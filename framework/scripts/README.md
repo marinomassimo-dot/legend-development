@@ -43,6 +43,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | …and then to run the checks that apply to that paper's actual surfaces, in one call | `framework/scripts/paper_packet.py check --pmid <PMID>` |
 | whether the DOI PubMed stores for a PMID resolves to the article PubMed describes (a hybrid record serves the wrong PDF) — one record per PMID naming both identities | `framework/scripts/pubmed_identity_check.py --pmid <PMID>` |
 | a supplementary spreadsheet as text (sheet names, SHA-256 and bytes of exactly what was read; control characters reported) — and whether deposited workbooks are byte-identical | `framework/scripts/xlsx_to_text.py FILE.xlsx` · `--dedupe A.xlsx B.xlsx` |
+| whether a staged receipt JSON passes the writer's own validators, without appending to any ledger (what a parallel Scientist can run before the Orchestrator records) | `framework/scripts/staged_receipt_check.py --artifact-root <shared checkout> <receipt.json>` |
 | what a claim rests on, down to the species and reading depth of its foundation | `framework/scripts/trace_claim_foundation.py` |
 | high-relevance corpus placeholders that were never read — the gold already at home | `framework/scripts/unread_gold.py` |
 | a cross-paper query over what the deep-dive manifests already evidence (derived, never written to disk) | `framework/scripts/build_evidence_index.py` |

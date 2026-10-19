@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-10-19T20:30:00Z",
+ "event_at": "2026-10-19T20:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present"
+ },
+ "event_id": "FTR-20261019-32905056-01",
+ "evidence_basis": [
+  "Whole JATS body read section by section; Figures 1 and 2 inspected as images (GC/MS chromatograms, not quantitative panels).",
+  "FIND: WWOX is absent. One 20-month-old with HMGCS2 deficiency was normoglycaemic (4.6 mmol/L) at presentation after two days of vomiting; no insulin, cortisol, catecholamine, growth-hormone or free-fatty-acid value is reported, so the paper cannot say why hypoglycaemia was avoided (the authors state the mechanism is unclear).",
+  "References enumerated (20) and screened for integrity, not read."
+ ],
+ "evidence_depth": "complete_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID32905056.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID32905056.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-B-H3-AUTONOMIC-HYPOGLYCAEMIA-01.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "b7718001d6c2d83240b9fdb843c43f45375d687fcdc2bf38ab22983fb721fd03",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID32905056_Conlon2020_PMC7463059.xml",
+ "study_id": {
+  "doi": "10.1002/jmd2.12146",
+  "pmid": "32905056"
+ },
+ "workflow": "scientist-b, interventions batch 2026-10-19 group H3, task branch task/INTERV-H3-B-20261019; context_policy SOURCE_FIRST. Route: Europe PMC JATS fetched with no User-Agent, figures from the PMC OA S3 bucket, all into the root files/ tree; figures inspected as images where stated; locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a JSON file for the integrator and was not appended at preparation time."
+}

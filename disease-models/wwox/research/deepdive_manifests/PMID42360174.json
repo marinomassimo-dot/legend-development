@@ -1,0 +1,342 @@
+{
+ "schema_version": 2,
+ "pmid": "42360174",
+ "doi": "10.1002/epi.70343",
+ "pmcid": "PMC13592486",
+ "receipt": "FTR-20261019-42360174-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the interventions selection file's one-line 'why it matters' for this row and the group H5 header, plus the earlier readings of this lot done in this session (Yuskaitis, Phillips-Farfan, Salvati) and the registry theme records CLAIM 042 and DL-MECH-020 admitted after the first pass of the first paper. No registry record about this paper (none exists).",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/interventions_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a non-WWOX comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype; class-level literature only, BLOCK-1 caution carried in the analysis note."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the load-bearing triples were checked mechanically by locator_audit.py and are exposed in the analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Prospective single-centre two-period crossover pilot in adults with drug-resistant epilepsy (36 enrolled, 22 analysed; focal in 16), 16:8 time-restricted eating with or without a commercial MCT shake, seizure diary outcome. Not a WWOX system, not children, not a calorie-restriction or dextrose design. The reported fact is a non-significant difference with wide patient-level variability; the authors' words 'signal favoring IF-MCT' rest on post hoc responder counts and a Kaplan-Meier plot defined by starting sequence."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (fasting OR \"caloric restriction\" OR \"calorie restriction\" OR \"dietary restriction\")",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the four hits are type 2 diabetes association studies (fasting glucose), none a fasting or restriction intervention"
+   },
+   {
+    "query": "WWOX AND (mTOR OR mTORC1 OR AMPK)",
+    "count": 8,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (hypoglycemia OR hypoglycaemia OR dextrose OR \"glucose infusion\")",
+    "count": 21,
+    "source": "PubMed ESearch rettype=count 2026-10-19; hits are glucose-metabolism, glycolysis and association papers, none an infusion or dextrose intervention"
+   },
+   {
+    "query": "WWOX AND (edema OR oedema OR hyponatremia OR \"fluid overload\")",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the two hits are a high-altitude pulmonary oedema locus list and a zebrafish embryo knockdown paper"
+   },
+   {
+    "query": "WWOX AND (refeeding OR thiamine OR \"parenteral nutrition\")",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are PubMed search hits only (ESearch rettype=count, 2026-10-19), not a census; none of the WWOX hits tests the intervention of this group."
+ },
+ "multihop": {
+  "references_enumerated": 25,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted (25 entries), not read item by item; no WWOX-directed reference seen in the body."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42360174 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED for this PMID in the seven registry surfaces at commit 0c85331b341e; a statement about that query only. CLAIM 042 and DL-MECH-020 (ketogenic-diet lines) admitted for comparison after the first pass."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 25,
+   "references_screened": 24,
+   "references_with_doi": 24,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42360174_Hahn2026_PMC.xml",
+   "sha256": "5244defd931c1dfde167b7041a548060a219729868b73cf9c5887870865b31d5",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13592486/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "5244defd931c1dfde167b7041a548060a219729868b73cf9c5887870865b31d5"
+   }
+  },
+  {
+   "path": "files/figures/PMID42360174/native/EPI-67-4618-g002.png",
+   "sha256": "0d310d2274668e6c0efea270e7b3436be23c7efa234224661aa1b0f117551c7f",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13592486.1/EPI-67-4618-g002.png",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "0d310d2274668e6c0efea270e7b3436be23c7efa234224661aa1b0f117551c7f"
+   }
+  },
+  {
+   "path": "files/figures/PMID42360174/native/EPI-67-4618-g003.png",
+   "sha256": "e047f3210d91e3c784f20d6228395274b924f1bc7a75591af07418fc6431c8fc",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13592486.1/EPI-67-4618-g003.png",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "e047f3210d91e3c784f20d6228395274b924f1bc7a75591af07418fc6431c8fc"
+   }
+  },
+  {
+   "path": "files/figures/PMID42360174/native/EPI-67-4618-g001.png",
+   "sha256": "07352dd8d42992d6fa96151f2acd08f40fecebbfdf46e1b367120b52dd8d92ba",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13592486.1/EPI-67-4618-g001.png",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "07352dd8d42992d6fa96151f2acd08f40fecebbfdf46e1b367120b52dd8d92ba"
+   }
+  },
+  {
+   "path": "files/supplements/PMID42360174/EPI-67-4618-s001.docx",
+   "sha256": "bca4ca371db452ad71ff7bf7c3d4555271f0795ade926f595e394ef728ae726a",
+   "kind": "supplement_binary",
+   "note": "Supplementary Tables S1-S6 (docx). Only Tables S1 and S2a were read; the remainder is declared unread.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13592486.1/EPI-67-4618-s001.docx",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "bca4ca371db452ad71ff7bf7c3d4555271f0795ade926f595e394ef728ae726a"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The trial was a 16:8 time-restricted eating crossover in adults; no limit was placed on intake in the eating window, so it tests a timing pattern, not a calorie target.",
+    "snippet": "During IF, participants fasted for 16 h per day and consumed only water and unsweetened tea during the fasting window; no restrictions were imposed on food intake during the 8‐h eating window.",
+    "anchor": "Methods, Procedures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42360174_Hahn2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The MCT shake added 360 kcal per 200 mL.",
+    "snippet": "The number of calories per 200 mL was 360 kcal.",
+    "anchor": "Methods, Procedures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42360174_Hahn2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Thirty-six were enrolled and 22 analysed per protocol; three completers were excluded for adherence concerns.",
+    "snippet": "Of the 25 participants who completed the trial, three were excluded from the analysis owing to substantial concerns about adherence to study procedures (Figure 1).",
+    "anchor": "Results, Patient characteristics and dropouts",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42360174_Hahn2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The analysed group was adult, mostly female and mostly focal epilepsy.",
+    "snippet": "Thus, 22 participants were included in the final analysis: 19 were female and 3 were male; 16 had focal epilepsy, 2 had generalized epilepsy, and 4 had epilepsy of undetermined type (Table 1).",
+    "anchor": "Results, Patient characteristics and dropouts",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42360174_Hahn2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No difference in seizure frequency was found within participants across conditions.",
+    "snippet": "we found no evidence of within‐participant differences (Friedman test; p = .183)",
+    "anchor": "Results, Per-protocol analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42360174_Hahn2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Kaplan-Meier statement is described as an earlier effect during the combined regimen, with Breslow p = .233.",
+    "snippet": "In addition to the clearer seizure‐suppressive effect in the IF‐MCT condition, a Kaplan–Meier curve also indicated an earlier effect during ketogenic intermittent fasting (Breslow: p = .233).",
+    "anchor": "Results, Per-protocol analysis, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42360174_Hahn2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Kaplan-Meier figure legend defines the two curves by the starting sequence (IF-MCT first versus IF first), not by condition; the curves therefore mix sequence with treatment.",
+    "snippet": "Visual attestation of Figure 3: Kaplan-Meier curves labelled Start IF-MCT and Start IF; legend text 'Blue line=IF-MCT first; red line=IF first'; the proportion not yet responding falls to about 0.55 for the IF-MCT-first sequence and about 0.73 for the IF-first sequence at week 12, with censoring marks.",
+    "anchor": "Figure 3 (image EPI-67-4618-g001)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID42360174/native/EPI-67-4618-g001.png"
+    ],
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "adults with drug-resistant epilepsy, crossover, by starting sequence",
+     "endpoint": "time to at least 50% seizure reduction"
+    },
+    "qualifies": "entries[5]",
+    "qualifies_needle": "indicated an earlier effect during ketogenic intermittent fasting"
+   },
+   {
+    "proposition": "Table 2 gives participant 3 as seizure-free (0, 0, 0) in all three IF-alone intervals as well as at 12 weeks of IF-MCT; the Discussion says seizure freedom occurred only during IF-MCT.",
+    "snippet": "Sz sum IF 12 weeks 3 3 0 1 0 1 0 0 0 4 8 11",
+    "anchor": "Table 2, first participant row",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42360174_Hahn2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion states seizure freedom was observed only during the combined regimen.",
+    "snippet": "Overall, this crossover pilot trial suggests a signal favoring IF–MCT, with earlier and more frequent responder outcomes and seizure freedom observed only during IF–MCT.",
+    "anchor": "Discussion, final paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42360174_Hahn2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Participant 28 rose from 94 seizures at baseline to 216 in the first IF-MCT block and stayed above baseline in IF; two participants account for the largest counts.",
+    "snippet": "26 6 3 2 6 2 9 0 10 28 94 216 196 131 157 170 255 185",
+    "anchor": "Table 2, participant 28 row",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42360174_Hahn2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say the degree of ketosis might have been insufficient (peak 0.13 versus 0.06 mmol).",
+    "snippet": "Although IF–MCT increased BHB concentrations compared with IF (peak value IF‐MCT: 0.13 mmol vs peak value IF: 0.06 mmol; Figure 2), the degree of ketosis might have been insufficient.",
+    "anchor": "Discussion, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42360174_Hahn2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2 plots beta-hydroxybutyrate in micromol/L with a maximum near 420 and medians of roughly 75-90 (IF-MCT) and 30-40 (IF); the ketosis range quoted by the authors for a ketogenic state is 0.5-3.0 mmol/L.",
+    "snippet": "Visual attestation of Figure 2: beta-hydroxybutyrate (micromol/l) boxplots, IF MCT median about 75 at 4 weeks and about 90 at 12 weeks, whisker maximum about 415; IF median about 40 and 30; axis 0 to 500.",
+    "anchor": "Figure 2 (image EPI-67-4618-g003)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID42360174/native/EPI-67-4618-g003.png"
+    ],
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "adults with drug-resistant epilepsy, serum, after the fasting window",
+     "endpoint": "beta-hydroxybutyrate"
+    }
+   },
+   {
+    "proposition": "Drop-out was 39% and the prespecified size was not reached.",
+    "snippet": "The trial did not reach the prespecified sample size of 28 participants, largely because of a drop‐out rate of 39% (14/36)",
+    "anchor": "Discussion, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42360174_Hahn2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizure counts came from patient-kept diaries.",
+    "snippet": "Seizure frequency was primarily assessed using patient‐reported seizure diaries, which are prone to under‐reporting and imprecision",
+    "anchor": "Discussion, limitations paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42360174_Hahn2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "All participants had transient gastrointestinal effects during titration of the MCT shake.",
+    "snippet": "All participants experienced transient gastrointestinal side effects, predominantly fullness and mild nausea, during the titration phase.",
+    "anchor": "Results, Adverse effects",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42360174_Hahn2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The study was funded by the manufacturer of the shake, with a statement that the funder had no role in design or analysis.",
+    "snippet": "This study was financed by an unrestricted donation from Kanso to the Otto Loewi Foundation",
+    "anchor": "Methods, Role of the funding source",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42360174_Hahn2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13592486/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure panel."
+ }
+}

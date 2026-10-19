@@ -702,7 +702,7 @@ Serves to:
 **Final decision label:** background only
 **Claim links:** 009 (supporto secondario)
 **Working Model impact:** BLOCCO 2 — supporto secondario a CLAIM 009
-**Evidence depth:** abstract-only
+**Evidence depth:** `partial_fulltext_read` (superseding the earlier abstract-only entry) — receipt `FTR-20261019-41007296-01`; landing [[paper_registry_current#PAPER 266]] (`BATCH_20261019_001`, `CC-20261019-SCIENTIST-B-G2-HUMAN-AXIS-01`)
 **Full text status:** found — PMC disponibile; lettura non prioritaria
 **Status:** background_only
 **Next action:** none
@@ -1538,11 +1538,12 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 39500530 / DOI 10.1136/jitc-2024-010422
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-10-19 (`FTR-20261019-39500530-01`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 15
-**Status:** discovered
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 250]] by `BATCH_20261019_001` (`CC-20261019-SCIENTIST-A-LIPID-02`); reading `complete_fulltext_read`, receipt `FTR-20261019-39500530-01`.
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -1754,11 +1755,12 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 25595186 / DOI 10.1177/1535370214565990
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-10-19 (`FTR-20261019-25595186-01`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 23
-**Status:** discovered
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 251]] by `BATCH_20261019_001` (`CC-20261019-SCIENTIST-A-LIPID-03`); reading `complete_fulltext_read`, receipt `FTR-20261019-25595186-01`.
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -1781,11 +1783,12 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 36364214 / DOI 10.3390/molecules27217388
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-10-19 (`FTR-20261019-36364214-01`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 24
-**Status:** discovered
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 291]] by `BATCH_20261019_001` (`CC-20261019-SCIENTIST-C-G3-01`); reading `complete_fulltext_read`, receipt `FTR-20261019-36364214-01`.
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -2393,11 +2396,12 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 36530994 / DOI 10.3389/fonc.2022.996820
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-10-19 (`FTR-20261019-36530994-01`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 49
-**Status:** discovered
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 267]] by `BATCH_20261019_001` (`CC-20261019-SCIENTIST-B-G2-HUMAN-AXIS-01`); reading `partial_fulltext_read`, receipt `FTR-20261019-36530994-01`.
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -2448,11 +2452,12 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 25595191 / DOI 10.1177/1535370214566747
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-10-19 (`FTR-20261019-25595191-01`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 51
-**Status:** discovered
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 292]] by `BATCH_20261019_001` (`CC-20261019-SCIENTIST-C-G3-01`); reading `complete_fulltext_read`, receipt `FTR-20261019-25595191-01`.
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -5178,11 +5183,12 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 35559044 / DOI 10.3389/fgene.2022.843661
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-10-19 (`FTR-20261019-35559044-01`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 157
-**Status:** discovered
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 249]] by `BATCH_20261019_001` (`CC-20261019-SCIENTIST-A-LIPID-01`); reading `complete_fulltext_read`, receipt `FTR-20261019-35559044-01`.
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -8121,7 +8127,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 20942981 / PMC2967537 / DOI 10.1186/1471-2350-11-148
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
+**Date processed:** 2026-10-19 (`FTR-20261019-20942981-01`)
 **Date last touched:** 2026-04-18
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
@@ -8130,7 +8136,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 247]] by `BATCH_20261019_001` (`CC-20261019-SCIENTIST-A-LIPID-01`); reading `complete_fulltext_read`, receipt `FTR-20261019-20942981-01`.
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Genotype/model tag:** unassigned in triage
 **Species:** not assessed in triage
@@ -11792,7 +11799,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** in — standard
 **Tier:** B
-**Status:** screened
+**Status:** processed
+**Status note:** a re-read of the commentary is recorded by receipt `FTR-20261019-26355344-02` (complete; `CC-20261019-SCIENTIST-C-G3-01`, `BATCH_20261019_001`): a commentary restates the model and is not an independent observation of the binding map it describes; the placeholder `CORPUS P395` is promoted to [[paper_registry_current#PAPER 310]] and kept as history.
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Genotype/model tag:** unassigned in triage
 **Species:** not assessed in triage
@@ -12031,7 +12039,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Report mentions:** CC-20260726-001 → BATCH_20260726_001
 **Next action:** none for this record; the calpain proteolysis arc stays open in DIS-008 with its `REVIVAL_TRIGGER`
 **Flags:** full text read (receipt `FTR-20260726-34214506-01`) / parity-of-sources case / source-correction registered / multi-hop reading debt declared
-**Note:** Promosso a [[paper_registry_current#PAPER 054]]. Il titolo promette retinopatia diabetica; il contenuto è un asse Ca²⁺→calpaina→WWOX→ROS in un neurone eccitabile, con un hit proteomico non guidato su WWOX. Filed by disease label sarebbe stato rumore. Debito di lettura dichiarato e **non pagato** in questa sessione: PMID 28123895 (C1q → attivazione di WWOX, coda HIGH) e PMID 21444760 (Wwox come candidato HDL da QTL murino, coda MEDIUM), più i riferimenti 38/39 non risolti a PMID.
+**Note:** Promosso a [[paper_registry_current#PAPER 054]]. Il titolo promette retinopatia diabetica; il contenuto è un asse Ca²⁺→calpaina→WWOX→ROS in un neurone eccitabile, con un hit proteomico non guidato su WWOX. Filed by disease label sarebbe stato rumore. Debito di lettura dichiarato e **non pagato** in questa sessione: PMID 28123895 (C1q → attivazione di WWOX, coda HIGH) e PMID 21444760 (Wwox come candidato HDL da QTL murino, coda MEDIUM) [debito pagato il 2026-10-19 da `CC-20261019-SCIENTIST-A-LIPID-01`: letto per intero, ricevuta `FTR-20261019-21444760-01`, [[paper_registry_current#PAPER 248]]], più i riferimenti 38/39 non risolti a PMID.
 
 ---
 
@@ -15285,3 +15293,1378 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Next action:** none
 **Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261004-42807309-01`; manifest `deepdive_manifests/PMID42807309.json`; dossier `research/fulltext_dossiers/PMID42807309.md`; landing [[paper_registry_current#CORPUS-STUB-189]]
 **Note:** class-level record. Not medical advice.
+
+## LIT-0549
+**Short title:** Leduc 2011 J Lipid Res — mouse HDL QTL map against human HDL GWAS; Wwox is a QTL candidate on a predicted missense change, no expression difference, no knockout, no brain data
+**Authors:** Magalie S Leduc, Malcolm Lyons, Katayoon Darvishi, Kenneth Walsh, Susan Sheehan, Sarah Amend, et al.
+**Year:** 2011
+**Source type:** primary research — cross-species QTL and GWAS re-analysis
+**Journal/source:** *Journal of Lipid Research* 2011
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 21444760 / DOI 10.1194/jlr.M009175
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist A, group G1)
+**Date processed:** 2026-10-19 (`FTR-20261019-21444760-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-LIPID-01` and authored by the batch integrator from the artefact's own front matter; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-21444760-01`; manifest `deepdive_manifests/PMID21444760.json`; landing [[paper_registry_current#PAPER 248]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0550
+**Short title:** Sun 2026 J Transl Med — CNS and oligodendrocyte-lineage CerS2 knockout mice: very-long-chain sphingolipids govern myelination; WWOX is absent
+**Authors:** Sun H, Mo L, Cao M, Tian Y, Mo L, Ni Z, et al.
+**Year:** 2026
+**Source type:** primary research — murine conditional knockout (lipidomics, imaging, proteomics, EM, culture)
+**Journal/source:** *Journal of Translational Medicine* 2026;24:550
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41715204 / DOI 10.1186/s12967-026-07881-0
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist A, group G1)
+**Date processed:** 2026-10-19 (`FTR-20261019-41715204-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-LIPID-04` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-41715204-01`; manifest `deepdive_manifests/PMID41715204.json`; landing [[paper_registry_current#PAPER 252]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0551
+**Short title:** Teo 2023 Glia — CerS2 deleted in myelinating cells: myelin lipid chain length shifts, a microglial subset expands, mice die; myelin cholesterol unchanged; WWOX absent
+**Authors:** Teo JD, Marian OC, Spiteri AG, Nicholson M, Song H, Khor JXY, et al.
+**Year:** 2022
+**Source type:** primary research — murine conditional knockout (lipidomics, EM, cytometry, behaviour, survival)
+**Journal/source:** *Glia* 2022;71(4):1120-1141
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 36583573 / DOI 10.1002/glia.24329
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist A, group G1)
+**Date processed:** 2026-10-19 (`FTR-20261019-36583573-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-LIPID-04` and authored by the batch integrator from the artefact's own front matter; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-36583573-01`; manifest `deepdive_manifests/PMID36583573.json`; landing [[paper_registry_current#PAPER 253]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0552
+**Short title:** Wong 2025 Mov Disord — biallelic ELOVL1 variants in seven patients: hypomyelinating leukodystrophy, movement disorder, ichthyosis, no seizures recorded; WWOX absent
+**Authors:** Wong KM, Maroofian R, Meier K, Diegmann S, Tkemaladze T, Alvi JR, et al.
+**Year:** 2025
+**Source type:** primary research — human genetic case series (seven patients, five consanguineous families)
+**Journal/source:** *Movement Disorders* 2025;40(9):1836-1850
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40590574 / DOI 10.1002/mds.30258
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist A, group G1)
+**Date processed:** 2026-10-19 (`FTR-20261019-40590574-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-LIPID-04` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-40590574-01`; manifest `deepdive_manifests/PMID40590574.json`; landing [[paper_registry_current#PAPER 254]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0553
+**Short title:** Isokawa 2019 FASEB BioAdv — epidermis-rescued Elovl1 knockout mice: shortened myelin sphingolipid chains, mild late myelin thinning, motor deficits, startle-epilepsy deaths; WWOX absent
+**Authors:** Isokawa M, Sassa T, Hattori S, Miyakawa T, Kihara A
+**Year:** 2019
+**Source type:** primary research — murine whole-body knockout with epidermal rescue
+**Journal/source:** *FASEB bioAdvances* 2019;1(12):747
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 32123819 / DOI 10.1096/fba.2019-00067
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist A, group G1)
+**Date processed:** 2026-10-19 (`FTR-20261019-32123819-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-LIPID-04` and authored by the batch integrator from the artefact's own front matter; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-32123819-01`; manifest `deepdive_manifests/PMID32123819.json`; landing [[paper_registry_current#PAPER 255]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0554
+**Short title:** Eberhart 2026 Front Mol Neurosci — Pex2 knockout (Zellweger) mice: lipid metabolism and hypomyelination; WWOX protein is one unchanged row of the deposited proteome
+**Authors:** Eberhart T, Charles KN, Salumbides-Torres B, Price N, Fliesler SJ, Faust PL, Kovacs WJ
+**Year:** 2026
+**Source type:** primary research — murine systemic knockout (lipids, sterols, proteomics, transcripts)
+**Journal/source:** *Frontiers in Molecular Neuroscience* 2026;19:1636268
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41815956 / DOI 10.3389/fnmol.2026.1636268
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist A, group G1)
+**Date processed:** 2026-10-19 (`FTR-20261019-41815956-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-LIPID-04` and authored by the batch integrator from the artefact's own front matter; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-41815956-01`; manifest `deepdive_manifests/PMID41815956.json`; landing [[paper_registry_current#PAPER 256]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0555
+**Short title:** Ziegler 2025 PLoS Genet — Drosophila ceramide synthase loss: chain length versus long-chain bases in neuronal dendrite loss; WWOX absent
+**Authors:** Ziegler AB, Wesselmann C, Beckschäfer K, Wulf AL, Dhiman N, Soba P, et al.
+**Year:** 2025
+**Source type:** primary research — Drosophila genetics and lipidomics
+**Journal/source:** *PLOS Genetics* 2025;21(9):e1011880
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40997116 / DOI 10.1371/journal.pgen.1011880
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist A, group G1)
+**Date processed:** 2026-10-19 (`FTR-20261019-40997116-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-LIPID-04` and authored by the batch integrator from the artefact's own front matter; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-40997116-01`; manifest `deepdive_manifests/PMID40997116.json`; landing [[paper_registry_current#PAPER 257]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0556
+**Short title:** Peeples 2026 J Clin Invest — narrative review of sterol biosynthesis, brain development and disease; a framing and safety-screen source, WWOX absent
+**Authors:** Peeples ES, Korade Z, Mirnics K
+**Year:** 2026
+**Source type:** review — narrative
+**Journal/source:** *The Journal of Clinical Investigation* 2026;136(14):e208000
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42454491 / DOI 10.1172/JCI208000
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist A, group G1)
+**Date processed:** 2026-10-19 (`FTR-20261019-42454491-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-LIPID-05` and authored by the batch integrator from the artefact's own front matter; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-42454491-01`; manifest `deepdive_manifests/PMID42454491.json`; landing [[paper_registry_current#PAPER 258]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0557
+**Short title:** Kondo 2025 Epilepsia — sponsor-authored narrative review of soticlestat mechanisms (brain cholesterol 24-hydroxylase inhibition); a framing source, WWOX absent
+**Authors:** Kondo S, Murthy V, Asgharnejad M, Benitez A, Nakashima K, Hawkins N, White HS
+**Year:** 2025
+**Source type:** review — narrative, sponsor-authored
+**Journal/source:** *Epilepsia* 2025;66(5):1394
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39963730 / DOI 10.1111/epi.18287
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist A, group G1)
+**Date processed:** 2026-10-19 (`FTR-20261019-39963730-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-LIPID-06` and authored by the batch integrator from the artefact's own front matter; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-39963730-01`; manifest `deepdive_manifests/PMID39963730.json`; landing [[paper_registry_current#PAPER 259]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0558
+**Short title:** Sahu 2026 iScience — review of very-long-chain fatty acids as regulators of neuroinflammatory pathways; causation stated as unproven, WWOX absent
+**Authors:** Sahu RK, Yang Y, Chung HL
+**Year:** 2026
+**Source type:** review — narrative
+**Journal/source:** *iScience* 2026;29(2):114724
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41704776 / DOI 10.1016/j.isci.2026.114724
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist A, group G1)
+**Date processed:** 2026-10-19 (`FTR-20261019-41704776-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-LIPID-06` and authored by the batch integrator from the artefact's own front matter; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-41704776-01`; manifest `deepdive_manifests/PMID41704776.json`; landing [[paper_registry_current#PAPER 260]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0559
+**Short title:** Siddiqui 2023 ACS Omega — review of ELOVL elongases in neurological disease; its conclusion on human ELOVL1 seizures is not supported by its own body, WWOX absent
+**Authors:** Siddiqui AJ, Jahan S, Chaturvedi S, Siddiqui MA, Alshahrani MM, Abdelgadir A, et al.
+**Year:** 2023
+**Source type:** review — narrative, with a flagged internal contradiction
+**Journal/source:** *ACS Omega* 2023;8(11):9764-9774
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 36969404 / DOI 10.1021/acsomega.3c00056
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist A, group G1)
+**Date processed:** 2026-10-19 (`FTR-20261019-36969404-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-LIPID-06` and authored by the batch integrator from the artefact's own front matter; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-36969404-01`; manifest `deepdive_manifests/PMID36969404.json`; landing [[paper_registry_current#PAPER 261]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0560
+**Short title:** Baryla 2021 PeerJ — blood-leukocyte WWOX and HIF1A transcripts in 98 gestational-diabetes women against 37 controls; the axis shift is carried by HIF1A, WWOX is a marginal tendency
+**Authors:** Baryla I, Pluciennik E, Kośla K, Wojcik M, Zieleniak A, Zurawska-Klis M, et al.
+**Year:** 2021
+**Source type:** primary research — human blood-leukocyte mRNA, case-control (gestational diabetes)
+**Journal/source:** *PeerJ* 2021;9:e10604
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 33520443 / DOI 10.7717/peerj.10604
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist B, group G2)
+**Date processed:** 2026-10-19 (`FTR-20261019-33520443-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-G2-HUMAN-AXIS-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** BACKGROUND — non-neural, non-DEE context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-33520443-01`; manifest `deepdive_manifests/PMID33520443.json`; landing [[paper_registry_current#PAPER 262]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0561
+**Short title:** Jamaspishvili 2019 Acta Biochim Pol — WWOX rs17797882 and 8 other East Asian type-2-diabetes loci in a Han Chinese sample; no association with diabetes; nominal control-only HOMA-beta and lipid coefficients (PubMed identity defect)
+**Authors:** Jamaspishvili E, Zhang S, Tong H, Chen Y, Zhou Z, Sun L, Kazakova E, Hong Q
+**Year:** 2019
+**Source type:** primary research — human genetic association (Han Chinese, type 2 diabetes, glycaemic and lipid traits)
+**Journal/source:** *Acta Biochimica Polonica* 2019;66(2):159-165
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 31145772 / DOI 10.18388/abp.2018_2632 (the DOI printed on the article; PubMed stores a different DOI and page range — see Note)
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist B, group G2)
+**Date processed:** 2026-10-19 (`FTR-20261019-31145772-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-G2-HUMAN-AXIS-01` and authored by the batch integrator from the artefact's own front matter; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** BACKGROUND — non-neural, non-DEE context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-31145772-01`; manifest `deepdive_manifests/PMID31145772.json`; landing [[paper_registry_current#PAPER 263]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0562
+**Short title:** Sakai 2013 PLoS ONE — Bonferroni-corrected Japanese replication of nine East Asian type-2-diabetes loci (7,379 subjects); WWOX rs17797882 not replicated, no HOMA-beta association
+**Authors:** Sakai K, Imamura M, Tanaka Y, Iwata M, Hirose H, Kaku K, et al.
+**Year:** 2013
+**Source type:** primary research — human genetic association replication (Japanese)
+**Journal/source:** *PLoS ONE* 2013;8(9):e76317
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 24086726 / DOI 10.1371/journal.pone.0076317
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist B, group G2)
+**Date processed:** 2026-10-19 (`FTR-20261019-24086726-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-G2-HUMAN-AXIS-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** BACKGROUND — non-neural, non-DEE context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-24086726-01`; manifest `deepdive_manifests/PMID24086726.json`; landing [[paper_registry_current#PAPER 264]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0563
+**Short title:** Ouyang 2021 Global Challenges — metabolome-genome-wide association in a Chinese cohort; a WWOX-region SNP is labelled by nearest gene against leucine/isoleucine at suggestive significance; the Mendelian randomisation does not involve WWOX
+**Authors:** Ouyang Y, Qiu G, zhao X, Su B, Feng D, Lv W, et al.
+**Year:** 2021
+**Source type:** primary research — metabolome GWAS with Mendelian randomisation
+**Journal/source:** *Global Challenges* 2021;5(4):2000088
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 33854788 / DOI 10.1002/gch2.202000088
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist B, group G2)
+**Date processed:** 2026-10-19 (`FTR-20261019-33854788-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-G2-HUMAN-AXIS-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** BACKGROUND — non-neural, non-DEE context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-33854788-01`; manifest `deepdive_manifests/PMID33854788.json`; landing [[paper_registry_current#PAPER 265]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0564
+**Short title:** Hu 2025 Front Pediatr — narrative review of ketogenic diet in developmental and epileptic encephalopathies; syndrome and gene-wise responder fractions as a base rate, WWOX absent
+**Authors:** Hu W, Li L, Zhao F, Zhang H, Zhang H
+**Year:** 2025
+**Source type:** review — narrative
+**Journal/source:** *Frontiers in Pediatrics* 2025;13:1567095
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40831798 / DOI 10.3389/fped.2025.1567095
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist B, group G2)
+**Date processed:** 2026-10-19 (`FTR-20261019-40831798-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-G2-KD-PRIOR-01` and authored by the batch integrator from the artefact's own front matter; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** BACKGROUND — base-rate context
+**Claim links:** 042 (base-rate context in the evidence boundary only; status unchanged)
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-40831798-01`; manifest `deepdive_manifests/PMID40831798.json`; landing [[paper_registry_current#PAPER 268]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0565
+**Short title:** Klepper 2026 Epilepsia Open — ketogenic therapy in Glut1 deficiency: 61 percent of 44 epileptic patients respond on monotherapy, secondary loss of response is common
+**Authors:** Klepper J, Runkel E, Kiesel L
+**Year:** 2026
+**Source type:** primary research — retrospective cohort (Glut1 deficiency)
+**Journal/source:** *Epilepsia Open* 2026;11(3):847-858
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41830506 / DOI 10.1002/epi4.70243
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist B, group G2)
+**Date processed:** 2026-10-19 (`FTR-20261019-41830506-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-G2-KD-PRIOR-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** BACKGROUND — base-rate context
+**Claim links:** 042 (base-rate context in the evidence boundary only; status unchanged)
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-41830506-01`; manifest `deepdive_manifests/PMID41830506.json`; landing [[paper_registry_current#PAPER 269]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0566
+**Short title:** Joshi 2025 J Neural Eng — in silico model of ketone rescue of presynaptic ATP; rescue works only upstream of acetyl-CoA and fails for MCT1 and complex I, the 'primary mechanism' conclusion is untested
+**Authors:** Joshi SN, Joshi AN, Joshi ND
+**Year:** 2025
+**Source type:** primary research — computational model
+**Journal/source:** *Journal of Neural Engineering* 2025;22(4):046025
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40659031 / DOI 10.1088/1741-2552/adef7f
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist B, group G2)
+**Date processed:** 2026-10-19 (`FTR-20261019-40659031-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-G2-KD-PRIOR-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — mechanism context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-40659031-01`; manifest `deepdive_manifests/PMID40659031.json`; landing [[paper_registry_current#PAPER 270]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0567
+**Short title:** Pain 2026 Epilepsia Open — one Glut1-deficiency iPSC line, three replicates, transcripts only: energy-metabolism reprogramming by decanoic acid; internally inconsistent direction statements, sponsor-linked
+**Authors:** Pain E, Kapatel Y, Singh PK, Jones KL, Selvakumaran J, Malerba A, et al.
+**Year:** 2026
+**Source type:** primary research — iPSC transcriptomics
+**Journal/source:** *Epilepsia Open* 2026;11(3):1036-1045
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42047543 / DOI 10.1002/epi4.70263
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist B, group G2)
+**Date processed:** 2026-10-19 (`FTR-20261019-42047543-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-G2-KD-PRIOR-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — mechanism context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-42047543-01`; manifest `deepdive_manifests/PMID42047543.json`; landing [[paper_registry_current#PAPER 271]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0568
+**Short title:** Kuang 2024 Front Cell Neurosci — narrative review of lactate and protein lactylation in epilepsy; the authors state the evidence for direct causation is insufficient
+**Authors:** Kuang X, Chen S, Ye Q
+**Year:** 2025
+**Source type:** review — narrative
+**Journal/source:** *Frontiers in Cellular Neuroscience* 2025;18:1464169
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39876842 / DOI 10.3389/fncel.2024.1464169
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist B, group G2)
+**Date processed:** 2026-10-19 (`FTR-20261019-39876842-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-G2-KD-PRIOR-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — mechanism context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-39876842-01`; manifest `deepdive_manifests/PMID39876842.json`; landing [[paper_registry_current#PAPER 272]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0569
+**Short title:** Fei 2020 Front Neurol — review of metabolic control of epilepsy: two opposite directions (inhibit glycolysis; supply energy in hypometabolic states)
+**Authors:** Fei Y, Shi R, Song Z, Wu J
+**Year:** 2020
+**Source type:** review — narrative
+**Journal/source:** *Frontiers in Neurology* 2020;11:592514
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 33363507 / DOI 10.3389/fneur.2020.592514
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist B, group G2)
+**Date processed:** 2026-10-19 (`FTR-20261019-33363507-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-G2-KD-PRIOR-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — mechanism context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-33363507-01`; manifest `deepdive_manifests/PMID33363507.json`; landing [[paper_registry_current#PAPER 273]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0570
+**Short title:** Beltran-Velasco 2025 Metabolites — review of brain glycogen in neuronal health and neurological disease; glycogen as a hypoglycaemic buffer stated generally, no WWOX
+**Authors:** Beltran-Velasco AI
+**Year:** 2025
+**Source type:** review — narrative
+**Journal/source:** *Metabolites* 2025;15(2):128
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39997753 / DOI 10.3390/metabo15020128
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist B, group G2)
+**Date processed:** 2026-10-19 (`FTR-20261019-39997753-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-G2-KD-PRIOR-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — mechanism context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-39997753-01`; manifest `deepdive_manifests/PMID39997753.json`; landing [[paper_registry_current#PAPER 274]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0571
+**Short title:** Cornelio-Martinez 2026 Mol Biol Rep — review of HIF-1 alpha signalling networks in adult hypoxic brain injury; the sign of a HIF-1 alpha intervention reverses with timing and cell type
+**Authors:** Cornelio-Martínez S, Lagunas-Rangel FA
+**Year:** 2026
+**Source type:** review — narrative
+**Journal/source:** *Molecular Biology Reports* 2026;53(1):815
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42171828 / DOI 10.1007/s11033-026-11966-w
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist B, group G2)
+**Date processed:** 2026-10-19 (`FTR-20261019-42171828-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-G2-KD-PRIOR-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — mechanism context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-42171828-01`; manifest `deepdive_manifests/PMID42171828.json`; landing [[paper_registry_current#PAPER 275]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0572
+**Short title:** Wang 2025 Nature — neonatal high fructose via microglial GLUT5 lowers microglia phagocytosis and raises whole-brain neonatal lactate about 2.7-fold; WWOX absent
+**Authors:** Wang Z, Lipshutz A, Martínez de la Torre C, Trzeciak AJ, Liu ZL, Miranda IC, et al.
+**Year:** 2025
+**Source type:** primary research — murine (diet exposure, GLUT5 knockouts, NMR tracing)
+**Journal/source:** *Nature* 2025;644(8077):759
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40500435 / DOI 10.1038/s41586-025-09098-5
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist B, group G2)
+**Date processed:** 2026-10-19 (`FTR-20261019-40500435-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-G2-FRUCTOSE-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** BACKGROUND — mechanism context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-40500435-01`; manifest `deepdive_manifests/PMID40500435.json`; landing [[paper_registry_current#PAPER 276]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0573
+**Short title:** Li 2023 Exp Mol Med — endogenous fructose metabolised by ketohexokinase in hippocampal microglia of db/db mice (NOX4, ROS); non-specific AAV knockdown, loose DE threshold, human-genome mapping stated for mouse RNA-seq
+**Authors:** Li Y, Jiang T, Du M, He S, Huang N, Cheng B, et al.
+**Year:** 2023
+**Source type:** primary research — murine (db/db), AAV knockdown, RNA-seq
+**Journal/source:** *Experimental & Molecular Medicine* 2023;55(11):2417
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 37907746 / DOI 10.1038/s12276-023-01112-y
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist B, group G2)
+**Date processed:** 2026-10-19 (`FTR-20261019-37907746-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-G2-FRUCTOSE-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — mechanism context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-37907746-01`; manifest `deepdive_manifests/PMID37907746.json`; landing [[paper_registry_current#PAPER 277]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0574
+**Short title:** Li 2022 Neuro-Oncol Adv — mitochondrial 1555 G>A and childhood glioblastoma, with a nominal WWOX intronic hit in one ancestry stratum that does not survive meta-analysis
+**Authors:** Li S, Gai X, Myint SS, Arroyo K, Morimoto L, Metayer C, et al.
+**Year:** 2022
+**Source type:** primary research — germline case-control association (mitochondria-ontology SNPs)
+**Journal/source:** *Neuro-oncology Advances* 2022;4(1):vdac045
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 35571988 / DOI 10.1093/noajnl/vdac045
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist C, group G3)
+**Date processed:** 2026-10-19 (`FTR-20261019-35571988-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-G3-01` and authored by the batch integrator from the artefact's own front matter; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-35571988-01`; manifest `deepdive_manifests/PMID35571988.json`; landing [[paper_registry_current#PAPER 278]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0575
+**Short title:** Xu 2025 Front Neurol — narrative review of ferroptosis and epilepsy (bidirectional links, therapeutic implications); WWOX occurs zero times
+**Authors:** Xu J, Dong X, Yuan M, Chen X, Shu H, Yu S
+**Year:** 2025
+**Source type:** review — narrative, no search method
+**Journal/source:** *Frontiers in Neurology* 2025;16:1635441
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40808923 / DOI 10.3389/fneur.2025.1635441
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist C, group G3)
+**Date processed:** 2026-10-19 (`FTR-20261019-40808923-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-G3-01` and authored by the batch integrator from the artefact's own front matter; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-40808923-01`; manifest `deepdive_manifests/PMID40808923.json`; landing [[paper_registry_current#PAPER 279]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0576
+**Short title:** Kawabata 2024 Sci Rep — chronic replication stress, parkin and mitochondrial dysfunction; WWOX transcript falls about 40 percent in a dividing non-cancer human cell type
+**Authors:** Kawabata T, Sekiya R, Goto S, Li TS
+**Year:** 2024
+**Source type:** primary research — cell biology under chronic aphidicolin stress
+**Journal/source:** *Scientific Reports* 2024;14:7877
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 38570643 / DOI 10.1038/s41598-024-58656-w
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist C, group G3)
+**Date processed:** 2026-10-19 (`FTR-20261019-38570643-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-G3-01` and authored by the batch integrator from the artefact's own front matter; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-38570643-01`; manifest `deepdive_manifests/PMID38570643.json`; landing [[paper_registry_current#PAPER 280]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0577
+**Short title:** Ganapathy 2026 J Gastrointest Oncol — commentary on STAT3 blockade, ferritinophagy and ferroptosis (toosendanin); the sign of WWOX on ferroptosis is unresolved
+**Authors:** Ganapathy V, Bhutia YD
+**Year:** 2026
+**Source type:** commentary
+**Journal/source:** *Journal of Gastrointestinal Oncology* 2026;17(3):202
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42434280 / DOI 10.21037/jgo-2026-1-0151
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist C, group G3)
+**Date processed:** 2026-10-19 (`FTR-20261019-42434280-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-G3-01` and authored by the batch integrator from the artefact's own front matter; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-42434280-01`; manifest `deepdive_manifests/PMID42434280.json`; landing [[paper_registry_current#PAPER 281]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0578
+**Short title:** Petrillo 2026 Front Cell Neurosci — ferroptosis-induced epileptiform activity in mouse cortical slices (RSL-3, 4-HNE); a methods-transfer note, WWOX absent
+**Authors:** Petrillo S, Loia F, Giustizieri M, Torda C, Cairoli S, Goffredo B, et al.
+**Year:** 2026
+**Source type:** primary research — acute cortical slice electrophysiology
+**Journal/source:** *Frontiers in Cellular Neuroscience* 2026;20:1758230
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41822170 / DOI 10.3389/fncel.2026.1758230
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist C, group G3)
+**Date processed:** 2026-10-19 (`FTR-20261019-41822170-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-G3-01` and authored by the batch integrator from the artefact's own front matter; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-41822170-01`; manifest `deepdive_manifests/PMID41822170.json`; landing [[paper_registry_current#PAPER 282]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0579
+**Short title:** Puertas-Frias 2026 EMBO Rep — PUFA sequestration in triglycerides protects against mitochondrial-dysfunction-induced ferroptosis; one testable bridge to WWOX-deficient fibroblasts
+**Authors:** Puertas-Frías G, Saucedo-Rodríguez MJ, Čunátová K, Alán L, Hrbáč P, Knězů M, et al.
+**Year:** 2026
+**Source type:** primary research — cell biology (lipid droplets, PUFA-TG, GPX4)
+**Journal/source:** *EMBO Reports* 2026;27(18):5382
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42601505 / DOI 10.1038/s44319-026-00898-y
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist C, group G3)
+**Date processed:** 2026-10-19 (`FTR-20261019-42601505-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-G3-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-42601505-01`; manifest `deepdive_manifests/PMID42601505.json`; landing [[paper_registry_current#PAPER 283]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0580
+**Short title:** Liang 2026 Neural Regen Res — HIF-1a inhibitor PX-478 and hippocampal neuronal ferroptosis in PTZ-kindled mice; seizure-driven HIF-1a/HO-1 iron accumulation, WWOX absent
+**Authors:** Liang Z, Guo Q, Zheng Z, Lou Y, Zhu X, Liu S
+**Year:** 2025
+**Source type:** primary research — murine pentylenetetrazole kindling
+**Journal/source:** *Neural Regeneration Research* 2025;21(6):2389
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39995090 / DOI 10.4103/NRR.NRR-D-24-01007
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist C, group G3)
+**Date processed:** 2026-10-19 (`FTR-20261019-39995090-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-G3-01` and authored by the batch integrator from the artefact's own front matter; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-39995090-01`; manifest `deepdive_manifests/PMID39995090.json`; landing [[paper_registry_current#PAPER 284]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0581
+**Short title:** Truong 2025 Membranes — narrative review of mitochondria-associated membrane dysfunction in neurodegeneration; the MAM frame has no WWOX anchor
+**Authors:** Truong TT, Singh AA, Bang NV, Vu NMH, Na S, Choi J, Oh J, Mondal S
+**Year:** 2025
+**Source type:** review — narrative
+**Journal/source:** *Membranes* 2025;15(9):263
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41002898 / DOI 10.3390/membranes15090263
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist C, group G3)
+**Date processed:** 2026-10-19 (`FTR-20261019-41002898-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-G3-01` and authored by the batch integrator from the artefact's own front matter; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-41002898-01`; manifest `deepdive_manifests/PMID41002898.json`; landing [[paper_registry_current#PAPER 285]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0582
+**Short title:** Munk 2021 Front Genet — an 80 kb PRKN intron deletion lowers its fragile-site breakage without changing expression; fragility and expression can dissociate
+**Authors:** Munk SHN, Voutsinos V, Oestergaard VH
+**Year:** 2021
+**Source type:** primary research — cell genetics (CRISPR deletion, fragile-site assays)
+**Journal/source:** *Frontiers in Genetics* 2021;12:695172
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 34354738 / DOI 10.3389/fgene.2021.695172
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist C, group G3)
+**Date processed:** 2026-10-19 (`FTR-20261019-34354738-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-G3-01` and authored by the batch integrator from the artefact's own front matter; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-34354738-01`; manifest `deepdive_manifests/PMID34354738.json`; landing [[paper_registry_current#PAPER 286]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0583
+**Short title:** Schule 2015 Neurol Genet — is PARKIN parkinsonism a cancer predisposition syndrome? A single-case two-hit hypothesis for a fragile-site gene
+**Authors:** Schüle B, Byrne C, Rees L, Langston JW
+**Year:** 2015
+**Source type:** case note
+**Journal/source:** *Neurology: Genetics* 2015;1(4):e31
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 27066568 / DOI 10.1212/NXG.0000000000000031
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist C, group G3)
+**Date processed:** 2026-10-19 (`FTR-20261019-27066568-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-G3-01` and authored by the batch integrator from the artefact's own front matter; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-27066568-01`; manifest `deepdive_manifests/PMID27066568.json`; landing [[paper_registry_current#PAPER 287]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0584
+**Short title:** Ambroziak 2015 J Appl Genet — PARK2 rearrangement breakpoints in a Polish Parkinson cohort; junction microhomology as an observable
+**Authors:** Ambroziak W, Koziorowski D, Duszyc K, Górka-Skoczylas P, Potulska-Chromik A, Sławek J, Hoffman-Zacharska D
+**Year:** 2015
+**Source type:** primary research — breakpoint mapping in a patient cohort
+**Journal/source:** *Journal of Applied Genetics* 2015;56(4):451-461
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 25833766 / DOI 10.1007/s13353-015-0282-9
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist C, group G3)
+**Date processed:** 2026-10-19 (`FTR-20261019-25833766-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-G3-01` and authored by the batch integrator from the artefact's own front matter; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-25833766-01`; manifest `deepdive_manifests/PMID25833766.json`; landing [[paper_registry_current#PAPER 288]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0585
+**Short title:** Zhang 2021 J Neuroinflammation — narrative review of mitophagy in neurological disorders; no senescence content, cannot arbitrate the CLAIM 010 baseline
+**Authors:** Zhang L, Dai L, Li D
+**Year:** 2021
+**Source type:** review — narrative
+**Journal/source:** *Journal of Neuroinflammation* 2021;18:297
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 34937577 / DOI 10.1186/s12974-021-02334-5
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist C, group G3)
+**Date processed:** 2026-10-19 (`FTR-20261019-34937577-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-G3-01` and authored by the batch integrator from the artefact's own front matter; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-34937577-01`; manifest `deepdive_manifests/PMID34937577.json`; landing [[paper_registry_current#PAPER 289]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0586
+**Short title:** Bjorklund 2026 Biometals — narrative review of iron dysregulation in the central nervous system and autism spectrum disorder; names the iron observables the repository lacks
+**Authors:** Bjørklund G, Harutyunyan H, Mkrtchyan Z, Baghdasaryan E, Avetisyan T, Meguid NA, Hussein F, Yenkoyan K
+**Year:** 2026
+**Source type:** review — narrative
+**Journal/source:** *Biometals* 2026;39(5):1339-1359
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42219438 / DOI 10.1007/s10534-026-00833-7
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist C, group G3)
+**Date processed:** 2026-10-19 (`FTR-20261019-42219438-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-G3-01` and authored by the batch integrator from the artefact's own front matter; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-42219438-01`; manifest `deepdive_manifests/PMID42219438.json`; landing [[paper_registry_current#PAPER 290]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0587
+**Short title:** Wainberg 2023 Alzheimers Res Ther — shared genetic risk loci for Alzheimer disease and related dementias, Parkinson disease and ALS; a locus near MAF, WWOX named only by proximity
+**Authors:** Wainberg M, Andrews SJ, Tripathy SJ
+**Year:** 2023
+**Source type:** primary research — GWAS summary-statistics analysis
+**Journal/source:** *Alzheimer's Research & Therapy* 2023;15:113
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 37328865 / DOI 10.1186/s13195-023-01244-3
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist D, group G4)
+**Date processed:** 2026-10-19 (`FTR-20261019-37328865-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-G4-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-37328865-01`; manifest `deepdive_manifests/PMID37328865.json`; landing [[paper_registry_current#PAPER 293]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0588
+**Short title:** Sathe 2025 Epilepsia Open — symptomatic vigabatrin-associated MRI toxicity and simultaneous hormonal therapy in infantile spasms; association, causation not established
+**Authors:** Sathe R, Shrestha G, Terango A, Tabibzadeh D, Rajaraman RR, Nariai H, Hussain SA
+**Year:** 2024
+**Source type:** primary research — single-centre retrospective cohort
+**Journal/source:** *Epilepsia Open* 2024;10(1):314-320
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39570186 / DOI 10.1002/epi4.13099
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist D, group G4)
+**Date processed:** 2026-10-19 (`FTR-20261019-39570186-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-G4-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** 001 (wave note only; status unchanged, no claim created or narrowed)
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-39570186-01`; manifest `deepdive_manifests/PMID39570186.json`; landing [[paper_registry_current#PAPER 294]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0589
+**Short title:** Stevering 2025 Epilepsia — vigabatrin-associated MRI abnormalities in tuberous sclerosis infants; VABAM-like change in unexposed children, hormonal therapy tied to symptoms but not to MRI
+**Authors:** Stevering C, Lequin M, Szczepaniak K, Sadowski K, Ishrat S, De Luca A, et al.
+**Year:** 2024
+**Source type:** primary research — registry plus prospective cohort, blinded MRI
+**Journal/source:** *Epilepsia* 2024;66(2):356
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39641935 / DOI 10.1111/epi.18190
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist D, group G4)
+**Date processed:** 2026-10-19 (`FTR-20261019-39641935-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-G4-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** 001 (wave note only; status unchanged, no claim created or narrowed)
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-39641935-01`; manifest `deepdive_manifests/PMID39641935.json`; landing [[paper_registry_current#PAPER 295]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0590
+**Short title:** Ng 2023 Cells — review of dopamine transporter deficiency syndrome; the CSF signature (raised HVA, ratio 5.0-13.0) as a reference
+**Authors:** Ng J, Barral S, Waddington SN, Kurian MA
+**Year:** 2023
+**Source type:** review — narrative, authors hold a gene-therapy patent
+**Journal/source:** *Cells* 2023;12(13):1737
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 37443770 / DOI 10.3390/cells12131737
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist D, group G4)
+**Date processed:** 2026-10-19 (`FTR-20261019-37443770-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-G4-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-37443770-01`; manifest `deepdive_manifests/PMID37443770.json`; landing [[paper_registry_current#PAPER 296]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0591
+**Short title:** Al Sari 2025 J Med Life — comparative review of DTDS and PKDYS2; internally inconsistent on anticholinergic and benzodiazepine use
+**Authors:** Al Sari RR, Thalib HI, Imad SS, Khan S, Haidar S, Al Zoabi BMK, et al.
+**Year:** 2025
+**Source type:** review — narrative (keyword search, no appraisal)
+**Journal/source:** *Journal of Medicine and Life* 2025;18(3):188
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40291937 / DOI 10.25122/jml-2024-0398
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist D, group G4)
+**Date processed:** 2026-10-19 (`FTR-20261019-40291937-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-G4-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-40291937-01`; manifest `deepdive_manifests/PMID40291937.json`; landing [[paper_registry_current#PAPER 297]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0592
+**Short title:** Naranjo-Lobo 2026 Front Neurol — pediatric parkinsonism clinical review and algorithm; age-stratified CSF and imaging work-up tables
+**Authors:** Naranjo-Lobo V, Hidalgo-Bravo MJ, Munoz-Chesta D, Troncoso-Schifferli M
+**Year:** 2026
+**Source type:** review — targeted narrative (AI language editing disclosed)
+**Journal/source:** *Frontiers in Neurology* 2026;17:1788936
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42483444 / DOI 10.3389/fneur.2026.1788936
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist D, group G4)
+**Date processed:** 2026-10-19 (`FTR-20261019-42483444-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-G4-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-42483444-01`; manifest `deepdive_manifests/PMID42483444.json`; landing [[paper_registry_current#PAPER 298]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0593
+**Short title:** Sugiyama 2025 Epilepsia Open — decreased CSF homovanillic acid and 5-HIAA in two adults with Dravet syndrome and parkinsonism; no non-parkinsonian Dravet control
+**Authors:** Sugiyama R, Saito T, Katsumoto A, Yoneno S, Akiyama T, Komaki H
+**Year:** 2025
+**Source type:** case report — two adults
+**Journal/source:** *Epilepsia Open* 2025;10(3):965-970
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40183510 / DOI 10.1002/epi4.70034
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist D, group G4)
+**Date processed:** 2026-10-19 (`FTR-20261019-40183510-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-G4-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-40183510-01`; manifest `deepdive_manifests/PMID40183510.json`; landing [[paper_registry_current#PAPER 299]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0594
+**Short title:** Ferraro 2022 Cells — cell-composition-corrected meta-analysis of substantia nigra expression in Parkinson disease; WWOX named once as a network-central protein, not differentially expressed
+**Authors:** Ferraro F, Fevga C, Bonifati V, Mandemakers W, Mahfouz A, Reinders M
+**Year:** 2022
+**Source type:** computational meta-analysis
+**Journal/source:** *Cells* 2022;11(2):198
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 35053314 / DOI 10.3390/cells11020198
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist D, group G4)
+**Date processed:** 2026-10-19 (`FTR-20261019-35053314-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-G4-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-35053314-01`; manifest `deepdive_manifests/PMID35053314.json`; landing [[paper_registry_current#PAPER 300]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0595
+**Short title:** Bian 2024 J Clin Neurol — review of the hypothalamic-pituitary-adrenal axis and epilepsy; background on CRH, ACTH and glucocorticoids
+**Authors:** Bian X, Yang W, Lin J, Jiang B, Shao X
+**Year:** 2024
+**Source type:** review — narrative, no methods
+**Journal/source:** *Journal of Clinical Neurology (Seoul, Korea)* 2024;20(2):131
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 38330420 / DOI 10.3988/jcn.2023.0308
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist D, group G4)
+**Date processed:** 2026-10-19 (`FTR-20261019-38330420-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-G4-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-38330420-01`; manifest `deepdive_manifests/PMID38330420.json`; landing [[paper_registry_current#PAPER 301]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0596
+**Short title:** Abdygalyk 2025 Medicina — structured narrative review of infantile spasms; one sentence and one table row on WWOX resting on one case report; neurosteroid hypothesis for ACTH unmeasured
+**Authors:** Abdygalyk B, Rabandiyarov M, Lepessova M, Koshkimbayeva G, Zharkinbekova N, Tekebayeva L, et al.
+**Year:** 2025
+**Source type:** review — narrative
+**Journal/source:** *Medicina* 2025;61(12):2223
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41470225 / DOI 10.3390/medicina61122223
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist D, group G4)
+**Date processed:** 2026-10-19 (`FTR-20261019-41470225-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-G4-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-41470225-01`; manifest `deepdive_manifests/PMID41470225.json`; landing [[paper_registry_current#PAPER 302]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0597
+**Short title:** Bagyinszky 2026 Cells — review of ERBB4 in the hypothalamic-pituitary-adrenal axis and neurodegeneration; the bridge is called largely speculative, WWOX not mentioned
+**Authors:** Bagyinszky E, An SSA
+**Year:** 2026
+**Source type:** review — narrative
+**Journal/source:** *Cells* 2026;15(18):1710
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42782811 / DOI 10.3390/cells15181710
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist D, group G4)
+**Date processed:** 2026-10-19 (`FTR-20261019-42782811-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-G4-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-42782811-01`; manifest `deepdive_manifests/PMID42782811.json`; landing [[paper_registry_current#PAPER 303]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0598
+**Short title:** Alammary 2026 JIMD Rep — severe neonatal GABA-transaminase deficiency in three siblings; the genetic counterpart of vigabatrin's target
+**Authors:** Alammary D, Low T, Srinivasan G, Dery M, Almutadares M, Marin S, et al.
+**Year:** 2026
+**Source type:** case report — three siblings
+**Journal/source:** *JIMD Reports* 2026;67(1):e70069
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41573381 / DOI 10.1002/jmd2.70069
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist D, group G4)
+**Date processed:** 2026-10-19 (`FTR-20261019-41573381-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-G4-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-41573381-01`; manifest `deepdive_manifests/PMID41573381.json`; landing [[paper_registry_current#PAPER 304]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0599
+**Short title:** Dumitrescu 2026 Int J Mol Sci — conceptual review of chloride-homeostasis failure and KCC2/NKCC1 microdomains in human disease; measures nothing about depolarising GABA in WWOX loss
+**Authors:** Dumitrescu D, Oprea S, Tulin R, Dumitru AV, Munteanu O, Pariza G
+**Year:** 2026
+**Source type:** review — conceptual, no methods section
+**Journal/source:** *International Journal of Molecular Sciences* 2026;27(7):3184
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41977367 / DOI 10.3390/ijms27073184
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist D, group G4)
+**Date processed:** 2026-10-19 (`FTR-20261019-41977367-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-G4-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-41977367-01`; manifest `deepdive_manifests/PMID41977367.json`; landing [[paper_registry_current#PAPER 305]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0600
+**Short title:** Nikkhah 2026 Case Rep Neurol Med — a novel SLC18A2 splice-acceptor variant in infantile parkinsonism-dystonia; oculogyric crises read as seizures, EEG non-epileptic, CSF not done
+**Authors:** Nikkhah A, Badv RS, Habibi SAH, Zorzi G, Mehdizadeh M
+**Year:** 2026
+**Source type:** case report
+**Journal/source:** *Case Reports in Neurological Medicine* 2026;2026:2230320
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42643745 / DOI 10.1155/crnm/2230320
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist D, group G4)
+**Date processed:** 2026-10-19 (`FTR-20261019-42643745-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-G4-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-42643745-01`; manifest `deepdive_manifests/PMID42643745.json`; landing [[paper_registry_current#PAPER 306]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0601
+**Short title:** Almutair 2026 Front Genet — two siblings with a homozygous SLC18A2 variant: same variant, different severity and tolerability; CSF not done
+**Authors:** Almutair M, Hakami W
+**Year:** 2026
+**Source type:** case series — two siblings
+**Journal/source:** *Frontiers in Genetics* 2026;17:1812336
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42245405 / DOI 10.3389/fgene.2026.1812336
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist D, group G4)
+**Date processed:** 2026-10-19 (`FTR-20261019-42245405-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-G4-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-42245405-01`; manifest `deepdive_manifests/PMID42245405.json`; landing [[paper_registry_current#PAPER 307]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0602
+**Short title:** Shi 2020 Transl Psychiatry — review of neuregulin 1 and ErbB4 in cortical interneurons; the proposed direction is to lower ErbB4 in PV+ cells, WWOX absent
+**Authors:** Shi L, Bergson CM
+**Year:** 2020
+**Source type:** review — narrative
+**Journal/source:** *Translational Psychiatry* 2020;10:190
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 32546684 / DOI 10.1038/s41398-020-00868-5
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist D, group G4)
+**Date processed:** 2026-10-19 (`FTR-20261019-32546684-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-G4-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-32546684-01`; manifest `deepdive_manifests/PMID32546684.json`; landing [[paper_registry_current#PAPER 308]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0603
+**Short title:** Li 2026 Rev Neurol — review of serotonin-associated mechanisms in sudden unexpected death in epilepsy; evidence mostly from DBA mice, WWOX absent
+**Authors:** Li B, Zhao W, Lin J, Chen Y, Zhou R, Ma K, Fang Y
+**Year:** 2026
+**Source type:** review — narrative
+**Journal/source:** *Revista de Neurología* 2026;81(3):45871
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41914335 / DOI 10.31083/RN45871
+**Date discovered:** 2026-10-19 (metabolic batch selection record, Scientist D, group G4)
+**Date processed:** 2026-10-19 (`FTR-20261019-41914335-01`)
+**Discovery source:** metabolic batch 2026-10-19 selection record
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-G4-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter; reading is `partial_fulltext_read` (**partial full text**), never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/metabolic_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-41914335-01`; manifest `deepdive_manifests/PMID41914335.json`; landing [[paper_registry_current#PAPER 309]]
+**Note:** class-level record. Not medical advice.
+
+---

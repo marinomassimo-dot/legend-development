@@ -1,0 +1,34 @@
+{
+ "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Metabolic batch. Orchestrator assumption: scientist-d is a fourth equivalent Scientist under the shared contract roles/scientist.md (body 32); operator authorised up to four Scientists on 2026-10-19.",
+ "TASK_ID": "DEBT-WWOX-DIRECT-D-20261019",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-d",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Read the WWOX-direct unread primaries that wave 1 named as reading debts, when a lawful full text exists: from scientist-a Liu S 2024 manifest (three references), from scientist-c's CC-20261019-SCIENTIST-C-G3-01 section 4 (Lo 2015 debts: photoreceptor translocation, MPP+ Tyr33, two Zfra papers, 2004 tau; Carvalho 2022 references: Chang 2003, Sze 2004, Lo 2008, Teng 2012, Tabarki 2015, Huang 2018, Chang 2007; Sze debts Hsu 2009), and the Choi 2026 VABAM anchor if a lawful body exists. Resolve each identifier from PubMed first (never from recall), dedupe with paper_packet.py, skip those with complete receipts.",
+ "SCOPE": {
+  "lot": "WWOX-direct reading debts named in wave-1 manifests and candidates; park paywalled ones with the cascade",
+  "brief": "disease-models/wwox/research/metabolic_batch_dispatch_brief_20261019.md"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "per paper manifest PASS, receipt staged",
+  "analysis note debts_wave_20261019_scientist-d.md",
+  "DEFAULTS_TAKEN and STOP_LOG here"
+ ],
+ "DEPENDENCIES": [],
+ "REVIEW_REQUIREMENT": "Mirror ex post",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently",
+ "MILESTONE_PLAN": [
+  "TASK_ACK/CLAIM",
+  "per-paper M0-M5",
+  "analysis note",
+  "self-eval",
+  "report"
+ ],
+ "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
+ "CURRENT_STATE": "ASSIGNED",
+ "assigned_on": "2026-10-19"
+}

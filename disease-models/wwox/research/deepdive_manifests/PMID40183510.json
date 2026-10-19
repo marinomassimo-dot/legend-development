@@ -2,84 +2,71 @@
  "schema_version": 2,
  "pmid": "40183510",
  "doi": "10.1002/epi4.70034",
- "pmcid": "PMC12163531",
  "receipt": "FTR-20261019-40183510-01",
- "context_policy": "QUESTION_DRIVEN",
- "context_policy_note": "Held before reading: the batch selection file's abstract-level 'why it matters' line and its per-theme summary of what the repository holds (GABA/vigabatrin modelled; no dopamine, catecholamine, adrenal, serotonin text). No registry record was opened before the first pass.",
  "landing": [
-  "disease-models/wwox/research/metabolic_wave_20261019_scientist-d.md",
-  "disease-models/wwox/research/metabolic_batch_selection_20261019.md"
+  "CC-20261019-SCIENTIST-B-H3-AUTONOMIC-HYPOGLYCAEMIA-01",
+  "interventions_wave_20261019_scientist-b"
  ],
  "skills_considered": [
   {
    "skill": "find-fulltext",
    "used": false,
-   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
   },
   {
    "skill": "legend-deepdive",
    "used": false,
-   "reason": "Run inline by the Scientist; the reading is the deliverable."
-  },
-  {
-   "skill": "legend-discovery",
-   "used": false,
-   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
-  },
-  {
-   "skill": "legend-hypothesis-forge",
-   "used": false,
-   "reason": "No lever is matured by this paper; forging a hypothesis from a comparator would manufacture a lead."
-  },
-  {
-   "skill": "legend-safety-triage",
-   "used": false,
-   "reason": "No compound is proposed for the reference genotype."
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
   },
   {
    "skill": "legend-locator-audit",
    "used": false,
-   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the triples are exposed in the commit candidate/analysis note for a blind auditor."
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared (group H3 has no WWOX evidence to compare against)."
   }
  ],
  "group_assessment": {
-  "total_publications": 0,
+  "performed": true,
+  "total_publications": 250,
   "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Sugiyama R[au]' 250; 'Sugiyama R[au] AND WWOX' 0 (surname-initial queries are ambiguous and are not evidence of authorship); last author 'Komaki H[au]'.",
   "research_type": "descriptive_clinical",
-  "output_kind": "primary_research",
   "is_primary_group_for_disease": false,
   "is_primary_group_for_gene": false,
-  "weighting": "Two adult women with Dravet syndrome (SCN1A; one variant of uncertain significance) with parkinsonism around 30 years of age, DAT SPECT normal in both, CSF HVA and 5-HIAA below the cited reference interval in both. n = 2, adults, no CSF from Dravet patients without parkinsonism, polypharmacy. The observation (low CSF metabolites in two adults) is firm as reported; the interpretation (reduced dopamine synthesis causes the parkinsonism) is the authors' hypothesis. Not a neonatal or WWOX system."
+  "weighting": "Two-patient case report from a Japanese paediatric/epilepsy centre; weigh as a hypothesis-generating observation with no control group and reference ranges taken from a review.",
+  "note": "Not a WWOX group."
  },
  "field_density": {
+  "wwox_directed": false,
   "queries": [
    {
-    "query": "WWOX AND (CSF OR cerebrospinal) AND (homovanillic OR 5-HIAA)",
-    "count": 0,
-    "source": "PubMed ESearch rettype=count 2026-10-19"
-   },
-   {
-    "query": "WWOX AND (dopamin* OR catecholamin* OR monoamine*)",
-    "count": 3,
-    "source": "PubMed ESearch rettype=count 2026-10-19"
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 0
    }
   ],
-  "note": "Counts are search hits only."
+  "note": "WWOX does not occur in the article."
  },
  "multihop": {
+  "performed": false,
   "references_enumerated": 24,
   "gene_direct_refs_in_source": [],
+  "enumeration_method": "dependency_integrity.py screen reference count, confirmed against <ref> elements in the JATS.",
   "resolved": [],
   "queued": [],
-  "note": "The article cites no WWOX-directed reference that this reading could identify; reference list counted, not read."
+  "note": "No WWOX-directed reference."
  },
  "corpus_crossquery": {
-  "query": "registry_records.py get --pmid 40183510 --hops 1 (run after the first pass)",
+  "performed": true,
+  "query": "registry_records.py get --theme adrenergic / epinephrine / noradrenaline / catecholamine / autonomic / sympathetic (each exit 1, no record) and --theme SUDEP (2 of 1586 records)",
   "hits": 0,
-  "note": "NO RECORD MATCHED in the seven registry surfaces at commit 718db84f; a statement about that query only."
+  "finding": "No registry record carries any adrenergic term, so the laboratory holds nothing on catecholamines to compare with; an empty result is a statement about those queries over those files, not about the literature. SUDEP occurs in two records only as a reason to keep seizure control, not as a mechanism."
  },
  "retraction_check": {
-  "checked": true,
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed efetch 2026-10-19 for this PMID (no CommentsCorrections element, publication types listed); JATS front matter",
+  "result": "No retraction, correction or expression of concern found in the PubMed record.",
+  "hold": false,
   "dependencies": {
    "flagged": [],
    "noted": [],
@@ -98,110 +85,132 @@
    },
    "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
    "unscreenable": {}
-  },
-  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+  }
  },
  "source_artifacts": [
   {
-   "path": "files/fulltext/PMID40183510_Sugiyama2025_PMC.xml",
+   "path": "files/fulltext/PMID40183510_Sugiyama2025_PMC12163531.xml",
    "sha256": "22b072ce5588fb1199213898942dd169ae41931e29bcc0d1580b080f668759ff",
    "kind": "article_text",
+   "note": "Europe PMC JATS for PMC12163531, 65,912 bytes; abstract, introduction, two case reports, Tables 1 and 2, Figure 1 legend, discussion and conclusions present; the supplementary file is not in the JATS (none listed).",
    "acquisition_recipe": {
     "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12163531/fullTextXML",
     "http_method": "GET",
-    "tier": "Europe PMC REST fullTextXML",
+    "tier": "europepmc_fulltextxml",
     "user_agent_policy": "none",
     "acquired_on": "2026-10-19",
+    "derived": false,
     "result_sha256": "22b072ce5588fb1199213898942dd169ae41931e29bcc0d1580b080f668759ff"
+   }
+  },
+  {
+   "path": "files/figures/PMID40183510/EPI4-10-965-g001.jpg",
+   "sha256": "570c3e38f2dc14b0f699f3000e8eaf3f93e34266103771e5535647c9ffc0d722",
+   "kind": "figure",
+   "note": "Figure 1 (file g001): axial T1 MRI of both cases (A, B) and DAT SPECT of both cases (C, D), inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12163531.1/EPI4-10-965-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "570c3e38f2dc14b0f699f3000e8eaf3f93e34266103771e5535647c9ffc0d722"
    }
   }
  ],
  "verbatim_locators": {
   "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 65,912 bytes; abstract, introduction, two case reports, Tables 1 and 2, Figure 1 legend, discussion and conclusions present; the supplementary file is not in the JATS (none listed).",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: whole article read, Tables 1 and 2 read cell by cell, Figure 1 inspected as an image. Case reports have no methods or limitations sections as such: the Discussion carries both and is read; the reference list (24) was screened for integrity, with ref 18 identified as the source of the reference ranges and not read.",
   "entries": [
    {
-    "proposition": "Two adult women with Dravet syndrome are described, with SCN1A variants, one classified as of uncertain significance.",
-    "snippet": "this variant was classified as having uncertain significance (PM2, PM5, and PP3)",
-    "anchor": "Case 1",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID40183510_Sugiyama2025_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "Both had normal striatal DAT SPECT binding.",
-    "snippet": "DAT SPECT also showed no decrease in the signal intensity in the striatum (Figure 1D).",
-    "anchor": "Case 2",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID40183510_Sugiyama2025_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "CSF HVA and 5-HIAA were below the reference intervals in both cases (Table 2).",
-    "snippet": "HVA (145–324 nmol/L18) | 36.6 | 79.3",
-    "anchor": "Table 2, HVA row",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID40183510_Sugiyama2025_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "5-HIAA is also low in both cases against the cited interval.",
-    "snippet": "5‐HIAA (67–140 nmol/L18) | 20.4 | 52.2",
-    "anchor": "Table 2, 5-HIAA row",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID40183510_Sugiyama2025_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "The authors state that CSF monoamine metabolite levels can be lowered secondarily by epilepsy and convulsions and by collection conditions.",
-    "snippet": "can be reduced secondarily because of epilepsy, convulsions, and other factors",
-    "anchor": "Discussion, para 3",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID40183510_Sugiyama2025_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "The authors state the lack of CSF data from Dravet patients without parkinsonism is a limitation.",
+    "proposition": "DESIGN: two adult women with SCN1A-related Dravet syndrome and parkinsonism; DAT SPECT and CSF monoamine metabolites measured once; levodopa-carbidopa started in both; no control group of Dravet patients without parkinsonism (the authors name this as the key limitation).",
     "snippet": "The lack of CSF data in patients with DS who do not have parkinsonism is an important limitation of our study.",
-    "anchor": "Discussion, final para",
     "surface": "body",
-    "artifact": "files/fulltext/PMID40183510_Sugiyama2025_PMC.xml",
+    "artifact": "files/fulltext/PMID40183510_Sugiyama2025_PMC12163531.xml",
+    "anchor": "Discussion, paragraph 5",
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Case 2 stayed on valproate through the work-up, so her CSF values were obtained on an antiseizure drug.",
-    "snippet": "She was taking VPA, but we did not discontinue it because she had been taking it for many years",
-    "anchor": "Case 2",
+    "proposition": "Table 2 reports four CSF analytes per case against the quoted reference range: HVA 36.6 and 79.3 against 145 to 324; 5-HIAA 20.4 and 52.2 against 67 to 140 nmol/L.",
+    "snippet": "HVA (145–324 nmol/L18)36.679.35‐HIAA (67–140 nmol/L18)20.452.2",
     "surface": "body",
-    "artifact": "files/fulltext/PMID40183510_Sugiyama2025_PMC.xml",
+    "artifact": "files/fulltext/PMID40183510_Sugiyama2025_PMC12163531.xml",
+    "anchor": "Table 2, rows 1 and 2",
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Only one earlier report measured CSF monoamine metabolites in Dravet parkinsonism and it gave no measured values.",
-    "snippet": "this is the only report in which CSF monoamine metabolites were measured in such patients, and the actual measured values were not reported",
-    "anchor": "Discussion, para 3",
+    "proposition": "THE NORADRENALINE ARM IS IN THE TABLE AND NOT IN THE TEXT: CSF MHPG, the main central noradrenaline metabolite, is 27.7 in Case 1 (below the quoted 35 to 65) and 40.7 in Case 2 (inside it); the abstract, discussion and conclusion speak only of HVA and 5-HIAA.",
+    "snippet": "MHPG (35–65 nmol/L18)27.740.73‐OMD (<100 nmol/L18)",
     "surface": "body",
-    "artifact": "files/fulltext/PMID40183510_Sugiyama2025_PMC.xml",
+    "artifact": "files/fulltext/PMID40183510_Sugiyama2025_PMC12163531.xml",
+    "anchor": "Table 2, row 3",
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Case 1 improved on levodopa-carbidopa; Case 2 was started on a low dose and effect was still being evaluated.",
-    "snippet": "We initiated treatment with a low dose of levodopa and carbidopa combination and are evaluating its effectiveness (Table 1).",
-    "anchor": "Case 2",
+    "proposition": "Discussion wording: HVA and 5-HIAA levels significantly lower than the published reference values; the evidence is one value per patient against a published range, with no test and n of 2 (the abstract says the same).",
+    "snippet": "In both cases, HVA and 5‐HIAA levels were significantly lower than the reference values in the published report",
     "surface": "body",
-    "artifact": "files/fulltext/PMID40183510_Sugiyama2025_PMC.xml",
+    "artifact": "files/fulltext/PMID40183510_Sugiyama2025_PMC12163531.xml",
+    "anchor": "Discussion, paragraph 3",
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The authors' conclusion is that decreased dopamine synthesis may be present in at least some patients with Dravet syndrome.",
-    "snippet": "we conclude that a decrease in dopamine synthesis may be present at least in some patients with DS",
-    "anchor": "Discussion, para 3",
+    "proposition": "The authors assert the CSF results were reliable because no seizures or other confounders preceded sampling, although Case 2 had frequent seizures into adulthood and the interval from the last seizure and the medication state (valproate, fenfluramine; aripiprazole in Case 1) at sampling are not given.",
+    "snippet": "No epileptic seizures and other causes that can affect the CSF results occurred before the examination; therefore, the measurement results were considered reliable.",
     "surface": "body",
-    "artifact": "files/fulltext/PMID40183510_Sugiyama2025_PMC.xml",
+    "artifact": "files/fulltext/PMID40183510_Sugiyama2025_PMC12163531.xml",
+    "anchor": "Discussion, paragraph 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Medication in Table 1 includes fenfluramine (a serotonin-releasing drug) in Case 2 and aripiprazole in Case 1; risperidone and valproate were stopped in Case 1 at admission; whether these altered the CSF metabolites is not addressed.",
+    "snippet": "First, we considered the possibility of drug‐induced parkinsonism and discontinued valproic acid (VPA) and risperidone; however, bradykinesia, rigidity, and tremor persisted",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40183510_Sugiyama2025_PMC12163531.xml",
+    "anchor": "Case reports, Case 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DAT SPECT was normal in both patients (specific binding ratios 10.49 and 9.58 in Case 1; 9.32 and 9.88 in Case 2), which the authors read as intact presynaptic dopaminergic terminals.",
+    "snippet": "No decrease in the striatal signals was observed (Figure 1C).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40183510_Sugiyama2025_PMC12163531.xml",
+    "anchor": "Case reports, Case 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 C and D show symmetric intense striatal uptake on the colour scale in both patients, consistent with the stated ratios; panels A and B are T1 MRI with non-specific atrophy per the caption.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1: panels A and B axial T1 MRI of Case 1 and Case 2; panels C and D DAT SPECT of Case 1 and Case 2, two bilateral bright striatal comma-shaped uptakes on a 0 to 5 BP colour scale, symmetric.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40183510/EPI4-10-965-g001.jpg",
+    "anchor": "Figure 1 A-D, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "two adult women with SCN1A Dravet syndrome and parkinsonism",
+     "genotype": "SCN1A heterozygous missense, one classified uncertain significance and one likely pathogenic",
+     "endpoint": "MRI and DAT SPECT striatal binding ratio"
+    }
+   },
+   {
+    "proposition": "Levodopa response: Case 1 improved on levodopa-carbidopa with the benefit continuing about a year; Case 2 had only started a low dose. The authors recognise previous reports of response as inconclusive and age-dependent.",
+    "snippet": "previously, the efficacy of levodopa's effect on parkinsonism in patients with DS has been reported as inconclusive.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40183510_Sugiyama2025_PMC12163531.xml",
+    "anchor": "Discussion, paragraph 6",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Internal inconsistencies of age: Case 1 is called 29 years in the text and 28 in Table 1; the abstract places onset of parkinsonism around 30 for both, while the text dates Case 1 onset at 27 and Case 2 slowness and hypomimia in the early 20s.",
+    "snippet": "Case 1 was a 29‐year‐old woman who manifested a typical clinical course of DS and was later diagnosed genetically.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40183510_Sugiyama2025_PMC12163531.xml",
+    "anchor": "Case reports, Case 1 first sentence; Table 1 row Age",
     "panel_text_relation": "text_only"
    }
-  ],
-  "source_fulltext_indexed": true,
-  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12163531/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
-  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body or a table."
+  ]
  }
 }

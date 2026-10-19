@@ -76,3 +76,17 @@ Note text to carry:
 13. Reference 16 is the case report | A Novel Missense Variant in the SDR Domain of the WWOX Gene Leads to Complete Loss of WWOX Protein with Early-Onset Epileptic Encephalopathy and Severe Developmental Delay. | Reference 16
 14. A printed beta lies outside its own interval | rs2222896 AA AG −0.647 −11.274 <0.0004 −1.053 −0.741 | Table 4, TG block
 15. CAD genotype column layout in the deposit | RUNS CAD rs2278075: 5 runs; A/T x30, T/T x14, A/A x386, T/T x14, A/T x178 | `files/fulltext/PMID35559044_Liu2022_supplement/Table1_aggregate_derivation.txt` (aggregate derivation of the authors' Table1.XLSX)
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_001` · 2026-10-19 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.20 -> WM_v7.21 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** not run — no baseline claim is narrowed and no MAJOR contingency is declared; the candidate's locator triples are carried for a later audit.
+**What landed:** 3 PAPER record(s) (PAPER 247, PAPER 248, PAPER 249) with their LIT records. Queue entry FT-019 closed; the reading debt declared in `LIT-0402` marked paid; `CORPUS-STUB-157` title corrected with the superseded wording quoted. The optional sentence for `PAPER 084` was not written (parked).
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.

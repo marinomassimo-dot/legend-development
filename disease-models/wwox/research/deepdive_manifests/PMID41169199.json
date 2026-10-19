@@ -1,0 +1,322 @@
+{
+ "schema_version": 2,
+ "pmid": "41169199",
+ "doi": "10.4103/NRR.NRR-D-25-00529",
+ "receipt": "FTR-20261019-41169199-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-H3-ADRENERGIC-SEIZURE-01",
+  "interventions_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared (group H3 has no WWOX evidence to compare against)."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 126054,
+  "publications_on_gene": 4,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Li S[au]' 126054; 'Li S[au] AND WWOX' 4 (surname-initial queries are ambiguous and are not evidence of authorship); last author 'Jin SX[au]'.",
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Two-author narrative review whose central experimental claims are the authors own earlier mouse work (their citations dominate the enriched-environment and microglia sections); weigh as a position paper for beta2 agonists in Alzheimer disease.",
+  "note": "Not a WWOX group."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 0
+   }
+  ],
+  "note": "WWOX does not occur in the article."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 236,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "dependency_integrity.py screen reference count, confirmed against <ref> elements in the JATS.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-directed reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --theme adrenergic / epinephrine / noradrenaline / catecholamine / autonomic / sympathetic (each exit 1, no record) and --theme SUDEP (2 of 1586 records)",
+  "hits": 0,
+  "finding": "No registry record carries any adrenergic term, so the laboratory holds nothing on catecholamines to compare with; an empty result is a statement about those queries over those files, not about the literature. SUDEP occurs in two records only as a reason to keep seizure control, not as a mechanism."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed efetch 2026-10-19 for this PMID (no CommentsCorrections element, publication types listed); JATS front matter",
+  "result": "No retraction, correction or expression of concern found in the PubMed record.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 236,
+   "references_screened": 229,
+   "references_with_doi": 229,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 7
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41169199_Li2026_PMC13568679.xml",
+   "sha256": "cfa50dc3bdf0f68c96b286a3cc930394700b99a59ddd49a0cf51367bbb32e911",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC13568679, 372,923 bytes; abstract, introduction, search strategy, nine thematic sections, future directions, conclusion, Table 1 and Figures 1 to 4 legends present.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13568679/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "cfa50dc3bdf0f68c96b286a3cc930394700b99a59ddd49a0cf51367bbb32e911"
+   }
+  },
+  {
+   "path": "files/figures/PMID41169199/NRR-21-4832-g001.webp",
+   "sha256": "bdac9c154f3ee9816ca3e8c65028577eb172fe01b588e3602c47a94999c9c749",
+   "kind": "figure",
+   "note": "Figure 1 (file g001, published as 700 px or smaller WebP): schematic, inspected as an image (enlarged for viewing only).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13568679.1/NRR-21-4832-g001.webp",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "bdac9c154f3ee9816ca3e8c65028577eb172fe01b588e3602c47a94999c9c749"
+   }
+  },
+  {
+   "path": "files/figures/PMID41169199/NRR-21-4832-g002.webp",
+   "sha256": "db42df23515c862a83959d8ef29c443ad1f4d5b4c761e6cb00e905b693358948",
+   "kind": "figure",
+   "note": "Figure 2 (file g002, published as 700 px or smaller WebP): schematic, inspected as an image (enlarged for viewing only).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13568679.1/NRR-21-4832-g002.webp",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "db42df23515c862a83959d8ef29c443ad1f4d5b4c761e6cb00e905b693358948"
+   }
+  },
+  {
+   "path": "files/figures/PMID41169199/NRR-21-4832-g003.webp",
+   "sha256": "abe2831033dd486ddda5e7b46fdc15a92051f27157e11afe62514eabd6bcb1af",
+   "kind": "figure",
+   "note": "Figure 3 (file g003, published as 700 px or smaller WebP): schematic, inspected as an image (enlarged for viewing only).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13568679.1/NRR-21-4832-g003.webp",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "abe2831033dd486ddda5e7b46fdc15a92051f27157e11afe62514eabd6bcb1af"
+   }
+  },
+  {
+   "path": "files/figures/PMID41169199/NRR-21-4832-g004.webp",
+   "sha256": "e8315d42e2120117048d843e9f5fbb0a5803900cf828ac96823c20ace3753cf9",
+   "kind": "figure",
+   "note": "Figure 4 (file g004, published as 700 px or smaller WebP): schematic, inspected as an image (enlarged for viewing only).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13568679.1/NRR-21-4832-g004.webp",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "e8315d42e2120117048d843e9f5fbb0a5803900cf828ac96823c20ace3753cf9"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 372,923 bytes; abstract, introduction, search strategy, nine thematic sections, future directions, conclusion, Table 1 and Figures 1 to 4 legends present.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: whole article read, Table 1 read, all four figures (schematics, native WebP files of 596 to 700 px) inspected as images. A narrative review: no results or limitations sections of its own; the reference list (236) was screened for integrity, not read, so every effect and number is a restatement.",
+  "entries": [
+   {
+    "proposition": "DESIGN: a narrative review with a stated search of PubMed, ScienceDirect and ClinicalTrials.gov restricted to English-language publications from 2005 to March 2025.",
+    "snippet": "The review of the literature included only publications written in English between 2005 and March 2025.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41169199_Li2026_PMC13568679.xml",
+    "anchor": "Search Strategy",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The stated 2005 start does not match the citations: the alpha2 paragraph cites receptor-density work from 1991 and 1992, so the search window is not applied to cited content.",
+    "snippet": "AD brains show a 50% reduction of α2-AR density in the prefrontal cortex, consistent with noradrenergic synapse loss (Kalaria and Andorn, 1991; Pascual et al., 1992).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41169199_Li2026_PMC13568679.xml",
+    "anchor": "Alpha-adrenergic receptors, paragraph 4",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "AUTHOR-OWN EVIDENCE: the central enriched-environment and beta2 receptor claim is the authors earlier work (cited as Li 2013 and Jin 2023), with the knockout result as the receptor-specific evidence.",
+    "snippet": "We had earlier shown that EE prevents hippocampal synaptic plasticity impairments caused by AD brain-derived Aβ oligomers, an effect mediated by activation of the receptor β2-AR (Li et al., 2013).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41169199_Li2026_PMC13568679.xml",
+    "anchor": "Enriched environments guard against AD via beta2 activation, paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review states it is unknown whether beta2 activation improves learning and memory enough to overcome AD deficits, which is at odds with its closing claim that it can halt and reverse AD.",
+    "snippet": "It is not known whether activation of the receptor, β2-AR, improves learning and memory sufficiently to overcome AD-related deficits.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41169199_Li2026_PMC13568679.xml",
+    "anchor": "Enriched environments guard against AD via beta2 activation, paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CONTRADICTION IN THE INTRODUCTION: knockout of the beta2 receptor gene rescued pathology in a mouse model, and the review cites this as support for an agonist strategy.",
+    "snippet": "Furthermore, ablation of the β2-AR gene rescued pathological features of senile PS1/APP mice, indicating that β2-AR is an attractive target for therapeutic purposes for the alleviation of AD (Wang et al., 2013a).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41169199_Li2026_PMC13568679.xml",
+    "anchor": "Introduction, paragraph 4",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "BIVALENT SIGNAL: amyloid binding to the beta2 receptor hyperactivates PKA, raises AMPA receptor activity and calcium influx and leads to excitotoxic death, while the same cAMP-PKA axis is presented as neuroprotective; the review calls the action bivalent.",
+    "snippet": "These results highlight the bivalent nature of Aβ action on β2-AR signaling and its involvement in AD progression.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41169199_Li2026_PMC13568679.xml",
+    "anchor": "Loss of noradrenergic tone and beta2 dysfunction, last paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "ALPHA-2: the review says selective alpha2 agonists confer neuroprotection and also that alpha2A activation increases amyloid-beta production and alpha2B deletion enhances memory.",
+    "snippet": "α2-ARs also have a dual role in AD. Whereas α2b-AR deletion is associated with enhanced memory and reduced AD risk, activation of α2A-AR increases production of Aβ",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41169199_Li2026_PMC13568679.xml",
+    "anchor": "Alpha-adrenergic receptors, paragraph 4",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "ALPHA-1: stimulation of alpha1 receptors is said to maintain synaptic function, and blocking alpha1 receptors (doxazosin, prazosin, terazosin) is also said to be therapeutic.",
+    "snippet": "Blocking α1-AR, however, is also of therapeutic benefit.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41169199_Li2026_PMC13568679.xml",
+    "anchor": "Alpha-adrenergic receptors, paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "BETA-1: a beta1 agonist (xamoterol) is reported to reduce amyloid and tau pathology while a beta1 antagonist (nebivolol) also reduced brain amyloid with no cognitive effect; the review concludes that beta1 activation could prevent pathology.",
+    "snippet": "Notably, the β1-AR antagonist nebivolol decreased brain content of Aβ in Tg2576 mice but was without effect on cognitive function (Wang et al., 2013b).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41169199_Li2026_PMC13568679.xml",
+    "anchor": "Beta1-adrenergic receptors, paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The cohort evidence for beta2 agonists is one registry-style association (743,948 cases over 25 years, antagonist users at higher risk, selective beta2 agonist users at lower risk); confounding by indication is not discussed.",
+    "snippet": "A recent study of 743,948 cases over 25 years identified an elevated risk of developing AD among individuals using non-selective β-AR antagonists",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41169199_Li2026_PMC13568679.xml",
+    "anchor": "Introduction, paragraph 4",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "BRAIN PENETRANCE: the review says the clinically used beta2 agonists (salmeterol, formoterol) are weakly permeable through the blood-brain barrier and salbutamol has minimal penetration, so central efficacy of the drugs in the cited work is not established for oral or inhaled use.",
+    "snippet": "Salmeterol and formoterol, the most clinically applied β2-AR agonists, are weakly permeable through the BBB and thus have poor CNS efficacy.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41169199_Li2026_PMC13568679.xml",
+    "anchor": "Future Directions, Optimizing central nervous system targeting",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Sign slip: the text says beta2 signalling promotes release of inhibitory neurotrophic factors such as BDNF, yet describes BDNF as critical for survival and plasticity; the sentence is internally contradictory.",
+    "snippet": "β2-AR promotes excretion of inhibitory neurotrophic factors such as BDNF",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41169199_Li2026_PMC13568679.xml",
+    "anchor": "Microglial and astrocytic function regulation, paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "LACTATE: beta2 receptors are said to mediate training-induced astrocytic lactate release needed for long-term memory, a single sentence with no value.",
+    "snippet": "β2-ARs also mediate training-induced astrocytic lactate release, a process critical for long-term memory establishment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41169199_Li2026_PMC13568679.xml",
+    "anchor": "Microglial and astrocytic function regulation, paragraph 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DESENSITISATION: long-term stimulation of the beta2 receptor is said to cause arrestin-mediated desensitisation and internalisation, so chronic agonist use may lose efficacy; the authors list it as an unresolved challenge.",
+    "snippet": "Long-term stimulation of β2-AR has been implicated in receptor desensitization by mostly β-arrestin recruitment and subsequent internalization",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41169199_Li2026_PMC13568679.xml",
+    "anchor": "Future Directions, Preventing receptor desensitization",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "OVERSTATEMENT: the conclusion says manipulation of beta2 signalling can halt and also reverse AD pathology; every supporting entry in Table 1 is cell culture, slice or rodent work and no clinical result is cited.",
+    "snippet": "Ultimately, manipulation of β2-AR signaling can not only halt AD pathology but also reverse it with great potential for other neurodegenerative conditions.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41169199_Li2026_PMC13568679.xml",
+    "anchor": "Conclusion and Perspective",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1: the schematic of the enriched-environment experiment uses isoproterenol (a non-selective beta agonist) and propranolol (a non-selective beta blocker) alongside a beta2 knockout; the receptor subtype is attributed from the knockout.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1: panels of standard housing and enriched environment mice, arrows from mice fed with isoproterenol or propranolol and from beta2-AR KO mice to Normal LTP or Enhanced LTP with Increased beta2-AR expression.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41169199/NRR-21-4832-g001.webp",
+    "anchor": "Figure 1, native WebP",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "review schematic of mouse experiments from the authors laboratory",
+     "endpoint": "none (no data)"
+    }
+   },
+   {
+    "proposition": "Figures 3 and 4 draw the same cAMP, PKA and receptor axis once as a route to neuronal death and tau phosphorylation (amyloid-bound receptor) and once as a route to synaptic plasticity enhancement (agonist-activated receptor); neither carries data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3: neuron panel with Abeta bound to beta2-AR, adenylyl cyclase, cAMP, PKA leading to PKA-JNK and tau phosphorylation and a PKA arrow to AMPAR with calcium influx and neuronal death; microglia panel with NF-kB and cytokines.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41169199/NRR-21-4832-g003.webp",
+    "anchor": "Figure 3 (with Figure 4), native WebP",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "review schematic",
+     "endpoint": "none (no data)"
+    }
+   }
+  ]
+ }
+}

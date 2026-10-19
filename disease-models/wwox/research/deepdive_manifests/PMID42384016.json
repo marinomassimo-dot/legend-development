@@ -1,0 +1,376 @@
+{
+ "schema_version": 2,
+ "pmid": "42384016",
+ "doi": "10.2337/db26-0293",
+ "pmcid": "PMC13493211",
+ "receipt": "FTR-20261019-42384016-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the interventions selection file's one-line 'why it matters' for this row and the group H5 header, plus the earlier readings of this lot done in this session (Yuskaitis, Phillips-Farfan, Salvati) and the registry theme records CLAIM 042 and DL-MECH-020 admitted after the first pass of the first paper. No registry record about this paper (none exists).",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/interventions_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a non-WWOX comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype; class-level literature only, BLOCK-1 caution carried in the analysis note."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the load-bearing triples were checked mechanically by locator_audit.py and are exposed in the analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Two small human studies in adults with type 1 diabetes: a first-in-human 13C-BHB magnetic resonance spectroscopy tracer study (5 diabetes, 6 controls) and an open-label randomised 4-week MCT-versus-isocaloric diet pilot (8 per arm) with clamped hypoglycaemia, working-memory tasks and fMRI. The observation (higher memory accuracy and some regional BOLD differences in the MCT arm at plasma BHB below 0.5 mmol/L) is firm as reported for 16 people; the interpretation that ketones supported brain metabolism is the authors' inference, and the accuracy outcome shows a ceiling effect. Adults with insulin-treated diabetes and insulin-induced hypoglycaemia; not neonates, not encephalopathy, not WWOX."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (fasting OR \"caloric restriction\" OR \"calorie restriction\" OR \"dietary restriction\")",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the four hits are type 2 diabetes association studies (fasting glucose), none a fasting or restriction intervention"
+   },
+   {
+    "query": "WWOX AND (mTOR OR mTORC1 OR AMPK)",
+    "count": 8,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (hypoglycemia OR hypoglycaemia OR dextrose OR \"glucose infusion\")",
+    "count": 21,
+    "source": "PubMed ESearch rettype=count 2026-10-19; hits are glucose-metabolism, glycolysis and association papers, none an infusion or dextrose intervention"
+   },
+   {
+    "query": "WWOX AND (edema OR oedema OR hyponatremia OR \"fluid overload\")",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the two hits are a high-altitude pulmonary oedema locus list and a zebrafish embryo knockdown paper"
+   },
+   {
+    "query": "WWOX AND (refeeding OR thiamine OR \"parenteral nutrition\")",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are PubMed search hits only (ESearch rettype=count, 2026-10-19), not a census; none of the WWOX hits tests the intervention of this group."
+ },
+ "multihop": {
+  "references_enumerated": 47,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted (47 entries), not read item by item; no WWOX-directed reference seen in the body."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42384016 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED for this PMID in the seven registry surfaces at commit 0c85331b341e; a statement about that query only. CLAIM 042 and DL-MECH-020 (ketogenic-diet lines) admitted for comparison after the first pass."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 47,
+   "references_screened": 47,
+   "references_with_doi": 47,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42384016_Trico2026_PMC.xml",
+   "sha256": "953835b52ab4849d3880f515d1ea4c267a7b51516202d32b1efd92749933b913",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13493211/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "953835b52ab4849d3880f515d1ea4c267a7b51516202d32b1efd92749933b913"
+   }
+  },
+  {
+   "path": "files/figures/PMID42384016/native/db260293f1.webp",
+   "sha256": "91ac76ee932518072c17702ad7d8afdc056560e1e9e75cb8a4898c908f3f605e",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13493211.1/db260293f1.webp",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "91ac76ee932518072c17702ad7d8afdc056560e1e9e75cb8a4898c908f3f605e"
+   }
+  },
+  {
+   "path": "files/figures/PMID42384016/native/db260293f2.webp",
+   "sha256": "9e51062cc7e079693981a00646096af7cced602cc42f2875bda971efce40a51d",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13493211.1/db260293f2.webp",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "9e51062cc7e079693981a00646096af7cced602cc42f2875bda971efce40a51d"
+   }
+  },
+  {
+   "path": "files/figures/PMID42384016/native/db260293f3.webp",
+   "sha256": "38143bbeb225666daf56e61562d330085ad0cf6f78e8a1738fe9223d1cc267f7",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13493211.1/db260293f3.webp",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "38143bbeb225666daf56e61562d330085ad0cf6f78e8a1738fe9223d1cc267f7"
+   }
+  },
+  {
+   "path": "files/figures/PMID42384016/native/db260293f4.webp",
+   "sha256": "0caabe38e8a140c360ae741dde90cf612ff68999480f97288c6b48058162eae6",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13493211.1/db260293f4.webp",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "0caabe38e8a140c360ae741dde90cf612ff68999480f97288c6b48058162eae6"
+   }
+  },
+  {
+   "path": "files/figures/PMID42384016/native/db260293f5.webp",
+   "sha256": "e1f0fa3058a30faa9cf05a152c98dcbf282f99926ad1b2b4c94096b541857c99",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13493211.1/db260293f5.webp",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "e1f0fa3058a30faa9cf05a152c98dcbf282f99926ad1b2b4c94096b541857c99"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The tracer study had 11 participants (5 with type 1 diabetes, 6 controls) and the diet trial 16 (8 per arm).",
+    "snippet": "A total of 11 individuals were enrolled in the MRS study.",
+    "anchor": "Methods, Study Cohorts",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42384016_Trico2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The clamp used insulin with a variable 20% dextrose infusion to hold plasma glucose at 50 mg/dL (2.8 mmol/L).",
+    "snippet": "Participants received a primed (200 mU/kg) continuous (2 mU/kg/min) intravenous infusion of insulin together with a variable 20% dextrose infusion adjusted to achieve the target plasma glucose level of 50 mg/dL (2.8 mmol/L).",
+    "anchor": "Methods, MRS Study Experimental Protocol",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42384016_Trico2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The diet trial was open-label.",
+    "snippet": "Because of the distinctive taste of MCT oil, participants were not blinded to diet assignment.",
+    "anchor": "Methods, MCT Diet Study Experimental Protocol",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42384016_Trico2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The sample size was set to detect a 5% difference in working-memory accuracy with eight participants per group.",
+    "snippet": "a sample size of eight participants with T1DM per group was calculated to provide 85% power",
+    "anchor": "Methods, Statistical Analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42384016_Trico2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The results sentence reports plasma BHB steady-state during infusion with '(2.8 mmol/L)' in brackets, which is the glucose clamp target; Figure 1A plots plasma BHB near 0.6-0.7 mmol/L.",
+    "snippet": "reached similar steady-state levels (60–90 min) during BHB infusion under clamped hypoglycemia (2.8 mmol/L)",
+    "anchor": "Results, Brain Ketone Metabolism",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42384016_Trico2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The text reports a higher relative contribution of labelled BHB to brain oxidative metabolism in type 1 diabetes (17.3% versus 13.7%).",
+    "snippet": "the relative contribution of labeled BHB to total oxidative capacity was significantly higher in astrocytes and neurons of participants with T1DM",
+    "anchor": "Results, Brain Ketone Metabolism",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42384016_Trico2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1J, K shows both total TCA flux and absolute ketone oxidation lower in type 1 diabetes (p < 0.0001); the higher relative contribution in panel L arises because the TCA denominator fell more than ketone oxidation, not because absolute BHB oxidation rose.",
+    "snippet": "Visual attestation of Figure 1J-L: V_tca total about 1.07 (healthy) versus 0.72 (T1DM) micromol/g/min; V_kb total about 0.060 versus 0.049; V_kb/V_tca total about 13.7% versus 17.3%; plasma BHB (panel A) about 0.6-0.7 mmol/L in both groups at steady state.",
+    "anchor": "Figure 1A, J, K, L (image db260293f1)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID42384016/native/db260293f1.webp"
+    ],
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "humans, 5 with type 1 diabetes and 6 healthy, 13C-MRS during insulin-hypoglycaemic clamp with BHB infusion",
+     "endpoint": "modelled TCA and ketone oxidation rates"
+    },
+    "qualifies": "entries[5]",
+    "qualifies_needle": "the relative contribution of labeled BHB to total oxidative capacity was significantly higher"
+   },
+   {
+    "proposition": "On the primary memory outcome the MCT group had 100% accuracy and the ISO group 93% on the Sternberg digit tasks, with no reaction-time difference.",
+    "snippet": "without reaction time differences (P = 0.51)",
+    "anchor": "Results, Working Memory Performance",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42384016_Trico2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2C shows 6 of 8 MCT participants at 100% accuracy (ceiling), one at about 72%, the ISO group at 83-94%, and healthy controls median about 93% with a wide range.",
+    "snippet": "Visual attestation of Figure 2C, D: S6D accuracy; T1DM-MCT six of eight points at 100%, one near 94%, one near 72%; T1DM-ISO between about 83% and 94%; healthy median about 93%, range about 53-100%; p = 0.02 MCT versus ISO, p = 0.03 versus healthy; reaction time p = 0.31 and 0.23.",
+    "anchor": "Figure 2C, D (image db260293f2)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID42384016/native/db260293f2.webp"
+    ],
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "adults with type 1 diabetes after 4 weeks of MCT or isocaloric diet, and healthy controls, clamped hypoglycaemia",
+     "endpoint": "Sternberg 6-digit accuracy and reaction time"
+    }
+   },
+   {
+    "proposition": "The authors state plasma BHB stayed below 0.5 mmol/L in all participants with diabetes after four weeks of MCT.",
+    "snippet": "in fact, plasma BHB levels remained lower than 0.5 mmol/L in all participants with T1DM after the 4-week MCT-enriched diet",
+    "anchor": "Discussion, para 7",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42384016_Trico2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3A shows BHB about 0.27 mmol/L before the clamp in the MCT group falling to about 0.13 at the memory test, against about 0.05-0.08 in the ISO group.",
+    "snippet": "Visual attestation of Figure 3A, B, C, E: BHB MCT about 0.27 at -20 min, 0.26 at 0, 0.13 at 65 and 100 min versus ISO about 0.07-0.05 mmol/L; FFA MCT about 0.43-0.49 then 0.16-0.15 versus ISO about 0.12-0.2; BHB AUC versus S6D accuracy r = 0.64, p = 0.01 pooling both diet groups; FFA AUC versus accuracy r = 0.37, p = 0.16.",
+    "anchor": "Figure 3 (image db260293f3)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID42384016/native/db260293f3.webp"
+    ],
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "adults with type 1 diabetes, diet groups pooled for correlations",
+     "endpoint": "BHB and FFA concentrations and correlation with accuracy"
+    }
+   },
+   {
+    "proposition": "The Results state that both BHB and FFA AUCs strongly correlated with working memory performance; Figure 3E shows the FFA-accuracy correlation as not significant.",
+    "snippet": "strongly correlated with working memory performance measured by the S6D test",
+    "anchor": "Results, Association Between Circulating BHB and FFA Levels",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42384016_Trico2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion says the brain-activity correlation is in the MCT group; the Figure 5 caption and axes show all participants pooled (n about 32).",
+    "snippet": "which showed a strong correlation between changes in regional brain activity and memory performance in the T1DMMCT group (Fig. 5)",
+    "anchor": "Discussion, para 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42384016_Trico2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 5 pools all three groups (about 32 points) for the BOLD-accuracy correlations (r 0.48, 0.48, 0.57); the MCT points are a subset.",
+    "snippet": "Visual attestation of Figure 5A-C: S6D accuracy against BOLD signal change with healthy (circles), ISO (open squares) and MCT (filled squares) points in one regression; L APC r = 0.48, L POIFG r = 0.48, DVACC r = 0.57.",
+    "anchor": "Figure 5 (image db260293f5)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID42384016/native/db260293f5.webp"
+    ],
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "all participants, three groups pooled, clamped hypoglycaemia fMRI",
+     "endpoint": "accuracy versus regional BOLD change"
+    },
+    "qualifies": "entries[12]",
+    "qualifies_needle": "in the T1DMMCT group (Fig. 5)"
+   },
+   {
+    "proposition": "The MCT diet modestly and non-significantly lowered epinephrine in n = 8 per group.",
+    "snippet": "The MCT diet produced a modest, nonsignificant decrease in plasma epinephrine during insulin-induced hypoglycemia",
+    "anchor": "Results, Counterregulatory Hormone Responses",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42384016_Trico2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors list small size, no baseline cognition and open-label design among limitations.",
+    "snippet": "Limitations included the small sample size impeding adjustment for potentially cognition-relevant covariates, limited cognitive domain testing with no baseline assessment, and incomplete continuous glucose monitoring data availability.",
+    "anchor": "Discussion, limitations paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42384016_Trico2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The conclusion proposes the strategy may allow tighter glycaemic control without increased risk of hypoglycaemic brain injury.",
+    "snippet": "This novel nutritional strategy may allow tighter glycemic control in this vulnerable population without increasing the risk of hypoglycemia-induced brain injury.",
+    "anchor": "Discussion, conclusion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42384016_Trico2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13493211/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure panel."
+ }
+}

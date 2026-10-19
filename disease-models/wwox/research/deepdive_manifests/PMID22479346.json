@@ -1,0 +1,382 @@
+{
+ "schema_version": 2,
+ "pmid": "22479346",
+ "doi": "10.1371/journal.pone.0032907",
+ "receipt": "FTR-20261019-22479346-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-H3-WWOX-BP-01",
+  "interventions_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared (group H3 has no WWOX evidence to compare against)."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 1594,
+  "publications_on_gene": 1,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Yang HC[au]' 1594; 'Yang HC[au] AND WWOX' 1 (surname-initial queries are ambiguous and are not evidence of authorship); last author 'Pan WH[au]'.",
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Gene-based association study of a Taiwanese research group on 400 matched pairs; WWOX is one of 17 genes with differential expression, replicated within Han Chinese only. Weigh as an exploratory genetic signal, with the group own mouse annotation standing in for mechanism.",
+  "note": "Not a WWOX group."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 24
+   }
+  ],
+  "note": "WWOX does not occur in the article."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 97,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "dependency_integrity.py screen reference count, confirmed against <ref> elements in the JATS.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-directed reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --pmid 22479346 --hops 1 (CORPUS P360 and LIT-0360: triage only, no deep-dive); --theme hypertension (5 records, one of them this paper); --theme 'blood pressure' and 'adrenal' (0 records)",
+  "hits": 0,
+  "finding": "The laboratory holds this paper only as a Tier C triage placeholder (corpus record P360, literature log LIT-0360, status screened, role background); this reading is its first deep-dive. The theme query finds a second hypertension-and-WWOX study (EHBP1, TUBB, WWOX SNP interactions) that is not part of this lot. An empty result for blood pressure and adrenal is a statement about those queries over those files."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed efetch 2026-10-19 for this PMID (no CommentsCorrections element, publication types listed); JATS front matter",
+  "result": "No retraction, correction or expression of concern found in the PubMed record.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 97,
+   "references_screened": 93,
+   "references_with_doi": 93,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID22479346_Yang2012_PMC3315540.xml",
+   "sha256": "02ed85c90af8580c60acd98df4ac29fd8afa7de880a2ea5f087461a714a1b667",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC3315540, 233,470 bytes; abstract, introduction, results, discussion, materials and methods, Tables 1 to 3 and Figures 1 to 3 legends present; supplementary tables and methods are separate files.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3315540/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "02ed85c90af8580c60acd98df4ac29fd8afa7de880a2ea5f087461a714a1b667"
+   }
+  },
+  {
+   "path": "files/figures/PMID22479346/pone.0032907.g001.jpg",
+   "sha256": "8d795d76cc15a2493bd90bb7ff0dda35efba58d3a4f1276b04423a23e289954e",
+   "kind": "figure",
+   "note": "Figure 1 (file g001): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3315540.1/pone.0032907.g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "8d795d76cc15a2493bd90bb7ff0dda35efba58d3a4f1276b04423a23e289954e"
+   }
+  },
+  {
+   "path": "files/figures/PMID22479346/pone.0032907.g002.jpg",
+   "sha256": "b6b28c149bc8fe06e48d9660d16ecde1f72feb278c2c3932a32657cefd447f65",
+   "kind": "figure",
+   "note": "Figure 2 (file g002): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3315540.1/pone.0032907.g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "b6b28c149bc8fe06e48d9660d16ecde1f72feb278c2c3932a32657cefd447f65"
+   }
+  },
+  {
+   "path": "files/figures/PMID22479346/pone.0032907.g003.jpg",
+   "sha256": "b7be744fde2f3f9fe5bd3b498a0898ae27d488a17d6aebb08da7e56345de624d",
+   "kind": "figure",
+   "note": "Figure 3 (file g003): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3315540.1/pone.0032907.g003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "b7be744fde2f3f9fe5bd3b498a0898ae27d488a17d6aebb08da7e56345de624d"
+   }
+  },
+  {
+   "path": "files/supplement/PMID22479346_pone.0032907.s003.xls",
+   "sha256": "a4968dd76fa5b941a4b7e62c1d01da4b3f5d5b3f696cb40c279f509961e1fe2b",
+   "kind": "supplement_binary",
+   "note": "Table S1 (gene-based raw p-values, 101 genes), Excel 97 binary, 59,392 bytes; read with a spreadsheet reader; the WWOX row gives 422 SNPs, category VIII.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3315540/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementaryfiles_zip",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "a4968dd76fa5b941a4b7e62c1d01da4b3f5d5b3f696cb40c279f509961e1fe2b"
+   }
+  },
+  {
+   "path": "files/supplement/PMID22479346_pone.0032907.s004.xls",
+   "sha256": "c0daa1bb4a4f7d898d590827240a150e7850e3cad64e2d05f5d6059e9622015a",
+   "kind": "supplement_binary",
+   "note": "Table S2 (gene annotation from Mouse Genome Informatics, OMIM and the Genetic Association Database), Excel 97 binary, 2,260,992 bytes; read with a spreadsheet reader; the WWOX sheet rows list Wwox mutant mouse phenotype terms.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3315540/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementaryfiles_zip",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "c0daa1bb4a4f7d898d590827240a150e7850e3cad64e2d05f5d6059e9622015a"
+   }
+  },
+  {
+   "path": "files/supplement/PMID22479346_pone.0032907.s006.xls",
+   "sha256": "6f1c6dadd51925142b1ab243f7b4f925796f0a60cedcd5ef2bafe315ff3895a6",
+   "kind": "supplement_binary",
+   "note": "Table S4 (cis-eQTL of the 17 genes), Excel 97 binary, 50,688 bytes; read; WWOX has 24 cis-eQTL rows.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3315540/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementaryfiles_zip",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "6f1c6dadd51925142b1ab243f7b4f925796f0a60cedcd5ef2bafe315ff3895a6"
+   }
+  },
+  {
+   "path": "files/supplement/PMID22479346_pone.0032907.s007.xls",
+   "sha256": "8553bfd172fcc067738b7309016d48737708f4b0cc9a12729bcc383cb13b3946",
+   "kind": "supplement_binary",
+   "note": "Table S5 (cis-eQTL of previously reported hypertension genes), Excel 97 binary, 40,960 bytes; opened for headers; no WWOX content.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3315540/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementaryfiles_zip",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "8553bfd172fcc067738b7309016d48737708f4b0cc9a12729bcc383cb13b3946"
+   }
+  },
+  {
+   "path": "files/supplement/PMID22479346_pone.0032907.s005.doc",
+   "sha256": "b541039503047a26a2e7f65f4123a96372578951e29e37e0b552fe066e36b0c7",
+   "kind": "supplement_binary",
+   "note": "Table S3 (beta coefficients), Word 97 binary, 50,688 bytes; the WWOX row read by string extraction: human beta -0.248 (SE 0.071), mouse aorta 35.039, heart -8.496, kidney -6.29, liver -16.344.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3315540/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementaryfiles_zip",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "b541039503047a26a2e7f65f4123a96372578951e29e37e0b552fe066e36b0c7"
+   }
+  },
+  {
+   "path": "files/supplement/PMID22479346_pone.0032907.s008.doc",
+   "sha256": "fb6ca3425e073c8a19ca79247637a12610e8286f436c76f002325c54f28ef179",
+   "kind": "supplement_binary",
+   "note": "Method S1 (gene-based test, truncated product statistic), Word binary, 55,296 bytes; opening sentences only; not read through.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3315540/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementaryfiles_zip",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "fb6ca3425e073c8a19ca79247637a12610e8286f436c76f002325c54f28ef179"
+   }
+  },
+  {
+   "path": "files/supplement/PMID22479346_pone.0032907.s009.doc",
+   "sha256": "9a8dc04df8b966bdb3d275cf230659ec201e68988ed0b2588b2f9c63ed09fade",
+   "kind": "supplement_binary",
+   "note": "Method S2 (selection of extremely discordant pairs), Word binary, 938,496 bytes; opening sentences only; not read through.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3315540/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementaryfiles_zip",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "9a8dc04df8b966bdb3d275cf230659ec201e68988ed0b2588b2f9c63ed09fade"
+   }
+  },
+  {
+   "path": "files/supplement/PMID22479346_pone.0032907.s001.doc",
+   "sha256": "acb37b448a5ac65dbbb2c9e304a33be83a07177ba65455fe5c31f8ecf6ce8bb3",
+   "kind": "supplement_binary",
+   "note": "Figure S1 legend (principal components), Word binary, 52,224 bytes; legend line only.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3315540/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementaryfiles_zip",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "acb37b448a5ac65dbbb2c9e304a33be83a07177ba65455fe5c31f8ecf6ce8bb3"
+   }
+  },
+  {
+   "path": "files/supplement/PMID22479346_pone.0032907.s002.doc",
+   "sha256": "42b17fc83726cceb3d1c6ca809e56b4065c5107aecd6b34d282b3c8161469486",
+   "kind": "supplement_binary",
+   "note": "Figure S2 legend (SBAS p-values), Word binary, 308,224 bytes; legend lines only.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3315540/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementaryfiles_zip",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "42b17fc83726cceb3d1c6ca809e56b4065c5107aecd6b34d282b3c8161469486"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 233,470 bytes; abstract, introduction, results, discussion, materials and methods, Tables 1 to 3 and Figures 1 to 3 legends present; supplementary tables and methods are separate files.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: whole main article read including Methods, Tables 1 to 3 and the replication tables; the three main figures were inspected as images (the Figure 3 heatmap read for direction at its published 561 px width). Supplementary: Tables S1, S2, S3 and S4 were read for the WWOX rows with a spreadsheet reader and string extraction; Methods S1 and S2 and the figure legends were opened only at their opening lines. Supplementary is therefore declared captions_only and the receipt is partial. The reference list (97) was screened for integrity, not read.",
+  "entries": [
+   {
+    "proposition": "DESIGN: 400 young-onset hypertensive Han Chinese patients from Taiwan matched to 400 normotensive controls, a gene-based scan built from marginal SNP p-values, RNA array in 12 extreme pairs, replication in a Hong Kong family study and a British case-control study.",
+    "snippet": "This TWNHS analyzed 400 matched pairs of patients with hypertension and normotensive controls.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22479346_Yang2012_PMC3315540.xml",
+    "anchor": "Materials and Methods, Study population",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NO SNP-LEVEL SIGNAL: the single-SNP scan found no SNP at the stated thresholds; the gene-level hits are built from marginal SNPs.",
+    "snippet": "No significant SNPs (pFDR<10−3 or p<10−7) were found.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22479346_Yang2012_PMC3315540.xml",
+    "anchor": "Results, Genome-wide SBAS",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WWOX NUMBERS: the gene-based p-values are 7.47 x 10 to the minus 14 (quoted FDR 5.77 x 10 to the minus 3) in the continuous-coding model and 1.18 x 10 to the minus 8 with BMI adjustment; the nominal-coding raw p-values are 0.017 and 0.022; the expression test gives p 5.96 x 10 to the minus 3 in 12 pairs.",
+    "snippet": "WWOX, which encodes the WW domain-containing protein on 16q23.3-q24.1, is the third gene that was simultaneously identified by our genome-wide GBAS",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22479346_Yang2012_PMC3315540.xml",
+    "anchor": "Results, Replication analysis, WWOX paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "REPLICATION IS WITHIN ANCESTRY: no gene was significantly confirmed in the British case-control data; WWOX is replicated only in the Hong Kong Han Chinese family study.",
+    "snippet": "Although no genes identified by us were significantly confirmed by the WTCCCHS data (Caucasian)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22479346_Yang2012_PMC3315540.xml",
+    "anchor": "Discussion, paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CIRCULARITY OF THE EXPRESSION TEST: the 12 pairs for the array were chosen as the patients with the highest and controls with the lowest genotype risk scores from the same data, so the expression comparison is made on genotype-extreme samples.",
+    "snippet": "the 12 matched pairs of patients and controls were selected to have an extremely discordant genotypic distribution between groups",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22479346_Yang2012_PMC3315540.xml",
+    "anchor": "Results, Gene expression analysis",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "MOUSE ANNOTATION AS MECHANISM: the article says WWOX variants are associated with hypoglycaemia, hyperphosphatemia, lower cholesterol and triglycerides and higher uric acid in mice; supplementary Table S2 shows these are Mouse Genome Informatics knockout phenotype terms, which also list postnatal lethality and abnormal adrenal gland morphology, not variant associations.",
+    "snippet": "WWOX variants are associated with hypoglycemia, hyperphosphatemia, decreased circulating cholesterol levels and triglyceride levels, but with increased blood uric acid levels in mice [59].",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22479346_Yang2012_PMC3315540.xml",
+    "anchor": "Results, Replication analysis, WWOX paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CITATION MISMATCH: the text says WWOX variants were associated with blood pressure in a previous Japanese GWAS (reference 23), but Table 1 of the same article lists reference 23 as a European-ancestry study and the Japanese study with WWOX as reference 34.",
+    "snippet": "WWOX variants were also found to be associated with blood pressure in a previous Japanese GWAS [23].",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22479346_Yang2012_PMC3315540.xml",
+    "anchor": "Results, Replication analysis, WWOX paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "MECHANISM CLAIM: the Discussion states that IGF1, SLC4A4 and WWOX are primarily associated with obesity, glucose metabolism and ion homeostasis, well-known mechanisms of blood pressure regulation; no measurement of these in WWOX carriers is made in the article.",
+    "snippet": "are primarily associated with obesity, glucose metabolism, and ion homeostasis, which are well-known mechanisms of blood pressure regulation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22479346_Yang2012_PMC3315540.xml",
+    "anchor": "Discussion, paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "LIMITS: the three studies differ in phenotype definition (onset age 50 or younger only in the Taiwan cohort), arrays and populations.",
+    "snippet": "First, the phenotype definition and sample ascertainment were not exactly the same in the three studies (TWNHS, HKHS, and WTCCCHS).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22479346_Yang2012_PMC3315540.xml",
+    "anchor": "Discussion, limitations paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3A: in the cluster heatmap of the 17 genes the WWOX column groups with AP3S1, IGF1 and SFMBT1 and is red (higher) in the normotensive control rows and blue in most hypertensive rows; supplementary Table S3 gives a human beta of minus 0.248 (SE 0.071), i.e. lower expression in cases; the text gives no direction.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3 panel A heatmap with hypertensive (red bar) and normotensive (blue bar) sample rows and 17 gene columns; WWOX, AP3S1, IGF1, SFMBT1 clustered at the right, red in the bottom normotensive rows.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID22479346/pone.0032907.g003.jpg",
+    "anchor": "Figure 3A, native JPEG (direction confirmed in Table S3)",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "immortalised or peripheral cells of 12 extreme matched pairs, Illumina HT12 array (source tissue not named in the sentence)",
+     "endpoint": "expression of 17 genes, hypertensive against normotensive"
+    }
+   }
+  ]
+ }
+}

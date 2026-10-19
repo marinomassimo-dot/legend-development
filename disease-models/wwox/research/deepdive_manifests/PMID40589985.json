@@ -1,0 +1,315 @@
+{
+ "schema_version": 2,
+ "pmid": "40589985",
+ "doi": "10.3389/fneur.2025.1587200",
+ "pmcid": "PMC12206811",
+ "receipt": "FTR-20261019-40589985-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the interventions selection file's one-line 'why it matters' for this row and the group H5 header, plus the earlier readings of this lot done in this session (Yuskaitis, Phillips-Farfan, Salvati) and the registry theme records CLAIM 042 and DL-MECH-020 admitted after the first pass of the first paper. No registry record about this paper (none exists).",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/interventions_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a non-WWOX comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype; class-level literature only, BLOCK-1 caution carried in the analysis note."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the load-bearing triples were checked mechanically by locator_audit.py and are exposed in the analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Neonatal Sprague-Dawley rat pups (75 randomised, three groups), repeated insulin hypoglycaemia on P2, P4, P6, 2 h daily visual stimulation P14-P28, MRI on a subset, PTZ seizure score at P28, immunohistochemistry for BDNF and synaptophysin. The paper is about visual stimulation, not about glucose therapy; its hypoglycaemia arm is a model of injury. Reported numbers are internally inconsistent in several places (n, t statistics, glucose threshold, one SYN value), so the group differences are weak evidence even in this model. Not a WWOX system."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (fasting OR \"caloric restriction\" OR \"calorie restriction\" OR \"dietary restriction\")",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the four hits are type 2 diabetes association studies (fasting glucose), none a fasting or restriction intervention"
+   },
+   {
+    "query": "WWOX AND (mTOR OR mTORC1 OR AMPK)",
+    "count": 8,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (hypoglycemia OR hypoglycaemia OR dextrose OR \"glucose infusion\")",
+    "count": 21,
+    "source": "PubMed ESearch rettype=count 2026-10-19; hits are glucose-metabolism, glycolysis and association papers, none an infusion or dextrose intervention"
+   },
+   {
+    "query": "WWOX AND (edema OR oedema OR hyponatremia OR \"fluid overload\")",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the two hits are a high-altitude pulmonary oedema locus list and a zebrafish embryo knockdown paper"
+   },
+   {
+    "query": "WWOX AND (refeeding OR thiamine OR \"parenteral nutrition\")",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are PubMed search hits only (ESearch rettype=count, 2026-10-19), not a census; none of the WWOX hits tests the intervention of this group."
+ },
+ "multihop": {
+  "references_enumerated": 41,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted (41 entries), not read item by item; no WWOX-directed reference seen in the body."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 40589985 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED for this PMID in the seven registry surfaces at commit 0c85331b341e; a statement about that query only. CLAIM 042 and DL-MECH-020 (ketogenic-diet lines) admitted for comparison after the first pass."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 41,
+   "references_screened": 35,
+   "references_with_doi": 35,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 6
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40589985_Sun2025_PMC.xml",
+   "sha256": "1eb59f0f19a6645f6523401f0af5532c679e2040ada2608431b760d90ec775d7",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12206811/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "1eb59f0f19a6645f6523401f0af5532c679e2040ada2608431b760d90ec775d7"
+   }
+  },
+  {
+   "path": "files/figures/PMID40589985/native/fneur-16-1587200-g001.jpg",
+   "sha256": "a395aa91c1b971aa22e1f8b5a4d13ece83a5e6cade91053622c7f03efc668353",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12206811.1/fneur-16-1587200-g001.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "a395aa91c1b971aa22e1f8b5a4d13ece83a5e6cade91053622c7f03efc668353"
+   }
+  },
+  {
+   "path": "files/figures/PMID40589985/native/fneur-16-1587200-g002.jpg",
+   "sha256": "56eb4a06655dd8bc20e8038d14c4fbed3c2e42d9b4ad5316e3b86d42b8fe1f91",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12206811.1/fneur-16-1587200-g002.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "56eb4a06655dd8bc20e8038d14c4fbed3c2e42d9b4ad5316e3b86d42b8fe1f91"
+   }
+  },
+  {
+   "path": "files/figures/PMID40589985/native/fneur-16-1587200-g003.jpg",
+   "sha256": "5398d76102cadf35efe53d5b01ad0bd929a8d23623fc2d400a51cf4a7a2bc9bb",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12206811.1/fneur-16-1587200-g003.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "5398d76102cadf35efe53d5b01ad0bd929a8d23623fc2d400a51cf4a7a2bc9bb"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Hypoglycaemia was induced with insulin 40 U/kg i.p. on postnatal days 2, 4 and 6 in rat pups.",
+    "snippet": "Rats in the NH and NH-V groups were intraperitoneally injected with insulin (40 U/kg, 10 mL/400 U, Jiangsu Wanbang) on postnatal days 2, 4, and 6 to induce hypoglycemia.",
+    "anchor": "Methods, Model preparation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40589985_Sun2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Hypoglycaemia was terminated with an intraperitoneal 50% glucose bolus of 2 mL/kg after the fifth glucose reading (about 4 h).",
+    "snippet": "After the 5th blood glucose measurement, a 2 mL/kg intraperitoneal injection of 50% glucose was administered to terminate hypoglycemia, and the rats were returned to their mothers.",
+    "anchor": "Methods, Model preparation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40589985_Sun2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Pups with spontaneous seizures or death during modelling were excluded, a selection step that removes the most severely affected animals.",
+    "snippet": "Rats that experienced spontaneous seizures or death during the model development process were excluded from the study.",
+    "anchor": "Methods, Model preparation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40589985_Sun2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The text says the 3 h and 4 h glucose values were below the meter threshold of 0.06 mmol/L, while Table 1 lists 4 h values as 0.6-0.8 mmol/L or lower; the inclusion rule was 0.8 mmol/L or lower.",
+    "snippet": "Data from 3 and 4 h after insulin injection were below the measurement threshold (<0.06 mmol/L).",
+    "anchor": "Results, Model preparation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40589985_Sun2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 1 lists the 4 h values as at most 0.6, 0.6 and 0.8 mmol/L on days 2, 4 and 6 (not the text's below 0.06).",
+    "snippet": "4 h after injectiona ≦0.600 ≦0.600 ≦0.800",
+    "anchor": "Table 1, 4 h row",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40589985_Sun2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Only 10 of 25 pups per group were imaged, and 5 of the 10 NH pups showed an abnormal occipital signal.",
+    "snippet": "In the NH group, 5 rats exhibited structural damage of varying severity, characterized by mixed signals in the occipital region, predominantly low signals (Figure 1B).",
+    "anchor": "Results, MRI results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40589985_Sun2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 shows one axial T2 slice per group, with a single arrow in group B at the dorsal midline region; one slice does not establish occipital location or lesion extent, and the control and model slices differ in window settings.",
+    "snippet": "Visual attestation of Figure 1: panels A (control) and B (model) are single axial FSE T2-weighted slices at 4.7 T; panel B carries one white arrow near the dorsal midline; the on-image windowing values differ between panels (WL 2048/WW 4095 versus WL 1495/WW 2989).",
+    "anchor": "Figure 1 (image fneur-16-1587200-g001)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID40589985/native/fneur-16-1587200-g001.jpg"
+    ],
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "Sprague-Dawley rat at about P21, 4.7 T MRI",
+     "endpoint": "T2 signal"
+    }
+   },
+   {
+    "proposition": "Seizure scores after PTZ were 2.4 control, 4.1 model, 3.0 visual-stimulation, with n = 25 stated per group.",
+    "snippet": "N 25 2.400 ± 0.843 NH 25 4.100 ± 0.876a NH-V 25 3.000 ± 1.155b",
+    "anchor": "Table 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40589985_Sun2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The reported t statistics (-3.431 and -2.283) do not match n = 25 per group with the tabulated means and SDs: they correspond to roughly 5-6 (N versus NH) and 8-9 (NH-V versus NH) animals per group, while a t test on the tabulated values with n = 25 gives about 7 for N versus NH (reader's arithmetic, not stated in the paper).",
+    "snippet": "the N group had significantly lower seizure scores compared to the NH group (t = −3.431, p = 0.008)",
+    "anchor": "Results, Seizure induction results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40589985_Sun2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40589985.json",
+     "entry": 8,
+     "what_changed": "animals-per-group estimate corrected from about 10 to about 5-9",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
+    }
+   },
+   {
+    "proposition": "The synaptophysin table gives 0.235 in the visual-stimulation group against 0.024 and 0.021 in the other groups, a tenfold step inconsistent with the BDNF column and the text; likely a decimal slip, not resolvable from the paper.",
+    "snippet": "N 25 0.034 ± 0.004 0.024 ± 0.003 NH 25 0.040 ± 0.006a 0.021 ± 0.002a NH-V 25 0.043 ± 0.006b 0.235 ± 0.004b",
+    "anchor": "Table 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40589985_Sun2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion calls the MRI finding 'inconsistent' with earlier work in one sentence and 'consistent' in another.",
+    "snippet": "Head MRI scans showed low signals in the occipital lobe of NH group rats, indicating occipital lobe damage, which is inconsistent with previous studies on hypoglycemic brain injury (3, 4).",
+    "anchor": "Discussion, para 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40589985_Sun2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors report that the result differed from their own initial hypothesis that stimulation would increase susceptibility.",
+    "snippet": "indicating that visual stimulation reduced the epileptic susceptibility of HBIN rats, which was different from our initial hypothesis.",
+    "anchor": "Discussion, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40589985_Sun2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors name immature inhibitory synapses at the age of testing and state that further research is needed.",
+    "snippet": "The animals used in this experiment were 2-day-old rats, where inhibitory synapses had not yet matured.",
+    "anchor": "Discussion, limitations paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40589985_Sun2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The animal work used a very severe, repeated, insulin-induced hypoglycaemia (glucose at or below about 0.6-0.8 mmol/L for hours) in 2-day-old pups.",
+    "snippet": "Rats in the NH and NH-V groups were included in the study if their blood glucose levels reached ≤0.8 mmol/L 4 h after insulin injection",
+    "anchor": "Methods, Model preparation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40589985_Sun2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12206811/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure panel."
+ }
+}

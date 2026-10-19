@@ -1,0 +1,325 @@
+{
+ "schema_version": 2,
+ "pmid": "38542290",
+ "doi": "10.3390/ijms25063316",
+ "receipt": "FTR-20261019-38542290-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-H3-EPINEPHRINE-SAFETY-01",
+  "interventions_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared (group H3 has no WWOX evidence to compare against)."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 41,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Oulehri W[au]' 41; 'Oulehri W[au] AND WWOX' 0 (surname-initial queries are ambiguous and are not evidence of authorship); last author 'Collange O[au]'.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Primary rat study from a critical-care laboratory that has run this shock model for years and cites its own earlier work for the model characterisation; weigh as a single-model mechanistic study with echo-derived haemodynamics.",
+  "note": "Not a WWOX group."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 0
+   }
+  ],
+  "note": "WWOX does not occur in the article."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 44,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "dependency_integrity.py screen reference count, confirmed against <ref> elements in the JATS.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-directed reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --theme adrenergic / epinephrine / noradrenaline / catecholamine / autonomic / sympathetic (each exit 1, no record) and --theme SUDEP (2 of 1586 records)",
+  "hits": 0,
+  "finding": "No registry record carries any adrenergic term, so the laboratory holds nothing on catecholamines to compare with; an empty result is a statement about those queries over those files, not about the literature. SUDEP occurs in two records only as a reason to keep seizure control, not as a mechanism."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed efetch 2026-10-19 for this PMID (no CommentsCorrections element, publication types listed); JATS front matter",
+  "result": "No retraction, correction or expression of concern found in the PubMed record.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 44,
+   "references_screened": 41,
+   "references_with_doi": 41,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38542290_Oulehri2024_PMC10970273.xml",
+   "sha256": "0099be1321ef02feeeef17a15fb65d1475417d925cb04a329bbf34866d417269",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC10970273, 125,099 bytes; abstract, introduction, results, discussion, methods, Figures 1 to 7 legends and Table 1 present.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10970273/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "0099be1321ef02feeeef17a15fb65d1475417d925cb04a329bbf34866d417269"
+   }
+  },
+  {
+   "path": "files/figures/PMID38542290/ijms-25-03316-g001.jpg",
+   "sha256": "8c111b488767669ed0872e2a8f43413bc930863cc29fb35edc23897c3bfd61dd",
+   "kind": "figure",
+   "note": "Figure 1 (file g001): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10970273.1/ijms-25-03316-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "8c111b488767669ed0872e2a8f43413bc930863cc29fb35edc23897c3bfd61dd"
+   }
+  },
+  {
+   "path": "files/figures/PMID38542290/ijms-25-03316-g002.jpg",
+   "sha256": "de6708dc7ef0ba094e85f9432c000ed181349472b9ad029d4d1a4e18173dc796",
+   "kind": "figure",
+   "note": "Figure 2 (file g002): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10970273.1/ijms-25-03316-g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "de6708dc7ef0ba094e85f9432c000ed181349472b9ad029d4d1a4e18173dc796"
+   }
+  },
+  {
+   "path": "files/figures/PMID38542290/ijms-25-03316-g003.jpg",
+   "sha256": "eeb09eba81c4437e74b38dcad8cf920c2a9d3acf66051fc0838a0b4907a6a994",
+   "kind": "figure",
+   "note": "Figure 3 (file g003): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10970273.1/ijms-25-03316-g003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "eeb09eba81c4437e74b38dcad8cf920c2a9d3acf66051fc0838a0b4907a6a994"
+   }
+  },
+  {
+   "path": "files/figures/PMID38542290/ijms-25-03316-g004.jpg",
+   "sha256": "c5d9d4aa44f492aa7ca48c00370019072716a47fe51e6b968f6a47638746ece6",
+   "kind": "figure",
+   "note": "Figure 4 (file g004): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10970273.1/ijms-25-03316-g004.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "c5d9d4aa44f492aa7ca48c00370019072716a47fe51e6b968f6a47638746ece6"
+   }
+  },
+  {
+   "path": "files/figures/PMID38542290/ijms-25-03316-g005.jpg",
+   "sha256": "ab2cf956b2a3b260fd59ff690f3ebfc7f088ad8a4ac88feaf6e7dbe2c8eccc80",
+   "kind": "figure",
+   "note": "Figure 5 (file g005): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10970273.1/ijms-25-03316-g005.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "ab2cf956b2a3b260fd59ff690f3ebfc7f088ad8a4ac88feaf6e7dbe2c8eccc80"
+   }
+  },
+  {
+   "path": "files/figures/PMID38542290/ijms-25-03316-g006.jpg",
+   "sha256": "96346754f6bf68b7a087b2fa870fc3fe9ea7aea2db611e47385eb5c8096cc56d",
+   "kind": "figure",
+   "note": "Figure 6 (file g006): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10970273.1/ijms-25-03316-g006.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "96346754f6bf68b7a087b2fa870fc3fe9ea7aea2db611e47385eb5c8096cc56d"
+   }
+  },
+  {
+   "path": "files/figures/PMID38542290/ijms-25-03316-g007.jpg",
+   "sha256": "0f4b0e0ed00abbc308ace68afe2a28217a2cc0976f42b7cd069e176be0889a20",
+   "kind": "figure",
+   "note": "Figure 7 (file g007): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10970273.1/ijms-25-03316-g007.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "0f4b0e0ed00abbc308ace68afe2a28217a2cc0976f42b7cd069e176be0889a20"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 125,099 bytes; abstract, introduction, results, discussion, methods, Figures 1 to 7 legends and Table 1 present.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: whole article read including Methods and Table 1; all seven figures inspected as images. No supplementary file is listed. The reference list (44) was screened for integrity, not read.",
+  "entries": [
+   {
+    "proposition": "DESIGN: ovalbumin-sensitised male Brown Norway rats, 10 weeks, anaesthetised and ventilated; six groups across two steps with n of 10 (7 in the shock group of step one); epinephrine titrated to a target blood pressure; mitochondrial respiration on left-ventricle fibres at 15 or 60 minutes; lactate by a bedside meter; cardiac output estimated from echocardiographic diameters.",
+    "snippet": "Ten-week-old male Brown Norway rats (Charles River laboratories, Saint-Germain-Nuelles, France) weighing 250–300 g were sensitized",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38542290_Oulehri2024_PMC10970273.xml",
+    "anchor": "4.1 Animals",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The epinephrine regimen is large: two 2.5 microgram boluses then an infusion started at 10 micrograms per kg per minute and titrated every five minutes to a mean arterial pressure of 100 mmHg; the cumulative dose was about 880 micrograms per kg in both treated groups.",
+    "snippet": "Then, a continuous infusion of epinephrine (10 μg/kg/min) was started at T5 as described previously [4].",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38542290_Oulehri2024_PMC10970273.xml",
+    "anchor": "4.6 Second-step study, AS+EPI group",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Epinephrine restored pressure and survival to 60 minutes but cardiac mitochondrial respiration stayed impaired: complexes I plus II minus 29 percent and complex II minus 40 percent against control at 60 minutes.",
+    "snippet": "OXPHOS was significantly impaired in the AS+EPI groups as compared to the control group through complexes I+II (−29%, p < 0.05) and II (−40%, p < 0.001) at T60 min",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38542290_Oulehri2024_PMC10970273.xml",
+    "anchor": "2.2.3 Cardiac Mitochondrial Respiration",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "ATTRIBUTION: the Discussion says epinephrine might itself provoke cardiomyocyte dysfunction including impaired respiration; the design cannot test it, because the shock-only group was sampled at 15 minutes (it died) and there is no epinephrine-in-non-shocked group; at 15 minutes shock alone already lowered complex II respiration by 36 percent.",
+    "snippet": "Epinephrine might even provoke cardiomyocyte dysfunction, including impaired mitochondrial respiration, which might participate in the epinephrine refractory cases of AS.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38542290_Oulehri2024_PMC10970273.xml",
+    "anchor": "3 Discussion, (1) Characterization of AS and effects of epinephrine alone",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "LACTATE: at 60 minutes arterial lactate was 4.8 mmol/L in the epinephrine-treated shock group against control and 3.6 with the adjuvant; no shock-only value at a matched time and no epinephrine-only value exist, and the article does not discuss epinephrine-driven glycolysis as a source of lactate.",
+    "snippet": "arterial lactatemia (Figure 7) was significantly higher in the AS+EPI and AS+EPI+preNBut groups as compared to the CON group (p < 0.0001)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38542290_Oulehri2024_PMC10970273.xml",
+    "anchor": "2.2.3 Cardiac Mitochondrial Respiration, last paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The contractility readout is the shortening fraction; it rises above control in the epinephrine groups and reaches 100 percent, while cardiac output stays far below control (15 against 62 mL/min), which the figures show is a collapsed end-systolic cavity, not an index of intrinsic contractility.",
+    "snippet": "In the AS+EPI+preNBut group, LVSF did not decrease and remained at a high level throughout the experiment.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38542290_Oulehri2024_PMC10970273.xml",
+    "anchor": "2.2.2 Cardiac Function, paragraph 5",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The cardiac output is a derived estimate (Teichholz from echocardiographic diameters), and the authors state they did not use invasive methods; the formula was validated in clinical echocardiography, not in a rat with a collapsed ventricle.",
+    "snippet": "First, we did not investigate cardiac output or cardiac contractility with invasive methods",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38542290_Oulehri2024_PMC10970273.xml",
+    "anchor": "3 Discussion, limitations paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "TRANSLATION: the authors say there is insufficient evidence to justify clinical trials of the adjuvant; the only effective treatment remains epinephrine; the adjuvant was given one hour before the shock, which limits use to predictable risk.",
+    "snippet": "Concerning the translational potential of the findings, there is insufficient evidence to justify testing NbutGT in clinical trials.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38542290_Oulehri2024_PMC10970273.xml",
+    "anchor": "3 Discussion, translational paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The statistics paragraph concedes that multiple comparisons raise type I error and that results should be interpreted as containing some biases; group sizes are justified from earlier work in the same model.",
+    "snippet": "Because of the potential for type I error due to multiple comparisons, results should be interpreted as containing some biases.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38542290_Oulehri2024_PMC10970273.xml",
+    "anchor": "4.11 Statistical Analysis",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 7: lactate at 60 minutes about 0.9 (control), 4.8 (shock plus epinephrine) and 3.6 mmol/L (plus adjuvant); no shock-only bar exists.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7 bar chart of arterial lactatemia in mmol/L: CON about 0.9, AS+EPI about 4.8 with four asterisks against CON, AS+EPI+preNBut about 3.6 with one asterisk against AS+EPI.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38542290/ijms-25-03316-g007.jpg",
+    "anchor": "Figure 7, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "anaesthetised ventilated male Brown Norway rat, ovalbumin-sensitised, intravenous ovalbumin anaphylactic shock",
+     "genotype": "wild type",
+     "comparator": "saline controls and shock plus epinephrine",
+     "timepoint": "60 minutes",
+     "endpoint": "arterial lactate"
+    }
+   },
+   {
+    "proposition": "Figure 4B and 5A: the end-systolic diameter in both epinephrine groups sits at about 0 to 1 mm for much of the 60 minutes and the shortening fraction reaches 100 percent, against about 45 percent in controls, while Figure 5B cardiac output stays under about 40 mL/min.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5 panel A LVSF percent: CON about 45, AS falling to about 20, AS+EPI and AS+EPI+preNBut rising to 100 from T5 to T22.5 then 60 to 100; panel B cardiac output: CON about 50 to 90, treated groups about 10 to 40 mL/min.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38542290/ijms-25-03316-g005.jpg",
+    "anchor": "Figure 5A and 5B, native JPEG (with Figure 4B LVESD about 0 mm)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "anaesthetised ventilated male Brown Norway rat, ovalbumin-sensitised, intravenous ovalbumin anaphylactic shock",
+     "genotype": "wild type",
+     "comparator": "saline controls and shock plus epinephrine",
+     "timepoint": "0 to 60 minutes",
+     "endpoint": "echocardiographic shortening fraction and derived cardiac output"
+    }
+   }
+  ]
+ }
+}

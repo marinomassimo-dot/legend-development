@@ -115,3 +115,17 @@ Note text to carry:
 21. Lipids come from a weaker allele | To study the lipidome of a full body cerS mutant, we have therefore used the weaker cerSP61 allele. cerS mRNA is reduced by approximately 60% in this mutant, which allows a low number of slim larvae to reach the LIII stage [24]. | Results, section 2, same
 22. Rescue condition | In summary, a complete rescue of the mutant dendritic phenotype can only be obtained by decreasing toxic LCBs and simultaneously providing C20-C22 ceramides, the most abundant ceramide species. | Results, section 4, same
 23. Vertebrate relevance is future work | We thus envision that as an alternative to the re-expression of CerSs, a combination of reducing the effect of toxic LCBs, such as (dh)S1P, together with a supplementation of long-chain ceramides will be an important path to be tested in future experiments in vertebrate models of PME8. | Discussion, same
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_001` · 2026-10-19 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.20 -> WM_v7.21 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** not run — no baseline claim is narrowed and no MAJOR contingency is declared; the candidate's locator triples are carried for a later audit.
+**What landed:** 6 PAPER record(s) (PAPER 252, PAPER 253, PAPER 254, PAPER 255, PAPER 256, PAPER 257) with their LIT records. 
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.

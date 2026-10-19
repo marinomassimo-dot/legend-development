@@ -961,6 +961,34 @@ catalytic-dead control, a titration. The missing item is the experiment, not the
 
 **Next surgical micro-step:** run the proposition-versus-quote prompt over the existing manifests offline and count what it would have flagged.
 
+## 2026-10-19 — scientist-b, interventions wave group H3
+
+**Capability gap recorded (with evidence).** A Scientist staging receipts under the parallel-wave rule has no read-only way to validate them: `fulltext_receipts.py record` rewrites the hash chain and state manifest, and `validate` takes no receipt argument. Two waves wrote the same ad hoc script from the module's own validators.
+
+**CHANGE (proportional micro-upgrade, shipped).** `framework/scripts/staged_receipt_check.py` runs the writer's own `validate_new_receipt` and `validate_receipt` over staged JSON files with an explicit artefact root and appends nothing; test `test_staged_receipt_check.py`; README routing row; release-regression enrolment. All 15 receipts of this wave return OK.
+
+**Not built, and why.** An automatic proposition-versus-quote check (named by scientist-d) and a figure-file-to-label mapper (Dhillon: 11 PMC files in non-figure order) were not built; each is larger than a micro-step.
+
+**Cost / API / privacy risk:** none; offline.
+
+**Next surgical micro-step:** map PMC image files to figure labels from the JATS `fig` and `graphic` elements and warn when file order differs.
+---
+
+## 2026-10-19 — scientist-d, interventions batch group H5
+
+**Capability gap recorded (with evidence).** Two, one closed and one measured.
+
+1. **Closed (shipped, `CHANGE` made):** `deepdive_manifest.py` refused a well-formed `contradicts_locator` declaration whose prior manifest existed only on the task branch, with "is not a file under the workspace", because the prior manifest was looked up under the artifact root (the shared evidence checkout) alone. Evidence: 25 declared revisions of this branch's own manifests were refused; after the fix (look beside the manifest being validated first, then fall back to the artifact root) all eight affected manifests PASS from the task worktree with `--artifact-workspace` pointing at the shared checkout. Regression: `test_the_prior_manifest_may_live_in_the_branch_workspace_not_the_artifact_root` (205 tests OK).
+2. **Measured, not built:** last wave named "the validator proves a quote exists, not that it supports the proposition". This wave measured it. Two blind auditors over 101 load-bearing triples returned 23 non-SUPPORTED (9 overshoot, 14 undershoot; 23%) while the validator, the receipt validator and the contradiction audit were all green. The pre-commit self re-read caught none of these 23. A plausible cheap aid: print each proposition beside its quote and list the proposition's number-bearing and quantifier words that occur nowhere in the quote or its two neighbouring sentences. A second small gap of my own: the text renderer I used skipped floats placed outside body sections (a 22-row table and figure legends); a `table-wrap` and `fig` count against the rendering would have flagged it at once.
+
+**What did not need building.** `paper_packet.py check --artifact-workspace` (last wave's upgrade), the strict manifest validator, the dependency screen and `locator_contradiction_audit.py` each worked first time; the blind-audit method needed only a triples file and two agents.
+
+**Cost / API / privacy risk:** none. All retrieval was Europe PMC REST and the PMC open-data bucket; no spend, no key, no new dependency; the auditors read local files only.
+
+**Next surgical micro-step:** run the word-overlap aid over the existing manifests offline and compare what it flags against the 23 known cases.
+
+---
+
 ## 2026-10-19 — scientist-a, metabolic batch G1 (task `METAB-G1-A-20261019`)
 
 **Capability gap that emerged (with evidence).** The `--artifact-workspace` passthrough shipped by scientist-d the same day has a trap. `paper_packet.py check` builds the validator command with the value as typed, and the child process runs from the repository root, so a relative value typed inside a task worktree (`--artifact-workspace .`) names the worktree, not the shared checkout. Evidence: the run for one of this lot's manifests returned 10 BLOCK lines of the form `No such file or directory: <worktree>/files/fulltext/...` and four `artifact does not exist` lines, indistinguishable from missing evidence; the same command with an absolute path returned PASS for all fifteen manifests.

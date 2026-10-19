@@ -1,0 +1,232 @@
+{
+ "schema_version": 2,
+ "pmid": "32905056",
+ "doi": "10.1002/jmd2.12146",
+ "receipt": "FTR-20261019-32905056-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-H3-AUTONOMIC-HYPOGLYCAEMIA-01",
+  "interventions_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared (group H3 has no WWOX evidence to compare against)."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 4,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Conlon TA[au]' 4; 'Conlon TA[au] AND WWOX' 0 (surname-initial queries are ambiguous and are not evidence of authorship); last author 'Crushell E[au]'.",
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Single-patient case report from a national metabolic centre; strong on laboratory method for urine organic acids, silent on counter-regulatory physiology. Weigh as one observation.",
+  "note": "Not a WWOX group."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 0
+   }
+  ],
+  "note": "WWOX does not occur in the article."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 20,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "dependency_integrity.py screen reference count, confirmed against <ref> elements in the JATS.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-directed reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --theme adrenergic / epinephrine / noradrenaline / catecholamine / autonomic / sympathetic (each exit 1, no record) and --theme SUDEP (2 of 1586 records)",
+  "hits": 0,
+  "finding": "No registry record carries any adrenergic term, so the laboratory holds nothing on catecholamines to compare with; an empty result is a statement about those queries over those files, not about the literature. SUDEP occurs in two records only as a reason to keep seizure control, not as a mechanism."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed efetch 2026-10-19 for this PMID (no CommentsCorrections element, publication types listed); JATS front matter",
+  "result": "No retraction, correction or expression of concern found in the PubMed record.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 20,
+   "references_screened": 19,
+   "references_with_doi": 19,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID32905056_Conlon2020_PMC7463059.xml",
+   "sha256": "b7718001d6c2d83240b9fdb843c43f45375d687fcdc2bf38ab22983fb721fd03",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC7463059, 50,190 bytes; abstract, introduction, methods, case presentation, results, discussion, Figures 1 and 2 legends present; no tables.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7463059/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "b7718001d6c2d83240b9fdb843c43f45375d687fcdc2bf38ab22983fb721fd03"
+   }
+  },
+  {
+   "path": "files/figures/PMID32905056/JMD2-55-26-g001.jpg",
+   "sha256": "be5719ae9798f20c711e050e5240536288a8202551f38fc2a8603446d68d3c19",
+   "kind": "figure",
+   "note": "Figure 1 (file g001): urine organic acid GC/MS chromatogram at presentation, inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7463059.1/JMD2-55-26-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "be5719ae9798f20c711e050e5240536288a8202551f38fc2a8603446d68d3c19"
+   }
+  },
+  {
+   "path": "files/figures/PMID32905056/JMD2-55-26-g002.jpg",
+   "sha256": "be5104e5f17f14a5a9e44e0cbfaea636b4c058ed3fa1ad3a792407d9e40c40f4",
+   "kind": "figure",
+   "note": "Figure 2 (file g002): urine organic acid GC/MS chromatogram after treatment, inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7463059.1/JMD2-55-26-g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "be5104e5f17f14a5a9e44e0cbfaea636b4c058ed3fa1ad3a792407d9e40c40f4"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 50,190 bytes; abstract, introduction, methods, case presentation, results, discussion, Figures 1 and 2 legends present; no tables.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: whole article read; both chromatograms inspected as images. A case report: results of the patient are in the Case presentation and Results sections; there is no limitations section, so limitations is not_present as a section (the Discussion states the unexplained mechanism). The 20 references were screened for integrity, not read.",
+  "entries": [
+   {
+    "proposition": "DESIGN: one patient, 20 months, compound heterozygous HMGCS2 variants confirmed in both parents; urine organic acids by GC/MS and acylcarnitines on a dried blood spot.",
+    "snippet": "Molecular genetic analysis of the HMGCS2 gene in leukocyte DNA from the patient, identified compound heterozygosity for a missense mutation c.634G>A",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32905056_Conlon2020_PMC7463059.xml",
+    "anchor": "Results, last paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "GLYCAEMIA: the initial glucose was 4.6 mmol/L (3.3 to 5.6) before dextrose, after two days of vomiting and limited oral intake; glucose and serum ketone bodies are reported normal, with severe high anion gap acidosis.",
+    "snippet": "Initial investigations indicated normoglycemia (blood glucose 4.6 mmol/L, reference range 3.3‐5.6)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32905056_Conlon2020_PMC7463059.xml",
+    "anchor": "Case presentation, paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the mechanism by which hypoglycaemia was averted is unclear; no counter-regulatory hormone or fuel measurement is reported anywhere in the article.",
+    "snippet": "The mechanism by which hypoglycemia was averted remains unclear.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32905056_Conlon2020_PMC7463059.xml",
+    "anchor": "Discussion, paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CONFOUNDERS: the child was febrile with EBV, adenovirus and rhinovirus positivity, took colloidal silver and herbal preparations, and later developed features suggestive of haemophagocytic lymphohistiocytosis; stress-hormone surge from this illness is a candidate explanation for normoglycaemia, unmeasured.",
+    "snippet": "our case had a persistent high grade fever and was positive for EBV, adenovirus and rhinovirus",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32905056_Conlon2020_PMC7463059.xml",
+    "anchor": "Discussion, paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The only other normoglycaemic case with an acute-phase glucose was sampled after intravenous fluids, so the claim of a third case rests on one clean pre-dextrose value (this one) and one reported without hypoglycaemia (a Japanese case).",
+    "snippet": "The only other case 4 in which normoglycemia occurred in the acute phase was investigated following the administration of intravenous fluids.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32905056_Conlon2020_PMC7463059.xml",
+    "anchor": "Discussion, paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Ketone paradox: marked ketonuria in a disorder of ketone synthesis; the authors suggest leucine-derived HMG-CoA and hypothesise, without testing, that the ketonuria may have been cerebroprotective.",
+    "snippet": "We hypothesize that the extent of ketonuria in this case may have been cerebroprotective.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32905056_Conlon2020_PMC7463059.xml",
+    "anchor": "Discussion, paragraph 7",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Dextrose 10 percent was started after the first sample and the infusion maximised (glucose infusion rate 8.7 mg/kg/min); recovery of acidosis at 13 hours and a normal neurological examination on day 4 are reported, so the outcome is confounded by the treatment given.",
+    "snippet": "dextrose concentration maximized (glucose infusion rate 8.7 mg/kg/min)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32905056_Conlon2020_PMC7463059.xml",
+    "anchor": "Case presentation, paragraph 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 (presentation): the chromatogram carries large 3-hydroxybutyrate and acetoacetate peaks, large glutarate, adipate and 3-hydroxyisovalerate, and small labelled peaks A to E for the putative biomarkers; peak D (4HMP) is barely above baseline.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 chromatogram, retention 10 to 50 min: tall peaks labelled 3-Hydroxybutyrate, 3-Hydroxyisovalerate, Glutarate, Adipate, small red arrows A to E, internal standard heptadecanoate.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID32905056/JMD2-55-26-g001.jpg",
+    "anchor": "Figure 1, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "urine of one 20-month-old with HMGCS2 deficiency, presentation sample",
+     "genotype": "compound heterozygous HMGCS2",
+     "timepoint": "presentation, before treatment effect",
+     "endpoint": "GC/MS total ion chromatogram"
+    }
+   },
+   {
+    "proposition": "Figure 2 (after treatment): lactate dominates; the caption says no ketone bodies were detected but two labelled acetoacetate peaks of about 1 to 1.4 million counts remain on the panel; the persistent 3-hydroxyglutarate and 4HMP peaks are small.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2 chromatogram, retention 10 to 50 min: tall Lactate peak, labelled Fumarate, Glutarate, Adipate, Paracetamol, Hippurate, Sebacate, small peaks A to E, and two arrows at Acetoacetate near 15.5 and 17 min.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID32905056/JMD2-55-26-g002.jpg",
+    "anchor": "Figure 2, native JPEG",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "urine of the same patient after treatment (day 3)",
+     "genotype": "compound heterozygous HMGCS2",
+     "timepoint": "post treatment",
+     "endpoint": "GC/MS total ion chromatogram"
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,209 @@
+{
+ "schema_version": 2,
+ "pmid": "38073616",
+ "doi": "10.3389/fneur.2023.1298310",
+ "receipt": "FTR-20261019-38073616-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-H3-ADRENERGIC-SEIZURE-01",
+  "interventions_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared (group H3 has no WWOX evidence to compare against)."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 111,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Sitnikova E[au]' 111; 'Sitnikova E[au] AND WWOX' 0 (surname-initial queries are ambiguous and are not evidence of authorship); last author 'Sitnikova E[au]'.",
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Single-author narrative review by the group that generated most of the primary rat data it summarises; its own earlier papers are cited as the source of the central claim. Weigh as a literature map plus a group position, not as independent confirmation.",
+  "note": "Not a WWOX group."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 0
+   }
+  ],
+  "note": "WWOX does not occur in the article."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 103,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "dependency_integrity.py screen reference count, confirmed against <ref> elements in the JATS.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-directed reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --theme adrenergic / epinephrine / noradrenaline / catecholamine / autonomic / sympathetic (each exit 1, no record) and --theme SUDEP (2 of 1586 records)",
+  "hits": 0,
+  "finding": "No registry record carries any adrenergic term, so the laboratory holds nothing on catecholamines to compare with; an empty result is a statement about those queries over those files, not about the literature. SUDEP occurs in two records only as a reason to keep seizure control, not as a mechanism."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed efetch 2026-10-19 for this PMID (no CommentsCorrections element, publication types listed); JATS front matter",
+  "result": "No retraction, correction or expression of concern found in the PubMed record.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 103,
+   "references_screened": 99,
+   "references_with_doi": 99,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38073616_Sitnikova2023_PMC10703303.xml",
+   "sha256": "4afc25057c6e7c199bf97b1f3cab0e24461414d62bb1ec1132f1fc521e90bc2e",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC10703303, 139,400 bytes; abstract, introduction, sections 2 to 4, limitations, conclusion, Table 1 and Figure 1 legend present.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10703303/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "4afc25057c6e7c199bf97b1f3cab0e24461414d62bb1ec1132f1fc521e90bc2e"
+   }
+  },
+  {
+   "path": "files/figures/PMID38073616/fneur-14-1298310-g001.jpg",
+   "sha256": "f9b3911b9b33356c5f18eb9d0d25450bdac4ef06181c86ab506da14bc45902a1",
+   "kind": "figure",
+   "note": "Figure 1 (file g001): sleep-wake continuum with the two proposed alpha2 targets, inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10703303.1/fneur-14-1298310-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "f9b3911b9b33356c5f18eb9d0d25450bdac4ef06181c86ab506da14bc45902a1"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 139,400 bytes; abstract, introduction, sections 2 to 4, limitations, conclusion, Table 1 and Figure 1 legend present.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: whole article read, Table 1 read row by row, Figure 1 inspected as an image. A narrative review: the article has no methods or results section of its own, so those are not_present as sections; the reference list (103) was screened for integrity and not read.",
+  "entries": [
+   {
+    "proposition": "DESIGN: a narrative review; the central experimental claim (dexmedetomidine produces an absence-status-like state in WAG/Rij rats) is the author group own work, cited as its refs 49 and 65.",
+    "snippet": "Our team recently investigated the alpha2-adrenergic modulation of spike–wave epilepsy in symptomatic WAG/Rij rats using systemic injections of dexmedetomidine",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38073616_Sitnikova2023_PMC10703303.xml",
+    "anchor": "Section 4, paragraph 6",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "SIGN: alpha2 agonists increase spike-wave activity in genetically prone rats; antagonists suppress it. The direction of an adrenergic manipulation on seizures therefore depends on receptor subtype and site, and the same review notes that presynaptic alpha2 activation lowers noradrenaline release.",
+    "snippet": "Antagonists of alpha2-ARs, in contrast, suppress SWDs (Table 1) putatively via an indirect effect on vigilance",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38073616_Sitnikova2023_PMC10703303.xml",
+    "anchor": "Section 4, paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DOSE: the absence-status state is produced by low doses; a very high dose reverses the effect (a decrease in SWDs and deep sedation), so the dose-response is non-monotonic.",
+    "snippet": "Low doses of dexmedetomidine caused a pro-absence effect in rats, whereas high doses caused a reduction in SWDs and deep sedation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38073616_Sitnikova2023_PMC10703303.xml",
+    "anchor": "Section 2, paragraph after Table 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The absence-status duration was not dose-dependent and was predetermined by baseline seizure intensity: the response is a property of the seizure phenotype, not of the dose.",
+    "snippet": "the duration of EEG-behavioral correlates of absence status was not dose-dependent and was predetermined by the intensity of absence seizures at baseline",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38073616_Sitnikova2023_PMC10703303.xml",
+    "anchor": "Section 4, last paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In healthy control rats alpha2 agonists did not induce spike-wave seizures; the authors attribute it, speculatively, to a different alpha2 receptor distribution (thalamic alpha2B overexpression in epileptic rats), which is untested.",
+    "snippet": "Alpha2-AR agonists did not induce spike–wave seizures in healthy control rats (49) probably because the receptor-binding profile",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38073616_Sitnikova2023_PMC10703303.xml",
+    "anchor": "Section 4, paragraph 5",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "INTERNAL TENSION: the limitations say absence status was only found in rats with spontaneous seizures at baseline, while the conclusion says agonists induced seizures in subclinical individuals without prior seizures and could unmask hidden absence epilepsy in humans.",
+    "snippet": "Absence status was only found in epileptic rats with spontaneous absence seizures at baseline (49).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38073616_Sitnikova2023_PMC10703303.xml",
+    "anchor": "Limitations and future directions, paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The conclusion extends the rat result to clinical use: dexmedetomidine and other alpha2 agonists could help identify hidden forms of absence epilepsy; no human datum is given.",
+    "snippet": "dexmedetomidine, which is frequently used in clinical practice, and other alpha2-adrenoreceptor agonists could help identify hidden forms of absence epilepsy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38073616_Sitnikova2023_PMC10703303.xml",
+    "anchor": "Conclusion",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the translational value of the model is at an early stage and that pharmacological provocation is the major limitation.",
+    "snippet": "The translational value of the proposed model is still in its early stages and needs more extensive ex- and pre-clinical research",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38073616_Sitnikova2023_PMC10703303.xml",
+    "anchor": "Limitations and future directions, paragraph 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 is a schematic: sleep-wake continuum with spike-wave discharges during drowsiness and light slow-wave sleep, target 1 presynaptic alpha2 receptor in the locus coeruleus (noradrenaline down), target 2 postsynaptic thalamic alpha2B receptor; it carries one example EEG trace and one photograph, no measurement.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1, schematic with the sleep-wake bar (wakefulness, drowsiness, light slow-wave sleep, deep slow-wave sleep, REM), SWD EEG trace, boxes \"Target 1 presynaptic alpha2-AR up\" and \"Target 2 postsynaptic alpha2-AR up alpha2B-subtype\", the \"Alpha2-wakefulness\" panel and a rat photograph.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38073616/fneur-14-1298310-g001.jpg",
+    "anchor": "Figure 1, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "review schematic of WAG/Rij rat vigilance states",
+     "endpoint": "none (no measurement)"
+    }
+   }
+  ]
+ }
+}

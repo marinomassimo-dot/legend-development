@@ -34,3 +34,17 @@ The two cohorts disagree with each other on the MRI finding, neither is a WWOX s
 (VABAM-like abnormalities occur in children never given vigabatrin | Prevalence of "VABAM-like MRI abnormalities not VGB-related" was, therefore, 13.5% (7/52 patients). | PMID 39641935, Results 3.2.2; files/fulltext/PMID39641935_Stevering2025_PMC.xml)
 (hormonal therapy is not associated with the MRI finding in the TSC cohort | Concomitant hormonal/steroid therapy | .94 (.17-2.27) | .92 | PMID 39641935, Table 2 last row; same file)
 (hormonal therapy is associated with symptoms in only eight exposed patients | although there were only eight patients treated with hormonal or steroid therapy | PMID 39641935, Results 3.3; same file)
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_001` · 2026-10-19 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.20 -> WM_v7.21 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** not run — no baseline claim is narrowed and no MAJOR contingency is declared; the candidate's locator triples are carried for a later audit.
+**What landed:** `CLAIM 001` wave note applied (the author's dry run was repeated by the integrator). `CONFLICTING EVIDENCE` status unchanged; `BLOCK 1` unchanged.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.

@@ -39,3 +39,17 @@ Receipts `FTR-20261019-40500435-01` and `-37907746-01` first.
 | 37907746 | entry 2 | Methods state that reads were mapped to the Homo sapiens genome for mouse hippocampus and mouse BV2 samples, an apparent error that is not corrected in the text. | After cleaning reads and mapping them to the genome of Homo sapie | Methods, RNA-seq |
 | 37907746 | entry 3 | With that threshold, 18,201 of 55,450 transcripts are called differentially expressed (9,323 up, 8,878 down), a third of the annotated transcriptome. | Transcriptomic analysis detected 55,450 genes, of which 9,323 were upregulated and 8,878 were downregulated (F | Results, omics |
 | 37907746 | entry 6 | The in vivo knockdown uses an AAV2/6 shRNA injected into hippocampus under a CMV promoter, not a microglia-specific promoter or a conditional allele. | Recombinant adeno-associated virus (rAAV2/6 m) expressing U6-driven shRNA and CMV-driven EGFP (rAAV-U6-sh | Methods, viral vectors |
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_001` · 2026-10-19 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.20 -> WM_v7.21 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** not run — no baseline claim is narrowed and no MAJOR contingency is declared; the candidate's locator triples are carried for a later audit.
+**What landed:** 2 PAPER record(s) (PAPER 276, PAPER 277) with their LIT records. 
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.

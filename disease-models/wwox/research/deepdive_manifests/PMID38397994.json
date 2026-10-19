@@ -1,0 +1,240 @@
+{
+ "schema_version": 2,
+ "pmid": "38397994",
+ "doi": "10.3390/biomedicines12020391",
+ "receipt": "FTR-20261019-38397994-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-H3-AUTONOMIC-HYPOGLYCAEMIA-01",
+  "interventions_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared (group H3 has no WWOX evidence to compare against)."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 7,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Hölzen L[au]' 7; 'Hölzen L[au] AND WWOX' 0 (surname-initial queries are ambiguous and are not evidence of authorship); last author 'Meyhöfer S[au]'.",
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Four-author mini-review of diabetes medicine with no stated search method and a literature base of 66 references; weigh as a textbook-level map of adult counter-regulation.",
+  "note": "Not a WWOX group."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 0
+   }
+  ],
+  "note": "WWOX does not occur in the article."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 66,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "dependency_integrity.py screen reference count, confirmed against <ref> elements in the JATS.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-directed reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --theme adrenergic / epinephrine / noradrenaline / catecholamine / autonomic / sympathetic (each exit 1, no record) and --theme SUDEP (2 of 1586 records)",
+  "hits": 0,
+  "finding": "No registry record carries any adrenergic term, so the laboratory holds nothing on catecholamines to compare with; an empty result is a statement about those queries over those files, not about the literature. SUDEP occurs in two records only as a reason to keep seizure control, not as a mechanism."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed efetch 2026-10-19 for this PMID (no CommentsCorrections element, publication types listed); JATS front matter",
+  "result": "No retraction, correction or expression of concern found in the PubMed record.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 66,
+   "references_screened": 62,
+   "references_with_doi": 62,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38397994_Holzen2024_PMC10887081.xml",
+   "sha256": "3a16650b684c3dd8120da78311874d1e641c4fd227a2c0e12cad9dcbb7cc9fed",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC10887081, 119,041 bytes; abstract, introduction, pathophysiology, therapeutic strategies, conclusions, Table 1 and Figures 1 and 2 present.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10887081/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "3a16650b684c3dd8120da78311874d1e641c4fd227a2c0e12cad9dcbb7cc9fed"
+   }
+  },
+  {
+   "path": "files/figures/PMID38397994/biomedicines-12-00391-g001.jpg",
+   "sha256": "1b5acfd26da1e5b86f4de3bd5d51aa3029e808dc36353eb70d6ff6524a3cd674",
+   "kind": "figure",
+   "note": "Figure 1 (file g001): schematic of risk factors and pathophysiology of hypoglycaemia unawareness, inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10887081.1/biomedicines-12-00391-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "1b5acfd26da1e5b86f4de3bd5d51aa3029e808dc36353eb70d6ff6524a3cd674"
+   }
+  },
+  {
+   "path": "files/figures/PMID38397994/biomedicines-12-00391-g002.jpg",
+   "sha256": "3f25a91cd1138ae91618e9cc92a48783cf6229a6771f247a0a8939c8d07e4e58",
+   "kind": "figure",
+   "note": "Figure 2 (file g002): schematic of declining counter-regulatory hormone response over three hypoglycaemias, inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10887081.1/biomedicines-12-00391-g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "3f25a91cd1138ae91618e9cc92a48783cf6229a6771f247a0a8939c8d07e4e58"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 119,041 bytes; abstract, introduction, pathophysiology, therapeutic strategies, conclusions, Table 1 and Figures 1 and 2 present.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: whole article read, Table 1 read, both figures (schematics) inspected as images. A narrative mini-review: no methods or results sections, no limitations section; the reference list (66) was screened for integrity, not read, so every statement is a restatement of a cited source.",
+  "entries": [
+   {
+    "proposition": "DESIGN: a mini-review whose two writers state they researched the literature; no search strategy, no appraisal; every number is a restatement.",
+    "snippet": "L.H. and S.M. researched literature and wrote the manuscript.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38397994_Holzen2024_PMC10887081.xml",
+    "anchor": "Author Contributions",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The glucose thresholds used are diabetes-clinic definitions: 70 mg/dL (3.9 mmol/L) or lower with symptoms, level 2 below 54 mg/dL; they are adult standards and say nothing about neonatal or genetic-metabolic ranges.",
+    "snippet": "In numerical terms, a value of 70 mg/dL (3.9 mmol/L) or lower with associated symptoms is usually considered a hypoglycemic condition.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38397994_Holzen2024_PMC10887081.xml",
+    "anchor": "1.1 Definition of Hypoglycemia",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "COUNTER-REGULATION: epinephrine is one of the hormones whose release falls after recent antecedent hypoglycaemia; the review states that absence of symptoms reflects attenuation of the sympathoadrenal response.",
+    "snippet": "The absence of symptoms of hypoglycemia reflects the attenuation of the sympathoadrenal response",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38397994_Holzen2024_PMC10887081.xml",
+    "anchor": "2.1 Autonomic Failure",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The epinephrine statement is that after recent antecedent hypoglycaemia plasma epinephrine rises less; no value, no cohort and no time course are given in the review.",
+    "snippet": "After recent antecedent hypoglycemia, epinephrine levels are significantly reduced (Figure 2)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38397994_Holzen2024_PMC10887081.xml",
+    "anchor": "2.4 Hormonal Regulation, last paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "GLYCOGEN: the review states brain cells cannot store glucose as glycogen; astrocytes do hold glycogen, and another review in this corpus (a metabolic-batch reading of brain glycogen) treats it as a buffer; the sentence is a simplification or an error.",
+    "snippet": "It is not possible for cells in the brain to synthesize glucose or to store it as glycogen.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38397994_Holzen2024_PMC10887081.xml",
+    "anchor": "2.2 Altered Brain Glucose Sensing, paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The role of the other hormones is partly open: growth hormone matters in prolonged hypoglycaemia, and the review says the exact role of cortisol remains unclear.",
+    "snippet": "However, the exact role of cortisol in hypoglycemia counterregulation remains unclear.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38397994_Holzen2024_PMC10887081.xml",
+    "anchor": "2.4 Hormonal Regulation, paragraph 4",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A central mechanism offered is raised GABA inhibitory tone in the ventromedial hypothalamus after recurrent hypoglycaemia, hedged with \"could be important\".",
+    "snippet": "Recurrent hypoglycemia results in increased VMH GABA inhibitory tone which could be important in the development of a hypoglycemia unawareness syndrome",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38397994_Holzen2024_PMC10887081.xml",
+    "anchor": "2.3 Cerebral Adaptations",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Sleep: awakening with an epinephrine rise during nocturnal clamp hypoglycaemia was impaired in type 1 diabetes against controls; a three-clamp study found the response preserved after sleep loss and attenuated after regular sleep, which the review calls neurometabolic memory.",
+    "snippet": "Awakening from sleep with an accompanying increase in epinephrine levels was impaired in patients with T1D compared to healthy controls",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38397994_Holzen2024_PMC10887081.xml",
+    "anchor": "2.5 Sleep",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review suggests sleep loss after repeated hypoglycaemia might prevent unawareness, a speculation from one study that the authors say needs further investigation.",
+    "snippet": "sleep loss after repeated hypoglycemia could prevent hypoglycemia unawareness",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38397994_Holzen2024_PMC10887081.xml",
+    "anchor": "3 Therapeutic Strategies, paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "POPULATION: children appear only for nocturnal hypoglycaemia after exercise; there is no neonatal, genetic or encephalopathy content.",
+    "snippet": "Especially in children and adolescents, nocturnal hypoglycemia can occur after delayed effects of exercise and alterations in sleep physiology.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38397994_Holzen2024_PMC10887081.xml",
+    "anchor": "1.3 Risk Factors for Hypoglycemia, paragraph 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2 is a schematic: a timeline of first, second and third hypoglycaemia over a falling wedge labelled growth hormone, epinephrine, glucagon; no axis, quantity or source data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2: arrow with ticks 1st, 2nd and 3rd hypoglycemia over a downward-sloping band labelled Hypoglycemia counterregulation: Growth Hormone, Epinephrine, Glucagon.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38397994/biomedicines-12-00391-g002.jpg",
+    "anchor": "Figure 2, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "review schematic",
+     "endpoint": "none (no measurement)"
+    }
+   }
+  ]
+ }
+}

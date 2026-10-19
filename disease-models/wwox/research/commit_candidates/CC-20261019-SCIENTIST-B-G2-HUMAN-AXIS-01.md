@@ -69,3 +69,17 @@ Receipts `FTR-20261019-33520443-01`, `-31145772-01`, `-24086726-01`, `-33854788-
 | 36530994 | entry 3 | Figure 3B: pooling both trial cohorts (160 patients) the WWOX GG advantage disappears (GG versus non-GG P 0.127; GG n 14); only tumour number remains significant for OS. The GG result is therefore specific to the monotherapy cohor | [figure attestation - pixels cannot be quote-matched] Figure 3, overall survival in all 160 patients: (A) tumour number, (B) WWOX-rs13338697 AA versus non-AA (P 0.612), GG versus non-GG (P 0.127), thr | Figure 3B, native JPEG |
 | 36530994 | entry 5 | Figure 6: the tissue and plasma comparisons rest on 12 GG patients in the western blot and IHC analyses (n 79 and 96 of the 214 resected tumours) and 8 GG patients for plasma arginine (n 112); T/N ratios of WWOX and ASS1 are lower | [figure attestation - pixels cannot be quote-matched] Figure 6, (A) western blots of WWOX and ASS1 tumour and non-tumour pairs, (B) T/N quantification, (C and D) IHC images and quantification, (E and  | Figure 6B, 6D and 6G, native JPEG |
 | 36530994 | entry 6 | Silencing WWOX alone does not change ASS1 in three HCC lines; the ASS1 fall appears only after CoCl2 hypoxia mimicry and is larger with WWOX silencing. | ASS1 levels remained similar in the three different HCC cell lines even after WWOX silencing (no statistical d | Results, cell experiments |
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_001` · 2026-10-19 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.20 -> WM_v7.21 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** not run — no baseline claim is narrowed and no MAJOR contingency is declared; the candidate's locator triples are carried for a later audit.
+**What landed:** 6 PAPER record(s) (PAPER 262, PAPER 263, PAPER 264, PAPER 265, PAPER 266, PAPER 267) with their LIT records. The PubMed identity defect of the Han Chinese report is recorded as an `identity_correction` on `PAPER 263`; the PubMed fact is not rewritten.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.

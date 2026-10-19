@@ -74,3 +74,17 @@ No scientific proposition in a current file is changed by this candidate; the tr
 - [PMID 35984507, artefact `files/fulltext/PMID35984507_Carvalho2022_PMC11071800_wayback20240101.html`] (the EI condition promoted a twofold reduction in the levels of this lipid peroxidation marker | the EI condition promoted a twofold reduction in the levels of this lipid peroxidation marker | Results, oxidative stress and damage)
 
 **Not medical advice.**
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_001` · 2026-10-19 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.20 -> WM_v7.21 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** not run — no baseline claim is narrowed and no MAJOR contingency is declared; the candidate's locator triples are carried for a later audit.
+**What landed:** 15 PAPER record(s) (PAPER 278, PAPER 279, PAPER 280, PAPER 281, PAPER 282, PAPER 283, PAPER 284, PAPER 285, PAPER 286, PAPER 287, PAPER 288, PAPER 289, PAPER 290, PAPER 291, PAPER 292) with their LIT records. Receipt identifiers named here so that the output-to-study check can match them: PMID 27551439 (`FTR-20261019-27551439-03`), PMID 41677633 (`FTR-20261019-41677633-03`), PMID 35984507 (`FTR-20261019-35984507-03`), PMID 26355344 (`FTR-20261019-26355344-02`). The three HELD-partial resumes are closed at complete depth on `PAPER 136`, `PAPER 147` and `PAPER 097`. PARKED: claim-level proposals 1 and 2 (support mentions on `CLAIM 034` and `CLAIM 010`) carry no op text and touch claim support sets; they stay in this candidate's section 3 for a later batch. Staged leads became `DL-MECH-125` to `DL-MECH-132`.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.
