@@ -926,3 +926,18 @@ catalytic-dead control, a titration. The missing item is the experiment, not the
 **Cost / API / privacy risk:** none. The parked pair's open-access PDFs were refused by two publishers; no Unpaywall query was sent because it requires an e-mail address and the operator's may not be used for it without being asked. No shadow-library route was used.
 
 **Next surgical micro-step:** run the proposition-versus-quote prompt over the existing manifests offline and count what it would have flagged.
+
+---
+
+## 2026-10-19 — scientist-d, interventions batch group H5
+
+**Capability gap recorded (with evidence).** Two, one closed and one measured.
+
+1. **Closed (shipped, `CHANGE` made):** `deepdive_manifest.py` refused a well-formed `contradicts_locator` declaration whose prior manifest existed only on the task branch, with "is not a file under the workspace", because the prior manifest was looked up under the artifact root (the shared evidence checkout) alone. Evidence: 25 declared revisions of this branch's own manifests were refused; after the fix (look beside the manifest being validated first, then fall back to the artifact root) all eight affected manifests PASS from the task worktree with `--artifact-workspace` pointing at the shared checkout. Regression: `test_the_prior_manifest_may_live_in_the_branch_workspace_not_the_artifact_root` (205 tests OK).
+2. **Measured, not built:** last wave named "the validator proves a quote exists, not that it supports the proposition". This wave measured it. Two blind auditors over 101 load-bearing triples returned 23 non-SUPPORTED (9 overshoot, 14 undershoot; 23%) while the validator, the receipt validator and the contradiction audit were all green. The pre-commit self re-read caught none of these 23. A plausible cheap aid: print each proposition beside its quote and list the proposition's number-bearing and quantifier words that occur nowhere in the quote or its two neighbouring sentences. A second small gap of my own: the text renderer I used skipped floats placed outside body sections (a 22-row table and figure legends); a `table-wrap` and `fig` count against the rendering would have flagged it at once.
+
+**What did not need building.** `paper_packet.py check --artifact-workspace` (last wave's upgrade), the strict manifest validator, the dependency screen and `locator_contradiction_audit.py` each worked first time; the blind-audit method needed only a triples file and two agents.
+
+**Cost / API / privacy risk:** none. All retrieval was Europe PMC REST and the PMC open-data bucket; no spend, no key, no new dependency; the auditors read local files only.
+
+**Next surgical micro-step:** run the word-overlap aid over the existing manifests offline and compare what it flags against the 23 known cases.
