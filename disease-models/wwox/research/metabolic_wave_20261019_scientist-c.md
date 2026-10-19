@@ -113,3 +113,53 @@ local sign (PAPER-level support for the context principle in CLAIM 034, MINOR), 
 caution for any ROS-lowering rationale (NAC, CoQ10, creatine) built on CLAIM 009: the sign of the
 WWOX-ROS relation has now been seen positive in a fly, a mouse photoreceptor and a rat tumour line,
 and in none of them in a WWOX-null neuron. RL-003 (metabolic line) is not changed.
+
+---
+
+## 3. PMID 35571988 — Li 2022, Neuro-Oncol Adv: mitochondrial 1555 G>A and childhood glioblastoma, with a WWOX intronic hit (tier 1, new)
+
+context_policy: SOURCE_FIRST (only the selection row's one-line why-it-matters was held; the registry returned
+nothing for this PMID, searched across seven surfaces, and that empty result is a statement about the
+query and not about the laboratory).
+
+**What it MEASURES.** Germline association in a California registry case-control study: 675 mtDNA SNPs
+and about 19 000 nuclear SNPs inside 1318 genes of the GO mitochondrion category, genotyped from
+archived dried blood spots on a SNP array; 90 glioblastoma cases (44 European, 43 Hispanic by the
+Methods counts) against 2789 controls, European and Hispanic strata analysed separately and
+meta-analysed. No expression, no function, no tumour tissue, no WWOX measurement of any kind.
+
+**First-pass observations (Fig 1-2, Tables 1-4, Supplementary Tables S1-S7 opened).**
+- The WWOX SNP (an intronic variant, rs62036057) reaches OR 2.99 with P 3.42e-6 in Europeans, just
+  under that stratum's Bonferroni threshold (6.28e-6). Supplementary Table S7: Hispanic OR 1.30
+  (0.73-2.29, P 0.37) and meta-analysis OR 2.14 (1.50-3.07, P 3.07e-5), which is above the
+  meta-analysis threshold (5.63e-6). So the WWOX hit exists in one stratum of about 44 cases, does not
+  replicate in the second stratum, and does not survive the combined analysis. The authors name the
+  missing replication set and the wide intervals as their major drawback.
+- The Fig 2 legend gives the European Q-Q genomic inflation factor as 1.30. A correction of the
+  quoted P by that factor is my arithmetic (the paper does not do it): 3.42e-6 corresponds to
+  chi-square 21.6, which divided by 1.30 gives 16.6 and P of about 4.6e-5, above 6.28e-6
+  (INFERENZA, stated so; the factor is genome-wide for the scan, not for one locus).
+- Neither the text nor Table S7 names the effect allele of the WWOX SNP, its frequency or its
+  expression effect; there is no regional plot.
+- WWOX enters through Gene Ontology membership, not as a hypothesis; the paper's mitochondrial
+  sentence about WWOX cites one 2003 tumour-expression paper whose abstract (checked at abstract
+  level only) reports mitochondrial association in one fibroblast line before confluence and says
+  nothing about brain.
+- Mitochondrial headline: m1555 A>G carried by only 3 glioblastoma cases; in Europeans alone the
+  point lies below the Bonferroni line (Fig 1A, about 3.5 against about 3.7) and only the
+  meta-analysis panel crosses it. The abstract pairs the adjusted OR with the exact-test P (9.5e-4),
+  which would not clear the 1.8e-4 threshold; the meta-analysis P of 1.0e-4 does (reader's
+  observation, relevant to m1555 not to WWOX).
+- Abstract and supplement disagree for the EFHD1 hit: the abstract's 3.57 is the meta-analysis OR,
+  the Hispanic OR is 6.19.
+
+FIRST-PASS OBSERVATIONS COMPLETE -> PRIOR KNOWLEDGE ADMITTED FOR COMPARISON: admitted the registry query result
+(empty) and the working model's silence on cancer-risk genetics of the locus.
+
+**What it changes in the disease model: nothing, and it should not be cited as WWOX-mitochondria
+evidence.** The paper supports "a common intronic WWOX variant shows a nominal case-control signal
+for childhood glioblastoma in one ancestry stratum"; it does not support "WWOX variation impairs
+mitochondrial function in the brain". Heterozygous or hypomorphic loss and tumour risk is a
+different question from biallelic-LoF DEE; no allele effect on expression is shown. Revival trigger
+for the signal: an independent paediatric glioma set that replicates the SNP in the same stratum, or
+an eQTL showing a direction at the locus; absent both, it stays a corpus record.

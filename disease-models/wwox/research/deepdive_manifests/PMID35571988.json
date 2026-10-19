@@ -1,0 +1,308 @@
+{
+ "schema_version": 2,
+ "pmid": "35571988",
+ "doi": "10.1093/noajnl/vdac045",
+ "receipt": "FTR-20261019-35571988-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A genetic-epidemiology group running a candidate-set germline association in a registry case-control study of childhood glioma; WWOX is one of 1318 genes entering through a Gene Ontology label, not a hypothesis of the group. Observation (case-control counts, odds ratios) is weighted above interpretation (mitochondrial energy insufficiency in childhood glioblastoma), which has no functional readout behind it."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND glioblastoma",
+    "count": 16,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "WWOX AND glioma",
+    "count": 14,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "WWOX AND rs62036057",
+    "count": 1,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches, not measurements; the rs62036057 query returns this paper alone."
+ },
+ "multihop": {
+  "references_enumerated": 36,
+  "gene_direct_refs_in_source": [
+   "14695174",
+   "11956080",
+   "11572989"
+  ],
+  "resolved": [
+   {
+    "pmid": "14695174",
+    "how": "Ref 32 (Watanabe 2003), the only source the paper gives for WWOX mitochondrial localisation and brain expression, resolved at ABSTRACT level only (PubMed EFetch 2026-10-19; no PMC deposit, no DOI on the PubMed record, Europe PMC inEPMC N): the abstract reports WWOX associated mainly with mitochondria before confluence in one human fibroblast line and nuclear after confluence, and reports WWOX in non-cancerous epithelial cells only; it does not mention brain. Not a reading and no receipt is claimed; the full text was not acquired."
+   }
+  ],
+  "queued": [
+   {
+    "queue": "CC-20261019-SCIENTIST-C-G3-01",
+    "why": "Full text of ref 32 (Watanabe 2003) not acquired (cascade: PubMed link-out, Europe PMC, DOI lookup by title in Crossref returned an unrelated record); refs 33 (Kuroki 2002, no receipt) and 34 (Paige 2001, partial receipt only) not read. No conclusion of this reading rests on them."
+   }
+  ],
+  "disposition": "Thirty-six references enumerated; three WWOX-titled; one resolved at abstract level only (stated), two queued, full text of the first also queued."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 35571988 --hops 1; paper_packet.py packet; fulltext_receipts.py status --pmid 35571988",
+  "hits": 0,
+  "note": "No record in any of the seven searched registry surfaces and no prior receipt; an empty result is a statement about that query over those files, not about the laboratory."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication type Journal Article.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 36,
+   "references_screened": 31,
+   "references_with_doi": 31,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 5
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID35571988_Li2022_PMC.xml",
+   "sha256": "c82f4f98541cc35bfd3655ccc92b48522d8f28e0ba95845d80bade029f377f35",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9092641/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "c82f4f98541cc35bfd3655ccc92b48522d8f28e0ba95845d80bade029f377f35"
+   }
+  },
+  {
+   "path": "files/figures/PMID35571988/vdac045f0001.jpg",
+   "sha256": "3dd1b219b76fdbff52c4517029c631d21a8047ccb3f49e8c3c52bfe3216d06c6",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC9092641 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID35571988/vdac045f0002.jpg",
+   "sha256": "9c41106e05cbbf03a5e66015e7e08b52ce14fd4d851eefb7170a84c4a54bb9c5",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC9092641 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID35571988/vdac045_suppl_supplementary_tables.xlsx",
+   "sha256": "f84d81a9b5086232fe551855cf75ba905f4c90116d65807c3d395471637fd8eb",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC9092641 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID35571988/vdac045_suppl_supplementary_tables.txt",
+   "sha256": "44d3eeda899a4c29c88ac835235c9ba6ccb0c456ee43dd288a2e45ae9b290975",
+   "kind": "supplement_text",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID35571988/vdac045_suppl_supplementary_tables.xlsx",
+    "extractor": {
+     "name": "python zipfile + regex over sharedStrings and sheet XML",
+     "version": "3.12 (system python3)",
+     "call": "cells joined by ' | ' per row, sheets in workbook order, prefixed '## SHEET name rows=N'"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "44d3eeda899a4c29c88ac835235c9ba6ccb0c456ee43dd288a2e45ae9b290975"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Design: registry-based case-control study, genotyping from archived dried blood spots on a SNP array, European and Hispanic children analysed separately.",
+    "snippet": "Subjects were derived from the California Childhood Cancer Records Linkage Project (CCRLP), a case-control study",
+    "anchor": "Methods, Population",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35571988_Li2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The glioblastoma stratum is small: 44 European and 43 Hispanic cases against 1431 and 1501 controls.",
+    "snippet": "Association analyses were conducted in self-reported Hispanics (43 cases and 1501 controls) and Europeans (44 cases and 1431 controls) separately",
+    "anchor": "Methods, MtDNA Association Study",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35571988_Li2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WWOX enters the analysis only as a member of a Gene Ontology mitochondrion gene set (about 1300 genes), not as a candidate chosen for WWOX biology.",
+    "snippet": "SNPs bounded by their genomic coordinates within this GO category were included in N-mt SNP scanning.",
+    "anchor": "Methods, N-mt Gene Set Association Analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35571988_Li2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The European significance threshold for the nuclear-mitochondrial scan is 6.28e-6 and the meta-analysis threshold 5.63e-6.",
+    "snippet": "Europeans: 7960 variants, P < 6.28 X 10–6",
+    "anchor": "Methods, N-mt Gene Set Association Analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35571988_Li2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The WWOX result: rs62036057 reached OR 2.99, P 3.42e-6 in Europeans, just under the Bonferroni threshold.",
+    "snippet": "In European children, rs62036057 was significant after Bonferroni correction (OR = 2.99, 95% CI 1.88–4.75, P-value = 3.42 X 10–6)",
+    "anchor": "Results, N-mt analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35571988_Li2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The SNP is intronic and the association is absent in Hispanic children and in the meta-analysis.",
+    "snippet": "However, the association with this SNP was not statistically significant in the analysis limited to Hispanic children nor in the meta-analysis",
+    "anchor": "Results, N-mt analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35571988_Li2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table S7 row for WWOX: European OR 2.99 (P 3.42e-6), Hispanic OR 1.3 (P 0.37), meta-analysis OR 2.14 (P 3.07e-5, above the 5.63e-6 threshold); the table does not name the effect allele.",
+    "snippet": "16:78990391:T:C | rs62036057 | WWOX | 2.99 | 3.42X10-6* | 1.3 | 0.37 | 2.14 | 3.07X10-5",
+    "anchor": "Supplementary Table S7",
+    "surface": "supplement",
+    "artifact": "files/figures/PMID35571988/vdac045_suppl_supplementary_tables.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table S7 row for EFHD1 reports Hispanic OR 6.19 and meta-analysis OR 3.57 (the abstract attaches the 3.57 value to the Hispanic stratum).",
+    "snippet": "2:232616979:T:G | rs111709726 | EFHD1 | 1.43 | 0.47 | 6.19 | 1.41X10-6* | 3.57 | 2.06X10-5",
+    "anchor": "Supplementary Table S7",
+    "surface": "supplement",
+    "artifact": "files/figures/PMID35571988/vdac045_suppl_supplementary_tables.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 2 legend gives the genomic inflation factor of the European Q-Q plot as 1.30.",
+    "snippet": "(B) Q-Q plot for European subjects (lambda value = 1.30)",
+    "anchor": "Figure 2 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35571988_Li2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2A/B: in the European Manhattan plot a single point near chromosome 16 clears the threshold line by a small margin, and the Q-Q plot departs upward only in its top tail; no regional association plot, no effect allele and no allele frequency is shown for the WWOX SNP.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2A-B (European): Manhattan plot with a red Bonferroni line near -log10 p 5.2; one point above the line on the chromosome 16 band at about 5.5, other chromosome points below; Q-Q plot with observed points on the diagonal until the last few points at -log10 expected above about 3.5, which rise above the line.",
+    "anchor": "Figure 2A-B",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35571988/vdac045f0002.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The mitochondrial m1555 variant is found in only three glioblastoma cases and is described by the authors as unlikely sufficient on its own.",
+    "snippet": "Indeed, only 3 subjects of our case group carry this variant.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35571988_Li2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1A: in Europeans the m1555 point sits below the Bonferroni line (about 3.5 against about 3.7), i.e. the European stratum alone does not clear it; only the meta-analysis panel C does.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1A-C: scatter of -log10 p against mtDNA position, red line near 3.7; panel A highest point about 3.5 below the line; panel B no point near the line; panel C one point about 3.9 above the line at about position 1500.",
+    "anchor": "Figure 1A-C",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35571988/vdac045f0001.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The WWOX statement of mitochondrial localisation is sourced to a single reference; the paper offers no mitochondrial measurement of its own.",
+    "snippet": "WWOX protein localizes to the mitochondria",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35571988_Li2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors read the WWOX germline hit as support for carcinogenesis rather than treatment effects; the design measures neither expression nor function.",
+    "snippet": "Our findings at the germline level lend support to the former hypothesis.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35571988_Li2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors name the absence of replication and the small sample as the major drawback.",
+    "snippet": "One major drawback of our study is the lack of a replication dataset.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35571988_Li2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC9092641/fullTextXML returned HTTP 200 (93087 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}
