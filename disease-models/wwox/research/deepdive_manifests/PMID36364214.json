@@ -1,0 +1,371 @@
+{
+ "schema_version": 2,
+ "pmid": "36364214",
+ "doi": "10.3390/molecules27217388",
+ "receipt": "FTR-20261019-36364214-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A urology and pathology group using WWOX as a tumour suppressor in a rat bladder cancer line; no neurological, developmental or biallelic-LoF disease work. Observation (what was stained or counted) is weighted above interpretation (ROS-dependent senescence, tumour suppression through senescence), which rests on one unquantified rescue panel and one tissue comparison between unlike compartments."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND bladder",
+    "count": 18,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "WWOX AND reactive oxygen",
+    "count": 11,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "WWOX AND senescence",
+    "count": 21,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Counts are record matches, not measurements of the pair."
+ },
+ "multihop": {
+  "references_enumerated": 27,
+  "gene_direct_refs_in_source": [
+   "21075834",
+   "26302329",
+   "30211123",
+   "28426730",
+   "27596295",
+   "25295115",
+   "27352332",
+   "34210081",
+   "25595185",
+   "27234396"
+  ],
+  "resolved": [
+   {
+    "pmid": "21075834",
+    "how": "Ref 11 (O'Keefe 2011, Drosophila Wwox and ROS) has a complete receipted reading in LEGEND (FTR-20260811-21075834-01, complete_fulltext_read); it is the source of the sentence that WWOX regulates ROS."
+   }
+  ],
+  "queued": [
+   {
+    "queue": "CC-20261019-SCIENTIST-C-G3-01",
+    "why": "Refs 4-7, 13, 15, 18-20 are WWOX tumour-suppressor reviews and cohort or cell-line studies in cancer; PMIDs obtained by PubMed ESearch on the DOI in the reference markup (2026-10-19). Ref 7 (O'Keefe 2015 PLoS ONE, the Drosophila tumour-cell elimination paper) holds a partial receipt only. None of the others is read; none is a WWOX-null neural or metabolic measurement, so no conclusion of this reading rests on them."
+   }
+  ],
+  "disposition": "Ten gene-direct references from the reference markup; one resolved by an existing complete reading, nine queued in the candidate with the reason above."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 36364214 --hops 1; paper_packet.py packet; fulltext_receipts.py status --pmid 36364214",
+  "hits": 3,
+  "note": "A corpus placeholder stub in the paper registry and the tracking log, both unprocessed; one discovery-ledger mention that lists the PMID among 'already read' records although no receipt of any kind exists for it."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication type Journal Article.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 27,
+   "references_screened": 27,
+   "references_with_doi": 27,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID36364214_Liu2022_PMC.xml",
+   "sha256": "d735c712dad6dd177a265b3183271f732a2e10c937e68857be63cdc60059aae7",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9657618/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "d735c712dad6dd177a265b3183271f732a2e10c937e68857be63cdc60059aae7"
+   }
+  },
+  {
+   "path": "files/figures/PMID36364214/molecules-27-07388-g002.jpg",
+   "sha256": "b28f2a397b99f4185d34a85ac32a03745323b210755bb8a17ba1a83486095262",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC9657618 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID36364214/molecules-27-07388-g003a.jpg",
+   "sha256": "a48a8fd12fd853d4f535c7e9a3ba2dc144c93472df60e022465d28e6baabd63d",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC9657618 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID36364214/molecules-27-07388-g003b.jpg",
+   "sha256": "93e6e442dc07beec75171d7cad9e02fec6d4f1e68c4133248f417f1801ad0994",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC9657618 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID36364214/molecules-27-07388-g004.jpg",
+   "sha256": "ddcf7163aca9c7fa6671250ebb3bd6bdc7556f57828a08b0fe0ac8ed3b93da37",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC9657618 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID36364214/molecules-27-07388-g005.jpg",
+   "sha256": "69b7a82c30dc96c1e0a96ba04fc50812c0d6df6d232895e9b6b4a84ca7e1302a",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC9657618 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "System: AY-27 rat bladder carcinoma cells (a gift line), not a neural cell or a WWOX-null background.",
+    "snippet": "The rat bladder cancer cell line AY-27 (a kind gift from Professor R. Moore",
+    "anchor": "4.3 Cell Culture and Cytotoxic Assay",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36364214_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Manipulation is lentiviral WWOX overexpression (LV-WWOX), about 2-fold over empty vector by Western blot; there is no knockdown, knockout or loss-of-function arm.",
+    "snippet": "was 2.01-fold (p < 0.01) higher than those in the AY-27 cells infected with the lentivirus-containing control vector (LV)",
+    "anchor": "2.1 Establishment of Cell Lines Overexpressing WWOX",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36364214_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "ROS readout: DHE-positive area was reported 6.93-fold over uninfected control and 2.87-fold over empty vector after LV-WWOX.",
+    "snippet": "the ROS expression levels in those AY-27 cells infected with LV-WWOX were 6.93-fold (p < 0.001) higher than the control",
+    "anchor": "2.3 Overexpression of WWOX Increased the TNF and ROS Activity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36364214_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The ROS method is one DHE fluorescence stain read as positive area; no mitochondrial probe, no oxygen consumption, no scavenger control is described.",
+    "snippet": "the cells were pretreated with interventions and then loaded with DHE (100 μM; Sigma",
+    "anchor": "4.6 Measurement of Intracellular ROS",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36364214_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Senescence readout: SA-beta-gal positive cells were 6.90-fold over uninfected control and 3.31-fold over empty vector after LV-WWOX.",
+    "snippet": "the senescence expression levels in the AY-27 cells infected with LV-WWOX were 6.90-fold (p < 0.001) higher than the control",
+    "anchor": "2.4 WWOX Induced Premature Senescence in the Bladder Cancer Cells",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36364214_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "AY-27 rat bladder carcinoma cells in vitro",
+     "genotype": "LV-WWOX overexpression",
+     "comparator": "uninfected and empty-vector lentivirus",
+     "endpoint": "SA-beta-gal positive cells"
+    }
+   },
+   {
+    "proposition": "ROS-dependence of senescence rests on exendin-4 treatment described as reducing ROS; ROS under exendin-4 is not reported in the Results.",
+    "snippet": "Exendin-4 suppressed the WWOX-induced senescence in LV-WWOX group of AY-27 cells in comparison with Figure 4a.",
+    "anchor": "2.4 WWOX Induced Premature Senescence in the Bladder Cancer Cells",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36364214_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "AY-27 rat bladder carcinoma cells in vitro",
+     "genotype": "LV-WWOX overexpression",
+     "treatment": "exendin-4 100 nM 24 h (Methods 4.7)",
+     "comparator": "Figure 4a without exendin-4",
+     "endpoint": "SA-beta-gal staining, unquantified"
+    }
+   },
+   {
+    "proposition": "Figure 4c shows one unquantified micrograph per condition under exendin-4; the LV-WWOX panel shows faint, diffuse blue staining of a cell cluster, and there is no count, no bar chart and no ROS readout beside it; it therefore illustrates but does not quantify the claimed rescue.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4c (Control, LV, LV-WWOX, all under exendin-4): three single micrographs at higher magnification than panel 4a; the LV-WWOX panel shows a cluster of cells with pale blue-green cytoplasm; no scale bar, no percentage, no n, and Figure 4b carries the only quantification (without exendin-4).",
+    "anchor": "Figure 4c",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36364214/molecules-27-07388-g004.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "AY-27 rat bladder carcinoma cells in vitro",
+     "genotype": "LV-WWOX overexpression",
+     "treatment": "exendin-4",
+     "comparator": "untreated Figure 4a",
+     "endpoint": "SA-beta-gal staining, unquantified"
+    },
+    "qualifies": "entries[5]",
+    "qualifies_needle": "Exendin-4 suppressed the WWOX-induced senescence"
+   },
+   {
+    "proposition": "Tumour comparison text: the control and empty-vector groups are said to have decreased tumour size by 30.49 and 28.60 percent relative to LV-WWOX, a sentence whose direction and base are unclear.",
+    "snippet": "compared to LV-WWOX, the control and LV also significantly decreased the tumor size by 30.49 and 28.60%, respectively (p < 0.05)",
+    "anchor": "2.5 WWOX Suppressed Bladder Cancer Growth in the F344/AY-27 Rat Model",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36364214_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "F344 rat orthotopic AY-27 bladder tumour, day 14",
+     "genotype": "intravesical LV-WWOX",
+     "comparator": "uninfected and empty-vector lentivirus",
+     "endpoint": "tumour volume"
+    }
+   },
+   {
+    "proposition": "Figure 5b: bar heights read by eye are about 12.3 (control), 13.1 (LV) and 3.7 (LV-WWOX) mm3; the LV-WWOX bar is about 30 percent of the control bar and about 28 percent of the LV bar, so 30.49 and 28.60 appear to be LV-WWOX as a percentage of the comparator, a reduction of roughly 70 percent, not 30 percent. Inference from approximate bar heights; the bar values are not tabulated and no n per group is given.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5b: bar chart, y axis Tumor volume (mm3) 0 to 18; three bars with error bars, Control about 12.3, LV about 13.1, LV-WWOX about 3.7, asterisk and hash on the LV-WWOX bar; Figure 5a: three excised specimens on mm grid paper, LV-WWOX a small pale nodule; no n per group in the legend or the text.",
+    "anchor": "Figure 5a-b",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36364214/molecules-27-07388-g005.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "F344 rat orthotopic AY-27 bladder tumour, day 14",
+     "genotype": "intravesical LV-WWOX",
+     "comparator": "uninfected and empty-vector lentivirus",
+     "endpoint": "tumour volume"
+    },
+    "qualifies": "entries[7]",
+    "qualifies_needle": "decreased the tumor size by 30.49 and 28.60%"
+   },
+   {
+    "proposition": "p21 IHC text: p21 said to be highly expressed in the LV-WWOX group versus control and LV.",
+    "snippet": "p21 was highly expressed in the LV-WWOX group compared to the control and LV group (Figure 5d).",
+    "anchor": "2.5 WWOX Suppressed Bladder Cancer Growth in the F344/AY-27 Rat Model",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36364214_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "F344 rat orthotopic AY-27 bladder tissue, day 14",
+     "genotype": "intravesical LV-WWOX",
+     "comparator": "uninfected and empty-vector lentivirus",
+     "endpoint": "p21 immunohistochemistry"
+    }
+   },
+   {
+    "proposition": "Figure 5d compares unlike compartments: the control and LV fields are solid sheets of tumour cells, whereas the LV-WWOX field is a folded urothelial epithelium over connective tissue with strong brown signal in the epithelium; there is no quantification, so the panel does not show p21 rising in tumour cells.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5d (p21 IHC, Control, LV, LV-WWOX, scale bars 100 um): Control and LV show dense pleomorphic tumour cell sheets with weak pale brown signal; LV-WWOX shows a thick folded epithelial layer with intense dark brown signal above pale connective tissue; no score, count or chart accompanies the panel.",
+    "anchor": "Figure 5d",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36364214/molecules-27-07388-g005.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "F344 rat orthotopic AY-27 bladder tissue, day 14",
+     "genotype": "intravesical LV-WWOX",
+     "comparator": "uninfected and empty-vector lentivirus",
+     "endpoint": "p21 immunohistochemistry"
+    },
+    "qualifies": "entries[9]",
+    "qualifies_needle": "p21 was highly expressed in the LV-WWOX group"
+   },
+   {
+    "proposition": "Statistics: group comparisons are run with Student's t-test and one-way ANOVA, with no named post-hoc correction or n for animals.",
+    "snippet": "The data were analyzed using the Student's t-test and one-way analysis of variance (ANOVA).",
+    "anchor": "4.9 Statistical Analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36364214_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The only mitochondrial statement is a restatement that WWOX may circumvent mitochondrial damage-induced glycolysis, sourced to an earlier Drosophila paper; this paper measures no mitochondrial quantity.",
+    "snippet": "(Warburg effect) has been proposed as a possible mechanism for its tumor-suppressor activity",
+    "anchor": "3. Discussion, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36364214_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Methods carry an epirubicin-hydrogel cytotoxicity assay that is not reported in the Results, a trace of text reused from another study of the group.",
+    "snippet": "then treated with epirubicin-loaded hydrogels for 18 h",
+    "anchor": "4.3 Cell Culture and Cytotoxic Assay",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36364214_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors themselves summarise the effect as cytotoxicity plus senescence, which the sparse rounded cell clusters of Figure 2a are compatible with.",
+    "snippet": "In conclusion, WWOX caused cytotoxicity and the induction of senescence in the AY-27 bladder cancer cells.",
+    "anchor": "5. Conclusions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36364214_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2a shows the LV-WWOX culture as a sparse field of rounded cell clusters on a clear background, not a flat confluent layer of enlarged cells.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2a (phase contrast, Control, LV, LV-WWOX, scale bar bottom right): Control and LV are confluent monolayers; LV-WWOX shows scattered round refractile cell clusters with large empty areas.",
+    "anchor": "Figure 2a",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36364214/molecules-27-07388-g002.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC9657618/fullTextXML returned HTTP 200 (76023 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}
