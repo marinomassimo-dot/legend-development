@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-27066568-01",
+ "study_id": {
+  "pmid": "27066568",
+  "doi": "10.1212/NXG.0000000000000031"
+ },
+ "event_at": "2026-10-19T18:37:00Z",
+ "analysis_at": "2026-10-19T18:37:00Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, metabolic batch 2026-10-19, task METAB-G3-C-20261019, branch task/METAB-G3-C-20261019; context_policy SOURCE_FIRST. Route: Europe PMC REST fullTextXML (open access) saved to the shared checkout files/fulltext; whole note, disclosure block and the seven references read from a text rendering of the JATS; the one figure opened at native size. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID27066568_Schule2015_PMC.xml",
+ "source_fingerprint": "0f9be2051c31fa17b37f27f7e8fc0e4bd23e627d91d1692091d9cd76882b848e",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_present",
+  "introduction": "read",
+  "methods": "read",
+  "results": "not_present",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID27066568.json",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "A Clinical/Scientific Note: no abstract and no Results section; the case description sits under Methods. No limitations section; the authors' caveats are the Discussion's closing paragraphs."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

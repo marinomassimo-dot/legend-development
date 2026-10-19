@@ -574,7 +574,8 @@ clones.
   homozygous clone sits slightly right of the full-length peak in all three replicates, marked n.s.;
   PACRG is lower in all three clones (about -0.65, -0.27 and -0.17 log2), significant in one and
   put down to clonal variation. So "no impact on expression" is a three-replicate, one-clone result
-  for the homozygote, with a faint shift in the same direction as no effect would not predict.
+  for the homozygote, with a visible shift to higher YFP that a strict no-effect reading would not
+  predict, although the comparison is marked not significant.
 - Two of 14 targeted clones are chromosome 3 trisomic: the targeting itself carries a
   mis-segregation risk, a caveat for any engineered fragile-site gene.
 - Authors' own limits: replication timing was not measured; the mechanisms for lower fragility are
@@ -593,3 +594,34 @@ does not touch human cells, neurons, mitochondria, or phenotype; it cannot say t
 has a phenotypic consequence, only that it can be changed without changing expression. Transfer: a
 design template (an internal control allele, FISH, an expression reporter) and a reminder that a
 fragility effect needs a locus-specific assay, which the model does not have.
+
+---
+
+## 13. PMID 27066568 — Schule 2015, Neurol Genet: "Is PARKIN parkinsonism a cancer predisposition syndrome?" (tier 3, new; case note)
+
+context_policy: SOURCE_FIRST. The selection row says it poses "the same two-sided question as WWOX": a
+fragile-site gene with neurological and tumour phenotypes. WWOX is not named; read for what the
+design can and cannot show.
+
+**What it MEASURES.** One patient: compound heterozygous PARKIN variants (a small deletion and a 118 kb
+exon duplication, class-level here), parkinsonism from age 44, a temporal-lobe glioblastoma at 46,
+death 14 months after surgery, autopsy findings (infiltrating glioblastoma, severe nigral cell loss,
+no Lewy bodies). Two younger brothers are compound heterozygous too, with no statement of their tumour
+status. No tumour genotyping, no cohort, no incidence figure for carriers.
+
+**First-pass observations.**
+- The inference to a predisposition syndrome rests on the rarity of the combination in one person
+  ("may well be more than a coincidence") and a two-hit schematic whose second hit is a placeholder.
+- The authors themselves note the combination is rare, that larger studies are needed, and that
+  epidemiology points the other way (lower cancer risk in neurodegenerative disease).
+- The fragility content is a single sentence: the gene is 1.3 Mb and holds the fragile site
+  FRA6E between exons 2 and 8; the paper does not link the patient's variants to fragility
+  (an exon duplication is a copy-number event that a fragile site could produce, but it is not argued).
+
+FIRST-PASS OBSERVATIONS COMPLETE -> PRIOR KNOWLEDGE ADMITTED FOR COMPARISON: admitted the registry query (empty).
+
+**What it changes in the disease model: nothing.** The WWOX analogue it invites (biallelic germline
+LoF with tumour risk) cannot be asked of the DEE class, whose affected children do not live long
+enough for adult tumour ascertainment; it can be asked only of heterozygous carriers, and this note
+offers no method for it. It is a reminder, not evidence: a single-case two-hit hypothesis for a
+fragile-site gene, with no allele-level or tumour-level data.
