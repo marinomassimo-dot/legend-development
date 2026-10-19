@@ -1,0 +1,42 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-25595186-01",
+ "study_id": {
+  "pmid": "25595186",
+  "doi": "10.1177/1535370214565990"
+ },
+ "analysis_at": "2026-10-19T18:23:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a (Scientist A), metabolic batch 2026-10-19 group G1, task METAB-G1-A-20261019 on branch task/METAB-G1-A-20261019, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN. Route: PMC article page HTML for PMC4935231 (Europe PMC fullTextXML not served for this non-open-access PMC record; efetch metadata only; the plain PMC article URL returned the body on one of three attempts), four figure JPEGs from the PMC blob store into the root files/ tree; the article is a narrative review, so methods, results, tables and supplementary are not present; Figures 1-4 inspected as images; the review's own sections are filed under introduction and discussion. Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a staged JSON for the Orchestrator and was not appended at preparation time (the Orchestrator records staged receipts in event-ID order).",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID25595186_Richards2015_PMC.html",
+ "source_fingerprint": "f22749f1263d7bc19aeed5119566661679b3dd51a267bd1c2e53b659f0f2a7a2",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "not_present",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID25595186.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID25595186.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-A-LIPID-03.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-a.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "manifest",
+  "Figures 1-4 inspected as images (two summary boxes, a phylogeny and a six-species alignment)",
+  "Narrative review: no methods, results, tables or supplementary; a term search for HDL, lipoprotein, cholesterol and lipid across the body found one generic lipid sentence"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

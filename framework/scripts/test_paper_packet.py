@@ -778,6 +778,12 @@ class ArtifactWorkspacePassthroughTests(unittest.TestCase):
         self.assertEqual(with_flag["manifest validator"][-1], "/shared/root")
         self.assertNotIn("--artifact-workspace", without["manifest validator"])
 
+    def test_relative_workspace_is_resolved_against_the_invoker_not_the_child(self):
+        packet = {"applicable_checks": [{"name": "manifest validator"}]}
+        got = dict(pp._runnable(Path("."), "wwox", "1", packet, "."))["manifest validator"][-1]
+        self.assertTrue(Path(got).is_absolute(), got)
+        self.assertEqual(Path(got), Path.cwd().resolve())
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
