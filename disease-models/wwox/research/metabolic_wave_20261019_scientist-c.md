@@ -719,3 +719,47 @@ stabilisation; BNIP3 and NIX are absent from the repository, so a first step is 
 BNIP3L transcript and LC3/TOMM20 colocalisation in the WWOX-deficient fibroblast lines. Falsifier:
 no change in those readouts. Counter: no WWOX paper in the repository measures BNIP3 and the HIF1A
 targets it lists are glycolytic.
+
+---
+
+## 16. PMID 42219438 — Bjorklund 2026, Biometals: "Iron dysregulation in the central nervous system: implications for autism spectrum disorder" (tier 3, new; narrative review)
+
+context_policy: SOURCE_FIRST. The selection row calls it the only iron-in-neurodevelopment review found and notes
+iron is entirely absent from the repository. WWOX is not named (zero); ferroptosis occurs 30 times,
+myelin 27, epilepsy once (as an ASD comorbidity), seizure zero (counts from the text in this session).
+
+**What it MEASURES.** Nothing. It relays: fetal iron supply (placenta, blood-brain barrier), maternal
+and neonatal deficiency and autism risk, single-gene association findings (TFRC, SLC40A1, CP, FTL and
+others; Table 2), serum markers and susceptibility-weighted MRI in children (Table 1), and
+management (supplementation, chelation).
+
+**First-pass observations (four figures, two tables).**
+- The review is internally uneven on its central premise: the text says children with autism show lower
+  serum ferritin and haemoglobin, while Table 1 lists a study with no significant ferritin difference;
+  an elevated-transferrin cohort is labelled "causal-level evidence"; Mendelian-randomisation support is
+  cited secondhand; the authors conclude the findings are heterogeneous and do not support a single
+  pathogenic role.
+- GPX4 is stated both ways with one reference: the text says autistic progenitor cells resist
+  ferroptosis through upregulated GPX4 and overgrow; Table 2 lists GPX4 as reduced antioxidant
+  defence with increased ferroptosis susceptibility, citing the same paper (recorded as a
+  `panel_qualifies_text` locator between a table row and a text sentence).
+- "Iron-dependent superoxide dismutase" is named in autism patients; mammalian superoxide dismutases
+  are Cu-Zn and Mn enzymes (domain knowledge, flagged as not checked against a source).
+- The developmental-window figure (Fig 3) is a conceptual colour map without a scale; it states that
+  about 80 percent of brain iron accumulates in the late prenatal and early postnatal windows.
+- It states systemic iron overload is not common in autism, so the ferroptosis argument rests on
+  regional accumulation seen by susceptibility imaging.
+
+FIRST-PASS OBSERVATIONS COMPLETE -> PRIOR KNOWLEDGE ADMITTED FOR COMPARISON: admitted the registry query (empty) and the
+working model's recorded hypomyelination reading (the neuronal-deletion mouse, CLAIM 003, a
+non-cell-autonomous result).
+
+**What it changes in the disease model: nothing, and it names the iron-related observables the
+repository lacks.** Its iron readouts for a developing brain are serum ferritin, transferrin
+saturation, hepcidin, TFRC, ferroportin and ceruloplasmin genotypes, and susceptibility MRI of deep
+grey matter and cortex, with myelination as a downstream process. For WWOX there is no record of any
+of them: no plasma ferritin or transferrin saturation in WWOX-DEE case reports (not searched
+beyond the registry), no brain-iron imaging. A closing step that needs no new reading: scan the
+case reports already in the repository for a stated ferritin, haemoglobin or susceptibility imaging
+value and record "none stated" per report. The review does not touch the WWOX-ferroptosis literature
+and does not discuss genetic epilepsies; transfer is the readout list only.
