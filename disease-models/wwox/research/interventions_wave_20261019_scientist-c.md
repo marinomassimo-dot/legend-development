@@ -126,3 +126,59 @@ is correlation in a group of five. One timing statement (deficit "3 days" after)
 tested remedy was a drug. For the model it is a transferable negative: ictal hypoxia as a feature of a WWOX phenotype is
 unmeasured. Class-level BLOCK-1 note: acetaminophen at 250 mg/kg and nifedipine at 15 mg/kg i.p. in DMSO are rat experimental doses, not guidance.
 
+---
+
+## 7. PMID 37876811 — Liang 2023, iScience (tier 2) — HIF-1 alpha/HO-1, ferroptosis markers and epilepsy
+
+SOURCE_FIRST · FTR-20261019-37876811-01 (partial: supplement tables S1 and S3 not read) · manifest PASS · **not WWOX evidence; the only WWOX item is a row in a gene list.**
+
+**Measures.** Plasma untargeted metabolomics (62 patients, 20 controls; free fatty acids, bilirubin up, glutamine, arginine down), a
+DisGeNET epilepsy gene set (1215 genes, 73 hubs) with HIF-1 signalling enriched, and PTZ-kindled mice (HIF-1 alpha, HO-1, COX-2, Fe2+,
+ferritin, transferrin, GPX4, MDA; n = 3 per bar). Supplementary Table S2 lists WWOX among the 1215 epilepsy genes (row 252); Table S4 puts
+the HIF-1 pathway 22nd of the enriched pathways, behind lipid and atherosclerosis, IL-17, cancer and TNF pathways, with HIF1A itself one of the 15 member genes
+drawn from a hub set picked by network connectivity (a circularity the paper does not discuss).
+
+**Does not support.** Causation: no intervention on HIF-1 alpha or HO-1 was made (the authors' own limitation), the patient arm reports
+no anti-seizure medication, the ROS panel has images without a quantification plot, and three animals per arm carry every mouse conclusion.
+
+**Changes.** The WWOX/HIF1A axis (HIF1A up on WWOX loss, read in the metabolic batch) predicts a pseudo-hypoxic neural state; this paper
+shows HIF-1 alpha up in an acquired epilepsy model, so a raised neural HIF-1 alpha is **not specific** to WWOX loss and cannot be a WWOX marker. Question 1 of the
+selection file (is neural HIF1A measurable in existing mouse tissue) stays open. WWOX is on the DisGeNET epilepsy list (a database
+fact, not a measurement).
+
+---
+
+## 8. PMID 41324728 — Kuang 2025, Mol Neurobiol (tier 2) — HIF-1 alpha/BNIP3 and autophagy in epilepsy
+
+SOURCE_FIRST · FTR-20261019-41324728-01 · manifest PASS · **not WWOX evidence.**
+
+**Measures.** A public blood expression set (34 medication-free cases, 50 controls) and machine-learning classifiers (AUC 0.77 to 0.81; external
+check AUC 0.793, interval 0.587 to 0.953, in hippocampal tissue from a different population), then LiCl-pilocarpine rats with the HIF-1
+alpha translation inhibitor KC7F2 given 24 h before induction. KC7F2 lengthened latency to the first stage-4 seizure (about 19 to 40 min), lowered LC3 II/I, raised p62
+and BNIP3, and increased neuron counts and mitochondrial area; spontaneous seizure counts did not change.
+
+**Does not support.** Treatment of established epilepsy (the drug is a pre-treatment) or reduced seizure number: the Discussion says
+HIF-1 alpha inhibition "reduced the number of SRS" while the Results report no change. For the same LiCl-Pilo group, neuron counts in Figure 8 (about 30 HE) and Figure 11 (about 6 HE)
+differ about five-fold. The count of DE-ATGs is eleven in the text, ten names listed.
+
+**Changes.** Nothing for claims. Adds the second acquired-epilepsy paper in which HIF-1 alpha is up and pharmacological HIF-1 alpha lowering is neuroprotective in a rodent,
+on small n; whether the same holds when HIF1A is already raised by WWOX loss is untested. Class-level BLOCK-1 note: KC7F2 is an experimental anticancer compound.
+
+---
+
+## 9. PMID 41039661 — Huang 2025, Epigenomics (tier 2) — MeCP2, hypoxia and oxidative stress in Rett syndrome (narrative review)
+
+SOURCE_FIRST · FTR-20261019-41039661-01 · manifest PASS · **disease-class comparator, not WWOX evidence.**
+
+**Measures.** Nothing new: it collates breathing abnormalities, oximetry (partial pressure as low as 50 mmHg in about half of patients), mouse
+hypoxia responses and an oxidative-stress marker table (Table 1) for MECP2 loss. Two statements matter for the oxygen questions: female
+patients' breathing defects are "generally present during awake periods but not during sleep", and hyperventilation in patients occurs "independently of
+hypoxemia". The central MeCP2-PARP1-BDNF hypoxia mechanism is labelled speculative by the authors.
+
+**Does not support.** Any benefit of nocturnal or supplemental oxygen or helmet/CPAP in a developmental encephalopathy: the review contains no oxygen-therapy
+trial. It does not establish that hypoxia causes the oxidative stress (stated as unanswered) and its Table 1 shows tissue-dependent glutathione direction.
+
+**Changes.** For WOREE/SCAR12/DEE28 the transferable negative is that even in the best-described encephalopathy with hypoxaemia, awake-versus-sleep timing
+and the cause-versus-consequence of hypoxia are unresolved, so a "nocturnal" rationale cannot be assumed. Whether WWOX loss produces breathing abnormalities is
+not addressed here (a WWOX case-report scan is a lead, below).
+
