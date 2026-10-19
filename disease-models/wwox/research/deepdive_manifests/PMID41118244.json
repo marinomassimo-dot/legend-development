@@ -1,0 +1,684 @@
+{
+ "schema_version": 2,
+ "pmid": "41118244",
+ "doi": "10.1111/epi.18678",
+ "receipt": "FTR-20261019-41118244-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID41118244.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A Korean neuroscience laboratory using its own pilocarpine mouse pipeline; primary for its own mouse data; a mechanistic-hypothesis paper with an intervention."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "C1q AND epileptogenesis AND pilocarpine",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND complement",
+    "count": 8,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts at the stated date."
+ },
+ "multihop": {
+  "references_enumerated": 50,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41118244 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 41118244: publication types ['Journal Article']; correction/retraction link markers in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 50,
+   "references_screened": 49,
+   "references_with_doi": 49,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41118244_Jeong2026_PMC.xml",
+   "sha256": "0d43a839073981d1cb457ad4b179bbc3afd9087684a1f396ec0d010404697150",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC12927691: abstract, body, six figure legends, 50 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12927691/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41118244/EPI-67-908-g003.jpg",
+   "sha256": "f10429497c2704ecc620cdaa0dbbfb47a877704fc9368498613e832330420903",
+   "kind": "figure",
+   "note": "Image file g003 from the Europe PMC supplementaryFiles container (JATS figure mapping: Figure 1), inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12927691/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41118244/EPI-67-908-g001.jpg",
+   "sha256": "c4c8770f613f3f4f0a39c3af33f53ebb41a6c7683c550023109603f96aa9cc9b",
+   "kind": "figure",
+   "note": "Image file g001 from the Europe PMC supplementaryFiles container (JATS figure mapping: Figure 2), inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12927691/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41118244/EPI-67-908-g002.jpg",
+   "sha256": "78e8ee0773a37ac014ac9cb9b8162a7654bfa55fb2ea05ff98399fd5e151ee83",
+   "kind": "figure",
+   "note": "Image file g002 from the Europe PMC supplementaryFiles container (JATS figure mapping: Figure 3), inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12927691/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41118244/EPI-67-908-g005.jpg",
+   "sha256": "b024dfc81c054e126f69dff32e5ea291aab8dd2e20d9e333634d3c81052f0d2e",
+   "kind": "figure",
+   "note": "Image file g005 from the Europe PMC supplementaryFiles container (JATS figure mapping: Figure 4), inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12927691/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41118244/EPI-67-908-g004.jpg",
+   "sha256": "4f6082015d1a0e6822a28c0c22ad00087d85abe244f62f8934c30a88776a24b0",
+   "kind": "figure",
+   "note": "Image file g004 from the Europe PMC supplementaryFiles container (JATS figure mapping: Figure 5), inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12927691/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41118244/EPI-67-908-g006.jpg",
+   "sha256": "271fe0b37a8af8192d0f9e578bdc8128405bdcc083281d4190083d55510e8edf",
+   "kind": "figure",
+   "note": "Image file g006 from the Europe PMC supplementaryFiles container (JATS figure mapping: Figure 6), inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12927691/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41118244/EPI-67-908-s001.docx",
+   "sha256": "d911c70a0ff1b7c3d79d7078fbf307f1771a560580f2048e61f9ef4cd63ef459",
+   "kind": "supplement_binary",
+   "note": "Supplementary Word file (Figures S1-S3 with legends).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12927691/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41118244_Jeong2026_supplement/EPI-67-908-s001.txt",
+   "sha256": "3e128c559c9d4a52453b9c9b21d602532e787591f823241f6b8111fc25aa52d9",
+   "kind": "supplement_text",
+   "note": "DERIVED text of the supplementary Word file (legends).",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_python_zipfile_docx",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "3e128c559c9d4a52453b9c9b21d602532e787591f823241f6b8111fc25aa52d9",
+    "derived_from": "files/figures/PMID41118244/EPI-67-908-s001.docx",
+    "extractor": {
+     "name": "python zipfile extraction (docx2txt.py for text; media members copied unchanged)",
+     "version": "python 3.12",
+     "call": "docx2txt.py / zipfile.read"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID41118244/supp_media/image1.tiff",
+   "sha256": "1e9939204f3f725c2e498bbc42ab4c78f34612fa221810536e9a7db9cd6ae6ef",
+   "kind": "figure",
+   "note": "Supplementary Figure S1 (model characterisation) extracted unchanged from the Word file; viewed after conversion to PNG.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_python_zipfile_docx",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "1e9939204f3f725c2e498bbc42ab4c78f34612fa221810536e9a7db9cd6ae6ef",
+    "derived_from": "files/figures/PMID41118244/EPI-67-908-s001.docx",
+    "extractor": {
+     "name": "python zipfile extraction (docx2txt.py for text; media members copied unchanged)",
+     "version": "python 3.12",
+     "call": "docx2txt.py / zipfile.read"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID41118244/supp_media/image2.tiff",
+   "sha256": "9e0616c6d07625543bf4e5030c58a2322b30b697447c08f79ca6065af625cb03",
+   "kind": "figure",
+   "note": "Supplementary Figure S2 (spectral analysis and seizure count) extracted unchanged from the Word file; viewed after conversion to PNG.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_python_zipfile_docx",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "9e0616c6d07625543bf4e5030c58a2322b30b697447c08f79ca6065af625cb03",
+    "derived_from": "files/figures/PMID41118244/EPI-67-908-s001.docx",
+    "extractor": {
+     "name": "python zipfile extraction (docx2txt.py for text; media members copied unchanged)",
+     "version": "python 3.12",
+     "call": "docx2txt.py / zipfile.read"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID41118244/supp_media/image3.tiff",
+   "sha256": "b799036a97822b63f4a8e2e45176e3ac12f6dd0d98310238d95035ec21535872",
+   "kind": "figure",
+   "note": "Supplementary Figure S3 (MAP2 and spine scheme) extracted unchanged from the Word file; legend read, image not opened.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_python_zipfile_docx",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "b799036a97822b63f4a8e2e45176e3ac12f6dd0d98310238d95035ec21535872",
+    "derived_from": "files/figures/PMID41118244/EPI-67-908-s001.docx",
+    "extractor": {
+     "name": "python zipfile extraction (docx2txt.py for text; media members copied unchanged)",
+     "version": "python 3.12",
+     "call": "docx2txt.py / zipfile.read"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12927691/fullTextXML returned HTTP 200 (128584 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "Cohort: 163 male mice considered; about 80 percent of 150 pilocarpine mice reached stage 3 or more and about 30 percent survived beyond one week; 45 epileptic mice were analysed.",
+    "snippet": "Of 150 pilocarpine‐injected mice, ~80% reached stage ≥3 and ~30% survived >1 week following SE termination. Thus, 45 epileptic mice were subjected to analyses.",
+    "anchor": "Materials and methods, Pilocarpine model",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41118244_Jeong2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "male C57BL/6N mice, pilocarpine-induced status epilepticus, hippocampal CA1/CA3, intra-cisterna magna anti-C1q or isotype IgG at day 7",
+     "genotype": "wild type",
+     "treatment": "C1q-neutralising antibody 100 ug/mL 10 uL or control IgG2b, single dose at 7 days post-SE",
+     "comparator": "control IgG-treated epileptic mice; naive mice",
+     "timepoint": "5 weeks post-SE",
+     "endpoint": "interictal spikes, Nissl, spines, Iba-1/CD68, GFAP/C3"
+    }
+   },
+   {
+    "proposition": "Intervention: a single intra-cisterna magna injection of 10 uL at 100 ug/mL anti-C1q or isotype IgG at day 7.",
+    "snippet": "C1q neutralizing antibody (100 μg/mL; GTX54404, GeneTex) or the immunoglobulin G (IgG) 2b isotype control (100 μg/mL; GTX35023, GeneTex) was infused (10 μL total) at 500 nL/min using a syringe pump.",
+    "anchor": "Materials and methods, Intra-cisterna magna injection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41118244_Jeong2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "male C57BL/6N mice, pilocarpine-induced status epilepticus, hippocampal CA1/CA3, intra-cisterna magna anti-C1q or isotype IgG at day 7",
+     "genotype": "wild type",
+     "treatment": "C1q-neutralising antibody 100 ug/mL 10 uL or control IgG2b, single dose at 7 days post-SE",
+     "comparator": "control IgG-treated epileptic mice; naive mice",
+     "timepoint": "5 weeks post-SE",
+     "endpoint": "interictal spikes, Nissl, spines, Iba-1/CD68, GFAP/C3"
+    }
+   },
+   {
+    "proposition": "EEG: 12 h recordings at 4 and 5 weeks; spike analysis used twelve 5-minute epochs from six chronic epileptic mice, while Figure 2 shows eight mice per group.",
+    "snippet": "For quantification, twelve 5‐min resting state epochs—excluding those with seizures or movement artifacts—were randomly selected from a 12‐h EEG session in six chronic epileptic mice.",
+    "anchor": "Materials and methods, EEG",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41118244_Jeong2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "male C57BL/6N mice, pilocarpine-induced status epilepticus, hippocampal CA1/CA3, intra-cisterna magna anti-C1q or isotype IgG at day 7",
+     "genotype": "wild type",
+     "treatment": "C1q-neutralising antibody 100 ug/mL 10 uL or control IgG2b, single dose at 7 days post-SE",
+     "comparator": "control IgG-treated epileptic mice; naive mice",
+     "timepoint": "5 weeks post-SE",
+     "endpoint": "interictal spikes, Nissl, spines, Iba-1/CD68, GFAP/C3"
+    }
+   },
+   {
+    "proposition": "Statistics: one-way ANOVA with Bonferroni and Mann-Whitney; mean plus or minus SD; one representative coronal section per animal for immunostaining.",
+    "snippet": "one representative coronal section per animal was analyzed, corresponding to 2.0 mm posterior to bregma, where the hippocampal formation was clearly defined.",
+    "anchor": "Materials and methods, Immunofluorescence",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41118244_Jeong2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "male C57BL/6N mice, pilocarpine-induced status epilepticus, hippocampal CA1/CA3, intra-cisterna magna anti-C1q or isotype IgG at day 7",
+     "genotype": "wild type",
+     "treatment": "C1q-neutralising antibody 100 ug/mL 10 uL or control IgG2b, single dose at 7 days post-SE",
+     "comparator": "control IgG-treated epileptic mice; naive mice",
+     "timepoint": "5 weeks post-SE",
+     "endpoint": "interictal spikes, Nissl, spines, Iba-1/CD68, GFAP/C3"
+    }
+   },
+   {
+    "proposition": "Temporal profile: microglial C1q peaks at 7 and 14 days and falls by 5 weeks, while astrocytic C3 rises from day 7 and persists in CA1.",
+    "snippet": "Astrocyte activation was significantly elevated from 7 days post‐SE and remained persistently high through chronic phases in the CA1 region (Figure 1I,J).",
+    "anchor": "Results, C1q inhibition alleviated epileptiform activity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41118244_Jeong2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "male C57BL/6N mice, pilocarpine-induced status epilepticus, hippocampal CA1/CA3, intra-cisterna magna anti-C1q or isotype IgG at day 7",
+     "genotype": "wild type",
+     "treatment": "C1q-neutralising antibody 100 ug/mL 10 uL or control IgG2b, single dose at 7 days post-SE",
+     "comparator": "control IgG-treated epileptic mice; naive mice",
+     "timepoint": "5 weeks post-SE",
+     "endpoint": "interictal spikes, Nissl, spines, Iba-1/CD68, GFAP/C3"
+    }
+   },
+   {
+    "proposition": "Primary outcome: interictal spike frequency fell in anti-C1q mice; the authors call it quantitative support for antiepileptic efficacy.",
+    "snippet": "the observed reduction quantitatively supports the antiepileptic efficacy of C1q inhibition.",
+    "anchor": "Results, C1q inhibition alleviated epileptiform activity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41118244_Jeong2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "male C57BL/6N mice, pilocarpine-induced status epilepticus, hippocampal CA1/CA3, intra-cisterna magna anti-C1q or isotype IgG at day 7",
+     "genotype": "wild type",
+     "treatment": "C1q-neutralising antibody 100 ug/mL 10 uL or control IgG2b, single dose at 7 days post-SE",
+     "comparator": "control IgG-treated epileptic mice; naive mice",
+     "timepoint": "5 weeks post-SE",
+     "endpoint": "interictal spikes, Nissl, spines, Iba-1/CD68, GFAP/C3"
+    }
+   },
+   {
+    "proposition": "The authors state seizure frequency could not be precisely quantified in 12 hour recordings.",
+    "snippet": "Although precise quantification of seizure frequency was limited by the 12‐h recording duration, the analysis revealed a reduction in interictal epileptiform activity",
+    "anchor": "Results, C1q inhibition alleviated epileptiform activity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41118244_Jeong2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "male C57BL/6N mice, pilocarpine-induced status epilepticus, hippocampal CA1/CA3, intra-cisterna magna anti-C1q or isotype IgG at day 7",
+     "genotype": "wild type",
+     "treatment": "C1q-neutralising antibody 100 ug/mL 10 uL or control IgG2b, single dose at 7 days post-SE",
+     "comparator": "control IgG-treated epileptic mice; naive mice",
+     "timepoint": "5 weeks post-SE",
+     "endpoint": "interictal spikes, Nissl, spines, Iba-1/CD68, GFAP/C3"
+    }
+   },
+   {
+    "proposition": "Neuronal protection was claimed in CA1 by Nissl counts at 5 weeks.",
+    "snippet": "Importantly, this reduction in electrophysiological hyperactivity was accompanied by a significant reduction in neuronal loss in the CA1 region at 5 weeks post‐SE, as evidenced by Nissl staining (Figure 2H,I).",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41118244_Jeong2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "male C57BL/6N mice, pilocarpine-induced status epilepticus, hippocampal CA1/CA3, intra-cisterna magna anti-C1q or isotype IgG at day 7",
+     "genotype": "wild type",
+     "treatment": "C1q-neutralising antibody 100 ug/mL 10 uL or control IgG2b, single dose at 7 days post-SE",
+     "comparator": "control IgG-treated epileptic mice; naive mice",
+     "timepoint": "5 weeks post-SE",
+     "endpoint": "interictal spikes, Nissl, spines, Iba-1/CD68, GFAP/C3"
+    }
+   },
+   {
+    "proposition": "Spines: anti-C1q preserved spine density and dendritic architecture in CA1 and CA3 compared with control IgG (Golgi, 13 mice).",
+    "snippet": "Anti‐C1q treatment preserved both spine density and dendritic architecture in hippocampal regions CA1 and CA3 relative to ctrl‐IgG‐injected epileptic mice (Figure 3F).",
+    "anchor": "Results, C1q neutralization mitigated synaptic elimination",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41118244_Jeong2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "male C57BL/6N mice, pilocarpine-induced status epilepticus, hippocampal CA1/CA3, intra-cisterna magna anti-C1q or isotype IgG at day 7",
+     "genotype": "wild type",
+     "treatment": "C1q-neutralising antibody 100 ug/mL 10 uL or control IgG2b, single dose at 7 days post-SE",
+     "comparator": "control IgG-treated epileptic mice; naive mice",
+     "timepoint": "5 weeks post-SE",
+     "endpoint": "interictal spikes, Nissl, spines, Iba-1/CD68, GFAP/C3"
+    }
+   },
+   {
+    "proposition": "Golgi analysis used 13 mice (3 naive, 4 control IgG, 6 anti-C1q) and the plots count cells (up to 50 per group) as the unit.",
+    "snippet": "A total of 13 mice, namely, treatment‐naïve (n = 3), control IgG‐injected epileptic (n = 4), and anti‐C1q‐injected epileptic mice (n = 6), were subjected to Golgi staining to evaluate dendritic spine density in the hippocampus.",
+    "anchor": "Materials and methods, Golgi staining",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41118244_Jeong2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "male C57BL/6N mice, pilocarpine-induced status epilepticus, hippocampal CA1/CA3, intra-cisterna magna anti-C1q or isotype IgG at day 7",
+     "genotype": "wild type",
+     "treatment": "C1q-neutralising antibody 100 ug/mL 10 uL or control IgG2b, single dose at 7 days post-SE",
+     "comparator": "control IgG-treated epileptic mice; naive mice",
+     "timepoint": "5 weeks post-SE",
+     "endpoint": "interictal spikes, Nissl, spines, Iba-1/CD68, GFAP/C3"
+    }
+   },
+   {
+    "proposition": "Mechanism claimed: C1q is the upstream factor for persistent C3; microglial CD68 and astrocytic C3 fell with anti-C1q.",
+    "snippet": "Importantly, our data indicate that C1q serves as a critical upstream factor for persistent C3 upregulation.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41118244_Jeong2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "male C57BL/6N mice, pilocarpine-induced status epilepticus, hippocampal CA1/CA3, intra-cisterna magna anti-C1q or isotype IgG at day 7",
+     "genotype": "wild type",
+     "treatment": "C1q-neutralising antibody 100 ug/mL 10 uL or control IgG2b, single dose at 7 days post-SE",
+     "comparator": "control IgG-treated epileptic mice; naive mice",
+     "timepoint": "5 weeks post-SE",
+     "endpoint": "interictal spikes, Nissl, spines, Iba-1/CD68, GFAP/C3"
+    }
+   },
+   {
+    "proposition": "The intro cites C1q knockout mice showing heightened seizure susceptibility and aberrant synaptic connections, and says roles depend on timing and context.",
+    "snippet": "whereas C1q knockout mice exhibited heightened seizure susceptibility and aberrant synaptic connections.",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41118244_Jeong2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "male C57BL/6N mice, pilocarpine-induced status epilepticus, hippocampal CA1/CA3, intra-cisterna magna anti-C1q or isotype IgG at day 7",
+     "genotype": "wild type",
+     "treatment": "C1q-neutralising antibody 100 ug/mL 10 uL or control IgG2b, single dose at 7 days post-SE",
+     "comparator": "control IgG-treated epileptic mice; naive mice",
+     "timepoint": "5 weeks post-SE",
+     "endpoint": "interictal spikes, Nissl, spines, Iba-1/CD68, GFAP/C3"
+    }
+   },
+   {
+    "proposition": "Only one treatment time (day 7) was tested; the discussion nonetheless argues that the subacute window is critical.",
+    "snippet": "These results indicate that the timing of complement inhibition, particularly targeting C1q during the subacute window when microglial complement activity is transiently elevated, may be critical for effectively mitigating downstream glial activation and long‐term epileptogenic changes.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41118244_Jeong2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "male C57BL/6N mice, pilocarpine-induced status epilepticus, hippocampal CA1/CA3, intra-cisterna magna anti-C1q or isotype IgG at day 7",
+     "genotype": "wild type",
+     "treatment": "C1q-neutralising antibody 100 ug/mL 10 uL or control IgG2b, single dose at 7 days post-SE",
+     "comparator": "control IgG-treated epileptic mice; naive mice",
+     "timepoint": "5 weeks post-SE",
+     "endpoint": "interictal spikes, Nissl, spines, Iba-1/CD68, GFAP/C3"
+    }
+   },
+   {
+    "proposition": "The authors say it is unlikely the antibody affected homeostatic complement functions, without a measurement of peripheral or developmental complement function.",
+    "snippet": "Additionally, it is unlikely that the antibody administration significantly impacted homeostatic complement functions, which are typically maintained at low levels.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41118244_Jeong2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "male C57BL/6N mice, pilocarpine-induced status epilepticus, hippocampal CA1/CA3, intra-cisterna magna anti-C1q or isotype IgG at day 7",
+     "genotype": "wild type",
+     "treatment": "C1q-neutralising antibody 100 ug/mL 10 uL or control IgG2b, single dose at 7 days post-SE",
+     "comparator": "control IgG-treated epileptic mice; naive mice",
+     "timepoint": "5 weeks post-SE",
+     "endpoint": "interictal spikes, Nissl, spines, Iba-1/CD68, GFAP/C3"
+    }
+   },
+   {
+    "proposition": "Clinical translation caveat: most clinical interventions are applied during the chronic stage, so complement modulation beyond the early window must be evaluated.",
+    "snippet": "Furthermore, as most clinical interventions are applied during the chronic stage of epilepsy, evaluating complement modulation beyond the early epileptogenic window is essential to translate experimental findings into clinically relevant applications.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41118244_Jeong2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "male C57BL/6N mice, pilocarpine-induced status epilepticus, hippocampal CA1/CA3, intra-cisterna magna anti-C1q or isotype IgG at day 7",
+     "genotype": "wild type",
+     "treatment": "C1q-neutralising antibody 100 ug/mL 10 uL or control IgG2b, single dose at 7 days post-SE",
+     "comparator": "control IgG-treated epileptic mice; naive mice",
+     "timepoint": "5 weeks post-SE",
+     "endpoint": "interictal spikes, Nissl, spines, Iba-1/CD68, GFAP/C3"
+    }
+   },
+   {
+    "proposition": "Figure 2 (file g001): spike-detection rasters from eight mice per group; control-IgG animals show dense spike trains in most animals (one animal with about 27 spikes/min), anti-C1q animals show sparser rasters but two animals (#6 and #7) remain dense; panel G median about 5 versus about 2 spikes/min (Mann-Whitney, two asterisks); panel I shows CA1 neuron counts restored (about 52 to 63 per ROI) but the CA3 anti-C1q versus control IgG difference carries no bracket.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 A timeline, B-C open field before injection ns, D-E EEG traces, F rasters 8 per group, G box plot spikes per minute, H-I Nissl images and counts.",
+    "anchor": "Figure 2 (g001.jpg), read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41118244/EPI-67-908-g001.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "male C57BL/6N mice, pilocarpine-induced status epilepticus, hippocampal CA1/CA3, intra-cisterna magna anti-C1q or isotype IgG at day 7",
+     "genotype": "wild type",
+     "treatment": "C1q-neutralising antibody 100 ug/mL 10 uL or control IgG2b, single dose at 7 days post-SE",
+     "comparator": "control IgG-treated epileptic mice; naive mice",
+     "timepoint": "5 weeks post-SE",
+     "endpoint": "interictal spikes, Nissl, spines, Iba-1/CD68, GFAP/C3"
+    }
+   },
+   {
+    "proposition": "Figure 3 (file g002): C1q and PSD95 colocalisation, with C1q-positive area higher in control-IgG epilepsy than naive or anti-C1q in CA1 and CA3, C1q+/PSD95 percentage increased only in CA3 (about 21 versus 6-9 percent), and Golgi spine density about 16 per 10 um in control-IgG against about 26-27 in naive and anti-C1q; the spine plot counts 18-50 cells per group from 3-6 mice per group.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3 A-B C1q/PSD95 panels, C-D bar charts, E Golgi images, F spine density bars (****).",
+    "anchor": "Figure 3 (g002.jpg), read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41118244/EPI-67-908-g002.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "male C57BL/6N mice, pilocarpine-induced status epilepticus, hippocampal CA1/CA3, intra-cisterna magna anti-C1q or isotype IgG at day 7",
+     "genotype": "wild type",
+     "treatment": "C1q-neutralising antibody 100 ug/mL 10 uL or control IgG2b, single dose at 7 days post-SE",
+     "comparator": "control IgG-treated epileptic mice; naive mice",
+     "timepoint": "5 weeks post-SE",
+     "endpoint": "interictal spikes, Nissl, spines, Iba-1/CD68, GFAP/C3"
+    }
+   },
+   {
+    "proposition": "Figure 1 (file g003): time course after status epilepticus, with Iba-1 area in CA1 rising at 14 days and falling by 5 weeks, microglial C1q peaking at 7-14 days in CA1 and CA3, GFAP and C3 rising from 7 days in CA1 and persisting; group sizes 4-6 per time point; the 5-week C1q signal is not different from control in CA1.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 A timeline, B hippocampus, C Iba-1/C1q images, D-G bars, H GFAP/C3 images, I-L bars.",
+    "anchor": "Figure 1 (g003.jpg), read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41118244/EPI-67-908-g003.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "male C57BL/6N mice, pilocarpine-induced status epilepticus, hippocampal CA1/CA3, intra-cisterna magna anti-C1q or isotype IgG at day 7",
+     "genotype": "wild type",
+     "treatment": "C1q-neutralising antibody 100 ug/mL 10 uL or control IgG2b, single dose at 7 days post-SE",
+     "comparator": "control IgG-treated epileptic mice; naive mice",
+     "timepoint": "5 weeks post-SE",
+     "endpoint": "interictal spikes, Nissl, spines, Iba-1/CD68, GFAP/C3"
+    }
+   },
+   {
+    "proposition": "Figure 4 (file g005): Iba-1 and CD68 areas are higher in control-IgG epileptic mice and lower after anti-C1q in CA1 and CA3 (CD68 about 1.5 and 1.1 against 0.6 and 0.3 percent), with n = 5, 5 and 8.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 4 A-B confocal images, C Iba-1 area, D CD68 area.",
+    "anchor": "Figure 4 (g005.jpg), read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41118244/EPI-67-908-g005.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "male C57BL/6N mice, pilocarpine-induced status epilepticus, hippocampal CA1/CA3, intra-cisterna magna anti-C1q or isotype IgG at day 7",
+     "genotype": "wild type",
+     "treatment": "C1q-neutralising antibody 100 ug/mL 10 uL or control IgG2b, single dose at 7 days post-SE",
+     "comparator": "control IgG-treated epileptic mice; naive mice",
+     "timepoint": "5 weeks post-SE",
+     "endpoint": "interictal spikes, Nissl, spines, Iba-1/CD68, GFAP/C3"
+    }
+   },
+   {
+    "proposition": "Figure 5 (file g004): GFAP, C3 and GFAP-C3 colocalisation higher in control-IgG epileptic CA1 and lower after anti-C1q; CA3 values are small and mostly not different.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 5 A-B confocal images, C GFAP area, D C3 area, E colocalisation.",
+    "anchor": "Figure 5 (g004.jpg), read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41118244/EPI-67-908-g004.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "male C57BL/6N mice, pilocarpine-induced status epilepticus, hippocampal CA1/CA3, intra-cisterna magna anti-C1q or isotype IgG at day 7",
+     "genotype": "wild type",
+     "treatment": "C1q-neutralising antibody 100 ug/mL 10 uL or control IgG2b, single dose at 7 days post-SE",
+     "comparator": "control IgG-treated epileptic mice; naive mice",
+     "timepoint": "5 weeks post-SE",
+     "endpoint": "interictal spikes, Nissl, spines, Iba-1/CD68, GFAP/C3"
+    }
+   },
+   {
+    "proposition": "Figure 6 (file g006) is the authors' schematic of the proposed mechanism; it contains no data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 6 schematic of anti-C1q interrupting microglial engulfment and astrocytic C3 upregulation.",
+    "anchor": "Figure 6 (g006.jpg), read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41118244/EPI-67-908-g006.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "male C57BL/6N mice, pilocarpine-induced status epilepticus, hippocampal CA1/CA3, intra-cisterna magna anti-C1q or isotype IgG at day 7",
+     "genotype": "wild type",
+     "treatment": "C1q-neutralising antibody 100 ug/mL 10 uL or control IgG2b, single dose at 7 days post-SE",
+     "comparator": "control IgG-treated epileptic mice; naive mice",
+     "timepoint": "5 weeks post-SE",
+     "endpoint": "interictal spikes, Nissl, spines, Iba-1/CD68, GFAP/C3"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure S1: pilocarpine mice (n = 20) reach Racine scores near 4 against saline (n = 9) at zero; open-field distance about 3700 against 2500 cm; EEG traces show interictal spikes and an electrographic seizure with video frames; the model characterisation is descriptive.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] S1 A timeline, B Racine scores, C-D open field, E trajectories, F-G EEG and video frames of a seizure, H spike threshold detection.",
+    "anchor": "Supplementary Figure S1 (extracted TIFF, viewed as PNG)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41118244/supp_media/image1.tiff",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "male C57BL/6N mice, pilocarpine-induced status epilepticus, hippocampal CA1/CA3, intra-cisterna magna anti-C1q or isotype IgG at day 7",
+     "genotype": "wild type",
+     "treatment": "C1q-neutralising antibody 100 ug/mL 10 uL or control IgG2b, single dose at 7 days post-SE",
+     "comparator": "control IgG-treated epileptic mice; naive mice",
+     "timepoint": "5 weeks post-SE",
+     "endpoint": "interictal spikes, Nissl, spines, Iba-1/CD68, GFAP/C3"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure S2: band power is lower in anti-C1q mice across delta, theta, alpha, beta and gamma (gamma near zero), a roughly 70 to 95 percent broadband reduction on 12 selected 5-minute resting epochs per mouse; the number of seizures per 12 hours is about 0.9 (control IgG) against about 0.1 (anti-C1q) with p = 0.0816, not significant.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] S2 A spectrograms, B band powers with asterisks, C-D power per frequency, E seizures per 12 h with p = 0.0816, F seizure traces.",
+    "anchor": "Supplementary Figure S2 (extracted TIFF, viewed as PNG)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41118244/supp_media/image2.tiff",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "male C57BL/6N mice, pilocarpine-induced status epilepticus, hippocampal CA1/CA3, intra-cisterna magna anti-C1q or isotype IgG at day 7",
+     "genotype": "wild type",
+     "treatment": "C1q-neutralising antibody 100 ug/mL 10 uL or control IgG2b, single dose at 7 days post-SE",
+     "comparator": "control IgG-treated epileptic mice; naive mice",
+     "timepoint": "5 weeks post-SE",
+     "endpoint": "interictal spikes, Nissl, spines, Iba-1/CD68, GFAP/C3"
+    }
+   }
+  ]
+ }
+}

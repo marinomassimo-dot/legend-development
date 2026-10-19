@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-41118244-01",
+ "study_id": {
+  "pmid": "41118244",
+  "doi": "10.1111/epi.18678"
+ },
+ "analysis_at": "2026-10-19T19:48:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a (Scientist A), interventions batch 2026-10-19 groups H1/H2, task INTERV-H1-A-20261019 on branch task/INTERV-H1-A-20261019, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN. Route: Europe PMC JATS body (PMC12927691) and the supplementaryFiles container into the root files/ tree: Figures 1-6 opened at native resolution (note the file numbering differs from the figure numbering; mapping taken from the JATS graphic references); the supplementary Word file converted to text locally and its three embedded TIFF figures (S1-S3) extracted unchanged, converted to PNG for viewing only, and S1 and S2 opened (S3 not opened, legend read). Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a staged JSON for the Orchestrator and not appended at preparation time.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID41118244_Jeong2026_PMC.xml",
+ "source_fingerprint": "0d43a839073981d1cb457ad4b179bbc3afd9087684a1f396ec0d010404697150",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "captions_only",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41118244.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID41118244.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "manifest",
+  "Figures 1-6 inspected as images",
+  "Supplementary Figures S1 and S2 inspected; S3 legend only (declared debt)"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
