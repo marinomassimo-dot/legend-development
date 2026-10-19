@@ -50,7 +50,7 @@ The dry-run call of the editing tool against the shared registry was refused by 
   "op": "replace-within",
   "id": "DL-MECH-012",
   "old": "**Possibile passo successivo**: NS-020/021;",
-  "new": "**Possibile passo successivo**: NS-020/021; 🔵 pointer attached by `CC-20261019-SCIENTIST-A-LIPID-06` (source: PMID 41704776, a 2026 narrative review read in full, WWOX absent): a lipid-derived danger signal (very-long-chain ceramide converted to sphingosine 1-phosphate, then NF-kB or IMD signalling) is the review's proposed link between lipid dysmetabolism and glial inflammation, from one group's fly work, stated by the review as causally unproven. No S1P or sphingolipid measurement exists in any WWOX system; the direction of any WWOX lipid change is not given by it (the mouse CerS2 papers of the same lot show the opposite lesion, loss of very-long species, also with microglial activation). IPOTESI, not a claim;"
+  "new": "**Possibile passo successivo**: NS-020/021; 🔵 pointer attached by `CC-20261019-SCIENTIST-A-LIPID-06` (source: PMID 41704776, a 2026 narrative review read in full, WWOX absent): a lipid-derived danger signal (very-long-chain ceramide converted to sphingosine 1-phosphate, then NF-kB or IMD signalling) is the review's proposed link between lipid dysmetabolism and glial inflammation, from one group's fly work, stated by the review as causally unproven. No S1P or sphingolipid measurement exists in any WWOX system; the direction of any WWOX lipid change is not given by it (the mouse CerS2 papers of the same lot show the opposite lesion, loss of very-long species, also with a glial response (astrocytic GFAP rise or an expanded microglial subset)). IPOTESI, not a claim;"
  }
 ]
 ```
