@@ -1,0 +1,268 @@
+{
+ "schema_version": 2,
+ "pmid": "42638834",
+ "doi": "10.1002/jmd2.70113",
+ "pmcid": "PMC13500214",
+ "receipt": "FTR-20261019-42638834-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the interventions selection file's one-line 'why it matters' for this row and the group H5 header, plus the earlier readings of this lot done in this session (Yuskaitis, Phillips-Farfan, Salvati) and the registry theme records CLAIM 042 and DL-MECH-020 admitted after the first pass of the first paper. No registry record about this paper (none exists).",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/interventions_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a non-WWOX comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype; class-level literature only, BLOCK-1 caution carried in the analysis note."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the load-bearing triples were checked mechanically by locator_audit.py and are exposed in the analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Retrospective multicentre Brazilian cohort of 40 patients (36 families) with pathogenic or likely pathogenic SLC2A1 variants, clinical data by teleconsultation or visit, a new unvalidated severity score, ketogenic therapy in 85%. It is a disease-class comparator (brain glucose transport failure treated by glucose-sparing diet), not a dextrose or fluid study and not WWOX. Several internal numerical inconsistencies limit how far its figures can be quoted."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (fasting OR \"caloric restriction\" OR \"calorie restriction\" OR \"dietary restriction\")",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the four hits are type 2 diabetes association studies (fasting glucose), none a fasting or restriction intervention"
+   },
+   {
+    "query": "WWOX AND (mTOR OR mTORC1 OR AMPK)",
+    "count": 8,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (hypoglycemia OR hypoglycaemia OR dextrose OR \"glucose infusion\")",
+    "count": 21,
+    "source": "PubMed ESearch rettype=count 2026-10-19; hits are glucose-metabolism, glycolysis and association papers, none an infusion or dextrose intervention"
+   },
+   {
+    "query": "WWOX AND (edema OR oedema OR hyponatremia OR \"fluid overload\")",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the two hits are a high-altitude pulmonary oedema locus list and a zebrafish embryo knockdown paper"
+   },
+   {
+    "query": "WWOX AND (refeeding OR thiamine OR \"parenteral nutrition\")",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are PubMed search hits only (ESearch rettype=count, 2026-10-19), not a census; none of the WWOX hits tests the intervention of this group."
+ },
+ "multihop": {
+  "references_enumerated": 20,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted (20 entries), not read item by item; no WWOX-directed reference seen in the body."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42638834 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED for this PMID in the seven registry surfaces at commit 0c85331b341e; a statement about that query only. CLAIM 042 and DL-MECH-020 (ketogenic-diet lines) admitted for comparison after the first pass."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 20,
+   "references_screened": 19,
+   "references_with_doi": 19,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42638834_Sobrinho2026_PMC.xml",
+   "sha256": "0fb69abd25b8275c8312ae2ebe91bc7af0e4d3fb7046e4fd741a0ee514329619",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13500214/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "0fb69abd25b8275c8312ae2ebe91bc7af0e4d3fb7046e4fd741a0ee514329619"
+   }
+  },
+  {
+   "path": "files/figures/PMID42638834/native/JMD2-67-e70113-g001.webp",
+   "sha256": "cbcf409261b2b5e35131abb35abafc19bfe66946dd94134dc4c8a4f450ed920c",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13500214.1/JMD2-67-e70113-g001.webp",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "cbcf409261b2b5e35131abb35abafc19bfe66946dd94134dc4c8a4f450ed920c"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The cohort is 40 patients from 36 families, mostly children (median age 9.1 years), collected by teleconsultation in 32 and retrospective review.",
+    "snippet": "Detailed information on family history, abnormal pre‐ and perinatal events, age at onset of seizures, psychomotor development, age at diagnosis, and response to treatment provided were collected and retrospectively reviewed.",
+    "anchor": "Methods",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42638834_Sobrinho2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "85% were on ketogenic dietary therapy (27 classic, 7 modified Atkins).",
+    "snippet": "Thirty‐four patients were on a ketogenic diet (85%).",
+    "anchor": "Results, Ketogenic Diet and Severity Assessment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42638834_Sobrinho2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizure control exclusively with the ketogenic diet was reported in 11 patients (31.4%) in one paragraph and 21 patients (56.7%) 'relying exclusively' on it in the next; the denominators differ and are not reconciled.",
+    "snippet": "In 11 patients (31.4%), seizure control was achieved exclusively with the ketogenic diet.",
+    "anchor": "Results, Ketogenic Diet and Severity Assessment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42638834_Sobrinho2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Twenty-one patients (56.7%) used the diet exclusively for seizure management.",
+    "snippet": "Overall, 21 patients (56.7%) relied exclusively on a ketogenic diet for seizure management",
+    "anchor": "Results, Ketogenic Diet and Severity Assessment, second paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42638834_Sobrinho2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Diet-only patients had lower severity scores than patients also on drugs; severity and treatment choice are confounded, so this is not a diet effect.",
+    "snippet": "The median Glut1‐CSS was 7 [IQR: 2–10] for the first group, compared to 13 [IQR: 11.25–15.75] for the latter 2 groups.",
+    "anchor": "Results, Ketogenic Diet and Severity Assessment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42638834_Sobrinho2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Reported adverse effects of the diet were constipation, irritability and nausea, transient at the start; the Introduction says it is well tolerated with hardly any side effects.",
+    "snippet": "The most common were constipation (28.5%), irritability (8.5%), and nausea (5.7%).",
+    "anchor": "Results, Ketogenic Diet and Severity Assessment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42638834_Sobrinho2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say the severity scale is their own and not externally validated.",
+    "snippet": "This modified scale is not yet externally validated and should be considered an exploratory phenotypic stratification tool.",
+    "anchor": "Methods, The Glut-1CSS",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42638834_Sobrinho2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 3 gives patient 28 a language score of 6 although the scale for that domain stops at 5, so the table contains an out-of-range value.",
+    "snippet": "27 F26 2 3 1 1 2 9 28 F27 4 6 1 2 3 16",
+    "anchor": "Table 3, patients 27-28",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42638834_Sobrinho2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The missense severity split is reported as 60%, 30% and 20%, which sums to 110%.",
+    "snippet": "Patients with missense variants more frequently exhibited a mild phenotype (60% mild, 30% moderate, and 20% severe)",
+    "anchor": "Results, Genotype/Phenotype Correlation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42638834_Sobrinho2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CSF glucose is reported in the body only for one individual (low); the 10-patient CSF statement exists only in the abstract, which is not an evidentiary surface here.",
+    "snippet": "Cerebrospinal fluid analysis revealed hypoglycorrhachia in the boy.",
+    "anchor": "Results, Genetic Findings",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42638834_Sobrinho2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 table gives the mild-group current age as 7.0 [5-9.55] whereas the text gives [5.18-9.73]; seizure-free time, diet start and duration medians agree with the text.",
+    "snippet": "Visual attestation of Figure 1 table: mild current age 7.0 [5-9.55], moderate 10.0 [6.8-25], severe 11.8 [7.8-13.6]; seizure onset 0.5, 0.2, 0.2 years; seizure-free time 2.0, 3.7, 0.2 years; diet start age 3.6, 5.0, 5.0; time on diet 2.85, 4.15, 1.85 years.",
+    "anchor": "Figure 1 (image JMD2-67-e70113-g001)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID42638834/native/JMD2-67-e70113-g001.webp"
+    ],
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "Brazilian Glut1-DS cohort, n = 40, by Glut1-CSS stratum",
+     "endpoint": "medians of age and diet variables"
+    }
+   },
+   {
+    "proposition": "The authors conclude that the ketogenic diet was associated with improvement, that complete seizure freedom occurred only in a subset, and name the retrospective design as the main limitation.",
+    "snippet": "Although ketogenic diet therapy was associated with clinical improvement in seizure frequency and neurodevelopmental trajectory, particularly when introduced early, complete seizure freedom was achieved in only a subset of patients.",
+    "anchor": "Conclusions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42638834_Sobrinho2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The main limitation named is the retrospective design.",
+    "snippet": "The main limitation of our study concerns the retrospective design, which may have introduced registration bias and hindered the standardization of clinical assessments.",
+    "anchor": "Discussion, final paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42638834_Sobrinho2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13500214/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure panel."
+ }
+}
