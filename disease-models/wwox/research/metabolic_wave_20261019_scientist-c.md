@@ -353,3 +353,61 @@ differs, would be a first iron/lipid-peroxide readout for the model; this paper 
 shape and the controls that are missing from it (vehicle trace, ferrostatin-1, cell counts). Transfer
 verdict: protocol-level only; the findings themselves are wild-type, acute-pharmacological and
 unreplicated by the standards of its own methods section.
+
+---
+
+## 8. PMID 42601505 — Puertas-Frias 2026, EMBO Rep: PUFA sequestration and mitochondrial dysfunction-induced ferroptosis (tier 2, new; PARTIAL by choice)
+
+context_policy: SOURCE_FIRST (selection row's line only; registry empty; WWOX is not named anywhere in the artefact).
+Depth recorded: `partial_fulltext_read`, because Tables EV1 to EV3 and the five source-data archives
+(about 79 MB of per-panel spreadsheets) were inventoried and not opened; every other surface was read
+(whole article and Methods, all nine figure images, the Appendix, the Review Process File).
+
+**What it MEASURES.** HEK293 lines lacking complex IV (COX6B1 knock-out, 6BKO), 6BKO rescued by
+alternative oxidase (6BAOX) or by COX6B1 re-expression (6BRES), complex II (SDHA) and complex V
+(ATP5F1B) knock-outs, wild-type cells at 1 percent oxygen for a week, two immortalised fibroblast
+lines from patients with a COX6B1 variant against a control, and plasma from 13 MERRF patients against
+23 controls. Readouts: LC-MS metabolomics and lipidomics, 13C-glucose and 13C-glutamine tracing,
+proteomics, fatty-acid oxidation, BODIPY lipid-droplet area per cell, GPX4, BODIPY C11 ratio and
+CyQUANT proliferation under RSL3 with ferrostatin-1, oleic or palmitic acid and DGAT1/2 inhibitors.
+
+**First-pass observations.**
+- Robust descriptive result: OXPHOS-limited cells (knock-outs, hypoxia, patient fibroblasts) store
+  more TG, with PUFA-rich TG species up to 9-fold, lipid droplets increase, desaturases (SCD, FADS1,
+  FADS2) fall and GPX4 rises; the complex II knock-out shows it with an unchanged NAD+/NADH ratio.
+- The causal title claim is thinner than the descriptive result. Desaturase inhibitors do not change
+  proliferation; RSL3-induced C11 oxidation is higher in 6BKO, absent in 6BAOX (high GPX4), blocked by
+  ferrostatin-1 and by oleic acid. The decisive arm for "sequestration protects" is DGAT1/2
+  inhibition plus RSL3 on lipid peroxidation, and Figure 3D has a DGAT1/2i condition only without RSL3;
+  in proliferation (Fig 3E), adding DGAT1/2i to RSL3 gives no further fall. Oleic acid is a MUFA
+  rescue, not a test of PUFA sequestration. The Review Process File shows one referee stating that no
+  causal experiment supports the claims and another asking for exactly the DGAT1/2i lipid-peroxidation
+  readout; the authors answered with oleic acid, which they describe as "directly supporting" the
+  protective role of sequestration (from my reading of their response: that is an inference beyond the
+  experiment).
+- A text/panel gap: the text says some highly unsaturated phospholipids rose "up to 40%" in 6BKO;
+  Figure 3B bars read by eye show PC and PE species at about 1.6 to 2.2 times WT (INFERENZA from
+  approximate bar heights; recorded as a `panel_qualifies_text` locator). Phospholipid PUFAs, the
+  peroxidation substrate, therefore rise more than the text says.
+- Patients: one control fibroblast line against two patient lines of one variant; plasma 13 versus
+  23 with different age ranges, large overlap in the PUFA-TG panel; the authors call it exploratory.
+- Statistics: automatic outlier removal (ROUT) and no blinding are stated; proliferation is a DNA
+  content read, not a death assay.
+
+FIRST-PASS OBSERVATIONS COMPLETE -> PRIOR KNOWLEDGE ADMITTED FOR COMPARISON: admitted the registry query (empty) and, by name
+from this lot and the selection file, the WWOX Drosophila respiration/ROS paper (read), the WWOX/HIF1A
+glycolytic-shift readings and the WWOX lipid phenotypes (low HDL, hepatocyte-specific knock-out).
+
+**What it changes in the disease model: nothing yet; it supplies one testable bridge and two cautions.**
+Bridge (IPOTESI, staged for the Orchestrator because the discovery ledger is one shared file): the
+repository holds WWOX loss as raising glycolysis in fibroblasts and as perturbing respiratory function
+in the fly; if WWOX deficiency limits OXPHOS even mildly, a lipid-droplet and PUFA-TG signature with
+lower desaturase and higher GPX4 would follow in donor-derived WWOX-deficient fibroblasts, readable with
+BODIPY area per cell, targeted TG lipidomics and GPX4. Falsifier: no difference in lipid-droplet area or
+PUFA-TG species between WWOX-deficient and matched control fibroblasts at equal passage. Counter:
+the effect in this paper is driven by knock-outs with abolished respiration (OCR near zero), a far
+stronger defect than anything recorded for WWOX; the sign of WWOX on respiration is itself unsettled
+(the Drosophila blocked paper, Choo 2015, is unread). Cautions: (1) the paper's "protective
+sequestration" title rests on a missing arm and should not be quoted as shown; (2) the MERRF plasma
+PUFA-TG panel is exploratory and not a biomarker precedent for a WWOX disease. Transfer verdict:
+mechanistic template and readout set, no WWOX content, no system match.
