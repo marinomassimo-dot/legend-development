@@ -1,0 +1,221 @@
+{
+ "schema_version": 2,
+ "pmid": "41470225",
+ "doi": "10.3390/medicina61122223",
+ "pmcid": "PMC12734430",
+ "receipt": "FTR-20261019-41470225-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's abstract-level 'why it matters' line and its per-theme summary of what the repository holds (GABA/vigabatrin modelled; no dopamine, catecholamine, adrenal, serotonin text). No registry record was opened before the first pass.",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/metabolic_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the triples are exposed in the commit candidate/analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "output_kind": "review",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A structured narrative review of infantile spasms (1990-2025, four databases, 236 listed references) by a group not otherwise identified as a WWOX or epilepsy-genetics group. WWOX appears once in the prose and once as a gene-table row, both resting on one cited case report. Several sentences refer to a 'supplied corpus' and to information 'not provided', which reads as a text partly assembled from a restricted source set; claims are taken as the review's statements, not as measurements."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (infantile spasms OR West syndrome)",
+    "count": 23,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (hormon* OR ACTH OR corticosteroid*)",
+    "count": 28,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are search hits only."
+ },
+ "multihop": {
+  "references_enumerated": 236,
+  "gene_direct_refs_in_source": [
+   {
+    "ref": 109,
+    "pmid": "30361190",
+    "note": "Shaukat 2018, two WWOX-null children with West syndrome; reference title read in the reference list"
+   }
+  ],
+  "resolved": [
+   {
+    "ref": 109,
+    "pmid": "30361190",
+    "status": "complete_fulltext_read in this corpus (FTR-20261003-30361190-01); not re-read here"
+   }
+  ],
+  "queued": [],
+  "note": "The PMID was taken from the reference entry's own identifier markup in the artefact."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41470225 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED in the seven registry surfaces at commit 718db84f; a statement about that query only."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 236,
+   "references_screened": 224,
+   "references_with_doi": 224,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 12
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41470225_Abdygalyk2025_PMC.xml",
+   "sha256": "073d659122d00f9a406c8a2d1ac325955d0686fda3cf4ad91c14fbc09ea3e29c",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12734430/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "073d659122d00f9a406c8a2d1ac325955d0686fda3cf4ad91c14fbc09ea3e29c"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "WWOX is mentioned once in the prose, as autosomal recessive defects, with focal cortical dysplasia attached to the SLC35A2 half of the sentence only by the word 'latter'.",
+    "snippet": "Autosomal recessive defects in WWOX [109] and mosaic or germline variants in SLC35A2 [110] have been described in both structural and non-structural forms, the latter being associated with focal cortical dysplasia.",
+    "anchor": "3.1, para 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41470225_Abdygalyk2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The gene-table row for WWOX (16q23.1, AR) carries the comment 'WWOX-related encephalopathy with spasms' with one citation and no case count.",
+    "snippet": "WWOX-related encephalopathy with spasms",
+    "anchor": "Table 1, row 41",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41470225_Abdygalyk2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review states hormonal therapy and GABAergic modulation form the pharmacological foundation, with ACTH, corticosteroids and vigabatrin as the triad.",
+    "snippet": "ACTH, corticosteroids (notably prednisolone), and vigabatrin form the primary therapeutic triad",
+    "anchor": "5, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41470225_Abdygalyk2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review states ACTH raises endogenous neurosteroid synthesis through adrenal and central melanocortin pathways, as the proposed explanation for rapid spasm suppression.",
+    "snippet": "ACTH, which increases endogenous neurosteroid synthesis through adrenal and central melanocortin pathways",
+    "anchor": "4.4, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41470225_Abdygalyk2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "ACTH non-responders are reported to have a low DHEA to androstenedione ratio.",
+    "snippet": "ACTH nonresponders exhibit a low DHEA to androstenedione ratio, suggesting that impaired neurosteroidogenesis may reduce the efficacy of hormonal therapy [186].",
+    "anchor": "4.4, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41470225_Abdygalyk2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review concedes there are no direct neurosteroid or steroidogenic-enzyme measurements in human infantile spasms tissue in its source set.",
+    "snippet": "direct measurements of neurosteroids or steroidogenic enzymes in human IS tissue are not provided in the available literature",
+    "anchor": "4.4, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41470225_Abdygalyk2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review states the GABA-A developmental switch can be delayed, with KCC2 involved, and that no direct NKCC1 measurement in infantile spasms was found.",
+    "snippet": "the supplied corpus does not provide direct NKCC1 measurements in IS, and the role of this transporter must therefore be regarded as insufficient evidence",
+    "anchor": "4.4, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41470225_Abdygalyk2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Vigabatrin's MRI signal change in deep gray matter is acknowledged, with surveillance advised, without a rate.",
+    "snippet": "reversible MRI signal changes in deep gray matter structures, which necessitates careful ophthalmologic and imaging surveillance",
+    "anchor": "5, para 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41470225_Abdygalyk2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review attributes the lower CSF GABA in symptomatic spasms to reduced inhibitory tone.",
+    "snippet": "Symptomatic etiologies show lower CSF GABA than idiopathic cases and controls, which confirms insufficient inhibitory tone",
+    "anchor": "Table 2, row 10",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41470225_Abdygalyk2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Glucocorticoids are said to raise serum IGF-1 while reducing tissue-bioactive IGF-1, offered as a reason serum levels can mislead.",
+    "snippet": "glucocorticoid exposure can increase serum IGF-1 while simultaneously reducing tissue-bioactive IGF-1",
+    "anchor": "4.3, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41470225_Abdygalyk2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12734430/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body or a table."
+ }
+}

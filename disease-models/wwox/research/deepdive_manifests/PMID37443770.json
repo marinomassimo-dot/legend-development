@@ -1,0 +1,201 @@
+{
+ "schema_version": 2,
+ "pmid": "37443770",
+ "doi": "10.3390/cells12131737",
+ "pmcid": "PMC10341083",
+ "receipt": "FTR-20261019-37443770-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's abstract-level 'why it matters' line and its per-theme summary of what the repository holds (GABA/vigabatrin modelled; no dopamine, catecholamine, adrenal, serotonin text). No registry record was opened before the first pass.",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/metabolic_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the triples are exposed in the commit candidate/analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "output_kind": "review",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A narrative review by the group that characterised dopamine transporter deficiency syndrome (DTDS); no new data are created (data-availability statement). Authors hold a gene-therapy patent and company ties on DTDS. Useful as a clinical-biochemical reference for the DTDS signature, not as evidence about WWOX."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (dopamin* OR catecholamin* OR monoamine*)",
+    "count": 3,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (VMAT2 OR SLC18A2 OR SLC6A3)",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are search hits only."
+ },
+ "multihop": {
+  "references_enumerated": 37,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "The article cites no WWOX-directed reference that this reading could identify; reference list counted, not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 37443770 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED in the seven registry surfaces at commit 718db84f; a statement about that query only."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 37,
+   "references_screened": 32,
+   "references_with_doi": 32,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 5
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID37443770_Ng2023_PMC.xml",
+   "sha256": "6288d46e512b971eaa281df38d7feea9a76ef6b368ca411e5a813d0b51cec30c",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10341083/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "6288d46e512b971eaa281df38d7feea9a76ef6b368ca411e5a813d0b51cec30c"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The paper states that it creates no new data; it is a narrative review.",
+    "snippet": "No new data were created or analyzed in this study.",
+    "anchor": "Back matter, data availability",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37443770_Ng2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Primary neurotransmitter disorders of dopamine synthesis and storage carry low CSF dopamine metabolites.",
+    "snippet": "These primary neurotransmitter disorders are associated with low cerebrospinal fluid dopamine metabolites",
+    "anchor": "Introduction, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37443770_Ng2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DTDS is the exception: reuptake failure gives raised CSF HVA with normal 5-HIAA and a raised HVA:5-HIAA ratio.",
+    "snippet": "Reported classical early onset DTDS individuals have a distinct CSF neurotransmitter analysis profile, with raised HVA (a stable metabolite of dopamine) and normal hydroxyindoleacetic acid levels (5-HIAA, a stable metabolite of serotonin). The HVA:HIAA ratio is raised at 5.0–13.0 (normal range: 1.0–4.0)",
+    "anchor": "2.1, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37443770_Ng2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Classical DTDS MRI is normal or shows subtle nonspecific change, including mild delayed myelination.",
+    "snippet": "MRI brain imaging can be normal or show subtle nonspecific abnormalities, such as mild delayed myelination",
+    "anchor": "2.1, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37443770_Ng2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DaTScan uptake is absent or reduced in the basal nuclei in DTDS.",
+    "snippet": "Single-photon emission computerised tomography (SPECT) with 123Ioflupane (DaTScan) imaging shows either absent or significantly reduced tracer uptake in the basal nuclei",
+    "anchor": "2.1, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37443770_Ng2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Response to levodopa is limited or absent in classical DTDS.",
+    "snippet": "There is limited or no response to levodopa treatment.",
+    "anchor": "2.1, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37443770_Ng2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DTDS carries a poor prognosis, with a stated mean age of death.",
+    "snippet": "with a mean age of death of 10.4 years old (range: 3–16.2)",
+    "anchor": "2.1, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37443770_Ng2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Intellect is described as relatively preserved in many children with DTDS, a contrast with a developmental and epileptic encephalopathy.",
+    "snippet": "many individuals are reported to have relative preservation of intellect and good cognitive development",
+    "anchor": "2.1, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37443770_Ng2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The classical-DTDS movement sequence quoted here is hyperkinetic then parkinsonism-dystonia; this sentence lists no seizure (absence from one sentence is not absence from the syndrome, and no seizure count is given in the review).",
+    "snippet": "A hyperkinetic movement disorder develops with features of chorea, dystonia, ballismus, and orolingual dyskinesia",
+    "anchor": "2.1, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37443770_Ng2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC10341083/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body or a table."
+ }
+}

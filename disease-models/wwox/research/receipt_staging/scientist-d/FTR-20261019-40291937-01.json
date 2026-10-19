@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-19T00:00:00Z",
+ "analysis_time_precision": "date_only",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "tables": "read",
+  "figures": "captions_only",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-10-19T18:06:22Z",
+ "event_id": "FTR-20261019-40291937-01",
+ "evidence_basis": [
+  "JATS body, tables read from the XML; figure captions read, images not opened.",
+  "Reference list counted, not read; no supplement examined."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID40291937.json",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-d.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "87c7f0345f799cbf3d54fea4dcabc247e04900542d06e85472584f67a3bf24e6",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID40291937_AlSari2025_PMC.xml",
+ "study_id": {
+  "doi": "10.25122/jml-2024-0398",
+  "pmid": "40291937"
+ },
+ "workflow": "scientist-d (stated assumption of the Orchestrator), metabolic batch 2026-10-19, task METAB-G4-D-20261019, branch task/metab-g4-d; context_policy QUESTION_DRIVEN. Route: Europe PMC REST fullTextXML into the shared checkout files/fulltext/; JATS body and tables read section by section from a text rendering; figures not opened as images (captions only); locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts. Receipt prepared as staged JSON for the integrator, not appended."
+}

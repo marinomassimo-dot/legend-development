@@ -926,14 +926,18 @@ def classify(code: int, output: str, headline: str) -> tuple[str, str]:
     return "nothing-to-screen", (missing.group(1).strip() if missing else headline)[:170]
 
 
-def _runnable(root: Path, disease: str, pmid: str, packet: dict[str, Any]) -> list[tuple[str, list[str]]]:
+def _runnable(root: Path, disease: str, pmid: str, packet: dict[str, Any],
+              artifact_workspace: str = "") -> list[tuple[str, list[str]]]:
     """The checks whose command this file can build with no human choice left in it."""
     names = {check["name"] for check in packet["applicable_checks"]}
     jobs: list[tuple[str, list[str]]] = []
     if "manifest validator" in names:
         jobs.append(("manifest validator",
                      [sys.executable, str(HERE / "deepdive_manifest.py"), "--disease", disease,
-                      "--pmid", pmid, "--verify-artifacts", "--require-current-schema"]))
+                      "--pmid", pmid, "--verify-artifacts", "--require-current-schema"]
+                     # A task worktree holds the manifest but not the gitignored files/ tree;
+                     # the validator already accepts a separate artifact root (2026-10-19, scientist-d).
+                     + (["--artifact-workspace", artifact_workspace] if artifact_workspace else [])))
         jobs.append(("flag drift",
                      [sys.executable, str(HERE / "manifest_flag_drift.py"), "--pmid", pmid]))
         jobs.append(("erratum scope",
@@ -944,7 +948,8 @@ def _runnable(root: Path, disease: str, pmid: str, packet: dict[str, Any]) -> li
     return jobs
 
 
-def run_checks(root: Path, disease: str, pmid: str, out_dir: Path | None = None) -> dict[str, Any]:
+def run_checks(root: Path, disease: str, pmid: str, out_dir: Path | None = None,
+               artifact_workspace: str = "") -> dict[str, Any]:
     packet = build(root, disease, pmid)
     out_dir = out_dir or (root / "files" / "check_runs")
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -952,7 +957,7 @@ def run_checks(root: Path, disease: str, pmid: str, out_dir: Path | None = None)
     started = time.monotonic()
     results = []
     with detail.open("w", encoding="utf-8") as handle:
-        for name, argv in _runnable(root, disease, pmid, packet):
+        for name, argv in _runnable(root, disease, pmid, packet, artifact_workspace):
             began = time.monotonic()
             try:
                 done = subprocess.run(argv, cwd=root, capture_output=True, text=True, timeout=600)
@@ -1019,6 +1024,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--pmid", required=True)
     parser.add_argument("--root", default=str(ROOT))
     parser.add_argument("--disease", default="wwox")
+    parser.add_argument("--artifact-workspace", default="",
+                        help="check only: root that holds the gitignored files/ tree when --root is a task worktree")
     parser.add_argument("--json", action="store_true")
     parser.add_argument("--out-dir", default="")
     parser.add_argument("--observed", action="append", default=[],
@@ -1060,7 +1067,8 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     report = run_checks(root, args.disease, args.pmid,
-                        Path(args.out_dir).resolve() if args.out_dir else None)
+                        Path(args.out_dir).resolve() if args.out_dir else None,
+                        args.artifact_workspace)
     print(json.dumps(report, indent=1, ensure_ascii=False) if args.json else render_checks(report))
     return 1 if any(row["exit"] != 0 for row in report["results"]) else 0
 

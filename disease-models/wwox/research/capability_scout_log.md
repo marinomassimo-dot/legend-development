@@ -925,3 +925,16 @@ catalytic-dead control, a titration. The missing item is the experiment, not the
 **Cost / API / privacy risk:** none; NCBI eutils and Crossref, no key, no spend. Four Scientists share one NCBI rate limit (HTTP 429 seen once); the tool retries with back-off.
 
 **Next surgical micro-step:** run the tool over the registry PMIDs that carry a DOI and queue every non-MATCH for identity review.
+
+## 2026-10-19 — scientist-d, metabolic batch group G4
+
+**Capability gap recorded (with evidence).** Two, one closed and one named.
+
+1. **Closed (shipped, `CHANGE` made):** `paper_packet.py check` could not validate a manifest from a task worktree, because the worktree holds the manifest but not the gitignored `files/` tree, and the packet's runner did not pass the validator's existing `--artifact-workspace`. Evidence: with `files/` absent the manifest check returned `No such file`; with `files/` a symlink to the shared tree it returned `artifact path escapes the workspace`. Fix: `check --artifact-workspace <root>` passes the root through. Regression: `ArtifactWorkspacePassthroughTests` in `framework/scripts/test_paper_packet.py` (69 tests, OK). Cost: one optional argument, no dependency.
+2. **Named, not built:** the manifest validator proves that a quote exists in the body surface, not that it supports the proposition written beside it. In this wave the reader's re-reading caught seven propositions that outran their quotes before they were committed (incident D of `session_evaluations/2026-10-19_metabolic_G4_scientist-d.md`); no machine saw them. A mechanical aid is plausible and cheap to try: print each proposition beside its quote and the words of the proposition absent from the quote, as a prompt to the reader, never a gate. It is a heuristic and would produce false alarms on paraphrase, so it should be measured against the 4,319 locator entries counted on main on 2026-10-19 before anyone treats it as a control. Not built here because the sample of one wave cannot show its false-alarm rate.
+
+**What did not need building.** The strict manifest validator, the dependency screen (`--manifest-block`), `registry_records.py` and `record_scoped_edit.py` (dry run on `CLAIM 001`) each worked first time.
+
+**Cost / API / privacy risk:** none. The parked pair's open-access PDFs were refused by two publishers; no Unpaywall query was sent because it requires an e-mail address and the operator's may not be used for it without being asked. No shadow-library route was used.
+
+**Next surgical micro-step:** run the proposition-versus-quote prompt over the existing manifests offline and count what it would have flagged.

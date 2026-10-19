@@ -1,0 +1,201 @@
+{
+ "schema_version": 2,
+ "pmid": "35053314",
+ "doi": "10.3390/cells11020198",
+ "pmcid": "PMC8774027",
+ "receipt": "FTR-20261019-35053314-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's abstract-level 'why it matters' line and its per-theme summary of what the repository holds (GABA/vigabatrin modelled; no dopamine, catecholamine, adrenal, serotonin text). No registry record was opened before the first pass.",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/metabolic_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the triples are exposed in the commit candidate/analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "computational",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A computational meta-analysis of nine public bulk microarray datasets of human substantia nigra (70 control, 88 PD) with computational cell-type deconvolution. WWOX enters only through protein-interaction network centrality of the partners of 93 differentially expressed genes, not through any WWOX expression change. The observation (cell-composition correction removes most DEGs) is firm; the WWOX shortlisting is an interpretation of network topology."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (Parkinson*)",
+    "count": 12,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (substantia nigra)",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are search hits only."
+ },
+ "multihop": {
+  "references_enumerated": 81,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "The article cites no WWOX-directed reference that this reading could identify; reference list counted, not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 35053314 --hops 1 (run AFTER the first pass)",
+  "hits": 1,
+  "note": "One mention: full-text queue entry FT-167 (LOW, method-only transfer, 'no biology transfers'). That entry does not mention WWOX; this reading found WWOX named in the Abstract and Discussion as a network-central protein."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 81,
+   "references_screened": 76,
+   "references_with_doi": 76,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 5
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID35053314_Ferraro2022_PMC.xml",
+   "sha256": "db4960edf98c1b43f1311c5528fa0ed2146858ab3fe77eefcf9e44fecb0739f3",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8774027/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "db4960edf98c1b43f1311c5528fa0ed2146858ab3fe77eefcf9e44fecb0739f3"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The study pools nine bulk microarray datasets of substantia nigra, 70 control and 88 PD transcriptomes.",
+    "snippet": "In total, 70 control (CTRL) and 88 PD transcriptomes were put together in our study.",
+    "anchor": "Results 3.1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35053314_Ferraro2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Correcting for neuron and oligodendrocyte proportions cuts the differentially expressed genes from 1050 to 93.",
+    "snippet": "With the second LMM, we detected a reduced number of DEGs (adjusted p-value < 0.05, FC > 1.2): 93 instead of the 1050 obtained with the cell proportion-unaware LMM (63 genes overlapping).",
+    "anchor": "Results 3.2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35053314_Ferraro2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No PD-causing gene and no gene proximal to a GWAS risk variant is among the differentially expressed genes.",
+    "snippet": "None of the PD-causing genes nor any of the genes proximal to GWAS risk variants were found among the DEGs.",
+    "anchor": "Results 3.2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35053314_Ferraro2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The interaction network is built from the direct interactors of the 93 DEGs, using experimentally validated interactions from six databases.",
+    "snippet": "For all databases, only experimentally validated interactions were selected",
+    "anchor": "Methods 2.8",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35053314_Ferraro2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Central proteins are defined by degree and betweenness centrality above the 95th percentile of that network.",
+    "snippet": "we identified 207 nodes that have both a degree centrality higher than the 95th percentile (288 nodes) and a betweenness centrality higher than the 95th percentile (288 nodes)",
+    "anchor": "Results 3.5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35053314_Ferraro2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WWOX is named once in the body, in a list of central proteins with 'compelling evidence' for a role in neurodegeneration, cited to two references; the paper reports no WWOX expression value.",
+    "snippet": "other hits with compelling evidence supporting their role in neurodegeneration (e.g., GSK3β, WWOX, and VPC) [77,78], corroborate that new potential players in the PD pathogenesis might be identified among the central proteins we found.",
+    "anchor": "Discussion, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35053314_Ferraro2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that PD-causing genes, though not differentially expressed, are enriched in the network, which is how the network is justified.",
+    "snippet": "PD-causing genes and those proximal to GWAS variants, albeit not being differentially expressed, were enriched in this network.",
+    "anchor": "Discussion, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35053314_Ferraro2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Many of the usually reported pathways (Parkinson disease, oxidative phosphorylation, alpha-synuclein) may be driven by cell composition rather than pathology.",
+    "snippet": "several of the usually reported pathways (e.g., Parkinson’s disease pathway, oxidative phosphorylation, alpha-synuclein pathway) might be driven, at least in part, by changes in cell composition rather than the pathological status",
+    "anchor": "Discussion, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35053314_Ferraro2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Limitation: genotype and Braak stage could not be examined because sample annotation was incomplete.",
+    "snippet": "the incomplete annotation of the samples across the studies prevented us from exploring the effect of age, age of onset, pathology progression, genotype, and Braak staging",
+    "anchor": "Discussion, caveats",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35053314_Ferraro2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC8774027/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body or a table."
+ }
+}

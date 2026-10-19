@@ -1,0 +1,229 @@
+{
+ "schema_version": 2,
+ "pmid": "37328865",
+ "doi": "10.1186/s13195-023-01244-3",
+ "pmcid": "PMC10273745",
+ "receipt": "FTR-20261019-37328865-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's abstract-level 'why it matters' line and its per-theme summary of what the repository holds (GABA/vigabatrin modelled; no dopamine, catecholamine, adrenal, serotonin text). No registry record was opened before the first pass.",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/metabolic_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the triples are exposed in the commit candidate/analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "computational",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A summary-statistics pleiotropy analysis of three published GWAS; WWOX is one of eleven loci and is assigned by literature argument, not by a WWOX-specific analysis. The observation (a variant associated with ADRD and nominally with PD) is firm; the gene assignment is interpretation. Not a per-author sweep."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (Parkinson*)",
+    "count": 12,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Search hits only; includes cancer and neurodegeneration papers that name both terms."
+ },
+ "multihop": {
+  "references_enumerated": 109,
+  "gene_direct_refs_in_source": [
+   {
+    "ref": 55,
+    "pmid": "15126504",
+    "note": "Sze 2004, WWOX down-regulation and Tau phosphorylation in vitro"
+   },
+   {
+    "ref": 56,
+    "pmid": "25650666",
+    "note": "Chang 2015, TRAPPC6A-delta; cited for Wwox knockout and tau aggregation"
+   },
+   {
+    "ref": 57,
+    "pmid": "18371080",
+    "note": "Lo 2008, MPP+ and WOX1 Tyr33 phosphorylation"
+   }
+  ],
+  "resolved": [
+   {
+    "ref": 56,
+    "pmid": "25650666",
+    "status": "complete_fulltext_read in this corpus (FTR-20261003-25650666-03); not re-read here"
+   }
+  ],
+  "queued": [
+   {
+    "pmid": "15126504",
+    "queue": "FT-024",
+    "reason": "Sze 2004 is the primary behind the paper's AD argument for WWOX; already a queue entry, unread."
+   },
+   {
+    "pmid": "18371080",
+    "queue": "FT-109",
+    "reason": "Lo 2008 is the only dopaminergic-toxin datum offered for WWOX; subscription, BLOCKED for lawful body in the batch selection."
+   }
+  ],
+  "note": "PMIDs for refs 55-57 were resolved from the DOIs printed in the artefact's reference list by PubMed ID conversion on 2026-10-19."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 37328865 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED in the seven registry surfaces at commit 718db84f; a statement about that query only. The searched surfaces include the full-text queue and the literature tracking log."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 109,
+   "references_screened": 108,
+   "references_with_doi": 108,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID37328865_Wainberg2023_PMC.xml",
+   "sha256": "9d98376704ff75d008f1d6e957b0e783c507bc51c35e73d4141ce7c536cf0318",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10273745/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "9d98376704ff75d008f1d6e957b0e783c507bc51c35e73d4141ce7c536cf0318"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The abstract and Discussion list the ADRD-PD shared loci by a name that includes WWOX while the nearest gene to the WWOX-locus variant in Table 2 is MAF.",
+    "snippet": "five with ADRD and PD (near LCORL, CLU, SETD1A/KAT8, WWOX, and GRN)",
+    "anchor": "Discussion, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37328865_Wainberg2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The WWOX-locus lead variant is an ADRD lead variant that is only Bonferroni-level for PD, in the same direction with the same small odds ratio.",
+    "snippet": "rs450674 had the same direction and magnitude of association with both disorders (ADRD OR = 1.04, p = 3.2 × 10−8; PD OR = 1.04, p = 2.1 × 10−4), and colocalization supported a shared causal variant (80.5% chance).",
+    "anchor": "Results, Genetic risk loci shared between ADRD and PD, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37328865_Wainberg2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors attach WWOX to the variant only because it is the only other coding gene within 500 kb of a variant lying downstream of MAF.",
+    "snippet": "Besides MAF, the only other coding gene within 500 kilobases is the oxidoreductase WWOX, involved in the regulation of apoptosis.",
+    "anchor": "Results, shared ADRD-PD loci, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37328865_Wainberg2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The WWOX literature offered for AD is knockdown-in-vitro and knockout-mouse, and the authors concede the knockout is not a realistic model of a common-variant effect.",
+    "snippet": "though Wwox knockout may not be a realistic model for the much gentler perturbation of WWOX expression likely to be effected by a common GWAS variant",
+    "anchor": "Results, shared ADRD-PD loci, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37328865_Wainberg2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The only dopaminergic datum offered for WWOX is the MPP+ toxin study, cited as WWOX phosphorylation contributing to neuronal apoptosis; no dopaminergic neuron, dopamine or catecholamine measurement is made in the paper.",
+    "snippet": "Supporting its relevance to PD, WWOX phosphorylation contributed to neuronal apoptosis upon treatment with the dopaminergic neurotoxin 1-methyl-4-phenyl-pyridinium (MPP +), a model of PD [57].",
+    "anchor": "Results, shared ADRD-PD loci, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37328865_Wainberg2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Causal-gene assignment is explicitly not established by the study.",
+    "snippet": "Our hypotheses about causal gene candidates should not be treated as definitive.",
+    "anchor": "Discussion, limitations, final para",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37328865_Wainberg2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Sharing a causal variant is not sharing a causal gene.",
+    "snippet": "We note that sharing a causal variant is not at all the same as sharing a causal gene",
+    "anchor": "Discussion, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37328865_Wainberg2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper's own stated limits: coloc assumes at most one causal variant per locus; ADRD includes proxy cases.",
+    "snippet": "Second, our colocalization analysis assumes that each disorder has at most one causal variant per locus.",
+    "anchor": "Discussion, limitations, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37328865_Wainberg2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The WWOX-locus colocalization probability is stated as 80.5% in Table 2 and 80.4% in the Discussion.",
+    "snippet": "CLU (88.4% chance), WWOX (80.4% chance), and LCORL (65.3% chance)",
+    "anchor": "Discussion, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37328865_Wainberg2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC10273745/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body or a table."
+ }
+}
