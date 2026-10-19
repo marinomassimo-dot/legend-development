@@ -1,0 +1,201 @@
+{
+ "schema_version": 2,
+ "pmid": "38330420",
+ "doi": "10.3988/jcn.2023.0308",
+ "pmcid": "PMC10921057",
+ "receipt": "FTR-20261019-38330420-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's abstract-level 'why it matters' line and its per-theme summary of what the repository holds (GABA/vigabatrin modelled; no dopamine, catecholamine, adrenal, serotonin text). No registry record was opened before the first pass.",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/metabolic_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the triples are exposed in the commit candidate/analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "output_kind": "review",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A narrative review of CRH, ACTH and glucocorticoids in epilepsy with no methods section, no search strategy and no appraisal; language assistance by machine translation is acknowledged. Much of it rests on rodent models and small human studies. WWOX does not appear in the text. Useful only as background on why the adrenal axis and ACTH/steroid therapy are mechanistically entangled with seizures."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (adrenal OR HPA OR stress)",
+    "count": 46,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (hormon* OR ACTH OR corticosteroid*)",
+    "count": 28,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are broad search hits (the 'stress' term captures cell-stress papers); not WWOX adrenal reports."
+ },
+ "multihop": {
+  "references_enumerated": 98,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "The article cites no WWOX-directed reference that this reading could identify; reference list counted, not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 38330420 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED in the seven registry surfaces at commit 718db84f; a statement about that query only."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 98,
+   "references_screened": 97,
+   "references_with_doi": 97,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38330420_Bian2024_PMC.xml",
+   "sha256": "d08a4b351b8ce1c0cacc84cfb499c259221f9ccdc3f471d0183843f3d366bf9e",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10921057/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "d08a4b351b8ce1c0cacc84cfb499c259221f9ccdc3f471d0183843f3d366bf9e"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The review states no search strategy; the Introduction states the aim as a literature review.",
+    "snippet": "This article presents the intrinsic relationships of CRH, ACTH, and GCs in the HPA axis as an important regulatory pathway with epilepsy through a literature review",
+    "anchor": "Introduction, last para",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38330420_Bian2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Machine translation tools were used for language assistance.",
+    "snippet": "as well as to Baidu Translator and other software for their assistance",
+    "anchor": "Acknowledgements",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38330420_Bian2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CRH and CRHR1 expression is reported higher in tissue from infantile spasms patients than in control tissue.",
+    "snippet": "The expression levels of CRH and CRHR1 were significantly higher in the epileptogenic tissues of patients with infantile spasms than in normal control tissues",
+    "anchor": "CRH section, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38330420_Bian2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "ACTH acts on the adrenal cortex to drive conversion of cholesterol to pregnenolone and cortisol synthesis.",
+    "snippet": "promoting the conversion of cholesterol to pregnenolone via the AC-cAMP-PKA and PLC-IP3/DG-PKC pathways, thereby increasing cortisol synthesis",
+    "anchor": "ACTH section, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38330420_Bian2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The HPA axis is described as largely under GABAergic control, with impaired GABAergic control proposed to cause HPA hyperexcitability.",
+    "snippet": "The HPA axis mediated by the organism’s stress response is largely under GABAergic control, and impaired GABAergic control may lead to hyperexcitability of the HPA axis and increased susceptibility to future seizures.",
+    "anchor": "Therapeutic target section, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38330420_Bian2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "ACTH is called the preferred short-term option for infantile spasms, with no significant difference from prednisolone reported.",
+    "snippet": "studies have found no significant difference between the effects of ACTH and prednisolone treatments for infantile spasms",
+    "anchor": "Therapeutic target section, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38330420_Bian2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Glucocorticoids are described as bidirectional in epilepsy: both GR activation (antiepileptic) and chronic excess (pro-epileptogenic) are reported.",
+    "snippet": "GCs play a bidirectional role in the treatment of epilepsy.",
+    "anchor": "Therapeutic target section, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38330420_Bian2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizures activate the HPA axis, and the review frames the relation as circular.",
+    "snippet": "In short, seizures can lead to dysregulation of the HPA axis that, in turn, can promote seizures.",
+    "anchor": "Introduction, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38330420_Bian2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mutations in the ACTH receptor (melanocortin 2 receptor) are cited as a cause of familial glucocorticoid deficiency with seizures.",
+    "snippet": "Mutations in the ACTH receptor (melanocortin 2 receptor) cause type-1 FGD, which can manifest as low serum cortisol levels, high ACTH levels, and seizures.",
+    "anchor": "ACTH section, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38330420_Bian2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC10921057/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body or a table."
+ }
+}
