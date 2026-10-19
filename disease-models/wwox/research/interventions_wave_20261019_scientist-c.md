@@ -300,3 +300,22 @@ the three supplementary spreadsheets (seizure review, background EEG, neuropatho
 
 **Changes.** A neonatal reference for hypoxic seizures with an inflammatory hit; it informs why oxygen delivery is discussed in neonatal seizure care but contains no oxygen intervention.
 
+---
+
+## 17. What the lot says as a whole (class level, not medical advice)
+
+| Oxygen item | WWOX-deficient evidence | Best substitute read | What the substitute does not carry |
+|---|---|---|---|
+| supplemental oxygen, neonatal | none | Perrone 2016; Serdar 2025 | preterm and rat-pup populations; no genetic encephalopathy |
+| nocturnal helmet, CPAP, intermittent hypoxia | none (OSA gene list has WWOX as one positional hit) | Ma 2023; Zhao 2025; Huang 2025 | review hypothesis; Rett breathing defects are described awake, not asleep |
+| hypoxia or hyperoxia in seizures | none | Villa 2023; June 2024; Lopez-Ramos 2015 | rodent models; hypoxia is the injury, no oxygen arm |
+| hyperbaric oxygen | none | Alekseeva 2026 | rat seizure model at 6 ATA; protocol differs from clinical 1.5-2.5 ATA |
+| hypoxia therapy | none | Garg 2026; Blume 2025 | needs an electron-transport lesion that raises tissue oxygen; not shown for WWOX |
+| HIF1A and ROS | WWOX-direct anchor (Liu 2022) read in wave 1 and not repeated | Liang 2023; Kuang 2025 | correlational; HIF-1 alpha is also raised in acquired epilepsy |
+| measurable oxygen readout | none | Khaksari 2026 | title contradicts its own figures; n = 7 versus 6 |
+
+**Answers to the three questions of the selection file.** (1) Whether a Wwox-null neuron responds differently to hypoxia or hyperoxia: untested here; neural HIF-1 alpha is raised in two acquired-epilepsy models, so it is not a WWOX marker. (2) Whether ROS is the intermediate between WWOX loss and mitochondrial stress: nothing new beyond the wave-1 reading of Liu 2022; the hypoxia-therapy precondition (a complex I lesion that raises tissue oxygen) is not shown. (3) Whether nocturnal or ictal hypoxia belongs to the DEE phenotype: no oximetry or sleep data on a WWOX cohort exist in anything read; the one encephalopathy comparator (Rett) places its breathing defects awake.
+
+**Extra self-chosen search (lot exhausted).** Four PubMed queries (WWOX with brain or neuron and hypoxia, ischaemia or ROS; with stroke, hypoxic-ischaemic or reoxygenation; with oxygen consumption or respiration; with oxygen and epilepsy or encephalopathy) returned 5, 4, 3 and 0 records. Nothing new qualified: two records were already read (wave 1 and another actor), one has a receipt from another actor, two Alzheimer's-disease WOX1 reviews and the four WWOX/HIF-1 papers named in the commit candidate have no open body (Europe PMC and OpenAlex checked). They are parked with that cascade.
+
+**Skills declined, with reasons.** `legend-discovery` and `legend-hypothesis-forge`: no lead matured beyond the staged IPOTESI items; `legend-safety-triage`: no molecule was triaged (memantine, perampanel and HypoxyStat appear as literature objects in rodents); `legend-locator-audit`: no consolidated baseline claim is narrowed or reversed; `legend-commit`: scientists do not touch the four current files.

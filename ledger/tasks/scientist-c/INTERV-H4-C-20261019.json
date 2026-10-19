@@ -30,7 +30,7 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "CLAIMED",
+ "CURRENT_STATE": "COMPLETE_PENDING_LANDING",
  "assigned_on": "2026-10-19",
  "TASK_ACK": {
   "TASK_ID": "INTERV-H4-C-20261019",
@@ -50,6 +50,37 @@
   "durable_pointer": "ledger/tasks/scientist-c/INTERV-H4-C-20261019.json on branch task/INTERV-H4-C-20261019, worktree .claude/worktrees/interv-h4-c",
   "lot": "H4 tier order: 1 (36364214 already receipted in wave 1, not re-read; 42420651), then tier 2 (39087877, 26578889, 38074156, 37726428, 37876811, 41324728, 41039661, 42428241), then tier 3 (28119904, 40022130, 42763430, 42652189, 39965572, 38206902)"
  },
- "DEFAULTS_TAKEN": [],
- "STOP_LOG": []
+ "DEFAULTS_TAKEN": [
+  "Wave-1 receipt for Liu 2022 (PMID 36364214) already staged by this actor: not re-read, no stated question requires it; the lot is therefore fifteen papers.",
+  "Commit gate refused stale derived surfaces on every commit; used LEGEND_STALE_SURFACES_BECAUSE with the reason that shared derived surfaces belong to the Orchestrator (dispatch brief).",
+  "Staged discovery leads in the commit candidate instead of appending to the shared discovery ledger (Orchestrator appends).",
+  "Declared four receipts at partial depth with supplementary not_read where only part of the supplement was opened (Zhao, Liang, Serdar, June), rather than claim complete depth.",
+  "Europe PMC supplementaryFiles bundle for one review (Perrone) was an empty bean and the PMC image route returned a challenge page; the deposit has no figure or table element, so no image existed to open (stated in its receipt).",
+  "Used a scratch xlsx reader and then shipped it as framework/scripts/xlsx_to_text.py (micro-upgrade) because no spreadsheet library is installed.",
+  "Did not use Unpaywall (needs an e-mail parameter; the operator e-mail is not to be sent to an unrelated service); used Europe PMC and OpenAlex for the closed-body WWOX/HIF-1 papers and parked them.",
+  "Backed off PubMed requests to 3 s spacing after a rate-limit failure; builders kept in a private scratch subdirectory.",
+  "Extra self-chosen WWOX-oxygen search run because the lot was exhausted; nothing qualified (no lawful body or already read), parked with the cascade."
+ ],
+ "STOP_LOG": [],
+ "WAVE_1_RESULT": {
+  "papers": 15,
+  "manifests_pass": 15,
+  "staged_receipts": "disease-models/wwox/research/receipt_staging/scientist-c/ (FTR-20261019-<pmid>-01 for the fifteen H4 papers)",
+  "commit_candidate": "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md",
+  "analysis_note": "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "self_eval": "disease-models/wwox/research/session_evaluations/2026-10-19_interv-h4-c.md",
+  "micro_upgrade": "framework/scripts/xlsx_to_text.py plus test_xlsx_to_text.py and README routing row",
+  "DEFAULTS_TAKEN": [
+   "Wave-1 receipt for Liu 2022 (PMID 36364214) already staged by this actor: not re-read, no stated question requires it; the lot is therefore fifteen papers.",
+   "Commit gate refused stale derived surfaces on every commit; used LEGEND_STALE_SURFACES_BECAUSE with the reason that shared derived surfaces belong to the Orchestrator (dispatch brief).",
+   "Staged discovery leads in the commit candidate instead of appending to the shared discovery ledger (Orchestrator appends).",
+   "Declared four receipts at partial depth with supplementary not_read where only part of the supplement was opened (Zhao, Liang, Serdar, June), rather than claim complete depth.",
+   "Europe PMC supplementaryFiles bundle for one review (Perrone) was an empty bean and the PMC image route returned a challenge page; the deposit has no figure or table element, so no image existed to open (stated in its receipt).",
+   "Used a scratch xlsx reader and then shipped it as framework/scripts/xlsx_to_text.py (micro-upgrade) because no spreadsheet library is installed.",
+   "Did not use Unpaywall (needs an e-mail parameter; the operator e-mail is not to be sent to an unrelated service); used Europe PMC and OpenAlex for the closed-body WWOX/HIF-1 papers and parked them.",
+   "Backed off PubMed requests to 3 s spacing after a rate-limit failure; builders kept in a private scratch subdirectory.",
+   "Extra self-chosen WWOX-oxygen search run because the lot was exhausted; nothing qualified (no lawful body or already read), parked with the cascade."
+  ],
+  "STOP_LOG": []
+ }
 }
