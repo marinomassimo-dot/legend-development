@@ -1,0 +1,40 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-19366691-01",
+ "study_id": {
+  "pmid": "19366691",
+  "doi": "10.1074/jbc.m806688200"
+ },
+ "analysis_at": "2026-10-19T19:31:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d (stated assumption of the Orchestrator), task DEBT-WWOX-DIRECT-D-20261019; context_policy QUESTION_DRIVEN (held: the Sze 2015 commentary, read by a peer, cites this paper as its ref 9 for the TGF-beta1, Hyal-2 and WWOX complex). Route: Internet Archive capture of the PMC page as the text surface (HTML with whole body, legends and references), ten figure JPEGs from the PMC blob store named in that page; Figures 1-10 inspected as images; whole article read. The supplementary figures S1 to S6 are a single index page in PMC and were not retrieved, so the supplement is declared not read.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID19366691_Hsu2009_PMC2708898_wayback20251104.html",
+ "source_fingerprint": "acf05c055300fd156d1f4e7482aff02a373b8aa113f6708e9d17a581bbdc3d30",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID19366691.json",
+  "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "Figures 1-10 inspected as images (Figures 2 and 4 inspected, not declared as artefacts)",
+  "supplementary Figs S1-S6 not retrieved: declared debt"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
