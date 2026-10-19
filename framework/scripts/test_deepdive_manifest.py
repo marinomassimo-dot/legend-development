@@ -2645,6 +2645,29 @@ class ContradictingAPersistedLocatorIsDeclaredAndAudited(unittest.TestCase):
              "audit": {"auditors": 1, "verdicts": ["CONFIRMED"]}}), root=root)
         self.assertTrue([e for e in errors if "not a file" in e], errors)
 
+    def test_the_prior_manifest_may_live_in_the_branch_workspace_not_the_artifact_root(self) -> None:
+        """A task branch carries its own manifests while `root` is the shared evidence checkout.
+
+        Found 2026-10-19 (scientist-d, interventions wave): 25 declared revisions of manifests
+        that existed only on the branch were refused as 'not a file under the workspace',
+        because the prior manifest was looked up under the artifact root alone.
+        """
+        branch = TemporaryDirectory()
+        shared = TemporaryDirectory()
+        self.addCleanup(branch.cleanup)
+        self.addCleanup(shared.cleanup)
+        prior = Path(branch.name) / self.PRIOR
+        prior.parent.mkdir(parents=True)
+        prior.write_text(json.dumps({"verbatim_locators": {"entries": [{}, {}]}}), encoding="utf-8")
+        declaration = {"manifest": self.PRIOR, "entry": 1, "what_changed": "the caption order was reversed",
+                       "audit": {"auditors": 1, "verdicts": ["CONFIRMED"]}}
+        errors, _ = gate.validate(self._manifest(declaration), root=Path(shared.name),
+                                  queue_root=Path(branch.name))
+        self.assertFalse([e for e in errors if "not a file" in e], errors)
+        errors, _ = gate.validate(self._manifest(dict(declaration, entry=7)), root=Path(shared.name),
+                                  queue_root=Path(branch.name))
+        self.assertTrue([e for e in errors if "entries[7]" in e], errors)
+
     def test_an_undeclared_entry_is_untouched_by_this_branch(self) -> None:
         errors, incomplete = gate.validate(minimal())
         self.assertFalse([x for x in errors + incomplete if "contradicts_locator" in x])

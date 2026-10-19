@@ -1,0 +1,357 @@
+{
+ "schema_version": 2,
+ "pmid": "39871710",
+ "doi": "10.1002/jpn3.12466",
+ "pmcid": "PMC11959107",
+ "receipt": "FTR-20261019-39871710-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the interventions selection file's one-line 'why it matters' for this row and the group H5 header, plus the earlier readings of this lot done in this session (Yuskaitis, Phillips-Farfan, Salvati) and the registry theme records CLAIM 042 and DL-MECH-020 admitted after the first pass of the first paper. No registry record about this paper (none exists).",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/interventions_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a non-WWOX comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype; class-level literature only, BLOCK-1 caution carried in the analysis note."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the load-bearing triples were checked mechanically by locator_audit.py and are exposed in the analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Retrospective ancillary cohort of 77 children (mean age 8.5 years; 47 organic disease including 9 neurologic and one mitochondrial cytopathy, 30 anorexia nervosa) given a continuous exclusive enteral refeeding protocol, 3-week outcomes, no comparison arm. The reported fact is the incidence of laboratory and clinical complications under that protocol; effectiveness cannot be judged without a comparator, as the authors say. It is a class-level reference for refeeding risk with careful low-start enteral feeding, not a dextrose-solution or fluid-volume study and not WWOX."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (fasting OR \"caloric restriction\" OR \"calorie restriction\" OR \"dietary restriction\")",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the four hits are type 2 diabetes association studies (fasting glucose), none a fasting or restriction intervention"
+   },
+   {
+    "query": "WWOX AND (mTOR OR mTORC1 OR AMPK)",
+    "count": 8,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (hypoglycemia OR hypoglycaemia OR dextrose OR \"glucose infusion\")",
+    "count": 21,
+    "source": "PubMed ESearch rettype=count 2026-10-19; hits are glucose-metabolism, glycolysis and association papers, none an infusion or dextrose intervention"
+   },
+   {
+    "query": "WWOX AND (edema OR oedema OR hyponatremia OR \"fluid overload\")",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the two hits are a high-altitude pulmonary oedema locus list and a zebrafish embryo knockdown paper"
+   },
+   {
+    "query": "WWOX AND (refeeding OR thiamine OR \"parenteral nutrition\")",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are PubMed search hits only (ESearch rettype=count, 2026-10-19), not a census; none of the WWOX hits tests the intervention of this group."
+ },
+ "multihop": {
+  "references_enumerated": 46,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted (46 entries by parsing the JATS reference block), not read item by item; no WWOX-directed reference seen in the body."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 39871710 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED for this PMID in the seven registry surfaces at commit 0c85331b341e; a statement about that query only. CLAIM 042 and DL-MECH-020 (ketogenic-diet lines) admitted for comparison after the first pass."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 46,
+   "references_screened": 44,
+   "references_with_doi": 44,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39871710_Abbas2025_PMC.xml",
+   "sha256": "39112c5d9230535f1215e6b337ae030ea9f8d4c0fbf1906b4392b83fcc317797",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11959107/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "39112c5d9230535f1215e6b337ae030ea9f8d4c0fbf1906b4392b83fcc317797"
+   }
+  },
+  {
+   "path": "files/figures/PMID39871710/native/JPN3-80-695-g001.jpg",
+   "sha256": "45ee07c843949c0ed9e635b4074720b37d8ab7acfc45bdfb3f8ab6aee7d1727a",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11959107.1/JPN3-80-695-g001.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "45ee07c843949c0ed9e635b4074720b37d8ab7acfc45bdfb3f8ab6aee7d1727a"
+   }
+  },
+  {
+   "path": "files/figures/PMID39871710/native/JPN3-80-695-g002.jpg",
+   "sha256": "6a72d7d4b3b38c79ecbfebe0f7442c54b79b9528f3a39f5907f5e767853cc310",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11959107.1/JPN3-80-695-g002.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "6a72d7d4b3b38c79ecbfebe0f7442c54b79b9528f3a39f5907f5e767853cc310"
+   }
+  },
+  {
+   "path": "files/figures/PMID39871710/native/JPN3-80-695-g003.jpg",
+   "sha256": "99df79504db8177e8c73bda05ba1b82eac49188c211baa1ad5cf588f335550e2",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11959107.1/JPN3-80-695-g003.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "99df79504db8177e8c73bda05ba1b82eac49188c211baa1ad5cf588f335550e2"
+   }
+  },
+  {
+   "path": "files/supplements/PMID39871710/JPN3-80-695-s001.docx",
+   "sha256": "00d4f54b88e26d78d9f0c9f23275ae13c74702ea8f090638342184c838c96230",
+   "kind": "supplement_binary",
+   "note": "Supplementary tables and Supporting Information 1-3 (docx), text extracted from word/document.xml and read in full.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11959107.1/JPN3-80-695-s001.docx",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "00d4f54b88e26d78d9f0c9f23275ae13c74702ea8f090638342184c838c96230"
+   }
+  },
+  {
+   "path": "files/supplements/PMID39871710/JPN3-80-695-s002.docx",
+   "sha256": "47716587d9659ac207810b3cc17b241a376f000a92f2fd9f7c86ecbae567aa4c",
+   "kind": "supplement_binary",
+   "note": "Supplementary Figure 1 legend (docx); the plot was not opened.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11959107.1/JPN3-80-695-s002.docx",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "47716587d9659ac207810b3cc17b241a376f000a92f2fd9f7c86ecbae567aa4c"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Ancillary retrospective analysis of 77 severely undernourished children (47 organic disease, 30 anorexia nervosa) given a standardised enteral refeeding protocol at one university hospital, with 3 weeks of follow-up.",
+    "snippet": "A total of 77 patients from the PREDIRE study were included (Figure 1); their mean ± SD age was 8.52 ± 6.3 years and 46 (59.7%) were girls (Table 1).",
+    "anchor": "Results, Population description",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39871710_Abbas2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol started at a low intake relative to other pediatric protocols, about a third of the 30-40 kcal/kg/day used in comparison studies.",
+    "snippet": "the three times lower initial caloric intake of our protocol compared with the previous studies (10 vs. 30–40 kcal/kg/day, or 1860–1900 kcal/day)",
+    "anchor": "Discussion, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39871710_Abbas2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplement S1 gives the protocol: continuous exclusive enteral feeding over 24 h, 10 kcal/kg/d on day 1, oral phosphorus 1 mmol/kg/d for 10 days, oral thiamine 100 or 300 mg for 3 days, hydrolysed formula.",
+    "snippet": "Visual attestation of Supporting Information 1 (supplement docx): modality continuous exclusive EN over 24 hours; oral intake limited to 5 x 5 ml of milk; caloric intake D1 start with 10 kcal/kg/d; oral phosphorus 1 mmol/kg/d for 10 days; vitamin B1 3 days oral, 100 mg for younger children and 300 mg for older children.",
+    "anchor": "Supplement s001, Supporting Information 1",
+    "surface": "figure",
+    "artifact": [
+     "files/supplements/PMID39871710/JPN3-80-695-s001.docx"
+    ],
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "pediatric enteral refeeding protocol, Lyon university hospital",
+     "endpoint": "protocol parameters"
+    }
+   },
+   {
+    "proposition": "Refeeding syndrome by the ASPEN definition occurred in 10.4% (8 of 77); the authors elsewhere (abstract) describe the protocol as appearing safe.",
+    "snippet": "According to the ASPEN definition, during the 3‐weeks refeeding period, the prevalence of RS in the total cohort was 10.4% (8/77 children).",
+    "anchor": "Results, RS: type, frequency, and delay",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39871710_Abbas2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID39871710.json",
+     "entry": 3,
+     "what_changed": "'safe' attributed to the abstract",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "SUPPORTED"
+      ]
+     }
+    }
+   },
+   {
+    "proposition": "Just before, the same paragraph says 19 children had one electrolyte abnormality, six had two and none three; eight with refeeding syndrome do not follow from six with two abnormalities, so the definition applied is not reproducible from the text.",
+    "snippet": "Overall, 19 (24.1%) children had only one abnormality, six (7.8%) had two, and none had three.",
+    "anchor": "Results, RS: type, frequency, and delay",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39871710_Abbas2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Hypophosphatemia (below 0.8 mmol/L) occurred in 13.7% during refeeding but symptomatic in 2.5%.",
+    "snippet": "but real hypophosphatemia (<0.8 mmol/L) in 13.7% of children, with only 2.5% of them presented with symptoms",
+    "anchor": "Results, laboratory abnormalities",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39871710_Abbas2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Peripheral edema during refeeding occurred in 6.7% (5/75), between days 2 and 21.",
+    "snippet": "Peripheral edema occurred in 6.7% of children, between Days 2 and 21.",
+    "anchor": "Results, RS: type, frequency, and delay",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39871710_Abbas2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Neurologic signs occurred in 4%, including hallucinations with severe hypophosphatemia (0.42 mmol/L) in one child with anorexia nervosa.",
+    "snippet": "1 AN presented auditory and visual hallucination on Day 3 associated with a severe hypophosphatemia (0.42 mmol/L)",
+    "anchor": "Results, RS: type, frequency, and delay",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39871710_Abbas2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Hypoglycaemia (below 3.3 mmol/L) was present at inclusion in 22.2% overall and in 37.9% of the anorexia nervosa group, before refeeding.",
+    "snippet": "Hypoglycemia (<3.3 mmol/L) | 16/72 (22.2%) | 5/43(11.6%) | 11/29 (37.9%) | p = 0.005",
+    "anchor": "Table 1, hypoglycemia row",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39871710_Abbas2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Exclusion criteria listed premature stop of the protocol, yet 14 children (18.2%) interrupted early and are analysed.",
+    "snippet": "Exclusion criteria were missing medical record, parental refusal of inclusion, deviation from the enteral protocol (change in calories, premature stop).",
+    "anchor": "Methods, Study design and setting",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39871710_Abbas2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A premature interruption of the protocol occurred in 14 children, mostly for digestive intolerance.",
+    "snippet": "Over the 3‐week study period, a premature interruption or suspension of the protocol occurred in 14 (18.2%) children, between Days 1 and 16.",
+    "anchor": "Results, RS: type, frequency, and delay",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39871710_Abbas2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Weight-for-height rose from 72% to 82% in three weeks with half of the children still severely undernourished; the difference in weekly gain between anorexia nervosa and organic disease was 0.49% per week.",
+    "snippet": "During refeeding, WHR gain each week was significantly higher for AN with a difference of 0.49% of WHR gain higher each week for AN compared to OD (p = 0.033).",
+    "anchor": "Results, Effectiveness",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39871710_Abbas2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors note that single-centre retrospective design, exclusion of intensive-care patients, and absence of follow-up after three weeks limit conclusions.",
+    "snippet": "First, its single‐center nature may limit the generalizability of the findings, we excluded patients from neonatal and pediatric intensive care which are at high RS risk.",
+    "anchor": "Discussion, limitations paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39871710_Abbas2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say they cannot conclude on true effectiveness without more comparable studies and randomised comparisons.",
+    "snippet": "we need studies more comparable in terms of initial nutritional status and similar etiologies to conclude on the true effectiveness of renutrition.",
+    "anchor": "Discussion, conclusion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39871710_Abbas2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2 plots weight-for-height percent at D0, D7, D14, D21: AN about 70.5, 72.5, 77.5, 81.5; OD about 74.5, 75.5, 78.5, 82.5; total 72.5 to 82.5; asterisks at D0 and D7 only.",
+    "snippet": "Visual attestation of Figure 2 (image JPN3-80-695-g001): percent of ideal weight for height; OD 74.5, 75.5, 78.5, 82.5; AN 70.5, 72.5, 77.5, 81.5; total 72.5 to 82.5; asterisks (p = 0.023) at D0 and D7.",
+    "anchor": "Figure 2 (image JPN3-80-695-g001)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID39871710/native/JPN3-80-695-g001.jpg"
+    ],
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "children hospitalised with severe undernutrition, enteral refeeding protocol",
+     "endpoint": "weight-for-height percent over 21 days"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC11959107/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure panel."
+ }
+}

@@ -1,0 +1,316 @@
+{
+ "schema_version": 2,
+ "pmid": "40119223",
+ "doi": "10.1007/s00431-025-06082-z",
+ "pmcid": "PMC11928350",
+ "receipt": "FTR-20261019-40119223-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the interventions selection file's one-line 'why it matters' for this row and the group H5 header, plus the earlier readings of this lot done in this session (Yuskaitis, Phillips-Farfan, Salvati) and the registry theme records CLAIM 042 and DL-MECH-020 admitted after the first pass of the first paper. No registry record about this paper (none exists).",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/interventions_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a non-WWOX comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype; class-level literature only, BLOCK-1 caution carried in the analysis note."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the load-bearing triples were checked mechanically by locator_audit.py and are exposed in the analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "output_kind": "narrative_review",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Narrative review of neonatal hypoglycaemia thresholds and outcomes (no methods for study selection stated, no data). Its value here is as a class-level statement of what is recorded about glucose thresholds, dextrose gel and intravenous dextrose dosing and later neurodevelopment in otherwise healthy or at-risk newborns; it says nothing about encephalopathic infants on a deliberate low-calorie regimen, and nothing about WWOX."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (fasting OR \"caloric restriction\" OR \"calorie restriction\" OR \"dietary restriction\")",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the four hits are type 2 diabetes association studies (fasting glucose), none a fasting or restriction intervention"
+   },
+   {
+    "query": "WWOX AND (mTOR OR mTORC1 OR AMPK)",
+    "count": 8,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (hypoglycemia OR hypoglycaemia OR dextrose OR \"glucose infusion\")",
+    "count": 21,
+    "source": "PubMed ESearch rettype=count 2026-10-19; hits are glucose-metabolism, glycolysis and association papers, none an infusion or dextrose intervention"
+   },
+   {
+    "query": "WWOX AND (edema OR oedema OR hyponatremia OR \"fluid overload\")",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the two hits are a high-altitude pulmonary oedema locus list and a zebrafish embryo knockdown paper"
+   },
+   {
+    "query": "WWOX AND (refeeding OR thiamine OR \"parenteral nutrition\")",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are PubMed search hits only (ESearch rettype=count, 2026-10-19), not a census; none of the WWOX hits tests the intervention of this group."
+ },
+ "multihop": {
+  "references_enumerated": 25,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted (25 entries) by parsing the JATS reference block, not read item by item; no WWOX-directed reference seen in the body."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 40119223 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED for this PMID in the seven registry surfaces at commit 0c85331b341e; a statement about that query only. CLAIM 042 and DL-MECH-020 (ketogenic-diet lines) admitted for comparison after the first pass."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 25,
+   "references_screened": 25,
+   "references_with_doi": 25,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40119223_Garg2025_PMC.xml",
+   "sha256": "c9d6c9ac1bb96658e42a910b109c0c2a5d6f9472cbd4c4cfef7172c85d7aa3d7",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11928350/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "c9d6c9ac1bb96658e42a910b109c0c2a5d6f9472cbd4c4cfef7172c85d7aa3d7"
+   }
+  },
+  {
+   "path": "files/figures/PMID40119223/native/431_2025_6082_Fig1_HTML.jpg",
+   "sha256": "fc8631cc8febed3b098f60b5c4d6c5c3539644da3e5b7e492b7850afdb7c7b23",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11928350.1/431_2025_6082_Fig1_HTML.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "fc8631cc8febed3b098f60b5c4d6c5c3539644da3e5b7e492b7850afdb7c7b23"
+   }
+  },
+  {
+   "path": "files/figures/PMID40119223/native/431_2025_6082_Fig2_HTML.jpg",
+   "sha256": "3df807d3296ef3f3d53b78b2c19ed1c7b71d59d1e77d954e14328ee61d5ef281",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11928350.1/431_2025_6082_Fig2_HTML.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "3df807d3296ef3f3d53b78b2c19ed1c7b71d59d1e77d954e14328ee61d5ef281"
+   }
+  },
+  {
+   "path": "files/figures/PMID40119223/native/431_2025_6082_Fig3_HTML.jpg",
+   "sha256": "f1202662a493175e6a29c0f1f77b71b5c905e8d7ea6e9ef1fd6fbc5802c540a5",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11928350.1/431_2025_6082_Fig3_HTML.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "f1202662a493175e6a29c0f1f77b71b5c905e8d7ea6e9ef1fd6fbc5802c540a5"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The article is a narrative review with no original data, and a correction for a dosage error on page 5 was issued; the text read here is the revised online version as served on the acquisition date.",
+    "snippet": "The original online version of this article was revised due to a dosage error identified on page 5.",
+    "anchor": "Footnotes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40119223_Garg2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No datasets were generated or analysed.",
+    "snippet": "No datasets were generated or analysed during the current study.",
+    "anchor": "Data availability",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40119223_Garg2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review says no consensus exists among ten guidelines on the glucose value at which to intervene.",
+    "snippet": "No consensus existed among these guidelines regarding the specific blood glucose concentration at which intervention should be initiated or the target range at which glucose concentrations should be maintained [7].",
+    "anchor": "Controversies in guidelines",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40119223_Garg2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Dosing as stated: intravenous bolus 200 mg/kg (2 mL/kg of 10% dextrose) followed by 6-8 mg/kg per minute; an infusion rate above 8-10 mg/kg per minute suggests hyperinsulinism.",
+    "snippet": "followed by a continuous glucose infusion at a rate of 6 to 8 mg/kg per minute. A glucose infusion rate above 8–10 mg/kg/min strongly suggests the diagnosis of hyperinsulinism",
+    "anchor": "Management, Intravenous glucose infusions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40119223_Garg2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3 heads the escalation step as glucose infusion above 10-12 mg/kg/hr, a different unit and range from the 8-10 mg/kg per minute in the text.",
+    "snippet": "Visual attestation of Figure 3: three-step treatment flow; third header reads 'Glucose infusion > 10-12 mg/kg/hr'; second step 'Glucose infusion (200 mg/kg bolus plus 6 to 8 mg/kg/min)'; first step buccal glucose gel 40% at 200-400 mg per kg.",
+    "anchor": "Figure 3 (image 431_2025_6082_Fig3_HTML)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID40119223/native/431_2025_6082_Fig3_HTML.jpg"
+    ],
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative synthesis figure, neonatal hypoglycaemia treatment",
+     "endpoint": "dose statements"
+    }
+   },
+   {
+    "proposition": "The glucose gel dose is 200-400 mg/kg of a 40% gel, recommended for initial hypoglycaemia unresponsive to feeding.",
+    "snippet": "It should be administered at 200–400 mg per kg and is recommended for initial or transitional hypoglycemia unresponsive to early feeding.",
+    "anchor": "Buccal glucose gel",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40119223_Garg2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review cites rodent evidence that glucose infusion worsened neuronal death in insulin-induced hypoglycaemia through superoxide, a reason for controlled rather than uncontrolled glucose delivery.",
+    "snippet": "Experimental studies in rodents have shown that glucose infusion worsens neuronal death in insulin-induced hypoglycemia by increasing superoxide production, suggestive of therapeutic administration of uncontrolled glucose delivery proving to be detrimental by worsening the initial neuronal injury [18].",
+    "anchor": "Management, NH and neuroglycopenia",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40119223_Garg2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review states that lactate or ketones do not fully replace glucose in meeting neuronal demand.",
+    "snippet": "Supplementation with lactate or ketones does not entirely meet the cellular demand that glucose is able to provide.",
+    "anchor": "Management, NH and neuroglycopenia",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40119223_Garg2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Diazoxide with chlorothiazide is routinely combined to prevent fluid overload, and one low-dose RCT found no fluid overload.",
+    "snippet": "In current practice, chlorothiazide and diazoxide are routinely used together to prevent fluid overload.",
+    "anchor": "Management, Diazoxide and chlorothiazide",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40119223_Garg2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The non-inferiority trial that supports a 36 mg/dL threshold excluded infants whose first glucose was below 36 mg/dL and enrolled only 'healthy' infants.",
+    "snippet": "By study design, newborn infants with initial blood glucose concentrations < 36 mg/dL (2 mol/L) were excluded from this study [9].",
+    "anchor": "Hypoglycemia threshold and treatment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40119223_Garg2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Follow-up cohorts link severe or recurrent neonatal hypoglycaemia (below about 36 mg/dL) to later executive and visual-motor deficits at 4.5 years, and below 30 mg/dL to lower IQ at 7-11 years; at 2 years no impairment was seen.",
+    "snippet": "However, children with severe hypoglycemia (< 36 mg/dL or 2 mmol/L), recurrent hypoglycemia, or clinically undetected hypoglycemia (detected only through continuous glucose monitoring) exhibited lower scores in executive and visual-motor functions.",
+    "anchor": "Long-term prognosis, CHYLD 4.5 years",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40119223_Garg2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the Roeper cohort two or more episodes below 30 mg/dL were not associated with worse outcomes, which sits beside the summary claim that a single severe episode may cause adverse outcomes.",
+    "snippet": "Two or more episodes of blood glucose less than 30 mg/dL (1.7 mmol/L) were not associated with significantly worse outcomes.",
+    "anchor": "Mid-childhood neurodevelopmental effects",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40119223_Garg2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Summary gives 47 mg/dL in the first 48 h and 60 mg/dL after as safe thresholds, in the same paragraph as an advice to keep values above 36 mg/dL.",
+    "snippet": "Blood glucose > 47 mg/dL (2.6 mmol/L) in the first 48 h of life and > 60 mg/dL (3.3 mmol/L) after 48 h are not associated with adverse neurological outcomes and may be used as safe thresholds.",
+    "anchor": "Summary, final paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40119223_Garg2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The text puts the day-4 plasma plateau at 89 +/- 13 mg/dL while Figure 2A plots 82-83 mg/dL for 72-120 h.",
+    "snippet": "a final steady-state concentration plateau of 89 + / − 13 mg/dL (4.9 + / − 0.7 mmol/L) was reached by the fourth day of life.",
+    "anchor": "Newer approach, GLOW paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40119223_Garg2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2A shows plasma glucose means of 57, 57, 59, 60, 69, 82 and 83 mg/dL across the age bands and interstitial values at or slightly below them in the first 24 h.",
+    "snippet": "Visual attestation of Figure 2A: plasma glucose (mean + SD) 57, 57, 59, 60, 69, 82, 83 mg/dL for 0-4, 4-12, 12-24, 24-48, 48-72, 72-96, 96-120 h; interstitial row 54, 55, 59, 59, 69, 82, 83; panel B 10th percentile 47 mg/dL below 48 h and 54 above 72 h.",
+    "anchor": "Figure 2A, B (image 431_2025_6082_Fig2_HTML)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID40119223/native/431_2025_6082_Fig2_HTML.jpg"
+    ],
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "healthy term infants, GLOW cohort data re-plotted by the review",
+     "endpoint": "plasma and interstitial glucose by postnatal age"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC11928350/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure panel."
+ }
+}

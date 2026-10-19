@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-19T00:00:00Z",
+ "analysis_time_precision": "date_only",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "tables": "read",
+  "figures": "read",
+  "references": "not_read",
+  "supplementary": "not_present"
+ },
+ "event_at": "2026-10-19T18:46:18Z",
+ "event_id": "FTR-20261019-40944047-01",
+ "evidence_basis": [
+  "JATS body of a narrative review (no Results section, one table) read in full in two pages of a text rendering; both figure images opened.",
+  "No supplementary material listed in the deposit; reference list counted (273), not read; a string search of the rendered text for dextrose returned no occurrence."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID40944047.json",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-d.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "839ca9cb5cb0770ec7dee2d52000578e9e7f75e2f94b8fb4c859906de1677d88",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID40944047_Ziaka2025_PMC.xml",
+ "study_id": {
+  "doi": "10.3390/jcm14176289",
+  "pmid": "40944047"
+ },
+ "workflow": "scientist-d (stated assumption of the Orchestrator), interventions wave 2026-10-19, task INTERV-H5-D-20261019, branch task/INTERV-H5-D-20261019; context_policy QUESTION_DRIVEN. Route: Europe PMC REST fullTextXML into the shared checkout files/fulltext/; figures and supplements from the PMC Article Datasets open-data bucket where present; locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts."
+}

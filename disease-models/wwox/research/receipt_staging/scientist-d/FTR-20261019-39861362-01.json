@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-19T00:00:00Z",
+ "analysis_time_precision": "date_only",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "tables": "read",
+  "figures": "read",
+  "references": "not_read",
+  "supplementary": "not_present"
+ },
+ "event_at": "2026-10-19T18:48:15Z",
+ "event_id": "FTR-20261019-39861362-01",
+ "evidence_basis": [
+  "JATS body, Table 2 and the three figures (PRISMA, RoB2, Newcastle-Ottawa) read and opened; Table 1a-c (study characteristics) was missed by the first text rendering (table placed outside the body sections) and was read in a second extraction of the JATS table-wrap; figure captions are not rendered by the first extraction, images were opened.",
+  "Reference list counted (54), not read; no supplementary material listed."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID39861362.json",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-d.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "f38f3671b851e4a39b8c79e7e21050e35f62e8c53829a69589dfaf0fc709deec",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID39861362_Tesser2025_PMC.xml",
+ "study_id": {
+  "doi": "10.3390/nu17020232",
+  "pmid": "39861362"
+ },
+ "workflow": "scientist-d (stated assumption of the Orchestrator), interventions wave 2026-10-19, task INTERV-H5-D-20261019, branch task/INTERV-H5-D-20261019; context_policy QUESTION_DRIVEN. Route: Europe PMC REST fullTextXML into the shared checkout files/fulltext/; figures and supplements from the PMC Article Datasets open-data bucket where present; locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts."
+}

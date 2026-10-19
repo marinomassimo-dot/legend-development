@@ -1,5 +1,5 @@
 {
- "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
  "_note": "Metabolic batch. Orchestrator assumption: scientist-d is a fourth equivalent Scientist under the shared contract roles/scientist.md (body 32); operator authorised up to four Scientists on 2026-10-19.",
  "TASK_ID": "INTERV-H5-D-20261019",
  "DIRECTIVE_VERSION": 1,
@@ -30,6 +30,85 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "QUEUED_BEHIND_WAVE_1",
- "assigned_on": "2026-10-19"
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-10-19",
+ "TASK_ACK": {
+  "TASK_ID": "INTERV-H5-D-20261019",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "decision": "ACCEPTED",
+  "at": "2026-10-19T18:28:34Z"
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "INTERV-H5-D-20261019",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-d",
+  "timestamp": "2026-10-19T18:28:34Z",
+  "durable_pointer": "branch task/INTERV-H5-D-20261019, worktree .claude/worktrees/interv-h5-d",
+  "note": "scientist-d is a stated assumption of the Orchestrator (task ORCH-METABOLIC-BATCH-20261019); interventions wave, lot H5"
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "legend_commit.sh refused each manifest commit as STALE (pathograph drift) while four Scientists work in parallel",
+   "default": "committed with LEGEND_STALE_SURFACES_BECAUSE naming the parallel wave; pathograph regeneration left to the Orchestrator",
+   "why_safe": "the dispatch brief says shared derived surfaces are regenerated only when all inputs are committed",
+   "would_have_differed": "a single-actor wave would regenerate before committing"
+  },
+  {
+   "condition": "PMC pages serve a reCAPTCHA and Europe PMC binary endpoints return 403 for figures and supplements",
+   "default": "took figures and supplements from the PMC Article Datasets open-data bucket (pmc-oa-opendata), recorded in each artifact's acquisition_recipe",
+   "why_safe": "lawful open-access deposits, retrieval only, digests recorded",
+   "would_have_differed": "an interactive browser would have used the publisher page"
+  },
+  {
+   "condition": "the brief asks for DOI confirmation with PubMed convert_article_ids",
+   "default": "confirmed all 16 DOIs against PubMed ESummary article ids (same index, one batch call) and against the JATS front matter",
+   "why_safe": "identical source of truth, all 16 matched",
+   "would_have_differed": "none"
+  },
+  {
+   "condition": "two held WWOX-direct rows (Su 2026, Carvalho 2022) were listed 'only with a stated question' and the lot was exhausted with budget left",
+   "default": "re-opened both as an independent pass; at landing found scientist-c had re-read and staged both first (same event id -03), so withdrew my receipt and manifest additions and kept the observations in the analysis note section 6 as a second reader's extract",
+   "why_safe": "no duplicate receipt id reaches the ledger; nothing of scientist-c's was touched",
+   "would_have_differed": "checking peers' branch commits before reopening a held row would have avoided the duplicate reading"
+  },
+  {
+   "condition": "declared contradicts_locator revisions were refused because the prior manifest existed only on this branch",
+   "default": "validated the eight affected manifests against a scratch workspace holding copies, then fixed the validator (prior manifest resolved beside the manifest first) with a regression test, and re-validated from the task worktree",
+   "why_safe": "the fix is additive; the full 205-test suite passes",
+   "would_have_differed": "waiting for landing would have left the revisions unverified"
+  },
+  {
+   "condition": "blind auditors found 23 non-supported propositions after they were committed",
+   "default": "narrowed the 25 affected propositions in place, each with a contradicts_locator declaration and the audit object, and appended one locator",
+   "why_safe": "the persisted-locator rule: declaration plus audit, checked by locator_contradiction_audit.py (25 declared, 0 undeclared)",
+   "would_have_differed": "none"
+  },
+  {
+   "condition": "receipts say partial wherever references were counted only, a supplement was unopened or a figure was seen reduced",
+   "default": "understated depth rather than claim complete",
+   "why_safe": "an overstated receipt is immutable once chained",
+   "would_have_differed": "more reading time would have raised some to complete"
+  }
+ ],
+ "STOP_LOG": [],
+ "RESULT": {
+  "read": 16,
+  "parked": 0,
+  "analysis_note": "disease-models/wwox/research/interventions_wave_20261019_scientist-d.md",
+  "self_eval": "disease-models/wwox/research/session_evaluations/2026-10-19_interventions_H5_scientist-d.md",
+  "commit_candidates": [
+   "CC-20261019-SCIENTISTD-H5-REGISTRY-01",
+   "CC-20261019-SCIENTISTD-H5-NEGATIVES-01"
+  ],
+  "staged_receipts": "disease-models/wwox/research/receipt_staging/scientist-d/ (16 new JSON files, not appended)",
+  "blind_audit": {
+   "auditors": 2,
+   "triples": 101,
+   "non_supported": 23,
+   "revisions_declared": 25
+  },
+  "micro_upgrade": "deepdive_manifest.py resolves contradicts_locator prior manifest beside the manifest being validated, with regression test",
+  "held_rows": "Su 2026 and Carvalho 2022 re-opened as a duplicate of scientist-c's landed re-reads; observations only, no receipt"
+ }
 }
