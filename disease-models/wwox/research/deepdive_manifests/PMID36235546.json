@@ -1,0 +1,268 @@
+{
+ "schema_version": 2,
+ "pmid": "36235546",
+ "doi": "10.3390/nu14193890",
+ "pmcid": "PMC9570539",
+ "receipt": "FTR-20261019-36235546-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the interventions selection file's one-line 'why it matters' for this row and the group H5 header, plus the earlier readings of this lot done in this session (Yuskaitis, Phillips-Farfan, Salvati) and the registry theme records CLAIM 042 and DL-MECH-020 admitted after the first pass of the first paper. No registry record about this paper (none exists).",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/interventions_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a non-WWOX comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype; class-level literature only, BLOCK-1 caution carried in the analysis note."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the load-bearing triples were checked mechanically by locator_audit.py and are exposed in the analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Pilot randomised, partially blinded trial of an enhanced (higher glucose infusion rate, higher lipid) versus standard parenteral nutrition protocol in the first week in 90 very low birth weight preterm infants, with neurodevelopmental follow-up (VEP at 4 months in 33, Bayley at 12 and 24 months in 46 and 29). The reported fact is no benefit and a slower P100 latency that disappears after adjusting for enteral intake, in a small and heavily attrited sample. A class-level data point on dextrose-rate intensity in neonates; not term encephalopathy, not a low-calorie regimen, not WWOX."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (fasting OR \"caloric restriction\" OR \"calorie restriction\" OR \"dietary restriction\")",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the four hits are type 2 diabetes association studies (fasting glucose), none a fasting or restriction intervention"
+   },
+   {
+    "query": "WWOX AND (mTOR OR mTORC1 OR AMPK)",
+    "count": 8,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (hypoglycemia OR hypoglycaemia OR dextrose OR \"glucose infusion\")",
+    "count": 21,
+    "source": "PubMed ESearch rettype=count 2026-10-19; hits are glucose-metabolism, glycolysis and association papers, none an infusion or dextrose intervention"
+   },
+   {
+    "query": "WWOX AND (edema OR oedema OR hyponatremia OR \"fluid overload\")",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the two hits are a high-altitude pulmonary oedema locus list and a zebrafish embryo knockdown paper"
+   },
+   {
+    "query": "WWOX AND (refeeding OR thiamine OR \"parenteral nutrition\")",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are PubMed search hits only (ESearch rettype=count, 2026-10-19), not a census; none of the WWOX hits tests the intervention of this group."
+ },
+ "multihop": {
+  "references_enumerated": 34,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted (34 entries), not read item by item; no WWOX-directed reference seen in the body."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 36235546 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED for this PMID in the seven registry surfaces at commit 0c85331b341e; a statement about that query only. CLAIM 042 and DL-MECH-020 (ketogenic-diet lines) admitted for comparison after the first pass."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 34,
+   "references_screened": 30,
+   "references_with_doi": 30,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID36235546_Morris2022_PMC.xml",
+   "sha256": "6c08cfa06723b5f58b9fef4630fdf29b2e480e3ecc0abe2ccce3138356dcdeed",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9570539/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "6c08cfa06723b5f58b9fef4630fdf29b2e480e3ecc0abe2ccce3138356dcdeed"
+   }
+  },
+  {
+   "path": "files/figures/PMID36235546/native/nutrients-14-03890-g001.jpg",
+   "sha256": "0929a44a74e6e3356388d2a0e1874f13845841e5097e2c7ab71216ce947336ee",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9570539.1/nutrients-14-03890-g001.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "0929a44a74e6e3356388d2a0e1874f13845841e5097e2c7ab71216ce947336ee"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Pilot randomised trial of enhanced versus standard parenteral nutrition in 90 infants under 32 weeks and 1500 g, with no formal power calculation and neurodevelopment as secondary outcomes.",
+    "snippet": "Given that this was a pilot/feasibility trial, we were unable to perform formal power analysis.",
+    "anchor": "Methods, Study Population",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36235546_Morris2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The intervention group started a glucose infusion rate of about 5.5 mg/kg/min with protein 4 g/kg/day and advanced by about 1.5 mg/kg/min per day to 12-14 mg/kg/min; the control started at about 4 mg/kg/min and advanced by 1 mg/kg/min to the same maximum.",
+    "snippet": "GIR was advanced by ~1.5 mg/kg/min per day throughout the first week of life to a maximum of 12–14 mg/kg/min.",
+    "anchor": "Methods, Intervention",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36235546_Morris2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The two arms differed in energy (parenteral kcal 65.2 versus 81.6) but parenteral protein was nearly the same (3.5 versus 3.6 g/kg/day); the contrast is mostly glucose and lipid.",
+    "snippet": "Mean parenteral kcal intakeDays 2–8 (kcals/kg/day) 65.2 (10.5) 81.6 (11.1) <0.001",
+    "anchor": "Table 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36235546_Morris2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Only 33, 46 and 29 of 90 infants had VEP, 12-month and 24-month follow-up respectively; the authors say follow-up was low because of the COVID-19 pandemic and that this jeopardises randomisation.",
+    "snippet": "While this is a randomized trial, the benefit of randomization is jeopardized when follow-up rates are low.",
+    "anchor": "Discussion, para 7",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36235546_Morris2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 flow diagram: 203 screened, 102 not included, 11 not eligible, 90 randomised, 87 with complete intervention data (45 control, 42 intervention); 4-month VEP 18 and 15, 12-month Bayley 23 and 23, 24-month Bayley 13 and 16.",
+    "snippet": "Visual attestation of the flow diagram (image nutrients-14-03890-g001): screened infants n = 203; subjects not included n = 102; not eligible n = 11; consented and randomized n = 90; died before 1 week of life 1, withdrawn due to metabolic disorder 1, incomplete data 1; infants with complete intervention data n = 87; control n = 45 and intervention n = 42; VEP 18 and 15; Bayley 12 months 23 and 23; Bayley 24 months 13 and 16.",
+    "anchor": "Figure 1 (image nutrients-14-03890-g001)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID36235546/native/nutrients-14-03890-g001.jpg"
+    ],
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "preterm infants under 32 weeks, single NICU",
+     "endpoint": "recruitment and follow-up"
+    }
+   },
+   {
+    "proposition": "The intention-to-treat comparison found a longer P100 latency (slower processing) in the intervention group (145 versus 177 ms, p = 0.01).",
+    "snippet": "Univariate intention to treat the analysis of VEP data showed longer P100 latency in the intervention group, suggestive of slower speed of processing (control 145 vs. intervention 177 ms, p = 0.01).",
+    "anchor": "Results, para 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36235546_Morris2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "After adjusting for enteral calories (Model 2) the latency difference disappeared (estimate 22.81 ms, 95% CI -4.5 to 50.13, p 0.098).",
+    "snippet": "Multivariable analysis found a similarly longer P100 latency in the intervention group in adjusted Model 1 (for sex, gestational age, and age at VEP), but the difference disappeared in Model 2",
+    "anchor": "Results, para 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36235546_Morris2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Bayley scores at 12 and 24 months did not differ between arms.",
+    "snippet": "BSID outcomes were similar at 12 and 24 months CA (Table 3).",
+    "anchor": "Results, para 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36235546_Morris2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Control infants in the follow-up groups had higher enteral intake (VEP group 31.4 versus 17.5 kcal/kg/day), i.e. enteral feeding differs between arms among those followed.",
+    "snippet": "Average enteral intake, Days 2–8 (kcal/kg/day) VEP 31.4 (18.1) 17.5 (14.2) 0.019",
+    "anchor": "Table 2, enteral intake row",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36235546_Morris2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The text states a 10.13 ms faster processing per 10 kcal/kg/day of enteral energy, while the quoted effect estimate of -1.13 ms per kcal/kg/day would be 11.3 ms per 10 kcal/kg/day.",
+    "snippet": "there was a 10.13 ms faster speed of processing at 4-month VEP (effect estimate −1.13 (−2.011, −0.26) p = 0.013)",
+    "anchor": "Results, para 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36235546_Morris2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 1 gives the same p value (0.475) for antibiotic days (2.2 versus 2.9) as for Apgar below 5; a duplicated value is likely.",
+    "snippet": "Antibiotic use (Days 1–7) 2.2 (1.7) 2.9 (1.9) 0.475",
+    "anchor": "Table 1, antibiotic use row",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36235546_Morris2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors report no increase in hyperglycaemia, hypertriglyceridaemia or days of insulin with enhanced PN, and refer to a separate paper for it.",
+    "snippet": "In this trial, infants who had received enhanced PN did so without increased metabolic complications such as hyperglycemia, hypertriglyceridemia, hyperbilirubinemia, or increased days of insulin use when compared to the control group.",
+    "anchor": "Results, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36235546_Morris2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say the enhanced PN should be given with caution until larger randomised trials are completed; first-week enteral intake associated with better processing speed.",
+    "snippet": "Despite these differences in the follow-up groups, our findings suggest enhanced parenteral nutrition should be given with caution until larger randomized trials have been completed.",
+    "anchor": "Discussion, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36235546_Morris2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC9570539/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure panel."
+ }
+}
