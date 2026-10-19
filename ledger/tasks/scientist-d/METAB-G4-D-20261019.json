@@ -30,6 +30,23 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-19"
+ "CURRENT_STATE": "IN_PROGRESS",
+ "assigned_on": "2026-10-19",
+ "TASK_ACK": {
+  "TASK_ID": "METAB-G4-D-20261019",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "decision": "ACCEPTED",
+  "at": "2026-10-19T17:56:42Z"
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "METAB-G4-D-20261019",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-d",
+  "timestamp": "2026-10-19T17:56:42Z",
+  "durable_pointer": "branch task/metab-g4-d, worktree .claude/worktrees/metab-g4-d",
+  "note": "scientist-d is a stated assumption of the Orchestrator (task ORCH-METABOLIC-BATCH-20261019)"
+ },
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
 }
