@@ -1,0 +1,350 @@
+{
+ "schema_version": 2,
+ "pmid": "42219438",
+ "doi": "10.1007/s10534-026-00833-7",
+ "receipt": "FTR-20261019-42219438-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "An Armenian and Norwegian group on metals in autism writing a narrative review of iron in neurodevelopment; WWOX is not named. No measurement is made; its tables relay single cohort and genetic-association studies, and it is weighted as a map of iron-handling readouts and of how heterogeneous the autism-iron literature is."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "iron AND autism",
+    "count": 296,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (iron OR ferroptosis)",
+    "count": 3,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches, not measurements."
+ },
+ "multihop": {
+  "references_enumerated": 147,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "The reference list holds 147 reference elements in the JATS artefact (counted in the session); WWOX is not named anywhere in the article (case-insensitive count 0).",
+  "disposition": "No gene-direct references."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42219438 --hops 1; paper_packet.py packet; fulltext_receipts.py status --pmid 42219438",
+  "hits": 0,
+  "note": "No record in any of the seven searched registry surfaces and no prior receipt; an empty result is a statement about that query over those files."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication types Journal Article and Review.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 147,
+   "references_screened": 147,
+   "references_with_doi": 147,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42219438_Bjorklund2026_PMC.xml",
+   "sha256": "1d8fd7777f88a505bb1dc07cda0935df7e6d935f992c239fa99ec98de84581ed",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13518416/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "1d8fd7777f88a505bb1dc07cda0935df7e6d935f992c239fa99ec98de84581ed"
+   }
+  },
+  {
+   "path": "files/figures/PMID42219438/10534_2026_833_Fig1_HTML.webp",
+   "sha256": "e9ee36d5455ae3b7cf2c4c6bd880a1501fa62df3c270b5fe6f3f565e456d6903",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13518416 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42219438_Fig1.png",
+   "sha256": "e014e00ccd728d6179ce347cfa2af384b9c3998737a061fa6dc83561e830ef5a",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42219438/10534_2026_833_Fig1_HTML.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "e014e00ccd728d6179ce347cfa2af384b9c3998737a061fa6dc83561e830ef5a"
+   }
+  },
+  {
+   "path": "files/figures/PMID42219438/10534_2026_833_Fig2_HTML.webp",
+   "sha256": "b5cd26c92734de0f42a74a5b3faa6b42fca7a081ca08addfd91352b004c42d27",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13518416 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42219438_Fig2.png",
+   "sha256": "cffccdad4d7854bb0d4c6fc897a134158369e0bdf6da08f83ee98dde917029fd",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42219438/10534_2026_833_Fig2_HTML.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "cffccdad4d7854bb0d4c6fc897a134158369e0bdf6da08f83ee98dde917029fd"
+   }
+  },
+  {
+   "path": "files/figures/PMID42219438/10534_2026_833_Fig3_HTML.webp",
+   "sha256": "18044fa2a34cff957fdd9a6b76e43461804b9ec63cf8224752e496bd1b30f82e",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13518416 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42219438_Fig3.png",
+   "sha256": "d33d4311441243efc0d984b18bc0ae99724fd53cc6eec9bcc4059875f690696a",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42219438/10534_2026_833_Fig3_HTML.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "d33d4311441243efc0d984b18bc0ae99724fd53cc6eec9bcc4059875f690696a"
+   }
+  },
+  {
+   "path": "files/figures/PMID42219438/10534_2026_833_Fig4_HTML.webp",
+   "sha256": "3f250de60b85a11c7ebb5bac28269a7fb52d0eda49b2848765a5b7b6e0e6c5a8",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13518416 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42219438_Fig4.png",
+   "sha256": "0f9b20549a7d9e2d5e0bf6edbd5a8b7634450940949df0fcfb475d1ed7963997",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42219438/10534_2026_833_Fig4_HTML.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "0f9b20549a7d9e2d5e0bf6edbd5a8b7634450940949df0fcfb475d1ed7963997"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Scope: a narrative review of iron in prenatal and postnatal brain development and autism spectrum disorder, with no search method, inclusion rule or appraisal stated.",
+    "snippet": "This review examines the possible involvement of iron in the etiology of ASD",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42219438_Bjorklund2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Text: children with ASD are said to have lower serum ferritin and haemoglobin and altered transferrin saturation (two cited studies).",
+    "snippet": "Children with ASD have been shown to exhibit lower serum ferritin and hemoglobin levels",
+    "anchor": "Neurodevelopment, region-specific paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42219438_Bjorklund2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 1, Tseng row: no significant difference in serum ferritin between ASD and controls, listed beside the lower-ferritin findings of the text.",
+    "snippet": "Tseng et al. (2018)Children with ASDSerum ferritin (FTH1/FTL)No significant difference between serum ferritin levels",
+    "anchor": "Table 1",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42219438_Bjorklund2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 1, Chen row: elevated serum transferrin in an ASD cohort is labelled causal-level evidence.",
+    "snippet": "Causal-level evidence linking transferrin dysregulation to ASD risk",
+    "anchor": "Table 1",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42219438_Bjorklund2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mendelian-randomisation support for a causal role of reduced iron availability is cited secondhand.",
+    "snippet": "Mendelian randomization analyses additionally support a potential causal relationship between reduced iron availability and ASD risk",
+    "anchor": "Neurodevelopment, region-specific paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42219438_Bjorklund2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Text on ferroptosis: neural progenitor cells from children with ASD accumulate iron yet resist ferroptosis, possibly through upregulated GPX4, explaining brain overgrowth (ref Chen 2025b).",
+    "snippet": "Surprisingly, these cells resist ferroptosis, possibly through upregulated glutathione peroxidase 4",
+    "anchor": "Iron overload and ASD",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42219438_Bjorklund2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 2 cites the same reference for GPX4 with the opposite direction: reduced antioxidant defence and increased ferroptosis susceptibility.",
+    "snippet": "GPX4 (Chen et al. 2025b)Prevention of lipid peroxidation (key anti-ferroptosis enzyme)Reduced antioxidant defenseIncreased ferroptosis susceptibility",
+    "anchor": "Table 2",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42219438_Bjorklund2026_PMC.xml",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "review table against review text",
+     "endpoint": "direction of GPX4 change and ferroptosis susceptibility in ASD progenitors"
+    },
+    "qualifies": "entries[5]",
+    "qualifies_needle": "these cells resist ferroptosis"
+   },
+   {
+    "proposition": "The review states iron is not systemically overloaded in autism, so the ferroptosis argument rests on regional accumulation.",
+    "snippet": "systemic iron overload is not common in autism",
+    "anchor": "Iron overload and ASD",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42219438_Bjorklund2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mammalian biochemistry check: the text refers to iron-dependent superoxide dismutase in autism patients, whereas mammalian superoxide dismutases are copper-zinc and manganese enzymes (domain knowledge, not verified against a source in this session).",
+    "snippet": "reduced functioning of iron-dependent superoxide dismutase, found in autism patients",
+    "anchor": "Neurodevelopment, energy paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42219438_Bjorklund2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Myelin: iron is called a cofactor of the fatty acid desaturases needed for myelin and iron deficiency is said to reduce myelination.",
+    "snippet": "Iron deficiency reduces myelination, weakening neuronal connectivity",
+    "anchor": "Neurodevelopment, neurotransmitter paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42219438_Bjorklund2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Developmental timing: most of the brain's iron is said to accumulate in late prenatal and early postnatal windows.",
+    "snippet": "the fetal and neonatal brain accumulates approximately 80% of its total iron content",
+    "anchor": "Neurodevelopment, timing paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42219438_Bjorklund2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3A-B colours brain regions and four developmental windows by relative iron distribution and demand (red high to blue low) with annotated processes; it is a conceptual map without a measured scale, and the legend says beige regions are not primarily associated with ASD.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3: panel A a sagittal brain colour-coded red to blue for relative non-heme iron (basal ganglia and substantia nigra red, cerebellum yellow, cortex blue); panel B four brains for 0-12 weeks, 13-24 weeks, 25-40 weeks and 0-6 months with labels for striatal progenitors, dopaminergic maturation, myelination, synaptic pruning and peak iron accumulation.",
+    "anchor": "Figure 3",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42219438_Fig3.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 4 is a causal-flow schematic from maternal and fetal iron-handling lesions to behavioural outcomes (language delay, repetitive behaviours, motor coordination deficits); it carries no data or citation.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4: boxes for maternal factors (low iron intake, inflammation, defective ferroportin or transferrin), placental transport, fetal ferritin storage, neonatal and postnatal iron deficiency, linked by lines to outcome boxes at the top and bottom.",
+    "anchor": "Figure 4",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42219438_Fig4.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 1 is a mechanism schematic of transferrin-bound iron crossing the blood-brain barrier endothelium (TfR1, ferrireductase, DMT1, ferroportin, hepcidin inhibiting ferroportin, HEPH and CP); Figure 2 is the equivalent placental schematic; neither plots data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figures 1 and 2: Fe3+-Tf-TfR1 endocytosis, pH 5.5 endosome with DMT1, ferritin and mitochondrion, ferroportin export with hepcidin inhibition, ceruloplasmin and hephaestin oxidation; placental syncytiotrophoblast with heme transporter and heme oxygenase.",
+    "anchor": "Figures 1 and 2",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42219438_Fig1.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Conclusion: the findings are heterogeneous and do not support a single pathogenic role of iron in autism; causal or secondary status is open.",
+    "snippet": "do not support a singular pathogenic role of iron dysregulation in ASD",
+    "anchor": "Conclusion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42219438_Bjorklund2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13518416/fullTextXML returned HTTP 200 (308995 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}

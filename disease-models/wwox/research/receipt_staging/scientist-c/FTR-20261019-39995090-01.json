@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-39995090-01",
+ "study_id": {
+  "pmid": "39995090",
+  "doi": "10.4103/NRR.NRR-D-24-01007"
+ },
+ "event_at": "2026-10-19T18:25:32Z",
+ "analysis_at": "2026-10-19T18:25:32Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, metabolic batch 2026-10-19, task METAB-G3-C-20261019, branch task/METAB-G3-C-20261019; context_policy SOURCE_FIRST. Route: Europe PMC REST fullTextXML (open access) saved to the shared checkout files/fulltext; whole article, both tables and reference list read from a text rendering of the JATS; the eight figure images (including the graphical abstract) opened at the resolution of the deposit (394 to 707 px wide). Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID39995090_Liang2026_PMC.xml",
+ "source_fingerprint": "362b7ab13c754794eacc2b222cfa818f0efc865e5e5864adf837fd03ccb72c9e",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID39995090.json",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "The deposited figures are low resolution (the Europe PMC bundle carries them at 394 to 707 px wide); the publisher PDF was not fetched. Quantities read off bars are marked approximate. There is no supplement."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

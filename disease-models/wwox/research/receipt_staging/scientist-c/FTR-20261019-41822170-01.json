@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-41822170-01",
+ "study_id": {
+  "pmid": "41822170",
+  "doi": "10.3389/fncel.2026.1758230"
+ },
+ "event_at": "2026-10-19T18:42:40Z",
+ "analysis_at": "2026-10-19T18:42:40Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, metabolic batch 2026-10-19, task METAB-G3-C-20261019, branch task/METAB-G3-C-20261019; context_policy SOURCE_FIRST. Route: Europe PMC REST fullTextXML (open access) saved to the shared checkout files/fulltext; whole article and reference list read from a text rendering of the JATS; seven figure images and the two-page supplementary data sheet (rendered at 70 and 200 dpi) opened. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID41822170_Petrillo2026_PMC.xml",
+ "source_fingerprint": "33167c5342e6cea0c1084228effb2d576e5a7c13767e624757c84aa281cb922a",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41822170.json",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "The article has no limitations section; its limits are a closing sentence of the Conclusion. The supplement is a two-page full-blot sheet."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

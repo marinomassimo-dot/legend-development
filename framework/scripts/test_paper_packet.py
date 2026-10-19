@@ -773,7 +773,8 @@ class ArtifactWorkspacePassthroughTests(unittest.TestCase):
     def test_flag_reaches_the_manifest_validator_only_when_given(self):
         packet = {"applicable_checks": [{"name": "manifest validator"}]}
         with_flag = dict(pp._runnable(Path("."), "wwox", "1", packet, "/shared/root"))
-        without = dict(pp._runnable(Path("."), "wwox", "1", packet))
+        with tempfile.TemporaryDirectory() as raw:  # not a linked worktree: no default applies
+            without = dict(pp._runnable(Path(raw), "wwox", "1", packet))
         self.assertIn("--artifact-workspace", with_flag["manifest validator"])
         self.assertEqual(with_flag["manifest validator"][-1], "/shared/root")
         self.assertNotIn("--artifact-workspace", without["manifest validator"])
@@ -783,6 +784,34 @@ class ArtifactWorkspacePassthroughTests(unittest.TestCase):
         got = dict(pp._runnable(Path("."), "wwox", "1", packet, "."))["manifest validator"][-1]
         self.assertTrue(Path(got).is_absolute(), got)
         self.assertEqual(Path(got), Path.cwd().resolve())
+
+
+class LinkedWorktreeArtefactRoot(unittest.TestCase):
+    """A task worktree carries manifests, not the gitignored bytes: with no explicit root the validator job defaults to the shared checkout."""
+
+    def _make(self, tmp: Path) -> tuple[Path, Path]:
+        main = tmp / "main"
+        (main / "files").mkdir(parents=True)
+        subprocess.run(["git", "-C", str(tmp), "init", "-q", "main"], check=True)
+        subprocess.run(["git", "-C", str(main), "-c", "user.name=t", "-c", "user.email=t@example.invalid",
+                        "commit", "-q", "--allow-empty", "-m", "init"], check=True)
+        wt = tmp / "wt"
+        subprocess.run(["git", "-C", str(main), "worktree", "add", "-q", "-b", "task/x", str(wt)], check=True)
+        return main, wt
+
+    def test_shared_checkout_found_from_linked_worktree(self) -> None:
+        with tempfile.TemporaryDirectory() as raw:
+            main, wt = self._make(Path(raw))
+            self.assertEqual(pp._shared_checkout(wt), main.resolve())
+
+    def test_validator_job_defaults_to_shared_checkout_in_worktree(self) -> None:
+        packet = {"applicable_checks": [{"name": "manifest validator"}]}
+        with tempfile.TemporaryDirectory() as raw:
+            main, wt = self._make(Path(raw))
+            jobs = dict(pp._runnable(wt, "wwox", "1", packet))
+            self.assertIn(str(main.resolve()), jobs["manifest validator"])
+            jobs_main = dict(pp._runnable(main, "wwox", "1", packet))
+            self.assertNotIn("--artifact-workspace", jobs_main["manifest validator"])
 
 
 if __name__ == "__main__":

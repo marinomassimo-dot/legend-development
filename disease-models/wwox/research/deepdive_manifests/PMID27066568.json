@@ -1,0 +1,203 @@
+{
+ "schema_version": 2,
+ "pmid": "27066568",
+ "doi": "10.1212/NXG.0000000000000031",
+ "receipt": "FTR-20261019-27066568-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A movement-disorders clinic reporting one patient and a hypothesis; WWOX is not named. Observation (one pedigree, one autopsy) is weighted far below interpretation (a cancer predisposition syndrome), which has no tumour genotyping and no cohort behind it."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "PARK2 AND glioblastoma",
+    "count": 69,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches, not measurements."
+ },
+ "multihop": {
+  "references_enumerated": 7,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "The reference list holds 7 entries (counted in the session); WWOX is not named anywhere in the article (case-insensitive count 0).",
+  "disposition": "No gene-direct references."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 27066568 --hops 1; paper_packet.py packet; fulltext_receipts.py status --pmid 27066568",
+  "hits": 0,
+  "note": "No record in any of the seven searched registry surfaces and no prior receipt; an empty result is a statement about that query over those files."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication type Journal Article.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 7,
+   "references_screened": 7,
+   "references_with_doi": 7,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID27066568_Schule2015_PMC.xml",
+   "sha256": "0f9be2051c31fa17b37f27f7e8fc0e4bd23e627d91d1692091d9cd76882b848e",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4811379/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "0f9be2051c31fa17b37f27f7e8fc0e4bd23e627d91d1692091d9cd76882b848e"
+   }
+  },
+  {
+   "path": "files/figures/PMID27066568/NG2015000992FF1.jpg",
+   "sha256": "e01912aeb0381951c1bea6d61dcd90c3d93065042f22e8d3bae86f14bc953798",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC4811379 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "A one-patient clinical note: compound heterozygous PARKIN variants, early-onset parkinsonism and glioblastoma.",
+    "snippet": "This report describes such a patient with compound heterozygous mutations in PARKIN, early-onset parkinsonism, and GBM.",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27066568_Schule2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PARKIN is described as a 1.3 Mb gene containing the fragile site FRA6E between exons 2 and 8.",
+    "snippet": "PARKIN is one of the largest genes in the human genome (1.3 Mb) and contains a chromosomal fragile site (CFS) FRA6E (6q26) between exons 2 and 8.",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27066568_Schule2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors themselves note that the two phenotypes rarely co-occur.",
+    "snippet": "it is surprising that PARKIN mutations rarely result in both parkinsonism and GBM",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27066568_Schule2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Case: carrier of two causative variants, one a small deletion and one an exon duplication; two younger brothers carry the same compound heterozygous state, with no statement of their tumour status.",
+    "snippet": "Two of his younger brothers were also compound heterozygous",
+    "anchor": "Methods",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27066568_Schule2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Autopsy: infiltrating glioblastoma in the temporal lobe, severe nigral cell loss, no Lewy bodies.",
+    "snippet": "no Lewy bodies or Alzheimer pathology",
+    "anchor": "Methods",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27066568_Schule2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The inference to a predisposition rests on rarity of the combination in one individual.",
+    "snippet": "Given the rarity of PARKIN mutations and GBM, their concomitant occurrence in a single individual may well be more than a coincidence.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27066568_Schule2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Proposed mechanism: reduced PARKIN ligase function raises cyclin E, a mitotic-instability route in dividing cells; the tumour was not genotyped and no second hit is shown.",
+    "snippet": "Mutations in PARKIN show decreased PARKIN E3 ligase function with resultant accumulation of cyclin E, creating the potential for mitotic instability in dividing cells.",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27066568_Schule2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say larger studies are needed and cite epidemiology pointing the other way (lower cancer risk in neurodegenerative disease).",
+    "snippet": "Future clinical genetic studies are needed to determine whether there is indeed an increased risk for development of malignancies in PARKIN carriers.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27066568_Schule2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The figure is a two-box hypothesis schematic (one-hit familial parkinsonism versus a two-hit cancer predisposition model with a second-hit mutation); it plots no data and the 'second hit' is a placeholder.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1: top, 1-hit hypothesis arrow from germ-line PARKIN mutations on both alleles to nigrostriatal degeneration and parkinsonism; bottom, 2-hit hypothesis with germ-line PARKIN mutations on both alleles or on one allele, and a 2nd hit mutation box, to growth advantage and development of cancer.",
+    "anchor": "Figure 1",
+    "surface": "figure",
+    "artifact": "files/figures/PMID27066568/NG2015000992FF1.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC4811379/fullTextXML returned HTTP 200 (32884 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}
