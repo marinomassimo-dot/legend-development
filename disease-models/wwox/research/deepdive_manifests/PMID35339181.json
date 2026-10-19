@@ -1,0 +1,204 @@
+{
+ "schema_version": 2,
+ "pmid": "35339181",
+ "doi": "10.2174/1570159X20666220327213615",
+ "receipt": "FTR-20261019-35339181-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-H3-ADRENERGIC-SEIZURE-01",
+  "interventions_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared (group H3 has no WWOX evidence to compare against)."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 186,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Biagioni F[au]' 186; 'Biagioni F[au] AND WWOX' 0 (surname-initial queries are ambiguous and are not evidence of authorship); last author 'Fornai F[au]'.",
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Perspective article from a rat limbic-seizure group; the only primary data are one 8-per-group experiment. Weigh as a hypothesis-generating pilot, not as a pharmacology study.",
+  "note": "Not a WWOX group."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 0
+   }
+  ],
+  "note": "WWOX does not occur in the article."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 27,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "dependency_integrity.py screen reference count, confirmed against <ref> elements in the JATS.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-directed reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --theme adrenergic / epinephrine / noradrenaline / catecholamine / autonomic / sympathetic (each exit 1, no record) and --theme SUDEP (2 of 1586 records)",
+  "hits": 0,
+  "finding": "No registry record carries any adrenergic term, so the laboratory holds nothing on catecholamines to compare with; an empty result is a statement about those queries over those files, not about the literature. SUDEP occurs in two records only as a reason to keep seizure control, not as a mechanism."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed efetch 2026-10-19 for this PMID (no CommentsCorrections element, publication types listed); JATS front matter",
+  "result": "No retraction, correction or expression of concern found in the PubMed record.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 27,
+   "references_screened": 26,
+   "references_with_doi": 26,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID35339181_Biagioni2023_PMC10556380.xml",
+   "sha256": "7a6d71c4120b0ba443e275ba21b131f22bda77cdfee5370d0fda4c6671808aa3",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC10556380, 53,811 bytes; abstract, introduction, results and discussion, conclusion, Figure 1 legend and Table 1 present; the supplementary Methods file is not in the JATS.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10556380/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "7a6d71c4120b0ba443e275ba21b131f22bda77cdfee5370d0fda4c6671808aa3"
+   }
+  },
+  {
+   "path": "files/figures/PMID35339181/CN-21-2233_F1.jpg",
+   "sha256": "32e11cc70e8f8dac3cd40b3f785091b3c1ecb42d24ed2baf1ee4bd2d9eaf7b74",
+   "kind": "figure",
+   "note": "Figure 1 (file F1): percent of rats with bicuculline-evoked seizures by pretreatment, inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10556380.1/CN-21-2233_F1.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "32e11cc70e8f8dac3cd40b3f785091b3c1ecb42d24ed2baf1ee4bd2d9eaf7b74"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 53,811 bytes; abstract, introduction, results and discussion, conclusion, Figure 1 legend and Table 1 present; the supplementary Methods file is not in the JATS.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: whole article read including Figure 1 as an image and Table 1. The Supplementary Methods (statistics, surgery, scoring) are on the publisher site and were not retrieved, so the test behind the asterisks and the seizure score scale are unread: methods are declared not_present as a section and the receipt is partial.",
+  "entries": [
+   {
+    "proposition": "DESIGN: one experiment, adult male Sprague Dawley rats, 8 per group, focal micro-infusion of bicuculline into the anterior piriform cortex (area tempestas) five minutes after salbutamol, butoxamine, or both; methods are in a supplementary file.",
+    "snippet": "in Sprague Dawley male adult rats, pre-infusion of β2-AR agonist salbutamol (10 nmol) prevents focally serial seizures evoked by bicuculline (118 pmol)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35339181_Biagioni2023_PMC10556380.xml",
+    "anchor": "Results and Discussion, paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The abstract says salbutamol FULLY prevents limbic seizures; the figure caption gives 3 of 8 rats (37.5 percent) still seizing after salbutamol plus bicuculline, so prevention was complete in 5 of 8.",
+    "snippet": "Butox=0%, N=0/8; Salbut+Bic= 37.5%, N=3/8; Butox + Bic=100%, N=8/8",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35339181_Biagioni2023_PMC10556380.xml",
+    "anchor": "Figure 1 caption",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 shows the incidence bars: bicuculline 100, salbutamol alone 0, butoxamine alone 0, salbutamol plus bicuculline about 37, butoxamine plus bicuculline 100, triple 100; the incidence ceiling of 100 percent in the control means the antagonist cannot be shown to raise incidence, only severity.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 bars of percent of rats with seizures: Bic 100, Salbut 0, Butox 0, Salbut+Bic about 37 with asterisk, Butox+Bic 100, Butox+Salbut+Bic 100; y axis 0 to 110.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35339181/CN-21-2233_F1.jpg",
+    "anchor": "Figure 1, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "adult male rat, anterior piriform cortex micro-infusion, bicuculline model",
+     "genotype": "wild type",
+     "treatment": "salbutamol 10 nmol, butoxamine 10 umol, bicuculline 118 pmol",
+     "comparator": "bicuculline alone",
+     "endpoint": "percent of rats with seizures, N 8 per group"
+    }
+   },
+   {
+    "proposition": "Severity: butoxamine plus bicuculline raised time to last seizure (72 against 47 minutes) and maximum seizure score (4.25 against 2.5); salbutamol plus bicuculline lowered both (16.3 minutes, 0.5). Mean and spread are given; the test is not stated in the article body.",
+    "snippet": "Butox + Bic | 72 ±12.46 * | 4.25 ± 1.09*",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35339181_Biagioni2023_PMC10556380.xml",
+    "anchor": "Table 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The antagonist effect is stated to be sometimes enough to convert serial seizures into self-sustaining status epilepticus; no count of such conversions is given in the article.",
+    "snippet": "antagonism at β2-AR within AT does not merely worsen seizures being sometimes sufficient in converting serial seizures into self-sustaining, long-lasting SE",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35339181_Biagioni2023_PMC10556380.xml",
+    "anchor": "Results and Discussion, paragraph 4",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The autophagy link is argued from other literature and is not measured here: the paper itself says the link between receptor stimulation and autophagy still needs to be established.",
+    "snippet": "a link between ARs stimulation and autophagy needs to be established concerning seizure onset from AT",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35339181_Biagioni2023_PMC10556380.xml",
+    "anchor": "Conclusion",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors concede the data are focal and that systemic receptor effects (temperature, blood pressure, neuroendocrine, blood-brain barrier) would alter seizure threshold under a systemic chemoconvulsant.",
+    "snippet": "when seizures are induced through systemic administration of chemoconvulsants, even systemic effects induced by β-AR become relevant",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35339181_Biagioni2023_PMC10556380.xml",
+    "anchor": "Results and Discussion, penultimate paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Translation claim: rat piriform data are said to bear translational relevance because neural networks are preserved through phylogenesis; this is an assertion, offered without a human datum.",
+    "snippet": "pharmacological data obtained from AT in rats bear translational relevance in humans",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35339181_Biagioni2023_PMC10556380.xml",
+    "anchor": "Conclusion",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
