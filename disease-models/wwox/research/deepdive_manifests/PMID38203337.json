@@ -1,0 +1,838 @@
+{
+ "schema_version": 2,
+ "pmid": "38203337",
+ "doi": "10.3390/ijms25010167",
+ "receipt": "FTR-20261019-38203337-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID38203337.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-A-PLASMA-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Two Korean dermatology departments (Soonchunhyang and Chungnam National University); a group that publishes keratinocyte biology and psoriasis; WWOX appears as a candidate in their own survey of a methylation dataset. Not a WWOX-disease group; the paper is a first mechanistic look at WWOX in a skin model."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND psoriasis",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (inflammation OR NF-kB) AND keratinocytes",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts at the stated date."
+ },
+ "multihop": {
+  "references_enumerated": 65,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 38203337 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 38203337: publication types ['Journal Article']; correction/retraction link markers in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 65,
+   "references_screened": 63,
+   "references_with_doi": 63,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38203337_Shin2023_PMC.xml",
+   "sha256": "68169591886316fc76c7aa87f29eac7bff548d1503ce13feb950b32992535ac4",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC10779412: abstract, body, five figure legends, 65 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10779412/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID38203337/ijms-25-00167-g001.jpg",
+   "sha256": "de3a36be3557edca1e1dc92943b40503d66d951a66c2415734b732de37a386bc",
+   "kind": "figure",
+   "note": "Figure 1 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10779412/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID38203337/ijms-25-00167-g002.jpg",
+   "sha256": "501a323814215536e5b56216c9e591f7dcc5cae1b4e98919bb868207f32679fd",
+   "kind": "figure",
+   "note": "Figure 2 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10779412/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID38203337/ijms-25-00167-g003.jpg",
+   "sha256": "6872cb937c4cef558870edeca28cf01118ffecf2dcc4bb0032a865180224cc8f",
+   "kind": "figure",
+   "note": "Figure 3 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10779412/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID38203337/ijms-25-00167-g004.jpg",
+   "sha256": "d9ae793bb07ee15026807e6537b08f3c156f52cbf255a08d53bd2aa44071b4ad",
+   "kind": "figure",
+   "note": "Figure 4 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10779412/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID38203337/ijms-25-00167-g005.jpg",
+   "sha256": "fd53c0c33a966b3a3f477ac9f634b9b6c7a5528e0c7575c08d113c8d61274162",
+   "kind": "figure",
+   "note": "Figure 5 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10779412/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID38203337/ijms-25-00167-s001.zip",
+   "sha256": "c4f2ec1326450958792a0515f49e67994fcedc4a99a12fe8f50e3c9bc254dbbb",
+   "kind": "supplement_binary",
+   "note": "Supplementary zip from the Europe PMC supplementaryFiles container (one PDF).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10779412/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID38203337/s001/ijms-2770340-supplementary.pdf",
+   "sha256": "116690fb547cd31e9b8ba1563896efcf2233161adb878347a0ea460ebc21002a",
+   "kind": "supplement_binary",
+   "note": "Supplementary PDF (Figures S1-S6), extracted unchanged from the zip.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_python_zipfile",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "116690fb547cd31e9b8ba1563896efcf2233161adb878347a0ea460ebc21002a",
+    "derived_from": "files/figures/PMID38203337/ijms-25-00167-s001.zip",
+    "extractor": {
+     "name": "python zipfile extract (member unchanged)",
+     "version": "python 3.12",
+     "call": "zipfile.ZipFile(...).extractall"
+    }
+   }
+  },
+  {
+   "path": "files/fulltext/PMID38203337_Shin2023_supplement/ijms-2770340-supplementary.txt",
+   "sha256": "f0bd0fd783cabb8d864106bfca3a2bebccb566b2bc5f19323c70547db12c0735",
+   "kind": "supplement_text",
+   "note": "DERIVED text layer of the supplementary PDF (legends only; the panels are images).",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftotext_layout_nopgbrk",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "f0bd0fd783cabb8d864106bfca3a2bebccb566b2bc5f19323c70547db12c0735",
+    "derived_from": "files/figures/PMID38203337/s001/ijms-2770340-supplementary.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk ijms-2770340-supplementary.pdf out.txt"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID38203337/s001_pages/p-2.png",
+   "sha256": "10ed66cb422ed3949b74907e0d1760a68c24c3ab9d442dfb5ac2888de2bba376",
+   "kind": "figure",
+   "note": "Page 2 of the supplementary PDF rendered at 150 dpi and inspected.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftoppm_150dpi",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "10ed66cb422ed3949b74907e0d1760a68c24c3ab9d442dfb5ac2888de2bba376",
+    "derived_from": "files/figures/PMID38203337/s001/ijms-2770340-supplementary.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 150 -png ijms-2770340-supplementary.pdf p"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID38203337/s001_pages/p-3.png",
+   "sha256": "7d3f5fa3bfbc163413e1c985f07656027a9a1d0035c6bdd0ccb345e5b3d4b7c7",
+   "kind": "figure",
+   "note": "Page 3 of the supplementary PDF rendered at 150 dpi and inspected.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftoppm_150dpi",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "7d3f5fa3bfbc163413e1c985f07656027a9a1d0035c6bdd0ccb345e5b3d4b7c7",
+    "derived_from": "files/figures/PMID38203337/s001/ijms-2770340-supplementary.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 150 -png ijms-2770340-supplementary.pdf p"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID38203337/s001_pages/p-4.png",
+   "sha256": "181b541cbb6ad6a56d9101d8ba71f32fea1506dbed3e5fc21b7595332bbb47d3",
+   "kind": "figure",
+   "note": "Page 4 of the supplementary PDF rendered at 150 dpi and inspected.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftoppm_150dpi",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "181b541cbb6ad6a56d9101d8ba71f32fea1506dbed3e5fc21b7595332bbb47d3",
+    "derived_from": "files/figures/PMID38203337/s001/ijms-2770340-supplementary.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 150 -png ijms-2770340-supplementary.pdf p"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID38203337/s001_pages/p-5.png",
+   "sha256": "87f4dc0420ac65134f43e6d2a9c450526f55a1d44a33e4ad5894bdf57697b098",
+   "kind": "figure",
+   "note": "Page 5 of the supplementary PDF rendered at 150 dpi and inspected.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftoppm_150dpi",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "87f4dc0420ac65134f43e6d2a9c450526f55a1d44a33e4ad5894bdf57697b098",
+    "derived_from": "files/figures/PMID38203337/s001/ijms-2770340-supplementary.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 150 -png ijms-2770340-supplementary.pdf p"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID38203337/s001_pages/p-6.png",
+   "sha256": "95ae77935cba883b2559810d3845fda91c2a65e81baf049754170bb2100fba66",
+   "kind": "figure",
+   "note": "Page 6 of the supplementary PDF rendered at 150 dpi and inspected.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftoppm_150dpi",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "95ae77935cba883b2559810d3845fda91c2a65e81baf049754170bb2100fba66",
+    "derived_from": "files/figures/PMID38203337/s001/ijms-2770340-supplementary.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 150 -png ijms-2770340-supplementary.pdf p"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID38203337/s001_pages/p-7.png",
+   "sha256": "5b3e21006718afccee5fb60e3d0af9835b3eddfad2fc906acf760a2ac5a0abc7",
+   "kind": "figure",
+   "note": "Page 7 of the supplementary PDF rendered at 150 dpi and inspected.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftoppm_150dpi",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "5b3e21006718afccee5fb60e3d0af9835b3eddfad2fc906acf760a2ac5a0abc7",
+    "derived_from": "files/figures/PMID38203337/s001/ijms-2770340-supplementary.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 150 -png ijms-2770340-supplementary.pdf p"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC10779412/fullTextXML returned HTTP 200 (132085 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "Starting point: the authors say mechanistic investigation of WWOX in psoriasis is lacking, citing a methylation study in which WWOX was hypomethylated and more transcribed in psoriatic skin.",
+    "snippet": "However, there is still a lack of mechanistic investigation regarding WWOX and its association with psoriasis.",
+    "anchor": "1. Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38203337_Shin2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "SV40-immortalised human epidermal keratinocytes",
+     "cell_line": "SV-keratinocytes (donor-derived primary keratinocytes immortalised with SV40 T antigen)",
+     "genotype": "adenoviral microRNA WWOX knockdown versus scrambled miRNA",
+     "treatment": "poly(I:C) 0.5 ug/mL for 1-2 h",
+     "comparator": "miR-scr",
+     "endpoint": "p-p65, cytokines, PKC activity"
+    }
+   },
+   {
+    "proposition": "Human tissue: weak WWOX immunoreactivity in normal epidermis and strong in psoriatic keratinocytes.",
+    "snippet": "Weak WWOX immunoreactivity was detected in the normal epidermis, whereas epidermal keratinocytes of psoriatic lesions exhibited strong WWOX immunoreactivity (Figure 1A).",
+    "anchor": "2.1 WWOX Is Highly Expressed in Psoriatic Skin",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38203337_Shin2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human skin tissue (psoriatic lesion n = 6, normal n = 3), IHC",
+     "genotype": "wild type, WWOX expression level",
+     "endpoint": "WWOX IHC intensity"
+    }
+   },
+   {
+    "proposition": "Figure 1 legend states n = 3 normal and 6 psoriasis, and n = 3 for the mouse model.",
+    "snippet": "The WWOX level in psoriatic lesions was higher than that of the normal epidermis (normal = 3, psoriasis patient = 6, Magnification: 200×, Scale bar = 100 μm).",
+    "anchor": "Figure 1 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38203337_Shin2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human skin tissue (psoriatic lesion n = 6, normal n = 3), IHC",
+     "genotype": "wild type, WWOX expression level",
+     "endpoint": "WWOX IHC intensity"
+    }
+   },
+   {
+    "proposition": "Text: WWOX immunoreactivity was strong in thickened epidermis of imiquimod-treated mouse skin.",
+    "snippet": "Like human psoriatic lesions, WWOX immunoreactivity was strong in the thickened epidermis of IMQ-treated mouse skin (Figure 1B).",
+    "anchor": "2.1 WWOX Is Highly Expressed in Psoriatic Skin",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38203337_Shin2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "imiquimod-treated female BALB/c mouse back skin, IHC",
+     "genotype": "wild type",
+     "treatment": "imiquimod cream for up to 14 days",
+     "comparator": "day 1 (histogram) / control (images)",
+     "endpoint": "WWOX IHC intensity"
+    }
+   },
+   {
+    "proposition": "Knockdown vector: an adenovirus-delivered microRNA targeting nucleotides 395-415 of the WWOX transcript.",
+    "snippet": "The resulting microRNA sequence targets nt 395~415 in NM_016373.4.",
+    "anchor": "4.4 Recombinant Adenovirus Expressing a WWOX-Specific microRNA",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38203337_Shin2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "SV40-immortalised human epidermal keratinocytes",
+     "cell_line": "SV-keratinocytes (donor-derived primary keratinocytes immortalised with SV40 T antigen)",
+     "genotype": "adenoviral microRNA WWOX knockdown versus scrambled miRNA",
+     "treatment": "poly(I:C) 0.5 ug/mL for 1-2 h",
+     "comparator": "miR-scr",
+     "endpoint": "p-p65, cytokines, PKC activity"
+    }
+   },
+   {
+    "proposition": "Western: p-p65 induced by poly(I:C) was lower after WWOX knockdown.",
+    "snippet": "After the adenovirus-mediated knockdown of WWOX expression in these cells, the protein levels of the NF-kB marker phospho-p65 were decreased (Figure 2B).",
+    "anchor": "2.2 WWOX Knockdown Inhibits Poly(I:C)-Induced Inflammatory Response",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38203337_Shin2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "SV40-immortalised human epidermal keratinocytes",
+     "cell_line": "SV-keratinocytes (donor-derived primary keratinocytes immortalised with SV40 T antigen)",
+     "genotype": "adenoviral microRNA WWOX knockdown versus scrambled miRNA",
+     "treatment": "poly(I:C) 0.5 ug/mL for 1-2 h",
+     "comparator": "miR-scr",
+     "endpoint": "p-p65, cytokines, PKC activity"
+    }
+   },
+   {
+    "proposition": "Text: WWOX knockdown significantly decreased cytokine mRNAs and their secretion.",
+    "snippet": "WWOX knockdown significantly decreased levels of mRNAs encoding these proinflammatory cytokines and their secretion (Figure 3B,C).",
+    "anchor": "2.2 WWOX Knockdown Inhibits Poly(I:C)-Induced Inflammatory Response",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38203337_Shin2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "SV40-immortalised human epidermal keratinocytes",
+     "cell_line": "SV-keratinocytes (donor-derived primary keratinocytes immortalised with SV40 T antigen)",
+     "genotype": "adenoviral microRNA WWOX knockdown versus scrambled miRNA",
+     "treatment": "poly(I:C) 0.5 ug/mL for 1-2 h",
+     "comparator": "miR-scr",
+     "endpoint": "p-p65, cytokines, PKC activity"
+    }
+   },
+   {
+    "proposition": "Mechanism step by prediction: pathway software predicted an interaction between WWOX and JPT2, from which a calcium-PKC route was assumed; the interaction was not tested.",
+    "snippet": "We performed QIAGEN Ingenuity Pathway Analysis (IPA) to find WWOX-interacting proteins, and the results predicted that WWOX could interact with JPT2 (Supplementary Figure S5).",
+    "anchor": "2.3 PKC Activity Is Decreased by WWOX Knockdown",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38203337_Shin2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "SV40-immortalised human epidermal keratinocytes",
+     "cell_line": "SV-keratinocytes (donor-derived primary keratinocytes immortalised with SV40 T antigen)",
+     "genotype": "adenoviral microRNA WWOX knockdown versus scrambled miRNA",
+     "treatment": "poly(I:C) 0.5 ug/mL for 1-2 h",
+     "comparator": "miR-scr",
+     "endpoint": "p-p65, cytokines, PKC activity"
+    }
+   },
+   {
+    "proposition": "Text: without poly(I:C), WWOX knockdown did not change PKC activity; with poly(I:C) it decreased.",
+    "snippet": "Interestingly, upon WWOX knockdown, there was no change in PKC activity in the group not treated with poly(I:C), whereas PKC activity was decreased in the group treated with poly(I:C).",
+    "anchor": "3. Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38203337_Shin2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "SV40-immortalised human epidermal keratinocytes",
+     "cell_line": "SV-keratinocytes (donor-derived primary keratinocytes immortalised with SV40 T antigen)",
+     "genotype": "adenoviral microRNA WWOX knockdown versus scrambled miRNA",
+     "treatment": "poly(I:C) 0.5 ug/mL for 1-2 h",
+     "comparator": "miR-scr",
+     "endpoint": "p-p65, cytokines, PKC activity"
+    }
+   },
+   {
+    "proposition": "Text: the PKC inhibitor lowered IL-6 and IL-1beta mRNA significantly and IL-8 and CCL20 'decreased but not significantly'.",
+    "snippet": "Also, the mRNA expression of IL-8 and CCL20 decreased but was not statistically significant.",
+    "anchor": "2.4 Inflammatory Response by Ca2+ and PKC",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38203337_Shin2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "SV40-immortalised human epidermal keratinocytes",
+     "cell_line": "SV-keratinocytes (donor-derived primary keratinocytes immortalised with SV40 T antigen)",
+     "genotype": "adenoviral microRNA WWOX knockdown versus scrambled miRNA",
+     "treatment": "poly(I:C) 0.5 ug/mL for 1-2 h",
+     "comparator": "miR-scr",
+     "endpoint": "p-p65, cytokines, PKC activity"
+    }
+   },
+   {
+    "proposition": "Rescue limit: overexpression did not fully restore p-p65 to its pre-knockdown level.",
+    "snippet": "we encountered a limitation in not being able to fully restore p-p65 levels to those observed prior to WWOX knockdown, even after a successful rescue experiment.",
+    "anchor": "3. Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38203337_Shin2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "SV40-immortalised human epidermal keratinocytes",
+     "cell_line": "SV-keratinocytes (donor-derived primary keratinocytes immortalised with SV40 T antigen)",
+     "genotype": "adenoviral microRNA WWOX knockdown versus scrambled miRNA",
+     "treatment": "poly(I:C) 0.5 ug/mL for 1-2 h",
+     "comparator": "miR-scr",
+     "endpoint": "p-p65, cytokines, PKC activity"
+    }
+   },
+   {
+    "proposition": "Authors' limits: in vitro poly(I:C) model, one pathway, calcium and PKC roles preliminary; in vivo validation needed.",
+    "snippet": "The primary focus lies on an in vitro model employing poly(I:C) to mimic NF-kB inflammation, a simulation that might not fully encapsulate the complexities inherent in human and mouse models of psoriasis.",
+    "anchor": "3. Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38203337_Shin2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "SV40-immortalised human epidermal keratinocytes",
+     "cell_line": "SV-keratinocytes (donor-derived primary keratinocytes immortalised with SV40 T antigen)",
+     "genotype": "adenoviral microRNA WWOX knockdown versus scrambled miRNA",
+     "treatment": "poly(I:C) 0.5 ug/mL for 1-2 h",
+     "comparator": "miR-scr",
+     "endpoint": "p-p65, cytokines, PKC activity"
+    }
+   },
+   {
+    "proposition": "Statistics: experiments repeated at least three times; Student's t-test for two-group comparisons including multi-condition figures.",
+    "snippet": "All experiments were repeated at least three times. Student’s t-test was used to compare the two groups, and p-values of less than 0.05 were considered statistically significant.",
+    "anchor": "4.9 Statistical Analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38203337_Shin2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "SV40-immortalised human epidermal keratinocytes",
+     "cell_line": "SV-keratinocytes (donor-derived primary keratinocytes immortalised with SV40 T antigen)",
+     "genotype": "adenoviral microRNA WWOX knockdown versus scrambled miRNA",
+     "treatment": "poly(I:C) 0.5 ug/mL for 1-2 h",
+     "comparator": "miR-scr",
+     "endpoint": "p-p65, cytokines, PKC activity"
+    }
+   },
+   {
+    "proposition": "Reagent record: the same catalogue number is given for BAPTA-AM and GF109203X.",
+    "snippet": "BAPTA-AM (Selleck Chemicals, Houston, TX, USA, S7534) and GF109203X (Selleck Chemicals, S7534)",
+    "anchor": "4.3 Cell Culture and Reagents",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38203337_Shin2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "SV40-immortalised human epidermal keratinocytes",
+     "cell_line": "SV-keratinocytes (donor-derived primary keratinocytes immortalised with SV40 T antigen)",
+     "genotype": "adenoviral microRNA WWOX knockdown versus scrambled miRNA",
+     "treatment": "poly(I:C) 0.5 ug/mL for 1-2 h",
+     "comparator": "miR-scr",
+     "endpoint": "p-p65, cytokines, PKC activity"
+    }
+   },
+   {
+    "proposition": "Conclusion: targeting WWOX is proposed as a possible future approach to psoriasis.",
+    "snippet": "Targeting WWOX could be a novel future therapeutic approach for treating psoriasis.",
+    "anchor": "5. Conclusions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38203337_Shin2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "SV40-immortalised human epidermal keratinocytes",
+     "cell_line": "SV-keratinocytes (donor-derived primary keratinocytes immortalised with SV40 T antigen)",
+     "genotype": "adenoviral microRNA WWOX knockdown versus scrambled miRNA",
+     "treatment": "poly(I:C) 0.5 ug/mL for 1-2 h",
+     "comparator": "miR-scr",
+     "endpoint": "p-p65, cytokines, PKC activity"
+    }
+   },
+   {
+    "proposition": "Supplement S1 legend: histology n = 2 at several time points, epidermal thickness n = 5 at day 5 with a legend threshold of P below 0.05.",
+    "snippet": "Figure S1. (A) Timeline of the imiquimod-induced psoriasis mouse model.",
+    "anchor": "Supplementary Figure S1 legend (derived text)",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID38203337_Shin2023_supplement/ijms-2770340-supplementary.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "imiquimod-treated female BALB/c mouse back skin, IHC",
+     "genotype": "wild type",
+     "treatment": "imiquimod cream for up to 14 days",
+     "comparator": "day 1 (histogram) / control (images)",
+     "endpoint": "WWOX IHC intensity"
+    }
+   },
+   {
+    "proposition": "Supplement S2: public microarray data on lesional versus non-lesional psoriatic skin used as corroboration.",
+    "snippet": "Figure S2. (A) Processed microarray data were obtained from Gene Expression",
+    "anchor": "Supplementary Figure S2 legend (derived text)",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID38203337_Shin2023_supplement/ijms-2770340-supplementary.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "public microarray, chronic plaque psoriasis biopsies, lesional versus non-lesional",
+     "endpoint": "WWOX probe signal"
+    }
+   },
+   {
+    "proposition": "Figure 1A: WWOX IHC in 3 normal and 6 psoriatic skin samples as nine small micrographs, brown staining stronger in the psoriatic epidermis; histogram about 380 percent of control with two asterisks; the chromogenic stain is weak and no antibody-specificity control (knockdown tissue, peptide block, isotype) is shown.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1A: 3 rows x 3 columns of IHC panels (normal left, psoriasis two columns), bar chart normal 100% vs psoriasis ~380%.",
+    "anchor": "Figure 1A, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38203337/ijms-25-00167-g001.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human skin tissue (psoriatic lesion n = 6, normal n = 3), IHC",
+     "genotype": "wild type, WWOX expression level",
+     "endpoint": "WWOX IHC intensity"
+    }
+   },
+   {
+    "proposition": "Figure 1B: imiquimod time course; the histogram's x axis runs 1 day, 2 day, 3 day, 5 day, 7 day, 14 day and its asterisk bracket joins day 1 (about 100 percent) and day 5 (about 420 percent), so the control (untreated) image shown in the micrograph panel is not the histogram comparator, and no day-2 micrograph is shown.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1B: micrographs Control, 1 day, 3 day, 5 day, 7 day, 14 day; bar chart 1 day ~100, 2 day ~245, 3 day ~350, 5 day ~425 (**), 7 day ~305, 14 day ~205.",
+    "anchor": "Figure 1B, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38203337/ijms-25-00167-g001.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "imiquimod-treated female BALB/c mouse back skin, IHC",
+     "genotype": "wild type",
+     "treatment": "imiquimod cream for up to 14 days",
+     "comparator": "day 1 (histogram) / control (images)",
+     "endpoint": "WWOX IHC intensity"
+    },
+    "qualifies": "entries[3]",
+    "qualifies_needle": "WWOX immunoreactivity was strong in the thickened epidermis"
+   },
+   {
+    "proposition": "Figure 2A: knockdown at protein level is partial: the WWOX band falls from about 8000 to about 4300 units (roughly 45 percent remaining) and poly(I:C) raises the residual WWOX band (about 5300) in the knockdown cells; the actin loading band is even. Figure 2B: p-p65 is expressed against actin only, not against total p65 (no total p65 blot is shown), about 9300 against 5100 units with poly(I:C), asterisk between those two bars.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2A WWOX blot and histogram (scr ~8000/8300, miR-WWOX ~4300/5300); Fig 2B p-p65 blot and histogram (scr -/+ ~2600/9300, miR-WWOX ~2300/5100).",
+    "anchor": "Figure 2, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38203337/ijms-25-00167-g002.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "SV40-immortalised human epidermal keratinocytes",
+     "cell_line": "SV-keratinocytes (donor-derived primary keratinocytes immortalised with SV40 T antigen)",
+     "genotype": "adenoviral microRNA WWOX knockdown versus scrambled miRNA",
+     "treatment": "poly(I:C) 0.5 ug/mL for 1-2 h",
+     "comparator": "miR-scr",
+     "endpoint": "p-p65, cytokines, PKC activity"
+    }
+   },
+   {
+    "proposition": "Figure 3A: WWOX mRNA after knockdown by gel and qPCR bars is nearly absent while the protein remained near half (Figure 2A). Figure 3B: poly(I:C) cytokine mRNAs fall partially after knockdown (IL-6 about 24 to 10, IL-8 about 48 to 38, TNF-alpha about 9 to 6.7, IL-1beta about 5.9 to 4.9, CCL20 about 17 to 8). Figure 3C: secreted IL-1beta carries the label 'ns' between scr and knockdown after poly(I:C), and untreated IL-8 secretion is lower in the knockdown cells (about 80 against 135 pg/mL).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3A WWOX RT-PCR gel and bars; Fig 3B five mRNA panels; Fig 3C five ELISA panels with IL-1beta labelled ns.",
+    "anchor": "Figure 3, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38203337/ijms-25-00167-g003.jpg",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "SV40-immortalised human epidermal keratinocytes",
+     "cell_line": "SV-keratinocytes (donor-derived primary keratinocytes immortalised with SV40 T antigen)",
+     "genotype": "adenoviral microRNA WWOX knockdown versus scrambled miRNA",
+     "treatment": "poly(I:C) 0.5 ug/mL for 1-2 h",
+     "comparator": "miR-scr",
+     "endpoint": "p-p65, cytokines, PKC activity"
+    },
+    "contradicts": "entries[6]",
+    "contradicts_needle": "WWOX knockdown significantly decreased levels of mRNAs encoding these proinflammatory cytokines and their secretion"
+   },
+   {
+    "proposition": "Figure 4A: PKC activity after poly(I:C) rises only from about 96 to about 117 percent of control at 1 h (asterisk), stays near 110 at 2 h and falls to about 15 at 6 h. Figure 4B: in the same cells poly(I:C) raises PKC activity from about 107 to about 215 percent (scr) and from about 72 to about 165 percent (knockdown); the 1 h poly(I:C) effect is about 1.2-fold in 4A and about 2-fold in 4B, and the untreated knockdown bar (about 72) is lower than untreated scr (about 107) with no test marked.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 4A time-course bars 0, 10 min, 30 min, 1 hr (*), 2 hr, 6 hr; Fig 4B four bars untreated and poly(I:C) for miR-SCR and miR-WWOX.",
+    "anchor": "Figure 4, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38203337/ijms-25-00167-g004.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "SV40-immortalised human epidermal keratinocytes",
+     "cell_line": "SV-keratinocytes (donor-derived primary keratinocytes immortalised with SV40 T antigen)",
+     "genotype": "adenoviral microRNA WWOX knockdown versus scrambled miRNA",
+     "treatment": "poly(I:C) 0.5 ug/mL for 1-2 h",
+     "comparator": "miR-scr",
+     "endpoint": "p-p65, cytokines, PKC activity"
+    },
+    "qualifies": "entries[8]",
+    "qualifies_needle": "there was no change in PKC activity in the group not treated with poly(I:C)"
+   },
+   {
+    "proposition": "Figure 5: BAPTA-AM lowers poly(I:C)-induced cytokine mRNA and secretion dose-dependently and also lowers the untreated baseline of several (IL-8, TNF-alpha, CCL20 secretion); no viability assay is shown. GF109203X lowers IL-6 and IL-1beta mRNA, but IL-8 mRNA is about 52 untreated-control against about 56 at 10 uM (no decrease), TNF-alpha mRNA and secretion are flat across doses, and p-p65 is reduced at all doses.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 5A-E: BAPTA-AM mRNA and secretion panels; GF109203X mRNA and secretion panels; p-p65 blot with 0.1, 1 and 10 uM lanes.",
+    "anchor": "Figure 5, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38203337/ijms-25-00167-g005.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "SV40-immortalised human epidermal keratinocytes",
+     "cell_line": "SV-keratinocytes (donor-derived primary keratinocytes immortalised with SV40 T antigen)",
+     "genotype": "adenoviral microRNA WWOX knockdown versus scrambled miRNA",
+     "treatment": "poly(I:C) 0.5 ug/mL for 1-2 h",
+     "comparator": "miR-scr",
+     "endpoint": "p-p65, cytokines, PKC activity"
+    },
+    "qualifies": "entries[9]",
+    "qualifies_needle": "the mRNA expression of IL-8 and CCL20 decreased but was not statistically significant"
+   },
+   {
+    "proposition": "Supplementary Figure S1: IMQ mouse photographs and H&E at days 0-14; panel D epidermal thickness on day 5 about 5 versus 14 micrometres with three asterisks while the legend gives P below 0.05 and n = 5, and the histology n is 2.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] S1 A timeline, B photographs day 0,1,3,5,7,14, C H&E, D bar normal ~5 vs psoriasis ~14 um (***).",
+    "anchor": "Supplementary Figure S1, rendered page 2",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38203337/s001_pages/p-2.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "imiquimod-treated female BALB/c mouse back skin, IHC",
+     "genotype": "wild type",
+     "treatment": "imiquimod cream for up to 14 days",
+     "comparator": "day 1 (histogram) / control (images)",
+     "endpoint": "WWOX IHC intensity"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure S2: GEO dataset GDS5392, four lesional and four non-lesional punch biopsies from four patients, WWOX probe signal about 6.1-6.8 versus 4.9-6.0 (log scale), p = 0.01493 on the authors' box plot; lesional higher than non-lesional in each pair.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] S2 A bar chart of eight samples with percentile ranks, B boxplot lesional ~6.5 vs non-lesional ~5.5, P=0.01493.",
+    "anchor": "Supplementary Figure S2, rendered page 3",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38203337/s001_pages/p-3.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "public microarray, chronic plaque psoriasis, four patients paired",
+     "endpoint": "WWOX probe 221147_x_at"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure S3 (uncropped Figure 2 blots): WWOX is detected as a strong band near 45 kDa with fainter higher bands at about 100 to 180 kDa; the knockdown lanes show a weaker 45 kDa band but the high-molecular-weight bands are also present; p-p65 appears at about 65-70 kDa with a second lower band.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] S3 uncropped WWOX and p-p65 blots with marker ladders and actin below.",
+    "anchor": "Supplementary Figure S3, rendered page 4",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38203337/s001_pages/p-4.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "SV40-immortalised human epidermal keratinocytes",
+     "cell_line": "SV-keratinocytes (donor-derived primary keratinocytes immortalised with SV40 T antigen)",
+     "genotype": "adenoviral microRNA WWOX knockdown versus scrambled miRNA",
+     "treatment": "poly(I:C) 0.5 ug/mL for 1-2 h",
+     "comparator": "miR-scr",
+     "endpoint": "p-p65, cytokines, PKC activity"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure S4 (rescue): in miR-WWOX plus Ad/HA-WWOX cells WWOX is strongly overexpressed (a band much stronger than endogenous) and poly(I:C) p-p65 is about 3400 against 1900 in knockdown and 4800 in scr, so rescue is partial; brackets marked with asterisks.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] S4 A blot lanes scr, miR-WWOX, miR-WWOX+Ad/HA-WWOX with and without poly(I:C); B bars ~4800, ~1900, ~3400.",
+    "anchor": "Supplementary Figure S4, rendered page 5",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38203337/s001_pages/p-5.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "SV40-immortalised human epidermal keratinocytes",
+     "cell_line": "SV-keratinocytes (donor-derived primary keratinocytes immortalised with SV40 T antigen)",
+     "genotype": "adenoviral microRNA WWOX knockdown versus scrambled miRNA",
+     "treatment": "poly(I:C) 0.5 ug/mL for 1-2 h",
+     "comparator": "miR-scr",
+     "endpoint": "p-p65, cytokines, PKC activity"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure S5: an Ingenuity Pathway Analysis network with a red box around WWOX linked to JPT2 (and to TUBA4B and YAP1) inside an IL-6-centred network; it is a predicted interaction map, with no experiment on JPT2.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] S5 network graphic with red box around JPT2-WWOX.",
+    "anchor": "Supplementary Figure S5, rendered page 6",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38203337/s001_pages/p-6.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "SV40-immortalised human epidermal keratinocytes",
+     "cell_line": "SV-keratinocytes (donor-derived primary keratinocytes immortalised with SV40 T antigen)",
+     "genotype": "adenoviral microRNA WWOX knockdown versus scrambled miRNA",
+     "treatment": "poly(I:C) 0.5 ug/mL for 1-2 h",
+     "comparator": "miR-scr",
+     "endpoint": "p-p65, cytokines, PKC activity"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure S6 (uncropped Figure 5E): p-p65 band is strongest in the poly(I:C) lane without inhibitor and lower in the inhibitor lanes; the band in the 10 uM untreated lane is as visible as in the 0.1 and 1 uM untreated lanes.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] S6 uncropped p-p65 and actin blots with GF109203X 0.1, 1, 10 uM.",
+    "anchor": "Supplementary Figure S6, rendered page 7",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38203337/s001_pages/p-7.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "SV40-immortalised human epidermal keratinocytes",
+     "cell_line": "SV-keratinocytes (donor-derived primary keratinocytes immortalised with SV40 T antigen)",
+     "genotype": "adenoviral microRNA WWOX knockdown versus scrambled miRNA",
+     "treatment": "poly(I:C) 0.5 ug/mL for 1-2 h",
+     "comparator": "miR-scr",
+     "endpoint": "p-p65, cytokines, PKC activity"
+    }
+   }
+  ]
+ }
+}
