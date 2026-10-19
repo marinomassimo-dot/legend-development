@@ -77,3 +77,18 @@
 **What it does not support.** Any new datum. The mitochondrial statements (a pY33-WWOX/IkappaB-alpha/ERK complex "in the cytoplasm and mitochondria" in resting MOLT-4 cells; WWOX relocating to mitochondria after phorbol ester dissociates a WWOX/MEK1 complex) are single-leukaemia-line results from the same laboratory. The pS14 model rests on one mouse experiment (Zfra peptide lowering pS14-WWOX, tumour growth and amyloid pathology together), which cannot separate pS14 from Zfra's other actions. The steroid-binding explanation of the rat testis phenotype is "not surprising" rather than shown.
 
 **System gap and change.** Review of cultured-cell, rodent and human reports, with the senior author's own models foremost; no claim moves. It is worth having read because it is a pointer-rich secondary source cited by Carvalho 2022: the metabolic sentences it carries resolve to reviews and to one allele paper already read, so the Carvalho-to-Huang chain adds no independent evidence for a human metabolic phenotype of WWOX loss.
+
+## Paper 5. Lee 2017, PLoS One (PMID 28426730): WWOX SNPs and hepatocellular carcinoma risk (Chen 2018 ref 17)
+
+`context_policy: SOURCE_FIRST` (opened as a reference of paper 1; nothing about it held). Surface: Europe PMC JATS plus the PLOS printable PDF; Figure 1 (A to E) opened as a render; Tables 1-5 read. Whole article read.
+
+**What it measures.** A hospital case-control series in Taiwan (354 HCC patients, 708 health-examination controls, blood DNA): five common WWOX SNPs, association with HCC risk and with clinicopathology and laboratory values, a homology model of the SDR domain and a GTEx eQTL plot for one SNP.
+
+**What it does not support.**
+- *Risk by an allele that lowers WWOX.* The single significant case-control result is protective: carriers of the rs73569323 minor allele are 6 of 354 patients against 39 of 708 controls (adjusted OR about 0.3). The other four SNPs show no association. The abstract's conclusion that WWOX variation is "a significant predictor of early HCC occurrence" is carried by this rare protective allele and by subgroup tests.
+- *The vascular-invasion result as established.* It is 252 men, 28 carriers, 9 with invasion (P = 0.024), one of many clinical comparisons for five SNPs, with no multiplicity statement.
+- *A consistent variant class.* rs12918952 is called an exonic SNP that "may result from amino acid changes", an Ala-179-Thr substitution, and a "synonymous variant in exon 6" in different sections.
+- *An expression effect.* The Discussion says "we reported the additional finding that WWOX expression was downregulated in HCC"; no such measurement is in the paper. The eQTL trend is described as human HCC (Results), GTEx liver (Discussion) and whole blood (legend); the panel title names a liver eQTL; its class sizes (25, 40 and 32 donors) imply an alternate-allele frequency near 54 percent against about 5 percent A allele among the study's own controls, and the paper does not say which allele GTEx calls "Alt". Figure 1E is an overlapping boxplot trend, not a test.
+- Nothing metabolic; the Introduction lists metabolic disease only as an HCC risk factor.
+
+**System gap and change.** Common-variant association with a tumour in an adult East Asian series; the reference genotype is a biallelic loss of function. No claim moves; it is a small datum that HCC SNP literature on WWOX is internally inconsistent about what the variants do, and it supports the reading of paper 1 that a WWOX SNP association with tumour behaviour has no demonstrated effect on WWOX protein or function.
