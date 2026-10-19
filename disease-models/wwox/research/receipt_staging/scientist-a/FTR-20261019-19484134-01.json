@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-19484134-01",
+ "study_id": {
+  "pmid": "19484134",
+  "doi": "10.1371/journal.pone.0005755"
+ },
+ "analysis_at": "2026-10-19T19:56:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a (Scientist A), interventions batch 2026-10-19 groups H1/H2, task INTERV-H1-A-20261019 on branch task/INTERV-H1-A-20261019, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN. Route: Europe PMC JATS body (PMC2685983) and the supplementaryFiles container into the root files/ tree: Figures 1-10 opened at native resolution; Supporting Figures S1 to S4 (TIFF) opened (S1 and S3 after ImageMagick conversion, S2 and S4 after PyMuPDF rendering, viewing only); this is a RESUME of the partial text-only reading FTR-20260921-19484134-01 (figures were unavailable then). Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a staged JSON for the Orchestrator and not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID19484134_Hong2009_PMC.xml",
+ "source_fingerprint": "dc3b0ac56eb446ea42cd99b840b6d99c4df4a3b2f56e3f26ce843d022af472bf",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID19484134.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID19484134.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "manifest",
+  "Figures 1-10 and Supporting Figures S1-S4 inspected as images",
+  "Resume: prior receipt covered text and legends only, figures unavailable; no tables in the article"
+ ],
+ "prior_receipt": "FTR-20260921-19484134-01",
+ "reread_reason": "inadequate_prior_coverage"
+}

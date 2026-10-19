@@ -73,10 +73,73 @@
  },
  "multihop": {
   "references_enumerated": 65,
-  "gene_direct_refs_in_source": [],
-  "resolved": [],
-  "queued": [],
-  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+  "gene_direct_refs_in_source": [
+   "ref 14",
+   "ref 15",
+   "28283473",
+   "35328751",
+   "24871327",
+   "ref 20",
+   "ref 23",
+   "ref 24",
+   "ref 43",
+   "ref 46",
+   "ref 49",
+   "33255508"
+  ],
+  "resolved": [
+   {
+    "pmid": "28283473",
+    "how": "Reference 17 (loss of lung WWOX expression causes neutrophilic inflammation) matches by title a PAPER already in the corpus; resolved by identity, not re-read here."
+   },
+   {
+    "pmid": "35328751",
+    "how": "Reference 18 (WWOX/HIF1A axis downregulation alters glucose metabolism) matches by title a processed corpus record; resolved by identity."
+   },
+   {
+    "pmid": "24871327",
+    "how": "Reference 19 (WWOX modulates HDL and lipid metabolism) matches by title a promoted corpus record; resolved by identity."
+   },
+   {
+    "pmid": "33255508",
+    "how": "Reference 50 (WWOX loss of function in neurodevelopmental and neurodegenerative disorders) matches by title a resolved corpus record; resolved by identity."
+   }
+  ],
+  "queued": [
+   {
+    "pmid": "ref 14 (no PMID in the screened entry)",
+    "queue": "not queued by this actor: the full-text queue is the orchestrator's; WWOX background reference, debt recorded here so it stays visible"
+   },
+   {
+    "pmid": "ref 15 (no PMID in the screened entry)",
+    "queue": "not queued by this actor: the full-text queue is the orchestrator's; WWOX background reference, debt recorded here so it stays visible"
+   },
+   {
+    "pmid": "ref 20 (no PMID in the screened entry)",
+    "queue": "not queued by this actor: the full-text queue is the orchestrator's; WWOX background reference, debt recorded here so it stays visible"
+   },
+   {
+    "pmid": "ref 23 (no PMID in the screened entry)",
+    "queue": "not queued by this actor: the full-text queue is the orchestrator's; WWOX background reference, debt recorded here so it stays visible"
+   },
+   {
+    "pmid": "ref 24 (no PMID in the screened entry)",
+    "queue": "not queued by this actor: the full-text queue is the orchestrator's; WWOX background reference, debt recorded here so it stays visible"
+   },
+   {
+    "pmid": "ref 43 (no PMID in the screened entry)",
+    "queue": "not queued by this actor: the full-text queue is the orchestrator's; WWOX background reference, debt recorded here so it stays visible"
+   },
+   {
+    "pmid": "ref 46 (no PMID in the screened entry)",
+    "queue": "not queued by this actor: the full-text queue is the orchestrator's; WWOX background reference, debt recorded here so it stays visible"
+   },
+   {
+    "pmid": "ref 49 (no PMID in the screened entry)",
+    "queue": "not queued by this actor: the full-text queue is the orchestrator's; WWOX background reference, debt recorded here so it stays visible"
+   }
+  ],
+  "note": "Twelve references are WWOX papers (term-screened list). Four resolve by title identity to records already in the corpus (refs 17, 18, 19, 50); eight are recorded as unqueued debt, among them reference 49 (WWOX links canonical and noncanonical NF-kB), which bears on the paper's own premise."
  },
  "corpus_crossquery": {
   "query": "registry_records.py get --pmid 38203337 --hops 1 (run AFTER the first pass)",
@@ -383,6 +446,22 @@
   "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
   "entries": [
    {
+    "proposition": "Introduction cites reference 17 for decreased WWOX in lung and ovarian cancer correlating with metastasis; reference 17 in the list is a paper titled as loss of lung WWOX expression causing neutrophilic inflammation (the opposite sign to this knockdown result), which the Discussion never addresses.",
+    "snippet": "The decrease in WWOX expression, observed in diverse cancer types including lung and ovarian cancer, correlates with increased tumor metastasis and poorer prognosis.",
+    "anchor": "1. Introduction (citation 17)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38203337_Shin2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "SV40-immortalised human epidermal keratinocytes",
+     "cell_line": "SV-keratinocytes (donor-derived primary keratinocytes immortalised with SV40 T antigen)",
+     "genotype": "adenoviral microRNA WWOX knockdown versus scrambled miRNA",
+     "treatment": "poly(I:C) 0.5 ug/mL for 1-2 h",
+     "comparator": "miR-scr",
+     "endpoint": "p-p65, cytokines, PKC activity"
+    }
+   },
+   {
     "proposition": "Starting point: the authors say mechanistic investigation of WWOX in psoriasis is lacking, citing a methylation study in which WWOX was hypomethylated and more transcribed in psoriatic skin.",
     "snippet": "However, there is still a lack of mechanistic investigation regarding WWOX and its association with psoriasis.",
     "anchor": "1. Introduction",
@@ -669,7 +748,7 @@
      "comparator": "day 1 (histogram) / control (images)",
      "endpoint": "WWOX IHC intensity"
     },
-    "qualifies": "entries[3]",
+    "qualifies": "entries[4]",
     "qualifies_needle": "WWOX immunoreactivity was strong in the thickened epidermis"
    },
    {
@@ -703,7 +782,7 @@
      "comparator": "miR-scr",
      "endpoint": "p-p65, cytokines, PKC activity"
     },
-    "contradicts": "entries[6]",
+    "contradicts": "entries[7]",
     "contradicts_needle": "WWOX knockdown significantly decreased levels of mRNAs encoding these proinflammatory cytokines and their secretion"
    },
    {
@@ -721,7 +800,7 @@
      "comparator": "miR-scr",
      "endpoint": "p-p65, cytokines, PKC activity"
     },
-    "qualifies": "entries[8]",
+    "qualifies": "entries[9]",
     "qualifies_needle": "there was no change in PKC activity in the group not treated with poly(I:C)"
    },
    {
@@ -739,7 +818,7 @@
      "comparator": "miR-scr",
      "endpoint": "p-p65, cytokines, PKC activity"
     },
-    "qualifies": "entries[9]",
+    "qualifies": "entries[10]",
     "qualifies_needle": "the mRNA expression of IL-8 and CCL20 decreased but was not statistically significant"
    },
    {

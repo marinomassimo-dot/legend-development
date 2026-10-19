@@ -5,7 +5,7 @@
   "pmid": "42652171",
   "doi": "10.3390/biomedicines14081788"
  },
- "analysis_at": "2026-10-19T19:46:00Z",
+ "analysis_at": "2026-10-19T19:58:00Z",
  "analysis_time_precision": "minute",
  "workflow": "scientist-a (Scientist A), interventions batch 2026-10-19 groups H1/H2, task INTERV-H1-A-20261019 on branch task/INTERV-H1-A-20261019, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN. Route: Europe PMC JATS body (PMC13509543) and the two figure images (webp) from the Europe PMC supplementaryFiles zip into the root files/ tree; Figures 1 and 2 opened at native resolution; no supplementary document. Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a staged JSON for the Orchestrator and not appended at preparation time.",
  "evidence_depth": "complete_fulltext_read",

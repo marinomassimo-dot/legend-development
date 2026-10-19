@@ -5,7 +5,7 @@
   "pmid": "38203337",
   "doi": "10.3390/ijms25010167"
  },
- "analysis_at": "2026-10-19T19:42:00Z",
+ "analysis_at": "2026-10-19T19:57:00Z",
  "analysis_time_precision": "minute",
  "workflow": "scientist-a (Scientist A), interventions batch 2026-10-19 groups H1/H2, task INTERV-H1-A-20261019 on branch task/INTERV-H1-A-20261019, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN. Route: Europe PMC JATS body (PMC10779412) and the supplementaryFiles container into the root files/ tree: Figures 1-5 opened at native resolution; the supplementary zip (one PDF, Figures S1-S6) extracted unchanged, its text layer extracted by pdftotext and its seven pages rendered by pdftoppm at 150 dpi and Figures S1-S6 opened as images. Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a staged JSON for the Orchestrator and not appended at preparation time.",
  "evidence_depth": "complete_fulltext_read",
