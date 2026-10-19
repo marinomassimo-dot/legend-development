@@ -825,3 +825,32 @@ protein overlap, and the cited movie numbers do not map to the experiments the t
 commentary read first in this lot (the Sze deposit) restates the model, so the model's evidence base
 is this one laboratory's overexpression system plus two supplementary AD tissue panels; no
 WWOX-null neuron measurement of mitochondrial aggregation exists in either paper.
+
+---
+
+## 18. PMID 41677633 — Su 2026, Cells: HELD-partial resume (figures only)
+
+context_policy: QUESTION_DRIVEN. Held before reading: the prior receipt FTR-20261003-41677633-02 and its manifest
+(figures recorded captions_only; Figures 2, 3 and 6 not declared as opened). **Stated question:** do
+Figures 2, 3 and 6 show what the text says about WWOX induction by serum starvation and hydrogen
+peroxide in human SCC-15 cells and mouse fibroblasts, and about Bcl-XL and Mcl-1 mRNA in
+Wwox+/+ and Wwox-/- fibroblasts?
+
+**What the three figures show.**
+- Figure 2 (SCC-15): the RT-PCR densitometry peaks at 24 h under serum starvation (about 1.37), the
+  qPCR of the same condition peaks at 12 h (about 1.6) and is below baseline at 48 h (about 0.8); under
+  H2O2 both rise to 48 h. Two assays, two peak times; the text's "negative feedback after 48 h" matches
+  the qPCR and not the densitometry.
+- Figure 3 (MEFs): the Wwox signal is absent in the null in blot and RT-PCR (specificity confirmed);
+  the protein and RT-PCR bar charts in 3A and 3B quantify one representative gel with no error bars or
+  statistics, so the "at least four repeats" of the text are visible only in the qPCR of 3C (about 2.6
+  and 4.0-fold under serum starvation, about 2.6 and 2.1-fold under H2O2, wild type only).
+- Figure 6 (MEFs): Bcl-XL and Mcl-1 mRNA do not fall under serum starvation in either genotype, as the
+  text says; the null carries more Bcl-XL mRNA than the wild type at 48 h (about 1.33 against 1.15, a
+  significant difference) which the text does not mention.
+
+**What it changes.** Nothing in a claim. The prior reading's direction stands (under serum starvation the
+WWOX-null fibroblast is the surviving cell and the mitochondrial membrane potential falls with WWOX
+present); the three panels remove an uncertainty about whether the induction and the non-
+transcriptional reading were visible in the images. The receipt is closed at complete depth with the
+earlier coverage carried and stated as carried.

@@ -216,6 +216,30 @@
     "derived": false,
     "result_sha256": "eabc63d92a279282a8d3924fdf648607e14ee49eaa17016e52d72458c5f9465f"
    }
+  },
+  {
+   "path": "files/figures/PMID41677633/native/cells-15-00270-g002.jpg",
+   "sha256": "dcc2b75a96e78a81ffbda043cdede50b8ed25f091526c931a90f83ac74f70796",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Figure image saved into the shared files tree by the earlier reading of this paper (2026-10-03) from the open-access deposit; its route was not recorded in that manifest and is not reconstructed here."
+   }
+  },
+  {
+   "path": "files/figures/PMID41677633/native/cells-15-00270-g003.jpg",
+   "sha256": "1c8cc10ae0e1b4cbf1e8faf5a618c5a1410e360db5d5c8d5a271e80f30bc2820",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Figure image saved into the shared files tree by the earlier reading of this paper (2026-10-03) from the open-access deposit; its route was not recorded in that manifest and is not reconstructed here."
+   }
+  },
+  {
+   "path": "files/figures/PMID41677633/native/cells-15-00270-g006.jpg",
+   "sha256": "06fcdd3821af4694ec50f6c9cd9064d4003aa73eaf9c9cfef9c0638cc07391dc",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Figure image saved into the shared files tree by the earlier reading of this paper (2026-10-03) from the open-access deposit; its route was not recorded in that manifest and is not reconstructed here."
+   }
   }
  ],
  "verbatim_locators": {
@@ -327,6 +351,75 @@
      "endpoint": "DCF-DA flow cytometry"
     },
     "artifact": "files/fulltext/PMID41677633_Su2026_PMC.xml"
+   },
+   {
+    "proposition": "Text: each stress experiment on the MEFs was repeated at least four times with consistent results.",
+    "snippet": "We repeated each experiment at least four times and obtained consistent results.",
+    "anchor": "Results, WWOX induction in MEFs",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41677633_Su2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary mouse embryonic fibroblasts, Wwox+/+ and Wwox-/-",
+     "treatment": "serum-free medium or 100 uM H2O2 for 24 and 48 h",
+     "endpoint": "Wwox protein and mRNA"
+    }
+   },
+   {
+    "proposition": "Figure 3A and 3B quantify one representative blot or gel per stress as bar charts with no error bars and no statistics (bars about 1.0, 1.7 and 2.2 for protein under serum starvation, about 1.0, 1.7 and 1.65 under H2O2), while only 3C carries error bars and asterisks; the four repeats are therefore not visible in 3A and 3B. The Wwox-/- lanes carry no signal in either blot and no mRNA band, confirming the antibody and primer specificity.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3: A, Wwox over beta-actin blots for Wwox+/+ and Wwox-/- at 0, 24 and 48 h under serum starvation (left) and H2O2 (right) with single-bar relative-intensity charts and N.D. over the knock-out lanes; B, RT-PCR gels with single-bar charts; C, qPCR bar charts with error bars and asterisks for the Wwox+/+ group only (about 1, 2.6 and 4 under serum starvation; 1, 2.6 and 2.1 under H2O2).",
+    "anchor": "Figure 3A-C",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41677633/native/cells-15-00270-g003.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[7]",
+    "qualifies_needle": "We repeated each experiment at least four times",
+    "experimental_context": {
+     "system": "primary mouse embryonic fibroblasts, Wwox+/+ and Wwox-/-",
+     "treatment": "serum-free medium or 100 uM H2O2 for 24 and 48 h",
+     "endpoint": "Wwox protein and mRNA"
+    }
+   },
+   {
+    "proposition": "Figure 2 (SCC-15 cells): RT-PCR densitometry peaks at 24 h under serum starvation (about 1.37, **), but qPCR peaks at 12 h (about 1.6, ***) and is back to about 0.8 at 48 h, so the two assays of the same RNA put the maximum at different times; under H2O2 both rise to 48 h (about 1.6 and 2.4).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2: A, agarose gel of WWOX and beta-actin RT-PCR at 0, 12, 24 and 48 h for serum starvation and H2O2; B, bar charts of densitometry (serum starvation about 1.0, 1.05, 1.37, 1.17; H2O2 about 1.0, 1.2, 1.22, 1.62); C, qPCR bar charts (serum starvation about 1.0, 1.6, 1.37, 0.8; H2O2 about 1.0, 1.05, 1.65, 2.4) with asterisks.",
+    "anchor": "Figure 2A-C",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41677633/native/cells-15-00270-g002.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human SCC-15 squamous carcinoma cells",
+     "treatment": "serum-free medium or 100 uM H2O2",
+     "endpoint": "WWOX mRNA by RT-PCR and qPCR"
+    }
+   },
+   {
+    "proposition": "Text: Bcl-XL and Mcl-1 mRNA were not decreased by serum starvation in either genotype, taken to mean the protein loss is not transcriptional.",
+    "snippet": "mRNA levels of Bcl-XL and Mcl-1 were not decreased after serum starvation in either Wwox+/+ or Wwox−/− MEFs",
+    "anchor": "Results, mRNA of the anti-apoptotic proteins",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41677633_Su2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary MEFs, Wwox+/+ and Wwox-/-",
+     "treatment": "serum-free medium",
+     "endpoint": "Bcl-XL and Mcl-1 mRNA"
+    }
+   },
+   {
+    "proposition": "Figure 6B: Bcl-XL mRNA at 48 h is higher in the null (about 1.33) than in the wild type (about 1.15), a significant genotype difference (**), and rises from baseline in both; Mcl-1 mRNA is flat except a null 24-to-48 h rise; so the mRNAs do not fall, which supports the text, and the null carries more Bcl-XL transcript at 48 h, which the text does not mention.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6: A, RT-PCR gels of Wwox, Bcl-XL, Mcl-1 and beta-actin at 0, 24 and 48 h in Wwox+/+ and Wwox-/- (no Wwox band in the null); B, two bar charts of Bcl-XL and Mcl-1 mRNA fold change by genotype and time with n.s. and asterisk brackets (Bcl-XL 48 h: +/+ about 1.15, -/- about 1.33, ** between genotypes).",
+    "anchor": "Figure 6A-B",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41677633/native/cells-15-00270-g006.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[10]",
+    "qualifies_needle": "were not decreased after serum starvation in either",
+    "experimental_context": {
+     "system": "primary MEFs, Wwox+/+ and Wwox-/-",
+     "treatment": "serum-free medium",
+     "endpoint": "Bcl-XL and Mcl-1 mRNA"
+    }
    }
   ]
  }
