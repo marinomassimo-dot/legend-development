@@ -1,0 +1,226 @@
+{
+ "schema_version": 2,
+ "pmid": "40500435",
+ "doi": "10.1038/s41586-025-09098-5",
+ "receipt": "FTR-20261019-40500435-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-G2-FRUCTOSE-01",
+  "metabolic_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared. Triples are listed in the commit candidate for a later blind audit."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 43,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Perry JSA[au]' 43; 'Wang Z[au] AND WWOX' 2 (initial-surname query, ambiguous).",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Immunology and metabolism laboratory (MSKCC), Nature paper; no WWOX.",
+  "note": "NIH-funded; transferable microglia and diet model."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 0
+   }
+  ],
+  "note": "WWOX does not occur."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 76,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS: 76.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-directed reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --theme fructose (no record of this paper)",
+  "hits": 0,
+  "finding": "Not in the registries."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed esummary 2026-10-19 for 40500435; JATS front matter carries is-retracted flag",
+  "result": "No retraction, correction or expression of concern found in the PubMed record or the JATS front matter.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 76,
+   "references_screened": 73,
+   "references_with_doi": 73,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40500435_Wang2025_PMC7617807.xml",
+   "sha256": "af43a9c3589a7ddd2c70e169f31c1be76b285e82f14c2a3e2cc6d33aced91f62",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC7617807 (Nature 2025, author manuscript, CC BY), 226,909 bytes; abstract, results, discussion, Methods, Figures 1-5 and Extended Data Figure legends present. 76 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7617807/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "af43a9c3589a7ddd2c70e169f31c1be76b285e82f14c2a3e2cc6d33aced91f62"
+   }
+  },
+  {
+   "path": "files/figures/PMID40500435/EMS206505-f003.jpg",
+   "sha256": "335ff7c7941d2e99f12d0350f2bef112a1abbb206262e18646a38fab4e30e310",
+   "kind": "figure",
+   "note": "Figure 3 (file f003) in vivo and in vitro 13C-fructose tracing, inspected as an image. File names are EMS206505-f001 to f018; f001 to f005 are the five main figures.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7617807.1/EMS206505-f003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "335ff7c7941d2e99f12d0350f2bef112a1abbb206262e18646a38fab4e30e310"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 226,909 bytes; whole article incl. Methods and figure legends.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: Abstract, Results and Discussion read in full; Methods only skimmed (first 300 characters of each subsection); Figure 3 inspected as an image; Figures 1, 2, 4, 5 and the 13 Extended Data figures (files f002, f004-f018) and both supplementary PDFs NOT inspected (legends only), so figures and supplementary are captions_only/not_read and the receipt is partial. Sample sizes per group are small (N 4 to 10 mice).",
+  "entries": [
+   {
+    "proposition": "DESIGN: wild-type mouse pups exposed to fructose by intragastric injection (P1 to P7) or through dams on a 15 kcal percent fructose diet; prefrontal cortex microglia counted and phagocytosis scored at P7.",
+    "snippet": "we delivered fructose to neonates using intragastric injection (Extended Data Fig. 1a",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40500435_Wang2025_PMC7617807.xml",
+    "anchor": "Results, first section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fewer microglia and more uncleared dying cells in neonates of fructose-fed dams.",
+    "snippet": "We found that neonates born to and nursed by dams on HF diet had significantly fewer microglia compared to mice born t",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40500435_Wang2025_PMC7617807.xml",
+    "anchor": "Results",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "SPECIFICITY: a high-glucose diet had no effect on phagocytosis; the fructose effect is not a generic sugar excess effect in this model.",
+    "snippet": "we observed no significant difference in microglia phagocytic activity in neonates born to and nursed by dams on high glucose diet (Ext",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40500435_Wang2025_PMC7617807.xml",
+    "anchor": "Results",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Global GLUT5 (Slc2a5) deletion reversed microglia numbers, morphology and phagocytic capacity under high fructose; the fructose transporter is the necessary route.",
+    "snippet": "Strikingly, microglia numbers, morphology, and phagocytic capacity were completely reversed in neonates l",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40500435_Wang2025_PMC7617807.xml",
+    "anchor": "Results, GLUT5",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Primary microglia were cultured in closed-state 1 mM and 5 mM fructose at fixed 5 mM glucose and 3.5 percent oxygen; the 5 mM fructose is a high, static dose.",
+    "snippet": "a closed-state level of low (1 mM) and high (5 mM) fructose with a hexose osmolarity ",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40500435_Wang2025_PMC7617807.xml",
+    "anchor": "Results, in vitro design",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In vivo: fructose carbon appears as brain lactate in neonates, increased in HF-diet wild-type pups and reversed in GLUT5-null pups.",
+    "snippet": "we found increased catabolism of [2-13C]-fructose in the brains of wildtype neonates born to and nursed b",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40500435_Wang2025_PMC7617807.xml",
+    "anchor": "Results, metabolism",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3b: the whole-brain total lactate pool in HF-diet wild-type neonates is about 11 umol/g against about 4 in controls and about 4 in GLUT5-null HF pups (N 4 to 5 per group); a diet exposure alone moves brain lactate nearly three-fold, via a microglial transporter. A lactate rise in brain tissue is therefore not specific to a WWOX-dependent glycolytic shift.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3, (a) design of [2-13C]-fructose tracing in P7 pups by NMR; (b) brain [2-13C]-fructose, [2-13C]-lactic acid and total lactic acid pool in WT and KO pups on CD or HF (N 4 to 5); (c) ManCou14 GLUT5 probe uptake by microglia; (d) in vitro [U-13C]-fructose tracing into lactate, glutamate and F6P at 1 or 5 mM fructose.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40500435/EMS206505-f003.jpg",
+    "anchor": "Figure 3b, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "wild-type and Slc2a5-null mouse pups at P7 and primary microglia at 3.5 percent oxygen",
+     "treatment": "high fructose diet or 5 mM fructose",
+     "endpoint": "13C and total lactate by NMR and LC-MS"
+    }
+   },
+   {
+    "proposition": "Mechanism offered: fructose enters via GLUT5, is phosphorylated by hexokinase to fructose 6-phosphate, and increases mitochondrial HK2 localisation; the HK2 inhibitor 3-BP restores phagocytosis, in cell lines and primary microglia.",
+    "snippet": "blocking HK2 activity using the isoform-specific inhibitor 3-BP significantly boosted microglia phagocytosis in glu",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40500435_Wang2025_PMC7617807.xml",
+    "anchor": "Results, HK2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The behavioural readouts disagree: novel object recognition is lost, spatial memory in the Barnes maze is not impaired; fear extinction fails.",
+    "snippet": "The contradiction between NOR and Barnes maze performance suggests that HF diet affects co",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40500435_Wang2025_PMC7617807.xml",
+    "anchor": "Results, behaviour",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Myeloid-specific GLUT5 deletion rescues phagocytosis but not microglia number, so the number reduction is not explained by the same cell-intrinsic route.",
+    "snippet": "myeloid-specific deletion of GLUT5 completely reversed the HF diet-induced microglia phagocytosis defect, but not microglia numbers, ob",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40500435_Wang2025_PMC7617807.xml",
+    "anchor": "Results, cKO",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state fructose consumption by itself likely does not cause mood or anxiety disorders (a first hit); the epidemiological link is called an observation.",
+    "snippet": "High fructose consumption itself likely does not cause the development of mood or anxiety disorders. Howe",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40500435_Wang2025_PMC7617807.xml",
+    "anchor": "Discussion",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
