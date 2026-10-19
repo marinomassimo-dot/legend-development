@@ -763,3 +763,65 @@ beyond the registry), no brain-iron imaging. A closing step that needs no new re
 case reports already in the repository for a stated ferritin, haemoglobin or susceptibility imaging
 value and record "none stated" per report. The review does not touch the WWOX-ferroptosis literature
 and does not discuss genetic epilepsies; transfer is the readout list only.
+
+---
+
+## 17. PMID 27551439 — Chang and Chang 2015, Cell Death Discov: HELD-partial resume (the primary behind the Sze commentary)
+
+context_policy: QUESTION_DRIVEN. Held before reading: the prior receipt FTR-20261003-27551439-02 (complete
+article reading except the supplement) and its manifest, and the selection file's note that the
+supplement was owed. **Stated question:** what do the fifteen supplementary time-lapse movies, the two
+supplementary figures and the four main figures not declared in the first manifest show about
+nucleolus-mitochondrion shuttling and aggregation of TPC6A-delta, and do the movie numbers cited in
+the text match the movies?
+
+**Acquisition (the debt was a missing decoder).** The first manifest recorded that the fifteen
+movies were not decoded because no video decoder was installed. The movies are small mp4 files on the
+PMC open-access S3 mirror; a static ffmpeg build (version 7.0.2) was installed from the imageio-ffmpeg
+wheel into the session scratch area and six frames per movie were tiled and opened. This is a
+capability finding, not only a reading: see the micro-upgrade in the self-evaluation.
+
+**What the supplement and the unopened figures show.**
+- Videos 1 to 3 (one cell, three channels, 6.1 s each, no clock, no scale bar): the cell rounds and
+  retracts a tail; no cytoplasmic puncta are resolved in the sampled frames.
+- Video 6 (S35G mutant with WWOX): after rounding, a dense bright clump and fragments, an
+  apoptotic-body morphology; Videos 4 and 5 are 0.83 s clips with no visible nucleolar translocation.
+- Video 8 (EYFP-TPC6A-delta with MitoTracker Red): the transfected cell's cytoplasm turns yellow over
+  the frames, which a diffuse cytoplasmic protein overlapping a mitochondrial network also produces;
+  there is no colocalisation measure, so mitochondrial relocation is not separable from cytoplasmic
+  spread in the movie.
+- Videos 10 and 11 (ECFP-TPC6A-delta, CCCP, with and without the MitoTracker channel) show cells
+  swelling, blebbing and fragmenting; discrete aggregates are not visible before the last frames.
+- Videos 12 to 15 (SDR/D3 run) are four channels of one field; Video 14 (the DIC channel) shows many
+  small granules spreading across the field as cells round and bleb, which the authors call
+  exosome-like particles; the movie does not characterise them.
+- **Cross-reference errors, checked against the movies themselves.** The text cites Videos 8 and 9
+  for the CCCP experiment (the movies of that experiment are Videos 10 and 11, as the Figure 6 legend
+  says), Videos 10 to 13 for the SDR/D3 run (the legend and the movies are Videos 12 to 15), and Video
+  12 for the exosome-like particles (they are in Video 14); Video 8 is cited for two different
+  experiments.
+- **Text against panel (Figure 6a).** The text puts TPC6A-delta's relocation at hour 3, its
+  aggregation at hour 6 and the loss of mitochondrial red signal "in less than 1 h"; the panel is
+  sampled at 0, 6, 12, 18 and 24 h, the arrows sit at 12, 18 and 24 h, and the red signal is still
+  present at 6 h.
+- Supplementary Figures S1 and S2 are human post-mortem Alzheimer hippocampus (TIAF1, phospho-TPC6A,
+  TPC6A, WOX1, amyloid-beta), single fields without quantification and without a WWOX-genotype
+  comparator or a mitochondrial marker.
+- Main figures 1, 4, 5 and 6 add to the earlier reading: Figure 4 shows wild-type TRAPPC6A and the
+  delta isoform killing transfected cells to the same extent at every dose in two lines
+  (electroporation alone kills about a third), and WWOX overexpression kills too; Figure 6c to f
+  show FRET binding of TPC6A-delta to the D3 tail/SDR peaking at about 3 to 3.5 h and to the WW
+  domain at 8 to 12 h, with no binding for the SDR alone.
+
+FIRST-PASS OBSERVATIONS COMPLETE -> PRIOR KNOWLEDGE ADMITTED FOR COMPARISON: the earlier reading's locators (the
+overexpression-only cell-death readout, the Y112F and S35G contradiction, the unpublished-data
+attributions, the Wwox-null cortex immunostaining).
+
+**What it changes.** Nothing in a claim; it narrows what the repository can say about the mitochondrial
+arm. The shuttling and aggregation of TPC6A-delta are shown in transfected COS7 and HEK293 cells with
+fluorescent fusions under TGF-beta1; the Wwox-null element is one immunostaining and a MEF shuttling
+time reported in the text; the movies do not show a mitochondrial endpoint that survives a diffuse-
+protein overlap, and the cited movie numbers do not map to the experiments the text names. The
+commentary read first in this lot (the Sze deposit) restates the model, so the model's evidence base
+is this one laboratory's overexpression system plus two supplementary AD tissue panels; no
+WWOX-null neuron measurement of mitochondrial aggregation exists in either paper.
