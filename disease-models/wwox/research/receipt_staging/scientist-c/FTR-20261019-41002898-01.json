@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-41002898-01",
+ "study_id": {
+  "pmid": "41002898",
+  "doi": "10.3390/membranes15090263"
+ },
+ "event_at": "2026-10-19T18:28:33Z",
+ "analysis_at": "2026-10-19T18:28:33Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, metabolic batch 2026-10-19, task METAB-G3-C-20261019, branch task/METAB-G3-C-20261019; context_policy SOURCE_FIRST. Route: Europe PMC REST fullTextXML (open access) saved to the shared checkout files/fulltext; whole article and three tables read from a text rendering of the JATS; the four figure images opened at native size; reference list counted from the JATS but not read entry by entry. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID41002898_Truong2025_PMC.xml",
+ "source_fingerprint": "d36cc7f8812c9447d6f91594ff30b9a9bab01aa801210586d7e172c3e0ce4a72",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "not_present",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41002898.json",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "A narrative review with no Methods or Results; its limits are the closing Conclusions paragraph. The reference list of 176 entries was enumerated and not read entry by entry; references reached by quotation (for example the one cited for the Parkin fibroblast MAM statement) were not opened."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

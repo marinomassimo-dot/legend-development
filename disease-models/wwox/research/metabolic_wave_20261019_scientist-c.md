@@ -460,3 +460,47 @@ WWOX loss in non-neural systems; a Wwox-null brain showing high HIF1A and HO-1 w
 route to test, but this paper cannot say which way causality runs. PX-478 is named here only as the
 paper's tool: no safety triage was run (BLOCK-1 not reached), and nothing here proposes it for the
 reference genotype; its chemistry is a reason for caution, not a lead.
+
+---
+
+## 10. PMID 41002898 — Truong 2025, Membranes: mitochondria-associated membrane dysfunction in neurodegeneration (tier 2, new; narrative review)
+
+context_policy: SOURCE_FIRST (selection row's line only; the selection row says it is the MAM frame for the WWOX
+Ca2+ and mitochondrial findings; this read asks whether the article gives any such frame).
+
+**What it MEASURES.** Nothing. It is a narrative review of ER-mitochondria contact sites (tethers
+IP3R-GRP75-VDAC1, MFN2, VAPB-PTPIP51, BAP31-FIS1) in Alzheimer, Parkinson, ALS and Huntington disease,
+with sections on lipid transfer, calcium and autophagy/apoptosis and a therapy section (a peptide,
+SIGMAR1 agonists, curcumin, resveratrol, gene delivery). Counted in this session over the text: the
+words epilepsy, seizure, ferroptosis and iron occur zero times, and WWOX zero times.
+
+**First-pass observations.**
+- The review does not cover development, epilepsy or inherited metabolic disease, so it cannot
+  provide a MAM frame for a WWOX developmental and epileptic encephalopathy; the transfer is by
+  vocabulary and candidate readouts only.
+- Internal contradictions about direction: the Section 3 summary says MAM changes are increased
+  tethering in AD and reduced connectivity in PD and ALS; in the PD paragraph, one sentence says
+  PINK1/Parkin loss reduces ER-mitochondria tethering and calcium exchange, and the next says
+  PARK2-mutant fibroblasts and Parkin knock-out mice show ER and mitochondria in closer proximity, more
+  calcium flow and more MFN2. The direction of the PD change is therefore stated both ways.
+- Figure 4's legend describes a schematic with three proteins (MFN2, PACS-2, ATAD3A); the image
+  displayed is a different schematic (mitochondrial transfer routes, treatments, and an inset with
+  VDAC1, GRP75, Sig-1R, IP3R, RyRs, SERCA) in which none of the three is labelled (recorded as a
+  `text_contradicted_by_panel` locator on a legend/figure pair).
+- The authors state that whether MAM changes are compensatory or causative remains unclear; the
+  trials in Table 3 (curcumin, resveratrol) have amyloid, atrophy or isoprostane outcomes and not MAM
+  measures.
+
+FIRST-PASS OBSERVATIONS COMPLETE -> PRIOR KNOWLEDGE ADMITTED FOR COMPARISON: admitted by command the registry query for the
+PMID (empty) and `registry_records.py get --theme` for VDAC1, IP3R, ITPR1, MFN2, SIGMAR1, VAPB and HSPA9
+(each returned no record; a statement about those queries over the seven surfaces).
+
+**What it changes in the disease model: nothing, and it exposes an empty cell.** No WWOX record in
+the repository names any of the seven tether or calcium-channel terms, so the MAM frame has no anchor
+here: the selection row's premise (a MAM frame for WWOX calcium findings) was not in the paper and
+is not in the registries. A cheap closing step that needs no new reading: look the seven proteins
+up in the WWOX interactome already read in this repository (the Hussain 2018 interactome paper has
+a complete receipt) and in the Chang laboratory mitochondrial-shuttling papers' text; if none appears,
+MAM stays a vocabulary, if one does, it becomes a testable contact-site question. Transfer verdict:
+vocabulary only; a review that contradicts itself on the direction of the one disease (PD) most
+related to the fragile-site analogue read earlier in this lot.
