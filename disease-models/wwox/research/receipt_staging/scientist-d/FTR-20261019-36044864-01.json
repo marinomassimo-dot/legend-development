@@ -13,10 +13,10 @@
   "references": "read",
   "supplementary": "read"
  },
- "event_at": "2026-10-19T18:29:48Z",
+ "event_at": "2026-10-19T18:48:26Z",
  "event_id": "FTR-20261019-36044864-01",
  "evidence_basis": [
-  "JATS body, STAR Methods and the reference list (80 entries) read section by section from a text rendering.",
+  "JATS body, STAR Methods and the reference list (80 entries) read section by section from a text rendering; figure legends and the key resources table read in a second extraction of the JATS (the first rendering omitted both).",
   "All five main-figure images (graphical abstract and Figures 1-4) opened at native resolution.",
   "Supplement PDF (nine pages) rendered and opened; Table S1 workbook opened for structure and metabolite list only (declared in the manifest)."
  ],

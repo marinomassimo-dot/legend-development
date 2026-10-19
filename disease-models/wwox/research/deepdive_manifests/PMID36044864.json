@@ -378,6 +378,14 @@
     "surface": "body",
     "artifact": "files/fulltext/PMID36044864_Yuskaitis2022_PMC.xml",
     "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 legend: wild-type fed n = 25 (14 M, 11 F) and fasted n = 27 (14 M, 13 F), seizure incidence difference by log-rank p = 0.0126.",
+    "snippet": "(n = 25 fed [14 M, 11 F]; 27 fasted mice [14 M, 13 F]; *p = 0.0126, log rank test)",
+    "anchor": "Figure 1 legend, panel B",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36044864_Yuskaitis2022_PMC.xml",
+    "panel_text_relation": "text_only"
    }
   ],
   "source_fulltext_indexed": true,

@@ -1,0 +1,319 @@
+{
+ "schema_version": 2,
+ "pmid": "39861362",
+ "doi": "10.3390/nu17020232",
+ "pmcid": "PMC11767679",
+ "receipt": "FTR-20261019-39861362-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the interventions selection file's one-line 'why it matters' for this row and the group H5 header, plus the earlier readings of this lot done in this session (Yuskaitis, Phillips-Farfan, Salvati) and the registry theme records CLAIM 042 and DL-MECH-020 admitted after the first pass of the first paper. No registry record about this paper (none exists).",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/interventions_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a non-WWOX comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype; class-level literature only, BLOCK-1 caution carried in the analysis note."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the load-bearing triples were checked mechanically by locator_audit.py and are exposed in the analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "output_kind": "systematic_review",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Systematic-style qualitative review (databases to May 2024; 22 studies, 12 randomised trials) of macronutrient parenteral nutrition and Bayley or head-circumference outcomes in very preterm or very low birth weight infants. Class-level information on glucose and energy dose in neonates and the uncertain link between aggressive early parenteral nutrition and neurodevelopment. Not encephalopathic term infants, not a low-calorie regimen, not WWOX. The review's Conclusions pull in two directions (mandatory early nutrition; aggressive nutrition may not help)."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (fasting OR \"caloric restriction\" OR \"calorie restriction\" OR \"dietary restriction\")",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the four hits are type 2 diabetes association studies (fasting glucose), none a fasting or restriction intervention"
+   },
+   {
+    "query": "WWOX AND (mTOR OR mTORC1 OR AMPK)",
+    "count": 8,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (hypoglycemia OR hypoglycaemia OR dextrose OR \"glucose infusion\")",
+    "count": 21,
+    "source": "PubMed ESearch rettype=count 2026-10-19; hits are glucose-metabolism, glycolysis and association papers, none an infusion or dextrose intervention"
+   },
+   {
+    "query": "WWOX AND (edema OR oedema OR hyponatremia OR \"fluid overload\")",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the two hits are a high-altitude pulmonary oedema locus list and a zebrafish embryo knockdown paper"
+   },
+   {
+    "query": "WWOX AND (refeeding OR thiamine OR \"parenteral nutrition\")",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are PubMed search hits only (ESearch rettype=count, 2026-10-19), not a census; none of the WWOX hits tests the intervention of this group."
+ },
+ "multihop": {
+  "references_enumerated": 54,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted (54 entries), not read item by item; no WWOX-directed reference seen in the body."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 39861362 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED for this PMID in the seven registry surfaces at commit 0c85331b341e; a statement about that query only. CLAIM 042 and DL-MECH-020 (ketogenic-diet lines) admitted for comparison after the first pass."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 54,
+   "references_screened": 47,
+   "references_with_doi": 47,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 7
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39861362_Tesser2025_PMC.xml",
+   "sha256": "f38f3671b851e4a39b8c79e7e21050e35f62e8c53829a69589dfaf0fc709deec",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11767679/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "f38f3671b851e4a39b8c79e7e21050e35f62e8c53829a69589dfaf0fc709deec"
+   }
+  },
+  {
+   "path": "files/figures/PMID39861362/native/nutrients-17-00232-g001.jpg",
+   "sha256": "c37e4326ab07ec1e1bc442a63d81bcc107aa748a8b3bab520072ff6f80b0c617",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11767679.1/nutrients-17-00232-g001.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "c37e4326ab07ec1e1bc442a63d81bcc107aa748a8b3bab520072ff6f80b0c617"
+   }
+  },
+  {
+   "path": "files/figures/PMID39861362/native/nutrients-17-00232-g002.jpg",
+   "sha256": "a2c4464f64c5843bea513542c4d58b4c35b6619e59b322b33b5c0d5117766b92",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11767679.1/nutrients-17-00232-g002.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "a2c4464f64c5843bea513542c4d58b4c35b6619e59b322b33b5c0d5117766b92"
+   }
+  },
+  {
+   "path": "files/figures/PMID39861362/native/nutrients-17-00232-g003.jpg",
+   "sha256": "850b3fd5e0a65a857cd5344c13a816a3d63093bf43abebbbabf7a0e224ff66dc",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11767679.1/nutrients-17-00232-g003.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "850b3fd5e0a65a857cd5344c13a816a3d63093bf43abebbbabf7a0e224ff66dc"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The text says only 2.8% of the enhanced-nutrition group had language delay (versus 18.4%); Table 1 gives the same group as 2 (3.8%).",
+    "snippet": "in fact, only 2.8% of them exhibited language delay compared with 18.4% in the control group (p-value = 0.033)",
+    "anchor": "4.1 Carbohydrates and energy, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39861362_Tesser2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 1 row for Shim 2014 lists language delay as 2 (3.8) in the intervention group and 7 (18.4) in controls; 2 of 52 is 3.8%.",
+    "snippet": "Language delay: I 2 (3.8); C 7 (18.4) - Gross motor delay: I 7 (13.5); C 6 (15.8)",
+    "anchor": "Table 1a, Shim 2014 row",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39861362_Tesser2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 1a lists the first trial as 'Tan, 2008' while the risk-of-bias figure lists 'Tan, 2015'.",
+    "snippet": "Tan, 2008RCT [23] GA < 29 wk Enhanced Nutrition Protocol VS Standard parenteral",
+    "anchor": "Table 1a, first row",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39861362_Tesser2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review included very preterm (under 32 weeks) or very low birth weight infants receiving parenteral nutrition, with Bayley or similar scales or head circumference in the first two years.",
+    "snippet": "if they included very preterm infants (GA less than 32 weeks) and/or very low birth weight infants (birth weight less than 1500 g) receiving early PN during Neonatal Intensive Care Unit (NICU) stay",
+    "anchor": "2.2 Types of studies, participants and outcome measures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39861362_Tesser2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Risk-of-bias judgments did not affect inclusion.",
+    "snippet": "The overall risk of bias judgments for each study did not affect their inclusion in this review.",
+    "anchor": "2.4 Quality assessment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39861362_Tesser2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Of the 12 randomised trials, 7 had some concerns, 2 high risk and 3 low risk.",
+    "snippet": "The majority of studies (7 out of 12) were judged to have some concerns, while two studies were deemed to have an overall high risk of bias.",
+    "anchor": "3.3 Quality assessment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39861362_Tesser2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The PRISMA diagram gives the identification, duplicate-removal, screening, full-text exclusion and inclusion numbers (22 studies included from 64 full texts).",
+    "snippet": "Visual attestation of Figure 1 (image nutrients-17-00232-g001): studies from databases n = 338; references removed n = 63; studies screened n = 275, excluded 211; assessed for eligibility n = 64, excluded 42 (language 2, outcomes 25, intervention 7, design 6, full text unavailable 2); included n = 22.",
+    "anchor": "Figure 1 (image nutrients-17-00232-g001)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID39861362/native/nutrients-17-00232-g001.jpg"
+    ],
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "systematic review flow, preterm parenteral nutrition studies",
+     "endpoint": "study selection"
+    }
+   },
+   {
+    "proposition": "In the Stephens cohort, greater first-week protein and energy intake were associated with higher Bayley MDI at 18 months; this is an observational association.",
+    "snippet": "Higher Mental Development Index (MDI) scores on the Bayley scale emerged both for greater protein intake",
+    "anchor": "4.1 Carbohydrates and energy, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39861362_Tesser2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the Morgan trial, the enriched regimen produced higher composite scores that were not statistically significant.",
+    "snippet": "although these results were not statistically significant",
+    "anchor": "4.1 Carbohydrates and energy, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39861362_Tesser2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review writes that higher energy intake in an observational cohort 'can lead to hyperglycemia' that harms neurodevelopment at 24 months; the design is observational.",
+    "snippet": "showed how increased energy intakes (energy intake through PN ≥ 432 kcal/kg/week) can lead to hyperglycemia",
+    "anchor": "4.1 Carbohydrates and energy, para 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39861362_Tesser2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the Bloomfield RCT extra amino acids did not change survival without neurological impairment but moderate-to-severe neurodisability was 16.5% versus 8.6% (adjusted relative risk 1.95).",
+    "snippet": "27 out of 164 infants evaluated [16.5%] vs. 14 out of 163 [8.6%] in the placebo group",
+    "anchor": "4.2 Proteins, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39861362_Tesser2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Guideline glucose rates quoted for preterm infants are 4-8 mg/kg/min on day 1 rising to 8-10 mg/kg/min, with the stated need to avoid hyperglycaemia.",
+    "snippet": "The recommended glucose intake for preterm infants is 4–8 mg/kg/min (5.8–11.5 g/kg/day) on the first day of life, with a gradual increase to the target dose of 8–10 mg/kg/min (11.5–14.4 g/kg/day)",
+    "anchor": "5.1 Energy and carbohydrates",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39861362_Tesser2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Conclusions state that adequate parenteral macronutrients are mandatory and may help neurodevelopment, and in the same paragraph that an aggressive approach may not correlate with favourable outcomes.",
+    "snippet": "We have learned that an aggressive approach to nutrition could lead to severe metabolic complications and may not correlate with favorable outcomes",
+    "anchor": "6. Conclusions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39861362_Tesser2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review's own table states the carbohydrate neurological-outcome line as a need for tailored glucose to avoid hypo- and hyperglycaemia.",
+    "snippet": "Tailored glucose maintenance should be provided to avoid hypo/hyperglycemia",
+    "anchor": "Table 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39861362_Tesser2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figures 2 and 3 give the risk-of-bias tables: RCT overall high for Blanco 2012 and Tan 2015, low for Thanhaeuser 2020, Gallini 2022 and Bloomfield 2022; Newcastle-Ottawa totals 7-9 for the nine cohort studies.",
+    "snippet": "Visual attestation of Figures 2 and 3 (images nutrients-17-00232-g002, -g003): RoB2 traffic-light table with overall red for Blanco 2012 and Tan 2015, green for Thanhaeuser 2020, Gallini 2022, Bloomfield 2022, yellow for the others; Newcastle-Ottawa table totals 7 (Stephens 2009) to 9.",
+    "anchor": "Figures 2, 3",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID39861362/native/nutrients-17-00232-g002.jpg",
+     "files/figures/PMID39861362/native/nutrients-17-00232-g003.jpg"
+    ],
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "included studies of preterm parenteral nutrition",
+     "endpoint": "risk of bias"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC11767679/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure panel."
+ }
+}
