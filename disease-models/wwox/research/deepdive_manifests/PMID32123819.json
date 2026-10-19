@@ -1,0 +1,351 @@
+{
+ "schema_version": 2,
+ "pmid": "32123819",
+ "doi": "10.1096/fba.2019-00067",
+ "receipt": "FTR-20261019-32123819-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID32123819.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-a.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-A-LIPID-04.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger (selection file, method step 3); the per-paper M0 packet re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Discovery leads, if any, are routed through the commit candidate and the analysis note; no cumulative discovery squeeze was warranted by this paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A Japanese lipid-biochemistry group (Hokkaido University) that generated the Elovl1 mice and published the epidermal and ocular phenotypes. Primary for Elovl1 in mouse; WWOX absent. Observation (lipidomics n = 3, EM at one age, behavioural batteries n = 10-12) weighed above the extrapolation to patients."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "Elovl1 AND (myelin OR brain OR sphingolipid)",
+    "count": 57,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (galactosylceramide OR sulfatide)",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts; the second query reaches the WWOX sphingolipid literature (a count near zero shows how little exists)."
+ },
+ "multihop": {
+  "references_enumerated": 33,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "33 references enumerated from the XML; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 32123819 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the dossier."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 33,
+   "references_screened": 33,
+   "references_with_doi": 33,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  },
+  "result": "Checked 2026-10-19 via PubMed esummary/efetch for PMID 32123819: publication types ['Journal Article']; corrections/retraction markers in the efetch record: none."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID32123819_Isokawa2019_PMC.xml",
+   "sha256": "715ffb8a9186a9918ee8b89eda926b2d2bd65c697b270df423367001540516a1",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC6996318: abstract, body, Tables 1-5, six figure legends, references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6996318/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID32123819/FBA2-1-747-g001.jpg",
+   "sha256": "12f43b2bed20d3501c3fdecb4acfbc910d25442a2ce37b8f75f61d6463648ec7",
+   "kind": "figure",
+   "note": "Figure 1 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution (the container holds figure files only; no supplementary document).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6996318/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID32123819/FBA2-1-747-g002.jpg",
+   "sha256": "72c4a0a8bc0dc9ffa9c37014c714b7f8211976c3a883cc11c3b92f8caaa49d82",
+   "kind": "figure",
+   "note": "Figure 2 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution (the container holds figure files only; no supplementary document).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6996318/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID32123819/FBA2-1-747-g003.jpg",
+   "sha256": "689a0e661b207b2aa924944eeef8168030f5e1c6207338ece0bb65254e04d863",
+   "kind": "figure",
+   "note": "Figure 3 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution (the container holds figure files only; no supplementary document).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6996318/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID32123819/FBA2-1-747-g004.jpg",
+   "sha256": "5bea00fae1da80e15fbd152865d6e7abfbd311d07fd4ae987392e70712b6b4b3",
+   "kind": "figure",
+   "note": "Figure 4 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution (the container holds figure files only; no supplementary document).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6996318/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID32123819/FBA2-1-747-g005.jpg",
+   "sha256": "172a58fd95cc69e18d928b837c385a204d17e0ddded5b92866635ea8de36ab27",
+   "kind": "figure",
+   "note": "Figure 5 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution (the container holds figure files only; no supplementary document).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6996318/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID32123819/FBA2-1-747-g006.jpg",
+   "sha256": "4bb36078c589b7bdf4ef5744a39fd6d939243a21aed9c388bdfe82688b32f684",
+   "kind": "figure",
+   "note": "Figure 6 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution (the container holds figure files only; no supplementary document).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6996318/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The model is a whole-body Elovl1 knockout rescued in the epidermis only by a transgene; brain Elovl1 mRNA is near the detection limit. WWOX is not in the paper.",
+    "snippet": "The Elovl1 −/− Tg(IVL‐Elovl1) mice, which are deficient in Elovl1 throughout the body except the epidermis, harbor the transgene Tg(IVL‐Elovl1) expressing 3×FLAG‐tagged ELOVL1 under the control of the epidermis‐specific human IVL (involucrin) promoter.",
+    "anchor": "Results, section 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32123819_Isokawa2019_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Lipid analyses use three animals per genotype.",
+    "snippet": "Lipids were extracted from the brains of control (n = 3) and Elovl1 −/− Tg(IVL‐Elovl1) (n = 3) mice, and GalCer (C), 2‐OH GalCer (D), sulfatide (E), 2‐OH sulfatide (F), sphingomyelin (G), and ceramide (H) species were analyzed by LC‐MS/MS.",
+    "anchor": "Figure 1 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32123819_Isokawa2019_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Whole-brain GalCer species of 24 or more carbons are almost undetectable in the knockout while C22:1 and shorter species rise; total GalCer and 2-OH GalCer are reduced by 39 and 34 percent.",
+    "snippet": "Consistent with the results of the TLC analysis, the total levels of GalCer and 2‐OH GalCer were reduced by 39% and 34%, respectively, in Elovl1 −/− Tg(IVL‐Elovl1) mice relative to control mice.",
+    "anchor": "Results, section 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32123819_Isokawa2019_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Total sphingomyelin and total ceramide are comparable between genotypes (the text separately says total sulfatide did not differ significantly).",
+    "snippet": "The total levels of sphingomyelin and ceramide were comparable between control and Elovl1 −/− Tg(IVL‐Elovl1) mice.",
+    "anchor": "Results, section 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32123819_Isokawa2019_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Ugt8a mRNA is 38 percent lower in the knockout brain; the authors cannot say how Elovl1 affects Ugt8a.",
+    "snippet": "There was a significant reduction in the mRNA levels of Ugt8a in Elovl1 −/− Tg(IVL‐Elovl1) mice of 38% relative to control mice, while the levels of Cers2 and Fa2h were unchanged (Figure 2A–C).",
+    "anchor": "Results, section 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32123819_Isokawa2019_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Electron microscopy is done only at 13 months, counting 96 and 73 axons in 13 fields; the number of animals is not stated in the legend.",
+    "snippet": "Average diameters ± SD of myelinated axons: n = 96 [Elovl1 +/+ Tg(IVL‐Elovl1)] and n = 73 [Elovl1 −/− Tg(IVL‐Elovl1)] total axons counted in 13 different fields of view.",
+    "anchor": "Figure 3 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32123819_Isokawa2019_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Myelin is thinner only in the smallest (below 0.4 um) and the largest (1.6 um or more) axons, the latter more severely.",
+    "snippet": "The thickness of myelin increased in proportion to axon diameter in control mice (Figure 3C); however, in Elovl1 −/− Tg(IVL‐Elovl1) mice such proportionality was less obvious, and the myelin was significantly thinner in axons with diameters of <0.4 µm or ≥1.6 µm, the latter being more severely affected (Figure 3A, C).",
+    "anchor": "Results, section 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32123819_Isokawa2019_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Only 22 of an expected 66 knockout mice were genotyped at three weeks, and two more died of startle epilepsy by eight weeks.",
+    "snippet": "There were 22 Elovl1 −/− Tg(IVL‐Elovl1) mice, which was one‐third of the expected number of 66 (= 265/4) based on the Mendelian ratio.",
+    "anchor": "Results, section 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32123819_Isokawa2019_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Startle epilepsy is recorded as a cause of death in two knockout mice; the cause of the early loss is stated as unclear.",
+    "snippet": "Three more of these mice were lost by the age of eight weeks, and two of them died from startle epilepsy.",
+    "anchor": "Results, section 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32123819_Isokawa2019_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "On the balance beam the text reports no difference on the wide beam and slower travel and more paw slips on the narrow beam.",
+    "snippet": "On the wide beam, there were no significant differences between control and Elovl1 −/− Tg(IVL‐Elovl1) mice; however, on the narrow beam, Elovl1 −/− Tg(IVL‐Elovl1) mice moved significantly more slowly and exhibited more paw slips (Figure 4K, L).",
+    "anchor": "Results, section 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32123819_Isokawa2019_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure 4K-N. 4L paw slips: the printed P for the genotype effect is .0199 on the wide beam and .0184 on the narrow beam, so the wide-beam slips also pass .05 although the text reports no wide-beam difference (both groups are near zero slips on the wide beam); 4K moving speed on the narrow beam P = .0252; 4N startle amplitude about 5.5 versus 3.3 at 120 dB (two asterisks), equal at 110 dB and below; n = 12 versus 10 to 11.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 4K moving speed wide P=.0922 and narrow P=.0252; Fig 4L paw slips wide P=.0199 and narrow P=.0184; Fig 4M movement initiations ns; Fig 4N startle amplitude versus sound level 70-120 dB with two asterisks at 120 dB.",
+    "anchor": "Figure 4K-N, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID32123819/FBA2-1-747-g004.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "mouse Elovl1 knockout rescued in epidermis by an involucrin-promoter transgene (brain-null), C57BL/6J background",
+     "genotype": "Elovl1 -/- Tg(IVL-Elovl1) versus Elovl1 +/+ Tg(IVL-Elovl1)",
+     "treatment": "none",
+     "comparator": "transgene-carrying wild-type",
+     "endpoint": "as stated per panel"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 1C-H. Total GalCer about 520 versus 320 pmol/mg tissue and total 2-OH GalCer about 820 versus 540 (one asterisk, n = 3); total sulfatide about 25 versus 15 (arbitrary peak-area units, not significant); total sphingomyelin about 1150 versus 800 pmol/mg (not significant); total ceramide equal; species plots show C24:0, C24:1 and C26 absent in the knockout with C18:0 and C20:0 GalCer higher.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1C-H paired panels (species left, totals right) for GalCer, 2-OH GalCer, sulfatide, 2-OH sulfatide, sphingomyelin, ceramide in control blue and knockout red, with asterisks.",
+    "anchor": "Figure 1C-H, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID32123819/FBA2-1-747-g001.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "mouse Elovl1 knockout rescued in epidermis by an involucrin-promoter transgene (brain-null), C57BL/6J background",
+     "genotype": "Elovl1 -/- Tg(IVL-Elovl1) versus Elovl1 +/+ Tg(IVL-Elovl1)",
+     "treatment": "none",
+     "comparator": "transgene-carrying wild-type",
+     "endpoint": "as stated per panel"
+    }
+   },
+   {
+    "proposition": "The authors read the pattern as myelin thinning in a subset of axons without axonal abnormality and suggest an oligodendrocyte-autonomous defect in patients.",
+    "snippet": "Thus, the hypomyelination in patients with the ELOVL1 mutation may be caused by autonomous cellular defects in oligodendrocytes.",
+    "anchor": "Discussion, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32123819_Isokawa2019_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say the mouse motor deficit is mild with no paraplegia and that the species difference may reflect the degree of hypomyelination or axon length.",
+    "snippet": "This difference in the extent of motor dysfunction between human and mouse may result from the degree of hypomyelination.",
+    "anchor": "Discussion, paragraph 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32123819_Isokawa2019_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Retinal and corneal histology is normal at 16 weeks.",
+    "snippet": "These results suggest the absence of ocular abnormalities in Elovl1 −/− Tg(IVL‐Elovl1) mice.",
+    "anchor": "Results, section 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32123819_Isokawa2019_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search returned inEPMC Y, isOpenAccess Y, license cc by on 2026-10-19; fullTextXML returned HTTP 200 and the declared article_text artefact is that response byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

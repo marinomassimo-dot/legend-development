@@ -11,6 +11,7 @@
 | 1 | PMID 41715204 (Sun 2026, J Transl Med, CerS2 conditional knockout, very-long-chain sphingolipids and myelination) | `FTR-20261019-41715204-01` (partial: supplementary video not inspected) | New `PAPER` record (none exists), type murine mechanistic comparator, T3, relevance LOW (WWOX absent) |
 | 2 | PMID 36583573 (Teo 2023, Glia, CerS2 deleted in myelinating cells: myelin lipid chain length, microglia, lethality) | `FTR-20261019-36583573-01` | New `PAPER` record (none exists), murine mechanistic comparator, T3, relevance LOW (WWOX absent) |
 | 3 | PMID 40590574 (Wong 2025, Mov Disord, biallelic ELOVL1 variants: hypomyelinating leukodystrophy, movement disorder, ichthyosis) | `FTR-20261019-40590574-01` (partial: photographs and videos not inspected) | New `PAPER` record (none exists), human genetic comparator, T3, relevance LOW (WWOX absent) |
+| 4 | PMID 32123819 (Isokawa 2019, FASEB BioAdv, Elovl1-deficient mice, myelin sphingolipid chain length, motor coordination) | `FTR-20261019-32123819-01` | New `PAPER` record (none exists), murine comparator, T3, relevance LOW (WWOX absent) |
 
 ## 2 · Record content (source 1)
 
@@ -70,3 +71,17 @@ Note text to carry:
 12. Seizures are absent for recessive ELOVL1 disease in the comparison table | Spasticity + + + − − − Seizures − − + − − − Movement disorder + − − − − − | Table 1, same artefact
 13. Plasma VLCFA was measured in one patient | Analysis of VLCFAs in plasma was performed only in case 1 and demonstrated a decrease in C24:0 and C26:0 concentrations, consistent with the function of ELOVL1 in the synthesis of C22‐C26 VLCFAs (Supplementary Table S2). | Results, clinical review, same artefact
 14. Only case 1 was studied in fibroblasts | Unfortunately, fibroblasts were unavailable from the other cases. | Discussion, paragraph 7, same artefact
+
+## 8 · Source 4 (PMID 32123819, Isokawa 2019): record content
+
+What it measures: brain sphingolipid lipidomics (3 versus 3), Ugt8a mRNA, EM at 13 months, survival and a behavioural battery in an epidermis-rescued whole-body Elovl1 knockout. WWOX: zero occurrences.
+
+Note text to carry:
+🔴 **A readout template, not WWOX evidence.** Chain-length shortening (C24 and C26 almost absent) with total GalCer down 39 percent and mild, late myelin thinning confined to the smallest and largest axons (EM at one age, 13 months; animals per group not stated). Two of 22 knockouts died of startle epilepsy and only 22 of 66 expected knockouts were present at three weeks. The text reports no wide-beam difference while Figure 4L prints P .0199 for wide-beam slips. The only VLC-lesion seizure phenotype in this lot is in this mouse; the human ELOVL1 series (PMID 40590574) records none.
+
+### LOCATOR TRIPLES FOR BLIND AUDIT (source 4)
+
+15. Total GalCer down 39 percent | Consistent with the results of the TLC analysis, the total levels of GalCer and 2‐OH GalCer were reduced by 39% and 34%, respectively, in Elovl1 −/− Tg(IVL‐Elovl1) mice relative to control mice. | Results, section 1, `files/fulltext/PMID32123819_Isokawa2019_PMC.xml`
+16. Startle epilepsy deaths | Three more of these mice were lost by the age of eight weeks, and two of them died from startle epilepsy. | Results, section 4, same
+17. EM counts | Average diameters ± SD of myelinated axons: n = 96 [Elovl1 +/+ Tg(IVL‐Elovl1)] and n = 73 [Elovl1 −/− Tg(IVL‐Elovl1)] total axons counted in 13 different fields of view. | Figure 3 legend, same
+18. Wide-beam text | On the wide beam, there were no significant differences between control and Elovl1 −/− Tg(IVL‐Elovl1) mice; however, on the narrow beam, Elovl1 −/− Tg(IVL‐Elovl1) mice moved significantly more slowly and exhibited more paw slips (Figure 4K, L). | Results, section 4, same (panel: `files/figures/PMID32123819/FBA2-1-747-g004.jpg`, Figure 4L wide-beam P .0199)
