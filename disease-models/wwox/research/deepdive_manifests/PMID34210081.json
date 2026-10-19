@@ -276,7 +276,7 @@
     }
    },
    {
-    "proposition": "The section on metabolic-disorder risk attributes risk to the genomic region, not the gene, and its twelve references include a lung-cancer copy-number paper and the SCAR12 family paper, neither of which concerns a metabolic disease.",
+    "proposition": "The section on risk in metabolic disorders speaks of the genomic region containing WWOX in its first sentence (a following paragraph then says genetic variation of WWOX is a risk factor); its twelve references include a lung-cancer copy-number paper and the SCAR12 family paper, neither of which is a metabolic-disease association study by conventional definition (the review itself counts cancer among metabolic-dysfunction diseases).",
     "snippet": "The genomic region containing the WWOX gene has been identified as a genetic risk factor in each of these metabolic diseases",
     "anchor": "4. WWOX Genomic Region Is a Risk Factor in Metabolic Disorders, paragraph 1",
     "surface": "body",
@@ -286,6 +286,17 @@
      "system": "narrative review; Drosophila, human cell and mouse studies as cited; population GWAS as cited",
      "genotype": "WWOX loss, reduction and overexpression as reported in cited sources",
      "endpoint": "none measured"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34210081.json",
+     "entry": 4,
+     "what_changed": "Narrowed my own committed proposition after a blind audit found it overshot: the source's following paragraph does call WWOX genetic variation a risk factor, and the review itself counts cancer among metabolic-dysfunction diseases.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
     }
    },
    {

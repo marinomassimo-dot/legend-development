@@ -989,3 +989,15 @@ catalytic-dead control, a titration. The missing item is the experiment, not the
 **Cost / API / privacy risk:** none. The auto-mode classifier refused one dry-run of `record_scoped_edit.py apply` against the shared registry; the op list was shipped in the candidate with the refusal stated and the `old` string verified by a count in the branch's own file.
 
 **Next surgical micro-step:** none required; the integrator dry-runs the DL-MECH-012 op list before applying.
+
+## 2026-10-19 · scientist-d · DEBT-WWOX-DIRECT-D-20261019
+
+**Gap (with evidence).** `pubmed_identity_check.py` reported TITLE_MISMATCH for PMID 17567906, a clean record, because for an article with no `ELocationID` it fell back to the last `ArticleId` of the whole efetch record, which sits in the reference list and is a cited paper's DOI. A false mismatch sends a reader hunting for a hybrid record that does not exist; the same defect in the other direction would pass a hybrid.
+
+**CHANGE (proportional micro-upgrade, shipped).** `fetch_pubmed` now reads only `MedlineCitation/Article/ELocationID` and `PubmedData/ArticleIdList`, first match. Regression `test_doi_comes_from_the_article_not_its_reference_list` in `framework/scripts/test_pubmed_identity_check.py` (5 tests, OK). Disease-agnostic.
+
+**Named, not built.** (1) PMC pages for author-manuscript deposits (Europe PMC XML returns HTTP 500) were reachable only through an Internet Archive capture of the PMC page plus the figure blobs it names; this route worked five times and is not written down in `find-fulltext`; a short tier entry would save the next actor an hour. (2) Three free-to-read papers are blocked by publisher bot challenges (no browser tool in this session); a browser-capable retrieval tier is an operator-side capability, not a script.
+
+**Cost / API / privacy risk:** none; no keyed API, no paid or unauthorised source.
+
+**Next surgical micro-step:** add the archived-PMC-page route to the `find-fulltext` skill's Tier 0 notes.

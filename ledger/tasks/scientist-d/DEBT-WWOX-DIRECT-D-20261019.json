@@ -29,7 +29,7 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "IN_PROGRESS",
+ "CURRENT_STATE": "COMPLETE",
  "assigned_on": "2026-10-19",
  "TASK_ACK": {
   "TASK_ID": "DEBT-WWOX-DIRECT-D-20261019",
@@ -46,6 +46,59 @@
   "durable_pointer": "branch task/DEBT-WWOX-DIRECT-D-20261019, worktree .claude/worktrees/debt-d",
   "note": "scientist-d is a stated assumption of the Orchestrator for this batch"
  },
- "DEFAULTS_TAKEN": [],
- "STOP_LOG": []
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "legend_commit.sh refused each manifest commit as STALE (pathograph drift) while peers and the Orchestrator work in parallel",
+   "default": "committed with LEGEND_STALE_SURFACES_BECAUSE naming the parallel batch; derived surfaces left to the Orchestrator",
+   "why_safe": "the dispatch brief says shared derived surfaces are regenerated only when all inputs are committed",
+   "would_have_differed": "a single-actor wave would regenerate the pathograph first"
+  },
+  {
+   "condition": "Europe PMC fullTextXML returned HTTP 500 for four author-manuscript PMC deposits (Hsu 2009, Lin 2011, Huang 2016, Huang 2018)",
+   "default": "used the Internet Archive capture of the PMC page as the text surface and the figure blobs it names; recorded the capture timestamp and digest in the manifests; supplements declared not_read",
+   "why_safe": "lawful free-to-read deposits; the surface is verified by the validator against its SHA-256; coverage understated",
+   "would_have_differed": "a working XML endpoint would have been preferred"
+  },
+  {
+   "condition": "fifteen listed debts have no lawful body obtainable (subscription or publisher bot challenge)",
+   "default": "parked with the cascade run; no Sci-Hub-type source, no keyed publisher API, no paid retrieval; wishlist in best-value order in the commit candidate",
+   "why_safe": "reserved acts (external spend, unlawful retrieval) not taken",
+   "would_have_differed": "an operator-supplied PDF would be read at once"
+  },
+  {
+   "condition": "scope: read eight papers, four of them not named in the contract (Lee 2017, Lin 2011, Huang 2016, Lee 2021, chased from the named papers' reference lists); the other four (Chen 2018, Hong 2007, Hsu 2009, Huang 2018) are named debts",
+   "default": "followed the debt chain to the primaries behind the named papers' load-bearing sentences and to the one metabolic-theme review not yet read",
+   "why_safe": "inside the theme and the lot's intent; each reading has a manifest PASS and a staged receipt; none touches a current file",
+   "would_have_differed": "a strict reading of the contract list would have stopped at three read and the rest parked"
+  },
+  {
+   "condition": "a blind audit found one overshoot in my own committed locator proposition (Lee 2021, region versus gene)",
+   "default": "narrowed the manifest proposition with a declared contradicts_locator (audit object attached) and the note text; ran locator_contradiction_audit.py --working-tree --fail-on-undeclared clean",
+   "why_safe": "the correction path of the standing brief",
+   "would_have_differed": "none"
+  }
+ ],
+ "STOP_LOG": [],
+ "WAVE_RESULT": {
+  "papers_read": 8,
+  "complete": 4,
+  "partial": 4,
+  "parked": 15,
+  "receipts_staged": [
+   "FTR-20261019-29675105-01",
+   "FTR-20261019-17567906-01",
+   "FTR-20261019-19366691-01",
+   "FTR-20261019-29310447-01",
+   "FTR-20261019-28426730-01",
+   "FTR-20261019-21901168-01",
+   "FTR-20261019-27339895-01",
+   "FTR-20261019-34210081-01"
+  ],
+  "outputs": [
+   "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+   "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-01.md",
+   "disease-models/wwox/research/session_evaluations/2026-10-19_debts_scientist-d.md"
+  ],
+  "micro_upgrade": "pubmed_identity_check takes the article's own DOI (regression added)"
+ }
 }

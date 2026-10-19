@@ -70,7 +70,7 @@
 **What it measures.** Nothing; it is a narrative review by the laboratory that produced most of the Tyr33, Ser14, Zfra and Hyal-2 literature. It restates mouse, rat and human WWOX data and proposes a pY33 (anti-cancer, protective in neurons) versus pS14 (cancer-promoting, neurodegeneration-enhancing) switch.
 
 **What it does and does not carry on the metabolic theme.** Two sentences bear on it, and both are restatements:
-- "Null mutations of WWOX/Wwox in humans, mice, and rats lead to severe neural diseases ..., metabolic disorders associated with lipid, cholesterol and glucose metabolism, and early death" cites four items, two of them reviews, one an editorial and one a commentary (refs 27, 28, 55, 56). None is a primary report of a human biallelic-loss case. The sentence puts human null mutations, mouse knockouts and the rat frameshift in one clause; the lde rat allele is a C-terminal frameshift, not a null, as the repository's earlier reading of the rat paper records.
+- "Null mutations of WWOX/Wwox in humans, mice, and rats lead to severe neural diseases ..., metabolic disorders associated with lipid, cholesterol and glucose metabolism, and early death" cites four items that are, by title and venue (an inference; no reference type is printed), two reviews, an editorial and a commentary (refs 27, 28, 55, 56). None is a primary report of a human biallelic-loss case. The sentence puts human null mutations, mouse knockouts and the rat frameshift in one clause; the lde rat allele is a C-terminal frameshift, not a null, as the repository's earlier reading of the rat paper records.
 - "Conditional Wwox knockout mice suffer severe metabolic defect, growth retardation, reduced bone volume, hypocapnia, impaired hematopoiesis, leukopenia, and splenic atrophy" cites the Ludes-Meyers 2009 allele-generation paper. Comparing with that paper's existing manifest (hypoglycaemia, uraemia and acidosis at postnatal day 18; leukopenia and anaemia on two animals; bone trend at P = 0.07): the direction is faithful, but the animals are the germline-deleted knockout derived from the floxed allele, not a conditional deletion, and "hypocapnia" is not a value I could confirm from that manifest.
 - Also checked from the text itself: the knockout survival "three weeks" cites a paper on the Wwox and p73 association and a TRAPPC6A-delta paper, not a knockout report, and the companion Hsu 2009 paper gives "approximately 1 month".
 
@@ -136,7 +136,53 @@
 **What it carries on the metabolic theme, and what it does not support.**
 - *Drosophila.* WWOX-deficient flies show "no phenotypic consequences"; reduced WWOX worsens, and extra WWOX suppresses, tissue phenotypes caused by mitochondrial deficiency, in a way that needs the SDR active-site tyrosine (Y288F in the fly, residue 293 in human). The text then infers that human WWOX-deficiency pathology is "likely to be treatable" through a compensating pathway; no compensating pathway is named, so this is an `IPOTESI`.
 - *Mammalian chain.* HIF1A and glucose, aerobic glycolysis, muscle ablation, HDL and lipids and an interactome enrichment are listed as one sentence of single-laboratory results; I checked that the primaries named there are already read in this repository (Abu-Remaileh 2014, Iatan 2014, Lee 2019 interactome, the muscle paper) except the two subscription items below.
-- *Human risk.* "The genomic region containing the WWOX gene has been identified as a genetic risk factor in each of these metabolic diseases" attributes risk to the region, not the gene, and its twelve references include a lung-cancer copy-number paper and the SCAR12 family paper, neither a metabolic disease. The review mentions human biallelic loss-of-function families only in the enzyme-specificity section, and never links them to a metabolic phenotype.
+- *Human risk.* "The genomic region containing the WWOX gene has been identified as a genetic risk factor in each of these metabolic diseases" is phrased about the region (a later paragraph does say genetic variation of WWOX is a risk factor), and its twelve references include a lung-cancer copy-number paper and the SCAR12 family paper, neither a metabolic-disease association study by conventional definition (the review itself counts cancer among metabolic-dysfunction diseases; narrowed after the blind audit below). The review mentions human biallelic loss-of-function families only in the enzyme-specificity section, and never links them to a metabolic phenotype.
 - *The enzyme.* The substrate and product are unknown; the build-up-of-a-metabolite model is conjecture with the metabolite unidentified.
 
 **System gap and change.** Flies and cultured cells for mechanism; population GWAS for human risk; nothing in the reference genotype class (constitutive biallelic loss in a developing brain). No claim moves. It is the best single statement that the WWOX-metabolism axis is a Drosophila and mouse-tissue axis without a human biallelic-loss metabolic datum, which is what the repository's own readings concluded; the unread primaries behind its Drosophila arm are Choo 2015 and Dayan 2013, both subscription (parked).
+
+---
+
+## Blind audit (legend-locator-audit, run blind on eight load-bearing triples)
+
+A separate agent with no session history received only eight (proposition, quote, anchor) triples and the source files. No baseline claim is narrowed, so the audit was not mandatory; it was run because the Orchestrator asked for it on load-bearing triples and because several propositions here are absence claims.
+
+| # | Source | Verdict | What the audit added |
+|---|---|---|---|
+| 1 | Hong 2007: no mitochondrial measurement; the statement points to a "submitted" paper | SUPPORTED | The only fractionation in its Methods is cytosol and nucleus; Figure 6 is a yeast two-hybrid map of the SDR domain. |
+| 2 | Lin 2011: siRNA arm, P = 0.0042, 0.0436, 0.0465, 0.4403 | SUPPORTED | No knockdown-validation blot is shown in Figure 5; the analysis is separate within-condition P values with no interaction test; the siRNA bars still drop about 9 points with U0126. |
+| 3 | Huang 2016: Figure 4C has no mitochondrial marker row | SUPPORTED | alpha-tubulin sits on the cytosol side only; mitochondrial localisation is also imaged with a dye in 4E, which is not a blot. |
+| 4 | Huang 2018: refs 27, 28, 55, 56 are reviews, an editorial and a commentary | UNDERSHOOT | The reference type is not printed; it is inferred from title and venue (now stated in the text above). |
+| 5 | Lee 2017: the Discussion claims an expression finding the paper does not contain | SUPPORTED | The Results phrase "in human HCC" for GTEx describes a genotype-versus-expression comparison, not tumour against normal. |
+| 6 | Chen 2018: Table 2 percentages use denominators 61 and 85 | SUPPORTED | The same denominators apply to every genotype percentage in Table 2, not only AA+AG; the Results text also calls the non-recurrence group "control subjects". |
+| 7 | Hsu 2009: the mitochondrial sentence is an inference | SUPPORTED | None. |
+| 8 | Lee 2021: region versus gene; two non-metabolic references | OVERSHOOT | A following paragraph does say variation of WWOX is a risk factor, and the review counts cancer among metabolic-dysfunction diseases. The manifest proposition was narrowed with a declared `contradicts_locator` (audit object attached); the text above was narrowed. |
+
+Disposition: one overshoot caught by the auditor (not by me), one undershoot; both corrected before landing.
+
+## Parked papers and the cascade (full wishlist in `CC-20261019-SCIENTISTD-DEBT-01.md`, section 4)
+
+Fifteen papers have no lawful body obtainable here. Cascade for each: PubMed identity check, Unpaywall, Europe PMC search and full text, OpenAlex, CORE, Internet Archive, publisher landing and PDF with and without a browser-like User-Agent, HAL, one Semantic Scholar try (HTTP 429), web search for the two highest-value Chang-laboratory items. Three of them (Sze 2004, Yang 2021, Aqeilan 2004) are free to read but sit behind a publisher bot challenge: a browser download by the operator suffices. Best-value order: Choo 2015 (respiratory complex), Mignot 2015, Tabarki 2015, Sze 2004, Hsu 2008, Lo 2008, Chen 2005, Choi 2026, Dayan 2013, Yang 2021, Aqeilan 2004, Teng 2012, Chang 2003, Chang 2007, Lin 2017.
+
+## Result table
+
+| PMID | Paper | Depth | Receipt JSON (staged) | Manifest | Locators |
+|---|---|---|---|---|---|
+| 29675105 | Chen 2018 (WWOX SNP, HCC) | complete | `FTR-20261019-29675105-01` | PASS | 11 |
+| 17567906 | Hong 2007 (Zfra, TNF, WOX1) | complete | `FTR-20261019-17567906-01` | PASS | 15 |
+| 19366691 | Hsu 2009 (TGF-beta1, Hyal-2, WOX1) | partial | `FTR-20261019-19366691-01` | PASS | 13 |
+| 29310447 | Huang 2018 (phosphorylation review) | partial | `FTR-20261019-29310447-01` | PASS | 10 |
+| 28426730 | Lee 2017 (WWOX SNPs, HCC risk) | complete | `FTR-20261019-28426730-01` | PASS | 7 |
+| 21901168 | Lin 2011 (MEK1/WOX1, leukaemia) | partial | `FTR-20261019-21901168-01` | PASS | 11 |
+| 27339895 | Huang 2016 (IkappaB-alpha/ERK/WWOX) | partial | `FTR-20261019-27339895-01` | PASS | 12 |
+| 34210081 | Lee 2021 (WWOX gene and metabolism review) | complete | `FTR-20261019-34210081-01` | PASS | 9 |
+
+All receipts are under `receipt_staging/scientist-d/` and validated in isolation (`validate_receipt` plus `validate_new_receipt`). Every figure of every paper read was opened as an image (Hsu 2009 figures 2 and 4 and Hong 2007 figure 12 viewed but not declared as artefacts); none was read from a caption alone.
+
+## The plain statement
+
+**The debt chase found no WWOX-direct primary that measures a metabolic consequence of WWOX loss.** What it found instead is where the secondary literature's mitochondrial and phosphorylation statements end: single-laboratory observations in cultured leukaemia, fibroblast and tumour lines under pharmacological or acute stress, with overexpression and dominant-negative constructs and no Wwox-null cell. The Lo 2015 pointer for Zfra/WWOX mitochondrial translocation resolves, for Hong 2007, to a paper that says "submitted"; the TGF-beta/Hyal-2 model of Sze 2015 rests on an overexpression and yeast-substitution paper with one dominant-negative blot; the mitochondrial relocation after phorbol ester is one confocal series in Jurkat cells; the pS14 model is a blot series in one T-ALL line plus an undisclosed peptide experiment. The primaries that would test the mitochondrial leg directly (retinal, MPP+, Zfra/cytochrome c) and the Drosophila respiratory primary (Choo 2015) are subscription and are the operator's first four requests. The HCC SNP papers (Chen 2018, Lee 2017) are internally inconsistent about what their variants do and carry no loss-of-function readout. No claim moves; CLAIM 009 receives one MINOR annotation.
+
+## Micro-upgrade shipped
+
+`framework/scripts/pubmed_identity_check.py` took the last `ArticleId` DOI of the whole PubMed record, which for an article with no `ELocationID` is a cited paper's DOI: it reported a clean record (PMID 17567906) as TITLE_MISMATCH against a paper it cites. It now reads the article's own identifiers only; regression `test_doi_comes_from_the_article_not_its_reference_list` (5 tests, OK). Disease-agnostic: any PubMed record with a reference list and no `ELocationID`.
