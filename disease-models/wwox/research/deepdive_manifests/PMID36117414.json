@@ -1,0 +1,302 @@
+{
+ "schema_version": 2,
+ "pmid": "36117414",
+ "doi": "10.1111/epi.17412",
+ "pmcid": "PMC10952408",
+ "receipt": "FTR-20261019-36117414-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the interventions selection file's one-line 'why it matters' for this row and the group H5 header, plus the earlier readings of this lot done in this session (Yuskaitis, Phillips-Farfan, Salvati) and the registry theme records CLAIM 042 and DL-MECH-020 admitted after the first pass of the first paper. No registry record about this paper (none exists).",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/interventions_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a non-WWOX comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype; class-level literature only, BLOCK-1 caution carried in the analysis note."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the load-bearing triples were checked mechanically by locator_audit.py and are exposed in the analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "output_kind": "narrative_review",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Review and hypothesis paper of glucose and glycogen metabolism in epilepsy (FDG-PET, 13C-glucose labelling, rodent seizure models, two human biopsy and microdialysis series). It contributes background on fuel supply during seizures and on starvation before seizures; it contains one original figure from the authors' earlier mouse data. Not a WWOX system and not a feeding or fluid study. The text contains no mention of GSK3 or WWOX (a string count over the rendered text returned 0 for both), so the selection file's link to the GSK3B arm is not carried by this paper."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (fasting OR \"caloric restriction\" OR \"calorie restriction\" OR \"dietary restriction\")",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the four hits are type 2 diabetes association studies (fasting glucose), none a fasting or restriction intervention"
+   },
+   {
+    "query": "WWOX AND (mTOR OR mTORC1 OR AMPK)",
+    "count": 8,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (hypoglycemia OR hypoglycaemia OR dextrose OR \"glucose infusion\")",
+    "count": 21,
+    "source": "PubMed ESearch rettype=count 2026-10-19; hits are glucose-metabolism, glycolysis and association papers, none an infusion or dextrose intervention"
+   },
+   {
+    "query": "WWOX AND (edema OR oedema OR hyponatremia OR \"fluid overload\")",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the two hits are a high-altitude pulmonary oedema locus list and a zebrafish embryo knockdown paper"
+   },
+   {
+    "query": "WWOX AND (refeeding OR thiamine OR \"parenteral nutrition\")",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are PubMed search hits only (ESearch rettype=count, 2026-10-19), not a census; none of the WWOX hits tests the intervention of this group."
+ },
+ "multihop": {
+  "references_enumerated": 140,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted (140 entries), not read item by item; no WWOX-directed reference seen in the body."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 36117414 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED for this PMID in the seven registry surfaces at commit 0c85331b341e; a statement about that query only. CLAIM 042 and DL-MECH-020 (ketogenic-diet lines) admitted for comparison after the first pass."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 140,
+   "references_screened": 134,
+   "references_with_doi": 134,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 6
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID36117414_Dienel2023_PMC.xml",
+   "sha256": "0197ccf95ef002e83a408b644ef09f00790a62c41f9bedab6a041714b9199670",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10952408/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "0197ccf95ef002e83a408b644ef09f00790a62c41f9bedab6a041714b9199670"
+   }
+  },
+  {
+   "path": "files/figures/PMID36117414/native/EPI-64-29-g001.jpg",
+   "sha256": "0ccdb5372480e7924f00b46c0565e9a3629fad5b92236208b070102c66d2c40c",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10952408.1/EPI-64-29-g001.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "0ccdb5372480e7924f00b46c0565e9a3629fad5b92236208b070102c66d2c40c"
+   }
+  },
+  {
+   "path": "files/figures/PMID36117414/native/EPI-64-29-g002.jpg",
+   "sha256": "762893bd7d415ce500db36d81b35fb4d1488de5bb10012f4f0ffa90fe47e2a39",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10952408.1/EPI-64-29-g002.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "762893bd7d415ce500db36d81b35fb4d1488de5bb10012f4f0ffa90fe47e2a39"
+   }
+  },
+  {
+   "path": "files/figures/PMID36117414/native/EPI-64-29-g003.jpg",
+   "sha256": "15a814eb1b84033f914526dda64294590080cb97f2acaf0620d8f4d1fc91bc09",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10952408.1/EPI-64-29-g003.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "15a814eb1b84033f914526dda64294590080cb97f2acaf0620d8f4d1fc91bc09"
+   }
+  },
+  {
+   "path": "files/figures/PMID36117414/native/EPI-64-29-g004.jpg",
+   "sha256": "8fcc375d6744e4384e93d08176d2af5cc36096d5ed99132376e2ec1bae7a22aa",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10952408.1/EPI-64-29-g004.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "8fcc375d6744e4384e93d08176d2af5cc36096d5ed99132376e2ec1bae7a22aa"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "It is a hypothesis and review paper with no primary data.",
+    "snippet": "As this is a hypothesis paper, there were no primary data used, and no ethical approval and no patient consent were needed.",
+    "anchor": "Statements relating to ethics and integrity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36117414_Dienel2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In rats starved for 24 h before bicuculline seizures, glucose stayed low, glycogen was nearly depleted and did not recover.",
+    "snippet": "Importantly, when rats were starved for 24 h prior to seizure induction, blood and brain glucose levels remained low, glycogen levels were nearly depleted and did not recover, and glucose‐6‐P levels were reduced.",
+    "anchor": "Brain glycogen levels in epilepsy models and patients, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36117414_Dienel2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review concludes that blood-borne fuel is essential for brain energetics and glycogen replenishment.",
+    "snippet": "These effects of preseizure starvation indicate fuel availability from the blood is essential for brain energetics and glycogen replenishment.",
+    "anchor": "Brain glycogen levels in epilepsy models and patients, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36117414_Dienel2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Interictal brain glucose is not reduced in the studies compiled in Table 1.",
+    "snippet": "The results from different studies (Table 1) strongly support the conclusion that brain glucose levels are not reduced interictally and that brain glucose deficiency is an unlikely cause of interictal hypometabolism in animal models for epilepsy.",
+    "anchor": "Brain glucose levels and glucose utilization, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36117414_Dienel2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In healthy adults acute hypoglycaemia raised glycogen and repeated hypoglycaemia blunted that response, which the authors take as glycogen responding to fuel deficit.",
+    "snippet": "that was blunted with repeated episodes of hypoglycemia, 69 supporting the possibility that glycogen levels respond to fuel deficits during hypoglycemia and seizures.",
+    "anchor": "Brain glycogen levels, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36117414_Dienel2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Brain-specific glycogen synthase-deficient mice were more susceptible to seizures, cited as support.",
+    "snippet": "Furthermore, absence of glycogen seems to promote seizures, as brain‐specific glycogen synthase‐deficient mice showed increased susceptibility to seizures.",
+    "anchor": "Glycogen and seizure generation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36117414_Dienel2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The central claim is a hypothesis: glycogen use adapts to recurrent seizures, with interictal glycogenolysis lowering FDG signal.",
+    "snippet": "We propose that glycogen levels and utilization adapt to recurrent seizures in epileptic brains, with increased concentrations and unrecognized functional roles during interictal periods.",
+    "anchor": "Hypothesis section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36117414_Dienel2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say that evidence on glycogen turnover between seizures is scarce and that more research is needed.",
+    "snippet": "Elevated interictal glycogen content may appear to contradict its proposed role in fueling spiking or high‐frequency oscillations and managing oxidative stress, but we emphasize that there is a paucity of information regarding glycogen turnover and regulation during the interictal period.",
+    "anchor": "Glycogen and seizure generation, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36117414_Dienel2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The proposed benefit of auxiliary fuels (ketones, MCT, pyruvate) is stated as an expectation.",
+    "snippet": "Supplemental oxidative fuel is expected to reduce glucose utilization and spare glucose for glycolytic production of ATP and for flux into the pentose phosphate shunt in both neurons and astrocytes",
+    "anchor": "Glycogen and seizure generation, final paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36117414_Dienel2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Stress, alerting and seizures release norepinephrine, which the authors list as a trigger of glycogen mobilisation that could bias PET and labelling data.",
+    "snippet": "First, stress, alerting, and seizures trigger norepinephrine release to blood and can activate the locus coeruleus to cause norepinephrine release in brain",
+    "anchor": "Hypothesis, scenarios paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36117414_Dienel2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 shows plasma glucose 13C enrichment similar between groups and lower enrichment in G6P, F6P, DHAP and PEP in the status epilepticus group (asterisks), with total pools unchanged.",
+    "snippet": "Visual attestation of Figure 1: percent 13C enrichment, plasma glucose about 14.4 (no SE) and 12.6 (SE) with no asterisk; hippocampal G6P about 13.3 versus 10.3, F6P about 13.3 versus 10.4, DHAP about 15.6 versus 13.0 and PEP about 14.9 versus 11.9 with asterisks, F16BP and PYR without asterisks.",
+    "anchor": "Figure 1 (image EPI-64-29-g001)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID36117414/native/EPI-64-29-g001.jpg"
+    ],
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "chronic stage of the mouse pilocarpine model, hippocampus, 13C-glucose injection, interictal",
+     "endpoint": "percent 13C enrichment of glycolytic metabolites"
+    }
+   },
+   {
+    "proposition": "The author group's own back-of-envelope calculation says glycogen could carry a 20% fall in glucose use for about 90 min in mouse hippocampus.",
+    "snippet": "Based on glycogen content of ~13 μmol/g reported in healthy mouse hippocampus, 88 this amount would be able to sustain ~90 min of a reduction in CMRGLC by providing energy from glycogenolysis.",
+    "anchor": "Glycogenolysis reduces glucose utilization in astrocytes, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36117414_Dienel2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC10952408/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure panel."
+ }
+}
