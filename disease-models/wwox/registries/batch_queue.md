@@ -81,12 +81,12 @@ time; it does not redistribute or license the article text.
 
 | Status | Records | Share |
 |---|---:|---:|
-| **Not found by identifier** — run the intake gate | 277 | 39% |
+| **Not found by identifier** — run the intake gate | 271 | 38% |
 | **Catalogued, never processed** — the reading debt | 135 | 19% |
-| Known to the tracking log only | 101 | 14% |
+| Known to the tracking log only | 99 | 14% |
 | Processed from the abstract | 3 | 0% |
-| Partial full text read | 53 | 8% |
-| Full text read | 137 | 19% |
+| Partial full text read | 60 | 8% |
+| Full text read | 138 | 20% |
 
 ⚠️ This second table combines registry state with the authoritative append-only
 `fulltext_read_receipts.jsonl`. Historical registry-only full-text declarations remain
@@ -299,7 +299,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [38203337](https://pubmed.ncbi.nlm.nih.gov/38203337/) | 2023 | ✅ | Journal Article | screened | Mechanistic Investigation of WWOX Function in NF-kB-Induced Skin Inflammation in Psoriasis. |
 | [37324196](https://pubmed.ncbi.nlm.nih.gov/37324196/) | 2023 | ✅ | Journal Article | screened | WWOX Polymorphisms as Predictors of the Biochemical Recurrence of Localized Prostate Cancer after Radical Prostatectomy. |
 | [36979157](https://pubmed.ncbi.nlm.nih.gov/36979157/) | 2023 | ✅ | Journal Article | screened | Antineoplastic Nature of WWOX in Glioblastoma Is Mainly a Consequence of Reduced Cell Viability and Invasion. |
-| [36530994](https://pubmed.ncbi.nlm.nih.gov/36530994/) | 2022 | ✅ | Journal Article | screened | WWOX-rs13338697 genotype predicts therapeutic efficacy of ADI-PEG 20 for patients with advanced hepatocellular carcinoma. |
 | [36364214](https://pubmed.ncbi.nlm.nih.gov/36364214/) | 2022 | ✅ | Journal Article | screened | WWOX Modulates ROS-Dependent Senescence in Bladder Cancer. |
 | [35883580](https://pubmed.ncbi.nlm.nih.gov/35883580/) | 2022 | ✅ | Journal Article; Research Support, Non-U.S. Gov't; Research Support, U.S. Gov't, Non-P.H.S.; Review | screened | WWOX Controls Cell Survival, Immune Response and Disease Progression by pY33 to pS14 Transition to Alternate Signaling Partners. |
 | [35563688](https://pubmed.ncbi.nlm.nih.gov/35563688/) | 2022 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | screened | Determination of WWOX Function in Modulating Cellular Pathways Activated by AP-2α and AP-2γ Transcription Factors in Bladder Cancer. |
@@ -408,7 +407,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [37930698](https://pubmed.ncbi.nlm.nih.gov/37930698/) | 2023 | ✅ | Journal Article; Research Support, N.I.H., Intramural | unmatched | Neighborhood Deprivation and DNA Methylation and Expression of Cancer Genes in Breast Tumors. |
 | [37686047](https://pubmed.ncbi.nlm.nih.gov/37686047/) | 2023 | ✅ | Journal Article | unmatched | Multi-Omics Analysis of NCI-60 Cell Line Data Reveals Novel Metabolic Processes Linked with Resistance to Alkylating Anti-Cancer Agents. |
 | [37461096](https://pubmed.ncbi.nlm.nih.gov/37461096/) | 2023 | ✅ | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't | unmatched | ✎ corrected — Landscape of germline pathogenic variants in patients with dual primary breast and lung cancer. |
-| [37328865](https://pubmed.ncbi.nlm.nih.gov/37328865/) | 2023 | ✅ | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't | unmatched | Shared genetic risk loci between Alzheimer's disease and related dementias, Parkinson's disease, and amyotrophic lateral sclerosis. |
 | [36975604](https://pubmed.ncbi.nlm.nih.gov/36975604/) | 2023 | ✅ | Journal Article | unmatched | Epigenome-Wide Changes in the Cell Layers of the Vein Wall When Exposing the Venous Endothelium to Oscillatory Shear Stress. |
 | [36874126](https://pubmed.ncbi.nlm.nih.gov/36874126/) | 2023 | ✅ | Editorial | unmatched | ✎ corrected — Editorial: The role of STAT3 signaling pathway in tumor progression. |
 | [35383826](https://pubmed.ncbi.nlm.nih.gov/35383826/) | 2023 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | unmatched | Plasma biomarkers and genetics in the diagnosis and prediction of Alzheimer's disease. |
@@ -421,7 +419,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [35627222](https://pubmed.ncbi.nlm.nih.gov/35627222/) | 2022 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | unmatched | Feature Fusion and Detection in Alzheimer's Disease Using a Novel Genetic Multi-Kernel SVM Based on MRI Imaging and Gene Data. |
 | [35571988](https://pubmed.ncbi.nlm.nih.gov/35571988/) | 2022 | ✅ | Journal Article | unmatched | Mitochondrial 1555 G>A variant as a potential risk factor for childhood glioblastoma. |
 | [35047994](https://pubmed.ncbi.nlm.nih.gov/35047994/) | 2021 | ✅ | Journal Article | unmatched | Combination of Clptm1L and TMEM207 Expression as a Robust Prognostic Marker in Oral Squamous Cell Carcinoma. |
-| [33854788](https://pubmed.ncbi.nlm.nih.gov/33854788/) | 2021 | ✅ | Journal Article | unmatched | Metabolome-Genome-Wide Association Study (mGWAS) Reveals Novel Metabolites Associated with Future Type 2 Diabetes Risk and Susceptibility Loci in a Case-Control Study in a Chinese Prospective Cohort. |
 | [33074286](https://pubmed.ncbi.nlm.nih.gov/33074286/) | 2021 | ✅ | Journal Article; Meta-Analysis; Research Support, N.I.H., Extramural | unmatched | ✎ corrected — Novel Alzheimer Disease Risk Loci and Pathways in African American Individuals Using the African Genome Resources Panel: A Meta-analysis. |
 | [32922661](https://pubmed.ncbi.nlm.nih.gov/32922661/) | 2020 | ✅ | Journal Article | unmatched | The NKL-code for innate lymphoid cells reveals deregulated expression of NKL homeobox genes HHEX and HLX in anaplastic large cell lymphoma (ALCL). |
 | [32669614](https://pubmed.ncbi.nlm.nih.gov/32669614/) | 2020 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | unmatched | The HNRNPA2B1-MST1R-Akt axis contributes to epithelial-to-mesenchymal transition in head and neck cancer. |
@@ -430,7 +427,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [32290755](https://pubmed.ncbi.nlm.nih.gov/32290755/) | 2020 | ✅ | Journal Article; Research Support, Non-U.S. Gov't; Review | unmatched | Clinical epigenetics and multidrug-resistant bacterial infections: host remodelling in critical illness. |
 | [32180796](https://pubmed.ncbi.nlm.nih.gov/32180796/) | 2020 | ✅ | Journal Article | unmatched | Genetic Architecture of Carcass and Meat Quality Traits in Montana Tropical® Composite Beef Cattle. |
 | [31745703](https://pubmed.ncbi.nlm.nih.gov/31745703/) | 2020 | ✅ | Journal Article | unmatched | Transcriptome analysis reveals overlap in fusion genes in a phase I clinical cohort of TNBC and HGSOC patients treated with buparlisib and olaparib. |
-| [31145772](https://pubmed.ncbi.nlm.nih.gov/31145772/) | 2019 | ✅ | Journal Article | unmatched | East Asian Genome-wide association study derived loci in relation to type 2 diabetes in the Han Chinese population. |
 | [30805310](https://pubmed.ncbi.nlm.nih.gov/30805310/) | 2019 | ✅ | Journal Article; Review | unmatched | WW Domain-Containing Proteins YAP and TAZ in the Hippo Pathway as Key Regulators in Stemness Maintenance, Tissue Homeostasis, and Tumorigenesis. |
 | [30529582](https://pubmed.ncbi.nlm.nih.gov/30529582/) | 2019 | ✅ | Journal Article; Meta-Analysis; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't | unmatched | ✎ corrected — Large-Scale Genome-Wide Association Study of East Asians Identifies Loci Associated With Risk for Colorectal Cancer. |
 | [30385613](https://pubmed.ncbi.nlm.nih.gov/30385613/) | 2019 | ✅ | Clinical Trial, Phase III; Journal Article; Multicenter Study; Randomized Controlled Trial; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't | unmatched | Genetic Variants of VEGFA and FLT4 Are Determinants of Survival in Renal Cell Carcinoma Patients Treated with Sorafenib. |
@@ -469,7 +465,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [24127039](https://pubmed.ncbi.nlm.nih.gov/24127039/) | 2014 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | unmatched | WW domain containing oxidoreductase induces apoptosis in gallbladder-derived malignant cell by upregulating expression of P73 and PUMA. |
 | [27234387](https://pubmed.ncbi.nlm.nih.gov/27234387/) | 2013 | ✅ | Journal Article | unmatched | Self-aggregating TIAF1 in lung cancer progression. |
 | [24098343](https://pubmed.ncbi.nlm.nih.gov/24098343/) | 2013 | ✅ | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't | unmatched | ✎ corrected — Genome-wide association study of gene by smoking interactions in coronary artery calcification. |
-| [24086726](https://pubmed.ncbi.nlm.nih.gov/24086726/) | 2013 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | unmatched | Replication study for the association of 9 East Asian GWAS-derived loci with susceptibility to type 2 diabetes in a Japanese population. |
 | [23464470](https://pubmed.ncbi.nlm.nih.gov/23464470/) | 2012 | ✅ | Journal Article | unmatched | Effects of sodium valproate on the growth of human ovarian cancer cell line HO8910. |
 | [23317259](https://pubmed.ncbi.nlm.nih.gov/23317259/) | 2012 | ✅ | Comparative Study; Journal Article; Research Support, Non-U.S. Gov't | unmatched | Ectopic overexpression of COTE1 promotes cellular invasion of hepatocellular carcinoma. |
 | [23028374](https://pubmed.ncbi.nlm.nih.gov/23028374/) | 2012 | ✅ | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't | unmatched | De novo CNV formation in mouse embryonic stem cells occurs in the absence of Xrcc4-dependent nonhomologous end joining. |
@@ -582,8 +577,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [40263068](https://pubmed.ncbi.nlm.nih.gov/40263068/) | 2025 | ✅ | Published Erratum | unmatched | ℹ️ CORRECTION NOTICE — Corrigendum to "WWOX attenuates the progression of gallbladder cancer by suppressing cellular glycolysis through the modulation of the P73/HIF-1a signaling pathway" [Tissue Cell 95 (2025) 102885]. |
 | [40006511](https://pubmed.ncbi.nlm.nih.gov/40006511/) | 2025 | ✅ | Journal Article | unmatched | Novel Hydrogel-Mediated Lentiviral Gene Delivery via Intravesical Administration for Bladder Cancer Treatment. |
 | [39933386](https://pubmed.ncbi.nlm.nih.gov/39933386/) | 2025 | ✅ | Journal Article | unmatched | Infantile Epileptic Spasms Syndrome: Unveiling clinical and genetic variability in a case series from Argentina. |
-| [35053314](https://pubmed.ncbi.nlm.nih.gov/35053314/) | 2022 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | unmatched | Correcting Differential Gene Expression Analysis for Cyto-Architectural Alterations in Substantia Nigra of Parkinson's Disease Patients Reveals Known and Potential Novel Disease-Associated Genes and Pathways. |
-| [33520443](https://pubmed.ncbi.nlm.nih.gov/33520443/) | 2021 | ✅ | Journal Article | unmatched | Identification of a novel association for the WWOX/HIF1A axis with gestational diabetes mellitus (GDM). |
 | [30820047](https://pubmed.ncbi.nlm.nih.gov/30820047/) | 2019 | ✅ | Journal Article; Meta-Analysis; Research Support, Non-U.S. Gov't | unmatched | ✎ corrected — Genetic meta-analysis of diagnosed Alzheimer's disease identifies new risk loci and implicates Aβ, tau, immunity and lipid processing. |
 | [28742274](https://pubmed.ncbi.nlm.nih.gov/28742274/) | 2017 | ✅ | Journal Article | unmatched | Whole exome sequencing identified genetic variations in Chinese hemangioblastoma patients. |
 | [28123895](https://pubmed.ncbi.nlm.nih.gov/28123895/) | 2016 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | unmatched | The non-inflammatory role of C1q during Her2/neu-driven mammary carcinogenesis. |
@@ -615,10 +608,9 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [11719429](https://pubmed.ncbi.nlm.nih.gov/11719429/) | 2001 | — | Journal Article; Research Support, U.S. Gov't, P.H.S. | unmatched | WWOX, the FRA16D gene, behaves as a suppressor of tumor growth. |
 | [41510857](https://pubmed.ncbi.nlm.nih.gov/41510857/) | 2026 | ✅ | Journal Article | screened | An Overview of Drug-Resistant Epilepsies Based on Advances in Genetics: A Cohort Study. |
 | [41776383](https://pubmed.ncbi.nlm.nih.gov/41776383/) | 2026 | — | Journal Article; Multicenter Study | screened | Pharmacogenomics of response to interferon-beta and glatiramer acetate in Multiple Sclerosis: A multi-centric study. |
-| [41007296](https://pubmed.ncbi.nlm.nih.gov/41007296/) | 2025 | ✅ | Journal Article | screened | Prognostic Significance of WWOX/HIF1A Ratio in Cancer Subtypes: Insights into Metabolism, ECM, and EMT. |
 | [28151481](https://pubmed.ncbi.nlm.nih.gov/28151481/) | 2017 | ✅ | Journal Article; Retracted Publication | screened | 🛑 RETRACTED — Epigenetic regulation of HGF/Met receptor axis is critical for the outgrowth of bone metastasis from breast carcinoma. |
 
-*(showing all 513 outstanding records)*
+*(showing all 505 outstanding records)*
 
 ## Already processed from this seed
 
@@ -634,6 +626,7 @@ for an entirely unprocessed record.
 | [41124647](https://pubmed.ncbi.nlm.nih.gov/41124647/) | 2026 | ✅ | partial full text | receipt FTR-20261004-41124647-03 | Genetic and Functional Evidence Links Germline Biallelic Inactivating Variants in WWOX to Histological Mixed-Type Thyroid Cancer. |
 | [41228229](https://pubmed.ncbi.nlm.nih.gov/41228229/) | 2025 | ✅ | partial full text | receipt FTR-20260921-41228229-01 | The Role of WWOX in Cancer Progression: Mechanisms and Therapeutic Potential. |
 | [37897534](https://pubmed.ncbi.nlm.nih.gov/37897534/) | 2023 | ✅ | partial full text | PAPER 130 | Loss of fragile WWOX gene leads to senescence escape and genome instability. |
+| [36530994](https://pubmed.ncbi.nlm.nih.gov/36530994/) | 2022 | ✅ | partial full text | receipt FTR-20261019-36530994-01 | WWOX-rs13338697 genotype predicts therapeutic efficacy of ADI-PEG 20 for patients with advanced hepatocellular carcinoma. |
 | [34140629](https://pubmed.ncbi.nlm.nih.gov/34140629/) | 2021 | ✅ | partial full text | PAPER 096 | Normal cells repel WWOX-negative or -dysfunctional cancer cells via WWOX cell surface epitope 286-299. |
 | [33612478](https://pubmed.ncbi.nlm.nih.gov/33612478/) | 2021 | ✅ | partial full text | CORPUS-STUB-109 | Associations between TUBB-WWOX SNPs, their haplotypes, gene-gene, and gene-environment interactions and dyslipidemia. |
 | [33195192](https://pubmed.ncbi.nlm.nih.gov/33195192/) | 2020 | ✅ | partial full text | PAPER 129 | Wwox Deficiency Causes Downregulation of Prosurvival ERK Signaling and Abnormal Homeostatic Responses in Mouse Skin. |
@@ -671,8 +664,14 @@ for an entirely unprocessed record.
 | [15692750](https://pubmed.ncbi.nlm.nih.gov/15692750/) | 2005 | ✅ | full text | CORPUS P324 | Frequent loss of WWOX expression in breast cancer: correlation with estrogen receptor status. |
 | [15266310](https://pubmed.ncbi.nlm.nih.gov/15266310/) | 2004 | ✅ | full text | CORPUS P244 | Frequent downregulation and loss of WWOX gene expression in human hepatocellular carcinoma. |
 | [30470736](https://pubmed.ncbi.nlm.nih.gov/30470736/) | 2018 | ✅ | full text | receipt FTR-20260909-30470736-01 | ℹ️ CORRECTION NOTICE — Author Correction: WWOX controls hepatic HIF1α to suppress hepatocyte proliferation and neoplasia. |
+| [37328865](https://pubmed.ncbi.nlm.nih.gov/37328865/) | 2023 | ✅ | partial full text | receipt FTR-20261019-37328865-01 | Shared genetic risk loci between Alzheimer's disease and related dementias, Parkinson's disease, and amyotrophic lateral sclerosis. |
+| [33854788](https://pubmed.ncbi.nlm.nih.gov/33854788/) | 2021 | ✅ | partial full text | receipt FTR-20261019-33854788-01 | Metabolome-Genome-Wide Association Study (mGWAS) Reveals Novel Metabolites Associated with Future Type 2 Diabetes Risk and Susceptibility Loci in a Case-Control Study in a Chinese Prospective Cohort. |
+| [24086726](https://pubmed.ncbi.nlm.nih.gov/24086726/) | 2013 | ✅ | partial full text | receipt FTR-20261019-24086726-01 | Replication study for the association of 9 East Asian GWAS-derived loci with susceptibility to type 2 diabetes in a Japanese population. |
+| [31145772](https://pubmed.ncbi.nlm.nih.gov/31145772/) | 2019 | ✅ | full text | receipt FTR-20261019-31145772-01 | East Asian Genome-wide association study derived loci in relation to type 2 diabetes in the Han Chinese population. |
 | [42395553](https://pubmed.ncbi.nlm.nih.gov/42395553/) | 2026 | ✅ | partial full text | receipt FTR-20261004-42395553-02 | WWOX contributes to DNA damage, but not somatic instability in Huntington's disease. |
 | [42523332](https://pubmed.ncbi.nlm.nih.gov/42523332/) | 2026 | ✅ | partial full text | receipt FTR-20260921-42523332-01 | Golgi CATCHR complexes function as organizing hubs for vesicle tethering and fusion. |
+| [35053314](https://pubmed.ncbi.nlm.nih.gov/35053314/) | 2022 | ✅ | partial full text | receipt FTR-20261019-35053314-01 | Correcting Differential Gene Expression Analysis for Cyto-Architectural Alterations in Substantia Nigra of Parkinson's Disease Patients Reveals Known and Potential Novel Disease-Associated Genes and Pathways. |
+| [33520443](https://pubmed.ncbi.nlm.nih.gov/33520443/) | 2021 | ✅ | partial full text | receipt FTR-20261019-33520443-01 | Identification of a novel association for the WWOX/HIF1A axis with gestational diabetes mellitus (GDM). |
 | [30783266](https://pubmed.ncbi.nlm.nih.gov/30783266/) | 2019 | ✅ | partial full text | receipt FTR-20260921-30783266-01 | ℹ️ CORRECTION NOTICE — Correction: The phenotypic spectrum of WWOX-related disorders: 20 additional cases of WOREE syndrome and review of the literature. |
 | [27845895](https://pubmed.ncbi.nlm.nih.gov/27845895/) | 2017 | ✅ | partial full text | receipt FTR-20260921-27845895-01 | Hyaluronan activates Hyal-2/WWOX/Smad4 signaling and causes bubbling cell death when the signaling complex is overexpressed. |
 | [41442931](https://pubmed.ncbi.nlm.nih.gov/41442931/) | 2026 | — | abstract only | PAPER 003 | Vigabatrin-Associated Brain Magnetic Resonance Imaging Abnormalities in Two Children With WW domain-containing oxidoreductase-Related Epileptic Encephalopathy Syndrome. |
@@ -680,6 +679,7 @@ for an entirely unprocessed record.
 | [41677633](https://pubmed.ncbi.nlm.nih.gov/41677633/) | 2026 | ✅ | partial full text | PAPER 147 | WWOX Induction Promotes Bcl-XL and Mcl-1 Degradation Through a Lysosomal Pathway upon Stress Responses. |
 | [42092735](https://pubmed.ncbi.nlm.nih.gov/42092735/) | 2026 | ✅ | partial full text | PAPER 145 | WWOX Mutation as a Rare Cause of Neonatal-Infantile Parkinsonism Mimicking a Neurotransmitter Disorder: A Case Report. |
 | [41254692](https://pubmed.ncbi.nlm.nih.gov/41254692/) | 2025 | ✅ | partial full text | PAPER 222 | Integrative multi-omics and Mendelian randomization identify WWOX and THBS2 as potential therapeutic targets in mature T/NK-cell lymphoma. |
+| [41007296](https://pubmed.ncbi.nlm.nih.gov/41007296/) | 2025 | ✅ | partial full text | receipt FTR-20261019-41007296-01 | Prognostic Significance of WWOX/HIF1A Ratio in Cancer Subtypes: Insights into Metabolism, ECM, and EMT. |
 | [40191585](https://pubmed.ncbi.nlm.nih.gov/40191585/) | 2025 | ✅ | partial full text | PAPER 123 | Identifying individuals with rare disease variants by inferring shared ancestral haplotypes from SNP array data. |
 | [39952983](https://pubmed.ncbi.nlm.nih.gov/39952983/) | 2025 | ✅ | partial full text | PAPER 135 | Genome-wide identification and functional validation of the WW domain containing oxidoreductase gene associated with sleep duration. |
 | [38542478](https://pubmed.ncbi.nlm.nih.gov/38542478/) | 2024 | ✅ | partial full text | PAPER 149 | Zfra Overrides WWOX in Suppressing the Progression of Neurodegeneration. |
@@ -822,7 +822,7 @@ for an entirely unprocessed record.
 | [28721938](https://pubmed.ncbi.nlm.nih.gov/28721938/) | 2017 | — | full text | PAPER 151 | Practical clues for diagnosing WWOX encephalopathy. |
 | [21476439](https://pubmed.ncbi.nlm.nih.gov/21476439/) | 2011 | — | full text | PAPER 244 | WWOX oxidoreductase--substrate and enzymatic characterization. |
 
-*(showing all 193 processed records from the seed)*
+*(showing all 201 processed records from the seed)*
 
 ## How to work one
 
