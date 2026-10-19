@@ -9,6 +9,7 @@
 | # | Source | Receipt (staged) | Landing proposed |
 |---|---|---|---|
 | 1 | PMID 41715204 (Sun 2026, J Transl Med, CerS2 conditional knockout, very-long-chain sphingolipids and myelination) | `FTR-20261019-41715204-01` (partial: supplementary video not inspected) | New `PAPER` record (none exists), type murine mechanistic comparator, T3, relevance LOW (WWOX absent) |
+| 2 | PMID 36583573 (Teo 2023, Glia, CerS2 deleted in myelinating cells: myelin lipid chain length, microglia, lethality) | `FTR-20261019-36583573-01` | New `PAPER` record (none exists), murine mechanistic comparator, T3, relevance LOW (WWOX absent) |
 
 ## 2 · Record content (source 1)
 
@@ -39,3 +40,18 @@ None existing for this PMID. CLAIM 003 and CLAIM 005 are unchanged.
 3. Causal link incomplete | We acknowledge that a definitive causal link requires supplementation with purified individual VLC species, but this remains technically challenging due to difficulties in isolating specific VLC sphingolipids (e.g., distinct ceramides). | Results, section 7, same artefact
 4. P20 sample sizes in the legend | (C) The g-ratio of myelin sheath in P20 mice corpus callosum, n = 4 for Ctrl, n = 2 for cKO-nestin mice. | Figure 2 legend, same artefact
 5. GFAP up in the whole-brain proteome | Gfap coverage 74.4: LFQ CKO 18655000000 18549000000 14626000000 15183000000 \| WT 6816800000 4273900000 3985400000 5758200000 \| ratio CKO over WT 3.22 | `files/fulltext/PMID41715204_Sun2026_supplement/Table3_myelin_proteins_derivation.txt` (aggregate derivation of the deposited proteomics spreadsheet)
+
+## 6 · Source 2 (PMID 36583573, Teo 2023): record content
+
+What it measures: CNP-Cre CerS2 knockout: brain and purified-myelin lipidomics, EM, gliosis, whole-brain cytometry, motor tests, survival. WWOX: zero occurrences.
+
+Note text to carry:
+🔴 **A comparator with a measured cholesterol negative.** Even with severe hypomyelination and death, myelin cholesterol is unchanged (1577 versus 1616 nmol/mg protein) and total sphingomyelin is unchanged; the change is chain length (C22-C24 to C16-C18) with totals of HexCer, sulfatide and ceramide rising. A distinct microglial subset (TMEM119 and P2RY12 low; CD68, CD11c, CD45, MHC-II high) is about four-fold more abundant at 6 weeks and eight-fold at 10 weeks (3 mice per group); the trigger (TREM2, denatured MBP) is untested. The oligodendrocyte-lineage deletion suffices for myelin loss, whereas CLAIM 003 records WWOX hypomyelination as non-cell-autonomous. Deaths were not investigated. The deposited per-animal table reproduces Table 2 for four checked lipids.
+
+### LOCATOR TRIPLES FOR BLIND AUDIT (source 2)
+
+6. Myelin cholesterol does not differ | Myelin cholesterol content did not differ between CerS2fl/fl and CerS2ΔO/ΔO mice (1577 ± 202 vs. 1616 ± 140 nmoles/mg protein), and sphingolipid levels in the liver did not differ between the two genotypes (Figure 3k–n). | Results, myelin lipid acyl chain length, `files/fulltext/PMID36583573_Teo2023_PMC.xml`
+7. Totals rise while chain length shifts | Increased C16‐C18 variants produced an increase in total HexCer, ST and ceramide in myelin from CerS2ΔO/ΔO relative to CerS2fl/fl mice, despite reduced C22‐C24 variants (Figure 3f–h), whereas total SM was not significantly different (Figure 3i). | same
+8. The microglial subset is about four- and eight-fold more abundant | and was approximately 4‐fold more abundant in 6‐week‐old CerS2ΔO/ΔO compared to CerS2fl/fl mice, increasing to 8‐fold in 10‐week‐old CerS2ΔO/ΔO mice | Results, phagocytic microglial population, same
+9. The trigger is untested | Myelin phagocytosis by microglia can be initiated by interaction of the receptor TREM2 with myelin lipids such as ST and SM, when myelin or cellular debris is present | Discussion, paragraph 9, same
+10. The cause of death was not determined | Death in CerS2ΔO/ΔO mice was sudden and unexpected. This necessitated modification of our ethics protocol such that CerS2ΔO/ΔO mice were only kept up to 4 months of age, and we were unable to determine the exact cause of death. | Discussion, paragraph 8, same
