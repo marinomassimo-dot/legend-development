@@ -1,0 +1,190 @@
+{
+ "schema_version": 2,
+ "pmid": "39876842",
+ "doi": "10.3389/fncel.2024.1464169",
+ "receipt": "FTR-20261019-39876842-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-G2-KD-PRIOR-01",
+  "metabolic_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared. Triples are listed in the commit candidate for a later blind audit."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 1511,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Kuang X[au]' 1511 (surname-initial, ambiguous); 'Kuang X[au] AND WWOX' 0.",
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Narrative review by a neurology group (Hainan); a literature synthesis with no data of its own.",
+  "note": "No competing interests relevant to WWOX; one regional foundation grant."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 0
+   }
+  ],
+  "note": "WWOX does not occur."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 253,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS: 253.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-directed reference. The primary on brain protein lactylation and neuronal excitability is Hagihara 2021 (identified, not read)."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --theme lactate (no record of this paper)",
+  "hits": 0,
+  "finding": "Not in the registries; the lactate-as-the-surviving-WWOX-loss-readout statement sits in the 2026-09-21 audit."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed esummary 2026-10-19 for 39876842; JATS front matter carries is-retracted flag",
+  "result": "No retraction, correction or expression of concern found in the PubMed record or the JATS front matter.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [
+    {
+     "citing_relation": "Citation only: reference 130 (Ma 2020, USP22 and SIRT1-p53/SLC7A11 ferroptosis in cardiomyocytes, retracted 2025 for image concerns) sits in a run of citations supporting the statement that HDAC inhibitors promote the HMGB1-p53 complex by inhibiting SIRT1 and so reduce glycolytic lactate; no reagent, method or data of this review depends on it and the chain does not touch any statement used in this reading.",
+     "doi": "10.3389/fphys.2020.551318",
+     "nature": "Retraction",
+     "reason_verbatim": "Concerns/Issues about Image;Investigation by Journal/Publisher;Investigation by Third Party;",
+     "retraction_date": "6/11/2025 0:00",
+     "retraction_pmid": "40574900",
+     "verdict": "FLAGGED_RETRACTION"
+    }
+   ],
+   "noted": [],
+   "paper_verdict": "FLAGGED_RETRACTION",
+   "reference_source": "cache",
+   "references_declared": 253,
+   "references_screened": 253,
+   "references_with_doi": 253,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39876842_Kuang2024_PMC11772370.xml",
+   "sha256": "81bd7ffbccd4e1c365237043971685d4846fd4120e24abb8ed39b43326c91bf8",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC11772370 (Front Cell Neurosci 2024, CC BY), 435,930 bytes; abstract, highlights, introduction, sections 2 to 6, Tables 1 and 2 and all six figure legends present. 253 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11772370/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "81bd7ffbccd4e1c365237043971685d4846fd4120e24abb8ed39b43326c91bf8"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 435,930 bytes; whole article incl. Tables 1 and 2 and figure legends.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: whole text read (sections 2 to 6) including Tables 1 and 2; the six figures are mechanism schematics acquired from no surface in this pass (legends read only), so figures is captions_only and the receipt is partial. HEDGE DENSITY: about 110 hedging words (may, might, could, likely, speculated, possible, potential, suggest) in about 8,400 words of body text, counted 2026-10-19 on the persisted JATS; the review is hypothesis, not finding.",
+  "entries": [
+   {
+    "proposition": "SCOPE: the review is framed around post-ischaemic-stroke epilepsy, lactate, protein lactylation and HDAC inhibitors, not developmental epilepsy or loss-of-function genotypes.",
+    "snippet": "Ischemic stroke is one of the common causes of epilepsy. Post-ischemic stroke epilepsy acc",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39876842_Kuang2024_PMC11772370.xml",
+    "anchor": "Introduction",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The central mechanism is stated as a speculation.",
+    "snippet": "It can be speculated that ischemia-induced stroke may lead to increased glucose metabolism in the brain, resulting in the producti",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39876842_Kuang2024_PMC11772370.xml",
+    "anchor": "Introduction",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the evidence that lactylation directly causes epilepsy is insufficient.",
+    "snippet": "Currently, there is insufficient evidence to confirm that protein lactylation directly induces epilepsy by regulating neuronal excitabi",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39876842_Kuang2024_PMC11772370.xml",
+    "anchor": "Section 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Lactate-driven histone lactylation (H3K18la, H4K12la) and a HIF-1 alpha, PKM2, LDHA positive-feedback loop are described from a microglia and Alzheimer-model study, not from epilepsy models.",
+    "snippet": "Microglia cells have significantly higher levels of H4K12la at the promoters of hypoxia-inducible factor-1α (HIF-1α), PKM2, and la",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39876842_Kuang2024_PMC11772370.xml",
+    "anchor": "Section 2.2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review itself records two opposite readings of glial-to-neuron lactate and mitochondria transfer (protective versus excitatory).",
+    "snippet": "However, some other studies suggest that transporting these energy substances and mitochondria may increase neuronal excitability, ther",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39876842_Kuang2024_PMC11772370.xml",
+    "anchor": "Section 2.4",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Class I HDAC delactylase activity is described from in vitro work; the HDAC inhibitor route to lower lactylation is inferential.",
+    "snippet": "Class I HDAC1, 2, and 3 are the most efficient lysine delactylases in vitro, mainly catalyzing the d",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39876842_Kuang2024_PMC11772370.xml",
+    "anchor": "Section 3.3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The proposed therapeutic leap (valproate, vorinostat lowering HIF-1 alpha and thereby lactylation) is a chain of cited inferences from non-epilepsy systems.",
+    "snippet": "Valproate, which has been shown to inhibit class I and class II HDACs, may reduce HIF-1α-mediated hippocampal neuronal loss by low",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39876842_Kuang2024_PMC11772370.xml",
+    "anchor": "Section 4.2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors conclude that lactylation control \"may be a potential strategy\" after ischaemic stroke.",
+    "snippet": "In summary, the modulation of protein lactylation levels by regulating lactate production and/or lactate membrane transport m",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39876842_Kuang2024_PMC11772370.xml",
+    "anchor": "Section 4.2",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

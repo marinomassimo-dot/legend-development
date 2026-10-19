@@ -1,0 +1,257 @@
+{
+ "schema_version": 2,
+ "pmid": "40831798",
+ "doi": "10.3389/fped.2025.1567095",
+ "receipt": "FTR-20261019-40831798-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-G2-KD-PRIOR-01",
+  "metabolic_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared. Triples are listed in the commit candidate for a later blind audit."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 21461,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Hu W[au]' 21461 (surname-initial, ambiguous); 'Hu W[au] AND WWOX' 0; 'Zhang H[au] AND WWOX' 9 (surname-initial queries are ambiguous and are not evidence of authorship); 'Hu W[au] AND ketogenic diet' 8.",
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Secondary narrative review by a paediatric neurology group; WWOX is not named. Weigh as a literature summary whose numbers come from its cited primaries (chiefly ref 9, Ko 2018).",
+  "note": "Funding from the Jinan Health Commission; no competing interests declared."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 0
+   }
+  ],
+  "note": "WWOX does not occur anywhere in the article."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 89,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS: 89.",
+  "resolved": [],
+  "queued": [],
+  "note": "No reference is WWOX-directed, so no gene-direct debt arises. The primary behind the gene-wise responder rates is ref 9 (Ko 2018, Front Neurol, DOI 10.3389/fneur.2018.00530); it was identified, not read."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --theme ketogenic and get --id 'CLAIM 042' and get --id 'PAPER 133'",
+  "hits": 3,
+  "finding": "CLAIM 042 holds the only WOREE KD datum (three of five reported to respond, denominator not stated, no Q230P carrier among them, status in observation); PAPER 133 records a WOREE patient on whom KD was ineffective. This review is in neither record."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed esummary 2026-10-19 for 40831798; JATS front matter carries is-retracted flag",
+  "result": "No retraction, correction or expression of concern found in the PubMed record or the JATS front matter.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 89,
+   "references_screened": 87,
+   "references_with_doi": 87,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40831798_Hu2025_PMC12358386.xml",
+   "sha256": "9c5f36b5aedb22d4b9f92a9e65bba58698834128b86c762c8717a67febd6d63a",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC12358386 (Front Pediatr 2025, CC BY), 131,460 bytes; abstract, introduction, review methodology, seven sections, Table 1 and the Figure 1 legend present. 89 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12358386/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "9c5f36b5aedb22d4b9f92a9e65bba58698834128b86c762c8717a67febd6d63a"
+   }
+  },
+  {
+   "path": "files/figures/PMID40831798/fped-13-1567095-g001.jpg",
+   "sha256": "8cc3d4cd6d1a257f89ae418d8cc7eaa83e0accf186ee6d93aadb63011b70111c",
+   "kind": "figure",
+   "note": "Figure 1 schematic of putative ketogenic-diet anticonvulsant mechanisms, inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12358386.1/fped-13-1567095-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "8cc3d4cd6d1a257f89ae418d8cc7eaa83e0accf186ee6d93aadb63011b70111c"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 131,460 bytes; abstract, introduction, methodology, sections 3 to 7, Table 1, figure legend present.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: whole article read including Table 1 and Figure 1 as an image. REVIEW: no experimental data of its own; every number is a restatement of a cited primary and was NOT checked against those primaries (refs 9, 43, 46, 53, 55, 63, 71, 79 identified). WWOX does not occur in the article (term count 0), so the review establishes a base rate for KD across DEE aetiologies and nothing about WWOX.",
+  "entries": [
+   {
+    "proposition": "DESIGN: a narrative, non-systematic review with a search closing at January 2024; no quantitative synthesis, no quality appraisal. It is a secondary source.",
+    "snippet": "this review presents a qualitative, narrative synthesis rather than a quantitative meta-analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40831798_Hu2025_PMC12358386.xml",
+    "anchor": "Review methodology",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The gene-wise responder rates the review gives (SCN1A, KCNQ2, STXBP1, SCN2A) come from very small cohorts, a single study (its ref 9) behind all four, with n of 18, 6, 4 and 3.",
+    "snippet": "STXBP1 (n = 4, responder rate = 100.0%, p = 0.01)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40831798_Hu2025_PMC12358386.xml",
+    "anchor": "5.6 DEE associated with other genetic mutations",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The one gene-level negative: CDKL5-related DEE, 0 of 10 responders in the same small study, and a registry of 104 with improvement in 61 of the 69 who changed but poor long-term efficacy. KD response is therefore heterogeneous by gene, from 0 to 100 percent in cohorts of 3 to 18.",
+    "snippet": "one small study reported no significant response (n = 10, responder rate = 0.0%, p = 0.031)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40831798_Hu2025_PMC12358386.xml",
+    "anchor": "5.6",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Syndrome-level prior for infantile spasms: spasm cessation in 23 of 43 children.",
+    "snippet": "KD successfully terminated seizures in 53.5% (23/43) of children",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40831798_Hu2025_PMC12358386.xml",
+    "anchor": "5.1 WS/IS",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Syndrome-level prior for Dravet syndrome with attrition: the 50 percent responder fraction falls from 63 to 47 percent between 3 and 12 months.",
+    "snippet": "seizure reduction ≥50% was observed in 63%, 60%, and 47% of patients at 3, 6, and 12 months, respectively",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40831798_Hu2025_PMC12358386.xml",
+    "anchor": "5.2 Ds",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Syndrome-level prior for Lennox-Gastaut: 47 percent with at least a 50 percent seizure reduction in 189 children.",
+    "snippet": "In a cohort of 189 children with LGS, 47% achieved ≥50% seizure reduction after 3–36 months of KD therapy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40831798_Hu2025_PMC12358386.xml",
+    "anchor": "5.4 LGS",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Outlook states KD reduces or controls seizures in \"most\" DEE cases, a sentence stronger than the syndrome figures the review itself gives (47 to 63 percent responder fractions at the 50 percent threshold) and silent on how responders were defined across studies.",
+    "snippet": "KD not only reduces or controls seizures in most DEE cases",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40831798_Hu2025_PMC12358386.xml",
+    "anchor": "7 Outlook",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "SELECTION: KD is introduced after multiple drugs and even surgery have failed, so any responder fraction describes a refractory, pre-selected population.",
+    "snippet": "KD is commonly introduced after the failure of multiple antiseizure medications and even epilepsy surgery",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40831798_Hu2025_PMC12358386.xml",
+    "anchor": "7 Outlook",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "MECHANISM: the review lists ketone-body mechanisms (glutamate down, GABA up, mitochondrial ATP, adenosine, histone deacetylase inhibition, cytokines, microbiota, PUFAs) and says the precise mechanisms are not established; energy repletion and Warburg reversal are not distinguished.",
+    "snippet": "Although the precise mechanisms are not yet fully elucidated, the clinical efficacy of KD is widely recognized",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40831798_Hu2025_PMC12358386.xml",
+    "anchor": "4 Antiseizure mechanism of KD",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 is a pathway schematic (seven bands: direct action, neurotransmitter regulation, anti-inflammatory, gut microbiota, PUFAs); it carries no data and no WWOX-relevant node.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1, schematic with bands Direct action, Neurotransmitter regulation, Anti-inflammatory and immune, The impact of gut microbiota, PUFAs, each leading to Anti-epileptic; legend \"Putative anticonvulsant mechanisms of the ketogenic diet\".",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40831798/fped-13-1567095-g001.jpg",
+    "anchor": "Figure 1, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "review schematic, no experimental system",
+     "endpoint": "none"
+    }
+   },
+   {
+    "proposition": "HYPOGLYCAEMIA AT INITIATION: hypoglycaemia and dehydration are named as common early adverse effects, related to fasting and reduced intake.",
+    "snippet": "Common early adverse effects of KD include hypoglycemia and dehydration, typically related to fasting and reduced caloric intake",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40831798_Hu2025_PMC12358386.xml",
+    "anchor": "6 Safety and tolerability",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In 12-month-old-or-younger infants on KD only two children had significant hypoglycaemia at initiation (due to vomiting and poor intake).",
+    "snippet": "Only two children experienced significant hypoglycemia at initiation due to vomiting and reduced oral intake",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40831798_Hu2025_PMC12358386.xml",
+    "anchor": "6 Safety and tolerability",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CONTRAINDICATIONS: mitochondrial respiratory chain disorders and fatty-acid oxidation defects are contraindications; any mitochondrial-dysfunction reading of WWOX loss would collide with them.",
+    "snippet": "mitochondrial respiratory chain disorders, and severe hepatic or pancreatic dysfunction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40831798_Hu2025_PMC12358386.xml",
+    "anchor": "7 Outlook",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review names KD first-line for GLUT1 deficiency and pyruvate dehydrogenase deficiency, the two energy-supply defects.",
+    "snippet": "It is considered a first-line treatment for metabolic epilepsies such as GLUT1 deficiency syndrome and pyruvate dehydrogenase deficiency",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40831798_Hu2025_PMC12358386.xml",
+    "anchor": "7 Outlook",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the evidence base is limited in sample size and follow-up.",
+    "snippet": "Due to limitations in sample size and follow-up duration, further studies are required to evaluate the long-term safety and efficacy of KD",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40831798_Hu2025_PMC12358386.xml",
+    "anchor": "7 Outlook",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

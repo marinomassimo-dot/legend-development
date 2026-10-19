@@ -1,0 +1,42 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-42454491-01",
+ "study_id": {
+  "pmid": "42454491",
+  "doi": "10.1172/jci208000"
+ },
+ "analysis_at": "2026-10-19T18:42:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a (Scientist A), metabolic batch 2026-10-19 group G1, task METAB-G1-A-20261019 on branch task/METAB-G1-A-20261019, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN. Route: Europe PMC JATS for PMC13367958 and three image files (Figure 1, Figure 2 and Table 1 supplied as an image) from the Europe PMC supplementaryFiles zip into the root files/ tree; the article is a narrative review, so methods, results and supplementary are not present; Figures 1 and 2 and the Table 1 image inspected as images; the review's sections are filed under introduction and discussion. Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a staged JSON for the Orchestrator and was not appended at preparation time (the Orchestrator records staged receipts in event-ID order).",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID42454491_Peeples2026_PMC.xml",
+ "source_fingerprint": "cea034e9216f6abb4998dead5bb4a5b76bdfc9b2bd89d808a64e9cb19b1adac1",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "not_present",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42454491.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID42454491.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-A-LIPID-05.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-a.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "manifest",
+  "Figures 1-2 and the Table 1 image inspected as images",
+  "Narrative review: no methods, results, limitations section or supplementary document"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

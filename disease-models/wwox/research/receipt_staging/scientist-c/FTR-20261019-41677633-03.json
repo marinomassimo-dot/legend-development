@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-41677633-03",
+ "study_id": {
+  "pmid": "41677633",
+  "doi": "10.3390/cells15030270"
+ },
+ "event_at": "2026-10-19T18:52:26Z",
+ "analysis_at": "2026-10-19T18:52:26Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, metabolic batch 2026-10-19, task METAB-G3-C-20261019, branch task/METAB-G3-C-20261019; context_policy QUESTION_DRIVEN, resume of a HELD-partial row. Held before reading: the prior receipt FTR-20261003-41677633-02 and its manifest, in which figures were recorded captions_only and Figures 2, 3 and 6 were not declared as inspected images. Stated question: do Figures 2, 3 and 6 show what the text says about WWOX induction by serum starvation and hydrogen peroxide and about Bcl-XL and Mcl-1 mRNA in Wwox+/+ and Wwox-/- fibroblasts. Route: the three figure images already saved in the shared files tree opened at native size and three locators added to the existing manifest; all other coverage is carried from the prior event. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID41677633_Su2026_PMC.xml",
+ "source_fingerprint": "5a9b26f202e2176f4f263c330c476515d0ff03105372433baa3660842ed27577",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41677633.json",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "Coverage other than Figures 2, 3 and 6 is carried from FTR-20261003-41677633-02 and the existing locators of the same manifest, which were not re-derived. All eight figure images of the paper are now inspected (five by the earlier reading, three here)."
+ ],
+ "prior_receipt": "FTR-20261003-41677633-02",
+ "reread_reason": "inadequate_prior_coverage"
+}

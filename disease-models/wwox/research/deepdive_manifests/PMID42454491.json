@@ -1,0 +1,279 @@
+{
+ "schema_version": 2,
+ "pmid": "42454491",
+ "doi": "10.1172/jci208000",
+ "receipt": "FTR-20261019-42454491-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID42454491.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-a.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-A-LIPID-05.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger (selection file, method step 3); the per-paper M0 packet re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Discovery leads, if any, are routed through the commit candidate and the analysis note; no cumulative discovery squeeze was warranted by this paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "The review names drug classes, not a compound proposed for a WWOX lever; the repository's one statin seed (DL-THER-080) is addressed in the commit candidate as a caution to attach, without running an ADMET screen."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A sterol-biology and pediatric-neurodevelopment group (Nebraska, from the author emails). Primary for their own sterol-inhibitor work; this is a narrative review and WWOX is absent. The epidemiological headline rests on the authors' own study, cited as in press."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "sterol biosynthesis AND (brain OR neurodevelopment) AND (medication OR drug)",
+    "count": 4014,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (cholesterol OR sterol OR 7-dehydrocholesterol)",
+    "count": 10,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts; the second query is the WWOX sterol literature, which is thin."
+ },
+ "multihop": {
+  "references_enumerated": 137,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "137 references enumerated from the XML; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42454491 --hops 1 (run AFTER the first pass); get --theme simvastatin --hops 0",
+  "hits": 0,
+  "note": "No identity record. The theme query reaches DL-THER-080 (simvastatin seed) and DL-MOL-003."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 137,
+   "references_screened": 127,
+   "references_with_doi": 127,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 10
+   }
+  },
+  "result": "Checked 2026-10-19 via PubMed esummary/efetch for PMID 42454491: publication types ['Journal Article', 'Review', \"Research Support, Non-U.S. Gov't\", \"Research Support, U.S. Gov't, P.H.S.\", 'Research Support, N.I.H., Extramural']; corrections/retraction markers in the efetch record: none."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42454491_Peeples2026_PMC.xml",
+   "sha256": "cea034e9216f6abb4998dead5bb4a5b76bdfc9b2bd89d808a64e9cb19b1adac1",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC13367958: abstract, body, Table 1 (supplied as an image), two figure legends, references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13367958/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID42454491/jci-136-208000-g131.jpg",
+   "sha256": "97d98af0ddb40b60f8c9e1717cf4a7314e0dc51baa3c33bc6c61595b8b1de050",
+   "kind": "figure",
+   "note": "Image file g131 from the Europe PMC supplementaryFiles container (Figure 1), inspected at native resolution (the container holds image files only).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13367958/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID42454491/jci-136-208000-g132.jpg",
+   "sha256": "03e929c23264d3a1e277f8ae7f0ab48ac3faf6c554f3d5df804ad7828d30a078",
+   "kind": "figure",
+   "note": "Image file g132 from the Europe PMC supplementaryFiles container (Figure 2), inspected at native resolution (the container holds image files only).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13367958/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID42454491/jci-136-208000-g133.jpg",
+   "sha256": "1d7633df218c28bbb2fcc337332a36862abb2e5926f148af9a3d7b09627cb5e2",
+   "kind": "figure",
+   "note": "Image file g133 from the Europe PMC supplementaryFiles container (Table 1 as an image), inspected at native resolution (the container holds image files only).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13367958/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The review states that after the blood-brain barrier forms the brain depends almost entirely on its own sterol synthesis, so plasma cholesterol does not reflect brain supply.",
+    "snippet": "Once the blood-brain barrier forms, isolating the CNS from circulating lipoprotein-bound cholesterol, the embryonic and postnatal brain depends almost entirely on intrinsic sterol synthesis (3, 36).",
+    "anchor": "Section: Cholesterol and the developing brain",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42454491_Peeples2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Myelin growth needs very high cholesterol; suppression of cholesterol synthesis impairs myelin growth and oligodendrocyte cholesterol deficiency causes ataxia and tremor in mice (cited, not new data).",
+    "snippet": "Production of myelin membranes requires exceptionally high cholesterol levels, and experimental suppression of cholesterol synthesis markedly impairs myelin growth, leading to hypomyelination (42). Cholesterol deficiency in oligodendrocytes causes ataxia and tremor in mice (18).",
+    "anchor": "Section: Cholesterol and the developing brain",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42454491_Peeples2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Desmosterolosis (DHCR24 deficiency) is described with corpus callosum agenesis or hypoplasia, white-matter loss, spasticity and seizures.",
+    "snippet": "Clinically, affected individuals present with a constellation of multiple congenital anomalies, including corpus callosum agenesis or hypoplasia, white matter loss, microcephaly or macrocephaly, arthrogryposis, spasticity, cleft palate, facial dysmorphism, ocular abnormalities, and seizures (72).",
+    "anchor": "Section: Sterol biosynthesis gene variants",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42454491_Peeples2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Sterol-biosynthesis-inhibiting medications are listed, including statins (HMG-CoA reductase) and several psychotropic and cardiovascular drugs with off-target DHCR7 inhibition.",
+    "snippet": "This second group includes medications such as aripiprazole, trazodone, amiodarone, cariprazine, buspirone, haloperidol, nebivolol, propranolol, and other compounds (39, 85–93).",
+    "anchor": "Section: Sterol biosynthesis-inhibiting side effects",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42454491_Peeples2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review hypothesises that cumulative inhibitor burden may exceed the fetus's compensation threshold; this is stated as a hypothesis.",
+    "snippet": "Because polypharmacy is common in psychiatry, neurology, and pain management, we hypothesize that cumulative SBIM burden may exceed the threshold for physiologic compensation in the developing fetus.",
+    "anchor": "Section: Sterol biosynthesis-inhibiting side effects",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42454491_Peeples2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The epidemiological association (autism diagnosis after maternal exposure) is from the authors' own database study: hazard ratio 1.47 for one or more and 2.33 for four or more inhibitors; the cited study is a prepublication-style reference.",
+    "snippet": "Cox proportional hazard modeling revealed that exposure to at least one SBIM during pregnancy was associated with a 1.47 times (95% CI 1.45–1.49) increased risk of an ASD diagnosis after adjusting for potential confounders.",
+    "anchor": "Section: SBIM prescription during pregnancy and risk of ASD",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42454491_Peeples2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the association is one of several, not all exposed pregnancies lead to autism, and dose, duration, timing and genotype are undetermined modifiers.",
+    "snippet": "Not all pregnancies prescribed SBIMs resulted in a child with ASD, and it is not yet clear which factors may exacerbate the sterol-inhibiting effects (or side effects) of these medications.",
+    "anchor": "Conclusions and future directions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42454491_Peeples2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In humans with Smith-Lemli-Opitz syndrome, cerebrospinal fluid 5-HIAA and homovanillic acid are reported reduced.",
+    "snippet": "Furthermore, in humans with SLOS, cerebrospinal fluid levels of serotonin metabolite 5-HIAA and dopamine metabolite homovanillic acid are reduced relative to age-matched controls (78), suggesting a sterol-related defect in synaptic vesicle formation and neurotransmitter release.",
+    "anchor": "Section: Sterol biosynthesis gene variants",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42454491_Peeples2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Heterozygous DHCR7 carriers are asymptomatic but show a sharper 7-DHC rise on exposure, which the review proposes as a latent vulnerability for 1-3 percent of people.",
+    "snippet": "Carriers of single pathogenic DHCR7 variants (e.g., parents of SLOS patients) are asymptomatic and considered healthy. However, they have mildly elevated 7-DHC in peripheral tissue (91, 100), suggesting a latent vulnerability to SBIMs for the 1%–3% of the human population who carry the DHCR7+/– genotype (110).",
+    "anchor": "Section: Interaction between sterol inhibition and genetic vulnerability",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42454491_Peeples2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Table 1 (image). Nine inborn errors of sterol metabolism with sterol effects and CNS features: SLOS lists intellectual disability, microcephaly and partial or complete callosal agenesis, with no seizure entry; desmosterolosis lists seizures and callosal agenesis; lathosterolosis intellectual disability and microcephaly; LSS deficiency seizures and structural brain malformations; SC4MOL microcephaly and intellectual disability.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Table 1 'Inborn errors of sterol metabolism' with columns Disorder name, Gene, Primary sterol effects, CNS features, Other clinical features; rows SLOS DHCR7, Desmosterolosis DHCR24, Lathosterolosis SC5D, CDPX2 EBP, hemizygous male EBP, CHILD NSDHL, SC4MOL, LSS, SQS.",
+    "anchor": "Table 1 (image file g133), read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42454491/jci-136-208000-g133.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative review (human inborn errors, mouse models, epidemiology)",
+     "genotype": "n/a",
+     "treatment": "n/a",
+     "comparator": "n/a",
+     "endpoint": "as stated"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 1 (post-lanosterol pathway). Bloch and Kandutsch-Russell branches drawn with enzymes in red (DHCR24, DHCR14, EBP, SC5D, DHCR7) and colour-coded markers for the four inborn errors; no WWOX or SDR-type enzyme is shown.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 pathway scheme from lanosterol to cholesterol with two branches and symbols for chondrodysplasia punctata 2 and EBP deficiency (yellow diamond), lathosterolosis (green circle), SLOS (blue square), desmosterolosis (purple triangle).",
+    "anchor": "Figure 1, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42454491/jci-136-208000-g131.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative review (human inborn errors, mouse models, epidemiology)",
+     "genotype": "n/a",
+     "treatment": "n/a",
+     "comparator": "n/a",
+     "endpoint": "as stated"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search returned inEPMC Y, isOpenAccess Y, license cc by on 2026-10-19; fullTextXML returned HTTP 200 and the declared article_text artefact is that response byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

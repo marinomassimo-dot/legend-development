@@ -1,0 +1,352 @@
+{
+ "schema_version": 2,
+ "pmid": "39995090",
+ "doi": "10.4103/NRR.NRR-D-24-01007",
+ "receipt": "FTR-20261019-39995090-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A neurology department working on HIF-1a/HO-1 in the PTZ epilepsy model, building on its own earlier paper; WWOX is not named. Observation (behaviour counts, assay values) is weighted above interpretation (PX-478 treats epilepsy by inhibiting HIF-1a/HO-1-driven ferroptosis), which has no genetic HIF1A manipulation, no ferroptosis inhibitor and no direct lipid-peroxide probe behind it."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "PX-478 AND (epilepsy OR seizure)",
+    "count": 1,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "WWOX AND HIF1A",
+    "count": 8,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches, not measurements; the single PX-478 epilepsy record is this paper."
+ },
+ "multihop": {
+  "references_enumerated": 69,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "The reference list holds 69 reference elements in the JATS artefact (counted in the session); WWOX is not named anywhere in the article (case-insensitive count 0 over the text rendering).",
+  "disposition": "No gene-direct references."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 39995090 --hops 1; paper_packet.py packet; fulltext_receipts.py status --pmid 39995090",
+  "hits": 0,
+  "note": "No record in any of the seven searched registry surfaces and no prior receipt; an empty result is a statement about that query over those files."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication type Journal Article.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 69,
+   "references_screened": 68,
+   "references_with_doi": 68,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39995090_Liang2026_PMC.xml",
+   "sha256": "362b7ab13c754794eacc2b222cfa818f0efc865e5e5864adf837fd03ccb72c9e",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13211804/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "362b7ab13c754794eacc2b222cfa818f0efc865e5e5864adf837fd03ccb72c9e"
+   }
+  },
+  {
+   "path": "files/figures/PMID39995090/NRR-21-2389-g001.jpg",
+   "sha256": "aacab420eaf3849e4ab0fa038bc82fd8786216136980764e2526e5bf4a8f7627",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13211804 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service. The deposit carries these figures at 394 to 707 px width."
+   }
+  },
+  {
+   "path": "files/figures/PMID39995090/NRR-21-2389-g002.jpg",
+   "sha256": "c2e5ba65b50970a240d09bb68a80531bcd57bcb998e4a222e2bf9bcb3273848c",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13211804 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service. The deposit carries these figures at 394 to 707 px width."
+   }
+  },
+  {
+   "path": "files/figures/PMID39995090/NRR-21-2389-g003.jpg",
+   "sha256": "d42bda2d6b96b44401f231a6597513403cc6e49b54e766b2f66d555676adc125",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13211804 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service. The deposit carries these figures at 394 to 707 px width."
+   }
+  },
+  {
+   "path": "files/figures/PMID39995090/NRR-21-2389-g004.jpg",
+   "sha256": "61b2f2b545e2ee376e3e9b5ac446bbefdb21ccc55e083a9d6048d3f82bb5d1ff",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13211804 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service. The deposit carries these figures at 394 to 707 px width."
+   }
+  },
+  {
+   "path": "files/figures/PMID39995090/NRR-21-2389-g005.jpg",
+   "sha256": "389de7dae60d0718e41ca2eda78adf5bb0e5ad5e981dc5065781968af7e456bf",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13211804 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service. The deposit carries these figures at 394 to 707 px width."
+   }
+  },
+  {
+   "path": "files/figures/PMID39995090/NRR-21-2389-g006.jpg",
+   "sha256": "417be462c9551d1bf867d2aadfcefecd7d92334071c7dba9e697d83c9fb79a1e",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13211804 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service. The deposit carries these figures at 394 to 707 px width."
+   }
+  },
+  {
+   "path": "files/figures/PMID39995090/NRR-21-2389-g007.jpg",
+   "sha256": "44e1ecbcfb67fe2499927d422e43cf95303ba4284fe75cd4b1e93ea6ab4fb5fa",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13211804 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service. The deposit carries these figures at 394 to 707 px width."
+   }
+  },
+  {
+   "path": "files/figures/PMID39995090/NRR-21-2389-g008.jpg",
+   "sha256": "b4ad987f46fc6f7761c420288a615041aef95d2925651ba90555a69e3ca5f910",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13211804 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service. The deposit carries these figures at 394 to 707 px width."
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "System: eight-week-old male C57BL/6 wild-type mice, chronic PTZ kindling, a PTZ-induced acquired epilepsy model.",
+    "snippet": "Eight-week-old male C57BL/6 mice, weighing 20.1 ± 2.3 g",
+    "anchor": "Methods, Animals and study design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39995090_Liang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Group size: 16 per group for behaviour; molecular readouts are n = 3 and mitochondria n = 5.",
+    "snippet": "the mice were randomly assigned into four groups (n = 16 per group)",
+    "anchor": "Methods, Animals and study design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39995090_Liang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Text asserts reduced kindling success rate and seizure duration and longer latencies with PX-478.",
+    "snippet": "the seizure scores, full kindling success rates, and seizure duration after the final injection were significantly reduced in the PTZ + PX-478 group",
+    "anchor": "Results, first section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39995090_Liang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 2, PTZ + PX-478 row: 56.3 percent kindled, kindling latency 19.11 +- 1.05 d, seizure latency 215.56 +- 9.86 s, duration 48.56 +- 4.72 s (the PTZ row reads 75.0 percent, 16.00 +- 1.21, 206.00 +- 10.92, 62.15 +- 3.39).",
+    "snippet": "PTZ+PX-4781656.319.11±1.05215.56±9.8648.56±4.72",
+    "anchor": "Table 2",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID39995090_Liang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2 (seizure score per PTZ injection, n = 16): the PTZ and PTZ + PX-478 curves separate from about injection 3, with asterisks on several injections, reaching about 4.7 against about 4.1 at the last injections; control curves at 0.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2: line chart seizure score 0 to 5 against PTZ injection times 1 to 11, PTZ curve rising to about 4.7, PTZ plus PX-478 curve to about 4.1, CON and CON plus PX-478 flat at 0, asterisks at injections 3 to 11.",
+    "anchor": "Figure 2",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39995090/NRR-21-2389-g003.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Statistics text for blots and assays: each measurement repeated at least three times, group n of 3 in the figures.",
+    "snippet": "Each behavioral testing and molecular biology experiment was repeated at least three times.",
+    "anchor": "Figure 1 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39995090_Liang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "ROS by DHE: described as 'appeared to have higher' ROS in PTZ; the Methods describe ImageJ quantification of ROS fluorescence.",
+    "snippet": "the PTZ group appeared to have higher ROS levels in hippocampal CA1, CA3, and DG tissues",
+    "anchor": "Results, oxidative stress section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39995090_Liang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 4A shows DHE and DAPI micrographs for CA1, CA3 and DG in four groups with faint red signal in PTZ; Figure 4B and C plot SOD, CAT, GSH-Px and MDA as bar charts of n = 3, but no bar chart quantifies the DHE fluorescence.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4A: grid of ROS, DAPI and merge panels for CA1, CA3 and DG across CON, PTZ, PTZ+PX-478 and CON+PX-478, red signal visible but faint in PTZ; panels B and C: bar charts of relative SOD, CAT and GSH-Px activity and relative MDA, three points per bar; no DHE intensity chart.",
+    "anchor": "Figure 4A-C",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39995090/NRR-21-2389-g005.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "PTZ-kindled male C57BL/6 mouse hippocampus",
+     "treatment": "PTZ 35 mg/kg every other day, with or without PX-478 5 mg/kg",
+     "comparator": "saline controls",
+     "endpoint": "hippocampal mRNA and protein"
+    },
+    "qualifies": "entries[6]",
+    "qualifies_needle": "appeared to have higher ROS levels"
+   },
+   {
+    "proposition": "Figure 3 H&E panels (CA1, CA3, DG; four groups) are single low-power fields at 100 um scale bars with no neuronal count or damage score; differences are subtle at the deposited resolution.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3: 3 by 4 grid of H and E sections, CA1, CA3 and DG rows, CON, PTZ, PTZ+PX-478, CON+PX-478 columns, pyramidal layers visible with scale bars; no quantification chart.",
+    "anchor": "Figure 3",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39995090/NRR-21-2389-g004.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Text on ferroptosis markers lists GPX4 among markers elevated in PTZ and decreased by PX-478.",
+    "snippet": "GPX4, prostaglandin-endoperoxide synthase 2 (PTGS2)/cyclooxygenase 2 (COX-2), ferritin heavy chain 1 (FTH-1), and transferrin (TRF) were significantly elevated in the PTZ group compared with those in the CON and CON + PX-478 groups",
+    "anchor": "Results, ferroptosis indicators section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39995090_Liang2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "PTZ-kindled male C57BL/6 mouse hippocampus",
+     "treatment": "PTZ 35 mg/kg every other day, with or without PX-478 5 mg/kg",
+     "comparator": "saline controls",
+     "endpoint": "hippocampal mRNA and protein"
+    }
+   },
+   {
+    "proposition": "Figure 6B (GPX4): in PTZ the GPX4 mRNA bar is about 0.45 and the protein bar about 0.3 of control, with a weaker GPX4 band, and PX-478 restores both to about 0.9 and 0.8; GPX4 is therefore LOWER in PTZ, not elevated, unlike PTGS2, FTH-1 and TRF in panels C and D.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6B: three panels, relative GPX4 mRNA expression (CON 1.0, PTZ about 0.45, PTZ+PX-478 about 0.9, CON+PX-478 about 1.0), relative GPX4 protein expression (about 1.0, 0.3, 0.8, 1.05) and a GPX4 over beta-actin blot with a weaker PTZ lane.",
+    "anchor": "Figure 6B",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39995090/NRR-21-2389-g007.jpg",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "PTZ-kindled male C57BL/6 mouse hippocampus",
+     "treatment": "PTZ 35 mg/kg every other day, with or without PX-478 5 mg/kg",
+     "comparator": "saline controls",
+     "endpoint": "hippocampal mRNA and protein"
+    },
+    "contradicts": "entries[9]",
+    "contradicts_needle": "GPX4, prostaglandin-endoperoxide synthase 2"
+   },
+   {
+    "proposition": "Discussion states GPX4 activity falls during ferroptosis, which fits the panel and not the Results sentence.",
+    "snippet": "Intracellular antioxidants such as GSH are depleted, the cystine/glutamate antiporter system is downregulated, and GPX4 activity is reduced during ferroptosis.",
+    "anchor": "Discussion, ferroptosis paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39995090_Liang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 5 TEM: mitochondria are smaller with denser matrix in PTZ; length about 0.65 against about 1.15 um in control and about 0.8 in PTZ + PX-478; n = 5 per the legend, with no statement whether n counts mice or mitochondria.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5A-B: TEM at 5.0 um, 2.0 um and 500 nm scales across four groups with red arrows on mitochondria; bar charts of mitochondrial length (about 1.15, 0.65, 0.82, 1.13 um) and area (about 0.35, 0.17, 0.26, 0.35 um2) with asterisks.",
+    "anchor": "Figure 5",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39995090/NRR-21-2389-g006.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Ferroptosis is inferred from MDA, Fe2+ and marker expression and mitochondrial morphology; no ferroptosis inhibitor, lipid peroxide probe or cell-death assay is used.",
+    "snippet": "This result indicates that epilepsy leads to ferroptosis damage, and that PX-478 injection helps inhibit ferroptosis occurrence.",
+    "anchor": "Discussion, ferroptosis paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39995090_Liang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper presents PX-478 as BBB-permeant and low in oral toxicity, a claim supported by citation only.",
+    "snippet": "Notably, unlike other HIF-1α inhibitors, PX-478 exhibits low oral toxicity and can penetrate the blood–brain barrier, making it more suitable for therapeutic use",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39995090_Liang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Stated limits: species and an 'acute' focus; no long-term or adverse outcome.",
+    "snippet": "this study primarily focused on the acute effects of PX-478 treatment and did not extensively explore its long-term impacts and potential adverse outcomes",
+    "anchor": "Discussion, limitations paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39995090_Liang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Data availability: none.",
+    "snippet": "No additional data are available.",
+    "anchor": "Data availability statement",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39995090_Liang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13211804/fullTextXML returned HTTP 200 (138060 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}

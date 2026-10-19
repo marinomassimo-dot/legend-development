@@ -926,18 +926,42 @@ def classify(code: int, output: str, headline: str) -> tuple[str, str]:
     return "nothing-to-screen", (missing.group(1).strip() if missing else headline)[:170]
 
 
+def _shared_checkout(root: Path) -> Path | None:
+    """The checkout that holds `files/` when `root` is a linked task worktree, else None."""
+    try:
+        done = subprocess.run(["git", "-C", str(root), "rev-parse", "--git-common-dir"],
+                              capture_output=True, text=True, timeout=30)
+    except (OSError, subprocess.SubprocessError):
+        return None
+    if done.returncode != 0 or not done.stdout.strip():
+        return None
+    common = Path(done.stdout.strip())
+    common = common if common.is_absolute() else (root / common)
+    top = common.resolve().parent
+    return top if (top / "files").is_dir() else None
+
+
 def _runnable(root: Path, disease: str, pmid: str, packet: dict[str, Any],
               artifact_workspace: str = "") -> list[tuple[str, list[str]]]:
     """The checks whose command this file can build with no human choice left in it."""
     names = {check["name"] for check in packet["applicable_checks"]}
     jobs: list[tuple[str, list[str]]] = []
     if "manifest validator" in names:
+        # No explicit root given: from a linked task worktree that carries no files/fulltext,
+        # default to the shared checkout that holds the gitignored bytes (2026-10-19, scientist-c).
+        if not artifact_workspace and not (root / "files" / "fulltext").is_dir():
+            shared = _shared_checkout(root)
+            if shared is not None and shared != root.resolve():
+                artifact_workspace = str(shared)
         jobs.append(("manifest validator",
                      [sys.executable, str(HERE / "deepdive_manifest.py"), "--disease", disease,
                       "--pmid", pmid, "--verify-artifacts", "--require-current-schema"]
                      # A task worktree holds the manifest but not the gitignored files/ tree;
                      # the validator already accepts a separate artifact root (2026-10-19, scientist-d).
-                     + (["--artifact-workspace", artifact_workspace] if artifact_workspace else [])))
+                     # Resolved HERE, against the invoker's cwd: the child process runs from the
+                     # repository root, so a relative value ("." typed inside a worktree) silently
+                     # named the worktree and turned every locator into "No such file" (2026-10-19, scientist-a).
+                     + (["--artifact-workspace", str(Path(artifact_workspace).resolve())] if artifact_workspace else [])))
         jobs.append(("flag drift",
                      [sys.executable, str(HERE / "manifest_flag_drift.py"), "--pmid", pmid]))
         jobs.append(("erratum scope",

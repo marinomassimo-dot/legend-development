@@ -1,253 +1,929 @@
 {
-  "schema_version": 2,
-  "pmid": "27551439",
-  "doi": "10.1038/cddiscovery.2015.3",
-  "receipt": "FTR-20261003-27551439-02",
-  "landing": [
-    "FTR-20261003-27551439-02",
-    "disease-models/wwox/research/fulltext_dossiers/PMID27551439.md",
-    "disease-models/wwox/research/intake_wave_20261003_B.md"
-  ],
-  "skills_considered": [
-    {
-      "skill": "legend-deepdive",
-      "used": false,
-      "reason": "Run inline. Figure inspection and locator capture had to come from the same open document as the text reading."
-    },
-    {
-      "skill": "find-fulltext",
-      "used": false,
-      "reason": "Europe PMC fullTextXML returned HTTP 200 with a body on the first attempt; figures, PDF and the supplementary .doc came from the PMC open-access S3 mirror."
-    },
-    {
-      "skill": "legend-locator-audit",
-      "used": false,
-      "reason": "OWED. Two internal contradictions in this paper are load-bearing for the cascade ordering claim and deserve a blind adversarial pass before any claim edit rests on them."
-    }
-  ],
-  "group_assessment": {
-    "performed": true,
-    "research_type": "experimental_lab",
-    "is_primary_group_for_disease": false,
-    "is_primary_group_for_gene": false,
-    "counts_measured": "PubMed esearch 2026-10-02 (tool=LEGEND-research): 'WWOX AND TIAF1' 9 records, 'WWOX AND TIAF1 NOT Chang NS[au]' 0 records; '\"TRAPPC6A\" AND (aggregation OR plaque)' 4 records, all four from this laboratory (PMIDs 25650666, 27551439, 29067327, 36498839); 'Zfra' 17 records, 'Zfra NOT Chang NS[au]' 1 record which is an unrelated zebrafish androgen-receptor paper matching the string by accident (PMID 17698417).",
-    "self_citation_measured": "Of this paper's 46 references, all 46 carry a PMID; 24 have Chang NS as an author and 25 have Chang NS or Sze CI (PubMed esummary author lists, 2026-10-02). That is 54 percent of the bibliography.",
-    "weighting": "This is the originating and, on the measurement above, the only laboratory publishing on the TRAPPC6A-delta/TIAF1 node. Its measurements are not thereby wrong; they are unreplicated, which is a property of the evidence and must travel with every datum carried from it.",
-    "note": "Research-group knowledge base excluded from the public edition; this rests on measured PubMed counts and the paper's own author and reference lists.",
-    "total_publications": 0,
-    "publications_on_gene": 0,
-    "counts_note": "total_publications and publications_on_gene are 0 because no per-author output count was measured in this pass. What was measured is the mechanism's independence (counts_measured) and this paper's self-citation share (self_citation_measured). A zero here means NOT MEASURED, not zero publications."
+ "schema_version": 2,
+ "pmid": "27551439",
+ "doi": "10.1038/cddiscovery.2015.3",
+ "receipt": "FTR-20261003-27551439-02",
+ "landing": [
+  "FTR-20261003-27551439-02",
+  "disease-models/wwox/research/fulltext_dossiers/PMID27551439.md",
+  "disease-models/wwox/research/intake_wave_20261003_B.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. Figure inspection and locator capture had to come from the same open document as the text reading."
   },
-  "field_density": {
-    "wwox_directed": true,
-    "queries": [
-      {
-        "query": "WWOX AND TIAF1",
-        "route": "PubMed esearch 2026-10-02",
-        "count": 9
-      },
-      {
-        "query": "WWOX AND TIAF1 NOT Chang NS[au]",
-        "route": "PubMed esearch 2026-10-02",
-        "count": 0
-      }
-    ],
-    "note": "Maximum density for the mechanism, zero density outside one laboratory."
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Europe PMC fullTextXML returned HTTP 200 with a body on the first attempt; figures, PDF and the supplementary .doc came from the PMC open-access S3 mirror."
   },
-  "multihop": {
-    "performed": false,
-    "references_enumerated": 46,
-    "enumeration_method": "All 46 reference PMIDs parsed from the JATS back matter and resolved by PubMed esummary for authorship only. Topic classification deliberately deferred: that is triage work.",
-    "resolved": [],
-    "queued": [],
-    "gene_direct_refs_in_source": []
-  },
-  "corpus_crossquery": {
-    "performed": true,
-    "query": "Is any link of the TRAPPC6A-delta cascade measured by a laboratory other than this one?",
-    "hits": 0,
-    "finding": "No. The four papers that pair TRAPPC6A with aggregation or plaque are B1, B2, B3 and B4 of this group, and the WWOX-TIAF1 pair has no record without Chang NS as an author."
-  },
-  "retraction_check": {
-    "performed": true,
-    "at": "2026-10-02",
-    "route": "PubMed esummary pubtype for 27551439 and exact DOI/PMID match against files/retraction_watch/retractionwatch_20261002.csv (72870 rows)",
-    "result": "pubtype ['Journal Article']. No retraction, no expression of concern, no erratum; no Retraction Watch row.",
-    "hold": false,
-    "dependencies": {
-      "flagged": [],
-      "noted": [],
-      "paper_verdict": "SCREENED_CLEAN",
-      "reference_source": "cache",
-      "references_declared": 46,
-      "references_screened": 43,
-      "references_with_doi": 43,
-      "schema": "retraction_check.dependencies/1",
-      "screened": true,
-      "snapshot": {
-        "date": "2026-09-10",
-        "days_since_fetch": 22,
-        "rows": 72476,
-        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
-      },
-      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
-      "unscreenable": {
-        "UNSCREENABLE_NO_DOI": 3
-      }
-    }
-  },
-  "source_artifacts": [
-    {
-      "path": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
-      "sha256": "61522f75014460b602cc2f1098d5921fef8bab36caa4314748904c757aea61b8",
-      "kind": "article_text",
-      "acquisition_recipe": {
-        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4981022/fullTextXML",
-        "http_method": "GET",
-        "tier": "europepmc_rest_fulltextxml",
-        "user_agent_policy": "none",
-        "acquired_on": "2026-10-02",
-        "derived": false,
-        "result_sha256": "61522f75014460b602cc2f1098d5921fef8bab36caa4314748904c757aea61b8"
-      }
-    },
-    {
-      "path": "files/figures/PMID27551439/native/cddiscovery20153-f2.jpg",
-      "sha256": "18cf9488929803dc116412eaa0377a05c7c4ca96b27af7a857fa73bf7409fa49",
-      "kind": "figure",
-      "acquisition_recipe": {
-        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-f2.jpg",
-        "http_method": "GET",
-        "tier": "pmc_oa_opendata_s3",
-        "user_agent_policy": "none",
-        "acquired_on": "2026-10-02",
-        "derived": false,
-        "result_sha256": "18cf9488929803dc116412eaa0377a05c7c4ca96b27af7a857fa73bf7409fa49"
-      }
-    },
-    {
-      "path": "files/figures/PMID27551439/native/cddiscovery20153-f3.jpg",
-      "sha256": "79528567a159db41d8df059d9b6ccf7444e860d67d8b51833809191f1974bb76",
-      "kind": "figure",
-      "acquisition_recipe": {
-        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-f3.jpg",
-        "http_method": "GET",
-        "tier": "pmc_oa_opendata_s3",
-        "user_agent_policy": "none",
-        "acquired_on": "2026-10-02",
-        "derived": false,
-        "result_sha256": "79528567a159db41d8df059d9b6ccf7444e860d67d8b51833809191f1974bb76"
-      }
-    },
-    {
-      "path": "files/figures/PMID27551439/native/cddiscovery20153-f7.jpg",
-      "sha256": "09dca7dbe736e467e60d3c89005c0c27d5b69b6e81e8d759d832feb425a878e4",
-      "kind": "figure",
-      "acquisition_recipe": {
-        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-f7.jpg",
-        "http_method": "GET",
-        "tier": "pmc_oa_opendata_s3",
-        "user_agent_policy": "none",
-        "acquired_on": "2026-10-02",
-        "derived": false,
-        "result_sha256": "09dca7dbe736e467e60d3c89005c0c27d5b69b6e81e8d759d832feb425a878e4"
-      }
-    },
-    {
-      "path": "files/supplements/PMID27551439/cddiscovery20153-s1.doc",
-      "sha256": "d47988dad3c8ae964b1b33a190f420ff820a50989958b83b5d196083f6385b11",
-      "kind": "article_binary",
-      "acquisition_recipe": {
-        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-s1.doc",
-        "http_method": "GET",
-        "tier": "pmc_oa_opendata_s3",
-        "user_agent_policy": "none",
-        "acquired_on": "2026-10-02",
-        "derived": false,
-        "result_sha256": "d47988dad3c8ae964b1b33a190f420ff820a50989958b83b5d196083f6385b11"
-      }
-    }
-  ],
-  "verbatim_locators": {
-    "waived": false,
-    "source_fulltext_indexed": true,
-    "source_fulltext_indexed_evidence": "Europe PMC JATS XML held locally and fingerprinted; all seven figure images and the supplementary .doc retrieved from the PMC open-access S3 mirror (pmc-oa-opendata) at the sizes the mirror declares, byte-length checked against the mirror listing; the two supplementary figure images were carved from the .doc OLE Data stream by PNG chunk-walking and inspected as rasters. The fifteen supplementary movies were NOT decoded: no video decoder is installed in this environment.",
-    "abstract_anchoring_waived": "No locator is abstract-anchored. Every entry below is a bound on the cascade-ordering claim, a panel reading, or an internal inconsistency between the paper's own Results and Discussion.",
-    "entries": [
-      {
-        "proposition": "The cell-death readout on which the whole TPC6A-delta apoptosis link rests is transient overexpression, in two non-neuronal lines plus one neuroblastoma line, and the wild-type and the delta isoform are equally potent — so the delta isoform's special status is not supported by this assay.",
-        "snippet": "Transiently overexpressed TPC6A and TPC6A",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
-        "anchor": "Results, 'Transiently overexpressed TPC6AΔ induces apoptosis and counteracts the function of WWOX in activating promoter governed by NF-κB'",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "The one endogenous, non-overexpression demonstration of a WWOX/TPC6A physical interaction in this paper is a reciprocal co-immunoprecipitation in an embryonic kidney fibroblast line, not in neurons.",
-        "snippet": "Embryonic kidney fibroblast HEK293 cells",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
-        "anchor": "Results, 'TPC6A physically binds to the C-terminal D3 tail of WWOX'",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "The Results state that the Y112F mutant aggregates less.",
-        "snippet": "the S35G mutant failed to undergo aggregation, and the Y112F mutant had a reduced aggregation",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
-        "anchor": "Results, 'WWOX prevents TPC6AΔ aggregation'",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "THE DISCUSSION OF THE SAME PAPER STATES THE OPPOSITE OF THE SENTENCE ABOVE. Figure 5a adjudicates: the Y112F bar carries p = 0.040 for medium versus TGF-beta1, i.e. it still responds, and the S35G bar carries p = 0.002, i.e. the mutant the Results call non-aggregating is the one with the most significant TGF-beta1-induced increase.",
-        "snippet": "alteration of Tyr112 to Phe does not reduce TPC6A",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
-        "anchor": "Discussion, paragraph on predicted phosphorylation sites",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "A third residue inconsistency: the Discussion names Tyr216 for the step the Results and the Figure 5i scheme name Tyr112. The protein is 173 aa (wild type) / 159 aa (delta) per the companion paper's alignment, so Tyr216 does not exist in it.",
-        "snippet": "phosphorylation of Ser35 and Tyr216 is needed for TPC6A to relocate to the nucleolus and mitochondria",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
-        "anchor": "Discussion, first paragraph",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "FIGURE ATTESTATION. Figure 5a is the panel that adjudicates the Y112F/S35G contradiction; it reports p = 0.844 (TPC6AΔ), p = 0.040 (Y112F) and p = 0.002 (S35G) for medium versus TGF-beta1, with no n on the panel and the axis labelled 'Number of cells with protein aggregation'. Read from a fingerprinted raster, not from a text layer. (The figure file fingerprinted here is Figure 3; Figure 5 is the file cddiscovery20153-f5.jpg in the same directory and is declared in the dossier.)",
-        "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 3c/3d: HEK293 co-IP, two lanes plus Pre-IP, IgH heavy-chain band dominating both blots; Fig 3e/3f: FRETc 16 (c/y) vs 23 (WWOX), 12 (WW), 28 (SDR/D3), 30 (D3), ten cells per set.",
-        "surface": "figure",
-        "artifact": "files/figures/PMID27551439/native/cddiscovery20153-f3.jpg",
-        "anchor": "Figure 3, panels c-f, native PMC open-access raster",
-        "panel_text_relation": "panel_only"
-      },
-      {
-        "proposition": "The only in-vivo WWOX-genotype datum in this paper is immunostaining of Wwox-/- mouse cortex, reported as a presence without a wild-type comparator in the text.",
-        "snippet": "By fluorescent immunostaining, we showed the presence of TPC6A plaques with Ser35 phosphorylation",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
-        "anchor": "Results, 'TPC6A plaques interact with TIAF1 aggregates in vivo'",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "Two load-bearing mechanistic steps of the Discussion are attributed to unpublished data of the same laboratory, so they cannot be checked from any source.",
-        "snippet": ", unpublished). By filter retardation assay",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
-        "anchor": "Discussion, paragraph on TGF-beta/Hyal-2/WWOX/Smad4 signalling",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "FIGURE ATTESTATION qualifying the sentence above. In Figure 7 the comparator for panels a-c is the SAME Wwox-/- cortex with the antibodies peptide-blocked (panel b, FRETc 5 +/- 3 against 75 +/- 9 in panel a), and panel d's control is likewise 'p-TPC6A (peptide blocking)' on knockout tissue. A peptide block tests antibody specificity; it does not test genotype dependence, so no panel of this figure compares knockout with wild-type brain.",
-        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 7a 'Wwox-/- brain cortex' FRETc = 75+/-9; Fig 7b same tissue, 'Antibodies blocked with peptides', FRETc = 5+/-3; Fig 7c pS35-TPC6A/TIAF1 FRETc = 105+/-7; Fig 7d 'Wwox-/- mouse brain' p-TPC6A at 40x/100x/400x over 'p-TPC6A (peptide blocking)'. No Wwox+/+ panel appears anywhere in the figure.",
-        "surface": "figure",
-        "artifact": "files/figures/PMID27551439/native/cddiscovery20153-f7.jpg",
-        "anchor": "Figure 7, panels a-d, native PMC open-access raster",
-        "panel_text_relation": "panel_qualifies_text",
-        "qualifies": "entries[6]",
-        "qualifies_needle": "immunostaining, we showed the presence of TPC6A plaques"
-      }
-    ]
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED. Two internal contradictions in this paper are load-bearing for the cascade ordering claim and deserve a blind adversarial pass before any claim edit rests on them."
   }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "counts_measured": "PubMed esearch 2026-10-02 (tool=LEGEND-research): 'WWOX AND TIAF1' 9 records, 'WWOX AND TIAF1 NOT Chang NS[au]' 0 records; '\"TRAPPC6A\" AND (aggregation OR plaque)' 4 records, all four from this laboratory (PMIDs 25650666, 27551439, 29067327, 36498839); 'Zfra' 17 records, 'Zfra NOT Chang NS[au]' 1 record which is an unrelated zebrafish androgen-receptor paper matching the string by accident (PMID 17698417).",
+  "self_citation_measured": "Of this paper's 46 references, all 46 carry a PMID; 24 have Chang NS as an author and 25 have Chang NS or Sze CI (PubMed esummary author lists, 2026-10-02). That is 54 percent of the bibliography.",
+  "weighting": "This is the originating and, on the measurement above, the only laboratory publishing on the TRAPPC6A-delta/TIAF1 node. Its measurements are not thereby wrong; they are unreplicated, which is a property of the evidence and must travel with every datum carried from it.",
+  "note": "Research-group knowledge base excluded from the public edition; this rests on measured PubMed counts and the paper's own author and reference lists.",
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "counts_note": "total_publications and publications_on_gene are 0 because no per-author output count was measured in this pass. What was measured is the mechanism's independence (counts_measured) and this paper's self-citation share (self_citation_measured). A zero here means NOT MEASURED, not zero publications."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX AND TIAF1",
+    "route": "PubMed esearch 2026-10-02",
+    "count": 9
+   },
+   {
+    "query": "WWOX AND TIAF1 NOT Chang NS[au]",
+    "route": "PubMed esearch 2026-10-02",
+    "count": 0
+   }
+  ],
+  "note": "Maximum density for the mechanism, zero density outside one laboratory."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 46,
+  "enumeration_method": "All 46 reference PMIDs parsed from the JATS back matter and resolved by PubMed esummary for authorship only. Topic classification deliberately deferred: that is triage work.",
+  "resolved": [],
+  "queued": [],
+  "gene_direct_refs_in_source": []
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Is any link of the TRAPPC6A-delta cascade measured by a laboratory other than this one?",
+  "hits": 0,
+  "finding": "No. The four papers that pair TRAPPC6A with aggregation or plaque are B1, B2, B3 and B4 of this group, and the WWOX-TIAF1 pair has no record without Chang NS as an author."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-02",
+  "route": "PubMed esummary pubtype for 27551439 and exact DOI/PMID match against files/retraction_watch/retractionwatch_20261002.csv (72870 rows)",
+  "result": "pubtype ['Journal Article']. No retraction, no expression of concern, no erratum; no Retraction Watch row.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 46,
+   "references_screened": 43,
+   "references_with_doi": 43,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 22,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
+   "sha256": "61522f75014460b602cc2f1098d5921fef8bab36caa4314748904c757aea61b8",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4981022/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_rest_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "derived": false,
+    "result_sha256": "61522f75014460b602cc2f1098d5921fef8bab36caa4314748904c757aea61b8"
+   }
+  },
+  {
+   "path": "files/figures/PMID27551439/native/cddiscovery20153-f2.jpg",
+   "sha256": "18cf9488929803dc116412eaa0377a05c7c4ca96b27af7a857fa73bf7409fa49",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-f2.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "derived": false,
+    "result_sha256": "18cf9488929803dc116412eaa0377a05c7c4ca96b27af7a857fa73bf7409fa49"
+   }
+  },
+  {
+   "path": "files/figures/PMID27551439/native/cddiscovery20153-f3.jpg",
+   "sha256": "79528567a159db41d8df059d9b6ccf7444e860d67d8b51833809191f1974bb76",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-f3.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "derived": false,
+    "result_sha256": "79528567a159db41d8df059d9b6ccf7444e860d67d8b51833809191f1974bb76"
+   }
+  },
+  {
+   "path": "files/figures/PMID27551439/native/cddiscovery20153-f7.jpg",
+   "sha256": "09dca7dbe736e467e60d3c89005c0c27d5b69b6e81e8d759d832feb425a878e4",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-f7.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "derived": false,
+    "result_sha256": "09dca7dbe736e467e60d3c89005c0c27d5b69b6e81e8d759d832feb425a878e4"
+   }
+  },
+  {
+   "path": "files/supplements/PMID27551439/cddiscovery20153-s1.doc",
+   "sha256": "d47988dad3c8ae964b1b33a190f420ff820a50989958b83b5d196083f6385b11",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-s1.doc",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "derived": false,
+    "result_sha256": "d47988dad3c8ae964b1b33a190f420ff820a50989958b83b5d196083f6385b11"
+   }
+  },
+  {
+   "path": "files/figures/PMID27551439/native/cddiscovery20153-f1.jpg",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-f1.jpg",
+    "http_method": "GET",
+    "tier": "PMC open-access S3 mirror",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "derived": false,
+    "result_sha256": "2faa0282e2bce32c9b3519c46c5188cee17837bce7a9f6d1225a85427c5f6898"
+   },
+   "sha256": "2faa0282e2bce32c9b3519c46c5188cee17837bce7a9f6d1225a85427c5f6898"
+  },
+  {
+   "path": "files/figures/PMID27551439/native/cddiscovery20153-f4.jpg",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-f4.jpg",
+    "http_method": "GET",
+    "tier": "PMC open-access S3 mirror",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "derived": false,
+    "result_sha256": "41b7cd7b2c0794a422cc53823202f753da0f51adf9909b8a0168e7c478230ab7"
+   },
+   "sha256": "41b7cd7b2c0794a422cc53823202f753da0f51adf9909b8a0168e7c478230ab7"
+  },
+  {
+   "path": "files/figures/PMID27551439/native/cddiscovery20153-f5.jpg",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-f5.jpg",
+    "http_method": "GET",
+    "tier": "PMC open-access S3 mirror",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "derived": false,
+    "result_sha256": "7a4726a8a63a365cd00d7a2cc3d2608eaef14f5c3b4867c67b8880be9fdc9b98"
+   },
+   "sha256": "7a4726a8a63a365cd00d7a2cc3d2608eaef14f5c3b4867c67b8880be9fdc9b98"
+  },
+  {
+   "path": "files/figures/PMID27551439/native/cddiscovery20153-f6.jpg",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-f6.jpg",
+    "http_method": "GET",
+    "tier": "PMC open-access S3 mirror",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "derived": false,
+    "result_sha256": "800a826fa8e86fbbdc4cee8a901db29895341d4ad4152b43f49d989d03a00990"
+   },
+   "sha256": "800a826fa8e86fbbdc4cee8a901db29895341d4ad4152b43f49d989d03a00990"
+  },
+  {
+   "path": "files/supplements/PMID27551439/movies/cddiscovery20153-s2.mp4",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-s2.mp4",
+    "http_method": "GET",
+    "tier": "PMC open-access S3 mirror",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "daa540343923b251fe39b2db4804abb7abc06352667081f0a1393c3899c6d290"
+   },
+   "sha256": "daa540343923b251fe39b2db4804abb7abc06352667081f0a1393c3899c6d290"
+  },
+  {
+   "path": "files/figure_renders/PMID27551439_movies/PMID27551439_video1_montage.png",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID27551439/movies/cddiscovery20153-s2.mp4",
+    "extractor": {
+     "name": "ffmpeg (imageio-ffmpeg 0.6.0 static build)",
+     "version": "7.0.2",
+     "call": "ffmpeg -vf select='not(mod(n,K))',scale=<w>:-1,tile=3x2 -frames:v 1 (K = frame count / 6; first frame and every K-th frame, six tiles)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "76c0bef4e3614d210540f466bcac2777de6c324b0860f6e5cf5df357573afc75"
+   },
+   "sha256": "76c0bef4e3614d210540f466bcac2777de6c324b0860f6e5cf5df357573afc75"
+  },
+  {
+   "path": "files/supplements/PMID27551439/movies/cddiscovery20153-s3.mp4",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-s3.mp4",
+    "http_method": "GET",
+    "tier": "PMC open-access S3 mirror",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "dae84e5f4c6b607e39d6b87eb5e9a603d806ce77c0464692011524cd468f382c"
+   },
+   "sha256": "dae84e5f4c6b607e39d6b87eb5e9a603d806ce77c0464692011524cd468f382c"
+  },
+  {
+   "path": "files/figure_renders/PMID27551439_movies/PMID27551439_video2_montage.png",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID27551439/movies/cddiscovery20153-s3.mp4",
+    "extractor": {
+     "name": "ffmpeg (imageio-ffmpeg 0.6.0 static build)",
+     "version": "7.0.2",
+     "call": "ffmpeg -vf select='not(mod(n,K))',scale=<w>:-1,tile=3x2 -frames:v 1 (K = frame count / 6; first frame and every K-th frame, six tiles)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "0289bd2e9cff58fa4039d464ce494b84d9def291d34dab9015a472d3ca0b08e7"
+   },
+   "sha256": "0289bd2e9cff58fa4039d464ce494b84d9def291d34dab9015a472d3ca0b08e7"
+  },
+  {
+   "path": "files/supplements/PMID27551439/movies/cddiscovery20153-s4.mp4",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-s4.mp4",
+    "http_method": "GET",
+    "tier": "PMC open-access S3 mirror",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "3f9e1876790f1cf600d67032247a63b929665ae988d287408137dcc9af4437e5"
+   },
+   "sha256": "3f9e1876790f1cf600d67032247a63b929665ae988d287408137dcc9af4437e5"
+  },
+  {
+   "path": "files/figure_renders/PMID27551439_movies/PMID27551439_video3_montage.png",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID27551439/movies/cddiscovery20153-s4.mp4",
+    "extractor": {
+     "name": "ffmpeg (imageio-ffmpeg 0.6.0 static build)",
+     "version": "7.0.2",
+     "call": "ffmpeg -vf select='not(mod(n,K))',scale=<w>:-1,tile=3x2 -frames:v 1 (K = frame count / 6; first frame and every K-th frame, six tiles)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "9c249970c517a7ebd4c22cfb7e0207333bc41f6f76104e43cd08d3cdb7bd4f2a"
+   },
+   "sha256": "9c249970c517a7ebd4c22cfb7e0207333bc41f6f76104e43cd08d3cdb7bd4f2a"
+  },
+  {
+   "path": "files/supplements/PMID27551439/movies/cddiscovery20153-s5.mp4",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-s5.mp4",
+    "http_method": "GET",
+    "tier": "PMC open-access S3 mirror",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "a0b7197c9de1f2cef38bb6a243a0fb7197fc94bbeed728031bf18487e016fcf7"
+   },
+   "sha256": "a0b7197c9de1f2cef38bb6a243a0fb7197fc94bbeed728031bf18487e016fcf7"
+  },
+  {
+   "path": "files/figure_renders/PMID27551439_movies/PMID27551439_video4_montage.png",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID27551439/movies/cddiscovery20153-s5.mp4",
+    "extractor": {
+     "name": "ffmpeg (imageio-ffmpeg 0.6.0 static build)",
+     "version": "7.0.2",
+     "call": "ffmpeg -vf select='not(mod(n,K))',scale=<w>:-1,tile=3x2 -frames:v 1 (K = frame count / 6; first frame and every K-th frame, six tiles)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "ac4a1fd48c3f1eb60727eef48447c020399f5f5212225f7e2077d559b8c12354"
+   },
+   "sha256": "ac4a1fd48c3f1eb60727eef48447c020399f5f5212225f7e2077d559b8c12354"
+  },
+  {
+   "path": "files/supplements/PMID27551439/movies/cddiscovery20153-s6.mp4",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-s6.mp4",
+    "http_method": "GET",
+    "tier": "PMC open-access S3 mirror",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "129f89cd79eb35462ba70ef3f74553a1d1860babc5edb27e86f70a64fe6b60a9"
+   },
+   "sha256": "129f89cd79eb35462ba70ef3f74553a1d1860babc5edb27e86f70a64fe6b60a9"
+  },
+  {
+   "path": "files/figure_renders/PMID27551439_movies/PMID27551439_video5_montage.png",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID27551439/movies/cddiscovery20153-s6.mp4",
+    "extractor": {
+     "name": "ffmpeg (imageio-ffmpeg 0.6.0 static build)",
+     "version": "7.0.2",
+     "call": "ffmpeg -vf select='not(mod(n,K))',scale=<w>:-1,tile=3x2 -frames:v 1 (K = frame count / 6; first frame and every K-th frame, six tiles)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "d84fa1ba6a2cc571af2470f75ccd1c297e69afcf3c8b09081529690c9d1b1bd6"
+   },
+   "sha256": "d84fa1ba6a2cc571af2470f75ccd1c297e69afcf3c8b09081529690c9d1b1bd6"
+  },
+  {
+   "path": "files/supplements/PMID27551439/movies/cddiscovery20153-s7.mp4",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-s7.mp4",
+    "http_method": "GET",
+    "tier": "PMC open-access S3 mirror",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "0cc22066f2a0f2fb78c9fbe0e6f4e846070cd98bacedbbac3f9b377c95c0ecf4"
+   },
+   "sha256": "0cc22066f2a0f2fb78c9fbe0e6f4e846070cd98bacedbbac3f9b377c95c0ecf4"
+  },
+  {
+   "path": "files/figure_renders/PMID27551439_movies/PMID27551439_video6_montage.png",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID27551439/movies/cddiscovery20153-s7.mp4",
+    "extractor": {
+     "name": "ffmpeg (imageio-ffmpeg 0.6.0 static build)",
+     "version": "7.0.2",
+     "call": "ffmpeg -vf select='not(mod(n,K))',scale=<w>:-1,tile=3x2 -frames:v 1 (K = frame count / 6; first frame and every K-th frame, six tiles)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "d1909df49375173e494ddc2a2935fdb993b99820d96d3102198b6918aa35a426"
+   },
+   "sha256": "d1909df49375173e494ddc2a2935fdb993b99820d96d3102198b6918aa35a426"
+  },
+  {
+   "path": "files/supplements/PMID27551439/movies/cddiscovery20153-s8.mp4",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-s8.mp4",
+    "http_method": "GET",
+    "tier": "PMC open-access S3 mirror",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "89d04a164ee5c4f3ccd0bac32533cc90feba3bdbb7f4c142e71515db427c8f11"
+   },
+   "sha256": "89d04a164ee5c4f3ccd0bac32533cc90feba3bdbb7f4c142e71515db427c8f11"
+  },
+  {
+   "path": "files/figure_renders/PMID27551439_movies/PMID27551439_video7_montage.png",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID27551439/movies/cddiscovery20153-s8.mp4",
+    "extractor": {
+     "name": "ffmpeg (imageio-ffmpeg 0.6.0 static build)",
+     "version": "7.0.2",
+     "call": "ffmpeg -vf select='not(mod(n,K))',scale=<w>:-1,tile=3x2 -frames:v 1 (K = frame count / 6; first frame and every K-th frame, six tiles)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "4d18e93b881e0504b65c5743a8f14b8c18dcf138e1cb7fa2af1a08ff7a73e7cd"
+   },
+   "sha256": "4d18e93b881e0504b65c5743a8f14b8c18dcf138e1cb7fa2af1a08ff7a73e7cd"
+  },
+  {
+   "path": "files/supplements/PMID27551439/movies/cddiscovery20153-s9.mp4",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-s9.mp4",
+    "http_method": "GET",
+    "tier": "PMC open-access S3 mirror",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "f0eead9bd9d6a852ad92075ac55c783f9f004d0f7f2af38ce8ec19b6a330837b"
+   },
+   "sha256": "f0eead9bd9d6a852ad92075ac55c783f9f004d0f7f2af38ce8ec19b6a330837b"
+  },
+  {
+   "path": "files/figure_renders/PMID27551439_movies/PMID27551439_video8_montage.png",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID27551439/movies/cddiscovery20153-s9.mp4",
+    "extractor": {
+     "name": "ffmpeg (imageio-ffmpeg 0.6.0 static build)",
+     "version": "7.0.2",
+     "call": "ffmpeg -vf select='not(mod(n,K))',scale=<w>:-1,tile=3x2 -frames:v 1 (K = frame count / 6; first frame and every K-th frame, six tiles)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "6acee4e9ecf1f293ee8efd231e88ba54c475c90a90a542073a03d4c8874a0bcf"
+   },
+   "sha256": "6acee4e9ecf1f293ee8efd231e88ba54c475c90a90a542073a03d4c8874a0bcf"
+  },
+  {
+   "path": "files/supplements/PMID27551439/movies/cddiscovery20153-s10.mp4",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-s10.mp4",
+    "http_method": "GET",
+    "tier": "PMC open-access S3 mirror",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "0373e05f62b9edd2b8bf34a56454106308888ca864d734b194db546e5f5b29e0"
+   },
+   "sha256": "0373e05f62b9edd2b8bf34a56454106308888ca864d734b194db546e5f5b29e0"
+  },
+  {
+   "path": "files/figure_renders/PMID27551439_movies/PMID27551439_video9_montage.png",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID27551439/movies/cddiscovery20153-s10.mp4",
+    "extractor": {
+     "name": "ffmpeg (imageio-ffmpeg 0.6.0 static build)",
+     "version": "7.0.2",
+     "call": "ffmpeg -vf select='not(mod(n,K))',scale=<w>:-1,tile=3x2 -frames:v 1 (K = frame count / 6; first frame and every K-th frame, six tiles)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "e8042ca8c12b253f7400c3931e46cd728d7950e7d2fbdceb027e6dfe3bbc8315"
+   },
+   "sha256": "e8042ca8c12b253f7400c3931e46cd728d7950e7d2fbdceb027e6dfe3bbc8315"
+  },
+  {
+   "path": "files/supplements/PMID27551439/movies/cddiscovery20153-s11.mp4",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-s11.mp4",
+    "http_method": "GET",
+    "tier": "PMC open-access S3 mirror",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "25ab5a3f000bad9d31259a871f4aaf8d673039339b804acd1769cec401ff5ddd"
+   },
+   "sha256": "25ab5a3f000bad9d31259a871f4aaf8d673039339b804acd1769cec401ff5ddd"
+  },
+  {
+   "path": "files/figure_renders/PMID27551439_movies/PMID27551439_video10_montage.png",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID27551439/movies/cddiscovery20153-s11.mp4",
+    "extractor": {
+     "name": "ffmpeg (imageio-ffmpeg 0.6.0 static build)",
+     "version": "7.0.2",
+     "call": "ffmpeg -vf select='not(mod(n,K))',scale=<w>:-1,tile=3x2 -frames:v 1 (K = frame count / 6; first frame and every K-th frame, six tiles)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "4ec66ab08f2825397252d78c1d7d2e5921b57efe90bb28babcb681d0adab5ec0"
+   },
+   "sha256": "4ec66ab08f2825397252d78c1d7d2e5921b57efe90bb28babcb681d0adab5ec0"
+  },
+  {
+   "path": "files/supplements/PMID27551439/movies/cddiscovery20153-s12.mp4",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-s12.mp4",
+    "http_method": "GET",
+    "tier": "PMC open-access S3 mirror",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "773e78dfdf82d492bdde92638cd49650f593f9b438277394a0364ee5ea314e51"
+   },
+   "sha256": "773e78dfdf82d492bdde92638cd49650f593f9b438277394a0364ee5ea314e51"
+  },
+  {
+   "path": "files/figure_renders/PMID27551439_movies/PMID27551439_video11_montage.png",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID27551439/movies/cddiscovery20153-s12.mp4",
+    "extractor": {
+     "name": "ffmpeg (imageio-ffmpeg 0.6.0 static build)",
+     "version": "7.0.2",
+     "call": "ffmpeg -vf select='not(mod(n,K))',scale=<w>:-1,tile=3x2 -frames:v 1 (K = frame count / 6; first frame and every K-th frame, six tiles)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "5f7b944343249b2224415c77be9d1fa697d8e5d4dca29d05a594ea61156762b7"
+   },
+   "sha256": "5f7b944343249b2224415c77be9d1fa697d8e5d4dca29d05a594ea61156762b7"
+  },
+  {
+   "path": "files/supplements/PMID27551439/movies/cddiscovery20153-s13.mp4",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-s13.mp4",
+    "http_method": "GET",
+    "tier": "PMC open-access S3 mirror",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "a30cb290cb98362c42f15e4ec6e1f9cae0859bac03549590cbe3009d4b49b95b"
+   },
+   "sha256": "a30cb290cb98362c42f15e4ec6e1f9cae0859bac03549590cbe3009d4b49b95b"
+  },
+  {
+   "path": "files/figure_renders/PMID27551439_movies/PMID27551439_video12_montage.png",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID27551439/movies/cddiscovery20153-s13.mp4",
+    "extractor": {
+     "name": "ffmpeg (imageio-ffmpeg 0.6.0 static build)",
+     "version": "7.0.2",
+     "call": "ffmpeg -vf select='not(mod(n,K))',scale=<w>:-1,tile=3x2 -frames:v 1 (K = frame count / 6; first frame and every K-th frame, six tiles)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "cbc4701bc991f1dd189ef5d4f65126301aaa3accf557c72eec4d21dbd39d5a93"
+   },
+   "sha256": "cbc4701bc991f1dd189ef5d4f65126301aaa3accf557c72eec4d21dbd39d5a93"
+  },
+  {
+   "path": "files/supplements/PMID27551439/movies/cddiscovery20153-s14.mp4",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-s14.mp4",
+    "http_method": "GET",
+    "tier": "PMC open-access S3 mirror",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "b55e8f80273f9ef65a1a244ed6988eb6e5931a06764e2fe9123db92098e52ff3"
+   },
+   "sha256": "b55e8f80273f9ef65a1a244ed6988eb6e5931a06764e2fe9123db92098e52ff3"
+  },
+  {
+   "path": "files/figure_renders/PMID27551439_movies/PMID27551439_video13_montage.png",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID27551439/movies/cddiscovery20153-s14.mp4",
+    "extractor": {
+     "name": "ffmpeg (imageio-ffmpeg 0.6.0 static build)",
+     "version": "7.0.2",
+     "call": "ffmpeg -vf select='not(mod(n,K))',scale=<w>:-1,tile=3x2 -frames:v 1 (K = frame count / 6; first frame and every K-th frame, six tiles)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "40f6a27190d020a108b2387ab9d009bd5d3131f39a4608d06f2ed40fd0b46a48"
+   },
+   "sha256": "40f6a27190d020a108b2387ab9d009bd5d3131f39a4608d06f2ed40fd0b46a48"
+  },
+  {
+   "path": "files/supplements/PMID27551439/movies/cddiscovery20153-s15.mp4",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-s15.mp4",
+    "http_method": "GET",
+    "tier": "PMC open-access S3 mirror",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "0c8282a84f358c070163acbbd653d846bbc464350eb4a745cbf1180945b7465b"
+   },
+   "sha256": "0c8282a84f358c070163acbbd653d846bbc464350eb4a745cbf1180945b7465b"
+  },
+  {
+   "path": "files/figure_renders/PMID27551439_movies/PMID27551439_video14_montage.png",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID27551439/movies/cddiscovery20153-s15.mp4",
+    "extractor": {
+     "name": "ffmpeg (imageio-ffmpeg 0.6.0 static build)",
+     "version": "7.0.2",
+     "call": "ffmpeg -vf select='not(mod(n,K))',scale=<w>:-1,tile=3x2 -frames:v 1 (K = frame count / 6; first frame and every K-th frame, six tiles)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "799ac9c4873cbffff1f0cdb60dd006899cd56880631af7d8929b01ad9ca8e757"
+   },
+   "sha256": "799ac9c4873cbffff1f0cdb60dd006899cd56880631af7d8929b01ad9ca8e757"
+  },
+  {
+   "path": "files/supplements/PMID27551439/movies/cddiscovery20153-s16.mp4",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-s16.mp4",
+    "http_method": "GET",
+    "tier": "PMC open-access S3 mirror",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "ad8d96ce7c72f5704beac4ae8086308d339e12146e6f373b972bf40aa15c05fd"
+   },
+   "sha256": "ad8d96ce7c72f5704beac4ae8086308d339e12146e6f373b972bf40aa15c05fd"
+  },
+  {
+   "path": "files/figure_renders/PMID27551439_movies/PMID27551439_video15_montage.png",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID27551439/movies/cddiscovery20153-s16.mp4",
+    "extractor": {
+     "name": "ffmpeg (imageio-ffmpeg 0.6.0 static build)",
+     "version": "7.0.2",
+     "call": "ffmpeg -vf select='not(mod(n,K))',scale=<w>:-1,tile=3x2 -frames:v 1 (K = frame count / 6; first frame and every K-th frame, six tiles)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "5bc17f0dc8da759b7b2e857a19083b8fd022fc7496387cd52dd292df331f77c6"
+   },
+   "sha256": "5bc17f0dc8da759b7b2e857a19083b8fd022fc7496387cd52dd292df331f77c6"
+  },
+  {
+   "path": "files/figure_renders/PMID27551439_supp/s1_doc_image1.png",
+   "sha256": "b4842e54dda38df7579eaf38f000a9abd6a4ee0836bc605dccfc7b88f629da02",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID27551439/cddiscovery20153-s1.doc",
+    "extractor": {
+     "name": "python PNG chunk-walk over the OLE document bytes",
+     "version": "3.12 (system python3)",
+     "call": "find PNG signature, walk chunks to IEND, write bytes unchanged (image 1)"
+    },
+    "acquired_on": "2026-10-19"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID27551439_supp/s1_doc_image2_small.png",
+   "sha256": "0bd2b70363699d9551c1af9a18fd3968c6ac65b95cf4891ac34f4e39801866c2",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID27551439/cddiscovery20153-s1.doc",
+    "extractor": {
+     "name": "python PNG chunk-walk then ImageMagick convert -resize 1400x",
+     "version": "3.12 and system ImageMagick",
+     "call": "image 2 carved unchanged (2917x2958) then resized to 1400 px wide for inspection"
+    },
+    "acquired_on": "2026-10-19"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS XML held locally and fingerprinted; all seven figure images and the supplementary .doc retrieved from the PMC open-access S3 mirror (pmc-oa-opendata) at the sizes the mirror declares, byte-length checked against the mirror listing; the two supplementary figure images were carved from the .doc OLE Data stream by PNG chunk-walking and inspected as rasters. The fifteen supplementary movies were NOT decoded: no video decoder is installed in this environment.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored. Every entry below is a bound on the cascade-ordering claim, a panel reading, or an internal inconsistency between the paper's own Results and Discussion.",
+  "entries": [
+   {
+    "proposition": "The cell-death readout on which the whole TPC6A-delta apoptosis link rests is transient overexpression, in two non-neuronal lines plus one neuroblastoma line, and the wild-type and the delta isoform are equally potent — so the delta isoform's special status is not supported by this assay.",
+    "snippet": "Transiently overexpressed TPC6A and TPC6A",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
+    "anchor": "Results, 'Transiently overexpressed TPC6AΔ induces apoptosis and counteracts the function of WWOX in activating promoter governed by NF-κB'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The one endogenous, non-overexpression demonstration of a WWOX/TPC6A physical interaction in this paper is a reciprocal co-immunoprecipitation in an embryonic kidney fibroblast line, not in neurons.",
+    "snippet": "Embryonic kidney fibroblast HEK293 cells",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
+    "anchor": "Results, 'TPC6A physically binds to the C-terminal D3 tail of WWOX'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Results state that the Y112F mutant aggregates less.",
+    "snippet": "the S35G mutant failed to undergo aggregation, and the Y112F mutant had a reduced aggregation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
+    "anchor": "Results, 'WWOX prevents TPC6AΔ aggregation'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE DISCUSSION OF THE SAME PAPER STATES THE OPPOSITE OF THE SENTENCE ABOVE. Figure 5a adjudicates: the Y112F bar carries p = 0.040 for medium versus TGF-beta1, i.e. it still responds, and the S35G bar carries p = 0.002, i.e. the mutant the Results call non-aggregating is the one with the most significant TGF-beta1-induced increase.",
+    "snippet": "alteration of Tyr112 to Phe does not reduce TPC6A",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
+    "anchor": "Discussion, paragraph on predicted phosphorylation sites",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A third residue inconsistency: the Discussion names Tyr216 for the step the Results and the Figure 5i scheme name Tyr112. The protein is 173 aa (wild type) / 159 aa (delta) per the companion paper's alignment, so Tyr216 does not exist in it.",
+    "snippet": "phosphorylation of Ser35 and Tyr216 is needed for TPC6A to relocate to the nucleolus and mitochondria",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
+    "anchor": "Discussion, first paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FIGURE ATTESTATION. Figure 5a is the panel that adjudicates the Y112F/S35G contradiction; it reports p = 0.844 (TPC6AΔ), p = 0.040 (Y112F) and p = 0.002 (S35G) for medium versus TGF-beta1, with no n on the panel and the axis labelled 'Number of cells with protein aggregation'. Read from a fingerprinted raster, not from a text layer. (The figure file fingerprinted here is Figure 3; Figure 5 is the file cddiscovery20153-f5.jpg in the same directory and is declared in the dossier.)",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 3c/3d: HEK293 co-IP, two lanes plus Pre-IP, IgH heavy-chain band dominating both blots; Fig 3e/3f: FRETc 16 (c/y) vs 23 (WWOX), 12 (WW), 28 (SDR/D3), 30 (D3), ten cells per set.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID27551439/native/cddiscovery20153-f3.jpg",
+    "anchor": "Figure 3, panels c-f, native PMC open-access raster",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The only in-vivo WWOX-genotype datum in this paper is immunostaining of Wwox-/- mouse cortex, reported as a presence without a wild-type comparator in the text.",
+    "snippet": "By fluorescent immunostaining, we showed the presence of TPC6A plaques with Ser35 phosphorylation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
+    "anchor": "Results, 'TPC6A plaques interact with TIAF1 aggregates in vivo'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Two load-bearing mechanistic steps of the Discussion are attributed to unpublished data of the same laboratory, so they cannot be checked from any source.",
+    "snippet": ", unpublished). By filter retardation assay",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
+    "anchor": "Discussion, paragraph on TGF-beta/Hyal-2/WWOX/Smad4 signalling",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FIGURE ATTESTATION qualifying the sentence above. In Figure 7 the comparator for panels a-c is the SAME Wwox-/- cortex with the antibodies peptide-blocked (panel b, FRETc 5 +/- 3 against 75 +/- 9 in panel a), and panel d's control is likewise 'p-TPC6A (peptide blocking)' on knockout tissue. A peptide block tests antibody specificity; it does not test genotype dependence, so no panel of this figure compares knockout with wild-type brain.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 7a 'Wwox-/- brain cortex' FRETc = 75+/-9; Fig 7b same tissue, 'Antibodies blocked with peptides', FRETc = 5+/-3; Fig 7c pS35-TPC6A/TIAF1 FRETc = 105+/-7; Fig 7d 'Wwox-/- mouse brain' p-TPC6A at 40x/100x/400x over 'p-TPC6A (peptide blocking)'. No Wwox+/+ panel appears anywhere in the figure.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID27551439/native/cddiscovery20153-f7.jpg",
+    "anchor": "Figure 7, panels a-d, native PMC open-access raster",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[6]",
+    "qualifies_needle": "immunostaining, we showed the presence of TPC6A plaques"
+   },
+   {
+    "proposition": "Text on the CCCP experiment: TPC6A-delta relocates to the cytoplasm at hour 3 and aggregates at hour 6, with arrows in Figure 6a and Supplementary Videos 8 and 9 cited.",
+    "snippet": "TPC6AΔ started to relocate to the cytoplasm at hour 3 and became aggregated at hour 6 (see arrows in Figure 6a and Supplementary Videos 8 and 9)",
+    "anchor": "Results, mitochondrial-loss section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "COS7 cells, transient ECFP-TPC6A-delta, CCCP 50 uM",
+     "treatment": "CCCP",
+     "endpoint": "mitochondrial red signal and TPC6A-delta localisation over time"
+    }
+   },
+   {
+    "proposition": "Figure 6a is sampled at 0, 6, 12, 18 and 24 h; the arrows sit on the 12, 18 and 24 h columns and no column earlier than 6 h exists, so hours 3 and 6 cannot be read from the panel.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6a: five columns labelled 0, 6, 12, 18 and 24 hr for ECFP-TPC6A-delta (blue), mitochondria (red) and merge; white arrows on the TPC6A-delta row at 12, 18 and 24 hr; red mitochondrial signal present at 0 and 6 hr and dimmer from 12 hr.",
+    "anchor": "Figure 6a",
+    "surface": "figure",
+    "artifact": "files/figures/PMID27551439/native/cddiscovery20153-f6.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[9]",
+    "qualifies_needle": "started to relocate to the cytoplasm at hour 3 and became aggregated at hour 6",
+    "experimental_context": {
+     "system": "COS7 cells, transient ECFP-TPC6A-delta, CCCP 50 uM",
+     "treatment": "CCCP",
+     "endpoint": "mitochondrial red signal and TPC6A-delta localisation over time"
+    }
+   },
+   {
+    "proposition": "Text: CCCP is said to have collapsed the mitochondrial signal in less than one hour.",
+    "snippet": "CCCP rapidly induced loss of mitochondrial membrane permeability in less than 1 h (loss of red fluorescence)",
+    "anchor": "Results, mitochondrial-loss section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "COS7 cells, transient ECFP-TPC6A-delta, CCCP 50 uM",
+     "treatment": "CCCP",
+     "endpoint": "mitochondrial red signal and TPC6A-delta localisation over time"
+    }
+   },
+   {
+    "proposition": "Figure 6a has no frame before 6 h and the red signal is still present at 6 h, dimming from 12 h; the sub-hour loss cannot be seen in the panel.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6a mitochondria row: bright red at 0 hr, still red at 6 hr, progressively weaker at 12, 18 and 24 hr.",
+    "anchor": "Figure 6a (mitochondria row)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID27551439/native/cddiscovery20153-f6.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[11]",
+    "qualifies_needle": "rapidly induced loss of mitochondrial membrane permeability in less than 1 h",
+    "experimental_context": {
+     "system": "COS7 cells, transient ECFP-TPC6A-delta, CCCP 50 uM",
+     "treatment": "CCCP",
+     "endpoint": "mitochondrial red signal and TPC6A-delta localisation over time"
+    }
+   },
+   {
+    "proposition": "Text on the SDR/D3 experiment cites Supplementary Videos 10, 11, 12 and 13 and Video 12 for exosome-like particles; the Figure 6 legend cites Videos 12 to 15 and Video 14 for the particles.",
+    "snippet": "During cell death, increased secretion of exosome-like particles to the extracellular space is shown (Supplementary Video 12)",
+    "anchor": "Results, SDR/D3 section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Video 14 (the fifth file of that run, a differential-interference-contrast channel) shows many small granules spread through the field that increase over time as cells round and bleb; Video 12 is the ECFP channel of the same field and shows no particles, so the legend's Video 14 is the one that carries the particles and the text's Video 12 does not; the movie shows granules but does not characterise them as exosomes (no size, marker or isolation).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Video 14 montage (six frames, ECFP and DIC run of the SDR/D3 experiment): a field with a spread cell at the first frame, then rounded cells and numerous small dark granules scattered across the field from the second frame on, strongest in the lower right; Video 12 montage: blue ECFP channel of the same field, rounded cell bodies and blebs, no granule field.",
+    "anchor": "Supplementary Video 14 and Video 12 montages",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID27551439_movies/PMID27551439_video14_montage.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[13]",
+    "qualifies_needle": "exosome-like particles to the extracellular space is shown (Supplementary Video 12)",
+    "experimental_context": {
+     "system": "COS7 cells, ECFP-TPC6A-delta with EYFP-SDR/D3, TGF-beta1 5 ng/ml",
+     "endpoint": "cell death and extracellular particles by time-lapse DIC"
+    }
+   },
+   {
+    "proposition": "Text on the TGF-beta1 experiment: nuclear TPC6A-delta is said to relocate to mitochondria stained with MitoTracker Red, cited to Supplementary Video 8.",
+    "snippet": "TGF-β1 induced nuclear EYFP-TPC6AΔ relocation to the mitochondria (Supplementary Video 8)",
+    "anchor": "Results, shuttling section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Video 8 overlays diffuse cytoplasmic EYFP-TPC6A-delta on MitoTracker Red; the cytoplasm turns yellow over the sampled frames, which is what a diffuse protein overlapping a mitochondrial network gives; no colocalisation coefficient, no single-channel control and no line profile are shown, so mitochondrial relocation is not separable from cytoplasmic spread in the movie.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Video 8 montage (frames stamped 0, 40, 80, 120, 160 and 200, unit not printed with the stamp): a green nucleus with green haze in a cell surrounded by red-stained mitochondrial networks of neighbours; later frames show the cell's cytoplasm yellow-orange; scale bar 0.02 mm; neighbouring untransfected cells stay red.",
+    "anchor": "Supplementary Video 8 montage",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID27551439_movies/PMID27551439_video8_montage.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[15]",
+    "qualifies_needle": "nuclear EYFP-TPC6AΔ relocation to the mitochondria (Supplementary Video 8)",
+    "experimental_context": {
+     "system": "COS7 cells, EYFP-TPC6A-delta with MitoTracker Red, TGF-beta1",
+     "endpoint": "EYFP and MitoTracker overlay over time"
+    }
+   },
+   {
+    "proposition": "Videos 10 and 11 are the CCCP experiment of Figure 6a (ECFP-TPC6A-delta with and without the MitoTracker channel), not Videos 8 and 9 that the text cites for it; the sampled frames show the cells swelling, blebbing and fragmenting by the last frame, with the ECFP signal diffuse until that point, so the movie shows cell death more clearly than discrete aggregates.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Video 10 montage (ECFP, frames stamped 0, 110, 220, 330, 30 and 360 with the unit not printed): two or three cells, diffuse blue signal, rounding and blebbing in the fifth frame, a field of vesicular blobs in the last; Video 11 montage: the same field with MitoTracker Red, central cells losing red signal while neighbours keep it; scale bar 20 um.",
+    "anchor": "Supplementary Videos 10 and 11 montages",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID27551439_movies/PMID27551439_video11_montage.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Videos 1 to 3 are one cell in three channels (EYFP, ECFP, FRET), 6.1 s each, with no clock and no scale bar; in the sampled frames the cell rounds and retracts a tail, the nucleus stays bright, and no cytoplasmic puncta that would be an aggregation signal can be resolved.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Video 3 montage (the third channel file, six sampled frames across 61): a single bright nucleus with diffuse cytoplasm that shrinks and rounds; Video 1 (yellow-green) and Video 2 (cyan) show the same cell; no timestamp or scale bar.",
+    "anchor": "Supplementary Videos 1 to 3 montages",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID27551439_movies/PMID27551439_video3_montage.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Video 6 (S35G mutant with WWOX) ends with a dense bright clump and fragments after cell rounding, an apoptotic-body morphology; Videos 4 and 5 are 0.83 s clips of single cells with no visible nucleolar translocation within the clip and no clock.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Video 6 montage: a bright nucleus in the first frames, then a contracted cell with a bright perinuclear clump, then a clump with small fragments and scale bar; Video 4 and Video 5 montages: stable cell with a nucleolus, no change across 25 frames.",
+    "anchor": "Supplementary Videos 4 to 6 montages",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID27551439_movies/PMID27551439_video6_montage.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Supplementary Figure S1 is one human post-mortem Alzheimer hippocampal field: TIAF1 (green) and phospho-TPC6A (red) overlap in a plaque-like region with nuclei in blue, without quantification; panel B, the no-primary-antibody control, is blank; the tissue is Alzheimer brain, not WWOX-deficient tissue.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure S1: panel A, Bielschowski silver stain, TIAF1 green, p-TPC6A red, nuclei blue and a merge with yellow overlap around one patch; panel B, the same set at lower density with faint green and red and a nuclei-only merge.",
+    "anchor": "Supplementary Figure S1 (A and B)",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID27551439_supp/s1_doc_image1.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Supplementary Figure S2 shows TPC6A signal (red) at silver-stained lesions with a DAPI-positive core in panels A to B, a signal-free negative panel C, WOX1 beside TRAPPC6A and amyloid-beta beside TRAPPC6A in D to F, and TIAF1 with TRAPPC6A in a plaque in G to J; it is human Alzheimer tissue with no WWOX-genotype comparator and no mitochondrial marker.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure S2: rows A to C TPC6A, DAPI, merge and Bielschowsky columns at 200x and 400x; rows D to F colour overlays labelled WOX1 or amyloid-beta in magenta against TRAPPC6A in green; G to J TIAF1 green, TRAPPC6A red, Bielschowsky and merge with yellow scale bars.",
+    "anchor": "Supplementary Figure S2 (A to J)",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID27551439_supp/s1_doc_image2_small.png",
+    "panel_text_relation": "panel_only"
+   }
+  ]
+ }
 }

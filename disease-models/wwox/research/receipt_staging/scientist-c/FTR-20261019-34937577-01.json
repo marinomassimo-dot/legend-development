@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-34937577-01",
+ "study_id": {
+  "pmid": "34937577",
+  "doi": "10.1186/s12974-021-02334-5"
+ },
+ "event_at": "2026-10-19T18:42:11Z",
+ "analysis_at": "2026-10-19T18:42:11Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, metabolic batch 2026-10-19, task METAB-G3-C-20261019, branch task/METAB-G3-C-20261019; context_policy SOURCE_FIRST. Route: Europe PMC REST fullTextXML (open access) saved to the shared checkout files/fulltext; whole article, Table 1 and reference count read from a text rendering of the JATS; two figure images opened at native size. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID34937577_Zhang2021_PMC.xml",
+ "source_fingerprint": "10d8c775d0a46805eabfcb84e0bacced2c887be377dda2274f51b4fb5d288827",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "not_present",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID34937577.json",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "A narrative review with no Methods or Results; the limits are the Conclusions paragraph. The 122 references were counted from the JATS and not read entry by entry; the primaries behind the epilepsy paragraph were not opened."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

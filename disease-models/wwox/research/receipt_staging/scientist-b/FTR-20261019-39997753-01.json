@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-10-19T00:00:00Z",
+ "event_at": "2026-10-19T18:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "captions_only",
+  "methods": "read",
+  "results": "captions_only",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present"
+ },
+ "event_id": "FTR-20261019-39997753-01",
+ "evidence_basis": [
+  "Narrative review: abstract, methods, sections 2.1, 5.1, 5.3, 7.1, 7.2 and the Conclusions read; introduction and sections 4, 5.2, 6, 7.3, 7.4 read only to the heading and first paragraph (screening depth); three schematic figures legends only.",
+  "FIND: WWOX absent; GSK-3 beta appears once; the epilepsy section says glycogen accumulation (not a deficit) is linked to hyperexcitability; the synthase-inhibitor sentence contradicts itself.",
+  "References enumerated and screened for integrity, not read."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID39997753.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID39997753.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-B-G2-KD-PRIOR-01.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "e587f7d0d5dc8753a1b8ef7a862acbcc4887f02276d214c1747c0032e57bafea",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID39997753_BeltranVelasco2025_PMC11857135.xml",
+ "study_id": {
+  "doi": "10.3390/metabo15020128",
+  "pmid": "39997753"
+ },
+ "workflow": "scientist-b, metabolic batch 2026-10-19 group G2, task branch task/METAB-G2-B-20261019; context_policy SOURCE_FIRST. Route: Europe PMC JATS fetched with no User-Agent, figures from the PMC OA S3 bucket, all into the root files/ tree; figures inspected as images where stated; locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a JSON file for the integrator and was not appended at preparation time."
+}

@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-10-19T00:00:00Z",
+ "event_at": "2026-10-19T18:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "captions_only",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "event_id": "FTR-20261019-37907746-01",
+ "evidence_basis": [
+  "Abstract, introduction, methods (all subsections), first paragraph of the discussion and every figure legend read; discussion is therefore not_read beyond that; each Results subsection read only for its first approximately 900 characters, so results is declared captions_only; no figure inspected as an image; supplementary PDF not opened.",
+  "FIND: mouse RNA-seq methods state mapping to the human genome; loose differential-expression threshold (18,201 of 55,450 transcripts); Khk knockdown by hippocampal AAV2/6 shRNA is not cell-type specific; the db/db hyperglycaemic model is the metabolic opposite of the hypoglycaemic Wwox-null mouse.",
+  "References enumerated and screened for integrity, not read."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID37907746.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID37907746.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-B-G2-FRUCTOSE-01.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "011cf5558765f227f0cb89ae18c46230750f77b771a5bbdda3db3c0ee19f2b41",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID37907746_Li2023_PMC10689812.xml",
+ "study_id": {
+  "doi": "10.1038/s12276-023-01112-y",
+  "pmid": "37907746"
+ },
+ "workflow": "scientist-b, metabolic batch 2026-10-19 group G2, task branch task/METAB-G2-B-20261019; context_policy SOURCE_FIRST. Route: Europe PMC JATS fetched with no User-Agent, figures from the PMC OA S3 bucket, all into the root files/ tree; figures inspected as images where stated; locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a JSON file for the integrator and was not appended at preparation time."
+}

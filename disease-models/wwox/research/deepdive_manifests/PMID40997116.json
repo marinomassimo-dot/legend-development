@@ -1,0 +1,357 @@
+{
+ "schema_version": 2,
+ "pmid": "40997116",
+ "doi": "10.1371/journal.pgen.1011880",
+ "receipt": "FTR-20261019-40997116-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID40997116.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-a.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-A-LIPID-04.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger (selection file, method step 3); the per-paper M0 packet re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Discovery leads, if any, are routed through the commit candidate and the analysis note; no cumulative discovery squeeze was warranted by this paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A Drosophila neurobiology group (from the genotype tables and methods). Primary for the fly cerS model; WWOX absent. Observation (clone morphometry, N = 4-8) weighed above the disease-translation sentences."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "ceramide synthase AND (Drosophila OR dendrite)",
+    "count": 29,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (ceramide OR sphingosine-1-phosphate)",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts; the second query is the WWOX ceramide literature."
+ },
+ "multihop": {
+  "references_enumerated": 79,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "79 references enumerated from the XML; none concerns WWOX (term search: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 40997116 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No record matched."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 79,
+   "references_screened": 77,
+   "references_with_doi": 77,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  },
+  "result": "Checked 2026-10-19 via PubMed esummary/efetch for PMID 40997116: publication types ['Journal Article']; corrections/retraction markers in the efetch record: none."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40997116_Ziegler2025_PMC.xml",
+   "sha256": "367eba5eb7ddb9dc5364c04d62b5b4171e7dd0664aa6761e3b3cd0bee2bc92d1",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC12500085: abstract, body, seven figure legends, references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12500085/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID40997116/pgen.1011880.g001.jpg",
+   "sha256": "142e7b56d3abbfd2f7e8e6827e9b8d6dadf435ca7984b128f9eba1c3eb8ac17e",
+   "kind": "figure",
+   "note": "Figure 1 JPEG from the Europe PMC supplementaryFiles container, inspected in a montage.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12500085/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID40997116/pgen.1011880.g002.jpg",
+   "sha256": "7d0b29a7f9872a0cdf9996b9d8d721ca181a523d96ee2638e39e11073b9fd3d8",
+   "kind": "figure",
+   "note": "Figure 2 JPEG from the Europe PMC supplementaryFiles container, inspected in a montage.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12500085/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID40997116/pgen.1011880.g003.jpg",
+   "sha256": "51eaa33da70ace40d513f4e62575d5b33cabb9436c5c8b345170504244804872",
+   "kind": "figure",
+   "note": "Figure 3 JPEG from the Europe PMC supplementaryFiles container, inspected in a montage.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12500085/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID40997116/pgen.1011880.g004.jpg",
+   "sha256": "e8529d8e2eb99152271a7f9dcd202cf03c16208614f0f2ad910ae233ab1f8418",
+   "kind": "figure",
+   "note": "Figure 4 JPEG from the Europe PMC supplementaryFiles container, inspected in a montage.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12500085/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID40997116/pgen.1011880.g005.jpg",
+   "sha256": "da3ba52a87cc6da78a48633c729efe582e0410542711c62cac009f9516581198",
+   "kind": "figure",
+   "note": "Figure 5 JPEG from the Europe PMC supplementaryFiles container, inspected in a montage.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12500085/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID40997116/pgen.1011880.g006.jpg",
+   "sha256": "0e6e50cd601b93429318b8023167359a219b24afaa8e1fbf38e0c1dcf939b930",
+   "kind": "figure",
+   "note": "Figure 6 JPEG from the Europe PMC supplementaryFiles container, inspected in a montage.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12500085/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID40997116/pgen.1011880.g007.jpg",
+   "sha256": "15e712c7dc485cdadec74dbb38c71535998d84ceebcfc2199f3b18f46a70a0a3",
+   "kind": "figure",
+   "note": "Figure 7 JPEG from the Europe PMC supplementaryFiles container, inspected in a montage.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12500085/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID40997116_Ziegler2025_supplement/pgen.1011880.s006.docx",
+   "sha256": "1835846b90072a72d89c90f99ce0e6f231c648dfdc6ebd33f4923e44f2acb299",
+   "kind": "supplement_text",
+   "note": "Supplementary genotype table (Word).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12500085/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The system is fly sensory-neuron dendrites with a single ceramide synthase; a catalytically dead allele and a null give about 75 percent loss of dendrite length and almost 90 percent of terminals in single-cell clones. WWOX is not in the paper.",
+    "snippet": "In comparison to cerSWT c4da neurons, cerSKO and cerSH215D mutant neurons exhibited approximately a 75% reduction of total dendritic length and almost 90% of their total dendritic terminal endpoints (Fig 1B–1D).",
+    "anchor": "Results, section 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40997116_Ziegler2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No caspase activation and no neuronal loss were found, so the defect is dendrite growth and loss, not cell death.",
+    "snippet": "Overall, these data indicate that cerS mutant c4da neurons exhibit aberrant dendrite morphology but do not show signs of caspase activation and the lack of CerS function does not influence c4da neuronal viability.",
+    "anchor": "Results, section 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40997116_Ziegler2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Whole-animal lipidomics uses a weaker hypomorph (cerS P61, mRNA down about 60 percent), because the null and catalytic-dead animals die as first-instar larvae; lipid and neuron phenotypes are therefore from different alleles.",
+    "snippet": "To study the lipidome of a full body cerS mutant, we have therefore used the weaker cerSP61 allele. cerS mRNA is reduced by approximately 60% in this mutant, which allows a low number of slim larvae to reach the LIII stage [24].",
+    "anchor": "Results, section 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40997116_Ziegler2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The relative Cer-PE level is decreased in the hypomorph, with N = 4 larval pools.",
+    "snippet": "Taking the overall low lipid levels of cerSP61 mutant larvae into account we found the relative Cer-PE level to be significantly decreased (Fig 2D).",
+    "anchor": "Results, section 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40997116_Ziegler2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mutations at the steps upstream or downstream of cerS give milder dendrite phenotypes than loss of cerS itself, which the authors take to mean additional metabolic problems.",
+    "snippet": "However, the fact that impairment of enzymes upstream or downstream of cerS leads to milder phenotypes than impairment of cerS function itself suggests that the strong phenotype in cerS mutant neurons may be due to additional metabolic problems.",
+    "anchor": "Results, section 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40997116_Ziegler2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The ceramide substrate base (dihydro)sphingosine and its phosphate rise in the hypomorph; blocking their production or receptor did not rescue, and a lyase gave only a mild rescue.",
+    "snippet": "However, genetic manipulations, that presumably should block LCB production, action, or degradation, only very mildly rescued the dendrite loss of cerSH215D mutant c4da neurons, if at all, suggesting that additional factors might be at play.",
+    "anchor": "Results, section 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40997116_Ziegler2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fly ceramide species of 18-24 carbons fall in the hypomorph while C12 and C16 species are unchanged or higher; the authors propose the C12 and C16 species come from diet or gut bacteria.",
+    "snippet": "This suggests that Drosophila CerS produces ceramides with C18-C24 acyl chains and that C12- or C16-ceramides, which are found in robust amounts in mutants and controls, may originate from exogenous sources such as food or gut bacteria.",
+    "anchor": "Results, section 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40997116_Ziegler2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Only mouse CerS enzymes producing C18-C26 ceramides (mCerS2, mCerS4) restore dendrites; mCerS5 (C16) barely helps and, overexpressed in wild-type neurons, reduces branching.",
+    "snippet": "Only the overexpression of mCerS5 but not mCerS1, mCerS4, or mCerS2 led to reduced dendrite branching in c4da neurons, indicating that increased C16-ceramide levels are detrimental to c4da neurons (Fig 6B–6D).",
+    "anchor": "Results, section 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40997116_Ziegler2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A full rescue needs both lowering the toxic long-chain bases and supplying C20-C22 ceramides; the dietary C22-ceramide rescue is mild.",
+    "snippet": "In summary, a complete rescue of the mutant dendritic phenotype can only be obtained by decreasing toxic LCBs and simultaneously providing C20-C22 ceramides, the most abundant ceramide species.",
+    "anchor": "Results, section 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40997116_Ziegler2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that the mammalian relevance (a cell-autonomous requirement and rescue by supplementation) is a path to test in vertebrate models, not a result.",
+    "snippet": "We thus envision that as an alternative to the re-expression of CerSs, a combination of reducing the effect of toxic LCBs, such as (dh)S1P, together with a supplementation of long-chain ceramides will be an important path to be tested in future experiments in vertebrate models of PME8.",
+    "anchor": "Discussion, last paragraphs",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40997116_Ziegler2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure 2A-D. Dendrite length falls from about 13 to 9 mm and terminals from about 300 to 170 in the hypomorph (N = 5); total lipid about 50,000 versus 8,000 pmol (N = 4); relative ceramide and hexosylceramide are not significantly different, Cer-PE about 2.8 versus 1.6 mol per mille of total lipid.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2A tracings and box plots of length and terminals; Fig 2B total lipid boxes; Fig 2C pathway scheme; Fig 2D three panels Cer, Cer-PE (one asterisk), HexCer.",
+    "anchor": "Figure 2, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40997116/pgen.1011880.g002.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "Drosophila larval class IV dendritic arborization neurons, MARCM single-cell clones and whole-larva lipidomics",
+     "genotype": "cerS null, catalytic-dead cerS H215D, strong hypomorph cerS P61",
+     "treatment": "as stated",
+     "comparator": "cerS wild-type clones or controls",
+     "endpoint": "dendrite length and terminals; lipid species"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 5A and 5D. Ceramide species as mol percent of total lipid: C18, C20, C22 and C24 ceramide lower in the hypomorph (asterisks), C12 and C16 higher (N = 4); rescue by expressing mouse CerS2 or CerS4 brings clone dendrites close to wild type (N = 7-8).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 5A box plots of six ceramide species; Fig 5B schematic of CerS acyl-chain specificity; Fig 5C tracings; Fig 5D length and terminals boxes.",
+    "anchor": "Figure 5, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40997116/pgen.1011880.g005.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "Drosophila larval class IV dendritic arborization neurons, MARCM single-cell clones and whole-larva lipidomics",
+     "genotype": "cerS null, catalytic-dead cerS H215D, strong hypomorph cerS P61",
+     "treatment": "as stated",
+     "comparator": "cerS wild-type clones or controls",
+     "endpoint": "dendrite length and terminals; lipid species"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search returned inEPMC Y, isOpenAccess Y, license cc by on 2026-10-19; fullTextXML returned HTTP 200 and the declared article_text artefact is that response byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

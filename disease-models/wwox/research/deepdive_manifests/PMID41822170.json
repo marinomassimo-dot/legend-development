@@ -1,0 +1,347 @@
+{
+ "schema_version": 2,
+ "pmid": "41822170",
+ "doi": "10.3389/fncel.2026.1758230",
+ "receipt": "FTR-20261019-41822170-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "weighting": "A paediatric hospital neuro-metabolic group with an electrophysiology collaborator, studying ferroptosis markers in epilepsy; WWOX is not named. Wet-lab halves: blots and enzymatic assays on acute slices from wild-type mice; clinical half: four children against five controls. Observation (band densitometry, one example trace, a four-versus-five mRNA comparison) is weighted well above interpretation (ferroptosis as crucial contributor, xCT as a therapeutic target and peripheral biomarker)."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "(RSL3 OR RSL-3) AND (epilepsy OR seizure OR epileptiform)",
+    "count": 7,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "4-hydroxynonenal AND epilepsy",
+    "count": 32,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches, not measurements."
+ },
+ "multihop": {
+  "references_enumerated": 56,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "The reference list holds 56 entries (the count of reference elements in the JATS artefact); WWOX is not named anywhere in the artefact (case-insensitive search returned nothing), so no gene-direct hop exists.",
+  "disposition": "No gene-direct references."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41822170 --hops 1; paper_packet.py packet; fulltext_receipts.py status --pmid 41822170",
+  "hits": 0,
+  "note": "No record in any of the seven searched registry surfaces and no prior receipt; an empty result is a statement about that query over those files."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication type Journal Article.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 56,
+   "references_screened": 55,
+   "references_with_doi": 55,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41822170_Petrillo2026_PMC.xml",
+   "sha256": "33167c5342e6cea0c1084228effb2d576e5a7c13767e624757c84aa281cb922a",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12975598/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "33167c5342e6cea0c1084228effb2d576e5a7c13767e624757c84aa281cb922a"
+   }
+  },
+  {
+   "path": "files/figures/PMID41822170/fncel-20-1758230-g001.jpg",
+   "sha256": "3e9aa50ca849aee80db7f0b7da602e24ea10a4476e7abde54bc352fef4c33270",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12975598 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID41822170/fncel-20-1758230-g002.jpg",
+   "sha256": "060a088f4f188b98e6c51acae0c58ce4baebe6fedf79b3b13157e2ea8b27a8d8",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12975598 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID41822170/fncel-20-1758230-g003.jpg",
+   "sha256": "bf07d0e8c087fb19e4c3b42adf3133acb5b32f26dd987155cb140e3ae80c6e3e",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12975598 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID41822170/fncel-20-1758230-g004.jpg",
+   "sha256": "1f0f6880ffbdfe4df5bfa8266f8ad8644747c2123259c80111cd3ce22dc57520",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12975598 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID41822170/fncel-20-1758230-g005.jpg",
+   "sha256": "28467e722ca6b258497ebd4ab44704972d64c44babda29dacd873f342edc48ca",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12975598 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID41822170/fncel-20-1758230-g006.jpg",
+   "sha256": "a9868d49720c04f7b063aedb49759dc9d9effd464f9c3576d1f5d85e37b4f288",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12975598 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID41822170/fncel-20-1758230-g007.jpg",
+   "sha256": "24ce12b639772548527f6d86d0e05f5230c00d0735a77b4d2583b25d06d23b9c",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12975598 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID41822170/Data_Sheet_1.pdf",
+   "sha256": "a91bbab1e296cb71fdca6ca1074fc1caab442233919ca7ba3ba9f905fa24b84c",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12975598 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "System: acute coronal cortical slices from wild-type C57BL/6J mice aged P30 to P40, male and female.",
+    "snippet": "Cortical slices were obtained from postnatal (P) day P30–P40 old animals (male and female)",
+    "anchor": "2.2 Cortical slices",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41822170_Petrillo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Sample size: 3 to 10 slices from at least 3 mice per approach; blots are three independent experiments.",
+    "snippet": "data were collected from several slices (3–10) obtained at least from 3 different mice",
+    "anchor": "2.2 Cortical slices",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41822170_Petrillo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Statistics: Student's t-test between two groups, with comparisons to untreated samples at two time points.",
+    "snippet": "Statistically significant differences between two groups were analyzed using Student",
+    "anchor": "2.10 Statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41822170_Petrillo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "RSL-3 at 5 uM lowered GPX4 by 36 and 47 percent at 15 min and 1 h and raised 15-LOX 4.5- and 5.3-fold; ferroptosis itself (cell death, lipid ROS) is not measured in the slices.",
+    "snippet": "A 36 and 47% reduction was found, respectively, after 15 min and 1 h exposure to RSL-3 (5 μM)",
+    "anchor": "3.1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41822170_Petrillo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Cysteine fell by 41 and 32 percent but the difference is declared not significant, under a heading that says RSL-3 decreases cysteine.",
+    "snippet": "Although these values were not significantly different, the reduced expression of cysteine may contribute to slow down GSH synthesis",
+    "anchor": "3.3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41822170_Petrillo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The cystine/glutamate antiporter protein rose 2.4- and 3.4-fold, the opposite of a deficiency, read as compensation.",
+    "snippet": "Surprisingly, we found a significant 2.4- and 3.4-fold increase of the protein amount after 15 min and 1 h treatment",
+    "anchor": "3.4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41822170_Petrillo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "4-HNE at 10 uM is reported to induce interictal bursts within 15 min, persisting after washout.",
+    "snippet": "the application of 4-HNE in the bath induced, within 15 min, an enhancement of spontaneous synaptic activity in cortical slices and the appearance of epileptogenic interictal bursts",
+    "anchor": "3.5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41822170_Petrillo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 5 legend states the recording is whole-cell current clamp at -70 mV from one layer 2/3 pyramidal neuron.",
+    "snippet": "Whole cell patch clamp recordings (-70mV) in current clamp configuration from a layer 2/3 pyramidal neuron",
+    "anchor": "Figure 5 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41822170_Petrillo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 5 shows one control and one 4-HNE trace from one cell with a current calibration (20 pA) although the legend says current clamp; no vehicle trace, no cell count and no burst quantification are given.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5: upper trace Control with isolated spikes and a small asterisk, lower trace 4 HNE (10 uM) with dense repetitive spike bursts and an asterisk; calibration bars 5 s and 20 pA and an expanded 0.5 s segment at right; no vehicle trace, no n, no summary plot.",
+    "anchor": "Figure 5",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41822170/fncel-20-1758230-g005.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "acute mouse cortical slice, layer 2/3 pyramidal neuron",
+     "genotype": "wild-type C57BL/6J",
+     "treatment": "4-HNE 10 uM 15 min",
+     "comparator": "same cell before application",
+     "endpoint": "spontaneous firing and bursts"
+    },
+    "qualifies": "entries[7]",
+    "qualifies_needle": "Whole cell patch clamp recordings (-70mV) in current clamp configuration"
+   },
+   {
+    "proposition": "Figure 6 shows 15-LOX and SLC7A11 bands under 4-HNE that are faint in the cropped blots, quantified as 1.5- to 2.2-fold.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6A-B: bar charts of 15-LOX and SLC7A11 densitometry (percent of control, three points per bar, asterisks) beside cropped blots whose 15-LOX and SLC7A11 bands are faint and close in intensity across control, 15 min and 1 h lanes, with strong beta-actin bands below.",
+    "anchor": "Figure 6",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41822170/fncel-20-1758230-g006.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Patients: four children with epilepsy against five healthy children, leukocyte SLC7A11 mRNA only; no diagnosis, medication or seizure data are given in the Methods.",
+    "snippet": "Blood samples from four children with epilepsy were collected into EDTA Vacutainer Tubes",
+    "anchor": "2.8 Blood sample collection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41822170_Petrillo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The four-versus-five comparison is presented as evidence for a peripheral biomarker mirroring brain changes.",
+    "snippet": "thus providing evidence for this protein as a potential peripheral biomarker in epilepsy, able to mirror pathological changes occurring in the brain",
+    "anchor": "3.7",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41822170_Petrillo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 7 plots four patient points (about 1.9 to 3.4) against five control points (about 0.7 to 1.35).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7: bar chart of mRNA SCL7A11 fold change, Controls five round points around 1.0 (about 0.7 to 1.35), Patients four square points about 1.9, 2.2, 2.7 and 3.4 with ** above the patient bar.",
+    "anchor": "Figure 7",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41822170/fncel-20-1758230-g007.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The conclusion asserts a role of ferroptosis in epilepsy development and proposes combination therapy, while conceding the coordination of processes is not understood.",
+    "snippet": "Ferroptosis plays a role in the development of epilepsy.",
+    "anchor": "5. Conclusion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41822170_Petrillo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Data Sheet 1 full blots: each full blot carries four lanes although the figures show three conditions (control, 15 min, 1 h); the lane order is not labelled; and the beta-actin images given for Figure 1A, Figure 2B and Figure 4 show the same band pattern, which is expected if one membrane was reprobed but is not stated on the sheet.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Data Sheet 1, page 1: Figure 1A GPX4 full blot with four lanes (first lane dark, three lighter) beside Figure 1A b-Actin with a red marker dot at left and an arrowed band; lower on the page the Figure 2B b-Actin full blot has the same lane layout, red dot and band pattern; Figure 1B 15-Lox full blot four lanes with a molecular weight marker; page 2: Figure 6A and 6B 15-LOX and SLC7A11 full blots are dark smeared strips with several bands and an arrow.",
+    "anchor": "Data Sheet 1",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41822170/Data_Sheet_1.pdf",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Text on GSH: levels are said to be decreased 'to 64 and 52 percent' at 15 min and 1 h of RSL-3.",
+    "snippet": "the GSH concentration was consistently decreased to 64 and 52% at 15 min and 1 h after RSL-3-treatment",
+    "anchor": "3.2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41822170_Petrillo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2A: GSH is about 175 (control), 65 (15 min) and 85 (1 h) nmol/mg protein, i.e. about 37 and 49 percent of control remaining, a fall of about 63 and 51 percent; the text 'decreased to 64 and 52 percent' reads as the size of the fall, not the remaining level.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2A: bar chart GSH nmol/mg prot 0 to 200, Ctrls about 175, RSL-3 15 min about 65, RSL-3 1 h about 85, three points per bar, three asterisks on each RSL-3 bar; Figure 2B Gcl densitometry (percent A.U.) about 100, 46 and 54 with a Gcl over b-Actin blot.",
+    "anchor": "Figure 2A-B",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41822170/fncel-20-1758230-g002.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "acute mouse cortical slices",
+     "treatment": "RSL-3 5 uM",
+     "comparator": "untreated slices",
+     "endpoint": "GSH enzymatic recycling assay"
+    },
+    "qualifies": "entries[15]",
+    "qualifies_needle": "the GSH concentration was consistently decreased to 64 and 52%"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12975598/fullTextXML returned HTTP 200 (124107 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}

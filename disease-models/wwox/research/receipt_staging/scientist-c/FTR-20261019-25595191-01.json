@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-25595191-01",
+ "study_id": {
+  "pmid": "25595191",
+  "doi": "10.1177/1535370214566747"
+ },
+ "event_at": "2026-10-19T18:33:29Z",
+ "analysis_at": "2026-10-19T18:33:29Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, metabolic batch 2026-10-19, task METAB-G3-C-20261019, branch task/METAB-G3-C-20261019; context_policy SOURCE_FIRST. Route after a failed cascade (PMC efetch XML metadata only; Europe PMC REST fullTextXML HTTP 500; Europe PMC render and the SAGE PDF behind a Cloudflare challenge; PMC page and PDF behind reCAPTCHA; Unpaywall, OpenAlex and Semantic Scholar all point to the PMC copy): the Internet Archive Wayback snapshot of the PMC article page dated 2024-04-18, saved to the shared checkout files/fulltext, with three figure images from the same snapshot; the whole article read from a text rendering of the HTML. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID25595191_Lo2015_PMC4935227_wayback2024.html",
+ "source_fingerprint": "a81407677199c42db0c8db02caee81854f10144e381a48e58c7be1cfd7c7f06a",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "not_present",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID25595191.json",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "The artefact is an archived copy of the PMC page (an author-manuscript deposit per the open-access indexes), not the publisher PDF; the figure images are the three the snapshot preserved (the page declares Figure 1 to Figure 3 only). A minireview: no Methods or Results; its limits are the Conclusions paragraph."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

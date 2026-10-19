@@ -1,0 +1,461 @@
+{
+ "schema_version": 2,
+ "pmid": "41815956",
+ "doi": "10.3389/fnmol.2026.1636268",
+ "receipt": "FTR-20261019-41815956-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID41815956.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-a.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-A-LIPID-04.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger (selection file, method step 3); the per-paper M0 packet re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Discovery leads, if any, are routed through the commit candidate and the analysis note; no cumulative discovery squeeze was warranted by this paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A peroxisome and cholesterol-metabolism group (Zurich proteomics core plus San Diego and Columbia mouse work, from the acknowledgments and animal approvals). Primary for the Pex2 knockout; WWOX is not studied. Observation (enzyme activities, proteome, mRNA at one age) weighed above the signalling interpretation (mTORC1) and the neuroinflammation narrative."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "Pex2 AND (myelin OR hypomyelination OR cholesterol)",
+    "count": 11,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (peroxisom* OR catalase)",
+    "count": 3,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts; the second query is the WWOX peroxisome literature."
+ },
+ "multihop": {
+  "references_enumerated": 253,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "253 references enumerated from the XML; none concerns WWOX (term search over the body: zero occurrences; WWOX protein appears only as a row of the deposited proteomics table)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41815956 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the dossier."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 253,
+   "references_screened": 249,
+   "references_with_doi": 249,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  },
+  "result": "Checked 2026-10-19 via PubMed esummary/efetch for PMID 41815956: publication types ['Journal Article']; corrections/retraction markers in the efetch record: none."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41815956_Eberhart2026_PMC.xml",
+   "sha256": "196817dd334b835ee3c1daa4891a63e45bac06358d771b3f20ada239140f2bea",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC12971716: abstract, body, twelve figure legends, references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12971716/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41815956/fnmol-19-1636268-g001.jpg",
+   "sha256": "0b7448e889e2b4e40dad4785ffabf5605701e18ca5e66a0cddf5f431430836a6",
+   "kind": "figure",
+   "note": "Figure 1 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution or in a montage (Figures 1, 2, 4, 5, 7-10 in two 2x2 montages).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12971716/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41815956/fnmol-19-1636268-g002.jpg",
+   "sha256": "2a4e4eea7b8bf9c647cafaeb1eb6c04e81c742739b65f9511ba94709b86a3d3a",
+   "kind": "figure",
+   "note": "Figure 2 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution or in a montage (Figures 1, 2, 4, 5, 7-10 in two 2x2 montages).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12971716/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41815956/fnmol-19-1636268-g003.jpg",
+   "sha256": "038db416dd0860c923a63d466356343cbb64f7bd776b8b31123f13ab63a05e66",
+   "kind": "figure",
+   "note": "Figure 3 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution or in a montage (Figures 1, 2, 4, 5, 7-10 in two 2x2 montages).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12971716/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41815956/fnmol-19-1636268-g004.jpg",
+   "sha256": "e5c1daeb4d295ba15b43db418b1a5162aabcb8d0b4b4bd71454457f93359fc40",
+   "kind": "figure",
+   "note": "Figure 4 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution or in a montage (Figures 1, 2, 4, 5, 7-10 in two 2x2 montages).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12971716/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41815956/fnmol-19-1636268-g005.jpg",
+   "sha256": "bced4efca28a0462dcc80dfc92f5f2b5854e01dd5c7d56f22a8ae297af7145c1",
+   "kind": "figure",
+   "note": "Figure 5 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution or in a montage (Figures 1, 2, 4, 5, 7-10 in two 2x2 montages).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12971716/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41815956/fnmol-19-1636268-g006.jpg",
+   "sha256": "ebcf6de830d0d516de7b6af40ee6bf37c7cdd929f2acdde35f447d40ba21deae",
+   "kind": "figure",
+   "note": "Figure 6 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution or in a montage (Figures 1, 2, 4, 5, 7-10 in two 2x2 montages).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12971716/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41815956/fnmol-19-1636268-g007.jpg",
+   "sha256": "50381b57fa62b9a0980cec190583b12f5bd4dfe5249e93f0ff3e61f6b9371893",
+   "kind": "figure",
+   "note": "Figure 7 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution or in a montage (Figures 1, 2, 4, 5, 7-10 in two 2x2 montages).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12971716/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41815956/fnmol-19-1636268-g008.jpg",
+   "sha256": "d121d5dbe1de813e92202ed0a0b1a5c5f74666cb3afcd7e6530e6dc2528fb000",
+   "kind": "figure",
+   "note": "Figure 8 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution or in a montage (Figures 1, 2, 4, 5, 7-10 in two 2x2 montages).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12971716/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41815956/fnmol-19-1636268-g009.jpg",
+   "sha256": "6ffaddadd3ddfefc5a3ab6cee2c36ad22988850e87b770f6bdb69f86574190a2",
+   "kind": "figure",
+   "note": "Figure 9 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution or in a montage (Figures 1, 2, 4, 5, 7-10 in two 2x2 montages).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12971716/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41815956/fnmol-19-1636268-g010.jpg",
+   "sha256": "2410400df968d221e3b2c99c60a0e11a3f752672e7cae3fa22a77a1af0699e41",
+   "kind": "figure",
+   "note": "Figure 10 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution or in a montage (Figures 1, 2, 4, 5, 7-10 in two 2x2 montages).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12971716/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41815956/fnmol-19-1636268-g011.jpg",
+   "sha256": "22aef2f4dad15e1c0c25d8e1a925ad13b4ab4440a4e1b4c22281fb9329a0cba1",
+   "kind": "figure",
+   "note": "Figure 11 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution or in a montage (Figures 1, 2, 4, 5, 7-10 in two 2x2 montages).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12971716/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41815956/fnmol-19-1636268-g012.jpg",
+   "sha256": "7d0a9ed5a9557460272903595f99511efa1cbfced6425acc7bfa038bbd359f6a",
+   "kind": "figure",
+   "note": "Figure 12 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution or in a montage (Figures 1, 2, 4, 5, 7-10 in two 2x2 montages).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12971716/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41815956_Eberhart2026_supplement/Table_3.xlsx",
+   "sha256": "1dac8c188dc64978d3007d75652e4c4d765741afa61cd69a0f93d06706d6d53f",
+   "kind": "supplement_binary",
+   "note": "Supplementary Table S3 (differential proteomics, four sheets, one per CNS region).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12971716/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41815956_Eberhart2026_supplement/Table3_wwox_derivation.txt",
+   "sha256": "7efef09e6265b7e40a0d2096a10955f0d306fbbc55dd399e8e5c7f2d5cd513af",
+   "kind": "supplement_text",
+   "note": "Aggregate derivation of the Wwox rows of Table S3 by a short Python script; values unmodified.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID41815956_Eberhart2026_supplement/Table_3.xlsx",
+    "extractor": {
+     "name": "python3 zipfile+re script (derive_eberhart.py, scratchpad)",
+     "version": "3.12",
+     "call": "read sharedStrings and sheet xml; print rows whose gene cell is Wwox with the sheet header cells",
+     "join": "\\n"
+    },
+    "acquired_on": "2026-10-19",
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The model is the systemic Pex2 knockout on a mixed background, studied at P10 in five CNS regions; controls are Pex2+/+ or +/- pooled; WWOX is not studied.",
+    "snippet": "As their biochemical characteristics were comparable, the control mice consisted of either Pex2+/+ or Pex2+/− genotypes (hereafter referred to as Pex2+/) for the purpose of this study",
+    "anchor": "Methods, animal studies",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41815956_Eberhart2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Cholesterol is similar in control and knockout brain while desmosterol is significantly higher, with and without bile-acid feeding.",
+    "snippet": "While cholesterol levels were similar in the brains of control and Pex2−/− mice, desmosterol levels were significantly elevated in the brains of both untreated and BA-fed Pex2−/− mice compared to their control littermates (Figure 3A).",
+    "anchor": "Results, sterol levels",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41815956_Eberhart2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure 3A and 3C. 3A brain cholesterol about 6.2 (control) versus 5.5 mg/g (knockout, not significant; n = 8 versus 4) and desmosterol about 0.85 versus 1.3 mg/g (three asterisks); 3C enzyme activities rise in cortex and fall in spinal cord and brainstem (HMGCR, IDI1, FDPS, FDFT1 by region).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3A two bar charts of brain cholesterol and desmosterol for untreated and BA-fed groups; Fig 3C four enzyme-activity panels across SC, BS, CBL, DE, CBR.",
+    "anchor": "Figure 3A,C, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41815956/fnmol-19-1636268-g003.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "mouse systemic Pex2 knockout (Swiss Webster x 129), P10 CNS regions",
+     "genotype": "Pex2 -/- versus Pex2 +/+ or +/-",
+     "treatment": "none (bile-acid arm in one panel)",
+     "comparator": "littermate controls",
+     "endpoint": "as stated per panel"
+    }
+   },
+   {
+    "proposition": "Cholesterol synthesis is down in white-matter regions and up in cortex, by enzyme activity, mRNA and protein.",
+    "snippet": "Here we show through enzyme activity measurements and the determination of mRNA and protein levels that the cholesterol biosynthesis pathway is downregulated in CNS regions with a higher proportion of white matter (i.e., SC, BS) and upregulated in regions enriched for gray matter (i.e., cerebral cortex) (Figure 12).",
+    "anchor": "Discussion, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41815956_Eberhart2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CERS2 and DEGS1 proteins are decreased in spinal cord and brainstem, and ELOVL1 protein was not detected while its mRNA is lower.",
+    "snippet": "ELOVL1 was not detected at the protein level, but since Elovl1 expression was significantly reduced while C26:0 levels were increased in the brain, other elongases might be responsible for the synthesis of C26:0 in the CNS of Pex2−/− mice.",
+    "anchor": "Results, fatty acid genes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41815956_Eberhart2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CNP activity is 50 to 60 percent lower in all CNS regions at P10.",
+    "snippet": "CNP activity was decreased by 50–60% in all CNS regions of P10 Pex2−/− mice compared to controls (Figure 6A).",
+    "anchor": "Results, myelination",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41815956_Eberhart2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure 6A-D. CNP activity in spinal cord about 5.0 versus 2.5 U/mg and in brainstem about 3.5 versus 1.6, lower in every region (three asterisks); MBP and CNP blots reduced; PLP, MBP and CNP mRNA reduced in all regions, cerebral cortex most (about 0.2 of control).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 6A bar chart CNP activity per region; Fig 6B immunoblots MBP and CNP; Fig 6C northern blots; Fig 6D bar graphs of relative mRNA for PLP, MBP, CNP.",
+    "anchor": "Figure 6, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41815956/fnmol-19-1636268-g006.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "mouse systemic Pex2 knockout (Swiss Webster x 129), P10 CNS regions",
+     "genotype": "Pex2 -/- versus Pex2 +/+ or +/-",
+     "treatment": "none (bile-acid arm in one panel)",
+     "comparator": "littermate controls",
+     "endpoint": "as stated per panel"
+    }
+   },
+   {
+    "proposition": "Phosphorylation of ribosomal protein S6 is decreased in every region, read as lower mTORC1 activity; AMPK and AKT are not activated.",
+    "snippet": "Phosphorylation of RPS6 at Ser240/244 was significantly decreased in all CNS regions of Pex2−/− mice (Figure 10), suggesting that mTORC1 activity is lower in the peroxisome-deficient CNS.",
+    "anchor": "Results, AMPK, AKT/mTOR and MAPK signaling",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41815956_Eberhart2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The knockout mice have intestinal lipid malabsorption and the authors note starvation from birth to 14-20 days in rats gives persistent myelin deficits, so the hypomyelination may partly be nutritional.",
+    "snippet": "Postnatal peroxisome-deficient Pex2−/− mice suffer from intestinal lipid malabsorption due to impaired bile acid synthesis (Keane et al., 2007), and the combination of inadequate dietary fat intake and impaired fatty acid processing can lead to severe energy deficits and developmental delays such as hypomyelination.",
+    "anchor": "Discussion, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41815956_Eberhart2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Pro-inflammatory cytokines and Trem2 are up but full disease-associated microglial activation is not seen at P10.",
+    "snippet": "In summary, the expression of pro-inflammatory cytokines is increased and the expression of some homeostatic and disease-associated microglial genes has changed. However, full DAM activation is not yet observed in P10 Pex2−/− mice.",
+    "anchor": "Results, neuroinflammation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41815956_Eberhart2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A limitation named by the authors: whole regions were analysed, so changes cannot be assigned to cell types.",
+    "snippet": "A limitation of our study is that we analyzed the entire tissue of different regions of the CNS, so that observed changes in the activity of enzymes, or the expression of genes and proteins cannot be assigned to a specific cell type (neurons, astrocytes, oligodendrocytes, and microglia).",
+    "anchor": "Discussion, paragraph 8",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41815956_Eberhart2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The study is a single time point; the knockout survives about a week or two so longitudinal work is not feasible.",
+    "snippet": "However, such analyses are not feasible due to the severely limited survival of Pex2−/− mice beyond P10.",
+    "anchor": "Discussion, conclusion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41815956_Eberhart2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table S3 contains WWOX protein in three regions: log2 fold change +0.14 (spinal cord), -0.06 (brainstem), -0.26 (cerebellum), none significant (P 0.40, 0.73, 0.67); WWOX was not listed for cortex.",
+    "snippet": "SC diff_exp_analysis: Wwox | header cells: ['Gene', 'log2 fold change', 'p.value', 'FDR'] | values: ['0.14269064630456141', '0.39832844584379168', '0.6219501169559114']",
+    "anchor": "Supplementary Table S3, derived by script from the deposited xlsx",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID41815956_Eberhart2026_supplement/Table3_wwox_derivation.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Same derivation, cerebellum row.",
+    "snippet": "CBL diff_exp_analysis: Wwox | header cells: ['Gene', 'log2 fold change', 'p.value', 'FDR'] | values: ['-0.26134379502771682', '0.67404861086198831', '0.87760320871459885']",
+    "anchor": "Supplementary Table S3, derived by script",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID41815956_Eberhart2026_supplement/Table3_wwox_derivation.txt",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search returned inEPMC Y, isOpenAccess Y, license cc by on 2026-10-19; fullTextXML returned HTTP 200 and the declared article_text artefact is that response byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

@@ -1,0 +1,198 @@
+{
+ "schema_version": 2,
+ "pmid": "37907746",
+ "doi": "10.1038/s12276-023-01112-y",
+ "receipt": "FTR-20261019-37907746-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-G2-FRUCTOSE-01",
+  "metabolic_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared. Triples are listed in the commit candidate for a later blind audit."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 303216,
+  "publications_on_gene": 11,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Li Y[au]' 303216 (surname-initial, ambiguous and uninformative); 'Li Y[au] AND WWOX' 11 (ambiguous).",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Diabetes and cognition laboratory (Xi'an Jiaotong); mouse multi-omics and cell biology; no WWOX.",
+  "note": "Corresponding author Wang Q."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 0
+   }
+  ],
+  "note": "WWOX does not occur."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 60,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS: 60.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-directed reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --theme fructose (no record of this paper)",
+  "hits": 0,
+  "finding": "Not in the registries."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed esummary 2026-10-19 for 37907746; JATS front matter carries is-retracted flag",
+  "result": "No retraction, correction or expression of concern found in the PubMed record or the JATS front matter.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 60,
+   "references_screened": 59,
+   "references_with_doi": 59,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID37907746_Li2023_PMC10689812.xml",
+   "sha256": "011cf5558765f227f0cb89ae18c46230750f77b771a5bbdda3db3c0ee19f2b41",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC10689812 (Exp Mol Med 2023, CC BY), 146,722 bytes; abstract, introduction, methods, results, discussion and eight figure legends present; supplementary methods and figures are in a separate PDF. 60 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10689812/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "011cf5558765f227f0cb89ae18c46230750f77b771a5bbdda3db3c0ee19f2b41"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 146,722 bytes; whole article; supplementary PDF not read.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: abstract, introduction, methods headings and the first lines of each Results subsection and the figure legends read; the Results subsections were read in the first 900 characters only, so results is read at screening depth and the receipt records results as captions_only. No figure inspected as an image; supplementary methods and figures PDF not opened. The article states no limitations section.",
+  "entries": [
+   {
+    "proposition": "SYSTEM: male leptin-receptor-deficient db/db mice and m/m littermates (24 weeks), hippocampus; a type 2 diabetes model with chronic hyperglycaemia, the metabolic opposite of the hypoglycaemic Wwox-null mouse.",
+    "snippet": "Male homozygous leptin receptor-deficient T2DM (Lepr db/Lepr db, db/db) mice and their littermate m/m (m/m) mi",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37907746_Li2023_PMC10689812.xml",
+    "anchor": "Methods, Animals",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The omics design is 5 to 6 biological replicates per group with a loose threshold (fold change above 1.2 or below 0.83, unadjusted p below 0.05).",
+    "snippet": "RNA-seq was performed on 5 biological replicates for db/db and m/m mice and 6 biological replic",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37907746_Li2023_PMC10689812.xml",
+    "anchor": "Methods, RNA-seq",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Methods state that reads were mapped to the Homo sapiens genome for mouse hippocampus and mouse BV2 samples, an apparent error that is not corrected in the text.",
+    "snippet": "After cleaning reads and mapping them to the genome of Homo sapie",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37907746_Li2023_PMC10689812.xml",
+    "anchor": "Methods, RNA-seq",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "With that threshold, 18,201 of 55,450 transcripts are called differentially expressed (9,323 up, 8,878 down), a third of the annotated transcriptome.",
+    "snippet": "Transcriptomic analysis detected 55,450 genes, of which 9,323 were upregulated and 8,878 were downregulated (F",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37907746_Li2023_PMC10689812.xml",
+    "anchor": "Results, omics",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Hippocampal sorbitol and fructose are higher and ATP lower in db/db mice (whole-tissue assays by kit).",
+    "snippet": "The results demonstrated that the sorbitol and fructose levels were elevated in the db/db mice. However, the level of ATP, a unique cha",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37907746_Li2023_PMC10689812.xml",
+    "anchor": "Results, fructose pathway",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Cell-type attribution of KHK and GLUT5 rests on a public single-cell dataset and immunostaining colocalisation (n 30 fields from 4 to 5 mice).",
+    "snippet": "Both Khk and Slc2a5 (GLUT5) were expressed mainly in microglia (Supplementary Fi",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37907746_Li2023_PMC10689812.xml",
+    "anchor": "Results, cell type",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The in vivo knockdown uses an AAV2/6 shRNA injected into hippocampus under a CMV promoter, not a microglia-specific promoter or a conditional allele.",
+    "snippet": "Recombinant adeno-associated virus (rAAV2/6 m) expressing U6-driven shRNA and CMV-driven EGFP (rAAV-U6-sh",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37907746_Li2023_PMC10689812.xml",
+    "anchor": "Methods, viral vectors",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Khk knockdown leaves body weight, glucose, insulin and HOMA-IR unchanged while raising hippocampal ATP.",
+    "snippet": "Khk knockdown had no apparent effect on body weight, water intake, serum glucose, serum fructose, serum sorbitol, fasting glu",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37907746_Li2023_PMC10689812.xml",
+    "anchor": "Results, Khk knockdown",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Damaged mitochondria in hippocampal microglia are more frequent in db/db mice and restored by Khk depletion (transmission electron microscopy, n 3 mice).",
+    "snippet": "the ratio of damaged mitochondria in microglia was increased in db/db mice and restored when fructose metabolism was blocked ",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37907746_Li2023_PMC10689812.xml",
+    "anchor": "Results, mitochondria",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Neuronal synaptic protein loss is shown with conditioned medium from fructose-treated microglia and rescued by Khk knockout, NOX4 inhibition, mitochondrial ROS scavenger or N-acetylcysteine (in vitro).",
+    "snippet": "Conditioned medium from wild-type primary microglia treated with fructose decreased the expression of syn",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37907746_Li2023_PMC10689812.xml",
+    "anchor": "Results, synapses",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

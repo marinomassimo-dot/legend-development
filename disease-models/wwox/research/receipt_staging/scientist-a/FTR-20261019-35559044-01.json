@@ -1,0 +1,42 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-35559044-01",
+ "study_id": {
+  "pmid": "35559044",
+  "doi": "10.3389/fgene.2022.843661"
+ },
+ "analysis_at": "2026-10-19T18:14:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a (Scientist A), metabolic batch 2026-10-19 group G1, task METAB-G1-A-20261019 on branch task/METAB-G1-A-20261019, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN. Route: Europe PMC JATS for PMC9086287, four figure JPEGs and the authors' Table1.XLSX from the Europe PMC supplementaryFiles zip into the root files/ tree; Figures 1-4 inspected as images; Table1.XLSX read through an aggregate-only script derivation (genotype counts per group, run-length encoding per column in file order, one dosage R-squared) declared as supplement_text; no individual row reproduced. Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a staged JSON for the Orchestrator and was not appended at preparation time (the Orchestrator records staged receipts in event-ID order).",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID35559044_Liu2022_PMC.xml",
+ "source_fingerprint": "9e848604465c4ce61659081f26dbb4cb50c7758259aa6a49ed41cfdff64d706b",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID35559044.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID35559044.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-A-LIPID-01.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-a.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "manifest",
+  "Figures 1-4 inspected as images",
+  "Table1.XLSX (1853 rows x 6 SNPs, no covariates) read through an aggregate derivation; counts equal the printed Table 2 exactly; CAD and stroke genotype columns are laid out in a few contiguous blocks in file order"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

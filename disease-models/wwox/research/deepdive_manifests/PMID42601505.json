@@ -1,0 +1,600 @@
+{
+ "schema_version": 2,
+ "pmid": "42601505",
+ "doi": "10.1038/s44319-026-00898-y",
+ "receipt": "FTR-20261019-42601505-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A mitochondrial bioenergetics laboratory with metabolomics, lipidomics and paediatric inherited-metabolic-disease collaborators; WWOX is not studied or named. Observation (isotope tracing, lipidomics, enzyme activities, flow cytometry) is weighted well above interpretation (PUFA sequestration protects against ferroptosis), which rests on correlative lipidomics, a MUFA rescue, and a DGAT inhibitor design that lacks its decisive arm."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "lipid droplets AND ferroptosis AND mitochondrial",
+    "count": 69,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "triacylglycerol AND polyunsaturated AND ferroptosis",
+    "count": 28,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches, not measurements."
+ },
+ "multihop": {
+  "references_enumerated": 69,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "The reference list holds 69 reference elements in the JATS artefact (counted in the session); WWOX is not named anywhere in the article (case-insensitive count 0 over the text rendering), so no gene-direct hop exists.",
+  "disposition": "No gene-direct references."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42601505 --hops 1; paper_packet.py packet; fulltext_receipts.py status --pmid 42601505",
+  "hits": 0,
+  "note": "No record in any of the seven searched registry surfaces and no prior receipt; an empty result is a statement about that query over those files."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication type Journal Article.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 69,
+   "references_screened": 69,
+   "references_with_doi": 69,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42601505_Puertas2026_PMC.xml",
+   "sha256": "d414a68bd9c69642116e9540a24da64a9852b5d38d0460f262732c6ad26e9d2a",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13601559/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "d414a68bd9c69642116e9540a24da64a9852b5d38d0460f262732c6ad26e9d2a"
+   }
+  },
+  {
+   "path": "files/figures/PMID42601505/44319_2026_898_Fig1_HTML.webp",
+   "sha256": "5be721addc7fee509587f7db6d6e100d7d5e4bc6e43e7d46e242f0ddf0479e6f",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13601559 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42601505_Fig1.png",
+   "sha256": "2b984394bb8e07660d1ec236483dba2f92e1e9803e396db83a14b9b6b7b3210c",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42601505/44319_2026_898_Fig1_HTML.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "2b984394bb8e07660d1ec236483dba2f92e1e9803e396db83a14b9b6b7b3210c"
+   }
+  },
+  {
+   "path": "files/figures/PMID42601505/44319_2026_898_Fig2_HTML.webp",
+   "sha256": "255a0d6b0d4edcd148349b0783ca5da45bc04e9cb951af294a839f0b6c723558",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13601559 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42601505_Fig2.png",
+   "sha256": "0e0d257169fb79e7e55fc7d353ec6b923f4acc1132b81143262ae2d7780e567f",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42601505/44319_2026_898_Fig2_HTML.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "0e0d257169fb79e7e55fc7d353ec6b923f4acc1132b81143262ae2d7780e567f"
+   }
+  },
+  {
+   "path": "files/figures/PMID42601505/44319_2026_898_Fig3_HTML.webp",
+   "sha256": "a3a53c4551ac377af8768a266092ec0c5e7ced775846f2817c3867e0a795de74",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13601559 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42601505_Fig3.png",
+   "sha256": "f1d20b6460b5f9c5092df97bea8f52a8ac9c822e64bb591d4e83db284b8e1541",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42601505/44319_2026_898_Fig3_HTML.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "f1d20b6460b5f9c5092df97bea8f52a8ac9c822e64bb591d4e83db284b8e1541"
+   }
+  },
+  {
+   "path": "files/figures/PMID42601505/44319_2026_898_Fig4_HTML.webp",
+   "sha256": "c2d82079eac256bf791d8c123fb5ab55c0052674cf5c6c0f4959bbaaa262686c",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13601559 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42601505_Fig4.png",
+   "sha256": "3eb4d210ac7c00e8c613569c76a00e6d2e988b06fdd032ae8bbbe9a5374fe779",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42601505/44319_2026_898_Fig4_HTML.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "3eb4d210ac7c00e8c613569c76a00e6d2e988b06fdd032ae8bbbe9a5374fe779"
+   }
+  },
+  {
+   "path": "files/figures/PMID42601505/44319_2026_898_Fig5_HTML.webp",
+   "sha256": "637f5eddca413241d507e1ef68559fcd5a24c3ebd6868af13aa78419a84c6229",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13601559 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42601505_Fig5.png",
+   "sha256": "6343ac4a99de2c73bafcc79c253ebf2ce082c9ece0c0ee10e0dcd846e2d84fb2",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42601505/44319_2026_898_Fig5_HTML.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "6343ac4a99de2c73bafcc79c253ebf2ce082c9ece0c0ee10e0dcd846e2d84fb2"
+   }
+  },
+  {
+   "path": "files/figures/PMID42601505/44319_2026_898_Fig6_HTML.webp",
+   "sha256": "15ec1037bdd4899b74aaa85ebc90049d1201e99d99ebab28a3087e96fd5dbdc7",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13601559 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42601505_Fig6.png",
+   "sha256": "0b48490bda3fd42eb44db801ea38ebfd2a587275b6c2b618eade77de4024e696",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42601505/44319_2026_898_Fig6_HTML.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "0b48490bda3fd42eb44db801ea38ebfd2a587275b6c2b618eade77de4024e696"
+   }
+  },
+  {
+   "path": "files/figures/PMID42601505/44319_2026_898_Fig7_HTML.webp",
+   "sha256": "411ccf454fd40eb6635daf1d2cc8723881e20d8d79c213d3f3c32d8a170c3426",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13601559 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42601505_Fig7.png",
+   "sha256": "27542efb9ec637f90006b4647cb1eac3ae126ff487e7cd11d5b19b56b15fc090",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42601505/44319_2026_898_Fig7_HTML.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "27542efb9ec637f90006b4647cb1eac3ae126ff487e7cd11d5b19b56b15fc090"
+   }
+  },
+  {
+   "path": "files/figures/PMID42601505/44319_2026_898_Fig8_HTML.webp",
+   "sha256": "ecb38da50a66975a84b26fc8be61667f0ca1d1eb602f265ccff79b53503853af",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13601559 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42601505_Fig8.png",
+   "sha256": "0414b348f1572f04d485cfd731e153d53e885f15132d5e258214808227ff79ec",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42601505/44319_2026_898_Fig8_HTML.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "0414b348f1572f04d485cfd731e153d53e885f15132d5e258214808227ff79ec"
+   }
+  },
+  {
+   "path": "files/figures/PMID42601505/44319_2026_898_Figa_HTML.webp",
+   "sha256": "1dcc23541bdf3a74dd4a64831873f40f4bf41fc3c3b1cf7d1ec610408567bd49",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13601559 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42601505_Figa.png",
+   "sha256": "e476f829325dc5fa506892d23c2f5ad4f2c8946d95839e03a4168060c10a4ab4",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42601505/44319_2026_898_Figa_HTML.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "e476f829325dc5fa506892d23c2f5ad4f2c8946d95839e03a4168060c10a4ab4"
+   }
+  },
+  {
+   "path": "files/figures/PMID42601505/44319_2026_898_MOESM4_ESM.pdf",
+   "sha256": "14cda148d370a9609ff872f745d7f4a3de5ae48e6855fcd613fa6bbf082986bd",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13601559 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID42601505/44319_2026_898_MOESM4_ESM.txt",
+   "sha256": "6d2420c6cfe04be2e414d4a9c5cbb1ac8be5f1b1b446fbc7cef97c3cb4ec39eb",
+   "kind": "supplement_text",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42601505/44319_2026_898_MOESM4_ESM.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk <pdf> <txt>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "6d2420c6cfe04be2e414d4a9c5cbb1ac8be5f1b1b446fbc7cef97c3cb4ec39eb"
+   }
+  },
+  {
+   "path": "files/figures/PMID42601505/44319_2026_898_MOESM5_ESM.pdf",
+   "sha256": "a231e14dd6ab8a7feee351517381d8b01cd2389266e67018cfe7cfc07f0a6206",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13601559 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID42601505/44319_2026_898_MOESM5_ESM.txt",
+   "sha256": "2c2a2b19718e33bfebb0cfb7142a56efca3929cee4414677f52dae3cea018b14",
+   "kind": "supplement_text",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42601505/44319_2026_898_MOESM5_ESM.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk <pdf> <txt>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "2c2a2b19718e33bfebb0cfb7142a56efca3929cee4414677f52dae3cea018b14"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "System: HEK293-derived lines, COX6B1 knock-out (6BKO), 6BKO with alternative oxidase (6BAOX), plus SDHA and ATP5F1B knock-outs, a week of 1 percent oxygen, two patient fibroblast lines and plasma.",
+    "snippet": "we used three HEK293-derived cell lines – wild-type (WT), COX6B1 knock-out (6BKO), and 6BKO cells overexpressing alternative oxidase (6BAOX)",
+    "anchor": "Results, first section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42601505_Puertas2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "TG rise, DG fall, phospholipids comparable or slightly lower in 6BKO.",
+    "snippet": "Lipidomic analysis showed significantly increased triacylglycerols (TGs) and decreased diacylglycerols in 6BKO compared to WT (Fig. 2B)",
+    "anchor": "Results, TG section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42601505_Puertas2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PUFA-rich TG species are up to 9-fold in 6BKO.",
+    "snippet": "TGs with a higher number of double bonds were strongly elevated in 6BKO, up to 9-fold for specific species (Fig. 2D)",
+    "anchor": "Results, TG section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42601505_Puertas2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Desaturase inhibitors did not change proliferation, so TG-PUFA storage is not shown to be an NAD+ recycling device.",
+    "snippet": "did not affect proliferation of 6BKO or 6BAOX at 24 h (Fig. EV2B) or 48 h",
+    "anchor": "Results, PUFA stress response section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42601505_Puertas2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Text on phospholipids: some highly unsaturated phospholipids rose up to 40 percent in 6BKO against PUFA-TGs up to fourfold.",
+    "snippet": "Although some highly unsaturated phospholipids rose up to 40% in 6BKO, PUFA-enriched TGs increased up to fourfold",
+    "anchor": "Results, PUFA stress response section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42601505_Puertas2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3B: in 6BKO several unsaturated phosphatidylcholine species (8 to 10 double bonds) and phosphatidylethanolamine species are about 1.6 to 2.2 times WT, more than the 40 percent in the text, while TG species reach about 3.7; values read by eye from the bars.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3B: grouped bars WT, 6BKO, 6BAOX per double-bond class for PC, PE and TG, y axis relative levels 0 to 4; 6BKO PC bars at DB-8, DB-9 and DB-10 about 2.2, 2.0 and 1.85; 6BKO PE at DB-7 and DB-8 about 1.7 and 1.6; 6BKO TG bars up to about 3.7 at DB-6 to DB-8; WT bars at 1.",
+    "anchor": "Figure 3B",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42601505_Fig3.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "HEK293 COX6B1 knock-out cells, LC-MS lipidomics",
+     "genotype": "6BKO and 6BKO plus AOX",
+     "comparator": "wild-type HEK293",
+     "endpoint": "relative lipid species levels by double-bond class"
+    },
+    "qualifies": "entries[4]",
+    "qualifies_needle": "highly unsaturated phospholipids rose up to 40%"
+   },
+   {
+    "proposition": "Under RSL3 the lipid peroxidation reporter ratio was higher in 6BKO than WT and not raised in 6BAOX, the latter attributed to sustained GPX4.",
+    "snippet": "Peroxidation was significantly higher in 6BKO than in WT after 24 h (Fig. 3D), but not elevated in 6BAOX, likely due to the sustained high GPX4 expression (Fig. 3C).",
+    "anchor": "Results, protection section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42601505_Puertas2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Text: DGAT1/2 inhibition reduced lipid droplets without an increase in lipid peroxidation, cited to Fig 3D.",
+    "snippet": "Inhibition of TG synthesis with inhibitors of diacylglycerol acyltransferases 1 and 2 (DGAT1/2) (Fig. EV2E) reduced LD formation (Fig. EV2F) without an increase in lipid peroxidation (Fig. 3D).",
+    "anchor": "Results, protection section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42601505_Puertas2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3D contains a DGAT1/2 inhibitor condition only without RSL3 (rightmost bars, all three lines near the basal 0.3); there is no DGAT1/2i plus RSL3 condition for the lipid peroxidation reporter, so the panel does not test whether blocking TG sequestration raises RSL3-induced peroxidation.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3D: y axis BODIPY C11 emission (Ox/Non-ox ratio) 0 to 2; bars for WT, 6BKO and 6BAOX under conditions listed beneath: untreated about 0.3; RSL3 about 1.0, 1.4 and 0.3; RSL3 plus Fer-1 about 0.3; RSL3 plus OA about 0.38, 0.2 and 0.38; and a DGAT1/2i condition without RSL3 about 0.3; the shaded RSL3 band does not include a DGAT1/2i row.",
+    "anchor": "Figure 3D",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42601505_Fig3.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "HEK293 COX6B1 knock-out cells, flow cytometry BODIPY 581/591 C11",
+     "treatment": "RSL3 1 uM 24 h, Fer-1, oleic acid, DGAT1/2 inhibitors",
+     "comparator": "untreated",
+     "endpoint": "oxidised to non-oxidised C11 ratio"
+    },
+    "qualifies": "entries[7]",
+    "qualifies_needle": "without an increase in lipid peroxidation"
+   },
+   {
+    "proposition": "Combined DGAT1/2 inhibition and RSL3 did not reduce proliferation further than RSL3.",
+    "snippet": "RSL3 suppressed proliferation across all cell lines, with 6BKO being most sensitive at 48 h, and combined DGAT1/2 inhibition and RSL3 did not cause a further reduction.",
+    "anchor": "Results, protection section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42601505_Puertas2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3E: 48 h proliferation under RSL3 is about 0.36 (WT), 0.21 (6BKO) and 0.33 (6BAOX); with DGAT1/2i added about 0.33, 0.22 and 0.45 with a wide error bar for 6BAOX; no sensitisation by TG-synthesis inhibition.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3E: y axis proliferation 48 h (norm to vehicle) 0 to 1.5; vehicle bars at 1; DGAT1/2i alone WT about 1.0, 6BKO about 0.88; RSL3 bars about 0.36, 0.21, 0.33; RSL3 plus DGAT1/2i about 0.33, 0.22, 0.45; asterisks on two comparisons.",
+    "anchor": "Figure 3E",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42601505_Fig3.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "HEK293 COX6B1 knock-out cells, CyQUANT DNA-content proliferation",
+     "treatment": "RSL3 1 uM with or without DGAT1/2 inhibitors",
+     "comparator": "vehicle",
+     "endpoint": "relative cell number at 48 h"
+    },
+    "qualifies": "entries[9]",
+    "qualifies_needle": "did not cause a further reduction"
+   },
+   {
+    "proposition": "The authors conclude the PUFA stress response is protective, with GPX4 as the primary defence and TG synthesis an additional layer relevant to proliferation.",
+    "snippet": "Together, these results indicate that the PUFA stress response is protective.",
+    "anchor": "Results, protection section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42601505_Puertas2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "GPX4 stays elevated in the rescue lines, read as a stable transcriptional adaptation.",
+    "snippet": "The persistence of GPX4 in both 6BAOX and 6BRES after the redox trigger is removed indicates a stable transcriptional adaptation.",
+    "anchor": "Results, protection section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42601505_Puertas2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The complex II knock-out shows the full response without a reduced NAD+/NADH ratio, so electron-flux impairment itself is proposed as the trigger.",
+    "snippet": "SDHAKO still displays the full PUFA stress signature despite an unchanged NAD+/NADH ratio and only marginally increased reductive carboxylation.",
+    "anchor": "Results, generality section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42601505_Puertas2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "One week of 1 percent oxygen raises TGs and lipid droplet area in wild-type cells.",
+    "snippet": "Hypoxia increased TGs (Fig. 4E) and lipid droplet area (Fig. EV3I).",
+    "anchor": "Results, generality section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42601505_Puertas2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Patient fibroblasts: two patients with the same COX6B1 variant, reduced complex IV activity.",
+    "snippet": "Immortalised human skin fibroblasts from two patients carrying the COX6B1 p.R20H variant (Massa et al, 2008) had significantly decreased cytochrome c oxidase activity (Fig. 5A)",
+    "anchor": "Results, patients section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42601505_Puertas2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 5A to C: a single Control bar with three points against P1 and P2; complex IV about 28 against about 9 and 7.5 nmol/min/mg; TG about 1.3 and 1.7 times control; lipid droplet area per cell about 280 (control), 1800 (P1), 1100 (P2) with wide scatter; the comparison is one control line against two patient lines.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5A-C: bar charts with Control, P1, P2 on the x axis, three data points per bar in A, relative lipid classes in B (TG, LPC, FA up; Cer and HexCer down), BODIPY micrographs for Control, P1 and P2 in C with green puncta in P1 and P2 and a bar chart of area per cell.",
+    "anchor": "Figure 5A-C",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42601505_Fig5.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Plasma cohort: 13 MERRF patients against 23 controls; the control age range is wider than the patient range.",
+    "snippet": "A total of 13 patients with MERRF syndrome (13–56 years old, 69% females, 31% males) and 23 age-matched healthy controls (17–80 years old",
+    "anchor": "Methods, Human plasma",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42601505_Puertas2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors call their plasma cohort exploratory.",
+    "snippet": "although our cohort (13 MERRF patients, 23 controls) is exploratory and requires validation in larger, genetically diverse datasets",
+    "anchor": "Results, patients section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42601505_Puertas2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 5F-G: plasma TG about 1.6 times control with large spread (patient points from about 0.6 to 3.5), DG about 1.45, PE about 1.35, FA below 1; PUFA-class TGs about 1.5 to 2 times control, PE with one double bond about 2; many individual points overlap the control cloud.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5F-G: grouped bars Control (23 blue points) and MERRF (13 brown points) per lipid class in F and per double-bond class in G, y axes relative to controls 0 to 4 and 0 to 8, asterisks on TG, DG, PE and FA in F and on several TG and one PE classes in G.",
+    "anchor": "Figure 5F-G",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42601505_Fig5.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Statistics and bias controls: outliers removed by an automatic rule and no blinding.",
+    "snippet": "Outliers were identified by the ROUT method and excluded from analysis.",
+    "anchor": "Methods, Data analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42601505_Puertas2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The proliferation assay is a DNA-content fluorescence read (CyQUANT), not a cell death assay.",
+    "snippet": "Cell proliferation was measured using the CyQUANT Cell Proliferation Assay",
+    "anchor": "Methods, Proliferation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42601505_Puertas2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Referee 2 in the Review Process File states that the data do not address the paper's fundamental claims because no causal experiment is performed.",
+    "snippet": "the only data examining PUFA metabolism is lipidomics analysis of complex lipids including TGs.",
+    "anchor": "Peer Review File, Referee 2",
+    "surface": "supplement",
+    "artifact": "files/figures/PMID42601505/44319_2026_898_MOESM5_ESM.txt",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13601559/fullTextXML returned HTTP 200 (192213 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}
