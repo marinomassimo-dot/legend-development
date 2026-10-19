@@ -1,0 +1,382 @@
+{
+ "schema_version": 2,
+ "pmid": "29675105",
+ "doi": "10.7150/jca.23808",
+ "receipt": "FTR-20261019-29675105-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named from wave-1 reading debts and deduplicated by the per-paper M0 packet and the receipt status check run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate and the analysis note; the discovery ledger is a shared single-writer file appended by the Orchestrator at integration."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A liver-surgery group (Zhongshan Hospital, Fudan University, from the affiliations) that also authored the later WWOX/NME2/oleate paper. Primary for HCC prognosis cohorts; not a WWOX loss-of-function or neurological group. Observation (genotype counts, survival curves, immunostaining) is weighed above the interpretive sentence that the A allele has 'poor prognostic value'."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (polymorphism OR SNP) AND hepatocellular",
+    "count": 6,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND rs9926344",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts, dated."
+ },
+ "multihop": {
+  "references_enumerated": 37,
+  "gene_direct_refs_in_source": [
+   "ref 26 Lo 2015 (minireview; PMID 25595191)",
+   "ref 11 Choo 2015 (WWOX moderates the mitochondrial respiratory complex; PMID 26390919)",
+   "ref 17 Lee 2017 (WWOX variant and HCC risk; PMID 28426730)",
+   "ref 18 Lin 2017 (WWOX-rs13338697 and chemotherapy outcome; PMID 28695683)",
+   "ref 15 Aderca 2008 (PMID 18620777)",
+   "ref 9 Abu-Odeh 2014 (ATM; PMID 25331887)",
+   "refs 5 and 25 are the same Bednarek 2000 paper listed twice (PMID 10786676)"
+  ],
+  "resolved": [
+   {
+    "pmid": "25595191",
+    "state": "complete receipt (read in this batch, staged by scientist-c)"
+   },
+   {
+    "pmid": "25245215",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "26499798",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "11572989",
+    "state": "partial receipt in the ledger"
+   },
+   {
+    "pmid": "25331887",
+    "state": "partial receipts in the ledger"
+   }
+  ],
+  "queued": [
+   {
+    "pmid": "26390919",
+    "queue": "debt of this actor's lot, DEBT-WWOX-DIRECT-D-20261019 (added: the one gene-direct reference of this paper about mitochondrial respiration)",
+    "note": "Choo 2015, unread; no receipt anywhere"
+   },
+   {
+    "pmid": "28426730",
+    "queue": "proposed in CC-20261019-SCIENTISTD-DEBT-01 section on reading debts; no FT identifier minted by a Scientist",
+    "note": "Lee 2017, the earlier WWOX HCC risk-variant paper this one cites as its predecessor; unread"
+   }
+  ],
+  "note": "37 references enumerated from the publisher PDF and the Europe PMC reference list. Twenty-two are gene-direct by title; most are cancer expression or genetics. Five carry a receipt in the ledger, one is staged; sixteen carry none. Only Choo 2015 bears on metabolism."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 29675105 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed efetch for PMID 29675105: publication types ['Journal Article']; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "UNSCREENABLE_NO_REFERENCE_LIST",
+   "reference_source": "network",
+   "references_declared": 0,
+   "references_screened": 0,
+   "references_with_doi": 0,
+   "schema": "retraction_check.dependencies/1",
+   "screened": false,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID29675105_Chen2018_PMC5907672.xml",
+   "sha256": "7adae76a631839f5b440a9d72b3496a7bbc9cbe58ebca541ff7be07ff7f8e828",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC5907672 (CC BY-NC): abstract, body, tables, figure legends, 37 references. Every text locator is matched against this surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5907672/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "7adae76a631839f5b440a9d72b3496a7bbc9cbe58ebca541ff7be07ff7f8e828"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID29675105_Chen2018_jcancer.pdf",
+   "sha256": "46b9b0992bd56fba7c1bce1d378c0eb860289d5cb869c60260affa006b2f1a60",
+   "kind": "article_binary",
+   "note": "Publisher PDF (9 pages) from the Journal of Cancer, the URL Unpaywall lists as the publisher gold copy. Source of the page renders.",
+   "acquisition_recipe": {
+    "resolved_url": "http://www.jcancer.org/v09p1239.pdf",
+    "http_method": "GET",
+    "tier": "Unpaywall publisher copy",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "46b9b0992bd56fba7c1bce1d378c0eb860289d5cb869c60260affa006b2f1a60"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID29675105/p-4.png",
+   "sha256": "bcc3893033f648fdfea9355364e705f7fe702d5e6c16145235606f9a5a3a2618",
+   "kind": "figure",
+   "note": "PDF page 4 rendered at 130 dpi (Figure 1 MassARRAY spectra, Tables 2 and 3), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID29675105_Chen2018_jcancer.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 130 -png (page 4)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "bcc3893033f648fdfea9355364e705f7fe702d5e6c16145235606f9a5a3a2618"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID29675105/p-5.png",
+   "sha256": "82b05134ac6937e5e1ce3df48616a3f08c6f939fc79b2dc26bfd4cbb740b0480",
+   "kind": "figure",
+   "note": "PDF page 5 rendered at 130 dpi (Figure 2 Kaplan-Meier panels), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID29675105_Chen2018_jcancer.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 130 -png (page 5)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "82b05134ac6937e5e1ce3df48616a3f08c6f939fc79b2dc26bfd4cbb740b0480"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID29675105/p-7.png",
+   "sha256": "6fa534954f4c2dd14233fe652b12f2c87b09493b13b055bd86e06aca0a1c9050",
+   "kind": "figure",
+   "note": "PDF page 7 rendered at 130 dpi (Figure 3 H&E and WWOX immunostaining), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID29675105_Chen2018_jcancer.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 130 -png (page 7)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "6fa534954f4c2dd14233fe652b12f2c87b09493b13b055bd86e06aca0a1c9050"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The genotyped material is DNA extracted from cancerous tissue, so a tumour genotype cannot be separated from a somatic change; the paper never says germline DNA was checked.",
+    "snippet": "the cancerous tissues obtained from 16 HCC patients and the following 136 cases were used to extract the genomic DNA (gDNA)",
+    "anchor": "Methods, DNA extraction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29675105_Chen2018_PMC5907672.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human HCC tumour tissue from one Chinese surgical series (Zhongshan Hospital)",
+     "genotype": "germline-versus-somatic not separated (DNA from tumour tissue); rs9926344 carrier status",
+     "endpoint": "recurrence, recurrence-free and overall survival, WWOX immunostaining"
+    }
+   },
+   {
+    "proposition": "The discovery stage compared 8 recurrent with 8 non-recurrent patients on a 6.0 SNP array; 32 candidate SNPs passed and their data are not shown, so the number of variants tested before one was reported is not recoverable.",
+    "snippet": "Finally there were 32 SNPs fitting the screen strategy and, therefore, selected as candidate SNPs (data were not shown)",
+    "anchor": "Results, Identification of candidate SNPs within WWOX",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29675105_Chen2018_PMC5907672.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human HCC tumour tissue from one Chinese surgical series (Zhongshan Hospital)",
+     "genotype": "germline-versus-somatic not separated (DNA from tumour tissue); rs9926344 carrier status",
+     "endpoint": "recurrence, recurrence-free and overall survival, WWOX immunostaining"
+    }
+   },
+   {
+    "proposition": "The headline association is reported as percentages 31.1 and 10.6 for AA+AG in recurrent and non-recurrent patients; the table counts (19 of 58 and 9 of 78) give 32.8 and 11.5, and the printed percentages correspond to denominators 61 and 85.",
+    "snippet": "the recurrence group had a higher prevalence of AA+AG (31.1%) than the control subjects (10.6%, P = 0.002)",
+    "anchor": "Results, Association analysis of candidate SNPs with HCC recurrence",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29675105_Chen2018_PMC5907672.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human HCC tumour tissue from one Chinese surgical series (Zhongshan Hospital)",
+     "genotype": "germline-versus-somatic not separated (DNA from tumour tissue); rs9926344 carrier status",
+     "endpoint": "recurrence, recurrence-free and overall survival, WWOX immunostaining"
+    }
+   },
+   {
+    "proposition": "The recurrent/non-recurrent split used for the genotype association was made on early follow-up data, while the survival analysis later uses follow-up to April 2015 with 76 recurrences among 119 patients; the two classifications are not reconciled in the text.",
+    "snippet": "In the early stage of our experiment, 58 cases have been diagnosed as tumor recurrence within 2-years after operation and 78 cases without tumor recurrence according to the early follow-up data after operation.",
+    "anchor": "Results, Association analysis of candidate SNPs with HCC recurrence",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29675105_Chen2018_PMC5907672.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human HCC tumour tissue from one Chinese surgical series (Zhongshan Hospital)",
+     "genotype": "germline-versus-somatic not separated (DNA from tumour tissue); rs9926344 carrier status",
+     "endpoint": "recurrence, recurrence-free and overall survival, WWOX immunostaining"
+    }
+   },
+   {
+    "proposition": "After adjustment the A-allele carrier effect is significant for recurrence-free survival and not for overall survival; the text prints the upper confidence limit as 2.816 and Table 5 prints 2.866.",
+    "snippet": "adjusted HR 1.787, 95% CI 1.042-3.064, P = 0.035 and adjusted HR 1.621, 95% CI 0.917- 2.816, P = 0.097 for RFS and OS, respectively",
+    "anchor": "Results, WWOX rs9926344 polymorphisms was associated with the poor prognosis of HCC patients",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29675105_Chen2018_PMC5907672.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human HCC tumour tissue from one Chinese surgical series (Zhongshan Hospital)",
+     "genotype": "germline-versus-somatic not separated (DNA from tumour tissue); rs9926344 carrier status",
+     "endpoint": "recurrence, recurrence-free and overall survival, WWOX immunostaining"
+    }
+   },
+   {
+    "proposition": "The protein-level support is an immunostaining comparison in 100 tumours in which only AG (16) and GG (82) carriers can be compared; the AA group has two samples and no test is possible.",
+    "snippet": "the WWOX down-regulation is more frequent in patients carrying rs9926344 AG genotype than those carrying GG genotype, which is 75.0% (12/16) to 43.9% (36/82), with the difference being statistically significance (P = 0.023)",
+    "anchor": "Results, WWOX expression in HCC patients' samples",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29675105_Chen2018_PMC5907672.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human HCC tumour tissue from one Chinese surgical series (Zhongshan Hospital)",
+     "genotype": "germline-versus-somatic not separated (DNA from tumour tissue); rs9926344 carrier status",
+     "endpoint": "recurrence, recurrence-free and overall survival, WWOX immunostaining"
+    }
+   },
+   {
+    "proposition": "The authors themselves attribute the lack of an AA effect on expression to the small number of AA carriers and call for further verification.",
+    "snippet": "This phenomenon may contribute to small number of patients with the AA genotype (only 2 samples) and large standard error.",
+    "anchor": "Discussion, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29675105_Chen2018_PMC5907672.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human HCC tumour tissue from one Chinese surgical series (Zhongshan Hospital)",
+     "genotype": "germline-versus-somatic not separated (DNA from tumour tissue); rs9926344 carrier status",
+     "endpoint": "recurrence, recurrence-free and overall survival, WWOX immunostaining"
+    }
+   },
+   {
+    "proposition": "The paper positions WWOX as a gene that 'moderates the mitochondrial respiratory complex' only as a one-line introductory citation; no metabolic readout is measured.",
+    "snippet": "controlling CNS development and moderating the mitochondrial respiratory complex 9-11",
+    "anchor": "Introduction, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29675105_Chen2018_PMC5907672.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human HCC tumour tissue from one Chinese surgical series (Zhongshan Hospital)",
+     "genotype": "germline-versus-somatic not separated (DNA from tumour tissue); rs9926344 carrier status",
+     "endpoint": "recurrence, recurrence-free and overall survival, WWOX immunostaining"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 1: three MassARRAY mass spectra labelled rs9926344, panel A AA, B AG, C GG, each with several peaks between about m/z 5600 and 6400; they illustrate the three genotype calls and carry no quantitative result.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 three stacked mass spectra titled rs9926344 with x-axis Mass 5600-6400 and y-axis Intensity, captioned AA genotype (A), AG genotype (B), GG genotype (C).",
+    "anchor": "Figure 1, PDF page 4, read as an image at 130 dpi",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID29675105/p-4.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human HCC tumour tissue from one Chinese surgical series (Zhongshan Hospital)",
+     "genotype": "germline-versus-somatic not separated (DNA from tumour tissue); rs9926344 carrier status",
+     "endpoint": "recurrence, recurrence-free and overall survival, WWOX immunostaining"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 2: Kaplan-Meier curves for overall survival (A) and recurrence-free survival (B), AA+AG n=28 against GG n=91, P = 0.005 and P = 0.004; the AA+AG curve sits below GG throughout; at about 70 months overall survival is about 0.27 against about 0.53 and recurrence-free survival about 0.17 against about 0.42. n=28 plus 91 equals the 119 patients with follow-up, so all 28 carriers kept follow-up and the 17 lost to follow-up were all GG.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2A y-axis Probability of Overall Survival, legend AA+AG(n=28) green and GG(n=91) blue, P = 0.005; Fig 2B y-axis Probability of Recurrence-free Survival, same legend, P = 0.004; x-axis Months after Surgery 0-80.",
+    "anchor": "Figure 2A and 2B, PDF page 5, read as an image at 130 dpi",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID29675105/p-5.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human HCC tumour tissue from one Chinese surgical series (Zhongshan Hospital)",
+     "genotype": "germline-versus-somatic not separated (DNA from tumour tissue); rs9926344 carrier status",
+     "endpoint": "recurrence, recurrence-free and overall survival, WWOX immunostaining"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 3: H&E and WWOX immunostaining of one peritumour and one tumour field; peritumour hepatocytes stain brown (cytoplasmic) and the tumour field is nearly unstained. One representative pair; no genotype is attached to either field and no quantification is plotted.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3 2x2 grid, columns Peritumor and Tumor, rows H&E and WWOX, scale bar 50um; WWOX row brown cytoplasmic stain in Peritumor and pale blue haematoxylin only in Tumor.",
+    "anchor": "Figure 3, PDF page 7, read as an image at 130 dpi",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID29675105/p-7.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human HCC tumour tissue from one Chinese surgical series (Zhongshan Hospital)",
+     "genotype": "germline-versus-somatic not separated (DNA from tumour tissue); rs9926344 carrier status",
+     "endpoint": "recurrence, recurrence-free and overall survival, WWOX immunostaining"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search returned inEPMC Y and isOpenAccess Y for PMC5907672 on 2026-10-19; fullTextXML returned HTTP 200 with a body, and the publisher PDF returned a valid 9-page PDF.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}
