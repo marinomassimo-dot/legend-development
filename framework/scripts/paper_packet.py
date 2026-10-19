@@ -926,14 +926,37 @@ def classify(code: int, output: str, headline: str) -> tuple[str, str]:
     return "nothing-to-screen", (missing.group(1).strip() if missing else headline)[:170]
 
 
+def _shared_checkout(root: Path) -> Path | None:
+    """The checkout that holds `files/` when `root` is a linked task worktree, else None."""
+    try:
+        done = subprocess.run(["git", "-C", str(root), "rev-parse", "--git-common-dir"],
+                              capture_output=True, text=True, timeout=30)
+    except (OSError, subprocess.SubprocessError):
+        return None
+    if done.returncode != 0 or not done.stdout.strip():
+        return None
+    common = Path(done.stdout.strip())
+    common = common if common.is_absolute() else (root / common)
+    top = common.resolve().parent
+    return top if (top / "files").is_dir() else None
+
+
 def _runnable(root: Path, disease: str, pmid: str, packet: dict[str, Any]) -> list[tuple[str, list[str]]]:
     """The checks whose command this file can build with no human choice left in it."""
     names = {check["name"] for check in packet["applicable_checks"]}
     jobs: list[tuple[str, list[str]]] = []
     if "manifest validator" in names:
+        # Evidence locality (fulltext_read_receipt.md): a task worktree carries the manifest and
+        # not the gitignored bytes it fingerprints. Without the shared checkout as the artefact
+        # root, every locator of a perfectly good manifest reads "No such file" from the
+        # worktree. Measured 2026-10-19 on a Scientist's task worktree.
+        extra: list[str] = []
+        shared = _shared_checkout(root)
+        if shared is not None and shared != root.resolve() and not (root / "files" / "fulltext").is_dir():
+            extra = ["--artifact-workspace", str(shared)]
         jobs.append(("manifest validator",
                      [sys.executable, str(HERE / "deepdive_manifest.py"), "--disease", disease,
-                      "--pmid", pmid, "--verify-artifacts", "--require-current-schema"]))
+                      "--pmid", pmid, "--verify-artifacts", "--require-current-schema", *extra]))
         jobs.append(("flag drift",
                      [sys.executable, str(HERE / "manifest_flag_drift.py"), "--pmid", pmid]))
         jobs.append(("erratum scope",
