@@ -1,0 +1,259 @@
+{
+ "schema_version": 2,
+ "pmid": "42260675",
+ "doi": "10.1186/s13063-026-09776-3",
+ "receipt": "FTR-20261019-42260675-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-H3-EPINEPHRINE-SAFETY-01",
+  "interventions_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared (group H3 has no WWOX evidence to compare against)."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 154,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Idrees S[au]' 154; 'Idrees S[au] AND WWOX' 0 (surname-initial queries are ambiguous and are not evidence of authorship); last author 'Tijssen JA[au]'.",
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Published trial protocol of a Canadian paediatric resuscitation group; it reports no outcome data. Weigh as a statement of design, rationale and safety reasoning.",
+  "note": "Not a WWOX group."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 0
+   }
+  ],
+  "note": "WWOX does not occur in the article."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 52,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "dependency_integrity.py screen reference count, confirmed against <ref> elements in the JATS.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-directed reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --theme adrenergic / epinephrine / noradrenaline / catecholamine / autonomic / sympathetic (each exit 1, no record) and --theme SUDEP (2 of 1586 records)",
+  "hits": 0,
+  "finding": "No registry record carries any adrenergic term, so the laboratory holds nothing on catecholamines to compare with; an empty result is a statement about those queries over those files, not about the literature. SUDEP occurs in two records only as a reason to keep seizure control, not as a mechanism."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed efetch 2026-10-19 for this PMID (no CommentsCorrections element, publication types listed); JATS front matter",
+  "result": "No retraction, correction or expression of concern found in the PubMed record.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 52,
+   "references_screened": 45,
+   "references_with_doi": 45,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 7
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42260675_Idrees2026_PMC13471612.xml",
+   "sha256": "22fcc5b4f51e2c14d71bf1ae461deb2c07fa767485b01f8d39a8e67b71d3fe3e",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC13471612, 116,990 bytes; abstract, background, methods, interventions, outcomes, sample size, allocation, statistics, oversight, discussion, trial status, Tables 1 and 2 and Figures 1 to 3 present; supplementary files are not in the JATS.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13471612/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "22fcc5b4f51e2c14d71bf1ae461deb2c07fa767485b01f8d39a8e67b71d3fe3e"
+   }
+  },
+  {
+   "path": "files/figures/PMID42260675/13063_2026_9776_Fig1_HTML.jpg",
+   "sha256": "39c919a784bdfba2f0aae68767dfaa1de76e79332f7f5e7e45b6b188d3a8c692",
+   "kind": "figure",
+   "note": "Figure 1 (file Fig1): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13471612.1/13063_2026_9776_Fig1_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "39c919a784bdfba2f0aae68767dfaa1de76e79332f7f5e7e45b6b188d3a8c692"
+   }
+  },
+  {
+   "path": "files/figures/PMID42260675/13063_2026_9776_Fig2_HTML.jpg",
+   "sha256": "e3467ec9f3fc600b06431c1577b7d20c4ca559c5215c626ea81eb64f18c8f052",
+   "kind": "figure",
+   "note": "Figure 2 (file Fig2): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13471612.1/13063_2026_9776_Fig2_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "e3467ec9f3fc600b06431c1577b7d20c4ca559c5215c626ea81eb64f18c8f052"
+   }
+  },
+  {
+   "path": "files/figures/PMID42260675/13063_2026_9776_Fig3_HTML.jpg",
+   "sha256": "bb2babbc6bed5c9baa003fdd3559d354119a9a668261ed6b4883b6c420acfcfa",
+   "kind": "figure",
+   "note": "Figure 3 (file Fig3): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13471612.1/13063_2026_9776_Fig3_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "bb2babbc6bed5c9baa003fdd3559d354119a9a668261ed6b4883b6c420acfcfa"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 116,990 bytes; abstract, background, methods, interventions, outcomes, sample size, allocation, statistics, oversight, discussion, trial status, Tables 1 and 2 and Figures 1 to 3 present; supplementary files are not in the JATS.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: whole article read, Tables 1 and 2 read, Figures 1 to 3 inspected as images. A protocol: there are no results; \"methods\" stands for the design sections and \"results\" is not_present. The supplementary files (protocol document, supplementary tables) are listed in the article and were not retrieved, so the receipt is partial. The reference list (52) was screened for integrity, not read.",
+  "entries": [
+   {
+    "proposition": "DESIGN: open-label stepped-wedge cluster quasi-randomised trial across Ontario paramedic services, each site serving as its own control, with a two-year retrospective lookback and a prospective control period.",
+    "snippet": "The PRIME Trial is a prospective, multi-centre, pragmatic, two-arm, open-label, stepped-wedge cluster quasi-randomized controlled trial (SW-CRCT).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42260675_Idrees2026_PMC13471612.xml",
+    "anchor": "Trial design {8}",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "POPULATION: children from 1 day to under 18 years with out-of-hospital arrest, so neonates and infants are included; trauma excluded; drowning and hanging included.",
+    "snippet": "The trial will include children aged 1 day to <18 years who experience an OHCA during the study period",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42260675_Idrees2026_PMC13471612.xml",
+    "anchor": "Eligibility criteria {10}",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DOSE: the intramuscular dose is set at up to 10 times the matched IV dose (Table 1: 0.3 mg for 3 to under 5 kg up to 3 mg from 30 kg); the Discussion says 5 to 10 times, an inconsistency of range between two sections.",
+    "snippet": "In our dosing schedule, we recommend the IM epinephrine dose be up to 10 times higher than the corresponding IV dose for a child of equivalent weight",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42260675_Idrees2026_PMC13471612.xml",
+    "anchor": "Intervention description {11a}",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DOSE DOUBLING: the authors state the IM peak may coincide with the IV or IO dose, so a child could receive up to double the recommended dose at one time.",
+    "snippet": "the patient could potentially receive up to double the recommended dose of epinephrine at one time",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42260675_Idrees2026_PMC13471612.xml",
+    "anchor": "Discussion, paragraph 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "SAFETY REASONING: the authors cite a trial of ten-fold epinephrine in paediatric in-hospital arrest as showing no benefit but a trend towards harm, then conclude from data on shorter dosing intervals that the risk of a double dose is minimal; the first paragraph of the Discussion relies on anaphylaxis safety data for a different dose and setting.",
+    "snippet": "These data suggest that there is minimal risk of harm associated with administering a double dose of epinephrine.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42260675_Idrees2026_PMC13471612.xml",
+    "anchor": "Discussion, paragraph 3, last sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The safety statement for the trial rests on anaphylaxis practice: no criteria for discontinuing, and no pre-defined stopping rules in the interim analyses.",
+    "snippet": "There are no pre-defined stopping rules for this trial.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42260675_Idrees2026_PMC13471612.xml",
+    "anchor": "Interim analyses {21b}",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PRIMARY OUTCOME: time to return of circulation analysed only in patients who achieve it (no censored data), described as an intermediate outcome strongly associated with survival; the adult review read in this batch shows return of circulation moving without a neurological gain.",
+    "snippet": "will include only patients who achieved ROSC (i.e., there will be no censored data)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42260675_Idrees2026_PMC13471612.xml",
+    "anchor": "Statistical methods {20a}, paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "SAMPLE: 86 patients who achieve circulation (43 per arm) to detect an 8-minute difference, scaled to 288 patients at about 30 percent return of circulation, with a cluster size of 3 and an intracluster correlation of 1 percent; control data include two years of historical records.",
+    "snippet": "we require a sample size of N = 86 patients (n = 43 per group) who achieve ROSC to have 80% probability of detecting a difference in time to ROSC of 8 min or greater",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42260675_Idrees2026_PMC13471612.xml",
+    "anchor": "Sample size {14}",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "STATUS: as of 30 December 2024, 139 patients were recruited, 3 in the intervention group, 25 prospective controls and 111 retrospective controls; the protocol version is dated December 2025, so the status paragraph is a year older than the version.",
+    "snippet": "As of December 30, 2024, we have recruited a total of 139 patients: 3 in the intervention group, 25 in the prospective control group, and 111 in the retrospective control group.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42260675_Idrees2026_PMC13471612.xml",
+    "anchor": "Trial status",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3 (SPIRIT schedule): footnotes state hospital-based outcomes will only be collected for patients admitted to the lead hospital, whereas the secondary outcomes include survival to discharge and neurological status after discharge across all sites.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3 table: footnote star \"Hospital-based outcomes will only be collected for patients admitted to LHSC.\" and double star \"Adverse events will be recorded using ambulance call reports for all patients. For patients admitted to LHSC, hospital records will also be used to identify adverse events.\"",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42260675/13063_2026_9776_Fig3_HTML.jpg",
+    "anchor": "Figure 3 footnotes, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "trial schedule of enrolment, interventions and assessments",
+     "endpoint": "none (schedule)"
+    }
+   },
+   {
+    "proposition": "Figure 1 flow: control arm IV or IO epinephrine immediately (advanced paramedic scope); intervention arm IM epinephrine first (advanced or primary paramedics) then IV or IO immediately after, then every 3 to 5 minutes.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 flow diagram: POHCA event, Standard of Care, then Control Protocol (first-dose IV/IO epinephrine immediately, repeat q3-5 min) against Intervention Protocol (first-dose IM epinephrine immediately, IV/IO epinephrine immediately following IM dose, then q3-5 min).",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42260675/13063_2026_9776_Fig1_HTML.jpg",
+    "anchor": "Figure 1, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "trial flow diagram",
+     "endpoint": "none"
+    }
+   }
+  ]
+ }
+}
