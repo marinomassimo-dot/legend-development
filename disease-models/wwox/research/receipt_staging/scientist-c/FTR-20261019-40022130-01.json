@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-40022130-01",
+ "study_id": {
+  "pmid": "40022130",
+  "doi": "10.1186/s12974-025-03389-4"
+ },
+ "event_at": "2026-10-19T19:32:35Z",
+ "analysis_at": "2026-10-19T19:32:35Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, interventions batch 2026-10-19, task INTERV-H4-C-20261019, branch task/INTERV-H4-C-20261019; context_policy SOURCE_FIRST. Route: Europe PMC REST fullTextXML (open access) saved to the shared checkout files/fulltext; whole article read from a text rendering of the JATS up to the abbreviation list and references (108 references counted, not read); the seven figures opened in two montages at 900 to 1000 px per panel; the 13-page supplementary PDF was reached as extracted text (clean, no control characters) and its supplementary-figure legends and the four ANOVA tables were read; its image panels were not opened. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID40022130_Serdar2025_PMC.xml",
+ "source_fingerprint": "1081bb1268022e40cb88b5259985d0c8ad2cf62723db3f4110e30295b5a7d27a",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID40022130.json",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "The supplementary PDF's legends and tables were read as text but its nine supplementary figure panels were not opened as images, so supplementary is declared not_read and the depth is partial. A rat injury model of hyperoxia (80 percent for 48 h) on inflamed developing brain; it informs safety direction only and is not WWOX evidence."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

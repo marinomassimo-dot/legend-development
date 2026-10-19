@@ -1,0 +1,352 @@
+{
+ "schema_version": 2,
+ "pmid": "40022130",
+ "doi": "10.1186/s12974-025-03389-4",
+ "receipt": "FTR-20261019-40022130-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "The Essen neonatology and experimental perinatal neuroscience group (Felderhoff-Mueser, Bendix), established authors on rodent hyperoxia and white matter injury; not a WWOX group. Observation (cell counts, areas, expression) at n = 14-16 per group is weighted above the synergy interpretation, which depends on interaction tests across many outcomes."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "hyperoxia AND neonatal brain",
+    "count": 292,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (oligodendrocyte OR myelin)",
+    "count": 9,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches, not measurements."
+ },
+ "multihop": {
+  "references_enumerated": 108,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-direct reference; WWOX is not named in the article.",
+  "disposition": "No gene-direct references."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 40022130 --hops 1; paper_packet.py packet --pmid 40022130; fulltext_receipts.py status --pmid 40022130",
+  "hits": 0,
+  "note": "No record in any of the seven searched registry surfaces and no prior receipt; an empty result is a statement about that query over those files."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication type Journal Article.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 108,
+   "references_screened": 108,
+   "references_with_doi": 108,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40022130_Serdar2025_PMC.xml",
+   "sha256": "1081bb1268022e40cb88b5259985d0c8ad2cf62723db3f4110e30295b5a7d27a",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11871844/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "1081bb1268022e40cb88b5259985d0c8ad2cf62723db3f4110e30295b5a7d27a"
+   }
+  },
+  {
+   "path": "files/figures/PMID40022130/12974_2025_3389_Fig1_HTML.jpg",
+   "sha256": "c3b4b1b09cddfa449dacd561c5deecc7bb3575e41671ee5e2dc2ae27c1d0b536",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC11871844 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID40022130/12974_2025_3389_Fig2_HTML.jpg",
+   "sha256": "fcd975a948888f0fc97342d6f1f33dc698fa20cc6d3303db9b631a44fe2dddc1",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC11871844 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID40022130/12974_2025_3389_Fig3_HTML.jpg",
+   "sha256": "cd44cb6cbdc2f6a0ce37a9a6286897abb29be573c4a8ff4ce69b38fc8e73342c",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC11871844 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID40022130/12974_2025_3389_Fig4_HTML.jpg",
+   "sha256": "e94b1dace387046f02cd78c14db386677b4bc7c22adb5fabb15f72c589af6377",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC11871844 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID40022130/12974_2025_3389_Fig5_HTML.jpg",
+   "sha256": "a37976dfc4efd214697994a839e93faba71d9ac9f4ee871f97fd5aeebcb594ba",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC11871844 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID40022130/12974_2025_3389_Fig6_HTML.jpg",
+   "sha256": "cea8d0ea9254886ba366ff1efd405ba1a8d096ff1a3126021329ab3e3571f16a",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC11871844 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID40022130/12974_2025_3389_Fig7_HTML.jpg",
+   "sha256": "ac6c784ac56c845794bdeb424892b723cd2d99f3cb668196be97de7169038347",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC11871844 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID40022130_mA.png",
+   "sha256": "4cfa5b94e40e812978c9a4476dc32a43f09b4362576d1e0cd376b291afb0a787",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID40022130/12974_2025_3389_Fig1_HTML.jpg",
+    "extractor": {
+     "name": "ImageMagick montage",
+     "version": "system package",
+     "call": "montage Fig1-Fig4 -tile 2x2 -geometry 1000x"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "4cfa5b94e40e812978c9a4476dc32a43f09b4362576d1e0cd376b291afb0a787"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID40022130_mB.png",
+   "sha256": "ee5112b60dded681e1462ecd38d4335a8e223a80dc753c7864dd4cb8db4b4801",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID40022130/12974_2025_3389_Fig1_HTML.jpg",
+    "extractor": {
+     "name": "ImageMagick montage",
+     "version": "system package",
+     "call": "montage Fig5-Fig7 -tile 3x1 -geometry 900x"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "ee5112b60dded681e1462ecd38d4335a8e223a80dc753c7864dd4cb8db4b4801"
+   }
+  },
+  {
+   "path": "files/figures/PMID40022130/12974_2025_3389_MOESM1_ESM.pdf",
+   "sha256": "792fe3bc81f88d7fd1e8c9b54295003f770c2cf56453667e87ad1777de740906",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC11871844 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID40022130/12974_2025_3389_MOESM1_ESM.txt",
+   "sha256": "752b4a4eaad47ad0483855128781e153bba2e4d7d6a2a64c3db57cc8515602b9",
+   "kind": "supplement_text",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID40022130/12974_2025_3389_MOESM1_ESM.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk <pdf> <txt>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "752b4a4eaad47ad0483855128781e153bba2e4d7d6a2a64c3db57cc8515602b9"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "System: Wistar rat pups, prenatal LPS at embryonic day 20 and 80 percent oxygen for 48 hours from postnatal day 3 to 5, analysed at P5 and P11; an injury model of encephalopathy of prematurity. No WWOX and no therapeutic oxygen.",
+    "snippet": "Offspring were exposed to hyperoxia (80% O2) from postnatal day 3 (P3) to P5, aligning with the brain development stage of a preterm infant at 26–28 weeks of gestation",
+    "anchor": "Background",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40022130_Serdar2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Design: 94 pups from nine litters in four groups; both sexes pooled (28 female and 32 male at P11).",
+    "snippet": "In total 94 pups derived from nine litters were enrolled in this study.",
+    "anchor": "Methods, Animal experiments",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40022130_Serdar2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Hyperoxia alone: acute oligodendrocyte degeneration and fewer mature oligodendrocytes at P5, independent of prenatal LPS.",
+    "snippet": "postnatal hyperoxia leads to acute oligodendrocyte degeneration associated with reduced numbers of mature oligodendrocytes",
+    "anchor": "Results, oligodendrocyte section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40022130_Serdar2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Hypomyelination from hyperoxia alone is marked; the combination is stronger (reported as additive for MBP area).",
+    "snippet": "Confirming previous work [21, 25, 27, 59], postnatal hyperoxia resulted in a marked hypomyelination revealed by a reduction of MBP positive area",
+    "anchor": "Results, myelination section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40022130_Serdar2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Prenatal LPS, not hyperoxia, drove the growth, fibre-length and microglial-elongation effects.",
+    "snippet": "Nevertheless, the main factor contributing to reduced growth was prenatal LPS exposure",
+    "anchor": "Results, growth section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40022130_Serdar2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Brain and serum cytokines move in opposite directions, and one is measured as mRNA and the other as protein.",
+    "snippet": "we observed the opposite regulation, as shown by a reduction of pro- and anti-inflammatory cytokines in the combined setting",
+    "anchor": "Results, cytokine section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40022130_Serdar2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors caution that mRNA in brain and protein in serum are not directly comparable.",
+    "snippet": "data need to be interpreted with caution, considering different methods of cytokine analyses (i.e. protein analysis in serum vs. mRNA expression analyses in brain samples)",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40022130_Serdar2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The correlations in Figure 7 mainly appear when the double-hit group is included.",
+    "snippet": "These moderate to strong correlations were mainly observed when the double hit group was included",
+    "anchor": "Results, last section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40022130_Serdar2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Definition of synergy used: no single-insult difference but a significant combined difference, plus a two-way ANOVA interaction.",
+    "snippet": "We defined synergistic effects between treatment groups when single insults did not show differences compared to controls, but the combination of insults resulted in significant group differences",
+    "anchor": "Methods, Statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40022130_Serdar2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Long-term neurodevelopmental outcome was not studied and the authors say so.",
+    "snippet": "Therefore, future studies should investigate long-term neurodevelopmental outcomes in the present injury model, which was beyond the scope of this study.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40022130_Serdar2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Data availability statement says no datasets were generated or analysed, although the study reports original animal data.",
+    "snippet": "No datasets were generated or analysed during the current study.",
+    "anchor": "Data availability",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40022130_Serdar2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table S2: the hippocampal MBP-area interaction is not significant (F = 3.039, p = 0.0868) while the hyperoxia main effect is very large (F = 97.21), so the MBP effect is hyperoxia-dominated and additive, and the brain-volume interaction is significant (F = 8.370, p = 0.0054).",
+    "snippet": "Interaction LPS x 80% O2 F (1, 56) = 8.370 p= 0.0054 (**)",
+    "anchor": "Supplementary Table S2, Figure 2 block",
+    "surface": "supplement",
+    "artifact": "files/figures/PMID40022130/12974_2025_3389_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figures 1 to 4: P5 and P11 weights, length and serum leptin (leptin up with LPS, higher with both); brain volume about 123 in controls and about 103 mm3 in the double hit with single hits near 120; TBR1 layer thinning only in the double hit at the hippocampal level; TUNEL-positive oligodendrocytes about 15 against about 3 per mm2 with hyperoxia, CC1 mature cells lower; MBP area about 9 falling to about 6 with hyperoxia and about 4 in the double hit.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 A-G, Figure 2 A-E, Figure 3 A-I, Figure 4 A-F scatter plots with asterisks.",
+    "anchor": "Figures 1-4",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID40022130_mA.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figures 5 to 7: CD68 and Iba1 areas highest in the double hit, brain IL-6 highest with LPS plus hyperoxia, serum IL-6, IL-4 and IL-10 lower with hyperoxia; the principal component plot separates the double hit from the rest; the correlation panels (r 0.48 to 0.75 and -0.64 to -0.75) plot only the control (NaCl, 21 percent) and double-hit (LPS, 80 percent) groups, so each correlation spans two separated clusters.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5 A-C, Figure 6 A-D, Figure 7 PCA and B-H correlations with legend NaCl+21% O2 and LPS+80% O2 only.",
+    "anchor": "Figures 5-7",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID40022130_mB.png",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC11871844/fullTextXML returned HTTP 200 (205098 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}

@@ -182,3 +182,57 @@ trial. It does not establish that hypoxia causes the oxidative stress (stated as
 and the cause-versus-consequence of hypoxia are unresolved, so a "nocturnal" rationale cannot be assumed. Whether WWOX loss produces breathing abnormalities is
 not addressed here (a WWOX case-report scan is a lead, below).
 
+---
+
+## 10. PMID 42428241 — Khaksari 2026, Front Neurosci (tier 2) — task-dependent cortical oxygenation in Glut1 deficiency (fNIRS)
+
+SOURCE_FIRST · FTR-20261019-42428241-01 · manifest PASS · **disease-class comparator (brain-energy disorder), not WWOX evidence.**
+
+**Measures.** Relative oxy- and deoxy-haemoglobin change over six cortical regions during auditory and visual N-back tasks in seven people with
+Glut1 deficiency (four female) and six controls (all female) at a patient conference. The title and abstract say oxygenation responses were **reduced**.
+The body shows otherwise: Figure 4 and the Figure 5 table give patients **higher** left-prefrontal HbO (patients minus controls 1.19 to 1.43,
+audio 2-back 1.38 with an interval of 0.08 to 2.69, p = 0.001 unadjusted in the pooled table) and almost every other interval crosses zero; occipital
+deoxygenated haemoglobin is lower in patients. The authors then concede the differences "were not consistently supported by statistically significant group
+differences after correction for multiple comparisons". Figure 3 shows the patient prefrontal HbO line at a flat positive offset (one trace near 0.008 on a
+scale where controls sit near zero) with no task-locked change, so the "increase" may be a baseline offset (a reading of the figure, not a stated analysis).
+Two ethics boards are named in different places.
+
+**Does not support.** Reduced task oxygenation in Glut1 deficiency, an adaptive-compensation account, or any use of fNIRS as a biomarker of energy
+failure. It is a seven-versus-six exploratory pilot with a 0-back baseline, fixed pathlength and a 0.03 Hz low-pass.
+
+**Changes.** For the selection-file question on a measurable oxygen readout in a DEE analogue: fNIRS is feasible at a conference in older, higher-functioning
+patients, but this first dataset does not yet show a disease signal and cannot calibrate expectations for WWOX loss. The model is untouched.
+
+---
+
+## 11. PMID 28119904 — Perrone 2016, Front Pediatr (tier 3) — oxygen use in neonatal care (review)
+
+SOURCE_FIRST · FTR-20261019-28119904-01 · manifest PASS · **preterm-infant safety background, not WWOX evidence.**
+
+**Measures.** Nothing new. It summarises ROS biology (mitochondria, free iron, hypoxia-reoxygenation, hyperoxia), organ toxicity (lung, retina, red cells; rodent
+long-term neurodevelopment) and saturation-target trials. The trial lesson that bears on any oxygen manipulation: the lower target reduced severe retinopathy but raised death
+before discharge (SUPPORT) and death plus necrotising enterocolitis (BOOST II); guidelines suggest 90 to 95 percent for infants under 28 weeks. Its own alarm advice
+is inconsistent (90-95, below 85 and above 93, and 91 and 96 percent in three places), and it concedes the optimum is unknown.
+
+**Does not support.** Any recommendation for a WWOX-deficient child, who is neither preterm nor in this trial population; it has no figures, tables or
+methods and does not discuss encephalopathy. BLOCK-1 at class level: both too little and too much oxygen carry harm in neonates, and the safe window in a genetic DEE is
+unmeasured.
+
+---
+
+## 12. PMID 40022130 — Serdar 2025, J Neuroinflammation (tier 3) — prenatal inflammation plus hyperoxia in the neonatal rat brain
+
+SOURCE_FIRST · FTR-20261019-40022130-01 (partial: supplementary figure panels not opened) · manifest PASS · **animal safety-direction paper, not WWOX evidence.**
+
+**Measures.** Prenatal LPS (E20) and 80 percent oxygen for 48 h (P3 to P5) in rat pups, outcomes at P5 and P11 (94 pups, both sexes pooled). Hyperoxia alone
+caused acute oligodendrocyte degeneration (TUNEL-positive about 15 against about 3 per mm2) and hypomyelination (MBP area about 9 falling to about 6); the double hit gave the
+largest brain-volume loss (about 123 to about 103 mm3), deep-cortical thinning, microglial activation and brain IL-6. Supplementary Table S2 shows the MBP-area interaction is
+not significant (p = 0.0868), so that effect is hyperoxia-dominated and additive; growth effects were prenatal-LPS-driven.
+
+**Does not support.** Human thresholds (80 percent for 48 h in a rat pup), sex-specific effects (not analysed), long-term outcome (not studied) or synergy for the
+myelin readout. The Figure 7 correlations use only two groups (control and double hit) so they largely re-express group separation; brain cytokines (mRNA) and serum cytokines (protein)
+differ in method; the data statement says no datasets were generated.
+
+**Changes.** A transferable negative for the oxygen group: hyperoxia is injurious to the developing brain's oligodendrocyte lineage even without a second hit, so "more oxygen"
+cannot be assumed harmless in a hypomyelinating genotype. Whether WWOX-null oligodendrocytes are more or less vulnerable is unmeasured (WWOX myelin papers exist but none tests oxygen).
+
