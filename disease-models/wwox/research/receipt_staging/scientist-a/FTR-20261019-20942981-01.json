@@ -1,0 +1,42 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-20942981-01",
+ "study_id": {
+  "pmid": "20942981",
+  "doi": "10.1186/1471-2350-11-148"
+ },
+ "analysis_at": "2026-10-19T18:02:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a (Scientist A), metabolic batch 2026-10-19 group G1, task METAB-G1-A-20261019 on branch task/METAB-G1-A-20261019, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN. Route: Europe PMC JATS for PMC2967537, Figure 1 and the supplementary container (S1-S10) from the Europe PMC supplementaryFiles zip into the root files/ tree; Figure 1 and the six LD-map PDFs (S1, S2, S4-S7, rendered with pdftoppm) inspected as images; the four Word tables (S3, S8-S10) read through a GNU strings text derivation declared as supplement_text. Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a staged JSON for the Orchestrator and was not appended at preparation time (the Orchestrator records staged receipts in event-ID order).",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID20942981_Saez2010_PMC.xml",
+ "source_fingerprint": "b6eed51305f312d558b0b9a63282b9260bb47bd51d0f47913b4466bd3c1601f4",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID20942981.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID20942981.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-A-LIPID-01.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-a.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "manifest",
+  "Figure 1 inspected as an image; Figure S1 and Figure S3 (region 1) viewed at 70 and 60 dpi, Figures S2, S4, S5, S6 at 70 and 45 dpi, as rendered pages",
+  "Tables S2-S4 (per-SNP association results for HDL, TG, TG/HDL) read through a strings-derived surface: row counts of 1045 per trait; nominal-P hit counts were computed by script and are reported in the dossier as derived INFERENZA, not as locators"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
