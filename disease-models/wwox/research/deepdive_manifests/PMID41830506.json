@@ -1,0 +1,305 @@
+{
+ "schema_version": 2,
+ "pmid": "41830506",
+ "doi": "10.1002/epi4.70243",
+ "receipt": "FTR-20261019-41830506-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-G2-KD-PRIOR-01",
+  "metabolic_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared. Triples are listed in the commit candidate for a later blind audit."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 101,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Klepper J[au]' 101 (surname-initial, partly ambiguous); 'Klepper J[au] AND Glut1' 48; 'Klepper J[au] AND WWOX' 0.",
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": true,
+  "is_primary_group_for_gene": false,
+  "weighting": "Primary clinical group for Glut1 deficiency, the reference energy-supply epilepsy; not a WWOX group. Weigh as the best clinical base rate for how often ketones fail when the defect is a known fuel shortage.",
+  "note": "Single clinic cohort (Aschaffenburg); data stated available on request."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 0
+   }
+  ],
+  "note": "WWOX does not occur."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 22,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS (regular expression), see text file tail.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-directed reference; Bekker 2023 (seven refractory Glut1DS patients) is the paper the cohort responds to and is not in this lot."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --theme ketogenic; CLAIM 042",
+  "hits": 1,
+  "finding": "CLAIM 042 (three of five WOREE patients reported to improve on KD, denominator not stated). This cohort supplies a within-disease failure rate for a known fuel-shortage defect (39 percent), which the WOREE series lacks."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed esummary 2026-10-19 for 41830506; JATS front matter carries is-retracted flag",
+  "result": "No retraction, correction or expression of concern found in the PubMed record or the JATS front matter.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 22,
+   "references_screened": 19,
+   "references_with_doi": 19,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41830506_Klepper2026_PMC13238889.xml",
+   "sha256": "f83533f4e6135fda2cd6d8449dbc6f3d06c2fb91d6bc829894b77a9dcae023e0",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC13238889 (Epilepsia Open 2026, CC BY-NC-ND), 141,240 bytes; abstract, key points, introduction, methods, Table 1 (patient-level A and B), results, discussion, conclusion, five figure legends. The PMC file numbering is reversed: file g005 is Figure 1 and file g001 is Figure 5.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13238889/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "f83533f4e6135fda2cd6d8449dbc6f3d06c2fb91d6bc829894b77a9dcae023e0"
+   }
+  },
+  {
+   "path": "files/figures/PMID41830506/EPI4-11-847-g005.jpg",
+   "sha256": "919c5594b65d4525ccf824f7c5f6b5138d5e2b4dbf513ac2764214520a1e1b70",
+   "kind": "figure",
+   "note": "Figure 1 (file g005): study flow and phenotype Venn diagram, inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13238889.1/EPI4-11-847-g005.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "919c5594b65d4525ccf824f7c5f6b5138d5e2b4dbf513ac2764214520a1e1b70"
+   }
+  },
+  {
+   "path": "files/figures/PMID41830506/EPI4-11-847-g001.jpg",
+   "sha256": "6c96df148aa02ace371268ee6883cb0c113265121b0887aaec94ce617961c209",
+   "kind": "figure",
+   "note": "Figure 5 (file g001): EEG epileptic discharge and background slowing counts before and on KDT, inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13238889.1/EPI4-11-847-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "6c96df148aa02ace371268ee6883cb0c113265121b0887aaec94ce617961c209"
+   }
+  },
+  {
+   "path": "files/figures/PMID41830506/EPI4-11-847-g003.jpg",
+   "sha256": "cc11e06c8744c4f51b42d208ef32b76b8d7855e48f4508b56f157363d768acd1",
+   "kind": "figure",
+   "note": "Figure 3 (file g003): antiseizure medication Gantt bars in the 17 non-responders, inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13238889.1/EPI4-11-847-g003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "cc11e06c8744c4f51b42d208ef32b76b8d7855e48f4508b56f157363d768acd1"
+   }
+  },
+  {
+   "path": "files/figures/PMID41830506/EPI4-11-847-g002.jpg",
+   "sha256": "f3d6767ea9777e82581a4d81befad05b76c468de70d1cc83e9826281ebfc53fa",
+   "kind": "figure",
+   "note": "Figure 4 (file g002), acquired and fingerprinted; not inspected as an image (legend read).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13238889.1/EPI4-11-847-g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "f3d6767ea9777e82581a4d81befad05b76c468de70d1cc83e9826281ebfc53fa"
+   }
+  },
+  {
+   "path": "files/figures/PMID41830506/EPI4-11-847-g004.jpg",
+   "sha256": "eba819d57673345707c7c3af47c953b9c59aeb44a38bf4e8f1cf19ea907005ef",
+   "kind": "figure",
+   "note": "Figure 2 (file g004), acquired and fingerprinted; not inspected as an image (legend read).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13238889.1/EPI4-11-847-g004.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "eba819d57673345707c7c3af47c953b9c59aeb44a38bf4e8f1cf19ea907005ef"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 141,240 bytes; whole article incl. Table 1 patient-level data and figure legends.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: whole article incl. patient-level Table 1; Figures 1, 3 and 5 inspected as images (note the reversed PMC file numbering), Figures 2 and 4 acquired and fingerprinted, legends only, so figures is captions_only and the receipt is partial. No supplement exists (PMC marks has-supplement no). Patient-level SLC2A1 variants appear in the source and are not carried into this public record.",
+  "entries": [
+   {
+    "proposition": "DESIGN: single-centre retrospective-prospective clinic cohort, 53 Glut1DS patients (44 with epilepsy) followed 2000 to 2023; the one disease in which the energy defect is known and bypassable by ketones.",
+    "snippet": "Glut1DS was diagnosed in 53 patients based on clinical features, hypoglycorrhachia, and/or pathological SLC2A1 variants as described 1 (Table 1A). SLC",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41830506_Klepper2026_PMC13238889.xml",
+    "anchor": "Methods",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "RESPONSE DEFINITION: more than 90 percent seizure reduction on KDT monotherapy, from history, parents' phone videos and EEG where available.",
+    "snippet": "Seizures were based on clinical history, mobile phone video from parents, and video‐EEGs if available. Seizure types reflect all s",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41830506_Klepper2026_PMC13238889.xml",
+    "anchor": "Methods",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "KETOSIS was verified by capillary 3OHB logged mostly by parents in diaries; adequacy thresholds vary by age.",
+    "snippet": "Patients checked capillary 3OHB usually once daily, but at least once a week at the same time of day. Measurements reflect both parents'/patients' 3OHB values in dia",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41830506_Klepper2026_PMC13238889.xml",
+    "anchor": "Methods",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EEG was recorded awake only, for at least 40 minutes, and rated by hand by the two treating authors; no sleep EEG, no blinding.",
+    "snippet": "EEGs were recorded in wakefulness only and routinely recorded for a minimum of 40 min. Provocation methods (photic sti",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41830506_Klepper2026_PMC13238889.xml",
+    "anchor": "Methods",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Headline: 27 of 44 patients (61 percent) reached more than 90 percent seizure reduction on KDT monotherapy; 17 did not.",
+    "snippet": "Our results in a much larger cohort confirm insufficient seizure control by KDT in one third of Glut1DS patients; however, wi",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41830506_Klepper2026_PMC13238889.xml",
+    "anchor": "Results 3.4 and abstract",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3: the non-responder group is not one group. Panel A (six patients) and panel C (four) show white KDT-monotherapy bars before ASM was added, with the legend saying they were initially responsive; panels B and D (seven) never responded. At least ten of the 17 non-responders therefore lost an initial response (secondary failure) and seven failed from the start.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3, horizontal bars per patient against age 0 to 25 years: white KDT monotherapy, grey KDT plus ASM with response, black KDT plus ASM without response, red asterisk age at diagnosis; panels A (6 patients), B (4), C (4), D (3) with drug abbreviations.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41830506/EPI4-11-847-g003.jpg",
+    "anchor": "Figure 3 panels A to D, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "paediatric Glut1DS clinic cohort",
+     "endpoint": "seizure control by treatment period"
+    }
+   },
+   {
+    "proposition": "The legend states panel A patients were initially responsive to KDT monotherapy and relapsed.",
+    "snippet": "initially responsive to KDT monotherapy, on seizure recurrence responsive to KDT + ASMs",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41830506_Klepper2026_PMC13238889.xml",
+    "anchor": "Figure 3 legend",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "ARITHMETIC: KDT plus ASM is said to be effective in 23 percent of non-responders; 10 of 17 non-responders is 59 percent, and 23 percent is 10 of all 44 patients.",
+    "snippet": "KDT plus ASM was effective in 23% of non‐responders to KDT monotherapy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41830506_Klepper2026_PMC13238889.xml",
+    "anchor": "Discussion 4.1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 5: epileptic discharges fall from 15 to 5 patients in responders and from 14 to 9 in non-responders; background slowing 4 to 0 in responders, 4 to 4 in non-responders. The bars give the numbers still present on KDT. The Abstract describes 5 (responders) and 9 (non-responders) as the patients in whom discharges \"improved\", which are the persisting counts; the Results text gives the resolved counts, 10 and 5.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5, (A) responders and (B) non-responders: grey bars epileptic discharges before and on KDT (15, 5 and 14, 9), white bars background slowing before and on KDT (4, 0 and 4, 4).",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41830506/EPI4-11-847-g001.jpg",
+    "anchor": "Figure 5A and 5B, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "paediatric Glut1DS clinic cohort",
+     "endpoint": "EEG epileptic discharge and background slowing counts"
+    }
+   },
+   {
+    "proposition": "The EEG observation: background slowing reverted in all four responders who had it and none of the four non-responders; the authors call it a novel predictor from numbers of four and four.",
+    "snippet": "KDT normalized background slowing in all responders (n = 4), but in none of the nonresponders (n = 4) (Table",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41830506_Klepper2026_PMC13238889.xml",
+    "anchor": "Results 3.5",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No association of response with SLC2A1 variant location or type (missense versus truncating), age, sex, KDT type or seizure type.",
+    "snippet": "Neither the location of the SLC2A1 variant nor the severity of the mutation (type A or type B) was correlated to epilepsy control (Figure 2). FIGURE 2 Loca",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41830506_Klepper2026_PMC13238889.xml",
+    "anchor": "Results 3.2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state they could not explain why ketones fail to control seizures in individual patients despite a wide search of covariates.",
+    "snippet": "The crucial question—why do KDT fail to control epilepsy in individual patients—could not be answered despit",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41830506_Klepper2026_PMC13238889.xml",
+    "anchor": "Conclusion",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Stated limits: complex phenotype, variable KDT, focus on epilepsy only.",
+    "snippet": "Limitations of the study are the complexity of Glut1DS phenotype and genotype, the variable KDT applied, and the isolated focus on",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41830506_Klepper2026_PMC13238889.xml",
+    "anchor": "Conclusion",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
