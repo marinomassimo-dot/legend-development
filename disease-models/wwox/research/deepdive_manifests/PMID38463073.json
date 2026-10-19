@@ -1,0 +1,255 @@
+{
+ "schema_version": 2,
+ "pmid": "38463073",
+ "doi": "10.1097/ms9.0000000000001751",
+ "receipt": "FTR-20261019-38463073-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID38463073.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "A narrative review in a general surgery-and-medicine journal; no search method; no primary data. Mixes randomised trials and observational cohorts under the heading 'RBC trials'."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "neonatal transfusion AND review",
+    "count": 3475,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (anemia OR hemoglobin OR transfusion)",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts at the stated date."
+ },
+ "multihop": {
+  "references_enumerated": 102,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 38463073 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 38463073: publication types ['Journal Article', 'Review']; correction/retraction link markers in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 100,
+   "references_screened": 83,
+   "references_with_doi": 83,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 17
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38463073_Shafique2024_PMC.xml",
+   "sha256": "e117e549aa66ae7bd899427b2147e3cce1ecd08bfcef03eef6cddf92e82bf929",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC10923393: abstract, body, Tables 1-4 (JATS), 102 references; no figures.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10923393/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC10923393/fullTextXML returned HTTP 200 (156558 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "The review's conclusion says recent rigorous trials have raised questions about liberal strategies and calls for further investigation.",
+    "snippet": "Recent trials with rigorous designs and control of confounding factors have raised questions regarding the effectiveness of liberal transfusion strategies for preterm infants.",
+    "anchor": "Conclusion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38463073_Shafique2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of neonatal and preterm transfusion practice (RBC, platelet, granulocyte)"
+    }
+   },
+   {
+    "proposition": "Advantages section: liberal threshold may reduce respiratory support, but is associated with greater morbidity and mortality; no reference is attached to the last statement.",
+    "snippet": "However, liberal thresholds are also associated with greater morbidity and mortality, despite being more efficacious.",
+    "anchor": "Advantages of current guidelines",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38463073_Shafique2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of neonatal and preterm transfusion practice (RBC, platelet, granulocyte)"
+    }
+   },
+   {
+    "proposition": "Highlights state that recent trials revealed higher thresholds linked to increased mortality and morbidity, while the Table 4 row for the largest trial says higher haemoglobin conferred little evidence of benefit.",
+    "snippet": "Nevertheless, recent trials have revealed that adopting higher thresholds for initiating transfusions is linked to increased mortality and morbidity.",
+    "anchor": "Introduction, Highlights",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38463073_Shafique2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of neonatal and preterm transfusion practice (RBC, platelet, granulocyte)"
+    }
+   },
+   {
+    "proposition": "Table 4 row for the largest RBC trial: higher haemoglobin results in more infants transfused with little evidence of benefit.",
+    "snippet": "In extremely low birth weight infants, maintaining a higher hemoglobin level results in more infants receiving transfusions but confers little evidence of benefit.",
+    "anchor": "Table 4, row Kirpalani",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID38463073_Shafique2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of neonatal and preterm transfusion practice (RBC, platelet, granulocyte)"
+    }
+   },
+   {
+    "proposition": "Table 4 includes a single trial in which restriction was associated with more brain haemorrhage, leukomalacia and apnoea (100 infants).",
+    "snippet": "Infants in the restrictive transfusion group were more likely to have intraparenchymal brain hemorrhage or periventricular leukomalacia, and they had more frequent episodes of apnea, including both mild and severe episodes.",
+    "anchor": "Table 4, row Bell",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID38463073_Shafique2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of neonatal and preterm transfusion practice (RBC, platelet, granulocyte)"
+    }
+   },
+   {
+    "proposition": "Table 4 lists many observational cohort studies (BPD, ROP and RDW risk factors) under the heading of RBC trials; they associate transfusion with bronchopulmonary dysplasia and retinopathy without randomisation.",
+    "snippet": "Transfusions were associated with the risk of developing the composite outcome, independently from other conditions; this risk correlated with several transfusions >3.",
+    "anchor": "Table 4, row Ghirardello",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID38463073_Shafique2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of neonatal and preterm transfusion practice (RBC, platelet, granulocyte)"
+    }
+   },
+   {
+    "proposition": "Iron overload: in the Park cohort multiply transfused very low birth weight infants had high iron reserves and non-transfused infants may also be at risk during NICU stay (a cited cohort of 10).",
+    "snippet": "Very low birth weight neonates that received several erythrocyte transfusions had high iron reserves, and non-transfused newborns may also be at risk of iron overload during NICU hospitalization.",
+    "anchor": "Table 4, row Park",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID38463073_Shafique2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of neonatal and preterm transfusion practice (RBC, platelet, granulocyte)"
+    }
+   },
+   {
+    "proposition": "Stored red cells lose 2,3-diphosphoglycerate, shifting the haemoglobin-oxygen curve leftward and reducing oxygen release for several hours; young infants compensate less well.",
+    "snippet": "During storage of RBCs, the concentration of 2,3-diphosphoglycerate rapidly decreases. This leads to a leftward shift in the Hb–oxygen dissociation curve, resulting in reduced oxygen release from RBCs to the tissues72.",
+    "anchor": "2,3-Diphosphoglycerate",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38463073_Shafique2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of neonatal and preterm transfusion practice (RBC, platelet, granulocyte)"
+    }
+   },
+   {
+    "proposition": "Glucose homeostasis: both hypoglycaemia and hyperglycaemia are associated with neonatal transfusion, with the caveat that at-risk infants may be those more likely to be transfused; stored blood glucose declines with storage.",
+    "snippet": "Both hypoglycemia and hyperglycemia are associated with blood transfusions in neonates. It is possible that the infants at risk of developing these conditions are also the ones more likely to receive a transfusion69.",
+    "anchor": "Complications, Glucose homeostasis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38463073_Shafique2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of neonatal and preterm transfusion practice (RBC, platelet, granulocyte)"
+    }
+   },
+   {
+    "proposition": "Hyperkalaemia from stored red cells is a risk with large volumes, fast rates or impaired renal clearance; irradiated blood beyond 24 hours is to be avoided.",
+    "snippet": "However, serious hyperkalemia can arise with large-volume transfusions or if the kidneys of infants are unable to eliminate K+ properly64.",
+    "anchor": "Complications, Hyperkalemia",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38463073_Shafique2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of neonatal and preterm transfusion practice (RBC, platelet, granulocyte)"
+    }
+   },
+   {
+    "proposition": "NIRS in transfusion decisions is described as a potential tool, with no stated outcome evidence.",
+    "snippet": "For optimization, researchers have explored non-invasive technologies, such as near-infrared spectroscopy (NIRS).",
+    "anchor": "RBC transfusion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38463073_Shafique2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of neonatal and preterm transfusion practice (RBC, platelet, granulocyte)"
+    }
+   }
+  ]
+ }
+}
