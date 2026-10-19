@@ -1,5 +1,5 @@
 {
- "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
  "_note": "Metabolic batch. Orchestrator assumption: scientist-d is a fourth equivalent Scientist under the shared contract roles/scientist.md (body 32); operator authorised up to four Scientists on 2026-10-19.",
  "TASK_ID": "INTERV-H3-B-20261019",
  "DIRECTIVE_VERSION": 1,
@@ -30,6 +30,26 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "QUEUED_BEHIND_WAVE_1",
- "assigned_on": "2026-10-19"
+ "CURRENT_STATE": "IN_PROGRESS",
+ "assigned_on": "2026-10-19",
+ "TASK_ACK": {
+  "TASK_ID": "INTERV-H3-B-20261019",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "DECISION": "ACCEPTED",
+  "ACTOR_ID": "scientist-b",
+  "acked_at": "2026-10-19T20:00:00Z",
+  "reading_mode": "PRIMARY_EVIDENCE_READ",
+  "note": "Dispatch brief, task contract, selection file group H3, standing brief, role contract read; working on task branch task/INTERV-H3-B-20261019 in .claude/worktrees/interv-h3-b. Receipts staged under research/receipt_staging/scientist-b, never recorded by this actor."
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "INTERV-H3-B-20261019",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-b",
+  "claimed_at": "2026-10-19T20:00:00Z",
+  "durable_pointer": "ledger/tasks/scientist-b/INTERV-H3-B-20261019.json on branch task/INTERV-H3-B-20261019",
+  "claim_precondition_checked": "Group H3 is named by no other contract; H5 belongs to the interv-h5-d worktree."
+ },
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
 }
