@@ -29,7 +29,7 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "COMPLETE",
+ "CURRENT_STATE": "COMPLETE_UNLANDED",
  "assigned_on": "2026-10-19",
  "TASK_ACK": {
   "TASK_ID": "DEBT-WWOX-DIRECT-D-20261019",
@@ -76,6 +76,12 @@
    "default": "narrowed the manifest proposition with a declared contradicts_locator (audit object attached) and the note text; ran locator_contradiction_audit.py --working-tree --fail-on-undeclared clean",
    "why_safe": "the correction path of the standing brief",
    "would_have_differed": "none"
+  },
+  {
+   "condition": "task_close.py refused to land: the root checkout holds the Orchestrator's in-flight BATCH_20261019_001 changes (state manifest modified, a mirror review untracked); global session_self_eval and lint BLOCK_BATCH_COMMIT lines name peers' receipts recorded by the Orchestrator, none names this task's eight PMIDs",
+   "default": "left task/DEBT-WWOX-DIRECT-D-20261019 committed and unlanded (commit ccb0be90 and its parents); reported, not fixed; the Orchestrator lands it with task_close.py or a merge after its batch",
+   "why_safe": "never touch the four current files, the registries or the ledger, nor another actor's in-flight files",
+   "would_have_differed": "a quiet root checkout would have been landed by this actor"
   }
  ],
  "STOP_LOG": [],
