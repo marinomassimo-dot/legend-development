@@ -85,7 +85,7 @@
    "flagged": [],
    "noted": [],
    "paper_verdict": "SCREENED_CLEAN",
-   "reference_source": "network",
+   "reference_source": "cache",
    "references_declared": 56,
    "references_screened": 55,
    "references_with_doi": 55,
@@ -314,6 +314,30 @@
     "surface": "figure",
     "artifact": "files/figures/PMID41822170/Data_Sheet_1.pdf",
     "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Text on GSH: levels are said to be decreased 'to 64 and 52 percent' at 15 min and 1 h of RSL-3.",
+    "snippet": "the GSH concentration was consistently decreased to 64 and 52% at 15 min and 1 h after RSL-3-treatment",
+    "anchor": "3.2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41822170_Petrillo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2A: GSH is about 175 (control), 65 (15 min) and 85 (1 h) nmol/mg protein, i.e. about 37 and 49 percent of control remaining, a fall of about 63 and 51 percent; the text 'decreased to 64 and 52 percent' reads as the size of the fall, not the remaining level.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2A: bar chart GSH nmol/mg prot 0 to 200, Ctrls about 175, RSL-3 15 min about 65, RSL-3 1 h about 85, three points per bar, three asterisks on each RSL-3 bar; Figure 2B Gcl densitometry (percent A.U.) about 100, 46 and 54 with a Gcl over b-Actin blot.",
+    "anchor": "Figure 2A-B",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41822170/fncel-20-1758230-g002.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "acute mouse cortical slices",
+     "treatment": "RSL-3 5 uM",
+     "comparator": "untreated slices",
+     "endpoint": "GSH enzymatic recycling assay"
+    },
+    "qualifies": "entries[15]",
+    "qualifies_needle": "the GSH concentration was consistently decreased to 64 and 52%"
    }
   ],
   "source_fulltext_indexed": true,

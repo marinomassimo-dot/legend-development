@@ -330,6 +330,8 @@ measure and no ferrostatin or chelator control is reported.
 - Cysteine falls but the paper says the values are not significantly different, under a heading
   stating that RSL-3 decreases cysteine; the antiporter protein rises 2.4- to 3.4-fold (read as
   compensation).
+- Wording slip: the text says GSH was "decreased to 64 and 52%"; Figure 2A shows about 65 and 85 nmol/mg
+  against about 175 in controls, i.e. falls of about 63 and 51 percent (about 37 and 49 percent remaining).
 - The only electrophysiology is one control and one 4-HNE trace from one cell; the legend says current
   clamp while the calibration is in pA; no vehicle trace, no cell count, no burst quantification.
 - In the 4-HNE blots (Fig 6) the 15-LOX and SLC7A11 bands are faint and close in intensity across
@@ -666,8 +668,8 @@ could put side by side.** The repository holds a murine WWOX-loss measurement th
 junctions toward long microhomology (a repair-pathway-choice endpoint in a claim held in
 observation, CLAIM 029) and has no record of the junction structure of human WWOX copy-number
 alleles. IPOTESI, stated so and staged for the Orchestrator: published breakpoint junctions of human
-WWOX exon deletions (the dominant class of WWOX copy-number variants in the epilepsy literature)
-could be scored for microhomology against a chance model, as this paper did for PARK2; a WWOX
+WWOX exon deletions (copy-number alleles are among the reported patient alleles; their share was
+not re-derived here and the junction sequences of published cases were not looked up) could be scored for microhomology against a chance model, as this paper did for PARK2; a WWOX
 rearrangement spectrum with a microhomology share like PARK2's would say the FRA16D alleles arise as
 other fragile-site alleles do, while a share different from it would be a first hint of a locus- or
 gene-specific repair signature. Falsifier: junction microhomology no different from PARK2 and from
@@ -675,3 +677,45 @@ the chance model. Counter: WWOX copy-number alleles in patients are germline eve
 generations (meiosis or early embryo), the murine measurement is in B cells, and PARK2 shows only what
 a different fragile site does; nothing here tests whether WWOX loss changes the junction type of
 its own gene. Transfer: method and comparator only.
+
+---
+
+## 15. PMID 34937577 — Zhang 2021, J Neuroinflammation: "Mitophagy in neurological disorders" (tier 3, new; narrative review)
+
+context_policy: SOURCE_FIRST. The selection row calls it the baseline for the open mitophagy-versus-senolytic
+item (CLAIM 010, held as a background-only hypothesis). WWOX is not named and senescence is not
+discussed (counted in this session: zero for WWOX, zero for senolytic stems).
+
+**What it MEASURES.** Nothing; a narrative review with a pharmacology table (Table 1) and two
+schematics. Epilepsy gets one paragraph: autophagy markers in refractory temporal-lobe epilepsy
+tissue, TSC-type mTORC1-pathway mutations raising seizure susceptibility, focal cortical dysplasia with
+mTOR over-activation, and rapamycin preventing epilepsy early and reducing seizures late in mice.
+
+**First-pass observations (two figures, Table 1).**
+- The conclusions concede that whether targeting mitophagy is more harmful than beneficial is
+  unresolved, and the text says the order of mitochondrial dysfunction, defective mitophagy and
+  pathogenic-protein accumulation is unclear. Figure 2 draws both lowering mitophagy (3-MA, BNIP3
+  silencing, WNT3a, glycine) and raising it (rapamycin, melatonin, NIX, TFEB and others) as leading to
+  "neuronal protection".
+- The epilepsy evidence is mTOR pathway pharmacology: rapamycin is labelled a mitophagy inducer, yet
+  nothing in that paragraph states a mitophagy measurement; the text also misnames rapamycin
+  ("silomus") once.
+- The one HIF contact: NIX/BNIP3-mediated mitophagy under hypoxia and HIF1-alpha stabilisation.
+
+FIRST-PASS OBSERVATIONS COMPLETE -> PRIOR KNOWLEDGE ADMITTED FOR COMPARISON: admitted by command the three registry records for
+the theme "mitophagy" (CLAIM 009's pathway line, CLAIM 010 and its working-model mirror); BNIP3 returns no
+record.
+
+**What it changes in the disease model: nothing, and it is not the baseline the row says.** CLAIM 010
+asks whether damaged mitochondria, not senescent cells, are the target. This review contains no
+senescence content, so it cannot arbitrate; it supports only the generic statement that mitophagy has
+context-dependent effects (the claim's own caveat). Across this lot the WWOX-adjacent facts that bear
+on CLAIM 010 are indirect and point in different directions: WWOX overexpression produced ROS and a
+senescence marker in rat tumour cells (Liu 2022); chronic replication stress lowered WWOX transcript
+and raised mtROS in human fibroblasts without mitophagy being the mechanism (Kawabata 2024); and
+nothing here measures mitophagy in any WWOX-deficient cell. A stageable pointer (IPOTESI, not a
+claim): the registry-held WWOX loss raising HIF1A meets BNIP3/NIX-type mitophagy under HIF1-alpha
+stabilisation; BNIP3 and NIX are absent from the repository, so a first step is reading BNIP3 and
+BNIP3L transcript and LC3/TOMM20 colocalisation in the WWOX-deficient fibroblast lines. Falsifier:
+no change in those readouts. Counter: no WWOX paper in the repository measures BNIP3 and the HIF1A
+targets it lists are glycolytic.
