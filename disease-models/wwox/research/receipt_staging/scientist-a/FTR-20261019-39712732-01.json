@@ -1,0 +1,40 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-39712732-01",
+ "study_id": {
+  "pmid": "39712732",
+  "doi": "10.7759/cureus.74129"
+ },
+ "analysis_at": "2026-10-19T19:36:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a (Scientist A), interventions batch 2026-10-19 groups H1/H2, task INTERV-H1-A-20261019 on branch task/INTERV-H1-A-20261019, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN. Route: Europe PMC JATS body (PMC11662512) into the root files/ tree; the article has no figures and the supplementaryFiles endpoint returned no archive (no supplementary document); Tables 1-3 read from the JATS. Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a staged JSON for the Orchestrator and not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID39712732_Jadhav2024_PMC.xml",
+ "source_fingerprint": "6aa89e901ad627533a446217cd8a92764f57e8706ad9f1d0dbb08617e63ef18b",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "not_present",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID39712732.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID39712732.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "manifest",
+  "No figures; supplementaryFiles endpoint returned no archive; Tables 1-3 read"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
