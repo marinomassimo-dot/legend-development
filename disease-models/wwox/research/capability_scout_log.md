@@ -938,3 +938,15 @@ catalytic-dead control, a titration. The missing item is the experiment, not the
 **Cost / API / privacy risk:** none. The parked pair's open-access PDFs were refused by two publishers; no Unpaywall query was sent because it requires an e-mail address and the operator's may not be used for it without being asked. No shadow-library route was used.
 
 **Next surgical micro-step:** run the proposition-versus-quote prompt over the existing manifests offline and count what it would have flagged.
+
+## 2026-10-19 — scientist-b, interventions wave group H3
+
+**Capability gap recorded (with evidence).** A Scientist staging receipts under the parallel-wave rule has no read-only way to validate them: `fulltext_receipts.py record` rewrites the hash chain and state manifest, and `validate` takes no receipt argument. Two waves wrote the same ad hoc script from the module's own validators.
+
+**CHANGE (proportional micro-upgrade, shipped).** `framework/scripts/staged_receipt_check.py` runs the writer's own `validate_new_receipt` and `validate_receipt` over staged JSON files with an explicit artefact root and appends nothing; test `test_staged_receipt_check.py`; README routing row; release-regression enrolment. All 15 receipts of this wave return OK.
+
+**Not built, and why.** An automatic proposition-versus-quote check (named by scientist-d) and a figure-file-to-label mapper (Dhillon: 11 PMC files in non-figure order) were not built; each is larger than a micro-step.
+
+**Cost / API / privacy risk:** none; offline.
+
+**Next surgical micro-step:** map PMC image files to figure labels from the JATS `fig` and `graphic` elements and warn when file order differs.
