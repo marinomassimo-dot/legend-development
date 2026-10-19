@@ -773,7 +773,8 @@ class ArtifactWorkspacePassthroughTests(unittest.TestCase):
     def test_flag_reaches_the_manifest_validator_only_when_given(self):
         packet = {"applicable_checks": [{"name": "manifest validator"}]}
         with_flag = dict(pp._runnable(Path("."), "wwox", "1", packet, "/shared/root"))
-        without = dict(pp._runnable(Path("."), "wwox", "1", packet))
+        with tempfile.TemporaryDirectory() as raw:  # not a linked worktree: no default applies
+            without = dict(pp._runnable(Path(raw), "wwox", "1", packet))
         self.assertIn("--artifact-workspace", with_flag["manifest validator"])
         self.assertEqual(with_flag["manifest validator"][-1], "/shared/root")
         self.assertNotIn("--artifact-workspace", without["manifest validator"])
