@@ -30,7 +30,7 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "IN_PROGRESS",
+ "CURRENT_STATE": "LOT_EXHAUSTED — 14 of 14 selected papers read plus one extra item; self-eval and report pending integration",
  "assigned_on": "2026-10-19",
  "TASK_ACK": {
   "TASK_ID": "INTERV-H3-B-20261019",
@@ -50,6 +50,70 @@
   "durable_pointer": "ledger/tasks/scientist-b/INTERV-H3-B-20261019.json on branch task/INTERV-H3-B-20261019",
   "claim_precondition_checked": "Group H3 is named by no other contract; H5 belongs to the interv-h5-d worktree."
  },
- "DEFAULTS_TAKEN": [],
- "STOP_LOG": []
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "commit refused with VERDICT STALE because manifests and staged receipts stale derived surfaces that only the Orchestrator regenerates",
+   "default_taken": "set LEGEND_STALE_SURFACES_BECAUSE with a written reason on every path-scoped commit",
+   "why_safe": "none of my commits touches a ledger, the state manifest or a current file; the brief assigns regeneration to the Orchestrator",
+   "what_would_differ": "waiting would have blocked the lot; regenerating would have baked peers in-flight files into shared surfaces"
+  },
+  {
+   "condition": "the gitignored files/ tree is not in the task worktree, so the manifest validator refused every artefact path",
+   "default_taken": "validated with --artifact-workspace pointing at the shared checkout root (a files symlink in the worktree was refused by the validator as escaping the workspace and was removed)",
+   "why_safe": "evidence stays in the shared checkout as the role contract requires; nothing copied into the branch",
+   "what_would_differ": "a copy of files/ into the worktree would have broken the evidence-locality rule"
+  },
+  {
+   "condition": "receipt-record rewrites the state manifest and ledger, which the Orchestrator is recording in parallel",
+   "default_taken": "validated each staged receipt with the validator own functions (validate_new_receipt and validate_receipt with the shared root) and never ran fulltext_receipts.py record",
+   "why_safe": "the ledger and state manifest are untouched",
+   "what_would_differ": "recording would have collided with the Orchestrator wave-1 recording"
+  },
+  {
+   "condition": "the HELD item 31543760 carries no stated question in the selection file",
+   "default_taken": "stated the question (does the paper carry any catecholamine or monoamine marker) and answered it with a term-absence screen over the persisted JATS and data-sheet text layers; no receipt staged because a screen is not a reading",
+   "why_safe": "no claim follows; the result is a null screen only",
+   "what_would_differ": "a full resume would have spent the lot budget on a paper with no adrenergic content"
+  },
+  {
+   "condition": "lot exhausted with context remaining",
+   "default_taken": "ran the extra self-chosen WWOX search inside the theme and read the one qualifying item (22479346, Tier C placeholder in the registry)",
+   "why_safe": "brief step 21 prescribes it; deduped against the receipt ledger",
+   "what_would_differ": "stopping would have been a class-3 stop with the lot's own search unrun"
+  },
+  {
+   "condition": "an adult WWOX-DEE case report (39507621) with autonomic seizures and respiratory decline is a legacy reconstruction in the ledger and its manifest artefacts are absent from the root files tree",
+   "default_taken": "did not re-read or restore it (not in my lot, another actor claim unknown); reported it as reading debt and cited the existing manifest locators only for the fact that a respiratory-decline locator exists",
+   "why_safe": "no claim or receipt made from it",
+   "what_would_differ": "a duplicated reading could have collided with an owner"
+  },
+  {
+   "condition": "supplementary files in legacy binary formats (xls, doc) and a zip container from the publisher",
+   "default_taken": "downloaded through the Europe PMC supplementary zip, fingerprinted, declared as supplement_binary, read by spreadsheet reader or string extraction where it carried a WWOX or primer row, and declared captions_only in the receipt coverage where only openings were read",
+   "why_safe": "coverage understated rather than overstated",
+   "what_would_differ": "declaring them read would have overstated the receipt"
+  },
+  {
+   "condition": "a PubMed query returned nothing under throttling during the extra search",
+   "default_taken": "backed off and retried (growing sleeps); no HTTP 429 persisted",
+   "why_safe": "rate limit is shared across Scientists",
+   "what_would_differ": "hammering would have starved peers"
+  }
+ ],
+ "STOP_LOG": [],
+ "WAVE_1_RESULT": {
+  "DEFAULTS_TAKEN": "see top-level DEFAULTS_TAKEN",
+  "STOP_LOG": [],
+  "papers_read": 15,
+  "selected_read": 14,
+  "parked": 0,
+  "staged_receipts": "disease-models/wwox/research/receipt_staging/scientist-b/FTR-20261019-<PMID>-01.json (15 files)",
+  "commit_candidates": [
+   "CC-20261019-SCIENTIST-B-H3-ADRENERGIC-SEIZURE-01",
+   "CC-20261019-SCIENTIST-B-H3-AUTONOMIC-HYPOGLYCAEMIA-01",
+   "CC-20261019-SCIENTIST-B-H3-EPINEPHRINE-SAFETY-01",
+   "CC-20261019-SCIENTIST-B-H3-WWOX-BP-01"
+  ],
+  "analysis_note": "disease-models/wwox/research/interventions_wave_20261019_scientist-b.md"
+ }
 }
