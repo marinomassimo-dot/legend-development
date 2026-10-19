@@ -1,0 +1,182 @@
+{
+ "schema_version": 2,
+ "pmid": "33363507",
+ "doi": "10.3389/fneur.2020.592514",
+ "receipt": "FTR-20261019-33363507-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-G2-KD-PRIOR-01",
+  "metabolic_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared. Triples are listed in the commit candidate for a later blind audit."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 2108,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Fei Y[au]' 2108 (surname-initial, ambiguous); 'Fei Y[au] AND epilepsy' 9.",
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Narrative review by a neurology group (Xiangya); a literature synthesis with no data.",
+  "note": "No competing interests."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 0
+   }
+  ],
+  "note": "WWOX does not occur."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 146,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS: 146.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-directed reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --theme glycolysis (no record of this paper)",
+  "hits": 0,
+  "finding": "Not in the registries."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed esummary 2026-10-19 for 33363507; JATS front matter carries is-retracted flag",
+  "result": "No retraction, correction or expression of concern found in the PubMed record or the JATS front matter.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 146,
+   "references_screened": 144,
+   "references_with_doi": 144,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID33363507_Fei2020_PMC7753014.xml",
+   "sha256": "fde5d341dcbdfbd9585e0ffea1d6c6847288f36448a94efc2a891c12dbfe0c2f",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC7753014 (Front Neurol 2020, CC BY), 213,140 bytes; abstract, introduction, sections on brain metabolism, metabolic changes and causes of epilepsy, lactate and ATP, metabolic control, dietary therapy, drugs, Table 1 and five figure legends present. 146 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7753014/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "fde5d341dcbdfbd9585e0ffea1d6c6847288f36448a94efc2a891c12dbfe0c2f"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 213,140 bytes; whole article incl. Table 1 and figure legends.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: whole text read including Table 1 and figure legends; the five schematic figures were not inspected as images (legends only), so figures is captions_only and the receipt is partial. HEDGE: the review states metabolic control as a \"rising panacea\" in its Conclusion; no data of its own.",
+  "entries": [
+   {
+    "proposition": "DIRECTION A: the review supports inhibiting glycolysis (2-DG, KATP opening, BDNF/TrkB, PPP and neurosteroid routes) as antiseizure.",
+    "snippet": "glycolysis inhibition, such as by 2-DG, is a promising treatment for epilepsy [(107, 108)]. Targetin",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33363507_Fei2020_PMC7753014.xml",
+    "anchor": "Control of Epilepsy by Regulating Metabolic Pathways, glycolysis",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DIRECTION B: the same review states hypometabolism (hypoglycaemia, GLUT1 deficiency, mitochondrial dysfunction) can initiate seizures and energy supplementation treats them; the metabolic-control statement therefore has two opposite therapeutic directions depending on the cause.",
+    "snippet": "Hypometabolism could initiate convulsions or epilepsy, such as hypoglycemia, GLUT1 deficiency, and mitochondrial dysfunction. Supplementing neuronal e",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33363507_Fei2020_PMC7753014.xml",
+    "anchor": "Conclusion",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Hypoglycaemia is named as a seizure cause, more so in neonates and children; the susceptibility mechanism is stated as unclear.",
+    "snippet": "Hypoglycemia is a common, acute life-threatening illness in diabetic patients that may cause seizures. No",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33363507_Fei2020_PMC7753014.xml",
+    "anchor": "Metabolism Dysfunction Leads to Epilepsy, Hypoglycemia",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The astrocyte-neuron lactate shuttle underlies the lactate arguments and is acknowledged as controversial.",
+    "snippet": "Although this theory remains controversial, the concentration of lactate in astrocytes was significantly higher than that in neurons, a",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33363507_Fei2020_PMC7753014.xml",
+    "anchor": "Metabolic Features in the Brain, ANLS",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Measured lactate: epileptogenic hippocampus 6.8 mM against 4.6 mM non-epileptogenic hippocampus (human cited studies), CSF lactate raised in status epilepticus.",
+    "snippet": "Comparing with the non-epileptogenic hippocampus, the concentration of lactate in the epileptogenic hippocampus increased from 4.6 ± 0.4 to 6.8 ± 0.7 ",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33363507_Fei2020_PMC7753014.xml",
+    "anchor": "Biochemical Changes in Epilepsy",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The direct signalling effect of lactate on seizures is stated uncertain, and its effects differ by region, even oppositely.",
+    "snippet": "However, its physiological concentration is not sufficient to activate the known GPR81 receptor (78) and its direct effe",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33363507_Fei2020_PMC7753014.xml",
+    "anchor": "Metabolites Affect Neuronal Excitability, Lactate",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "LDH inhibition (oxamate, stiripentol) is proposed as a target; mTOR inhibition and LDH are linked.",
+    "snippet": "Therefore, LDH may be a promising potential target for the treatment of epilepsy, and these dis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33363507_Fei2020_PMC7753014.xml",
+    "anchor": "Targeting Lactate Dehydrogenase",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Astrocytic glycogen-derived lactate fuels the brain in hypoglycaemia, high memory load and sleep deprivation.",
+    "snippet": "In some special circumstances, such as high-intense memory tasks, sleep deprivation, and hypoglycemia, lactate derived from astrocytic glycogen fuels ",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33363507_Fei2020_PMC7753014.xml",
+    "anchor": "Metabolic Features in the Brain, Various Energetics",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
