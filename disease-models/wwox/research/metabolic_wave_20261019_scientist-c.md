@@ -309,3 +309,47 @@ and neither says that a Wwox-null neuron is ferroptosis-prone or ferroptosis-res
 and ferroptosis arm of the working model stays empty and the sign of WWOX on ferroptosis is, on the
 present sources, context-dependent in the same way the WWOX-ROS sign is. Manual PDF request logged for
 ref 14 (carried by the candidate).
+
+---
+
+## 7. PMID 41822170 — Petrillo 2026, Front Cell Neurosci: ferroptosis-induced epileptiform activity in mouse cortical slices (tier 2, new)
+
+context_policy: SOURCE_FIRST (selection row's line only; registry empty; WWOX is not named anywhere in the
+artefact).
+
+**What it MEASURES.** Acute coronal cortical slices from wild-type C57BL/6J mice at P30 to P40 treated
+with RSL-3 (5 uM, 15 min or 1 h) or 4-HNE (10 uM): GPX4, 15-LOX, GCL and SLC7A11 by Western blot,
+GSH enzymatically, cysteine by HPLC, one example whole-cell trace after 4-HNE; and SLC7A11 mRNA in
+leukocytes of four children with epilepsy against five controls. Every ferroptosis claim in the
+slices is inferred from marker proteins at 15 to 60 minutes; no cell death, lipid ROS or iron
+measure and no ferrostatin or chelator control is reported.
+
+**First-pass observations (seven figures and the two-page data sheet opened).**
+- GPX4 falls 36 and 47 percent and 15-LOX rises 4.5- and 5.3-fold within 15 and 60 minutes (n =
+  three experiments, t-tests against control at two time points).
+- Cysteine falls but the paper says the values are not significantly different, under a heading
+  stating that RSL-3 decreases cysteine; the antiporter protein rises 2.4- to 3.4-fold (read as
+  compensation).
+- The only electrophysiology is one control and one 4-HNE trace from one cell; the legend says current
+  clamp while the calibration is in pA; no vehicle trace, no cell count, no burst quantification.
+- In the 4-HNE blots (Fig 6) the 15-LOX and SLC7A11 bands are faint and close in intensity across
+  lanes yet quantified 1.5- to 2.2-fold.
+- The data sheet's full blots carry four lanes where the figures show three conditions (lane order
+  not labelled), and the beta-actin images for Fig 1A, 2B and 4 show the same band pattern, expected
+  if one membrane was reprobed but not stated; no inference beyond that is drawn.
+- Clinical arm: four children against five controls, mRNA only, no diagnosis, medication or seizure
+  data; presented as a candidate peripheral biomarker mirroring brain changes.
+
+FIRST-PASS OBSERVATIONS COMPLETE -> PRIOR KNOWLEDGE ADMITTED FOR COMPARISON: admitted the registry query (empty) and the
+ferroptosis review read earlier in this lot.
+
+**What it changes in the disease model: nothing; it is a methods-transfer note.** The assay family
+(acute slice, RSL-3 or 4-HNE exposure, GPX4/15-LOX/GSH/xCT readouts, burst scoring) is the kind the
+Xu review lacks for genetic models. For a Wwox-null background the slice route has a hard age
+constraint: the paper's slices are P30 to P40, while the null mouse is recorded in this repository as
+dying within weeks, so a null comparison would need younger slices or a heterozygous or conditional
+line. A Wwox-null slice that fires bursts more readily under RSL-3 or 4-HNE, or whose GPX4/GSH baseline
+differs, would be a first iron/lipid-peroxide readout for the model; this paper supplies the protocol
+shape and the controls that are missing from it (vehicle trace, ferrostatin-1, cell counts). Transfer
+verdict: protocol-level only; the findings themselves are wild-type, acute-pharmacological and
+unreplicated by the standards of its own methods section.
