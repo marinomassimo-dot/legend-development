@@ -236,3 +236,67 @@ differ in method; the data statement says no datasets were generated.
 **Changes.** A transferable negative for the oxygen group: hyperoxia is injurious to the developing brain's oligodendrocyte lineage even without a second hit, so "more oxygen"
 cannot be assumed harmless in a hypomyelinating genotype. Whether WWOX-null oligodendrocytes are more or less vulnerable is unmeasured (WWOX myelin papers exist but none tests oxygen).
 
+---
+
+## 13. PMID 42763430 — Moore 2026, ASN Neuro (tier 3) — "hyperoxia" and mouse oligodendrocyte progenitors in culture
+
+SOURCE_FIRST · FTR-20261019-42763430-01 · manifest PASS · **in-vitro culture-methods paper; not WWOX evidence and not an exposure model.**
+
+**Measures.** Primary C57BL/6 neonatal mouse OPCs expanded in 2 percent versus 20 percent oxygen. The title's "hyperoxia" is 20 percent, ordinary room-air culture (the authors call it
+superphysiological). At 2 percent the cells doubled faster and passaged every four days (Fig 2C, a single curve without error bars), apoptosis at 96 h was 7.2 versus 18.7 percent, and rat OPCs were
+insensitive to oxygen (Fig 2F, rat growth higher at 20 percent). After T3, about 63 percent of passage-3 cells became MBP-positive in 20 percent oxygen; at passage 6 only about 19 percent did
+(Fig 7). The HIF-1 alpha explanation is a stated suspicion (HIF-1 alpha was not measured), and Sox10 loss between P0 and P3 is "not associated" with failure to reach O4 or MBP, which falls only at P6.
+
+**Does not support.** That clinical hyperoxia inhibits OPC growth but promotes differentiation, any in vivo oxygen effect, or a HIF-1 alpha mechanism. Fig 7 is one to two
+experiments with technical replicates; one comparison is printed as p below 0.5.
+
+**Changes.** For the hypomyelination link only a methods point: mouse progenitor biology is oxygen-sensitive in culture, so oxygen is a confound in any in-vitro WWOX-null
+oligodendrocyte experiment (control for incubator oxygen). No exposure inference.
+
+---
+
+## 14. PMID 42652189 — Alekseeva 2026, Biomedicines (tier 3) — NMDA and AMPA receptors in hyperbaric-oxygen seizures
+
+SOURCE_FIRST · FTR-20261019-42652189-01 · manifest PASS · **animal safety-direction paper; not WWOX evidence.**
+
+**Measures.** Adult male rats at 6 ATA (100 percent oxygen) until generalised seizure or 90 min. Memantine accelerated every seizure stage; perampanel (1 and 5 mg/kg) delayed stage 4 (about 37 to
+about 69 and 57 min) but did not prevent seizures (7 of 8 treated animals seized); methionine sulfoximine (at 5 ATA) accelerated seizures. NeuN counts fell about 19 percent in CA3 after exposure.
+
+**Does not support.** AMPA receptors as the "definitive upstream trigger": the combination arm used monotherapy data re-used from earlier experiments, the abstract says perampanel prevented CA1/CA3
+cell death and the combination mitigated it, while section 3.6 says the combination did not protect either field, and Figure 6D shows the CA1 perampanel bar below the HBO2 bar although a significance
+bracket links them. The Methods list 94 monitoring animals (abstract: 86) and call Iba-1 an astrocyte marker. Mechanisms (GluN2A zinc, blood flow, disinhibition) are untested.
+
+**Changes.** This is the safety anchor of the group: hyperbaric oxygen provokes generalised seizures within tens of minutes at 6 ATA in rats, clinical protocols use 1.5 to 2.5 ATA for 60 to 90 minutes, and drug
+modification of the effect is unreliable (a standard antiseizure NMDA blocker made it worse). For an epilepsy genotype any hyperbaric exposure is BLOCK-1; no WWOX data exist. Doses are rat experimental doses, not guidance.
+
+---
+
+## 15. PMID 39965572 — Blume 2025, Cell (tier 3) — HypoxyStat, a haemoglobin left-shifter as drug-based hypoxia therapy
+
+SOURCE_FIRST · FTR-20261019-39965572-01 · manifest PASS · **preclinical mitochondrial-disease paper with a declared sponsor interest; not WWOX evidence.**
+
+**Measures.** An oral covalent haemoglobin modifier (p50 about 26 to 5.6 mmHg) in wild-type and Ndufs4 knockout mice. At 400 mg/kg daily it raised Epo (about 380 pg/mL against about 130 for 11 percent
+inhaled oxygen) and haematocrit (about 52 against 48 percent; up to about 59 percent at 600 mg/kg), and extended knockout lifespan 3 to 4 fold (n = 6 vehicle, 9, 9); started late it extended survival
+in n = 10 against n = 6. The comparator GBT-440 did not rescue. Authors state intermittent or sleep-only hypoxia would be insufficient, effect is not acutely reversible except by transfusion, and chronic hypoxia
+risks pulmonary hypertension and right heart failure.
+
+**Does not support.** Use in any child or any non-complex-I disease: one mouse model, safety studies in mice and in vitro (three weeks in wild type, a 25-target off-target panel), first-generation compound, no statistics section
+in the Methods, and the start of the "late" experiment is given as P50, P55 and P80 in three places.
+
+**Changes.** The one oxygen-lowering route with a mechanism: it works where tissue is hyperoxic because of an ETC lesion (see Garg 2026). WWOX null tissue has no demonstrated hyperoxia, so nothing transfers; the "nocturnal"
+route is explicitly not supported by the authors' own statement. Class-level BLOCK-1: polycythaemia and irreversibility.
+
+---
+
+## 16. PMID 38206902 — June 2024, PLOS ONE (tier 3) — acute seizures in neonatal inflammation-sensitised hypoxia-ischaemia (mouse)
+
+SOURCE_FIRST · FTR-20261019-38206902-01 (partial: supplementary not read) · manifest PASS · **animal model where hypoxia is the injury; not WWOX evidence.**
+
+**Measures.** P10 mice, carotid ligation plus 1 h at 8 percent oxygen, with or without LPS 4 h before; continuous EEG (seizures began about 16 s into hypoxia) and DAPI lesion scores at P30 (about 8 against about 23 of 60). Seizure duration, burden
+and score were equal; three of the LPS-sensitised mice died in hypoxia after convulsive seizures (none in hypoxia alone).
+
+**Does not support.** That acute seizures play no role: survivors only, EEG and histology in different animals, the mortality difference not analysed, an ordinal score compared by t-test, and a first-time-point p of 0.05 on background suppression called not significant. The group sizes are swapped between the Methods and the Figure 3 legend, and
+the three supplementary spreadsheets (seizure review, background EEG, neuropathology scores) are **byte-identical** (one SHA-256) and hold only the seizure table, so the data behind Figures 3C and 4 are not deposited despite the data statement.
+
+**Changes.** A neonatal reference for hypoxic seizures with an inflammatory hit; it informs why oxygen delivery is discussed in neonatal seizure care but contains no oxygen intervention.
+

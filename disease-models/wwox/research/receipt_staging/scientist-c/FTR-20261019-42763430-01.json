@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-42763430-01",
+ "study_id": {
+  "pmid": "42763430",
+  "doi": "10.1080/17590914.2026.2698260"
+ },
+ "event_at": "2026-10-19T19:34:09Z",
+ "analysis_at": "2026-10-19T19:34:09Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, interventions batch 2026-10-19, task INTERV-H4-C-20261019, branch task/INTERV-H4-C-20261019; context_policy SOURCE_FIRST. Route: Europe PMC REST fullTextXML (open access) saved to the shared checkout files/fulltext; whole article, Table 1 and the footnote read from a text rendering of the JATS up to the reference list (61 references counted, not read); Figures 2 and 7 opened individually at native size, the other figures in one montage; webp figures converted to png. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID42763430_Moore2026_PMC.xml",
+ "source_fingerprint": "a3c84121b52affb19dea9c10d485d88def8b4c0a9ba1050fe1937720278c63f4",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42763430.json",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "A culture-methods paper in which 'hyperoxia' is room-air oxygen in vitro; the article has no limitations section, and the HIF-1 alpha mechanism is a stated suspicion. Oligodendrocyte-lineage substitute for the hypomyelination link; not WWOX evidence and not an exposure model."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
