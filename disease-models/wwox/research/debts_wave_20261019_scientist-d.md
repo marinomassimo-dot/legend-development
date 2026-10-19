@@ -25,3 +25,22 @@
 
 **Reading debts it carries.** Choo 2015 (mitochondrial respiratory complex; no receipt anywhere; added to this lot) and Lee 2017 (the preceding WWOX/HCC risk-variant paper; no receipt).
 
+
+## Paper 2. Hong 2007, BMC Mol Biol (PMID 17567906): Zfra, TNF and WOX1 (Lo 2015 ref 55)
+
+`context_policy: QUESTION_DRIVEN` (held: a peer's note that the 2015 minireview points to this paper for Zfra and WWOX mitochondrial translocation). Surface: Europe PMC JATS plus the open-access PDF (Springer Link content URL; the BioMed Central counter URL returned a client challenge). All twelve figures opened as page renders; whole article read.
+
+**Identity note.** The DOI that Europe PMC and PubMed carry for this PMID is the BioMed Central one; the repository's `pubmed_identity_check.py` first reported TITLE_MISMATCH for it because it took the last `ArticleId` DOI of the whole record, a cited paper's. Fixed and regression-tested in this wave (see the micro-upgrade); the record itself is a clean match.
+
+**What it measures.** Overexpression of a 31-residue peptide (Zfra) and of mouse WOX1 or point mutants in cultured lines (L929, COS7, SK-N-SH, MCF7, MDA-MB-231, Molt4, ME180, HEK-293), with crystal-violet death percentages, GST pull-downs, a yeast Ras-rescue two-hybrid and cytosol/nucleus fractionation blots after TNF or UV. Readouts: Zfra overexpression kills most lines tested; Zfra binds the first WW domain (lost with a Tyr33-to-Arg substitution) and the SDR domain but not the mitochondria-targeting stretch inside it; TNF or UV raises Zfra binding to Tyr33-phosphorylated WOX1, JNK1 and NF-kappaB; Zfra keeps WOX1, p53, NF-kappaB and p-ERK out of the nucleus in SK-N-SH and MCF7 but not WOX1 in Molt4 without UV; Zfra and WOX1 given together do not add in death.
+
+**What it does not support.**
+- *Mitochondrial translocation of WWOX or Zfra.* This is the point that matters for the repository. The paper contains no mitochondrial fraction, no cytochrome c and no mitochondrial imaging. Its one mitochondrial statement is a pointer to "Hsu et al., submitted" (Discussion, paragraph 8). The 2015 minireview's pointer to this paper for Zfra and WWOX mitochondrial translocation and cytochrome c release is therefore carried by the companion Hsu 2008 paper (PMID 18403180), not by this one. A reader who follows the minireview's reference 55 will not find it.
+- *Any WWOX loss-of-function effect.* There is no knockdown, knockout or hypomorph; every WOX1 manipulation is overexpression of the mouse cDNA or its Y33R mutant. The Y33R result tests the residue (it also loses apoptotic activity), not the phosphorylation; phosphorylation is not measured in yeast.
+- *Enzymatic SDR function.* SDR alone neither kills cells nor responds to Zfra; SDR plus the C-terminal tail kills (about 26 percent, 62 percent with synthetic Zfra peptide, one experiment per condition shown). No substrate, cofactor or activity assay exists.
+- *Quantified binding.* Figures 7 and 8 are single blots with no densitometry or replicates; "greater than 50 percent" appears only in the caption. Figure 9C is one histogram per condition (SubG1 52.1 percent WOX1, 29.9 percent WOX1 plus Zfra, 34.5 percent Zfra alone); 48-hour data and nuclear counts are stated as not shown.
+- The authors' own frame is split: WOX1 is "pro-apoptotic" in these assays, and the Discussion says observations "support a pro-survival role of WOX1 in vivo".
+
+**System gap to the disease model.** Mouse WOX1 and human Zfra overexpressed in tumour or transformed lines, acute TNF or UV stress, 24 to 48 hours. The reference genotype is a constitutive biallelic loss of function. This is a datum about what an overexpressed WWOX does to a stressed cell, not about what is lost when WWOX is absent, and it says nothing about metabolism.
+
+**What it changes.** Nothing in a claim. It converts one sentence in a minireview from a restatement into an unsupported pointer, which is a transfer risk: the repository's mitochondria-related lines that lean on the minireview should cite the Hsu 2008 primary, which is not readable here (see parked list), so the mitochondrial-translocation statement stays at the level of "reported by one laboratory in stressed cultured cells, primary unread".

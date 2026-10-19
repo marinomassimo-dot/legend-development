@@ -1,0 +1,518 @@
+{
+ "schema_version": 2,
+ "pmid": "17567906",
+ "doi": "10.1186/1471-2199-8-50",
+ "receipt": "FTR-20261019-17567906-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named from wave-1 reading debts and deduplicated by the per-paper M0 packet and the receipt status check run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate and the analysis note; the discovery ledger is a shared single-writer file appended by the Orchestrator at integration."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "The Chang laboratory (Guthrie Research Institute and National Cheng Kung University, from the affiliations) that cloned Zfra and WOX1-binding partners and wrote most of the WWOX apoptosis and Tyr33 literature. Primary for WWOX stress signalling in cultured cells; not a WWOX loss-of-function, neurological or metabolic group. Observation (cell-death percentages, blots) weighed above the pathway cartoon of Figure 12, which the paper itself marks as unvalidated."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "Zfra AND (WWOX OR WOX1)",
+    "count": 13,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND mitochondri*",
+    "count": 36,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts, dated."
+ },
+ "multihop": {
+  "references_enumerated": 45,
+  "gene_direct_refs_in_source": [
+   "Chang 2000 hyaluronidase induction of WOX1 (PMID 11058590)",
+   "Chang 2005 WOX1 essential for TNF, UV, staurosporine, p53 cell death (PMID 16219768)",
+   "Chen 2005 light-induced retinal damage, Tyr33, mitochondrial and nuclear translocation (PMID 15664696)",
+   "Sze 2004 WWOX down-regulation and Tau phosphorylation (PMID 15126504)",
+   "Chang 2003 JNK1 and WOX1 (PMID 12514174)",
+   "Hsu et al., submitted (the Zfra and Bcl-2 and cytochrome c paper, PMID 18403180)",
+   "Hsu 2005 Zfra cloning (PMID 15629131)",
+   "O'Keefe 2005 FOR protects against ionising radiation in Drosophila (PMID 16007179)"
+  ],
+  "resolved": [
+   {
+    "pmid": "25595191",
+    "state": "complete receipt (read in this batch, staged by scientist-c); it cites this paper as its ref 55"
+   }
+  ],
+  "queued": [
+   {
+    "pmid": "18403180",
+    "queue": "debt of this actor's lot, DEBT-WWOX-DIRECT-D-20261019",
+    "note": "Hsu 2008; the source this paper names for mitochondrial co-translocation; subscription, parked or read per the analysis note"
+   },
+   {
+    "pmid": "15664696",
+    "queue": "debt of this actor's lot, DEBT-WWOX-DIRECT-D-20261019",
+    "note": "Chen 2005 retinal damage; subscription"
+   },
+   {
+    "pmid": "15126504",
+    "queue": "debt of this actor's lot, DEBT-WWOX-DIRECT-D-20261019",
+    "note": "Sze 2004 Tau"
+   },
+   {
+    "pmid": "16219768",
+    "queue": "proposed in CC-20261019-SCIENTISTD-DEBT-01; no FT identifier minted by a Scientist",
+    "note": "Chang 2005, no receipt"
+   },
+   {
+    "pmid": "12514174",
+    "queue": "proposed in CC-20261019-SCIENTISTD-DEBT-01; no FT identifier minted by a Scientist",
+    "note": "Chang 2003 JNK1, no receipt"
+   },
+   {
+    "pmid": "15629131",
+    "queue": "proposed in CC-20261019-SCIENTISTD-DEBT-01; no FT identifier minted by a Scientist",
+    "note": "Zfra cloning, no receipt"
+   }
+  ],
+  "note": "45 references enumerated from the Europe PMC references endpoint and the JATS. Eighteen are gene-direct by title; none has a receipt except the minireview that cites this paper. This paper's own mitochondrial statement rests on a then-submitted manuscript."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 17567906 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed efetch for PMID 17567906: publication types ['Journal Article', \"Research Support, Non-U.S. Gov't\", \"Research Support, U.S. Gov't, Non-P.H.S.\"]; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "UNSCREENABLE_NO_REFERENCE_LIST",
+   "reference_source": "cache",
+   "references_declared": 0,
+   "references_screened": 0,
+   "references_with_doi": 0,
+   "schema": "retraction_check.dependencies/1",
+   "screened": false,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID17567906_Hong2007_PMC1904229.xml",
+   "sha256": "7411b314c84faaf4d1e4a6a9df6d59e1c24ae5df1879f2b41e5067cc053d8489",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC1904229 (CC BY 2.0): abstract, body, figure legends, 45 references. Every text locator is matched against this surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC1904229/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "7411b314c84faaf4d1e4a6a9df6d59e1c24ae5df1879f2b41e5067cc053d8489"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID17567906_Hong2007_bmcmolbiol.pdf",
+   "sha256": "5d5d3748f8d0ef1bb5a3730232199c4d9fcd9aabb7f65f36ce794812d5d41933",
+   "kind": "article_binary",
+   "note": "Publisher PDF (17 pages) from Springer Link, the open-access copy; the BioMed Central counter URL that Unpaywall lists returned a Client Challenge page, the link.springer.com content URL returned the PDF.",
+   "acquisition_recipe": {
+    "resolved_url": "https://link.springer.com/content/pdf/10.1186/1471-2199-8-50.pdf",
+    "http_method": "GET",
+    "tier": "publisher OA PDF (Springer Link content URL)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "5d5d3748f8d0ef1bb5a3730232199c4d9fcd9aabb7f65f36ce794812d5d41933"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID17567906/p-03.png",
+   "sha256": "c49614ccf3429267e6b05b79caec4492df10933ef77dbd2c08d168aba2b39e22",
+   "kind": "figure",
+   "note": "PDF page 3 rendered at 100 dpi (Figure 1), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID17567906_Hong2007_bmcmolbiol.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 100 -f 2 -l 17 -png (page 3)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "c49614ccf3429267e6b05b79caec4492df10933ef77dbd2c08d168aba2b39e22"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID17567906/p-05.png",
+   "sha256": "30127c3a98bbfc7965a001edc8f76924a6145082a1a0d1cbcff3b25ab162d62c",
+   "kind": "figure",
+   "note": "PDF page 5 rendered at 100 dpi (Figure 2), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID17567906_Hong2007_bmcmolbiol.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 100 -f 2 -l 17 -png (page 5)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "30127c3a98bbfc7965a001edc8f76924a6145082a1a0d1cbcff3b25ab162d62c"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID17567906/p-09.png",
+   "sha256": "7dd382baea5b34000b2a0206229c5e9985d59496b282ce65d394d1183260a74a",
+   "kind": "figure",
+   "note": "PDF page 9 rendered at 100 dpi (Figure 6), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID17567906_Hong2007_bmcmolbiol.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 100 -f 2 -l 17 -png (page 9)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "7dd382baea5b34000b2a0206229c5e9985d59496b282ce65d394d1183260a74a"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID17567906/p-10.png",
+   "sha256": "7cf382bf1872114f467d833a423edade877de910eeac73120afec20e57b236aa",
+   "kind": "figure",
+   "note": "PDF page 10 rendered at 100 dpi (Figure 7), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID17567906_Hong2007_bmcmolbiol.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 100 -f 2 -l 17 -png (page 10)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "7cf382bf1872114f467d833a423edade877de910eeac73120afec20e57b236aa"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID17567906/p-11.png",
+   "sha256": "1d3e78f6adea29ea923848990e958873fbc8f2f08eb32f777152ef054165360d",
+   "kind": "figure",
+   "note": "PDF page 11 rendered at 100 dpi (Figure 8), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID17567906_Hong2007_bmcmolbiol.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 100 -f 2 -l 17 -png (page 11)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "1d3e78f6adea29ea923848990e958873fbc8f2f08eb32f777152ef054165360d"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID17567906/p-12.png",
+   "sha256": "30ba806cdc24622f14a600356ddd359a58c7763c3f06a92711d51caa6729ec73",
+   "kind": "figure",
+   "note": "PDF page 12 rendered at 100 dpi (Figure 9), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID17567906_Hong2007_bmcmolbiol.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 100 -f 2 -l 17 -png (page 12)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "30ba806cdc24622f14a600356ddd359a58c7763c3f06a92711d51caa6729ec73"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID17567906/p-13.png",
+   "sha256": "5a38d501ff02584f147e07111964ed3e4d1eb602dc28ac33272f4f07a350198c",
+   "kind": "figure",
+   "note": "PDF page 13 rendered at 100 dpi (Figure 10), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID17567906_Hong2007_bmcmolbiol.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 100 -f 2 -l 17 -png (page 13)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "5a38d501ff02584f147e07111964ed3e4d1eb602dc28ac33272f4f07a350198c"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The paper measures no mitochondrial event; its statement that the Zfra/WOX1 complex co-translocates to mitochondria is attributed to a manuscript then submitted by the same group.",
+    "snippet": "the Zfra/WOX1 complex co-translocates to the mitochondria to regulate cell death via the mitochondrial pathway (Hsu et al., submitted)",
+    "anchor": "Discussion and conclusion, paragraph 8",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17567906_Hong2007_PMC1904229.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "overexpression of mouse WOX1 and human Zfra in L929, COS7, SK-N-SH, MCF7, MDA-MB-231, Molt4 and other cell lines; yeast two-hybrid",
+     "genotype": "no Wwox allele altered; wild-type and Y33R WOX1 cDNA overexpression, Zfra S8G",
+     "treatment": "TNF 50 ng/ml or UV 120 mJ/cm2",
+     "endpoint": "crystal violet cell death, pull-down, fractionation blots"
+    }
+   },
+   {
+    "proposition": "Every perturbation is an overexpression of Zfra, mouse WOX1 or a point mutant in cultured cell lines; the cells that die include Zfra-negative lines, so cell death is not tied to endogenous Zfra or WWOX.",
+    "snippet": "Following 48 hr in culture, Zfra induced death of human cell lines including ovarian ME180, embryonic kidney HEK-293, neuroblastoma SK-N-SH, Molt4 T lymphocytes, and breast MCF7 and MDA-MB-231 cells, and murine L929 fibroblasts (Figure 1A).",
+    "anchor": "Results, Transiently overexpressed Zfra induces apoptosis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17567906_Hong2007_PMC1904229.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "overexpression of mouse WOX1 and human Zfra in L929, COS7, SK-N-SH, MCF7, MDA-MB-231, Molt4 and other cell lines; yeast two-hybrid",
+     "genotype": "no Wwox allele altered; wild-type and Y33R WOX1 cDNA overexpression, Zfra S8G",
+     "treatment": "TNF 50 ng/ml or UV 120 mJ/cm2",
+     "endpoint": "crystal violet cell death, pull-down, fractionation blots"
+    }
+   },
+   {
+    "proposition": "In the yeast two-hybrid assay a Tyr33-to-Arg substitution abolishes Zfra binding to the WW domain; this tests the residue, and the text infers that phosphorylation is required although phosphorylation is not measured in yeast.",
+    "snippet": "Alteration of the known phosphorylation site Tyr33 to Arg in this domain abrogated the binding (Figure 6), suggesting that Tyr33 phosphorylation is needed for WOX1 to interact with Zfra.",
+    "anchor": "Results, Zfra physically interacts with TRADD, and binds to the N-terminal first WW domain and C-terminal SDR domain of WOX1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17567906_Hong2007_PMC1904229.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "yeast cytoplasmic Ras-rescue two-hybrid",
+     "genotype": "WOX1 bait with Y33R substitution",
+     "endpoint": "growth at 37 C"
+    }
+   },
+   {
+    "proposition": "Zfra binds the SDR domain but not the mitochondria-targeting region inside it, so the binding site for Zfra is not the region that targets WOX1 to mitochondria.",
+    "snippet": "Zfra also bound the C-terminal SDR domain. This domain has a mitochondria-targeting region, and Zfra did not bind to this region (Figure 6).",
+    "anchor": "Results, Zfra physically interacts with TRADD, and binds to the N-terminal first WW domain and C-terminal SDR domain of WOX1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17567906_Hong2007_PMC1904229.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "yeast cytoplasmic Ras-rescue two-hybrid",
+     "genotype": "WOX1 SDR and Mito-SDR baits",
+     "endpoint": "growth at 37 C"
+    }
+   },
+   {
+    "proposition": "Overexpressed Zfra keeps WOX1, p53, NF-kappaB and p-ERK out of the nucleus in SK-N-SH cells; the readout is a cytosol and nucleus fractionation blot, not a mitochondrial fraction.",
+    "snippet": "Transiently overexpressed EGFP-Zfra suppressed nuclear localization of NF-κB (p65), WOX1, p53, p-ERK (extracellular signal-regulated kinase), but had little or no effect on JNK1/2 (Figure 8A).",
+    "anchor": "Results, Transiently overexpressed Zfra sequesters WOX1, NF-kB, p53 and p-ERK in the cytoplasm",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17567906_Hong2007_PMC1904229.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "overexpression of mouse WOX1 and human Zfra in L929, COS7, SK-N-SH, MCF7, MDA-MB-231, Molt4 and other cell lines; yeast two-hybrid",
+     "genotype": "no Wwox allele altered; wild-type and Y33R WOX1 cDNA overexpression, Zfra S8G",
+     "treatment": "TNF 50 ng/ml or UV 120 mJ/cm2",
+     "endpoint": "crystal violet cell death, pull-down, fractionation blots"
+    }
+   },
+   {
+    "proposition": "The nuclear exclusion of WOX1 by Zfra is not general: it is absent in Molt4 T cells without UV.",
+    "snippet": "Interestingly, transiently overexpressed EGFP-Zfra did not have a significant effect on the nuclear localization of WOX1 in Molt4 T cells (Figure 8C).",
+    "anchor": "Results, Transiently overexpressed Zfra sequesters WOX1, NF-kB, p53 and p-ERK in the cytoplasm",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17567906_Hong2007_PMC1904229.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "overexpression of mouse WOX1 and human Zfra in L929, COS7, SK-N-SH, MCF7, MDA-MB-231, Molt4 and other cell lines; yeast two-hybrid",
+     "genotype": "no Wwox allele altered; wild-type and Y33R WOX1 cDNA overexpression, Zfra S8G",
+     "treatment": "TNF 50 ng/ml or UV 120 mJ/cm2",
+     "endpoint": "crystal violet cell death, pull-down, fractionation blots"
+    }
+   },
+   {
+    "proposition": "Binding of Zfra to Tyr33-phosphorylated WOX1 after TNF is shown by pull-down blots; the percentages given for bands are not accompanied by replicate counts or quantification panels.",
+    "snippet": "TNF increased the binding of GST-Zfra with JNK1, NF-κB (p65) and p-WOX1 (Tyr33 phosphorylated), and weakly with p53 in a time-related manner (Figure 7B and 7C).",
+    "anchor": "Results, TNF induces the binding of Zfra with Tyr33-phosphorylated WOX1, JNK1, and NF-kB",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17567906_Hong2007_PMC1904229.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "overexpression of mouse WOX1 and human Zfra in L929, COS7, SK-N-SH, MCF7, MDA-MB-231, Molt4 and other cell lines; yeast two-hybrid",
+     "genotype": "no Wwox allele altered; wild-type and Y33R WOX1 cDNA overexpression, Zfra S8G",
+     "treatment": "TNF 50 ng/ml or UV 120 mJ/cm2",
+     "endpoint": "crystal violet cell death, pull-down, fractionation blots"
+    }
+   },
+   {
+    "proposition": "Zfra and WOX1 given together do not add up in cell death; the paper reads this as mutual counteraction.",
+    "snippet": "However, when in combination, Zfra and WOX1 failed to synergistically increase cell death (Figure 9C).",
+    "anchor": "Results, Zfra counteracts the apoptotic function of WOX1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17567906_Hong2007_PMC1904229.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "overexpression of mouse WOX1 and human Zfra in L929, COS7, SK-N-SH, MCF7, MDA-MB-231, Molt4 and other cell lines; yeast two-hybrid",
+     "genotype": "no Wwox allele altered; wild-type and Y33R WOX1 cDNA overexpression, Zfra S8G",
+     "treatment": "TNF 50 ng/ml or UV 120 mJ/cm2",
+     "endpoint": "crystal violet cell death, pull-down, fractionation blots"
+    }
+   },
+   {
+    "proposition": "The SDR domain alone does not kill cells and gains no effect from Zfra; only SDR plus the C-terminal tail does, so no enzymatic readout of the SDR domain exists in this paper.",
+    "snippet": "SDR alone could not cause cell death and Zfra and SDR, in combination, did not increase the cell death (Figure 10C).",
+    "anchor": "Results, Phosphorylation at Tyr33 is essential for WOX1 to counteract Zfra-mediated apoptosis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17567906_Hong2007_PMC1904229.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "overexpression of mouse WOX1 and human Zfra in L929, COS7, SK-N-SH, MCF7, MDA-MB-231, Molt4 and other cell lines; yeast two-hybrid",
+     "genotype": "no Wwox allele altered; wild-type and Y33R WOX1 cDNA overexpression, Zfra S8G",
+     "treatment": "TNF 50 ng/ml or UV 120 mJ/cm2",
+     "endpoint": "crystal violet cell death, pull-down, fractionation blots"
+    }
+   },
+   {
+    "proposition": "The 48-hour data behind the Zfra-versus-WOX1 growth result are stated as not shown, and the same holds for apoptotic-nuclei counts.",
+    "snippet": "low doses of Zfra enhanced the growth of L929 cells during 24 and 48 hr in culture (Figure 9A; data not shown for 48 hr)",
+    "anchor": "Results, Zfra counteracts the apoptotic function of WOX1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17567906_Hong2007_PMC1904229.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "overexpression of mouse WOX1 and human Zfra in L929, COS7, SK-N-SH, MCF7, MDA-MB-231, Molt4 and other cell lines; yeast two-hybrid",
+     "genotype": "no Wwox allele altered; wild-type and Y33R WOX1 cDNA overexpression, Zfra S8G",
+     "treatment": "TNF 50 ng/ml or UV 120 mJ/cm2",
+     "endpoint": "crystal violet cell death, pull-down, fractionation blots"
+    }
+   },
+   {
+    "proposition": "The authors state that the in vivo function of WWOX is largely unknown and, in the Discussion, that observations support a pro-survival role in vivo, while the experiments of the paper are pro-apoptotic overexpression assays.",
+    "snippet": "These observations support a pro-survival role of WOX1 in vivo [4].",
+    "anchor": "Discussion and conclusion, paragraph 7",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17567906_Hong2007_PMC1904229.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "overexpression of mouse WOX1 and human Zfra in L929, COS7, SK-N-SH, MCF7, MDA-MB-231, Molt4 and other cell lines; yeast two-hybrid",
+     "genotype": "no Wwox allele altered; wild-type and Y33R WOX1 cDNA overexpression, Zfra S8G",
+     "treatment": "TNF 50 ng/ml or UV 120 mJ/cm2",
+     "endpoint": "crystal violet cell death, pull-down, fractionation blots"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 6: Ras-rescue yeast two-hybrid spot arrays at 22 C and 37 C; growth at 37 C is visible for the positive control MafB/MafB, Wox1/Zfra, SDR/Zfra and TRADD/Zfra, faint for 1st WW/Zfra and WWs/Zfra, and absent for vector/vector, WWs(Y33R)/Zfra, Mito-SDR/Zfra and RIP/Zfra.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 6 spot panels at 22C and 37C with rows vector/vector, MafB/MafB, Wox1/Zfra, 1st WW/Zfra, WWs/Zfra, WWs(Y33R)/Zfra, SDR/Zfra, Mito-SDR/Zfra, TRADD/Zfra, RIP/Zfra, Wox1/TRADD; domain schematic with the mitochondria-targeting region 209-273.",
+    "anchor": "Figure 6, PDF page 9, read as an image at 100 dpi",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID17567906/p-09.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "yeast cytoplasmic Ras-rescue two-hybrid",
+     "endpoint": "growth at 37 C"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 8: single fractionation blots (cytosol and nucleus, TNF minus or plus, GFP or Zfra) for SK-N-SH, MCF7 and Molt4 cells; WOX1 bands are faint, there is no densitometry and no replicate is shown.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 8A SK-N-SH, 8B MCF7, 8C Molt4 blot panels with columns GFP/Zfra by TNF or UV minus/plus in cytosol and nucleus, rows JNK1/2, NF-kB p65, WOX1, p53, p-ERK(Y204), alpha-tubulin cytosol control.",
+    "anchor": "Figure 8, PDF page 11, read as an image at 100 dpi",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID17567906/p-11.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "overexpression of mouse WOX1 and human Zfra in L929, COS7, SK-N-SH, MCF7, MDA-MB-231, Molt4 and other cell lines; yeast two-hybrid",
+     "genotype": "no Wwox allele altered; wild-type and Y33R WOX1 cDNA overexpression, Zfra S8G",
+     "treatment": "TNF 50 ng/ml or UV 120 mJ/cm2",
+     "endpoint": "crystal violet cell death, pull-down, fractionation blots"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 9C: single flow-cytometry histograms of L929 cells; SubG1 2.8 percent null, 52.1 percent WOX1, 34.5 percent Zfra, 29.9 percent WOX1 plus Zfra, 31.2 percent JNK1, 31.9 percent JNK1 plus Zfra; no replicate or error bar.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 9C six histograms labelled 1 Null SubG1 2.8% G1 45.3%, 2 WOX1 SubG1 52.1% G1 13.4%, 3 Zfra SubG1 34.5% G1 24.4%, 4 WOX1/Zfra SubG1 29.9% G1 17.1%, 5 JNK1 SubG1 31.2%, 6 JNK1/Zfra SubG1 31.9%.",
+    "anchor": "Figure 9C, PDF page 12, read as an image at 100 dpi",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID17567906/p-12.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "overexpression of mouse WOX1 and human Zfra in L929, COS7, SK-N-SH, MCF7, MDA-MB-231, Molt4 and other cell lines; yeast two-hybrid",
+     "genotype": "no Wwox allele altered; wild-type and Y33R WOX1 cDNA overexpression, Zfra S8G",
+     "treatment": "TNF 50 ng/ml or UV 120 mJ/cm2",
+     "endpoint": "crystal violet cell death, pull-down, fractionation blots"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 10C: L929 cells, percent cell death about 26 for SDR/C without and about 62 with synthetic Zfra peptide, about 6 and 12 for SDR alone, about 0 and 8 for control; expression micrographs of ECFP-SDR/C and ECFP-SDR.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 10C bar chart L929 cells x-axis Control, SDR/C, SDR, legend -Zfra pep grey and +Zfra pep black, y-axis % cell death 0-70.",
+    "anchor": "Figure 10C, PDF page 13, read as an image at 100 dpi",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID17567906/p-13.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "overexpression of mouse WOX1 and human Zfra in L929, COS7, SK-N-SH, MCF7, MDA-MB-231, Molt4 and other cell lines; yeast two-hybrid",
+     "genotype": "no Wwox allele altered; wild-type and Y33R WOX1 cDNA overexpression, Zfra S8G",
+     "treatment": "TNF 50 ng/ml or UV 120 mJ/cm2",
+     "endpoint": "crystal violet cell death, pull-down, fractionation blots"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search returned inEPMC Y and isOpenAccess Y for PMC1904229 on 2026-10-19; fullTextXML returned HTTP 200 with a body and the Springer Link content URL returned a valid 26-page PDF.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}
