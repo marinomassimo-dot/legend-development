@@ -49,3 +49,55 @@ Lot (12): 35328751, 37897534, 38542478, 33195192, 42589397, 40875931, 36537114, 
 | 31543760 Kosla 2019 | Selection row: abstract/introduction not read, figure captions only. | In the figures (and the 23 undeclared on-disk files), is any differentially expressed gene set after WWOX knockdown in neural progenitors metabolic (lipid, glucose, mitochondrial) rather than synaptic/neurite? |
 | 24308844 Schuchardt 2013 | Selection row: figures, methods, tables owed; binding biophysics. | Does any figure or table speak to metabolism or only to ErbB4 ICD / WW1 binding (negative expected)? |
 | 33958783 Liu 2021 GWAS | Selection row: supplement not read. | Does the supplementary table carry a WWOX-locus effect size, direction and per-cohort consistency that the main text does not, and does it name any metabolic annotation? |
+
+---
+
+## 2. PMID 35328751 — Baryla 2022 (WWOX/HIF1A axis and glucose metabolism, human fibroblasts) — receipt FTR-20261019-35328751-04
+
+**What it MEASURES.** System: immortalised human skin fibroblast line 1BR.3.N, in vitro, four
+oxygen x glucose conditions (19% or 1% O2; 5.5 or 25 mM glucose), 6 h (HRE reporter, fractionation,
+immunofluorescence) or 48 h (uptake, qPCR, enzymes, whole-lysate blots). Genotype: a CRISPR/Cas9
+sgRNA depletion called "KO" (protein about 0.05 versus 0.43 WWOX/GAPDH, mRNA about 3-fold lower,
+polyclonal) and a lentiviral overexpression arm (hundreds-fold by blot and qPCR, about 2.5-3-fold by
+immunofluorescence). Readouts: HRE-luciferase, 2-deoxyglucose uptake (uM, serum-free), mRNA of 13
+glycolytic/TCA genes, HK/LDH/PDH/CS activity, lactate, HK2/PKM2/LDHA/GLUT1 protein, HIF1alpha
+distribution. No neural cell, no animal, no respiration, ATP or ROS readout.
+
+**Question and answer (stated before opening the figures).** Panels 1-4, 7-12 and S1-S6 were opened as
+images. The text is faithfully drawn from the panels for the quantities it quotes; what the panels add
+is condition structure the Discussion does not carry.
+
+1. Uptake does not rise with WWOX loss in general. Figure 3: knockdown exceeds control only in
+   normoxia normoglycaemia; no knockdown-versus-control bracket in normoxia hyperglycaemia or hypoxia
+   normoglycaemia; lower than control in hypoxia hyperglycaemia. The Discussion sentence "glucose
+   uptake, both insulin-dependent and independent, was upregulated in WWOX KO cells" is true of one
+   condition of four (entry 14 `panel_qualifies_text`). The overexpression arm (Figure S1b) also
+   lowers uptake in both hypoxia conditions, so uptake is not monotonic in WWOX dose.
+2. Hypoxia plus hyperglycaemia is not a depleted-versus-replete contrast: WWOX mRNA is not lower in
+   knockdown there (Figure 4a, no bracket) and the Figure 8 text says total protein is unchanged.
+   The reduced uptake and PFK1/PKM2 changes reported for that condition cannot be read as WWOX dose
+   effects.
+3. The transporter arm is mRNA plus function: GLUT1 protein shows no knockdown bracket in any
+   condition (Figure 7e); GLUT4 protein is never measured despite an eight-fold SLC2A4 mRNA rise.
+4. Overexpression and knockdown move several nodes in the same direction (PDK and ENO1 mRNA up in
+   normoxia normoglycaemia in both, Figure S2 versus 4; lactate up in both, S3d versus 5): the
+   readouts are not dose-faithful. Only HK2 and LDHA protein agree across arms (up with loss, down
+   with gain, normoxia normoglycaemia).
+5. Internal inconsistencies found: Methods 4.6 fractionation at 6 h versus Figure S4 caption 48 h;
+   uptake run in serum-free medium for 48 h in every condition (a serum-deprivation confound that
+   the paper's Methods state and its Results do not mention); densitometry scales differ between
+   Figure 1d (about 350-fold) and S4 (about 9-24-fold) for the same cells; panels show a single
+   representative blot lane per genotype; micrographs carry no scale bar.
+
+**What it does not support.** Any neural or developmental statement; any in vivo statement; "knockout"
+(partial depletion); a general rise in glucose uptake; an oxidative-arm change (citrate synthase and
+PDH unchanged, already locator 3). The only readout that moves the same way under every loss
+condition remains medium lactate (entry 7, prior reading).
+
+**Comparison phase.** FIRST-PASS OBSERVATIONS COMPLETE -> PRIOR KNOWLEDGE ADMITTED FOR COMPARISON: the
+2026-10-04 manifest locators (read before appending). Effect: the earlier receipt's partial status is
+reduced to references and abstract; the supplement (all of S1-S6) is now read as images. Consequence for
+the model: no baseline claim changes; RL-003's metabolic-biomarker line gains the explicit statement
+that a carrier-detectable *uptake* readout would need the oxygen, glucose and serum condition named,
+and that lactate (fibroblast) is the one direction-stable readout. Class: MINOR, no commit candidate
+needed beyond the manifest (no registry record text is contradicted).

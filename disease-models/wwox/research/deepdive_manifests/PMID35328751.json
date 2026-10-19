@@ -352,6 +352,142 @@
     },
     "acquired_on": "2026-10-04"
    }
+  },
+  {
+   "path": "files/fulltext/PMID35328751_assets/s001/Figure S1.tif",
+   "kind": "figure",
+   "note": "Figure S1.tif: supplementary figure TIFF from the Europe PMC/PMC supplement ZIP already on disk since 2026-10-04; first declared and viewed as an image in the 2026-10-19 held-partial re-read (rendered to PNG with ImageMagick convert for viewing only).",
+   "sha256": "162f5065c26bd478ead40ab919ac207f3da7ded6c0b1d76f19f7120368b6401d",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID35328751_assets/ijms-23-03326-s001.zip",
+    "extractor": {
+     "name": "python zipfile extract",
+     "version": "stdlib",
+     "call": "zipfile.ZipFile(zip).extractall(s001)",
+     "join": ""
+    },
+    "acquired_on": "2026-10-04"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID35328751_assets/s001/Figure S3.tif",
+   "kind": "figure",
+   "note": "Figure S3.tif: supplementary figure TIFF from the Europe PMC/PMC supplement ZIP already on disk since 2026-10-04; first declared and viewed as an image in the 2026-10-19 held-partial re-read (rendered to PNG with ImageMagick convert for viewing only).",
+   "sha256": "429de32fb41fcb515de34685dbe8146e602a2aed1727da05eed2414e11ff1894",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID35328751_assets/ijms-23-03326-s001.zip",
+    "extractor": {
+     "name": "python zipfile extract",
+     "version": "stdlib",
+     "call": "zipfile.ZipFile(zip).extractall(s001)",
+     "join": ""
+    },
+    "acquired_on": "2026-10-04"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID35328751_assets/s001/Figure S4.tif",
+   "kind": "figure",
+   "note": "Figure S4.tif: supplementary figure TIFF from the Europe PMC/PMC supplement ZIP already on disk since 2026-10-04; first declared and viewed as an image in the 2026-10-19 held-partial re-read (rendered to PNG with ImageMagick convert for viewing only).",
+   "sha256": "1efc5ed826aa32b25269d56b848143dd35eda629b12aa0f7541a043dd2fd012a",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID35328751_assets/ijms-23-03326-s001.zip",
+    "extractor": {
+     "name": "python zipfile extract",
+     "version": "stdlib",
+     "call": "zipfile.ZipFile(zip).extractall(s001)",
+     "join": ""
+    },
+    "acquired_on": "2026-10-04"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID35328751_assets/s001/FigureS6C.tif",
+   "kind": "figure",
+   "note": "FigureS6C.tif: supplementary figure TIFF from the Europe PMC/PMC supplement ZIP already on disk since 2026-10-04; first declared and viewed as an image in the 2026-10-19 held-partial re-read (rendered to PNG with ImageMagick convert for viewing only).",
+   "sha256": "09ad535df5b791721c47e9659cf91de022a0ef8b60fa4bcbf032170a58a75836",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID35328751_assets/ijms-23-03326-s001.zip",
+    "extractor": {
+     "name": "python zipfile extract",
+     "version": "stdlib",
+     "call": "zipfile.ZipFile(zip).extractall(s001)",
+     "join": ""
+    },
+    "acquired_on": "2026-10-04"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID35328751_assets/s001/Figure S2.tif",
+   "kind": "figure",
+   "note": "Figure S2.tif: supplementary figure TIFF from the supplement ZIP on disk since 2026-10-04; first viewed as an image 2026-10-19 (rendered to PNG with ImageMagick convert for viewing only).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID35328751_assets/ijms-23-03326-s001.zip",
+    "extractor": {
+     "name": "python zipfile extract",
+     "version": "stdlib",
+     "call": "zipfile.ZipFile(zip).extractall(s001)",
+     "join": ""
+    },
+    "acquired_on": "2026-10-04"
+   },
+   "sha256": "434924ed0f4278dc9c7224b92c98213730dcdf5a8b8ff2124c8ce21a252cedd9"
+  },
+  {
+   "path": "files/fulltext/PMID35328751_assets/s001/Figure S5.tif",
+   "kind": "figure",
+   "note": "Figure S5.tif: supplementary figure TIFF from the supplement ZIP on disk since 2026-10-04; first viewed as an image 2026-10-19 (rendered to PNG with ImageMagick convert for viewing only).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID35328751_assets/ijms-23-03326-s001.zip",
+    "extractor": {
+     "name": "python zipfile extract",
+     "version": "stdlib",
+     "call": "zipfile.ZipFile(zip).extractall(s001)",
+     "join": ""
+    },
+    "acquired_on": "2026-10-04"
+   },
+   "sha256": "fdb35992bf58f79c912a0c4046709432951b870707a94d6c9cbfa6c6afceef78"
+  },
+  {
+   "path": "files/fulltext/PMID35328751_assets/s001/Figure S6A.tif",
+   "kind": "figure",
+   "note": "Figure S6A.tif: supplementary figure TIFF from the supplement ZIP on disk since 2026-10-04; first viewed as an image 2026-10-19 (rendered to PNG with ImageMagick convert for viewing only).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID35328751_assets/ijms-23-03326-s001.zip",
+    "extractor": {
+     "name": "python zipfile extract",
+     "version": "stdlib",
+     "call": "zipfile.ZipFile(zip).extractall(s001)",
+     "join": ""
+    },
+    "acquired_on": "2026-10-04"
+   },
+   "sha256": "9d9546def40912b96ec896745b22b6564dd39a6a21c117c5cfd0cd5273bd18af"
+  },
+  {
+   "path": "files/fulltext/PMID35328751_assets/s001/Figure S6B.tif",
+   "kind": "figure",
+   "note": "Figure S6B.tif: supplementary figure TIFF from the supplement ZIP on disk since 2026-10-04; first viewed as an image 2026-10-19 (rendered to PNG with ImageMagick convert for viewing only).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID35328751_assets/ijms-23-03326-s001.zip",
+    "extractor": {
+     "name": "python zipfile extract",
+     "version": "stdlib",
+     "call": "zipfile.ZipFile(zip).extractall(s001)",
+     "join": ""
+    },
+    "acquired_on": "2026-10-04"
+   },
+   "sha256": "3376bda3cdee310d9ea038a44ec357185496b1435c651329e0b00282fe40503a"
   }
  ],
  "verbatim_locators": {
@@ -517,6 +653,262 @@
     "qualifies": "entries[9]",
     "qualifies_needle": "normoxia normoglycemia (2-fold; p < 0.01)",
     "found_or_sought": "sought — the HIF1α panel behind DL-MECH-020"
+   },
+   {
+    "proposition": "THE DISCUSSION GENERALISES GLUCOSE UPTAKE AS UP IN WWOX-KNOCKDOWN CELLS, BOTH WITH AND WITHOUT INSULIN, ACROSS A STUDY WHOSE FOUR CONDITIONS GAVE DIFFERENT SIGNS.",
+    "snippet": "We have shown that glucose uptake, both insulin-dependent and independent, was upregulated in WWOX KO cells.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph on glycolysis in normoxia",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "immortalised human skin fibroblast line",
+     "cell_line": "1BR.3.N",
+     "genotype": "WWOX knockdown versus scrambled control",
+     "treatment": "four sugar/oxygen conditions, with and without 1 microM insulin",
+     "timepoint": "48 h, serum-free",
+     "comparator": "scrambled control",
+     "endpoint": "2-deoxyglucose uptake"
+    },
+    "artifact": "files/fulltext/PMID35328751_Baryla2022_PMC.xml"
+   },
+   {
+    "proposition": "The Results state significant WWOX mRNA depletion in three of the four conditions and are silent on the fourth (hypoxia plus hyperglycaemia).",
+    "snippet": "The WWOX expression was statistically significantly down-regulated in normoxia normoglycemia and hyperglycemia condition (p < 0.05) and in hypoxia normoglycemia (p < 0.05).",
+    "surface": "body",
+    "anchor": "Results 2.4",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "immortalised human skin fibroblast line",
+     "cell_line": "1BR.3.N",
+     "genotype": "WWOX knockdown versus scrambled control",
+     "timepoint": "48 h",
+     "endpoint": "WWOX mRNA, RT-qPCR"
+    },
+    "artifact": "files/fulltext/PMID35328751_Baryla2022_PMC.xml"
+   },
+   {
+    "proposition": "Figure 3 (knockdown arm, hand readings, uptake in uM): knockdown exceeds control only in normoxia normoglycaemia (about 940 versus 640, bracket *; with insulin about 740 versus 560, bracket *). In normoxia hyperglycaemia there is no knockdown-versus-control bracket (about 1040 versus 1240) and insulin lowers knockdown uptake (about 580, **). In hypoxia hyperglycaemia knockdown is lower than control (about 680 versus 1110, bracket ** on the pair). Hypoxia normoglycaemia carries no knockdown bracket. The Discussion sentence is true for one condition of four, and the sign reverses in a second.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3, bar chart of glucose uptake (uM) for 1BR3N CONTR, CONTR+insulin, WWOX KO, WWOX KO+insulin in four oxygen x glucose conditions.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35328751/ijms-23-03326-g003.jpg",
+    "anchor": "Figure 3, native JPEG 750 px wide",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[12]",
+    "qualifies_needle": "glucose uptake, both insulin-dependent and independent, was upregulated",
+    "experimental_context": {
+     "system": "immortalised human skin fibroblast line",
+     "cell_line": "1BR.3.N",
+     "genotype": "WWOX knockdown versus scrambled control",
+     "treatment": "four sugar/oxygen conditions, with and without 1 microM insulin",
+     "timepoint": "48 h, serum-free",
+     "comparator": "scrambled control",
+     "endpoint": "2-deoxyglucose uptake"
+    },
+    "found_or_sought": "sought - question: sign of the uptake effect per condition"
+   },
+   {
+    "proposition": "Figure 4a (WWOX mRNA, hand readings): knockdown is about 0.4 versus 1.0, 0.75 versus 1.8 and 0.55 versus 1.7 in the first three conditions (brackets *), and about 0.75 versus 1.0 with no bracket in hypoxia plus hyperglycaemia. The fourth condition is therefore not a depleted-versus-replete contrast at the mRNA level, and the Figure 8 text says the same of total WWOX protein; the reduced uptake, PFK1 and PKM2 changes reported there cannot be read as a dose effect of WWOX loss. Control WWOX mRNA itself moves with condition (about 1.0, 1.8, 1.7, 1.0).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4a-c, WWOX, HIF1A and WWOX/HIF1A mRNA fold change, CONTR white and WWOX KO black, four conditions.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35328751/ijms-23-03326-g004.jpg",
+    "anchor": "Figure 4a, native JPEG",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[13]",
+    "qualifies_needle": "hypoxia normoglycemia (p < 0.05)",
+    "experimental_context": {
+     "system": "immortalised human skin fibroblast line",
+     "cell_line": "1BR.3.N",
+     "genotype": "WWOX knockdown versus scrambled control",
+     "timepoint": "48 h",
+     "endpoint": "WWOX mRNA, RT-qPCR"
+    },
+    "found_or_sought": "sought - question: is each condition a genuine depleted contrast"
+   },
+   {
+    "proposition": "Figure 1 (hand readings): knockdown WWOX/GAPDH protein about 0.05 versus 0.43 (about 8-fold) from two lanes per genotype, and mRNA about 0.12 versus 0.35 (about 3-fold). The overexpression arm is about 350 versus 0.5 (protein) and 480 versus 0.5 (mRNA); the overexpression blot is saturated. Depletion is large at protein level and partial at mRNA level, in one polyclonal population.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1a-f, western blots with GAPDH and bar charts of WWOX protein and mRNA, knockdown and overexpression variants.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35328751/ijms-23-03326-g001.jpg",
+    "anchor": "Figure 1a-f, native JPEG",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "immortalised human skin fibroblast line",
+     "cell_line": "1BR.3.N",
+     "genotype": "CRISPR/Cas9 sgRNA knockdown and lentiviral overexpression",
+     "comparator": "scrambled control; empty-vector wild type",
+     "endpoint": "WWOX protein and mRNA"
+    },
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "Figure 7 (glycolytic proteins): GLUT1 protein shows no knockdown-versus-control bracket in any condition (single blot lane per genotype shown) while SLC2A1 mRNA rises in Figure 4; GLUT4 protein is not measured on any surface although SLC2A4 mRNA rises about eight-fold in normoxia hyperglycaemia. HK2 and LDHA proteins are higher in knockdown only in normoxia normoglycaemia (**) and LDHA is lower in hypoxia hyperglycaemia (**). The transporter arm of the model is therefore mRNA plus a functional uptake assay whose sign is condition-dependent.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7a-e, western blot of HK2, PKM2, ACTIN, LDHA, GLUT1 and bar charts, CONTR versus WWOX KO, four conditions.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35328751/ijms-23-03326-g007.jpg",
+    "anchor": "Figure 7a-e, native JPEG",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "immortalised human skin fibroblast line",
+     "cell_line": "1BR.3.N",
+     "genotype": "WWOX knockdown versus scrambled control",
+     "timepoint": "48 h",
+     "endpoint": "HK2, PKM2, LDHA, GLUT1 protein"
+    },
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "Methods fix the fractionation time at 6 h, whereas the supplementary caption of Figure S4 says 48 h for the overexpression fractions; the two cannot both be true of the same blots.",
+    "snippet": "After 6h culture in tested conditions the cytoplasmic and nuclear subfractions were isolated",
+    "surface": "body",
+    "anchor": "Methods 4.6",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "immortalised human skin fibroblast line",
+     "cell_line": "1BR.3.N",
+     "treatment": "four sugar/oxygen conditions",
+     "timepoint": "6 h"
+    },
+    "artifact": "files/fulltext/PMID35328751_Baryla2022_PMC.xml"
+   },
+   {
+    "proposition": "The caption of Figure S4 (overexpression arm) states 48 h incubation for the cytoplasmic and nuclear fractions, which disagrees with Methods 4.6 (6 h) and with the knockdown arm text.",
+    "snippet": "Figure S4: WWOX and HIF1α western blot analysis of cytoplasmic (a) and nuclear (b) fractions of WT and WWOX OE 1BR.3.N cells after 48h incubation in four tested condition.",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID35328751_assets/s001/Supplementary_figures_captions_pdftotext.txt",
+    "anchor": "Supplementary figures captions, Figure S4",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "immortalised human skin fibroblast line",
+     "cell_line": "1BR.3.N",
+     "genotype": "WWOX overexpression versus empty-vector wild type",
+     "timepoint": "48 h per the caption"
+    },
+    "found_or_sought": "found while reading S4"
+   },
+   {
+    "proposition": "The 2-deoxyglucose uptake assay is run after 48 h in serum-free medium in every condition, so the uptake readout (and the sign reversals) is measured under serum deprivation in addition to the stated oxygen and glucose arms.",
+    "snippet": "all cells’ variants were incubated in free FBS for 48 h in all tested conditions",
+    "surface": "body",
+    "anchor": "Methods 4.12",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "immortalised human skin fibroblast line",
+     "cell_line": "1BR.3.N",
+     "treatment": "serum-free, 48 h",
+     "endpoint": "2-deoxyglucose uptake"
+    },
+    "artifact": "files/fulltext/PMID35328751_Baryla2022_PMC.xml"
+   },
+   {
+    "proposition": "Figure S1b (overexpression arm, uM): uptake is higher in overexpression than wild type in normoxia hyperglycaemia (about 800 versus 520) but about half of wild type in both hypoxia conditions (about 700 versus 1500; 960 versus 1280); insulin changes little. Overexpression and knockdown both lower uptake relative to their control in hypoxia hyperglycaemia, so the uptake readout does not move with WWOX dose. Hand readings.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S1a-b, HRE luciferase and glucose uptake, WT versus WWOX OE, four conditions.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID35328751_assets/s001/Figure S1.tif",
+    "anchor": "Figure S1b, TIFF rendered to PNG for viewing",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "immortalised human skin fibroblast line",
+     "cell_line": "1BR.3.N",
+     "genotype": "WWOX overexpression versus empty-vector wild type",
+     "timepoint": "48 h, serum-free",
+     "endpoint": "2-deoxyglucose uptake"
+    },
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "Figure S3d (overexpression arm): lactate is higher in overexpression than wild type in all four conditions by bar height (about 16 versus 10, 19 versus 15, 19.5 versus 14.5, 23 versus 17 mM) with brackets only in normoxia normoglycaemia (*) and hypoxia hyperglycaemia (*), matching the Results sentence. Lactate rises under both knockdown and overexpression; citrate synthase (S3e) carries no overexpression-versus-wild-type bracket (y-axis 1.0-1.5).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S3a-e, hexokinase, pyruvate dehydrogenase, LDH, lactate and citrate synthase, WT versus WWOX OE.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID35328751_assets/s001/Figure S3.tif",
+    "anchor": "Figure S3d-e, TIFF rendered to PNG for viewing",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "immortalised human skin fibroblast line",
+     "cell_line": "1BR.3.N",
+     "genotype": "WWOX overexpression versus empty-vector wild type",
+     "timepoint": "48 h",
+     "endpoint": "medium lactate"
+    },
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "Figure S4 (overexpression arm): cytoplasmic HIF1alpha bands are faint with one lane per cell; the bar charts show WWOX/HIF1alpha ratios up to about 24-fold (cytoplasm) and tens-fold (nucleus) whereas the same cells are about 350-fold in Figure 1d, i.e. blot densitometry scales differ between figures. Panels are one representative blot with replicate bars.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S4a-b, cytoplasmic and nuclear western blots with WWOX, HIF1alpha and ratio bars, WT versus OE.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID35328751_assets/s001/Figure S4.tif",
+    "anchor": "Figure S4a-b, TIFF rendered to PNG",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "immortalised human skin fibroblast line",
+     "cell_line": "1BR.3.N",
+     "genotype": "WWOX overexpression versus empty-vector wild type",
+     "endpoint": "WWOX and HIF1alpha in cytoplasm and nucleus"
+    },
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "Figure S6c (overexpression arm, total corrected fluorescence): overexpression lowers HIF1alpha versus wild type in both hypoxia conditions (about 27 versus 46 and 27 versus 35, ***) but raises it in normoxia hyperglycaemia (about 23 versus 14.5, ***). The overexpression effect on HIF1alpha is therefore condition-dependent, and WWOX immunofluorescence rises only about 2.5-3-fold, not hundreds-fold.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S6c, WWOX and HIF1A mean fluorescent integrated density, WT versus WWOX OE, four conditions.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID35328751_assets/s001/FigureS6C.tif",
+    "anchor": "Figure S6c, TIFF rendered to PNG",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "immortalised human skin fibroblast line",
+     "cell_line": "1BR.3.N",
+     "genotype": "WWOX overexpression versus empty-vector wild type",
+     "timepoint": "6 h",
+     "endpoint": "immunofluorescence"
+    },
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "Figure S2 (overexpression arm, qPCR): WWOX mRNA is about 1000-1700-fold in overexpression (***) while the same cells show about 2.5-3-fold WWOX immunofluorescence (S6c); PDK mRNA is raised in overexpression in normoxia normoglycaemia (about 2.6 versus 1.0, *), the same direction as in knockdown (Figure 4k); ENO1 mRNA is raised in overexpression in normoxia normoglycaemia (*) as in knockdown (Figure 4g); SLC2A4 mRNA is lowered in overexpression (about 0.35 versus 1.0, *) opposite to knockdown (Figure 4e). Several genes therefore move in the same direction under loss and gain of WWOX.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S2a-n, RT-qPCR fold change of WWOX, HIF1A, WWOX/HIF1A, SLC2A1, SLC2A4, HK2, ENO1, PFK1, PKM2, LDHA, PDK, PDHA, CS and ACLY, WT versus WWOX OE.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID35328751_assets/s001/Figure S2.tif",
+    "anchor": "Figure S2a-n, TIFF rendered to PNG",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "immortalised human skin fibroblast line",
+     "cell_line": "1BR.3.N",
+     "genotype": "WWOX overexpression versus empty-vector wild type",
+     "timepoint": "48 h",
+     "endpoint": "mRNA, RT-qPCR"
+    },
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "Figure S5 (overexpression arm, glycolytic proteins): overexpression lowers PKM2 (normoxia normoglycaemia and hypoxia hyperglycaemia, *), LDHA (normoxia normoglycaemia, *), HK2 (normoxia hyperglycaemia, *) and GLUT1 (normoxia hyperglycaemia, *) versus wild type, one lane per genotype per condition. Protein falls with WWOX gain in the same nodes that rise with WWOX loss only in normoxia normoglycaemia (HK2, LDHA), so the arms agree there and are inconclusive elsewhere.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S5a-e, western blot of HK2, PKM2, ACTIN, LDHA, GLUT1 and bar charts, WT versus WWOX OE.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID35328751_assets/s001/Figure S5.tif",
+    "anchor": "Figure S5a-e, TIFF rendered to PNG",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "immortalised human skin fibroblast line",
+     "cell_line": "1BR.3.N",
+     "genotype": "WWOX overexpression versus empty-vector wild type",
+     "timepoint": "48 h",
+     "endpoint": "protein, western blot"
+    },
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "Figures S6a-b are immunofluorescence micrographs (WWOX green, HIF1alpha red, DAPI blue) of wild type and overexpression in the four conditions; they carry no scale bar and show one field per cell and condition; HIF1alpha signal is visibly stronger in hypoxia (wild type), cytoplasmic and nuclear, which is the quantity plotted in S6c.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S6a (normoxia) and S6b (hypoxia), WWOX/DAPI, HIF1A/DAPI and merge, WT versus WWOX OE, normoglycaemia and hyperglycaemia.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID35328751_assets/s001/Figure S6B.tif",
+    "anchor": "Figure S6b, TIFF rendered to PNG; S6a read the same way",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "immortalised human skin fibroblast line",
+     "cell_line": "1BR.3.N",
+     "genotype": "WWOX overexpression versus empty-vector wild type",
+     "timepoint": "6 h",
+     "endpoint": "immunofluorescence"
+    },
+    "found_or_sought": "sought"
    }
   ]
  },
@@ -530,6 +922,15 @@
     "disease-models/wwox/research/fulltext_dossiers/PMID35328751.md",
     "disease-models/wwox/research/intake_wave_20261004w13_C.md",
     "disease-models/wwox/research/commit_candidates/CC-20261004W13-C-HIF1A-PANELS-01.md"
+   ]
+  },
+  {
+   "receipt": "FTR-20261019-35328751-04",
+   "reader": "scientist-c, HELD-PARTIAL-WWOX-C-20261019",
+   "context_policy": "QUESTION_DRIVEN",
+   "what_changed": "Opened Figures 1, 3, 4, 7-12 and Supplementary Figures S1, S3, S4, S6c as images; appended 13 entries and re-pointed none of the earlier ones. Findings: uptake sign is condition-specific and the Discussion generalises it; the hypoxia-hyperglycaemia arm is not a depleted contrast; Methods/caption disagree on fractionation time; uptake assay is serum-free; overexpression arm raises lactate too.",
+   "outputs": [
+    "disease-models/wwox/research/held_wave_20261019_scientist-c.md"
    ]
   }
  ]
