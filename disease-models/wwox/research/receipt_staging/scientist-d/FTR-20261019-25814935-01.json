@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-10-19T00:00:00Z",
+ "analysis_time_precision": "date_only",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "tables": "not_present",
+  "figures": "read",
+  "references": "read",
+  "supplementary": "read"
+ },
+ "event_at": "2026-10-19T18:31:51Z",
+ "event_id": "FTR-20261019-25814935-01",
+ "evidence_basis": [
+  "JATS body and the reference list (39 entries) read section by section from a text rendering; the article has no tables and no separate limitations section.",
+  "All six main-figure images opened at native resolution; supplementary figure opened as an image.",
+  "Supplementary Data Word document reached only through a lossy strings extraction (table cells partly lost), so depth is held at partial."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID25814935.json",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-d.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "7546d09cb04cba1f03c329f75120997a17fcf20989354030c238707348366376",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID25814935_PhillipsFarfan2015_PMC.xml",
+ "study_id": {
+  "doi": "10.3389/fncel.2015.00090",
+  "pmid": "25814935"
+ },
+ "workflow": "scientist-d (stated assumption of the Orchestrator), interventions wave 2026-10-19, task INTERV-H5-D-20261019, branch task/INTERV-H5-D-20261019; context_policy QUESTION_DRIVEN. Route: Europe PMC REST fullTextXML into the shared checkout files/fulltext/; figures and supplements from the PMC Article Datasets open-data bucket; locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts."
+}
