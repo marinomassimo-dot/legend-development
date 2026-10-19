@@ -68,9 +68,9 @@
   },
   {
    "condition": "two held WWOX-direct rows (Su 2026, Carvalho 2022) were listed 'only with a stated question' and the lot was exhausted with budget left",
-   "default": "re-read Su 2026 with a stated question and appended 16 locators to its existing manifest (no existing entry changed); for Carvalho 2022 recorded an extract without a receipt because only two figures were opened",
-   "why_safe": "append-only; the extract is labelled not a read and the debt is named",
-   "would_have_differed": "a full re-read would have produced a receipt"
+   "default": "re-opened both as an independent pass; at landing found scientist-c had re-read and staged both first (same event id -03), so withdrew my receipt and manifest additions and kept the observations in the analysis note section 6 as a second reader's extract",
+   "why_safe": "no duplicate receipt id reaches the ledger; nothing of scientist-c's was touched",
+   "would_have_differed": "checking peers' branch commits before reopening a held row would have avoided the duplicate reading"
   },
   {
    "condition": "declared contradicts_locator revisions were refused because the prior manifest existed only on this branch",
@@ -94,8 +94,6 @@
  "STOP_LOG": [],
  "RESULT": {
   "read": 16,
-  "reread_held_rows": 1,
-  "extract_without_receipt": 1,
   "parked": 0,
   "analysis_note": "disease-models/wwox/research/interventions_wave_20261019_scientist-d.md",
   "self_eval": "disease-models/wwox/research/session_evaluations/2026-10-19_interventions_H5_scientist-d.md",
@@ -103,13 +101,14 @@
    "CC-20261019-SCIENTISTD-H5-REGISTRY-01",
    "CC-20261019-SCIENTISTD-H5-NEGATIVES-01"
   ],
-  "staged_receipts": "disease-models/wwox/research/receipt_staging/scientist-d/ (17 new JSON files, not appended)",
+  "staged_receipts": "disease-models/wwox/research/receipt_staging/scientist-d/ (16 new JSON files, not appended)",
   "blind_audit": {
    "auditors": 2,
    "triples": 101,
    "non_supported": 23,
    "revisions_declared": 25
   },
-  "micro_upgrade": "deepdive_manifest.py resolves contradicts_locator prior manifest beside the manifest being validated, with regression test"
+  "micro_upgrade": "deepdive_manifest.py resolves contradicts_locator prior manifest beside the manifest being validated, with regression test",
+  "held_rows": "Su 2026 and Carvalho 2022 re-opened as a duplicate of scientist-c's landed re-reads; observations only, no receipt"
  }
 }

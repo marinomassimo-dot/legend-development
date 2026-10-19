@@ -3,10 +3,10 @@
 **Status:** `PROPOSED — NOT PROPAGATED`
 **Author:** ACTOR_ID `scientist-d` (stated assumption of the Orchestrator), interventions wave 2026-10-19 group H5, branch `task/INTERV-H5-D-20261019`.
 **target_wm_version:** `WM_v7.20_2026-10-04` · **Change class:** MINOR (registry identity records and one queue note; no claim status and no working-model block changes).
-**Not medical advice.** Class-level statements only. **Every row is a substitute, labelled NOT WWOX EVIDENCE: none carries a WWOX patient or a WWOX measurement except the Su 2026 row (cell culture).**
+**Not medical advice.** Class-level statements only. **Every row is a substitute, labelled NOT WWOX EVIDENCE: none carries a WWOX patient or a WWOX measurement.**
 
 ## Target and need
-Sixteen lot papers had no registry record at the start (`registry_records.py get --pmid` returned `NO RECORD MATCHED`). The integrator needs `PAPER` and `LIT` identity records so the staged receipts have something to attach to. Provisional numbers are left to the integrator. Su 2026 (PMID 41677633) already has a record; its row adds the re-read receipt only.
+Sixteen lot papers had no registry record at the start (`registry_records.py get --pmid` returned `NO RECORD MATCHED`). The integrator needs `PAPER` and `LIT` identity records so the staged receipts have something to attach to. Provisional numbers are left to the integrator. The two held WWOX-direct rows (Su 2026, Carvalho 2022) were re-read first by scientist-c and are not repeated here.
 
 | PMID | Short title | Source type | Model | Transferability | Role (one line) | Receipt |
 |---|---|---|---|---|---|---|
@@ -26,12 +26,11 @@ Sixteen lot papers had no registry record at the start (`registry_records.py get
 | 40944047 | Ziaka 2025 fluids in TBI | narrative review | human adults | T4 | Hypotonicity and fluid balance statements; no dextrose mention | FTR-20261019-40944047-01 |
 | 39861362 | Tesser 2025 parenteral nutrition preterm | qualitative review | human preterm | T4 | Early aggressive parenteral energy: uncertain benefit; glucose rates printed | FTR-20261019-39861362-01 |
 | 36235546 | Morris 2022 enhanced PN RCT | pilot RCT | human preterm | T4 | No benefit; slower P100 that vanishes after enteral adjustment | FTR-20261019-36235546-01 |
-| 41677633 | Su 2026 (re-read) | primary, cell culture | Wwox-null MEFs, SCC-15, HeLa | T2 | Serum-free stress; null cells resist death; ROS rise in both; no glucose manipulation | FTR-20261019-41677633-03 |
 
 ## Queue and register notes
 - Correct the interventions selection file's description of PMID 36117414: the text never mentions GSK3 (string count 0), so the "links H5 to the GSK3B arm" remark does not come from this paper.
 - Correct its description of PMID 42087252: the paper never mentions thiamine (string count 0); the thiamine question is answered only by 38681648 (one case) and 39871710 (a protocol).
-- Carvalho 2022 (PMID 35984507) remains `partial_fulltext_read`; the 2026-10-19 extract of its glucose conditions is described in the analysis note section 6 and is not a read.
+- Carvalho 2022 (PMID 35984507) and Su 2026 (PMID 41677633): scientist-c's resumes hold the receipts; the analysis note section 6 keeps an independent second-reader extract of each (no receipt, no manifest change).
 
 ## Discovery-ledger proposals (not appended)
 Leads L1-L3 of the analysis note (`IPOTESI`), each with a falsifier in the note.

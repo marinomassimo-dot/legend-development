@@ -4,11 +4,11 @@
 
 ## Scope and executable verdict
 
-- **Batch/session:** `INTERV-H5-D-20261019`, branch `task/INTERV-H5-D-20261019`, 16 lot papers read (3 tier 1, 6 tier 2, 7 tier 3), one WWOX-direct held row re-read, one held row extracted without a receipt.
-- **Receipt IDs (staged, not appended):** `FTR-20261019-<PMID>-01` for the 16 lot PMIDs and `FTR-20261019-41677633-03` (prior `-02`), listed in `interventions_wave_20261019_scientist-d.md` section 1. One is `complete_fulltext_read` (36044864); the Su 2026 re-read is `complete_fulltext_read`; the other fifteen are `partial_fulltext_read`.
+- **Batch/session:** `INTERV-H5-D-20261019`, branch `task/INTERV-H5-D-20261019`, 16 lot papers read (3 tier 1, 6 tier 2, 7 tier 3); two WWOX-direct held rows re-opened as an independent pass and then found to be duplicates of scientist-c's landed re-reads, so no receipt or manifest change was kept for them.
+- **Receipt IDs (staged, not appended):** `FTR-20261019-<PMID>-01` for the 16 lot PMIDs, listed in `interventions_wave_20261019_scientist-d.md` section 1. One is `complete_fulltext_read` (36044864); the other fifteen are `partial_fulltext_read`.
 - **`session_self_eval.py --workspace . --disease wwox`:** `VERDICT: PASS` (every complete read has landed and every declared output resolves). The `[DECLARED GAP]` lines belong to five other PMIDs; none concerns this wave.
-- **Per-study manifests:** `deepdive_manifest.py --verify-artifacts --require-current-schema` returned `PASS`, zero gaps, for all 17. The eight manifests carrying `contradicts_locator` declarations passed once the prior-manifest lookup was fixed (micro-upgrade below); before the fix they were validated against a scratch workspace holding copies.
-- **Receipt verification:** `fulltext_receipts.py verify` OK (475 chained receipts, tail anchored). All 34 staged receipts under `receipt_staging/scientist-d/` (17 this wave, 17 of the previous wave) validated in isolation with `validate_new_receipt` and `validate_receipt`: no errors. None appended.
+- **Per-study manifests:** `deepdive_manifest.py --verify-artifacts --require-current-schema` returned `PASS`, zero gaps, for all 16. The eight manifests carrying `contradicts_locator` declarations passed once the prior-manifest lookup was fixed (micro-upgrade below); before the fix they were validated against a scratch workspace holding copies.
+- **Receipt verification:** `fulltext_receipts.py verify` OK (475 chained receipts, tail anchored). All 33 staged receipts under `receipt_staging/scientist-d/` (16 this wave, 17 of the previous wave) validated in isolation with `validate_new_receipt` and `validate_receipt`: no errors. None appended.
 - **Undeclared revisions:** `locator_contradiction_audit.py --working-tree --fail-on-undeclared`: 25 declared revisions, 0 undeclared.
 - **Structural LINT:** `VERDICT: WARN`, no `BLOCK`; the warnings are pre-existing `UNLINKED_SUPPORT` lines on claims this wave did not touch.
 - **Concurrent conditions:** `legend_commit.sh` refused each commit as `STALE` (pathograph drift); committed with `LEGEND_STALE_SURFACES_BECAUSE` naming the parallel wave; regeneration left to the Orchestrator. Recorded as a default taken.
@@ -28,8 +28,8 @@
 
 ## Persistence diagnosis
 
-- **Durable IDs:** 17 manifests (16 new, one appended), 17 staged receipts, the analysis note, two commit candidates (`CC-20261019-SCIENTISTD-H5-REGISTRY-01`, `-NEGATIVES-01`), this file, the scout entry, the task JSON with `DEFAULTS_TAKEN` and `STOP_LOG`.
-- **Reading queue/debt:** note section 8; Carvalho 2022 stays `partial` because an extract is not a read.
+- **Durable IDs:** 16 manifests, 16 staged receipts, the analysis note, two commit candidates (`CC-20261019-SCIENTISTD-H5-REGISTRY-01`, `-NEGATIVES-01`), this file, the scout entry, the task JSON with `DEFAULTS_TAKEN` and `STOP_LOG`.
+- **Reading queue/debt:** note section 8; the held-row duplication with scientist-c is reported, not hidden.
 - **Can a future run distinguish full text from abstract only?** Yes: `source_kind: fulltext_local`, SHA-256, closed-vocabulary coverage, manifests whose body locators are verified against the XML and whose figure locators name the image files and their digests.
 
 ## Process and capability diagnosis
@@ -55,14 +55,15 @@ Incidents, one per defect or near-error, repeated instances of one class counted
 | F | `contradicts_locator` declarations were refused because the prior manifest existed only on the task branch, not under the artifact root | machine (then fixed in the validator, with a regression) | no |
 | G | Inserting a locator mid-list shifted every later index and `locator_contradiction_audit.py` read it as 17 undeclared revisions | machine (the entry was re-added at the end) | no |
 | H | The selection file links Dienel 2023 to the GSK3B arm and Funayama 2026 to thiamine risk; the texts mention neither (string counts 0) | self (reading and counting in the rendered text) | would have |
+| J | I started a re-read of two held rows that scientist-c had already re-read and staged (the ledger status I checked shows only recorded receipts; staged ones are invisible to it); detected at landing when `main` showed the same event ID `-03` | self (task_close dry run listing peers' commits) | no (withdrawn before landing) |
 | I | Figure file numbering differs from figure labels in two papers (Hahn, Abbas): the first image opened as "Figure 1" was a different panel set | self (checked the XML figure-to-file map before attesting) | would have |
 
 ```
 ATTRIBUTION_CENSUS
-incidents: 9
-machine: 3   blind_auditor: 3   peer: 0   self: 3
+incidents: 10
+machine: 3   blind_auditor: 3   peer: 0   self: 4
 severity_high: 2   of which self: 1
 undetected_known: 0
 ```
 
-**Reading of the census.** Incident C is the one that matters: it reached committed manifests, every structural gate was green over it, and only blind auditors saw it; the self-check I ran before committing (re-reading each proposition against its snippet, the control wave 1 relied on) did not find these 23. That is a weaker result than wave 1's, and it argues for the blind step being routine and for a mechanical proposition-versus-quote aid. `undetected_known: 0` is an honest zero only in the sense that I know of none; two auditors read 101 of 252 locators, and the unaudited remainder carries the same expected defect rate until someone checks it.
+**Reading of the census.** Incident J cost about an hour of duplicated reading: staged receipts are not in the ledger, so the pre-claim check (`fulltext_receipts.py status`) cannot see a peer's pending re-read; a check of peers' branch commits before reopening a held row would have. Incident C is the one that matters: it reached committed manifests, every structural gate was green over it, and only blind auditors saw it; the self-check I ran before committing (re-reading each proposition against its snippet, the control wave 1 relied on) did not find these 23. That is a weaker result than wave 1's, and it argues for the blind step being routine and for a mechanical proposition-versus-quote aid. `undetected_known: 0` is an honest zero only in the sense that I know of none; two auditors read 101 of 252 locators, and the unaudited remainder carries the same expected defect rate until someone checks it.
