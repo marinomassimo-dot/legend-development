@@ -163,3 +163,53 @@ mitochondrial function in the brain". Heterozygous or hypomorphic loss and tumou
 different question from biallelic-LoF DEE; no allele effect on expression is shown. Revival trigger
 for the signal: an independent paediatric glioma set that replicates the SNP in the same stratum, or
 an eQTL showing a direction at the locus; absent both, it stays a corpus record.
+
+---
+
+## 4. PMID 40808923 — Xu 2025, Front Neurol: "Ferroptosis and epilepsy: bidirectional pathogenic links and therapeutic implications" (tier 1, new; narrative review)
+
+context_policy: SOURCE_FIRST. WWOX is named zero times in the article (case-insensitive count 0, taken in
+this session over the text rendering), so this is a transfer read: what does the epilepsy-ferroptosis
+literature, as this review states it, give a seizure phenotype in WWOX loss, and what is its
+evidence base worth?
+
+**What it MEASURES.** Nothing; it is a secondhand synthesis with no search method, no inclusion rule
+and no appraisal. Observations it carries: injected-iron models (FeCl3, haemoglobin, post-traumatic
+epilepsy), chemoconvulsant models (pentylenetetrazole kindling, pilocarpine, kainic acid) with
+ferrostatin-1, deferoxamine or Klotho; one 130-versus-128 transferrin-saturation case-control from
+2001; susceptibility-weighted imaging reports of iron in mesial temporal lobe epilepsy.
+
+**First-pass observations (five figures opened, Table 1, all 93 references enumerated).**
+- Evidence base is acquired-epilepsy models, not genetic epilepsy. The one genetic-epilepsy item is
+  ref 17: patient-derived cells from five childhood epilepsy syndromes, mitochondrial-disease-related,
+  responding to EPI-743 in a dose-dependent manner (this is the single nearest comparator to a DEE
+  and it is cited secondhand; the primary is not read here).
+- The authors themselves warn against a simply causal reading, state no trial of ferroptosis
+  inhibitors exists, and say imaging and fluid markers are not specific to ferroptosis.
+- The review's internal consistency is poor in the places a reader would use it: Table 1 gives
+  valproate as raising non-transferrin-bound iron and oxidative stress while section 4.1 says it
+  lowered lipid peroxides; Table 1 numbers do not line up with the list (valproate cites a topiramate
+  migraine paper; the DHEA row cites the 2001 iron-overload paper); Figure 1 writes the Fenton
+  reaction with two hydroxides. The proposed hippocampal iron threshold (1.2 mg/g) has no source and
+  is declared unvalidated by the authors.
+- The only contact with a WWOX-relevant axis: seizures activating HIF-1a/HO-1 and raising Fe2+ in
+  hippocampal neurons (ref 60, a 2023 primary), and one sentence tying iron to myelination and
+  catecholamine metabolism.
+
+FIRST-PASS OBSERVATIONS COMPLETE -> PRIOR KNOWLEDGE ADMITTED FOR COMPARISON: admitted the registry query (empty), the
+selection file's statement that the working model is silent on iron and ferroptosis (term counts 0),
+and the registry-held WWOX-HIF1A glycolytic-shift reading.
+
+**Comparison and what it changes.** No claim or record changes. What the paper contributes is a
+checklist of readouts that no WWOX record holds: labile iron or ferritin, GPX4 and GSH, lipid
+peroxidation (4-HNE, malondialdehyde, ACSL4), susceptibility-weighted iron imaging, and ferrostatin-1
+or a chelator as a perturbation, all validated in acquired-seizure models and none in a Wwox-null or
+biallelic-LoF background. The one stageable lead (IPOTESI, not a claim, staged for the Orchestrator
+because the discovery ledger is a single shared file): the registry-held reading that WWOX loss raises
+HIF1A (fibroblast and hepatic systems) meets ref 60's seizure-driven HIF-1a/HO-1 iron accumulation;
+a Wwox-null brain might therefore show HO-1, ferritin or labile iron changes independently of the
+paper's mechanism. Falsifier: no difference in HO-1, ferritin or lipid-peroxidation readouts between
+Wwox-null and control cortex or hippocampus at a pre-lethal age. Counter-evidence: the HIF1A reading is
+non-neural, the null mouse is short-lived, and ref 60 is a seizure-induced response, so it cannot
+separate cause from consequence of seizures. Transfer to the reference genotype: indirect, readout-level
+only; a review, no system match.
