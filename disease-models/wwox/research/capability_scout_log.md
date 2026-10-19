@@ -938,3 +938,15 @@ catalytic-dead control, a titration. The missing item is the experiment, not the
 **Cost / API / privacy risk:** none. The parked pair's open-access PDFs were refused by two publishers; no Unpaywall query was sent because it requires an e-mail address and the operator's may not be used for it without being asked. No shadow-library route was used.
 
 **Next surgical micro-step:** run the proposition-versus-quote prompt over the existing manifests offline and count what it would have flagged.
+
+## 2026-10-19 — scientist-a, metabolic batch G1 (task `METAB-G1-A-20261019`)
+
+**Capability gap that emerged (with evidence).** The `--artifact-workspace` passthrough shipped by scientist-d the same day has a trap. `paper_packet.py check` builds the validator command with the value as typed, and the child process runs from the repository root, so a relative value typed inside a task worktree (`--artifact-workspace .`) names the worktree, not the shared checkout. Evidence: the run for one of this lot's manifests returned 10 BLOCK lines of the form `No such file or directory: <worktree>/files/fulltext/...` and four `artifact does not exist` lines, indistinguishable from missing evidence; the same command with an absolute path returned PASS for all fifteen manifests.
+
+**CHANGE (proportional micro-upgrade, shipped).** `framework/scripts/paper_packet.py` now resolves the value to an absolute path against the invoker's working directory before it builds the command. Regression: `ArtifactWorkspacePassthroughTests.test_relative_workspace_is_resolved_against_the_invoker_not_the_child` in `framework/scripts/test_paper_packet.py` (the file is already in the release battery; the suite passes, 70 tests, 19 skipped for absent local corpora).
+
+**Named, not built.** (1) Every spreadsheet, old `.doc` and aggregate-table derivation in this lot (xlsx cell dump, GNU strings of a legacy document, mean and fold-change recomputation) was a one-off script, and a hand reading of truncated digits once produced a false up-regulation before a script on full values reversed it. A small shared "derive and cite" helper (full values in, derivation file out, the manifest recipe pointing at it) would remove the temptation to read printed numbers; the shape is clear but the three derivation types differ enough that one tool would be speculative. (2) The `legend_commit.sh` pathograph-staleness refusal fired on every commit of a new manifest (15 times) and was bypassed each time with the dispatch brief's stated reason; a per-actor batch flag would shorten this, but the bypass reason is itself the audit trail and was kept.
+
+**Cost / API / privacy risk:** none. The auto-mode classifier refused one dry-run of `record_scoped_edit.py apply` against the shared registry; the op list was shipped in the candidate with the refusal stated and the `old` string verified by a count in the branch's own file.
+
+**Next surgical micro-step:** none required; the integrator dry-runs the DL-MECH-012 op list before applying.

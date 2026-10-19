@@ -937,7 +937,10 @@ def _runnable(root: Path, disease: str, pmid: str, packet: dict[str, Any],
                       "--pmid", pmid, "--verify-artifacts", "--require-current-schema"]
                      # A task worktree holds the manifest but not the gitignored files/ tree;
                      # the validator already accepts a separate artifact root (2026-10-19, scientist-d).
-                     + (["--artifact-workspace", artifact_workspace] if artifact_workspace else [])))
+                     # Resolved HERE, against the invoker's cwd: the child process runs from the
+                     # repository root, so a relative value ("." typed inside a worktree) silently
+                     # named the worktree and turned every locator into "No such file" (2026-10-19, scientist-a).
+                     + (["--artifact-workspace", str(Path(artifact_workspace).resolve())] if artifact_workspace else [])))
         jobs.append(("flag drift",
                      [sys.executable, str(HERE / "manifest_flag_drift.py"), "--pmid", pmid]))
         jobs.append(("erratum scope",
