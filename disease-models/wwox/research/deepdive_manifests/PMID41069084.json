@@ -1,0 +1,290 @@
+{
+ "schema_version": 2,
+ "pmid": "41069084",
+ "doi": "10.1111/acem.70158",
+ "pmcid": "PMC12820600",
+ "receipt": "FTR-20261019-41069084-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the interventions selection file's one-line 'why it matters' for this row and the group H5 header, plus the earlier readings of this lot done in this session (Yuskaitis, Phillips-Farfan, Salvati) and the registry theme records CLAIM 042 and DL-MECH-020 admitted after the first pass of the first paper. No registry record about this paper (none exists).",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/interventions_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a non-WWOX comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype; class-level literature only, BLOCK-1 caution carried in the analysis note."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the load-bearing triples were checked mechanically by locator_audit.py and are exposed in the analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Retrospective single-centre cohort of 852 adults (median age 67) in an emergency department with plasma sodium at or below 125 mmol/L, with chart review of symptoms and blinded radiologist re-reads of imaging, outcome rates of cerebral edema (4) and osmotic demyelination (11). The reported fact is event frequencies in hospital-presenting hyponatremia, mostly chronic, with a stated underpowered, partly imaging-limited design. It is a class-level reference for hypotonic-state brain edema and for correction-rate risk, in adults with common etiologies; not children, not encephalopathy or WWOX, and not a fluid-volume or dextrose intervention study."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (fasting OR \"caloric restriction\" OR \"calorie restriction\" OR \"dietary restriction\")",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the four hits are type 2 diabetes association studies (fasting glucose), none a fasting or restriction intervention"
+   },
+   {
+    "query": "WWOX AND (mTOR OR mTORC1 OR AMPK)",
+    "count": 8,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (hypoglycemia OR hypoglycaemia OR dextrose OR \"glucose infusion\")",
+    "count": 21,
+    "source": "PubMed ESearch rettype=count 2026-10-19; hits are glucose-metabolism, glycolysis and association papers, none an infusion or dextrose intervention"
+   },
+   {
+    "query": "WWOX AND (edema OR oedema OR hyponatremia OR \"fluid overload\")",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the two hits are a high-altitude pulmonary oedema locus list and a zebrafish embryo knockdown paper"
+   },
+   {
+    "query": "WWOX AND (refeeding OR thiamine OR \"parenteral nutrition\")",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are PubMed search hits only (ESearch rettype=count, 2026-10-19), not a census; none of the WWOX hits tests the intervention of this group."
+ },
+ "multihop": {
+  "references_enumerated": 34,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted (34 entries by parsing the JATS reference block), not read item by item; no WWOX-directed reference seen in the body."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41069084 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED for this PMID in the seven registry surfaces at commit 0c85331b341e; a statement about that query only. CLAIM 042 and DL-MECH-020 (ketogenic-diet lines) admitted for comparison after the first pass."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 34,
+   "references_screened": 33,
+   "references_with_doi": 33,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41069084_Burst2026_PMC.xml",
+   "sha256": "d7c4605c96bd693f825f9a21fb05b572d96c122ceba3a3376039b8912a582563",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12820600/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "d7c4605c96bd693f825f9a21fb05b572d96c122ceba3a3376039b8912a582563"
+   }
+  },
+  {
+   "path": "files/figures/PMID41069084/native/ACEM-33-0-g001.jpg",
+   "sha256": "bef5030883843a4522c28991a6da9f54c13181e21fb6407dae9e7a01b2996aee",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12820600.1/ACEM-33-0-g001.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "bef5030883843a4522c28991a6da9f54c13181e21fb6407dae9e7a01b2996aee"
+   }
+  },
+  {
+   "path": "files/figures/PMID41069084/native/ACEM-33-0-g002.jpg",
+   "sha256": "6eb33e3fbfda998fab4f92f9345357056fde0d25a52ae49426836bec6e60fdda",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12820600.1/ACEM-33-0-g002.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "6eb33e3fbfda998fab4f92f9345357056fde0d25a52ae49426836bec6e60fdda"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Retrospective single-centre cohort of adults presenting to an emergency department over six years with plasma sodium at or below 125 mmol/L.",
+    "snippet": "We included patients with age ≥ 18 years and a plasma sodium concentration ≤ 125 mmol/L in the initial blood sample obtained upon admission to the ED.",
+    "anchor": "Methods, Selection of Participants",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41069084_Burst2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The text says 1101 patients had an initial sodium at or below 125 mmol/L; the flow diagram's electronic exclusion of 100,549 patients with sodium above 125 leaves 1,053 of 101,602.",
+    "snippet": "1101 patients had an initial plasma sodium ≤ 125 mmol/L and 852 patients were included in this analysis (Figure 1).",
+    "anchor": "Results, Characteristics of Study Cohort",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41069084_Burst2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2 (flow diagram) lists: 101,602 with a sodium; 100,738 excluded electronically, of which 100,549 had sodium above 125; 864 eligible; 12 excluded manually; 852 analysed; 318 severe symptoms (132 imaged), 534 other (67 imaged).",
+    "snippet": "Visual attestation of the patient flow diagram (image ACEM-33-0-g002): excluded electronically n = 100,738 with initial plasma sodium > 125 mmol/L (n = 100,549), age < 18 (n = 3), blood glucose > 300 (n = 80), missing sodium follow-up (n = 106); eligible n = 864; excluded manually n = 12; primary analysis group n = 852; severe symptoms 318, emergency imaging 132; no or moderate symptoms 534, emergency imaging 67.",
+    "anchor": "Flow diagram (image ACEM-33-0-g002)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID41069084/native/ACEM-33-0-g002.jpg"
+    ],
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "adult emergency department patients, single centre, 2013-2018",
+     "endpoint": "cohort flow"
+    },
+    "qualifies": "entries[1]",
+    "qualifies_needle": "1101 patients had an initial plasma sodium"
+   },
+   {
+    "proposition": "Cerebral edema attributable to hyponatremia was confirmed in four patients, 0.5% of 852 and 1.3% of those with severe symptoms.",
+    "snippet": "Taken together, confirmed hyponatremia‐induced cerebral edema was found in four patients, which represents 0.5% of the primary analysis group and 1.3% of the patients with severe symptoms.",
+    "anchor": "Results, Hyponatremia-Associated Cerebral Edema",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41069084_Burst2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "One of three imaged cases was a 28-year-old woman after MDMA and excessive water drinking with sodium 111 mmol/L who survived 17 days; the same description matches confirmed ODS patient 10 (sodium rise 25 mmol/L in 24 h), not cross-referenced in the text.",
+    "snippet": "Seizure followed by coma. Had been partying for 2 days, ingestion of high‐volume fluids (urinary osmolality: 58 mOsm/kg). [Na+] 111 mmol/L",
+    "anchor": "Table 2, patient 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41069084_Burst2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Confirmed ODS in 11 patients (1.3%); overly rapid correction at 24 h was present in seven.",
+    "snippet": "Seven of the 11 patients with confirmed ODS had well‐established risk factors for ODS, and overly rapid sodium correction at 24 h was also confirmed in seven patients.",
+    "anchor": "Results, Risk Factors for Development of ODS",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41069084_Burst2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The ODS table row 11 (65-year-old woman, sodium 113 mmol/L, rise 10.1 mmol/L) carries the etiology label of a tea-and-toast diet; row 10 is the water-drinking case; both are low-solute or high-water exposures.",
+    "snippet": "No No No No 11 65 f 113 10.1 No Yes",
+    "anchor": "Table 3, patient 11 etiology",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41069084_Burst2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the primary model overly rapid correction was not associated with ODS (OR 1.65, p 0.219); in the 475-patient sensitivity set it was (OR 4.20, p 0.004).",
+    "snippet": "overly rapid correction at 24 h was revealed the most important risk factor for ODS (p = 0.004)",
+    "anchor": "Results, Risk Factors for Development of ODS",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41069084_Burst2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say overly rapid correction mostly followed 5% dextrose in 341 patients (40%); the sentence is ambiguous about whether dextrose was the cause of overcorrection or a rescue.",
+    "snippet": "Overly rapid sodium correction occurred in 341 patients (40%), the majority of which received 5% dextrose",
+    "anchor": "Results, Characteristics of Study Cohort",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41069084_Burst2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Severe symptoms were frequently accompanied by other brain pathology on imaging (about 38%).",
+    "snippet": "Of note, imaging studies revealed other pathological findings in a total of 50 patients (37.9%) of the severe symptom group",
+    "anchor": "Results, Hyponatremia-Associated Cerebral Edema",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41069084_Burst2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Limitations section says the study is underpowered, few imaged, true incidences likely higher, and that the 24 h sodium was extrapolated.",
+    "snippet": "Given the small sample size and—even more important—the limited number of imaging studies, our single‐center study is underpowered to draw generalizable conclusions.",
+    "anchor": "Limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41069084_Burst2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The conclusion is that treatment limits on sodium rise should stay until more evidence exists; it applies to adults with sodium at or below 125 mmol/L, not to mild-moderate hyponatremia.",
+    "snippet": "Finally, since we only included patients with initial sodium ≤ 125 mmol/L, no recommendations for patients with mild‐to‐moderate hyponatremia can be deduced from our study.",
+    "anchor": "Limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41069084_Burst2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 groups the 852 by most severe symptom: coma 40 (19 deaths), seizures 47 (0), obtundation 119 (19), vomiting 112 (5), no severe symptoms 534 (50); panel B shows edema with or without herniation in 3 coma patients (2 deaths) and none in other groups.",
+    "snippet": "Visual attestation of Figure 2A, B (image ACEM-33-0-g001): coma n = 40 deaths 19; seizures n = 47 deaths 0; obtundation n = 119 deaths 19; vomiting n = 112 deaths 5; no severe symptoms n = 534 deaths 50; panel B imaged groups, E±H 3 (2 deaths) only in coma.",
+    "anchor": "Figure 2A, B (image ACEM-33-0-g001)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID41069084/native/ACEM-33-0-g001.jpg"
+    ],
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "adult emergency department hyponatremia cohort",
+     "endpoint": "deaths and imaging-defined edema by symptom group"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12820600/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure panel."
+ }
+}
