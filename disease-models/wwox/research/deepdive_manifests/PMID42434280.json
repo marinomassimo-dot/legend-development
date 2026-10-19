@@ -1,0 +1,259 @@
+{
+ "schema_version": 2,
+ "pmid": "42434280",
+ "doi": "10.21037/jgo-2026-1-0151",
+ "receipt": "FTR-20261019-42434280-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "A transporter and amino-acid-metabolism laboratory (cell biology and biochemistry) writing a commissioned commentary on a gastrointestinal stromal tumour paper; WWOX is named once, in a list of other reports. No measurement is made. Weighted as a literature pointer to the WWOX-toosendanin-ferroptosis paper and as a model of how a commentary can carry a secondhand sign."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "toosendanin AND ferroptosis",
+    "count": 11,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "WWOX AND toosendanin",
+    "count": 3,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches, not measurements."
+ },
+ "multihop": {
+  "references_enumerated": 32,
+  "gene_direct_refs_in_source": [
+   "39894307"
+  ],
+  "resolved": [
+   {
+    "pmid": "39894307",
+    "how": "Ref 14 (Yang 2025, WWOX-mediated p53/SAT1 and NRF2/FPN1 axis in toosendanin-induced ferroptosis in hepatocellular carcinoma) resolved at ABSTRACT level only (PubMed EFetch 2026-10-19): the abstract says toosendanin increased SAT1 and DECREASED SLC40A1, and that the effect depended on WWOX. Full text not acquired: no PMC deposit, Europe PMC inEPMC N, Unpaywall is_oa false, publisher subscription (consistent with the BLOCKED row of the batch selection). Not a reading; no receipt is claimed."
+   }
+  ],
+  "queued": [
+   {
+    "queue": "CC-20261019-SCIENTIST-C-G3-01",
+    "why": "Full text of ref 14 (Yang 2025) is the one WWOX-ferroptosis-iron-export primary in this lot's neighbourhood and is paywalled; carried by the candidate as a manual-PDF request, not read."
+   }
+  ],
+  "disposition": "One gene-direct reference; resolved at abstract level only (stated); full text queued as a manual acquisition."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42434280 --hops 1; paper_packet.py packet; fulltext_receipts.py status --pmid 42434280",
+  "hits": 0,
+  "note": "No record in any of the seven searched registry surfaces and no prior receipt; an empty result is a statement about that query over those files."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: link of type CommentOn only (it is the commentary on a gastrointestinal stromal tumour paper); no RetractionIn, ErratumIn or ExpressionOfConcernIn; publication types Editorial and Comment.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "UNSCREENABLE_NO_REFERENCE_LIST",
+   "reference_source": "cache",
+   "references_declared": 0,
+   "references_screened": 0,
+   "references_with_doi": 0,
+   "schema": "retraction_check.dependencies/1",
+   "screened": false,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42434280_Ganapathy2026_PMC.xml",
+   "sha256": "ab4a5e261edbc1861f6582bf6e0c9c1ee39eb288ee2daa67cfde1c12e463607b",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13350003/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "ab4a5e261edbc1861f6582bf6e0c9c1ee39eb288ee2daa67cfde1c12e463607b"
+   }
+  },
+  {
+   "path": "files/figures/PMID42434280/jgo-17-03-202-f1.jpg",
+   "sha256": "033d29e7aa00b4fff89854aed03b39cfa00b1cf9e76d1879b03dc4d36a937c92",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13350003 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID42434280/jgo-17-03-202-prf.pdf",
+   "sha256": "fa9dc7f240545c79fecff814f0b9589163fb17160b8c65353b4ce957443b0cb8",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13350003 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID42434280/jgo-17-03-202-prf.txt",
+   "sha256": "c2b3c10e66057e66aa2fa0adb8886e28c2b08485a68aaff9ce5a494b96941011",
+   "kind": "supplement_text",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42434280/jgo-17-03-202-prf.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk <pdf> <txt>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "c2b3c10e66057e66aa2fa0adb8886e28c2b08485a68aaff9ce5a494b96941011"
+   }
+  },
+  {
+   "path": "files/figures/PMID42434280/jgo-17-03-202-coif.pdf",
+   "sha256": "2a77bbe63921eefff778752196a451aeef9c2b20c8b9f1ba0b75963167e1b363",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13350003 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The commentary is on a single gastrointestinal stromal tumour paper (ref 8, toosendanin and NCOA4 ferritinophagy); it makes no measurement.",
+    "snippet": "A recently reported study by Feng et al. in the Journal of Gastrointestinal Oncology (8) describes the ability of toosendanin",
+    "anchor": "main text, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42434280_Ganapathy2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The commentator calls the single-cell-line design a significant weakness of the commented study.",
+    "snippet": "The use of a single cell line (GIST-T1 cells) is a significant weakness in this investigation.",
+    "anchor": "main text, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42434280_Ganapathy2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The only WWOX statement: citing ref 14, toosendanin activates WWOX, raising p53 and suppressing NRF2 activity, lowering GPX4 and SLC7A11 and, as written here, increasing the iron exporter SLC40A1.",
+    "snippet": "activation of WWOX leading to increased transcriptional activity of p53 and suppressed transcriptional activity of NRF2, thus leading to decreased expression of GPX4 and SLC7A11 and increased expression of the iron exporter SLC40A1 (14)",
+    "anchor": "main text, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42434280_Ganapathy2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Ref 14 as listed (the WWOX hepatocellular carcinoma paper whose abstract reports DECREASED SLC40A1, so the commentary's 'increased' disagrees with the abstract of its own source).",
+    "snippet": "WWOX-mediated p53/SAT1 and NRF2/FPN1 axis contribute to toosendanin-induced ferroptosis in hepatocellular carcinoma.",
+    "anchor": "Reference list, entry 14",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42434280_Ganapathy2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The STAT3 hypothesis is stated as a posited explanation, and the paper's own title asks it as a question.",
+    "snippet": "we posit that STAT3 as the upstream pharmacological target for toosendanin may convincingly explain the changes",
+    "anchor": "main text, paragraph 7",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42434280_Ganapathy2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The STAT3 SH2 binding statement carries citation (17), which in the reference list is a toosendanin paper on Nrf2 O-GlcNAcylation, not the osteosarcoma STAT3 paper listed as ref 18.",
+    "snippet": "Toosendanin directly binds to the SH2 domain of STAT3 with a KD value of ~0.24 µM (17).",
+    "anchor": "main text, paragraph 7",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42434280_Ganapathy2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Ref 17 as listed.",
+    "snippet": "Toosendanin sensitizes hepatocyte ferroptosis via dual inhibition of Nrf2 O-GlcNAcylation and USP7-driven deubiquitination.",
+    "anchor": "Reference list, entry 17",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42434280_Ganapathy2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The commentary concedes the commented study is wholly in vitro and calls for in vivo and safety work.",
+    "snippet": "represents an in vitro experimentation in its entirety",
+    "anchor": "main text, final paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42434280_Ganapathy2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 is a hypothetical scheme with toosendanin inhibiting STAT3 at its top; WWOX does not appear in it.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1: a flow diagram with Toosendanin at top inhibiting STAT3, arrows to GPX4 down, SLC7A11 down and FTH1 down, then GSH down, ROS up, Fe2+ and Fe3+ up, ATF3 and STEAP3 up, NCOA4 up with ferritinophagy and FTH1 down, ending in lipid peroxidation and Ferroptosis; no WWOX box; no data.",
+    "anchor": "Figure 1",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42434280/jgo-17-03-202-f1.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The peer-review file records the reviewer asking the authors to soften the STAT3-centred causal language, and the authors agreeing.",
+    "snippet": "My main suggestion is to slightly recalibrate the strength of the STAT3-",
+    "anchor": "Peer Review File, Comment 1",
+    "surface": "supplement",
+    "artifact": "files/figures/PMID42434280/jgo-17-03-202-prf.txt",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13350003/fullTextXML returned HTTP 200 (60200 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}

@@ -273,3 +273,39 @@ hypomorph-dose question. No mitochondrial result transfers: parkin is a differen
 ROS effect is small and unevenly significant. A pre-registered test the repository could state: in
 the same schedule, WWOX protein and mtROS in a donor-derived fibroblast line; a null for protein
 would close the lead.
+
+---
+
+## 6. PMID 42434280 — Ganapathy 2026, J Gastrointest Oncol: is STAT3 blockade at the epicentre of toosendanin-induced ferritinophagy and ferroptosis? (tier 2, new; commentary)
+
+context_policy: SOURCE_FIRST. The selection row says WWOX is not in the abstract and asks to check the body.
+
+**What it MEASURES.** Nothing. It is a commissioned commentary on a single in vitro gastrointestinal
+stromal tumour paper (one cell line) that proposes STAT3 as an upstream explanation; it carries one
+hypothesis scheme (Fig 1) with no WWOX box. The peer-review file shows the reviewer asking the
+authors to soften the STAT3-centred causal language, and the authors agreeing.
+
+**The WWOX content, in one sentence (body, paragraph 4).** Citing a 2025 hepatocellular carcinoma paper
+(ref 14), toosendanin "activation of WWOX" raises p53 activity, suppresses NRF2 activity, lowers GPX4
+and SLC7A11 and, as written here, "increased expression of the iron exporter SLC40A1". The source's
+own PubMed abstract (abstract-level check only, 2026-10-19; full text is paywalled, no PMC deposit, no
+open-access copy) says toosendanin DEcreased SLC40A1 and that the ferroptosis effect depended on WWOX.
+The commentary therefore reverses the sign of the iron exporter relative to its source (an
+exporter going down is the direction that raises intracellular iron and fits the ferroptosis
+reading). One more citation slip in the same paragraph block: the STAT3 SH2 binding statement carries
+(17), which in the reference list is a hepatocyte Nrf2 O-GlcNAcylation paper, not the osteosarcoma
+STAT3 paper listed as 18.
+
+FIRST-PASS OBSERVATIONS COMPLETE -> PRIOR KNOWLEDGE ADMITTED FOR COMPARISON: admitted the registry query (empty) and the
+selection file's BLOCKED rows for the WWOX-ferroptosis primaries (Yang 2025 paywalled; Wang 2026 lung
+injury paywalled).
+
+**What it changes in the disease model.** Nothing, and what it adds is a sign problem. In the one
+WWOX-ferroptosis system that is visible here, WWOX activity is pro-ferroptotic and its loss would be
+expected to blunt toosendanin-induced ferroptosis (abstract-level only); the batch selection lists a
+second report, paywalled and unread, in which WWOX protects against ferroptosis in acute lung injury.
+Both are pharmacological or injury states in cancer or lung models, neither is a genetic-LoF baseline,
+and neither says that a Wwox-null neuron is ferroptosis-prone or ferroptosis-resistant. So the iron
+and ferroptosis arm of the working model stays empty and the sign of WWOX on ferroptosis is, on the
+present sources, context-dependent in the same way the WWOX-ROS sign is. Manual PDF request logged for
+ref 14 (carried by the candidate).
