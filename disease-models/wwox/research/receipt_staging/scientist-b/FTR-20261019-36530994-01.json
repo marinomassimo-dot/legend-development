@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-10-19T23:00:00Z",
+ "event_at": "2026-10-19T23:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "captions_only"
+ },
+ "event_id": "FTR-20261019-36530994-01",
+ "evidence_basis": [
+  "Whole JATS body read; Figures 1, 3 and 6 inspected as images; Figures 2, 4, 5, 7, 8 legends only; DataSheet 1 DOCX text read (Table S2 checked), supplementary figures not inspected.",
+  "FIND: the WWOX rs13338697 GG advantage rests on 9 patients in the monotherapy cohort (P 0.020 to 0.025) and vanishes when both cohorts are pooled (P 0.127, GG n 14); tissue and plasma contrasts rest on 12 and 8 GG patients; WWOX silencing alone does not change ASS1; sponsor-employed authors.",
+  "References enumerated and screened for integrity, not read."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID36530994.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID36530994.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-B-G2-HUMAN-AXIS-01.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "e4555b8c5bcade8dc4e7bba0628e4f7d7d3f98bdb8a270754f57e9bb8d6a9b01",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID36530994_Chu2022_PMC9756969.xml",
+ "study_id": {
+  "doi": "10.3389/fonc.2022.996820",
+  "pmid": "36530994"
+ },
+ "workflow": "scientist-b, metabolic batch 2026-10-19 group G2, task branch task/METAB-G2-B-20261019; context_policy SOURCE_FIRST. Route: Europe PMC JATS fetched with no User-Agent, figures from the PMC OA S3 bucket, all into the root files/ tree; figures inspected as images where stated; locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a JSON file for the integrator and was not appended at preparation time."
+}
