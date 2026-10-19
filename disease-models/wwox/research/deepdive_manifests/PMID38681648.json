@@ -1,0 +1,260 @@
+{
+ "schema_version": 2,
+ "pmid": "38681648",
+ "doi": "10.1016/j.heliyon.2024.e29419",
+ "pmcid": "PMC11053267",
+ "receipt": "FTR-20261019-38681648-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the interventions selection file's one-line 'why it matters' for this row and the group H5 header, plus the earlier readings of this lot done in this session (Yuskaitis, Phillips-Farfan, Salvati) and the registry theme records CLAIM 042 and DL-MECH-020 admitted after the first pass of the first paper. No registry record about this paper (none exists).",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/interventions_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a non-WWOX comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype; class-level literature only, BLOCK-1 caution carried in the analysis note."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the load-bearing triples were checked mechanically by locator_audit.py and are exposed in the analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "output_kind": "case_report",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Single case report of a 64-year-old woman with diabetes (n = 1), with a short narrative literature section. The temporal association (intravenous glucose for insulin-overdose hypoglycaemia, then confusion) and the response to high-dose thiamine are observations; the causal claim that the glucose depleted thiamine is the authors' inference, with no thiamine level, no transketolase, no follow-up imaging and an alternative explanation (the hypoglycaemic episode itself) not discussed. Adult, not a child, not a WWOX or DEE system."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (fasting OR \"caloric restriction\" OR \"calorie restriction\" OR \"dietary restriction\")",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the four hits are type 2 diabetes association studies (fasting glucose), none a fasting or restriction intervention"
+   },
+   {
+    "query": "WWOX AND (mTOR OR mTORC1 OR AMPK)",
+    "count": 8,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (hypoglycemia OR hypoglycaemia OR dextrose OR \"glucose infusion\")",
+    "count": 21,
+    "source": "PubMed ESearch rettype=count 2026-10-19; hits are glucose-metabolism, glycolysis and association papers, none an infusion or dextrose intervention"
+   },
+   {
+    "query": "WWOX AND (edema OR oedema OR hyponatremia OR \"fluid overload\")",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the two hits are a high-altitude pulmonary oedema locus list and a zebrafish embryo knockdown paper"
+   },
+   {
+    "query": "WWOX AND (refeeding OR thiamine OR \"parenteral nutrition\")",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are PubMed search hits only (ESearch rettype=count, 2026-10-19), not a census; none of the WWOX hits tests the intervention of this group."
+ },
+ "multihop": {
+  "references_enumerated": 31,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted (31 entries) from the JATS reference block, not read item by item; no WWOX-directed reference seen."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 38681648 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED for this PMID in the seven registry surfaces at commit 0c85331b341e; a statement about that query only. CLAIM 042 and DL-MECH-020 (ketogenic-diet lines) admitted for comparison after the first pass."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 31,
+   "references_screened": 28,
+   "references_with_doi": 28,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38681648_Tao2024_PMC.xml",
+   "sha256": "763a0a09773535c4ae6adc5c5b2b1d0a3bde7dbe04898e648ab5616bae32c22a",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11053267/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "763a0a09773535c4ae6adc5c5b2b1d0a3bde7dbe04898e648ab5616bae32c22a"
+   }
+  },
+  {
+   "path": "files/figures/PMID38681648/native/gr1.jpg",
+   "sha256": "af887fa8a9f41bf9f0c80207db526b2ac86c66d9540f958044786a106b6c67a6",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11053267.1/gr1.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "af887fa8a9f41bf9f0c80207db526b2ac86c66d9540f958044786a106b6c67a6"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The patient was a 64-year-old woman with long-standing diabetes; the glucose exposure was an intravenous glucose treatment for insulin-overdose hypoglycaemia about two months before admission.",
+    "snippet": "Further probing of the patient's history revealed that she had experienced transient hypoglycemia due to insulin overdose 2 months earlier.",
+    "anchor": "Case presentation, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38681648_Tao2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Altered mental status began several days after the glucose treatment; the dose, volume and duration of the glucose treatment are not given.",
+    "snippet": "Her hypoglycemia improved rapidly; however, several days after glucose treatment, she developed altered mental status.",
+    "anchor": "Case presentation, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38681648_Tao2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The diagnosis was presumptive and made on imaging, history of glucose, and response to thiamine.",
+    "snippet": "Considering that excessive glucose intake increases the demand for thiamine, this treatment might lead to thiamine deficiency, a presumptive clinical diagnosis of WE was made.",
+    "anchor": "Case presentation, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38681648_Tao2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Thiamine level, transketolase activity and thiamine-metabolism genes were not measured.",
+    "snippet": "Due to technical unavailability, we didn't detect the thiamine level and erythrocyte transketolase activity, and the potential gene mutation that related to thiamine metabolism.",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38681648_Tao2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No follow-up imaging was obtained.",
+    "snippet": "We failed to follow up the patient's imaging changes.",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38681648_Tao2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors' conclusion generalises from this single case to rapid or excessive glucose intake depleting thiamine stores.",
+    "snippet": "Rapid or excessive glucose intake may deplete the endogenous thiamine stores, thereby increase the risk of WE.",
+    "anchor": "Conclusions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38681648_Tao2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion gives body thiamine reserves of 30-50 mg exhausted in 4-6 weeks without intake, a time scale at odds with 'rapid' depletion after a single glucose treatment, and notes she ate normally.",
+    "snippet": "The body's reserves of thiamine are 30–50 mg, which would be completely depleted in 4–6 weeks in the absence of thiamine intake [5].",
+    "anchor": "Discussion, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38681648_Tao2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors note she had normal gastrointestinal function and ate normally, ensuring basic thiamine intake.",
+    "snippet": "She had intact gastrointestinal function and eat food normally, this ensured a basic daily thiamine intake",
+    "anchor": "Discussion, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38681648_Tao2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Susceptible groups listed include children and critically ill patients, and prolonged or excessive carbohydrate or glucose intake as raising the requirement.",
+    "snippet": "In addition, prolonged or excessive intake of carbohydrates or glucose increases the requirement of thiamine and may result in relative thiamine deficiency.",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38681648_Tao2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Treatment given was intravenous thiamine 500 mg every 8 h for 3 days, then 250 mg for 5 days and 100 mg for 5 days, with nearly complete recovery in 2 weeks and no adverse event reported.",
+    "snippet": "Thiamine hydrochloride (500 mg) dissolved in 100 mL of saline was administered intravenously every 8 h for 3 consecutive days, followed by 250 mg for 5 days and 100 mg for 5 days.",
+    "anchor": "Case presentation, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38681648_Tao2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "MRI sensitivity for the condition is stated as 53% (specificity 93%), so imaging cannot rule it out or confirm it alone.",
+    "snippet": "Although MRI has high specificity (93 %) for the diagnosis, its sensitivity is only 53 %",
+    "anchor": "Discussion, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38681648_Tao2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 shows four unlabelled axial brain slices without arrows or sequence labels; the caption states the lesion list, but the changes are not marked on the panel and are subtle at the published resolution.",
+    "snippet": "Visual attestation of Figure 1: four axial brain MRI slices (from posterior fossa upward through the brainstem, levels not labelled on the image) without arrows, sequence name or window labels; no hyperintensity is marked.",
+    "anchor": "Figure 1 (image gr1)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID38681648/native/gr1.jpg"
+    ],
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "single adult patient, brain MRI",
+     "endpoint": "signal change pattern"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC11053267/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure panel."
+ }
+}
