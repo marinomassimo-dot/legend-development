@@ -32,12 +32,12 @@ annotations is reported below whatever it happens to be.
 | …undirected edges they collapse into | 46 |
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
-| Deep-dive manifests read | 320 |
+| Deep-dive manifests read | 337 |
 | …of which bound to at least one claim | 96 |
-| Propositions scanned | 5008 |
-| …carrying a relational connective | 973 |
-| …locator-backed candidates | 933 |
-| …locator-backed and bound to a claim | 340 |
+| Propositions scanned | 5287 |
+| …carrying a relational connective | 1042 |
+| …locator-backed candidates | 1002 |
+| …locator-backed and bound to a claim | 343 |
 
 The scanned population is three declared surfaces and no others: every claim
 `Title`, every row of the working model's BLOCK 2 mirror, and every
@@ -320,16 +320,16 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 | Source | Candidates |
 |---|---|
 | claim_title | 21 |
-| locator_proposition | 933 |
+| locator_proposition | 1002 |
 | working_model_mirror_title | 19 |
 
 | Connective class (lexical) | Candidates |
 |---|---|
-| AMBIGUOUS_LEXICAL_FORM | 646 |
+| AMBIGUOUS_LEXICAL_FORM | 701 |
 | ARROW | 18 |
-| ASSOCIATIVE | 49 |
-| CAUSAL | 189 |
-| DEPENDENCY | 71 |
+| ASSOCIATIVE | 51 |
+| CAUSAL | 200 |
+| DEPENDENCY | 72 |
 
 A connective class is a property of the word, not a verdict about the
 relationship. An `ASSOCIATIVE` connective does not make an edge `ASSOCIATED`.
@@ -359,7 +359,7 @@ its sentence is a reading, and this tool does not perform readings.
 | CLAIM 016 | claim_title | `contribute to` | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency |
 | CLAIM 018 | claim_title | `causes` | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in humans |
 
-Showing 12 of 380 bound candidates; the
+Showing 12 of 383 bound candidates; the
 complete set, with evidence and provenance, is in the export. The worklist
 in cost order — what needs an annotation, what needs a type, what needs a
 decomposition, what needs a reading — is printed by:
@@ -375,7 +375,7 @@ carried no connective from the lexicon.
 
 ## Provenance
 
-Derived from 323 input files; digest
-`22c0f9f317711008`. Sources: the claim, paper and
+Derived from 340 input files; digest
+`fbe64071754ef9b6`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
