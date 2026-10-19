@@ -40,12 +40,13 @@
     },
     {
      "step": "Integrate returns: receipts recorded in event-ID order after a scratch-clone trial, branches landed",
-     "status": "IN_PROGRESS",
-     "evidence": "B and D returned and landed (1ca5bf78, 56cb33c5); 33 receipts recorded b968bbd2, ledger 508; A and C pending"
+     "status": "DONE",
+     "evidence": "A,B,C,D landed (8cd800a0,1ca5bf78,56cb33c5,6d4df4cb); 67 receipts recorded, ledger 542, main fe91f386"
     },
     {
      "step": "BATCH_COMMIT of wave 1 candidates under LINT; Mirror ex-post review",
-     "status": "TODO"
+     "status": "IN_PROGRESS",
+     "evidence": "integrator agent running BATCH_20261019_001 (12 candidates, WM_v7.21)"
     },
     {
      "step": "Fresh-clone battery on exact SHA, public_release_gate, receipts verify, safe_push to development",
@@ -73,7 +74,7 @@
     {
      "step": "Dispatch wave 2 (up to four Scientists) on that selection; integrate, BATCH_COMMIT, Mirror, battery, push",
      "status": "IN_PROGRESS",
-     "evidence": "scientist-d on H5 and scientist-b on H3 dispatched; A (H1,H2) and C (H4) dispatch when they return"
+     "evidence": "wave 2 running: A (H1,H2), B (H3), C (H4), D (H5); returns to be integrated as BATCH_20261019_002"
     }
    ]
   }
