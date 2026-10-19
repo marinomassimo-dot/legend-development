@@ -30,7 +30,7 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "CLAIMED",
+ "CURRENT_STATE": "WAVE_1_COMPLETE — lot exhausted, report pending integration",
  "assigned_on": "2026-10-19",
  "TASK_ACK": {
   "TASK_ID": "METAB-G1-A-20261019",
@@ -50,6 +50,158 @@
   "durable_pointer": "ledger/tasks/scientist-a/METAB-G1-A-20261019.json on branch task/METAB-G1-A-20261019 (worktree .claude/worktrees/metab-g1-a)",
   "claim_precondition_checked": "G1 lot is disjoint from G2/G3/G4 lots by the selection file; M0 packet is run per PMID before each paper."
  },
- "DEFAULTS_TAKEN": [],
- "STOP_LOG": []
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "commit script refused each manifest commit with VERDICT STALE because a new manifest stales the pathograph inventory (and, with staged receipts, other derived surfaces)",
+   "default_taken": "set LEGEND_STALE_SURFACES_BECAUSE with the dispatch brief's reason on every path-scoped commit (about 20 commits)",
+   "why_safe": "the brief assigns regeneration of the shared derived surfaces (batch_queue, coverage_report, reading_state, pathograph) to the Orchestrator once all inputs are committed; none of my commits touches a ledger, the state manifest or a current file",
+   "what_would_differ": "waiting would have blocked the lot; regenerating would have baked peers' in-flight files into shared surfaces"
+  },
+  {
+   "condition": "no validated discovery-ledger writer for an actor; registry edits are reserved to BATCH_COMMIT",
+   "default_taken": "carried proposed edits as op lists inside commit candidates (DL-MECH-015 correction in LIPID-02, DL-THER-080 caution in LIPID-05, DL-MECH-012 pointer in LIPID-06)",
+   "why_safe": "candidates are the sanctioned route; nothing was written to any registry",
+   "what_would_differ": "a writer would have applied them at once"
+  },
+  {
+   "condition": "the auto-mode classifier refused the dry run of record_scoped_edit.py apply for the DL-MECH-012 op list against the shared registry",
+   "default_taken": "did not retry or work around; shipped the op list in LIPID-06 section 4 marked NOT dry-run, with the old string verified by a count in the branch's own copy",
+   "why_safe": "no registry was written; the integrator dry-runs before applying",
+   "what_would_differ": "a dry run would have confirmed the span"
+  },
+  {
+   "condition": "patient photographs (Wong 2025 Figure 1A) and movement-disorder videos (Wong 2025, Sun 2026) cannot or should not be opened",
+   "default_taken": "left uninspected, declared in coverage and the receipts as partial_fulltext_read for the two papers; no decoder exists for the videos",
+   "why_safe": "understating depth is the rule; the unread surfaces carry no quantitative claim used",
+   "what_would_differ": "a decoder or operator review of the photographs would raise the two receipts to complete"
+  },
+  {
+   "condition": "a symlink of the shared files/ tree into the worktree was refused by the manifest validator (artifact path escapes the workspace)",
+   "default_taken": "removed the symlink; validated manifests through the root tool with --artifact-workspace pointing at the shared checkout (absolute path)",
+   "why_safe": "the evidence stays in the shared gitignored files/ tree with SHA-256 in each manifest",
+   "what_would_differ": "none for the record"
+  },
+  {
+   "condition": "fulltext_receipts.py record is forbidden to this actor but each staged receipt needed a validity check",
+   "default_taken": "validated each staged JSON with the ledger's own validators in a no-write script against the live ledger sequence",
+   "why_safe": "the ledger and state manifest were not touched (verify OK, 475 chained receipts)",
+   "what_would_differ": "the Orchestrator records them in event-ID order and may see a refusal this check could not predict"
+  },
+  {
+   "condition": "the PMC XML route returned 500 or interstitials for two papers (Leduc 2011, Richards 2015)",
+   "default_taken": "used the plain PMC article URL that returned the body on one attempt, and the proof-of-work supplement fetcher for the Leduc supplement; source_locator names the persisted artefact, not the URL",
+   "why_safe": "artefacts persisted with SHA-256; the recipe is in each manifest",
+   "what_would_differ": "none for the record"
+  },
+  {
+   "condition": "main advanced (scientist-d shipped the paper_packet --artifact-workspace flag) while the branch was open",
+   "default_taken": "merged main into the task branch before landing",
+   "why_safe": "a merge, not a rebase; no history rewritten",
+   "what_would_differ": "the packet check could not have run from the worktree"
+  }
+ ],
+ "STOP_LOG": [],
+ "WAVE_1_RESULT": {
+  "PMIDS_READ": [
+   "20942981",
+   "21444760",
+   "35559044",
+   "39500530",
+   "25595186",
+   "41715204",
+   "36583573",
+   "40590574",
+   "32123819",
+   "42454491",
+   "41815956",
+   "40997116",
+   "39963730",
+   "41704776",
+   "36969404"
+  ],
+  "PARKED": {},
+  "manifests": "15 strict-validator PASS (deepdive_manifest --verify-artifacts --require-current-schema) and paper_packet check manifest validator PASS for all 15",
+  "depth": {
+   "complete_fulltext_read": 13,
+   "partial_fulltext_read": 2,
+   "partial_pmids": [
+    "41715204",
+    "40590574"
+   ]
+  },
+  "receipts_staged": "disease-models/wwox/research/receipt_staging/scientist-a/",
+  "commit_candidates": [
+   "CC-20261019-SCIENTIST-A-LIPID-01",
+   "CC-20261019-SCIENTIST-A-LIPID-02",
+   "CC-20261019-SCIENTIST-A-LIPID-03",
+   "CC-20261019-SCIENTIST-A-LIPID-04",
+   "CC-20261019-SCIENTIST-A-LIPID-05",
+   "CC-20261019-SCIENTIST-A-LIPID-06"
+  ],
+  "analysis_note": "disease-models/wwox/research/metabolic_wave_20261019_scientist-a.md",
+  "self_eval": "disease-models/wwox/research/session_evaluations/2026-10-19_METAB-G1-A-20261019.md",
+  "micro_upgrade": "framework/scripts/paper_packet.py (relative --artifact-workspace resolved against the invoker) with test_paper_packet.py regression",
+  "unread_debts_named": [
+   "29675105",
+   "34015398",
+   "15548692 (WWOX-direct, behind Liu S 2024)",
+   "non-WWOX primaries behind Sahu 2026 (glial S1P, ACOX1) and Siddiqui 2023 (astrocyte ELOVL1) for the integrator to queue"
+  ],
+  "registry_observations": [
+   "CORPUS-STUB-157 title says Hypertension but the paper is on ischemic stroke (queue entry FT-130)",
+   "DL-MECH-015 source note cites a prior reading with no receipt",
+   "CORPUS-STUB-109 may share the Liu-group deposit layout (unchecked)"
+  ],
+  "DEFAULTS_TAKEN": [
+   {
+    "condition": "commit script refused each manifest commit with VERDICT STALE because a new manifest stales the pathograph inventory (and, with staged receipts, other derived surfaces)",
+    "default_taken": "set LEGEND_STALE_SURFACES_BECAUSE with the dispatch brief's reason on every path-scoped commit (about 20 commits)",
+    "why_safe": "the brief assigns regeneration of the shared derived surfaces (batch_queue, coverage_report, reading_state, pathograph) to the Orchestrator once all inputs are committed; none of my commits touches a ledger, the state manifest or a current file",
+    "what_would_differ": "waiting would have blocked the lot; regenerating would have baked peers' in-flight files into shared surfaces"
+   },
+   {
+    "condition": "no validated discovery-ledger writer for an actor; registry edits are reserved to BATCH_COMMIT",
+    "default_taken": "carried proposed edits as op lists inside commit candidates (DL-MECH-015 correction in LIPID-02, DL-THER-080 caution in LIPID-05, DL-MECH-012 pointer in LIPID-06)",
+    "why_safe": "candidates are the sanctioned route; nothing was written to any registry",
+    "what_would_differ": "a writer would have applied them at once"
+   },
+   {
+    "condition": "the auto-mode classifier refused the dry run of record_scoped_edit.py apply for the DL-MECH-012 op list against the shared registry",
+    "default_taken": "did not retry or work around; shipped the op list in LIPID-06 section 4 marked NOT dry-run, with the old string verified by a count in the branch's own copy",
+    "why_safe": "no registry was written; the integrator dry-runs before applying",
+    "what_would_differ": "a dry run would have confirmed the span"
+   },
+   {
+    "condition": "patient photographs (Wong 2025 Figure 1A) and movement-disorder videos (Wong 2025, Sun 2026) cannot or should not be opened",
+    "default_taken": "left uninspected, declared in coverage and the receipts as partial_fulltext_read for the two papers; no decoder exists for the videos",
+    "why_safe": "understating depth is the rule; the unread surfaces carry no quantitative claim used",
+    "what_would_differ": "a decoder or operator review of the photographs would raise the two receipts to complete"
+   },
+   {
+    "condition": "a symlink of the shared files/ tree into the worktree was refused by the manifest validator (artifact path escapes the workspace)",
+    "default_taken": "removed the symlink; validated manifests through the root tool with --artifact-workspace pointing at the shared checkout (absolute path)",
+    "why_safe": "the evidence stays in the shared gitignored files/ tree with SHA-256 in each manifest",
+    "what_would_differ": "none for the record"
+   },
+   {
+    "condition": "fulltext_receipts.py record is forbidden to this actor but each staged receipt needed a validity check",
+    "default_taken": "validated each staged JSON with the ledger's own validators in a no-write script against the live ledger sequence",
+    "why_safe": "the ledger and state manifest were not touched (verify OK, 475 chained receipts)",
+    "what_would_differ": "the Orchestrator records them in event-ID order and may see a refusal this check could not predict"
+   },
+   {
+    "condition": "the PMC XML route returned 500 or interstitials for two papers (Leduc 2011, Richards 2015)",
+    "default_taken": "used the plain PMC article URL that returned the body on one attempt, and the proof-of-work supplement fetcher for the Leduc supplement; source_locator names the persisted artefact, not the URL",
+    "why_safe": "artefacts persisted with SHA-256; the recipe is in each manifest",
+    "what_would_differ": "none for the record"
+   },
+   {
+    "condition": "main advanced (scientist-d shipped the paper_packet --artifact-workspace flag) while the branch was open",
+    "default_taken": "merged main into the task branch before landing",
+    "why_safe": "a merge, not a rebase; no history rewritten",
+    "what_would_differ": "the packet check could not have run from the worktree"
+   }
+  ],
+  "STOP_LOG": []
+ }
 }
