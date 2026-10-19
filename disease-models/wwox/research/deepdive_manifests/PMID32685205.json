@@ -1,0 +1,386 @@
+{
+ "schema_version": 2,
+ "pmid": "32685205",
+ "doi": "10.1155/2020/3642035",
+ "receipt": "FTR-20261019-32685205-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID32685205.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "An Indonesian medical-faculty laboratory; primary for its own 15-rat experiment; the ketogenic pellet was prepared in-house, so composition and reproducibility rest on the authors' own recipe (Tables 1-2)."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "ketogenic diet AND anemia",
+    "count": 22,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (ketogenic OR ketone)",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts at the stated date."
+ },
+ "multihop": {
+  "references_enumerated": 28,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 32685205 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 32685205: publication types ['Journal Article']; correction/retraction link markers in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 28,
+   "references_screened": 23,
+   "references_with_doi": 23,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 5
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID32685205_Arsyad2020_PMC.xml",
+   "sha256": "798ff8ca1a608d6f66fc6eee227e80e187f0a8418e20dab80a69dcf5b85e9bb2",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC7341377: abstract, body, Tables 1-6 and three figure legends in the JATS floats, 28 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7341377/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID32685205/JNME2020-3642035.001.jpg",
+   "sha256": "12543947c030310a95133f2d9ca9d3d53589a60baa7857b60fa4a330ccc6a54e",
+   "kind": "figure",
+   "note": "Figure 1 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7341377/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID32685205/JNME2020-3642035.002.jpg",
+   "sha256": "0a188d2f42cd11598f9c9914a6e146c45e68b3bcd61a402b4a242bf29d0e41a0",
+   "kind": "figure",
+   "note": "Figure 2 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7341377/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID32685205/JNME2020-3642035.003.jpg",
+   "sha256": "3b883eae3b65dbc70c9da9f761fb5a078017aeec8d4d306523c01abf8b3755e4",
+   "kind": "figure",
+   "note": "Figure 3 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7341377/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC7341377/fullTextXML returned HTTP 200 (72684 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "Design: 15 male Wistar rats, 8 on standard chow and 7 on a ketogenic diet for 60 days, caged singly, food ad libitum.",
+    "snippet": "Rats were divided into two groups. The first group (n = 8) received a standard diet, while the second group received the ketogenic diet for 60 days.",
+    "anchor": "Materials and Methods, Experimental Protocols",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32685205_Arsyad2020_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "healthy adult male Wistar rats, 60 days of home-made high-fat diet versus standard chow (n = 7 versus 8), single terminal blood sample",
+     "genotype": "wild type",
+     "comparator": "standard chow group",
+     "endpoint": "blood gas, haematology, liver and kidney markers, MDA, SOD"
+    }
+   },
+   {
+    "proposition": "Table 1 note: the in-house diet is built on a fat to (carbohydrate plus protein) ratio of 8.6 to 1, from goat fat, egg yolk, avocado and peanuts.",
+    "snippet": "Formula is prepared based on ketogenic diet for rats, with the ratio of 8.6 : 1 portion of fat:(carbohydrate + protein) [16].",
+    "anchor": "Table 1 footnote",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID32685205_Arsyad2020_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "healthy adult male Wistar rats, 60 days of home-made high-fat diet versus standard chow (n = 7 versus 8), single terminal blood sample",
+     "genotype": "wild type",
+     "comparator": "standard chow group",
+     "endpoint": "blood gas, haematology, liver and kidney markers, MDA, SOD"
+    }
+   },
+   {
+    "proposition": "Weight: ketogenic rats fell from 260 to 157 g (about 40 percent) while standard rats rose from 252 to 319 g.",
+    "snippet": "Ketogenic7Baseline260 ± 12.600.01∗Posttreatment157 ± 06.40",
+    "anchor": "Table 4",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID32685205_Arsyad2020_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "healthy adult male Wistar rats, 60 days of home-made high-fat diet versus standard chow (n = 7 versus 8), single terminal blood sample",
+     "genotype": "wild type",
+     "comparator": "standard chow group",
+     "endpoint": "blood gas, haematology, liver and kidney markers, MDA, SOD"
+    }
+   },
+   {
+    "proposition": "Energy intake: Table 3 shows the ketogenic group eating a similar or higher energy intake than the standard group in most weeks (week 8: 98.24 versus 75.57 kcal per day) despite the weight loss.",
+    "snippet": "Ketogenic88.7784.7882.8683.4586.7084.7888.7798.24",
+    "anchor": "Table 3",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID32685205_Arsyad2020_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "healthy adult male Wistar rats, 60 days of home-made high-fat diet versus standard chow (n = 7 versus 8), single terminal blood sample",
+     "genotype": "wild type",
+     "comparator": "standard chow group",
+     "endpoint": "blood gas, haematology, liver and kidney markers, MDA, SOD"
+    }
+   },
+   {
+    "proposition": "Blood gas: control pH 7.52 and pCO2 27.63 mmHg against ketogenic pH 7.36 and pCO2 35.72, with base excess 1.08 versus 0.32 mmol/L.",
+    "snippet": "Base excess (mmol/l)8Standard1.08 ± 0.430.04∗7Ketogenic0.32 ± 0.11",
+    "anchor": "Table 5",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID32685205_Arsyad2020_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "healthy adult male Wistar rats, 60 days of home-made high-fat diet versus standard chow (n = 7 versus 8), single terminal blood sample",
+     "genotype": "wild type",
+     "comparator": "standard chow group",
+     "endpoint": "blood gas, haematology, liver and kidney markers, MDA, SOD"
+    }
+   },
+   {
+    "proposition": "The text calls the pH fall very significant and the group acidotic; the ketogenic pH of 7.36 is a value close to the neutral range for blood while the standard group sits at 7.52.",
+    "snippet": "It was found there was a very significant decrease in blood pH of rats following 2 months of having a ketogenic diet compared to those fed with a standard diet (p < 0.01).",
+    "anchor": "Results, Blood pH",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32685205_Arsyad2020_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "healthy adult male Wistar rats, 60 days of home-made high-fat diet versus standard chow (n = 7 versus 8), single terminal blood sample",
+     "genotype": "wild type",
+     "comparator": "standard chow group",
+     "endpoint": "blood gas, haematology, liver and kidney markers, MDA, SOD"
+    }
+   },
+   {
+    "proposition": "Haematology: haemoglobin 13.76 to 11.98 g/dL (p 0.02), haematocrit 39.90 to 32.77, MCV 49.78 to 42.67, MCH 17.15 to 15.62, with red cell count not significantly different (8.04 versus 7.65, p 0.33); no iron, ferritin, reticulocyte or copper measurement.",
+    "snippet": "Hemoglobin (g/dl)8Standard13.76 ± 0.330.02∗7Ketogenic11.98 ± 0.54",
+    "anchor": "Table 6",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID32685205_Arsyad2020_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "healthy adult male Wistar rats, 60 days of home-made high-fat diet versus standard chow (n = 7 versus 8), single terminal blood sample",
+     "genotype": "wild type",
+     "comparator": "standard chow group",
+     "endpoint": "blood gas, haematology, liver and kidney markers, MDA, SOD"
+    }
+   },
+   {
+    "proposition": "The text calls the rats anaemic from lower indices on a single end-point sample, without a baseline blood draw.",
+    "snippet": "These hematological abnormalities indicate that rats fed with the ketogenic diet were anemic.",
+    "anchor": "Results, Anemia",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32685205_Arsyad2020_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "healthy adult male Wistar rats, 60 days of home-made high-fat diet versus standard chow (n = 7 versus 8), single terminal blood sample",
+     "genotype": "wild type",
+     "comparator": "standard chow group",
+     "endpoint": "blood gas, haematology, liver and kidney markers, MDA, SOD"
+    }
+   },
+   {
+    "proposition": "Authors attribute anaemia on ketogenic diet in children to copper deficiency and say it is manageable with copper supplementation, citing other work; copper was not measured here.",
+    "snippet": "However, this complication of the ketogenic diet can be managed with copper supplementation.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32685205_Arsyad2020_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "healthy adult male Wistar rats, 60 days of home-made high-fat diet versus standard chow (n = 7 versus 8), single terminal blood sample",
+     "genotype": "wild type",
+     "comparator": "standard chow group",
+     "endpoint": "blood gas, haematology, liver and kidney markers, MDA, SOD"
+    }
+   },
+   {
+    "proposition": "Liver and kidney function markers did not differ significantly; creatinine and urea were somewhat higher in ketogenic rats.",
+    "snippet": "However, when comparing the renal function test, a slight increase in plasma creatinine and urea levels was found in the ketogenic group compared to standard, although the difference was not statistically significant.",
+    "anchor": "Results, Liver and kidney",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32685205_Arsyad2020_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "healthy adult male Wistar rats, 60 days of home-made high-fat diet versus standard chow (n = 7 versus 8), single terminal blood sample",
+     "genotype": "wild type",
+     "comparator": "standard chow group",
+     "endpoint": "blood gas, haematology, liver and kidney markers, MDA, SOD"
+    }
+   },
+   {
+    "proposition": "Oxidative stress: tissue malondialdehyde rose (very significant) and plasma SOD fell about 80 percent in ketogenic rats; MDA and SOD measured once at end point.",
+    "snippet": "The increase of MDA level in the ketogenic group was accompanied by a reduced level of antioxidant superoxide dismutase (SOD), which was ∼80% lower compared to that of standard (p < 0.01).",
+    "anchor": "Results, Lipid peroxidation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32685205_Arsyad2020_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "healthy adult male Wistar rats, 60 days of home-made high-fat diet versus standard chow (n = 7 versus 8), single terminal blood sample",
+     "genotype": "wild type",
+     "comparator": "standard chow group",
+     "endpoint": "blood gas, haematology, liver and kidney markers, MDA, SOD"
+    }
+   },
+   {
+    "proposition": "Hypoglycaemia: blood glucose in ketogenic rats was 57 mg/dL, called hypoglycaemic by the authors, with blood ketones about eight times higher.",
+    "snippet": "At this stage, the value of blood glucose was 57 ± 5.69 mg/dl, suggesting a hypoglycemic condition of the ketogenic diet group.",
+    "anchor": "Results, Weight, glucose and ketones",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32685205_Arsyad2020_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "healthy adult male Wistar rats, 60 days of home-made high-fat diet versus standard chow (n = 7 versus 8), single terminal blood sample",
+     "genotype": "wild type",
+     "comparator": "standard chow group",
+     "endpoint": "blood gas, haematology, liver and kidney markers, MDA, SOD"
+    }
+   },
+   {
+    "proposition": "Figure 1: blood glucose about 136 mg/dL (standard) against about 57 (ketogenic) and blood ketones about 0.3 against about 8 mmol/L, both marked with two asterisks; n = 8 and 7.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 two bar charts with error bars: glucose ~136 vs ~57 mg/dL; ketone ~0.34 vs ~7.97 mmol/L.",
+    "anchor": "Figure 1, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID32685205/JNME2020-3642035.001.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "healthy adult male Wistar rats, 60 days of home-made high-fat diet versus standard chow (n = 7 versus 8), single terminal blood sample",
+     "genotype": "wild type",
+     "comparator": "standard chow group",
+     "endpoint": "blood gas, haematology, liver and kidney markers, MDA, SOD"
+    }
+   },
+   {
+    "proposition": "Figure 2: AST, ALT, creatinine and urea bars with overlapping error bars; creatinine about 0.39 versus 0.59 mg/dL (about a 50 percent higher mean in ketogenic rats, not significant at n = 7 and 8).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 four bar charts AST ~139 vs ~122, ALT ~61 vs ~65, creatinine ~0.39 vs ~0.59, urea ~41 vs ~48.",
+    "anchor": "Figure 2, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID32685205/JNME2020-3642035.002.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "healthy adult male Wistar rats, 60 days of home-made high-fat diet versus standard chow (n = 7 versus 8), single terminal blood sample",
+     "genotype": "wild type",
+     "comparator": "standard chow group",
+     "endpoint": "blood gas, haematology, liver and kidney markers, MDA, SOD"
+    }
+   },
+   {
+    "proposition": "Figure 3: the y axes for liver MDA (33 to 41) and renal MDA (35 to 44) are truncated, so differences of about 7 percent (36.5 to 39.1) and 11 percent (38.3 to 42.6) appear large; plasma SOD about 33 versus 3.5 U/mL with a very wide control error bar (about 25 to 42).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3 three bar charts: liver MDA ~36.5 vs ~39.1 ug/g; renal MDA ~38.3 vs ~42.6; plasma SOD ~33 vs ~3.5 U/mL.",
+    "anchor": "Figure 3, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID32685205/JNME2020-3642035.003.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "healthy adult male Wistar rats, 60 days of home-made high-fat diet versus standard chow (n = 7 versus 8), single terminal blood sample",
+     "genotype": "wild type",
+     "comparator": "standard chow group",
+     "endpoint": "blood gas, haematology, liver and kidney markers, MDA, SOD"
+    }
+   }
+  ]
+ }
+}
