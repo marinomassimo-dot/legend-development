@@ -1,5 +1,5 @@
 {
- "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
  "_note": "Metabolic batch. Orchestrator assumption: scientist-d is a fourth equivalent Scientist under the shared contract roles/scientist.md (body 32); operator authorised up to four Scientists on 2026-10-19.",
  "TASK_ID": "METAB-G3-C-20261019",
  "DIRECTIVE_VERSION": 1,
@@ -30,6 +30,26 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-19"
+ "CURRENT_STATE": "CLAIMED",
+ "assigned_on": "2026-10-19",
+ "TASK_ACK": {
+  "TASK_ID": "METAB-G3-C-20261019",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-c",
+  "DECISION": "ACCEPTED",
+  "acked_at": "2026-10-19T00:00:00Z",
+  "reading_mode": "PRIMARY_EVIDENCE_READ",
+  "duplicate_assignment_check": "Lot is group G3 of the selection file; peer contracts METAB-G1/G2/G4 carry other groups. Receipt ledger queried per PMID at M0."
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "METAB-G3-C-20261019",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-c",
+  "claimed_at": "2026-10-19T00:00:00Z",
+  "durable_pointer": "ledger/tasks/scientist-c/METAB-G3-C-20261019.json on branch task/METAB-G3-C-20261019, worktree .claude/worktrees/metab-g3-c",
+  "lot": "G3 tier order: 1 (26355344, 36364214, 35571988, 40808923, 38570643), then 2, then 3; HELD rows only with a stated question"
+ },
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
 }
