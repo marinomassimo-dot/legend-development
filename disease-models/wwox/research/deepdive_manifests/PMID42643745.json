@@ -1,0 +1,201 @@
+{
+ "schema_version": 2,
+ "pmid": "42643745",
+ "doi": "10.1155/crnm/2230320",
+ "pmcid": "PMC13505190",
+ "receipt": "FTR-20261019-42643745-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's abstract-level 'why it matters' line and its per-theme summary of what the repository holds (GABA/vigabatrin modelled; no dopamine, catecholamine, adrenal, serotonin text). No registry record was opened before the first pass.",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/metabolic_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the triples are exposed in the commit candidate/analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A single-patient case report (18-month-old boy, consanguineous parents) with a novel homozygous SLC18A2 canonical splice-acceptor variant classified likely pathogenic on PVS1, PM2 and PP4 plus SpliceAI; no RNA study and no CSF neurotransmitter analysis. Treatment response is clinical observation without rating scales or video. The authors disclose language editing with a generative-AI tool. No WWOX content; its value is the diagnostic pattern (oculogyric crises read as seizures, normal MRI, normal EEG during events)."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (VMAT2 OR SLC18A2 OR SLC6A3)",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (dopamin* OR catecholamin* OR monoamine*)",
+    "count": 3,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are search hits only."
+ },
+ "multihop": {
+  "references_enumerated": 10,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "The article cites no WWOX-directed reference that this reading could identify; reference list counted, not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42643745 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED in the seven registry surfaces at commit 718db84f; a statement about that query only."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 10,
+   "references_screened": 9,
+   "references_with_doi": 9,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42643745_Nikkhah2026_PMC.xml",
+   "sha256": "3f874aa36067a2ba4f1618e24446a27ea417ff3de2533d347b0ea7d23da899fc",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13505190/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "3f874aa36067a2ba4f1618e24446a27ea417ff3de2533d347b0ea7d23da899fc"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The proband's events were first treated as seizures; video-EEG captured one event with no epileptiform activity.",
+    "snippet": "Video‐EEG captured one event and demonstrated no epileptiform activity, confirming a nonepileptic movement disorder.",
+    "anchor": "Case presentation, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42643745_Nikkhah2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CSF neurotransmitter analysis was discussed but not performed, because of parental reluctance.",
+    "snippet": "Analysis of cerebrospinal fluid neurotransmitters was discussed but not performed due to parental reluctance.",
+    "anchor": "Case presentation, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42643745_Nikkhah2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Introduction states routine CSF HVA and 5-HIAA are usually normal in PKDYS2.",
+    "snippet": "Notably, routine cerebrospinal fluid neurotransmitter levels (HVA, 5‐HIAA) are usually normal in PKDYS2, distinguishing it from other monoamine disorders [3].",
+    "anchor": "Introduction, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42643745_Nikkhah2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The variant was classified likely pathogenic from a canonical splice-acceptor location (PVS1), absence from population databases (PM2) and phenotype (PP4), with SpliceAI support and no RNA study.",
+    "snippet": "Although functional RNA studies were not performed, the variant affects a canonical splice acceptor site and SpliceAI predicted loss of the native splice acceptor site (DS_AL = 0.74), supporting a loss‐of‐function effect.",
+    "anchor": "Discussion, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42643745_Nikkhah2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Brain MRI and the routine metabolic screen were normal.",
+    "snippet": "Brain MRI and routine metabolic screens (including amino acids, urine organic acids, lactate, and ammonia) were normal.",
+    "anchor": "Case presentation, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42643745_Nikkhah2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Levodopa-benserazide was stopped because adverse effects (irritability, hyperactivity, sleeplessness) outweighed an initial slight gain in head control.",
+    "snippet": "Because these adverse effects outweighed any benefit, levodopa was discontinued.",
+    "anchor": "Case presentation, para 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42643745_Nikkhah2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state absence of rating scales and of video as limitations of the response assessment.",
+    "snippet": "A limitation of this report is the absence of standardized quantitative rating scales for assessing the severity of dystonia and parkinsonism before and after treatment",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42643745_Nikkhah2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Genotype-outcome contrast quoted from a cited cohort: 9 of 17 with p.Pro237His died by age 13, all 14 with p.Pro387Leu survived.",
+    "snippet": "In Saida et al.’s series, 9 of 17 patients with Pro237His died by age 13 years, whereas all 14 patients with Pro387Leu survived [1].",
+    "anchor": "Discussion, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42643745_Nikkhah2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A generative-AI chat tool was used for language editing.",
+    "snippet": "used ChatGPT (Version 4) solely for language editing of the manuscript",
+    "anchor": "Acknowledgements",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42643745_Nikkhah2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13505190/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body or a table."
+ }
+}

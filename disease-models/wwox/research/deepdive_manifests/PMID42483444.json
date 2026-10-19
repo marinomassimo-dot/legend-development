@@ -1,0 +1,201 @@
+{
+ "schema_version": 2,
+ "pmid": "42483444",
+ "doi": "10.3389/fneur.2026.1788936",
+ "pmcid": "PMC13387017",
+ "receipt": "FTR-20261019-42483444-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's abstract-level 'why it matters' line and its per-theme summary of what the repository holds (GABA/vigabatrin modelled; no dopamine, catecholamine, adrenal, serotonin text). No registry record was opened before the first pass.",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/metabolic_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the triples are exposed in the commit candidate/analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "output_kind": "review",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A targeted narrative review of pediatric parkinsonism (PubMed search limited to 10 years to December 2025; no formal appraisal, stated as a limitation). The CSF/imaging table content is a secondary synthesis of cited reviews. The article discloses that generative-AI tools were used for language editing. WWOX does not appear anywhere in the text."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (Parkinson*)",
+    "count": 12,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (dopamin* OR catecholamin* OR monoamine*)",
+    "count": 3,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are search hits only."
+ },
+ "multihop": {
+  "references_enumerated": 40,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "The article cites no WWOX-directed reference that this reading could identify; reference list counted, not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42483444 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED in the seven registry surfaces at commit 718db84f; a statement about that query only."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 40,
+   "references_screened": 37,
+   "references_with_doi": 37,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42483444_NaranjoLobo2026_PMC.xml",
+   "sha256": "a5d676c51288d0fb58093510b175db70835696d7e09c4c67b56b80a339e69bb3",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13387017/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "a5d676c51288d0fb58093510b175db70835696d7e09c4c67b56b80a339e69bb3"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The review is a targeted narrative review with a PubMed search restricted to the last ten years, and states that it is not a systematic review.",
+    "snippet": "The literature search was not conducted as a formal systematic review, and therefore some relevant studies may not have been captured and selection bias cannot be excluded.",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42483444_NaranjoLobo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Generative AI was used for language editing.",
+    "snippet": "ChatGPT (OpenAI) and Perplexity (OpenAI) were used for assistance with language editing and improvement of clarity during the preparation of the manuscript.",
+    "anchor": "Back matter, AI statement",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42483444_NaranjoLobo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Infancy table: in DAT deficiency the CSF HVA/5-HIAA ratio is markedly increased; in VMAT2 deficiency urinary monoamine metabolites are elevated while free monoamines are low.",
+    "snippet": "in VMAT2 deficiency, urinary monoamine metabolites are elevated while free monoamines are low",
+    "anchor": "Table 3, dopamine transport defects row",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42483444_NaranjoLobo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Infancy table: TH deficiency gives markedly reduced CSF HVA, and BH4-pathway disorders give combined low HVA and 5-HIAA with an abnormal pterin profile.",
+    "snippet": "Markedly reduced HVA in CSF with variable changes in other monoamines and pterins in TH deficiency; combined low HVA and 5-HIAA with abnormal CSF pterin profile",
+    "anchor": "Table 3, dopamine synthesis defects row",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42483444_NaranjoLobo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Dopamine transporter functional imaging is typically normal in monoamine synthesis defects and abnormal in nigrostriatal denervation.",
+    "snippet": "Dopaminergic functional imaging (such Dopamine Transporter [DaT]-SPECT [DaTSCAN] or dopaminergic PET) is typically normal and can aid in distinguishing disorders with preserved nigrostriatal function",
+    "anchor": "4.1.1, last para",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42483444_NaranjoLobo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Levodopa and standard dopaminergic therapy are largely ineffective in DAT deficiency.",
+    "snippet": "Levodopa and standard dopaminergic therapy are largely ineffective in DAT deficiency",
+    "anchor": "Table 3, dopamine transport defects row",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42483444_NaranjoLobo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review lists epilepsy, developmental delay and neurodevelopmental disorders among the associations of pediatric parkinsonism.",
+    "snippet": "It is commonly associated with additional neurological manifestations, including dystonia, global developmental delay, epilepsy, neurodevelopmental disorders, and oculogyric crises, among others (1).",
+    "anchor": "Introduction, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42483444_NaranjoLobo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The proposed work-up begins with CSF monoamines, pterins and urine studies in infants and young children.",
+    "snippet": "Metabolic and CSF studies are fundamental in infants and young children, since several etiologies are treatable (32–34).",
+    "anchor": "6.2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42483444_NaranjoLobo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The diagnostic algorithm is a figure; its caption is the only text, and the figure was not inspected as an image in this reading.",
+    "snippet": "Proposed diagnostic algorithm for pediatric parkinsonism. This diagnostic algorithm summarizes a practical age-stratified approach to the etiological evaluation of pediatric parkinsonism.",
+    "anchor": "Figure 2 caption",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42483444_NaranjoLobo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13387017/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body or a table."
+ }
+}

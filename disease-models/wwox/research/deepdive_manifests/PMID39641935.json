@@ -1,0 +1,209 @@
+{
+ "schema_version": 2,
+ "pmid": "39641935",
+ "doi": "10.1111/epi.18190",
+ "pmcid": "PMC11827727",
+ "receipt": "FTR-20261019-39641935-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's abstract-level 'why it matters' line and its per-theme summary of what the repository holds (GABA/vigabatrin modelled; no dopamine, catecholamine, adrenal, serotonin text). No registry record was opened before the first pass.",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/metabolic_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the triples are exposed in the commit candidate/analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A registry-based cohort (Dutch TSC Registry, retrospective, plus the prospective EPISTOP cohort) of 80 vigabatrin-treated TSC infants, 23 untreated TSC infants and 29 non-TSC epilepsy controls, with blinded MRI review and pre-treatment scans for every treated child. It is the better-controlled of the two VABAM cohorts read in this wave, but its population is TSC (an mTORopathy), and hormonal therapy was used in only 8 children. No WWOX patient."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND vigabatrin",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (hormon* OR ACTH OR corticosteroid*)",
+    "count": 28,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are search hits only."
+ },
+ "multihop": {
+  "references_enumerated": 44,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "The article cites no WWOX-directed reference that this reading could identify; reference list counted, not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 39641935 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED in the seven registry surfaces at commit 718db84f; a statement about that query only."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 44,
+   "references_screened": 42,
+   "references_with_doi": 42,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39641935_Stevering2025_PMC.xml",
+   "sha256": "391016fa02ee6fc5ea4010e58ceccff58981b20d267de9e3ba769987da42a491",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11827727/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "391016fa02ee6fc5ea4010e58ceccff58981b20d267de9e3ba769987da42a491"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The cohort comprises 80 vigabatrin-treated TSC infants, 23 untreated TSC infants and 29 non-TSC epilepsy controls.",
+    "snippet": "We included 80 TSC infants with VGB treatment during MRI (TSC+VGB+), 23 TSC infants without VGB treatment during the entire study period (TSC+VGB−), and 29 epilepsy patients without TSC and VGB treatment (TSC−VGB−).",
+    "anchor": "Results 3.1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39641935_Stevering2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "MRI review was independent and blinded to vigabatrin status.",
+    "snippet": "independently reviewed by two researchers (M.L. and C.S.) blinded for VGB status",
+    "anchor": "Methods 2.2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39641935_Stevering2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "VABAM-like abnormalities also occurred without vigabatrin, in 7 of 52 untreated children.",
+    "snippet": "Prevalence of “VABAM‐like MRI abnormalities not VGB‐related” was, therefore, 13.5% (7/52 patients).",
+    "anchor": "Results 3.2.2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39641935_Stevering2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Vigabatrin was independently associated with VABAM; TSC diagnosis and refractory epilepsy were not.",
+    "snippet": "VGB was significantly and independently associated with the detection of VABAM (RR = 3.57, 95% confidence interval [CI] = 1.43–6.39), whereas refractory epilepsy (RR = .92, 95% CI = .43–1.81) and TSC (RR = .49, 95% CI = .07–1.99) were not.",
+    "anchor": "Results 3.2.3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39641935_Stevering2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Concomitant hormonal or steroid therapy was not associated with the occurrence of VABAM on MRI (univariable RR 0.94).",
+    "snippet": "Concomitant hormonal/steroid therapy | .94 (.17–2.27) | .92",
+    "anchor": "Table 2, last row",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39641935_Stevering2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Hormonal or steroid therapy was associated with the clinical symptoms (RR 9.00), in only eight treated patients.",
+    "snippet": "Concomitant hormonal or steroid therapy appeared to be a significant predictor of predefined clinical symptoms, associated with a nine times higher risk for these symptoms compared to patients without hormonal or steroid treatment (RR = 9.00, 95% CI = 2.21–18.43), although there were only eight patients treated with hormonal or steroid therapy.",
+    "anchor": "Results 3.3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39641935_Stevering2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Hormone-treated patients had more symptoms but not higher VABAM severity scores or more regions affected.",
+    "snippet": "they did not have higher VABAM severity scores (p = .06, Cohen d = 1.37) or higher numbers of ROIs affected in comparison to patients without hormonal or steroid therapy (p = .77, Cohen d = −.14)",
+    "anchor": "Results 3.3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39641935_Stevering2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "VABAM was not significantly associated with the predefined clinical symptoms.",
+    "snippet": "The presence of VABAM (or VABAM‐like MRI abnormalities) was not significantly associated with predefined clinical symptoms (RR = 2.76, 95% CI = .68–8.77).",
+    "anchor": "Results 3.3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39641935_Stevering2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "All 13 treated children with a post-treatment MRI had complete resolution after discontinuation.",
+    "snippet": "In all 13 VGB‐treated patients with “VABAM possibly VGB‐related” for whom posttreatment MRIs were available, VABAM entirely resolved after VGB discontinuation",
+    "anchor": "Results 3.2.1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39641935_Stevering2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors list a retrospective design, TSC-only treated group, and low symptom prevalence as limits; no non-TSC vigabatrin-treated group was available.",
+    "snippet": "First, we were not able to include a group of non‐TSC epilepsy patients with VGB treatment",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39641935_Stevering2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC11827727/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body or a table."
+ }
+}

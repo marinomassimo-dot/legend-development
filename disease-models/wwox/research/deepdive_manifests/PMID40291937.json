@@ -1,0 +1,209 @@
+{
+ "schema_version": 2,
+ "pmid": "40291937",
+ "doi": "10.25122/jml-2024-0398",
+ "pmcid": "PMC12022732",
+ "receipt": "FTR-20261019-40291937-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's abstract-level 'why it matters' line and its per-theme summary of what the repository holds (GABA/vigabatrin modelled; no dopamine, catecholamine, adrenal, serotonin text). No registry record was opened before the first pass.",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/metabolic_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the triples are exposed in the commit candidate/analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "output_kind": "review",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A narrative literature review (searched to January 2024, four databases, four keywords, no stated screening or appraisal procedure) of two monoamine-transport disorders, DTDS and PKDYS2. Reference-signature content is useful; the review is internally inconsistent in at least one place (anticholinergic and benzodiazepine use in DTDS). It contains no WWOX content."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (dopamin* OR catecholamin* OR monoamine*)",
+    "count": 3,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (VMAT2 OR SLC18A2 OR SLC6A3)",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are search hits only."
+ },
+ "multihop": {
+  "references_enumerated": 48,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "The article cites no WWOX-directed reference that this reading could identify; reference list counted, not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 40291937 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED in the seven registry surfaces at commit 718db84f; a statement about that query only."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 48,
+   "references_screened": 45,
+   "references_with_doi": 45,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40291937_AlSari2025_PMC.xml",
+   "sha256": "87c7f0345f799cbf3d54fea4dcabc247e04900542d06e85472584f67a3bf24e6",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12022732/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "87c7f0345f799cbf3d54fea4dcabc247e04900542d06e85472584f67a3bf24e6"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The review's method is a keyword search of four databases to January 2024 with no stated appraisal.",
+    "snippet": "This literature review included many published studies until January 2024.",
+    "anchor": "Material and methods",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40291937_AlSari2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DTDS gives elevated CSF HVA with normal 5-HIAA; the stated discriminating ratio is HVA to 5-HIAA above 4.",
+    "snippet": "Therefore, another useful finding is an HVA to 5-HIAA ratio > 4 [8,9,11].",
+    "anchor": "CSF analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40291937_AlSari2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PKDYS2 (VMAT2) is described as having normal CSF HVA and 5-HIAA, so a CSF panel can be normal in a monoamine storage disorder.",
+    "snippet": "Individuals with this condition have normal CSF neurotransmitters, with HVA and 5-HIAA levels within normal limits [12].",
+    "anchor": "CSF analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40291937_AlSari2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CSF HVA and 5-HIAA are affected by drugs, and sampling and handling must follow strict protocols.",
+    "snippet": "It must be noted that the levels of HVA and 5-HIAA can be affected by several different groups of drugs [15].",
+    "anchor": "CSF analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40291937_AlSari2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EEG is described as normal in both disorders.",
+    "snippet": "Electroencephalography (EEG) and electromyography and nerve conduction studies (ENMG) have always been found to be normal in both DTDS and PKDYS2 [16,18,19].",
+    "anchor": "EEG and EMG",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40291937_AlSari2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Oculogyric crisis and dystonia are sometimes misdiagnosed as epilepsy.",
+    "snippet": "Sometimes, patients with oculogyric crises and dystonia are misdiagnosed with epilepsy [13].",
+    "anchor": "Differential diagnosis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40291937_AlSari2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Brain MRI in PKDYS2 may show a dorsal brainstem T2 signal with restricted diffusion, in one cited report.",
+    "snippet": "brain MRI with abnormally high T2 signal intensity with restricted diffusion in the dorsal brainstem can be noted [13]",
+    "anchor": "Neuroimaging",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40291937_AlSari2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Internal inconsistency: the text says DTDS patients are not treated with anticholinergics and benzodiazepines, while Table 2 lists anticholinergic and GABAergic agents against DTDS.",
+    "snippet": "In contrast, patients with DTDS are not treated with anticholinergics and benzodiazepines.",
+    "anchor": "Management, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40291937_AlSari2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 2 lists anticholinergic medications for generalized and segmental dystonia in DTDS.",
+    "snippet": "Anticholinergic medications | Generalized and segmental dystonia | Dopamine transporter deficiency syndrome",
+    "anchor": "Table 2, row 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40291937_AlSari2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Dopaminergic drugs can worsen hypotonia and cause hyperkinesia at higher doses in PKDYS2 case reports.",
+    "snippet": "This improved dystonic posture, but when the dose was increased to 0.01 mg/kg/day, it worsened hypotonia, irritability, and sleep difficulties.",
+    "anchor": "Outcome, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40291937_AlSari2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12022732/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body or a table."
+ }
+}
