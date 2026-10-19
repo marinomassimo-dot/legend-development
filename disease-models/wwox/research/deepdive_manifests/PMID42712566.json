@@ -1,0 +1,190 @@
+{
+ "schema_version": 2,
+ "pmid": "42712566",
+ "doi": "10.3389/fped.2026.1891295",
+ "receipt": "FTR-20261019-42712566-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID42712566.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "A paediatric nutrition and systematic-review group (affiliations not weighed beyond the byline). A protocol is a plan, not an observation: nothing it says about iron and myelination is a finding of this paper."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "iron supplementation AND (myelination OR myelin) AND (infant OR child)",
+    "count": 26,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (iron OR ferroptosis)",
+    "count": 3,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts; the second query is the WWOX iron literature."
+ },
+ "multihop": {
+  "references_enumerated": 50,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42712566 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 42712566: publication types ['Journal Article']; correction/retraction link markers in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 50,
+   "references_screened": 35,
+   "references_with_doi": 35,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 15
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42712566_Sinha2026_PMC.xml",
+   "sha256": "add45067b1ee30095d1680c45133d823be88a911cff7242626d5f9ec46428e31",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC13550114: abstract, body, Table 1 and Table 2 as JATS tables, 50 references; no figures.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13550114/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13550114/fullTextXML returned HTTP 200 (87144 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "The protocol states its method frame in the Methods body: PRISMA 2020 and Cochrane Handbook, prospectively designed, registered in PROSPERO.",
+    "snippet": "The review methodology has been prospectively designed to ensure transparency, reproducibility and methodological rigor (21).",
+    "anchor": "Methods, Protocol and registration",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42712566_Sinha2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol itself says that iron supplementation effects on brain myelination and neurodevelopment in 0-3 year olds are 'unclear' and evidence on myelination is 'limited' (the premise is the authors' statement, not a result).",
+    "snippet": "Although previous systematic reviews have examined the effects of iron supplementation on psychomotor and cognitive outcomes, evidence specifically related to brain myelination remains limited (12, 13).",
+    "anchor": "Introduction, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42712566_Sinha2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Exclusion criterion: participants with significant congenital neurological abnormalities or conditions known to independently affect neurodevelopment are excluded unless outcome data are reported separately. A genetic developmental epileptic encephalopathy population would fall under this exclusion.",
+    "snippet": "Studies involving participants with significant congenital neurological abnormalities, severe chronic illnesses unrelated to iron deficiency or conditions known to independently affect neurodevelopment will be excluded unless outcome data are reported separately for eligible participants (25).",
+    "anchor": "Methods, Types of participants",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42712566_Sinha2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Myelination outcomes are to be assessed by ABR, VEP and advanced neuroimaging (myelin water imaging, DTI, MTI); these name the measurable endpoints a hypomyelination question would use.",
+    "snippet": "Brain myelination and neurophysiological maturation will be assessed using validated modalities such as auditory brainstem response (ABR), visual evoked potential (VEP) (30, 31), and advanced neuroimaging techniques including myelin water imaging (MWI), diffusion tensor imaging (DTI), and magnetization transfer imaging (MTI) (14, 15, 32).",
+    "anchor": "Methods, Primary outcomes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42712566_Sinha2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Intended supplementation timing categories: pregnancy, neonatal, infancy, early childhood; the authors expect timing to alter biological effects through oligodendrocyte maturation.",
+    "snippet": "Iron administered during pregnancy, the neonatal period, infancy, or early childhood may produce different biological effects owing to developmental differences in oligodendrocyte maturation, myelin formation, and neuronal connectivity.",
+    "anchor": "Methods, Types of interventions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42712566_Sinha2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Secondary outcomes include adverse events and iron overload or toxicity 'where reported'.",
+    "snippet": "Secondary outcomes will include adverse events associated with iron supplementation, including gastrointestinal intolerance, constipation, nausea, vomiting, diarrhea and outcomes related to iron overload or toxicity where reported.",
+    "anchor": "Methods, Secondary outcomes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42712566_Sinha2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The discussion states the expected output as an evidence synthesis on timing, dose and neuroimaging; no result exists yet.",
+    "snippet": "This review is expected to address important evidence gaps related to the optimal timing, dosage, formulation, and duration of iron supplementation during early life.",
+    "anchor": "Discussion, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42712566_Sinha2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
