@@ -1,0 +1,43 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-40590574-01",
+ "study_id": {
+  "pmid": "40590574",
+  "doi": "10.1002/mds.30258"
+ },
+ "analysis_at": "2026-10-19T18:37:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a (Scientist A), metabolic batch 2026-10-19 group G1, task METAB-G1-A-20261019 on branch task/METAB-G1-A-20261019, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN. Route: Europe PMC JATS for PMC12485584, six figure files and the supplementary container (four videos, six Word files, one PDF) from the Europe PMC supplementaryFiles zip into the root files/ tree; Figures 1B, 2, 3, 4 and 5 and the Sanger PDF page inspected as images; the clinical photographs of Figure 1A were deliberately not opened (patient photographs), so figures are stated captions_only; the supplementary Word tables were read as text but the four supplementary videos were not inspected (no decoder), so supplementary is stated captions_only and the depth is partial. Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a staged JSON for the Orchestrator and was not appended at preparation time (the Orchestrator records staged receipts in event-ID order).",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID40590574_Wong2025_PMC.xml",
+ "source_fingerprint": "f6ca74d549e7b7faba018e0288d266489b461f7820a7d191bbfa21136a31427e",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "captions_only",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID40590574.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID40590574.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-A-LIPID-04.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-a.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "manifest",
+  "Figures 1B, 2, 3, 4, 5 and Supplementary Figure S1 inspected as images; Figure 1A (patient photographs) NOT opened by choice",
+  "Supplementary Tables 1-3 and 5 read as text; Supplementary Table 1 has no seizure or EEG row",
+  "Four supplementary videos NOT inspected: no video decoder"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

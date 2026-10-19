@@ -10,6 +10,7 @@
 |---|---|---|---|
 | 1 | PMID 41715204 (Sun 2026, J Transl Med, CerS2 conditional knockout, very-long-chain sphingolipids and myelination) | `FTR-20261019-41715204-01` (partial: supplementary video not inspected) | New `PAPER` record (none exists), type murine mechanistic comparator, T3, relevance LOW (WWOX absent) |
 | 2 | PMID 36583573 (Teo 2023, Glia, CerS2 deleted in myelinating cells: myelin lipid chain length, microglia, lethality) | `FTR-20261019-36583573-01` | New `PAPER` record (none exists), murine mechanistic comparator, T3, relevance LOW (WWOX absent) |
+| 3 | PMID 40590574 (Wong 2025, Mov Disord, biallelic ELOVL1 variants: hypomyelinating leukodystrophy, movement disorder, ichthyosis) | `FTR-20261019-40590574-01` (partial: photographs and videos not inspected) | New `PAPER` record (none exists), human genetic comparator, T3, relevance LOW (WWOX absent) |
 
 ## 2 · Record content (source 1)
 
@@ -55,3 +56,17 @@ Note text to carry:
 8. The microglial subset is about four- and eight-fold more abundant | and was approximately 4‐fold more abundant in 6‐week‐old CerS2ΔO/ΔO compared to CerS2fl/fl mice, increasing to 8‐fold in 10‐week‐old CerS2ΔO/ΔO mice | Results, phagocytic microglial population, same
 9. The trigger is untested | Myelin phagocytosis by microglia can be initiated by interaction of the receptor TREM2 with myelin lipids such as ST and SM, when myelin or cellular debris is present | Discussion, paragraph 9, same
 10. The cause of death was not determined | Death in CerS2ΔO/ΔO mice was sudden and unexpected. This necessitated modification of our ethics protocol such that CerS2ΔO/ΔO mice were only kept up to 4 months of age, and we were unable to determine the exact cause of death. | Discussion, paragraph 8, same
+
+## 7 · Source 3 (PMID 40590574, Wong 2025): record content
+
+What it is: seven patients from five consanguineous families with homozygous ELOVL1 variants (one nonsense, four missense VUS); MRI hypomyelination 6 of 6 and thin corpus callosum 5 of 6; biochemistry of one patient (plasma and fibroblasts). WWOX: zero occurrences. Class-level only.
+
+Note text to carry:
+🔴 **A comparator, and a conditional negative for the WOREE seizure phenotype.** The comparison table lists seizures as absent in recessive ELOVL1 disease and the clinical table has no seizure or EEG row, so hypomyelination with thin corpus callosum from a VLCFA lesion is recorded without epilepsy. The biochemistry is one patient and one variant; the antibody used to show absent protein targets residues 250-277, beyond the truncation at 154; the truncated protein retains about 57 percent of wild-type elongation in transfected cells; Supplementary Table 2 has an anomalous C22:0 cell and Supplementary Figure S1 a variant typo (c.284C>T for c.248C>T). Photographs and videos not inspected.
+
+### LOCATOR TRIPLES FOR BLIND AUDIT (source 3)
+
+11. The antibody epitope lies beyond the truncation | As expected for a nonsense variant, Western blot analysis using a polyclonal antibody targeting the C‐terminal peptide sequence of ELOVL1 (amino acids 250–277, C‐ELOVL1) detected no signal in whole cell extracts from case 1 fibroblasts (Fig. 3A). | Results, expression in fibroblasts, `files/fulltext/PMID40590574_Wong2025_PMC.xml` (variant p.Trp154*, Results, molecular genetic data)
+12. Seizures are absent for recessive ELOVL1 disease in the comparison table | Spasticity + + + − − − Seizures − − + − − − Movement disorder + − − − − − | Table 1, same artefact
+13. Plasma VLCFA was measured in one patient | Analysis of VLCFAs in plasma was performed only in case 1 and demonstrated a decrease in C24:0 and C26:0 concentrations, consistent with the function of ELOVL1 in the synthesis of C22‐C26 VLCFAs (Supplementary Table S2). | Results, clinical review, same artefact
+14. Only case 1 was studied in fibroblasts | Unfortunately, fibroblasts were unavailable from the other cases. | Discussion, paragraph 7, same artefact

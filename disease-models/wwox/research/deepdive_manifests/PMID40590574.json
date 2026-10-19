@@ -1,0 +1,434 @@
+{
+ "schema_version": 2,
+ "pmid": "40590574",
+ "doi": "10.1002/mds.30258",
+ "receipt": "FTR-20261019-40590574-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID40590574.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-a.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-A-LIPID-04.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger (selection file, method step 3); the per-paper M0 packet re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Discovery leads, if any, are routed through the commit candidate and the analysis note; no cumulative discovery squeeze was warranted by this paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A clinical neurogenetics consortium (Goettingen and partners, from the Genematcher assembly stated in the Results) with a lipid mass-spectrometry core. Primary for the clinical description of this ELOVL1 series; WWOX absent. Observation (clinical counts, one patient's biochemistry) weighed above interpretation (ELOVL1-ELOVL4 link, truncated-protein mechanism)."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "ELOVL1 AND (leukodystrophy OR ichthyosis OR hypomyelination)",
+    "count": 17,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (leukodystrophy OR hypomyelination)",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts; the first set is the ELOVL1 disease literature (a handful of papers); the second shows WWOX hypomyelination records."
+ },
+ "multihop": {
+  "references_enumerated": 28,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "28 references enumerated from the XML; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 40590574 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the dossier."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 28,
+   "references_screened": 28,
+   "references_with_doi": 28,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  },
+  "result": "Checked 2026-10-19 via PubMed esummary/efetch for PMID 40590574: publication types ['Case Reports', 'Journal Article', 'Video-Audio Media', 'Research Support, N.I.H., Extramural']; corrections/retraction markers in the efetch record: none."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40590574_Wong2025_PMC.xml",
+   "sha256": "f6ca74d549e7b7faba018e0288d266489b461f7820a7d191bbfa21136a31427e",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC12485584: abstract, body, Table 1, six figure legends, references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12485584/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID40590574/MDS-40-1836-g001.jpg",
+   "sha256": "8052dfa257e9730c0199d15f26c9ef0711b669dce178e6ae9a7077420f8b4e9f",
+   "kind": "figure",
+   "note": "Image file g001 from the Europe PMC supplementaryFiles container (Figure 5, summary of clinical features), inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12485584/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID40590574/MDS-40-1836-g002.jpg",
+   "sha256": "8712cc14d6dd8157cbae7e4832f3f3243d9e8e2ba6fa6908182bf2defbc37940",
+   "kind": "figure",
+   "note": "Image file g002 from the Europe PMC supplementaryFiles container (Figure 1B, MRI panels), inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12485584/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID40590574/MDS-40-1836-g003.jpg",
+   "sha256": "68d198e0a1b4eed24a5fa9a8b1326051a527f6a1f2175c7423fd21318c53042a",
+   "kind": "figure",
+   "note": "Image file g003 from the Europe PMC supplementaryFiles container (Figure 4, plasma and fibroblast lipids), inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12485584/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID40590574/MDS-40-1836-g005.jpg",
+   "sha256": "175eeec4bf57ae93e9ad5ebfbcf65ba88c6e6e8acb0701937fcbdc5d04790c25",
+   "kind": "figure",
+   "note": "Image file g005 from the Europe PMC supplementaryFiles container (Figure 3, ELOVL1 biochemistry), inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12485584/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID40590574/MDS-40-1836-g006.jpg",
+   "sha256": "edb22b79467178e78854ca2894920727abac3cc5dd01214514badfef0c2529ac",
+   "kind": "figure",
+   "note": "Image file g006 from the Europe PMC supplementaryFiles container (Figure 2, pedigrees and gene structure), inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12485584/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID40590574_Wong2025_supplement/MDS-40-1836-s007.docx",
+   "sha256": "8e23f36ab7a6607e42d57b17c95910996d9cabbe3a3b4bcaaa08ce2778c0e2c7",
+   "kind": "supplement_text",
+   "note": "Supplementary Table 2 (plasma LCFAs and VLCFAs, patient and four siblings) (Word).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12485584/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID40590574_Wong2025_supplement/MDS-40-1836-s008.docx",
+   "sha256": "d334950a92258f6ff4bcfb353092f020dac56edef93e3fe8598a4ca8e463c314",
+   "kind": "supplement_text",
+   "note": "Supplementary Table 1 (clinical and genetic findings of 7 patients and 4 earlier cases) (Word).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12485584/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID40590574_Wong2025_supplement/MDS-40-1836-s004.docx",
+   "sha256": "31f8f86aae27b9c4f7725a3856ab379060adad49ab1e0d56e2353c3897e321ac",
+   "kind": "supplement_text",
+   "note": "Supplementary Table 3 (variant annotations) (Word).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12485584/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The series is seven patients from five consanguineous families with homozygous ELOVL1 variants; only one patient's plasma and fibroblasts were studied biochemically.",
+    "snippet": "Seven cases from five unrelated families were included in the study, four of whom were female.",
+    "anchor": "Results, clinical review",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40590574_Wong2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The shared neurological picture is a movement disorder with head tremor, myoclonus, dystonia, axial hypotonia and dysarthria; counts exclude cases with unknown status.",
+    "snippet": "Additionally, all cases exhibited a movement disorder characterized by axial hypotonia (6/6), head tremor (7/7), dystonia (4/7), myoclonus (6/7), and dysarthria (6/6).",
+    "anchor": "Results, clinical review",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40590574_Wong2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "MRI shows hypomyelination in 6 of 6 imaged, a thin corpus callosum in 5 of 6, and no progression on repeat imaging in one patient.",
+    "snippet": "Magnetic resonance imaging (MRI) of the brain revealed hypomyelinating leukodystrophy (6/6), also affecting the cerebellum and hypoplasia of the corpus callosum (5/6) (Fig. 1B). Hypomyelination was independent of age at imaging and repeated magnetic resonance imaging in case 1 showed no progression.",
+    "anchor": "Results, clinical review",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40590574_Wong2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The summary comparison table lists seizures as absent for recessive ELOVL1 disease and present for recessive ELOVL4 disease.",
+    "snippet": "Spasticity + + + − − − Seizures − − + − − − Movement disorder + − − − − −",
+    "anchor": "Table 1, Seizures row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID40590574_Wong2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Plasma VLCFA was measured in one patient only.",
+    "snippet": "Analysis of VLCFAs in plasma was performed only in case 1 and demonstrated a decrease in C24:0 and C26:0 concentrations, consistent with the function of ELOVL1 in the synthesis of C22‐C26 VLCFAs (Supplementary Table S2).",
+    "anchor": "Results, clinical review",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40590574_Wong2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table 2 compares the patient with four siblings: C24:0 18 versus 26.5-32.7 nmol/mL and C26:0 0.21 versus 0.34-0.68 (the comparison group is four siblings of the patient; the sibling-4 C22:0 cell reads 0.41 where the other four values are 30.9-47.4).",
+    "snippet": "C24:0 18 26.5 30.9 32.7 29.5 C26:0 0.21 0.34 0.41 0.68 0.44",
+    "anchor": "Supplementary Table 2, C24:0 and C26:0 rows",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID40590574_Wong2025_supplement/MDS-40-1836-s007.docx",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table 2: the C22:0 row, whose last cell (0.41) does not match the ratio printed for the same sibling (C24:0/C22:0 0.65 implies C22:0 near 45).",
+    "snippet": "C22:0 41.4 32.5 47.4 30.9 0.41",
+    "anchor": "Supplementary Table 2, C22:0 row",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID40590574_Wong2025_supplement/MDS-40-1836-s007.docx",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Only the nonsense variant in case 1 reaches likely-pathogenic by ACMG; the four missense variants are VUS.",
+    "snippet": "According to American College of Medical Genetics and Genomics (ACMG) guidelines the ELOVL1 variant c.462G>A would be classified as pathogenic (PVS1_VS, PM2_P, PM3_P), the c.248C>T variant as a variant of uncertain significance (VUS)",
+    "anchor": "Results, molecular genetic data",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40590574_Wong2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The variant tested biochemically is the nonsense variant c.462G>A (p.Trp154*) in case 1 only.",
+    "snippet": "c.462G>A (p.Trp154*) in case 1; c.248C>T (p.Ser83Leu) in cases 2 and 3; c.457 T>C (p.Trp153Arg) in case 4; c.491G>A (p.Gly164Asp) in case 5; and c.52C>T (p.Arg18Trp) in cases 6 and 7",
+    "anchor": "Results, molecular genetic data",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40590574_Wong2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The antibody used to show absence of ELOVL1 protein in patient fibroblasts is raised to residues 250-277, C-terminal to the truncation at residue 154, so it cannot detect a truncated product.",
+    "snippet": "As expected for a nonsense variant, Western blot analysis using a polyclonal antibody targeting the C‐terminal peptide sequence of ELOVL1 (amino acids 250–277, C‐ELOVL1) detected no signal in whole cell extracts from case 1 fibroblasts (Fig. 3A).",
+    "anchor": "Results, expression in fibroblasts",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40590574_Wong2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A truncated FLAG-tagged W154X protein is expressed in transfected HeLa cells and localises to the ER, yet shows reduced elongation activity.",
+    "snippet": "However, an in vitro elongation assay conducted on ELOVL1‐W154X demonstrated a substantial reduction in enzymatic activity compared to ELOVL1‐WT (Fig. 3F).",
+    "anchor": "Results, localization and enzymatic activity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40590574_Wong2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure 3F-G. 3F: relative elongation of C22:0-CoA by W154X about 0.57 of wild type (about 1.0), n = 3, two asterisks; expression level of the construct is not normalised in the panel. 3G: patient-fibroblast mRNA relative to one control line: ELOVL1 about 0.15, ELOVL2 about 2.3, ELOVL3 about 0.65, ELOVL4 about 0.45, ELOVL5 not significant, ELOVL6 about 1.35, ELOVL7 not detectable.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3F bar chart 'Relative fold change' ELOVL1-WT about 1.0 and ELOVL1-W154X about 0.57 with two asterisks; Fig 3G grouped bars for ELOVL1 to ELOVL7, control black and patient dotted, with asterisks.",
+    "anchor": "Figure 3F-G, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40590574/MDS-40-1836-g005.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human patients (class level) and one patient's plasma and skin fibroblasts; transfected HeLa cells",
+     "genotype": "biallelic ELOVL1 variants",
+     "treatment": "none",
+     "comparator": "control plasma and fibroblasts",
+     "endpoint": "as stated per panel"
+    }
+   },
+   {
+    "proposition": "Other ELOVL transcripts shift in the patient's fibroblasts; this is one patient line against one control, and the paper says only speculation can distinguish compensation from dysregulation.",
+    "snippet": "Analysis of mRNA levels for other known ELOVL enzymes showed a significant decrease in ELOVL3 and ELOVL4 expression, along with a notable increase in ELOVL2 and ELOVL6 mRNA expression, indicating widespread dysregulation of VLCFA metabolism because of the variant (Fig. 3G).",
+    "anchor": "Results, other ELOVLs",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40590574_Wong2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Plasma metabolomics: all sphingomyelins are lower in the patient.",
+    "snippet": "Specifically, all sphingomyelins (SMs) exhibited a substantial decrease in the plasma of case 1 (Fig. 4B).",
+    "anchor": "Results, sphingolipids",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40590574_Wong2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fibroblast lipidomics: C24:0 ceramide and C24:0 hexosylceramide fall, shorter-chain species rise.",
+    "snippet": "We found reduced levels of VLCFA C24:0‐ceramides and C24:0‐HexCer, coupled with an increase in shorter chain lengths of Cer and HexCer (Fig. 4C,D).",
+    "anchor": "Results, sphingolipids",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40590574_Wong2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure 4A and 4F-H. 4A: heat map with three patient columns against four control columns (one patient; the three columns are not described as separate individuals). 4F-G: C24:0/C22:0 ceramide ratio about 1.65 in control against about 0.42 in the patient, and for hexosylceramide about 2.35 against about 0.45. 4H: sphingomyelin C24:0/C22:0 about 0.85 against about 0.5; C26:0/C22:0 near zero in both.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 4A heat map class bars Patient (3 columns, red) and Control (4 columns, green); Fig 4F-H bar charts of ratios with four-asterisk and three-asterisk marks.",
+    "anchor": "Figure 4A and 4F-H, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40590574/MDS-40-1836-g003.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human patients (class level) and one patient's plasma and skin fibroblasts; transfected HeLa cells",
+     "genotype": "biallelic ELOVL1 variants",
+     "treatment": "none",
+     "comparator": "control plasma and fibroblasts",
+     "endpoint": "as stated per panel"
+    }
+   },
+   {
+    "proposition": "Fibroblasts were available only from case 1.",
+    "snippet": "Unfortunately, fibroblasts were unavailable from the other cases.",
+    "anchor": "Discussion, paragraph 7",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40590574_Wong2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the genotype-phenotype correlation cannot be established and that genetic modifiers and dietary VLCFA intake may contribute.",
+    "snippet": "The sample size was too small to establish a definitive genotype–phenotype correlation.",
+    "anchor": "Discussion, paragraph 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40590574_Wong2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The proposed link between ELOVL1 and ELOVL4 deficiency is a plausibility argument.",
+    "snippet": "It, therefore, seems plausible that ELOVL1 deficiency might also cause functional ELOVL4 deficiency because of the lack of C26‐VLCFAs as a substrate for the elongation reaction thereby explaining the overlap of symptoms.",
+    "anchor": "Discussion, paragraph 11",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40590574_Wong2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The truncated-protein mechanism is stated as speculative.",
+    "snippet": "However, this remains speculative, as no direct structural or interaction data were obtained.",
+    "anchor": "Discussion, paragraph 9",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40590574_Wong2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure 5 (summary bars of the clinical features among the patients with biallelic variants): hypomyelination 100 percent, ichthyosis about 77, walking about 33, intellectual disability about 57, myoclonus about 89, nystagmus about 88; there is no seizure or epilepsy bar.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 5 horizontal grey bars labelled Congenital ichthyosis, Motor developmental delay, Sitting, Walking, Regression of motor abilities, Movement disorder, Myoclonus, Head tremor, Dysarthria, Nystagmus, Hyperreflexia, Spasticity, Contractures, Intellectual disability, Hypomyelination; x-axis '% of patients' 0-100.",
+    "anchor": "Figure 5, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40590574/MDS-40-1836-g001.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human patients (class level) and one patient's plasma and skin fibroblasts; transfected HeLa cells",
+     "genotype": "biallelic ELOVL1 variants",
+     "treatment": "none",
+     "comparator": "control plasma and fibroblasts",
+     "endpoint": "as stated per panel"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search returned inEPMC Y, isOpenAccess Y, license cc by on 2026-10-19; fullTextXML returned HTTP 200 and the declared article_text artefact is that response byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}
