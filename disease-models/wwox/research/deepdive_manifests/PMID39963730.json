@@ -1,0 +1,280 @@
+{
+ "schema_version": 2,
+ "pmid": "39963730",
+ "doi": "10.1111/epi.18287",
+ "receipt": "FTR-20261019-39963730-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID39963730.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-a.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-A-LIPID-06.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger (selection file, method step 3); the per-paper M0 packet re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Discovery leads, if any, are routed through the commit candidate and the analysis note; no cumulative discovery squeeze was warranted by this paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "Sponsor-authored review (authors are employees of the drug developer, from the conflict statement). Cited preclinical data are weighed above the authors' mechanism sentences."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "soticlestat AND seizures",
+    "count": 37,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "CYP46A1 AND WWOX",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts; the second query is the WWOX-CYP46A1 intersection."
+ },
+ "multihop": {
+  "references_enumerated": 93,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "93 references enumerated; none concerns WWOX (term search: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 39963730 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No record matched."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 93,
+   "references_screened": 90,
+   "references_with_doi": 90,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  },
+  "result": "Checked 2026-10-19 via PubMed esummary/efetch for PMID 39963730: publication types ['Journal Article', 'Review']; corrections/retraction markers in the efetch record: none."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39963730_Kondo2025_PMC.xml",
+   "sha256": "bbcce641752e2e66ff561146e048da6b5d98017b3f32d8663a4e7a38faa5b5ea",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC12097479: abstract, body, Tables 1-2, figure legends, references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12097479/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39963730/EPI-66-1394-g001.jpg",
+   "sha256": "0ec94e80b18a034008a4d51379ebfc40469da71842a773ba1ec0a37d7097fa4c",
+   "kind": "figure",
+   "note": "Image file g001 from the Europe PMC supplementaryFiles zip, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12097479/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39963730/EPI-66-1394-g002.jpg",
+   "sha256": "cc9bdcccc9dc2803ac80ac3f4da7a51f28cb05195ba24e4abd7f5a8a1f4c5bb2",
+   "kind": "figure",
+   "note": "Image file g002 from the Europe PMC supplementaryFiles zip, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12097479/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39963730/EPI-66-1394-g003.jpg",
+   "sha256": "75a84a4dd93cceb5e1880311a845b543cbf9dd4cfb59f4d6f745fcee659dfd12",
+   "kind": "figure",
+   "note": "Image file g003 from the Europe PMC supplementaryFiles zip, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12097479/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The review is sponsor-authored: authors are employees and stockholders of the drug developer, and writing support was funded by it.",
+    "snippet": "S.K. and K.N. are employees of, and stockholders in, Takeda Pharmaceutical Company Limited.",
+    "anchor": "Conflict of interest statement",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39963730_Kondo2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The mechanism of soticlestat is stated as undetermined; the review presents a working hypothesis from preclinical data.",
+    "snippet": "The exact mechanisms of action by which soticlestat exerts pharmacological benefits, such as reducing seizure frequency as seen in the ELEKTRA phase II study in patients with Dravet syndrome and Lennox–Gastaut syndrome, 3 remains to be fully elucidated.",
+    "anchor": "Introduction, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39963730_Kondo2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Total brain cholesterol stays unchanged when CH24H is deleted in mice, because de novo synthesis falls; this is a homeostasis premise relevant to measuring cholesterol alone.",
+    "snippet": "For example, when CH24H was deleted in mice, total brain cholesterol remained unchanged.",
+    "anchor": "Introduction, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39963730_Kondo2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "More than 95 percent of brain cholesterol is synthesised within the brain and the barrier prevents exchange with blood, so peripheral lipid levels do not set brain supply.",
+    "snippet": "Consequently, >95% of brain cholesterol is synthesized de novo within astrocytes.",
+    "anchor": "Brain cholesterol homeostasis section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39963730_Kondo2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mouse efficacy is model-dependent: soticlestat protected in the Dravet models, kainate model, kindling and audiogenic models but not in maximal electroshock, subcutaneous pentylenetetrazol or 6-Hz assays.",
+    "snippet": "Soticlestat was ineffective in the maximal electroshock model of generalized tonic–clonic seizures, a “gold standard” in epilepsy drug screening",
+    "anchor": "Soticlestat section, paragraph 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39963730_Kondo2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 2 gives eight protected-per-tested counts per arm in the screening models.",
+    "snippet": "Maximum electroshock seizures model | Mouse a | Vehicle | 0/8",
+    "anchor": "Table 2, first row of data",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39963730_Kondo2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mechanism 1 rests on 24-hydroxycholesterol as a positive allosteric modulator of NMDA receptors; knockout slices show a smaller NMDA/AMPA ratio without change in intrinsic excitability, spontaneous transmission or long-term potentiation.",
+    "snippet": "Slices from CH24H knockout mice showed a significantly smaller NMDAR to α‐amino‐3‐hydroxy‐5‐methyl‐4‐isoxazoleproprionic acid receptor",
+    "anchor": "Mechanisms, NMDAR section, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39963730_Kondo2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say the strong correlation between brain drug level and 24-hydroxycholesterol is why the effect is likely mediated by the metabolite; this is stated as likely, not shown.",
+    "snippet": "Therefore, it is likely that the antiseizure effect of soticlestat is primarily exerted through reduction of brain 24HC.",
+    "anchor": "Mechanisms, NMDAR section, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39963730_Kondo2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mechanism 2 (membrane raft cholesterol and glutamate transporter EAAT2) is a hypothesis drawn from astrocyte overexpression work.",
+    "snippet": "Inhibition of CH24H by soticlestat is hypothesized to preserve the membrane raft structure by inhibiting conversion of membrane cholesterol in the raft.",
+    "anchor": "Mechanisms, lipid raft section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39963730_Kondo2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mechanism 3 (neuroinflammation) rests on a correlation between brain 24-hydroxycholesterol and TNF-alpha in a tauopathy mouse model, which the authors say may be consequence of tissue damage rather than cause.",
+    "snippet": "Because of the vicious cycle of neuroinflammation in epilepsy, it was unclear whether the correlation between 24HC and TNF‐α was a direct causal relationship or a consequence of tissue damage.",
+    "anchor": "Mechanisms, neuroinflammation section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39963730_Kondo2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review closes by stating the second and third mechanisms need further study; no clinical efficacy figures are reported in it.",
+    "snippet": "These potential mechanisms of action, especially the second and third, warrant future studies to gain further insights into the antiseizure effects of soticlestat.",
+    "anchor": "Conclusions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39963730_Kondo2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, the summary scheme (matches the Figure 3 legend): numbered branches 1 to 3 from cholesterol and CH24H to 24-hydroxycholesterol, TNF-alpha, membrane raft cholesterol, glutamate in the cleft, NMDA/AMPA receptors and hyperexcitation; red arrows for the pathogenic state and green for soticlestat effects. A schematic, no data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Scheme with three numbered branches ending in hyperexcitation; arrow colour legend at top right.",
+    "anchor": "Scheme file g001, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39963730/EPI-66-1394-g001.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "review figure (schematic)",
+     "genotype": "not applicable",
+     "treatment": "soticlestat (CH24H inhibitor)",
+     "comparator": "not applicable",
+     "endpoint": "proposed mechanism"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search returned inEPMC Y, isOpenAccess Y, license cc by-nc on 2026-10-19; fullTextXML returned HTTP 200 and the declared article_text artefact is that response byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}
