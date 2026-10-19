@@ -911,3 +911,26 @@ retrieval, no spend, no new dependency. Two reserved acquisition routes were nam
 assay specification that would turn *«nobody outside three laboratories has measured a WWOX activity»* from
 a measured null into a testable experiment — purified WW2-SDR, a named substrate and cofactor, a YxxxK
 catalytic-dead control, a titration. The missing item is the experiment, not the tool.
+
+## 2026-10-19 — scientist-c, task METAB-G3-C-20261019 (group G3)
+
+### Session Learning Delta
+- Nineteen manifests built from open copies; panel-versus-text mismatches were common in small-lab primaries.
+- A task worktree carries manifests and not the gitignored artefact bytes, so `paper_packet.py check` reported every artefact missing from the worktree.
+- Movies and webp figures need decoders that the host lacks by default (ffmpeg via pip, ImageMagick).
+
+### Capability Gaps
+| Gap | Why it matters | Priority |
+|---|---|---|
+| To run `paper_packet.py check` from a task worktree we lacked shared-checkout artefact resolution. | Every Scientist in a worktree gets false "missing artefact" findings. | 4 |
+| To read movie supplements we lack a video-decoder entry in `tool_preflight.py`. | A silent absence cost time before a static ffmpeg was installed. | 2 |
+| To reach PMC-challenged open copies we lack a written Wayback-PMC route in the find-fulltext cascade. | Used for two papers; undocumented. | 2 |
+
+### Capability outcome (`CHANGE = NONE` is valid)
+- **Outcome:** CHANGE-MADE (first gap); the other two GAP-NEW, recorded.
+- **Evidence:** the packet check failed from the worktree on this task's own manifests before the change and passes after it.
+- **If a change was made — type:** CONNECTION
+- **What improved and why it is proportionate:** `paper_packet.py` now resolves the shared checkout and passes `--artifact-workspace` to the manifest validator from a linked worktree; two regression tests in `test_paper_packet.py` pin it. Host: Linux desktop, poppler 24.02.0, ImageMagick present, ffmpeg absent by default.
+
+### Next Micro-Step
+- Add a video-decoder line to `tool_preflight.py` with its test.
