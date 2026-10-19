@@ -11,3 +11,6 @@ Measures nothing: it is a plan for a systematic review of iron supplementation, 
 
 ### 40808923 Xu 2025 (H1, tier 1) - NOT re-read
 Already read in full this day by scientist-c (manifest and staged receipt on main, FTR-20261019-40808923-01). Duplicate-work gate: skipped, not re-read. The substantive reading is theirs; the iron/ferroptosis question of H1 is carried by the other ferroptosis rows below.
+
+### 37124220 Jin 2023 (H1, tier 2) - ferroptosis inhibitors in epilepsy, review
+Measures nothing new (narrative review of chemoconvulsant rodent models: kainic acid, pilocarpine, PTZ, FeCl3; HT22/SH-SY5Y cell stress; one cited paediatric blood study and one cited patient-cell study with EPI-743). WWOX absent. Changes nothing: the model has no iron or ferroptosis line and this review does not supply a WWOX datum to compare with. Negatives: cannot say whether WWOX loss changes neuronal ferroptosis susceptibility; internal inconsistency (conclusion calls ferrostatin an iron chelator, its own Table 1 lists GPX4/P38 MAPK); the oligodendrocyte question is open in the review itself. Figures 1-2 opened as images. Depth: complete. No commit candidate.
