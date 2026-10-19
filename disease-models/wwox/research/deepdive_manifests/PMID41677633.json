@@ -6,7 +6,8 @@
  "receipt": "FTR-20261003-41677633-02",
  "landing": [
   "FTR-20261003-41677633-02",
-  "disease-models/wwox/research/intake_wave_20261003w3_B.md"
+  "disease-models/wwox/research/intake_wave_20261003w3_B.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-d.md"
  ],
  "landing_note": "Intake wave 3 2026-10-03, Scientist B, group B (organelle endpoints under WWOX loss or gain). The receipt is prepared and NOT appended: the Orchestrator records the wave's receipts in event order.",
  "skills_considered": [
@@ -216,6 +217,48 @@
     "derived": false,
     "result_sha256": "eabc63d92a279282a8d3924fdf648607e14ee49eaa17016e52d72458c5f9465f"
    }
+  },
+  {
+   "path": "files/figures/PMID41677633/cells-15-00270-g002.jpg",
+   "sha256": "dcc2b75a96e78a81ffbda043cdede50b8ed25f091526c931a90f83ac74f70796",
+   "kind": "figure",
+   "note": "Published figure raster; opened as an image in the interventions-wave re-read of 2026-10-19 (same file family as the declared figures).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12897155.1/cells-15-00270-g002.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "dcc2b75a96e78a81ffbda043cdede50b8ed25f091526c931a90f83ac74f70796"
+   }
+  },
+  {
+   "path": "files/figures/PMID41677633/cells-15-00270-g003.jpg",
+   "sha256": "1c8cc10ae0e1b4cbf1e8faf5a618c5a1410e360db5d5c8d5a271e80f30bc2820",
+   "kind": "figure",
+   "note": "Published figure raster; opened as an image in the interventions-wave re-read of 2026-10-19 (same file family as the declared figures).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12897155.1/cells-15-00270-g003.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "1c8cc10ae0e1b4cbf1e8faf5a618c5a1410e360db5d5c8d5a271e80f30bc2820"
+   }
+  },
+  {
+   "path": "files/figures/PMID41677633/cells-15-00270-g006.jpg",
+   "sha256": "06fcdd3821af4694ec50f6c9cd9064d4003aa73eaf9c9cfef9c0638cc07391dc",
+   "kind": "figure",
+   "note": "Published figure raster; opened as an image in the interventions-wave re-read of 2026-10-19 (same file family as the declared figures).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12897155.1/cells-15-00270-g006.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "06fcdd3821af4694ec50f6c9cd9064d4003aa73eaf9c9cfef9c0638cc07391dc"
+   }
   }
  ],
  "verbatim_locators": {
@@ -327,6 +370,165 @@
      "endpoint": "DCF-DA flow cytometry"
     },
     "artifact": "files/fulltext/PMID41677633_Su2026_PMC.xml"
+   },
+   {
+    "proposition": "The stress applied is removal of serum from the culture medium (serum-free RPMI-1640), not glucose or calorie restriction; the paper does not describe medium glucose or any glucose manipulation.",
+    "snippet": "MEFs were treated with serum-free RPMI-1640 medium or 100 μM H2O2 for 24 and 48 h",
+    "anchor": "Figure 3 legend, panel A",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41677633_Su2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The knockout fibroblasts were isolated from E14.5 fetuses.",
+    "snippet": "mouse fetuses at E14.5 was determined (Figure 3A)",
+    "anchor": "Results 3.2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41677633_Su2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Wwox+/+ MEFs lost more viability than Wwox-/- MEFs after prolonged serum-free culture (72 h).",
+    "snippet": "showed a significantly enhanced reduction in cell viability as compared with",
+    "anchor": "Results 3.3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41677633_Su2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 4A: viability against serum-fed controls is about 35%, 21%, 20% (+/+ at 48, 72, 96 h) and about 40%, 42%, 38% (-/-); both genotypes lose most viability, the genotype difference is 20 points at 72 h.",
+    "snippet": "Visual attestation of Figure 4A (image cells-15-00270-g004): cell viability (%) normalised to serum-fed cells; Wwox+/+ about 35 (48 h), 21 (72 h), 20 (96 h); Wwox-/- about 40, 42, 38; asterisks for +/+ 48 h versus 72/96 h and +/+ versus -/-.",
+    "anchor": "Figure 4A (image g004)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID41677633/cells-15-00270-g004.jpg"
+    ],
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "primary mouse embryonic fibroblasts, Wwox+/+ versus Wwox-/-, serum-free medium",
+     "endpoint": "WST-8 viability"
+    }
+   },
+   {
+    "proposition": "The text gives 48 h of serum starvation for the sub-G0/G1 comparison while the Figure 4B legend gives 72 h.",
+    "snippet": "serum starvation for 48 h induced a higher percentage of cells in sub G0/G1 phase",
+    "anchor": "Results 3.3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41677633_Su2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 4 legend, panel B states 72 h serum-free medium and n = 3.",
+    "snippet": "treated with serum-free medium for 72 h. The percentages of cells in subG0/G1",
+    "anchor": "Figure 4 legend, panel B",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41677633_Su2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 4B shows single bars with no error bars although n = 3 is stated: sub-G0/G1 about 21% (+/+) versus about 11% (-/-) after starvation, 4% and 2% fed.",
+    "snippet": "Visual attestation of Figure 4B (image cells-15-00270-g004): four bars without error bars; control about 4% (+/+) and 2.5% (-/-); serum starvation about 21% (+/+) and 11% (-/-); asterisks for the comparisons.",
+    "anchor": "Figure 4B (image g004)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID41677633/cells-15-00270-g004.jpg"
+    ],
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "primary mouse embryonic fibroblasts",
+     "endpoint": "fraction of cells in sub-G0/G1"
+    }
+   },
+   {
+    "proposition": "No ROS difference between genotypes in freshly isolated cells.",
+    "snippet": "No differences in the amounts of ROS generation were observed between the freshly isolated",
+    "anchor": "Results 3.6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41677633_Su2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 8A: after starvation DCF fluorescence rises about 5.3-fold at 6 h to about 10-fold at 48 h in +/+ and about 3-fold to about 4.5-fold in -/-; ROS rise in both genotypes and is larger when Wwox is present.",
+    "snippet": "Visual attestation of Figure 8A (image cells-15-00270-g008): fold increase in ROS; Wwox+/+ about 0.5 (0 h), 5.3 (6 h), 6.8 (12 h), 8.8 (24 h), 10 (48 h); Wwox-/- about 0.5, 2.9, 3.2, 4.0, 4.6; no difference at 0 h.",
+    "anchor": "Figure 8A (image g008)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID41677633/cells-15-00270-g008.jpg"
+    ],
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "primary mouse embryonic fibroblasts",
+     "endpoint": "DCFH-DA flow cytometry, fold increase"
+    }
+   },
+   {
+    "proposition": "NAC blocked WWOX upregulation under serum starvation in wild-type MEFs.",
+    "snippet": "blocked WWOX upregulation induced by serum starvation",
+    "anchor": "Results 3.6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41677633_Su2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Figure S4 densitometry shows Wwox at about 3.4 and 5.8 without NAC and about 1.2 and 2.2 with NAC at 24 and 48 h; each panel is a single quantification without error bars.",
+    "snippet": "Visual attestation of Supplementary Figure S4 (supplement PDF page 5): Wwox relative intensity 1, 3.4, 1.2, 5.8, 2.2 for the +/+ lanes; Bcl-XL 1, 0.5, 1.1, 0.3, 1.5; single bars, no error bars.",
+    "anchor": "Supplementary Figure S4",
+    "surface": "figure",
+    "artifact": [
+     "files/supplements/PMID41677633/cells-4078288-supplementary.pdf"
+    ],
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "primary mouse embryonic fibroblasts, NAC pretreatment",
+     "endpoint": "densitometry of Fig 8B"
+    }
+   },
+   {
+    "proposition": "In SCC-15 cells serum-starvation WWOX mRNA peaks near 1.6-fold at 12 h and is below baseline at 48 h by qPCR while protein is still rising (about 3.4-fold at 48 h).",
+    "snippet": "Visual attestation of Figure 1A and Figure 2C (images g001, g002): protein relative intensity 1, 2.2, 3.4 at 0, 24, 48 h of serum starvation; qPCR relative WWOX mRNA 1, 1.6 (12 h), 1.4 (24 h), 0.8 (48 h).",
+    "anchor": "Figure 1A, Figure 2C (images g001, g002)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID41677633/cells-15-00270-g001.jpg",
+     "files/figures/PMID41677633/cells-15-00270-g002.jpg"
+    ],
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "SCC-15 human squamous carcinoma cells",
+     "endpoint": "WWOX protein by blot, mRNA by qPCR"
+    }
+   },
+   {
+    "proposition": "The text concludes that stress activates transcription and increases WWOX protein.",
+    "snippet": "Together, we determined that various stress stimuli activate WWOX gene transcription and increase WWOX protein levels in human cancer cells.",
+    "anchor": "Results 3.1, last sentence",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41677633_Su2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The inhibitor experiments were done in Wwox+/+ MEFs only; chloroquine blocked the Mcl-1 loss.",
+    "snippet": "blocked serum starvation-induced Mcl-1 protein reduction",
+    "anchor": "Results 3.5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41677633_Su2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say the lysosome conclusion rests on pharmacological inhibitors and needs gene knockdown verification.",
+    "snippet": "knockdown of essential genes involved in the autophagy or lysosomal degradation pathway using RNA interference tools needs to be tested for verification",
+    "anchor": "Discussion, para 8",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41677633_Su2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Conclusions extrapolate from cancer cell lines and fibroblasts to patients with WWOX deficiency.",
+    "snippet": "These findings raise important translational implications for treating patients with disorders due to WWOX deficiency.",
+    "anchor": "Conclusions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41677633_Su2026_PMC.xml",
+    "panel_text_relation": "text_only"
    }
   ]
  }
