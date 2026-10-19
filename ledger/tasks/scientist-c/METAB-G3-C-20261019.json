@@ -30,7 +30,7 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "CLAIMED",
+ "CURRENT_STATE": "COMPLETED",
  "assigned_on": "2026-10-19",
  "TASK_ACK": {
   "TASK_ID": "METAB-G3-C-20261019",
@@ -50,6 +50,33 @@
   "durable_pointer": "ledger/tasks/scientist-c/METAB-G3-C-20261019.json on branch task/METAB-G3-C-20261019, worktree .claude/worktrees/metab-g3-c",
   "lot": "G3 tier order: 1 (26355344, 36364214, 35571988, 40808923, 38570643), then 2, then 3; HELD rows only with a stated question"
  },
- "DEFAULTS_TAKEN": [],
- "STOP_LOG": []
+ "DEFAULTS_TAKEN": [
+  "Commit gate refused stale derived surfaces on every commit; used LEGEND_STALE_SURFACES_BECAUSE with the reason that shared derived surfaces belong to the Orchestrator (dispatch brief).",
+  "Staged discovery leads in the commit candidate instead of appending to the shared discovery ledger (Orchestrator appends).",
+  "Used the Wayback snapshot route (Lo 2015, Carvalho 2022 text) and Springer media/ESM URLs for figures when PMC routes were challenged; archived copies are named as such in each receipt.",
+  "Installed a static ffmpeg build via pip --target in the scratchpad to decode the Chang 2015 movies.",
+  "Left Puertas-Frias 2026 at partial depth by choice (stated in its receipt).",
+  "Left blocked rows closed after retrying new routes; the publisher API needing a key was not used (reserved).",
+  "Moved my builder scripts to scratchpad/c after a peer overwrote the shared scratchpad build script."
+ ],
+ "STOP_LOG": [],
+ "WAVE_1_RESULT": {
+  "papers": 19,
+  "manifests_pass": 19,
+  "staged_receipts": "disease-models/wwox/research/receipt_staging/scientist-c/",
+  "commit_candidate": "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md",
+  "analysis_note": "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "self_eval": "disease-models/wwox/research/session_evaluations/2026-10-19_metab-g3-c.md",
+  "micro_upgrade": "paper_packet.py worktree artefact-root resolution plus LinkedWorktreeArtefactRoot tests",
+  "DEFAULTS_TAKEN": [
+   "Commit gate refused stale derived surfaces on every commit; used LEGEND_STALE_SURFACES_BECAUSE with the reason that shared derived surfaces belong to the Orchestrator (dispatch brief).",
+   "Staged discovery leads in the commit candidate instead of appending to the shared discovery ledger (Orchestrator appends).",
+   "Used the Wayback snapshot route (Lo 2015, Carvalho 2022 text) and Springer media/ESM URLs for figures when PMC routes were challenged; archived copies are named as such in each receipt.",
+   "Installed a static ffmpeg build via pip --target in the scratchpad to decode the Chang 2015 movies.",
+   "Left Puertas-Frias 2026 at partial depth by choice (stated in its receipt).",
+   "Left blocked rows closed after retrying new routes; the publisher API needing a key was not used (reserved).",
+   "Moved my builder scripts to scratchpad/c after a peer overwrote the shared scratchpad build script."
+  ],
+  "STOP_LOG": []
+ }
 }
