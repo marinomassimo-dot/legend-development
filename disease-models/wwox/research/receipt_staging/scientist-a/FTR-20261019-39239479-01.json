@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-39239479-01",
+ "study_id": {
+  "pmid": "39239479",
+  "doi": "10.1016/j.crneur.2024.100136"
+ },
+ "analysis_at": "2026-10-19T19:19:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a (Scientist A), interventions batch 2026-10-19 groups H1/H2, task INTERV-H1-A-20261019 on branch task/INTERV-H1-A-20261019, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN. Route: Europe PMC JATS body (PMC11372806) plus the supplementaryFiles container: figure images gr1, gr8 and gr11 (Figures 1, 8, 11) opened at native resolution; the container also holds a peer-review PDF (mmc1) and a supplementary-figure Word file (mmc2, eight TIFF figures); mmc2 legends were reached through its XML text and its images were not opened; mmc1 was not read. Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a staged JSON for the Orchestrator and not appended at preparation time.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID39239479_Porras2024_PMC.xml",
+ "source_fingerprint": "faaa4514c954bcb0813546d095755a9d0b7c65790d36258726cd7f2b75b27fa1",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "captions_only",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID39239479.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID39239479.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "manifest",
+  "Figures 1, 8 and 11 inspected as images",
+  "Supplementary: mmc2 legends only, eight TIFF figures and the peer-review PDF not opened (declared debt)"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
