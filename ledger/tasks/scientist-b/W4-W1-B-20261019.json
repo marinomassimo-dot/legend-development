@@ -1,5 +1,5 @@
 {
- "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
  "_note": "Metabolic batch. Orchestrator assumption: scientist-d is a fourth equivalent Scientist under the shared contract roles/scientist.md (body 32); operator authorised up to four Scientists on 2026-10-19.",
  "TASK_ID": "W4-W1-B-20261019",
  "DIRECTIVE_VERSION": 1,
@@ -29,6 +29,24 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-19"
+ "CURRENT_STATE": "CLAIMED",
+ "assigned_on": "2026-10-19",
+ "TASK_ACK": {
+  "TASK_ID": "W4-W1-B-20261019",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "DECISION": "ACCEPTED",
+  "ACTOR_ID": "scientist-b",
+  "acked_at": "2026-10-20T07:00:00Z",
+  "reading_mode": "PRIMARY_EVIDENCE_READ",
+  "note": "Dispatch brief, standing brief and the wave 4 selection record read; branch task/W4-W1-B-20261019 in .claude/worktrees/w4-b from main e956fe1e; receipts staged, never recorded; the four current files, registries and ledger untouched."
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "W4-W1-B-20261019",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-b",
+  "claimed_at": "2026-10-20T07:00:00Z",
+  "durable_pointer": "ledger/tasks/scientist-b/W4-W1-B-20261019.json on branch task/W4-W1-B-20261019",
+  "claim_precondition_checked": "Group W1 of the wave 4 selection; no other contract names these PMIDs."
+ }
 }
