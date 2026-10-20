@@ -270,3 +270,35 @@ effect specific to WWOX; the authors themselves withdraw the rs2548861 HDL-C ass
 **Effect on the model.** Strengthens the existing negative: the best this record can be cited for is a
 hypothesis-generating common-variant association in one population with a flagged internal error.
 MINOR; the printed-OR error is passed to the Orchestrator through the commit candidate.
+
+---
+
+## 9. PMID 31543760 — Kosla 2019 (WWOX knockdown in human neural progenitor cells) — receipt FTR-20261019-31543760-05
+
+**What it MEASURES.** System: a human neural progenitor line (hNPC) and its differentiated neurons,
+lentiviral shWWOX versus scrambled shRNA, in vitro. Readouts: ECM adhesion, MMP zymography, 3D growth, a
+PrestoBlue resazurin assay (Figure 2), CAGE transcriptomes with GSEA and protein networks, and a PCA on
+362 oxidative stress and antioxidant genes (Figure 11).
+
+**Question and answer.** The question was whether any figure holds a metabolic rather than
+synaptic/neurite set. Two panels do and no earlier locator had covered them. (1) Figure 2: raw
+resorufin fluorescence is about 32% lower in the knockdown at 270 min and lower at all five time points;
+no normalisation to cell number, no n, per-time-point t-tests; resazurin reduction reports whole-cell
+reducing capacity, and the same paper shows the knockdown cells adhere and grow differently, so the
+"mitochondrial redox activity" label is stronger than the assay. (2) Figure 11 is a PCA with one point per
+group (four samples): the knockdown points lie lower on dim2 in both cell states, with no replicate
+variation drawn. (3) Supplementary Table 1 lists 35 genes by PCA contribution, with no fold change: HIF1A
+ranks last (0.033), HK2 29th, LDHA 20th, PDK1 7th; NFE2L2, G6PD, TXNIP, UCP2 and CYCS rank high. No
+metabolic gene-set appears in Figures 8-10 (adhesion and stem-cell differentiation sets).
+
+**What it supports.** It is the only readout in this lot from a human neural cell with WWOX knocked
+down that bears on redox or mitochondrial function: a single, un-normalised, unreplicated-in-the-figure
+curve (INFERENZA: lower reducing capacity). It does not support an HIF1A, glycolysis or oxidative-phosphorylation
+claim: HIF1A barely contributes, directions are not given, and the PCA has no inference.
+
+**Comparison phase.** FIRST-PASS OBSERVATIONS COMPLETE -> PRIOR KNOWLEDGE ADMITTED FOR COMPARISON:
+the 21 earlier locators (adhesion, 3D phenotype, MMP, GSEA, supplement inventory). RL-003 asks for
+CNS-specific data: this is the one candidate item and the lead is real but weak. Cross-paper
+co-occurrence (hypothesis tier, no direction known): G6PD(x) and NFE2L2 appear in this table and in the
+early-passage Wwox-null mouse fibroblast redox heatmap read in section 3. Candidate:
+`CC-20261019-SCIENTIST-C-HELD-01` (MINOR) and a discovery lead.
