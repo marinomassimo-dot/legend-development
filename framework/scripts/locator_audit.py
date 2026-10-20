@@ -222,6 +222,34 @@ def corpus_hint(root: Path, corpus: Path, absent_here: int) -> str:
             f"fetched it; re-run with --corpus {target}")
 
 
+def print_triples(root: Path, disease: str, pmid: str, count: int, seed: str) -> int:
+    """The blind input of a locator audit, sampled, carrying nothing but the triples.
+
+    N7 (metabolic batch 2026-10-19): blind audits run voluntarily caught propositions that
+    overshot their quotes after every gate had passed (23 of 101 in one wave, none caught by
+    the reader's own re-read). Assembling the packet by hand was the cost that kept the audit
+    voluntary. Only proposition, quote, anchor, surface and artifact leave the manifest: no
+    receipt, reader, dossier, landing or assessment field, so the auditor stays blind.
+    """
+    import random
+    path = root / "disease-models" / disease / "research" / "deepdive_manifests" / f"PMID{pmid}.json"
+    try:
+        entries = json.loads(path.read_text(encoding="utf-8"))["verbatim_locators"]["entries"]
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        print(f"locator_audit: no locator entries for PMID {pmid}: {exc}", file=sys.stderr)
+        return 2
+    indexed = list(enumerate(entries))
+    if count and count < len(indexed):
+        indexed = sorted(random.Random(seed).sample(indexed, count))
+    packet = [{"entry": i, "proposition": e.get("proposition", ""),
+               "quote": e.get("snippet", ""), "anchor": e.get("anchor", ""),
+               "surface": e.get("surface", ""), "artifact": e.get("artifact", "")}
+              for i, e in indexed]
+    print(json.dumps({"pmid": pmid, "sampled": len(packet), "of": len(entries),
+                      "seed": seed, "triples": packet}, indent=1, ensure_ascii=False))
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     parser.add_argument("--root", default=str(ROOT))
@@ -230,9 +258,18 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--pmid", default="")
     parser.add_argument("--strict", action="store_true",
                         help="exit non-zero when a quote is not found in its artifact")
+    parser.add_argument("--triples", type=int, default=None, metavar="N",
+                        help=("with --pmid: print a BLIND audit packet instead - N sampled "
+                              "(proposition, quote, anchor) triples as JSON, 0 for all, and "
+                              "nothing else from the manifest (legend-locator-audit input)"))
+    parser.add_argument("--seed", default="", help="--triples sample seed (default: the PMID)")
     args = parser.parse_args(argv)
 
     root = Path(args.root).resolve()
+    if args.triples is not None:
+        if not args.pmid:
+            parser.error("--triples needs --pmid")
+        return print_triples(root, args.disease, args.pmid, args.triples, args.seed or args.pmid)
     corpus = Path(args.corpus) if args.corpus else root / "files" / "fulltext"
 
     audited = unauditable = missing_total = absent_here = 0

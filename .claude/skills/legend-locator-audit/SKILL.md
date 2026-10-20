@@ -54,7 +54,11 @@ know who wrote what then found eight more in an hour. Knowing the author makes a
 reconstruct intent instead of testing behaviour. Blindness is the active ingredient, not the
 tooling.
 
-Spawn the auditor as a separate agent with no session history. Give it the triples as data.
+Spawn the auditor as a separate agent with no session history. Give it the triples as data:
+`python3 framework/scripts/locator_audit.py --pmid <PMID> --triples N` prints N reproducibly
+sampled triples (0 = all) and nothing else from the manifest. It is cheap enough to run on any
+reading, not only on the triggers below: in one 2026-10-19 wave a voluntary audit found 23 of
+101 propositions over- or undershooting after every gate had passed.
 
 ## When it is mandatory
 

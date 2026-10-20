@@ -50,6 +50,11 @@ TOOLS = [
     ("pdfimages", "binary", False,
      "poppler. Lists/extracts embedded PDF images. Useful for inventory; does NOT reproduce "
      "PyMuPDF xref bytes."),
+    ("ffmpeg", "binary", False,
+     "Video decoder. A supplementary video is a figure surface; without a decoder its frames "
+     "cannot be extracted and it is declared unread (one 44 MB video, 2026-10-19). Zero-spend "
+     "route measured the same day: `pip install --target <scratch> imageio-ffmpeg` ships a "
+     "static ffmpeg (7.0.2) under imageio_ffmpeg/binaries/ - call it by path, no system install."),
     ("git", "binary", True, "Version control. Every durable milestone is a commit."),
     ("flock", "binary", False,
      "util-linux. Serialises commits when several actors share one checkout."),

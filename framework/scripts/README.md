@@ -87,7 +87,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 
 | You want | Run |
 |---|---|
-| does every locator's quote actually occur in the artifact it was taken from (in a worktree, pass `--corpus`; the run prints the hint when it cannot see its surfaces) | `framework/scripts/locator_audit.py` |
+| does every locator's quote actually occur in the artifact it was taken from (in a worktree, pass `--corpus`; the run prints the hint when it cannot see its surfaces) — and, with `--pmid <PMID> --triples N`, the **blind packet** for a `legend-locator-audit` auditor: N reproducibly sampled (proposition, quote, anchor) triples and no other manifest field | `framework/scripts/locator_audit.py` |
 | a paper's load-bearing citations — **how many this checkout can adjudicate** (the denominator, always printed), and the reader's `SUPPORTED` / `NOT_CONTAINED` / `CONTRADICTED` tally against it; the judgement stays with the reader | `framework/scripts/upstream_citation_census.py` |
 | which readings contradicted an already-persisted locator, and were they audited | `framework/scripts/locator_contradiction_audit.py` |
 | where the identifiers inside a locator's proposition came from | `framework/scripts/locator_identifier_provenance.py` |
@@ -110,6 +110,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | does the DECLARED genre of an article agree with what its own deposit measures | `framework/scripts/genre_discriminator.py` |
 | page furniture that has landed INSIDE a sentence in an extracted text | `framework/scripts/text_surface_intrusion_check.py` |
 | are the figure captions inside the `<body>` of the surface you are about to declare | `framework/scripts/caption_census.py` |
+| which image file carries which caption, from the JATS XML — file numbers are not figure numbers (3 of 8 deposits in one 2026-10 wave) — with each file checked on disk | `framework/scripts/figure_legend_pairs.py <xml> --figures <dir>` |
 | a PDF's raster information ceiling, before rendering its pages | `framework/scripts/figure_ppi_preflight.py` |
 | regenerate page-adjudication crops from the source PDF and verify them by digest | `framework/scripts/regenerate_adjudications.py` |
 | every degraded state of that verification, graded | `framework/scripts/adjudication_state_matrix.py` |
