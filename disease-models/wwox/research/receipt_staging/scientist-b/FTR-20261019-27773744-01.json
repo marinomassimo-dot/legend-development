@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-19T20:00:00Z",
+ "event_at": "2026-10-19T20:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "captions_only",
+  "results": "read",
+  "figures": "unavailable",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present"
+ },
+ "event_id": "FTR-20261019-27773744-01",
+ "evidence_basis": [
+  "Results and Discussion read in full; no figure files are obtainable from the bucket, so figures are unavailable and every numeric claim here is taken from the text.",
+  "FIND: the one thymidine-supplementation experiment is in Fhit-null cells; the Wwox survival data rest on five unrelated breast lines, one early-versus-late passage comparison and an unadjusted public-database survival split; the co-loss claim is an expression correlation read as an order of events."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID27773744.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID27773744.md",
+  "disease-models/wwox/research/wave4_scientist-b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "93b6ec9555aae4f241d0a4df4f376f9bd76fb3529ce02811e65601814ed595a4",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID27773744_Schrock2017_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1016/j.jbior.2016.09.008",
+  "pmid": "27773744"
+ },
+ "workflow": "scientist-b wave 4 group W1; SOURCE_FIRST; PMC efetch XML re-acquired with pmc_bucket_fetch.py, no User-Agent; locators verified by deepdive_manifest.py. Prepared as a JSON file for the integrator and not appended."
+}

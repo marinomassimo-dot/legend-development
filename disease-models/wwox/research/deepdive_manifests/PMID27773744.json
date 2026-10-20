@@ -1,0 +1,221 @@
+{
+ "schema_version": 2,
+ "pmid": "27773744",
+ "doi": "10.1016/j.jbior.2016.09.008",
+ "receipt": "FTR-20261019-27773744-01",
+ "landing": [
+  "FTR-20261019-27773744-01",
+  "wave4_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: PMC efetch XML returned a full body although the selection listed it as page only; no figure files are in the bucket."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: read directly under the Scientist brief."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no baseline claim is narrowed, reversed or removed and no MAJOR change is declared."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 6,
+  "publications_on_gene": 6,
+  "counts_measured": "PubMed esearch 2026-10-20: Schrock MS[au] AND WWOX 6; Huebner K[au] AND WWOX 32 (senior author).",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "The fragile-site and FHIT laboratory; Wwox is the second theme; cancer cell lines and public cohorts only.",
+  "note": "No competing interests assessed here."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "Huebner K[au] AND WWOX",
+    "route": "PubMed esearch count 2026-10-20",
+    "count": 32
+   }
+  ],
+  "note": "Count as returned by the API on the date."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 36,
+  "gene_direct_refs_in_source": [
+   "25331887",
+   "15070730",
+   "17360458",
+   "17823927",
+   "16941225",
+   "27869163",
+   "24308844",
+   "15548692",
+   "17458891",
+   "15073846",
+   "19609013"
+  ],
+  "enumeration_method": "<ref> elements with WWOX, Wwox, WOX1, WOREE or FRA16D in the citation text and a PMID; 0 more carry no PMID.",
+  "resolved": [
+   "25331887",
+   "15070730",
+   "17360458",
+   "17823927",
+   "16941225",
+   "27869163",
+   "24308844"
+  ],
+  "queued": [
+   "15548692",
+   "17458891",
+   "15073846",
+   "19609013"
+  ],
+  "note": "Resolved = already has a manifest or receipt; queued = listed for the Orchestrator as reading debt (this actor does not edit the queue)."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 27773744; registry comparison after the first pass",
+  "hits": 0,
+  "finding": "Queue and ledger mention only before this reading."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-20",
+  "route": "PMC efetch XML front matter; dependency_integrity.py screen",
+  "result": "No retraction, correction or expression of concern found.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 39,
+   "references_screened": 34,
+   "references_with_doi": 34,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 5
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID27773744_Schrock2017_PMC_r2.xml",
+   "sha256": "93b6ec9555aae4f241d0a4df4f376f9bd76fb3529ce02811e65601814ed595a4",
+   "kind": "article_text",
+   "note": "PMC efetch JATS for PMC7213024 (Adv Biol Regul 2017), 95,012 bytes; the bucket has no figure files.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "93b6ec9555aae4f241d0a4df4f376f9bd76fb3529ce02811e65601814ed595a4",
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC7213024&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch JATS for PMC7213024 retrieved 2026-10-20, 95,012 bytes; the whole body is indexed locally for exact-text checks.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "SOURCE_FIRST. Results and Discussion read in full; figures are not available (no files in the bucket), so figures are not_present for the reading and every figure-dependent statement is quoted from the text; the Fhit TK1 mRNA-decapping subsections were read lightly and the methods were skimmed; depth partial.",
+  "entries": [
+   {
+    "proposition": "Thymidine supplementation (10 uM for 40 days) suppressed double-strand-break formation in Fhit knockout mouse kidney cells only, to a tail moment like wild type; this is a nucleotide-supply rescue of a Fhit-TK1 lesion, with no thymidine experiment in Wwox-deficient cells.",
+    "snippet": "Low level concentration (10 μM) thymidine supplementation for 40 days suppressed DSB formation in −/− cells only (Fig. 1F)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27773744_Schrock2017_PMC_r2.xml",
+    "anchor": "Results, thymidine supplementation",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "mouse kidney cell lines (Fhit +/+ and -/-), five human breast cancer lines, mouse embryonic fibroblasts (Wwox ko), Kaplan-Meier Plotter ovarian cohort, TCGA squamous lung expression",
+     "genotype": "Fhit loss (thymidine axis); Wwox deficiency by endogenous expression or knockout MEFs",
+     "comparator": "Fhit +/+; Wwox-expressing lines; Wwox-expressing tumours"
+    }
+   },
+   {
+    "proposition": "The Wwox survival claim rests on five breast cancer lines classified as expressing (two) or deficient (three) by endogenous expression: the two expressors show about 10-fold lower survival at 4 Gy than the three deficient lines, so the comparison confounds Wwox with the identity of five unrelated lines.",
+    "snippet": "ZR-75–1 and BT-20 cells express normal levels of Wwox and exhibit ~10-fold lower survival at 4 Gy compared to T47D, MDA MB-453 and MDA MB-436 cell lines, which were Wwox-deficient.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27773744_Schrock2017_PMC_r2.xml",
+    "anchor": "Results, Wwox-deficient cells exhibit increased cell survival",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "mouse kidney cell lines (Fhit +/+ and -/-), five human breast cancer lines, mouse embryonic fibroblasts (Wwox ko), Kaplan-Meier Plotter ovarian cohort, TCGA squamous lung expression",
+     "genotype": "Fhit loss (thymidine axis); Wwox deficiency by endogenous expression or knockout MEFs",
+     "comparator": "Fhit +/+; Wwox-expressing lines; Wwox-expressing tumours"
+    }
+   },
+   {
+    "proposition": "The second line of evidence compares early (passage 10) and late (passage 23) mouse kidney cells in which Wwox protein is reduced at late passage; passage changes many properties besides Wwox.",
+    "snippet": "This cell line at late passage (Wwox-reduced) exhibits a significant and striking survival compared to the early passage at 4 Gy (P<0.0001).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27773744_Schrock2017_PMC_r2.xml",
+    "anchor": "Results, Wwox-deficient cells exhibit increased cell survival",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "mouse kidney cell lines (Fhit +/+ and -/-), five human breast cancer lines, mouse embryonic fibroblasts (Wwox ko), Kaplan-Meier Plotter ovarian cohort, TCGA squamous lung expression",
+     "genotype": "Fhit loss (thymidine axis); Wwox deficiency by endogenous expression or knockout MEFs",
+     "comparator": "Fhit +/+; Wwox-expressing lines; Wwox-expressing tumours"
+    }
+   },
+   {
+    "proposition": "The repair-pathway mechanism (Wwox loss gives enhanced homology-directed and single-strand-annealing repair and reduced end-joining) is cited to the authors earlier paper, not shown here.",
+    "snippet": "Recently, our lab discovered that Wwox expression modulates the efficiencies of all four DSB pathways in normal and cancer cells exposed to ionizing radiation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27773744_Schrock2017_PMC_r2.xml",
+    "anchor": "Results, Wwox-deficient cells exhibit increased cell survival",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "mouse kidney cell lines (Fhit +/+ and -/-), five human breast cancer lines, mouse embryonic fibroblasts (Wwox ko), Kaplan-Meier Plotter ovarian cohort, TCGA squamous lung expression",
+     "genotype": "Fhit loss (thymidine axis); Wwox deficiency by endogenous expression or knockout MEFs",
+     "comparator": "Fhit +/+; Wwox-expressing lines; Wwox-expressing tumours"
+    }
+   },
+   {
+    "proposition": "The patient-level claim is a Kaplan-Meier Plotter comparison in ovarian cancer patients given platinum (n = 1185) of progression-free survival by Wwox expression group, with no adjustment, no hazard ratio and no stage or treatment covariates stated in the text.",
+    "snippet": "Kaplan–Meier analysis revealed that ovarian cancer patients with Wwox-deficient cancers that received Platinum-based chemotherapy exhibited shorter progression-free survival (n = 1185) compared to patients with Wwox-expressing cancers (Fig. 5A).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27773744_Schrock2017_PMC_r2.xml",
+    "anchor": "Results, patients with Wwox-deficient cancers",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "mouse kidney cell lines (Fhit +/+ and -/-), five human breast cancer lines, mouse embryonic fibroblasts (Wwox ko), Kaplan-Meier Plotter ovarian cohort, TCGA squamous lung expression",
+     "genotype": "Fhit loss (thymidine axis); Wwox deficiency by endogenous expression or knockout MEFs",
+     "comparator": "Fhit +/+; Wwox-expressing lines; Wwox-expressing tumours"
+    }
+   },
+   {
+    "proposition": "The co-loss claim is that Wwox expression is lower (P < 0.05) in the Fhit-low group of a TCGA squamous lung cohort, from expression normalised to GAPDH and ranked groups; the text reads it as loss of Fhit being quickly succeeded by loss of Wwox (it writes activation of Wwox), a causal order that expression correlation cannot give.",
+    "snippet": "Fig. 5B demonstrates that the average expression for Wwox was significantly decreased (P< 0.05) in the Fhit-low group compared to the Fhit-normal group, suggesting loss of Fhit is accompanied by reduction in expression of Wwox.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27773744_Schrock2017_PMC_r2.xml",
+    "anchor": "Results, loss of Fhit occurs frequently with loss of Wwox",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "mouse kidney cell lines (Fhit +/+ and -/-), five human breast cancer lines, mouse embryonic fibroblasts (Wwox ko), Kaplan-Meier Plotter ovarian cohort, TCGA squamous lung expression",
+     "genotype": "Fhit loss (thymidine axis); Wwox deficiency by endogenous expression or knockout MEFs",
+     "comparator": "Fhit +/+; Wwox-expressing lines; Wwox-expressing tumours"
+    }
+   }
+  ]
+ }
+}
