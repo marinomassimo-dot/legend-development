@@ -34,6 +34,35 @@ conflict metadata never becomes false. The checksum covers canonical JSON conten
 original file bytes. The tool adds no probabilities or pooled score. Translational dimensions
 remain UNKNOWN until separately qualified; this tool never certifies safety or efficacy.
 
+Two optional P4 blocks are **declared in the packet, never performed by this tool**, which
+has no network (added 2026-10-20 from the external drug-repurposing roadmap, which names both
+and which this tool lacked):
+
+`label_lookup` records a pharmacological-label search on two separate axes. `status` is
+MATCH_FOUND, NO_MATCH_FOUND, QUERY_ERROR or NOT_ATTEMPTED; `coverage` is independently
+COMPLETE_FOR_QUERIES_RUN, COVERAGE_INCOMPLETE or UNKNOWN, so NO_MATCH_FOUND with incomplete
+coverage is a legal and distinct statement. Omitting the block yields NOT_ATTEMPTED, which is
+never NO_MATCH_FOUND. A concluded search must list the `queries` actually run; NOT_ATTEMPTED
+must not. MATCH_FOUND requires `product_name` or `spl_id`; QUERY_ERROR requires `error`;
+COVERAGE_INCOMPLETE requires `coverage_limit`. `source`, `retrieved_at`, `client_version`,
+`active_ingredient`, `formulation` and `method` (primary / alternative /
+primary_then_alternative / UNKNOWN) default to UNKNOWN. The outcome never touches the
+directional comparison, never ranks and never drops a candidate: NO_MATCH_FOUND is
+information not available, not DRUG_HAS_NO_LABEL, not proof of absence and not biological
+counterevidence; a label that exists certifies neither approval, currency, paediatric
+suitability nor WOREE relevance. Each state writes its own line under `limits`.
+
+`p4_fields` carries the fields the plan added later — `endpoint_pursued`,
+`functional_evidence_available`, `temporal_or_model_limit` and a `cellular_context` of
+`target_expression`, `cells_tissue_stage`, `coverage` and `limits`. Every one is always
+present in the card and defaults to UNKNOWN rather than being absent, because a missing field
+reads as "not applicable" while UNKNOWN reads as "owed". A pathway or expression change does
+not substitute for the functional measure, and target expression is not drug selectivity.
+Unknown keys in either block are rejected rather than silently kept, so a typo cannot
+become a field and no weight or score can be smuggled in. An empty `drug_assertions` list is
+reported as `abstention: NO_DRUG_ASSERTIONS_SUPPLIED`, which is a different fact from a search
+that returned nothing.
+
 The Monarch/DGIdb adapter now offers --json with timestamp, request and raw responses,
 interaction actions and scores as returned. Monarch coverage is conservative: without an
 explicit total matching returned items it says INCOMPLETE. It does not implement pagination.
