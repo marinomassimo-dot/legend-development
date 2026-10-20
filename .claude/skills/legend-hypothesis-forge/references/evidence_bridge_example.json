@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "route": "BENEFICIO_PRECOCE",
+  "candidate": {
+    "id": "TEST:drug",
+    "name": "Synthetic compound"
+  },
+  "disease_assertion": {
+    "id": "disease-1",
+    "target_id": "TEST:target",
+    "endpoint": "activity",
+    "direction": "INCREASE",
+    "source": "synthetic-fixture",
+    "locator": "row 1",
+    "epistemic_status": "IPOTESI",
+    "reading_depth": "UNKNOWN",
+    "context": {
+      "disease_id": "synthetic",
+      "genotype": "synthetic",
+      "species": "synthetic",
+      "cell_type": "synthetic",
+      "developmental_stage": "synthetic"
+    }
+  },
+  "drug_assertions": [
+    {
+      "id": "drug-1",
+      "target_id": "TEST:target",
+      "endpoint": "activity",
+      "direction": "DECREASE",
+      "source": "synthetic-fixture",
+      "locator": "row 1",
+      "epistemic_status": "IPOTESI",
+      "reading_depth": "UNKNOWN",
+      "context": {
+        "disease_id": "synthetic",
+        "genotype": "synthetic",
+        "species": "synthetic",
+        "cell_type": "synthetic",
+        "developmental_stage": "synthetic"
+      }
+    }
+  ],
+  "evidence_against": [
+    "Synthetic counterevidence"
+  ],
+  "engine_score": 0.8
+}

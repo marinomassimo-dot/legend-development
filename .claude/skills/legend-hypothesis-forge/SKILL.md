@@ -81,6 +81,28 @@ Every hypothesis is generated *against the real case*, not in the abstract: geno
 - Status and, if mature, a `proposed-to-portfolio` flag with a note of what promotion to the tracker would need.
 - Session change-log at the bottom of the file.
 
+## Local Evidence Bridge (technical increment)
+
+Reuse this skill and the existing safety-triage workflow; no new orchestrator or ledger.
+For the offline packet contract and synthetic example, read
+[`references/evidence_bridge.md`](references/evidence_bridge.md).
+
+1. Run `python3 .claude/skills/legend-hypothesis-forge/scripts/kg_thin_slice.py WWOX --json`
+   only when live discovery is needed. Save stdout as a run artifact. Query errors return
+   a nonzero exit code; `INCOMPLETE` is not an exhaustive negative. Pathways remain in
+   the raw packet and never enter the DGIdb gene-symbol request.
+2. Qualify assertions against existing records via `registry_records.py`, preserving
+   evidence for/against and reading debt. Do not infer causal direction from pathograph
+   links, KG predicates, drug scores or the word TARGET. The live packet is discovery
+   material, not automatically a qualified Evidence Bridge input.
+3. Run `python3 framework/scripts/repurposing_bridge.py <packet.json>` for each research
+   objective (`RECUPERO_PROFONDO` or `BENEFICIO_PRECOCE`); retain the resulting JSON in
+   existing research/run artifacts and link mature hypotheses to the existing ledger.
+4. Read the comparison and its unresolved dimensions. A mismatched context requires
+   scientific qualification; opposing signs alone do not establish functional rescue.
+   Keep source-specific assertions and scores separate. Specify the next discriminating
+   experiment, then use `legend-safety-triage`. No automatic promotion or administration.
+
 ## Closing (mandatory in chat)
 1. Summary: how many mechanistically distinct hypotheses survived and why, which levers were searched and found empty, and the top ones (up to 5) with lever and tag.
 2. Any `proposed-to-portfolio` and what is missing to promote them.
