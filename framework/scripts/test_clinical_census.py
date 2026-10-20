@@ -245,7 +245,7 @@ class ContactRedactionTests(unittest.TestCase):
     PAYLOAD = {"studies": [{"protocolSection": {
         "contactsLocationsModule": {"centralContacts": [
             {"name": "A Person", "role": "CONTACT",
-             "email": "someone@example.org", "phone": "555-0100"}]},
+             "email": "contact@example.invalid", "phone": "555-0100"}]},
         "identificationModule": {"nctId": "NCT00000010", "briefTitle": "Keep me"}}}]}
 
     def test_contact_values_are_replaced_and_counted(self) -> None:
@@ -270,7 +270,7 @@ class ContactRedactionTests(unittest.TestCase):
             self.assertEqual(2, page["original_response_contact_redactions"])
             self.assertTrue(page["original_response_is_contact_redacted"])
             stored = Path(page["original_response_path"]).read_text(encoding="utf-8")
-            self.assertNotIn("@example.org", stored)
+            self.assertNotIn("@example.invalid", stored)
             self.assertIn("NCT00000010", stored)
 
 
