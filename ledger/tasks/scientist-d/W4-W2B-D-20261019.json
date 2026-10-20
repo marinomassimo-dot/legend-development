@@ -29,6 +29,23 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-19"
+ "CURRENT_STATE": "IN_PROGRESS",
+ "assigned_on": "2026-10-19",
+ "TASK_ACK": {
+  "TASK_ID": "W4-W2B-D-20261019",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "decision": "ACCEPTED",
+  "at": "2026-10-20T06:46:37Z"
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "W4-W2B-D-20261019",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-d",
+  "timestamp": "2026-10-20T06:46:37Z",
+  "durable_pointer": "branch task/W4-W2B-D-20261019, worktree .claude/worktrees/w4-d",
+  "note": "scientist-d is a stated assumption of the Orchestrator"
+ },
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
 }
