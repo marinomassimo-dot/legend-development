@@ -58,7 +58,7 @@ class DiscoveryLeadWriter(unittest.TestCase):
 
     def test_validation_names_every_reason(self) -> None:
         errors = dl.validate(spec(kind="X", tag="GUESS", status="done", title="",
-                                  extra=1, source="mail me at a.b@example.org"))
+                                  extra=1, source="mail me at x@example.invalid"))
         joined = "; ".join(errors)
         for needle in ("title", "kind", "tag", "status", "unknown", "e-mail"):
             self.assertIn(needle, joined)
