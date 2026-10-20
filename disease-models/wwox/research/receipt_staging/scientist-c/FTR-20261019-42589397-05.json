@@ -1,0 +1,40 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-42589397-05",
+ "study_id": {
+  "pmid": "42589397",
+  "doi": "10.3390/ijms27156740"
+ },
+ "event_at": "2026-10-19T21:00:00Z",
+ "analysis_at": "2026-10-19T21:00:00Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, task HELD-PARTIAL-WWOX-C-20261019, branch task/HELD-PARTIAL-WWOX-C-20261019; context_policy QUESTION_DRIVEN. Held before reading: the selection row and the prior receipt's owed sections. Stated question: in the main figures what per-subtype WWOX/HIF1A ratio and survival direction is plotted, and does it agree in sign with the running text and the supplementary tables already read. Route: the five main-figure JPEGs acquired on 2026-10-20 from the PMC OA open-data bucket (the paper's figures were never on disk before) and declared in the manifest; all five opened at native size. The question as stated assumed a survival plot among the main figures; there is none, and the receipt records the figures actually present (Notch genes, KEGG ORA, Hallmark GSEA, MCPcounter). Coverage other than figures is carried from FTR-20260928-42589397-03 (body) and -04 (supplementary File S1), which were not re-derived. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml",
+ "source_fingerprint": "ae7f429190e0b48faaf91f9df0c79e66dd7986d23c65c21f5564ef8607f898af",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "read",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "read",
+  "results": "read",
+  "supplementary": "read",
+  "tables": "not_present",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42589397.json",
+  "disease-models/wwox/research/held_wave_20261019_scientist-c.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "Coverage other than figures is carried from FTR-20260928-42589397-03 and -04."
+ ],
+ "prior_receipt": "FTR-20260928-42589397-04",
+ "reread_reason": "inadequate_prior_coverage"
+}

@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-41324728-01",
+ "study_id": {
+  "pmid": "41324728",
+  "doi": "10.1007/s12035-025-05406-2"
+ },
+ "event_at": "2026-10-19T19:28:36Z",
+ "analysis_at": "2026-10-19T19:28:36Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, interventions batch 2026-10-19, task INTERV-H4-C-20261019, branch task/INTERV-H4-C-20261019; context_policy SOURCE_FIRST. Route: Europe PMC REST fullTextXML (open access) saved to the shared checkout files/fulltext; whole article read from a text rendering of the JATS up to the abbreviation list and references (77 references counted, not read); the eleven figures opened in two montages at 700 to 1000 px per panel. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID41324728_Kuang2025_PMC.xml",
+ "source_fingerprint": "d6882c356c506f85a85513d3d94d8ad6dabe53f6a3ceea8c971d40da7a931eed",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41324728.json",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "A correlational-plus-inhibitor rat study of HIF-1 alpha/BNIP3 in epilepsy; the Results and Discussion disagree on seizure counts and the two neuron-count figures disagree for one group; recorded as locators. Substitute for the HIF1A item, not WWOX evidence."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-37726428-01",
+ "study_id": {
+  "pmid": "37726428",
+  "doi": "10.1038/s41598-023-42741-7"
+ },
+ "event_at": "2026-10-19T19:24:38Z",
+ "analysis_at": "2026-10-19T19:24:38Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, interventions batch 2026-10-19, task INTERV-H4-C-20261019, branch task/INTERV-H4-C-20261019; context_policy SOURCE_FIRST. Route: Europe PMC REST fullTextXML (open access) saved to the shared checkout files/fulltext; whole article read from a text rendering of the JATS up to the reference list (28 references counted, not read); the six figures opened in one montage at 800 px per panel. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID37726428_Villa2023_PMC.xml",
+ "source_fingerprint": "5cb024f576d3ededb9a42efb510a84846a011ca1709ba12bdf410a44e77f45e8",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID37726428.json",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "Rat kindling model of postictal hypoxia: a substitute for the ictal-hypoxia question, not WWOX evidence. The article has no limitations section; the limits are recorded as locators."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

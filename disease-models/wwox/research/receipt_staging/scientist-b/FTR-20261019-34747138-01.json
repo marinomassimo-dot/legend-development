@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-19T22:00:00Z",
+ "event_at": "2026-10-19T22:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "captions_only"
+ },
+ "event_id": "FTR-20261019-34747138-01",
+ "evidence_basis": [
+  "Whole JATS body and all seven figure images opened; Appendix text read (legends) and Appendix Figure S1 opened as a 150 dpi page image; Appendix Figures S2-S6 and the review-process file not opened as images, hence supplementary captions_only.",
+  "NEW: glucose rescue rests on Appendix S1C/D alone (n=5, pooled KO+GFP or KO control, glucometer single reading); Figure 1E and 2G percentages sit below the 60-70 percent in the text for cerebellum; rescued survival curves end at 330-350 days."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID34747138.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID34747138.md",
+  "disease-models/wwox/research/gold_wave_20261019_scientist-b.md"
+ ],
+ "prior_receipt": "FTR-20260928-34747138-04",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_version_or_supplement",
+ "source_fingerprint": "c430d5d2771bb0cc9cced8e27c095cab1947f1299e71ddd7bba156fd47689b46",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID34747138_Repudi2021_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.15252/emmm.202114599",
+  "pmid": "34747138"
+ },
+ "workflow": "scientist-b gold wave 2026-10-19; QUESTION_DRIVEN re-read (the paper was read in full on 2026-08-10); bytes re-acquired with no User-Agent (PMC efetch, PMC open-data bucket); locators verified by deepdive_manifest.py; prepared as JSON for the integrator and not appended."
+}

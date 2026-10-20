@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-10-19T20:30:00Z",
+ "event_at": "2026-10-19T20:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "not_present",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present"
+ },
+ "event_id": "FTR-20261019-38397994-01",
+ "evidence_basis": [
+  "Whole JATS body read section by section; Table 1 (glucose levels) read; Figures 1 and 2 (schematics) inspected as images.",
+  "FIND: WWOX is absent. Epinephrine appears as one of the counter-regulatory hormones whose response is blunted after antecedent hypoglycaemia in diabetic adults; the review has no neonatal, paediatric-genetic or encephalopathy content, and states the brain cannot store glucose as glycogen, which another corpus review contradicts.",
+  "References enumerated (66) and screened for integrity, not read."
+ ],
+ "evidence_depth": "complete_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID38397994.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID38397994.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-B-H3-AUTONOMIC-HYPOGLYCAEMIA-01.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "3a16650b684c3dd8120da78311874d1e641c4fd227a2c0e12cad9dcbb7cc9fed",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID38397994_Holzen2024_PMC10887081.xml",
+ "study_id": {
+  "doi": "10.3390/biomedicines12020391",
+  "pmid": "38397994"
+ },
+ "workflow": "scientist-b, interventions batch 2026-10-19 group H3, task branch task/INTERV-H3-B-20261019; context_policy SOURCE_FIRST. Route: Europe PMC JATS fetched with no User-Agent, figures from the PMC OA S3 bucket, all into the root files/ tree; figures inspected as images where stated; locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a JSON file for the integrator and was not appended at preparation time."
+}

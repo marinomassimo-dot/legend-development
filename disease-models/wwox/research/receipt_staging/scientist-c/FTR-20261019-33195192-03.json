@@ -1,0 +1,40 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-33195192-03",
+ "study_id": {
+  "pmid": "33195192",
+  "doi": "10.3389/fcell.2020.558432"
+ },
+ "event_at": "2026-10-19T21:00:00Z",
+ "analysis_at": "2026-10-19T21:00:00Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, task HELD-PARTIAL-WWOX-C-20261019, branch task/HELD-PARTIAL-WWOX-C-20261019; context_policy QUESTION_DRIVEN. Held before reading: the selection row and the prior receipt's owed sections. Stated question: in the main-figure panels which genotype, age and tissue carry the ERK and homeostasis readouts, and is a systemic confounder (hypoglycaemia, growth) visible in any panel. Route: the Europe PMC JATS and the eight main-figure JPEGs from the Europe PMC supplementary archive already declared in the manifest; all eight opened at native size. Coverage other than figures is carried from FTR-20261004-33195192-02 and the existing locators. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID33195192_Chou2020_PMC.xml",
+ "source_fingerprint": "ef330947352977c26f7be0eb422682c065cd986709e8f5bfa52cc301872b15cd",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "read",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "read",
+  "tables": "not_present"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID33195192.json",
+  "disease-models/wwox/research/held_wave_20261019_scientist-c.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "Coverage other than figures is carried from FTR-20261004-33195192-02."
+ ],
+ "prior_receipt": "FTR-20261004-33195192-02",
+ "reread_reason": "inadequate_prior_coverage"
+}

@@ -1,0 +1,297 @@
+{
+ "schema_version": 2,
+ "pmid": "36686527",
+ "doi": "10.3389/fneur.2022.1040648",
+ "receipt": "FTR-20261019-36686527-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-H3-AUTONOMIC-HYPOGLYCAEMIA-01",
+  "interventions_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared (group H3 has no WWOX evidence to compare against)."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 4743,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Bauer J[au]' 4743; 'Bauer J[au] AND WWOX' 0 (surname-initial queries are ambiguous and are not evidence of authorship); last author 'Koch H[au]'.",
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Four-author narrative review by a group that works on brainstem respiratory networks and SUDEP in mice; weigh as a literature map whose catecholamine statements are single sentences with cited sources.",
+  "note": "Not a WWOX group."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 0
+   }
+  ],
+  "note": "WWOX does not occur in the article."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 249,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "dependency_integrity.py screen reference count, confirmed against <ref> elements in the JATS.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-directed reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --theme adrenergic / epinephrine / noradrenaline / catecholamine / autonomic / sympathetic (each exit 1, no record) and --theme SUDEP (2 of 1586 records)",
+  "hits": 0,
+  "finding": "No registry record carries any adrenergic term, so the laboratory holds nothing on catecholamines to compare with; an empty result is a statement about those queries over those files, not about the literature. SUDEP occurs in two records only as a reason to keep seizure control, not as a mechanism."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed efetch 2026-10-19 for this PMID (no CommentsCorrections element, publication types listed); JATS front matter",
+  "result": "No retraction, correction or expression of concern found in the PubMed record.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 249,
+   "references_screened": 248,
+   "references_with_doi": 248,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID36686527_Bauer2022_PMC9853197.xml",
+   "sha256": "2a34650779525e3c0510de0837fa973e2b2ffe371098ad6fbd0aa52e1bc4858d",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC9853197, 300,628 bytes; abstract, introduction, nine body sections, Table 1, Figures 1 to 5 legends and conclusion present.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9853197/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "2a34650779525e3c0510de0837fa973e2b2ffe371098ad6fbd0aa52e1bc4858d"
+   }
+  },
+  {
+   "path": "files/figures/PMID36686527/fneur-13-1040648-g0001.jpg",
+   "sha256": "a72fe3c417065b7f00554f175c97a7bdf364a1373f6b404cd9d36678afd0a508",
+   "kind": "figure",
+   "note": "Figure 1 (file g0001): schematic, inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9853197.1/fneur-13-1040648-g0001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "a72fe3c417065b7f00554f175c97a7bdf364a1373f6b404cd9d36678afd0a508"
+   }
+  },
+  {
+   "path": "files/figures/PMID36686527/fneur-13-1040648-g0002.jpg",
+   "sha256": "ad74743f5efb40621a4781e6ecb51e16c2a02b36e2e617b84f99c93692749900",
+   "kind": "figure",
+   "note": "Figure 2 (file g0002): schematic, inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9853197.1/fneur-13-1040648-g0002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "ad74743f5efb40621a4781e6ecb51e16c2a02b36e2e617b84f99c93692749900"
+   }
+  },
+  {
+   "path": "files/figures/PMID36686527/fneur-13-1040648-g0003.jpg",
+   "sha256": "71b8c1fcf6ccdda086d3a48e1879df6630172f14ac1b671b2b0570ee2fec316a",
+   "kind": "figure",
+   "note": "Figure 3 (file g0003): schematic, inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9853197.1/fneur-13-1040648-g0003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "71b8c1fcf6ccdda086d3a48e1879df6630172f14ac1b671b2b0570ee2fec316a"
+   }
+  },
+  {
+   "path": "files/figures/PMID36686527/fneur-13-1040648-g0004.jpg",
+   "sha256": "4dc03a548a0404fb1eaa5ae69c60f57e8921302b91a4feeb0417f65b2f3627b5",
+   "kind": "figure",
+   "note": "Figure 4 (file g0004): schematic, inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9853197.1/fneur-13-1040648-g0004.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "4dc03a548a0404fb1eaa5ae69c60f57e8921302b91a4feeb0417f65b2f3627b5"
+   }
+  },
+  {
+   "path": "files/figures/PMID36686527/fneur-13-1040648-g0005.jpg",
+   "sha256": "271fc99d38788ff14840acd49d9a98528783bae23ccb8eb7fc99095013ecec9b",
+   "kind": "figure",
+   "note": "Figure 5 (file g0005): schematic, inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9853197.1/fneur-13-1040648-g0005.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "271fc99d38788ff14840acd49d9a98528783bae23ccb8eb7fc99095013ecec9b"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 300,628 bytes; abstract, introduction, nine body sections, Table 1, Figures 1 to 5 legends and conclusion present.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: whole article read, Table 1 read, all five figures (schematics) inspected as images. A narrative review: no methods or results sections of its own and no limitations section; the reference list (249) was screened for integrity, not read, so every number and mechanism here is a restatement of a cited primary.",
+  "entries": [
+   {
+    "proposition": "DESIGN: a narrative review with no stated search or appraisal; every mechanism is a restatement of a cited primary.",
+    "snippet": "We review potential mechanisms of seizure propagation and spread that might contribute to SUDEP, examine models used to study the mechanisms, and highlight advances",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36686527_Bauer2022_PMC9853197.xml",
+    "anchor": "Epilepsy and SUDEP, last paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DEFINITION: SUDEP excludes status epilepticus and deaths with another post-mortem cause, so a death in status epilepticus is not SUDEP by this definition.",
+    "snippet": "SUDEP excludes status epilepticus and cases where post-mortem examination or toxicology reveals another cause of death",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36686527_Bauer2022_PMC9853197.xml",
+    "anchor": "Epilepsy and SUDEP, paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "SYMPATHETIC: the review gives one sentence that high sympathetic tone and several neuropeptides can follow seizures, with two cited sources and no quantity or timing.",
+    "snippet": "High sympathetic tone and elevated levels of several neuropeptides can follow seizures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36686527_Bauer2022_PMC9853197.xml",
+    "anchor": "Control of autonomic functions in the brainstem and SUDEP, paragraph 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOREPINEPHRINE as one of nine neuromodulators of the respiratory network; the review says several have been shown to be elevated during and after seizures and potentially could contribute, without naming which.",
+    "snippet": "neuromodulators influencing respiratory activity include norepinephrine, serotonin, acetylcholine, substance P, ATP, somatostatin, dopamine, endorphins, and adenosine",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36686527_Bauer2022_PMC9853197.xml",
+    "anchor": "Control of autonomic functions in the brainstem and SUDEP, paragraph 4",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The norepinephrine-plus-hypoxia statement is hedged: repeated hypoxic episodes with increased norepinephrine can destabilise pre-Botzinger function and may parallel secondary changes; it is a mechanism candidate, not a measurement in SUDEP.",
+    "snippet": "This combination can destabilize PreBötC function (129) and may parallel secondary changes induced by the hypoxic conditions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36686527_Bauer2022_PMC9853197.xml",
+    "anchor": "ASM and brainstem function, paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The human recorded-SUDEP evidence is small and biased toward severe focal epilepsy with rapid drug withdrawal in presurgical units, and the authors say it cannot be generalised.",
+    "snippet": "The few SUDEPs recorded on video with electroencephalographic and electrocardiographic data are biased toward more severe focal epilepsy cases",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36686527_Bauer2022_PMC9853197.xml",
+    "anchor": "Epilepsy and SUDEP, paragraph 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Post-ictal EEG suppression is described as a weak SUDEP predictor.",
+    "snippet": "The post-ictal EEG suppression is viewed as a potential contributor but only a weak SUDEP predictor",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36686527_Bauer2022_PMC9853197.xml",
+    "anchor": "General concepts of the spreading of pathological activity",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "MODELS: developmental and epileptic encephalopathies are mentioned generically; the genetic SUDEP models tabulated are ion-channel genes (SCN1A, SCN1B, SCN8A, KCNA1, KCNH2, KCNQ1, CACNA1A) and no gene outside channelopathies is a SUDEP model here.",
+    "snippet": "Commonly SUDEP mouse models carry mutations in the Nav (1.1, 1.6) and Kv (1.1, 7.1, 11.1) genes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36686527_Bauer2022_PMC9853197.xml",
+    "anchor": "Model systems, paragraph 3 (after Table 1)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The autonomic toolkit named for mouse work is ECG, whole-chamber plethysmography, telemetry and intranasal cannula; these are the readouts that no WWOX model in the repository records has been reported with.",
+    "snippet": "Cardiac activity is typically recorded via electrocardiography (ECG)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36686527_Bauer2022_PMC9853197.xml",
+    "anchor": "Techniques to study network interaction, paragraph 8",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors close the therapeutic discussion by saying invasive neuromodulation needs far more refinement before benefits exceed risks.",
+    "snippet": "However, these invasive approaches will require far more refinement for their potential benefits to exceed their definite risks.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36686527_Bauer2022_PMC9853197.xml",
+    "anchor": "Techniques to study network interaction, last paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3 overview of genetic mouse models: three hexagons (channelopathies with SCN1A, KCNA1, CACNA1A; induced models with temperature or auditory signals; other diseases with autism, psychiatric, hyperkinetic disorder); no gene outside the channelopathy group is named and WWOX is absent.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3: title Genetic mouse models for epilepsy research; three hexagons labelled Channelopathies (Nav e.g. SCN1A, Kv e.g. KCNA1, Cav e.g. CACNA1A), Induced models (temperature or auditory signals e.g. DBA/1), Other diseases (autism, psychiatric disorder, hyperkinetic disorder).",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36686527/fneur-13-1040648-g0003.jpg",
+    "anchor": "Figure 3, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "review schematic of mouse model classes",
+     "endpoint": "none"
+    }
+   },
+   {
+    "proposition": "Figure 1 is a schematic of afferent and efferent connections of central autonomic networks leading to apnea, bradycardia, asystole or arrhythmia; it carries no measurement.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1: schematic of human head with cortex, hippocampus, striatum, amygdala, hypothalamus, brainstem and a magnified pons and medulla, red afferent and green efferent lines, ending in cardiorespiratory dysfunction with arrows for respiration (apnea) and heart rate (asystole, arrhythmia).",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36686527/fneur-13-1040648-g0001.jpg",
+    "anchor": "Figure 1, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "review schematic, no experimental system",
+     "endpoint": "none"
+    }
+   }
+  ]
+ }
+}

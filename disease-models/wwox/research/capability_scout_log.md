@@ -961,6 +961,17 @@ catalytic-dead control, a titration. The missing item is the experiment, not the
 
 **Next surgical micro-step:** run the proposition-versus-quote prompt over the existing manifests offline and count what it would have flagged.
 
+## 2026-10-19 — scientist-b, interventions wave group H3
+
+**Capability gap recorded (with evidence).** A Scientist staging receipts under the parallel-wave rule has no read-only way to validate them: `fulltext_receipts.py record` rewrites the hash chain and state manifest, and `validate` takes no receipt argument. Two waves wrote the same ad hoc script from the module's own validators.
+
+**CHANGE (proportional micro-upgrade, shipped).** `framework/scripts/staged_receipt_check.py` runs the writer's own `validate_new_receipt` and `validate_receipt` over staged JSON files with an explicit artefact root and appends nothing; test `test_staged_receipt_check.py`; README routing row; release-regression enrolment. All 15 receipts of this wave return OK.
+
+**Not built, and why.** An automatic proposition-versus-quote check (named by scientist-d) and a figure-file-to-label mapper (Dhillon: 11 PMC files in non-figure order) were not built; each is larger than a micro-step.
+
+**Cost / API / privacy risk:** none; offline.
+
+**Next surgical micro-step:** map PMC image files to figure labels from the JATS `fig` and `graphic` elements and warn when file order differs.
 ---
 
 ## 2026-10-19 — scientist-d, interventions batch group H5
@@ -1013,3 +1024,16 @@ catalytic-dead control, a titration. The missing item is the experiment, not the
 **Cost / API / privacy risk:** none; no keyed API, no unlawful source.
 
 **Next surgical micro-step:** add the archived-PMC-page route and the publisher-ESM check to the `find-fulltext` skill's Tier 0 and Tier 8 notes.
+---
+
+## 2026-10-20 — scientist-b, gold wave (task `GOLD-LEGACY-WWOX-B-20261019`)
+
+**Capability gap that emerged (with evidence).** Re-acquiring absent artefacts was repeated by hand for ten papers: eutils esummary for the PMCID, efetch XML, then the PMC open-data bucket listing for figures, supplements and PDF, with the same traps each time (PMC web pages serve a reCAPTCHA; efetch returns a 7.6 kB stub with a publisher comment when XML is forbidden; author-manuscript figures are not in the bucket). One restricted stub was nearly taken for a text; one XML re-fetched four weeks later was byte-identical to the earlier copy (42422765), another differed by digest (39507621), so digests must be recorded per fetch.
+
+**CHANGE (proportional micro-upgrade, shipped).** `framework/scripts/pmc_bucket_fetch.py` does the sequence once, never overwrites, writes only under files/, reports route, HTTP status, size and SHA-256 per file, and returns exit code 2 with `xml_state: restricted_stub` for a stub. Offline suite `framework/scripts/test_pmc_bucket_fetch.py` (stub versus full, bucket-key classification, no-overwrite), in the release battery; routed in `framework/scripts/README.md`. A first draft classified any `<restricted-by>` front-matter tag as a stub and mislabelled a full text; the live smoke test on a known-full paper caught it and the rule was removed.
+
+**Named, not built.** (1) A manifest re-point tool: nine re-reads needed the same operation (map absent artefact names to new files, drop declared-absent artefacts, append locators, declare path-only changes); done by a scratch builder in this run. (2) Absent derived renders (PDF pages at fixed dpi) are regenerated with new digests; a convention for recording "same page, same dpi, new digest" in the artefact note would stop each reader inventing wording.
+
+**Cost / API / privacy risk:** none; no key, no paid service, no personal address sent.
+
+**Next surgical micro-step:** none required.

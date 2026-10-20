@@ -32,12 +32,12 @@ annotations is reported below whatever it happens to be.
 | …undirected edges they collapse into | 46 |
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
-| Deep-dive manifests read | 337 |
-| …of which bound to at least one claim | 96 |
-| Propositions scanned | 5287 |
-| …carrying a relational connective | 1042 |
-| …locator-backed candidates | 1002 |
-| …locator-backed and bound to a claim | 343 |
+| Deep-dive manifests read | 382 |
+| …of which bound to at least one claim | 101 |
+| Propositions scanned | 6004 |
+| …carrying a relational connective | 1228 |
+| …locator-backed candidates | 1188 |
+| …locator-backed and bound to a claim | 385 |
 
 The scanned population is three declared surfaces and no others: every claim
 `Title`, every row of the working model's BLOCK 2 mirror, and every
@@ -50,7 +50,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 
 | Node | Declared title | Status | Type | Pathway | Scale | Deg | Papers |
 |---|---|---|---|---|---|---|---|
-| CLAIM 001 | Vigabatrin associated with VABAM in WWOX-DEE | conflicting evidence | DATO | P2 — GABAergic vulnerability / safety | NOT_ANNOTATED | 5 | 7 |
+| CLAIM 001 | Vigabatrin associated with VABAM in WWOX-DEE | conflicting evidence | DATO | P2 — GABAergic vulnerability / safety | NOT_ANNOTATED | 5 | 9 |
 | CLAIM 002 | WWOX-LoF causes network hyperexcitability; AAV-WWOX rescues organoid phenotype | consolidated baseline | DATO + INFERENZA prudente | P1 — Ca²⁺ / network dysregulation; P7 —  | NOT_ANNOTATED | 2 | 5 |
 | CLAIM 003 | Neuronal WWOX deletion induces non-cell-autonomous hypomyelination | consolidated baseline | DATO | P4 — myelination / white matter | NOT_ANNOTATED | 3 | 3 |
 | CLAIM 004 | AAV9-WWOX neuron-targeted rescue shows multi-domain in vivo improvement | consolidated baseline | DATO | P7 — gene therapy readiness | NOT_ANNOTATED | 10 | 3 |
@@ -59,7 +59,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 007 | P47T abolishes or near-abolishes WWOX recovery by two PPPY peptides in vitro | consolidated baseline | DATO | P3 — MYC/Wnt / interaction logic | NOT_ANNOTATED | 1 | 4 |
 | CLAIM 008 | WOREE and SCAR12 form a genotype-phenotype spectrum | consolidated baseline | DATO | Clinical spectrum / genotype-phenotype | NOT_ANNOTATED | 0 | 3 |
 | CLAIM 009 | WWOX deficiency plausibly alters mitochondrial quality control, redox and energy efficiency | in observation | INFERENZA | P5 — metabolism / mitochondria / redox / | NOT_ANNOTATED | 7 | 10 |
-| CLAIM 010 | Mitophagy may be more relevant than senolytics for WWOX-related mitochondrial dysfunction | background only | IPOTESI | P5 — metabolism / mitochondria / mitopha | NOT_ANNOTATED | 0 | 0 |
+| CLAIM 010 | Mitophagy may be more relevant than senolytics for WWOX-related mitochondrial dysfunction | background only | IPOTESI | P5 — metabolism / mitochondria / mitopha | NOT_ANNOTATED | 0 | 1 |
 | CLAIM 011 | AAV9-hSynI-hWWOX: dose-dependent durable rescue in Wwox-null murine model su domini multipli inc | flagged for review | DATO preclinico (full text reviewed) | P7 — gene therapy readiness; P4 — myelin | NOT_ANNOTATED | 11 | 2 |
 | CLAIM 012 | Fenotipo WWOX severo neonatale-fatale con MRI inizialmente normale: genotipo-severità heterogene | consolidated baseline | DATO descrittivo (full text reviewed) | clinical spectrum / genotype-phenotype | NOT_ANNOTATED | 0 | 1 |
 | CLAIM 013 | In WWOX-DEE, genotipi biallelici null/null associati a maggiore rischio di crisi, ipertonia e co | in observation | DATO con limiti metodologici dichiarati | Clinical spectrum / genotype-phenotype / | NOT_ANNOTATED | 0 | 2 |
@@ -91,7 +91,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 039 | Ataxic gait is the most penetrant phenotype of the rat `lde/lde` model — 95% versus 0% — and **n | in observation | DATO | P1 — neurosviluppo / funzione motoria | NOT_ANNOTATED | 3 | 1 |
 | CLAIM 040 | Neuronal restoration of WWOX suppresses spike-wave discharges in the `Wwox`-null mouse to a leve | in observation | DATO | P1 — neurosviluppo; P7 — eccitabilità di | NOT_ANNOTATED | 12 | 1 |
 | CLAIM 041 | In the P47T knock-in mouse, sampled cerebellar regions show fewer calbindin-positive Purkinje pr | in observation | DATO (mouse histology) + INFERENZA (rela | P1 — cerebellar neuronal structure; adja | NOT_ANNOTATED | 1 | 2 |
-| CLAIM 042 | In one WOREE case series, three of five patients are reported to have improved seizure control a | in observation | DATO (uncontrolled case series, clinical | P1 — clinical epilepsy management; P5 —  | NOT_ANNOTATED | 2 | 1 |
+| CLAIM 042 | In one WOREE case series, three of five patients are reported to have improved seizure control a | in observation | DATO (uncontrolled case series, clinical | P1 — clinical epilepsy management; P5 —  | NOT_ANNOTATED | 2 | 3 |
 | CLAIM 043 | The WWOX → TRAPPC6AΔ/TIAF1 → caspase → tau/Aβ cascade has no link measured in a neuron carrying  | in observation | DATO (what each cited link measures, rea | P4 — proteostasis / aggregation cascade | NOT_ANNOTATED | 3 | 5 |
 | CLAIM 044 | The direction of WWOX activity in stressed neurons is unresolved: one in-vivo record makes activ | in observation | DATO (the injury time course and its bou | P3 — neuronal injury and WWOX directiona | NOT_ANNOTATED | 2 | 2 |
 | CLAIM 045 | One WWOX allele is not electrophysiologically silent in the murine neocortex, and no endpoint be | in observation | DATO (la proporzione) + INFERENZA (la le | P2 — eccitabilità / rete neocorticale | NOT_ANNOTATED | 1 | 2 |
@@ -269,7 +269,7 @@ working model with no edge between them in the registry.
 |---|---|---|
 | CLAIM 006 | ANNOTATION_GAP_CONFIRMED | LOCATOR_PROPOSITION_BOUND, SHARED_EVIDENTIAL_PAPER, UNLINKED_PROSE_MENTION |
 | CLAIM 008 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SHARED_EVIDENTIAL_PAPER |
-| CLAIM 010 | NO_RELATION_MATERIAL_IN_REPOSITORY | — |
+| CLAIM 010 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND |
 | CLAIM 012 | NO_RELATION_MATERIAL_IN_REPOSITORY | — |
 | CLAIM 013 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE, SHARED_EVIDENTIAL_PAPER |
 | CLAIM 014 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE, SHARED_EVIDENTIAL_PAPER |
@@ -320,16 +320,16 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 | Source | Candidates |
 |---|---|
 | claim_title | 21 |
-| locator_proposition | 1002 |
+| locator_proposition | 1188 |
 | working_model_mirror_title | 19 |
 
 | Connective class (lexical) | Candidates |
 |---|---|
-| AMBIGUOUS_LEXICAL_FORM | 701 |
+| AMBIGUOUS_LEXICAL_FORM | 839 |
 | ARROW | 18 |
-| ASSOCIATIVE | 51 |
-| CAUSAL | 200 |
-| DEPENDENCY | 72 |
+| ASSOCIATIVE | 67 |
+| CAUSAL | 231 |
+| DEPENDENCY | 73 |
 
 A connective class is a property of the word, not a verdict about the
 relationship. An `ASSOCIATIVE` connective does not make an edge `ASSOCIATED`.
@@ -359,7 +359,7 @@ its sentence is a reading, and this tool does not perform readings.
 | CLAIM 016 | claim_title | `contribute to` | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency |
 | CLAIM 018 | claim_title | `causes` | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in humans |
 
-Showing 12 of 383 bound candidates; the
+Showing 12 of 425 bound candidates; the
 complete set, with evidence and provenance, is in the export. The worklist
 in cost order — what needs an annotation, what needs a type, what needs a
 decomposition, what needs a reading — is printed by:
@@ -375,7 +375,7 @@ carried no connective from the lexicon.
 
 ## Provenance
 
-Derived from 340 input files; digest
-`fbe64071754ef9b6`. Sources: the claim, paper and
+Derived from 385 input files; digest
+`8e84ed48e23d892c`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 

@@ -33,3 +33,17 @@ Note text to carry:
 1. The substrate of WWOX's SDR activity is unknown; steroids are suspected | The in vivo substrate and reaction product for the SDR enzyme activity of WWOX are unknown, although several in vitro targets have been identified11 and ablation of WWOX in mice leads to impaired steroidogenesis.12 Steroids are therefore likely suspects although impaired steroidogenesis is not evident in the Drosophila melanogaster WWOX mutants. | Introduction, Characteristics of the WWOX protein sequence, `files/fulltext/PMID25595186_Richards2015_PMC.html`
 2. The lipid sentence is a family-level description | These enzymes are NAD(P)(H)-dependent oxidoreductases that catalyze diverse small molecule reactions including those involving lipids, amino acids, carbohydrate, and steroids.16 | same
 3. The substrate-binding region is a homology inference | Protein homology searches indicate that the likely “substrate-binding domain” indicated by amino acid sequence homology C-terminal to the enzyme catalytic site (Figure 4) appears to be unique to WWOX orthologs (including those of C. elegans) and therefore likely to have a unique substrate. | Conclusions/future directions, same
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_001` · 2026-10-19 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.20 -> WM_v7.21 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** not run — no baseline claim is narrowed and no MAJOR contingency is declared; the candidate's locator triples are carried for a later audit.
+**What landed:** 1 PAPER record(s) (PAPER 251) with their LIT records. 
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.

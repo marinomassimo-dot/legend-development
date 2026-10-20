@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-10-19T20:30:00Z",
+ "event_at": "2026-10-19T20:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present"
+ },
+ "event_id": "FTR-20261019-35339181-01",
+ "evidence_basis": [
+  "Whole JATS body read section by section; Figure 1 inspected as an image; Table 1 read. The Supplementary Methods file is not in the JATS and was not retrieved (declared debt, not read).",
+  "FIND: WWOX is absent. The only primary data are rat intra-piriform micro-infusions, 8 rats per group, one experiment; abstract says beta2 stimulation \"fully prevents\" seizures but Figure 1 and its caption give 3 of 8 still seizing (37.5 percent).",
+  "References enumerated (27) and screened for integrity, not read."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID35339181.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID35339181.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-B-H3-ADRENERGIC-SEIZURE-01.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "7a6d71c4120b0ba443e275ba21b131f22bda77cdfee5370d0fda4c6671808aa3",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID35339181_Biagioni2023_PMC10556380.xml",
+ "study_id": {
+  "doi": "10.2174/1570159X20666220327213615",
+  "pmid": "35339181"
+ },
+ "workflow": "scientist-b, interventions batch 2026-10-19 group H3, task branch task/INTERV-H3-B-20261019; context_policy SOURCE_FIRST. Route: Europe PMC JATS fetched with no User-Agent, figures from the PMC OA S3 bucket, all into the root files/ tree; figures inspected as images where stated; locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a JSON file for the integrator and was not appended at preparation time."
+}

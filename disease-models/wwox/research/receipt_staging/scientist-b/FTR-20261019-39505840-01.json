@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-10-19T20:30:00Z",
+ "event_at": "2026-10-19T20:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "captions_only"
+ },
+ "event_id": "FTR-20261019-39505840-01",
+ "evidence_basis": [
+  "Whole JATS body read section by section; Table 1 and all seven main figures inspected as images; supplementary legends read, supplementary images and Source Data not opened; the peer review file read as context.",
+  "FIND: WWOX is absent. Primary mouse data on a three-drug adrenergic BLOCKADE (propranolol, prazosin, atipamezole), the opposite manipulation to the agonist papers of this group; blockade lengthened individual seizures during status epilepticus (115 to 204 s, P < 0.001) yet lowered mortality and later seizure counts; causality through glymphatic flow is not demonstrated.",
+  "References enumerated (140) and screened for integrity, not read."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID39505840.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID39505840.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-B-H3-ADRENERGIC-SEIZURE-01.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "d3206150963fce735fe7a023cb5dfa1fdcfdc21ac58d82ae21b9299dc3887537",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID39505840_Sun2024_PMC11541706.xml",
+ "study_id": {
+  "doi": "10.1038/s41467-024-53430-y",
+  "pmid": "39505840"
+ },
+ "workflow": "scientist-b, interventions batch 2026-10-19 group H3, task branch task/INTERV-H3-B-20261019; context_policy SOURCE_FIRST. Route: Europe PMC JATS fetched with no User-Agent, figures from the PMC OA S3 bucket, all into the root files/ tree; figures inspected as images where stated; locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a JSON file for the integrator and was not appended at preparation time."
+}

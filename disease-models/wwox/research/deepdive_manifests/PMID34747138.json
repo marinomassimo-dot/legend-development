@@ -1,253 +1,691 @@
 {
-  "schema_version": 2,
-  "pmid": "34747138",
-  "doi": "10.15252/emmm.202114599",
-  "receipt": "FTR-20260810-34747138-01",
-  "landing": [
-    "FTR-20260810-34747138-01",
-    "PAPER 005",
-    "CLAIM 003",
-    "PMID34747138_locators.md"
-  ],
-  "skills_considered": [
-    {"skill": "legend-deepdive", "used": false, "reason": "Run inline. The figure inspection and the locator capture had to come from the same open document."},
-    {"skill": "find-fulltext", "used": false, "reason": "The JATS XML was already local. Figures, appendix and review file were fetched from Europe PMC and the article PDF by documented routes."},
-    {"skill": "legend-study-intake-triage", "used": false, "reason": "No study list arrived; a single paper was chosen from the structured-surface backlog."},
-    {"skill": "legend-batch-inferential-sweep", "used": false, "reason": "A single paper, not a batch."},
-    {"skill": "legend-hypothesis-forge", "used": false, "reason": "OWED rather than declined. This paper is a therapeutic proof of concept and belongs in the therapeutic tracker, but forging hypotheses is separate work and is not claimed as done here."},
-    {"skill": "legend-safety-triage", "used": false, "reason": "Not applicable: no small molecule. The safety question here is oncological surveillance of a brain-restricted rescue in a tumour-suppressor null, which BLOCK-1 does not cover."},
-    {"skill": "legend-locator-audit", "used": false, "reason": "OWED. This reading touches CLAIM 003, a consolidated baseline, and qualifies how far its rescue travels. The audit is owed before any claim edit rests on locators 6, 7 or 8."}
-  ],
-  "group_assessment": {
-    "performed": true,
-    "total_publications": 137,
-    "publications_on_gene": 65,
-    "counts_measured": "PubMed esearch 2026-08-10: 'Aqeilan RI[au]' 137, 'Aqeilan RI[au] AND WWOX' 65.",
-    "research_type": "experimental_lab",
-    "is_primary_group_for_disease": true,
-    "is_primary_group_for_gene": true,
-    "weighting": "This is the primary group for both the gene and the disease, and 47% of its output is on WWOX — the inverse of yesterday's paper, where lipid expertise was deep and gene expertise borrowed. Observation and interpretation therefore carry closer to the same weight here, with one asymmetry that runs the other way: a group this invested in a gene is the least likely to under-read its own rescue. That is precisely why the untested WT-versus-rescued comparisons in the figures matter, and why the reviewers' n=3 objection is recorded even though it cannot be quoted.",
-    "note": "The research-group knowledge base is excluded from the public edition; this rests on the measured counts and on the Methods."
+ "schema_version": 2,
+ "pmid": "34747138",
+ "doi": "10.15252/emmm.202114599",
+ "receipt": "FTR-20261019-34747138-01",
+ "landing": [
+  "FTR-20260810-34747138-01",
+  "PAPER 005",
+  "CLAIM 003",
+  "PMID34747138_locators.md",
+  "FTR-20261019-34747138-01",
+  "gold_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. The figure inspection and the locator capture had to come from the same open document."
   },
-  "field_density": {
-    "wwox_directed": true,
-    "queries": [
-      {"query": "Aqeilan RI[au] AND WWOX", "route": "PubMed esearch 2026-08-10", "count": 65},
-      {"query": "Aqeilan RI[au]", "route": "PubMed esearch 2026-08-10", "count": 137}
-    ],
-    "note": "Maximum density: the paper is a WWOX gene-therapy study from the gene's primary laboratory."
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "The JATS XML was already local. Figures, appendix and review file were fetched from Europe PMC and the article PDF by documented routes."
   },
-  "multihop": {
-    "performed": false,
-    "references_enumerated": 62,
-    "gene_direct_refs_in_source": [
-      {"pmid": "31075076"}, {"pmid": "23254685"}, {"pmid": "23254778"}, {"pmid": "30755385"},
-      {"pmid": "25012504"}, {"pmid": "26499798"}, {"pmid": "29724996"}, {"pmid": "27308416"},
-      {"pmid": "24932569"}, {"pmid": "33255508"}, {"pmid": "25245215"}, {"pmid": "18487609"},
-      {"pmid": "33916893"}, {"pmid": "25681467"}, {"pmid": "10786676"}, {"pmid": "32000863"},
-      {"pmid": "27550453"}, {"pmid": "22574198"}, {"pmid": "30290271"}, {"pmid": "24871327"},
-      {"pmid": "32300104"}, {"pmid": "30622118"}, {"pmid": "20530675"}, {"pmid": "19936220"},
-      {"pmid": "24369382"}, {"pmid": "19708029"}, {"pmid": "25411445"}, {"pmid": "30356099"},
-      {"pmid": "33914858"}, {"pmid": "25595186"}, {"pmid": "10861292"}, {"pmid": "20146584"},
-      {"pmid": "21476439"}, {"pmid": "30361190"}, {"pmid": "19500159"}, {"pmid": "30370248"}
-    ],
-    "enumeration_method": "All 62 <ref> elements parsed from the JATS; 36 mention WWOX/Wwox/WOREE/FRA16D in the citation text.",
-    "resolved": [
-      {"scope": "all 36 gene-directed references", "state": "already present in paper_registry_current, full_text_queue_current or literature_tracking_log_current", "checked_at": "2026-08-10"}
-    ],
-    "queued": [],
-    "dedup_performed": "36 of 36 known — this paper adds no unknown gene-directed reference, the first time that has happened in this corpus. Three of the 36 are notable: 24871327 (read yesterday), 33914858 (the suspended Brain twin, FT-044) and 30370248 (the paper FT-047's own list had omitted).",
-    "reason": "Enumerated, deduplicated and found to add no debt. Nothing is queued because nothing is missing; the debt this reading leaves is the appendix figures and the refused review file, recorded in the locator file."
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "No study list arrived; a single paper was chosen from the structured-surface backlog."
   },
-  "corpus_crossquery": {
-    "performed": true,
-    "query": "Among the 21 local structured surfaces without a complete read, which have a MEASURED reading debt rather than a presumed one — i.e. an existing partial receipt with an explicit coverage map?",
-    "hits": 1,
-    "finding": "Exactly one: 34747138, with three receipts — a legacy_reconstruction whose coverage is unknown_legacy in every section, and two contemporaneous partials declaring discussion, methods, references not_read and figures captions_only. Closing a measured partial was preferred to opening an unmeasured unknown, especially as the paper sits on the same axis as CLAIM 003 whose own primary (33914858) is suspended for text-layer corruption."
+  {
+   "skill": "legend-batch-inferential-sweep",
+   "used": false,
+   "reason": "A single paper, not a batch."
   },
-  "retraction_check": {
-    "performed": true,
-    "at": "2026-08-10",
-    "route": "PubMed esummary for 34747138; PMC OA record for PMC8649866",
-    "result": "No retraction, no expression of concern, no erratum. Publication types are Journal Article and research support only; the OA record carries retracted=\"no\" and license CC BY.",
-    "hold": false
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "OWED rather than declined. This paper is a therapeutic proof of concept and belongs in the therapeutic tracker, but forging hypotheses is separate work and is not claimed as done here."
   },
-  "source_artifacts": [
-    {"path": "files/fulltext/PMID34747138_Repudi2021_PMC.xml", "sha256": "7da156e82cb7014f837d8c29374d888cb99ecc3268d1c383af2c3d0832b988bb", "kind": "article_text"},
-    {"path": "files/fulltext/figures/PMID34747138/EMMM-13-e14599_article.pdf", "sha256": "32ee98733a6f45550f6b924b701734e111d171992ecba2535f0c32a5e105b438", "kind": "article_binary"},
-    {"path": "files/fulltext/figures/PMID34747138/fig_p03_1404x1326.png", "sha256": "7ff26405026d2f8f51e60f884b2685df4d6bb31291629969168d3a44a0a2143e", "kind": "figure"},
-    {"path": "files/fulltext/figures/PMID34747138/fig_p04_1304x1408.png", "sha256": "9d0e3b9a9d0dff90bb44ea2b3ede665c02f5e78b98b969e8b1f75cfa92769eaf", "kind": "figure"},
-    {"path": "files/fulltext/figures/PMID34747138/fig_p06_1401x1565.png", "sha256": "f5f96b94afd183a3d138406888c2f7d12ffc0d9cddf89bc8e0d4505784aafcac", "kind": "figure"},
-    {"path": "files/fulltext/figures/PMID34747138/fig_p07_1365x1484.png", "sha256": "3e3a0b2d340403986663c7738adf53521155b47efc5116de9ec90fa7005ec77a", "kind": "figure"},
-    {"path": "files/fulltext/figures/PMID34747138/fig_p08_1410x1539.png", "sha256": "8c6fdcd4b07e2a8a9f747b2a5abb3d4a943a0d7a4443f52c291eb31e40d816ea", "kind": "figure"},
-    {"path": "files/fulltext/figures/PMID34747138/fig_p10_1415x1226.png", "sha256": "da70e61302397abdd1b8e8dc1b063f3bf89aef425edb9c15d9ec31cff30fdb6f", "kind": "figure"},
-    {"path": "files/fulltext/figures/PMID34747138/EMMM-13-e14599-s001.pdf", "sha256": "1e5c30a903d96726cffae487e14f2e80593e4a6adf2e8b08efb70a5762f86cd2", "kind": "article_binary"},
-    {"path": "files/fulltext/figures/PMID34747138/EMMM-13-e14599-s002.pdf", "sha256": "2a9f4fe6da019efd53eaa813632d02e34d396c9bef625973afdfd82e9fecbbdc", "kind": "article_binary"}
-  ],
-  "verbatim_locators": {
-    "waived": false,
-    "source_fulltext_indexed": true,
-    "source_fulltext_indexed_evidence": "PMCID PMC8649866, CC BY 4.0, in the PMC open-access subset: oa.fcgi returns a record with license=\"CC BY\" and retracted=\"no\". Full JATS XML, figures, appendix and review process file are all retrievable.",
-    "abstract_anchoring_waived": "No locator is abstract-anchored and none could be. The abstract reports that neuronal restoration reverses the phenotypes; every proposition below is a bound on that claim — the P0-only window, the 60-70% transduction, the untested WT-versus-rescued comparisons, the doubled unmyelinated axon count, the qualifiers on the tumour survey, the anaesthetic, n=3. These are exactly what an abstract drops. Verified mechanically: all sixteen snippets match the body and none matches the abstract.",
-    "entries": [
-      {
-        "proposition": "The authors frame the work as a proof of concept aimed at a clinical trial in WOREE and SCAR12.",
-        "snippet": "this proof‐of‐concept will lay down the groundwork for a possible gene therapy clinical trial on children suffering from the devastating and often refractory WOREE and SCAR12 syndromes",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC.xml",
-        "anchor": "Discussion, closing paragraph"
-      },
-      {
-        "proposition": "The unmet need the argument starts from: current antiepileptics fail these children.",
-        "snippet": "WOREE children are refractory to the current antiepileptic drugs (AEDs)",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC.xml",
-        "anchor": "Discussion, second paragraph"
-      },
-      {
-        "proposition": "Dose and route, stated exactly — what any translation has to start from.",
-        "snippet": "Approximately 1 μl (2 × 1010 GC/hemisphere) virus was dispensed",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC.xml",
-        "anchor": "Materials and Methods, 'Intracerebroventricular (ICV) injection of AAV particles into P0 Wwox-null mice'"
-      },
-      {
-        "proposition": "The injection technique is free-hand, not stereotaxic — relevant to reproducibility and to dose placement.",
-        "snippet": "Free‐hand intracranial injections",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC.xml",
-        "anchor": "Materials and Methods, ICV injection, first sentence"
-      },
-      {
-        "proposition": "Transduction reaches 60-70% of neurons, not near-completeness — the efficacy is achieved with a partially transduced brain.",
-        "snippet": "The percentage of NeuN and WWOX double‐positive cells was calculated and found to range between 60 and 70%",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC.xml",
-        "anchor": "Results, 'Specific neuronal WWOX expression upon use of AAV9-SynI-WWOX vectors'"
-      },
-      {
-        "proposition": "Oligodendrocytes are never transduced, which is what makes the myelin rescue non-cell-autonomous rather than a direct effect.",
-        "snippet": "WWOX expression was lacking in non‐neuronal cells of the brain such as oligodendrocytes",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC.xml",
-        "anchor": "Results, same section, verified by CC1/anti-WWOX co-staining"
-      },
-      {
-        "proposition": "PREMISE_TAG — every efficacy number is conditioned on treatment at P0, and the authors state the reason and the untested alternative. In WOREE, diagnosis follows seizure onset by months.",
-        "snippet": "The limited life span and poor conditions of Wwox‐null mice prompted us to treat these mice very early on in their life (P0)",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC.xml",
-        "anchor": "Discussion, penultimate paragraph"
-      },
-      {
-        "proposition": "The later-window experiment is declared as future work, not as done. REVIVAL_TRIGGER: a post-natal dosing result would change the reading of the whole paper.",
-        "snippet": "attempts to treat post‐natal Wwox‐null mice by different route of AAV administration should and will be explored in the future",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC.xml",
-        "anchor": "Discussion, penultimate paragraph"
-      },
-      {
-        "proposition": "The authors themselves record that the rescue is incomplete and attribute the residue to an oligodendrocyte-autonomous WWOX function.",
-        "snippet": "there are still some differences between rescued and WT mice which could be attributed to an oligodendrocyte‐specific WWOX function in regulating the myelination process",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC.xml",
-        "anchor": "Discussion, third paragraph"
-      },
-      {
-        "proposition": "READ FROM THE PANEL — in the electron-microscopy figure the only comparison drawn between WT and rescued animals is the unmyelinated axon count, and it is significant AGAINST the rescue: roughly 26 per field in WT versus roughly 52 in the treated mice, marked **. In the two panels where the rescue looks strongest (myelinated axons per field, corpus callosum ~130/46/105 and optic nerve ~140/68/124) the brackets run WT-vs-KO and KO-vs-rescued, never WT-vs-rescued, so the visible residual gap is untested. The g-ratio scatter does normalise: the treated cloud overlies WT while the KO cloud sits flat at 0.8-0.95.",
-        "snippet": "[figure attestation — pixels cannot be quote-matched] EM figure: 'Unmyelinated axons per FOV' panel, WT vs KO+A-mW, bracket labelled **; adjacent 'Myelinated axons per FOV' panels bracketed only WT-vs-KO and KO-vs-rescued.",
-        "surface": "figure",
-        "artifact": "files/fulltext/figures/PMID34747138/fig_p08_1410x1539.png",
-        "anchor": "Electron microscopy figure, corpus callosum and optic nerve panels, read at ~200 effective ppi from the image embedded in the article PDF"
-      },
-      {
-        "proposition": "READ FROM THE PANEL — the same pattern in the myelination/OPC figure: CC1+ mature oligodendrocytes run WT ~170, KO+GFP ~77, rescued ~135 (*** and ***), and PDGFRa+ progenitors run WT ~53, KO+GFP ~87, rescued ~70 (** and *). Both rescued values sit between KO and WT and neither is tested against WT.",
-        "snippet": "[figure attestation — pixels cannot be quote-matched] Bar chart 'No of cells in CC (0.5mm2)': six bars, brackets WT-vs-KO+GFP and KO+GFP-vs-KO+AAV-mWwox for each marker, none WT-vs-rescued.",
-        "surface": "figure",
-        "artifact": "files/fulltext/figures/PMID34747138/fig_p07_1365x1484.png",
-        "anchor": "MBP/CC1/PDGFRa figure, quantification panel, read at ~195 effective ppi"
-      },
-      {
-        "proposition": "The tumour observation is a no-signal in a small survey, and its three qualifiers are the finding: gross, limited number, 8-11 months. WWOX is a tumour suppressor and the restoration is brain-only, so peripheral tissues stay null.",
-        "snippet": "we did not detect gross tumor formation in the limited number of adult Wwox‐null mice treated with AAV9‐hSynI‐WWOX that we examined (age 8–11 months)",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC.xml",
-        "anchor": "Discussion, tumour-suppressor paragraph"
-      },
-      {
-        "proposition": "The electron-microscopy quantification rests on three biological replicates per genotype.",
-        "snippet": "100 axons per mouse, n = 3 per genotype",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC.xml",
-        "anchor": "Materials and Methods, 'Electron microscopy', g-ratio calculation"
-      },
-      {
-        "proposition": "The hyperexcitability recordings are made under ketamine, an NMDA antagonist with direct effects on cortical excitability. The between-group contrast stands; the absolute firing rates are not those of an awake brain.",
-        "snippet": "Mice were anesthetized using ketamine/medetomidine",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC.xml",
-        "anchor": "Materials and Methods, 'Surgical procedures for electrophysiology'"
-      },
-      {
-        "proposition": "POSITIVE CONTROL FOR RULE 5d. On this structured JATS surface the comparator survives intact. The same sentence in the PDF of PMID 33914858 — same first author, same year, same laboratory — extracts as 'P 5 0.05', the comparator destroyed, which is why FT-044 is suspended. The policy is about the surface, not about the paper.",
-        "snippet": "Results were considered significant when the P < 0.05",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC.xml",
-        "anchor": "Materials and Methods, 'Statistical analysis'"
-      },
-      {
-        "proposition": "Analysis was blinded to genotype, stated for both image analysis and statistics.",
-        "snippet": "Data analysis was performed while blinded to the genotype",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC.xml",
-        "anchor": "Materials and Methods, 'Statistical analysis'"
-      },
-      {
-        "proposition": "Neuronal-only restoration reverses hypoglycaemia, and the paragraph cites Iatan 2014 (PMID 24871327, read 2026-08-10) as part of the metabolic evidence.",
-        "snippet": "the reversibility of hypoglycemia associated with WWOX deficiency in Wwox‐null mice",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC.xml",
-        "anchor": "Discussion, metabolic paragraph, citing Abu-Remaileh & Aqeilan 2014, Lee 2008, Iatan 2014"
-      },
-      {
-        "proposition": "INFERENZA, not DATO — the convergence with FT-039. Restoring WWOX only in neurons rescued peripheral phenotypes (glucose, fertility, bone) with no peripheral WWOX expression, while yesterday's reading showed the liver-specific knockout failing to reproduce the whole-body HDL phenotype. Two groups, two directions, one shape: for several WWOX phenotypes the tissue where the readout is measured is not the tissue where the gene must be present. Neither paper tests the other's organ.",
-        "snippet": "our findings imply that WWOX’s function in the CNS is superimposing its tissue‐level function",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC.xml",
-        "anchor": "Discussion, fertility paragraph; peripheral WWOX absence documented in Appendix Fig S2"
-      },
-      {
-        "proposition": "READ FROM THE PANEL — MBP staining shows myelin restored across cortex, hippocampus and cerebellum in the treated animals, the whole-brain view behind the quantifications above.",
-        "snippet": "[figure attestation — pixels cannot be quote-matched] Sagittal MBP panels, three columns WT / KO+AAV-GFP / KO+AAV-mWwox, with cortex, hippocampus and cerebellum insets.",
-        "surface": "figure",
-        "artifact": "files/fulltext/figures/PMID34747138/fig_p07_1365x1484.png",
-        "anchor": "Myelination figure, upper panels, read at ~195 effective ppi"
-      },
-      {
-        "proposition": "READ FROM THE PANEL — the open-access supplementary bundle serves these same figures at 93-102 effective ppi while the article PDF embeds them at 186-202. The significance brackets and axis values quoted above are not legible on the OA-package copy, so the ppi ceiling has to be measured per route rather than assumed from the route's authority.",
-        "snippet": "[figure attestation — measurement, not content] Europe PMC bundle JPGs 654-711 px wide; article-PDF embedded PNGs 1304-1415 px wide, same figures.",
-        "surface": "figure",
-        "artifact": "files/fulltext/figures/PMID34747138/fig_p03_1404x1326.png",
-        "anchor": "Comparison of the two retrieval routes, recorded in the locator file"
-      },
-      {
-        "proposition": "The authors state that the knockout's death before 4 weeks, not a biological boundary, is why no adult recording of the untreated knockout exists: the age range measured was set by survival. NOTE the verbatim wording contains 'in vivo' ('could not perform in vivo recordings'), which the MODEL-HORIZON candidate's quotation dropped without marking. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
-        "snippet": "Since KO mice died within less than 4 weeks, we could not perform ",
-        "anchor": "Results, 'Neuronal restoration of WWOX decreases hyperexcitability and neuroinflammation in Wwox-null mice', paragraph after the Figure 3 legend",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC.xml",
-        "found_or_sought": "sought",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "The same limit is stated for behaviour: untreated null mice could not be assessed at all, so every behavioural comparison in the paper is rescued-versus-wild-type, never rescued-versus-untreated. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
-        "snippet": "Unfortunately, we could not assess behavior of Wwox‐null mice due to their poor conditions and premature death",
-        "anchor": "Results, 'Behavioral and motor functions of Wwox-null mice upon neuronal WWOX restoration', first paragraph",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC.xml",
-        "found_or_sought": "sought",
-        "panel_text_relation": "text_only"
-      }
-    ]
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "Not applicable: no small molecule. The safety question here is oncological surveillance of a brain-restricted rescue in a tumour-suppressor null, which BLOCK-1 does not cover."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED. This reading touches CLAIM 003, a consolidated baseline, and qualifies how far its rescue travels. The audit is owed before any claim edit rests on locators 6, 7 or 8."
   }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 137,
+  "publications_on_gene": 65,
+  "counts_measured": "PubMed esearch 2026-08-10: 'Aqeilan RI[au]' 137, 'Aqeilan RI[au] AND WWOX' 65.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": true,
+  "is_primary_group_for_gene": true,
+  "weighting": "This is the primary group for both the gene and the disease, and 47% of its output is on WWOX — the inverse of yesterday's paper, where lipid expertise was deep and gene expertise borrowed. Observation and interpretation therefore carry closer to the same weight here, with one asymmetry that runs the other way: a group this invested in a gene is the least likely to under-read its own rescue. That is precisely why the untested WT-versus-rescued comparisons in the figures matter, and why the reviewers' n=3 objection is recorded even though it cannot be quoted.",
+  "note": "The research-group knowledge base is excluded from the public edition; this rests on the measured counts and on the Methods."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "Aqeilan RI[au] AND WWOX",
+    "route": "PubMed esearch 2026-08-10",
+    "count": 65
+   },
+   {
+    "query": "Aqeilan RI[au]",
+    "route": "PubMed esearch 2026-08-10",
+    "count": 137
+   }
+  ],
+  "note": "Maximum density: the paper is a WWOX gene-therapy study from the gene's primary laboratory."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 62,
+  "gene_direct_refs_in_source": [
+   {
+    "pmid": "31075076"
+   },
+   {
+    "pmid": "23254685"
+   },
+   {
+    "pmid": "23254778"
+   },
+   {
+    "pmid": "30755385"
+   },
+   {
+    "pmid": "25012504"
+   },
+   {
+    "pmid": "26499798"
+   },
+   {
+    "pmid": "29724996"
+   },
+   {
+    "pmid": "27308416"
+   },
+   {
+    "pmid": "24932569"
+   },
+   {
+    "pmid": "33255508"
+   },
+   {
+    "pmid": "25245215"
+   },
+   {
+    "pmid": "18487609"
+   },
+   {
+    "pmid": "33916893"
+   },
+   {
+    "pmid": "25681467"
+   },
+   {
+    "pmid": "10786676"
+   },
+   {
+    "pmid": "32000863"
+   },
+   {
+    "pmid": "27550453"
+   },
+   {
+    "pmid": "22574198"
+   },
+   {
+    "pmid": "30290271"
+   },
+   {
+    "pmid": "24871327"
+   },
+   {
+    "pmid": "32300104"
+   },
+   {
+    "pmid": "30622118"
+   },
+   {
+    "pmid": "20530675"
+   },
+   {
+    "pmid": "19936220"
+   },
+   {
+    "pmid": "24369382"
+   },
+   {
+    "pmid": "19708029"
+   },
+   {
+    "pmid": "25411445"
+   },
+   {
+    "pmid": "30356099"
+   },
+   {
+    "pmid": "33914858"
+   },
+   {
+    "pmid": "25595186"
+   },
+   {
+    "pmid": "10861292"
+   },
+   {
+    "pmid": "20146584"
+   },
+   {
+    "pmid": "21476439"
+   },
+   {
+    "pmid": "30361190"
+   },
+   {
+    "pmid": "19500159"
+   },
+   {
+    "pmid": "30370248"
+   }
+  ],
+  "enumeration_method": "All 62 <ref> elements parsed from the JATS; 36 mention WWOX/Wwox/WOREE/FRA16D in the citation text.",
+  "resolved": [
+   {
+    "scope": "all 36 gene-directed references",
+    "state": "already present in paper_registry_current, full_text_queue_current or literature_tracking_log_current",
+    "checked_at": "2026-08-10"
+   }
+  ],
+  "queued": [],
+  "dedup_performed": "36 of 36 known — this paper adds no unknown gene-directed reference, the first time that has happened in this corpus. Three of the 36 are notable: 24871327 (read yesterday), 33914858 (the suspended Brain twin, FT-044) and 30370248 (the paper FT-047's own list had omitted).",
+  "reason": "Enumerated, deduplicated and found to add no debt. Nothing is queued because nothing is missing; the debt this reading leaves is the appendix figures and the refused review file, recorded in the locator file."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Among the 21 local structured surfaces without a complete read, which have a MEASURED reading debt rather than a presumed one — i.e. an existing partial receipt with an explicit coverage map?",
+  "hits": 1,
+  "finding": "Exactly one: 34747138, with three receipts — a legacy_reconstruction whose coverage is unknown_legacy in every section, and two contemporaneous partials declaring discussion, methods, references not_read and figures captions_only. Closing a measured partial was preferred to opening an unmeasured unknown, especially as the paper sits on the same axis as CLAIM 003 whose own primary (33914858) is suspended for text-layer corruption."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-08-10",
+  "route": "PubMed esummary for 34747138; PMC OA record for PMC8649866",
+  "result": "No retraction, no expression of concern, no erratum. Publication types are Journal Article and research support only; the OA record carries retracted=\"no\" and license CC BY.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 62,
+   "references_screened": 56,
+   "references_with_doi": 56,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 6
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID34747138_Repudi2021_PMC_r2.xml",
+   "sha256": "c430d5d2771bb0cc9cced8e27c095cab1947f1299e71ddd7bba156fd47689b46",
+   "kind": "article_text",
+   "note": "PMC efetch JATS for PMC8649866 (EMBO Mol Med 2021, CC BY), re-acquired 2026-10-19; the 2026-08 XML and PDF-page PNG renders are absent from this checkout.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "c430d5d2771bb0cc9cced8e27c095cab1947f1299e71ddd7bba156fd47689b46",
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC8649866&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID34747138_r2/EMMM-13-e14599-g001.jpg",
+   "sha256": "aecb02322b1d75fdfdee1f3aaea1c4307944f38a4ff88269a3d2c481520b1023",
+   "kind": "figure",
+   "note": "Figure image from the PMC open-data bucket, opened as an image (g001 Fig 1, g006 Fig 2, g004 Fig 3, g002 Fig 4, g008 Fig 5, g003 Fig 6, g007 graphical abstract).",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "aecb02322b1d75fdfdee1f3aaea1c4307944f38a4ff88269a3d2c481520b1023",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8649866.1/EMMM-13-e14599-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID34747138_r2/EMMM-13-e14599-g002.jpg",
+   "sha256": "7a9d04bd67e6808727919db315674d48a4d39d6457eb8d87537cc3be6f22f279",
+   "kind": "figure",
+   "note": "Figure image from the PMC open-data bucket, opened as an image (g001 Fig 1, g006 Fig 2, g004 Fig 3, g002 Fig 4, g008 Fig 5, g003 Fig 6, g007 graphical abstract).",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "7a9d04bd67e6808727919db315674d48a4d39d6457eb8d87537cc3be6f22f279",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8649866.1/EMMM-13-e14599-g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID34747138_r2/EMMM-13-e14599-g003.jpg",
+   "sha256": "f2f4b6823b4c3e4cad6ab387b3f95c50b2f9d205ba1354bd7088284b7943d5a8",
+   "kind": "figure",
+   "note": "Figure image from the PMC open-data bucket, opened as an image (g001 Fig 1, g006 Fig 2, g004 Fig 3, g002 Fig 4, g008 Fig 5, g003 Fig 6, g007 graphical abstract).",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "f2f4b6823b4c3e4cad6ab387b3f95c50b2f9d205ba1354bd7088284b7943d5a8",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8649866.1/EMMM-13-e14599-g003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID34747138_r2/EMMM-13-e14599-g004.jpg",
+   "sha256": "c023be91f37d953224d200e1b6733e874ebcef35f75f85072fbc824a0a2e5083",
+   "kind": "figure",
+   "note": "Figure image from the PMC open-data bucket, opened as an image (g001 Fig 1, g006 Fig 2, g004 Fig 3, g002 Fig 4, g008 Fig 5, g003 Fig 6, g007 graphical abstract).",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "c023be91f37d953224d200e1b6733e874ebcef35f75f85072fbc824a0a2e5083",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8649866.1/EMMM-13-e14599-g004.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID34747138_r2/EMMM-13-e14599-g006.jpg",
+   "sha256": "b8aaaf51665ac1c76d3f2dcf7d5bd5c7ef8ee10b0ce7f49e59a69eaaaa3c885c",
+   "kind": "figure",
+   "note": "Figure image from the PMC open-data bucket, opened as an image (g001 Fig 1, g006 Fig 2, g004 Fig 3, g002 Fig 4, g008 Fig 5, g003 Fig 6, g007 graphical abstract).",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "b8aaaf51665ac1c76d3f2dcf7d5bd5c7ef8ee10b0ce7f49e59a69eaaaa3c885c",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8649866.1/EMMM-13-e14599-g006.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID34747138_r2/EMMM-13-e14599-g007.jpg",
+   "sha256": "31314efeb5b5077f127b27d93fbb299474c01792ef04f28197e05a76d32aa868",
+   "kind": "figure",
+   "note": "Figure image from the PMC open-data bucket, opened as an image (g001 Fig 1, g006 Fig 2, g004 Fig 3, g002 Fig 4, g008 Fig 5, g003 Fig 6, g007 graphical abstract).",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "31314efeb5b5077f127b27d93fbb299474c01792ef04f28197e05a76d32aa868",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8649866.1/EMMM-13-e14599-g007.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID34747138_r2/EMMM-13-e14599-g008.jpg",
+   "sha256": "5fb42fa4901ecb7fb237fb5baad98541387378b94ffb21336644b59e69eed827",
+   "kind": "figure",
+   "note": "Figure image from the PMC open-data bucket, opened as an image (g001 Fig 1, g006 Fig 2, g004 Fig 3, g002 Fig 4, g008 Fig 5, g003 Fig 6, g007 graphical abstract).",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "5fb42fa4901ecb7fb237fb5baad98541387378b94ffb21336644b59e69eed827",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8649866.1/EMMM-13-e14599-g008.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/supplement/PMID34747138_r2/EMMM-13-e14599-s001.pdf",
+   "sha256": "1e5c30a903d96726cffae487e14f2e80593e4a6adf2e8b08efb70a5762f86cd2",
+   "kind": "article_binary",
+   "note": "Appendix (Figures S1-S6, Table S1, legends), 11 pages.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "1e5c30a903d96726cffae487e14f2e80593e4a6adf2e8b08efb70a5762f86cd2",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8649866.1/EMMM-13-e14599-s001.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/supplement/PMID34747138_r2/EMMM-13-e14599-s002.pdf",
+   "sha256": "2a9f4fe6da019efd53eaa813632d02e34d396c9bef625973afdfd82e9fecbbdc",
+   "kind": "article_binary",
+   "note": "Review process file, 29 pages (referee reports and author responses).",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "2a9f4fe6da019efd53eaa813632d02e34d396c9bef625973afdfd82e9fecbbdc",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8649866.1/EMMM-13-e14599-s002.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/supplement/PMID34747138_r2/PMC8649866.1.pdf",
+   "sha256": "32ee98733a6f45550f6b924b701734e111d171992ecba2535f0c32a5e105b438",
+   "kind": "article_binary",
+   "note": "Article PDF from the PMC open-data bucket.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "32ee98733a6f45550f6b924b701734e111d171992ecba2535f0c32a5e105b438",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8649866.1/PMC8649866.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/supplement/PMID34747138_r2/s001_p02_150dpi.png",
+   "sha256": "a8b625496c2bb91b16cdc64a5261dc2a2453e2424023d7bd626bb776b8c43ff6",
+   "kind": "figure",
+   "note": "Appendix page 2 (Figure S1) rendered at 150 dpi with PyMuPDF 1.28.2, opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "a8b625496c2bb91b16cdc64a5261dc2a2453e2424023d7bd626bb776b8c43ff6",
+    "derived_from": "files/supplement/PMID34747138_r2/EMMM-13-e14599-s001.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=150) on page 2",
+     "join": ""
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMCID PMC8649866, CC BY 4.0, in the PMC open-access subset: oa.fcgi returns a record with license=\"CC BY\" and retracted=\"no\". Full JATS XML, figures, appendix and review process file are all retrievable.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored and none could be. The abstract reports that neuronal restoration reverses the phenotypes; every proposition below is a bound on that claim — the P0-only window, the 60-70% transduction, the untested WT-versus-rescued comparisons, the doubled unmyelinated axon count, the qualifiers on the tumour survey, the anaesthetic, n=3. These are exactly what an abstract drops. Verified mechanically: all sixteen snippets match the body and none matches the abstract.",
+  "entries": [
+   {
+    "proposition": "The authors frame the work as a proof of concept aimed at a clinical trial in WOREE and SCAR12.",
+    "snippet": "this proof‐of‐concept will lay down the groundwork for a possible gene therapy clinical trial on children suffering from the devastating and often refractory WOREE and SCAR12 syndromes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC_r2.xml",
+    "anchor": "Discussion, closing paragraph"
+   },
+   {
+    "proposition": "The unmet need the argument starts from: current antiepileptics fail these children.",
+    "snippet": "WOREE children are refractory to the current antiepileptic drugs (AEDs)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC_r2.xml",
+    "anchor": "Discussion, second paragraph"
+   },
+   {
+    "proposition": "Dose and route, stated exactly — what any translation has to start from.",
+    "snippet": "Approximately 1 μl (2 × 1010 GC/hemisphere) virus was dispensed",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC_r2.xml",
+    "anchor": "Materials and Methods, 'Intracerebroventricular (ICV) injection of AAV particles into P0 Wwox-null mice'"
+   },
+   {
+    "proposition": "The injection technique is free-hand, not stereotaxic — relevant to reproducibility and to dose placement.",
+    "snippet": "Free‐hand intracranial injections",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC_r2.xml",
+    "anchor": "Materials and Methods, ICV injection, first sentence"
+   },
+   {
+    "proposition": "Transduction reaches 60-70% of neurons, not near-completeness — the efficacy is achieved with a partially transduced brain.",
+    "snippet": "The percentage of NeuN and WWOX double‐positive cells was calculated and found to range between 60 and 70%",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC_r2.xml",
+    "anchor": "Results, 'Specific neuronal WWOX expression upon use of AAV9-SynI-WWOX vectors'"
+   },
+   {
+    "proposition": "Oligodendrocytes are never transduced, which is what makes the myelin rescue non-cell-autonomous rather than a direct effect.",
+    "snippet": "WWOX expression was lacking in non‐neuronal cells of the brain such as oligodendrocytes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC_r2.xml",
+    "anchor": "Results, same section, verified by CC1/anti-WWOX co-staining"
+   },
+   {
+    "proposition": "PREMISE_TAG — every efficacy number is conditioned on treatment at P0, and the authors state the reason and the untested alternative. In WOREE, diagnosis follows seizure onset by months.",
+    "snippet": "The limited life span and poor conditions of Wwox‐null mice prompted us to treat these mice very early on in their life (P0)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC_r2.xml",
+    "anchor": "Discussion, penultimate paragraph"
+   },
+   {
+    "proposition": "The later-window experiment is declared as future work, not as done. REVIVAL_TRIGGER: a post-natal dosing result would change the reading of the whole paper.",
+    "snippet": "attempts to treat post‐natal Wwox‐null mice by different route of AAV administration should and will be explored in the future",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC_r2.xml",
+    "anchor": "Discussion, penultimate paragraph"
+   },
+   {
+    "proposition": "The authors themselves record that the rescue is incomplete and attribute the residue to an oligodendrocyte-autonomous WWOX function.",
+    "snippet": "there are still some differences between rescued and WT mice which could be attributed to an oligodendrocyte‐specific WWOX function in regulating the myelination process",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC_r2.xml",
+    "anchor": "Discussion, third paragraph"
+   },
+   {
+    "proposition": "READ FROM THE PANEL — in the electron-microscopy figure the only comparison drawn between WT and rescued animals is the unmyelinated axon count, and it is significant AGAINST the rescue: roughly 26 per field in WT versus roughly 52 in the treated mice, marked **. In the two panels where the rescue looks strongest (myelinated axons per field, corpus callosum ~130/46/105 and optic nerve ~140/68/124) the brackets run WT-vs-KO and KO-vs-rescued, never WT-vs-rescued, so the visible residual gap is untested. The g-ratio scatter does normalise: the treated cloud overlies WT while the KO cloud sits flat at 0.8-0.95.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] EM figure: 'Unmyelinated axons per FOV' panel, WT vs KO+A-mW, bracket labelled **; adjacent 'Myelinated axons per FOV' panels bracketed only WT-vs-KO and KO-vs-rescued.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID34747138_r2/EMMM-13-e14599-g008.jpg",
+    "anchor": "Electron microscopy figure, corpus callosum and optic nerve panels, read at ~200 effective ppi from the image embedded in the article PDF"
+   },
+   {
+    "proposition": "READ FROM THE PANEL — the same pattern in the myelination/OPC figure: CC1+ mature oligodendrocytes run WT ~170, KO+GFP ~77, rescued ~135 (*** and ***), and PDGFRa+ progenitors run WT ~53, KO+GFP ~87, rescued ~70 (** and *). Both rescued values sit between KO and WT and neither is tested against WT.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Bar chart 'No of cells in CC (0.5mm2)': six bars, brackets WT-vs-KO+GFP and KO+GFP-vs-KO+AAV-mWwox for each marker, none WT-vs-rescued.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID34747138_r2/EMMM-13-e14599-g002.jpg",
+    "anchor": "MBP/CC1/PDGFRa figure, quantification panel, read at ~195 effective ppi"
+   },
+   {
+    "proposition": "The tumour observation is a no-signal in a small survey, and its three qualifiers are the finding: gross, limited number, 8-11 months. WWOX is a tumour suppressor and the restoration is brain-only, so peripheral tissues stay null.",
+    "snippet": "we did not detect gross tumor formation in the limited number of adult Wwox‐null mice treated with AAV9‐hSynI‐WWOX that we examined (age 8–11 months)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC_r2.xml",
+    "anchor": "Discussion, tumour-suppressor paragraph"
+   },
+   {
+    "proposition": "The electron-microscopy quantification rests on three biological replicates per genotype.",
+    "snippet": "100 axons per mouse, n = 3 per genotype",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC_r2.xml",
+    "anchor": "Materials and Methods, 'Electron microscopy', g-ratio calculation"
+   },
+   {
+    "proposition": "The hyperexcitability recordings are made under ketamine, an NMDA antagonist with direct effects on cortical excitability. The between-group contrast stands; the absolute firing rates are not those of an awake brain.",
+    "snippet": "Mice were anesthetized using ketamine/medetomidine",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC_r2.xml",
+    "anchor": "Materials and Methods, 'Surgical procedures for electrophysiology'"
+   },
+   {
+    "proposition": "POSITIVE CONTROL FOR RULE 5d. On this structured JATS surface the comparator survives intact. The same sentence in the PDF of PMID 33914858 — same first author, same year, same laboratory — extracts as 'P 5 0.05', the comparator destroyed, which is why FT-044 is suspended. The policy is about the surface, not about the paper.",
+    "snippet": "Results were considered significant when the P < 0.05",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC_r2.xml",
+    "anchor": "Materials and Methods, 'Statistical analysis'"
+   },
+   {
+    "proposition": "Analysis was blinded to genotype, stated for both image analysis and statistics.",
+    "snippet": "Data analysis was performed while blinded to the genotype",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC_r2.xml",
+    "anchor": "Materials and Methods, 'Statistical analysis'"
+   },
+   {
+    "proposition": "Neuronal-only restoration reverses hypoglycaemia, and the paragraph cites Iatan 2014 (PMID 24871327, read 2026-08-10) as part of the metabolic evidence.",
+    "snippet": "the reversibility of hypoglycemia associated with WWOX deficiency in Wwox‐null mice",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC_r2.xml",
+    "anchor": "Discussion, metabolic paragraph, citing Abu-Remaileh & Aqeilan 2014, Lee 2008, Iatan 2014"
+   },
+   {
+    "proposition": "INFERENZA, not DATO — the convergence with FT-039. Restoring WWOX only in neurons rescued peripheral phenotypes (glucose, fertility, bone) with no peripheral WWOX expression, while yesterday's reading showed the liver-specific knockout failing to reproduce the whole-body HDL phenotype. Two groups, two directions, one shape: for several WWOX phenotypes the tissue where the readout is measured is not the tissue where the gene must be present. Neither paper tests the other's organ.",
+    "snippet": "our findings imply that WWOX’s function in the CNS is superimposing its tissue‐level function",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC_r2.xml",
+    "anchor": "Discussion, fertility paragraph; peripheral WWOX absence documented in Appendix Fig S2"
+   },
+   {
+    "proposition": "READ FROM THE PANEL — MBP staining shows myelin restored across cortex, hippocampus and cerebellum in the treated animals, the whole-brain view behind the quantifications above.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Sagittal MBP panels, three columns WT / KO+AAV-GFP / KO+AAV-mWwox, with cortex, hippocampus and cerebellum insets.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID34747138_r2/EMMM-13-e14599-g002.jpg",
+    "anchor": "Myelination figure, upper panels, read at ~195 effective ppi"
+   },
+   {
+    "proposition": "READ FROM THE PANEL — the open-access supplementary bundle serves these same figures at 93-102 effective ppi while the article PDF embeds them at 186-202. The significance brackets and axis values quoted above are not legible on the OA-package copy, so the ppi ceiling has to be measured per route rather than assumed from the route's authority.",
+    "snippet": "[figure attestation — measurement, not content] Europe PMC bundle JPGs 654-711 px wide; article-PDF embedded PNGs 1304-1415 px wide, same figures.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID34747138_r2/EMMM-13-e14599-g001.jpg",
+    "anchor": "Comparison of the two retrieval routes, recorded in the locator file"
+   },
+   {
+    "proposition": "The authors state that the knockout's death before 4 weeks, not a biological boundary, is why no adult recording of the untreated knockout exists: the age range measured was set by survival. NOTE the verbatim wording contains 'in vivo' ('could not perform in vivo recordings'), which the MODEL-HORIZON candidate's quotation dropped without marking. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
+    "snippet": "Since KO mice died within less than 4 weeks, we could not perform ",
+    "anchor": "Results, 'Neuronal restoration of WWOX decreases hyperexcitability and neuroinflammation in Wwox-null mice', paragraph after the Figure 3 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC_r2.xml",
+    "found_or_sought": "sought",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The same limit is stated for behaviour: untreated null mice could not be assessed at all, so every behavioural comparison in the paper is rescued-versus-wild-type, never rescued-versus-untreated. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
+    "snippet": "Unfortunately, we could not assess behavior of Wwox‐null mice due to their poor conditions and premature death",
+    "anchor": "Results, 'Behavioral and motor functions of Wwox-null mice upon neuronal WWOX restoration', first paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC_r2.xml",
+    "found_or_sought": "sought",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Blood glucose was measured as a single tail-prick glucometer reading in mg/dL; fed or fasted state, time of day and any insulin, glucagon, ketone or IGF-1 value are not stated anywhere in the article.",
+    "snippet": "To monitor the blood glucose, the tip of the mouse tail was ruptured with scissors and a tiny drop of blood collected for measurement (mg/dl) using an Accu‐Check glucometer",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC_r2.xml",
+    "anchor": "Materials and Methods, Weight and blood glucose levels",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Wwox-null mice (FVB) injected intracerebroventricularly at P0 with AAV9-hSynI-Wwox or -WWOX",
+     "genotype": "Wwox -/- with neuronal re-expression",
+     "comparator": "WT and KO or KO+AAV-GFP",
+     "endpoint": "tail-blood glucose by glucometer"
+    }
+   },
+   {
+    "proposition": "The hypoglycemia rescue is reported in the main text only by reference to Appendix Figure S1C and D; no main-figure panel carries a glucose value.",
+    "snippet": "while AAV9‐hSynI‐mWwox‐ or AAV9‐hSynI‐hWWOX‐injected mice had normal blood glucose levels when compared to the wild‐type mice (Appendix Fig S1C and D).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC_r2.xml",
+    "anchor": "Results, first section, last paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Wwox-null mice (FVB) injected intracerebroventricularly at P0 with AAV9-hSynI-Wwox or -WWOX",
+     "genotype": "Wwox -/- with neuronal re-expression",
+     "comparator": "WT and KO or KO+AAV-GFP",
+     "endpoint": "tail-blood glucose by glucometer"
+    }
+   },
+   {
+    "proposition": "Appendix Figure S1C and D as drawn: WT about 120 to 125 mg/dL flat from day 10; the control curve is one pooled series labelled KO+GFP or KO, about 85 at day 10 falling to about 45 at day 20 to 24; the AAV-treated curves overlie WT; n = 5 per group, SEM. The control group already sits about 35 mg/dL below WT at day 10, and the last control points come from the survivors of mice that die by 3 to 4 weeks.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Appendix Fig S1 page rendered at 150 dpi: panels C (KO+AAV-mWwox) and D (KO+AAV-hWWOX), y axis Blood glucose (mg/dL) 0 to 200, x axis age in days; red series KO+GFP or KO descending, blue WT and purple or green rescued flat.",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID34747138_r2/s001_p02_150dpi.png",
+    "anchor": "Appendix Figure S1 panels C and D, rendered page image",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "Wwox-null mice (FVB) injected intracerebroventricularly at P0 with AAV9-hSynI-Wwox or -WWOX",
+     "genotype": "Wwox -/- with neuronal re-expression",
+     "comparator": "WT and KO or KO+AAV-GFP",
+     "endpoint": "tail-blood glucose by glucometer"
+    }
+   },
+   {
+    "proposition": "The text puts transduced neurons at 60 to 70 percent; Figure 1E as drawn shows about 56 (cortex), 63 (hippocampus) and 52 (cerebellum), and Figure 2G about 61, 71 and 57; the stated range holds for neither cerebellum.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1E bars Cor about 56, Hip about 63, Cer about 52 percent NeuN and WWOX positive cells; Figure 2G Cor about 61, Hip about 71, Cer about 57.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID34747138_r2/EMMM-13-e14599-g001.jpg",
+    "anchor": "Figure 1 panel E (and Figure 2 panel G in EMMM-13-e14599-g006.jpg), native JPEG",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "Wwox-null mice (FVB) injected intracerebroventricularly at P0 with AAV9-hSynI-Wwox or -WWOX",
+     "genotype": "Wwox -/- with neuronal re-expression",
+     "comparator": "WT and KO or KO+AAV-GFP",
+     "endpoint": "tail-blood glucose by glucometer"
+    },
+    "contradicts": "entries[4]",
+    "contradicts_needle": "range between 60 and 70%"
+   },
+   {
+    "proposition": "The article states that all treated mice had an extended life span compared with null or GFP-injected mice.",
+    "snippet": "Remarkably, all rescued mice, treated with AAV‐mWwox or AAV‐hWWOX, exhibited extended life span compared to the Wwox‐null or AAV9‐hSynI‐EGFP‐injected mice",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC_r2.xml",
+    "anchor": "Results, first section",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Wwox-null mice (FVB) injected intracerebroventricularly at P0 with AAV9-hSynI-Wwox or -WWOX",
+     "genotype": "Wwox -/- with neuronal re-expression",
+     "comparator": "WT and KO or KO+AAV-GFP",
+     "endpoint": "tail-blood glucose by glucometer"
+    }
+   },
+   {
+    "proposition": "Survival curves in Figures 1C and 2C for the AAV-treated groups reach 0 percent at about 350 and about 330 days respectively and the treated groups are all dead or censored before 400 days, while WT stays at 100 percent; the legends give 6 of 16 treated mice alive in Figure 2C and the article says only that treated mice have an extended life span; no explanation of the late deaths is given.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1C purple KO+AAV-mWwox (n=18) steps down between about 170 and 350 days to 0; Figure 2C green KO+AAV-hWWOX (n=16) steps down to 0 near 330 days; WT blue line at 100 to 400 days.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID34747138_r2/EMMM-13-e14599-g001.jpg",
+    "anchor": "Figure 1 panel C and Figure 2 panel C (EMMM-13-e14599-g006.jpg), native JPEG",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Wwox-null mice (FVB) injected intracerebroventricularly at P0 with AAV9-hSynI-Wwox or -WWOX",
+     "genotype": "Wwox -/- with neuronal re-expression",
+     "comparator": "WT and KO or KO+AAV-GFP",
+     "endpoint": "tail-blood glucose by glucometer"
+    },
+    "qualifies": "entries[26]",
+    "qualifies_needle": "exhibited extended life span"
+   },
+   {
+    "proposition": "Males in Figure 6K show a significant difference in rotarod latency on trial 1 (asterisk, rescued lower), while the text says rescued mice had similar motor coordination to WT at the different trials.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6K males trial 1: WT about 215 s, KO+A-mWwox about 175 s with one asterisk; trial 2 ns.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID34747138_r2/EMMM-13-e14599-g003.jpg",
+    "anchor": "Figure 6 panel K, native JPEG",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Wwox-null mice (FVB) injected intracerebroventricularly at P0 with AAV9-hSynI-Wwox or -WWOX",
+     "genotype": "Wwox -/- with neuronal re-expression",
+     "comparator": "WT and KO or KO+AAV-GFP",
+     "endpoint": "tail-blood glucose by glucometer"
+    }
+   }
+  ],
+  "note": "2026-10-19 gold wave, scientist-b: the 2026-08 XML, article PDF and PDF-page PNG renders are absent; the earlier text locators re-point unchanged to the re-acquired XML, the four figure attestations re-point to the PMC bucket JPEG of the same figure (entry 19 concerns retrieval-route resolution and was not re-measured), and the declared-absent artefacts are dropped from source_artifacts (their SHA-256 remain in this file git history). New: Appendix S1C/D glucose panel, Figure 1E versus text, survival curves, rotarod, glucometer method."
+ }
 }

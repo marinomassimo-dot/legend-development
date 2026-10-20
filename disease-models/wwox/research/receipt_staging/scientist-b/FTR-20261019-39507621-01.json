@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-10-19T20:00:00Z",
+ "event_at": "2026-10-19T20:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "tables": "not_present",
+  "supplementary": "not_present"
+ },
+ "event_id": "FTR-20261019-39507621-01",
+ "evidence_basis": [
+  "Whole JATS body read in the persisted XML (account of Methods in the Case report section; no tables, no limitations section, no supplement); all three figures opened as images at native pixel size.",
+  "Bytes lost from the shared checkout were re-acquired: figures identical by SHA-256 to the earlier declared digests, XML differs (PMC re-serialisation), so this is a new-version read of the article text.",
+  "The brief asked for first_read naming the legacy reconstruction; the ledger carries a contemporaneous complete receipt FTR-20260804-39507621-01 after the legacy FTR-20260726-39507621-01, so first_read would be refused by the validator and new_version_or_supplement is used with prior_receipt naming the contemporaneous receipt."
+ ],
+ "evidence_depth": "complete_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID39507621.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID39507621.md",
+  "disease-models/wwox/research/gold_wave_20261019_scientist-b.md"
+ ],
+ "prior_receipt": "FTR-20260804-39507621-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_version_or_supplement",
+ "source_fingerprint": "ae7d18a74e0e7ffea3635f6f39fc2108b473770c9d688d0b2d5ebe6210a69692",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.3389/fgene.2024.1477466",
+  "pmid": "39507621"
+ },
+ "workflow": "scientist-b gold wave 2026-10-19, task branch task/GOLD-LEGACY-WWOX-B-20261019; SOURCE_FIRST; evidence_presence.py search found no copy, PMC efetch XML and PMC open-data figures re-acquired with no User-Agent; figures opened as images; locators verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a JSON file for the integrator and not appended."
+}

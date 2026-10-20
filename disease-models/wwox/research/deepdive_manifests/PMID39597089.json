@@ -1,0 +1,214 @@
+{
+ "schema_version": 2,
+ "pmid": "39597089",
+ "doi": "10.3390/medicina60111904",
+ "receipt": "FTR-20261019-39597089-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-H3-EPINEPHRINE-SAFETY-01",
+  "interventions_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared (group H3 has no WWOX evidence to compare against)."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 816,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Williams CA[au]' 816; 'Williams CA[au] AND WWOX' 0 (surname-initial queries are ambiguous and are not evidence of authorship); last author 'Pourmand A[au]'.",
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Narrative review with a stated PubMed search and an adult-only filter; weigh as an organised summary of adult cardiac-arrest trials and cohorts, not as a systematic synthesis.",
+  "note": "Not a WWOX group."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 0
+   }
+  ],
+  "note": "WWOX does not occur in the article."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 47,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "dependency_integrity.py screen reference count, confirmed against <ref> elements in the JATS.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-directed reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --theme adrenergic / epinephrine / noradrenaline / catecholamine / autonomic / sympathetic (each exit 1, no record) and --theme SUDEP (2 of 1586 records)",
+  "hits": 0,
+  "finding": "No registry record carries any adrenergic term, so the laboratory holds nothing on catecholamines to compare with; an empty result is a statement about those queries over those files, not about the literature. SUDEP occurs in two records only as a reason to keep seizure control, not as a mechanism."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed efetch 2026-10-19 for this PMID (no CommentsCorrections element, publication types listed); JATS front matter",
+  "result": "No retraction, correction or expression of concern found in the PubMed record.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 47,
+   "references_screened": 43,
+   "references_with_doi": 43,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39597089_Williams2024_PMC11596809.xml",
+   "sha256": "9b0c0d2bc9e03cc425c092d3bf259ef374ee0c6071bb49e476d490956c1db7cc",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC11596809, 175,382 bytes; abstract, introduction, methods, results with Tables 1 to 5, discussion, limitations and conclusions present; the article has no figures.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11596809/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "9b0c0d2bc9e03cc425c092d3bf259ef374ee0c6071bb49e476d490956c1db7cc"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 175,382 bytes; abstract, introduction, methods, results with Tables 1 to 5, discussion, limitations and conclusions present; the article has no figures.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: whole article read including Tables 1 to 5 (cell by cell for the rows quoted); the article has no figures. The reference list (47) was screened for integrity, not read: every trial figure here is a restatement.",
+  "entries": [
+   {
+    "proposition": "DESIGN: a narrative review with a PubMed search closed at September 2024, an adult-only English filter and a stated two-reviewer screen; it states it is not a systematic review.",
+    "snippet": "((english[Filter]) AND (alladult[Filter]))",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39597089_Williams2024_PMC11596809.xml",
+    "anchor": "2 Methods",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The stated inclusion rules (randomised trials, prospective observational studies, secondary analyses) and exclusion of meta-analyses do not match the tables: retrospective cohorts and analyses (for example Dumas, Donnino, Koscik, Wang) are tabulated and a 2024 meta-analysis is summarised.",
+    "snippet": "We included randomized controlled trials (RCTs), prospective observational studies, and secondary analyses of prospective observational data.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39597089_Williams2024_PMC11596809.xml",
+    "anchor": "2.1 Inclusion and Exclusion Criteria",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The meta-analysis that the exclusion criteria would bar is summarised in the results: epinephrine better than other vasopressors for discharge survival and return of circulation, no neurological benefit.",
+    "snippet": "A recent meta-analysis determined that while epinephrine showed superiority over other vasopressors in survival to hospital discharge and ROSC, there was no benefit in neurological outcome [46].",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39597089_Williams2024_PMC11596809.xml",
+    "anchor": "3.5 Epinephrine and Other Vasopressors",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EFFICACY, the placebo trial: return of spontaneous circulation 3.4 times more likely with epinephrine, no significant difference in neurological outcome or discharge survival.",
+    "snippet": "found that the likelihood of achieving ROSC in patients who received epinephrine was 3.4 times greater than for those who received the placebo [8]",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39597089_Williams2024_PMC11596809.xml",
+    "anchor": "3.1 Efficacy and Long-Term Outcomes, paragraph 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "MISLABEL: the prospective Japanese study (nonrandomised, propensity analysis per Table 1) is described as comparing epinephrine with placebo; no placebo existed, the comparator was no epinephrine, and the retrospective French cohort is likewise tabulated under epinephrine versus placebo.",
+    "snippet": "a nonrandomized prospective observational study conducted in Japan in 2012 also compared prehospital use of epinephrine to placebo in cardiac arrest",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39597089_Williams2024_PMC11596809.xml",
+    "anchor": "3.1 Efficacy and Long-Term Outcomes, paragraph 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Observational cohorts in Table 1 show lower discharge survival and fewer good neurological outcomes with epinephrine; the review itself does not discuss that treated patients are sicker or arrested for longer (confounding by indication).",
+    "snippet": "A later cohort study also determined that epinephrine was negatively associated with a favorable neurological outcome, after adjusting for confounding variables [11].",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39597089_Williams2024_PMC11596809.xml",
+    "anchor": "3.1 Efficacy and Long-Term Outcomes, paragraph 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "POST-ROSC RHYTHM: epinephrine is linked to more pulseless ventricular tachycardia or fibrillation after return of circulation (a cited secondary result).",
+    "snippet": "Epinephrine administration has also been linked to higher rates of abnormal cardiac rhythm after ROSC, including ventricular tachycardia and ventricular fibrillation [13]",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39597089_Williams2024_PMC11596809.xml",
+    "anchor": "3.1 Efficacy and Long-Term Outcomes, paragraph 5",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DOSE: higher epinephrine raises return of circulation but not discharge survival or neurological outcome in the cited trials (0.2 against 0.02 mg/kg; 1 against 7 mg; 5 mg repeated; 15 mg), with harm signals in a cohort.",
+    "snippet": "while higher dose epinephrine has the potential to increase rates of ROSC, it may not be meaningful in that patients may not survive to discharge or have a good neurological outcome",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39597089_Williams2024_PMC11596809.xml",
+    "anchor": "3.2 Dosage, paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "TIMING: the placebo trial secondary analysis found the time-to-drug association present with placebo too, which the review reports as timing having no significant effect on secondary outcomes, so the observational timing associations may reflect time to resuscitation rather than the drug.",
+    "snippet": "suggesting on secondary analysis of timing of epinephrine specifically, that administration timing ultimately has no significant effect on these secondary outcomes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39597089_Williams2024_PMC11596809.xml",
+    "anchor": "3.3 Timing, paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The number needed to treat to prevent one death at 30 days in the placebo trial is quoted as 112, larger than for bystander CPR or early defibrillation.",
+    "snippet": "the number of patients needed to treat with epinephrine to prevent one death at 30 days from cardiac arrest was 112",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39597089_Williams2024_PMC11596809.xml",
+    "anchor": "5 Limitations",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "LIMITS: the authors state the data are mostly out-of-hospital arrests, few randomised trials exist, and reviewer-dependent inclusion may bias the selection.",
+    "snippet": "Inherent bias may also exist as data were reviewed by different reviewers for inclusion in this study.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39597089_Williams2024_PMC11596809.xml",
+    "anchor": "5 Limitations, last sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors conclude epinephrine remains the cornerstone but that several studies suggest it may not give survivors meaningful neurological recovery, and call for more trials.",
+    "snippet": "Ultimately, several studies suggest that epinephrine use may not provide patients who survive cardiac arrest with a meaningful neurological recovery.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39597089_Williams2024_PMC11596809.xml",
+    "anchor": "6 Conclusions",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

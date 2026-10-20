@@ -1,0 +1,39 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-35328751-04",
+ "study_id": {
+  "pmid": "35328751",
+  "doi": "10.3390/ijms23063326"
+ },
+ "event_at": "2026-10-19T21:00:00Z",
+ "analysis_at": "2026-10-19T21:00:00Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, task HELD-PARTIAL-WWOX-C-20261019, branch task/HELD-PARTIAL-WWOX-C-20261019; context_policy QUESTION_DRIVEN. Held before reading: the selection row and the prior receipt's owed sections. Stated question: in the figure panels not yet seen as images (1-4, 7-12 and S1-S6) what is measured per genotype and condition in the glucose arm, and does any panel carry a direction the text states differently or omits, and is any neural cell present. Route: the Europe PMC JATS, twelve main-figure JPEGs and the six supplementary TIFFs (ZIP members) already in the shared files tree; JPEGs opened at native size, TIFFs rendered to PNG with ImageMagick for viewing; locators appended to the existing manifest and verified with deepdive_manifest.py --verify-artifacts --require-current-schema --artifact-workspace. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID35328751_Baryla2022_PMC.xml",
+ "source_fingerprint": "3610388f72848bd63c6084576b9d243589ffb44e0ef9169691b515a09b5b9de8",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID35328751.json",
+  "disease-models/wwox/research/held_wave_20261019_scientist-c.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators"
+ ],
+ "prior_receipt": "FTR-20261004-35328751-03",
+ "reread_reason": "inadequate_prior_coverage"
+}

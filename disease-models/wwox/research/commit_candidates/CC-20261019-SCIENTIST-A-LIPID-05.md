@@ -54,3 +54,17 @@ If brain sterol is ever measured in Wwox-null or P47T brain: a post-lanosterol p
 2. Statins and other drugs are named as inhibitors | This second group includes medications such as aripiprazole, trazodone, amiodarone, cariprazine, buspirone, haloperidol, nebivolol, propranolol, and other compounds (39, 85–93). | Section: Sterol biosynthesis-inhibiting side effects, same
 3. The cumulative-burden idea is a hypothesis | Because polypharmacy is common in psychiatry, neurology, and pain management, we hypothesize that cumulative SBIM burden may exceed the threshold for physiologic compensation in the developing fetus. | same section
 4. Not all exposed pregnancies lead to the outcome | Not all pregnancies prescribed SBIMs resulted in a child with ASD, and it is not yet clear which factors may exacerbate the sterol-inhibiting effects (or side effects) of these medications. | Conclusions and future directions, same
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_001` · 2026-10-19 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.20 -> WM_v7.21 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** not run — no baseline claim is narrowed and no MAJOR contingency is declared; the candidate's locator triples are carried for a later audit.
+**What landed:** 1 PAPER record(s) (PAPER 258) with their LIT records. Caution line on `DL-THER-080` applied (op dry-run and applied); the method note for brain sterol is carried as a lead.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.

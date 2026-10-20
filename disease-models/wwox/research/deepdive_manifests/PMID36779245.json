@@ -2,7 +2,7 @@
  "schema_version": 2,
  "pmid": "36779245",
  "doi": "10.1111/epi.17542",
- "receipt": "FTR-20260804-36779245-02",
+ "receipt": "FTR-20261019-36779245-01",
  "landing": [
   "FTR-20260804-36779245-02",
   "PAPER 018",
@@ -10,7 +10,10 @@
   "CLAIM 030",
   "CLAIM 033",
   "full_text_queue_current#FT-029",
-  "full_text_queue_current#FT-032"
+  "full_text_queue_current#FT-032",
+  "FTR-20261019-36779245-01",
+  "gold_wave_20261019_scientist-b",
+  "CC-20261019-SCIENTIST-B-GOLD-CLINICAL-01"
  ],
  "skills_considered": [
   {
@@ -49,10 +52,31 @@
   }
  ],
  "group_assessment": {
-  "waived": "The two publication counts cannot be measured: the PubMed connector is unauthorized in this session, and an estimate in an integer slot is indistinguishable from a measurement. What the paper itself establishes is recorded here so the waiver loses nothing. research_type is descriptive_clinical: a 13-patient, 12-family, five-centre international cohort with source EEG and MRI reviewed centrally, ACMG re-classification of all literature variants, and Kaplan-Meier survival analysis; RNA/RT-PCR work was performed but only to resolve the pathogenicity of two CNVs, so it is confirmatory rather than mechanistic. is_primary_group_for_disease is false in the strict sense — this is a leading epilepsy-genetics network (Scheffer, Bahlo, Hildebrand, Mefford, Specchio), not a WWOX laboratory — but it is as close to a primary group as WWOX-DEE currently has, because the disease's evidence base is clinical cohorts and this is the largest. Weighting: the observations carry high weight (centralised re-review of primary EEG and MRI, not abstracted from reports; variants re-classified rather than accepted). The survival analysis is the weakest link and the paper does not flag it: n = 75 split three ways, and the p-value is a three-group log-rank presented alongside a pairwise conclusion. NOTE: the waiver is per-section but the impediment is per-field — declining two unmeasurable integers also discards three fields determined from the Methods."
+  "performed": true,
+  "total_publications": 3,
+  "publications_on_gene": 3,
+  "counts_measured": "PubMed esearch 2026-10-19: Oliver KL[au] 81 (ambiguous); Oliver KL[au] AND WWOX 3; Scheffer IE[au] 677; Scheffer IE[au] AND WWOX 3. total_publications is the WWOX-restricted count of the first author.",
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Epilepsy-genetics consortium (Australia, Italy, France, Germany, USA); a clinical cohort with central EEG and MRI review and a variant-class survival analysis; RNA work only confirms two CNVs. Weight the observed phenotypes and variant lists; the survival result rests on literature pooling and carries that weight.",
+  "note": "Senior author declares extensive industry advisory roles in epilepsy therapeutics; none specific to WWOX."
  },
  "field_density": {
-  "waived": "Field density requires a live PubMed query and the connector is unauthorized in this session. It was also not the gating question: the paper is already PAPER 018, and this run upgrades a partial receipt rather than deciding an intake."
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX AND epilepsy",
+    "route": "PubMed esearch count 2026-10-19",
+    "count": 67
+   },
+   {
+    "query": "WWOX",
+    "route": "PubMed esearch count 2026-10-19",
+    "count": 710
+   }
+  ],
+  "note": "Counts as returned by the API on the date."
  },
  "multihop": {
   "references_enumerated": 50,
@@ -65,17 +89,18 @@
    "32051108",
    "25716914"
   ],
-  "resolved": [],
-  "queued": [
+  "resolved": [
    "35573960",
+   "17360458"
+  ],
+  "queued": [
    "30094525",
    "26345274",
-   "17360458",
    "11719429",
    "32051108",
    "25716914"
   ],
-  "note": "50 references; 26 are WWOX-direct with a PMID, of which 19 are already in paper_registry_current.md. Seven are not. Two of those seven — PMID 32051108 and 25716914 — were queued hours earlier as FT-031 and FT-030 from the reference list of PMID 39507621: two independent papers cite them and LEGEND had seen neither, which raises their priority rather than duplicating it. The remaining five are queued as FT-032. The listed gene_direct_refs_in_source are the unresolved ones only; the 19 already in the registry are counted in corpus_crossquery.hits and are not repeated here."
+  "note": "50 references; 26 are WWOX-direct with a PMID, of which 19 are already in paper_registry_current.md. Seven are not. Two of those seven — PMID 32051108 and 25716914 — were queued hours earlier as FT-031 and FT-030 from the reference list of PMID 39507621: two independent papers cite them and LEGEND had seen neither, which raises their priority rather than duplicating it. The remaining five are queued as FT-032. The listed gene_direct_refs_in_source are the unresolved ones only; the 19 already in the registry are counted in corpus_crossquery.hits and are not repeated here. [2026-10-19] Two of the seven now have manifests and receipts in the repository (35573960 and 17360458) and are recorded as resolved; five remain queued as reading debt."
  },
  "corpus_crossquery": {
   "query": "Which of this paper's 26 gene-direct references (those carrying a PMID) are already recorded in paper_registry_current.md, and which are absent from the registry, the full-text queue and the literature tracking log?",
@@ -84,7 +109,28 @@
  },
  "retraction_check": {
   "result": "No retraction or expression of concern. The article does carry a published correction, dated 24 March 2023, which the text records inline: 'The entries in column 9 of Table 1 for the WWOX and Genetic combination rows of the Genetics section have been updated.' Column 9 is Patient 9. Any reading of Table 1 must use the corrected values, and this reading did. Verified against the local PMC XML; not re-checked against a live PubMed query, because the connector is unauthorized.",
-  "checked": true
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 50,
+   "references_screened": 48,
+   "references_with_doi": 48,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
  },
  "verbatim_locators": {
   "waived": false,
@@ -96,7 +142,7 @@
     "snippet": "We found no difference between individuals with one or two missense variants and therefore no evidence to support an “intermediate” phenotype, as our WWOX‐DEE patients were as severe as those with two loss‐of‐function null alleles.",
     "anchor": "Discussion, gene-dosage paragraph",
     "surface": "body",
-    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -104,7 +150,7 @@
     "snippet": "Using the Kaplan–Meier method to analyze time to death, we found that survival was much poorer for the double null group compared with the patients who had at least one missense pathogenic variant (p‐value = .0085, log‐rank test).",
     "anchor": "Results, Genotype-phenotype correlation",
     "surface": "body",
-    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
     "panel_text_relation": "text_confirmed_by_panel"
    },
    {
@@ -112,7 +158,7 @@
     "snippet": "Probability of survival to the age of 5 years for the double null group was <50%; by comparison, it was >75% for the other two, presumably less severe, genetic groups",
     "anchor": "Results, Genotype-phenotype correlation",
     "surface": "body",
-    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
     "panel_text_relation": "text_confirmed_by_panel"
    },
    {
@@ -120,7 +166,7 @@
     "snippet": "we found no difference in time to seizure onset between the three genetic groups (p‐value = .65, log‐rank test",
     "anchor": "Results, Genotype-phenotype correlation",
     "surface": "body",
-    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
     "panel_text_relation": "text_confirmed_by_panel"
    },
    {
@@ -128,7 +174,7 @@
     "snippet": "no region of the gene emerged as specific for being associated with WWOX‐DEE. Furthermore, the two missense variants associated with the rarer, milder SCAR12 phenotype are situated in close proximity to WWOX‐DEE variants: p.Gly372Arg in exon 9 and p.Pro47Thr in exon 2.",
     "anchor": "Results, Genetic variants, final paragraph",
     "surface": "body",
-    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
     "panel_text_relation": "text_confirmed_by_panel"
    },
    {
@@ -136,7 +182,7 @@
     "snippet": "p.Pro47 has been associated with two pathogenic variants; the more conservative change to threonine was found in SCAR12 26 compared with the arginine substitution found in WWOX‐DEE",
     "anchor": "Results, Genetic variants, final paragraph",
     "surface": "body",
-    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
     "panel_text_relation": "text_confirmed_by_panel"
    },
    {
@@ -144,7 +190,7 @@
     "snippet": "Although our patients had multiple seizure types, they did not show the mandatory EEG hallmark of LGS of <2.5 Hz slow spike–wave, 39 excluding this syndromic diagnosis. It is notable that this EEG feature was not reported for patients previously classified as LGS.",
     "anchor": "Discussion, epilepsy-syndrome paragraph",
     "surface": "body",
-    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -152,7 +198,7 @@
     "snippet": "WWOX‐DEE has a high mortality rate of 35%, with 23 of 62 individuals deceased in the literature and 3 of 13 patients here.",
     "anchor": "Discussion, mortality paragraph",
     "surface": "body",
-    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -160,7 +206,7 @@
     "snippet": "We identified a WWOX‐DEE pattern of severe frontotemporal atrophy, hippocampal atrophy, very thin corpus callosum, optic atrophy, and white matter signal abnormalities. These findings were evident from as early as 15 days of life, with repeat MRI revealing increased cerebral atrophy over time.",
     "anchor": "Discussion, imaging paragraph",
     "surface": "body",
-    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -168,7 +214,7 @@
     "snippet": "All cases demonstrated severe optic atrophy, irrespective of age, and some patients showed brainstem changes, which were mainly dorsal",
     "anchor": "Results, Brain imaging",
     "surface": "body",
-    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -176,7 +222,7 @@
     "snippet": "there are no reports of WWOX‐DEE or SCAR12 patients with tumors; however, this could simply be due to the high early mortality rate of WWOX‐DEE",
     "anchor": "Discussion, tumour-suppressor paragraph",
     "surface": "body",
-    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -184,7 +230,7 @@
     "snippet": "the brains of Wwox‐mutant rodents demonstrate severe hypomyelination, 13 , 46 , 47 , 48 a finding more recently observed in human WWOX‐deficient brain organoids.",
     "anchor": "Discussion, models paragraph",
     "surface": "body",
-    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -192,7 +238,7 @@
     "snippet": "this makes WWOX a plausible candidate gene for patients with PEHO or PEHO‐like syndrome that remain without a genetic diagnosis.",
     "anchor": "Discussion, differential-diagnosis paragraph",
     "surface": "body",
-    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -200,7 +246,7 @@
     "snippet": "Without this dual approach, one third of our WWOX‐DEE cases would have been missed.",
     "anchor": "Discussion, diagnostic-workup paragraph",
     "surface": "body",
-    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -208,7 +254,7 @@
     "snippet": "None achieved independent walking, and only two had a single word, whereas 11 were nonverbal.",
     "anchor": "Results, Patients",
     "surface": "body",
-    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -216,7 +262,7 @@
     "snippet": "We report the oldest living patient, aged 23 years 11 months.",
     "anchor": "Results, Genotype-phenotype correlation, opening",
     "surface": "body",
-    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -224,7 +270,7 @@
     "snippet": "Patient 2, with the longest follow‐up (21 years), showed progression to a diffuse low‐voltage background without epileptiform abnormalities",
     "anchor": "Results, Electroencephalography",
     "surface": "body",
-    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -232,7 +278,7 @@
     "snippet": "c.689A > C, p.Gln230Pro (homozygous)",
     "anchor": "Table 1, Patient 2 — read together with the same column's 'Age, sex: 23 y 11 m, M' and 'Genetic combination: Missense/missense'",
     "surface": "table",
-    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -307,42 +353,169 @@
     "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_2026-09-27.xml",
     "panel_text_relation": "text_only"
    },
-    {
-      "proposition": "PRESENTATION AGE in the 13-patient cohort: median seizure onset 5 weeks (1 day to 10 months, mean 9 weeks). This is the presentation floor the post-diagnosis window argument uses; the cohort reports no age at molecular diagnosis in the served body (token sweep of 'diagnos': no age). [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
-      "snippet": "Seizures began at a median of 5",
-      "anchor": "Results, 'Patients'",
-      "surface": "body",
-      "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_2026-09-27.xml",
-      "found_or_sought": "sought",
-      "panel_text_relation": "text_only"
-    },
-    {
-      "proposition": "Seizure onset is a presentation floor, not disease onset: development was already abnormal from birth in 11 of 13 patients. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
-      "snippet": "Development was abnormal from birth in 11 of 13 patients, with 9 of 13 patients not meeting any developmental milestones at seizure onset",
-      "anchor": "Results, 'Patients'",
-      "surface": "body",
-      "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_2026-09-27.xml",
-      "found_or_sought": "found",
-      "panel_text_relation": "text_only"
-    },
-    {
-      "proposition": "The authors' own caveat on reading seizure onset as the start of disease. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
-      "snippet": "With EIDEE, it is often difficult to ascertain whether early development is normal prior to seizure onset",
-      "anchor": "Discussion",
-      "surface": "body",
-      "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_2026-09-27.xml",
-      "found_or_sought": "found",
-      "panel_text_relation": "text_only"
+   {
+    "proposition": "PRESENTATION AGE in the 13-patient cohort: median seizure onset 5 weeks (1 day to 10 months, mean 9 weeks). This is the presentation floor the post-diagnosis window argument uses; the cohort reports no age at molecular diagnosis in the served body (token sweep of 'diagnos': no age). [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
+    "snippet": "Seizures began at a median of 5",
+    "anchor": "Results, 'Patients'",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_2026-09-27.xml",
+    "found_or_sought": "sought",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizure onset is a presentation floor, not disease onset: development was already abnormal from birth in 11 of 13 patients. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
+    "snippet": "Development was abnormal from birth in 11 of 13 patients, with 9 of 13 patients not meeting any developmental milestones at seizure onset",
+    "anchor": "Results, 'Patients'",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_2026-09-27.xml",
+    "found_or_sought": "found",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors' own caveat on reading seizure onset as the start of disease. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
+    "snippet": "With EIDEE, it is often difficult to ascertain whether early development is normal prior to seizure onset",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_2026-09-27.xml",
+    "found_or_sought": "found",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Treatment negative with numbers: the ketogenic diet was started by 3 of 13 patients and continued by only 1 of the 3; all 4 patients given cannabidiol continued it. No efficacy outcome (seizure frequency, responder rate) is reported for either.",
+    "snippet": "Only 1 of 3 individuals who started the ketogenic diet continued it. In contrast, all four patients who had cannabidiol continued that ASM.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
+    "anchor": "Epilepsy results, treatment paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 WWOX-DEE patients (12 families) from five epilepsy centres, EEG, MRI and clinical record review",
+     "genotype": "biallelic WWOX pathogenic variants, null/missense classes",
+     "comparator": "literature cases coded by variant class"
     }
+   },
+   {
+    "proposition": "Table 2 names the three patients who tried the ketogenic diet (Patients 7, 11, 12) among long drug lists; the reason a diet was stopped is not given.",
+    "snippet": "LTG, ZNS, CLB, LAC, MDZ, PHT, PHB, PRED, ACTH, TPM, KD, VGB, VPA, LEV",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
+    "anchor": "Table 2, row ASMs trialed (current), Patient 7 column",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 WWOX-DEE patients (12 families) from five epilepsy centres, EEG, MRI and clinical record review",
+     "genotype": "biallelic WWOX pathogenic variants, null/missense classes",
+     "comparator": "literature cases coded by variant class"
+    }
+   },
+   {
+    "proposition": "Death record: Patient 6 died of respiratory complications; Patient 8 of possible SUDEP after a recent respiratory infection with no post-mortem; Patient 5 of unknown cause. Respiratory and autonomic mechanisms are asserted by clinical context only.",
+    "snippet": "Patient 6 died from respiratory complications and Patient 8 from possible sudden unexpected death in epilepsy (SUDEP), on the background of a recent respiratory tract infection (postmortem was not performed).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
+    "anchor": "Patients, results, mortality paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 WWOX-DEE patients (12 families) from five epilepsy centres, EEG, MRI and clinical record review",
+     "genotype": "biallelic WWOX pathogenic variants, null/missense classes",
+     "comparator": "literature cases coded by variant class"
+    }
+   },
+   {
+    "proposition": "The only functional-metabolic imaging in the paper is one FDG-PET (Patient 6, age 6): temporal and perisylvian hypometabolism with moderate frontal hypometabolism, in regions that are also atrophic; no glucose, lactate, ketone or other metabolic laboratory value is reported for any patient.",
+    "snippet": "Brain fluorodeoxyglucose positron emission tomography in Patient 6 at age 6 years showed low metabolism in the temporal lobes and perisylvian regions with moderate atrophy and moderate hypometabolism in the frontal lobes (Figure S4).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
+    "anchor": "Brain imaging, last paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 WWOX-DEE patients (12 families) from five epilepsy centres, EEG, MRI and clinical record review",
+     "genotype": "biallelic WWOX pathogenic variants, null/missense classes",
+     "comparator": "literature cases coded by variant class"
+    }
+   },
+   {
+    "proposition": "A focal seizure in Patient 9 at 10 months includes cyanosis, the only ictal autonomic or respiratory sign named in the cohort; it is recorded on a standard montage page without a respiratory channel.",
+    "snippet": "Focal seizure in a 10‐month‐old boy (Patient 9) characterized by behavioral arrest, left eye deviation, asymmetric upper limb stiffening, cyanosis, and clonic activity of the right upper limb.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
+    "anchor": "Figure 1 caption, panel C",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 WWOX-DEE patients (12 families) from five epilepsy centres, EEG, MRI and clinical record review",
+     "genotype": "biallelic WWOX pathogenic variants, null/missense classes",
+     "comparator": "literature cases coded by variant class"
+    }
+   },
+   {
+    "proposition": "The Figure 1 caption states the panel C ictal rhythm as left parietal-occipital.",
+    "snippet": "EEG showed a left parietal–occipital ictal rhythm characterized by theta activity increasing in amplitude and reducing in frequency",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
+    "anchor": "Figure 1 caption, panel C",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 WWOX-DEE patients (12 families) from five epilepsy centres, EEG, MRI and clinical record review",
+     "genotype": "biallelic WWOX pathogenic variants, null/missense classes",
+     "comparator": "literature cases coded by variant class"
+    }
+   },
+   {
+    "proposition": "Panels B, D, E and F of Figure 1 carry extra polygraphy channels labelled ECG, Breath, EOG, R Delt, L Delt and MKR beneath the EEG; the caption and text never say respiratory or cardiac channels were recorded, and nothing is analysed from them.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 native 709x664: lower channels of panels B, D, E labelled ECG, Breath (B, D), EOG, R Delt, L Delt, MKR.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36779245_r2/EPI-64-1351-g001.jpg",
+    "anchor": "Figure 1 panels B, D, E, lower channels, native JPEG",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "13 WWOX-DEE patients (12 families) from five epilepsy centres, EEG, MRI and clinical record review",
+     "genotype": "biallelic WWOX pathogenic variants, null/missense classes",
+     "comparator": "literature cases coded by variant class"
+    }
+   },
+   {
+    "proposition": "In Figure 1C the large rhythmic ictal activity sits on the channels the figure itself labels C4-P4, P4-O2, T8-P8 and P8-O2, which are right-hemisphere derivations, while the caption says a left parietal-occipital ictal rhythm and the clinical arrows give left eye deviation and right arm clonic jerks. Either the channel labels or the caption laterality is wrong; at 709 px width the labels were read on a 3x enlargement and no further resolution exists.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1C, 3x enlargement of the native JPEG: highest-amplitude rhythmic activity on rows labelled C4 P4, P4 O2, T8 P8, P8 O2; arrows below read behavioural arrest, left eye deviation, asymmetric upper limb stiffening (R>L), cyanosis, right arm clonic jerks.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36779245_r2/EPI-64-1351-g001.jpg",
+    "anchor": "Figure 1 panel C, native JPEG enlarged 3x for reading",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "13 WWOX-DEE patients (12 families) from five epilepsy centres, EEG, MRI and clinical record review",
+     "genotype": "biallelic WWOX pathogenic variants, null/missense classes",
+     "comparator": "literature cases coded by variant class"
+    },
+    "qualifies": "entries[35]",
+    "qualifies_needle": "left parietal–occipital ictal rhythm"
+   },
+   {
+    "proposition": "Figure 4A as drawn: null/missense stays near 0.9 with few at risk; missense/missense falls to about 0.75 at about 3 years and about 0.62 from about 8 to 9 years to the end at about 24 years; null/null falls to about 0.45 by 3 years and about 0.26 from 9 years; the missense/missense band overlaps the null/null band at late ages. The p value is the three-group log-rank; no pairwise test is shown.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4A native 709x226: three step curves, p = 0.0085 Log-rank; blue null/missense flat near 0.9; green missense/missense steps to about 0.62 from about 9 years; red null/null to about 0.26.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36779245_r2/EPI-64-1351-g004.jpg",
+    "anchor": "Figure 4 panel A, native JPEG",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "13 WWOX-DEE patients (12 families) from five epilepsy centres, EEG, MRI and clinical record review",
+     "genotype": "biallelic WWOX pathogenic variants, null/missense classes",
+     "comparator": "literature cases coded by variant class"
+    },
+    "qualifies": "entries[0]",
+    "qualifies_needle": "no evidence to support an “intermediate” phenotype",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36779245.json",
+     "entry": 38,
+     "what_changed": "Own same-day entry: timing of the missense/missense plateau corrected from about 9 years to about 8.3 years after blind audit (verdict SUPPORTS with a timing correction).",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "SUPPORTS"
+      ]
+     }
+    }
+   }
   ],
-  "note": "Twenty locators. Two are anchored to inspected figure images and one to a table cell read against its neighbours; the rest to text. The figures were retrieved and inspected earlier the same day via the pmc.ncbi.nlm.nih.gov/articles/instance/<PMCID>/bin/ route, after four earlier routes had failed and the figures had been recorded as unobtainable.\n\n🔴 LOCATOR AUDIT AND REPAIR 2026-08-10. All twenty text snippets were matched against the local XML; THIRTEEN did not occur in it. Every one was the transcription class — the quote written as the page reads rather than extracted as the artifact contains — and this journal's markup is the worst case in the corpus: non-breaking hyphens (`WWOX‐DEE` written `WWOX-DEE`), en dashes (`Kaplan–Meier`, `spike–wave`, `7–8 Hz`), curly quotation marks, and superscript reference numbers interleaved in the running text (`hypomyelination, 13 , 46 , 47 , 48 a finding`). NOTHING WAS REWORDED: each snippet is the same span re-taken from the extracted text, and both ends were verified to land where the recorded quote landed, folded to alphanumerics so the comparison survives exactly the characters the transcription mangled. All thirteen now match in STRICT mode. No quote here was ever absent from the paper — the defect was fidelity, not integrity.\n\n🔴 SCHEMA v2 UPGRADE 2026-08-10. Three artifacts declared and fingerprinted: the JATS XML and the two figure images. The images are why this manifest could not reach v2 before today — the note above said they had been retrieved and inspected, and they were in no checkout: `files/` is gitignored, so the inspection travelled and its subject did not. Both were re-retrieved from pmc.ncbi.nlm.nih.gov/articles/instance/10952634/bin/ and re-inspected in this run, at 709x368 (Figure 3) and 709x226 (Figure 4).\n\nThe two figure locators had the FIGURE CAPTION in the snippet slot while their own propositions said \"read from the figure image rather than its caption\" — the manifest declared a reading of an image and carried the text that was not the evidence for it. The snippets now describe what the images show, which is the convention PMID34831305 set for `surface: figure`, and the captions are preserved here verbatim so nothing is lost: Figure 4 — \"Survival analysis for 75 individuals with WWOX developmental and epileptic encephalopathy stratified by genetic variant group. (A) Time to death. (B) Time to seizure onset.\"; Figure 3 — \"Location and type of pathogenic WWOX variants in our cohort (top) of 13 patients and those from the literature (bottom).\"\n\nPanel/text relation is declared on all twenty locators. Five text statements are marked `text_confirmed_by_panel` because the panel was read for that statement in this run: entries 1, 2 and 3 against Figure 4, which prints p = 0.0085 and p = 0.65 on its face and from which the 5-year separation can be read directly, and entries 4 and 5 against Figure 3's marker placement. Entry 0 is deliberately left `text_only`: it claims that one versus two missense variants makes no difference, and Figure 4A orders null/missense above missense/missense with overlapping bands. That is a QUALIFICATION — neither a confirmation nor a contradiction — and the vocabulary has no value for it. Recording it as confirmed would have been the over-claim; the gap is reported rather than papered over."
+  "note": "Twenty locators. Two are anchored to inspected figure images and one to a table cell read against its neighbours; the rest to text. The figures were retrieved and inspected earlier the same day via the pmc.ncbi.nlm.nih.gov/articles/instance/<PMCID>/bin/ route, after four earlier routes had failed and the figures had been recorded as unobtainable.\n\n🔴 LOCATOR AUDIT AND REPAIR 2026-08-10. All twenty text snippets were matched against the local XML; THIRTEEN did not occur in it. Every one was the transcription class — the quote written as the page reads rather than extracted as the artifact contains — and this journal's markup is the worst case in the corpus: non-breaking hyphens (`WWOX‐DEE` written `WWOX-DEE`), en dashes (`Kaplan–Meier`, `spike–wave`, `7–8 Hz`), curly quotation marks, and superscript reference numbers interleaved in the running text (`hypomyelination, 13 , 46 , 47 , 48 a finding`). NOTHING WAS REWORDED: each snippet is the same span re-taken from the extracted text, and both ends were verified to land where the recorded quote landed, folded to alphanumerics so the comparison survives exactly the characters the transcription mangled. All thirteen now match in STRICT mode. No quote here was ever absent from the paper — the defect was fidelity, not integrity.\n\n🔴 SCHEMA v2 UPGRADE 2026-08-10. Three artifacts declared and fingerprinted: the JATS XML and the two figure images. The images are why this manifest could not reach v2 before today — the note above said they had been retrieved and inspected, and they were in no checkout: `files/` is gitignored, so the inspection travelled and its subject did not. Both were re-retrieved from pmc.ncbi.nlm.nih.gov/articles/instance/10952634/bin/ and re-inspected in this run, at 709x368 (Figure 3) and 709x226 (Figure 4).\n\nThe two figure locators had the FIGURE CAPTION in the snippet slot while their own propositions said \"read from the figure image rather than its caption\" — the manifest declared a reading of an image and carried the text that was not the evidence for it. The snippets now describe what the images show, which is the convention PMID34831305 set for `surface: figure`, and the captions are preserved here verbatim so nothing is lost: Figure 4 — \"Survival analysis for 75 individuals with WWOX developmental and epileptic encephalopathy stratified by genetic variant group. (A) Time to death. (B) Time to seizure onset.\"; Figure 3 — \"Location and type of pathogenic WWOX variants in our cohort (top) of 13 patients and those from the literature (bottom).\"\n\nPanel/text relation is declared on all twenty locators. Five text statements are marked `text_confirmed_by_panel` because the panel was read for that statement in this run: entries 1, 2 and 3 against Figure 4, which prints p = 0.0085 and p = 0.65 on its face and from which the 5-year separation can be read directly, and entries 4 and 5 against Figure 3's marker placement. Entry 0 is deliberately left `text_only`: it claims that one versus two missense variants makes no difference, and Figure 4A orders null/missense above missense/missense with overlapping bands. That is a QUALIFICATION — neither a confirmation nor a contradiction — and the vocabulary has no value for it. Recording it as confirmed would have been the over-claim; the gap is reported rather than papered over.\n\n2026-10-19 gold wave, scientist-b: re-acquired JATS (the 2026-08 XML absent), earlier locators re-pointed unchanged to the new surface (path only); new locators added for the treatment negatives, deaths, PET, Figure 1 polygraphy and panel C laterality, Figure 4A as drawn, and the supplement RNA studies. Owed sections of the prior reading (figures, introduction, supplementary) were read in this pass; the two EMF graphics of the supplement were not rendered, so supplementary coverage is partial."
  },
  "source_artifacts": [
-  {
-   "path": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
-   "sha256": "3aff9ecb9e62b4a9fcdc0bc1f73c674e13face044f784855cb09a58c60499e58",
-   "kind": "article_text"
-  },
   {
    "path": "files/fulltext/PMID36779245_Oliver2023_assets/EPI-64-1351-g003.jpg",
    "sha256": "c4f8c54189b2b484b4c3681aade205b8aab952fe7c3161901d892a2d1227a64a",
@@ -366,6 +539,129 @@
     "acquired_on": "2026-09-27",
     "derived": false,
     "result_sha256": "780f42de9b3982fa5bf9bf1e6bb76f71384c943aa197fb2d4de80be7ac7e7a34"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
+   "sha256": "780f42de9b3982fa5bf9bf1e6bb76f71384c943aa197fb2d4de80be7ac7e7a34",
+   "kind": "article_text",
+   "note": "PMC efetch JATS for PMC10952634 (Epilepsia 2023, CC BY), 180,365 bytes, re-acquired 2026-10-19 because the 2026-08 XML is absent; locators of earlier readings re-point here when their snippets verify.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "780f42de9b3982fa5bf9bf1e6bb76f71384c943aa197fb2d4de80be7ac7e7a34",
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC10952634&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36779245_r2/EPI-64-1351-g001.jpg",
+   "sha256": "0cc1cbdc8317f586d7d97ce2766ac355471d4e8a4d034829122ab8d17d4811e6",
+   "kind": "figure",
+   "note": "Figure 1 EEG pages, opened as an image; panel C also read on a 3x enlargement.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "0cc1cbdc8317f586d7d97ce2766ac355471d4e8a4d034829122ab8d17d4811e6",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10952634.1/EPI-64-1351-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36779245_r2/EPI-64-1351-g002.jpg",
+   "sha256": "246436d57aae0624f074485ff4aca756fd10fd1038f45fa4c70bdcbb4af9e173",
+   "kind": "figure",
+   "note": "Figure 2 MRI montage, opened as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "246436d57aae0624f074485ff4aca756fd10fd1038f45fa4c70bdcbb4af9e173",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10952634.1/EPI-64-1351-g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36779245_r2/EPI-64-1351-g003.jpg",
+   "sha256": "c4f8c54189b2b484b4c3681aade205b8aab952fe7c3161901d892a2d1227a64a",
+   "kind": "figure",
+   "note": "Figure 3 variant map, opened as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "c4f8c54189b2b484b4c3681aade205b8aab952fe7c3161901d892a2d1227a64a",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10952634.1/EPI-64-1351-g003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36779245_r2/EPI-64-1351-g004.jpg",
+   "sha256": "65ab0f9e5534bddebd331cf4b980853eae20145eb252f2af56ba8ff3afcfe0db",
+   "kind": "figure",
+   "note": "Figure 4 Kaplan-Meier curves, opened as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "65ab0f9e5534bddebd331cf4b980853eae20145eb252f2af56ba8ff3afcfe0db",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10952634.1/EPI-64-1351-g004.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/supplement/PMID36779245/EPI-64-1351-s001.docx",
+   "sha256": "4c674762f267d8e492da5f3abc1ecdb38ffb489263026b9f313b88ed60a4c41f",
+   "kind": "supplement_binary",
+   "note": "Supplementary Methods and Results and Figures S1-S6 (docx); text derived below; embedded figures S1 gel, S1 chromatogram, S2, S3, S5 and the Patient 9 and 10 chromatogram opened as images; two EMF graphics (S1 EEG and S4 PET pages) not rendered.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "4c674762f267d8e492da5f3abc1ecdb38ffb489263026b9f313b88ed60a4c41f",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10952634.1/EPI-64-1351-s001.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/supplement/PMID36779245/EPI-64-1351-s002.xlsx",
+   "sha256": "7825f659c03c07de3681ee114c695006ae8939c798a4acd8e21850b275d2d74c",
+   "kind": "supplement_binary",
+   "note": "Table S1: 90 variant rows with citations and ACMG criteria; no ages or survival data, so the Kaplan-Meier result cannot be recomputed from the supplement.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "7825f659c03c07de3681ee114c695006ae8939c798a4acd8e21850b275d2d74c",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10952634.1/EPI-64-1351-s002.xlsx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/supplement/PMID36779245_s001_text.txt",
+   "sha256": "4f6df1526a1040f8b50d83125f29f2cff10a16c357b3bab4a1b8c3d91e7a39e3",
+   "kind": "supplement_text",
+   "note": "Text of word/document.xml of the supplement docx, paragraph ends to newlines, tags removed.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "4f6df1526a1040f8b50d83125f29f2cff10a16c357b3bab4a1b8c3d91e7a39e3",
+    "derived_from": "files/supplement/PMID36779245/EPI-64-1351-s001.docx",
+    "extractor": {
+     "name": "python zipfile and re",
+     "version": "3.12",
+     "call": "zipfile read of word/document.xml, paragraph ends to newlines, tags removed, blank lines collapsed",
+     "join": ""
+    }
    }
   }
  ]

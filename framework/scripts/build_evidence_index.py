@@ -177,7 +177,7 @@ class EvidenceIndex:
             "evidence_records": len(self.records),
             "by_tier": tiers,
             "verifiable_share": round(
-                tiers.get(VERIFIABLE, 0) / len(self.records), 2) if self.records else 0.0,
+                tiers.get(VERIFIABLE, 0) / len(self.records), 4) if self.records else 0.0,
         }
 
     def query(self, term: str | None, claim: str | None, tier: str | None) -> list[dict]:
@@ -204,7 +204,7 @@ def render_header(index: EvidenceIndex) -> list[str]:
         f"records: {coverage['evidence_records']} from "
         f"{coverage['papers_with_evidence_records']} papers, out of "
         f"{coverage['papers_in_registry']} in the registry",
-        f"tiers: {tiers}  ·  verifiable share {coverage['verifiable_share']:.0%}",
+        f"tiers: {tiers}  ·  verifiable share {coverage['verifiable_share']:.1%}",
         "",
         "A query here searches the manifest-backed part of the literature, not the",
         "literature. Records at tier `legacy_unanchored` predate schema v2: they carry a",

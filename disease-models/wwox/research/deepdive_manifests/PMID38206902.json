@@ -1,0 +1,370 @@
+{
+ "schema_version": 2,
+ "pmid": "38206902",
+ "doi": "10.1371/journal.pone.0295860",
+ "receipt": "FTR-20261019-38206902-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "A University of Virginia paediatric neurology group (Burnsed) with a mouse neonatal HI-EEG platform; not a WWOX group. Observation (EEG event counts, DAPI lesion scores) is weighted above the conclusion that acute seizures play no role, which depends on survivors and non-concurrent animals."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "neonatal hypoxia-ischemia AND seizures AND mice",
+    "count": 28,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "WWOX AND hypoxia",
+    "count": 24,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches, not measurements."
+ },
+ "multihop": {
+  "references_enumerated": 42,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-direct reference; WWOX is not named in the article.",
+  "disposition": "No gene-direct references."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 38206902 --hops 1; paper_packet.py packet --pmid 38206902; fulltext_receipts.py status --pmid 38206902",
+  "hits": 0,
+  "note": "No record in any of the seven searched registry surfaces and no prior receipt; an empty result is a statement about that query over those files."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication types Journal Article, Research Support N.I.H. Extramural and Non-U.S. Gov't.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 42,
+   "references_screened": 34,
+   "references_with_doi": 34,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 8
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38206902_June2024_PMC.xml",
+   "sha256": "7db9b804a9cec9d4bc80e0e17d5b668c9a387f05b4ce4b4e2820f3e893f9153f",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10783742/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "7db9b804a9cec9d4bc80e0e17d5b668c9a387f05b4ce4b4e2820f3e893f9153f"
+   }
+  },
+  {
+   "path": "files/figures/PMID38206902/pone.0295860.g001.jpg",
+   "sha256": "977aded5330d8b658ccf6304dba640a837f6230c11b627c73b26bb412fd001f4",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10783742 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID38206902/pone.0295860.g002.jpg",
+   "sha256": "9b918c5cc019abbeee643baa01832778c021143d99f33ba7ed8ad22aeb2afabb",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10783742 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID38206902/pone.0295860.g003.jpg",
+   "sha256": "bc324b2892c9937a1228844cceae180c96cae327fb4a3117ddc5765eacf22e95",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10783742 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID38206902/pone.0295860.g004.jpg",
+   "sha256": "8e4bdc67cba41952231b2519cae399b28bc62603c99c3915361d3a6191f71593",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10783742 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID38206902/pone.0295860.g005.jpg",
+   "sha256": "c9dec74b78ef5b0fd69786f844979389cdedd19e8d6566b08cc22b6baa3f56f4",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10783742 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID38206902/pone.0295860.t001.jpg",
+   "sha256": "a968201dfdd0073a8cd1eef978a7c64de62629734149d361a608692404c5d62f",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10783742 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID38206902_mA.png",
+   "sha256": "9ad46466fcdc41e9793c84e131c7f4c2be1ac272036f63fa6121ae1c8cf7c81b",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID38206902/pone.0295860.g001.jpg",
+    "extractor": {
+     "name": "ImageMagick montage",
+     "version": "system package",
+     "call": "montage g001 g002 g003 -tile 3x1 -geometry 900x"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "9ad46466fcdc41e9793c84e131c7f4c2be1ac272036f63fa6121ae1c8cf7c81b"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID38206902_mB.png",
+   "sha256": "be410e0aae4ebf68eced588bff3d24dc3c4c4e710b02a976f7778b7fbaabb5a5",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID38206902/pone.0295860.g001.jpg",
+    "extractor": {
+     "name": "ImageMagick montage",
+     "version": "system package",
+     "call": "montage g004 g005 t001 -tile 3x1 -geometry 900x"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "be410e0aae4ebf68eced588bff3d24dc3c4c4e710b02a976f7778b7fbaabb5a5"
+   }
+  },
+  {
+   "path": "files/figures/PMID38206902/pone.0295860.s001.xlsx",
+   "sha256": "d5aea981e0a56cdfdf5b6d07535ce4e3600c17563b374dd9fbced9ac631c628f",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10783742 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID38206902/pone.0295860.s002.xlsx",
+   "sha256": "d5aea981e0a56cdfdf5b6d07535ce4e3600c17563b374dd9fbced9ac631c628f",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10783742 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID38206902/pone.0295860.s003.xlsx",
+   "sha256": "d5aea981e0a56cdfdf5b6d07535ce4e3600c17563b374dd9fbced9ac631c628f",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10783742 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID38206902/pone.0295860.s004.docx",
+   "sha256": "039e208e815d53bd8eecc75687e434ce7fcacc140da397acb8b10f48b61d66ee",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10783742 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID38206902/pone.0295860.s005.docx",
+   "sha256": "77b6b857d8bbf9e3821ff1623cdc361ca10b98ee276d86797a4dd828366e4667",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10783742 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID38206902/pone.0295860.s001.txt",
+   "sha256": "fe216bd65e3672d9b4637305abc038f67358b6b4ad5f4918b2a8dcabccb4faac",
+   "kind": "supplement_text",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID38206902/pone.0295860.s001.xlsx",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "x2t.py <xlsx> > <txt> (python zipfile and regular expressions, scientist-c scratch script)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "fe216bd65e3672d9b4637305abc038f67358b6b4ad5f4918b2a8dcabccb4faac"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "System: C57BL/6 neonatal mice at postnatal day 10 with unilateral carotid ligation and one hour at 8 percent oxygen, with or without a prior LPS injection; the hypoxia is the injury and no oxygen therapy is given or compared. No WWOX.",
+    "snippet": "HI injury was modeled in postnatal day (p) 10 mice with permanent unilateral left carotid artery ligation followed by 1 hour of recovery and then 1 hour of hypoxia at FiO2 = 0.08",
+    "anchor": "Methods, HI and sham procedure",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38206902_June2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Group sizes in the Methods and the Abstract: 10 inflammation-sensitised and 12 hypoxia-ischaemia-alone mice for EEG.",
+    "snippet": "n = 10 [5 female, 5 male] for IS-HI, n = 12 [5 female, 7 male] for HI alone, n = 4 [1 female, 3 male] for sham, n = 6 [3 female, 3 male] for LPS only",
+    "anchor": "Methods, Animals",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38206902_June2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Deaths: three of the inflammation-sensitised mice died during hypoxia after a convulsive seizure and none in the hypoxia-alone group; the mortality difference is not analysed.",
+    "snippet": "Mortalities of mice included in this analysis include n = 3 [1 female, 2 males] in the IS-HI group, all during hypoxia following a convulsive seizure, and n = 0 in the HI only group.",
+    "anchor": "Results, Baseline characteristics and survival",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38206902_June2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Acute seizure result: no difference in seizure duration (63 versus 62 seconds, p 0.57), burden or median behavioural score (5 versus 6, p 0.25 on an unpaired t-test of an ordinal score).",
+    "snippet": "There was no significant difference in median BSS between the IS-HI group and HI group, respectively 5 and 6 (p = 0.25, unpaired t-test).",
+    "anchor": "Results, Acute seizure activity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38206902_June2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizures began about 16 seconds into hypoxia on average, and nonconvulsive seizures occurred only during hypoxia and reoxygenation.",
+    "snippet": "Seizures began on average 16 ± 24 seconds following the start of hypoxia in the HI and IS-HI groups combined.",
+    "anchor": "Results, Acute seizure activity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38206902_June2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EEG background: the inflammation-sensitised group appears to recover more slowly; the difference at the first hypoxia time point is reported as p = 0.05 and called not significant.",
+    "snippet": "hypoxia 1 p = 0.05, hypoxia 2 p = 0.18, reoxygenation 1 p = 0.42, reoxygenation 2 p = 0.51, unpaired t-test",
+    "anchor": "Results, EEG background activity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38206902_June2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Histology result: total neuropathology score about 8 for hypoxia-ischaemia alone and about 23 with LPS (maximum 60 per animal), p below 0.0001; scoring is on DAPI-stained sections only.",
+    "snippet": "The mice in the IS-HI group had significantly higher total neuropathologic severity scores compared to the HI only group",
+    "anchor": "Results, Brain histology",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38206902_June2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The unit of analysis for the p-values (animal or brain slice) is not stated although five slices per animal were scored.",
+    "snippet": "Each slice was scored for lesion size and tissue damage by a researcher (W.M.) blinded to treatment group and sex",
+    "anchor": "Methods, Data analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38206902_June2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EEG and histology came from different animals, so seizure burden and lesion size cannot be related within an animal.",
+    "snippet": "histology could not be done on the same animals used for EEG due to permanent headset implantation",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38206902_June2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion concludes that acute seizures do not contribute to the greater injury, from equal seizure duration among survivors, although three sensitised mice died during hypoxia.",
+    "snippet": "This indicates that acute seizures do not contribute to the increased severity of injury in IS-HI compared to HI, which has been previously published and demonstrated here.",
+    "anchor": "Discussion, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38206902_June2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary data files: the three deposited spreadsheets labelled seizure review, background EEG review and neuropathologic scores are byte-identical (same SHA-256) and contain only the per-seizure event table with sheets named HI and LPS.",
+    "snippet": "Seizure #\tStart time\tStop time \tTime (s) \tPhase\tOnly electrographic? (1 = Y, 0 = N)\tBSS",
+    "anchor": "Supplementary files S1 to S3 (identical workbook)",
+    "surface": "supplement",
+    "artifact": "files/figures/PMID38206902/pone.0295860.s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figures 1 to 3: design with LPS 4 h before ligation then 8 percent oxygen for 1 h and 21 percent for 30 min (32 mice for video EEG, 20 for histology); EEG patterns (baseline, global suppression, burst suppression, seizure); seizure score plots for the two groups (the legend labels the hypoxia-alone group n = 10 and the sensitised group n = 12, the reverse of the Methods); background-activity curves reaching about 35 percent of baseline (hypoxia alone) against about 48 percent (sensitised) mid-hypoxia without error bars; seizure-time bars equal.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 A-B design; Figure 2 A-D EEG traces; Figure 3 A-D BSS timing, background activity, seizure time.",
+    "anchor": "Figures 1-3",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID38206902_mA.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figures 4 and 5 and Table 1: lesion-score bars (total about 8 against about 23; cortex about 0.5 against 1.5; thalamus about 0.8 against 2.1; hippocampus about 0.9 against 1.9, **** each); DAPI whole-section images with a large ipsilateral cavity in the sensitised example; the 0 to 4 scale per region.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4 A-D bars; Figure 5 A-D DAPI sections; Table 1 scoring scale rows 0 to 4.",
+    "anchor": "Figures 4, 5 and Table 1",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID38206902_mB.png",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC10783742/fullTextXML returned HTTP 200 (141204 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}

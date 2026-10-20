@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-37876811-01",
+ "study_id": {
+  "pmid": "37876811",
+  "doi": "10.1016/j.isci.2023.108098"
+ },
+ "event_at": "2026-10-19T19:26:41Z",
+ "analysis_at": "2026-10-19T19:26:41Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, interventions batch 2026-10-19, task INTERV-H4-C-20261019, branch task/INTERV-H4-C-20261019; context_policy SOURCE_FIRST. Route: Europe PMC REST fullTextXML (open access) saved to the shared checkout files/fulltext; whole article, Table 1 and STAR Methods read from a text rendering of the JATS up to the reference list (52 references counted, not read); the seven figure images (including the graphical abstract) opened in two montages; supplementary Tables S2 and S4 were converted from xlsx to text by a scratch reader and searched or ranked (S2: WWOX row; S4: HIF-1 rank); Tables S1 and S3 were opened only at their header rows. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID37876811_Liang2023_PMC.xml",
+ "source_fingerprint": "c8e9736de2576fc4b3d0829d2e325fe9ce3cc6620a61d7bdff9e47e1fa9b6a8f",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID37876811.json",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "Supplementary Tables S1 and S3 were not read beyond headers and S2 and S4 were searched or ranked rather than read line by line, so supplementary is declared not_read and the depth is partial. A correlational epilepsy paper on HIF-1 alpha/HO-1 and ferroptosis; substitute for the HIF1A item, not WWOX evidence."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

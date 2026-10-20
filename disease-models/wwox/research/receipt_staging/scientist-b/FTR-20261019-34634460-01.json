@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-20T01:00:00Z",
+ "event_at": "2026-10-20T01:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read"
+ },
+ "event_id": "FTR-20261019-34634460-01",
+ "evidence_basis": [
+  "Whole JATS body, Table 1, Figures 1-6 opened as images; supplement docx text read in full and the four embedded TIFFs opened (resized to 900 px PNG).",
+  "NEW: supplement Table S1 medians disagree with the main-text medians for the same 119-burst dataset; slices are in 10 mM glucose; pentobarbital donors; the earlier pannexin-blocker reading is confirmed on the panel."
+ ],
+ "evidence_depth": "complete_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID34634460.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID34634460.md",
+  "disease-models/wwox/research/gold_wave_20261019_scientist-b.md"
+ ],
+ "prior_receipt": "FTR-20260927-34634460-03",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_version_or_supplement",
+ "source_fingerprint": "b01bfa4f6a9cb9cc1d39c167b9953e679639913d56ef74b19b4d59cc05399e02",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID34634460_Wwox_osc2021_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1016/j.nbd.2021.105529",
+  "pmid": "34634460"
+ },
+ "workflow": "scientist-b gold wave 2026-10-19; QUESTION_DRIVEN re-read; bytes re-acquired with no User-Agent; prepared as JSON for the integrator and not appended."
+}

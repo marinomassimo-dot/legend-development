@@ -2,117 +2,170 @@
  "schema_version": 2,
  "pmid": "39507621",
  "doi": "10.3389/fgene.2024.1477466",
- "receipt": "FTR-20260804-39507621-01",
+ "receipt": "FTR-20261019-39507621-01",
  "landing": [
-  "FTR-20260804-39507621-01",
-  "CLAIM 020",
-  "CLAIM 017",
-  "CLAIM 008",
-  "PAPER 015"
+  "FTR-20261019-39507621-01",
+  "metabolic_wave_20261019_scientist-b",
+  "gold_wave_20261019_scientist-b",
+  "CC-20261019-SCIENTIST-B-GOLD-CLINICAL-01"
  ],
  "skills_considered": [
   {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Lost bytes: evidence_presence.py --search over the home directory and /tmp found no copy of the declared digests; the PMC efetch XML (no User-Agent) and the PMC open-data bucket were re-acquired. The two figures came back byte-identical to the declared digests; the XML did not (PMC re-serialised it)."
+  },
+  {
    "skill": "legend-deepdive",
    "used": false,
-   "reason": "Run inline in the main session rather than delegated: the object was to test whether the locator obligation actually fires on a live reading, and delegating would have tested the agent's copy of the rule instead of the route the operator uses."
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
   },
   {
-   "skill": "find-fulltext",
+   "skill": "legend-locator-audit",
    "used": false,
-   "reason": "The PMC XML was already in the local corpus from an earlier session; retrieval was not the missing step, the reading was."
-  },
-  {
-   "skill": "legend-study-intake-triage",
-   "used": false,
-   "reason": "No study list arrived. The paper is already PAPER 015 in the registry, so intake triage had no undetermined status to resolve."
-  },
-  {
-   "skill": "legend-batch-inferential-sweep",
-   "used": false,
-   "reason": "A single paper, not a batch; a second abstract-ranking pass would rank one item against nothing."
-  },
-  {
-   "skill": "legend-discovery",
-   "used": false,
-   "reason": "The reading is a debt closure on an existing PAPER record, not a discovery hunt. The one lead it did surface (EEG polygraphy visible only in the figures) is recorded as a locator rather than promoted to the ledger, because a single case report does not support a lead status on its own."
-  },
-  {
-   "skill": "legend-hypothesis-forge",
-   "used": false,
-   "reason": "No molecule or mechanism emerged that was not already tracked; the gene-therapy paragraph is this report's summary of a study already in the therapeutics layer."
-  },
-  {
-   "skill": "legend-commit",
-   "used": false,
-   "reason": "Candidates recorded, not applied. The four canonical current files change only under an operator-authorized BATCH_COMMIT, which was not requested."
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared (see the commit candidate)."
   }
  ],
  "group_assessment": {
-  "waived": "The two publication counts cannot be measured in this session: the PubMed connector is unauthorized, and an estimate written into an integer slot is indistinguishable from a measurement. Waiving rather than guessing. What the Methods do establish is recorded here so the waiver loses nothing: research_type is descriptive_clinical (single patient, exome + Sanger + long-term video-EEG, no model and no cohort); is_primary_group_for_disease is false (a Moscow clinical epileptology and epilepsy-genetics pairing, adult service plus paediatric genetic diagnostics, not a WWOX laboratory); and the weighting is that this report's authority rests on the observation, not the group — the 40-year natural-history datum is checkable against the published age envelope, whereas the Discussion's genotype-phenotype statements are this group's summary of other people's cohorts and carry those cohorts' weight, not this report's. NOTE: the waiver is per-section but the impediment is per-field, so declining two unmeasurable integers also discards three fields that were determined from the Methods. See the run report.",
-  "performed_during_run": false
+  "performed": true,
+  "total_publications": 7,
+  "publications_on_gene": 1,
+  "counts_measured": "PubMed esearch 2026-10-19: Teplyshova A[au] 7; Teplyshova A[au] AND WWOX 1; Sharkov A[au] 45 (ambiguous surname-initial); Sharkov A[au] AND WWOX 1. First author counts used.",
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Adult epileptology and genetic-diagnostics clinical pairing, not a WWOX laboratory; authority rests on the observation, not on the Discussion restatements of other cohorts.",
+  "note": "One author declares employment at a genetic-testing company; no competing interest is declared as relevant."
  },
  "field_density": {
-  "waived": "Field density measures how crowded the surrounding literature is, which requires a live PubMed query; the connector is unauthorized in this session. It was also not the gating question for this run: the paper is already PAPER 015 in the registry and this reading closes a receipt gap rather than deciding an intake."
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 63
+   }
+  ],
+  "note": "WWOX-directed case report; token count over the whole JATS including references."
  },
  "multihop": {
+  "performed": false,
   "references_enumerated": 19,
-  "gene_direct_refs_in_source": [
-   "24456803",
-   "38161429",
-   "10786676",
-   "23459853",
-   "34034642",
-   "32051108",
-   "29808465",
-   "24369382",
-   "25411445",
-   "36779245",
-   "30356099",
-   "34747138",
-   "30361190",
-   "34831305",
-   "25716914",
-   "30853297"
-  ],
-  "resolved": [
-   "24456803",
-   "38161429",
-   "10786676",
-   "23459853",
-   "34034642",
-   "29808465",
-   "24369382",
-   "25411445",
-   "36779245",
-   "30356099",
-   "34747138",
-   "30361190",
-   "34831305",
-   "30853297"
-  ],
-  "queued": [
-   "32051108",
-   "25716914"
-  ],
-  "note": "16 of 19 references are WWOX-direct. Fourteen are already in paper_registry_current.md. Two are absent from the registry, the full-text queue and the tracking log — that is, LEGEND had never seen them, and would not have learned so without enumerating the list: PMID 32051108 (compound-heterozygous WWOX epilepsy, Chinese patient) and PMID 25716914 (biallelic WWOX epileptic encephalopathy first described prenatally). The second is the more interesting of the two, because this report records absent foetal movement in the last month of pregnancy and attributes prenatal onset to the literature; a prenatal-presentation case is the direct test of that. Both are queued as reading debt, not resolved."
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS: 19.",
+  "resolved": [],
+  "queued": [],
+  "note": "Sixteen of nineteen references are WWOX-direct; the two not previously known to the repository were queued as reading debt in the 2026-08 reading and are not re-resolved here."
  },
  "corpus_crossquery": {
-  "query": "Which of this paper's 16 gene-direct references are already recorded in paper_registry_current.md, and which are absent from the registry, the full-text queue and the literature tracking log?",
-  "hits": 14,
-  "note": "Run mechanically over the canonical registries, not by recall. The 2 misses are the value: an unenumerated reference list hides its own gaps."
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 39507621 and registry_records.py get --pmid 39507621 --hops 1",
+  "hits": 2,
+  "finding": "PAPER 015 (identity), CLAIM 017 and CLAIM 020 cite it; a contemporaneous receipt FTR-20260804-39507621-01 exists whose three artefacts were absent from this checkout."
  },
  "retraction_check": {
-  "result": "No retraction, correction or expression of concern in the PMC record. Verified against the local PMC XML article-meta only; not re-checked against a live PubMed query, because the connector is unauthorized in this session. A notice issued after the local copy was fetched would therefore not be visible here.",
-  "checked": true
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "pubmed_identity_check.py (MATCH) and dependency_integrity.py screen; JATS front matter carries no retraction flag",
+  "result": "No retraction, correction or expression of concern found.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 19,
+   "references_screened": 18,
+   "references_with_doi": 18,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
  },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
+   "sha256": "ae7d18a74e0e7ffea3635f6f39fc2108b473770c9d688d0b2d5ebe6210a69692",
+   "kind": "article_text",
+   "note": "PMC efetch JATS for PMC11537890 (Front Genet 2024, CC BY), 55,275 bytes; abstract, introduction, case report, exome sequencing, discussion, conclusion; no tables, no supplement; 19 references. Supersedes the absent PMID39507621_Teplyshova2024_PMC.xml (different digest after PMC re-serialisation).",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "ae7d18a74e0e7ffea3635f6f39fc2108b473770c9d688d0b2d5ebe6210a69692",
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC11537890&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID39507621_Teplyshova2024_assets/fgene-15-1477466-g001.jpg",
+   "sha256": "49c8d761cf50d4f84f8bf58687d658dc70c33f6e28563e839dd5bab4948045a7",
+   "kind": "figure",
+   "note": "Figure 1 clinical photograph (publisher-masked), inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "49c8d761cf50d4f84f8bf58687d658dc70c33f6e28563e839dd5bab4948045a7",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11537890.1/fgene-15-1477466-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID39507621_Teplyshova2024_assets/fgene-15-1477466-g002.jpg",
+   "sha256": "351ceafc9616a2df7ef638e76cd70ce2209c10e3c5573cba53b1912467247fdb",
+   "kind": "figure",
+   "note": "Figure 2 EEG page, inspected as an image; digest identical to the one declared before the loss.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "351ceafc9616a2df7ef638e76cd70ce2209c10e3c5573cba53b1912467247fdb",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11537890.1/fgene-15-1477466-g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID39507621_Teplyshova2024_assets/fgene-15-1477466-g003.jpg",
+   "sha256": "9fcb0abebd29907dec2c7eb16f4f551423e8f474205c96eae2698d631d45ca91",
+   "kind": "figure",
+   "note": "Figure 3 EEG page, inspected as an image; digest identical to the one declared before the loss.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "9fcb0abebd29907dec2c7eb16f4f551423e8f474205c96eae2698d631d45ca91",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11537890.1/fgene-15-1477466-g003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  }
+ ],
  "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch JATS, 55,275 bytes; whole article; all three figures opened as images.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "Independent re-read on re-acquired bytes, context_policy SOURCE_FIRST for the locators (captured before any prior locator or registry record was opened). Supersedes the locators of FTR-20260804-39507621-01, whose artefacts were absent; the prior reading had also found the caption-versus-calibration-bar discrepancy and the ECG/EMG channels, both re-derived here from the images.",
   "entries": [
    {
     "proposition": "The WWOX genotype-phenotype relation is a graded spectrum: biallelic null produces the severe DEE pole, biallelic missense the ataxia pole, and null/missense an intermediate range.",
     "snippet": "The phenotype of patients depends on the following combination: premature translation termination due to biallelic null (i.e., frameshift, nonsense, donor/acceptor, splice site, and deletion) variants lead to more severe phenotypes of early epileptic encephalopathy, while biallelic missense variants lead to a predominantly spinocerebellar ataxia phenotype. The phenotype of patients carrying null and missense variants falls in an intermediate range",
     "anchor": "Discussion, genotype-phenotype paragraph",
     "surface": "body",
-    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -120,7 +173,7 @@
     "snippet": "It has been shown that the risk of mortality correlates with the WWOX genotype, with the presence of at least one missense variant increasing the probability of 5-year survival from <50% to >75%",
     "anchor": "Discussion, mortality paragraph",
     "surface": "body",
-    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -128,7 +181,7 @@
     "snippet": "Notably, no specific region within the gene has been conclusively linked to WWOX-DEE.",
     "anchor": "Introduction, ClinVar variant-count paragraph",
     "surface": "body",
-    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -136,7 +189,7 @@
     "snippet": "Approximately 80 patients with WWOX-DEE have been described in the literature, with the oldest being 23 years and 11 months old at date",
     "anchor": "Discussion, opening sentence",
     "surface": "body",
-    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -144,7 +197,7 @@
     "snippet": "The child could sit independently after 1 year, crawl from 1.5 years, and walk with support from 3 years of age.",
     "anchor": "Clinical features, first paragraph",
     "surface": "body",
-    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -152,7 +205,7 @@
     "snippet": "After 12 years of life, a regression of acquired skills and a reduction of independent motor activity were noted; he ceased to walk and then sit on his own.",
     "anchor": "Clinical features, third paragraph",
     "surface": "body",
-    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -160,7 +213,7 @@
     "snippet": "From 36 years of age, the frequency of pneumonia has increased to four times a year, often requiring inpatient treatment, and bulbar palsy has appeared, leading to tube feeding.",
     "anchor": "Clinical features, fourth paragraph",
     "surface": "body",
-    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -168,7 +221,7 @@
     "snippet": "Various antiseizure medications have been prescribed: phenobarbital, valproic acid, carbamazepine, topiramate, levetiracetam, ethosuximide, and perampanel. No sustained positive effect of treatment was detected.",
     "anchor": "History of epilepsy",
     "surface": "body",
-    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -176,7 +229,7 @@
     "snippet": "The variant p. Thr12Met is located in the N-terminal domain and does not fall within any known domains. However, it is predicted as a tyrosine phosphorylation site by NetPhos 2.0 Server",
     "anchor": "Introduction, penultimate paragraph",
     "surface": "body",
-    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -184,7 +237,7 @@
     "snippet": "A homozygous variant in exon 1 of the WWOX gene (hg19, chr16:78133710C>T) NM_016373.4:c.35C>T was identified, leading to the replacement of an amino acid at position 12 (p.Thr12Met).",
     "anchor": "Exome sequencing, second paragraph",
     "surface": "body",
-    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -192,14 +245,14 @@
     "snippet": "Testing the efficacy of AAV-SynI-WWOX delivery in Wwox-null mice demonstrated that specific neuronal restoration of WWOX expression rescued brain hyperexcitability and seizures, hypoglycemia, myelination deficits, and the premature lethality and behavioural deficits of Wwox-null mice.",
     "anchor": "Discussion, gene-therapy paragraph",
     "surface": "body",
-    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
     "panel_text_relation": "text_only"
    },
    {
     "proposition": "The published caption states the recording parameters, and states the sensitivity in millivolts per millimetre.",
     "snippet": "EEG longitudinal bipolar montage. Sweep: 30 mm/s; sensitivity: 100 mV/mm; bandpass: 1–70 Hz.",
     "surface": "body",
-    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
     "anchor": "Caption of Figure 2, printed identically as the caption of Figure 3 — which is why no fragment of it occurs exactly once in the article",
     "panel_text_relation": "text_only"
    },
@@ -208,7 +261,7 @@
     "snippet": "shows a background posterior dominant rhythm of 7–8 Hz. Sleep was divided into stages and phases; physiological patterns were well represented.",
     "anchor": "Clinical features, EEG paragraph",
     "surface": "body",
-    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -216,7 +269,7 @@
     "snippet": "The prevalence of epileptiform activity increased in sleep, reaching 70%–80% on some epochs, but overall remaining below 20%–25%.",
     "anchor": "Clinical features, EEG paragraph",
     "surface": "body",
-    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -224,14 +277,14 @@
     "snippet": "Brain computed tomography at the age of 35 years did not show any significant pathological lesions. No magnetic resonance imaging of the brain was performed.",
     "anchor": "Clinical features, final paragraph",
     "surface": "body",
-    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
     "panel_text_relation": "text_only"
    },
    {
     "proposition": "The molecular genetic diagnosis arrived 38 years after the onset of the disease.",
     "snippet": "Thus, the patient was given a molecular genetic diagnosis of WWOX-associated developmental and epileptic encephalopathy 38 years after the onset of the disease.",
     "surface": "body",
-    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
     "anchor": "Exome sequencing, closing sentence",
     "panel_text_relation": "text_only"
    },
@@ -260,28 +313,293 @@
     "artifact": "files/fulltext/PMID39507621_Teplyshova2024_assets/fgene-15-1477466-g003.jpg",
     "anchor": "Figure 3, image inspected at the returned native 708×530 pixels — timestamps along the polygraphy channels",
     "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The index genotype is homozygous c.35C>T, p.Thr12Met, in exon 1, with parents described as healthy and non-consanguineous.",
+    "snippet": "A homozygous variant in exon 1 of the WWOX gene (hg19, chr16:78133710C>T) NM_016373.4:c.35C>T was identified, leading to the replacement of an amino acid at position 12 (p.Thr12Met).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
+    "anchor": "Exome sequencing, second paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "one human patient, whole-exome plus Sanger, retrospective narrative with one video-EEG session in 2019",
+     "genotype": "homozygous WWOX NM_016373.4:c.35C>T p.Thr12Met",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "The parents are described as non-consanguineous, with no family history.",
+    "snippet": "The patient is a 40-year-old man, the second child of healthy, non-consanguineous parents.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
+    "anchor": "Case report, first paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "one human patient, whole-exome plus Sanger, retrospective narrative with one video-EEG session in 2019",
+     "genotype": "homozygous WWOX NM_016373.4:c.35C>T p.Thr12Met",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "Sanger confirmation in the proband and unaffected family members is named in Methods, but no segregation result, parental genotype, copy-number result or runs-of-homozygosity statement is given anywhere in the article: a homozygous call in a non-consanguineous family leaves hemizygosity over a deletion unexcluded by the text.",
+    "snippet": "To validate the pathogenic variant in the proband and unaffected family members, Sanger sequencing was performed using the Applied Biosystems 3,130 xl Genetic Analyzer",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
+    "anchor": "Exome sequencing, first paragraph (Methods sentence only; no result sentence exists)",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "one human patient, whole-exome plus Sanger, retrospective narrative with one video-EEG session in 2019",
+     "genotype": "homozygous WWOX NM_016373.4:c.35C>T p.Thr12Met",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "CNV and structural-variant analysis was run (Manta), but no outcome of it is reported.",
+    "snippet": "CNV and SV analysis was performed using the Manta tool (v. 1.6.0).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
+    "anchor": "Exome sequencing, first paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "one human patient, whole-exome plus Sanger, retrospective narrative with one video-EEG session in 2019",
+     "genotype": "homozygous WWOX NM_016373.4:c.35C>T p.Thr12Met",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "The ACMG classification is likely pathogenic on PM2, PM5, PP3 and PP4, with PM5 resting on a different substitution at the same residue (Thr12Arg) that ClinVar lists both as a variant of unknown significance and as pathogenic.",
+    "snippet": "there is a description of another amino acid substitution in the same position - p. (Thr12Arg), presented in the ClinVar database as a variant of unknown significance (RCV000690341.5) and as a pathogenic variant (RCV002286420.2).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
+    "anchor": "Exome sequencing, second paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "one human patient, whole-exome plus Sanger, retrospective narrative with one video-EEG session in 2019",
+     "genotype": "homozygous WWOX NM_016373.4:c.35C>T p.Thr12Met",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "In-silico predictors disagree (MutPred benign-moderate, FATHMM and PROVEAN uncertain, others pathogenic-supporting); no protein-level or functional measurement of p.Thr12Met is given.",
+    "snippet": "predominantly predicted by computer algorithms as possibly pathogenic (PrimateAI, SIFT, EIGEN—Pathogenic Supporting, MVP—Pathogenic Moderate, MutPred—Benign Moderate, and FATHMM, PROVEAN—Uncertain).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
+    "anchor": "Exome sequencing, third paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "one human patient, whole-exome plus Sanger, retrospective narrative with one video-EEG session in 2019",
+     "genotype": "homozygous WWOX NM_016373.4:c.35C>T p.Thr12Met",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "Seizure semiology across life: epileptic spasms in clusters, autonomic seizures with impaired awareness and myoclonic seizures from age 4 months; spasms and autonomic seizures stopped by 1.5 years; later tonic drop attacks, myoclonic seizures, eyelid-myoclonia absences and behaviour-arrest seizures. The autonomic seizures are an early-childhood, recalled item.",
+    "snippet": "Epileptic spasms and autonomic seizures stopped by the age of 1.5 years.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
+    "anchor": "History of epilepsy",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "one human patient, whole-exome plus Sanger, retrospective narrative with one video-EEG session in 2019",
+     "genotype": "homozygous WWOX NM_016373.4:c.35C>T p.Thr12Met",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "Seven named antiseizure medications gave no sustained effect; seizure frequency stayed at 10 to 30 paroxysms daily. The listed medications contain no ketogenic diet, steroid or ACTH course, vigabatrin, benzodiazepine or neurostimulation, none of which is said to have been tried or withheld.",
+    "snippet": "No sustained positive effect of treatment was detected.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
+    "anchor": "History of epilepsy",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "one human patient, whole-exome plus Sanger, retrospective narrative with one video-EEG session in 2019",
+     "genotype": "homozygous WWOX NM_016373.4:c.35C>T p.Thr12Met",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "The seizure frequency is quantified for the whole disease course as 10 to 30 paroxysms per day.",
+    "snippet": "The seizure frequency has remained extremely high throughout the disease course, reaching 10–30 paroxysms daily.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
+    "anchor": "History of epilepsy",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "one human patient, whole-exome plus Sanger, retrospective narrative with one video-EEG session in 2019",
+     "genotype": "homozygous WWOX NM_016373.4:c.35C>T p.Thr12Met",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "Respiratory trajectory: recurrent respiratory disease and pneumonia from infancy; four pneumonias a year from age 36, bulbar palsy and tube feeding, respiratory failure worsening after COVID-19 at 38 or later, ventilatory support since. No blood gas, sleep study, swallow study, ECG, heart-rate or other autonomic measurement is reported.",
+    "snippet": "After the age of 38 years, the patient’s respiratory failure deteriorated after contracting COVID-19, and ventilatory support was initiated, continuing until now.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
+    "anchor": "Clinical features, fourth paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "one human patient, whole-exome plus Sanger, retrospective narrative with one video-EEG session in 2019",
+     "genotype": "homozygous WWOX NM_016373.4:c.35C>T p.Thr12Met",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "Current anthropometry is reported (165 cm, 60 kg); no glucose, lactate, lipid, endocrine or any other metabolic laboratory value is reported anywhere in the article.",
+    "snippet": "Currently, the patient’s height is 165 cm and weight is 60 kg.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
+    "anchor": "Clinical features, fifth paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "one human patient, whole-exome plus Sanger, retrospective narrative with one video-EEG session in 2019",
+     "genotype": "homozygous WWOX NM_016373.4:c.35C>T p.Thr12Met",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "Motor regression began after age 12 and was followed by scoliosis, kyphosis and limb contractures.",
+    "snippet": "After 12 years of life, a regression of acquired skills and a reduction of independent motor activity were noted; he ceased to walk and then sit on his own.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
+    "anchor": "Clinical features, third paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "one human patient, whole-exome plus Sanger, retrospective narrative with one video-EEG session in 2019",
+     "genotype": "homozygous WWOX NM_016373.4:c.35C>T p.Thr12Met",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "The 2019 video-EEG shows a preserved posterior rhythm and physiological sleep patterns; epileptiform activity is sleep-activated (70 to 80 percent of some epochs, below 20 to 25 percent overall); ictal recording captured myoclonic seizures only.",
+    "snippet": "Ictal EEG showed epileptic generalised myoclonic seizures.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
+    "anchor": "Clinical features, EEG paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "one human patient, whole-exome plus Sanger, retrospective narrative with one video-EEG session in 2019",
+     "genotype": "homozygous WWOX NM_016373.4:c.35C>T p.Thr12Met",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "No MRI was ever done; head CT at 35 showed no significant lesion.",
+    "snippet": "No magnetic resonance imaging of the brain was performed.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
+    "anchor": "Clinical features, imaging sentence",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "one human patient, whole-exome plus Sanger, retrospective narrative with one video-EEG session in 2019",
+     "genotype": "homozygous WWOX NM_016373.4:c.35C>T p.Thr12Met",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "The Discussion cites a genotype rule (at least one missense variant raises five-year survival; biallelic null gives early epileptic encephalopathy, biallelic missense a predominantly ataxia phenotype) and does not note that this patient, biallelic missense, has a DEE phenotype with Lennox-Gastaut features.",
+    "snippet": "while biallelic missense variants lead to a predominantly spinocerebellar ataxia phenotype.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
+    "anchor": "Discussion, genotype-phenotype paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "one human patient, whole-exome plus Sanger, retrospective narrative with one video-EEG session in 2019",
+     "genotype": "homozygous WWOX NM_016373.4:c.35C>T p.Thr12Met",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "Survival rule cited: the presence of at least one missense variant raises the probability of 5-year survival from below 50 percent to above 75 percent (cited to Oliver 2023, not derived here).",
+    "snippet": "the presence of at least one missense variant increasing the probability of 5-year survival from <50% to >75% (Oliver et al., 2023).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
+    "anchor": "Discussion, mortality paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "one human patient, whole-exome plus Sanger, retrospective narrative with one video-EEG session in 2019",
+     "genotype": "homozygous WWOX NM_016373.4:c.35C>T p.Thr12Met",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "The authors classify the case as Lennox-Gastaut syndrome while stating that generalised paroxysmal fast activity was not detected.",
+    "snippet": "Although typical generalised paroxysmal fast activity (GPFA) in sleep was not detected, perhaps due to the lack of EEG at an early age, the patient can be diagnosed with Lennox–Gastaut syndrome",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
+    "anchor": "Discussion, Lennox-Gastaut paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "one human patient, whole-exome plus Sanger, retrospective narrative with one video-EEG session in 2019",
+     "genotype": "homozygous WWOX NM_016373.4:c.35C>T p.Thr12Met",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "The authors state that early diagnosis would have left treatment choice negligibly changed at the time.",
+    "snippet": "However, the impact on the choice of therapy at that time would have been negligible.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
+    "anchor": "Discussion, penultimate-but-two paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "one human patient, whole-exome plus Sanger, retrospective narrative with one video-EEG session in 2019",
+     "genotype": "homozygous WWOX NM_016373.4:c.35C>T p.Thr12Met",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "The gene-therapy sentence restates a mouse study (neuronal AAV9 rescue of seizures, hypoglycemia, myelination, lethality); it is the only place hypoglycemia appears in the article, and it is not a measurement in this patient.",
+    "snippet": "rescued brain hyperexcitability and seizures, hypoglycemia, myelination deficits, and the premature lethality and behavioural deficits of Wwox-null mice.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC_r2.xml",
+    "anchor": "Discussion, gene-therapy paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "one human patient, whole-exome plus Sanger, retrospective narrative with one video-EEG session in 2019",
+     "genotype": "homozygous WWOX NM_016373.4:c.35C>T p.Thr12Met",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "Figure 2 and Figure 3 are 18-channel longitudinal bipolar EEG pages with two extra channels labelled in Cyrillic as ECG (250 uV/mm) and EMG (200 uV/mm); the article text never mentions that ECG or EMG was recorded. The ECG trace is a flat baseline with regular small deflections and no heart-rate analysis is given.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2 native 708x529: channel labels Fp1-F3 to Cz-Pz down the left margin; bottom two traces labelled ЭКГ 250 мкВ/мм and ЭМГ 200 мкВ/мм; timestamps along the bottom read 21/4/2019 15:52.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_assets/fgene-15-1477466-g002.jpg",
+    "anchor": "Figure 2, labels at left margin and the bottom traces, native JPEG",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "one human patient, whole-exome plus Sanger, retrospective narrative with one video-EEG session in 2019",
+     "genotype": "homozygous WWOX NM_016373.4:c.35C>T p.Thr12Met",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "Figure 3 shows a continuous run of slow sharp-and-slow-wave complexes at roughly 1.5 to 2 per second over the 8 s page, as the text says; the page was recorded on the same day (timestamps 21/4/2019 18:06) as Figure 2 (15:52), with the same ECG and EMG channels.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3 native 708x530: repeated diffuse slow spike-and-wave complexes across all derivations; bottom channels ЭКГ 250 мкВ/мм and ЭМГ 200 мкВ/мм; timestamps 21/4/2019 18:06:10 to 18:06:14.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_assets/fgene-15-1477466-g003.jpg",
+    "anchor": "Figure 3, whole page and timestamp row, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "one human patient, whole-exome plus Sanger, retrospective narrative with one video-EEG session in 2019",
+     "genotype": "homozygous WWOX NM_016373.4:c.35C>T p.Thr12Met",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "Figure 1 is a clinical photograph with the lower face masked by a publisher box; the upslanting fissures, arched brows and hypertelorism named in the caption lie in the visible region, and the resolution (588x768) does not allow grading. No further description of the individual is recorded.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 native 588x768: lower face covered by an opaque rectangle; caption features are in the unmasked upper face and not contradicted.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_assets/fgene-15-1477466-g001.jpg",
+    "anchor": "Figure 1, whole image, native JPEG",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "one human patient, whole-exome plus Sanger, retrospective narrative with one video-EEG session in 2019",
+     "genotype": "homozygous WWOX NM_016373.4:c.35C>T p.Thr12Met",
+     "comparator": "none"
+    }
    }
-  ],
-  "waived": false,
-  "source_fulltext_indexed": true,
-  "source_fulltext_indexed_evidence": "Europe PMC REST EXT_ID:39507621 on 2026-08-07: inEPMC=Y, PMCID PMC11537890, hasPDF=Y — full text is indexed, so an external validator can re-verify body quotes.",
-  "note": "Sixteen locators captured during the reading, not reconstructed afterwards. One (the EEG polygraphy) is anchored to an inspected image rather than to text, and is recorded precisely because neither the caption nor the body states it. All three figures were inspected, including Figure 1, a clinical photograph. The first pass abstained from that image on privacy grounds and was wrong to: the privacy risk lives in what LEGEND records, not in what it looks at, so abstaining protected nothing and left the D-14 failure mode — a caption that misdescribes its own image — unchecked. The non-identifying finding is recorded and no description of the individual is: the image is publisher-redacted across the lower face, the three dysmorphic features named in the caption lie in the visible region and are not contradicted by it, and no feature is visible that the text omits. The image resolution does not support independent grading of palpebral-fissure slant, so the caption is uncontradicted rather than confirmed.\n\n🔴 LOCATOR AUDIT AND PARTIAL REPAIR 2026-08-10. Four of sixteen text snippets did not occur in the local XML. TWO were the transcription class and are repaired — en dashes written as hyphens in `7–8 Hz`, `70%–80%`, `20%–25%` — each re-taken from the artifact and verified to begin and end where the recorded quote did. TWO ARE REFUSED AND LEFT ALONE, which is the point of a mechanical repair having refusals at all: entry 11 contains no fragment of sixteen characters that occurs exactly once in the source, so no anchor can be trusted; entry 15 aligns onto a LATER CLAUSE and would come back 215 characters shortened to 117 — a `strict` match to a DIFFERENT sentence, which is the failure mode that looks most like success. Both need a reader with the paper open, not an algorithm. Declared here rather than repaired.\n\n🔴 SCHEMA v2 UPGRADE AND REFUSAL RESOLUTION 2026-08-10. The two quotes the mechanical re-capture refused on 2026-08-10 are resolved here, and the refusals were right for two different reasons no algorithm could have separated.\n\nENTRY 11 was a figure caption printed IDENTICALLY under Figure 2 and Figure 3, so no fragment of it occurs exactly once in the article and the tool correctly declined to anchor on an ambiguous match. Its only defect was an en dash written as a hyphen in `1–70 Hz`. It also carried the same shape of defect this corpus keeps finding: a proposition about the montage and the ECG/EMG polygraphy, evidenced by a snippet that is the caption and says nothing about either. The caption is now its own text locator, and what the images show is in locators of their own.\n\nENTRY 15 was never in the body: it is in the ABSTRACT, which `_artifact_text` separates deliberately, so no re-capture could have found it and none should have. Under schema v2 abstract material cannot carry an evidentiary locator, so the locator now quotes the body sentence that states the 38-year diagnostic delay. The other half of the old proposition does not survive the move, and that is a fact about the paper worth recording: the phrase \"cerebral palsy\" appears NOWHERE in the article body. It exists only in the abstract — \"For many years, the patient was given a diagnosis of cerebral palsy; 38 years after the onset of the disease, he was given a molecular genetic diagnosis of WWOX -associated developmental and epileptic encephalopathy.\" — and is preserved here verbatim rather than carried by a locator the schema forbids.\n\nOPENING THE IMAGES TO SETTLE ENTRY 11 PRODUCED THE FINDING OF THE RUN. Both captions print `sensitivity: 100 mV/mm`; both figures carry a calibration bar reading `100 мкВ` — 100 microvolts. Millivolts per millimetre is not a possible EEG sensitivity, so the published caption is wrong and the panel it describes says so. It is recorded through `text_contradicted_by_panel` with `contradicts: entries[11]` and the needle `100 mV/mm`, which is what that grammar was built for, instead of a sentence in this note that no command can check. The polygraphy channels themselves are visible only in the images: ЭКГ and ЭМГ traces, labelled in Cyrillic, mentioned by neither caption nor running text.\n\nThree artifacts declared and fingerprinted: the JATS XML and the two EEG figures, retrieved from pmc.ncbi.nlm.nih.gov/articles/instance/11537890/bin/ and written into the shared checkout's `files/`. Panel/text relation is declared on all nineteen locators."
- },
- "source_artifacts": [
-  {
-   "path": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
-   "sha256": "e9330a4084654d6beba81cd523d5d52ef9f8d34a3a720301d085d4f6457d79c9",
-   "kind": "article_text"
-  },
-  {
-   "path": "files/fulltext/PMID39507621_Teplyshova2024_assets/fgene-15-1477466-g002.jpg",
-   "sha256": "351ceafc9616a2df7ef638e76cd70ce2209c10e3c5573cba53b1912467247fdb",
-   "kind": "figure"
-  },
-  {
-   "path": "files/fulltext/PMID39507621_Teplyshova2024_assets/fgene-15-1477466-g003.jpg",
-   "sha256": "9fcb0abebd29907dec2c7eb16f4f551423e8f474205c96eae2698d631d45ca91",
-   "kind": "figure"
-  }
- ]
+  ]
+ }
 }

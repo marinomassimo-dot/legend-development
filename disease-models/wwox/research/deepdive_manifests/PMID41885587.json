@@ -1,0 +1,380 @@
+{
+ "schema_version": 2,
+ "pmid": "41885587",
+ "doi": "10.1113/JP290169",
+ "receipt": "FTR-20261019-41885587-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-H3-ADRENERGIC-SEIZURE-01",
+  "CC-20261019-SCIENTIST-B-H3-EPINEPHRINE-SAFETY-01",
+  "interventions_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared (group H3 has no WWOX evidence to compare against)."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 136,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Dhillon SK[au]' 136; 'Dhillon SK[au] AND WWOX' 0 (surname-initial queries are ambiguous and are not evidence of authorship); last author 'Bennet L[au]'.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Primary fetal-sheep physiology paper from the group that built this hypoxia-ischaemia paradigm; the key adrenergic claim about injury is cited to its own earlier work. Weigh as a haemodynamic study with a small validation cohort, not as an injury-outcome study.",
+  "note": "Not a WWOX group."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 0
+   }
+  ],
+  "note": "WWOX does not occur in the article."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 56,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "dependency_integrity.py screen reference count, confirmed against <ref> elements in the JATS.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-directed reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --theme adrenergic / epinephrine / noradrenaline / catecholamine / autonomic / sympathetic (each exit 1, no record) and --theme SUDEP (2 of 1586 records)",
+  "hits": 0,
+  "finding": "No registry record carries any adrenergic term, so the laboratory holds nothing on catecholamines to compare with; an empty result is a statement about those queries over those files, not about the literature. SUDEP occurs in two records only as a reason to keep seizure control, not as a mechanism."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed efetch 2026-10-19 for this PMID (no CommentsCorrections element, publication types listed); JATS front matter",
+  "result": "No retraction, correction or expression of concern found in the PubMed record.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 56,
+   "references_screened": 53,
+   "references_with_doi": 53,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41885587_Dhillon2026_PMC13082192.xml",
+   "sha256": "df89360a936c12b945fbb9ec4e1568f2f5b426917c554db064ef2dadc936f905",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC13082192, 160,205 bytes; abstract, introduction, methods, results, Tables 1, discussion, conclusions and Figures 1 to 10 legends present; the peer review history is listed as supporting information and was not retrieved.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13082192/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "df89360a936c12b945fbb9ec4e1568f2f5b426917c554db064ef2dadc936f905"
+   }
+  },
+  {
+   "path": "files/figures/PMID41885587/TJP-604-3457-g001.jpg",
+   "sha256": "2ee97ba40ad4b77b9bc05301f4d6e2c1e35c4bd3c31dd3d0695ce324dd6700fd",
+   "kind": "figure",
+   "note": "File g001: Figure 4 content (systolic dispersion and sequential variability), inspected as an image; the PMC file numbering does not follow the figure labels (declared mapping).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13082192.1/TJP-604-3457-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "2ee97ba40ad4b77b9bc05301f4d6e2c1e35c4bd3c31dd3d0695ce324dd6700fd"
+   }
+  },
+  {
+   "path": "files/figures/PMID41885587/TJP-604-3457-g002.jpg",
+   "sha256": "6272e9d4c6c35110755ca6e15e8ee6d7d7607d0aa1effb243349f6b648f18f67",
+   "kind": "figure",
+   "note": "File g002: Figure 9 content (3-hour averaged systolic variability by day), inspected as an image; the PMC file numbering does not follow the figure labels (declared mapping).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13082192.1/TJP-604-3457-g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "6272e9d4c6c35110755ca6e15e8ee6d7d7607d0aa1effb243349f6b648f18f67"
+   }
+  },
+  {
+   "path": "files/figures/PMID41885587/TJP-604-3457-g003.jpg",
+   "sha256": "693aedf68c299ff9897455e83f7a262097fbbea1652d1731d97cbca0f9345dac",
+   "kind": "figure",
+   "note": "File g003: Figure 1 content (study design flowchart), inspected as an image; the PMC file numbering does not follow the figure labels (declared mapping).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13082192.1/TJP-604-3457-g003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "693aedf68c299ff9897455e83f7a262097fbbea1652d1731d97cbca0f9345dac"
+   }
+  },
+  {
+   "path": "files/figures/PMID41885587/TJP-604-3457-g004.jpg",
+   "sha256": "dd582ee6a87016a4e5f884e253a33e9a49ebf99a3ceedad7efb93872d4965635",
+   "kind": "figure",
+   "note": "File g004: Figure 8 content (3-hourly systolic readings by day), inspected as an image; the PMC file numbering does not follow the figure labels (declared mapping).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13082192.1/TJP-604-3457-g004.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "dd582ee6a87016a4e5f884e253a33e9a49ebf99a3ceedad7efb93872d4965635"
+   }
+  },
+  {
+   "path": "files/figures/PMID41885587/TJP-604-3457-g005.jpg",
+   "sha256": "c1ff8e9eef6488abef9059f85c34ab74cb2f27f111ea6579f9c68458b3ddcb1f",
+   "kind": "figure",
+   "note": "File g005: Figure 5 content (systolic spectral variability), inspected as an image; the PMC file numbering does not follow the figure labels (declared mapping).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13082192.1/TJP-604-3457-g005.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "c1ff8e9eef6488abef9059f85c34ab74cb2f27f111ea6579f9c68458b3ddcb1f"
+   }
+  },
+  {
+   "path": "files/figures/PMID41885587/TJP-604-3457-g006.jpg",
+   "sha256": "7d8c10fb33f8dacb877ea74bf877db30c04e5b72a35ac7a40ee1e1077f340467",
+   "kind": "figure",
+   "note": "File g006: graphical abstract (small), inspected as an image; the PMC file numbering does not follow the figure labels (declared mapping).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13082192.1/TJP-604-3457-g006.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "7d8c10fb33f8dacb877ea74bf877db30c04e5b72a35ac7a40ee1e1077f340467"
+   }
+  },
+  {
+   "path": "files/figures/PMID41885587/TJP-604-3457-g007.jpg",
+   "sha256": "5b507696916f32bffd9a4028664ccbd8beb90f714087046982408618886c98bc",
+   "kind": "figure",
+   "note": "File g007: Figure 3 content (heart rate, pressure, EEG power, nuchal EMG), inspected as an image; the PMC file numbering does not follow the figure labels (declared mapping).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13082192.1/TJP-604-3457-g007.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "5b507696916f32bffd9a4028664ccbd8beb90f714087046982408618886c98bc"
+   }
+  },
+  {
+   "path": "files/figures/PMID41885587/TJP-604-3457-g008.jpg",
+   "sha256": "37811e7b26284ca5595b3646774e1867a84f41a3a5aada8c350c6f794d5ddad0",
+   "kind": "figure",
+   "note": "File g008: Figure 2 content (pressure and heart rate during occlusion), inspected as an image; the PMC file numbering does not follow the figure labels (declared mapping).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13082192.1/TJP-604-3457-g008.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "37811e7b26284ca5595b3646774e1867a84f41a3a5aada8c350c6f794d5ddad0"
+   }
+  },
+  {
+   "path": "files/figures/PMID41885587/TJP-604-3457-g009.jpg",
+   "sha256": "099de801b3d6f7f9ea59160a401ead4afa0506f8c50af27bf85bc1a401c914b1",
+   "kind": "figure",
+   "note": "File g009: Figure 6 content (diastolic dispersion and sequential variability), inspected as an image; the PMC file numbering does not follow the figure labels (declared mapping).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13082192.1/TJP-604-3457-g009.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "099de801b3d6f7f9ea59160a401ead4afa0506f8c50af27bf85bc1a401c914b1"
+   }
+  },
+  {
+   "path": "files/figures/PMID41885587/TJP-604-3457-g010.jpg",
+   "sha256": "001a96c65d62364f1c9aeb3ecdb22d992d61b94f81f668516d2047a9f41de52b",
+   "kind": "figure",
+   "note": "File g010: Figure 7 content (diastolic spectral variability), inspected as an image; the PMC file numbering does not follow the figure labels (declared mapping).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13082192.1/TJP-604-3457-g010.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "001a96c65d62364f1c9aeb3ecdb22d992d61b94f81f668516d2047a9f41de52b"
+   }
+  },
+  {
+   "path": "files/figures/PMID41885587/TJP-604-3457-g011.jpg",
+   "sha256": "71001c66993ea46390aac11c9a82cd588fbc26372c3d277cd99ba90600d8276f",
+   "kind": "figure",
+   "note": "File g011: Figure 10 content (validation scatter of coefficient of variation), inspected as an image; the PMC file numbering does not follow the figure labels (declared mapping).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13082192.1/TJP-604-3457-g011.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "71001c66993ea46390aac11c9a82cd588fbc26372c3d277cd99ba90600d8276f"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 160,205 bytes; abstract, introduction, methods, results, Tables 1, discussion, conclusions and Figures 1 to 10 legends present; the peer review history is listed as supporting information and was not retrieved.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: whole article read including Methods and Table 1; all eleven image files retrieved from the PMC bucket were inspected as images and mapped to figure labels (file numbering does not follow figure numbers; a twelfth file, the graphical abstract gif, is not in the bucket). The Peer Review History supporting file was not retrieved. The reference list (56) was screened for integrity, not read.",
+  "entries": [
+   {
+    "proposition": "DESIGN: preterm fetal sheep at 0.7 gestation, 25-minute cord occlusion, then saline or the non-selective alpha antagonist phentolamine (10 mg bolus, 10 mg/h) from 15 minutes to 8 hours; recordings for 72 hours; 18 sham, 18 occluded with saline, 6 with phentolamine.",
+    "snippet": "Fetuses either received a continuous intravenous infusion of saline or the non‐selective alpha‐adrenergic antagonist phentolamine (10 mg loading bolus, followed by continuous infusion at 10 mg h−1) from 15 min to 8 h post‐HI.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41885587_Dhillon2026_PMC13082192.xml",
+    "anchor": "Methods, Experimental design",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "GROUPING: the groups are described as randomised, but the sex counts place the six phentolamine fetuses in the validation dataset while the pharmacology comparisons use the primary-dataset saline and sham fetuses (8 each); whether phentolamine fetuses were run concurrently with those controls is not stated.",
+    "snippet": "validation dataset – Sham‐HI 6:4 and HI‐saline 6:4, HI‐phentolamine 4:2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41885587_Dhillon2026_PMC13082192.xml",
+    "anchor": "Results, Baseline parameters",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "GLUCOSE AND LACTATE: after the insult glucose and lactate were higher in saline-treated fetuses and recovered by 2 hours with phentolamine, a direct measurement of an alpha-adrenergic contribution to post-insult glycaemia and lactate in a developing-brain model; Table 1 flags glucose differences only at 2 and 4 hours although the text says until 6 hours.",
+    "snippet": "Glucose and lactate concentrations were higher in the HI‐saline group than the sham‐HI group until 6 h post‐HI but recovered to baseline levels by 2 h in the HI‐phentolamine group (Table 1).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41885587_Dhillon2026_PMC13082192.xml",
+    "anchor": "Results, Cardiovascular and biochemical parameters during HI",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "SEIZURES: alpha blockade did not change seizure onset, time with seizures, burden, amplitude, duration or count; the onset means differ (13.3 against 7.3 h) with wide spread.",
+    "snippet": "There was no difference between the occlusion groups in the average onset time (HI‐saline 13.3 ± 9.2 h; HI‐phentolamine 7.3 ± 2.4 h)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41885587_Dhillon2026_PMC13082192.xml",
+    "anchor": "Results, Post-occlusion neurophysiological and EMG recovery",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "UNIT SLIP: the seizure burden is given as seizures per hour (172.4 and 146.1); with a mean duration of about 94 s and 59 seizures over 30 h, 172 seizures per hour is impossible and the figure matches roughly 59 x 94 s / 30 h, about 180 seconds of seizure per hour.",
+    "snippet": "average seizure burden (HI‐saline 172.4 ± 36.8 seizures h−1; HI‐phentolamine 146.1 ± 47.9 seizures h−1)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41885587_Dhillon2026_PMC13082192.xml",
+    "anchor": "Results, Post-occlusion neurophysiological and EMG recovery",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NO INJURY OUTCOME HERE: the harmful effect of alpha blockade (faster secondary mitochondrial failure, more severe neural injury) is cited from the group earlier study in the same paradigm; this paper reports no histology or injury grade, so it cannot show whether blockade helps or harms.",
+    "snippet": "phentolamine infusion following HI accelerates the progression of secondary mitochondrial failure and is associated with a more severe neural injury (Dhillon et al., 2023)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41885587_Dhillon2026_PMC13082192.xml",
+    "anchor": "Discussion, paragraph 6",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state sympathetic activation is part of an endogenous neuroinhibition after hypoxia-ischaemia that is neuroprotective, the opposite sign to the blockade-benefit reading of the adult mouse seizure study in this group of readings.",
+    "snippet": "sympathetic nervous system activation and is neuroprotective",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41885587_Dhillon2026_PMC13082192.xml",
+    "anchor": "Discussion, paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "SPECIFICITY OF THE DRUG: phentolamine blocks alpha receptors non-selectively, so subtype contributions are not separated.",
+    "snippet": "Phentolamine is a non‐specific alpha‐adrenergic receptor antagonist, and so the present study did not investigate the relative contribution of adrenoreceptor subtypes.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41885587_Dhillon2026_PMC13082192.xml",
+    "anchor": "Discussion, paragraph 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "BIOMARKER CLAIM: a threshold one standard deviation above the baseline coefficient of variation, set in the primary group and applied by a blinded observer to a 10 plus 10 validation group, is reported as 90 percent sensitivity and 80 percent specificity; the marker is validated against exposure to the insult, not against measured injury.",
+    "snippet": "Applying this set threshold, in the validation dataset animals with severe HI were identified with 90% sensitivity and 80% specificity (Fig. 10).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41885587_Dhillon2026_PMC13082192.xml",
+    "anchor": "Results, Viability of short BPV as a biomarker for severe HI",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 10 enlarged: of 10 occluded fetuses, 8 lie above the dashed threshold at about 0.043 and 2 below; of 10 sham fetuses, 1 lies above and 9 below; this gives sensitivity 8 of 10 (95 percent exact interval 44 to 97 percent) and specificity 9 of 10 (55 to 99.7 percent), not 90 and 80 percent as reported.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 10 scatter of 3-hourly systolic CoV: Sham-HI ten black dots with one at about 0.047 above the dashed line near 0.043 and nine at 0.01 to 0.024; HI-Saline ten red triangles with eight between 0.049 and 0.168 and two at about 0.023 and 0.029 below the line.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41885587/TJP-604-3457-g011.jpg",
+    "anchor": "Figure 10 (file g011), native JPEG enlarged three times",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "chronically instrumented preterm fetal sheep (0.7 gestation), 25-minute umbilical cord occlusion",
+     "genotype": "wild type",
+     "treatment": "phentolamine 10 mg bolus then 10 mg/h from 15 min to 8 h post occlusion, or saline",
+     "comparator": "sham occlusion and saline",
+     "timepoint": "first 24 h after occlusion",
+     "endpoint": "coefficient of variation of 3-hourly systolic pressure, validation cohort 10 plus 10"
+    }
+   },
+   {
+    "proposition": "LIMITS: stable preterm fetal sheep, not asphyxiated neonates with cardiorespiratory disturbance and routine vasopressor use, which could change variability.",
+    "snippet": "The studies were undertaken in stable preterm fetal sheep, whereas transitioning asphyxiated neonates experience significant cardio‐respiratory disturbances",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41885587_Dhillon2026_PMC13082192.xml",
+    "anchor": "Discussion, limitations paragraph",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

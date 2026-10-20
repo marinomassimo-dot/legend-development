@@ -468,6 +468,84 @@
     "anchor": "Discussion",
     "panel_text_relation": "text_only",
     "found_or_sought": "sought — FIND-X for a migration measurement across every surface"
+   },
+   {
+    "proposition": "The paper labels the PrestoBlue readout mitochondrial redox activity and states WWOX silencing reduced it.",
+    "snippet": "WWOX silencing reduced the mitochondrial redox activity of the cells (Figure 2)",
+    "surface": "body",
+    "anchor": "Results, Figure 2 and 3 paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human neural progenitor cell line (hNPC), in vitro",
+     "cell_line": "hNPC",
+     "genotype": "lentiviral shWWOX knockdown versus scrambled shRNA",
+     "endpoint": "PrestoBlue resorufin fluorescence"
+    },
+    "artifact": "files/fulltext/PMID31543760_Kosla2019_EPMC.xml"
+   },
+   {
+    "proposition": "Figure 2 (hand reading): resorufin fluorescence rises over 270 min in both lines; at 270 min about 10,000 RFU in shScrambled versus about 6,800 in shWWOX (about 32% lower), lower at every one of five time points (all starred, per-time-point unpaired t-tests). The y-axis is raw RFU; no normalisation to cell number, protein or viability is stated, no n or replicate count is printed, and the knockdown line is known from the same paper to adhere and grow differently (Figures 3, 5-7), so a cell-number or reducing-capacity difference cannot be separated from a mitochondrial one. Resazurin reduction measures whole-cell NAD(P)H-linked reducing capacity, not mitochondrial membrane potential; the Methods say seeding was 20,000 cells per well, 18 h before the assay.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2, line chart of PrestoBlue fluorescence (RFU) against time in minutes, hNPC/shWWOX red and hNPC/shScrambled black, five time points with asterisks.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID31543760/fncel-13-00391-g002.jpg",
+    "anchor": "Figure 2, native JPEG",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[21]",
+    "qualifies_needle": "reduced the mitochondrial redox activity",
+    "experimental_context": {
+     "system": "human neural progenitor cell line (hNPC), in vitro",
+     "cell_line": "hNPC",
+     "genotype": "lentiviral shWWOX knockdown versus scrambled shRNA",
+     "timepoint": "up to 270 min after reagent addition, 18 h after seeding",
+     "endpoint": "resorufin fluorescence, raw RFU"
+    },
+    "found_or_sought": "sought - the one metabolic readout in a neural human cell"
+   },
+   {
+    "proposition": "The oxidative-gene PCA is described as showing clear partitioning of control and silenced genotypes along the second dimension.",
+    "snippet": "The dim2 differentiates shScrambled and shWWOX variants indicating changes in oxidation-related genes induced by WWOX depletion (Figure 11).",
+    "surface": "body",
+    "anchor": "Results, PCA paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human neural progenitor cell line (hNPC), in vitro",
+     "cell_line": "hNPC",
+     "genotype": "lentiviral shWWOX knockdown versus scrambled shRNA",
+     "endpoint": "PCA on 362 oxidative stress and antioxidant genes"
+    },
+    "artifact": "files/fulltext/PMID31543760_Kosla2019_EPMC.xml"
+   },
+   {
+    "proposition": "Figure 11 (hand reading): a PCA scatter with ONE point per group (hNSC, hNSC_WWOX_del, Neurons, Neurons_WWOX_del; dim1 77.7%, dim2 14.6%), i.e. four samples and no replicates drawn; dim2 positions are about +11 (hNSC) versus -9 (hNSC shWWOX) and about +1.5 (neurons) versus -3 (neurons shWWOX). Both knockdown points sit lower on dim2 than their control, but a four-point PCA has no inferential content: it cannot say the separation exceeds replicate variation, and the label hNSC differs from the hNPC of the text. Direction of any single gene is not shown.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 11, PCA individuals plot with four points and a dim1/dim2 axis.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID31543760/fncel-13-00391-g011.jpg",
+    "anchor": "Figure 11, native JPEG",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[23]",
+    "qualifies_needle": "changes in oxidation-related genes",
+    "experimental_context": {
+     "system": "human neural progenitor cell line (hNPC), in vitro",
+     "cell_line": "hNPC",
+     "genotype": "lentiviral shWWOX knockdown versus scrambled shRNA",
+     "endpoint": "PCA, 362 genes, CAGE expression"
+    },
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "Supplementary Table 1 lists 35 genes by their CONTRIBUTION to the PCA dimension, with a protein description, and no fold change or direction. In the contribution ranking HIF1A is last (0.033 of 35), HK2 is 29th (0.144), LDHA 20th (0.498), PDK1 7th (0.726); NFE2L2 (0.821), G6PD (0.677), TXNIP (0.633), UCP2 (0.658), CYCS (0.664), FDXR, NDUFS4 and GSK3B also appear. The text names HK2, PDK1 and LDHA as examples of genes that differentiate the genotypes but the table gives no direction and ranks HK2 near the bottom; HIF1A, the axis' partner gene, contributes almost nothing. The same two redox genes G6pd(x) and Nfe2l2 appear as higher in the Wwox-null early-passage mouse fibroblast heatmap of a separate paper; direction here is unknown, so this is a co-occurrence of genes, not a convergent finding.",
+    "snippet": "Supplementary Table 1. The selected genes with high contribution to spatial partitioning of the",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID31543760_assets/Data_Sheet_1_pdftotext.txt",
+    "anchor": "Data_Sheet_1 page 2, Supplementary Table 1",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human neural progenitor cell line (hNPC), in vitro",
+     "cell_line": "hNPC",
+     "genotype": "lentiviral shWWOX knockdown versus scrambled shRNA",
+     "endpoint": "PCA contribution values, 35 genes"
+    },
+    "found_or_sought": "sought - the HIF1A/glycolysis genes the text names"
    }
   ]
  },
@@ -492,6 +570,15 @@
     "disease-models/wwox/research/fulltext_dossiers/PMID31543760.md",
     "disease-models/wwox/research/intake_wave_20261004w13_C.md",
     "disease-models/wwox/research/commit_candidates/CC-20261004W13-C-CLAIM014-SCOPE-01.md"
+   ]
+  },
+  {
+   "receipt": "FTR-20261019-31543760-05",
+   "reader": "scientist-c, HELD-PARTIAL-WWOX-C-20261019",
+   "context_policy": "QUESTION_DRIVEN",
+   "what_changed": "Opened Figures 2 and 11 (the two metabolic panels no earlier locator covered) as images and re-read Supplementary Table 1 with ranks; appended 5 entries. Findings: the only redox readout is a raw-RFU PrestoBlue curve with no normalisation; the oxidative-gene PCA has four points; Table S1 gives contributions not directions, ranks HK2 29th and HIF1A last of 35.",
+   "outputs": [
+    "disease-models/wwox/research/held_wave_20261019_scientist-c.md"
    ]
   }
  ]
