@@ -1,0 +1,408 @@
+{
+ "schema_version": 2,
+ "pmid": "36719667",
+ "doi": "10.5041/rmmj.10489",
+ "receipt": "FTR-20261019-36719667-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID36719667.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "An Israeli military-supported trauma research laboratory at a university medical faculty with a prior uncontrolled-haemorrhage model (cited as the group's own earlier work); primary for this dataset; funded by the Israel Defense Forces medical corps and the defence ministry; no WWOX work."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "fresh frozen plasma AND traumatic brain injury AND hemorrhagic shock AND rat",
+    "count": 14,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND plasma resuscitation",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts at the stated date."
+ },
+ "multihop": {
+  "references_enumerated": 34,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 36719667 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 36719667: publication types ['Journal Article']; correction/retraction link markers in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "UNSCREENABLE_NO_REFERENCE_LIST",
+   "reference_source": "cache",
+   "references_declared": 0,
+   "references_screened": 0,
+   "references_with_doi": 0,
+   "schema": "retraction_check.dependencies/1",
+   "screened": false,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID36719667_Abergel2023_PMC.xml",
+   "sha256": "c5739a68cb5ed4a7125ac5f5edfd72f7e665daa07461975e75f71d501ea18e8b",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC9888485: abstract, body, Table 1, three figure legends, references; the PubMed identity check returned AUTHOR_MISMATCH only because Crossref lists no first author (title and DOI agree).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9888485/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36719667/rmmj-14-1-e0002-g001.jpg",
+   "sha256": "e200d9d1ab7701ebd253eaec2806b168395db33934db264cfcdc991ddc1b5517",
+   "kind": "figure",
+   "note": "Figure 1 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9888485/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36719667/rmmj-14-1-e0002-g002.jpg",
+   "sha256": "64bc7bf051d889598fb05d110fd151054ddaa90a27dea35d55e241a01e506b50",
+   "kind": "figure",
+   "note": "Figure 2 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9888485/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36719667/rmmj-14-1-e0002-g003.jpg",
+   "sha256": "e80690d4529e160ecd151e1c521962b1da475956527898405d00250ffabd3d70",
+   "kind": "figure",
+   "note": "Figure 3 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9888485/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC9888485/fullTextXML returned HTTP 200 (79847 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "Aim and hypothesis: early plasma may increase haemorrhage before bleeding is controlled ('pop-the-clot'); the null was adopted for survival.",
+    "snippet": "We therefore hypothesized that FFP will increase hemorrhage in a UCHS animal model.",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36719667_Abergel2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult male Lewis rats (300-350 g), 97 immediate survivors analysed, blunt head injury by 200 g weight drop plus tail amputation (uncontrolled haemorrhage), eight groups of 10-16",
+     "comparator": "allogeneic fresh frozen plasma versus lactated Ringer's solution versus no fluid, 3 mL given over 15 minutes starting 15 minutes after injury",
+     "endpoint": "blood shed from the tail, haematocrit, lactate, mean arterial pressure, mortality to 120 minutes"
+    }
+   },
+   {
+    "proposition": "Eight groups by injury and fluid; rats randomly allocated; the allocation method and blinding are not described.",
+    "snippet": "Rats were randomly allocated into groups according to the mechanism of trauma",
+    "anchor": "Methods, animals",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36719667_Abergel2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult male Lewis rats (300-350 g), 97 immediate survivors analysed, blunt head injury by 200 g weight drop plus tail amputation (uncontrolled haemorrhage), eight groups of 10-16",
+     "comparator": "allogeneic fresh frozen plasma versus lactated Ringer's solution versus no fluid, 3 mL given over 15 minutes starting 15 minutes after injury",
+     "endpoint": "blood shed from the tail, haematocrit, lactate, mean arterial pressure, mortality to 120 minutes"
+    }
+   },
+   {
+    "proposition": "Sample-size basis: an assumed standard deviation of 1 mL, giving 10 rats per group 80 percent power for a 1.33 mL difference.",
+    "snippet": "Assuming a standard deviation of 1 mL hemorrhage in rats undergoing bTBI and UCHS with no resuscitation",
+    "anchor": "Methods, animals",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36719667_Abergel2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult male Lewis rats (300-350 g), 97 immediate survivors analysed, blunt head injury by 200 g weight drop plus tail amputation (uncontrolled haemorrhage), eight groups of 10-16",
+     "comparator": "allogeneic fresh frozen plasma versus lactated Ringer's solution versus no fluid, 3 mL given over 15 minutes starting 15 minutes after injury",
+     "endpoint": "blood shed from the tail, haematocrit, lactate, mean arterial pressure, mortality to 120 minutes"
+    }
+   },
+   {
+    "proposition": "Fluid: 3 mL over 15 minutes, 10-15 percent of blood volume, of lactated Ringer's or allogeneic rat plasma; plasma prepared from donor blood drawn into CPDA-1 at 1:6 and frozen at -70 degrees.",
+    "snippet": "Blood was aspirated into these tubes at a volume ratio of 1:6 (CPDA-1:whole blood).",
+    "anchor": "Methods, FFP preparation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36719667_Abergel2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult male Lewis rats (300-350 g), 97 immediate survivors analysed, blunt head injury by 200 g weight drop plus tail amputation (uncontrolled haemorrhage), eight groups of 10-16",
+     "comparator": "allogeneic fresh frozen plasma versus lactated Ringer's solution versus no fluid, 3 mL given over 15 minutes starting 15 minutes after injury",
+     "endpoint": "blood shed from the tail, haematocrit, lactate, mean arterial pressure, mortality to 120 minutes"
+    }
+   },
+   {
+    "proposition": "Bleeding outcome is blood shed from the amputated tail collected to the end of the experiment at 120 minutes, whatever the animal's survival time.",
+    "snippet": "Blood loss after the beginning of resuscitation included the period from the start of resuscitation until the end of the experiment at 120 minutes",
+    "anchor": "Methods, data collection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36719667_Abergel2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult male Lewis rats (300-350 g), 97 immediate survivors analysed, blunt head injury by 200 g weight drop plus tail amputation (uncontrolled haemorrhage), eight groups of 10-16",
+     "comparator": "allogeneic fresh frozen plasma versus lactated Ringer's solution versus no fluid, 3 mL given over 15 minutes starting 15 minutes after injury",
+     "endpoint": "blood shed from the tail, haematocrit, lactate, mean arterial pressure, mortality to 120 minutes"
+    }
+   },
+   {
+    "proposition": "Group comparisons of bleeding used ordinary one-way ANOVA across fluid protocols; no pairwise test or multiplicity control is named.",
+    "snippet": "Differences in bleeding according to the different resuscitation protocols within these two different trauma groups were evaluated using ordinary one-way ANOVA.",
+    "anchor": "Methods, data analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36719667_Abergel2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult male Lewis rats (300-350 g), 97 immediate survivors analysed, blunt head injury by 200 g weight drop plus tail amputation (uncontrolled haemorrhage), eight groups of 10-16",
+     "comparator": "allogeneic fresh frozen plasma versus lactated Ringer's solution versus no fluid, 3 mL given over 15 minutes starting 15 minutes after injury",
+     "endpoint": "blood shed from the tail, haematocrit, lactate, mean arterial pressure, mortality to 120 minutes"
+    }
+   },
+   {
+    "proposition": "Exclusions: 15 of 127 rats lost to technical problems and 15 died immediately; 97 immediate survivors analysed.",
+    "snippet": "Ninety-seven rats that were considered immediate survivors and therefore potentially salvageable were included in the analysis",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36719667_Abergel2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult male Lewis rats (300-350 g), 97 immediate survivors analysed, blunt head injury by 200 g weight drop plus tail amputation (uncontrolled haemorrhage), eight groups of 10-16",
+     "comparator": "allogeneic fresh frozen plasma versus lactated Ringer's solution versus no fluid, 3 mL given over 15 minutes starting 15 minutes after injury",
+     "endpoint": "blood shed from the tail, haematocrit, lactate, mean arterial pressure, mortality to 120 minutes"
+    }
+   },
+   {
+    "proposition": "Pre-resuscitation bleeding in bTBI plus UCHS groups is given as 2.0 mL (95 percent CI 1.7 to 2.3) and in UCHS groups as 1.8 mL (95 percent CI 1.7 to 2.3), the same interval for two different means.",
+    "snippet": "similar to 1.8 mL (95% CI 1.7, 2.3) in the three groups with UCHS without bTBI",
+    "anchor": "Results, bleeding",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36719667_Abergel2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult male Lewis rats (300-350 g), 97 immediate survivors analysed, blunt head injury by 200 g weight drop plus tail amputation (uncontrolled haemorrhage), eight groups of 10-16",
+     "comparator": "allogeneic fresh frozen plasma versus lactated Ringer's solution versus no fluid, 3 mL given over 15 minutes starting 15 minutes after injury",
+     "endpoint": "blood shed from the tail, haematocrit, lactate, mean arterial pressure, mortality to 120 minutes"
+    }
+   },
+   {
+    "proposition": "Key result: after resuscitation, bTBI plus UCHS rats given plasma bled considerably more than those given Ringer's or nothing (P 0.005); UCHS-only rats showed no significant difference (P 0.254).",
+    "snippet": "bled considerably more than rats with bTBI+UCHS that were resuscitated with LR or not resuscitated at all (P=0.005)",
+    "anchor": "Results, bleeding",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36719667_Abergel2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult male Lewis rats (300-350 g), 97 immediate survivors analysed, blunt head injury by 200 g weight drop plus tail amputation (uncontrolled haemorrhage), eight groups of 10-16",
+     "comparator": "allogeneic fresh frozen plasma versus lactated Ringer's solution versus no fluid, 3 mL given over 15 minutes starting 15 minutes after injury",
+     "endpoint": "blood shed from the tail, haematocrit, lactate, mean arterial pressure, mortality to 120 minutes"
+    }
+   },
+   {
+    "proposition": "Table 1 row for bTBI-only rats: mortality 0.20 with interval 0.50 to 0.52, a lower limit above the estimate.",
+    "snippet": "bTBI10N/AN/A4.9 (2.2, 7.6)38.5 (35.0, 42.1)0.20 (0.50, 0.52)",
+    "anchor": "Table 1",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID36719667_Abergel2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult male Lewis rats (300-350 g), 97 immediate survivors analysed, blunt head injury by 200 g weight drop plus tail amputation (uncontrolled haemorrhage), eight groups of 10-16",
+     "comparator": "allogeneic fresh frozen plasma versus lactated Ringer's solution versus no fluid, 3 mL given over 15 minutes starting 15 minutes after injury",
+     "endpoint": "blood shed from the tail, haematocrit, lactate, mean arterial pressure, mortality to 120 minutes"
+    }
+   },
+   {
+    "proposition": "Table 1 bTBI plus UCHS plus plasma: n 12, bleeding after resuscitation 5.2 mL (3.7 to 6.6), haematocrit loss 13.5, mortality 0.83 (0.54 to 0.97); the Ringer's arm 2.5 mL and 0.42.",
+    "snippet": "bTBI+UCHS+FFP122.3 (1.8, 2.7)5.2 (3.7, 6.6)13.5 (11.9, 15.1)31.8 (27.8, 35.7)0.83 (0.54, 0.97)",
+    "anchor": "Table 1",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID36719667_Abergel2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult male Lewis rats (300-350 g), 97 immediate survivors analysed, blunt head injury by 200 g weight drop plus tail amputation (uncontrolled haemorrhage), eight groups of 10-16",
+     "comparator": "allogeneic fresh frozen plasma versus lactated Ringer's solution versus no fluid, 3 mL given over 15 minutes starting 15 minutes after injury",
+     "endpoint": "blood shed from the tail, haematocrit, lactate, mean arterial pressure, mortality to 120 minutes"
+    }
+   },
+   {
+    "proposition": "Mortality differences were not significant (P 0.106 for plasma against Ringer's or none in the combined-injury rats); the authors caution against reading this as no adverse effect.",
+    "snippet": "Increased mortality observed in bTBI+UCHS rats undergoing resuscitation with FFP was not significant when these rats were compared",
+    "anchor": "Results, mortality",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36719667_Abergel2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult male Lewis rats (300-350 g), 97 immediate survivors analysed, blunt head injury by 200 g weight drop plus tail amputation (uncontrolled haemorrhage), eight groups of 10-16",
+     "comparator": "allogeneic fresh frozen plasma versus lactated Ringer's solution versus no fluid, 3 mL given over 15 minutes starting 15 minutes after injury",
+     "endpoint": "blood shed from the tail, haematocrit, lactate, mean arterial pressure, mortality to 120 minutes"
+    }
+   },
+   {
+    "proposition": "Bleeding data are missing for 21.6 percent of rats; the bleeding-versus-mortality analysis rests on 76 rats and the 4.5 mL cut-off.",
+    "snippet": "Data concerning the extent of bleeding were not collected in 21.6% of the rats.",
+    "anchor": "Limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36719667_Abergel2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult male Lewis rats (300-350 g), 97 immediate survivors analysed, blunt head injury by 200 g weight drop plus tail amputation (uncontrolled haemorrhage), eight groups of 10-16",
+     "comparator": "allogeneic fresh frozen plasma versus lactated Ringer's solution versus no fluid, 3 mL given over 15 minutes starting 15 minutes after injury",
+     "endpoint": "blood shed from the tail, haematocrit, lactate, mean arterial pressure, mortality to 120 minutes"
+    }
+   },
+   {
+    "proposition": "Authors state that the degree of brain injury in surviving rats was not assessed.",
+    "snippet": "We did not assess the degree of brain injury in the rats who survived the initial bTBI",
+    "anchor": "Limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36719667_Abergel2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult male Lewis rats (300-350 g), 97 immediate survivors analysed, blunt head injury by 200 g weight drop plus tail amputation (uncontrolled haemorrhage), eight groups of 10-16",
+     "comparator": "allogeneic fresh frozen plasma versus lactated Ringer's solution versus no fluid, 3 mL given over 15 minutes starting 15 minutes after injury",
+     "endpoint": "blood shed from the tail, haematocrit, lactate, mean arterial pressure, mortality to 120 minutes"
+    }
+   },
+   {
+    "proposition": "Conclusion states plasma resuscitation increased bleeding and 'resulted in very high mortality' in bTBI plus UCHS animals.",
+    "snippet": "Resuscitation with FFP resulted in very high mortality rates in animals with bTBI+UCHS.",
+    "anchor": "Conclusions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36719667_Abergel2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult male Lewis rats (300-350 g), 97 immediate survivors analysed, blunt head injury by 200 g weight drop plus tail amputation (uncontrolled haemorrhage), eight groups of 10-16",
+     "comparator": "allogeneic fresh frozen plasma versus lactated Ringer's solution versus no fluid, 3 mL given over 15 minutes starting 15 minutes after injury",
+     "endpoint": "blood shed from the tail, haematocrit, lactate, mean arterial pressure, mortality to 120 minutes"
+    }
+   },
+   {
+    "proposition": "Figure 1: timeline (cannulation at -30, trauma at 0, resuscitation 15-30, end at 120 min, with the two blood-loss windows), the weight-drop device and the tail-amputation collection tube; schematics, no data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 A timeline, B weight-drop rig, C tail collection tube.",
+    "anchor": "Figure 1, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36719667/rmmj-14-1-e0002-g001.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "adult male Lewis rats (300-350 g), 97 immediate survivors analysed, blunt head injury by 200 g weight drop plus tail amputation (uncontrolled haemorrhage), eight groups of 10-16",
+     "comparator": "allogeneic fresh frozen plasma versus lactated Ringer's solution versus no fluid, 3 mL given over 15 minutes starting 15 minutes after injury",
+     "endpoint": "blood shed from the tail, haematocrit, lactate, mean arterial pressure, mortality to 120 minutes"
+    }
+   },
+   {
+    "proposition": "Figure 2: group means only, no error bars, for MAP (A), haematocrit (B), lactate (C) at -30, 0, 15, 45, 75 and 120 minutes; the combined-injury plasma group has the lowest haematocrit from 45 min (about 30) and a lactate peak of about 6 mmol/L at 75 min; the key spells the group 'bTBI+UCSH+FFP'; later points rest on survivors.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 A1-A3 MAP, B1-B3 haematocrit, C1-C3 lactate by group and time.",
+    "anchor": "Figure 2, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36719667/rmmj-14-1-e0002-g002.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "adult male Lewis rats (300-350 g), 97 immediate survivors analysed, blunt head injury by 200 g weight drop plus tail amputation (uncontrolled haemorrhage), eight groups of 10-16",
+     "comparator": "allogeneic fresh frozen plasma versus lactated Ringer's solution versus no fluid, 3 mL given over 15 minutes starting 15 minutes after injury",
+     "endpoint": "blood shed from the tail, haematocrit, lactate, mean arterial pressure, mortality to 120 minutes"
+    }
+   },
+   {
+    "proposition": "Figure 3: sodium (A, about 139-142 mmol/L) and potassium (B, 4.1-5.4 mmol/L) lines for all groups; no ionised calcium is shown.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3 A sodium, B potassium by time and group.",
+    "anchor": "Figure 3, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36719667/rmmj-14-1-e0002-g003.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "adult male Lewis rats (300-350 g), 97 immediate survivors analysed, blunt head injury by 200 g weight drop plus tail amputation (uncontrolled haemorrhage), eight groups of 10-16",
+     "comparator": "allogeneic fresh frozen plasma versus lactated Ringer's solution versus no fluid, 3 mL given over 15 minutes starting 15 minutes after injury",
+     "endpoint": "blood shed from the tail, haematocrit, lactate, mean arterial pressure, mortality to 120 minutes"
+    }
+   }
+  ]
+ }
+}
