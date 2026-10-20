@@ -1,0 +1,506 @@
+{
+ "schema_version": 2,
+ "pmid": "42064976",
+ "doi": "10.3389/fneur.2026.1796553",
+ "receipt": "FTR-20261019-42064976-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID42064976.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "Alberta Children's Hospital paediatric epilepsy group (prior IVIG chart review from the same centre cited as ref 18); primary for its own database; funded by a children's epilepsy foundation; descriptive retrospective cohort with no comparator."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "intravenous immunoglobulin AND drug-resistant epilepsy AND children",
+    "count": 29,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND immunoglobulin",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts at the stated date."
+ },
+ "multihop": {
+  "references_enumerated": 46,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42064976 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 42064976: publication types ['Journal Article']; correction/retraction link markers in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 46,
+   "references_screened": 43,
+   "references_with_doi": 43,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42064976_Ebdalla2026_PMC.xml",
+   "sha256": "6b2f62fe5620d06bf25573f5efb8f7b853ed062291a51380b0447b451a62739f",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC13127252: abstract, body, Tables 1-5 and three figure legends, 46 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13127252/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID42064976/fneur-17-1796553-g001.jpg",
+   "sha256": "641ed9a44ca72241ff29576b58cf7d453cb3036e13cf64ca928b9c15c263e520",
+   "kind": "figure",
+   "note": "Figure 1 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13127252/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID42064976/fneur-17-1796553-g002.jpg",
+   "sha256": "01c8a2668ac2692dd605347bd65036892e20d7b427d74ed90a96c6b757b3089a",
+   "kind": "figure",
+   "note": "Figure 2 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13127252/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID42064976/fneur-17-1796553-g003.jpg",
+   "sha256": "a6ec1869a7787f197f60908ac09d30dd8df2836983715a56c56fb25a9b941cf1",
+   "kind": "figure",
+   "note": "Figure 3 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13127252/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID42064976/Image_1.pdf",
+   "sha256": "0ec8bba61f52cb9325693e279d98680bc1c15758bbfb6243a00b3188e8420ab2",
+   "kind": "supplement_binary",
+   "note": "Supplementary Figure S1 (Tableau dashboard of IVIG-filtered DRE data) as a one-page PDF.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13127252/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID42064976/Image_2.pdf",
+   "sha256": "d84c98cdc026a260eec4b871f24adfe1b4bb55ba47ebb1ee85666e627e33aec1",
+   "kind": "supplement_binary",
+   "note": "Supplementary Figure S2 (treatment timeline for one responding patient) as a one-page PDF.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13127252/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID42064976/s_pages/i1-1.png",
+   "sha256": "13e8794e9cb5100c20cbd77e0623b4fc1e267c4cd0be9dcdfdad9c4b42a34c9c",
+   "kind": "figure",
+   "note": "Supplementary Figure S1 page rendered at 90 dpi and inspected.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftoppm_90dpi",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "13e8794e9cb5100c20cbd77e0623b4fc1e267c4cd0be9dcdfdad9c4b42a34c9c",
+    "derived_from": "files/figures/PMID42064976/Image_1.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 90 -png Image_1.pdf i1"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID42064976/s_pages/i2-1.png",
+   "sha256": "dc25713722d233a331459ae9701338a2db6cf57bead7e8773b060d2e16849316",
+   "kind": "figure",
+   "note": "Supplementary Figure S2 page rendered at 90 dpi and inspected.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftoppm_90dpi",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "dc25713722d233a331459ae9701338a2db6cf57bead7e8773b060d2e16849316",
+    "derived_from": "files/figures/PMID42064976/Image_2.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 90 -png Image_2.pdf i2"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13127252/fullTextXML returned HTTP 200 (108209 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "Design: retrospective chart review of children with drug-resistant epilepsy treated with IVIG for at least a year, autoimmune epilepsy excluded.",
+    "snippet": "We performed a retrospective chart review of children with DRE treated with IVIG for at least 1 year within neurology clinics at the Alberta Children’s Hospital.",
+    "anchor": "Methods",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42064976_Ebdalla2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "children 2-18 years with drug-resistant epilepsy treated with IVIG at one tertiary centre (n = 60 after exclusions), retrospective chart review, seizure frequency score at baseline, 3 and 12 months",
+     "comparator": "own baseline (no control group)",
+     "endpoint": "seizure frequency category (0-8 ordinal scale), at least 50 percent reduction, adverse effects"
+    }
+   },
+   {
+    "proposition": "Dosing and frequency were set case by case by the treating neurologist and adjusted by seizure score, with interval shortening when seizures continued.",
+    "snippet": "IVIG dose and frequency was determined on a case-by-case basis by the treating neurologist.",
+    "anchor": "Methods",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42064976_Ebdalla2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "children 2-18 years with drug-resistant epilepsy treated with IVIG at one tertiary centre (n = 60 after exclusions), retrospective chart review, seizure frequency score at baseline, 3 and 12 months",
+     "comparator": "own baseline (no control group)",
+     "endpoint": "seizure frequency category (0-8 ordinal scale), at least 50 percent reduction, adverse effects"
+    }
+   },
+   {
+    "proposition": "Outcome is a seizure-frequency category score read from patient dashboards; analysis by repeated-measures ANOVA across three time points.",
+    "snippet": "The Repeated Measures ANOVA was used to detect statistical differences between independent variables (including etiology, seizure type and ASM use) and dependent variables (i.e., seizure frequency) across three time points.",
+    "anchor": "Methods",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42064976_Ebdalla2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "children 2-18 years with drug-resistant epilepsy treated with IVIG at one tertiary centre (n = 60 after exclusions), retrospective chart review, seizure frequency score at baseline, 3 and 12 months",
+     "comparator": "own baseline (no control group)",
+     "endpoint": "seizure frequency category (0-8 ordinal scale), at least 50 percent reduction, adverse effects"
+    }
+   },
+   {
+    "proposition": "Selection: nine of 74 treated children stopped IVIG before a year and are excluded from the analysis.",
+    "snippet": "Nine patients (12.7 ± 4.33) discontinued IVIG prior to 1 year.",
+    "anchor": "Results, patient characteristics",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42064976_Ebdalla2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "children 2-18 years with drug-resistant epilepsy treated with IVIG at one tertiary centre (n = 60 after exclusions), retrospective chart review, seizure frequency score at baseline, 3 and 12 months",
+     "comparator": "own baseline (no control group)",
+     "endpoint": "seizure frequency category (0-8 ordinal scale), at least 50 percent reduction, adverse effects"
+    }
+   },
+   {
+    "proposition": "Cohort composition: 28 genetic, 17 structural, 15 unknown; sixteen with a developmental and epileptic encephalopathy (ten Lennox-Gastaut, six Dravet).",
+    "snippet": "Sixteen patients had a diagnosis of developmental epileptic encephalopathy with 10 having Lennox–Gastaut and 6 with Dravet syndrome.",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42064976_Ebdalla2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "children 2-18 years with drug-resistant epilepsy treated with IVIG at one tertiary centre (n = 60 after exclusions), retrospective chart review, seizure frequency score at baseline, 3 and 12 months",
+     "comparator": "own baseline (no control group)",
+     "endpoint": "seizure frequency category (0-8 ordinal scale), at least 50 percent reduction, adverse effects"
+    }
+   },
+   {
+    "proposition": "Overall: 36.7 percent (22 of 60) had at least a 50 percent reduction and eight of those became seizure free (13.3 percent of the cohort).",
+    "snippet": "Overall, 36.7% (n = 22) of patients exhibited a seizure frequency reduction by at least 50% within 1 year of IVIG use and 36.4% (n = 8) of these patients achieved seizure freedom (13.3% of the total population).",
+    "anchor": "Results, overall effect of IVIG",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42064976_Ebdalla2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "children 2-18 years with drug-resistant epilepsy treated with IVIG at one tertiary centre (n = 60 after exclusions), retrospective chart review, seizure frequency score at baseline, 3 and 12 months",
+     "comparator": "own baseline (no control group)",
+     "endpoint": "seizure frequency category (0-8 ordinal scale), at least 50 percent reduction, adverse effects"
+    }
+   },
+   {
+    "proposition": "Text categories: at least 50 percent 22, below 50 percent 2, no change 23, which total 47 of 60; Table 4 lists 38 in 'below 50 percent or no change'.",
+    "snippet": "3.3% (n = 2) experienced a seizure frequency reduction less than 50 and 38.3% (n = 23) experienced no change in seizure frequency.",
+    "anchor": "Results, overall effect of IVIG",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42064976_Ebdalla2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "children 2-18 years with drug-resistant epilepsy treated with IVIG at one tertiary centre (n = 60 after exclusions), retrospective chart review, seizure frequency score at baseline, 3 and 12 months",
+     "comparator": "own baseline (no control group)",
+     "endpoint": "seizure frequency category (0-8 ordinal scale), at least 50 percent reduction, adverse effects"
+    }
+   },
+   {
+    "proposition": "Table 4: genetic 12 of 28 (42.9 percent), structural 4 of 17 (23.5 percent), unknown 6 of 15 (40.0 percent) with at least 50 percent reduction; chi-square p = 0.41.",
+    "snippet": "Genetic2812 (42.9)16 (57.1)Structural174 (23.5)13 (76.5)Unknown156 (40.0)9 (60.0)Total6022 (36.7)38 (63.3)",
+    "anchor": "Table 4",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42064976_Ebdalla2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "children 2-18 years with drug-resistant epilepsy treated with IVIG at one tertiary centre (n = 60 after exclusions), retrospective chart review, seizure frequency score at baseline, 3 and 12 months",
+     "comparator": "own baseline (no control group)",
+     "endpoint": "seizure frequency category (0-8 ordinal scale), at least 50 percent reduction, adverse effects"
+    }
+   },
+   {
+    "proposition": "Over time no significant reduction in seizure frequency was observed in the genetic subgroup, while the unknown-aetiology subgroup reached p = 0.03.",
+    "snippet": "However, no significant seizure frequency reductions were observed across time among the confirmed genetic etiology subgroups.",
+    "anchor": "Results, etiology",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42064976_Ebdalla2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "children 2-18 years with drug-resistant epilepsy treated with IVIG at one tertiary centre (n = 60 after exclusions), retrospective chart review, seizure frequency score at baseline, 3 and 12 months",
+     "comparator": "own baseline (no control group)",
+     "endpoint": "seizure frequency category (0-8 ordinal scale), at least 50 percent reduction, adverse effects"
+    }
+   },
+   {
+    "proposition": "Seizure type: generalized seizures p = 0.019 after a year, focal p = 0.075, both p = 0.095; no significant effect at 3 months.",
+    "snippet": "After 1 year of IVIG therapy, there was a significant reduction in seizure frequencies among patients with generalized seizure types (p = 0.019) (Figure 2B).",
+    "anchor": "Results, seizure types",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42064976_Ebdalla2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "children 2-18 years with drug-resistant epilepsy treated with IVIG at one tertiary centre (n = 60 after exclusions), retrospective chart review, seizure frequency score at baseline, 3 and 12 months",
+     "comparator": "own baseline (no control group)",
+     "endpoint": "seizure frequency category (0-8 ordinal scale), at least 50 percent reduction, adverse effects"
+    }
+   },
+   {
+    "proposition": "Concurrent ASM changes: 16 children had an antiseizure drug escalated, 22 stopped two or more; the reduction was significant (p = 0.045) only in the stable-or-reduced group.",
+    "snippet": "A significant reduction in seizure frequency at the one-year time point compared to baseline was observed among the group with stable or reduced ASM regimens (p = 0.045) (Figure 2D).",
+    "anchor": "Results, ASM use",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42064976_Ebdalla2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "children 2-18 years with drug-resistant epilepsy treated with IVIG at one tertiary centre (n = 60 after exclusions), retrospective chart review, seizure frequency score at baseline, 3 and 12 months",
+     "comparator": "own baseline (no control group)",
+     "endpoint": "seizure frequency category (0-8 ordinal scale), at least 50 percent reduction, adverse effects"
+    }
+   },
+   {
+    "proposition": "Adverse effects: 88.3 percent none; headache, hyperactivity, personality change and fatigue in seven children.",
+    "snippet": "However, 11.67% (n = 7) of patients reported side effects including headaches (42.86%, n = 3), hyperactivity (28.57%, n = 2), personality changes (14.29%, n = 1), and fatigue (14.29%, n = 1).",
+    "anchor": "Results, adverse effects",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42064976_Ebdalla2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "children 2-18 years with drug-resistant epilepsy treated with IVIG at one tertiary centre (n = 60 after exclusions), retrospective chart review, seizure frequency score at baseline, 3 and 12 months",
+     "comparator": "own baseline (no control group)",
+     "endpoint": "seizure frequency category (0-8 ordinal scale), at least 50 percent reduction, adverse effects"
+    }
+   },
+   {
+    "proposition": "Discussion limitations: no randomisation, no control group, spontaneous change not excluded, retrospective.",
+    "snippet": "Although our data are encouraging, our study is not without limitations inherent to retrospective designs such as the lack of randomization, absence of control group, and limited control over certain variables.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42064976_Ebdalla2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "children 2-18 years with drug-resistant epilepsy treated with IVIG at one tertiary centre (n = 60 after exclusions), retrospective chart review, seizure frequency score at baseline, 3 and 12 months",
+     "comparator": "own baseline (no control group)",
+     "endpoint": "seizure frequency category (0-8 ordinal scale), at least 50 percent reduction, adverse effects"
+    }
+   },
+   {
+    "proposition": "Conclusion states IVIG is a safe adjuvant therapy that 'should be considered early' in refractory childhood epilepsy, particularly with genetic or unknown aetiology, though the genetic subgroup showed no significant change over time.",
+    "snippet": "In summary, IVIG therapy is a safe adjuvant therapy and should be considered early in children with refractory epilepsy, particularly among patients with genetic or unknown etiologies and among patients exhibiting generalized seizures.",
+    "anchor": "Conclusion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42064976_Ebdalla2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "children 2-18 years with drug-resistant epilepsy treated with IVIG at one tertiary centre (n = 60 after exclusions), retrospective chart review, seizure frequency score at baseline, 3 and 12 months",
+     "comparator": "own baseline (no control group)",
+     "endpoint": "seizure frequency category (0-8 ordinal scale), at least 50 percent reduction, adverse effects"
+    }
+   },
+   {
+    "proposition": "The Discussion itself says causality cannot be established and the medication-reduction observation is only indirect support.",
+    "snippet": "While this observation may indirectly support a therapeutic effect of IVIG, causality cannot be established in this retrospective cohort.",
+    "anchor": "Discussion, ASM changes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42064976_Ebdalla2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "children 2-18 years with drug-resistant epilepsy treated with IVIG at one tertiary centre (n = 60 after exclusions), retrospective chart review, seizure frequency score at baseline, 3 and 12 months",
+     "comparator": "own baseline (no control group)",
+     "endpoint": "seizure frequency category (0-8 ordinal scale), at least 50 percent reduction, adverse effects"
+    }
+   },
+   {
+    "proposition": "Figure 1: cohort flow 1142 assessed, 412 with epilepsy, 248 drug-resistant, 74 treated with IVIG, 14 excluded (5 immunologic, 9 under 12 months), 60 analysed; panel B the 0-8 ordinal seizure-frequency scale (each step a category such as 1-3 per year, 1-3 per month, 1-6 per week); panel C timeline 0, 3 and 12 months.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 A flow diagram, B seizure scale 0-8, C timeline.",
+    "anchor": "Figure 1, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42064976/fneur-17-1796553-g001.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "children 2-18 years with drug-resistant epilepsy treated with IVIG at one tertiary centre (n = 60 after exclusions), retrospective chart review, seizure frequency score at baseline, 3 and 12 months",
+     "comparator": "own baseline (no control group)",
+     "endpoint": "seizure frequency category (0-8 ordinal scale), at least 50 percent reduction, adverse effects"
+    }
+   },
+   {
+    "proposition": "Figure 2: mean seizure score by etiology (genetic about 4.7, 4.3, 4.1; structural about 3.1, 3.0, 3.0; unknown about 4.5, 3.8, 2.9), generalized seizures (about 4.5, 4.0, 3.5; p = 0.019), focal seizures (about 3.9, 3.5, 3.1; p = 0.075) and by ASM change (stable or reduced about 4.0, 3.5, 3.3, p = 0.045; escalated about 4.8, 4.6, 3.7); the genetic bracket p = 0.048 compares genetic with structural at baseline; the mean change in the genetic group is about 0.6 category steps.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 A-D grouped bars pre, 3 months, 1 year with SEM and p values.",
+    "anchor": "Figure 2, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42064976/fneur-17-1796553-g002.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "children 2-18 years with drug-resistant epilepsy treated with IVIG at one tertiary centre (n = 60 after exclusions), retrospective chart review, seizure frequency score at baseline, 3 and 12 months",
+     "comparator": "own baseline (no control group)",
+     "endpoint": "seizure frequency category (0-8 ordinal scale), at least 50 percent reduction, adverse effects"
+    }
+   },
+   {
+    "proposition": "Figure 3: adverse effects pie: no adverse effects 88.3 percent (53), headache 5.0 percent (3), personality change 1.7 percent (1), fatigue 1.7 percent (1), hyperactivity 3.3 percent (2); no serious events listed.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3 pie chart with legend.",
+    "anchor": "Figure 3, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42064976/fneur-17-1796553-g003.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "children 2-18 years with drug-resistant epilepsy treated with IVIG at one tertiary centre (n = 60 after exclusions), retrospective chart review, seizure frequency score at baseline, 3 and 12 months",
+     "comparator": "own baseline (no control group)",
+     "endpoint": "seizure frequency category (0-8 ordinal scale), at least 50 percent reduction, adverse effects"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure S1: Tableau dashboard of the IVIG-filtered database showing 75 patients and 197 events (the legend says 74 at the time of data collection) with a date range ending 26 May 2022, while the Methods give the treatment endpoint as 21 February 2021.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] S1 dashboard patient count 75, event count 197, age bars, events per patient.",
+    "anchor": "Supplementary Figure S1 (rendered)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42064976/s_pages/i1-1.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "children 2-18 years with drug-resistant epilepsy treated with IVIG at one tertiary centre (n = 60 after exclusions), retrospective chart review, seizure frequency score at baseline, 3 and 12 months",
+     "comparator": "own baseline (no control group)",
+     "endpoint": "seizure frequency category (0-8 ordinal scale), at least 50 percent reduction, adverse effects"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure S2: a single responding patient's timeline with valproate, clobazam and IVIG, red higher and blue lower seizure scores; it illustrates one case.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] S2 timeline dashboard for one patient.",
+    "anchor": "Supplementary Figure S2 (rendered)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42064976/s_pages/i2-1.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "children 2-18 years with drug-resistant epilepsy treated with IVIG at one tertiary centre (n = 60 after exclusions), retrospective chart review, seizure frequency score at baseline, 3 and 12 months",
+     "comparator": "own baseline (no control group)",
+     "endpoint": "seizure frequency category (0-8 ordinal scale), at least 50 percent reduction, adverse effects"
+    }
+   }
+  ]
+ }
+}
