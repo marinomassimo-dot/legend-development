@@ -52,3 +52,30 @@ tolerance; any energy-metabolism readout; any neural or in vivo statement about 
 does not explain the whole-body-null hypothermia read earlier in this batch (a runted, fat-depleted animal): that
 phenotype has no mechanistic bridge in this paper. Class MINOR; no claim touched. Debts: nine
 supplementary movies and the laboratory's UV/TRAF2/p53 primaries (queued in the commit candidate).
+
+---
+
+## 2. PMID 36587184 — Friemel 2022, single-cell ploidy and chromosomal aberrations in NASH-induced HCC and precursor lesions (WWOX-direct, W2 liver steatosis axis; tumour genomics) — receipt FTR-20261020-36587184-01
+
+**What it MEASURES.** System: archival FFPE liver from Zurich, 11 NASH-associated HCC resections and 11
+NAFLD/NASH biopsies; single-nucleus multiplex FISH (eight loci, WWOX on a custom 560 kb BAC contig at
+16q23.1) with FISHtrees phylogenies. Readout: signal number per nucleus (gain or loss), ploidy, an
+instability index. No WWOX RNA or protein, no metabolic variable beyond the clinical steatosis percentage.
+
+**Question and answer.** Does any panel or table tie WWOX to metabolism or steatosis? No. (1) The WWOX
+signal is an HCC event: "NAFLD/NASH lesions did not show any clonal copy number changes" for the whole
+probe panel, so there is no WWOX loss in the steatosis or steatohepatitis tissue. (2) Instability index
+against macrosteatosis is flat (Figure 2C, p = 0.26, 11 points); only tumour grade correlates (p = 0.01).
+(3) A count problem the text hides: the headline is WWOX loss in 4 of 11 cases (Table 1: cases 2, 3, 7, 8),
+but Figure 3A marks 15% WWOX loss in case 1 (and Figure 3B draws a WWOX-negative terminal clone), no
+loss-calling threshold is stated, case 3's WWOX value is printed in the gains column in
+Supplementary Figure 3 and coloured green in one copy and red in the other although Table 1 lists it as a
+loss, and cases 4 and 5 have no panel anywhere. Per-case losses read from the figures: 93% (case 2), 3%
+or a 44% gain/loss conflict (case 3), 35% (case 7), 49% (case 8), 15% (case 1), 6%, 3%, 1% (cases 9-11), 0% (case 6).
+
+**What it does not support.** Any statement about WWOX function in hepatocytes, steatosis, glucose or lipid
+handling; a WWOX copy-number change in the precursor lesion; "WWOX loss is a novel NASH-HCC finding" beyond
+a small unreplicated FISH series with an unspecified call threshold.
+
+**Effect on the model.** Liver steatosis stays "no WWOX evidence" (tumour genomics only). The count and
+colour inconsistencies are logged in the commit candidate. Class MINOR.
