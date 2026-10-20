@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-19T20:00:00Z",
+ "event_at": "2026-10-19T20:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "not_read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present"
+ },
+ "event_id": "FTR-20261019-40327201-01",
+ "evidence_basis": [
+  "Review body read except the ten organ-cancer sections; Figure 1 opened as an image; references enumerated (194) and gene-direct ones classified against the repository.",
+  "FIND: the paragraph on non-cancer disease attributes vermis hypoplasia and impaired neuronal migration to a case report that contains neither; the metabolic framing is cancer-cell glycolysis, opposite in sign to the null-mouse hypoglycemia, and unremarked."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID40327201.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID40327201.md",
+  "disease-models/wwox/research/wave4_scientist-b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "41ff6c1b6669a500d96ab564ee3dc15ff8b1024641b3e17da0ea9d90a9b0e3b7",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID40327201_Hammouz2025_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1007/s10142-025-01601-0",
+  "pmid": "40327201"
+ },
+ "workflow": "scientist-b wave 4 group W1, task branch task/W4-W1-B-20261019; SOURCE_FIRST; PMC efetch XML and PMC open-data bucket re-acquired with pmc_bucket_fetch.py, no User-Agent; locators verified by deepdive_manifest.py. Prepared as a JSON file for the integrator and not appended."
+}
