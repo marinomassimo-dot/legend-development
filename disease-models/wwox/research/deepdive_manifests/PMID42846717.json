@@ -1,0 +1,225 @@
+{
+ "schema_version": 2,
+ "pmid": "42846717",
+ "doi": "10.3389/fped.2026.1958733",
+ "receipt": "FTR-20261019-42846717-01",
+ "landing": [
+  "FTR-20261019-42846717-01",
+  "wave4_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: PMC efetch XML and the bucket PDF returned the body."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: read directly under the Scientist brief."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no baseline claim is narrowed, reversed or removed and no MAJOR change is declared."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 17,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-20: Samanta D[au] 571 (ambiguous); Samanta D[au] AND ketogenic 17; no WWOX output.",
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Paediatric epilepsy clinician review; class-level synthesis, not WWOX.",
+  "note": "Frontiers review; declared ChatGPT editing of language."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-20",
+    "count": 0
+   }
+  ],
+  "note": "WWOX does not occur."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 168,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS: 168; none has WWOX in its citation.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-direct reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 42846717; registry comparison after the first pass",
+  "hits": 0,
+  "finding": "No receipt before this one; sets the ketogenic-diet prior of the WOREE responder claim (class level)."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-20",
+  "route": "PMC efetch XML front matter; dependency_integrity.py screen",
+  "result": "No retraction, correction or expression of concern found.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 168,
+   "references_screened": 166,
+   "references_with_doi": 166,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42846717_Samanta2026_PMC_r2.xml",
+   "sha256": "91d2f62e085398d1590d569b24f540f43a0587aa9961443bcedba74f990c2941",
+   "kind": "article_text",
+   "note": "PMC efetch JATS for PMC13643383 (Front Pediatr 2026, CC BY), 280,801 bytes; Tables 1, 5 and 6 are in the text layer.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "91d2f62e085398d1590d569b24f540f43a0587aa9961443bcedba74f990c2941",
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC13643383&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42846717_r2/PMC13643383.1.pdf",
+   "sha256": "3a62d5f2dc672e45843db9e1880281218b799d58c7814834d1df6cfba3cab72b",
+   "kind": "article_binary",
+   "note": "Article PDF from the PMC open-data bucket (not opened).",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "3a62d5f2dc672e45843db9e1880281218b799d58c7814834d1df6cfba3cab72b",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13643383.1/PMC13643383.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch JATS for PMC13643383 retrieved 2026-10-20, 280,801 bytes; the whole body is indexed locally for exact-text checks.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "SOURCE_FIRST. Class-level substitute: nothing in this article is WWOX evidence. Read: abstract, introduction, the EIDEE, EIMFS and gene-specific sections, adverse-effect Tables 5 and 6; NOT read: IESS, Dravet, EMAtS, LGS, DEE-SWAS, HHE, FIRES sections, mechanisms Table 1 and the future-directions section; depth partial.",
+  "entries": [
+   {
+    "proposition": "For early-infantile DEE (the syndrome class in which most WWOX-DEE patients are classified) the evidence for ketogenic therapy is small case series and reports; responsive etiologies named are ALG13, SCN2A, KCNQ2, mitochondrial respiratory-chain disorders, creatine transporter deficiency and glycine encephalopathy. Class level, not WWOX evidence.",
+    "snippet": "Evidence supporting KDT in EIDEE is limited primarily to small case series and individual case reports",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42846717_Samanta2026_PMC_r2.xml",
+    "anchor": "Early-infantile DEE section",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of ketogenic dietary therapy in DEE syndromes and genes (class level; NOT WWOX evidence)",
+     "genotype": "DEE genes other than WWOX",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "For epilepsy of infancy with migrating focal seizures, 25 of 40 KCNT1 patients with reported outcomes (62.5 percent) showed some benefit, mostly described qualitatively and started at about one year of age; class level, not WWOX evidence.",
+    "snippet": "Among the 40 patients for whom outcomes were available, 25 (62.5%) showed some degree of benefit, although responses were frequently described qualitatively rather than using standardized seizure-reduction thresholds",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42846717_Samanta2026_PMC_r2.xml",
+    "anchor": "EIMFS section",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of ketogenic dietary therapy in DEE syndromes and genes (class level; NOT WWOX evidence)",
+     "genotype": "DEE genes other than WWOX",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "Gene-level KD responders in a meta-analysis (overall 58 percent of 849 patients): SLC2A1 96 percent, SCN2A 73, SCN1A 64, STXBP1 54, KCNQ2 42, KCNT1 24, CDKL5 23, SCN8A 15; seizure freedom overall 29 percent. WWOX is not among the genes. Class level.",
+    "snippet": "A meta-analysis reported gene-specific responder rates (an overall rate of 58% among 849 patients) of 96% for SLC2A1 (n = 87), 73% for SCN2A (n = 16)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42846717_Samanta2026_PMC_r2.xml",
+    "anchor": "Gene-specific and etiology-defined epilepsy syndromes, second paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of ketogenic dietary therapy in DEE syndromes and genes (class level; NOT WWOX evidence)",
+     "genotype": "DEE genes other than WWOX",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "Gene-specific use is described as nonspecific, broad-acting antiseizure therapy generally after failure of two or more ASMs and supported mainly by case series and small cohorts; transporter-related disorders did best and genes of structural integrity or homeostatic regulation did worst in one cohort. Class level.",
+    "snippet": "generally after failure of two or more ASMs, supported mainly by case series and small cohorts",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42846717_Samanta2026_PMC_r2.xml",
+    "anchor": "Gene-specific and etiology-defined epilepsy syndromes, first paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of ketogenic dietary therapy in DEE syndromes and genes (class level; NOT WWOX evidence)",
+     "genotype": "DEE genes other than WWOX",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "Table 5 lists hypoglycemia, especially during induction, among the metabolic adverse effects of ketogenic therapy, with dyslipidemia, acidosis and symptomatic hyperketosis; Table 6 lists glucose, carnitine and acylcarnitine screening before starting. Class level; relevant to any diet rationale in a condition whose null mouse is hypoglycemic.",
+    "snippet": "Hypoglycemia (especially during induction), dyslipidemia (elevated LDL cholesterol and triglycerides), metabolic acidosis, symptomatic hyperketosis",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42846717_Samanta2026_PMC_r2.xml",
+    "anchor": "Table 5, Metabolic/biochemical row",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of ketogenic dietary therapy in DEE syndromes and genes (class level; NOT WWOX evidence)",
+     "genotype": "DEE genes other than WWOX",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "The word WWOX does not occur anywhere in the article text, nor does the DEE28 label; the review contains no WWOX data point and cannot be cited for WWOX ketogenic response.",
+    "snippet": "Gene-specific and etiology-defined epilepsy syndromes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42846717_Samanta2026_PMC_r2.xml",
+    "anchor": "Whole article (absence claim: no occurrence of WWOX or DEE28 in the persisted text)",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of ketogenic dietary therapy in DEE syndromes and genes (class level; NOT WWOX evidence)",
+     "genotype": "DEE genes other than WWOX",
+     "comparator": "none"
+    },
+    "external_provenance": "grep -c WWOX over the persisted JATS text on 2026-10-20 returned 0"
+   },
+   {
+    "proposition": "The Generative AI statement says the final version was edited with ChatGPT for language, structure and clarity and that no scientific content was generated or modified by it.",
+    "snippet": "The final version was edited using ChatGPT (OpenAI) solely to improve language, clarity, and structure.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42846717_Samanta2026_PMC_r2.xml",
+    "anchor": "Generative AI statement",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of ketogenic dietary therapy in DEE syndromes and genes (class level; NOT WWOX evidence)",
+     "genotype": "DEE genes other than WWOX",
+     "comparator": "none"
+    }
+   }
+  ]
+ }
+}
