@@ -180,3 +180,27 @@ or a modifier, not evidence about WWOX.
 
 **Effect on the model.** Defines the exclusion work-up for any WWOX-DEE case series in class terms; no claim
 touched. Class MINOR.
+
+---
+
+## 7. PMID 36980111 — Mastrangelo 2023, epilepsy phenotypes of vitamin B6-dependent diseases, systematic review (SUBSTITUTE, NOT WWOX EVIDENCE; W2 vitamin B6 axis) — receipt FTR-20261020-36980111-01
+
+**What it MEASURES.** A registered systematic review of published paediatric cases with a molecular diagnosis of a
+B6-dependent epilepsy: 497 patients from 128 papers (62 ALDH7A1, 28 PNPO, 17 PLPBP, 1, 14 and 6 for the rest), mostly
+case reports. Readouts: seizure types, EEG, MRI, therapy and developmental outcome as published. No WWOX.
+
+**Question and answer (what a pyridoxine response looks like).** Of 312 patients given pyridoxine, 173 became seizure-free and 38
+had a significant reduction (about 55% and 12%); pyridoxal phosphate gave complete control in only five patients; the
+modal phenotype is neonatal-onset (67.8%) generalised or focal motor seizures with burst suppression. The response is a
+seizure endpoint: the Background says it can be incomplete or delayed up to three weeks and omits other manifestations; an EEG
+response to intravenous pyridoxine is no longer a diagnostic criterion; neurocognitive tests exist for 50 of 497
+patients; detailed follow-up seizure types for 18.7%; there is no comparator. The supplement's responsiveness column is
+blank in about 175 of 288 ALDH7A1-labelled rows (script count; some rows are column-shifted), and Table 2's PLP-responder
+cells (12 and 2) do not obviously match the text's five.
+
+**What it does not support.** Any WWOX statement; a B6 requirement or response in WWOX loss; neurocognitive benefit
+of supplementation (explicitly not drawable). A response in a WWOX case would show a co-diagnosis or a seizure modifier
+at most, and a non-response excludes nothing.
+
+**Effect on the model.** Supplies the trial-interpretation logic (seizure endpoint only, delayed response possible, EEG
+not a criterion) for any future WWOX B6 observation. Class MINOR.

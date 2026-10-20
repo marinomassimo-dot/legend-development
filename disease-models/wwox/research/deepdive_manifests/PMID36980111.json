@@ -1,0 +1,348 @@
+{
+ "schema_version": 2,
+ "pmid": "36980111",
+ "doi": "10.3390/children10030553",
+ "receipt": "FTR-20261020-36980111-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/wave4_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-W4-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Europe PMC REST fullTextXML; PMC OA open-data bucket for figures and the supplementary archive (workbook read through the repository xlsx reader)."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true,
+   "reason": "Run inline under the dispatch brief; this manifest and the note carry what the skill would produce."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate; the shared discovery ledger is written by the Orchestrator."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "A paediatric neurology group with a registered systematic review (PROSPERO) of B6-dependent epilepsies; adjacent-method expertise for how a vitamin trial is interpreted, not a WWOX group. Observation (counted published cases) is weighted above interpretation (early trial gives a better outcome), which rests on a retrospective pool without comparator."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "vitamin B6 dependent epilepsy[tiab] OR pyridoxine dependent epilepsy[tiab]",
+    "count": 287,
+    "source": "PubMed ESearch 2026-10-20"
+   }
+  ],
+  "note": "No WWOX field density is claimed; this is a substitute read for class-level trial logic."
+ },
+ "multihop": {
+  "references_enumerated": 106,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [
+   {
+    "queue": "CC-20261019-SCIENTIST-C-W4-01",
+    "why": "No reference is WWOX-direct; the 105 DOI-bearing reference entries (ALDH7A1, PNPO and PLPBP case reports) were not opened."
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 36980111 --hops 0; fulltext_receipts.py status --pmid 36980111; ls receipt_staging/*",
+  "hits": 0,
+  "note": "No registry record, receipt or staged receipt."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-20 by PubMed EFetch: publication types Journal Article and Review; no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 106,
+   "references_screened": 105,
+   "references_with_doi": 105,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID36980111_Mastrangelo2023_PMC.xml",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML for PMC10047402 (HTTP 200, 215,341 bytes).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10047402/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_rest_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "2df0ee77cf925826f972d26b1a6ab13cb4999081ad4a7a99c081a71358904652"
+  },
+  {
+   "path": "files/figures/PMID36980111/children-10-00553-g001.jpg",
+   "kind": "figure",
+   "note": "Figure 1, PMC OA open-data bucket.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10047402.1/children-10-00553-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "11767a8a6d88bb28de386aa73d57b4765c1b5b0e0296e79bbd8aa552e40d1b40"
+  },
+  {
+   "path": "files/figures/PMID36980111/children-10-00553-g002.jpg",
+   "kind": "figure",
+   "note": "Figure 2, PMC OA open-data bucket.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10047402.1/children-10-00553-g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "3b929af8b7c825922bd8c4dfaefa65360de181b79fb442a790e5ff497f1b0c65"
+  },
+  {
+   "path": "files/figures/PMID36980111/children-10-00553-g003.jpg",
+   "kind": "figure",
+   "note": "Figure 3, PMC OA open-data bucket.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10047402.1/children-10-00553-g003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "4075e67dffc0936fcec76bd695f5e023196da8b549cae8a1a5f6c7ce20ab54f3"
+  },
+  {
+   "path": "files/figures/PMID36980111/children-10-00553-g004.jpg",
+   "kind": "figure",
+   "note": "Figure 4, PMC OA open-data bucket.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10047402.1/children-10-00553-g004.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "dab5e9983531fc3ca920421f0294ff6d639d83403fd296708e61ba8b152353d1"
+  },
+  {
+   "path": "files/supplement/PMID36980111/children-10-00553-s001.zip",
+   "kind": "supplement_binary",
+   "note": "Supplementary archive (one xlsx, Supplementary File S1: data collection sheet), PMC OA open-data bucket.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10047402.1/children-10-00553-s001.zip",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "f7457710f0360d7688253981795684cee232073dd3e4e4310ec506c21d771df1"
+  },
+  {
+   "path": "files/supplement/PMID36980111/sup_S1.xlsx",
+   "kind": "supplement_binary",
+   "note": "Supplementary File S1 workbook extracted from the archive (sheets TOTALE, ALDH7A1, PNPO, PLPBP, Hyperprolinemia II, Hypophosphatasia, GPI-anchor defects, Legend, VECCHIO TOTALE, Articoli Mario).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID36980111/children-10-00553-s001.zip",
+    "extractor": {
+     "name": "python zipfile extractall",
+     "version": "stdlib",
+     "call": "zipfile.ZipFile(zip).extractall(x); copy children-2219827-supplementary.xlsx",
+     "join": ""
+    },
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "3626fca85051e83c8cdc416f55902f3abc2f3dc9debff34db5b4c5ffb3bb216f"
+  },
+  {
+   "path": "files/supplement/PMID36980111/sup_S1_dump.txt",
+   "kind": "supplement_text",
+   "note": "Cell-by-cell text of the workbook by framework/scripts/xlsx_to_text.py.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID36980111/sup_S1.xlsx",
+    "extractor": {
+     "name": "xlsx_to_text.py",
+     "version": "repository 2026-10",
+     "call": "python3 -I framework/scripts/xlsx_to_text.py sup_S1.xlsx --max-rows 100000",
+     "join": "\n"
+    },
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "2a9f33095f4bff295e3450924fdfc328629d7ba94cbb4ed371a8524ba87365f3"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC10047402/fullTextXML returned HTTP 200 (215,341 bytes) on 2026-10-20; the declared artefact is that response.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a supplement text layer or a figure image.",
+  "entries": [
+   {
+    "proposition": "SUBSTITUTE (NOT WWOX EVIDENCE). The review pools 497 published patients with a confirmed gene diagnosis; 90.7% are ALDH7A1, PNPO or PLPBP deficiency.",
+    "snippet": "Our search strategy yielded 497 patients with a confirmed genetic diagnosis of B6-dependent epilepsies.",
+    "surface": "body",
+    "anchor": "Results 3.1, first sentence",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "systematic review of published paediatric cases with a molecular diagnosis of B6-dependent epilepsy; SUBSTITUTE, not WWOX evidence",
+     "genotype": "ALDH7A1, PNPO, PLPBP, ALDH4A1, ALPL and GPI-anchor genes (not WWOX)",
+     "endpoint": "cohort size"
+    },
+    "artifact": "files/fulltext/PMID36980111_Mastrangelo2023_PMC.xml"
+   },
+   {
+    "proposition": "SUBSTITUTE. What a pyridoxine response is in this class: of 312 treated patients, complete seizure freedom in 173 and a significant reduction in 38 (about 55% and 12%); the response is a seizure endpoint only, and the Background states it can be incomplete or delayed for up to 3 weeks and does not include other manifestations.",
+    "snippet": "Complete seizure freedom was observed in 173 patients, while a significant seizure reduction occurred in 38 patients",
+    "surface": "body",
+    "anchor": "Results 3.3 Treatment, first paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "systematic review of published paediatric cases with a molecular diagnosis of B6-dependent epilepsy; SUBSTITUTE, not WWOX evidence",
+     "genotype": "ALDH7A1, PNPO, PLPBP, ALDH4A1, ALPL and GPI-anchor genes (not WWOX)",
+     "endpoint": "seizure response to pyridoxine"
+    },
+    "artifact": "files/fulltext/PMID36980111_Mastrangelo2023_PMC.xml"
+   },
+   {
+    "proposition": "SUBSTITUTE. The review states that the response is seizure-only and can be delayed, so a short negative trial does not exclude a B6-responsive disease.",
+    "snippet": "In some cases, this therapeutic response can be incomplete or delayed for up to 3 weeks and does not include manifestations other than seizures",
+    "surface": "body",
+    "anchor": "Background, second paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "systematic review of published paediatric cases with a molecular diagnosis of B6-dependent epilepsy; SUBSTITUTE, not WWOX evidence",
+     "genotype": "ALDH7A1, PNPO, PLPBP, ALDH4A1, ALPL and GPI-anchor genes (not WWOX)",
+     "endpoint": "response definition"
+    },
+    "artifact": "files/fulltext/PMID36980111_Mastrangelo2023_PMC.xml"
+   },
+   {
+    "proposition": "SUBSTITUTE. The EEG response to intravenous pyridoxine is not a criterion to confirm or exclude the diagnosis in this class: an EEG response cannot serve as the readout of a B6 trial in a WWOX case either.",
+    "snippet": "The EEG response to the intravenous administration of pyridoxine is no longer considered a criterion to confirm or exclude the diagnosis",
+    "surface": "body",
+    "anchor": "Discussion, paragraph on EEG",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "systematic review of published paediatric cases with a molecular diagnosis of B6-dependent epilepsy; SUBSTITUTE, not WWOX evidence",
+     "genotype": "ALDH7A1, PNPO, PLPBP, ALDH4A1, ALPL and GPI-anchor genes (not WWOX)",
+     "endpoint": "EEG as diagnostic criterion"
+    },
+    "artifact": "files/fulltext/PMID36980111_Mastrangelo2023_PMC.xml"
+   },
+   {
+    "proposition": "SUBSTITUTE. The evidence is thin outside seizure onset: follow-up seizure types for 18.7% of patients, neurocognitive tests for 50 of 497, and the authors state the extreme heterogeneity of outcome measures prevents any generalisable conclusion on neurocognition.",
+    "snippet": "while published detailed descriptions of seizure types during follow-up were available for only 18.7% of patients",
+    "surface": "body",
+    "anchor": "Results 3.1, third paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "systematic review of published paediatric cases with a molecular diagnosis of B6-dependent epilepsy; SUBSTITUTE, not WWOX evidence",
+     "genotype": "ALDH7A1, PNPO, PLPBP, ALDH4A1, ALPL and GPI-anchor genes (not WWOX)",
+     "endpoint": "reporting completeness"
+    },
+    "artifact": "files/fulltext/PMID36980111_Mastrangelo2023_PMC.xml"
+   },
+   {
+    "proposition": "SUBSTITUTE. The authors' limitation: retrospective collection and exclusion of patients without a molecular diagnosis; the review includes no comparator and no neurodevelopmental effect size from supplementation.",
+    "snippet": "The limitations of the present systematic review include possible bias due to the retrospective nature of the collected data",
+    "surface": "body",
+    "anchor": "Discussion, penultimate paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "systematic review of published paediatric cases with a molecular diagnosis of B6-dependent epilepsy; SUBSTITUTE, not WWOX evidence",
+     "genotype": "ALDH7A1, PNPO, PLPBP, ALDH4A1, ALPL and GPI-anchor genes (not WWOX)",
+     "endpoint": "limitation"
+    },
+    "artifact": "files/fulltext/PMID36980111_Mastrangelo2023_PMC.xml"
+   },
+   {
+    "proposition": "Table 2 (text surface): the pyridoxal-phosphate-responsive row reads 12 and 2 in two disease columns and dashes elsewhere (14 patients if the concatenated cell '122' is two cells), whereas the Results say PLP produced complete seizure control in only five patients; the two statements need a reading of the workbook to reconcile. The pyridoxine-responsive row sums to 173 and equals the complete-seizure-freedom count in the Results (122, 23, 20, 2, 4, 2).",
+    "snippet": "The administration of PLP resulted in complete seizure control in only five patients",
+    "surface": "body",
+    "anchor": "Results 3.3 Treatment, PLP paragraph (Table 2 row Patients responsive to PLP read from the table markup)",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "systematic review of published paediatric cases with a molecular diagnosis of B6-dependent epilepsy; SUBSTITUTE, not WWOX evidence",
+     "genotype": "ALDH7A1, PNPO, PLPBP, ALDH4A1, ALPL and GPI-anchor genes (not WWOX)",
+     "endpoint": "PLP responder counts"
+    },
+    "artifact": "files/fulltext/PMID36980111_Mastrangelo2023_PMC.xml"
+   },
+   {
+    "proposition": "Supplementary File S1 (cell dump): the 'TOTALE' sheet carries 508 data rows against 497 patients in the text; its RESPONSIVENESS column is blank in 175 of the 288 rows whose gene column reads ALDH7A1 (script count over the dump; some rows are shifted by one column), so the class response rate rests on incompletely coded rows. The legend defines SFp (seizures free after pyridoxine), PRp (partial response) and ARp (no response).",
+    "snippet": "SFp= seizures free after Pyridoxine therapy",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID36980111/sup_S1_dump.txt",
+    "anchor": "Sheet Legend, first row",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "systematic review of published paediatric cases with a molecular diagnosis of B6-dependent epilepsy; SUBSTITUTE, not WWOX evidence",
+     "genotype": "ALDH7A1, PNPO, PLPBP, ALDH4A1, ALPL and GPI-anchor genes (not WWOX)",
+     "endpoint": "coding of responsiveness"
+    },
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "Figure 1 (hand reading): not a flow chart of exclusions but a distribution of 62, 28, 17, 1, 14 and 6 papers (mostly case reports) and 344, 66, 46, 4, 18 and 19 patients across ALDH7A1, PNPO, PLPBP, hyperprolinaemia type II, hypophosphatasia and GPI-anchor defects, with sex NA in 99 of 344 ALDH7A1 patients. Figures 2-4 are three EEG traces of one PNPO neonate (burst suppression, then improvement on pyridoxine, then sleep spindles): an n = 1 illustration.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 distribution of papers and patients by disease; Figures 2-4 EEG traces of one PNPO-deficient neonate.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36980111/children-10-00553-g001.jpg",
+    "anchor": "Figures 1-4, native JPEGs",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "systematic review of published paediatric cases with a molecular diagnosis of B6-dependent epilepsy; SUBSTITUTE, not WWOX evidence",
+     "genotype": "ALDH7A1, PNPO, PLPBP, ALDH4A1, ALPL and GPI-anchor genes (not WWOX)",
+     "endpoint": "distribution; single-case EEG"
+    },
+    "found_or_sought": "sought"
+   }
+  ]
+ }
+}
