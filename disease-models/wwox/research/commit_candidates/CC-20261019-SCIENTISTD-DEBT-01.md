@@ -90,3 +90,17 @@ Open, readable, unread, gene-direct (priority MEDIUM unless stated), found as re
 
 ### LOCATOR TRIPLES FOR BLIND AUDIT
 Eight load-bearing triples were audited blind by a separate agent holding only the triples and the source files: six SUPPORTED, one UNDERSHOOT, one OVERSHOOT; the overshoot (Lee 2021, region versus gene) was narrowed in the manifest with a declared `contradicts_locator`. Detail in `debts_wave_20261019_scientist-d.md`, section "Blind audit".
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_004` · 2026-10-20 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.22 -> WM_v7.23 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** run by the Scientist (eight triples; six SUPPORTED, one UNDERSHOOT, one OVERSHOOT, both repaired before landing); not rerun by the integrator.
+**What landed:** one `CLAIM 009` evidence-boundary wave note (op text as proposed, with the study identifiers replaced by `PAPER` numbers); eight `PAPER` records (`PAPER 356`-`363`, the placeholders `D01`-`D08` renumbered; `PAPER 358`, `359`, `360`, `362` and `363` promote corpus placeholders kept as history) with `LIT-0648`, `LIT-0649`, `LIT-0650` and promoted `LIT-0357`, `LIT-0069`, `LIT-0353`, `LIT-0229`, `LIT-0046`; leads `DL-MECH-156` to `DL-MECH-159`. Correction of the candidate's registry-state column: Lee 2017, Hsu 2009 and Lee 2021 were reported as having no record and each had a corpus placeholder and a `LIT` record.
+**Parked:** section 4 (the wishlist of subscription papers) and section 5 (queue entries) carry no op text and were not queued here.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.

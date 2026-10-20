@@ -68,3 +68,17 @@ Not triaged for access: Cancemi 2011 (PMID 21520031) and Guo 2013 (PMID 23197378
 
 ### LOCATOR TRIPLES FOR BLIND AUDIT
 Eight load-bearing triples were audited blind by a separate agent: six SUPPORTED (one with a note), one UNDERSHOOT-style wording point, one OVERSHOOT ("only" in a Tabarki proposition); narrowings applied before commit; table in `debts_wave_20261019_scientist-d.md`, section "Blind audit, wave 2".
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_004` · 2026-10-20 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.22 -> WM_v7.23 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** run by the Scientist (eight triples; six SUPPORTED, one SUPPORTED with a note, one OVERSHOOT on the word "only", narrowed before landing); not rerun by the integrator.
+**What landed:** the `FT-090` status op (closed by a complete reading, with the landing named); six `PAPER` records (`PAPER 364`-`369`, the placeholders `D09`-`D14` renumbered; five promote corpus placeholders kept as history) with `LIT-0651` and promoted `LIT-0060`, `LIT-0058`, `LIT-0140`, `LIT-0341`, `LIT-0283`; leads `DL-MECH-160` to `DL-MECH-162`. The three resumed receipts (`FTR-20261019-19918364-02`, `FTR-20261019-26302329-02`, `FTR-20261019-24008736-03`) are in the ledger; they name papers that already have registry records and the candidate proposes no op for them.
+**Parked:** section 4 (the wishlist of papers with no lawful body) carries no op text.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.

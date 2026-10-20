@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-19T20:00:00Z",
+ "event_at": "2026-10-19T20:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present"
+ },
+ "event_id": "FTR-20261019-35883580-01",
+ "evidence_basis": [
+  "Whole JATS body read; the eight figures were not opened (captions only).",
+  "FIND: the pY33 to pS14 model is the originating laboratory's, supported by tumour lines, 4T1 spheres and AD mice; the review states that the transition inside the signalling complex is unknown and reports no measurement in any WWOX loss-of-function tissue; the neuronal-heterotopia statement for newborns is cited to two mouse papers."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID35883580.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID35883580.md",
+  "disease-models/wwox/research/wave4_scientist-b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "2b818e9726ce68fac8005531123252ee3c01c10e275b1da68c1f8c28b8875a8d",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID35883580_Liu2022_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.3390/cells11142137",
+  "pmid": "35883580"
+ },
+ "workflow": "scientist-b wave 4 group W1, task branch task/W4-W1-B-20261019; SOURCE_FIRST; PMC efetch XML re-acquired with pmc_bucket_fetch.py, no User-Agent; locators verified by deepdive_manifest.py. Prepared as a JSON file for the integrator and not appended."
+}

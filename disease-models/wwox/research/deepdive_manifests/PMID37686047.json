@@ -1,0 +1,486 @@
+{
+ "schema_version": 2,
+ "pmid": "37686047",
+ "doi": "10.3390/ijms241713242",
+ "receipt": "FTR-20261020-37686047-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/wave4_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-W4-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Europe PMC REST fullTextXML; PMC OA open-data bucket for figures and the 22 MB supplementary archive (Tables S1-S7 read through the repository xlsx reader)."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true,
+   "reason": "Run inline under the dispatch brief; this manifest and the note carry what the skill would produce."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate; the shared discovery ledger is written by the Orchestrator."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "computational",
+  "is_primary_group_for_disease": false,
+  "weighting": "A pharmacology and metabolomics group mining public NCI-60 omics against alkylating-agent sensitivity; WWOX is one gene in a CNV list. Not a WWOX group. Observation (quartile differences, correlations in public data) is weighted above interpretation (metabolic reprogramming as the resistance mechanism, WWOX as a metabolic regulator), which the paper takes from literature citations, not from a measurement of WWOX."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND NCI-60",
+    "count": 1,
+    "source": "PubMed ESearch 2026-10-20"
+   },
+   {
+    "query": "WWOX AND alkylating",
+    "count": 42,
+    "source": "PubMed ESearch 2026-10-20"
+   },
+   {
+    "query": "WWOX AND chemoresistance",
+    "count": 5,
+    "source": "PubMed ESearch 2026-10-20"
+   }
+  ],
+  "note": "Counts are record matches, not measurements of the pair."
+ },
+ "multihop": {
+  "references_enumerated": 75,
+  "gene_direct_refs_in_source": [
+   "25012504"
+  ],
+  "resolved": [
+   {
+    "pmid": "25012504",
+    "how": "Abu-Remaileh and Aqeilan 2014 (ref 46) has a complete receipted reading in the ledger (checked with fulltext_receipts.py status)."
+   }
+  ],
+  "queued": [
+   {
+    "queue": "CC-20261019-SCIENTIST-C-W4-01",
+    "why": "Refs 47 (Pospiech, WWOX in breast cancer, a historical perspective) and the two other WWOX-metabolism citations (48, 49) and ref 50 (WWOX and cisplatin resistance in ovarian cancer) are gene-direct; PMIDs not present in the reference markup, none asserted; not opened."
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 37686047 --hops 0; fulltext_receipts.py status --pmid 37686047; ls receipt_staging/*",
+  "hits": 0,
+  "note": "No registry record, receipt or staged receipt for this PMID."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-20 by PubMed EFetch: publication type Journal Article; no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 75,
+   "references_screened": 73,
+   "references_with_doi": 73,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID37686047_Rushing2023_PMC.xml",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML for PMC10487847 (HTTP 200, 168,602 bytes).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10487847/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_rest_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "91d401a8d80181c5312d741a513d009efae20f0c2162680eadf05cafdf5587a6"
+  },
+  {
+   "path": "files/figures/PMID37686047/ijms-24-13242-g001.jpg",
+   "kind": "figure",
+   "note": "Figure 1, PMC OA open-data bucket.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10487847.1/ijms-24-13242-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "a287442156985e52d48425f44cb57d1ba91586f8093c96d72d3acab16cf50c73"
+  },
+  {
+   "path": "files/figures/PMID37686047/ijms-24-13242-g002.jpg",
+   "kind": "figure",
+   "note": "Figure 2, PMC OA open-data bucket.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10487847.1/ijms-24-13242-g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "5ae9e6475f9863484df10969fd493d9eb163f28fad2ad8579c9c7f59ba769c54"
+  },
+  {
+   "path": "files/figures/PMID37686047/ijms-24-13242-g003.jpg",
+   "kind": "figure",
+   "note": "Figure 3, PMC OA open-data bucket.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10487847.1/ijms-24-13242-g003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "c3b692cd800ae841c5656af89a70eb36d90ade231a1f5bedf701e1711a6d2458"
+  },
+  {
+   "path": "files/figures/PMID37686047/ijms-24-13242-g004.jpg",
+   "kind": "figure",
+   "note": "Figure 4, PMC OA open-data bucket.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10487847.1/ijms-24-13242-g004.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "f356be6e526276f56c20108e88986c6bd5d4877eff4dc408485d819c184be729"
+  },
+  {
+   "path": "files/figures/PMID37686047/ijms-24-13242-g005.jpg",
+   "kind": "figure",
+   "note": "Figure 5, PMC OA open-data bucket.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10487847.1/ijms-24-13242-g005.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "b9429b14e22bcb9a41601ddb2bce4bee32850bfaf41f837054b0b9ee0d3c7868"
+  },
+  {
+   "path": "files/figures/PMID37686047/ijms-24-13242-g006.jpg",
+   "kind": "figure",
+   "note": "Figure 6, PMC OA open-data bucket.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10487847.1/ijms-24-13242-g006.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "c266366e17d1d919b6d7e1d2522eb0ef7e250f7a8b9bd34510f12e73460af5a3"
+  },
+  {
+   "path": "files/supplement/PMID37686047/ijms-24-13242-s001.zip",
+   "kind": "supplement_binary",
+   "note": "Supplementary archive (22 MB: Supplemental Tables S1-S7, xlsx), PMC OA open-data bucket; members extracted with python zipfile into a separate directory.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10487847.1/ijms-24-13242-s001.zip",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "b71659569a89c1e15e6b4f31e4854d8fcaddedd63289461b54f45a10c3de232e"
+  },
+  {
+   "path": "files/supplement/PMID37686047/sup_S2.xlsx",
+   "kind": "supplement_binary",
+   "note": "Supplemental Table S2 (fold changes and P values Q1 versus Q4), extracted from the archive.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID37686047/ijms-24-13242-s001.zip",
+    "extractor": {
+     "name": "python zipfile extractall",
+     "version": "stdlib",
+     "call": "zipfile.ZipFile(zip).extractall(x); copy Supplemental Table S2.xlsx",
+     "join": ""
+    },
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "7991208866963ff04682a0c7e133118d4a77c475d0f3f3a79b28d2546f11fd96"
+  },
+  {
+   "path": "files/supplement/PMID37686047/sup_S2_dump.txt",
+   "kind": "supplement_text",
+   "note": "Cell-by-cell text of Supplemental Table S2 by framework/scripts/xlsx_to_text.py (stdlib reader).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID37686047/sup_S2.xlsx",
+    "extractor": {
+     "name": "xlsx_to_text.py",
+     "version": "repository 2026-10",
+     "call": "python3 -I framework/scripts/xlsx_to_text.py sup_S2.xlsx --max-rows 1000000",
+     "join": "\n"
+    },
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "6b52bf3f41efd66ab570d90d9571b45236e9eef9bc26d0a8733594e182f4aa30"
+  },
+  {
+   "path": "files/supplement/PMID37686047/sup_S3.xlsx",
+   "kind": "supplement_binary",
+   "note": "Supplemental Table S3 (genes correlated with IC50 of alkylating agents in CREAMMIST), extracted from the archive.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID37686047/ijms-24-13242-s001.zip",
+    "extractor": {
+     "name": "python zipfile extractall",
+     "version": "stdlib",
+     "call": "zipfile.ZipFile(zip).extractall(x); copy Supplemental Table S3.xlsx",
+     "join": ""
+    },
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "58384442da499ca4f0892964238fd1a302352416bab115d534079f97417d2b25"
+  },
+  {
+   "path": "files/supplement/PMID37686047/sup_S3_dump.txt",
+   "kind": "supplement_text",
+   "note": "Cell-by-cell text of Supplemental Table S3 by framework/scripts/xlsx_to_text.py (stdlib reader).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID37686047/sup_S3.xlsx",
+    "extractor": {
+     "name": "xlsx_to_text.py",
+     "version": "repository 2026-10",
+     "call": "python3 -I framework/scripts/xlsx_to_text.py sup_S3.xlsx --max-rows 1000000",
+     "join": "\n"
+    },
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "dd24704a7ff1d5a99614d8d2ad372eabf9e7b8b22fa8e6cd4a4c7d52c5fda63f"
+  },
+  {
+   "path": "files/supplement/PMID37686047/sup_S5.xlsx",
+   "kind": "supplement_binary",
+   "note": "Supplemental Table S5 (DIABLO loadings), extracted from the archive.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID37686047/ijms-24-13242-s001.zip",
+    "extractor": {
+     "name": "python zipfile extractall",
+     "version": "stdlib",
+     "call": "zipfile.ZipFile(zip).extractall(x); copy Supplemental Table S5.xlsx",
+     "join": ""
+    },
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "ab5110e8056747bd0dee1c2e87a7da45fdb69157dc4638b32f6ee7c518a66f7b"
+  },
+  {
+   "path": "files/supplement/PMID37686047/sup_S5_dump.txt",
+   "kind": "supplement_text",
+   "note": "Cell-by-cell text of Supplemental Table S5 by framework/scripts/xlsx_to_text.py (stdlib reader).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID37686047/sup_S5.xlsx",
+    "extractor": {
+     "name": "xlsx_to_text.py",
+     "version": "repository 2026-10",
+     "call": "python3 -I framework/scripts/xlsx_to_text.py sup_S5.xlsx --max-rows 1000000",
+     "join": "\n"
+    },
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "da269b1adab4f7bf551504feb0449f6c94149343ad4a1642df6c4f17b445a9b9"
+  },
+  {
+   "path": "files/supplement/PMID37686047/sup_S7.xlsx",
+   "kind": "supplement_binary",
+   "note": "Supplemental Table S7 (CNV markers selected by DIABLO), extracted from the archive.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID37686047/ijms-24-13242-s001.zip",
+    "extractor": {
+     "name": "python zipfile extractall",
+     "version": "stdlib",
+     "call": "zipfile.ZipFile(zip).extractall(x); copy Supplemental Table S7.xlsx",
+     "join": ""
+    },
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "4570c351418f9ecf591c8a7d3952b2bb1fb416147a42d556c329dcbab23003ce"
+  },
+  {
+   "path": "files/supplement/PMID37686047/sup_S7_dump.txt",
+   "kind": "supplement_text",
+   "note": "Cell-by-cell text of Supplemental Table S7 by framework/scripts/xlsx_to_text.py (stdlib reader).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID37686047/sup_S7.xlsx",
+    "extractor": {
+     "name": "xlsx_to_text.py",
+     "version": "repository 2026-10",
+     "call": "python3 -I framework/scripts/xlsx_to_text.py sup_S7.xlsx --max-rows 1000000",
+     "join": "\n"
+    },
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "52dd5a504df5e0f5bd2103b997144c208ed4418f918da49a2aaefb61de680187"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC10487847/fullTextXML returned HTTP 200 (168,602 bytes) on 2026-10-20; the declared artefact is that response.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a supplement text layer or a figure image.",
+  "entries": [
+   {
+    "proposition": "The metabolic link of WWOX in this paper is a Discussion sentence that cites literature; WWOX is one of 15 genes differing in copy-number marker intensity between the most sensitive and most resistant quartiles of cell lines, and the metabolic findings of the paper are purine metabolism and related pathways, not WWOX.",
+    "snippet": "Included in these genes was WWOX, a tumor suppressor gene that has been shown to regulate multiple metabolic processes, including glucose and lipid metabolism [46,47,48,49].",
+    "surface": "body",
+    "anchor": "Discussion, paragraph on CNV analysis",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "NCI-60 human cancer cell line panel, public baseline omics against alkylating-agent sensitivity, in silico",
+     "genotype": "WWOX SNP-array copy-number marker intensity, transcript and IC50 correlation; no perturbation",
+     "endpoint": "WWOX in a CNV gene list"
+    },
+    "artifact": "files/fulltext/PMID37686047_Rushing2023_PMC.xml"
+   },
+   {
+    "proposition": "The CNV statement: 15 genes with more than 5 DIABLO-selected markers; WWOX is among those decreased in the resistant quartile (Q4).",
+    "snippet": "These genes included those that were increased in copy number intensity (MIR1302-2, MIR3163, CNTN5, MIR1302-9, DDAH1, DISC1FP1, PGR, and TRPC6) and those that were decreased in copy number intensity (MIR1244-3, WWOX, ARL17B, VAT1L, OR4F3, and FRG2) (Table 5).",
+    "surface": "body",
+    "anchor": "Results, CNV paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "NCI-60 human cancer cell line panel, public baseline omics against alkylating-agent sensitivity, in silico",
+     "genotype": "WWOX SNP-array copy-number marker intensity, transcript and IC50 correlation; no perturbation",
+     "endpoint": "CNV intensity direction"
+    },
+    "artifact": "files/fulltext/PMID37686047_Rushing2023_PMC.xml"
+   },
+   {
+    "proposition": "Supplemental Table S7: the 22 WWOX markers behind the Table 5 'decreased' call have a mean intensity of about -0.17 in Q4 against about +0.19 in Q1 (range of Q4 means -0.28 to -0.06), i.e. a difference of about 0.35 on a CRMA-type intensity scale averaged over 14-15 lines per quartile; it is a quartile-mean shift in a deletion-prone fragile-site gene, not a per-line deletion call, and the analysis kept only the top 25% of CNV markers by variance and the supervised DIABLO selection (one marker shown as the row).",
+    "snippet": "rs2667589\tSNP_A-1788450\tWWOX\t-0.12879999999999997\t0.19139999999999999",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID37686047/sup_S7_dump.txt",
+    "anchor": "Supplemental Table S7, first WWOX row of 22",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "NCI-60 human cancer cell line panel, public baseline omics against alkylating-agent sensitivity, in silico",
+     "genotype": "WWOX SNP-array copy-number marker intensity, transcript and IC50 correlation; no perturbation",
+     "endpoint": "average CNV marker intensity Q4 versus Q1"
+    },
+    "found_or_sought": "sought - question: is the WWOX line more than a gene-list sentence"
+   },
+   {
+    "proposition": "Supplemental Table S2: five WWOX transcript probes all show lower expression in the resistant quartile (fold change Q4/Q1 between about 0.73 and 0.95) and none reaches P < 0.05 (smallest P about 0.074); the Table S5 DIABLO first-component loading for WWOX transcript is about -0.34, below the paper's 0.6 cutoff. The copy-number difference is therefore not matched by a significant transcript difference in the same quartiles.",
+    "snippet": "WWOX\t7.3765328757477641E-2\t0.77960996928631399\t35.015437839426426\t44.914045765064998\ttranscriptomics",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID37686047/sup_S2_dump.txt",
+    "anchor": "Supplemental Table S2, WWOX transcript row with the smallest P value (five rows)",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "NCI-60 human cancer cell line panel, public baseline omics against alkylating-agent sensitivity, in silico",
+     "genotype": "WWOX SNP-array copy-number marker intensity, transcript and IC50 correlation; no perturbation",
+     "endpoint": "transcript fold change Q4/Q1, t-test P"
+    },
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "Supplemental Table S5, WWOX transcript row: loadings -0.337 (component 1) and four others; the cutoff for 'differentiator' is absolute 0.6 on component 1, so the WWOX transcript is not a DIABLO differentiator.",
+    "snippet": "WWOX\t-0.33690326827408601\t7.6395811091108295E-2\t-0.37904302808130602\t-0.187727260519719\t0.43422955879623398\ttranscriptomics",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID37686047/sup_S5_dump.txt",
+    "anchor": "Supplemental Table S5, WWOX transcriptomics row",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "NCI-60 human cancer cell line panel, public baseline omics against alkylating-agent sensitivity, in silico",
+     "genotype": "WWOX SNP-array copy-number marker intensity, transcript and IC50 correlation; no perturbation",
+     "endpoint": "DIABLO component loadings"
+    },
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "Supplemental Table S3 (CREAMMIST): WWOX expression correlates NEGATIVELY with IC50 for five alkylating agents (bendamustine rho -0.20, oxaliplatin -0.25 P 7.6e-18, mitomycin -0.23, chlorambucil -0.21, carboplatin -0.22): higher WWOX expression goes with lower IC50 (greater sensitivity), a weak correlation, in the same direction as the copy-number difference. The main text does not state this correlation.",
+    "snippet": "Oxaliplatin\tWWOX\t-0.24801899999999999\t7.5866399999999999E-18",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID37686047/sup_S3_dump.txt",
+    "anchor": "Supplemental Table S3, WWOX rows (five of the ten agents)",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "NCI-60 human cancer cell line panel, public baseline omics against alkylating-agent sensitivity, in silico",
+     "genotype": "WWOX SNP-array copy-number marker intensity, transcript and IC50 correlation; no perturbation",
+     "endpoint": "Spearman correlation of expression with IC50"
+    },
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "Figures 3 and 4 (hand reading): the DIABLO plot separates Q1 and Q4 cell lines on component 1 (about 14-15 points each), which a supervised multi-block PLS-DA over about 10^5 variables would be expected to do for 29 samples regardless of biology (INFERENCE; no permutation or held-out test is described); the only metabolic pathway reaching P < 0.05 in the DIABLO joint analysis is purine metabolism (P = 0.0054 with transcripts, 0.012 with proteins), uncorrected; ketone-body synthesis and degradation (P = 0.056) is the next one. No panel names WWOX.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3A-B DIABLO sample plot and component summary; Figure 4A-B joint pathway analysis of DIABLO-selected metabolites with transcripts and proteins.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID37686047/ijms-24-13242-g003.jpg",
+    "anchor": "Figures 3 and 4, native JPEGs",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "NCI-60 human cancer cell line panel, public baseline omics against alkylating-agent sensitivity, in silico",
+     "genotype": "WWOX SNP-array copy-number marker intensity, transcript and IC50 correlation; no perturbation",
+     "endpoint": "DIABLO separation; joint pathway P values"
+    },
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "Figures 1, 2, 5 and 6: heatmap of rank-ordered z-scores of 51 alkylating agents over 58 lines; joint pathways (tight junction, endocytosis, Hippo, adherens junction, sphingolipid signalling) from p < 0.05 features; Pathview purine-metabolism maps; CRISPR-screen pathway hits (Fanconi anaemia, homologous recombination). WWOX appears in none of them; the purine-metabolism maps are the metabolic result and carry no WWOX gene (WWOX is not a metabolic enzyme).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figures 1, 2, 5, 6: clustering heatmap, joint-pathway bubble plots and network, Pathview purine maps, CRISPR-screen pathway plot.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID37686047/ijms-24-13242-g005.jpg",
+    "anchor": "Figures 1, 2, 5, 6, native JPEGs",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "NCI-60 human cancer cell line panel, public baseline omics against alkylating-agent sensitivity, in silico",
+     "genotype": "WWOX SNP-array copy-number marker intensity, transcript and IC50 correlation; no perturbation",
+     "endpoint": "pathway-level results"
+    },
+    "found_or_sought": "sought"
+   }
+  ]
+ }
+}

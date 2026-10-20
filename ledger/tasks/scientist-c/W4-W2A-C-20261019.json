@@ -29,6 +29,54 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-19"
+ "CURRENT_STATE": "COMPLETED",
+ "assigned_on": "2026-10-19",
+ "TASK_ACK": {
+  "TASK_ID": "W4-W2A-C-20261019",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-c",
+  "DECISION": "ACCEPTED",
+  "acked_at": "2026-10-20T00:00:00Z",
+  "reading_mode": "PRIMARY_EVIDENCE_READ",
+  "duplicate_assignment_check": "Lot is the first eight rows of group W2 in file order excluding 29481666 (unreachable per the coordinator); peers: scientist-d second half of W2, scientist-b W1. Staged receipt dirs checked per paper."
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "W4-W2A-C-20261019",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-c",
+  "claimed_at": "2026-10-20T00:00:00Z",
+  "durable_pointer": "ledger/tasks/scientist-c/W4-W2A-C-20261019.json on branch task/W4-W2A-C-20261019, worktree .claude/worktrees/w4-c",
+  "lot": "25779665, 36587184, 41141138, 37686047, 22842668, 29899766, 36980111, 38978529"
+ },
+ "DEFAULTS_TAKEN": [
+  "Shared derived surfaces were stale on every commit; committed under LEGEND_STALE_SURFACES_BECAUSE (dispatch brief).",
+  "29481666 skipped as the coordinator instructed; the lot is the first eight rows of W2 in file order after it.",
+  "Papers without a PMCID (22842668) read from the publisher open-access PDF; supplementary archives and figures taken from the PMC OA open-data bucket and the Springer ESM address, no User-Agent, no paywall circumvention.",
+  "Gene-direct references with no PMID in the markup or PDF were queued without asserting a PMID.",
+  "Receipts validated with validate_receipt against the root ledger instead of record(), because the root ledger and its state anchor are moved by the Orchestrator's concurrent batch.",
+  "Substitute rows (29899766, 36980111, 38978529) read for class-level screening logic and labelled NOT WWOX evidence everywhere.",
+  "Staged discovery leads in the commit candidate; the shared ledger is the Orchestrator's."
+ ],
+ "STOP_LOG": [],
+ "WAVE_1_RESULT": {
+  "papers_read": 8,
+  "papers_parked": 0,
+  "manifests_pass": 8,
+  "staged_receipts": "disease-models/wwox/research/receipt_staging/scientist-c/ (FTR-20261020-25779665-01, -36587184-01, -41141138-01, -37686047-01, -22842668-01, -29899766-01, -36980111-01, -38978529-01)",
+  "commit_candidate": "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-W4-01.md",
+  "analysis_note": "disease-models/wwox/research/wave4_scientist-c.md",
+  "self_eval": "disease-models/wwox/research/session_evaluations/2026-10-20_w4-c.md",
+  "micro_upgrade": "framework/scripts/manifest_scaffold.py with test_manifest_scaffold.py, routed in framework/scripts/README.md",
+  "DEFAULTS_TAKEN": [
+   "Shared derived surfaces were stale on every commit; committed under LEGEND_STALE_SURFACES_BECAUSE (dispatch brief).",
+   "29481666 skipped as the coordinator instructed; the lot is the first eight rows of W2 in file order after it.",
+   "Papers without a PMCID (22842668) read from the publisher open-access PDF; supplementary archives and figures taken from the PMC OA open-data bucket and the Springer ESM address, no User-Agent, no paywall circumvention.",
+   "Gene-direct references with no PMID in the markup or PDF were queued without asserting a PMID.",
+   "Receipts validated with validate_receipt against the root ledger instead of record(), because the root ledger and its state anchor are moved by the Orchestrator's concurrent batch.",
+   "Substitute rows (29899766, 36980111, 38978529) read for class-level screening logic and labelled NOT WWOX evidence everywhere.",
+   "Staged discovery leads in the commit candidate; the shared ledger is the Orchestrator's."
+  ],
+  "STOP_LOG": []
+ }
 }

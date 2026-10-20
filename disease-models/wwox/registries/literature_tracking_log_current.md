@@ -1647,11 +1647,12 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 34210081 / DOI 10.3390/cells10071637
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-10-19 (`FTR-20261019-34210081-01`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 19
-**Status:** discovered
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 363]] by `BATCH_20261019_004` (`CC-20261019-SCIENTISTD-DEBT-01`); reading `complete_fulltext_read`, receipt `FTR-20261019-34210081-01`.
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -1659,7 +1660,7 @@ Serves to:
 **Claim links:** none
 **Working Model impact:** none yet
 **Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
+**Next action:** none — read; landing [[paper_registry_current#PAPER 363]]
 **Flags:** corpus placeholder / not yet screened
 **Note:** Title: Molecular Biology of the WWOX Gene That Spans Chromosomal Fragile Site FRA16D
 
@@ -1977,11 +1978,12 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 27999774 / DOI 10.3389/fcell.2016.00141
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-10-19 (`FTR-20261019-27999774-01`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 32
-**Status:** discovered
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 365]] by `BATCH_20261019_004` (`CC-20261019-SCIENTISTD-DEBT-02`); reading `complete_fulltext_read`, receipt `FTR-20261019-27999774-01`.
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -1989,7 +1991,7 @@ Serves to:
 **Claim links:** none
 **Working Model impact:** none yet
 **Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
+**Next action:** none — read; landing [[paper_registry_current#PAPER 365]]
 **Flags:** corpus placeholder / not yet screened
 **Note:** Title: HYAL-2-WWOX-SMAD4 Signaling in Cell Death and Anticancer Response
 
@@ -2031,11 +2033,12 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 25416187 / DOI 10.1177/1535370214561952
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-10-19 (`FTR-20261019-25416187-01`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 34
-**Status:** discovered
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 364]] by `BATCH_20261019_004` (`CC-20261019-SCIENTISTD-DEBT-02`); reading `complete_fulltext_read`, receipt `FTR-20261019-25416187-01`.
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -2043,7 +2046,7 @@ Serves to:
 **Claim links:** none
 **Working Model impact:** none yet
 **Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
+**Next action:** none — read; landing [[paper_registry_current#PAPER 364]]
 **Flags:** corpus placeholder / not yet screened
 **Note:** Title: The fragile site WWOX gene and the developing brain
 
@@ -2283,11 +2286,12 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 29310447 / DOI 10.1177/1535370217752350
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-10-19 (`FTR-20261019-29310447-01`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 45
-**Status:** discovered
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 359]] by `BATCH_20261019_004` (`CC-20261019-SCIENTISTD-DEBT-01`); reading `partial_fulltext_read`, receipt `FTR-20261019-29310447-01`.
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -2295,7 +2299,7 @@ Serves to:
 **Claim links:** none
 **Working Model impact:** none yet
 **Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
+**Next action:** none — read; landing [[paper_registry_current#PAPER 359]]
 **Flags:** corpus placeholder / not yet screened
 **Note:** Title: Phosphorylation/de-phosphorylation in specific sites of tumor suppressor WWOX and control of distinct biological events
 
@@ -2888,11 +2892,12 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 38203337 / DOI 10.3390/ijms25010167
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-10-19 (`FTR-20261019-38203337-01`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 68
-**Status:** discovered
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 383]] by `BATCH_20261019_005` (`CC-20261019-SCIENTIST-A-PLASMA-01`); reading `complete_fulltext_read`, receipt `FTR-20261019-38203337-01`.
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -2900,7 +2905,7 @@ Serves to:
 **Claim links:** none
 **Working Model impact:** none yet
 **Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
+**Next action:** none — read; landing [[paper_registry_current#PAPER 383]]
 **Flags:** corpus placeholder / not yet screened
 **Note:** Title: Mechanistic Investigation of WWOX Function in NF-kB-Induced Skin Inflammation in Psoriasis
 
@@ -4253,11 +4258,12 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 22484428 / DOI 10.3892/mmr.2012.860
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-10-19 (`FTR-20261019-22484428-01`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 121
-**Status:** discovered
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 367]] by `BATCH_20261019_004` (`CC-20261019-SCIENTISTD-DEBT-02`); reading `complete_fulltext_read`, receipt `FTR-20261019-22484428-01`.
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -4265,7 +4271,7 @@ Serves to:
 **Claim links:** none
 **Working Model impact:** none yet
 **Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
+**Next action:** none — read; landing [[paper_registry_current#PAPER 367]]
 **Flags:** corpus placeholder / not yet screened
 **Note:** Title: WWOX-mediated apoptosis in A549 cells mainly involves the mitochondrial pathway
 
@@ -6136,7 +6142,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 27339895 / PMC5016130 / DOI 10.1074/jbc.M116.716167
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
+**Date processed:** 2026-10-19 (`FTR-20261019-27339895-01`)
 **Date last touched:** 2026-04-18
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
@@ -6145,7 +6151,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 362]] by `BATCH_20261019_004` (`CC-20261019-SCIENTISTD-DEBT-01`); reading `partial_fulltext_read`, receipt `FTR-20261019-27339895-01`.
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Genotype/model tag:** unassigned in triage
 **Species:** mouse
@@ -6156,8 +6163,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Claim links:** none — triage only
 **Working Model impact:** none yet
 **Report mentions:** FASE 1 triage 221–400
-**Current status:** screened — C
-**Next action:** background-only; escalate only on convergence signal
+**Current status:** processed — see the Status note
+**Next action:** none — read; landing [[paper_registry_current#PAPER 362]]
 **Flags:** FASE 1 batch entry / no deep-dive yet
 **Note:** Title: Role of WW Domain-containing Oxidoreductase WWOX in Driving T Cell Acute Lymphoblastic Leukemia Maturation
 
@@ -7953,7 +7960,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 25612104 / PMC4303423 / DOI 10.1371/journal.pone.0115353
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
+**Date processed:** 2026-10-19 (`FTR-20261019-25612104-01`)
 **Date last touched:** 2026-04-18
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
@@ -7962,7 +7969,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 369]] by `BATCH_20261019_004` (`CC-20261019-SCIENTISTD-DEBT-02`); reading `partial_fulltext_read`, receipt `FTR-20261019-25612104-01`.
 **Primary pathway:** oncology / tumor suppressor biology
 **Genotype/model tag:** unassigned in triage
 **Species:** not assessed in triage
@@ -7973,8 +7981,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Claim links:** none — triage only
 **Working Model impact:** none yet
 **Report mentions:** FASE 1 triage 221–400
-**Current status:** screened — C
-**Next action:** background-only; escalate only on convergence signal
+**Current status:** processed — see the Status note
+**Next action:** none — read; landing [[paper_registry_current#PAPER 369]]
 **Flags:** FASE 1 batch entry / no deep-dive yet
 **Note:** Title: Epigenetic and genetic alterations affect the WWOX gene in head and neck squamous cell carcinoma
 
@@ -9565,7 +9573,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 19484134 / PMC2685983 / DOI 10.1371/journal.pone.0005755
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
+**Date processed:** 2026-10-19 (`FTR-20261019-19484134-01`, resume of `FTR-20260921-19484134-01`)
 **Date last touched:** 2026-04-18
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
@@ -9574,7 +9582,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 387]] by `BATCH_20261019_005` (`CC-20261019-SCIENTIST-A-PLASMA-02`); reading `complete_fulltext_read`, receipt `FTR-20261019-19484134-01`.
 **Primary pathway:** oncology / tumor suppressor biology
 **Genotype/model tag:** unassigned in triage
 **Species:** not assessed in triage
@@ -9586,7 +9595,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Working Model impact:** none yet
 **Report mentions:** FASE 1 triage 221–400
 **Current status:** screened — C
-**Next action:** background-only; escalate only on convergence signal
+**Next action:** none — read; landing [[paper_registry_current#PAPER 387]]
 **Flags:** FASE 1 batch entry / no deep-dive yet
 **Note:** Title: Complement C1q activates tumor suppressor WWOX to induce apoptosis in prostate cancer cells
 
@@ -9942,7 +9951,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 27655721 / PMC5342485 / DOI 10.18632/oncotarget.12082
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
+**Date processed:** 2026-10-19 (`FTR-20261019-27655721-01`)
 **Date last touched:** 2026-04-18
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
@@ -9951,7 +9960,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 368]] by `BATCH_20261019_004` (`CC-20261019-SCIENTISTD-DEBT-02`); reading `complete_fulltext_read`, receipt `FTR-20261019-27655721-01`.
 **Primary pathway:** oncology / tumor suppressor biology
 **Genotype/model tag:** unassigned in triage
 **Species:** human
@@ -9962,8 +9972,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Claim links:** none — triage only
 **Working Model impact:** none yet
 **Report mentions:** FASE 1 triage 221–400
-**Current status:** screened — C
-**Next action:** background-only; escalate only on convergence signal
+**Current status:** processed — see the Status note
+**Next action:** none — read; landing [[paper_registry_current#PAPER 368]]
 **Flags:** FASE 1 batch entry / no deep-dive yet
 **Note:** Title: Functional genetic variant in the Kozak sequence of WW domain-containing oxidoreductase (WWOX) gene is associated with oral cancer risk
 
@@ -10350,7 +10360,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 28426730 / PMC5398630 / DOI 10.1371/journal.pone.0176141
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
+**Date processed:** 2026-10-19 (`FTR-20261019-28426730-01`)
 **Date last touched:** 2026-04-18
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
@@ -10359,7 +10369,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 360]] by `BATCH_20261019_004` (`CC-20261019-SCIENTISTD-DEBT-01`); reading `complete_fulltext_read`, receipt `FTR-20261019-28426730-01`.
 **Primary pathway:** oncology / tumor suppressor biology
 **Genotype/model tag:** unassigned in triage
 **Species:** human
@@ -10370,8 +10381,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Claim links:** none — triage only
 **Working Model impact:** none yet
 **Report mentions:** FASE 1 triage 221–400
-**Current status:** screened — C
-**Next action:** background-only; escalate only on convergence signal
+**Current status:** processed — see the Status note
+**Next action:** none — read; landing [[paper_registry_current#PAPER 360]]
 **Flags:** FASE 1 batch entry / no deep-dive yet
 **Note:** Title: Functional genetic variant of WW domain-containing oxidoreductase (WWOX) gene is associated with hepatocellular carcinoma risk
 
@@ -10486,7 +10497,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 19366691 / PMC2708898 / DOI 10.1074/jbc.M806688200
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
+**Date processed:** 2026-10-19 (`FTR-20261019-19366691-01`)
 **Date last touched:** 2026-04-18
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
@@ -10495,7 +10506,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 358]] by `BATCH_20261019_004` (`CC-20261019-SCIENTISTD-DEBT-01`); reading `partial_fulltext_read`, receipt `FTR-20261019-19366691-01`.
 **Primary pathway:** oncology / tumor suppressor biology
 **Genotype/model tag:** unassigned in triage
 **Species:** not assessed in triage
@@ -10506,8 +10518,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Claim links:** none — triage only
 **Working Model impact:** none yet
 **Report mentions:** FASE 1 triage 221–400
-**Current status:** screened — C
-**Next action:** background-only; escalate only on convergence signal
+**Current status:** processed — see the Status note
+**Next action:** none — read; landing [[paper_registry_current#PAPER 358]]
 **Flags:** FASE 1 batch entry / no deep-dive yet
 **Note:** Title: Transforming growth factor beta1 signaling via interaction with cell surface Hyal-2 and recruitment of WWOX/WOX1
 
@@ -17769,3 +17781,802 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Note:** class-level record. Not medical advice.
 
 ---
+## LIT-0648
+**Short title:** Chen 2018 — WWOX rs9926344 and hepatocellular carcinoma recurrence: one surgical series, DNA from tumour tissue, no loss-of-function readout
+**Authors:** Chen W, Zhou C, Zhang W, Atyah M, Yin Y, Guo L, et al.
+**Year:** 2018
+**Source type:** primary research — surgical HCC cohort, SNP association (152 patients)
+**Journal/source:** *J Cancer* 2018;9(7):1239-1247
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 29675105 / PMC5907672 / DOI 10.7150/jca.23808
+**Date discovered:** 2026-10-19 (Scientist D, reading-debt chase of WWOX-direct primaries)
+**Date processed:** 2026-10-19 (`FTR-20261019-29675105-01`)
+**Discovery source:** reference of a paper read in the debt wave (`debts_wave_20261019_scientist-d.md`)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-DEBT-01` and authored by the batch integrator at `BATCH_20261019_004`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** oncology / tumor suppressor biology
+**Transferability:** T3
+**clinical relevance:** LOW — background
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/debts_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-29675105-01`; manifest `deepdive_manifests/PMID29675105.json`; landing [[paper_registry_current#PAPER 356]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0649
+**Short title:** Hong 2007 — Zfra, TNF and WOX1: overexpression in cultured lines; no mitochondrial measurement (the pointer is to a paper then "submitted")
+**Authors:** Hong Q, Hsu LJ, Schultz L, Pratt N, Mattison J, Chang NS
+**Year:** 2007
+**Source type:** primary research — cell-line overexpression, pull-downs, yeast two-hybrid
+**Journal/source:** *BMC Mol Biol* 2007;8:50
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 17567906 / PMC1904229 / DOI 10.1186/1471-2199-8-50
+**Date discovered:** 2026-10-19 (Scientist D, reading-debt chase of WWOX-direct primaries)
+**Date processed:** 2026-10-19 (`FTR-20261019-17567906-01`)
+**Discovery source:** reference of a paper read in the debt wave (`debts_wave_20261019_scientist-d.md`)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-DEBT-01` and authored by the batch integrator at `BATCH_20261019_004`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW — background
+**Claim links:** CLAIM 009 (annotation only: the wave note of this batch on the mitochondrial-localisation leg; status and type unchanged)
+**Working Model impact:** none
+**Report mentions:** `research/debts_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-17567906-01`; manifest `deepdive_manifests/PMID17567906.json`; landing [[paper_registry_current#PAPER 357]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0650
+**Short title:** Lin 2011 — a WOX1/MEK1 complex in T-leukaemia cells: Jurkat only, 10 micromolar PMA, one confocal field per time point; the primary behind two mitochondrial sentences
+**Authors:** Lin HP, Chang JY, Lin SR, Lee MH, Huang SS, Hsu LJ, et al.
+**Year:** 2011
+**Source type:** primary research — T-leukaemia cell lines, pharmacological stimulus
+**Journal/source:** *Genes Cancer* 2011;2(5):550-562
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 21901168 / PMC3161421 / DOI 10.1177/1947601911418498
+**Date discovered:** 2026-10-19 (Scientist D, reading-debt chase of WWOX-direct primaries)
+**Date processed:** 2026-10-19 (`FTR-20261019-21901168-01`)
+**Discovery source:** reference of a paper read in the debt wave (`debts_wave_20261019_scientist-d.md`)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-DEBT-01` and authored by the batch integrator at `BATCH_20261019_004`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW — background
+**Claim links:** CLAIM 009 (annotation only: the wave note of this batch on the mitochondrial-localisation leg; status and type unchanged)
+**Working Model impact:** none
+**Report mentions:** `research/debts_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-21901168-01`; manifest `deepdive_manifests/PMID21901168.json`; landing [[paper_registry_current#PAPER 361]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0651
+**Short title:** Lee 2015 — Zfra peptide, spleen "Z cells" and a Wwox heterozygote "cure": one mouse, inconsistent counting (the primary behind Hsu 2016)
+**Authors:** Lee MH, Su WP, Wang WJ, Lin SR, Lu CY, Chen YA, et al.
+**Year:** 2015
+**Source type:** primary research — mouse tumour-transfer experiments with a synthetic peptide
+**Journal/source:** *Oncotarget* 2015;6(6):3737-3751
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 25686832 / PMC4414150 / DOI 10.18632/oncotarget.2895
+**Date discovered:** 2026-10-19 (Scientist D, reading-debt chase of WWOX-direct primaries)
+**Date processed:** 2026-10-19 (`FTR-20261019-25686832-01`)
+**Discovery source:** reference of a paper read in the debt wave (`debts_wave_20261019_scientist-d.md`)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-DEBT-02` and authored by the batch integrator at `BATCH_20261019_004`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** oncology / tumor suppressor biology
+**Transferability:** T3
+**clinical relevance:** LOW — background
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/debts_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-25686832-01`; manifest `deepdive_manifests/PMID25686832.json`; landing [[paper_registry_current#PAPER 366]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0652
+**Short title:** Sinha 2026 — a protocol, not a review, for a systematic review of iron supplementation, myelination and neurodevelopment in children aged 0 to 3 years
+**Authors:** Sinha A, Kuruba YP, Kumar P, Thalukdar R, Gupta S, Pradhan A, et al.
+**Year:** 2026
+**Source type:** protocol of a systematic review (no results)
+**Journal/source:** *Front Pediatr* 2026;14:1891295
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42712566 / PMC13550114 / DOI 10.3389/fped.2026.1891295
+**Date discovered:** 2026-10-19 (Scientist A, group H1)
+**Date processed:** 2026-10-19 (`FTR-20261019-42712566-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H1)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-42712566-01`; manifest `deepdive_manifests/PMID42712566.json`; landing [[paper_registry_current#PAPER 370]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0653
+**Short title:** Jin 2023 — ferroptosis inhibitors in epilepsy: a narrative review of chemoconvulsant rodent models and cell-stress lines
+**Authors:** Jin Y, Ren L, Jing X, Wang H
+**Year:** 2023
+**Source type:** narrative review (secondary source)
+**Journal/source:** *Front Pharmacol* 2023;14:1185071
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 37124220 / PMC10133701 / DOI 10.3389/fphar.2023.1185071
+**Date discovered:** 2026-10-19 (Scientist A, group H1)
+**Date processed:** 2026-10-19 (`FTR-20261019-37124220-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H1)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-37124220-01`; manifest `deepdive_manifests/PMID37124220.json`; landing [[paper_registry_current#PAPER 371]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0654
+**Short title:** Porras 2024 — Irp2-null mouse behaviour: a milder murine phenotype than the human iron-misregulation disease
+**Authors:** Porras C, Olliviere H, Bradley SP, Graham AM, Chudasama Y, Rouault TA
+**Year:** 2024
+**Source type:** primary research — constitutive knockout mouse behavioural battery
+**Journal/source:** *Curr Res Neurobiol* 2024;7:100136
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39239479 / PMC11372806 / DOI 10.1016/j.crneur.2024.100136
+**Date discovered:** 2026-10-19 (Scientist A, group H1)
+**Date processed:** 2026-10-19 (`FTR-20261019-39239479-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H1)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-39239479-01`; manifest `deepdive_manifests/PMID39239479.json`; landing [[paper_registry_current#PAPER 372]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0655
+**Short title:** Padda 2021 — anaemia, epilepsy and antiseizure drugs: a narrative review
+**Authors:** Padda J, Khalid K, Syam M, Kakani V, Kankeu Tonpouwo G, Dhakal R, et al.
+**Year:** 2021
+**Source type:** narrative review (secondary source)
+**Journal/source:** *Cureus* 2021;13(11):e19334
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 34909297 / PMC8653853 / DOI 10.7759/cureus.19334
+**Date discovered:** 2026-10-19 (Scientist A, group H1)
+**Date processed:** 2026-10-19 (`FTR-20261019-34909297-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H1)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-34909297-01`; manifest `deepdive_manifests/PMID34909297.json`; landing [[paper_registry_current#PAPER 373]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0656
+**Short title:** Garcia-Delgado 2025 — deferasirox before and after in transfusion-dependent myelodysplastic syndrome: leukocyte redox and mitochondrial readouts in 23 adults
+**Authors:** García-Delgado R, Moreno-Carrasco G, Carrasco-Gomariz M, García-Segovia S, Flores RMO, Torres-González J, et al.
+**Year:** 2025
+**Source type:** primary research — uncontrolled before-and-after, adults
+**Journal/source:** *Front Immunol* 2025;16:1683941
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41293173 / PMC12640865 / DOI 10.3389/fimmu.2025.1683941
+**Date discovered:** 2026-10-19 (Scientist A, group H1)
+**Date processed:** 2026-10-19 (`FTR-20261019-41293173-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H1)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-41293173-01`; manifest `deepdive_manifests/PMID41293173.json`; landing [[paper_registry_current#PAPER 374]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0657
+**Short title:** Fitz 2026 — iron supplementation and infant neurodevelopment: a review whose benefit is confined to iron-deficient or high-risk infants
+**Authors:** Fitz SJT, Sanchez VJ, Hoyos AM, Pena DEM
+**Year:** 2026
+**Source type:** systematic-style review (secondary source)
+**Journal/source:** *Children (Basel)* 2026;13(9)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42794294 / PMC13605664 / DOI 10.3390/children13091274
+**Date discovered:** 2026-10-19 (Scientist A, group H1)
+**Date processed:** 2026-10-19 (`FTR-20261019-42794294-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H1)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-42794294-01`; manifest `deepdive_manifests/PMID42794294.json`; landing [[paper_registry_current#PAPER 375]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0658
+**Short title:** Chock 2023 — tissue oxygenation by near-infrared spectroscopy after red-cell transfusion in extremely preterm infants (TOP NIRS substudy)
+**Authors:** Chock VY, Kirpalani H, Bell EF, Tan S, Hintz SR, Ball MB, et al.
+**Year:** 2023
+**Source type:** primary research — nested substudy of a randomised trial, exploratory outcome analysis
+**Journal/source:** *JAMA Netw Open* 2023;6(9):e2334889
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 37733345 / PMC10514737 / DOI 10.1001/jamanetworkopen.2023.34889
+**Date discovered:** 2026-10-19 (Scientist A, group H1)
+**Date processed:** 2026-10-19 (`FTR-20261019-37733345-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H1)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-37733345-01`; manifest `deepdive_manifests/PMID37733345.json`; landing [[paper_registry_current#PAPER 376]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0659
+**Short title:** Bailey 2026 — liberal against restrictive haemoglobin thresholds and cerebral oxygenation: a meta-analysis of seven NIRS studies
+**Authors:** Bailey DN, Noone AN, Crawford TM, Andersen CC, Stark MJ
+**Year:** 2026
+**Source type:** systematic review and meta-analysis
+**Journal/source:** *Neonatology* 2026
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42313692 / PMC13441262 / DOI 10.1159/000553042
+**Date discovered:** 2026-10-19 (Scientist A, group H1)
+**Date processed:** 2026-10-19 (`FTR-20261019-42313692-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H1)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-42313692-01`; manifest `deepdive_manifests/PMID42313692.json`; landing [[paper_registry_current#PAPER 377]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0660
+**Short title:** Shafique 2024 — neonatal red-cell transfusion strategies: a narrative review without methods
+**Authors:** Shafique MA, Abbas SQ, Habiba U, Mughal A, Fadlalla Ahmad TK, Munir Chaudhary A
+**Year:** 2024
+**Source type:** narrative review (secondary source)
+**Journal/source:** *Ann Med Surg (Lond)* 2024;86(3):1550-1562
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 38463073 / PMC10923393 / DOI 10.1097/MS9.0000000000001751
+**Date discovered:** 2026-10-19 (Scientist A, group H1)
+**Date processed:** 2026-10-19 (`FTR-20261019-38463073-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H1)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-38463073-01`; manifest `deepdive_manifests/PMID38463073.json`; landing [[paper_registry_current#PAPER 378]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0661
+**Short title:** Nguyen 2026 — physiology-guided red-cell transfusion in adult critical illness: an expert perspective
+**Authors:** Nguyen TL, Le QD, Huynh PNA, Ho VHN, Tran CD, Duong VP, et al.
+**Year:** 2026
+**Source type:** expert perspective (secondary source)
+**Journal/source:** *Sci Prog* 2026;109(1):368504261440780
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41904698 / PMC13067254 / DOI 10.1177/00368504261440780
+**Date discovered:** 2026-10-19 (Scientist A, group H1)
+**Date processed:** 2026-10-19 (`FTR-20261019-41904698-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H1)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-41904698-01`; manifest `deepdive_manifests/PMID41904698.json`; landing [[paper_registry_current#PAPER 379]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0662
+**Short title:** De Rose 2026 — blood-product burden in 142 neonates treated with hypothermia for hypoxic-ischaemic encephalopathy
+**Authors:** De Rose DU, Maddaloni C, Ronci S, Campi F, Caoci S, Martini L, et al.
+**Year:** 2026
+**Source type:** primary research — single-centre retrospective cohort
+**Journal/source:** *Children (Basel)* 2026;13(9)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42794205 / PMC13605100 / DOI 10.3390/children13091185
+**Date discovered:** 2026-10-19 (Scientist A, group H1)
+**Date processed:** 2026-10-19 (`FTR-20261019-42794205-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H1)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-42794205-01`; manifest `deepdive_manifests/PMID42794205.json`; landing [[paper_registry_current#PAPER 380]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0663
+**Short title:** Jadhav 2024 — iron-deficiency anaemia and first febrile seizure: a 150-child case-control study
+**Authors:** Jadhav R, Pande V, Garud B, Mane S
+**Year:** 2024
+**Source type:** primary research — single-hospital case-control
+**Journal/source:** *Cureus* 2024;16(11):e74129
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39712732 / PMC11662512 / DOI 10.7759/cureus.74129
+**Date discovered:** 2026-10-19 (Scientist A, group H1)
+**Date processed:** 2026-10-19 (`FTR-20261019-39712732-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H1)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-39712732-01`; manifest `deepdive_manifests/PMID39712732.json`; landing [[paper_registry_current#PAPER 381]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0664
+**Short title:** Arsyad 2020 — a long-term home-made ketogenic diet in 15 healthy adult rats: weight loss, ketosis, lower haemoglobin and oxidative markers
+**Authors:** Arsyad A, Idris I, Rasyid AA, Usman RA, Faradillah KR, Latif WOU, et al.
+**Year:** 2020
+**Source type:** primary research — rodent diet study
+**Journal/source:** *J Nutr Metab* 2020;2020:3642035
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 32685205 / PMC7341377 / DOI 10.1155/2020/3642035
+**Date discovered:** 2026-10-19 (Scientist A, group H1)
+**Date processed:** 2026-10-19 (`FTR-20261019-32685205-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H1)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-32685205-01`; manifest `deepdive_manifests/PMID32685205.json`; landing [[paper_registry_current#PAPER 382]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0665
+**Short title:** Karayanni 2026 — the complement-microglia axis in paediatric epilepsy: a narrative review
+**Authors:** Karayanni M, Mitsoudis N, Vanakliotou M, Bakirtzis C, Kesidou E, Polyzoidou E, Liana E
+**Year:** 2026
+**Source type:** narrative review (secondary source)
+**Journal/source:** *Biomedicines* 2026;14(8)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42652171 / PMC13509543 / DOI 10.3390/biomedicines14081788
+**Date discovered:** 2026-10-19 (Scientist A, group H2)
+**Date processed:** 2026-10-19 (`FTR-20261019-42652171-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-42652171-01`; manifest `deepdive_manifests/PMID42652171.json`; landing [[paper_registry_current#PAPER 384]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0666
+**Short title:** Jeong 2026 — C1q neutralisation after pilocarpine status epilepticus in mice: fewer interictal spikes at five weeks, no tested timing window
+**Authors:** Jeong Y, Lim HK, Kim H, Lee J, Lee S, Suh M
+**Year:** 2026
+**Source type:** primary research — mouse status-epilepticus model, partial depth
+**Journal/source:** *Epilepsia* 2026;67(2):908-922
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41118244 / PMC12927691 / DOI 10.1111/epi.18678
+**Date discovered:** 2026-10-19 (Scientist A, group H2)
+**Date processed:** 2026-10-19 (`FTR-20261019-41118244-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-41118244-01`; manifest `deepdive_manifests/PMID41118244.json`; landing [[paper_registry_current#PAPER 385]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0667
+**Short title:** Pinzon-Hoyos 2025 — serum complement and cytokines in 46 adults with drug-resistant epilepsy against 45 healthy controls: lower complement, cause and direction unseparated
+**Authors:** Pinzon-Hoyos N, Li Y, McGee M, Poolos NP, Marchi N, Brewster AL
+**Year:** 2025
+**Source type:** primary research — single-draw case-control pilot, partial depth
+**Journal/source:** *Sci Rep* 2025;15(1):5096
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39934240 / PMC11814292 / DOI 10.1038/s41598-025-88654-5
+**Date discovered:** 2026-10-19 (Scientist A, group H2)
+**Date processed:** 2026-10-19 (`FTR-20261019-39934240-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-39934240-01`; manifest `deepdive_manifests/PMID39934240.json`; landing [[paper_registry_current#PAPER 386]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0668
+**Short title:** Wang 2024 — serum immunoglobulins, lymphocyte subsets and cytokines before and after ACTH in 35 infants with infantile spasms
+**Authors:** Wang X, Huang Q, Wu L, Yang Y, Ye X, Yang B
+**Year:** 2024
+**Source type:** primary research — single-hospital cohort against healthy controls
+**Journal/source:** *Front Pediatr* 2024;12:1365917
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39055621 / PMC11270505 / DOI 10.3389/fped.2024.1365917
+**Date discovered:** 2026-10-19 (Scientist A, group H2)
+**Date processed:** 2026-10-19 (`FTR-20261019-39055621-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-39055621-01`; manifest `deepdive_manifests/PMID39055621.json`; landing [[paper_registry_current#PAPER 388]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0669
+**Short title:** Jiang 2025 — astrocytic C3 expression after status epilepticus with a C3-tdTomato reporter: expression only, three animals per time point
+**Authors:** Jiang M, Romagnolo A, Aronica E, Wang Y
+**Year:** 2025
+**Source type:** primary research — reporter mouse and human tissue transcripts, partial depth
+**Journal/source:** *Front Neurol* 2025;16:1682488
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41346378 / PMC12672298 / DOI 10.3389/fneur.2025.1682488
+**Date discovered:** 2026-10-19 (Scientist A, group H2)
+**Date processed:** 2026-10-19 (`FTR-20261019-41346378-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-41346378-01`; manifest `deepdive_manifests/PMID41346378.json`; landing [[paper_registry_current#PAPER 389]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0670
+**Short title:** Veremeyko 2023 — C3- and C4B-knockout mice in PTZ seizures: C4B-null mice die, C3-null mice do not
+**Authors:** Veremeyko T, Jiang R, He M, Ponomarev ED
+**Year:** 2023
+**Source type:** primary research — germline knockout mice
+**Journal/source:** *Front Cell Neurosci* 2023;17:1170031
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 37234916 / PMC10206007 / DOI 10.3389/fncel.2023.1170031
+**Date discovered:** 2026-10-19 (Scientist A, group H2)
+**Date processed:** 2026-10-19 (`FTR-20261019-37234916-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-37234916-01`; manifest `deepdive_manifests/PMID37234916.json`; landing [[paper_registry_current#PAPER 390]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0671
+**Short title:** Ebdalla 2026 — intravenous immunoglobulin in 60 children with drug-resistant epilepsy: a retrospective cohort without a comparator
+**Authors:** Ebdalla A, Scantlebury MH, Appendino JP, Ho A, Jacobs J
+**Year:** 2026
+**Source type:** primary research — single-centre retrospective cohort
+**Journal/source:** *Front Neurol* 2026;17:1796553
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42064976 / PMC13127252 / DOI 10.3389/fneur.2026.1796553
+**Date discovered:** 2026-10-19 (Scientist A, group H2)
+**Date processed:** 2026-10-19 (`FTR-20261019-42064976-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-42064976-01`; manifest `deepdive_manifests/PMID42064976.json`; landing [[paper_registry_current#PAPER 391]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0672
+**Short title:** Hu 2024 — COL4A2 variants, infantile spasms and astrocyte neuroinflammation: eight patients and overexpression in LPS-stimulated astrocytes
+**Authors:** Hu C, Liu D, Wang H
+**Year:** 2024
+**Source type:** primary research — small clinical series with cell-line and primary-astrocyte overexpression
+**Journal/source:** *Int J Med Sci* 2024;21(9):1756-1768
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39006838 / PMC11241092 / DOI 10.7150/ijms.97164
+**Date discovered:** 2026-10-19 (Scientist A, group H2)
+**Date processed:** 2026-10-19 (`FTR-20261019-39006838-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-39006838-01`; manifest `deepdive_manifests/PMID39006838.json`; landing [[paper_registry_current#PAPER 392]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0673
+**Short title:** Suleymanova 2025 — blood-brain barrier disruption in epilepsy: a narrative review of albumin, TGF-beta and astrocyte excitability
+**Authors:** Suleymanova E, Karan A
+**Year:** 2025
+**Source type:** narrative review (secondary source)
+**Journal/source:** *Neurol Int* 2025;18(1)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41591075 / PMC12845512 / DOI 10.3390/neurolint18010001
+**Date discovered:** 2026-10-19 (Scientist A, group H2)
+**Date processed:** 2026-10-19 (`FTR-20261019-41591075-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-41591075-01`; manifest `deepdive_manifests/PMID41591075.json`; landing [[paper_registry_current#PAPER 393]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0674
+**Short title:** Preininger 2023 — albumin, TGF-beta and astrocyte senescence: seven days of albumin in rat astrocytes and mouse ventricular infusion
+**Authors:** Preininger MK, Zaytseva D, Lin JM, Kaufer D
+**Year:** 2023
+**Source type:** primary research — primary rat astrocytes and mouse intraventricular infusion
+**Journal/source:** *Aging Cell* 2023;22(2):e13747
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 36606305 / PMC9924950 / DOI 10.1111/acel.13747
+**Date discovered:** 2026-10-19 (Scientist A, group H2)
+**Date processed:** 2026-10-19 (`FTR-20261019-36606305-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-36606305-01`; manifest `deepdive_manifests/PMID36606305.json`; landing [[paper_registry_current#PAPER 394]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0675
+**Short title:** Sahin 2026 — therapeutic plasma exchange in 22 critically ill children with neuroimmunological disorders: a single-unit uncontrolled series
+**Authors:** Sahin EG, Guvenc KB, Yucel GA, Yasar E, Varol F, Durak C
+**Year:** 2026
+**Source type:** primary research — single-centre retrospective series
+**Journal/source:** *Children (Basel)* 2026;13(7)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42509933 / PMC13407348 / DOI 10.3390/children13070908
+**Date discovered:** 2026-10-19 (Scientist A, group H2)
+**Date processed:** 2026-10-19 (`FTR-20261019-42509933-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-42509933-01`; manifest `deepdive_manifests/PMID42509933.json`; landing [[paper_registry_current#PAPER 395]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0676
+**Short title:** Zamith 2025 — plasma exchange with albumin for refractory high anion gap acidosis: two adult cases
+**Authors:** Zamith N, Zetola NM
+**Year:** 2025
+**Source type:** case report (two adults)
+**Journal/source:** *Case Rep Crit Care* 2025;2025:8872468
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41393164 / PMC12698179 / DOI 10.1155/crcc/8872468
+**Date discovered:** 2026-10-19 (Scientist A, group H2)
+**Date processed:** 2026-10-19 (`FTR-20261019-41393164-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-41393164-01`; manifest `deepdive_manifests/PMID41393164.json`; landing [[paper_registry_current#PAPER 396]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0677
+**Short title:** Houben 2020 — fresh-frozen plasma use in 2577 preterm neonates over 16 years in one Dutch unit
+**Authors:** Houben NAM, Heeger LE, Stanworth SJ, New HV, van der Bom JG, Fustolo-Gunnink S, Lopriore E
+**Year:** 2020
+**Source type:** primary research — single-centre utilisation cohort across three epochs
+**Journal/source:** *J Clin Med* 2020;9(11)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 33238649 / PMC7700187 / DOI 10.3390/jcm9113789
+**Date discovered:** 2026-10-19 (Scientist A, group H2)
+**Date processed:** 2026-10-19 (`FTR-20261019-33238649-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-33238649-01`; manifest `deepdive_manifests/PMID33238649.json`; landing [[paper_registry_current#PAPER 397]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0678
+**Short title:** Tang 2026 — fresh-frozen plasma and intraventricular haemorrhage in 748 preterm infants with prolonged APTT: a target-trial emulation with a null primary estimate
+**Authors:** Tang B, Yu Q, Zhang J, Duan X, Meng T, Chen Z, et al.
+**Year:** 2026
+**Source type:** primary research — retrospective cohort, target-trial emulation
+**Journal/source:** *Front Neurosci* 2026;20:1950034
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42769206 / PMC13590724 / DOI 10.3389/fnins.2026.1950034
+**Date discovered:** 2026-10-19 (Scientist A, group H2)
+**Date processed:** 2026-10-19 (`FTR-20261019-42769206-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-42769206-01`; manifest `deepdive_manifests/PMID42769206.json`; landing [[paper_registry_current#PAPER 398]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0679
+**Short title:** Abergel 2023 — fresh-frozen plasma in a rat model of blunt head injury plus uncontrolled haemorrhage: more bleeding after plasma in one subgroup
+**Authors:** Abergel H, Bidder M, Ashkenazi I, Reytman L, Alfici R, Krausz MM
+**Year:** 2023
+**Source type:** primary research — rodent trauma model
+**Journal/source:** *Rambam Maimonides Med J* 2023;14(1)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 36719667 / PMC9888485 / DOI 10.5041/RMMJ.10489
+**Date discovered:** 2026-10-19 (Scientist A, group H2)
+**Date processed:** 2026-10-19 (`FTR-20261019-36719667-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-a.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-36719667-01`; manifest `deepdive_manifests/PMID36719667.json`; landing [[paper_registry_current#PAPER 399]]
+**Note:** class-level record. Not medical advice.
+
+---
+

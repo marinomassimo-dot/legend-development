@@ -1,0 +1,302 @@
+{
+ "schema_version": 2,
+ "pmid": "38978529",
+ "doi": "10.14581/jer.24005",
+ "receipt": "FTR-20261020-38978529-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/wave4_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-W4-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Europe PMC REST fullTextXML and the PMC OA open-data bucket for the seven figures; no supplement exists."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true,
+   "reason": "Run inline under the dispatch brief; this manifest and the note carry what the skill would produce."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate; the shared discovery ledger is written by the Orchestrator."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A paediatric neurology centre reporting two exome-diagnosed cases; descriptive clinical, not a WWOX group. Observation (what the patients had) is weighted above interpretation (late diagnosis explains partial response), and the report omits the confirmatory CSF measurement."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "cerebral folate deficiency[tiab] OR FOLR1[tiab]",
+    "count": 557,
+    "source": "PubMed ESearch 2026-10-20"
+   }
+  ],
+  "note": "No WWOX field density is claimed; this is a substitute read for what a folate-transport DEE looks like in practice."
+ },
+ "multihop": {
+  "references_enumerated": 13,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [
+   {
+    "queue": "CC-20261019-SCIENTIST-C-W4-01",
+    "why": "No reference is WWOX-direct; the FOLR1 review and case reports it cites were not opened."
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 38978529 --hops 0; fulltext_receipts.py status --pmid 38978529; ls receipt_staging/*",
+  "hits": 0,
+  "note": "No registry record, receipt or staged receipt."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-20 by PubMed EFetch: publication types Case Reports and Journal Article; no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 13,
+   "references_screened": 12,
+   "references_with_doi": 12,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38978529_Girgis2024_PMC.xml",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML for PMC11227922 (HTTP 200, 42,362 bytes).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11227922/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_rest_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "7d8164eab349473df95e5eda143b31a6286495d65be97c9ad8d0ec6c736fa514"
+  },
+  {
+   "path": "files/figures/PMID38978529/jer-24005f1.jpg",
+   "kind": "figure",
+   "note": "Figure 1, PMC OA open-data bucket (photograph of an imaging film montage).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11227922.1/jer-24005f1.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "66b1f783b45bed9b149f98cf83b5ce6ffb4299d34d4752edd0abdf7b84b3d701"
+  },
+  {
+   "path": "files/figures/PMID38978529/jer-24005f2.jpg",
+   "kind": "figure",
+   "note": "Figure 2, PMC OA open-data bucket (photograph of an imaging film montage).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11227922.1/jer-24005f2.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "c58a5b6786a9a8c49d7d3dfb815e5090570572077811b4b017b0a5d24c3798c0"
+  },
+  {
+   "path": "files/figures/PMID38978529/jer-24005f3.jpg",
+   "kind": "figure",
+   "note": "Figure 3, PMC OA open-data bucket (photograph of an imaging film montage).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11227922.1/jer-24005f3.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "7b12d0ecd4687006cc9141f953e22fbd570dbd6e2d255049b962f43cb076cc39"
+  },
+  {
+   "path": "files/figures/PMID38978529/jer-24005f4.jpg",
+   "kind": "figure",
+   "note": "Figure 4, PMC OA open-data bucket (photograph of an imaging film montage).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11227922.1/jer-24005f4.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "fbfab2f0c2b2a441ca52e83ced0527b8abe1ee7011c4c827cb3ef035de90a7c4"
+  },
+  {
+   "path": "files/figures/PMID38978529/jer-24005f5.jpg",
+   "kind": "figure",
+   "note": "Figure 5, PMC OA open-data bucket (photograph of an imaging film montage).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11227922.1/jer-24005f5.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "4fd13062f83d80530a7a91ea37332d50000cb16787ec8de1c08d0636866130a4"
+  },
+  {
+   "path": "files/figures/PMID38978529/jer-24005f6.jpg",
+   "kind": "figure",
+   "note": "Figure 6, PMC OA open-data bucket (photograph of an imaging film montage).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11227922.1/jer-24005f6.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "e459f6e5c9b74d924c94d29a6126afaacf6c5bdd800e100e1d316ba6ee95ab1d"
+  },
+  {
+   "path": "files/figures/PMID38978529/jer-24005f7.jpg",
+   "kind": "figure",
+   "note": "Figure 7, PMC OA open-data bucket (photograph of an imaging film montage).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11227922.1/jer-24005f7.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "121709d2728dfc6c9117f218ab65845bf37dc4e2ff3da5511822f8f5d9a18fb1"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC11227922/fullTextXML returned HTTP 200 (42,362 bytes) on 2026-10-20; the declared artefact is that response.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a supplement text layer or a figure image.",
+  "entries": [
+   {
+    "proposition": "SUBSTITUTE (NOT WWOX EVIDENCE). The defining readout of the disease, a low CSF 5-methyltetrahydrofolate, was NOT measured in either patient: the diagnosis rests on exome sequencing, so the report does not show what the CSF readout looks like in practice.",
+    "snippet": "Unfortunately, we could not measure the levels of CSF MTHF as the test is not present in our country.",
+    "surface": "body",
+    "anchor": "Discussion, CSF 5-MTHF paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "two unrelated girls with intractable myoclonic-atonic epilepsy, Egypt; SUBSTITUTE, not WWOX evidence",
+     "genotype": "homozygous FOLR1 variants (not WWOX)",
+     "endpoint": "CSF 5-MTHF not measured"
+    },
+    "artifact": "files/fulltext/PMID38978529_Girgis2024_PMC.xml"
+   },
+   {
+    "proposition": "Case 1's variant is called nonsense and written c.C382T p.R128W; by the usual protein-change notation Arg-to-Trp is a missense substitution (INFERENCE from the notation, not looked up in a database), so either the label or the protein change is wrong. Case 2's p.Cys109Ter is a stop.",
+    "snippet": "revealing homozygous nonsense pathogenic variant in FOLR1 gene in exon 3 c.C382T p.R128W",
+    "surface": "body",
+    "anchor": "Case presentation 1, last paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "two unrelated girls with intractable myoclonic-atonic epilepsy, Egypt; SUBSTITUTE, not WWOX evidence",
+     "genotype": "homozygous FOLR1 variants (not WWOX)",
+     "endpoint": "variant description"
+    },
+    "artifact": "files/fulltext/PMID38978529_Girgis2024_PMC.xml"
+   },
+   {
+    "proposition": "The routine metabolic work-up was NORMAL in the first patient, including blood ammonia, lactate, acylcarnitines, urine organic acids and CSF glucose, protein and lactate with a normal CSF-to-blood glucose ratio: a cerebral folate transport deficiency does not show on the standard metabolic screen listed in the review checklist, which is the class-level point.",
+    "snippet": "Laboratory investigations as blood ammonia, serum lactate, acyl carnitine profile in blood, and urine organic acid, were done with normal results.",
+    "surface": "body",
+    "anchor": "Case presentation 1, third paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "two unrelated girls with intractable myoclonic-atonic epilepsy, Egypt; SUBSTITUTE, not WWOX evidence",
+     "genotype": "homozygous FOLR1 variants (not WWOX)",
+     "endpoint": "routine metabolic screen"
+    },
+    "artifact": "files/fulltext/PMID38978529_Girgis2024_PMC.xml"
+   },
+   {
+    "proposition": "Treatment response is described without numbers: case 1 'better controlled (less frequent and less duration)' on 1 mg/kg/day intramuscular folinic acid; case 2 'partial reduction in the frequency of seizures' on 2 mg/kg/day; no seizure counts before and after, no EEG or CSF follow-up; the authors attribute incomplete control to late diagnosis.",
+    "snippet": "At this dose of folinic acid, seizures became better controlled (less frequent and less duration).",
+    "surface": "body",
+    "anchor": "Case presentation 1, last paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "two unrelated girls with intractable myoclonic-atonic epilepsy, Egypt; SUBSTITUTE, not WWOX evidence",
+     "genotype": "homozygous FOLR1 variants (not WWOX)",
+     "endpoint": "seizure response to folinic acid"
+    },
+    "artifact": "files/fulltext/PMID38978529_Girgis2024_PMC.xml"
+   },
+   {
+    "proposition": "Class-level caution stated in the Discussion: folic acid competes with folinic acid at the folate receptor and is contraindicated in this condition; a folate supplement is therefore not a neutral addition in a folate-transport disorder.",
+    "snippet": "Interestingly, folic acid is contraindicated in these conditions as it competitively binds to FRα, further reducing 5-MTHF transport into the brain.",
+    "surface": "body",
+    "anchor": "Discussion, treatment paragraph, last sentence",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "two unrelated girls with intractable myoclonic-atonic epilepsy, Egypt; SUBSTITUTE, not WWOX evidence",
+     "genotype": "homozygous FOLR1 variants (not WWOX)",
+     "endpoint": "treatment caution"
+    },
+    "artifact": "files/fulltext/PMID38978529_Girgis2024_PMC.xml"
+   },
+   {
+    "proposition": "Figures 1-7 (opened): photographs of film montages (axial and sagittal MRI, CT, one EEG segment) of the two patients; no scale, annotation or arrow marks the stated finding on any panel (cerebellar atrophy, calcifications); they illustrate, they do not quantify. The EEG (Figure 4) shows a generalised discharge pattern.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figures 1-7, MRI, CT and EEG photographs of two patients with FOLR1 variants.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38978529/jer-24005f1.jpg",
+    "anchor": "Figures 1-7, native JPEGs",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "two unrelated girls with intractable myoclonic-atonic epilepsy, Egypt; SUBSTITUTE, not WWOX evidence",
+     "genotype": "homozygous FOLR1 variants (not WWOX)",
+     "endpoint": "imaging illustrations"
+    },
+    "found_or_sought": "sought"
+   }
+  ]
+ }
+}

@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-19T20:00:00Z",
+ "event_at": "2026-10-19T20:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "not_read",
+  "figures": "not_present",
+  "tables": "read",
+  "discussion": "captions_only",
+  "limitations": "not_present",
+  "supplementary": "not_present"
+ },
+ "event_id": "FTR-20261019-42846717-01",
+ "evidence_basis": [
+  "Review sections relevant to early-infantile and migrating-seizure syndromes, gene-specific responses and adverse effects read; six syndrome sections not read.",
+  "FIND: WWOX does not occur; ketogenic evidence in the syndrome classes that contain WWOX-DEE is small case series; hypoglycemia at induction is a listed adverse effect with glucose monitoring recommended."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42846717.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID42846717.md",
+  "disease-models/wwox/research/wave4_scientist-b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "91d2f62e085398d1590d569b24f540f43a0587aa9961443bcedba74f990c2941",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID42846717_Samanta2026_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.3389/fped.2026.1958733",
+  "pmid": "42846717"
+ },
+ "workflow": "scientist-b wave 4 group W1; SOURCE_FIRST; PMC efetch XML re-acquired with pmc_bucket_fetch.py, no User-Agent; locators verified by deepdive_manifest.py. Prepared as a JSON file for the integrator and not appended."
+}

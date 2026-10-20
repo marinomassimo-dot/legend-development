@@ -1,0 +1,306 @@
+{
+ "schema_version": 2,
+ "pmid": "29581896",
+ "doi": "10.1038/s41420-018-0047-4",
+ "receipt": "FTR-20261019-29581896-01",
+ "landing": [
+  "FTR-20261019-29581896-01",
+  "wave4_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: PMC efetch XML, figures, supplements and PDF came from the bucket."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: read directly under the Scientist brief."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no baseline claim is narrowed, reversed or removed and no MAJOR change is declared."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 66,
+  "publications_on_gene": 66,
+  "counts_measured": "PubMed esearch 2026-10-20: Chang NS[au] AND WWOX 66 (senior author).",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "weighting": "The group that originated the method and the pathway reviews its own earlier data; panels are adapted from earlier papers.",
+  "note": "Perspective article; unpublished and submitted data are cited."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "Chang NS[au] AND WWOX",
+    "route": "PubMed esearch count 2026-10-20",
+    "count": 66
+   }
+  ],
+  "note": "Count as returned by the API on the date."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 34,
+  "gene_direct_refs_in_source": [
+   "27339895",
+   "27845895",
+   "27551439",
+   "21901168",
+   "19366691",
+   "27999774",
+   "26499798",
+   "29310447"
+  ],
+  "enumeration_method": "<ref> elements with WWOX, Wwox, WOX1, WOREE or FRA16D in the citation text and a PMID; 0 more carry no PMID.",
+  "resolved": [
+   "27339895",
+   "27845895",
+   "27551439",
+   "21901168",
+   "19366691",
+   "27999774",
+   "26499798",
+   "29310447"
+  ],
+  "queued": [],
+  "note": "Resolved = already has a manifest or receipt; queued = listed for the Orchestrator as reading debt (this actor does not edit the queue)."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 29581896; registry comparison after the first pass",
+  "hits": 0,
+  "finding": "No receipt before this one."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-20",
+  "route": "PMC efetch XML front matter; dependency_integrity.py screen",
+  "result": "No retraction, correction or expression of concern found.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [
+    {
+     "citing_relation": "Citation only: reference 28, cited in a sentence on ERK interacting with downstream adaptors such as BIM, MCL1 and RSK in the general discussion of branching signalling; no data or method of this review depends on it, and the retraction concerns a leukaemia MEK-inhibition and MCL-1 paper.",
+     "doi": "10.1038/leu.2011.287",
+     "nature": "Retraction",
+     "reason_verbatim": "Concerns/Issues about Data;Duplication of/in Image;Investigation by Journal/Publisher;Objections by Author(s);Unreliable Data;Unreliable Results and/or Conclusions;",
+     "retraction_date": "7/18/2024 0:00",
+     "retraction_pmid": "39025987",
+     "verdict": "FLAGGED_RETRACTION"
+    }
+   ],
+   "noted": [],
+   "paper_verdict": "FLAGGED_RETRACTION",
+   "reference_source": "cache",
+   "references_declared": 34,
+   "references_screened": 34,
+   "references_with_doi": 34,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID29581896_Kuo2018_PMC_r2.xml",
+   "sha256": "e491873a723be80865e3e597107d2aa12585aab9689c04fee85173ce6991958a",
+   "kind": "article_text",
+   "note": "PMC efetch JATS for PMC5864757 (Cell Death Discov 2018, CC BY), 76,308 bytes.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "e491873a723be80865e3e597107d2aa12585aab9689c04fee85173ce6991958a",
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC5864757&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID29581896_r2/41420_2018_47_Fig1_HTML.jpg",
+   "sha256": "e6747bd22bc3c537508781ebb51a86b9d491f808300e664cf02a7466dacccd10",
+   "kind": "figure",
+   "note": "Figure 1 from the PMC open-data bucket (not opened).",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "e6747bd22bc3c537508781ebb51a86b9d491f808300e664cf02a7466dacccd10",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5864757.1/41420_2018_47_Fig1_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID29581896_r2/41420_2018_47_Fig2_HTML.jpg",
+   "sha256": "d33b895c1de7fb773bb2840591d9eb112888416e19a9d628a9606484aa8e6dd8",
+   "kind": "figure",
+   "note": "Figure 2 from the PMC open-data bucket, opened as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "d33b895c1de7fb773bb2840591d9eb112888416e19a9d628a9606484aa8e6dd8",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5864757.1/41420_2018_47_Fig2_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID29581896_r2/41420_2018_47_Fig3_HTML.jpg",
+   "sha256": "71df41b111330e91c682cab60b61e4841b0e3a586b9ecca3bfdfa4a694460b5e",
+   "kind": "figure",
+   "note": "Figure 3 from the PMC open-data bucket (not opened).",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "71df41b111330e91c682cab60b61e4841b0e3a586b9ecca3bfdfa4a694460b5e",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5864757.1/41420_2018_47_Fig3_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch JATS for PMC5864757 retrieved 2026-10-20, 76,308 bytes; the whole body is indexed locally for exact-text checks.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "SOURCE_FIRST. Whole text read; Figure 2 opened as an image, Figures 1 and 3 and the six videos and supplementary PDF not opened (captions only), so figures and supplementary are captions_only and depth is partial.",
+  "entries": [
+   {
+    "proposition": "The review states the design: energy relays from the first fluorophore to the second and then the third, and the arrangement is meant to prevent direct transfer from the first to the third because their emission and excitation ranges do not overlap.",
+    "snippet": "The energy transfer strategy is designed so that emitted energy from the first protein does not go directly to the third one, as there is no overlap in the emission and the excitation energy range.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29581896_Kuo2018_PMC_r2.xml",
+    "anchor": "Introduction",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "ectopic overexpression of tagged WWOX, Smad4, p53, IkBalpha, ERK, Hyal-2 in COS7, DU145 and NCI-H1299 cells, time-lapse three-colour FRET",
+     "genotype": "transient cDNA expression; dominant-negative WWOX and p53 controls",
+     "comparator": "ECFP/DsRed and empty-vector controls"
+    }
+   },
+   {
+    "proposition": "The key time-lapse result (Fig 1b) is an average of two experiments with its range; the negative controls in the same figure are n = 3; no statistical test is described for any FRET trace in the article.",
+    "snippet": "The bar graph is an average of two experiments and its range.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29581896_Kuo2018_PMC_r2.xml",
+    "anchor": "Figure 1 legend, panel b",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "ectopic overexpression of tagged WWOX, Smad4, p53, IkBalpha, ERK, Hyal-2 in COS7, DU145 and NCI-H1299 cells, time-lapse three-colour FRET",
+     "genotype": "transient cDNA expression; dominant-negative WWOX and p53 controls",
+     "comparator": "ECFP/DsRed and empty-vector controls"
+    }
+   },
+   {
+    "proposition": "Several panels are reproduced from the authors earlier papers (Fig 1b-d, 1e-i, 2a-c, 2f-g, 3a-c with permissions); the new analysis is an exponential regression of earlier curves done in a spreadsheet to define a driver phase and an execution phase.",
+    "snippet": "Exponential regression analysis was carried out for Figs. 2a, 1b, e by Excel software program.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29581896_Kuo2018_PMC_r2.xml",
+    "anchor": "Figure 3 legend, panels d-f",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "ectopic overexpression of tagged WWOX, Smad4, p53, IkBalpha, ERK, Hyal-2 in COS7, DU145 and NCI-H1299 cells, time-lapse three-colour FRET",
+     "genotype": "transient cDNA expression; dominant-negative WWOX and p53 controls",
+     "comparator": "ECFP/DsRed and empty-vector controls"
+    }
+   },
+   {
+    "proposition": "The text says the driver and execution phases, and a gap phase of 1-2 hours or less between them, are general; the gap is described as of unknown nature, and the supporting observation on cell death autofluorescence is cited to unpublished data.",
+    "snippet": "The aforementioned observations have also been shown in imaging cell death-regulated autofluorescence. That is, there must have a strong driver force to jumpstart the execution (Chang et al., unpublished).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29581896_Kuo2018_PMC_r2.xml",
+    "anchor": "Section An initial driving or priming force, last paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "ectopic overexpression of tagged WWOX, Smad4, p53, IkBalpha, ERK, Hyal-2 in COS7, DU145 and NCI-H1299 cells, time-lapse three-colour FRET",
+     "genotype": "transient cDNA expression; dominant-negative WWOX and p53 controls",
+     "comparator": "ECFP/DsRed and empty-vector controls"
+    }
+   },
+   {
+    "proposition": "The Figure 2 legend says that dominant-negative WWOX and dominant-negative p53 abolish the Smad4/WWOX/p53 signalling.",
+    "snippet": "b, c Dominant-negative WWOX and p53 abolish the signaling.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29581896_Kuo2018_PMC_r2.xml",
+    "anchor": "Figure 2 legend, panels b and c",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "ectopic overexpression of tagged WWOX, Smad4, p53, IkBalpha, ERK, Hyal-2 in COS7, DU145 and NCI-H1299 cells, time-lapse three-colour FRET",
+     "genotype": "transient cDNA expression; dominant-negative WWOX and p53 controls",
+     "comparator": "ECFP/DsRed and empty-vector controls"
+    }
+   },
+   {
+    "proposition": "Figure 2 as drawn: the Smad4/WWOX/p53 trace in DU145 (n = 2) rises to about 6,000-8,000 FRETc in hours 1-6 and to about 10,000-14,000 after hour 8; the dominant-negative WWOX trace (n = 3) shows an early peak to about 14,000 near hour 4 with large error bars before falling to about 2,000 to 4,000; the dominant-negative p53 trace (n = 4) stays near baseline. The legend says dominant-negative WWOX and p53 abolish the signalling; the dominant-negative WWOX panel shows a transient peak of the same size as the wild-type early phase.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2 panels a to c: FRETc bar traces against time 0-18.5 h, labelled Smad4/WWOX/p53 n = 2, Smad4/dn-WWOX/p53 n = 3, Smad4/WWOX/dn-p53 n = 4; panel d two-colour single traces with a red arrow between phases I and II.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29581896_r2/41420_2018_47_Fig2_HTML.jpg",
+    "anchor": "Figure 2 panels a to d, native JPEG",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "ectopic overexpression of tagged WWOX, Smad4, p53, IkBalpha, ERK, Hyal-2 in COS7, DU145 and NCI-H1299 cells, time-lapse three-colour FRET",
+     "genotype": "transient cDNA expression; dominant-negative WWOX and p53 controls",
+     "comparator": "ECFP/DsRed and empty-vector controls"
+    },
+    "qualifies": "entries[4]",
+    "qualifies_needle": "abolish the signaling",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID29581896.json",
+     "entry": 5,
+     "what_changed": "Own same-day entry: level after the early peak corrected from about 2,500 to about 2,000-4,000 after blind audit (verdict SUPPORTS with a numeric correction).",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "SUPPORTS"
+      ]
+     }
+    }
+   },
+   {
+    "proposition": "The review states that the complex formation seen by FRET is of ectopic proteins: when ectopic WWOX, Smad4 and Hyal-2 are transiently overexpressed in the cytoplasm, hyaluronan induces complex formation of these ectopic proteins and bubbling cell death; the endogenous behaviour of the complex is a separate claim cited to earlier work.",
+    "snippet": "when ectopic WWOX, Smad4 and Hyal-2 are transiently overexpressed in the cytoplasm, HA/Hyal-2 signaling induces complex formation of these ectopic proteins to cause bubbling cell death",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29581896_Kuo2018_PMC_r2.xml",
+    "anchor": "Perspectives, paragraph on endogenous HA/Hyal-2 signalling",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "ectopic overexpression of tagged WWOX, Smad4, p53, IkBalpha, ERK, Hyal-2 in COS7, DU145 and NCI-H1299 cells, time-lapse three-colour FRET",
+     "genotype": "transient cDNA expression; dominant-negative WWOX and p53 controls",
+     "comparator": "ECFP/DsRed and empty-vector controls"
+    }
+   },
+   {
+    "proposition": "COS7 monkey kidney cells were used for the IkBalpha/ERK/WWOX imaging because of their large size, easy transfection and adherence; the biological context of the claim (T-cell maturation) is in MOLT-4 cells, in which end-point FRET only was done.",
+    "snippet": "Time-lapse FRET microscopy was carried out in COS7 cells, rather than MOLT-4 cells, simply because of their large sizes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29581896_Kuo2018_PMC_r2.xml",
+    "anchor": "IkBalpha/ERK/WWOX section, last paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "ectopic overexpression of tagged WWOX, Smad4, p53, IkBalpha, ERK, Hyal-2 in COS7, DU145 and NCI-H1299 cells, time-lapse three-colour FRET",
+     "genotype": "transient cDNA expression; dominant-negative WWOX and p53 controls",
+     "comparator": "ECFP/DsRed and empty-vector controls"
+    }
+   }
+  ]
+ }
+}

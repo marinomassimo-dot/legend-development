@@ -1,5 +1,5 @@
 {
- "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
  "_note": "Metabolic batch. Orchestrator assumption: scientist-d is a fourth equivalent Scientist under the shared contract roles/scientist.md (body 32); operator authorised up to four Scientists on 2026-10-19.",
  "TASK_ID": "W4-W1-B-20261019",
  "DIRECTIVE_VERSION": 1,
@@ -29,6 +29,130 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-19"
+ "CURRENT_STATE": "WAVE_1_COMPLETE — eleven read, three parked, report pending integration",
+ "assigned_on": "2026-10-19",
+ "TASK_ACK": {
+  "TASK_ID": "W4-W1-B-20261019",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "DECISION": "ACCEPTED",
+  "ACTOR_ID": "scientist-b",
+  "acked_at": "2026-10-20T07:00:00Z",
+  "reading_mode": "PRIMARY_EVIDENCE_READ",
+  "note": "Dispatch brief, standing brief and the wave 4 selection record read; branch task/W4-W1-B-20261019 in .claude/worktrees/w4-b from main e956fe1e; receipts staged, never recorded; the four current files, registries and ledger untouched."
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "W4-W1-B-20261019",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-b",
+  "claimed_at": "2026-10-20T07:00:00Z",
+  "durable_pointer": "ledger/tasks/scientist-b/W4-W1-B-20261019.json on branch task/W4-W1-B-20261019",
+  "claim_precondition_checked": "Group W1 of the wave 4 selection; no other contract names these PMIDs."
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "most selected papers are long reviews or have questions confined to a few passages",
+   "default_taken": "targeted partial first reads, with the sections not read declared per receipt (coverage not_read or captions_only) and owed_sections.py run to confirm",
+   "why_safe": "understates rather than overstates; no unread section is claimed"
+  },
+  {
+   "condition": "gene-direct references of the reviews are not in the repository and this actor does not edit the queue",
+   "default_taken": "listed as queued strings in each manifest multihop block for the Orchestrator",
+   "why_safe": "declared reading debt, no registry file touched"
+  },
+  {
+   "condition": "commit refused with VERDICT STALE because manifests and staged receipts stale derived surfaces",
+   "default_taken": "LEGEND_STALE_SURFACES_BECAUSE with a written reason on every path-scoped commit",
+   "why_safe": "the Orchestrator regenerates derived surfaces after recording receipts; no ledger, state manifest or current file touched"
+  },
+  {
+   "condition": "two own locators and one numeric value were overstated after blind audit",
+   "default_taken": "corrected in place with a declared contradicts_locator carrying the audit verdict, and dossier, commit candidate and receipt text brought into line",
+   "why_safe": "the declaration is the sanctioned route"
+  },
+  {
+   "condition": "three PMC-only papers have no lawful body reachable and one preprint host returned HTTP 429",
+   "default_taken": "parked the three with the cascade recorded; backed off on the 429 and did not retry in a loop",
+   "why_safe": "no unlawful retrieval; operator wishlist"
+  },
+  {
+   "condition": "a DOI was written from memory in one spec",
+   "default_taken": "replaced by the DOI of the fetch record and PubMed; shipped staged_receipt_check.py --check-doi",
+   "why_safe": "all eleven receipts now pass the DOI check"
+  }
+ ],
+ "STOP_LOG": [
+  {
+   "class": "none",
+   "entry": "No stop was taken. Landing of the previous task branch had been refused while the root was dirty; it had since landed. This task is left committed if the root is still dirty.",
+   "time_waited": "0"
+  }
+ ],
+ "WAVE_1_RESULT": {
+  "PMIDS_READ": [
+   "41510857",
+   "40327201",
+   "35883580",
+   "29581896",
+   "27773744",
+   "36979157",
+   "42720877",
+   "42738851",
+   "42650175",
+   "42587736",
+   "42846717"
+  ],
+  "PARKED": {
+   "27075929": "PMC author manuscript only",
+   "25802472": "PMC author manuscript only",
+   "35107375": "published version closed, preprint host rate-limited"
+  },
+  "manifests": "11 strict-validator PASS",
+  "receipts_staged": "disease-models/wwox/research/receipt_staging/scientist-b/ (FTR-20261019-<PMID>-01 for the eleven)",
+  "commit_candidates": [
+   "CC-20261019-SCIENTIST-B-W4-NEGATIVES-01"
+  ],
+  "analysis_note": "disease-models/wwox/research/wave4_scientist-b.md",
+  "self_eval": "disease-models/wwox/research/session_evaluations/2026-10-20_W4-W1-B-20261019.md",
+  "micro_upgrade": "framework/scripts/staged_receipt_check.py --check-doi",
+  "DEFAULTS_TAKEN": [
+   {
+    "condition": "most selected papers are long reviews or have questions confined to a few passages",
+    "default_taken": "targeted partial first reads, with the sections not read declared per receipt (coverage not_read or captions_only) and owed_sections.py run to confirm",
+    "why_safe": "understates rather than overstates; no unread section is claimed"
+   },
+   {
+    "condition": "gene-direct references of the reviews are not in the repository and this actor does not edit the queue",
+    "default_taken": "listed as queued strings in each manifest multihop block for the Orchestrator",
+    "why_safe": "declared reading debt, no registry file touched"
+   },
+   {
+    "condition": "commit refused with VERDICT STALE because manifests and staged receipts stale derived surfaces",
+    "default_taken": "LEGEND_STALE_SURFACES_BECAUSE with a written reason on every path-scoped commit",
+    "why_safe": "the Orchestrator regenerates derived surfaces after recording receipts; no ledger, state manifest or current file touched"
+   },
+   {
+    "condition": "two own locators and one numeric value were overstated after blind audit",
+    "default_taken": "corrected in place with a declared contradicts_locator carrying the audit verdict, and dossier, commit candidate and receipt text brought into line",
+    "why_safe": "the declaration is the sanctioned route"
+   },
+   {
+    "condition": "three PMC-only papers have no lawful body reachable and one preprint host returned HTTP 429",
+    "default_taken": "parked the three with the cascade recorded; backed off on the 429 and did not retry in a loop",
+    "why_safe": "no unlawful retrieval; operator wishlist"
+   },
+   {
+    "condition": "a DOI was written from memory in one spec",
+    "default_taken": "replaced by the DOI of the fetch record and PubMed; shipped staged_receipt_check.py --check-doi",
+    "why_safe": "all eleven receipts now pass the DOI check"
+   }
+  ],
+  "STOP_LOG": [
+   {
+    "class": "none",
+    "entry": "No stop was taken. Landing of the previous task branch had been refused while the root was dirty; it had since landed. This task is left committed if the root is still dirty.",
+    "time_waited": "0"
+   }
+  ]
+ }
 }

@@ -227,7 +227,7 @@ Count selected: 19 (tier column: 1 highest priority).
 
 | PMID | Note |
 |---|---|
-| 33958783 | Liu 2021 (survival GWAS, TMEM108/WWOX progression loci): partial; owed = supplementary data; WWOX locus is an AD progression signal, not a neurotransmitter finding. Not selected. |
+| 33958783 | Liu 2021 (survival GWAS, TMEM108/WWOX progression loci): partial; owed = supplementary data; WWOX locus is a Parkinson's-disease-dementia progression signal, not a neurotransmitter finding [corrected 2026-10-20 from "WWOX locus is an AD progression signal" by CC-20261019-SCIENTIST-C-HELD-01 at BATCH_20261019_004: the disease of the paper is Parkinson's disease dementia, not Alzheimer's disease]. Not selected. |
 | 24308844 | Schuchardt 2013 (WWOX WW1 binding to ErbB4 ICD): partial, two receipts; owed = figures, limitations, methods, tables. Not selected (binding biophysics; would not change a model question). |
 | 38542478, 33195192, 37897534, 30158849 | partial with figures-only debt; outside the four themes. |
 

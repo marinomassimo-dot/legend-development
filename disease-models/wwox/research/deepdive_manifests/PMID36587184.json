@@ -1,0 +1,312 @@
+{
+ "schema_version": 2,
+ "pmid": "36587184",
+ "doi": "10.1038/s41598-022-27173-z",
+ "receipt": "FTR-20261020-36587184-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/wave4_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-W4-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Europe PMC REST fullTextXML, PMC OA bucket for figures, Springer ESM address for the supplementary PDF."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true,
+   "reason": "Run inline under the dispatch brief; this manifest and the note carry what the skill would produce."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate; the shared discovery ledger is written by the Orchestrator."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A hepatology and pathology group studying tumour evolution by single-cell FISH; WWOX is one of eight probes and was added as a fragile-site marker. Not a WWOX group and not a neurological-disease group. Observation (counted signals per nucleus) is weighted above interpretation (WWOX loss as a novel NASH-HCC finding), which rests on four of eleven cases without a stated threshold."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND steatosis",
+    "count": 2,
+    "source": "PubMed ESearch 2026-10-20"
+   },
+   {
+    "query": "WWOX AND hepatocellular",
+    "count": 33,
+    "source": "PubMed ESearch 2026-10-20"
+   },
+   {
+    "query": "WWOX AND (NAFLD OR NASH OR steatohepatitis)",
+    "count": 2,
+    "source": "PubMed ESearch 2026-10-20"
+   }
+  ],
+  "note": "Counts are record matches, not measurements of the pair."
+ },
+ "multihop": {
+  "references_enumerated": 46,
+  "gene_direct_refs_in_source": [
+   "24932569",
+   "15266310"
+  ],
+  "resolved": [
+   {
+    "pmid": "24932569",
+    "how": "Aldaz 2014 (ref 17) has a complete receipted reading in the ledger (FTR-20260913-24932569-02, checked with fulltext_receipts.py status 2026-10-20)."
+   },
+   {
+    "pmid": "15266310",
+    "how": "Park 2004 (ref 18) has a complete receipted reading (FTR-20260914-15266310-01)."
+   }
+  ],
+  "queued": []
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 36587184 --hops 0; fulltext_receipts.py status --pmid 36587184; ls receipt_staging/*",
+  "hits": 0,
+  "note": "No registry record, receipt or staged receipt; the selection file listed it as new."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-20 by PubMed EFetch: publication type Journal Article, Research Support Non-US Gov't; no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 46,
+   "references_screened": 41,
+   "references_with_doi": 41,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 5
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID36587184_Friemel2022_PMC.xml",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML for PMC9805444 (HTTP 200, 121,104 bytes).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9805444/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_rest_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "3cf008b6c7ddd96547ee984c92d5e40c8355da4eaa3007e8051612b5e496ccdf"
+  },
+  {
+   "path": "files/figures/PMID36587184/41598_2022_27173_Fig1_HTML.jpg",
+   "kind": "figure",
+   "note": "Figure 1, PMC OA open-data bucket.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9805444.1/41598_2022_27173_Fig1_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "5acbe3531a06712ad07325d15bdf2f6bce5486dde0ee4008cbbb00b3a469c7dd"
+  },
+  {
+   "path": "files/figures/PMID36587184/41598_2022_27173_Fig2_HTML.jpg",
+   "kind": "figure",
+   "note": "Figure 2, PMC OA open-data bucket.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9805444.1/41598_2022_27173_Fig2_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "3cc314a9e7a2a7e69e09be907fb6ef6cf252acd74a2a111d9c4fb9432756b791"
+  },
+  {
+   "path": "files/figures/PMID36587184/41598_2022_27173_Fig3_HTML.jpg",
+   "kind": "figure",
+   "note": "Figure 3, PMC OA open-data bucket.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9805444.1/41598_2022_27173_Fig3_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "078b4e3550eecdd956bd605e919080479720c03f1c5be0553e6f41f5011abdd8"
+  },
+  {
+   "path": "files/supplement/PMID36587184/41598_2022_27173_MOESM1_ESM.pdf",
+   "kind": "supplement_binary",
+   "note": "Supplementary Information (4 pages: Supplementary Figures 1-3), Springer static-content ESM address, no User-Agent; the PMC bucket does not hold it.",
+   "acquisition_recipe": {
+    "resolved_url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41598-022-27173-z/MediaObjects/41598_2022_27173_MOESM1_ESM.pdf",
+    "http_method": "GET",
+    "tier": "springer_esm",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "8823aba7551a2017124e0a95e3685a334f35d1f022983ad8f030f3a704c97655"
+  },
+  {
+   "path": "files/supplement/PMID36587184/sup.txt",
+   "kind": "supplement_text",
+   "note": "Derived text layer of the supplementary PDF; clean.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID36587184/41598_2022_27173_MOESM1_ESM.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk 41598_2022_27173_MOESM1_ESM.pdf sup.txt",
+     "join": "\n"
+    },
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "9ae78dc030d717b31233f26011dc1618d290abf1dc413622ab8f4abf5c47207c"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC9805444/fullTextXML returned HTTP 200 (121,104 bytes) on 2026-10-20; the declared artefact is that response.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a supplement text layer or a figure image.",
+  "entries": [
+   {
+    "proposition": "WWOX is reported as a copy-number loss in 4 of 11 NASH-HCC tumours; the readout is FISH signal number per nucleus with a BAC probe, not WWOX RNA, protein or any metabolic variable.",
+    "snippet": "We observed losses of WWOX, the fragile site marker, in 4 cases (36%).",
+    "surface": "body",
+    "anchor": "Discussion, paragraph on WWOX",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "archival FFPE liver, 11 NASH-associated HCC and 11 NAFLD/NASH specimens, single-nucleus FISH, Zurich",
+     "genotype": "WWOX copy number by a custom BAC probe (not expression)",
+     "endpoint": "WWOX FISH signal loss in tumour nuclei"
+    },
+    "artifact": "files/fulltext/PMID36587184_Friemel2022_PMC.xml"
+   },
+   {
+    "proposition": "NO CLONAL COPY-NUMBER CHANGE, INCLUDING WWOX, IN ANY OF THE 11 NAFLD/NASH SPECIMENS: the steatosis and steatohepatitis tissue carries no WWOX loss on this panel. The WWOX signal is therefore a tumour (HCC) event here, not a steatosis event.",
+    "snippet": "NAFLD/NASH lesions did not show any clonal copy number changes for the miFISH probe panel applied.",
+    "surface": "body",
+    "anchor": "Results, Polyploidy in HCC vs. NAFLD/NASH specimens",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "archival FFPE liver, 11 NASH-associated HCC and 11 NAFLD/NASH specimens, single-nucleus FISH, Zurich",
+     "genotype": "WWOX copy number by a custom BAC probe (not expression)",
+     "endpoint": "clonal copy-number changes in NAFLD/NASH tissue"
+    },
+    "artifact": "files/fulltext/PMID36587184_Friemel2022_PMC.xml"
+   },
+   {
+    "proposition": "The most frequent aberrations are listed with MYC gain/WWOX loss in 4 of 11; no loss-calling threshold for a case is stated in the text.",
+    "snippet": "Observed aberrations were TP53 loss, TERT gain, MYC gain, MET gain, WWOX loss and HER2 loss/gain with TP53 loss (5/11; 45%) and MYC gain/WWOX loss (4/11; 36%) being the most frequent ones.",
+    "surface": "body",
+    "anchor": "Results, Chromosomal instability as an indicator for intratumor heterogeneity",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "archival FFPE liver, 11 NASH-associated HCC and 11 NAFLD/NASH specimens, single-nucleus FISH, Zurich",
+     "genotype": "WWOX copy number by a custom BAC probe (not expression)",
+     "endpoint": "aberration frequencies"
+    },
+    "artifact": "files/fulltext/PMID36587184_Friemel2022_PMC.xml"
+   },
+   {
+    "proposition": "Figure 3A (case 1, enlarged 2.5x): the WWOX row reads gains 1%, LOSSES 15% (highlighted red), average signal number 3.1, with the 16q row red across a large part of the tetraploid clones, and Figure 3B draws the terminal octoploid clone as WWOX-negative. Table 1 lists WWOX loss for cases 2, 3, 7 and 8 only and gives case 1 no WWOX loss, so the 4-of-11 count omits a case the paper's own figure marks (5 of 11 if counted), and no threshold is stated for what counts as a case.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3A, miFISH colour display of case 1 with gains and losses per gene, WWOX 1% gains and 15% losses; Figure 3B, phylogeny ending in a WWOX-negative octoploid clone.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36587184/41598_2022_27173_Fig3_HTML.jpg",
+    "anchor": "Figure 3A-B, native JPEG, 3A enlarged for viewing",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[2]",
+    "qualifies_needle": "MYC gain/WWOX loss (4/11; 36%)",
+    "experimental_context": {
+     "system": "archival FFPE liver, 11 NASH-associated HCC and 11 NAFLD/NASH specimens, single-nucleus FISH, Zurich",
+     "genotype": "WWOX copy number by a custom BAC probe (not expression)",
+     "endpoint": "WWOX loss percentage in case 1"
+    },
+    "found_or_sought": "sought - question: does any panel tie WWOX to a metabolic readout; found a count discrepancy instead"
+   },
+   {
+    "proposition": "Figure 2B (case 8): WWOX LOSSES 49%, average signal 1.8, with HER2 loss 57% and TERT gain 42%; Figure 2A (case 6): WWOX losses 0%. Figure 2C shows instability index plotted against macrosteatosis (p = 0.26), average ploidy (0.15), vascular invasion (0.17), tumour grade (0.01, the only significant one), stage (0.56) and size (0.27): no steatosis-instability relation, 11 points each.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2A-C, miFISH colour displays for cases 6 and 8 and six scatter plots of instability index against clinical variables.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36587184/41598_2022_27173_Fig2_HTML.jpg",
+    "anchor": "Figure 2A-C, native JPEG",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "archival FFPE liver, 11 NASH-associated HCC and 11 NAFLD/NASH specimens, single-nucleus FISH, Zurich",
+     "genotype": "WWOX copy number by a custom BAC probe (not expression)",
+     "endpoint": "WWOX loss percentage; instability index versus steatosis"
+    },
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "Figure 1: panel A shows three overlapping BAC clones (RP11-356N15, RP11-11M13, RP11-111D10) spanning about 78.94-79.39 Mb of 16q23.1 and a metaphase with signals; panel B gives the two probe panels with WWOX on the red channel in panel II. The probe is a custom 560 kb contig, so a 'loss' is loss of the signal from that region in a nucleus, not an exon-level deletion call.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1A-B, WWOX BAC probe design (three overlapping clones with coordinates) and the customised two-panel marker scheme.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36587184/41598_2022_27173_Fig1_HTML.jpg",
+    "anchor": "Figure 1A-B, native JPEG",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "archival FFPE liver, 11 NASH-associated HCC and 11 NAFLD/NASH specimens, single-nucleus FISH, Zurich",
+     "genotype": "WWOX copy number by a custom BAC probe (not expression)",
+     "endpoint": "probe design"
+    },
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "Supplementary Figure 3 per-case WWOX values (hand readings from the rendered PDF page at 200 dpi): case 2 losses 93%; case 3 printed twice with WWOX 44 in the GAINS column, coloured green in the first copy and red in the second, losses 3%, although Table 1 lists case 3 as a WWOX loss; case 7 losses 35%; case 9 losses 6%; case 10 losses 3%; case 11 losses 1%. Cases 4 and 5 have no panel in the main figures or the supplement. WWOX status for cases 3 (colour conflict), 4 and 5 is therefore not verifiable from the figures.",
+    "snippet": "Supplementary Figure 3 Color display of miFISH analysis of all cases that are not shown in Figure 2 and 3.",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID36587184/sup.txt",
+    "anchor": "Supplementary Figure 3 legend; table values read from PDF page 4 rendered at 200 dpi",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "archival FFPE liver, 11 NASH-associated HCC and 11 NAFLD/NASH specimens, single-nucleus FISH, Zurich",
+     "genotype": "WWOX copy number by a custom BAC probe (not expression)",
+     "endpoint": "per-case WWOX gain and loss percentages"
+    },
+    "found_or_sought": "found while checking the 4-of-11 count"
+   }
+  ]
+ }
+}

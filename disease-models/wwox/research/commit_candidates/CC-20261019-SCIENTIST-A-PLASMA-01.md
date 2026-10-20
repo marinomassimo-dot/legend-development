@@ -38,3 +38,17 @@ Proposed line for `CLAIM 028` Source/Summary (record-scoped edit by the integrat
 3. Text says cytokine secretion significantly decreased | WWOX knockdown significantly decreased levels of mRNAs encoding these proinflammatory cytokines and their secretion (Figure 3B,C). | 2.2, same (Figure 3C labels IL-1beta secretion 'ns')
 4. WWOX-JPT2 is predicted | the results predicted that WWOX could interact with JPT2 (Supplementary Figure S5). | 2.3, same
 5. Rescue incomplete | we encountered a limitation in not being able to fully restore p-p65 levels to those observed prior to WWOX knockdown, even after a successful rescue experiment. | 3 Discussion, same
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_005` · 2026-10-20 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.23 -> WM_v7.24 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** not run by the integrator; the five locator triples are carried for a later audit.
+**What landed:** `PAPER 383` (the placeholder `CORPUS-STUB-068` promoted, kept as history; `LIT-0091` promoted to processed) with the opposite-sign note, named by `PAPER` number (`PAPER 102`, `113`, `114`, `115`) in the record; `CLAIM 028` gains the paper as a further source in its Source and Wikilinks lines (the candidate's op text, with study identifiers replaced by the `PAPER` number and the other papers' numbers left in the paper record, because the claim must not name a paper whose Claim links do not name it). Status stays `flagged for review`; Type stays INFERENZA; Summary unchanged.
+**Parked:** none.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.

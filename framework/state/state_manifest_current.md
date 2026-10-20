@@ -43,7 +43,7 @@ edition: public
 ## 2. DISEASE-MODEL (WORKING-MODEL) VERSION
 
 ```yaml
-working_model_version: WM_v7.22
+working_model_version: WM_v7.24
 working_model_file: disease-models/wwox/registries/working_model_current.md
 narrative_view: disease-models/wwox/disease_model.md
 notes: "Canonical disease-level working model derived from public literature; disease_model.md is its narrative reader-facing view. The private individual-level record is not part of this edition."
@@ -106,12 +106,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261019_003
+last_batch_commit_id: BATCH_20261019_005
 last_batch_commit_date: 2026-10-20
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 9
-target_wm_version: WM_v7.22
-trigger: MANUAL (operator-authorised integration of the metabolic batch's waves 2 and 3 together with the repairs of the Mirror review of BATCH_20261019_001, ACTOR_ID orchestrator by stated assumption, task ORCH-METABOLIC-BATCH-20261019; BATCH_20261019_002 was reserved for the repairs alone and is not used). Nine candidates (interventions groups H3 x4, H4, H5 x2 and the GOLD pair), all propagated, none merged, none superseded; the HELD-partial candidate CC-20261019-SCIENTIST-C-HELD-01 is deferred because its ten receipts are staged and not yet in the ledger. The registry debt of the lot is discharged: 45 PAPER records (PAPER 311 to PAPER 355, one a promotion of CORPUS P360) and 44 LIT records (LIT-0604 to LIT-0647, LIT-0360 promoted) land every PMID of the lot, including the 22 complete readings that blocked BATCH_COMMIT with ORPHAN_COMPLETE_READ; the OUTPUT_STUDY_MISMATCH was fixed by naming the study identifiers in the epinephrine-safety candidate's disposition block. No claim was created, none reversed, and no Status, Type or Summary changed: evidence-boundary notes were added to CLAIM 017, 020 and 031, and the Mirror repairs corrected CLAIM 001 (the VABAM cohorts agree, not disagree; both partial reads), CLAIM 042 (CDKL5 0 of 10 and the partial Glut1 source), PAPER 097, PAPER 263 and LIT-0561, DL-MECH-117, DL-MECH-121, DL-MECH-133 and PAPER 289 and 291. Research layer: DL-MECH-136 to DL-MECH-150 and DL-METH-125, and DIS-037 to DIS-040. Parked: CLAIM 009 and CLAIM 025 support mentions of the oxygen candidate, the reading debts of that candidate, the working-model catecholamine note, and the RL-003 research-line boundary. No blind locator audit was run.
+commit_candidates_propagated: 2
+target_wm_version: WM_v7.24
+trigger: MANUAL (operator-authorised integration of the metabolic batch's interventions lot H1/H2 of Scientist A, ACTOR_ID orchestrator by stated assumption, task ORCH-METABOLIC-BATCH-20261019). Two candidates, both propagated, none merged, none superseded. The registry debt of the lot is discharged: 30 PAPER records (PAPER 370 to PAPER 399, two of them promotions of corpus placeholders kept as history) and 28 new LIT records (LIT-0652 to LIT-0679, LIT-0091 and LIT-0330 promoted to processed) land every PMID of the lot, including the readings that blocked BATCH_COMMIT with ORPHAN_COMPLETE_READ. No claim was created, none reversed, and no Status, Type or Summary changed: CLAIM 028 gains a further source (a non-neural partial-knockdown instance with the opposite sign) in its Source and Wikilinks lines; the selection file's statement that the model had nothing on complement is corrected in place with the old wording quoted (the only WWOX-direct complement paper, a gain-of-function cancer-cell report, is upgraded from a stale placeholder at complete depth); FT-108 carries a follow-up line. Parked: seven proposed method notes (no registry target), the gene-direct reference debts of two manifests (no PMID in the screened entries, no op text) and the four blocked WWOX-direct items. No blind locator audit was run by the integrator.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -125,7 +125,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261020_BATCH_20261019_003
+last_lint_id: LINT_20261020_BATCH_20261019_005
 last_lint_date: 2026-10-20
 last_lint_result: WARN
 ```
@@ -163,8 +163,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 624
-fulltext_ledger_head: 975eb6365c40cc75d863ccba9102e7dc83d8844b8518c385558b03f2f66ca71c
+fulltext_ledger_events: 654
+fulltext_ledger_head: b49e3bc367f9960a21beda18f5d3f0ad1099fb5843152ff85756011a00a11df1
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.
@@ -212,8 +212,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 51
-growth_anchor_head: bade64ac36d89b69fe8ce7f01b186537ea3e61b0020c6a1483dc12748dbaf797
+growth_anchor_events: 53
+growth_anchor_head: 32d9819224fa00d2addd8286e8c1ed5a15ed1215a4c430fb2492eb37f6c8d560
 ```
 
 ```bash

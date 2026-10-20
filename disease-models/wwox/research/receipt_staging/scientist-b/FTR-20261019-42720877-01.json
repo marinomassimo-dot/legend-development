@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-19T20:00:00Z",
+ "event_at": "2026-10-19T20:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "read",
+  "figures": "not_present",
+  "tables": "captions_only",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present"
+ },
+ "event_id": "FTR-20261019-42720877-01",
+ "evidence_basis": [
+  "Review sections relevant to treatment read; WWOX appears once, in Table 1.",
+  "FIND: the WWOX row says \"MedPath Trial of gene replacement\" with no source; registry queries on 2026-10-20 find no WWOX gene-replacement trial."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42720877.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID42720877.md",
+  "disease-models/wwox/research/wave4_scientist-b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "d3e2e1c9ab767c27fd2eb525d75d0453a3fa6cf2469e0317896d449db1e5eabe",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID42720877_Schatz2026_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1007/s11910-026-01514-1",
+  "pmid": "42720877"
+ },
+ "workflow": "scientist-b wave 4 group W1; SOURCE_FIRST; PMC efetch XML re-acquired with pmc_bucket_fetch.py, no User-Agent; locators verified by deepdive_manifest.py. Prepared as a JSON file for the integrator and not appended."
+}
