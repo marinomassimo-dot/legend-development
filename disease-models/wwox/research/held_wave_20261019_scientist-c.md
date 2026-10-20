@@ -136,3 +136,25 @@ the manifest's prior seven locators. No prior locator is contradicted; entry 1 (
 only therapeutic-direction lead) is qualified: the lead is "an antioxidant restores the senescence
 phenotype in passaged null MEFs", with no ROS confirmation in treated cells and no relation to
 neurons. MINOR; no commit candidate (no registry record text is contradicted).
+
+---
+
+## 4. PMID 38542478 — Chen 2024 review "Zfra overrides WWOX in suppressing neurodegeneration" — receipt FTR-20261019-38542478-02
+
+**What it MEASURES.** Nothing new: a perspective review. The seven figures are curcumin/calebin-A
+structures (Fig 1), a table of percentage ranges "tabulated and summarized" from a cited DRG study
+(Fig 2A), two summary schematics (Figs 3, 7), a Zfra-conjugation schematic (Fig 4), a heatmap of
+fold-increases in WWOX co-immunoprecipitation from peptide-treated 4T1-bearing BALB/c mice with PBS
+as the zero reference (Fig 5B) and three-field pT12-WWOX immunostains of 11-month Wwox+/- versus +/+
+cortex (Fig 6A), all cited from earlier work.
+
+**Question and answer.** No figure contains a WWOX-null or knockdown arm with a metabolic,
+mitochondrial or ROS readout; every treatment panel is Zfra or WWOX-peptide effect on a WWOX-replete
+background. The one genotype-level panel (6A) is a heterozygote cortex immunostain with no counts, no
+animal number and no antibody control. The negative is complete for the figures. Entry 3 (the high-glucose
+Y33 phosphorylation sentence) therefore stays a cited sentence with no panel behind it in this article.
+
+**Effect on the model.** None. The review is a source of citations, not of observations; Fig 5B
+supports at most "peptide-treated WWOX-replete mice show co-IP changes in cancer-bearing animals", not
+any neural or metabolic statement. Receipt closes figures; depth carried at the prior receipt's level.
+MINOR; no commit candidate.

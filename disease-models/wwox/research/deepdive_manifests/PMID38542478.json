@@ -130,6 +130,97 @@
     "derived": false,
     "result_sha256": "e130c6b8e4eaeb8a7957fada7fcd39bc299158bdac5893d4fd2bd61476a51ab6"
    }
+  },
+  {
+   "path": "files/figures/PMID38542478/ijms-25-03507-g001.jpg",
+   "kind": "figure",
+   "note": "Figure 1 of the review, on disk since 2026-10-03 from the PMC OA bucket; first declared and opened as an image 2026-10-19.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10970703.1/ijms-25-03507-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03"
+   },
+   "sha256": "823bf7f4d86d90302181c945550d4d508bb55a19e144ef281db516c97a8e18c3"
+  },
+  {
+   "path": "files/figures/PMID38542478/ijms-25-03507-g002.jpg",
+   "kind": "figure",
+   "note": "Figure 2 of the review, on disk since 2026-10-03 from the PMC OA bucket; first declared and opened as an image 2026-10-19.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10970703.1/ijms-25-03507-g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03"
+   },
+   "sha256": "167471557d710778ee0f206ba2ad60b0095253b09d2e721330fab0e8a79ef7f8"
+  },
+  {
+   "path": "files/figures/PMID38542478/ijms-25-03507-g003.jpg",
+   "kind": "figure",
+   "note": "Figure 3 of the review, on disk since 2026-10-03 from the PMC OA bucket; first declared and opened as an image 2026-10-19.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10970703.1/ijms-25-03507-g003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03"
+   },
+   "sha256": "be428544f873cddaba481802ed11dd7178188c201083e4385d0833d5a1451edb"
+  },
+  {
+   "path": "files/figures/PMID38542478/ijms-25-03507-g004.jpg",
+   "kind": "figure",
+   "note": "Figure 4 of the review, on disk since 2026-10-03 from the PMC OA bucket; first declared and opened as an image 2026-10-19.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10970703.1/ijms-25-03507-g004.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03"
+   },
+   "sha256": "83ec29c0c8e4d6f74d4876ddeacf10b5d856811a60eb9de34d680111a156d5bb"
+  },
+  {
+   "path": "files/figures/PMID38542478/ijms-25-03507-g005.jpg",
+   "kind": "figure",
+   "note": "Figure 5 of the review, on disk since 2026-10-03 from the PMC OA bucket; first declared and opened as an image 2026-10-19.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10970703.1/ijms-25-03507-g005.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03"
+   },
+   "sha256": "6b04fbcb794b85ed2602c7470dd2745bc950211cfe33055fbc278f4cb769f84d"
+  },
+  {
+   "path": "files/figures/PMID38542478/ijms-25-03507-g006.jpg",
+   "kind": "figure",
+   "note": "Figure 6 of the review, on disk since 2026-10-03 from the PMC OA bucket; first declared and opened as an image 2026-10-19.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10970703.1/ijms-25-03507-g006.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03"
+   },
+   "sha256": "85528c1773ae4fb9aa8b5931fa23934c86ef5973747cd50b83a6bab5af57e66a"
+  },
+  {
+   "path": "files/figures/PMID38542478/ijms-25-03507-g007.jpg",
+   "kind": "figure",
+   "note": "Figure 7 of the review, on disk since 2026-10-03 from the PMC OA bucket; first declared and opened as an image 2026-10-19.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10970703.1/ijms-25-03507-g007.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03"
+   },
+   "sha256": "bedd12e8bf567e1bdbe9432a83268fea50cd603da5857c2bcb65a2a9ec5c9bb5"
   }
  ],
  "verbatim_locators": {
@@ -170,7 +261,61 @@
     "anchor": "Section 10.3, 'Zfra1-31 for Treating Hyperglycemia/Diabetes-Associated Neurodegeneration', second paragraph",
     "panel_text_relation": "text_only",
     "artifact": "files/fulltext/PMID38542478_Chen2024_PMC.xml"
+   },
+   {
+    "proposition": "Figure 6A (hand reading): three cortical fields of 11-month Wwox+/- brain with red punctate pT12-WWOX signal and three fields of Wwox+/+ without; no counts, no number of animals, no antibody validation or secondary-only control, bright-field chromogen. The aggregate datum behind the sentence is a qualitative image set, cited here from an earlier source; it is a heterozygote cortex finding, with no metabolic or mitochondrial readout.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6A, pT12-WWOX immunostaining of cortex, Wwox+/+ (left column) and Wwox+/- (right column), three magnifications.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38542478/ijms-25-03507-g006.jpg",
+    "anchor": "Figure 6A, native JPEG",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[2]",
+    "qualifies_needle": "occurs as aggregates in the cortex of heterozygous Wwox mice",
+    "experimental_context": {
+     "system": "mouse cortex, 11 months",
+     "genotype": "Wwox+/- versus Wwox+/+",
+     "endpoint": "pT12-WWOX immunostaining"
+    },
+    "found_or_sought": "sought - question: any WWOX-null/knockdown metabolic arm in the figures"
+   },
+   {
+    "proposition": "Figure 5B (hand reading): the in vivo evidence for peptide-driven WWOX complex formation is a heatmap of fold increases (0 to 12) from one panel of co-immunoprecipitations in spleen and lung of BALB/c mice carrying 4T1 breast cancer, with PBS as the zero reference and the combined peptide arm often reading 0 or 1; no n, no error, no blot image, no WWOX-null control. It is a cancer-bearing, peptide-treated, WWOX-replete system.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5A-D, schematic of tail-vein peptide injection, spleen and lung fold-increase heatmaps, summary tables.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38542478/ijms-25-03507-g005.jpg",
+    "anchor": "Figure 5B, native JPEG",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "BALB/c mouse spleen and lung with 4T1 tumour",
+     "genotype": "wild type, peptide treatment",
+     "endpoint": "co-immunoprecipitation fold change"
+    },
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "Figure 2A is a table of percentage ranges (below 20, 20-40, 40-65, above 65 percent nuclear accumulation) for pY33-WWOX, p-JNK, ATF3, p-CREB, NF-kB, c-JUN and SMAD4 in small DRG neurons after sciatic nerve injury, 'tabulated and summarized from reference' by the caption; it carries no raw data, n or statistics, and no WWOX loss arm. Figures 1, 3, 4 and 7 are chemical structures and schematics. No figure in the review contains a WWOX-null or knockdown arm with a metabolic, mitochondrial or ROS readout.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2A table of nuclear accumulation ranges; Figures 1, 3, 4, 7 schematics and structures.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38542478/ijms-25-03507-g002.jpg",
+    "anchor": "Figures 1-4 and 7, native JPEGs",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "rat or mouse dorsal root ganglion small neurons, sciatic nerve injury (as summarised from a cited paper)",
+     "endpoint": "percent nuclear accumulation ranges"
+    },
+    "found_or_sought": "sought - the question's negative"
    }
   ]
- }
+ },
+ "reading_history": [
+  {
+   "receipt": "FTR-20261019-38542478-02",
+   "reader": "scientist-c, HELD-PARTIAL-WWOX-C-20261019",
+   "context_policy": "QUESTION_DRIVEN",
+   "what_changed": "Declared and opened all seven figures; appended 3 entries. All figures are structures, schematics, a range table, one heatmap of cited data and one qualitative immunostain; none holds a WWOX-null metabolic arm.",
+   "outputs": [
+    "disease-models/wwox/research/held_wave_20261019_scientist-c.md"
+   ]
+  }
+ ]
 }
