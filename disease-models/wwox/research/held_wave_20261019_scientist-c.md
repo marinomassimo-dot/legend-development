@@ -327,3 +327,22 @@ epilepsy statement; a single "WWOX locus" in this paper.
 **Effect on the model.** None for WWOX-DEE; for the registry, the locus is two signals with unreplicated
 discovery strength on one and weak replication on the other, and the disease label in the selection
 file needs correcting. MINOR; no baseline claim touched.
+
+---
+
+## 11. PMID 24308844 — Schuchardt 2013 (WW1 domain of WWOX and the ErbB4 PPXY motifs) — receipt FTR-20261019-24308844-03
+
+**What it MEASURES.** Recombinant WWOX WW1, WW2 and the tandem module against synthetic ErbB4 peptides:
+isothermal titration calorimetry, analytical light scattering, homology models and molecular dynamics. No
+cell, tissue or organism.
+
+**Question and answer.** Does any figure or table speak to metabolism? No, by method scope (Methods read in
+full: protein, peptide, ITC, light scattering, modelling, simulation). The five figure files the manifest
+declared but that were absent from disk (Figures 2-6) were re-retrieved from the PMC content-delivery
+blob addresses with no User-Agent (the landing page itself then served a reCAPTCHA, which was not
+bypassed) and their SHA-256 values match the declared ones, so the persisted figure locators of the
+earlier reading are verifiable again; Figures 1 (schematics) and 7 (four molecular-dynamics snapshots
+showing WW1 moving relative to WW2) were opened as images and declared.
+
+**Effect on the model.** None; the manifest keeps one inherited declared gap (queued references). The
+binding-biophysics negative recorded earlier (the WW2 domain does not bind these peptides) stands.
