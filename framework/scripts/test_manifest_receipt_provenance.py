@@ -142,6 +142,55 @@ class TheDecidedSemantics(Fixture):
         self.assertEqual([], mrp.output_strings({}))
 
 
+class TheSupersededVerdict(Fixture):
+    """SUPERSEDED_ARTIFACTS (2026-10-20) fires only for: declared = later naming event whose
+    fingerprint is a declared source_artifacts digest AND earliest fingerprint is not."""
+
+    MANIFEST = "disease-models/wwox/research/deepdive_manifests/PMID11111111.json"
+
+    def case(self, *, declared_fp: str, earliest_fp: str, digests=("new",), declared="-02"):
+        events = [dict(event("FTR-20260814-11111111-01", "11111111", [self.MANIFEST]),
+                       source_fingerprint=earliest_fp),
+                  dict(event("FTR-20261019-11111111-02", "11111111", [self.MANIFEST]),
+                       source_fingerprint=declared_fp)]
+        root = self.build({"PMID11111111.json": "FTR-20261019-11111111-02"}, events)
+        path = mrp.manifest_dir(root, "wwox") / "PMID11111111.json"
+        payload = json.loads(path.read_text())
+        payload["source_artifacts"] = [{"path": "a", "sha256": d} for d in digests]
+        if declared == "-01":
+            payload["receipt"] = "FTR-20260814-11111111-01"
+        path.write_text(json.dumps(payload), encoding="utf-8")
+        return mrp.survey(root, "wwox")[0]
+
+    def test_fires_when_all_three_conditions_hold(self) -> None:
+        finding = self.case(declared_fp="new", earliest_fp="old")
+        self.assertEqual("SUPERSEDED_ARTIFACTS", finding.verdict)
+        self.assertEqual("FTR-20260814-11111111-01", finding.should_be)
+        self.assertNotIn("SUPERSEDED_ARTIFACTS", mrp.DEFECTS)
+
+    def test_does_not_fire_when_the_producer_fingerprint_is_still_declared(self) -> None:
+        self.assertEqual("NOT_THE_PRODUCER",
+                         self.case(declared_fp="new", earliest_fp="old",
+                                   digests=("new", "old")).verdict)
+
+    def test_does_not_fire_when_the_declared_receipt_fingerprints_something_else(self) -> None:
+        self.assertEqual("NOT_THE_PRODUCER",
+                         self.case(declared_fp="other", earliest_fp="old").verdict)
+
+    def test_does_not_fire_without_fingerprints(self) -> None:
+        self.assertEqual("NOT_THE_PRODUCER", self.case(declared_fp="", earliest_fp="old").verdict)
+        self.assertEqual("NOT_THE_PRODUCER", self.case(declared_fp="new", earliest_fp="").verdict)
+
+    def test_the_producer_itself_still_conforms(self) -> None:
+        self.assertEqual("CONFORMS",
+                         self.case(declared_fp="new", earliest_fp="old", declared="-01").verdict)
+
+    def test_the_render_states_it(self) -> None:
+        out = mrp.render([self.case(declared_fp="new", earliest_fp="old")])
+        self.assertIn("SUPERSEDED_ARTIFACTS", out)
+        self.assertIn("not a defect", out)
+
+
 class TheGate(Fixture):
     def run_tool(self, root: Path, *arguments: str):
         return subprocess.run([sys.executable, str(TOOL), "--root", str(root), *arguments],
@@ -191,6 +240,12 @@ class TheLiveCorpus(unittest.TestCase):
                          "when the tail is repaired — never raise it. Non-conforming now: "
                          + ", ".join(f"{f.manifest} {f.verdict}" for f in defects))
         self.assertEqual(0, mrp.main(["--root", str(ROOT), "--check"]))
+
+    def test_the_reread_manifests_are_superseded_not_defects(self) -> None:
+        by_name = {finding.manifest: finding.verdict for finding in mrp.survey(ROOT, "wwox")}
+        for pmid in ("21075834", "30755385", "34747138", "36779245", "39507621", "42422765"):
+            self.assertEqual("SUPERSEDED_ARTIFACTS", by_name[f"PMID{pmid}.json"], pmid)
+        self.assertEqual("CONFORMS", by_name["PMID25779665.json"])
 
     def test_the_two_manifests_the_decision_was_made_on(self) -> None:
         by_name = {finding.manifest: finding for finding in mrp.survey(ROOT, "wwox")}

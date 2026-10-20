@@ -2,7 +2,7 @@
  "schema_version": 2,
  "pmid": "25779665",
  "doi": "10.18632/oncotarget.3153",
- "receipt": "FTR-20261019-25779665-01",
+ "receipt": "FTR-20261020-25779665-01",
  "context_policy": "SOURCE_FIRST",
  "landing": [
   "disease-models/wwox/research/wave4_scientist-c.md",

@@ -46,6 +46,12 @@ VERDICTS
   UNNAMED         the declared receipt's `outputs` do not name the manifest AT ALL, while another
                   same-study event's do — the sharper defect, and the one that cannot be read as a
                   difference of convention
+  SUPERSEDED_ARTIFACTS  NOT a defect (decided 2026-10-20, see below): the declared receipt is a
+                  LATER same-study event that names the manifest, its `source_fingerprint` equals
+                  one of the manifest's own `source_artifacts` digests, and the earliest naming
+                  event (the producer by the rule) fingerprints bytes the manifest no longer
+                  declares. A re-read re-acquired the paper's bytes and legitimately rewrote the
+                  manifest for them; the repoint is provably impossible (ARTIFACT DIVERGENCE).
   UNKNOWN_EVENT   the declared receipt is not in the ledger
   NO_RECEIPT      the manifest declares no `receipt` (the schema validator already refuses this)
   UNCHECKABLE     no same-study event names the manifest, so the ledger cannot answer. Reported,
@@ -59,6 +65,22 @@ Closing the field does not retro-fit 116 manifests. Measured on 2026-09-28 the c
 `--check` fails when the count EXCEEDS that ceiling, so a NEW non-conforming manifest is loud while
 the known tail stays visible and countable. Lower the ceiling when the tail is repaired; never
 raise it.
+
+🔴 SUPERSEDED_ARTIFACTS — DECIDED 2026-10-20 (Harness Engineering, LEGEND_CORE 21e, T0)
+-----------------------------------------------------------------------------------
+WHAT: a sixth non-defect class beside CONFORMS/UNCHECKABLE. It fires ONLY when ALL hold: (a) the
+declared receipt is in the ledger and is a same-study event naming the manifest but not the
+earliest one; (b) its non-empty `source_fingerprint` equals a `sha256` in the manifest's
+`source_artifacts`; (c) the earliest naming event has a non-empty `source_fingerprint` that is NOT
+among those digests. Every other verdict is unchanged (UNNAMED never qualifies).
+WHY: wave-3 re-reads re-acquired the paper's bytes (absent from files/), so the manifest was
+rewritten for the new bytes and names the new receipt. `manifest_receipt_repoint.py` correctly
+refuses (ARTIFACT DIVERGENCE: pointing at the producer would name a reading of a document the
+manifest no longer declares). Counting them as defects against a ceiling that only a hand edit or a
+false repoint could lower made the gate permanently red for a lawful state. The earliest reading is
+still reported (`should_be`), so nothing is hidden.
+HOW TO REVERT: delete the SUPERSEDED_ARTIFACTS branch in `assess` and add the verdict to DEFECTS;
+the ceiling must then be re-measured (it only ever goes down by repair).
 
 🔴 **THIS TOOL DOES NOT WRITE. `manifest_receipt_repoint.py` is the instrument that does.**
 Written 2026-09-28, the day after this one: it takes a PMID, derives the target through `assess`
@@ -93,7 +115,10 @@ if str(HERE) not in sys.path:
 #: It fell to 15 on 2026-09-28 (`BATCH_20260928_007`): PMID15870886.json, the one UNKNOWN_EVENT, now
 #: names FTR-20260928-15870886-01, a recorded complete reading whose outputs name the manifest
 #: (the 2026-09-14 event it named was never in the ledger). 117 manifests, 15 non-conforming.
-BASELINE_DEFECTS = 15
+#: It fell to 9 on 2026-10-20: PMID25779665 (a wrong-date id, repointed by the repoint tool) and the
+#: 11 manifests that read SUPERSEDED_ARTIFACTS (5 old artifact-divergence cases, 5 re-read on
+#: 2026-10-19/20, and PMID42422765) left the defect count; 21 measured -> 9. LOWERED, never raised.
+BASELINE_DEFECTS = 9
 
 DEFECTS = ("NOT_THE_PRODUCER", "UNNAMED", "UNKNOWN_EVENT", "NO_RECEIPT")
 
@@ -198,6 +223,17 @@ def assess(manifest_path: Path, events: list[dict]) -> Finding:
     if declared == naming[0]:
         return Finding(manifest_path.name, pmid, declared, "CONFORMS", naming[0], naming)
     if declared in naming:
+        by_id = {str(event.get("event_id") or ""): event for event in events}
+        declared_fp = str(by_id[declared].get("source_fingerprint") or "")
+        producer_fp = str(by_id[naming[0]].get("source_fingerprint") or "")
+        digests = {str(item.get("sha256") or "")
+                   for item in (manifest.get("source_artifacts") or []) if isinstance(item, dict)}
+        digests.discard("")
+        if declared_fp and declared_fp in digests and producer_fp and producer_fp not in digests:
+            return Finding(manifest_path.name, pmid, declared, "SUPERSEDED_ARTIFACTS", naming[0],
+                           naming, "the manifest was rewritten for re-acquired bytes by this later "
+                           "reading; the earliest reading fingerprinted bytes it no longer "
+                           "declares, so a repoint is impossible (not a defect)")
         return Finding(manifest_path.name, pmid, declared, "NOT_THE_PRODUCER", naming[0], naming,
                        "this reading touched the manifest, but an earlier same-study reading "
                        "produced it")
@@ -240,6 +276,12 @@ def render(findings: list[Finding]) -> str:
                      "taking one from its caller, and refuses the classes the ledger cannot "
                      "settle. `rechain --repoint-manifests` follows a rename and is still "
                      "forbidden for a target decision.")
+    superseded = [finding for finding in findings if finding.verdict == "SUPERSEDED_ARTIFACTS"]
+    if superseded:
+        lines += ["", f"{len(superseded)} SUPERSEDED_ARTIFACTS — reported, not a defect: the declared "
+                      "later receipt fingerprints the manifest's own source_artifacts and the "
+                      "earliest naming event fingerprints bytes it no longer declares (decided "
+                      "2026-10-20): " + ", ".join(finding.manifest for finding in superseded)]
     unchecked = [finding for finding in findings if finding.verdict == "UNCHECKABLE"]
     if unchecked:
         lines += ["", f"{len(unchecked)} UNCHECKABLE — reported, not a defect: "

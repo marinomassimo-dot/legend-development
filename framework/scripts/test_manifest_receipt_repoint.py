@@ -186,6 +186,27 @@ class TheRefusals(Fixture):
         self.assertEqual(1, done.returncode)
         self.assertIn("needs a receipt, not a repoint", done.stderr)
 
+    def test_an_unknown_declared_id_is_repointed_when_one_event_names_the_manifest(self) -> None:
+        """A wrong-DATE id (PMID25779665, 2026-10-20): the single same-study event naming the
+        manifest is the unique producer, and its fingerprint is a declared source artifact."""
+        manifest = "disease-models/wwox/research/deepdive_manifests/PMID11111111.json"
+        text = MANIFEST_TEXT.replace("FTR-20260909-11111111-02", "FTR-20261019-11111111-01")
+        root = self.build({"PMID11111111.json": text},
+                          [event("FTR-20261020-11111111-01", "11111111", [manifest])])
+        done = self.run_tool(root, "--pmid", "11111111", "--apply")
+        self.assertEqual(0, done.returncode, done.stderr)
+        self.assertEqual("CONFORMS", mrp.survey(root, "wwox")[0].verdict)
+
+    def test_superseded_artifacts_is_refused_by_the_repair(self) -> None:
+        manifest = "disease-models/wwox/research/deepdive_manifests/PMID11111111.json"
+        root = self.build({"PMID11111111.json": MANIFEST_TEXT},
+                          [event("FTR-20260814-11111111-01", "11111111", [manifest],
+                                 fingerprint="oldold"),
+                           event("FTR-20260909-11111111-02", "11111111", [manifest])])
+        done = self.run_tool(root, "--pmid", "11111111", "--apply")
+        self.assertEqual(1, done.returncode)
+        self.assertIn("SUPERSEDED_ARTIFACTS", done.stderr)
+
     def test_a_missing_receipt_key_is_not_added(self) -> None:
         manifest = "disease-models/wwox/research/deepdive_manifests/PMID11111111.json"
         root = self.build({"PMID11111111.json": {"schema_version": 2, "pmid": "11111111"}},
@@ -326,9 +347,10 @@ class TheLiveCorpus(unittest.TestCase):
         self.assertEqual(1, done.returncode, done.stdout)
         self.assertIn("CONFORMS", done.stderr)
 
-    def test_the_five_artifact_divergence_manifests_are_refused(self) -> None:
-        """Measured 2026-09-28. These are the ones a batch repair must not walk into."""
-        for pmid in ("15070730", "18674750", "20530675", "29724996", "38499540"):
+    def test_the_artifact_divergence_manifests_are_refused(self) -> None:
+        """Measured 2026-09-28 (five), 42422765 added 2026-10-20. Since 2026-10-20 they read
+        SUPERSEDED_ARTIFACTS (not defects) and are still refused by the repair tool."""
+        for pmid in ("15070730", "18674750", "20530675", "29724996", "38499540", "42422765"):
             with self.subTest(pmid):
                 done = self.run_tool("--pmid", pmid)
                 self.assertEqual(1, done.returncode, done.stdout)
@@ -351,7 +373,7 @@ class TheLiveCorpus(unittest.TestCase):
         the ceiling fell) or it changed class (and that is worth noticing).
         """
         expected = {"19936220", "22193544", "22634283", "23370280", "24550385", "26675548",
-                    "30362252", "34831305", "36828035", "42422765"}
+                    "30362252", "34831305", "36828035"}
         for pmid in sorted(expected):
             with self.subTest(pmid):
                 done = self.run_tool("--pmid", pmid)
@@ -360,8 +382,8 @@ class TheLiveCorpus(unittest.TestCase):
         # The no-producer term was 1 (PMID15870886, UNKNOWN_EVENT) until 2026-09-28, when
         # BATCH_20260928_007 recorded its producing reading; 34214506 and 35716775 are UNCHECKABLE,
         # which the ceiling does not count.
-        self.assertEqual(len(expected) + 5 + 0, mrp.BASELINE_DEFECTS,
-                         "the ceiling must equal repairable + artifact-divergence + no-producer; "
+        self.assertEqual(len(expected), mrp.BASELINE_DEFECTS,
+                         "after 2026-10-20 the ceiling must equal the repairable tail alone (divergence cases are SUPERSEDED); "
                          "if it does not, one of the three classes has moved unmeasured")
 
 

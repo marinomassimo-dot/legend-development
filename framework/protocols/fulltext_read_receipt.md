@@ -441,6 +441,19 @@ ceiling the tool declares, so a NEW non-conforming manifest is loud at write tim
 ceiling as the tail is repaired and never raise it. **The tail is 16 since later the same day**,
 when the instrument below repaired `PMID42589397.json`.
 
+**Amendment 2026-10-20 (Harness Engineering, T0) — `SUPERSEDED_ARTIFACTS` is not a defect.** WHAT:
+a manifest whose declared `receipt` is a LATER same-study event naming it, whose
+`source_fingerprint` equals one of the manifest's own `source_artifacts` digests, while the earliest
+naming event fingerprints bytes the manifest no longer declares. WHY: a re-read re-acquired the
+paper's bytes and lawfully rewrote the manifest for them; the repoint is provably impossible
+(ARTIFACT DIVERGENCE), so counting it as debt could only be cleared by a false repoint. This is the
+"second decision" the 2026-09-28 text left open, taken for the case where the manifest's own digests
+prove which reading it describes. Measured: 11 manifests (the 5 earlier divergence cases, 5 re-reads
+of 2026-10-19/20, and PMID42422765); defects 21 -> 9 together with the `PMID25779665.json` repoint
+(a wrong-date id; `manifest_receipt_repoint.py` now repairs `UNKNOWN_EVENT` when exactly one
+same-study event names the manifest). The ceiling was LOWERED to 9, not raised. REVERT: remove the
+branch in `manifest_receipt_provenance.assess`, add the verdict to `DEFECTS`, re-measure.
+
 ### The repair instrument
 
 🔴 **A decided semantics with a check and no writer leaves exactly one route open — the hand edit

@@ -376,6 +376,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 455 input files; digest
-`6b7dc7bda226bc5a`. Sources: the claim, paper and
+`7c4e8c0a02cef3a3`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 

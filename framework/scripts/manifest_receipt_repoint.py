@@ -36,6 +36,7 @@ unique, or not possible, the tool refuses and names what is missing.
     to whatever writes the manifest.
   * `CONFORMS` — there is nothing to repair, and rewriting a correct field is how a correct field
     becomes a wrong one.
+  * `SUPERSEDED_ARTIFACTS` (not a defect; see manifest_receipt_provenance.py, 2026-10-20)
   * `UNCHECKABLE` and `UNKNOWN_EVENT` with no naming event — no same-study event names the
     manifest, so the ledger holds no producer to point at. An append-only ledger is not rewritten
     to manufacture one.
@@ -122,7 +123,7 @@ REFUSAL = 1
 TOOL_ERROR = 2
 
 #: Verdicts this tool can act on. Everything else is a refusal, named in `refuse_reason`.
-REPAIRABLE = ("NOT_THE_PRODUCER", "UNNAMED")
+REPAIRABLE = ("NOT_THE_PRODUCER", "UNNAMED", "UNKNOWN_EVENT")
 
 
 class Refusal(Exception):
@@ -155,6 +156,12 @@ def derive(manifest_path: Path, events: list[dict]) -> tuple[str, str, provenanc
             f"{manifest_path.name} CONFORMS: `receipt` already names {finding.declared}, the "
             "earliest same-study event whose outputs name this manifest. Rewriting a correct "
             "field is how a correct field becomes a wrong one")
+    if finding.verdict == "SUPERSEDED_ARTIFACTS":
+        raise Refusal(
+            f"{manifest_path.name} is SUPERSEDED_ARTIFACTS: ARTIFACT DIVERGENCE by construction. "
+            f"The declared {finding.declared} fingerprints the manifest's own source_artifacts and "
+            f"the earliest naming event {finding.should_be} fingerprints bytes it no longer "
+            "declares; the manifest was lawfully rewritten for re-acquired bytes and is not a defect")
     if finding.verdict not in REPAIRABLE or not finding.should_be:
         raise Refusal(
             f"{manifest_path.name} is {finding.verdict}: no same-study ledger event names this "
