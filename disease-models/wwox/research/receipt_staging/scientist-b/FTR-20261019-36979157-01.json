@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-19T20:00:00Z",
+ "event_at": "2026-10-19T20:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "captions_only",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_present"
+ },
+ "event_id": "FTR-20261019-36979157-01",
+ "evidence_basis": [
+  "Abstract, introduction, discussion, methods 2.4 and results 3.1 and 3.2 read; Figures 1 and 2 opened as images; results 3.3 to 3.5 and Figures 3 to 6 not read in detail.",
+  "FIND: WWOX gain of 2.6- to 15-fold in four glioma lines raises apoptosis in three and lowers the resazurin reducing-capacity readout in all four, with a dissociation from proliferation in DBTRG-05MG; the text cites the wrong figure for proliferation."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID36979157.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID36979157.md",
+  "disease-models/wwox/research/wave4_scientist-b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "4864305c68fee89bde8af8118b5bf7bbec9ffb91d41ebdab4e49473cf4444937",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID36979157_Kaluzinska2023_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.3390/biology12030465",
+  "pmid": "36979157"
+ },
+ "workflow": "scientist-b wave 4 group W1; SOURCE_FIRST; PMC efetch XML re-acquired with pmc_bucket_fetch.py, no User-Agent; Figures 1 and 2 opened as images; locators verified by deepdive_manifest.py. Prepared as a JSON file for the integrator and not appended."
+}
