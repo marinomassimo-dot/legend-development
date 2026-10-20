@@ -377,9 +377,12 @@ def ledger_leads_by_scan() -> dict[str, str]:
 
 
 class ARecordIsNotAProseSection(unittest.TestCase):
-    """Measured, not assumed: the first cut pulled a 470,808-character `## Change-log` block
-    into a reading because it mentioned a PMID once, and the selective path came out LARGER
-    than the full preload it replaces. Sections are named and left behind; records are carried."""
+    """Measured, not assumed: the first cut pulled a six-figure-character prose section into a
+    reading because it mentioned a PMID once, and the selective path came out LARGER than the
+    full preload it replaces. Sections are named and left behind; records are carried.
+    (The section that taught this was `## Change-log`, measured at 470,808 characters when it
+    ran to the end of the file; it is 2,871 characters today and moved to the ledger's history
+    file on 2026-10-20. The ledger's largest prose section is now a dated `## Run …` block.)"""
 
     def test_the_giant_prose_sections_really_exist(self) -> None:
         blocks = rr.parse_records(ROOT, "wwox", "discovery_ledger_current")
@@ -407,13 +410,27 @@ class ARecordIsNotAProseSection(unittest.TestCase):
         self.assertTrue(expected, "the fixture needs a ledger lead citing the PMID")
         self.assertEqual(expected, got)
 
+    @staticmethod
+    def largest_section() -> str:
+        """The biggest prose section of the ledger, BY SIZE and never by name.
+
+        These two cases named `Change-log` until 2026-10-20, when that block moved to
+        `discovery_ledger_history.md` and both went red — which is the failure the class's own
+        docstring warns about one method above. A section is chosen by the property under test.
+        """
+        blocks = rr.parse_records(ROOT, "wwox", "discovery_ledger_current")
+        sections = [b for b in blocks if b.kind == "section"]
+        return max(sections, key=lambda b: len(b.text)).record_id
+
     def test_a_section_is_still_reachable_when_it_is_asked_for_by_name(self) -> None:
-        found = rr.select(ROOT, "wwox", record_id="Change-log", hops=0, open_sections=True)
-        self.assertTrue([r for r, _ in found.hits if r.record_id == "Change-log"])
+        name = self.largest_section()
+        found = rr.select(ROOT, "wwox", record_id=name, hops=0, open_sections=True)
+        self.assertTrue([r for r, _ in found.hits if r.record_id == name])
 
     def test_hops_never_expand_through_a_section(self) -> None:
-        found = rr.select(ROOT, "wwox", record_id="Change-log", hops=1)
-        linked = [why for _r, why in found.hits if "linked from Change-log" in why]
+        name = self.largest_section()
+        found = rr.select(ROOT, "wwox", record_id=name, hops=1)
+        linked = [why for _r, why in found.hits if f"linked from {name}" in why]
         self.assertEqual([], linked)
 
     def test_every_carried_record_has_a_recognised_identity_shape(self) -> None:

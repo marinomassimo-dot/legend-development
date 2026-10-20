@@ -53,6 +53,12 @@ class Harness:
             # Well under the trigger, so the existing policy tests stay about the policy
             # they were written for. The scale tests raise these deliberately.
             "registry_bytes": {"claims": 1_000, "literature": 2_000, "papers": 3_000},
+            # Well under every budget, so the existing policy tests stay about the policy
+            # they were written for. The scale tests raise one axis deliberately.
+            "surface_cost": {
+                name: {"bytes": 1_000.0, "records": 10.0,
+                       "record_access_seconds": 0.001, "record_rewrite_seconds": 0.001}
+                for name in ("claims", "literature", "papers", "discovery")},
         }
         # Every ratchet the module declares must be present in an injected measurement, or
         # `evaluate` raises instead of judging. Derived from `RATCHET_KEYS` rather than listed,
@@ -204,6 +210,10 @@ class ScaleTriggerTests(unittest.TestCase):
     A registry can be perfectly anchored and still have outgrown the shape it is. These
     tests are about the one property that makes such a signal survive: it must not be
     silenceable more cheaply than it is satisfiable.
+
+    Since the Orchestrator's decision of 2026-10-20 the trigger is founded on MEASURED COST,
+    not on bytes: a file may be arbitrarily large and say nothing, and a surface that has
+    become slow to read or rewrite says something whatever its size.
     """
 
     def setUp(self) -> None:
@@ -215,16 +225,76 @@ class ScaleTriggerTests(unittest.TestCase):
         self.h.restore()
         self._stack.cleanup()
 
-    def over(self, size: int | None = None) -> None:
-        self.h.live["registry_bytes"]["literature"] = size or (
-            ga.REGISTRY_SIZE_TRIGGER_BYTES + 1)
+    AXIS = "record_access_seconds"
+
+    def over(self, seconds: float | None = None, surface: str = "literature") -> None:
+        budget = ga.SCALE_COST_BUDGETS[self.AXIS][0]
+        self.h.live["surface_cost"][surface][self.AXIS] = seconds or (budget * 2)
 
     def grow(self, claims: int = 2) -> int:
         self.h.live["structural"]["claims"] += claims
         return self.h.run("record", "--batch", "B1", "--claims", f"+{claims}")
 
-    def test_a_registry_under_the_trigger_says_nothing(self) -> None:
+    def test_a_surface_under_every_budget_says_nothing(self) -> None:
         self.assertEqual([], ga.scale_triggers(self.h.live, {}))
+
+    def test_size_alone_never_fires_the_trigger(self) -> None:
+        """The whole point of the 2026-10-20 decision: bytes are not a harm.
+
+        A registry a hundred times today's largest, read and rewritten as fast as ever, is
+        not a scale question — and the byte trigger it replaced would have fired on it twice.
+        """
+        for surface in self.h.live["surface_cost"].values():
+            surface["bytes"] = 150_000_000.0
+            surface["records"] = 200_000.0
+        self.assertEqual([], ga.scale_triggers(self.h.live, {}))
+        self.assertEqual(0, self.h.run("check"))
+        self.assertEqual(0, self.grow(), "a batch is not blocked by size")
+
+    def test_a_cost_breach_fires_and_names_the_measured_value_and_its_budget(self) -> None:
+        self.over(seconds=0.9)
+        triggers = ga.scale_triggers(self.h.live, {})
+        self.assertEqual(1, len(triggers))
+        self.assertIn("literature", triggers[0])
+        self.assertIn("0.900 s", triggers[0])
+        budget = ga.SCALE_COST_BUDGETS[self.AXIS][0]
+        self.assertIn(f"{budget:.3f} s budget", triggers[0])
+
+    def test_the_discovery_ledger_is_watched_and_can_fire_on_its_own(self) -> None:
+        """It had no scale anchor at all until 2026-10-20, at 798 KB and growing every wave."""
+        self.assertIn("discovery", ga.SCALE_SURFACES)
+        self.over(surface="discovery")
+        triggers = ga.scale_triggers(self.h.live, {})
+        self.assertEqual(1, len(triggers))
+        self.assertIn("discovery", triggers[0])
+
+    def test_the_real_discovery_ledger_is_measured_in_this_checkout(self) -> None:
+        """A watched surface the measurement cannot see would be watched in name only."""
+        root = Path(__file__).resolve().parents[2]
+        if not (root / ga.SCALE_SURFACES["discovery"].format(disease="wwox")).is_file():
+            self.skipTest("discovery ledger absent from this checkout")
+        costs = ga.measure_surface_cost(root, "wwox")
+        self.assertFalse(costs["discovery"].get("absent"))
+        self.assertGreater(costs["discovery"]["records"], 0)
+        self.assertIn("discovery", ga.render_surface_cost(costs))
+
+    def test_an_absent_surface_is_reported_absent_and_never_counted_clean(self) -> None:
+        with TemporaryDirectory() as empty:
+            costs = ga.measure_surface_cost(Path(empty), "wwox")
+        self.assertTrue(all(row.get("absent") for row in costs.values()))
+        self.assertIn("ABSENT", ga.render_surface_cost(costs))
+        self.assertEqual([], ga.scale_triggers({"surface_cost": costs}, {}))
+
+    def test_the_measured_value_is_printed_even_when_nothing_fires(self) -> None:
+        """A threshold whose measurement is invisible is a number nobody can judge."""
+        import contextlib
+        import io
+        buffer = io.StringIO()
+        with contextlib.redirect_stdout(buffer):
+            self.h.run("check")
+        printed = buffer.getvalue()
+        self.assertIn("scale: papers", printed)
+        self.assertIn("/0.25s", printed)
 
     def test_crossing_the_trigger_is_reported_but_does_not_fail_check(self) -> None:
         """It must not block a suite: an architectural question is not a broken anchor."""
@@ -248,23 +318,37 @@ class ScaleTriggerTests(unittest.TestCase):
         self.assertEqual([], ga.scale_triggers(self.h.live, ga.tail_state(self.h.events())))
         self.assertEqual(0, self.grow())
 
-    def test_an_acknowledgement_expires_once_the_file_grows_past_the_margin(self) -> None:
+    def test_an_acknowledgement_expires_once_the_cost_grows_past_the_margin(self) -> None:
         """Without this, `deferred` becomes permanent and the trigger is decoration."""
         self.over()
         self.h.run("acknowledge-scale", "--batch", "B1", "--note", "deferred once")
         state = ga.tail_state(self.h.events())
-        acknowledged = self.h.live["registry_bytes"]["literature"]
-        self.h.live["registry_bytes"]["literature"] = int(
-            acknowledged * (1 + ga.SCALE_ACK_MARGIN)) + 1
+        acknowledged = self.h.live["surface_cost"]["literature"][self.AXIS]
+        self.h.live["surface_cost"]["literature"][self.AXIS] = (
+            acknowledged * (1 + ga.SCALE_ACK_MARGIN) * 1.01)
         triggers = ga.scale_triggers(self.h.live, state)
         self.assertTrue(triggers)
         self.assertIn("expired", triggers[0])
         self.assertEqual(1, self.grow(), "an expired deferral must block again")
 
-    def test_a_registry_cannot_be_acknowledged_before_it_crosses_the_trigger(self) -> None:
+    def test_a_third_deferral_by_an_agent_is_refused_and_blocks_nothing_else(self) -> None:
+        """Never auto-renewed (Mirror A7, 2026-10-20): the report stays, the silence does not."""
+        for round_number in range(ga.SCALE_ACK_AGENT_RENEWALS):
+            self.over(seconds=0.3 * (round_number + 1))
+            self.assertEqual(0, self.h.run("acknowledge-scale", "--batch", "B1", "--note",
+                                           f"deferral {round_number + 1}"))
+        self.over(seconds=5.0)
+        self.assertEqual(2, self.h.run("acknowledge-scale", "--batch", "B1", "--note", "again"))
+        self.assertTrue(ga.scale_triggers(self.h.live, ga.tail_state(self.h.events())),
+                        "the refusal must leave the report standing")
+        self.assertEqual(0, self.h.run("acknowledge-scale", "--batch", "B1", "--note", "again",
+                                       "--operator-decision", "operator said defer, 2026-10-20"))
+        self.assertEqual([], ga.scale_triggers(self.h.live, ga.tail_state(self.h.events())))
+
+    def test_a_surface_cannot_be_acknowledged_before_it_crosses_a_budget(self) -> None:
         """A pre-emptive acknowledgement would be silence bought before the question."""
         self.assertEqual(0, self.h.run("acknowledge-scale", "--batch", "B1", "--note", "early"))
-        self.assertEqual({}, (ga.tail_state(self.h.events()) or {}).get("scale_ack", {}))
+        self.assertEqual({}, (ga.tail_state(self.h.events()) or {}).get("scale_cost_ack", {}))
 
     def test_acknowledgement_survives_a_later_ordinary_batch(self) -> None:
         """A `record` event must not drop the acknowledgement it did not touch."""
@@ -272,7 +356,7 @@ class ScaleTriggerTests(unittest.TestCase):
         self.h.run("acknowledge-scale", "--batch", "B1", "--note", "deferred")
         self.assertEqual(0, self.grow())
         state = ga.tail_state(self.h.events())
-        self.assertIn("literature", state.get("scale_ack", {}))
+        self.assertIn("literature", state.get("scale_cost_ack", {}))
 
 
 class MeasurementIsSingleSourced(unittest.TestCase):

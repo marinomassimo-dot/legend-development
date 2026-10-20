@@ -97,7 +97,7 @@
   "release battery green on a fresh clone of the landed SHA",
   "DEFAULTS_TAKEN, DECISIONS_TAKEN, STOP_LOG in this record"
  ],
- "CURRENT_STATE": "COMPLETED",
+ "CURRENT_STATE": "COMPLETED_WITH_FOLLOW_UP",
  "assigned_on": "2026-10-20",
  "TASK_ACK": {
   "state": "ACCEPTED",
@@ -160,10 +160,11 @@
    "what": "eutils.py: cross-process throttle (one lock per host user), 429 Retry-After + exponential back-off, one-day cache, empty UA; wired into pubmed_identity_check, staged_receipt_check, pmc_bucket_fetch, lot_internal_edges"
   },
   "N9": {
-   "result": "DECISION_PACKET",
+   "result": "DECISION_PACKET + DECISION IMPLEMENTED",
    "commit": "f178271d",
    "path": "governance/design_records/registry_scale_decision_packet_20261020.md",
-   "what": "measured: no batch cost attributable to size (context 0, get 0.83 s, LINT 7.85 s, scoped edit 0.17 s); recommends A (re-found the trigger on measured cost, watch all three files) now, E (cold/hot history split) when a cost appears; discovery-ledger change-log split as the cheapest size cut; no agent renewal of the deferral"
+   "what": "measured: no batch cost attributable to size (context 0, get 0.83 s, LINT 7.85 s, scoped edit 0.17 s); recommends A (re-found the trigger on measured cost, watch all three files) now, E (cold/hot history split) when a cost appears; discovery-ledger change-log split as the cheapest size cut; no agent renewal of the deferral",
+   "decision": "ORCHESTRATOR DECISION 2026-10-20 (operator delegated): adopt A now plus the discovery-ledger change-log move; B, C, D rejected; E deferred to the new trigger, not to a date. Implemented: growth_anchors.py byte trigger replaced by two measured per-surface cost budgets (record_access_seconds 0.25 s, record_rewrite_seconds 0.25 s), all four surfaces watched including the discovery ledger which had no anchor; check prints measured beside budget; deferral binds to cost, expires at +25%, and from the third needs --operator-decision. Change-log block moved verbatim to discovery_ledger_history.md. Note: governance/design_records/registry_scale_decision_20261020_note.md"
   },
   "N10": {
    "result": "DONE",
@@ -217,6 +218,22 @@
    "who_consulted": "none",
    "reversibility": "n/a",
    "how_to_revert": "n/a"
+  },
+  {
+   "what": "the discovery-ledger history move covers the `## Change-log` block only; the dated `## Run …` sections stay in the current ledger",
+   "alternatives_rejected": "moving the dated sections as the decision's '~470,808 bytes, 58%' implied",
+   "who_consulted": "the file itself, re-measured",
+   "reversibility": "full",
+   "how_to_revert": "git revert the move commit; the note records both digests",
+   "why": "the 470,808-byte figure was false — repeated from a stale comment in registry_records.py into the N9 packet. Measured 2026-10-20 the Change-log block is 2,871 bytes (0.36%); the ledger's bulk is 669,319 bytes of dated sections holding 193 of its 221 lead records, which are current material, not history. Cutting the ledger down is option E, deferred to the trigger."
+  },
+  {
+   "what": "two tests pinned to the section name 'Change-log' now choose the ledger's largest prose section by size",
+   "alternatives_rejected": "renaming them to the new largest section's name",
+   "who_consulted": "none",
+   "reversibility": "full",
+   "how_to_revert": "git revert the move commit",
+   "why": "a test pinned to a name goes green while the protection lapses - the warning the same test class already carried"
   }
  ],
  "STOP_LOG": [
@@ -242,6 +259,49 @@
    "lines": 434,
    "drifting": 13,
    "command": "locator_count_crosscheck.py --depth"
+  },
+  "scale_cost_trigger_20261020": {
+   "budgets": {
+    "record_access_seconds": 0.25,
+    "record_rewrite_seconds": 0.25
+   },
+   "measured": {
+    "papers": {
+     "bytes": 1541499,
+     "records": 813,
+     "record_access_seconds": 0.008,
+     "record_rewrite_seconds": 0.001
+    },
+    "literature": {
+     "bytes": 964192,
+     "records": 703,
+     "record_access_seconds": 0.005
+    },
+    "discovery": {
+     "bytes": 810852,
+     "records": 283,
+     "record_access_seconds": 0.003
+    },
+    "claims": {
+     "bytes": 314817,
+     "records": 53,
+     "record_access_seconds": 0.001
+    }
+   },
+   "command": "python3 framework/scripts/growth_anchors.py check"
+  },
+  "discovery_ledger_history_move_20261020": {
+   "moved_block_sha256": "b620ea72c222aa8f6bdfa39f59d75fca5a7917985967ac17c3ffd1c14170d0d9",
+   "history_tail_sha256": "36482f00c0177669ee19610be29ea0b86b7a6c5e0480a372d413eea03ab12061",
+   "note": "the two digests differ only by the block's trailing blank lines: the removed block normalised to one trailing newline hashes to the history tail's value, and the ledger with the pointer replaced by the block reconstructs the original file byte for byte",
+   "ledger_bytes": {
+    "before": 797603,
+    "after": 794991
+   },
+   "change_log_block_bytes": 2871,
+   "dated_sections_bytes": 669319,
+   "lead_records_total": 221,
+   "lead_records_inside_dated_sections": 193
   }
  },
  "ACCEPTANCE": {

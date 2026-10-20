@@ -130,8 +130,8 @@ LARGE = ("paper_registry_current", "literature_tracking_log_current")
 RECORD_HEAD = re.compile(r"^##[ \t]+(?P<id>\S.*?)[ \t]*$", re.M)
 # 🔴 A RECORD IS AN ADDRESSABLE SCIENTIFIC UNIT; A SECTION IS EVERYTHING ELSE, AND THE
 # DIFFERENCE WAS MEASURED, NOT ASSUMED. The first cut of this file treated every `##` heading as
-# a record. `discovery_ledger_current.md` ends with a `## Change-log` block of 470,808
-# characters and `full_text_queue_current.md` with a `## Esito` block of 95,290; an incidental
+# a record. When this was written `discovery_ledger_current.md` ended with a `## Change-log`
+# block of 470,808 characters and `full_text_queue_current.md` with a `## Esito` block of 95,290; an incidental
 # PMID inside either dragged the whole block in, and then its wikilinks exploded at hop 1. The
 # result was WORSE than the full load it replaces — 602 KB and 689 KB for two PMIDs against a
 # 1,067 KB four-file preload. Naming what is addressable fixes it at the root instead of
@@ -229,7 +229,7 @@ def is_record(record_id: str, text: str) -> bool:
     field is a record whatever its heading looks like. The first cut listed shapes, and missed
     `CORPUS P###` (188 headings) and `LIT-EX-###` (6) — so records holding a real identifier were
     withheld as prose and their links were never followed. A block with neither a known shape nor
-    an identifier — `## Change-log`, 470,808 characters — is a section.
+    an identifier — a dated `## Run …` narrative of six figures of characters — is a section.
     """
     return is_record_id(record_id) or bool(IDENTIFIER_LINE.search(text))
 # Identity fields, per registry shape. These say what the record IS ABOUT.
@@ -681,8 +681,8 @@ def select(root: Path, disease: str, *, pmid: str = "", doi: str = "", record_id
                 why = ""
             if why and record.kind == "section" and why != "record id":
                 # Named, never carried: a prose section that happens to cite the query is a
-                # place to look, not a record to load. The alternative is a 470 KB change-log
-                # entering a reading because it mentions a PMID once.
+                # place to look, not a record to load. The alternative is a six-figure prose
+                # section entering a reading because it mentions a PMID once.
                 found.notes.append(
                     f"not returned (prose section, {len(record.text):,} chars): "
                     f"{record.source}#{record.record_id} matched by {why} — "
