@@ -23,3 +23,32 @@ All are `first_read` (`context_policy: SOURCE_FIRST`; the held context is only t
 | 29899766 Mastrangelo 2018 (SUBSTITUTE) | Which treatable cofactor and metabolic causes (B6, folate, biotin, creatine, CoQ10, serine) belong in a DEE work-up, and what can a negative screen say? |
 | 36980111 Mastrangelo 2023 (SUBSTITUTE) | Which seizure phenotypes respond to B6 across the B6-dependent diseases, and what would a pyridoxine response look like in a class-level reading? |
 | 38978529 Girgis 2024 (SUBSTITUTE) | What does a cerebral folate transport deficiency look like in practice, and which CSF readout defines it? |
+
+---
+
+## 1. PMID 25779665 — Chen 2015, UV/cold shock-mediated apoptosis switched to bubbling cell death at low temperature (WWOX-direct, W2 temperature axis) — receipt FTR-20261020-25779665-01
+
+**What it MEASURES.** System: cultured COS7, L929 and B16F10 cells and Wwox+/+ versus Wwox-/- MEFs, in vitro.
+Trigger: UVC 480 mJ/cm2 then 5 min at 4 C, then incubation at 4, 22 or 37 C. Readouts: percent of cells that
+extrude a single nuclear "gas bubble", DNA laddering, annexin V, NOS2 and TRAF2 by immunofluorescence and
+blot, p53 and pS46-p53, EM of the burst nucleus, one human frostbite IHC pair.
+
+**Question and answer.** Does the temperature thread rest on anything beyond a cell-death assay? No. Temperature
+is a post-irradiation culture condition of cell lines (Figure 1B-D: at 4 C versus 37 C bubbling is about 57%
+versus 18% at 2 h and converges at 4 h; DNA laddering is blocked at 4 C). The only in-tissue datum is a
+frostbite-versus-normal human skin IHC pair (Figure 7C: WWOX up above 80%, TRAF2 down above 90% in the text)
+with no n, no plotted quantification and "skin sections from patient" in the Methods. There is no in vivo
+cold or fever experiment. The direction for WWOX loss is protection: Wwox-/- MEFs resist bubbling death
+(Figure 6B: about 28/45/85% bubbling in +/+ at 0.5/1/2 h versus about 0-2% in -/-, n = 3), so nothing
+here supports a WWOX-loss cold sensitivity or hypothermia mechanism. The metabolic statements are "data not
+shown" (bubbling "does not require ATP"; HIF1alpha involvement "unknown"); nutrient stress changes the
+outcome (24-48 h starvation gives autophagic death without bubbles) but only in a representative movie that
+is not retrievable.
+
+**What it does not support.** A link between WWOX and body temperature, thermogenesis, hypothermia or cold
+tolerance; any energy-metabolism readout; any neural or in vivo statement about WWOX loss.
+
+**Effect on the model.** The "temperature" axis in W2 stays "no WWOX evidence beyond cell-death assays". It
+does not explain the whole-body-null hypothermia read earlier in this batch (a runted, fat-depleted animal): that
+phenotype has no mechanistic bridge in this paper. Class MINOR; no claim touched. Debts: nine
+supplementary movies and the laboratory's UV/TRAF2/p53 primaries (queued in the commit candidate).

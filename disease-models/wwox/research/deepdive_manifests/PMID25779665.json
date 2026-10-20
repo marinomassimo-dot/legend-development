@@ -1,0 +1,408 @@
+{
+ "schema_version": 2,
+ "pmid": "25779665",
+ "doi": "10.18632/oncotarget.3153",
+ "receipt": "FTR-20261019-25779665-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/wave4_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-W4-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Europe PMC REST fullTextXML plus the PMC OA open-data bucket for figures and supplement."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true,
+   "reason": "Run inline under the dispatch brief; this manifest and the note carry what the skill would produce."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate; the shared discovery ledger is written by the Orchestrator."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "The senior laboratory is the main WWOX/WOX1 signalling group (the cited primary work on pY33-WWOX, p53, TRAF2 and Zfra); it is primary for the gene's cell-death signalling and not for the biallelic-loss neurological disease. Observation (counted bubbles, immunoblots, EM) is weighted above interpretation (a nitric-oxide-containing gas jet, a frostbite treatment concept), which rests on an NOS2 inhibitor, a single IHC pair and 'data not shown'."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND temperature",
+    "count": 6,
+    "source": "PubMed ESearch 2026-10-20"
+   },
+   {
+    "query": "WWOX AND hypothermia",
+    "count": 1,
+    "source": "PubMed ESearch 2026-10-20"
+   },
+   {
+    "query": "WWOX AND cold shock",
+    "count": 3,
+    "source": "PubMed ESearch 2026-10-20"
+   },
+   {
+    "query": "WWOX AND bubbling",
+    "count": 8,
+    "source": "PubMed ESearch 2026-10-20"
+   }
+  ],
+  "note": "Counts are record matches, not measurements of the pair; the field is one laboratory's thread."
+ },
+ "multihop": {
+  "references_enumerated": 41,
+  "gene_direct_refs_in_source": [
+   "12514174",
+   "16219768",
+   "16115915",
+   "11058590",
+   "19366691",
+   "21901168",
+   "17567906",
+   "24008736",
+   "25331887",
+   "27234396",
+   "19484134",
+   "25012504"
+  ],
+  "resolved": [
+   {
+    "pmid": "25012504",
+    "how": "Abu-Remaileh and Aqeilan 2014, WWOX and glucose metabolism through HIF1alpha, has a complete receipted reading in the ledger (checked with fulltext_receipts.py status)."
+   }
+  ],
+  "queued": [
+   {
+    "queue": "CC-20261019-SCIENTIST-C-W4-01",
+    "why": "The laboratory's UV/TRAF2/p53 primaries (PMIDs in the list above, taken from the reference markup's pub-id elements) were not opened here; this reading asked a temperature question only."
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 25779665 --hops 0; fulltext_receipts.py status --pmid 25779665; ls receipt_staging/*",
+  "hits": 0,
+  "note": "No registry record, no receipt, no staged receipt for this PMID; the 2024 WWOX/TRAF2 cold-shock bubbling paper is receipted and was the reason this precursor was selected."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-20 by PubMed EFetch: publication type Journal Article, no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 41,
+   "references_screened": 31,
+   "references_with_doi": 31,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 10
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID25779665_Chen2015_PMC.xml",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML for PMC4480731 (HTTP 200, 102,889 bytes), 2026-10-20.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4480731/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_rest_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "0ae2abc7d22a5ad28f03caeb3024a48fdfab7824ce223707370ab198651aab40"
+  },
+  {
+   "path": "files/figures/PMID25779665/oncotarget-06-8007-g001.jpg",
+   "kind": "figure",
+   "note": "Figure 1, PMC OA open-data bucket, 2026-10-20; rendered at about 550 px width, which limits panel text.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4480731.1/oncotarget-06-8007-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "27c1c8cf0aa00ca4a3ba6d55971b78333f5d5d228d694b8d90123116623108f9"
+  },
+  {
+   "path": "files/figures/PMID25779665/oncotarget-06-8007-g002.jpg",
+   "kind": "figure",
+   "note": "Figure 2, PMC OA open-data bucket, 2026-10-20; rendered at about 550 px width, which limits panel text.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4480731.1/oncotarget-06-8007-g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "c21d80f92ca539e8ddfd4594d377a241eb76e0d054b5f0e8bdf626cc78c22e7e"
+  },
+  {
+   "path": "files/figures/PMID25779665/oncotarget-06-8007-g003.jpg",
+   "kind": "figure",
+   "note": "Figure 3, PMC OA open-data bucket, 2026-10-20; rendered at about 550 px width, which limits panel text.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4480731.1/oncotarget-06-8007-g003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "7d6dc476827b81f78270fefc688e69fd47c08f62390534dbd95627b26324cffa"
+  },
+  {
+   "path": "files/figures/PMID25779665/oncotarget-06-8007-g004.jpg",
+   "kind": "figure",
+   "note": "Figure 4, PMC OA open-data bucket, 2026-10-20; rendered at about 550 px width, which limits panel text.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4480731.1/oncotarget-06-8007-g004.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "6c5e47c25cbf1a65968854e10f809e38e8b62c3f69311f2f6678ca6314a2af1e"
+  },
+  {
+   "path": "files/figures/PMID25779665/oncotarget-06-8007-g005.jpg",
+   "kind": "figure",
+   "note": "Figure 5, PMC OA open-data bucket, 2026-10-20; rendered at about 550 px width, which limits panel text.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4480731.1/oncotarget-06-8007-g005.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "b7f700d0928b5d47bb5518e9259bdb06994294ee9a92035878fbad3b2f13861b"
+  },
+  {
+   "path": "files/figures/PMID25779665/oncotarget-06-8007-g006.jpg",
+   "kind": "figure",
+   "note": "Figure 6, PMC OA open-data bucket, 2026-10-20; rendered at about 550 px width, which limits panel text.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4480731.1/oncotarget-06-8007-g006.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "09098454e803f6cf591d4c6f3b88aebeb5b6396a5722b50b5ece138c40e7a5e1"
+  },
+  {
+   "path": "files/figures/PMID25779665/oncotarget-06-8007-g007.jpg",
+   "kind": "figure",
+   "note": "Figure 7, PMC OA open-data bucket, 2026-10-20; rendered at about 550 px width, which limits panel text.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4480731.1/oncotarget-06-8007-g007.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "189d3ba6d38f6d55bd5b15a06e6f82849d5e76159ec18e7171da74fe3412c4f5"
+  },
+  {
+   "path": "files/fulltext/PMID25779665_Chen2015_supp.pdf",
+   "kind": "supplement_binary",
+   "note": "Supplementary file (11 pages: Supplementary Figures S1-S5 and legends of Supplementary Videos 1-8; the videos themselves are not in the bucket).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4480731.1/oncotarget-06-8007-s001.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "1e6c253f0e9f4fa459efe6824eec75df37127eb748bc18f1e634d87402b29186"
+  },
+  {
+   "path": "files/fulltext/PMID25779665_Chen2015_supp_pdftotext.txt",
+   "kind": "supplement_text",
+   "note": "Derived text layer of the supplementary PDF; clean (no control characters).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID25779665_Chen2015_supp.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk supp.pdf supp_pdftotext.txt",
+     "join": "\n"
+    },
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "e1afaad9d83dbbdaa4f215a253aee8065482cbaa3f9906fdd780e08d46a7e482"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC4480731/fullTextXML returned HTTP 200 (102,889 bytes) on 2026-10-20; the declared artefact is that response.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a supplement text layer or a figure image.",
+  "entries": [
+   {
+    "proposition": "TEMPERATURE HERE IS A POST-IRRADIATION CULTURE CONDITION OF CELL LINES, NOT A BODY TEMPERATURE. Cells receive UVC at 480 mJ/cm2 and 5 min at 4 C and are then held at 4, 22 or 37 C; bubbling is counted. Nothing in the design is a whole-animal, thermoregulatory or fever experiment.",
+    "snippet": "When cells were subjected to UV irradiation and/or cold shock and then incubated at 4, 22 or 37°C for indicated durations",
+    "surface": "body",
+    "anchor": "Results, first paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "cultured COS7, L929, B16F10 cells and Wwox MEFs, UVC then cold shock, in vitro",
+     "treatment": "UVC 480 mJ/cm2 then 4 C for 5 min then 4, 22 or 37 C",
+     "endpoint": "nuclear bubbling counted"
+    },
+    "artifact": "files/fulltext/PMID25779665_Chen2015_PMC.xml"
+   },
+   {
+    "proposition": "WWOX-NULL MEFs RESIST THE BUBBLING DEATH: loss of Wwox PROTECTS these cells in this assay, so WWOX loss is not shown to sensitise cells to cold; the direction is the reverse of a hypothermia-sensitivity reading.",
+    "snippet": "However, the knockout Wwox−/− MEF cells resisted bubbling death by UV/cold shock (Figure 6A and 6B; Supplementary Video 9)",
+    "surface": "body",
+    "anchor": "Results, WWOX/WOX1 and p53 are essential for UV/cold shock-induced nuclear damage",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "cultured COS7, L929, B16F10 cells and Wwox MEFs, UVC then cold shock, in vitro",
+     "genotype": "Wwox-/- versus Wwox+/+ MEF",
+     "treatment": "UV then 4 C",
+     "endpoint": "percent bubbling cells"
+    },
+    "artifact": "files/fulltext/PMID25779665_Chen2015_PMC.xml"
+   },
+   {
+    "proposition": "Figure 6B (hand reading, 550 px render): percent bubbling is about 28, 45 and 85 in Wwox+/+ MEFs at 0.5, 1 and 2 h and about 0 to 2 in Wwox-/- MEFs at each time (** P < 0.005, n = 3, about 100 cells counted per condition). Panel 6C-D: pS46-p53 is not detectable in Wwox-/- MEFs with or without treatment and rises in Wwox+/+. The comparison is knockout versus wild-type MEF, an immortalised-or-primary fibroblast of unstated passage; no heterozygote and no re-expression arm.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6A-F, MEF Wwox+/+ and Wwox-/- time-lapse images, bubbling percentages, p53 and pS46-p53 immunoblots, COS7 p53 constructs.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID25779665/oncotarget-06-8007-g006.jpg",
+    "anchor": "Figure 6B, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "cultured COS7, L929, B16F10 cells and Wwox MEFs, UVC then cold shock, in vitro",
+     "genotype": "Wwox-/- versus Wwox+/+ MEF",
+     "endpoint": "percent bubbling, p53 phosphorylation"
+    },
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "THE ONLY IN-TISSUE CHANGE IS A HUMAN FROSTBITE IHC COMPARISON WITH NO STATED n: the text gives WWOX up above 80% and TRAF2 down above 90% in frostbitten skin against normal skin; Methods say skin sections 'from patient' (singular) and the quantification is by ImageJ without a replicate statement.",
+    "snippet": "When human skin was subjected to frostbite, the WWOX/WOX1 level was dramatically increased (> 80% increase), and the TRAF2 level reduced by greater than 90% (Figure 7C).",
+    "surface": "body",
+    "anchor": "Results, TRAF2 significantly retards bubbling death, second paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human skin sections, frostbitten versus normal",
+     "endpoint": "WWOX/WOX1 and TRAF2 immunohistochemistry"
+    },
+    "artifact": "files/fulltext/PMID25779665_Chen2015_PMC.xml"
+   },
+   {
+    "proposition": "Figure 7C (hand reading): two bright-field IHC fields per condition (negative control, WOX1, TRAF2; frostbite versus normal skin), no scale beyond a 20 um bar, no quantification plot and no statement of how many patients or fields; the 80% and 90% figures are text-only. The panel cannot carry a quantitative claim.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7C, IHC of WOX1 and TRAF2 in frostbitten and normal human skin with negative control.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID25779665/oncotarget-06-8007-g007.jpg",
+    "anchor": "Figure 7C, native JPEG",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[3]",
+    "qualifies_needle": "the WWOX/WOX1 level was dramatically increased",
+    "experimental_context": {
+     "system": "human skin sections, frostbitten versus normal",
+     "endpoint": "IHC staining"
+    },
+    "found_or_sought": "sought - question: any in vivo cold datum"
+   },
+   {
+    "proposition": "THE METABOLIC STATEMENTS ARE 'DATA NOT SHOWN': the paper says bubbling does not require ATP and that HIF1alpha involvement is unknown; neither has a panel, so the paper carries no energy-metabolism readout.",
+    "snippet": "The bubbling process does not require ATP (data not shown).",
+    "surface": "body",
+    "anchor": "Discussion, Summary",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "cultured COS7, L929, B16F10 cells and Wwox MEFs, UVC then cold shock, in vitro",
+     "endpoint": "ATP requirement, not shown"
+    },
+    "artifact": "files/fulltext/PMID25779665_Chen2015_PMC.xml"
+   },
+   {
+    "proposition": "Nutrient stress changes the outcome: 24-48 h serum-starved COS7 cells exposed to UV and cold shock show autophagic vacuoles and nuclear bursting without bubbles; the evidence is a representative video (Supplementary Video 6), not a quantified panel, and the video is not in the retrievable supplement.",
+    "snippet": "When COS7 cells were pre-starved for 24–48 hr and then exposed to UV/cold shock, these cells exhibited increasing numbers of cytosolic autophagic vacuoles with time",
+    "surface": "body",
+    "anchor": "Results, Starving cells prefer autophagic death but not bubbling death",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "cultured COS7, L929, B16F10 cells and Wwox MEFs, UVC then cold shock, in vitro",
+     "treatment": "24-48 h serum starvation then UV/cold shock",
+     "endpoint": "autophagic vacuoles, representative video"
+    },
+    "artifact": "files/fulltext/PMID25779665_Chen2015_PMC.xml"
+   },
+   {
+    "proposition": "Supplementary Video 6 legend: starvation induces autophagic death and blocks bubbling; 'a representative data from 3 experiments is shown'. The movies (Videos 1-9) are not retrievable here, so everything resting on a movie is declared a debt, not read.",
+    "snippet": "Supplementary Video 6: Starvation induces autophagic death and blocks bubbling in COS7 cells.",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID25779665_Chen2015_supp_pdftotext.txt",
+    "anchor": "Supplementary Video 6 legend, PDF page 8",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "cultured COS7, L929, B16F10 cells and Wwox MEFs, UVC then cold shock, in vitro",
+     "treatment": "24 h serum-free then UV/cold shock",
+     "endpoint": "movie"
+    },
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "Figure 1B-D (hand reading): in COS7 cells bubbling at 4 C versus 37 C is about 57% versus 18% at 2 h and about 87% versus 85% at 4 h (n = 3, * P < 0.05 at 1 and 2 h only), and internucleosomal DNA laddering appears at 22 and 37 C and is blocked at 4 C; B16F10 cells show laddering at 37 C only. Temperature changes the kinetics and the death mode of UV-damaged cells in vitro; at 4 h the 4 and 37 C bubbling counts converge.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1A-E, COS7 time-lapse frames, bubbling versus time at 4 and 37 C, DNA fragmentation gels for COS7 and B16F10, schematic.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID25779665/oncotarget-06-8007-g001.jpg",
+    "anchor": "Figure 1B-E, native JPEG",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "cultured COS7, L929, B16F10 cells and Wwox MEFs, UVC then cold shock, in vitro",
+     "treatment": "UV then cold shock then 4, 22 or 37 C",
+     "endpoint": "percent bubbling; DNA laddering"
+    },
+    "found_or_sought": "sought"
+   }
+  ]
+ }
+}
