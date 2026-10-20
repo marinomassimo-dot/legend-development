@@ -60,6 +60,16 @@ if [ -f "$FRESHNESS" ]; then
   REPORT="$(python3 "$FRESHNESS" --repo "$ROOT" --paths "$@" 2>&1)"
   CODE=$?
   set -e
+  # N3 (2026-10-20): off main, a STALE shared surface is not this commit's to regenerate -
+  # on a task branch regeneration bakes in peers' in-flight inputs or conflicts at landing,
+  # and in the metabolic batch every Scientist commit needed a stated reason for it. The
+  # surfaces are regenerated on main after the landing (task_close.py). An UNVERIFIABLE
+  # surface (exit 2) still refuses everywhere.
+  BRANCH="$(git -C "$ROOT" branch --show-current)"
+  if [ "$CODE" -eq 1 ] && [ "$BRANCH" != "main" ] && [ -z "${LEGEND_STALE_SURFACES_BECAUSE:-}" ]; then
+    echo "note: generated surfaces are stale on this task-branch commit; task_close.py regenerates them on main after landing." >&2
+    LEGEND_STALE_SURFACES_BECAUSE="task branch ${BRANCH:-(detached)}; regenerated on main after landing"
+  fi
   if [ "$CODE" -ne 0 ]; then
     printf '%s\n' "$REPORT" >&2
     if [ -n "${LEGEND_STALE_SURFACES_BECAUSE:-}" ]; then

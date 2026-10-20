@@ -392,11 +392,15 @@ Nothing was lost, and that is luck rather than design. The binding rules:
    There is no integrating session and no monopoly on merging; nothing stays unmerged at
    rest. Before touching `main`, `task_close.py` verifies the committed generated surfaces on
    the **exact merge result** (`framework/scripts/candidate_tree_freshness.py`, only the checks
-   whose inputs the landing changes) and refuses a STALE one with its regeneration command;
-   `scripts/legend_commit.sh` does the same on HEAD + the files it names. The override is a
-   stated reason (`--stale-surfaces-because` / `LEGEND_STALE_SURFACES_BECAUSE`), which is
-   printed and, for a commit, recorded in its message. Why: H0, 2026-09-24
-   ([design record](../../governance/design_records/h0_generated_surface_drift_20260924.md)).
+   whose inputs the landing changes). A STALE shared surface is regenerated **on `main`**,
+   never on a task branch: `task_close.py` lands, regenerates and commits the surfaces alone,
+   and `scripts/legend_commit.sh` on a task branch records the deferral instead of refusing;
+   on `main` it still refuses a STALE commit. An unverifiable surface refuses everywhere; the
+   override is a stated reason (`--stale-surfaces-because` / `LEGEND_STALE_SURFACES_BECAUSE`).
+   From a main checkout, `candidate_tree_freshness.py --regenerate` is the one command.
+   Why: H0, 2026-09-24
+   ([design record](../../governance/design_records/h0_generated_surface_drift_20260924.md)),
+   and the metabolic batch of 2026-10-19, where every task-branch commit needed a reason.
    Rule and recipe: [`LEGEND_CORE.md` §21e](../instruction/LEGEND_CORE.md#21e-agile-operating-mode)
    (operator decision 2026-09-05, `DEC-20260905-AGILE-HARNESS-MODE`), which replaced the
    earlier "only the integrating session merges to `main`".

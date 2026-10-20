@@ -405,25 +405,49 @@ class GeneratedSurfaceFreshnessOnLanding(unittest.TestCase):
         run(["commit", "-q", "-m", "input"], self.wt)
         return run(["rev-parse", "HEAD"], self.wt).strip()
 
-    def test_a_stale_merge_result_is_refused_and_main_is_untouched(self):
+    def test_a_stale_merge_result_lands_and_main_is_regenerated_alone(self):
+        """N3 (2026-10-20): the task branch never regenerates the shared surfaces; main does."""
         tip = self.commit_input(regenerate=False)
-        before = run(["rev-parse", "main"], self.repo)
-        with self.assertRaises(tc.GitError) as caught:
-            tc.close_task(self.wt)
-        message = str(caught.exception)
-        self.assertIn("STALE", message)
-        self.assertIn("toy_gen.py --out " + self.fixture.SURFACE, message)
-        self.assertIn("--stale-surfaces-because", message)
-        self.assertEqual(before, run(["rev-parse", "main"], self.repo))
-        self.assertEqual(tip, run(["rev-parse", "task/fresh"], self.repo).strip())
+        commands = tc.close_task(self.wt)
+        self.assertIn("--regenerate", commands[-1])
+        run(["merge-base", "--is-ancestor", tip, "main"], self.repo)
+        self.assertEqual(f"repository: regenerate derived surfaces after landing task/fresh",
+                         run(["log", "-1", "--format=%s", "main"], self.repo).strip())
+        self.assertEqual([self.fixture.SURFACE],
+                         run(["show", "--name-only", "--format=", "main"], self.repo).split())
+        self.assertEqual("", run(["status", "--porcelain"], self.repo).strip())
+        import candidate_tree_freshness as ctf
+        self.assertEqual(0, ctf.evaluate(self.repo, mode="candidate", tip="main",
+                                         base="main", run_all=True).exit_code)
         common = Path(run(["rev-parse", "--path-format=absolute", "--git-common-dir"],
                           self.repo).strip())
         self.assertFalse((common / "legend-task-close.lock").exists())
 
-    def test_the_dry_run_refuses_the_same_way(self):
+    def test_regenerate_on_main_is_one_command_and_idempotent(self):
+        import candidate_tree_freshness as ctf
+        self.write(self.repo, self.fixture.INPUT, "gamma\n")
+        run(["commit", "-q", "-am", "input landed alone"], self.repo)
+        self.assertEqual([self.fixture.SURFACE], ctf.regenerate_and_commit(self.repo))
+        self.assertEqual([], ctf.regenerate_and_commit(self.repo))
+        self.assertEqual("", run(["status", "--porcelain"], self.repo).strip())
+
+    def test_the_dry_run_names_the_regeneration_and_changes_nothing(self):
         self.commit_input(regenerate=False)
-        with self.assertRaises(tc.GitError):
-            tc.close_task(self.wt, dry_run=True)
+        before = run(["rev-parse", "main"], self.repo)
+        commands = tc.close_task(self.wt, dry_run=True)
+        self.assertIn("--regenerate", commands[-1])
+        self.assertEqual(before, run(["rev-parse", "main"], self.repo))
+
+    def test_a_failed_regeneration_keeps_the_landing_and_says_so(self):
+        from unittest import mock
+        import candidate_tree_freshness as ctf
+        tip = self.commit_input(regenerate=False)
+        with mock.patch.object(ctf, "regenerate_and_commit",
+                               side_effect=ctf.RegenerationError("toy failure")):
+            with self.assertRaises(tc.LandedButNotRegenerated) as caught:
+                tc.close_task(self.wt)
+        self.assertIn("LANDED", str(caught.exception))
+        run(["merge-base", "--is-ancestor", tip, "main"], self.repo)
 
     def test_a_stated_reason_lands_the_stale_candidate(self):
         tip = self.commit_input(regenerate=False)
@@ -435,10 +459,18 @@ class GeneratedSurfaceFreshnessOnLanding(unittest.TestCase):
         tc.close_task(self.wt)
         run(["merge-base", "--is-ancestor", tip, "main"], self.repo)
 
-    def test_a_blank_reason_is_no_reason(self):
+    def test_an_unverifiable_merge_result_is_refused_and_main_is_untouched(self):
+        from unittest import mock
+        import candidate_tree_freshness as ctf
         self.commit_input(regenerate=False)
-        with self.assertRaises(tc.GitError):
-            tc.close_task(self.wt, stale_because="   ")
+        before = run(["rev-parse", "main"], self.repo)
+        broken = {k: ctf.Generator(inputs=g.inputs, check=("--no-such-flag",),
+                                   regenerate=g.regenerate) for k, g in self.fixture.TOY.items()}
+        with mock.patch.dict(ctf.GENERATORS, broken, clear=True):
+            with self.assertRaises(tc.GitError) as caught:
+                tc.close_task(self.wt, stale_because="   ")
+        self.assertIn("unverifiable", str(caught.exception))
+        self.assertEqual(before, run(["rev-parse", "main"], self.repo))
 
 
 if __name__ == "__main__":

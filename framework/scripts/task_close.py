@@ -21,13 +21,20 @@ Before landing, the committed generated surfaces are verified against the EXACT 
 (`candidate_tree_freshness.py`): only the checks whose inputs the landing changes run, and a
 STALE surface refuses the landing with its regeneration commands — H0 (2026-09-24) found four
 surfaces stale because direct landings changed their inputs and nothing on that path looked.
-The only override is a stated reason, `--stale-surfaces-because "<why>"`, which is printed.
+A merge result whose only defect is a STALE surface lands, and the surfaces are then
+regenerated ON MAIN and committed alone (`candidate_tree_freshness.regenerate_and_commit`):
+a task branch never regenerates the shared surfaces, because there they bake in a peer's
+in-flight inputs or conflict at the next landing (N3, metabolic batch 2026-10-19). If that
+regeneration fails the landing stands, the reason is printed and the exit status is 3. An
+unverifiable surface (CHECK_ERROR) still refuses; its override is a stated reason,
+`--stale-surfaces-because "<why>"`, which is printed.
 """
 from __future__ import annotations
 
 import argparse
 import os
 import shlex
+import subprocess
 import sys
 from pathlib import Path
 
@@ -85,11 +92,16 @@ def protect_ignored(destination: Path, tip: str) -> None:
                 raise GitError(f"landing would overlap ignored material on main: {local}")
 
 
-def check_freshness(source: Path, tip: str, main_sha: str,
-                    stale_because: str | None) -> None:
-    """Refuse a landing whose merge result leaves a generated surface stale, unless told why.
+class LandedButNotRegenerated(GitError):
+    """The task landed; regenerating the stale surfaces on main afterwards failed."""
 
-    A conflicted candidate is not judged here: the merge itself refuses it, naming the path.
+
+def check_freshness(source: Path, tip: str, main_sha: str,
+                    stale_because: str | None) -> list:
+    """Return the STALE surfaces of the merge result, to regenerate on main after landing.
+
+    Refuses an UNVERIFIABLE merge result (CHECK_ERROR) unless told why. A conflicted
+    candidate is not judged here: the merge itself refuses it, naming the path.
     """
     try:
         report = freshness.evaluate(source, mode="merge", tip=tip, base=main_sha)
@@ -105,14 +117,20 @@ def check_freshness(source: Path, tip: str, main_sha: str,
                    else "not affected by this landing (none checked")
         print(f"task_close: generated surfaces {verdict}, {report.seconds:.1f}s)",
               file=sys.stderr)
-        return
+        return []
     if stale_because and stale_because.strip():
         print(f"task_close: landing although the merge result is not fresh, because: "
               f"{stale_because.strip()}\n{report_text}", file=sys.stderr)
-        return
-    raise GitError("the merge result leaves generated surfaces stale or unverifiable; nothing "
-                   "was landed. Regenerate on the task branch, commit, retry — or state why "
-                   f"it is safe with --stale-surfaces-because \"<reason>\".\n{report_text}")
+        return []
+    if code == 1:
+        stale = report.stale()
+        print(f"task_close: {len(stale)} generated surface(s) STALE on the merge result; "
+              "they are regenerated on main after the landing:\n" + report_text,
+              file=sys.stderr)
+        return stale
+    raise GitError("the merge result leaves generated surfaces unverifiable; nothing was "
+                   "landed. Repair the check, or state why it is safe with "
+                   f"--stale-surfaces-because \"<reason>\".\n{report_text}")
 
 
 def close_task(start: Path, remove_worktree: bool = False,
@@ -152,7 +170,11 @@ def close_task(start: Path, remove_worktree: bool = False,
     clean(destination)
     protect_ignored(destination, tip)
     checked_main = git(["rev-parse", "HEAD"], destination).strip()
-    check_freshness(source, tip, checked_main, stale_because)
+    stale = check_freshness(source, tip, checked_main, stale_because)
+    regenerate = ["python3", "framework/scripts/candidate_tree_freshness.py", "--repo",
+                  str(destination), "--regenerate"]
+    if stale:
+        commands.append(regenerate)
     if dry_run:
         return commands
 
@@ -180,7 +202,7 @@ def close_task(start: Path, remove_worktree: bool = False,
         if current_main != checked_main:
             # main moved while the surfaces were checked: the merge result is a different
             # tree, so it is checked again — under the lock, where task_close cannot race it.
-            check_freshness(source, tip, current_main, stale_because)
+            stale = check_freshness(source, tip, current_main, stale_because)
         try:
             git(commands[0][3:], destination)
         except GitError as exc:
@@ -214,6 +236,19 @@ def close_task(start: Path, remove_worktree: bool = False,
         git(commands[2][3:], destination)
         if remove_worktree:
             git(commands[3][3:], destination)
+        if stale:
+            try:
+                committed = freshness.regenerate_and_commit(
+                    destination, stale,
+                    message=f"repository: regenerate derived surfaces after landing {branch}")
+            except (freshness.RegenerationError, freshness.CandidateError, OSError,
+                    subprocess.TimeoutExpired) as exc:
+                raise LandedButNotRegenerated(
+                    f"LANDED, but regenerating the stale surfaces on main failed: {exc}\n"
+                    f"Retry from the main checkout: {shlex.join(regenerate)}") from exc
+            if committed:
+                print("task_close: regenerated on main and committed: " + ", ".join(committed),
+                      file=sys.stderr)
     finally:
         lock.unlink()
     return commands
@@ -249,6 +284,9 @@ def main(argv: list[str] | None = None) -> int:
     try:
         commands = close_task(Path.cwd(), args.remove_worktree, args.dry_run, args.branch,
                               args.stale_because)
+    except LandedButNotRegenerated as exc:
+        print(f"task_close: {exc}", file=sys.stderr)
+        return 3
     except (GitError, OSError) as exc:
         print(f"task_close: {exc}", file=sys.stderr)
         return 2

@@ -1691,8 +1691,10 @@ def main() -> int:
             # candidate that leaves them stale (candidate_tree_freshness.py).
             registries = ledger.parent
             reason = "the dirty ledger is this receipt, committed with the surface"
-            print("FOLLOW-UP: this append stales the surfaces derived from the ledger; "
-                  "regenerate and commit them with it (the reason below is true only while "
+            print("FOLLOW-UP: this append stales the surfaces derived from the ledger. On a "
+                  "task branch, do nothing: task_close.py regenerates them on main after "
+                  "landing. On main, `candidate_tree_freshness.py --regenerate` after the "
+                  "commit, or regenerate and commit them with it (the reason below is true only while "
                   f"`git status --porcelain {registries}` lists nothing but the ledger):\n"
                   f"  python3 framework/scripts/reading_state.py --disease {args.disease} "
                   f"--out {registries / 'reading_state.md'} --inputs-dirty-because \"{reason}\"\n"

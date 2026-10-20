@@ -55,9 +55,11 @@ from __future__ import annotations
 
 import argparse
 import ast
+import fcntl
 import fnmatch
 import json
 import os
+import shlex
 import signal
 import subprocess
 import sys
@@ -160,6 +162,7 @@ class SurfaceResult:
     seconds: float = 0.0
     triggers: list[str] = field(default_factory=list)
     regenerate: str = ""
+    outputs: list[str] = field(default_factory=list)
 
 
 @dataclass
@@ -435,7 +438,9 @@ def evaluate(repo: Path, *, mode: str = "merge", tip: str = "HEAD", base: str | 
                 disease = disease_of(surface) or ""
                 result = SurfaceResult(surface, script, NOT_AFFECTED,
                                        regenerate=generator.regenerate.format(
-                                           surface=surface, disease=disease))
+                                           surface=surface, disease=disease),
+                                       outputs=[o.format(disease=disease)
+                                                for o in generator.outputs])
                 results.append(result)
                 if generator.check is None:
                     result.status, result.detail = NO_CHECK, generator.note
@@ -469,12 +474,73 @@ def render(report: Report) -> str:
                      + (f"\n               {r.detail}" if r.detail and r.status != FRESH else ""))
     stale = report.stale()
     if stale:
-        lines.append("REGENERATE on the task side (inputs committed there, so no reason is "
-                     "needed), commit, and retry:")
+        lines.append("STALE surfaces are regenerated on main, not on a task branch: "
+                     "task_close.py does it after landing, and from a main checkout "
+                     "`candidate_tree_freshness.py --regenerate` does it in one command. "
+                     "By hand:")
         lines.extend(f"  {r.regenerate}" for r in stale)
     verdict = {0: "FRESH", 1: "STALE", 2: "CHECK_ERROR"}[report.exit_code]
     lines.append(f"VERDICT: {verdict} ({report.seconds:.1f}s)")
     return "\n".join(lines)
+
+
+class RegenerationError(RuntimeError):
+    """A regeneration command failed, or its result is still not fresh; nothing committed."""
+
+
+def regenerate_and_commit(repo: Path, stale: list[SurfaceResult] | None = None, *,
+                          message: str = "repository: regenerate derived surfaces on main",
+                          timeout: float = DEFAULT_TIMEOUT,
+                          generators: dict[str, Generator] | None = None) -> list[str]:
+    """Regenerate the STALE surfaces of ``repo``'s HEAD in place, verify, commit them alone.
+
+    N3 of PLAN-HARNESS-FROM-METABOLIC-BATCH-20261020: in the metabolic batch every Scientist
+    commit needed LEGEND_STALE_SURFACES_BECAUSE (one actor, about twenty times), because the
+    shared derived surfaces cannot be regenerated on a task branch without baking a peer's
+    in-flight inputs in or conflicting at landing — and the Orchestrator then regenerated
+    them by hand after each landing. They are regenerated where their inputs are whole: on
+    main, after the landing, by this one function (`task_close.py` calls it; `--regenerate`
+    is the command). ``stale`` defaults to running every check on HEAD. Returns the paths
+    committed (empty when nothing was stale). Each generator still refuses dirty inputs
+    itself; the commit names only the regenerated files and takes the same common lock
+    `scripts/legend_commit.sh` takes.
+    """
+    repo = top_level(repo)
+    if stale is None:
+        report = evaluate(repo, mode="candidate", tip="HEAD", base="HEAD", run_all=True,
+                          timeout=timeout, generators=generators)
+        if report.exit_code == 2:
+            raise RegenerationError("a check could not run on HEAD:\n" + render(report))
+        stale = report.stale()
+    if not stale:
+        return []
+    written: list[str] = []
+    for result in stale:
+        done = subprocess.run(shlex.split(result.regenerate), cwd=repo, capture_output=True,
+                              text=True, timeout=timeout)
+        if done.returncode != 0:
+            raise RegenerationError(f"`{result.regenerate}` exited {done.returncode}: "
+                                    + (done.stderr or done.stdout).strip()[-800:])
+        for path in [result.surface, *result.outputs]:
+            if path not in written and (repo / path).exists():
+                written.append(path)
+    changed = [p for p in written
+               if _git(repo, "status", "--porcelain", "--", p).stdout.strip()]
+    if not changed:
+        return []
+    verify = evaluate(repo, mode="paths", paths=changed, timeout=timeout,
+                      generators=generators)
+    if verify.exit_code != 0:
+        raise RegenerationError("regenerated, but the result is still not fresh; nothing "
+                                "committed:\n" + render(verify))
+    common = Path(_git(repo, "rev-parse", "--path-format=absolute",
+                       "--git-common-dir").stdout.strip())
+    with open(os.environ.get("LEGEND_COMMIT_LOCK", str(common / "legend_commit.lock")),
+              "w") as lock:
+        fcntl.flock(lock.fileno(), fcntl.LOCK_EX)
+        _git(repo, "add", "--", *changed)
+        _git(repo, "commit", "-q", "-m", message, "--", *changed)
+    return changed
 
 
 def _terminate(signum, _frame):
@@ -496,9 +562,23 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--timeout", type=float, default=DEFAULT_TIMEOUT,
                         help="per-check deadline in seconds")
     parser.add_argument("--json", action="store_true")
+    parser.add_argument("--regenerate", action="store_true",
+                        help="run every check on HEAD of --repo, regenerate what is STALE in "
+                             "place and commit exactly those files (use on a main checkout "
+                             "after landings; each generator refuses dirty inputs)")
     args = parser.parse_args(argv)
     for signum in (signal.SIGTERM, signal.SIGHUP):
         signal.signal(signum, _terminate)
+    if args.regenerate:
+        try:
+            committed = regenerate_and_commit(Path(args.repo), timeout=args.timeout)
+        except (RegenerationError, CandidateError, OSError,
+                subprocess.TimeoutExpired) as exc:
+            print(f"candidate_tree_freshness: {exc}", file=sys.stderr)
+            return 2
+        print("REGENERATED and committed: " + ", ".join(committed) if committed
+              else "NOTHING STALE on HEAD")
+        return 0
     if args.staged:
         kwargs = {"mode": "staged"}
     elif args.paths:
