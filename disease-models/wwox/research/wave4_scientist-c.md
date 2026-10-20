@@ -230,3 +230,28 @@ response to folinic acid; that a cerebral folate readout exists for a WWOX model
 **Effect on the model.** The folate axis stays a pure substitute with no WWOX datum: this report adds that a
 normal routine screen does not exclude the disease and that the confirmatory CSF assay may be unavailable.
 Class MINOR.
+
+---
+
+## 9. Blind locator audit and the wave's balance sheet
+
+One auditor with no history received six load-bearing triples (Friemel Figure 3A against Table 1; Sharma
+Kaplan-Meier against the caption and table; Rushing Tables S2, S3, S7; Płuciennik Table I; Chen Figure 6B; Girgis
+cases). Verdicts: six SUPPORTED. Two precision notes taken, not edited into the manifests (they change no
+claim): the "two survivors" reading of the Sharma plateau is loose (the curve implies about 2 of 7; the contradiction with six deaths
+holds either way), and the intron-8 wording of the Płuciennik LOH rate comes from the Discussion while the Results
+sentence names only the marker D16S3096. No baseline claim is narrowed, so the audit was run on the brief's instruction, not a
+mandatory trigger.
+
+| PMID | Role | Depth | Receipt | Manifest |
+|---|---|---|---|---|
+| 25779665 | WWOX-direct, temperature | partial | FTR-20261020-25779665-01 | PASS 0 gaps |
+| 36587184 | WWOX-direct, liver | partial | FTR-20261020-36587184-01 | PASS 0 gaps |
+| 41141138 | WWOX-direct, bone | partial | FTR-20261020-41141138-01 | PASS 0 gaps |
+| 37686047 | WWOX CNV line, one-carbon | partial | FTR-20261020-37686047-01 | PASS 0 gaps |
+| 22842668 | WWOX-direct, kidney | partial | FTR-20261020-22842668-01 | PASS 0 gaps |
+| 29899766 | SUBSTITUTE | partial | FTR-20261020-29899766-01 | PASS 0 gaps |
+| 36980111 | SUBSTITUTE | partial | FTR-20261020-36980111-01 | PASS 0 gaps |
+| 38978529 | SUBSTITUTE | partial | FTR-20261020-38978529-01 | PASS 0 gaps |
+
+All depths are partial because references are unread. 29481666 was skipped as instructed.
