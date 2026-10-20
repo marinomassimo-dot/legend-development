@@ -687,7 +687,7 @@
     "artifact": "files/fulltext/PMID35328751_Baryla2022_PMC.xml"
    },
    {
-    "proposition": "Figure 3 (knockdown arm, hand readings, uptake in uM): knockdown exceeds control only in normoxia normoglycaemia (about 940 versus 640, bracket *; with insulin about 740 versus 560, bracket *). In normoxia hyperglycaemia there is no knockdown-versus-control bracket (about 1040 versus 1240) and insulin lowers knockdown uptake (about 580, **). In hypoxia hyperglycaemia knockdown is lower than control (about 680 versus 1110, bracket ** on the pair). Hypoxia normoglycaemia carries no knockdown bracket. The Discussion sentence is true for one condition of four, and the sign reverses in a second.",
+    "proposition": "Figure 3 (knockdown arm, hand readings, uptake in uM): knockdown exceeds control only in normoxia normoglycaemia (about 940 versus 640, bracket *; with insulin about 740 versus 560, bracket *). In normoxia hyperglycaemia there is no knockdown-versus-control bracket (about 1040 versus 1240) and insulin lowers knockdown uptake (about 580, **). In hypoxia hyperglycaemia knockdown is lower than control (about 680 versus 1110, bracket ** on the pair). Hypoxia normoglycaemia carries no knockdown bracket. The Discussion sentence is true for one condition of four, and the sign reverses in a second. Audit caveat: in hypoxia normoglycaemia the knockdown-plus-insulin bar (about 1150) sits numerically above control-plus-insulin (about 1010), unbracketed; 'only' refers to marked differences.",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3, bar chart of glucose uptake (uM) for 1BR3N CONTR, CONTR+insulin, WWOX KO, WWOX KO+insulin in four oxygen x glucose conditions.",
     "surface": "figure",
     "artifact": "files/figures/PMID35328751/ijms-23-03326-g003.jpg",
@@ -704,7 +704,18 @@
      "comparator": "scrambled control",
      "endpoint": "2-deoxyglucose uptake"
     },
-    "found_or_sought": "sought - question: sign of the uptake effect per condition"
+    "found_or_sought": "sought - question: sign of the uptake effect per condition",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35328751.json",
+     "entry": 14,
+     "what_changed": "A caveat sentence was appended after the blind audit (one unbracketed numeric comparison); the reading itself is unchanged.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "SUPPORTED"
+      ]
+     }
+    }
    },
    {
     "proposition": "Figure 4a (WWOX mRNA, hand readings): knockdown is about 0.4 versus 1.0, 0.75 versus 1.8 and 0.55 versus 1.7 in the first three conditions (brackets *), and about 0.75 versus 1.0 with no bracket in hypoxia plus hyperglycaemia. The fourth condition is therefore not a depleted-versus-replete contrast at the mRNA level, and the Figure 8 text says the same of total WWOX protein; the reduced uptake, PFK1 and PKM2 changes reported there cannot be read as a dose effect of WWOX loss. Control WWOX mRNA itself moves with condition (about 1.0, 1.8, 1.7, 1.0).",

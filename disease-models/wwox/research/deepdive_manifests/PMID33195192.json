@@ -318,7 +318,7 @@
     "found_or_sought": "sought - question: systemic or metabolic confounders and the metabolic panels"
    },
    {
-    "proposition": "Figure 4 (litter photographs P2-P20): the Wwox-/- pup is visibly smaller than littermates at P2 and the null animal is the smallest at P14, P17 and P20. The article reports no body weight, glycaemia or food intake on any surface read; the P21 skin and fat comparisons are therefore made in runted animals about a week before the lethality window the Introduction states (death within 4 weeks).",
+    "proposition": "Figure 4 (litter photographs P2-P20): the Wwox-/- pup is clearly smaller than littermates from P4-P6 (slightly at P2, hard to judge) and the smallest at P14, P17 and P20 (blind audit correction: P2 was first written as clear). The article reports no body weight, glycaemia or food intake on any surface read; the P21 skin and fat comparisons are therefore made in runted animals about a week before the lethality window the Introduction states (death within 4 weeks).",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4, photographs of Wwox+/+, +/- and -/- littermates from P2 to P20 beside the hair-cycle timeline.",
     "surface": "figure",
     "artifact": "files/fulltext/PMID33195192_Chou2020_supplement/fcell-08-558432-g004.jpg",
@@ -330,7 +330,18 @@
      "timepoint": "P2 to P20",
      "endpoint": "litter photographs, hair cycle"
     },
-    "found_or_sought": "found while looking for a growth or weight panel"
+    "found_or_sought": "found while looking for a growth or weight panel",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33195192.json",
+     "entry": 10,
+     "what_changed": "The P2 size statement was softened to slight at P2 and clear from P4-P6 after the blind audit.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "SUPPORTED"
+      ]
+     }
+    }
    },
    {
     "proposition": "Figure 7A (hand reading): pERK-positive keratinocytes about 47% in +/+ versus about 24% in -/- (***) with the unit of analysis 25 regions from 3 mice (a region is not an animal; the P value is a pseudoreplicated one); Figure 7B p63 mean intensity about 6.8 versus 5.6 a.u. (**; 28 regions/4 mice). The ERK result is a region-level difference in whole-body nulls, qualified by the same-animal runting above.",

@@ -175,7 +175,7 @@ of the paper is Figure 8, which no earlier locator covered: the subcutaneous fat
 the null versus about 270 um in controls (n = 3), the few remaining FABP4 cells are shrunken and
 lipid-free, and dorsal skin surface temperature is 31.3 C versus 35.8 C (n = 15 versus 12). (3) A
 systemic confounder is visible but unquantified: the Figure 4 photographs show the null pup smaller
-from P2 and the smallest at P14-P20, and the article reports no body weight, glycaemia or intake. The
+from P4-P6 (slightly at P2) and the smallest at P14-P20, and the article reports no body weight, glycaemia or intake. The
 causal sentence "the loss of subcutaneous fat causes hypothermia" is untested; fat loss and hypothermia
 are equally two readouts of one wasting state. (4) pERK (Figure 7A) is a region-level comparison, 25
 regions from 3 mice. (5) Onset: follicle length equal at P0, shorter from P3 onward, consistent with a
@@ -204,8 +204,7 @@ expression, KEGG over-representation, Hallmark GSEA, MCPcounter immune scores.
 none: Figures 1-5 are Notch-gene violins, a KEGG bubble plot, a Hallmark heatmap and two immune-score
 boxplot sets; the Kaplan-Meier curves are in the supplement. That part of the question is closed as
 mis-specified (an error of the lot construction, not of the paper). What the figures do carry for the
-metabolic theme is Figure 3: glycolysis and hypoxia Hallmark sets are enriched in the low-ratio group in
-four of five strata, MYC targets in the high-ratio group in all five, and there is no oxidative
+metabolic theme is Figure 3: hypoxia (five of five strata) and glycolysis (four of five) Hallmark sets are enriched in the low-ratio group, MYC targets in the high-ratio group in all five, and there is no oxidative
 phosphorylation row in Figure 3 or Figure 2 although the Results say high ratios go with "enhanced
 oxidative phosphorylation". The glycolytic signature does not track prognosis (low-ratio is the
 better-DFS group in luminal A, luminal B and OV, the worse in basal-like), HIF1A sits in the ratio's
@@ -346,3 +345,26 @@ showing WW1 moving relative to WW2) were opened as images and declared.
 
 **Effect on the model.** None; the manifest keeps one inherited declared gap (queued references). The
 binding-biophysics negative recorded earlier (the WW2 domain does not bind these peptides) stands.
+
+---
+
+## 12. Blind locator audit of load-bearing triples
+
+One auditor with no session history received six triples (Baryla Figure 3 against the Discussion
+sentence; Cheng Figure 6 panels a, c, g; Chou Figures 8 and 4; Hammouz Figures 2-3 against the
+oxidative-phosphorylation sentence; Liu Table 6 odds ratio; Kosla Figures 2 and 11) and the source
+artefacts only. Verdicts: five SUPPORTED, one UNDERSHOOT (Hammouz: hypoxia is enriched in the low-ratio
+group in five of five strata, not four; corrected, declared with `contradicts_locator` and the audit object,
+glycolysis stays four of five). Two softenings adopted from its notes: the Chou Figure 4 size difference is
+clear from P4-P6 and slight at P2; the Baryla uptake statement carries an unbracketed numeric exception in
+hypoxia normoglycaemia. The Hammouz auditor also noted that RIBOSOME and TRANSLATION INITIATION terms are
+enriched in the basal-like LOW-ratio column of Figure 2, which runs against the text's "ribosomal biogenesis"
+at higher ratios; recorded here, not added to a locator. The audit did not touch a baseline claim (no MAJOR
+class); it was run on the brief's instruction.
+
+## 13. Parked, and the cascade run
+
+| PMID | Paper | Cascade (2026-10-20) | State |
+|---|---|---|---|
+| 40875931 | Gao 2025, WWOX-related DEE (Neurology) | Europe PMC (not open access, not in PMC), Unpaywall (closed), OpenAlex (closed, no repository), Semantic Scholar (CLOSED), Crossref (publisher link only), CORE (no hit); the earlier operator-supplied PDF was not retained | parked; operator route: institutional access or an author request |
+| 36537114 | Chong 2023, WWOX epileptic encephalopathy (Am J Med Genet A) | Europe PMC (not in PMC), Unpaywall (closed), OpenAlex (closed) | parked, same routes |

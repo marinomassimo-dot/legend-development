@@ -200,7 +200,7 @@
     "artifact": "files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml"
    },
    {
-    "proposition": "Figure 3 (hand reading, Hallmark GSEA heatmap, 12 rows by 10 columns): GLYCOLYSIS and HYPOXIA are red (enriched in the LOW-ratio group) in basal-like, luminal A, luminal B (glycolysis, hypoxia) and OV, and HER2 low shows hypoxia only; HER2-high carries a pale blue glycolysis tile. MYC TARGETS V1 is the one row enriched in the HIGH-ratio group in all five subtypes. There is no OXIDATIVE_PHOSPHORYLATION row in the figure, and Figure 2 (KEGG ORA) has no oxidative phosphorylation term either, so the sentence cited from the text has no panel behind it in the main figures. In luminal A/B and OV the low-ratio (glycolysis-enriched) group is the one the text calls the BETTER-DFS group, in basal-like the worse-DFS group: the glycolytic signature does not track outcome across subtypes. Because HIF1A is the denominator, low ratio selects high HIF1A transcript (Figure 1, luminal B, p = 5.9e-08), so hypoxia and glycolysis enrichment in the low group is partly built into the stratification. The Discussion states that pathways reaching FDR < 0.05 were few and trends up to FDR 0.25 are shown.",
+    "proposition": "Figure 3 (hand reading, Hallmark GSEA heatmap, 12 rows by 10 columns): HYPOXIA is red (enriched in the LOW-ratio group) in all five strata and GLYCOLYSIS is red in basal-like, luminal A, luminal B and OV, with a pale blue (high-ratio) glycolysis tile in HER2 (blind audit correction: hypoxia was first written as four of five). MYC TARGETS V1 is the one row enriched in the HIGH-ratio group in all five subtypes. There is no OXIDATIVE_PHOSPHORYLATION row in the figure, and Figure 2 (KEGG ORA) has no oxidative phosphorylation term either, so the sentence cited from the text has no panel behind it in the main figures. In luminal A/B and OV the low-ratio (glycolysis-enriched) group is the one the text calls the BETTER-DFS group, in basal-like the worse-DFS group: the glycolytic signature does not track outcome across subtypes. Because HIF1A is the denominator, low ratio selects high HIF1A transcript (Figure 1, luminal B, p = 5.9e-08), so hypoxia and glycolysis enrichment in the low group is partly built into the stratification. The Discussion states that pathways reaching FDR < 0.05 were few and trends up to FDR 0.25 are shown.",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3, integrated Hallmark GSEA heatmap, NES colour scale, Basal, HER2, LumA, LumB, OV, high versus low WWOX/HIF1A ratio columns.",
     "surface": "figure",
     "artifact": "files/figures/PMID42589397/ijms-27-06740-g003.jpg",
@@ -213,7 +213,18 @@
      "genotype": "low versus high WWOX/HIF1A transcript ratio (subtype-specific maxstat cutpoint), not a WWOX perturbation",
      "endpoint": "Hallmark NES, exploratory FDR <= 0.25"
     },
-    "found_or_sought": "sought - question restated after the figures were found not to plot survival"
+    "found_or_sought": "sought - question restated after the figures were found not to plot survival",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42589397.json",
+     "entry": 8,
+     "what_changed": "HYPOXIA row corrected from four of five strata to five of five after a blind audit re-read the heatmap; glycolysis stays four of five.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ]
+     }
+    }
    },
    {
     "proposition": "Figure 2 (KEGG ORA bubble plot) shows 27 terms with no oxidative phosphorylation, glycolysis or TCA term; metabolic terms are steroid hormone biosynthesis and retinol metabolism (luminal A high-ratio), nitrogen metabolism (luminal A low-ratio); signalling and immune terms (JAK-STAT, cytokine, PI3K) dominate the high-ratio luminal A column. Figure 1 shows HIF1A in luminal B (violin, p = 5.9e-08, low-ratio higher) and ADAM10 and DTX3 in basal-like. Figures 4 and 5 are MCPcounter immune-cell boxplots. No survival curve is plotted in any main figure (Kaplan-Meier curves and cutpoint plots are Supplementary Figure S1), so the question about the sign of the per-subtype survival direction cannot be answered from the main figures; it was posed on the assumption that they did.",
