@@ -135,6 +135,30 @@
      "evidence": "batch 007 12ce3d0f; self-eval 2026-10-20_ORCH-METABOLIC-BATCH-20261019.md; battery on 6c20ab3e PASS WITH SKIPS (145 targets, 0 red); safe_push PUBLISHED sha=6c20ab3e gate=PASS verified=ls-remote"
     }
    ]
+  },
+  "OBJ_REPURPOSING_INTEGRATION": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "Operator directive 2026-10-20: land the codex repurposing branch and fix the gap it left",
+     "status": "DONE",
+     "evidence": "main c9ce22bf; test_repurposing_bridge enrolled in the battery (e869c299); branch deleted; pushed"
+    },
+    {
+     "step": "Operator authorisation 2026-10-20: remove the landed worktrees",
+     "status": "DONE",
+     "evidence": "16 removed, 1.2 GB freed; the 196 worktree-only check-run logs preserved under files/check_runs/from_worktrees first"
+    },
+    {
+     "step": "Place the operator's roadmap v4 r14 and scout log r20 in the repository; reconcile the plan with what is really present; implement the feasible increments",
+     "status": "IN_PROGRESS",
+     "evidence": "two plan agents dispatched: PLAN-REPURPOSING-INTEGRATION-20261020 (placement, reconciliation, bridge increments, rescue-reference scaffold) and PLAN-CLINICAL-CENSUS-20261020 (Spectrum manifest correction, ClinicalTrials.gov v2 census, P2 kg_thin_slice)"
+    },
+    {
+     "step": "After the reconciliation: P3 scientific qualification and P4/P5 candidate cards for both paths, by Scientists; integrate, batch, Mirror, push",
+     "status": "TODO"
+    }
+   ]
   }
  },
  "DECISIONS_TAKEN": [
@@ -153,6 +177,15 @@
    "authority": "operator delegated this decision to the Orchestrator on 2026-10-20, explicitly",
    "reversibility": "high",
    "how_to_revert": "restore the byte trigger in growth_anchors.py and move the change-log block back from discovery_ledger_history.md (both are single commits)"
+  },
+  {
+   "what": "scheduled restart at 07:00 Italian time, created twice (07:04 and 05:04 scheduler-local) because the scheduler's timezone could not be established from the host clock, which is UTC while Rome is CEST",
+   "why": "the operator is away 8 hours and asked for a 07:00 Italian restart; a missed wake-up costs the whole window, a duplicate costs one idempotent reconciliation",
+   "alternatives_rejected": "a single job at one of the two times; a recurring job (not asked for, auto-expires in 7 days and would fire daily)",
+   "who_consulted": "none; CronList reports the next run in scheduler-local time and does not name the zone",
+   "reversibility": "high",
+   "how_to_revert": "CronDelete on job 17750720 or 8eebf5b0",
+   "known_limit": "these jobs are session-only and in-memory: if this session exits they are gone, and nothing on disk restarts the work"
   }
  ],
  "DEFAULTS_TAKEN": [
