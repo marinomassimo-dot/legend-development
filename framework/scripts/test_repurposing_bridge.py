@@ -12,7 +12,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from repurposing_bridge import build_card
+from repurposing_bridge import build_card, normalise_label_lookup, normalise_p4_fields
 
 ROOT = Path(__file__).resolve().parents[2]
 spec = importlib.util.spec_from_file_location(
@@ -88,6 +88,93 @@ class BridgeTests(unittest.TestCase):
                                  capture_output=True, text=True)
             self.assertEqual(run.returncode, 0, run.stderr)
             self.assertEqual(json.loads(run.stdout), build_card(packet()))
+
+    def test_label_lookup_states_stay_four_different_facts(self):
+        absent = build_card(packet())
+        self.assertEqual(absent["label_lookup"]["status"], "NOT_ATTEMPTED")
+        self.assertEqual(absent["label_lookup"]["coverage"], "UNKNOWN")
+        self.assertEqual(absent["label_lookup"]["queries"], [])
+        self.assertTrue(any("not NO_MATCH_FOUND" in line for line in absent["limits"]))
+
+        empty_response = packet()
+        empty_response["label_lookup"] = {
+            "status": "NO_MATCH_FOUND", "queries": ["synthetic-generic", "synthetic-brand"],
+            "source": "synthetic-archive", "retrieved_at": "2026-10-20",
+            "client_version": "fixture-0", "method": "primary_then_alternative"}
+        card = build_card(empty_response)
+        self.assertEqual(card["label_lookup"]["status"], "NO_MATCH_FOUND")
+        self.assertEqual(card["label_lookup"]["coverage"], "UNKNOWN")
+        self.assertTrue(any("not proof the label is absent" in line for line in card["limits"]))
+        # An outcome never moves the directional comparison, and never drops the candidate.
+        self.assertEqual(card["directional_summary"], absent["directional_summary"])
+        self.assertEqual(card["assessment"], absent["assessment"])
+        self.assertEqual(card["comparisons"], absent["comparisons"])
+
+        failed = copy.deepcopy(empty_response)
+        failed["label_lookup"].update(status="QUERY_ERROR", error="HTTP 503 from fixture")
+        self.assertTrue(any("never a concluded one" in line
+                            for line in build_card(failed)["limits"]))
+        self.assertNotEqual(build_card(failed)["label_lookup"]["status"],
+                            card["label_lookup"]["status"])
+
+        # Coverage is a second axis: NO_MATCH_FOUND with incomplete coverage is legal.
+        truncated = copy.deepcopy(empty_response)
+        truncated["label_lookup"].update(coverage="COVERAGE_INCOMPLETE",
+                                         coverage_limit="alternative search unavailable")
+        both = build_card(truncated)["label_lookup"]
+        self.assertEqual((both["status"], both["coverage"]),
+                         ("NO_MATCH_FOUND", "COVERAGE_INCOMPLETE"))
+
+        matched = copy.deepcopy(empty_response)
+        matched["label_lookup"].update(status="MATCH_FOUND", spl_id="SPL-FIXTURE-1")
+        self.assertTrue(any("certifies neither" in line
+                            for line in build_card(matched)["limits"]))
+
+        for bad in (
+            {"status": "DRUG_HAS_NO_LABEL"},
+            {"status": "NOT_ATTEMPTED", "queries": ["x"]},
+            {"status": "NO_MATCH_FOUND", "queries": []},
+            {"status": "MATCH_FOUND", "queries": ["x"]},
+            {"status": "QUERY_ERROR", "queries": ["x"]},
+            {"status": "NO_MATCH_FOUND", "queries": ["x"], "coverage": "COVERAGE_INCOMPLETE"},
+            {"status": "NO_MATCH_FOUND", "queries": ["x"], "coverage": "PARTIAL"},
+            {"status": "NO_MATCH_FOUND", "queries": ["x"], "lookup_score": "0.9"},
+        ):
+            with self.subTest(bad=bad), self.assertRaises(ValueError):
+                normalise_label_lookup(bad)
+
+    def test_later_p4_fields_are_present_and_unknown_not_absent(self):
+        card = build_card(packet())
+        fields = card["p4_fields"]
+        self.assertEqual(fields["endpoint_pursued"], "UNKNOWN")
+        self.assertEqual(fields["functional_evidence_available"], "UNKNOWN")
+        self.assertEqual(fields["temporal_or_model_limit"], "UNKNOWN")
+        self.assertEqual(set(fields["cellular_context"]),
+                         {"target_expression", "cells_tissue_stage", "coverage", "limits"})
+        self.assertEqual(set(fields["cellular_context"].values()), {"UNKNOWN"})
+
+        data = packet()
+        data["p4_fields"] = {"endpoint_pursued": "synthetic excitability readout",
+                             "cellular_context": {"cells_tissue_stage": "synthetic stage"}}
+        filled = build_card(data)["p4_fields"]
+        self.assertEqual(filled["endpoint_pursued"], "synthetic excitability readout")
+        self.assertEqual(filled["functional_evidence_available"], "UNKNOWN")
+        self.assertEqual(filled["cellular_context"]["cells_tissue_stage"], "synthetic stage")
+        self.assertEqual(filled["cellular_context"]["target_expression"], "UNKNOWN")
+        # A declared P4 field is never allowed to become a score or a ranking input.
+        for bad in ({"endpoint_pursued": ""}, {"endpoint_weight": "0.5"},
+                    {"cellular_context": {"selectivity": "x"}}, {"cellular_context": "x"}):
+            with self.subTest(bad=bad), self.assertRaises(ValueError):
+                normalise_p4_fields(bad)
+
+    def test_empty_assertion_list_is_an_abstention_not_an_empty_lookup(self):
+        data = packet()
+        data["drug_assertions"] = []
+        card = build_card(data)
+        self.assertEqual(card["abstention"], "NO_DRUG_ASSERTIONS_SUPPLIED")
+        self.assertEqual(card["directional_summary"], "UNRESOLVED")
+        self.assertEqual(card["label_lookup"]["status"], "NOT_ATTEMPTED")
+        self.assertIsNone(build_card(packet())["abstention"])
 
     def test_kg_separates_pathways_and_declares_incomplete_coverage(self):
         raw = {"items": [
