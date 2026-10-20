@@ -1,0 +1,36 @@
+{
+ "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Drug-repurposing P3 under the operator's roadmap v4 r14 (quoted at disease-models/wwox/research/drug_repurposing/roadmap_v4_r14_20261020.md). The roadmap is a plan, not an authority: where it and the repository's rules differ, the repository wins. ADOTTATO NEL_PIANO in it never means verified.",
+ "TASK_ID": "REPURP-P3-EARLYBENEFIT-B-20261020",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-b",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "The BENEFICIO_PRECOCE axis: which WOREE endpoints are measurable and what the repository already holds on each, qualified for model, genotype, age window and control. Start from the five endpoint families the roadmap lists (excitability/EEG, myelination, neuroinflammation/gliosis, growth/metabolism, survival/function) but treat them as revisable references, not a coverage requirement: a single useful endpoint is a legitimate early benefit. Also qualify 10-20 relations from current records with entity, effect, direction or UNKNOWN, context, source and epistemic state.",
+ "SCOPE": {
+  "lot": "current records first via registry_records.py, then lawful full texts for the gaps; max 12 readings",
+  "brief": "disease-models/wwox/research/metabolic_batch_dispatch_brief_20261019.md",
+  "forbidden": "disease-models/wwox/research/drug_repurposing/ and framework/scripts/repurposing_bridge.py are owned by a Harness agent working in parallel"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "analysis note repurposing_early_benefit_20261020_scientist-b.md",
+  "per reading: manifest PASS and receipt staged (never recorded)",
+  "every outcome classed: relevant negative / partial / inconclusive / exposure-or-toxicity limit / not verified / UNKNOWN",
+  "DEFAULTS_TAKEN and STOP_LOG here"
+ ],
+ "DEPENDENCIES": [],
+ "REVIEW_REQUIREMENT": "Mirror ex post",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently",
+ "MILESTONE_PLAN": [
+  "TASK_ACK/CLAIM",
+  "per-paper M0-M5",
+  "analysis note",
+  "self-eval",
+  "report"
+ ],
+ "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
+ "CURRENT_STATE": "ASSIGNED",
+ "assigned_on": "2026-10-20"
+}
