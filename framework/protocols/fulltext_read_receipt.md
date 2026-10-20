@@ -450,9 +450,23 @@ paper's bytes and lawfully rewrote the manifest for them; the repoint is provabl
 "second decision" the 2026-09-28 text left open, taken for the case where the manifest's own digests
 prove which reading it describes. Measured: 11 manifests (the 5 earlier divergence cases, 5 re-reads
 of 2026-10-19/20, and PMID42422765); defects 21 -> 9 together with the `PMID25779665.json` repoint
-(a wrong-date id; `manifest_receipt_repoint.py` now repairs `UNKNOWN_EVENT` when exactly one
-same-study event names the manifest). The ceiling was LOWERED to 9, not raised. REVERT: remove the
-branch in `manifest_receipt_provenance.assess`, add the verdict to `DEFECTS`, re-measure.
+(a wrong-date id; `manifest_receipt_repoint.py` now repairs `UNKNOWN_EVENT` when one or more
+same-study events name the manifest and the earliest of them is the same event by append order and
+by `event_at` — corrected 2026-10-20 after Mirror B3: the first wording said "exactly one", the code
+never required it). The ceiling was LOWERED to 9, not raised. REVERT: remove the branch in
+`manifest_receipt_provenance.assess`, add the verdict to `DEFECTS`, re-measure.
+
+**What the ceiling's meaning is after this amendment (Mirror B2, 2026-10-20).** The ceiling fell from
+21 to 9 by RECLASSIFICATION (`SUPERSEDED_ARTIFACTS` is no longer counted), not by repair of any
+manifest, apart from the single `PMID25779665.json` repoint; before the amendment the ceiling could
+fall only by repair. From here it equals the repairable tail alone, and a reader must not infer from
+the fall that eleven manifests were mended.
+
+**Which receipt a registry depth line cites (Mirror B4, 2026-10-20).** The manifest's `receipt` names
+the EARLIEST same-study event that produced it (the rule above, stated once). A registry depth line
+cites the reading whose coverage it reports, which after a resume or re-read is a LATER event. Both
+are correct, and the depth line says so in these terms: "manifest receipt `X` (producer); resume
+receipt `Y` extended it".
 
 ### The repair instrument
 

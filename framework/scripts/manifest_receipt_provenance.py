@@ -81,6 +81,12 @@ false repoint could lower made the gate permanently red for a lawful state. The 
 still reported (`should_be`), so nothing is hidden.
 HOW TO REVERT: delete the SUPERSEDED_ARTIFACTS branch in `assess` and add the verdict to DEFECTS;
 the ceiling must then be re-measured (it only ever goes down by repair).
+MEANING OF THE CEILING CHANGED (Mirror B2, 2026-10-20): it fell from 21 to 9 by RECLASSIFICATION
+(SUPERSEDED_ARTIFACTS stopped counting), not by repair; before this amendment it could fall only by
+repair. From here it equals the repairable tail alone. Eleven manifests were not mended.
+EARLIEST-PRODUCER SEMANTICS, STATED ONCE (Mirror B4): `receipt` names the EARLIEST same-study event
+that names the manifest. A registry depth line may cite a LATER resume or re-read (the reading whose
+coverage it reports); it then says which receipt produced the manifest and which one extended it.
 
 🔴 **THIS TOOL DOES NOT WRITE. `manifest_receipt_repoint.py` is the instrument that does.**
 Written 2026-09-28, the day after this one: it takes a PMID, derives the target through `assess`

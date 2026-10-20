@@ -37,6 +37,9 @@ unique, or not possible, the tool refuses and names what is missing.
   * `CONFORMS` — there is nothing to repair, and rewriting a correct field is how a correct field
     becomes a wrong one.
   * `SUPERSEDED_ARTIFACTS` (not a defect; see manifest_receipt_provenance.py, 2026-10-20)
+  * `UNKNOWN_EVENT` is repaired when ONE OR MORE same-study events name the manifest (the earliest
+    by append order and by `event_at` must be the same event; Mirror B3, 2026-10-20: this text said
+    "exactly one" and the code never required it)
   * `UNCHECKABLE` and `UNKNOWN_EVENT` with no naming event — no same-study event names the
     manifest, so the ledger holds no producer to point at. An append-only ledger is not rewritten
     to manufacture one.

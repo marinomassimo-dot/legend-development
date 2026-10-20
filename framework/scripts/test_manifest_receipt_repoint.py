@@ -188,7 +188,9 @@ class TheRefusals(Fixture):
 
     def test_an_unknown_declared_id_is_repointed_when_one_event_names_the_manifest(self) -> None:
         """A wrong-DATE id (PMID25779665, 2026-10-20): the single same-study event naming the
-        manifest is the unique producer, and its fingerprint is a declared source artifact."""
+        manifest is the producer (the fixture has one naming event; the code accepts one or more
+        and requires the earliest by append order and by event_at to coincide), and its
+        fingerprint is a declared source artifact."""
         manifest = "disease-models/wwox/research/deepdive_manifests/PMID11111111.json"
         text = MANIFEST_TEXT.replace("FTR-20260909-11111111-02", "FTR-20261019-11111111-01")
         root = self.build({"PMID11111111.json": text},
