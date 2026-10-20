@@ -1065,3 +1065,9 @@ catalytic-dead control, a titration. The missing item is the experiment, not the
 **Cost / API / privacy risk:** none; no key, no paid service.
 
 **Next surgical micro-step:** none required.
+
+## 2026-10-20 (orchestrator, metabolic batch)
+
+- **Gap:** the trial-then-record procedure for staged receipts was a hand sequence repeated seven times, and its first form (a symlinked evidence tree) failed for a reason unrelated to the receipts.
+- **Change:** `framework/scripts/record_staged_receipts.py` (dry run by default, `--apply` records, never commits), with `test_record_staged_receipts.py`, a routing row and release-regression enrolment.
+- **Not built, named:** a one-command regeneration of the four ledger-derived surfaces with the dirty-input reason filled from the staged actors; a Mirror-side check that a harness brief's "must not change" list is honoured by the diff.
