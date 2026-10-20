@@ -221,3 +221,21 @@ stays; the glycolysis-for-low-ratio statement, if cited for RL-003, must carry t
 non-tracking-of-DFS qualifications. The manifest keeps five inherited waived deep-dive slots
 (group, field density, multihop, cross-query, retraction): its verdict is PASS with those five declared
 gaps, unchanged by this re-read.
+
+---
+
+## 7. PMID 35460704 — Dong 2022 (exome sequencing, hypoalphalipoproteinaemia) — receipt FTR-20261019-35460704-03
+
+**What it MEASURES.** A human cohort with low HDL-C, exome sequencing, rare damaging heterozygous variants in
+104 HDL candidate genes against controls; WWOX is one of eleven candidate genes with the highest
+occurrence count (four occurrences, three distinct missense alleles; no association, no copy-number event).
+
+**Question and answer.** The row asked about the LDLR panel. Figure 2, acquired from the PMC OA bucket
+(it had never been on disk) and opened as an image, is a map and table of 14 rare heterozygous LDLR
+variants with per-carrier lipids (HDL-C 23-36, LDL-C above 170 in most). It contains no WWOX datum.
+The question "what is the WWOX carrier lipid phenotype in the figure panels" is therefore answered:
+none is plotted; WWOX appears only in Supplemental Table S4, already read.
+
+**Effect on the model.** None; the earlier boundary (an occurrence count inside a candidate list, no
+comparator, a benign-annotated common allele carrying two of four occurrences) is untouched. The re-read
+closes the figure debt; references remain unread.

@@ -1,0 +1,40 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-35460704-03",
+ "study_id": {
+  "pmid": "35460704",
+  "doi": "10.1016/j.jlr.2022.100209"
+ },
+ "event_at": "2026-10-19T21:00:00Z",
+ "analysis_at": "2026-10-19T21:00:00Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, task HELD-PARTIAL-WWOX-C-20261019, branch task/HELD-PARTIAL-WWOX-C-20261019; context_policy QUESTION_DRIVEN. Held before reading: the selection row and the prior receipt's owed sections. Stated question: in the figure panels what is the WWOX-variant carrier lipid phenotype versus controls, and is the LDLR panel about WWOX or about another gene. Route: Figure 2, the one main figure not previously on disk, acquired from the PMC OA open-data bucket and opened at native size; Figures 1 and 3 were opened in an earlier wave. Coverage other than figures carried from FTR-20261004-35460704-02. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID35460704_Dong2022_PMC.xml",
+ "source_fingerprint": "d16c23055a39f229f243e1427223dc51504e6a5e6526a5249f2d8732c01775d7",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "read",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "read",
+  "tables": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID35460704.json",
+  "disease-models/wwox/research/held_wave_20261019_scientist-c.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "Coverage other than figures is carried from FTR-20261004-35460704-02."
+ ],
+ "prior_receipt": "FTR-20261004-35460704-02",
+ "reread_reason": "inadequate_prior_coverage"
+}
