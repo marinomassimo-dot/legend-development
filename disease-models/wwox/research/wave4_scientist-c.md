@@ -204,3 +204,29 @@ at most, and a non-response excludes nothing.
 
 **Effect on the model.** Supplies the trial-interpretation logic (seizure endpoint only, delayed response possible, EEG
 not a criterion) for any future WWOX B6 observation. Class MINOR.
+
+---
+
+## 8. PMID 38978529 — Girgis 2024, cerebral folate transport deficiency in two cases with intractable myoclonic epilepsy (SUBSTITUTE, NOT WWOX EVIDENCE; W2 folate axis) — receipt FTR-20261020-38978529-01
+
+**What it MEASURES.** Two unrelated Egyptian girls (8 and 12 years) with myoclonic-atonic drop attacks, global
+developmental delay, hypotonia and ataxia, exome-diagnosed with homozygous FOLR1 variants; MRI, CT, EEG, routine
+metabolic screen; folinic acid by intramuscular injection. No WWOX.
+
+**Question and answer (what it looks like in practice, and which readout defines it).** A school-age onset of
+myoclonic-atonic seizures after a delay already present, cerebellar atrophy, bilateral basal-ganglia and
+periventricular calcifications on CT, normal routine metabolic screen (ammonia, lactate, acylcarnitines, organic
+acids, CSF glucose, protein and lactate, a normal CSF-to-blood glucose ratio), and a partial response to folinic acid
+(no seizure counts given). The defining readout, CSF 5-methyltetrahydrofolate, was **not measured** in either
+patient ("the test is not present in our country"), so the report diagnoses by genotype and cannot show the
+CSF readout; the Discussion supplies the reference thresholds from the literature (below 5 nmol/L typical, 11 the
+highest reported). Reporting issues: case 1's variant is called nonsense but written p.R128W, an Arg-to-Trp
+(missense) change by the usual notation (INFERENCE from the notation); case 2 text has transcription errors. The
+Discussion's class caution stands: folic acid competes at the receptor and is contraindicated.
+
+**What it does not support.** Any WWOX statement; the CSF folate level in these patients; the size of the
+response to folinic acid; that a cerebral folate readout exists for a WWOX model.
+
+**Effect on the model.** The folate axis stays a pure substitute with no WWOX datum: this report adds that a
+normal routine screen does not exclude the disease and that the confirmatory CSF assay may be unavailable.
+Class MINOR.
