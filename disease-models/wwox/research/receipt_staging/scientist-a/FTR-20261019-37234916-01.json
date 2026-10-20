@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-37234916-01",
+ "study_id": {
+  "pmid": "37234916",
+  "doi": "10.3389/fncel.2023.1170031"
+ },
+ "analysis_at": "2026-10-20T05:57:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a (Scientist A), interventions batch 2026-10-19 groups H1/H2, task INTERV-H1-A-20261019 on branch task/INTERV-H1-A-20261019, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN. Route: Europe PMC JATS body (PMC10206007) and the supplementaryFiles container into the root files/ tree: Figures 1-7 opened at native resolution; the supplementary PDF (Supplementary Figures 1-3, serum blots and PSD95) text layer extracted and its four pages rendered at 100 dpi and opened. Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a staged JSON for the Orchestrator and not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID37234916_Veremeyko2023_PMC.xml",
+ "source_fingerprint": "c704fed23c99489be56900053ef6a81e1ef6a4d9081eef2f58c2136416f1c77b",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID37234916.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID37234916.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "manifest",
+  "Figures 1-7 inspected as images",
+  "Supplementary PDF pages rendered and inspected"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
