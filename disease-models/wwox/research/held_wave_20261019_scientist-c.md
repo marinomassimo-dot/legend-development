@@ -239,3 +239,34 @@ none is plotted; WWOX appears only in Supplemental Table S4, already read.
 **Effect on the model.** None; the earlier boundary (an occurrence count inside a candidate list, no
 comparator, a benign-annotated common allele carrying two of four occurrences) is untouched. The re-read
 closes the figure debt; references remain unread.
+
+---
+
+## 8. PMID 33612478 — Liu 2021 (TUBB and WWOX SNPs, haplotypes, dyslipidaemia) — receipt FTR-20261019-33612478-02
+
+**What it MEASURES.** A cross-sectional sample of Maonan adults in southern China (864 normolipidaemic
+and 1129 dyslipidaemic; Table 3's header prints 1229, a typo the haplotype counts of 1728 and 2258
+haplotypes confirm), four common SNPs (two TUBB, WWOX rs2222896 and rs2548861), serum lipids, haplotypes
+and gene-environment interactions. A genotype-association study of common variants; no WWOX function,
+expression or perturbation.
+
+**Question and answer (figures opened for the first time).** Which SNP, trait, direction: the rs2222896 G
+allele goes with higher LDL-C and lower HDL-C and ApoA1 in the normal group (Figure 1 B, C, D), the
+rs2548861 T allele only in the dyslipidaemic group; haplotypes G-G and G-T raise, A-T and A-G lower, the
+dyslipidaemia odds. The effects behind the stars are about 0.1-0.2 per carrier (Tables 4, 7) and are
+invisible at the plotted axis scale. Is any WWOX-specific signal isolated? No: the TUBB and WWOX SNPs
+are in moderate-to-high LD (D' 0.34-0.79, Figure 2), the gene-gene interaction trees cluster them, and
+the dyslipidaemia-group comparisons are selected on the outcome. Three findings the earlier text-only
+reading could not see: (i) Table 6 prints the G-T haplotype odds ratio as 111.055 with a CI of
+7.818-15.633 that excludes it (the geometric midpoint is 11.05: a stray digit, inferred from the
+arithmetic), against an adjusted 15.08 (9.24-24.60) in Figure 4; (ii) D' between the two WWOX SNPs is
+0.87 and 0.81, so "weak LD" in the Discussion describes r2 only; (iii) a haplotype of two common SNPs with an
+odds ratio of 11-15 and frequencies 0.020 against 0.190 is unexplained by the paper and is not replicated.
+
+**What it does not support.** Any statement about WWOX function, dose, loss-of-function or a rare damaging
+allele (SNP selection was restricted to common variants, as the existing locator records); a lipid
+effect specific to WWOX; the authors themselves withdraw the rs2548861 HDL-C association.
+
+**Effect on the model.** Strengthens the existing negative: the best this record can be cited for is a
+hypothesis-generating common-variant association in one population with a flagged internal error.
+MINOR; the printed-OR error is passed to the Orchestrator through the commit candidate.

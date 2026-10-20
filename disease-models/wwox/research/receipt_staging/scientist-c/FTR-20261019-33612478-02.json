@@ -1,0 +1,40 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-33612478-02",
+ "study_id": {
+  "pmid": "33612478",
+  "doi": "10.18632/aging.202514"
+ },
+ "event_at": "2026-10-19T21:00:00Z",
+ "analysis_at": "2026-10-19T21:00:00Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, task HELD-PARTIAL-WWOX-C-20261019, branch task/HELD-PARTIAL-WWOX-C-20261019; context_policy QUESTION_DRIVEN. Held before reading: the selection row and the prior receipt's owed sections. Stated question: which WWOX SNP or haplotype, which lipid trait, which direction and which sample, as drawn in the figures, and is any WWOX-specific signal isolated from the gene-gene and gene-environment panels. Route: the five main-figure JPEGs, acquired on 2026-10-20 from the PMC OA open-data bucket (not on disk before) and declared in the manifest; all opened at native size. The bucket holds no supplementary file other than the figure images, so supplementary is recorded not_present. Coverage other than figures and supplementary is carried from FTR-20261003-33612478-01. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID33612478_Liu2021_PMC.xml",
+ "source_fingerprint": "fd40936559a65a8a85e34145f25f3910c463c6fd87930c3ae11b055c39a33344",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "read",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID33612478.json",
+  "disease-models/wwox/research/held_wave_20261019_scientist-c.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "Coverage other than figures and supplementary is carried from FTR-20261003-33612478-01."
+ ],
+ "prior_receipt": "FTR-20261003-33612478-01",
+ "reread_reason": "inadequate_prior_coverage"
+}
