@@ -31,7 +31,7 @@
  "source_kind": "fulltext_local",
  "source_locator": "files/fulltext/PMID40327201_Hammouz2025_PMC_r2.xml",
  "study_id": {
-  "doi": "10.1007/s10142-025-01601-0",
+  "doi": "10.1007/s10142-025-01601-5",
   "pmid": "40327201"
  },
  "workflow": "scientist-b wave 4 group W1, task branch task/W4-W1-B-20261019; SOURCE_FIRST; PMC efetch XML and PMC open-data bucket re-acquired with pmc_bucket_fetch.py, no User-Agent; locators verified by deepdive_manifest.py. Prepared as a JSON file for the integrator and not appended."

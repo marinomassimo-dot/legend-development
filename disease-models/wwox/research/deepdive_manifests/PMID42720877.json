@@ -1,0 +1,169 @@
+{
+ "schema_version": 2,
+ "pmid": "42720877",
+ "doi": "10.1007/s11910-026-01514-1",
+ "receipt": "FTR-20261019-42720877-01",
+ "landing": [
+  "FTR-20261019-42720877-01",
+  "wave4_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: PMC efetch XML and the bucket PDF returned the body."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: read directly under the Scientist brief."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no baseline claim is narrowed, reversed or removed and no MAJOR change is declared."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "counts_measured": "Not measured: author surname-initial counts are ambiguous for this group and WWOX is one row of a table; recorded as zero WWOX-directed output for the first author without a PubMed check.",
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Epilepsy-genetics clinical review; WWOX is a table row; weight the WWOX line as a secondary statement without a source.",
+  "note": "Springer Nature review."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-20",
+    "count": 1
+   }
+  ],
+  "note": "WWOX appears once in an 82 kB text."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 134,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements of the JATS; none has WWOX in its citation text.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-direct reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 42720877; registry comparison after the first pass",
+  "hits": 0,
+  "finding": "No receipt before this one."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-20",
+  "route": "PMC efetch XML front matter; dependency_integrity.py screen",
+  "result": "No retraction, correction or expression of concern found.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 134,
+   "references_screened": 134,
+   "references_with_doi": 134,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42720877_Schatz2026_PMC_r2.xml",
+   "sha256": "d3e2e1c9ab767c27fd2eb525d75d0453a3fa6cf2469e0317896d449db1e5eabe",
+   "kind": "article_text",
+   "note": "PMC efetch JATS for PMC13562175 (Curr Neurol Neurosci Rep 2026, CC BY-NC-ND), 285,791 bytes; Table 1 is in the text layer, no figure files in the bucket.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "d3e2e1c9ab767c27fd2eb525d75d0453a3fa6cf2469e0317896d449db1e5eabe",
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC13562175&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch JATS for PMC13562175 retrieved 2026-10-20, 285,791 bytes; the whole body is indexed locally for exact-text checks.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "SOURCE_FIRST. Read: abstract, introduction, the gene-therapy section, parts of the management and precision-medicine sections, the WWOX row of Table 1 and the Table 1 column structure; the other table rows were not read, so tables are captions_only and the depth is partial. Class-level substitute: nothing here is WWOX evidence beyond the one table row.",
+  "entries": [
+   {
+    "proposition": "Table 1 lists WWOX (DEE28 and spinocerebellar ataxia 12; recessive; mechanism intracellular signalling) with the column Precision epilepsy therapy or considerations reading \"MedPath Trial of gene replacement\"; no trial identifier or reference is given for WWOX in the table or in the text.",
+    "snippet": "WWOXDEE28, spinocerebellar ataxia 12616,211, 614,322Intracellular signalingARMedPath Trial of gene replacement",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42720877_Schatz2026_PMC_r2.xml",
+    "anchor": "Table 1, WWOX row",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of epilepsy genetics and precision therapy; Table 1 of representative genes (class level)",
+     "genotype": "monogenic epilepsy genes; WWOX one row of many",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "The text names eight registered trials (all with an NCT number) and none is a WWOX trial; ClinicalTrials.gov searched by condition WWOX or WOREE on 2026-10-20 returns one record each time, a general rare-disease registry and not a gene-replacement study, and the term WWOX plus AAV returns none. The Table 1 phrase is therefore not supported by the registry as queried and by this review; the preclinical WWOX gene-therapy papers in this repository describe a trial as future work.",
+    "snippet": "There are currently no FDA-approved gene therapies directly targeting monogenic epilepsies where epilepsy is the only or primary symptom, but there are several for syndromes that include epilepsy as a comorbidity.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42720877_Schatz2026_PMC_r2.xml",
+    "anchor": "Gene Therapy and Other Emerging Therapies, first paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of epilepsy genetics and precision therapy; Table 1 of representative genes (class level)",
+     "genotype": "monogenic epilepsy genes; WWOX one row of many",
+     "comparator": "none"
+    },
+    "external_provenance": "ClinicalTrials.gov API v2 queries on 2026-10-20: query.cond=WWOX totalCount 1; query.cond=WOREE totalCount 1 (same record); query.term=WWOX+AAV totalCount 0"
+   },
+   {
+    "proposition": "Class level, not WWOX evidence: phenylbutyrate is described as a chemical chaperone being studied for proper folding of STXBP1 and SLC6A1 (NCT04937062), with other preclinical suggestions; no WWOX variant is mentioned.",
+    "snippet": "phenylbutyrate, an FDA-approved nitrogen scavenger therapy for urea cycle disorders [104–106], is also being studied as a chemical chaperone to promote proper folding of STXBP1 and SLC6A1 (NCT04937062)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42720877_Schatz2026_PMC_r2.xml",
+    "anchor": "Gene Therapy and Other Emerging Therapies, third paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of epilepsy genetics and precision therapy; Table 1 of representative genes (class level)",
+     "genotype": "monogenic epilepsy genes; WWOX one row of many",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "Class level: management changes after a genetic diagnosis include ketogenic diet initiation, other dietary changes and vitamin or mineral supplementation; the review gives no WWOX example.",
+    "snippet": "other management changes may include ketogenic diet initiation, other dietary changes, and vitamin or mineral supplementation (Table 1)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42720877_Schatz2026_PMC_r2.xml",
+    "anchor": "Impact of Genetic Testing on Clinical Management",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of epilepsy genetics and precision therapy; Table 1 of representative genes (class level)",
+     "genotype": "monogenic epilepsy genes; WWOX one row of many",
+     "comparator": "none"
+    }
+   }
+  ]
+ }
+}
