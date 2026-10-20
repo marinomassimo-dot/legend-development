@@ -1,0 +1,40 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-38542478-02",
+ "study_id": {
+  "pmid": "38542478",
+  "doi": "10.3390/ijms25063507"
+ },
+ "event_at": "2026-10-19T21:00:00Z",
+ "analysis_at": "2026-10-19T21:00:00Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, task HELD-PARTIAL-WWOX-C-20261019, branch task/HELD-PARTIAL-WWOX-C-20261019; context_policy QUESTION_DRIVEN. Held before reading: the selection row and the prior receipt's owed sections. Stated question: do the figure panels contain any WWOX-null or knockdown arm with a metabolic, mitochondrial or ROS readout, or are all panels Zfra-treatment effects on a WWOX-replete background. Route: the Europe PMC JATS and the seven figure JPEGs already on disk (PMC OA bucket, declared in the manifest for the first time in this re-read); every figure opened at native size. Coverage other than figures is carried from FTR-20261003-38542478-01 and its existing locators, which were not re-derived. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID38542478_Chen2024_PMC.xml",
+ "source_fingerprint": "e130c6b8e4eaeb8a7957fada7fcd39bc299158bdac5893d4fd2bd61476a51ab6",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "read",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "not_present"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID38542478.json",
+  "disease-models/wwox/research/held_wave_20261019_scientist-c.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "Coverage other than figures is carried from FTR-20261003-38542478-01."
+ ],
+ "prior_receipt": "FTR-20261003-38542478-01",
+ "reread_reason": "inadequate_prior_coverage"
+}

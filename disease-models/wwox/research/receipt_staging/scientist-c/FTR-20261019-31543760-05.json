@@ -1,0 +1,40 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-31543760-05",
+ "study_id": {
+  "pmid": "31543760",
+  "doi": "10.3389/fncel.2019.00391"
+ },
+ "event_at": "2026-10-19T21:00:00Z",
+ "analysis_at": "2026-10-19T21:00:00Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, task HELD-PARTIAL-WWOX-C-20261019, branch task/HELD-PARTIAL-WWOX-C-20261019; context_policy QUESTION_DRIVEN. Held before reading: the selection row and the prior receipt's owed sections. Stated question: in the figures is any differentially expressed gene set after WWOX knockdown in neural progenitors metabolic rather than synaptic or neurite, and what do the redox and oxidative-gene panels carry. Route: the Europe PMC JATS, the eleven figure JPEGs and Data_Sheet_1 text layer already declared in the manifest; Figures 1, 2, 5, 8, 9, 10 and 11 opened at native size in this re-read (Figures 3, 4, 6, 7 were opened in an earlier wave); Supplementary Table 1 re-read with contribution ranks counted by script over the text layer. Coverage other than figures and introduction carried from FTR-20261004-31543760-04. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID31543760_Kosla2019_EPMC.xml",
+ "source_fingerprint": "9deafe306e891ec7eae9e4e6d46a8238f0e4233a85ae6e5af9091d7c22301647",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "read",
+  "figures": "read",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "read",
+  "tables": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
+  "disease-models/wwox/research/held_wave_20261019_scientist-c.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "Coverage other than figures and introduction is carried from FTR-20261004-31543760-04."
+ ],
+ "prior_receipt": "FTR-20261004-31543760-04",
+ "reread_reason": "inadequate_prior_coverage"
+}

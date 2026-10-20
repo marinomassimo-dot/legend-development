@@ -1,0 +1,39 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-24308844-03",
+ "study_id": {
+  "pmid": "24308844",
+  "doi": "10.1021/bi400987k"
+ },
+ "event_at": "2026-10-19T21:00:00Z",
+ "analysis_at": "2026-10-19T21:00:00Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, task HELD-PARTIAL-WWOX-C-20261019, branch task/HELD-PARTIAL-WWOX-C-20261019; context_policy QUESTION_DRIVEN. Held before reading: the selection row and the prior receipt's owed sections. Stated question: does any figure or table speak to metabolism or only to ErbB4 intracellular-domain and WW1 binding (negative expected). Route: the seven figure JPEGs re-retrieved on 2026-10-20 from the PMC content-delivery blob addresses with no User-Agent (five were declared in the manifest and absent from disk, their SHA-256 values match the declaration; Figures 1 and 7 are new), Figures 1 and 7 opened as images, the Methods section read in full from the JATS. Figures 2-6 carry locators from an earlier reading that the restored files now verify. Tables remain recorded not_read in this event by choice (earlier locators cite them). Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID24308844_Schuchardt2013_PMC.xml",
+ "source_fingerprint": "00da56df985d59b873d8ceea546fdb870138201aaa8c3e22badec660c30581ce",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID24308844.json",
+  "disease-models/wwox/research/held_wave_20261019_scientist-c.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "Coverage other than figures and methods is carried from FTR-20260927-24308844-02."
+ ],
+ "prior_receipt": "FTR-20260927-24308844-02",
+ "reread_reason": "inadequate_prior_coverage"
+}
