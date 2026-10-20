@@ -436,7 +436,7 @@
     }
    },
    {
-    "proposition": "The neurodevelopmental paragraph states that specific homozygous mutations cause cerebellar vermis hypoplasia and impaired neuronal migration, citing a 2024 case report; the text of that case report as read on 2026-10-19 contains neither term (vermis hypoplasia and the migration study belong to a different 2020 paper).",
+    "proposition": "The neurodevelopmental paragraph states that specific homozygous mutations cause cerebellar vermis hypoplasia and impaired neuronal migration; the sentence has no citation of its own, the only 2024 case-report citation (Feng et al.) ends the preceding sentence, and the text of that case report as read on 2026-10-19 contains neither term (vermis hypoplasia and the migration study belong to a different 2020 paper). The attribution is by adjacency.",
     "snippet": "Specific homozygous mutations result in premature stop codons that disrupt normal brain development, causing abnormalities like cerebellar vermis hypoplasia and impaired neuronal migration.",
     "surface": "body",
     "artifact": "files/fulltext/PMID40327201_Hammouz2025_PMC_r2.xml",
@@ -447,7 +447,18 @@
      "genotype": "WWOX loss in cancer cells; WWOX loss-of-function disease in one paragraph",
      "comparator": "none"
     },
-    "external_provenance": "Case-report text of PMID 39416860 searched for vermis and migration on 2026-10-19: grep -c -i \"vermis|migration\" returned 0"
+    "external_provenance": "Case-report text of PMID 39416860 searched for vermis and migration on 2026-10-19: grep -c -i \"vermis|migration\" returned 0",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40327201.json",
+     "entry": 5,
+     "what_changed": "Own same-day entry corrected after blind audit verdict PARTIAL: the sentence carries no citation of its own; the Feng citation is on the preceding sentence.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "PARTIAL"
+      ]
+     }
+    }
    },
    {
     "proposition": "The restatement of the 2021 gene-therapy paper lists growth retardation, seizures and ataxia as reversed and mentions glucose only as involvement in CNS glucose metabolism; it does not state that hypoglycemia was the measured rescue, nor that the rescue rests on an appendix panel.",

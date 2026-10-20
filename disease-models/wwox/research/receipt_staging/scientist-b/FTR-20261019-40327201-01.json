@@ -16,7 +16,7 @@
  "event_id": "FTR-20261019-40327201-01",
  "evidence_basis": [
   "Review body read except the ten organ-cancer sections; Figure 1 opened as an image; references enumerated (194) and gene-direct ones classified against the repository.",
-  "FIND: the paragraph on non-cancer disease attributes vermis hypoplasia and impaired neuronal migration to a case report that contains neither; the metabolic framing is cancer-cell glycolysis, opposite in sign to the null-mouse hypoglycemia, and unremarked."
+  "FIND: the paragraph on non-cancer disease states vermis hypoplasia and impaired neuronal migration next to a case-report citation (adjacency) whose text contains neither term; the metabolic framing is cancer-cell glycolysis, opposite in sign to the null-mouse hypoglycemia, and unremarked."
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

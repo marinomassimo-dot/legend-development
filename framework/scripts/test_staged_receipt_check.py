@@ -21,5 +21,24 @@ class Check(unittest.TestCase):
             self.assertEqual(m.main(), 1)
 
 
+class DoiCheck(unittest.TestCase):
+    @staticmethod
+    def fake(doi):
+        return lambda url: json.dumps({"result": {"1": {"articleids": [{"idtype": "pubmed", "value": "1"}, {"idtype": "doi", "value": doi}]}}})
+
+    def test_matching_doi_passes(self):
+        r = {"study_id": {"pmid": "1", "doi": "10.1/Abc"}}
+        self.assertEqual(m.doi_errors(r, self.fake("10.1/abc")), [])
+
+    def test_last_digit_wrong_is_refused(self):
+        r = {"study_id": {"pmid": "1", "doi": "10.1007/s10142-025-01601-0"}}
+        errs = m.doi_errors(r, self.fake("10.1007/s10142-025-01601-5"))
+        self.assertTrue(errs and "differs" in errs[0])
+
+    def test_unreadable_pubmed_is_not_silence(self):
+        r = {"study_id": {"pmid": "1", "doi": "10.1/x"}}
+        self.assertTrue(m.doi_errors(r, lambda url: "not json")[0].startswith("doi check: PubMed DOI"))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
