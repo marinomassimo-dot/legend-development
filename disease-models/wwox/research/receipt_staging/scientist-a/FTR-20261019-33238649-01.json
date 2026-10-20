@@ -37,5 +37,6 @@
   "Tables 1-2 and A1 read from the JATS; percentages recomputed"
  ],
  "prior_receipt": null,
- "reread_reason": "first_read"
+ "reread_reason": "first_read",
+ "event_at": "2026-10-20T06:16:00Z"
 }
