@@ -23,6 +23,7 @@ EXPECTED_NON_CONTENT_ASSETS = {
     "legend-batch-inferential-sweep/scripts/test_batch_inferential_sweep.py",
     "legend-dashboard/agents/openai.yaml",
     "legend-hypothesis-forge/scripts/kg_thin_slice.py",
+    "legend-hypothesis-forge/scripts/test_kg_thin_slice.py",
     "legend-lint-repair-plan/agents/openai.yaml",
     "legend-proband-priority-matrix/scripts/score_proband_priority.py",
     "legend-research-loop/agents/openai.yaml",
