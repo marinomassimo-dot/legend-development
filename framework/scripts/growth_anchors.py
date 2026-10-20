@@ -49,6 +49,7 @@ import json
 import os
 import re
 import sys
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -99,35 +100,101 @@ REGISTRIES = {
 # --- third policy: `scale_trigger` -------------------------------------------------------
 #
 # The two policies above answer "is the anchored number still true?". Neither answers "is
-# this file still a workable shape?", and that is a different question with a different
-# failure mode: nothing is corrupt, the registry simply outgrows the thing it is — one
-# Markdown document that a batch rewrites whole and a human reviews as a diff.
+# this surface still a workable shape?", and that is a different question with a different
+# failure mode: nothing is corrupt, the registry simply outgrows the thing it is.
 #
-# The threshold is a declared engineering judgement, and it is written here rather than
-# discovered because there is nothing to discover: no measurement in the repository knows
-# when a diff stops being reviewable. Two properties keep it honest. It is roughly twice the
-# largest registry at the time of writing (462 KB), so it cannot fire spuriously today and
-# a session cannot be tempted to relax it to get on with its work. And crossing it does not
-# block: it declares an architectural decision *due*, which is exactly what the sharding
-# question is — canonical Markdown split into a family, versus an event store — a decision
-# deferred on purpose and only defensible while someone is still watching the number.
-REGISTRY_SIZE_TRIGGER_BYTES = 1_048_576
+# 🔴 THE TRIGGER WAS A BYTE SIZE UNTIL 2026-10-20, AND MEASURING CHANGED IT.
+# `REGISTRY_SIZE_TRIGGER_BYTES = 1 MiB` fired at a size nobody could tie to a harm, and the
+# paper registry then crossed it and was deferred twice. The decision packet written for the
+# third deferral measured what size actually costs
+# (`governance/design_records/registry_scale_decision_packet_20261020.md`): session context 0
+# bytes at every profile below FULL, a record lookup 0.83 s, a record-scoped edit 0.17 s, a
+# depth screen 0.62 s, LINT 7.85 s over the whole repository. Nothing the metabolic batch of
+# 2026-10-19 paid was attributable to file size. The one structural pain it paid repeatedly —
+# an append conflict at the end of one file between parallel branches — is not cured by
+# sharding by record range, since every new record lands in the last shard. Against that, any
+# split costs about 20 tools, 26 tests and 370 linking documents, paid once, to buy nothing
+# that was measured. A trigger that fires where no harm is measurable spends operator turns on
+# a non-question, so the Orchestrator's decision of 2026-10-20 (on the operator's delegation)
+# re-founded it on COST: ORCHESTRATOR DECISION 2026-10-20 — adopt A, plus the discovery-ledger
+# change-log move; B (shard by record range), C (shard by year) and D (event store) rejected;
+# E (cold/hot history split per record) deferred to this trigger rather than to a date.
+#
+# WHAT IS MEASURED, and why these two numbers and not a third. Both are the cost that a split
+# would actually change, and both are paid per surface:
+#
+#   record_access_seconds   read the surface and split it into records, then take one whole
+#                           record out — what every `registry_records.py get` pays before it
+#                           can answer, and the only part of that cost which grows with the
+#                           file.
+#   record_rewrite_seconds  re-serialise every record — what a record-scoped edit and a
+#                           BATCH_COMMIT propagation pay per operation.
+#
+# LINT's 7.85 s is deliberately NOT an axis here: it is repo-wide, cannot be attributed to one
+# surface, and measuring it would mean running from inside the module `legend_lint.py` itself
+# imports. Context cost is not an axis either, for the plainest reason: it is zero and
+# structurally so — no profile below FULL preloads a registry, and record-level access is how
+# every session reads them.
+#
+# Measured, never declared, on every invocation; the best of three runs is kept, because a
+# trigger that fires when the host was briefly busy teaches sessions to ignore it.
+SCALE_MEASUREMENT_RUNS = 3
+
+# The thresholds, each with its rationale, as the growth principle requires of any number that
+# decides something. They are budgets per surface, not sizes, and they carry about an order of
+# magnitude of headroom on purpose: the question is whether reading and editing a surface has
+# become slow enough to change behaviour, and the answer today is no.
+SCALE_COST_BUDGETS: dict[str, tuple[float, str]] = {
+    # The cross-surface lookup a Scientist actually runs measured 0.83 s end to end with the
+    # largest surface's split inside it at 0.009 s (this tool's own measurement, 2026-10-20,
+    # papers: 1,541,499 bytes, 813 records). At 0.25 s for one surface that lookup has
+    # passed roughly 1.5-2 s — the latency at which the measured behaviour changed before
+    # record-level access existed: sessions stopped reading records and grepped instead
+    # (zero `Read` calls on either large registry across four transcripts, 24 ad-hoc greps,
+    # `framework/scripts/README.md`). That is the harm, and it is a reader's harm.
+    "record_access_seconds": (0.25, "a session's record lookup stays under ~2 s end to end"),
+    # A record-scoped edit measured 0.17 s end to end on the largest registry, of which the
+    # re-serialisation is 0.001 s. A batch applies tens of operations, so 0.25 s per operation
+    # is where one BATCH_COMMIT's propagation passes a minute of pure re-serialisation.
+    "record_rewrite_seconds": (0.25, "one batch's propagation stays under ~1 min of rewriting"),
+}
+
+# Which surfaces are watched. The three canonical registries, plus the discovery ledger, which
+# had NO scale anchor at all until this decision although it was the third-largest surface in
+# the repository (798 KB on 2026-10-20) and grows with every wave's leads.
+SCALE_SURFACES = {
+    **REGISTRIES,
+    "discovery": "disease-models/{disease}/research/discovery_ledger_current.md",
+}
 
 # An acknowledgement is how "we looked, and we are deferring" is recorded. It binds to the
-# size measured when it was made and **expires** once the file has grown a further quarter,
+# cost measured when it was made and **expires** once that cost grows a further quarter,
 # mirroring the freeze contract's drift acknowledgements: without expiry, `resolved` decays
 # into `ignored once, ignored forever`, which is the state this whole module exists to
 # prevent. Deferring again is cheap; deferring silently and permanently is not available.
+# (Events before 2026-10-20 carry size-bound `scale_ack` values under the old byte policy.
+# They are history and are never rewritten; the cost policy reads `scale_cost_ack` only, so a
+# stale byte acknowledgement can neither silence nor fire this trigger.)
 SCALE_ACK_MARGIN = 0.25
 
-# 🔴 Known gap, deliberately unimplemented until the first trigger fires. Acknowledging costs
-# a command; sharding costs days. If acknowledging stays cheaper indefinitely, nobody ever
-# shards and the ordering this policy was built on inverts — somewhere around the third
-# deferral, when "we looked and deferred" has become the routine answer rather than a
-# decision. The escalation that closes it: from the third acknowledgement of the same
-# registry, either the note must carry a date by which the shard will happen, or this module
-# stops recording and starts warning. Building it now would be guessing at the shape of a
-# situation nobody has been in; building it at the first trigger will not be.
+# 🔴 Never auto-renewed. An agent may record the first two deferrals of a surface, with the
+# reasoning that is the whole value of the record. From the THIRD, `acknowledge-scale` refuses
+# unless `--operator-decision` names the instruction it is acting on — the escalation this
+# module declared as a known gap when the byte trigger was written, and the condition Mirror
+# review A7 set on 2026-10-20 ("a third renewal should be refused until the operator has
+# decided"). Nothing about it is an approval queue: the report stays visible either way, and
+# what is refused is an agent silencing it a third time on its own authority.
+SCALE_ACK_AGENT_RENEWALS = 2
+
+# The splitter the cost measurement uses. It is deliberately NOT `HEADINGS`: that dict is the
+# repository's definition of a canonical RECORD, and the registries, the discovery ledger and
+# anything watched later each name records differently (`## PAPER n`, `### DL-MECH-nnn`). What
+# is being timed is the parse a reader pays before it can hand back one block, so splitting on
+# every second- or third-level heading is the right shape and a fair upper bound of it. No
+# consumer takes identity from this pattern, so it cannot drift into a second definition of
+# what a record is — the failure `heading_re` exists to prevent.
+ANY_RECORD_HEAD = re.compile(r"(?m)^#{2,3}[ \t]+\S.*$")
+
 # These four patterns ARE the definition of "a canonical record" for the whole repository.
 # They were lifted verbatim from `scripts/test_canonical_structure.py`, which owned the
 # cardinality before this module existed, and that test now imports them from here instead of
@@ -250,29 +317,91 @@ def measure_registry_bytes(root: Path, disease: str) -> dict[str, int]:
             for name, template in sorted(REGISTRIES.items())}
 
 
-def scale_triggers(live: dict[str, Any], state: dict[str, Any]) -> list[str]:
-    """Registries past the trigger whose acknowledgement is missing or has expired.
+def measure_surface_cost(root: Path, disease: str) -> dict[str, dict[str, float]]:
+    """Per surface: its size, its record count, and the two costs the trigger watches.
 
-    Returns human-readable lines. This never reports a violation: nothing here is wrong,
-    something here is *due*.
+    Measured, never declared, and the best of `SCALE_MEASUREMENT_RUNS` runs is kept so a busy
+    host cannot fire the trigger. A surface the checkout does not have is reported absent
+    rather than silently skipped — a missing measurement is not a clean one.
     """
-    acknowledged = (state or {}).get("scale_ack") or {}
-    lines: list[str] = []
-    for name, size in sorted((live.get("registry_bytes") or {}).items()):
-        if size <= REGISTRY_SIZE_TRIGGER_BYTES:
+    out: dict[str, dict[str, float]] = {}
+    for name, template in sorted(SCALE_SURFACES.items()):
+        path = root / template.format(disease=disease)
+        if not path.is_file():
+            out[name] = {"absent": True}
             continue
-        at = acknowledged.get(name)
-        if at is None:
-            lines.append(
-                f"SCALE_TRIGGER: {name} registry is {size / 1024:.0f} KB, past the "
-                f"{REGISTRY_SIZE_TRIGGER_BYTES / 1024:.0f} KB trigger. The sharding decision "
-                f"is due — canonical Markdown family versus event store. Record the outcome "
-                f"with `growth_anchors.py acknowledge-scale --note '<decision>'`.")
-        elif size > at * (1 + SCALE_ACK_MARGIN):
-            lines.append(
-                f"SCALE_TRIGGER: {name} registry is {size / 1024:.0f} KB, a further "
-                f"{(size / at - 1) * 100:.0f}% beyond the {at / 1024:.0f} KB at which the "
-                f"deferral was acknowledged. The acknowledgement has expired; decide again.")
+        access: list[float] = []
+        rewrite: list[float] = []
+        records = 0
+        for _ in range(SCALE_MEASUREMENT_RUNS):
+            started = time.perf_counter()
+            text = path.read_text(encoding="utf-8")
+            heads = list(ANY_RECORD_HEAD.finditer(text))
+            bounds = [(heads[index].start(),
+                       heads[index + 1].start() if index + 1 < len(heads) else len(text))
+                      for index in range(len(heads))]
+            if bounds:
+                middle = bounds[len(bounds) // 2]
+                _one_whole_record = text[middle[0]:middle[1]]
+            access.append(time.perf_counter() - started)
+            records = len(bounds)
+            started = time.perf_counter()
+            _reserialised = "".join(text[start:end] for start, end in bounds)
+            rewrite.append(time.perf_counter() - started)
+        out[name] = {
+            "bytes": float(path.stat().st_size),
+            "records": float(records),
+            "record_access_seconds": round(min(access), 4),
+            "record_rewrite_seconds": round(min(rewrite), 4),
+        }
+    return out
+
+
+def render_surface_cost(costs: dict[str, Any]) -> str:
+    """One line per watched surface: measured value beside the budget that judged it."""
+    lines = []
+    for name, row in sorted(costs.items()):
+        if not isinstance(row, dict) or row.get("absent"):
+            lines.append(f"  scale: {name:<11} ABSENT from this checkout — not measured")
+            continue
+        axes = " · ".join(
+            f"{axis.replace('_seconds', '')} {float(row.get(axis) or 0.0):.3f}/{budget:.2f}s"
+            for axis, (budget, _why) in sorted(SCALE_COST_BUDGETS.items()))
+        lines.append(f"  scale: {name:<11} {row.get('bytes', 0) / 1024:7.0f} KB · "
+                     f"{int(row.get('records') or 0):4d} records · {axes}")
+    return "\n".join(lines) if lines else "  scale: no watched surface measured"
+
+
+def scale_triggers(live: dict[str, Any], state: dict[str, Any]) -> list[str]:
+    """Surfaces over a measured-cost budget whose deferral is missing or has expired.
+
+    Returns human-readable lines, each naming the MEASURED value beside the budget it was
+    judged against, so the next reader sees why it did or did not fire. This never reports a
+    violation: nothing here is wrong, something here is *due*.
+    """
+    acknowledged = (state or {}).get("scale_cost_ack") or {}
+    lines: list[str] = []
+    for name, costs in sorted((live.get("surface_cost") or {}).items()):
+        if not isinstance(costs, dict) or costs.get("absent"):
+            continue
+        for axis, (budget, rationale) in sorted(SCALE_COST_BUDGETS.items()):
+            measured = float(costs.get(axis) or 0.0)
+            if measured <= budget:
+                continue
+            at = (acknowledged.get(name) or {}).get(axis)
+            where = (f"{name}: {axis} measured {measured:.3f} s against a {budget:.3f} s "
+                     f"budget ({rationale})")
+            if at is None:
+                lines.append(
+                    f"SCALE_TRIGGER: {where}. The storage decision is due — see "
+                    f"`governance/design_records/registry_scale_decision_packet_20261020.md` "
+                    f"for the options and the costs. Record the outcome with "
+                    f"`growth_anchors.py acknowledge-scale --note '<decision>'`.")
+            elif measured > at * (1 + SCALE_ACK_MARGIN):
+                lines.append(
+                    f"SCALE_TRIGGER: {where}, a further {(measured / at - 1) * 100:.0f}% "
+                    f"beyond the {at:.3f} s at which the deferral was acknowledged. The "
+                    f"acknowledgement has expired; decide again.")
     return lines
 
 
@@ -691,6 +820,9 @@ def measure_all(root: Path, disease: str) -> dict[str, Any]:
         # anchored value: sizes are expected to move constantly, so anchoring them would
         # produce a violation on every batch. Only the acknowledgement is anchored.
         "registry_bytes": measure_registry_bytes(root, disease),
+        # The scale trigger's own measurement, and like the sizes above it is NOT anchored:
+        # it moves with every batch and with the host. Only a deferral is anchored.
+        "surface_cost": measure_surface_cost(root, disease),
     }
 
 
@@ -921,6 +1053,10 @@ def cmd_check(root: Path, disease: str, _args) -> int:
     triggers = scale_triggers(live, tail_state(load_ledger(root / LEDGER_REL)) or {})
     for item in triggers:
         print(f"  [SCALE] {item}")
+    # Printed whether or not anything fired: a threshold whose measured value is invisible is
+    # a number nobody can judge, and "it did not fire" must be readable as a measurement
+    # rather than taken on trust.
+    print(render_surface_cost(live.get("surface_cost") or {}))
     # Same contract, different question: `SCALE` asks whether the model has outgrown its
     # storage, `BACKLOG` asks whether reading has outrun propagation. Both report something
     # DUE rather than something wrong, so neither fails `check`.
@@ -1053,8 +1189,9 @@ def cmd_record(root: Path, disease: str, args) -> int:
     if pending:
         for item in pending:
             print(f"  [SCALE] {item}")
-        print("REFUSED: this batch grows a registry whose scale decision is outstanding. "
-              "Record the decision with `acknowledge-scale`, or shard, then record again.")
+        print("REFUSED: this batch grows a surface whose scale decision is outstanding — the "
+              "measured cost above is past its budget. Record the decision with "
+              "`acknowledge-scale`, or change the storage, then record again.")
         return 1
 
     note = args.note or "structural growth declared by " + args.batch
@@ -1066,9 +1203,9 @@ def cmd_record(root: Path, disease: str, args) -> int:
 
 
 def cmd_acknowledge_scale(root: Path, disease: str, args) -> int:
-    """Record that the sharding decision was taken, and bind it to the size it was taken at.
+    """Record that the storage decision was taken, and bind it to the cost it was taken at.
 
-    There is deliberately no way to acknowledge a registry that has not crossed the trigger:
+    There is deliberately no way to acknowledge a surface that has not crossed a budget:
     a pre-emptive acknowledgement would be a permanent silence bought before the question was
     asked, which is the failure mode `SCALE_ACK_MARGIN` exists to close from the other side.
     """
@@ -1077,7 +1214,7 @@ def cmd_acknowledge_scale(root: Path, disease: str, args) -> int:
     state = tail_state(events) or {}
     pending = scale_triggers(live, state)
     if not pending:
-        print("NOTHING TO ACKNOWLEDGE: no registry is past the trigger, or every deferral "
+        print("NOTHING TO ACKNOWLEDGE: no surface is past a cost budget, or every deferral "
               "on record is still current")
         return 0
     if not args.note:
@@ -1085,20 +1222,45 @@ def cmd_acknowledge_scale(root: Path, disease: str, args) -> int:
               "the timestamp; an acknowledgement without one is a silence with a date on it.")
         return 2
 
-    sizes = live["registry_bytes"]
-    over = {name: size for name, size in sizes.items()
-            if size > REGISTRY_SIZE_TRIGGER_BYTES}
-    anchors = {"scale_ack": {**(state.get("scale_ack") or {}), **over}}
+    costs = live["surface_cost"]
+    previous = state.get("scale_cost_ack") or {}
+    over: dict[str, dict[str, float]] = {}
+    for name, row in costs.items():
+        if not isinstance(row, dict) or row.get("absent"):
+            continue
+        breached = {axis: float(row[axis]) for axis, (budget, _why) in SCALE_COST_BUDGETS.items()
+                    if float(row.get(axis) or 0.0) > budget}
+        if breached:
+            over[name] = {**(previous.get(name) or {}), **breached}
+    renewals = {name: int((state.get("scale_ack_renewals") or {}).get(name, 0)) + 1
+                for name in over}
+    capped = sorted(name for name, count in renewals.items()
+                    if count > SCALE_ACK_AGENT_RENEWALS)
+    if capped and not getattr(args, "operator_decision", ""):
+        print(f"REFUSED: {', '.join(capped)} would be deferred for the "
+              f"{renewals[capped[0]]}th time. From the "
+              f"{SCALE_ACK_AGENT_RENEWALS + 1}th, a deferral is the operator's call, not an "
+              f"agent's: pass --operator-decision '<the instruction you are acting on>'. "
+              f"Nothing is blocked by this refusal except silencing the report again; "
+              f"`check` keeps printing the measured value beside its budget.")
+        return 2
+    anchors = {"scale_cost_ack": {**previous, **over},
+               "scale_ack_renewals": {**(state.get("scale_ack_renewals") or {}), **renewals}}
     if state.get("structural"):
         anchors["structural"] = state["structural"]
     for key in ("registry_only_fulltext", "unread_premises"):
         if state.get(key) is not None:
             anchors[key] = state[key]
-    event = append_event(root, disease, "scale_ack", anchors, args.note, args.batch)
+    note = args.note
+    if getattr(args, "operator_decision", ""):
+        note = f"{note} [operator decision: {args.operator_decision}]"
+    event = append_event(root, disease, "scale_ack", anchors, note, args.batch)
     changed = reanchor_manifest(root, disease)
-    for name, size in sorted(over.items()):
-        print(f"  [ACKNOWLEDGED] {name} at {size / 1024:.0f} KB; this record expires once it "
-              f"reaches {size * (1 + SCALE_ACK_MARGIN) / 1024:.0f} KB")
+    for name, axes in sorted(over.items()):
+        for axis, measured in sorted(axes.items()):
+            print(f"  [ACKNOWLEDGED] {name} {axis} at {measured:.3f} s (deferral "
+                  f"{renewals[name]} for this surface); this record expires once it reaches "
+                  f"{measured * (1 + SCALE_ACK_MARGIN):.3f} s")
     print(f"RECORDED: {event['event_id']}")
     print("ANCHORED: " + ", ".join(changed))
     return 0
@@ -1207,6 +1369,9 @@ def build_parser() -> argparse.ArgumentParser:
                          help="record the sharding decision for a registry past the trigger")
     ack.add_argument("--batch")
     ack.add_argument("--note", help="the decision and its reasoning; required")
+    ack.add_argument("--operator-decision", default="",
+                     help=("required from the third deferral of the same surface: the operator "
+                           "instruction this deferral acts on, recorded with the note"))
     return parser
 
 

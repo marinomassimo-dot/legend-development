@@ -87,6 +87,7 @@ Commit candidates must declare their intended `target_wm_version`.
 | File | Status | Notes |
 |------|--------|-------|
 | `disease-models/wwox/research/discovery_ledger_current.md` | present | cumulative discovery capital — leads toward biomarkers, molecules, repurposing |
+| `disease-models/wwox/research/discovery_ledger_history.md` | present | cold history of the ledger — its dated change-log, moved verbatim 2026-10-20; read on demand, never a source of a lead's current state |
 | `disease-models/wwox/research/therapeutic_hypotheses_ledger_current.md` | present | scored hypothesis portfolio from the co-scientist loop |
 | `disease-models/wwox/research/dismissal_ledger_current.md` | present | rejections with their `REVIVAL_TRIGGER` — nothing dies in silence |
 | `framework/eval/learned_gates_registry.md` | present | reusable error-prevention gates distilled from failures |

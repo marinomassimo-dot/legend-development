@@ -8,6 +8,8 @@
 >
 > Research-layer working file. Append-only sui lead; status, mai cancellazione.
 > Tag epistemici: DATO / INFERENZA / IPOTESI / ESPANSIONE. Promozione a canonico SOLO via COMMIT CANDIDATE.
+> Cold history: the dated change-log lives in [`discovery_ledger_history.md`](discovery_ledger_history.md)
+> — read on demand, never at startup, and never a source of a lead's current state.
 > Status lead: open · maturing · promoted-to-CC · parked · refuted
 > Creato: 2026-06-28 · WM di riferimento: WM_v3.0_2026-07-14
 
@@ -350,23 +352,10 @@
 ---
 
 ## Change-log
-| Data | Azione | Voce | Note |
-|------|--------|------|------|
-| 2026-06-28 | created | ledger | Bootstrap dal template; primo paper = Riccardi 2026 (PMID 42190144) |
-| 2026-06-28 | created | DL-MECH-001..004, DL-MOL-001/002, DL-REPO-001 | da Riccardi 2026 (abstract) × CLAIM Breton 2021 |
-| 2026-06-28 | created | H-001, H-002 | euristiche distillate |
-| 2026-06-28 | created | NS-001..006 | next-search agenda |
-| 2026-06-28 | created | DL-BIO-001/002, DL-MECH-005/006 | da referto genetico il record pubblico di variante (genotipo di riferimento) × pipeline strutturale AlphaFold3/AlphaMissense/SpliceAI — modelli da eseguire |
-| 2026-06-28 | created | H-003, H-004 | euristiche: strumento-per-tipo-variante; mappare varianti sui dominî |
-| 2026-06-28 | created | NS-007..010 | next-search: esecuzione modelli strutturali + correlazione dominio-fenotipo |
-| 2026-06-28 | hop NS-002 | DL-MOL-003, DL-MECH-007, NS-011/012 | da Repudi & Aqeilan EMBO Mol Med 2021 (PMID 34268881): organoidi WOREE, asse Wnt, rescue WWOX ectopico |
-| 2026-06-28 | assembly | DL-MOL-001 | belief medio→medio-alto, status open→maturing: convergenza Breton+GRIN2A+organoidi (3 fonti indipendenti) |
-| 2026-06-28 | hop Wnt/catalisi | DL-MOL-003 (ribaltato), DL-MOL-004, DL-MECH-008, H-005/006/007, NS-013/014/015 | direzione Wnt risolta (Bouteille/Li/Celebi); sito catalitico SDR mappato (PMC4374002); litio→contro-indicato; +lead CRISPRa; conflitto contesto cancro-vs-neurone flaggato |
-| 2026-07-03 | paper Obeid/Aqeilan 2026 OMTA gene therapy (supplemental S1–S8) + proof-of-concept 2021 (PMID 34747138) | DL-MOL-005, DL-MECH-009/010/011, H-008/009, NS-016/017/018/019 | gene replacement genotype-agnostic (maturing, belief alto mouse / medio il genotipo di riferimento); WPRE booster 3–16.7× + contraddizione review; neuron-specific driver non-cell-autonomous; gap-timing = domanda-cardine per il genotipo di riferimento. Assembly: belief MECH-007 confermato alto (3 livelli convergenti). Paper già canonico (PAPER Obeid 2026 + CLAIM 011) → nessun CC duplicato; segnalato solo upgrade preprint→published |
-| 2026-07-03 | hop "compound Aldaz/Zhang" (richiesta dell'operatore) — ricerca PubMed + web | DL-REPO-002, DL-MECH-012, NS-020/021/022 | asse **neuroinfiammazione** WWOX (Aldaz, multi-tessuto) = ancora meccanicistica; lead REPO anti-infiammatorio riposizionato (direzione risolta: inibire); farmaco specifico + trial "Zhang/Baylor" **NON nel record pubblico** (probabile preclinico/foundation non pubblicato); ponte Baylor reale = Noebels/Seo (Neurology). Recovery via contatto diretto Aldaz (NS-020) |
-| 2026-07-05 | deepdive PMID 30619736 | DL-MECH-018, NS-023/024 | WWOX full-length interactome normalizzato come probabile fonte primaria CLAIM 026/CORPUS P182; DVL2 + endomembrane trafficking + Acetyl-CoA diventano pannello sperimentale, non farmaco pronto |
 
----
+Moved **verbatim** to [`discovery_ledger_history.md`](discovery_ledger_history.md) on
+2026-10-20: it is a dated action log, read on demand and never a source of a lead's
+current state. A new row is appended there; a new lead is appended here.
 
 ## Run 2026-07-05 — lead dalla lista 50-studi (autopilota)
 
