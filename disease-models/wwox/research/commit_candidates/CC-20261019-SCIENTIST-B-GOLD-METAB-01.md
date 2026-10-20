@@ -12,11 +12,11 @@ Research line RL-003 (metabolic and lipid) evidence boundary; paper-registry not
 ## Proposed additions (all INFERENZA or ESPANSIONE; negatives carried)
 
 1. **Opposite-sign, multi-tissue metabolic phenotype of WWOX loss.** Whole-body Wwox-null mice are hypoglycemic and die by 3 weeks; neuron-restricted re-expression normalises glucose, growth and survival (34747138 Appendix S1C/D, n = 5, single glucometer reading, pooled KO+GFP or KO control; 42422765 Figures 1 and 3); muscle-specific deletion gives higher-glucose, insulin-resistant mice (30755385; fasting glucose about 78 against 67 mg/dL, glucose tolerance and insulin resistance larger); hepatocyte and adipocyte deletions give no fasting-glucose change. The null hypoglycemia is therefore not attributable to muscle or liver WWOX, and no study dissects seizure, feeding or growth as drivers.
-2. **Glucose correction does not predict survival** (42422765 Figure 1): a CMV-driven vector normalises P14 glucose (about 131 mg/dL) while animals die by about P35; an EF1-alpha vector partly corrects glucose (about 102) with death by about P20. Hypoglycemia is not shown to be the lethal driver.
+2. **Glucose correction does not predict survival** (42422765 Figure 1): a CMV-driven vector normalises P14 glucose (about 131 mg/dL) while only two of five treated animals remain at the end of the plot (day 35; 3 of 5 dead by about day 32); an EF1-alpha vector partly corrects glucose (about 102) with death by about P20. Hypoglycemia is not shown to be the lethal driver.
 3. **Human-genetics support for WWOX metabolic traits is nominal** (30755385 Supplementary Table 1: best T2D variant p 3.78E-06, none genome-wide), consistent with the Harbin, Japanese and Ouyang readings of this wave.
 4. **Drosophila Wwox-Idh interaction is replicate-inconsistent** (21075834 Table S2: 2 of 5 and 3 of 5 replicates significant; Idh protein change 12 to 19 percent); no TCA or oxygen-consumption measurement exists for any Wwox-null mammalian tissue.
 5. **Slice hyperexcitability of the neuron-specific knockout occurs in 10 mM glucose** (34634460), so it is not an acute hypoglycemic effect in the dish; donor glucose is not reported.
-6. **The lde rat adds no metabolic data** (31340538); Wwox is highest in liver among rat organs tested and not detected in heart (Figure 1A), against the text's "all organs".
+6. **The lde rat adds no metabolic data** (31340538); Wwox is highest in liver among rat organs tested and not quantified in heart (Figure 1A, legend: low beta-actin; a faint band is visible).
 7. Integrity notes: 30755385 cites two retracted papers (citation only); 21075834 cites one retracted FHIT paper (citation only).
 
 ## Ordering

@@ -410,19 +410,30 @@
     }
    },
    {
-    "proposition": "Figure 1A quantification marks the heart as N.D. (not detected) while the sentence says all organs; liver carries the highest relative level (about 2.6 against about 1.2 for brain), adrenal about 1.75, kidney about 1.6, testis about 1.5, small intestine about 1.2, femur and spleen lowest after heart; n and error bars are drawn but the number of animals is not stated for this panel.",
+    "proposition": "Figure 1A marks the heart N.D., which its legend defines as relative expression not determined because of apparently low beta-actin in that organ (not as protein not detected); a faint heart Wwox band is visible in the blot. Liver carries the highest relative Wwox of the organs quantified (about 2.6 against about 1.2 for brain), adrenal about 1.75, kidney about 1.6, testis about 1.5, small intestine about 1.2; the number of animals is not stated for this panel. The sentence \"detected in all organs\" is therefore not contradicted but the heart is not quantified.",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1A bar chart Relative protein expression of Wwox: Brain about 1.2, Thymus about 0.65, Lung about 0.5, Heart N.D., Spleen about 0.35, Liver about 2.6, Small intestine about 1.25, Adrenal gland about 1.75, Kidney about 1.6, Femur about 0.25, Testis about 1.55.",
     "surface": "figure",
     "artifact": "files/figures/PMID31340538_r2/ijms-20-03596-g001.jpg",
     "anchor": "Figure 1 panel A, native JPEG",
-    "panel_text_relation": "text_contradicted_by_panel",
+    "panel_text_relation": "panel_qualifies_text",
     "experimental_context": {
      "system": "inbred LDE rats (lde/lde, +/lde, +/+), male, PND 5-21, western blot and immunostaining",
      "genotype": "Wwox 13-bp exon 9 deletion",
      "comparator": "+/+ littermates"
     },
-    "contradicts": "entries[11]",
-    "contradicts_needle": "detected in all organs examined"
+    "qualifies": "entries[11]",
+    "qualifies_needle": "detected in all organs examined",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31340538.json",
+     "entry": 12,
+     "what_changed": "Own same-day entry corrected after blind audit verdict PARTIAL: N.D. means not determined (low beta-actin), not not detected, so the text is qualified rather than contradicted.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "PARTIAL"
+      ]
+     }
+    }
    },
    {
     "proposition": "The Discussion names the brain, liver, small intestine, adrenal, kidney and testis as high-expression organs and reads that as involvement in neuroendocrine function and metabolism; no metabolic parameter (glucose, weight-adjusted intake, lipid, hormone) of the lde/lde rats is measured in the paper.",
@@ -451,6 +462,6 @@
     }
    }
   ],
-  "note": "2026-10-19 gold wave, scientist-b: 2026-08 XML and figure copies are absent; earlier locators re-point unchanged to the re-acquired XML and figures; Figures 3 to 6 were not re-opened in this pass (earlier receipt records them read). New: heart N.D. against the all-organs sentence, liver highest, absence of any metabolic measurement, weak loading control in lde/lde lanes."
+  "note": "2026-10-19 gold wave, scientist-b: 2026-08 XML and figure copies are absent; earlier locators re-point unchanged to the re-acquired XML and figures; Figures 3 to 6 were not re-opened in this pass (earlier receipt records them read). New: heart N.D. (legend: not determined, low beta-actin) qualifying the all-organs sentence, liver highest, absence of any metabolic measurement, weak loading control in lde/lde lanes."
  }
 }

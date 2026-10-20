@@ -17,7 +17,7 @@
  "evidence_basis": [
   "Whole JATS body read; Figures 1 and 3 opened as images; Figures 2, 4-7 and the supplementary pages not re-opened in this pass (earlier receipts record them read), hence figures and supplementary captions_only here and the depth is partial.",
   "Re-acquired PMC XML is byte-identical to the 2026-09-27 copy (same SHA-256).",
-  "NEW: glucose at P14 is corrected by CMV and partly by EF1-alpha without survival being rescued; the P10 partial correction by LD or HD is not significant against untreated KO; P20 and P30 panels contain no untreated KO."
+  "NEW: glucose at P14 is corrected by CMV and partly by EF1-alpha without WT-like survival (CMV: 3 of 5 dead by day 32); the P10 partial correction by LD or HD is not significant against untreated KO; P20 and P30 panels contain no untreated KO."
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

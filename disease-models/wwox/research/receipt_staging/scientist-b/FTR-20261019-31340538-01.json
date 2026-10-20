@@ -16,7 +16,7 @@
  "event_id": "FTR-20261019-31340538-01",
  "evidence_basis": [
   "Whole JATS body read; Figures 1 and 2 opened as images; Figures 3-6 not re-opened (captions only here), so depth is partial.",
-  "NEW: Figure 1A heart N.D. contradicts the all-organs sentence; liver has the highest Wwox of the organs tested; no metabolic parameter measured in the lde/lde rat."
+  "NEW: Figure 1A heart N.D. is defined in the legend as not determined (low beta-actin), so the all-organs sentence is qualified, not contradicted; liver has the highest Wwox of the organs tested; no metabolic parameter measured in the lde/lde rat."
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

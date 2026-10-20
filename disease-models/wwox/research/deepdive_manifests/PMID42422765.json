@@ -685,8 +685,8 @@
     "qualifies_needle": "From P30 onward"
    },
    {
-    "proposition": "Figure 1 as drawn (glucose at P14, n = 5 to 6): KO+RI about 58 mg/dL against WT about 137; EF1-alpha vector about 102 (partial; asterisks against both) with all treated mice dead by about P20, as in KO; CMV vector about 131 (ns against WT) with survival ending by about P35; MBP vector about 50, no change; synapsin vector about 131 (ns against WT) with full survival over the 50-day window. Glucose is therefore corrected by CMV and partly by EF1-alpha without survival being rescued, so glycaemic correction at P14 does not predict lethality.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 panels C, F, I, L glucose bars at p14 and A, D, G, J survival curves for EF1a, CMV, MBP and synapsin promoter vectors: EF1a glucose about 102 with survival to about P20; CMV glucose about 131 with survival to about P35; MBP about 50; synapsin about 131 with survival 100 percent to P50.",
+    "proposition": "Figure 1 as drawn (glucose at P14, n = 5 to 6): KO+RI about 58 mg/dL against WT about 137; EF1-alpha vector about 102 (partial; asterisks against both) with all treated mice dead by about P20, as in KO; CMV vector about 131 (ns against WT) with survival falling to 40 percent of 5 animals by about day 32 and the plot ending at day 35 with those 40 percent still shown (possibly censored); MBP vector about 50, no change; synapsin vector about 131 (ns against WT) with full survival over the 50-day window. Glucose is therefore corrected by CMV, and partly by EF1-alpha, without WT-like survival (3 of 5 CMV animals dead by day 32; all EF1-alpha animals dead by about day 20), so glycaemic correction at P14 does not predict lethality.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 panels C, F, I, L glucose bars at p14 and A, D, G, J survival curves for EF1a, CMV, MBP and synapsin promoter vectors: EF1a glucose about 102 with survival to about P20; CMV glucose about 131 with survival falling to 40 percent by about day 32; MBP about 50; synapsin about 131 with survival 100 percent to P50.",
     "surface": "figure",
     "artifact": "files/fulltext/figures/PMID42422765/gr1.jpg",
     "anchor": "Figure 1 panels A, C, D, F, G, I, J, L, native JPEG",
@@ -696,6 +696,17 @@
      "genotype": "Wwox -/- with neuronal, ubiquitous or oligodendrocyte promoter-driven hWWOX",
      "comparator": "WT and KO injected with reference item (RI)",
      "endpoint": "blood glucose mg/dL at P10, P14, P20, P30, P180"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
+     "entry": 38,
+     "what_changed": "Own same-day entry corrected after blind audit verdict PARTIAL: the CMV curve ends at 40 percent alive at day 35 (possibly censored), not all dead by about P35.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "PARTIAL"
+      ]
+     }
     }
    },
    {
