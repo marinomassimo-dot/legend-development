@@ -1,0 +1,531 @@
+{
+ "schema_version": 2,
+ "pmid": "39055621",
+ "doi": "10.3389/fped.2024.1365917",
+ "receipt": "FTR-20261019-39055621-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID39055621.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A single Chinese hospital paediatric group; primary for its own 35 infants; small observational pre/post design."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "infantile spasms AND ACTH AND cytokine",
+    "count": 10,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND infantile spasms",
+    "count": 23,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts at the stated date."
+ },
+ "multihop": {
+  "references_enumerated": 30,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 39055621 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 39055621: publication types ['Journal Article']; correction/retraction link markers in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 30,
+   "references_screened": 20,
+   "references_with_doi": 20,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 10
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39055621_Wang2024_PMC.xml",
+   "sha256": "86a99b439efa35a26557e92d6e338da15656ba31f4ebd09fd31bfa65bcd30d9c",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC11270505: abstract, body, Tables 1-4 and seven figure legends, 30 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11270505/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39055621/fped-12-1365917-g001.jpg",
+   "sha256": "700202cf021bfcd13a2f987c60c239bdaae20147c528c6bea3af53c86264c8f8",
+   "kind": "figure",
+   "note": "Figure 1 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11270505/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39055621/fped-12-1365917-g002.jpg",
+   "sha256": "c49b1fa548e43c82906fff0d8b2a581615eabaa44d5d291e872c687984e0d68b",
+   "kind": "figure",
+   "note": "Figure 2 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11270505/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39055621/fped-12-1365917-g003.jpg",
+   "sha256": "63e25870ce9d83fe02c01dbbb824142c71252deca88cc0a12a7e69e9271ea46a",
+   "kind": "figure",
+   "note": "Figure 3 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11270505/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39055621/fped-12-1365917-g004.jpg",
+   "sha256": "632203a7b3e60a6408b141c214653710028f9a396f4976980b269e4f788e60b2",
+   "kind": "figure",
+   "note": "Figure 4 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11270505/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39055621/fped-12-1365917-g005.jpg",
+   "sha256": "3324a2e35726f33484b742b9dfcd722e551a28f8e9dcabd8c1275a287b458300",
+   "kind": "figure",
+   "note": "Figure 5 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11270505/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39055621/fped-12-1365917-g006.jpg",
+   "sha256": "3e8ed6bb33af62cc64431231e64168aa9c752a8782e036c82126606a7714b6bc",
+   "kind": "figure",
+   "note": "Figure 6 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11270505/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39055621/fped-12-1365917-g007.jpg",
+   "sha256": "e7e5f7aaf212eb1cd7971d8a6aee37c0ed356e5b76063c8c4edaabbaa5251b47",
+   "kind": "figure",
+   "note": "Figure 7 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11270505/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39055621/Table1.docx",
+   "sha256": "cd98090a7729ef4bb68cf626ea387c77aeaf81c010188d37247c79ba79e87058",
+   "kind": "supplement_binary",
+   "note": "Supplementary Table 1 as a Word file (cohort characteristics).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11270505/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID39055621_Wang2024_supplement/Table1.txt",
+   "sha256": "dff075d8f60d9a78639c03c8ee5af00bca4b8ec972a7de7e5c00eb6473462dfa",
+   "kind": "supplement_text",
+   "note": "DERIVED text of the supplementary Word file.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_python_zipfile_docx_text",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "dff075d8f60d9a78639c03c8ee5af00bca4b8ec972a7de7e5c00eb6473462dfa",
+    "derived_from": "files/figures/PMID39055621/Table1.docx",
+    "extractor": {
+     "name": "docx2txt.py (python zipfile + regex over word/document.xml)",
+     "version": "python 3.12",
+     "call": "python3 docx2txt.py Table1.docx out.txt"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC11270505/fullTextXML returned HTTP 200 (92333 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "Design: 35 treatment-naive infants with infantile spasms and 35 healthy infants, bloods before and after two weeks of ACTH 1 unit per kg twice daily.",
+    "snippet": "The dosage was set at 1 unit per kilogram, administered twice daily continuously for 2 weeks (9).",
+    "anchor": "Methods, Methods",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39055621_Wang2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "infants 2-18 months with infantile spasms (n = 35) versus healthy infants at physical examination (n = 35), single Chinese hospital, serum before and after 2 weeks of ACTH",
+     "endpoint": "IgG/IgA/IgM, lymphocyte subsets, IL-1beta, IL-2R, IL-6; spasm frequency response"
+    }
+   },
+   {
+    "proposition": "Inclusion required cerebrospinal fluid showing increased albumin and increased blood-brain barrier permeability, so the cohort was selected for BBB leakage.",
+    "snippet": "cerebrospinal fluid examination showing increased albumin, decreased protein, and increased blood–brain barrier permeability",
+    "anchor": "Methods, Inclusion and exclusion criteria",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39055621_Wang2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "infants 2-18 months with infantile spasms (n = 35) versus healthy infants at physical examination (n = 35), single Chinese hospital, serum before and after 2 weeks of ACTH",
+     "endpoint": "IgG/IgA/IgM, lymphocyte subsets, IL-1beta, IL-2R, IL-6; spasm frequency response"
+    }
+   },
+   {
+    "proposition": "Aetiology is heterogeneous: genetic testing in 16 (three chromosome deletions, six pathogenic mutations, genes not named), brain structural abnormality in 14, asphyxia or hypoxic-ischaemic encephalopathy in 30.",
+    "snippet": "Genetic testing was conducted on 16 patients, revealing chromosome deletions in 3 and pathogenic mutations in 6 patients.",
+    "anchor": "Results, Demographic and clinical characteristics",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39055621_Wang2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "infants 2-18 months with infantile spasms (n = 35) versus healthy infants at physical examination (n = 35), single Chinese hospital, serum before and after 2 weeks of ACTH",
+     "endpoint": "IgG/IgA/IgM, lymphocyte subsets, IL-1beta, IL-2R, IL-6; spasm frequency response"
+    }
+   },
+   {
+    "proposition": "Eighteen infants had previously taken one to three antiseizure drugs; controls have no corresponding record.",
+    "snippet": "Eighteen patients had previously taken one to three antiepileptic drugs without successful seizure control.",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39055621_Wang2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "infants 2-18 months with infantile spasms (n = 35) versus healthy infants at physical examination (n = 35), single Chinese hospital, serum before and after 2 weeks of ACTH",
+     "endpoint": "IgG/IgA/IgM, lymphocyte subsets, IL-1beta, IL-2R, IL-6; spasm frequency response"
+    }
+   },
+   {
+    "proposition": "Methods describe controls as 3-16 months, mean 6.58, while Results give the control group an 'age of onset range' identical to the patients (6 days to 1 year 10 months), 18 boys and 17 girls, against 21 and 14 in Methods.",
+    "snippet": "The control group also consisted of 35 patients, with 18 boys and 17 girls, and a similar age of onset range (6 days to 1 year and 10 months) and average (4.57 ± 4.33 months).",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39055621_Wang2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "infants 2-18 months with infantile spasms (n = 35) versus healthy infants at physical examination (n = 35), single Chinese hospital, serum before and after 2 weeks of ACTH",
+     "endpoint": "IgG/IgA/IgM, lymphocyte subsets, IL-1beta, IL-2R, IL-6; spasm frequency response"
+    }
+   },
+   {
+    "proposition": "Efficacy: 8 markedly effective, 11 remission, 16 invalid, total effective 54.29 percent.",
+    "snippet": "8 cases were markedly effective, accounting for 22.86%; there were 11 cases of remission, accounting for 31.43%; 16 cases were invalid, accounting for 45.71%; and the total effective rate was 54.29% (Figure 1).",
+    "anchor": "Results, Therapeutic effective rate",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39055621_Wang2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "infants 2-18 months with infantile spasms (n = 35) versus healthy infants at physical examination (n = 35), single Chinese hospital, serum before and after 2 weeks of ACTH",
+     "endpoint": "IgG/IgA/IgM, lymphocyte subsets, IL-1beta, IL-2R, IL-6; spasm frequency response"
+    }
+   },
+   {
+    "proposition": "Before treatment IgG and IgM were higher, IgA lower, B cells higher, CD3 and CD4 lower, IL-1beta, IL-2R and IL-6 higher than in controls.",
+    "snippet": "In the IS group, the serum levels of IgG and IgM were significantly higher (5.82 ± 1.55 and 0.89 ± 0.23 g/L, respectively), while the level of IgA was significantly lower (0.28 ± 0.29 g/L)",
+    "anchor": "Results, before therapy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39055621_Wang2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "infants 2-18 months with infantile spasms (n = 35) versus healthy infants at physical examination (n = 35), single Chinese hospital, serum before and after 2 weeks of ACTH",
+     "endpoint": "IgG/IgA/IgM, lymphocyte subsets, IL-1beta, IL-2R, IL-6; spasm frequency response"
+    }
+   },
+   {
+    "proposition": "The before-treatment B-cell percentage in the before-and-after paragraph is given as 19.73 percent, which is the control value; Table 4 gives 35.21 percent for the same infants.",
+    "snippet": "CD3−CD19+ B cells were 56.13 ± 9.76%, 35.46 ± 7.27%, 18.78 ± 5.27%, 11.18 ± 6.90%, and 19.73 ± 6.69%, respectively.",
+    "anchor": "Results, before and after treatment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39055621_Wang2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "infants 2-18 months with infantile spasms (n = 35) versus healthy infants at physical examination (n = 35), single Chinese hospital, serum before and after 2 weeks of ACTH",
+     "endpoint": "IgG/IgA/IgM, lymphocyte subsets, IL-1beta, IL-2R, IL-6; spasm frequency response"
+    }
+   },
+   {
+    "proposition": "Table 3: after ACTH, IgG 5.82 to 4.98 (t 2.20, p 0.031), IL-1beta 9.88 to 6.65, IL-2R 1425.97 to 869.63, IL-6 3.75 to 2.13; t values equal those of an independent-samples comparison (IgG 0.84 over a standard error of about 0.385).",
+    "snippet": "Before5.82 ± 1.550.28 ± 0.290.89 ± 0.239.88 ± 5.821,425.97 ± 679.593.75 ± 2.57After4.98 ± 1.670.32 ± 0.320.85 ± 0.416.65 ± 3.50869.63 ± 476.792.13 ± 0.21",
+    "anchor": "Table 3",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID39055621_Wang2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "infants 2-18 months with infantile spasms (n = 35) versus healthy infants at physical examination (n = 35), single Chinese hospital, serum before and after 2 weeks of ACTH",
+     "endpoint": "IgG/IgA/IgM, lymphocyte subsets, IL-1beta, IL-2R, IL-6; spasm frequency response"
+    }
+   },
+   {
+    "proposition": "Statistics: t-test for between-group comparisons; the same tests are described for the before and after comparison in the same children, and no response-stratified analysis is reported.",
+    "snippet": "Measurement data were expressed as mean ± standard deviation and analyzed by the t-test for comparisons between the two groups",
+    "anchor": "Methods, Statistical methods",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39055621_Wang2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "infants 2-18 months with infantile spasms (n = 35) versus healthy infants at physical examination (n = 35), single Chinese hospital, serum before and after 2 weeks of ACTH",
+     "endpoint": "IgG/IgA/IgM, lymphocyte subsets, IL-1beta, IL-2R, IL-6; spasm frequency response"
+    }
+   },
+   {
+    "proposition": "Authors state they cannot establish causality, did not control for age, sex or comorbidity, and measured only two time points.",
+    "snippet": "Finally, we did not control for potential confounding factors such as age, sex, and comorbid conditions, which could influence cytokine and immunoglobulin levels.",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39055621_Wang2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "infants 2-18 months with infantile spasms (n = 35) versus healthy infants at physical examination (n = 35), single Chinese hospital, serum before and after 2 weeks of ACTH",
+     "endpoint": "IgG/IgA/IgM, lymphocyte subsets, IL-1beta, IL-2R, IL-6; spasm frequency response"
+    }
+   },
+   {
+    "proposition": "The authors infer from unchanged IgA and IgM that ACTH's mechanism does not involve immunoglobulin levels.",
+    "snippet": "Therefore, it is presumed that the therapeutic mechanism of ACTH on IS does not involve changes in immunoglobulin levels.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39055621_Wang2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "infants 2-18 months with infantile spasms (n = 35) versus healthy infants at physical examination (n = 35), single Chinese hospital, serum before and after 2 weeks of ACTH",
+     "endpoint": "IgG/IgA/IgM, lymphocyte subsets, IL-1beta, IL-2R, IL-6; spasm frequency response"
+    }
+   },
+   {
+    "proposition": "Conclusion: the immune measures may serve as diagnostic aids and as indicators to evaluate ACTH effect; no analysis ties a marker to individual response.",
+    "snippet": "lymphocytes (CD3+ T, CD3+CD4+ T, CD3−CD16+CD56+ NK, and CD3−CD19+ B) and inflammatory factor (IL-1 β, IL-2R, and IL-6) levels can be used as detection indicators to evaluate the therapeutic effects of ACTH.",
+    "anchor": "Discussion, conclusion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39055621_Wang2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "infants 2-18 months with infantile spasms (n = 35) versus healthy infants at physical examination (n = 35), single Chinese hospital, serum before and after 2 weeks of ACTH",
+     "endpoint": "IgG/IgA/IgM, lymphocyte subsets, IL-1beta, IL-2R, IL-6; spasm frequency response"
+    }
+   },
+   {
+    "proposition": "The Discussion says immunoglobulins entering the brain through the BBB inhibit cytokines such as C-Fos (sic) and interferon-gamma, a statement of cited mechanism not tested here.",
+    "snippet": "Immunoglobulins that enter the brain through the blood–brain barrier can inhibit the expression of cytokines such as C-Fos and r-interferon",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39055621_Wang2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "infants 2-18 months with infantile spasms (n = 35) versus healthy infants at physical examination (n = 35), single Chinese hospital, serum before and after 2 weeks of ACTH",
+     "endpoint": "IgG/IgA/IgM, lymphocyte subsets, IL-1beta, IL-2R, IL-6; spasm frequency response"
+    }
+   },
+   {
+    "proposition": "Supplementary Table 1 repeats the cohort description and states control details beyond sex and onset age were not provided.",
+    "snippet": "However, details regarding antiepileptic drugs, genetic testing, brain structure abnormalities, birth history, seizure manifestations, and video EEG were not provided for this group.",
+    "anchor": "Supplementary Table 1 (derived text)",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID39055621_Wang2024_supplement/Table1.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "infants 2-18 months with infantile spasms (n = 35) versus healthy infants at physical examination (n = 35), single Chinese hospital, serum before and after 2 weeks of ACTH",
+     "endpoint": "IgG/IgA/IgM, lymphocyte subsets, IL-1beta, IL-2R, IL-6; spasm frequency response"
+    }
+   },
+   {
+    "proposition": "Figure 1: pie chart of ACTH response, remission 31.43 percent (11), significant effect 22.86 percent (8), invalid 45.71 percent (16), drawn as a 3D pie.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 3D pie remission n=11, significant effect n=8, invalid n=16.",
+    "anchor": "Figure 1, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39055621/fped-12-1365917-g001.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "infants 2-18 months with infantile spasms (n = 35) versus healthy infants at physical examination (n = 35), single Chinese hospital, serum before and after 2 weeks of ACTH",
+     "endpoint": "IgG/IgA/IgM, lymphocyte subsets, IL-1beta, IL-2R, IL-6; spasm frequency response"
+    }
+   },
+   {
+    "proposition": "Figure 2: boxplots of IgG, IgA, IgM, patients versus controls: IgG median about 5.8 against 4.6 (p 0.0064), IgA and IgM differing with p 0.024 and 0.0024; ranges overlap widely.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 three box panels IgG, IgA, IgM with p values.",
+    "anchor": "Figure 2, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39055621/fped-12-1365917-g002.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "infants 2-18 months with infantile spasms (n = 35) versus healthy infants at physical examination (n = 35), single Chinese hospital, serum before and after 2 weeks of ACTH",
+     "endpoint": "IgG/IgA/IgM, lymphocyte subsets, IL-1beta, IL-2R, IL-6; spasm frequency response"
+    }
+   },
+   {
+    "proposition": "Figure 3: boxplots of IL-1beta, IL-2R and IL-6 on one shared axis, labelled 'inflammatory cytokine lever' (sic); controls sit at the assay floor for IL-1beta (about 5) and IL-2R (about 0.5), and patient IL-1beta has an outlier near 32 and a median near 8.5 with a long upper range; p values 2.4e-05, 2.7e-09 and 0.0013.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3 box panels with controls compressed at floor values; y label 'inflammatory cytokine lever'.",
+    "anchor": "Figure 3, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39055621/fped-12-1365917-g003.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "infants 2-18 months with infantile spasms (n = 35) versus healthy infants at physical examination (n = 35), single Chinese hospital, serum before and after 2 weeks of ACTH",
+     "endpoint": "IgG/IgA/IgM, lymphocyte subsets, IL-1beta, IL-2R, IL-6; spasm frequency response"
+    }
+   },
+   {
+    "proposition": "Figure 4: lymphocyte subsets patients versus controls: CD3+ about 56 against 68, CD4 about 35 against 43, B cells about 35 against 18; CD8 and NK not different.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 4 five box panels CD3+T, CD3+CD4+T, CD3+CD8+T, NK, B cells.",
+    "anchor": "Figure 4, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39055621/fped-12-1365917-g004.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "infants 2-18 months with infantile spasms (n = 35) versus healthy infants at physical examination (n = 35), single Chinese hospital, serum before and after 2 weeks of ACTH",
+     "endpoint": "IgG/IgA/IgM, lymphocyte subsets, IL-1beta, IL-2R, IL-6; spasm frequency response"
+    }
+   },
+   {
+    "proposition": "Figure 5: immunoglobulins before and after ACTH: IgG median about 5.8 to 4.9 (p 0.031), IgA and IgM unchanged (p 0.63 and 0.59); the after-treatment IgG range is wider (about 1.7 to 9.5).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 5 three box panels before and after.",
+    "anchor": "Figure 5, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39055621/fped-12-1365917-g005.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "infants 2-18 months with infantile spasms (n = 35) versus healthy infants at physical examination (n = 35), single Chinese hospital, serum before and after 2 weeks of ACTH",
+     "endpoint": "IgG/IgA/IgM, lymphocyte subsets, IL-1beta, IL-2R, IL-6; spasm frequency response"
+    }
+   },
+   {
+    "proposition": "Figure 6: cytokines before and after ACTH: IL-1beta p 0.0069, IL-2R p 0.00019, IL-6 p 0.00067; after-treatment IL-1beta retains several outliers up to about 20 and a median near the assay-floor value of 5; IL-6 after is compressed near 2.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 6 three box panels before and after.",
+    "anchor": "Figure 6, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39055621/fped-12-1365917-g006.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "infants 2-18 months with infantile spasms (n = 35) versus healthy infants at physical examination (n = 35), single Chinese hospital, serum before and after 2 weeks of ACTH",
+     "endpoint": "IgG/IgA/IgM, lymphocyte subsets, IL-1beta, IL-2R, IL-6; spasm frequency response"
+    }
+   },
+   {
+    "proposition": "Figure 7: lymphocyte subsets before and after ACTH: CD3+ and CD4+ rise, NK and B cells fall, CD8 unchanged; B cells median about 35 to 21.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 7 five box panels before and after.",
+    "anchor": "Figure 7, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39055621/fped-12-1365917-g007.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "infants 2-18 months with infantile spasms (n = 35) versus healthy infants at physical examination (n = 35), single Chinese hospital, serum before and after 2 weeks of ACTH",
+     "endpoint": "IgG/IgA/IgM, lymphocyte subsets, IL-1beta, IL-2R, IL-6; spasm frequency response"
+    }
+   }
+  ]
+ }
+}
