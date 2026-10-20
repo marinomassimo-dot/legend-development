@@ -1,0 +1,250 @@
+{
+ "schema_version": 2,
+ "pmid": "41039661",
+ "doi": "10.1080/17501911.2025.2568303",
+ "receipt": "FTR-20261019-41039661-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "The LaSalle laboratory (UC Davis), an epigenetics group on MeCP2 and Rett syndrome writing a narrative review; primary for MeCP2 epigenetics, not for WWOX. No measurement; weighted as a map of the hypoxia-oxidative stress literature in a developmental encephalopathy comparator, with its mechanism labelled by the authors as speculative."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (Rett OR MECP2)",
+    "count": 4,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "WWOX AND hypoxia",
+    "count": 24,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches, not measurements."
+ },
+ "multihop": {
+  "references_enumerated": 118,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-direct reference; WWOX is not named in the article.",
+  "disposition": "No gene-direct references."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41039661 --hops 1; paper_packet.py packet --pmid 41039661; fulltext_receipts.py status --pmid 41039661",
+  "hits": 0,
+  "note": "No record in any of the seven searched registry surfaces and no prior receipt; an empty result is a statement about that query over those files."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication types Journal Article and Review.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 118,
+   "references_screened": 116,
+   "references_with_doi": 116,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41039661_Huang2025_PMC.xml",
+   "sha256": "a956d5a4a4edbd9217174af9402590e4c533d5b240572db90f3aff7688b16194",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12674224/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "a956d5a4a4edbd9217174af9402590e4c533d5b240572db90f3aff7688b16194"
+   }
+  },
+  {
+   "path": "files/figures/PMID41039661/IEPI_A_2568303_F0001_OC.jpg",
+   "sha256": "f093ba3282bcee3ea91c34725f16e921545bbabf79f6800046ceb4dd08301910",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12674224 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID41039661/IEPI_A_2568303_F0001_PB.jpg",
+   "sha256": "c0da1f758693bdf6666728dd781ee4c5e79862dd5f2bb4f11efd024f39b69877",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12674224 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Genre: a narrative review of MeCP2 loss (Rett syndrome), hypoxia, oxidative stress and mitochondria; search is Google Scholar to June 2025 with a term list and an English-only rule, with no counts or appraisal. WWOX is not named.",
+    "snippet": "A literature search was conducted on Google Scholar for peer-reviewed studies published up until June 2025.",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41039661_Huang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Breathing abnormalities in female patients are said to occur awake and not asleep, which bears on any nocturnal-support rationale.",
+    "snippet": "Breathing defects in female RTT patients result from brain stem neuronal circuit defects and are generally present during awake periods but not during sleep",
+    "anchor": "Section 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41039661_Huang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Hypoxaemia in patients: some measurements show a partial pressure of oxygen as low as 50 mmHg in about half of patients.",
+    "snippet": "with some measurements showing a partial pressure of oxygen as low as 50 mm Hg in about half of RTT patients [14]",
+    "anchor": "Section 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41039661_Huang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review itself notes hyperventilation in patients occurs independently of hypoxaemia, which sits against the framing of breath-holding as the source of the hypoxia.",
+    "snippet": "hyperventilation appears to occur independently of hypoxemia in RTT patients [34]",
+    "anchor": "Section 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41039661_Huang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The MeCP2-BDNF-hypoxia mechanism is stated to be speculative and the direct mechanistic link is called under-researched.",
+    "snippet": "Therefore, although speculative, these results suggest that MeCP2-PARP1 interactions are involved in the resolution stage that result from adaptation to hypoxia.",
+    "anchor": "Section 2.1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41039661_Huang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "An unproven hypothesis is stated for breath holds as a failed BDNF-raising stimulus.",
+    "snippet": "One unproven hypothesis is that breath holds, which induce intermittent hypoxia, may be a way that the body attempts but fails to increase BDNF levels in RTT patients.",
+    "anchor": "Section 2.1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41039661_Huang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Evidence for impaired hypoxic BDNF response: acute intermittent hypoxia raised BDNF in wild-type but not Mecp2-null male mice.",
+    "snippet": "acute intermittent hypoxia led to increased BDNF protein levels in wild-type Mecp2+/y, but not MeCP2-/y mice",
+    "anchor": "Section 2.1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41039661_Huang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review concedes that whether oxidative stress follows hypoxia directly, intermittent hypoxia or mitochondrial dysfunction is unresolved.",
+    "snippet": "remains an unanswered question",
+    "anchor": "Section 2.2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41039661_Huang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 1 shows tissue-dependent direction for glutathione: higher in plasma and erythrocytes with a lower ratio, lower in fibroblasts.",
+    "snippet": "NPBI ↑, F2-IsoPs ↑, GSH ↑, GSSG ↑, GSH:GSSG ratio ↓",
+    "anchor": "Table 1",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41039661_Huang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Same table, skin fibroblasts: GSH lower with GSSG higher.",
+    "snippet": "Total F2-IsoPs ↑, total F4-NeuroPs ↑, 4-HNE protein adducts ↑, NPBI ↑, GSH ↓, GSSG ↑, GSH:GSSG ratio ↓",
+    "anchor": "Table 1",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41039661_Huang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review's own list of gaps includes that it is unclear whether recurrent hypoxia is cause or consequence of autonomic network dysregulation, and calls for long-term chronic hypoxia studies in mutant neurons.",
+    "snippet": "it is currently unclear whether recurrent hypoxia due to irregular breathing in RTT is a cause or consequence of CAN dysregulation",
+    "anchor": "Section 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41039661_Huang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Competing interest: three authors co-found 2C Bioscience.",
+    "snippet": "Osman Sharifi, Dag Yasui, and Janine LaSalle are co-founders of 2C Bioscience Inc.",
+    "anchor": "Disclosures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41039661_Huang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 (colour and greyscale versions opened): three-panel scheme of hypoxia response, resolution and adaptation in which ROS drive PARP, PARP modifies HIF-1 alpha (response) or MeCP2 (resolution) and BDNF transcription is activated or repressed; it carries no data and the legend itself labels it as a proposed model.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1: hypoxia response, hypoxia resolution, hypoxia adaptation panels with PARP, HIF-1a, HIF-1b, MeCP2, RNAPII and the BDNF promoter.",
+    "anchor": "Figure 1",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41039661/IEPI_A_2568303_F0001_OC.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12674224/fullTextXML returned HTTP 200 (178780 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}

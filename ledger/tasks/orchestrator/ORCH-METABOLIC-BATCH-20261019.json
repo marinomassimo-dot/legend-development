@@ -45,12 +45,13 @@
     },
     {
      "step": "BATCH_COMMIT of wave 1 candidates under LINT; Mirror ex-post review",
-     "status": "IN_PROGRESS",
-     "evidence": "integrator agent running BATCH_20261019_001 (12 candidates, WM_v7.21)"
+     "status": "DONE",
+     "evidence": "BATCH_20261019_001 propagated, WM_v7.21, db4f3d63; Mirror review launched (a9db41b0 base)"
     },
     {
      "step": "Fresh-clone battery on exact SHA, public_release_gate, receipts verify, safe_push to development",
-     "status": "TODO"
+     "status": "IN_PROGRESS",
+     "evidence": "battery running on clone of a9db41b0; gate PASS 0 blocks; push pending"
     }
    ]
   },
@@ -74,7 +75,21 @@
     {
      "step": "Dispatch wave 2 (up to four Scientists) on that selection; integrate, BATCH_COMMIT, Mirror, battery, push",
      "status": "IN_PROGRESS",
-     "evidence": "wave 2 running: A (H1,H2), B (H3), C (H4), D (H5); returns to be integrated as BATCH_20261019_002"
+     "evidence": "B,C,D wave-2 groups returned and landed; A (H1,H2) still running; receipts staged for B(15),C(15),D(16)"
+    }
+   ]
+  },
+  "OBJ_WAVE3_DEBTS": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "Wave 3 under way: scientist-d WWOX-direct reading debts, scientist-b legacy-reconstruction re-reads, scientist-c HELD-partial re-reads",
+     "status": "IN_PROGRESS",
+     "evidence": "contracts DEBT-WWOX-DIRECT-D, GOLD-LEGACY-WWOX-B, HELD-PARTIAL-WWOX-C 20261019"
+    },
+    {
+     "step": "Record wave 2 receipts (B, C, D, then A) after scratch-clone trial; BATCH_20261019_002",
+     "status": "TODO"
     }
    ]
   }

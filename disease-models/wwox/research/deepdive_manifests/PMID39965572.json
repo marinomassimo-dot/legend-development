@@ -1,0 +1,378 @@
+{
+ "schema_version": 2,
+ "pmid": "39965572",
+ "doi": "10.1016/j.cell.2025.01.029",
+ "receipt": "FTR-20261019-39965572-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "The Jain laboratory (Gladstone, Arc Institute) with Maze Therapeutics co-authors; primary for hypoxia therapy in the Ndufs4 mouse and for HypoxyStat, not a WWOX group. The paper is a preclinical proof of concept with a declared sponsor interest; observation (survival at n = 6 to 10, behaviour) is weighted above the translation framing."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "hypoxia therapy AND mitochondrial disease",
+    "count": 1765,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (hyperoxia OR hyperbaric OR oxygen therapy)",
+    "count": 1,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches, not measurements."
+ },
+ "multihop": {
+  "references_enumerated": 30,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-direct reference; WWOX is not named. The mechanism and the inhaled-hypoxia precedent rest on the same group's earlier papers (see also the Garg 2026 reading in this wave).",
+  "disposition": "No gene-direct references."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 39965572 --hops 1; paper_packet.py packet --pmid 39965572; fulltext_receipts.py status --pmid 39965572",
+  "hits": 0,
+  "note": "No record in any of the seven searched registry surfaces and no prior receipt; an empty result is a statement about that query over those files."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication type Journal Article.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 30,
+   "references_screened": 28,
+   "references_with_doi": 28,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39965572_Blume2025_PMC.xml",
+   "sha256": "c12ae24abfbdeb1825e110913c84d554c5caaeac109f9b1e5d45cf1e8767c2d6",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12186697/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "c12ae24abfbdeb1825e110913c84d554c5caaeac109f9b1e5d45cf1e8767c2d6"
+   }
+  },
+  {
+   "path": "files/figures/PMID39965572/nihms-2087898-f0001.jpg",
+   "sha256": "219a53c1854a75b26bf63a649561e2f614eebda78e68464d38a529e499d9f89f",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12186697 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID39965572/nihms-2087898-f0002.jpg",
+   "sha256": "deb8725694d5c0323ef4dcb0ab30d90eafce592a1834bcac75cf962424adc3f4",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12186697 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID39965572/nihms-2087898-f0003.jpg",
+   "sha256": "3571d56f2c36349856239193ffdf92fad1a714c32ed68f30822c7469e3bfbd83",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12186697 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID39965572/nihms-2087898-f0004.jpg",
+   "sha256": "b993a3e0d7ec7a41764bbc2390b82f3e1143695b97759c10d42fe5fe82b39d15",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12186697 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID39965572/nihms-2087898-f0005.jpg",
+   "sha256": "e5b2d58557c95dc41c2e9786bb3b88387042fc1809c73c49fdd748624f9ba190",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12186697 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID39965572/nihms-2087898-f0006.jpg",
+   "sha256": "6abc522bd03d32c95e1a0865099bc8364767bf65d3f906efe30fceaa61313d50",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12186697 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID39965572/NIHMS2087898-supplement-1.pdf",
+   "sha256": "f0b155f493367fa2b49711847680607fc09d833f1e76a1c111ae24172b9de718",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12186697 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID39965572_mA.png",
+   "sha256": "5c78e6e726c33e5ba99b32eec07ae365759f82aa9fcc7b9d4b244e3a60fff44c",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID39965572/nihms-2087898-f0001.jpg",
+    "extractor": {
+     "name": "ImageMagick montage (with pdftoppm for the supplement)",
+     "version": "system package; poppler 24.02.0",
+     "call": "montage f0001 f0002 f0003 -tile 3x1 -geometry 800x"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "5c78e6e726c33e5ba99b32eec07ae365759f82aa9fcc7b9d4b244e3a60fff44c"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID39965572_mB.png",
+   "sha256": "e6168c5991b754298135fe1a4745e6fce58b1a45b06b39977bd9475fb447a242",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID39965572/nihms-2087898-f0004.jpg",
+    "extractor": {
+     "name": "ImageMagick montage (with pdftoppm for the supplement)",
+     "version": "system package; poppler 24.02.0",
+     "call": "montage f0004 f0005 f0006 -tile 3x1 -geometry 800x"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "e6168c5991b754298135fe1a4745e6fce58b1a45b06b39977bd9475fb447a242"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID39965572_suppm.png",
+   "sha256": "6dc3841fc43a1b73f9cb9f4c0fd74ecf7187c71d059a621ec67913800bfbd789",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID39965572/NIHMS2087898-supplement-1.pdf",
+    "extractor": {
+     "name": "ImageMagick montage (with pdftoppm for the supplement)",
+     "version": "system package; poppler 24.02.0",
+     "call": "pdftoppm -r 70 -png <pdf>; montage supp-1..6 -tile 3x2 -geometry 700x"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "6dc3841fc43a1b73f9cb9f4c0fd74ecf7187c71d059a621ec67913800bfbd789"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "System: Ndufs4 knockout mice (complex I; Leigh syndrome model) and wild-type C57BL/6 mice given oral HypoxyStat, a haemoglobin left-shifter; the lever is tissue hypoxia in a mitochondrial disease. WWOX is not studied.",
+    "snippet": "This model lacks an essential complex 1 subunit of the electron transport chain (ETC) and reproduces the pathology of Leigh syndrome",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39965572_Blume2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state intermittent hypoxia or sleeping in hypoxia would be insufficient for mitochondrial disease; continuous hypoxia was judged necessary.",
+    "snippet": "making intermittent hypoxia or approaches such as “sleeping in hypoxia” insufficient",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39965572_Blume2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say gas-based devices carry fatal risk if equipment fails, which motivated the drug route.",
+    "snippet": "these devices carry significant risks, as equipment malfunctions could result in dangerously low-oxygen levels and potential fatalities",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39965572_Blume2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Human data cited: a phase 1 inhaled hypoxia study took patients to about 85 percent arterial saturation and was well tolerated.",
+    "snippet": "Patients were gradually acclimated to hypoxic conditions until they reached an arterial oxygen saturation (SaO2) of ~85%.",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39965572_Blume2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Pharmacology: HypoxyStat shifts the dissociation curve (p50 down about 82 percent) and has an effective half-life of 121 h in mice.",
+    "snippet": "we observed an effective half-life of 121 h and a blood/plasma ratio of 396 at 3 days post dosing",
+    "anchor": "Results, concept section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39965572_Blume2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Haemoglobin occupancy estimates are 29.3 percent at 200 mg/kg and 41.4 percent at 600 mg/kg; the dose used for efficacy was 400 mg/kg daily.",
+    "snippet": "we estimated Hb occupancy to be 29.3% at 200 mg/kg and 41.4% at 600 mg/kg",
+    "anchor": "Results, PK/PD section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39965572_Blume2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Haematocrit and erythropoietin rose with dose, the known adaptive consequence of chronic hypoxia.",
+    "snippet": "we observed substantial increases in both Epo and hematocrit as HypoxyStat doses were increased",
+    "anchor": "Results, PK/PD section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39965572_Blume2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Efficacy: daily dosing gave a 3 to 4 fold lifespan extension in Ndufs4 knockout mice, every other day 1.5 to 2 fold; the cohorts are n = 6, 9 and 9.",
+    "snippet": "daily dosing achieving a 3–4× increase",
+    "anchor": "Results, lifespan section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39965572_Blume2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Late-stage start: dosing started at about P50 in the text; the Figure 5 legend gives 'late stages of disease (P80)' and the Methods say a single dose at about P55.",
+    "snippet": "initiating daily HypoxyStat treatment at P50 significantly extended the lifespan of these late-stage Ndufs4 KO mice",
+    "anchor": "Results, reversal section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39965572_Blume2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Methods date the late-stage start at about postnatal day 55, a third value for the same experiment.",
+    "snippet": "For the reversal study, KO mice were dosed once with 200mg/kg on postnatal day ~P55, followed by 400mg/kg daily.",
+    "anchor": "STAR Methods, HypoxyStat Treatment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39965572_Blume2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Safety limits stated: the effect is covalent and cannot be acutely reversed except by transfusion; chronic hypoxia can cause pulmonary hypertension and right heart failure.",
+    "snippet": "However, the covalent nature of the drug-binding also means that this effect cannot be acutely reversed.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39965572_Blume2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Pulmonary hypertension risk of chronic hypoxia is named as an open long-term safety question.",
+    "snippet": "chronic hypoxia is known to cause pulmonary hypertension, which can lead to right heart failure",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39965572_Blume2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Stated limitation: one disease model, mouse and in-vitro safety only, a first-generation compound.",
+    "snippet": "Moreover, our current safety studies are primarily in mice or in vitro.",
+    "anchor": "Limitations of the study",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39965572_Blume2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say patients with milder electron-transport defects would need lower doses, and the required degree of hypoxia may differ between species.",
+    "snippet": "the exact degree of hypoxia required may differ between humans and mice",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39965572_Blume2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Conflict declaration: the senior author consulted for Maze Therapeutics and has hypoxia-therapy patents; the work was supported by a sponsored research agreement with Maze Therapeutics.",
+    "snippet": "I.H.J. was previously a consultant for Maze Therapeutics and has patents related to hypoxia therapy.",
+    "anchor": "Declaration of interests",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39965572_Blume2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figures 1 to 3: oxygen-dissociation curves with p50 about 26 (vehicle), 7.2 (GBT-440) and 5.6 (HypoxyStat); GBT-440 survival and temperature rescue absent (n = 6 and 9); PK curves; haematocrit up to about 59 percent at 600 mg/kg and plasma Epo about 80 pg/mL; head-to-head: HypoxyStat Epo about 380 pg/mL against about 130 for 11 percent oxygen, haematocrit about 52 against about 48 percent, hindbrain HIF targets induced to similar fold.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1D p50 table 7.2 5.6 26.0 25.7; Figure 2B GBT-440 survival; Figure 3D hematocrit bars to about 59; Figure 3F Epo; Figure 3H VEGFA ACER2 ADM ANGPT2 DEPP1.",
+    "anchor": "Figures 1-3",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID39965572_mA.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figures 4 to 6: survival (vehicle ends about day 65; 48 h dosing about day 120; 24 h dosing to about day 190 with early deaths in some animals); neuropathology with Iba1-positive lesions in the vestibular region of vehicle knockouts; behaviour and temperature bars; reversal survival (vehicle n = 6, late treatment n = 10, last death about day 170), reversal body weight, before (P50) and after (P80) comparisons; Figure 6 is a mechanism cartoon.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4 A-E, Figure 5 A-D, Figure 6 schematic.",
+    "anchor": "Figures 4-6",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID39965572_mB.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Supplementary Figures S1 to S6 opened as page renders: haemoglobin occupancy table; three weeks of dosing in wild-type mice with body and organ weights, clinical chemistry and blood count; off-target panel of 25 targets all negative; replicate neuropathology; replicate open-field traces; skeletal muscle electron micrographs.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplemental figures S1 S2 S3 S4 S5 S6 page renders.",
+    "anchor": "Supplementary Figures S1-S6",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID39965572_suppm.png",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12186697/fullTextXML returned HTTP 200 (110257 bytes) on 2026-10-19; the declared artefact is that response (the NIH author manuscript), byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}

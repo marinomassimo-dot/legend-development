@@ -1138,7 +1138,7 @@ def scan_readme_consistency(root: Path, findings: list[Finding]) -> None:
         corpus,
     )
     patient_markers = re.search(
-        r"(?i)(?:(?<![A-Za-z0-9])(?-i:NG)[-\d]{5,}|allele materno|allele paterno|"
+        r"(?i)(?:(?<![A-Za-z0-9])(?-i:NG)[-\d]{5,}(?![-\dA-Za-z])|allele materno|allele paterno|"
         r"maternal\s+c\.1057-2A>G|paternal\s+(?:Q230P|p\.Gln230Pro)|"
         r"the proband.{0,200}(?:folinato|folinate|mg/kg|patient cells))",
         corpus,

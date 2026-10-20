@@ -1,0 +1,362 @@
+{
+ "schema_version": 2,
+ "pmid": "37876811",
+ "doi": "10.1016/j.isci.2023.108098",
+ "receipt": "FTR-20261019-37876811-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "Neurology and molecular epigenetics groups in Changchun; a metabolomics-plus-mouse correlational study of epilepsy. Not a WWOX group. Observation (plasma metabolite levels, mouse marker levels at n = 3 per group) is weighted above the HIF-1 alpha/HO-1 causal interpretation, which the authors concede is untested."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "HIF-1alpha AND epilepsy",
+    "count": 57,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (HIF1A OR HIF-1alpha)",
+    "count": 12,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches, not measurements."
+ },
+ "multihop": {
+  "references_enumerated": 52,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-direct reference. WWOX is present only as a row in Supplementary Table S2 (the DisGeNET epilepsy gene list).",
+  "disposition": "No gene-direct references."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 37876811 --hops 1; paper_packet.py packet --pmid 37876811; fulltext_receipts.py status --pmid 37876811",
+  "hits": 0,
+  "note": "No record in any of the seven searched registry surfaces and no prior receipt; an empty result is a statement about that query over those files."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication type Journal Article.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 52,
+   "references_screened": 50,
+   "references_with_doi": 50,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID37876811_Liang2023_PMC.xml",
+   "sha256": "c8e9736de2576fc4b3d0829d2e325fe9ce3cc6620a61d7bdff9e47e1fa9b6a8f",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10590818/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "c8e9736de2576fc4b3d0829d2e325fe9ce3cc6620a61d7bdff9e47e1fa9b6a8f"
+   }
+  },
+  {
+   "path": "files/figures/PMID37876811/gr1.jpg",
+   "sha256": "f9e71b14eb39eb63d79692de3fc88d2d4b95487ecd8e1e8854e98729b00c8d37",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10590818 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID37876811/gr2.jpg",
+   "sha256": "baf67d0beb59fce546aeb38020670fa0d4da8dded9072cd320caf0e05a294a8b",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10590818 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID37876811/gr3.jpg",
+   "sha256": "208e55bd2569c03549fdadc07752a8479e42cc67710466d18b0522c080fb74cb",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10590818 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID37876811/gr4.jpg",
+   "sha256": "a8ab27f325ba7bd8201a4ce3a60d94b7794fa6218b4be698103d63fec6e2f9a5",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10590818 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID37876811/gr5.jpg",
+   "sha256": "9b2e537862b0afd63dadb4cdb78a1763dc0015bb2164c78e470e2e47ffa72f5a",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10590818 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID37876811/gr6.jpg",
+   "sha256": "1d1b08eb01bdd7aa365a1528b7473e257c367d87ba238639c11acfcbb2cf4692",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10590818 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID37876811/fx1.jpg",
+   "sha256": "0f5d25bfd60adfa6ac320ecc1fbf4c917c5bf375020c67f07034b63cebdbe49d",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10590818 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID37876811_m123.png",
+   "sha256": "e6bb48922e9afdc337e1cc3628c66a6cfec11d2e6bcabcda71bbce265c737bc3",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID37876811/gr1.jpg",
+    "extractor": {
+     "name": "ImageMagick montage",
+     "version": "system package",
+     "call": "montage gr1 gr2 gr3 fx1 -tile 2x2 -geometry 900x"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "e6bb48922e9afdc337e1cc3628c66a6cfec11d2e6bcabcda71bbce265c737bc3"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID37876811_m456.png",
+   "sha256": "afa9857f0fd002aba3334eda1b896936cfd500fb9e026a51de16a2b0597adbb0",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID37876811/gr1.jpg",
+    "extractor": {
+     "name": "ImageMagick montage",
+     "version": "system package",
+     "call": "montage gr4 gr5 gr6 -tile 3x1 -geometry 900x"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "afa9857f0fd002aba3334eda1b896936cfd500fb9e026a51de16a2b0597adbb0"
+   }
+  },
+  {
+   "path": "files/figures/PMID37876811/mmc2.xlsx",
+   "sha256": "a021baa6c73695bc66671cfe7117ade2429ac6731404fc1132ac9f885389acb4",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10590818 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID37876811/mmc2.txt",
+   "sha256": "989a3c4af2418bc0349181183271f2c09220663c1cfddf11c510f3a2dc341d26",
+   "kind": "supplement_text",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID37876811/mmc2.xlsx",
+    "extractor": {
+     "name": "xlsx-to-text reader (python zipfile and regular expressions, scientist-c scratch script)",
+     "version": "python 3.12",
+     "call": "x2t.py <xlsx> > <txt>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "989a3c4af2418bc0349181183271f2c09220663c1cfddf11c510f3a2dc341d26"
+   }
+  },
+  {
+   "path": "files/figures/PMID37876811/mmc4.xlsx",
+   "sha256": "dcc959ee95747cebf6b5c926be17d6ea845b61f46ce152aa2c867057aae0087b",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10590818 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID37876811/mmc4.txt",
+   "sha256": "010959aa44dbba6eca9f75b510d12cd8b72d039c669cb4d1c239f76bfc90b4ba",
+   "kind": "supplement_text",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID37876811/mmc4.xlsx",
+    "extractor": {
+     "name": "xlsx-to-text reader (python zipfile and regular expressions, scientist-c scratch script)",
+     "version": "python 3.12",
+     "call": "x2t.py <xlsx> > <txt>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "010959aa44dbba6eca9f75b510d12cd8b72d039c669cb4d1c239f76bfc90b4ba"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Design: plasma untargeted metabolomics in 62 epilepsy patients (infrequent n=31, frequent n=31) against 20 healthy controls, DisGeNET enrichment, then PTZ-kindled male mice. The only oxygen-related content is HIF-1 pathway and ferroptosis markers; no oxygen exposure is applied.",
+    "snippet": "The study consisted of a total of eighty-two subjects: sixty-two epilepsy patients categorized into infrequent seizure (IS) (n = 31) and frequent seizures (FS) (n = 31)",
+    "anchor": "Results, Sample characteristic",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37876811_Liang2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper reports no anti-seizure medication, comorbidity or treatment data for patients, although its inclusion rules exclude severe systemic disease.",
+    "snippet": "Sixty-two epilepsy patients who met the inclusion and exclusion criteria were divided into the infrequent seizures group (IS, n=31) and the frequent seizures group (FS, n=31).",
+    "anchor": "STAR Methods, Experimental group",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37876811_Liang2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Metabolomics: free fatty acids and bilirubin higher, glutamine and arginine lower in patients; HIF-1 pathway appears only in negative-ion KEGG enrichment (adjusted p below 0.05), none in positive mode.",
+    "snippet": "In the positive ion mode, no significantly enriched pathways were identified among the differential metabolites.",
+    "anchor": "Results, KEGG pathway enrichment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37876811_Liang2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DisGeNET step: 1215 epilepsy genes yield 73 hub genes from a protein-interaction network; HIF-1 signalling is then reported as enriched among them.",
+    "snippet": "we identified a core network and 73 hub target genes",
+    "anchor": "Results, DisGeNET",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37876811_Liang2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mouse model: PTZ 35 mg/kg every other day, eleven injections; 83.3 percent kindled; pathway readouts are mRNA and protein for HIF-1 alpha and HO-1 (higher in PTZ).",
+    "snippet": "These results suggest that HIF-1α/HO-1 pathway is significantly activated in the hippocampus of PTZ kindling epileptic mice.",
+    "anchor": "Results, Validation of HIF-1α/HO-1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37876811_Liang2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Ferroptosis support is a panel of markers in the hippocampus (COX-2, Fe2+, ferritin, transferrin, GPX4, MDA) and small mitochondrial size by electron microscopy.",
+    "snippet": "the mitochondria of hippocampal neurons in the PTZ group became smaller, the membrane density increased, and the mitochondrial ridge decreased or disappeared",
+    "anchor": "Results, Validation of hippocampal neurons ferroptosis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37876811_Liang2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the central claim is correlational: no intervention on HIF-1 alpha or HO-1 was done.",
+    "snippet": "the study predominantly establishes correlations between the HIF-1α/HO-1 pathway activation, ferroptosis markers, and epilepsy",
+    "anchor": "Limitations of the study",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37876811_Liang2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Conclusion drawn beyond the data: the Discussion says the pathway 'might promote' epilepsy and proposes inhibiting HIF-1 alpha and regulating iron as treatments, which no experiment here tests.",
+    "snippet": "Inhibiting the activation of the HIF-1α/HO-1 pathway and regulating iron metabolism may offer potential approaches for epilepsy treatment.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37876811_Liang2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table S2 lists the 1215 epilepsy genes taken from DisGeNET; WWOX is one of them (row 252), the only WWOX-direct item in the paper, and it is not among the 73 hub genes.",
+    "snippet": "Epilepsy\tWWOX\t51741\tWW domain containing oxidoreductase",
+    "anchor": "Supplementary Table S2, WWOX row",
+    "surface": "supplement",
+    "artifact": "files/figures/PMID37876811/mmc2.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table S4: the HIF-1 signalling pathway is the 22nd of the listed enriched pathways, below lipid and atherosclerosis, IL-17, cancer and TNF pathways, with 15 of the 73 hub genes including HIF1A itself.",
+    "snippet": "hsa04066:HIF-1 signaling pathway\tNOS3, STAT3, IGF1, HIF1A, EGFR, MTOR, RELA, INS, VEGFA, IL6, IFNG, AKT1, MAPK1, GAPDH, TLR4\t15\t73",
+    "anchor": "Supplementary Table S4, HIF-1 row",
+    "surface": "supplement",
+    "artifact": "files/figures/PMID37876811/mmc4.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figures 4 to 6: bar charts each carry three dots per group (PTZ versus control) for COX-2, Fe2+, ferritin, transferrin, GPX4, SOD, CAT, GSH-Px, MDA, HIF-1 alpha and HO-1; blots show three control and three PTZ lanes; the ROS panel (Fig 5D) is DHE images for CA1, CA3 and DG without a quantification plot in the figure; Fig 4D electron micrographs with arrows on mitochondria; Fig 4C HE sections.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4 A-K, Figure 5 A-E, Figure 6 A-B montage: n = 3 dots per bar, blot lanes CON x3 PTZ x3, ROS images CA1 CA3 DG without bars.",
+    "anchor": "Figures 4-6",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID37876811_m456.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figures 1 to 3 and the graphical abstract: OPLS-DA separation of NC, IS and FS; box plots of palmitic, oleic, linoleic and myristic acids (higher), arginine and glutamine (lower), bilirubin (higher, IS-FS difference n.s.); KEGG bubble plots with the HIF-1 pathway highlighted in negative mode; the DisGeNET hub network with HIF1A, TNF, IL6, GAPDH and others; GO bars; KEGG bubble plot with HIF-1 highlighted in the middle of a list headed by cancer pathways.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 A-E, Figure 2 positive and negative KEGG, Figure 3 A-C, graphical abstract montage.",
+    "anchor": "Figures 1-3, graphical abstract",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID37876811_m123.png",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC10590818/fullTextXML returned HTTP 200 (146711 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}

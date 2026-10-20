@@ -1,0 +1,485 @@
+{
+ "schema_version": 2,
+ "pmid": "42420651",
+ "doi": "10.1038/s42255-026-01566-0",
+ "receipt": "FTR-20261019-42420651-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "A mitochondrial hypoxia-therapy laboratory (Gladstone and Arc Institutes) with the proteostasis biochemistry groups of Southworth and Shorter. It is primary for hypoxia therapy in complex I disease and for HTRA2 and CLPB biochemistry; it is not a WWOX group and does not name WWOX. Observation (survival, proteomics, blots) is weighted above its tissue-hyperoxia interpretation, which rests on proxies. The senior author holds hypoxia-therapy patents."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "hypoxia therapy AND mitochondrial disease",
+    "count": 1765,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (hyperoxia OR hyperbaric OR oxygen therapy)",
+    "count": 1,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "WWOX AND hypoxia",
+    "count": 24,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches, not measurements."
+ },
+ "multihop": {
+  "references_enumerated": 58,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "WWOX is not named anywhere in the article (case-insensitive count of the string in the text rendering: 0, run in session). The reference list was enumerated, not read entry by entry. The hypoxia-therapy lineage (refs 6, 7, 8, 25, 28, 49) is the primary literature for the lever; it is a reading lead for the oxygen group, not a WWOX debt.",
+  "disposition": "No gene-direct references."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42420651 --hops 1; paper_packet.py packet --pmid 42420651; fulltext_receipts.py status --pmid 42420651",
+  "hits": 0,
+  "note": "No record in any of the seven searched registry surfaces and no prior receipt; an empty result is a statement about that query over those files."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication type Journal Article.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 58,
+   "references_screened": 58,
+   "references_with_doi": 58,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42420651_Garg2026_PMC.xml",
+   "sha256": "3228e43a65365c5fa31592c677a8f8f20d8f56db62b80c0870c5f9fa10865387",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13489956/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "3228e43a65365c5fa31592c677a8f8f20d8f56db62b80c0870c5f9fa10865387"
+   }
+  },
+  {
+   "path": "files/figures/PMID42420651/42255_2026_1566_Fig1_HTML.webp",
+   "sha256": "eea5d2d40d9384be94591364ce046dfe44e1403256c0e119b0d748b85dc5ffaa",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13489956 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42420651_Fig1.png",
+   "sha256": "0701c2a5197551b1859f02c4de33bc7d0625576eea22a30d3c448e516a960fb1",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42420651/42255_2026_1566_Fig1_HTML.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "0701c2a5197551b1859f02c4de33bc7d0625576eea22a30d3c448e516a960fb1"
+   }
+  },
+  {
+   "path": "files/figures/PMID42420651/42255_2026_1566_Fig2_HTML.webp",
+   "sha256": "2715635288746919e870c400cb0dabda15a2edc7d98e9dbdadcf18b0fc12b0a7",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13489956 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42420651_Fig2.png",
+   "sha256": "9f636f5609981afe5e7540eb26495ae6c3d81245d5ac0b9e0334e986535a3806",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42420651/42255_2026_1566_Fig2_HTML.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "9f636f5609981afe5e7540eb26495ae6c3d81245d5ac0b9e0334e986535a3806"
+   }
+  },
+  {
+   "path": "files/figures/PMID42420651/42255_2026_1566_Fig3_HTML.webp",
+   "sha256": "8133015deb50cae6ef7a22503bf09cc706a1aed6215dbd404b53a7cdfffb3573",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13489956 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42420651_Fig3.png",
+   "sha256": "41b195cf364d94ee7066d9c12f2dae5eaea3a247d19849b095c26e0d0c888b82",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42420651/42255_2026_1566_Fig3_HTML.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "41b195cf364d94ee7066d9c12f2dae5eaea3a247d19849b095c26e0d0c888b82"
+   }
+  },
+  {
+   "path": "files/figures/PMID42420651/42255_2026_1566_Fig4_HTML.webp",
+   "sha256": "3812ab1ebac899bf6478094a321584f3781c2c0b340d05e07072107fd3ed944a",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13489956 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42420651_Fig4.png",
+   "sha256": "9f2892d1ad88fe4d3eed22310a47290be6bd4143b3b706dff6fb4a4389bce575",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42420651/42255_2026_1566_Fig4_HTML.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "9f2892d1ad88fe4d3eed22310a47290be6bd4143b3b706dff6fb4a4389bce575"
+   }
+  },
+  {
+   "path": "files/figures/PMID42420651/42255_2026_1566_Fig5_ESM.webp",
+   "sha256": "23e321f8feb811705f2021f7914ce17338a2c5afa756c9db8c5051b4e2ab2f88",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13489956 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42420651_ED1.png",
+   "sha256": "7cd8bfaf7b11ed6b4c21fd81bcbef13c19ddac2386bab12d40529a1ac8e54171",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42420651/42255_2026_1566_Fig5_ESM.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "7cd8bfaf7b11ed6b4c21fd81bcbef13c19ddac2386bab12d40529a1ac8e54171"
+   }
+  },
+  {
+   "path": "files/figures/PMID42420651/42255_2026_1566_Fig6_ESM.webp",
+   "sha256": "4565b0cc82570be22239724eb794ddd1f25f87ccb91562ac1d3810d1c6793e60",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13489956 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42420651_ED2.png",
+   "sha256": "c9c87c80e0bf76f50331acf9d86027a15645b83fbffc709212b926d2960f7465",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42420651/42255_2026_1566_Fig6_ESM.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "c9c87c80e0bf76f50331acf9d86027a15645b83fbffc709212b926d2960f7465"
+   }
+  },
+  {
+   "path": "files/figures/PMID42420651/42255_2026_1566_MOESM1_ESM.pdf",
+   "sha256": "c0097777db82997bff03443cf4011db1a950e3a647f0fcbc83debf5d5f786535",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13489956 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42420651_supp_m1.png",
+   "sha256": "857520755b92cd781a8246c5d24c5ea79604843e85f980615b29e0f021d75cc5",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42420651/42255_2026_1566_MOESM1_ESM.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler) plus ImageMagick montage",
+     "version": "poppler 24.02.0",
+     "call": "pdftoppm -r 90 -png <pdf>; montage pages 1-4 -tile 4x1"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "857520755b92cd781a8246c5d24c5ea79604843e85f980615b29e0f021d75cc5"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42420651_supp_m2.png",
+   "sha256": "e93e3aa791a570e0b27da4d225a9a1411bb3b5f89a1bf5c4239002718c9dba35",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42420651/42255_2026_1566_MOESM1_ESM.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler) plus ImageMagick montage",
+     "version": "poppler 24.02.0",
+     "call": "pdftoppm -r 90 -png <pdf>; montage pages 5-8 -tile 4x1"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "e93e3aa791a570e0b27da4d225a9a1411bb3b5f89a1bf5c4239002718c9dba35"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "System: a hypoxia (1 percent oxygen) CRISPR fitness screen in K562 cells and a mouse carrying the Htra2 S276C protease-dead point mutation; WWOX is not studied, and the article never names it.",
+    "snippet": "a mouse model carrying a naturally occurring point mutation (S276C) in Htra2, commonly known as the mnd2 mutation, that abolishes the protease activity of HtrA2",
+    "anchor": "Results, first section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42420651_Garg2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Intervention: continuous inhaled 11 percent oxygen, started at P11 with the mother, in a 472 L acrylic chamber.",
+    "snippet": "Starting at postnatal day 11, pups were transferred to the appropriate oxygen condition along with their mother",
+    "anchor": "Methods, In vivo hypoxia exposure and survival curves",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42420651_Garg2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Effect size as the authors state it: nearly threefold extension of median lifespan, both sexes, two cohorts.",
+    "snippet": "Hypoxia led to a nearly threefold extension in median lifespan in both males and females and across two independent cohorts",
+    "anchor": "Results, first section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42420651_Garg2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Timing matters: exposure started at P11 gave the most pronounced increase in survival among P11 to P16 starts.",
+    "snippet": "Since exposure beginning at P11 led to the most pronounced increase in survival",
+    "anchor": "Results, first section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42420651_Garg2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Region specificity: striatal inflammation was rescued, thalamic inflammation was not.",
+    "snippet": "striatal inflammation was rescued by hypoxia, while inflammation in the thalamus was not",
+    "anchor": "Results, first section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42420651_Garg2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Hypoxia restored C1 subunit abundance but not C1 enzymatic activity in the HTRA2 knockout cells.",
+    "snippet": "hypoxia induced only modest increase in fully assembled C1, without improving enzymatic activity",
+    "anchor": "Results, second section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42420651_Garg2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The central mechanism, tissue hyperoxia, was not measured directly; two indirect proxies are used.",
+    "snippet": "Direct measurement of tissue partial oxygen pressure (pO2) in the mouse striatum proved technically challenging.",
+    "anchor": "Results, second section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42420651_Garg2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors themselves call the HIF-target and iron-sulfur data suggestive only.",
+    "snippet": "Admittedly, these results are simply suggestive of tissue hyperoxia, since both ISC proteins and HIF targets are only indirect measures for local oxygen tensions.",
+    "anchor": "Results, second section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42420651_Garg2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Canonical HIF signalling is not the rescue route in the authors' earlier primary-C1 model; HIF target genes are LOWER in the mutant striatum under normoxia and normalised by hypoxia.",
+    "snippet": "canonical HIF target genes were downregulated in Htra2 mutant striatum under normoxia, consistent with a relatively hyperoxic state",
+    "anchor": "Results, second section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42420651_Garg2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "HIF activation alone did not rescue the earlier model.",
+    "snippet": "Notably, HIF activation alone does not rescue the Ndufs4 KO mouse model, indicating that canonical hypoxia responses are insufficient to explain the benefit",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42420651_Garg2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Scope limit stated by the authors: hypoxia therapy may work best for C1-centred disease and other ETC defects may not respond equally.",
+    "snippet": "However, other forms of ETC dysfunction may not be equally responsive to hypoxia.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42420651_Garg2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A frataxin-null precedent: symptomatic relief without lifespan extension.",
+    "snippet": "it does not extend lifespan, probably because FXN deficiency disrupts multiple essential processes beyond C1 stability",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42420651_Garg2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mechanisms other than hyperoxia are not excluded.",
+    "snippet": "While hyperoxia probably contributes to pathology, other physiological factors cannot be excluded.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42420651_Garg2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Translation is by a small molecule that lowers haemoglobin-delivered oxygen, not by breathing hypoxic gas in patients; the authors name future trials.",
+    "snippet": "This will enable future clinical trials targeting mitochondrial proteostasis disorders using systemically deliverable small molecules that decrease oxygen delivery.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42420651_Garg2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Declared limitation: in vitro proteomics had only two control replicates.",
+    "snippet": "except for K562 proteomics data collection, where n = 2 for controls, which represents a limitation of our work with respect to in vitro proteomics data",
+    "anchor": "Methods, Statistics and reproducibility",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42420651_Garg2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Competing interest: the senior author holds patents on hypoxia therapy.",
+    "snippet": "I.H.J. has patents related to hypoxia therapy",
+    "anchor": "Competing interests",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42420651_Garg2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1d-g: survival curve of Htra2 mutant mice at 21 versus 11 percent oxygen (median roughly 28 versus roughly 75 days read by eye, all mice dying by about 110 days), weight, inverted grid and rotarod; 1h striatum rescued, thalamus not (n.s.). The rescue is partial and the mice still die.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1d: Kaplan-Meier, 21 percent O2 n=15 ends by about day 40, 11 percent O2 n=13 ends by about day 110, P<0.001; 1e body weight; 1f inverted grid P=0.0018 and P=0.0083; 1g rotarod; 1h Gfap Iba1 striatum score P=0.0038 and thalamus n.s.",
+    "anchor": "Figure 1",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42420651_Fig1.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 2j-l: HIF target transcripts (Ldha, Pfkp, Ndrg1, Eno1) are lower in the mutant at 21 percent oxygen and higher at 11 percent; iron-sulfur proteins are depleted in the mutant at 21 percent and recovered at 11 percent; 2e C1 activity (pyruvate/malate, glutamate/malate) is lower in the knockout and not restored by 1 percent oxygen (n.s.).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2e: OCR bars knockout 21 versus 1 percent n.s.; Figure 2j heat map of Aldoc, Pfkp, Ldha, Vegfa, Eno1 and others; Figure 2l volcano plots of ISC proteins (Ndufs2, Nfs1, Aco2 and others).",
+    "anchor": "Figure 2",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42420651_Fig2.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Extended Data Fig. 1a: survival by hypoxia start day (P11, P12-13, P14, P16) against normoxia; the later the start the smaller the gain (day 16 start close to normoxia on the curve).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Extended Data Fig. 1a: five Kaplan-Meier curves, 21 percent O2 n=15 and 11 percent O2 from day 11 (n=13), 12-13 (n=11), 14 (n=9), 16 (n=8); 1b male and female, both rescued.",
+    "anchor": "Extended Data Fig. 1",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42420651_ED1.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figures 3 and 4 and Extended Data Fig. 2: co-essentiality, proximity-labelling and sedimentation data tie HTRA2 to CLPB and complex I subunits; in vitro biochemistry (luciferase, NDUFA13); no oxygen exposure is varied in these panels.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3a-f co-dependency network, scatter R2=0.345, proximity lists, 3-methylglutaconic aciduria gene list, sedimentation blots; Figure 4a-l IP proteomics, luciferase assays, NDUFA13 aggregation and cleavage.",
+    "anchor": "Figures 3 and 4",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42420651_Fig4.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Supplementary Fig. S1: an independent second survival cohort, 4 normoxia and 5 hypoxia mice, hypoxia curve to about day 100, p below 0.05; Supplementary Fig. S2: NAD+/NADH unchanged in HTRA2 knockout cells.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig. S1 Kaplan-Meier 21 percent O2 n=4 ending by about day 25 and 11 percent O2 n=5 ending near day 100; Fig. S2 NAD+/NADH bars and Ndi1 cell counts.",
+    "anchor": "Supplementary Figs S1 and S2",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42420651_supp_m1.png",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13489956/fullTextXML returned HTTP 200 (162358 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}

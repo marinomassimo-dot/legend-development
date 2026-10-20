@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-41039661-01",
+ "study_id": {
+  "pmid": "41039661",
+  "doi": "10.1080/17501911.2025.2568303"
+ },
+ "event_at": "2026-10-19T19:29:27Z",
+ "analysis_at": "2026-10-19T19:29:27Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, interventions batch 2026-10-19, task INTERV-H4-C-20261019, branch task/INTERV-H4-C-20261019; context_policy SOURCE_FIRST. Route: Europe PMC REST fullTextXML (open access) saved to the shared checkout files/fulltext; whole review and Table 1 read from a text rendering of the JATS up to the reference list (118 references counted, not read); Figure 1 opened in its colour and greyscale versions. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID41039661_Huang2025_PMC.xml",
+ "source_fingerprint": "a956d5a4a4edbd9217174af9402590e4c533d5b240572db90f3aff7688b16194",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "not_present",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41039661.json",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "A narrative review with no Results section; the 118 references were enumerated, not read, so the clinical oximetry and mouse hypoxia primaries behind the statements were not opened. Disease-class comparator for oxygen biology; not WWOX evidence."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

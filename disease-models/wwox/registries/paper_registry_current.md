@@ -6090,6 +6090,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Transferability:** unassigned in triage
 **clinical relevance:** MODERATE
 **Claim links:** none — triage only
+**Promoted to:** [[paper_registry_current#PAPER 310]] by `BATCH_20261019_001` (`CC-20261019-SCIENTIST-C-G3-01`); this placeholder is kept as history.
 **Role:** secondary full-text target
 **Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
 
@@ -12087,6 +12088,29 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Claim links:** none
 **Role:** Review of serotonin in SUDEP with a stated database search. Most evidence is from audiogenic-seizure DBA mice; the table grades 5-HT2A and 5-HT4 evidence as conflicting with low reproducibility; human data are limited. Developmental or intellectual disability is listed as a SUDEP risk factor. No WWOX, no serotonin measurement in any WWOX system.
 **LIT link:** [[literature_tracking_log_current#LIT-0603]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+---
+
+## PAPER 310
+**Short title:** Sze 2015 Cell Death Dis — News and Commentary on a cascade of protein aggregation bombarding mitochondria under WWOX deficiency; a self-commentary restating the founding laboratory's model, no data
+**Full title:** A cascade of protein aggregation bombards mitochondria for neurodegeneration and apoptosis under WWOX deficiency
+**Authors:** Sze CI, Kuo YM, Hsu LJ, Fu TF, Chiang MF, Chang JY, Chang NS
+**Year:** 2015
+**Source type:** commentary — News and Commentary
+**Journal/source:** *Cell Death & Disease* 2015;6(9):e1881
+**Identifier:** PMID 26355344 / PMC4650446 / DOI 10.1038/cddis.2015.251
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-C-G3-01` (metabolic batch 2026-10-19, Scientist C, group G3); identity authored by the batch integrator from the artefact's own front matter, and the number assigned from `registry_records.py catalog` (`PAPER` max was 246, `LIT` max 0548) in place of the candidate's provisional id. It is the promotion of the placeholder `CORPUS P395`, which is kept as history and cross-linked both ways.
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-26355344-02`; manifest `deepdive_manifests/PMID26355344.json`; artefact `files/fulltext/PMID26355344_PMC4650446_efetch.xml` (sha256 `ef302d02ba39ae21d21e57c6e995952926525aef4e8d0f7b97bafd20c38553fb`)
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Model/species:** not applicable (commentary)
+**Genotype/model:** none
+**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** LOW. Not medical advice.
+**Claim links:** none — no canonical claim is created or narrowed by this record
+**Role:** 🔴 **A finished News and Commentary by the founding laboratory, not a primary and not an independent source.** The deposit is JATS `article-type="news"`: two pages, no abstract, no Methods, no Results, no table, ten references and one two-panel schematic figure (opened as an image: it carries no axis, scale bar, n or micrograph). It restates, with reference numbers, the senior laboratory's own results (the primary is a different record in this registry), so counting it as a further source for the TPC6A-delta / SDR binding map or for the mitochondrial arm would count one laboratory twice. The earlier partial receipt had called Results, Methods, figures and tables *owed*; they do not exist in this article, so the earlier coverage was in fact the whole text and the depth is closed at complete for the article as published. It measures nothing. A source count in `DL-MECH-019` that lists this deposit next to its two primaries should read it as a restatement.
+**LIT link:** [[literature_tracking_log_current#LIT-0395]]
 **Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
 
 ---

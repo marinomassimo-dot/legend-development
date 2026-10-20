@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-42428241-01",
+ "study_id": {
+  "pmid": "42428241",
+  "doi": "10.3389/fnins.2026.1838150"
+ },
+ "event_at": "2026-10-19T19:31:01Z",
+ "analysis_at": "2026-10-19T19:31:01Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, interventions batch 2026-10-19, task INTERV-H4-C-20261019, branch task/INTERV-H4-C-20261019; context_policy SOURCE_FIRST. Route: Europe PMC REST fullTextXML (open access) saved to the shared checkout files/fulltext; whole article read from a text rendering of the JATS up to the reference list (27 references counted, not read); Figures 3, 4 and 5 opened individually at native size and Figures 1, 2, 6, 7 and 8 in one montage. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID42428241_Khaksari2026_PMC.xml",
+ "source_fingerprint": "8849b1b1d62ce9ee01ebb9f1550c7f60de76fe454d42ce91a82112914575fbac",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42428241.json",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "The structured abstract and title say oxygenation responses were reduced, the Results text and Figure 4 show higher patient HbO in the left prefrontal region and mostly null intervals; the contradiction is recorded in the locators. A measurable-oxygenation readout in a brain-energy disorder; substitute, not WWOX evidence."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

@@ -11799,8 +11799,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** in — standard
 **Tier:** B
-**Status:** screened
-**Status note:** a re-read of the commentary is recorded by receipt `FTR-20261019-26355344-02` (complete; `CC-20261019-SCIENTIST-C-G3-01`, `BATCH_20261019_001`): a commentary restates the model and is not an independent observation of the binding map it describes; the placeholder `CORPUS P395` is not promoted.
+**Status:** processed
+**Status note:** a re-read of the commentary is recorded by receipt `FTR-20261019-26355344-02` (complete; `CC-20261019-SCIENTIST-C-G3-01`, `BATCH_20261019_001`): a commentary restates the model and is not an independent observation of the binding map it describes; the placeholder `CORPUS P395` is promoted to [[paper_registry_current#PAPER 310]] and kept as history.
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Genotype/model tag:** unassigned in triage
 **Species:** not assessed in triage

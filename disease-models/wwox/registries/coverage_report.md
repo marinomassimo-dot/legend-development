@@ -21,23 +21,23 @@ the whole known corpus, not the part already processed.
 
 | Depth | Records | Share | What it means |
 |---|---:|---:|---|
-| **Full text depth** | 179 | 27% | complete receipt or legacy registry declaration; trace split below |
-| Partial full text | 159 | 24% | some sections read; explicitly declared incomplete |
+| **Full text depth** | 179 | 26% | complete receipt or legacy registry declaration; trace split below |
+| Partial full text | 160 | 24% | some sections read; explicitly declared incomplete |
 | Abstract / screened | 6 | 1% | classified from metadata and abstract; no full text read |
-| Catalogued only | 321 | 48% | known, deduplicated, never analytically processed — **the debt** |
+| Catalogued only | 321 | 47% | known, deduplicated, never analytically processed — **the debt** |
 | Filtered / superseded | 10 | 1% | explicitly set aside, with the reason preserved |
 
-- **299** promoted `PAPER` records · **376** `CORPUS` placeholders
+- **300** promoted `PAPER` records · **376** `CORPUS` placeholders
 - **584** lifecycle entries in the literature tracking log
 - **584** unique PMIDs known across the registries
 
 ## Receipt trace
 
 - Authoritative ledger: `disease-models/wwox/registries/fulltext_read_receipts.jsonl`
-- **542** append-only events: **517** contemporaneous · **22** conservative legacy reconstructions · **1** invalidation(s) · **2** identity correction(s)
+- **587** append-only events: **562** contemporaneous · **22** conservative legacy reconstructions · **1** invalidation(s) · **2** identity correction(s)
 - **175** registry records have a persisted `complete_fulltext_read` receipt
 - **4** records still rely on a historical registry full-text declaration without a surviving complete coverage receipt
-- **26** receipt event(s) do not yet map to a registry record
+- **70** receipt event(s) do not yet map to a registry record
 
 A full-text marker in the registry is preserved as historical state, but it is not
 retroactively converted into a complete receipt. Only a contemporaneous or adequately

@@ -1,0 +1,367 @@
+{
+ "schema_version": 2,
+ "pmid": "39087877",
+ "doi": "10.1093/sleep/zsae169",
+ "receipt": "FTR-20261019-39087877-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "A geriatric-neurology group in Nanjing running a population-genetics Mendelian randomisation. It is not a WWOX group and WWOX is a by-product of a gene-mapping step. Observation (association statistics) is weighted above interpretation; the WWOX statement is a list entry and is weighted as a pointer to a locus, not as biology."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (sleep apnea OR intermittent hypoxia)",
+    "count": 1,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "WWOX AND hypoxia",
+    "count": 24,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (oxygen saturation OR oximetry)",
+    "count": 0,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches, not measurements."
+ },
+ "multihop": {
+  "references_enumerated": 72,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "No reference is WWOX-direct. The article lists a linked correction-or-comment record in PubMed (CommentIn): a commentary titled on causal inference by Mendelian randomisation in OSA biomarker studies (Sleep 2024, listed in the article front matter); it was not read.",
+  "disposition": "No gene-direct references; the CommentIn item is a debt for any reader who needs the validity of the method, not for WWOX."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 39087877 --hops 1; paper_packet.py packet --pmid 39087877; fulltext_receipts.py status --pmid 39087877",
+  "hits": 0,
+  "note": "No record in any of the seven searched registry surfaces and no prior receipt; an empty result is a statement about that query over those files."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: the record carries a CommentIn link and no RetractionIn, ErratumIn or ExpressionOfConcernIn; publication type Journal Article. The comment was not read.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 72,
+   "references_screened": 71,
+   "references_with_doi": 71,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39087877_Zhao2025_PMC.xml",
+   "sha256": "0d048fc6a225fbd2de6a6da5550c18983d8f3be54cd3ede8631938f23704f1b4",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11808066/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "0d048fc6a225fbd2de6a6da5550c18983d8f3be54cd3ede8631938f23704f1b4"
+   }
+  },
+  {
+   "path": "files/figures/PMID39087877/zsae169_fig2.jpg",
+   "sha256": "a6a5e64f2306869ab03f7fb3253ba1dde4996ff62366601d8c063c2b14b06173",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC11808066 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID39087877/zsae169_fig7.jpg",
+   "sha256": "1e2678f6cb8985c66d466ba1c1af7ec8b5a6a92e06ce953e2cdd279d65b5bf55",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC11808066 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID39087877/zsae169_fig8.jpg",
+   "sha256": "119473a07183f6e15d0862b5247761876d309fd99becd380050869a9d84841bb",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC11808066 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID39087877_m134.png",
+   "sha256": "141531ceb688ea6ac4b08f0b8872f3c9afe2dd63e7715ba0fd894b40b4a8b773",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID39087877/zsae169_fig2.jpg",
+    "extractor": {
+     "name": "ImageMagick montage",
+     "version": "system package",
+     "call": "montage -tile 3x1 -geometry 800x of zsae169_fig1, fig3, fig4"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "141531ceb688ea6ac4b08f0b8872f3c9afe2dd63e7715ba0fd894b40b4a8b773"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID39087877_m56.png",
+   "sha256": "371df989916d8dc734697914006a3febbba0b08ce139ba7e731ae78f68dd93e7",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID39087877/zsae169_fig2.jpg",
+    "extractor": {
+     "name": "ImageMagick montage",
+     "version": "system package",
+     "call": "montage -tile 2x1 -geometry 900x of zsae169_fig5, fig6"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "371df989916d8dc734697914006a3febbba0b08ce139ba7e731ae78f68dd93e7"
+   }
+  },
+  {
+   "path": "files/figures/PMID39087877/zsae169_fig1.jpg",
+   "sha256": "e9c53f7e4b2a21b95814aed1d32c30b6dac924659147ba1cf66a9ba6363e7108",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC11808066 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID39087877/zsae169_fig3.jpg",
+   "sha256": "bcfcbab1c2dcf2b9fe9c1f1dee00eb75e2096867bd31bea52a1484bb92305902",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC11808066 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID39087877/zsae169_fig4.jpg",
+   "sha256": "9c53862793b36700f9090603e51cf717ab81cbb209635c25b7cf4e6a3293ad40",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC11808066 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID39087877/zsae169_fig5.jpg",
+   "sha256": "552c9369e686891b6487a2159bb531492a6294dc6c8bd1b8626872a18ef4003d",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC11808066 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID39087877/zsae169_fig6.jpg",
+   "sha256": "b05460581e0fbdf8df542ab03a29afbde88dd2a44716c05cb683dba86a88644b",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC11808066 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID39087877/zsae169_suppl_supplementary_tables_s1-s18_figures_s1-s2.pdf",
+   "sha256": "df2a52647ed0934eeec71dbffe6675743250e000688d1c291391ed0d089c89d1",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC11808066 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID39087877_suppS18-513.png",
+   "sha256": "9375dd56d3e5fb3edbb6169c58689d0e2e482d1ed1b0737dda1a82757686d9ba",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID39087877/zsae169_suppl_supplementary_tables_s1-s18_figures_s1-s2.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 110 -f 513 -l 513 -png <pdf>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "9375dd56d3e5fb3edbb6169c58689d0e2e482d1ed1b0737dda1a82757686d9ba"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID39087877_suppS18-514.png",
+   "sha256": "19365a39f1b1578b6b299030eefb9450bfdead5e4da1e209ad4df75f6a9bd801",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID39087877/zsae169_suppl_supplementary_tables_s1-s18_figures_s1-s2.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 110 -f 514 -l 514 -png <pdf>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "19365a39f1b1578b6b299030eefb9450bfdead5e4da1e209ad4df75f6a9bd801"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The study is a two-sample Mendelian randomisation of 91 circulating inflammatory proteins against obstructive sleep apnoea phenotypes; it is a genetic-association study, with no oxygen exposure and no WWOX measurement.",
+    "snippet": "Ninety-one inflammatory proteins in plasma served as the exposure variables, while two sets of OSA data from both the GWAS catalog and the FinnGen study constituted the outcomes.",
+    "anchor": "Methods, Study design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39087877_Zhao2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Where WWOX enters: the Discussion says FUMA revealed seven genetic risk loci including WWOX, associated with inflammatory proteins and sleep apnoea outcomes.",
+    "snippet": "FUMA revealed seven genetic risk loci, namely, ROBO1, PRIM1, NACA, SHBG, HSD17B6, RBMS2, and WWOX, associated with inflammatory proteins and sleep apnea outcomes",
+    "anchor": "Discussion, gene paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39087877_Zhao2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Results: the gene step is positional mapping; WWOX is listed with three other genes as upregulated, with no expression dataset named in the text.",
+    "snippet": "Specifically, the ROBO1, PRIM1, and NACA genes were downregulated, while the SHBG, HSD17B6, RBMS2, and WWOX genes were upregulated, as shown in Supplementary Table S18.",
+    "anchor": "Results, Post-GWAS gene analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39087877_Zhao2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Methods: the gene step uses positional mapping within 10 kb and analyses coding genes only.",
+    "snippet": "SNP2GENE facilitated positional mapping within a 10 kb range.",
+    "anchor": "Methods, Post-GWAS gene analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39087877_Zhao2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Discussion: the authors give WWOX one generic sentence and state that its effect on OSA is uncertain.",
+    "snippet": "However, their potential effects on OSA remain uncertain.",
+    "anchor": "Discussion, gene paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39087877_Zhao2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Discussion concedes the findings need validation and the sample size may allow false positives.",
+    "snippet": "even with FDR correction for multiple testing, the limited sample size may still allow false-positive results",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39087877_Zhao2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The instrument threshold was p below 5e-6, justified because plasma-protein loci rarely reach the standard 5e-8.",
+    "snippet": "SNPs with phenotypic links were prioritized at p < 5 × 10^-6",
+    "anchor": "Methods, instrument selection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39087877_Zhao2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Hypoxia link in the text: nocturnal hypoxaemia indicators are among the outcomes and intermittent hypoxia is said to drive HIF-1 alpha, NF-kB and NLRP3 inflammation; this is background from other work, not measured here.",
+    "snippet": "In particular, HIF-1α mediates the activation of NF-κB and the NLRP3 inflammasome",
+    "anchor": "Discussion, hypoxia paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39087877_Zhao2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2 forest plot: forward MR odds ratios of 1.06 to 1.16 for IL-18R1, IL-10RA, SLAMF1, CD5 and IL-5 on OSA or snoring, and reverse MR rows with intervals spanning 1; no WWOX panel.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2: IL-18R1 OR 1.088, IL-10RA OR 1.155, SLAMF1 1.060, CD5 1.060, CCL11 0.967, TNFSF14 0.969, IL-5 1.059, with Cochran Q, MR-Egger, Steiger and MR-PRESSO columns.",
+    "anchor": "Figure 2",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39087877/zsae169_fig2.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 7 holds Manhattan plots for IL-10RA, TNFSF14, IL-18R1, CCL23, ADA and SLAMF1 with labelled top genes and SNP-class bar charts; WWOX is not labelled in any panel, and panel A shows no point above the dashed significance line.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7 panels A to F Manhattan plots (labelled genes such as IL1RL1, TNFSF14, SLAMF1, CD84) and G to L annotation bar charts.",
+    "anchor": "Figure 7",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39087877/zsae169_fig7.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figures 1, 3 and 4 (study scheme, OSA-characteristic forest plot, scatter plots) and Figures 5 and 6 (meta-analysis forest plots and the fatty-acid multivariable heat map) were opened; none shows WWOX.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figures 1, 3, 4, 5, 6 montages: study flow, 21 outcome rows with ORs, scatter plots with five MR methods, meta-analysis forest plots for ADA, CCL23, IL-18R1, SLAMF1, TNFSF14, IL-10RA, MVMR heat map.",
+    "anchor": "Figures 1, 3-6",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID39087877_m134.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Supplementary Table S18 (supplement PDF pages 513 and 514 of 514): WWOX is the seventh listed gene, chromosome 16, with columns for position, pLI, ncRVIS, positional-SNP count, CADD, chromatin-interaction tissue, minimum GWAS P, independent SNPs and genomic locus; there is no expression or direction column. The WWOX row reads 1 positional SNP, CADD 2.928, no chromatin-interaction tissue, minimum GWAS P 3.28E-06, locus 152.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplement Table 18 page 514: last row pLI 1.94E-08, ncRVIS 2.205828, 1, 2.928, NA, 3.28E-06, rs9319519, locus 152; page 513 gene table listing ROBO1, SHBG, PRIM1, NACA, HSD17B6, RBMS2, WWOX with Chr 16 for WWOX.",
+    "anchor": "Supplementary Table S18, pages 513-514",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID39087877_suppS18-514.png",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC11808066/fullTextXML returned HTTP 200 (148426 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}

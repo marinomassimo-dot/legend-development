@@ -1,0 +1,344 @@
+{
+ "schema_version": 2,
+ "pmid": "42428241",
+ "doi": "10.3389/fnins.2026.1838150",
+ "receipt": "FTR-20261019-42428241-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "A neuro-imaging and rare-disease collaboration (St. Jude, Children's National, UT Southwestern) around the Glut1 deficiency community; not a WWOX group. Observation (relative haemoglobin traces, n = 7 and 6) is weighted well below the 'altered neuroenergetic response' interpretation, which the authors themselves call exploratory."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND Glut1",
+    "count": 2,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (oxygen saturation OR oximetry)",
+    "count": 0,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches, not measurements."
+ },
+ "multihop": {
+  "references_enumerated": 27,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-direct reference; WWOX is not named in the article.",
+  "disposition": "No gene-direct references."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42428241 --hops 1; paper_packet.py packet --pmid 42428241; fulltext_receipts.py status --pmid 42428241",
+  "hits": 0,
+  "note": "No record in any of the seven searched registry surfaces and no prior receipt; an empty result is a statement about that query over those files."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication type Journal Article.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 27,
+   "references_screened": 27,
+   "references_with_doi": 27,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42428241_Khaksari2026_PMC.xml",
+   "sha256": "8849b1b1d62ce9ee01ebb9f1550c7f60de76fe454d42ce91a82112914575fbac",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13346240/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "8849b1b1d62ce9ee01ebb9f1550c7f60de76fe454d42ce91a82112914575fbac"
+   }
+  },
+  {
+   "path": "files/figures/PMID42428241/fnins-20-1838150-g001.jpg",
+   "sha256": "ccaed1c7ea22d4089dd36612c8cdfb9999cf97251f30eccc484e053a888e656a",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13346240 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID42428241/fnins-20-1838150-g002.jpg",
+   "sha256": "5a7e909817c5e062c38b46570cc5fe1a275d079c0a8a4dcde112a30a27b43b48",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13346240 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID42428241/fnins-20-1838150-g003.jpg",
+   "sha256": "406af5dc1955159bf14a1b55e7aa1bd2abfef5cd942ef648192e91a0da379f4e",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13346240 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID42428241/fnins-20-1838150-g004.jpg",
+   "sha256": "67f53f3b8600931603144b8bbd7f69a6da748ef5a367a85a9cdb2dc2ff1ecb40",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13346240 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID42428241/fnins-20-1838150-g005.jpg",
+   "sha256": "fc6a671b6160ef492ad999f19f82a63bdca51e979ce2ce8f3db27b7110633233",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13346240 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID42428241/fnins-20-1838150-g006.jpg",
+   "sha256": "974f9f184bbd6d48f73668bc3940f119ed46a7668ce01fb6f37dce393671dd5a",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13346240 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID42428241/fnins-20-1838150-g007.jpg",
+   "sha256": "6e6baa577c99f92d2ad234f5edeb69c18d3b93ce9e09cd10b426badced942b8a",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13346240 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID42428241/fnins-20-1838150-g008.jpg",
+   "sha256": "5c4bb72d38c9fe40b830158d2495d04ebe51b8c913da9546d1b0ced6536269aa",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13346240 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42428241_mB.png",
+   "sha256": "3c432288370ba089e3204c0e27a378cc113548cfd05835658f966d2de21c6ce5",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42428241/fnins-20-1838150-g001.jpg",
+    "extractor": {
+     "name": "ImageMagick montage",
+     "version": "system package",
+     "call": "montage g001 g002 g006 g007 g008 -tile 3x2 -geometry 700x"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "3c432288370ba089e3204c0e27a378cc113548cfd05835658f966d2de21c6ce5"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42428241_mA.png",
+   "sha256": "4d86eb499209fa5b3cee516578c487f84b533fec254cd28d82ec2ac8f1bba50d",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42428241/fnins-20-1838150-g001.jpg",
+    "extractor": {
+     "name": "ImageMagick montage",
+     "version": "system package",
+     "call": "montage g003 g004 g005 -tile 1x3 -geometry 1100x (low resolution; Figures 3, 4 and 5 were also opened individually)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "4d86eb499209fa5b3cee516578c487f84b533fec254cd28d82ec2ac8f1bba50d"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "System: seven people with Glut1 deficiency (mean 20.6 years, 4 female) and six controls (all female), portable fNIRS at a patient conference, N-back tasks; the readout is relative haemoglobin change in six cortical regions. It measures no absolute oxygenation or glucose.",
+    "snippet": "seven participants with G1D (20.63 ± 8.73 years, 4 females) and a comparison group included six neurotypical control participants (18.33 ± 6.6 years, all females)",
+    "anchor": "Methods, Participants",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42428241_Khaksari2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Exclusions: two patients with more severe phenotypes could not do the task and one had poor signal; the authors call the sample a best-case phenotype.",
+    "snippet": "the observed patterns likely represent a “best-case” functional phenotype rather than the full neurobiological spectrum of the disorder",
+    "anchor": "Limitations, Selection bias",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42428241_Khaksari2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Pre-processing: a 0.03 Hz low-pass and a partial pathlength factor of 1.0, so values are relative, not absolute.",
+    "snippet": "a low-pass filter cutoff at 0.03 Hz to reduce high-frequency physiological artifacts",
+    "anchor": "Methods, fNIRS data analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42428241_Khaksari2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The comparison baseline is the 0-back task, an active control, not rest.",
+    "snippet": "0-back condition was used as a low-load control (baseline) condition rather than a true resting baseline",
+    "anchor": "Methods, fNIRS data analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42428241_Khaksari2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Results text: overall patterns are similar between groups, the clearest feature being higher HbO in the left prefrontal region of patients.",
+    "snippet": "In patients, increased HbO is observed in the LPFC, while no comparable increase is observed in the RPFC.",
+    "anchor": "Results, fNIRS results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42428241_Khaksari2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion nonetheless frames the finding as a reduced oxygenation response in G1D.",
+    "snippet": "the G1D results may suggest a relatively reduced oxygenation response during sustained cognitive activity",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42428241_Khaksari2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The same Discussion admits the differences were not consistently significant after multiple-comparison correction and are exploratory.",
+    "snippet": "they were not consistently supported by statistically significant group differences after correction for multiple comparisons and should therefore be considered exploratory",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42428241_Khaksari2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Interpretation rests on effect sizes at small n, with 'clinically meaningful' thresholds borrowed from other settings.",
+    "snippet": "In rare disorders like G1D, a moderate to large Hedges’ g effect size is often considered clinically meaningful because sample sizes are typically small",
+    "anchor": "Results, fNIRS results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42428241_Khaksari2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Behavioural performance was comparable between groups and was not entered as a covariate.",
+    "snippet": "behavioral variables were not included as covariates in the statistical analysis",
+    "anchor": "Results, N-back PsychoPy results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42428241_Khaksari2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Ethics statements name two different institutional boards (UT Southwestern in Methods, Children's National in the Ethics statement).",
+    "snippet": "The studies involving humans were approved by Children’s National Hospital IRB.",
+    "anchor": "Ethics statement",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42428241_Khaksari2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Methods name the UT Southwestern board as approver.",
+    "snippet": "The study protocol was approved by the Institutional Review Board (IRB) at University of Texas Southwestern (UTSW) Medical Center (Study# STU2022-0493).",
+    "anchor": "Methods, Participants",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42428241_Khaksari2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 4 (forest plots) and its tables: patients minus controls for HbO in the left prefrontal region reads 1.19 (-0.12 to 2.49), 1.43 (0.13 to 2.74) and 1.38 (0.08 to 2.69) for audio 0-, 1- and 2-back (positive = patients higher, p 0.075, 0.032, 0.038 uncorrected), with almost every other interval crossing zero; the visual task gives 1.34, 1.28, 1.08. Occipital deoxygenated haemoglobin is lower in patients (for example -1.30 and -1.26 for left occipital audio). The direction of the one clear HbO difference is patients HIGHER, not lower.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4a HbO LPFC T0 1.19 (-0.12,2.49), LPFC T1 1.43 (0.13,2.74), LPFC T2 1.38 (0.08,2.69); HbR LOL T0 -1.30 (-2.49,-0.11); table columns G1D Patients, Controls, Patients vs. Controls with p-values.",
+    "anchor": "Figure 4",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42428241/fnins-20-1838150-g004.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 3 (prefrontal time courses): in the patient row the left prefrontal HbO line sits at a flat positive offset of about 0.001 with one patient trace flat near 0.008 and no task-locked change in 0-back, 1-back or the visual tasks, while controls oscillate around zero on a scale about ten times smaller; for 2-back audio both groups show a late rise from about 200 s. The patient LPFC 'increase' therefore looks like a baseline offset in one or two traces, not a task response (a reading of the figure, not a stated analysis).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3a patients LPFC 0 Back Audio flat red line near +0.001 with a pale trace near +0.008; controls trace near zero; 2 Back Audio both groups rise after about 200 s.",
+    "anchor": "Figure 3",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42428241/fnins-20-1838150-g003.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 5 heat maps and table: LPFC HbO patients versus controls 1.33 (0.54 to 2.12) p = 0.001, Hedges g 1.61 for audio and 1.23 (0.44 to 2.02) p = 0.002 for visual; occipital deoxygenated haemoglobin lower in patients (-1.16, p = 0.007, g 1.32 audio); the figure reports unadjusted p-values and the correction status is not shown in the table.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5a N-back Audio all subsets table LPFC 1.33 (0.54,2.12) p=0.001 g=1.61; Figure 5b N-back Visual LPFC 1.23 (0.44,2.02) p=0.002.",
+    "anchor": "Figure 5",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42428241/fnins-20-1838150-g005.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figures 1, 2, 6, 7 and 8 opened: cap layout with six regions of interest; N-back trial design; cumulative-correct curves for patients (n = 7) and controls (n = 6) overlapping across 0-, 1- and 2-back; appendix time courses for parietal and occipital regions with the same offset pattern in the patient rows.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 cap layout LPFC RPFC LPA RPA LOL ROL; Figure 2 trial flow; Figure 6 cumulative correct responses vs time; Appendix figures parietal and occipital HbO and HbR.",
+    "anchor": "Figures 1, 2, 6, 7, 8",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42428241_mB.png",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13346240/fullTextXML returned HTTP 200 (88811 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}

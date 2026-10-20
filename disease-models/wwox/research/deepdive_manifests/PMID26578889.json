@@ -1,0 +1,271 @@
+{
+ "schema_version": 2,
+ "pmid": "26578889",
+ "doi": "10.3389/fncel.2015.00431",
+ "receipt": "FTR-20261019-26578889-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "A Seville neurophysiology group with the Barcelona glycogen-synthase laboratory; primary for the GYS1 Nestin-KO mouse and its electrophysiology, not for WWOX. Observation (field recordings in awake mice) is weighted above the mechanistic interpretation, which is untested."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND glycogen",
+    "count": 6,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "WWOX AND hypoxia",
+    "count": 24,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "hyperbaric oxygen AND seizure",
+    "count": 555,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches, not measurements."
+ },
+ "multihop": {
+  "references_enumerated": 45,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-direct reference; WWOX is not named in the article.",
+  "disposition": "No gene-direct references."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 26578889 --hops 1; paper_packet.py packet --pmid 26578889; fulltext_receipts.py status --pmid 26578889",
+  "hits": 0,
+  "note": "No record in any of the seven searched registry surfaces and no prior receipt; an empty result is a statement about that query over those files."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication type Journal Article.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 45,
+   "references_screened": 43,
+   "references_with_doi": 43,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID26578889_LopezRamos2015_PMC.xml",
+   "sha256": "3e20986484b7dbd6121a123e917dc3f6fcdd0fd7f071e2597199a4e0fa8362a9",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4621300/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "3e20986484b7dbd6121a123e917dc3f6fcdd0fd7f071e2597199a4e0fa8362a9"
+   }
+  },
+  {
+   "path": "files/figures/PMID26578889/fncel-09-00431-g001.jpg",
+   "sha256": "4c9134967b1b7a3fb543cd9ce08f8e00281d0616a19230dc6df850f303dc5f3d",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC4621300 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID26578889/fncel-09-00431-g002.jpg",
+   "sha256": "33ba51039776b560b9ff50f0d8efe6e0b48b27dbc0a23fd94eac060980ab3a1e",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC4621300 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID26578889/fncel-09-00431-g003.jpg",
+   "sha256": "df984e4fdbf5e9ecb616f336702cfb997d6f9502eb88452b5d43c0965f478547",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC4621300 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID26578889/fncel-09-00431-g004.jpg",
+   "sha256": "0694bdee854c088df2a2e4254721bcd9e8c5fc0d7aeb527fb62cc27bae3b1905",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC4621300 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID26578889/fncel-09-00431-g005.jpg",
+   "sha256": "63d49e1568be2e7b3bdbd882b844a5e99b75af7aadb7a564acfb123dc20a4626",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC4621300 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID26578889_m.png",
+   "sha256": "b684bab94a1ff1783226da6c3bc88c629238124f4352b4475473bdc8e483b078",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID26578889/fncel-09-00431-g001.jpg",
+    "extractor": {
+     "name": "ImageMagick montage",
+     "version": "system package",
+     "call": "montage fncel-09-00431-g00[1-5].jpg -tile 3x2 -geometry 700x"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "b684bab94a1ff1783226da6c3bc88c629238124f4352b4475473bdc8e483b078"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "System: five-month-old male mice with a brain-specific glycogen synthase knockout (GYS1 Nestin-KO) versus littermate controls; hippocampal CA1 recordings in awake mice. No WWOX.",
+    "snippet": "Five-month-old male mice were used for these experiments.",
+    "anchor": "Methods, Animal Studies",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26578889_LopezRamos2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Hypoxia is hypobaric, 405 mmHg (about 5000 m simulated altitude) for 60 minutes, not a therapeutic oxygen exposure.",
+    "snippet": "Animals were maintained at this altitude for a total of 60 min",
+    "anchor": "Methods, Experiments Performed in the Hypobaric Chamber",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26578889_LopezRamos2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Spectral result: in the 6-10 Hz band the knockout power exceeds control under hypobaric exposure (8.6 and 9.2 against 6.8 and 7.0), after no change within either group.",
+    "snippet": "the spectral power of LFPs in GYS1Nestin-KO were significantly (P ≤ 0.05) larger than those recorded in the WT group, during the 15 and 60 min hypobaric conditions",
+    "anchor": "Results, Effects of Hypoxia",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26578889_LopezRamos2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Synaptic result at baseline: the knockout CA3-CA1 synapse is already more excitable at ground level; hypoxia raises control excitability but the knockout differences vanish at 60 minutes and return 24 hours later.",
+    "snippet": "differences were abolished during the hypoxic episode, and recovered",
+    "anchor": "Results, paired-pulse paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26578889_LopezRamos2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The same paragraph's earlier sentence and the Figure 2 legend say recovery was seen at 24 hours, so the text gives two different recovery times for the same result.",
+    "snippet": "recovering 24 h later, although at higher intensities",
+    "anchor": "Results, input/output paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26578889_LopezRamos2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Kainate result: knockout mice showed more hippocampal seizures and more after-discharges (21.4 versus 6.25 percent before, 64.2 versus 25 percent after kainate).",
+    "snippet": "21.4% vs. 6.25% before, and 64.2% vs. 25% after kainate injection",
+    "anchor": "Results, Effects of Kainate Injection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26578889_LopezRamos2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Sample sizes differ between text and legends (14 control and 10 knockout in the Results text; n = 8 and n = 12 controls in Figure 2 and 3 legends; n = 16 and 14 in Figure 5).",
+    "snippet": "An initial number of 14 Control and 10 GYS1Nestin-KO mice were used.",
+    "anchor": "Results, first paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26578889_LopezRamos2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mechanistic statements are conjecture: possible roles of astrocytic potassium and glutamate uptake or of high-firing inhibitory neurons are offered, not tested; HIF is mentioned as a protective factor from other work.",
+    "snippet": "Alternatively, our results could be attributed to inhibitory neurons firing at very high frequency",
+    "anchor": "Discussion, epilepsy paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26578889_LopezRamos2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Direction of the conclusion: glycogen is protective in hypoxia and against seizures, on the basis of a loss-of-function allele only (no glycogen measurement, no rescue).",
+    "snippet": "Our results demonstrate the importance of brain glycogen in energetically challenging conditions.",
+    "anchor": "Discussion, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26578889_LopezRamos2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figures 1 to 5 opened: Fig 1 power spectra at 760 and 405 mmHg and 24 h after (asterisk at 6-10 Hz at 15 and 60 min); Fig 2 and 3 input/output curves and paired-pulse ratios (differences abolished at 60 min, back at 24 h); Fig 4 kainate-evoked seizure traces; Fig 5 train-stimulation after-discharges with bar charts of seizure percentage before and after kainate.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 spectra bars WT versus KO; Figure 2 and 3 amplitude and St2/St1 plots at four time points; Figure 4 LFP traces and spectra before and after kainate; Figure 5 fEPSP traces and seizure percentage bars.",
+    "anchor": "Figures 1-5",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID26578889_m.png",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC4621300/fullTextXML returned HTTP 200 (93703 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}

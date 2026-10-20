@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-38206902-01",
+ "study_id": {
+  "pmid": "38206902",
+  "doi": "10.1371/journal.pone.0295860"
+ },
+ "event_at": "2026-10-19T19:38:03Z",
+ "analysis_at": "2026-10-19T19:38:03Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, interventions batch 2026-10-19, task INTERV-H4-C-20261019, branch task/INTERV-H4-C-20261019; context_policy SOURCE_FIRST. Route: Europe PMC REST fullTextXML (open access) saved to the shared checkout files/fulltext; whole article and Table 1 read from a text rendering of the JATS up to the reference list (42 references counted, not read); the five figures and Table 1 opened in two montages at 900 px per panel; supplementary workbooks S1 to S3 were found byte-identical, converted to text by a scratch reader and inspected for structure and animal counts (sheets HI with 10 mice and LPS with 12 mice), not read row by row; the two docx supplements are reviewer-response letters and were opened only at their first lines. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID38206902_June2024_PMC.xml",
+ "source_fingerprint": "7db9b804a9cec9d4bc80e0e17d5b668c9a387f05b4ce4b4e2820f3e893f9153f",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID38206902.json",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "The supplementary workbook was inspected for structure and counts only (1983 text lines), so supplementary is declared not_read and the depth is partial. Neonatal mouse hypoxia-ischaemia model, hypoxia as the harm; no oxygen therapy arm; not WWOX evidence."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
