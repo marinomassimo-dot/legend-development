@@ -1,0 +1,305 @@
+{
+ "schema_version": 2,
+ "pmid": "35883580",
+ "doi": "10.3390/cells11142137",
+ "receipt": "FTR-20261019-35883580-01",
+ "landing": [
+  "FTR-20261019-35883580-01",
+  "wave4_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: PMC efetch XML and the bucket returned the body and figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: read directly."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no baseline claim is narrowed, reversed or removed and no MAJOR change is declared."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 66,
+  "publications_on_gene": 66,
+  "counts_measured": "PubMed esearch 2026-10-20: Chang NS[au] AND WWOX 66 (author who proposed the pY33 to pS14 model; Liu YA[au] AND WWOX 0).",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "weighting": "The group that originated the model reviews its own work; evidence for the model is from its own lines and mouse peptides, and the review is not independent confirmation.",
+  "note": "MDPI perspective article; self-citation is dense (reference list dominated by the same laboratory)."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "Chang NS[au] AND WWOX",
+    "route": "PubMed esearch count 2026-10-20",
+    "count": 66
+   }
+  ],
+  "note": "Count as returned by the API on the date."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 86,
+  "gene_direct_refs_in_source": [
+   "26499798",
+   "30619736",
+   "27999774",
+   "34359949",
+   "33255508",
+   "30158849",
+   "24550385",
+   "19366691",
+   "24932569",
+   "25331887",
+   "15070730",
+   "31315632",
+   "34140629",
+   "32000863",
+   "34831305",
+   "33914858",
+   "19918364",
+   "27845895",
+   "16061658",
+   "32764489",
+   "31752354",
+   "27339895",
+   "27551439",
+   "15064722",
+   "22634283",
+   "19465938",
+   "12514174",
+   "26041563",
+   "30154439",
+   "33946771",
+   "25703206",
+   "31123603",
+   "34015398",
+   "16219768",
+   "16438931",
+   "25802472",
+   "15026124",
+   "24503545",
+   "18371080",
+   "30214895",
+   "35107375"
+  ],
+  "enumeration_method": "<ref> elements with WWOX, Wwox, WOX1, WOREE or FRA16D in the citation text and a PMID; 0 more carry no PMID.",
+  "resolved": [
+   "26499798",
+   "30619736",
+   "27999774",
+   "34359949",
+   "33255508",
+   "30158849",
+   "24550385",
+   "19366691",
+   "24932569",
+   "25331887",
+   "15070730",
+   "31315632",
+   "34140629",
+   "32000863",
+   "34831305",
+   "33914858",
+   "19918364",
+   "27845895",
+   "16061658",
+   "32764489",
+   "31752354",
+   "27339895",
+   "27551439",
+   "15064722",
+   "22634283"
+  ],
+  "queued": [
+   "19465938",
+   "12514174",
+   "26041563",
+   "30154439",
+   "33946771",
+   "25703206",
+   "31123603",
+   "34015398",
+   "16219768",
+   "16438931",
+   "25802472",
+   "15026124",
+   "24503545",
+   "18371080",
+   "30214895",
+   "35107375"
+  ],
+  "note": "Resolved = already has a manifest or receipt; queued = listed for the Orchestrator as reading debt (this actor does not edit the queue)."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 35883580; registry_records.py get --pmid 35883580 --hops 0",
+  "hits": 0,
+  "finding": "No receipt before this one."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-20",
+  "route": "PMC efetch XML front matter; dependency_integrity.py screen",
+  "result": "No retraction, correction or expression of concern found.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [
+    {
+     "citing_relation": "Citation only: reference 29, listed among the signalling pathways in which WWOX takes part (HGF/MET); the review draws no data, method or argument from it and the retraction concerns image duplication in that paper.",
+     "doi": "10.1186/s12943-015-0389-y",
+     "nature": "Retraction",
+     "reason_verbatim": "Duplication of/in Image;Investigation by Company/Institution;Manipulation of Images;Objections by Author(s);Unreliable Results and/or Conclusions;",
+     "retraction_date": "8/15/2020 0:00",
+     "retraction_pmid": "32799870",
+     "verdict": "FLAGGED_RETRACTION"
+    }
+   ],
+   "noted": [],
+   "paper_verdict": "FLAGGED_RETRACTION",
+   "reference_source": "cache",
+   "references_declared": 86,
+   "references_screened": 83,
+   "references_with_doi": 83,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID35883580_Liu2022_PMC_r2.xml",
+   "sha256": "2b818e9726ce68fac8005531123252ee3c01c10e275b1da68c1f8c28b8875a8d",
+   "kind": "article_text",
+   "note": "PMC efetch JATS for PMC9323965 (Cells 2022, CC BY), 177,682 bytes.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "2b818e9726ce68fac8005531123252ee3c01c10e275b1da68c1f8c28b8875a8d",
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC9323965&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch JATS for PMC9323965 retrieved 2026-10-20, 177,682 bytes; the whole body is indexed locally for exact-text checks.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "SOURCE_FIRST. Whole text read; the eight figures (schemes and time-lapse montages) were not opened, so figures are captions_only and the depth is partial; no data in the review rests on them for the questions asked.",
+  "entries": [
+   {
+    "proposition": "The review states the model: pY33-WWOX is proapoptotic and anticancer and maintains normal physiology, while pS14-WWOX accumulates in cancer and Alzheimer lesions, and that Zfra suppression of S14 phosphorylation abolishes cancer growth and retards AD progression.",
+    "snippet": "Under pathological conditions, proapoptotic pY33-WWOX is downregulated and shifted to pS14-WWOX. pS14-WWOX is accumulated in the lesions of cancer and AD brains",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35883580_Liu2022_PMC_r2.xml",
+    "anchor": "Section 6, second paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "perspective review by the group that proposed the model; cell lines, 4T1 breast tumours, 3xTg mice, restated",
+     "genotype": "WWOX phosphoforms pY33 and pS14; WWOX loss",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "On the basis of the peptide experiments the review concludes that WWOX is not an authentic tumour suppressor; this is an interpretation of mouse peptide data from the authors laboratory.",
+    "snippet": "suggesting that WWOX is not an authentic tumor suppressor",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35883580_Liu2022_PMC_r2.xml",
+    "anchor": "Section 6, second paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "perspective review by the group that proposed the model; cell lines, 4T1 breast tumours, 3xTg mice, restated",
+     "genotype": "WWOX phosphoforms pY33 and pS14; WWOX loss",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "The review asserts that WWOX deficiency in human newborns causes neuronal migration disorders (heterotopia) that lead to seizures, citing two mouse papers (references 40 and 42); the 13-patient cohort read in this repository on 2026-10-19 does not use the word heterotopia.",
+    "snippet": "WWOX gene deficiency in newborns results in neuronal migration disorders (or neuronal heterotopia) that lead to epileptic seizures [40,42].",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35883580_Liu2022_PMC_r2.xml",
+    "anchor": "Section 4, first paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "perspective review by the group that proposed the model; cell lines, 4T1 breast tumours, 3xTg mice, restated",
+     "genotype": "WWOX phosphoforms pY33 and pS14; WWOX loss",
+     "comparator": "none"
+    },
+    "external_provenance": "Text of PMID 36779245 searched for heterotopia on 2026-10-19: grep -c -i heterotop returned 0"
+   },
+   {
+    "proposition": "The review states that whether pY33-WWOX is down- and pS14-WWOX up-regulated within the HYAL-2/WWOX/SMAD4 complex during disease progression is unknown, and that the proteomic partner profiles of the two phosphoforms remain to be established.",
+    "snippet": "Whether pY33-WWOX is downregulated and pS14-WWOX upregulated in the HYAL-2/WWOX/SMAD4 complex during disease progression is unknown.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35883580_Liu2022_PMC_r2.xml",
+    "anchor": "Section 12, first paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "perspective review by the group that proposed the model; cell lines, 4T1 breast tumours, 3xTg mice, restated",
+     "genotype": "WWOX phosphoforms pY33 and pS14; WWOX loss",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "No measurement of pY33 or pS14 in any WWOX loss-of-function tissue is reported: the model is built on tumour lines, 4T1 spheres and triple-transgenic AD mice, and the review gives no data from WWOX-null, hypomorphic or patient material.",
+    "snippet": "Endogenous pS14-WWOX protein is accumulated in the lesions of growing tumors and AD brains [50,51].",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35883580_Liu2022_PMC_r2.xml",
+    "anchor": "Section 12, first paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "perspective review by the group that proposed the model; cell lines, 4T1 breast tumours, 3xTg mice, restated",
+     "genotype": "WWOX phosphoforms pY33 and pS14; WWOX loss",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "Co-administration of the two peptides (Zfra4-10 with WWOX7-21) nullified each others function and enhanced tumour growth in mice, a negative result for combination use.",
+    "snippet": "when mice receive both Zfra4-10 and WWOX7-21 peptides in combination via tail vein injections, both peptides nullify each other’s function, which leads to enhanced tumor growth [53].",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35883580_Liu2022_PMC_r2.xml",
+    "anchor": "Section 15, second paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "perspective review by the group that proposed the model; cell lines, 4T1 breast tumours, 3xTg mice, restated",
+     "genotype": "WWOX phosphoforms pY33 and pS14; WWOX loss",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "The STRING analysis in the review returns five first-level WWOX interactors (TP53, ERBB4, DVL2, FAM189B, WBP2) and the review notes that the approach shows no domain-specific or affinity information.",
+    "snippet": "By STRING analysis (https://string-db.org/cgi/network?taskId=brQHTnXWILzL&sessionId=b73ctYMesgwG) (accessed on 19 June 2022), the first level of WWOX-binding protein network reveals that WWOX has connection with 5 interactors",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35883580_Liu2022_PMC_r2.xml",
+    "anchor": "Section 5",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "perspective review by the group that proposed the model; cell lines, 4T1 breast tumours, 3xTg mice, restated",
+     "genotype": "WWOX phosphoforms pY33 and pS14; WWOX loss",
+     "comparator": "none"
+    }
+   }
+  ]
+ }
+}
