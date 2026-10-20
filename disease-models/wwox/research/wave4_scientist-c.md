@@ -129,3 +129,28 @@ any one-carbon, folate, or amino-acid statement about WWOX; any neural content.
 **Effect on the model.** One-carbon and amino-acid axes stay "no WWOX evidence"; the paper adds a
 weak, unreplicated, tumour-line association of WWOX copy number and expression with alkylator sensitivity.
 Class MINOR.
+
+---
+
+## 5. PMID 22842668 — Płuciennik 2012, genetic alterations of WWOX in Wilms' tumour (WWOX-direct, W2 kidney axis; tumour genetics) — receipt FTR-20261020-22842668-01
+
+**What it MEASURES.** System: 23 resected Wilms' tumours from children (Lodz, Wroclaw). Readouts: WWOX and ten other
+transcripts by (semi-nested) real-time PCR against a reference RNA, two 16q microsatellites for LOH,
+promoter methylation by a restriction-digestion qPCR assay, a six-tumour western blot. No normal-kidney
+comparator, no function, no renal or metabolic measurement.
+
+**Question and answer.** What is measured and is there renal or metabolic content? Alterations: LOH,
+promoter methylation, expression. None of the readouts is physiological. Corrections the text-level reading would
+miss: the "LOH in 30.4%" is the observed hemizygosity at the intron-8 marker; Table I subtracts a population
+homozygosity of 26% and gives a predicted LOH of 4.4% (about one tumour) at intron 8 and 0 at intron 1, so the
+statement that LOH "did not influence" expression concerns a very small group. Methylation, seen in about 3 and 2
+tumours, goes with lower expression (15.9 vs 4.0, P = 0.036; 14.9 vs 0.8, P = 0.0037). The expression
+assay is a 77-cycle semi-nested PCR; the six-sample blot (Figure 1) does not show the 40-280-fold mRNA
+difference at protein level. Table II (BCL2, BCL2/BAX, TP73, ERBB4 JM-a, EGFR positive; both cyclins -0.66 with an
+identical printed coefficient and P value) is co-expression in tumour with no correction for eleven genes.
+
+**What it does not support.** Any kidney-function, hormonal-metabolism or biochemical statement (the only metabolism
+word is an Introduction citation); a clinical or prognostic WWOX effect (no correlation with age, stage or risk);
+loss of heterozygosity as a mechanism at this sample size.
+
+**Effect on the model.** Kidney axis stays "tumour genetics only, no renal-function evidence". Class MINOR.
