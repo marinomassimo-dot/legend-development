@@ -302,3 +302,28 @@ CNS-specific data: this is the one candidate item and the lead is real but weak.
 co-occurrence (hypothesis tier, no direction known): G6PD(x) and NFE2L2 appear in this table and in the
 early-passage Wwox-null mouse fibroblast redox heatmap read in section 3. Candidate:
 `CC-20261019-SCIENTIST-C-HELD-01` (MINOR) and a discovery lead.
+
+---
+
+## 10. PMID 33958783 — Liu 2021 Nature Genetics (progression to dementia in Parkinson's disease; WWOX is one of three nominated loci) — receipt FTR-20261019-33958783-02
+
+**What it MEASURES.** A genome-wide survival analysis in Parkinson's disease cohorts (4,872 patients,
+36,123 visits; discovery 2,650 patients) for progression to Parkinson's disease dementia, with replication
+and a polygenic hazard score. WWOX enters through imputed common or low-frequency non-coding variants.
+
+**Question and answer.** The supplement was not on disk; it was acquired from the PMC OA bucket and read.
+(1) The selection row calls the WWOX locus "an AD progression signal": the disease is Parkinson's
+disease dementia. (2) Supplementary Table 3 holds a SECOND WWOX-region variant, rs142789964
+(chr16 78.52 Mb; HR 3.49, 2.25-5.42; discovery P 2.72e-8; replication P 0.59; combined 1.95e-6) that is
+genome-wide significant in discovery and does not replicate, about 240 kb from the main-text rs8050111
+(HR 2.12; discovery 1.08e-6, replication 0.01, combined 2.37e-8). The two signals have opposite
+discovery/replication profiles; the Manhattan plot's labelled WWOX peak (Supplementary Figure 4a) is
+the unreplicated one. (3) Supplementary Data 1 (97 susceptibility variants against progression) has no
+WWOX-region row. (4) No metabolic annotation appears anywhere in the supplement.
+
+**What it does not support.** A WWOX mechanism; a coding or loss-of-function effect; any metabolic or
+epilepsy statement; a single "WWOX locus" in this paper.
+
+**Effect on the model.** None for WWOX-DEE; for the registry, the locus is two signals with unreplicated
+discovery strength on one and weak replication on the other, and the disease label in the selection
+file needs correcting. MINOR; no baseline claim touched.
