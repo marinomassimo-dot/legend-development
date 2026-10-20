@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-39006838-01",
+ "study_id": {
+  "pmid": "39006838",
+  "doi": "10.7150/ijms.97164"
+ },
+ "analysis_at": "2026-10-20T06:03:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a (Scientist A), interventions batch 2026-10-19 groups H1/H2, task INTERV-H1-A-20261019 on branch task/INTERV-H1-A-20261019, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN. Route: Europe PMC JATS body (PMC11241092) including the floats group (Tables 1-4) and the four figure images from the Europe PMC supplementaryFiles zip into the root files/ tree; Figures 1-4 opened at native resolution and Figure 1E and Figure 3D cropped and enlarged side by side for a direct comparison (viewing only); no supplementary document. Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a staged JSON for the Orchestrator and not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID39006838_Hu2024_PMC.xml",
+ "source_fingerprint": "52d6b819cc98b24aa76879e2b4cd22a417479d20494763ec3eb52ee1cb1b55c9",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID39006838.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID39006838.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "manifest",
+  "Figures 1-4 inspected as images; Figure 1E and 3D compared after cropping",
+  "Tables 1-4 read from the JATS"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

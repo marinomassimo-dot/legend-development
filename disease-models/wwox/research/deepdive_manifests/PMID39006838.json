@@ -1,0 +1,418 @@
+{
+ "schema_version": 2,
+ "pmid": "39006838",
+ "doi": "10.7150/ijms.97164",
+ "receipt": "FTR-20261019-39006838-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID39006838.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A Fujian children's hospital and medical university group; primary for its own eight-patient series and cell experiments; clinical series small; functional claims rest on a variant of uncertain significance."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "COL4A2 AND epilepsy",
+    "count": 25,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND collagen",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts at the stated date."
+ },
+ "multihop": {
+  "references_enumerated": 37,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 39006838 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 39006838: publication types ['Journal Article']; correction/retraction link markers in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "UNSCREENABLE_NO_REFERENCE_LIST",
+   "reference_source": "cache",
+   "references_declared": 0,
+   "references_screened": 0,
+   "references_with_doi": 0,
+   "schema": "retraction_check.dependencies/1",
+   "screened": false,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39006838_Hu2024_PMC.xml",
+   "sha256": "52d6b819cc98b24aa76879e2b4cd22a417479d20494763ec3eb52ee1cb1b55c9",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC11241092: abstract, body, Tables 1-4 and four figure legends, 37 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11241092/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39006838/ijmsv21p1756g001.jpg",
+   "sha256": "9e8a17477821ed7de57dd6705f687924d6fc9a19b0f68716f3c84ce0f8155305",
+   "kind": "figure",
+   "note": "Figure 1 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11241092/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39006838/ijmsv21p1756g002.jpg",
+   "sha256": "29bb128b6a1fa23b1c47badc74f18ecdd99ea3e9b67fc713cb751ddbf87c3fce",
+   "kind": "figure",
+   "note": "Figure 2 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11241092/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39006838/ijmsv21p1756g003.jpg",
+   "sha256": "0c8639770f53e502d92266f8309a836636289303904a8bf21b5895ff5f891ca8",
+   "kind": "figure",
+   "note": "Figure 3 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11241092/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39006838/ijmsv21p1756g004.jpg",
+   "sha256": "62457b983bf92743f87f9bf585e92b7f2fb6518c164f72afa2f59cb9823115fc",
+   "kind": "figure",
+   "note": "Figure 4 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11241092/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC11241092/fullTextXML returned HTTP 200 (105910 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "Cohort: eight patients with COL4A2-related infantile epileptic spasm syndrome, trio exome sequencing, ACMG classification; patients with significant structural abnormality excluded.",
+    "snippet": "Patients with epilepsy caused by intrauterine infection, perinatal brain injury, metabolic disease, or significant brain structural abnormalities were not included in the study.",
+    "anchor": "Materials and methods, Patients",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39006838_Hu2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "eight children with COL4A2 variants and infantile epileptic spasm syndrome, one Chinese hospital, CSF cytokines",
+     "endpoint": "CSF IL-1beta, IL-6 before and after treatment; seizure outcome"
+    }
+   },
+   {
+    "proposition": "Genetics: eight missense variants, seven likely pathogenic and one (patient 7, c.1838G>T, p.G613V) of uncertain significance; the variant chosen for the functional work is the uncertain one, inherited from a mother with intellectual disability but no epilepsy.",
+    "snippet": "Genetic analysis revealed eight missense mutations related to Col4a2 infantile epileptic spasm syndrome, seven of which are likely pathogenic and the other one is of uncertain significance (Table 2).",
+    "anchor": "Results, Patient demographics",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39006838_Hu2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "eight children with COL4A2 variants and infantile epileptic spasm syndrome, one Chinese hospital, CSF cytokines",
+     "endpoint": "CSF IL-1beta, IL-6 before and after treatment; seizure outcome"
+    }
+   },
+   {
+    "proposition": "Table 2 gives patient 7 as c.1838G>T p.G613V, heterozygous, inherited from the mother, 'uncertain significance', novel.",
+    "snippet": "7Chr13: 111117813 COL4A2 c.1838G>Tp.G613VMissenseHeterozygousMotherNM_001846.4Uncertain significanceN",
+    "anchor": "Table 2",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID39006838_Hu2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "eight children with COL4A2 variants and infantile epileptic spasm syndrome, one Chinese hospital, CSF cytokines",
+     "endpoint": "CSF IL-1beta, IL-6 before and after treatment; seizure outcome"
+    }
+   },
+   {
+    "proposition": "The authors interpret the maternal inheritance as incomplete penetrance and 'subsequently focused our validation efforts on the c.1838G>T site'.",
+    "snippet": "Subsequently, we focused our validation efforts on the c.1838G>T site.",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39006838_Hu2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "eight children with COL4A2 variants and infantile epileptic spasm syndrome, one Chinese hospital, CSF cytokines",
+     "endpoint": "CSF IL-1beta, IL-6 before and after treatment; seizure outcome"
+    }
+   },
+   {
+    "proposition": "Text: CSF cytokines were elevated in six patients before seizure freedom, IL-1beta and IL-6 raised; peripheral blood cytokines normal.",
+    "snippet": "Cerebrospinal fluid cytokine levels were elevated in 6 patients without infection before they became seizure free, and we detected increased IL-1β and IL-6 levels in these patients (Table 3).",
+    "anchor": "Results, Patient demographics",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39006838_Hu2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "eight children with COL4A2 variants and infantile epileptic spasm syndrome, one Chinese hospital, CSF cytokines",
+     "endpoint": "CSF IL-1beta, IL-6 before and after treatment; seizure outcome"
+    }
+   },
+   {
+    "proposition": "Table 3 lists six patients with IL-1beta 42.3, 10.5, 25.9, 36.9, 33.1 and 44.7 pg/mL (reference 0-12.1); patient 3 is 10.5, within range; IL-6 for patient 4 is 18.7 (reference up to 20.0).",
+    "snippet": "IL-1β (0-12.1)IL-2 (0-11.4)IL-4 (0-12.9)IL-5 (0-3.4)IL-6 (0-20.0)",
+    "anchor": "Table 3",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID39006838_Hu2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "eight children with COL4A2 variants and infantile epileptic spasm syndrome, one Chinese hospital, CSF cytokines",
+     "endpoint": "CSF IL-1beta, IL-6 before and after treatment; seizure outcome"
+    }
+   },
+   {
+    "proposition": "Text: after treatment cytokines decreased in four patients whose seizures were controlled and stayed elevated in uncontrolled patients; Table 4 lists patients 3, 4, 5 and 7, two of whom (5 and 7) have uncontrolled seizures in Table 1.",
+    "snippet": "Following anti-seizure treatment, cytokine levels in the cerebrospinal fluid decreased in 4 patients whose seizures were controlled but remained elevated in patients with uncontrolled seizures (Table 4).",
+    "anchor": "Results, Patient demographics",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39006838_Hu2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "eight children with COL4A2 variants and infantile epileptic spasm syndrome, one Chinese hospital, CSF cytokines",
+     "endpoint": "CSF IL-1beta, IL-6 before and after treatment; seizure outcome"
+    }
+   },
+   {
+    "proposition": "Table 4 reports four patients' ten non-IL-1beta/IL-6 cytokines at the same values, to one decimal, as their Table 3 before-treatment rows (for example patient 4: IL-2 3.3, IL-4 3.2, IL-5 1.3 in both).",
+    "snippet": "Levels of cerebrospinal fluid cytokines after multiple treatments in our 6 patients",
+    "anchor": "Table 4 title (the table states six patients but lists four)",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID39006838_Hu2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "eight children with COL4A2 variants and infantile epileptic spasm syndrome, one Chinese hospital, CSF cytokines",
+     "endpoint": "CSF IL-1beta, IL-6 before and after treatment; seizure outcome"
+    }
+   },
+   {
+    "proposition": "Initial EEG showed hypsarrhythmia or multifocal epileptiform abnormality in all eight patients, with two later normalised.",
+    "snippet": "Initial EEG findings showed hypsarrhythmia or multiple and multifocal sharp waves, spike waves, sharp slow waves, or spike slow waves.",
+    "anchor": "Results, Patient demographics",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39006838_Hu2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "eight children with COL4A2 variants and infantile epileptic spasm syndrome, one Chinese hospital, CSF cytokines",
+     "endpoint": "CSF IL-1beta, IL-6 before and after treatment; seizure outcome"
+    }
+   },
+   {
+    "proposition": "The in vitro model: LPS 5 ug/mL for 48 h in every group, with adenoviral empty vector, wild-type or mutant Col4a2 and WP1066 as comparators.",
+    "snippet": "LPS group (cells stimulated with 5 μg/mL LPS for 48 hours to induce neuroinflammation)",
+    "anchor": "Materials and methods, Cell culture and treatment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39006838_Hu2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "rat CTX-TNA astrocyte line and neonatal rat primary astrocytes, LPS 5 ug/mL 48 h, adenoviral Col4a2 wild type or p.G613V overexpression, WP1066",
+     "endpoint": "GFAP IF (50 cells per group, three experiments), ELISA IL-1beta, IL-6, TNF-alpha, western blots"
+    }
+   },
+   {
+    "proposition": "Units: GFAP intensity in 50 cells per group from three experiments; ELISA with three biological replicates; one-way ANOVA.",
+    "snippet": "The fluorescence intensity of GFAP was measured in 5 different groups, with 50 CTX-TNA cells per group from 3 repeated experiments.",
+    "anchor": "Materials and methods, Immunofluorescence",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39006838_Hu2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "rat CTX-TNA astrocyte line and neonatal rat primary astrocytes, LPS 5 ug/mL 48 h, adenoviral Col4a2 wild type or p.G613V overexpression, WP1066",
+     "endpoint": "GFAP IF (50 cells per group, three experiments), ELISA IL-1beta, IL-6, TNF-alpha, western blots"
+    }
+   },
+   {
+    "proposition": "Text: GFAP expression rose after the mutation in primary astrocytes by IF and western, indicating increased astrocyte activity.",
+    "snippet": "Our results revealed a significant increase in GFAP expression following Col4a2 mutation in both CTX-TNA cells (IF: p<0.001; Fig. 1A, B, F) and primary astrocytes (IF: p = 0.0017; Fig. 3A, B, F), indicating increased astrocyte activity.",
+    "anchor": "Results, Col4a2 mutation promotes astrocyte activation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39006838_Hu2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "rat CTX-TNA astrocyte line and neonatal rat primary astrocytes, LPS 5 ug/mL 48 h, adenoviral Col4a2 wild type or p.G613V overexpression, WP1066",
+     "endpoint": "GFAP IF (50 cells per group, three experiments), ELISA IL-1beta, IL-6, TNF-alpha, western blots"
+    }
+   },
+   {
+    "proposition": "The wild-type vector is said to reduce inflammation, suggesting a protective role for the wild-type gene; the comparison is overexpression of wild type against overexpression of the variant in LPS-stimulated cells, with no knockdown or null.",
+    "snippet": "These findings suggest that excessive astrocyte activation can trigger inflammatory responses. Mutation of Col4a2 enhanced the secretion of inflammatory cytokines, while overexpression of Col4a2Wt protected against inflammation.",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39006838_Hu2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "rat CTX-TNA astrocyte line and neonatal rat primary astrocytes, LPS 5 ug/mL 48 h, adenoviral Col4a2 wild type or p.G613V overexpression, WP1066",
+     "endpoint": "GFAP IF (50 cells per group, three experiments), ELISA IL-1beta, IL-6, TNF-alpha, western blots"
+    }
+   },
+   {
+    "proposition": "Authors say the mechanism by which the variant activates JAK/STAT is unclear, the sample is small and the methods need to be more comprehensive; endoplasmic-reticulum stress is proposed without measurement.",
+    "snippet": "However, the specific mechanism by which Col4a2 mutation triggers JAK/STAT activation remains unclear.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39006838_Hu2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "rat CTX-TNA astrocyte line and neonatal rat primary astrocytes, LPS 5 ug/mL 48 h, adenoviral Col4a2 wild type or p.G613V overexpression, WP1066",
+     "endpoint": "GFAP IF (50 cells per group, three experiments), ELISA IL-1beta, IL-6, TNF-alpha, western blots"
+    }
+   },
+   {
+    "proposition": "Conclusion: the findings suggest an inflammatory microenvironment may define COL4A2 as a 'type VII' DEE gene class.",
+    "snippet": "Our results suggest that an inflammatory microenvironment may be induced by mutations in Col4a2, which could be categorized as type VII in the functions classification of genes causing DEE.",
+    "anchor": "Conclusion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39006838_Hu2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "rat CTX-TNA astrocyte line and neonatal rat primary astrocytes, LPS 5 ug/mL 48 h, adenoviral Col4a2 wild type or p.G613V overexpression, WP1066",
+     "endpoint": "GFAP IF (50 cells per group, three experiments), ELISA IL-1beta, IL-6, TNF-alpha, western blots"
+    }
+   },
+   {
+    "proposition": "Figure 1 (CTX-TNA cells): GFAP immunofluorescence strongest in the LPS plus mutant group; bars: GFAP intensity about 58 (control), 104, 103, 81 (wild type) and 141 (mutant); IL-1beta about 8, 22, 23, 18 and 30; TNF-alpha about 68, 138, 132, 96 and 164; IL-6 about 25, 63, 64, 52 and 81 pg/mL; western blots with one lane per group and no replicate quantification.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 A GFAP/DAPI images, B GFAP bars, C IL-1beta, D TNF-alpha, E IL-6, F western blots.",
+    "anchor": "Figure 1, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39006838/ijmsv21p1756g001.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "rat CTX-TNA astrocyte line and neonatal rat primary astrocytes, LPS 5 ug/mL 48 h, adenoviral Col4a2 wild type or p.G613V overexpression, WP1066",
+     "endpoint": "GFAP IF (50 cells per group, three experiments), ELISA IL-1beta, IL-6, TNF-alpha, western blots"
+    }
+   },
+   {
+    "proposition": "Figure 2 (CTX-TNA cells with WP1066): GFAP intensity in the mutant plus WP1066 group returns to about 83, p-JAK2 and p-STAT3 bands weaker; the five shared groups repeat the Figure 1 values (control 58, LPS 104, NC 103, wild type 81, mutant 141).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 A images six groups, B GFAP bars with WP1066, C western blots.",
+    "anchor": "Figure 2, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39006838/ijmsv21p1756g002.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "rat CTX-TNA astrocyte line and neonatal rat primary astrocytes, LPS 5 ug/mL 48 h, adenoviral Col4a2 wild type or p.G613V overexpression, WP1066",
+     "endpoint": "GFAP IF (50 cells per group, three experiments), ELISA IL-1beta, IL-6, TNF-alpha, western blots"
+    }
+   },
+   {
+    "proposition": "Figure 3 (primary astrocytes): GFAP intensity about 59, 117, 114, 84 and 134; IL-1beta about 11, 21, 22, 18 and 27; the GFAP western blot (3F) shows near-equal bands across the five groups although the text reports a GFAP increase; the IL-6 panel (3D) gives bars of about 25, 63, 65, 52 and 82 pg/mL with matching significance marks, which are indistinguishable at this resolution from the CTX-TNA IL-6 panel in Figure 1E (about 25, 63, 64, 52, 81) although the two panels are from different cell systems; TNF-alpha differs (about 82, 161, 164, 118, 188).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3 A-B GFAP, C IL-1beta, D IL-6, E TNF-alpha, F western blot; Fig 1E and 3D cropped and compared.",
+    "anchor": "Figure 3, read at native resolution (Figure 1E and 3D compared after cropping and enlargement)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39006838/ijmsv21p1756g003.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "rat CTX-TNA astrocyte line and neonatal rat primary astrocytes, LPS 5 ug/mL 48 h, adenoviral Col4a2 wild type or p.G613V overexpression, WP1066",
+     "endpoint": "GFAP IF (50 cells per group, three experiments), ELISA IL-1beta, IL-6, TNF-alpha, western blots"
+    },
+    "qualifies": "entries[11]",
+    "qualifies_needle": "significant increase in GFAP expression following Col4a2 mutation"
+   },
+   {
+    "proposition": "Figure 4 (primary astrocytes with WP1066): GFAP intensity falls to about 93 with the inhibitor; iNOS, COX-2, IL-1beta, IL-6 and p-STAT3 bands weaker in the WP1066 lane; one blot lane per group.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 4 A images six groups, B GFAP bars, C western blots.",
+    "anchor": "Figure 4, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39006838/ijmsv21p1756g004.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "rat CTX-TNA astrocyte line and neonatal rat primary astrocytes, LPS 5 ug/mL 48 h, adenoviral Col4a2 wild type or p.G613V overexpression, WP1066",
+     "endpoint": "GFAP IF (50 cells per group, three experiments), ELISA IL-1beta, IL-6, TNF-alpha, western blots"
+    }
+   }
+  ]
+ }
+}
