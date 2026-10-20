@@ -79,3 +79,26 @@ a small unreplicated FISH series with an unspecified call threshold.
 
 **Effect on the model.** Liver steatosis stays "no WWOX evidence" (tumour genomics only). The count and
 colour inconsistencies are logged in the commit candidate. Class MINOR.
+
+---
+
+## 3. PMID 41141138 — Sharma 2025, WWOX and RUNX2 immunohistochemistry in childhood Ewing sarcoma, a seven-case pilot (WWOX-direct, W2 bone axis; tumour biomarker) — receipt FTR-20261020-41141138-01
+
+**What it MEASURES.** System: FFPE tissue from seven Ewing sarcoma cases and five unspecified controls
+(one Indian centre, 2019-2024), IHC intensity scores for WWOX and RUNX2 with ImageJ, a Kaplan-Meier curve of
+overall survival. No genotype, no function, no neural tissue.
+
+**Question and answer.** What is plotted for WWOX and RUNX2 and what does it support for the RUNX2 link?
+WWOX does not differ (medians about 204 versus 197, P = 0.876); RUNX2 is higher in cases (about 238 versus
+155, P = 0.005). The paper therefore reports no WWOX-RUNX2 relationship and no response endpoint, although
+its title promises both; the control tissue is never named; Figure 1c-d are unmatched fields. Survival
+statistics are internally inconsistent: the caption gives a median OS of 45 months, the curve crosses 50% at
+about 8 months, and it plateaus at about 29% (two survivors) while Table 1 and the text give six deaths
+of seven. The authors themselves call the WWOX result a pilot-power negative.
+
+**What it does not support.** A WWOX role in Ewing sarcoma; a WWOX-RUNX2 inverse relation in this tissue;
+any prognostic statement for WWOX or RUNX2 (no stratified survival); any bone-metabolism, calcium or vitamin D
+content. It cannot be cited for the RUNX2 arm of the Wwox-null bone phenotype beyond "no WWOX change at n = 7".
+
+**Effect on the model.** None; the bone axis stays "Wwox-null osteoblast and RUNX2 arm already read; no
+supplementation or bone-metabolism datum in humans". Class MINOR.

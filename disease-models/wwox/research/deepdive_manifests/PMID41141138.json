@@ -1,0 +1,245 @@
+{
+ "schema_version": 2,
+ "pmid": "41141138",
+ "doi": "10.7759/cureus.93160",
+ "receipt": "FTR-20261020-41141138-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/wave4_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-W4-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Europe PMC REST fullTextXML and the PMC OA open-data bucket for figures; no supplement exists."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true,
+   "reason": "Run inline under the dispatch brief; this manifest and the note carry what the skill would produce."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate; the shared discovery ledger is written by the Orchestrator."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "An orthopaedic surgery and pathology group at one Indian centre using WWOX and RUNX2 as tumour biomarkers in a seven-patient pilot; not a WWOX group and not a neurological-disease group. Observation (IHC scores, a Kaplan-Meier curve) is weighted above interpretation (RUNX2 as prognostic biomarker), which the data cannot carry at this size, and the survival statistics are internally inconsistent."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND Ewing",
+    "count": 1,
+    "source": "PubMed ESearch 2026-10-20"
+   },
+   {
+    "query": "WWOX AND RUNX2",
+    "count": 12,
+    "source": "PubMed ESearch 2026-10-20"
+   },
+   {
+    "query": "WWOX AND osteosarcoma",
+    "count": 28,
+    "source": "PubMed ESearch 2026-10-20"
+   }
+  ],
+  "note": "Counts are record matches, not measurements of the pair."
+ },
+ "multihop": {
+  "references_enumerated": 22,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [
+   {
+    "queue": "CC-20261019-SCIENTIST-C-W4-01",
+    "why": "References 4 (an Egyptian RUNX2/WWOX osteosarcoma biomarker study), 6 (Del Mare and Aqeilan, WWOX inhibits osteosarcoma metastasis by modulating RUNX2), 20 and 21 are gene-direct; the reference markup carries no pub-id, so no PMID is asserted here rather than taken from a search; not opened."
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41141138 --hops 0; fulltext_receipts.py status --pmid 41141138; ls receipt_staging/*",
+  "hits": 1,
+  "note": "The selection file records an identity record without a receipt; no staged receipt exists."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-20 by PubMed EFetch: publication type Journal Article; no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 22,
+   "references_screened": 19,
+   "references_with_doi": 19,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41141138_Sharma2025_PMC.xml",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML for PMC12552799 (HTTP 200, 61,329 bytes).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12552799/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_rest_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "2c16619588748cdb9d5ea284640f95b348d5a513c9b2bee1c019f24ead075de7"
+  },
+  {
+   "path": "files/figures/PMID41141138/cureus-0017-00000093160-i01.jpg",
+   "kind": "figure",
+   "note": "Figure 1, PMC OA open-data bucket.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12552799.1/cureus-0017-00000093160-i01.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "6e87dd40ddfc7ac0951d10cf81734596e7a9489017955bec0abc510779c7596e"
+  },
+  {
+   "path": "files/figures/PMID41141138/cureus-0017-00000093160-i02.jpg",
+   "kind": "figure",
+   "note": "Figure 2, PMC OA open-data bucket.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12552799.1/cureus-0017-00000093160-i02.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "2a26f2d40b3242b1a76355b0bd8a534c5a61951b900f1b633fa7f5fc4f310a09"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12552799/fullTextXML returned HTTP 200 (61,329 bytes) on 2026-10-20; the declared artefact is that response.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a supplement text layer or a figure image.",
+  "entries": [
+   {
+    "proposition": "WWOX protein by IHC does NOT differ between seven Ewing sarcoma cases and five controls (medians about 204 versus 197, P = 0.876); RUNX2 is higher in cases (about 238 versus 155, P = 0.005). The record's title wording ('intertwined relationship ... biomarker for predicting response') is not what the data show: no WWOX difference, no WWOX-RUNX2 correlation reported, no response endpoint.",
+    "snippet": "In Table 2, the median expression levels of WWOX did not exhibit a statistically significant difference between the cases (203.78; range: 151.89-237.61) and the controls (197.02; range: 157.86-241.34; p = 0.876).",
+    "surface": "body",
+    "anchor": "Results, Differential expression of WWOX and RUNX2 proteins in tumor vs. control tissue",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "FFPE tissue from 7 Ewing sarcoma cases and 5 unspecified control samples, Lucknow, India, immunohistochemistry",
+     "genotype": "WWOX and RUNX2 protein, no genotype",
+     "endpoint": "IHC intensity score, Mann-Whitney U"
+    },
+    "artifact": "files/fulltext/PMID41141138_Sharma2025_PMC.xml"
+   },
+   {
+    "proposition": "The control tissue is never identified: Methods say the control samples 'were subjected to identical procedures', with no tissue of origin, site, age or diagnosis named, so the RUNX2 and WWOX comparisons rest on an unspecified comparator.",
+    "snippet": "The control samples were subjected to identical procedures according to the standard protocol.",
+    "surface": "body",
+    "anchor": "Methods, Specimen and Tissue Collection",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "FFPE tissue from 7 Ewing sarcoma cases and 5 unspecified control samples, Lucknow, India, immunohistochemistry",
+     "genotype": "WWOX and RUNX2 protein, no genotype",
+     "endpoint": "comparator definition"
+    },
+    "artifact": "files/fulltext/PMID41141138_Sharma2025_PMC.xml"
+   },
+   {
+    "proposition": "Figure 1 (hand reading): panels a and b are per-patient score histograms (7 cases, 5 controls; WWOX scores spread from about 150 to 250 in both groups with overlap, RUNX2 cases about 210-250 against controls about 120-215); panels c and d are three IHC fields per group, not matched pairs, with visibly different tissue architecture and staining background between control and case fields and no scale bar. The panel supports the direction of the table and nothing about WWOX-RUNX2 co-variation.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1a-d, IHC score histograms for WWOX and RUNX2 (cases versus controls) and representative IHC fields.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41141138/cureus-0017-00000093160-i01.jpg",
+    "anchor": "Figure 1a-d, native JPEG",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "FFPE tissue from 7 Ewing sarcoma cases and 5 unspecified control samples, Lucknow, India, immunohistochemistry",
+     "genotype": "WWOX and RUNX2 protein, no genotype",
+     "endpoint": "IHC scores and fields"
+    },
+    "found_or_sought": "sought - question: what is plotted for WWOX and RUNX2"
+   },
+   {
+    "proposition": "The Kaplan-Meier caption states a median overall survival of 45 months and the text states six of seven patients died.",
+    "snippet": "Time origin = date of confirmed diagnosis; Median OS = 45 months.",
+    "surface": "body",
+    "anchor": "Figure 2 caption",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "FFPE tissue from 7 Ewing sarcoma cases and 5 unspecified control samples, Lucknow, India, immunohistochemistry",
+     "genotype": "WWOX and RUNX2 protein, no genotype",
+     "endpoint": "overall survival"
+    },
+    "artifact": "files/fulltext/PMID41141138_Sharma2025_PMC.xml"
+   },
+   {
+    "proposition": "Figure 2 (hand reading): the curve steps from 100% to about 86% (month 3), 71% (month 6), 43% (month 8) and 29% (month 29) and then plateaus at about 29% to month 50, with numbers at risk 7, 3, 3, 2, 1, 1. The median (the time the curve crosses 50%) is about 8 months, not 45; the plateau at 29% implies two censored patients, whereas Table 1 and the text give six deaths and one survivor (a plateau would then be 14%, or the curve ends at zero). Caption, table and curve cannot all be right. No survival is stratified by WWOX or RUNX2 level.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2, Kaplan-Meier overall survival with confidence band and numbers at risk, seven patients.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41141138/cureus-0017-00000093160-i02.jpg",
+    "anchor": "Figure 2, native JPEG",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[3]",
+    "qualifies_needle": "Median OS = 45 months",
+    "experimental_context": {
+     "system": "FFPE tissue from 7 Ewing sarcoma cases and 5 unspecified control samples, Lucknow, India, immunohistochemistry",
+     "genotype": "WWOX and RUNX2 protein, no genotype",
+     "endpoint": "Kaplan-Meier survival"
+    },
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "The authors' own limitation: seven cases, hypothesis-generating, WWOX result to be read cautiously. WWOX is therefore a negative here at pilot power.",
+    "snippet": "In this pilot study, no detectable difference in WWOX expression was observed between cases and controls; however, given the small cohort size, these results should be interpreted cautiously.",
+    "surface": "body",
+    "anchor": "Discussion, limitations paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "FFPE tissue from 7 Ewing sarcoma cases and 5 unspecified control samples, Lucknow, India, immunohistochemistry",
+     "genotype": "WWOX and RUNX2 protein, no genotype",
+     "endpoint": "limitation"
+    },
+    "artifact": "files/fulltext/PMID41141138_Sharma2025_PMC.xml"
+   }
+  ]
+ }
+}
