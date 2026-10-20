@@ -46,7 +46,7 @@
     {
      "step": "BATCH_COMMIT of wave 1 candidates under LINT; Mirror ex-post review",
      "status": "DONE",
-     "evidence": "BATCH_20261019_001 propagated, WM_v7.21, db4f3d63; Mirror review launched (a9db41b0 base)"
+     "evidence": "BATCH_20261019_001 propagated, WM_v7.21, db4f3d63; Mirror review launched (a9db41b0 base) ; batches 003 (v7.22), 004 (v7.23), 005 (v7.24) done, Mirror 003-005 CONFIRMED (9 findings, none blocking)"
     },
     {
      "step": "Fresh-clone battery on exact SHA, public_release_gate, receipts verify, safe_push to development",
@@ -99,16 +99,23 @@
    "steps": [
     {
      "step": "Wave 4 selection: fresh WWOX literature since 2026-08 and uncovered metabolic axes (adipose/thermogenesis, liver, bone, endocrine, BCAA, one-carbon/folate, carnitine, cofactors)",
-     "status": "IN_PROGRESS",
-     "evidence": "selector launched"
+     "status": "DONE",
+     "evidence": "wave4_batch_selection_20261019.md, e956fe1e"
     },
     {
      "step": "Dispatch wave 4 (up to four Scientists), integrate, batch, Mirror, battery, push",
-     "status": "TODO"
+     "status": "DONE",
+     "evidence": "B,C,D returned and landed; 26 receipts recorded 82694810, ledger 680"
+    },
+    {
+     "step": "BATCH_20261019_006: wave-4 candidates + Mirror repairs M1-M8 + three depth lines (test_batch_queue red)",
+     "status": "IN_PROGRESS",
+     "evidence": "integrator agent running, WM_v7.25"
     },
     {
      "step": "Final: rerun release battery on exact SHA after all batches; Mirror review of 003/004; safe_push to development; PDF wishlist for operator",
-     "status": "TODO"
+     "status": "TODO",
+     "evidence": "battery on f8bb7e9b red on 3 suites (verbosity x2, exec bits x4 fixed 5dfd0dae; batch_queue depth lines -> batch 006); rerun on final SHA then safe_push; registry scale (1.47 MB, +25% trigger 1.51 MB) reported to operator"
     }
    ]
   }
