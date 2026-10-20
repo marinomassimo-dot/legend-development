@@ -90,7 +90,25 @@
     {
      "step": "Record wave 2 receipts (B, C, D, then A) after scratch-clone trial; BATCH_20261019_002",
      "status": "IN_PROGRESS",
-     "evidence": "wave-2 receipts B,C,D recorded ef8c9427; B wave-3 recorded 6ef80e2c ledger 597; BATCH_20261019_003 (combined with Mirror repairs, WM_v7.22) running; A, C held-partial, D debts pending return"
+     "evidence": "BATCH_20261019_003 committed 7b8eaee7 (WM_v7.22, Mirror repairs folded in); gate PASS 14a89d02; C and D receipts recorded 1a08d784, ledger 624; BATCH_20261019_004 (C-HELD, D-DEBT) running; A pending"
+    }
+   ]
+  },
+  "OBJ_WAVE4": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "Wave 4 selection: fresh WWOX literature since 2026-08 and uncovered metabolic axes (adipose/thermogenesis, liver, bone, endocrine, BCAA, one-carbon/folate, carnitine, cofactors)",
+     "status": "IN_PROGRESS",
+     "evidence": "selector launched"
+    },
+    {
+     "step": "Dispatch wave 4 (up to four Scientists), integrate, batch, Mirror, battery, push",
+     "status": "TODO"
+    },
+    {
+     "step": "Final: rerun release battery on exact SHA after all batches; Mirror review of 003/004; safe_push to development; PDF wishlist for operator",
+     "status": "TODO"
     }
    ]
   }
