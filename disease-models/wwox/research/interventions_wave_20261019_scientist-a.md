@@ -125,3 +125,39 @@ For plasma, the lot's best-powered observations point away from a benefit: no ra
 
 ### What I parked
 Unqueued gene-direct reference debts and the references of all 30 papers were screened by term, not read item by item (declared per manifest). Supplementary panels not opened for the five partial papers. The WWOX-direct blocked items (a lung ferroptosis paper, a liver ferroptosis paper, a lung autophagy paper, and a DEE mechanisms review) stay blocked. The consolidated candidate CC-20261019-SCIENTIST-A-PLASMA-02 proposes record upgrades; no registry or current file was edited.
+
+## Report table (persisted copy of the hand-back; one row per paper)
+
+| PMID | Reading | Depth | Receipt JSON (staged) | Manifest PASS | Outputs |
+|---|---|---|---|---|---|
+| 42712566 | Sinha 2026 (H1, tier 1) | complete | `receipt_staging/scientist-a/FTR-20261019-42712566-01.json` | PASS | manifest, dossier, note entry |
+| 40808923 | Xu 2025 (H1, tier 1) | skipped (duplicate of scientist-c) | none (scientist-c receipt) | n/a | none |
+| 37124220 | Jin 2023 (H1, tier 2) | complete | `receipt_staging/scientist-a/FTR-20261019-37124220-01.json` | PASS | manifest, dossier, note entry |
+| 39239479 | Porras 2024 (H1, tier 2) | partial | `receipt_staging/scientist-a/FTR-20261019-39239479-01.json` | PASS | manifest, dossier, note entry |
+| 34909297 | Padda 2021 (H1, tier 2) | complete | `receipt_staging/scientist-a/FTR-20261019-34909297-01.json` | PASS | manifest, dossier, note entry |
+| 41293173 | Garcia-Delgado 2025 (H1, tier 2) | complete | `receipt_staging/scientist-a/FTR-20261019-41293173-01.json` | PASS | manifest, dossier, note entry |
+| 42794294 | Fitz 2026 (H1, tier 2) | complete | `receipt_staging/scientist-a/FTR-20261019-42794294-01.json` | PASS | manifest, dossier, note entry |
+| 37733345 | Chock 2023 (H1, tier 3) | partial | `receipt_staging/scientist-a/FTR-20261019-37733345-01.json` | PASS | manifest, dossier, note entry |
+| 42313692 | Bailey 2026 (H1, tier 3) | complete | `receipt_staging/scientist-a/FTR-20261019-42313692-01.json` | PASS | manifest, dossier, note entry |
+| 38463073 | Shafique 2024 (H1, tier 3) | complete | `receipt_staging/scientist-a/FTR-20261019-38463073-01.json` | PASS | manifest, dossier, note entry |
+| 41904698 | Nguyen 2026 (H1, tier 3) | complete | `receipt_staging/scientist-a/FTR-20261019-41904698-01.json` | PASS | manifest, dossier, note entry |
+| 42794205 | De Rose 2026 (H1 tier 3; also H2-relevant) | complete | `receipt_staging/scientist-a/FTR-20261019-42794205-01.json` | PASS | manifest, dossier, note entry |
+| 39712732 | Jadhav 2024 (H1, tier 3) | complete | `receipt_staging/scientist-a/FTR-20261019-39712732-01.json` | PASS | manifest, dossier, note entry |
+| 32685205 | Arsyad 2020 (H1, tier 3) | complete | `receipt_staging/scientist-a/FTR-20261019-32685205-01.json` | PASS | manifest, dossier, note entry |
+| 38203337 | Shin 2023 (H2, tier 1) | complete | `receipt_staging/scientist-a/FTR-20261019-38203337-01.json` | PASS | manifest, dossier, note entry; CC-PLASMA-01 and -02 |
+| 42652171 | Karayanni 2026 (H2, tier 1) | complete | `receipt_staging/scientist-a/FTR-20261019-42652171-01.json` | PASS | manifest, dossier, note entry |
+| 41118244 | Jeong 2026 (H2, tier 1) | partial | `receipt_staging/scientist-a/FTR-20261019-41118244-01.json` | PASS | manifest, dossier, note entry |
+| 39934240 | Pinzon-Hoyos 2025 (H2, tier 1) | partial | `receipt_staging/scientist-a/FTR-20261019-39934240-01.json` | PASS | manifest, dossier, note entry |
+| 19484134 | Hong 2009 (H2, extra self-chosen WWOX-direct reading; RESUME of FTR-20260921-19484134-01) | complete | `receipt_staging/scientist-a/FTR-20261019-19484134-01.json` | PASS | manifest, dossier, note entry; CC-PLASMA-02 (CORPUS P330 upgrade) |
+| 39055621 | Wang 2024 (H2, tier 2) | complete | `receipt_staging/scientist-a/FTR-20261019-39055621-01.json` | PASS | manifest, dossier, note entry |
+| 41346378 | Jiang 2025 (H2, tier 2) | partial | `receipt_staging/scientist-a/FTR-20261019-41346378-01.json` | PASS | manifest, dossier, note entry |
+| 37234916 | Veremeyko 2023 (H2, tier 2) | complete | `receipt_staging/scientist-a/FTR-20261019-37234916-01.json` | PASS | manifest, dossier, note entry |
+| 42064976 | Ebdalla 2026 (H2, tier 2) | complete | `receipt_staging/scientist-a/FTR-20261019-42064976-01.json` | PASS | manifest, dossier, note entry |
+| 39006838 | Hu 2024 (H2, tier 2) | complete | `receipt_staging/scientist-a/FTR-20261019-39006838-01.json` | PASS | manifest, dossier, note entry |
+| 41591075 | Suleymanova 2025 (H2, tier 2) | complete | `receipt_staging/scientist-a/FTR-20261019-41591075-01.json` | PASS | manifest, dossier, note entry |
+| 36606305 | Preininger 2023 (H2, tier 2) | complete | `receipt_staging/scientist-a/FTR-20261019-36606305-01.json` | PASS | manifest, dossier, note entry |
+| 42509933 | Sahin 2026 (H2, tier 3) | complete | `receipt_staging/scientist-a/FTR-20261019-42509933-01.json` | PASS | manifest, dossier, note entry |
+| 41393164 | Zamith 2025 (H2, tier 3) | complete | `receipt_staging/scientist-a/FTR-20261019-41393164-01.json` | PASS | manifest, dossier, note entry |
+| 33238649 | Houben 2020 (H2, tier 3) | complete | `receipt_staging/scientist-a/FTR-20261019-33238649-01.json` | PASS | manifest, dossier, note entry |
+| 42769206 | Tang 2026 (H2, tier 3) | complete | `receipt_staging/scientist-a/FTR-20261019-42769206-01.json` | PASS | manifest, dossier, note entry |
+| 36719667 | Abergel 2023 (H2, tier 3) | complete | `receipt_staging/scientist-a/FTR-20261019-36719667-01.json` | PASS | manifest, dossier, note entry |

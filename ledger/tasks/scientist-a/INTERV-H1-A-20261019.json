@@ -30,7 +30,7 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "IN_PROGRESS",
+ "CURRENT_STATE": "COMPLETE",
  "assigned_on": "2026-10-19",
  "TASK_ACK": {
   "TASK_ID": "INTERV-H1-A-20261019",
@@ -50,6 +50,52 @@
   "durable_pointer": "ledger/tasks/scientist-a/INTERV-H1-A-20261019.json on branch task/INTERV-H1-A-20261019 (worktree .claude/worktrees/interv-h1-a)",
   "claim_precondition_checked": "H1/H2 lot disjoint from H3 (scientist-b) and H5 (scientist-d) lots by the selection file."
  },
- "DEFAULTS_TAKEN": [],
- "STOP_LOG": []
+ "DEFAULTS_TAKEN": [
+  "Xu ferroptosis review (H1 tier 1) not re-read: already read in full the same day by scientist-c (manifest and staged receipt on main); duplicate-work gate. The lot is therefore 29 papers plus one extra.",
+  "Extra self-chosen WWOX-direct reading: the Hong 2009 WWOX-C1q paper, found by registry theme search (not in the selection file; registry record stale, ledger holds a partial receipt); resumed with reread_reason inadequate_prior_coverage and the prior receipt named.",
+  "Commit gate refused stale derived surfaces on every commit; used LEGEND_STALE_SURFACES_BECAUSE with the reason that shared derived surfaces belong to the Orchestrator (dispatch brief).",
+  "Declared five receipts at partial depth (Porras, Chock, Jeong, Pinzon-Hoyos, Jiang) where supplementary panels or the protocol were not opened, rather than claim complete depth; other unopened supplement images (one Garcia-Delgado figure, Porras TIFFs) declared in their manifests.",
+  "Reference lists of all papers were term-screened for WWOX and not read item by item; gene-direct reference debts were resolved or queued per manifest, and the queued ones remain unqueued in the full-text queue (Orchestrator).",
+  "Staged receipts carry event_at equal to analysis_at as a placeholder so staged_receipt_check passes; the authoritative writer restamps it on recording. Receipts were not recorded and the ledger was not touched.",
+  "The DL-MECH-012 op was left alone, as instructed.",
+  "No commit-gate bypass beyond LEGEND_STALE_SURFACES_BECAUSE; no sandbox-bypass flag; no push.",
+  "Backed off and retried PubMed efetch/esearch after HTTP 500 and rate-limit failures; builders kept in a private scratch subdirectory.",
+  "After the session rate limit the work resumed from the committed milestone; five tier-3 plasma papers and one tier-2 paper were read in the resumed session.",
+  "Merged main into the task branch before landing (main had advanced by 132 commits; merge was clean).",
+  "Shipped micro-upgrade framework/scripts/docx_to_text.py with test, README routing row and release-regression enrolment, because a missed embedded-image supplement showed the throwaway reader printed text only.",
+  "A reviewer re-analysis (conventional adjusted regression on the shared patient file of one paper) and recomputations of published counts were done as checks and are labelled as not the authors' method; nothing was proposed as a correction to the literature."
+ ],
+ "STOP_LOG": [],
+ "WAVE_1_RESULT": {
+  "papers_read": 29,
+  "extra_resume": 1,
+  "skipped_duplicate": 1,
+  "manifests_pass": 30,
+  "staged_receipts": "disease-models/wwox/research/receipt_staging/scientist-a/ (FTR-20261019-<pmid>-01, 30 files, staged_receipt_check OK on all)",
+  "depth": "complete 25, partial 5",
+  "commit_candidates": [
+   "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-A-PLASMA-01.md",
+   "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-A-PLASMA-02.md"
+  ],
+  "analysis_note": "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md (per-paper entries, synthesis of H1 and H2 questions, report table)",
+  "self_eval": "disease-models/wwox/research/session_evaluations/2026-10-20_interv-h1-a.md",
+  "micro_upgrade": "framework/scripts/docx_to_text.py plus test_docx_to_text.py, README routing row, release-regression enrolment",
+  "headline": "No WWOX-deficient evidence on any H1/H2 intervention; two papers carry a WWOX datum (a keratinocyte knockdown with opposite sign to other WWOX-loss inflammation reports; a WWOX-C1q gain-of-function cancer paper, resumed). All other papers are substitutes, class level, BLOCK-1 caution, not medical advice.",
+  "DEFAULTS_TAKEN": [
+   "Xu ferroptosis review (H1 tier 1) not re-read: already read in full the same day by scientist-c (manifest and staged receipt on main); duplicate-work gate. The lot is therefore 29 papers plus one extra.",
+   "Extra self-chosen WWOX-direct reading: the Hong 2009 WWOX-C1q paper, found by registry theme search (not in the selection file; registry record stale, ledger holds a partial receipt); resumed with reread_reason inadequate_prior_coverage and the prior receipt named.",
+   "Commit gate refused stale derived surfaces on every commit; used LEGEND_STALE_SURFACES_BECAUSE with the reason that shared derived surfaces belong to the Orchestrator (dispatch brief).",
+   "Declared five receipts at partial depth (Porras, Chock, Jeong, Pinzon-Hoyos, Jiang) where supplementary panels or the protocol were not opened, rather than claim complete depth; other unopened supplement images (one Garcia-Delgado figure, Porras TIFFs) declared in their manifests.",
+   "Reference lists of all papers were term-screened for WWOX and not read item by item; gene-direct reference debts were resolved or queued per manifest, and the queued ones remain unqueued in the full-text queue (Orchestrator).",
+   "Staged receipts carry event_at equal to analysis_at as a placeholder so staged_receipt_check passes; the authoritative writer restamps it on recording. Receipts were not recorded and the ledger was not touched.",
+   "The DL-MECH-012 op was left alone, as instructed.",
+   "No commit-gate bypass beyond LEGEND_STALE_SURFACES_BECAUSE; no sandbox-bypass flag; no push.",
+   "Backed off and retried PubMed efetch/esearch after HTTP 500 and rate-limit failures; builders kept in a private scratch subdirectory.",
+   "After the session rate limit the work resumed from the committed milestone; five tier-3 plasma papers and one tier-2 paper were read in the resumed session.",
+   "Merged main into the task branch before landing (main had advanced by 132 commits; merge was clean).",
+   "Shipped micro-upgrade framework/scripts/docx_to_text.py with test, README routing row and release-regression enrolment, because a missed embedded-image supplement showed the throwaway reader printed text only.",
+   "A reviewer re-analysis (conventional adjusted regression on the shared patient file of one paper) and recomputations of published counts were done as checks and are labelled as not the authors' method; nothing was proposed as a correction to the literature."
+  ],
+  "STOP_LOG": []
+ }
 }
