@@ -223,6 +223,18 @@ significant"* and *"not tested"*.
   `Fig1_HTML.jpg`; the CDN serves `.png`, and requesting `.jpg` returns seven HTML error pages.
   Same publisher, same journal, `PMID 29724996`: genuinely `.jpg`. **Try the extension; do not
   deduce it.**
+- 🔴 **The deposit's file numbering, and even the image under a caption, can be wrong.** In the
+  2026-10-20 wave 4 three of eight papers had it: one deposit named Figure 1 as file `g002`; one
+  numbered four figures `g003`, `g002`, `g004`, `g001` for Figures 1 to 4; one showed the symptom
+  timeline under the "Figure 1" caption and the bile-acid pathway under "Figure 2", the reverse of
+  what the legends describe. A panel reading attached by file name would have carried the wrong
+  legend. **Open every image, match it to its legend by content, and write the mapping in the
+  artefact note.**
+- ⚠️ **2026 deposits have no archive capture and may lack Europe PMC XML.** The routes that worked:
+  Europe PMC `fullTextXML` and the `supplementaryFiles` ZIP (figure JPEGs are inside it) for open
+  deposits; for one deposit with neither, the PMC article page fetched with an **empty**
+  User-Agent (`curl -H "User-Agent:"`, recorded as `user_agent_policy: none`), whose figure blob
+  URLs are in the page. WEBP figures open after `convert x.webp x.png` (Pillow is not installed).
 - 🔴 **Error pages save as figures.** Twice in one day a download loop produced seven files of
   identical size that were HTML, and that would have been fingerprinted and declared as
   figures. The mandatory check after any figure-set download —

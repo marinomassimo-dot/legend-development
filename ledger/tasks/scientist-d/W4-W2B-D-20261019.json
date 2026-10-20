@@ -1,5 +1,5 @@
 {
- "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
  "_note": "Metabolic batch. Orchestrator assumption: scientist-d is a fourth equivalent Scientist under the shared contract roles/scientist.md (body 32); operator authorised up to four Scientists on 2026-10-19.",
  "TASK_ID": "W4-W2B-D-20261019",
  "DIRECTIVE_VERSION": 1,
@@ -29,7 +29,7 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "IN_PROGRESS",
+ "CURRENT_STATE": "COMPLETE",
  "assigned_on": "2026-10-19",
  "TASK_ACK": {
   "TASK_ID": "W4-W2B-D-20261019",
@@ -46,6 +46,42 @@
   "durable_pointer": "branch task/W4-W2B-D-20261019, worktree .claude/worktrees/w4-d",
   "note": "scientist-d is a stated assumption of the Orchestrator"
  },
- "DEFAULTS_TAKEN": [],
- "STOP_LOG": []
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "legend_commit.sh refuses commits as STALE while peers and the Orchestrator work in parallel (pathograph drift)",
+   "default": "committed with LEGEND_STALE_SURFACES_BECAUSE naming the parallel wave; regeneration left to the Orchestrator",
+   "why_safe": "the dispatch brief says derived surfaces are regenerated once all inputs are committed",
+   "would_have_differed": "a single-actor wave would regenerate first"
+  },
+  {
+   "condition": "the selection file lists Agarwala 2023 (38074073) as a SUBSTITUTE with no record, but its XML has eight WWOX mentions and three WWOX case rows",
+   "default": "read it as a full paper, reclassified it WWOX-direct for those rows only, kept every aetiology comparison cohort-level, queued the one uncited-in-registry reference in the candidate",
+   "why_safe": "counting WWOX in the text surface is the brief's rule; no claim op is written",
+   "would_have_differed": "a pure substitute would carry no WWOX proposition"
+  },
+  {
+   "condition": "2026 deposits had no archive capture and one had no Europe PMC XML (42660645)",
+   "default": "fetched the PMC page with an empty User-Agent (recorded user_agent_policy none), figures from the PMC blob store; other figures from the Europe PMC supplementaryFiles ZIP",
+   "why_safe": "lawful open access, recipe and digests recorded; the page's all-rights-reserved notice means the copy is local evidence only",
+   "would_have_differed": "an archive capture would have been preferred"
+  },
+  {
+   "condition": "publisher figure files were numbered or attached differently from the legends in three papers",
+   "default": "opened every image, matched by content, declared the mapping in the manifest artefact notes",
+   "why_safe": "panel readings cite the legend by content, not by file name",
+   "would_have_differed": "none"
+  }
+ ],
+ "STOP_LOG": [],
+ "RESULT": {
+  "read": 8,
+  "parked": 0,
+  "analysis_note": "disease-models/wwox/research/wave4_scientist-d.md",
+  "self_eval": "disease-models/wwox/research/session_evaluations/2026-10-20_w4b_scientist-d.md",
+  "commit_candidates": [
+   "CC-20261019-SCIENTISTD-W4B-01"
+  ],
+  "staged_receipts": "disease-models/wwox/research/receipt_staging/scientist-d/ (8 new JSON files FTR-20261019-<PMID>-01, not appended)",
+  "micro_upgrade": "scientist_operating_practice_v1.md Phase 5: figure-numbering trap and 2026-deposit routes"
+ }
 }

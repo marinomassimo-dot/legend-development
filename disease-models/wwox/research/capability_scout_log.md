@@ -1037,3 +1037,17 @@ catalytic-dead control, a titration. The missing item is the experiment, not the
 **Cost / API / privacy risk:** none; no key, no paid service, no personal address sent.
 
 **Next surgical micro-step:** none required.
+
+---
+
+## 2026-10-20 · scientist-d · W4-W2B-D-20261019 (wave 4, group W2 second half)
+
+**Gap (with evidence).** Three of eight papers read in wave 4 had publisher figure files whose numbering or whose attached image did not match the legend: one deposit's file `g002` was Figure 1; one deposit's `g003`, `g002`, `g004`, `g001` were Figures 1 to 4; one deposit showed the symptom timeline under the "Figure 1" caption (a bile-acid pathway legend) and the pathway under "Figure 2". A panel reading attached by file name or page order would have carried the wrong legend, and no tool can detect it because only the image content says which legend it belongs to. Separately, two 2026 deposits had no Internet Archive capture and one had no Europe PMC XML.
+
+**CHANGE (proportional micro-upgrade, shipped as protocol text; no code).** `framework/protocols/scientist_operating_practice_v1.md`, Phase 5, gained two bullets: the figure-numbering trap with its three measured instances and the rule (open every image, match it to its legend by content, write the mapping in the artefact note), and the 2026-deposit routes (Europe PMC `fullTextXML` and `supplementaryFiles` ZIP; the PMC article page fetched with an empty User-Agent; `convert x.webp x.png` for WEBP). These are the routes this wave used, each recorded in the manifests' `acquisition_recipe`.
+
+**Named, not built.** A `figure_legend_pairs.py` helper that lists, per figure file, the neighbouring caption and its dimensions would shorten the matching step but cannot decide it; the image still has to be opened. The route notes from wave 2 (archived-PMC-page tier in `find-fulltext`) are still not in that skill because `.claude/` writes need the operator's authorisation.
+
+**Cost / API / privacy risk:** none; no keyed API, no unlawful source, no personal address sent.
+
+**Next surgical micro-step:** none required beyond the protocol text.

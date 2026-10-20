@@ -1,0 +1,330 @@
+{
+ "schema_version": 2,
+ "pmid": "39543202",
+ "doi": "10.1038/s41598-024-78779-4",
+ "receipt": "FTR-20261019-39543202-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/wave4_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-W4B-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named from wave-1 reading debts and deduplicated by the per-paper M0 packet and the receipt status check run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate and the analysis note; the discovery ledger is a shared single-writer file appended by the Orchestrator at integration."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A paediatric nutrition and neurology group at Ain Shams University, Cairo (from the affiliations) reporting a single-centre open trial of 30 children; descriptive/interventional clinical. Not a WWOX group; SUBSTITUTE for the carnitine axis (class level, not WWOX evidence). The tables and the Results text are weighed above the abstract and conclusion framing, where several claims outrun the tests."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND carnitine",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-20"
+   },
+   {
+    "query": "ketogenic diet AND carnitine AND epilepsy",
+    "count": 39,
+    "source": "PubMed ESearch rettype=count 2026-10-20"
+   }
+  ],
+  "note": "PubMed counts, dated."
+ },
+ "multihop": {
+  "references_enumerated": 31,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "31 references enumerated from the JATS; none is WWOX-related (0 occurrences of WWOX, Wwox or WOX1 counted in this session). Substitute row for the carnitine axis."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 39543202 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note; SUBSTITUTE rows carry no WWOX record by construction."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-20 via PubMed efetch for PMID 39543202: publication types ['Journal Article', 'Randomized Controlled Trial']; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 31,
+   "references_screened": 28,
+   "references_with_doi": 28,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39543202_Nassar2024_PMC11564695.xml",
+   "sha256": "cabf6bc3db3847474d8442811eb7db99d42595086f1c521ab20448e155c65308",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC11564695 (CC BY 4.0): randomized clinical trial: abstract, methods, five tables, no figures, 31 references. Every text locator is matched against this surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11564695/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "cabf6bc3db3847474d8442811eb7db99d42595086f1c521ab20448e155c65308"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE (substitute, carnitine axis). The primary endpoint is a within-arm change: antral length rose significantly in the carnitine arm (P = 0.039) and showed no significant difference in the diet-only arm (P = 0.925), and the results report no between-arm test of antral length even though the abstract frames it as a comparison with the non-supplemented group.",
+    "snippet": "On the other hand, there was no significant difference regarding antral length in the patients who only received KD upon follow up (P-value 0.925).",
+    "anchor": "Results, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39543202_Nassar2024_PMC11564695.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "30 children aged 12 months to 18 years with drug-resistant epilepsy starting a ketogenic diet, one hospital in Cairo, two arms of 15 (diet plus L-carnitine 50 mg/kg/day versus diet only), 3 months; NOT a WWOX system",
+     "genotype": "not stated (drug-resistant epilepsy of unspecified aetiology); no WWOX",
+     "endpoint": "antral length by ultrasound 15 minutes after a diet meal, GI symptom score, Bristol stool scale, defecation frequency, lipids"
+    }
+   },
+   {
+    "proposition": "The primary endpoint 'gastric emptying' is a single ultrasound antral-length measurement 15 minutes after a diet meal, not an emptying time.",
+    "snippet": "The longitudinal area was measured representing antral length, as described by Bolondi and collaborators in 198520.",
+    "anchor": "Methods, Radiological assessment, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39543202_Nassar2024_PMC11564695.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "30 children aged 12 months to 18 years with drug-resistant epilepsy starting a ketogenic diet, one hospital in Cairo, two arms of 15 (diet plus L-carnitine 50 mg/kg/day versus diet only), 3 months; NOT a WWOX system",
+     "genotype": "not stated (drug-resistant epilepsy of unspecified aetiology); no WWOX",
+     "endpoint": "antral length by ultrasound 15 minutes after a diet meal, GI symptom score, Bristol stool scale, defecation frequency, lipids"
+    }
+   },
+   {
+    "proposition": "Serum carnitine was not measured: the laboratory methods list only a fasting lipid profile, so the premise that these children were carnitine-deficient is not tested in this cohort.",
+    "snippet": "Laboratory tests: Fasting Lipid profile was assessed after 10 h of fasting",
+    "anchor": "Methods, Laboratory assessment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39543202_Nassar2024_PMC11564695.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "30 children aged 12 months to 18 years with drug-resistant epilepsy starting a ketogenic diet, one hospital in Cairo, two arms of 15 (diet plus L-carnitine 50 mg/kg/day versus diet only), 3 months; NOT a WWOX system",
+     "genotype": "not stated (drug-resistant epilepsy of unspecified aetiology); no WWOX",
+     "endpoint": "antral length by ultrasound 15 minutes after a diet meal, GI symptom score, Bristol stool scale, defecation frequency, lipids"
+    }
+   },
+   {
+    "proposition": "The study was registered after it ended: the enrolment period was January to November 2023 and the registry entry is dated February 2024.",
+    "snippet": "The study was also registered as a clinical trial [ClinicalTrials.gov Identifier NCT06255873 (13/02/2024)].",
+    "anchor": "Ethical considerations, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39543202_Nassar2024_PMC11564695.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "30 children aged 12 months to 18 years with drug-resistant epilepsy starting a ketogenic diet, one hospital in Cairo, two arms of 15 (diet plus L-carnitine 50 mg/kg/day versus diet only), 3 months; NOT a WWOX system",
+     "genotype": "not stated (drug-resistant epilepsy of unspecified aetiology); no WWOX",
+     "endpoint": "antral length by ultrasound 15 minutes after a diet meal, GI symptom score, Bristol stool scale, defecation frequency, lipids"
+    }
+   },
+   {
+    "proposition": "Enrolment ran from January to November 2023, before the registry entry.",
+    "snippet": "This randomized controlled clinical trial study was conducted on 30 patients who presented to the Pediatric Clinical Nutrition and Neurology Units, Children`s Hospital, Faculty of Medicine, Ain Shams University (Cairo, Egypt), during the period from January 2023 to November 2023.",
+    "anchor": "Methods, Setting",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39543202_Nassar2024_PMC11564695.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "30 children aged 12 months to 18 years with drug-resistant epilepsy starting a ketogenic diet, one hospital in Cairo, two arms of 15 (diet plus L-carnitine 50 mg/kg/day versus diet only), 3 months; NOT a WWOX system",
+     "genotype": "not stated (drug-resistant epilepsy of unspecified aetiology); no WWOX",
+     "endpoint": "antral length by ultrasound 15 minutes after a diet meal, GI symptom score, Bristol stool scale, defecation frequency, lipids"
+    }
+   },
+   {
+    "proposition": "Seizure severity fell in all patients together and did not differ between the arms, so the pooled fall cannot be attributed to carnitine.",
+    "snippet": "Nevertheless, comparison between the two studied groups after 3 months follow up revealed no significant difference (P-value = 0.097).",
+    "anchor": "Results, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39543202_Nassar2024_PMC11564695.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "30 children aged 12 months to 18 years with drug-resistant epilepsy starting a ketogenic diet, one hospital in Cairo, two arms of 15 (diet plus L-carnitine 50 mg/kg/day versus diet only), 3 months; NOT a WWOX system",
+     "genotype": "not stated (drug-resistant epilepsy of unspecified aetiology); no WWOX",
+     "endpoint": "antral length by ultrasound 15 minutes after a diet meal, GI symptom score, Bristol stool scale, defecation frequency, lipids"
+    }
+   },
+   {
+    "proposition": "The between-arm comparison of GI symptom score and Bristol stool scale did not reach significance; only defecation frequency did (50 percent rise in the carnitine arm, 33 percent fall in the diet-only arm).",
+    "snippet": "Although there was a decrease in the median (IQR) of GI symptoms score in the patients on KD with L-carnitine supplementation in comparison to KD only group indicating clinical improvement in GI symptoms, and an increase in the median (IQR) of the Bristol stool scale indicating that the stool was softer, these results didn’t reach statistical significance.",
+    "anchor": "Results, paragraph before Table 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39543202_Nassar2024_PMC11564695.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "30 children aged 12 months to 18 years with drug-resistant epilepsy starting a ketogenic diet, one hospital in Cairo, two arms of 15 (diet plus L-carnitine 50 mg/kg/day versus diet only), 3 months; NOT a WWOX system",
+     "genotype": "not stated (drug-resistant epilepsy of unspecified aetiology); no WWOX",
+     "endpoint": "antral length by ultrasound 15 minutes after a diet meal, GI symptom score, Bristol stool scale, defecation frequency, lipids"
+    }
+   },
+   {
+    "proposition": "The Discussion states the defecation-frequency comparison as 50 percent against 33 percent, while Table 4 shows the diet-only arm fell by 33 percent (median -33.3), so the sentence omits the direction.",
+    "snippet": "Nevertheless, the current study showed a highly significant increase in frequency of defecation (50%) in KDT with L-carnitine supplementation group in comparison to 33% in KD only group.",
+    "anchor": "Discussion, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39543202_Nassar2024_PMC11564695.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "30 children aged 12 months to 18 years with drug-resistant epilepsy starting a ketogenic diet, one hospital in Cairo, two arms of 15 (diet plus L-carnitine 50 mg/kg/day versus diet only), 3 months; NOT a WWOX system",
+     "genotype": "not stated (drug-resistant epilepsy of unspecified aetiology); no WWOX",
+     "endpoint": "antral length by ultrasound 15 minutes after a diet meal, GI symptom score, Bristol stool scale, defecation frequency, lipids"
+    }
+   },
+   {
+    "proposition": "The conclusion says supplementation improved stool consistency, but the between-arm Bristol comparison was not significant (P 0.305 in Table 4).",
+    "snippet": "this supplementation improved stool consistency and increased the frequency of defecation.",
+    "anchor": "Discussion, conclusion paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39543202_Nassar2024_PMC11564695.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "30 children aged 12 months to 18 years with drug-resistant epilepsy starting a ketogenic diet, one hospital in Cairo, two arms of 15 (diet plus L-carnitine 50 mg/kg/day versus diet only), 3 months; NOT a WWOX system",
+     "genotype": "not stated (drug-resistant epilepsy of unspecified aetiology); no WWOX",
+     "endpoint": "antral length by ultrasound 15 minutes after a diet meal, GI symptom score, Bristol stool scale, defecation frequency, lipids"
+    }
+   },
+   {
+    "proposition": "Table 4 gives the Bristol stool scale between-arm test as non-significant (test value -1.065, P 0.305).",
+    "snippet": "Comparison between the two studied groups regarding the rate of change in GI symptoms score, Bristol stool scale and frequency of defecation after intervention.",
+    "anchor": "Table 4 caption",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID39543202_Nassar2024_PMC11564695.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "30 children aged 12 months to 18 years with drug-resistant epilepsy starting a ketogenic diet, one hospital in Cairo, two arms of 15 (diet plus L-carnitine 50 mg/kg/day versus diet only), 3 months; NOT a WWOX system",
+     "genotype": "not stated (drug-resistant epilepsy of unspecified aetiology); no WWOX",
+     "endpoint": "antral length by ultrasound 15 minutes after a diet meal, GI symptom score, Bristol stool scale, defecation frequency, lipids"
+    }
+   },
+   {
+    "proposition": "Table 5 reports the pre-intervention HDL range as 32 to 40 mg/dl with a mean of 57.4, which is arithmetically impossible, so an error exists in the lipid table that carries the one 'protective' lipid claim (the after column, mean 63.4 with range 38-60, is also impossible).",
+    "snippet": "Range | 32–40 | 38–60 | TG in mg/dl",
+    "anchor": "Table 5, HDL rows",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID39543202_Nassar2024_PMC11564695.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "30 children aged 12 months to 18 years with drug-resistant epilepsy starting a ketogenic diet, one hospital in Cairo, two arms of 15 (diet plus L-carnitine 50 mg/kg/day versus diet only), 3 months; NOT a WWOX system",
+     "genotype": "not stated (drug-resistant epilepsy of unspecified aetiology); no WWOX",
+     "endpoint": "antral length by ultrasound 15 minutes after a diet meal, GI symptom score, Bristol stool scale, defecation frequency, lipids"
+    }
+   },
+   {
+    "proposition": "The conclusion advises supplementation on the strength of a 30-patient, 3-month, open (no blinding or placebo stated) trial; the limitations paragraph asserts external validity while listing no placebo comparison and short follow-up.",
+    "snippet": "Although the current findings are consistent and coherent, strongly indicating the external validity of the study",
+    "anchor": "Study limitations, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39543202_Nassar2024_PMC11564695.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "30 children aged 12 months to 18 years with drug-resistant epilepsy starting a ketogenic diet, one hospital in Cairo, two arms of 15 (diet plus L-carnitine 50 mg/kg/day versus diet only), 3 months; NOT a WWOX system",
+     "genotype": "not stated (drug-resistant epilepsy of unspecified aetiology); no WWOX",
+     "endpoint": "antral length by ultrasound 15 minutes after a diet meal, GI symptom score, Bristol stool scale, defecation frequency, lipids"
+    }
+   },
+   {
+    "proposition": "The limitations paragraph names the absent placebo comparison and the short follow-up as limitations.",
+    "snippet": "The current study has its own limitations, no comparisons were made with patients on traditional AEDs or placebo and the short follow up duration are among these limitations.",
+    "anchor": "Study limitations, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39543202_Nassar2024_PMC11564695.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "30 children aged 12 months to 18 years with drug-resistant epilepsy starting a ketogenic diet, one hospital in Cairo, two arms of 15 (diet plus L-carnitine 50 mg/kg/day versus diet only), 3 months; NOT a WWOX system",
+     "genotype": "not stated (drug-resistant epilepsy of unspecified aetiology); no WWOX",
+     "endpoint": "antral length by ultrasound 15 minutes after a diet meal, GI symptom score, Bristol stool scale, defecation frequency, lipids"
+    }
+   },
+   {
+    "proposition": "Table 2 correlations are cross-sectional at follow-up and pooled over both arms for the first column; the arm-specific coefficients differ (GI symptom score r -0.592 P 0.020 in the carnitine arm versus -0.279 P 0.313 in the diet-only arm) but no test of the difference between the two correlations is reported.",
+    "snippet": "Correlation between antral length by ultrasound and GI symptoms score, Bristol stool scale and frequency of defecation after intervention.",
+    "anchor": "Table 2 caption",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID39543202_Nassar2024_PMC11564695.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "30 children aged 12 months to 18 years with drug-resistant epilepsy starting a ketogenic diet, one hospital in Cairo, two arms of 15 (diet plus L-carnitine 50 mg/kg/day versus diet only), 3 months; NOT a WWOX system",
+     "genotype": "not stated (drug-resistant epilepsy of unspecified aetiology); no WWOX",
+     "endpoint": "antral length by ultrasound 15 minutes after a diet meal, GI symptom score, Bristol stool scale, defecation frequency, lipids"
+    }
+   },
+   {
+    "proposition": "The matching of arm II controls to arm I patients on sex, age and BMI Z score is described as done after the cards-based randomisation, so the allocation is not a plain simple randomisation.",
+    "snippet": "Every case from arm I was matched for gender, age (1 year range was allowed between the selected patients), and BMI Z score (1 SD range was allowed between them) with a patient from arm II to serve as controls.",
+    "anchor": "Methods, Patients, paragraph 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39543202_Nassar2024_PMC11564695.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "30 children aged 12 months to 18 years with drug-resistant epilepsy starting a ketogenic diet, one hospital in Cairo, two arms of 15 (diet plus L-carnitine 50 mg/kg/day versus diet only), 3 months; NOT a WWOX system",
+     "genotype": "not stated (drug-resistant epilepsy of unspecified aetiology); no WWOX",
+     "endpoint": "antral length by ultrasound 15 minutes after a diet meal, GI symptom score, Bristol stool scale, defecation frequency, lipids"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML for PMC11564695 returned HTTP 200 on 2026-10-20 (open access, CC BY 4.0).",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}
