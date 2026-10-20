@@ -34,10 +34,10 @@ annotations is reported below whatever it happens to be.
 | Nodes carrying a biological scale | 0 |
 | Deep-dive manifests read | 382 |
 | …of which bound to at least one claim | 100 |
-| Propositions scanned | 5875 |
-| …carrying a relational connective | 1191 |
-| …locator-backed candidates | 1151 |
-| …locator-backed and bound to a claim | 353 |
+| Propositions scanned | 5950 |
+| …carrying a relational connective | 1210 |
+| …locator-backed candidates | 1170 |
+| …locator-backed and bound to a claim | 368 |
 
 The scanned population is three declared surfaces and no others: every claim
 `Title`, every row of the working model's BLOCK 2 mirror, and every
@@ -320,14 +320,14 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 | Source | Candidates |
 |---|---|
 | claim_title | 21 |
-| locator_proposition | 1151 |
+| locator_proposition | 1170 |
 | working_model_mirror_title | 19 |
 
 | Connective class (lexical) | Candidates |
 |---|---|
-| AMBIGUOUS_LEXICAL_FORM | 810 |
+| AMBIGUOUS_LEXICAL_FORM | 828 |
 | ARROW | 18 |
-| ASSOCIATIVE | 66 |
+| ASSOCIATIVE | 67 |
 | CAUSAL | 224 |
 | DEPENDENCY | 73 |
 
@@ -359,7 +359,7 @@ its sentence is a reading, and this tool does not perform readings.
 | CLAIM 016 | claim_title | `contribute to` | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency |
 | CLAIM 018 | claim_title | `causes` | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in humans |
 
-Showing 12 of 393 bound candidates; the
+Showing 12 of 408 bound candidates; the
 complete set, with evidence and provenance, is in the export. The worklist
 in cost order — what needs an annotation, what needs a type, what needs a
 decomposition, what needs a reading — is printed by:
@@ -376,6 +376,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 385 input files; digest
-`d899d403136507cc`. Sources: the claim, paper and
+`8ca4cf32a1e99de1`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
