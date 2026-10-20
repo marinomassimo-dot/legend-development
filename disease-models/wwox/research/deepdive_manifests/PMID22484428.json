@@ -1,0 +1,302 @@
+{
+ "schema_version": 2,
+ "pmid": "22484428",
+ "doi": "10.3892/mmr.2012.860",
+ "receipt": "FTR-20261019-22484428-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-02.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named from wave-1 reading debts and deduplicated by the per-paper M0 packet and the receipt status check run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate and the analysis note; the discovery ledger is a shared single-writer file appended by the Orchestrator at integration."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A Shanghai biochemistry and ophthalmology group (from the affiliations) that earlier built a hypoxia-regulated WWOX adenovirus for lung cancer. Primary for WWOX gene therapy in lung cancer cells; not a loss-of-function, neurological or metabolic group. The measurements are a short set of single-line overexpression assays; the pathway attribution in the title is an interpretation."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND apoptosis AND mitochondri*",
+    "count": 22,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND A549",
+    "count": 6,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts, dated."
+ },
+ "multihop": {
+  "references_enumerated": 17,
+  "gene_direct_refs_in_source": [
+   "ref 1 Bednarek 2000 (PMID 10786676)",
+   "ref 5 Aqeilan 2004 gastric (PMID 15131042)",
+   "ref 6 Aderca 2008 (PMID 18620777)",
+   "ref 9 Nunez 2005 (PMID 15982416)",
+   "ref 11 Chang 2001 (PMID 11058590)",
+   "ref 12 Chang 2003 (PMID 14555208)",
+   "ref 13 Chang 2002 (PMID 11744990)",
+   "ref 16 Zhang 2010 hypoxia-regulated WWOX adenovirus (Hum Gene Ther)",
+   "ref 17 Chang 2003 JNK1 (PMID 12514174)"
+  ],
+  "resolved": [
+   {
+    "pmid": "15982416",
+    "state": "complete receipt in the ledger"
+   }
+  ],
+  "queued": [
+   {
+    "pmid": "11058590",
+    "queue": "parked in CC-20261019-SCIENTISTD-DEBT-02",
+    "note": "Chang 2001, free to read, publisher bot challenge"
+   },
+   {
+    "pmid": "14555208",
+    "queue": "parked in CC-20261019-SCIENTISTD-DEBT-01",
+    "note": "Chang 2003, closed"
+   },
+   {
+    "pmid": "12514174",
+    "queue": "parked in CC-20261019-SCIENTISTD-DEBT-02",
+    "note": "Chang 2003 JNK1, free to read, publisher bot challenge"
+   }
+  ],
+  "note": "17 references enumerated from the PDF text layer; the mitochondrial arguments of the Discussion rest on refs 11, 12 and 13, all Chang-laboratory papers."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 22484428 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed efetch for PMID 22484428: publication types ['Journal Article', \"Research Support, Non-U.S. Gov't\"]; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "UNSCREENABLE_NO_REFERENCE_LIST",
+   "reference_source": "cache",
+   "references_declared": 0,
+   "references_screened": 0,
+   "references_with_doi": 0,
+   "schema": "retraction_check.dependencies/1",
+   "screened": false,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID22484428_Zhang2012_spandidos.pdf",
+   "sha256": "f8d321d5b0118de509bb18cc4be5963c85218f986ed5a7cb801598f4d66a50e6",
+   "kind": "article_binary",
+   "note": "Publisher PDF (4 pages) from Spandidos, the bronze open-access URL Unpaywall lists; the PDF text layer uses CID TrueType fonts and was read through its extracted text and the page render.",
+   "acquisition_recipe": {
+    "resolved_url": "http://www.spandidos-publications.com/10.3892/mmr.2012.860/download",
+    "http_method": "GET",
+    "tier": "Unpaywall bronze publisher PDF",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "f8d321d5b0118de509bb18cc4be5963c85218f986ed5a7cb801598f4d66a50e6"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID22484428_Zhang2012_spandidos.txt",
+   "sha256": "135b7dcd36f8d4e2e4d0e45c3fef94b9fcf1ff739f6e1657c5da2a523fe66ef0",
+   "kind": "article_text",
+   "note": "DERIVED text layer of the PDF above, produced locally by `pdftotext -nopgbrk` (reading order). Every text locator is matched against this surface; the sentences quoted lie within single paragraphs.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID22484428_Zhang2012_spandidos.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -nopgbrk"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "135b7dcd36f8d4e2e4d0e45c3fef94b9fcf1ff739f6e1657c5da2a523fe66ef0"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID22484428/p-3.png",
+   "sha256": "37c10180ee05ce6dc6b46c2d21bb0ba9d620e0b1d52634f1bdf653c9f04be6b4",
+   "kind": "figure",
+   "note": "PDF page 3 rendered at 120 dpi (Figures 1 to 4), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID22484428_Zhang2012_spandidos.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 120 -png (page 3)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "37c10180ee05ce6dc6b46c2d21bb0ba9d620e0b1d52634f1bdf653c9f04be6b4"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The system is transient overexpression of WWOX in one lung adenocarcinoma line; viability falls to about 73 to 86 percent of control (MTT), a modest effect read as anti-proliferative.",
+    "snippet": "The cell proliferative percentage decreased to 85.62±3.27, 75.47±3.15 and 73.04±1.79% at 24, 48 and 72 h, respectively (Fig. 1).",
+    "anchor": "Results, WWOX inhibits cell proliferation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22484428_Zhang2012_spandidos.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "A549 human lung adenocarcinoma cells, transient transfection of full-length WWOX cDNA against empty vector",
+     "genotype": "WWOX overexpression; no loss of function",
+     "endpoint": "MTT viability, Annexin V/PI flow cytometry, cytosolic cytochrome c and caspase blots at 24 h"
+    }
+   },
+   {
+    "proposition": "The Methods give the MTT absorbance wavelength as 540 nm and the Figure 1 legend as 570 nm.",
+    "snippet": "recorded at 540 nm in a microplate reader (Sunrise).",
+    "anchor": "Materials and methods, Cell proliferation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22484428_Zhang2012_spandidos.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "A549 human lung adenocarcinoma cells, transient transfection of full-length WWOX cDNA against empty vector",
+     "genotype": "WWOX overexpression; no loss of function",
+     "endpoint": "MTT viability, Annexin V/PI flow cytometry, cytosolic cytochrome c and caspase blots at 24 h"
+    }
+   },
+   {
+    "proposition": "Early apoptosis is 16.64 percent against 3.0 percent for empty vector by Annexin V/PI at 24 hours; the representative plot shows 18.68 against 1.43 percent.",
+    "snippet": "Cells transfected with pcDNA3.0-WWOX exhibited an early apoptotic rate of 16.64±3.04% represented in the low-right quadrant, which was significantly higher than the 3.0±0.48% observed in the control cells (Fig. 2).",
+    "anchor": "Results, WWOX induces cell apoptosis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22484428_Zhang2012_spandidos.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "A549 human lung adenocarcinoma cells, transient transfection of full-length WWOX cDNA against empty vector",
+     "genotype": "WWOX overexpression; no loss of function",
+     "endpoint": "MTT viability, Annexin V/PI flow cytometry, cytosolic cytochrome c and caspase blots at 24 h"
+    }
+   },
+   {
+    "proposition": "The cytochrome c result is a single blot of a cytosolic fraction (10,000 g supernatant) probed for beta-tubulin as loading control; no mitochondrial fraction, mitochondrial marker or purity control is shown, and no inhibitor or knockdown test is applied.",
+    "snippet": "The analysis revealed a marked elevation in the level of cytosolic cytochrome C of the cells transfected with pcDNA3.0-WWOX compared to that of the control cells (Fig. 3).",
+    "anchor": "Results, WWOX triggers the release of cytochrome C from mitochondria",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22484428_Zhang2012_spandidos.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "A549 human lung adenocarcinoma cells, transient transfection of full-length WWOX cDNA against empty vector",
+     "genotype": "WWOX overexpression; no loss of function",
+     "endpoint": "MTT viability, Annexin V/PI flow cytometry, cytosolic cytochrome c and caspase blots at 24 h"
+    }
+   },
+   {
+    "proposition": "The conclusion that apoptosis is 'mainly' mitochondrial rests on cytochrome c and caspase-9 and -3 cleavage; no extrinsic-pathway readout (caspase-8) or comparison of pathways is reported, so 'mainly' is an interpretation.",
+    "snippet": "In conclusion, our data show that WWOX is involved in cell apoptosis, mainly through the mitochondrial pathway.",
+    "anchor": "Discussion, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22484428_Zhang2012_spandidos.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "A549 human lung adenocarcinoma cells, transient transfection of full-length WWOX cDNA against empty vector",
+     "genotype": "WWOX overexpression; no loss of function",
+     "endpoint": "MTT viability, Annexin V/PI flow cytometry, cytosolic cytochrome c and caspase blots at 24 h"
+    }
+   },
+   {
+    "proposition": "WWOX translocation to the mitochondrion under apoptotic stress is stated as speculation resting on a Chang-laboratory paper; WWOX localisation is not measured here.",
+    "snippet": "We therefore speculated that WWOX translocates to the mitochondrion in response to apoptotic stress, affecting the mitochondrial intermembrane stability.",
+    "anchor": "Discussion, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22484428_Zhang2012_spandidos.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "A549 human lung adenocarcinoma cells, transient transfection of full-length WWOX cDNA against empty vector",
+     "genotype": "WWOX overexpression; no loss of function",
+     "endpoint": "MTT viability, Annexin V/PI flow cytometry, cytosolic cytochrome c and caspase blots at 24 h"
+    }
+   },
+   {
+    "proposition": "The only metabolic statement is a one-sentence description of the SDR domain's enzymatic function as related to lipid hormones and metabolic mediators, cited to a general SDR review.",
+    "snippet": "The enzymatic function of the ADH domain is related to oxidation/reduction of lipid hormones and metabolic mediators, such as androgens and estrogens (14).",
+    "anchor": "Discussion, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22484428_Zhang2012_spandidos.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "A549 human lung adenocarcinoma cells, transient transfection of full-length WWOX cDNA against empty vector",
+     "genotype": "WWOX overexpression; no loss of function",
+     "endpoint": "MTT viability, Annexin V/PI flow cytometry, cytosolic cytochrome c and caspase blots at 24 h"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figures 1 to 4: Figure 1 viability of WWOX-transfected against empty-vector cells at 24, 48 and 72 h (about 85, 75 and 73 percent against about 97 to 100); Figure 2 Annexin V bar chart and flow plots (16.64 against 3.0 percent; plots 18.68 against 1.43); Figure 3 a two-lane blot (control, WWOX) of cytosolic cytochrome c with a beta-tubulin row; Figure 4 two-lane blots with cleaved caspase-9 (35 and 37 kDa) and caspase-3 (17 and 19 kDa) bands only in the WWOX lane; no replicate lanes, no densitometry, no WWOX expression blot.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 line plot Relative cell viability (%) versus Time (h) for pcDNA3.0 and pcDNA3.0-hWWOX; Fig 2 bar chart Annexin-V-FITC (%) and flow plots; Fig 3 blot rows 14-kDa cytosolic cytochrome C and 55-kDa beta-tubulin; Fig 4 blots 47, 37, 35 kDa caspase-9 and 35, 19, 17 kDa caspase-3.",
+    "anchor": "Figures 1-4, PDF page 3, read as an image at 120 dpi",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID22484428/p-3.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "A549 human lung adenocarcinoma cells, transient transfection of full-length WWOX cDNA against empty vector",
+     "genotype": "WWOX overexpression; no loss of function",
+     "endpoint": "MTT viability, Annexin V/PI flow cytometry, cytosolic cytochrome c and caspase blots at 24 h"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "The Spandidos download URL returned a valid 4-page PDF on 2026-10-20 (Unpaywall bronze open access); Europe PMC does not index the paper (inEPMC N).",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

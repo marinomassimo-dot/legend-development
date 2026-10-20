@@ -1,0 +1,304 @@
+{
+ "schema_version": 2,
+ "pmid": "25612104",
+ "doi": "10.1371/journal.pone.0115353",
+ "receipt": "FTR-20261019-25612104-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-02.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named from wave-1 reading debts and deduplicated by the per-paper M0 packet and the receipt status check run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate and the analysis note; the discovery ledger is a shared single-writer file appended by the Orchestrator at integration."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A tumour-genetics laboratory (Istanbul, from the earlier group's own prior WWOX breast and lung mutation screens that this paper cites as its method). Primary for tumour WWOX mutation screening; not a loss-of-function or neurological group. Counts and the negative expression comparisons are weighed above the 'two hits' interpretation."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (methylation OR promoter) AND tumor",
+    "count": 81,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND miR-134",
+    "count": 3,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts, dated."
+ },
+ "multihop": {
+  "references_enumerated": 37,
+  "gene_direct_refs_in_source": [
+   "ref 5 Bednarek 2000 or Ried 2000 (the FRA16D genomic papers)",
+   "ref 19 Paige 2001 (PMID 11572989)",
+   "ref 25 Liu 2014 miR-134 (HNSCC)",
+   "ref 35 Aldaz 2014 (PMID 24932569)",
+   "ref 36 Cancemi 2011 (PMID 21520031)",
+   "ref 11 Guo 2013 (PMID 23197378)"
+  ],
+  "resolved": [
+   {
+    "pmid": "24932569",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "11572989",
+    "state": "partial receipt in the ledger"
+   }
+  ],
+  "queued": [
+   {
+    "pmid": "21520031",
+    "queue": "proposed in CC-20261019-SCIENTISTD-DEBT-02; no FT identifier minted by a Scientist",
+    "note": "Cancemi 2011 Pro282Ala thyroid carcinoma; no receipt"
+   },
+   {
+    "pmid": "23197378",
+    "queue": "proposed in CC-20261019-SCIENTISTD-DEBT-02; no FT identifier minted by a Scientist",
+    "note": "Guo 2013 WWOX in gastric cardia adenocarcinoma; no receipt"
+   }
+  ],
+  "note": "37 references enumerated from the JATS; all are cancer genetics. One variant of this paper, the Kozak -5 C>T, is the same variant as the Cheng 2016 oral-cancer paper read in this lot."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 25612104 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed efetch for PMID 25612104: publication types ['Journal Article']; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [
+    {
+     "citing_relation": "Citation only: the 2005 PNAS lung-cancer WWOX restoration paper is listed twice (refs 15 and 32), once among cancers with altered WWOX and once for restoring expression with demethylating agents; no measurement or reagent of this paper uses its data.",
+     "doi": "10.1073/pnas.0505485102",
+     "nature": "Expression of concern",
+     "reason_verbatim": "Concerns/Issues about Data;Duplication of/in Image;Error in Image;Investigation by Company/Institution;Original Data and/or Images not Provided and/or not Available;",
+     "retraction_date": "4/3/2017 0:00",
+     "retraction_pmid": "28373548",
+     "verdict": "FLAGGED_EXPRESSION_OF_CONCERN"
+    },
+    {
+     "citing_relation": "Citation only: the 2005 PNAS lung-cancer WWOX restoration paper is listed twice (refs 15 and 32), once among cancers with altered WWOX and once for restoring expression with demethylating agents; no measurement or reagent of this paper uses its data.",
+     "doi": "10.1073/pnas.0505485102",
+     "nature": "Expression of concern",
+     "reason_verbatim": "Concerns/Issues about Data;Duplication of/in Image;Error in Image;Investigation by Company/Institution;Original Data and/or Images not Provided and/or not Available;",
+     "retraction_date": "4/3/2017 0:00",
+     "retraction_pmid": "28373548",
+     "verdict": "FLAGGED_EXPRESSION_OF_CONCERN"
+    }
+   ],
+   "noted": [],
+   "paper_verdict": "FLAGGED_EXPRESSION_OF_CONCERN",
+   "reference_source": "cache",
+   "references_declared": 37,
+   "references_screened": 31,
+   "references_with_doi": 31,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 6
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID25612104_Ekizoglu2015_PMC4303423.xml",
+   "sha256": "65e47f8bc62c83b8cc473dd356bd9ca0b8f9819997048210db96fa905a4caf0c",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC4303423 (CC BY): abstract, body, tables, figure legend, 37 references. Every text locator is matched against this surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4303423/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "65e47f8bc62c83b8cc473dd356bd9ca0b8f9819997048210db96fa905a4caf0c"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID25612104_Ekizoglu2015_plos.pdf",
+   "sha256": "9dbf36ad1b730b6354484136fc8fd87bd8ec14c4b108a392385efc03ce7eaad7",
+   "kind": "article_binary",
+   "note": "Publisher PDF (13 pages) from PLOS ONE (printable file URL listed by Unpaywall), source of the Figure 1 page render.",
+   "acquisition_recipe": {
+    "resolved_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0115353&type=printable",
+    "http_method": "GET",
+    "tier": "publisher OA PDF (PLOS printable)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "9dbf36ad1b730b6354484136fc8fd87bd8ec14c4b108a392385efc03ce7eaad7"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID25612104/p-08.png",
+   "sha256": "5685466e70343f4bf27970d0cc4e0e18621972b5566588593415a13669221c8a",
+   "kind": "figure",
+   "note": "PDF page 8 rendered at 110 dpi (Figure 1 and Table 6), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID25612104_Ekizoglu2015_plos.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 110 -f 8 -l 8 -png"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "5685466e70343f4bf27970d0cc4e0e18621972b5566588593415a13669221c8a"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "WWOX mRNA is lower in 61 of 80 tumours than in the paired normal tissue (about 3.5-fold lower on the mean delta-Ct), by qPCR against G6PD, in one cohort.",
+    "snippet": "However, 61 of 80 tumor tissues (76.3%) showed low WWOX expression when compared to their normal counterparts (p<0.001).",
+    "anchor": "Results, WWOX mRNA expression levels",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25612104_Ekizoglu2015_PMC4303423.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "80 head and neck squamous carcinoma tumours with matched non-cancerous tissue (one Turkish hospital); qPCR, methylation-specific PCR, Sanger sequencing of all exons",
+     "genotype": "somatic and germline status not separated in the tables; tumour DNA genotypes",
+     "endpoint": "WWOX mRNA, promoter methylation, miR-134, sequence variants"
+    }
+   },
+   {
+    "proposition": "The same Kozak-sequence variant (minus 5 C to T) that the oral-cancer paper reads as lowering WWOX expression is present here in about 35 percent heterozygous and 9 percent homozygous tumours and 'no effect on expression' is found; the table of that comparison is not shown for this variant.",
+    "snippet": "However, we did not identify any effect of this alteration on the expression level.",
+    "anchor": "Discussion, paragraph 8",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25612104_Ekizoglu2015_PMC4303423.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "80 head and neck squamous carcinoma tumours with matched non-cancerous tissue (one Turkish hospital); qPCR, methylation-specific PCR, Sanger sequencing of all exons",
+     "genotype": "somatic and germline status not separated in the tables; tumour DNA genotypes",
+     "endpoint": "WWOX mRNA, promoter methylation, miR-134, sequence variants"
+    }
+   },
+   {
+    "proposition": "The 3'UTR variant lying in a reported miR-134 binding sequence (25 heterozygous and 10 homozygous of 65) has no effect on WWOX expression in these tumours, and miR-134 levels do not differ between tumour and normal.",
+    "snippet": "However, we did not observe a difference in the WWOX expression levels between the samples carrying the T or G alleles.",
+    "anchor": "Results, Mutations of the WWOX gene, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25612104_Ekizoglu2015_PMC4303423.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "80 head and neck squamous carcinoma tumours with matched non-cancerous tissue (one Turkish hospital); qPCR, methylation-specific PCR, Sanger sequencing of all exons",
+     "genotype": "somatic and germline status not separated in the tables; tumour DNA genotypes",
+     "endpoint": "WWOX mRNA, promoter methylation, miR-134, sequence variants"
+    }
+   },
+   {
+    "proposition": "Promoter methylation is not more frequent in tumour than in normal tissue (54 against 37 percent partial methylation, not significant), and the association with low mRNA is shown only inside the tumour group.",
+    "snippet": "Although there is no significant difference in the methylation frequency between the tumor and normal tissues, methylation of tumor tissue resultes in down-regulation of WWOX mRNA expression (Table 3).",
+    "anchor": "Results, Epigenetic regulation of WWOX",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25612104_Ekizoglu2015_PMC4303423.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "80 head and neck squamous carcinoma tumours with matched non-cancerous tissue (one Turkish hospital); qPCR, methylation-specific PCR, Sanger sequencing of all exons",
+     "genotype": "somatic and germline status not separated in the tables; tumour DNA genotypes",
+     "endpoint": "WWOX mRNA, promoter methylation, miR-134, sequence variants"
+    }
+   },
+   {
+    "proposition": "The paper says matched normal DNA was sequenced to decide somatic against germline status, but Table 5 reports no such split, and two of the ten 'alterations' are called known polymorphisms.",
+    "snippet": "DNA from matched non-cancerous tissues of the patients were also investigated to verify whether the detected alterations were somatic/germline mutations or polymorphisms.",
+    "anchor": "Materials and methods, DNA isolation and mutation analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25612104_Ekizoglu2015_PMC4303423.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "80 head and neck squamous carcinoma tumours with matched non-cancerous tissue (one Turkish hospital); qPCR, methylation-specific PCR, Sanger sequencing of all exons",
+     "genotype": "somatic and germline status not separated in the tables; tumour DNA genotypes",
+     "endpoint": "WWOX mRNA, promoter methylation, miR-134, sequence variants"
+    }
+   },
+   {
+    "proposition": "The PolyPhen-2 text names R120P and calls P282A and E261K 'possibly damaging', while Table 5 lists Arg120Trp and gives P282A and E261K as 'probably damaging'.",
+    "snippet": "As a result of this analysis P98L, R120P, P252A, P282A, and E261K alterations were classified as possibly damaging while A179T, A251S, and L216V alterations were identified as benign.",
+    "anchor": "Results, Mutations of the WWOX gene, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25612104_Ekizoglu2015_PMC4303423.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "80 head and neck squamous carcinoma tumours with matched non-cancerous tissue (one Turkish hospital); qPCR, methylation-specific PCR, Sanger sequencing of all exons",
+     "genotype": "somatic and germline status not separated in the tables; tumour DNA genotypes",
+     "endpoint": "WWOX mRNA, promoter methylation, miR-134, sequence variants"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 1 and Table 6: a protein map with WW domains (17-49, 58-90), SDR (121-330) and ten variants marked (P98L, R120W, A179T, L216V, R249R, A251S, P252A, E261K, P282A, D286N), most inside the SDR; Table 6 lists 18 non-coding variants with counts, including the -5 C>T (23 heterozygous, 6 homozygous of 65) and the 3'UTR T>G (25 and 10).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 protein diagram with WW and SDR domain boxes, residue ticks 17, 49, 58, 90, 121, 330, 414 and labelled variants; Table 6 rows 5 bases 5' of exon 1 and 127 bases 3' of exon 9 with n (%).",
+    "anchor": "Figure 1 and Table 6, PDF page 8, read as an image at 110 dpi",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID25612104/p-08.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "80 head and neck squamous carcinoma tumours with matched non-cancerous tissue (one Turkish hospital); qPCR, methylation-specific PCR, Sanger sequencing of all exons",
+     "genotype": "somatic and germline status not separated in the tables; tumour DNA genotypes",
+     "endpoint": "WWOX mRNA, promoter methylation, miR-134, sequence variants"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search returned inEPMC Y and isOpenAccess Y for PMC4303423 on 2026-10-20; fullTextXML returned HTTP 200 with a body and the PLOS printable file returned a valid 13-page PDF.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

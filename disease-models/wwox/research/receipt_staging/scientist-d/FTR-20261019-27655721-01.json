@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-27655721-01",
+ "study_id": {
+  "pmid": "27655721",
+  "doi": "10.18632/oncotarget.12082"
+ },
+ "analysis_at": "2026-10-20T05:58:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d (stated assumption of the Orchestrator), task DEBT-WWOX-DIRECT-D-20261019 wave 2; context_policy SOURCE_FIRST (nothing about this paper held beyond its title). Route: Europe PMC JATS for PMC5342485 as the text surface and two figure JPEGs from the PMC blob store; both figures (all panels) opened as images; Tables 1-4 read as text; whole article read.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID27655721_Cheng2016_PMC5342485.xml",
+ "source_fingerprint": "6eb3f879026928648b036bf6ddcb10730a53e0dab5d31a71de79d770daa77562",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID27655721.json",
+  "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-02.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "Figures 1 and 2 (all panels) inspected as images",
+  "Tables 1-4 read as text",
+  "no supplementary file, no limitations section"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

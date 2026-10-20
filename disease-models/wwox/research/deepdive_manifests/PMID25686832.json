@@ -1,0 +1,415 @@
+{
+ "schema_version": 2,
+ "pmid": "25686832",
+ "doi": "10.18632/oncotarget.2895",
+ "receipt": "FTR-20261019-25686832-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-02.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named from wave-1 reading debts and deduplicated by the per-paper M0 packet and the receipt status check run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate and the analysis note; the discovery ledger is a shared single-writer file appended by the Orchestrator at integration."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "The Chang laboratory (National Cheng Kung University, from the authors' contributions), a many-author mouse and cell paper on a synthetic peptide. Primary for the Zfra peptide, not for Wwox loss of function; WWOX enters through one heterozygous mouse and the binding of Zfra to WWOX. Tumour-curve observations are weighed above the Z-cell and 'memory' interpretation."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "Zfra AND cancer",
+    "count": 11,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "Wwox AND heterozygous AND tumor",
+    "count": 21,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts, dated."
+ },
+ "multihop": {
+  "references_enumerated": 28,
+  "gene_direct_refs_in_source": [
+   "ref 2 Hong 2007 (PMID 17567906)",
+   "ref 3 Hsu 2008 (PMID 18403180)",
+   "ref 4 Dudekula 2010 (PMID 21212468)",
+   "ref 6 Chang 2007 (PMID 17142102)",
+   "ref 17 Tsai 2013 (PMID 24008736)",
+   "ref 18 Chang 2014 TRAPPC6A-delta (PMID 25650666)",
+   "ref 19 Hsu 2009 (PMID 19366691)",
+   "ref 22 Chang 2014 neuronal injury (PMID 25537520)",
+   "ref 23 Aqeilan 2007 (PMID 17360458)"
+  ],
+  "resolved": [
+   {
+    "pmid": "17567906",
+    "state": "complete receipt staged by this actor (wave 1)"
+   },
+   {
+    "pmid": "19366691",
+    "state": "partial receipt staged by this actor (wave 1)"
+   },
+   {
+    "pmid": "21212468",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "25650666",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "17360458",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "25537520",
+    "state": "partial receipt in the ledger"
+   },
+   {
+    "pmid": "24008736",
+    "state": "partial receipts in the ledger (resumed in wave 2 if the note says so)"
+   }
+  ],
+  "queued": [
+   {
+    "pmid": "18403180",
+    "queue": "debt of this actor's lot, DEBT-WWOX-DIRECT-D-20261019",
+    "note": "Hsu 2008, the source this paper names for the WWOX-induced cytochrome c release; parked"
+   },
+   {
+    "pmid": "17142102",
+    "queue": "parked in CC-20261019-SCIENTISTD-DEBT-01",
+    "note": "Chang 2007, closed"
+   }
+  ],
+  "note": "28 references enumerated from the JATS; the WWOX-direct ones are mostly the laboratory's own papers and mostly already receipted."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 25686832 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed efetch for PMID 25686832: publication types ['Journal Article', \"Research Support, U.S. Gov't, Non-P.H.S.\"]; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 28,
+   "references_screened": 24,
+   "references_with_doi": 24,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID25686832_Lee2015_PMC4414150.xml",
+   "sha256": "43259251abccb9861705a19a425e784450fa18e4ffcf44d38c7288098b551433",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC4414150 (CC BY): abstract, body, figure legends, 28 references. Every text locator is matched against this surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4414150/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "43259251abccb9861705a19a425e784450fa18e4ffcf44d38c7288098b551433"
+   }
+  },
+  {
+   "path": "files/figures/PMID25686832/fig1.jpg",
+   "sha256": "e9eeadb071563b7f42e08c619873f16141093c7201fec5f9195698bb6eb29ba7",
+   "kind": "figure",
+   "note": "Figure 1 JPEG from the PMC blob store (Zfra polymerisation and tumour curves), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c747/4414150/7525eb6eeca8/oncotarget-06-3737-g001.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "e9eeadb071563b7f42e08c619873f16141093c7201fec5f9195698bb6eb29ba7"
+   }
+  },
+  {
+   "path": "files/figures/PMID25686832/fig3.jpg",
+   "sha256": "1aaa720b3c9c0e0f7eaefb8b6c2c41a12fa12025d63b2ce377881a80c27750fe",
+   "kind": "figure",
+   "note": "Figure 3 JPEG from the PMC blob store (Zfra4-10 curves), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c747/4414150/dd6779360f7a/oncotarget-06-3737-g003.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "1aaa720b3c9c0e0f7eaefb8b6c2c41a12fa12025d63b2ce377881a80c27750fe"
+   }
+  },
+  {
+   "path": "files/figures/PMID25686832/fig5.jpg",
+   "sha256": "6c30ac8d5389ce8c2745fbadf3fb5b652b146b14ea979121cb49f9a7cc635fc9",
+   "kind": "figure",
+   "note": "Figure 5 JPEG from the PMC blob store (memory response and Wwox+/- mouse), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c747/4414150/5d07382ec730/oncotarget-06-3737-g005.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "6c30ac8d5389ce8c2745fbadf3fb5b652b146b14ea979121cb49f9a7cc635fc9"
+   }
+  },
+  {
+   "path": "files/figures/PMID25686832/fig6.jpg",
+   "sha256": "a42d7f7bdfd8304f721d11262f26fe4098a00f7e80f1f179faad4a3f20c774d9",
+   "kind": "figure",
+   "note": "Figure 6 JPEG from the PMC blob store (spleen cell transfer), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c747/4414150/5ed9c9189d7b/oncotarget-06-3737-g006.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "a42d7f7bdfd8304f721d11262f26fe4098a00f7e80f1f179faad4a3f20c774d9"
+   }
+  },
+  {
+   "path": "files/figures/PMID25686832/fig7.jpg",
+   "sha256": "ab3f04d5f3c14958e029891b74e630bbc204fcc01b664cd01f408afa2f7531d3",
+   "kind": "figure",
+   "note": "Figure 7 JPEG from the PMC blob store (Z-cell sorting), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c747/4414150/a4e548d265c6/oncotarget-06-3737-g007.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "ab3f04d5f3c14958e029891b74e630bbc204fcc01b664cd01f408afa2f7531d3"
+   }
+  },
+  {
+   "path": "files/figures/PMID25686832/fig8.jpg",
+   "sha256": "493df9163adfd0c3a11f596c110a2baecc2ff7e1888e57dc0fd7ec70499e0bce",
+   "kind": "figure",
+   "note": "Figure 8 JPEG from the PMC blob store (in vitro activated Z cells), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c747/4414150/9e7646980cb5/oncotarget-06-3737-g008.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "493df9163adfd0c3a11f596c110a2baecc2ff7e1888e57dc0fd7ec70499e0bce"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The text gives the cure rate of Wwox+/- tumours by Zfra4-10 as 70 percent of ten mice while the Figure 5E legend gives 75 percent of ten mice; 75 percent is not a possible fraction of ten.",
+    "snippet": "Zfra completely cured the cancer in 50 days, and the successful rate was 70% by examining 10 mice (Figure 5E).",
+    "anchor": "Results, Zfra4-10 induces a memory anticancer response against many types of cancer cells in vivo, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25686832_Lee2015_PMC4414150.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "nude, BALB/c and NOD-SCID mice receiving tail-vein synthetic Zfra peptides, xenografts and syngeneic tumours; one heterozygous Wwox mouse",
+     "genotype": "Wwox+/- (exon 2-4 ablation) for Figure 5E only; all other animals wild-type for Wwox",
+     "treatment": "Zfra1-31, Zfra4-10 and variants, 1-4 mM in 100 ul, tail vein",
+     "endpoint": "subcutaneous tumour volume curves (two flanks per mouse), spleen cell sorting"
+    }
+   },
+   {
+    "proposition": "The Figure 5E legend states a 75 percent cure rate for ten mice, against 70 percent in the text and 70 percent in the Discussion.",
+    "snippet": "Ten mice were examined and the cure rate was 75%.",
+    "anchor": "Figure 5 legend, panel E",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25686832_Lee2015_PMC4414150.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "nude, BALB/c and NOD-SCID mice receiving tail-vein synthetic Zfra peptides, xenografts and syngeneic tumours; one heterozygous Wwox mouse",
+     "genotype": "Wwox+/- (exon 2-4 ablation) for Figure 5E only; all other animals wild-type for Wwox",
+     "treatment": "Zfra1-31, Zfra4-10 and variants, 1-4 mM in 100 ul, tail vein",
+     "endpoint": "subcutaneous tumour volume curves (two flanks per mouse), spleen cell sorting"
+    }
+   },
+   {
+    "proposition": "Onset of spontaneous tumours in heterozygous Wwox mice is given as 'around 9 months', and a companion review by the same laboratory gives 'approximately at age one'; no untreated Wwox+/- tumour curve is in this paper.",
+    "snippet": "Heterozygous Wwox+/− appeared to spontaneously develop tumors around 9 months old.",
+    "anchor": "Results, Zfra4-10 induces a memory anticancer response, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25686832_Lee2015_PMC4414150.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "nude, BALB/c and NOD-SCID mice receiving tail-vein synthetic Zfra peptides, xenografts and syngeneic tumours; one heterozygous Wwox mouse",
+     "genotype": "Wwox+/- (exon 2-4 ablation) for Figure 5E only; all other animals wild-type for Wwox",
+     "treatment": "Zfra1-31, Zfra4-10 and variants, 1-4 mM in 100 ul, tail vein",
+     "endpoint": "subcutaneous tumour volume curves (two flanks per mouse), spleen cell sorting"
+    }
+   },
+   {
+    "proposition": "The Discussion concedes that spontaneous tumour formation in Wwox heterozygotes needs further investigation because wild-type mice also grow tumours, and that the result contradicts the earlier knockout paper.",
+    "snippet": "The notion that spontaneous tumor formation in WWOX +/− mice needs further investigation, since the wild type mice tend to spontaneously grow tumors.",
+    "anchor": "Discussion, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25686832_Lee2015_PMC4414150.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "nude, BALB/c and NOD-SCID mice receiving tail-vein synthetic Zfra peptides, xenografts and syngeneic tumours; one heterozygous Wwox mouse",
+     "genotype": "Wwox+/- (exon 2-4 ablation) for Figure 5E only; all other animals wild-type for Wwox",
+     "treatment": "Zfra1-31, Zfra4-10 and variants, 1-4 mM in 100 ul, tail vein",
+     "endpoint": "subcutaneous tumour volume curves (two flanks per mouse), spleen cell sorting"
+    }
+   },
+   {
+    "proposition": "The adoptive-transfer claim cites two panels together; in Figure 6C the Zfra-spleen group does not look lower than the control group.",
+    "snippet": "Naïve nude mice received Zfra-treated spleen cells became more resistant to the growth of BCC xenografts than those mice received control spleen cells (Figure 6B, 6C).",
+    "anchor": "Results, Spleen memory cells are responsible for Zfra-mediated cancer suppression",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25686832_Lee2015_PMC4414150.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "nude, BALB/c and NOD-SCID mice receiving tail-vein synthetic Zfra peptides, xenografts and syngeneic tumours; one heterozygous Wwox mouse",
+     "genotype": "Wwox+/- (exon 2-4 ablation) for Figure 5E only; all other animals wild-type for Wwox",
+     "treatment": "Zfra1-31, Zfra4-10 and variants, 1-4 mM in 100 ul, tail vein",
+     "endpoint": "subcutaneous tumour volume curves (two flanks per mouse), spleen cell sorting"
+    }
+   },
+   {
+    "proposition": "The statistics statement gives representative curves from two to six experiments and end-point Student t tests, with no randomisation, blinding, animal number per arm or sample-size basis.",
+    "snippet": "A representative data from the kinetics of tumor cell growth in tumor-bearing mice is shown from 2–6 experiments, as specified.",
+    "anchor": "Materials and Methods, Data presentation and statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25686832_Lee2015_PMC4414150.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "nude, BALB/c and NOD-SCID mice receiving tail-vein synthetic Zfra peptides, xenografts and syngeneic tumours; one heterozygous Wwox mouse",
+     "genotype": "Wwox+/- (exon 2-4 ablation) for Figure 5E only; all other animals wild-type for Wwox",
+     "treatment": "Zfra1-31, Zfra4-10 and variants, 1-4 mM in 100 ul, tail vein",
+     "endpoint": "subcutaneous tumour volume curves (two flanks per mouse), spleen cell sorting"
+    }
+   },
+   {
+    "proposition": "Several controls and results behind the mechanism are 'data not shown', including toxicity, lifespan and PBS-versus-water results.",
+    "snippet": "Zfra is not toxic to animals, and that Zfra-treated mice can live for their entire life span (data not shown).",
+    "anchor": "Results, Spleen memory cells are responsible for Zfra-mediated cancer suppression",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25686832_Lee2015_PMC4414150.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "nude, BALB/c and NOD-SCID mice receiving tail-vein synthetic Zfra peptides, xenografts and syngeneic tumours; one heterozygous Wwox mouse",
+     "genotype": "Wwox+/- (exon 2-4 ablation) for Figure 5E only; all other animals wild-type for Wwox",
+     "treatment": "Zfra1-31, Zfra4-10 and variants, 1-4 mM in 100 ul, tail vein",
+     "endpoint": "subcutaneous tumour volume curves (two flanks per mouse), spleen cell sorting"
+    }
+   },
+   {
+    "proposition": "The paper restates, for the WWOX link, that overexpressed WWOX induces cytochrome c release and that Zfra blocks it, citing the Cell Signal paper; this is a restatement of an in vitro overexpression result, not a result here.",
+    "snippet": "One of the mechanisms for Zfra inhibition of cytochrome c release is that transiently overexpressed WWOX induces cytochrome c release, and that Zfra binds and blocks the function of WWOX [3].",
+    "anchor": "Introduction, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25686832_Lee2015_PMC4414150.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "nude, BALB/c and NOD-SCID mice receiving tail-vein synthetic Zfra peptides, xenografts and syngeneic tumours; one heterozygous Wwox mouse",
+     "genotype": "Wwox+/- (exon 2-4 ablation) for Figure 5E only; all other animals wild-type for Wwox",
+     "treatment": "Zfra1-31, Zfra4-10 and variants, 1-4 mM in 100 ul, tail vein",
+     "endpoint": "subcutaneous tumour volume curves (two flanks per mouse), spleen cell sorting"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 5E: tumour volume of one heterozygous Wwox+/- mouse, about 2000 mm3 at the start falling to about 100 mm3 by day 50 with four tail-vein injections marked by red triangles, then flat to day 120; one animal, one curve, no untreated heterozygote curve, no genotype or necropsy panel.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 5E line plot 'Wwox+/- mice', y-axis Tumor volume (mm3) 0-3000, x-axis Day 0-140, a single curve with red triangle markers falling from about 2000 to about 100 by day 50.",
+    "anchor": "Figure 5E, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID25686832/fig5.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "nude, BALB/c and NOD-SCID mice receiving tail-vein synthetic Zfra peptides, xenografts and syngeneic tumours; one heterozygous Wwox mouse",
+     "genotype": "Wwox+/- (exon 2-4 ablation) for Figure 5E only; all other animals wild-type for Wwox",
+     "treatment": "Zfra1-31, Zfra4-10 and variants, 1-4 mM in 100 ul, tail vein",
+     "endpoint": "subcutaneous tumour volume curves (two flanks per mouse), spleen cell sorting"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 6B and 6C: two-flank tumour curves of BCC xenografts in nude mice after transfer of spleen cells; in 6B the Zfra-donor group has one flank near 1700 mm3 and one near 500 against 2900 and 1700 for control donors; in 6C the control group ends near 1000 and 300 and the Zfra-donor group near 800 and 600, overlapping; two curves per arm are drawn (two flanks) and the legend states no number of mice.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 6B and 6C line plots Spleen cell transfer from control mouse and from Zfra-treated mouse, two curves each, Day 1-86, BCC arrow, y-axis 0-4000 (B) and 0-2000 (C).",
+    "anchor": "Figure 6B and 6C, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID25686832/fig6.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "nude, BALB/c and NOD-SCID mice receiving tail-vein synthetic Zfra peptides, xenografts and syngeneic tumours; one heterozygous Wwox mouse",
+     "genotype": "Wwox+/- (exon 2-4 ablation) for Figure 5E only; all other animals wild-type for Wwox",
+     "treatment": "Zfra1-31, Zfra4-10 and variants, 1-4 mM in 100 ul, tail vein",
+     "endpoint": "subcutaneous tumour volume curves (two flanks per mouse), spleen cell sorting"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search returned inEPMC Y and isOpenAccess Y for PMC4414150 on 2026-10-20; fullTextXML returned HTTP 200 with a body; the ten figure JPEGs were fetched from the PMC blob store named in the archived article page.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

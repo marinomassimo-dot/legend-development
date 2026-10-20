@@ -55,3 +55,48 @@ undetected_known: 0
 ```
 
 **Reading of the census.** Two of the four incidents that could have reached the record were caught by the blind auditor and two by my own re-check; none by a validator. The validators caught only malformed declarations. The two auditor catches are the ones that matter: both were propositions that said slightly more than their source, written by me and passed by every gate. `undetected_known: 0` cannot be trusted; absence claims ("the paper contains no X") are the class most likely to hide an error and were audited for only five of the papers.
+
+---
+
+# Wave 2 addendum (2026-10-20): the open unread gene-direct items of my own queue list
+
+## Scope and executable verdict
+
+- Nine readings under `DEBT-WWOX-DIRECT-D-20261019` wave 2: six new (Tabarki 2015, Hsu 2016, Lee 2015, Zhang 2012, Cheng 2016, Ekizoglu 2015) and three resumes of partial receipts (Li 2009, O'Keefe 2015, Tsai 2013). Staged receipts `FTR-20261019-<PMID>-01` for the six and `-02`, `-02`, `-03` for the resumes; all validated in isolation; none appended.
+- All nine manifests `PASS` against the shared evidence tree; `locator_contradiction_audit.py --working-tree --fail-on-undeclared` clean. Global gates are run at landing, which the coordinator has deferred (branch kept committed, not landed).
+
+## Content diagnosis (differences from wave 1 only)
+
+| Dimension | Answer | Grade |
+|---|---|---|
+| Figures as images | Every figure of every new paper opened (page renders or blob JPEGs); resumes opened the supplementary figures, using PyMuPDF where ImageMagick crashes on the TIFFs. | strong |
+| Supplements | Two new papers leave supplements not read (declared); a deposit defect (another article's supplement under one PMID) was repaired by finding the article's own supplement on the publisher's page, which supersedes an earlier "not retrievable". | strong |
+| Duplicate-work gate | Two entries on my own queue list were wrong (a paper already resumed by a peer; one already complete). Caught by checking worktrees and the ledger before reading. | adequate |
+| Existing claims touched | None annotated; one queue-record status op (`FT-090`), dry-run clean. | strong |
+| Multi-hop | Reference lists enumerated; gene-direct items resolved to receipts or queued or parked; two un-triaged. | adequate |
+
+## Attribution census, wave 2
+
+| # | Incident | Caught by | Reached the record? |
+|---|---|---|---|
+| A | Manifest validator: unfilled `citing_relation` placeholder for a flagged dependency (one class, one instance) | machine | no |
+| B | My queue list named Hong 2009 as unread and Park 2004 as unreceipted; the first had been resumed by a peer, the second was complete | self (status check and worktree search before reading) | would have (duplicate reading) |
+| C | A first draft of the candidate carried counts "cited by five/seven read papers" and "worked eleven times" that no command supported | self (re-read the candidate against what I had run) | would have |
+| D | Proposition in the Cheng manifest said a promoter reporter "reports transcriptional output" as fact | blind auditor | would have |
+| E | Proposition in the Tabarki manifest said "the only reference to metabolism" while the abstract has an uncited metabolic phrase | blind auditor | would have |
+| F | Hsu 2016 proposition called a family study a case report | blind auditor | would have |
+| G | Italian text in a draft registry op (the queue file is Italian; my instruction is English files) | self (re-read the op before applying) | would have |
+
+```
+ATTRIBUTION_CENSUS
+incidents: 7
+machine: 1   blind_auditor: 3   peer: 0   self: 3
+severity_high: 6   of which self: 3
+undetected_known: 0
+```
+
+**Reading of the census.** Half of the incidents that could have reached the record were caught by the blind auditor, and all three auditor catches are propositions that went a clause beyond their source: a mechanism inferred, an absence stated as "only", a type mislabelled. That is the same class as wave 1. The practice that worked was running the auditor on eight triples before committing, which let the narrowings be made without a declared contradiction.
+
+## Micro-upgrade of the wave
+
+Not a code change this time: the capability scout log gains the proven route for author-manuscript PMC deposits and the TIFF-render workaround (see `capability_scout_log.md`).

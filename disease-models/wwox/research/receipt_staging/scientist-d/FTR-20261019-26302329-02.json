@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-26302329-02",
+ "study_id": {
+  "pmid": "26302329",
+  "doi": "10.1371/journal.pone.0136356"
+ },
+ "analysis_at": "2026-10-20T06:03:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d (stated assumption of the Orchestrator), task DEBT-WWOX-DIRECT-D-20261019 wave 2; context_policy QUESTION_DRIVEN (held: the Lee 2021 review, read in wave 1, which cites this paper). Resume of the earlier partial reading that left the reference list not read and the supplementary figures at caption level: the 70-entry reference list was read from the JATS (gene-direct entries checked against the receipt status: Aqeilan 2007 and Ludes-Meyers 2007 read, Choo 2015 and Dayan 2013 unread and parked, O'Keefe 2005 unreceipted), and supplementary figures S1 to S4 (TIFFs in the shared evidence tree, rendered with PyMuPDF) were each opened as an image. The body and Figures 1-7 stand as read by the earlier receipt.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID26302329_OKeefe2015_PMC.xml",
+ "source_fingerprint": "bbd1d0f6b315ee3e3dd60fa87046baa4d4753a32b3c6a66dee0c503f25926c73",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID26302329.json",
+  "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-02.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "reference list read from the JATS (70 entries)",
+  "supplementary Figures S1-S4 inspected as images",
+  "prior receipt FTR-20261003-26302329-01 named; reread_reason inadequate_prior_coverage"
+ ],
+ "prior_receipt": "FTR-20261003-26302329-01",
+ "reread_reason": "inadequate_prior_coverage"
+}

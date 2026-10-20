@@ -106,5 +106,54 @@
    "disease-models/wwox/research/session_evaluations/2026-10-19_debts_scientist-d.md"
   ],
   "micro_upgrade": "pubmed_identity_check takes the article's own DOI (regression added)"
+ },
+ "WAVE_2_RESULT": {
+  "papers_read": 9,
+  "new": 6,
+  "resumed": 3,
+  "parked_added": 6,
+  "receipts_staged": [
+   "FTR-20261019-25416187-01",
+   "FTR-20261019-27999774-01",
+   "FTR-20261019-25686832-01",
+   "FTR-20261019-22484428-01",
+   "FTR-20261019-27655721-01",
+   "FTR-20261019-25612104-01",
+   "FTR-20261019-19918364-02",
+   "FTR-20261019-26302329-02",
+   "FTR-20261019-24008736-03"
+  ],
+  "outputs": [
+   "disease-models/wwox/research/debts_wave_20261019_scientist-d.md (Wave 2 sections)",
+   "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-02.md",
+   "disease-models/wwox/research/session_evaluations/2026-10-19_debts_scientist-d.md (wave 2 addendum)"
+  ],
+  "DEFAULTS_TAKEN": [
+   {
+    "condition": "two entries of my own queue list were wrong (Hong 2009 already resumed by scientist-a in another branch; Park 2004 already complete)",
+    "default": "did not read Hong 2009 (duplicate); corrected the list in the candidate and the note",
+    "why_safe": "avoids a duplicated assignment",
+    "would_have_differed": "a clean list would have read both"
+   },
+   {
+    "condition": "the coordinator said not to land the branch (root busy with a corrective batch)",
+    "default": "kept task/DEBT-WWOX-DIRECT-D-20261019 committed and unlanded",
+    "why_safe": "explicit instruction",
+    "would_have_differed": "none"
+   },
+   {
+    "condition": "the PMC deposit's supplement for Tsai 2013 is another article's",
+    "default": "retrieved the article's own supplement from the publisher's page and superseded the earlier 'not retrievable' note with a declared SUPERSEDED sentence; no persisted locator text changed",
+    "why_safe": "audit clean; the checker reports no undeclared revision",
+    "would_have_differed": "a contradiction declaration would have been needed had a locator changed"
+   },
+   {
+    "condition": "max twelve papers; nine read; remaining open items are subscription or bot-challenged, or not triaged (two)",
+    "default": "stopped at nine with the rest parked or named; not out of context",
+    "why_safe": "within the cap and the lawful-body rule",
+    "would_have_differed": "an operator PDF would add readings"
+   }
+  ],
+  "STOP_LOG": []
  }
 }

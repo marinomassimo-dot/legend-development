@@ -1,0 +1,40 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-22484428-01",
+ "study_id": {
+  "pmid": "22484428",
+  "doi": "10.3892/mmr.2012.860"
+ },
+ "analysis_at": "2026-10-20T05:57:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d (stated assumption of the Orchestrator), task DEBT-WWOX-DIRECT-D-20261019 wave 2; context_policy QUESTION_DRIVEN (held: the Tabarki commentary, read earlier in this lot, cites this paper for the mitochondrial mechanism). Route: publisher PDF from Spandidos (Unpaywall bronze URL), text by pdftotext in reading order, page 3 rendered with pdftoppm at 120 dpi and opened; all four figures read as an image; whole article (four pages) and reference list read. PubMed and Crossref disagree on the first author (Zhang against Fan); the PDF title page names Zhang first, so the identity is the PubMed record's.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID22484428_Zhang2012_spandidos.txt",
+ "source_fingerprint": "135b7dcd36f8d4e2e4d0e45c3fef94b9fcf1ff739f6e1657c5da2a523fe66ef0",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID22484428.json",
+  "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-02.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "Figures 1-4 inspected on the page render at 120 dpi",
+  "no tables, supplement or limitations section"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

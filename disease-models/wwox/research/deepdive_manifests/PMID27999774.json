@@ -1,0 +1,357 @@
+{
+ "schema_version": 2,
+ "pmid": "27999774",
+ "doi": "10.3389/fcell.2016.00141",
+ "receipt": "FTR-20261019-27999774-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-02.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named from wave-1 reading debts and deduplicated by the per-paper M0 packet and the receipt status check run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate and the analysis note; the discovery ledger is a shared single-writer file appended by the Orchestrator at integration."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "The Chang laboratory (National Cheng Kung University, from the author contributions), writing a review and opinion piece on its own Hyal-2/WWOX/Smad4 and Zfra work. Primary for those cultured-cell models, not for Wwox loss of function or neurological disease. Statements about its own models weigh as that laboratory's interpretation; statements about other groups' knockout or human data weigh as restatements."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (HYAL2 OR Hyal-2 OR hyaluronidase)",
+    "count": 18,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "Zfra AND (cancer OR WWOX)",
+    "count": 16,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts, dated."
+ },
+ "multihop": {
+  "references_enumerated": 133,
+  "gene_direct_refs_in_source": [
+   "Hsu 2009 (PMID 19366691)",
+   "Hsu 2008 Zfra (PMID 18403180)",
+   "Hong 2007 (PMID 17567906)",
+   "Lee 2015 Zfra and Z cells (PMID 25686832)",
+   "Li 2009 sciatic nerve (PMID 19918364)",
+   "Aldaz 2014 (PMID 24932569)",
+   "Alkhateeb 2016 (PMID 27121845)",
+   "Elsaadany 2016 (PMID 27495153)",
+   "Huang 2016 (PMID 27339895)",
+   "Lin 2011 (PMID 21901168)"
+  ],
+  "resolved": [
+   {
+    "pmid": "19366691",
+    "state": "partial receipt staged by this actor (wave 1)"
+   },
+   {
+    "pmid": "17567906",
+    "state": "complete receipt staged by this actor (wave 1)"
+   },
+   {
+    "pmid": "27339895",
+    "state": "partial receipt staged by this actor (wave 1)"
+   },
+   {
+    "pmid": "21901168",
+    "state": "partial receipt staged by this actor (wave 1)"
+   },
+   {
+    "pmid": "24932569",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "27495153",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "19918364",
+    "state": "partial receipt in the ledger"
+   }
+  ],
+  "queued": [
+   {
+    "pmid": "25686832",
+    "queue": "debt of this actor's lot, DEBT-WWOX-DIRECT-D-20261019 wave 2",
+    "note": "Lee 2015, the Z-cell and Wwox+/- tumour claim; open access"
+   },
+   {
+    "pmid": "27121845",
+    "queue": "parked in CC-20261019-SCIENTISTD-DEBT-02",
+    "note": "Alkhateeb 2016 consanguineous Arab families with a WWOX variant; closed"
+   },
+   {
+    "pmid": "18403180",
+    "queue": "debt of this actor's lot, DEBT-WWOX-DIRECT-D-20261019",
+    "note": "Hsu 2008, parked"
+   }
+  ],
+  "note": "133 references enumerated from the Europe PMC references endpoint and the JATS; most concern hyaluronan biology. The WWOX-direct references are mostly the laboratory's own papers."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 27999774 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed efetch for PMID 27999774: publication types ['Review', 'Journal Article']; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 136,
+   "references_screened": 132,
+   "references_with_doi": 132,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID27999774_Hsu2016_PMC5138198.xml",
+   "sha256": "b10d5e44ea838a42940ef9b2e1a89410d2be3689085e4bcd2b7935d8964dfe2b",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC5138198 (CC BY): abstract, body, figure legends, 133 references. Every text locator is matched against this surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5138198/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "b10d5e44ea838a42940ef9b2e1a89410d2be3689085e4bcd2b7935d8964dfe2b"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID27999774_Hsu2016_frontiers.pdf",
+   "sha256": "75113b8e6785abd6f72206ac85cec9fb0b24b673601f016214b4ea8d454e2c6b",
+   "kind": "article_binary",
+   "note": "Publisher PDF (17 pages) from Frontiers, the open-access URL Unpaywall lists, source of the figure page renders.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.frontiersin.org/articles/10.3389/fcell.2016.00141/pdf",
+    "http_method": "GET",
+    "tier": "publisher OA PDF",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "75113b8e6785abd6f72206ac85cec9fb0b24b673601f016214b4ea8d454e2c6b"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID27999774/p-06.png",
+   "sha256": "a8c857b8495c99d202806516065e1859745282326ce249dc792d2ad49b3b8c8e",
+   "kind": "figure",
+   "note": "PDF page 6 rendered at 110 dpi (Figure 1), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID27999774_Hsu2016_frontiers.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 110 -f 6 -l 7 -png (page 6)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "a8c857b8495c99d202806516065e1859745282326ce249dc792d2ad49b3b8c8e"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID27999774/p-07.png",
+   "sha256": "a95f65e17beab8fe5c2feda6809f386ad923b18bc9f9e0860ad3b29aced35f3f",
+   "kind": "figure",
+   "note": "PDF page 7 rendered at 110 dpi (Figure 2), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID27999774_Hsu2016_frontiers.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 110 -f 6 -l 7 -png (page 7)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "a95f65e17beab8fe5c2feda6809f386ad923b18bc9f9e0860ad3b29aced35f3f"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The review states that null mutations in humans and animals cause metabolic disorders among other features; the four references are two reviews, one case report and one consanguineous-family genetic study (by title and venue), none cited with a metabolic measurement here.",
+    "snippet": "Notably, null mutations of WWOX/Wwox gene in humans and animals lead to severe neural diseases (e.g., microcephaly, seizure, ataxia, etc.), growth retardation, metabolic disorders, developmental delay, and early death",
+    "anchor": "Tumor suppressor WWOX is anchored on the cell membrane by HYAL-2, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27999774_Hsu2016_PMC5138198.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review and opinion by the Chang laboratory of its own cultured-cell, rat and mouse work",
+     "genotype": "WWOX null, heterozygous, overexpressed, as cited",
+     "endpoint": "none measured"
+    }
+   },
+   {
+    "proposition": "The review itself notes that WWOX-deficient newborns do not develop cancer and asks whether WWOX is a real tumour suppressor.",
+    "snippet": "Nevertheless, no spontaneous cancer formation has been seen in the newborns, arguing whether WWOX is a real tumor suppressor.",
+    "anchor": "Tumor suppressor WWOX is anchored on the cell membrane by HYAL-2, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27999774_Hsu2016_PMC5138198.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review and opinion by the Chang laboratory of its own cultured-cell, rat and mouse work",
+     "genotype": "WWOX null, heterozygous, overexpressed, as cited",
+     "endpoint": "none measured"
+    }
+   },
+   {
+    "proposition": "The statement that overexpressed WWOX sequesters transcription factors in the cytoplasm is qualified by the review as not working in vivo, citing a rat nerve-injury paper for endogenous WWOX co-translocating with CREB.",
+    "snippet": "Nonetheless, this does not work effectively in vivo. For example, endogenous WWOX rapidly binds and co-translocates with CREB to the nuclei of injured neurons during sciatic nerve transection in rats (Li et al., 2009).",
+    "anchor": "Tumor suppressor WWOX is anchored on the cell membrane by HYAL-2, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27999774_Hsu2016_PMC5138198.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review and opinion by the Chang laboratory of its own cultured-cell, rat and mouse work",
+     "genotype": "WWOX null, heterozygous, overexpressed, as cited",
+     "endpoint": "none measured"
+    }
+   },
+   {
+    "proposition": "A complete cure of tumours in heterozygous Wwox+/- mice by a Zfra peptide in 50 days is stated as a restatement of one earlier paper from the same laboratory, with no data in this review.",
+    "snippet": "and Zfra4-10 completely cures the tumor in 50 days (Lee et al., 2015).",
+    "anchor": "Zfra binds membrane HYAL-2 as a receptor in spleen HYAL-2+ CD3- CD19- Z lymphocyte, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27999774_Hsu2016_PMC5138198.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review and opinion by the Chang laboratory of its own cultured-cell, rat and mouse work",
+     "genotype": "WWOX null, heterozygous, overexpressed, as cited",
+     "endpoint": "none measured"
+    }
+   },
+   {
+    "proposition": "The proposed role of Hyal-2 capping in the memory anticancer response is offered with 'perhaps' and 'appears', i.e. as conjecture.",
+    "snippet": "Perhaps, Zfra-mediated capping of Hyal-2 on the cell surface appears to be necessary to establish the induced memory anticancer response.",
+    "anchor": "Zfra binds membrane HYAL-2 ... Z lymphocyte, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27999774_Hsu2016_PMC5138198.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review and opinion by the Chang laboratory of its own cultured-cell, rat and mouse work",
+     "genotype": "WWOX null, heterozygous, overexpressed, as cited",
+     "endpoint": "none measured"
+    }
+   },
+   {
+    "proposition": "The model that Zfra binding leads to Tyr33 phosphorylation and Ser14 de-phosphorylation exposing a WWOX 7-21 motif is stated as 'presumably'.",
+    "snippet": "Presumably, binding of Zfra to WWOX leads to Tyr33 phosphorylation and Ser14 de-phosphorylation, and the open form has an exposure of WWOX7-21 motif for Z cell activation.",
+    "anchor": "Conclusion and perspectives",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27999774_Hsu2016_PMC5138198.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review and opinion by the Chang laboratory of its own cultured-cell, rat and mouse work",
+     "genotype": "WWOX null, heterozygous, overexpressed, as cited",
+     "endpoint": "none measured"
+    }
+   },
+   {
+    "proposition": "The review asserts that malignant cancer cells are generally devoid of WWOX, SMAD4 and p53, a sweeping statement sitting beside the same laboratory's account of WWOX up-regulation in early lesions.",
+    "snippet": "Malignant cancer cells are generally devoid of tumor suppressors WWOX, SMAD4, and p53.",
+    "anchor": "High molecular weight HA induces bubbling cell death, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27999774_Hsu2016_PMC5138198.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review and opinion by the Chang laboratory of its own cultured-cell, rat and mouse work",
+     "genotype": "WWOX null, heterozygous, overexpressed, as cited",
+     "endpoint": "none measured"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 1: schematics of hyaluronan-induced Hyal-2/WWOX/Smad4 signalling (A), a tri-molecular FRET complex of tagged proteins with bubbling cell death (B) and a WWOX/Smad4/p53 complex with blebbing and no death (C); no measured value.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 three cell diagrams labelled HA, WWOX, SMAD4, Hyal2, nucleus, cells survive, bubbling cell death, blebbing without death, with ECFP-Smad4, EGFP-Hyal2, DsRed-Wwox legend.",
+    "anchor": "Figure 1, PDF page 6, read as an image at 110 dpi",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID27999774/p-06.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative review and opinion by the Chang laboratory of its own cultured-cell, rat and mouse work",
+     "genotype": "WWOX null, heterozygous, overexpressed, as cited",
+     "endpoint": "none measured"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 2: a schematic of Zfra tail-vein injection, spleen Z-cell activation, cancer-cell inoculation and adoptive transfer with 'resistance to cancer growth' outcomes; no measured value, no n and no data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 mouse diagrams titled In Vivo Activation of Z cell with Zfra injections, 2 weeks or 6 months later, transfer of activated Z cells to recipient mice, outcomes Resistance to cancer growth and Growth of cancer cells.",
+    "anchor": "Figure 2, PDF page 7, read as an image at 110 dpi",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID27999774/p-07.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative review and opinion by the Chang laboratory of its own cultured-cell, rat and mouse work",
+     "genotype": "WWOX null, heterozygous, overexpressed, as cited",
+     "endpoint": "none measured"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search returned inEPMC Y and isOpenAccess Y for PMC5138198 on 2026-10-20; fullTextXML returned HTTP 200 with a body and the Frontiers PDF returned a valid 17-page file.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

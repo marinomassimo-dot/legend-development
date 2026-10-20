@@ -1,0 +1,39 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-25416187-01",
+ "study_id": {
+  "pmid": "25416187",
+  "doi": "10.1177/1535370214561952"
+ },
+ "analysis_at": "2026-10-20T05:52:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d (stated assumption of the Orchestrator), task DEBT-WWOX-DIRECT-D-20261019 wave 2, branch task/DEBT-WWOX-DIRECT-D-20261019; context_policy SOURCE_FIRST (held nothing about this paper beyond its title). Route: Internet Archive capture of the PMC page as the text surface; the commentary has no figure, table or supplement; whole article and reference list read.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID25416187_Tabarki2015_PMC4935222_wayback20250307.html",
+ "source_fingerprint": "1000ba8156b553cfee38a68f47a009eb1b97b317771ead86ceb50469c3671def",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "not_present",
+  "figures": "not_present",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID25416187.json",
+  "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-02.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "commentary with no figures, tables, methods or supplement"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
