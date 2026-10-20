@@ -1,0 +1,327 @@
+{
+ "schema_version": 2,
+ "pmid": "41591075",
+ "doi": "10.3390/neurolint18010001",
+ "receipt": "FTR-20261019-41591075-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID41591075.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "A neuroscience group writing a mechanistic review (affiliations not examined); no primary data; very large reference base mostly from animal models."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "blood-brain barrier AND epilepsy AND albumin AND TGF-beta",
+    "count": 20,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND blood-brain barrier",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts at the stated date."
+ },
+ "multihop": {
+  "references_enumerated": 297,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41591075 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 41591075: publication types ['Journal Article', 'Review']; correction/retraction link markers in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 297,
+   "references_screened": 290,
+   "references_with_doi": 290,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 7
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41591075_Suleymanova2025_PMC.xml",
+   "sha256": "9c58c819491575770766bf5efabad1c9ed401de5633890596f177218215ff46f",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC12845512: abstract, body (nine sections), two figure legends, 297 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12845512/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41591075/neurolint-18-00001-g001.jpg",
+   "sha256": "104011c931f588b60f1530e19ec30c9f2b3c348fa7b57d2c08ccab35b8808e14",
+   "kind": "figure",
+   "note": "Figure 1 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12845512/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41591075/neurolint-18-00001-g002.jpg",
+   "sha256": "562a436f821e06f536b0cd53ed4e631cdc7dd68b5241dfdea8d46b3953f6f6b4",
+   "kind": "figure",
+   "note": "Figure 2 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12845512/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12845512/fullTextXML returned HTTP 200 (428143 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "The review's thesis: BBB dysfunction is both cause and consequence of seizures, an 'important link' in epilepsy pathophysiology.",
+    "snippet": "Such BBB dysfunction can both trigger and sustain seizures, thus being a cause and a consequence of epileptic activity, which makes the BBB an important link in the pathophysiology of epilepsy [5].",
+    "anchor": "1. Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41591075_Suleymanova2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of blood-brain barrier disruption in epilepsy (human MRI/tissue/CSF studies, rodent status epilepticus, TBI and ischaemia models)"
+    }
+   },
+   {
+    "proposition": "Human evidence: seizure-related BBB opening on imaging, persistent interictal leakage in drug-resistant epilepsy, and reduced leakage after successful focus resection.",
+    "snippet": "At the same time, BBB leakage in patients with drug-resistant epilepsy is persistent and observed inter-ictally [30,31].",
+    "anchor": "2. BBB permeability changes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41591075_Suleymanova2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of blood-brain barrier disruption in epilepsy (human MRI/tissue/CSF studies, rodent status epilepticus, TBI and ischaemia models)"
+    }
+   },
+   {
+    "proposition": "Evidence on endothelial tight-junction protein in human tissue is mixed: claudin-5 reduced in resected temporal lobe in one report, increased in microvasculature in another.",
+    "snippet": "However, the study of the expression of tight junction proteins specifically in endothelial cells in the microvasculature of TLE patients showed an increase in claudin-5 expression and a decrease in occludin expression [59].",
+    "anchor": "3.1 Endothelial cells and tight junctions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41591075_Suleymanova2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of blood-brain barrier disruption in epilepsy (human MRI/tissue/CSF studies, rodent status epilepticus, TBI and ischaemia models)"
+    }
+   },
+   {
+    "proposition": "Albumin in tissue: post-mortem and resected tissue from epilepsy patients shows extravasated serum albumin and activated astrocytes.",
+    "snippet": "Post-mortem immunohistochemical investigation of the hippocampus of epilepsy patients showed the presence of extravasated serum albumin and activated astrocytes [190]",
+    "anchor": "5.2 Extravasation of albumin and TGF-beta signaling",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41591075_Suleymanova2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of blood-brain barrier disruption in epilepsy (human MRI/tissue/CSF studies, rodent status epilepticus, TBI and ischaemia models)"
+    }
+   },
+   {
+    "proposition": "Rodent albumin experiments: intracerebral albumin increased susceptibility to kainic acid seizures and lowered the hippocampal after-discharge threshold; albumin binds astrocytic TGF-beta type II receptors; blocking the receptor prevents albumin-induced epileptiform activity.",
+    "snippet": "Intracerebral administration of albumin increased susceptibility to KA-induced seizures during the acute period after albumin injection and reduced the after-discharge threshold in the hippocampus in the long-term period after albumin injection",
+    "anchor": "5.2 Extravasation of albumin and TGF-beta signaling",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41591075_Suleymanova2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of blood-brain barrier disruption in epilepsy (human MRI/tissue/CSF studies, rodent status epilepticus, TBI and ischaemia models)"
+    }
+   },
+   {
+    "proposition": "The albumin pathway proceeds through astrocytic TGF-beta receptor II and reduces Kir4.1, with extracellular potassium and glutamate accumulation.",
+    "snippet": "Activation of TGF-β signaling leads to downregulation of Kir4.1 and accumulation of extracellular K+ and glutamate and a subsequent increase in neuronal excitability [199].",
+    "anchor": "5.2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41591075_Suleymanova2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of blood-brain barrier disruption in epilepsy (human MRI/tissue/CSF studies, rodent status epilepticus, TBI and ischaemia models)"
+    }
+   },
+   {
+    "proposition": "Clinical support for the TGF-beta arm is raised CSF TGF-beta1 and upregulated pathway components in resected temporal lobe tissue.",
+    "snippet": "Increased concentration of TGF-β1 has been found in the CSF of patients with drug-resistant epilepsy [207], and TGFβRIs are upregulated in the temporal lobe of such patients [208].",
+    "anchor": "5.2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41591075_Suleymanova2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of blood-brain barrier disruption in epilepsy (human MRI/tissue/CSF studies, rodent status epilepticus, TBI and ischaemia models)"
+    }
+   },
+   {
+    "proposition": "Plasminogen activation: tPA-null mice show less seizure susceptibility and BBB leakage, neuroserpin-null mice severe seizures and early barrier loss (rodent, kainic acid).",
+    "snippet": "In studies on knockout mice, tPA-deficient tPA−/− mice have demonstrated decreased susceptibility to seizures [161,162], while neuroserpin-deficient Nsp−/− mice, on the contrary, have developed very severe seizures in response to KA injection [161].",
+    "anchor": "4. Plasminogen activation system",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41591075_Suleymanova2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of blood-brain barrier disruption in epilepsy (human MRI/tissue/CSF studies, rodent status epilepticus, TBI and ischaemia models)"
+    }
+   },
+   {
+    "proposition": "Immune cells: monocyte and neutrophil infiltration contributes to damage in kainic acid and pilocarpine models, but infiltration of leukocytes may be protective in some contexts.",
+    "snippet": "At the same time, some processes accompanying BBB disruption may be a compensatory response to brain damage; for example, infiltration of peripheral leukocytes can have a protective effect via recruitment of B-cells to the brain",
+    "anchor": "8. BBB targeting as a therapeutic strategy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41591075_Suleymanova2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of blood-brain barrier disruption in epilepsy (human MRI/tissue/CSF studies, rodent status epilepticus, TBI and ischaemia models)"
+    }
+   },
+   {
+    "proposition": "Drug-resistance paradox: despite increased permeability of the damaged barrier, dysfunction is said to decrease drug penetration; the transporter hypothesis remains debated.",
+    "snippet": "Despite the increased permeability of the damaged BBB, its dysfunction leads to a decrease in drug penetration to the brain in epilepsy patients [9].",
+    "anchor": "7. BBB dysfunction and resistance to antiepileptic drugs",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41591075_Suleymanova2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of blood-brain barrier disruption in epilepsy (human MRI/tissue/CSF studies, rodent status epilepticus, TBI and ischaemia models)"
+    }
+   },
+   {
+    "proposition": "Therapeutic candidates (losartan, microRNA antagonists, levetiracetam, valproate, imatinib) rest on rodent models; the review says none has fully prevented epileptogenesis and most approaches are far from the clinic.",
+    "snippet": "However, so far, none of the studied candidates have exhibited an ability to fully prevent epileptogenesis.",
+    "anchor": "8. BBB targeting",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41591075_Suleymanova2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of blood-brain barrier disruption in epilepsy (human MRI/tissue/CSF studies, rodent status epilepticus, TBI and ischaemia models)"
+    }
+   },
+   {
+    "proposition": "An observational cohort of hypertensive patients on angiotensin receptor blockers (losartan in particular) is cited as showing lower new-onset epilepsy.",
+    "snippet": "Interestingly, a cohort study on patients with arterial hypertension has shown that patients receiving angiotensin receptor blockers, particularly losartan, demonstrated a lower incidence of new-onset epilepsy compared to patients receiving other groups of antihypertensive medications [269].",
+    "anchor": "8. BBB targeting",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41591075_Suleymanova2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of blood-brain barrier disruption in epilepsy (human MRI/tissue/CSF studies, rodent status epilepticus, TBI and ischaemia models)"
+    }
+   },
+   {
+    "proposition": "The conclusion says the timing and response of components differ by insult and that future work must define spatiotemporal detail.",
+    "snippet": "Therefore, future research is needed to elucidate the precise spatiotemporal details of BBB damage and NVU dysfunction across different epileptogenic contexts.",
+    "anchor": "9. Conclusions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41591075_Suleymanova2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of blood-brain barrier disruption in epilepsy (human MRI/tissue/CSF studies, rodent status epilepticus, TBI and ischaemia models)"
+    }
+   },
+   {
+    "proposition": "Figure 1: schematic of the neurovascular unit after an epileptogenic insult (endothelial tight junctions and VEGF, pericyte PDGFRbeta and CCL2, microglial cytokines and MMPs, tPA, immune-cell infiltration, albumin extravasation activating astrocytic TGFbetaRII, Kir4.1 and AQP4 changes) converging on BBB damage and neuroinflammation; a cartoon, no data, no WWOX.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 cartoon with endothelium, pericyte, microglia, astrocyte, neuron, albumin arrow to TGFbetaRII, BBB damage box.",
+    "anchor": "Figure 1, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41591075/neurolint-18-00001-g001.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative review of blood-brain barrier disruption in epilepsy (human MRI/tissue/CSF studies, rodent status epilepticus, TBI and ischaemia models)"
+    }
+   },
+   {
+    "proposition": "Figure 2: schematic of the plasminogen activation system (PAI-1 and neuroserpin inhibiting tPA/uPA; plasmin, MMP-9, LRP-1, NMDAR and PDGF-CC/PDGFRalpha routes) all ending in 'increase in BBB permeability'; a cartoon, no data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 cartoon PAI-1, neuroserpin, uPA, tPA, plasminogen, plasmin, MMP-9, LRP-1, NMDAR, PDGF-CC, outcome box.",
+    "anchor": "Figure 2, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41591075/neurolint-18-00001-g002.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative review of blood-brain barrier disruption in epilepsy (human MRI/tissue/CSF studies, rodent status epilepticus, TBI and ischaemia models)"
+    }
+   }
+  ]
+ }
+}
