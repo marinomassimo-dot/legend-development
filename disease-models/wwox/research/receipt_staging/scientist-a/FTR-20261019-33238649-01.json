@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-33238649-01",
+ "study_id": {
+  "pmid": "33238649",
+  "doi": "10.3390/jcm9113789"
+ },
+ "analysis_at": "2026-10-20T06:16:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a (Scientist A), interventions batch 2026-10-19 groups H1/H2, task INTERV-H1-A-20261019 on branch task/INTERV-H1-A-20261019, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN. Route: Europe PMC JATS body (PMC7700187) and the supplementaryFiles container into the root files/ tree: Figures 1 and 2 opened at native resolution; the supplementary PDF (Figures S1-S2; its fonts have no ToUnicode map, so no text layer was used) rendered at 90 dpi and opened; the 39 references were term-screened for WWOX (zero) and not read item by item. Epoch counts were recomputed from the stated numerators and denominators. Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a staged JSON for the Orchestrator and not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID33238649_Houben2020_PMC.xml",
+ "source_fingerprint": "9496d3afa19f0f382ca371342def0ac545ff687aec82ec06b966fdfcfc4d7f57",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID33238649.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID33238649.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "manifest",
+  "Figures 1-2 and supplementary Figures S1-S2 inspected as images",
+  "Tables 1-2 and A1 read from the JATS; percentages recomputed"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

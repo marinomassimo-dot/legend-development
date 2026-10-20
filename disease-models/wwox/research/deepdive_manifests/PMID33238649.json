@@ -1,0 +1,392 @@
+{
+ "schema_version": 2,
+ "pmid": "33238649",
+ "doi": "10.3390/jcm9113789",
+ "receipt": "FTR-20261019-33238649-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID33238649.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "Leiden University Medical Center neonatology and transfusion-research groups (the group's earlier red-cell transfusion work is among the references); primary for its own unit's records; no external funding; no WWOX work."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "fresh frozen plasma AND preterm neonates AND coagulation testing",
+    "count": 25,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND fresh frozen plasma",
+    "count": 17,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts at the stated date."
+ },
+ "multihop": {
+  "references_enumerated": 39,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 33238649 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 33238649: publication types ['Journal Article']; correction/retraction link markers in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 39,
+   "references_screened": 35,
+   "references_with_doi": 35,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID33238649_Houben2020_PMC.xml",
+   "sha256": "9496d3afa19f0f382ca371342def0ac545ff687aec82ec06b966fdfcfc4d7f57",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC7700187: abstract, body, Tables 1-2 and A1, two figure legends, 39 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7700187/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID33238649/jcm-09-03789-g001.jpg",
+   "sha256": "40db673680939a1048c85fdcadeca1a0eb322b875754b044171751c2037720d4",
+   "kind": "figure",
+   "note": "Figure 1 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7700187/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID33238649/jcm-09-03789-g002.jpg",
+   "sha256": "6a77297ab1b2e92e9b6e14f62936841db4c1458bf8c871e6a7fa6ca26621fbda",
+   "kind": "figure",
+   "note": "Figure 2 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7700187/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID33238649/jcm-09-03789-s001.pdf",
+   "sha256": "f947971af22bd6aa1c029070f1babc2c080b0fa884f2a3030371a34513993223",
+   "kind": "supplement_binary",
+   "note": "Supplementary Figures S1 (baseline characteristics per epoch) and S2 (neonatal outcomes per epoch) as one PDF page.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7700187/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID33238649/s_pages/s-1.png",
+   "sha256": "f5acc6bb9984b88a4970e4a6ac58527a98b494243e10ea0208f4a8957538a3ee",
+   "kind": "figure",
+   "note": "Supplementary Figures S1 and S2 page rendered at 90 dpi and inspected.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftoppm_90dpi",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "f5acc6bb9984b88a4970e4a6ac58527a98b494243e10ea0208f4a8957538a3ee",
+    "derived_from": "files/figures/PMID33238649/jcm-09-03789-s001.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 90 -png jcm-09-03789-s001.pdf s"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC7700187/fullTextXML returned HTTP 200 (77636 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "Design: retrospective single-unit cohort of all neonates born at 24+0 to 31+6 weeks, 2004-2019, split by birth date into three epochs.",
+    "snippet": "We conducted a retrospective cohort analysis in the NICU of the Leiden University Medical Center",
+    "anchor": "Methods, study design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33238649_Houben2020_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "2577 preterm neonates (24+0 to 31+6 weeks) admitted to one Dutch tertiary neonatal intensive care unit, 2004-2019, in three consecutive epochs",
+     "comparator": "epoch I (2004-2009) versus II (2009-2014) versus III (2014-2019); no concurrent comparison",
+     "endpoint": "percentage of neonates given fresh-frozen plasma, percentage tested for coagulation, indications, major haemorrhage"
+    }
+   },
+   {
+    "proposition": "The unit's guideline for plasma was unchanged throughout: treat non-bleeding neonates whose aPTT or PT exceeds twice the mid-point of the reference value with 10 mL/kg; reference ranges come from a 30-36-week cohort and were applied to infants below 30 weeks.",
+    "snippet": "Our guideline for FFP transfusion remained unchanged throughout the last two decades",
+    "anchor": "Methods, guidelines",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33238649_Houben2020_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "2577 preterm neonates (24+0 to 31+6 weeks) admitted to one Dutch tertiary neonatal intensive care unit, 2004-2019, in three consecutive epochs",
+     "comparator": "epoch I (2004-2009) versus II (2009-2014) versus III (2014-2019); no concurrent comparison",
+     "endpoint": "percentage of neonates given fresh-frozen plasma, percentage tested for coagulation, indications, major haemorrhage"
+    }
+   },
+   {
+    "proposition": "Statistics: Cochran-Armitage trend test across epochs for plasma use and testing; no adjustment for case mix.",
+    "snippet": "We used the Cochran–Armitage test for trend to examine changes in the use of plasma",
+    "anchor": "Methods, statistics",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33238649_Houben2020_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "2577 preterm neonates (24+0 to 31+6 weeks) admitted to one Dutch tertiary neonatal intensive care unit, 2004-2019, in three consecutive epochs",
+     "comparator": "epoch I (2004-2009) versus II (2009-2014) versus III (2014-2019); no concurrent comparison",
+     "endpoint": "percentage of neonates given fresh-frozen plasma, percentage tested for coagulation, indications, major haemorrhage"
+    }
+   },
+   {
+    "proposition": "Headline: 94 of 2577 neonates (3.6 percent) received at least one FFP transfusion.",
+    "snippet": "A total of 94 patients (3.6%) received one or more FFP transfusions during admission.",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33238649_Houben2020_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "2577 preterm neonates (24+0 to 31+6 weeks) admitted to one Dutch tertiary neonatal intensive care unit, 2004-2019, in three consecutive epochs",
+     "comparator": "epoch I (2004-2009) versus II (2009-2014) versus III (2014-2019); no concurrent comparison",
+     "endpoint": "percentage of neonates given fresh-frozen plasma, percentage tested for coagulation, indications, major haemorrhage"
+    }
+   },
+   {
+    "proposition": "Epoch III coagulation-test result stated as PT prolonged in 30.5 percent of 68 tested infants, against 64.5 and 66.4 percent in the first two epochs and 64.2 percent overall.",
+    "snippet": "in 68 of the 852 neonates in Epoch III (aPTT prolongation in 92.6%, PT prolongation in 30.5%)",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33238649_Houben2020_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "2577 preterm neonates (24+0 to 31+6 weeks) admitted to one Dutch tertiary neonatal intensive care unit, 2004-2019, in three consecutive epochs",
+     "comparator": "epoch I (2004-2009) versus II (2009-2014) versus III (2014-2019); no concurrent comparison",
+     "endpoint": "percentage of neonates given fresh-frozen plasma, percentage tested for coagulation, indications, major haemorrhage"
+    }
+   },
+   {
+    "proposition": "Discussion states plasma use fell from 5.7 percent through 3.7 percent to 2.0 percent; the middle epoch's stated numerator and denominator (30 of 901) give 3.3 percent.",
+    "snippet": "from 5.7% of the neonates born between January 2004 and April 2009 to 3.7%",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33238649_Houben2020_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "2577 preterm neonates (24+0 to 31+6 weeks) admitted to one Dutch tertiary neonatal intensive care unit, 2004-2019, in three consecutive epochs",
+     "comparator": "epoch I (2004-2009) versus II (2009-2014) versus III (2014-2019); no concurrent comparison",
+     "endpoint": "percentage of neonates given fresh-frozen plasma, percentage tested for coagulation, indications, major haemorrhage"
+    }
+   },
+   {
+    "proposition": "Indications: abnormal coagulation 53 (56 percent), DIC 19 (20), clinical bleeding 16 (17), not recorded 4 (4), surgery 1, suspected abnormal coagulation 1.",
+    "snippet": "Abnormal coagulation, n (%)53 (56)Prolonged PT and aPTT 52 (55)Prolonged aPTT1 (1)DIC, n (%)19 (20)",
+    "anchor": "Table 2",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID33238649_Houben2020_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "2577 preterm neonates (24+0 to 31+6 weeks) admitted to one Dutch tertiary neonatal intensive care unit, 2004-2019, in three consecutive epochs",
+     "comparator": "epoch I (2004-2009) versus II (2009-2014) versus III (2014-2019); no concurrent comparison",
+     "endpoint": "percentage of neonates given fresh-frozen plasma, percentage tested for coagulation, indications, major haemorrhage"
+    }
+   },
+   {
+    "proposition": "Authors' own reading: most plasma was given prophylactically for abnormal coagulation tests in non-bleeding neonates; the coding of bleeding versus non-bleeding was taken from the patient file.",
+    "snippet": "Most of the FFP transfusions in our NICU were administered prophylactically for abnormal coagulation tests and no bleeding.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33238649_Houben2020_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "2577 preterm neonates (24+0 to 31+6 weeks) admitted to one Dutch tertiary neonatal intensive care unit, 2004-2019, in three consecutive epochs",
+     "comparator": "epoch I (2004-2009) versus II (2009-2014) versus III (2014-2019); no concurrent comparison",
+     "endpoint": "percentage of neonates given fresh-frozen plasma, percentage tested for coagulation, indications, major haemorrhage"
+    }
+   },
+   {
+    "proposition": "Major haemorrhage did not change significantly across the epochs, while plasma use fell by more than half; the counts are not given in the text.",
+    "snippet": "The percentage of neonates with major hemorrhage per epoch did not change significantly.",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33238649_Houben2020_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "2577 preterm neonates (24+0 to 31+6 weeks) admitted to one Dutch tertiary neonatal intensive care unit, 2004-2019, in three consecutive epochs",
+     "comparator": "epoch I (2004-2009) versus II (2009-2014) versus III (2014-2019); no concurrent comparison",
+     "endpoint": "percentage of neonates given fresh-frozen plasma, percentage tested for coagulation, indications, major haemorrhage"
+    }
+   },
+   {
+    "proposition": "Limitation: the aPTT was prolonged in about 90 percent of tested neonates by the reference range used, and severity was not considered.",
+    "snippet": "aPTT was prolonged in about 90% of neonates when using the Andrews reference ranges",
+    "anchor": "Limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33238649_Houben2020_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "2577 preterm neonates (24+0 to 31+6 weeks) admitted to one Dutch tertiary neonatal intensive care unit, 2004-2019, in three consecutive epochs",
+     "comparator": "epoch I (2004-2009) versus II (2009-2014) versus III (2014-2019); no concurrent comparison",
+     "endpoint": "percentage of neonates given fresh-frozen plasma, percentage tested for coagulation, indications, major haemorrhage"
+    }
+   },
+   {
+    "proposition": "Authors: no randomised evidence that plasma corrects the coagulation tests or reduces bleeding in preterm neonates; whether plasma works is unknown.",
+    "snippet": "whether FFP transfusion can effectively correct coagulation abnormalities or decrease bleeding risk is unknown",
+    "anchor": "Conclusion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33238649_Houben2020_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "2577 preterm neonates (24+0 to 31+6 weeks) admitted to one Dutch tertiary neonatal intensive care unit, 2004-2019, in three consecutive epochs",
+     "comparator": "epoch I (2004-2009) versus II (2009-2014) versus III (2014-2019); no concurrent comparison",
+     "endpoint": "percentage of neonates given fresh-frozen plasma, percentage tested for coagulation, indications, major haemorrhage"
+    }
+   },
+   {
+    "proposition": "Appendix Table A1 lists the day-1 PT interval as 13.0 (10.6-6.2), an upper limit below the lower one.",
+    "snippet": "PT (s) (95% interval)13.0 (10.6",
+    "anchor": "Table A1",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID33238649_Houben2020_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "2577 preterm neonates (24+0 to 31+6 weeks) admitted to one Dutch tertiary neonatal intensive care unit, 2004-2019, in three consecutive epochs",
+     "comparator": "epoch I (2004-2009) versus II (2009-2014) versus III (2014-2019); no concurrent comparison",
+     "endpoint": "percentage of neonates given fresh-frozen plasma, percentage tested for coagulation, indications, major haemorrhage"
+    }
+   },
+   {
+    "proposition": "Figure 1: grouped bars for the three epochs; FFP transfusion about 5.8, 3.7 and 2.1 percent (p<0.0001); coagulation testing about 24.3, 14.5 and 8.0 percent (p<0.0001); major haemorrhage about 8.3, 9.2 and 6.5 percent (p=0.204). No error bars and no counts for haemorrhage.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 grouped bars FFP transfusion, coagulation testing, major haemorrhage for epochs I-III with p values.",
+    "anchor": "Figure 1, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33238649/jcm-09-03789-g001.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "2577 preterm neonates (24+0 to 31+6 weeks) admitted to one Dutch tertiary neonatal intensive care unit, 2004-2019, in three consecutive epochs",
+     "comparator": "epoch I (2004-2009) versus II (2009-2014) versus III (2014-2019); no concurrent comparison",
+     "endpoint": "percentage of neonates given fresh-frozen plasma, percentage tested for coagulation, indications, major haemorrhage"
+    }
+   },
+   {
+    "proposition": "Figure 2: by gestational age 24 to 31 weeks, coagulation testing peaks near 31.7 percent and FFP near 7.3 percent at 26 weeks, with lower values at 24 and 25 weeks and a decline to about 6.5 and 1.2 percent at 31 weeks.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 paired bars coagulation testing and FFP transfusion per gestational week.",
+    "anchor": "Figure 2, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33238649/jcm-09-03789-g002.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "2577 preterm neonates (24+0 to 31+6 weeks) admitted to one Dutch tertiary neonatal intensive care unit, 2004-2019, in three consecutive epochs",
+     "comparator": "epoch I (2004-2009) versus II (2009-2014) versus III (2014-2019); no concurrent comparison",
+     "endpoint": "percentage of neonates given fresh-frozen plasma, percentage tested for coagulation, indications, major haemorrhage"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure S2: neonatal outcomes by epoch; proven sepsis falls from about 32 to 20 to 24 percent, PDA from about 18 to 9 percent, NEC rises from about 3 to 5 percent, mortality about 7.5, 6.7 and 5.4 percent; Figure S1: caesarean section, multiple birth and SGA shift between epochs. Case mix and morbidity changed across the study period.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supp Fig S1 baseline bars and S2 outcome bars per epoch.",
+    "anchor": "Supplementary Figures S1-S2, read at 90 dpi",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33238649/s_pages/s-1.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "2577 preterm neonates (24+0 to 31+6 weeks) admitted to one Dutch tertiary neonatal intensive care unit, 2004-2019, in three consecutive epochs",
+     "comparator": "epoch I (2004-2009) versus II (2009-2014) versus III (2014-2019); no concurrent comparison",
+     "endpoint": "percentage of neonates given fresh-frozen plasma, percentage tested for coagulation, indications, major haemorrhage"
+    }
+   }
+  ]
+ }
+}
