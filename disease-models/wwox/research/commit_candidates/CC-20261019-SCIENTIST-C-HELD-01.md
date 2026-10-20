@@ -43,3 +43,13 @@ The HELD-partial rows of the two selection files were re-read each against a que
 3. **Direction of the G6PD and NFE2L2 contribution in the hNPC data against the mouse fibroblast heatmap (Kosla, Cheng).** Obtain the fold changes behind Supplementary Table 1 and compare with the early-passage Wwox-null redox set. Falsifier: opposite signs.
 4. **ROS re-measurement under NAC (Cheng).** DHE flow in NAC-treated null MEFs and p53 sequencing in NAC-treated clones. Falsifier: ROS unchanged by NAC, or p53 mutation unchanged.
 5. **Serum-replete glucose uptake (Baryla).** Repeat the 2-deoxyglucose assay in the four conditions with and without serum and with a dose series of WWOX depletion. Falsifier: sign does not depend on serum, or tracks dose monotonically.
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** DEFERRED
+**Batch:** `BATCH_20261019_003` · 2026-10-20 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Reason:** the candidate's ordering requires its ten staged receipts (`FTR-20261019-24308844-03`, `-31543760-05`, `-33195192-03`, `-33612478-02`, `-33958783-02`, `-35328751-04`, `-35460704-03`, `-37897534-03`, `-38542478-02`, `-42589397-05`) to be in the ledger first; they are staged and not recorded, and the candidate reached main after the batch scope was fixed. It stays queued for the next batch.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.

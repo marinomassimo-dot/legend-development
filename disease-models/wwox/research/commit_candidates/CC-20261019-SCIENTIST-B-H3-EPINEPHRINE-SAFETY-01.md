@@ -55,3 +55,17 @@ Receipts for the five PMIDs above must be in the ledger first.
 | 39000139 | entry 4 | DESENSITISATION is inferred from the alpha2A receptor mRNA, which fell by 13 percent at day 3 and about 30 percent at day 5 (Figure 1B); no receptor protein, cAMP or signalling readout is reported. | Despite removal of epinephrine, α2A-AR RNA expression did not show reversible features (Figure 1B). | 2.1 Glucose Stimulated Insulin Responsiveness |
 | 41885587 | entry 2 | GLUCOSE AND LACTATE: after the insult glucose and lactate were higher in saline-treated fetuses and recovered by 2 hours with phentolamine, a direct measurement of an alpha-adrenergic contribution to post-insult glycaemia and lact | Glucose and lactate concentrations were higher in the HI‐saline group than the sham‐HI group until 6 h post‐HI but recovered to baseline levels by 2 h in the HI‐phentolam | Results, Cardiovascular and biochemical parameters during HI |
 | 41885587 | entry 8 | BIOMARKER CLAIM: a threshold one standard deviation above the baseline coefficient of variation, set in the primary group and applied by a blinded observer to a 10 plus 10 validation group, is reported as 90 percent sensitivity an | Applying this set threshold, in the validation dataset animals with severe HI were identified with 90% sensitivity and 80% specificity (Fig. 10). | Results, Viability of short BPV as a biomarker for severe HI |
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_003` · 2026-10-20 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.21 -> WM_v7.22 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** not run — no baseline claim is narrowed and no MAJOR contingency is declared; the candidate's locator triples are carried for a later audit.
+**What landed:** `PAPER 316`, `PAPER 317`, `PAPER 318`, `PAPER 319` with their LIT records (the Dhillon record is `PAPER 314`, landed by the adrenergic candidate); leads `DL-MECH-139` and `DL-METH-125`. **Receipt identifiers named here so that the output-to-study check can match them:** PMID 39597089 (`FTR-20261019-39597089-01`, DOI 10.3390/medicina60111904); PMID 42260675 (`FTR-20261019-42260675-01`, DOI 10.1186/s13063-026-09776-3); PMID 38542290 (`FTR-20261019-38542290-01`, DOI 10.3390/ijms25063316); PMID 39000139 (`FTR-20261019-39000139-01`, DOI 10.3390/ijms25137029); PMID 41885587 (`FTR-20261019-41885587-01`, DOI 10.1113/JP290169); PMID 41584903 (`FTR-20261019-41584903-01`, DOI 10.1177/15357597261416723). The Wenker record (PMID 41584903, `FTR-20261019-41584903-01`) is `PAPER 321`, landed by the autonomic candidate.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.

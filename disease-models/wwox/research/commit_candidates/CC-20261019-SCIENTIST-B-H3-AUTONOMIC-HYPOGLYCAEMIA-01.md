@@ -58,3 +58,17 @@ Receipts for the five PMIDs above must be in the ledger first.
 | 38397994 | entry 2 | COUNTER-REGULATION: epinephrine is one of the hormones whose release falls after recent antecedent hypoglycaemia; the review states that absence of symptoms reflects attenuation of the sympathoadrenal response. | The absence of symptoms of hypoglycemia reflects the attenuation of the sympathoadrenal response | 2.1 Autonomic Failure |
 | 38397994 | entry 3 | The epinephrine statement is that after recent antecedent hypoglycaemia plasma epinephrine rises less; no value, no cohort and no time course are given in the review. | After recent antecedent hypoglycemia, epinephrine levels are significantly reduced (Figure 2) | 2.4 Hormonal Regulation, last paragraph |
 | 38397994 | entry 4 | GLYCOGEN: the review states brain cells cannot store glucose as glycogen; astrocytes do hold glycogen, and another review in this corpus (a metabolic-batch reading of brain glycogen) treats it as a buffer; the sentence is a simpli | It is not possible for cells in the brain to synthesize glucose or to store it as glycogen. | 2.2 Altered Brain Glucose Sensing, paragraph 1 |
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_003` · 2026-10-20 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.21 -> WM_v7.22 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** not run — no baseline claim is narrowed and no MAJOR contingency is declared; the candidate's locator triples are carried for a later audit.
+**What landed:** `PAPER 320`, `PAPER 321`, `PAPER 322`, `PAPER 323` with their LIT records; `CLAIM 031` evidence-boundary definition note (status unchanged); leads `DL-MECH-140` and `141`. Receipt identifiers: PMID 36686527 (`FTR-20261019-36686527-01`, DOI 10.3389/fneur.2022.1040648); PMID 41584903 (`FTR-20261019-41584903-01`, DOI 10.1177/15357597261416723); PMID 32905056 (`FTR-20261019-32905056-01`, DOI 10.1002/jmd2.12146); PMID 38397994 (`FTR-20261019-38397994-01`, DOI 10.3390/biomedicines12020391). The Sugiyama record already existed (`PAPER 299`). PARKED: the third lead (the adult WWOX case, now read at complete depth: see the GOLD-CLINICAL candidate).
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.

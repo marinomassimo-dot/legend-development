@@ -21,3 +21,17 @@ Premise: Su 2026 (PMID 41677633, serum-free medium, E14.5 fibroblasts): null cel
 
 ## Locator triples for blind audit
 The 101-triple blind audit of this wave (two auditors) covered the load-bearing locators behind N2 and N4; verdicts and repairs are recorded in section 9 of the analysis note and in each manifest's `contradicts_locator` declarations.
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_003` · 2026-10-20 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.21 -> WM_v7.22 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** not run — no baseline claim is narrowed and no MAJOR contingency is declared; the candidate's locator triples are carried for a later audit.
+**What landed:** `DIS-037` to `DIS-040` in the dismissal ledger (N1 to N4), each with its premises and revival trigger.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.

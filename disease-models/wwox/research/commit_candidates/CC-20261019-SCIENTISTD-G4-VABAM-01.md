@@ -48,3 +48,6 @@ The two cohorts disagree with each other on the MRI finding, neither is a WWOX s
 **What landed:** `CLAIM 001` wave note applied (the author's dry run was repeated by the integrator). `CONFLICTING EVIDENCE` status unchanged; `BLOCK 1` unchanged.
 **Status / Type / Summary:** unchanged by this candidate.
 **Not medical advice.** Class level only; no individual-level record is carried.
+
+
+**CORRECTION (`BATCH_20261019_003`, Mirror B1):** the wave-note sentence of this candidate that says the two VABAM cohorts disagree on whether hormonal therapy relates to the MRI finding is wrong as worded: both cohorts associate hormonal therapy with symptomatic VABAM and neither with the MRI finding alone, and both receipts are `partial_fulltext_read`, not full reads. The corrected wording landed in `CLAIM 001` and `DL-MECH-133`; the candidate body above is left as written.

@@ -54,3 +54,17 @@ Receipts for the five PMIDs above (staged under `receipt_staging/scientist-b/`) 
 | 41169199 | entry 4 | CONTRADICTION IN THE INTRODUCTION: knockout of the beta2 receptor gene rescued pathology in a mouse model, and the review cites this as support for an agonist strategy. | Furthermore, ablation of the β2-AR gene rescued pathological features of senile PS1/APP mice, indicating that β2-AR is an attractive target for therapeutic purposes for t | Introduction, paragraph 4 |
 | 41169199 | entry 5 | BIVALENT SIGNAL: amyloid binding to the beta2 receptor hyperactivates PKA, raises AMPA receptor activity and calcium influx and leads to excitotoxic death, while the same cAMP-PKA axis is presented as neuroprotective; the review c | These results highlight the bivalent nature of Aβ action on β2-AR signaling and its involvement in AD progression. | Loss of noradrenergic tone and beta2 dysfunction, last paragraph |
 | 41169199 | entry 6 | ALPHA-2: the review says selective alpha2 agonists confer neuroprotection and also that alpha2A activation increases amyloid-beta production and alpha2B deletion enhances memory. | α2-ARs also have a dual role in AD. Whereas α2b-AR deletion is associated with enhanced memory and reduced AD risk, activation of α2A-AR increases production of Aβ | Alpha-adrenergic receptors, paragraph 4 |
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_003` · 2026-10-20 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.21 -> WM_v7.22 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** not run — no baseline claim is narrowed and no MAJOR contingency is declared; the candidate's locator triples are carried for a later audit.
+**What landed:** `PAPER 311`, `PAPER 312`, `PAPER 313`, `PAPER 314`, `PAPER 315` with their LIT records; leads `DL-MECH-136` to `138`. Receipt identifiers: PMID 35339181 (`FTR-20261019-35339181-01`, DOI 10.2174/1570159X20666220327213615); PMID 38073616 (`FTR-20261019-38073616-01`, DOI 10.3389/fneur.2023.1298310); PMID 39505840 (`FTR-20261019-39505840-01`, DOI 10.1038/s41467-024-53430-y); PMID 41885587 (`FTR-20261019-41885587-01`, DOI 10.1113/JP290169); PMID 41169199 (`FTR-20261019-41169199-01`, DOI 10.4103/NRR.NRR-D-25-00529). PARKED: the optional evidence-boundary note on the working model's silence about catecholamines (no op text).
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.

@@ -22,3 +22,17 @@ Research line RL-003 (metabolic and lipid) evidence boundary; paper-registry not
 ## Ordering
 
 Receipts `FTR-20261019-34747138-01`, `-30755385-01`, `-42422765-01`, `-21075834-01`, `-31340538-01` (staged) must be recorded first.
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_003` · 2026-10-20 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.21 -> WM_v7.22 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** not run — no baseline claim is narrowed and no MAJOR contingency is declared; the candidate's locator triples are carried for a later audit.
+**What landed:** Notes on `PAPER 005`, `011`, `061`, `071`, `021` and `031` carrying items 1 to 7; no research-line edit was made (the RL-003 evidence boundary lives in a research file that is not one of the four current files and is left for the research-line owner). Receipts `FTR-20261019-34747138-01`, `-30755385-01`, `-42422765-01`, `-21075834-01`, `-31340538-01`, `-34634460-01`.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.

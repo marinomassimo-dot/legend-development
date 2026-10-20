@@ -10589,7 +10589,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 22479346 / PMC3315540 / DOI 10.1371/journal.pone.0032907
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
+**Date processed:** 2026-10-19 (`FTR-20261019-22479346-01`)
 **Date last touched:** 2026-04-18
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
@@ -10598,7 +10598,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 324]] by `BATCH_20261019_003` (`CC-20261019-SCIENTIST-B-H3-WWOX-BP-01`); reading `partial_fulltext_read`, receipt `FTR-20261019-22479346-01`.
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Genotype/model tag:** unassigned in triage
 **Species:** human
@@ -15615,7 +15616,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Report mentions:** `research/metabolic_wave_20261019_scientist-b.md`
 **Next action:** none
 **Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-31145772-01`; manifest `deepdive_manifests/PMID31145772.json`; landing [[paper_registry_current#PAPER 263]]
-**Note:** class-level record. Not medical advice.
+**Note:** class-level record. The `identity_correction` (PubMed joins this article's title and abstract with another article's authors, DOI and pages; cite the DOI printed on the article) is recorded in [[paper_registry_current#PAPER 263]]. Not medical advice.
 
 ---
 
@@ -16665,6 +16666,1106 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Report mentions:** `research/metabolic_wave_20261019_scientist-d.md`
 **Next action:** none
 **Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-41914335-01`; manifest `deepdive_manifests/PMID41914335.json`; landing [[paper_registry_current#PAPER 309]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0604
+**Short title:** Biagioni 2023 — salbutamol (beta2 agonist) before bicuculline in rat piriform cortex: seizure incidence 3 of 8 against 8 of 8; the abstract's "fully prevents" overstates it
+**Authors:** Biagioni F, Celli R, Puglisi-Allegra S, Nicoletti F, Giorgi FS, Fornai F
+**Year:** 2023
+**Source type:** perspective article with a rat experiment (JATS article type: editorial) — adrenergic receptors in limbic seizures
+**Journal/source:** *Current Neuropharmacology* 2023;21(11):2233
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 35339181 / PMC10556380 / DOI 10.2174/1570159X20666220327213615
+**Date discovered:** 2026-10-19 (Scientist B, group H3)
+**Date processed:** 2026-10-19 (`FTR-20261019-35339181-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H3)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-H3-ADRENERGIC-SEIZURE-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-35339181-01`; manifest `deepdive_manifests/PMID35339181.json`; landing [[paper_registry_current#PAPER 311]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0605
+**Short title:** Sitnikova 2023 — alpha2 agonists lengthen and antagonists shorten spike-wave activity in absence-epilepsy rats; non-monotonic dose
+**Authors:** Sitnikova E
+**Year:** 2023
+**Source type:** review (the author's own group data prominent)
+**Journal/source:** *Frontiers in Neurology* 2023;14:1298310
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 38073616 / PMC10703303 / DOI 10.3389/fneur.2023.1298310
+**Date discovered:** 2026-10-19 (Scientist B, group H3)
+**Date processed:** 2026-10-19 (`FTR-20261019-38073616-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H3)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-H3-ADRENERGIC-SEIZURE-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-38073616-01`; manifest `deepdive_manifests/PMID38073616.json`; landing [[paper_registry_current#PAPER 312]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0606
+**Short title:** Sun 2024 — pan-adrenergic blockade in kainic-acid status in mice: each seizure longer (115 to 204 s), mortality and later seizure counts lower, hippocampal glymphatic gain not significant
+**Authors:** Sun Q, Peng S, Xu Q, Weikop P, Hussain R, Song W, et al.
+**Year:** 2024
+**Source type:** primary research — mouse status epilepticus and epileptogenesis
+**Journal/source:** *Nature Communications* 2024;15:9600
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39505840 / PMC11541706 / DOI 10.1038/s41467-024-53430-y
+**Date discovered:** 2026-10-19 (Scientist B, group H3)
+**Date processed:** 2026-10-19 (`FTR-20261019-39505840-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H3)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-H3-ADRENERGIC-SEIZURE-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-39505840-01`; manifest `deepdive_manifests/PMID39505840.json`; landing [[paper_registry_current#PAPER 313]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0607
+**Short title:** Dhillon 2026 — alpha-adrenergic blockade after hypoxia-ischaemia in the preterm fetal sheep: seizures unchanged, post-insult lactate and glucose lower, blood-pressure-variability rise abolished
+**Authors:** Dhillon SK, Beacom MJ, King VJ, Nakao M, Lear OJ, Lear CA, et al.
+**Year:** 2026
+**Source type:** primary research — fetal sheep hypoxia-ischaemia
+**Journal/source:** *The Journal of Physiology* 2026;604(8):3457
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41885587 / PMC13082192 / DOI 10.1113/JP290169
+**Date discovered:** 2026-10-19 (Scientist B, group H3)
+**Date processed:** 2026-10-19 (`FTR-20261019-41885587-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H3)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-H3-ADRENERGIC-SEIZURE-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-41885587-01`; manifest `deepdive_manifests/PMID41885587.json`; landing [[paper_registry_current#PAPER 314]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0608
+**Short title:** Li 2026 — review of beta2-adrenergic agonists in Alzheimer disease: each receptor subtype has protective and harmful evidence; the conclusion claims reversal on preclinical evidence
+**Authors:** Li S, Jin SX
+**Year:** 2025
+**Source type:** narrative review
+**Journal/source:** *Neural Regeneration Research* 2025;21(10):4832-4842
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41169199 / PMC13568679 / DOI 10.4103/NRR.NRR-D-25-00529
+**Date discovered:** 2026-10-19 (Scientist B, group H3)
+**Date processed:** 2026-10-19 (`FTR-20261019-41169199-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H3)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-H3-ADRENERGIC-SEIZURE-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-41169199-01`; manifest `deepdive_manifests/PMID41169199.json`; landing [[paper_registry_current#PAPER 315]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0609
+**Short title:** Williams 2024 — epinephrine in adult cardiac arrest: return of circulation about 3.4 times more likely, neurological outcome not improved, number needed to treat 112; a nonrandomised study mislabelled placebo-controlled
+**Authors:** Williams CA, Fairley HE, Tran QK, Pourmand A, Prosen G
+**Year:** 2024
+**Source type:** narrative review
+**Journal/source:** *Medicina* 2024;60(11):1904
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39597089 / PMC11596809 / DOI 10.3390/medicina60111904
+**Date discovered:** 2026-10-19 (Scientist B, group H3)
+**Date processed:** 2026-10-19 (`FTR-20261019-39597089-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H3)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-H3-EPINEPHRINE-SAFETY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-39597089-01`; manifest `deepdive_manifests/PMID39597089.json`; landing [[paper_registry_current#PAPER 316]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0610
+**Short title:** Idrees 2026 — stepped-wedge protocol of intramuscular epinephrine in paediatric out-of-hospital arrest at up to ten times the intravenous dose; no stopping rules; primary outcome only among those who achieve circulation
+**Authors:** Idrees S, Assaf M, Davis M, Garcia-Bournissen F, Loosley J, Miller MR, et al.
+**Year:** 2026
+**Source type:** trial protocol
+**Journal/source:** *Trials* 2026;27:525
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42260675 / PMC13471612 / DOI 10.1186/s13063-026-09776-3
+**Date discovered:** 2026-10-19 (Scientist B, group H3)
+**Date processed:** 2026-10-19 (`FTR-20261019-42260675-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H3)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-H3-EPINEPHRINE-SAFETY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-42260675-01`; manifest `deepdive_manifests/PMID42260675.json`; landing [[paper_registry_current#PAPER 317]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0611
+**Short title:** Oulehri 2024 — rat anaphylactic shock: epinephrine restored pressure and survival but cardiac mitochondrial respiration stayed 29 to 40 percent below control and lactate was 4.8 against 0.9 mmol/L; no epinephrine-alone or time-matched shock control
+**Authors:** Oulehri W, Persello A, Blangy-Letheule A, Tacquard C, Rozec B, Charles AL, et al.
+**Year:** 2024
+**Source type:** primary research — rat model
+**Journal/source:** *International Journal of Molecular Sciences* 2024;25(6):3316
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 38542290 / PMC10970273 / DOI 10.3390/ijms25063316
+**Date discovered:** 2026-10-19 (Scientist B, group H3)
+**Date processed:** 2026-10-19 (`FTR-20261019-38542290-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H3)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-H3-EPINEPHRINE-SAFETY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-38542290-01`; manifest `deepdive_manifests/PMID38542290.json`; landing [[paper_registry_current#PAPER 318]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0612
+**Short title:** Zhang 2024 — 3 days of 100 nM epinephrine on MIN6 cells: higher glucose-stimulated secretion and ER-stress transcripts after washout; no ROS probe or apoptosis assay although both are concluded
+**Authors:** Zhang R, Yao B, Li R, Limesand SW, Zhao Y, Chen X
+**Year:** 2024
+**Source type:** primary research — pancreatic beta-cell line
+**Journal/source:** *International Journal of Molecular Sciences* 2024;25(13):7029
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39000139 / PMC11241606 / DOI 10.3390/ijms25137029
+**Date discovered:** 2026-10-19 (Scientist B, group H3)
+**Date processed:** 2026-10-19 (`FTR-20261019-39000139-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H3)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-H3-EPINEPHRINE-SAFETY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-39000139-01`; manifest `deepdive_manifests/PMID39000139.json`; landing [[paper_registry_current#PAPER 319]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0613
+**Short title:** Bauer 2022 — autonomic dysfunction in epilepsy mouse models and SUDEP: SUDEP excludes status epilepticus; catecholamines appear as three hedged sentences; genetic SUDEP models are ion-channel genes
+**Authors:** Bauer J, Devinsky O, Rothermel M, Koch H
+**Year:** 2022
+**Source type:** narrative review
+**Journal/source:** *Frontiers in Neurology* 2022;13:1040648
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 36686527 / PMC9853197 / DOI 10.3389/fneur.2022.1040648
+**Date discovered:** 2026-10-19 (Scientist B, group H3)
+**Date processed:** 2026-10-19 (`FTR-20261019-36686527-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H3)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-H3-AUTONOMIC-HYPOGLYCAEMIA-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-36686527-01`; manifest `deepdive_manifests/PMID36686527.json`; landing [[paper_registry_current#PAPER 320]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0614
+**Short title:** Wenker 2026 — SUDEP mechanisms review: epinephrine plus caffeine unmasks arrhythmia in Scn8a DEE13 mice; the HPA-axis mechanism rests on a 2021 review and a 2025 preprint; one citation mismatch
+**Authors:** Wenker IC, Gehlbach BK, Isom LL, Dlouhy BJ, Auerbach DS, Maguire JL, et al.
+**Year:** 2026
+**Source type:** narrative review
+**Journal/source:** *Epilepsy Currents* 2026;15357597261416723
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41584903 / PMC12823373 / DOI 10.1177/15357597261416723
+**Date discovered:** 2026-10-19 (Scientist B, group H3)
+**Date processed:** 2026-10-19 (`FTR-20261019-41584903-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H3)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-H3-AUTONOMIC-HYPOGLYCAEMIA-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-41584903-01`; manifest `deepdive_manifests/PMID41584903.json`; landing [[paper_registry_current#PAPER 321]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0615
+**Short title:** Conlon 2020 — a toddler with a ketogenesis defect normoglycaemic (4.6 mmol/L) in a severe febrile crisis with high anion gap acidosis; no insulin, cortisol, catecholamine or free fatty acid result
+**Authors:** Conlon TA, Fitzsimons PE, Borovickova I, Kirby F, Murphy S, Knerr I, et al.
+**Year:** 2020
+**Source type:** case report, n = 1
+**Journal/source:** *JIMD Reports* 2020;55(1):26
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 32905056 / PMC7463059 / DOI 10.1002/jmd2.12146
+**Date discovered:** 2026-10-19 (Scientist B, group H3)
+**Date processed:** 2026-10-19 (`FTR-20261019-32905056-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H3)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-H3-AUTONOMIC-HYPOGLYCAEMIA-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-32905056-01`; manifest `deepdive_manifests/PMID32905056.json`; landing [[paper_registry_current#PAPER 322]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0616
+**Short title:** Holzen 2024 — hypoglycaemia unawareness review: epinephrine, glucagon and growth-hormone responses blunted after antecedent hypoglycaemia; the brain-glycogen sentence disagrees with another review in the corpus
+**Authors:** Hölzen L, Schultes B, Meyhöfer SM, Meyhöfer S, Kaur G
+**Year:** 2024
+**Source type:** narrative review
+**Journal/source:** *Biomedicines* 2024;12(2):391
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 38397994 / PMC10887081 / DOI 10.3390/biomedicines12020391
+**Date discovered:** 2026-10-19 (Scientist B, group H3)
+**Date processed:** 2026-10-19 (`FTR-20261019-38397994-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H3)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-H3-AUTONOMIC-HYPOGLYCAEMIA-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-38397994-01`; manifest `deepdive_manifests/PMID38397994.json`; landing [[paper_registry_current#PAPER 323]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0617
+**Short title:** Garg 2026 — hypoxia rescues an HTRA2-deficient mouse by a complex I mechanism (not WWOX)
+**Authors:** Garg A, Desousa BR, Roy R, Flis A, Blume SY, Abe Y, et al.
+**Year:** 2026
+**Source type:** primary research — mouse
+**Journal/source:** *Nature Metabolism* 2026;8(8):1791
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42420651 / PMC13489956 / DOI 10.1038/s42255-026-01566-0
+**Date discovered:** 2026-10-19 (Scientist C, group H4)
+**Date processed:** 2026-10-19 (`FTR-20261019-42420651-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H4)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-H4-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-42420651-01`; manifest `deepdive_manifests/PMID42420651.json`; landing [[paper_registry_current#PAPER 325]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0618
+**Short title:** Zhao 2025 — obstructive-sleep-apnoea inflammatory-protein Mendelian randomisation with WWOX as one positional gene hit
+**Authors:** Zhao Y, Jiang Y, Wang Y, Zhang H, Zhu J, Jiang X, et al.
+**Year:** 2024
+**Source type:** primary research — Mendelian randomisation and genetic association
+**Journal/source:** *Sleep* 2024;48(2):zsae169
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39087877 / PMC11808066 / DOI 10.1093/sleep/zsae169
+**Date discovered:** 2026-10-19 (Scientist C, group H4)
+**Date processed:** 2026-10-19 (`FTR-20261019-39087877-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H4)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-H4-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-39087877-01`; manifest `deepdive_manifests/PMID39087877.json`; landing [[paper_registry_current#PAPER 326]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0619
+**Short title:** Lopez-Ramos 2015 — brain glycogen, hypobaric hypoxia and seizure susceptibility in a glycogen-synthase knockout mouse
+**Authors:** López-Ramos JC, Duran J, Gruart A, Guinovart JJ, Delgado-García JM
+**Year:** 2015
+**Source type:** primary research — mouse
+**Journal/source:** *Frontiers in Cellular Neuroscience* 2015;9:431
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 26578889 / PMC4621300 / DOI 10.3389/fncel.2015.00431
+**Date discovered:** 2026-10-19 (Scientist C, group H4)
+**Date processed:** 2026-10-19 (`FTR-20261019-26578889-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H4)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-H4-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-26578889-01`; manifest `deepdive_manifests/PMID26578889.json`; landing [[paper_registry_current#PAPER 327]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0620
+**Short title:** Ma 2023 — intermittent hypoxia as the link between obstructive sleep apnoea syndrome and epilepsy
+**Authors:** Ma Y, Wu Q
+**Year:** 2023
+**Source type:** narrative review
+**Journal/source:** *Frontiers in Pharmacology* 2023;14:1230313
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 38074156 / PMC10701596 / DOI 10.3389/fphar.2023.1230313
+**Date discovered:** 2026-10-19 (Scientist C, group H4)
+**Date processed:** 2026-10-19 (`FTR-20261019-38074156-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H4)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-H4-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-38074156-01`; manifest `deepdive_manifests/PMID38074156.json`; landing [[paper_registry_current#PAPER 328]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0621
+**Short title:** Villa 2023 — repeated postictal hypoxia and interictal cognition in kindled rats
+**Authors:** Villa BR, Bhatt D, Wolff MD, Addo-Osafo K, Epp JR, Teskey GC
+**Year:** 2023
+**Source type:** primary research — rat kindling
+**Journal/source:** *Scientific Reports* 2023;13:15474
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 37726428 / PMC10509159 / DOI 10.1038/s41598-023-42741-7
+**Date discovered:** 2026-10-19 (Scientist C, group H4)
+**Date processed:** 2026-10-19 (`FTR-20261019-37726428-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H4)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-H4-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-37726428-01`; manifest `deepdive_manifests/PMID37726428.json`; landing [[paper_registry_current#PAPER 329]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0622
+**Short title:** Liang 2023 — HIF-1 alpha/HO-1 pathway, ferroptosis markers and epilepsy (WWOX in a DisGeNET gene list only)
+**Authors:** Liang Z, Zheng Z, Guo Q, Tian M, Yang J, Liu X, et al.
+**Year:** 2023
+**Source type:** primary research — rodent epilepsy model with a bioinformatic gene list
+**Journal/source:** *iScience* 2023;26(11):108098
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 37876811 / PMC10590818 / DOI 10.1016/j.isci.2023.108098
+**Date discovered:** 2026-10-19 (Scientist C, group H4)
+**Date processed:** 2026-10-19 (`FTR-20261019-37876811-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H4)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-H4-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-37876811-01`; manifest `deepdive_manifests/PMID37876811.json`; landing [[paper_registry_current#PAPER 330]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0623
+**Short title:** Kuang 2025 — HIF-1 alpha/BNIP3 autophagy and KC7F2 in LiCl-pilocarpine rats
+**Authors:** Kuang H, Meng Y, Qin X, Qian K, Gong C, Li S, et al.
+**Year:** 2025
+**Source type:** primary research — rat
+**Journal/source:** *Molecular Neurobiology* 2025;63(1):232
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41324728 / PMC12669306 / DOI 10.1007/s12035-025-05406-2
+**Date discovered:** 2026-10-19 (Scientist C, group H4)
+**Date processed:** 2026-10-19 (`FTR-20261019-41324728-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H4)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-H4-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-41324728-01`; manifest `deepdive_manifests/PMID41324728.json`; landing [[paper_registry_current#PAPER 331]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0624
+**Short title:** Huang 2025 — MeCP2, hypoxia and oxidative stress in Rett syndrome
+**Authors:** Huang JL, Sharifi O, Yasui DH, LaSalle JM
+**Year:** 2025
+**Source type:** narrative review
+**Journal/source:** *Epigenomics* 2025;17(17):1281
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41039661 / PMC12674224 / DOI 10.1080/17501911.2025.2568303
+**Date discovered:** 2026-10-19 (Scientist C, group H4)
+**Date processed:** 2026-10-19 (`FTR-20261019-41039661-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H4)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-H4-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-41039661-01`; manifest `deepdive_manifests/PMID41039661.json`; landing [[paper_registry_current#PAPER 332]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0625
+**Short title:** Khaksari 2026 — task fNIRS cortical oxygenation in Glut1 deficiency: the title says reduced, the body shows higher left-prefrontal HbO and mostly null intervals
+**Authors:** Khaksari K, Blackshear C, Chaza AM, Santiago SM, Chen WL, Avila A, et al.
+**Year:** 2026
+**Source type:** primary research — functional near-infrared spectroscopy
+**Journal/source:** *Frontiers in Neuroscience* 2026;20:1838150
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42428241 / PMC13346240 / DOI 10.3389/fnins.2026.1838150
+**Date discovered:** 2026-10-19 (Scientist C, group H4)
+**Date processed:** 2026-10-19 (`FTR-20261019-42428241-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H4)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-H4-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-42428241-01`; manifest `deepdive_manifests/PMID42428241.json`; landing [[paper_registry_current#PAPER 333]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0626
+**Short title:** Perrone 2016 — oxygen use in neonatal care (review)
+**Authors:** Perrone S, Bracciali C, Di Virgilio N, Buonocore G
+**Year:** 2016
+**Source type:** narrative review
+**Journal/source:** *Frontiers in Pediatrics* 2016;4:143
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 28119904 / PMC5220090 / DOI 10.3389/fped.2016.00143
+**Date discovered:** 2026-10-19 (Scientist C, group H4)
+**Date processed:** 2026-10-19 (`FTR-20261019-28119904-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H4)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-H4-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-28119904-01`; manifest `deepdive_manifests/PMID28119904.json`; landing [[paper_registry_current#PAPER 334]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0627
+**Short title:** Serdar 2025 — prenatal inflammation plus 80 percent oxygen in the neonatal rat brain
+**Authors:** Serdar M, Walther KA, Gallert M, Kempe K, Obst S, Labusek N, et al.
+**Year:** 2025
+**Source type:** primary research — rat pups
+**Journal/source:** *Journal of Neuroinflammation* 2025;22:57
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40022130 / PMC11871844 / DOI 10.1186/s12974-025-03389-4
+**Date discovered:** 2026-10-19 (Scientist C, group H4)
+**Date processed:** 2026-10-19 (`FTR-20261019-40022130-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H4)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-H4-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-40022130-01`; manifest `deepdive_manifests/PMID40022130.json`; landing [[paper_registry_current#PAPER 335]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0628
+**Short title:** Moore 2026 — 2 versus 20 percent oxygen in mouse oligodendrocyte-precursor culture (the title's hyperoxia is room air)
+**Authors:** Moore L, McLane L, Wahl S, Ornelas IM, Wood TL, Canoll P, et al.
+**Year:** 2026
+**Source type:** primary research — cell culture
+**Journal/source:** *ASN NEURO* 2026;18(1):2698260
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42763430 / PMC13596923 / DOI 10.1080/17590914.2026.2698260
+**Date discovered:** 2026-10-19 (Scientist C, group H4)
+**Date processed:** 2026-10-19 (`FTR-20261019-42763430-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H4)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-H4-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-42763430-01`; manifest `deepdive_manifests/PMID42763430.json`; landing [[paper_registry_current#PAPER 336]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0629
+**Short title:** Alekseeva 2026 — AMPA versus NMDA blockade in rat hyperbaric-oxygen seizures
+**Authors:** Alekseeva O, Zaripov K, Vasilev D, Demchenko I, Wojtunik-Kulesza K, Rudkowska M
+**Year:** 2026
+**Source type:** primary research — rat
+**Journal/source:** *Biomedicines* 2026;14(8):1807
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42652189 / PMC13509269 / DOI 10.3390/biomedicines14081807
+**Date discovered:** 2026-10-19 (Scientist C, group H4)
+**Date processed:** 2026-10-19 (`FTR-20261019-42652189-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H4)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-H4-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-42652189-01`; manifest `deepdive_manifests/PMID42652189.json`; landing [[paper_registry_current#PAPER 337]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0630
+**Short title:** Blume 2025 — HypoxyStat, a haemoglobin left-shifter, in Ndufs4 knockout mice
+**Authors:** Blume SY, Garg A, Martí-Mateos Y, Midha AD, Chew BTL, Lin B, et al.
+**Year:** 2025
+**Source type:** primary research — mouse
+**Journal/source:** *Cell* 2025;188(6):1580-1588.e11
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39965572 / PMC12186697 / DOI 10.1016/j.cell.2025.01.029
+**Date discovered:** 2026-10-19 (Scientist C, group H4)
+**Date processed:** 2026-10-19 (`FTR-20261019-39965572-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H4)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-H4-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-39965572-01`; manifest `deepdive_manifests/PMID39965572.json`; landing [[paper_registry_current#PAPER 338]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0631
+**Short title:** June 2024 — acute seizures in neonatal inflammation-sensitised hypoxia-ischaemia in mice
+**Authors:** June A, Matysik W, Marlicz M, Zucker E, Wagley PK, Kuan CY, et al.
+**Year:** 2024
+**Source type:** primary research — mouse pups
+**Journal/source:** *PLOS ONE* 2024;19(1):e0295860
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 38206902 / PMC10783742 / DOI 10.1371/journal.pone.0295860
+**Date discovered:** 2026-10-19 (Scientist C, group H4)
+**Date processed:** 2026-10-19 (`FTR-20261019-38206902-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H4)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-H4-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-38206902-01`; manifest `deepdive_manifests/PMID38206902.json`; landing [[paper_registry_current#PAPER 339]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0632
+**Short title:** Yuskaitis 2022 — DEPDC5 knockout: 24 h fasting lowers PTZ seizure incidence in control mice and not in the knockout, despite lower glucose and higher ketones
+**Authors:** Yuskaitis CJ, Modasia JB, Schrötter S, Rossitto LA, Groff KJ, Morici C, et al.
+**Year:** 2022
+**Source type:** primary research — mouse and rat neurons
+**Journal/source:** *Cell reports* 2022;40(9):111278-111278
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 36044864 / PMC9508617 / DOI 10.1016/j.celrep.2022.111278
+**Date discovered:** 2026-10-19 (Scientist D, group H5)
+**Date processed:** 2026-10-19 (`FTR-20261019-36044864-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H5)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-H5-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-36044864-01`; manifest `deepdive_manifests/PMID36044864.json`; landing [[paper_registry_current#PAPER 340]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0633
+**Short title:** Phillips-Farfan 2015 — caloric restriction in kindling: threshold up, kindling rate unchanged, pS6 and pAKT lower, glucose and ketones unchanged
+**Authors:** Phillips-Farfán BV, Rubio Osornio MdC, Custodio Ramírez V, Paz Tres C, Carvajal Aguilera KG
+**Year:** 2015
+**Source type:** primary research — rat
+**Journal/source:** *Frontiers in Cellular Neuroscience* 2015;9:90
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 25814935 / PMC4356078 / DOI 10.3389/fncel.2015.00090
+**Date discovered:** 2026-10-19 (Scientist D, group H5)
+**Date processed:** 2026-10-19 (`FTR-20261019-25814935-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H5)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-H5-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-25814935-01`; manifest `deepdive_manifests/PMID25814935.json`; landing [[paper_registry_current#PAPER 341]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0634
+**Short title:** Salvati 2022 — hypoglycaemia and AMPK: fasting and insulin worsen spike-wave seizures; main text and Table S1 disagree on a p value
+**Authors:** Salvati KA, Ritger ML, Davoudian PA, O’Dell F, Wyskiel DR, Souza GMPR, et al.
+**Year:** 2022
+**Source type:** primary research — rat and mouse
+**Journal/source:** *Brain* 2022;145(7):2332
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 35134125 / PMC9337815 / DOI 10.1093/brain/awac037
+**Date discovered:** 2026-10-19 (Scientist D, group H5)
+**Date processed:** 2026-10-19 (`FTR-20261019-35134125-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H5)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-H5-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-35134125-01`; manifest `deepdive_manifests/PMID35134125.json`; landing [[paper_registry_current#PAPER 342]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0635
+**Short title:** Hahn 2026 — intermittent fasting with medium-chain triglycerides: no significant difference; one seizure-free participant on fasting alone
+**Authors:** Hahn W, Falk E, Balzter A, Foer T, Maierhofer S, Jaumann S, et al.
+**Year:** 2026
+**Source type:** crossover pilot
+**Journal/source:** *Epilepsia* 2026;67(9):4618-4630
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42360174 / PMC13592486 / DOI 10.1002/epi.70343
+**Date discovered:** 2026-10-19 (Scientist D, group H5)
+**Date processed:** 2026-10-19 (`FTR-20261019-42360174-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H5)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-H5-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-42360174-01`; manifest `deepdive_manifests/PMID42360174.json`; landing [[paper_registry_current#PAPER 343]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0636
+**Short title:** Sun 2025 — neonatal hypoglycaemic rats: higher later PTZ score; reporting inconsistent (n, t statistics, glucose threshold)
+**Authors:** Sun Y, Li X, Dong Y, Zhang X, Gan L, Jia T
+**Year:** 2025
+**Source type:** primary research — rat
+**Journal/source:** *Frontiers in Neurology* 2025;16:1587200
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40589985 / PMC12206811 / DOI 10.3389/fneur.2025.1587200
+**Date discovered:** 2026-10-19 (Scientist D, group H5)
+**Date processed:** 2026-10-19 (`FTR-20261019-40589985-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H5)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-H5-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-40589985-01`; manifest `deepdive_manifests/PMID40589985.json`; landing [[paper_registry_current#PAPER 344]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0637
+**Short title:** Garg 2025 — neonatal hypoglycaemia thresholds: no consensus; a correction was issued; unit mismatch in Figure 3
+**Authors:** Garg M, Devaskar SU
+**Year:** 2025
+**Source type:** narrative review
+**Journal/source:** *European Journal of Pediatrics* 2025;184(4):263
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40119223 / PMC11928350 / DOI 10.1007/s00431-025-06082-z
+**Date discovered:** 2026-10-19 (Scientist D, group H5)
+**Date processed:** 2026-10-19 (`FTR-20261019-40119223-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H5)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-H5-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-40119223-01`; manifest `deepdive_manifests/PMID40119223.json`; landing [[paper_registry_current#PAPER 345]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0638
+**Short title:** Sobrinho 2026 — Glut1 deficiency cohort: ketogenic therapy in 85 percent; unvalidated score; internal numeric inconsistencies
+**Authors:** Sobrinho LMF, Fontana JC, Lorea CF, van der Linden Júnior H, Leite ACS, Maia RE, et al.
+**Year:** 2026
+**Source type:** retrospective cohort
+**Journal/source:** *JIMD Reports* 2026;67(5):e70113
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42638834 / PMC13500214 / DOI 10.1002/jmd2.70113
+**Date discovered:** 2026-10-19 (Scientist D, group H5)
+**Date processed:** 2026-10-19 (`FTR-20261019-42638834-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H5)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-H5-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-42638834-01`; manifest `deepdive_manifests/PMID42638834.json`; landing [[paper_registry_current#PAPER 346]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0639
+**Short title:** Dienel 2023 — glycogen in epilepsy: starved-rat glycogen non-recovery; no GSK3 or WWOX mention
+**Authors:** Dienel GA, Gillinder L, McGonigal A, Borges K
+**Year:** 2022
+**Source type:** hypothesis review
+**Journal/source:** *Epilepsia* 2022;64(1):29
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 36117414 / PMC10952408 / DOI 10.1111/epi.17412
+**Date discovered:** 2026-10-19 (Scientist D, group H5)
+**Date processed:** 2026-10-19 (`FTR-20261019-36117414-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H5)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-H5-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-36117414-01`; manifest `deepdive_manifests/PMID36117414.json`; landing [[paper_registry_current#PAPER 347]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0640
+**Short title:** Tao 2024 — Wernicke encephalopathy after glucose infusion: temporal association only, no thiamine level
+**Authors:** Tao X, Qiao R, Liu C, Guo L, Li J, Kang Y, et al.
+**Year:** 2024
+**Source type:** case report, n = 1 adult
+**Journal/source:** *Heliyon* 2024;10(8):e29419
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 38681648 / PMC11053267 / DOI 10.1016/j.heliyon.2024.e29419
+**Date discovered:** 2026-10-19 (Scientist D, group H5)
+**Date processed:** 2026-10-19 (`FTR-20261019-38681648-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H5)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-H5-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-38681648-01`; manifest `deepdive_manifests/PMID38681648.json`; landing [[paper_registry_current#PAPER 348]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0641
+**Short title:** Funayama 2026 — parenteral dextrose in refeeding: tied to magnesium and calcium falls, not phosphorus; no thiamine mention
+**Authors:** Funayama M, Koreki A, Mimura Y, Takata T, Yagihashi T, Ogino S, et al.
+**Year:** 2026
+**Source type:** retrospective cohort
+**Journal/source:** *Journal of Eating Disorders* 2026;14:142
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42087252 / PMC13312573 / DOI 10.1186/s40337-026-01627-5
+**Date discovered:** 2026-10-19 (Scientist D, group H5)
+**Date processed:** 2026-10-19 (`FTR-20261019-42087252-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H5)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-H5-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-42087252-01`; manifest `deepdive_manifests/PMID42087252.json`; landing [[paper_registry_current#PAPER 349]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0642
+**Short title:** Abbas 2025 — pediatric enteral refeeding: refeeding syndrome 10.4 percent under a 10 kcal/kg/day start with thiamine and phosphorus
+**Authors:** Abbas F, Vacheron C, Duclos A, Touzet S, Restier L, Duclaux‐Loras R, et al.
+**Year:** 2025
+**Source type:** retrospective cohort
+**Journal/source:** *Journal of Pediatric Gastroenterology and Nutrition* 2025;80(4):695
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39871710 / PMC11959107 / DOI 10.1002/jpn3.12466
+**Date discovered:** 2026-10-19 (Scientist D, group H5)
+**Date processed:** 2026-10-19 (`FTR-20261019-39871710-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H5)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-H5-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T3
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-39871710-01`; manifest `deepdive_manifests/PMID39871710.json`; landing [[paper_registry_current#PAPER 350]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0643
+**Short title:** Trico 2026 — medium-chain-triglyceride ketones in type 1 diabetes: memory accuracy ceiling, BHB below 0.5 mmol/L, relative versus absolute ketone oxidation
+**Authors:** Tricò D, Jiang L, Spicer D, Page K, Belfort de Aguiar R, Naik S, et al.
+**Year:** 2026
+**Source type:** tracer study and pilot RCT
+**Journal/source:** *Diabetes* 2026;75(9):1644-1656
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42384016 / PMC13493211 / DOI 10.2337/db26-0293
+**Date discovered:** 2026-10-19 (Scientist D, group H5)
+**Date processed:** 2026-10-19 (`FTR-20261019-42384016-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H5)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-H5-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-42384016-01`; manifest `deepdive_manifests/PMID42384016.json`; landing [[paper_registry_current#PAPER 351]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0644
+**Short title:** Burst 2026 — hyponatraemia, oedema and osmotic demyelination: oedema 0.5 percent, demyelination 1.3 percent; water excess and low-solute diets in case lists
+**Authors:** Burst V, Rabii R, Peto‐Madew J, Persigehl T, Haneder S, Hackl MJ, et al.
+**Year:** 2025
+**Source type:** retrospective cohort
+**Journal/source:** *Academic Emergency Medicine* 2025;33(1):e70158
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41069084 / PMC12820600 / DOI 10.1111/acem.70158
+**Date discovered:** 2026-10-19 (Scientist D, group H5)
+**Date processed:** 2026-10-19 (`FTR-20261019-41069084-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H5)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-H5-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-41069084-01`; manifest `deepdive_manifests/PMID41069084.json`; landing [[paper_registry_current#PAPER 352]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0645
+**Short title:** Ziaka 2025 — fluid strategies in traumatic brain injury: hypotonicity and fluid-balance statements; no dextrose mention
+**Authors:** Ziaka M, Hautz W, Exadaktylos A, Wartenberg KE
+**Year:** 2025
+**Source type:** narrative review
+**Journal/source:** *Journal of Clinical Medicine* 2025;14(17):6289
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40944047 / PMC12428941 / DOI 10.3390/jcm14176289
+**Date discovered:** 2026-10-19 (Scientist D, group H5)
+**Date processed:** 2026-10-19 (`FTR-20261019-40944047-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H5)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-H5-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-40944047-01`; manifest `deepdive_manifests/PMID40944047.json`; landing [[paper_registry_current#PAPER 353]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0646
+**Short title:** Tesser 2025 — early aggressive parenteral nutrition in preterm infants: uncertain benefit; glucose rates printed
+**Authors:** Tesser F, Meneghelli M, Martino D, Pegoraro L, Pelosi MS, Sebellin S, et al.
+**Year:** 2025
+**Source type:** qualitative review
+**Journal/source:** *Nutrients* 2025;17(2):232
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39861362 / PMC11767679 / DOI 10.3390/nu17020232
+**Date discovered:** 2026-10-19 (Scientist D, group H5)
+**Date processed:** 2026-10-19 (`FTR-20261019-39861362-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H5)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-H5-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-39861362-01`; manifest `deepdive_manifests/PMID39861362.json`; landing [[paper_registry_current#PAPER 354]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0647
+**Short title:** Morris 2022 — enhanced parenteral nutrition RCT: no benefit; slower P100 that vanishes after enteral adjustment
+**Authors:** Morris EE, Miller NC, Marka NA, Super JL, Nagel EM, Gonzalez JD, et al.
+**Year:** 2022
+**Source type:** pilot RCT
+**Journal/source:** *Nutrients* 2022;14(19):3890
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 36235546 / PMC9570539 / DOI 10.3390/nu14193890
+**Date discovered:** 2026-10-19 (Scientist D, group H5)
+**Date processed:** 2026-10-19 (`FTR-20261019-36235546-01`)
+**Discovery source:** interventions batch 2026-10-19 selection record (group H5)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-H5-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/interventions_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-36235546-01`; manifest `deepdive_manifests/PMID36235546.json`; landing [[paper_registry_current#PAPER 355]]
 **Note:** class-level record. Not medical advice.
 
 ---

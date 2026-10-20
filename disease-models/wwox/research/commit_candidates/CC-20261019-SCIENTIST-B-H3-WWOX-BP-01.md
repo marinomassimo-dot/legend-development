@@ -40,3 +40,17 @@ Receipt for 22479346 must be in the ledger first.
 | 22479346 | entry 3 | REPLICATION IS WITHIN ANCESTRY: no gene was significantly confirmed in the British case-control data; WWOX is replicated only in the Hong Kong Han Chinese family study. | Although no genes identified by us were significantly confirmed by the WTCCCHS data (Caucasian) | Discussion, paragraph 1 |
 | 22479346 | entry 5 | MOUSE ANNOTATION AS MECHANISM: the article says WWOX variants are associated with hypoglycaemia, hyperphosphatemia, lower cholesterol and triglycerides and higher uric acid in mice; supplementary Table S2 shows these are Mouse Gen | WWOX variants are associated with hypoglycemia, hyperphosphatemia, decreased circulating cholesterol levels and triglyceride levels, but with increased blood uric acid le | Results, Replication analysis, WWOX paragraph |
 | 22479346 | entry 6 | CITATION MISMATCH: the text says WWOX variants were associated with blood pressure in a previous Japanese GWAS (reference 23), but Table 1 of the same article lists reference 23 as a European-ancestry study and the Japanese study  | WWOX variants were also found to be associated with blood pressure in a previous Japanese GWAS [23]. | Results, Replication analysis, WWOX paragraph |
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_003` · 2026-10-20 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.21 -> WM_v7.22 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** not run — no baseline claim is narrowed and no MAJOR contingency is declared; the candidate's locator triples are carried for a later audit.
+**What landed:** `PAPER 324` (promotion of `CORPUS P360`, kept as history; `LIT-0360` promoted to processed); lead `DL-MECH-142`. Receipt identifier: PMID 22479346 (`FTR-20261019-22479346-01`).
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.

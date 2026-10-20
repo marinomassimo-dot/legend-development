@@ -58,3 +58,17 @@ The Orchestrator owns `PAPER` and `LIT` numbering across four Scientists. Placeh
 ## 6 · Safety (BLOCK-1) summary, class level
 
 Hyperbaric oxygen (6 ATA in rats within tens of minutes; clinical protocols 1.5 to 2.5 ATA) provokes generalised seizures; hyperoxia (80 percent for 48 h in rat pups) injures oligodendrocytes without a second hit; low saturation targets raised death in extremely preterm trials; hypoxia therapy in mice is irreversible when delivered by haemoglobin modification and raises haematocrit to about 52 to 59 percent. None of this was tested in WWOX-deficient systems. Nothing here is medical advice.
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_003` · 2026-10-20 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.21 -> WM_v7.22 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** not run — no baseline claim is narrowed and no MAJOR contingency is declared; the candidate's locator triples are carried for a later audit.
+**What landed:** 15 PAPER records (`PAPER 325`, `PAPER 326`, `PAPER 327`, `PAPER 328`, `PAPER 329`, `PAPER 330`, `PAPER 331`, `PAPER 332`, `PAPER 333`, `PAPER 334`, `PAPER 335`, `PAPER 336`, `PAPER 337`, `PAPER 338`, `PAPER 339`) with their LIT records; leads `DL-MECH-143` to `147`. PARKED: the claim-level proposals on `CLAIM 009` (scope note) and `CLAIM 025` (support mention), which carry no op text, and the section 4 reading debts (not queued as full-text queue rows).
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.

@@ -34,3 +34,17 @@ Sixteen lot papers had no registry record at the start (`registry_records.py get
 
 ## Discovery-ledger proposals (not appended)
 Leads L1-L3 of the analysis note (`IPOTESI`), each with a falsifier in the note.
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_003` · 2026-10-20 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.21 -> WM_v7.22 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** not run — no baseline claim is narrowed and no MAJOR contingency is declared; the candidate's locator triples are carried for a later audit.
+**What landed:** 16 PAPER records (`PAPER 340` to `PAPER 355`) with their LIT records; leads `DL-MECH-148` to `150`. The two selection-file description corrections (the glycogen review has no GSK3 mention, the refeeding paper no thiamine mention) are carried in the records' Role text; the selection file itself is untouched.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.

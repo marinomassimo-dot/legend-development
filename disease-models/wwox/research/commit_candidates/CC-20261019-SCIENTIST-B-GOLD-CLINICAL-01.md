@@ -27,3 +27,17 @@ Receipts `FTR-20261019-39507621-01`, `FTR-20261019-36779245-01`, `FTR-20261019-3
 ### LOCATOR TRIPLES FOR BLIND AUDIT
 
 Run voluntarily; see the analysis note, section 5, for verdicts. The Teplyshova absence claim (no parental genotype or CNV outcome) is an absence over the whole article and was audited by whole-text read.
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_003` · 2026-10-20 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.21 -> WM_v7.22 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** not run — no baseline claim is narrowed and no MAJOR contingency is declared; the candidate's locator triples are carried for a later audit.
+**What landed:** `CLAIM 020` and `CLAIM 017` evidence-boundary additions (status unchanged); notes on `PAPER 015`, `PAPER 018` and `PAPER 093` (the Feng 2024 record). Receipts `FTR-20261019-39507621-01`, `FTR-20261019-36779245-01` and `FTR-20261019-39416860-01`.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.

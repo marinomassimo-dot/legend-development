@@ -400,3 +400,28 @@ Every rejection declares **what would revive it**. If the trigger fires, the rej
 - 🔴 **Genotype caution.** A common intronic deletion at AF 0.339–0.47 is **not** a WOREE or SCAR12 allele observation, and removes no exon; its population frequency says nothing about losing one functional copy. P47T, Q230P, G372R, A141T and P252A are not interchangeable, and a heterozygote is neither a demonstrated negative nor a positive for haploinsufficiency.
 - **`REVIVAL_TRIGGER`:** replication at genome-wide significance in an independent cohort, with orthogonal CNV genotyping (PCR or sequencing) **of the deletion itself**.
 - **Not medical advice.**
+
+### DIS-37 — «WWOX loss has been tested against fasting, calorie restriction, dextrose or glucose infusion, fluid or sodium load, refeeding or thiamine» → ⏸️ **NOT MEASURED — no WWOX-direct evidence exists on these interventions**
+- **PREMISE:** DATO + INFERENZA: PubMed ESearch counts of 2026-10-19 (WWOX with fasting or restriction 4, all type 2 diabetes association studies; with mTOR or AMPK 8; with hypoglycaemia or dextrose 21, none an infusion; with oedema or hyponatraemia 2; with refeeding, thiamine or parenteral nutrition 0); all sixteen papers of the H5 lot were read and none contains a WWOX-deficient system with the intervention.
+- **Confine:** over those queries and that lot, not the literature; an empty result is not evidence about the literature.
+- **`REVIVAL_TRIGGER`:** any report of a WWOX-null, knockdown, hypomorph or biallelic-loss system (animal, cell or patient series) with a fasting, restriction, glucose-load, fluid or refeeding readout, or a full text of the blocked WWOX/mTOR paper (PMID 36621327) that bears on it.
+- **Not medical advice.**
+
+### DIS-38 — «Fasting or calorie restriction protects against seizures» → ❌ **NOT SUPPORTED AS A PROPERTY OF FASTING IN GENERAL, and it has no WWOX premise**
+- **PREMISE:** DATO: protection was lost in a nutrient-sensing knockout despite lower glucose and higher ketones ([[paper_registry_current#PAPER 340]]); fasting worsened absence seizures in another model ([[paper_registry_current#PAPER 342]]); restriction raised a threshold but not the kindling rate ([[paper_registry_current#PAPER 341]]).
+- **Confine:** these are three models, none WWOX-deficient; they bound the general sentence, they do not say what fasting does in WWOX loss.
+- **`REVIVAL_TRIGGER`:** a WWOX-deficient model tested with a fasting seizure-threshold assay (`DL-MECH-148`).
+- **Not medical advice.**
+
+### DIS-39 — «Glut1 deficiency is an analogue of WWOX loss of function» → ⏸️ **NOT ESTABLISHED**
+- **PREMISE:** DATO + INFERENZA: Glut1-DS is transport failure ([[paper_registry_current#PAPER 346]]); WWOX-deficient fibroblasts in the repository's readings show higher glucose uptake and a direction that changes with condition (`DL-MECH-020` update). The shared element is a diet response only.
+- **Confine:** this rejects the analogy as an inference; it does not say the diet cannot help in WWOX loss.
+- **`REVIVAL_TRIGGER`:** a measurement of brain glucose or CSF glucose in a WWOX-deficient model or patient series.
+- **Not medical advice.**
+
+### DIS-40 — «A WWOX loss-of-function cell is more vulnerable to nutrient stress» → ⏸️ **NOT SHOWN — in culture it was less vulnerable to serum withdrawal**
+- **PREMISE:** DATO: in the held WWOX-direct reading (serum-free medium, E14.5 fibroblasts) null cells kept viability of about 42% against about 21% at 72 h and reactive oxygen species rose less.
+- **Confine:** serum withdrawal, fibroblasts; not glucose, not neurons.
+- **`REVIVAL_TRIGGER`:** a glucose-withdrawal experiment in Wwox-null neurons (`DL-MECH-149`).
+- **Not medical advice.**
+
