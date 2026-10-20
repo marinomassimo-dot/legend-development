@@ -37,7 +37,7 @@ metabolic batch alone added 4,231 lines in seven commits (`git log --numstat --s
 | A record-scoped edit | `record_scoped_edit.py replace` dry run on `PAPER 005` **0.17 s** | linear, negligible |
 | Depth/locator screens | `locator_count_crosscheck.py --depth` **0.62 s** over 434 depth lines | linear, negligible |
 | Code coupled to the path | 20 tools + 26 tests name `paper_registry_current`; 11 + 11 the literature log; 6 + 9 the discovery ledger (`git grep -l`) | fixed cost of any split |
-| Prose coupled to the path | 372 / 163 / 215 Markdown files link the three (wikilinks `[[paper_registry_current#PAPER n]]` among them) | fixed cost of any split, and the large one |
+| Prose coupled to the path | 372 / 163 / 215 Markdown files link the three (record wikilinks into the registry among them) | fixed cost of any split, and the large one |
 | Parallel conflicts | every new record is appended at the end of one file, so two branches that add records always conflict there — **independent of size** | no |
 | Agent `Read` of the whole file | not possible in one call above a few hundred KB — and never needed: the routing table forbids it | already past |
 
