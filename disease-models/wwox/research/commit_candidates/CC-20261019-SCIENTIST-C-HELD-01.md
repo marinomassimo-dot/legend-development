@@ -53,3 +53,17 @@ The HELD-partial rows of the two selection files were re-read each against a que
 **Reason:** the candidate's ordering requires its ten staged receipts (`FTR-20261019-24308844-03`, `-31543760-05`, `-33195192-03`, `-33612478-02`, `-33958783-02`, `-35328751-04`, `-35460704-03`, `-37897534-03`, `-38542478-02`, `-42589397-05`) to be in the ledger first; they are staged and not recorded, and the candidate reached main after the batch scope was fixed. It stays queued for the next batch.
 **Status / Type / Summary:** unchanged by this candidate.
 **Not medical advice.** Class level only; no individual-level record is carried.
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_004` · 2026-10-20 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.22 -> WM_v7.23 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** not run by the integrator (no baseline claim is narrowed, no MAJOR contingency); the candidate's locator triples are carried in its manifests.
+**What landed:** reading-update notes on `PAPER 129`, `PAPER 023`, `PAPER 118`, `PAPER 022`, `PAPER 130`, `PAPER 204`, `PAPER 149` and `PAPER 156` and on the reading record `CORPUS-STUB-109` (the TUBB-WWOX dyslipidaemia paper, which has no `PAPER` record), each naming its new receipt and keeping its depth as the receipt states it; the selection file's "AD progression" wording corrected in place with the old wording quoted (the registry records already said Parkinson's disease dementia); leads `DL-MECH-151` to `DL-MECH-155`. The ten receipts it needed (`FTR-20261019-24308844-03`, `-31543760-05`, `-33195192-03`, `-33612478-02`, `-33958783-02`, `-35328751-04`, `-35460704-03`, `-37897534-03`, `-38542478-02`, `-42589397-05`) are in the ledger.
+**Parked:** the claim-level proposals (RL-003 next action, the uptake-readout rule, the `CLAIM 025` no-change line) carry no op text, and a research line is not one of the four current files; the Schuchardt reading has only a corpus placeholder and the candidate proposes no op for it; the Gao 2025 and Chong 2023 access routes stay with the operator.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.

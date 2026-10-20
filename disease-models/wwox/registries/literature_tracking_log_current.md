@@ -1647,11 +1647,12 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 34210081 / DOI 10.3390/cells10071637
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-10-19 (`FTR-20261019-34210081-01`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 19
-**Status:** discovered
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 363]] by `BATCH_20261019_004` (`CC-20261019-SCIENTISTD-DEBT-01`); reading `complete_fulltext_read`, receipt `FTR-20261019-34210081-01`.
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -1659,7 +1660,7 @@ Serves to:
 **Claim links:** none
 **Working Model impact:** none yet
 **Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
+**Next action:** none — read; landing [[paper_registry_current#PAPER 363]]
 **Flags:** corpus placeholder / not yet screened
 **Note:** Title: Molecular Biology of the WWOX Gene That Spans Chromosomal Fragile Site FRA16D
 
@@ -1977,11 +1978,12 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 27999774 / DOI 10.3389/fcell.2016.00141
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-10-19 (`FTR-20261019-27999774-01`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 32
-**Status:** discovered
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 365]] by `BATCH_20261019_004` (`CC-20261019-SCIENTISTD-DEBT-02`); reading `complete_fulltext_read`, receipt `FTR-20261019-27999774-01`.
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -1989,7 +1991,7 @@ Serves to:
 **Claim links:** none
 **Working Model impact:** none yet
 **Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
+**Next action:** none — read; landing [[paper_registry_current#PAPER 365]]
 **Flags:** corpus placeholder / not yet screened
 **Note:** Title: HYAL-2-WWOX-SMAD4 Signaling in Cell Death and Anticancer Response
 
@@ -2031,11 +2033,12 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 25416187 / DOI 10.1177/1535370214561952
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-10-19 (`FTR-20261019-25416187-01`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 34
-**Status:** discovered
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 364]] by `BATCH_20261019_004` (`CC-20261019-SCIENTISTD-DEBT-02`); reading `complete_fulltext_read`, receipt `FTR-20261019-25416187-01`.
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -2043,7 +2046,7 @@ Serves to:
 **Claim links:** none
 **Working Model impact:** none yet
 **Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
+**Next action:** none — read; landing [[paper_registry_current#PAPER 364]]
 **Flags:** corpus placeholder / not yet screened
 **Note:** Title: The fragile site WWOX gene and the developing brain
 
@@ -2283,11 +2286,12 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 29310447 / DOI 10.1177/1535370217752350
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-10-19 (`FTR-20261019-29310447-01`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 45
-**Status:** discovered
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 359]] by `BATCH_20261019_004` (`CC-20261019-SCIENTISTD-DEBT-01`); reading `partial_fulltext_read`, receipt `FTR-20261019-29310447-01`.
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -2295,7 +2299,7 @@ Serves to:
 **Claim links:** none
 **Working Model impact:** none yet
 **Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
+**Next action:** none — read; landing [[paper_registry_current#PAPER 359]]
 **Flags:** corpus placeholder / not yet screened
 **Note:** Title: Phosphorylation/de-phosphorylation in specific sites of tumor suppressor WWOX and control of distinct biological events
 
@@ -4253,11 +4257,12 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 22484428 / DOI 10.3892/mmr.2012.860
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-10-19 (`FTR-20261019-22484428-01`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 121
-**Status:** discovered
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 367]] by `BATCH_20261019_004` (`CC-20261019-SCIENTISTD-DEBT-02`); reading `complete_fulltext_read`, receipt `FTR-20261019-22484428-01`.
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -4265,7 +4270,7 @@ Serves to:
 **Claim links:** none
 **Working Model impact:** none yet
 **Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
+**Next action:** none — read; landing [[paper_registry_current#PAPER 367]]
 **Flags:** corpus placeholder / not yet screened
 **Note:** Title: WWOX-mediated apoptosis in A549 cells mainly involves the mitochondrial pathway
 
@@ -6136,7 +6141,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 27339895 / PMC5016130 / DOI 10.1074/jbc.M116.716167
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
+**Date processed:** 2026-10-19 (`FTR-20261019-27339895-01`)
 **Date last touched:** 2026-04-18
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
@@ -6145,7 +6150,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 362]] by `BATCH_20261019_004` (`CC-20261019-SCIENTISTD-DEBT-01`); reading `partial_fulltext_read`, receipt `FTR-20261019-27339895-01`.
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Genotype/model tag:** unassigned in triage
 **Species:** mouse
@@ -6156,8 +6162,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Claim links:** none — triage only
 **Working Model impact:** none yet
 **Report mentions:** FASE 1 triage 221–400
-**Current status:** screened — C
-**Next action:** background-only; escalate only on convergence signal
+**Current status:** processed — see the Status note
+**Next action:** none — read; landing [[paper_registry_current#PAPER 362]]
 **Flags:** FASE 1 batch entry / no deep-dive yet
 **Note:** Title: Role of WW Domain-containing Oxidoreductase WWOX in Driving T Cell Acute Lymphoblastic Leukemia Maturation
 
@@ -7953,7 +7959,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 25612104 / PMC4303423 / DOI 10.1371/journal.pone.0115353
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
+**Date processed:** 2026-10-19 (`FTR-20261019-25612104-01`)
 **Date last touched:** 2026-04-18
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
@@ -7962,7 +7968,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 369]] by `BATCH_20261019_004` (`CC-20261019-SCIENTISTD-DEBT-02`); reading `partial_fulltext_read`, receipt `FTR-20261019-25612104-01`.
 **Primary pathway:** oncology / tumor suppressor biology
 **Genotype/model tag:** unassigned in triage
 **Species:** not assessed in triage
@@ -7973,8 +7980,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Claim links:** none — triage only
 **Working Model impact:** none yet
 **Report mentions:** FASE 1 triage 221–400
-**Current status:** screened — C
-**Next action:** background-only; escalate only on convergence signal
+**Current status:** processed — see the Status note
+**Next action:** none — read; landing [[paper_registry_current#PAPER 369]]
 **Flags:** FASE 1 batch entry / no deep-dive yet
 **Note:** Title: Epigenetic and genetic alterations affect the WWOX gene in head and neck squamous cell carcinoma
 
@@ -9942,7 +9949,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 27655721 / PMC5342485 / DOI 10.18632/oncotarget.12082
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
+**Date processed:** 2026-10-19 (`FTR-20261019-27655721-01`)
 **Date last touched:** 2026-04-18
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
@@ -9951,7 +9958,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 368]] by `BATCH_20261019_004` (`CC-20261019-SCIENTISTD-DEBT-02`); reading `complete_fulltext_read`, receipt `FTR-20261019-27655721-01`.
 **Primary pathway:** oncology / tumor suppressor biology
 **Genotype/model tag:** unassigned in triage
 **Species:** human
@@ -9962,8 +9970,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Claim links:** none — triage only
 **Working Model impact:** none yet
 **Report mentions:** FASE 1 triage 221–400
-**Current status:** screened — C
-**Next action:** background-only; escalate only on convergence signal
+**Current status:** processed — see the Status note
+**Next action:** none — read; landing [[paper_registry_current#PAPER 368]]
 **Flags:** FASE 1 batch entry / no deep-dive yet
 **Note:** Title: Functional genetic variant in the Kozak sequence of WW domain-containing oxidoreductase (WWOX) gene is associated with oral cancer risk
 
@@ -10350,7 +10358,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 28426730 / PMC5398630 / DOI 10.1371/journal.pone.0176141
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
+**Date processed:** 2026-10-19 (`FTR-20261019-28426730-01`)
 **Date last touched:** 2026-04-18
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
@@ -10359,7 +10367,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 360]] by `BATCH_20261019_004` (`CC-20261019-SCIENTISTD-DEBT-01`); reading `complete_fulltext_read`, receipt `FTR-20261019-28426730-01`.
 **Primary pathway:** oncology / tumor suppressor biology
 **Genotype/model tag:** unassigned in triage
 **Species:** human
@@ -10370,8 +10379,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Claim links:** none — triage only
 **Working Model impact:** none yet
 **Report mentions:** FASE 1 triage 221–400
-**Current status:** screened — C
-**Next action:** background-only; escalate only on convergence signal
+**Current status:** processed — see the Status note
+**Next action:** none — read; landing [[paper_registry_current#PAPER 360]]
 **Flags:** FASE 1 batch entry / no deep-dive yet
 **Note:** Title: Functional genetic variant of WW domain-containing oxidoreductase (WWOX) gene is associated with hepatocellular carcinoma risk
 
@@ -10486,7 +10495,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 19366691 / PMC2708898 / DOI 10.1074/jbc.M806688200
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
+**Date processed:** 2026-10-19 (`FTR-20261019-19366691-01`)
 **Date last touched:** 2026-04-18
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
@@ -10495,7 +10504,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 358]] by `BATCH_20261019_004` (`CC-20261019-SCIENTISTD-DEBT-01`); reading `partial_fulltext_read`, receipt `FTR-20261019-19366691-01`.
 **Primary pathway:** oncology / tumor suppressor biology
 **Genotype/model tag:** unassigned in triage
 **Species:** not assessed in triage
@@ -10506,8 +10516,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Claim links:** none — triage only
 **Working Model impact:** none yet
 **Report mentions:** FASE 1 triage 221–400
-**Current status:** screened — C
-**Next action:** background-only; escalate only on convergence signal
+**Current status:** processed — see the Status note
+**Next action:** none — read; landing [[paper_registry_current#PAPER 358]]
 **Flags:** FASE 1 batch entry / no deep-dive yet
 **Note:** Title: Transforming growth factor beta1 signaling via interaction with cell surface Hyal-2 and recruitment of WWOX/WOX1
 
@@ -17766,6 +17776,105 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Report mentions:** `research/interventions_wave_20261019_scientist-d.md`
 **Next action:** none
 **Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-36235546-01`; manifest `deepdive_manifests/PMID36235546.json`; landing [[paper_registry_current#PAPER 355]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0648
+**Short title:** Chen 2018 — WWOX rs9926344 and hepatocellular carcinoma recurrence: one surgical series, DNA from tumour tissue, no loss-of-function readout
+**Authors:** Chen W, Zhou C, Zhang W, Atyah M, Yin Y, Guo L, et al.
+**Year:** 2018
+**Source type:** primary research — surgical HCC cohort, SNP association (152 patients)
+**Journal/source:** *J Cancer* 2018;9(7):1239-1247
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 29675105 / PMC5907672 / DOI 10.7150/jca.23808
+**Date discovered:** 2026-10-19 (Scientist D, reading-debt chase of WWOX-direct primaries)
+**Date processed:** 2026-10-19 (`FTR-20261019-29675105-01`)
+**Discovery source:** reference of a paper read in the debt wave (`debts_wave_20261019_scientist-d.md`)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-DEBT-01` and authored by the batch integrator at `BATCH_20261019_004`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** oncology / tumor suppressor biology
+**Transferability:** T3
+**clinical relevance:** LOW — background
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/debts_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-29675105-01`; manifest `deepdive_manifests/PMID29675105.json`; landing [[paper_registry_current#PAPER 356]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0649
+**Short title:** Hong 2007 — Zfra, TNF and WOX1: overexpression in cultured lines; no mitochondrial measurement (the pointer is to a paper then "submitted")
+**Authors:** Hong Q, Hsu LJ, Schultz L, Pratt N, Mattison J, Chang NS
+**Year:** 2007
+**Source type:** primary research — cell-line overexpression, pull-downs, yeast two-hybrid
+**Journal/source:** *BMC Mol Biol* 2007;8:50
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 17567906 / PMC1904229 / DOI 10.1186/1471-2199-8-50
+**Date discovered:** 2026-10-19 (Scientist D, reading-debt chase of WWOX-direct primaries)
+**Date processed:** 2026-10-19 (`FTR-20261019-17567906-01`)
+**Discovery source:** reference of a paper read in the debt wave (`debts_wave_20261019_scientist-d.md`)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-DEBT-01` and authored by the batch integrator at `BATCH_20261019_004`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW — background
+**Claim links:** CLAIM 009 (annotation only: the wave note of this batch on the mitochondrial-localisation leg; status and type unchanged)
+**Working Model impact:** none
+**Report mentions:** `research/debts_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-17567906-01`; manifest `deepdive_manifests/PMID17567906.json`; landing [[paper_registry_current#PAPER 357]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0650
+**Short title:** Lin 2011 — a WOX1/MEK1 complex in T-leukaemia cells: Jurkat only, 10 micromolar PMA, one confocal field per time point; the primary behind two mitochondrial sentences
+**Authors:** Lin HP, Chang JY, Lin SR, Lee MH, Huang SS, Hsu LJ, et al.
+**Year:** 2011
+**Source type:** primary research — T-leukaemia cell lines, pharmacological stimulus
+**Journal/source:** *Genes Cancer* 2011;2(5):550-562
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 21901168 / PMC3161421 / DOI 10.1177/1947601911418498
+**Date discovered:** 2026-10-19 (Scientist D, reading-debt chase of WWOX-direct primaries)
+**Date processed:** 2026-10-19 (`FTR-20261019-21901168-01`)
+**Discovery source:** reference of a paper read in the debt wave (`debts_wave_20261019_scientist-d.md`)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-DEBT-01` and authored by the batch integrator at `BATCH_20261019_004`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** P5 — metabolism / mitochondria / redox
+**Transferability:** T3
+**clinical relevance:** LOW — background
+**Claim links:** CLAIM 009 (annotation only: the wave note of this batch on the mitochondrial-localisation leg; status and type unchanged)
+**Working Model impact:** none
+**Report mentions:** `research/debts_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-21901168-01`; manifest `deepdive_manifests/PMID21901168.json`; landing [[paper_registry_current#PAPER 361]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0651
+**Short title:** Lee 2015 — Zfra peptide, spleen "Z cells" and a Wwox heterozygote "cure": one mouse, inconsistent counting (the primary behind Hsu 2016)
+**Authors:** Lee MH, Su WP, Wang WJ, Lin SR, Lu CY, Chen YA, et al.
+**Year:** 2015
+**Source type:** primary research — mouse tumour-transfer experiments with a synthetic peptide
+**Journal/source:** *Oncotarget* 2015;6(6):3737-3751
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 25686832 / PMC4414150 / DOI 10.18632/oncotarget.2895
+**Date discovered:** 2026-10-19 (Scientist D, reading-debt chase of WWOX-direct primaries)
+**Date processed:** 2026-10-19 (`FTR-20261019-25686832-01`)
+**Discovery source:** reference of a paper read in the debt wave (`debts_wave_20261019_scientist-d.md`)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-DEBT-02` and authored by the batch integrator at `BATCH_20261019_004`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** oncology / tumor suppressor biology
+**Transferability:** T3
+**clinical relevance:** LOW — background
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/debts_wave_20261019_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-25686832-01`; manifest `deepdive_manifests/PMID25686832.json`; landing [[paper_registry_current#PAPER 366]]
 **Note:** class-level record. Not medical advice.
 
 ---

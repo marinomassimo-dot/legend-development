@@ -4443,7 +4443,7 @@ fatto addotto a sostegno è che la perdita di funzione **germinale** di WWOX cau
 neuronali — cioè esattamente pressione selettiva ereditaria, agente **prima** della riproduzione.
 Leggere la fonte è ciò che permette di dire quanto è forte il fatto, non solo che l'inversione c'è.
 
-**Priorità:** 🔴 **ALTA — la più alta fra le voci aperte da questa ondata.** **Current status:** ⬜ aperto.
+**Priorità:** 🔴 **ALTA — la più alta fra le voci aperte da questa ondata.** **Current status:** ✅ read, complete reading (2026-10-20, `CC-20261019-SCIENTISTD-DEBT-02`, `BATCH_20261019_004`, receipt `FTR-20261019-25416187-01`; route: Internet Archive capture of the PMC author-manuscript page, no figure or table). Answer to this entry's question: the commentary summarises three reports (the SCAR12 families of Mallaret, the nonsense-variant family of Abdel-Salam, one unpublished family with no data) in support of 'germline WWOX variants are associated with neurological disease'; it adds no data of its own, describes no metabolic phenotype of the biallelic families, and its proposed seizure mechanism is a list of possibilities. Landing: [[paper_registry_current#PAPER 364]].
 
 **🔴 STATO — 2026-09-21: `EVIDENCE_BLOCKED` per licenza — MA LA DOMANDA CHE CONTAVA È RISOLTA DAI
 SOLI METADATI.** Il PMCID è corretto ed è `PMC4935222` (verificato personalmente con

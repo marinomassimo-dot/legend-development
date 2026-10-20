@@ -4205,3 +4205,124 @@ Leads staged in the candidates of `BATCH_20261019_003` (groups H3, H4 and H5). A
 - **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
 - **Not medical advice.**
 
+## Run 2026-10-20 — metabolic batch, reading-debt wave: leads staged by Scientists C and D (BATCH_20261019_004)
+
+### DL-MECH-151 — Normalised redox readout in WWOX-depleted human neural progenitors: repeat resazurin with cell-number or protein normalisation plus a second mitochondrial readout in the same knockdown cells
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_004`, from `CC-20261019-SCIENTIST-C-HELD-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** [[paper_registry_current#PAPER 022]] shows a PrestoBlue curve about 32 percent lower at 270 min in knockdown hNPC as raw RFU with no normalisation and no n; the only redox readout in a human neural cell with WWOX depleted, and a weak one.
+- **Falsifying experiment / counter:** Falsifier: No difference after normalisation, or no difference in membrane potential or oxygen consumption in the same cells.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX loss-of-function measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-152 — Weight-matched or pair-fed controls for the Wwox-null fat and temperature phenotype: compare subcutaneous fat, FABP4 and core temperature in null pups against weight-matched wild-type pups or pair-fed littermates
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_004`, from `CC-20261019-SCIENTIST-C-HELD-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** [[paper_registry_current#PAPER 129]] reports a subcutaneous fat layer of about 10 against 270 um and a skin surface temperature of 31.3 against 35.8 C in the null, while the null pups are smaller from P4-P6; the differences cannot be separated from runting.
+- **Falsifying experiment / counter:** Falsifier: Equal fat and temperature at equal weight.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX loss-of-function measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-153 — Direction of the G6PD and NFE2L2 contribution in the hNPC data against the mouse fibroblast redox heatmap: obtain the fold changes behind Supplementary Table 1 and compare with the early-passage Wwox-null redox set
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_004`, from `CC-20261019-SCIENTIST-C-HELD-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** [[paper_registry_current#PAPER 022]] gives contributions, not directions (G6PD, NFE2L2, TXNIP, UCP2 and CYCS rank high); [[paper_registry_current#PAPER 130]] Supplementary Figure 8 carries an early-passage Wwox-null redox transcript set (G6pdx, Nfe2l2, Nqo1; one sample per genotype). Co-occurrence only; no direction is known.
+- **Falsifying experiment / counter:** Falsifier: Opposite signs in the two systems.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX loss-of-function measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-154 — ROS re-measurement under NAC in Wwox-null fibroblasts: DHE flow in NAC-treated null MEFs and p53 sequencing in NAC-treated clones
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_004`, from `CC-20261019-SCIENTIST-C-HELD-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** [[paper_registry_current#PAPER 130]]: NAC rescues senescence markers with WWOX still absent, but ROS was one unquantified DHE histogram and was not re-measured after NAC, and the p53 point mutations are one clone.
+- **Falsifying experiment / counter:** Falsifier: ROS unchanged by NAC, or the p53 mutation unchanged by NAC.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX loss-of-function measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-155 — Serum-replete glucose uptake in WWOX-depleted cells: repeat the 2-deoxyglucose assay in the four oxygen and glucose conditions with and without serum and with a dose series of WWOX depletion
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_004`, from `CC-20261019-SCIENTIST-C-HELD-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** [[paper_registry_current#PAPER 023]]: the uptake sign is condition-specific (knockdown above control only in normoxia with normoglycaemia), the assay is serum-free for 48 h, and overexpression also raises lactate.
+- **Falsifying experiment / counter:** Falsifier: The sign does not depend on serum, or tracks the dose of depletion monotonically.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX loss-of-function measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-156 — Antibody specificity for the pS14 model: blot the laboratory-made phospho-site antibodies on a WWOX-null lysate
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_004`, from `CC-20261019-SCIENTISTD-DEBT-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** [[paper_registry_current#PAPER 362]] and [[paper_registry_current#PAPER 359]] rest the Ser14 phosphorylation work on laboratory-made phospho-site antibodies.
+- **Falsifying experiment / counter:** Falsifier: Bands persist in the null lysate.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX loss-of-function measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-157 — Drosophila-style enhancement in mammalian cells: test whether WWOX-null cells are more sensitive to a respiratory-chain inhibitor than matched controls at equal passage
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_004`, from `CC-20261019-SCIENTISTD-DEBT-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** [[paper_registry_current#PAPER 363]] summarises the fly design (reduced WWOX worsens tissue phenotypes caused by mitochondrial deficiency); the primary is unread (subscription).
+- **Falsifying experiment / counter:** Falsifier: No differential sensitivity.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX loss-of-function measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-158 — eQTL allele orientation: resolve whether the GTEx "Alt" allele of rs12918952 is the rare A allele of the Taiwanese series
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_004`, from `CC-20261019-SCIENTISTD-DEBT-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** [[paper_registry_current#PAPER 360]]: the eQTL class sizes imply an alternate-allele frequency near 54 percent against about 5 percent in the study's own controls, and the paper does not say which allele GTEx calls "Alt".
+- **Falsifying experiment / counter:** Falsifier: They are different alleles, so the eQTL trend says nothing about the studied variant.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX loss-of-function measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-159 — Mitochondrial purity controls for WWOX fractions: re-run the MOLT-4 and Jurkat fractionations with a mitochondrial matrix and a cytosolic marker row and a protease-protection step
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_004`, from `CC-20261019-SCIENTISTD-DEBT-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** [[paper_registry_current#PAPER 362]] (no marker row in the fractionation blot) and [[paper_registry_current#PAPER 361]] (confocal overlap only).
+- **Falsifying experiment / counter:** Falsifier: WWOX is a cytosolic contaminant of the mitochondrial pellet.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX loss-of-function measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-160 — Flux control for the Wwox MEF LC3 arm: LC3-II in Wwox +/+, +/- and -/- fibroblasts with and without a lysosomal inhibitor, three biological replicates
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_004`, from `CC-20261019-SCIENTISTD-DEBT-02` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** The only germline Wwox arm of the autophagy paper is one pair of MEF blots (LC3-II 1.0, 1.9, 1.7) with no flux control (read in the resume of the Tsai 2013 reading, receipt `FTR-20261019-24008736-03`).
+- **Falsifying experiment / counter:** Falsifier: No genotype difference in flux.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX loss-of-function measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-161 — Same-tissue test of the Kozak variant: measure WWOX mRNA and protein by rs11545028 genotype in one tissue type with the allele frequency known
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_004`, from `CC-20261019-SCIENTISTD-DEBT-02` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** [[paper_registry_current#PAPER 368]] finds lower expression in oral tumour tissue; [[paper_registry_current#PAPER 369]] finds no effect in head and neck tumours.
+- **Falsifying experiment / counter:** Falsifier: No difference in either mRNA or protein.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX loss-of-function measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-162 — Heterozygous Wwox tumour incidence in an untreated cohort with the same strain and a stated onset age, before any peptide effect is cited
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_004`, from `CC-20261019-SCIENTISTD-DEBT-02` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** [[paper_registry_current#PAPER 366]] reports a Zfra "cure" in one heterozygous mouse with no untreated heterozygote curve; the Discussion concedes that wild-type mice tend to grow spontaneous tumours.
+- **Falsifying experiment / counter:** Falsifier: The incidence equals wild type.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX loss-of-function measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**

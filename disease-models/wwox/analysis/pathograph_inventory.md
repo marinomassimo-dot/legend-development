@@ -33,11 +33,11 @@ annotations is reported below whatever it happens to be.
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
 | Deep-dive manifests read | 426 |
-| …of which bound to at least one claim | 101 |
+| …of which bound to at least one claim | 104 |
 | Propositions scanned | 6672 |
 | …carrying a relational connective | 1391 |
 | …locator-backed candidates | 1351 |
-| …locator-backed and bound to a claim | 385 |
+| …locator-backed and bound to a claim | 396 |
 
 The scanned population is three declared surfaces and no others: every claim
 `Title`, every row of the working model's BLOCK 2 mirror, and every
@@ -58,7 +58,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 006 | P47T model shows progressive hippocampal astrogliosis; microglial progression shown for morpholo | consolidated baseline | DATO + INFERENZA prudente | P6 — neuroinflammation / glia | NOT_ANNOTATED | 0 | 2 |
 | CLAIM 007 | P47T abolishes or near-abolishes WWOX recovery by two PPPY peptides in vitro | consolidated baseline | DATO | P3 — MYC/Wnt / interaction logic | NOT_ANNOTATED | 1 | 4 |
 | CLAIM 008 | WOREE and SCAR12 form a genotype-phenotype spectrum | consolidated baseline | DATO | Clinical spectrum / genotype-phenotype | NOT_ANNOTATED | 0 | 3 |
-| CLAIM 009 | WWOX deficiency plausibly alters mitochondrial quality control, redox and energy efficiency | in observation | INFERENZA | P5 — metabolism / mitochondria / redox / | NOT_ANNOTATED | 7 | 10 |
+| CLAIM 009 | WWOX deficiency plausibly alters mitochondrial quality control, redox and energy efficiency | in observation | INFERENZA | P5 — metabolism / mitochondria / redox / | NOT_ANNOTATED | 7 | 13 |
 | CLAIM 010 | Mitophagy may be more relevant than senolytics for WWOX-related mitochondrial dysfunction | background only | IPOTESI | P5 — metabolism / mitochondria / mitopha | NOT_ANNOTATED | 0 | 1 |
 | CLAIM 011 | AAV9-hSynI-hWWOX: dose-dependent durable rescue in Wwox-null murine model su domini multipli inc | flagged for review | DATO preclinico (full text reviewed) | P7 — gene therapy readiness; P4 — myelin | NOT_ANNOTATED | 11 | 2 |
 | CLAIM 012 | Fenotipo WWOX severo neonatale-fatale con MRI inizialmente normale: genotipo-severità heterogene | consolidated baseline | DATO descrittivo (full text reviewed) | clinical spectrum / genotype-phenotype | NOT_ANNOTATED | 0 | 1 |
@@ -359,7 +359,7 @@ its sentence is a reading, and this tool does not perform readings.
 | CLAIM 016 | claim_title | `contribute to` | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency |
 | CLAIM 018 | claim_title | `causes` | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in humans |
 
-Showing 12 of 425 bound candidates; the
+Showing 12 of 436 bound candidates; the
 complete set, with evidence and provenance, is in the export. The worklist
 in cost order — what needs an annotation, what needs a type, what needs a
 decomposition, what needs a reading — is printed by:
@@ -376,6 +376,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 429 input files; digest
-`20693c40f791119f`. Sources: the claim, paper and
+`00a45fa9c9bba403`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
