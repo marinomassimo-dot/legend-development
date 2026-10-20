@@ -1,0 +1,313 @@
+{
+ "schema_version": 2,
+ "pmid": "29899766",
+ "doi": "10.4103/JPN.JPN_160_16",
+ "receipt": "FTR-20261020-29899766-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/wave4_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-W4-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Europe PMC REST fullTextXML and the PMC OA open-data bucket for the seven images; no supplement exists."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true,
+   "reason": "Run inline under the dispatch brief; this manifest and the note carry what the skill would produce."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate; the shared discovery ledger is written by the Orchestrator."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "A paediatric neurology group writing a narrative review of treatable metabolic epilepsies; adjacent-method expertise for DEE work-up logic and not primary for WWOX or the WWOX diseases. The review reports treatment statements from cited sources; observation versus interpretation cannot be separated because no data are presented."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "treatable inborn errors of metabolism[tiab] AND epilepsy[tiab]",
+    "count": 32,
+    "source": "PubMed ESearch 2026-10-20"
+   }
+  ],
+  "note": "Not a WWOX paper: no WWOX field density is claimed; the substitute is read for class-level screening logic only."
+ },
+ "multihop": {
+  "references_enumerated": 35,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [
+   {
+    "queue": "CC-20261019-SCIENTIST-C-W4-01",
+    "why": "No reference is WWOX-direct (the review is not about WWOX); the ALDH7A1, FOLR1 and creatine primaries it cites were not opened."
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 29899766 --hops 0; fulltext_receipts.py status --pmid 29899766; ls receipt_staging/*",
+  "hits": 0,
+  "note": "No registry record, receipt or staged receipt."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-20 by PubMed EFetch: publication types Journal Article and Review; no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "UNSCREENABLE_NO_REFERENCE_LIST",
+   "reference_source": "cache",
+   "references_declared": 0,
+   "references_screened": 0,
+   "references_with_doi": 0,
+   "schema": "retraction_check.dependencies/1",
+   "screened": false,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID29899766_Mastrangelo2018_PMC.xml",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML for PMC5982487 (HTTP 200, 80,630 bytes).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5982487/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_rest_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "4e44625b03ae26094453656371f79c3e2d843252f25e1c248ad0c26c65365f09"
+  },
+  {
+   "path": "files/figures/PMID29899766/JPN-13-13-g001.jpg",
+   "kind": "figure",
+   "note": "Figure or Table image 1, PMC OA open-data bucket (image 7 is Table 1, the metabolic work-up checklist).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5982487.1/JPN-13-13-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "f8e1aac9385b8b6d39e4915b06a133b7dc6a459ddccf8d782ce926f1d8ce81ab"
+  },
+  {
+   "path": "files/figures/PMID29899766/JPN-13-13-g002.jpg",
+   "kind": "figure",
+   "note": "Figure or Table image 2, PMC OA open-data bucket (image 7 is Table 1, the metabolic work-up checklist).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5982487.1/JPN-13-13-g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "415b2d8501cb3d3d34f3bdc4e811ce7c0bd9af2c7e48e4fc72947a597bd2ce83"
+  },
+  {
+   "path": "files/figures/PMID29899766/JPN-13-13-g003.jpg",
+   "kind": "figure",
+   "note": "Figure or Table image 3, PMC OA open-data bucket (image 7 is Table 1, the metabolic work-up checklist).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5982487.1/JPN-13-13-g003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "2eb780982e62473fbfa9de8eac399d40d6ae3d7700e7df14699468dffa78ff69"
+  },
+  {
+   "path": "files/figures/PMID29899766/JPN-13-13-g004.jpg",
+   "kind": "figure",
+   "note": "Figure or Table image 4, PMC OA open-data bucket (image 7 is Table 1, the metabolic work-up checklist).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5982487.1/JPN-13-13-g004.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "d44838a4e5b92bae06c171e51a0b3630194ca40592c62545ed37381cf2535357"
+  },
+  {
+   "path": "files/figures/PMID29899766/JPN-13-13-g005.jpg",
+   "kind": "figure",
+   "note": "Figure or Table image 5, PMC OA open-data bucket (image 7 is Table 1, the metabolic work-up checklist).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5982487.1/JPN-13-13-g005.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "51c92291a1cff4fcff8f9ef586b85cb583b85d23c1f646c8813ff393beef0950"
+  },
+  {
+   "path": "files/figures/PMID29899766/JPN-13-13-g006.jpg",
+   "kind": "figure",
+   "note": "Figure or Table image 6, PMC OA open-data bucket (image 7 is Table 1, the metabolic work-up checklist).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5982487.1/JPN-13-13-g006.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "a0517861c7273f9f4fbfde06d01a04275c11de57ddba28fca2d0c6594c47fc53"
+  },
+  {
+   "path": "files/figures/PMID29899766/JPN-13-13-g007.jpg",
+   "kind": "figure",
+   "note": "Figure or Table image 7, PMC OA open-data bucket (image 7 is Table 1, the metabolic work-up checklist).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5982487.1/JPN-13-13-g007.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "978130da6e1f18a607add64ae3ad1c74a9b72b146729a297e50a60a8094edaf2"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC5982487/fullTextXML returned HTTP 200 (80,630 bytes) on 2026-10-20; the declared artefact is that response.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a supplement text layer or a figure image.",
+  "entries": [
+   {
+    "proposition": "SUBSTITUTE (NOT WWOX EVIDENCE). The review states the limit of treatment in this disease class: seizures and motor signs respond better than cognition.",
+    "snippet": "Available treatments are more effective on epileptic manifestations and motor symptoms, whereas benefits on cognitive outcome are generally poor.[1,2]",
+    "surface": "body",
+    "anchor": "Introduction, final sentence",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of treatable inborn errors of metabolism causing epilepsy in children; SUBSTITUTE, not WWOX evidence",
+     "genotype": "none (disease-class review)",
+     "endpoint": "treatment outcome statement"
+    },
+    "artifact": "files/fulltext/PMID29899766_Mastrangelo2018_PMC.xml"
+   },
+   {
+    "proposition": "SUBSTITUTE. What a pyridoxine trial can and cannot say: a response is a diagnostic step, and the absence of a response does not exclude the disease; the review therefore licenses no inference from a negative trial.",
+    "snippet": "This response has no diagnostic value and if it is lacking, the diagnosis cannot be excluded.[5]",
+    "surface": "body",
+    "anchor": "ALDH7A1 deficiency, third paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of treatable inborn errors of metabolism causing epilepsy in children; SUBSTITUTE, not WWOX evidence",
+     "genotype": "none (disease-class review)",
+     "endpoint": "pyridoxine trial interpretation"
+    },
+    "artifact": "files/fulltext/PMID29899766_Mastrangelo2018_PMC.xml"
+   },
+   {
+    "proposition": "SUBSTITUTE. The defining readout of cerebral folate deficiency is a CSF measurement without peripheral depletion, which a blood folate level would not show; this is the readout class a WWOX-folate question would need, and no WWOX report contains it.",
+    "snippet": "The main biochemical marker of a cerebral folate deficiency is represented by an extremely low 5-methyltetrahydrofolate concentration in the cerebrospinal fluid without evidences of peripheral folate depletion.[20,21]",
+    "surface": "body",
+    "anchor": "Cerebral folate deficiency, third paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of treatable inborn errors of metabolism causing epilepsy in children; SUBSTITUTE, not WWOX evidence",
+     "genotype": "none (disease-class review)",
+     "endpoint": "CSF 5-methyltetrahydrofolate"
+    },
+    "artifact": "files/fulltext/PMID29899766_Mastrangelo2018_PMC.xml"
+   },
+   {
+    "proposition": "SUBSTITUTE. Metabolic derangement in the neonatal PNPO form includes acidosis, hyperlactataemia and hypoglycaemia with anaemia: shows that a cofactor-pathway DEE can carry glucose and lactate abnormalities, a class-level comparison for hypoglycaemia in the Wwox-null mouse and not a WWOX finding.",
+    "snippet": "signs of metabolic derangement (including metabolic acidosis, hyperlactacidemia, hypoglycemia), anemia, and gastrointestinal symptoms",
+    "surface": "body",
+    "anchor": "PNPO deficiency, second paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of treatable inborn errors of metabolism causing epilepsy in children; SUBSTITUTE, not WWOX evidence",
+     "genotype": "none (disease-class review)",
+     "endpoint": "clinical signs of PNPO deficiency"
+    },
+    "artifact": "files/fulltext/PMID29899766_Mastrangelo2018_PMC.xml"
+   },
+   {
+    "proposition": "SUBSTITUTE. Ketogenic diet is the gold-standard treatment of GLUT1 deficiency because it supplies an alternative brain fuel; the effect on cognition is not established. It supports the class statement that a diet can substitute a blocked glucose supply, nothing about WWOX.",
+    "snippet": "Ketogenic diet remains to be the gold standard for treatment of GLUT1 deficiency because it represents an alternative source of energy for the brain.[34]",
+    "surface": "body",
+    "anchor": "GLUT1 deficiency, fifth paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of treatable inborn errors of metabolism causing epilepsy in children; SUBSTITUTE, not WWOX evidence",
+     "genotype": "none (disease-class review)",
+     "endpoint": "treatment statement"
+    },
+    "artifact": "files/fulltext/PMID29899766_Mastrangelo2018_PMC.xml"
+   },
+   {
+    "proposition": "Table 1 (image, opened): the proposed checklist. First-level tests: blood count, blood gases and electrolytes, glucose, liver function, ammonia, uric acid, thyroid function; newborns and infants get therapeutic trials of pyridoxine, pyridoxal phosphate or folinic acid; epilepsy with movement disorder gets lactate, pyruvate, guanidinoacetate, urinary creatine/creatinine, pterins, CSF glucose ratio; multi-organ patients get lactate, acylcarnitines, amino acids, folates, homocysteine; second and third level tests are named. It lists the cofactor work-up a WWOX-related DEE case would be screened against, as a class checklist.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Table 1 image, Proposed checklist for metabolic workup in epileptic children: clinical considerations, laboratory investigations by level, neuroimaging.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29899766/JPN-13-13-g007.jpg",
+    "anchor": "Table 1 image, native JPEG",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative review of treatable inborn errors of metabolism causing epilepsy in children; SUBSTITUTE, not WWOX evidence",
+     "genotype": "none (disease-class review)",
+     "endpoint": "work-up checklist"
+    },
+    "found_or_sought": "sought - question: which treatable causes belong in a DEE work-up"
+   },
+   {
+    "proposition": "The review states its own scope as a restricted list of treatable disorders; seven pathway schematics (B6/lysine, proline, serine, biotin, creatine, molybdenum cofactor) accompany the text. WWOX occurs zero times in the body (counted over the JATS text with a script, 2026-10-20), so the paper cannot be cited for any WWOX statement.",
+    "snippet": "A detailed discussion of their features is beyond the scope of this review.",
+    "surface": "body",
+    "anchor": "Concluding remarks, first paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of treatable inborn errors of metabolism causing epilepsy in children; SUBSTITUTE, not WWOX evidence",
+     "genotype": "none (disease-class review)",
+     "endpoint": "scope"
+    },
+    "artifact": "files/fulltext/PMID29899766_Mastrangelo2018_PMC.xml"
+   }
+  ]
+ }
+}

@@ -154,3 +154,29 @@ word is an Introduction citation); a clinical or prognostic WWOX effect (no corr
 loss of heterozygosity as a mechanism at this sample size.
 
 **Effect on the model.** Kidney axis stays "tumour genetics only, no renal-function evidence". Class MINOR.
+
+---
+
+## 6. PMID 29899766 — Mastrangelo 2018, treatable inborn errors of metabolism causing epilepsy (SUBSTITUTE, NOT WWOX EVIDENCE; W2 umbrella cofactor axis) — receipt FTR-20261020-29899766-01
+
+**What it MEASURES.** Nothing: a narrative review of eight disease classes (pyridoxine-dependent epilepsies,
+cerebral folate deficiency, serine disorders, biotinidase deficiency, creatine disorders, molybdenum cofactor
+deficiency, GLUT1 deficiency) with six pathway schematics and a work-up checklist (Table 1, an image). No WWOX
+occurrence in the body.
+
+**Question and answer (screening logic).** A DEE work-up should rule out, by level: first-level blood
+count, gases, glucose, liver tests, ammonia, uric acid and thyroid function; therapeutic trials of pyridoxine,
+pyridoxal phosphate or folinic acid in newborns and infants; lactate, pyruvate, guanidinoacetate, creatine/creatinine,
+pterins and a CSF glucose ratio in epilepsy with movement disorder; acylcarnitines, amino acids, folates and
+homocysteine in multi-organ cases. What a negative screen can say is stated by the review itself: a
+lacking pyridoxine response "has no diagnostic value" and does not exclude the disease; the folate disease is
+defined by a CSF 5-methyltetrahydrofolate measurement without peripheral depletion, so blood folate cannot
+answer it; and treatment effect is better on seizures and motor signs than on cognition.
+
+**What it does not support.** Any statement about WWOX, a cofactor requirement of a WWOX-related DEE, or a
+benefit of any supplement in WWOX loss. A negative cofactor screen can exclude a treatable cause in a case; it
+says nothing about WWOX biology, and a positive response in a WWOX case would be a coincident diagnosis
+or a modifier, not evidence about WWOX.
+
+**Effect on the model.** Defines the exclusion work-up for any WWOX-DEE case series in class terms; no claim
+touched. Class MINOR.
