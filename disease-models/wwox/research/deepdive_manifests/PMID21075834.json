@@ -1,190 +1,536 @@
 {
-  "schema_version": 2,
-  "pmid": "21075834",
-  "doi": "10.1093/hmg/ddq495",
-  "receipt": "FTR-20260811-21075834-01",
-  "landing": [
-    "disease-models/wwox/research/fulltext_dossiers/PMID21075834.md",
-    "full_text_queue_current#FT-020",
-    "disease-models/wwox/research/commit_candidates/CC-20260811-21075834-01.md"
-  ],
-  "skills_considered": [
-    {"skill": "legend", "used": true},
-    {"skill": "legend-deepdive", "used": true},
-    {"skill": "legend-session-self-eval", "used": true},
-    {"skill": "legend-capability-scout", "used": true},
-    {"skill": "legend-session-takeaways", "used": true},
-    {"skill": "pdf", "used": true},
-    {"skill": "legend-study-intake-triage", "used": false, "reason": "The orchestrator supplied a verified zero-receipt preflight and an already resolved corpus/queue identity; duplicate intake was explicitly excluded."},
-    {"skill": "find-fulltext", "used": false, "reason": "The operator supplied the structured XML, five main-figure artifacts and the complete supplement in the persistent shared files tree."},
-    {"skill": "legend-proband-priority-matrix", "used": false, "reason": "The operator fixed a single exclusive reading cursor, so reprioritisation could not change scope."},
-    {"skill": "legend-discovery", "used": false, "reason": "The scientific trace lands in a durable dossier and commit candidate; no scientific ledger was manually edited."},
-    {"skill": "legend-hypothesis-forge", "used": false, "reason": "The study creates discriminating experiments but does not support a new intervention hypothesis."},
-    {"skill": "legend-safety-triage", "used": false, "reason": "No molecule, dose or treatment proposal was advanced."},
-    {"skill": "legend-commit", "used": false, "reason": "Canonical promotion remains reserved for a later BATCH_COMMIT by the integrator."}
-  ],
-  "group_assessment": {
-    "total_publications": 1,
-    "publications_on_gene": 1,
-    "research_type": "experimental_lab",
-    "is_primary_group_for_disease": false,
-    "weighting": "Perimeter-local count only: one assigned publication, and it is WWOX-direct. This is deliberately not an author-profile count. The article documents an experimental Drosophila/proteomics/genetics group with human-cell follow-up. External author-identity remapping was not repeated because actor identity is explicitly owned by Plan in this assignment. Group identity supplies no uplift to the scientific verdict."
+ "schema_version": 2,
+ "pmid": "21075834",
+ "doi": "10.1093/hmg/ddq495",
+ "receipt": "FTR-20261019-21075834-01",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID21075834.md",
+  "full_text_queue_current#FT-020",
+  "disease-models/wwox/research/commit_candidates/CC-20260811-21075834-01.md",
+  "FTR-20261019-21075834-01",
+  "gold_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend",
+   "used": true
   },
-  "field_density": {
-    "queries": [
-      {"query": "WWOX[Title/Abstract] AND Drosophila[Title/Abstract]", "count": 11, "source": "PubMed ESearch, 2026-08-11"},
-      {"query": "WWOX[Title/Abstract] AND isocitrate dehydrogenase[Title/Abstract]", "count": 1, "source": "PubMed ESearch, 2026-08-11"},
-      {"query": "WWOX[Title/Abstract] AND superoxide dismutase[Title/Abstract]", "count": 1, "source": "PubMed ESearch, 2026-08-11"}
-    ],
-    "note": "The exact WWOX-IDH and WWOX-SOD title/abstract intersections each contain one record, making this paper uniquely load-bearing for those named edges. These are topic-density queries, not actor-identity remapping."
+  {
+   "skill": "legend-deepdive",
+   "used": true
   },
-  "multihop": {
-    "references_enumerated": 54,
-    "gene_direct_refs_in_source": [
-      "10786676", "11719429", "14695174", "11896615", "15580310", "16115915",
-      "17360458", "17823927", "18487609", "18974271", "19936220", "17803050",
-      "19500159", "16007179", "17395332", "20542955"
-    ],
-    "resolved": ["19936220", "17803050", "19500159", "21075834"],
-    "queued": ["FT-020"],
-    "note": "All 54 references were enumerated sequentially. No cited paper was opened or treated as read because the operator imposed an exclusive PMID perimeter. The JATS marks reference 52 (PMID 18319262, FHIT) with retraction-forward; the FHIT analogy is therefore held and is not used as WWOX evidence."
+  {
+   "skill": "legend-session-self-eval",
+   "used": true
   },
-  "corpus_crossquery": {
-    "query": "Where does PMID 21075834 already occur and which current redox/metabolism claims does its complete read touch?",
-    "hits": 7,
-    "note": "Post-reading audit found CORPUS P358, LIT-0358, FT-020, surface_census, CLAIM 009, CLAIM 034 and meta_metabolism. It is an unread placeholder already used indirectly by later synthesis. The primary result is counter-directional to a monotonic deficit-to-high-ROS reading and supports only a context-dependent sign."
+  {
+   "skill": "legend-capability-scout",
+   "used": true
   },
-  "retraction_check": {
-    "checked": true,
-    "result": "Repository retraction gate on 2026-08-11 returned no retraction, expression of concern or correction for PMID 21075834; the XML declares is-retracted=no. The source's reference 52 separately carries a retraction-forward link and is not used as a load-bearing premise."
+  {
+   "skill": "legend-session-takeaways",
+   "used": true
   },
-  "source_artifacts": [
-    {"path": "files/fulltext/PMID21075834_OKeefe2011_EPMC.xml", "sha256": "d8ff045d14815ed237c52e468b50cfda32cc63b183ab1708e477c29e3a1b207b", "kind": "article_text"},
-    {"path": "files/figures/PMID21075834/ddq49501.jpg", "sha256": "bd2db410010026b1ab8609a46656041b3dbb922d15508f1767c7afbbcf7a1228", "kind": "figure"},
-    {"path": "files/figures/PMID21075834/ddq49502.jpg", "sha256": "cf8e6e09815f6dccc9c8a6dc0690559adf45307338fae2ae35c3da23f6157519", "kind": "figure"},
-    {"path": "files/figures/PMID21075834/ddq49503.jpg", "sha256": "030c8a6de522263f97455c85bf04519c593b93d4d701611397b36b7d9204b002", "kind": "figure"},
-    {"path": "files/figures/PMID21075834/ddq49504.jpg", "sha256": "5e9a463d403586acb980d5dd6186dbbe0288ab522ce5aff9e0a9b8276da2fd8c", "kind": "figure"},
-    {"path": "files/figures/PMID21075834/ddq49505.jpg", "sha256": "81852e5a9535dc300f3b464f98aa3fc7d8fcf14a1dd1e7a1f559082ef09aa3b9", "kind": "figure"},
-    {"path": "files/figures/PMID21075834/supp_ddq495_ddq495supp.pdf", "sha256": "3ebea93734ef6646924cdda46a9b26a2d149c7abed219c1c2a5358ada4c346a8", "kind": "article_binary"}
-  ],
-  "verbatim_locators": {
-    "waived": false,
-    "source_fulltext_indexed": true,
-    "source_fulltext_indexed_evidence": "The local structured JATS artifact identifies PMCID PMC3016910, PMID 21075834 and DOI 10.1093/hmg/ddq495 and contains the complete article body, table, five figure legends, supplement pointer and 54-reference list.",
-    "supplement_locator_waiver": "The eight rendered supplement pages were read, but they supplied no independent proposition carried out of the reading: their useful checks only confirmed qualifications already anchored more safely to the structured body and five main-figure artifacts. Because the PDF text layer was SUSPECT_FONTS, no supplement-derived locator was created or normalized.",
-    "entries": [
-      {
-        "proposition": "The proteomic and microarray candidates are functional responses rather than known physical WWOX interactors.",
-        "snippet": "None of the proteins or RNAs detected in these studies, as altered due to increases or decreases in Wwox, is found among those that have previously been reported as having physical interaction with Wwox",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID21075834_OKeefe2011_EPMC.xml",
-        "anchor": "Results, Biochemical responses to altered Wwox levels, paragraph after Table 1",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "A negative viability screen does not exclude a functional interaction outside the rate-limiting survival assay.",
-        "snippet": "The absence of such an interaction, however, does not necessarily rule out a functional interaction between a candidate and Wwox, but rather suggests that within this assay system any interaction between the two proteins is not a rate-limiting requirement for survival of the animal.",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID21075834_OKeefe2011_EPMC.xml",
-        "anchor": "Results, In vivo functional screen for candidate Wwox interactors",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "Lower Wwox enhances and higher Wwox suppresses the Idh knock-down viability phenotype across the reported experiments.",
-        "snippet": "A trend was observed across all five experimental replicates, where a further decrease in viability was observed when Wwox levels were also decreased in these flies, indicating an enhancement of the CG6439/Idh RNAi phenotype",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID21075834_OKeefe2011_EPMC.xml",
-        "anchor": "Results, Functional interaction of CG6439/isocitrate dehydrogenase with Wwox",
-        "panel_text_relation": "text_confirmed_by_panel"
-      },
-      {
-        "proposition": "The independent double-mutant experiment did not yield adults homozygous for both Wwox and Idh alleles.",
-        "snippet": "However, we were unable to obtain adult flies that were homozygous for both Idh/CG6439EY00276 and Wwox1, consistent with the enhanced decrease in viability of da > Idh/CG6439RNAi observed when Wwox levels were also decreased by RNAi",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID21075834_OKeefe2011_EPMC.xml",
-        "anchor": "Results, Functional interaction of CG6439/isocitrate dehydrogenase with Wwox, mutant-allele paragraph",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "WWOX and IDH1 transcript abundance are positively correlated across the tested human cancer-cell samples.",
-        "snippet": "A significant positive correlation was observed between endogenous WWOX and IDH1 mRNA levels",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID21075834_OKeefe2011_EPMC.xml",
-        "anchor": "Results, Correlation between WWOX and IDH1 mRNA levels in human cell lines",
-        "panel_text_relation": "text_confirmed_by_panel"
-      },
-      {
-        "proposition": "Combining Wwox loss with Sod mutant alleles causes a severe synthetic lifespan phenotype.",
-        "snippet": "This decreased lifespan phenotype was enhanced when the flies were also homozygous mutant for the Wwox1 mutation as Wwox;Sod double-mutant flies all died within the first 24 h of the assay.",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID21075834_OKeefe2011_EPMC.xml",
-        "anchor": "Results, Cu-Zn superoxide dismutase interacts with Wwox",
-        "panel_text_relation": "text_confirmed_by_panel"
-      },
-      {
-        "proposition": "SOD1 overexpression increases endogenous WWOX in HEK293 whereas the G37R construct does not show that increase.",
-        "snippet": "This increase in endogenous WWOX mRNA expression was not observed when a G37R mutant form of SOD1 that is associated with ALS",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID21075834_OKeefe2011_EPMC.xml",
-        "anchor": "Results, Cu-Zn superoxide dismutase interacts with Wwox, final paragraph",
-        "panel_text_relation": "text_confirmed_by_panel"
-      },
-      {
-        "proposition": "Wwox overexpression and loss shift the indirect ROS assay in reciprocal directions.",
-        "snippet": "In two independent lines of Wwox over-expressing larvae, the percentage of cells with ROS levels above an arbitrary threshold was found to be higher than for control larvae, while Wwox mutants had consistently lower levels of ROS compared with their control larvae",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID21075834_OKeefe2011_EPMC.xml",
-        "anchor": "Results, Wwox affects endogenous levels of ROS",
-        "panel_text_relation": "text_confirmed_by_panel"
-      },
-      {
-        "proposition": "The ROS readout is indirect CM-H2DCFDA fluorescence measured repeatedly by FACS.",
-        "snippet": "Intracellular ROS was determined using 5-(and-6)-chloromethyl-2′,7′-dichlorodihydorfluorescein diacetate (CM-H2DCFDA, Molecular Probes), a non-fluorescent dye, which upon deacetylation by cellular esterases and oxidation by ROS becomes fluorescent.",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID21075834_OKeefe2011_EPMC.xml",
-        "anchor": "Materials and Methods, Reactive oxygen species measurements",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "Figure 1 visually maps all 28 labelled DIGE spots, including the two Sod spots 19 and 20.",
-        "snippet": "The DIGE image contains 28 circled spot labels; spots 19 and 20 are both labelled Sod near the lower-left region.",
-        "surface": "figure",
-        "artifact": "files/figures/PMID21075834/ddq49501.jpg",
-        "anchor": "Figure 1, one panel, inspected at native local dimensions 410 x 499 pixels",
-        "panel_text_relation": "panel_only"
-      },
-      {
-        "proposition": "Figure 2 is a pathway synthesis and not an independent measurement panel.",
-        "snippet": "The pathway diagram routes altered candidate enzymes through glucose, ethanol and lipid metabolism into the TCA cycle and ROS.",
-        "surface": "figure",
-        "artifact": "files/figures/PMID21075834/ddq49502.jpg",
-        "anchor": "Figure 2, one panel, inspected at native local dimensions 424 x 557 pixels",
-        "panel_text_relation": "panel_only"
-      },
-      {
-        "proposition": "Figure 3 shows the Idh genetic-interaction assay and the human WWOX-IDH1 transcript correlation.",
-        "snippet": "Panels A-C display the interaction design, five replicate viability groups and the positive WWOX-versus-IDH1 mRNA regression.",
-        "surface": "figure",
-        "artifact": "files/figures/PMID21075834/ddq49503.jpg",
-        "anchor": "Figure 3 panels A-C, 3/3 inspected at native local dimensions 440 x 532 pixels",
-        "panel_text_relation": "panel_only"
-      },
-      {
-        "proposition": "Figure 4 displays Wwox-Sod synthetic phenotypes and the reverse SOD1-to-WWOX expression relationship in fly and HEK293.",
-        "snippet": "Panels A-D show reduced double-mutant viability, compressed lifespan, reciprocal fly Wwox transcript changes and HEK293 WWOX induction by SOD1 but not G37R.",
-        "surface": "figure",
-        "artifact": "files/figures/PMID21075834/ddq49504.jpg",
-        "anchor": "Figure 4 panels A-D, 4/4 inspected at native local dimensions 488 x 303 pixels",
-        "panel_text_relation": "panel_only"
-      },
-      {
-        "proposition": "Figure 5 displays the reciprocal Wwox-dose shift in the thresholded fluorescence assay.",
-        "snippet": "Panel A shows representative FACS distributions and panel B shows the percentage above threshold over 180 minutes for two overexpressors and two mutants.",
-        "surface": "figure",
-        "artifact": "files/figures/PMID21075834/ddq49505.jpg",
-        "anchor": "Figure 5 panels A-B, 2/2 inspected at native local dimensions 474 x 383 pixels",
-        "panel_text_relation": "panel_only"
-      }
-    ]
+  {
+   "skill": "pdf",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The orchestrator supplied a verified zero-receipt preflight and an already resolved corpus/queue identity; duplicate intake was explicitly excluded."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "The operator supplied the structured XML, five main-figure artifacts and the complete supplement in the persistent shared files tree."
+  },
+  {
+   "skill": "legend-proband-priority-matrix",
+   "used": false,
+   "reason": "The operator fixed a single exclusive reading cursor, so reprioritisation could not change scope."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The scientific trace lands in a durable dossier and commit candidate; no scientific ledger was manually edited."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "The study creates discriminating experiments but does not support a new intervention hypothesis."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule, dose or treatment proposal was advanced."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Canonical promotion remains reserved for a later BATCH_COMMIT by the integrator."
   }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Perimeter-local count only: one assigned publication, and it is WWOX-direct. This is deliberately not an author-profile count. The article documents an experimental Drosophila/proteomics/genetics group with human-cell follow-up. External author-identity remapping was not repeated because actor identity is explicitly owned by Plan in this assignment. Group identity supplies no uplift to the scientific verdict."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX[Title/Abstract] AND Drosophila[Title/Abstract]",
+    "count": 11,
+    "source": "PubMed ESearch, 2026-08-11"
+   },
+   {
+    "query": "WWOX[Title/Abstract] AND isocitrate dehydrogenase[Title/Abstract]",
+    "count": 1,
+    "source": "PubMed ESearch, 2026-08-11"
+   },
+   {
+    "query": "WWOX[Title/Abstract] AND superoxide dismutase[Title/Abstract]",
+    "count": 1,
+    "source": "PubMed ESearch, 2026-08-11"
+   }
+  ],
+  "note": "The exact WWOX-IDH and WWOX-SOD title/abstract intersections each contain one record, making this paper uniquely load-bearing for those named edges. These are topic-density queries, not actor-identity remapping."
+ },
+ "multihop": {
+  "references_enumerated": 54,
+  "gene_direct_refs_in_source": [
+   "10786676",
+   "11719429",
+   "14695174",
+   "11896615",
+   "15580310",
+   "16115915",
+   "17360458",
+   "17823927",
+   "18487609",
+   "18974271",
+   "19936220",
+   "17803050",
+   "19500159",
+   "16007179",
+   "17395332",
+   "20542955"
+  ],
+  "resolved": [
+   "19936220",
+   "17803050",
+   "19500159",
+   "21075834"
+  ],
+  "queued": [
+   "FT-020"
+  ],
+  "note": "All 54 references were enumerated sequentially. No cited paper was opened or treated as read because the operator imposed an exclusive PMID perimeter. The JATS marks reference 52 (PMID 18319262, FHIT) with retraction-forward; the FHIT analogy is therefore held and is not used as WWOX evidence."
+ },
+ "corpus_crossquery": {
+  "query": "Where does PMID 21075834 already occur and which current redox/metabolism claims does its complete read touch?",
+  "hits": 7,
+  "note": "Post-reading audit found CORPUS P358, LIT-0358, FT-020, surface_census, CLAIM 009, CLAIM 034 and meta_metabolism. It is an unread placeholder already used indirectly by later synthesis. The primary result is counter-directional to a monotonic deficit-to-high-ROS reading and supports only a context-dependent sign."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Repository retraction gate on 2026-08-11 returned no retraction, expression of concern or correction for PMID 21075834; the XML declares is-retracted=no. The source's reference 52 separately carries a retraction-forward link and is not used as a load-bearing premise.",
+  "dependencies": {
+   "flagged": [
+    {
+     "citing_relation": "Citation in the Discussion (reference 52, with 53) for FHIT gene transfer raising ROS and FHIT binding ferredoxin reductase and malate dehydrogenase; it supports the argued parallel between FHIT and Wwox in ROS control but supplies no data or method of this paper, and the fly ROS result does not depend on it.",
+     "doi": "10.1074/jbc.m709062200",
+     "nature": "Retraction",
+     "reason_verbatim": "Error in Image;",
+     "retraction_date": "8/3/2017 0:00",
+     "retraction_pmid": "28842474",
+     "verdict": "FLAGGED_RETRACTION"
+    }
+   ],
+   "noted": [],
+   "paper_verdict": "FLAGGED_RETRACTION",
+   "reference_source": "cache",
+   "references_declared": 54,
+   "references_screened": 49,
+   "references_with_doi": 49,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 5
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID21075834_OKeefe2011_PMC_r2.xml",
+   "sha256": "dc52cb20b22601cf4dbac02cdd7de69d18af4c8360339375c7ffca0be608bd5a",
+   "kind": "article_text",
+   "note": "PMC efetch JATS for PMC3016910 (Hum Mol Genet 2011, CC BY-NC), re-acquired 2026-10-19; the 2026-08 Europe PMC XML is absent.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "dc52cb20b22601cf4dbac02cdd7de69d18af4c8360339375c7ffca0be608bd5a",
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC3016910&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID21075834_r2/ddq49502.jpg",
+   "sha256": "cf8e6e09815f6dccc9c8a6dc0690559adf45307338fae2ae35c3da23f6157519",
+   "kind": "figure",
+   "note": "Figure image from the PMC open-data bucket, opened as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "cf8e6e09815f6dccc9c8a6dc0690559adf45307338fae2ae35c3da23f6157519",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3016910.1/ddq49502.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID21075834_r2/ddq49503.jpg",
+   "sha256": "030c8a6de522263f97455c85bf04519c593b93d4d701611397b36b7d9204b002",
+   "kind": "figure",
+   "note": "Figure image from the PMC open-data bucket, opened as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "030c8a6de522263f97455c85bf04519c593b93d4d701611397b36b7d9204b002",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3016910.1/ddq49503.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID21075834_r2/ddq49504.jpg",
+   "sha256": "5e9a463d403586acb980d5dd6186dbbe0288ab522ce5aff9e0a9b8276da2fd8c",
+   "kind": "figure",
+   "note": "Figure image from the PMC open-data bucket, opened as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "5e9a463d403586acb980d5dd6186dbbe0288ab522ce5aff9e0a9b8276da2fd8c",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3016910.1/ddq49504.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID21075834_r2/ddq49505.jpg",
+   "sha256": "81852e5a9535dc300f3b464f98aa3fc7d8fcf14a1dd1e7a1f559082ef09aa3b9",
+   "kind": "figure",
+   "note": "Figure image from the PMC open-data bucket, opened as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "81852e5a9535dc300f3b464f98aa3fc7d8fcf14a1dd1e7a1f559082ef09aa3b9",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3016910.1/ddq49505.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/supplement/PMID21075834_r2/PMC3016910.1.pdf",
+   "sha256": "9125e39b7cfbb253c5afc5748bc55fd26609e23d955db8f09ccb0cd5b90117b0",
+   "kind": "article_binary",
+   "note": "Article PDF from the PMC open-data bucket.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "9125e39b7cfbb253c5afc5748bc55fd26609e23d955db8f09ccb0cd5b90117b0",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3016910.1/PMC3016910.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/supplement/PMID21075834_r2/fig1_p03_130dpi.png",
+   "sha256": "16dbe8bec7152c889fbc7676a505f47b44ae14d75f14b46c2fdd769467231de1",
+   "kind": "figure",
+   "note": "Article PDF page 3 (Figure 1) rendered at 130 dpi with PyMuPDF 1.28.2, opened as an image; the bucket serves no JPEG for Figure 1.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "16dbe8bec7152c889fbc7676a505f47b44ae14d75f14b46c2fdd769467231de1",
+    "derived_from": "files/supplement/PMID21075834_r2/PMC3016910.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=130) on page 3",
+     "join": ""
+    }
+   }
+  },
+  {
+   "path": "files/supplement/PMID21075834_r2/supp_ddq495_ddq495supp.pdf",
+   "sha256": "3ebea93734ef6646924cdda46a9b26a2d149c7abed219c1c2a5358ada4c346a8",
+   "kind": "article_binary",
+   "note": "Supplementary Figures S1-S4 and Tables S1-S2 (8 pages).",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "3ebea93734ef6646924cdda46a9b26a2d149c7abed219c1c2a5358ada4c346a8",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3016910.1/supp_ddq495_ddq495supp.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/supplement/PMID21075834_r2/supp_text.txt",
+   "sha256": "560edc2c1a30a138a102f7cb0291253a359c2965304fac6b18a9175e4fe22d71",
+   "kind": "supplement_text",
+   "note": "Text of the supplement PDF, whitespace collapsed per page.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "560edc2c1a30a138a102f7cb0291253a359c2965304fac6b18a9175e4fe22d71",
+    "derived_from": "files/supplement/PMID21075834_r2/supp_ddq495_ddq495supp.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_text() per page, whitespace collapsed",
+     "join": "newline per page"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "The local structured JATS artifact identifies PMCID PMC3016910, PMID 21075834 and DOI 10.1093/hmg/ddq495 and contains the complete article body, table, five figure legends, supplement pointer and 54-reference list.",
+  "supplement_locator_waiver": "The eight rendered supplement pages were read, but they supplied no independent proposition carried out of the reading: their useful checks only confirmed qualifications already anchored more safely to the structured body and five main-figure artifacts. Because the PDF text layer was SUSPECT_FONTS, no supplement-derived locator was created or normalized.",
+  "entries": [
+   {
+    "proposition": "The proteomic and microarray candidates are functional responses rather than known physical WWOX interactors.",
+    "snippet": "None of the proteins or RNAs detected in these studies, as altered due to increases or decreases in Wwox, is found among those that have previously been reported as having physical interaction with Wwox",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21075834_OKeefe2011_PMC_r2.xml",
+    "anchor": "Results, Biochemical responses to altered Wwox levels, paragraph after Table 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A negative viability screen does not exclude a functional interaction outside the rate-limiting survival assay.",
+    "snippet": "The absence of such an interaction, however, does not necessarily rule out a functional interaction between a candidate and Wwox, but rather suggests that within this assay system any interaction between the two proteins is not a rate-limiting requirement for survival of the animal.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21075834_OKeefe2011_PMC_r2.xml",
+    "anchor": "Results, In vivo functional screen for candidate Wwox interactors",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Lower Wwox enhances and higher Wwox suppresses the Idh knock-down viability phenotype across the reported experiments.",
+    "snippet": "A trend was observed across all five experimental replicates, where a further decrease in viability was observed when Wwox levels were also decreased in these flies, indicating an enhancement of the CG6439/Idh RNAi phenotype",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21075834_OKeefe2011_PMC_r2.xml",
+    "anchor": "Results, Functional interaction of CG6439/isocitrate dehydrogenase with Wwox",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The independent double-mutant experiment did not yield adults homozygous for both Wwox and Idh alleles.",
+    "snippet": "However, we were unable to obtain adult flies that were homozygous for both Idh/CG6439EY00276 and Wwox1, consistent with the enhanced decrease in viability of da > Idh/CG6439RNAi observed when Wwox levels were also decreased by RNAi",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21075834_OKeefe2011_PMC_r2.xml",
+    "anchor": "Results, Functional interaction of CG6439/isocitrate dehydrogenase with Wwox, mutant-allele paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WWOX and IDH1 transcript abundance are positively correlated across the tested human cancer-cell samples.",
+    "snippet": "A significant positive correlation was observed between endogenous WWOX and IDH1 mRNA levels",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21075834_OKeefe2011_PMC_r2.xml",
+    "anchor": "Results, Correlation between WWOX and IDH1 mRNA levels in human cell lines",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Combining Wwox loss with Sod mutant alleles causes a severe synthetic lifespan phenotype.",
+    "snippet": "This decreased lifespan phenotype was enhanced when the flies were also homozygous mutant for the Wwox1 mutation as Wwox;Sod double-mutant flies all died within the first 24 h of the assay.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21075834_OKeefe2011_PMC_r2.xml",
+    "anchor": "Results, Cu-Zn superoxide dismutase interacts with Wwox",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "SOD1 overexpression increases endogenous WWOX in HEK293 whereas the G37R construct does not show that increase.",
+    "snippet": "This increase in endogenous WWOX mRNA expression was not observed when a G37R mutant form of SOD1 that is associated with ALS",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21075834_OKeefe2011_PMC_r2.xml",
+    "anchor": "Results, Cu-Zn superoxide dismutase interacts with Wwox, final paragraph",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Wwox overexpression and loss shift the indirect ROS assay in reciprocal directions.",
+    "snippet": "In two independent lines of Wwox over-expressing larvae, the percentage of cells with ROS levels above an arbitrary threshold was found to be higher than for control larvae, while Wwox mutants had consistently lower levels of ROS compared with their control larvae",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21075834_OKeefe2011_PMC_r2.xml",
+    "anchor": "Results, Wwox affects endogenous levels of ROS",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The ROS readout is indirect CM-H2DCFDA fluorescence measured repeatedly by FACS.",
+    "snippet": "Intracellular ROS was determined using 5-(and-6)-chloromethyl-2′,7′-dichlorodihydorfluorescein diacetate (CM-H2DCFDA, Molecular Probes), a non-fluorescent dye, which upon deacetylation by cellular esterases and oxidation by ROS becomes fluorescent.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21075834_OKeefe2011_PMC_r2.xml",
+    "anchor": "Materials and Methods, Reactive oxygen species measurements",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 visually maps all 28 labelled DIGE spots, including the two Sod spots 19 and 20.",
+    "snippet": "The DIGE image contains 28 circled spot labels; spots 19 and 20 are both labelled Sod near the lower-left region.",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID21075834_r2/fig1_p03_130dpi.png",
+    "anchor": "Figure 1, one panel, inspected at native local dimensions 410 x 499 pixels",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 2 is a pathway synthesis and not an independent measurement panel.",
+    "snippet": "The pathway diagram routes altered candidate enzymes through glucose, ethanol and lipid metabolism into the TCA cycle and ROS.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID21075834_r2/ddq49502.jpg",
+    "anchor": "Figure 2, one panel, inspected at native local dimensions 424 x 557 pixels",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 3 shows the Idh genetic-interaction assay and the human WWOX-IDH1 transcript correlation.",
+    "snippet": "Panels A-C display the interaction design, five replicate viability groups and the positive WWOX-versus-IDH1 mRNA regression.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID21075834_r2/ddq49503.jpg",
+    "anchor": "Figure 3 panels A-C, 3/3 inspected at native local dimensions 440 x 532 pixels",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 4 displays Wwox-Sod synthetic phenotypes and the reverse SOD1-to-WWOX expression relationship in fly and HEK293.",
+    "snippet": "Panels A-D show reduced double-mutant viability, compressed lifespan, reciprocal fly Wwox transcript changes and HEK293 WWOX induction by SOD1 but not G37R.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID21075834_r2/ddq49504.jpg",
+    "anchor": "Figure 4 panels A-D, 4/4 inspected at native local dimensions 488 x 303 pixels",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 5 displays the reciprocal Wwox-dose shift in the thresholded fluorescence assay.",
+    "snippet": "Panel A shows representative FACS distributions and panel B shows the percentage above threshold over 180 minutes for two overexpressors and two mutants.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID21075834_r2/ddq49505.jpg",
+    "anchor": "Figure 5 panels A-B, 2/2 inspected at native local dimensions 474 x 383 pixels",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Wwox loss alone has no phenotype in the fly, which is why the screen modifies a candidate-RNAi phenotype instead.",
+    "snippet": "We have previously determined that the loss of Wwox function has no phenotype (29), thus the strategy for our in vivo RNAi screen was first to identify phenotypes produced by altered levels of any of the candidates on their own",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21075834_OKeefe2011_PMC_r2.xml",
+    "anchor": "Results, in vivo functional screen",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Drosophila melanogaster (Wwox1 and Wwox f04545 mutants, da-GAL4 over-expression and RNAi, whole animal) and 15 human cancer cell lines",
+     "genotype": "Wwox loss or gain with candidate-gene RNAi or Sod alleles",
+     "comparator": "w1118 and da-GAL4 controls",
+     "endpoint": "viability, lifespan, 2D-DIGE, qPCR, FACS ROS"
+    }
+   },
+   {
+    "proposition": "Only 10 of the 27 candidates were tested by RNAi, six reduced viability and four were lethal; the text calls the Idh result the only clear and significant interaction.",
+    "snippet": "Only one of the candidate RNAi lines tested showed a clear and significant interaction with Wwox.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21075834_OKeefe2011_PMC_r2.xml",
+    "anchor": "Results, in vivo functional screen",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Drosophila melanogaster (Wwox1 and Wwox f04545 mutants, da-GAL4 over-expression and RNAi, whole animal) and 15 human cancer cell lines",
+     "genotype": "Wwox loss or gain with candidate-gene RNAi or Sod alleles",
+     "comparator": "w1118 and da-GAL4 controls",
+     "endpoint": "viability, lifespan, 2D-DIGE, qPCR, FACS ROS"
+    }
+   },
+   {
+    "proposition": "Table S2 shows the CG6439/Idh line (one reported off-target) gave a significant enhancement by Wwox RNAi in 2 of 5 replicates (P < 0.001 and P = 0.002; the other three P = 0.256, 0.768, 0.405) and a significant suppression by Wwox over-expression in 3 of 5 (P = 0.016, < 0.001, < 0.001; the other two P = 0.757, 0.072); the main text reports a trend across all five.",
+    "snippet": "#3 ↓ P<0.001 ** #3 ↑ P=0.016 ** #4 ↓ P=0.002 ** #4 ↑ P<0.001 ** CG6439 14443^ #5 ↓ P=0.405 #5 ↑ P<0.001 **",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID21075834_r2/supp_text.txt",
+    "anchor": "Supplementary Table S2, CG6439 rows, replicates 3 to 5 (replicates 1 and 2 precede in the same row)",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Drosophila melanogaster (Wwox1 and Wwox f04545 mutants, da-GAL4 over-expression and RNAi, whole animal) and 15 human cancer cell lines",
+     "genotype": "Wwox loss or gain with candidate-gene RNAi or Sod alleles",
+     "comparator": "w1118 and da-GAL4 controls",
+     "endpoint": "viability, lifespan, 2D-DIGE, qPCR, FACS ROS"
+    }
+   },
+   {
+    "proposition": "Several other candidates show a single-replicate P < 0.05 in Table S2 (CG11089 #2, CG30152 #2, CG14526 line 47138 #2) with no correction for the number of lines, replicates and two directions tested.",
+    "snippet": "#2 ↓ P=0.033 ** #2 ↑ P=0.663 Lethal with da-GAL4",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID21075834_r2/supp_text.txt",
+    "anchor": "Supplementary Table S2, CG30152 row",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Drosophila melanogaster (Wwox1 and Wwox f04545 mutants, da-GAL4 over-expression and RNAi, whole animal) and 15 human cancer cell lines",
+     "genotype": "Wwox loss or gain with candidate-gene RNAi or Sod alleles",
+     "comparator": "w1118 and da-GAL4 controls",
+     "endpoint": "viability, lifespan, 2D-DIGE, qPCR, FACS ROS"
+    }
+   },
+   {
+    "proposition": "The text states that decreased Wwox significantly decreases endogenous Idh protein; Table 1 gives the Idh spot fold changes as -1.12 and -1.19 in the two mutants.",
+    "snippet": "Thus, decreased levels of Wwox were found to significantly decrease endogenous levels of CG6439/Idh protein in this model",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21075834_OKeefe2011_PMC_r2.xml",
+    "anchor": "Results, functional interaction of Idh with Wwox, last sentence",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Drosophila melanogaster (Wwox1 and Wwox f04545 mutants, da-GAL4 over-expression and RNAi, whole animal) and 15 human cancer cell lines",
+     "genotype": "Wwox loss or gain with candidate-gene RNAi or Sod alleles",
+     "comparator": "w1118 and da-GAL4 controls",
+     "endpoint": "viability, lifespan, 2D-DIGE, qPCR, FACS ROS"
+    }
+   },
+   {
+    "proposition": "Figure 3B as drawn: the Idh-RNAi-alone bar ranges from about 7 percent (replicate 2) to about 27 percent (replicate 4); asterisks mark Wwox RNAi in replicates 3 and 4 and Wwox over-expression in replicates 3, 4 and 5; in replicates 4 and 5 over-expression reaches the 50 percent expected value. Figure 3C plots 60 points, four confluence time points for each of 15 lines, so points are not independent samples; the stated P is 2.5E-12.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3B bars per replicate 1 to 5 (blue Idh RNAi alone, red plus Wwox RNAi, green plus Wwox) with asterisks over replicates 3, 4 (red) and 3, 4, 5 (green); Figure 3C scatter of IDH1 against WWOX mRNA.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID21075834_r2/ddq49503.jpg",
+    "anchor": "Figure 3 panels B and C, native JPEG",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Drosophila melanogaster (Wwox1 and Wwox f04545 mutants, da-GAL4 over-expression and RNAi, whole animal) and 15 human cancer cell lines",
+     "genotype": "Wwox loss or gain with candidate-gene RNAi or Sod alleles",
+     "comparator": "w1118 and da-GAL4 controls",
+     "endpoint": "viability, lifespan, 2D-DIGE, qPCR, FACS ROS"
+    },
+    "qualifies": "entries[2]",
+    "qualifies_needle": "A trend was observed across all five experimental replicates"
+   },
+   {
+    "proposition": "Figure 5B (percent of cells above a fluorescence threshold over 180 minutes) shows no error bars and no replicate count: mutants and controls start together at 30 minutes and separate later (control about 57, mutants about 38 to 42 at 180 minutes; over-expressors about 52 to 58 against control about 52 at the end, separated early).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5B two line charts, percentage population above threshold vs time 0-200 min, single trace per genotype, no error bars; Figure 5A FACS histograms with a P2 gate.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID21075834_r2/ddq49505.jpg",
+    "anchor": "Figure 5 panels A and B, native JPEG",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Drosophila melanogaster (Wwox1 and Wwox f04545 mutants, da-GAL4 over-expression and RNAi, whole animal) and 15 human cancer cell lines",
+     "genotype": "Wwox loss or gain with candidate-gene RNAi or Sod alleles",
+     "comparator": "w1118 and da-GAL4 controls",
+     "endpoint": "viability, lifespan, 2D-DIGE, qPCR, FACS ROS"
+    }
+   }
+  ],
+  "note": "2026-10-19 gold wave, scientist-b: the 2026-08 Europe PMC XML is absent; earlier locators re-point unchanged by file name to the re-acquired XML and figures (Figure 1 to a render of the PDF page). New: Table S2 replicate-level P values for the Idh interaction, other single-replicate hits, Idh protein change size, Figure 3B and 3C structure, Figure 5B without error bars. Supplementary Figures S1 (western), S3, S4 text read as captions only."
+ }
 }
