@@ -5,7 +5,7 @@
 
 ## Verdict
 
-**CONFIRMED. No BLOCK-class defect. Eleven FINDINGs, none touching a claim Status, Type, Summary or baseline sentence.** CONFIRMED means no further defect found in the sampled evidence bundle, not "true". The sample is stated per item below; unsampled records were checked only mechanically.
+**CONFIRMED. No BLOCK-class defect. Nine FINDINGs (M1-M9), none touching a claim Status, Type, Summary or baseline sentence.** CONFIRMED means no further defect found in the sampled evidence bundle, not "true". The sample is stated per item below; unsampled records were checked only mechanically.
 
 Gates re-run by this reviewer on `main` at `f8bb7e9b` (HEAD equals it):
 
