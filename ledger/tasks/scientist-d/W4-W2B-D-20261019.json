@@ -70,6 +70,12 @@
    "default": "opened every image, matched by content, declared the mapping in the manifest artefact notes",
    "why_safe": "panel readings cite the legend by content, not by file name",
    "would_have_differed": "none"
+  },
+  {
+   "condition": "scientist-c committed a first read of 38978529 after my peer-directory check, colliding with my manifest path and event family",
+   "default": "withdrew my manifest and staged receipt for that PMID; kept my reading as a second-reading section in the note, which agrees with scientist-c's manifest",
+   "why_safe": "one manifest per PMID; a duplicate receipt would add a second complete read of one paper to the ledger with no new coverage",
+   "would_have_differed": "a re-check of peer branches immediately before commit would have avoided the duplicate"
   }
  ],
  "STOP_LOG": [],
@@ -81,7 +87,9 @@
   "commit_candidates": [
    "CC-20261019-SCIENTISTD-W4B-01"
   ],
-  "staged_receipts": "disease-models/wwox/research/receipt_staging/scientist-d/ (8 new JSON files FTR-20261019-<PMID>-01, not appended)",
-  "micro_upgrade": "scientist_operating_practice_v1.md Phase 5: figure-numbering trap and 2026-deposit routes"
+  "staged_receipts": "disease-models/wwox/research/receipt_staging/scientist-d/ (7 new JSON files FTR-20261019-<PMID>-01, not appended)",
+  "micro_upgrade": "scientist_operating_practice_v1.md Phase 5: figure-numbering trap and 2026-deposit routes",
+  "staged_by_me": 7,
+  "duplicate_withdrawn": "38978529 (scientist-c's stands)"
  }
 }

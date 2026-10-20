@@ -4,7 +4,7 @@
 **Reading mode:** `PRIMARY_EVIDENCE_READ`. **Not medical advice.** Class-level statements only; no individual-level record. Nothing here touches the four scientific current files, the registries, the ledger or `disease_model.md`.
 **Rule for this note.** Seven of the eight papers are disease-class SUBSTITUTES: every proposition about them is labelled NOT WWOX EVIDENCE in its manifest and none of them mentions WWOX (0 occurrences counted in each text surface). The eighth, Agarwala 2023, was listed as a substitute with "no record" but contains three WWOX case rows; it is reclassified WWOX-direct for those rows only and its aetiology comparisons stay cohort-level.
 
-Peer staging was checked before every paper (`receipt_staging/scientist-a`, `-b`, `-c`): none of the eight PMIDs was staged by a peer.
+Peer staging was checked before every paper (`receipt_staging/scientist-a`, `-b`, `-c`). **Duplicate found at landing:** scientist-c committed a first read of Paper 1 (38978529, receipt `FTR-20261020-38978529-01`, manifest on main) after my check. My own manifest and receipt for that paper were therefore withdrawn from this branch before landing (path collision, one manifest per PMID); the Paper 1 section below is kept as an independent second reading, and it agrees with scientist-c's manifest on every point (CSF 5-MTHF not measured, nonsense/R128W label mismatch, normal routine screen in case 1, treatment response without counts, folic acid caution, figures without annotation). Seven receipts are mine to stage; the eighth stays scientist-c's.
 
 ---
 
@@ -175,7 +175,7 @@ The auditor confirmed the three WWOX rows, the 0.4 versus 0.2 P-value mismatch, 
 
 | PMID | Paper | Depth | Receipt JSON (staged) | Manifest | Outputs |
 |---|---|---|---|---|---|
-| 38978529 | Girgis 2024, cerebral folate transport deficiency, 2 cases | complete_fulltext_read | `receipt_staging/scientist-d/FTR-20261019-38978529-01.json` | PASS | this note, `CC-20261019-SCIENTISTD-W4B-01` |
+| 38978529 | Girgis 2024, cerebral folate transport deficiency, 2 cases | complete_fulltext_read (duplicate of scientist-c's, withdrawn) | none from me; scientist-c's `FTR-20261020-38978529-01` stands | PASS (scientist-c's) | section in this note only |
 | 34258135 | Papadopoulou 2021, FOLR1 siblings, ketogenic diet | complete_fulltext_read | `FTR-20261019-34258135-01.json` | PASS | same |
 | 42563882 | Lai 2025, biotinidase deficiency letter | complete_fulltext_read | `FTR-20261019-42563882-01.json` | PASS | same |
 | 42660645 | Ribeiro-Constante 2026, BCKDK deficiency review | complete_fulltext_read | `FTR-20261019-42660645-01.json` | PASS | same |
@@ -184,7 +184,7 @@ The auditor confirmed the three WWOX rows, the 0.4 versus 0.2 P-value mismatch, 
 | 36619921 | Nóbrega 2022, cerebrotendinous xanthomatosis review | complete_fulltext_read | `FTR-20261019-36619921-01.json` | PASS | same |
 | 38074073 | Agarwala 2023, early-infantile DEE aetiologies (3 WWOX rows) | complete_fulltext_read | `FTR-20261019-38074073-01.json` | PASS | same |
 
-Eight of eight read in full; none parked.
+Eight of eight read in full (seven staged by me, one duplicate withdrawn); none parked.
 
 ## The plain statement
 

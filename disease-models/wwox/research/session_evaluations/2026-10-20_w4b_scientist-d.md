@@ -4,9 +4,9 @@
 
 ## Scope and executable verdict
 
-- **Task:** `W4-W2B-D-20261019`, branch `task/W4-W2B-D-20261019`; 8 papers read in full, none parked.
-- **Receipts (staged, not in the ledger):** `FTR-20261019-<PMID>-01` for the eight PMIDs in `wave4_scientist-d.md`; all `complete_fulltext_read`; each validated in isolation.
-- **Manifests:** `deepdive_manifest.py` strict with `--artifact-workspace` on the shared checkout returned PASS, zero gaps, for all eight.
+- **Task:** `W4-W2B-D-20261019`, branch `task/W4-W2B-D-20261019`; 8 papers read in full, none parked; one (38978529) duplicates scientist-c's later-landed read and its manifest and receipt were withdrawn, so seven are staged by me.
+- **Receipts (staged, not in the ledger):** `FTR-20261019-<PMID>-01` for seven of the eight PMIDs in `wave4_scientist-d.md`; all `complete_fulltext_read`; each validated in isolation.
+- **Manifests:** `deepdive_manifest.py` strict with `--artifact-workspace` on the shared checkout returned PASS, zero gaps, for all eight before the duplicate was withdrawn.
 - **`session_self_eval.py --workspace . --disease wwox`:** `VERDICT: PASS`, `unread_premises: 0/0`; the `[DECLARED GAP]` lines belong to other PMIDs.
 - **`fulltext_receipts.py verify`:** OK, 624 chained receipts. **`legend_lint.py`:** no BLOCK; pre-existing `UNLINKED_SUPPORT` warnings only.
 - **Blind audit:** 30 triples, separate agent: 24 SUPPORTED, 2 SUPPORTED with note, 4 OVERSHOOT (3 minor); all narrowed before commit.
@@ -42,12 +42,13 @@ Durable ids: eight manifests, eight staged receipts, note, candidate `CC-2026101
 | B | Selection file labelled Agarwala 2023 a substitute with no record; the XML has eight WWOX mentions and three WWOX case rows | self (counting WWOX in the text surface) | would have |
 | C | Publisher figure numbering or caption-image pairing wrong in three deposits | self (opening every image) | would have |
 | D | My text converter returned zero characters for a JATS with untitled sections | self (noticing the empty output) | no |
+| F | Peer duplicate: scientist-c staged 38978529 after my peer-directory check; found at the landing dry-run as a manifest path collision | machine (task_close dry-run listing plus git ls-tree) | no |
 | E | Four propositions said more than their quote (a "no annotations" and "continuous EEG" figure reading; a review label for a citation; "did not change"; a wider inference from one normal screen) | blind auditor | would have |
 
 ```
 ATTRIBUTION_CENSUS
-incidents: 5
-machine: 1   blind_auditor: 1   peer: 0   self: 3
+incidents: 6
+machine: 2   blind_auditor: 1   peer: 0   self: 3
 severity_high: 2   of which self: 2
 undetected_known: 0
 ```

@@ -7,7 +7,7 @@
 
 ## 0 · Why
 
-Wave 4, group W2, second half: the metabolic axes the repository had no record for (folate, biotin, branched-chain amino acids, carnitine, bone and calcium, bile acids, and the cofactor causes of DEE as a class). Eight papers were read in full; seven are disease-class substitutes and contain no WWOX occurrence, so they carry no WWOX claim. One, Agarwala 2023, was listed as a substitute with no record but contains three WWOX case rows; for those rows it is a class-level WWOX-direct primary.
+Wave 4, group W2, second half: the metabolic axes the repository had no record for (folate, biotin, branched-chain amino acids, carnitine, bone and calcium, bile acids, and the cofactor causes of DEE as a class). Eight papers were read in full (one duplicates scientist-c); seven are disease-class substitutes and contain no WWOX occurrence, so they carry no WWOX claim. One, Agarwala 2023, was listed as a substitute with no record but contains three WWOX case rows; for those rows it is a class-level WWOX-direct primary.
 
 ## 1 · Ops
 
@@ -17,7 +17,7 @@ None. The seven substitute readings carry no registry claim ops by construction.
 
 | Placeholder | PMID | Short title | Depth | Registry state found |
 |---|---|---|---|---|
-| W01 | 38978529 | Girgis 2024, cerebral folate transport deficiency, 2 cases (substitute) | complete | no record |
+| W01 | 38978529 | Girgis 2024, cerebral folate transport deficiency, 2 cases (substitute) | complete (already read and staged by scientist-c; my duplicate manifest and receipt withdrawn) | scientist-c's record only |
 | W02 | 34258135 | Papadopoulou 2021, FOLR1 siblings, ketogenic diet (substitute) | complete | no record |
 | W03 | 42563882 | Lai 2025, biotinidase deficiency letter (substitute) | complete | no record |
 | W04 | 42660645 | Ribeiro-Constante 2026, BCKDK deficiency review (substitute; bronze OA, all-rights-reserved notice) | complete | no record |
@@ -26,7 +26,7 @@ None. The seven substitute readings carry no registry claim ops by construction.
 | W07 | 36619921 | Nóbrega 2022, cerebrotendinous xanthomatosis review (substitute) | complete | no record |
 | W08 | 38074073 | Agarwala 2023, early-infantile DEE aetiologies; WWOX rows 7, 8 and 50 | complete | no record before this reading; WWOX-direct for three case rows |
 
-Receipt event ids staged under `receipt_staging/scientist-d/`: `FTR-20261019-<PMID>-01` for all eight (none was staged by a peer; checked before each paper). Manifests: `deepdive_manifests/PMID<PMID>.json`, all eight PASS under `--artifact-workspace` on the shared checkout.
+Receipt event ids staged under `receipt_staging/scientist-d/`: `FTR-20261019-<PMID>-01` for seven (38978529 was staged by scientist-c after my peer check and my duplicate was withdrawn). Manifests: `deepdive_manifests/PMID<PMID>.json`, all seven PASS under `--artifact-workspace` on the shared checkout.
 
 ## 3 · Claim-level observations (all MINOR; none narrows or reverses a baseline claim)
 
