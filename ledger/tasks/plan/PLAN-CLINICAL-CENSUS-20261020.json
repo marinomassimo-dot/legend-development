@@ -145,9 +145,16 @@
     ]
   },
   "ACCEPTANCE": {
-    "release_battery_on_a_fresh_clone_of_the_landed_sha": "recorded in the landing commit's session report",
-    "public_release_gate": "BLOCKS: 0",
-    "legend_lint": "VERDICT: WARN (pre-existing warnings only; no BLOCK)",
-    "fulltext_receipts_verify": "recorded in the landing commit's session report"
+    "release_battery_on_a_fresh_clone": "REGRESSION VERDICT: PASS WITH SKIPS (151 targets, 12 skipped) — fresh clone of 3fe5055c (the branch tip after merging main), files/ hard-linked",
+    "battery_findings_repaired_before_landing": [
+      "scripts/test_release_surface.py: the three new shebang entry points were not executable — chmod +x, commit cef09008",
+      "framework/scripts/test_repurposing_bridge.py (another tool's suite): four assertions about kg_thin_slice broke on the P2 rewrite — transport patchability, the ValueError base, the INCOMPLETE/NO_MATCH_FOUND vocabulary with the raw_response key, and the resolve_gene name; all restored in cef09008 without editing that suite",
+      "scripts/public_release_gate.py after landing: the census suite's synthetic contact fixture used an @example.org literal, which the gate blocks in public material — replaced with the gate's own @example.invalid placeholder, commit a0271d7b"
+    ],
+    "public_release_gate": "VERDICT: PASS, BLOCKS: 0 (on main after a0271d7b)",
+    "legend_lint": "VERDICT: WARN — pre-existing warnings only, no BLOCK",
+    "fulltext_receipts_verify": "OK: 680 chained receipts, tail anchored in the state manifest",
+    "landed": "main a65d4749 (merge of task/plan-clinical-census-20261020), plus a0271d7b",
+    "root_clean": true
   }
 }
