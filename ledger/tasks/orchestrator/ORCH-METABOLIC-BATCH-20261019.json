@@ -50,17 +50,19 @@
     },
     {
      "step": "Fresh-clone battery on exact SHA, public_release_gate, receipts verify, safe_push to development",
-     "status": "IN_PROGRESS",
-     "evidence": "gate PASS; battery on a9db41b had 3 reds: xlsx verbosity (fixed 76c32bce), paper_packet signals (green in root), receipt provenance ceiling (45 UNKNOWN_EVENT, cleared by recording wave-2 receipts ef8c9427); rerun after batch 003; push pending"
+     "status": "DONE",
+     "evidence": "see OBJ_WAVE4: pushed 750eda1f"
     }
    ]
   },
   "OBJ_STANDING_NEXT_WAVES": {
-   "order": 3,
+   "order": 6,
    "steps": [
     {
-     "step": "While qualifying studies remain: select and dispatch the next wave (same cap of four Scientists), integrate, commit, push; breadth over repetition; say so and stop padding when a wave would have fewer than 12 qualifying studies",
-     "status": "TODO"
+     "step": "Further waves on the metabolic themes: pool exhausted (wave 4 selector found <12 WWOX-direct selectable studies; remaining are paywalled). Revival: operator-supplied PDFs or new papers",
+     "status": "BLOCKED",
+     "blocker": "selectable lawful pool exhausted; blocked targets need operator PDFs (see final report wishlist)",
+     "unblock": "operator supplies PDFs or a new WWOX/WOREE paper appears"
     }
    ]
   },
@@ -109,13 +111,27 @@
     },
     {
      "step": "BATCH_20261019_006: wave-4 candidates + Mirror repairs M1-M8 + three depth lines (test_batch_queue red)",
-     "status": "IN_PROGRESS",
-     "evidence": "integrator agent running, WM_v7.25"
+     "status": "DONE",
+     "evidence": "415c47e6; harness provenance fix 255237ac; Mirror 006+harness: no BLOCK (bef0c9d4)"
     },
     {
      "step": "Final: rerun release battery on exact SHA after all batches; Mirror review of 003/004; safe_push to development; PDF wishlist for operator",
-     "status": "TODO",
-     "evidence": "battery on f8bb7e9b red on 3 suites (verbosity x2, exec bits x4 fixed 5dfd0dae; batch_queue depth lines -> batch 006); rerun on final SHA then safe_push; registry scale (1.47 MB, +25% trigger 1.51 MB) reported to operator"
+     "status": "DONE",
+     "evidence": "battery on 255237ac: one red suite (verbosity of a new test), fixed 750eda1f and re-verified; safe_push PUBLISHED sha=750eda1f gate=PASS verified=ls-remote"
+    }
+   ]
+  },
+  "OBJ_FOLLOWUPS": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "BATCH_20261019_007: Mirror follow-ups A1-A5 and harness-doc B2-B4",
+     "status": "IN_PROGRESS",
+     "evidence": "integrator agent running, WM_v7.26"
+    },
+    {
+     "step": "Orchestrator self-evaluation, capability scout, takeaways; final push of batch 007; hand operator the PDF wishlist and the registry-scale decision",
+     "status": "TODO"
     }
    ]
   }
