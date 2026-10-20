@@ -61,8 +61,8 @@
     {
      "step": "Further waves on the metabolic themes: pool exhausted (wave 4 selector found <12 WWOX-direct selectable studies; remaining are paywalled). Revival: operator-supplied PDFs or new papers",
      "status": "BLOCKED",
-     "blocker": "selectable lawful pool exhausted; blocked targets need operator PDFs (see final report wishlist)",
-     "unblock": "operator supplies PDFs or a new WWOX/WOREE paper appears"
+     "blocker": "selectable lawful WWOX-direct pool exhausted; the decisive remaining targets have no lawful free route",
+     "unblock": "operator supplies PDFs (wishlist in the closing report) or a new WWOX/WOREE/SCAR12/EIEE28 paper appears"
     }
    ]
   },
@@ -144,6 +144,15 @@
    "who_consulted": "operator instruction: at least three, four for important tasks",
    "reversibility": "high",
    "how_to_revert": "retire the scientist-d task contract"
+  },
+  {
+   "what": "N9 registry scale: option A (trigger re-founded on measured cost, all three surfaces watched) plus the discovery-ledger change-log move to a history file; B/C/D rejected, E deferred to the new trigger",
+   "why": "no cost measured in the metabolic batch is attributable to file size (context 0, record lookup 0.83s, record-scoped edit 0.17s, depth screen 0.62s, LINT 7.85s); the append conflict the batch really paid is size-independent and sharding by record range does not cure it; a split costs ~20 tools, ~26 tests, ~370 linking documents once, for nothing measured",
+   "alternatives_rejected": "B shard by record range, C shard by year, D event store \u2014 days to weeks of work against no measured harm; E cold/hot split deferred, not refused",
+   "who_consulted": "Harness Engineering (plan) measurement packet governance/design_records/registry_scale_decision_packet_20261020.md; Mirror A7 asked only that no third byte deferral be renewed by an agent \u2014 this does not renew it, it replaces the trigger",
+   "authority": "operator delegated this decision to the Orchestrator on 2026-10-20, explicitly",
+   "reversibility": "high",
+   "how_to_revert": "restore the byte trigger in growth_anchors.py and move the change-log block back from discovery_ledger_history.md (both are single commits)"
   }
  ],
  "DEFAULTS_TAKEN": [
@@ -161,7 +170,6 @@
   }
  ],
  "REFERRED_TO_OPERATOR": [
-  "papers registry sharding/event-store decision (1.54 MB, +25 percent re-raise point passed; a third deferral refused)",
   "PDF wishlist (closing report)",
   "review SUPERSEDED_ARTIFACTS harness decision (ceiling 15 to 9 by reclassification)"
  ]
