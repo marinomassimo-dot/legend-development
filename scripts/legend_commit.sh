@@ -10,7 +10,8 @@
 #
 #   usage: scripts/legend_commit.sh "<commit message>" <path> [<path> ...]
 #   exit:  0 committed / nothing to commit · 2 usage · 3 lock timeout · 4 directory pathspec
-#          5 generated surfaces stale or unverifiable on the candidate commit (see below)
+#          5 generated surfaces unverifiable (or stale under a refused override) on the candidate commit
+#          6 committed on main, but regenerating the stale surfaces afterwards failed
 #
 # Concurrent actors share one checkout, so every commit takes an exclusive lock:
 # `git commit` races on .git/index.lock. The commit is path-scoped, so an actor can
@@ -65,10 +66,18 @@ if [ -f "$FRESHNESS" ]; then
   # and in the metabolic batch every Scientist commit needed a stated reason for it. The
   # surfaces are regenerated on main after the landing (task_close.py). An UNVERIFIABLE
   # surface (exit 2) still refuses everywhere.
+  # On main the commit goes through and the stale surfaces are regenerated and committed
+  # alone right after it (candidate_tree_freshness.py --regenerate); exit 6 if that fails.
   BRANCH="$(git -C "$ROOT" branch --show-current)"
-  if [ "$CODE" -eq 1 ] && [ "$BRANCH" != "main" ] && [ -z "${LEGEND_STALE_SURFACES_BECAUSE:-}" ]; then
-    echo "note: generated surfaces are stale on this task-branch commit; task_close.py regenerates them on main after landing." >&2
-    LEGEND_STALE_SURFACES_BECAUSE="task branch ${BRANCH:-(detached)}; regenerated on main after landing"
+  REGENERATE_AFTER=0
+  if [ "$CODE" -eq 1 ] && [ -z "${LEGEND_STALE_SURFACES_BECAUSE:-}" ]; then
+    if [ "$BRANCH" = "main" ]; then
+      REGENERATE_AFTER=1
+      LEGEND_STALE_SURFACES_BECAUSE="regenerated on main by the next commit"
+    else
+      echo "note: generated surfaces are stale on this task-branch commit; task_close.py regenerates them on main after landing." >&2
+      LEGEND_STALE_SURFACES_BECAUSE="task branch ${BRANCH:-(detached)}; regenerated on main after landing"
+    fi
   fi
   if [ "$CODE" -ne 0 ]; then
     printf '%s\n' "$REPORT" >&2
@@ -92,3 +101,10 @@ if git diff --cached --quiet -- "$@"; then
 fi
 git commit -q -m "$MSG" -- "$@"
 git --no-pager log -1 --oneline
+if [ "${REGENERATE_AFTER:-0}" -eq 1 ]; then
+  exec 9>&-   # release the commit lock: the regeneration commit takes it again
+  if ! python3 "$FRESHNESS" --repo "$ROOT" --regenerate >&2; then
+    echo "committed, but the stale surfaces were not regenerated; retry: python3 $FRESHNESS --repo $ROOT --regenerate" >&2
+    exit 6
+  fi
+fi

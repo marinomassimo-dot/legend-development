@@ -394,8 +394,9 @@ Nothing was lost, and that is luck rather than design. The binding rules:
    the **exact merge result** (`framework/scripts/candidate_tree_freshness.py`, only the checks
    whose inputs the landing changes). A STALE shared surface is regenerated **on `main`**,
    never on a task branch: `task_close.py` lands, regenerates and commits the surfaces alone,
-   and `scripts/legend_commit.sh` on a task branch records the deferral instead of refusing;
-   on `main` it still refuses a STALE commit. An unverifiable surface refuses everywhere; the
+   `scripts/legend_commit.sh` on a task branch records the deferral instead of refusing, and
+   on `main` commits and then regenerates and commits the stale surfaces alone (exit 6 if
+   that fails; a sealed surface such as the DisMech sidecar is reported, never regenerated). An unverifiable surface refuses everywhere; the
    override is a stated reason (`--stale-surfaces-because` / `LEGEND_STALE_SURFACES_BECAUSE`).
    From a main checkout, `candidate_tree_freshness.py --regenerate` is the one command.
    Why: H0, 2026-09-24
