@@ -1,0 +1,291 @@
+{
+ "schema_version": 2,
+ "pmid": "41510857",
+ "doi": "10.4103/neurol-india.Neurol-India-D-24-00886",
+ "receipt": "FTR-20261019-41510857-01",
+ "landing": [
+  "FTR-20261019-41510857-01",
+  "wave4_scientist-b",
+  "FT-115"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "No PMCID; OpenAlex hybrid OA; the DOI resolves to the Ovid article page, saved as HTML with the figure and table images from the Ovid image API."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: read directly under the Scientist brief."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no baseline claim is narrowed, reversed or removed (see the analysis note)."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "counts_measured": "PubMed esearch 2026-10-20: Kilic B[au] 396 (ambiguous); Kilic B[au] AND WWOX 1; Aydin K[au] 519 (ambiguous); Aydin K[au] AND WWOX 1.",
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Single-centre paediatric epilepsy clinic cohort; WWOX is one of about 45 genes; weight the counts as observations and the genotype-treatment sentences as the authors summary.",
+  "note": "No competing interests declared."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX AND drug-resistant epilepsy",
+    "route": "PubMed esearch count 2026-10-20",
+    "count": 9
+   },
+   {
+    "query": "WWOX AND CACNA1H",
+    "route": "PubMed esearch count 2026-10-20",
+    "count": 1
+   },
+   {
+    "query": "WWOX AND T-type",
+    "route": "PubMed esearch count 2026-10-20",
+    "count": 0
+   }
+  ],
+  "note": "Counts as returned by the API on the date."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 20,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference entries counted on the saved article page (20 shown; the page offers a link to the full list).",
+  "resolved": [],
+  "queued": [],
+  "note": "No reference is WWOX-direct."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 41510857 (no receipt, no manifest); registry comparison deferred to M4b",
+  "hits": 0,
+  "finding": "No receipt before this one; the queue entry FT-115 names this paper."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-20",
+  "route": "pubmed_identity_check.py (MATCH); no retraction notice on the saved page",
+  "result": "No retraction, correction or expression of concern found.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 20,
+   "references_screened": 18,
+   "references_with_doi": 18,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41510857_Kilic2026_ovid.html",
+   "sha256": "8ac4943ec2bef5febbfaeb75ef68ee437aaad423a2c86e6023193f72ab4cf711",
+   "kind": "article_text",
+   "note": "Ovid article page for DOI 10.4103/neurol-india.Neurol-India-D-24-00886 (Neurol India 74:29-33, open access hybrid), 281,489 bytes of HTML; abstract, introduction, methods, results, discussion, conclusion and the first 20 references in the page text; Figure 1 and Table 1 are images.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "8ac4943ec2bef5febbfaeb75ef68ee437aaad423a2c86e6023193f72ab4cf711",
+    "resolved_url": "https://doi.org/10.4103/neurol-india.Neurol-India-D-24-00886",
+    "http_method": "GET",
+    "tier": "publisher_html_ovid",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41510857_r2/figure1.png",
+   "sha256": "9ab537c5872fc50375d390676069d7607549136fe9027d2d189d2f0e10a983d4",
+   "kind": "figure",
+   "note": "Figure 1 as served by the Ovid image API at width 710 (thumbnail; no larger rendition obtained), opened as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "9ab537c5872fc50375d390676069d7607549136fe9027d2d189d2f0e10a983d4",
+    "resolved_url": "https://www.ovid.com/image-api/imgsrv/article/i/thumb/wkmrid/JOURNAL%252Fneuin%252F04.03%252F02223311-202601000-00006%252Ffigure1%252Fv%252F2026-01-12T132617Z%252Fr%252Fimage-tiff/width/710.png",
+    "http_method": "GET",
+    "tier": "publisher_image_api",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41510857_r2/table1.png",
+   "sha256": "4920b1c5b52102ea3635e34cd3ac2f41c608de5e8330e1ba49f9eac703b391f6",
+   "kind": "figure",
+   "note": "Table 1 (variants of uncertain significance) as served at width 710, opened as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "4920b1c5b52102ea3635e34cd3ac2f41c608de5e8330e1ba49f9eac703b391f6",
+    "resolved_url": "https://www.ovid.com/image-api/imgsrv/article/i/thumb/wkmrid/JOURNAL%252Fneuin%252F04.03%252F02223311-202601000-00006%252Ftable1%252Fv%252F2026-01-12T132617Z%252Fr%252Fimage-tiff/width/710.png",
+    "http_method": "GET",
+    "tier": "publisher_image_api",
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Publisher HTML saved locally; the article is open access; not in PMC.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "SOURCE_FIRST: locators taken before the registry record FT-115 was opened. Figure and table are 710 px thumbnails; the numeric readings of bars are estimates.",
+  "entries": [
+   {
+    "proposition": "WWOX is named with 4 patients carrying significant pathogenic variants among 261 diagnosed, in a flat list beside CACNA1H (6) and other genes; the list gives counts only, with no patient-level genotype, phenotype or co-occurrence.",
+    "snippet": "significant pathogenic variants were detected in MECP2 (n = 6), ADGRV1 (n = 6), CACNA1H (n = 6), KCNQ2 (n = 5), RELN (n = 5), TREX1 (n = 4), WWOX (n = 4), CACNA1 (n = 3)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41510857_Kilic2026_ovid.html",
+    "anchor": "Results, second paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "retrospective single-centre cohort, 520 children with drug-resistant epilepsy, gene panel or exome",
+     "genotype": "pathogenic or likely pathogenic variants by gene, counts only",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "The cohort reports 181 different variants in 261 patients (82 novel, 99 known) but lists no pathogenic variant (no HGVS name, zygosity, inheritance or phenotype) for any gene; the only variant table (Table 1) is of variants of uncertain significance.",
+    "snippet": "There were 181 different variants from 261 patients, including 82 novel and 99 known variants.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41510857_Kilic2026_ovid.html",
+    "anchor": "Results, last paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "retrospective single-centre cohort, 520 children with drug-resistant epilepsy, gene panel or exome",
+     "genotype": "pathogenic or likely pathogenic variants by gene, counts only",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "Patients whose genotype-phenotype correlation was judged not consistent with epilepsy were excluded, and variants of uncertain significance were excluded, so the WWOX count is conditional on the authors judgement.",
+    "snippet": "mutations identified in these patients were excluded because they were determined to be unrelated to epilepsy.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41510857_Kilic2026_ovid.html",
+    "anchor": "Methods, inclusion and exclusion criteria",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "retrospective single-centre cohort, 520 children with drug-resistant epilepsy, gene panel or exome",
+     "genotype": "pathogenic or likely pathogenic variants by gene, counts only",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "The text names a gene CACNA1 (n = 3), which is not a gene symbol; Figure 1 labels the corresponding bar CACNA1A.",
+    "snippet": "CACNA1 (n = 3), PRUNE1 (n = 3)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41510857_Kilic2026_ovid.html",
+    "anchor": "Results, second paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "retrospective single-centre cohort, 520 children with drug-resistant epilepsy, gene panel or exome",
+     "genotype": "pathogenic or likely pathogenic variants by gene, counts only",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "Figure 1 (counts by gene and test type) does not reproduce the text counts: the WWOX bar ends near 1.3 on the 0-7 axis against n = 4 in the text, SCN1A near 6.1 against 20, CDKL5 near 3.9 and STXBP1 near 3.05 although both are 9 in the text; two x-axes (0-16 and 0-7) are drawn and the legend does not say which bar uses which. The figure therefore cannot confirm any single-gene count including WWOX.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 native 710x951 (Ovid thumbnail): horizontal bars per gene, orange WES and blue panel, top axis 0-16 and bottom axis 0-7; WWOX orange bar to about 1.3; SCN1A to about 6.1; ADGRV1 blue bar to about 14 on the top axis.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41510857_r2/figure1.png",
+    "anchor": "Figure 1, whole figure, native PNG",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "retrospective single-centre cohort, 520 children with drug-resistant epilepsy, gene panel or exome",
+     "genotype": "pathogenic or likely pathogenic variants by gene, counts only",
+     "comparator": "none"
+    },
+    "qualifies": "entries[0]",
+    "qualifies_needle": "WWOX (n = 4)"
+   },
+   {
+    "proposition": "Table 1 lists the variants of uncertain significance (35 genes, all labelled heterozygous or homozygous with a disease and inheritance); WWOX and CACNA1H are not in it. It includes metabolic-class genes (SLC19A3 thiamine transport, MAT1A methionine adenosyltransferase, ADSL).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Table 1 native 710x614 (Ovid thumbnail): columns Gene, Heterogeneity, Disease, Inheritance; rows include ADSL, MAT1A, SLC19A3, KCNQ3, CACNB4; no WWOX, no CACNA1H.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41510857_r2/table1.png",
+    "anchor": "Table 1 image, native PNG",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "retrospective single-centre cohort, 520 children with drug-resistant epilepsy, gene panel or exome",
+     "genotype": "pathogenic or likely pathogenic variants by gene, counts only",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "The word T-type, and any statement that CACNA1H encodes a T-type calcium channel, does not occur anywhere in the article; the paper says nothing about calcium-channel biology.",
+    "snippet": "Significant variants were found in 261 of 529 genetic tests (49.3%) with 181 different genetic variants.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41510857_Kilic2026_ovid.html",
+    "anchor": "Results, third paragraph (absence claim over the whole article text)",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "retrospective single-centre cohort, 520 children with drug-resistant epilepsy, gene panel or exome",
+     "genotype": "pathogenic or likely pathogenic variants by gene, counts only",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "The Discussion says ketogenic diet therapy benefited patients with SLC2A1, CDKL5, KCNQ3 and SLC12A5 variants; KCNQ3 appears only among the uncertain-significance variants (Table 1) and SLC12A5 appears in no list, and no WWOX patient is said to have had any specific treatment.",
+    "snippet": "Ketogenic diet therapy was found to be beneficial for seizure control in patients with SLC2A1, CDKL5, KCNQ3, and SLC12A5 variants.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41510857_Kilic2026_ovid.html",
+    "anchor": "Discussion, treatment paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "retrospective single-centre cohort, 520 children with drug-resistant epilepsy, gene panel or exome",
+     "genotype": "pathogenic or likely pathogenic variants by gene, counts only",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "The Results report the diagnostic yield of whole-exome sequencing as not significantly different from the epilepsy panel (P = 0.085), while the Conclusion states that WES significantly increased the diagnostic rate.",
+    "snippet": "The diagnostic yield of WES was not significantly different from genetic epilepsy panel ( P =0.085).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41510857_Kilic2026_ovid.html",
+    "anchor": "Results, first paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "retrospective single-centre cohort, 520 children with drug-resistant epilepsy, gene panel or exome",
+     "genotype": "pathogenic or likely pathogenic variants by gene, counts only",
+     "comparator": "none"
+    }
+   },
+   {
+    "proposition": "The Conclusion states that WES significantly increased the rate of specific diagnoses.",
+    "snippet": "This study demonstrated that WES significantly increased the rate of specific genetic diagnoses in cases of refractory epilepsy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41510857_Kilic2026_ovid.html",
+    "anchor": "Conclusion",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "retrospective single-centre cohort, 520 children with drug-resistant epilepsy, gene panel or exome",
+     "genotype": "pathogenic or likely pathogenic variants by gene, counts only",
+     "comparator": "none"
+    }
+   }
+  ]
+ }
+}

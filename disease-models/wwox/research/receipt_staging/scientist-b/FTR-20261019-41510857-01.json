@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-19T20:00:00Z",
+ "event_at": "2026-10-19T20:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_present"
+ },
+ "event_id": "FTR-20261019-41510857-01",
+ "evidence_basis": [
+  "Whole article text from the saved HTML read; Figure 1 and Table 1 opened as images at 710 px width.",
+  "FIND: WWOX is one gene in a flat list (n = 4 of 261 diagnosed), with CACNA1H listed separately (n = 6); the paper gives no patient-level data, never mentions T-type channels, and its Figure 1 does not reproduce the text counts."
+ ],
+ "evidence_depth": "complete_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41510857.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID41510857.md",
+  "disease-models/wwox/research/wave4_scientist-b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "8ac4943ec2bef5febbfaeb75ef68ee437aaad423a2c86e6023193f72ab4cf711",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID41510857_Kilic2026_ovid.html",
+ "study_id": {
+  "doi": "10.4103/neurol-india.Neurol-India-D-24-00886",
+  "pmid": "41510857"
+ },
+ "workflow": "scientist-b wave 4 group W1, task branch task/W4-W1-B-20261019; SOURCE_FIRST; publisher HTML via DOI redirect with no User-Agent; images from the publisher image API; locators verified by deepdive_manifest.py. Prepared as a JSON file for the integrator and not appended."
+}

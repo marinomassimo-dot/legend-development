@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-19T20:00:00Z",
+ "event_at": "2026-10-19T20:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "captions_only",
+  "methods": "captions_only",
+  "results": "captions_only",
+  "figures": "captions_only",
+  "tables": "captions_only",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "captions_only"
+ },
+ "event_id": "FTR-20261019-42738851-01",
+ "evidence_basis": [
+  "Abstract, one results subsection and one discussion paragraph read; the remainder not read.",
+  "FIND: FRA16D is a minor, line-specific fragile site in iPSCs (18 breaks, one of three lines) and WWOX is not recurrently rearranged in iPSC culture; no iPSC-derived neural or patient line was studied."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42738851.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID42738851.md",
+  "disease-models/wwox/research/wave4_scientist-b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "9ca2806dbe185b87df973446002db9922fab27b147bebfdf285c9223d3955dd6",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID42738851_Pozhitnova2026_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.3390/cells15171557",
+  "pmid": "42738851"
+ },
+ "workflow": "scientist-b wave 4 group W1; SOURCE_FIRST; PMC efetch XML re-acquired with pmc_bucket_fetch.py, no User-Agent; locators verified by deepdive_manifest.py. Prepared as a JSON file for the integrator and not appended."
+}

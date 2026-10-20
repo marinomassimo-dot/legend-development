@@ -25,19 +25,52 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import fulltext_receipts as fr  # noqa: E402
 
 
-def check(receipt: dict, root: Path) -> list[str]:
-    return list(fr.validate_new_receipt(receipt)) + list(fr.validate_receipt(receipt, root))
+def pubmed_doi(pmid: str, get=None) -> str | None:
+    """The DOI PubMed stores for a PMID (esummary), or None when it cannot be read."""
+    import subprocess
+    url = f"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id={pmid}&retmode=json"
+    try:
+        body = get(url) if get else subprocess.run(["curl", "-sS", "-A", "", "-m", "40", url],
+                                                    capture_output=True, text=True).stdout
+        ids = json.loads(body)["result"][str(pmid)]["articleids"]
+        return next((x["value"] for x in ids if x["idtype"] == "doi"), None)
+    except Exception:
+        return None
+
+
+def doi_errors(receipt: dict, get=None) -> list[str]:
+    """study_id.doi must equal the DOI PubMed carries. A DOI recalled from memory is the failure this
+    catches: on 2026-10-20 a staged receipt carried a DOI whose last digit was wrong and every other
+    validator passed it."""
+    sid = receipt.get("study_id") or {}
+    pmid, doi = sid.get("pmid"), sid.get("doi")
+    if not pmid or not doi:
+        return []
+    stored = pubmed_doi(str(pmid), get)
+    if stored is None:
+        return [f"doi check: PubMed DOI for {pmid} could not be read, so {doi} is unverified"]
+    return [] if stored.lower() == str(doi).lower() else [
+        f"doi check: receipt DOI {doi} differs from the DOI PubMed stores for {pmid} ({stored})"]
+
+
+def check(receipt: dict, root: Path, check_doi: bool = False, get=None) -> list[str]:
+    errs = list(fr.validate_new_receipt(receipt)) + list(fr.validate_receipt(receipt, root))
+    if check_doi:
+        errs += doi_errors(receipt, get)
+    return errs
 
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--artifact-root", required=True, type=Path)
+    ap.add_argument("--check-doi", action="store_true",
+                    help="also require study_id.doi to equal the DOI PubMed stores for the PMID (network)")
     ap.add_argument("receipts", nargs="+", type=Path)
     a = ap.parse_args()
     bad = 0
     for p in a.receipts:
         try:
-            errs = check(json.loads(p.read_text()), a.artifact_root)
+            errs = check(json.loads(p.read_text()), a.artifact_root, a.check_doi)
         except (OSError, ValueError) as exc:
             errs = [f"unreadable: {exc}"]
         print(json.dumps({"receipt": str(p), "verdict": "OK" if not errs else "REFUSED", "errors": errs}))

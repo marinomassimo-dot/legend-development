@@ -1,0 +1,431 @@
+{
+ "schema_version": 2,
+ "pmid": "36979157",
+ "doi": "10.3390/biology12030465",
+ "receipt": "FTR-20261019-36979157-01",
+ "landing": [
+  "FTR-20261019-36979157-01",
+  "wave4_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: PMC efetch XML and the bucket returned the body and figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: read directly under the Scientist brief."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no baseline claim is narrowed, reversed or removed and no MAJOR change is declared."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 3,
+  "publications_on_gene": 3,
+  "counts_measured": "PubMed esearch 2026-10-20: Kaluzinska-Kolat Z[au] AND WWOX 3; Bednarek AK[au] AND WWOX 38 (senior author).",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "weighting": "A WWOX cancer-biology group (Lodz); the work is over-expression in tumour lines, so weight cell-line observations and not disease relevance.",
+  "note": "No competing interests assessed here."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "Bednarek AK[au] AND WWOX",
+    "route": "PubMed esearch count 2026-10-20",
+    "count": 38
+   }
+  ],
+  "note": "Count as returned by the API on the date."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 117,
+  "gene_direct_refs_in_source": [
+   "33255508",
+   "17360458",
+   "25012504",
+   "26499798",
+   "35328751",
+   "25331887",
+   "30755385",
+   "34831305",
+   "26675548",
+   "30285739",
+   "29724996",
+   "15982416",
+   "18452537",
+   "32389029",
+   "30619736",
+   "33916893",
+   "25416187",
+   "24932569",
+   "30158849",
+   "34747138",
+   "34204789",
+   "34359949",
+   "36572673",
+   "25245215",
+   "36537114",
+   "34140629",
+   "15070730",
+   "24330518",
+   "18487609",
+   "10786676",
+   "25681467",
+   "17909041",
+   "30154439",
+   "15073846",
+   "30622118",
+   "25476151",
+   "16360296",
+   "30211123",
+   "34015398",
+   "20510001",
+   "20556583",
+   "33718178",
+   "22555346",
+   "25051421",
+   "22898080",
+   "33455117",
+   "33946771",
+   "25538133",
+   "23197378",
+   "23277037",
+   "26345274",
+   "25432984",
+   "34204827",
+   "19950548",
+   "33691672",
+   "23525362",
+   "27834355",
+   "32096174",
+   "29845204",
+   "32101017",
+   "23824713",
+   "32606933",
+   "31230746"
+  ],
+  "enumeration_method": "<ref> elements with WWOX, Wwox, WOX1, WOREE or FRA16D in the citation text and a PMID; 0 more carry no PMID.",
+  "resolved": [
+   "33255508",
+   "17360458",
+   "25012504",
+   "26499798",
+   "35328751",
+   "25331887",
+   "30755385",
+   "34831305",
+   "26675548",
+   "30285739",
+   "29724996",
+   "15982416",
+   "18452537",
+   "32389029",
+   "30619736",
+   "33916893",
+   "25416187",
+   "24932569",
+   "30158849",
+   "34747138",
+   "34204789",
+   "34359949",
+   "36572673",
+   "25245215",
+   "36537114",
+   "34140629",
+   "15070730",
+   "24330518",
+   "18487609"
+  ],
+  "queued": [
+   "10786676",
+   "25681467",
+   "17909041",
+   "30154439",
+   "15073846",
+   "30622118",
+   "25476151",
+   "16360296",
+   "30211123",
+   "34015398",
+   "20510001",
+   "20556583",
+   "33718178",
+   "22555346",
+   "25051421",
+   "22898080",
+   "33455117",
+   "33946771",
+   "25538133",
+   "23197378",
+   "23277037",
+   "26345274",
+   "25432984",
+   "34204827",
+   "19950548",
+   "33691672",
+   "23525362",
+   "27834355",
+   "32096174",
+   "29845204",
+   "32101017",
+   "23824713",
+   "32606933",
+   "31230746"
+  ],
+  "note": "Resolved = already has a manifest or receipt; queued = listed for the Orchestrator as reading debt (this actor does not edit the queue)."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 36979157; registry comparison after the first pass",
+  "hits": 0,
+  "finding": "No receipt before this one."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-20",
+  "route": "PMC efetch XML front matter; dependency_integrity.py screen",
+  "result": "No retraction, correction or expression of concern found.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [
+    {
+     "citing_relation": "Citation only: reference 116, one of four cited (114 to 117) for lncRNAs and miRNAs regulating WWOX expression in the closing paragraph; no data, method or argument of this paper depends on it, and the retraction concerns a paper-mill report on a HOTAIRM1, miR-498 and WWOX axis in lung adenocarcinoma.",
+     "doi": "10.2147/cmar.s244573",
+     "nature": "Retraction",
+     "reason_verbatim": "Author Unresponsive;Duplication of/in Image;Investigation by Journal/Publisher;Investigation by Third Party;Original Data and/or Images not Provided and/or not Available;Paper Mill;Unreliable Results and/or Conclusions;",
+     "retraction_date": "1/22/2024 0:00",
+     "retraction_pmid": "38282791",
+     "verdict": "FLAGGED_RETRACTION"
+    }
+   ],
+   "noted": [],
+   "paper_verdict": "FLAGGED_RETRACTION",
+   "reference_source": "cache",
+   "references_declared": 117,
+   "references_screened": 105,
+   "references_with_doi": 105,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 12
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID36979157_Kaluzinska2023_PMC_r2.xml",
+   "sha256": "4864305c68fee89bde8af8118b5bf7bbec9ffb91d41ebdab4e49473cf4444937",
+   "kind": "article_text",
+   "note": "PMC efetch JATS for PMC10045224 (Biology 2023, CC BY), 209,512 bytes.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "4864305c68fee89bde8af8118b5bf7bbec9ffb91d41ebdab4e49473cf4444937",
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC10045224&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36979157_r2/biology-12-00465-g001.jpg",
+   "sha256": "03cebdd37b547584851843d571322a499d5036adb7345126215a391bbffb5038",
+   "kind": "figure",
+   "note": "Figure 1 from the PMC open-data bucket, opened as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "03cebdd37b547584851843d571322a499d5036adb7345126215a391bbffb5038",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10045224.1/biology-12-00465-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36979157_r2/biology-12-00465-g002.jpg",
+   "sha256": "b6c75af81aca04129f1c79c0fed1714053a266deb830431970264b8960dca780",
+   "kind": "figure",
+   "note": "Figure 2 from the PMC open-data bucket, opened as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "b6c75af81aca04129f1c79c0fed1714053a266deb830431970264b8960dca780",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10045224.1/biology-12-00465-g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36979157_r2/biology-12-00465-g003.jpg",
+   "sha256": "6f39e0e3d12058b0be7372acec7ee1a3b66aa24087c42951fe7048024dfc559e",
+   "kind": "figure",
+   "note": "Figure 3 from the PMC open-data bucket (not opened).",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "6f39e0e3d12058b0be7372acec7ee1a3b66aa24087c42951fe7048024dfc559e",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10045224.1/biology-12-00465-g003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36979157_r2/biology-12-00465-g004.jpg",
+   "sha256": "1c5342db92331b32da2e4f4020676efa3c3425a1c17aefedd47551324a4b9011",
+   "kind": "figure",
+   "note": "Figure 4 from the PMC open-data bucket (not opened).",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "1c5342db92331b32da2e4f4020676efa3c3425a1c17aefedd47551324a4b9011",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10045224.1/biology-12-00465-g004.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36979157_r2/biology-12-00465-g005.jpg",
+   "sha256": "5cd8831df06598984eb6ca94edbc077ac82c0b544e1170712962054d1b4cb6df",
+   "kind": "figure",
+   "note": "Figure 5 from the PMC open-data bucket (not opened).",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "5cd8831df06598984eb6ca94edbc077ac82c0b544e1170712962054d1b4cb6df",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10045224.1/biology-12-00465-g005.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36979157_r2/biology-12-00465-g006.jpg",
+   "sha256": "158ec5496b54c8dcf7889ea765b52638a3b4ba322ec8334903e1166462ca7eb6",
+   "kind": "figure",
+   "note": "Figure 6 from the PMC open-data bucket (not opened).",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "158ec5496b54c8dcf7889ea765b52638a3b4ba322ec8334903e1166462ca7eb6",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10045224.1/biology-12-00465-g006.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch JATS for PMC10045224 retrieved 2026-10-20, 209,512 bytes; the whole body is indexed locally for exact-text checks.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "SOURCE_FIRST. Read: abstract, introduction, methods 2.1 and 2.4 (others skimmed by heading), results 3.1 and 3.2 in full, discussion; Results 3.3 to 3.5 (adhesion, colony, invasion) were not read in detail and Figures 3 to 6 were not opened, so results are partial and figures captions_only beyond Figures 1 and 2; depth partial.",
+  "entries": [
+   {
+    "proposition": "Stable over-expression is large and cell-line dependent: mean relative WWOX protein rises 2.6-fold (T98G) to 14.7-fold (DBTRG-05MG), 12-fold (U251MG) and 10-fold (U87MG) over control, from one blot per line with three lanes each (Figure 1E).",
+    "snippet": "The mean relative protein level of “WWOX” was significantly higher (20.93 ± 0.8359 for T98G; 11.72 ± 0.8161 for DBTRG-05MG; 0.86 ± 0.3365 for U251MG; and 12.50 ± 1.6540 for U87MG)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36979157_Kaluzinska2023_PMC_r2.xml",
+    "anchor": "Results 3.1",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "four human glioblastoma cell lines (T98G, DBTRG-05MG, U251MG, U87MG), lentiviral stable WWOX over-expression against empty-vector control",
+     "genotype": "WWOX gain, not loss",
+     "comparator": "vector control cells",
+     "endpoint": "TUNEL, BrdU, PrestoBlue fluorescence, adhesion, colony and invasion assays"
+    }
+   },
+   {
+    "proposition": "Over-expression increased TUNEL apoptosis in T98G, DBTRG-05MG and U87MG; Figure 2A bars give about 11.7k against 8.7k, 8.0k against 5.6k and 7.8k against 4.3k RFU, and no change in U251MG (about 6.9k against 6.5k).",
+    "snippet": "Overexpression of WWOX significantly intensified the programmed cell death of T98G (p = 0.042), DBTRG-05MG (p = 0.009), and U87MG (p = 0.021) cells (Figure 2A).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36979157_Kaluzinska2023_PMC_r2.xml",
+    "anchor": "Results 3.2",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "four human glioblastoma cell lines (T98G, DBTRG-05MG, U251MG, U87MG), lentiviral stable WWOX over-expression against empty-vector control",
+     "genotype": "WWOX gain, not loss",
+     "comparator": "vector control cells",
+     "endpoint": "TUNEL, BrdU, PrestoBlue fluorescence, adhesion, colony and invasion assays"
+    }
+   },
+   {
+    "proposition": "The text cites Figure 1B for the proliferation result; the proliferation bars are Figure 2B (BrdU: T98G about 31k against 93k, U87MG about 27k against 47k, DBTRG-05MG up about 87k against 31k, U251MG ns).",
+    "snippet": "In terms of proliferation, the “WWOX” variant significantly reduced this biological process in T98G (p = 0.0041) and U87MG (p = 0.0264) cells, whereas it increased in DBTRG-05MG (p < 0.0001) (Figure 1B).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36979157_Kaluzinska2023_PMC_r2.xml",
+    "anchor": "Results 3.2",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "four human glioblastoma cell lines (T98G, DBTRG-05MG, U251MG, U87MG), lentiviral stable WWOX over-expression against empty-vector control",
+     "genotype": "WWOX gain, not loss",
+     "comparator": "vector control cells",
+     "endpoint": "TUNEL, BrdU, PrestoBlue fluorescence, adhesion, colony and invasion assays"
+    }
+   },
+   {
+    "proposition": "The section title and text call the PrestoBlue readout mitochondrial redox potential and cell viability; PrestoBlue is a resazurin-reduction fluorescence assay of overall cellular reducing capacity, read here as fluorescence at eight times over 80 minutes, not a mitochondrial-specific measurement.",
+    "snippet": "10 µL of PrestoBlue reagent (Thermo Fisher Scientific, Naarden, The Netherlands) was added to the wells, and fluorescence (excitation at 550 nm and emission at 590 nm) was measured eight times at 10 min intervals",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36979157_Kaluzinska2023_PMC_r2.xml",
+    "anchor": "Methods 2.4",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "four human glioblastoma cell lines (T98G, DBTRG-05MG, U251MG, U87MG), lentiviral stable WWOX over-expression against empty-vector control",
+     "genotype": "WWOX gain, not loss",
+     "comparator": "vector control cells",
+     "endpoint": "TUNEL, BrdU, PrestoBlue fluorescence, adhesion, colony and invasion assays"
+    }
+   },
+   {
+    "proposition": "In every line over-expression lowered the PrestoBlue signal (Figure 2C at 80 min: T98G about 130k against 240k, DBTRG-05MG about 225k against 390k, U251MG about 190k against 285k, U87MG about 120k against 265k RFU); DBTRG-05MG falls although its BrdU proliferation rises about 2.8-fold and its apoptosis rises, so the reducing-capacity readout and proliferation dissociate in that line.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2 panels A (TUNEL), B (BrdU) and C (PrestoBlue time course 0-80 min with p-value table): WWOX series lower than control in all four lines in C; DBTRG-05MG BrdU bar WWOX about 87k vs control about 31k in B.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36979157_r2/biology-12-00465-g002.jpg",
+    "anchor": "Figure 2 panels A to C, native JPEG",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "four human glioblastoma cell lines (T98G, DBTRG-05MG, U251MG, U87MG), lentiviral stable WWOX over-expression against empty-vector control",
+     "genotype": "WWOX gain, not loss",
+     "comparator": "vector control cells",
+     "endpoint": "TUNEL, BrdU, PrestoBlue fluorescence, adhesion, colony and invasion assays"
+    }
+   },
+   {
+    "proposition": "The authors state their limits: in-vitro findings often fail to extrapolate to the organism, the DBTRG-05MG discrepancy is unexplained, and in-vivo validation is needed.",
+    "snippet": "the in vitro findings often fail to extrapolate the cellular conditions in an organism, so future in vivo validation is recommended.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36979157_Kaluzinska2023_PMC_r2.xml",
+    "anchor": "Discussion, limitations paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "four human glioblastoma cell lines (T98G, DBTRG-05MG, U251MG, U87MG), lentiviral stable WWOX over-expression against empty-vector control",
+     "genotype": "WWOX gain, not loss",
+     "comparator": "vector control cells",
+     "endpoint": "TUNEL, BrdU, PrestoBlue fluorescence, adhesion, colony and invasion assays"
+    }
+   }
+  ]
+ }
+}
