@@ -1,0 +1,290 @@
+{
+  "studies": [
+    {
+      "derivedSection": {
+        "conditionBrowseModule": {
+          "meshes": [
+            {
+              "id": "C537403",
+              "term": "Pitt-Hopkins syndrome"
+            }
+          ]
+        },
+        "miscInfoModule": {
+          "versionHolder": "2026-10-20"
+        }
+      },
+      "hasResults": false,
+      "protocolSection": {
+        "armsInterventionsModule": {
+          "armGroups": [
+            {
+              "description": "Participants ages 12-25 years",
+              "interventionNames": [
+                "Genetic: MZ-1866"
+              ],
+              "label": "Cohort 1 (MZ-1866)",
+              "type": "EXPERIMENTAL"
+            },
+            {
+              "description": "Participants aged 2-11 years",
+              "interventionNames": [
+                "Genetic: MZ-1866"
+              ],
+              "label": "Cohort 2 (MZ-1866)",
+              "type": "EXPERIMENTAL"
+            }
+          ],
+          "interventions": [
+            {
+              "armGroupLabels": [
+                "Cohort 1 (MZ-1866)",
+                "Cohort 2 (MZ-1866)"
+              ],
+              "description": "AAV-9 gene therapy delivered by intracerebroventricular injection",
+              "name": "MZ-1866",
+              "type": "GENETIC"
+            }
+          ]
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Pitt Hopkins Syndrome"
+          ],
+          "keywords": [
+            "MZ-1866",
+            "AAV9 Gene Therapy",
+            "Gene Therapy",
+            "ICV",
+            "Intracerebroventricular",
+            "TCF4",
+            "PTHS"
+          ]
+        },
+        "contactsLocationsModule": {
+          "centralContacts": [
+            {
+              "email": "[REDACTED_CONTACT]",
+              "name": "Emily Radomile",
+              "phone": "[REDACTED_CONTACT]",
+              "role": "CONTACT"
+            }
+          ],
+          "locations": [
+            {
+              "city": "Oakland",
+              "contacts": [
+                {
+                  "email": "[REDACTED_CONTACT]",
+                  "name": "Neil Smith",
+                  "role": "CONTACT"
+                },
+                {
+                  "name": "Alex Fay, M.D., Ph.D.",
+                  "role": "PRINCIPAL_INVESTIGATOR"
+                }
+              ],
+              "country": "United States",
+              "facility": "UCSF Benioff Children's Hospital Oakland",
+              "geoPoint": {
+                "lat": 37.80437,
+                "lon": -122.2708
+              },
+              "state": "California",
+              "status": "RECRUITING",
+              "zip": "94609"
+            },
+            {
+              "city": "Aurora",
+              "contacts": [
+                {
+                  "email": "[REDACTED_CONTACT]",
+                  "name": "Sky Gould",
+                  "role": "CONTACT"
+                },
+                {
+                  "name": "Diana Walleigh, MD",
+                  "role": "PRINCIPAL_INVESTIGATOR"
+                }
+              ],
+              "country": "United States",
+              "facility": "Children's Hospital Colorado",
+              "geoPoint": {
+                "lat": 39.72943,
+                "lon": -104.83192
+              },
+              "state": "Colorado",
+              "status": "RECRUITING",
+              "zip": "80045"
+            },
+            {
+              "city": "Chicago",
+              "contacts": [
+                {
+                  "email": "[REDACTED_CONTACT]",
+                  "name": "Tara Khandelwal",
+                  "role": "CONTACT"
+                },
+                {
+                  "name": "Elizabeth Berry-Kravis, M.D., Ph.D.",
+                  "role": "PRINCIPAL_INVESTIGATOR"
+                }
+              ],
+              "country": "United States",
+              "facility": "Rush University Medical Center",
+              "geoPoint": {
+                "lat": 41.85003,
+                "lon": -87.65005
+              },
+              "state": "Illinois",
+              "status": "RECRUITING",
+              "zip": "60612"
+            },
+            {
+              "city": "Tel Litwinsky",
+              "contacts": [
+                {
+                  "email": "[REDACTED_CONTACT]",
+                  "name": "Ester Frank",
+                  "phone": "[REDACTED_CONTACT]",
+                  "role": "CONTACT"
+                },
+                {
+                  "name": "Gali Heimer, M.D., Ph.D.",
+                  "role": "PRINCIPAL_INVESTIGATOR"
+                }
+              ],
+              "country": "Israel",
+              "facility": "Sheba Medical Center",
+              "geoPoint": {
+                "lat": 32.05096,
+                "lon": 34.84588
+              },
+              "status": "RECRUITING"
+            }
+          ]
+        },
+        "descriptionModule": {
+          "briefSummary": "The goal of this clinical trial is to learn if MZ-1866 is a safe and tolerable treatment for children and adults with Pitt Hopkins Syndrome.\n\nTo evaluate the safety of MZ-1866, the following will be evaluated:\n\n* frequency and severity of adverse events\n* physical exam, laboratory results and electrocardiogram findings\n\nParticipants will:\n\n* receive a single dose of MZ-1866 by intracerebroventricular injection\n* be seen by the study physician and site staff periodically to assess changes to their health status\n* be periodically evaluated using neurodevelopmental tools\n\nCaregivers will:\n\n* be interviewed periodically about the health status and development of the participant\n* keep diaries and complete periodic questionnaires regarding participant symptoms"
+        },
+        "designModule": {
+          "designInfo": {
+            "allocation": "NON_RANDOMIZED",
+            "interventionModel": "SEQUENTIAL",
+            "maskingInfo": {
+              "masking": "NONE"
+            },
+            "primaryPurpose": "TREATMENT"
+          },
+          "enrollmentInfo": {
+            "count": 12,
+            "type": "ESTIMATED"
+          },
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ],
+          "studyType": "INTERVENTIONAL"
+        },
+        "eligibilityModule": {
+          "eligibilityCriteria": "Inclusion Criteria:\n\n* The participant has a TCF4 gene mutation confirmed as \"pathogenic\" or \"likely pathogenic\" by whole exome sequencing, whole genome sequencing, gene panel, single gene testing, or microarray, performed at an accredited laboratory\n* Clinical phenotype consistent with Pitt Hopkins Syndrome, in the opinion of the investigator\n* The participant, or the participant's parent or legal guardian, is willing to provide access to prior medical records for the collection of demographics and diagnostic and treatment history\n\nExclusion Criteria:\n\n* A deletion that includes the TCF4 gene that is over 12 Mbp in size\n* Another genetic mutation or clinical comorbidity not associated with Pitt Hopkins Syndrome that could potentially confound interpretation of the study data\n* A central nervous system structural or vascular abnormality that is a contraindication to the ICV administration procedure, including but not limited to: signs or symptoms of increased intracranial pressure, history of a space-occupying lesion, or presence of a ventricular shunt that would preclude ICV procedures or safety assessments, or increase risk to the participant\n* Not able to receive prophylactic corticosteroids due to a medical contraindication or participant has a history of a condition that could worsen with corticosteroid therapy as assessed and determined by the Investigator\n* Not able to undergo MRI procedures\n* Cannot be anesthetized for the ICV injection",
+          "healthyVolunteers": false,
+          "maximumAge": "25 Years",
+          "minimumAge": "2 Years",
+          "sex": "ALL",
+          "stdAges": [
+            "CHILD",
+            "ADULT"
+          ]
+        },
+        "identificationModule": {
+          "briefTitle": "Phase 1/2 Study of MZ-1866, an AAV-9 Gene Therapy Delivered by Intracerebroventricular Injection to Participants With Pitt Hopkins Syndrome",
+          "nctId": "NCT07135050",
+          "officialTitle": "Phase 1/2 First-in-Human Study to Evaluate the Safety, Tolerability, and Efficacy of MZ-1866, an AAV-9 Gene Therapy Delivered by Intracerebroventricular Injection to Participants With Pitt Hopkins Syndrome",
+          "orgStudyIdInfo": {
+            "id": "MZ1866-CL101"
+          },
+          "organization": {
+            "class": "INDUSTRY",
+            "fullName": "Mahzi Therapeutics"
+          }
+        },
+        "ipdSharingStatementModule": {
+          "ipdSharing": "UNDECIDED"
+        },
+        "outcomesModule": {
+          "primaryOutcomes": [
+            {
+              "description": "Frequency and severity of adverse events of special interest",
+              "measure": "To evaluate the safety and tolerability of MZ-1866 in participants with Pitt Hopkins Syndrome",
+              "timeFrame": "Week 104"
+            }
+          ],
+          "secondaryOutcomes": [
+            {
+              "description": "Frequency and severity of adverse events",
+              "measure": "To evaluate the safety and tolerability of MZ-1866 in participants with Pitt Hopkins Syndrome",
+              "timeFrame": "Week 104"
+            },
+            {
+              "description": "Frequency of clinically significant physical examination findings, vital signs, laboratory tests and electrocardiograms that are considered outside normal range.",
+              "measure": "To further assess the safety and tolerability of MZ-1866 in participants with Pitt Hopkins Syndrome",
+              "timeFrame": "Week 104"
+            }
+          ]
+        },
+        "oversightModule": {
+          "isFdaRegulatedDevice": false,
+          "isFdaRegulatedDrug": true,
+          "oversightHasDmc": true
+        },
+        "sponsorCollaboratorsModule": {
+          "collaborators": [
+            {
+              "class": "OTHER",
+              "name": "California Institute for Regenerative Medicine (CIRM)"
+            }
+          ],
+          "leadSponsor": {
+            "class": "INDUSTRY",
+            "name": "Mahzi Therapeutics"
+          },
+          "responsibleParty": {
+            "type": "SPONSOR"
+          }
+        },
+        "statusModule": {
+          "completionDateStruct": {
+            "date": "2029-07",
+            "type": "ESTIMATED"
+          },
+          "expandedAccessInfo": {
+            "hasExpandedAccess": false
+          },
+          "lastUpdatePostDateStruct": {
+            "date": "2026-07-31",
+            "type": "ACTUAL"
+          },
+          "lastUpdateSubmitDate": "2026-07-30",
+          "overallStatus": "RECRUITING",
+          "primaryCompletionDateStruct": {
+            "date": "2029-03",
+            "type": "ESTIMATED"
+          },
+          "startDateStruct": {
+            "date": "2025-12-19",
+            "type": "ACTUAL"
+          },
+          "statusVerifiedDate": "2026-07",
+          "studyFirstPostDateStruct": {
+            "date": "2025-08-21",
+            "type": "ACTUAL"
+          },
+          "studyFirstSubmitDate": "2025-08-04",
+          "studyFirstSubmitQcDate": "2025-08-13"
+        }
+      }
+    }
+  ],
+  "totalCount": 1
+}

@@ -129,6 +129,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | turn a PubMed Clipboard export into a de-identified dated seed | `framework/scripts/pubmed_clipboard_to_seed.py` |
 | fetch a public PMC binary behind the cloud-viewer proof-of-work page | `framework/scripts/pmc_pow_fetch.py` |
 | read the text layer of a PDF the operator supplied, and count terms in it **only after positive controls prove the extractor read it** — an unverified zero is a reading of the tool, not of the paper | `framework/scripts/pdf_text_extract.py` |
+| census the public ClinicalTrials.gov registry (API v2, key-less, no pre-filter on phase, masking or status) for the WOREE/WWOX synonym set and the relevant sponsor — **a retrieval record, not evidence**: `MATCH`, `NO_MATCH`, `QUERY_ERROR` and `COVERAGE_INCOMPLETE` are four states and an empty answer never means "no study exists" | `framework/scripts/clinical_census.py` |
 
 ## 6 · Screen the model itself
 

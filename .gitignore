@@ -28,6 +28,14 @@ overlay/
 *patient*
 *_clinical_*
 *_overlay_*
+# One narrow exception, named rather than widened: the regression suite of
+# `framework/scripts/clinical_census.py`. The tool's own name is not matched by the pattern
+# above, but `test_clinical_census.py` is, and `framework/scripts/self_test_coverage.py`
+# pairs a tool with `test_<tool>.py` by name — so the suite is either called this or it does
+# not count as the tool's suite. It carries synthetic fixtures only: no record, no private
+# material, nothing clinical. The pattern itself is unchanged and keeps fail-closed for
+# everything else.
+!framework/scripts/test_clinical_census.py
 
 # "Proband" may be used in public, disease-level methodology. Do not ignore it
 # by name: semantic case linkage is enforced by the release gate instead.

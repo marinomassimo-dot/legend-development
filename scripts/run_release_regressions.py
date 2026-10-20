@@ -119,6 +119,11 @@ PRIORITY_TESTS = (
     "framework/scripts/test_figure_legend_pairs.py",
     "framework/scripts/test_docx_to_text.py",
     "framework/scripts/test_pmc_bucket_fetch.py",
+    # The clinical census connector, enrolled in the commit that adds it. Four states, no
+    # pre-filter on phase or masking, and an empty answer that can never read as "no study
+    # exists" — the properties the 2022 spectrum-drug-tracker audit showed a census can lose
+    # in code while still looking like a census (_external_repos/MANIFEST.md).
+    "framework/scripts/test_clinical_census.py",
     "framework/scripts/test_phase_handoff.py",
     # Record-level access to the two large registries, with the Aqeilan adverse cases: identifier
     # ambiguity, identity versus incidental mention, a caveat mid-record, expansion by hop, and
@@ -168,6 +173,12 @@ PRIORITY_TESTS = (
     "test_study_dedup_triage.py",
     ".claude/skills/legend-batch-inferential-sweep/scripts/"
     "test_batch_inferential_sweep.py",
+    # The P2 upgrade of the Monarch/DGIdb thin slice: entity resolution with type and
+    # species, pathways typed apart from gene symbols before the DGIdb request, offset
+    # pagination with an explicit truncation statement, actions and sources preserved, the
+    # error/incompleteness states kept distinct from zero results, and the approved-only
+    # view as a stated choice rather than a silent default.
+    ".claude/skills/legend-hypothesis-forge/scripts/test_kg_thin_slice.py",
     "disease-models/wwox/analysis/scripts/test_derive_dismech_sidecar.py",
     "disease-models/wwox/analysis/scripts/test_dismech_independent_protocol.py",
     "disease-models/wwox/analysis/scripts/test_export_dismech_dryrun.py",

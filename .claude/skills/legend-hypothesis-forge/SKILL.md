@@ -88,9 +88,15 @@ For the offline packet contract and synthetic example, read
 [`references/evidence_bridge.md`](references/evidence_bridge.md).
 
 1. Run `python3 .claude/skills/legend-hypothesis-forge/scripts/kg_thin_slice.py WWOX --json`
-   only when live discovery is needed. Save stdout as a run artifact. Query errors return
-   a nonzero exit code; `INCOMPLETE` is not an exhaustive negative. Pathways remain in
-   the raw packet and never enter the DGIdb gene-symbol request.
+   only when live discovery is needed (add `--raw-dir <dir>` to keep the original responses;
+   their paths are recorded in the packet). Save stdout as a run artifact. The seed resolves
+   to one identifier of one type in one species (`--taxon`, human by default) and the
+   rejected candidates stay in the record. `QUERY_ERROR` and `API_ERROR` exit 1,
+   `INCOMPLETE` exits 3, and neither that status nor `NO_MATCH_FOUND` nor an `UNMATCHED`
+   symbol is an exhaustive negative. Pathways are typed apart from gene symbols, remain in
+   the raw packet, and never enter the DGIdb gene-symbol request. The approval view is a
+   choice — `--drug-approval {all,approved,investigational}`, default `all`; the packet keeps
+   every interaction with its pharmacological actions and its source databases either way.
 2. Qualify assertions against existing records via `registry_records.py`, preserving
    evidence for/against and reading debt. Do not infer causal direction from pathograph
    links, KG predicates, drug scores or the word TARGET. The live packet is discovery

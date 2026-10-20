@@ -1,0 +1,153 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK record, as held by the owning actor",
+  "_domain": "CONTROL PLANE — ledger/ is a declared CONTROL_PLANE_ROOT (P5.1)",
+  "_note": "Assigned to this actor by the Orchestrator in-session on 2026-10-20, with the operator-supplied Drug Repurposing roadmap v1-3 as the plan of record. The roadmap is a plan, not an authority: where it and this repository's rules disagreed, the repository won — see DECISIONS_TAKEN entries 1 and 4.",
+  "TASK_ID": "PLAN-CLINICAL-CENSUS-20261020",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "plan",
+  "ACTOR_ID": "plan",
+  "ORIGIN": "ORCHESTRATOR",
+  "PRIORITY": "high",
+  "OBJECTIVE": "Three harness acts from the roadmap: correct the Spectrum entry in _external_repos/MANIFEST.md; establish whether a ClinicalTrials.gov access already exists and, if not, build the smallest read-only connector and run it for real; strengthen kg_thin_slice.py per P2. No scientific claim, no promotion to DATO, no change to the four scientific current files or disease_model.md, no new gate or registry, zero spend.",
+  "BOUNDARIES": [
+    "disease-models/wwox/research/drug_repurposing/ and framework/scripts/repurposing_bridge.py were being written by a parallel agent: this task touched neither that tool nor any pre-existing file in that directory, and added only its own two new artefacts plus their raw-response directory, as the task statement itself required the census output to be persisted there",
+    "no push; landing on main only, through framework/scripts/task_close.py",
+    "no change to the four scientific current files, disease_model.md, or any registry"
+  ],
+  "CURRENT_STATE": "CLOSED",
+  "assigned_on": "2026-10-20",
+  "NEED_RESULTS": [
+    {
+      "need": "TASK 1 — correct the Spectrum entry, reusing the admitted statuses",
+      "result": "DONE. Row corrected in `_external_repos/MANIFEST.md`: capability was `monogenic-DEE trial drugs and endpoints`, runtime `local CSV`; it is now `historic (2022) autism/listed-syndrome drug-trial snapshot — method reference only; NOT a WWOX/WOREE trial source, and NOT a census of monogenic-DEE drugs or endpoints`, runtime `local CSV; legacy ClinicalTrials.gov v1 study_fields endpoint`. Status left `AUDITED`; no new status invented; the record was not deleted. An audit note beside the Reproduced-routes notes quotes the old wording next to the new and states the five verified limits.",
+      "verification": "The four facts the roadmap supplied were checked against the manifest itself (entry name, pin `200238a6c692`, status `AUDITED`, capability wording) and the audit claims were re-verified directly against the pin: the upstream commit `200238a6c692be37b43b7b9a6069c606be9cb1fd` (date 2022-06-01, public GitHub API) and its `functions.py` / `nct_scraper.py` were read. `search_terms` names no WWOX/WOREE/EIEE28/DEE28; `clean_dataframes` applies `~Phase.str.contains(\"1\")` (removing phase 1 and phase 1–2) after dropping absent/Not-Applicable phases, then `~DesignMasking.str.contains(\"None\")` (removing open-label); the endpoint is the legacy v1 `api/query/study_fields`; the source docstrings misname the registry as the FDA's."
+    },
+    {
+      "need": "TASK 2a — does a ClinicalTrials.gov access already exist in LEGEND or its censused tools?",
+      "result": "NO. Measured, not assumed: `git grep -i clinicaltrials` over the index returns hits in 14 Markdown/JSON records and zero in any `.py`, `.sh` or configuration file; `framework/scripts/README.md` routes no trial-registry tool; `_external_repos/MANIFEST.md` carries exactly one trial-registry route, `spectrum-drug-tracker`, which is a 2022 CSV snapshot on the retired v1 API and is not callable. ToolUniverse is `TRIAL`-verdict only in `governance/candidates/HARNESS-SCOUT-2026-W40.md` and is not installed. So nothing existed to reuse, and the smallest connector was written."
+    },
+    {
+      "need": "TASK 2b — the smallest connector, run for real and persisted",
+      "result": "DONE. `framework/scripts/clinical_census.py` (public API v2, read-only, key-less, standard library only, zero spend) with `framework/scripts/test_clinical_census.py` (21 offline regressions). Live run 2026-10-20, exit 0: WOREE MATCH 1/1, 'WWOX-related epileptic encephalopathy' MATCH 1/1, EIEE28 MATCH 1/1, DEE28 NO_MATCH 0/0, WWOX MATCH 83/83, MZ-9138 NO_MATCH 0/0, sponsor Mahzi Therapeutics MATCH 1/1; 84 distinct identifiers; no QUERY_ERROR and no COVERAGE_INCOMPLETE. Output at `disease-models/wwox/research/drug_repurposing/clinical_census_20261020.json` with the note beside it and the original responses under `clinical_census_20261020_raw/`.",
+      "states": "MATCH, NO_MATCH, QUERY_ERROR and COVERAGE_INCOMPLETE are four distinct states with a regression each; an empty answer is never collapsed into 'no study exists'; the synonym that found a record is kept with the record; deduplication is by identifier; query, date, pagination and the stored-response path are recorded per page."
+    },
+    {
+      "need": "TASK 3 — P2 on kg_thin_slice.py, only what the code lacked",
+      "result": "DONE, six changes, each with a regression in the new `.claude/skills/legend-hypothesis-forge/scripts/test_kg_thin_slice.py` (22 offline tests, enrolled in the release battery and in `scripts/test_skill_packages.py`'s asset set): (1) `resolve_entity` returns identifier, biolink type, taxon and taxon label, with `--taxon` (human default) and the rejected candidates retained — WWOX matches dog and pig genes in Monarch too; (2) associations typed GENE / PATHWAY / UNRESOLVED before the DGIdb request, with per-type counts, so only gene labels are sent; (3) real offset pagination with an explicit truncation statement and a COVERAGE_INCOMPLETE status carrying the numbers (the old code read one page and inferred completeness from `total == len(items)`); (4) pharmacological actions (type + directionality), source databases with versions, and publications preserved in the packet and printed, with absent values shown as UNKNOWN rather than dropped; (5) `QUERY_ERROR`, `API_ERROR` (a GraphQL errors document), `COVERAGE_INCOMPLETE` and an UNMATCHED symbol each distinct from `NO_MATCH`, with exit 1 / 3; (6) structured output carrying schema version, tool version, query, retrieved_at, provenance block and the stored-response paths (`--raw-dir`). The approved-only view became `--drug-approval {all,approved,investigational}`, default `all`, printed with the result; the packet always keeps every interaction.",
+      "live_proof": "Run live 2026-10-20 against both services: seed WWOX → HGNC:12799, biolink:Gene, Homo sapiens; Monarch OK, all 825 associations read over 9 pages; typed 521 GENE / 3 PATHWAY / 0 UNRESOLVED; DGIdb COVERAGE_INCOMPLETE over 10 batches — 328 of 461 requested symbols returned, 133 unmatched; exit 3 as specified. The same run with `--drug-approval approved` printed actions and sources per interaction."
+    }
+  ],
+  "DEFAULTS_TAKEN": [
+    {
+      "condition": "the task forbade touching `disease-models/wwox/research/drug_repurposing/` (a parallel agent's directory) and in the same breath required the census output to be persisted inside it",
+      "default": "wrote only new files of my own there — `clinical_census_20261020.json`, `clinical_census_20261020.md`, `clinical_census_20261020_raw/` — and read, moved or modified nothing else in that directory; commits were path-scoped through `scripts/legend_commit.sh`, which refuses a directory pathspec",
+      "why_safe": "the prohibition protects the peer's files; path-scoped commits cannot sweep an in-flight peer file",
+      "different_if": "a file of mine had collided with one of theirs by name"
+    },
+    {
+      "condition": "the roadmap names 'the relevant sponsor' without naming it",
+      "default": "Mahzi Therapeutics, read 2026-10-20 from the public CIRM award page for `CLIN1-14825` (PI Dr. Yael Weiss), queried through `query.spons` rather than free text",
+      "why_safe": "the sponsor is on the public grant record the roadmap itself cites; a sponsor-field query keeps a sponsor hit distinguishable from an incidental name mention",
+      "different_if": "the roadmap had meant a different sponsor, in which case `--query` overrides the set"
+    },
+    {
+      "condition": "the broad `WWOX` query's original response is ~4.8 MB",
+      "default": "a response above 1 MB is stored gzipped at the recorded path",
+      "why_safe": "the path recorded is the path written; a provenance artefact too heavy to keep is one that gets deleted",
+      "different_if": "the repository had a large-file store for raw API responses"
+    },
+    {
+      "condition": "`kg_thin_slice.py` had no test file and the task allowed either the skill's own test file or a new one",
+      "default": "created `test_kg_thin_slice.py` beside the tool and enrolled it in the release battery, which also required adding it to `scripts/test_skill_packages.py`'s exact asset set",
+      "why_safe": "that set is asserted by equality, so an unlisted new asset turns the suite red",
+      "different_if": "the asset set had been a minimum rather than an equality"
+    }
+  ],
+  "DECISIONS_TAKEN": [
+    {
+      "what": "Spectrum keeps status `AUDITED` rather than becoming `REJECTED`",
+      "alternatives_rejected": "`REJECTED` (this manifest's own suite requires `DO NOT USE` in the licence cell for a rejected route, and MIT forbids nothing — the defect is coverage, not licence); a new status such as `LEGACY_STATIC` (the task and the roadmap both forbid inventing one); deleting the record (forbidden, and the audit is history worth keeping)",
+      "who_consulted": "none",
+      "reversibility": "full",
+      "how_to_revert": "restore the row and drop the audit-note bullet in `_external_repos/MANIFEST.md`"
+    },
+    {
+      "what": "the connector never sends a phase, masking, status or recruiting filter, and `build_url` refuses any `filter.`/`aggFilters`/`postFilter` parameter mechanically",
+      "alternatives_rejected": "a documented convention alone — which is exactly what the 2022 snapshot had",
+      "who_consulted": "none",
+      "reversibility": "full",
+      "how_to_revert": "remove the ALLOWED_PARAMETERS guard"
+    },
+    {
+      "what": "stored original responses have personal contact values (e-mail, phone, fax) replaced by `[REDACTED_CONTACT]`, declared as redacted wherever the path is recorded, with the replacement count per page",
+      "alternatives_rejected": "storing them verbatim (the first run produced 12 BLOCK findings from `scripts/public_release_gate.py` — live e-mail addresses of trial staff in public material, which the gate is right to refuse); storing nothing (loses the provenance path the roadmap requires); hiding them inside the gzip (compression is not redaction)",
+      "who_consulted": "none",
+      "reversibility": "full",
+      "how_to_revert": "drop `redact_personal_contacts` — but the gate then blocks the artefact"
+    },
+    {
+      "what": "one named negation added to `.gitignore` for `framework/scripts/test_clinical_census.py`",
+      "alternatives_rejected": "`git add -f` behind the privacy pattern (invisible in review, and `scripts/legend_commit.sh` offers no such flag); widening or removing the `*_clinical_*` pattern (it is a fail-closed privacy guard and stays exactly as it was); renaming the suite (`framework/scripts/self_test_coverage.py` pairs a tool with `test_<tool>.py` by name, so any other name means the tool counts as having no suite); renaming the tool away from the name the task fixed",
+      "who_consulted": "none",
+      "reversibility": "full",
+      "how_to_revert": "delete the negation line; the suite then becomes untracked again",
+      "note": "the exempted file carries synthetic fixtures only — no record, no private material, nothing clinical"
+    },
+    {
+      "what": "the repository's own record was re-verified against the pin before the manifest was edited, rather than transcribing the roadmap's audit",
+      "alternatives_rejected": "trusting 'ADOTTATO NEL_PIANO' and the roadmap's prose",
+      "who_consulted": "none",
+      "reversibility": "n/a",
+      "how_to_revert": "n/a"
+    },
+    {
+      "what": "`kg_thin_slice.py` CLI stays backward-compatible (`kg_thin_slice.py WWOX` and `--json` unchanged) and the documented invocation in the skill's own SKILL.md was updated to the new states and the approval flag",
+      "alternatives_rejected": "a breaking rename; leaving SKILL.md describing the old `INCOMPLETE` status",
+      "who_consulted": "none",
+      "reversibility": "full",
+      "how_to_revert": "git revert the landing commit"
+    }
+  ],
+  "STOP_LOG": [
+    {
+      "class": "not a stop — recorded block",
+      "what": "no public regulatory confirmation, sponsor-declared authorisation, enrolment or first-dose event for MZ-9138 could be observed from the registry",
+      "cause": "the registry returns none; and the absence of a public document is not evidence against an authorisation, since an IND need not be publicly exposed",
+      "outcome": "the four events stay UNKNOWN in the note, which also records that the CIRM 'Project Objective: Phase 1-2 trial initiated' wording is an award objective beside preclinical and start-up activities, not a completed milestone; no access timing estimated"
+    },
+    {
+      "class": "0 (no stop taken)",
+      "what": "no act reserved to the operator was reached: no push, no gate added, no registry added, no scientific claim, no promotion to DATO, no change to the four scientific current files or `disease_model.md`, zero spend",
+      "time_waited": "0",
+      "outcome": "task carried to its end autonomously under §21c–§21e"
+    }
+  ],
+  "MEASUREMENTS": {
+    "census_states_20261020": {
+      "WOREE": "MATCH 1/1",
+      "WWOX-related epileptic encephalopathy": "MATCH 1/1",
+      "EIEE28": "MATCH 1/1",
+      "DEE28": "NO_MATCH 0/0",
+      "WWOX": "MATCH 83/83",
+      "MZ-9138": "NO_MATCH 0/0",
+      "sponsor:Mahzi Therapeutics": "MATCH 1/1",
+      "distinct_identifiers": 84,
+      "note": "counts are what the registry returned on one date; none of them is pinned in a test, and none of them is a conclusion"
+    },
+    "regressions_added": {
+      "framework/scripts/test_clinical_census.py": 21,
+      ".claude/skills/legend-hypothesis-forge/scripts/test_kg_thin_slice.py": 22
+    },
+    "live_runs": [
+      "clinical_census.py full default query set, 2026-10-20, exit 0",
+      "kg_thin_slice.py WWOX --limit 900 --json, 2026-10-20, exit 3 (COVERAGE_INCOMPLETE on DGIdb symbol coverage, Monarch complete at 825/825)"
+    ]
+  },
+  "ACCEPTANCE": {
+    "release_battery_on_a_fresh_clone_of_the_landed_sha": "recorded in the landing commit's session report",
+    "public_release_gate": "BLOCKS: 0",
+    "legend_lint": "VERDICT: WARN (pre-existing warnings only; no BLOCK)",
+    "fulltext_receipts_verify": "recorded in the landing commit's session report"
+  }
+}
