@@ -29,6 +29,26 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-19"
+ "CURRENT_STATE": "CLAIMED",
+ "assigned_on": "2026-10-19",
+ "TASK_ACK": {
+  "TASK_ID": "W4-W2A-C-20261019",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-c",
+  "DECISION": "ACCEPTED",
+  "acked_at": "2026-10-20T00:00:00Z",
+  "reading_mode": "PRIMARY_EVIDENCE_READ",
+  "duplicate_assignment_check": "Lot is the first eight rows of group W2 in file order excluding 29481666 (unreachable per the coordinator); peers: scientist-d second half of W2, scientist-b W1. Staged receipt dirs checked per paper."
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "W4-W2A-C-20261019",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-c",
+  "claimed_at": "2026-10-20T00:00:00Z",
+  "durable_pointer": "ledger/tasks/scientist-c/W4-W2A-C-20261019.json on branch task/W4-W2A-C-20261019, worktree .claude/worktrees/w4-c",
+  "lot": "25779665, 36587184, 41141138, 37686047, 22842668, 29899766, 36980111, 38978529"
+ },
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
 }
