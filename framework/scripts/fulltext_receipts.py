@@ -935,7 +935,7 @@ def receipt_depth_index(path: Path) -> dict[str, dict[str, Any]]:
 
 def append_receipt(
     path: Path, receipt: dict[str, Any], *, manifest: Optional[Path] = None,
-    artifact_root: Optional[Path] = None,
+    artifact_root: Optional[Path] = None, dry_run: bool = False,
 ) -> dict[str, Any]:
     """Append one event under an exclusive lock and return the persisted record.
 
@@ -973,13 +973,19 @@ def append_receipt(
         strict_errors = _strict_local_source(record, evidence_root)
     else:
         root, strict_errors = None, []
+    foreign = foreign_manifest_error(path, manifest)
+    if foreign:
+        raise ValueError(foreign)
     # `root` matters: without it the corpus content check resolves against the process CWD.
     errors = validate_receipt(record, root) + validate_new_receipt(record) + strict_errors
     if errors:
         raise ValueError("; ".join(errors))
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("a+", encoding="utf-8") as handle:
-        fcntl.flock(handle.fileno(), fcntl.LOCK_EX)
+    if dry_run and not path.is_file():
+        raise ValueError(f"ledger does not exist: {path}")
+    if not dry_run:
+        path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("r" if dry_run else "a+", encoding="utf-8") as handle:
+        fcntl.flock(handle.fileno(), fcntl.LOCK_SH if dry_run else fcntl.LOCK_EX)
         try:
             handle.seek(0)
             existing = _parse_lines(handle.read())
@@ -997,6 +1003,8 @@ def append_receipt(
             sequence_errors = validate_ledger_sequence(existing + [record])
             if sequence_errors:
                 raise ValueError("; ".join(sequence_errors))
+            if dry_run:
+                return record  # every check above ran; nothing below writes
             handle.seek(0, os.SEEK_END)
             original_size = handle.tell()
             handle.write(canonical_line(record) + "\n")
@@ -1418,6 +1426,9 @@ def write_rechained_ledger(
     """
     if fcntl is None:
         raise RuntimeError("POSIX file locking unavailable; refusing unlocked ledger rewrite")
+    foreign = foreign_manifest_error(path, manifest)
+    if foreign:
+        raise ValueError(foreign)
     payload = "".join(canonical_line(event) + "\n" for event in merged)
     with path.open("r+", encoding="utf-8") as handle:
         fcntl.flock(handle.fileno(), fcntl.LOCK_EX)
@@ -1450,6 +1461,31 @@ def write_rechained_ledger(
 
 def default_manifest_path(root: Path) -> Path:
     return root / "framework" / "state" / "state_manifest_current.md"
+
+
+def foreign_manifest_error(ledger: Path, manifest: Optional[Path]) -> Optional[str]:
+    """Refuse to anchor a ledger in a repository state manifest that is not its own.
+
+    N1 of PLAN-HARNESS-FROM-METABOLIC-BATCH-20261020: a trial `record` against a scratch
+    copy of the ledger, run from the shared checkout, defaulted `--manifest` to that
+    checkout's state manifest. The copy agreed with the anchor, so the append passed the
+    check and re-anchored the REAL manifest to the scratch tail (543 against a ledger of
+    542); LINT and every landing were blocked until the operator authorised a restore. A
+    repository state manifest is written only together with that repository's own sink.
+    """
+    if manifest is None:
+        return None
+    resolved = manifest.resolve()
+    if resolved.parts[-3:] != ("framework", "state", "state_manifest_current.md"):
+        return None  # a scratch manifest (tests, trials) is the caller's own business
+    repository = resolved.parents[2]
+    context = _authoritative_context(ledger)
+    if context is not None and context[0].resolve() == repository:
+        return None
+    return (f"refusing to anchor {ledger} in {manifest}: that state manifest belongs to "
+            f"{repository}, whose receipt sink is not this ledger. A trial against a "
+            "scratch ledger anchors in a scratch manifest (`--manifest <copy>`), or runs "
+            "`record --dry-run`, which writes nothing")
 
 
 def require_work_manifest(
@@ -1565,6 +1601,10 @@ def main() -> int:
     status.add_argument("--doi", default="")
     record = subparsers.add_parser("record")
     record.add_argument("--receipt", required=True, help="one receipt JSON file")
+    record.add_argument(
+        "--dry-run", action="store_true",
+        help=("run every check `record` runs (validators, work manifest, chain, anchor, "
+              "sequence) and write nothing - neither the ledger nor the state manifest"))
     rechain_cmd = subparsers.add_parser(
         "rechain",
         help="rebase this ledger's divergent events onto another ledger's history")
@@ -1588,13 +1628,26 @@ def main() -> int:
         if args.ledger
         else default_ledger_path(Path(args.root), args.disease)
     )
-    manifest = Path(args.manifest) if args.manifest else default_manifest_path(Path(args.root))
+    if args.manifest:
+        manifest: Optional[Path] = Path(args.manifest)
+    elif not args.ledger:
+        manifest = default_manifest_path(Path(args.root))
+    else:
+        # The default manifest follows the LEDGER, never the working directory: a canonical
+        # sink in another checkout anchors in that checkout's manifest, and a scratch ledger
+        # has no default manifest at all (N1, see `foreign_manifest_error`).
+        context = _authoritative_context(ledger)
+        manifest = default_manifest_path(context[0]) if context is not None else None
 
     try:
         if args.command == "validate":
             receipts = load_ledger(ledger)
             print(f"OK: {len(receipts)} valid receipt(s)")
             return 0
+        if args.command in ("verify", "anchor") and manifest is None:
+            raise ValueError(
+                f"{ledger} is not a repository receipt sink, so it has no default state "
+                "manifest; pass --manifest <file> explicitly")
         if args.command == "verify":
             receipts = load_ledger(ledger)
             if not manifest.is_file():
@@ -1608,6 +1661,9 @@ def main() -> int:
             return 0
         if args.command == "anchor":
             receipts = load_ledger(ledger)
+            foreign = foreign_manifest_error(ledger, manifest)
+            if foreign:
+                raise ValueError(foreign)
             if not write_state_anchor(manifest, receipts):
                 raise ValueError(
                     f"{manifest} declares no fulltext_ledger_events/fulltext_ledger_head anchor"
@@ -1621,7 +1677,13 @@ def main() -> int:
                 receipt,
                 manifest=manifest,
                 artifact_root=(Path(args.artifact_workspace) if args.artifact_workspace else None),
+                dry_run=args.dry_run,
             )
+            if args.dry_run:
+                print(f"DRY RUN OK: {persisted['event_id']} would be appended to {ledger} "
+                      f"after {persisted.get(CHAIN_FIELD) or 'an empty ledger'}; "
+                      "nothing written")
+                return 0
             print(f"RECORDED: {persisted['event_id']}")
             # H0 (2026-09-24): a receipt landed alone left reading_state.md and
             # coverage_report.md stale until the next batch commit. The ledger is their input;
