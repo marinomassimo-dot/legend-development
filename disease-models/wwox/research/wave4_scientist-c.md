@@ -102,3 +102,30 @@ content. It cannot be cited for the RUNX2 arm of the Wwox-null bone phenotype be
 
 **Effect on the model.** None; the bone axis stays "Wwox-null osteoblast and RUNX2 arm already read; no
 supplementation or bone-metabolism datum in humans". Class MINOR.
+
+---
+
+## 4. PMID 37686047 — Rushing 2023, NCI-60 multi-omics and sensitivity to alkylating agents (WWOX-direct only as a CNV gene-list line; W2 one-carbon/amino-acid axis) — receipt FTR-20261020-37686047-01
+
+**What it MEASURES.** System: 58 NCI-60 human cancer cell lines, public baseline metabolomics,
+transcriptomics, proteomics and SNP-array copy-number intensities against the rank-ordered sensitivity to 51
+alkylating agents; Q1 (most sensitive) versus Q4 (most resistant), about 14-15 lines each. WWOX is not
+perturbed or measured as a function; it is one of 15 genes with more than 5 DIABLO-selected CNV markers.
+
+**Question and answer.** Is the WWOX line more than a gene-list sentence, and is a metabolic readout tied to it?
+No metabolic readout is tied to WWOX. The paper's metabolic result is purine metabolism (P = 0.0054 with
+transcripts, 0.012 with proteins, uncorrected), and its WWOX-metabolism sentence is a literature citation.
+What the supplement adds, and the main text omits: (1) the "decreased" call rests on 22 CNV markers with a
+mean of about -0.17 in Q4 against +0.19 in Q1 (Table S7), a quartile-mean shift; (2) the transcript does not
+follow: five WWOX probes, Q4/Q1 fold change 0.73-0.95, smallest P about 0.074, DIABLO loading -0.34 below the
+0.6 cutoff (Tables S2, S5); (3) in the CREAMMIST data WWOX expression correlates weakly and negatively with IC50
+for five alkylating agents (rho -0.20 to -0.25; Table S3), same direction as the copy number (more WWOX, more
+sensitive). The DIABLO separation of the two quartiles is a supervised fit on about 29 samples and says little
+by itself (INFERENCE).
+
+**What it does not support.** A role of WWOX in cancer metabolism or in alkylating-agent resistance mechanism;
+any one-carbon, folate, or amino-acid statement about WWOX; any neural content.
+
+**Effect on the model.** One-carbon and amino-acid axes stay "no WWOX evidence"; the paper adds a
+weak, unreplicated, tumour-line association of WWOX copy number and expression with alkylator sensitivity.
+Class MINOR.
