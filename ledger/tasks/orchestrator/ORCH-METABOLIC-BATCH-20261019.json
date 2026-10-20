@@ -76,8 +76,8 @@
     },
     {
      "step": "Dispatch wave 2 (up to four Scientists) on that selection; integrate, BATCH_COMMIT, Mirror, battery, push",
-     "status": "IN_PROGRESS",
-     "evidence": "B,C,D wave-2 groups returned and landed; A (H1,H2) still running; receipts staged for B(15),C(15),D(16)"
+     "status": "DONE",
+     "evidence": "wave 2 (H1-H5) read by A,B,C,D; receipts recorded; propagated in batches 003 and 005; pushed 750eda1f"
     }
    ]
   },
@@ -86,13 +86,13 @@
    "steps": [
     {
      "step": "Wave 3 under way: scientist-d WWOX-direct reading debts, scientist-b legacy-reconstruction re-reads, scientist-c HELD-partial re-reads",
-     "status": "IN_PROGRESS",
-     "evidence": "contracts DEBT-WWOX-DIRECT-D, GOLD-LEGACY-WWOX-B, HELD-PARTIAL-WWOX-C 20261019"
+     "status": "DONE",
+     "evidence": "wave 3 (B legacy, C held-partial, D debts) read and recorded; propagated in batches 003/004; pushed 750eda1f"
     },
     {
      "step": "Record wave 2 receipts (B, C, D, then A) after scratch-clone trial; BATCH_20261019_002",
-     "status": "IN_PROGRESS",
-     "evidence": "BATCH_20261019_003 committed 7b8eaee7 (WM_v7.22, Mirror repairs folded in); gate PASS 14a89d02; C and D receipts recorded 1a08d784, ledger 624; BATCH_20261019_004 (C-HELD, D-DEBT) running; A pending"
+     "status": "DONE",
+     "evidence": "wave 3 (B legacy, C held-partial, D debts) read and recorded; propagated in batches 003/004; pushed 750eda1f"
     }
    ]
   },
