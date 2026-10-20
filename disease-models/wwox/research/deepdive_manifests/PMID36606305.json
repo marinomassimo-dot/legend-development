@@ -1,0 +1,474 @@
+{
+ "schema_version": 2,
+ "pmid": "36606305",
+ "doi": "10.1111/acel.13747",
+ "receipt": "FTR-20261019-36606305-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID36606305.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A Berkeley integrative-biology laboratory with a prior line on albumin, TGF-beta and BBB dysfunction (refs to the group's earlier work); primary for this dataset; fellowship and foundation funding; no WWOX work."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "albumin AND astrocyte AND senescence AND TGF-beta",
+    "count": 5,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND albumin AND astrocyte",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts at the stated date."
+ },
+ "multihop": {
+  "references_enumerated": 88,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 36606305 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 36606305: publication types ['Journal Article', 'Research Support, N.I.H., Extramural', \"Research Support, Non-U.S. Gov't\", \"Research Support, U.S. Gov't, Non-P.H.S.\"]; correction/retraction link markers in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 88,
+   "references_screened": 87,
+   "references_with_doi": 87,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID36606305_Preininger2023_PMC.xml",
+   "sha256": "a0376cfb1cae92ab382cc561ec5f145d187331292a5d4ffc4ef5e8d4253f7123",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC9924950: abstract, body, four figure legends, 88 references; supplement s001.docx (Tables S1-S3).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9924950/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36606305/ACEL-22-e13747-g001.jpg",
+   "sha256": "6b0b7f5efa4990a64d35d8ea31401a311fc2fb6ab3ebc373b8012f5596e65dde",
+   "kind": "figure",
+   "note": "Image g001 from the Europe PMC supplementaryFiles container, inspected at native resolution (JATS maps g001 graphical abstract, g002 Figure 1, g004 Figure 2, g003 Figure 3).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9924950/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36606305/ACEL-22-e13747-g002.jpg",
+   "sha256": "d467a21a4d40e3d7fc9947389ee122be947f92a840b7af336368e58831d4a243",
+   "kind": "figure",
+   "note": "Image g002 from the Europe PMC supplementaryFiles container, inspected at native resolution (JATS maps g001 graphical abstract, g002 Figure 1, g004 Figure 2, g003 Figure 3).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9924950/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36606305/ACEL-22-e13747-g003.jpg",
+   "sha256": "fdb2c8f05a632dc8ae7a4cc5acb533007a4e56bcd0dcb17489064ce3e9c3b531",
+   "kind": "figure",
+   "note": "Image g003 from the Europe PMC supplementaryFiles container, inspected at native resolution (JATS maps g001 graphical abstract, g002 Figure 1, g004 Figure 2, g003 Figure 3).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9924950/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36606305/ACEL-22-e13747-g004.jpg",
+   "sha256": "66ce8ec68306234f07089aaff27f9ffa20a1a304760552940c6ec73c45f4f75b",
+   "kind": "figure",
+   "note": "Image g004 from the Europe PMC supplementaryFiles container, inspected at native resolution (JATS maps g001 graphical abstract, g002 Figure 1, g004 Figure 2, g003 Figure 3).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9924950/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36606305/ACEL-22-e13747-s001.docx",
+   "sha256": "bc6f9606850a8d5cd86a3ff36f68aa2e38470bdee612549e08a4a28cbdc2f2e7",
+   "kind": "supplement_binary",
+   "note": "Appendix S1 as a Word file: antibody tables (S1, S2) and RT-qPCR primer table (S3).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9924950/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID36606305_Preininger2023_supplement/s001.txt",
+   "sha256": "afda643f04f6a9f74f622b827717327fc99ddd6d3bde830814102e033f224ecc",
+   "kind": "supplement_text",
+   "note": "DERIVED text of Appendix S1.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_python_zipfile_docx_text",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "afda643f04f6a9f74f622b827717327fc99ddd6d3bde830814102e033f224ecc",
+    "derived_from": "files/figures/PMID36606305/ACEL-22-e13747-s001.docx",
+    "extractor": {
+     "name": "docx2txt.py (python zipfile + regex over word/document.xml)",
+     "version": "python 3.12",
+     "call": "python3 docx2txt.py s001.docx s001.txt"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC9924950/fullTextXML returned HTTP 200 (171422 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "Primary cultures: rat hippocampal astrocytes from P8 pups, immunopanned, serum-free, passage 3; 97 percent GFAP positive.",
+    "snippet": "Primary rat hippocampal astrocytes were isolated from P8 Sprague",
+    "anchor": "Methods, astrocyte isolation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36606305_Preininger2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary rat hippocampal astrocytes (P8, serum-free, passage 3) exposed to 0.2 mM albumin for 7 days; adult male mice with 7-day intracerebroventricular infusion of 0.4 mM bovine albumin",
+     "comparator": "vehicle or aCSF; ALK5 inhibitor SJN2511 (cells) or IPW-5371 (mice); astrocytic TGFbR2 conditional knockdown (fl/fl) versus heterozygous (fl/+)",
+     "endpoint": "SA-beta-gal, p16 by flow cytometry, qPCR of senescence and SASP genes, Lamin B1 intensity, western blots of pSMAD2, p-p38 and p16"
+    }
+   },
+   {
+    "proposition": "Cells were treated with 0.2 mM albumin every 48 hours for 7 days, with the ALK5 inhibitor SJN2511 pre-treatment; the albumin is a commercial preparation at a serum-like concentration.",
+    "snippet": "Cells were treated by adding either 10 nM TGF",
+    "anchor": "Methods, cell culture experiments",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36606305_Preininger2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary rat hippocampal astrocytes (P8, serum-free, passage 3) exposed to 0.2 mM albumin for 7 days; adult male mice with 7-day intracerebroventricular infusion of 0.4 mM bovine albumin",
+     "comparator": "vehicle or aCSF; ALK5 inhibitor SJN2511 (cells) or IPW-5371 (mice); astrocytic TGFbR2 conditional knockdown (fl/fl) versus heterozygous (fl/+)",
+     "endpoint": "SA-beta-gal, p16 by flow cytometry, qPCR of senescence and SASP genes, Lamin B1 intensity, western blots of pSMAD2, p-p38 and p16"
+    }
+   },
+   {
+    "proposition": "Statistics: one-way ANOVA with Dunnett's comparison to the control group only, so albumin versus albumin plus inhibitor is never tested.",
+    "snippet": "a one‐way ANOVA was used followed by Dunnett",
+    "anchor": "Methods, statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36606305_Preininger2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary rat hippocampal astrocytes (P8, serum-free, passage 3) exposed to 0.2 mM albumin for 7 days; adult male mice with 7-day intracerebroventricular infusion of 0.4 mM bovine albumin",
+     "comparator": "vehicle or aCSF; ALK5 inhibitor SJN2511 (cells) or IPW-5371 (mice); astrocytic TGFbR2 conditional knockdown (fl/fl) versus heterozygous (fl/+)",
+     "endpoint": "SA-beta-gal, p16 by flow cytometry, qPCR of senescence and SASP genes, Lamin B1 intensity, western blots of pSMAD2, p-p38 and p16"
+    }
+   },
+   {
+    "proposition": "Claim that every albumin-induced SASP gene was prevented by TGFbR inhibition, with no significant difference between controls and inhibitor-treated cells.",
+    "snippet": "The Albumin‐induced activation of all measured SASP genes was prevented by TGF",
+    "anchor": "Results, SASP genes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36606305_Preininger2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary rat hippocampal astrocytes (P8, serum-free, passage 3) exposed to 0.2 mM albumin for 7 days; adult male mice with 7-day intracerebroventricular infusion of 0.4 mM bovine albumin",
+     "comparator": "vehicle or aCSF; ALK5 inhibitor SJN2511 (cells) or IPW-5371 (mice); astrocytic TGFbR2 conditional knockdown (fl/fl) versus heterozygous (fl/+)",
+     "endpoint": "SA-beta-gal, p16 by flow cytometry, qPCR of senescence and SASP genes, Lamin B1 intensity, western blots of pSMAD2, p-p38 and p16"
+    }
+   },
+   {
+    "proposition": "Cell-level result: SA-beta-gal rose from about 3 percent to about 35 percent and p16 positivity from about 10 to about 30 percent with albumin; both fell to control levels with the inhibitor.",
+    "snippet": "In the control group, only ~3% of the cells were SA‐β‐Gal positive on day 7.",
+    "anchor": "Results, senescence markers",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36606305_Preininger2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary rat hippocampal astrocytes (P8, serum-free, passage 3) exposed to 0.2 mM albumin for 7 days; adult male mice with 7-day intracerebroventricular infusion of 0.4 mM bovine albumin",
+     "comparator": "vehicle or aCSF; ALK5 inhibitor SJN2511 (cells) or IPW-5371 (mice); astrocytic TGFbR2 conditional knockdown (fl/fl) versus heterozygous (fl/+)",
+     "endpoint": "SA-beta-gal, p16 by flow cytometry, qPCR of senescence and SASP genes, Lamin B1 intensity, western blots of pSMAD2, p-p38 and p16"
+    }
+   },
+   {
+    "proposition": "Replicate unit for the cell data is three independent experiments, shown as mean plus SEM.",
+    "snippet": "Bar graphs depict the mean ± SEM of three independent experiments.",
+    "anchor": "Figure 1 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36606305_Preininger2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary rat hippocampal astrocytes (P8, serum-free, passage 3) exposed to 0.2 mM albumin for 7 days; adult male mice with 7-day intracerebroventricular infusion of 0.4 mM bovine albumin",
+     "comparator": "vehicle or aCSF; ALK5 inhibitor SJN2511 (cells) or IPW-5371 (mice); astrocytic TGFbR2 conditional knockdown (fl/fl) versus heterozygous (fl/+)",
+     "endpoint": "SA-beta-gal, p16 by flow cytometry, qPCR of senescence and SASP genes, Lamin B1 intensity, western blots of pSMAD2, p-p38 and p16"
+    }
+   },
+   {
+    "proposition": "In vivo model: ICV infusion of 0.4 mM bovine albumin at 1 microlitre per hour for 7 days into the right lateral ventricle of adult male mice; aCSF as sham.",
+    "snippet": "filled with 200 μl of either 0.4 mM bovine serum albumin",
+    "anchor": "Methods, osmotic pump implants",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36606305_Preininger2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary rat hippocampal astrocytes (P8, serum-free, passage 3) exposed to 0.2 mM albumin for 7 days; adult male mice with 7-day intracerebroventricular infusion of 0.4 mM bovine albumin",
+     "comparator": "vehicle or aCSF; ALK5 inhibitor SJN2511 (cells) or IPW-5371 (mice); astrocytic TGFbR2 conditional knockdown (fl/fl) versus heterozygous (fl/+)",
+     "endpoint": "SA-beta-gal, p16 by flow cytometry, qPCR of senescence and SASP genes, Lamin B1 intensity, western blots of pSMAD2, p-p38 and p16"
+    }
+   },
+   {
+    "proposition": "Lamin B1 loss is the in vivo senescence read-out because commercial p16 antibodies are not suitable for mouse immunohistochemistry; only the ipsilateral dentate region was assayed.",
+    "snippet": "Since commercially available p16INK4A antibodies are not suitable for IHC in mice",
+    "anchor": "Results, in vivo Lamin B1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36606305_Preininger2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary rat hippocampal astrocytes (P8, serum-free, passage 3) exposed to 0.2 mM albumin for 7 days; adult male mice with 7-day intracerebroventricular infusion of 0.4 mM bovine albumin",
+     "comparator": "vehicle or aCSF; ALK5 inhibitor SJN2511 (cells) or IPW-5371 (mice); astrocytic TGFbR2 conditional knockdown (fl/fl) versus heterozygous (fl/+)",
+     "endpoint": "SA-beta-gal, p16 by flow cytometry, qPCR of senescence and SASP genes, Lamin B1 intensity, western blots of pSMAD2, p-p38 and p16"
+    }
+   },
+   {
+    "proposition": "Astrocytic Lamin B1 was lower with albumin infusion, not in GFAP-negative cells, and not with IPW-5371; groups of five mice.",
+    "snippet": "hippocampal astrocytes (GFAP+ cells) had significantly reduced Lamin B1 expression compared to control mice infused with aCSF",
+    "anchor": "Results, in vivo Lamin B1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36606305_Preininger2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary rat hippocampal astrocytes (P8, serum-free, passage 3) exposed to 0.2 mM albumin for 7 days; adult male mice with 7-day intracerebroventricular infusion of 0.4 mM bovine albumin",
+     "comparator": "vehicle or aCSF; ALK5 inhibitor SJN2511 (cells) or IPW-5371 (mice); astrocytic TGFbR2 conditional knockdown (fl/fl) versus heterozygous (fl/+)",
+     "endpoint": "SA-beta-gal, p16 by flow cytometry, qPCR of senescence and SASP genes, Lamin B1 intensity, western blots of pSMAD2, p-p38 and p16"
+    }
+   },
+   {
+    "proposition": "Genetic arm: tamoxifen-induced recombination in about 40 percent of hippocampal astrocytes (cited from earlier work), heterozygous fl/+ mice as controls, hippocampus harvested two months after pump removal; groups of 10, 9 and 8 mice.",
+    "snippet": "Tamoxifen induced efficient recombination in ~40% of hippocampal astrocytes",
+    "anchor": "Results, TGFbR knockdown",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36606305_Preininger2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary rat hippocampal astrocytes (P8, serum-free, passage 3) exposed to 0.2 mM albumin for 7 days; adult male mice with 7-day intracerebroventricular infusion of 0.4 mM bovine albumin",
+     "comparator": "vehicle or aCSF; ALK5 inhibitor SJN2511 (cells) or IPW-5371 (mice); astrocytic TGFbR2 conditional knockdown (fl/fl) versus heterozygous (fl/+)",
+     "endpoint": "SA-beta-gal, p16 by flow cytometry, qPCR of senescence and SASP genes, Lamin B1 intensity, western blots of pSMAD2, p-p38 and p16"
+    }
+   },
+   {
+    "proposition": "Western result: albumin raised pSMAD2, p-p38MAPK and p16 in fl/+ mice and the astrocytic knockdown prevented the rise.",
+    "snippet": "Mice with homozygous‐induced KD of TGFβR2 (fl/fl) in astrocytes were protected against albumin‐induced increases in TGFβ signaling and senescence marker expression",
+    "anchor": "Results, TGFbR knockdown",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36606305_Preininger2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary rat hippocampal astrocytes (P8, serum-free, passage 3) exposed to 0.2 mM albumin for 7 days; adult male mice with 7-day intracerebroventricular infusion of 0.4 mM bovine albumin",
+     "comparator": "vehicle or aCSF; ALK5 inhibitor SJN2511 (cells) or IPW-5371 (mice); astrocytic TGFbR2 conditional knockdown (fl/fl) versus heterozygous (fl/+)",
+     "endpoint": "SA-beta-gal, p16 by flow cytometry, qPCR of senescence and SASP genes, Lamin B1 intensity, western blots of pSMAD2, p-p38 and p16"
+    }
+   },
+   {
+    "proposition": "The correlations of p16 with pSMAD2 ratio and with p-p38 ratio are pooled across all three groups (r 0.54 and 0.60).",
+    "snippet": "Regression analysis revealed there were positive correlations between the pSMAD2:SMAD2 ratio and p16INK4A expression",
+    "anchor": "Results, regression",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36606305_Preininger2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary rat hippocampal astrocytes (P8, serum-free, passage 3) exposed to 0.2 mM albumin for 7 days; adult male mice with 7-day intracerebroventricular infusion of 0.4 mM bovine albumin",
+     "comparator": "vehicle or aCSF; ALK5 inhibitor SJN2511 (cells) or IPW-5371 (mice); astrocytic TGFbR2 conditional knockdown (fl/fl) versus heterozygous (fl/+)",
+     "endpoint": "SA-beta-gal, p16 by flow cytometry, qPCR of senescence and SASP genes, Lamin B1 intensity, western blots of pSMAD2, p-p38 and p16"
+    }
+   },
+   {
+    "proposition": "Discussion conclusion: the results establish a link between TGFbeta hyperactivation and astrocyte senescence and suggest prolonged albumin exposure due to BBB dysfunction can underlie it; the proposed feedback loop is stated as a possibility, tested nowhere.",
+    "snippet": "Together, these results establish a link between TGFβ hyperactivation and astrocyte senescence",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36606305_Preininger2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary rat hippocampal astrocytes (P8, serum-free, passage 3) exposed to 0.2 mM albumin for 7 days; adult male mice with 7-day intracerebroventricular infusion of 0.4 mM bovine albumin",
+     "comparator": "vehicle or aCSF; ALK5 inhibitor SJN2511 (cells) or IPW-5371 (mice); astrocytic TGFbR2 conditional knockdown (fl/fl) versus heterozygous (fl/+)",
+     "endpoint": "SA-beta-gal, p16 by flow cytometry, qPCR of senescence and SASP genes, Lamin B1 intensity, western blots of pSMAD2, p-p38 and p16"
+    }
+   },
+   {
+    "proposition": "Data availability: data on request only.",
+    "snippet": "The data supporting the findings of this study available from the corresponding author upon reasonable request.",
+    "anchor": "Data availability",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36606305_Preininger2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary rat hippocampal astrocytes (P8, serum-free, passage 3) exposed to 0.2 mM albumin for 7 days; adult male mice with 7-day intracerebroventricular infusion of 0.4 mM bovine albumin",
+     "comparator": "vehicle or aCSF; ALK5 inhibitor SJN2511 (cells) or IPW-5371 (mice); astrocytic TGFbR2 conditional knockdown (fl/fl) versus heterozygous (fl/+)",
+     "endpoint": "SA-beta-gal, p16 by flow cytometry, qPCR of senescence and SASP genes, Lamin B1 intensity, western blots of pSMAD2, p-p38 and p16"
+    }
+   },
+   {
+    "proposition": "Figure 1 (image g002): panel a 97 percent GFAP; b Tgfb1 mRNA time course (peak about 2.2-2.7 fold at 4 h, back to baseline by 24 h); c SA-beta-gal about 35 percent with albumin versus about 3 percent, about 5 percent with inhibitor; d flow histograms Alb 34, control 11, Alb plus SJN 16 percent, summary about 30, 10, 11; e and f qPCR bars (p16, p21, BCL family 1.5-3 fold; IL-6 about 3.8 fold with albumin and about 1.8 fold with inhibitor, RANTES about 3.7 fold). Only three arms (vehicle, albumin, albumin plus SJN); no inhibitor-alone arm.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 a-f: flow dot plot and GFAP image; Tgfb1 time course; SA-b-Gal images and bars; p16 histograms and bars; qPCR bars SIPS markers and SASP markers.",
+    "anchor": "Figure 1, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36606305/ACEL-22-e13747-g002.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "primary rat hippocampal astrocytes (P8, serum-free, passage 3) exposed to 0.2 mM albumin for 7 days; adult male mice with 7-day intracerebroventricular infusion of 0.4 mM bovine albumin",
+     "comparator": "vehicle or aCSF; ALK5 inhibitor SJN2511 (cells) or IPW-5371 (mice); astrocytic TGFbR2 conditional knockdown (fl/fl) versus heterozygous (fl/+)",
+     "endpoint": "SA-beta-gal, p16 by flow cytometry, qPCR of senescence and SASP genes, Lamin B1 intensity, western blots of pSMAD2, p-p38 and p16"
+    }
+   },
+   {
+    "proposition": "Figure 1f IL-6 panel: the albumin-plus-inhibitor bar sits at about 1.8 against vehicle 1.0, with an error bar reaching about 2.2; the text says no significant difference from control for every SASP gene. The panel does not show the inhibitor returning IL-6 to baseline, though the omnibus-plus-Dunnett test the Methods describe may still return not significant at n of three.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1f IL-6 bars vehicle about 1.0, Alb about 3.8, Alb plus SJN about 1.8.",
+    "anchor": "Figure 1f, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36606305/ACEL-22-e13747-g002.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "primary rat hippocampal astrocytes (P8, serum-free, passage 3) exposed to 0.2 mM albumin for 7 days; adult male mice with 7-day intracerebroventricular infusion of 0.4 mM bovine albumin",
+     "comparator": "vehicle or aCSF; ALK5 inhibitor SJN2511 (cells) or IPW-5371 (mice); astrocytic TGFbR2 conditional knockdown (fl/fl) versus heterozygous (fl/+)",
+     "endpoint": "SA-beta-gal, p16 by flow cytometry, qPCR of senescence and SASP genes, Lamin B1 intensity, western blots of pSMAD2, p-p38 and p16"
+    },
+    "qualifies": "entries[3]",
+    "qualifies_needle": "prevented by TGF"
+   },
+   {
+    "proposition": "Figure 2 (image g004): panel a design (pump 0-7 d, IPW injections daily, harvest at 15 d); b Lamin B1/GFAP/DAPI images; c GFAP+ Lamin B1 about 4.9 aCSF, about 2.0 albumin, about 4.8 albumin plus IPW with five animals per group plotted; d GFAP- cells about 4.6, 4.1, 5.0, no significant change. No IPW-alone group.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 a timeline, b confocal images, c and d dot plots with five points per group.",
+    "anchor": "Figure 2, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36606305/ACEL-22-e13747-g004.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "primary rat hippocampal astrocytes (P8, serum-free, passage 3) exposed to 0.2 mM albumin for 7 days; adult male mice with 7-day intracerebroventricular infusion of 0.4 mM bovine albumin",
+     "comparator": "vehicle or aCSF; ALK5 inhibitor SJN2511 (cells) or IPW-5371 (mice); astrocytic TGFbR2 conditional knockdown (fl/fl) versus heterozygous (fl/+)",
+     "endpoint": "SA-beta-gal, p16 by flow cytometry, qPCR of senescence and SASP genes, Lamin B1 intensity, western blots of pSMAD2, p-p38 and p16"
+    }
+   },
+   {
+    "proposition": "Figure 3 (image g003): panel a timeline (tamoxifen days 0-5, pump days 20-27, harvest day 87); b pSMAD2 about 2.4 in fl/+ albumin and about 0.2 in fl/fl albumin (below the aCSF control, marked with an asterisk), SMAD2 flat; c p-p38 about 3.8 and p38 about 1.2 (marked) in fl/+ albumin, fl/fl about 1.6; d p16 about 2.3 in fl/+ albumin and about 1.0 in fl/fl albumin, with one albumin fl/+ animal near 0; e and f pooled correlations (n about 27). There is no fl/fl aCSF group, so the knockdown's own effect on baseline is not shown.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3 a timeline, b-d western blots with dot plots, e-f scatterplots coloured by group.",
+    "anchor": "Figure 3, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36606305/ACEL-22-e13747-g003.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "primary rat hippocampal astrocytes (P8, serum-free, passage 3) exposed to 0.2 mM albumin for 7 days; adult male mice with 7-day intracerebroventricular infusion of 0.4 mM bovine albumin",
+     "comparator": "vehicle or aCSF; ALK5 inhibitor SJN2511 (cells) or IPW-5371 (mice); astrocytic TGFbR2 conditional knockdown (fl/fl) versus heterozygous (fl/+)",
+     "endpoint": "SA-beta-gal, p16 by flow cytometry, qPCR of senescence and SASP genes, Lamin B1 intensity, western blots of pSMAD2, p-p38 and p16"
+    }
+   },
+   {
+    "proposition": "Graphical abstract (image g001): cartoon of a healthy barrier versus a dysfunctional barrier with albumin entering, astrocytic TGFbR activation, SASP release and reduced function, ending in senescence; a model, no data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Cartoon of healthy and dysfunctional BBB with albumin, TGFbR, p38MAPK, SASP, p16 and p21.",
+    "anchor": "Graphical abstract, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36606305/ACEL-22-e13747-g001.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "primary rat hippocampal astrocytes (P8, serum-free, passage 3) exposed to 0.2 mM albumin for 7 days; adult male mice with 7-day intracerebroventricular infusion of 0.4 mM bovine albumin",
+     "comparator": "vehicle or aCSF; ALK5 inhibitor SJN2511 (cells) or IPW-5371 (mice); astrocytic TGFbR2 conditional knockdown (fl/fl) versus heterozygous (fl/+)",
+     "endpoint": "SA-beta-gal, p16 by flow cytometry, qPCR of senescence and SASP genes, Lamin B1 intensity, western blots of pSMAD2, p-p38 and p16"
+    }
+   }
+  ]
+ }
+}

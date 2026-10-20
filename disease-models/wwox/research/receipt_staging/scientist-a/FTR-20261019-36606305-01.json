@@ -1,0 +1,42 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-36606305-01",
+ "study_id": {
+  "pmid": "36606305",
+  "doi": "10.1111/acel.13747"
+ },
+ "analysis_at": "2026-10-20T06:09:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a (Scientist A), interventions batch 2026-10-19 groups H1/H2, task INTERV-H1-A-20261019 on branch task/INTERV-H1-A-20261019, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN. Route: Europe PMC JATS body (PMC9924950), figure images and Appendix S1 (Word) from the Europe PMC supplementaryFiles container into the root files/ tree: Figures 1-3 and the graphical abstract opened at native resolution; the supplement read as derived text (antibody and primer tables); the 88 references were term-screened for WWOX (zero) and not read item by item. Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a staged JSON for the Orchestrator and not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID36606305_Preininger2023_PMC.xml",
+ "source_fingerprint": "a0376cfb1cae92ab382cc561ec5f145d187331292a5d4ffc4ef5e8d4253f7123",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID36606305.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID36606305.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "manifest",
+  "Figures 1-3 and graphical abstract inspected as images",
+  "Supplementary Tables S1-S3 read as derived text",
+  "Reference list term-screened only"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
