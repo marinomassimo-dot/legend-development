@@ -1,0 +1,157 @@
+{
+ "schema_version": 2,
+ "pmid": "42738851",
+ "doi": "10.3390/cells15171557",
+ "receipt": "FTR-20261019-42738851-01",
+ "landing": [
+  "FTR-20261019-42738851-01",
+  "wave4_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: PMC efetch XML, the PDF and a supplement came from the bucket."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: read directly under the Scientist brief."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no baseline claim is narrowed, reversed or removed and no MAJOR change is declared."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 3,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-20: Pozhitnova V[au] 12; Pozhitnova V[au] AND fragile 3; Pozhitnova V[au] AND WWOX 0.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A cytogenetics laboratory; WWOX appears once as a locus; class-level substitute.",
+  "note": "No competing interests assessed here."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-20",
+    "count": 1
+   }
+  ],
+  "note": "WWOX appears once; FRA16D appears in three sentences."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 49,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS: 49; none WWOX-direct.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-direct reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 42738851; registry comparison after the first pass",
+  "hits": 0,
+  "finding": "No receipt before this one."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-20",
+  "route": "PMC efetch XML front matter; dependency_integrity.py screen",
+  "result": "No retraction, correction or expression of concern found.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 49,
+   "references_screened": 48,
+   "references_with_doi": 48,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42738851_Pozhitnova2026_PMC_r2.xml",
+   "sha256": "9ca2806dbe185b87df973446002db9922fab27b147bebfdf285c9223d3955dd6",
+   "kind": "article_text",
+   "note": "PMC efetch JATS for PMC13564719 (Cells 2026, CC BY), 128,608 bytes.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "9ca2806dbe185b87df973446002db9922fab27b147bebfdf285c9223d3955dd6",
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC13564719&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch JATS for PMC13564719 retrieved 2026-10-20, 128,608 bytes; the whole body is indexed locally for exact-text checks.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "SOURCE_FIRST. Class-level substitute. Read: abstract, Results 3.5, the Discussion paragraph naming WWOX and the sentences naming FRA16D; the rest of the Results, the tables of fragile sites and the supplement were not read, so results and tables are captions_only and the depth is partial.",
+  "entries": [
+   {
+    "proposition": "FRA16D (the fragile site within WWOX) is identified in the iPSC dataset with 18 breaks, belongs to the Minor cluster and is line-specific to one of the three lines (P1L5); in lymphocytes and fibroblasts it ranks among the most active sites. It does not dominate the iPSC landscape.",
+    "snippet": "FRA16D (18 breaks) was line-specific to P1L5.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42738851_Pozhitnova2026_PMC_r2.xml",
+    "anchor": "Results 3.5, tissue-specific landscape",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "three independent human iPSC lines, aphidicolin-induced metaphase breaks and MiDAS mapping (class level; WWOX is a named locus)",
+     "genotype": "wild-type iPSCs; fragile site FRA16D within WWOX",
+     "comparator": "published fragile-site maps of lymphocytes and fibroblasts"
+    }
+   },
+   {
+    "proposition": "WWOX is named, with FHIT, MACROD2 and PARK2, among tumour-suppressor genes at fragile-site loci that are not themselves recurrently rearranged in iPSC cultures; the authors say their potential instability warrants attention and is relevant for neural differentiation.",
+    "snippet": "Although these loci are not themselves recurrently rearranged in iPSC cultures, their potential instability warrants attention",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42738851_Pozhitnova2026_PMC_r2.xml",
+    "anchor": "Discussion, culture-acquired rearrangements paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "three independent human iPSC lines, aphidicolin-induced metaphase breaks and MiDAS mapping (class level; WWOX is a named locus)",
+     "genotype": "wild-type iPSCs; fragile site FRA16D within WWOX",
+     "comparator": "published fragile-site maps of lymphocytes and fibroblasts"
+    }
+   },
+   {
+    "proposition": "The study maps aphidicolin-sensitive sites in three iPSC lines (28 sites, 5 universal) with no neural derivative, no WWOX expression or genotype measurement and no patient line, so it bears on iPSC-based WWOX models only as a prior about the locus.",
+    "snippet": "The activity of the 28 asFS identified in the pooled analysis varied considerably among the three lines.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42738851_Pozhitnova2026_PMC_r2.xml",
+    "anchor": "Results, line-to-line variation",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "three independent human iPSC lines, aphidicolin-induced metaphase breaks and MiDAS mapping (class level; WWOX is a named locus)",
+     "genotype": "wild-type iPSCs; fragile site FRA16D within WWOX",
+     "comparator": "published fragile-site maps of lymphocytes and fibroblasts"
+    }
+   }
+  ]
+ }
+}
