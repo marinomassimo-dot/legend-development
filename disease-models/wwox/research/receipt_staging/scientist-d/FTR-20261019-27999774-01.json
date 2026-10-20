@@ -1,0 +1,40 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-27999774-01",
+ "study_id": {
+  "pmid": "27999774",
+  "doi": "10.3389/fcell.2016.00141"
+ },
+ "analysis_at": "2026-10-20T05:53:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d (stated assumption of the Orchestrator), task DEBT-WWOX-DIRECT-D-20261019 wave 2; context_policy QUESTION_DRIVEN (held: papers 3, 6 and 7 of wave 1, which this review summarises). Route: Europe PMC JATS for PMC5138198 as the text surface and the Frontiers PDF rendered with pdftoppm; both figures (schematics) opened as page renders; whole article read; no tables or supplement.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID27999774_Hsu2016_PMC5138198.xml",
+ "source_fingerprint": "b10d5e44ea838a42940ef9b2e1a89410d2be3689085e4bcd2b7935d8964dfe2b",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "not_present",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID27999774.json",
+  "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-02.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "Figures 1 and 2 inspected as page renders at 110 dpi (both schematics)",
+  "review without methods or results; no tables or supplement"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

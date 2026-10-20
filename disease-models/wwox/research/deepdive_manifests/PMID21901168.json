@@ -1,0 +1,440 @@
+{
+ "schema_version": 2,
+ "pmid": "21901168",
+ "doi": "10.1177/1947601911418498",
+ "receipt": "FTR-20261019-21901168-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named from wave-1 reading debts and deduplicated by the per-paper M0 packet and the receipt status check run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate and the analysis note; the discovery ledger is a shared single-writer file appended by the Orchestrator at integration."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "The Chang laboratory (National Cheng Kung University, from the affiliations), the source of most WOX1 stress-signalling papers. Primary for WWOX behaviour in leukaemia T-cell lines under a pharmacological stress; not a Wwox-null, neurological or metabolic group. Blots, counts and confocal images weighed above the switch model of Figure 7C."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND mitochondri*",
+    "count": 36,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (MEK OR ERK)",
+    "count": 19,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts, dated."
+ },
+ "multihop": {
+  "references_enumerated": 54,
+  "gene_direct_refs_in_source": [
+   "ref 15 Chang 2001 (PMID 11058590)",
+   "ref 24 Chang 2005 (PMID 16219768)",
+   "ref 25 Chang 2003 JNK1 (PMID 12514174)",
+   "ref 28 Hsu 2009 (PMID 19366691)",
+   "ref 29 Hong 2009 C1q (PMID 19484134)",
+   "ref 30 Chen 2005 retinal damage (PMID 15664696)",
+   "ref 31 Lo 2008 MPP+ (PMID 18371080)",
+   "ref 32 Li 2009 sciatic nerve (PMID 19918364)",
+   "refs 21-23 Aqeilan 2007, Aqeilan 2008, Ludes-Meyers 2007 mouse models"
+  ],
+  "resolved": [
+   {
+    "pmid": "19366691",
+    "state": "partial receipt staged by this actor (this wave)"
+   },
+   {
+    "pmid": "17360458",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "18487609",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "17823927",
+    "state": "complete receipt in the ledger"
+   }
+  ],
+  "queued": [
+   {
+    "pmid": "15664696",
+    "queue": "debt of this actor's lot, DEBT-WWOX-DIRECT-D-20261019",
+    "note": "Chen 2005; the paper's mitochondrial-translocation reference; subscription"
+   },
+   {
+    "pmid": "18371080",
+    "queue": "debt of this actor's lot, DEBT-WWOX-DIRECT-D-20261019",
+    "note": "Lo 2008; subscription"
+   },
+   {
+    "pmid": "19918364",
+    "queue": "proposed in CC-20261019-SCIENTISTD-DEBT-01; no FT identifier minted by a Scientist",
+    "note": "Li 2009 sciatic nerve transection, WWOX, PLoS One; open access; unread"
+   },
+   {
+    "pmid": "19484134",
+    "queue": "proposed in CC-20261019-SCIENTISTD-DEBT-01; no FT identifier minted by a Scientist",
+    "note": "Hong 2009 C1q and WWOX, PLoS One; open access; unread"
+   }
+  ],
+  "note": "54 references enumerated from the Europe PMC references endpoint and the archived page. The mitochondrial statements of this paper rest on refs 15, 16, 30 and 31; two of those (30, 31) are subscription papers parked in this wave."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 21901168 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed efetch for PMID 21901168: publication types ['Journal Article']; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "UNSCREENABLE_NO_REFERENCE_LIST",
+   "reference_source": "network",
+   "references_declared": 0,
+   "references_screened": 0,
+   "references_with_doi": 0,
+   "schema": "retraction_check.dependencies/1",
+   "screened": false,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID21901168_Lin2011_PMC3161421_wayback20250315.html",
+   "sha256": "5bb8693d1f3c1b36a702aff371629b1e26dca32bc5672a1d30ed967f299c206a",
+   "kind": "article_text",
+   "note": "Internet Archive capture (2025-03-15) of the PMC article page for PMC3161421 (author manuscript deposit), raw bytes with the id_ modifier; Europe PMC fullTextXML returned HTTP 500 for this PMCID. Every text locator is matched against this surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://web.archive.org/web/20250315035847id_/https://pmc.ncbi.nlm.nih.gov/articles/PMC3161421/",
+    "http_method": "GET",
+    "tier": "Internet Archive Wayback capture of the PMC page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "5bb8693d1f3c1b36a702aff371629b1e26dca32bc5672a1d30ed967f299c206a"
+   }
+  },
+  {
+   "path": "files/figures/PMID21901168/fig1.jpg",
+   "sha256": "1e5559556a88c131339ce95ffff377d06dce287b77c28f8ca179469cf85c36bc",
+   "kind": "figure",
+   "note": "Figure 1 JPEG from the PMC blob store (DNA fragmentation gels), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/ecb9/3161421/54f01b44db4f/10.1177_1947601911418498-fig1.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "1e5559556a88c131339ce95ffff377d06dce287b77c28f8ca179469cf85c36bc"
+   }
+  },
+  {
+   "path": "files/figures/PMID21901168/fig2.jpg",
+   "sha256": "4884ecaa9206069a63260769b81fd6474cde05a92cae9c738beb6389e3765f42",
+   "kind": "figure",
+   "note": "Figure 2 JPEG from the PMC blob store (cell cycle and blots), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/ecb9/3161421/796d0d182a0d/10.1177_1947601911418498-fig2.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "4884ecaa9206069a63260769b81fd6474cde05a92cae9c738beb6389e3765f42"
+   }
+  },
+  {
+   "path": "files/figures/PMID21901168/fig3.jpg",
+   "sha256": "90139c39ede904e92d62df8f0fb89fcf165ac2831e3094989b22b45ceddd0cd1",
+   "kind": "figure",
+   "note": "Figure 3 JPEG from the PMC blob store (JC-1 time-lapse), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/ecb9/3161421/f72544b7c08e/10.1177_1947601911418498-fig3.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "90139c39ede904e92d62df8f0fb89fcf165ac2831e3094989b22b45ceddd0cd1"
+   }
+  },
+  {
+   "path": "files/figures/PMID21901168/fig4.jpg",
+   "sha256": "4bb551bdd147adca4321efb6c1317706a36ee58f0fcaf888eb2e626f5cea4eca",
+   "kind": "figure",
+   "note": "Figure 4 JPEG from the PMC blob store (MEK1/WOX1 co-IP), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/ecb9/3161421/bf9f077e32c2/10.1177_1947601911418498-fig4.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "4bb551bdd147adca4321efb6c1317706a36ee58f0fcaf888eb2e626f5cea4eca"
+   }
+  },
+  {
+   "path": "files/figures/PMID21901168/fig5.jpg",
+   "sha256": "78ce0d7712df52a0c7457152a52c9fec5779c1a69a8b1989d64768547d40f329",
+   "kind": "figure",
+   "note": "Figure 5 JPEG from the PMC blob store (DN-WOX1 and siRNA), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/ecb9/3161421/039cb6a8ed6c/10.1177_1947601911418498-fig5.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "78ce0d7712df52a0c7457152a52c9fec5779c1a69a8b1989d64768547d40f329"
+   }
+  },
+  {
+   "path": "files/figures/PMID21901168/fig6.jpg",
+   "sha256": "4f1cf9cbc8d7e3fe7145539e1e66eef07baf14a563a71e15e631ada627297f28",
+   "kind": "figure",
+   "note": "Figure 6 JPEG from the PMC blob store (confocal localisation), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/ecb9/3161421/b183aa7f53e3/10.1177_1947601911418498-fig6.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "4f1cf9cbc8d7e3fe7145539e1e66eef07baf14a563a71e15e631ada627297f28"
+   }
+  },
+  {
+   "path": "files/figures/PMID21901168/fig7.jpg",
+   "sha256": "b5715673f72914a1a42fd2b3a173f15abf2684ad1af62d4e6b77917da14e2a06",
+   "kind": "figure",
+   "note": "Figure 7 JPEG from the PMC blob store (FRET and model), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/ecb9/3161421/fcbecd328c66/10.1177_1947601911418498-fig7.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "b5715673f72914a1a42fd2b3a173f15abf2684ad1af62d4e6b77917da14e2a06"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The stimulus is micromolar phorbol ester, a pharmacological dose far above the nanomolar range the paper itself says drives differentiation; the readouts are DNA fragmentation and sub-G1 content.",
+    "snippet": "Both cells were exposed to PMA (2.5-40 µM) for 24 hours, followed by determining the extent of cell death by DNA fragmentation assays and cell cycle analyses.",
+    "anchor": "Results, Jurkat is sensitive to PMA-induced apoptosis, but less differentiated Molt-4 is refractory",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21901168_Lin2011_PMC3161421_wayback20250315.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human T-leukaemia lines Jurkat and Molt-4 (and COS7 for FRET); endogenous WOX1 plus WOX1/dominant-negative/siRNA constructs",
+     "genotype": "no Wwox allele altered; transient dominant-negative WOX1 and siRNA knockdown in Jurkat",
+     "treatment": "phorbol myristate acetate 2.5-40 uM, U0126 30 uM",
+     "endpoint": "DNA fragmentation, subG1, JC-1, co-IP, confocal co-localisation, FRET"
+    }
+   },
+   {
+    "proposition": "The MEK1/WOX1 behaviour is specific to one line: no other tested line responds to PMA and U0126 as Jurkat does, and the paper reports the death as lacking phosphatidylserine exposure, shrinkage and blebbing.",
+    "snippet": "Together, none of the tested cells act similarly as that in Jurkat T cells in response to U0126 and PMA.",
+    "anchor": "Results, Induction of Molt-4 differentiation restores their sensitivity to PMA-induced apoptosis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21901168_Lin2011_PMC3161421_wayback20250315.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human T-leukaemia lines Jurkat and Molt-4 (and COS7 for FRET); endogenous WOX1 plus WOX1/dominant-negative/siRNA constructs",
+     "genotype": "no Wwox allele altered; transient dominant-negative WOX1 and siRNA knockdown in Jurkat",
+     "treatment": "phorbol myristate acetate 2.5-40 uM, U0126 30 uM",
+     "endpoint": "DNA fragmentation, subG1, JC-1, co-IP, confocal co-localisation, FRET"
+    }
+   },
+   {
+    "proposition": "The complex between endogenous WOX1 and MEK1 is shown by one co-immunoprecipitation series in Jurkat cells with PMA at 10 micromolar, with a non-immune serum control shown for MEK1 only.",
+    "snippet": "In resting Jurkat cells, endogenous WOX1 physically interacted with MEK1, and that PMA rapidly dissociated the binding in 10 minutes (Fig. 4A).",
+    "anchor": "Results, WOX1 physically interacts with MEK1, and PMA rapidly dissociates the WOX1/MEK1 complex in Jurkat but not in Molt-4 cells",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21901168_Lin2011_PMC3161421_wayback20250315.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human T-leukaemia lines Jurkat and Molt-4 (and COS7 for FRET); endogenous WOX1 plus WOX1/dominant-negative/siRNA constructs",
+     "genotype": "no Wwox allele altered; transient dominant-negative WOX1 and siRNA knockdown in Jurkat",
+     "treatment": "phorbol myristate acetate 2.5-40 uM, U0126 30 uM",
+     "endpoint": "DNA fragmentation, subG1, JC-1, co-IP, confocal co-localisation, FRET"
+    }
+   },
+   {
+    "proposition": "The WOX1 mitochondrial relocation is a confocal co-localisation with a mitochondrial dye at three time points in one line, described by colour overlap; no co-localisation coefficient or fractionation is given.",
+    "snippet": "Confocal microscopy analysis revealed that PMA rapidly induced relocation of WOX1 to the mitochondria approximately within 30 minutes (see the yellow punctate; Fig. 6C).",
+    "anchor": "Results, MEK1 and WOX1 co-localize in part in the lysosome, and PMA induces relocation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21901168_Lin2011_PMC3161421_wayback20250315.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human T-leukaemia lines Jurkat and Molt-4 (and COS7 for FRET); endogenous WOX1 plus WOX1/dominant-negative/siRNA constructs",
+     "genotype": "no Wwox allele altered; transient dominant-negative WOX1 and siRNA knockdown in Jurkat",
+     "treatment": "phorbol myristate acetate 2.5-40 uM, U0126 30 uM",
+     "endpoint": "DNA fragmentation, subG1, JC-1, co-IP, confocal co-localisation, FRET"
+    }
+   },
+   {
+    "proposition": "The knockdown arm is an siRNA in Jurkat cells (n = 3) read as abolishing the protection by U0126; the protection P values are 0.0042 control, 0.0436 mock, 0.0465 scramble and 0.4403 WOX1 siRNA, so the conclusion rests on a difference between a significant and a non-significant comparison.",
+    "snippet": "In parallel, knockdown of WOX1 expression by small interfering RNA (WOX1si) abolished U0126-mediated protection of Jurkat cells from PMA-induced apoptosis (Fig. 5E).",
+    "anchor": "Results, Dominant negative WOX1 suppresses PMA-induced cell death",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21901168_Lin2011_PMC3161421_wayback20250315.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human T-leukaemia lines Jurkat and Molt-4 (and COS7 for FRET); endogenous WOX1 plus WOX1/dominant-negative/siRNA constructs",
+     "genotype": "no Wwox allele altered; transient dominant-negative WOX1 and siRNA knockdown in Jurkat",
+     "treatment": "phorbol myristate acetate 2.5-40 uM, U0126 30 uM",
+     "endpoint": "DNA fragmentation, subG1, JC-1, co-IP, confocal co-localisation, FRET"
+    }
+   },
+   {
+    "proposition": "Replicate numbers differ across panels: two experiments for some DNA-fragmentation bar graphs, three for others, against a Methods statement that all experiments were done three to five times.",
+    "snippet": "The bar graph in B is an average of 2 experiments and in C is mean ± standard deviation from 3 experiments.",
+    "anchor": "Figure 5 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21901168_Lin2011_PMC3161421_wayback20250315.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human T-leukaemia lines Jurkat and Molt-4 (and COS7 for FRET); endogenous WOX1 plus WOX1/dominant-negative/siRNA constructs",
+     "genotype": "no Wwox allele altered; transient dominant-negative WOX1 and siRNA knockdown in Jurkat",
+     "treatment": "phorbol myristate acetate 2.5-40 uM, U0126 30 uM",
+     "endpoint": "DNA fragmentation, subG1, JC-1, co-IP, confocal co-localisation, FRET"
+    }
+   },
+   {
+    "proposition": "The authors allow that the U0126 protection may have other causes and that ERK phosphorylation by PMA is unrelated to protection.",
+    "snippet": "We do not exclude other possibilities, which may cause U0126 protection of Jurkat cells from apoptosis by PMA, as there are many binding proteins of WOX1 in cells.",
+    "anchor": "Discussion, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21901168_Lin2011_PMC3161421_wayback20250315.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human T-leukaemia lines Jurkat and Molt-4 (and COS7 for FRET); endogenous WOX1 plus WOX1/dominant-negative/siRNA constructs",
+     "genotype": "no Wwox allele altered; transient dominant-negative WOX1 and siRNA knockdown in Jurkat",
+     "treatment": "phorbol myristate acetate 2.5-40 uM, U0126 30 uM",
+     "endpoint": "DNA fragmentation, subG1, JC-1, co-IP, confocal co-localisation, FRET"
+    }
+   },
+   {
+    "proposition": "The summary statement ties cell death to WOX1 relocation to mitochondria as 'probably associated', that is as an inference.",
+    "snippet": "The cell death is probably associated with relocation of WOX1 to the mitochondria.",
+    "anchor": "Discussion, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21901168_Lin2011_PMC3161421_wayback20250315.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human T-leukaemia lines Jurkat and Molt-4 (and COS7 for FRET); endogenous WOX1 plus WOX1/dominant-negative/siRNA constructs",
+     "genotype": "no Wwox allele altered; transient dominant-negative WOX1 and siRNA knockdown in Jurkat",
+     "treatment": "phorbol myristate acetate 2.5-40 uM, U0126 30 uM",
+     "endpoint": "DNA fragmentation, subG1, JC-1, co-IP, confocal co-localisation, FRET"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 5E: percent apoptosis (subG1) in Jurkat cells, control against U0126, for control, mock, scramble and WOX1 siRNA; control about 45 against 26 (P = 0.0042), mock about 46 against 32 (P = 0.0436), scramble about 47 against 32 (P = 0.0465), WOX1 siRNA about 53 against 44 (P = 0.4403); Figure 5A and 5B DNA-fragmentation bars are single values from two experiments.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 5E bar chart y-axis % Apoptosis 0-80, four groups Control, Mock, Scramble, WOX1si, grey control and white U0126 bars with P values 0.0042, 0.0436, 0.0465, 0.4403 above; Fig 5A-D gels and bar graphs.",
+    "anchor": "Figure 5, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID21901168/fig5.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human T-leukaemia lines Jurkat and Molt-4 (and COS7 for FRET); endogenous WOX1 plus WOX1/dominant-negative/siRNA constructs",
+     "genotype": "no Wwox allele altered; transient dominant-negative WOX1 and siRNA knockdown in Jurkat",
+     "treatment": "phorbol myristate acetate 2.5-40 uM, U0126 30 uM",
+     "endpoint": "DNA fragmentation, subG1, JC-1, co-IP, confocal co-localisation, FRET"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 6C: confocal images of Jurkat cells at 0, 30, 60 and 120 min with WOX1 (green), MitoTracker (red) and nuclei (blue), one field per time, scale bar, yellow overlap at 30 min; no quantification.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 6C four confocal panels labelled WOX1, Mito, nucl at 0, 30, 60, 120 min; Fig 6A-B MEK with LysoTracker; 6D WOX1 with MEK at 0, 60, 120 min; 6E MEK with Mito; 6F MEK with lipid raft.",
+    "anchor": "Figure 6, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID21901168/fig6.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human T-leukaemia lines Jurkat and Molt-4 (and COS7 for FRET); endogenous WOX1 plus WOX1/dominant-negative/siRNA constructs",
+     "genotype": "no Wwox allele altered; transient dominant-negative WOX1 and siRNA knockdown in Jurkat",
+     "treatment": "phorbol myristate acetate 2.5-40 uM, U0126 30 uM",
+     "endpoint": "DNA fragmentation, subG1, JC-1, co-IP, confocal co-localisation, FRET"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 4A: co-immunoprecipitation blots (anti-MEK1 IgG) in Jurkat cells at 0 to 120 min of PMA; the WOX1 band in the MEK1 precipitate is faint and fades over time; Figure 4B (U0126) and 4C (Molt-4) are single blots; 4D shows non-specific serum for MEK1 only.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 4A Jurkat Pre-IP and IP: MEK1 IgG blots with rows MEK1, WOX1, alpha-tubulin and IgH at PMA 0, 10, 20, 40, 60, 120 min; 4B with U0126; 4C Molt-4; 4D non-specific serum lane.",
+    "anchor": "Figure 4, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID21901168/fig4.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human T-leukaemia lines Jurkat and Molt-4 (and COS7 for FRET); endogenous WOX1 plus WOX1/dominant-negative/siRNA constructs",
+     "genotype": "no Wwox allele altered; transient dominant-negative WOX1 and siRNA knockdown in Jurkat",
+     "treatment": "phorbol myristate acetate 2.5-40 uM, U0126 30 uM",
+     "endpoint": "DNA fragmentation, subG1, JC-1, co-IP, confocal co-localisation, FRET"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search returned inEPMC Y and isOpenAccess N for PMC3161421 (author manuscript) on 2026-10-19; fullTextXML returned HTTP 500; the Internet Archive capture of the PMC page returned HTTP 200 with the body sections, seven figures and the reference list.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

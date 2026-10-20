@@ -1,0 +1,40 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-24008736-03",
+ "study_id": {
+  "pmid": "24008736",
+  "doi": "10.1038/cddis.2013.308"
+ },
+ "analysis_at": "2026-10-20T06:05:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d (stated assumption of the Orchestrator), task DEBT-WWOX-DIRECT-D-20261019 wave 2; context_policy QUESTION_DRIVEN (held: the earlier manifest, which says the article's supplementary figures are not retrievable). Resume of a partial reading whose only open section was the supplement: the PMC deposit serves another article's supplement as cddis2013308x1.pdf, but the article page on the publisher's site links this article's own supplementary PDF (MOESM12, 12 pages, Supplementary Methods and Figures 1-7), which was retrieved with a browser-like User-Agent, fingerprinted, rendered at 90 dpi and opened page by page. The body and Figures 1-6 stand as read by the earlier receipts. The earlier statement that Supplementary Figures 1-7 are not retrievable is superseded by this retrieval.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID24008736_Tsai2013_PMC.xml",
+ "source_fingerprint": "08b9e0d797cddcead7f4eb9ccf7ff88205b3d28049061a389d12ac5e527c32ed",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID24008736.json",
+  "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-02.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "supplementary Figures 1-7 inspected as page renders at 90 dpi",
+  "prior receipt FTR-20261003-24008736-02 named; reread_reason inadequate_prior_coverage"
+ ],
+ "prior_receipt": "FTR-20261003-24008736-02",
+ "reread_reason": "inadequate_prior_coverage"
+}

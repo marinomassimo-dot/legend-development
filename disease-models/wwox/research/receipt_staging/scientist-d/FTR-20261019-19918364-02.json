@@ -1,0 +1,40 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-19918364-02",
+ "study_id": {
+  "pmid": "19918364",
+  "doi": "10.1371/journal.pone.0007820"
+ },
+ "analysis_at": "2026-10-20T06:02:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d (stated assumption of the Orchestrator), task DEBT-WWOX-DIRECT-D-20261019 wave 2; context_policy QUESTION_DRIVEN (held: the earlier reading's manifest and the Hsu 2016 review). Resume of the earlier partial reading that left supplementary figures S2, S4 and S5 at caption level: the TIFFs already in the shared evidence tree were rendered with PyMuPDF (ImageMagick crashes on them) and each opened as an image; S1 and S3 were read by the earlier reading and are not re-read. The XML body, figures 4 and 5 and the reference list stand as read by the earlier receipt; the reference list is enumerated in the manifest.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID19918364_Li2009_PMC.xml",
+ "source_fingerprint": "a4a30c59780468a0074e02ac5890da5ead6f69deaad57b183431dfa667955425",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID19918364.json",
+  "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-02.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "supplementary Figures S2, S4, S5 inspected as images (S1 and S3 by the prior reading)",
+  "prior receipt FTR-20261003-19918364-01 named; reread_reason inadequate_prior_coverage"
+ ],
+ "prior_receipt": "FTR-20261003-19918364-01",
+ "reread_reason": "inadequate_prior_coverage"
+}

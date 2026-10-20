@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-28426730-01",
+ "study_id": {
+  "pmid": "28426730",
+  "doi": "10.1371/journal.pone.0176141"
+ },
+ "analysis_at": "2026-10-19T19:37:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d (stated assumption of the Orchestrator), task DEBT-WWOX-DIRECT-D-20261019; context_policy SOURCE_FIRST (no prior LEGEND conclusion about this paper was held; it was opened as a reference of PMID 29675105). Route: Europe PMC JATS for PMC5398630 as the text surface and the PLOS printable PDF rendered with pdftoppm; the only figure (Figure 1, panels A to E) opened as a page render; Tables 1-5 read as text; whole article read.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID28426730_Lee2017_PMC5398630.xml",
+ "source_fingerprint": "b061dfa64b1c4633d40bc6ef8a3ec595a7c9ee889103c7519a423612dfd75062",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID28426730.json",
+  "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "Figure 1 (A to E) inspected as a page render at 130 dpi",
+  "Tables 1-5 read as text",
+  "no supplementary file, no limitations section"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

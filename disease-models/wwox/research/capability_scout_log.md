@@ -1001,6 +1001,29 @@ catalytic-dead control, a titration. The missing item is the experiment, not the
 
 **Next surgical micro-step:** none required; the integrator dry-runs the DL-MECH-012 op list before applying.
 
+## 2026-10-19 · scientist-d · DEBT-WWOX-DIRECT-D-20261019
+
+**Gap (with evidence).** `pubmed_identity_check.py` reported TITLE_MISMATCH for PMID 17567906, a clean record, because for an article with no `ELocationID` it fell back to the last `ArticleId` of the whole efetch record, which sits in the reference list and is a cited paper's DOI. A false mismatch sends a reader hunting for a hybrid record that does not exist; the same defect in the other direction would pass a hybrid.
+
+**CHANGE (proportional micro-upgrade, shipped).** `fetch_pubmed` now reads only `MedlineCitation/Article/ELocationID` and `PubmedData/ArticleIdList`, first match. Regression `test_doi_comes_from_the_article_not_its_reference_list` in `framework/scripts/test_pubmed_identity_check.py` (5 tests, OK). Disease-agnostic.
+
+**Named, not built.** (1) PMC pages for author-manuscript deposits (Europe PMC XML returns HTTP 500) were reachable only through an Internet Archive capture of the PMC page plus the figure blobs it names; this route worked five times and is not written down in `find-fulltext`; a short tier entry would save the next actor an hour. (2) Three free-to-read papers are blocked by publisher bot challenges (no browser tool in this session); a browser-capable retrieval tier is an operator-side capability, not a script.
+
+**Cost / API / privacy risk:** none; no keyed API, no paid or unauthorised source.
+
+**Next surgical micro-step:** add the archived-PMC-page route to the `find-fulltext` skill's Tier 0 notes.
+
+## 2026-10-20 · scientist-d · DEBT-WWOX-DIRECT-D-20261019 wave 2
+
+**Gap (with evidence).** Three recurring acquisition failures, each costing a reading to rediscover: (1) Europe PMC `fullTextXML` returns HTTP 500 for author-manuscript PMC deposits; (2) ImageMagick `convert` crashes ("double free") on several PLOS and PMC supplementary TIFFs; (3) the PMC supplementary file for one article was another article's, and the article's own supplement sat on the publisher's page.
+
+**CHANGE (proportional, shipped as a log entry; no code).** Routes that worked: (1) the Internet Archive capture of the PMC page, `https://web.archive.org/web/2025id_/https://pmc.ncbi.nlm.nih.gov/articles/<PMCID>/` (raw bytes, redirect gives the exact timestamp to record), with figure blobs fetched from the `cdn.ncbi.nlm.nih.gov/pmc/blobs/` URLs named in it; (2) `fitz.open(tif)[0].get_pixmap(matrix=...)` from PyMuPDF renders those TIFFs (the PDF-points page rect must be scaled up, since the TIFF dpi makes it small); (3) when a deposit's supplement does not match the article, follow the article page's own supplementary link on the publisher's site (here a `media.springernature.com` ESM URL) before declaring the supplement unretrievable.
+
+**Named, not built.** A short "author-manuscript PMC" tier in `find-fulltext` and a `render_tiff.py` helper; both are two-hour jobs with a clear shape and a test (a TIFF fixture) and would pay back at the next supplement read.
+
+**Cost / API / privacy risk:** none; no keyed API, no unlawful source.
+
+**Next surgical micro-step:** add the archived-PMC-page route and the publisher-ESM check to the `find-fulltext` skill's Tier 0 and Tier 8 notes.
 ---
 
 ## 2026-10-20 — scientist-b, gold wave (task `GOLD-LEGACY-WWOX-B-20261019`)

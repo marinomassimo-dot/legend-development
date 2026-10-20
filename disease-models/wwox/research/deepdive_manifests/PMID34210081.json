@@ -1,0 +1,359 @@
+{
+ "schema_version": 2,
+ "pmid": "34210081",
+ "doi": "10.3390/cells10071637",
+ "receipt": "FTR-20261019-34210081-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named from wave-1 reading debts and deduplicated by the per-paper M0 packet and the receipt status check run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate and the analysis note; the discovery ledger is a shared single-writer file appended by the Orchestrator at integration."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A review from the Richards laboratory (University of Adelaide; the author-contributions statement names the senior author as drafter), the group behind the Drosophila WWOX metabolism papers (Choo 2015 and relatives). A secondary source written by the primary group: statements about its own Drosophila work weigh as that laboratory's interpretation; the population-genetics list weighs as a restatement."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND Drosophila",
+    "count": 11,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (metabolism OR metabolic) AND review[pt]",
+    "count": 53,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts, dated."
+ },
+ "multihop": {
+  "references_enumerated": 66,
+  "gene_direct_refs_in_source": [
+   "ref 32 Richards 2015 review (PMID 25595186)",
+   "ref 33 Abu-Remaileh 2015 review (PMID 25491415)",
+   "ref 34 O'Keefe 2011 Drosophila WWOX (PMID 21075834)",
+   "ref 35 Dayan 2013 (PMID 23765596)",
+   "ref 36 O'Keefe 2015 (PMID 26302329)",
+   "ref 37 Choo 2015 (PMID 26390919)",
+   "ref 41 Abu-Remaileh 2014 (PMID 25012504)",
+   "ref 42 (PMID 27308416)",
+   "ref 43 muscle ablation (PMID 30755385)",
+   "ref 44 Iatan 2014 (PMID 24871327)",
+   "ref 45 Lee 2019 interactome (PMID 30619736)",
+   "ref 46 Lee 2008 HDL (PMID 18674750)",
+   "ref 57 Mallaret 2014 (PMID 24369382)"
+  ],
+  "resolved": [
+   {
+    "pmid": "25595186",
+    "state": "complete receipt (read in this batch, staged by scientist-a)"
+   },
+   {
+    "pmid": "25491415",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "21075834",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "26302329",
+    "state": "partial receipt in the ledger"
+   },
+   {
+    "pmid": "27308416",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "30755385",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "24871327",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "30619736",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "18674750",
+    "state": "complete and partial receipts in the ledger"
+   },
+   {
+    "pmid": "25012504",
+    "state": "complete receipt in the ledger"
+   }
+  ],
+  "queued": [
+   {
+    "pmid": "26390919",
+    "queue": "debt of this actor's lot, DEBT-WWOX-DIRECT-D-20261019 (parked; subscription)",
+    "note": "Choo 2015, the Drosophila respiratory-complex primary"
+   },
+   {
+    "pmid": "23765596",
+    "queue": "proposed in CC-20261019-SCIENTISTD-DEBT-01; no FT identifier minted by a Scientist",
+    "note": "Dayan 2013, WWOX expression and metabolic reprogramming; subscription; unread"
+   }
+  ],
+  "note": "66 references enumerated from the JATS. The review's metabolism references are mostly already read in this repository; the two unread are subscription papers from the same Drosophila programme."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 34210081 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed efetch for PMID 34210081: publication types ['Journal Article', \"Research Support, Non-U.S. Gov't\", 'Review']; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 66,
+   "references_screened": 56,
+   "references_with_doi": 56,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 10
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID34210081_Lee2021_PMC8305172.xml",
+   "sha256": "393f935d20c466db716e258434ca20ada4042e7ba761571ed710c94d899facab",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC8305172 (CC BY): abstract, body, figure legends, 66 references. Every text locator is matched against this surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8305172/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "393f935d20c466db716e258434ca20ada4042e7ba761571ed710c94d899facab"
+   }
+  },
+  {
+   "path": "files/figures/PMID34210081/fig1.jpg",
+   "sha256": "59fc0cd2e5375024468856fded046b30d5386fae14ce9720e230a66a81432482",
+   "kind": "figure",
+   "note": "Figure 1 JPEG from the PMC blob store (intron lengths of WWOX in four species), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2857/8305172/03b7178b3cfc/cells-10-01637-g001.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "59fc0cd2e5375024468856fded046b30d5386fae14ce9720e230a66a81432482"
+   }
+  },
+  {
+   "path": "files/figures/PMID34210081/fig2.jpg",
+   "sha256": "5f28004788fa81c2ded55c56757e36d5953b5a790bea49461cf4ee69b355e451",
+   "kind": "figure",
+   "note": "Figure 2 JPEG from the PMC blob store (protein alignment across six species), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2857/8305172/ea178d8fefb4/cells-10-01637-g002.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "5f28004788fa81c2ded55c56757e36d5953b5a790bea49461cf4ee69b355e451"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The review states that the substrate and product of the WWOX enzyme reaction are not known after more than twenty years.",
+    "snippet": "Despite more than twenty years of research on the WWOX protein, the substrate and product of the enzyme reaction that it catalyses are yet to be discovered.",
+    "anchor": "3. WWOX in Metabolism, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34210081_Lee2021_PMC8305172.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review; Drosophila, human cell and mouse studies as cited; population GWAS as cited",
+     "genotype": "WWOX loss, reduction and overexpression as reported in cited sources",
+     "endpoint": "none measured"
+    }
+   },
+   {
+    "proposition": "The inference that human pathology from WWOX deficiency is 'likely to be treatable' rests on one fly line with no reported phenotype and no named compensating pathway; it is a hypothesis stated as an expectation.",
+    "snippet": "On the contrary, the ability of Drosophila to compensate for the lack of WWOX indicates that pathology caused by deficiency of WWOX is likely to be treatable, with identification and targeting of the compensating pathway(s).",
+    "anchor": "3. WWOX in Metabolism, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34210081_Lee2021_PMC8305172.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review; Drosophila, human cell and mouse studies as cited; population GWAS as cited",
+     "genotype": "WWOX loss, reduction and overexpression as reported in cited sources",
+     "endpoint": "none measured"
+    }
+   },
+   {
+    "proposition": "The Drosophila mitochondrial finding is a genetic enhancement: reduced WWOX worsens tissue phenotypes caused by mitochondrial deficiency and extra WWOX suppresses them, in a manner that needs the SDR active-site tyrosine.",
+    "snippet": "Reduced levels of WWOX were found to result in further perturbation of cellular dysfunction caused by mitochondrial deficiencies, leading to increased frequency of phenotypes such as loss of tissue, cellular outgrowths and presence of ectopic structures.",
+    "anchor": "3. WWOX in Metabolism, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34210081_Lee2021_PMC8305172.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Drosophila melanogaster genetic interaction (as cited)",
+     "genotype": "reduced or increased Wwox, Y288F active-site mutant, mitochondrial-deficiency backgrounds",
+     "endpoint": "tissue loss, outgrowths, ectopic structures"
+    }
+   },
+   {
+    "proposition": "The mammalian metabolic claims are listed as a chain of single-lab results: glucose via HIF1A, aerobic glycolysis, muscle ablation, HDL and lipid metabolism, and an interactome enrichment.",
+    "snippet": "WWOX regulates glucose metabolism via HIF1α modulation [41], while loss of WWOX activates aerobic glycolysis [42] and the somatic ablation of WWOX in skeletal muscles alters glucose metabolism [43].",
+    "anchor": "3. WWOX in Metabolism, paragraph 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34210081_Lee2021_PMC8305172.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review; Drosophila, human cell and mouse studies as cited; population GWAS as cited",
+     "genotype": "WWOX loss, reduction and overexpression as reported in cited sources",
+     "endpoint": "none measured"
+    }
+   },
+   {
+    "proposition": "The section on risk in metabolic disorders speaks of the genomic region containing WWOX in its first sentence (a following paragraph then says genetic variation of WWOX is a risk factor); its twelve references include a lung-cancer copy-number paper and the SCAR12 family paper, neither of which is a metabolic-disease association study by conventional definition (the review itself counts cancer among metabolic-dysfunction diseases).",
+    "snippet": "The genomic region containing the WWOX gene has been identified as a genetic risk factor in each of these metabolic diseases",
+    "anchor": "4. WWOX Genomic Region Is a Risk Factor in Metabolic Disorders, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34210081_Lee2021_PMC8305172.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review; Drosophila, human cell and mouse studies as cited; population GWAS as cited",
+     "genotype": "WWOX loss, reduction and overexpression as reported in cited sources",
+     "endpoint": "none measured"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34210081.json",
+     "entry": 4,
+     "what_changed": "Narrowed my own committed proposition after a blind audit found it overshot: the source's following paragraph does call WWOX genetic variation a risk factor, and the review itself counts cancer among metabolic-dysfunction diseases.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
+    }
+   },
+   {
+    "proposition": "The review mentions the human biallelic loss-of-function families only in the section on enzyme specificity, and nowhere connects them to a metabolic phenotype.",
+    "snippet": "Of relevance, homozygous mutations that diminish WWOX function are found in families with recessive spinocerebellar ataxia 12 (SCAR12).",
+    "anchor": "5.2. What Does WWOX the Enzyme Normally Do?, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34210081_Lee2021_PMC8305172.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review; Drosophila, human cell and mouse studies as cited; population GWAS as cited",
+     "genotype": "WWOX loss, reduction and overexpression as reported in cited sources",
+     "endpoint": "none measured"
+    }
+   },
+   {
+    "proposition": "The metabolite-accumulation model for reduced WWOX is a conjecture offered as a plausible therapeutic target, with the metabolite unidentified.",
+    "snippet": "Reduced WWOX enzyme activity suggests a build-up on one side of the equation, which leads to elevated levels of a metabolite and, therefore, has biological consequences.",
+    "anchor": "5.2. What Does WWOX the Enzyme Normally Do?, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34210081_Lee2021_PMC8305172.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review; Drosophila, human cell and mouse studies as cited; population GWAS as cited",
+     "genotype": "WWOX loss, reduction and overexpression as reported in cited sources",
+     "endpoint": "none measured"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 1: exon and intron maps of WWOX in human, mouse, fugu and Drosophila with intron lengths in bases; the human intron 5 is 222570 and the last intron 778855 bases, against 18778 and 63559 in fugu; Drosophila has six exons and short introns apart from one of about 2850; it carries no experimental value.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 four horizontal domain maps (WW domains I and II, Oxido-Reductase, Substrate specificity?) with arrows and triangles at exon boundaries and intron lengths 8537, 1290, 5140, 49028, 222570, 37921, 7432, 778855 for human.",
+    "anchor": "Figure 1, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID34210081/fig1.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative review; Drosophila, human cell and mouse studies as cited; population GWAS as cited",
+     "genotype": "WWOX loss, reduction and overexpression as reported in cited sources",
+     "endpoint": "none measured"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 2: a six-species WWOX protein alignment with conservation bars, WW domains, the SDR cofactor-binding and catalytic motifs, a putative substrate-specificity region (green, C-terminal) and a highlighted PEST sequence at the N-terminus; no experimental value.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 alignment of Human, Chicken, Drosophila, Fugu, Zebrafish, Mouse with legend Identical 6 to 2 species, boxes WW domain, SDR enzyme, substrate binding?, labels PEST sequence, Co-factor, Catalytic.",
+    "anchor": "Figure 2, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID34210081/fig2.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative review; Drosophila, human cell and mouse studies as cited; population GWAS as cited",
+     "genotype": "WWOX loss, reduction and overexpression as reported in cited sources",
+     "endpoint": "none measured"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search returned inEPMC Y and isOpenAccess Y for PMC8305172 on 2026-10-19; fullTextXML returned HTTP 200 with a body; both figure JPEGs were fetched from the PMC blob store named in the archived article page.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

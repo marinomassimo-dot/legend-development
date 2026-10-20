@@ -1,0 +1,242 @@
+{
+ "schema_version": 2,
+ "pmid": "25416187",
+ "doi": "10.1177/1535370214561952",
+ "receipt": "FTR-20261019-25416187-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-02.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named from wave-1 reading debts and deduplicated by the per-paper M0 packet and the receipt status check run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate and the analysis note; the discovery ledger is a shared single-writer file appended by the Orchestrator at integration."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": true,
+  "weighting": "A paediatric neurology and metabolic-genetics group (Prince Sultan Military Medical City, from the affiliations) that sees WWOX-null children. Primary for the clinical phenotype of biallelic loss (it adds an unpublished sibling family); not a mechanism group. Its clinical restatements weigh as a summary of cited reports; its mechanism paragraph weighs as speculation."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (epilepsy OR encephalopathy OR microcephaly)",
+    "count": 119,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (spinocerebellar OR SCAR12)",
+    "count": 21,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts, dated."
+ },
+ "multihop": {
+  "references_enumerated": 17,
+  "gene_direct_refs_in_source": [
+   "ref 4 Aldaz 2014 (PMID 24932569)",
+   "ref 7 Li 2014 WWOX in metabolic disorders and tumours (Int J Biol Sci)",
+   "ref 8 Mallaret 2014 (PMID 24369382)",
+   "ref 9 Abdel-Salam 2014 (PMID 24456803)",
+   "ref 13 Suzuki 2009 (PMID 19500159)",
+   "ref 14 Chang 2001 (PMID 11058590)",
+   "ref 15 Zhang 2012 (PMID 22484428)",
+   "ref 17 Lo 2008 (PMID 18371080)"
+  ],
+  "resolved": [
+   {
+    "pmid": "24369382",
+    "state": "complete receipts in the ledger"
+   },
+   {
+    "pmid": "24456803",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "24932569",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "19500159",
+    "state": "complete receipt in the ledger"
+   }
+  ],
+  "queued": [
+   {
+    "pmid": "22484428",
+    "queue": "debt of this actor's lot, DEBT-WWOX-DIRECT-D-20261019 wave 2",
+    "note": "WWOX and the mitochondrial pathway in A549 cells; read or parked per the note"
+   },
+   {
+    "pmid": "18371080",
+    "queue": "debt of this actor's lot, DEBT-WWOX-DIRECT-D-20261019",
+    "note": "Lo 2008, parked"
+   },
+   {
+    "pmid": "11058590",
+    "queue": "parked in CC-20261019-SCIENTISTD-DEBT-02",
+    "note": "Chang 2001, free to read but publisher bot challenge"
+   }
+  ],
+  "note": "17 references enumerated from the archived page. The clinical references are already read here; the two mechanism references are a JBC primary (parked) and a lung-cancer cell-line paper."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 25416187 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed efetch for PMID 25416187: publication types ['Journal Article', 'Review']; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 17,
+   "references_screened": 15,
+   "references_with_doi": 15,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID25416187_Tabarki2015_PMC4935222_wayback20250307.html",
+   "sha256": "1000ba8156b553cfee38a68f47a009eb1b97b317771ead86ceb50469c3671def",
+   "kind": "article_text",
+   "note": "Internet Archive capture (2025-03-07) of the PMC article page for PMC4935222 (author manuscript of an Exp Biol Med commentary), raw bytes with the id_ modifier; the page has no figures or tables. Every text locator is matched against this surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://web.archive.org/web/20250307041015id_/https://pmc.ncbi.nlm.nih.gov/articles/PMC4935222/",
+    "http_method": "GET",
+    "tier": "Internet Archive Wayback capture of the PMC page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "1000ba8156b553cfee38a68f47a009eb1b97b317771ead86ceb50469c3671def"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "A second human biallelic nonsense case is described as a 'virtual full knockout'; the commentary cites no RNA or protein study showing absence of WWOX in that family.",
+    "snippet": "In this case, the homozygous WWOX germline alteration is a nonsense mutation at arginine 54 (pArg54*) leading to a virtual WWOX human full knockout case.",
+    "anchor": "Mutation in WWOX gene cause microcephaly, growth retardation, epilepsy, retinal degeneration, and early death",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25416187_Tabarki2015_PMC4935222_wayback20250307.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative commentary on human, rat and mouse reports; no new experiment",
+     "genotype": "human biallelic WWOX loss-of-function families, lde/lde rat, as cited",
+     "endpoint": "none measured"
+    }
+   },
+   {
+    "proposition": "The commentary adds an unpublished sibling family with refractory seizures, spasticity, microcephaly, failure to thrive and early death; no data are shown.",
+    "snippet": "We also observed three siblings from a consanguineous Saudi family (unpublished data) with onset in the first month of life of refractory seizures, spasticity, microcephaly, failure to thrive, and early death.",
+    "anchor": "Mutation in WWOX gene cause microcephaly, growth retardation, epilepsy, retinal degeneration, and early death",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25416187_Tabarki2015_PMC4935222_wayback20250307.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative commentary on human, rat and mouse reports; no new experiment",
+     "genotype": "human biallelic WWOX loss-of-function families, lde/lde rat, as cited",
+     "endpoint": "none measured"
+    }
+   },
+   {
+    "proposition": "The commentary's metabolic content is a one-clause mention of metabolic syndrome with one citation (a review) and an uncited abstract phrase about 'metabolic and nervous system-related conditions'; no metabolic phenotype of the biallelic families is described anywhere (failure to thrive and growth retardation are described, without measurement).",
+    "snippet": "In addition, recent studies demonstrate a growing important role of WWOX gene in other human pathologies such as metabolic syndrome,7 and more recently central nervous system (CNS)-related pathologic conditions.8,9",
+    "anchor": "Introduction, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25416187_Tabarki2015_PMC4935222_wayback20250307.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative commentary on human, rat and mouse reports; no new experiment",
+     "genotype": "human biallelic WWOX loss-of-function families, lde/lde rat, as cited",
+     "endpoint": "none measured"
+    }
+   },
+   {
+    "proposition": "The mechanism offered for the seizures is a list of possibilities, the mitochondrial pathway resting on Bcl-2 and Bcl-xL down-regulation by overexpressed WOX1 in cell lines and on an MPP+ rat paper.",
+    "snippet": "In fact, WOX1 significantly downregulate the apoptotic inhibitors Bcl-2and Bcl-xL, and upregulates p53 expression and tumor necrosis factor cytotoxicity.14,15",
+    "anchor": "Conclusions and future directions, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25416187_Tabarki2015_PMC4935222_wayback20250307.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative commentary on human, rat and mouse reports; no new experiment",
+     "genotype": "human biallelic WWOX loss-of-function families, lde/lde rat, as cited",
+     "endpoint": "none measured"
+    }
+   },
+   {
+    "proposition": "The commentary says the clinical series confirm each other and resemble the lde/lde rat, a rat whose allele the same commentary describes, earlier, as a 13-base-pair deletion that frameshifts the last 44 codons (so 'functional null' is the commentary's characterisation of a C-terminal frameshift).",
+    "snippet": "These two reports confirm the observation of Mallaret et al.,8 but in more severe phenotype, and are highly similar to the abnormalities reported in lde/lde rats with a spontaneous functional null mutation of WWOX, expanding the nervous system clinical presentation of WWOX gene mutation.",
+    "anchor": "Mutation in WWOX gene cause microcephaly, growth retardation, epilepsy, retinal degeneration, and early death",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25416187_Tabarki2015_PMC4935222_wayback20250307.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative commentary on human, rat and mouse reports; no new experiment",
+     "genotype": "human biallelic WWOX loss-of-function families, lde/lde rat, as cited",
+     "endpoint": "none measured"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search returned inEPMC Y and isOpenAccess N for PMC4935222 (author manuscript) on 2026-10-20; the Internet Archive capture of the PMC page returned HTTP 200 with the whole text and the reference list.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

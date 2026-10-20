@@ -94,12 +94,16 @@ def fetch_pubmed(pmid: str) -> dict:
     title = "".join(art.find(".//ArticleTitle").itertext()) if art is not None and art.find(".//ArticleTitle") is not None else ""
     first = art.find(".//AuthorList/Author/LastName") if art is not None else None
     doi = None
-    for e in (art.findall(".//ELocationID") if art is not None else []):
-        if e.get("EIdType") == "doi":
+    # The article's OWN identifiers only. `.//ArticleId` also matches every entry of the
+    # reference list (PubmedData/ReferenceList), and taking the last match returned the DOI of
+    # a cited paper: PMID 17567906 (BMC Mol Biol, no ELocationID) was reported TITLE_MISMATCH
+    # against a Neuroscience 2004 paper it cites (2026-10-19, scientist-d).
+    for e in (art.findall("./MedlineCitation/Article/ELocationID") if art is not None else []):
+        if e.get("EIdType") == "doi" and doi is None:
             doi = (e.text or "").strip()
     if doi is None and art is not None:
-        for e in art.findall(".//ArticleId"):
-            if e.get("IdType") == "doi":
+        for e in art.findall("./PubmedData/ArticleIdList/ArticleId"):
+            if e.get("IdType") == "doi" and doi is None:
                 doi = (e.text or "").strip()
     return {"pmid": pmid, "title": title, "doi": doi, "first_author": first.text if first is not None else None}
 

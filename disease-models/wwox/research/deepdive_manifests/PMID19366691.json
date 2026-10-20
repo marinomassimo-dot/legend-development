@@ -1,0 +1,489 @@
+{
+ "schema_version": 2,
+ "pmid": "19366691",
+ "doi": "10.1074/jbc.m806688200",
+ "receipt": "FTR-20261019-19366691-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named from wave-1 reading debts and deduplicated by the per-paper M0 packet and the receipt status check run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate and the analysis note; the discovery ledger is a shared single-writer file appended by the Orchestrator at integration."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "The Chang laboratory (Guthrie Research Institute and National Cheng Kung University, from the affiliations) that wrote most of the WOX1 stress-signalling literature. Primary for WWOX/TGF-beta/hyaluronidase signalling in cultured cells; not a Wwox-null, neurological or metabolic group. Observation (blots, counts, images) weighed above the signalling schemes of Figure 10, which the text offers as 'likely' paths."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (TGF-beta OR TGFB1)",
+    "count": 25,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND hyaluronidase",
+    "count": 12,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts, dated."
+ },
+ "multihop": {
+  "references_enumerated": 57,
+  "gene_direct_refs_in_source": [
+   "Chang 2000 hyaluronidase induction of WOX1 (PMID 11058590)",
+   "Chang 2005 WOX1 essential for TNF and p53 death (PMID 16219768)",
+   "Chang 2003 JNK1 (PMID 12514174)",
+   "Chen 2005 retinal damage, Tyr33, mitochondrial translocation (PMID 15664696)",
+   "Lo 2008 MPP+ and Tyr33 (PMID 18371080)",
+   "Hsu 2008 Zfra and cytochrome c release (PMID 18403180)",
+   "Aqeilan 2007 targeted deletion (PMID 17360458)",
+   "Aqeilan 2008 bone metabolism (PMID 18487609)",
+   "Aqeilan 2008 steroidogenesis (PMID 18974271)",
+   "Ludes-Meyers 2007 hypomorphic mice (PMID 17823927)"
+  ],
+  "resolved": [
+   {
+    "pmid": "17360458",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "18487609",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "18974271",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "17823927",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "26355344",
+    "state": "complete receipt in the ledger; this paper is its ref 9"
+   }
+  ],
+  "queued": [
+   {
+    "pmid": "18371080",
+    "queue": "debt of this actor's lot, DEBT-WWOX-DIRECT-D-20261019",
+    "note": "Lo 2008, named in the paper's mitochondrial sentence"
+   },
+   {
+    "pmid": "15664696",
+    "queue": "debt of this actor's lot, DEBT-WWOX-DIRECT-D-20261019",
+    "note": "Chen 2005"
+   },
+   {
+    "pmid": "18403180",
+    "queue": "debt of this actor's lot, DEBT-WWOX-DIRECT-D-20261019",
+    "note": "Hsu 2008, named for cytochrome c release"
+   },
+   {
+    "pmid": "16219768",
+    "queue": "proposed in CC-20261019-SCIENTISTD-DEBT-01; no FT identifier minted by a Scientist",
+    "note": "Chang 2005"
+   },
+   {
+    "pmid": "11058590",
+    "queue": "proposed in CC-20261019-SCIENTISTD-DEBT-01; no FT identifier minted by a Scientist",
+    "note": "Chang 2000, the hyaluronidase-induction primary"
+   }
+  ],
+  "note": "57 references enumerated (Europe PMC references endpoint and the archived article page). Thirty-three are gene-direct by title; four mouse-model primaries carry complete receipts; the mitochondrial sentence of this paper rests on three unread primaries."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 19366691 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed efetch for PMID 19366691: publication types ['Journal Article', \"Research Support, Non-U.S. Gov't\", \"Research Support, U.S. Gov't, Non-P.H.S.\"]; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [
+    {
+     "citing_relation": "Citation only: the 2005 PNAS lung-cancer WWOX restoration paper is cited twice in the Introduction (ref 22) among sources for ectopic WOX1 inhibiting tumour growth in vivo; no measurement, reagent or conclusion of this paper uses its data.",
+     "doi": "10.1073/pnas.0505485102",
+     "nature": "Expression of concern",
+     "reason_verbatim": "Concerns/Issues about Data;Duplication of/in Image;Error in Image;Investigation by Company/Institution;Original Data and/or Images not Provided and/or not Available;",
+     "retraction_date": "4/3/2017 0:00",
+     "retraction_pmid": "28373548",
+     "verdict": "FLAGGED_EXPRESSION_OF_CONCERN"
+    }
+   ],
+   "noted": [],
+   "paper_verdict": "FLAGGED_EXPRESSION_OF_CONCERN",
+   "reference_source": "cache",
+   "references_declared": 57,
+   "references_screened": 54,
+   "references_with_doi": 54,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID19366691_Hsu2009_PMC2708898_wayback20251104.html",
+   "sha256": "acf05c055300fd156d1f4e7482aff02a373b8aa113f6708e9d17a581bbdc3d30",
+   "kind": "article_text",
+   "note": "Internet Archive capture (2025-11-04) of the PMC article page for PMC2708898, raw bytes with the id_ modifier; PMC deposit of a JBC article. The Europe PMC fullTextXML endpoint returned HTTP 500 for this PMCID and the PMC PDF is behind a challenge; the archived page carries the full text. Every text locator is matched against this surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://web.archive.org/web/20251104151642id_/https://pmc.ncbi.nlm.nih.gov/articles/PMC2708898/",
+    "http_method": "GET",
+    "tier": "Internet Archive Wayback capture of the PMC page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "acf05c055300fd156d1f4e7482aff02a373b8aa113f6708e9d17a581bbdc3d30"
+   }
+  },
+  {
+   "path": "files/figures/PMID19366691/fig1.jpg",
+   "sha256": "1e5689c8fc0481d4c6c8498f451fd5d71b619819967b832c9daf01642be653a9",
+   "kind": "figure",
+   "note": "Figure 1 JPEG from the PMC blob store (nuclear fractionation time courses), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/415c/2708898/f71ea298d6e6/zbc0280979030001.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "1e5689c8fc0481d4c6c8498f451fd5d71b619819967b832c9daf01642be653a9"
+   }
+  },
+  {
+   "path": "files/figures/PMID19366691/fig3.jpg",
+   "sha256": "0c891e010929b719afcf013a9e5a0eb22a228d19fbd02587c77720a6302d3a61",
+   "kind": "figure",
+   "note": "Figure 3 JPEG from the PMC blob store (Hyal-2 antisense, TGF-beta1 binding, antiserum), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/415c/2708898/cfa850709cb4/zbc0280979030003.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "0c891e010929b719afcf013a9e5a0eb22a228d19fbd02587c77720a6302d3a61"
+   }
+  },
+  {
+   "path": "files/figures/PMID19366691/fig5.jpg",
+   "sha256": "f490683a4b5a88f733d2b08007e7a75faf25de543c4385989ccd0a5bde1fd256",
+   "kind": "figure",
+   "note": "Figure 5 JPEG from the PMC blob store (immunogold EM and counts), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/415c/2708898/fb59b98e4bc1/zbc0280979030005.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "f490683a4b5a88f733d2b08007e7a75faf25de543c4385989ccd0a5bde1fd256"
+   }
+  },
+  {
+   "path": "files/figures/PMID19366691/fig6.jpg",
+   "sha256": "ebd14d2501aee2d1092220aaf23c287ac43cb83dfb8805c991ff7ac7e8105e87",
+   "kind": "figure",
+   "note": "Figure 6 JPEG from the PMC blob store (FRET time course), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/415c/2708898/f18dfc41b580/zbc0280979030006.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "ebd14d2501aee2d1092220aaf23c287ac43cb83dfb8805c991ff7ac7e8105e87"
+   }
+  },
+  {
+   "path": "files/figures/PMID19366691/fig7.jpg",
+   "sha256": "3065baae7b11b587587393febea0ba55d662f9fc8d7910344a0f86ce6cb355f7",
+   "kind": "figure",
+   "note": "Figure 7 JPEG from the PMC blob store (yeast two-hybrid), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/415c/2708898/9587ee59cacb/zbc0280979030007.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "3065baae7b11b587587393febea0ba55d662f9fc8d7910344a0f86ce6cb355f7"
+   }
+  },
+  {
+   "path": "files/figures/PMID19366691/fig8.jpg",
+   "sha256": "de39f69dd20a7540ca3b5cd667823c38be5657f4ca92dd3659615e1ac75a8fdd",
+   "kind": "figure",
+   "note": "Figure 8 JPEG from the PMC blob store (co-immunoprecipitation), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/415c/2708898/dc16327c7bc1/zbc0280979030008.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "de39f69dd20a7540ca3b5cd667823c38be5657f4ca92dd3659615e1ac75a8fdd"
+   }
+  },
+  {
+   "path": "files/figures/PMID19366691/fig9.jpg",
+   "sha256": "53980c6482de17dcccf0d5598b78bacbcae8e5f28fb5ac6acc61961b43ff8de2",
+   "kind": "figure",
+   "note": "Figure 9 JPEG from the PMC blob store (Smad promoter reporter), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/415c/2708898/072b818752a3/zbc0280979030009.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "53980c6482de17dcccf0d5598b78bacbcae8e5f28fb5ac6acc61961b43ff8de2"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The WWOX gain is mouse WOX1 or human WWOX overexpression in L929 and HCT116 cells; the only perturbations of function are a dominant-negative WOX1 and a Hyal-2 antisense construct.",
+    "snippet": "We selected an antisense construct which allows expression of EGFP and a short stretch of antisense mRNA for Hyal-2, designated EGFP-Hyal-2(as).",
+    "anchor": "Experimental Procedures, cDNA Expression Constructs",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID19366691_Hsu2009_PMC2708898_wayback20251104.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "mouse L929 fibroblasts and human HCT116 colorectal cells (type II TGF-beta receptor deficient); yeast two-hybrid",
+     "genotype": "no Wwox allele altered; overexpression of mouse WOX1, Hyal-2 catalytic domain, Smad4; dominant-negative WOX1; Hyal-2 antisense",
+     "treatment": "TGF-beta1 5 ng/ml",
+     "endpoint": "nuclear fractionation blots, FRET, immunogold counts, co-IP, promoter-reporter cell counts"
+    }
+   },
+   {
+    "proposition": "The evidence that Tyr33 phosphorylation is required for binding Hyal-2 is a yeast substitution (Y33R) and a dominant-negative WOX1 that lowers the complex by about a third in HCT116 cells; phosphorylation itself is not measured in the yeast assay.",
+    "snippet": "No binding interaction was observed using a phosphorylation mutant, Wox1ww(Y33R), indicating an essential role of Tyr-33 phosphorylation in the binding.",
+    "anchor": "Results, Hyal-2 Binds WOX1 at the Tyr-33-phosphorylated First WW Domain",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID19366691_Hsu2009_PMC2708898_wayback20251104.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "yeast cytoplasmic Ras-rescue two-hybrid",
+     "genotype": "WOX1 bait with Y33R substitution",
+     "endpoint": "growth at 37 C"
+    }
+   },
+   {
+    "proposition": "The mitochondrial statement of the Discussion is an inference from earlier papers, not a result of this paper: no mitochondrial fraction or marker is measured here.",
+    "snippet": "Thus, Hyal-2 and WOX1 are likely to co-translocate, as complexes, to the mitochondria during apoptosis.",
+    "anchor": "Discussion, paragraph 8",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID19366691_Hsu2009_PMC2708898_wayback20251104.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "mouse L929 fibroblasts and human HCT116 colorectal cells (type II TGF-beta receptor deficient); yeast two-hybrid",
+     "genotype": "no Wwox allele altered; overexpression of mouse WOX1, Hyal-2 catalytic domain, Smad4; dominant-negative WOX1; Hyal-2 antisense",
+     "treatment": "TGF-beta1 5 ng/ml",
+     "endpoint": "nuclear fractionation blots, FRET, immunogold counts, co-IP, promoter-reporter cell counts"
+    }
+   },
+   {
+    "proposition": "The same Discussion paragraph rests its WWOX mitochondrial statements on a block of earlier references (retinal damage, MPP+ rat, cytochrome c release), each from the same group.",
+    "snippet": "Under stress conditions, WOX1 translocates to the mitochondria both in vitro and in vivo (9, 19, 42, 43) and causes cytochrome c release from the mitochondria (44).",
+    "anchor": "Discussion, paragraph 8",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID19366691_Hsu2009_PMC2708898_wayback20251104.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "mouse L929 fibroblasts and human HCT116 colorectal cells (type II TGF-beta receptor deficient); yeast two-hybrid",
+     "genotype": "no Wwox allele altered; overexpression of mouse WOX1, Hyal-2 catalytic domain, Smad4; dominant-negative WOX1; Hyal-2 antisense",
+     "treatment": "TGF-beta1 5 ng/ml",
+     "endpoint": "nuclear fractionation blots, FRET, immunogold counts, co-IP, promoter-reporter cell counts"
+    }
+   },
+   {
+    "proposition": "The promoter-activation readout is a count of fluorescent cells per field, and the cells scored positive are dying: 98 and 95 percent of promoter-activated cells are dead by nuclear staining.",
+    "snippet": "Notably, there was 98 and 95% death in the promoter-activated cells transfected with WOX1·Hyal-2 and WOX1·Smad4, respectively",
+    "anchor": "Results, WOX1 and Hyal-2 Synergistically Enhance the Promoter Activation Driven by Smad Proteins",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID19366691_Hsu2009_PMC2708898_wayback20251104.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "mouse L929 fibroblasts and human HCT116 colorectal cells (type II TGF-beta receptor deficient); yeast two-hybrid",
+     "genotype": "no Wwox allele altered; overexpression of mouse WOX1, Hyal-2 catalytic domain, Smad4; dominant-negative WOX1; Hyal-2 antisense",
+     "treatment": "TGF-beta1 5 ng/ml",
+     "endpoint": "nuclear fractionation blots, FRET, immunogold counts, co-IP, promoter-reporter cell counts"
+    }
+   },
+   {
+    "proposition": "The electron-microscopy complex counts are averages of a few random areas, and the text still states that nuclear accumulation increased with time.",
+    "snippet": "Nuclear accumulation of these complexes either on nuclear envelopes or in nuclei was increased upon exposure to TGF-β1 with time (Fig. 5C).",
+    "anchor": "Results, TGF-beta1 Increases the Complex Formation of Hyal-2 and WOX1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID19366691_Hsu2009_PMC2708898_wayback20251104.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "mouse L929 fibroblasts and human HCT116 colorectal cells (type II TGF-beta receptor deficient); yeast two-hybrid",
+     "genotype": "no Wwox allele altered; overexpression of mouse WOX1, Hyal-2 catalytic domain, Smad4; dominant-negative WOX1; Hyal-2 antisense",
+     "treatment": "TGF-beta1 5 ng/ml",
+     "endpoint": "nuclear fractionation blots, FRET, immunogold counts, co-IP, promoter-reporter cell counts"
+    }
+   },
+   {
+    "proposition": "The agonist claim for the Hyal-2 antiserum rests on one antiserum against a 15-residue peptide, without a Hyal-2-null control.",
+    "snippet": "These observations suggest that our produced Hyal-2 antibody acts as a specific agonist in inducing WOX1 nuclear relocation or activation.",
+    "anchor": "Results, TGF-beta1 Binds Cell Surface Hyal-2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID19366691_Hsu2009_PMC2708898_wayback20251104.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "mouse L929 fibroblasts and human HCT116 colorectal cells (type II TGF-beta receptor deficient); yeast two-hybrid",
+     "genotype": "no Wwox allele altered; overexpression of mouse WOX1, Hyal-2 catalytic domain, Smad4; dominant-negative WOX1; Hyal-2 antisense",
+     "treatment": "TGF-beta1 5 ng/ml",
+     "endpoint": "nuclear fractionation blots, FRET, immunogold counts, co-IP, promoter-reporter cell counts"
+    }
+   },
+   {
+    "proposition": "The same-cell-type replication of the promoter result in L929 cells is stated as data not shown.",
+    "snippet": "The experiment was also carried out in L929 cells, which showed similar results (data not shown).",
+    "anchor": "Results, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID19366691_Hsu2009_PMC2708898_wayback20251104.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "mouse L929 fibroblasts and human HCT116 colorectal cells (type II TGF-beta receptor deficient); yeast two-hybrid",
+     "genotype": "no Wwox allele altered; overexpression of mouse WOX1, Hyal-2 catalytic domain, Smad4; dominant-negative WOX1; Hyal-2 antisense",
+     "treatment": "TGF-beta1 5 ng/ml",
+     "endpoint": "nuclear fractionation blots, FRET, immunogold counts, co-IP, promoter-reporter cell counts"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 1: nuclear fraction of WOX1, p-WOX1, p-ERK and Smad4 as percent of time zero. In L929 cells (A) WOX1 peaks about 160 percent at 10 min and falls to about 50 percent by 80 min while p-WOX1 stays about 180 percent; in HCT116 cells (B) all four rise to 125-150 percent at 10 min and fall to about 30 percent by 40 min.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1A L929 and 1B HCT116 blots (cyto and nucl lanes at 0-80 min for WOX1, p-WOX1, p-ERK, Smad4, alpha-tubulin) with line plots of percent nuclear localization of proteins versus TGF-beta1 treatment (min).",
+    "anchor": "Figure 1, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID19366691/fig1.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "mouse L929 fibroblasts and human HCT116 colorectal cells (type II TGF-beta receptor deficient); yeast two-hybrid",
+     "genotype": "no Wwox allele altered; overexpression of mouse WOX1, Hyal-2 catalytic domain, Smad4; dominant-negative WOX1; Hyal-2 antisense",
+     "treatment": "TGF-beta1 5 ng/ml",
+     "endpoint": "nuclear fractionation blots, FRET, immunogold counts, co-IP, promoter-reporter cell counts"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 5C: immunogold counts of WOX1 with Hyal-2 particles per 2.5 square micrometres at 0, 0.5, 1 and 6 h in cell membrane, cytoplasm, nuclear membrane and nucleus; one bar per location and time, no error bars; nucleus about 7, 4, 3 and 22; the 1 h nuclear value is below the untreated value.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 5C bar chart y-axis Particles per 2.5 um2 (0-25), x-axis TGF-beta1 treatment (hr) 0, 0.5, 1, 6, legend Cell membrane, Cytoplasm, Nuclear membrane, Nucleus.",
+    "anchor": "Figure 5C, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID19366691/fig5.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "mouse L929 fibroblasts and human HCT116 colorectal cells (type II TGF-beta receptor deficient); yeast two-hybrid",
+     "genotype": "no Wwox allele altered; overexpression of mouse WOX1, Hyal-2 catalytic domain, Smad4; dominant-negative WOX1; Hyal-2 antisense",
+     "treatment": "TGF-beta1 5 ng/ml",
+     "endpoint": "nuclear fractionation blots, FRET, immunogold counts, co-IP, promoter-reporter cell counts"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 6B and 6C: FRET images and a time course of percent increase in WOX1-Hyal-2 binding after TGF-beta1 in L929 cells (n = 5); about 100 percent at 0, about 170 percent at 20 min, about 25 percent at 240 min.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 6C bar chart percent increase in binding versus TGF-beta1 treatment 0, 10, 20, 40, 60, 80, 120, 240 min, peak at 20 min, error bars; 6B FRET and FRETc images at 0, 20 and 120 min.",
+    "anchor": "Figure 6, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID19366691/fig6.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "mouse L929 fibroblasts and human HCT116 colorectal cells (type II TGF-beta receptor deficient); yeast two-hybrid",
+     "genotype": "no Wwox allele altered; overexpression of mouse WOX1, Hyal-2 catalytic domain, Smad4; dominant-negative WOX1; Hyal-2 antisense",
+     "treatment": "TGF-beta1 5 ng/ml",
+     "endpoint": "nuclear fractionation blots, FRET, immunogold counts, co-IP, promoter-reporter cell counts"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 8: co-immunoprecipitation blots in L929 (A) and HCT116 (B) with and without TGF-beta1 and with dominant-negative WOX1 (C); single blots, no densitometry panel (the 32 percent reduction is given in the legend).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 8A IP anti-WOX1 IgG L929 blots IgH, WOX1, Hyal-2 with Pre-IP; 8B IP anti-p-WOX1 HCT116; 8C IP anti-Hyal-2 HCT116 with EGFP (1) or DN-WOX1 (2).",
+    "anchor": "Figure 8, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID19366691/fig8.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "mouse L929 fibroblasts and human HCT116 colorectal cells (type II TGF-beta receptor deficient); yeast two-hybrid",
+     "genotype": "no Wwox allele altered; overexpression of mouse WOX1, Hyal-2 catalytic domain, Smad4; dominant-negative WOX1; Hyal-2 antisense",
+     "treatment": "TGF-beta1 5 ng/ml",
+     "endpoint": "nuclear fractionation blots, FRET, immunogold counts, co-IP, promoter-reporter cell counts"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 9: Smad-promoter reporter, number of positive cells per field in HCT116 cells; about 0 for promoter alone, about 45 WOX1, about 20 Hyal-2, about 238 WOX1 plus Hyal-2, about 10 Smad4, about 128 Smad4 plus WOX1, about 20 DN-WOX1 and about 8 with Smad4 plus DN-WOX1; the kit positive control is about 40.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 9 bar chart 'Number of positive cells per field' 0-300 with ten bars: 1 Negative, 2 Positive, 3 SP, 4 Hyal-2/SP, 5 WOX1/SP, 6 WOX1/Hyal-2/SP, 7 Smad4/SP, 8 Smad4/WOX1/SP, 9 DN-WOX1/SP, 10 Smad4/DN-WOX1/SP.",
+    "anchor": "Figure 9, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID19366691/fig9.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "mouse L929 fibroblasts and human HCT116 colorectal cells (type II TGF-beta receptor deficient); yeast two-hybrid",
+     "genotype": "no Wwox allele altered; overexpression of mouse WOX1, Hyal-2 catalytic domain, Smad4; dominant-negative WOX1; Hyal-2 antisense",
+     "treatment": "TGF-beta1 5 ng/ml",
+     "endpoint": "nuclear fractionation blots, FRET, immunogold counts, co-IP, promoter-reporter cell counts"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search returned inEPMC Y and isOpenAccess N for PMC2708898 (PMC author deposit) on 2026-10-19; fullTextXML returned HTTP 500; the Internet Archive capture of the PMC page returned HTTP 200 with the body sections, ten figures and the reference list.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

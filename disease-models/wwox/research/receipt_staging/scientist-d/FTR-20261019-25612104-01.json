@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-25612104-01",
+ "study_id": {
+  "pmid": "25612104",
+  "doi": "10.1371/journal.pone.0115353"
+ },
+ "analysis_at": "2026-10-20T06:08:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d (stated assumption of the Orchestrator), task DEBT-WWOX-DIRECT-D-20261019 wave 2; context_policy SOURCE_FIRST (nothing held beyond the title; opened as a reference of the Cheng 2016 paper). Route: Europe PMC JATS for PMC4303423 as the text surface and the PLOS printable PDF rendered with pdftoppm; Figure 1 and Table 6 opened as a page render; Tables 1-5 read as text; whole article read. Supplementary Figures S1-S16 (a methylation gel and chromatograms) were not retrieved: the supplement is declared not read.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID25612104_Ekizoglu2015_PMC4303423.xml",
+ "source_fingerprint": "65e47f8bc62c83b8cc473dd356bd9ca0b8f9819997048210db96fa905a4caf0c",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID25612104.json",
+  "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-02.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "Figure 1 and Table 6 inspected on a page render at 110 dpi",
+  "Tables 1-5 read as text",
+  "supplementary Figs S1-S16 (gel and chromatograms) not retrieved: declared debt"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

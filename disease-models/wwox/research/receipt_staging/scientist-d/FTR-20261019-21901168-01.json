@@ -1,0 +1,40 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-21901168-01",
+ "study_id": {
+  "pmid": "21901168",
+  "doi": "10.1177/1947601911418498"
+ },
+ "analysis_at": "2026-10-19T19:47:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d (stated assumption of the Orchestrator), task DEBT-WWOX-DIRECT-D-20261019; context_policy QUESTION_DRIVEN (held: the Huang 2018 review read earlier in this wave, which cites this paper for WWOX relocating to mitochondria after the WWOX/MEK1 complex dissociates). Route: Internet Archive capture of the PMC page as the text surface and seven figure JPEGs from the PMC blob store named in it; Figures 1-7 inspected as images; whole article read. Supplementary Figures S1-S12 (one index page in PMC) were not retrieved; the supplement is declared not read.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID21901168_Lin2011_PMC3161421_wayback20250315.html",
+ "source_fingerprint": "5bb8693d1f3c1b36a702aff371629b1e26dca32bc5672a1d30ed967f299c206a",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID21901168.json",
+  "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "Figures 1-7 inspected as images (Figures 2, 3 and 7 inspected, not all declared)",
+  "supplementary Figs S1-S12 not retrieved: declared debt"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

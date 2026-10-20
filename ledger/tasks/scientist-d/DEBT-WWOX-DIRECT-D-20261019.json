@@ -29,6 +29,131 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-19"
+ "CURRENT_STATE": "COMPLETE_UNLANDED",
+ "assigned_on": "2026-10-19",
+ "TASK_ACK": {
+  "TASK_ID": "DEBT-WWOX-DIRECT-D-20261019",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "decision": "ACCEPTED",
+  "at": "2026-10-19T19:16:49Z"
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "DEBT-WWOX-DIRECT-D-20261019",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-d",
+  "timestamp": "2026-10-19T19:16:49Z",
+  "durable_pointer": "branch task/DEBT-WWOX-DIRECT-D-20261019, worktree .claude/worktrees/debt-d",
+  "note": "scientist-d is a stated assumption of the Orchestrator for this batch"
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "legend_commit.sh refused each manifest commit as STALE (pathograph drift) while peers and the Orchestrator work in parallel",
+   "default": "committed with LEGEND_STALE_SURFACES_BECAUSE naming the parallel batch; derived surfaces left to the Orchestrator",
+   "why_safe": "the dispatch brief says shared derived surfaces are regenerated only when all inputs are committed",
+   "would_have_differed": "a single-actor wave would regenerate the pathograph first"
+  },
+  {
+   "condition": "Europe PMC fullTextXML returned HTTP 500 for four author-manuscript PMC deposits (Hsu 2009, Lin 2011, Huang 2016, Huang 2018)",
+   "default": "used the Internet Archive capture of the PMC page as the text surface and the figure blobs it names; recorded the capture timestamp and digest in the manifests; supplements declared not_read",
+   "why_safe": "lawful free-to-read deposits; the surface is verified by the validator against its SHA-256; coverage understated",
+   "would_have_differed": "a working XML endpoint would have been preferred"
+  },
+  {
+   "condition": "fifteen listed debts have no lawful body obtainable (subscription or publisher bot challenge)",
+   "default": "parked with the cascade run; no Sci-Hub-type source, no keyed publisher API, no paid retrieval; wishlist in best-value order in the commit candidate",
+   "why_safe": "reserved acts (external spend, unlawful retrieval) not taken",
+   "would_have_differed": "an operator-supplied PDF would be read at once"
+  },
+  {
+   "condition": "scope: read eight papers, four of them not named in the contract (Lee 2017, Lin 2011, Huang 2016, Lee 2021, chased from the named papers' reference lists); the other four (Chen 2018, Hong 2007, Hsu 2009, Huang 2018) are named debts",
+   "default": "followed the debt chain to the primaries behind the named papers' load-bearing sentences and to the one metabolic-theme review not yet read",
+   "why_safe": "inside the theme and the lot's intent; each reading has a manifest PASS and a staged receipt; none touches a current file",
+   "would_have_differed": "a strict reading of the contract list would have stopped at three read and the rest parked"
+  },
+  {
+   "condition": "a blind audit found one overshoot in my own committed locator proposition (Lee 2021, region versus gene)",
+   "default": "narrowed the manifest proposition with a declared contradicts_locator (audit object attached) and the note text; ran locator_contradiction_audit.py --working-tree --fail-on-undeclared clean",
+   "why_safe": "the correction path of the standing brief",
+   "would_have_differed": "none"
+  },
+  {
+   "condition": "task_close.py refused to land: the root checkout holds the Orchestrator's in-flight BATCH_20261019_001 changes (state manifest modified, a mirror review untracked); global session_self_eval and lint BLOCK_BATCH_COMMIT lines name peers' receipts recorded by the Orchestrator, none names this task's eight PMIDs",
+   "default": "left task/DEBT-WWOX-DIRECT-D-20261019 committed and unlanded (commit ccb0be90 and its parents); reported, not fixed; the Orchestrator lands it with task_close.py or a merge after its batch",
+   "why_safe": "never touch the four current files, the registries or the ledger, nor another actor's in-flight files",
+   "would_have_differed": "a quiet root checkout would have been landed by this actor"
+  }
+ ],
+ "STOP_LOG": [],
+ "WAVE_RESULT": {
+  "papers_read": 8,
+  "complete": 4,
+  "partial": 4,
+  "parked": 15,
+  "receipts_staged": [
+   "FTR-20261019-29675105-01",
+   "FTR-20261019-17567906-01",
+   "FTR-20261019-19366691-01",
+   "FTR-20261019-29310447-01",
+   "FTR-20261019-28426730-01",
+   "FTR-20261019-21901168-01",
+   "FTR-20261019-27339895-01",
+   "FTR-20261019-34210081-01"
+  ],
+  "outputs": [
+   "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+   "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-01.md",
+   "disease-models/wwox/research/session_evaluations/2026-10-19_debts_scientist-d.md"
+  ],
+  "micro_upgrade": "pubmed_identity_check takes the article's own DOI (regression added)"
+ },
+ "WAVE_2_RESULT": {
+  "papers_read": 9,
+  "new": 6,
+  "resumed": 3,
+  "parked_added": 6,
+  "receipts_staged": [
+   "FTR-20261019-25416187-01",
+   "FTR-20261019-27999774-01",
+   "FTR-20261019-25686832-01",
+   "FTR-20261019-22484428-01",
+   "FTR-20261019-27655721-01",
+   "FTR-20261019-25612104-01",
+   "FTR-20261019-19918364-02",
+   "FTR-20261019-26302329-02",
+   "FTR-20261019-24008736-03"
+  ],
+  "outputs": [
+   "disease-models/wwox/research/debts_wave_20261019_scientist-d.md (Wave 2 sections)",
+   "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-02.md",
+   "disease-models/wwox/research/session_evaluations/2026-10-19_debts_scientist-d.md (wave 2 addendum)"
+  ],
+  "DEFAULTS_TAKEN": [
+   {
+    "condition": "two entries of my own queue list were wrong (Hong 2009 already resumed by scientist-a in another branch; Park 2004 already complete)",
+    "default": "did not read Hong 2009 (duplicate); corrected the list in the candidate and the note",
+    "why_safe": "avoids a duplicated assignment",
+    "would_have_differed": "a clean list would have read both"
+   },
+   {
+    "condition": "the coordinator said not to land the branch (root busy with a corrective batch)",
+    "default": "kept task/DEBT-WWOX-DIRECT-D-20261019 committed and unlanded",
+    "why_safe": "explicit instruction",
+    "would_have_differed": "none"
+   },
+   {
+    "condition": "the PMC deposit's supplement for Tsai 2013 is another article's",
+    "default": "retrieved the article's own supplement from the publisher's page and superseded the earlier 'not retrievable' note with a declared SUPERSEDED sentence; no persisted locator text changed",
+    "why_safe": "audit clean; the checker reports no undeclared revision",
+    "would_have_differed": "a contradiction declaration would have been needed had a locator changed"
+   },
+   {
+    "condition": "max twelve papers; nine read; remaining open items are subscription or bot-challenged, or not triaged (two)",
+    "default": "stopped at nine with the rest parked or named; not out of context",
+    "why_safe": "within the cap and the lawful-body rule",
+    "would_have_differed": "an operator PDF would add readings"
+   }
+  ],
+  "STOP_LOG": []
+ }
 }

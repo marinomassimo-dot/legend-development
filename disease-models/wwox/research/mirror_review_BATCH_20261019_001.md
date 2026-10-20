@@ -20,7 +20,7 @@ The batch discharged a real registry debt (23 orphan complete reads) with record
 
 - Diff of `claim_registry_current.md` and `working_model_current.md` from `d956ded7`: the only changed lines are the `CLAIM 042` evidence-boundary line, the `CLAIM 001` additional-observations line, and the WM `Version` and `Last update` lines. No Status, Type, Summary or baseline sentence moved.
 - Sampled 17 of 64 PAPER records (250, 254, 261, 262, 263, 265, 267, 268, 269, 278, 291, 294, 295, 296, 299, 302 and 310), 6 LIT records (0549, 0561, 0565, 0575, 0590, 0603) and all 22 new leads, against the dossiers and, for PAPER 263, a live PubMed metadata query.
-- Scan of 15,909 added lines in `disease-models` and `framework/state`: 0 e-mail strings, 0 parent-of-origin or pedigree-allele attributions about the reference genotype (the only family terms are sibling and consanguinity facts of third-party published case reports), and no new truncated digest. The four `sha256 xxxxxxxx…` truncations in PAPER 097 were already in `d956ded7` and are quoted history.
+- Scan of 15,909 added lines in `disease-models` and `framework/state`: 0 e-mail strings, 0 transmission or pedigree-allele attributions about the reference genotype (the only family terms are sibling and consanguinity facts of third-party published case reports), and no new truncated digest. The four `sha256 xxxxxxxx…` truncations in PAPER 097 were already in `d956ded7` and are quoted history.
 
 ## Findings
 
