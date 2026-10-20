@@ -1000,3 +1000,17 @@ catalytic-dead control, a titration. The missing item is the experiment, not the
 **Cost / API / privacy risk:** none. The auto-mode classifier refused one dry-run of `record_scoped_edit.py apply` against the shared registry; the op list was shipped in the candidate with the refusal stated and the `old` string verified by a count in the branch's own file.
 
 **Next surgical micro-step:** none required; the integrator dry-runs the DL-MECH-012 op list before applying.
+
+---
+
+## 2026-10-20 — scientist-b, gold wave (task `GOLD-LEGACY-WWOX-B-20261019`)
+
+**Capability gap that emerged (with evidence).** Re-acquiring absent artefacts was repeated by hand for ten papers: eutils esummary for the PMCID, efetch XML, then the PMC open-data bucket listing for figures, supplements and PDF, with the same traps each time (PMC web pages serve a reCAPTCHA; efetch returns a 7.6 kB stub with a publisher comment when XML is forbidden; author-manuscript figures are not in the bucket). One restricted stub was nearly taken for a text; one XML re-fetched four weeks later was byte-identical to the earlier copy (42422765), another differed by digest (39507621), so digests must be recorded per fetch.
+
+**CHANGE (proportional micro-upgrade, shipped).** `framework/scripts/pmc_bucket_fetch.py` does the sequence once, never overwrites, writes only under files/, reports route, HTTP status, size and SHA-256 per file, and returns exit code 2 with `xml_state: restricted_stub` for a stub. Offline suite `framework/scripts/test_pmc_bucket_fetch.py` (stub versus full, bucket-key classification, no-overwrite), in the release battery; routed in `framework/scripts/README.md`. A first draft classified any `<restricted-by>` front-matter tag as a stub and mislabelled a full text; the live smoke test on a known-full paper caught it and the rule was removed.
+
+**Named, not built.** (1) A manifest re-point tool: nine re-reads needed the same operation (map absent artefact names to new files, drop declared-absent artefacts, append locators, declare path-only changes); done by a scratch builder in this run. (2) Absent derived renders (PDF pages at fixed dpi) are regenerated with new digests; a convention for recording "same page, same dpi, new digest" in the artefact note would stop each reader inventing wording.
+
+**Cost / API / privacy risk:** none; no key, no paid service, no personal address sent.
+
+**Next surgical micro-step:** none required.
