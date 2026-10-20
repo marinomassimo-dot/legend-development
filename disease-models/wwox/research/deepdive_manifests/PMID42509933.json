@@ -1,0 +1,414 @@
+{
+ "schema_version": 2,
+ "pmid": "42509933",
+ "doi": "10.3390/children13070908",
+ "receipt": "FTR-20261019-42509933-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID42509933.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A Turkish tertiary paediatric intensive care unit reporting its own consecutive series; primary for the cohort; no external funding; no WWOX work."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "therapeutic plasma exchange AND children AND neuroimmunological",
+    "count": 19,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND plasma exchange",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts at the stated date."
+ },
+ "multihop": {
+  "references_enumerated": 25,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42509933 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 42509933: publication types ['Journal Article']; correction/retraction link markers in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 25,
+   "references_screened": 23,
+   "references_with_doi": 23,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42509933_Sahin2026_PMC.xml",
+   "sha256": "8bf0e1bcb92be7ccb3a2dc998221fb2ee60f1a258b73d7013edd6443e919f121",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC13407348: abstract, body, Tables 1-3 (Table 2 is the 22-row per-patient table), 25 references; no figures.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13407348/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID42509933/children-13-00908-s001.zip",
+   "sha256": "abc47a86eabd58262c264411b29f663a7f8790ea78d3323a4984529f95fb3445",
+   "kind": "supplement_binary",
+   "note": "Europe PMC supplementaryFiles member (zip) holding the supplementary PDF.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13407348/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID42509933/children-4402418-supplementary.pdf",
+   "sha256": "894bd0ffda7076d8842f54c89010c64a0010cce1c9874c1834a85ac9093d7b8c",
+   "kind": "supplement_binary",
+   "note": "Supplementary Tables S1-S3, extracted unchanged from the zip.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_python_zipfile",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "894bd0ffda7076d8842f54c89010c64a0010cce1c9874c1834a85ac9093d7b8c",
+    "derived_from": "files/figures/PMID42509933/children-13-00908-s001.zip",
+    "extractor": {
+     "name": "python zipfile extractall (member unchanged)",
+     "version": "python 3.12",
+     "call": "zipfile.ZipFile(...).extractall"
+    }
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42509933_Sahin2026_supplement/supp.txt",
+   "sha256": "2770f7a5efbd862608dde8d7a0f6d90e3b64cb40f388405da7b0037694df6bb6",
+   "kind": "supplement_text",
+   "note": "DERIVED text layer of the supplementary PDF (Tables S1-S3).",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftotext_layout_nopgbrk",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "2770f7a5efbd862608dde8d7a0f6d90e3b64cb40f388405da7b0037694df6bb6",
+    "derived_from": "files/figures/PMID42509933/children-4402418-supplementary.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk children-4402418-supplementary.pdf supp.txt"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID42509933/s_pages/s-1.png",
+   "sha256": "3e8a0705aca853837e16a0425c3593ad671a0d3999a0f2d572085424445f6e74",
+   "kind": "figure",
+   "note": "Supplementary Table S1 page rendered at 90 dpi and inspected.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftoppm_90dpi",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "3e8a0705aca853837e16a0425c3593ad671a0d3999a0f2d572085424445f6e74",
+    "derived_from": "files/figures/PMID42509933/children-4402418-supplementary.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 90 -png children-4402418-supplementary.pdf s"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID42509933/s_pages/s-3.png",
+   "sha256": "3066954078243ff49023e1024915508ad315d77285638fe2d59580e56327f4dc",
+   "kind": "figure",
+   "note": "Supplementary Table S3 page rendered at 90 dpi and inspected.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftoppm_90dpi",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "3066954078243ff49023e1024915508ad315d77285638fe2d59580e56327f4dc",
+    "derived_from": "files/figures/PMID42509933/children-4402418-supplementary.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 90 -png children-4402418-supplementary.pdf s"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13407348/fullTextXML returned HTTP 200 (121442 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "Design: retrospective observational single-centre study of consecutive children given plasma exchange for neuroimmunological disorders, September 2020 to December 2025.",
+    "snippet": "This retrospective observational study was conducted in the PICU of Sancaktepe",
+    "anchor": "Methods, study design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42509933_Sahin2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "22 children (median age 104 months) who received therapeutic plasma exchange in one tertiary paediatric intensive care unit in Istanbul between 2020 and 2025 for neuroimmunological disorders (6 Guillain-Barre, 6 autoimmune encephalitis, 4 infection-triggered encephalopathy, 3 MOGAD, 2 ADEM, 1 MERS)",
+     "comparator": "none (descriptive, no control group; all patients also received methylprednisolone and/or IVIG, some rituximab)",
+     "endpoint": "discharge Pediatric Cerebral Performance Category (unfavourable = 3 or more, or death), mortality, ventilation, MRI evolution"
+    }
+   },
+   {
+    "proposition": "Replacement fluid was fresh frozen plasma and/or 5 percent albumin by indication, coagulation status and availability, with plasma the predominant fluid; the fluid used in each patient is not tabulated.",
+    "snippet": "Replacement fluid consisted of fresh frozen plasma and/or 5% albumin according to clinical indication",
+    "anchor": "Methods, therapeutic plasma exchange",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42509933_Sahin2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "22 children (median age 104 months) who received therapeutic plasma exchange in one tertiary paediatric intensive care unit in Istanbul between 2020 and 2025 for neuroimmunological disorders (6 Guillain-Barre, 6 autoimmune encephalitis, 4 infection-triggered encephalopathy, 3 MOGAD, 2 ADEM, 1 MERS)",
+     "comparator": "none (descriptive, no control group; all patients also received methylprednisolone and/or IVIG, some rituximab)",
+     "endpoint": "discharge Pediatric Cerebral Performance Category (unfavourable = 3 or more, or death), mortality, ventilation, MRI evolution"
+    }
+   },
+   {
+    "proposition": "TPE was not protocolised and was started after first-line steroids and IVIG in most patients.",
+    "snippet": "The decision to initiate therapeutic plasma exchange (TPE) was not protocolized",
+    "anchor": "Methods, therapeutic plasma exchange",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42509933_Sahin2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "22 children (median age 104 months) who received therapeutic plasma exchange in one tertiary paediatric intensive care unit in Istanbul between 2020 and 2025 for neuroimmunological disorders (6 Guillain-Barre, 6 autoimmune encephalitis, 4 infection-triggered encephalopathy, 3 MOGAD, 2 ADEM, 1 MERS)",
+     "comparator": "none (descriptive, no control group; all patients also received methylprednisolone and/or IVIG, some rituximab)",
+     "endpoint": "discharge Pediatric Cerebral Performance Category (unfavourable = 3 or more, or death), mortality, ventilation, MRI evolution"
+    }
+   },
+   {
+    "proposition": "Outcome definition: unfavourable means a discharge PCPC score of 3 or more or in-hospital death.",
+    "snippet": "Patients with a PCPC score ≥3 and those who died during hospitalization were classified as having an unfavorable neurological outcome.",
+    "anchor": "Methods, outcome measures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42509933_Sahin2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "22 children (median age 104 months) who received therapeutic plasma exchange in one tertiary paediatric intensive care unit in Istanbul between 2020 and 2025 for neuroimmunological disorders (6 Guillain-Barre, 6 autoimmune encephalitis, 4 infection-triggered encephalopathy, 3 MOGAD, 2 ADEM, 1 MERS)",
+     "comparator": "none (descriptive, no control group; all patients also received methylprednisolone and/or IVIG, some rituximab)",
+     "endpoint": "discharge Pediatric Cerebral Performance Category (unfavourable = 3 or more, or death), mortality, ventilation, MRI evolution"
+    }
+   },
+   {
+    "proposition": "Statistics were descriptive and exploratory; no comparator, no adjustment.",
+    "snippet": "Given the descriptive nature of the study and the limited sample size, analyses were primarily exploratory and descriptive.",
+    "anchor": "Methods, statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42509933_Sahin2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "22 children (median age 104 months) who received therapeutic plasma exchange in one tertiary paediatric intensive care unit in Istanbul between 2020 and 2025 for neuroimmunological disorders (6 Guillain-Barre, 6 autoimmune encephalitis, 4 infection-triggered encephalopathy, 3 MOGAD, 2 ADEM, 1 MERS)",
+     "comparator": "none (descriptive, no control group; all patients also received methylprednisolone and/or IVIG, some rituximab)",
+     "endpoint": "discharge Pediatric Cerebral Performance Category (unfavourable = 3 or more, or death), mortality, ventilation, MRI evolution"
+    }
+   },
+   {
+    "proposition": "Headline: favourable outcomes in 14 of 22 (63.6 percent) and three deaths (13.6 percent).",
+    "snippet": "At hospital discharge, favorable neurological outcomes were observed in 14 patients (63.6%)",
+    "anchor": "Results, clinical outcomes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42509933_Sahin2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "22 children (median age 104 months) who received therapeutic plasma exchange in one tertiary paediatric intensive care unit in Istanbul between 2020 and 2025 for neuroimmunological disorders (6 Guillain-Barre, 6 autoimmune encephalitis, 4 infection-triggered encephalopathy, 3 MOGAD, 2 ADEM, 1 MERS)",
+     "comparator": "none (descriptive, no control group; all patients also received methylprednisolone and/or IVIG, some rituximab)",
+     "endpoint": "discharge Pediatric Cerebral Performance Category (unfavourable = 3 or more, or death), mortality, ventilation, MRI evolution"
+    }
+   },
+   {
+    "proposition": "Discussion statement that outcomes among autoimmune encephalitis patients were variable with most experiencing unfavourable discharge outcomes.",
+    "snippet": "Outcomes among patients with autoimmune encephalitis were variable, with most patients experiencing unfavorable neurological outcomes",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42509933_Sahin2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "22 children (median age 104 months) who received therapeutic plasma exchange in one tertiary paediatric intensive care unit in Istanbul between 2020 and 2025 for neuroimmunological disorders (6 Guillain-Barre, 6 autoimmune encephalitis, 4 infection-triggered encephalopathy, 3 MOGAD, 2 ADEM, 1 MERS)",
+     "comparator": "none (descriptive, no control group; all patients also received methylprednisolone and/or IVIG, some rituximab)",
+     "endpoint": "discharge Pediatric Cerebral Performance Category (unfavourable = 3 or more, or death), mortality, ventilation, MRI evolution"
+    }
+   },
+   {
+    "proposition": "The paper itself says the findings are not a measure of TPE efficacy and that no conclusion about comparative effectiveness can be drawn.",
+    "snippet": "These findings should be interpreted within the context of a highly selected cohort of critically ill children rather than as a measure of TPE efficacy.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42509933_Sahin2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "22 children (median age 104 months) who received therapeutic plasma exchange in one tertiary paediatric intensive care unit in Istanbul between 2020 and 2025 for neuroimmunological disorders (6 Guillain-Barre, 6 autoimmune encephalitis, 4 infection-triggered encephalopathy, 3 MOGAD, 2 ADEM, 1 MERS)",
+     "comparator": "none (descriptive, no control group; all patients also received methylprednisolone and/or IVIG, some rituximab)",
+     "endpoint": "discharge Pediatric Cerebral Performance Category (unfavourable = 3 or more, or death), mortality, ventilation, MRI evolution"
+    }
+   },
+   {
+    "proposition": "Limitation: all patients received concomitant immunomodulators, so the independent contribution of plasma exchange cannot be assessed; no control group; discharge-only outcome.",
+    "snippet": "all patients received concomitant immunomodulatory therapies, precluding assessment of the independent therapeutic contribution of plasma exchange",
+    "anchor": "Limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42509933_Sahin2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "22 children (median age 104 months) who received therapeutic plasma exchange in one tertiary paediatric intensive care unit in Istanbul between 2020 and 2025 for neuroimmunological disorders (6 Guillain-Barre, 6 autoimmune encephalitis, 4 infection-triggered encephalopathy, 3 MOGAD, 2 ADEM, 1 MERS)",
+     "comparator": "none (descriptive, no control group; all patients also received methylprednisolone and/or IVIG, some rituximab)",
+     "endpoint": "discharge Pediatric Cerebral Performance Category (unfavourable = 3 or more, or death), mortality, ventilation, MRI evolution"
+    }
+   },
+   {
+    "proposition": "Safety claim: no major TPE-related complications were observed; no complication table, definition or per-session record is given.",
+    "snippet": "No major TPE-related complications were observed during the study period.",
+    "anchor": "Results, TPE characteristics",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42509933_Sahin2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "22 children (median age 104 months) who received therapeutic plasma exchange in one tertiary paediatric intensive care unit in Istanbul between 2020 and 2025 for neuroimmunological disorders (6 Guillain-Barre, 6 autoimmune encephalitis, 4 infection-triggered encephalopathy, 3 MOGAD, 2 ADEM, 1 MERS)",
+     "comparator": "none (descriptive, no control group; all patients also received methylprednisolone and/or IVIG, some rituximab)",
+     "endpoint": "discharge Pediatric Cerebral Performance Category (unfavourable = 3 or more, or death), mortality, ventilation, MRI evolution"
+    }
+   },
+   {
+    "proposition": "Mechanistic premise in the Introduction: TPE removes autoantibodies, immune complexes, complement components and cytokines; none of these is measured in the cohort.",
+    "snippet": "TPE exerts its therapeutic effect through the removal of circulating autoantibodies, immune complexes, complement components, cytokines",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42509933_Sahin2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "22 children (median age 104 months) who received therapeutic plasma exchange in one tertiary paediatric intensive care unit in Istanbul between 2020 and 2025 for neuroimmunological disorders (6 Guillain-Barre, 6 autoimmune encephalitis, 4 infection-triggered encephalopathy, 3 MOGAD, 2 ADEM, 1 MERS)",
+     "comparator": "none (descriptive, no control group; all patients also received methylprednisolone and/or IVIG, some rituximab)",
+     "endpoint": "discharge Pediatric Cerebral Performance Category (unfavourable = 3 or more, or death), mortality, ventilation, MRI evolution"
+    }
+   },
+   {
+    "proposition": "Table 2 per-patient row for patient 1: seronegative autoimmune encephalitis, TPE started on day 61, five procedures, no sequelae; this row sets the 2-to-61-day range quoted in the Discussion.",
+    "snippet": "160MSeronegative AE-MPS-IVIG-TPEI-1C615NormalUA5No sequelae",
+    "anchor": "Table 2",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42509933_Sahin2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "22 children (median age 104 months) who received therapeutic plasma exchange in one tertiary paediatric intensive care unit in Istanbul between 2020 and 2025 for neuroimmunological disorders (6 Guillain-Barre, 6 autoimmune encephalitis, 4 infection-triggered encephalopathy, 3 MOGAD, 2 ADEM, 1 MERS)",
+     "comparator": "none (descriptive, no control group; all patients also received methylprednisolone and/or IVIG, some rituximab)",
+     "endpoint": "discharge Pediatric Cerebral Performance Category (unfavourable = 3 or more, or death), mortality, ventilation, MRI evolution"
+    }
+   },
+   {
+    "proposition": "Table 3 reports CSF antibody and microbiological positives with percentages of 5.9, 11.8, 17.6 and 17.6 percent while the text says 16 patients were tested.",
+    "snippet": "Serum and/or CSF neuronal antibody testing performed, n (%)16/16 (100)CSF anti-NMDAR positive, n (%)1 (5.9)",
+    "anchor": "Table 3",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42509933_Sahin2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "22 children (median age 104 months) who received therapeutic plasma exchange in one tertiary paediatric intensive care unit in Istanbul between 2020 and 2025 for neuroimmunological disorders (6 Guillain-Barre, 6 autoimmune encephalitis, 4 infection-triggered encephalopathy, 3 MOGAD, 2 ADEM, 1 MERS)",
+     "comparator": "none (descriptive, no control group; all patients also received methylprednisolone and/or IVIG, some rituximab)",
+     "endpoint": "discharge Pediatric Cerebral Performance Category (unfavourable = 3 or more, or death), mortality, ventilation, MRI evolution"
+    }
+   },
+   {
+    "proposition": "Supplementary Table S3: admission GCS and ventilation differ between outcome groups (p 0.016 and 0.014) among seven unadjusted exploratory comparisons.",
+    "snippet": "Continuous variables were compared using the Mann",
+    "anchor": "Supplementary Table S3",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42509933_Sahin2026_supplement/supp.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "22 children (median age 104 months) who received therapeutic plasma exchange in one tertiary paediatric intensive care unit in Istanbul between 2020 and 2025 for neuroimmunological disorders (6 Guillain-Barre, 6 autoimmune encephalitis, 4 infection-triggered encephalopathy, 3 MOGAD, 2 ADEM, 1 MERS)",
+     "comparator": "none (descriptive, no control group; all patients also received methylprednisolone and/or IVIG, some rituximab)",
+     "endpoint": "discharge Pediatric Cerebral Performance Category (unfavourable = 3 or more, or death), mortality, ventilation, MRI evolution"
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-42509933-01",
+ "study_id": {
+  "pmid": "42509933",
+  "doi": "10.3390/children13070908"
+ },
+ "analysis_at": "2026-10-20T06:12:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a (Scientist A), interventions batch 2026-10-19 groups H1/H2, task INTERV-H1-A-20261019 on branch task/INTERV-H1-A-20261019, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN. Route: Europe PMC JATS body (PMC13407348) into the root files/ tree; the supplementaryFiles container held one zip with a three-page PDF (Tables S1-S3), extracted unchanged, read by pdftotext, and pages 1 and 3 rendered at 90 dpi and opened; the article has no figures; the 25 references were term-screened for WWOX (zero) and not read item by item. Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a staged JSON for the Orchestrator and not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID42509933_Sahin2026_PMC.xml",
+ "source_fingerprint": "8bf0e1bcb92be7ccb3a2dc998221fb2ee60f1a258b73d7013edd6443e919f121",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "not_present",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42509933.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID42509933.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "manifest",
+  "Tables 1-3 read from the JATS, Table 2 re-parsed row by row",
+  "Supplementary Tables S1-S3 read as text and pages 1 and 3 inspected as images",
+  "Reference list term-screened only; no figures exist"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
