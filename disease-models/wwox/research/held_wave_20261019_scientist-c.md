@@ -158,3 +158,35 @@ Y33 phosphorylation sentence) therefore stays a cited sentence with no panel beh
 supports at most "peptide-treated WWOX-replete mice show co-IP changes in cancer-bearing animals", not
 any neural or metabolic statement. Receipt closes figures; depth carried at the prior receipt's level.
 MINOR; no commit candidate.
+
+---
+
+## 5. PMID 33195192 — Chou 2020 (Wwox-/- mouse skin, ERK, homeostasis) — receipt FTR-20261019-33195192-03
+
+**What it MEASURES.** System: constitutive whole-body Wwox knockout mouse and littermates, skin and body
+temperature, mostly P20-P21 (one to two weeks before the lethality window the Introduction states);
+primary keratinocytes; HaCaT shWWOX. Readouts: epidermal thickness and hydration, K5/K10, Ki67, BrdU,
+hair-follicle length and stem markers, pERK, p63, and (Figure 8) subcutaneous fat layer, FABP4 and
+skin surface temperature.
+
+**Question and answer.** (1) Genotype/age/tissue: whole-body null versus +/+ and +/-, P20-P21, dorsal skin
+(heterozygote indistinguishable from wild type on every quantified endpoint). (2) The metabolic content
+of the paper is Figure 8, which no earlier locator covered: the subcutaneous fat layer is about 10 um in
+the null versus about 270 um in controls (n = 3), the few remaining FABP4 cells are shrunken and
+lipid-free, and dorsal skin surface temperature is 31.3 C versus 35.8 C (n = 15 versus 12). (3) A
+systemic confounder is visible but unquantified: the Figure 4 photographs show the null pup smaller
+from P2 and the smallest at P14-P20, and the article reports no body weight, glycaemia or intake. The
+causal sentence "the loss of subcutaneous fat causes hypothermia" is untested; fat loss and hypothermia
+are equally two readouts of one wasting state. (4) pERK (Figure 7A) is a region-level comparison, 25
+regions from 3 mice. (5) Onset: follicle length equal at P0, shorter from P3 onward, consistent with a
+systemic growth effect superimposed on the local keratinocyte phenotype that the paper does not
+separate.
+
+**What it does not support.** A cell-autonomous adipose defect (no conditional or adipocyte-specific
+arm); that fat loss drives hypothermia; any neural statement; any ERK readout as a biomarker (already
+rejected, DIS-027).
+
+**Effect on the model.** PAPER 129's role sentence names the pERK observation and the dose statement but
+not Figure 8. The figure is a second independent constitutive-null readout of lipid or energy
+economy next to the serum-lipid and hypoglycaemia reports already in the record, with the same
+failure-to-thrive confound. Candidate: `CC-20261019-SCIENTIST-C-HELD-01` (MINOR).
