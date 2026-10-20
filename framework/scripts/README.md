@@ -233,7 +233,7 @@ refs or observe clones on other hosts. A missing or
 
 ## 12 · Libraries, not commands
 
-These four are imported by other tools and have no `__main__`. They are listed so the routing is
+These are imported by other tools and have no `__main__`. They are listed so the routing is
 **complete** rather than tidy — a reader who finds one and cannot run it should learn why here,
 not by running it.
 
@@ -243,3 +243,4 @@ not by running it.
 | `framework/scripts/screen_verdict.py` | the verdict contract every screen in `framework/scripts/` returns |
 | `framework/scripts/corpus_firewall.py` | what a bibliographic corpus is, and how every guard recognises one |
 | `framework/scripts/claim_links.py` | the declared `Claim links` of a record, never identifiers inside a refusal or an annotation |
+| `framework/scripts/eutils.py` | the one polite door to NCBI E-utilities: a throttle shared by every process on the host, back-off on 429/5xx with `Retry-After`, a one-day response cache (`LEGEND_EUTILS_CACHE_TTL=0` disables) — used by `pubmed_identity_check`, `staged_receipt_check`, `pmc_bucket_fetch`, `lot_internal_edges`; a new tool that calls NCBI imports it |

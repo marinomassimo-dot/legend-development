@@ -29,6 +29,9 @@ import subprocess
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import eutils  # noqa: E402  the shared NCBI throttle (N8, 2026-10-20)
+
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
 BUCKET = "https://pmc-oa-opendata.s3.amazonaws.com/"
 SUPP_EXT = {"pdf", "docx", "doc", "xlsx", "xls", "zip", "ppt", "pptx", "csv", "txt", "mp4"}
@@ -36,6 +39,9 @@ SUPP_EXT = {"pdf", "docx", "doc", "xlsx", "xls", "zip", "ppt", "pptx", "csv", "t
 
 def curl(url: str, out: Path | None = None) -> tuple[str, str]:
     """GET with no User-Agent. Returns (status, body text) or (status, '') when saved to a file."""
+    if out is None and url.startswith(EUTILS):
+        code, data = eutils.fetch(url, timeout=90)
+        return str(code), data.decode("utf-8", errors="replace")
     cmd = ["curl", "-sS", "-L", "-A", "", "-m", "90", url]
     if out is not None:
         r = subprocess.run(cmd[:-1] + ["-o", str(out), "-w", "%{http_code}", url], capture_output=True, text=True)

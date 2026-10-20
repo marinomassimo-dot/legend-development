@@ -114,6 +114,7 @@ PRIORITY_TESTS = (
     "framework/scripts/test_staged_receipt_check.py",
     "framework/scripts/test_record_staged_receipts.py",
     "framework/scripts/test_discovery_lead.py",
+    "framework/scripts/test_eutils.py",
     "framework/scripts/test_docx_to_text.py",
     "framework/scripts/test_pmc_bucket_fetch.py",
     "framework/scripts/test_phase_handoff.py",
