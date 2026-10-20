@@ -1,0 +1,34 @@
+{
+ "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Metabolic batch. Orchestrator assumption: scientist-d is a fourth equivalent Scientist under the shared contract roles/scientist.md (body 32); operator authorised up to four Scientists on 2026-10-19.",
+ "TASK_ID": "W4-W2A-C-20261019",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-c",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Read group W2, the first half of its table in file order (WWOX-direct and locus rows, then substitutes), 8 papers of disease-models/wwox/research/wave4_batch_selection_20261019.md, tier order, WWOX loss-of-function context; where no WWOX evidence exists say so and label every substitute not WWOX evidence (class level, not medical advice).",
+ "SCOPE": {
+  "lot": "group W2, the first half of its table in file order (WWOX-direct and locus rows, then substitutes), 8 papers",
+  "brief": "disease-models/wwox/research/metabolic_batch_dispatch_brief_20261019.md"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "per paper manifest PASS, receipt staged",
+  "analysis note wave4_scientist-c.md",
+  "DEFAULTS_TAKEN and STOP_LOG here"
+ ],
+ "DEPENDENCIES": [],
+ "REVIEW_REQUIREMENT": "Mirror ex post",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently",
+ "MILESTONE_PLAN": [
+  "TASK_ACK/CLAIM",
+  "per-paper M0-M5",
+  "analysis note",
+  "self-eval",
+  "report"
+ ],
+ "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
+ "CURRENT_STATE": "ASSIGNED",
+ "assigned_on": "2026-10-19"
+}
