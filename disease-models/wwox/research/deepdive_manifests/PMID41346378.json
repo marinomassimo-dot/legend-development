@@ -1,0 +1,386 @@
+{
+ "schema_version": 2,
+ "pmid": "41346378",
+ "doi": "10.3389/fneur.2025.1682488",
+ "receipt": "FTR-20261019-41346378-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID41346378.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A US university group (University of Michigan animal protocols) using a reporter line obtained from the NIH developer, with human RNA-seq from Dutch neuropathology archives; primary for its own mouse histology; small N."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "complement C3 AND astrocytes AND temporal lobe epilepsy",
+    "count": 5,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND complement",
+    "count": 8,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts at the stated date."
+ },
+ "multihop": {
+  "references_enumerated": 51,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41346378 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 41346378: publication types ['Journal Article']; correction/retraction link markers in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 51,
+   "references_screened": 50,
+   "references_with_doi": 50,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41346378_Jiang2025_PMC.xml",
+   "sha256": "45c22e8008319fc0339153fbb0f167236028e9671b7d7b1052735452f56743c2",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC12672298: abstract, body, four figure legends, 51 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12672298/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41346378/fneur-16-1682488-g001.jpg",
+   "sha256": "7fe8336f0079856058b7b64efa43a9590b91f1e1303c73f36bebc2ed4bd6f9ae",
+   "kind": "figure",
+   "note": "Figure 1 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12672298/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41346378/fneur-16-1682488-g002.jpg",
+   "sha256": "5b7a636ac020d429fcbb9f063ba2bc763d63ae81d2bcf7e855181f59a23922b1",
+   "kind": "figure",
+   "note": "Figure 2 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12672298/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41346378/fneur-16-1682488-g003.jpg",
+   "sha256": "98ab85d85d0496afbf636994b8f6b3640e5044a3b529cfcdec9f3385fdfb4424",
+   "kind": "figure",
+   "note": "Figure 3 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12672298/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41346378/fneur-16-1682488-g004.jpg",
+   "sha256": "d487377c3d51d8913ec5d68576e3870e9e5f0fdcbf5420a847de74b2018e7601",
+   "kind": "figure",
+   "note": "Figure 4 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12672298/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41346378/Table_1.xlsx",
+   "sha256": "ae3355eeda9bd4458f81c96bb0b5e1f608cdb78c64e9bbe24ff34d12c612ca47",
+   "kind": "supplement_binary",
+   "note": "Supplementary Table 1 (human cohort clinical data sheet); shared-strings headers read (sampleInfo, diagnosis, HS classification, sex, onset age, operation age, duration, seizure frequency); values not read.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12672298/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12672298/fullTextXML returned HTTP 200 (114218 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "Human data: resected hippocampus from 64 patients with mTLE and hippocampal sclerosis against 13 controls who were post-mortem tissue; C3 modestly higher (adjusted p = 0.029).",
+    "snippet": "Control tissue was postmortem from individuals without neurological disease.",
+    "anchor": "Materials and methods, human and rodent sequencing",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41346378_Jiang2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human resected hippocampus (mTLE-HS n = 64) versus post-mortem controls (n = 13), bulk RNA-seq; GEO kainic-acid mouse microarray",
+     "endpoint": "C3 transcript"
+    }
+   },
+   {
+    "proposition": "Result: C3 expression 'modestly but consistently' elevated in human TLE-HS.",
+    "snippet": "In human RNA sequencing data, C3 expression was modestly but consistently elevated in the hippocampus of patients with TLE-HS compared to healthy controls (p.adj = 0.029)",
+    "anchor": "Results, C3 is overexpressed in both human and mouse mTLE",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41346378_Jiang2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human resected hippocampus (mTLE-HS n = 64) versus post-mortem controls (n = 13), bulk RNA-seq; GEO kainic-acid mouse microarray",
+     "endpoint": "C3 transcript"
+    }
+   },
+   {
+    "proposition": "The mouse sequencing evidence is from a kainic acid model dataset, while the new histology is in the pilocarpine model.",
+    "snippet": "Although the gene-expression data were derived from a KA-induced model and histological analyses were performed in the pilocarpine model, which differ in their induction mechanisms",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41346378_Jiang2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "floxed C3-IRES-tdTomato knock-in mice (C57BL/6J), pilocarpine status epilepticus, N = 3 animals per time point, images as units",
+     "endpoint": "tdTomato (C3 reporter) area and intensity, NeuN, GFAP, Iba1"
+    }
+   },
+   {
+    "proposition": "Reporter validation compares seizure frequency and duration with N = 3 knock-in and N = 4 wild-type mice and concludes the transgene does not affect epileptogenesis.",
+    "snippet": "does not substantially affect seizure susceptibility or the course of epileptogenesis.",
+    "anchor": "Results, C3-IRES-TdTomato KI mouse line",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41346378_Jiang2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "floxed C3-IRES-tdTomato knock-in mice (C57BL/6J), pilocarpine status epilepticus, N = 3 animals per time point, images as units",
+     "endpoint": "tdTomato (C3 reporter) area and intensity, NeuN, GFAP, Iba1"
+    }
+   },
+   {
+    "proposition": "Seizure severity could not be assessed because of limited video resolution.",
+    "snippet": "Due to limited video resolution, the severity of individual seizures could not be precisely assessed.",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41346378_Jiang2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "floxed C3-IRES-tdTomato knock-in mice (C57BL/6J), pilocarpine status epilepticus, N = 3 animals per time point, images as units",
+     "endpoint": "tdTomato (C3 reporter) area and intensity, NeuN, GFAP, Iba1"
+    }
+   },
+   {
+    "proposition": "Time course: no signal within 24 h, weak at 72 h in the stratum lacunosum-moleculare, extension to CA1 by 1-2 weeks, prominent at 3-6 weeks.",
+    "snippet": "At 72 h after SE induction (acute phase), TdTomato fluorescence was weak and sparsely distributed within the SLM of the hippocampus.",
+    "anchor": "Results, spatiotemporal dynamics",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41346378_Jiang2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "floxed C3-IRES-tdTomato knock-in mice (C57BL/6J), pilocarpine status epilepticus, N = 3 animals per time point, images as units",
+     "endpoint": "tdTomato (C3 reporter) area and intensity, NeuN, GFAP, Iba1"
+    }
+   },
+   {
+    "proposition": "Figure 3 legend: no statistical analysis was performed on the time series; N = 3 animals per time point.",
+    "snippet": "No statistical analysis was performed; data are shown to indicate temporal trends.",
+    "anchor": "Figure 3 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41346378_Jiang2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "floxed C3-IRES-tdTomato knock-in mice (C57BL/6J), pilocarpine status epilepticus, N = 3 animals per time point, images as units",
+     "endpoint": "tdTomato (C3 reporter) area and intensity, NeuN, GFAP, Iba1"
+    }
+   },
+   {
+    "proposition": "Methods state the animal mean was used for statistics (N = 3), while Figure 4 plots one point per image and reports p at or below 0.0001.",
+    "snippet": "For each animal, values from multiple sections were averaged and the animal mean was used for statistical analysis.",
+    "anchor": "Materials and methods, Imaging acquisition and quantification",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41346378_Jiang2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "floxed C3-IRES-tdTomato knock-in mice (C57BL/6J), pilocarpine status epilepticus, N = 3 animals per time point, images as units",
+     "endpoint": "tdTomato (C3 reporter) area and intensity, NeuN, GFAP, Iba1"
+    }
+   },
+   {
+    "proposition": "Cell source: all tdTomato-positive cells co-expressed GFAP and none Iba1; the comparison with non-SE controls is reported with p at or below 0.0001.",
+    "snippet": "All C3-TdT+ cells co-expressed GFAP+ astrocytes, confirming astrocytes as the primary cellular source of C3 in TLE",
+    "anchor": "Results, Cell type sources",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41346378_Jiang2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "floxed C3-IRES-tdTomato knock-in mice (C57BL/6J), pilocarpine status epilepticus, N = 3 animals per time point, images as units",
+     "endpoint": "tdTomato (C3 reporter) area and intensity, NeuN, GFAP, Iba1"
+    }
+   },
+   {
+    "proposition": "Authors' limitations: no etiological detail for human samples, astrocyte and SLM findings not validated in human tissue, bulk datasets, no longitudinal EEG to relate C3 dynamics to seizures.",
+    "snippet": "Finally, because longitudinal EEG monitoring was not performed, we could not directly correlate C3 expression dynamics with seizure onset, frequency, or severity.",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41346378_Jiang2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "floxed C3-IRES-tdTomato knock-in mice (C57BL/6J), pilocarpine status epilepticus, N = 3 animals per time point, images as units",
+     "endpoint": "tdTomato (C3 reporter) area and intensity, NeuN, GFAP, Iba1"
+    }
+   },
+   {
+    "proposition": "The Introduction states C3 effects are stage-dependent and early interventions more beneficial than prolonged or non-selective inhibition (cited), and that conditional astrocytic C3 deletion in the chronic phase suppresses seizures (cited).",
+    "snippet": "Importantly, the effects of C3 modulation appear to be stage-dependent, with early latent-phase interventions generally more beneficial than prolonged or non-selective inhibition.",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41346378_Jiang2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "floxed C3-IRES-tdTomato knock-in mice (C57BL/6J), pilocarpine status epilepticus, N = 3 animals per time point, images as units",
+     "endpoint": "tdTomato (C3 reporter) area and intensity, NeuN, GFAP, Iba1"
+    }
+   },
+   {
+    "proposition": "Figure 1: A box plot of C3 expression with heavily overlapping boxes (control median about 7.9, TLE about 8.2, adjusted p = 0.029); B volcano plots of the kainic acid mouse dataset at 7, 28 and 60 days with C3 among thousands of upregulated genes; C a schematic of the IRES-tdTomato knock-in.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 A box plot control vs TLE p.adj 0.029; B three volcano plots D7, D28, D60 labelled C3; C locus diagram with loxP.",
+    "anchor": "Figure 1, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41346378/fneur-16-1682488-g001.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human resected hippocampus (mTLE-HS n = 64) versus post-mortem controls (n = 13), bulk RNA-seq; GEO kainic-acid mouse microarray",
+     "endpoint": "C3 transcript"
+    }
+   },
+   {
+    "proposition": "Figure 2: pie charts of pilocarpine outcomes (73.33 percent status epilepticus in both lines; non-SE 20 and 13.33; acute death 6.66 and 13.33) and dot plots of latencies (N = 12 and 10 per group) and of seizure frequency and duration with N = 3 knock-in and N = 4 wild-type points.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 A pies, B latency dots, C seizure frequency and duration dots with N 3 and 4.",
+    "anchor": "Figure 2, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41346378/fneur-16-1682488-g002.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "floxed C3-IRES-tdTomato knock-in mice (C57BL/6J), pilocarpine status epilepticus, N = 3 animals per time point, images as units",
+     "endpoint": "tdTomato (C3 reporter) area and intensity, NeuN, GFAP, Iba1"
+    }
+   },
+   {
+    "proposition": "Figure 3: tdTomato staining; control shows signal only in the choroid plexus, epileptic brain in the stratum lacunosum-moleculare; panel D plots one point per time point (C3+ area about 3, 10, 9, 10.5 and 17 percent at 72 h, 1, 2, 3 and 6 weeks; intensity rising to about 13 at 3 weeks and about 12 at 6 weeks) with no error bars.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3 A-B whole-brain sections, C time-course hippocampi, D two line plots without error bars.",
+    "anchor": "Figure 3, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41346378/fneur-16-1682488-g003.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "floxed C3-IRES-tdTomato knock-in mice (C57BL/6J), pilocarpine status epilepticus, N = 3 animals per time point, images as units",
+     "endpoint": "tdTomato (C3 reporter) area and intensity, NeuN, GFAP, Iba1"
+    },
+    "qualifies": "entries[6]",
+    "qualifies_needle": "No statistical analysis was performed; data are shown to indicate temporal trends."
+   },
+   {
+    "proposition": "Figure 4: NeuN density about 15 against 23 percent and GFAP and Iba1 density higher in epileptic hippocampus, each panel with nine points per group (images) and p below 0.0001 against methods that state animal means (N = 3) were used; panel F plots C3-tdTomato cells co-expressing GFAP or Iba1 as 100 percent in the epileptic group and 0 in controls (three points each) although controls had no hippocampal tdTomato cells.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 4 A-B NeuN/GFAP/Iba1 rows control vs TLE; C-E density and intensity plots with image-level points; F 100 vs 0 percent.",
+    "anchor": "Figure 4, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41346378/fneur-16-1682488-g004.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "floxed C3-IRES-tdTomato knock-in mice (C57BL/6J), pilocarpine status epilepticus, N = 3 animals per time point, images as units",
+     "endpoint": "tdTomato (C3 reporter) area and intensity, NeuN, GFAP, Iba1"
+    }
+   }
+  ]
+ }
+}
