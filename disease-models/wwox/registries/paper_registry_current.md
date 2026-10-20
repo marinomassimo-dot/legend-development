@@ -1419,6 +1419,7 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Identifier:** PMID 38203337 / DOI 10.3390/ijms25010167
 **Status:** not_processed
 **Registry role:** corpus placeholder only
+**Promoted to:** [[paper_registry_current#PAPER 383]] by `BATCH_20261019_005` (`CC-20261019-SCIENTIST-A-PLASMA-01`); this placeholder is kept as history.
 **Claim links:** none
 **Next action:** screening / triage required
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
@@ -4785,6 +4786,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Identifier:** PMID 19484134 / PMC2685983 / DOI 10.1371/journal.pone.0005755
 **Tier (FASE 1):** C
 **Status:** screened — corpus placeholder
+**Promoted to:** [[paper_registry_current#PAPER 387]] by `BATCH_20261019_005` (`CC-20261019-SCIENTIST-A-PLASMA-02`); this placeholder is kept as history. The placeholder was stale: the ledger held a partial text-only receipt of 2026-09-21, now resumed at complete depth with all figures.
 **LIT link:** LIT-0330
 **Primary pathway:** oncology / tumor suppressor biology
 **Model/species:** not assessed in triage
@@ -13498,6 +13500,696 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Role:** WWOX mRNA is lower in 61 of 80 tumours (about 3.5-fold on the mean) and associates with stage and histology; promoter methylation is not more frequent in tumour than in normal tissue (54 against 37 percent) and associates with low mRNA only inside the tumour group; miR-134 does not differ and its 3'UTR binding-site variant has no effect on expression; ten coding alterations in 65 tumours, mostly in exons 6-8; the Kozak minus-5 C to T "has no effect on the expression level" (unquantified; the link to the Kozak row is by position and label). NOT supported: a somatic-versus-germline split (matched normal DNA was sequenced but no table reports it) or "functional inactivation by mutation" (no function is tested; PolyPhen-2 labels differ between text and table). It is the one reading of this lot that tests the Kozak variant of PAPER 368 against expression in tumour tissue directly, and it finds nothing; the two papers cannot both be right about that allele unless the tissue differs.
 **LIT link:** [[literature_tracking_log_current#LIT-0283]]
 **Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples were audited blind by the Scientist and are carried in its manifest. Not medical advice.
+
+---
+
+## PAPER 370
+**Short title:** Sinha 2026 — a protocol, not a review, for a systematic review of iron supplementation, myelination and neurodevelopment in children aged 0 to 3 years
+**Full title:** Effect of iron supplementation on brain myelination and neurodevelopmental outcomes in children aged 0-3 years: a systematic review protocol
+**Authors:** Sinha A, Kuruba YP, Kumar P, Thalukdar R, Gupta S, Pradhan A, et al.
+**Year:** 2026
+**Source type:** protocol of a systematic review (no results)
+**Journal/source:** *Front Pediatr* 2026;14:1891295
+**Identifier:** PMID 42712566 / PMC13550114 / DOI 10.3389/fped.2026.1891295
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-42712566-01`; manifest `deepdive_manifests/PMID42712566.json`; dossier `research/fulltext_dossiers/PMID42712566.md`; artefact `files/fulltext/PMID42712566_Sinha2026_PMC.xml` (sha256 `add45067b1ee30095d1680c45133d823be88a911cff7242626d5f9ec46428e31`); coverage limits from the receipt's `coverage` map (absent from the source: figures, limitations, results, supplementary); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** human infants and children 0 to 3 years (planned review population)
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** A plan: it measures nothing and reports no finding. The selection file calls it a systematic review; the title and body say protocol. Its eligibility text excludes participants with significant congenital neurological abnormalities, so a DEE cohort would probably not enter the eventual review, and it cannot answer whether hypomyelination from WWOX loss is modifiable by iron. Revival trigger: publication of the review's results, if they carry a myelin-imaging endpoint. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0652]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 371
+**Short title:** Jin 2023 — ferroptosis inhibitors in epilepsy: a narrative review of chemoconvulsant rodent models and cell-stress lines
+**Full title:** Targeting ferroptosis as novel therapeutic approaches for epilepsy
+**Authors:** Jin Y, Ren L, Jing X, Wang H
+**Year:** 2023
+**Source type:** narrative review (secondary source)
+**Journal/source:** *Front Pharmacol* 2023;14:1185071
+**Identifier:** PMID 37124220 / PMC10133701 / DOI 10.3389/fphar.2023.1185071
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-37124220-01`; manifest `deepdive_manifests/PMID37124220.json`; dossier `research/fulltext_dossiers/PMID37124220.md`; artefact `files/fulltext/PMID37124220_Jin2023_PMC.xml` (sha256 `372be24ccdf1a37a637c5750569b28d2fb9750a1713343d06e558ee64b7134ee`); coverage limits from the receipt's `coverage` map (absent from the source: methods, results, supplementary); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** rodent chemoconvulsant models (kainic acid, pilocarpine, PTZ, FeCl3), HT22 and SH-SY5Y cell stress; one cited paediatric blood study and one cited patient-cell study
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** Synthesises other groups' work and measures nothing new; WWOX is absent. It cannot say whether WWOX loss changes neuronal ferroptosis susceptibility. Internal inconsistency: the conclusion calls ferrostatin an iron chelator while its own Table 1 lists GPX4 and P38 MAPK; the oligodendrocyte question is left open by the review itself. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0653]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 372
+**Short title:** Porras 2024 — Irp2-null mouse behaviour: a milder murine phenotype than the human iron-misregulation disease
+**Full title:** Ablation of Iron Regulatory Protein 2 produces a neurological disorder characterized by motor, somatosensory, and executive dysfunction in mice
+**Authors:** Porras C, Olliviere H, Bradley SP, Graham AM, Chudasama Y, Rouault TA
+**Year:** 2024
+**Source type:** primary research — constitutive knockout mouse behavioural battery
+**Journal/source:** *Curr Res Neurobiol* 2024;7:100136
+**Identifier:** PMID 39239479 / PMC11372806 / DOI 10.1016/j.crneur.2024.100136
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-39239479-01`; manifest `deepdive_manifests/PMID39239479.json`; dossier `research/fulltext_dossiers/PMID39239479.md`; artefact `files/fulltext/PMID39239479_Porras2024_PMC.xml` (sha256 `faaa4514c954bcb0813546d095755a9d0b7c65790d36258726cd7f2b75b27fa1`); coverage limits from the receipt's `coverage` map (captions only: supplementary); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** Irp2-null mouse (iron-regulatory protein 2), 6 per group in the Barnes maze
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** Rotarod latency about 40 percent shorter, lighter animals (the hang-time result depends on a weight covariate), reduced thermal nociception, a reversal-specific learning deficit. It measures no haemoglobin, brain iron, seizure or intervention; the human anaemia and epilepsy are cited context, and the authors say the mouse is much milder than the human disease. For the model it is a severity-discordance comparator only (the Wwox-null mouse is the severe side of such a discordance). Supplementary files read as captions only. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0654]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 373
+**Short title:** Padda 2021 — anaemia, epilepsy and antiseizure drugs: a narrative review
+**Full title:** Association of Anemia With Epilepsy and Antiepileptic Drugs
+**Authors:** Padda J, Khalid K, Syam M, Kakani V, Kankeu Tonpouwo G, Dhakal R, et al.
+**Year:** 2021
+**Source type:** narrative review (secondary source)
+**Journal/source:** *Cureus* 2021;13(11):e19334
+**Identifier:** PMID 34909297 / PMC8653853 / DOI 10.7759/cureus.19334
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-34909297-01`; manifest `deepdive_manifests/PMID34909297.json`; dossier `research/fulltext_dossiers/PMID34909297.md`; artefact `files/fulltext/PMID34909297_Padda2021_PMC.xml` (sha256 `0e18a88296fa004fbcf93f906c2cad4fd7ceced94c5b11c7148b9b2f5785dd31`); coverage limits from the receipt's `coverage` map (absent from the source: methods, results, supplementary, tables); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** human, mixed populations (review)
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T4 — distant source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** Anaemia meets epilepsy through sickle cell disease, iron deficiency (contradictory for febrile seizures) and antiseizure-drug effects on marrow, immunity, oxidative state and folate or B12; management is stop the drug, monitor counts, give folic acid, transfuse where haemolysis is severe. It cannot separate disease from drug in a DEE cohort, carries no WWOX or genetic-epilepsy anaemia datum and no effect of transfusion on seizures; two of its seizure-threshold statements contradict each other. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0655]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 374
+**Short title:** Garcia-Delgado 2025 — deferasirox before and after in transfusion-dependent myelodysplastic syndrome: leukocyte redox and mitochondrial readouts in 23 adults
+**Full title:** Impact of iron chelation therapy on mitochondrial function, vascular integrity and inflammation in transfusion-dependent myelodysplastic syndromes
+**Authors:** García-Delgado R, Moreno-Carrasco G, Carrasco-Gomariz M, García-Segovia S, Flores RMO, Torres-González J, et al.
+**Year:** 2025
+**Source type:** primary research — uncontrolled before-and-after, adults
+**Journal/source:** *Front Immunol* 2025;16:1683941
+**Identifier:** PMID 41293173 / PMC12640865 / DOI 10.3389/fimmu.2025.1683941
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-41293173-01`; manifest `deepdive_manifests/PMID41293173.json`; dossier `research/fulltext_dossiers/PMID41293173.md`; artefact `files/fulltext/PMID41293173_GarciaDelgado2025_PMC.xml` (sha256 `7ba34e2dfd38b23484f6f48b763da48cc015db86d2f0df2c05cb2fab1d3a8734`); coverage limits from the receipt's `coverage` map (every coverage entry read); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** 23 adults with low-risk myelodysplastic syndrome, leukocyte flow cytometry
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T4 — distant source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** Ferritin, ROS, glutathione, a mitochondrial-potential dye, adhesion markers, endothelial progenitors and cytokines move after deferasirox; haemoglobin does not, there is no control arm and no transfusion record. It does not show that transfusional iron damages mitochondria (Figure 5 is a model; the authors say the drug acts beyond iron removal), and says nothing about brain, children or WWOX. Recorded while reading: Figure 2 contradicts two statements of its own text, and the supplementary multiplicity-adjusted values do not reproduce from their own inputs. Whether the overlap with the WWOX respiratory-complex findings exists is unmeasured. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0656]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 375
+**Short title:** Fitz 2026 — iron supplementation and infant neurodevelopment: a review whose benefit is confined to iron-deficient or high-risk infants
+**Full title:** Iron Supplementation and Neurodevelopmental Outcomes in Infancy and Early Childhood: A Review
+**Authors:** Fitz SJT, Sanchez VJ, Hoyos AM, Pena DEM
+**Year:** 2026
+**Source type:** systematic-style review (secondary source)
+**Journal/source:** *Children (Basel)* 2026;13(9)
+**Identifier:** PMID 42794294 / PMC13605664 / DOI 10.3390/children13091274
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-42794294-01`; manifest `deepdive_manifests/PMID42794294.json`; dossier `research/fulltext_dossiers/PMID42794294.md`; artefact `files/fulltext/PMID42794294_Fitz2026_PMC.xml` (sha256 `53db199b297cba1b575e0727a569406b0252a2454d25b6c102f47dc60075f67b`); coverage limits from the receipt's `coverage` map (absent from the source: supplementary); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** human infants (review of trials and cohorts)
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T4 — distant source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** Benefit appears in iron-deficient or high-risk infants and not in iron-replete term infants, with possible long-term harm in replete infants from one cohort lineage (a U-shaped risk). It shows no iron effect on hypomyelination from a genetic encephalopathy; the single imaging study it cites has no untreated arm and no motor difference at six months, although the Discussion says reversible. Recorded while reading: the total of 7840 is the arithmetic sum of table sample sizes and counts a 412-child subsample of a 3300-child trial twice; the PRISMA figure contradicts the Methods on the search dates; the work is registered as an undergraduate thesis. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0657]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 376
+**Short title:** Chock 2023 — tissue oxygenation by near-infrared spectroscopy after red-cell transfusion in extremely preterm infants (TOP NIRS substudy)
+**Full title:** Tissue Oxygenation Changes After Transfusion and Outcomes in Preterm Infants: A Secondary Near-Infrared Spectroscopy Study of the Transfusion of Prematures Randomized Clinical Trial (TOP NIRS)
+**Authors:** Chock VY, Kirpalani H, Bell EF, Tan S, Hintz SR, Ball MB, et al.
+**Year:** 2023
+**Source type:** primary research — nested substudy of a randomised trial, exploratory outcome analysis
+**Journal/source:** *JAMA Netw Open* 2023;6(9):e2334889
+**Identifier:** PMID 37733345 / PMC10514737 / DOI 10.1001/jamanetworkopen.2023.34889
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-37733345-01`; manifest `deepdive_manifests/PMID37733345.json`; dossier `research/fulltext_dossiers/PMID37733345.md`; artefact `files/fulltext/PMID37733345_Chock2023_PMC.xml` (sha256 `d5cd41796f111a56d538e762cf660fbf28615c7e7c1336438a02fc7c584b99f1`); coverage limits from the receipt's `coverage` map (not read: supplementary); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** extremely preterm infants; cerebral and mesenteric NIRS
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T4 — distant source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** Cerebral saturation rises about 2.7 to 4.8 points and mesenteric 5.6 to 6.7 after transfusion with no change in peripheral saturation and no difference between haemoglobin-threshold groups. An exploratory association of transfusion at low pre-transfusion cerebral saturation with death or impairment (OR 2.41) rests on a tree leaf of 10 infants after attrition from 140 to 101 to 80. It shows the readout moves, not a benefit; infants with a genetic encephalopathy were excluded and NIRS is confounded by cardiac output, carbon dioxide and ductus. The protocol supplement was not read (partial depth). NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0658]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 377
+**Short title:** Bailey 2026 — liberal against restrictive haemoglobin thresholds and cerebral oxygenation: a meta-analysis of seven NIRS studies
+**Full title:** The Effect of Liberal versus Restrictive Haemoglobin Thresholds on Cerebral Tissue Oxygenation in Preterm Infants: A Systematic Review and Meta-Analysis
+**Authors:** Bailey DN, Noone AN, Crawford TM, Andersen CC, Stark MJ
+**Year:** 2026
+**Source type:** systematic review and meta-analysis
+**Journal/source:** *Neonatology* 2026
+**Identifier:** PMID 42313692 / PMC13441262 / DOI 10.1159/000553042
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-42313692-01`; manifest `deepdive_manifests/PMID42313692.json`; dossier `research/fulltext_dossiers/PMID42313692.md`; artefact `files/fulltext/PMID42313692_Bailey2026_PMC.xml` (sha256 `81ea4041f05fa08862830d7b93495a652ae3a17b26926d48a1774fe82690a7a4`); coverage limits from the receipt's `coverage` map (every coverage entry read); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** preterm and neonatal transfusion studies (NIRS)
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T4 — distant source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** Cerebral saturation rises 6.40 points under restrictive thresholds against 2.75 under liberal, with very low certainty (I-squared 0.93). It does not support a threshold effect: the one randomised within-trial contrast is 4.48 against 4.84, and the pooled gap is between-study (small-variance observational studies on one side). Certainty is stated as low in Results and very low in the Limitations and GRADE table; no outcome benefit is shown and the rise may be transient. No WWOX bearing. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0659]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 378
+**Short title:** Shafique 2024 — neonatal red-cell transfusion strategies: a narrative review without methods
+**Full title:** Transfusion strategies for neonates: current perspectives
+**Authors:** Shafique MA, Abbas SQ, Habiba U, Mughal A, Fadlalla Ahmad TK, Munir Chaudhary A
+**Year:** 2024
+**Source type:** narrative review (secondary source)
+**Journal/source:** *Ann Med Surg (Lond)* 2024;86(3):1550-1562
+**Identifier:** PMID 38463073 / PMC10923393 / DOI 10.1097/MS9.0000000000001751
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-38463073-01`; manifest `deepdive_manifests/PMID38463073.json`; dossier `research/fulltext_dossiers/PMID38463073.md`; artefact `files/fulltext/PMID38463073_Shafique2024_PMC.xml` (sha256 `e117e549aa66ae7bd899427b2147e3cce1ecd08bfcef03eef6cddf92e82bf929`); coverage limits from the receipt's `coverage` map (absent from the source: figures, methods, results, supplementary); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** human neonates (review)
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T4 — distant source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** A trial and guideline overview with a lean to restrictive thresholds, listing neonatal transfusion complications (hyperkalaemia, hypothermia, glucose fluctuation in both directions, left-shifted oxygen-dissociation after stored cells). Its Abstract, Highlights, Advantages section and Conclusion point different ways and the table of randomised trials is mostly observational cohorts. One class-level observation touches an existing strand of the model: transfusion is associated with neonatal hypo- and hyperglycaemia (confounded by indication), a reason to read glucose beside any blood-product event, not WWOX evidence. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0660]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 379
+**Short title:** Nguyen 2026 — physiology-guided red-cell transfusion in adult critical illness: an expert perspective
+**Full title:** Beyond hemoglobin thresholds: A physiology-guided framework for red blood cell transfusion in non-bleeding critically ill patients
+**Authors:** Nguyen TL, Le QD, Huynh PNA, Ho VHN, Tran CD, Duong VP, et al.
+**Year:** 2026
+**Source type:** expert perspective (secondary source)
+**Journal/source:** *Sci Prog* 2026;109(1):368504261440780
+**Identifier:** PMID 41904698 / PMC13067254 / DOI 10.1177/00368504261440780
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-41904698-01`; manifest `deepdive_manifests/PMID41904698.json`; dossier `research/fulltext_dossiers/PMID41904698.md`; artefact `files/fulltext/PMID41904698_Nguyen2026_PMC.xml` (sha256 `345683d8f466f344545e49164de184da3a30d40b576b67ec892e9b63d407c69b`); coverage limits from the receipt's `coverage` map (absent from the source: figures, limitations, methods, results, supplementary); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** human adults, intensive care (perspective)
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T4 — distant source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** Haemoglobin alone does not track tissue oxygenation; restrictive thresholds are broadly safe at population level with a subgroup signal in type 1 myocardial infarction; the proposed cut-offs are the authors' own and unvalidated. One cited adult study found mitochondrial oxygen tension and consumption did not change consistently after transfusion, many patients starting normal. No paediatric content, nothing on a mitochondrially stressed brain or WWOX. A conceptual principle only (INFERENZA): if oxygen use rather than supply were limiting, more carrying capacity adds little; nothing in the repository measures WWOX tissue oxygen delivery or extraction. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0661]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 380
+**Short title:** De Rose 2026 — blood-product burden in 142 neonates treated with hypothermia for hypoxic-ischaemic encephalopathy
+**Full title:** Transfusion Burden in Neonates with Hypoxic-Ischemic Encephalopathy Undergoing Therapeutic Hypothermia
+**Authors:** De Rose DU, Maddaloni C, Ronci S, Campi F, Caoci S, Martini L, et al.
+**Year:** 2026
+**Source type:** primary research — single-centre retrospective cohort
+**Journal/source:** *Children (Basel)* 2026;13(9)
+**Identifier:** PMID 42794205 / PMC13605100 / DOI 10.3390/children13091185
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-42794205-01`; manifest `deepdive_manifests/PMID42794205.json`; dossier `research/fulltext_dossiers/PMID42794205.md`; artefact `files/fulltext/PMID42794205_DeRose2026_PMC.xml` (sha256 `bea59f4d2fcb01539684f67972b7f7d60287e8bfe8097622abb0ccfee431572b`); coverage limits from the receipt's `coverage` map (absent from the source: supplementary); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** 142 cooled neonates, one NICU
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T4 — distant source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** 52.1 percent received a product: plasma 38.7 percent (the most used), prothrombin complex 20.4, antithrombin 14.1, red cells 10.6, platelets 9.9; visible bleeding (aOR 12.95, interval 1.34 to 124.97 from 16 infants) and respiratory support predict use. A use-pattern paper: no causal effect of transfusion on the brain (unadjusted; a severity proxy), no efficacy of plasma, nothing on a genetic DEE. Recorded while reading: the text says intracranial bleeding was more frequent in transfused infants while Table 4 shows 21.6 against 22.1 percent (the difference is hypoxic-ischaemic injury, 28.4 against 10.3 percent); Figure 1 disagrees with the single-versus-multi-product counts. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0662]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 381
+**Short title:** Jadhav 2024 — iron-deficiency anaemia and first febrile seizure: a 150-child case-control study
+**Full title:** Association of Iron Deficiency Anaemia With the First Episode of Febrile Seizure in Children
+**Authors:** Jadhav R, Pande V, Garud B, Mane S
+**Year:** 2024
+**Source type:** primary research — single-hospital case-control
+**Journal/source:** *Cureus* 2024;16(11):e74129
+**Identifier:** PMID 39712732 / PMC11662512 / DOI 10.7759/cureus.74129
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-39712732-01`; manifest `deepdive_manifests/PMID39712732.json`; dossier `research/fulltext_dossiers/PMID39712732.md`; artefact `files/fulltext/PMID39712732_Jadhav2024_PMC.xml` (sha256 `6aa89e901ad627533a446217cd8a92764f57e8706ad9f1d0dbb08617e63ef18b`); coverage limits from the receipt's `coverage` map (absent from the source: figures, supplementary); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** 150 children, one hospital
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T4 — distant source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** Cases had lower haemoglobin, MCV and ferritin and higher RDW and TIBC; anaemia in 96 percent of cases and 85 percent of febrile controls. It does not support causality or a correctable risk factor (one admission draw, no intervention), an anaemic-versus-healthy contrast (both groups anaemic), or the fourfold odds as stated (recomputed OR 4.24, interval 0.93 to 19.3, which spans 1); confounding by age, weight, temperature and fever-raised ferritin is unaddressed; developmental delay was excluded, so no DEE. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0663]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 382
+**Short title:** Arsyad 2020 — a long-term home-made ketogenic diet in 15 healthy adult rats: weight loss, ketosis, lower haemoglobin and oxidative markers
+**Full title:** Long-Term Ketogenic Diet Induces Metabolic Acidosis, Anemia, and Oxidative Stress in Healthy Wistar Rats
+**Authors:** Arsyad A, Idris I, Rasyid AA, Usman RA, Faradillah KR, Latif WOU, et al.
+**Year:** 2020
+**Source type:** primary research — rodent diet study
+**Journal/source:** *J Nutr Metab* 2020;2020:3642035
+**Identifier:** PMID 32685205 / PMC7341377 / DOI 10.1155/2020/3642035
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-32685205-01`; manifest `deepdive_manifests/PMID32685205.json`; dossier `research/fulltext_dossiers/PMID32685205.md`; artefact `files/fulltext/PMID32685205_Arsyad2020_PMC.xml` (sha256 `798ff8ca1a608d6f66fc6eee227e80e187f0a8418e20dab80a69dcf5b85e9bb2`); coverage limits from the receipt's `coverage` map (absent from the source: limitations, supplementary); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** 15 healthy adult rats, one end-point sample
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T4 — distant source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** About 40 percent weight loss, glucose 57 mg/dL, ketones near 8 mmol/L, pH 7.36 against 7.52, haemoglobin 13.76 to 11.98 with red-cell count not significantly lower, tissue MDA up and plasma SOD down. It is not a clinical ketogenic diet in a child, and its labels do not hold: the control is alkalotic and the ketogenic pH near normal, the abstract base excess disagrees with Table 5, anaemia has no baseline or iron data, and energy intake is equal or higher in Table 3 despite the weight loss, so malnutrition is open. MDA axes are truncated. Neither moves nor tests any ketogenic-diet response claim of the model; the glucose caution is class-level only. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0664]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 383
+**Short title:** Shin 2023 — WWOX knockdown lowers poly(I:C)-induced NF-kB output in immortalised human keratinocytes; higher WWOX immunostaining in psoriatic skin
+**Full title:** Mechanistic Investigation of WWOX Function in NF-kB-Induced Skin Inflammation in Psoriasis
+**Authors:** Shin MJ, Kim HS, Lee P, Yang NG, Kim JY, Eun YS, et al.
+**Year:** 2023
+**Source type:** primary research — partial adenoviral-microRNA knockdown in one immortalised keratinocyte line, human and mouse skin immunostaining
+**Journal/source:** *Int J Mol Sci* 2023;25(1)
+**Identifier:** PMID 38203337 / PMC10779412 / DOI 10.3390/ijms25010167
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-01` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers; the number assigned from `registry_records.py catalog` (`PAPER` max was 369). Promoted from the placeholder `CORPUS-STUB-068`, which is kept as history.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-38203337-01`; manifest `deepdive_manifests/PMID38203337.json`; dossier `research/fulltext_dossiers/PMID38203337.md`; artefact `files/fulltext/PMID38203337_Shin2023_PMC.xml` (sha256 `68169591886316fc76c7aa87f29eac7bff548d1503ce13feb950b32992535ac4`); coverage limits from the receipt's `coverage` map (every coverage entry read); the depth is never upgraded from the receipt
+**Primary pathway:** inflammatory signalling (NF-kB), non-neural
+**Model/species:** SV40-immortalised human epidermal keratinocytes (WWOX protein about 45 percent remaining); human psoriatic skin (3 normal against 6 patients) and imiquimod mouse skin
+**Genotype/model:** partial adenoviral-microRNA WWOX knockdown with a partial rescue; no germline loss-of-function allele; non-neural
+**Transferability:** T4 — distant source — WWOX-direct, not a loss-of-function neural system; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** LOW — background. Not medical advice.
+**Claim links:** CLAIM 028 (source added at this batch; status and type unchanged)
+**Role:** 🔴 **Non-neural, partial knockdown, one immortalised line, one stimulus.** WWOX loss lowers an inflammatory readout here (lower poly(I:C)-induced phospho-p65, partly lower mRNA of five cytokines, lower PKC activity, partial rescue), the opposite sign to partial Wwox loss in murine sepsis and neuroinflammation (`PAPER 114`), endothelial WWOX knockdown in lung injury (`PAPER 113`), B-cell Wwox deletion (`PAPER 115`) and loss of lung WWOX causing neutrophilic inflammation (`PAPER 102`, which this paper cites as its reference 17 for a different statement and never discusses for sign), compared at registry-title level. The calcium and PKC steps rest on inhibitors tested without WWOX manipulation; the WWOX-JPT2 link is a software prediction (supplementary figure). Recorded while reading: secreted IL-1beta is 'ns' against the text; untreated-knockdown PKC activity is lower against the text; IL-8 mRNA is not reduced by the PKC inhibitor; Figure 1B compares days to day 1, not to control. Rescue is incomplete by the authors' own statement. NOT SUPPORTED: that WWOX loss is anti-inflammatory in brain, that targeting WWOX is therapeutic (the authors' psoriasis speculation is not a claim), or any link to complement, albumin, immunoglobulin or plasma products. Added as a further source of `CLAIM 028` with the system gap stated.
+**LIT link:** [[literature_tracking_log_current#LIT-0091]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 384
+**Short title:** Karayanni 2026 — the complement-microglia axis in paediatric epilepsy: a narrative review
+**Full title:** Targeting the Complement-Microglia Axis for Neuroprotection in Pediatric Epilepsy
+**Authors:** Karayanni M, Mitsoudis N, Vanakliotou M, Bakirtzis C, Kesidou E, Polyzoidou E, Liana E
+**Year:** 2026
+**Source type:** narrative review (secondary source)
+**Journal/source:** *Biomedicines* 2026;14(8)
+**Identifier:** PMID 42652171 / PMC13509543 / DOI 10.3390/biomedicines14081788
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-42652171-01`; manifest `deepdive_manifests/PMID42652171.json`; dossier `research/fulltext_dossiers/PMID42652171.md`; artefact `files/fulltext/PMID42652171_Karayanni2026_PMC.xml` (sha256 `c96d5adbe3c0fba777f8ddbf775e338e22657f0baf772a88f48fc0b518a71eca`); coverage limits from the receipt's `coverage` map (absent from the source: methods, results, supplementary); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** rodent status-epilepticus models, adult or mixed-age human tissue (review)
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** Cites seizure-triggered C1q and C3 tagging with microglial CR3 pruning of healthy synapses, C3-null protection, and two candidate inhibitors (an anti-C1q antibody and a C3 inhibitor) neither shown effective in epilepsy, with infection and developmental-pruning risks. WWOX is absent: no complement datum for a genetic DEE, no efficacy of complement inhibition in a child, no plasma-product relevance. Recorded while reading: the text attributes a young-mouse result to Figure 2, which is a schematic, and gives a 48 h window where Table 1 says the acute timeline is unknown. The theme search that found this paper also found the one WWOX-direct complement record, `PAPER 387`, which the selection file's statement that the model has nothing on complement had missed. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0665]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 385
+**Short title:** Jeong 2026 — C1q neutralisation after pilocarpine status epilepticus in mice: fewer interictal spikes at five weeks, no tested timing window
+**Full title:** C1q neutralization during epileptogenesis attenuates complement-mediated synaptic elimination and epileptiform activity
+**Authors:** Jeong Y, Lim HK, Kim H, Lee J, Lee S, Suh M
+**Year:** 2026
+**Source type:** primary research — mouse status-epilepticus model, partial depth
+**Journal/source:** *Epilepsia* 2026;67(2):908-922
+**Identifier:** PMID 41118244 / PMC12927691 / DOI 10.1111/epi.18678
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-41118244-01`; manifest `deepdive_manifests/PMID41118244.json`; dossier `research/fulltext_dossiers/PMID41118244.md`; artefact `files/fulltext/PMID41118244_Jeong2026_PMC.xml` (sha256 `0d43a839073981d1cb457ad4b179bbc3afd9087684a1f396ec0d010404697150`); coverage limits from the receipt's `coverage` map (captions only: supplementary); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** pilocarpine mice, n = 8 per group, single intracisternal anti-C1q injection at day 7
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** C1q peaks in the subacute phase (microglia) with persistent astrocytic C3; one anti-C1q injection lowers the 5-week interictal spike rate (median about 2 against 5 per minute) and shifts CA1 neuron counts, spine density, CD68, GFAP and C3 toward naive. It does not show fewer seizures (supplement: about 0.9 against 0.1 per 12 h, p = 0.0816), a specific effect (supplement shows 70 to 95 percent broadband power loss), a timing window (one treatment time), a behavioural benefit, transfer to a genetic DEE, or plasma-product relevance (locally injected antibody). The introduction cites C1q-knockout mice with heightened seizure susceptibility. One supplementary figure was read by legend only (partial depth). NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0666]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 386
+**Short title:** Pinzon-Hoyos 2025 — serum complement and cytokines in 46 adults with drug-resistant epilepsy against 45 healthy controls: lower complement, cause and direction unseparated
+**Full title:** Drug-resistant epilepsy associated with peripheral complement decreases and sex-specific cytokine imbalances: a pilot study
+**Authors:** Pinzon-Hoyos N, Li Y, McGee M, Poolos NP, Marchi N, Brewster AL
+**Year:** 2025
+**Source type:** primary research — single-draw case-control pilot, partial depth
+**Journal/source:** *Sci Rep* 2025;15(1):5096
+**Identifier:** PMID 39934240 / PMC11814292 / DOI 10.1038/s41598-025-88654-5
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-39934240-01`; manifest `deepdive_manifests/PMID39934240.json`; dossier `research/fulltext_dossiers/PMID39934240.md`; artefact `files/fulltext/PMID39934240_PinzonHoyos2025_PMC.xml` (sha256 `89ee510a27865ab904f0823263c2c75650b79cb33860052cee1d85ae07321856`); coverage limits from the receipt's `coverage` map (captions only: supplementary); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** 46 adult surgical candidates and 45 healthy controls
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** Serum C1q, C4, C4b, Factor B and Factor H about 30 percent lower, C3, C3b/iC3b and C5 lower; MBL, C2, C3a, C5a and C5b-9 unchanged; IL-8 lower. It does not give cause or direction (antiseizure drugs, a single draw), 'sex-specific' dysregulation (supplement Table 2: condition-by-sex interaction p 0.259 or more for every complement analyte), a correlation disruption (one panel is r 0.45, p 0.094 against the text), a bridge from blood to brain complement, plasma-product relevance, or any child or WWOX datum. Supplementary panels were not opened (partial depth). NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0667]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 387
+**Short title:** Hong 2009 — C1q activates WWOX to induce apoptosis in prostate cancer cells: gain of function only, no loss-of-function datum
+**Full title:** Complement C1q activates tumor suppressor WWOX to induce apoptosis in prostate cancer cells
+**Authors:** Hong Q, Sze CI, Lin SR, Lee MH, He RY, Schultz L, et al.
+**Year:** 2009
+**Source type:** primary research — cultured prostate cancer cells, in-house phospho-WOX1 antibody, patient tissue immunostaining
+**Journal/source:** *PLoS One* 2009;4(6):e5755
+**Identifier:** PMID 19484134 / PMC2685983 / DOI 10.1371/journal.pone.0005755
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019, extra WWOX-direct resume); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers; the number assigned from `registry_records.py catalog` (`PAPER` max was 369). Promoted from the stale placeholder `CORPUS P330`, which is kept as history; the receipt resumes `FTR-20260921-19484134-01` (`reread_reason: inadequate_prior_coverage`).
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-19484134-01`; manifest `deepdive_manifests/PMID19484134.json`; dossier `research/fulltext_dossiers/PMID19484134.md`; artefact `files/fulltext/PMID19484134_Hong2009_PMC.xml` (sha256 `dc3b0ac56eb446ea42cd99b840b6d99c4df4a3b2f56e3f26ce843d022af472bf`); coverage limits from the receipt's `coverage` map (absent from the source: limitations, supplementary, tables); the depth is never upgraded from the receipt
+**Primary pathway:** oncology / tumor suppressor biology
+**Model/species:** human prostate cancer cell lines (overexpressing and endogenous-WWOX cells), benign prostatic hyperplasia and cancer tissue
+**Genotype/model:** WWOX overexpression with dominant-negative and point-mutant constructs; no knockdown, knockout or loss-of-function allele
+**Transferability:** T3 — comparator or adjacent source — WWOX-direct, not a loss-of-function neural system; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** LOW — background. Not medical advice.
+**Claim links:** none
+**Role:** 🔴 **Gain of WWOX in cancer cells only.** The earlier reading of 2026-09-21 (receipt `FTR-20260921-19484134-01`, text and legends, figures unavailable) recorded the activation arm on endogenous protein (C1q-depleted serum lowering phospho-Tyr33 WWOX by about half with total WWOX unchanged); that is carried unchanged, and this complete resume adds the figure-level limits below. C1q alone gives about 85 percent nuclear phospho-WOX1 (in-house antibody); C1q raises sub-G1 only in cells overexpressing EGFP-WOX1 (about 13.5 to 38 percent), vector cells unaffected; a dominant-negative and a Y33R mutant block it; C1q-depleted or C6-depleted serum lowers p-ERK and WOX2 and raises p-JNK1; C1q signal is lower in benign hyperplasia and cancer prostate. It carries no loss-of-function datum (no knockdown, knockout or patient cell, and endogenous-WWOX cells show no C1q killing), no protective axis (the output is death), no complement independence (the serum-free arm is 'data not shown') and no receptor. Figure-level additions to the 2026-09-21 audit: overexpression alone doubles baseline sub-G1, C1q adds at low to mid dose and not at the top dose, the Figure 5B increment is about 15 percent from two experiments, the dominant-negative has no WOX1-plus-C1q comparator and itself raises sub-G1, the text says C7, C8 and C9 depletion 'did not support' p-ERK and WOX2 while Figure 8B shows the C7-depleted serum retaining both, and the tissue comparison used longer exposure for benign hyperplasia. The authors' projection to neuronal killing is not a finding of the paper. **This is the one WWOX-direct complement paper in the repository: the selection file's statement that the model has nothing on complement was too strong.** Not a plasma, albumin or immunoglobulin intervention.
+**LIT link:** [[literature_tracking_log_current#LIT-0330]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 388
+**Short title:** Wang 2024 — serum immunoglobulins, lymphocyte subsets and cytokines before and after ACTH in 35 infants with infantile spasms
+**Full title:** Application of peripheral blood cytokine and immunoglobulin detection in ACTH therapy for the treatment of infantile spasms
+**Authors:** Wang X, Huang Q, Wu L, Yang Y, Ye X, Yang B
+**Year:** 2024
+**Source type:** primary research — single-hospital cohort against healthy controls
+**Journal/source:** *Front Pediatr* 2024;12:1365917
+**Identifier:** PMID 39055621 / PMC11270505 / DOI 10.3389/fped.2024.1365917
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-39055621-01`; manifest `deepdive_manifests/PMID39055621.json`; dossier `research/fulltext_dossiers/PMID39055621.md`; artefact `files/fulltext/PMID39055621_Wang2024_PMC.xml` (sha256 `86a99b439efa35a26557e92d6e338da15656ba31f4ebd09fd31bfa65bcd30d9c`); coverage limits from the receipt's `coverage` map (every coverage entry read); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** 35 infants with infantile spasms against 35 healthy infants
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T4 — distant source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** At baseline higher IgG, IgM, B cells, IL-1beta, IL-2R and IL-6 and lower IgA, CD3 and CD4; after two weeks of ACTH IgG, NK cells, B cells and the three cytokines fall and CD3 and CD4 rise; 54.29 percent responded. No link between immune change and response (no responder analysis; 16 of 35 did not respond), the paired comparison as analysed (printed t values equal an independent-samples test), a clean control group (age, sex and onset data inconsistent between Methods and Results; controls at the assay floor for two cytokines) or any role for plasma products (endogenous immunoglobulin only). The cohort was selected for cerebrospinal-fluid albumin and BBB leakage and is aetiologically mixed (30 of 35 asphyxia or hypoxic-ischaemic encephalopathy); WWOX status is not given. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0668]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 389
+**Short title:** Jiang 2025 — astrocytic C3 expression after status epilepticus with a C3-tdTomato reporter: expression only, three animals per time point
+**Full title:** Dynamic astrocytic complement C3 activation in the epileptic hippocampus
+**Authors:** Jiang M, Romagnolo A, Aronica E, Wang Y
+**Year:** 2025
+**Source type:** primary research — reporter mouse and human tissue transcripts, partial depth
+**Journal/source:** *Front Neurol* 2025;16:1682488
+**Identifier:** PMID 41346378 / PMC12672298 / DOI 10.3389/fneur.2025.1682488
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-41346378-01`; manifest `deepdive_manifests/PMID41346378.json`; dossier `research/fulltext_dossiers/PMID41346378.md`; artefact `files/fulltext/PMID41346378_Jiang2025_PMC.xml` (sha256 `45c22e8008319fc0339153fbb0f167236028e9671b7d7b1052735452f56743c2`); coverage limits from the receipt's `coverage` map (captions only: supplementary); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** C3-tdTomato reporter mice (N = 3 per point); resected human mTLE-HS hippocampus against post-mortem controls
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** A modest C3 transcript rise in human mTLE-HS hippocampus (adjusted p = 0.029); reporter signal from 72 h in the stratum lacunosum-moleculare spreading to CA1 by 3 to 6 weeks, all in GFAP astrocytes. It does not show complement activation (expression only, no cleavage product or pruning), robust statistics (image-level points against Methods that state animal means; no error bars or tests on the time course; seizure comparison N = 3 against 4), human validation of the cell source, a seizure or EEG link, or anything on WWOX, children or plasma products. C3 is produced locally, so brain complement is not readable from plasma. Supplement headers only (partial depth). NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0669]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 390
+**Short title:** Veremeyko 2023 — C3- and C4B-knockout mice in PTZ seizures: C4B-null mice die, C3-null mice do not
+**Full title:** Complement C4-deficient mice have a high mortality rate during PTZ-induced epileptic seizures, which correlates with cognitive problems and the deficiency in the expression of Egr1 and other immediate early genes
+**Authors:** Veremeyko T, Jiang R, He M, Ponomarev ED
+**Year:** 2023
+**Source type:** primary research — germline knockout mice
+**Journal/source:** *Front Cell Neurosci* 2023;17:1170031
+**Identifier:** PMID 37234916 / PMC10206007 / DOI 10.3389/fncel.2023.1170031
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-37234916-01`; manifest `deepdive_manifests/PMID37234916.json`; dossier `research/fulltext_dossiers/PMID37234916.md`; artefact `files/fulltext/PMID37234916_Veremeyko2023_PMC.xml` (sha256 `c704fed23c99489be56900053ef6a81e1ef6a4d9081eef2f58c2136416f1c77b`); coverage limits from the receipt's `coverage` map (every coverage entry read); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** female C3-null and C4B-null mice, n = 4 to 6 per group
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** C4B-null mice die after PTZ (6 of 6 at 80 mg/kg, 3 of 5 at 50 mg/kg; wild type 0) with scores 5 to 6, fail to induce nine of ten immediate-early genes, BDNF and three cytokines at 9 minutes and have about fivefold lower baseline Egr1 protein; C3-null mice have lower scores at 80 mg/kg and no deaths at 50 mg/kg. Lowering complement is therefore not uniformly protective and the sign depends on the component. Not shown: a tissue- or time-specific mechanism (germline knockout, no brain C4 activation measured), a causal C4-to-immediate-early-gene chain (association only), or anything on WWOX or plasma products. Expression was sampled only from animals alive at 9 minutes (survivor selection), n is as low as 3, and Barnes-maze trials are treated as independent. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0670]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 391
+**Short title:** Ebdalla 2026 — intravenous immunoglobulin in 60 children with drug-resistant epilepsy: a retrospective cohort without a comparator
+**Full title:** Efficacy of intravenous immunoglobulin in children with drug-resistant epilepsy
+**Authors:** Ebdalla A, Scantlebury MH, Appendino JP, Ho A, Jacobs J
+**Year:** 2026
+**Source type:** primary research — single-centre retrospective cohort
+**Journal/source:** *Front Neurol* 2026;17:1796553
+**Identifier:** PMID 42064976 / PMC13127252 / DOI 10.3389/fneur.2026.1796553
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-42064976-01`; manifest `deepdive_manifests/PMID42064976.json`; dossier `research/fulltext_dossiers/PMID42064976.md`; artefact `files/fulltext/PMID42064976_Ebdalla2026_PMC.xml` (sha256 `6b2f62fe5620d06bf25573f5efb8f7b853ed062291a51380b0447b451a62739f`); coverage limits from the receipt's `coverage` map (every coverage entry read); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** 60 children kept on IVIG for at least a year (28 genetic, 17 structural, 15 unknown aetiology; 16 with DEE, none gene-resolved)
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T4 — distant source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** 22 of 60 (36.7 percent) had at least 50 percent seizure reduction and 8 were seizure free; no effect at 3 months; repeated-measures ANOVA is significant for generalized seizures (p = 0.019) and unknown aetiology (p = 0.03) but not for the genetic subgroup; 88.3 percent had no reported adverse effect. It gives no evidence for IVIG in genetic DEE: the genetic subgroup shows no significant change over time while the conclusion advises early IVIG for genetic aetiologies. Efficacy is not shown (no comparator, selection by retention beyond a year with nine early stoppers dropped, an ordinal scale analysed by ANOVA, uncorrected subgroup tests); the response breakdown disagrees (text totals 47 of 60 against 38 non-responders in Table 4). Nothing on WWOX. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0671]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 392
+**Short title:** Hu 2024 — COL4A2 variants, infantile spasms and astrocyte neuroinflammation: eight patients and overexpression in LPS-stimulated astrocytes
+**Full title:** Col4a2 Mutations Contribute to Infantile Epileptic Spasm Syndrome and Neuroinflammation
+**Authors:** Hu C, Liu D, Wang H
+**Year:** 2024
+**Source type:** primary research — small clinical series with cell-line and primary-astrocyte overexpression
+**Journal/source:** *Int J Med Sci* 2024;21(9):1756-1768
+**Identifier:** PMID 39006838 / PMC11241092 / DOI 10.7150/ijms.97164
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-39006838-01`; manifest `deepdive_manifests/PMID39006838.json`; dossier `research/fulltext_dossiers/PMID39006838.md`; artefact `files/fulltext/PMID39006838_Hu2024_PMC.xml` (sha256 `52d6b819cc98b24aa76879e2b4cd22a417479d20494763ec3eb52ee1cb1b55c9`); coverage limits from the receipt's `coverage` map (absent from the source: supplementary); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** eight-patient series; rat astrocyte line and primary astrocytes overexpressing a COL4A2 missense variant under LPS
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** CSF IL-1beta and IL-6 above reference in six of eight patients before seizure freedom; the variant-bearing construct gives higher GFAP, cytokines, p-JAK2 and p-STAT3 than the wild-type construct under LPS, reversed by WP1066. It does not establish pathogenicity of the modelled variant (uncertain significance), a loss-of-function or BBB mechanism (overexpression in stimulated astrocytes only), a 'type VII DEE gene' class, or any WWOX or plasma-product statement. Data-integrity queries recorded neutrally: Table 4 repeats ten of twelve cytokine values of Table 3 to one decimal for four patients (the title says six); the IL-6 ELISA bars of two figures are indistinguishable at the available resolution; the primary-astrocyte GFAP western is flat against the text. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0672]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 393
+**Short title:** Suleymanova 2025 — blood-brain barrier disruption in epilepsy: a narrative review of albumin, TGF-beta and astrocyte excitability
+**Full title:** The Role of Blood-Brain Barrier Disruption in Epilepsy: Mechanisms and Consequences
+**Authors:** Suleymanova E, Karan A
+**Year:** 2025
+**Source type:** narrative review (secondary source)
+**Journal/source:** *Neurol Int* 2025;18(1)
+**Identifier:** PMID 41591075 / PMC12845512 / DOI 10.3390/neurolint18010001
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-41591075-01`; manifest `deepdive_manifests/PMID41591075.json`; dossier `research/fulltext_dossiers/PMID41591075.md`; artefact `files/fulltext/PMID41591075_Suleymanova2025_PMC.xml` (sha256 `9c58c819491575770766bf5efabad1c9ed401de5633890596f177218215ff46f`); coverage limits from the receipt's `coverage` map (absent from the source: limitations, methods, results, supplementary, tables); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** rodent models and human tissue or CSF (review); 297 references term-screened only
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** BBB leakage accompanies epileptogenic insults and persists in drug-resistant epilepsy; leaked albumin binds astrocytic TGF-beta receptor II, lowering Kir4.1 and raising excitability (rodent intracerebral albumin; extravasated albumin and a raised TGF-beta pathway in human tissue and CSF); plasminogen-activation, immune-cell and drug-transporter arms; losartan, microRNA antagonists and imatinib as rodent candidates. Whether a Wwox-null brain leaks albumin is unmeasured (testable by serum-albumin immunostaining; IPOTESI). The pathway is leakage into the brain, not albumin infusion, and effect directions are context-dependent; the conclusion that barrier restoration is viable is not borne out because no candidate fully prevents epileptogenesis. WWOX is absent. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0673]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 394
+**Short title:** Preininger 2023 — albumin, TGF-beta and astrocyte senescence: seven days of albumin in rat astrocytes and mouse ventricular infusion
+**Full title:** Blood-brain barrier dysfunction promotes astrocyte senescence through albumin-induced TGFβ signaling activation
+**Authors:** Preininger MK, Zaytseva D, Lin JM, Kaufer D
+**Year:** 2023
+**Source type:** primary research — primary rat astrocytes and mouse intraventricular infusion
+**Journal/source:** *Aging Cell* 2023;22(2):e13747
+**Identifier:** PMID 36606305 / PMC9924950 / DOI 10.1111/acel.13747
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-36606305-01`; manifest `deepdive_manifests/PMID36606305.json`; dossier `research/fulltext_dossiers/PMID36606305.md`; artefact `files/fulltext/PMID36606305_Preininger2023_PMC.xml` (sha256 `a0376cfb1cae92ab382cc561ec5f145d187331292a5d4ffc4ef5e8d4253f7123`); coverage limits from the receipt's `coverage` map (every coverage entry read); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** primary rat astrocytes; mice with ventricular bovine albumin; ALK5 inhibitor or astrocytic receptor knockdown
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** Albumin raises senescence markers (SA-beta-gal, p16, p21, BCL family) and six cytokine or chemokine transcripts in astrocytes and, in mice, lowers astrocytic Lamin B1 and raises pSMAD2, p-p38 and p16; an ALK5 inhibitor or receptor knockdown prevents it. Unmeasured in WWOX models. Prevention is not tested as stated: non-significance against control is read as prevention (Dunnett against control only; albumin against albumin plus inhibitor never compared; one inhibitor-arm bar about 1.8 against 1.0); no inhibitor-alone or knockout-vehicle arm; senescence rests on a marker panel; pooled correlations are group-driven; blots are one gel per group compared across gels through GAPDH only. The model is a bovine albumin preparation in the ventricle, not infused albumin or plasma. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0674]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 395
+**Short title:** Sahin 2026 — therapeutic plasma exchange in 22 critically ill children with neuroimmunological disorders: a single-unit uncontrolled series
+**Full title:** Therapeutic Plasma Exchange in Critically Ill Children with Neuroimmunological Disorders: A Single-Center Cohort Study
+**Authors:** Sahin EG, Guvenc KB, Yucel GA, Yasar E, Varol F, Durak C
+**Year:** 2026
+**Source type:** primary research — single-centre retrospective series
+**Journal/source:** *Children (Basel)* 2026;13(7)
+**Identifier:** PMID 42509933 / PMC13407348 / DOI 10.3390/children13070908
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-42509933-01`; manifest `deepdive_manifests/PMID42509933.json`; dossier `research/fulltext_dossiers/PMID42509933.md`; artefact `files/fulltext/PMID42509933_Sahin2026_PMC.xml` (sha256 `8bf0e1bcb92be7ccb3a2dc998221fb2ee60f1a258b73d7013edd6443e919f121`); coverage limits from the receipt's `coverage` map (absent from the source: figures); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** 22 children in one paediatric intensive care unit (6 Guillain-Barre, 6 autoimmune encephalitis, 4 infection-triggered encephalopathy, 3 MOGAD, 2 ADEM, 1 MERS)
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T4 — distant source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** 14 had a favourable discharge outcome, 3 died, and no major exchange complication was recorded; the replacement fluid was plasma and/or albumin, plasma predominant. Neither efficacy nor safety is shown: no control, every child also received steroids and/or IVIG, discharge-only outcome (the authors say so), fluid per patient untabulated, and no antibody, complement or cytokine measured. The 63.6 percent favourable figure is case mix (Guillain-Barre 6 of 6, other diagnoses 8 of 16, infection-triggered encephalopathy 0 of 4). Text against table: 'most' autoimmune-encephalitis patients unfavourable is 3 of 6; Table 3 percentages imply a denominator of 17 while 16 were tested. No genetic DEE, no WWOX. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0675]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 396
+**Short title:** Zamith 2025 — plasma exchange with albumin for refractory high anion gap acidosis: two adult cases
+**Full title:** Plasma Exchange Transfusion for Refractory High Anion Gap Metabolic Acidosis
+**Authors:** Zamith N, Zetola NM
+**Year:** 2025
+**Source type:** case report (two adults)
+**Journal/source:** *Case Rep Crit Care* 2025;2025:8872468
+**Identifier:** PMID 41393164 / PMC12698179 / DOI 10.1155/crcc/8872468
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-41393164-01`; manifest `deepdive_manifests/PMID41393164.json`; dossier `research/fulltext_dossiers/PMID41393164.md`; artefact `files/fulltext/PMID41393164_Zamith2025_PMC.xml` (sha256 `b77bd170d35ec707556e86721741fa0c638d12019dbe3213c8c318c5a218b90a`); coverage limits from the receipt's `coverage` map (absent from the source: figures, supplementary); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** two adult intensive-care patients on renal replacement therapy
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T4 — distant source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** Acidosis persisted on renal replacement therapy and improved after three plasma exchanges with 5 percent albumin; the authors suggest protein-bound acids and state causality is not established. It supports no causal reading (concurrent dialysis and recovery of the underlying illness; lactate 20 to 12 before the first exchange; creatinine 2.6 to 1.0 in case 2), no mechanism (no bound acid measured) and no active role of albumin (replacement fluid, never compared). Table checks: reported anion gaps in case 1 exceed the value recomputed from the table's own sodium, chloride and bicarbonate by 11 to 18 mmol/L before and after the first exchange; case 2 text bicarbonate 10 against 15 to 16 in the table; case 1 text says lactic acidosis resolved after hydroxocobalamin while the table shows lactate 15 to 20 through dialysis. The weakest evidence class of the plasma group; nothing on children, glucose, neurology or WWOX. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0676]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 397
+**Short title:** Houben 2020 — fresh-frozen plasma use in 2577 preterm neonates over 16 years in one Dutch unit
+**Full title:** Changes in the Use of Fresh-Frozen Plasma Transfusions in Preterm Neonates: A Single Center Experience
+**Authors:** Houben NAM, Heeger LE, Stanworth SJ, New HV, van der Bom JG, Fustolo-Gunnink S, Lopriore E
+**Year:** 2020
+**Source type:** primary research — single-centre utilisation cohort across three epochs
+**Journal/source:** *J Clin Med* 2020;9(11)
+**Identifier:** PMID 33238649 / PMC7700187 / DOI 10.3390/jcm9113789
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-33238649-01`; manifest `deepdive_manifests/PMID33238649.json`; dossier `research/fulltext_dossiers/PMID33238649.md`; artefact `files/fulltext/PMID33238649_Houben2020_PMC.xml` (sha256 `9496d3afa19f0f382ca371342def0ac545ff687aec82ec06b966fdfcfc4d7f57`); coverage limits from the receipt's `coverage` map (every coverage entry read); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** 2577 preterm neonates, one Dutch unit
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T4 — distant source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** Plasma use fell from 5.7 to 2.0 percent and coagulation testing from 24.3 to 8.0 percent across three epochs; most plasma (56 percent) was for abnormal coagulation tests, 20 percent for DIC, 17 percent for bleeding; major haemorrhage did not change significantly (p 0.204, no counts). A utilisation study: the authors say benefit 'is unknown'; it does not show that giving less is safe (no power, no counts) or a single cause for the fall (testing and case mix both changed). Internal checks: the middle-epoch 30 of 901 is 3.3 percent against 3.7 printed; epoch III prothrombin-time prolongation 30.5 percent against about 59 percent implied by the overall 256 of 399; one table prints an interval of 13.0 (10.6-6.2). No WWOX or genetic-DEE content. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0677]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 398
+**Short title:** Tang 2026 — fresh-frozen plasma and intraventricular haemorrhage in 748 preterm infants with prolonged APTT: a target-trial emulation with a null primary estimate
+**Full title:** Effect of fresh-frozen plasma transfusion on intraventricular hemorrhage risk in preterm infants with prolonged APTT: a target trial emulation with causal forest analysis
+**Authors:** Tang B, Yu Q, Zhang J, Duan X, Meng T, Chen Z, et al.
+**Year:** 2026
+**Source type:** primary research — retrospective cohort, target-trial emulation
+**Journal/source:** *Front Neurosci* 2026;20:1950034
+**Identifier:** PMID 42769206 / PMC13590724 / DOI 10.3389/fnins.2026.1950034
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-42769206-01`; manifest `deepdive_manifests/PMID42769206.json`; dossier `research/fulltext_dossiers/PMID42769206.md`; artefact `files/fulltext/PMID42769206_Tang2026_PMC.xml` (sha256 `f946c894b244fd336c78881eddf5772d8aeaae4301630872de04c556934d5f71`); coverage limits from the receipt's `coverage` map (every coverage entry read); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** 748 preterm infants (434 plasma, 314 none), shared patient files
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T4 — distant source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** The weighted odds ratio for any-grade IVH is 1.18 (0.79 to 1.78), doubly robust 1.03; below 32.4 weeks 2.16 (1.11 to 4.23), above 0.67; the authors conclude routine plasma is not recommended. Not supported: harm below 28 weeks (the shared file shows 10 such infants, all given plasma, 9 with IVH, no controls: model extrapolation); a robust low-gestational-age signal (a conventional adjusted regression gives 1.49, 0.76 to 2.94; the 2.16 and interaction p 0.02 sit in one model with a data-chosen cut); the E-value reading (a small E-value on a null makes it fragile, not robust); the negative control (fails its own rule); the claimed design (registered after data; controls defined by future non-treatment). Printing and citation problems: a CI printed -0.45 against a plotted -0.046; several references carry titles on unrelated subjects. Counts reproduce exactly from the shared files. No WWOX or genetic-DEE content. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0678]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
+
+---
+
+## PAPER 399
+**Short title:** Abergel 2023 — fresh-frozen plasma in a rat model of blunt head injury plus uncontrolled haemorrhage: more bleeding after plasma in one subgroup
+**Full title:** Fresh Frozen Plasma Increases Hemorrhage in Blunt Traumatic Brain Injury and Uncontrolled Hemorrhagic Shock
+**Authors:** Abergel H, Bidder M, Ashkenazi I, Reytman L, Alfici R, Krausz MM
+**Year:** 2023
+**Source type:** primary research — rodent trauma model
+**Journal/source:** *Rambam Maimonides Med J* 2023;14(1)
+**Identifier:** PMID 36719667 / PMC9888485 / DOI 10.5041/RMMJ.10489
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-A-PLASMA-02` (BATCH_20261019_005 integration of the interventions lot H1/H2, Scientist A, task INTERV-H1-A-20261019); identity authored by the integrator from the PubMed record (E-utilities summary, 2026-10-20) and checked against the receipt's study identifiers, and the number assigned from `registry_records.py catalog` (`PAPER` max was 369, `LIT` max 0651) in place of the candidate's unnumbered 'new record' row.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-36719667-01`; manifest `deepdive_manifests/PMID36719667.json`; dossier `research/fulltext_dossiers/PMID36719667.md`; artefact `files/fulltext/PMID36719667_Abergel2023_PMC.xml` (sha256 `c5739a68cb5ed4a7125ac5f5edfd72f7e665daa07461975e75f71d501ea18e8b`); coverage limits from the receipt's `coverage` map (absent from the source: supplementary); the depth is never upgraded from the receipt
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** 97 adult male rats (combined head injury and tail amputation)
+**Genotype/model:** no WWOX-deficient system; comparator or class-level context
+**Transferability:** T4 — distant source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** Three millilitres of plasma was followed by 5.2 mL further bleeding against 2.5 with Ringer's and 1.9 with no fluid (ANOVA P 0.005), with nominally higher mortality (10 of 12, 5 of 12, 9 of 14; P 0.106). An omnibus test is not a pairwise plasma-versus-Ringer's finding (the injury-only P is 0.254); no brain endpoint was measured and the mortality difference is not significant; the power claim assumes an SD of 1 mL against implied SDs of 2 to 3.4 mL; citrate from the plasma and ionised calcium are unaddressed (IPOTESI). Table 1 prints injury-only mortality as 0.20 (0.50, 0.52); two pre-resuscitation bleeding means share one interval; secondary endpoints rest on survivors. The identity check's author mismatch reflects a missing Crossref author only. No WWOX or genetic-DEE content. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0679]]
+**Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
 
 ---
 

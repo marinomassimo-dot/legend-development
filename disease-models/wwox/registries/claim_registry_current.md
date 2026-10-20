@@ -525,8 +525,8 @@ Canonical audit trail of numbered claims relevant to the Working Model.
 **clinical relevance:** INDIRECT — important for disciplined inference across all pathways
 **Summary:** WWOX signaling output varies depending on partner composition, subcellular context and signaling state. Some systems suggest that WWOX availability does not translate into simple linear benefit unless relevant partners and network accessibility are preserved. WWOX should not be modeled as a uniformly monotonic regulator whose increase or decrease has identical meaning across tissues or disease states. Partner accessibility, phosphorylation state, compartmentalization and network context must be considered.
 **Clinical meaning:** Principio di cautela interpretativa trasversale. Impedisce di leggere "più WWOX = meglio" in modo lineare e uniforme. Rilevante per interpretazione di terapia genica, modulazione farmacologica e lettura di studi in sistemi non-CNS.
-**Source:** papers 207, 218, 206, 214 (corpus 181–220)
-**Wikilinks:** [[paper_registry_current#CORPUS P207]], [[paper_registry_current#CORPUS P218]], [[paper_registry_current#CORPUS P206]], [[paper_registry_current#CORPUS P214]]
+**Source:** papers 207, 218, 206, 214 (corpus 181–220); plus `PAPER 383` (added at BATCH_20261019_005: a non-neural partial-knockdown instance in which WWOX loss lowers poly(I:C)-induced NF-kB signalling, a sign opposite to the lung, endothelial, B-cell and sepsis reports of partial loss that the paper record names; system gap: one immortalised human keratinocyte line, a partial knockdown and a single stimulus; it is a further instance of context dependence, not a statement that WWOX loss is anti-inflammatory)
+**Wikilinks:** [[paper_registry_current#CORPUS P207]], [[paper_registry_current#CORPUS P218]], [[paper_registry_current#CORPUS P206]], [[paper_registry_current#CORPUS P214]], [[paper_registry_current#PAPER 383]]
 **Impact on Working Model:** cautionary interpretive principle; no direct BLOCCO 1 change; informs disciplined reading of all future WWOX biology
 
 ---

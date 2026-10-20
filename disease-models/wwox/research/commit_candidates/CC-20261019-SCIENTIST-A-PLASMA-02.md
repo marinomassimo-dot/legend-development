@@ -64,3 +64,17 @@
 ## 5 - Registry statements to re-check at integration
 
 `CORPUS P330` entry; `CORPUS-STUB-068` (PLASMA-01); the selection file's complement sentence. Nothing in the four scientific current files or `disease_model.md` is touched.
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_005` · 2026-10-20 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.23 -> WM_v7.24 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** not run by the integrator.
+**What landed:** 28 class-level `PAPER` records (`PAPER 370`-`382`, `384`-`386`, `388`-`399`, the candidate's unnumbered rows) with `LIT-0652`-`0679`; the stale placeholder `CORPUS P330` (Hong 2009) promoted to `PAPER 387` with `LIT-0330` promoted to processed (the placeholder is kept as history; the record states that the selection file's "nothing on complement" was too strong, and the statement is corrected in place in the selection file with the old wording quoted); the Shin 2023 row landed through `CC-20261019-SCIENTIST-A-PLASMA-01` (`PAPER 383`). Depth, receipt, artefact and full sha256 come from the ledger event of each paper; partial depths state what the receipt's coverage map leaves unread.
+**Parked:** section 3 (seven proposed method notes: patterns seen in the lot, not claims, no registry target and no op text); the gene-direct reference debts recorded in the manifests of the keratinocyte and prostate papers (no PMID in the screened reference entries, no op text in the candidate, so no full-text queue entry was written); the four blocked WWOX-direct items named in the wave note.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.

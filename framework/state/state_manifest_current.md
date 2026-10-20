@@ -43,7 +43,7 @@ edition: public
 ## 2. DISEASE-MODEL (WORKING-MODEL) VERSION
 
 ```yaml
-working_model_version: WM_v7.23
+working_model_version: WM_v7.24
 working_model_file: disease-models/wwox/registries/working_model_current.md
 narrative_view: disease-models/wwox/disease_model.md
 notes: "Canonical disease-level working model derived from public literature; disease_model.md is its narrative reader-facing view. The private individual-level record is not part of this edition."
@@ -106,12 +106,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261019_004
+last_batch_commit_id: BATCH_20261019_005
 last_batch_commit_date: 2026-10-20
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 3
-target_wm_version: WM_v7.23
-trigger: MANUAL (operator-authorised integration of the metabolic batch's reading-debt candidates, ACTOR_ID orchestrator by stated assumption, task ORCH-METABOLIC-BATCH-20261019; the backlog threshold of 5 was also met). Three candidates, all propagated, none merged, none superseded: the HELD-partial re-reads of WWOX-direct papers, deferred by the previous batch until their ten receipts reached the ledger, and the two WWOX-direct reading-debt candidates (17 receipts). The registry debt of the lot is discharged: 14 PAPER records (PAPER 356 to PAPER 369, ten of them promotions of corpus placeholders kept as history) and 4 new LIT records (LIT-0648 to LIT-0651, ten existing LIT records promoted to processed) land every PMID the debt wave read. No claim was created, none reversed, and no Status, Type or Summary changed: CLAIM 009 gains one evidence-boundary wave note, nine existing paper and corpus-stub records gain reading-update notes, FT-090 is closed by a complete reading, and the selection file's wrong Alzheimer-type label for a Parkinson's-disease-dementia paper is corrected in place with the old wording quoted. Research layer: DL-MECH-151 to DL-MECH-162. Parked: the claim-level proposals and reading debts of the oxygen candidate and the catecholamine working-model note (no op text), the RL-003 research-line boundary (not one of the four current files), and the wishlists of papers with no lawful body. No blind locator audit was run by the integrator.
+commit_candidates_propagated: 2
+target_wm_version: WM_v7.24
+trigger: MANUAL (operator-authorised integration of the metabolic batch's interventions lot H1/H2 of Scientist A, ACTOR_ID orchestrator by stated assumption, task ORCH-METABOLIC-BATCH-20261019). Two candidates, both propagated, none merged, none superseded. The registry debt of the lot is discharged: 30 PAPER records (PAPER 370 to PAPER 399, two of them promotions of corpus placeholders kept as history) and 28 new LIT records (LIT-0652 to LIT-0679, LIT-0091 and LIT-0330 promoted to processed) land every PMID of the lot, including the readings that blocked BATCH_COMMIT with ORPHAN_COMPLETE_READ. No claim was created, none reversed, and no Status, Type or Summary changed: CLAIM 028 gains a further source (a non-neural partial-knockdown instance with the opposite sign) in its Source and Wikilinks lines; the selection file's statement that the model had nothing on complement is corrected in place with the old wording quoted (the only WWOX-direct complement paper, a gain-of-function cancer-cell report, is upgraded from a stale placeholder at complete depth); FT-108 carries a follow-up line. Parked: seven proposed method notes (no registry target), the gene-direct reference debts of two manifests (no PMID in the screened entries, no op text) and the four blocked WWOX-direct items. No blind locator audit was run by the integrator.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -125,7 +125,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261020_BATCH_20261019_004
+last_lint_id: LINT_20261020_BATCH_20261019_005
 last_lint_date: 2026-10-20
 last_lint_result: WARN
 ```
@@ -212,8 +212,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 52
-growth_anchor_head: f0b4ffe0196a8387734b3a3d1be05305999cbb04c09cb033b8c61f93e38c4d91
+growth_anchor_events: 53
+growth_anchor_head: 32d9819224fa00d2addd8286e8c1ed5a15ed1215a4c430fb2492eb37f6c8d560
 ```
 
 ```bash
