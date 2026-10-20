@@ -1,41 +1,42 @@
 {
- "record_kind": "contemporaneous_receipt",
- "event_id": "FTR-20261019-34258135-01",
- "study_id": {
-  "pmid": "34258135",
-  "doi": "10.1002/jmd2.12206"
- },
- "analysis_at": "2026-10-20T07:22:00Z",
- "analysis_time_precision": "minute",
- "workflow": "scientist-d (stated assumption of the Orchestrator), task W4-W2B-D-20261019; context_policy QUESTION_DRIVEN (held: the selection file's reason, SUBSTITUTE, not WWOX evidence). Route: Europe PMC JATS for PMC8260484 as the text surface, the one-page supplement from the Europe PMC supplementaryFiles container, and the two figure JPEGs from the PMC blob store; both figures and the supplement page opened as images; Table 1 read as text; whole article read. Every statement here is about FOLR1-class disease and is not WWOX evidence.",
- "evidence_depth": "complete_fulltext_read",
- "source_locator": "files/fulltext/PMID34258135_Papadopoulou2021_PMC8260484.xml",
- "source_fingerprint": "e036d021b23897278ae0005a18c8d19ae071f9f61dbaa4beee5d8e05dfa0a3bb",
- "source_kind": "fulltext_local",
- "coverage": {
-  "abstract": "read",
-  "introduction": "read",
-  "methods": "not_present",
-  "results": "read",
-  "figures": "read",
-  "tables": "read",
-  "discussion": "read",
-  "limitations": "not_present",
-  "supplementary": "read",
-  "references": "read"
- },
- "outputs": [
-  "disease-models/wwox/research/deepdive_manifests/PMID34258135.json",
-  "disease-models/wwox/research/wave4_scientist-d.md",
-  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-W4B-01.md"
- ],
- "evidence_basis": [
-  "coverage_map",
-  "manifest",
-  "Figures 1-2 and the supplement page inspected as images",
-  "Table 1 read as text",
-  "SUBSTITUTE: no WWOX content (0 mentions)"
- ],
- "prior_receipt": null,
- "reread_reason": "first_read"
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261019-34258135-01",
+  "study_id": {
+    "pmid": "34258135",
+    "doi": "10.1002/jmd2.12206"
+  },
+  "analysis_at": "2026-10-20T07:22:00Z",
+  "analysis_time_precision": "minute",
+  "workflow": "scientist-d (stated assumption of the Orchestrator), task W4-W2B-D-20261019; context_policy QUESTION_DRIVEN (held: the selection file's reason, SUBSTITUTE, not WWOX evidence). Route: Europe PMC JATS for PMC8260484 as the text surface, the one-page supplement from the Europe PMC supplementaryFiles container, and the two figure JPEGs from the PMC blob store; both figures and the supplement page opened as images; Table 1 read as text; whole article read. Every statement here is about FOLR1-class disease and is not WWOX evidence.",
+  "evidence_depth": "complete_fulltext_read",
+  "source_locator": "files/fulltext/PMID34258135_Papadopoulou2021_PMC8260484.xml",
+  "source_fingerprint": "e036d021b23897278ae0005a18c8d19ae071f9f61dbaa4beee5d8e05dfa0a3bb",
+  "source_kind": "fulltext_local",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "read",
+    "methods": "not_present",
+    "results": "read",
+    "figures": "read",
+    "tables": "read",
+    "discussion": "read",
+    "limitations": "not_present",
+    "supplementary": "read",
+    "references": "read"
+  },
+  "outputs": [
+    "disease-models/wwox/research/deepdive_manifests/PMID34258135.json",
+    "disease-models/wwox/research/wave4_scientist-d.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-W4B-01.md"
+  ],
+  "evidence_basis": [
+    "coverage_map",
+    "manifest",
+    "Figures 1-2 and the supplement page inspected as images",
+    "Table 1 read as text",
+    "SUBSTITUTE: no WWOX content (0 mentions)"
+  ],
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "event_at": "2026-10-20T07:22:00Z"
 }
