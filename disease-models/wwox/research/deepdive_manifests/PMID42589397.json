@@ -1,126 +1,245 @@
 {
-  "schema_version": 2,
-  "pmid": "42589397",
-  "doi": "10.3390/ijms27156740",
-  "receipt": "FTR-20260927-42589397-02",
-  "landing": [
-    "CLAIM 025",
-    "CC-20260922-CLAIM025-SIGN-INVARIANCE-01"
-  ],
-  "skills_considered": [
-    {
-      "skill": "legend-deepdive",
-      "used": false,
-      "reason": "No deep dive was run. The pass persisted verbatim locators for sentences already quoted by wave-2 commit candidates; a deep dive would have produced a dossier this pass does not claim."
-    },
-    {
-      "skill": "find-fulltext",
-      "used": true,
-      "reason": "PMC JATS re-acquired by E-utilities efetch on 2026-09-27 because the artifact the prior receipt fingerprints is not present in this checkout."
-    },
-    {
-      "skill": "legend-locator-audit",
-      "used": false,
-      "reason": "Triples are handed to the audit through the commit candidate's LOCATOR TRIPLES FOR BLIND AUDIT section, not run here: producer must not be verifier."
-    }
-  ],
-  "group_assessment": {
-    "waived": "Waived by name. This is NOT a deep dive: it is a targeted locator-capture pass on a paper already carried in the registry with a prior receipt, opened to persist the verbatim sentences that wave-2 commit candidates quote. The deep-dive steps belong to whichever reading promotes or re-rates this record, and waiving them here is cheaper and more honest than filling them from metadata that no one used. Scope of this pass is recorded in the accompanying receipt."
+ "schema_version": 2,
+ "pmid": "42589397",
+ "doi": "10.3390/ijms27156740",
+ "receipt": "FTR-20260927-42589397-02",
+ "landing": [
+  "CLAIM 025",
+  "CC-20260922-CLAIM025-SIGN-INVARIANCE-01"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "No deep dive was run. The pass persisted verbatim locators for sentences already quoted by wave-2 commit candidates; a deep dive would have produced a dossier this pass does not claim."
   },
-  "field_density": {
-    "waived": "Waived by name. This is NOT a deep dive: it is a targeted locator-capture pass on a paper already carried in the registry with a prior receipt, opened to persist the verbatim sentences that wave-2 commit candidates quote. The deep-dive steps belong to whichever reading promotes or re-rates this record, and waiving them here is cheaper and more honest than filling them from metadata that no one used. Scope of this pass is recorded in the accompanying receipt."
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "PMC JATS re-acquired by E-utilities efetch on 2026-09-27 because the artifact the prior receipt fingerprints is not present in this checkout."
   },
-  "multihop": {
-    "waived": "Waived by name. This is NOT a deep dive: it is a targeted locator-capture pass on a paper already carried in the registry with a prior receipt, opened to persist the verbatim sentences that wave-2 commit candidates quote. The deep-dive steps belong to whichever reading promotes or re-rates this record, and waiving them here is cheaper and more honest than filling them from metadata that no one used. Scope of this pass is recorded in the accompanying receipt."
-  },
-  "corpus_crossquery": {
-    "waived": "Waived by name. This is NOT a deep dive: it is a targeted locator-capture pass on a paper already carried in the registry with a prior receipt, opened to persist the verbatim sentences that wave-2 commit candidates quote. The deep-dive steps belong to whichever reading promotes or re-rates this record, and waiving them here is cheaper and more honest than filling them from metadata that no one used. Scope of this pass is recorded in the accompanying receipt."
-  },
-  "retraction_check": {
-    "waived": "Waived by name. This is NOT a deep dive: it is a targeted locator-capture pass on a paper already carried in the registry with a prior receipt, opened to persist the verbatim sentences that wave-2 commit candidates quote. The deep-dive steps belong to whichever reading promotes or re-rates this record, and waiving them here is cheaper and more honest than filling them from metadata that no one used. Scope of this pass is recorded in the accompanying receipt."
-  },
-  "source_artifacts": [
-    {
-      "path": "files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml",
-      "sha256": "ae7f429190e0b48faaf91f9df0c79e66dd7986d23c65c21f5564ef8607f898af",
-      "kind": "article_text",
-      "note": "PMC JATS XML acquired 2026-09-27 for a first-hand read of the subtype-direction and statistical-fragility sentences that CC-20260922-CLAIM025-SIGN-INVARIANCE-01 had only by another actor's attestation.",
-      "acquisition_recipe": {
-        "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=13467099&retmode=xml",
-        "http_method": "GET",
-        "tier": "ncbi_efetch_pmc_xml",
-        "user_agent_policy": "none",
-        "acquired_on": "2026-09-27",
-        "derived": false,
-        "result_sha256": "ae7f429190e0b48faaf91f9df0c79e66dd7986d23c65c21f5564ef8607f898af"
-      }
-    }
-  ],
-  "verbatim_locators": {
-    "waived": false,
-    "source_fulltext_indexed": true,
-    "source_fulltext_indexed_evidence": "JATS from E-utilities efetch db=pmc id=13467099, 193,422 bytes. Abstract separated from body by the validator's own extraction; every locator is matched against the body.",
-    "abstract_anchoring_waived": "No locator draws on the abstract; every entry is matched against the body of the declared JATS artifact.",
-    "note": "Coverage of this pass: Abstract, Results (stratification, Cox models, pathway/immune/hormone sections), Discussion, Methods and Limitations read from the JATS running text. Figures and supplementary tables NOT inspected: the figures are supplementary in this article and the Supplementary tables (S4-S8) that carry the per-subtype survival numbers are a separate file not fetched here -- so the lineage-by-lineage DFS numbers remain unverified at panel level and only the authors' running-text statements about them are receipted.",
-    "entries": [
-      {
-        "proposition": "THE SUBTYPE DIRECTIONS ARE HEDGED IN THE SOURCE AND MUST BE HEDGED IN THE CLAIM: the paper says TENDED, and CC-20260922-CLAIM025-SIGN-INVARIANCE-01's delta-2 wording ('si associa a DFS peggiore') is stronger than this sentence. Read first-hand 2026-09-27, which discharges that candidate's blocking verification item 1.",
-        "snippet": "Patients with Basal-like and HER2-enriched BRCA tended to show more favourable DFS in the high-ratio group, whereas those with Luminal A, Luminal B, and OV tumours showed more favourable DFS in the low-ratio group",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml",
-        "anchor": "Results, 'Patient Stratification and Subtype Composition', Kaplan-Meier paragraph",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "THE SOURCE ITSELF REFUSES THE PROGNOSTIC READING OF THOSE DIRECTIONS. This is the sentence that licenses a QUALIFY of CLAIM 025 and forbids any strengthening of it.",
-        "snippet": "Given the modest number of DFS events per subtype and the exploratory nature of the subgroup cutpoints, these effects are descriptive and hypothesis-generating rather than formally validated prognostic groupings.",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml",
-        "anchor": "Results, 'Patient Stratification and Subtype Composition', sentence immediately following the subtype-direction sentence",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "WHAT THE PAPER GENUINELY STRENGTHENS IS THE RATIO ARCHITECTURE, NOT THE SIGN: in the combined model the ratio survives and the single transcripts do not. This is CLAIM 025's core architectural proposition and the half that must not be lost in qualifying the claim.",
-        "snippet": "remained significant in the combined model with WWOX and HIF1A (HR 0.31, 95% CI 0.14–0.70, p = 4.8 × 10−3), whereas the individual genes lost significance",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml",
-        "anchor": "Results, continuous-ratio Cox models, BRCA sentence",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "AND THE DISCRIMINATION IS NEGLIGIBLE ONCE OPTIMISM IS CORRECTED, which is why this source can refuse a direction and cannot raise a corroboration weight.",
-        "snippet": "the optimism-corrected C-indices were centred close to 0 with a wide interval (approximately −0.50 to 0.46)",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml",
-        "anchor": "Results, LASSO-Cox full breast cohort, bootstrap internal validation sentence",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "THE OVARIAN COHORT -- THE LARGER ONE -- IS NOT SIGNIFICANT AT ALL in the single-predictor model, which is the second half of the evidence boundary proposed for CLAIM 025.",
-        "snippet": "In OV, the ratio was not significantly associated with DFS in the single-predictor model (HR 1.11, 95% CI 0.92–1.35, p = 0.27; concordance 0.49)",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml",
-        "anchor": "Results, continuous-ratio Cox models, OV sentence",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "LUMINAL A, THE LARGEST BREAST SUBTYPE STRATUM, IS n = 181 - SMALLER THAN OV's 228, which is what makes OV the largest of the five strata. Added 2026-09-28 (mirror003 repairs, Mirror N4).",
-        "snippet": "Subtype-specific analyses were strictly constrained by very low DFS event counts (for example, Luminal A: n = 181).",
-        "anchor": "Results 2.6.2, 'Subtype-Specific Analyses', opening sentence",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml",
-        "panel_text_relation": "text_only",
-        "found_or_sought": "sought"
-      },
-      {
-        "proposition": "THE OVARIAN NULL IS NOT AN UNDERPOWERED ONE AND THE BREAST COHORT'S SIGNIFICANCE IS THE POOR-EVENT ONE: the OV cohort carries 161 events in 228 patients while the larger BRCA cohort carries 22 events in 390 - so the non-significant ovarian HR is an event-rich null, not a small-sample one. Added 2026-09-28 (mirror003 repairs, Mirror N4).",
-        "snippet": "resulting in final DFS-proxy cohorts of 390 BRCA patients (22 events, 368 censored) and 228 OV patients (161 events, 67 censored)",
-        "anchor": "Methods 5.1, cohort-assembly sentence, citing Supplementary Tables S1 and S2",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml",
-        "panel_text_relation": "text_only",
-        "found_or_sought": "sought"
-      }
-    ]
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Triples are handed to the audit through the commit candidate's LOCATOR TRIPLES FOR BLIND AUDIT section, not run here: producer must not be verifier."
   }
+ ],
+ "group_assessment": {
+  "waived": "Waived by name. This is NOT a deep dive: it is a targeted locator-capture pass on a paper already carried in the registry with a prior receipt, opened to persist the verbatim sentences that wave-2 commit candidates quote. The deep-dive steps belong to whichever reading promotes or re-rates this record, and waiving them here is cheaper and more honest than filling them from metadata that no one used. Scope of this pass is recorded in the accompanying receipt."
+ },
+ "field_density": {
+  "waived": "Waived by name. This is NOT a deep dive: it is a targeted locator-capture pass on a paper already carried in the registry with a prior receipt, opened to persist the verbatim sentences that wave-2 commit candidates quote. The deep-dive steps belong to whichever reading promotes or re-rates this record, and waiving them here is cheaper and more honest than filling them from metadata that no one used. Scope of this pass is recorded in the accompanying receipt."
+ },
+ "multihop": {
+  "waived": "Waived by name. This is NOT a deep dive: it is a targeted locator-capture pass on a paper already carried in the registry with a prior receipt, opened to persist the verbatim sentences that wave-2 commit candidates quote. The deep-dive steps belong to whichever reading promotes or re-rates this record, and waiving them here is cheaper and more honest than filling them from metadata that no one used. Scope of this pass is recorded in the accompanying receipt."
+ },
+ "corpus_crossquery": {
+  "waived": "Waived by name. This is NOT a deep dive: it is a targeted locator-capture pass on a paper already carried in the registry with a prior receipt, opened to persist the verbatim sentences that wave-2 commit candidates quote. The deep-dive steps belong to whichever reading promotes or re-rates this record, and waiving them here is cheaper and more honest than filling them from metadata that no one used. Scope of this pass is recorded in the accompanying receipt."
+ },
+ "retraction_check": {
+  "waived": "Waived by name. This is NOT a deep dive: it is a targeted locator-capture pass on a paper already carried in the registry with a prior receipt, opened to persist the verbatim sentences that wave-2 commit candidates quote. The deep-dive steps belong to whichever reading promotes or re-rates this record, and waiving them here is cheaper and more honest than filling them from metadata that no one used. Scope of this pass is recorded in the accompanying receipt."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml",
+   "sha256": "ae7f429190e0b48faaf91f9df0c79e66dd7986d23c65c21f5564ef8607f898af",
+   "kind": "article_text",
+   "note": "PMC JATS XML acquired 2026-09-27 for a first-hand read of the subtype-direction and statistical-fragility sentences that CC-20260922-CLAIM025-SIGN-INVARIANCE-01 had only by another actor's attestation.",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=13467099&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-27",
+    "derived": false,
+    "result_sha256": "ae7f429190e0b48faaf91f9df0c79e66dd7986d23c65c21f5564ef8607f898af"
+   }
+  },
+  {
+   "path": "files/figures/PMID42589397/ijms-27-06740-g001.jpg",
+   "kind": "figure",
+   "note": "Figure 1, acquired 2026-10-20 from the PMC OA open-data bucket, first declared and opened as an image in the held-partial re-read.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13467099.1/ijms-27-06740-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "931288278f417e26c2ac3d2800b4fce713f25c0bc521882d450c1b768a1f8549"
+  },
+  {
+   "path": "files/figures/PMID42589397/ijms-27-06740-g002.jpg",
+   "kind": "figure",
+   "note": "Figure 2, acquired 2026-10-20 from the PMC OA open-data bucket, first declared and opened as an image in the held-partial re-read.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13467099.1/ijms-27-06740-g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "8e6e655fa8f7a050f664d92477dcbdf568fa0d2762e07cc92aa6cd479ca73fa7"
+  },
+  {
+   "path": "files/figures/PMID42589397/ijms-27-06740-g003.jpg",
+   "kind": "figure",
+   "note": "Figure 3, acquired 2026-10-20 from the PMC OA open-data bucket, first declared and opened as an image in the held-partial re-read.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13467099.1/ijms-27-06740-g003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "f3b1ecec627a57c2f70108d23a3121f949a38dc408ba6246e5808a70b63bc4db"
+  },
+  {
+   "path": "files/figures/PMID42589397/ijms-27-06740-g004.jpg",
+   "kind": "figure",
+   "note": "Figure 4, acquired 2026-10-20 from the PMC OA open-data bucket, first declared and opened as an image in the held-partial re-read.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13467099.1/ijms-27-06740-g004.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "8085409b7405cc39ebb81681f6c3f29d93c37945358673562fee084ad35d18ac"
+  },
+  {
+   "path": "files/figures/PMID42589397/ijms-27-06740-g005.jpg",
+   "kind": "figure",
+   "note": "Figure 5, acquired 2026-10-20 from the PMC OA open-data bucket, first declared and opened as an image in the held-partial re-read.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13467099.1/ijms-27-06740-g005.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "9932bc6ca476842a6ca5af8cbe1fc716ae093dcfbebeb4ac9e239a7789dfcd12"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "JATS from E-utilities efetch db=pmc id=13467099, 193,422 bytes. Abstract separated from body by the validator's own extraction; every locator is matched against the body.",
+  "abstract_anchoring_waived": "No locator draws on the abstract; every entry is matched against the body of the declared JATS artifact.",
+  "note": "Coverage of this pass: Abstract, Results (stratification, Cox models, pathway/immune/hormone sections), Discussion, Methods and Limitations read from the JATS running text. Figures and supplementary tables NOT inspected: the figures are supplementary in this article and the Supplementary tables (S4-S8) that carry the per-subtype survival numbers are a separate file not fetched here -- so the lineage-by-lineage DFS numbers remain unverified at panel level and only the authors' running-text statements about them are receipted.",
+  "entries": [
+   {
+    "proposition": "THE SUBTYPE DIRECTIONS ARE HEDGED IN THE SOURCE AND MUST BE HEDGED IN THE CLAIM: the paper says TENDED, and CC-20260922-CLAIM025-SIGN-INVARIANCE-01's delta-2 wording ('si associa a DFS peggiore') is stronger than this sentence. Read first-hand 2026-09-27, which discharges that candidate's blocking verification item 1.",
+    "snippet": "Patients with Basal-like and HER2-enriched BRCA tended to show more favourable DFS in the high-ratio group, whereas those with Luminal A, Luminal B, and OV tumours showed more favourable DFS in the low-ratio group",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml",
+    "anchor": "Results, 'Patient Stratification and Subtype Composition', Kaplan-Meier paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE SOURCE ITSELF REFUSES THE PROGNOSTIC READING OF THOSE DIRECTIONS. This is the sentence that licenses a QUALIFY of CLAIM 025 and forbids any strengthening of it.",
+    "snippet": "Given the modest number of DFS events per subtype and the exploratory nature of the subgroup cutpoints, these effects are descriptive and hypothesis-generating rather than formally validated prognostic groupings.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml",
+    "anchor": "Results, 'Patient Stratification and Subtype Composition', sentence immediately following the subtype-direction sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WHAT THE PAPER GENUINELY STRENGTHENS IS THE RATIO ARCHITECTURE, NOT THE SIGN: in the combined model the ratio survives and the single transcripts do not. This is CLAIM 025's core architectural proposition and the half that must not be lost in qualifying the claim.",
+    "snippet": "remained significant in the combined model with WWOX and HIF1A (HR 0.31, 95% CI 0.14–0.70, p = 4.8 × 10−3), whereas the individual genes lost significance",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml",
+    "anchor": "Results, continuous-ratio Cox models, BRCA sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "AND THE DISCRIMINATION IS NEGLIGIBLE ONCE OPTIMISM IS CORRECTED, which is why this source can refuse a direction and cannot raise a corroboration weight.",
+    "snippet": "the optimism-corrected C-indices were centred close to 0 with a wide interval (approximately −0.50 to 0.46)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml",
+    "anchor": "Results, LASSO-Cox full breast cohort, bootstrap internal validation sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE OVARIAN COHORT -- THE LARGER ONE -- IS NOT SIGNIFICANT AT ALL in the single-predictor model, which is the second half of the evidence boundary proposed for CLAIM 025.",
+    "snippet": "In OV, the ratio was not significantly associated with DFS in the single-predictor model (HR 1.11, 95% CI 0.92–1.35, p = 0.27; concordance 0.49)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml",
+    "anchor": "Results, continuous-ratio Cox models, OV sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "LUMINAL A, THE LARGEST BREAST SUBTYPE STRATUM, IS n = 181 - SMALLER THAN OV's 228, which is what makes OV the largest of the five strata. Added 2026-09-28 (mirror003 repairs, Mirror N4).",
+    "snippet": "Subtype-specific analyses were strictly constrained by very low DFS event counts (for example, Luminal A: n = 181).",
+    "anchor": "Results 2.6.2, 'Subtype-Specific Analyses', opening sentence",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "THE OVARIAN NULL IS NOT AN UNDERPOWERED ONE AND THE BREAST COHORT'S SIGNIFICANCE IS THE POOR-EVENT ONE: the OV cohort carries 161 events in 228 patients while the larger BRCA cohort carries 22 events in 390 - so the non-significant ovarian HR is an event-rich null, not a small-sample one. Added 2026-09-28 (mirror003 repairs, Mirror N4).",
+    "snippet": "resulting in final DFS-proxy cohorts of 390 BRCA patients (22 events, 368 censored) and 228 OV patients (161 events, 67 censored)",
+    "anchor": "Methods 5.1, cohort-assembly sentence, citing Supplementary Tables S1 and S2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "The Results state that higher ratios go with enhanced oxidative phosphorylation in basal-like and HER2-enriched tumours; the same paragraph names KEGG and Hallmark analyses as the basis.",
+    "snippet": "higher ratios were generally associated with reduced HIF1A-linked glycolytic programmes, enhanced oxidative phosphorylation and ribosomal biogenesis, and more active immune-surveillance microenvironments",
+    "surface": "body",
+    "anchor": "Results, KEGG ORA and Hallmark synthesis paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "TCGA-style tumour RNA-seq cohorts, breast cancer subtypes and ovarian carcinoma",
+     "genotype": "low versus high WWOX/HIF1A transcript ratio (subtype-specific maxstat cutpoint), not a WWOX perturbation",
+     "endpoint": "pathway enrichment"
+    },
+    "artifact": "files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml"
+   },
+   {
+    "proposition": "Figure 3 (hand reading, Hallmark GSEA heatmap, 12 rows by 10 columns): GLYCOLYSIS and HYPOXIA are red (enriched in the LOW-ratio group) in basal-like, luminal A, luminal B (glycolysis, hypoxia) and OV, and HER2 low shows hypoxia only; HER2-high carries a pale blue glycolysis tile. MYC TARGETS V1 is the one row enriched in the HIGH-ratio group in all five subtypes. There is no OXIDATIVE_PHOSPHORYLATION row in the figure, and Figure 2 (KEGG ORA) has no oxidative phosphorylation term either, so the sentence cited from the text has no panel behind it in the main figures. In luminal A/B and OV the low-ratio (glycolysis-enriched) group is the one the text calls the BETTER-DFS group, in basal-like the worse-DFS group: the glycolytic signature does not track outcome across subtypes. Because HIF1A is the denominator, low ratio selects high HIF1A transcript (Figure 1, luminal B, p = 5.9e-08), so hypoxia and glycolysis enrichment in the low group is partly built into the stratification. The Discussion states that pathways reaching FDR < 0.05 were few and trends up to FDR 0.25 are shown.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3, integrated Hallmark GSEA heatmap, NES colour scale, Basal, HER2, LumA, LumB, OV, high versus low WWOX/HIF1A ratio columns.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42589397/ijms-27-06740-g003.jpg",
+    "anchor": "Figure 3, native JPEG 791 px wide",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[7]",
+    "qualifies_needle": "enhanced oxidative phosphorylation",
+    "experimental_context": {
+     "system": "TCGA-style tumour RNA-seq cohorts, breast cancer subtypes and ovarian carcinoma",
+     "genotype": "low versus high WWOX/HIF1A transcript ratio (subtype-specific maxstat cutpoint), not a WWOX perturbation",
+     "endpoint": "Hallmark NES, exploratory FDR <= 0.25"
+    },
+    "found_or_sought": "sought - question restated after the figures were found not to plot survival"
+   },
+   {
+    "proposition": "Figure 2 (KEGG ORA bubble plot) shows 27 terms with no oxidative phosphorylation, glycolysis or TCA term; metabolic terms are steroid hormone biosynthesis and retinol metabolism (luminal A high-ratio), nitrogen metabolism (luminal A low-ratio); signalling and immune terms (JAK-STAT, cytokine, PI3K) dominate the high-ratio luminal A column. Figure 1 shows HIF1A in luminal B (violin, p = 5.9e-08, low-ratio higher) and ADAM10 and DTX3 in basal-like. Figures 4 and 5 are MCPcounter immune-cell boxplots. No survival curve is plotted in any main figure (Kaplan-Meier curves and cutpoint plots are Supplementary Figure S1), so the question about the sign of the per-subtype survival direction cannot be answered from the main figures; it was posed on the assumption that they did.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figures 1, 2, 4 and 5: Notch gene violin plots, KEGG ORA bubble plot, MCPcounter boxplots for basal-like and luminal A.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42589397/ijms-27-06740-g002.jpg",
+    "anchor": "Figures 1, 2, 4, 5, native JPEGs",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "TCGA-style tumour RNA-seq cohorts, breast cancer subtypes and ovarian carcinoma",
+     "genotype": "low versus high WWOX/HIF1A transcript ratio (subtype-specific maxstat cutpoint), not a WWOX perturbation",
+     "endpoint": "ORA, expression, immune score"
+    },
+    "found_or_sought": "sought"
+   }
+  ]
+ },
+ "reading_history": [
+  {
+   "receipt": "FTR-20261019-42589397-05",
+   "reader": "scientist-c, HELD-PARTIAL-WWOX-C-20261019",
+   "context_policy": "QUESTION_DRIVEN",
+   "what_changed": "Acquired the five main figures from the PMC OA bucket, declared them and opened them as images; appended 3 entries. The stated question assumed a survival panel among the main figures; there is none (Figures 1-5 are Notch genes, KEGG, Hallmark, immune scores). The oxidative-phosphorylation sentence has no panel in Figures 2-3 and the glycolysis/hypoxia enrichment in the low-ratio group is partly built in by the HIF1A denominator and does not track DFS across subtypes.",
+   "outputs": [
+    "disease-models/wwox/research/held_wave_20261019_scientist-c.md"
+   ]
+  }
+ ]
 }

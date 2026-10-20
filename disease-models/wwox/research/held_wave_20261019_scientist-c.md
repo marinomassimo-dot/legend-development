@@ -190,3 +190,34 @@ rejected, DIS-027).
 not Figure 8. The figure is a second independent constitutive-null readout of lipid or energy
 economy next to the serum-lipid and hypoglycaemia reports already in the record, with the same
 failure-to-thrive confound. Candidate: `CC-20261019-SCIENTIST-C-HELD-01` (MINOR).
+
+---
+
+## 6. PMID 42589397 — Hammouz 2026 (WWOX/HIF1A balance, breast and ovarian tumours) — receipt FTR-20261019-42589397-05
+
+**What it MEASURES.** System: bulk tumour RNA-seq cohorts (618 patients, five strata: four breast
+subtypes and ovarian carcinoma). The "genotype" is a stratum of the WWOX/HIF1A transcript ratio
+(subtype-specific maxstat cutpoint), not a WWOX perturbation. Readouts: Notch-gene differential
+expression, KEGG over-representation, Hallmark GSEA, MCPcounter immune scores.
+
+**Question and answer.** The question I wrote assumed a survival panel among the main figures. There is
+none: Figures 1-5 are Notch-gene violins, a KEGG bubble plot, a Hallmark heatmap and two immune-score
+boxplot sets; the Kaplan-Meier curves are in the supplement. That part of the question is closed as
+mis-specified (an error of the lot construction, not of the paper). What the figures do carry for the
+metabolic theme is Figure 3: glycolysis and hypoxia Hallmark sets are enriched in the low-ratio group in
+four of five strata, MYC targets in the high-ratio group in all five, and there is no oxidative
+phosphorylation row in Figure 3 or Figure 2 although the Results say high ratios go with "enhanced
+oxidative phosphorylation". The glycolytic signature does not track prognosis (low-ratio is the
+better-DFS group in luminal A, luminal B and OV, the worse in basal-like), HIF1A sits in the ratio's
+denominator so the low group is partly selected for high HIF1A transcript (Figure 1, p = 5.9e-08), and
+the enrichments are exploratory trends at FDR up to 0.25.
+
+**What it does not support.** Any statement about WWOX loss or neural tissue; an oxidative-phosphorylation
+shift (no panel); a prognostic role of the glycolytic signature.
+
+**Comparison phase.** FIRST-PASS OBSERVATIONS COMPLETE -> PRIOR KNOWLEDGE ADMITTED FOR COMPARISON: the
+manifest's seven locators (all text) and CLAIM 025's evidence boundary. Effect: CLAIM 025's boundary
+stays; the glycolysis-for-low-ratio statement, if cited for RL-003, must carry the circularity and the
+non-tracking-of-DFS qualifications. The manifest keeps five inherited waived deep-dive slots
+(group, field density, multihop, cross-query, retraction): its verdict is PASS with those five declared
+gaps, unchanged by this re-read.
