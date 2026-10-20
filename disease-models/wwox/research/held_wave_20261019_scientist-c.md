@@ -101,3 +101,38 @@ the model: no baseline claim changes; RL-003's metabolic-biomarker line gains th
 that a carrier-detectable *uptake* readout would need the oxygen, glucose and serum condition named,
 and that lactate (fibroblast) is the one direction-stable readout. Class: MINOR, no commit candidate
 needed beyond the manifest (no registry record text is contradicted).
+
+---
+
+## 3. PMID 37897534 — Cheng 2023 (Wwox loss, senescence escape, genome instability) — receipt FTR-20261019-37897534-03
+
+**What it MEASURES.** System: primary mouse embryonic fibroblasts, serial passage in vitro (early,
+intermediate, late; passages 1, 8, 20), several Wwox-/- clones against Wwox+/- (heterozygote) and, in
+places, Wwox+/+; plus lentiviral shWWOX in HEK293T and human dermal fibroblasts (supplement). Readouts:
+gamma-H2AX, SA-beta-gal, p16/p21/p53 protein, promoter methylation, microsatellite instability, DHE
+flow cytometry, NAC rescue, Agilent redox-gene heatmap. No mitochondrial, glucose, lactate or ATP
+readout anywhere.
+
+**Question and answer.** The ROS panel is Figure 6a, which an earlier wave recorded as not read after a
+classifier halt; it opened without difficulty. (1) The ROS datum is one representative DHE histogram per
+passage with no quantification, n or clone identifier: at early passage the genotypes overlap, at late
+passage the null curve is right-shifted. (2) The NAC rescue is real at its stated endpoints (SA-beta-gal
+about 1.5% null versus 35% null+NAC versus 35% wild type; p16, p21, p53 restored while WWOX stays absent)
+but ROS is not re-measured in NAC-treated cells. (3) The p53 mutations that the model figure says ROS
+"causes" were found in one null clone of several; no panel sequences NAC-treated cells. (4) p16 or p21
+re-expression alone restores senescence in null cells (Figure 3), so the lesion is downstream of WWOX,
+not rescued by WWOX re-supply (no WWOX re-expression arm exists). (5) Supplementary Figure 8: an
+early-passage redox transcript signature (G6pdx, Nfe2l2, Nqo1, Sod3, others; all higher in null,
+one sample per genotype, unexplained gene selection) precedes any measurable ROS difference.
+(6) Comparator is the heterozygote in most panels.
+
+**Connection to the metabolic theme: the only link is ROS, and ROS is one trace in a culture-adapted
+fibroblast system.** The paper cannot be cited as showing a WWOX-null metabolic state; the
+G6pdx/Nfe2l2/Nqo1 heatmap is the one place it touches metabolism (pentose-phosphate and NRF2 axis) and
+is an unreplicated transcript panel on newly isolated cells.
+
+**Comparison phase.** FIRST-PASS OBSERVATIONS COMPLETE -> PRIOR KNOWLEDGE ADMITTED FOR COMPARISON:
+the manifest's prior seven locators. No prior locator is contradicted; entry 1 (the NAC rescue as the
+only therapeutic-direction lead) is qualified: the lead is "an antioxidant restores the senescence
+phenotype in passaged null MEFs", with no ROS confirmation in treated cells and no relation to
+neurons. MINOR; no commit candidate (no registry record text is contradicted).
