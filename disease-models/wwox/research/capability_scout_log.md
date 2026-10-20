@@ -1037,3 +1037,17 @@ catalytic-dead control, a titration. The missing item is the experiment, not the
 **Cost / API / privacy risk:** none; no key, no paid service, no personal address sent.
 
 **Next surgical micro-step:** none required.
+
+---
+
+## 2026-10-20 — scientist-b, wave 4 group W1 (task `W4-W1-B-20261019`)
+
+**Capability gap that emerged (with evidence).** `staged_receipt_check.py` runs the writer's validators on a staged receipt but nothing compares `study_id.doi` with the DOI PubMed stores. In this wave one receipt and its manifest carried a DOI written from memory (the last character wrong) and passed the receipt validator, the manifest validator and the paper-packet checks; it was found only because the fetch record printed by the acquisition tool was compared by eye. The standing brief says an identifier comes from the artefact or a command; no tool enforced it for the DOI.
+
+**CHANGE (proportional micro-upgrade, shipped).** `framework/scripts/staged_receipt_check.py --check-doi` fetches the DOI PubMed stores (esummary, no key, no User-Agent) and refuses a receipt whose DOI differs, and reports (does not hide) a PubMed read failure as unverified. Regression: `DoiCheck` in `framework/scripts/test_staged_receipt_check.py` (matching DOI passes, a last-character mismatch is refused, an unreadable PubMed answer is not silence). The eleven receipts of this wave all pass it. Rate-limit note: running the check over thirty receipts in parallel made some PubMed reads fail; sequential with a one-second pause is clean.
+
+**Named, not built.** (1) A shared first-read manifest builder: two waves wrote the same private scratch builder (artefacts with SHA-256 and recipes, locator verification, retraction dependencies with citing relations, receipt JSON); (2) a reference-debt classifier (gene-direct references of a source against manifests and receipts).
+
+**Cost / API / privacy risk:** none; no key, no paid service.
+
+**Next surgical micro-step:** none required.
