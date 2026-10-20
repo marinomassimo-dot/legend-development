@@ -59,7 +59,7 @@
 ## DECISIONS_TAKEN
 
 - A study identifier appears only in `Identifier` lines of registry records and in the candidates; the claim note and this report name papers by `PAPER` number, so that no claim names a paper whose `Claim links` does not name it.
-- No parent-side term is paired with a variant anywhere in the new text (a record that would have carried one — the COL4A2 missense series — states the variant only as "of uncertain significance" with no inheritance wording); `public_release_gate.py` was run.
+- No parent-side term is paired with a variant in the registry records of the batch (a record that would have carried one — the COL4A2 missense series — states the variant only as "of uncertain significance" with no inheritance wording); `public_release_gate.py` was run. *Narrowed at `BATCH_20261019_006` (Mirror M8): the original sentence said "anywhere in the new text", which is false of the files the batch rests on. A dossier and the Scientist A wave file still record transmission wording about a published COL4A2 family, and a WWOX dossier records the carrier status of the relatives of a published child. These are third-party published facts, none is the reference genotype's, and they are retained on purpose; the gate's pairing rule is about the reference genotype.*
 - Hong 2009 was upgraded as a promotion of a stale placeholder rather than as a new record, so that the registry holds one record per paper; its `LIT-0330` was promoted in place.
 - The two disposition blocks were written by the integrator; the candidates' locator triples are carried for a later blind audit and the audit was not run here (no baseline claim is narrowed, reversed or removed).
 

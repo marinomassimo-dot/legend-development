@@ -5317,7 +5317,7 @@ the point is that the anchor is unread, not that it is wrong.
 
 *Neurol India* 2026, drug-resistant-epilepsy WES cohort. It is the **only** PubMed record joining
 `WWOX` to any T-type calcium-channel gene, and it joins them only as **co-occurrence in a
-~45-gene list across different patients** — not as a finding about either.
+~45-gene list across different patients** [corrected 2026-10-20 at `BATCH_20261019_006`: the paper holds gene counts only and gives no way to know whether the counts are different patients; read 'no patient-level data', see the status line below] — not as a finding about either.
 
 **Why the debt matters here.** It carries the weight of a **measured zero**: the census
 `WWOX AND (CACNA1G OR CACNA1H OR CACNA1I OR "T-type" OR Cav3.1 OR Cav3.2 OR "calcium channel")`
@@ -5327,8 +5327,8 @@ calcium evidence in WWOX deficiency, so ethosuximide's genotype-specific efficac
 being what it is described as. ⚠️ **If it turned out to report an actual `CACNA1H` finding in a
 WWOX patient, the negative would invert.** Nobody has opened it.
 
-**Next action:** one abstract-level confirmation is enough to retire this entry; a full read is not
-required for the use it is being put to. Retrievability untested.
+**Current status:** ✅ retired as a confirmed negative (2026-10-20, `CC-20261019-SCIENTIST-B-W4-NEGATIVES-01`, `BATCH_20261019_006`; receipt `FTR-20261019-41510857-01`, `complete_fulltext_read`; landing [[paper_registry_current#PAPER 400]]). The paper contains gene counts only (WWOX n = 4, CACNA1H n = 6 among 261 diagnosed patients), no patient-level data for any gene, no variant names, and never mentions T-type channels; its Figure 1 does not reproduce the text counts. The negative 'no T-type calcium evidence in WWOX deficiency' stands. Wording corrected: this entry's 'across different patients' is not supported by the paper and is replaced by 'no patient-level data'. Revival trigger: patient-level data for the four WWOX cases.
+**Next action:** none. (Earlier text, kept: 'one abstract-level confirmation is enough to retire this entry; a full read is not required for the use it is being put to. Retrievability untested.')
 
 
 ---
@@ -8386,6 +8386,15 @@ raggiungibile da qui.
 **Why:** found by the same self-chosen search; it passed the same three tests
 **Current status:** closed to retrieval on 2026-10-19 — no open copy through the routes tried (see the wave note section 6).
 **Next action:** operator-supplied PDF or a licensed route. Record created by `CC-20261019-SCIENTISTD-G4-REGISTRY-01`, number assigned by `BATCH_20261019_001`.
+
+---
+
+## FT-201
+**Paper:** PMID 33196034 — Surana 2020, infantile-spasms aetiology, lead time and treatment response in a resource-limited setting (cited by the early-infantile cohort of [[paper_registry_current#PAPER 425]], Table 4, for its WWOX deletion row and for previously published cohort members)
+**Priority:** LOW
+**Why:** the shared citation has to be resolved before anything is said about overlap between the two series or about the origin of the WWOX deletion row; PubMed identity checked (a PMC identifier exists)
+**Current status:** ⬜ open — queued from `CC-20261019-SCIENTISTD-W4B-01`, number assigned by `BATCH_20261019_006`; no copy fetched, retrievability untested.
+**Next action:** read the cohort and the WWOX row; record any overlap with the 80-child series.
 
 ---
 ## 🔴 CORRECTION 2026-09-23 — `PMID 29808465` is NOT without a DOI, and this file says both things

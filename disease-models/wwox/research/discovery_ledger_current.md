@@ -3826,7 +3826,7 @@ Leads staged in the candidates of `BATCH_20261019_001` (groups G1 to G4). All ar
 - **Tag:** INFERENZA
 - **Status:** open
 - **Created:** 2026-10-19 · `BATCH_20261019_001`, from `CC-20261019-SCIENTIST-B-G2-HUMAN-AXIS-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
-- **Causal statement:** In the gestational-diabetes leukocyte series ([[paper_registry_current#PAPER 262]]) WWOX and HIF1A transcripts are uncorrelated (rho -0.05 in cases, -0.12 in controls) while the ratio tracks HIF1A (rho -0.79); in the TCGA ratio analysis ([[paper_registry_current#PAPER 266]]) the favourable glioblastoma group has WWOX up and HIF1A down. Where two transcripts are uncorrelated, their ratio is dominated by the denominator by arithmetic coupling; so in these two data sets (one leukocyte series and one TCGA analysis) the ratio-based reading adds nothing about WWOX loss that HIF1A alone does not carry. This is a conditional on uncorrelated transcripts, not a general statement about ratio readings: it does not hold where WWOX and HIF1A are correlated, or where the ratio is validated against a separate WWOX measurement (recast at `BATCH_20261019_003`, Mirror F4).
+- **Causal statement:** In the gestational-diabetes leukocyte series ([[paper_registry_current#PAPER 262]]) WWOX and HIF1A transcripts are uncorrelated (rho -0.05 in cases, -0.12 in controls) while the ratio tracks HIF1A (rho -0.79); in the TCGA ratio analysis ([[paper_registry_current#PAPER 266]]) the favourable glioblastoma group has WWOX up and HIF1A down. Where two transcripts are uncorrelated, their ratio is dominated by the denominator by arithmetic coupling; so in the leukocyte series, the only data set shown to be uncorrelated, the ratio-based reading adds nothing about WWOX loss that HIF1A alone does not carry. The TCGA leg is not shown to meet the condition: no WWOX-HIF1A correlation is reported there, and a favourable group with WWOX up and HIF1A down is a between-group contrast, so the arithmetic-coupling argument is not applied to it (restricted at `BATCH_20261019_006`, Mirror M2). This is a conditional on uncorrelated transcripts, not a general statement about ratio readings: it does not hold where WWOX and HIF1A are correlated, or where the ratio is validated against a separate WWOX measurement (recast at `BATCH_20261019_003`, Mirror F4).
 - **Falsifying experiment / counter:** A dataset in which WWOX and HIF1A protein or activity are measured separately and the ratio still adds information beyond HIF1A alone.
 - **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
 - **Not medical advice.**
@@ -4080,7 +4080,7 @@ Leads staged in the candidates of `BATCH_20261019_003` (groups H3, H4 and H5). A
 - **Tag:** INFERENZA
 - **Status:** open
 - **Created:** 2026-10-20 · `BATCH_20261019_003`, from `CC-20261019-SCIENTIST-B-H3-EPINEPHRINE-SAFETY-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
-- **Causal statement:** Epinephrine raises return of circulation about 3.4-fold without improving neurological outcome ([[paper_registry_current#PAPER 316]]); the paediatric protocol takes time to return of circulation among those who achieve it as its primary outcome ([[paper_registry_current#PAPER 317]]); lactate and mitochondrial respiration stay impaired after epinephrine restored pressure and survival in the rat ([[paper_registry_current#PAPER 318]]).
+- **Causal statement:** Epinephrine raises return of circulation about 3.4-fold without improving neurological outcome ([[paper_registry_current#PAPER 316]]); the paediatric protocol takes time to return of circulation among those who achieve it as its primary outcome ([[paper_registry_current#PAPER 317]]); lactate was higher and mitochondrial respiration lower at 60 minutes in rats in which epinephrine had restored pressure and survival ([[paper_registry_current#PAPER 318]]; the design has no epinephrine-alone group and the shock-only group was sampled at 15 minutes after dying, so the study cannot show that the impairment persists after epinephrine, or that epinephrine did not cause it; caveat added at `BATCH_20261019_006`, Mirror M3, as `DL-METH-125` already states it).
 - **Falsifying experiment / counter:** A surrogate that predicts the outcome in a population relevant to WWOX would make the surrogate sufficient.
 - **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
 - **Not medical advice.**
@@ -4150,7 +4150,7 @@ Leads staged in the candidates of `BATCH_20261019_003` (groups H3, H4 and H5). A
 - **Tag:** IPOTESI
 - **Status:** open
 - **Created:** 2026-10-20 · `BATCH_20261019_003`, from `CC-20261019-SCIENTIST-C-H4-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
-- **Causal statement:** Hypoxia rescued disease only where an electron-transport lesion lowers tissue oxygen use and raises tissue oxygen ([[paper_registry_current#PAPER 325]], [[paper_registry_current#PAPER 338]]); that precondition is not established for WWOX loss, so hypoxia or HIF logic cannot be transferred without it.
+- **Causal statement:** Hypoxia rescued disease where, in two mouse models, an electron-transport lesion lowers tissue oxygen use and raises tissue oxygen (a sufficient condition seen twice, not shown necessary; wording corrected at `BATCH_20261019_006`, Mirror M3) ([[paper_registry_current#PAPER 325]], [[paper_registry_current#PAPER 338]]); that precondition is not established for WWOX loss, so hypoxia or HIF logic cannot be transferred without it.
 - **Falsifying experiment / counter:** Tissue oxygen in a Wwox-null brain not raised relative to control.
 - **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
 - **Not medical advice.**
@@ -4180,7 +4180,7 @@ Leads staged in the candidates of `BATCH_20261019_003` (groups H3, H4 and H5). A
 - **Tag:** IPOTESI
 - **Status:** open
 - **Created:** 2026-10-20 · `BATCH_20261019_003`, from `CC-20261019-SCIENTISTD-H5-REGISTRY-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
-- **Causal statement:** Prediction: a 24 h fast lowers PTZ seizure incidence in Wwox+/+ and Wwox+/- animals as in the controls of the Depdc5 study (about 56% to about 22%; [[paper_registry_current#PAPER 340]]), because mTORC1 sensing is not shown to be altered by WWOX loss; the alternative is loss of protection as in the Depdc5 knockout. This is a plan for an experiment, not an indication for any fasting.
+- **Causal statement:** Prediction: a 24 h fast lowers PTZ seizure incidence in Wwox+/+ and Wwox+/- animals as in the controls of the Depdc5 study (about 56% to about 22%; [[paper_registry_current#PAPER 340]]), because no record in this repository measures mTORC1 signalling in a Wwox-deficient neuron (cancer-cell WWOX over-expression records report a WWOX-mTOR association and raised phospho-mTOR, [[paper_registry_current#PAPER 148]] and [[paper_registry_current#PAPER 152]]; neither is a neuron or a null; premise reworded at `BATCH_20261019_006`, Mirror M4); the alternative is loss of protection as in the Depdc5 knockout. This is a plan for an experiment, not an indication for any fasting.
 - **Falsifying experiment / counter:** Falsifier of "fasting protection is intact": incidence unchanged in the deficient genotype with glucose lowered and ketones raised.
 - **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
 - **Not medical advice.**
@@ -4324,5 +4324,75 @@ Leads staged in the candidates of `BATCH_20261019_003` (groups H3, H4 and H5). A
 - **Created:** 2026-10-20 · `BATCH_20261019_004`, from `CC-20261019-SCIENTISTD-DEBT-02` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
 - **Causal statement:** [[paper_registry_current#PAPER 366]] reports a Zfra "cure" in one heterozygous mouse with no untreated heterozygote curve; the Discussion concedes that wild-type mice tend to grow spontaneous tumours.
 - **Falsifying experiment / counter:** Falsifier: The incidence equals wild type.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX loss-of-function measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-163 — WWOX expression against alkylator sensitivity in the NCI-60 panel: test the weak negative correlation per cell line against copy number and methylation
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_006`, from `CC-20261019-SCIENTIST-C-W4-01` (metabolic batch 2026-10-19, wave 4). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** [[paper_registry_current#PAPER 414]] reports, in supplementary tables, a weak negative correlation of WWOX expression with IC50 for five alkylating agents (rho about -0.20 to -0.25) in the same direction as copy number, while the transcript differences between sensitive and resistant quartiles are not significant; the main text omits the correlation. Tumour-line observation only; not metabolic evidence.
+- **Falsifying experiment / counter:** Falsifier: the correlation disappears after tissue-of-origin adjustment.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX loss-of-function measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-164 — Count WWOX loss properly in the NASH-associated hepatocellular carcinoma series: per-case loss percentages at a stated threshold
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_006`, from `CC-20261019-SCIENTIST-C-W4-01` (metabolic batch 2026-10-19, wave 4). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** [[paper_registry_current#PAPER 412]] headlines WWOX loss in 4 of 11 cases but marks 15 percent loss in a fifth case in a figure, states no loss threshold, and prints one case's value in two colours in a supplementary figure; two cases have no panel.
+- **Falsifying experiment / counter:** Falsifier: case 1 falls below the threshold used for the four counted cases once the per-case percentages are re-derived.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX loss-of-function measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-165 — Temperature as an in vivo variable in Wwox-null pups: core temperature against body weight in weight-matched controls
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_006`, from `CC-20261019-SCIENTIST-C-W4-01` (metabolic batch 2026-10-19, wave 4). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** [[paper_registry_current#PAPER 411]] has no in vivo cold or fever experiment and shows Wwox-null MEFs resisting a cold-dependent death; a whole-body-null hypothermia read earlier in this batch therefore has no mechanistic bridge in it, and a runted, fat-depleted animal may be cold for that reason alone.
+- **Falsifying experiment / counter:** Falsifier: equal temperature at equal weight.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX loss-of-function measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-166 — Share of WWOX among early-infantile epileptic encephalopathy: about 4 percent of an unselected-by-gene series
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_006`, from `CC-20261019-SCIENTISTD-W4B-01` (metabolic batch 2026-10-19, wave 4). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** [[paper_registry_current#PAPER 425]] finds WWOX in 3 of 80 recruited children and 3 of 53 molecular diagnoses in one referral-biased private-hospital series; a proportion in one centre, not an incidence.
+- **Falsifying experiment / counter:** Falsifier: other prospective, gene-agnostic early-infantile cohorts with a WWOX count well outside 1 to 8 percent.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX loss-of-function measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-167 — An intragenic WWOX deletion can be missed by exome-based testing and found by array
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_006`, from `CC-20261019-SCIENTISTD-W4B-01` (metabolic batch 2026-10-19, wave 4). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** In [[paper_registry_current#PAPER 425]] one WWOX case is listed as a homozygous intragenic deletion found by array, a route the Methods apply to children undiagnosed after sequencing (inference from the Methods and Table 4; per-case exome copy-number calling is not stated).
+- **Falsifying experiment / counter:** Falsifier: the cohort's exome copy-number output for that case, or a WWOX series reporting exome detection of intragenic deletions.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX loss-of-function measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-168 — Neuroimaging at ascertainment can be normal in early-onset WWOX encephalopathy
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_006`, from `CC-20261019-SCIENTISTD-W4B-01` (metabolic batch 2026-10-19, wave 4). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** [[paper_registry_current#PAPER 425]] lists one WWOX case with onset at 21 days and a normal neuroimaging entry (another with a thin corpus callosum); a single table entry.
+- **Falsifying experiment / counter:** Falsifier: the primary report of this case, or serial imaging of the same child.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX loss-of-function measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-169 — No WWOX-null amino-acid, folate, carnitine or bile-acid measurement exists: the measurement that would turn a substitute axis into evidence
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_006`, from `CC-20261019-SCIENTISTD-W4B-01` (metabolic batch 2026-10-19, wave 4). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** Seven substitute records ([[paper_registry_current#PAPER 419]], [[paper_registry_current#PAPER 420]], [[paper_registry_current#PAPER 421]], [[paper_registry_current#PAPER 422]], [[paper_registry_current#PAPER 423]], [[paper_registry_current#PAPER 424]] and [[paper_registry_current#PAPER 416]]) describe work-ups for folate, biotin, branched-chain amino-acid, carnitine, bone and bile-acid classes and contain no WWOX occurrence. A plasma amino-acid panel, CSF 5-methyltetrahydrofolate and an acylcarnitine profile in WWOX-null patients or models would be the measurement.
+- **Falsifying experiment / counter:** Falsifier: 'WWOX loss does not alter these axes' fails if an abnormal value is measured in WWOX-null patients or models.
 - **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX loss-of-function measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
 - **Not medical advice.**

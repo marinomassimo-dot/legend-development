@@ -28,6 +28,8 @@ A paper found is not yet a paper processed.
 A paper processed is not yet a paper integrated.
 A paper integrated is not necessarily a paper that changes BLOCCO 1.
 
+**Transferability scale (T1 to T4), stated once (`BATCH_20261019_006`, Mirror M5; the grade had no definition and the batches of 2026-10-19 took defaults that disagreed).** T1 = measured in the WWOX-deficient human or mouse neural system the model is about. T2 = human WWOX disease, or a well-matched WWOX-deficient system, indirect or with a stated gap. T3 = WWOX measured, but outside a loss-of-function neural system (gain of function, cancer or non-neural cells, secondary sources on WWOX). T4 = WWOX not measured: every record labelled NOT WWOX EVIDENCE, and records in which WWOX is only a list entry or a count. The grade orders sources by distance, never moves a claim, and within T4 carries no further information. Records graded before this note and not re-read by it keep their grade; the ones the review named, and every class-level substitute of records 311 to 399, are re-graded by rule (a re-graded record says so).
+
 ### Pathway-code legend
 The canonical P1–P7 codes follow the WWOX working model and claim registry. **P6 = neuroinflammation / glia** (for example `PAPER 007`, `PAPER 114`, `CLAIM 006`). DNA-damage response and genome stability are described by name, without a P-code; `P9` is not a canonical code. Historical FASE-1 triage entries that say `P6 — DDR / genome stability` retain their source wording for audit, but the label's words, not that legacy code, determine their topic. New and reassessed records use this legend.
 
@@ -363,7 +365,7 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 **Journal/source:** *Frontiers in Genetics*
 **Identifier:** PMID 39507621 / PMC PMC11537890 / DOI 10.3389/fgene.2024.1477466
 **Status:** integrated
-**Evidence depth:** full text reviewed (PMC open access)
+**Evidence depth:** full text reviewed (PMC open access) — receipts `FTR-20260726-39507621-01` (partial, earliest, kept visible), `FTR-20260804-39507621-01` (`complete_fulltext_read`, the reading the declaration rests on) and `FTR-20261019-39507621-01` (`complete_fulltext_read`, re-read at `BATCH_20261019_003`); artefact `files/fulltext/PMID39507621_Teplyshova2024_PMC.xml`
 **Primary pathway:** clinical spectrum / natural history
 **Secondary pathway:** P4 (myelination long-term)
 **Model/species:** human
@@ -844,6 +846,7 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Status:** not_processed
 **Registry role:** corpus placeholder only
 **Claim links:** none
+**Promoted to:** [[paper_registry_current#PAPER 402]] by `BATCH_20261019_006` (`CC-20261019-SCIENTIST-B-W4-NEGATIVES-01`); this placeholder is kept as history.
 **Next action:** screening / triage required
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
@@ -1269,6 +1272,7 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Status:** not_processed
 **Registry role:** corpus placeholder only
 **Claim links:** none
+**Promoted to:** [[paper_registry_current#PAPER 401]] by `BATCH_20261019_006` (`CC-20261019-SCIENTIST-B-W4-NEGATIVES-01`); this placeholder is kept as history.
 **Next action:** screening / triage required
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
@@ -1721,6 +1725,7 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Status:** not_processed
 **Registry role:** corpus placeholder only
 **Claim links:** none
+**Promoted to:** [[paper_registry_current#PAPER 405]] by `BATCH_20261019_006` (`CC-20261019-SCIENTIST-B-W4-NEGATIVES-01`); this placeholder is kept as history.
 **Next action:** screening / triage required
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
@@ -2419,6 +2424,7 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Status:** not_processed
 **Registry role:** corpus placeholder only
 **Claim links:** none
+**Promoted to:** [[paper_registry_current#PAPER 404]] by `BATCH_20261019_006` (`CC-20261019-SCIENTIST-B-W4-NEGATIVES-01`); this placeholder is kept as history.
 **Next action:** screening / triage required
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
@@ -3581,6 +3587,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Transferability:** unassigned in triage
 **clinical relevance:** LOW
 **Claim links:** none — triage only
+**Promoted to:** [[paper_registry_current#PAPER 426]] by `BATCH_20261019_006` (`CC-20261019-SCIENTISTD-DEBT-02`); this placeholder is kept as history.
 **Role:** background corpus only
 **Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
 
@@ -3967,6 +3974,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Transferability:** unassigned in triage
 **clinical relevance:** LOW
 **Claim links:** none — triage only
+**Promoted to:** [[paper_registry_current#PAPER 413]] by `BATCH_20261019_006` (`CC-20261019-SCIENTIST-C-W4-01`); this placeholder is kept as history.
 **Role:** background corpus only
 **Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
 
@@ -4510,6 +4518,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Transferability:** unassigned in triage
 **clinical relevance:** LOW
 **Claim links:** none — triage only
+**Promoted to:** [[paper_registry_current#PAPER 415]] by `BATCH_20261019_006` (`CC-20261019-SCIENTIST-C-W4-01`); this placeholder is kept as history.
 **Role:** background corpus only
 **Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
 
@@ -8424,7 +8433,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Identifier:** PMID 19918364 / PMCID PMC2771921 / DOI 10.1371/journal.pone.0007820
 **Status:** processed
 **Record provenance:** created by `CC-20261003-B-REGISTRY-01` (intake wave 2 2026-10-03, Scientist B). Provisional number: if `PAPER 140` is taken when this batch runs, the integrator renumbers and updates the `LIT link`.
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261003-19918364-01`; manifest `deepdive_manifests/PMID19918364.json`; dossier `research/fulltext_dossiers/PMID19918364.md`
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — resume receipt `FTR-20261019-19918364-02` (`reread_reason: inadequate_prior_coverage`; read with supplementary Figures S2, S4 and S5, single fields without counts, nothing contradicting the earlier reading); the earlier partial receipt `FTR-20261003-19918364-01` stays visible; manifest `deepdive_manifests/PMID19918364.json`; dossier `research/fulltext_dossiers/PMID19918364.md`; artefact `files/fulltext/PMID19918364_Li2009_PMC.xml` (sha256 `a4a30c59780468a0074e02ac5890da5ead6f69deaad57b183431dfa667955425`); depth as the receipt states it (raised at `BATCH_20261019_006`, `CC-20261019-SCIENTISTD-DEBT-02`)
 **Primary pathway:** P3 — neuronal injury and WWOX directionality
 **Model/species:** adult Sprague-Dawley rat DRG and spinal cord; p53−/− mice; HEK-293; SK-N-SH; primary DRG cultures
 **Genotype/model:** wild-type rats — endogenous injury-induced WWOX activation, no WWOX allele
@@ -8592,10 +8601,10 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Identifier:** PMID 24008736 / PMCID PMC3789168 / DOI 10.1038/cddis.2013.308
 **Status:** processed
 **Record provenance:** created by `CC-20261003W3-B-REGISTRY-01` (intake wave 3 2026-10-03, Scientist B). Provisional number, measured with `registry_records.py catalog` on `main` 0e6fd4e9b886 (highest `PAPER 132`); the three wave-2 registry candidates (A, B, C) already claim `PAPER 133`-`141` and `LIT-0432`-`LIT-0439`, so this candidate starts at `PAPER 142` / `LIT-0440`. The integrator renumbers in event order and updates the anchors.
-**Evidence depth:** `partial_fulltext_read` - receipt `FTR-20261003-24008736-02` (earlier: `FTR-20260921-24008736-01`, partial, no figures); manifest `deepdive_manifests/PMID24008736.json`; dossier `research/fulltext_dossiers/PMID24008736.md`. Partial for one reason only: the supplement deposited under this identifier is a different article's supplement (see `CC-20261003W3-B-SUPPDEPOSIT-01`)
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — resume receipt `FTR-20261019-24008736-03` (`reread_reason: inadequate_prior_coverage`); the earlier partial receipts `FTR-20261003-24008736-02` and `FTR-20260921-24008736-01` (partial, no figures) stay visible; manifest `deepdive_manifests/PMID24008736.json`; dossier `research/fulltext_dossiers/PMID24008736.md`; artefact `files/fulltext/PMID24008736_Tsai2013_PMC.xml` (sha256 `08b9e0d797cddcead7f4eb9ccf7ff88205b3d28049061a389d12ac5e527c32ed`). The deposit defect (the supplement served under this identifier belongs to a different article, `CC-20261003W3-B-SUPPDEPOSIT-01`) is bypassed: the article's own 12-page supplement was retrieved from the publisher site and read, and the earlier statement that Supplementary Figures 1 to 7 are not retrievable is superseded. The only germline Wwox arm (Supplementary Figure 7) is one pair of MEF blots (LC3-II 1.0, 1.9, 1.7 for +/+, +/-, -/-) with no replicate, statistic or flux control; the mTOR interaction (Supplementary Figure 6b) is one faint co-immunoprecipitation (raised at `BATCH_20261019_006`, `CC-20261019-SCIENTISTD-DEBT-02`)
 **Primary pathway:** autophagy / mTOR / chemosensitivity
 **Model/species:** human SCC-4, SCC-9, SCC-15; tumour biopsies; one sentence of `Wwox` knockout MEF data
-**Genotype/model:** ectopic WWOX overexpression, siRNA and shRNA knockdown, Y33R dominant-negative; `Wwox+/-` and `Wwox-/-` MEFs in the unreachable Supplementary Figure 7
+**Genotype/model:** ectopic WWOX overexpression, siRNA and shRNA knockdown, Y33R dominant-negative; `Wwox+/-` and `Wwox-/-` MEFs in Supplementary Figure 7 (one blot pair, read at the complete resume)
 **Transferability:** T3 for the sign in epithelial cancer under antimetabolite stress; T4 for neurons and for any constitutive human genotype
 **clinical relevance:** MODERATE - the readable half of the autophagy-direction disagreement
 **Claim links:** none
@@ -12827,7 +12836,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Primary pathway:** none — comparator / adjacent source
 **Model/species:** neuron-specific Depdc5 conditional knockout mouse (6 to 9 weeks), rat primary cortical neurons with shRNA, HEK293T and HeLa lines
 **Genotype/model:** no WWOX-deficient system; comparator or class-level context
-**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**Transferability:** T4 (was T3; re-graded at `BATCH_20261019_006`, scale note in the registry header) — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
 **Claim links:** none
 **Role:** Fasting protection is lost in a nutrient-sensing knockout; the interpretation that nutrient sensing upstream of mTORC1 mediates it is the authors' inference from one knockout; fasting lowers cortical pS6. Not a WWOX system and not a neonatal or feeding question. NOT WWOX EVIDENCE.
@@ -12850,7 +12859,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Primary pathway:** none — comparator / adjacent source
 **Model/species:** young Wistar rats, 15 percent restriction
 **Genotype/model:** no WWOX-deficient system; comparator or class-level context
-**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**Transferability:** T4 (was T3; re-graded at `BATCH_20261019_006`, scale note in the registry header) — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
 **Claim links:** none
 **Role:** Restriction raised a seizure threshold but not the kindling rate. NOT WWOX EVIDENCE.
@@ -12873,7 +12882,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Primary pathway:** none — comparator / adjacent source
 **Model/species:** absence-epilepsy models
 **Genotype/model:** no WWOX-deficient system; comparator or class-level context
-**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**Transferability:** T4 (was T3; re-graded at `BATCH_20261019_006`, scale note in the registry header) — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
 **Claim links:** none
 **Role:** Fasting worsened absence seizures in this model; the main text and Table S1 disagree on a p value. NOT WWOX EVIDENCE.
@@ -12896,7 +12905,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Primary pathway:** none — comparator / adjacent source
 **Model/species:** human adults with epilepsy
 **Genotype/model:** no WWOX-deficient system; comparator or class-level context
-**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**Transferability:** T4 (was T3; re-graded at `BATCH_20261019_006`, scale note in the registry header) — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
 **Claim links:** none
 **Role:** No significant difference; Kaplan-Meier by start sequence. NOT WWOX EVIDENCE.
@@ -12919,7 +12928,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Primary pathway:** none — comparator / adjacent source
 **Model/species:** rat pups, insulin model
 **Genotype/model:** no WWOX-deficient system; comparator or class-level context
-**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**Transferability:** T4 (was T3; re-graded at `BATCH_20261019_006`, scale note in the registry header) — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
 **Claim links:** none
 **Role:** Reporting inconsistencies in n, t statistics and the glucose threshold. NOT WWOX EVIDENCE.
@@ -12942,7 +12951,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Primary pathway:** none — comparator / adjacent source
 **Model/species:** human newborns
 **Genotype/model:** no WWOX-deficient system; comparator or class-level context
-**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**Transferability:** T4 (was T3; re-graded at `BATCH_20261019_006`, scale note in the registry header) — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
 **Claim links:** none
 **Role:** No consensus glucose threshold for neonatal hypoglycaemia. NOT WWOX EVIDENCE.
@@ -12965,7 +12974,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Primary pathway:** none — comparator / adjacent source
 **Model/species:** human SLC2A1 (Glut1-DS)
 **Genotype/model:** no WWOX-deficient system; comparator or class-level context
-**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**Transferability:** T4 (was T3; re-graded at `BATCH_20261019_006`, scale note in the registry header) — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
 **Claim links:** none
 **Role:** Glut1-DS is a transport failure; the shared element with WWOX loss is a diet response only. NOT WWOX EVIDENCE.
@@ -13057,7 +13066,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Primary pathway:** none — comparator / adjacent source
 **Model/species:** human children
 **Genotype/model:** no WWOX-deficient system; comparator or class-level context
-**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**Transferability:** T4 (was T3; re-graded at `BATCH_20261019_006`, scale note in the registry header) — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
 **Claim links:** none
 **Role:** A protocol-level datum for refeeding. NOT WWOX EVIDENCE.
@@ -13517,7 +13526,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Primary pathway:** none — comparator / adjacent source
 **Model/species:** human infants and children 0 to 3 years (planned review population)
 **Genotype/model:** no WWOX-deficient system; comparator or class-level context
-**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**Transferability:** T4 (was T3; re-graded at `BATCH_20261019_006`, scale note in the registry header) — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
 **Claim links:** none
 **Role:** A plan: it measures nothing and reports no finding. The selection file calls it a systematic review; the title and body say protocol. Its eligibility text excludes participants with significant congenital neurological abnormalities, so a DEE cohort would probably not enter the eventual review, and it cannot answer whether hypomyelination from WWOX loss is modifiable by iron. Revival trigger: publication of the review's results, if they carry a myelin-imaging endpoint. NOT WWOX EVIDENCE.
@@ -13540,7 +13549,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Primary pathway:** none — comparator / adjacent source
 **Model/species:** rodent chemoconvulsant models (kainic acid, pilocarpine, PTZ, FeCl3), HT22 and SH-SY5Y cell stress; one cited paediatric blood study and one cited patient-cell study
 **Genotype/model:** no WWOX-deficient system; comparator or class-level context
-**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**Transferability:** T4 (was T3; re-graded at `BATCH_20261019_006`, scale note in the registry header) — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
 **Claim links:** none
 **Role:** Synthesises other groups' work and measures nothing new; WWOX is absent. It cannot say whether WWOX loss changes neuronal ferroptosis susceptibility. Internal inconsistency: the conclusion calls ferrostatin an iron chelator while its own Table 1 lists GPX4 and P38 MAPK; the oligodendrocyte question is left open by the review itself. NOT WWOX EVIDENCE.
@@ -13563,7 +13572,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Primary pathway:** none — comparator / adjacent source
 **Model/species:** Irp2-null mouse (iron-regulatory protein 2), 6 per group in the Barnes maze
 **Genotype/model:** no WWOX-deficient system; comparator or class-level context
-**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**Transferability:** T4 (was T3; re-graded at `BATCH_20261019_006`, scale note in the registry header) — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
 **Claim links:** none
 **Role:** Rotarod latency about 40 percent shorter, lighter animals (the hang-time result depends on a weight covariate), reduced thermal nociception, a reversal-specific learning deficit. It measures no haemoglobin, brain iron, seizure or intervention; the human anaemia and epilepsy are cited context, and the authors say the mouse is much milder than the human disease. For the model it is a severity-discordance comparator only (the Wwox-null mouse is the severe side of such a discordance). Supplementary files read as captions only. NOT WWOX EVIDENCE.
@@ -13816,10 +13825,10 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Primary pathway:** inflammatory signalling (NF-kB), non-neural
 **Model/species:** SV40-immortalised human epidermal keratinocytes (WWOX protein about 45 percent remaining); human psoriatic skin (3 normal against 6 patients) and imiquimod mouse skin
 **Genotype/model:** partial adenoviral-microRNA WWOX knockdown with a partial rescue; no germline loss-of-function allele; non-neural
-**Transferability:** T4 — distant source — WWOX-direct, not a loss-of-function neural system; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**Transferability:** T3 (was T4; re-graded at `BATCH_20261019_006`, scale note in the registry header) — distant source — WWOX-direct, not a loss-of-function neural system; no datum transfers to P47T, Q230P, G372R, A141T or P252A
 **clinical relevance:** LOW — background. Not medical advice.
 **Claim links:** CLAIM 028 (source added at this batch; status and type unchanged)
-**Role:** 🔴 **Non-neural, partial knockdown, one immortalised line, one stimulus.** WWOX loss lowers an inflammatory readout here (lower poly(I:C)-induced phospho-p65, partly lower mRNA of five cytokines, lower PKC activity, partial rescue), the opposite sign to partial Wwox loss in murine sepsis and neuroinflammation (`PAPER 114`), endothelial WWOX knockdown in lung injury (`PAPER 113`), B-cell Wwox deletion (`PAPER 115`) and loss of lung WWOX causing neutrophilic inflammation (`PAPER 102`, which this paper cites as its reference 17 for a different statement and never discusses for sign), compared at registry-title level. The calcium and PKC steps rest on inhibitors tested without WWOX manipulation; the WWOX-JPT2 link is a software prediction (supplementary figure). Recorded while reading: secreted IL-1beta is 'ns' against the text; untreated-knockdown PKC activity is lower against the text; IL-8 mRNA is not reduced by the PKC inhibitor; Figure 1B compares days to day 1, not to control. Rescue is incomplete by the authors' own statement. NOT SUPPORTED: that WWOX loss is anti-inflammatory in brain, that targeting WWOX is therapeutic (the authors' psoriasis speculation is not a claim), or any link to complement, albumin, immunoglobulin or plasma products. Added as a further source of `CLAIM 028` with the system gap stated.
+**Role:** 🔴 **Non-neural, partial knockdown, one immortalised line, one stimulus.** WWOX loss lowers an inflammatory readout here (lower poly(I:C)-induced phospho-p65, partly lower mRNA of five cytokines, lower PKC activity, partial rescue), a different direction from partial Wwox loss in murine sepsis and neuroinflammation (`PAPER 114`), endothelial WWOX knockdown in lung injury (`PAPER 113`), B-cell Wwox deletion (`PAPER 115`) and loss of lung WWOX causing neutrophilic inflammation (`PAPER 102`, which this paper cites as its reference 17 for a different statement and never discusses for sign), compared at registry-title level. The calcium and PKC steps rest on inhibitors tested without WWOX manipulation; the WWOX-JPT2 link is a software prediction (supplementary figure). Recorded while reading: secreted IL-1beta is 'ns' against the text; untreated-knockdown PKC activity is lower against the text; IL-8 mRNA is not reduced by the PKC inhibitor; Figure 1B compares days to day 1, not to control. Rescue is incomplete by the authors' own statement. NOT SUPPORTED: that WWOX loss is anti-inflammatory in brain, that targeting WWOX is therapeutic (the authors' psoriasis speculation is not a claim), or any link to complement, albumin, immunoglobulin or plasma products. Added as a further source of `CLAIM 028` with the system gap stated.
 **LIT link:** [[literature_tracking_log_current#LIT-0091]]
 **Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
 
@@ -13839,7 +13848,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Primary pathway:** none — comparator / adjacent source
 **Model/species:** rodent status-epilepticus models, adult or mixed-age human tissue (review)
 **Genotype/model:** no WWOX-deficient system; comparator or class-level context
-**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**Transferability:** T4 (was T3; re-graded at `BATCH_20261019_006`, scale note in the registry header) — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
 **Claim links:** none
 **Role:** Cites seizure-triggered C1q and C3 tagging with microglial CR3 pruning of healthy synapses, C3-null protection, and two candidate inhibitors (an anti-C1q antibody and a C3 inhibitor) neither shown effective in epilepsy, with infection and developmental-pruning risks. WWOX is absent: no complement datum for a genetic DEE, no efficacy of complement inhibition in a child, no plasma-product relevance. Recorded while reading: the text attributes a young-mouse result to Figure 2, which is a schematic, and gives a 48 h window where Table 1 says the acute timeline is unknown. The theme search that found this paper also found the one WWOX-direct complement record, `PAPER 387`, which the selection file's statement that the model has nothing on complement had missed. NOT WWOX EVIDENCE.
@@ -13862,7 +13871,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Primary pathway:** none — comparator / adjacent source
 **Model/species:** pilocarpine mice, n = 8 per group, single intracisternal anti-C1q injection at day 7
 **Genotype/model:** no WWOX-deficient system; comparator or class-level context
-**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**Transferability:** T4 (was T3; re-graded at `BATCH_20261019_006`, scale note in the registry header) — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
 **Claim links:** none
 **Role:** C1q peaks in the subacute phase (microglia) with persistent astrocytic C3; one anti-C1q injection lowers the 5-week interictal spike rate (median about 2 against 5 per minute) and shifts CA1 neuron counts, spine density, CD68, GFAP and C3 toward naive. It does not show fewer seizures (supplement: about 0.9 against 0.1 per 12 h, p = 0.0816), a specific effect (supplement shows 70 to 95 percent broadband power loss), a timing window (one treatment time), a behavioural benefit, transfer to a genetic DEE, or plasma-product relevance (locally injected antibody). The introduction cites C1q-knockout mice with heightened seizure susceptibility. One supplementary figure was read by legend only (partial depth). NOT WWOX EVIDENCE.
@@ -13885,7 +13894,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Primary pathway:** none — comparator / adjacent source
 **Model/species:** 46 adult surgical candidates and 45 healthy controls
 **Genotype/model:** no WWOX-deficient system; comparator or class-level context
-**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**Transferability:** T4 (was T3; re-graded at `BATCH_20261019_006`, scale note in the registry header) — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
 **Claim links:** none
 **Role:** Serum C1q, C4, C4b, Factor B and Factor H about 30 percent lower, C3, C3b/iC3b and C5 lower; MBL, C2, C3a, C5a and C5b-9 unchanged; IL-8 lower. It does not give cause or direction (antiseizure drugs, a single draw), 'sex-specific' dysregulation (supplement Table 2: condition-by-sex interaction p 0.259 or more for every complement analyte), a correlation disruption (one panel is r 0.45, p 0.094 against the text), a bridge from blood to brain complement, plasma-product relevance, or any child or WWOX datum. Supplementary panels were not opened (partial depth). NOT WWOX EVIDENCE.
@@ -13911,7 +13920,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Transferability:** T3 — comparator or adjacent source — WWOX-direct, not a loss-of-function neural system; no datum transfers to P47T, Q230P, G372R, A141T or P252A
 **clinical relevance:** LOW — background. Not medical advice.
 **Claim links:** none
-**Role:** 🔴 **Gain of WWOX in cancer cells only.** The earlier reading of 2026-09-21 (receipt `FTR-20260921-19484134-01`, text and legends, figures unavailable) recorded the activation arm on endogenous protein (C1q-depleted serum lowering phospho-Tyr33 WWOX by about half with total WWOX unchanged); that is carried unchanged, and this complete resume adds the figure-level limits below. C1q alone gives about 85 percent nuclear phospho-WOX1 (in-house antibody); C1q raises sub-G1 only in cells overexpressing EGFP-WOX1 (about 13.5 to 38 percent), vector cells unaffected; a dominant-negative and a Y33R mutant block it; C1q-depleted or C6-depleted serum lowers p-ERK and WOX2 and raises p-JNK1; C1q signal is lower in benign hyperplasia and cancer prostate. It carries no loss-of-function datum (no knockdown, knockout or patient cell, and endogenous-WWOX cells show no C1q killing), no protective axis (the output is death), no complement independence (the serum-free arm is 'data not shown') and no receptor. Figure-level additions to the 2026-09-21 audit: overexpression alone doubles baseline sub-G1, C1q adds at low to mid dose and not at the top dose, the Figure 5B increment is about 15 percent from two experiments, the dominant-negative has no WOX1-plus-C1q comparator and itself raises sub-G1, the text says C7, C8 and C9 depletion 'did not support' p-ERK and WOX2 while Figure 8B shows the C7-depleted serum retaining both, and the tissue comparison used longer exposure for benign hyperplasia. The authors' projection to neuronal killing is not a finding of the paper. **This is the one WWOX-direct complement paper in the repository: the selection file's statement that the model has nothing on complement was too strong.** Not a plasma, albumin or immunoglobulin intervention.
+**Role:** 🔴 **Gain of WWOX in cancer cells only.** The earlier reading of 2026-09-21 (receipt `FTR-20260921-19484134-01`, text and legends, figures unavailable) recorded the activation arm on endogenous protein (C1q-depleted serum lowering phospho-Tyr33 WWOX by about half with total WWOX unchanged); that is carried unchanged, and this complete resume adds the figure-level limits below. C1q alone gives about 85 percent nuclear phospho-WOX1 (in-house antibody); C1q raises sub-G1 only in cells overexpressing EGFP-WOX1 (about 13.5 to 38 percent), vector cells unaffected; a dominant-negative and a Y33R mutant block it; C1q-depleted or C6-depleted serum lowers p-ERK and WOX2 and raises p-JNK1; C1q signal is lower in benign hyperplasia and cancer prostate. It carries no loss-of-function datum (no knockdown, knockout or patient cell, and endogenous-WWOX cells show no C1q killing), no protective axis (the output is death), no complement independence (the serum-free arm is 'data not shown') and no receptor. Figure-level additions to the 2026-09-21 audit: overexpression alone doubles baseline sub-G1, C1q adds at low to mid dose and not at the top dose, the Figure 5B increment is about 15 percent from two experiments, the dominant-negative has no WOX1-plus-C1q comparator and itself raises sub-G1, the text says C7, C8 and C9 depletion 'did not support' p-ERK and WOX2 while Figure 8B shows the C7-depleted serum retaining both, and the tissue comparison used longer exposure for benign hyperplasia. The authors' projection to neuronal killing is not a finding of the paper. **This is the one WWOX-direct complement paper in the repository (by term query over the registry files, not a statement about the literature): the selection file's statement that the model has nothing on complement was too strong.** Not a plasma, albumin or immunoglobulin intervention.
 **LIT link:** [[literature_tracking_log_current#LIT-0330]]
 **Note:** class-level record; no individual-level detail is carried in this public edition; the commit candidate's locator triples are carried for a later blind audit. Not medical advice.
 
@@ -13954,7 +13963,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Primary pathway:** none — comparator / adjacent source
 **Model/species:** C3-tdTomato reporter mice (N = 3 per point); resected human mTLE-HS hippocampus against post-mortem controls
 **Genotype/model:** no WWOX-deficient system; comparator or class-level context
-**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**Transferability:** T4 (was T3; re-graded at `BATCH_20261019_006`, scale note in the registry header) — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
 **Claim links:** none
 **Role:** A modest C3 transcript rise in human mTLE-HS hippocampus (adjusted p = 0.029); reporter signal from 72 h in the stratum lacunosum-moleculare spreading to CA1 by 3 to 6 weeks, all in GFAP astrocytes. It does not show complement activation (expression only, no cleavage product or pruning), robust statistics (image-level points against Methods that state animal means; no error bars or tests on the time course; seizure comparison N = 3 against 4), human validation of the cell source, a seizure or EEG link, or anything on WWOX, children or plasma products. C3 is produced locally, so brain complement is not readable from plasma. Supplement headers only (partial depth). NOT WWOX EVIDENCE.
@@ -13977,7 +13986,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Primary pathway:** none — comparator / adjacent source
 **Model/species:** female C3-null and C4B-null mice, n = 4 to 6 per group
 **Genotype/model:** no WWOX-deficient system; comparator or class-level context
-**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**Transferability:** T4 (was T3; re-graded at `BATCH_20261019_006`, scale note in the registry header) — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
 **Claim links:** none
 **Role:** C4B-null mice die after PTZ (6 of 6 at 80 mg/kg, 3 of 5 at 50 mg/kg; wild type 0) with scores 5 to 6, fail to induce nine of ten immediate-early genes, BDNF and three cytokines at 9 minutes and have about fivefold lower baseline Egr1 protein; C3-null mice have lower scores at 80 mg/kg and no deaths at 50 mg/kg. Lowering complement is therefore not uniformly protective and the sign depends on the component. Not shown: a tissue- or time-specific mechanism (germline knockout, no brain C4 activation measured), a causal C4-to-immediate-early-gene chain (association only), or anything on WWOX or plasma products. Expression was sampled only from animals alive at 9 minutes (survivor selection), n is as low as 3, and Barnes-maze trials are treated as independent. NOT WWOX EVIDENCE.
@@ -14023,7 +14032,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Primary pathway:** none — comparator / adjacent source
 **Model/species:** eight-patient series; rat astrocyte line and primary astrocytes overexpressing a COL4A2 missense variant under LPS
 **Genotype/model:** no WWOX-deficient system; comparator or class-level context
-**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**Transferability:** T4 (was T3; re-graded at `BATCH_20261019_006`, scale note in the registry header) — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
 **Claim links:** none
 **Role:** CSF IL-1beta and IL-6 above reference in six of eight patients before seizure freedom; the variant-bearing construct gives higher GFAP, cytokines, p-JAK2 and p-STAT3 than the wild-type construct under LPS, reversed by WP1066. It does not establish pathogenicity of the modelled variant (uncertain significance), a loss-of-function or BBB mechanism (overexpression in stimulated astrocytes only), a 'type VII DEE gene' class, or any WWOX or plasma-product statement. Data-integrity queries recorded neutrally: Table 4 repeats ten of twelve cytokine values of Table 3 to one decimal for four patients (the title says six); the IL-6 ELISA bars of two figures are indistinguishable at the available resolution; the primary-astrocyte GFAP western is flat against the text. NOT WWOX EVIDENCE.
@@ -14046,7 +14055,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Primary pathway:** none — comparator / adjacent source
 **Model/species:** rodent models and human tissue or CSF (review); 297 references term-screened only
 **Genotype/model:** no WWOX-deficient system; comparator or class-level context
-**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**Transferability:** T4 (was T3; re-graded at `BATCH_20261019_006`, scale note in the registry header) — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
 **Claim links:** none
 **Role:** BBB leakage accompanies epileptogenic insults and persists in drug-resistant epilepsy; leaked albumin binds astrocytic TGF-beta receptor II, lowering Kir4.1 and raising excitability (rodent intracerebral albumin; extravasated albumin and a raised TGF-beta pathway in human tissue and CSF); plasminogen-activation, immune-cell and drug-transporter arms; losartan, microRNA antagonists and imatinib as rodent candidates. Whether a Wwox-null brain leaks albumin is unmeasured (testable by serum-albumin immunostaining; IPOTESI). The pathway is leakage into the brain, not albumin infusion, and effect directions are context-dependent; the conclusion that barrier restoration is viable is not borne out because no candidate fully prevents epileptogenesis. WWOX is absent. NOT WWOX EVIDENCE.
@@ -14069,7 +14078,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Primary pathway:** none — comparator / adjacent source
 **Model/species:** primary rat astrocytes; mice with ventricular bovine albumin; ALK5 inhibitor or astrocytic receptor knockdown
 **Genotype/model:** no WWOX-deficient system; comparator or class-level context
-**Transferability:** T3 — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**Transferability:** T4 (was T3; re-graded at `BATCH_20261019_006`, scale note in the registry header) — comparator or adjacent source; no datum transfers to P47T, Q230P, G372R, A141T or P252A
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
 **Claim links:** none
 **Role:** Albumin raises senescence markers (SA-beta-gal, p16, p21, BCL family) and six cytokine or chemokine transcripts in astrocytes and, in mice, lowers astrocytic Lamin B1 and raises pSMAD2, p-p38 and p16; an ALK5 inhibitor or receptor knockdown prevents it. Unmeasured in WWOX models. Prevention is not tested as stated: non-significance against control is read as prevention (Dunnett against control only; albumin against albumin plus inhibitor never compared; one inhibitor-arm bar about 1.8 against 1.0); no inhibitor-alone or knockout-vehicle arm; senescence rests on a marker panel; pooled correlations are group-driven; blots are one gel per group compared across gels through GAPDH only. The model is a bovine albumin preparation in the ventricle, not infused albumin or plasma. NOT WWOX EVIDENCE.
@@ -14193,6 +14202,627 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 
 ---
 
+
+## PAPER 400
+**Short title:** Kilic 2026 — drug-resistant-epilepsy genetics cohort: WWOX 4 and CACNA1H 6 of 261 as gene counts only; FT-115 negative confirmed
+**Full title:** An Overview of Drug-Resistant Epilepsies Based on Advances in Genetics: A Cohort Study
+**Authors:** Kılıç B, Topçu Y, Ayaz A, Özpınar E, Seyhan S, Demir AGÖ, et al.
+**Year:** 2026
+**Source type:** primary research — single-centre genetics cohort, gene-count table
+**Journal/source:** *Neurol India* 2026;74(1):29-33
+**Identifier:** PMID 41510857 / DOI 10.4103/neurol-india.Neurol-India-D-24-00886
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-B-W4-NEGATIVES-01` (Scientist B, task W4-W1-B-20261019) at `BATCH_20261019_006`; identity from the PubMed record (E-utilities, 2026-10-20), checked against the receipt; number minted by the integrator.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-41510857-01`; manifest `deepdive_manifests/PMID41510857.json`; dossier `research/fulltext_dossiers/PMID41510857.md`; artefact `files/fulltext/PMID41510857_Kilic2026_ovid.html` (sha256 `8ac4943ec2bef5febbfaeb75ef68ee437aaad423a2c86e6023193f72ab4cf711`); unread or absent (receipt): supplementary not_present; depth as the receipt states it
+**Primary pathway:** none — census record for a negative
+**Model/species:** 261 diagnosed patients with drug-resistant epilepsy; counts only
+**Genotype/model:** no patient-level data for any gene; no variant names
+**Transferability:** T4 — WWOX not measured (class-level or distant source); no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** LOW — background. Not medical advice.
+**Claim links:** none
+**Role:** Gene counts only (WWOX n = 4, CACNA1H n = 6 of 261 diagnosed patients): no patient-level data for any gene, no variant names, and T-type channels are never mentioned, so the two genes meet only as rows of one count table. Figure 1 does not reproduce the text counts (it uses two x-axes; one gene reaches about 14 on the top axis against 6 in the text). 🔵 The negative 'no T-type calcium evidence in WWOX deficiency' stands; the queue wording 'across different patients' is withdrawn because the paper gives no way to know, and is replaced by 'no patient-level data'. Revival trigger: patient-level data for the four WWOX cases. Not WWOX evidence for any channel mechanism.
+**LIT link:** [[literature_tracking_log_current#LIT-EX-006]]
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
+---
+
+## PAPER 401
+**Short title:** Hammouz 2025 — WWOX in cancer, a review: statements on vermis, migration and HDL attach to citations that do not hold them
+**Full title:** Twenty-five years of WWOX insight in cancer: a treasure trove of knowledge
+**Authors:** Hammouz RY, Baryła I, Styczeń-Binkowska E, Bednarek AK
+**Year:** 2025
+**Source type:** secondary — narrative review (cancer), organ-cancer sections not read
+**Journal/source:** *Funct Integr Genomics* 2025;25(1):100
+**Identifier:** PMID 40327201 / PMC12055895 / DOI 10.1007/s10142-025-01601-5
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-B-W4-NEGATIVES-01` (Scientist B, task W4-W1-B-20261019) at `BATCH_20261019_006`; identity from the PubMed record (E-utilities, 2026-10-20), checked against the receipt; number minted by the integrator. Promoted from `CORPUS-STUB-052` (kept as history).
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-40327201-01`; manifest `deepdive_manifests/PMID40327201.json`; dossier `research/fulltext_dossiers/PMID40327201.md`; artefact `files/fulltext/PMID40327201_Hammouz2025_PMC_r2.xml` (sha256 `41ff6c1b6669a500d96ab564ee3dc15ff8b1024641b3e17da0ea9d90a9b0e3b7`); unread or absent (receipt): limitations not_present, methods not_present, results not_read, supplementary not_present; depth as the receipt states it
+**Primary pathway:** oncology / tumor suppressor biology
+**Model/species:** review; no data of its own
+**Genotype/model:** not applicable (review)
+**Transferability:** T3 — WWOX measured outside a loss-of-function neural system; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** LOW — background. Not medical advice.
+**Claim links:** none
+**Role:** Review, read in part (the organ-cancer sections were not read). Three statements to check against primaries before any citation: (1) cerebellar vermis hypoplasia and impaired neuronal migration are stated next to a citation, on the preceding sentence, of a 2024 case report whose text contains neither term (they belong to a 2020 migration paper's fetal supplement and cohort), so the attribution is by adjacency; (2) the cancer-cell sign of glycolysis-up for WWOX loss is given without remark against the null-mouse hypoglycemia; (3) the HDL and metabolic-syndrome links are stated as established from a review and two papers. Never cite for a primary finding.
+**LIT link:** [[literature_tracking_log_current#LIT-0076]]
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
+---
+
+## PAPER 402
+**Short title:** Liu 2022 — WWOX pY33 to pS14 transition, a review from the originating laboratory: a model with no loss-of-function measurement
+**Full title:** WWOX Controls Cell Survival, Immune Response and Disease Progression by pY33 to pS14 Transition to Alternate Signaling Partners
+**Authors:** Liu TY, Nagarajan G, Chiang MF, Huang SS, Lin TC, Chen YA, et al.
+**Year:** 2022
+**Source type:** secondary — narrative review (originating laboratory), figure captions only
+**Journal/source:** *Cells* 2022;11(14)
+**Identifier:** PMID 35883580 / PMC9323965 / DOI 10.3390/cells11142137
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-B-W4-NEGATIVES-01` (Scientist B, task W4-W1-B-20261019) at `BATCH_20261019_006`; identity from the PubMed record (E-utilities, 2026-10-20), checked against the receipt; number minted by the integrator. Promoted from `CORPUS-STUB-009` (kept as history).
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-35883580-01`; manifest `deepdive_manifests/PMID35883580.json`; dossier `research/fulltext_dossiers/PMID35883580.md`; artefact `files/fulltext/PMID35883580_Liu2022_PMC_r2.xml` (sha256 `2b818e9726ce68fac8005531123252ee3c01c10e275b1da68c1f8c28b8875a8d`); unread or absent (receipt): figures captions_only, limitations not_present, methods not_present, supplementary not_present, tables not_present; depth as the receipt states it
+**Primary pathway:** WWOX phosphorylation / cell survival and immune response
+**Model/species:** review; no data of its own
+**Genotype/model:** not applicable (review)
+**Transferability:** T3 — WWOX measured outside a loss-of-function neural system; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** LOW — background. Not medical advice.
+**Claim links:** none
+**Role:** The pY33 to pS14 model is one laboratory's and has no measurement in any WWOX loss-of-function tissue; the review itself says the in-complex transition is unknown. Heterotopia in newborns is cited to mouse papers, and one WWOX-direct citation among its references is retracted. Read in part (figures at caption level). Not independent support for the FRET method record of the same laboratory.
+**LIT link:** [[literature_tracking_log_current#LIT-0036]]
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
+---
+
+## PAPER 403
+**Short title:** Kuo 2018 — tri-molecular time-lapse FRET method for WWOX signalling: n = 2 to 4 per trace, no statistics, ectopic expression
+**Full title:** Chasing the signaling run by tri-molecular time-lapse FRET microscopy
+**Authors:** Kuo HL, Ho PC, Huang SS, Chang NS
+**Year:** 2018
+**Source type:** primary research — live-cell FRET method, ectopic expression in non-neural lines
+**Journal/source:** *Cell Death Discov* 2018;4:45
+**Identifier:** PMID 29581896 / PMC5864757 / DOI 10.1038/s41420-018-0047-4
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-B-W4-NEGATIVES-01` (Scientist B, task W4-W1-B-20261019) at `BATCH_20261019_006`; identity from the PubMed record (E-utilities, 2026-10-20), checked against the receipt; number minted by the integrator.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-29581896-01`; manifest `deepdive_manifests/PMID29581896.json`; dossier `research/fulltext_dossiers/PMID29581896.md`; artefact `files/fulltext/PMID29581896_Kuo2018_PMC_r2.xml` (sha256 `e491873a723be80865e3e597107d2aa12585aab9689c04fee85173ce6991958a`); unread or absent (receipt): figures captions_only, limitations not_present, supplementary captions_only, tables not_present; depth as the receipt states it
+**Primary pathway:** WWOX phosphorylation / signalling relay
+**Model/species:** cultured non-neural cell lines, ectopic fluorescent constructs
+**Genotype/model:** overexpression constructs and a dominant-negative control; no loss-of-function allele
+**Transferability:** T3 — WWOX measured outside a loss-of-function neural system; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** LOW — background. Not medical advice.
+**Claim links:** none
+**Role:** n = 2 to 4 per trace, no statistics, ectopic expression in non-neural lines, and the dominant-negative control still peaks (the level after the early peak is about 2,000 to 4,000, corrected from 2,500 after the blind audit). Partial (figures and supplement at caption level). Same laboratory as the pY33 to pS14 review, so the two are one source, not two.
+**LIT link:** [[literature_tracking_log_current#LIT-0680]]
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
+---
+
+## PAPER 404
+**Short title:** Schrock 2017 — Fhit and Wwox loss and genome instability, a perspective: the thymidine rescue is in Fhit-null cells only
+**Full title:** Fhit and Wwox loss-associated genome instability: A genome caretaker one-two punch
+**Authors:** Schrock MS, Karras JR, Guggenbiller MJ, Druck T, Batar B, Huebner K
+**Year:** 2017
+**Source type:** secondary — perspective, no figures obtainable
+**Journal/source:** *Adv Biol Regul* 2017;63:167-176
+**Identifier:** PMID 27773744 / PMC7213024 / DOI 10.1016/j.jbior.2016.09.008
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-B-W4-NEGATIVES-01` (Scientist B, task W4-W1-B-20261019) at `BATCH_20261019_006`; identity from the PubMed record (E-utilities, 2026-10-20), checked against the receipt; number minted by the integrator. Promoted from `CORPUS-STUB-173` (kept as history).
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-27773744-01`; manifest `deepdive_manifests/PMID27773744.json`; dossier `research/fulltext_dossiers/PMID27773744.md`; artefact `files/fulltext/PMID27773744_Schrock2017_PMC_r2.xml` (sha256 `93b6ec9555aae4f241d0a4df4f376f9bd76fb3529ce02811e65601814ed595a4`); unread or absent (receipt): figures unavailable, limitations not_present, methods captions_only, supplementary not_present, tables not_present; depth as the receipt states it
+**Primary pathway:** DNA-damage response / genome stability
+**Model/species:** perspective; cites cell-line and database analyses
+**Genotype/model:** not applicable (perspective)
+**Transferability:** T3 — WWOX measured outside a loss-of-function neural system; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** LOW — background. Not medical advice.
+**Claim links:** none
+**Role:** The one thymidine-supplementation experiment is in Fhit-null cells; no nucleotide-pool measurement exists for Wwox. The Wwox survival data rest on five lines, one passage comparison and one unadjusted database split. Read in part (no figures obtainable). Do not cite for a Wwox nucleotide-supply mechanism. Distinct from the Schrock 2017 primary on WWOX and BRCA1 held as `PAPER 109`.
+**LIT link:** [[literature_tracking_log_current#LIT-0189]]
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
+---
+
+## PAPER 405
+**Short title:** Kaluzinska-Kolat 2023 — WWOX gain 2.6- to 15-fold in four glioma lines: apoptosis up in three, a resazurin readout down in all four
+**Full title:** Antineoplastic Nature of WWOX in Glioblastoma Is Mainly a Consequence of Reduced Cell Viability and Invasion
+**Authors:** Kałuzińska-Kołat Ż, Kośla K, Kołat D, Płuciennik E, Bednarek AK
+**Year:** 2023
+**Source type:** primary research — four glioma cell lines, WWOX overexpression
+**Journal/source:** *Biology (Basel)* 2023;12(3)
+**Identifier:** PMID 36979157 / PMC10045224 / DOI 10.3390/biology12030465
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-B-W4-NEGATIVES-01` (Scientist B, task W4-W1-B-20261019) at `BATCH_20261019_006`; identity from the PubMed record (E-utilities, 2026-10-20), checked against the receipt; number minted by the integrator. Promoted from `CORPUS-STUB-100` (kept as history).
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-36979157-01`; manifest `deepdive_manifests/PMID36979157.json`; dossier `research/fulltext_dossiers/PMID36979157.md`; artefact `files/fulltext/PMID36979157_Kaluzinska2023_PMC_r2.xml` (sha256 `4864305c68fee89bde8af8118b5bf7bbec9ffb91d41ebdab4e49473cf4444937`); unread or absent (receipt): figures captions_only, results captions_only, supplementary not_present, tables not_present; depth as the receipt states it
+**Primary pathway:** oncology / tumor suppressor biology
+**Model/species:** four human glioma lines (non-neuronal)
+**Genotype/model:** WWOX over-expression 2.6- to 15-fold; no loss-of-function arm
+**Transferability:** T3 — WWOX measured outside a loss-of-function neural system; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** LOW — background. Not medical advice.
+**Claim links:** none
+**Role:** WWOX gain raises apoptosis in three of four lines and lowers a resazurin reducing-capacity readout in all four; in Figure 2B the proliferation difference runs opposite ways in two lines against the third. A non-neuronal caution for the dose-control census, not a neuronal safety signal. Partial (results, figures at caption level).
+**LIT link:** [[literature_tracking_log_current#LIT-0121]]
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
+---
+
+## PAPER 406
+**Short title:** Schatz 2026 — genetic diagnosis in epilepsy, a review: the WWOX 'trial of gene replacement' table line is unsourced
+**Full title:** Genetic Diagnosis in Epilepsy: Implications for Clinical Management
+**Authors:** Schatz KS, Lammert DB, Habela CW
+**Year:** 2026
+**Source type:** secondary — narrative review (epilepsy genetics), class level
+**Journal/source:** *Curr Neurol Neurosci Rep* 2026;26(1)
+**Identifier:** PMID 42720877 / PMC13562175 / DOI 10.1007/s11910-026-01514-1
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-B-W4-NEGATIVES-01` (Scientist B, task W4-W1-B-20261019) at `BATCH_20261019_006`; identity from the PubMed record (E-utilities, 2026-10-20), checked against the receipt; number minted by the integrator.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-42720877-01`; manifest `deepdive_manifests/PMID42720877.json`; dossier `research/fulltext_dossiers/PMID42720877.md`; artefact `files/fulltext/PMID42720877_Schatz2026_PMC_r2.xml` (sha256 `d3e2e1c9ab767c27fd2eb525d75d0453a3fa6cf2469e0317896d449db1e5eabe`); unread or absent (receipt): figures not_present, limitations not_present, methods not_present, supplementary not_present, tables captions_only; depth as the receipt states it
+**Primary pathway:** none — secondary source
+**Model/species:** review; no data of its own
+**Genotype/model:** WWOX appears as one table row
+**Transferability:** T4 — WWOX not measured (class-level or distant source); no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** Table 1 lists WWOX with 'MedPath Trial of gene replacement' and no identifier; condition searches of ClinicalTrials.gov on 2026-10-20 return one general rare-disease registry record for WWOX or WOREE and none for WWOX plus AAV. Do not use the table as evidence of a trial. Partial (methods, figures, supplement absent; tables at caption level).
+**LIT link:** [[literature_tracking_log_current#LIT-0681]]
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
+---
+
+## PAPER 407
+**Short title:** Pozhitnova 2026 — fragile sites of induced pluripotent stem cells: FRA16D is minor and line-specific in three lines; WWOX not recurrently rearranged
+**Full title:** The Fragile Site Landscape of Induced Pluripotent Stem Cells: Hierarchy, Variability, Tissue Specificity, and Links to Culture-Acquired Rearrangements
+**Authors:** Pozhitnova VO, Zheglo D, Kislova AV, Kiselev DS, Voronina ES
+**Year:** 2026
+**Source type:** primary research — three iPSC lines, fragile-site mapping
+**Journal/source:** *Cells* 2026;15(17)
+**Identifier:** PMID 42738851 / PMC13564719 / DOI 10.3390/cells15171557
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-B-W4-NEGATIVES-01` (Scientist B, task W4-W1-B-20261019) at `BATCH_20261019_006`; identity from the PubMed record (E-utilities, 2026-10-20), checked against the receipt; number minted by the integrator.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-42738851-01`; manifest `deepdive_manifests/PMID42738851.json`; dossier `research/fulltext_dossiers/PMID42738851.md`; artefact `files/fulltext/PMID42738851_Pozhitnova2026_PMC_r2.xml` (sha256 `9ca2806dbe185b87df973446002db9922fab27b147bebfdf285c9223d3955dd6`); unread or absent (receipt): figures captions_only, introduction captions_only, limitations not_present, methods captions_only, results captions_only, supplementary captions_only, tables captions_only; depth as the receipt states it
+**Primary pathway:** DNA-damage response / genome stability
+**Model/species:** three human iPSC lines in culture
+**Genotype/model:** no WWOX manipulation
+**Transferability:** T3 — WWOX measured outside a loss-of-function neural system; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** LOW — background. Not medical advice.
+**Claim links:** none
+**Role:** FRA16D, the fragile site inside the WWOX locus, is minor and line-specific in three iPSC lines, and WWOX is not recurrently rearranged in culture. Partial: only introduction, methods, results, figures, tables and supplement at caption level are owed. Says nothing about WWOX function or about a neuronal lineage.
+**LIT link:** [[literature_tracking_log_current#LIT-0682]]
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
+---
+
+## PAPER 408
+**Short title:** Delahanty 2026 — 4-phenylbutyrate with GAT-1 augmentation for SLC6A1 variants: rescue in cells, 4 mM reduces viability (substitute)
+**Full title:** 4-Phenylbutyrate Plus Wildtype GAT-1 Augmentation: A Dual Therapy to Rescue SLC6A1 Variant-Associated Developmental and Epileptic Encephalopathy
+**Authors:** Delahanty AJ, James K, Carter EG, Song ZD, Wang J, Bassette M, Kang JQ
+**Year:** 2026
+**Source type:** primary research — cell models of SLC6A1 variants, a trial-feedback statement
+**Journal/source:** *Genes (Basel)* 2026;17(8)
+**Identifier:** PMID 42650175 / PMC13512211 / DOI 10.3390/genes17080983
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-B-W4-NEGATIVES-01` (Scientist B, task W4-W1-B-20261019) at `BATCH_20261019_006`; identity from the PubMed record (E-utilities, 2026-10-20), checked against the receipt; number minted by the integrator.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-42650175-01`; manifest `deepdive_manifests/PMID42650175.json`; dossier `research/fulltext_dossiers/PMID42650175.md`; artefact `files/fulltext/PMID42650175_Delahanty2026_PMC_r2.xml` (sha256 `f7aa81589e02cb9bc20adf4bfe6d2087cef2f1a3c8b468cd501f9516c00a2749`); unread or absent (receipt): figures captions_only, supplementary captions_only, tables not_present; depth as the receipt states it
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** cultured cells expressing GAT-1 variants
+**Genotype/model:** no WWOX-deficient system; membrane transporter variants
+**Transferability:** T4 — WWOX not measured (class-level or distant source); no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** SUBSTITUTE. An ER-retained transporter is rescued in cells; 4 mM phenylbutyrate reduced viability in vitro; the trial feedback is stated without data. System gap: a membrane transporter against a cytosolic WWOX. Source for a dose caution only. Partial (figures and supplement at caption level). NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0683]]
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
+---
+
+## PAPER 409
+**Short title:** Song 2026 — 4-phenylbutyrate rescue of GABRA1 variants in developmental and epileptic encephalopathy: raises wild-type and variant alike (substitute)
+**Full title:** 4-Phenylbutyrate Rescue in GABRA1 Variants Associated with Developmental Epileptic Encephalopathies: From Cell and Mouse Models to Humans
+**Authors:** Song ZD, Zavalin K, Shen W, DeLeeuw MB, Hunn GX, Eda RS, et al.
+**Year:** 2026
+**Source type:** primary research — cells, a mouse arm and one child
+**Journal/source:** *Cells* 2026;15(15)
+**Identifier:** PMID 42587736 / PMC13465587 / DOI 10.3390/cells15151327
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-B-W4-NEGATIVES-01` (Scientist B, task W4-W1-B-20261019) at `BATCH_20261019_006`; identity from the PubMed record (E-utilities, 2026-10-20), checked against the receipt; number minted by the integrator.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-42587736-01`; manifest `deepdive_manifests/PMID42587736.json`; dossier `research/fulltext_dossiers/PMID42587736.md`; artefact `files/fulltext/PMID42587736_Song2026_PMC_r2.xml` (sha256 `3f4e65c6f4333f9b3033826eef145613cb6ff68951b5ad366d50ce90d3d42795`); unread or absent (receipt): figures captions_only, limitations not_present, methods captions_only, results captions_only, supplementary not_present; depth as the receipt states it
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** cultured cells, mice (3 to 4 animals), one child
+**Genotype/model:** no WWOX-deficient system; receptor variants
+**Transferability:** T4 — WWOX not measured (class-level or distant source); no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** SUBSTITUTE. Phenylbutyrate raises wild-type and variant receptor alike; the mouse data are expression only in 3 to 4 animals; the human arm is one uncontrolled child. System gap: a membrane receptor against a cytosolic WWOX. Partial (methods, results and figures at caption level). NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0684]]
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
+---
+
+## PAPER 410
+**Short title:** Samanta 2026 — ketogenic therapy by developmental and epileptic encephalopathy gene: WWOX absent; hypoglycemia at induction listed (substitute)
+**Full title:** Ketogenic diet therapy in developmental and epileptic encephalopathies: toward syndrome- and gene-informed precision therapy
+**Authors:** Samanta D, Manbeck CP
+**Year:** 2026
+**Source type:** secondary — narrative review (ketogenic therapy by gene)
+**Journal/source:** *Front Pediatr* 2026;14:1958733
+**Identifier:** PMID 42846717 / PMC13643383 / DOI 10.3389/fped.2026.1958733
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-B-W4-NEGATIVES-01` (Scientist B, task W4-W1-B-20261019) at `BATCH_20261019_006`; identity from the PubMed record (E-utilities, 2026-10-20), checked against the receipt; number minted by the integrator.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261019-42846717-01`; manifest `deepdive_manifests/PMID42846717.json`; dossier `research/fulltext_dossiers/PMID42846717.md`; artefact `files/fulltext/PMID42846717_Samanta2026_PMC_r2.xml` (sha256 `91d2f62e085398d1590d569b24f540f43a0587aa9961443bcedba74f990c2941`); unread or absent (receipt): discussion captions_only, figures not_present, limitations not_present, methods not_present, results not_read, supplementary not_present; depth as the receipt states it
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** review; no data of its own
+**Genotype/model:** WWOX is absent from the review
+**Transferability:** T4 — WWOX not measured (class-level or distant source); no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** SUBSTITUTE. WWOX is absent. The ketogenic-diet evidence in the syndromes it covers is small series; hypoglycemia at induction is a listed class risk. Supplies base rates and the system gap, not WWOX evidence. Partial (results not read; methods, figures, supplement absent). NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0685]]
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
+---
+
+## PAPER 411
+**Short title:** Chen 2015 — UV and cold shock switch apoptosis to bubbling cell death at low temperature (WWOX/WOX1, p53, TRAF2, NOS2): the only WWOX-direct temperature paper
+**Full title:** UV irradiation/cold shock-mediated apoptosis is switched to bubbling cell death at low temperatures
+**Authors:** Chen SJ, Lin PW, Lin HP, Huang SS, Lai FJ, Sheu HM, et al.
+**Year:** 2015
+**Source type:** primary research — cultured cell lines and MEFs, one frostbite IHC pair
+**Journal/source:** *Oncotarget* 2015;6(10):8007-18
+**Identifier:** PMID 25779665 / PMC4480731 / DOI 10.18632/oncotarget.3153
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-C-W4-01` (Scientist C, task W4-W2A-C-20261019) at `BATCH_20261019_006`; identity from the PubMed record (E-utilities, 2026-10-20), checked against the receipt; number minted by the integrator.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261020-25779665-01`; manifest `deepdive_manifests/PMID25779665.json`; artefact `files/fulltext/PMID25779665_Chen2015_PMC.xml` (sha256 `0ae2abc7d22a5ad28f03caeb3024a48fdfab7824ce223707370ab198651aab40`); unread or absent (receipt): abstract not_read, limitations not_present, references not_read, supplementary captions_only, tables not_present; depth as the receipt states it
+**Primary pathway:** cell death / stress response
+**Model/species:** COS7, L929, B16F10 cells; Wwox+/+ and Wwox-/- MEFs; one human skin pair
+**Genotype/model:** Wwox-/- MEFs against +/+; no in vivo cold or fever experiment
+**Transferability:** T3 — WWOX measured outside a loss-of-function neural system; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** LOW — background. Not medical advice.
+**Claim links:** none
+**Role:** Temperature is a post-irradiation culture condition; Wwox-/- MEFs RESIST bubbling death (about 0 to 2 percent against 28, 45 and 85 percent at 0.5, 1 and 2 h, n = 3), so nothing supports a cold sensitivity or hypothermia mechanism for WWOX loss. The one tissue datum is a frostbite immunohistochemistry pair with no stated n; ATP independence and HIF1A involvement are 'data not shown'; nine supplementary movies are not retrievable. No thermoregulation datum. Partial (abstract, references not read).
+**LIT link:** [[literature_tracking_log_current#LIT-0686]]
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
+---
+
+## PAPER 412
+**Short title:** Friemel 2022 — single-cell ploidy in NASH-induced HCC and NAFLD/NASH (miFISH, WWOX probe): tumour genomics, with a count the text hides
+**Full title:** Single-cell resolved ploidy and chromosomal aberrations in nonalcoholic steatohepatitis-(NASH) induced hepatocellular carcinoma and its precursor lesions
+**Authors:** Friemel J, Torres I, Brauneis E, Thörner T, Schäffer AA, Gertz EM, et al.
+**Year:** 2022
+**Source type:** primary research — FFPE single-nucleus FISH, 11 HCC and 11 NAFLD/NASH specimens
+**Journal/source:** *Sci Rep* 2022;12(1):22622
+**Identifier:** PMID 36587184 / PMC9805444 / DOI 10.1038/s41598-022-27173-z
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-C-W4-01` (Scientist C, task W4-W2A-C-20261019) at `BATCH_20261019_006`; identity from the PubMed record (E-utilities, 2026-10-20), checked against the receipt; number minted by the integrator.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261020-36587184-01`; manifest `deepdive_manifests/PMID36587184.json`; artefact `files/fulltext/PMID36587184_Friemel2022_PMC.xml` (sha256 `3cf008b6c7ddd96547ee984c92d5e40c8355da4eaa3007e8051612b5e496ccdf`); unread or absent (receipt): abstract not_read, limitations not_present, references not_read; depth as the receipt states it
+**Primary pathway:** oncology / tumor genomics
+**Model/species:** archival human liver, one centre
+**Genotype/model:** WWOX copy number by BAC-contig FISH; no RNA, protein or metabolic readout
+**Transferability:** T3 — WWOX measured outside a loss-of-function neural system; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** LOW — background. Not medical advice.
+**Claim links:** none
+**Role:** WWOX copy-number loss in 4 of 11 HCC (headline) and none in the 11 NAFLD/NASH specimens, so no steatosis datum. Figure 3A marks 15 percent WWOX loss in case 1, absent from Table 1; no loss threshold is stated; a supplementary figure prints one case's WWOX value in the gains column coloured green in one copy and red in the other; two cases have no panel. Instability index against macrosteatosis is flat (p = 0.26). Tumour genomics only. Partial (abstract, references not read).
+**LIT link:** [[literature_tracking_log_current#LIT-0687]]
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
+---
+
+## PAPER 413
+**Short title:** Sharma 2025 — WWOX and RUNX2 immunohistochemistry in Ewing sarcoma, 7 cases against 5 unspecified controls: a pilot-power negative for WWOX
+**Full title:** Intertwined Relationship of WWOX and RUNX2 Proteins as a Biomarker for Predicting Response and Survival in Patients With Childhood Bone Cancer in North India: A Pilot Study
+**Authors:** Sharma P, Waliullah S, Kumar B, Mohan R, Rastogi D, Kumar D, Ali W
+**Year:** 2025
+**Source type:** primary research — seven-case pilot, FFPE immunohistochemistry
+**Journal/source:** *Cureus* 2025;17(9):e93160
+**Identifier:** PMID 41141138 / PMC12552799 / DOI 10.7759/cureus.93160
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-C-W4-01` (Scientist C, task W4-W2A-C-20261019) at `BATCH_20261019_006`; identity from the PubMed record (E-utilities, 2026-10-20), checked against the receipt; number minted by the integrator. Promoted from `CORPUS P289` (kept as history).
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261020-41141138-01`; manifest `deepdive_manifests/PMID41141138.json`; artefact `files/fulltext/PMID41141138_Sharma2025_PMC.xml` (sha256 `2c16619588748cdb9d5ea284640f95b348d5a513c9b2bee1c019f24ead075de7`); unread or absent (receipt): abstract not_read, references not_read, supplementary not_present; depth as the receipt states it
+**Primary pathway:** oncology / bone tumour biomarker
+**Model/species:** human tumour tissue, one Indian centre
+**Genotype/model:** no genotype; staining intensity only
+**Transferability:** T3 — WWOX measured outside a loss-of-function neural system; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** LOW — background. Not medical advice.
+**Claim links:** none
+**Role:** WWOX unchanged (P = 0.876), RUNX2 higher (P = 0.005); the controls are never identified and no WWOX-RUNX2 relation or response endpoint is reported although the title promises both. The survival caption (median 45 months), the curve (median about 8 months, plateau about 29 percent) and the table (6 of 7 dead) disagree; no stratified survival. It cannot be cited for the RUNX2 arm of the Wwox-null bone phenotype beyond 'no WWOX change at n = 7'. Partial (abstract, references not read).
+**LIT link:** [[literature_tracking_log_current#LIT-0289]]
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
+---
+
+## PAPER 414
+**Short title:** Rushing 2023 — NCI-60 multi-omics and alkylating-agent sensitivity: WWOX is a copy-number gene-list line, not a metabolic finding
+**Full title:** Multi-Omics Analysis of NCI-60 Cell Line Data Reveals Novel Metabolic Processes Linked with Resistance to Alkylating Anti-Cancer Agents
+**Authors:** Rushing BR
+**Year:** 2023
+**Source type:** primary research — public NCI-60 multi-omics re-analysis
+**Journal/source:** *Int J Mol Sci* 2023;24(17)
+**Identifier:** PMID 37686047 / PMC10487847 / DOI 10.3390/ijms241713242
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-C-W4-01` (Scientist C, task W4-W2A-C-20261019) at `BATCH_20261019_006`; identity from the PubMed record (E-utilities, 2026-10-20), checked against the receipt; number minted by the integrator.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261020-37686047-01`; manifest `deepdive_manifests/PMID37686047.json`; artefact `files/fulltext/PMID37686047_Rushing2023_PMC.xml` (sha256 `91d401a8d80181c5312d741a513d009efae20f0c2162680eadf05cafdf5587a6`); unread or absent (receipt): abstract not_read, limitations not_present, references not_read; depth as the receipt states it
+**Primary pathway:** oncology / drug sensitivity
+**Model/species:** 58 human cancer cell lines (public data)
+**Genotype/model:** WWOX not perturbed; one of 15 genes with many copy-number markers
+**Transferability:** T4 — WWOX not measured (class-level or distant source); no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** LOW — background. Not medical advice.
+**Claim links:** none
+**Role:** WWOX is a copy-number gene-list line (22 markers, resistant-quartile mean about -0.17 against +0.19, Table S7); the transcript does not follow (fold 0.73 to 0.95, smallest P about 0.074, loading below the cutoff); in a second data set expression correlates weakly and negatively with IC50 for five agents (rho -0.20 to -0.25; Table S3, absent from the text). The paper's metabolic result is purine metabolism, not WWOX. The supervised separation on about 29 samples says little by itself. Partial (abstract, references not read).
+**LIT link:** [[literature_tracking_log_current#LIT-0688]]
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
+---
+
+## PAPER 415
+**Short title:** Pluciennik 2012 — genetic alterations of WWOX in Wilms' tumour (23 tumours): observed hemizygosity is not predicted LOH
+**Full title:** Genetic alterations of WWOX in Wilms' tumor are involved in its carcinogenesis
+**Authors:** Płuciennik E, Nowakowska M, Wujcicka WI, Sitkiewicz A, Kazanowska B, Zielińska E, Bednarek AK
+**Year:** 2012
+**Source type:** primary research — 23 resected childhood tumours, PCR-based genetics
+**Journal/source:** *Oncol Rep* 2012;28(4):1417-22
+**Identifier:** PMID 22842668 / DOI 10.3892/or.2012.1940
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-C-W4-01` (Scientist C, task W4-W2A-C-20261019) at `BATCH_20261019_006`; identity from the PubMed record (E-utilities, 2026-10-20), checked against the receipt; number minted by the integrator. Promoted from `CORPUS P316` (kept as history).
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261020-22842668-01`; manifest `deepdive_manifests/PMID22842668.json`; artefact `files/fulltext/PMID22842668_Pluciennik2012.pdf` (sha256 `fd9178354875a5c17edfb68eb41845fa4de2fbd566b4e9ebd90dae2ac37f655d`); unread or absent (receipt): abstract not_read, limitations not_present, references not_read, supplementary not_present; depth as the receipt states it
+**Primary pathway:** oncology / tumour genetics
+**Model/species:** human Wilms' tumours, two centres; no normal-kidney comparator
+**Genotype/model:** LOH at two markers, promoter methylation, expression; no function
+**Transferability:** T3 — WWOX measured outside a loss-of-function neural system; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** LOW — background. Not medical advice.
+**Claim links:** none
+**Role:** The 'LOH in 30.4 percent' is observed hemizygosity at one marker; Table I gives predicted LOH 4.4 percent (about one tumour) at intron 8 and 0 at intron 1. Methylation (about 2 to 3 tumours) goes with lower expression; the assay is a 77-cycle semi-nested PCR and the six-sample blot does not match the 40- to 280-fold mRNA range. No renal-function or metabolic readout; kidney stays 'tumour genetics only'. Partial (abstract, references not read; local file is a PDF).
+**LIT link:** [[literature_tracking_log_current#LIT-0316]]
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
+---
+
+## PAPER 416
+**Short title:** Mastrangelo 2018 — treatable inborn errors of metabolism causing epilepsy (narrative review; substitute)
+**Full title:** Actual Insights into Treatable Inborn Errors of Metabolism Causing Epilepsy
+**Authors:** Mastrangelo M
+**Year:** 2018
+**Source type:** secondary — narrative review
+**Journal/source:** *J Pediatr Neurosci* 2018;13(1):13-23
+**Identifier:** PMID 29899766 / PMC5982487 / DOI 10.4103/JPN.JPN_160_16
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-C-W4-01` (Scientist C, task W4-W2A-C-20261019) at `BATCH_20261019_006`; identity from the PubMed record (E-utilities, 2026-10-20), checked against the receipt; number minted by the integrator.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261020-29899766-01`; manifest `deepdive_manifests/PMID29899766.json`; artefact `files/fulltext/PMID29899766_Mastrangelo2018_PMC.xml` (sha256 `4e44625b03ae26094453656371f79c3e2d843252f25e1c248ad0c26c65365f09`); unread or absent (receipt): abstract not_read, limitations not_present, methods not_present, references not_read, supplementary not_present; depth as the receipt states it
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** review; no data of its own
+**Genotype/model:** no WWOX occurrence
+**Transferability:** T4 — WWOX not measured (class-level or distant source); no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** SUBSTITUTE. Gives the work-up checklist (Table 1 is an image) and two statements: a lacking pyridoxine response 'has no diagnostic value', and the folate disease is defined by CSF 5-methyltetrahydrofolate. It defines the exclusion work-up in class terms and says nothing about WWOX. Partial (abstract, references not read). NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0689]]
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
+---
+
+## PAPER 417
+**Short title:** Mastrangelo 2023 — epilepsy phenotypes of vitamin B6-dependent diseases, systematic review of 497 patients (substitute)
+**Full title:** Epilepsy Phenotypes of Vitamin B6-Dependent Diseases: An Updated Systematic Review
+**Authors:** Mastrangelo M, Gasparri V, Bernardi K, Foglietta S, Ramantani G, Pisani F
+**Year:** 2023
+**Source type:** secondary — systematic review of published cases
+**Journal/source:** *Children (Basel)* 2023;10(3)
+**Identifier:** PMID 36980111 / PMC10047402 / DOI 10.3390/children10030553
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-C-W4-01` (Scientist C, task W4-W2A-C-20261019) at `BATCH_20261019_006`; identity from the PubMed record (E-utilities, 2026-10-20), checked against the receipt; number minted by the integrator.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261020-36980111-01`; manifest `deepdive_manifests/PMID36980111.json`; artefact `files/fulltext/PMID36980111_Mastrangelo2023_PMC.xml` (sha256 `2df0ee77cf925826f972d26b1a6ab13cb4999081ad4a7a99c081a71358904652`); unread or absent (receipt): abstract not_read, references not_read, supplementary captions_only; depth as the receipt states it
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** 497 published patients from 128 papers
+**Genotype/model:** no WWOX occurrence
+**Transferability:** T4 — WWOX not measured (class-level or distant source); no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** SUBSTITUTE. Pyridoxine: 173 seizure-free and 38 reduced of 312 treated; a seizure endpoint only, possibly delayed up to three weeks, EEG response no longer a criterion, no comparator; neurocognitive tests exist for 50 of 497. Supplement responsiveness column blank in about 175 of 288 rows, and Table 2's pyridoxal phosphate cells do not obviously match the text. A response in a WWOX case would show a co-diagnosis at most. Partial (abstract, references not read). NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0690]]
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
+---
+
+## PAPER 418
+**Short title:** Girgis 2024 — cerebral folate transport deficiency in two children (substitute): CSF 5-methyltetrahydrofolate not measured
+**Full title:** Cerebral Folate Transport Deficiency in 2 Cases with Intractable Myoclonic Epilepsy
+**Authors:** Girgis MY, Mahfouz E, Abdellatif A, Taha F, ElNaggar W
+**Year:** 2024
+**Source type:** primary research — two-case report
+**Journal/source:** *J Epilepsy Res* 2024;14(1):29-36
+**Identifier:** PMID 38978529 / PMC11227922 / DOI 10.14581/jer.24005
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTIST-C-W4-01` (Scientist C, task W4-W2A-C-20261019) at `BATCH_20261019_006`; identity from the PubMed record (E-utilities, 2026-10-20), checked against the receipt; number minted by the integrator.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261020-38978529-01`; manifest `deepdive_manifests/PMID38978529.json`; artefact `files/fulltext/PMID38978529_Girgis2024_PMC.xml` (sha256 `7d8164eab349473df95e5eda143b31a6286495d65be97c9ad8d0ec6c736fa514`); unread or absent (receipt): abstract not_read, limitations not_present, references not_read, supplementary not_present, tables not_present; depth as the receipt states it
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** two children, exome-diagnosed FOLR1 variants
+**Genotype/model:** no WWOX occurrence
+**Transferability:** T4 — WWOX not measured (class-level or distant source); no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** SUBSTITUTE. The defining analyte, CSF 5-methyltetrahydrofolate, was not measured in either child (diagnosis by exome); the routine metabolic screen was normal; the folinic acid response is unquantified; one variant is labelled nonsense but written as an Arg-to-Trp change. A normal routine screen does not exclude the disease. Partial (abstract, references not read). NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0691]]
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
+---
+
+## PAPER 419
+**Short title:** Papadopoulou 2021 — cerebral folate deficiency in two siblings (FOLR1), ketogenic diet and early treatment (substitute)
+**Full title:** Cerebral folate deficiency in two siblings caused by biallelic variants including a novel mutation of FOLR1 gene: Intrafamilial heterogeneity following early treatment and the role of ketogenic diet
+**Authors:** Papadopoulou MT, Dalpa E, Portokalas M, Katsanika I, Tirothoulaki K, Spilioti M, et al.
+**Year:** 2021
+**Source type:** primary research — two-sibling report
+**Journal/source:** *JIMD Rep* 2021;60(1):3-9
+**Identifier:** PMID 34258135 / PMC8260484 / DOI 10.1002/jmd2.12206
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTISTD-W4B-01` (Scientist D, task W4-W2B-D-20261019) at `BATCH_20261019_006`; identity from the PubMed record (E-utilities, 2026-10-20), checked against the receipt; number minted by the integrator.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-34258135-01`; manifest `deepdive_manifests/PMID34258135.json`; artefact `files/fulltext/PMID34258135_Papadopoulou2021_PMC8260484.xml` (sha256 `e036d021b23897278ae0005a18c8d19ae071f9f61dbaa4beee5d8e05dfa0a3bb`); unread or absent (receipt): limitations not_present, methods not_present; depth as the receipt states it
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** two siblings with biallelic FOLR1 variants
+**Genotype/model:** no WWOX occurrence
+**Transferability:** T4 — WWOX not measured (class-level or distant source); no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** SUBSTITUTE. CSF 5-methyltetrahydrofolate of 49 nmol/L in one sibling (far above the typical receptor-defect value) shows that a moderately low value cannot separate a primary receptor defect from a secondary deficiency; the other value was drawn on oral folinic acid. A halving of daily seizures after the ketogenic diet overlaps B6, folic and folinic acid changes in a fluctuating course, which the authors call hard to interpret. Folic acid is reported 'beneficial' here and called contraindicated elsewhere; unreconciled. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0692]]
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
+---
+
+## PAPER 420
+**Short title:** Lai 2025 — biotinidase deficiency as a rare and treatable cause of generalised epilepsy, one patient (substitute)
+**Full title:** A Rare and Treatable Cause for Generalized Epilepsy: Biotinidase Deficiency
+**Authors:** Lai S, Galan FN
+**Year:** 2025
+**Source type:** primary research — single-case clinical letter
+**Journal/source:** *Ann Child Neurol Soc* 2025;3(4):324-325
+**Identifier:** PMID 42563882 / PMC13359203 / DOI 10.1002/cns3.70042
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTISTD-W4B-01` (Scientist D, task W4-W2B-D-20261019) at `BATCH_20261019_006`; identity from the PubMed record (E-utilities, 2026-10-20), checked against the receipt; number minted by the integrator.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-42563882-01`; manifest `deepdive_manifests/PMID42563882.json`; artefact `files/fulltext/PMID42563882_Lai2025_PMC13359203.xml` (sha256 `e50a7909d93c42f532eca0d7773cb51ab55f7f2454b38cbcf2b8db55734b1865`); unread or absent (receipt): abstract not_present, limitations not_present, methods not_present, supplementary not_present, tables not_present; depth as the receipt states it
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** one adolescent with biallelic BTD variants
+**Genotype/model:** no WWOX occurrence
+**Transferability:** T4 — WWOX not measured (class-level or distant source); no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** SUBSTITUTE. The authors write that the relation of the deficiency to the epilepsy is unknown; seizure freedom is on levetiracetam plus biotin; the diagnosis of mild deficiency rests on exome sequencing with no enzyme activity given; the lesion regression cannot be attributed to biotin (two treatments, pre-treatment seizure frequency unstated). A reminder that biotinidase deficiency is on the work-up list. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0693]]
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
+---
+
+## PAPER 421
+**Short title:** Ribeiro-Constante 2026 — treating BCKD-kinase deficiency, a disorder of an overactive enzyme (review; substitute)
+**Full title:** Treating a Disorder Caused by an Overactive Enzyme: BCKD-Kinase Deficiency
+**Authors:** Ribeiro-Constante J, Tangeraas T, García-Cazorla A
+**Year:** 2026
+**Source type:** secondary — narrative review (31 reported patients)
+**Journal/source:** *J Inherit Metab Dis* 2026;49(5):e70242
+**Identifier:** PMID 42660645 / PMC13521751 / DOI 10.1002/jimd.70242
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTISTD-W4B-01` (Scientist D, task W4-W2B-D-20261019) at `BATCH_20261019_006`; identity from the PubMed record (E-utilities, 2026-10-20), checked against the receipt; number minted by the integrator.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-42660645-01`; manifest `deepdive_manifests/PMID42660645.json`; artefact `files/fulltext/PMID42660645_RibeiroConstante2026_PMC13521751_page20261020.html` (sha256 `f30d2c612a0f55ff5c058c6900e67129421866d666aab208df7dd8da748f413c`); unread or absent (receipt): methods not_present, supplementary not_present; depth as the receipt states it
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** review of patients and Bckdk knockout mice
+**Genotype/model:** no WWOX occurrence
+**Transferability:** T4 — WWOX not measured (class-level or distant source); no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** SUBSTITUTE. Branched-chain amino acids are depleted rather than accumulated; treatment is a high-protein diet plus amino-acid supplementation, graded 'Level 4 (case series) at best' by the authors. 'Early treatment prevents autism' rests on three sibling-screened patients (ascertainment bias, as the authors say) though a figure box states a prevention rule; the 31-patient total sums three reports that may overlap; the plasma-brain gap is shown only in knockout mice. An amino-acid panel is at most a prior for a WWOX biomarker list. The page carries an all-rights-reserved notice; the local copy is evidence only. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0694]]
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
+---
+
+## PAPER 422
+**Short title:** Nassar 2024 — L-carnitine with the ketogenic diet in children, a randomised trial: no between-arm antral-length test (substitute)
+**Full title:** Impact of L-carnitine supplementation on gastric emptying and bowel function in pediatric ketogenic diet therapy: a clinical trial
+**Authors:** Nassar MF, Shata MO, Awadallah SM, Youssef MA, Ibrahim HE
+**Year:** 2024
+**Source type:** primary research — randomised trial, 30 children, unblinded
+**Journal/source:** *Sci Rep* 2024;14(1):28099
+**Identifier:** PMID 39543202 / PMC11564695 / DOI 10.1038/s41598-024-78779-4
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTISTD-W4B-01` (Scientist D, task W4-W2B-D-20261019) at `BATCH_20261019_006`; identity from the PubMed record (E-utilities, 2026-10-20), checked against the receipt; number minted by the integrator.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-39543202-01`; manifest `deepdive_manifests/PMID39543202.json`; artefact `files/fulltext/PMID39543202_Nassar2024_PMC11564695.xml` (sha256 `cabf6bc3db3847474d8442811eb7db99d42595086f1c521ab20448e155c65308`); unread or absent (receipt): figures not_present, supplementary not_present; depth as the receipt states it
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** 30 children on a ketogenic diet
+**Genotype/model:** no WWOX occurrence
+**Transferability:** T4 — WWOX not measured (class-level or distant source); no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** SUBSTITUTE. Antral length rose within the carnitine arm (P = 0.039) and did not change significantly in the diet-only arm (P = 0.925), but no between-arm test is reported though the abstract frames one; the endpoint is not gastric emptying; serum carnitine was not measured; stool consistency was not significant while the conclusion says improved; seizure severity did not differ between arms. Table 5 prints an impossible HDL range before and after. Registered after the trial began, no placebo. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0695]]
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
+---
+
+## PAPER 423
+**Short title:** Merlotti 2021 — energy metabolism, ketogenic diets and skeletal health, a narrative review (substitute)
+**Full title:** Energy Metabolism and Ketogenic Diets: What about the Skeletal Health? A Narrative Review and a Prospective Vision for Planning Clinical Trials on this Issue
+**Authors:** Merlotti D, Cosso R, Eller-Vainicher C, Vescini F, Chiodini I, Gennari L, Falchetti A
+**Year:** 2021
+**Source type:** secondary — narrative review
+**Journal/source:** *Int J Mol Sci* 2021;22(1)
+**Identifier:** PMID 33406758 / PMC7796307 / DOI 10.3390/ijms22010435
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTISTD-W4B-01` (Scientist D, task W4-W2B-D-20261019) at `BATCH_20261019_006`; identity from the PubMed record (E-utilities, 2026-10-20), checked against the receipt; number minted by the integrator.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-33406758-01`; manifest `deepdive_manifests/PMID33406758.json`; artefact `files/fulltext/PMID33406758_Merlotti2021_PMC7796307.xml` (sha256 `659593d0dfcc43ce2f9e0d3ed40bc1c201043eff6ba0e25ca0c7e3a0e78e3077`); unread or absent (receipt): supplementary not_present; depth as the receipt states it
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** review of rodent, paediatric and adult cohort data
+**Genotype/model:** no WWOX occurrence
+**Transferability:** T4 — WWOX not measured (class-level or distant source); no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** SUBSTITUTE. No adequately powered human study exists (the authors' conclusion); the 'approximately 20 percent' fracture figure rests on one citation while tabulated cohorts report about 7 to 9 percent; drugs and immobility confound the diet; reference and table inconsistencies recorded (a cohort cited as two different references, 144 against 57 subjects). The monitoring list (bone density, turnover markers, calcium, 25-hydroxyvitamin D, urinary calcium) is the authors' proposal, not a validated protocol. The Wwox-null bone prior comes from other records. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0696]]
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
+---
+
+## PAPER 424
+**Short title:** Nobrega 2022 — cerebrotendinous xanthomatosis, a practice review (bile-acid axis; substitute)
+**Full title:** Cerebrotendinous Xanthomatosis: A practice review of pathophysiology, diagnosis, and treatment
+**Authors:** Nóbrega PR, Bernardes AM, Ribeiro RM, Vasconcelos SC, Araújo DABS, Gama VCV, et al.
+**Year:** 2022
+**Source type:** secondary — practice review
+**Journal/source:** *Front Neurol* 2022;13:1049850
+**Identifier:** PMID 36619921 / PMC9816572 / DOI 10.3389/fneur.2022.1049850
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTISTD-W4B-01` (Scientist D, task W4-W2B-D-20261019) at `BATCH_20261019_006`; identity from the PubMed record (E-utilities, 2026-10-20), checked against the receipt; number minted by the integrator.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-36619921-01`; manifest `deepdive_manifests/PMID36619921.json`; artefact `files/fulltext/PMID36619921_Nobrega2022_PMC9816572.xml` (sha256 `375e27e2dbf783774b3d3d473695865c5d0609e41e873d8e3ca572c899dec89a`); unread or absent (receipt): limitations not_present, methods not_present, supplementary not_present; depth as the receipt states it
+**Primary pathway:** none — comparator / adjacent source
+**Model/species:** review of retrospective cohorts and case series
+**Genotype/model:** no WWOX occurrence
+**Transferability:** T4 — WWOX not measured (class-level or distant source); no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence. Not medical advice.
+**Claim links:** none
+**Role:** SUBSTITUTE. No placebo-controlled trial of chenodeoxycholic acid; internal inconsistencies recorded (diarrhoea 31, 76 and 40 to 50 percent; cataract 82, 85 and 70 percent; cholestanol 'normal or low' against the main diagnostic marker; 'no genotype-phenotype correlation' against tables that assign one); the images of Figures 1 and 2 are swapped on the PMC page. Epilepsy is a moderate item in the suspicion index, so early-infant seizures alone would not trigger testing. No WWOX bile-acid record exists. NOT WWOX EVIDENCE.
+**LIT link:** [[literature_tracking_log_current#LIT-0697]]
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
+---
+
+## PAPER 425
+**Short title:** Agarwala 2023 — early-infantile developmental and epileptic encephalopathy, aetiologies and outcomes: three WWOX rows of 80, a WWOX-direct clinical series for those rows only
+**Full title:** Early-infantile developmental and epileptic encephalopathy: the aetiologies, phenotypic differences and outcomes-a prospective observational study
+**Authors:** Agarwala P, Narang B, Geetha TS, Kurwale N, Samson PL, Golani T, et al.
+**Year:** 2023
+**Source type:** primary research — prospective single-centre observational cohort (80 children)
+**Journal/source:** *Brain Commun* 2023;5(5):fcad243
+**Identifier:** PMID 38074073 / PMC10702464 / DOI 10.1093/braincomms/fcad243
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTISTD-W4B-01` (Scientist D, task W4-W2B-D-20261019) at `BATCH_20261019_006`; identity from the PubMed record (E-utilities, 2026-10-20), checked against the receipt; number minted by the integrator.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-38074073-01`; manifest `deepdive_manifests/PMID38074073.json`; artefact `files/fulltext/PMID38074073_Agarwala2023_PMC10702464.xml` (sha256 `d81b42f814d615309766c5ca40672b23a85cba097d51def8b6a5a0a8bc0ecc65`); depth as the receipt states it
+**Primary pathway:** clinical genetics / DEE aetiology
+**Model/species:** 80 children with seizure onset before 3 months, one private hospital, 2016 to 2021
+**Genotype/model:** three cohort members with biallelic WWOX loss (two with one homozygous nonsense variant, one with a homozygous intragenic deletion found by array)
+**Transferability:** T2 — human WWOX disease, case rows only, with a stated gap; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** LOW — case-row presence only; no WWOX-specific outcome. Not medical advice.
+**Claim links:** none
+**Role:** 🔵 Not a pure substitute: WWOX appears in 3 of 80 recruited (3.75 percent) and 3 of 53 molecular diagnoses (5.7 percent); onset at 4, 21 and 27 days. LIMITS: outcomes are by aetiological group, so no seizure, death, medication or developmental outcome is reported for the three WWOX cases; 3 of 80 is a single-centre, referral-biased proportion, not an incidence; whether the two same-variant cases are related is not stated; the deletion was found by array, a route the Methods apply after sequencing (inference). The rows are not entered into the genotype-phenotype corpus: no WWOX-specific outcome, and the shared citations need the earlier cohort series. The other aetiology comparisons are cohort-level and not WWOX evidence: 11 of 80 (14 percent) had a treatable cofactor cause, and a normal genetic result did not exclude B6 responsiveness in three patients.
+**LIT link:** [[literature_tracking_log_current#LIT-0698]]
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
+---
+
+## PAPER 426
+**Short title:** O'Keefe 2015 — WWOX contributes to the elimination of tumorigenic cells in Drosophila: heterozygous loss enlarges the eye under Egr/TNF, caspase panel labels contradict the text
+**Full title:** Tumor Suppressor WWOX Contributes to the Elimination of Tumorigenic Cells in Drosophila melanogaster
+**Authors:** O'Keefe LV, Lee CS, Choo A, Richards RI
+**Year:** 2015
+**Source type:** primary research — Drosophila genetics (eye, wing disc, cell competition)
+**Journal/source:** *PLoS One* 2015;10(8):e0136356
+**Identifier:** PMID 26302329 / PMC4547717 / DOI 10.1371/journal.pone.0136356
+**Status:** processed
+**Record provenance:** created by `CC-20261019-SCIENTISTD-DEBT-02` (Scientist D, task DEBT-WWOX-DIRECT-D-20261019 (wave 2)) at `BATCH_20261019_006`; identity from the PubMed record (E-utilities, 2026-10-20), checked against the receipt; number minted by the integrator. Promoted from `CORPUS P270` (kept as history).
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261019-26302329-02` (resume, `reread_reason: inadequate_prior_coverage`; the earlier partial receipt `FTR-20261003-26302329-01` stays visible); manifest `deepdive_manifests/PMID26302329.json`; dossier `research/fulltext_dossiers/PMID26302329.md`; artefact `files/fulltext/PMID26302329_OKeefe2015_PMC.xml` (sha256 `bbd1d0f6b315ee3e3dd60fa87046baa4d4753a32b3c6a66dee0c503f25926c73`); unread or absent (receipt): limitations not_present, tables not_present; depth as the receipt states it
+**Primary pathway:** cell death / stress response
+**Model/species:** Drosophila melanogaster eye and wing imaginal discs
+**Genotype/model:** RNAi, two heterozygous loss-of-function alleles and overexpression constructs of the fly WWOX gene
+**Transferability:** T3 — WWOX measured outside a loss-of-function neural system; no datum transfers to P47T, Q230P, G372R, A141T or P252A
+**clinical relevance:** LOW — background. Not medical advice.
+**Claim links:** none
+**Role:** Adult eye area under ectopic Egr/TNF is a dose-sensitive in vivo assay (RNAi and heterozygous alleles enlarge the eye; overexpression shrinks it; ectopic WWOX alone gives no phenotype; trans-heterozygous null animals are viable). 🔴 The only caspase-3 quantification (Figure 5G) is labelled the opposite way to the text and legend; ROS is not measured in any WWOX-manipulated animal (hypothesised from earlier work); endogenous WWOX is undetectable and ectopic WWOX stays cytoplasmic; excluded clone discs differ by arm (13 of 52 against 31 of 50). The resume added the reference list and Supplementary Figures S1 to S4: adult eye sizes about 26.5, 29 and 32 for wild type and two heterozygous alleles with about ten flies each, single photographs without quantification elsewhere. Reference 17 carries a 2017 expression of concern (citation only). Not a rescue readout for the genotype class.
+**LIT link:** [[literature_tracking_log_current#LIT-0270]]
+**Note:** class-level record; no individual-level detail. Not medical advice.
+
+---
 ## CORPUS-STUB-181
 **Corpus paper no:** 181
 **Full title:** Intramolecular autoinhibition regulates the selectivity of PRPF40A tandem WW domains for proline-rich motifs

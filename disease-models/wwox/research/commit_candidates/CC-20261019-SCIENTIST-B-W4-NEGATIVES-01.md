@@ -22,3 +22,18 @@
 ## Ordering
 
 Receipts for the eleven PMIDs (staged under `receipt_staging/scientist-b/FTR-20261019-<PMID>-01.json`) must be recorded first. Manifests carry reading debt lists (gene-direct references not in the repository) for the Orchestrator.
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_006` · 2026-10-20 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.24 -> WM_v7.25 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** voluntary audit by the Scientist (seven triples; six SUPPORTS, one PARTIAL narrowed before landing); not rerun by the integrator (no baseline claim is narrowed).
+**What landed:** eleven `PAPER` records (`PAPER 400` to `PAPER 410`: `PAPER 400` Kilic 2026, `401` Hammouz 2025, `402` Liu 2022, `403` Kuo 2018, `404` Schrock 2017 perspective, `405` Kaluzinska-Kolat 2023, `406` Schatz 2026, `407` Pozhitnova 2026, `408` and `409` the two phenylbutyrate papers, `410` Samanta 2026), four of them promotions of corpus placeholders kept as history, with `LIT-0680` to `LIT-0685` and the promoted `LIT-EX-006`, `LIT-0076`, `LIT-0036`, `LIT-0189` and `LIT-0121`; `FT-115` retired as a confirmed negative with the wording 'no patient-level data' and the old wording quoted. The eleven receipts (`FTR-20261019-<id>-01`) are in the ledger.
+**Parked:** the three PARKED readings (no lawful body); the candidate's points 2, 3, 6 and 7 are carried inside the records of the papers they concern and as the queue and ledger wording, not as claim edits; the reference-debt lists of the manifests (gene-direct references with no identifier in the screened entry) are not queued.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.

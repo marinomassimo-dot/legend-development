@@ -82,3 +82,11 @@ Eight load-bearing triples were audited blind by a separate agent: six SUPPORTED
 **Parked:** section 4 (the wishlist of papers with no lawful body) carries no op text.
 **Status / Type / Summary:** unchanged by this candidate.
 **Not medical advice.** Class level only; no individual-level record is carried.
+
+---
+
+## BATCH DISPOSITION — follow-up (append-only)
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_006` · 2026-10-20 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**What landed:** the three resumed receipts (`FTR-20261019-19918364-02`, `FTR-20261019-24008736-03`, `FTR-20261019-26302329-02`), which `BATCH_20261019_004` recorded as in the ledger with no registry op, now reach the registry: the depth lines of `PAPER 140` and `PAPER 148` are raised from partial to complete (the earlier partial receipts stay visible), and the third reading, which had only a corpus placeholder, lands as `PAPER 426` (the placeholder is kept as history; `LIT-0270` promoted). The earlier verdict above is not rewritten. This closes the `READ_NOT_REGISTERED` finding of `test_batch_queue.py` for these three studies.

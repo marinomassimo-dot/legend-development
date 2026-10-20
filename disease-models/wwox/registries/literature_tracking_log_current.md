@@ -1078,6 +1078,7 @@ Serves to:
 **Identifier value:** 41510857
 **Date discovered:** 2026-03-27
 **Status:** background_only
+**Status note:** read in full (`FTR-20261019-41510857-01`, `complete_fulltext_read`) at `BATCH_20261019_006`; landing [[paper_registry_current#PAPER 400]]. The record holds gene counts only and no patient-level data; the filter reason above stands.
 **Filter reason:** WWOX listed among pathogenic DRE genes in WES cohort — useful as clinical context but no WWOX-specific data
 **Transferability:** T3 contextual
 **clinical relevance:** LOW
@@ -1375,11 +1376,12 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 35883580 / DOI 10.3390/cells11142137
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-10-19 (`FTR-20261019-35883580-01`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 9
-**Status:** discovered
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 402]] by `BATCH_20261019_006` (`CC-20261019-SCIENTIST-B-W4-NEGATIVES-01`); reading `partial_fulltext_read`, receipt `FTR-20261019-35883580-01`.
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -1387,7 +1389,7 @@ Serves to:
 **Claim links:** none
 **Working Model impact:** none yet
 **Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
+**Next action:** none — read; landing [[paper_registry_current#PAPER 402]]
 **Flags:** corpus placeholder / not yet screened
 **Note:** Title: WWOX Controls Cell Survival, Immune Response and Disease Progression by pY33 to pS14 Transition
 
@@ -2484,11 +2486,12 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 40327201 / DOI 10.1007/s10142-025-01601-5
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-10-19 (`FTR-20261019-40327201-01`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 52
-**Status:** discovered
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 401]] by `BATCH_20261019_006` (`CC-20261019-SCIENTIST-B-W4-NEGATIVES-01`); reading `partial_fulltext_read`, receipt `FTR-20261019-40327201-01`.
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -2496,7 +2499,7 @@ Serves to:
 **Claim links:** none
 **Working Model impact:** none yet
 **Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
+**Next action:** none — read; landing [[paper_registry_current#PAPER 401]]
 **Flags:** corpus placeholder / not yet screened
 **Note:** Title: Twenty-five years of WWOX insight in cancer: a treasure trove of knowledge
 
@@ -3728,11 +3731,12 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 36979157 / DOI 10.3390/biology12030465
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-10-19 (`FTR-20261019-36979157-01`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 100
-**Status:** discovered
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 405]] by `BATCH_20261019_006` (`CC-20261019-SCIENTIST-B-W4-NEGATIVES-01`); reading `partial_fulltext_read`, receipt `FTR-20261019-36979157-01`.
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -3740,7 +3744,7 @@ Serves to:
 **Claim links:** none
 **Working Model impact:** none yet
 **Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
+**Next action:** none — read; landing [[paper_registry_current#PAPER 405]]
 **Flags:** corpus placeholder / not yet screened
 **Note:** Title: Antineoplastic Nature of WWOX in Glioblastoma Is Mainly a Consequence of Reduced Cell Viability and Invasion
 
@@ -5602,11 +5606,12 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 27773744 / DOI 10.1016/j.jbior.2016.09.008
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-10-19 (`FTR-20261019-27773744-01`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 173
-**Status:** discovered
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 404]] by `BATCH_20261019_006` (`CC-20261019-SCIENTIST-B-W4-NEGATIVES-01`); reading `partial_fulltext_read`, receipt `FTR-20261019-27773744-01`.
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -5614,7 +5619,7 @@ Serves to:
 **Claim links:** none
 **Working Model impact:** none yet
 **Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
+**Next action:** none — read; landing [[paper_registry_current#PAPER 404]]
 **Flags:** corpus placeholder / not yet screened
 **Note:** Title: Fhit and Wwox loss-associated genome instability: A genome caretaker one-two punch
 
@@ -7517,7 +7522,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 26302329 / PMC4547717 / DOI 10.1371/journal.pone.0136356
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
+**Date processed:** 2026-10-19 (`FTR-20261019-26302329-02`, resume of `FTR-20261003-26302329-01`)
 **Date last touched:** 2026-04-18
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
@@ -7526,7 +7531,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 426]] by `BATCH_20261019_006` (`CC-20261019-SCIENTISTD-DEBT-02`); reading `complete_fulltext_read`, receipt `FTR-20261019-26302329-02`.
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Genotype/model tag:** unassigned in triage
 **Species:** human
@@ -7538,7 +7544,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Working Model impact:** none yet
 **Report mentions:** FASE 1 triage 221–400
 **Current status:** screened — C
-**Next action:** background-only; escalate only on convergence signal
+**Next action:** none — read; landing [[paper_registry_current#PAPER 426]]
 **Flags:** FASE 1 batch entry / no deep-dive yet
 **Note:** Title: Tumor Suppressor WWOX Contributes to the Elimination of Tumorigenic Cells in Drosophila melanogaster
 
@@ -8170,7 +8176,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 41141138 / PMC12552799 / DOI 10.7759/cureus.93160
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
+**Date processed:** 2026-10-20 (`FTR-20261020-41141138-01`)
 **Date last touched:** 2026-04-18
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
@@ -8179,7 +8185,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 413]] by `BATCH_20261019_006` (`CC-20261019-SCIENTIST-C-W4-01`); reading `partial_fulltext_read`, receipt `FTR-20261020-41141138-01`.
 **Primary pathway:** P6 — DDR / genome stability
 **Genotype/model tag:** unassigned in triage
 **Species:** human
@@ -8191,7 +8198,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Working Model impact:** none yet
 **Report mentions:** FASE 1 triage 221–400
 **Current status:** screened — C
-**Next action:** background-only; escalate only on convergence signal
+**Next action:** none — read; landing [[paper_registry_current#PAPER 413]]
 **Flags:** FASE 1 batch entry / no deep-dive yet
 **Note:** Title: Intertwined Relationship of WWOX and RUNX2 Proteins as a Biomarker for Predicting Response and Survival in Patients With Childhood Bone Cancer in North India: A Pilot Study
 
@@ -9094,7 +9101,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 22842668 / DOI 10.3892/or.2012.1940
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
+**Date processed:** 2026-10-20 (`FTR-20261020-22842668-01`)
 **Date last touched:** 2026-04-18
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
@@ -9103,7 +9110,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 415]] by `BATCH_20261019_006` (`CC-20261019-SCIENTIST-C-W4-01`); reading `partial_fulltext_read`, receipt `FTR-20261020-22842668-01`.
 **Primary pathway:** P6 — DDR / genome stability
 **Genotype/model tag:** unassigned in triage
 **Species:** not assessed in triage
@@ -9115,7 +9123,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Working Model impact:** none yet
 **Report mentions:** FASE 1 triage 221–400
 **Current status:** screened — C
-**Next action:** background-only; escalate only on convergence signal
+**Next action:** none — read; landing [[paper_registry_current#PAPER 415]]
 **Flags:** FASE 1 batch entry / no deep-dive yet
 **Note:** Title: Genetic alterations of WWOX in Wilms' tumor are involved in its carcinogenesis
 
@@ -17396,7 +17404,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Status:** processed
 **Status note:** record created by `CC-20261019-SCIENTISTD-H5-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `complete_fulltext_read`, never upgraded from its receipt.
 **Primary pathway:** none — comparator / adjacent source
-**Transferability:** T3
+**Transferability:** T4
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context
 **Claim links:** none
 **Working Model impact:** none
@@ -17421,7 +17429,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Status:** processed
 **Status note:** record created by `CC-20261019-SCIENTISTD-H5-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
 **Primary pathway:** none — comparator / adjacent source
-**Transferability:** T3
+**Transferability:** T4
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context
 **Claim links:** none
 **Working Model impact:** none
@@ -17446,7 +17454,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Status:** processed
 **Status note:** record created by `CC-20261019-SCIENTISTD-H5-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
 **Primary pathway:** none — comparator / adjacent source
-**Transferability:** T3
+**Transferability:** T4
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context
 **Claim links:** none
 **Working Model impact:** none
@@ -17471,7 +17479,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Status:** processed
 **Status note:** record created by `CC-20261019-SCIENTISTD-H5-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
 **Primary pathway:** none — comparator / adjacent source
-**Transferability:** T3
+**Transferability:** T4
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context
 **Claim links:** none
 **Working Model impact:** none
@@ -17496,7 +17504,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Status:** processed
 **Status note:** record created by `CC-20261019-SCIENTISTD-H5-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
 **Primary pathway:** none — comparator / adjacent source
-**Transferability:** T3
+**Transferability:** T4
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context
 **Claim links:** none
 **Working Model impact:** none
@@ -17521,7 +17529,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Status:** processed
 **Status note:** record created by `CC-20261019-SCIENTISTD-H5-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
 **Primary pathway:** none — comparator / adjacent source
-**Transferability:** T3
+**Transferability:** T4
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context
 **Claim links:** none
 **Working Model impact:** none
@@ -17546,7 +17554,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Status:** processed
 **Status note:** record created by `CC-20261019-SCIENTISTD-H5-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
 **Primary pathway:** none — comparator / adjacent source
-**Transferability:** T3
+**Transferability:** T4
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context
 **Claim links:** none
 **Working Model impact:** none
@@ -17646,7 +17654,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Status:** processed
 **Status note:** record created by `CC-20261019-SCIENTISTD-H5-REGISTRY-01` and authored by the batch integrator from the artefact's own front matter at `BATCH_20261019_003`; reading is `partial_fulltext_read`, never upgraded from its receipt.
 **Primary pathway:** none — comparator / adjacent source
-**Transferability:** T3
+**Transferability:** T4
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context
 **Claim links:** none
 **Working Model impact:** none
@@ -17894,7 +17902,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Status:** processed
 **Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
 **Primary pathway:** none — comparator / adjacent source
-**Transferability:** T3
+**Transferability:** T4
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context
 **Claim links:** none
 **Working Model impact:** none
@@ -17919,7 +17927,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Status:** processed
 **Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
 **Primary pathway:** none — comparator / adjacent source
-**Transferability:** T3
+**Transferability:** T4
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context
 **Claim links:** none
 **Working Model impact:** none
@@ -17944,7 +17952,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Status:** processed
 **Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `partial_fulltext_read`, never upgraded from its receipt.
 **Primary pathway:** none — comparator / adjacent source
-**Transferability:** T3
+**Transferability:** T4
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context
 **Claim links:** none
 **Working Model impact:** none
@@ -18219,7 +18227,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Status:** processed
 **Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
 **Primary pathway:** none — comparator / adjacent source
-**Transferability:** T3
+**Transferability:** T4
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context
 **Claim links:** none
 **Working Model impact:** none
@@ -18244,7 +18252,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Status:** processed
 **Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `partial_fulltext_read`, never upgraded from its receipt.
 **Primary pathway:** none — comparator / adjacent source
-**Transferability:** T3
+**Transferability:** T4
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context
 **Claim links:** none
 **Working Model impact:** none
@@ -18269,7 +18277,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Status:** processed
 **Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `partial_fulltext_read`, never upgraded from its receipt.
 **Primary pathway:** none — comparator / adjacent source
-**Transferability:** T3
+**Transferability:** T4
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context
 **Claim links:** none
 **Working Model impact:** none
@@ -18319,7 +18327,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Status:** processed
 **Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `partial_fulltext_read`, never upgraded from its receipt.
 **Primary pathway:** none — comparator / adjacent source
-**Transferability:** T3
+**Transferability:** T4
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context
 **Claim links:** none
 **Working Model impact:** none
@@ -18344,7 +18352,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Status:** processed
 **Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
 **Primary pathway:** none — comparator / adjacent source
-**Transferability:** T3
+**Transferability:** T4
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context
 **Claim links:** none
 **Working Model impact:** none
@@ -18394,7 +18402,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Status:** processed
 **Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
 **Primary pathway:** none — comparator / adjacent source
-**Transferability:** T3
+**Transferability:** T4
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context
 **Claim links:** none
 **Working Model impact:** none
@@ -18419,7 +18427,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Status:** processed
 **Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
 **Primary pathway:** none — comparator / adjacent source
-**Transferability:** T3
+**Transferability:** T4
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context
 **Claim links:** none
 **Working Model impact:** none
@@ -18444,7 +18452,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Status:** processed
 **Status note:** record created by `CC-20261019-SCIENTIST-A-PLASMA-02` and authored by the batch integrator at `BATCH_20261019_005`; reading is `complete_fulltext_read`, never upgraded from its receipt.
 **Primary pathway:** none — comparator / adjacent source
-**Transferability:** T3
+**Transferability:** T4
 **clinical relevance:** BACKGROUND — non-WWOX, class-level context
 **Claim links:** none
 **Working Model impact:** none
@@ -18580,3 +18588,478 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 
 ---
 
+
+## LIT-0680
+**Short title:** Kuo 2018 — tri-molecular time-lapse FRET method for WWOX signalling: n = 2 to 4 per trace, no statistics, ectopic expression
+**Authors:** Kuo HL, Ho PC, Huang SS, Chang NS
+**Year:** 2018
+**Source type:** primary research — live-cell FRET method, ectopic expression in non-neural lines
+**Journal/source:** *Cell Death Discov* 2018;4:45
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 29581896 / PMC5864757 / DOI 10.1038/s41420-018-0047-4
+**Date discovered:** 2026-10-19 (Scientist B, wave 4 group W1)
+**Date processed:** 2026-10-19 (`FTR-20261019-29581896-01`)
+**Discovery source:** wave 4 batch selection 2026-10-19 (group W1)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-W4-NEGATIVES-01` and authored by the batch integrator at `BATCH_20261019_006`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** WWOX phosphorylation / signalling relay
+**Transferability:** T3
+**clinical relevance:** LOW — background.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/wave4_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-29581896-01`; manifest `deepdive_manifests/PMID29581896.json`; landing [[paper_registry_current#PAPER 403]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0681
+**Short title:** Schatz 2026 — genetic diagnosis in epilepsy, a review: the WWOX 'trial of gene replacement' table line is unsourced
+**Authors:** Schatz KS, Lammert DB, Habela CW
+**Year:** 2026
+**Source type:** secondary — narrative review (epilepsy genetics), class level
+**Journal/source:** *Curr Neurol Neurosci Rep* 2026;26(1)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42720877 / PMC13562175 / DOI 10.1007/s11910-026-01514-1
+**Date discovered:** 2026-10-19 (Scientist B, wave 4 group W1)
+**Date processed:** 2026-10-19 (`FTR-20261019-42720877-01`)
+**Discovery source:** wave 4 batch selection 2026-10-19 (group W1)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-W4-NEGATIVES-01` and authored by the batch integrator at `BATCH_20261019_006`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — secondary source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/wave4_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-42720877-01`; manifest `deepdive_manifests/PMID42720877.json`; landing [[paper_registry_current#PAPER 406]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0682
+**Short title:** Pozhitnova 2026 — fragile sites of induced pluripotent stem cells: FRA16D is minor and line-specific in three lines; WWOX not recurrently rearranged
+**Authors:** Pozhitnova VO, Zheglo D, Kislova AV, Kiselev DS, Voronina ES
+**Year:** 2026
+**Source type:** primary research — three iPSC lines, fragile-site mapping
+**Journal/source:** *Cells* 2026;15(17)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42738851 / PMC13564719 / DOI 10.3390/cells15171557
+**Date discovered:** 2026-10-19 (Scientist B, wave 4 group W1)
+**Date processed:** 2026-10-19 (`FTR-20261019-42738851-01`)
+**Discovery source:** wave 4 batch selection 2026-10-19 (group W1)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-W4-NEGATIVES-01` and authored by the batch integrator at `BATCH_20261019_006`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** DNA-damage response / genome stability
+**Transferability:** T3
+**clinical relevance:** LOW — background.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/wave4_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-42738851-01`; manifest `deepdive_manifests/PMID42738851.json`; landing [[paper_registry_current#PAPER 407]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0683
+**Short title:** Delahanty 2026 — 4-phenylbutyrate with GAT-1 augmentation for SLC6A1 variants: rescue in cells, 4 mM reduces viability (substitute)
+**Authors:** Delahanty AJ, James K, Carter EG, Song ZD, Wang J, Bassette M, Kang JQ
+**Year:** 2026
+**Source type:** primary research — cell models of SLC6A1 variants, a trial-feedback statement
+**Journal/source:** *Genes (Basel)* 2026;17(8)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42650175 / PMC13512211 / DOI 10.3390/genes17080983
+**Date discovered:** 2026-10-19 (Scientist B, wave 4 group W1)
+**Date processed:** 2026-10-19 (`FTR-20261019-42650175-01`)
+**Discovery source:** wave 4 batch selection 2026-10-19 (group W1)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-W4-NEGATIVES-01` and authored by the batch integrator at `BATCH_20261019_006`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/wave4_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-42650175-01`; manifest `deepdive_manifests/PMID42650175.json`; landing [[paper_registry_current#PAPER 408]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0684
+**Short title:** Song 2026 — 4-phenylbutyrate rescue of GABRA1 variants in developmental and epileptic encephalopathy: raises wild-type and variant alike (substitute)
+**Authors:** Song ZD, Zavalin K, Shen W, DeLeeuw MB, Hunn GX, Eda RS, et al.
+**Year:** 2026
+**Source type:** primary research — cells, a mouse arm and one child
+**Journal/source:** *Cells* 2026;15(15)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42587736 / PMC13465587 / DOI 10.3390/cells15151327
+**Date discovered:** 2026-10-19 (Scientist B, wave 4 group W1)
+**Date processed:** 2026-10-19 (`FTR-20261019-42587736-01`)
+**Discovery source:** wave 4 batch selection 2026-10-19 (group W1)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-W4-NEGATIVES-01` and authored by the batch integrator at `BATCH_20261019_006`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/wave4_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-42587736-01`; manifest `deepdive_manifests/PMID42587736.json`; landing [[paper_registry_current#PAPER 409]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0685
+**Short title:** Samanta 2026 — ketogenic therapy by developmental and epileptic encephalopathy gene: WWOX absent; hypoglycemia at induction listed (substitute)
+**Authors:** Samanta D, Manbeck CP
+**Year:** 2026
+**Source type:** secondary — narrative review (ketogenic therapy by gene)
+**Journal/source:** *Front Pediatr* 2026;14:1958733
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42846717 / PMC13643383 / DOI 10.3389/fped.2026.1958733
+**Date discovered:** 2026-10-19 (Scientist B, wave 4 group W1)
+**Date processed:** 2026-10-19 (`FTR-20261019-42846717-01`)
+**Discovery source:** wave 4 batch selection 2026-10-19 (group W1)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-B-W4-NEGATIVES-01` and authored by the batch integrator at `BATCH_20261019_006`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/wave4_scientist-b.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261019-42846717-01`; manifest `deepdive_manifests/PMID42846717.json`; landing [[paper_registry_current#PAPER 410]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0686
+**Short title:** Chen 2015 — UV and cold shock switch apoptosis to bubbling cell death at low temperature (WWOX/WOX1, p53, TRAF2, NOS2): the only WWOX-direct temperature paper
+**Authors:** Chen SJ, Lin PW, Lin HP, Huang SS, Lai FJ, Sheu HM, et al.
+**Year:** 2015
+**Source type:** primary research — cultured cell lines and MEFs, one frostbite IHC pair
+**Journal/source:** *Oncotarget* 2015;6(10):8007-18
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 25779665 / PMC4480731 / DOI 10.18632/oncotarget.3153
+**Date discovered:** 2026-10-19 (Scientist C, wave 4 group W2)
+**Date processed:** 2026-10-20 (`FTR-20261020-25779665-01`)
+**Discovery source:** wave 4 batch selection 2026-10-19 (group W2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-W4-01` and authored by the batch integrator at `BATCH_20261019_006`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** cell death / stress response
+**Transferability:** T3
+**clinical relevance:** LOW — background.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/wave4_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261020-25779665-01`; manifest `deepdive_manifests/PMID25779665.json`; landing [[paper_registry_current#PAPER 411]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0687
+**Short title:** Friemel 2022 — single-cell ploidy in NASH-induced HCC and NAFLD/NASH (miFISH, WWOX probe): tumour genomics, with a count the text hides
+**Authors:** Friemel J, Torres I, Brauneis E, Thörner T, Schäffer AA, Gertz EM, et al.
+**Year:** 2022
+**Source type:** primary research — FFPE single-nucleus FISH, 11 HCC and 11 NAFLD/NASH specimens
+**Journal/source:** *Sci Rep* 2022;12(1):22622
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 36587184 / PMC9805444 / DOI 10.1038/s41598-022-27173-z
+**Date discovered:** 2026-10-19 (Scientist C, wave 4 group W2)
+**Date processed:** 2026-10-20 (`FTR-20261020-36587184-01`)
+**Discovery source:** wave 4 batch selection 2026-10-19 (group W2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-W4-01` and authored by the batch integrator at `BATCH_20261019_006`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** oncology / tumor genomics
+**Transferability:** T3
+**clinical relevance:** LOW — background.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/wave4_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261020-36587184-01`; manifest `deepdive_manifests/PMID36587184.json`; landing [[paper_registry_current#PAPER 412]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0688
+**Short title:** Rushing 2023 — NCI-60 multi-omics and alkylating-agent sensitivity: WWOX is a copy-number gene-list line, not a metabolic finding
+**Authors:** Rushing BR
+**Year:** 2023
+**Source type:** primary research — public NCI-60 multi-omics re-analysis
+**Journal/source:** *Int J Mol Sci* 2023;24(17)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 37686047 / PMC10487847 / DOI 10.3390/ijms241713242
+**Date discovered:** 2026-10-19 (Scientist C, wave 4 group W2)
+**Date processed:** 2026-10-20 (`FTR-20261020-37686047-01`)
+**Discovery source:** wave 4 batch selection 2026-10-19 (group W2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-W4-01` and authored by the batch integrator at `BATCH_20261019_006`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** oncology / drug sensitivity
+**Transferability:** T4
+**clinical relevance:** LOW — background.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/wave4_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261020-37686047-01`; manifest `deepdive_manifests/PMID37686047.json`; landing [[paper_registry_current#PAPER 414]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0689
+**Short title:** Mastrangelo 2018 — treatable inborn errors of metabolism causing epilepsy (narrative review; substitute)
+**Authors:** Mastrangelo M
+**Year:** 2018
+**Source type:** secondary — narrative review
+**Journal/source:** *J Pediatr Neurosci* 2018;13(1):13-23
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 29899766 / PMC5982487 / DOI 10.4103/JPN.JPN_160_16
+**Date discovered:** 2026-10-19 (Scientist C, wave 4 group W2)
+**Date processed:** 2026-10-20 (`FTR-20261020-29899766-01`)
+**Discovery source:** wave 4 batch selection 2026-10-19 (group W2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-W4-01` and authored by the batch integrator at `BATCH_20261019_006`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/wave4_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261020-29899766-01`; manifest `deepdive_manifests/PMID29899766.json`; landing [[paper_registry_current#PAPER 416]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0690
+**Short title:** Mastrangelo 2023 — epilepsy phenotypes of vitamin B6-dependent diseases, systematic review of 497 patients (substitute)
+**Authors:** Mastrangelo M, Gasparri V, Bernardi K, Foglietta S, Ramantani G, Pisani F
+**Year:** 2023
+**Source type:** secondary — systematic review of published cases
+**Journal/source:** *Children (Basel)* 2023;10(3)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 36980111 / PMC10047402 / DOI 10.3390/children10030553
+**Date discovered:** 2026-10-19 (Scientist C, wave 4 group W2)
+**Date processed:** 2026-10-20 (`FTR-20261020-36980111-01`)
+**Discovery source:** wave 4 batch selection 2026-10-19 (group W2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-W4-01` and authored by the batch integrator at `BATCH_20261019_006`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/wave4_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261020-36980111-01`; manifest `deepdive_manifests/PMID36980111.json`; landing [[paper_registry_current#PAPER 417]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0691
+**Short title:** Girgis 2024 — cerebral folate transport deficiency in two children (substitute): CSF 5-methyltetrahydrofolate not measured
+**Authors:** Girgis MY, Mahfouz E, Abdellatif A, Taha F, ElNaggar W
+**Year:** 2024
+**Source type:** primary research — two-case report
+**Journal/source:** *J Epilepsy Res* 2024;14(1):29-36
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 38978529 / PMC11227922 / DOI 10.14581/jer.24005
+**Date discovered:** 2026-10-19 (Scientist C, wave 4 group W2)
+**Date processed:** 2026-10-20 (`FTR-20261020-38978529-01`)
+**Discovery source:** wave 4 batch selection 2026-10-19 (group W2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTIST-C-W4-01` and authored by the batch integrator at `BATCH_20261019_006`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/wave4_scientist-c.md`
+**Next action:** none
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261020-38978529-01`; manifest `deepdive_manifests/PMID38978529.json`; landing [[paper_registry_current#PAPER 418]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0692
+**Short title:** Papadopoulou 2021 — cerebral folate deficiency in two siblings (FOLR1), ketogenic diet and early treatment (substitute)
+**Authors:** Papadopoulou MT, Dalpa E, Portokalas M, Katsanika I, Tirothoulaki K, Spilioti M, et al.
+**Year:** 2021
+**Source type:** primary research — two-sibling report
+**Journal/source:** *JIMD Rep* 2021;60(1):3-9
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 34258135 / PMC8260484 / DOI 10.1002/jmd2.12206
+**Date discovered:** 2026-10-19 (Scientist D, wave 4 group W2)
+**Date processed:** 2026-10-19 (`FTR-20261019-34258135-01`)
+**Discovery source:** wave 4 batch selection 2026-10-19 (group W2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-W4B-01` and authored by the batch integrator at `BATCH_20261019_006`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/wave4_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-34258135-01`; manifest `deepdive_manifests/PMID34258135.json`; landing [[paper_registry_current#PAPER 419]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0693
+**Short title:** Lai 2025 — biotinidase deficiency as a rare and treatable cause of generalised epilepsy, one patient (substitute)
+**Authors:** Lai S, Galan FN
+**Year:** 2025
+**Source type:** primary research — single-case clinical letter
+**Journal/source:** *Ann Child Neurol Soc* 2025;3(4):324-325
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42563882 / PMC13359203 / DOI 10.1002/cns3.70042
+**Date discovered:** 2026-10-19 (Scientist D, wave 4 group W2)
+**Date processed:** 2026-10-19 (`FTR-20261019-42563882-01`)
+**Discovery source:** wave 4 batch selection 2026-10-19 (group W2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-W4B-01` and authored by the batch integrator at `BATCH_20261019_006`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/wave4_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-42563882-01`; manifest `deepdive_manifests/PMID42563882.json`; landing [[paper_registry_current#PAPER 420]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0694
+**Short title:** Ribeiro-Constante 2026 — treating BCKD-kinase deficiency, a disorder of an overactive enzyme (review; substitute)
+**Authors:** Ribeiro-Constante J, Tangeraas T, García-Cazorla A
+**Year:** 2026
+**Source type:** secondary — narrative review (31 reported patients)
+**Journal/source:** *J Inherit Metab Dis* 2026;49(5):e70242
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42660645 / PMC13521751 / DOI 10.1002/jimd.70242
+**Date discovered:** 2026-10-19 (Scientist D, wave 4 group W2)
+**Date processed:** 2026-10-19 (`FTR-20261019-42660645-01`)
+**Discovery source:** wave 4 batch selection 2026-10-19 (group W2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-W4B-01` and authored by the batch integrator at `BATCH_20261019_006`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/wave4_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-42660645-01`; manifest `deepdive_manifests/PMID42660645.json`; landing [[paper_registry_current#PAPER 421]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0695
+**Short title:** Nassar 2024 — L-carnitine with the ketogenic diet in children, a randomised trial: no between-arm antral-length test (substitute)
+**Authors:** Nassar MF, Shata MO, Awadallah SM, Youssef MA, Ibrahim HE
+**Year:** 2024
+**Source type:** primary research — randomised trial, 30 children, unblinded
+**Journal/source:** *Sci Rep* 2024;14(1):28099
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39543202 / PMC11564695 / DOI 10.1038/s41598-024-78779-4
+**Date discovered:** 2026-10-19 (Scientist D, wave 4 group W2)
+**Date processed:** 2026-10-19 (`FTR-20261019-39543202-01`)
+**Discovery source:** wave 4 batch selection 2026-10-19 (group W2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-W4B-01` and authored by the batch integrator at `BATCH_20261019_006`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/wave4_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-39543202-01`; manifest `deepdive_manifests/PMID39543202.json`; landing [[paper_registry_current#PAPER 422]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0696
+**Short title:** Merlotti 2021 — energy metabolism, ketogenic diets and skeletal health, a narrative review (substitute)
+**Authors:** Merlotti D, Cosso R, Eller-Vainicher C, Vescini F, Chiodini I, Gennari L, Falchetti A
+**Year:** 2021
+**Source type:** secondary — narrative review
+**Journal/source:** *Int J Mol Sci* 2021;22(1)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 33406758 / PMC7796307 / DOI 10.3390/ijms22010435
+**Date discovered:** 2026-10-19 (Scientist D, wave 4 group W2)
+**Date processed:** 2026-10-19 (`FTR-20261019-33406758-01`)
+**Discovery source:** wave 4 batch selection 2026-10-19 (group W2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-W4B-01` and authored by the batch integrator at `BATCH_20261019_006`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/wave4_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-33406758-01`; manifest `deepdive_manifests/PMID33406758.json`; landing [[paper_registry_current#PAPER 423]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0697
+**Short title:** Nobrega 2022 — cerebrotendinous xanthomatosis, a practice review (bile-acid axis; substitute)
+**Authors:** Nóbrega PR, Bernardes AM, Ribeiro RM, Vasconcelos SC, Araújo DABS, Gama VCV, et al.
+**Year:** 2022
+**Source type:** secondary — practice review
+**Journal/source:** *Front Neurol* 2022;13:1049850
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 36619921 / PMC9816572 / DOI 10.3389/fneur.2022.1049850
+**Date discovered:** 2026-10-19 (Scientist D, wave 4 group W2)
+**Date processed:** 2026-10-19 (`FTR-20261019-36619921-01`)
+**Discovery source:** wave 4 batch selection 2026-10-19 (group W2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-W4B-01` and authored by the batch integrator at `BATCH_20261019_006`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none — comparator / adjacent source
+**Transferability:** T4
+**clinical relevance:** BACKGROUND — non-WWOX, class-level context; not WWOX evidence.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/wave4_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-36619921-01`; manifest `deepdive_manifests/PMID36619921.json`; landing [[paper_registry_current#PAPER 424]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0698
+**Short title:** Agarwala 2023 — early-infantile developmental and epileptic encephalopathy, aetiologies and outcomes: three WWOX rows of 80, a WWOX-direct clinical series for those rows only
+**Authors:** Agarwala P, Narang B, Geetha TS, Kurwale N, Samson PL, Golani T, et al.
+**Year:** 2023
+**Source type:** primary research — prospective single-centre observational cohort (80 children)
+**Journal/source:** *Brain Commun* 2023;5(5):fcad243
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 38074073 / PMC10702464 / DOI 10.1093/braincomms/fcad243
+**Date discovered:** 2026-10-19 (Scientist D, wave 4 group W2)
+**Date processed:** 2026-10-19 (`FTR-20261019-38074073-01`)
+**Discovery source:** wave 4 batch selection 2026-10-19 (group W2)
+**Status:** processed
+**Status note:** record created by `CC-20261019-SCIENTISTD-W4B-01` and authored by the batch integrator at `BATCH_20261019_006`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** clinical genetics / DEE aetiology
+**Transferability:** T2
+**clinical relevance:** LOW — case-row presence only; no WWOX-specific outcome.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/wave4_scientist-d.md`
+**Next action:** none
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261019-38074073-01`; manifest `deepdive_manifests/PMID38074073.json`; landing [[paper_registry_current#PAPER 425]]
+**Note:** class-level record. Not medical advice.
+
+---

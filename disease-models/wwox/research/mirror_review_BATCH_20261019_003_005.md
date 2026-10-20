@@ -89,7 +89,7 @@ Substitute labels: every new record that is not WWOX-direct carries "NOT WWOX EV
 - Individual linkage to the reference genotype: none. Reference-genotype variant names occur only in the standard "no datum transfers to ..." transferability sentence.
 - Parent-side wording: the added lines contain parent terms only for third-party published patients (a COL4A2 series, a published WWOX child, a published adult case). No pairing for the reference genotype; the gate passes.
 
-**M8 — FINDING (report accuracy, low).** The 005 report states "No parent-side term is paired with a variant anywhere in the new text". That is true of the registry records and false of the files the batch rests on: a dossier says a COL4A2 variant was inherited from a mother without epilepsy, the Scientist A wave file repeats it ("maternal, mother without epilepsy"), and a WWOX dossier still records "both parents heterozygous" for a published child after the earlier repair of the CACNA1A sentence. None is the reference genotype's, none is blocked, but the gate's own wording is "read it before publishing". Soften the report to "in the registry records", and either strip the maternal wording from the wave file and the COL4A2 dossier or record that they are third-party facts retained on purpose.
+**M8 — FINDING (report accuracy, low).** The 005 report states "No parent-side term is paired with a variant anywhere in the new text". That is true of the registry records and false of the files the batch rests on: a dossier gives the transmission of a COL4A2 variant in a published family, the Scientist A wave file repeats it, and a WWOX dossier still records the carrier status of the relatives of a published child after the earlier repair of the CACNA1A sentence. None is the reference genotype's, none is blocked, but the gate's own wording is "read it before publishing". Soften the report to "in the registry records", and either strip the transmission wording from the wave file and the COL4A2 dossier or record that they are third-party facts retained on purpose.
 
 Also low: the PAPER 015 `Evidence depth` line still reads "full text reviewed (PMC open access)", a declaration; the receipt-backed depth (complete) lives only in the new wave note. Add the receipt to the depth line.
 
@@ -115,5 +115,5 @@ Measured: the papers registry was 1,214,458 bytes at the base, 1,321,413 after 0
 5. M5: define T3 and T4 in one sentence or stop grading class-level substitutes; re-grade Shin, Hong and batch 004 consistently.
 6. M6: reword the CLAIM 028 "opposite sign" phrase to title-level and non-commensurate readouts.
 7. M7: add "by term query" to PAPER 387.
-8. M8: soften the 005 report sentence; resolve the third-party maternal and paternal wording; add the receipt to the PAPER 015 depth line.
+8. M8: soften the 005 report sentence; resolve the third-party transmission wording; add the receipt to the PAPER 015 depth line.
 9. M9: put the sharding question to the operator now, with the byte counts above.

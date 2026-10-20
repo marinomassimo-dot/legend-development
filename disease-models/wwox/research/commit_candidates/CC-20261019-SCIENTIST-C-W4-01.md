@@ -45,3 +45,18 @@ The Orchestrator owns numbering; placeholder ids `PAPER W01`-`W08` and no `LIT` 
 2. **Count WWOX loss properly in the NASH-HCC series (Friemel):** request or re-derive per-case loss percentages at a stated threshold; falsifier: case 1 below the threshold used for cases 2, 3, 7, 8.
 3. **Temperature as an in vivo variable in Wwox-null pups (Chen 2015 with Chou 2020):** core temperature against body weight in weight-matched controls; falsifier: equal temperature at equal weight.
 4. **Normalised redox and amino-acid panel in a WWOX-deficient neural line:** carried from the earlier HELD-PARTIAL candidate; nothing here changes it.
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_006` · 2026-10-20 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.24 -> WM_v7.25 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** run by the Scientist (six triples, six SUPPORTED); not rerun by the integrator (no baseline claim is narrowed).
+**What landed:** eight `PAPER` records (`PAPER 411` to `PAPER 418`, the placeholders `W01`-`W08` renumbered; two promote corpus placeholders kept as history) with new `LIT` records for the six papers that had none and the promoted `LIT-0289` and `LIT-0316`; leads 1 to 3 of section 5 as `DL-MECH-163` to `DL-MECH-165` (lead 4 is carried from an earlier candidate and is not re-appended). The eight receipts are in the ledger.
+**Parked:** section 3 (axis statements with no registry target and no op text: they are carried by the records themselves; `CLAIM 025` and `RL-003` unchanged as the candidate says); section 4 reading debts stay recorded in the manifests.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.

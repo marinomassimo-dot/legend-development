@@ -56,3 +56,18 @@ No parked papers: all eight were read from lawful open text (seven Europe PMC JA
 
 ### LOCATOR TRIPLES FOR BLIND AUDIT
 Thirty load-bearing triples across the eight papers were audited blind by a separate agent: 24 SUPPORTED, 2 SUPPORTED with a note, 4 OVERSHOOT (three minor); all narrowings applied before commit; table in `wave4_scientist-d.md`, section "Blind audit".
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_006` · 2026-10-20 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.24 -> WM_v7.25 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** run by the Scientist (thirty triples; 24 SUPPORTED, 2 SUPPORTED with a note, 4 OVERSHOOT narrowed before landing); not rerun by the integrator.
+**What landed:** seven `PAPER` records (`PAPER 419` to `PAPER 425`, the placeholders `W02`-`W08` renumbered; `W01` is scientist-c's `PAPER 418`, whose receipt is scientist-c's and whose duplicate reading was withdrawn) with seven new `LIT` records; Agarwala 2023 registered as `PAPER 425`, a WWOX-direct clinical series for its three WWOX case rows only, with the limits stated (no WWOX-specific outcome, referral-biased, not an incidence); `FT-201` queued for the infantile-spasms cohort; leads 1 to 4 as `DL-MECH-166` to `DL-MECH-169`. The seven receipts are in the ledger.
+**Parked:** the three WWOX case rows are NOT entered into a genotype-phenotype corpus (no WWOX-specific outcome; the shared earlier-cohort citation needs `FT-201` first); the earlier WOREE cohort row is already read.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.
