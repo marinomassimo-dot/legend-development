@@ -126,12 +126,13 @@
    "steps": [
     {
      "step": "BATCH_20261019_007: Mirror follow-ups A1-A5 and harness-doc B2-B4",
-     "status": "IN_PROGRESS",
-     "evidence": "integrator agent running, WM_v7.26"
+     "status": "DONE",
+     "evidence": "batch 007 12ce3d0f; self-eval 2026-10-20_ORCH-METABOLIC-BATCH-20261019.md; battery on 6c20ab3e PASS WITH SKIPS (145 targets, 0 red); safe_push PUBLISHED sha=6c20ab3e gate=PASS verified=ls-remote"
     },
     {
      "step": "Orchestrator self-evaluation, capability scout, takeaways; final push of batch 007; hand operator the PDF wishlist and the registry-scale decision",
-     "status": "TODO"
+     "status": "DONE",
+     "evidence": "batch 007 12ce3d0f; self-eval 2026-10-20_ORCH-METABOLIC-BATCH-20261019.md; battery on 6c20ab3e PASS WITH SKIPS (145 targets, 0 red); safe_push PUBLISHED sha=6c20ab3e gate=PASS verified=ls-remote"
     }
    ]
   }
@@ -158,5 +159,10 @@
    "why_safe": "ledger file identical to HEAD, verify OK after",
    "different_if": "none"
   }
+ ],
+ "REFERRED_TO_OPERATOR": [
+  "papers registry sharding/event-store decision (1.54 MB, +25 percent re-raise point passed; a third deferral refused)",
+  "PDF wishlist (closing report)",
+  "review SUPERSEDED_ARTIFACTS harness decision (ceiling 15 to 9 by reclassification)"
  ]
 }
