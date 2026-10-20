@@ -29,7 +29,7 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "CLAIMED",
+ "CURRENT_STATE": "COMPLETED",
  "assigned_on": "2026-10-19",
  "TASK_ACK": {
   "TASK_ID": "HELD-PARTIAL-WWOX-C-20261019",
@@ -49,6 +49,36 @@
   "durable_pointer": "ledger/tasks/scientist-c/HELD-PARTIAL-WWOX-C-20261019.json on branch task/HELD-PARTIAL-WWOX-C-20261019, worktree .claude/worktrees/held-c",
   "lot": "WWOX-direct partial receipts with a figure, supplementary or table debt: 35328751, 37897534, 38542478, 33195192, 42589397, 40875931, 36537114, 35460704, 33612478, 31543760, 24308844, 33958783 (max 12); references-only debts skipped"
  },
- "DEFAULTS_TAKEN": [],
- "STOP_LOG": []
+ "DEFAULTS_TAKEN": [
+  "Shared derived surfaces were stale on every commit; committed under LEGEND_STALE_SURFACES_BECAUSE (dispatch brief: they belong to the Orchestrator).",
+  "Selection-file HELD rows were stale in part; the lot was rebuilt from a ledger census across all contemporaneous receipts plus staged receipts, and four papers already re-read in this batch by this actor (26355344, 27551439, 35984507, 41677633), references-only debts (25649963) and no-debt rows (33914858) were excluded.",
+  "Main figures and supplements missing from disk were acquired from the PMC OA open-data bucket and the PMC content-delivery blob addresses (no User-Agent); the PMC landing page then served a reCAPTCHA and was not bypassed.",
+  "Receipts coverage other than the re-read sections is carried from the prior event and said so in evidence_basis; supplementary coverage understated where not all figures were rendered.",
+  "Receipt trial against the root ledger refused (anchor moved by the Orchestrator's batch); validated with validate_receipt per receipt instead, and one receipt by trial-record in a scratch ledger copy earlier.",
+  "Gao 2025 and Chong 2023 parked after the lawful cascade; no paywall circumvention.",
+  "Cross-paper G6PD/NFE2L2 observation kept at co-occurrence (direction unknown) in the commit candidate, not as a lead with a sign.",
+  "Staged discovery leads in the commit candidate instead of appending to the shared discovery ledger."
+ ],
+ "STOP_LOG": [],
+ "WAVE_1_RESULT": {
+  "papers_read": 10,
+  "papers_parked": 2,
+  "manifests_pass": 10,
+  "staged_receipts": "disease-models/wwox/research/receipt_staging/scientist-c/ (FTR-20261019-35328751-04, -37897534-03, -38542478-02, -33195192-03, -42589397-05, -35460704-03, -33612478-02, -31543760-05, -33958783-02, -24308844-03)",
+  "commit_candidate": "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-HELD-01.md",
+  "analysis_note": "disease-models/wwox/research/held_wave_20261019_scientist-c.md",
+  "self_eval": "disease-models/wwox/research/session_evaluations/2026-10-19_held-c.md",
+  "micro_upgrade": "framework/scripts/owed_sections.py with test_owed_sections.py, routed in framework/scripts/README.md",
+  "DEFAULTS_TAKEN": [
+   "Shared derived surfaces were stale on every commit; committed under LEGEND_STALE_SURFACES_BECAUSE (dispatch brief: they belong to the Orchestrator).",
+   "Selection-file HELD rows were stale in part; the lot was rebuilt from a ledger census across all contemporaneous receipts plus staged receipts, and four papers already re-read in this batch by this actor (26355344, 27551439, 35984507, 41677633), references-only debts (25649963) and no-debt rows (33914858) were excluded.",
+   "Main figures and supplements missing from disk were acquired from the PMC OA open-data bucket and the PMC content-delivery blob addresses (no User-Agent); the PMC landing page then served a reCAPTCHA and was not bypassed.",
+   "Receipts coverage other than the re-read sections is carried from the prior event and said so in evidence_basis; supplementary coverage understated where not all figures were rendered.",
+   "Receipt trial against the root ledger refused (anchor moved by the Orchestrator's batch); validated with validate_receipt per receipt instead, and one receipt by trial-record in a scratch ledger copy earlier.",
+   "Gao 2025 and Chong 2023 parked after the lawful cascade; no paywall circumvention.",
+   "Cross-paper G6PD/NFE2L2 observation kept at co-occurrence (direction unknown) in the commit candidate, not as a lead with a sign.",
+   "Staged discovery leads in the commit candidate instead of appending to the shared discovery ledger."
+  ],
+  "STOP_LOG": []
+ }
 }
