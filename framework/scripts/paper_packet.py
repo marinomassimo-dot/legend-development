@@ -19,6 +19,10 @@ Two subcommands, one file, no new state:
               real pixel size measured by two instruments, whether a better surface for THIS
               paper exists unused, which routes were already tried, and which page-adjudication
               crops are already on disk. It classifies nothing as marginal.
+    claim   — say "I am reading this PMID now" in the repository's common git directory, which
+              every worktree sees; `packet` lists claims and every other worktree's in-flight
+              manifest or staged receipt for the PMID. A marker, never a lock (N5, 2026-10-20).
+              Exit 1 when someone else is already on it.
     check   — run the checks that apply to that PMID's actual surfaces, in one call, and print
               one line per check. Full output goes to a file under `files/` (gitignored) and is
               read only when a check has something to say.
@@ -308,6 +312,87 @@ def applicable_checks(rows: list[dict[str, Any]], identity_row: dict[str, Any],
     return checks
 
 
+CLAIMS_DIR = "legend-reading-claims"
+
+
+def _git_out(cwd: Path, *args: str) -> str:
+    done = subprocess.run(["git", "-C", str(cwd), *args], capture_output=True, text=True)
+    return done.stdout if done.returncode == 0 else ""
+
+
+def claims_dir(root: Path) -> Path | None:
+    common = _git_out(root, "rev-parse", "--path-format=absolute", "--git-common-dir").strip()
+    return Path(common) / CLAIMS_DIR if common else None
+
+
+def claim(root: Path, pmid: str, actor: str, note: str = "") -> Path:
+    """Say "I am reading this PMID now", where every worktree of the repository sees it.
+
+    N5 (metabolic batch 2026-10-19): two Scientists read the same paper twice, and both
+    duplicates were found only at landing; one actor had checked its peers' staging
+    directories, and the peer staged afterwards. The marker is a file in the COMMON git
+    directory — shared by every worktree, never committed, never a lock: nothing refuses on
+    it, and `packet` shows it to the next reader of the same PMID. A stale marker costs one
+    line of reading; a missing one cost an hour of duplicated reading.
+    """
+    directory = claims_dir(root)
+    if directory is None:
+        raise ValueError(f"{root} is not inside a git repository")
+    target = directory / pmid / actor
+    target.parent.mkdir(parents=True, exist_ok=True)
+    stamp = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+    target.write_text(json.dumps({"actor": actor, "pmid": pmid, "claimed_at": stamp,
+                                  "worktree": str(root), "note": note}) + "\n",
+                      encoding="utf-8")
+    return target
+
+
+def peer_work(root: Path, disease: str, pmid: str) -> list[dict[str, str]]:
+    """Every other worktree's in-flight work on this PMID, plus the claim markers.
+
+    In flight = a work manifest or a staged receipt for this PMID that is uncommitted in a
+    worktree, or committed on its branch and not yet on main. Paths and states only: no
+    content is read, so nothing crosses the packet's firewall.
+    """
+    rows: list[dict[str, str]] = []
+    directory = claims_dir(root)
+    if directory is not None and (directory / pmid).is_dir():
+        for marker in sorted((directory / pmid).iterdir()):
+            try:
+                data = json.loads(marker.read_text(encoding="utf-8"))
+            except (OSError, ValueError):
+                data = {}
+            rows.append({"kind": "claim", "actor": marker.name,
+                         "at": str(data.get("claimed_at", "")),
+                         "where": str(data.get("worktree", "")),
+                         "note": str(data.get("note", ""))})
+    patterns = [f"disease-models/{disease}/research/deepdive_manifests/PMID{pmid}.json",
+                f"disease-models/{disease}/research/receipt_staging/*/*-{pmid}-*.json"]
+    here = root.resolve()
+    current = None
+    for line in _git_out(root, "worktree", "list", "--porcelain").splitlines() + [""]:
+        if line.startswith("worktree "):
+            current = {"path": line[9:], "branch": ""}
+        elif line.startswith("branch ") and current is not None:
+            current["branch"] = line[7:].removeprefix("refs/heads/")
+        elif not line and current is not None:
+            path = Path(current["path"])
+            if path.resolve() != here and path.is_dir():
+                pathspec = ["--", *[f":(glob){p}" for p in patterns]]
+                for entry in _git_out(path, "status", "--porcelain", "--untracked-files=all",
+                                      *pathspec).splitlines():
+                    rows.append({"kind": "uncommitted", "actor": "", "at": "",
+                                 "where": f"{path} [{current['branch'] or 'detached'}]",
+                                 "note": entry[3:]})
+                if current["branch"] and current["branch"] != "main":
+                    for name in sorted(set(_git_out(path, "log", "main..HEAD", "--name-only",
+                                                    "--format=", *pathspec).split())):
+                        rows.append({"kind": "on branch, not on main", "actor": "", "at": "",
+                                     "where": f"{path} [{current['branch']}]", "note": name})
+            current = None
+    return rows
+
+
 def build(root: Path, disease: str, pmid: str) -> dict[str, Any]:
     manifest = load_manifest(root, disease, pmid)
     identity_row = identity(root, disease, pmid, manifest)
@@ -323,6 +408,7 @@ def build(root: Path, disease: str, pmid: str) -> dict[str, Any]:
         "acquisition_history": acquisition_history(root, disease, pmid),
         "applicable_checks": applicable_checks(rows, identity_row, manifest),
         "technical_facts": technical_facts(root, disease, pmid, manifest, rows),
+        "peer_work": peer_work(root, disease, pmid),
         "excludes": list(FORBIDDEN_SOURCES),
         # 🔴 WHICH TREE THIS PACKET DESCRIBES. Every other field here is a fact about a file at
         # a moment; without the commit, a packet read in a transcript tomorrow cannot be tied to
@@ -367,6 +453,16 @@ def render(packet: dict[str, Any]) -> str:
                  f"· chain={prior['chain']}")
     if prior["uncovered"]:
         lines.append(f"      sections a resumed reading owes: {', '.join(prior['uncovered'])}")
+    peers = packet.get("peer_work") or []
+    if peers:
+        lines.append(f"  PEER WORK  : {len(peers)} sign(s) that someone else is on this paper "
+                     "— look before reading it twice")
+        for row in peers[:8]:
+            lines.append(f"      {row['kind']} · {row['actor'] or '-'} {row['at']} · "
+                         f"{row['note'] or ''} · {row['where']}")
+    else:
+        lines.append(f"  peer work  : none in flight (claim it: `paper_packet.py claim --pmid "
+                     f"{packet['pmid']} --actor <ACTOR_ID>`)")
     history = packet["acquisition_history"]
     if history:
         lines.append(f"  acquisition: {len(history)} route(s) already recorded")
@@ -1044,7 +1140,10 @@ def render_checks(report: dict[str, Any]) -> str:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("action", choices=("packet", "check", "procedures", "surfaces"))
+    parser.add_argument("action", choices=("packet", "check", "procedures", "surfaces",
+                                           "claim"))
+    parser.add_argument("--actor", default="", help="claim only: your ACTOR_ID")
+    parser.add_argument("--note", default="", help="claim only: one line, e.g. the task id")
     parser.add_argument("--pmid", required=True)
     parser.add_argument("--root", default=str(ROOT))
     parser.add_argument("--disease", default="wwox")
@@ -1061,6 +1160,16 @@ def main(argv: list[str] | None = None) -> int:
     if not re.fullmatch(r"\d{6,9}", args.pmid):
         parser.error("--pmid must be a PubMed identifier")
     root = Path(args.root).resolve()
+
+    if args.action == "claim":
+        if not re.fullmatch(r"[a-z0-9-]+", args.actor):
+            parser.error("claim needs --actor <ACTOR_ID>")
+        others = [row for row in peer_work(root, args.disease, args.pmid)
+                  if row["actor"] != args.actor]
+        print(f"CLAIMED {args.pmid} for {args.actor}: {claim(root, args.pmid, args.actor, args.note)}")
+        for row in others:
+            print(f"  ALSO: {row['kind']} · {row['actor'] or '-'} · {row['note']} · {row['where']}")
+        return 1 if others else 0
 
     if args.action == "packet":
         packet = build(root, args.disease, args.pmid)

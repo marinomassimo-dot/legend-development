@@ -61,6 +61,15 @@ Run tiers **in order**. **Stop as soon as you have a validated full text** — a
 - If a **PMCID** exists, the PDF is usually directly downloadable. **Prefer `https://europepmc.org/articles/<PMCID>?pdf=render`** — in testing this worked for nearly all OA PMCIDs. The `https://www.ncbi.nlm.nih.gov/pmc/articles/<PMCID>/pdf/` URL often returns a tiny (~1–2 KB) HTML interstitial instead of the PDF, so use it only as a fallback.
 - If a PMCID exists but the `?pdf=render` blob comes back empty/tiny (happens for a few, and for most bioRxiv-in-PMC items), fetch the **full-text XML** instead: `https://www.ebi.ac.uk/europepmc/webservices/rest/<PMCID>/fullTextXML` — if it has a `<body>`, that's the complete article (save as HTML full text).
 
+- **Measured PMC routes (metabolic batch, 2026-10-19/20 — `capability_scout_log.md`).**
+  - PMC pages and `cdn.ncbi.nlm.nih.gov/pmc/blobs/…` figure files serve a reCAPTCHA to a browser-like User-Agent and the file to an **empty** one: `curl -sSL -A "" <url>`. E-utilities: the same.
+  - `python3 framework/scripts/pmc_bucket_fetch.py --pmid <PMID> --tag <AuthorYear> --root <shared checkout>` fetches efetch XML, figures, supplements and the article PDF from the PMC open-data bucket with SHA-256 per file, never overwrites, and exits 2 on a **restricted stub** (efetch can return a ~7.6 kB XML without a body).
+  - PMC page restricted or challenged → the Internet Archive capture of the PMC page, `https://web.archive.org/web/2025id_/https://pmc.ncbi.nlm.nih.gov/articles/<PMCID>/`, with figures fetched from the `cdn.ncbi.nlm.nih.gov/pmc/blobs/` URLs it names (empty User-Agent). Worked five times; recent deposits may have no capture, and Wayback-wrapped figure URLs 404.
+  - Europe PMC `fullTextXML` and `supplementaryFiles` (ZIP) also answer an empty User-Agent.
+  - 🔴 **A deposit can serve another article's supplement** (Tsai 2013: the PMC "supplement" was a leukaemia kinase-inhibitor paper's). Check each supplement's title; take the right one from the article page on the publisher's own site (e.g. a `media.springernature.com` ESM URL).
+  - 🔴 **Figure file numbers are not figure numbers** (3 of 8 deposits in one wave: `g002` was Figure 1; a caption sat over another figure's image). Pair captions to images from the XML (`framework/scripts/figure_legend_pairs.py`) and open every image.
+  - TIFF figures: ImageMagick `convert` crashed ("double free"); render with PyMuPDF, `fitz.open(tif)[0].get_pixmap().save(png)`. WebP: `convert x.webp x.png`. Video supplements need a decoder — see `tool_preflight.py` (`ffmpeg`).
+
 ### Tier 1 — Unpaywall (best single OA aggregator; needs DOI)
 ```bash
 curl -sL --max-time 25 "https://api.unpaywall.org/v2/<DOI>?email=your-email@example.com"
@@ -120,6 +129,7 @@ These index author manuscripts deposited in institutional/subject repositories �
 - Otherwise `WebFetch` the DOI landing page (`https://doi.org/<DOI>`) and extract any direct PDF link, especially the HTML `<meta name="citation_pdf_url">` tag and obvious `.../pdf` / `?type=printable` / `/doi/full/` links.
 - If OpenAlex/Unpaywall flagged the work `is_oa` (gold/bronze/hybrid) but no PDF downloaded, the **publisher HTML body is usually free to read** — capture it as HTML full text (see "HTML full text is acceptable"). Note: some publishers (Wiley, Elsevier/ScienceDirect) bot-block `curl` *and* `WebFetch` (HTTP 402/403) even for bronze-OA articles.
 - **Configured tools for these blocked cases:** (a) the **`playwright` browser MCP** (installed at user scope) drives a real headless Chromium — use it to open the publisher page and capture full text / trigger the PDF download when `curl`/`WebFetch` get 402/403. (b) For **Wiley journals specifically**, the **Scholar Gateway** connector (Wiley's MCP, free researcher trial) returns Wiley full text directly — prefer it for any Wiley DOI (`10.1002/...`, `10.1111/...`). If neither resolves it, record `OA-but-bot-blocked` with the URL for a manual browser click.
+- **Measured bot challenges (2026-10-19/20), operator-browser routes, not retried:** ScienceDirect, AACR, JBC, MDPI and BioMed Central counter URLs; OUP PDFs behind Cloudflare (403). Record `OA-but-bot-blocked`, name the URL, and take the next paper; a browser-capable tier is an operator-side capability.
 
 ### Tier 9 — Open web search (any publicly posted copy)
 Last automated tier — catches copies posted anywhere (author homepages, lab sites, university repositories, conference mirrors, preprint echoes) that no structured index lists.

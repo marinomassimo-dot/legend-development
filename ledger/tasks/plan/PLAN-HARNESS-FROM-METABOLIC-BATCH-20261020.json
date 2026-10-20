@@ -1,5 +1,5 @@
 {
- "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
  "_note": "Operator directive 2026-10-20: give Harness Engineering a harness task scoped to the real needs that emerged in the metabolic batch (ORCH-METABOLIC-BATCH-20261019). Assigned by the Orchestrator.",
  "TASK_ID": "PLAN-HARNESS-FROM-METABOLIC-BATCH-20261020",
  "DIRECTIVE_VERSION": 1,
@@ -57,7 +57,7 @@
    "id": "N7",
    "need": "Figure numbering and caption-image pairing wrong in 3 of 8 deposits; blind locator audits run voluntarily caught proposition overshoots that passed every gate",
    "evidence": "scientist-d and scientist-b wave-4 reports; ATTRIBUTION_CENSUS blocks",
-   "shape": "cheap helpers (figure_legend_pairs; a triple sampler for a blind audit) \u2014 tools, not gates"
+   "shape": "cheap helpers (figure_legend_pairs; a triple sampler for a blind audit) — tools, not gates"
   },
   {
    "id": "N8",
@@ -97,6 +97,151 @@
   "release battery green on a fresh clone of the landed SHA",
   "DEFAULTS_TAKEN, DECISIONS_TAKEN, STOP_LOG in this record"
  ],
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-20"
+ "CURRENT_STATE": "COMPLETED",
+ "assigned_on": "2026-10-20",
+ "TASK_ACK": {
+  "state": "ACCEPTED",
+  "accepted_on": "2026-10-20",
+  "identity_basis": "ACTOR_ID plan assigned by the Orchestrator on the operator's instruction of 2026-10-20 (dispatch message); not inferred from a directory",
+  "interaction_mode": "AUTONOMOUS_COMPLETE",
+  "review_requirement": "none as a precondition (LEGEND_CORE 21e GATES); Mirror reviews ex post",
+  "scope_limit": "harness only: framework/scripts, framework/protocols, .claude/skills, scripts/, this record; the four scientific current files are not edited"
+ },
+ "TASK_CLAIM": {
+  "claimed_by": "plan",
+  "claimed_on": "2026-10-20",
+  "timestamp_precision": "date only",
+  "branch": "task/plan-harness-metabolic",
+  "worktree": ".claude/worktrees/plan-harness",
+  "uniqueness": "no competing claim exists for this TASK_ID + GENERATION"
+ },
+ "NEED_RESULTS": {
+  "N1": {
+   "result": "DONE",
+   "commit": "a174022e",
+   "what": "fulltext_receipts.py: default --manifest follows the ledger, not the cwd; a scratch ledger has no default manifest; pairing a non-sink ledger with a repository state manifest is refused by append_receipt, write_rechained_ledger and anchor; record --dry-run runs every check and writes nothing"
+  },
+  "N2": {
+   "result": "DONE",
+   "commit": "5994170a",
+   "what": "discovery_lead.py check | stage (research/lead_staging/<actor>/) | append --staged --apply on main (numbers assigned at append, all-or-none, idempotent); routed; legend-discovery skill points to it"
+  },
+  "N3": {
+   "result": "DONE",
+   "commits": [
+    "8f639b10",
+    "5a17f3c4"
+   ],
+   "what": "task_close.py lands a STALE-only merge result and regenerates + commits the surfaces alone on main (exit 3 if regeneration fails, landing stands); legend_commit.sh off main records the deferral, on main commits then regenerates; candidate_tree_freshness.py --regenerate is the one command; sealed DisMech sidecar never auto-regenerated; CHECK_ERROR still refuses"
+  },
+  "N4": {
+   "result": "DONE",
+   "commit": "b2b98e36",
+   "what": "standing brief v3: parallel-wave lessons merged (worktree, per-actor scratch, owed_sections, peer check + claim, NCBI limit, stage vs record, derived surfaces on main, record hygiene); brief 21,008 -> 12,941 bytes"
+  },
+  "N5": {
+   "result": "DONE",
+   "commit": "dc91170a",
+   "what": "paper_packet.py packet lists every other worktree's in-flight manifest/staged receipt for the PMID and every reading claim; paper_packet.py claim writes a marker in the common git dir (never a lock; exit 1 when someone else is on it)"
+  },
+  "N6": {
+   "result": "DONE",
+   "commit": "ab76cf87",
+   "what": "find-fulltext Tier 0 carries the measured PMC routes (empty UA, pmc_bucket_fetch, archived PMC page + blobs, Europe PMC, wrong-article supplement, figure numbering, TIFF/WebP render); Tier 8 lists the bot-challenged publishers as operator-browser routes; tool_preflight has an ffmpeg line with the zero-spend imageio-ffmpeg route"
+  },
+  "N7": {
+   "result": "DONE",
+   "commit": "ab76cf87",
+   "what": "figure_legend_pairs.py (caption-to-file pairing from JATS XML, NUMBER_DIFFERS / MISSING_FILE / SHARED_GRAPHIC flags); locator_audit.py --pmid P --triples N prints the blind audit packet (reproducible sample, no other manifest field)"
+  },
+  "N8": {
+   "result": "DONE",
+   "commit": "5fb93161",
+   "what": "eutils.py: cross-process throttle (one lock per host user), 429 Retry-After + exponential back-off, one-day cache, empty UA; wired into pubmed_identity_check, staged_receipt_check, pmc_bucket_fetch, lot_internal_edges"
+  },
+  "N9": {
+   "result": "DECISION_PACKET",
+   "commit": "f178271d",
+   "path": "governance/design_records/registry_scale_decision_packet_20261020.md",
+   "what": "measured: no batch cost attributable to size (context 0, get 0.83 s, LINT 7.85 s, scoped edit 0.17 s); recommends A (re-found the trigger on measured cost, watch all three files) now, E (cold/hot history split) when a cost appears; discovery-ledger change-log split as the cheapest size cut; no agent renewal of the deferral"
+  },
+  "N10": {
+   "result": "DONE",
+   "commit": "b090a82e",
+   "what": "locator_count_crosscheck.py --depth: each Evidence-depth line checked against the manifest's producing receipt (Mirror B4 semantics), unknown receipts and the ledger's strongest standing depth; 434 lines, 13 drifting today; report only"
+  },
+  "N11": {
+   "result": "DONE",
+   "commit": "b2b98e36",
+   "what": "measured reading set before paper 1: v2 brief + its mandated reads + the dated dispatch brief = 198,643 bytes; v3 = about 86,000 bytes (-57%) by loading the receipt protocol from 'Before reading' to 'Required receipt', reading modes sections 3-4, the state manifest by one command and session_self_evaluation at the end; no normative text removed"
+  }
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "dispatch brief cut off mid-sentence",
+   "default": "took the rest from the task contract, as the Orchestrator then confirmed",
+   "why_safe": "the contract carries principles, needs, boundaries and acceptance",
+   "different_if": "the missing sentence had added a constraint"
+  },
+  {
+   "condition": "N5 asked for 'a staged file' per PMID per wave; staged files on a branch are invisible to peers until landing",
+   "default": "the claim marker lives in the repository's common git directory (seen by every worktree, never committed) and peer work is derived from every worktree's state",
+   "why_safe": "no lock, no gate, nothing committed; a stale marker costs one line",
+   "different_if": "a marker committed on main had been wanted for the record"
+  },
+  {
+   "condition": "N3 regeneration on main runs inside task_close/legend_commit",
+   "default": "STALE-only results land and are regenerated; CHECK_ERROR still refuses; sealed surfaces are reported, never regenerated",
+   "why_safe": "main is transiently stale for one commit at most and the generator refuses dirty inputs itself",
+   "different_if": "a refusal on main had been preferred to an automatic follow-up commit"
+  }
+ ],
+ "DECISIONS_TAKEN": [
+  {
+   "what": "standing brief v3 drops v2's section 6 (dated open-reading-debt pointers of 2026-09-10)",
+   "alternatives_rejected": "keep it",
+   "who_consulted": "none",
+   "reversibility": "full",
+   "how_to_revert": "git show b2b98e36^:framework/protocols/scientist_standing_brief.md"
+  },
+  {
+   "what": "legend_commit.sh on main no longer refuses a STALE commit; it commits and regenerates (exit 6 if that fails)",
+   "alternatives_rejected": "keep the H0 refusal on main",
+   "who_consulted": "none",
+   "reversibility": "full",
+   "how_to_revert": "git revert 5a17f3c4"
+  },
+  {
+   "what": "N9: no prototype built; packet only",
+   "alternatives_rejected": "prototype the discovery change-log split now",
+   "who_consulted": "none",
+   "reversibility": "n/a",
+   "how_to_revert": "n/a"
+  }
+ ],
+ "STOP_LOG": [
+  {
+   "class": "1 (reserved act) avoided",
+   "what": "N9 sharding decision and any renewal of the scale deferral",
+   "time_waited": "0",
+   "outcome": "decision packet delivered; no renewal taken by an agent"
+  }
+ ],
+ "MEASUREMENTS": {
+  "pre_paper_reading_set_bytes": {
+   "v2_plus_dispatch_brief": 198643,
+   "v3": 86093,
+   "command": "wc -c on each file / awk section extracts, 2026-10-20"
+  },
+  "standing_brief_bytes": {
+   "before": 21008,
+   "after": 12941
+  },
+  "freshness_all_checks_on_HEAD_seconds": 7.5,
+  "depth_line_drift": {
+   "lines": 434,
+   "drifting": 13,
+   "command": "locator_count_crosscheck.py --depth"
+  }
+ }
 }

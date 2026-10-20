@@ -1649,6 +1649,63 @@ class TheCommandLineIsWhatActorsRun(unittest.TestCase):
         truncated = self.cli("verify")
         self.assertNotEqual(0, truncated.returncode)
 
+    def test_record_dry_run_runs_the_checks_and_writes_nothing(self) -> None:
+        self.cli("record", "--receipt", str(self.write_receipt("01")))
+        self.cli("anchor")
+        ledger_before = self.ledger.read_bytes()
+        manifest_before = self.manifest.read_bytes()
+        partial = self.write_receipt(
+            "02", evidence_depth="partial_fulltext_read",
+            prior_receipt="FTR-20260725-42193054-01",
+            reread_reason="inadequate_prior_coverage",
+        )
+        dry = self.cli("record", "--receipt", str(partial), "--dry-run")
+        self.assertEqual(0, dry.returncode, dry.stderr)
+        self.assertIn("DRY RUN OK: FTR-20260725-42193054-02", dry.stdout)
+        self.assertEqual(ledger_before, self.ledger.read_bytes())
+        self.assertEqual(manifest_before, self.manifest.read_bytes())
+        bad = self.write_receipt("03", coverage={key: "not_read" for key in receipts.COVERAGE_KEYS})
+        refused = self.cli("record", "--receipt", str(bad), "--dry-run")
+        self.assertNotEqual(0, refused.returncode)
+        self.assertEqual(ledger_before, self.ledger.read_bytes())
+
+    def test_a_scratch_ledger_never_anchors_in_a_repository_manifest(self) -> None:
+        """N1, 2026-10-20: a trial record against a scratch ledger, run from the shared
+        checkout, re-anchored that checkout's REAL manifest (543 against 542)."""
+        repo = Path(self.temporary.name) / "repo"
+        state = repo / "framework" / "state" / "state_manifest_current.md"
+        state.parent.mkdir(parents=True)
+        state.write_text(self.MANIFEST, encoding="utf-8")
+        scratch = Path(self.temporary.name) / "scratch" / "receipts.jsonl"
+        scratch.parent.mkdir()
+        before = state.read_bytes()
+        # Explicit pairing is refused by the writer itself.
+        with self.assertRaisesRegex(ValueError, "refusing to anchor"):
+            receipts.append_receipt(scratch, example("FTR-20260725-42193054-01"), manifest=state)
+        self.assertFalse(scratch.exists())
+        # From the CLI with --root pointing at the repository and no --manifest: the
+        # default no longer follows the working directory; the scratch append anchors nowhere.
+        receipt = self.write_receipt("01")
+        recorded = subprocess.run(
+            [sys.executable, str(self.script), "--root", str(repo), "--ledger", str(scratch),
+             "record", "--receipt", str(receipt)],
+            capture_output=True, text=True, cwd=repo,
+        )
+        self.assertEqual(0, recorded.returncode, recorded.stderr)
+        self.assertEqual(before, state.read_bytes(), "the repository manifest moved")
+        for command in ("anchor", "verify"):
+            result = subprocess.run(
+                [sys.executable, str(self.script), "--root", str(repo), "--ledger",
+                 str(scratch), command], capture_output=True, text=True, cwd=repo)
+            self.assertNotEqual(0, result.returncode)
+            self.assertIn("no default state manifest", result.stderr)
+        forced = subprocess.run(
+            [sys.executable, str(self.script), "--ledger", str(scratch), "--manifest",
+             str(state), "anchor"], capture_output=True, text=True, cwd=repo)
+        self.assertNotEqual(0, forced.returncode)
+        self.assertIn("refusing to anchor", forced.stderr)
+        self.assertEqual(before, state.read_bytes())
+
     def test_verify_runs_against_the_live_repository_ledger(self) -> None:
         """A real corpus artefact, read-only. Degrades to a declared skip, never a green."""
         root = Path(__file__).resolve().parents[2]

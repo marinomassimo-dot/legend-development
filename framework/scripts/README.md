@@ -39,7 +39,8 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | You want | Run |
 |---|---|
 | the whole record(s) for a PMID / DOI / record id / theme, with identity separated from mention, ambiguities named, links resolved one hop, and the commit it was read at | `framework/scripts/registry_records.py get --pmid <PMID> --hops 1` |
-| the technical state of one paper before reading it — artefacts, bytes, coverage so far, acquisition history, applicable checks, **and no prior conclusion** | `framework/scripts/paper_packet.py packet --pmid <PMID>` |
+| the technical state of one paper before reading it — artefacts, bytes, coverage so far, acquisition history, applicable checks, **every other worktree's in-flight manifest or staged receipt and every reading claim for it**, **and no prior conclusion** | `framework/scripts/paper_packet.py packet --pmid <PMID>` |
+| say "I am reading this PMID now" where every worktree sees it — a marker in the common git directory, never a lock; exit 1 when someone else is already on it | `framework/scripts/paper_packet.py claim --pmid <PMID> --actor <ACTOR_ID>` |
 | …and then to run the checks that apply to that paper's actual surfaces, in one call | `framework/scripts/paper_packet.py check --pmid <PMID>` |
 | which sections of which papers are **still owed**, counted across every ledger receipt and every staged receipt (so a stale selection row or a supplement-only latest receipt does not mislead, and two Scientists do not re-read one paper) | `framework/scripts/owed_sections.py [--pmid <PMID>]` |
 | to assemble a schema-v2 deep-dive manifest from a reader's JSON spec with every artefact digest computed (it writes no locator and no verdict) | `framework/scripts/manifest_scaffold.py --spec <spec.json> --root <checkout> --out <dir>` |
@@ -74,7 +75,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | per-paper reading state, summed across every receipt rather than taken from the last one | `framework/scripts/reading_state.py` |
 | the reading debt with an honest denominator | `framework/scripts/coverage_report.py` |
 | which reading surface exists per paper, and whether it can be trusted | `framework/scripts/surface_census.py` |
-| to validate, append to or query the hash-chained receipt ledger | `framework/scripts/fulltext_receipts.py verify` · `… record` |
+| to validate, append to or query the hash-chained receipt ledger — `record --dry-run` runs every check and writes nothing; a ledger that is not a repository's own sink never anchors in that repository's state manifest | `framework/scripts/fulltext_receipts.py verify` · `… record [--dry-run]` |
 | to apply an **operator-authorized, scope-limited** edit to one record of an append-only JSONL ledger — or to be refused | `framework/scripts/scoped_record_edit.py --file … --id … --field … --old … --new …` (dry run; add `--apply`) |
 | to find out **which string counts an extracted full-text artifact can answer**, before offering a zero as evidence | `framework/scripts/extraction_damage_report.py files/fulltext/<artifact>.txt` |
 | whether a deep-dive work manifest satisfies the gate, or which waiver it owes | `framework/scripts/deepdive_manifest.py` |
@@ -86,7 +87,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 
 | You want | Run |
 |---|---|
-| does every locator's quote actually occur in the artifact it was taken from (in a worktree, pass `--corpus`; the run prints the hint when it cannot see its surfaces) | `framework/scripts/locator_audit.py` |
+| does every locator's quote actually occur in the artifact it was taken from (in a worktree, pass `--corpus`; the run prints the hint when it cannot see its surfaces) — and, with `--pmid <PMID> --triples N`, the **blind packet** for a `legend-locator-audit` auditor: N reproducibly sampled (proposition, quote, anchor) triples and no other manifest field | `framework/scripts/locator_audit.py` |
 | a paper's load-bearing citations — **how many this checkout can adjudicate** (the denominator, always printed), and the reader's `SUPPORTED` / `NOT_CONTAINED` / `CONTRADICTED` tally against it; the judgement stays with the reader | `framework/scripts/upstream_citation_census.py` |
 | which readings contradicted an already-persisted locator, and were they audited | `framework/scripts/locator_contradiction_audit.py` |
 | where the identifiers inside a locator's proposition came from | `framework/scripts/locator_identifier_provenance.py` |
@@ -98,7 +99,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | does a manifest's `receipt` name the reading that **produced** it — the decided semantics (`fulltext_read_receipt.md`), with the declared non-conformance ceiling; reports, never writes | `framework/scripts/manifest_receipt_provenance.py --check` |
 | to **repair** one such `receipt` to the value the ledger derives — no `--to`, every other byte proven identical, and refused when the derivation is not unique, not possible, or would name a reading of an artifact the manifest does not declare | `framework/scripts/manifest_receipt_repoint.py --pmid …` (dry run; add `--apply`) |
 | does a candidate, ledger or analysis file cite an `FT-` entry that was never written | `framework/scripts/manifest_queue_id_crosscheck.py --prose` |
-| does the registry's declared locator count still match the manifest it names | `framework/scripts/locator_count_crosscheck.py` |
+| does the registry's declared locator count still match the manifest it names — and, with `--depth`, does each `**Evidence depth:**` line still name the receipt that produced its manifest and the strongest standing depth in the ledger | `framework/scripts/locator_count_crosscheck.py [--depth]` |
 | every number in an orchestration record sitting beside what produced it | `framework/scripts/record_number_provenance.py` |
 | a correction that has not yet reached the locator it retires | `framework/scripts/locator_propagation.py` |
 
@@ -109,6 +110,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | does the DECLARED genre of an article agree with what its own deposit measures | `framework/scripts/genre_discriminator.py` |
 | page furniture that has landed INSIDE a sentence in an extracted text | `framework/scripts/text_surface_intrusion_check.py` |
 | are the figure captions inside the `<body>` of the surface you are about to declare | `framework/scripts/caption_census.py` |
+| which image file carries which caption, from the JATS XML — file numbers are not figure numbers (3 of 8 deposits in one 2026-10 wave) — with each file checked on disk | `framework/scripts/figure_legend_pairs.py <xml> --figures <dir>` |
 | a PDF's raster information ceiling, before rendering its pages | `framework/scripts/figure_ppi_preflight.py` |
 | regenerate page-adjudication crops from the source PDF and verify them by digest | `framework/scripts/regenerate_adjudications.py` |
 | every degraded state of that verification, graded | `framework/scripts/adjudication_state_matrix.py` |
@@ -150,6 +152,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | the post-batch self-evaluation gate | `framework/scripts/session_self_eval.py` |
 | reconcile the ops you extracted from a commit candidate against the count its own prose declares — before `propagate`; refuses the **silent zero** (op structure present, nothing parsed) and the mismatch; reads the fenced-JSON, `### Op N` bullet, `### N.M` table / vertical-table / fence-pair and `## Exact op` layouts; `--ops-out` hands `record_scoped_edit.py apply --ops` the parsed list | `framework/scripts/candidate_ops_reconcile.py` |
 | the mechanical backup/restore phases of `BATCH_COMMIT`, and its Phase 4 record-scoped propagation (`propagate --file … --ops …` for all four current files; a refusal names its `FULL_FALLBACK`; `drift` says early whether main moved under a batch — a landed batch scope, a changed declared surface, a consumed candidate, an ID collision) | `framework/scripts/batch_commit.py` |
+| add a lead to the **discovery ledger** — `check` a JSON spec, `stage` it on your branch under `research/lead_staging/<actor>/`, and on main `append --staged --apply` numbers and appends every staged lead not yet in (dry run by default; idempotent; all or none) | `framework/scripts/discovery_lead.py check · stage · append` |
 | edit **one record or range** of a Markdown registry — every other byte proven unchanged — or be refused (duplicate id, fenced heading, nested record, re-segmentation, or an **unbounded span** — the last block at its level has no heading to close it, so an end assumed to be EOF that covers other headings is refused until `--to-eof` says the record really reaches it); dry run by default, atomic batch with `apply --ops` | `framework/scripts/record_scoped_edit.py replace --file … --id "CLAIM 006" --text-file …` |
 | land a committed, verified task, detach its worktree, delete its branch (one cut from `origin/main` included), and name on stderr (`PUSH_NOTE`) any unpublished commit on main a push would also carry that the task did not make | `framework/scripts/task_close.py` |
 | what is not on `main` and how old it is — the weekly §21e sweep | `framework/scripts/branch_hygiene.py` |
@@ -157,7 +160,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | push a ref only when the gate PASSes on the EXACT commit being pushed | `framework/scripts/safe_push.py` |
 | wait for a job to finish — by PID, `PID:START`, pid file or completion file, **never by name**, and always with a `--timeout` | `framework/scripts/process_wait.py` |
 | refuse to derive a surface whose inputs are uncommitted, or state why it is safe | `framework/scripts/derived_inputs.py` |
-| are the committed generated surfaces fresh on the EXACT tree about to land — a merge result, HEAD + index, or HEAD + named files — running only the checks whose inputs it changes (`task_close.py` and `legend_commit.sh` call it) | `framework/scripts/candidate_tree_freshness.py` |
+| are the committed generated surfaces fresh on the EXACT tree about to land — a merge result, HEAD + index, or HEAD + named files — running only the checks whose inputs it changes (`task_close.py` and `legend_commit.sh` call it); `--regenerate` on a main checkout regenerates what is STALE and commits exactly those files — `task_close.py` runs it after a landing, so a task branch never regenerates shared surfaces | `framework/scripts/candidate_tree_freshness.py` |
 | a temporary directory stamped with its owner's `PID:START`, and the reaping of a dead owner's box and of the worktrees registered inside it | `framework/scripts/owned_scratch.py` |
 | when the shared checkout moved, and when it deliberately did not | `framework/scripts/sync_epochs.py` |
 | classify, hand off, resume or sync a laboratory across hosts | `framework/scripts/legend_handoff.py` |
@@ -231,7 +234,7 @@ refs or observe clones on other hosts. A missing or
 
 ## 12 · Libraries, not commands
 
-These four are imported by other tools and have no `__main__`. They are listed so the routing is
+These are imported by other tools and have no `__main__`. They are listed so the routing is
 **complete** rather than tidy — a reader who finds one and cannot run it should learn why here,
 not by running it.
 
@@ -241,3 +244,4 @@ not by running it.
 | `framework/scripts/screen_verdict.py` | the verdict contract every screen in `framework/scripts/` returns |
 | `framework/scripts/corpus_firewall.py` | what a bibliographic corpus is, and how every guard recognises one |
 | `framework/scripts/claim_links.py` | the declared `Claim links` of a record, never identifiers inside a refusal or an annotation |
+| `framework/scripts/eutils.py` | the one polite door to NCBI E-utilities: a throttle shared by every process on the host, back-off on 429/5xx with `Retry-After`, a one-day response cache (`LEGEND_EUTILS_CACHE_TTL=0` disables) — used by `pubmed_identity_check`, `staged_receipt_check`, `pmc_bucket_fetch`, `lot_internal_edges`; a new tool that calls NCBI imports it |

@@ -28,6 +28,7 @@ Starts ONLY from the papers the operator provides (or the papers the skill itsel
 - **Read-only** toward the 4 canonical scientific current files and registries. Everything that becomes canonical (CLAIM, PAPER, validated Tier 1/2 biomarker) leaves **only** as a `COMMIT CANDIDATE` → then `BATCH_COMMIT`. LEGEND discipline stays intact.
 - **Writable** outside BATCH_COMMIT, exactly like the researchers-KB carve-out: the **discovery ledger** — structured-append, with explicit epistemic tags, change-log, and a status per lead. **It is not a canonical scientific file and introduces no canonical claims**: it is strategy space. Promotion of a lead to canonical fact happens only via COMMIT CANDIDATE.
 - Append discipline: a lead is not deleted, its status changes (`open` → `maturing` → `promoted-to-CC` → `parked` → `refuted`).
+- A **new** lead goes in through its validated writer, never a hand edit or a batch op: `python3 framework/scripts/discovery_lead.py check | stage | append` (on a task branch `stage`; the number is assigned on main by `append --staged --apply`). A status change to an existing lead is a record-scoped edit (`record_scoped_edit.py`).
 - Never present INFERENZA/IPOTESI/ESPANSIONE as DATO. Never self-authorize an URGENT. Patient framing: it supports a decision, it does not replace clinical judgement.
 
 ## Epistemic discipline (mandatory)

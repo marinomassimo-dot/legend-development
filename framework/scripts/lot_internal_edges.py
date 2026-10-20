@@ -68,6 +68,10 @@ import time
 import urllib.error
 import urllib.request
 from dataclasses import dataclass, field
+from pathlib import Path as _Path
+
+sys.path.insert(0, str(_Path(__file__).resolve().parent))
+import eutils  # noqa: E402  the shared NCBI throttle and cache (N8, 2026-10-20)
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -102,6 +106,8 @@ class Result:
 
 
 def _get(url: str, timeout: int = 40) -> str:
+    if url.startswith(EUTILS):
+        return eutils.get(url, timeout=timeout).decode("utf-8", errors="replace")
     request = urllib.request.Request(url, headers={"Accept": "application/json"})
     with urllib.request.urlopen(request, timeout=timeout) as response:
         return response.read().decode("utf-8", errors="replace")

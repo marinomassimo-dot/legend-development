@@ -37,6 +37,10 @@ import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import eutils  # noqa: E402  the shared NCBI throttle and cache (N8, 2026-10-20)
 
 STOP = set("a an and of the in on for to with by at from as is are was were be or its their into using use via study analysis".split())
 
@@ -78,6 +82,8 @@ def verdict(pubmed: dict, crossref: dict | None, threshold: float = 0.6) -> dict
 
 
 def _get(url: str, retries: int = 5) -> bytes:
+    if eutils.HOST in url:
+        return eutils.get(url, timeout=30, retries=retries)
     for i in range(retries):
         try:
             with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": ""}), timeout=30) as r:

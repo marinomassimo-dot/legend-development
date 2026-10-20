@@ -23,15 +23,14 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import fulltext_receipts as fr  # noqa: E402
+import eutils  # noqa: E402  the shared NCBI throttle and cache (N8, 2026-10-20)
 
 
 def pubmed_doi(pmid: str, get=None) -> str | None:
     """The DOI PubMed stores for a PMID (esummary), or None when it cannot be read."""
-    import subprocess
     url = f"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id={pmid}&retmode=json"
     try:
-        body = get(url) if get else subprocess.run(["curl", "-sS", "-A", "", "-m", "40", url],
-                                                    capture_output=True, text=True).stdout
+        body = get(url) if get else eutils.get(url).decode("utf-8")
         ids = json.loads(body)["result"][str(pmid)]["articleids"]
         return next((x["value"] for x in ids if x["idtype"] == "doi"), None)
     except Exception:

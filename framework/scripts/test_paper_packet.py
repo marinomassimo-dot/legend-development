@@ -814,5 +814,64 @@ class LinkedWorktreeArtefactRoot(unittest.TestCase):
             self.assertNotIn("--artifact-workspace", jobs_main["manifest validator"])
 
 
+
+class PeerWorkIsVisibleBeforeTheSecondReading(unittest.TestCase):
+    """N5 (2026-10-20): two duplicate readings were found only at landing."""
+
+    def setUp(self) -> None:
+        import subprocess as sp
+        import tempfile
+        self.sp = sp
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        base = Path(self.tmp.name)
+        self.root = base / "root"
+        self.root.mkdir()
+        def git(cwd, *args):
+            return sp.run(["git", "-C", str(cwd), *args], check=True, capture_output=True,
+                          text=True).stdout
+        self.git = git
+        git(self.root, "init", "-q", "-b", "main")
+        git(self.root, "config", "user.email", "t@example.invalid")
+        git(self.root, "config", "user.name", "t")
+        (self.root / "README").write_text("x\n")
+        git(self.root, "add", ".")
+        git(self.root, "commit", "-q", "-m", "seed")
+        self.mine = base / "mine"
+        self.peer = base / "peer"
+        git(self.root, "worktree", "add", "-q", "-b", "task/mine", str(self.mine))
+        git(self.root, "worktree", "add", "-q", "-b", "task/peer", str(self.peer))
+
+    def test_a_peers_staged_receipt_and_manifest_and_claim_are_listed(self) -> None:
+        staged = self.peer / "disease-models/wwox/research/receipt_staging/scientist-c"
+        staged.mkdir(parents=True)
+        (staged / "FTR-20261020-38978529-01.json").write_text("{}")
+        manifests = self.peer / "disease-models/wwox/research/deepdive_manifests"
+        manifests.mkdir(parents=True)
+        (manifests / "PMID38978529.json").write_text("{}")
+        self.git(self.peer, "add", str(manifests / "PMID38978529.json"))
+        self.git(self.peer, "commit", "-q", "-m", "manifest")
+        self.assertEqual([], pp.peer_work(self.mine, "wwox", "11111111"))
+        pp.claim(self.peer, "38978529", "scientist-c", "W4")
+        rows = pp.peer_work(self.mine, "wwox", "38978529")
+        kinds = sorted(row["kind"] for row in rows)
+        self.assertEqual(["claim", "on branch, not on main", "uncommitted"], kinds)
+        self.assertEqual(["scientist-c"], [r["actor"] for r in rows if r["kind"] == "claim"])
+        # The claimant's own worktree does not report itself as a peer's work in flight.
+        own = pp.peer_work(self.peer, "wwox", "38978529")
+        self.assertEqual(["claim"], [row["kind"] for row in own])
+
+    def test_claim_exits_1_when_someone_else_is_on_the_paper(self) -> None:
+        script = Path(pp.__file__)
+        first = self.sp.run([sys.executable, str(script), "claim", "--pmid", "38978529",
+                             "--actor", "scientist-c", "--root", str(self.peer)],
+                            capture_output=True, text=True)
+        self.assertEqual(0, first.returncode, first.stderr)
+        second = self.sp.run([sys.executable, str(script), "claim", "--pmid", "38978529",
+                              "--actor", "scientist-d", "--root", str(self.mine)],
+                             capture_output=True, text=True)
+        self.assertEqual(1, second.returncode, second.stderr)
+        self.assertIn("scientist-c", second.stdout)
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

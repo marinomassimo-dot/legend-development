@@ -118,5 +118,46 @@ class ExitCodes(unittest.TestCase):
                             for r in rows))
 
 
+
+class DepthLineDrift(unittest.TestCase):
+    """N10 (2026-10-20): depth lines that name a receipt the manifest was not produced by."""
+
+    def test_producer_unknown_and_depth_drift_are_each_named(self) -> None:
+        import tempfile
+        from unittest import mock
+        import fulltext_receipts as fr
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            manifests = root / lcc.MANIFEST_DIR.format(disease="wwox")
+            manifests.mkdir(parents=True)
+            (manifests / "PMID11111111.json").write_text(
+                json.dumps({"pmid": "11111111", "receipt": "FTR-20260101-11111111-01"}))
+            (manifests / "PMID22222222.json").write_text(
+                json.dumps({"pmid": "22222222", "receipt": "FTR-20260101-22222222-01"}))
+            ledger = fr.default_ledger_path(root, "wwox")
+            ledger.parent.mkdir(parents=True)
+            ledger.write_text("")
+            events = [
+                {"event_id": "FTR-20260101-11111111-01", "study_id": {"pmid": "11111111"},
+                 "evidence_depth": "partial_fulltext_read"},
+                {"event_id": "FTR-20260102-11111111-02", "study_id": {"pmid": "11111111"},
+                 "evidence_depth": "complete_fulltext_read"},
+                {"event_id": "FTR-20260101-22222222-01", "study_id": {"pmid": "22222222"},
+                 "evidence_depth": "complete_fulltext_read"},
+            ]
+            text = (
+                "**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20260102-11111111-02`, "
+                "`deepdive_manifests/PMID11111111.json`\n"
+                "**Evidence depth:** `complete_fulltext_read` — receipts `FTR-20260101-22222222-01` "
+                "(producer) and `FTR-20260109-22222222-02`, `deepdive_manifests/PMID22222222.json`\n")
+            with mock.patch.object(fr, "load_ledger", return_value=events), \
+                    mock.patch.object(fr, "active_receipts", side_effect=lambda e: e):
+                rows = lcc.scan_depth(text, root, "wwox")
+        first, second = rows
+        self.assertEqual(2, len(first["problems"]))
+        self.assertTrue(first["problems"][0].startswith("receipt_differs"))
+        self.assertTrue(first["problems"][1].startswith("depth_differs"))
+        self.assertEqual(["unknown_receipt: FTR-20260109-22222222-02"], second["problems"])
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
