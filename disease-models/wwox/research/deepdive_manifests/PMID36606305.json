@@ -193,6 +193,48 @@
    }
   },
   {
+   "path": "files/figures/PMID36606305/s001_image1.png",
+   "sha256": "fa3c5740d7b49444284229520eb4d7568a7c37dad19519a19e585b804afc5916",
+   "kind": "figure",
+   "note": "Supplementary Figure 1 image 1 (uncropped western blots: pSMAD2, p-p38MAPK, p16 at 53, 40 and 16 kDa, with GAPDH), extracted from Appendix S1 and inspected.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_python_zipfile_docx",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "fa3c5740d7b49444284229520eb4d7568a7c37dad19519a19e585b804afc5916",
+    "derived_from": "files/figures/PMID36606305/ACEL-22-e13747-s001.docx",
+    "extractor": {
+     "name": "python zipfile extraction (media members copied unchanged)",
+     "version": "python 3.12",
+     "call": "zipfile.ZipFile(...).read(word/media/imageN.png)"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID36606305/s001_image2.png",
+   "sha256": "6ae8c8ad04c7324aad347bc9be37eef348e8f123e2fa9b044424f3faf386b995",
+   "kind": "figure",
+   "note": "Supplementary Figure 1 image 2 (uncropped western blots: SMAD2 and p38MAPK at 58 and 40 kDa, with GAPDH), extracted from Appendix S1 and inspected.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_python_zipfile_docx",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "6ae8c8ad04c7324aad347bc9be37eef348e8f123e2fa9b044424f3faf386b995",
+    "derived_from": "files/figures/PMID36606305/ACEL-22-e13747-s001.docx",
+    "extractor": {
+     "name": "python zipfile extraction (media members copied unchanged)",
+     "version": "python 3.12",
+     "call": "zipfile.ZipFile(...).read(word/media/imageN.png)"
+    }
+   }
+  },
+  {
    "path": "files/fulltext/PMID36606305_Preininger2023_supplement/s001.txt",
    "sha256": "afda643f04f6a9f74f622b827717327fc99ddd6d3bde830814102e033f224ecc",
    "kind": "supplement_text",
@@ -449,6 +491,19 @@
     "anchor": "Figure 3, read at native resolution",
     "surface": "figure",
     "artifact": "files/figures/PMID36606305/ACEL-22-e13747-g003.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "primary rat hippocampal astrocytes (P8, serum-free, passage 3) exposed to 0.2 mM albumin for 7 days; adult male mice with 7-day intracerebroventricular infusion of 0.4 mM bovine albumin",
+     "comparator": "vehicle or aCSF; ALK5 inhibitor SJN2511 (cells) or IPW-5371 (mice); astrocytic TGFbR2 conditional knockdown (fl/fl) versus heterozygous (fl/+)",
+     "endpoint": "SA-beta-gal, p16 by flow cytometry, qPCR of senescence and SASP genes, Lamin B1 intensity, western blots of pSMAD2, p-p38 and p16"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure 1 (two embedded images in Appendix S1): uncropped western blots, one gel per group (fl/+ aCSF 10 lanes, fl/+ albumin 9, fl/fl albumin 8, matching the stated n), each with a prestained ladder between lanes 5 and 6 and one GAPDH blot; pSMAD2, p-p38 and p16 share one membrane (53, 40 and 16 kDa) and SMAD2 and p38 a second (58 and 40 kDa). The three groups were therefore run on separate gels and compared only through GAPDH, and the 16 kDa p16 band is faint.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supp Fig 1 six blot panels per image, lanes numbered, ladders in red, group labels at left.",
+    "anchor": "Supplementary Figure 1, extracted images read at native size",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36606305/s001_image1.png",
     "panel_text_relation": "panel_only",
     "experimental_context": {
      "system": "primary rat hippocampal astrocytes (P8, serum-free, passage 3) exposed to 0.2 mM albumin for 7 days; adult male mice with 7-day intracerebroventricular infusion of 0.4 mM bovine albumin",
