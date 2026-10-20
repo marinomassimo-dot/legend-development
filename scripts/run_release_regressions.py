@@ -113,6 +113,7 @@ PRIORITY_TESTS = (
     "framework/scripts/test_pubmed_identity_check.py",
     "framework/scripts/test_staged_receipt_check.py",
     "framework/scripts/test_record_staged_receipts.py",
+    "framework/scripts/test_repurposing_bridge.py",
     "framework/scripts/test_discovery_lead.py",
     "framework/scripts/test_eutils.py",
     "framework/scripts/test_figure_legend_pairs.py",
