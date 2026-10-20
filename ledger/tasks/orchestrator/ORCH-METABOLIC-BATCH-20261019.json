@@ -51,7 +51,7 @@
     {
      "step": "Fresh-clone battery on exact SHA, public_release_gate, receipts verify, safe_push to development",
      "status": "IN_PROGRESS",
-     "evidence": "battery running on clone of a9db41b0; gate PASS 0 blocks; push pending"
+     "evidence": "gate PASS; battery on a9db41b had 3 reds: xlsx verbosity (fixed 76c32bce), paper_packet signals (green in root), receipt provenance ceiling (45 UNKNOWN_EVENT, cleared by recording wave-2 receipts ef8c9427); rerun after batch 003; push pending"
     }
    ]
   },
@@ -89,7 +89,8 @@
     },
     {
      "step": "Record wave 2 receipts (B, C, D, then A) after scratch-clone trial; BATCH_20261019_002",
-     "status": "TODO"
+     "status": "IN_PROGRESS",
+     "evidence": "wave-2 receipts B,C,D recorded ef8c9427; B wave-3 recorded 6ef80e2c ledger 597; BATCH_20261019_003 (combined with Mirror repairs, WM_v7.22) running; A, C held-partial, D debts pending return"
     }
    ]
   }
@@ -109,6 +110,12 @@
    "default": "set analysis_at to the date 2026-10-19T00:00:00Z (the form scientist-d used) and event_at not later than the record time; staged copies replaced",
    "why_safe": "the reading happened that day; no field of content changed; recorded in commit b968bbd2",
    "different_if": "exact reading times would have been kept"
+  },
+  {
+   "condition": "stray state-manifest anchor 543 (ledger 542) blocked LINT and landings; classifier denied the restore",
+   "default": "saved the diff, asked the operator for one line; operator authorised; two anchor lines restored by sed to HEAD values",
+   "why_safe": "ledger file identical to HEAD, verify OK after",
+   "different_if": "none"
   }
  ]
 }
