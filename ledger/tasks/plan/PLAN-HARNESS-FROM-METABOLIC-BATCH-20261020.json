@@ -1,5 +1,5 @@
 {
- "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
  "_note": "Operator directive 2026-10-20: give Harness Engineering a harness task scoped to the real needs that emerged in the metabolic batch (ORCH-METABOLIC-BATCH-20261019). Assigned by the Orchestrator.",
  "TASK_ID": "PLAN-HARNESS-FROM-METABOLIC-BATCH-20261020",
  "DIRECTIVE_VERSION": 1,
@@ -57,7 +57,7 @@
    "id": "N7",
    "need": "Figure numbering and caption-image pairing wrong in 3 of 8 deposits; blind locator audits run voluntarily caught proposition overshoots that passed every gate",
    "evidence": "scientist-d and scientist-b wave-4 reports; ATTRIBUTION_CENSUS blocks",
-   "shape": "cheap helpers (figure_legend_pairs; a triple sampler for a blind audit) \u2014 tools, not gates"
+   "shape": "cheap helpers (figure_legend_pairs; a triple sampler for a blind audit) — tools, not gates"
   },
   {
    "id": "N8",
@@ -97,6 +97,26 @@
   "release battery green on a fresh clone of the landed SHA",
   "DEFAULTS_TAKEN, DECISIONS_TAKEN, STOP_LOG in this record"
  ],
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-20"
+ "CURRENT_STATE": "CLAIMED",
+ "assigned_on": "2026-10-20",
+ "TASK_ACK": {
+  "state": "ACCEPTED",
+  "accepted_on": "2026-10-20",
+  "identity_basis": "ACTOR_ID plan assigned by the Orchestrator on the operator's instruction of 2026-10-20 (dispatch message); not inferred from a directory",
+  "interaction_mode": "AUTONOMOUS_COMPLETE",
+  "review_requirement": "none as a precondition (LEGEND_CORE 21e GATES); Mirror reviews ex post",
+  "scope_limit": "harness only: framework/scripts, framework/protocols, .claude/skills, scripts/, this record; the four scientific current files are not edited"
+ },
+ "TASK_CLAIM": {
+  "claimed_by": "plan",
+  "claimed_on": "2026-10-20",
+  "timestamp_precision": "date only",
+  "branch": "task/plan-harness-metabolic",
+  "worktree": ".claude/worktrees/plan-harness",
+  "uniqueness": "no competing claim exists for this TASK_ID + GENERATION"
+ },
+ "NEED_RESULTS": {},
+ "DEFAULTS_TAKEN": [],
+ "DECISIONS_TAKEN": [],
+ "STOP_LOG": []
 }
