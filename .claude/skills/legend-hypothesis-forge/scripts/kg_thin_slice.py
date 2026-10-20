@@ -9,6 +9,7 @@ evidence or medical advice.
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import json
 import sys
 import urllib.error
@@ -46,23 +47,44 @@ def resolve_gene(symbol: str) -> str:
     for hit in hits:
         if hit.get("name", "").upper() == symbol.upper() and hit["id"].startswith("HGNC:"):
             return hit["id"]
-    raise SystemExit(f"Gene {symbol!r} did not resolve to an HGNC identifier in Monarch.")
+    raise ValueError(f"Gene {symbol!r} did not resolve to an HGNC identifier in Monarch.")
 
 
-def neighbors(gene_id: str, limit: int) -> dict[str, set[str]]:
-    items = _get(f"{MONARCH}/association?subject={gene_id}&limit={limit}").get("items", [])
-    result: dict[str, set[str]] = {}
+def neighbor_packet(gene_id: str, limit: int) -> dict:
+    url = f"{MONARCH}/association?subject={urllib.parse.quote(gene_id)}&limit={limit}"
+    raw = _get(url)
+    if not isinstance(raw.get("items"), list):
+        raise ValueError("Monarch response missing items list")
+    items = raw["items"]
+    result = []
     for association in items:
         if association.get("category") not in NEIGHBOR_CATEGORIES:
             continue
+        entity_id = association.get("object")
         label = association.get("object_label")
-        if not label or label.upper() == gene_id:
+        if not label or entity_id == gene_id:
             continue
-        result.setdefault(label, set()).add(association.get("predicate", "?").split(":")[-1])
+        # Pathways and unresolved/non-human identifiers never become DGIdb gene names.
+        is_gene = (association.get("category") == "biolink:PairwiseGeneToGeneInteraction"
+                   and isinstance(entity_id, str) and entity_id.startswith("HGNC:"))
+        result.append({"id": entity_id, "label": label,
+                       "type": "GENE" if is_gene else "PATHWAY_OR_UNRESOLVED",
+                       "predicate": association.get("predicate"), "raw": association})
+    total = raw.get("total")
+    complete = (isinstance(total, int) and not isinstance(total, bool) and total == len(items))
+    return {"query": url, "status": "OK" if complete else "INCOMPLETE",
+            "entities": result, "raw_response": raw}
+
+
+def neighbors(gene_id: str, limit: int) -> dict[str, set[str]]:
+    result: dict[str, set[str]] = {}
+    for entity in neighbor_packet(gene_id, limit)["entities"]:
+        if entity["type"] == "GENE":
+            result.setdefault(entity["label"], set()).add(entity["predicate"] or "UNKNOWN")
     return result
 
 
-def drugs_for(symbols: set[str]) -> dict[str, list[dict]]:
+def drug_packet(symbols: set[str]) -> dict:
     """Query DGIdb for all gene symbols in one request."""
     query = """
     query($names:[String!]!){
@@ -78,27 +100,62 @@ def drugs_for(symbols: set[str]) -> dict[str, list[dict]]:
       }
     }"""
     data = _post(DGIDB, {"query": query, "variables": {"names": sorted(symbols)}})
-    nodes = data.get("data", {}).get("genes", {}).get("nodes", [])
-    return {node["name"]: node.get("interactions", []) for node in nodes}
+    if data.get("errors"):
+        raise ValueError("DGIdb GraphQL errors: " + json.dumps(data["errors"]))
+    nodes = ((data.get("data") or {}).get("genes") or {}).get("nodes")
+    if not isinstance(nodes, list) or any(
+        not isinstance(node, dict) or not isinstance(node.get("name"), str)
+        or not isinstance(node.get("interactions"), list) for node in nodes
+    ):
+        raise ValueError("DGIdb response missing valid gene nodes/interactions")
+    unmatched = sorted(symbols - {node["name"] for node in nodes})
+    return {"endpoint": DGIDB, "request": {"query": query, "variables": {"names": sorted(symbols)}},
+            "status": "NO_MATCH_FOUND" if not nodes else "INCOMPLETE" if unmatched else "OK",
+            "unmatched_symbols": unmatched, "interaction_coverage": "UNKNOWN",
+            "raw_response": data,
+            "interactions": {node["name"]: node["interactions"] for node in nodes}}
+
+
+def drugs_for(symbols: set[str]) -> dict[str, list[dict]]:
+    return drug_packet(symbols)["interactions"]
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("gene", help="gene symbol used as the seed, for example WWOX")
     parser.add_argument("--limit", type=int, default=500, help="maximum Monarch associations to read")
+    parser.add_argument("--json", action="store_true", help="retain raw responses, actions and query provenance")
     args = parser.parse_args()
 
-    gene_id = resolve_gene(args.gene)
-    gene_neighbors = neighbors(gene_id, args.limit)
+    if args.limit < 1:
+        parser.error("--limit must be positive")
+    monarch = None
+    try:
+        gene_id = resolve_gene(args.gene)
+        monarch = neighbor_packet(gene_id, args.limit)
+        gene_neighbors: dict[str, set[str]] = {}
+        for entity in monarch["entities"]:
+            if entity["type"] == "GENE":
+                gene_neighbors.setdefault(entity["label"], set()).add(entity["predicate"] or "UNKNOWN")
+        dgidb = drug_packet(set(gene_neighbors) | {args.gene.upper()})
+    except (OSError, ValueError, KeyError, TypeError, AttributeError) as exc:
+        if args.json:
+            print(json.dumps({"status": "QUERY_ERROR", "error": str(exc),
+                              "monarch": monarch, "seed_query": args.gene}))
+        else:
+            print(f"QUERY_ERROR: {exc}", file=sys.stderr)
+        return 1
+    if args.json:
+        print(json.dumps({"schema_version": 1, "seed": {"id": gene_id, "label": args.gene},
+                          "retrieved_at": dt.datetime.now(dt.timezone.utc).isoformat(),
+                          "epistemic_status": "ESPANSIONE", "monarch": monarch, "dgidb": dgidb}, indent=2))
+        return 0
     print(f"# thin slice — seed {args.gene} ({gene_id})")
+    print(f"# Monarch coverage: {monarch['status']}; raw responses available with --json")
     print(f"# Monarch KG neighbours: {len(gene_neighbors)}\n")
 
     targets = set(gene_neighbors) | {args.gene.upper()}
-    try:
-        hits = drugs_for(targets)
-    except urllib.error.URLError as exc:
-        print(f"DGIdb unavailable: {exc}", file=sys.stderr)
-        return 1
+    hits = dgidb["interactions"]
 
     druggable = {gene: interactions for gene, interactions in hits.items() if interactions}
     print(f"# neighbours with known DGIdb drugs: {len(druggable)}/{len(targets)}\n")
