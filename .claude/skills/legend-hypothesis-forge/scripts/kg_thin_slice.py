@@ -17,12 +17,12 @@ drug interactions. The output is raw hypothesis material, never evidence or medi
   Pathways stay in the packet.
 * **Truncation is stated, never silent.** Monarch associations are paginated by offset until
   the registry's own `total` is reached or `--limit` is hit; hitting the ceiling yields
-  `COVERAGE_INCOMPLETE` with the numbers that justify it.
+  `INCOMPLETE` with the numbers that justify it.
 * **Pharmacological actions and sources are preserved.** DGIdb interaction types (with
   directionality), source databases with their versions, and supporting publications are
   retained in the packet and summarised in the text output.
 * **Errors are states, not zeros.** `QUERY_ERROR` (transport/shape), `API_ERROR` (a GraphQL
-  `errors` block) and `COVERAGE_INCOMPLETE` are each distinct from `NO_MATCH`. An empty
+  `errors` block) and `INCOMPLETE` are each distinct from `NO_MATCH_FOUND`. An empty
   answer is an empty answer, never "there are no drugs".
 * **Approved-only is a choice, not a default.** `--drug-approval {all,approved,
   investigational}` selects the view and the chosen value is printed with the result; the
@@ -32,7 +32,7 @@ drug interactions. The output is raw hypothesis material, never evidence or medi
 Network: public Monarch v3 and DGIdb GraphQL. Only the gene symbol and neighbour symbols
 travel; no key, no account, no private data, zero spend.
 
-Exit: 0 complete · 1 `QUERY_ERROR`/`API_ERROR`/unresolved seed · 3 `COVERAGE_INCOMPLETE`
+Exit: 0 complete · 1 `QUERY_ERROR`/`API_ERROR`/unresolved seed · 3 `INCOMPLETE`
 """
 
 from __future__ import annotations
@@ -76,8 +76,13 @@ query($names:[String!]!){
 }"""
 
 
-class SliceError(RuntimeError):
-    """A request did not complete. Distinct from a request that completed with no results."""
+class SliceError(ValueError):
+    """A request did not complete. Distinct from a request that completed with no results.
+
+    Derived from ``ValueError`` on purpose: `framework/scripts/test_repurposing_bridge.py`
+    pins that an unusable Monarch/DGIdb document raises ``ValueError`` here, and that suite
+    belongs to another tool. A refactor of this file may not quietly retire its contract.
+    """
 
 
 class ApiError(SliceError):
@@ -128,14 +133,15 @@ def keep_original(raw_dir: Path | None, name: str, payload: dict) -> str | None:
     return str(target)
 
 
-def resolve_entity(symbol: str, *, taxon: str = HUMAN, raw_dir: Path | None = None,
-                   get=_get) -> dict:
+def resolve_gene(symbol: str, *, taxon: str = HUMAN, raw_dir: Path | None = None,
+                 get=None) -> dict:
     """Resolve a gene symbol to one identifier of one type in one species.
 
     The returned record carries the identifier, the biolink type, the taxon and the
     candidates that were considered and not chosen — so a later reader can see that the
     non-human orthologues were present and were excluded on purpose.
     """
+    get = get or _get
     url = f"{MONARCH}/search?q={urllib.parse.quote(symbol)}&category=biolink:Gene&limit=20"
     raw = get(url)
     items = raw.get("items")
@@ -164,9 +170,12 @@ def resolve_entity(symbol: str, *, taxon: str = HUMAN, raw_dir: Path | None = No
 
 
 def neighbor_packet(gene_id: str, limit: int, *, page_size: int = 100,
-                    raw_dir: Path | None = None, get=_get) -> dict:
+                    raw_dir: Path | None = None, get=None) -> dict:
     """Page through Monarch associations, typing each one, up to an EXPLICIT ceiling."""
+    get = get or _get
     collected: list[dict] = []
+    collected_raw: dict | list[dict] | None = None
+    raw_pages: list[dict] = []
     pages: list[dict] = []
     total: int | None = None
     offset = 0
@@ -183,6 +192,8 @@ def neighbor_packet(gene_id: str, limit: int, *, page_size: int = 100,
         pages.append({"url": url, "offset": offset, "returned": len(items),
                       "original_response_path": keep_original(
                           raw_dir, f"monarch_assoc_{gene_id}_{offset}", raw)})
+        raw_pages.append(raw)
+        collected_raw = raw if len(raw_pages) == 1 else raw_pages
         collected.extend(items)
         offset += len(items)
         if not items or (total is not None and offset >= total):
@@ -209,7 +220,7 @@ def neighbor_packet(gene_id: str, limit: int, *, page_size: int = 100,
 
     truncated = total is not None and len(collected) < total
     if truncated:
-        status = "COVERAGE_INCOMPLETE"
+        status = "INCOMPLETE"
     elif not collected:
         status = "NO_MATCH"
     else:
@@ -230,6 +241,7 @@ def neighbor_packet(gene_id: str, limit: int, *, page_size: int = 100,
         "counts_by_type": {kind: sum(1 for item in entities if item["type"] == kind)
                            for kind in ("GENE", "PATHWAY", "UNRESOLVED")},
         "entities": entities,
+        "raw_response": collected_raw,
         "raw_response_pages": [page["original_response_path"] for page in pages],
     }
 
@@ -244,8 +256,9 @@ def neighbors(gene_id: str, limit: int) -> dict[str, set[str]]:
 
 
 def drug_packet(symbols: set[str], *, batch_size: int = 50, raw_dir: Path | None = None,
-                post=_post) -> dict:
+                post=None) -> dict:
     """Query DGIdb for gene symbols, in batches, preserving actions and sources."""
+    post = post or _post
     ordered = sorted(symbols)
     batches: list[dict] = []
     interactions: dict[str, list[dict]] = {}
@@ -271,12 +284,10 @@ def drug_packet(symbols: set[str], *, batch_size: int = 50, raw_dir: Path | None
             long_names[node["name"]] = node.get("longName")
 
     unmatched = sorted(symbols - set(interactions))
-    if not symbols:
-        status = "NO_MATCH"
-    elif not interactions:
-        status = "NO_MATCH"
+    if not symbols or not interactions:
+        status = "NO_MATCH_FOUND"
     elif unmatched:
-        status = "COVERAGE_INCOMPLETE"
+        status = "INCOMPLETE"
     else:
         status = "OK"
     return {
@@ -327,14 +338,14 @@ def describe_sources(interaction: dict) -> str:
                      for source in sources)
 
 
-def main(argv: list[str] | None = None, get=_get, post=_post) -> int:
+def main(argv: list[str] | None = None, get=None, post=None) -> int:
     parser = argparse.ArgumentParser(
         description=__doc__.splitlines()[0],
         formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("gene", help="gene symbol used as the seed, for example WWOX")
     parser.add_argument("--limit", type=int, default=500,
                         help="ceiling on Monarch associations read; reaching it reports "
-                             "COVERAGE_INCOMPLETE with the numbers, never a silent cut")
+                             "INCOMPLETE with the numbers, never a silent cut")
     parser.add_argument("--page-size", type=int, default=100,
                         help="Monarch association page size (offset pagination)")
     parser.add_argument("--taxon", default=HUMAN,
@@ -358,7 +369,7 @@ def main(argv: list[str] | None = None, get=_get, post=_post) -> int:
     seed = None
     monarch = None
     try:
-        seed = resolve_entity(args.gene, taxon=args.taxon, raw_dir=raw_dir, get=get)
+        seed = resolve_gene(args.gene, taxon=args.taxon, raw_dir=raw_dir, get=get)
         monarch = neighbor_packet(seed["id"], args.limit, page_size=args.page_size,
                                   raw_dir=raw_dir, get=get)
         gene_neighbors: dict[str, set[str]] = {}
@@ -368,7 +379,10 @@ def main(argv: list[str] | None = None, get=_get, post=_post) -> int:
                     entity["predicate"] or "UNKNOWN")
         dgidb = drug_packet(set(gene_neighbors) | {args.gene.upper()},
                             batch_size=args.batch_size, raw_dir=raw_dir, post=post)
-    except (ApiError, SliceError, KeyError, TypeError, AttributeError) as exc:
+    # ValueError covers SliceError and a plain ValueError from a replaced resolver
+    # (framework/scripts/test_repurposing_bridge.py drives exactly that case).
+    except (ApiError, SliceError, ValueError, KeyError, TypeError,
+            AttributeError) as exc:
         state = "API_ERROR" if isinstance(exc, ApiError) else "QUERY_ERROR"
         if args.json:
             print(json.dumps({"schema_version": SCHEMA_VERSION, "tool": TOOL_VERSION,
@@ -380,8 +394,7 @@ def main(argv: list[str] | None = None, get=_get, post=_post) -> int:
             print(f"{state}: {exc}", file=sys.stderr)
         return 1
 
-    status = ("COVERAGE_INCOMPLETE"
-              if "COVERAGE_INCOMPLETE" in (monarch["status"], dgidb["status"]) else "OK")
+    status = "INCOMPLETE" if "INCOMPLETE" in (monarch["status"], dgidb["status"]) else "OK"
     if args.json:
         print(json.dumps({
             "schema_version": SCHEMA_VERSION,
@@ -432,7 +445,7 @@ def main(argv: list[str] | None = None, get=_get, post=_post) -> int:
 
     print("---")
     print("Output = raw HYPOTHESIS material. It is not a claim or medical advice.")
-    print("A status of NO_MATCH, COVERAGE_INCOMPLETE or UNMATCHED is not an absence of drugs.")
+    print("A status of NO_MATCH_FOUND, INCOMPLETE or UNMATCHED is not an absence of drugs.")
     print("Next: assess rationale with legend-hypothesis-forge, then apply")
     print("legend-safety-triage (BLOCK 1 / ADMET / BBB) before any promotion.")
     return 0 if status == "OK" else 3

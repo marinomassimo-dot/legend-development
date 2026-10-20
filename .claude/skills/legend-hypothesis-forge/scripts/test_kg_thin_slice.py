@@ -63,7 +63,7 @@ def dgidb_two_nodes(url, payload) -> dict:
 
 class ResolutionTests(unittest.TestCase):
     def test_seed_resolves_with_type_and_species_and_keeps_the_rejected_candidates(self):
-        seed = kg.resolve_entity("WWOX", get=lambda url: SEARCH)
+        seed = kg.resolve_gene("WWOX", get=lambda url: SEARCH)
         self.assertEqual("HGNC:12799", seed["id"])
         self.assertEqual("biolink:Gene", seed["type"])
         self.assertEqual("NCBITaxon:9606", seed["taxon"])
@@ -74,17 +74,17 @@ class ResolutionTests(unittest.TestCase):
 
     def test_a_non_human_taxon_is_not_silently_accepted(self):
         with self.assertRaises(kg.SliceError) as raised:
-            kg.resolve_entity("WWOX", taxon="NCBITaxon:10090", get=lambda url: SEARCH)
+            kg.resolve_gene("WWOX", taxon="NCBITaxon:10090", get=lambda url: SEARCH)
         self.assertIn("UNRESOLVED seed", str(raised.exception))
 
     def test_an_unresolved_seed_is_not_an_absence_of_neighbours(self):
         with self.assertRaises(kg.SliceError) as raised:
-            kg.resolve_entity("NOTAGENE", get=lambda url: {"items": []})
+            kg.resolve_gene("NOTAGENE", get=lambda url: {"items": []})
         self.assertIn("not an absence of neighbours", str(raised.exception).replace("\n", " "))
 
     def test_resolution_response_is_persisted_at_the_recorded_path(self):
         with tempfile.TemporaryDirectory() as temporary:
-            seed = kg.resolve_entity("WWOX", raw_dir=Path(temporary),
+            seed = kg.resolve_gene("WWOX", raw_dir=Path(temporary),
                                      get=lambda url: SEARCH)
             path = Path(seed["original_response_path"])
             self.assertEqual(SEARCH, json.loads(path.read_text(encoding="utf-8")))
@@ -148,7 +148,7 @@ class PaginationTests(unittest.TestCase):
                 association(f"HGNC:{offset}", f"G{offset}", kg.GENE_GENE, "p")]}
 
         packet = kg.neighbor_packet("HGNC:12799", 2, page_size=1, get=get)
-        self.assertEqual("COVERAGE_INCOMPLETE", packet["status"])
+        self.assertEqual("INCOMPLETE", packet["status"])
         self.assertTrue(packet["truncation"]["truncated"])
         self.assertIn("read 2 of 825 associations", packet["truncation"]["statement"])
         self.assertIn("NOT read", packet["truncation"]["statement"])
@@ -183,15 +183,17 @@ class ErrorStateTests(unittest.TestCase):
 
     def test_api_error_is_a_subclass_of_slice_error_and_both_differ_from_no_match(self):
         self.assertTrue(issubclass(kg.ApiError, kg.SliceError))
+        # ValueError is the base another tool's suite pins; see the class docstring.
+        self.assertTrue(issubclass(kg.SliceError, ValueError))
         packet = kg.drug_packet({"MAPK1"}, post=lambda url, payload: {
             "data": {"genes": {"nodes": []}}})
-        self.assertEqual("NO_MATCH", packet["status"])
+        self.assertEqual("NO_MATCH_FOUND", packet["status"])
         self.assertEqual([], packet["interactions"].get("MAPK1", []))
 
     def test_an_unknown_symbol_is_coverage_incomplete_with_a_statement(self):
         packet = kg.drug_packet({"MAPK1", "NOTAGENE"},
                                 post=lambda url, payload: dgidb_response())
-        self.assertEqual("COVERAGE_INCOMPLETE", packet["status"])
+        self.assertEqual("INCOMPLETE", packet["status"])
         self.assertEqual(["NOTAGENE"], packet["unmatched_symbols"])
         self.assertIn("not the same as a gene with no drugs", packet["coverage_statement"])
 
@@ -301,7 +303,7 @@ class StructuredOutputTests(unittest.TestCase):
             code = kg.main(["WWOX", "--json", "--limit", "1"], get=get,
                            post=lambda url, payload: dgidb_response())
         self.assertEqual(3, code)
-        self.assertEqual("COVERAGE_INCOMPLETE", json.loads(buffer.getvalue())["status"])
+        self.assertEqual("INCOMPLETE", json.loads(buffer.getvalue())["status"])
 
 
 if __name__ == "__main__":

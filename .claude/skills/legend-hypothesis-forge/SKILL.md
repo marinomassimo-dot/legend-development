@@ -92,7 +92,7 @@ For the offline packet contract and synthetic example, read
    their paths are recorded in the packet). Save stdout as a run artifact. The seed resolves
    to one identifier of one type in one species (`--taxon`, human by default) and the
    rejected candidates stay in the record. `QUERY_ERROR` and `API_ERROR` exit 1,
-   `COVERAGE_INCOMPLETE` exits 3, and neither that status nor `NO_MATCH` nor an `UNMATCHED`
+   `INCOMPLETE` exits 3, and neither that status nor `NO_MATCH_FOUND` nor an `UNMATCHED`
    symbol is an exhaustive negative. Pathways are typed apart from gene symbols, remain in
    the raw packet, and never enter the DGIdb gene-symbol request. The approval view is a
    choice — `--drug-approval {all,approved,investigational}`, default `all`; the packet keeps
