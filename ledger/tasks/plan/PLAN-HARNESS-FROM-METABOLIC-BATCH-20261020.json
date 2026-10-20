@@ -243,5 +243,13 @@
    "drifting": 13,
    "command": "locator_count_crosscheck.py --depth"
   }
+ },
+ "ACCEPTANCE": {
+  "landed_sha": "225ad52112c672780410c08ed6e08df3f641548d",
+  "release_battery_fresh_clone": "REGRESSION VERDICT: PASS WITH SKIPS (148 targets, 38 skipped), exit 0, fresh clone at the landed SHA",
+  "worktree_battery_note": "the worktree run first failed two suites (exec bit on 5 new files; an illustrative wikilink in the N9 packet); both fixed in 6dcdad5e before landing",
+  "standing_brief_shorter": "21,008 -> 12,941 bytes",
+  "public_release_gate": "PASS, 0 blocks (worktree, before landing)",
+  "pushed": "no"
  }
 }
