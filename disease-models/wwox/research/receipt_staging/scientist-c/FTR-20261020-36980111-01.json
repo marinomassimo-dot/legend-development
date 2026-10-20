@@ -5,8 +5,8 @@
   "pmid": "36980111",
   "doi": "10.3390/children10030553"
  },
- "event_at": "2026-10-20T07:30:00Z",
- "analysis_at": "2026-10-20T07:30:00Z",
+ "event_at": "2026-10-20T07:00:00Z",
+ "analysis_at": "2026-10-20T00:00:00Z",
  "analysis_time_precision": "second",
  "workflow": "scientist-c, task W4-W2A-C-20261019, branch task/W4-W2A-C-20261019; context_policy SOURCE_FIRST. Held before reading: only the selection row's one-line statement of why the paper matters. Stated question: which seizure phenotypes respond to B6 across the B6-dependent diseases and what would a pyridoxine response look like in a class-level reading. SUBSTITUTE row: not WWOX evidence. Route: Europe PMC REST fullTextXML (HTTP 200) read whole from a text rendering; Tables 1 and 2 read from the markup; the four figures opened at native size from the PMC OA bucket; the supplementary workbook (Supplementary File S1) extracted and dumped through the repository xlsx reader and sampled (legend, response codes counted), not read row by row, so supplementary is stated captions_only. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
  "evidence_depth": "partial_fulltext_read",

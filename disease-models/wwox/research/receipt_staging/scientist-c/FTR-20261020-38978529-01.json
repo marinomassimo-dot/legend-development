@@ -5,8 +5,8 @@
   "pmid": "38978529",
   "doi": "10.14581/jer.24005"
  },
- "event_at": "2026-10-20T07:30:00Z",
- "analysis_at": "2026-10-20T07:30:00Z",
+ "event_at": "2026-10-20T07:00:00Z",
+ "analysis_at": "2026-10-20T00:00:00Z",
  "analysis_time_precision": "second",
  "workflow": "scientist-c, task W4-W2A-C-20261019, branch task/W4-W2A-C-20261019; context_policy SOURCE_FIRST. Held before reading: only the selection row's one-line statement of why the paper matters. Stated question: what does a cerebral folate transport deficiency look like in practice, and which CSF readout defines it. SUBSTITUTE row: not WWOX evidence. Route: Europe PMC REST fullTextXML (HTTP 200) read whole from a text rendering (case report: Methods and the two case presentations recorded as methods and results); all seven figures (photographs of imaging film montages and one EEG) opened at native size from the PMC OA bucket; no supplement exists. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
  "evidence_depth": "partial_fulltext_read",

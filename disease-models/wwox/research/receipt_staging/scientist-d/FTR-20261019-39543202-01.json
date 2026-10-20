@@ -1,42 +1,42 @@
 {
-  "record_kind": "contemporaneous_receipt",
-  "event_id": "FTR-20261019-39543202-01",
-  "study_id": {
-    "pmid": "39543202",
-    "doi": "10.1038/s41598-024-78779-4"
-  },
-  "analysis_at": "2026-10-20T07:22:00Z",
-  "analysis_time_precision": "minute",
-  "workflow": "scientist-d (stated assumption of the Orchestrator), task W4-W2B-D-20261019; context_policy QUESTION_DRIVEN (held: the selection file's reason, SUBSTITUTE, not WWOX evidence). Route: Europe PMC JATS for PMC11564695 (CC BY); whole trial read, five tables read, no figures exist. Every statement here is about L-carnitine with the ketogenic diet in drug-resistant epilepsy and is not WWOX evidence.",
-  "evidence_depth": "complete_fulltext_read",
-  "source_locator": "files/fulltext/PMID39543202_Nassar2024_PMC11564695.xml",
-  "source_fingerprint": "cabf6bc3db3847474d8442811eb7db99d42595086f1c521ab20448e155c65308",
-  "source_kind": "fulltext_local",
-  "coverage": {
-    "abstract": "read",
-    "introduction": "read",
-    "methods": "read",
-    "results": "read",
-    "figures": "not_present",
-    "tables": "read",
-    "discussion": "read",
-    "limitations": "read",
-    "supplementary": "not_present",
-    "references": "read"
-  },
-  "outputs": [
-    "disease-models/wwox/research/deepdive_manifests/PMID39543202.json",
-    "disease-models/wwox/research/wave4_scientist-d.md",
-    "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-W4B-01.md"
-  ],
-  "evidence_basis": [
-    "coverage_map",
-    "manifest",
-    "Tables 1-5 read",
-    "no figures or supplement in the article",
-    "SUBSTITUTE: no WWOX content (0 mentions)"
-  ],
-  "prior_receipt": null,
-  "reread_reason": "first_read",
-  "event_at": "2026-10-20T07:22:00Z"
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-39543202-01",
+ "study_id": {
+  "pmid": "39543202",
+  "doi": "10.1038/s41598-024-78779-4"
+ },
+ "analysis_at": "2026-10-20T00:00:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d (stated assumption of the Orchestrator), task W4-W2B-D-20261019; context_policy QUESTION_DRIVEN (held: the selection file's reason, SUBSTITUTE, not WWOX evidence). Route: Europe PMC JATS for PMC11564695 (CC BY); whole trial read, five tables read, no figures exist. Every statement here is about L-carnitine with the ketogenic diet in drug-resistant epilepsy and is not WWOX evidence.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID39543202_Nassar2024_PMC11564695.xml",
+ "source_fingerprint": "cabf6bc3db3847474d8442811eb7db99d42595086f1c521ab20448e155c65308",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "not_present",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID39543202.json",
+  "disease-models/wwox/research/wave4_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-W4B-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "Tables 1-5 read",
+  "no figures or supplement in the article",
+  "SUBSTITUTE: no WWOX content (0 mentions)"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "event_at": "2026-10-20T07:00:00Z"
 }

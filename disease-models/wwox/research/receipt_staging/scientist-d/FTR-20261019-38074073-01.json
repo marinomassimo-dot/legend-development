@@ -1,43 +1,43 @@
 {
-  "record_kind": "contemporaneous_receipt",
-  "event_id": "FTR-20261019-38074073-01",
-  "study_id": {
-    "pmid": "38074073",
-    "doi": "10.1093/braincomms/fcad243"
-  },
-  "analysis_at": "2026-10-20T07:22:00Z",
-  "analysis_time_precision": "minute",
-  "workflow": "scientist-d (stated assumption of the Orchestrator), task W4-W2B-D-20261019; context_policy QUESTION_DRIVEN (held: the selection file's reason, labelled SUBSTITUTE with no record, but the article contains three WWOX case rows so it is reclassified WWOX-direct at class level for those rows). Route: Europe PMC JATS for PMC10702464 (CC BY) as the text surface; the supplementary DOCX from the Europe PMC supplementaryFiles container read after unpacking; eight figure JPEGs from the Internet Archive capture of the PMC page via the PMC blob store, opened as images; the whole article read including Tables 1 to 4.",
-  "evidence_depth": "complete_fulltext_read",
-  "source_locator": "files/fulltext/PMID38074073_Agarwala2023_PMC10702464.xml",
-  "source_fingerprint": "d81b42f814d615309766c5ca40672b23a85cba097d51def8b6a5a0a8bc0ecc65",
-  "source_kind": "fulltext_local",
-  "coverage": {
-    "abstract": "read",
-    "introduction": "read",
-    "methods": "read",
-    "results": "read",
-    "figures": "read",
-    "tables": "read",
-    "discussion": "read",
-    "limitations": "read",
-    "supplementary": "read",
-    "references": "read"
-  },
-  "outputs": [
-    "disease-models/wwox/research/deepdive_manifests/PMID38074073.json",
-    "disease-models/wwox/research/wave4_scientist-d.md",
-    "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-W4B-01.md"
-  ],
-  "evidence_basis": [
-    "coverage_map",
-    "manifest",
-    "Figures 1-7 and graphical abstract inspected as images",
-    "Tables 1-4 read",
-    "Supplementary Data DOCX read",
-    "WWOX content: 3 case rows (two homozygous c.790C>T p.Arg264Ter, one homozygous 16q23.1 deletion)"
-  ],
-  "prior_receipt": null,
-  "reread_reason": "first_read",
-  "event_at": "2026-10-20T07:22:00Z"
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-38074073-01",
+ "study_id": {
+  "pmid": "38074073",
+  "doi": "10.1093/braincomms/fcad243"
+ },
+ "analysis_at": "2026-10-20T00:00:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d (stated assumption of the Orchestrator), task W4-W2B-D-20261019; context_policy QUESTION_DRIVEN (held: the selection file's reason, labelled SUBSTITUTE with no record, but the article contains three WWOX case rows so it is reclassified WWOX-direct at class level for those rows). Route: Europe PMC JATS for PMC10702464 (CC BY) as the text surface; the supplementary DOCX from the Europe PMC supplementaryFiles container read after unpacking; eight figure JPEGs from the Internet Archive capture of the PMC page via the PMC blob store, opened as images; the whole article read including Tables 1 to 4.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID38074073_Agarwala2023_PMC10702464.xml",
+ "source_fingerprint": "d81b42f814d615309766c5ca40672b23a85cba097d51def8b6a5a0a8bc0ecc65",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID38074073.json",
+  "disease-models/wwox/research/wave4_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-W4B-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "Figures 1-7 and graphical abstract inspected as images",
+  "Tables 1-4 read",
+  "Supplementary Data DOCX read",
+  "WWOX content: 3 case rows (two homozygous c.790C>T p.Arg264Ter, one homozygous 16q23.1 deletion)"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "event_at": "2026-10-20T07:00:00Z"
 }

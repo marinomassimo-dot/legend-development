@@ -5,8 +5,8 @@
   "pmid": "41141138",
   "doi": "10.7759/cureus.93160"
  },
- "event_at": "2026-10-20T07:30:00Z",
- "analysis_at": "2026-10-20T07:30:00Z",
+ "event_at": "2026-10-20T07:00:00Z",
+ "analysis_at": "2026-10-20T00:00:00Z",
  "analysis_time_precision": "second",
  "workflow": "scientist-c, task W4-W2A-C-20261019, branch task/W4-W2A-C-20261019; context_policy SOURCE_FIRST. Held before reading: only the selection row's one-line statement of why the paper matters. Stated question: in seven bone-tumour cases against five controls, what is measured for WWOX and RUNX2, in which tissue, and what does it support for the RUNX2 link. Route: Europe PMC REST fullTextXML (HTTP 200) read whole from a text rendering; Tables 1 and 2 read from the markup; Figures 1 and 2 opened at native size from the PMC OA bucket; no supplementary material exists in the bucket or the JATS. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
  "evidence_depth": "partial_fulltext_read",

@@ -1,42 +1,42 @@
 {
-  "record_kind": "contemporaneous_receipt",
-  "event_id": "FTR-20261019-36619921-01",
-  "study_id": {
-    "pmid": "36619921",
-    "doi": "10.3389/fneur.2022.1049850"
-  },
-  "analysis_at": "2026-10-20T07:03:00Z",
-  "analysis_time_precision": "minute",
-  "workflow": "scientist-d (stated assumption of the Orchestrator), task W4-W2B-D-20261019; context_policy QUESTION_DRIVEN (held: the selection file's reason, SUBSTITUTE, not WWOX evidence). Route: Europe PMC JATS for PMC9816572 (CC BY) as the text surface; six figure JPEGs from the Internet Archive capture of the PMC page via the PMC blob store, opened as images (the images attached to the Figure 1 and Figure 2 captions are swapped); whole review read including Tables 1 to 3. Every statement here is about CTX and is not WWOX evidence.",
-  "evidence_depth": "complete_fulltext_read",
-  "source_locator": "files/fulltext/PMID36619921_Nobrega2022_PMC9816572.xml",
-  "source_fingerprint": "375e27e2dbf783774b3d3d473695865c5d0609e41e873d8e3ca572c899dec89a",
-  "source_kind": "fulltext_local",
-  "coverage": {
-    "abstract": "read",
-    "introduction": "read",
-    "methods": "not_present",
-    "results": "read",
-    "figures": "read",
-    "tables": "read",
-    "discussion": "read",
-    "limitations": "not_present",
-    "supplementary": "not_present",
-    "references": "read"
-  },
-  "outputs": [
-    "disease-models/wwox/research/deepdive_manifests/PMID36619921.json",
-    "disease-models/wwox/research/wave4_scientist-d.md",
-    "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-W4B-01.md"
-  ],
-  "evidence_basis": [
-    "coverage_map",
-    "manifest",
-    "Figures 1-6 inspected as images",
-    "Tables 1-3 read",
-    "SUBSTITUTE: no WWOX content (0 mentions)"
-  ],
-  "prior_receipt": null,
-  "reread_reason": "first_read",
-  "event_at": "2026-10-20T07:03:00Z"
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-36619921-01",
+ "study_id": {
+  "pmid": "36619921",
+  "doi": "10.3389/fneur.2022.1049850"
+ },
+ "analysis_at": "2026-10-20T00:00:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d (stated assumption of the Orchestrator), task W4-W2B-D-20261019; context_policy QUESTION_DRIVEN (held: the selection file's reason, SUBSTITUTE, not WWOX evidence). Route: Europe PMC JATS for PMC9816572 (CC BY) as the text surface; six figure JPEGs from the Internet Archive capture of the PMC page via the PMC blob store, opened as images (the images attached to the Figure 1 and Figure 2 captions are swapped); whole review read including Tables 1 to 3. Every statement here is about CTX and is not WWOX evidence.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID36619921_Nobrega2022_PMC9816572.xml",
+ "source_fingerprint": "375e27e2dbf783774b3d3d473695865c5d0609e41e873d8e3ca572c899dec89a",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID36619921.json",
+  "disease-models/wwox/research/wave4_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-W4B-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "Figures 1-6 inspected as images",
+  "Tables 1-3 read",
+  "SUBSTITUTE: no WWOX content (0 mentions)"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "event_at": "2026-10-20T07:00:00Z"
 }

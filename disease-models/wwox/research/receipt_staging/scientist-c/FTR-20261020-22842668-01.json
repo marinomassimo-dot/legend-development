@@ -5,8 +5,8 @@
   "pmid": "22842668",
   "doi": "10.3892/or.2012.1940"
  },
- "event_at": "2026-10-20T07:30:00Z",
- "analysis_at": "2026-10-20T07:30:00Z",
+ "event_at": "2026-10-20T07:00:00Z",
+ "analysis_at": "2026-10-20T00:00:00Z",
  "analysis_time_precision": "second",
  "workflow": "scientist-c, task W4-W2A-C-20261019, branch task/W4-W2A-C-20261019; context_policy SOURCE_FIRST. Held before reading: only the selection row's one-line statement of why the paper matters. Stated question: in Wilms' tumour what WWOX alterations are measured, and is there any renal-function or metabolic content. Route: the publisher open-access PDF (6 pages) downloaded with no User-Agent from the Spandidos address and read whole from a pdftotext layer (font screen: 0 suspect, clean text layer); Figure 1 and Table I opened as an image from PDF page 3 rendered at 150 dpi; Tables II read from the text layer. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
  "evidence_depth": "partial_fulltext_read",

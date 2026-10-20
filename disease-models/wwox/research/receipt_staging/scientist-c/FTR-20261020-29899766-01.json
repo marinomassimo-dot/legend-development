@@ -5,8 +5,8 @@
   "pmid": "29899766",
   "doi": "10.4103/JPN.JPN_160_16"
  },
- "event_at": "2026-10-20T07:30:00Z",
- "analysis_at": "2026-10-20T07:30:00Z",
+ "event_at": "2026-10-20T07:00:00Z",
+ "analysis_at": "2026-10-20T00:00:00Z",
  "analysis_time_precision": "second",
  "workflow": "scientist-c, task W4-W2A-C-20261019, branch task/W4-W2A-C-20261019; context_policy SOURCE_FIRST. Held before reading: only the selection row's one-line statement of why the paper matters. Stated question: which treatable cofactor and metabolic causes (B6, folate, biotin, creatine, CoQ10, serine) belong in a DEE work-up and what can a negative screen say. SUBSTITUTE row: not WWOX evidence. Route: Europe PMC REST fullTextXML (HTTP 200) read whole from a text rendering (a narrative review: no Methods section, no Results section; the disease sections are recorded as results); all seven images (six pathway schematics and Table 1 as an image) opened at native size from the PMC OA bucket. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
  "evidence_depth": "partial_fulltext_read",

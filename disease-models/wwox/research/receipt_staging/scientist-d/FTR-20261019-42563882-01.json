@@ -1,42 +1,42 @@
 {
-  "record_kind": "contemporaneous_receipt",
-  "event_id": "FTR-20261019-42563882-01",
-  "study_id": {
-    "pmid": "42563882",
-    "doi": "10.1002/cns3.70042"
-  },
-  "analysis_at": "2026-10-20T06:53:00Z",
-  "analysis_time_precision": "minute",
-  "workflow": "scientist-d (stated assumption of the Orchestrator), task W4-W2B-D-20261019; context_policy QUESTION_DRIVEN (held: the selection file's reason, SUBSTITUTE, not WWOX evidence). Route: Europe PMC JATS for PMC13359203 as the text surface and the single figure JPEG from the Europe PMC supplementaryFiles container (no archived PMC page exists yet for this 2026 deposit); the figure opened as an image; whole letter read. Every statement here is about biotinidase deficiency and is not WWOX evidence.",
-  "evidence_depth": "complete_fulltext_read",
-  "source_locator": "files/fulltext/PMID42563882_Lai2025_PMC13359203.xml",
-  "source_fingerprint": "e50a7909d93c42f532eca0d7773cb51ab55f7f2454b38cbcf2b8db55734b1865",
-  "source_kind": "fulltext_local",
-  "coverage": {
-    "abstract": "not_present",
-    "introduction": "read",
-    "methods": "not_present",
-    "results": "read",
-    "figures": "read",
-    "tables": "not_present",
-    "discussion": "read",
-    "limitations": "not_present",
-    "supplementary": "not_present",
-    "references": "read"
-  },
-  "outputs": [
-    "disease-models/wwox/research/deepdive_manifests/PMID42563882.json",
-    "disease-models/wwox/research/wave4_scientist-d.md",
-    "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-W4B-01.md"
-  ],
-  "evidence_basis": [
-    "coverage_map",
-    "manifest",
-    "Figure 1 inspected as an image",
-    "clinical letter with no abstract, methods, tables or supplement",
-    "SUBSTITUTE: no WWOX content (0 mentions)"
-  ],
-  "prior_receipt": null,
-  "reread_reason": "first_read",
-  "event_at": "2026-10-20T06:53:00Z"
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-42563882-01",
+ "study_id": {
+  "pmid": "42563882",
+  "doi": "10.1002/cns3.70042"
+ },
+ "analysis_at": "2026-10-20T06:53:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d (stated assumption of the Orchestrator), task W4-W2B-D-20261019; context_policy QUESTION_DRIVEN (held: the selection file's reason, SUBSTITUTE, not WWOX evidence). Route: Europe PMC JATS for PMC13359203 as the text surface and the single figure JPEG from the Europe PMC supplementaryFiles container (no archived PMC page exists yet for this 2026 deposit); the figure opened as an image; whole letter read. Every statement here is about biotinidase deficiency and is not WWOX evidence.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID42563882_Lai2025_PMC13359203.xml",
+ "source_fingerprint": "e50a7909d93c42f532eca0d7773cb51ab55f7f2454b38cbcf2b8db55734b1865",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_present",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42563882.json",
+  "disease-models/wwox/research/wave4_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-W4B-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "Figure 1 inspected as an image",
+  "clinical letter with no abstract, methods, tables or supplement",
+  "SUBSTITUTE: no WWOX content (0 mentions)"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "event_at": "2026-10-20T06:53:00Z"
 }
