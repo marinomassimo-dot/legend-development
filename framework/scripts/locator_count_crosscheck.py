@@ -117,18 +117,100 @@ def scan(text: str, manifests: dict[str, tuple[int | None, Path]]) -> list[dict]
     return findings
 
 
+DEPTH_LINE_RE = re.compile(r"^\*\*Evidence depth:\*\*(?P<body>.*)$", re.M)
+RECEIPT_RE = re.compile(r"FTR-\d{8}-(?P<pmid>\d{6,9})-\d{2}")
+DEPTH_WORDS = ("complete_fulltext_read", "partial_fulltext_read", "abstract_only",
+               "metadata_only", "legacy_reconstruction")
+
+
+def scan_depth(text: str, root: Path, disease: str) -> list[dict]:
+    """Does each `**Evidence depth:**` line still describe its manifest and the ledger? (N10)
+
+    BATCH_20261019_007 found eight older records whose depth line named a receipt the work
+    manifest does not (mostly a later re-read). The decided semantics (Mirror B4): the
+    manifest's `receipt` is the reading that PRODUCED it; a depth line may cite a later
+    reading it reports, and then names both. So, per line naming a manifest or a receipt:
+
+        receipt_differs   the line names receipts, none of them the manifest's producer
+        unknown_receipt   the line names a receipt the ledger does not hold
+        depth_differs     the line's depth word is not the strongest STANDING depth the
+                          ledger holds for that PMID (either direction, both are reported)
+
+    Report only — an edit to the registry is a BATCH_COMMIT act.
+    """
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import fulltext_receipts as fr
+    ledger = fr.default_ledger_path(root, disease)
+    events = fr.load_ledger(ledger) if ledger.is_file() else []
+    known = {str(e.get("event_id")) for e in events}
+    strongest: dict[str, str] = {}
+    for event in fr.active_receipts(events):
+        pmid = str((event.get("study_id") or {}).get("pmid") or "")
+        depth = str(event.get("evidence_depth") or "")
+        if pmid and depth in fr.DEPTHS and (
+                pmid not in strongest or fr.DEPTHS[depth] > fr.DEPTHS[strongest[pmid]]):
+            strongest[pmid] = depth
+    findings = []
+    for match in DEPTH_LINE_RE.finditer(text):
+        body = match.group("body")
+        receipts_named = [m.group(0) for m in RECEIPT_RE.finditer(body)]
+        manifest_pmids = re.findall(r"deepdive_manifests/PMID(\d{6,9})\.json", body)
+        pmid = (manifest_pmids or [m.group("pmid") for m in RECEIPT_RE.finditer(body)] or [""])[0]
+        if not pmid:
+            continue
+        line = text.count("\n", 0, match.start()) + 1
+        problems = []
+        manifest_file = root / MANIFEST_DIR.format(disease=disease) / f"PMID{pmid}.json"
+        producer = ""
+        if manifest_file.is_file():
+            try:
+                producer = str(json.loads(manifest_file.read_text(encoding="utf-8"))
+                               .get("receipt") or "")
+            except (OSError, ValueError):
+                producer = ""
+        if receipts_named and producer and producer not in receipts_named:
+            problems.append(f"receipt_differs: line names {', '.join(receipts_named)}; "
+                            f"the manifest was produced by {producer}")
+        unknown = [r for r in receipts_named if events and r not in known]
+        if unknown:
+            problems.append(f"unknown_receipt: {', '.join(unknown)}")
+        declared = next((w for w in re.findall(r"`([a-z_]+)`", body) if w in DEPTH_WORDS), "")
+        if declared and pmid in strongest and declared != strongest[pmid]:
+            problems.append(f"depth_differs: line says {declared}, the ledger's strongest "
+                            f"standing reading is {strongest[pmid]}")
+        findings.append({"line": line, "pmid": pmid, "problems": problems})
+    return findings
+
+
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("root", nargs="?", default=".", type=Path)
     parser.add_argument("--disease", default="wwox")
     parser.add_argument("--json", action="store_true")
+    parser.add_argument("--depth", action="store_true",
+                        help="check the `**Evidence depth:**` lines against manifest and "
+                             "ledger instead of the locator counts (N10, 2026-10-20)")
     args = parser.parse_args(argv)
 
     registry = args.root / REGISTRY.format(disease=args.disease)
     if not registry.exists():
         print(f"ERROR: {registry} not found", file=sys.stderr)
         return 2
+
+    if args.depth:
+        rows = scan_depth(registry.read_text(encoding="utf-8"), args.root, args.disease)
+        drift = [r for r in rows if r["problems"]]
+        if args.json:
+            print(json.dumps(drift, indent=2))
+        else:
+            for row in drift:
+                for problem in row["problems"]:
+                    print(f"  [DRIFT] {registry.name}:{row['line']} — PMID {row['pmid']}: {problem}")
+            print(f"\ndepth lines checked: {len(rows)} | drifting: {len(drift)}")
+            if not rows:
+                print("NO DEPTH LINES FOUND — a failure of the scan, not a clean registry.")
+        return 2 if not rows else (1 if drift else 0)
 
     manifests = load_manifests(args.root, args.disease)
     findings = scan(registry.read_text(encoding="utf-8"), manifests)
