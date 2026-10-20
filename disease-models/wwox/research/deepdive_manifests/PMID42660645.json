@@ -1,0 +1,390 @@
+{
+ "schema_version": 2,
+ "pmid": "42660645",
+ "doi": "10.1002/jimd.70242",
+ "receipt": "FTR-20261019-42660645-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/wave4_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-W4B-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named from wave-1 reading debts and deduplicated by the per-paper M0 packet and the receipt status check run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate and the analysis note; the discovery ledger is a shared single-writer file appended by the Orchestrator at integration."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A Barcelona and Oslo metabolic-neurology review group (Hospital Sant Joan de Deu / MetabERN and Oslo University Hospital, from the affiliations) that also authored the cohort the review leans on. Narrative review: the outcome claims inherit the weakness of one retrospective cohort. Not a WWOX group; SUBSTITUTE for the BCAA axis (class level, not WWOX evidence). The cohort denominators and the authors' own limitation sections are weighed above the abstract's and Figure 3's framing."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND branched-chain amino acids",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-20"
+   },
+   {
+    "query": "BCKDK AND epilepsy",
+    "count": 7,
+    "source": "PubMed ESearch rettype=count 2026-10-20"
+   }
+  ],
+  "note": "PubMed counts, dated."
+ },
+ "multihop": {
+  "references_enumerated": 97,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "97 references enumerated from the saved page; none is WWOX-related (0 occurrences of WWOX, Wwox or WOX1 in the saved page text). Substitute row for the BCAA axis; the WWOX-locus leucine/isoleucine association named in the selection file is not discussed here."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42660645 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note; SUBSTITUTE rows carry no WWOX record by construction."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-20 via PubMed efetch for PMID 42660645: publication types ['Journal Article', 'Review']; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 97,
+   "references_screened": 94,
+   "references_with_doi": 94,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42660645_RibeiroConstante2026_PMC13521751_page20261020.html",
+   "sha256": "f30d2c612a0f55ff5c058c6900e67129421866d666aab208df7dd8da748f413c",
+   "kind": "article_text",
+   "note": "PMC13521751 article page (HTML) fetched on 2026-10-20 directly from pmc.ncbi.nlm.nih.gov with an empty User-Agent header (no Wayback capture exists for this 2026 deposit and no Europe PMC fullTextXML was available). Bronze: free to read; the page carries an all-rights-reserved notice, so the text is a local evidence copy only. Every text locator is matched against this surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13521751/",
+    "http_method": "GET",
+    "tier": "direct PMC page, empty User-Agent",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "f30d2c612a0f55ff5c058c6900e67129421866d666aab208df7dd8da748f413c"
+   }
+  },
+  {
+   "path": "files/figures/PMID42660645/JIMD-49-0-g003.webp",
+   "sha256": "a5b1d6257cafd963d58b01317aa09fcc413d09a8a7635f8820c28e583e4aae1c",
+   "kind": "figure",
+   "note": "Publisher file g003 = Figure 1 (BCAA catabolism and BCKDK/PP2Cm regulation) (PMC blob WEBP named in the saved article page), converted to PNG only for viewing and opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/0be4/13521751/c691a97efd50/JIMD-49-0-g003.webp",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the saved 2026 PMC page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "a5b1d6257cafd963d58b01317aa09fcc413d09a8a7635f8820c28e583e4aae1c"
+   }
+  },
+  {
+   "path": "files/figures/PMID42660645/JIMD-49-0-g002.webp",
+   "sha256": "e0cc5144bf035775b8dbd5925f5491637cda648eddd6536a8dc28cd473100643",
+   "kind": "figure",
+   "note": "Publisher file g002 = Figure 2 (mechanisms of neurological injury) (PMC blob WEBP named in the saved article page), converted to PNG only for viewing and opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/0be4/13521751/bffc32f9fda1/JIMD-49-0-g002.webp",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the saved 2026 PMC page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "e0cc5144bf035775b8dbd5925f5491637cda648eddd6536a8dc28cd473100643"
+   }
+  },
+  {
+   "path": "files/figures/PMID42660645/JIMD-49-0-g004.webp",
+   "sha256": "67c7f94fdbae0092970974df83f599ff8700d1d3b419d215d30bc02fec3756af",
+   "kind": "figure",
+   "note": "Publisher file g004 = Figure 3 (diagnostic and treatment algorithm) (PMC blob WEBP named in the saved article page), converted to PNG only for viewing and opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/0be4/13521751/611a1e18bae1/JIMD-49-0-g004.webp",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the saved 2026 PMC page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "67c7f94fdbae0092970974df83f599ff8700d1d3b419d215d30bc02fec3756af"
+   }
+  },
+  {
+   "path": "files/figures/PMID42660645/JIMD-49-0-g001.webp",
+   "sha256": "8ea4e2f603853a9e8abadeef05c16c018da4bab35d4fcf899e2bee5b4e9ef7a2",
+   "kind": "figure",
+   "note": "Publisher file g001 = Figure 4 (therapeutic strategies) (PMC blob WEBP named in the saved article page), converted to PNG only for viewing and opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/0be4/13521751/524254452219/JIMD-49-0-g001.webp",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the saved 2026 PMC page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "8ea4e2f603853a9e8abadeef05c16c018da4bab35d4fcf899e2bee5b4e9ef7a2"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE (substitute, BCAA axis). The dietary logic in BCKDK deficiency (high protein plus BCAA supplementation) is the reverse of maple syrup urine disease, where BCAAs are restricted, because the amino acids are depleted rather than accumulated; this is a class contrast, not a statement about WWOX.",
+    "snippet": "Unlike MSUD, where BCAAs must be strictly restricted, BCKDK deficiency requires a high‐protein diet and BCAA supplementation [3, 9].",
+    "anchor": "Introduction, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42660645_RibeiroConstante2026_PMC13521751_page20261020.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of BCKDK deficiency (about 31 reported patients, 20 families) with one retrospective cohort of 21 as the human outcome source; Bckdk knockout mouse and rat models; NOT a WWOX system",
+     "genotype": "BCKDK loss of function (class level: BCKDH over-activity, BCAA depletion); no WWOX",
+     "endpoint": "plasma BCAA, head circumference, motor function, autism occurrence"
+    }
+   },
+   {
+    "proposition": "The human outcome evidence behind the review rests on one retrospective cohort of 21 patients with variable follow-up and no controlled comparison.",
+    "snippet": "All outcome data derive from a single retrospective cohort of 21 patients with variable follow‐up and no controlled comparisons [9].",
+    "anchor": "Section 4.4, sentence 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42660645_RibeiroConstante2026_PMC13521751_page20261020.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of BCKDK deficiency (about 31 reported patients, 20 families) with one retrospective cohort of 21 as the human outcome source; Bckdk knockout mouse and rat models; NOT a WWOX system",
+     "genotype": "BCKDK loss of function (class level: BCKDH over-activity, BCAA depletion); no WWOX",
+     "endpoint": "plasma BCAA, head circumference, motor function, autism occurrence"
+    }
+   },
+   {
+    "proposition": "The authors state the evidence level as case-series level at best, with no prospective or dose-finding study.",
+    "snippet": "The evidence base remains Level 4 (case series) at best.",
+    "anchor": "Section 4.4, last sentence",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42660645_RibeiroConstante2026_PMC13521751_page20261020.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of BCKDK deficiency (about 31 reported patients, 20 families) with one retrospective cohort of 21 as the human outcome source; Bckdk knockout mouse and rat models; NOT a WWOX system",
+     "genotype": "BCKDK loss of function (class level: BCKDH over-activity, BCAA depletion); no WWOX",
+     "endpoint": "plasma BCAA, head circumference, motor function, autism occurrence"
+    }
+   },
+   {
+    "proposition": "The early-treatment benefit claim (no autism when treatment started before age 2) rests on three patients found through sibling screening, which the authors say carries ascertainment bias.",
+    "snippet": "The three early‐treated patients were identified through family screening after an older sibling's diagnosis, introducing ascertainment bias.",
+    "anchor": "Section 4.4, sentence 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42660645_RibeiroConstante2026_PMC13521751_page20261020.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of BCKDK deficiency (about 31 reported patients, 20 families) with one retrospective cohort of 21 as the human outcome source; Bckdk knockout mouse and rat models; NOT a WWOX system",
+     "genotype": "BCKDK loss of function (class level: BCKDH over-activity, BCAA depletion); no WWOX",
+     "endpoint": "plasma BCAA, head circumference, motor function, autism occurrence"
+    }
+   },
+   {
+    "proposition": "The abstract and Section 4.3 report that none of three early-treated patients developed autism, while the Figure 3 legend phrases the same observation as 'no patient treated before that age'; the legend adds that the result derives from a small cohort requiring confirmation.",
+    "snippet": "The critical window before age 2 for autism prevention is highlighted, based on the observation that no patient treated before that age developed ASD, though this derives from a small cohort requiring confirmation [9].",
+    "anchor": "Figure 3 legend, last sentence",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42660645_RibeiroConstante2026_PMC13521751_page20261020.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of BCKDK deficiency (about 31 reported patients, 20 families) with one retrospective cohort of 21 as the human outcome source; Bckdk knockout mouse and rat models; NOT a WWOX system",
+     "genotype": "BCKDK loss of function (class level: BCKDH over-activity, BCAA depletion); no WWOX",
+     "endpoint": "plasma BCAA, head circumference, motor function, autism occurrence"
+    }
+   },
+   {
+    "proposition": "The treatment regimen is empirical: no evidence-based fixed doses or ratios exist for individual BCAAs.",
+    "snippet": "However, no evidence‐based recommendations currently exist regarding fixed doses or ratios for individual BCAAs, and treatment should therefore be individualized [9].",
+    "anchor": "Section 4.1, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42660645_RibeiroConstante2026_PMC13521751_page20261020.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of BCKDK deficiency (about 31 reported patients, 20 families) with one retrospective cohort of 21 as the human outcome source; Bckdk knockout mouse and rat models; NOT a WWOX system",
+     "genotype": "BCKDK loss of function (class level: BCKDH over-activity, BCAA depletion); no WWOX",
+     "endpoint": "plasma BCAA, head circumference, motor function, autism occurrence"
+    }
+   },
+   {
+    "proposition": "Plasma correction may not reflect brain delivery: the authors say the plasma-brain gap has been characterised only in mice and is undemonstrated in humans.",
+    "snippet": "Whether plasma BCAA normalization translates to adequate cerebral delivery and restores different cell biology mechanisms that could be disrupted in this disease, is undemonstrated in humans; the plasma‐brain gap has been characterized only in murine models [20].",
+    "anchor": "Section 6.1, sentence 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42660645_RibeiroConstante2026_PMC13521751_page20261020.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of BCKDK deficiency (about 31 reported patients, 20 families) with one retrospective cohort of 21 as the human outcome source; Bckdk knockout mouse and rat models; NOT a WWOX system",
+     "genotype": "BCKDK loss of function (class level: BCKDH over-activity, BCAA depletion); no WWOX",
+     "endpoint": "plasma BCAA, head circumference, motor function, autism occurrence"
+    }
+   },
+   {
+    "proposition": "The motor and head-circumference outcome figures are fractions of treated patients with follow-up inside the 21-patient cohort (13 of 13 and 11 of 15).",
+    "snippet": "Motor function stabilized or improved in all treated patients with follow‐up (13/13), and head circumference stabilized or improved in 73% (11/15) [9].",
+    "anchor": "Section 4.3, sentence 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42660645_RibeiroConstante2026_PMC13521751_page20261020.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of BCKDK deficiency (about 31 reported patients, 20 families) with one retrospective cohort of 21 as the human outcome source; Bckdk knockout mouse and rat models; NOT a WWOX system",
+     "genotype": "BCKDK loss of function (class level: BCKDH over-activity, BCAA depletion); no WWOX",
+     "endpoint": "plasma BCAA, head circumference, motor function, autism occurrence"
+    }
+   },
+   {
+    "proposition": "The review's 31-patient total is a sum of three source reports (21 + six + four); the non-overlap of those reports was not tested here.",
+    "snippet": "Additional cases include six patients from the original report [4] and four patients from Iran [10].",
+    "anchor": "Introduction, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42660645_RibeiroConstante2026_PMC13521751_page20261020.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of BCKDK deficiency (about 31 reported patients, 20 families) with one retrospective cohort of 21 as the human outcome source; Bckdk knockout mouse and rat models; NOT a WWOX system",
+     "genotype": "BCKDK loss of function (class level: BCKDH over-activity, BCAA depletion); no WWOX",
+     "endpoint": "plasma BCAA, head circumference, motor function, autism occurrence"
+    }
+   },
+   {
+    "proposition": "Newborn screening feasibility is argued from retrospective dried-blood-spot values; the authors list the overlap of the low tail of normal with affected values as an unresolved challenge.",
+    "snippet": "However, screening for low BCAAs poses specific challenges. The lower tail of the normal BCAA distribution overlaps with values in affected neonates, influenced by gestational age, birth weight, feeding status, and sample timing [46].",
+    "anchor": "Section 5.5, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42660645_RibeiroConstante2026_PMC13521751_page20261020.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of BCKDK deficiency (about 31 reported patients, 20 families) with one retrospective cohort of 21 as the human outcome source; Bckdk knockout mouse and rat models; NOT a WWOX system",
+     "genotype": "BCKDK loss of function (class level: BCKDH over-activity, BCAA depletion); no WWOX",
+     "endpoint": "plasma BCAA, head circumference, motor function, autism occurrence"
+    }
+   },
+   {
+    "proposition": "Therapies other than diet (partial BCKDH suppression, BDK stabilisers, gene therapy, RNA therapies, neuroprotective adjuncts) are preclinical or conceptual for BCKDK deficiency; the Figure 4 legend says the adjuncts have not been tested in BCKDK deficiency.",
+    "snippet": "These have not been tested in BCKDK deficiency and are proposed based on mechanistic rationale.",
+    "anchor": "Figure 4 legend, last sentence",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42660645_RibeiroConstante2026_PMC13521751_page20261020.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of BCKDK deficiency (about 31 reported patients, 20 families) with one retrospective cohort of 21 as the human outcome source; Bckdk knockout mouse and rat models; NOT a WWOX system",
+     "genotype": "BCKDK loss of function (class level: BCKDH over-activity, BCAA depletion); no WWOX",
+     "endpoint": "plasma BCAA, head circumference, motor function, autism occurrence"
+    }
+   },
+   {
+    "proposition": "One preclinical proof-of-concept is cited for partial BCKDH suppression: a mouse genetic cross, not a drug in patients.",
+    "snippet": "raised plasma BCAAs significantly without toxic BCKA accumulation, establishing that approximately 50% reduction in BCKDH flux occupies a viable pharmacological space",
+    "anchor": "Section 5.1, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42660645_RibeiroConstante2026_PMC13521751_page20261020.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of BCKDK deficiency (about 31 reported patients, 20 families) with one retrospective cohort of 21 as the human outcome source; Bckdk knockout mouse and rat models; NOT a WWOX system",
+     "genotype": "BCKDK loss of function (class level: BCKDH over-activity, BCAA depletion); no WWOX",
+     "endpoint": "plasma BCAA, head circumference, motor function, autism occurrence"
+    }
+   },
+   {
+    "proposition": "The review's differential diagnosis for low BCAAs lists malnutrition, liver disease and dihydrolipoamide dehydrogenase deficiency, with SLC7A5 deficiency and UBE3B deficiency as overlapping phenotypes; no WWOX-locus metabolite or gene is discussed.",
+    "snippet": "Differential diagnosis includes other causes of low BCAAs (malnutrition, liver disease, dihydrolipoamide dehydrogenase deficiency) and overlapping phenotypes (SLC7A5 deficiency, Kaufman oculocerebrofacial syndrome/UBE3B deficiency).",
+    "anchor": "Figure 3 legend, Panel A",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42660645_RibeiroConstante2026_PMC13521751_page20261020.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of BCKDK deficiency (about 31 reported patients, 20 families) with one retrospective cohort of 21 as the human outcome source; Bckdk knockout mouse and rat models; NOT a WWOX system",
+     "genotype": "BCKDK loss of function (class level: BCKDH over-activity, BCAA depletion); no WWOX",
+     "endpoint": "plasma BCAA, head circumference, motor function, autism occurrence"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 3 (publisher file g004): Panel B bottom box states 'Therapeutic window: Initiate before age 2 years to prevent autism manifestation' as a prevention rule, whereas the legend and text hedge it as a three-patient observation. The figure is a schematic with no data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3 Panel B bottom red box reads 'Therapeutic window: Initiate before age 2 years to prevent autism manifestation'.",
+    "anchor": "Figure 3, Panel B, bottom box, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42660645/JIMD-49-0-g004.webp",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative review of BCKDK deficiency (about 31 reported patients, 20 families) with one retrospective cohort of 21 as the human outcome source; Bckdk knockout mouse and rat models; NOT a WWOX system",
+     "genotype": "BCKDK loss of function (class level: BCKDH over-activity, BCAA depletion); no WWOX",
+     "endpoint": "plasma BCAA, head circumference, motor function, autism occurrence"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 2 (publisher file g002): the schematic's key states that solid arrows are established mechanisms and dashed arrows hypothesised or partially characterised; it is a schematic with no data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2 bottom-right key reads 'Solid arrows: established mechanisms; dashed arrows: hypothesized/partially characterized pathways'.",
+    "anchor": "Figure 2, key box, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42660645/JIMD-49-0-g002.webp",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative review of BCKDK deficiency (about 31 reported patients, 20 families) with one retrospective cohort of 21 as the human outcome source; Bckdk knockout mouse and rat models; NOT a WWOX system",
+     "genotype": "BCKDK loss of function (class level: BCKDH over-activity, BCAA depletion); no WWOX",
+     "endpoint": "plasma BCAA, head circumference, motor function, autism occurrence"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Direct PMC page https://pmc.ncbi.nlm.nih.gov/articles/PMC13521751/ returned HTTP 200 with an empty User-Agent on 2026-10-20 (305 kB); no supplementary material is linked from the page.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

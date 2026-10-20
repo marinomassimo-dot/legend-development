@@ -1,0 +1,653 @@
+{
+ "schema_version": 2,
+ "pmid": "38074073",
+ "doi": "10.1093/braincomms/fcad243",
+ "receipt": "FTR-20261019-38074073-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/wave4_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-W4B-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named from wave-1 reading debts and deduplicated by the per-paper M0 packet and the receipt status check run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate and the analysis note; the discovery ledger is a shared single-writer file appended by the Orchestrator at integration."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "An Indian paediatric neurology and commercial genetics collaboration (Jaipur and Pune hospitals with a genetics laboratory, from the affiliations; the laboratory authors are co-affiliated with the genetic test provider). Prospective single-centre cohort, not a WWOX group; WWOX appears as three case rows. The case-level tables are weighed above the discussion framing; group comparisons carry the outcome-definition and assessment-bias caveats recorded."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND early infantile epileptic encephalopathy",
+    "count": 12,
+    "source": "PubMed ESearch rettype=count 2026-10-20"
+   },
+   {
+    "query": "WWOX AND India",
+    "count": 10,
+    "source": "PubMed ESearch rettype=count 2026-10-20"
+   },
+   {
+    "query": "WOREE AND homozygous deletion",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-20"
+   }
+  ],
+  "note": "PubMed counts, dated."
+ },
+ "multihop": {
+  "references_enumerated": 34,
+  "gene_direct_refs_in_source": [
+   "30356099",
+   "33196034"
+  ],
+  "resolved": [
+   {
+    "pmid": "30356099",
+    "state": "deep-dive manifest in the repository (Piard 2019 WOREE cohort)"
+   }
+  ],
+  "queued": [
+   {
+    "pmid": "33196034",
+    "queue": "proposed in CC-20261019-SCIENTISTD-W4B-01; no FT identifier minted by a Scientist",
+    "note": "Surana 2020 Indian infantile-spasms aetiology cohort; cited by this paper Table 4 for the WWOX deletion row and for previously published cohort members"
+   }
+  ],
+  "note": "34 references enumerated; two cite WWOX literature (Piard 2019, Tarta-Arsene 2017), both outside this session's read scope and queue-checked. WWOX occurs 8 times in the XML (Table 1 rows 7 and 8, Table 4 row 50, the Discussion sentence, two reference titles; plus the Figure 2 label read from the image)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 38074073 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note; SUBSTITUTE rows carry no WWOX record by construction."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-20 via PubMed efetch for PMID 38074073: publication types ['Journal Article']; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 34,
+   "references_screened": 33,
+   "references_with_doi": 33,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38074073_Agarwala2023_PMC10702464.xml",
+   "sha256": "d81b42f814d615309766c5ca40672b23a85cba097d51def8b6a5a0a8bc0ecc65",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC10702464 (CC BY 4.0): original prospective cohort: abstract, Methods, four tables, seven figures plus graphical abstract, 34 references. Every text locator is matched against this surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10702464/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "d81b42f814d615309766c5ca40672b23a85cba097d51def8b6a5a0a8bc0ecc65"
+   }
+  },
+  {
+   "path": "files/supplements/PMID38074073/fcad243_Supplementary_Data.docx",
+   "sha256": "763a2d4bbcfa1879b3384e8af0c5e551c4da2714cb0b281af46e9122128ba8ea",
+   "kind": "supplement_binary",
+   "note": "Supplementary Data (DOCX, test methodology for exome sequencing, microarray and references) from the Europe PMC supplementaryFiles container of PMC10702464 (member extracted unchanged); text read after unpacking the DOCX.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10702464/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "763a2d4bbcfa1879b3384e8af0c5e551c4da2714cb0b281af46e9122128ba8ea"
+   }
+  },
+  {
+   "path": "files/figures/PMID38074073/fcad243f1.jpg",
+   "sha256": "6211062ef7ac8c85681a4aba587fcbe19947af2982039c7d52546b67ca953e64",
+   "kind": "figure",
+   "note": "Figure 1 JPEG (recruitment and genetic evaluation flowchart) (PMC blob JPEG named in the archived article page), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/6f9e/10702464/08015302af16/fcad243f1.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "6211062ef7ac8c85681a4aba587fcbe19947af2982039c7d52546b67ca953e64"
+   }
+  },
+  {
+   "path": "files/figures/PMID38074073/fcad243f2.jpg",
+   "sha256": "b826112356ba1b004dd0bc1a29a828670189d03530303dd050020154ec6a9eb5",
+   "kind": "figure",
+   "note": "Figure 2 JPEG (aetiology tree of the 80-patient cohort) (PMC blob JPEG named in the archived article page), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/6f9e/10702464/25843b396242/fcad243f2.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "b826112356ba1b004dd0bc1a29a828670189d03530303dd050020154ec6a9eb5"
+   }
+  },
+  {
+   "path": "files/figures/PMID38074073/fcad243f3.jpg",
+   "sha256": "cf45ff29cb68bd3cdadc378046ae0e6a5bdc6ae9bde0440e044d1abfeb5e66b3",
+   "kind": "figure",
+   "note": "Figure 3 JPEG (seizure onset, seizure types and later infantile spasms by aetiology) (PMC blob JPEG named in the archived article page), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/6f9e/10702464/1cd35122e6fc/fcad243f3.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "cf45ff29cb68bd3cdadc378046ae0e6a5bdc6ae9bde0440e044d1abfeb5e66b3"
+   }
+  },
+  {
+   "path": "files/figures/PMID38074073/fcad243f4.jpg",
+   "sha256": "cb5d53260e61c9133bf87fb7238bd5b9ed245fa866c342e4ad87771da922dd1a",
+   "kind": "figure",
+   "note": "Figure 4 JPEG (tone abnormality and movement disorder by aetiology) (PMC blob JPEG named in the archived article page), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/6f9e/10702464/8114abaa298a/fcad243f4.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "cb5d53260e61c9133bf87fb7238bd5b9ed245fa866c342e4ad87771da922dd1a"
+   }
+  },
+  {
+   "path": "files/figures/PMID38074073/fcad243f5.jpg",
+   "sha256": "a345a772c06d5d2671dc3d8aee6542f005a7799f781b8426348d6b238409aaf0",
+   "kind": "figure",
+   "note": "Figure 5 JPEG (genetic test yield by method and time to diagnosis by year) (PMC blob JPEG named in the archived article page), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/6f9e/10702464/78d8639e2cf4/fcad243f5.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "a345a772c06d5d2671dc3d8aee6542f005a7799f781b8426348d6b238409aaf0"
+   }
+  },
+  {
+   "path": "files/figures/PMID38074073/fcad243f6.jpg",
+   "sha256": "b79205c84ee93825820f333e045f27e7716c9dd714730fb43b9a827644cfc432",
+   "kind": "figure",
+   "note": "Figure 6 JPEG (developmental delay and autistic behaviour by aetiology) (PMC blob JPEG named in the archived article page), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/6f9e/10702464/179500e0ebb1/fcad243f6.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "b79205c84ee93825820f333e045f27e7716c9dd714730fb43b9a827644cfc432"
+   }
+  },
+  {
+   "path": "files/figures/PMID38074073/fcad243f7.jpg",
+   "sha256": "e73d621e0bb9c11585fd988c7e7a97b369cde1df12eb4c7087b801ca5a2aec29",
+   "kind": "figure",
+   "note": "Figure 7 JPEG (seizure control pie, bar by aetiology and Kaplan-Meier curves) (PMC blob JPEG named in the archived article page), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/6f9e/10702464/7880f17ae82a/fcad243f7.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "e73d621e0bb9c11585fd988c7e7a97b369cde1df12eb4c7087b801ca5a2aec29"
+   }
+  },
+  {
+   "path": "files/figures/PMID38074073/fcad243_ga1.jpg",
+   "sha256": "8b3a77d05747f0c69c1edc89f19a11b9c5effd5dcfdae2ba8c39ae34e81d8b11",
+   "kind": "figure",
+   "note": "Graphical abstract JPEG (PMC blob JPEG named in the archived article page), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/6f9e/10702464/64a34d8799e9/fcad243_ga1.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "8b3a77d05747f0c69c1edc89f19a11b9c5effd5dcfdae2ba8c39ae34e81d8b11"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "WWOX-DIRECT (class-level case row, 1 of 3). One cohort member with seizure onset at 4 days and a thin corpus callosum carries a homozygous WWOX nonsense variant c.790C>T (p.Arg264Ter).",
+    "snippet": "7 | 4/M | Thin corpus callosum | Genetic | NM_016373.4 | WWOX | c.790C>T (p.Arg264Ter) | Homozygous/parents heterozygous | PMID: 30356099",
+    "anchor": "Table 1, row 7",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID38074073_Agarwala2023_PMC10702464.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   },
+   {
+    "proposition": "WWOX-DIRECT (case row 2 of 3). A second cohort member with seizure onset at 21 days and a normal neuroimaging entry carries the same homozygous c.790C>T (p.Arg264Ter); whether the two cases come from related families is not stated, and a normal neuroimaging entry is recorded for this case.",
+    "snippet": "8 | 21/M | Normal | Genetic | NM_016373.4 | WWOX | c.790C>T (p.Arg264Ter) | Homozygous/parents heterozygous | PMID: 30356099",
+    "anchor": "Table 1, row 8",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID38074073_Agarwala2023_PMC10702464.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   },
+   {
+    "proposition": "WWOX-DIRECT (case row 3 of 3). A third cohort member with onset at 27 days and cerebral atrophy has a homozygous deletion within 16q23.1 (positions 78185124 to 78206556, assembly not stated), found by comparative genomic hybridisation array and classed pathogenic; the Literature cell cites the same PMID the tables use for previously published cohort members.",
+    "snippet": "50 | 27/F | Cerebral atrophy | Genetic | cGH arraya | WWOX gene deletion | 16q23.1 (78185124–78206556) ×0 | Homozygous | Pathogenic | PMID: 33196034",
+    "anchor": "Table 4, row 50",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID38074073_Agarwala2023_PMC10702464.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   },
+   {
+    "proposition": "The authors state WWOX has been increasingly recognised as an important cause of EIDEE and was seen in some of their patients; the sentence carries no count.",
+    "snippet": "WWOX has been increasingly recognized as an important cause of EIDEE,30,31 as was also seen in some of our patients.",
+    "anchor": "Discussion, paragraph 12",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38074073_Agarwala2023_PMC10702464.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   },
+   {
+    "proposition": "The Methods route array testing to patients who remained undiagnosed after next-generation sequencing (or had lissencephaly), so the array-detected WWOX deletion was found after sequencing-based testing; whether exome-based copy-number calling was applied to this case is not stated per case (INFERENCE, hedged).",
+    "snippet": "In patients who remained without an aetiological diagnosis after NGS (Fig. 1) or had lissencephaly, the array comparative genomic hybridization (aCGH) analysis (Affymetrix CytoScan™ 750K) or Global Screening Array (cytoarray) with Cytogenetics (GSA Cyto) was performed.",
+    "anchor": "Methods, Genetic evaluation, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38074073_Agarwala2023_PMC10702464.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   },
+   {
+    "proposition": "Outcomes are reported per aetiological group, not per gene: the follow-up paragraph gives only cohort-level drug resistance, so no WWOX-specific seizure outcome, death, number of antiseizure medications or developmental outcome is reported for the three WWOX cases.",
+    "snippet": "At last follow-up contact, 60% patients still had drug-resistant epilepsy (Fig. 7A).",
+    "anchor": "Results, Follow-up outcome, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38074073_Agarwala2023_PMC10702464.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE (cohort-level DEE aetiology). All eleven metabolic aetiologies in the cohort were vitamin responsive, so the treatable cofactor causes this work-up found were pyridoxine-dependent epilepsy, biotinidase deficiency and pyridoxal phosphate deficiency; the paper reports no folate-related diagnosis.",
+    "snippet": "‘Eleven patients had a metabolic aetiology, and all of these were VR, and therefore, the metabolic group will be considered “EIDEE-VR” from here on in the paper’.",
+    "anchor": "Results, Patient profile, last sentence",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38074073_Agarwala2023_PMC10702464.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   },
+   {
+    "proposition": "The metabolic screen was a basic panel of lactate, ammonia and blood tandem mass spectrometry for 49 inborn errors, applied to 41 of 80 patients; no CSF, folate, creatine or CoQ10 testing is described, so the study cannot say what a negative cofactor screen excludes beyond the vitamins tried.",
+    "snippet": "Patients (except those with a malformation or dysplasia) also had a basic metabolic screening that included serum lactate, blood ammonia and blood tandem mass spectrometry for 49 common inborn errors of metabolism",
+    "anchor": "Methods, Initial investigations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38074073_Agarwala2023_PMC10702464.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   },
+   {
+    "proposition": "Metabolic screening was abnormal in three of 41 tested patients, all biotinidase deficiency confirmed by enzyme assay, and the authors say these results only reconfirmed strong clinical suspicion.",
+    "snippet": "‘Metabolic screening’ was done in 41 patients. Three of these 41 patients had abnormal results, subsequently diagnosed with biotinidase deficiency on enzyme assay.",
+    "anchor": "Results, Initial investigations, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38074073_Agarwala2023_PMC10702464.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   },
+   {
+    "proposition": "Folinic acid appears only in the Introduction's list of vitamins that may be trialled; the Results report no folinic acid trial or folate-responsive diagnosis.",
+    "snippet": "a therapeutic trial of specific vitamins namely pyridoxine, pyridoxal 5′-phosphate (P5′-P), folinic acid and/or biotin.",
+    "anchor": "Introduction, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38074073_Agarwala2023_PMC10702464.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   },
+   {
+    "proposition": "The unknown group is defined as patients with normal MRI, metabolic and genetic evaluation and no response to a pyridoxine or P5'-P trial, so vitamin responsiveness and non-responsiveness define the groups the outcome is then compared across.",
+    "snippet": "EIDEE-unknown (normal cranial MRI, metabolic and genetic evaluation with no response to trial of pyridoxine and/or P5′-P).",
+    "anchor": "Methods, Aetiological classification",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38074073_Agarwala2023_PMC10702464.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   },
+   {
+    "proposition": "The regression result that only the vitamin-responsive diagnosis predicts seizure control is partly definitional given those group definitions, rests on 80 patients with three covariates, and reports no effect size or interval in the text.",
+    "snippet": "Among all these factors, only a diagnosis of EIDEE-VR had a statistically significant positive effect on seizure control (P = 0.02).",
+    "anchor": "Results, Follow-up outcome, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38074073_Agarwala2023_PMC10702464.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   },
+   {
+    "proposition": "A normal genetic evaluation does not exclude a vitamin-responsive cause: in three patients with pyridoxine-dependent epilepsy a normal genetic result led to stopping pyridoxine and seizures recurred in all three.",
+    "snippet": "On the contrary, in three patients with PDE, a normal genetic evaluation prompted us to discontinue pyridoxine, resulting in seizure recurrence in all three.",
+    "anchor": "Results, Impact of genetically informed management",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38074073_Agarwala2023_PMC10702464.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   },
+   {
+    "proposition": "The authors recommend a pyridoxine trial for severe epilepsy in the first three months of life, more so in the first week, when history and early investigations give no cause.",
+    "snippet": "Our data reiterate that if a child presents with severe epilepsy in first three months of life, more so in the first week of life with no identified cause from history or early investigations (specifically metabolic screen and neuroimaging), a trial of pyridoxine is warranted.",
+    "anchor": "Discussion, paragraph 15",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38074073_Agarwala2023_PMC10702464.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   },
+   {
+    "proposition": "The 14 percent vitamin-responsive share is a lower bound under the authors' own exclusion of children presenting with acute metabolic crises, and patients with infantile epileptic spasms as the first presentation were also not included.",
+    "snippet": "We had excluded IEM patients who had presented with acute reactive seizures, which could have contributed to rarity of these disorders in our cohort.",
+    "anchor": "Discussion, paragraph 15",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38074073_Agarwala2023_PMC10702464.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   },
+   {
+    "proposition": "The 69 percent molecular diagnostic yield counts variants of uncertain significance with strong clinical match as causative (10 of the 53 diagnoses), so it is not a pathogenic-variant yield.",
+    "snippet": "‘All pathogenic, likely pathogenic and variants of unknown significance (VUS) with strong clinical match were considered causative for an underlying genetic aetiology’.",
+    "anchor": "Methods, Genetic evaluation, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38074073_Agarwala2023_PMC10702464.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   },
+   {
+    "proposition": "The Figure 5 legend gives the singleton/trio exome versus targeted-panel yield comparison as P = 0.2 (chi-square 0.65), whereas the Results text gives P = 0.4 for the same comparison.",
+    "snippet": "Two-sample proportion test was used to evaluate the difference in effectiveness between singleton/trio exome sequencing and targeted clinical exome panel (χ2 = 0.65; P-value = 0.2).",
+    "anchor": "Figure 5 legend, panel A",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38074073_Agarwala2023_PMC10702464.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   },
+   {
+    "proposition": "The Results text states the yield comparison as not significant with P = 0.4.",
+    "snippet": "When the different genetic testing strategies were compared, the difference in yield between singleton ES/trio ES and targeted clinical exome panel (Fig. 5A) was not statistically significant (P-value = 0.4).",
+    "anchor": "Results, Genetic evaluation, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38074073_Agarwala2023_PMC10702464.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   },
+   {
+    "proposition": "Severe developmental delay was assigned on the treating neurologist's clinical judgement to children who could not be tested, and the authors concede autism may have been over-diagnosed, so the large odds ratios for severe delay (57) and autistic behaviour (37) carry outcome-assessment bias.",
+    "snippet": "Children who could not be assessed due to significant neurodevelopmental issues were considered to have severe delay based on clinical assessment by the treating paediatric neurologist.",
+    "anchor": "Methods, Follow-up data",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38074073_Agarwala2023_PMC10702464.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   },
+   {
+    "proposition": "The authors concede that autism may have been over-diagnosed in children with severe to profound delay.",
+    "snippet": "it was difficult to differentiate behaviours of a child with severe to profound delay from autistic behaviours and therefore, autism may have been over-diagnosed.",
+    "anchor": "Discussion, limitations paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38074073_Agarwala2023_PMC10702464.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   },
+   {
+    "proposition": "Genetic diagnosis changed treatment in seven of 77 tested patients (9 percent), all sodium channel blocker or quinidine decisions.",
+    "snippet": "Achieving a genetic diagnosis was helpful in better treatment guidance in seven (9%) of the 77 patients tested.",
+    "anchor": "Results, Impact of genetically informed management",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38074073_Agarwala2023_PMC10702464.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   },
+   {
+    "proposition": "The Supplementary Data are the test methodology only (exome, copy-number calling from exome data with a minimum detectable size of 400 bp, microarray); no per-case clinical table or outcome is supplied there.",
+    "snippet": "Copy number variants (CNVs) were detected from targeted sequence data using the ExomeDepth (v1.1.10) method.",
+    "anchor": "Supplementary Data, Test methodology",
+    "surface": "supplement",
+    "artifact": "files/supplements/PMID38074073/fcad243_Supplementary_Data.docx",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 2: the aetiology tree places WWOX under the genetic branch in a bracket with KCNQ2 labelled N=3 (STXBP1 N=5 is the largest single gene; KCNT1, SCN1A and CNPY3 N=2); the tree counts the CNPY3 variants, which Table 3 classes as of uncertain significance, in the genetic group of 40.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2 genetic branch shows STXBP1 N=5, WWOX and KCNQ2 bracketed N=3, KCNT1 SCN1A CNPY3 bracketed N=2.",
+    "anchor": "Figure 2, genetic branch, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38074073/fcad243f2.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 7: the bar panel gives vitamin-responsive seizure control as 91 percent, which is 10 of 11, whereas the Results text gives 9 of 11 (6 of 7 pyridoxine-dependent plus 3 of 3 biotinidase deficiency) and does not mention the pyridoxal phosphate patient; the Kaplan-Meier panel plots time in days to 90 with the vitamin-responsive curve reaching zero near day 45, a quantity not defined against the pie and bar panels or the text's median age of 10 months at seizure freedom.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7 bar panel labels VR* 91%, Genetic 25%, Structural 40%, Unknown 43%; the Kaplan-Meier panel x-axis is Days to 100 and the VR curve ends at 0.00 near day 45.",
+    "anchor": "Figure 7, bar and Kaplan-Meier panels, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38074073/fcad243f7.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 1: the flowchart sums to 77 genetically evaluated (32 before 2019 by targeted panel, 41 since 2019 by exome, 2 tuberous sclerosis (TSC1/TSC2 testing; the Sanger method is stated in the Methods, not the figure), 2 lissencephaly arrays) and 53 diagnoses (14 + 33 + 3 + 1 + 2), consistent with the Results.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 boxes read 'Genetic Evaluation (N=77)', 'Targeted Clinical Exome panel (Diagnosed=14)', 'Singleton/Trio Exome (N=60) (Diagnosed=33)', 'aCGH/Cytoarray (Diagnosed=3)'.",
+    "anchor": "Figure 1, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38074073/fcad243f1.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 5: panel A gives yields of 14 percent for microarray (4 of 29), 44 percent for the targeted panel (14 of 32) and 55 percent for singleton or trio exome (33 of 60); the comparison box reads P = 0.2, and panel B gives age at genetic diagnosis and time to diagnosis falling after 2019 with P = 0.003 and P < 0.0001.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5A bars read Microarray 14% 4/29, Targeted exome panel 44% 14/32, Singleton/Trio ES 55% 33/60; the box reads 'p-value = 0.2'.",
+    "anchor": "Figure 5, panel A, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38074073/fcad243f5.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 3: seizure onset by age band and aetiology, seizure type counts (tonic 54, clonic 58, myoclonic 25, automatism 6, sequential 5, migrating partial 3) and later infantile spasm by aetiology (genetic 35 percent, unknown 50, structural 20, vitamin responsive 0); no WWOX-specific panel.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3 shows 'Initial Seizures Types' bars Tonic 54, Clonic 58, Myoclonic 25, Automatism 6, Sequential 5, Migrating Partial 3.",
+    "anchor": "Figure 3, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38074073/fcad243f3.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figures 4 and 6 and the graphical abstract: bar and chart panels of tone, movement disorder, developmental delay and autistic behaviour by aetiological group, the graphical abstract adding the group shares (50 percent genetic, 18.8 structural, 13.8 vitamin responsive, 17.5 unknown) and a time-to-diagnosis trend; none shows a WWOX subset.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] The graphical abstract lists '50%, Genetic', '18.8%, Structural', '13.8%, Vitamin Responsive' and '17.5%, Unknown'.",
+    "anchor": "Graphical abstract, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38074073/fcad243_ga1.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "prospective single-centre cohort of 80 children with seizure onset before 3 months (early-infantile developmental and epileptic encephalopathy, EIDEE), Jaipur, India, recruited 2016-2021, follow-up mean 30 months; three cohort members carry biallelic WWOX loss (two homozygous nonsense, one homozygous deletion), the rest are other aetiologies",
+     "genotype": "WWOX biallelic loss in 3 of 80 (case-level rows in Tables 1 and 4); the aetiology comparisons are cohort-level and not WWOX-specific",
+     "endpoint": "aetiology distribution, genetic yield, phenotype contrasts between groups, seizure control at last follow-up"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML for PMC10702464 returned HTTP 200 on 2026-10-20 (open access, CC BY 4.0); the supplementaryFiles zip carried the DOCX and the figure JPEGs; the Internet Archive capture supplied the PMC blob figure URLs.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

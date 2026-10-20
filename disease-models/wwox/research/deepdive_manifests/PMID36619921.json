@@ -1,0 +1,555 @@
+{
+ "schema_version": 2,
+ "pmid": "36619921",
+ "doi": "10.3389/fneur.2022.1049850",
+ "receipt": "FTR-20261019-36619921-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/wave4_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-W4B-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named from wave-1 reading debts and deduplicated by the per-paper M0 packet and the receipt status check run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate and the analysis note; the discovery ledger is a shared single-writer file appended by the Orchestrator at integration."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A Brazilian neurogenetics and neurometabolic collaboration (Fortaleza, Sao Paulo, Porto Alegre, from the affiliations) writing a practice review; narrative review of cohorts and case series, not a primary data group; not a WWOX group. SUBSTITUTE for the bile acid axis (class level, not WWOX evidence). The review's internal frequency and criteria inconsistencies are recorded; its genotype tables and clinical frequencies are weighed below the retrospective cohorts they cite."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND bile acid",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-20"
+   },
+   {
+    "query": "CYP27A1 AND epilepsy",
+    "count": 19,
+    "source": "PubMed ESearch rettype=count 2026-10-20"
+   },
+   {
+    "query": "cerebrotendinous xanthomatosis AND developmental and epileptic encephalopathy",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-20"
+   }
+  ],
+  "note": "PubMed counts, dated."
+ },
+ "multihop": {
+  "references_enumerated": 77,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "77 references enumerated from the JATS; none is WWOX-related (0 occurrences of WWOX, Wwox or WOX1 counted in this session). Substitute row for the bile acid axis."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 36619921 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note; SUBSTITUTE rows carry no WWOX record by construction."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-20 via PubMed efetch for PMID 36619921: publication types ['Journal Article', 'Review']; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 77,
+   "references_screened": 76,
+   "references_with_doi": 76,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID36619921_Nobrega2022_PMC9816572.xml",
+   "sha256": "375e27e2dbf783774b3d3d473695865c5d0609e41e873d8e3ca572c899dec89a",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC9816572 (CC BY 4.0): practice review: abstract, three tables, six figures, 77 references. Every text locator is matched against this surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9816572/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "375e27e2dbf783774b3d3d473695865c5d0609e41e873d8e3ca572c899dec89a"
+   }
+  },
+  {
+   "path": "files/figures/PMID36619921/fneur-13-1049850-g0001.jpg",
+   "sha256": "0994ae2df82e642c499fd1fdbfaa6353dec78a42b3d2f98bbdeaf848c5e8f806",
+   "kind": "figure",
+   "note": "Publisher file g0001, attached to the Figure 1 caption on the PMC page but showing the symptom and sign timeline (the content of the Figure 2 legend) (PMC blob JPEG named in the archived article page), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/da26/9816572/74ef28e58ea5/fneur-13-1049850-g0001.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "0994ae2df82e642c499fd1fdbfaa6353dec78a42b3d2f98bbdeaf848c5e8f806"
+   }
+  },
+  {
+   "path": "files/figures/PMID36619921/fneur-13-1049850-g0002.jpg",
+   "sha256": "e0592745d5673ed2cb0f61e6aa14af094a602152dae90cf650d672feb1f621e5",
+   "kind": "figure",
+   "note": "Publisher file g0002, attached to the Figure 2 caption on the PMC page but showing the bile acid pathway scheme (the content of the Figure 1 legend) (PMC blob JPEG named in the archived article page), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/da26/9816572/50d2dc00432e/fneur-13-1049850-g0002.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "e0592745d5673ed2cb0f61e6aa14af094a602152dae90cf650d672feb1f621e5"
+   }
+  },
+  {
+   "path": "files/figures/PMID36619921/fneur-13-1049850-g0003.jpg",
+   "sha256": "79e6f7b55eec6baf97ab6b1b3b883897366a7f8ce0a4f509122155f719aec6fb",
+   "kind": "figure",
+   "note": "Publisher file g0003 = Figure 3 (clinical photographs of tendon xanthoma and pes cavus) (PMC blob JPEG named in the archived article page), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/da26/9816572/cc7df892847f/fneur-13-1049850-g0003.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "79e6f7b55eec6baf97ab6b1b3b883897366a7f8ce0a4f509122155f719aec6fb"
+   }
+  },
+  {
+   "path": "files/figures/PMID36619921/fneur-13-1049850-g0004.jpg",
+   "sha256": "7432151c2cd716dde2e4cb81864594e32ceaf7291872b14ea9a1d608f1d098e4",
+   "kind": "figure",
+   "note": "Publisher file g0004 = Figure 4 (brain MRI panels A-J) (PMC blob JPEG named in the archived article page), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/da26/9816572/8cddcf5cb229/fneur-13-1049850-g0004.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "7432151c2cd716dde2e4cb81864594e32ceaf7291872b14ea9a1d608f1d098e4"
+   }
+  },
+  {
+   "path": "files/figures/PMID36619921/fneur-13-1049850-g0005.jpg",
+   "sha256": "d05bf2235981a64ac3569322e33e4fb6e3f45fc19f6d5ef1fd9f094881248fc4",
+   "kind": "figure",
+   "note": "Publisher file g0005 = Figure 5 (cerebellar MRI patterns A-H) (PMC blob JPEG named in the archived article page), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/da26/9816572/f3ddf87f2fdc/fneur-13-1049850-g0005.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "d05bf2235981a64ac3569322e33e4fb6e3f45fc19f6d5ef1fd9f094881248fc4"
+   }
+  },
+  {
+   "path": "files/figures/PMID36619921/fneur-13-1049850-g0006.jpg",
+   "sha256": "b9c0b4f7c7cf636d9652c61a245db46ad6838a5e6f209ddc20bee9b50ac19cb8",
+   "kind": "figure",
+   "note": "Publisher file g0006 = Figure 6 (spinal CTX MRI panels A-K) (PMC blob JPEG named in the archived article page), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/da26/9816572/5eed642aa1da/fneur-13-1049850-g0006.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "b9c0b4f7c7cf636d9652c61a245db46ad6838a5e6f209ddc20bee9b50ac19cb8"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE (substitute, bile acid axis; DEE work-up screening logic). Epilepsy is only a moderate indicator (25 points) in the Mignarri suspicion index, below the 100-point level that triggers plasma cholestanol testing, so seizures alone do not trigger CTX testing under this index.",
+    "snippet": "“Moderate indicator” (C) is attributable to individual score of 25 and given to early osteoporosis (C1), and/or epilepsy (C2), parkinsonism (C3), and polyneuropathy (C4)",
+    "anchor": "Section 3, Mignarri index paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36619921_Nobrega2022_PMC9816572.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative practice review of cerebrotendinous xanthomatosis (CTX, CYP27A1 sterol 27-hydroxylase deficiency, bile acid synthesis disorder), drawing on retrospective cohorts, case series and one rat feeding study; NOT a WWOX system",
+     "genotype": "biallelic CYP27A1 variants (class level); no WWOX",
+     "endpoint": "clinical frequencies, diagnostic criteria, plasma cholestanol, CDCA treatment outcomes, MRI patterns"
+    }
+   },
+   {
+    "proposition": "The cholestanol-testing trigger in the same index is a total score of 100 or more.",
+    "snippet": "Plasma cholestanol level assessment is indicated in patients with Mignarri scores ≥100.",
+    "anchor": "Section 3, Mignarri index paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36619921_Nobrega2022_PMC9816572.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative practice review of cerebrotendinous xanthomatosis (CTX, CYP27A1 sterol 27-hydroxylase deficiency, bile acid synthesis disorder), drawing on retrospective cohorts, case series and one rat feeding study; NOT a WWOX system",
+     "genotype": "biallelic CYP27A1 variants (class level); no WWOX",
+     "endpoint": "clinical frequencies, diagnostic criteria, plasma cholestanol, CDCA treatment outcomes, MRI patterns"
+    }
+   },
+   {
+    "proposition": "The Mignarri index is described as most indicated for juvenile and adult patients, so its fit to infantile-onset epileptic encephalopathy is not established in this review.",
+    "snippet": "Obs. 3: The Mignarri suspicion index can be used for patients with clinical suspicion at any age of symptom-onset, despite being more indicated for juvenile and adult patients.",
+    "anchor": "Table 1 footnote, Obs. 3",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID36619921_Nobrega2022_PMC9816572.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative practice review of cerebrotendinous xanthomatosis (CTX, CYP27A1 sterol 27-hydroxylase deficiency, bile acid synthesis disorder), drawing on retrospective cohorts, case series and one rat feeding study; NOT a WWOX system",
+     "genotype": "biallelic CYP27A1 variants (class level); no WWOX",
+     "endpoint": "clinical frequencies, diagnostic criteria, plasma cholestanol, CDCA treatment outcomes, MRI patterns"
+    }
+   },
+   {
+    "proposition": "There is no randomised placebo-controlled trial of chenodeoxycholic acid in CTX; the treatment evidence is retrospective.",
+    "snippet": "Despite this, there have been no specific randomized placebo-controlled clinical trials of CDCA in patients with CTX to this date.",
+    "anchor": "Section 5, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36619921_Nobrega2022_PMC9816572.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative practice review of cerebrotendinous xanthomatosis (CTX, CYP27A1 sterol 27-hydroxylase deficiency, bile acid synthesis disorder), drawing on retrospective cohorts, case series and one rat feeding study; NOT a WWOX system",
+     "genotype": "biallelic CYP27A1 variants (class level); no WWOX",
+     "endpoint": "clinical frequencies, diagnostic criteria, plasma cholestanol, CDCA treatment outcomes, MRI patterns"
+    }
+   },
+   {
+    "proposition": "The largest retrospective cohort (56 patients) is reported with an absolute outcome: complete resolution of neurologic symptoms in all patients diagnosed and treated before age 24.",
+    "snippet": "In the largest retrospective cohort study of CDCA treatment with 56 patients, all patients diagnosed and treated before the age of 24 had complete resolution of previous neurologic symptoms and no new onset symptoms",
+    "anchor": "Section 5, paragraph 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36619921_Nobrega2022_PMC9816572.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative practice review of cerebrotendinous xanthomatosis (CTX, CYP27A1 sterol 27-hydroxylase deficiency, bile acid synthesis disorder), drawing on retrospective cohorts, case series and one rat feeding study; NOT a WWOX system",
+     "genotype": "biallelic CYP27A1 variants (class level); no WWOX",
+     "endpoint": "clinical frequencies, diagnostic criteria, plasma cholestanol, CDCA treatment outcomes, MRI patterns"
+    }
+   },
+   {
+    "proposition": "The same review states that imaging features are rarely reversible after treatment even with early diagnosis, so the absolute clinical claim and the imaging statement sit side by side without reconciliation.",
+    "snippet": "Neuroimaging findings, despite being highly variable among patients, generally disclose features which are rarely reversible in multi-imaging modalities after treatment with CDCA, even in individuals with early diagnosis of CTX (13).",
+    "anchor": "Section 4, paragraph 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36619921_Nobrega2022_PMC9816572.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative practice review of cerebrotendinous xanthomatosis (CTX, CYP27A1 sterol 27-hydroxylase deficiency, bile acid synthesis disorder), drawing on retrospective cohorts, case series and one rat feeding study; NOT a WWOX system",
+     "genotype": "biallelic CYP27A1 variants (class level); no WWOX",
+     "endpoint": "clinical frequencies, diagnostic criteria, plasma cholestanol, CDCA treatment outcomes, MRI patterns"
+    }
+   },
+   {
+    "proposition": "The review gives chronic diarrhea in young people as 31 percent in the clinical overview and as 76 percent of patients in the childhood paragraph; the figure gives 40 to 50 percent.",
+    "snippet": "In young people, CTX-related findings are primarily bilateral juvenile cataracts (82%), chronic diarrhea (31%), and intellectual disability (48–74%) (1, 15).",
+    "anchor": "Section 3, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36619921_Nobrega2022_PMC9816572.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative practice review of cerebrotendinous xanthomatosis (CTX, CYP27A1 sterol 27-hydroxylase deficiency, bile acid synthesis disorder), drawing on retrospective cohorts, case series and one rat feeding study; NOT a WWOX system",
+     "genotype": "biallelic CYP27A1 variants (class level); no WWOX",
+     "endpoint": "clinical frequencies, diagnostic criteria, plasma cholestanol, CDCA treatment outcomes, MRI patterns"
+    }
+   },
+   {
+    "proposition": "The childhood paragraph gives chronic infancy-onset diarrhea as the most common gastrointestinal scenario in 76 percent of patients.",
+    "snippet": "Chronic unexplained infancy-onset diarrhea is the most common gastrointestinal scenario (76% of patients)",
+    "anchor": "Section 3, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36619921_Nobrega2022_PMC9816572.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative practice review of cerebrotendinous xanthomatosis (CTX, CYP27A1 sterol 27-hydroxylase deficiency, bile acid synthesis disorder), drawing on retrospective cohorts, case series and one rat feeding study; NOT a WWOX system",
+     "genotype": "biallelic CYP27A1 variants (class level); no WWOX",
+     "endpoint": "clinical frequencies, diagnostic criteria, plasma cholestanol, CDCA treatment outcomes, MRI patterns"
+    }
+   },
+   {
+    "proposition": "Section 5 says CTX causes normal or low plasma cholestanol, whereas Section 3 calls high serum cholestanol the main diagnostic marker.",
+    "snippet": "as well as normal or low levels of cholestanol in plasma and bile alcohols in urine (61).",
+    "anchor": "Section 5, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36619921_Nobrega2022_PMC9816572.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative practice review of cerebrotendinous xanthomatosis (CTX, CYP27A1 sterol 27-hydroxylase deficiency, bile acid synthesis disorder), drawing on retrospective cohorts, case series and one rat feeding study; NOT a WWOX system",
+     "genotype": "biallelic CYP27A1 variants (class level); no WWOX",
+     "endpoint": "clinical frequencies, diagnostic criteria, plasma cholestanol, CDCA treatment outcomes, MRI patterns"
+    }
+   },
+   {
+    "proposition": "High serum cholestanol is stated as the main diagnostic marker.",
+    "snippet": "high serum concentrations of cholestanol are the main diagnostic marker of CTX (7).",
+    "anchor": "Section 3, biochemical paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36619921_Nobrega2022_PMC9816572.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative practice review of cerebrotendinous xanthomatosis (CTX, CYP27A1 sterol 27-hydroxylase deficiency, bile acid synthesis disorder), drawing on retrospective cohorts, case series and one rat feeding study; NOT a WWOX system",
+     "genotype": "biallelic CYP27A1 variants (class level); no WWOX",
+     "endpoint": "clinical frequencies, diagnostic criteria, plasma cholestanol, CDCA treatment outcomes, MRI patterns"
+    }
+   },
+   {
+    "proposition": "The diagnostic criteria require raised plasma cholestanol (criterion B) in every category, while a footnote concedes genetically proven cases with normal cholestanol exist.",
+    "snippet": "Despite the existence of criteria B, as discussed in other topic of this review manuscript, there are several cases of genetically-proven CTX with normal plasma cholestanol levels during assessment.",
+    "anchor": "Table 3 footnote, Obs. 1",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID36619921_Nobrega2022_PMC9816572.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative practice review of cerebrotendinous xanthomatosis (CTX, CYP27A1 sterol 27-hydroxylase deficiency, bile acid synthesis disorder), drawing on retrospective cohorts, case series and one rat feeding study; NOT a WWOX system",
+     "genotype": "biallelic CYP27A1 variants (class level); no WWOX",
+     "endpoint": "clinical frequencies, diagnostic criteria, plasma cholestanol, CDCA treatment outcomes, MRI patterns"
+    }
+   },
+   {
+    "proposition": "The review states there is no known clear genotype-phenotype correlation.",
+    "snippet": "there is no known clear genotype-phenotype correlation (1, 7).",
+    "anchor": "Section 2, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36619921_Nobrega2022_PMC9816572.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative practice review of cerebrotendinous xanthomatosis (CTX, CYP27A1 sterol 27-hydroxylase deficiency, bile acid synthesis disorder), drawing on retrospective cohorts, case series and one rat feeding study; NOT a WWOX system",
+     "genotype": "biallelic CYP27A1 variants (class level); no WWOX",
+     "endpoint": "clinical frequencies, diagnostic criteria, plasma cholestanol, CDCA treatment outcomes, MRI patterns"
+    }
+   },
+   {
+    "proposition": "Table 2 nevertheless assigns the same variant, c.1214G>A (p.Arg405Gln), to spinal CTX and (with others) to non-neurological CTX, and c.1421G>A to both classical and non-neurological CTX.",
+    "snippet": "c.1214G>A (p.Arg405Gln) | Spinal CTX",
+    "anchor": "Table 2, section I",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID36619921_Nobrega2022_PMC9816572.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative practice review of cerebrotendinous xanthomatosis (CTX, CYP27A1 sterol 27-hydroxylase deficiency, bile acid synthesis disorder), drawing on retrospective cohorts, case series and one rat feeding study; NOT a WWOX system",
+     "genotype": "biallelic CYP27A1 variants (class level); no WWOX",
+     "endpoint": "clinical frequencies, diagnostic criteria, plasma cholestanol, CDCA treatment outcomes, MRI patterns"
+    }
+   },
+   {
+    "proposition": "Table 2 lists the non-neurological phenotype variants, including c.1214G>A and c.1421G>A that also appear in other phenotype rows.",
+    "snippet": "c.435G>T (p.Gly145Gly), c.1214G>A (p.Arg405Gln), c.1421G>A (p.Arg474Gln) | “Non-neurological” CTX",
+    "anchor": "Table 2, section I",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID36619921_Nobrega2022_PMC9816572.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative practice review of cerebrotendinous xanthomatosis (CTX, CYP27A1 sterol 27-hydroxylase deficiency, bile acid synthesis disorder), drawing on retrospective cohorts, case series and one rat feeding study; NOT a WWOX system",
+     "genotype": "biallelic CYP27A1 variants (class level); no WWOX",
+     "endpoint": "clinical frequencies, diagnostic criteria, plasma cholestanol, CDCA treatment outcomes, MRI patterns"
+    }
+   },
+   {
+    "proposition": "The proposed neurotoxicity of cholestanol rests on rats fed a 1 percent cholestanol diet.",
+    "snippet": "Evidence that cholestanol may be neurotoxic is supported by the finding of cholestanol deposition and apoptosis in neuronal cells, most notably Purkinje cells, in the cerebellum of rats fed a 1% cholestanol diet (62).",
+    "anchor": "Section 5, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36619921_Nobrega2022_PMC9816572.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative practice review of cerebrotendinous xanthomatosis (CTX, CYP27A1 sterol 27-hydroxylase deficiency, bile acid synthesis disorder), drawing on retrospective cohorts, case series and one rat feeding study; NOT a WWOX system",
+     "genotype": "biallelic CYP27A1 variants (class level); no WWOX",
+     "endpoint": "clinical frequencies, diagnostic criteria, plasma cholestanol, CDCA treatment outcomes, MRI patterns"
+    }
+   },
+   {
+    "proposition": "Newborn screening for CTX has no defined metabolite tier and is advised only in a research context.",
+    "snippet": "There is not a definite metabolite or battery tier to perform metabolic or genetic neonatal screening for CTX.",
+    "anchor": "Section 3, newborn screening paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36619921_Nobrega2022_PMC9816572.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative practice review of cerebrotendinous xanthomatosis (CTX, CYP27A1 sterol 27-hydroxylase deficiency, bile acid synthesis disorder), drawing on retrospective cohorts, case series and one rat feeding study; NOT a WWOX system",
+     "genotype": "biallelic CYP27A1 variants (class level); no WWOX",
+     "endpoint": "clinical frequencies, diagnostic criteria, plasma cholestanol, CDCA treatment outcomes, MRI patterns"
+    }
+   },
+   {
+    "proposition": "Gene therapy for CTX is preclinical: one liver-directed AAV in a transgenic mouse model.",
+    "snippet": "Finally, preclinical studies showed that single intravenous administration of adeno-associated virus (AAV) expressing CYP27A1 directed to liver provided full metabolic restoration of the disease in a transgenic mice model of CTX in a greater extent than CDCA (77)",
+    "anchor": "Section 5, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36619921_Nobrega2022_PMC9816572.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative practice review of cerebrotendinous xanthomatosis (CTX, CYP27A1 sterol 27-hydroxylase deficiency, bile acid synthesis disorder), drawing on retrospective cohorts, case series and one rat feeding study; NOT a WWOX system",
+     "genotype": "biallelic CYP27A1 variants (class level); no WWOX",
+     "endpoint": "clinical frequencies, diagnostic criteria, plasma cholestanol, CDCA treatment outcomes, MRI patterns"
+    }
+   },
+   {
+    "proposition": "The conclusion rates the drug as safe and apparently effective on the basis of retrospective studies.",
+    "snippet": "Treatment with CDCA is safe and appears to be effective based on results of retrospective studies, especially if initiated early.",
+    "anchor": "Conclusion, sentence 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36619921_Nobrega2022_PMC9816572.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative practice review of cerebrotendinous xanthomatosis (CTX, CYP27A1 sterol 27-hydroxylase deficiency, bile acid synthesis disorder), drawing on retrospective cohorts, case series and one rat feeding study; NOT a WWOX system",
+     "genotype": "biallelic CYP27A1 variants (class level); no WWOX",
+     "endpoint": "clinical frequencies, diagnostic criteria, plasma cholestanol, CDCA treatment outcomes, MRI patterns"
+    }
+   },
+   {
+    "proposition": "The legends of Figures 4 to 6 give no patient age, sex, treatment status or CYP27A1 genotype for the example images.",
+    "snippet": "Neuroimaging findings in CTX. (A) Sagittal T1W brain MR imaging (MRI) disclosed mild cerebellar atrophy.",
+    "anchor": "Figure 4 legend, first sentence",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36619921_Nobrega2022_PMC9816572.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative practice review of cerebrotendinous xanthomatosis (CTX, CYP27A1 sterol 27-hydroxylase deficiency, bile acid synthesis disorder), drawing on retrospective cohorts, case series and one rat feeding study; NOT a WWOX system",
+     "genotype": "biallelic CYP27A1 variants (class level); no WWOX",
+     "endpoint": "clinical frequencies, diagnostic criteria, plasma cholestanol, CDCA treatment outcomes, MRI patterns"
+    }
+   },
+   {
+    "proposition": "PANEL READING, publisher file g0001 (attached to the Figure 1 caption on the PMC page, showing the timeline): the image is the symptom and sign timeline, not the bile acid pathway the Figure 1 legend describes; boxes give frequencies as chronic diarrhea 40-50 percent, epilepsy >30 percent, cataracts >80 percent, tendon xanthomas >65-75 percent, osteoporosis >65 percent; dotted phenotype lines carry genotype labels c.1421G>A on both the severe classical and the non-neurological lines. A schematic with no data points.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] g0001 shows boxes 'Chronic diarrhea (40-50%)' and 'Epilepsy (>30%)' and phenotype lines labelled 'Classical CTX Severe phenotypes c.1421G>A' and '“Non- neurological” CTX c.435G>T; c.1214G>A; c.1421G>A'.",
+    "anchor": "Publisher file g0001, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36619921/fneur-13-1049850-g0001.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative practice review of cerebrotendinous xanthomatosis (CTX, CYP27A1 sterol 27-hydroxylase deficiency, bile acid synthesis disorder), drawing on retrospective cohorts, case series and one rat feeding study; NOT a WWOX system",
+     "genotype": "biallelic CYP27A1 variants (class level); no WWOX",
+     "endpoint": "clinical frequencies, diagnostic criteria, plasma cholestanol, CDCA treatment outcomes, MRI patterns"
+    }
+   },
+   {
+    "proposition": "PANEL READING, publisher file g0002 (attached to the Figure 2 caption on the PMC page, showing the pathway): the image is the bile acid biosynthesis scheme with the classic and alternative pathways, CYP27A1 steps, cholestanol and the blood-brain barrier crossings drawn as dash-dot arrows; it is the content of the Figure 1 legend, so the two images are swapped relative to their captions on the PMC page.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] g0002 shows 'Cholesterol' at top with 'ALTERNATIVE (ACIDIC) PATHWAY' and 'CLASSIC (NEUTRAL) PATHWAY', 'Cholestanol (dihydrocholesterol)' and 'Brain neurometabolism' boxes.",
+    "anchor": "Publisher file g0002, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36619921/fneur-13-1049850-g0002.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative practice review of cerebrotendinous xanthomatosis (CTX, CYP27A1 sterol 27-hydroxylase deficiency, bile acid synthesis disorder), drawing on retrospective cohorts, case series and one rat feeding study; NOT a WWOX system",
+     "genotype": "biallelic CYP27A1 variants (class level); no WWOX",
+     "endpoint": "clinical frequencies, diagnostic criteria, plasma cholestanol, CDCA treatment outcomes, MRI patterns"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 4 (g0004): the legend says FLAIR panels B to E show cerebellar white matter and dentate hyperintensity, but panels D and E are slices at the suprasellar and lateral-ventricle levels with no cerebellum in the field and no arrow; arrows appear in B, C, F, G and J only.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4 panels D and E show supratentorial axial FLAIR slices without arrows; white arrows are in B, C, F, G and J.",
+    "anchor": "Figure 4, panels D and E, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36619921/fneur-13-1049850-g0004.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative practice review of cerebrotendinous xanthomatosis (CTX, CYP27A1 sterol 27-hydroxylase deficiency, bile acid synthesis disorder), drawing on retrospective cohorts, case series and one rat feeding study; NOT a WWOX system",
+     "genotype": "biallelic CYP27A1 variants (class level); no WWOX",
+     "endpoint": "clinical frequencies, diagnostic criteria, plasma cholestanol, CDCA treatment outcomes, MRI patterns"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 3 (g0003): three clinical photographs, A a swelling at the anterior tibial tuberosity (arrow), B the Achilles tendon region (arrow), C a high-arched foot (arrowhead); no patient identifiers are shown in the images and no scale.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3 panel A shows a leg with a white arrow at a swelling, panel B an ankle with a white arrow, panel C a foot with a white arrowhead.",
+    "anchor": "Figure 3, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36619921/fneur-13-1049850-g0003.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative practice review of cerebrotendinous xanthomatosis (CTX, CYP27A1 sterol 27-hydroxylase deficiency, bile acid synthesis disorder), drawing on retrospective cohorts, case series and one rat feeding study; NOT a WWOX system",
+     "genotype": "biallelic CYP27A1 variants (class level); no WWOX",
+     "endpoint": "clinical frequencies, diagnostic criteria, plasma cholestanol, CDCA treatment outcomes, MRI patterns"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 5 (g0005): eight MRI panels, sagittal and axial T1, T2, FLAIR, DWI, ADC and coronal T1 and T2, with arrows in A to D, G and H and none in the DWI and ADC panels E and F; no quantification.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5 has panels A-H; white arrows appear in A, B, C, D, G and H; E and F are grayscale diffusion images without arrows.",
+    "anchor": "Figure 5, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36619921/fneur-13-1049850-g0005.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative practice review of cerebrotendinous xanthomatosis (CTX, CYP27A1 sterol 27-hydroxylase deficiency, bile acid synthesis disorder), drawing on retrospective cohorts, case series and one rat feeding study; NOT a WWOX system",
+     "genotype": "biallelic CYP27A1 variants (class level); no WWOX",
+     "endpoint": "clinical frequencies, diagnostic criteria, plasma cholestanol, CDCA treatment outcomes, MRI patterns"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 6 (g0006): eleven MRI panels A to K of spinal CTX, brain panels A to D and cervical and thoracic spine panels E to K, with arrows in E and K; no quantification and no timeline relative to treatment.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6 has panels A-K including sagittal cervical and thoracic spine and axial cervical cord images with white arrows in E and K.",
+    "anchor": "Figure 6, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36619921/fneur-13-1049850-g0006.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative practice review of cerebrotendinous xanthomatosis (CTX, CYP27A1 sterol 27-hydroxylase deficiency, bile acid synthesis disorder), drawing on retrospective cohorts, case series and one rat feeding study; NOT a WWOX system",
+     "genotype": "biallelic CYP27A1 variants (class level); no WWOX",
+     "endpoint": "clinical frequencies, diagnostic criteria, plasma cholestanol, CDCA treatment outcomes, MRI patterns"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML for PMC9816572 returned HTTP 200 on 2026-10-20 (open access, CC BY 4.0); the Internet Archive capture of the PMC page supplied the six figure URLs.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

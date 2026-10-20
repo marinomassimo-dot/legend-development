@@ -1,0 +1,299 @@
+{
+ "schema_version": 2,
+ "pmid": "34258135",
+ "doi": "10.1002/jmd2.12206",
+ "receipt": "FTR-20261019-34258135-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/wave4_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-W4B-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named from wave-1 reading debts and deduplicated by the per-paper M0 packet and the receipt status check run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate and the analysis note; the discovery ledger is a shared single-writer file appended by the Orchestrator at integration."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A Greek paediatric neurology and metabolic group reporting two siblings; descriptive clinical, with CSF folate measured in a reference laboratory. Not a WWOX group; the paper is a SUBSTITUTE for the folate axis (class level, not WWOX evidence). Observations (variants, CSF values, imaging, seizure counts) are weighed above the treatment-benefit interpretation, which the authors themselves call difficult to interpret."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (folate OR folic)",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-20"
+   },
+   {
+    "query": "FOLR1 AND ketogenic",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-20"
+   }
+  ],
+  "note": "PubMed counts, dated."
+ },
+ "multihop": {
+  "references_enumerated": 16,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "16 references enumerated from the JATS; none is WWOX-related (0 occurrences of WWOX, Wwox or WOX1 counted in this session). Substitute row for the folate axis and for a ketogenic diet in a gene-defined metabolic epilepsy."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 34258135 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note; SUBSTITUTE rows carry no WWOX record by construction."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-20 via PubMed efetch for PMID 34258135: publication types ['Case Reports', 'Journal Article']; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 16,
+   "references_screened": 16,
+   "references_with_doi": 16,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID34258135_Papadopoulou2021_PMC8260484.xml",
+   "sha256": "e036d021b23897278ae0005a18c8d19ae071f9f61dbaa4beee5d8e05dfa0a3bb",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC8260484 (CC BY-NC-ND): abstract, body, Table 1, two figure legends, 16 references. Every text locator is matched against this surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8260484/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "e036d021b23897278ae0005a18c8d19ae071f9f61dbaa4beee5d8e05dfa0a3bb"
+   }
+  },
+  {
+   "path": "files/figures/PMID34258135/JMD2-60-3-g002.jpg",
+   "sha256": "abad18cb696514efa47d42bb422cb22531ed7931a0f099abc17f5804134d041e",
+   "kind": "figure",
+   "note": "Figure 1 (publisher file g002) T2 MRI of sibling 1 at 19 months and 3 years (PMC blob JPEG named in the archived article page), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/93ba/8260484/1c2e6bfe0b20/JMD2-60-3-g002.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "abad18cb696514efa47d42bb422cb22531ed7931a0f099abc17f5804134d041e"
+   }
+  },
+  {
+   "path": "files/figures/PMID34258135/JMD2-60-3-g001.jpg",
+   "sha256": "606e80aa650c7dc26b3bcacbf49df3ca82449e62b09add268b38cdc489d364d4",
+   "kind": "figure",
+   "note": "Figure 2 (publisher file g001) EEG of sibling 1 and T2 MRI of sibling 2 (PMC blob JPEG named in the archived article page), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/93ba/8260484/a71c8acb87b3/JMD2-60-3-g001.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "606e80aa650c7dc26b3bcacbf49df3ca82449e62b09add268b38cdc489d364d4"
+   }
+  },
+  {
+   "path": "files/supplements/PMID34258135/JMD2-60-3-s001.pdf",
+   "sha256": "0f3edf8444d92a587a6d9c30cf9f7acdd4607e9caa3684971c52ca3ad4ed0b11",
+   "kind": "supplement_binary",
+   "note": "Supporting information S1 (one-page PDF, Schema 1: treatment dosage and seizure counts per day of sibling 1) from the Europe PMC supplementaryFiles container of PMC8260484 (member extracted unchanged).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8260484/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "0f3edf8444d92a587a6d9c30cf9f7acdd4607e9caa3684971c52ca3ad4ed0b11"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID34258135/s001-1.png",
+   "sha256": "eb21adceef3c9c6e9e2f7dd35d00c2ae280b839f81e8ba17ce30aa51d499edf4",
+   "kind": "figure",
+   "note": "Supplement page rendered at 80 dpi (Schema 1), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID34258135/JMD2-60-3-s001.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 80 -png"
+    },
+    "acquired_on": "2026-10-20",
+    "result_sha256": "eb21adceef3c9c6e9e2f7dd35d00c2ae280b839f81e8ba17ce30aa51d499edf4"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE (substitute, disease class). The younger sibling's CSF 5-MTHF at diagnosis was 49 nmol/L, far above the under-5 typical of FOLR1 deficiency, which the authors take to mean that moderately low CSF folate cannot separate a primary folate-receptor defect from secondary deficiency.",
+    "snippet": "5‐MTHF levels of younger sibling were also higher compared to previous patients with FOLR1 deficiency (usually <5 nmol/L).",
+    "anchor": "Discussion, paragraph 11",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34258135_Papadopoulou2021_PMC8260484.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "two siblings with compound heterozygous FOLR1 variants (class level: cerebral folate transport deficiency); NOT a WWOX system",
+     "genotype": "biallelic FOLR1 class; no WWOX",
+     "endpoint": "CSF 5-MTHF, MRI, EEG, seizure counts under treatment"
+    }
+   },
+   {
+    "proposition": "The older sibling's CSF value (19 nmol/L) was taken while on oral folinic acid, so the two siblings' CSF values are not comparable at baseline, and the reference range quoted for the younger sibling differs between sentences (63-122 at diagnosis, 44-122 at repeat).",
+    "snippet": "The CSF collection and analysis were identical between siblings; the older sister was under treatment with per os calcium folinate at diagnosis.",
+    "anchor": "Discussion, paragraph 11",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34258135_Papadopoulou2021_PMC8260484.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "two siblings with compound heterozygous FOLR1 variants (class level: cerebral folate transport deficiency); NOT a WWOX system",
+     "genotype": "biallelic FOLR1 class; no WWOX",
+     "endpoint": "CSF 5-MTHF, MRI, EEG, seizure counts under treatment"
+    }
+   },
+   {
+    "proposition": "The ketogenic-diet effect is a halving of daily seizures (about 10 to 5) in one child after add-on to two antiseizure drugs, in a seizure course that fluctuated between 10 and 15 per day beforehand; other changes (vitamin B6, folic acid, folinic acid) overlap in time.",
+    "snippet": "Ketogenic diet (KD), initiated 3 months after seizure onset as an add‐on treatment to valproate and topiramate, resulted in a further 50% reduction of seizure frequency (approximately 10 episodes per day reduced to 5 per day) and severity with a significant improvement in the patient's daily life.",
+    "anchor": "Case presentation, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34258135_Papadopoulou2021_PMC8260484.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "two siblings with compound heterozygous FOLR1 variants (class level: cerebral folate transport deficiency); NOT a WWOX system",
+     "genotype": "biallelic FOLR1 class; no WWOX",
+     "endpoint": "CSF 5-MTHF, MRI, EEG, seizure counts under treatment"
+    }
+   },
+   {
+    "proposition": "The authors themselves say the benefit of folinic acid in the older sibling cannot be separated from the ketogenic diet and the antiseizure drugs.",
+    "snippet": "The benefit of folinic acid supplementation reported in the case of the older sibling is difficult to be interpreted, as it was administered in combination with ketogenic diet and antiepileptic treatment.",
+    "anchor": "Discussion, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34258135_Papadopoulou2021_PMC8260484.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "two siblings with compound heterozygous FOLR1 variants (class level: cerebral folate transport deficiency); NOT a WWOX system",
+     "genotype": "biallelic FOLR1 class; no WWOX",
+     "endpoint": "CSF 5-MTHF, MRI, EEG, seizure counts under treatment"
+    }
+   },
+   {
+    "proposition": "Folic acid 1 mg daily is reported as beneficial for development 'according to the parents', in a child later shown to have a folate receptor defect; the same period saw vitamin B6 and other changes.",
+    "snippet": "per os supplementation with folic acid at a daily dose of 1 mg had a beneficial effect on patient's development, according to the parents.",
+    "anchor": "Case presentation, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34258135_Papadopoulou2021_PMC8260484.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "two siblings with compound heterozygous FOLR1 variants (class level: cerebral folate transport deficiency); NOT a WWOX system",
+     "genotype": "biallelic FOLR1 class; no WWOX",
+     "endpoint": "CSF 5-MTHF, MRI, EEG, seizure counts under treatment"
+    }
+   },
+   {
+    "proposition": "One of the two FOLR1 variants is a novel missense variant classed as of uncertain significance; pathogenicity rests on in silico tools, phenotype, low CSF folate and segregation.",
+    "snippet": "variant has been interpreted as a class 3 variant, a variant of uncertain significance; it should thus be interpreted with caution.",
+    "anchor": "Discussion, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34258135_Papadopoulou2021_PMC8260484.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "two siblings with compound heterozygous FOLR1 variants (class level: cerebral folate transport deficiency); NOT a WWOX system",
+     "genotype": "biallelic FOLR1 class; no WWOX",
+     "endpoint": "CSF 5-MTHF, MRI, EEG, seizure counts under treatment"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figures 1 and 2 (note the publisher's file numbering is reversed: file g002 is Figure 1 and file g001 is Figure 2): Figure 1 A-D axial T2 MRI of sibling 1 at 19 months and 3 years, panels A-B described as delayed myelination at 19 months and C-D as 'persistence of the axonal damage' at 3 years; Figure 2A an interictal EEG of the older sibling captioned hypsarrhythmic-like, with theta/delta waves, frequent multifocal spikes and intermittent bouts of hypsarrhythmia, 2B-C axial T2 MRI of sibling 2; channel labels only on the EEG plus a small circled electrode-map inset, MRI panels carry panel letters only.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] File g001 (Figure 2): EEG channels Fp2-C4 to Cz-Pz plus ECG, panels B and C axial T2 brain MRI; file g002 (Figure 1): four axial T2 MRI panels A-D.",
+    "anchor": "Figures 1 and 2, read as images",
+    "surface": "figure",
+    "artifact": "files/figures/PMID34258135/JMD2-60-3-g001.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "two siblings with compound heterozygous FOLR1 variants (class level: cerebral folate transport deficiency); NOT a WWOX system",
+     "genotype": "biallelic FOLR1 class; no WWOX",
+     "endpoint": "CSF 5-MTHF, MRI, EEG, seizure counts under treatment"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Supplement Schema 1: dose and seizure-per-day timeline of sibling 1 (seizures per day 15, 15, 10, 10, 15, 10, 10, 5, 5, 1, 1 at treatment start, 1, 3, 4, 6, 8 weeks and 2, 3, 4, 6, 9 months); the ketogenic diet appears at 3 months with 5 seizures per day, oral folinate at 4 months, intravenous folinate and 1 per day at 6 months, valproate and topiramate falling to zero at 9 months; a table and a line chart of one patient, no uncertainty.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Schema 1 table with rows Prednisolone, Vigabatrin, B6, Topiramate, Ketogenic Diet 3:1 / 3,75:1, Valproate, Calcium folinate per os, Calcium folinate IV, Seizures per day and a line chart titled Sibling #1 Treatment dosage and duration.",
+    "anchor": "Supplementary file 1, Schema 1, read as an image",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID34258135/s001-1.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "two siblings with compound heterozygous FOLR1 variants (class level: cerebral folate transport deficiency); NOT a WWOX system",
+     "genotype": "biallelic FOLR1 class; no WWOX",
+     "endpoint": "CSF 5-MTHF, MRI, EEG, seizure counts under treatment"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search returned inEPMC Y and isOpenAccess Y for PMC8260484 on 2026-10-20; fullTextXML returned HTTP 200; the supplement zip returned the PDF; figure JPEGs fetched from the PMC blob store.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

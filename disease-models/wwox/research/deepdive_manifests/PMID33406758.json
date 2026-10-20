@@ -1,0 +1,471 @@
+{
+ "schema_version": 2,
+ "pmid": "33406758",
+ "doi": "10.3390/ijms22010435",
+ "receipt": "FTR-20261019-33406758-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/wave4_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-W4B-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named from wave-1 reading debts and deduplicated by the per-paper M0 packet and the receipt status check run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate and the analysis note; the discovery ledger is a shared single-writer file appended by the Orchestrator at integration."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "An Italian endocrinology and bone-metabolism group (Siena, Milan, Udine, from the affiliations) writing a narrative review with a protocol proposal; review, not a primary data group; not a WWOX group. SUBSTITUTE for the bone, calcium and vitamin D axis (class level, not WWOX evidence). The tabulated cohort figures are weighed above the abstract and conclusion framing, and the review's own internal inconsistencies are recorded."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND bone",
+    "count": 41,
+    "source": "PubMed ESearch rettype=count 2026-10-20"
+   },
+   {
+    "query": "Wwox knockout AND bone",
+    "count": 9,
+    "source": "PubMed ESearch rettype=count 2026-10-20"
+   },
+   {
+    "query": "ketogenic diet AND bone mineral density",
+    "count": 45,
+    "source": "PubMed ESearch rettype=count 2026-10-20"
+   }
+  ],
+  "note": "PubMed counts, dated."
+ },
+ "multihop": {
+  "references_enumerated": 219,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "219 references enumerated from the JATS; none is WWOX-related (0 occurrences of WWOX, Wwox or WOX1 counted in this session). The Wwox-null mouse bone phenotype named in the selection file is not discussed in the review."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 33406758 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note; SUBSTITUTE rows carry no WWOX record by construction."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-20 via PubMed efetch for PMID 33406758: publication types ['Journal Article', 'Review']; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 219,
+   "references_screened": 206,
+   "references_with_doi": 206,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 13
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID33406758_Merlotti2021_PMC7796307.xml",
+   "sha256": "659593d0dfcc43ce2f9e0d3ed40bc1c201043eff6ba0e25ca0c7e3a0e78e3077",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC7796307 (CC BY 4.0): narrative review: abstract, six tables, three figures, 219 references. Every text locator is matched against this surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7796307/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "659593d0dfcc43ce2f9e0d3ed40bc1c201043eff6ba0e25ca0c7e3a0e78e3077"
+   }
+  },
+  {
+   "path": "files/figures/PMID33406758/ijms-22-00435-g001.jpg",
+   "sha256": "39a4cacb8716dddfc99df6118dbb8f7904679169bf15eb30feb97142c835df77",
+   "kind": "figure",
+   "note": "Figure 1 JPEG (glycolysis, TCA cycle and ketogenesis scheme with amino-acid classification key) (PMC blob JPEG named in the archived article page), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/e98b/7796307/67da7aaeef34/ijms-22-00435-g001.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "39a4cacb8716dddfc99df6118dbb8f7904679169bf15eb30feb97142c835df77"
+   }
+  },
+  {
+   "path": "files/figures/PMID33406758/ijms-22-00435-g002.jpg",
+   "sha256": "dbf71e9894c57b31b093795ecc9e901a3c2820f1399808c1d6431321b1137a84",
+   "kind": "figure",
+   "note": "Figure 2 JPEG (3-beta-hydroxybutyrate scheme) (PMC blob JPEG named in the archived article page), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/e98b/7796307/6894fd4eac66/ijms-22-00435-g002.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "dbf71e9894c57b31b093795ecc9e901a3c2820f1399808c1d6431321b1137a84"
+   }
+  },
+  {
+   "path": "files/figures/PMID33406758/ijms-22-00435-g003.jpg",
+   "sha256": "d053b08fee0c47a13e15f705b5a8da5fc6a0d9018bd3ad3867d1ffd00657bc90",
+   "kind": "figure",
+   "note": "Figure 3 JPEG (3-beta-hydroxybutyrate, histone deacetylase and epigenetic processes) (PMC blob JPEG named in the archived article page), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/e98b/7796307/04c5f2288bc3/ijms-22-00435-g003.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "d053b08fee0c47a13e15f705b5a8da5fc6a0d9018bd3ad3867d1ffd00657bc90"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE (substitute, bone/calcium axis). The authors conclude that no adequately powered human study can yet say whether ketogenic therapy helps or harms bone.",
+    "snippet": "at present there are no human clinical studies with adequate powerful experimental design to definitively determine if subjects under KD therapies can derive positive/negative effects on bone health.",
+    "anchor": "Conclusions, sentence 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33406758_Merlotti2021_PMC7796307.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review pooling rodent ketogenic-diet bone studies, paediatric and adult human cohorts on ketogenic or very-low-calorie diets, and athlete short-term trials; children with drug-resistant epilepsy are the main human group; NOT a WWOX system",
+     "genotype": "mostly unselected epilepsy; GLUT1 deficiency appears as one speculation and a three-patient adult series; no WWOX",
+     "endpoint": "bone mineral density and content, bone turnover markers, fractures, growth, kidney stones"
+    }
+   },
+   {
+    "proposition": "The review's search is described as following PRISMA (PubMed and MEDLINE, 1990 to 2020, English only) but gives no search string and no counts of records identified, screened or included.",
+    "snippet": "According to PRISMA guidelines, PubMed and MEDLINE were searched from March 1990 to November 2020 to identify published articles about KDs and bone health",
+    "anchor": "Introduction, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33406758_Merlotti2021_PMC7796307.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review pooling rodent ketogenic-diet bone studies, paediatric and adult human cohorts on ketogenic or very-low-calorie diets, and athlete short-term trials; children with drug-resistant epilepsy are the main human group; NOT a WWOX system",
+     "genotype": "mostly unselected epilepsy; GLUT1 deficiency appears as one speculation and a three-patient adult series; no WWOX",
+     "endpoint": "bone mineral density and content, bone turnover markers, fractures, growth, kidney stones"
+    }
+   },
+   {
+    "proposition": "The fracture figure of about 20 percent in children treated six or more years is given with a single citation; the cohorts the review itself tabulates report 8.8 percent and about 7 percent fractures.",
+    "snippet": "In long-term follow-up studies, approximately 20% of children treated with KD (≥6 years) experienced an increased incidence of bone fractures [2].",
+    "anchor": "Section 2, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33406758_Merlotti2021_PMC7796307.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review pooling rodent ketogenic-diet bone studies, paediatric and adult human cohorts on ketogenic or very-low-calorie diets, and athlete short-term trials; children with drug-resistant epilepsy are the main human group; NOT a WWOX system",
+     "genotype": "mostly unselected epilepsy; GLUT1 deficiency appears as one speculation and a three-patient adult series; no WWOX",
+     "endpoint": "bone mineral density and content, bone turnover markers, fractures, growth, kidney stones"
+    }
+   },
+   {
+    "proposition": "Table 5 gives the Dutch cohort result as a fracture rate of 8.8 percent and a non-significant BMD decrease.",
+    "snippet": "8.8% got a fracture during KDT, and also 8.8% got kidney stones. Not significant BMD decrease.",
+    "anchor": "Table 5, Dutch cohort row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID33406758_Merlotti2021_PMC7796307.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review pooling rodent ketogenic-diet bone studies, paediatric and adult human cohorts on ketogenic or very-low-calorie diets, and athlete short-term trials; children with drug-resistant epilepsy are the main human group; NOT a WWOX system",
+     "genotype": "mostly unselected epilepsy; GLUT1 deficiency appears as one speculation and a three-patient adult series; no WWOX",
+     "endpoint": "bone mineral density and content, bone turnover markers, fractures, growth, kidney stones"
+    }
+   },
+   {
+    "proposition": "The text summarises the same Dutch cohort as low-to-normal BMD susceptible to further decreases, which is stronger than the table's non-significant decrease.",
+    "snippet": "This survey demonstrated that children on KD exhibited low to normal BMD values, susceptible to further decreases during KD, over the time they were under KD [126].",
+    "anchor": "Section 5.2.1, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33406758_Merlotti2021_PMC7796307.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review pooling rodent ketogenic-diet bone studies, paediatric and adult human cohorts on ketogenic or very-low-calorie diets, and athlete short-term trials; children with drug-resistant epilepsy are the main human group; NOT a WWOX system",
+     "genotype": "mostly unselected epilepsy; GLUT1 deficiency appears as one speculation and a three-patient adult series; no WWOX",
+     "endpoint": "bone mineral density and content, bone turnover markers, fractures, growth, kidney stones"
+    }
+   },
+   {
+    "proposition": "The Swedish 24-month modified Atkins diet cohort is reported without negative effect on growth or bone mass; this counter-observation sits in Table 5 while the abstract frames the literature as showing increased fractures and decreased BMD.",
+    "snippet": "No negative effect observed on longitudinal growth or bone mass after 24 months MAD treatment.",
+    "anchor": "Table 5, Swedish MAD row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID33406758_Merlotti2021_PMC7796307.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review pooling rodent ketogenic-diet bone studies, paediatric and adult human cohorts on ketogenic or very-low-calorie diets, and athlete short-term trials; children with drug-resistant epilepsy are the main human group; NOT a WWOX system",
+     "genotype": "mostly unselected epilepsy; GLUT1 deficiency appears as one speculation and a three-patient adult series; no WWOX",
+     "endpoint": "bone mineral density and content, bone turnover markers, fractures, growth, kidney stones"
+    }
+   },
+   {
+    "proposition": "The Australian prospective cohort of 29 patients is cited as [119] in the text but as [109] in Table 5, and [109] is the metformin mouse study in Section 5.1, so the table's citation for that row is wrong or the text's is.",
+    "snippet": "Sixty-three Australian patients on the KD, 29 patients on the KD for a minimum of 6 months (range 0.5–6.5 years, mean 2.1 years) [109]",
+    "anchor": "Table 5, Australian cohort row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID33406758_Merlotti2021_PMC7796307.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review pooling rodent ketogenic-diet bone studies, paediatric and adult human cohorts on ketogenic or very-low-calorie diets, and athlete short-term trials; children with drug-resistant epilepsy are the main human group; NOT a WWOX system",
+     "genotype": "mostly unselected epilepsy; GLUT1 deficiency appears as one speculation and a three-patient adult series; no WWOX",
+     "endpoint": "bone mineral density and content, bone turnover markers, fractures, growth, kidney stones"
+    }
+   },
+   {
+    "proposition": "The text places that 29-patient Australian cohort under reference 119.",
+    "snippet": "Another prospective longitudinal study was performed on 29 patients and was commenced on KD, for a minimum of six months, monitoring DXA-BMD and -BMC.",
+    "anchor": "Section 5.2.1, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33406758_Merlotti2021_PMC7796307.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review pooling rodent ketogenic-diet bone studies, paediatric and adult human cohorts on ketogenic or very-low-calorie diets, and athlete short-term trials; children with drug-resistant epilepsy are the main human group; NOT a WWOX system",
+     "genotype": "mostly unselected epilepsy; GLUT1 deficiency appears as one speculation and a three-patient adult series; no WWOX",
+     "endpoint": "bone mineral density and content, bone turnover markers, fractures, growth, kidney stones"
+    }
+   },
+   {
+    "proposition": "The growth-versus-ketosis study of reference 120 is described as 144 young subjects in the text and as fifty-seven subjects in Table 5; the review is internally inconsistent on its sample size.",
+    "snippet": "After 12 months, 144 young subjects with high urinary ketone levels (80–120 mg/dl) were characterized by a reduced height versus those with moderate ketosis (<80 mg/dl) [120].",
+    "anchor": "Section 5.2.1, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33406758_Merlotti2021_PMC7796307.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review pooling rodent ketogenic-diet bone studies, paediatric and adult human cohorts on ketogenic or very-low-calorie diets, and athlete short-term trials; children with drug-resistant epilepsy are the main human group; NOT a WWOX system",
+     "genotype": "mostly unselected epilepsy; GLUT1 deficiency appears as one speculation and a three-patient adult series; no WWOX",
+     "endpoint": "bone mineral density and content, bone turnover markers, fractures, growth, kidney stones"
+    }
+   },
+   {
+    "proposition": "Table 5 describes reference 120 as fifty-seven subjects aged 1 to 26 years.",
+    "snippet": "Fifty-seven US subjects, age range 1-26 years, on KD for seizures management and one on KD for GLUT1 deficiency.",
+    "anchor": "Table 5, reference 120 row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID33406758_Merlotti2021_PMC7796307.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review pooling rodent ketogenic-diet bone studies, paediatric and adult human cohorts on ketogenic or very-low-calorie diets, and athlete short-term trials; children with drug-resistant epilepsy are the main human group; NOT a WWOX system",
+     "genotype": "mostly unselected epilepsy; GLUT1 deficiency appears as one speculation and a three-patient adult series; no WWOX",
+     "endpoint": "bone mineral density and content, bone turnover markers, fractures, growth, kidney stones"
+    }
+   },
+   {
+    "proposition": "Confounding is acknowledged: antiseizure drugs and reduced mobility are named alongside the diet as candidate causes of low bone density in children with intractable epilepsy, so diet cannot be isolated in these cohorts.",
+    "snippet": "together with both the concomitant use of AEDs, and the reduced/absent mobilization observed in a large proportion of patients with intractable epilepsies [5,6].",
+    "anchor": "Section 2, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33406758_Merlotti2021_PMC7796307.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review pooling rodent ketogenic-diet bone studies, paediatric and adult human cohorts on ketogenic or very-low-calorie diets, and athlete short-term trials; children with drug-resistant epilepsy are the main human group; NOT a WWOX system",
+     "genotype": "mostly unselected epilepsy; GLUT1 deficiency appears as one speculation and a three-patient adult series; no WWOX",
+     "endpoint": "bone mineral density and content, bone turnover markers, fractures, growth, kidney stones"
+    }
+   },
+   {
+    "proposition": "The animal bone-loss evidence is rodent data after 12 weeks of diet; the review's own summary says bone loss occurred only in mice although rat studies are tabulated beside it.",
+    "snippet": "Overall, these data supported that KD enables the increase in the blood ketone level as well as the induction of the occurrence of osteoporosis through the impairment of the cancellous bone mass only in mice, similar to that determined by OVX.",
+    "anchor": "Section 5.1, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33406758_Merlotti2021_PMC7796307.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review pooling rodent ketogenic-diet bone studies, paediatric and adult human cohorts on ketogenic or very-low-calorie diets, and athlete short-term trials; children with drug-resistant epilepsy are the main human group; NOT a WWOX system",
+     "genotype": "mostly unselected epilepsy; GLUT1 deficiency appears as one speculation and a three-patient adult series; no WWOX",
+     "endpoint": "bone mineral density and content, bone turnover markers, fractures, growth, kidney stones"
+    }
+   },
+   {
+    "proposition": "The one inborn-error population in the review, three adult patients with GLUT1 deficiency on a ketogenic diet for more than five years, showed no appreciable change in weight or body composition and no evidence of bone harm; n = 3.",
+    "snippet": "No appreciable changes in weight and body composition of adults with GLUT-1 deficiency.",
+    "anchor": "Table 5, GLUT1 case series row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID33406758_Merlotti2021_PMC7796307.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review pooling rodent ketogenic-diet bone studies, paediatric and adult human cohorts on ketogenic or very-low-calorie diets, and athlete short-term trials; children with drug-resistant epilepsy are the main human group; NOT a WWOX system",
+     "genotype": "mostly unselected epilepsy; GLUT1 deficiency appears as one speculation and a three-patient adult series; no WWOX",
+     "endpoint": "bone mineral density and content, bone turnover markers, fractures, growth, kidney stones"
+    }
+   },
+   {
+    "proposition": "The link between GLUT1 mutation, vitamin C transport and unhealthy bone is explicitly labelled speculative by the authors.",
+    "snippet": "A speculative consideration can be made regarding the possible link between epilepsy associated with GLUT1 gene mutations and the possible occurrence of unhealthy bone.",
+    "anchor": "Section 5.2.1, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33406758_Merlotti2021_PMC7796307.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review pooling rodent ketogenic-diet bone studies, paediatric and adult human cohorts on ketogenic or very-low-calorie diets, and athlete short-term trials; children with drug-resistant epilepsy are the main human group; NOT a WWOX system",
+     "genotype": "mostly unselected epilepsy; GLUT1 deficiency appears as one speculation and a three-patient adult series; no WWOX",
+     "endpoint": "bone mineral density and content, bone turnover markers, fractures, growth, kidney stones"
+    }
+   },
+   {
+    "proposition": "A sentence in Section 2 attributes glucose in blood to 'the glycerol released from triglycerides of lysine residue', which is not coherent chemistry (lysine is an amino acid), alongside an energetics claim that ketone bodies yield more energy than glucose that is supported by a single reference.",
+    "snippet": "and (b) the glycerol released from triglycerides of lysine residue (lysine is a ketogenic amino acid (Figure 1)).",
+    "anchor": "Section 2, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33406758_Merlotti2021_PMC7796307.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review pooling rodent ketogenic-diet bone studies, paediatric and adult human cohorts on ketogenic or very-low-calorie diets, and athlete short-term trials; children with drug-resistant epilepsy are the main human group; NOT a WWOX system",
+     "genotype": "mostly unselected epilepsy; GLUT1 deficiency appears as one speculation and a three-patient adult series; no WWOX",
+     "endpoint": "bone mineral density and content, bone turnover markers, fractures, growth, kidney stones"
+    }
+   },
+   {
+    "proposition": "The proposed study protocol is the authors' own suggestion from their experience, not a validated or guideline protocol.",
+    "snippet": "Moreover, based on the author’s experiences, practical and theoretical advice for the design and implementation of clinical studies on ketogenic nutritional regimens and bone health outcomes are provided.",
+    "anchor": "Introduction, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33406758_Merlotti2021_PMC7796307.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review pooling rodent ketogenic-diet bone studies, paediatric and adult human cohorts on ketogenic or very-low-calorie diets, and athlete short-term trials; children with drug-resistant epilepsy are the main human group; NOT a WWOX system",
+     "genotype": "mostly unselected epilepsy; GLUT1 deficiency appears as one speculation and a three-patient adult series; no WWOX",
+     "endpoint": "bone mineral density and content, bone turnover markers, fractures, growth, kidney stones"
+    }
+   },
+   {
+    "proposition": "The text says a repeat DXA scan is not appropriate before 15 to 18 months, whereas the Table 6 example schedule places DXA at 12 months.",
+    "snippet": "it is not appropriate to repeat the DXA scan before 15–18 months have passed.",
+    "anchor": "Section 6.1.1, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33406758_Merlotti2021_PMC7796307.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review pooling rodent ketogenic-diet bone studies, paediatric and adult human cohorts on ketogenic or very-low-calorie diets, and athlete short-term trials; children with drug-resistant epilepsy are the main human group; NOT a WWOX system",
+     "genotype": "mostly unselected epilepsy; GLUT1 deficiency appears as one speculation and a three-patient adult series; no WWOX",
+     "endpoint": "bone mineral density and content, bone turnover markers, fractures, growth, kidney stones"
+    }
+   },
+   {
+    "proposition": "Table 6 lists DXA at baseline, 12 and 24 months.",
+    "snippet": "Baseline, 12 mo., 24 mo.DXA for LS, FN/Total hip",
+    "anchor": "Table 6, instrumental parameters",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID33406758_Merlotti2021_PMC7796307.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review pooling rodent ketogenic-diet bone studies, paediatric and adult human cohorts on ketogenic or very-low-calorie diets, and athlete short-term trials; children with drug-resistant epilepsy are the main human group; NOT a WWOX system",
+     "genotype": "mostly unselected epilepsy; GLUT1 deficiency appears as one speculation and a three-patient adult series; no WWOX",
+     "endpoint": "bone mineral density and content, bone turnover markers, fractures, growth, kidney stones"
+    }
+   },
+   {
+    "proposition": "The authors assert that placebo-controlled trials are not ethically recommendable in these patients without a citation or argument.",
+    "snippet": "Of course, randomized and controlled clinical trials versus placebo are not ethically recommendable in these patients",
+    "anchor": "Section 5.5, sentence 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33406758_Merlotti2021_PMC7796307.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review pooling rodent ketogenic-diet bone studies, paediatric and adult human cohorts on ketogenic or very-low-calorie diets, and athlete short-term trials; children with drug-resistant epilepsy are the main human group; NOT a WWOX system",
+     "genotype": "mostly unselected epilepsy; GLUT1 deficiency appears as one speculation and a three-patient adult series; no WWOX",
+     "endpoint": "bone mineral density and content, bone turnover markers, fractures, growth, kidney stones"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 3 (g003): 3-beta-hydroxybutyrate is drawn as inhibiting histone deacetylase, with arrows to cell motility, angiogenesis, metabolism and energy control (GLUT1), inflammation, cell cycle, apoptosis and 'enhancing bone specific miRNAs (?)'; the bone link is drawn with a question mark, a hedge that the Section 2 text ('influencing, at an epigenetic level, bone cell physiology') does not carry. Schematic, no data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3 lower-left oval reads 'enhancing bone specific miRNAs (?)' with an arrow from hDAC.",
+    "anchor": "Figure 3, lower-left oval, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33406758/ijms-22-00435-g003.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative review pooling rodent ketogenic-diet bone studies, paediatric and adult human cohorts on ketogenic or very-low-calorie diets, and athlete short-term trials; children with drug-resistant epilepsy are the main human group; NOT a WWOX system",
+     "genotype": "mostly unselected epilepsy; GLUT1 deficiency appears as one speculation and a three-patient adult series; no WWOX",
+     "endpoint": "bone mineral density and content, bone turnover markers, fractures, growth, kidney stones"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 2 (g002): 3-beta-hydroxybutyrate is drawn at the centre of double-headed arrows to energetic regulation impairment, oxidative stress, apoptosis and inflammation, with metabolic arrows to adipose tissue, liver, skeletal muscle and bone via mitochondria; the double-headed arrows carry no direction of effect or source. Schematic, no data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2 shows a dotted circle labelled 3-βOHB with double-headed arrows to oxidative stresses, cell apoptosis and inflammation/NLP3 inflammatory activation and a bone icon at the top.",
+    "anchor": "Figure 2, whole panel, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33406758/ijms-22-00435-g002.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative review pooling rodent ketogenic-diet bone studies, paediatric and adult human cohorts on ketogenic or very-low-calorie diets, and athlete short-term trials; children with drug-resistant epilepsy are the main human group; NOT a WWOX system",
+     "genotype": "mostly unselected epilepsy; GLUT1 deficiency appears as one speculation and a three-patient adult series; no WWOX",
+     "endpoint": "bone mineral density and content, bone turnover markers, fractures, growth, kidney stones"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 1 (g001): the amino-acid key lists lysine and leucine as the only purely ketogenic amino acids and valine among the glucogenic ones, consistent with the Section 2 text; a pathway scheme with no data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 key reads 'Ketogenic amino acids Lys, Leu (underlined font)' and lists Val among the glucogenic amino acids.",
+    "anchor": "Figure 1, key box, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33406758/ijms-22-00435-g001.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative review pooling rodent ketogenic-diet bone studies, paediatric and adult human cohorts on ketogenic or very-low-calorie diets, and athlete short-term trials; children with drug-resistant epilepsy are the main human group; NOT a WWOX system",
+     "genotype": "mostly unselected epilepsy; GLUT1 deficiency appears as one speculation and a three-patient adult series; no WWOX",
+     "endpoint": "bone mineral density and content, bone turnover markers, fractures, growth, kidney stones"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML for PMC7796307 returned HTTP 200 on 2026-10-20 (open access, CC BY 4.0); the Internet Archive capture of the PMC page supplied the three figure URLs.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

@@ -1,0 +1,213 @@
+{
+ "schema_version": 2,
+ "pmid": "42563882",
+ "doi": "10.1002/cns3.70042",
+ "receipt": "FTR-20261019-42563882-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/wave4_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-W4B-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named from wave-1 reading debts and deduplicated by the per-paper M0 packet and the receipt status check run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate and the analysis note; the discovery ledger is a shared single-writer file appended by the Orchestrator at integration."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A US paediatric neurology service (Mayo Clinic and Nemours, from the affiliations) reporting one case in a clinical letter; descriptive clinical, n = 1. Not a WWOX group; SUBSTITUTE for the biotin axis (class level, not WWOX evidence). The observations (variants, imaging course) are weighed above the title's causal framing."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND biotin",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-20"
+   },
+   {
+    "query": "biotinidase AND epilepsy",
+    "count": 41,
+    "source": "PubMed ESearch rettype=count 2026-10-20"
+   }
+  ],
+  "note": "PubMed counts, dated."
+ },
+ "multihop": {
+  "references_enumerated": 4,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "4 references enumerated from the JATS; none is WWOX-related (0 occurrences of WWOX, Wwox or WOX1 counted in this session). Substitute row for the biotin axis."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42563882 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note; SUBSTITUTE rows carry no WWOX record by construction."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-20 via PubMed efetch for PMID 42563882: publication types ['Journal Article']; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 4,
+   "references_screened": 4,
+   "references_with_doi": 4,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42563882_Lai2025_PMC13359203.xml",
+   "sha256": "e50a7909d93c42f532eca0d7773cb51ab55f7f2454b38cbcf2b8db55734b1865",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC13359203 (CC BY-NC-ND): clinical letter: abstract-free body, one figure legend, four references. Every text locator is matched against this surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13359203/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "e50a7909d93c42f532eca0d7773cb51ab55f7f2454b38cbcf2b8db55734b1865"
+   }
+  },
+  {
+   "path": "files/figures/PMID42563882/CNS3-3-324-g001.jpg",
+   "sha256": "d3f0707cb6149edf589d810078318bfde468555660f4ab4a89e9fccc16fe9b54",
+   "kind": "figure",
+   "note": "Figure 1 JPEG (coronal T2 MRI, panels a-c) from the Europe PMC supplementaryFiles container of PMC13359203 (the PMC page has no archived capture yet), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13359203/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false,
+    "result_sha256": "d3f0707cb6149edf589d810078318bfde468555660f4ab4a89e9fccc16fe9b54"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE (substitute, disease class). The report title says biotinidase deficiency is 'a rare and treatable cause for generalized epilepsy', but the patient's seizure freedom is on levetiracetam plus biotin and the authors write that the relationship to her epilepsy is unknown.",
+    "snippet": "No further seizure episodes were observed, although the relationship to her epilepsy is unknown.",
+    "anchor": "Patient description, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42563882_Lai2025_PMC13359203.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "one adolescent with generalised epilepsy and biallelic BTD variants (class level: biotinidase deficiency); NOT a WWOX system",
+     "genotype": "BTD compound heterozygote; no WWOX",
+     "endpoint": "seizure freedom, brain MRI over 20 months"
+    }
+   },
+   {
+    "proposition": "The diagnosis of mild biotinidase deficiency rests on exome sequencing alone in this report; no enzyme activity or biotin level is given.",
+    "snippet": "Whole‐exome sequence revealed compound heterozygosity for two pathogenic variants in the BTD gene, confirming a diagnosis of BD.",
+    "anchor": "Patient description, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42563882_Lai2025_PMC13359203.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "one adolescent with generalised epilepsy and biallelic BTD variants (class level: biotinidase deficiency); NOT a WWOX system",
+     "genotype": "BTD compound heterozygote; no WWOX",
+     "endpoint": "seizure freedom, brain MRI over 20 months"
+    }
+   },
+   {
+    "proposition": "The patient was treated with an antiseizure drug and biotin together; the lesion regression on MRI cannot be assigned to biotin alone, and the pre-treatment seizure frequency is not stated.",
+    "snippet": "Her regimen included levetiracetam 750 mg twice daily and biotin 5 mg daily.",
+    "anchor": "Patient description, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42563882_Lai2025_PMC13359203.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "one adolescent with generalised epilepsy and biallelic BTD variants (class level: biotinidase deficiency); NOT a WWOX system",
+     "genotype": "BTD compound heterozygote; no WWOX",
+     "endpoint": "seizure freedom, brain MRI over 20 months"
+    }
+   },
+   {
+    "proposition": "The generalisation that treatment 'can reverse identified lesions and prevent further complications' rests on one patient and a cited review.",
+    "snippet": "As our patient demonstrates, treatment can reverse identified lesions and prevent further complications [ 3 ].",
+    "anchor": "Discussion, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42563882_Lai2025_PMC13359203.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "one adolescent with generalised epilepsy and biallelic BTD variants (class level: biotinidase deficiency); NOT a WWOX system",
+     "genotype": "BTD compound heterozygote; no WWOX",
+     "endpoint": "seizure freedom, brain MRI over 20 months"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 1: three coronal T2 MRI slices, a an arrowed hyperintense right cerebral-peduncle lesion, b and c the lesion not distinct at 8 and 20 months; the slices differ in level and contrast between panels, there is no quantification of lesion size.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 panels a, b, c coronal T2 brain MRI with a white arrow in panel a at the right cerebral peduncle region.",
+    "anchor": "Figure 1, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42563882/CNS3-3-324-g001.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "one adolescent with generalised epilepsy and biallelic BTD variants (class level: biotinidase deficiency); NOT a WWOX system",
+     "genotype": "BTD compound heterozygote; no WWOX",
+     "endpoint": "seizure freedom, brain MRI over 20 months"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search returned inEPMC Y and isOpenAccess Y for PMC13359203 on 2026-10-20; fullTextXML returned HTTP 200 (18.8 kB, whole letter); the supplementaryFiles zip carried the figure.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}
