@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-19T20:00:00Z",
+ "event_at": "2026-10-19T20:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "captions_only",
+  "results": "captions_only",
+  "figures": "captions_only",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present"
+ },
+ "event_id": "FTR-20261019-42587736-01",
+ "evidence_basis": [
+  "Abstract, in-vivo and clinical results, Discussion and Table 2 read; Figure 5 opened; HEK293T experiments not read in detail.",
+  "FIND: PBA raises wild-type and variant subunit expression alike; the in-vivo data are expression only in 3-4 mice with regional heterogeneity; the human arm is one uncontrolled child; the prediction sentence overreaches."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42587736.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID42587736.md",
+  "disease-models/wwox/research/wave4_scientist-b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "3f4e65c6f4333f9b3033826eef145613cb6ff68951b5ad366d50ce90d3d42795",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID42587736_Song2026_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.3390/cells15151327",
+  "pmid": "42587736"
+ },
+ "workflow": "scientist-b wave 4 group W1; SOURCE_FIRST; PMC efetch XML and bucket re-acquired with pmc_bucket_fetch.py, no User-Agent; Figure 5 opened as an image; locators verified by deepdive_manifest.py. Prepared as a JSON file for the integrator and not appended."
+}

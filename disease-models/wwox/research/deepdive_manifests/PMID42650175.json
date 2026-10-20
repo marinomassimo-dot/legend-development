@@ -1,0 +1,209 @@
+{
+ "schema_version": 2,
+ "pmid": "42650175",
+ "doi": "10.3390/genes17080983",
+ "receipt": "FTR-20261019-42650175-01",
+ "landing": [
+  "FTR-20261019-42650175-01",
+  "wave4_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: PMC efetch XML and the bucket PDF and supplement returned the body."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: read directly under the Scientist brief."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no baseline claim is narrowed, reversed or removed and no MAJOR change is declared."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "counts_measured": "No WWOX output; the group is a Vanderbilt epilepsy-channelopathy laboratory (PBA work on GABRG2, SLC6A1, GABRA1); no PubMed count was run.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Class-level substitute for a proteostasis rationale; nothing is WWOX evidence.",
+  "note": "Authors are co-investigators of the PBA trial they cite; declared interests not assessed here."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-20",
+    "count": 0
+   }
+  ],
+  "note": "WWOX does not occur."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 25,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS: 25; none WWOX-direct.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-direct reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 42650175; registry comparison after the first pass",
+  "hits": 0,
+  "finding": "No receipt before this one."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-20",
+  "route": "PMC efetch XML front matter; dependency_integrity.py screen",
+  "result": "No retraction, correction or expression of concern found.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 25,
+   "references_screened": 25,
+   "references_with_doi": 25,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42650175_Delahanty2026_PMC_r2.xml",
+   "sha256": "f7aa81589e02cb9bc20adf4bfe6d2087cef2f1a3c8b468cd501f9516c00a2749",
+   "kind": "article_text",
+   "note": "PMC efetch JATS for PMC13512211 (Genes 2026, CC BY), 96,301 bytes.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "f7aa81589e02cb9bc20adf4bfe6d2087cef2f1a3c8b468cd501f9516c00a2749",
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC13512211&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42650175_r2/PMC13512211.1.pdf",
+   "sha256": "d798b3bf0fef21e6aab14d8c7aa53d242bcc4d42c5545017a1695b775370ec2c",
+   "kind": "article_binary",
+   "note": "Article PDF from the PMC open-data bucket (not opened); the bucket serves no figure JPEGs for this article.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "d798b3bf0fef21e6aab14d8c7aa53d242bcc4d42c5545017a1695b775370ec2c",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13512211.1/PMC13512211.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch JATS for PMC13512211 retrieved 2026-10-20, 96,301 bytes; the whole body is indexed locally for exact-text checks.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "SOURCE_FIRST. Class-level substitute (NOT WWOX evidence). Whole text read; no figure was opened (the bucket has none and the PDF was not rendered), so figures are captions_only and the depth is partial; numeric readings are the text values.",
+  "entries": [
+   {
+    "proposition": "Class-level design for a misfolded missense protein: the mutant GAT-1 accumulates in the ER (about 30 percent of wild-type signal overlaps the ER marker against about 76 percent for Ala305Val) and PBA lowers the overlap to about 36 percent and restores total fluorescence from about 25 to about 47.5 arbitrary units, in human astrocytes.",
+    "snippet": "Approximately ~30% of wildtype GAT-1YFP fluorescence overlapped with the ER marker, compared with approximately 76% for p.Ala305Val; PBA treatment reduced p.Ala305Val/ER overlap to approximately 36%",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42650175_Delahanty2026_PMC_r2.xml",
+    "anchor": "Results 5.4",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293T cells and human iPSC-derived astrocytes and cortical neurons expressing rat GAT-1-EYFP variants (SLC6A1 p.Ala305Val); membrane transporter, ER trafficking (NOT WWOX evidence)",
+     "genotype": "de novo SLC6A1 missense, heterozygous modelled by 1:1 cDNA co-expression",
+     "comparator": "wild-type GAT-1; Ala305Thr and Ser295Leu comparators"
+    }
+   },
+   {
+    "proposition": "Heterozygous-condition GABA uptake is 0.59 of wild type in HEK293T (0.66 in astrocytes and neurons) and PBA brings it to 1.01 to 1.04, TUDCA and salubrinal to 0.82 to 0.92; the readout is a radiolabelled uptake in transfected cells, with n and replicates not stated in the text.",
+    "snippet": "The heterozygous GABA uptake increased to 1.01 with PBA; to 0.815 with TUDCA and 0.82 with salubrinal.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42650175_Delahanty2026_PMC_r2.xml",
+    "anchor": "Results 5.5",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293T cells and human iPSC-derived astrocytes and cortical neurons expressing rat GAT-1-EYFP variants (SLC6A1 p.Ala305Val); membrane transporter, ER trafficking (NOT WWOX evidence)",
+     "genotype": "de novo SLC6A1 missense, heterozygous modelled by 1:1 cDNA co-expression",
+     "comparator": "wild-type GAT-1; Ala305Thr and Ser295Leu comparators"
+    }
+   },
+   {
+    "proposition": "PBA doses used were 0.5, 1 and 2 mM; viability was compromised at 4 mM and that dose was dropped from the analysis, while the Results text also proposes that PBA acts without inducing ER stress or cellular toxicity.",
+    "snippet": "Cell viability was compromised in the dishes treated with 4 mM PBA, which thus was not included.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42650175_Delahanty2026_PMC_r2.xml",
+    "anchor": "Results 5.6",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293T cells and human iPSC-derived astrocytes and cortical neurons expressing rat GAT-1-EYFP variants (SLC6A1 p.Ala305Val); membrane transporter, ER trafficking (NOT WWOX evidence)",
+     "genotype": "de novo SLC6A1 missense, heterozygous modelled by 1:1 cDNA co-expression",
+     "comparator": "wild-type GAT-1; Ala305Thr and Ser295Leu comparators"
+    }
+   },
+   {
+    "proposition": "The rescue is in plasmid co-expression models; the authors say gene augmentation rather than gene therapy because in vivo viral delivery was not performed, and list the lack of an in-vivo knock-in model and the few residues studied as limits.",
+    "snippet": "The combined approach is described throughout as gene augmentation rather than gene therapy because in vivo viral delivery in animals was not performed in this study.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42650175_Delahanty2026_PMC_r2.xml",
+    "anchor": "Methods 4.2",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293T cells and human iPSC-derived astrocytes and cortical neurons expressing rat GAT-1-EYFP variants (SLC6A1 p.Ala305Val); membrane transporter, ER trafficking (NOT WWOX evidence)",
+     "genotype": "de novo SLC6A1 missense, heterozygous modelled by 1:1 cDNA co-expression",
+     "comparator": "wild-type GAT-1; Ala305Thr and Ser295Leu comparators"
+    }
+   },
+   {
+    "proposition": "The paper reports patient feedback from the phase I trial of glycerol phenylbutyrate in SLC6A1 and STXBP1 (NCT04937062) as promising while stating the trial is at an observational stage; no data are shown.",
+    "snippet": "Although it is still at an observational stage, the feedback from patients is promising.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42650175_Delahanty2026_PMC_r2.xml",
+    "anchor": "Introduction, third paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293T cells and human iPSC-derived astrocytes and cortical neurons expressing rat GAT-1-EYFP variants (SLC6A1 p.Ala305Val); membrane transporter, ER trafficking (NOT WWOX evidence)",
+     "genotype": "de novo SLC6A1 missense, heterozygous modelled by 1:1 cDNA co-expression",
+     "comparator": "wild-type GAT-1; Ala305Thr and Ser295Leu comparators"
+    }
+   },
+   {
+    "proposition": "The paper hypothesises that, being heterozygous, little dominant-negative effect is expected under PBA; this is an inference, not a measured test.",
+    "snippet": "Thus, it is likely that no or little dominant negative effect will exist in the cells expressing the mutant GAT-1 p.Ala305Val treated with PBA.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42650175_Delahanty2026_PMC_r2.xml",
+    "anchor": "Discussion, last paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293T cells and human iPSC-derived astrocytes and cortical neurons expressing rat GAT-1-EYFP variants (SLC6A1 p.Ala305Val); membrane transporter, ER trafficking (NOT WWOX evidence)",
+     "genotype": "de novo SLC6A1 missense, heterozygous modelled by 1:1 cDNA co-expression",
+     "comparator": "wild-type GAT-1; Ala305Thr and Ser295Leu comparators"
+    }
+   }
+  ]
+ }
+}

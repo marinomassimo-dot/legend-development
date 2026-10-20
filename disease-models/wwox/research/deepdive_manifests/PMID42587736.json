@@ -1,0 +1,226 @@
+{
+ "schema_version": 2,
+ "pmid": "42587736",
+ "doi": "10.3390/cells15151327",
+ "receipt": "FTR-20261019-42587736-01",
+ "landing": [
+  "FTR-20261019-42587736-01",
+  "wave4_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: PMC efetch XML, figures and PDF returned from the bucket."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: read directly under the Scientist brief."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no baseline claim is narrowed, reversed or removed and no MAJOR change is declared."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 12,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-20: Kang JQ[au] AND phenylbutyrate 12 (senior author, ambiguous surname-initial); Kang JQ[au] AND WWOX 0.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "The laboratory that proposed PBA proteostasis rescue and runs the cited trial; class-level substitute, nothing is WWOX evidence.",
+  "note": "The same group reports the trial it cites; interests not assessed here."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-20",
+    "count": 0
+   }
+  ],
+  "note": "WWOX does not occur."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 50,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS: 50; none WWOX-direct.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-direct reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 42587736; registry comparison after the first pass",
+  "hits": 0,
+  "finding": "No receipt before this one."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-20",
+  "route": "PMC efetch XML front matter; dependency_integrity.py screen",
+  "result": "No retraction, correction or expression of concern found.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 50,
+   "references_screened": 48,
+   "references_with_doi": 48,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42587736_Song2026_PMC_r2.xml",
+   "sha256": "3f4e65c6f4333f9b3033826eef145613cb6ff68951b5ad366d50ce90d3d42795",
+   "kind": "article_text",
+   "note": "PMC efetch JATS for PMC13465587 (Cells 2026, CC BY), 152,182 bytes; Table 2 body is in the article PDF only (not in the JATS text).",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "3f4e65c6f4333f9b3033826eef145613cb6ff68951b5ad366d50ce90d3d42795",
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC13465587&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID42587736_r2/cells-15-01327-g005.jpg",
+   "sha256": "82d9ed319b770460868661d6c7432d983e6b6cf3ecc6bcef24a2014cc30b222a",
+   "kind": "figure",
+   "note": "Figure 5 from the PMC open-data bucket, opened as an image (the other six figure files were not opened).",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "82d9ed319b770460868661d6c7432d983e6b6cf3ecc6bcef24a2014cc30b222a",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13465587.1/cells-15-01327-g005.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42587736_r2/PMC13465587.1.pdf",
+   "sha256": "e210d418add76bbb528fcabc8ed3ad3fb4cad73b56d3d26b83d488773d256f7e",
+   "kind": "article_binary",
+   "note": "Article PDF from the PMC open-data bucket; page 14 read for Table 2 (narrative clinical summary).",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-19",
+    "result_sha256": "e210d418add76bbb528fcabc8ed3ad3fb4cad73b56d3d26b83d488773d256f7e",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13465587.1/PMC13465587.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch JATS for PMC13465587 retrieved 2026-10-20, 152,182 bytes; the whole body is indexed locally for exact-text checks.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "SOURCE_FIRST. Class-level substitute (NOT WWOX evidence). Read: abstract, Results 3.10 and 3.11, Discussion, Table 2 narrative from the PDF; Results 3.1 to 3.9 (HEK293T structure and expression experiments) and Figures 1 to 4 and 6 were not read in detail, so results are captions_only and the depth is partial.",
+  "entries": [
+   {
+    "proposition": "PBA raised expression of both the wild-type and the variant alpha1 subunit, including in cells carrying no variant; the authors read that as beneficial in haploinsufficiency, which also means the effect is not specific to the mutant allele.",
+    "snippet": "PBA increased α1 expression regardless of the presence of the mutant protein, which is beneficial in case of a haploinsufficiency disorder.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42587736_Song2026_PMC_r2.xml",
+    "anchor": "Discussion, PBA paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293T cells expressing GABRA1 variants; Gabra1 +/A322D knock-in mice (7 days of 100 mg/kg/day PBA i.p., brain western blots); one child (class level, NOT WWOX evidence)",
+     "genotype": "GABRA1 missense variants; mouse A322D",
+     "comparator": "vehicle and wild-type control"
+    }
+   },
+   {
+    "proposition": "In vivo, after 7 days of PBA at 100 mg/kg/day by intraperitoneal injection, alpha1 rose 14.0 percent in cortex and 72.8 percent in thalamus of Gabra1 +/A322D mice and not in hippocampus or cerebellum; gamma2 rose 42.0 percent in thalamus only; beta2 did not change. Figure 5 shows 3 to 4 animals per group, expression normalised to wild-type cortex; no seizure, behaviour or receptor-function outcome is measured in the mice.",
+    "snippet": "We found that PBA treatment increased α1 expression in the Gabra1+/A322D cortex by 14.0% (# p < 0.05) and the thalamus by 72.8% (**** p < 0.0001) but that it did not affect expression in other regions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42587736_Song2026_PMC_r2.xml",
+    "anchor": "Results 3.10",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293T cells expressing GABRA1 variants; Gabra1 +/A322D knock-in mice (7 days of 100 mg/kg/day PBA i.p., brain western blots); one child (class level, NOT WWOX evidence)",
+     "genotype": "GABRA1 missense variants; mouse A322D",
+     "comparator": "vehicle and wild-type control"
+    }
+   },
+   {
+    "proposition": "The human evidence is one child with GABRA1 R214C: after glycerol phenylbutyrate (Ravicti) was added to several antiseizure drugs the child was seizure-free for 245 days with better emotional regulation and social interaction; the trial (NCT04937062) is ongoing and no control, blinding or biomarker is described.",
+    "snippet": "Following Ravicti addition, the child achieved seizure freedom for 245 days with improved emotional regulation and social interaction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42587736_Song2026_PMC_r2.xml",
+    "anchor": "Results 3.11",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293T cells expressing GABRA1 variants; Gabra1 +/A322D knock-in mice (7 days of 100 mg/kg/day PBA i.p., brain western blots); one child (class level, NOT WWOX evidence)",
+     "genotype": "GABRA1 missense variants; mouse A322D",
+     "comparator": "vehicle and wild-type control"
+    }
+   },
+   {
+    "proposition": "The Discussion states that the single patient shows that the preclinical data are predictive of efficacy in human patients; one uncontrolled case with an unmeasured expression effect in that patient (the in-vitro R214C total-expression gain was not seen) cannot support that sentence.",
+    "snippet": "This suggests that the preclinical data in our study are predictive of efficacy in human patients with GABRA1 mutations.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42587736_Song2026_PMC_r2.xml",
+    "anchor": "Discussion, in-vivo paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293T cells expressing GABRA1 variants; Gabra1 +/A322D knock-in mice (7 days of 100 mg/kg/day PBA i.p., brain western blots); one child (class level, NOT WWOX evidence)",
+     "genotype": "GABRA1 missense variants; mouse A322D",
+     "comparator": "vehicle and wild-type control"
+    }
+   },
+   {
+    "proposition": "The predicted stability change (delta delta G) is a weak predictor of the expression loss: F325L has the smallest change in expression and a small delta delta G, while A322D has the strongest loss of expression and the smallest predicted delta delta G.",
+    "snippet": "However, the change in ΔΔG magnitude was a weak predictor for the magnitude of decrease in subunit expression in some variants.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42587736_Song2026_PMC_r2.xml",
+    "anchor": "Discussion, structural paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293T cells expressing GABRA1 variants; Gabra1 +/A322D knock-in mice (7 days of 100 mg/kg/day PBA i.p., brain western blots); one child (class level, NOT WWOX evidence)",
+     "genotype": "GABRA1 missense variants; mouse A322D",
+     "comparator": "vehicle and wild-type control"
+    }
+   },
+   {
+    "proposition": "Figure 5 as drawn: alpha1 normalised to wild-type cortex, vehicle against PBA: cortex about 1.0 to 1.15 (hash mark only), thalamus about 1.0 to 1.7 (four asterisks), hippocampus and cerebellum ns; gamma2 thalamus about 1.0 to 1.4 (one asterisk); beta2 ns; dots show 3 to 4 animals per bar.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5 panels A to D: western blots of alpha1, beta2, gamma2 and ATPase for Ctx, Cb, Hipp, Thal vehicle and PBA; bar charts of normalised intensities with individual animal dots.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42587736_r2/cells-15-01327-g005.jpg",
+    "anchor": "Figure 5 panels A to D, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "HEK293T cells expressing GABRA1 variants; Gabra1 +/A322D knock-in mice (7 days of 100 mg/kg/day PBA i.p., brain western blots); one child (class level, NOT WWOX evidence)",
+     "genotype": "GABRA1 missense variants; mouse A322D",
+     "comparator": "vehicle and wild-type control"
+    }
+   }
+  ]
+ }
+}

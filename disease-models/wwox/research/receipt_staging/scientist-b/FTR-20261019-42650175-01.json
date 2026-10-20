@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-19T20:00:00Z",
+ "event_at": "2026-10-19T20:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "captions_only"
+ },
+ "event_id": "FTR-20261019-42650175-01",
+ "evidence_basis": [
+  "Whole article text read; figures not opened; supplement PDF not opened.",
+  "FIND: a misfolded transmembrane transporter variant shows ER retention and loss of uptake that PBA and added wild-type cDNA each partly rescue in cell models; 4 mM PBA compromised viability; the clinical trial feedback is stated without data; no relevance to WWOX beyond the proteostasis design."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42650175.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID42650175.md",
+  "disease-models/wwox/research/wave4_scientist-b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "f7aa81589e02cb9bc20adf4bfe6d2087cef2f1a3c8b468cd501f9516c00a2749",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID42650175_Delahanty2026_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.3390/genes17080983",
+  "pmid": "42650175"
+ },
+ "workflow": "scientist-b wave 4 group W1; SOURCE_FIRST; PMC efetch XML re-acquired with pmc_bucket_fetch.py, no User-Agent; locators verified by deepdive_manifest.py. Prepared as a JSON file for the integrator and not appended."
+}
