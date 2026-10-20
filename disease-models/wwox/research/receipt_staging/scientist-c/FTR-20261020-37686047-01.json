@@ -1,0 +1,39 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261020-37686047-01",
+ "study_id": {
+  "pmid": "37686047",
+  "doi": "10.3390/ijms241713242"
+ },
+ "event_at": "2026-10-20T07:30:00Z",
+ "analysis_at": "2026-10-20T07:30:00Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, task W4-W2A-C-20261019, branch task/W4-W2A-C-20261019; context_policy SOURCE_FIRST. Held before reading: only the selection row's one-line statement of why the paper matters. Stated question: is the WWOX copy-number line in alkylating-agent-resistant NCI-60 lines more than a gene-list sentence: is a metabolic readout tied to WWOX. Route: Europe PMC REST fullTextXML (HTTP 200) read whole from a text rendering; Tables 1-5 read from the markup; all six figures opened at native size from the PMC OA bucket; the 22 MB supplementary archive extracted and Supplemental Tables S2, S3, S5 and S7 read cell by cell through the repository xlsx reader (WWOX rows located by search over the dumps and counted); Tables S1, S4 and S6 were dumped but only searched for WWOX (no hit that bears on the question), so supplementary is stated read for the four tables that carry WWOX. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID37686047_Rushing2023_PMC.xml",
+ "source_fingerprint": "91d401a8d80181c5312d741a513d009efae20f0c2162680eadf05cafdf5587a6",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID37686047.json",
+  "disease-models/wwox/research/wave4_scientist-c.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

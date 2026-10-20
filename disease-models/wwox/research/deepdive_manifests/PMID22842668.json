@@ -1,0 +1,267 @@
+{
+ "schema_version": 2,
+ "pmid": "22842668",
+ "doi": "10.3892/or.2012.1940",
+ "receipt": "FTR-20261020-22842668-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/wave4_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-W4-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Publisher open-access PDF from the Spandidos download address, no User-Agent; text layer by pdftotext, page 3 rendered by pdftoppm."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true,
+   "reason": "Run inline under the dispatch brief; this manifest and the note carry what the skill would produce."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate; the shared discovery ledger is written by the Orchestrator."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A molecular carcinogenesis group (the senior author led the first WWOX loss-of-heterozygosity work in breast cancer) studying WWOX as a tumour suppressor in Wilms' tumour; primary for the gene in cancer, not for biallelic-loss neurological disease. Observation (mRNA levels, methylation calls, LOH rates) is weighted above interpretation (WWOX involved in carcinogenesis, in apoptosis and ErbB4 signalling), which rests on 23 tumours without an adjacent normal comparator."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND Wilms",
+    "count": 3,
+    "source": "PubMed ESearch 2026-10-20"
+   },
+   {
+    "query": "WWOX AND nephroblastoma",
+    "count": 3,
+    "source": "PubMed ESearch 2026-10-20"
+   },
+   {
+    "query": "WWOX AND kidney",
+    "count": 11,
+    "source": "PubMed ESearch 2026-10-20"
+   }
+  ],
+  "note": "Counts are record matches, not measurements of the pair."
+ },
+ "multihop": {
+  "references_enumerated": 34,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [
+   {
+    "queue": "CC-20261019-SCIENTIST-C-W4-01",
+    "why": "Gene-direct references 6 (Bednarek 2000, WWOX cloning), 7-12 (Aqeilan 2004-2007 WWOX partners) and 13 (Aqeilan 2008, postnatal survival and bone metabolism) are in the printed list; the PDF carries no PMIDs and none is asserted here; not opened."
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 22842668 --hops 0; fulltext_receipts.py status --pmid 22842668; ls receipt_staging/*",
+  "hits": 0,
+  "note": "No registry record, receipt or staged receipt for this PMID."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-20 by PubMed EFetch: publication type Journal Article, Research Support Non-US Gov't; no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 34,
+   "references_screened": 27,
+   "references_with_doi": 27,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 7
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID22842668_Pluciennik2012.pdf",
+   "kind": "article_text",
+   "note": "Publisher open-access PDF (Oncology Reports 28:1417-1422, 6 pages, 1,398,154 bytes), Spandidos download address with no User-Agent; Unpaywall lists it as the publisher published version. No PMCID exists. Font screen: 0 untrustworthy, 0 suspect, 1 undecided.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.spandidos-publications.com/or/28/4/1417/download",
+    "http_method": "GET",
+    "tier": "publisher_oa_pdf",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "derived": false
+   },
+   "sha256": "fd9178354875a5c17edfb68eb41845fa4de2fbd566b4e9ebd90dae2ac37f655d"
+  },
+  {
+   "path": "files/fulltext/PMID22842668_Pluciennik2012_pdftotext.txt",
+   "kind": "supplement_text",
+   "note": "Derived text layer of the article PDF (two columns interleaved on some lines); clean, no control characters.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID22842668_Pluciennik2012.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk PMID22842668_Pluciennik2012.pdf PMID22842668_Pluciennik2012_pdftotext.txt",
+     "join": "\n"
+    },
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "45904e163bd0c5d8f9fc8af95174933560bd07d497b99588afd1053f7bc216d1"
+  },
+  {
+   "path": "files/page_renders/PMID22842668/p-3.png",
+   "kind": "figure",
+   "note": "PDF page 3 (Figure 1 and Table I) rendered at 150 dpi with pdftoppm.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID22842668_Pluciennik2012.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -f 3 -l 3 -r 150 -png PMID22842668_Pluciennik2012.pdf p",
+     "join": ""
+    },
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "1f56d2561b8cbbec4d1b8334198941b61706b2ea2b5cbd93a8c0df6004cc6237"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": false,
+  "source_fulltext_indexed_evidence": "No PMCID exists; the body is a publisher open-access PDF (Unpaywall: published version, free), so the quotes are verifiable only against the persisted PDF text layer and page render, not an external full-text index.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a supplement text layer or a figure image.",
+  "entries": [
+   {
+    "proposition": "THE TEXT AND ABSTRACT STATE LOH OF WWOX IN 30.4% OF TUMOURS; Table I of the same paper reduces this to a predicted LOH of 4.4% at the intron-8 marker and 0 at the intron-1 marker once population homozygosity (26%) is subtracted from the observed 'hemizygosity'.",
+    "snippet": "of heterozygosity for locus D16S3096 and in 30.4% cases LOH",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID22842668_Pluciennik2012_pdftotext.txt",
+    "anchor": "Results, LOH analysis, first sentence (text layer)",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "23 resected Wilms' tumours from children, Lodz and Wroclaw, Poland",
+     "genotype": "WWOX mRNA, 16q microsatellites, promoter methylation; no perturbation",
+     "endpoint": "LOH at D16S3096"
+    },
+    "found_or_sought": "sought - question: what WWOX alterations are measured"
+   },
+   {
+    "proposition": "Table I (text layer and page render): observed hemizygosity 30.4% (D16S3096, intron 8) and 6.7% (D16S518, intron 1); population homozygosity 26% and 17%; predicted loss of heterozygosity 4.4% and 0. The headline '30.4% LOH' is the observed hemizygosity, not the predicted LOH; about one of 23 tumours (4.4%) is a predicted LOH at intron 8. The paper's own conclusion that LOH 'did not influence' expression is therefore about a very small group.",
+    "snippet": "Predicted loss of                           4.4                     0",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID22842668_Pluciennik2012_pdftotext.txt",
+    "anchor": "Table I, row Predicted loss of heterozygosity",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "23 resected Wilms' tumours from children, Lodz and Wroclaw, Poland",
+     "genotype": "WWOX mRNA, 16q microsatellites, promoter methylation; no perturbation",
+     "endpoint": "Table I LOH rates"
+    },
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "WWOX expression was measured by a semi-nested PCR of 77 cycles after a first round, because the transcript was 'relatively low'; the readout is a relative level against a calibrator (Universal Human Reference RNA) normalised to two reference genes, with no linear-range validation described; protein was checked on six tumours only (Figure 1).",
+    "snippet": "WWOX mRNA level was relatively low, therefore we",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID22842668_Pluciennik2012_pdftotext.txt",
+    "anchor": "Methods, Real-time RT-PCR analysis",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "23 resected Wilms' tumours from children, Lodz and Wroclaw, Poland",
+     "genotype": "WWOX mRNA, 16q microsatellites, promoter methylation; no perturbation",
+     "endpoint": "WWOX relative mRNA by semi-nested PCR"
+    },
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "Figure 1 (page 3 render, 150 dpi): western blot of six tumours, samples 3, 15 and 88 with low relative mRNA (1.48, 0.21, 0.96) and 89, 91, 92 with high (58.3, 36.5, 49.2). Samples 3 and 15 show visible WWOX bands, sample 88 shows none, samples 89 and 91 show bands of moderate intensity and sample 92 a strong band beside a nearly absent GAPDH band. A 40- to 280-fold difference in mRNA is not matched by a comparable protein difference; the blot validates direction at best and not magnitude.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1, western blot of WWOX and GAPDH in six Wilms' tumours with low and high relative WWOX mRNA, page 3 of the PDF rendered at 150 dpi.",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID22842668/p-3.png",
+    "anchor": "Figure 1, PDF page 3 render",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "23 resected Wilms' tumours from children, Lodz and Wroclaw, Poland",
+     "genotype": "WWOX mRNA, 16q microsatellites, promoter methylation; no perturbation",
+     "endpoint": "WWOX protein, six tumours"
+    },
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "Promoter methylation lowers WWOX expression in the two assayed regions: mean relative expression 15.94 unmethylated versus 4.01 methylated (P = 0.036) for the first region, and 14.92 versus 0.83 (P = 0.0037) for the second, with methylation in 13.64% and 8.7% of tumours (about 3 and 2 tumours); no heterozygous-loss effect; correlations with the clinical factors age, stage and risk are null.",
+    "snippet": "The mean was 15.94 for unmethylated and 4.01 for meth-",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID22842668_Pluciennik2012_pdftotext.txt",
+    "anchor": "Results, Analysis of WWOX methylation status",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "23 resected Wilms' tumours from children, Lodz and Wroclaw, Poland",
+     "genotype": "WWOX mRNA, 16q microsatellites, promoter methylation; no perturbation",
+     "endpoint": "WWOX expression by methylation status"
+    },
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "Table II (Spearman correlations of WWOX with other transcripts in the 23 tumours): BCL2 0.87, BCL2/BAX 0.84, TP73 0.92, ERBB4 JM-a 0.57, EGFR 0.48 positive; CCND1 and CCNE1 -0.66 (the identical coefficient and P value for both cyclins is printed and not commented); BAX, CDH1, Ki67 and ERBB4 JM-b not significant. These are transcript-level co-expression coefficients in a tumour, with no multiple-testing correction for eleven genes.",
+    "snippet": "BCL2/BAX                          0.8368                  <0.0001",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID22842668_Pluciennik2012_pdftotext.txt",
+    "anchor": "Table II, BCL2/BAX row",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "23 resected Wilms' tumours from children, Lodz and Wroclaw, Poland",
+     "genotype": "WWOX mRNA, 16q microsatellites, promoter methylation; no perturbation",
+     "endpoint": "Spearman correlation of WWOX with 11 genes"
+    },
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "The article contains no renal-function, metabolic, biochemical or physiological measurement: every readout is tumour mRNA, DNA or one blot. The only 'metabolism' word is the Introduction sentence that WWOX 'probably participates in hormonal metabolism' (a citation-level statement).",
+    "snippet": "in hormonal metabolism. The relative high expression of WWOX",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID22842668_Pluciennik2012_pdftotext.txt",
+    "anchor": "Introduction, last paragraph before Patients and methods (text layer)",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "23 resected Wilms' tumours from children, Lodz and Wroclaw, Poland",
+     "genotype": "WWOX mRNA, 16q microsatellites, promoter methylation; no perturbation",
+     "endpoint": "scope"
+    },
+    "found_or_sought": "sought"
+   }
+  ]
+ }
+}

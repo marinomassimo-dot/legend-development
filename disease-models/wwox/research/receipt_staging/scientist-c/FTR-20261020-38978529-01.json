@@ -1,0 +1,39 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261020-38978529-01",
+ "study_id": {
+  "pmid": "38978529",
+  "doi": "10.14581/jer.24005"
+ },
+ "event_at": "2026-10-20T07:30:00Z",
+ "analysis_at": "2026-10-20T07:30:00Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, task W4-W2A-C-20261019, branch task/W4-W2A-C-20261019; context_policy SOURCE_FIRST. Held before reading: only the selection row's one-line statement of why the paper matters. Stated question: what does a cerebral folate transport deficiency look like in practice, and which CSF readout defines it. SUBSTITUTE row: not WWOX evidence. Route: Europe PMC REST fullTextXML (HTTP 200) read whole from a text rendering (case report: Methods and the two case presentations recorded as methods and results); all seven figures (photographs of imaging film montages and one EEG) opened at native size from the PMC OA bucket; no supplement exists. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID38978529_Girgis2024_PMC.xml",
+ "source_fingerprint": "7d8164eab349473df95e5eda143b31a6286495d65be97c9ad8d0ec6c736fa514",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID38978529.json",
+  "disease-models/wwox/research/wave4_scientist-c.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

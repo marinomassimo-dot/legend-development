@@ -1,0 +1,39 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261020-25779665-01",
+ "study_id": {
+  "pmid": "25779665",
+  "doi": "10.18632/oncotarget.3153"
+ },
+ "event_at": "2026-10-20T07:30:00Z",
+ "analysis_at": "2026-10-20T07:30:00Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, task W4-W2A-C-20261019, branch task/W4-W2A-C-20261019; context_policy SOURCE_FIRST. Held before reading: only the selection row's one-line statement of why the paper matters. Stated question: does the temperature thread have any basis in WWOX biology beyond cell-death assays: does the body report only 4 C bubbling death, or any in vivo cold or fever sensitivity. Route: Europe PMC REST fullTextXML (HTTP 200) saved to the shared files tree, body read whole from a text rendering of the JATS; all seven figures opened at native size from the PMC OA open-data bucket (about 550 px wide, which limits panel text); the supplementary PDF read as a derived text layer (figure and video legends only: the nine movies are not retrievable, so supplementary is captions_only). Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID25779665_Chen2015_PMC.xml",
+ "source_fingerprint": "0ae2abc7d22a5ad28f03caeb3024a48fdfab7824ce223707370ab198651aab40",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "captions_only",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID25779665.json",
+  "disease-models/wwox/research/wave4_scientist-c.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
