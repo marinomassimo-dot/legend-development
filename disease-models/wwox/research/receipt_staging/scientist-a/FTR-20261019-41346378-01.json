@@ -1,0 +1,42 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-41346378-01",
+ "study_id": {
+  "pmid": "41346378",
+  "doi": "10.3389/fneur.2025.1682488"
+ },
+ "analysis_at": "2026-10-20T05:54:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a (Scientist A), interventions batch 2026-10-19 groups H1/H2, task INTERV-H1-A-20261019 on branch task/INTERV-H1-A-20261019, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN. Route: Europe PMC JATS body (PMC12672298) and the supplementaryFiles container into the root files/ tree: Figures 1-4 opened at native resolution; the supplementary Table_1.xlsx (clinical column headers for the human cohort) was opened as a spreadsheet and holds only column labels and codes, not per-patient data readable here. Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a staged JSON for the Orchestrator and not appended at preparation time.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID41346378_Jiang2025_PMC.xml",
+ "source_fingerprint": "45c22e8008319fc0339153fbb0f167236028e9671b7d7b1052735452f56743c2",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "captions_only",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41346378.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID41346378.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "manifest",
+  "Figures 1-4 inspected as images",
+  "Supplementary Table_1.xlsx: column labels only (declared)"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "event_at": "2026-10-20T05:54:00Z"
+}

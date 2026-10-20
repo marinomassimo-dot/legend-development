@@ -1,0 +1,42 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-41293173-01",
+ "study_id": {
+  "pmid": "41293173",
+  "doi": "10.3389/fimmu.2025.1683941"
+ },
+ "analysis_at": "2026-10-19T19:23:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a (Scientist A), interventions batch 2026-10-19 groups H1/H2, task INTERV-H1-A-20261019 on branch task/INTERV-H1-A-20261019, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN. Route: Europe PMC JATS body (PMC12640865) plus the supplementaryFiles container into the root files/ tree: Figures 1-5 opened as images at native resolution (649 px wide, the supplied size); the three supplementary Word files (Figure S1 legend, Table S1 adjusted p-values, summary table) converted to text by a local script and read, the Figure S1 embedded PNG was not opened; a cytometry-checklist PDF (DataSheet1) was read in part. Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a staged JSON for the Orchestrator and not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID41293173_GarciaDelgado2025_PMC.xml",
+ "source_fingerprint": "7ba34e2dfd38b23484f6f48b763da48cc015db86d2f0df2c05cb2fab1d3a8734",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41293173.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID41293173.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "manifest",
+  "Figures 1-5 inspected as images",
+  "Supplementary Word files S1-S3 read as derived text; Figure S1 PNG and the checklist PDF not opened in full"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "event_at": "2026-10-19T19:23:00Z"
+}

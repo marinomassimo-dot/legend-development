@@ -1,0 +1,221 @@
+{
+ "schema_version": 2,
+ "pmid": "34909297",
+ "doi": "10.7759/cureus.19334",
+ "receipt": "FTR-20261019-34909297-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID34909297.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "A narrative review in a general open-access journal (Cureus), with no primary data; the figure is credited to one author. Weight: a convenience summary of secondary sources, several of them decades old."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "anemia AND epilepsy AND antiepileptic drugs",
+    "count": 245,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (anemia OR anaemia OR haemoglobin OR hemoglobin)",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts at the stated date."
+ },
+ "multihop": {
+  "references_enumerated": 31,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 34909297 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 34909297: publication types ['Journal Article', 'Review']; correction/retraction link markers in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 31,
+   "references_screened": 31,
+   "references_with_doi": 31,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID34909297_Padda2021_PMC.xml",
+   "sha256": "0e18a88296fa004fbcf93f906c2cad4fd7ceced94c5b11c7148b9b2f5785dd31",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC8653853: abstract, body, one figure legend, 31 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8653853/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID34909297/cureus-0013-00000019334-i01.jpg",
+   "sha256": "b88f675bd059bf317410003182bac5fd3bd9187189faa8807ecd3cc1fb38e313",
+   "kind": "figure",
+   "note": "Figure 1 (epilepsy seizure prevention, five lifestyle boxes) from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8653853/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC8653853/fullTextXML returned HTTP 200 (51779 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "The review states the iron-deficiency/febrile-seizure literature is contradictory, with studies showing both risk and protection.",
+    "snippet": "Studies show contradictory results regarding the association of febrile seizures in children with iron deficiency anemia; few studies show it as a protective factor, while others show it as a risk factor.",
+    "anchor": "Conclusions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34909297_Padda2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review asserts, without a stated source for the sentence, that anaemia lowers the seizure threshold; two paragraphs earlier it cites iron deficiency as raising it.",
+    "snippet": "In addition, anemia reduces the seizure threshold, resulting in increased seizure activity.",
+    "anchor": "Review, The effect of anemia on epilepsy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34909297_Padda2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Proposed mechanisms of anaemia-related seizures are listed (fall in GABA, altered neuronal metabolism, enzyme reduction, reduced brain oxygenation and energy metabolism) with the statement that cause and mechanism are not understood.",
+    "snippet": "Anemia can cause seizures through various processes, including a drop in gamma-aminobutyric acid inhibitory neurotransmitters, alterations in neuron metabolism, enzyme reduction, and a reduction in brain oxygenation and energy metabolism.",
+    "anchor": "Review, The effect of anemia on epilepsy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34909297_Padda2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Iron supplementation is mentioned only as something some authors believe might decrease seizures 'in some populations'; no trial is described.",
+    "snippet": "Although the cause and mechanism are not fully understood, some of the authors believe that iron supplementation might decrease the incidence of seizures in some populations [15].",
+    "anchor": "Review, The effect of anemia on epilepsy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34909297_Padda2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The anaemia of epilepsy treatment is attributed to antiseizure drugs (aplastic, haemolytic, megaloblastic types), by direct toxicity, immune reactions, oxidative injury and folate or B12 depletion.",
+    "snippet": "Anemia is one of many adverse effects induced by ASMs.",
+    "anchor": "Review, Pathophysiology of hematologic diseases by ASMs",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34909297_Padda2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Drug-induced haemolysis management: hold the drug, then check laboratory values and assess for necessary transfusion (single case-report source).",
+    "snippet": "In the case of drug-induced hemolysis, particularly with drugs like oxcarbazepine, the primary step in management is to hold the drug. Then, we should look at the lab values and assess the patient for necessary transfusion [21].",
+    "anchor": "Review, Management",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34909297_Padda2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Felbamate metabolites are described as binding albumin before reaching bone marrow, the only albumin mention in the paper (a mechanism statement from a cited source).",
+    "snippet": "Once they are synthesized in the liver, they will bind albumin and be transported to the bone marrow where they induce direct cellular damage [19].",
+    "anchor": "Review, Aplastic anemia",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34909297_Padda2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Routine blood-count monitoring and folic acid are recommended during antiseizure drug therapy, with the dose for folic acid undetermined.",
+    "snippet": "Therefore, during ASM therapy, routine blood count monitoring is beneficial and should be done [23].",
+    "anchor": "Review, Management",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34909297_Padda2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 is a five-box lifestyle graphic (avoid alcohol and substance abuse, coping with stress, regular exercise with proper sleep, avoid flashing lights, control high-grade fever) with no data and no relation to anaemia.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 five coloured boxes: Avoid Alcohol, substance abuse; Coping with stress; Regular exercise with proper sleep; Avoid flashing lights; Control high grade fever.",
+    "anchor": "Figure 1, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID34909297/cureus-0013-00000019334-i01.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative review graphic (no data)"
+    }
+   }
+  ]
+ }
+}

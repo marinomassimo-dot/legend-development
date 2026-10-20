@@ -1,0 +1,776 @@
+{
+ "schema_version": 2,
+ "pmid": "19484134",
+ "doi": "10.1371/journal.pone.0005755",
+ "receipt": "FTR-20261019-19484134-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID19484134.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 14,
+  "publications_on_gene": 13,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "The Chang laboratory (National Cheng Kung University) with US collaborators, who coined WOX1 and have published most WWOX apoptosis work; primary for the gene's apoptotic-effector literature, and an investigator-defined model (WOX1/Y33 phosphorylation) that others have contested (the paper itself cites an opposing view)."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "complement C1q AND WWOX",
+    "count": 5,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND complement",
+    "count": 8,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts at the stated date."
+ },
+ "multihop": {
+  "references_enumerated": 57,
+  "gene_direct_refs_in_source": [
+   "ref 19",
+   "ref 20",
+   "ref 21",
+   "ref 26",
+   "ref 27",
+   "ref 29",
+   "ref 30",
+   "ref 31",
+   "ref 32",
+   "18487609",
+   "ref 37",
+   "ref 40",
+   "ref 43"
+  ],
+  "resolved": [
+   {
+    "pmid": "18487609",
+    "how": "Reference 33 (Aqeilan 2008, the Wwox-null postnatal survival and bone paper) matches by title a record already in this corpus (registry full title identical; the registry carries it as read); resolved by identity, not re-read in this wave."
+   }
+  ],
+  "queued": [
+   {
+    "pmid": "ref 19 (no PMID in the JATS reference list)",
+    "queue": "not queued by this actor: the full-text queue is the orchestrator's; the reference is a WWOX paper cited for background and method, debt recorded here so it stays visible"
+   },
+   {
+    "pmid": "ref 20 (no PMID in the JATS reference list)",
+    "queue": "not queued by this actor: the full-text queue is the orchestrator's; the reference is a WWOX paper cited for background and method, debt recorded here so it stays visible"
+   },
+   {
+    "pmid": "ref 21 (no PMID in the JATS reference list)",
+    "queue": "not queued by this actor: the full-text queue is the orchestrator's; the reference is a WWOX paper cited for background and method, debt recorded here so it stays visible"
+   },
+   {
+    "pmid": "ref 26 (no PMID in the JATS reference list)",
+    "queue": "not queued by this actor: the full-text queue is the orchestrator's; the reference is a WWOX paper cited for background and method, debt recorded here so it stays visible"
+   },
+   {
+    "pmid": "ref 27 (no PMID in the JATS reference list)",
+    "queue": "not queued by this actor: the full-text queue is the orchestrator's; the reference is a WWOX paper cited for background and method, debt recorded here so it stays visible"
+   },
+   {
+    "pmid": "ref 29 (no PMID in the JATS reference list)",
+    "queue": "not queued by this actor: the full-text queue is the orchestrator's; the reference is a WWOX paper cited for background and method, debt recorded here so it stays visible"
+   },
+   {
+    "pmid": "ref 30 (no PMID in the JATS reference list)",
+    "queue": "not queued by this actor: the full-text queue is the orchestrator's; the reference is a WWOX paper cited for background and method, debt recorded here so it stays visible"
+   },
+   {
+    "pmid": "ref 31 (no PMID in the JATS reference list)",
+    "queue": "not queued by this actor: the full-text queue is the orchestrator's; the reference is a WWOX paper cited for background and method, debt recorded here so it stays visible"
+   },
+   {
+    "pmid": "ref 32 (no PMID in the JATS reference list)",
+    "queue": "not queued by this actor: the full-text queue is the orchestrator's; the reference is a WWOX paper cited for background and method, debt recorded here so it stays visible"
+   },
+   {
+    "pmid": "ref 37 (no PMID in the JATS reference list)",
+    "queue": "not queued by this actor: the full-text queue is the orchestrator's; the reference is a WWOX paper cited for background and method, debt recorded here so it stays visible"
+   },
+   {
+    "pmid": "ref 40 (no PMID in the JATS reference list)",
+    "queue": "not queued by this actor: the full-text queue is the orchestrator's; the reference is a WWOX paper cited for background and method, debt recorded here so it stays visible"
+   },
+   {
+    "pmid": "ref 43 (no PMID in the JATS reference list)",
+    "queue": "not queued by this actor: the full-text queue is the orchestrator's; the reference is a WWOX paper cited for background and method, debt recorded here so it stays visible"
+   }
+  ],
+  "note": "Thirteen references are WWOX/WOX1 papers (term-screened list; mostly the corresponding author's laboratory plus Aqeilan and Croce, Watanabe, Jin, Sze). One resolved by identity to a record already in the corpus; twelve recorded as unqueued debt. Reference 38 (Hyal-2/WOX1) was not matched by the term screen because the entry text does not carry the gene name."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 19484134 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 19484134: publication types ['Journal Article', \"Research Support, Non-U.S. Gov't\", \"Research Support, U.S. Gov't, Non-P.H.S.\"]; correction/retraction link markers in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 57,
+   "references_screened": 52,
+   "references_with_doi": 52,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 5
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID19484134_Hong2009_PMC.xml",
+   "sha256": "dc3b0ac56eb446ea42cd99b840b6d99c4df4a3b2f56e3f26ce843d022af472bf",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC2685983: abstract, body, ten figure legends and four supporting-information legends, 57 references; no tables.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2685983/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID19484134/pone.0005755.g001.jpg",
+   "sha256": "1a91a4fc8205d23a1902e76868805ce2defba622f719b198aa92027352f6a91b",
+   "kind": "figure",
+   "note": "Figure 1 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2685983/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID19484134/pone.0005755.g002.jpg",
+   "sha256": "0600830b59fedf841d2744439daa201a3556fe6c3895ede7110d0da3337d7e70",
+   "kind": "figure",
+   "note": "Figure 2 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2685983/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID19484134/pone.0005755.g003.jpg",
+   "sha256": "7a8ed3febbafd8bf1fd46a32fb7414229fef14d885e6fac5214ae9d5398a7f9b",
+   "kind": "figure",
+   "note": "Figure 3 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2685983/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID19484134/pone.0005755.g004.jpg",
+   "sha256": "c78aabcd027b36b6d3161fae62d4c5f474858c57e38038a36b743c703cbb3c3e",
+   "kind": "figure",
+   "note": "Figure 4 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2685983/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID19484134/pone.0005755.g005.jpg",
+   "sha256": "42df97ecec68a97e0ace5c75787314321dc2d58228bcc65e532e3628cf16c0c9",
+   "kind": "figure",
+   "note": "Figure 5 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2685983/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID19484134/pone.0005755.g006.jpg",
+   "sha256": "3fb1c9cd9f788cbcced6d1e7611b305905e4e95b77807b9b703d16964d0935ed",
+   "kind": "figure",
+   "note": "Figure 6 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2685983/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID19484134/pone.0005755.g007.jpg",
+   "sha256": "9f00f2d560877e3b71f8562205f66e711b5132e8e918be5dcceb494f2e3d23d1",
+   "kind": "figure",
+   "note": "Figure 7 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2685983/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID19484134/pone.0005755.g008.jpg",
+   "sha256": "42d61030f0d53c760562e189f53d04d87906517d9ed4c9c9d7273b3b85319e4e",
+   "kind": "figure",
+   "note": "Figure 8 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2685983/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID19484134/pone.0005755.g009.jpg",
+   "sha256": "e9319c36dd82e8d15d610650684c6ecab7784d31390194ac5951c14c70c918f8",
+   "kind": "figure",
+   "note": "Figure 9 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2685983/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID19484134/pone.0005755.g010.jpg",
+   "sha256": "d10e0ce92905a2981112dda5be312c3a660ca7e59b8038b142aba0f76bfc27eb",
+   "kind": "figure",
+   "note": "Figure 10 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2685983/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID19484134/pone.0005755.s001.tif",
+   "sha256": "812aaa0ded82acfcb474120f2606ef98a8dfed9663726b5e4d76fbca55a4f443",
+   "kind": "figure",
+   "note": "Supporting Figure S1 (TIFF) from the Europe PMC supplementaryFiles container, opened after a viewing-only conversion; the declared artefact is the unchanged TIFF.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2685983/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID19484134/pone.0005755.s002.tif",
+   "sha256": "7153d67ca7151758df19828737bf3ddba34eae49b1b2175995b88b7ae9241d59",
+   "kind": "figure",
+   "note": "Supporting Figure S2 (TIFF) from the Europe PMC supplementaryFiles container, opened after a viewing-only conversion; the declared artefact is the unchanged TIFF.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2685983/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID19484134/pone.0005755.s003.tif",
+   "sha256": "d8b83a298e8011f4ead8efc31dd704d9634d41009fa4928dcb6edca601544b29",
+   "kind": "figure",
+   "note": "Supporting Figure S3 (TIFF) from the Europe PMC supplementaryFiles container, opened after a viewing-only conversion; the declared artefact is the unchanged TIFF.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2685983/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID19484134/pone.0005755.s004.tif",
+   "sha256": "5468b858d32de9bc03496d79b80588d70f7f84e13ae620418cad99428eeca0e2",
+   "kind": "figure",
+   "note": "Supporting Figure S4 (TIFF) from the Europe PMC supplementaryFiles container, opened after a viewing-only conversion; the declared artefact is the unchanged TIFF.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2685983/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC2685983/fullTextXML returned HTTP 200 (138684 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "The effect of C1q on endogenous WOX1 is read as nuclear accumulation of an in-house Tyr33-phosphorylated epitope antibody signal; the abstract's activation wording rests on this.",
+    "snippet": "Localization of p-WOX1 was determined by immunofluorescence microscopy. These starved cells had very low levels of cytoplasmic p-WOX1 (Fig. 1A).",
+    "anchor": "Results, C1q activates WOX1 in DU145 cells",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID19484134_Hong2009_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human prostate cancer cell line DU145 (also MCF7, SH-SY5Y, basal cell carcinoma line); endogenous and EGFP-WOX1 overexpressed WWOX",
+     "genotype": "endogenous WWOX versus electroporated EGFP-WOX1, dn-WOX1, Y33R",
+     "treatment": "purified C1q 1-4 ug/mL or complement-depleted 1% human serum",
+     "endpoint": "p-WOX1 localisation, SubG1, DNA fragmentation, ERK/JNK/STAT3/p53"
+    }
+   },
+   {
+    "proposition": "Apoptosis needs overexpressed WOX1: cells transfected with EGFP-WOX1 or EGFP alone, then C1q for 24 h.",
+    "snippet": "DU145 cells were transfected with EGFP-WOX1 (tagged with EGFP) or EGFP alone by electroporation.",
+    "anchor": "Results, C1q activates ectopic WOX1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID19484134_Hong2009_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human prostate cancer cell line DU145 (also MCF7, SH-SY5Y, basal cell carcinoma line); endogenous and EGFP-WOX1 overexpressed WWOX",
+     "genotype": "endogenous WWOX versus electroporated EGFP-WOX1, dn-WOX1, Y33R",
+     "treatment": "purified C1q 1-4 ug/mL or complement-depleted 1% human serum",
+     "endpoint": "p-WOX1 localisation, SubG1, DNA fragmentation, ERK/JNK/STAT3/p53"
+    }
+   },
+   {
+    "proposition": "In vector-only controls C1q did not induce apoptosis; no endogenous-WWOX apoptosis is reported.",
+    "snippet": "In controls, C1q did not induce apoptosis in DU145 cells overexpressing EGFP vector only (Figs. 2A and 2B).",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID19484134_Hong2009_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human prostate cancer cell line DU145 (also MCF7, SH-SY5Y, basal cell carcinoma line); endogenous and EGFP-WOX1 overexpressed WWOX",
+     "genotype": "endogenous WWOX versus electroporated EGFP-WOX1, dn-WOX1, Y33R",
+     "treatment": "purified C1q 1-4 ug/mL or complement-depleted 1% human serum",
+     "endpoint": "p-WOX1 localisation, SubG1, DNA fragmentation, ERK/JNK/STAT3/p53"
+    }
+   },
+   {
+    "proposition": "A decisive complement-independence arm is 'data not shown'.",
+    "snippet": "Also, under serum-free conditions, exogenous C1q enhanced ectopic WOX1-mediated apoptosis (data not shown).",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID19484134_Hong2009_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human prostate cancer cell line DU145 (also MCF7, SH-SY5Y, basal cell carcinoma line); endogenous and EGFP-WOX1 overexpressed WWOX",
+     "genotype": "endogenous WWOX versus electroporated EGFP-WOX1, dn-WOX1, Y33R",
+     "treatment": "purified C1q 1-4 ug/mL or complement-depleted 1% human serum",
+     "endpoint": "p-WOX1 localisation, SubG1, DNA fragmentation, ERK/JNK/STAT3/p53"
+    }
+   },
+   {
+    "proposition": "Dominant-negative WOX1 and a Y33R mutant blocked C1q killing in time-lapse, with representative cells and about 100 examined at the end.",
+    "snippet": "We altered Tyr33 to Arg33 in the first WW domain [27], [35], and determined that C1q did not mediate apoptosis when cells expressed this mutant protein (Fig. 4C).",
+    "anchor": "Results, N-terminal Tyr33-phosphorylated WW domain",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID19484134_Hong2009_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human prostate cancer cell line DU145 (also MCF7, SH-SY5Y, basal cell carcinoma line); endogenous and EGFP-WOX1 overexpressed WWOX",
+     "genotype": "endogenous WWOX versus electroporated EGFP-WOX1, dn-WOX1, Y33R",
+     "treatment": "purified C1q 1-4 ug/mL or complement-depleted 1% human serum",
+     "endpoint": "p-WOX1 localisation, SubG1, DNA fragmentation, ERK/JNK/STAT3/p53"
+    }
+   },
+   {
+    "proposition": "Text: C1q increased DNA fragmentation in WOX1-expressing cells but not p53 cells, and suppressed p53/WOX1 fragmentation.",
+    "snippet": "The results showed the cleaved DNA ladders as induced by C1q in WOX1-expressing DU145 and SH-SY5Y cells (Fig. 5 and Supplementary Fig. S4).",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID19484134_Hong2009_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human prostate cancer cell line DU145 (also MCF7, SH-SY5Y, basal cell carcinoma line); endogenous and EGFP-WOX1 overexpressed WWOX",
+     "genotype": "endogenous WWOX versus electroporated EGFP-WOX1, dn-WOX1, Y33R",
+     "treatment": "purified C1q 1-4 ug/mL or complement-depleted 1% human serum",
+     "endpoint": "p-WOX1 localisation, SubG1, DNA fragmentation, ERK/JNK/STAT3/p53"
+    }
+   },
+   {
+    "proposition": "Text: depletion of C7, C8 and C9 'did not support' expression of WOX2 and p-ERK (read literally, the opposite of what Figure 8B shows).",
+    "snippet": "In comparison, component C7, C8 and C9 did not support the expression of WOX2 and p-ERK (Figs. 8A and 8B).",
+    "anchor": "Results, Serum complement C1q and C6 are essential",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID19484134_Hong2009_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human prostate cancer cell line DU145 (also MCF7, SH-SY5Y, basal cell carcinoma line); endogenous and EGFP-WOX1 overexpressed WWOX",
+     "genotype": "endogenous WWOX versus electroporated EGFP-WOX1, dn-WOX1, Y33R",
+     "treatment": "purified C1q 1-4 ug/mL or complement-depleted 1% human serum",
+     "endpoint": "p-WOX1 localisation, SubG1, DNA fragmentation, ERK/JNK/STAT3/p53"
+    }
+   },
+   {
+    "proposition": "Method class: the authors state WOX1 expression (full-length) was unchanged while WOX2 fell without C1q or C6, and infer C1q and C6 support alternative splicing.",
+    "snippet": "These observations indicate that C1q and C6 are likely to support alternatively splicing of WWOX mRNA, thus leading to the generation of WOX2 protein.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID19484134_Hong2009_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human prostate cancer cell line DU145 (also MCF7, SH-SY5Y, basal cell carcinoma line); endogenous and EGFP-WOX1 overexpressed WWOX",
+     "genotype": "endogenous WWOX versus electroporated EGFP-WOX1, dn-WOX1, Y33R",
+     "treatment": "purified C1q 1-4 ug/mL or complement-depleted 1% human serum",
+     "endpoint": "p-WOX1 localisation, SubG1, DNA fragmentation, ERK/JNK/STAT3/p53"
+    }
+   },
+   {
+    "proposition": "The authors project C1q activating WOX1 in neurons toward cell death, a hypothesis for Alzheimer disease.",
+    "snippet": "There is a strong possibility that C1q activates WOX1 in neurons, which ultimately leads to cell death.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID19484134_Hong2009_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human prostate cancer cell line DU145 (also MCF7, SH-SY5Y, basal cell carcinoma line); endogenous and EGFP-WOX1 overexpressed WWOX",
+     "genotype": "endogenous WWOX versus electroporated EGFP-WOX1, dn-WOX1, Y33R",
+     "treatment": "purified C1q 1-4 ug/mL or complement-depleted 1% human serum",
+     "endpoint": "p-WOX1 localisation, SubG1, DNA fragmentation, ERK/JNK/STAT3/p53"
+    }
+   },
+   {
+    "proposition": "The authors state the C1q/WOX1 signalling may be less efficient in cancers, as advanced cancer cells are deficient in wild-type WWOX.",
+    "snippet": "Nonetheless, the C1q/WOX1 signaling could be less efficient in cancers, as many advanced cancer cells are deficient in the wild type WWOX/WOX1 [20], [21].",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID19484134_Hong2009_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human prostate cancer cell line DU145 (also MCF7, SH-SY5Y, basal cell carcinoma line); endogenous and EGFP-WOX1 overexpressed WWOX",
+     "genotype": "endogenous WWOX versus electroporated EGFP-WOX1, dn-WOX1, Y33R",
+     "treatment": "purified C1q 1-4 ug/mL or complement-depleted 1% human serum",
+     "endpoint": "p-WOX1 localisation, SubG1, DNA fragmentation, ERK/JNK/STAT3/p53"
+    }
+   },
+   {
+    "proposition": "Tissue: C1q signal lower in BPH and cancer than normal postmortem prostate (five each); the legend adds that exposure time for the BPH pictures was increased.",
+    "snippet": "Compared to the normal prostate tissues, the exposure time for taking the pictures for BPH was increased.",
+    "anchor": "Figure 7 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID19484134_Hong2009_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "archival post-mortem human prostate tissue, normal, BPH and cancer, n = 5 each, immunofluorescence",
+     "endpoint": "C1q signal"
+    }
+   },
+   {
+    "proposition": "The paper states the findings do not require complement activation and no activated C3 fragments were found on the cell surface.",
+    "snippet": "No activated complement C3 fragments were shown to deposit on cell surface.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID19484134_Hong2009_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human prostate cancer cell line DU145 (also MCF7, SH-SY5Y, basal cell carcinoma line); endogenous and EGFP-WOX1 overexpressed WWOX",
+     "genotype": "endogenous WWOX versus electroporated EGFP-WOX1, dn-WOX1, Y33R",
+     "treatment": "purified C1q 1-4 ug/mL or complement-depleted 1% human serum",
+     "endpoint": "p-WOX1 localisation, SubG1, DNA fragmentation, ERK/JNK/STAT3/p53"
+    }
+   },
+   {
+    "proposition": "The paper names no receptor for C1q on these cells and says Hyal-2 binding of C1q remains to be determined.",
+    "snippet": "Binding of Hyal-2 with C1q remains to be determined.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID19484134_Hong2009_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human prostate cancer cell line DU145 (also MCF7, SH-SY5Y, basal cell carcinoma line); endogenous and EGFP-WOX1 overexpressed WWOX",
+     "genotype": "endogenous WWOX versus electroporated EGFP-WOX1, dn-WOX1, Y33R",
+     "treatment": "purified C1q 1-4 ug/mL or complement-depleted 1% human serum",
+     "endpoint": "p-WOX1 localisation, SubG1, DNA fragmentation, ERK/JNK/STAT3/p53"
+    }
+   },
+   {
+    "proposition": "Figure 1: p-WOX1 immunofluorescence in DU145 cells; the medium panel is nearly empty while C1q alone gives strong nuclear signal; panel E reports about 85 percent nuclear p-WOX1 with C1q against about 1 percent in medium, about 15 percent in C1q-depleted serum and about 72 percent when C1q is added back, from about 100 cells in 3 experiments with error bars and no test marked.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 A-D immunofluorescence (p-WOX1, nuclei, merge) medium, C1q, dC1q serum, dC1q serum + C1q; E bar chart ~1, ~85, ~15, ~72 percent.",
+    "anchor": "Figure 1, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID19484134/pone.0005755.g001.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human prostate cancer cell line DU145 (also MCF7, SH-SY5Y, basal cell carcinoma line); endogenous and EGFP-WOX1 overexpressed WWOX",
+     "genotype": "endogenous WWOX versus electroporated EGFP-WOX1, dn-WOX1, Y33R",
+     "treatment": "purified C1q 1-4 ug/mL or complement-depleted 1% human serum",
+     "endpoint": "p-WOX1 localisation, SubG1, DNA fragmentation, ERK/JNK/STAT3/p53"
+    }
+   },
+   {
+    "proposition": "Figure 2: in EGFP-WOX1 cells the SubG1 fraction is about 13.5 percent without C1q (vector about 6 percent) and rises to about 20, 31 and 38 percent at 1, 2 and 4 ug/mL, while vector cells stay near 5-6 percent; the bar graph is a single representative experiment without error bars; panel C shows time-lapse phase images of a WOX1-expressing basal cell carcinoma cell shrinking over 6 h.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 A cell-cycle histograms, B SubG1 and G0/G1 bars vector vs WOX1 at C1q 0,1,2,4 ug/mL, C time-lapse BCC gfp and hWOX1.",
+    "anchor": "Figure 2, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID19484134/pone.0005755.g002.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human prostate cancer cell line DU145 (also MCF7, SH-SY5Y, basal cell carcinoma line); endogenous and EGFP-WOX1 overexpressed WWOX",
+     "genotype": "endogenous WWOX versus electroporated EGFP-WOX1, dn-WOX1, Y33R",
+     "treatment": "purified C1q 1-4 ug/mL or complement-depleted 1% human serum",
+     "endpoint": "p-WOX1 localisation, SubG1, DNA fragmentation, ERK/JNK/STAT3/p53"
+    }
+   },
+   {
+    "proposition": "Figure 3: dn-WOX1 dose series with and without C1q; SubG1 stays about 7-9 percent with C1q at 0-10 ug and the no-C1q bars also rise at 20 ug (about 24 percent, both conditions about 22-24), so the dominant-negative construct itself raises baseline apoptosis at the top dose; there is no WOX1 plus C1q arm in the same experiment, and the control values are single bars.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3 A histograms for 0, 2.5, 5, 10, 20 ug dn-WOX1 no C1q and C1q, controls and staurosporine; B SubG1; C G0/G1.",
+    "anchor": "Figure 3, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID19484134/pone.0005755.g003.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human prostate cancer cell line DU145 (also MCF7, SH-SY5Y, basal cell carcinoma line); endogenous and EGFP-WOX1 overexpressed WWOX",
+     "genotype": "endogenous WWOX versus electroporated EGFP-WOX1, dn-WOX1, Y33R",
+     "treatment": "purified C1q 1-4 ug/mL or complement-depleted 1% human serum",
+     "endpoint": "p-WOX1 localisation, SubG1, DNA fragmentation, ERK/JNK/STAT3/p53"
+    }
+   },
+   {
+    "proposition": "Figure 4: time-lapse series of single cells: WOX1ww shrinks by 200 min, WOX1ww plus dn-WOX1 persists, Y33R persists, EGFP persists; one cell per condition shown, with about 100 cells said to be examined at the end.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 4 four rows of time-lapse frames A-D with merged green fluorescence inset.",
+    "anchor": "Figure 4, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID19484134/pone.0005755.g004.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human prostate cancer cell line DU145 (also MCF7, SH-SY5Y, basal cell carcinoma line); endogenous and EGFP-WOX1 overexpressed WWOX",
+     "genotype": "endogenous WWOX versus electroporated EGFP-WOX1, dn-WOX1, Y33R",
+     "treatment": "purified C1q 1-4 ug/mL or complement-depleted 1% human serum",
+     "endpoint": "p-WOX1 localisation, SubG1, DNA fragmentation, ERK/JNK/STAT3/p53"
+    }
+   },
+   {
+    "proposition": "Figure 5: DNA-fragmentation gel (smears, no clear ladders in the reproduction) and densitometry from two experiments with no error bars: WOX1 about 205 without and about 235 with C1q (about 15 percent increase), p53 about 330 in both, p53 plus WOX1 about 495 falling to about 325 with C1q, dn plus p53 about 185 to 230.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 5 A gel lanes Sham, EGFP, WOX1, DN, p53, WOX1/p53, DN/p53, Cont with and without C1q; B bars.",
+    "anchor": "Figure 5, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID19484134/pone.0005755.g005.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "human prostate cancer cell line DU145 (also MCF7, SH-SY5Y, basal cell carcinoma line); endogenous and EGFP-WOX1 overexpressed WWOX",
+     "genotype": "endogenous WWOX versus electroporated EGFP-WOX1, dn-WOX1, Y33R",
+     "treatment": "purified C1q 1-4 ug/mL or complement-depleted 1% human serum",
+     "endpoint": "p-WOX1 localisation, SubG1, DNA fragmentation, ERK/JNK/STAT3/p53"
+    },
+    "qualifies": "entries[5]",
+    "qualifies_needle": "The results showed the cleaved DNA ladders as induced by C1q"
+   },
+   {
+    "proposition": "Figure 6: TIRF and epifluorescence of EGFP and EGFP-WOX1 cells with and without C1q; WOX1 cells show puncta between cells and C1q increases them (stated as 3-6 fold); one field per condition, no quantification panel.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 6 A EGFP Epi/TIRF control vs C1q, B EGFP-WOX1 control vs C1q, C zoomed microvilli.",
+    "anchor": "Figure 6, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID19484134/pone.0005755.g006.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human prostate cancer cell line DU145 (also MCF7, SH-SY5Y, basal cell carcinoma line); endogenous and EGFP-WOX1 overexpressed WWOX",
+     "genotype": "endogenous WWOX versus electroporated EGFP-WOX1, dn-WOX1, Y33R",
+     "treatment": "purified C1q 1-4 ug/mL or complement-depleted 1% human serum",
+     "endpoint": "p-WOX1 localisation, SubG1, DNA fragmentation, ERK/JNK/STAT3/p53"
+    }
+   },
+   {
+    "proposition": "Figure 7: C1q immunofluorescence of normal, BPH and cancer prostate with the BPH and cancer panels visibly dimmer; panel B shows a reduction of about 52 percent (BPH) and 54 percent (cancer) against normal with asterisks; panel C shows C1q and p-WOX1 signals in normal and BPH glands with partial overlap; the exposure-time difference stated in the legend is not reflected in the quantification description.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 7 A tissue panels C1q/nuclei/overlay, B bar chart percent reduction, C p-WOX1 and C1q colocalisation.",
+    "anchor": "Figure 7, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID19484134/pone.0005755.g007.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "archival post-mortem human prostate tissue, normal, BPH and cancer, n = 5 each, immunofluorescence",
+     "endpoint": "C1q signal"
+    }
+   },
+   {
+    "proposition": "Figure 8: Western blots and quantification; p-ERK and WOX2 rise with normal human serum and with C7-, C8- and C9-depleted sera (delta-C7 p-ERK about 210 percent, WOX2 about 80 percent) and fall with C1q- or C6-depleted serum; WOX1 itself is unchanged; panel F shows p-WOX1 about -50 percent and WOX1 about +25 percent in C1q-depleted serum from one blot. The text sentence that C7, C8 and C9 'did not support' WOX2 and p-ERK is not what the panel shows for C7.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 8 A blots, B quantification of p-ERK and WOX2, C WOX2 immunofluorescence, D-E p-WOX1 immunofluorescence, F p-WOX1 and WOX1 blot and bars.",
+    "anchor": "Figure 8, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID19484134/pone.0005755.g008.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "human prostate cancer cell line DU145 (also MCF7, SH-SY5Y, basal cell carcinoma line); endogenous and EGFP-WOX1 overexpressed WWOX",
+     "genotype": "endogenous WWOX versus electroporated EGFP-WOX1, dn-WOX1, Y33R",
+     "treatment": "purified C1q 1-4 ug/mL or complement-depleted 1% human serum",
+     "endpoint": "p-WOX1 localisation, SubG1, DNA fragmentation, ERK/JNK/STAT3/p53"
+    },
+    "qualifies": "entries[6]",
+    "qualifies_needle": "component C7, C8 and C9 did not support the expression of WOX2 and p-ERK"
+   },
+   {
+    "proposition": "Figure 9: p53 nuclear localisation in complement-depleted sera with and without hyaluronan; C9-depleted serum gives about 60 percent nuclear p53 and hyaluronan lowers it to about 5 percent, C6-depleted serum the opposite; two experiments, no error bars.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 9 A-B p53 immunofluorescence dC6 and dC9 with and without HA, C quantification, D negative control.",
+    "anchor": "Figure 9, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID19484134/pone.0005755.g009.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human prostate cancer cell line DU145 (also MCF7, SH-SY5Y, basal cell carcinoma line); endogenous and EGFP-WOX1 overexpressed WWOX",
+     "genotype": "endogenous WWOX versus electroporated EGFP-WOX1, dn-WOX1, Y33R",
+     "treatment": "purified C1q 1-4 ug/mL or complement-depleted 1% human serum",
+     "endpoint": "p-WOX1 localisation, SubG1, DNA fragmentation, ERK/JNK/STAT3/p53"
+    }
+   },
+   {
+    "proposition": "Figure 10: p-JNK1 rises about 83 and 100 percent in C1q- and C6-depleted sera against serum-free, and p-STAT3 rises with hyaluronan in C1q-depleted serum (about 140 percent); bars with error bars from n = 3.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 10 A p-JNK1 blot, B quantification, C-D p-STAT3 immunofluorescence and bars.",
+    "anchor": "Figure 10, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID19484134/pone.0005755.g010.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human prostate cancer cell line DU145 (also MCF7, SH-SY5Y, basal cell carcinoma line); endogenous and EGFP-WOX1 overexpressed WWOX",
+     "genotype": "endogenous WWOX versus electroporated EGFP-WOX1, dn-WOX1, Y33R",
+     "treatment": "purified C1q 1-4 ug/mL or complement-depleted 1% human serum",
+     "endpoint": "p-WOX1 localisation, SubG1, DNA fragmentation, ERK/JNK/STAT3/p53"
+    }
+   },
+   {
+    "proposition": "Supporting Figure S1 (DU145 dose series): SubG1 without C1q is about 22, 27, 42 and 82 percent at 0, 2.5, 5 and 10 ug WOX1 (baseline apoptosis climbs with dose; the 0 ug bar is about 22 percent here against about 6 percent for vector in Figure 2); C1q adds at 2.5 and 5 ug (about 45 and 68 percent) and lowers it at 10 ug (about 74 against 82).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] S1 histograms and bars SubG1 and G0/G1 for DU145 by WOX1 dose with and without C1q, staurosporine 51.6 percent.",
+    "anchor": "Supporting Figure S1 (TIFF)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID19484134/pone.0005755.s001.tif",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human prostate cancer cell line DU145 (also MCF7, SH-SY5Y, basal cell carcinoma line); endogenous and EGFP-WOX1 overexpressed WWOX",
+     "genotype": "endogenous WWOX versus electroporated EGFP-WOX1, dn-WOX1, Y33R",
+     "treatment": "purified C1q 1-4 ug/mL or complement-depleted 1% human serum",
+     "endpoint": "p-WOX1 localisation, SubG1, DNA fragmentation, ERK/JNK/STAT3/p53"
+    }
+   },
+   {
+    "proposition": "Supporting Figure S3 (SH-SY5Y, a neuroblastoma line): the SubG1 fraction rises with WOX1 dose without C1q (about 19, 23, 36, 51 percent at 0, 2.5, 5, 10 ug) and C1q adds at 2.5 and 5 ug (about 43 and 64 percent) but little at 10 ug (about 62 against 51); at 0 ug WOX1 C1q gives about 12 against 19; single experiment, no error bars.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] S3 histograms and bars SubG1 and G0/G1 for SH-SY5Y by WOX1 dose with and without C1q.",
+    "anchor": "Supporting Figure S3 (TIFF)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID19484134/pone.0005755.s003.tif",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human prostate cancer cell line DU145 (also MCF7, SH-SY5Y, basal cell carcinoma line); endogenous and EGFP-WOX1 overexpressed WWOX",
+     "genotype": "endogenous WWOX versus electroporated EGFP-WOX1, dn-WOX1, Y33R",
+     "treatment": "purified C1q 1-4 ug/mL or complement-depleted 1% human serum",
+     "endpoint": "p-WOX1 localisation, SubG1, DNA fragmentation, ERK/JNK/STAT3/p53"
+    }
+   },
+   {
+    "proposition": "Supporting Figure S4B (SH-SY5Y DNA fragmentation): WOX1 at 10 ug about 190 without and 188 with C1q (no C1q effect), WOX1 at 2.5 ug about 4 without and about 198 with C1q, and EGFP at 10 ug about 75 without and 37 with C1q, so the EGFP control also fragments DNA at high dose; panel A (DU145) WOX1 10 ug about 98 without and 160 with C1q.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] S4 A DU145 gel and bars; B SH-SY5Y gel and bars; lane key 1-12.",
+    "anchor": "Supporting Figure S4 (TIFF, rendered at higher zoom for viewing)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID19484134/pone.0005755.s004.tif",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human prostate cancer cell line DU145 (also MCF7, SH-SY5Y, basal cell carcinoma line); endogenous and EGFP-WOX1 overexpressed WWOX",
+     "genotype": "endogenous WWOX versus electroporated EGFP-WOX1, dn-WOX1, Y33R",
+     "treatment": "purified C1q 1-4 ug/mL or complement-depleted 1% human serum",
+     "endpoint": "p-WOX1 localisation, SubG1, DNA fragmentation, ERK/JNK/STAT3/p53"
+    }
+   },
+   {
+    "proposition": "Supporting Figure S2 (MCF7): SubG1 about 10 to 19 percent between 0 and 20 ug WOX1 without C1q and about 19 to 33 percent with C1q (peak at 2.5 ug), a smaller effect than in DU145; single experiment.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] S2 histograms and bar charts SubG1 and G0/G1 for MCF7 with numerical labels.",
+    "anchor": "Supporting Figure S2 (TIFF)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID19484134/pone.0005755.s002.tif",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human prostate cancer cell line DU145 (also MCF7, SH-SY5Y, basal cell carcinoma line); endogenous and EGFP-WOX1 overexpressed WWOX",
+     "genotype": "endogenous WWOX versus electroporated EGFP-WOX1, dn-WOX1, Y33R",
+     "treatment": "purified C1q 1-4 ug/mL or complement-depleted 1% human serum",
+     "endpoint": "p-WOX1 localisation, SubG1, DNA fragmentation, ERK/JNK/STAT3/p53"
+    }
+   }
+  ]
+ }
+}

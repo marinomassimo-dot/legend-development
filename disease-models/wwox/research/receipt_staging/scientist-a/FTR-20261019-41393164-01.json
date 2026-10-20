@@ -1,0 +1,42 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-41393164-01",
+ "study_id": {
+  "pmid": "41393164",
+  "doi": "10.1155/crcc/8872468"
+ },
+ "analysis_at": "2026-10-20T06:14:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a (Scientist A), interventions batch 2026-10-19 groups H1/H2, task INTERV-H1-A-20261019 on branch task/INTERV-H1-A-20261019, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN. Route: Europe PMC JATS body (PMC12698179) into the root files/ tree; the supplementaryFiles call returned a non-zip response, so there is no supplement to read; the article has no figures; the 11 references were term-screened for WWOX (zero) and listed, not read item by item. The two serial-laboratory tables were re-parsed column by column and the anion gap recomputed from sodium, chloride and bicarbonate. Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a staged JSON for the Orchestrator and not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID41393164_Zamith2025_PMC.xml",
+ "source_fingerprint": "b77bd170d35ec707556e86721741fa0c638d12019dbe3213c8c318c5a218b90a",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "not_present",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41393164.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID41393164.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "manifest",
+  "Tables 1-2 read and anion gap recomputed from the listed electrolytes",
+  "Reference list term-screened only; no figures and no supplement exist"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "event_at": "2026-10-20T06:14:00Z"
+}

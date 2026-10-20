@@ -1,0 +1,331 @@
+{
+ "schema_version": 2,
+ "pmid": "39239479",
+ "doi": "10.1016/j.crneur.2024.100136",
+ "receipt": "FTR-20261019-39239479-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID39239479.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "An NICHD intramural iron-biology laboratory (the Rouault group, which made the original Irp2-null mouse and described the first IREB2 patients) with an NIMH behavioural core. Primary for the gene and its mouse, not for WWOX; they interpret their own model, and the hyperactivity-as-impulsivity reading is speculation they flag as untested."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "Irp2 OR IREB2 AND mice AND behavior",
+    "count": 24,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (iron OR ferroptosis)",
+    "count": 3,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts at the stated date."
+ },
+ "multihop": {
+  "references_enumerated": 67,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 39239479 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 39239479: publication types ['Journal Article']; correction/retraction link markers in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 67,
+   "references_screened": 60,
+   "references_with_doi": 60,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 7
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39239479_Porras2024_PMC.xml",
+   "sha256": "faaa4514c954bcb0813546d095755a9d0b7c65790d36258726cd7f2b75b27fa1",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC11372806: abstract, body, eleven figure legends, 67 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11372806/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39239479/gr1.jpg",
+   "sha256": "1b81a0e160f88a606a474e0f5b3c6d7fe820a953c6a0ac44fad7d89d533ba8f6",
+   "kind": "figure",
+   "note": "Figure 1 (rotarod) from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11372806/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39239479/gr8.jpg",
+   "sha256": "b50637d2389e7c602c055129924655540324f99026954a6b886355e4c98b7edb",
+   "kind": "figure",
+   "note": "Figure 8 (Barnes maze) from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11372806/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39239479/gr11.jpg",
+   "sha256": "5a53737996d29184fd75bd541a3a3e9b86fb5d5091d7efa61425854d7e98013b",
+   "kind": "figure",
+   "note": "Figure 11 (touchscreen reversal learning) from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11372806/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39239479/mmc2.docx",
+   "sha256": "7853703f7324448c4416d9ecb58c8de26105dc1f0b9de408bde6c36dd6020892",
+   "kind": "supplement_binary",
+   "note": "Supplementary figures S1-S8 as a Word file with eight embedded TIFF images; legend text read through the document XML, images not opened.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11372806/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39239479/mmc1.pdf",
+   "sha256": "803d11695134999ea67dc331318200a1d10cc8e5254843bc9016bbbe736d1364",
+   "kind": "supplement_binary",
+   "note": "Peer Review Overview PDF (decision letters and reviewer comments); text extracted but not read.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11372806/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC11372806/fullTextXML returned HTTP 200 (165420 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "Human disease context in the Introduction: biallelic loss-of-function IREB2 (IRP2 absent) with dystonic cerebral palsy, failure to meet milestones, and progressive cerebral atrophy and white-matter loss, frontal predominant (cited human case descriptions).",
+    "snippet": "The patient was diagnosed with dystonic cerebral palsy and developed a movement disorder. Brain MRIs revealed progressive cerebral atrophy and white matter loss particularly in the frontal regions.",
+    "anchor": "Introduction, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39239479_Porras2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mouse severity is stated by the authors to be milder than the human disease.",
+    "snippet": "The Irp2−/− model significantly differs in severity from the IRP2 patients.",
+    "anchor": "Conclusion and future Directions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39239479_Porras2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Motor: rotarod latency to fall reduced by about 40 percent in the null mice; text reports p below 0.05 for the unpaired test; n 26 wild type and 28 null.",
+    "snippet": "On an accelerating rotarod test Irp2−/− mice had a nearly 40% reduction in latency to fall (Fig. 1A; t = 3.579, df = 40.82, p < 0.05).",
+    "anchor": "Results, Irp2-null mice show a robust motor deficit",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39239479_Porras2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Body weight confounds the motor readout: null mice were lighter and the genotype effect on hang time was assigned only after weight-covariate ANCOVA.",
+    "snippet": "This revealed a lower weight in the Irp2−/− mice (Fweight (1,52) = 14.438, p < 0.05; Fig. S2) causing the difference between the groups in their latency to fall during the hangtime test",
+    "anchor": "Results, motor control",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39239479_Porras2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The hyperactivity/impulsivity explanation of the motor result is the authors' speculation and is stated as untested.",
+    "snippet": "the most parsimonious explanation is that the motor deficit in the Irp2−/− mice is related to an increase in maladaptive impulsive behavior and possibly novelty/sensation seeking behavior",
+    "anchor": "Discussion, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39239479_Porras2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Barnes maze used n = 6 per genotype; the reversal probe target-zone time was 28.97 s in nulls against 22.5 s expected by chance.",
+    "snippet": "On average, the Irp2−/− mice spent 28.97s (±4.54 SEM) in the target zone which is only slightly above chance (22.5 s).",
+    "anchor": "Results, Irp2-null mice show poor navigation strategy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39239479_Porras2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Methods give n = 6 for the Barnes maze cohort.",
+    "snippet": "Age (5–7 months old) and sex-matched WT and Irp2−/− mice (n = 6) completed the following stages.",
+    "anchor": "Materials and methods, Barnes maze",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39239479_Porras2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Executive function: touchscreen reversal learning (nine wild type and thirteen nulls, 2-3 months old) showed about threefold more learning errors in nulls.",
+    "snippet": "Interestingly, there was a greater difference in the number of errors between WT and Irp2−/− mice during the “learning” stage than the “perseverative” stage (28.48 ± 8.7 vs 11.64 ± 5.4 respectively) corresponding with an approximately 3-fold increase in learning errors in Irp2−/− mice.",
+    "anchor": "Results, frontal-executive function",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39239479_Porras2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say learning, memory and anxiety appear unaffected; the cognitive deficit is reversal-specific.",
+    "snippet": "Learning and memory and anxiety appear to be unaffected by loss of Irp2, but Irp2−/− mice were consistently hyperactive in novel environments and showed a pronounced reversal learning deficit.",
+    "anchor": "Conclusion and future Directions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39239479_Porras2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors suggest the mouse phenotype could correspond to humans carrying hypomutations (hypomorphic IREB2 alleles); a suggestion without a human hypomorph measurement.",
+    "snippet": "The milder disease phenotype of the Irp2−/− mice characterized in this study could be observed in human patients who have hypomorphic mutations of IREB2.",
+    "anchor": "Conclusion and future Directions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39239479_Porras2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors propose monoamine synthesis (tyrosine and tryptophan hydroxylase, iron-dependent) as the vulnerable system, stated as possible and untested.",
+    "snippet": "Thus, monoaminergic neurons may be particularly sensitive to the functional iron deficiency caused by ablation of Irp2 and may experience a “double hit” of mitochondrial dysfunction and disrupted neurotransmitter synthesis and/or signaling.",
+    "anchor": "Conclusion and future Directions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39239479_Porras2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1A: rotarod latency to fall, wild type versus Irp2-null, marked with three asterisks; Figure 1C splits by age and sex into groups of about five to twelve animals, with a genotype bracket only for young females and a wild-type age bracket.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 panels A-C: dot plots of latency to fall (s); A genotype (*** bracket), B age (** bracket), C four groups at 4-6 and 10-12 months (brackets WT-F vs Irp2-/- F at 4-6 months, and WT-M young vs old).",
+    "anchor": "Figure 1, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39239479/gr1.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "mouse, constitutive Irp2-null (Irp2-/-) on C57Bl/6J, behavioural battery",
+     "genotype": "Irp2-/- vs wild type",
+     "endpoint": "behavioural"
+    }
+   },
+   {
+    "proposition": "Figure 8: Barnes maze with n about six per group; significant brackets only for acquisition-probe errors (wild type higher), reversal-probe visits to target and time in target zone; latency to escape hole shows overlapping dots on most days.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 8 panels A-E: proportion reaching target, errors into non-escape holes, latency to escape hole, probe visits, time in target zone; asterisks at reversal day 8, acquisition probe errors, reversal probe visits and time.",
+    "anchor": "Figure 8, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39239479/gr8.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "mouse, constitutive Irp2-null (Irp2-/-) on C57Bl/6J, behavioural battery",
+     "genotype": "Irp2-/- vs wild type",
+     "endpoint": "behavioural"
+    }
+   },
+   {
+    "proposition": "Figure 11: touchscreen reversal learning; significant differences confined to the reversal stage (total trials, non-correction errors, survival curve, perseverative and learning errors) while acquisition and correction-trial errors do not differ.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 11 panels A-F: total trials, non-correction and correction trial errors, survival plots for acquisition and reversal, perseverative and learning errors; asterisks only on reversal-stage comparisons and panel F.",
+    "anchor": "Figure 11, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39239479/gr11.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "mouse, constitutive Irp2-null (Irp2-/-) on C57Bl/6J, behavioural battery",
+     "genotype": "Irp2-/- vs wild type",
+     "endpoint": "behavioural"
+    }
+   }
+  ]
+ }
+}

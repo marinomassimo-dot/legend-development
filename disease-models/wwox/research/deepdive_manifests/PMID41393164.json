@@ -1,0 +1,290 @@
+{
+ "schema_version": 2,
+ "pmid": "41393164",
+ "doi": "10.1155/crcc/8872468",
+ "receipt": "FTR-20261019-41393164-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID41393164.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "Two ICU physicians at one US academic centre (affiliations not examined); no prior publication on the topic known to this note; no funding; two-patient case report."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "plasma exchange AND high anion gap metabolic acidosis AND albumin",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND plasma exchange",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts at the stated date."
+ },
+ "multihop": {
+  "references_enumerated": 11,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41393164 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 41393164: publication types ['Journal Article']; correction/retraction link markers in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 11,
+   "references_screened": 10,
+   "references_with_doi": 10,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41393164_Zamith2025_PMC.xml",
+   "sha256": "b77bd170d35ec707556e86721741fa0c638d12019dbe3213c8c318c5a218b90a",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC12698179: abstract, body (two cases and discussion), Tables 1-2 (serial laboratory values), 11 references; no figures.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12698179/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12698179/fullTextXML returned HTTP 200 (47493 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "Framing: two ICU patients with severe HAGMA that stayed refractory to standard care and continuous renal replacement therapy.",
+    "snippet": "Here, we present two cases of patients with unexplained, severe HAGMA suspected to be from protein",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41393164_Zamith2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "two adult ICU patients with refractory high anion gap metabolic acidosis (a 67-year-old with lactic acidosis after gastric bypass and a 50-year-old with cardiogenic shock and kidney injury), each given three plasma-exchange sessions with 3 L of 5 percent albumin",
+     "comparator": "none (two uncontrolled case reports; before and after values)",
+     "endpoint": "pH, bicarbonate, lactate, anion gap before and after exchange"
+    }
+   },
+   {
+    "proposition": "Case 1 treatment before exchange: empirical antibiotics, fomepizole, hydroxocobalamin, CRRT and bicarbonate infusion; the text says hydroxocobalamin led to improvement and eventual resolution of the lactic acidosis.",
+    "snippet": "he was also empirically treated with hydroxocobalamin, leading to subsequent improvement and eventual resolution of his lactic acidosis",
+    "anchor": "Case 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41393164_Zamith2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "two adult ICU patients with refractory high anion gap metabolic acidosis (a 67-year-old with lactic acidosis after gastric bypass and a 50-year-old with cardiogenic shock and kidney injury), each given three plasma-exchange sessions with 3 L of 5 percent albumin",
+     "comparator": "none (two uncontrolled case reports; before and after values)",
+     "endpoint": "pH, bicarbonate, lactate, anion gap before and after exchange"
+    }
+   },
+   {
+    "proposition": "Case 1 serial laboratory table: lactate is 20.0, 18.0, 15.0 and 12.0 mmol/L through CRRT and before and after the first exchange, then 2.0 after the third.",
+    "snippet": "Pre‐PLEX #17.2172715.0Elevated1384.1994.0High40High1.2203630",
+    "anchor": "Table 1",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41393164_Zamith2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "two adult ICU patients with refractory high anion gap metabolic acidosis (a 67-year-old with lactic acidosis after gastric bypass and a 50-year-old with cardiogenic shock and kidney injury), each given three plasma-exchange sessions with 3 L of 5 percent albumin",
+     "comparator": "none (two uncontrolled case reports; before and after values)",
+     "endpoint": "pH, bicarbonate, lactate, anion gap before and after exchange"
+    }
+   },
+   {
+    "proposition": "Case 1 exchange: three sessions of 3 L of 5 percent albumin on consecutive days, resolving the acidosis.",
+    "snippet": "he underwent three sessions of therapeutic plasma exchange with 3 L of 5% albumin on consecutive days",
+    "anchor": "Case 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41393164_Zamith2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "two adult ICU patients with refractory high anion gap metabolic acidosis (a 67-year-old with lactic acidosis after gastric bypass and a 50-year-old with cardiogenic shock and kidney injury), each given three plasma-exchange sessions with 3 L of 5 percent albumin",
+     "comparator": "none (two uncontrolled case reports; before and after values)",
+     "endpoint": "pH, bicarbonate, lactate, anion gap before and after exchange"
+    }
+   },
+   {
+    "proposition": "Case 1 albumin electrophoresis was low although serum albumin was normal; the authors attribute this possibly to methodological differences.",
+    "snippet": "An albumin electrophoresis was also conducted, which was low despite a normal serum albumin level.",
+    "anchor": "Case 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41393164_Zamith2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "two adult ICU patients with refractory high anion gap metabolic acidosis (a 67-year-old with lactic acidosis after gastric bypass and a 50-year-old with cardiogenic shock and kidney injury), each given three plasma-exchange sessions with 3 L of 5 percent albumin",
+     "comparator": "none (two uncontrolled case reports; before and after values)",
+     "endpoint": "pH, bicarbonate, lactate, anion gap before and after exchange"
+    }
+   },
+   {
+    "proposition": "Case 1 metabolic findings: raised acylcarnitines and several amino acids, offered as consistent with two inherited deficiencies but explicitly speculative without genetic confirmation.",
+    "snippet": "though these would remain speculative without genetic confirmation",
+    "anchor": "Case 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41393164_Zamith2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "two adult ICU patients with refractory high anion gap metabolic acidosis (a 67-year-old with lactic acidosis after gastric bypass and a 50-year-old with cardiogenic shock and kidney injury), each given three plasma-exchange sessions with 3 L of 5 percent albumin",
+     "comparator": "none (two uncontrolled case reports; before and after values)",
+     "endpoint": "pH, bicarbonate, lactate, anion gap before and after exchange"
+    }
+   },
+   {
+    "proposition": "Case 2 text: persistent HAGMA with serum bicarbonate of 10 mEq/L and pH around 7.2 on serial gases despite days on CRRT.",
+    "snippet": "with a serum bicarb of 10 mEq/L (pH around 7.2 persistently on serial ABGs)",
+    "anchor": "Case 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41393164_Zamith2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "two adult ICU patients with refractory high anion gap metabolic acidosis (a 67-year-old with lactic acidosis after gastric bypass and a 50-year-old with cardiogenic shock and kidney injury), each given three plasma-exchange sessions with 3 L of 5 percent albumin",
+     "comparator": "none (two uncontrolled case reports; before and after values)",
+     "endpoint": "pH, bicarbonate, lactate, anion gap before and after exchange"
+    }
+   },
+   {
+    "proposition": "Case 2 serial table: bicarbonate 15, 16 and 15 before the exchange and 19 then 23 after, with creatinine falling from 2.6 to 1.0 over the same rows.",
+    "snippet": "Pre‐PLEX #17.215294.8Mild ↑1384.9993.8Normal23212.6424339",
+    "anchor": "Table 2",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41393164_Zamith2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "two adult ICU patients with refractory high anion gap metabolic acidosis (a 67-year-old with lactic acidosis after gastric bypass and a 50-year-old with cardiogenic shock and kidney injury), each given three plasma-exchange sessions with 3 L of 5 percent albumin",
+     "comparator": "none (two uncontrolled case reports; before and after values)",
+     "endpoint": "pH, bicarbonate, lactate, anion gap before and after exchange"
+    }
+   },
+   {
+    "proposition": "Both tables are captioned as serial values before and after each session, but only before-first, after-first and after-third rows appear.",
+    "snippet": "Table 2Serial laboratory findings for Case 2.",
+    "anchor": "Table 2 caption",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41393164_Zamith2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "two adult ICU patients with refractory high anion gap metabolic acidosis (a 67-year-old with lactic acidosis after gastric bypass and a 50-year-old with cardiogenic shock and kidney injury), each given three plasma-exchange sessions with 3 L of 5 percent albumin",
+     "comparator": "none (two uncontrolled case reports; before and after values)",
+     "endpoint": "pH, bicarbonate, lactate, anion gap before and after exchange"
+    }
+   },
+   {
+    "proposition": "Interpretation: improvement after exchange suggests a role for protein-bound acids in these two cases; causality is not established.",
+    "snippet": "The improvement of acidosis following plasma exchange suggests a role for protein‐bound acids in these two cases.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41393164_Zamith2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "two adult ICU patients with refractory high anion gap metabolic acidosis (a 67-year-old with lactic acidosis after gastric bypass and a 50-year-old with cardiogenic shock and kidney injury), each given three plasma-exchange sessions with 3 L of 5 percent albumin",
+     "comparator": "none (two uncontrolled case reports; before and after values)",
+     "endpoint": "pH, bicarbonate, lactate, anion gap before and after exchange"
+    }
+   },
+   {
+    "proposition": "Conclusion offered: plasma exchange may merit further study as a rescue intervention in refractory cases (the abstract adds that causality cannot be established).",
+    "snippet": "While not standard therapy, plasma exchange may merit further study as a potential rescue intervention in refractory cases.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41393164_Zamith2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "two adult ICU patients with refractory high anion gap metabolic acidosis (a 67-year-old with lactic acidosis after gastric bypass and a 50-year-old with cardiogenic shock and kidney injury), each given three plasma-exchange sessions with 3 L of 5 percent albumin",
+     "comparator": "none (two uncontrolled case reports; before and after values)",
+     "endpoint": "pH, bicarbonate, lactate, anion gap before and after exchange"
+    }
+   },
+   {
+    "proposition": "No data were generated or analysed; no protein-bound acid, bound-fraction or albumin-binding measurement is reported.",
+    "snippet": "Data sharing is not applicable to this article as no datasets were generated or analyzed during the current study.",
+    "anchor": "Data availability",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41393164_Zamith2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "two adult ICU patients with refractory high anion gap metabolic acidosis (a 67-year-old with lactic acidosis after gastric bypass and a 50-year-old with cardiogenic shock and kidney injury), each given three plasma-exchange sessions with 3 L of 5 percent albumin",
+     "comparator": "none (two uncontrolled case reports; before and after values)",
+     "endpoint": "pH, bicarbonate, lactate, anion gap before and after exchange"
+    }
+   }
+  ]
+ }
+}

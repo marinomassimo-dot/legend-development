@@ -1,0 +1,711 @@
+{
+ "schema_version": 2,
+ "pmid": "42769206",
+ "doi": "10.3389/fnins.2026.1950034",
+ "receipt": "FTR-20261019-42769206-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID42769206.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "Chinese neonatal group at a military-affiliated university hospital NICU (affiliation not examined further) with a national young-investigator grant; primary for its own database; first publication of this analysis; no WWOX work."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "fresh frozen plasma AND intraventricular hemorrhage AND preterm AND target trial emulation",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND fresh frozen plasma",
+    "count": 17,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts at the stated date."
+ },
+ "multihop": {
+  "references_enumerated": 56,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42769206 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 42769206: publication types ['Journal Article']; correction/retraction link markers in the efetch record: ['ErratumIn'].",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 56,
+   "references_screened": 56,
+   "references_with_doi": 56,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42769206_Tang2026_PMC.xml",
+   "sha256": "f946c894b244fd336c78881eddf5772d8aeaae4301630872de04c556934d5f71",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC13590724: abstract, body, Table 1, three figure legends, 56 references; the linked correction (PMC13647118) concerns only a grant number.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13590724/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID42769206/fnins-20-1950034-g001.webp",
+   "sha256": "df2cd61f735fb33e3b38dd4da8e027a11ab94db91140c11f0f363076336c18be",
+   "kind": "figure",
+   "note": "Figure 1 from the Europe PMC supplementaryFiles container (webp); a png conversion was opened at native size.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13590724/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID42769206/fnins-20-1950034-g002.webp",
+   "sha256": "d0bb4b47f121e398b3574794306b5dbcd5a7ae354a4e9e4e058ddb7568c2dbff",
+   "kind": "figure",
+   "note": "Figure 2 from the Europe PMC supplementaryFiles container (webp); a png conversion was opened at native size.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13590724/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID42769206/fnins-20-1950034-g003.webp",
+   "sha256": "ef166fec2ce8ae1f4d25bcc311635bb6682751608d8e6d493c83b5637fdcbd48",
+   "kind": "figure",
+   "note": "Figure 3 from the Europe PMC supplementaryFiles container (webp); a png conversion was opened at native size.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13590724/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID42769206/view/g001.png",
+   "sha256": "70957fc2682a4e77e34c9c9bafdbf17cacb04056e1c5517443544db6c7719a33",
+   "kind": "figure",
+   "note": "Figure 1 converted from the delivered webp to png for viewing and inspected at native size.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_imagemagick_png_conversion",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "70957fc2682a4e77e34c9c9bafdbf17cacb04056e1c5517443544db6c7719a33",
+    "derived_from": "files/figures/PMID42769206/fnins-20-1950034-g001.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system",
+     "call": "convert fnins-20-1950034-g001.webp view/g001.png"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID42769206/view/g002.png",
+   "sha256": "b58f0cd2a4ac3eafef6943ae265d6441753af69fb8573419e8ca491f4022ce9a",
+   "kind": "figure",
+   "note": "Figure 2 converted from the delivered webp to png for viewing and inspected at native size.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_imagemagick_png_conversion",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "b58f0cd2a4ac3eafef6943ae265d6441753af69fb8573419e8ca491f4022ce9a",
+    "derived_from": "files/figures/PMID42769206/fnins-20-1950034-g002.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system",
+     "call": "convert fnins-20-1950034-g002.webp view/g002.png"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID42769206/view/g003.png",
+   "sha256": "9109083f865de9ea032e7b06131027aa69b7d411bddc35ef2b52284ee98c64ce",
+   "kind": "figure",
+   "note": "Figure 3 converted from the delivered webp to png for viewing and inspected at native size.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_imagemagick_png_conversion",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "9109083f865de9ea032e7b06131027aa69b7d411bddc35ef2b52284ee98c64ce",
+    "derived_from": "files/figures/PMID42769206/fnins-20-1950034-g003.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system",
+     "call": "convert fnins-20-1950034-g003.webp view/g003.png"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID42769206/Data_Sheet_4.CSV",
+   "sha256": "69a4d3cfe6e1277c703faea2366de8d1a8f0806ff18782bee561a0644b95458f",
+   "kind": "supplement_binary",
+   "note": "Patient-level dataset of 786 infants (the 24-hour landmark cohort) with APTT, plasma exposure and haemorrhage columns.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13590724/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42769206_Tang2026_supplement/Data_Sheet_4_rows.txt",
+   "sha256": "b42ce36f94418ebfac2de58ed598a92afd952cc689b49e7d62d6581e094044e2",
+   "kind": "supplement_text",
+   "note": "DERIVED copy of the CSV header and two rows quoted as locators.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_grep_extract_lines",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "b42ce36f94418ebfac2de58ed598a92afd952cc689b49e7d62d6581e094044e2",
+    "derived_from": "files/figures/PMID42769206/Data_Sheet_4.CSV",
+    "extractor": {
+     "name": "head and grep over the CSV (lines copied unchanged)",
+     "version": "coreutils",
+     "call": "head -1 Data_Sheet_4.CSV; grep -E \"^sub(189|647),\" Data_Sheet_4.CSV"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID42769206/Data_Sheet_6.XLSX",
+   "sha256": "98d9d65397ea412bc2bb69dc96b0a427eb1df38acc256f23c2881efa88f5c15e",
+   "kind": "supplement_binary",
+   "note": "Workbook of the primary analysis cohort (748 data rows) with 18 string cells; only row count and header read.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13590724/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID42769206/Data_Sheet_5.DOCX",
+   "sha256": "48ae31d8ca2221bc504bfe3f6a6a7e2695dd8a9d697d7c0ee92c7d59828c45af",
+   "kind": "supplement_binary",
+   "note": "R code for the weighting, trimming, balance and effect analyses.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13590724/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42769206_Tang2026_supplement/Data_Sheet_5.txt",
+   "sha256": "bf396efcce2a95555c8f7c4558f9825e021e86c5bea4f84f7ef42f07371f62c1",
+   "kind": "supplement_text",
+   "note": "DERIVED text of the R code document.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_python_zipfile_docx_text",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "bf396efcce2a95555c8f7c4558f9825e021e86c5bea4f84f7ef42f07371f62c1",
+    "derived_from": "files/figures/PMID42769206/Data_Sheet_5.DOCX",
+    "extractor": {
+     "name": "docx2txt.py (python zipfile + regex over word/document.xml)",
+     "version": "python 3.12",
+     "call": "python3 docx2txt.py Data_Sheet_5.DOCX Data_Sheet_5.txt"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID42769206/Data_Sheet_1.PDF",
+   "sha256": "2312b415028e12d767989281c2bd6524f68ede52c822d740aedc577d9efc9235",
+   "kind": "supplement_binary",
+   "note": "Supplementary Figure 3: birth-weight boxplot and density by group (negative control).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13590724/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID42769206/s_pages/d1-1.png",
+   "sha256": "83c8c91900100c6f4a0f4379b31e033e81902c78408aa1de5241d2809a7ad53a",
+   "kind": "figure",
+   "note": "Supplementary Figure 3 rendered at 70 dpi and inspected.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftoppm_90dpi",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "83c8c91900100c6f4a0f4379b31e033e81902c78408aa1de5241d2809a7ad53a",
+    "derived_from": "files/figures/PMID42769206/Data_Sheet_1.PDF",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 70 -png Data_Sheet_1.PDF d1"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13590724/fullTextXML returned HTTP 200 (158529 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "Design: retrospective NICU records emulating a parallel-group trial; time zero is the first APTT of 70 s or more within 48 h of admission; FFP within 24 h after time zero versus none in the window or in follow-up.",
+    "snippet": "treatment strategies: initiation of a qualifying FFP transfusion within 24 h after time zero versus no FFP transfusion during the treatment-assessment window or subsequent follow-up",
+    "anchor": "Methods, study design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42769206_Tang2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "748 preterm infants (24 to 34 weeks) with first APTT of 70 s or more at one Chinese NICU, 2015-2025; 434 given FFP within 24 h of time zero versus 314 not",
+     "comparator": "observational emulation of a trial: inverse-probability weighting with boosted propensity models, doubly robust and covariate-balancing variants, causal forest",
+     "endpoint": "any-grade intraventricular haemorrhage within 28 days"
+    }
+   },
+   {
+    "proposition": "The framework is described as strictly predefined, yet registration is dated 20 May 2026 while the data window closed in December 2025.",
+    "snippet": "registered in the Chinese Clinical Trial Registry (registration no.: ChiCTR2600125060) on 2026-05-20",
+    "anchor": "Methods, ethics statement",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42769206_Tang2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "748 preterm infants (24 to 34 weeks) with first APTT of 70 s or more at one Chinese NICU, 2015-2025; 434 given FFP within 24 h of time zero versus 314 not",
+     "comparator": "observational emulation of a trial: inverse-probability weighting with boosted propensity models, doubly robust and covariate-balancing variants, causal forest",
+     "endpoint": "any-grade intraventricular haemorrhage within 28 days"
+    }
+   },
+   {
+    "proposition": "Exclusion of death, discharge or transfer within 72 hours of birth, and of pre-existing haemorrhage.",
+    "snippet": "loss to follow-up for the death, discharge or transfer within 72 h after birth",
+    "anchor": "Methods, data description",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42769206_Tang2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "748 preterm infants (24 to 34 weeks) with first APTT of 70 s or more at one Chinese NICU, 2015-2025; 434 given FFP within 24 h of time zero versus 314 not",
+     "comparator": "observational emulation of a trial: inverse-probability weighting with boosted propensity models, doubly robust and covariate-balancing variants, causal forest",
+     "endpoint": "any-grade intraventricular haemorrhage within 28 days"
+    }
+   },
+   {
+    "proposition": "Headline crude counts: IVH in 95 of 434 FFP-treated (21.9 percent) and 51 of 314 controls (16.2 percent), p 0.067.",
+    "snippet": "95 (21.9%) developed IVH in treatment group (n = 434) and 51 (16.2%) in control group (n = 314)",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42769206_Tang2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "748 preterm infants (24 to 34 weeks) with first APTT of 70 s or more at one Chinese NICU, 2015-2025; 434 given FFP within 24 h of time zero versus 314 not",
+     "comparator": "observational emulation of a trial: inverse-probability weighting with boosted propensity models, doubly robust and covariate-balancing variants, causal forest",
+     "endpoint": "any-grade intraventricular haemorrhage within 28 days"
+    }
+   },
+   {
+    "proposition": "The authors state that the propensity-score separation indicated confounding by indication; groups differ in gestational age, weight, Apgar, ventilation and vasoactive drugs.",
+    "snippet": "although the separation between groups indicated confounding by indication",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42769206_Tang2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "748 preterm infants (24 to 34 weeks) with first APTT of 70 s or more at one Chinese NICU, 2015-2025; 434 given FFP within 24 h of time zero versus 314 not",
+     "comparator": "observational emulation of a trial: inverse-probability weighting with boosted propensity models, doubly robust and covariate-balancing variants, causal forest",
+     "endpoint": "any-grade intraventricular haemorrhage within 28 days"
+    }
+   },
+   {
+    "proposition": "After weighting and trimming, 38 outliers were removed (710 remain); gestational age stayed unbalanced (SMD 0.14).",
+    "snippet": "a total of 38 outliers were excluded from the analysis, resulting in a sample size of 710 cases",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42769206_Tang2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "748 preterm infants (24 to 34 weeks) with first APTT of 70 s or more at one Chinese NICU, 2015-2025; 434 given FFP within 24 h of time zero versus 314 not",
+     "comparator": "observational emulation of a trial: inverse-probability weighting with boosted propensity models, doubly robust and covariate-balancing variants, causal forest",
+     "endpoint": "any-grade intraventricular haemorrhage within 28 days"
+    }
+   },
+   {
+    "proposition": "Primary result: no overall association (OR 1.18, 0.79 to 1.78; doubly robust 1.03; CBPS 1.26).",
+    "snippet": "FFP transfusion did not significantly reduce the IVH risk in the whole cohort (OR = 1.18; 95% CI: 0.79",
+    "anchor": "Results, overall effect",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42769206_Tang2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "748 preterm infants (24 to 34 weeks) with first APTT of 70 s or more at one Chinese NICU, 2015-2025; 434 given FFP within 24 h of time zero versus 314 not",
+     "comparator": "observational emulation of a trial: inverse-probability weighting with boosted propensity models, doubly robust and covariate-balancing variants, causal forest",
+     "endpoint": "any-grade intraventricular haemorrhage within 28 days"
+    }
+   },
+   {
+    "proposition": "The gestational-age interaction (p 0.02) is the one reported after adjusting for birth weight and sex.",
+    "snippet": "After adjusting for BW and sex, the interaction term (FFP × centered GA) was statistically significant",
+    "anchor": "Results, effect modification",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42769206_Tang2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "748 preterm infants (24 to 34 weeks) with first APTT of 70 s or more at one Chinese NICU, 2015-2025; 434 given FFP within 24 h of time zero versus 314 not",
+     "comparator": "observational emulation of a trial: inverse-probability weighting with boosted propensity models, doubly robust and covariate-balancing variants, causal forest",
+     "endpoint": "any-grade intraventricular haemorrhage within 28 days"
+    }
+   },
+   {
+    "proposition": "Low-GA subgroup (below 32.4 weeks, the sample mean) OR 2.16 (1.11 to 4.23), high-GA OR 0.67 (0.38 to 1.18).",
+    "snippet": "the cohort was stratified at the mean GA (32.4w) into a low-GA group",
+    "anchor": "Results, subgroup analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42769206_Tang2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "748 preterm infants (24 to 34 weeks) with first APTT of 70 s or more at one Chinese NICU, 2015-2025; 434 given FFP within 24 h of time zero versus 314 not",
+     "comparator": "observational emulation of a trial: inverse-probability weighting with boosted propensity models, doubly robust and covariate-balancing variants, causal forest",
+     "endpoint": "any-grade intraventricular haemorrhage within 28 days"
+    }
+   },
+   {
+    "proposition": "Landmark sensitivity: 37 infants who ended observation within 72 h (2 deaths, 8 transfers, 27 withdrawals of care at parental request) were re-added; OR 1.17.",
+    "snippet": "thirty-seven infants were excluded from the primary analytic cohort for observation ended within 72 h",
+    "anchor": "Results, sensitivity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42769206_Tang2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "748 preterm infants (24 to 34 weeks) with first APTT of 70 s or more at one Chinese NICU, 2015-2025; 434 given FFP within 24 h of time zero versus 314 not",
+     "comparator": "observational emulation of a trial: inverse-probability weighting with boosted propensity models, doubly robust and covariate-balancing variants, causal forest",
+     "endpoint": "any-grade intraventricular haemorrhage within 28 days"
+    }
+   },
+   {
+    "proposition": "E-value reading: 1.22 exceeds the strength of gestational age (stated as about 1.18), so the null finding is called robust to unmeasured confounding.",
+    "snippet": "The E-value for association of FFP transfusion and IVH was 1.22.",
+    "anchor": "Results, E-value",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42769206_Tang2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "748 preterm infants (24 to 34 weeks) with first APTT of 70 s or more at one Chinese NICU, 2015-2025; 434 given FFP within 24 h of time zero versus 314 not",
+     "comparator": "observational emulation of a trial: inverse-probability weighting with boosted propensity models, doubly robust and covariate-balancing variants, causal forest",
+     "endpoint": "any-grade intraventricular haemorrhage within 28 days"
+    }
+   },
+   {
+    "proposition": "Negative control: unadjusted birth weight is 116.38 g lower in the FFP group (p 0.005), described as limited clinical relevance and likely residual confounding, 'showing adequate control' for gestational age.",
+    "snippet": "The apparent association between FFP and lower BW observed in unadjusted analyses",
+    "anchor": "Results, negative control",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42769206_Tang2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "748 preterm infants (24 to 34 weeks) with first APTT of 70 s or more at one Chinese NICU, 2015-2025; 434 given FFP within 24 h of time zero versus 314 not",
+     "comparator": "observational emulation of a trial: inverse-probability weighting with boosted propensity models, doubly robust and covariate-balancing variants, causal forest",
+     "endpoint": "any-grade intraventricular haemorrhage within 28 days"
+    }
+   },
+   {
+    "proposition": "Causal forest: overall ATE 0.98 percent, p 0.73, with 95 percent CI printed as -0.45 to 0.07.",
+    "snippet": "The overall ATE of FFP transfusion on IVH risk was 0.98%, with no significant difference (p = 0.73; 95% CI: −0.45–0.07)",
+    "anchor": "Results, causal forest",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42769206_Tang2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "748 preterm infants (24 to 34 weeks) with first APTT of 70 s or more at one Chinese NICU, 2015-2025; 434 given FFP within 24 h of time zero versus 314 not",
+     "comparator": "observational emulation of a trial: inverse-probability weighting with boosted propensity models, doubly robust and covariate-balancing variants, causal forest",
+     "endpoint": "any-grade intraventricular haemorrhage within 28 days"
+    }
+   },
+   {
+    "proposition": "Exploratory status of the forest outputs is conceded in the Figure 3 legend: no external validation cohort; subgroups and driver rankings are hypothesis-generating.",
+    "snippet": "Due to the lack of an independent external validation cohort, the subgroups identified in panels C, E and the driver rankings in panel D are considered exploratory",
+    "anchor": "Figure 3 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42769206_Tang2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "748 preterm infants (24 to 34 weeks) with first APTT of 70 s or more at one Chinese NICU, 2015-2025; 434 given FFP within 24 h of time zero versus 314 not",
+     "comparator": "observational emulation of a trial: inverse-probability weighting with boosted propensity models, doubly robust and covariate-balancing variants, causal forest",
+     "endpoint": "any-grade intraventricular haemorrhage within 28 days"
+    }
+   },
+   {
+    "proposition": "Discussion claim of a marked IVH increase in extremely preterm infants below 28 weeks.",
+    "snippet": "Extremely preterm infants below 28 weeks showed a marked increase in IVH risk.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42769206_Tang2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "748 preterm infants (24 to 34 weeks) with first APTT of 70 s or more at one Chinese NICU, 2015-2025; 434 given FFP within 24 h of time zero versus 314 not",
+     "comparator": "observational emulation of a trial: inverse-probability weighting with boosted propensity models, doubly robust and covariate-balancing variants, causal forest",
+     "endpoint": "any-grade intraventricular haemorrhage within 28 days"
+    }
+   },
+   {
+    "proposition": "Priority claim: the first study worldwide to address this question.",
+    "snippet": "this is also the first study worldwide to specifically address this underexplored clinical issue",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42769206_Tang2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "748 preterm infants (24 to 34 weeks) with first APTT of 70 s or more at one Chinese NICU, 2015-2025; 434 given FFP within 24 h of time zero versus 314 not",
+     "comparator": "observational emulation of a trial: inverse-probability weighting with boosted propensity models, doubly robust and covariate-balancing variants, causal forest",
+     "endpoint": "any-grade intraventricular haemorrhage within 28 days"
+    }
+   },
+   {
+    "proposition": "A 'multicenter observational study' by Kuperman is cited to a 2016 reference on mean centering and multicollinearity in the reference list.",
+    "snippet": "A multicenter observational study conducted by Kuperman et al. also demonstrated that empirical FFP transfusion failed to lower bleeding risk",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42769206_Tang2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "748 preterm infants (24 to 34 weeks) with first APTT of 70 s or more at one Chinese NICU, 2015-2025; 434 given FFP within 24 h of time zero versus 314 not",
+     "comparator": "observational emulation of a trial: inverse-probability weighting with boosted propensity models, doubly robust and covariate-balancing variants, causal forest",
+     "endpoint": "any-grade intraventricular haemorrhage within 28 days"
+    }
+   },
+   {
+    "proposition": "Limitation text: about 1,000 infants with initial IVH or other intracranial haemorrhage were excluded; the flowchart shows 12,290 admitted, 1,265 enrolled, 748 analysed.",
+    "snippet": "Approximately 1,000 infants who developed initial IVH or caused by other factors during the study period were excluded from analyses.",
+    "anchor": "Limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42769206_Tang2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "748 preterm infants (24 to 34 weeks) with first APTT of 70 s or more at one Chinese NICU, 2015-2025; 434 given FFP within 24 h of time zero versus 314 not",
+     "comparator": "observational emulation of a trial: inverse-probability weighting with boosted propensity models, doubly robust and covariate-balancing variants, causal forest",
+     "endpoint": "any-grade intraventricular haemorrhage within 28 days"
+    }
+   },
+   {
+    "proposition": "Conclusion recommends risk stratification and personalised plasma strategies instead of routine plasma when APTT is prolonged.",
+    "snippet": "risk stratification and personalized FFP transfusion strategies are recommended for clinical use",
+    "anchor": "Conclusion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42769206_Tang2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "748 preterm infants (24 to 34 weeks) with first APTT of 70 s or more at one Chinese NICU, 2015-2025; 434 given FFP within 24 h of time zero versus 314 not",
+     "comparator": "observational emulation of a trial: inverse-probability weighting with boosted propensity models, doubly robust and covariate-balancing variants, causal forest",
+     "endpoint": "any-grade intraventricular haemorrhage within 28 days"
+    }
+   },
+   {
+    "proposition": "Shared patient-level file: subject 189 has birth weight 11480 g at 207 days gestation; subject 647 has 150 g at 236 days.",
+    "snippet": "sub189,207,11480,1,1,2,9,0,1,1,1,2,76.5,1.33,1.04,1,1,240,0,15.33,8.99,28",
+    "anchor": "Data_Sheet_4.CSV (header and two rows)",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42769206_Tang2026_supplement/Data_Sheet_4_rows.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "748 preterm infants (24 to 34 weeks) with first APTT of 70 s or more at one Chinese NICU, 2015-2025; 434 given FFP within 24 h of time zero versus 314 not",
+     "comparator": "observational emulation of a trial: inverse-probability weighting with boosted propensity models, doubly robust and covariate-balancing variants, causal forest",
+     "endpoint": "any-grade intraventricular haemorrhage within 28 days"
+    }
+   },
+   {
+    "proposition": "Shared patient-level file column header: gestational age in days, weight, plasma exposure, IVH indicator, hours to FFP after time zero and ending reason.",
+    "snippet": "subject_id,GW,Weight,DM,Sex,X1_Apgar,X5_Apgar,GH,GD,NRDS,ES,Ventilator,APTT,INR,Fib,Plasma,VA,PLT,NICH,t0_after_admission_h,FFP_after_t0_h,ending_point_d,ending_reason",
+    "anchor": "Data_Sheet_4.CSV (header and two rows)",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42769206_Tang2026_supplement/Data_Sheet_4_rows.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "748 preterm infants (24 to 34 weeks) with first APTT of 70 s or more at one Chinese NICU, 2015-2025; 434 given FFP within 24 h of time zero versus 314 not",
+     "comparator": "observational emulation of a trial: inverse-probability weighting with boosted propensity models, doubly robust and covariate-balancing variants, causal forest",
+     "endpoint": "any-grade intraventricular haemorrhage within 28 days"
+    }
+   },
+   {
+    "proposition": "Figure 1: flowchart; 12,290 admitted, 1,265 enrolled, 748 analysed (no FFP 314, FFP 434); exclusion list names active haemorrhage, which the Methods exclusion paragraph does not; no counts per exclusion and the 1,265-to-748 step is not itemised.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 three-step flowchart with inclusion and exclusion boxes and the numbers 12290, 1265, 748, 314, 434.",
+    "anchor": "Figure 1, converted to png and read at native size",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42769206/fnins-20-1950034-g001.webp",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "748 preterm infants (24 to 34 weeks) with first APTT of 70 s or more at one Chinese NICU, 2015-2025; 434 given FFP within 24 h of time zero versus 314 not",
+     "comparator": "observational emulation of a trial: inverse-probability weighting with boosted propensity models, doubly robust and covariate-balancing variants, causal forest",
+     "endpoint": "any-grade intraventricular haemorrhage within 28 days"
+    }
+   },
+   {
+    "proposition": "Figure 2 panels A-G: PS densities overlap only in the middle; balance plot with GA still at about 0.14 after weighting; forest plot of three estimators; marginal-effect curve in which the FFP line rises to about 0.62 at 182 days against about 0.19 for controls; subgroup counts 65/213 vs 13/95 (low GA) and 30/212 vs 33/190 (high GA); DCA; E-value bars. Panel G shows the GA bar at about 1.04.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 A-G density, balance, forest, marginal effects, subgroup, DCA, E-value.",
+    "anchor": "Figure 2, converted to png and read at native size",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42769206/fnins-20-1950034-g002.webp",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "748 preterm infants (24 to 34 weeks) with first APTT of 70 s or more at one Chinese NICU, 2015-2025; 434 given FFP within 24 h of time zero versus 314 not",
+     "comparator": "observational emulation of a trial: inverse-probability weighting with boosted propensity models, doubly robust and covariate-balancing variants, causal forest",
+     "endpoint": "any-grade intraventricular haemorrhage within 28 days"
+    }
+   },
+   {
+    "proposition": "Figure 2G panel: the GA comparison bar sits near 1.04, below the E-value bar of about 1.22, while the text gives GA a risk ratio of about 1.18.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2G bars unmeasured (E) about 1.22 and GA about 1.04.",
+    "anchor": "Figure 2G, read at native size",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42769206/fnins-20-1950034-g002.webp",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "748 preterm infants (24 to 34 weeks) with first APTT of 70 s or more at one Chinese NICU, 2015-2025; 434 given FFP within 24 h of time zero versus 314 not",
+     "comparator": "observational emulation of a trial: inverse-probability weighting with boosted propensity models, doubly robust and covariate-balancing variants, causal forest",
+     "endpoint": "any-grade intraventricular haemorrhage within 28 days"
+    },
+    "qualifies": "entries[10]",
+    "qualifies_needle": "The E-value for association of FFP transfusion and IVH was 1.22."
+   },
+   {
+    "proposition": "Figure 3 panel A: ATE 0.98 percent with the printed interval [-0.45, 0.07] but a plotted whisker running from about -0.046 to about 0.064 on an axis of risk difference, so the printed lower limit looks like a decimal slip for -0.045.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3A ATE point at about 0.01 with whisker -0.046 to 0.064 and the label ATE 0.98 percent (95 percent CI -0.45, 0.07) p 0.73.",
+    "anchor": "Figure 3A, read at native size",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42769206/fnins-20-1950034-g003.webp",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "748 preterm infants (24 to 34 weeks) with first APTT of 70 s or more at one Chinese NICU, 2015-2025; 434 given FFP within 24 h of time zero versus 314 not",
+     "comparator": "observational emulation of a trial: inverse-probability weighting with boosted propensity models, doubly robust and covariate-balancing variants, causal forest",
+     "endpoint": "any-grade intraventricular haemorrhage within 28 days"
+    },
+    "qualifies": "entries[12]",
+    "qualifies_needle": "The overall ATE of FFP transfusion on IVH risk was 0.98%"
+   },
+   {
+    "proposition": "Figure 3 panels B-E: individual effects spread from about -0.08 to 0.10; waterfall with only a handful of beneficial or harmful infants; tree root effect 0.00353 against the stated ATE 0.0098; terminal leaves down to n = 7, 15 and 19.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3 B histogram, C waterfall, D importances, E tree with leaf sizes.",
+    "anchor": "Figure 3 B-E, read at native size",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42769206/fnins-20-1950034-g003.webp",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "748 preterm infants (24 to 34 weeks) with first APTT of 70 s or more at one Chinese NICU, 2015-2025; 434 given FFP within 24 h of time zero versus 314 not",
+     "comparator": "observational emulation of a trial: inverse-probability weighting with boosted propensity models, doubly robust and covariate-balancing variants, causal forest",
+     "endpoint": "any-grade intraventricular haemorrhage within 28 days"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure 3: birth-weight boxplots show a control value near zero and a treated value above 10,000 g; the density plot is drawn on an axis from below 0 to 4,000 g.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supp Fig 3 boxplot of BW by group with outliers and BW density curves.",
+    "anchor": "Supplementary Figure 3, rendered at 70 dpi",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42769206/s_pages/d1-1.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "748 preterm infants (24 to 34 weeks) with first APTT of 70 s or more at one Chinese NICU, 2015-2025; 434 given FFP within 24 h of time zero versus 314 not",
+     "comparator": "observational emulation of a trial: inverse-probability weighting with boosted propensity models, doubly robust and covariate-balancing variants, causal forest",
+     "endpoint": "any-grade intraventricular haemorrhage within 28 days"
+    }
+   }
+  ]
+ }
+}

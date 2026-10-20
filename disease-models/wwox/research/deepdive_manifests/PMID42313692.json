@@ -1,0 +1,472 @@
+{
+ "schema_version": 2,
+ "pmid": "42313692",
+ "doi": "10.1159/000553042",
+ "receipt": "FTR-20261019-42313692-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID42313692.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "A neonatal and perinatal research group conducting a PROSPERO-registered meta-analysis; it did not generate primary NIRS data, and one included RCT (Chock 2023) supplies 232 of the 577 transfusion events."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "cerebral oxygenation AND transfusion AND preterm AND meta-analysis",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (anemia OR hemoglobin OR transfusion)",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts at the stated date."
+ },
+ "multihop": {
+  "references_enumerated": 40,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42313692 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 42313692: publication types ['Journal Article', 'Systematic Review']; correction/retraction link markers in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 38,
+   "references_screened": 38,
+   "references_with_doi": 38,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42313692_Bailey2026_PMC.xml",
+   "sha256": "81ea4041f05fa08862830d7b93495a652ae3a17b26926d48a1774fe82690a7a4",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC13441262: abstract, body, Tables 1-2 (JATS), three figure legends, references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13441262/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID42313692/neo-2026-0000-0000-553042_F01.jpg",
+   "sha256": "63c81768d169d64bcf132c335721d29a5f8db1d931cfad141d6d7bd44fc86985",
+   "kind": "figure",
+   "note": "Figure 1 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13441262/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID42313692/neo-2026-0000-0000-553042_F02.jpg",
+   "sha256": "fd75396b5bda12384480e963b2f2b51ca5caea112adcce7a24239e995b999ae7",
+   "kind": "figure",
+   "note": "Figure 2 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13441262/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID42313692/neo-2026-0000-0000-553042_F03.jpg",
+   "sha256": "556bc1abf93c69ab15ed3b42c6c10f47821a69ff796c4a52c7611e584e01be86",
+   "kind": "figure",
+   "note": "Figure 3 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13441262/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID42313692/Supplementary_material-Suppl.1-s1.docx",
+   "sha256": "d48de75806ca193e737c9a607a5cb28bc236ff8de9d0756a4a3c39ebce646a56",
+   "kind": "supplement_binary",
+   "note": "Supplementary Word file (search strings, ROBINS-I and RoB 2 figures, GRADE table, PRISMA checklist).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13441262/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42313692_Bailey2026_supplement/Supplementary_material_Suppl1.txt",
+   "sha256": "6d42cde0c8fff6af34a2b9c7276b0254573a50c4ef8f79ab9b8b71fe233eb622",
+   "kind": "supplement_text",
+   "note": "DERIVED text of the supplementary Word file (table rows as ' | ' lines); the two risk-of-bias tables are images in the Word file and are declared separately.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_python_zipfile_docx",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "6d42cde0c8fff6af34a2b9c7276b0254573a50c4ef8f79ab9b8b71fe233eb622",
+    "derived_from": "files/figures/PMID42313692/Supplementary_material-Suppl.1-s1.docx",
+    "extractor": {
+     "name": "python zipfile extraction (docx2txt.py for text; media members copied unchanged)",
+     "version": "python 3.12",
+     "call": "docx2txt.py / zipfile.read"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID42313692/supp_media/image1.png",
+   "sha256": "12320c1b6e8319641d185b6bc3ec092da2fbc6835201d7cccf1e0a3fe2c297ef",
+   "kind": "figure",
+   "note": "ROBINS-I risk-of-bias figure (supplementary Table 2) extracted unchanged from the Word file and opened.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_python_zipfile_docx",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "12320c1b6e8319641d185b6bc3ec092da2fbc6835201d7cccf1e0a3fe2c297ef",
+    "derived_from": "files/figures/PMID42313692/Supplementary_material-Suppl.1-s1.docx",
+    "extractor": {
+     "name": "python zipfile extraction (docx2txt.py for text; media members copied unchanged)",
+     "version": "python 3.12",
+     "call": "docx2txt.py / zipfile.read"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID42313692/supp_media/image2.png",
+   "sha256": "100bc78488330bf6f04320a8d9cdee5626c24ee04be65f2bf9021bf4173eab57",
+   "kind": "figure",
+   "note": "RoB 2 risk-of-bias figure (supplementary Table 3) extracted unchanged from the Word file and opened.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_python_zipfile_docx",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "100bc78488330bf6f04320a8d9cdee5626c24ee04be65f2bf9021bf4173eab57",
+    "derived_from": "files/figures/PMID42313692/Supplementary_material-Suppl.1-s1.docx",
+    "extractor": {
+     "name": "python zipfile extraction (docx2txt.py for text; media members copied unchanged)",
+     "version": "python 3.12",
+     "call": "docx2txt.py / zipfile.read"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13441262/fullTextXML returned HTTP 200 (90435 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "Registration: PROSPERO protocol registered 1 October 2024; search run 1 October 2024 and updated 9 April 2025.",
+    "snippet": "The systematic review protocol was registered with the International Prospective Register of Systematic Reviews (PROSPERO) on October 1, 2024 (CRD42024569173).",
+    "anchor": "Methods, Protocol",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42313692_Bailey2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "meta-analysis of seven studies of NIRS cerebral saturation around red-cell transfusion in preterm infants, liberal versus restrictive haemoglobin thresholds",
+     "comparator": "pre versus post transfusion within study arms; subgroup contrast between threshold groups across studies",
+     "endpoint": "crSO2 and cFTOE change"
+    }
+   },
+   {
+    "proposition": "Classification rule: studies were assigned to liberal or restrictive by their stated threshold, approximately 10-13 g/dL versus 7-11 g/dL, with overlap between the two ranges.",
+    "snippet": "Definitions of “liberal” and “restrictive” were consistent with the high or low haemoglobin threshold (approximately 10–13 g/dL vs. 7–11 g/dL), used in established trials [4–7].",
+    "anchor": "Methods, Statistical Analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42313692_Bailey2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "meta-analysis of seven studies of NIRS cerebral saturation around red-cell transfusion in preterm infants, liberal versus restrictive haemoglobin thresholds",
+     "comparator": "pre versus post transfusion within study arms; subgroup contrast between threshold groups across studies",
+     "endpoint": "crSO2 and cFTOE change"
+    }
+   },
+   {
+    "proposition": "Attrition of eligibility: of 24 studies with before-and-after crSO2, 4 had no formal protocol and 13 gave insufficient detail, leaving 7.",
+    "snippet": "Twenty-four studies reported before and after changes in crSO2, however, four of these studies used no formal transfusion protocol, and thirteen did not report sufficient information to classify as either “liberal” or “restrictive.”",
+    "anchor": "Results, Study Selection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42313692_Bailey2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "meta-analysis of seven studies of NIRS cerebral saturation around red-cell transfusion in preterm infants, liberal versus restrictive haemoglobin thresholds",
+     "comparator": "pre versus post transfusion within study arms; subgroup contrast between threshold groups across studies",
+     "endpoint": "crSO2 and cFTOE change"
+    }
+   },
+   {
+    "proposition": "Of seven studies, four are RCTs and three observational; all observational studies carry serious risk of bias from confounding.",
+    "snippet": "The ROBINS-1 V2 quality assessment identified all observational studies as having serious bias due to confounding and serious overall risk of bias (online suppl. Table 2).",
+    "anchor": "Results, Quality of Studies",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42313692_Bailey2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "meta-analysis of seven studies of NIRS cerebral saturation around red-cell transfusion in preterm infants, liberal versus restrictive haemoglobin thresholds",
+     "comparator": "pre versus post transfusion within study arms; subgroup contrast between threshold groups across studies",
+     "endpoint": "crSO2 and cFTOE change"
+    }
+   },
+   {
+    "proposition": "Results state outcomes were rated low certainty by GRADE.",
+    "snippet": "Outcomes selected for GRADE assessment were all rated as low certainty of evidence due to serious risk of bias and inconsistency (online suppl. Table 4).",
+    "anchor": "Results, Quality of Studies",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42313692_Bailey2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "meta-analysis of seven studies of NIRS cerebral saturation around red-cell transfusion in preterm infants, liberal versus restrictive haemoglobin thresholds",
+     "comparator": "pre versus post transfusion within study arms; subgroup contrast between threshold groups across studies",
+     "endpoint": "crSO2 and cFTOE change"
+    }
+   },
+   {
+    "proposition": "Primary result: crSO2 rose 6.40 points under restrictive thresholds (n = 357 events) and 2.75 under liberal (n = 220); the subgroup difference has Q = 4.19, p = 0.04.",
+    "snippet": "Subgroup analysis indicated statistically significant differences between liberal (n = 220) and restrictive (n = 357) groups (Q = 4.19, df = 1, p = 0.04) with a greater magnitude of change under a restrictive threshold (shown in Fig. 2).",
+    "anchor": "Results, Primary Outcome",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42313692_Bailey2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "meta-analysis of seven studies of NIRS cerebral saturation around red-cell transfusion in preterm infants, liberal versus restrictive haemoglobin thresholds",
+     "comparator": "pre versus post transfusion within study arms; subgroup contrast between threshold groups across studies",
+     "endpoint": "crSO2 and cFTOE change"
+    }
+   },
+   {
+    "proposition": "Limitations section calls certainty of evidence very low for all outcomes and heterogeneity high, and notes events from the same infant may not be independent.",
+    "snippet": "Certainty of evidence was very low for all outcomes according to the GRADE assessment and high heterogeneity was found among studies.",
+    "anchor": "Strengths and Limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42313692_Bailey2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "meta-analysis of seven studies of NIRS cerebral saturation around red-cell transfusion in preterm infants, liberal versus restrictive haemoglobin thresholds",
+     "comparator": "pre versus post transfusion within study arms; subgroup contrast between threshold groups across studies",
+     "endpoint": "crSO2 and cFTOE change"
+    }
+   },
+   {
+    "proposition": "The conclusion reads the larger restrictive-group increase as enhanced physiological benefit, in the Discussion; in the same Clinical Implications the authors say the clinical meaning of a crSO2 change is undefined.",
+    "snippet": "Firstly, a clinically relevant change in crSO2 remains undefined and the effect of a relative increase in crSO2 by 2.75% (liberal threshold) compared to 6.4% (restrictive threshold) is unknown.",
+    "anchor": "Clinical Implications",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42313692_Bailey2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "meta-analysis of seven studies of NIRS cerebral saturation around red-cell transfusion in preterm infants, liberal versus restrictive haemoglobin thresholds",
+     "comparator": "pre versus post transfusion within study arms; subgroup contrast between threshold groups across studies",
+     "endpoint": "crSO2 and cFTOE change"
+    }
+   },
+   {
+    "proposition": "NIRS-guided treatment in a cited trial reduced cerebral hypoxia by 58 percent without improving death or brain injury; the authors say increases in cerebral oxygenation may not predict improved outcomes.",
+    "snippet": "This suggests, as with the transfusion setting, NIRS-detected increases in cerebral oxygenation may not predict improved clinical outcomes.",
+    "anchor": "Clinical Implications",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42313692_Bailey2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "meta-analysis of seven studies of NIRS cerebral saturation around red-cell transfusion in preterm infants, liberal versus restrictive haemoglobin thresholds",
+     "comparator": "pre versus post transfusion within study arms; subgroup contrast between threshold groups across studies",
+     "endpoint": "crSO2 and cFTOE change"
+    }
+   },
+   {
+    "proposition": "The post-transfusion rise may be transient, returning to baseline within 24 hours in cited studies.",
+    "snippet": "Similarly, in a cohort of 24 infants <34 weeks, Saito-Benz et al. [40] found initial improvements were not sustained, with crSO2 returning to pre-transfusion levels by 24 h post-transfusion.",
+    "anchor": "Clinical Implications",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42313692_Bailey2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "meta-analysis of seven studies of NIRS cerebral saturation around red-cell transfusion in preterm infants, liberal versus restrictive haemoglobin thresholds",
+     "comparator": "pre versus post transfusion within study arms; subgroup contrast between threshold groups across studies",
+     "endpoint": "crSO2 and cFTOE change"
+    }
+   },
+   {
+    "proposition": "Table 1 lists the Aktas restrictive-group thresholds as haemoglobin below 12 in week 1, below 11 in week 2 and below 9 from week 3.",
+    "snippet": "Hb < 12 g/dL at first week of life, Hb < 11 g/dL at second week of life, Hb < 9 g/dL at third week",
+    "anchor": "Table 1, row Aktas",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42313692_Bailey2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "meta-analysis of seven studies of NIRS cerebral saturation around red-cell transfusion in preterm infants, liberal versus restrictive haemoglobin thresholds",
+     "comparator": "pre versus post transfusion within study arms; subgroup contrast between threshold groups across studies",
+     "endpoint": "crSO2 and cFTOE change"
+    }
+   },
+   {
+    "proposition": "Table 2 lists the liberal group as only two studies: the TOP trial arm and a single-centre RCT of 42 infants whose baseline crSO2 was 77 to 78 percent.",
+    "snippet": "Saito Benz et al. [25] (2022)2017–2018Single centre, RCT n = 42SenSmart X-100, NoninPINT Liberal",
+    "anchor": "Table 2, row Saito Benz",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42313692_Bailey2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "meta-analysis of seven studies of NIRS cerebral saturation around red-cell transfusion in preterm infants, liberal versus restrictive haemoglobin thresholds",
+     "comparator": "pre versus post transfusion within study arms; subgroup contrast between threshold groups across studies",
+     "endpoint": "crSO2 and cFTOE change"
+    }
+   },
+   {
+    "proposition": "Supplementary Table 4 (GRADE) rates every outcome very low certainty, restrictive and liberal, for crSO2 and cFTOE.",
+    "snippet": "Certainty Assessment |  | Mean Difference (95% CI) | Certainty",
+    "anchor": "Supplementary Table 4 (derived text of the Word file)",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42313692_Bailey2026_supplement/Supplementary_material_Suppl1.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "meta-analysis of seven studies of NIRS cerebral saturation around red-cell transfusion in preterm infants, liberal versus restrictive haemoglobin thresholds",
+     "comparator": "pre versus post transfusion within study arms; subgroup contrast between threshold groups across studies",
+     "endpoint": "crSO2 and cFTOE change"
+    }
+   },
+   {
+    "proposition": "Figure 2 (forest plot of crSO2 change): eleven rows from seven studies (Chen, Smith and Saito-Benz each appear as two sub-arms; Chock appears once per subgroup); restrictive total 6.40 (3.85-8.95), liberal total 2.75 (0.35-5.14), overall 5.33; heterogeneity chi-square 83.04, 10 df, I-squared 0.93; subgroup test chi-square 4.19, p = 0.04. Within the single trial that appears in both subgroups the changes are 4.48 (restrictive arm) and 4.84 (liberal arm).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 forest plot: restrictive rows Aktas 1.32, Chen 5.41 and 4.53, Chock 4.48, Pellegrino 7.00, Smith 8.51 and 10.71, Van Hoften 11.73; liberal rows Chock 4.84, Saito-Benz 3.55 and 0.67.",
+    "anchor": "Figure 2, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42313692/neo-2026-0000-0000-553042_F02.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "meta-analysis of seven studies of NIRS cerebral saturation around red-cell transfusion in preterm infants, liberal versus restrictive haemoglobin thresholds",
+     "comparator": "pre versus post transfusion within study arms; subgroup contrast between threshold groups across studies",
+     "endpoint": "crSO2 and cFTOE change"
+    }
+   },
+   {
+    "proposition": "Figure 3 (cFTOE): restrictive total -0.08 (-0.11 to -0.06) from five rows, liberal total -0.03 (-0.06 to 0.00) from three rows; I-squared 0.78; the single-trial arms are -0.04 (restrictive) and -0.06 (liberal), the liberal Saito-Benz rows are -0.01 with baseline cFTOE 0.15.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3 forest plot with restrictive rows Chock -0.04, Pellegrino -0.08, Smith -0.08 and -0.10, Van Hoften -0.10; liberal rows Chock -0.06, Saito-Benz -0.01 and -0.01.",
+    "anchor": "Figure 3, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42313692/neo-2026-0000-0000-553042_F03.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "meta-analysis of seven studies of NIRS cerebral saturation around red-cell transfusion in preterm infants, liberal versus restrictive haemoglobin thresholds",
+     "comparator": "pre versus post transfusion within study arms; subgroup contrast between threshold groups across studies",
+     "endpoint": "crSO2 and cFTOE change"
+    }
+   },
+   {
+    "proposition": "Figure 1 (PRISMA): 633 records, 246 duplicates removed, 387 screened, 43 assessed, 7 included; exclusions at full text include insufficient trigger detail 13, no formal threshold 4, no pre-post measure 9; the arithmetic of the exclusion list (36) matches.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 PRISMA flow: Embase 268, Web of Science 180, PubMed 144, CENTRAL 39, ClinicalTrials.gov 2; 246 removed; 387 screened; 344 excluded; 43 assessed; 36 excluded; 7 included.",
+    "anchor": "Figure 1, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42313692/neo-2026-0000-0000-553042_F01.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "meta-analysis of seven studies of NIRS cerebral saturation around red-cell transfusion in preterm infants, liberal versus restrictive haemoglobin thresholds",
+     "comparator": "pre versus post transfusion within study arms; subgroup contrast between threshold groups across studies",
+     "endpoint": "crSO2 and cFTOE change"
+    }
+   },
+   {
+    "proposition": "Supplementary risk-of-bias figures: ROBINS-I for the three observational studies rates all as serious overall (confounding serious, missing-data no information); RoB 2 for the four RCTs rates the TOP trial low, two studies some concerns and one (Pellegrino) high overall.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supp ROBINS-I grid Aktas, Smith, Van Hoften all serious overall; RoB 2 grid Chen some concerns, Chock low, Pellegrino high, Saito-Benz some concerns.",
+    "anchor": "Supplementary Tables 2 and 3 (images in the Word file)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42313692/supp_media/image1.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "meta-analysis of seven studies of NIRS cerebral saturation around red-cell transfusion in preterm infants, liberal versus restrictive haemoglobin thresholds",
+     "comparator": "pre versus post transfusion within study arms; subgroup contrast between threshold groups across studies",
+     "endpoint": "crSO2 and cFTOE change"
+    }
+   }
+  ]
+ }
+}

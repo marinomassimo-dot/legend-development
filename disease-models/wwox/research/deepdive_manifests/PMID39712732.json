@@ -1,0 +1,266 @@
+{
+ "schema_version": 2,
+ "pmid": "39712732",
+ "doi": "10.7759/cureus.74129",
+ "receipt": "FTR-20261019-39712732-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID39712732.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A single Indian teaching-hospital paediatrics group (convenience sampling, 24 months); primary for its own 150 children; published in a general open-access journal. Weight: a small unadjusted association study."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "iron deficiency anemia AND febrile seizure AND children",
+    "count": 39,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (anemia OR hemoglobin OR transfusion)",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts at the stated date."
+ },
+ "multihop": {
+  "references_enumerated": 25,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 39712732 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 39712732: publication types ['Journal Article']; correction/retraction link markers in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 25,
+   "references_screened": 20,
+   "references_with_doi": 20,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 5
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39712732_Jadhav2024_PMC.xml",
+   "sha256": "6aa89e901ad627533a446217cd8a92764f57e8706ad9f1d0dbb08617e63ef18b",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC11662512: abstract, body, Tables 1-3, 25 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11662512/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC11662512/fullTextXML returned HTTP 200 (56552 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "Design: hospital-based case-control, convenience sampling, 50 first-febrile-seizure cases against 100 febrile controls, 24 months.",
+    "snippet": "Patients were enrolled as they were admitted, employing a convenience sampling strategy. After obtaining approval from the Institutional Ethics Committee and parental consent, 150 patients were enrolled.",
+    "anchor": "Materials and methods",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39712732_Jadhav2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "children 6-60 months at one Indian tertiary hospital, case-control: first febrile seizure (n = 50) versus febrile illness without seizure (n = 100)",
+     "endpoint": "blood count and iron indices at admission"
+    }
+   },
+   {
+    "proposition": "Exclusions: children receiving iron therapy, developmental delay, or prior febrile seizure.",
+    "snippet": "Children receiving iron therapy, those with developmental delays, and those with a history of febrile seizures were excluded.",
+    "anchor": "Materials and methods",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39712732_Jadhav2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "children 6-60 months at one Indian tertiary hospital, case-control: first febrile seizure (n = 50) versus febrile illness without seizure (n = 100)",
+     "endpoint": "blood count and iron indices at admission"
+    }
+   },
+   {
+    "proposition": "Analysis: unpaired t-tests and chi-square only; no adjustment for age, weight, temperature or infection.",
+    "snippet": "Quantitative data were represented using mean and standard deviation, and normality was tested using the Shapiro-Wilk test.",
+    "anchor": "Materials and methods, statistics",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39712732_Jadhav2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "children 6-60 months at one Indian tertiary hospital, case-control: first febrile seizure (n = 50) versus febrile illness without seizure (n = 100)",
+     "endpoint": "blood count and iron indices at admission"
+    }
+   },
+   {
+    "proposition": "Cases were older (2.15 versus 1.73 years, p = 0.027) and heavier, and controls had the higher temperature.",
+    "snippet": "Age (year)2.15 ± 1.251.73 ± 0.9930.027*Male; n (%)31 (62%)52 (52%)0.324Weight (kg) 9.98 ± 2.38.65 ± 2.180.001*",
+    "anchor": "Table 1",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID39712732_Jadhav2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "children 6-60 months at one Indian tertiary hospital, case-control: first febrile seizure (n = 50) versus febrile illness without seizure (n = 100)",
+     "endpoint": "blood count and iron indices at admission"
+    }
+   },
+   {
+    "proposition": "Haemoglobin was low in both groups (mean 8.62 g/dL in cases, 9.49 in controls); iron deficiency anaemia was labelled in 62 percent of cases and 16 percent of controls; ferritin 49.84 versus 80.64 ng/mL with standard deviations larger than the means.",
+    "snippet": "Haemoglobin (g/dL)8.62 ± 1.209.49 ± 1.11<0.001*Red cell distribution width (%)18.02 ± 2.0016.10 ± 1.92<0.001*",
+    "anchor": "Table 2",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID39712732_Jadhav2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "children 6-60 months at one Indian tertiary hospital, case-control: first febrile seizure (n = 50) versus febrile illness without seizure (n = 100)",
+     "endpoint": "blood count and iron indices at admission"
+    }
+   },
+   {
+    "proposition": "Ferritin and iron indices were drawn on admission during fever, with no inflammatory marker reported; mean ferritin was 49.84 ng/mL in cases.",
+    "snippet": "Serum ferritin (ng/mL)49.84 ± 65.8080.64 ± 69.420.010*Serum iron (µg/dL)77.64 ± 44.7186.63 ± 37.220.195",
+    "anchor": "Table 2",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID39712732_Jadhav2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "children 6-60 months at one Indian tertiary hospital, case-control: first febrile seizure (n = 50) versus febrile illness without seizure (n = 100)",
+     "endpoint": "blood count and iron indices at admission"
+    }
+   },
+   {
+    "proposition": "Anaemia (haemoglobin below 11) was present in 96 percent of cases and 85 percent of controls (p = 0.045); the control group of febrile children was itself anaemic in the great majority.",
+    "snippet": "In this study, we observed that 48 (96%) of cases and 85 (85%) of controls were anaemic (Hb < 11 g/dL), which was statistically significantly different (p=0.045).",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39712732_Jadhav2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "children 6-60 months at one Indian tertiary hospital, case-control: first febrile seizure (n = 50) versus febrile illness without seizure (n = 100)",
+     "endpoint": "blood count and iron indices at admission"
+    }
+   },
+   {
+    "proposition": "The Discussion gives the control anaemia rate as 86 percent (Results and Table 3 say 85) and reports a fourfold odds without an interval.",
+    "snippet": "Anaemia was observed in 96% of cases and 86% of controls in this study, with the likelihood of a febrile seizure being four times higher in anaemic patients than in non-anaemic patients.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39712732_Jadhav2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "children 6-60 months at one Indian tertiary hospital, case-control: first febrile seizure (n = 50) versus febrile illness without seizure (n = 100)",
+     "endpoint": "blood count and iron indices at admission"
+    }
+   },
+   {
+    "proposition": "Table 3: 48 of 50 cases and 85 of 100 controls were anaemic; two cases and fifteen controls were not.",
+    "snippet": "Anaemia (Hb < 11 g/dL)48 (96%)85 (85%)0.045*Normal (Hb ≥ 11 g/dL)2 (4%)15 (15%)",
+    "anchor": "Table 3",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID39712732_Jadhav2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "children 6-60 months at one Indian tertiary hospital, case-control: first febrile seizure (n = 50) versus febrile illness without seizure (n = 100)",
+     "endpoint": "blood count and iron indices at admission"
+    }
+   },
+   {
+    "proposition": "Authors' conclusion: iron deficiency anaemia is called a correctable risk factor, and screening and supplementation after a first seizure are advised.",
+    "snippet": "Screening for iron deficiency anaemia should be prioritised for children experiencing their first seizure episode, as early diagnosis and timely iron supplementation may help mitigate the risk.",
+    "anchor": "Conclusions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39712732_Jadhav2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "children 6-60 months at one Indian tertiary hospital, case-control: first febrile seizure (n = 50) versus febrile illness without seizure (n = 100)",
+     "endpoint": "blood count and iron indices at admission"
+    }
+   },
+   {
+    "proposition": "Authors' limitation: small sample, no follow-up after discharge.",
+    "snippet": "Due to the small sample size, we could not generalise these findings to this age group. We were unable to collect health records post-discharge.",
+    "anchor": "Limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39712732_Jadhav2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "children 6-60 months at one Indian tertiary hospital, case-control: first febrile seizure (n = 50) versus febrile illness without seizure (n = 100)",
+     "endpoint": "blood count and iron indices at admission"
+    }
+   }
+  ]
+ }
+}

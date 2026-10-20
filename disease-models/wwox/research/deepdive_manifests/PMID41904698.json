@@ -1,0 +1,264 @@
+{
+ "schema_version": 2,
+ "pmid": "41904698",
+ "doi": "10.1177/00368504261440780",
+ "receipt": "FTR-20261019-41904698-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID41904698.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "An intensive-care expert perspective; no primary data; the synthesis is declared conceptual. Primary for adult ICU transfusion physiology, not for children or genetic disease."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "red blood cell transfusion AND critically ill AND physiology",
+    "count": 360,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (anemia OR hemoglobin OR transfusion)",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts at the stated date."
+ },
+ "multihop": {
+  "references_enumerated": 44,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41904698 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 41904698: publication types ['Journal Article', 'Review']; correction/retraction link markers in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 44,
+   "references_screened": 44,
+   "references_with_doi": 44,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41904698_Nguyen2026_PMC.xml",
+   "sha256": "345683d8f466f344545e49164de184da3a30d40b576b67ec892e9b63d407c69b",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC13067254: abstract, body, Tables 1-3 (JATS), 44 references; one equation image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13067254/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13067254/fullTextXML returned HTTP 200 (97842 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "Genre: a conceptual synthesis informed by published literature, with no stated search or selection method.",
+    "snippet": "This article represents a focused conceptual synthesis informed by published literature and developed in accordance with established quality guidance for narrative reviews.",
+    "anchor": "Introduction, last sentence",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41904698_Nguyen2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult non-bleeding critically ill patients (ICU), narrative expert perspective"
+    }
+   },
+   {
+    "proposition": "Population-level trials are read as showing restrictive thresholds broadly safe in adult critical illness.",
+    "snippet": "Taken together, these trials suggest that restrictive transfusion thresholds are broadly safe at the population level.",
+    "anchor": "Hemoglobin-based transfusion thresholds",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41904698_Nguyen2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult non-bleeding critically ill patients (ICU), narrative expert perspective"
+    }
+   },
+   {
+    "proposition": "A subgroup signal of harm from restrictive transfusion in type 1 myocardial infarction is described as prespecified-subgroup, overall mortality showing no clear benefit for either strategy.",
+    "snippet": "In contrast, the MINT trial did not demonstrate a clear overall mortality benefit for either strategy but its prespecified subgroup analysis suggested a potential signal of harm associated with restrictive transfusion in patients with type 1 acute myocardial infarction.",
+    "anchor": "Hemoglobin-based transfusion thresholds",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41904698_Nguyen2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult non-bleeding critically ill patients (ICU), narrative expert perspective"
+    }
+   },
+   {
+    "proposition": "Impaired autoregulation (acute brain injury, fixed coronary stenosis) is the stated reason ischemia-sensitive tissue may become supply dependent at higher haemoglobin.",
+    "snippet": "When vascular adaptation is impaired, as in type 1 acute myocardial infarction with fixed coronary stenosis or in acute brain injury with disrupted cerebrovascular autoregulation, the ability to augment blood flow in response to anemia is constrained.9,12",
+    "anchor": "Circulatory flow and global oxygen balance",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41904698_Nguyen2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult non-bleeding critically ill patients (ICU), narrative expert perspective"
+    }
+   },
+   {
+    "proposition": "Mitochondrial level: in one cited multicentre observational study mitochondrial oxygen tension and consumption did not change consistently after transfusion and were not strongly associated with haemoglobin or conventional perfusion markers.",
+    "snippet": "The investigators found that mitoPO2 and mitoVO2 did not change consistently before and after transfusion, and neither parameter was strongly associated with hemoglobin concentration or conventional markers of tissue perfusion and oxygenation.",
+    "anchor": "Cellular oxygen utilization",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41904698_Nguyen2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult non-bleeding critically ill patients (ICU), narrative expert perspective"
+    }
+   },
+   {
+    "proposition": "In the same study many patients had normal baseline mitochondrial oxygen tension, so the study does not show mitochondrial failure (the abstract language of 'mitochondrial failure' rests on this single measurement study).",
+    "snippet": "In this study, many patients had normal baseline mitoPO2 values, suggesting that cellular oxygen tension was not critically low at the time of transfusion",
+    "anchor": "Cellular oxygen utilization",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41904698_Nguyen2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult non-bleeding critically ill patients (ICU), narrative expert perspective"
+    }
+   },
+   {
+    "proposition": "Table 1 mitochondrial row: unchanged or discordant from haemoglobin and ScvO2; cellular hypoxia may persist despite normal systemic oxygenation.",
+    "snippet": "Often unchanged or discordant from Hb and ScvO2Cellular hypoxia may persist despite normal systemic oxygenation",
+    "anchor": "Table 1, row mitoPO2/mitoVO2",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41904698_Nguyen2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult non-bleeding critically ill patients (ICU), narrative expert perspective"
+    }
+   },
+   {
+    "proposition": "Table 2 states NIRS tissue oxygen saturation has no validated absolute thresholds and the mitochondrial markers are experimental and site-specific.",
+    "snippet": "Noninvasive continuous microvascular trendNo validated absolute thresholdsInterpreting absolute values as global hypoxia",
+    "anchor": "Table 2, row NIRS",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41904698_Nguyen2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult non-bleeding critically ill patients (ICU), narrative expert perspective"
+    }
+   },
+   {
+    "proposition": "Lactate is described as multifactorial, influenced by adrenergic stimulation, mitochondrial dysfunction and impaired clearance, and not validated as a transfusion trigger.",
+    "snippet": "Lactate may reflect global hypoperfusion but is multifactorial and influenced by adrenergic stimulation, mitochondrial dysfunction, and impaired clearance.",
+    "anchor": "Clinical heterogeneity and risk-benefit balance",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41904698_Nguyen2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult non-bleeding critically ill patients (ICU), narrative expert perspective"
+    }
+   },
+   {
+    "proposition": "The proposed bedside cut-offs are explicitly not validated in randomised trials with hard outcomes.",
+    "snippet": "However, it must be explicitly acknowledged that none of these cut-offs have been validated in randomized trials using hard clinical outcomes such as mortality or organ failure.",
+    "anchor": "How to implement physiology-guided transfusion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41904698_Nguyen2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult non-bleeding critically ill patients (ICU), narrative expert perspective"
+    }
+   },
+   {
+    "proposition": "Transfusion risks listed: circulatory overload, transfusion-related lung injury, immunomodulation and infection.",
+    "snippet": "Red blood cell transfusion is associated with potential adverse effects, including transfusion-associated circulatory overload (TACO), transfusion-related acute lung injury (TRALI), immunomodulation, and infection.35–38",
+    "anchor": "Clinical heterogeneity and risk-benefit balance",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41904698_Nguyen2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult non-bleeding critically ill patients (ICU), narrative expert perspective"
+    }
+   },
+   {
+    "proposition": "The causal test is stated as still pending: oxygen-extraction-guided randomised trials are named as the critical current effort.",
+    "snippet": "Importantly, the ongoing O2ER guided randomized trials (NCT06102590) represent the most critical current effort to establish causality between physiology-based transfusion triggers and meaningful clinical outcomes.",
+    "anchor": "How to implement physiology-guided transfusion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41904698_Nguyen2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult non-bleeding critically ill patients (ICU), narrative expert perspective"
+    }
+   }
+  ]
+ }
+}

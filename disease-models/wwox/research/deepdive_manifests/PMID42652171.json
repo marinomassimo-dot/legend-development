@@ -1,0 +1,349 @@
+{
+ "schema_version": 2,
+ "pmid": "42652171",
+ "doi": "10.3390/biomedicines14081788",
+ "receipt": "FTR-20261019-42652171-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID42652171.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "A paediatric neurology and neuroimmunology author group writing a conceptual review; no primary data. Much of the human tissue evidence it cites comes from adult or mixed-age surgical cohorts, which the review itself says."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "complement AND microglia AND epilepsy AND pediatric",
+    "count": 5,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND complement",
+    "count": 8,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts at the stated date."
+ },
+ "multihop": {
+  "references_enumerated": 55,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42652171 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 42652171: publication types ['Journal Article', 'Review']; correction/retraction link markers in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 55,
+   "references_screened": 55,
+   "references_with_doi": 55,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42652171_Karayanni2026_PMC.xml",
+   "sha256": "c96d5adbe3c0fba777f8ddbf775e338e22657f0baf772a88f48fc0b518a71eca",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC13509543: abstract, body, Table 1 and two figure legends in the JATS floats, 55 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13509543/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID42652171/biomedicines-14-01788-g001.webp",
+   "sha256": "a850c794e5ab4e8fefa1caa97c74675e50ec559141cddcbb48efdd983b6528eb",
+   "kind": "figure",
+   "note": "Figure 1 (webp) from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13509543/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID42652171/biomedicines-14-01788-g002.webp",
+   "sha256": "68237d5c7d9c85c3a1d408d2625a8abab349a0b187ffdff983290ca0241fc051",
+   "kind": "figure",
+   "note": "Figure 2 (webp) from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13509543/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13509543/fullTextXML returned HTTP 200 (122032 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "Genre and thesis: a review proposing that complement-mediated microglial pruning of intact synapses contributes to cognitive decline in paediatric DEE, built on rodent status epilepticus and human tissue.",
+    "snippet": "This represents an important time of neurodevelopment when resident brain cells use complement proteins to define and organize the architecture of the brain as well as construct functional neural circuitry [3].",
+    "anchor": "1. Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42652171_Karayanni2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of complement and microglia in paediatric epilepsy (rodent status epilepticus, adult and mixed-age human surgical tissue, CSF and serum biomarkers)"
+    }
+   },
+   {
+    "proposition": "The rodent evidence is from acute chemoconvulsant models of acquired status epilepticus at P14 and P21.",
+    "snippet": "research has shown through in vivo studies utilizing acute chemoconvulsant rodent models of acquired status epilepticus that abnormal activation of this process may be triggered by repeated episodes of early life seizure activity.",
+    "anchor": "2. Pre-Clinical Evidence",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42652171_Karayanni2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of complement and microglia in paediatric epilepsy (rodent status epilepticus, adult and mixed-age human surgical tissue, CSF and serum biomarkers)"
+    }
+   },
+   {
+    "proposition": "C3 knockout mice after severe status epilepticus showed less neurodegeneration and microglia-astrocyte interaction (cited).",
+    "snippet": "experimental data strongly demonstrates that complement-deficient (C3-/-) knockout mice subjected to severe status epilepticus exhibit a statistically significant reduction in histochemical neurodegeneration and pathological microglia–astrocyte interaction compared to wild-type mice [8].",
+    "anchor": "2. Pre-Clinical Evidence",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42652171_Karayanni2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of complement and microglia in paediatric epilepsy (rodent status epilepticus, adult and mixed-age human surgical tissue, CSF and serum biomarkers)"
+    }
+   },
+   {
+    "proposition": "The human tissue evidence is mostly adult or mixed-age; the review cautions against extrapolating to paediatric DEE.",
+    "snippet": "Currently, much of the direct tissue evidence for complement activation in human epilepsy originates from adult or mixed-age surgical cohorts.",
+    "anchor": "3. Histopathological and Molecular Findings",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42652171_Karayanni2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of complement and microglia in paediatric epilepsy (rodent status epilepticus, adult and mixed-age human surgical tissue, CSF and serum biomarkers)"
+    }
+   },
+   {
+    "proposition": "Human surgical tissue is cross-sectional, selected for pharmacoresistance, and cannot show whether complement is a driver or a consequence.",
+    "snippet": "Consequently, this observational data cannot definitively determine whether complement activation is a primary driver of the pathology or a secondary consequence of intractable seizures",
+    "anchor": "3. Histopathological and Molecular Findings",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42652171_Karayanni2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of complement and microglia in paediatric epilepsy (rodent status epilepticus, adult and mixed-age human surgical tissue, CSF and serum biomarkers)"
+    }
+   },
+   {
+    "proposition": "Biomarker profiles differ by syndrome: acquired inflammatory syndromes versus genetic DEE (Dravet), and little evidence of complement activation in idiopathic generalised epilepsies.",
+    "snippet": "In contrast to severe encephalopathies, there is currently a lack of substantial evidence indicating significant complement activation in idiopathic generalized epilepsies (IGEs), such as childhood absence epilepsy [21].",
+    "anchor": "4. Clinical Biomarkers and Cognitive Correlates",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42652171_Karayanni2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of complement and microglia in paediatric epilepsy (rodent status epilepticus, adult and mixed-age human surgical tissue, CSF and serum biomarkers)"
+    }
+   },
+   {
+    "proposition": "Anti-seizure medications are described as not mitigating neuroinflammation, with cited preclinical data that phenobarbital or levetiracetam after status epilepticus did not consistently prevent chronic microglial activation.",
+    "snippet": "administering standard ASMs (such as phenobarbital or levetiracetam) during or immediately after status epilepticus generally suppresses acute convulsions but does not consistently prevent the subsequent development of spontaneous recurrent seizures or chronic microglial activation [32].",
+    "anchor": "5.1. The Synaptic Gap in Current Care",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42652171_Karayanni2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of complement and microglia in paediatric epilepsy (rodent status epilepticus, adult and mixed-age human surgical tissue, CSF and serum biomarkers)"
+    }
+   },
+   {
+    "proposition": "Neither named complement inhibitor has shown efficacy in paediatric epilepsy; their use in epilepsy is untested.",
+    "snippet": "Importantly, neither ANX005 nor pegcetacoplan has demonstrated efficacy in pediatric epilepsy or the prevention of seizure-associated synaptic pruning.",
+    "anchor": "5.2. Emerging Pharmacological Targets",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42652171_Karayanni2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of complement and microglia in paediatric epilepsy (rodent status epilepticus, adult and mixed-age human surgical tissue, CSF and serum biomarkers)"
+    }
+   },
+   {
+    "proposition": "Text: 'As shown in Figure 2' targeted C3 inhibition in young mice reduces microglial CR3 phagocytosis and preserves circuits.",
+    "snippet": "As shown in Figure 2, targeted inhibition of C3 function in young mice results in reduced microglial CR3-mediated phagocytic activity on aberrantly tagged synaptic surfaces containing C3b.",
+    "anchor": "5.2. Emerging Pharmacological Targets",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42652171_Karayanni2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of complement and microglia in paediatric epilepsy (rodent status epilepticus, adult and mixed-age human surgical tissue, CSF and serum biomarkers)"
+    }
+   },
+   {
+    "proposition": "Safety: complement is part of general immune defence; blocking it in children may raise infection risk; encapsulated-organism prophylaxis and vaccination are the cited management.",
+    "snippet": "Children are still building their natural immunity and a suppressed complement pathway might increase a child’s risk for infections [45].",
+    "anchor": "5.3. Immunosuppression and Safety",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42652171_Karayanni2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of complement and microglia in paediatric epilepsy (rodent status epilepticus, adult and mixed-age human surgical tissue, CSF and serum biomarkers)"
+    }
+   },
+   {
+    "proposition": "Text: seizures give 'a distinct time frame of approximately 48 h' to intervene.",
+    "snippet": "while seizures provide us with a distinct time frame of approximately 48 h to potentially intervene to stop massive structural removal from occurring",
+    "anchor": "5.4. The Therapeutic Window",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42652171_Karayanni2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of complement and microglia in paediatric epilepsy (rodent status epilepticus, adult and mixed-age human surgical tissue, CSF and serum biomarkers)"
+    }
+   },
+   {
+    "proposition": "Table 1 states the acute-phase timeline is unknown and that the sequence is hypothesised.",
+    "snippet": "Because exact post-seizure kinetics remain undefined in human DEEs, this table presents a hypothesized sequence of neuro-immune events.",
+    "anchor": "Table 1",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42652171_Karayanni2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of complement and microglia in paediatric epilepsy (rodent status epilepticus, adult and mixed-age human surgical tissue, CSF and serum biomarkers)"
+    }
+   },
+   {
+    "proposition": "Inhibition that is too early or too long would likely interfere with normal development, and one that is too late may miss lost connections.",
+    "snippet": "Thus, if clinicians were to inhibit the complement system too soon or for too long, they would likely interfere with normal and healthy brain development.",
+    "anchor": "5.4. The Therapeutic Window",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42652171_Karayanni2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of complement and microglia in paediatric epilepsy (rodent status epilepticus, adult and mixed-age human surgical tissue, CSF and serum biomarkers)"
+    }
+   },
+   {
+    "proposition": "Limitations: antibody delivery across the BBB, chronic C1q or C3 inhibition possibly causing neuropsychiatric phenotypes by disrupting developmental pruning.",
+    "snippet": "Theoretically, chronic systemic inhibition of C1q or C3 at this developmental time point may result in disrupting this developmental pruning, potentially inducing neuropsychiatric phenotypes [24].",
+    "anchor": "6. Limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42652171_Karayanni2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of complement and microglia in paediatric epilepsy (rodent status epilepticus, adult and mixed-age human surgical tissue, CSF and serum biomarkers)"
+    }
+   },
+   {
+    "proposition": "The review states that no new data were created.",
+    "snippet": "No new data were created or analyzed in this study. Data sharing is not applicable to this article.",
+    "anchor": "Data Availability Statement",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42652171_Karayanni2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of complement and microglia in paediatric epilepsy (rodent status epilepticus, adult and mixed-age human surgical tissue, CSF and serum biomarkers)"
+    }
+   },
+   {
+    "proposition": "Figure 1: schematic of physiological complement-tagged pruning of a weak spine by ramified microglia (A) and seizure-induced aberrant tagging of healthy spines by amoeboid microglia (B), with C1q, C3 and CR3 drawn; a schematic with no data, no scale and no WWOX.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 two-panel cartoon: (A) ramified microglia, C1q/C3-tagged weak spine; (B) amoeboid microglia, C1q/C3 on healthy and filopodia-like spines.",
+    "anchor": "Figure 1, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42652171/biomedicines-14-01788-g001.webp",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative review of complement and microglia in paediatric epilepsy (rodent status epilepticus, adult and mixed-age human surgical tissue, CSF and serum biomarkers)"
+    }
+   },
+   {
+    "proposition": "Figure 2 is a mechanism diagram (anti-seizure drug targets on the left; ANX005 neutralising C1q and pegcetacoplan blocking C3 cleavage with CR3 and a phagosome on the right). It contains no mouse data, so it does not show the result that the text attributes to it ('As shown in Figure 2 ... in young mice').",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 cartoon: sodium-channel blockers, levetiracetam on SV2A, GABAergic ASMs; ANX005 on C1q, pegcetacoplan on C3 to C3b, CR3, microglia and phagosome.",
+    "anchor": "Figure 2, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42652171/biomedicines-14-01788-g002.webp",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "narrative review of complement and microglia in paediatric epilepsy (rodent status epilepticus, adult and mixed-age human surgical tissue, CSF and serum biomarkers)"
+    },
+    "qualifies": "entries[8]",
+    "qualifies_needle": "targeted inhibition of C3 function in young mice results in reduced microglial CR3-mediated phagocytic activity"
+   }
+  ]
+ }
+}

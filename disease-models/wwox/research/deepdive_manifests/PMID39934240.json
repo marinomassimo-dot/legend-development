@@ -1,0 +1,501 @@
+{
+ "schema_version": 2,
+ "pmid": "39934240",
+ "doi": "10.1038/s41598-025-88654-5",
+ "receipt": "FTR-20261019-39934240-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID39934240.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A US-French group (Southern Methodist University, neurology and epilepsy centre, Montpellier) working on blood-brain barrier and inflammation biomarkers in epilepsy; biorepository samples from adult surgical candidates. Pilot scale; the authors label it a pilot."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "complement AND serum AND drug-resistant epilepsy",
+    "count": 6,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND complement",
+    "count": 8,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts at the stated date."
+ },
+ "multihop": {
+  "references_enumerated": 52,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 39934240 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 39934240: publication types ['Journal Article', 'Research Support, N.I.H., Extramural']; correction/retraction link markers in the efetch record: ['ErratumIn'].",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 52,
+   "references_screened": 50,
+   "references_with_doi": 50,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39934240_PinzonHoyos2025_PMC.xml",
+   "sha256": "89ee510a27865ab904f0823263c2c75650b79cb33860052cee1d85ae07321856",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC11814292: abstract, body, Table 1 (cohort), five figure legends, 52 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11814292/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39934240/41598_2025_88654_Fig1_HTML.jpg",
+   "sha256": "7d15b6a72e2b9a170d22c10b3a057b0fb2b9cd0bbeb6cbd3fe79934d257dbeb0",
+   "kind": "figure",
+   "note": "Figure 1 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11814292/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39934240/41598_2025_88654_Fig2_HTML.jpg",
+   "sha256": "9a49efc5aaee6989f4bd64c4392ec85815d33493814b488a5b0b9467d0d8f514",
+   "kind": "figure",
+   "note": "Figure 2 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11814292/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39934240/41598_2025_88654_Fig3_HTML.jpg",
+   "sha256": "882f72fb611530c6af8fe9fb5bbed9a758244682b970e0df709c30cb08f0893b",
+   "kind": "figure",
+   "note": "Figure 3 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11814292/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39934240/41598_2025_88654_Fig4_HTML.jpg",
+   "sha256": "0b17bc1da842b1bcd1796cbe8e46116710d23a5d3082fd7bc2673cb12ffd7e3e",
+   "kind": "figure",
+   "note": "Figure 4 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11814292/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39934240/41598_2025_88654_Fig5_HTML.jpg",
+   "sha256": "0fad32508c356e137f5d093e54cbdc709dfca5512878f2856ca147588c11da1c",
+   "kind": "figure",
+   "note": "Figure 5 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11814292/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39934240/41598_2025_88654_MOESM1_ESM.pdf",
+   "sha256": "ed96fef41e70be00099dcbdbd3a4e597c9750efdfab8b3937676fb246889fba4",
+   "kind": "supplement_binary",
+   "note": "Supplementary PDF (Supplementary Figures 1-6 and Tables 1-2).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11814292/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID39934240_PinzonHoyos2025_supplement/41598_2025_88654_MOESM1_ESM.txt",
+   "sha256": "5eef25f76006805c0c9103247f9bbc888f125189b234abc20c7d505b4716241c",
+   "kind": "supplement_text",
+   "note": "DERIVED text layer of the supplementary PDF (legends and the two p-value tables; figure panels are images).",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftotext_layout_nopgbrk",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "5eef25f76006805c0c9103247f9bbc888f125189b234abc20c7d505b4716241c",
+    "derived_from": "files/figures/PMID39934240/41598_2025_88654_MOESM1_ESM.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk 41598_2025_88654_MOESM1_ESM.pdf out.txt"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC11814292/fullTextXML returned HTTP 200 (153680 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "Cohort: 46 adults with drug-resistant epilepsy (surgical candidates, mean epilepsy duration about 19-21 years) against 45 healthy outpatient controls matched by age and sex; FSIQ available for only a subset of patients and not for controls.",
+    "snippet": "FSIQ scores were not assessed in the healthy control group.",
+    "anchor": "Methods, Sample population",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39934240_PinzonHoyos2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult human serum, drug-resistant epilepsy surgical candidates (n = 46; 22 F, 24 M; age 20-69) versus healthy outpatient controls (n = 45), single pre-operative draw",
+     "comparator": "healthy controls matched on sex and age",
+     "endpoint": "13 complement analytes, 16 cytokines, correlations with FSIQ and age"
+    }
+   },
+   {
+    "proposition": "Samples were drawn pre-operatively as part of routine procedures; no timing relative to seizures is controlled and the authors say a single collection is a limitation.",
+    "snippet": "The DRE blood samples were collected as part of routine preoperative procedures.",
+    "anchor": "Methods, Sample population",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39934240_PinzonHoyos2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult human serum, drug-resistant epilepsy surgical candidates (n = 46; 22 F, 24 M; age 20-69) versus healthy outpatient controls (n = 45), single pre-operative draw",
+     "comparator": "healthy controls matched on sex and age",
+     "endpoint": "13 complement analytes, 16 cytokines, correlations with FSIQ and age"
+    }
+   },
+   {
+    "proposition": "Statistics: Welch t-tests per analyte for two-group comparisons; two-way ANOVA for condition by sex with Sidak post hoc; Pearson correlations; no family-wise correction across the 13 complement and 16 cytokine analytes is described for the t-tests.",
+    "snippet": "Complement and cytokine comparisons between two groups (DRE and healthy controls) were performed using unpaired t-tests with Welch’s correction (Fig. 1 and Supplementary Fig. 5, Supplementary Table 1).",
+    "anchor": "Methods, Statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39934240_PinzonHoyos2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult human serum, drug-resistant epilepsy surgical candidates (n = 46; 22 F, 24 M; age 20-69) versus healthy outpatient controls (n = 45), single pre-operative draw",
+     "comparator": "healthy controls matched on sex and age",
+     "endpoint": "13 complement analytes, 16 cytokines, correlations with FSIQ and age"
+    }
+   },
+   {
+    "proposition": "Result: serum C1q, C4, C4b, C3, C3b/iC3b, C5, Factor B and Factor H were about 30 percent lower in DRE, with MBL, C2, C3a, C5a and C5b-9 unchanged.",
+    "snippet": "Compared to healthy individuals, DRE patients showed evidence of lower abundance, by approximately 30%, in the components C1q (p < 0.0001), C4 (p < 0.001), C4b (p < 0.0001), C3 (p = 0.006), C3b/iC3b (p = 0.006), C5 (p = 0.038)",
+    "anchor": "Results, Abnormal complement cascade components in DRE",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39934240_PinzonHoyos2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult human serum, drug-resistant epilepsy surgical candidates (n = 46; 22 F, 24 M; age 20-69) versus healthy outpatient controls (n = 45), single pre-operative draw",
+     "comparator": "healthy controls matched on sex and age",
+     "endpoint": "13 complement analytes, 16 cytokines, correlations with FSIQ and age"
+    }
+   },
+   {
+    "proposition": "The text describes Factor B as 'regulatory'; in the complement diagram of Figure 1A Factor B is shown as a component feeding the alternative pathway convertase and Factor H as the regulator (an outside-knowledge note: Factor B is a convertase component).",
+    "snippet": "and regulatory Factor B (p < 0.001) and Factor H (p < 0.0001) (Fig. 1C-O).",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39934240_PinzonHoyos2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult human serum, drug-resistant epilepsy surgical candidates (n = 46; 22 F, 24 M; age 20-69) versus healthy outpatient controls (n = 45), single pre-operative draw",
+     "comparator": "healthy controls matched on sex and age",
+     "endpoint": "13 complement analytes, 16 cytokines, correlations with FSIQ and age"
+    }
+   },
+   {
+    "proposition": "Text and abstract present sex-specific complement dysregulation: DRE males lower C3b/iC3b (p = 0.039), DRE females not (p = 0.372).",
+    "snippet": "However, DRE males had lower levels of C3b/iC3b compared to healthy males (p = 0.039), while DRE females showed no evidence of reduction (p = 0.372).",
+    "anchor": "Results, Abnormal complement cascade components in DRE",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39934240_PinzonHoyos2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult human serum, drug-resistant epilepsy surgical candidates (n = 46; 22 F, 24 M; age 20-69) versus healthy outpatient controls (n = 45), single pre-operative draw",
+     "comparator": "healthy controls matched on sex and age",
+     "endpoint": "13 complement analytes, 16 cytokines, correlations with FSIQ and age"
+    }
+   },
+   {
+    "proposition": "Supplementary Table 2: for C3b/iC3b the condition-by-sex interaction is p = 0.498 and for C1q p = 0.340; no complement analyte shows a significant interaction, while TNF-alpha does (p below 0.001).",
+    "snippet": "C3b/iC3b F (1, 72) = 0.4631, p = 0.498",
+    "anchor": "Supplementary Table 2 (derived text)",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID39934240_PinzonHoyos2025_supplement/41598_2025_88654_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult human serum, drug-resistant epilepsy surgical candidates (n = 46; 22 F, 24 M; age 20-69) versus healthy outpatient controls (n = 45), single pre-operative draw",
+     "comparator": "healthy controls matched on sex and age",
+     "endpoint": "13 complement analytes, 16 cytokines, correlations with FSIQ and age"
+    }
+   },
+   {
+    "proposition": "Correlation claims: the authors describe a 'loss' of MBL to C3b/iC3b correlation in DRE females and of classical and lectin correlations in DRE males as pathway disruption.",
+    "snippet": "However, DRE females showed no evidence of a linear association between levels of MBL and C3b/iC3b (Fig. 3J), suggesting selective disruption of lectin pathway coordination.",
+    "anchor": "Results, Dysregulation of complement pathways in DRE",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39934240_PinzonHoyos2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult human serum, drug-resistant epilepsy surgical candidates (n = 46; 22 F, 24 M; age 20-69) versus healthy outpatient controls (n = 45), single pre-operative draw",
+     "comparator": "healthy controls matched on sex and age",
+     "endpoint": "13 complement analytes, 16 cytokines, correlations with FSIQ and age"
+    }
+   },
+   {
+    "proposition": "The authors acknowledge the small sample may have obscured relationships and that Pearson correlation is sensitive to outliers.",
+    "snippet": "Thus, the small sample size may have obscured some true relationships.",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39934240_PinzonHoyos2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult human serum, drug-resistant epilepsy surgical candidates (n = 46; 22 F, 24 M; age 20-69) versus healthy outpatient controls (n = 45), single pre-operative draw",
+     "comparator": "healthy controls matched on sex and age",
+     "endpoint": "13 complement analytes, 16 cytokines, correlations with FSIQ and age"
+    }
+   },
+   {
+    "proposition": "Text: both male and female DRE patients showed positive C3b/iC3b-CCL2 correlations that healthy counterparts lacked.",
+    "snippet": "Notably, both male and female DRE patients showed positive correlations between C3b/iC3b and CCL2 that were not present in their healthy counterparts (Fig. 5M,P).",
+    "anchor": "Results, Cytokine serum levels in health and DRE",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39934240_PinzonHoyos2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult human serum, drug-resistant epilepsy surgical candidates (n = 46; 22 F, 24 M; age 20-69) versus healthy outpatient controls (n = 45), single pre-operative draw",
+     "comparator": "healthy controls matched on sex and age",
+     "endpoint": "13 complement analytes, 16 cytokines, correlations with FSIQ and age"
+    }
+   },
+   {
+    "proposition": "Text cites Figure 5E,H for IL-17 correlations 'in females, both healthy and DRE'; the DRE female panel is Figure 5F (panel H is DRE males).",
+    "snippet": "Female subjects, both healthy and DRE, displayed positive correlations between C3b/iC3b and IL-17 levels (Fig. 5E,H), while this relationship was absent in males.",
+    "anchor": "Results, Cytokine serum levels in health and DRE",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39934240_PinzonHoyos2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult human serum, drug-resistant epilepsy surgical candidates (n = 46; 22 F, 24 M; age 20-69) versus healthy outpatient controls (n = 45), single pre-operative draw",
+     "comparator": "healthy controls matched on sex and age",
+     "endpoint": "13 complement analytes, 16 cytokines, correlations with FSIQ and age"
+    }
+   },
+   {
+    "proposition": "FSIQ correlations: lower IQ with higher C2 (r = -0.63, p = 0.039) and IL-8 (r = -0.66, p = 0.02) in females with FSIQ data (n = 12), and with IL-9 in males (r = -0.65, p = 0.007; n = 16); uncorrected among dozens of correlations.",
+    "snippet": "Lower FSIQ scores were correlated with higher levels of C2 (r = -0.63, p = 0.039) and IL-8 (r = -0.66, p = 0.02) in DRE females (Supplementary Fig. 2)",
+    "anchor": "Results, Complement and cytokine correlations with age and clinical outcomes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39934240_PinzonHoyos2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult human serum, drug-resistant epilepsy surgical candidates (n = 46; 22 F, 24 M; age 20-69) versus healthy outpatient controls (n = 45), single pre-operative draw",
+     "comparator": "healthy controls matched on sex and age",
+     "endpoint": "13 complement analytes, 16 cytokines, correlations with FSIQ and age"
+    }
+   },
+   {
+    "proposition": "Limitations: cause versus consequence unknown, antiseizure medications may alter immune function, single-time sampling, assay sensitivity.",
+    "snippet": "It remains unclear whether the observed decrease in complement levels and altered cytokine/chemokine profiles cause seizures, result from them, or have beneficial or harmful effects in epilepsy.",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39934240_PinzonHoyos2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult human serum, drug-resistant epilepsy surgical candidates (n = 46; 22 F, 24 M; age 20-69) versus healthy outpatient controls (n = 45), single pre-operative draw",
+     "comparator": "healthy controls matched on sex and age",
+     "endpoint": "13 complement analytes, 16 cytokines, correlations with FSIQ and age"
+    }
+   },
+   {
+    "proposition": "bFGF was detectable only in the epilepsy groups; healthy samples were below the assay limit, so the abstract's 'elevated bFGF' is a detectability difference.",
+    "snippet": "Notably, bFGF was detected only in the DRE groups, while levels within the healthy group were below the sensitivity limit of the assay kit.",
+    "anchor": "Results, Cytokine serum levels in health and DRE",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39934240_PinzonHoyos2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult human serum, drug-resistant epilepsy surgical candidates (n = 46; 22 F, 24 M; age 20-69) versus healthy outpatient controls (n = 45), single pre-operative draw",
+     "comparator": "healthy controls matched on sex and age",
+     "endpoint": "13 complement analytes, 16 cytokines, correlations with FSIQ and age"
+    }
+   },
+   {
+    "proposition": "Interpretation offered: lower complement could mean a weakened system with infection or autoimmune susceptibility; the authors state their literature review found no link of epilepsy with infection susceptibility.",
+    "snippet": "Although our literature review did not identify studies linking epilepsy with increased susceptibility to infections or prolonged inflammation, some autoimmune disorders can be comorbid with epilepsy39.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39934240_PinzonHoyos2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "adult human serum, drug-resistant epilepsy surgical candidates (n = 46; 22 F, 24 M; age 20-69) versus healthy outpatient controls (n = 45), single pre-operative draw",
+     "comparator": "healthy controls matched on sex and age",
+     "endpoint": "13 complement analytes, 16 cytokines, correlations with FSIQ and age"
+    }
+   },
+   {
+    "proposition": "Figure 1: the volcano plot (B) and violin plots (C-O) show C1q, Factor B, Factor H, C4, C4b lower in DRE; the healthy distributions are wide and right-skewed (for example C1q about 40-200 ug/mL against about 30-80 in DRE), tested by t-test on raw values; MBL, C2, C3a, C5a and C5b-9 overlap.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 A complement pathway diagram, B volcano (C4, C4b, Factor B, Factor H, C1q at -log p about 4), C-O violins healthy (grey) vs DRE (blue).",
+    "anchor": "Figure 1, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39934240/41598_2025_88654_Fig1_HTML.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "adult human serum, drug-resistant epilepsy surgical candidates (n = 46; 22 F, 24 M; age 20-69) versus healthy outpatient controls (n = 45), single pre-operative draw",
+     "comparator": "healthy controls matched on sex and age",
+     "endpoint": "13 complement analytes, 16 cytokines, correlations with FSIQ and age"
+    }
+   },
+   {
+    "proposition": "Figure 2: by sex, C1q, Factor B, Factor H, C4 and C4b are lower in both DRE females and DRE males against their healthy counterparts (similar size and direction), and only C3b/iC3b reaches significance in males alone; the healthy female versus healthy male volcano shows no significant analyte.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 A-C volcano plots, D-P violins by sex; brackets F and M for C1q, Factor B, Factor H, C4, C4b; C3b/iC3b bracket for M only.",
+    "anchor": "Figure 2, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39934240/41598_2025_88654_Fig2_HTML.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "adult human serum, drug-resistant epilepsy surgical candidates (n = 46; 22 F, 24 M; age 20-69) versus healthy outpatient controls (n = 45), single pre-operative draw",
+     "comparator": "healthy controls matched on sex and age",
+     "endpoint": "13 complement analytes, 16 cytokines, correlations with FSIQ and age"
+    }
+   },
+   {
+    "proposition": "Figure 3: correlations of C1q, MBL and C5a with C3b/iC3b; in DRE males the C3b/iC3b values span only about 250-600 (healthy males about 100-2300) and the C1q correlation is r = 0.21, while DRE females keep C1q r = 0.70 and lose MBL r = 0.15; the restricted C3b/iC3b range in DRE could itself weaken correlations (INFERENZA).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3 A-D correlation heat matrices, E-P scatter plots with r and p; DRE male panels H, L, P r = 0.21, -0.041, 0.49.",
+    "anchor": "Figure 3, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39934240/41598_2025_88654_Fig3_HTML.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "adult human serum, drug-resistant epilepsy surgical candidates (n = 46; 22 F, 24 M; age 20-69) versus healthy outpatient controls (n = 45), single pre-operative draw",
+     "comparator": "healthy controls matched on sex and age",
+     "endpoint": "13 complement analytes, 16 cytokines, correlations with FSIQ and age"
+    }
+   },
+   {
+    "proposition": "Figure 4: cytokines; IL-8 lower in DRE (volcano A), TNF-alpha lower in DRE females only (panel E), CCL2 and CCL5 modestly higher with wide overlap, bFGF plotted only for patients with a single healthy point near 10; panel D (males) has no significant analyte.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 4 A-D volcano plots; E-I violins TNFalpha (***), IL-8 (**), CCL2, CCL5, bFGF.",
+    "anchor": "Figure 4, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39934240/41598_2025_88654_Fig4_HTML.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "adult human serum, drug-resistant epilepsy surgical candidates (n = 46; 22 F, 24 M; age 20-69) versus healthy outpatient controls (n = 45), single pre-operative draw",
+     "comparator": "healthy controls matched on sex and age",
+     "endpoint": "13 complement analytes, 16 cytokines, correlations with FSIQ and age"
+    }
+   },
+   {
+    "proposition": "Figure 5: complement-cytokine correlations; the DRE male C3b/iC3b versus CCL2 panel (P) shows r = 0.45, p = 0.094, which is not significant, whereas the text states both sexes with DRE showed a positive correlation (DRE females r = 0.58, p = 0.029); the healthy-male C4-IL-8 correlation (r = -0.5, p = 0.024) is as strong as in DRE males (r = -0.48, p = 0.03).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 5 A-D correlation matrices; E-H IL-17 vs C3b/iC3b; I-L IL-8 vs C4; M-P CCL2 vs C3b/iC3b; P labelled r = 0.45, p = 0.094.",
+    "anchor": "Figure 5, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39934240/41598_2025_88654_Fig5_HTML.jpg",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "adult human serum, drug-resistant epilepsy surgical candidates (n = 46; 22 F, 24 M; age 20-69) versus healthy outpatient controls (n = 45), single pre-operative draw",
+     "comparator": "healthy controls matched on sex and age",
+     "endpoint": "13 complement analytes, 16 cytokines, correlations with FSIQ and age"
+    },
+    "contradicts": "entries[9]",
+    "contradicts_needle": "both male and female DRE patients showed positive correlations between C3b/iC3b and CCL2"
+   }
+  ]
+ }
+}

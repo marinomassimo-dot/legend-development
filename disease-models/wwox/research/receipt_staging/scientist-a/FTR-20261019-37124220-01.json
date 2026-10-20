@@ -1,0 +1,42 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-37124220-01",
+ "study_id": {
+  "pmid": "37124220",
+  "doi": "10.3389/fphar.2023.1185071"
+ },
+ "analysis_at": "2026-10-19T19:18:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a (Scientist A), interventions batch 2026-10-19 groups H1/H2, task INTERV-H1-A-20261019 on branch task/INTERV-H1-A-20261019, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN. Route: Europe PMC JATS body (PMC10133701) and two figure images (Figures 1 and 2) from the Europe PMC supplementaryFiles zip into the root files/ tree; Figures 1 and 2 inspected as images at native resolution; the review has no methods or results sections. Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a staged JSON for the Orchestrator and not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID37124220_Jin2023_PMC.xml",
+ "source_fingerprint": "372be24ccdf1a37a637c5750569b28d2fb9750a1713343d06e558ee64b7134ee",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "not_present",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID37124220.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID37124220.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "manifest",
+  "Figures 1-2 inspected as images",
+  "Narrative review: no methods or results sections"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "event_at": "2026-10-19T19:18:00Z"
+}

@@ -1,0 +1,492 @@
+{
+ "schema_version": 2,
+ "pmid": "42794294",
+ "doi": "10.3390/children13091274",
+ "receipt": "FTR-20261019-42794294-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID42794294.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "A paediatric nutrition review that the Methods say was registered as an undergraduate thesis at the University of Granada and not in PROSPERO; no primary data; the figures carry an illustration-tool credit. Primary for nothing; a secondary synthesis of 15 mostly external trials."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "iron supplementation AND infants AND neurodevelopment",
+    "count": 69,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (iron OR ferroptosis)",
+    "count": 3,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts at the stated date."
+ },
+ "multihop": {
+  "references_enumerated": 94,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42794294 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 42794294: publication types ['Journal Article', 'Review']; correction/retraction link markers in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 94,
+   "references_screened": 85,
+   "references_with_doi": 85,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 9
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42794294_Fitz2026_PMC.xml",
+   "sha256": "53db199b297cba1b575e0727a569406b0252a2454d25b6c102f47dc60075f67b",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC13605664: abstract, body, four tables (Table 2 the 15-study summary) and three figure legends in the JATS floats, 94 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13605664/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID42794294/children-13-01274-g001.webp",
+   "sha256": "6b30cffe89874ca38d4129cc306c4b58f9402a75df9fb30a8b2342539423e22b",
+   "kind": "figure",
+   "note": "Figure 1 (webp) from the Europe PMC supplementaryFiles container, inspected at native resolution after a viewing-only conversion to PNG by ImageMagick convert (the declared artefact is the unchanged webp).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13605664/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID42794294/children-13-01274-g002.webp",
+   "sha256": "3c968e2abd2c70121633a324fac095be13575cf9a7f664068e69e98a29bd8311",
+   "kind": "figure",
+   "note": "Figure 2 (webp) from the Europe PMC supplementaryFiles container, inspected at native resolution after a viewing-only conversion to PNG by ImageMagick convert (the declared artefact is the unchanged webp).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13605664/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID42794294/children-13-01274-g003.webp",
+   "sha256": "0b64625032223493db17cd1b65b3875a6735a503a0a0ededcd83ab8df555244f",
+   "kind": "figure",
+   "note": "Figure 3 (webp) from the Europe PMC supplementaryFiles container, inspected at native resolution after a viewing-only conversion to PNG by ImageMagick convert (the declared artefact is the unchanged webp).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13605664/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13605664/fullTextXML returned HTTP 200 (215541 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "Registration: the review was registered as an undergraduate thesis, not in PROSPERO.",
+    "snippet": "It was registered at the University of Granada as an undergraduate thesis, not in the international registry for systematic reviews, PROSPERO.",
+    "anchor": "2. Methods, opening paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42794294_Fitz2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative-systematic review of human infant and child iron supplementation trials and cohorts (15 reports)",
+     "endpoint": "neurodevelopmental scales; iron status"
+    }
+   },
+   {
+    "proposition": "Methods state the database search ran from December 2025 to April 2026.",
+    "snippet": "The exploration of the six databases was carried out during the period between December 2025 and April 2026.",
+    "anchor": "2.4 Publication Period",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42794294_Fitz2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative-systematic review of human infant and child iron supplementation trials and cohorts (15 reports)",
+     "endpoint": "neurodevelopmental scales; iron status"
+    }
+   },
+   {
+    "proposition": "Methods 2.1 says older publications were considered when relevant; Methods 2.4 says no discretionary inclusion of older publications was permitted (two statements, one section apart).",
+    "snippet": "Older publications were considered when they provided relevant evidence that remained applicable.",
+    "anchor": "2.1 Search Strategy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42794294_Fitz2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative-systematic review of human infant and child iron supplementation trials and cohorts (15 reports)",
+     "endpoint": "neurodevelopmental scales; iron status"
+    }
+   },
+   {
+    "proposition": "Methods 2.4, the counterpart of the previous entry.",
+    "snippet": "No discretionary inclusion of older publications based on their perceived scientific or clinical relevance was permitted.",
+    "anchor": "2.4 Publication Period",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42794294_Fitz2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative-systematic review of human infant and child iron supplementation trials and cohorts (15 reports)",
+     "endpoint": "neurodevelopmental scales; iron status"
+    }
+   },
+   {
+    "proposition": "Methods list the 255 full-text exclusions as design 98, maternal-only 36, age range 21, multinutrient 74, comorbidities 11, no outcomes 15.",
+    "snippet": "inappropriate study design (n = 98), maternal-only interventions (n = 36), participants outside the target age range (n = 21), multinutrient supplementation or other ineligible interventions (n = 74), severe systemic comorbidities that could confound the effects of IS (n = 11), or failure to report relevant neurodevelopmental outcomes (n = 15)",
+    "anchor": "2.3 Study Selection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42794294_Fitz2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative-systematic review of human infant and child iron supplementation trials and cohorts (15 reports)",
+     "endpoint": "neurodevelopmental scales; iron status"
+    }
+   },
+   {
+    "proposition": "Results: 15 studies of which 8 are randomized trials, summing to 7840 children (the sum of the Table 2 sample sizes, which includes a 412-child neurocognitive subsample of a 3300-child trial that is also a row).",
+    "snippet": "which together offer a considerable sample of 7840 young children",
+    "anchor": "3. Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42794294_Fitz2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative-systematic review of human infant and child iron supplementation trials and cohorts (15 reports)",
+     "endpoint": "neurodevelopmental scales; iron status"
+    }
+   },
+   {
+    "proposition": "Table 2 lists a 3300-infant Bangladesh trial.",
+    "snippet": "Pasricha et al. [81]- n = 3300 infants (7.5 and 8.5 months)",
+    "anchor": "Table 2, row Pasricha",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42794294_Fitz2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative-systematic review of human infant and child iron supplementation trials and cohorts (15 reports)",
+     "endpoint": "neurodevelopmental scales; iron status"
+    }
+   },
+   {
+    "proposition": "Table 2 lists a 412-child subsample of the BRISC trial as a separate row, so the 7840 total counts those children twice.",
+    "snippet": "Subsample of 412 children (3rd month of study) and 374 (12th month) from the BRISC trial",
+    "anchor": "Table 2, row Larson",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42794294_Fitz2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative-systematic review of human infant and child iron supplementation trials and cohorts (15 reports)",
+     "endpoint": "neurodevelopmental scales; iron status"
+    }
+   },
+   {
+    "proposition": "Three Table 2 rows come from the Chilean infant-formula cohort lineage, with three different original cohort sizes (835, 1657, 1010) and no statement of overlap.",
+    "snippet": "East et al. [84]- n = 443 young adults (mean age 21 years)- Original cohort: 1657 healthy infants (6–12 months)",
+    "anchor": "Table 2, row East [84]",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42794294_Fitz2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative-systematic review of human infant and child iron supplementation trials and cohorts (15 reports)",
+     "endpoint": "neurodevelopmental scales; iron status"
+    }
+   },
+   {
+    "proposition": "Second of the three Chilean rows.",
+    "snippet": "Gahagan et al. [78]- n = 405 adolescents- Original cohort = 835 healthy infants",
+    "anchor": "Table 2, row Gahagan",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42794294_Fitz2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative-systematic review of human infant and child iron supplementation trials and cohorts (15 reports)",
+     "endpoint": "neurodevelopmental scales; iron status"
+    }
+   },
+   {
+    "proposition": "Third of the three Chilean rows.",
+    "snippet": "East et al. [87]- n = 562 adolescents (mean age 16 years)- Initial cohort: 1010 healthy, non-anemic infants",
+    "anchor": "Table 2, row East [87]",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42794294_Fitz2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative-systematic review of human infant and child iron supplementation trials and cohorts (15 reports)",
+     "endpoint": "neurodevelopmental scales; iron status"
+    }
+   },
+   {
+    "proposition": "Table 2: the preterm DTI study (n = 63) had no untreated comparison arm; groups were defined by baseline anaemia and ferritin, all on iron.",
+    "snippet": "Li et al. [82]- n = 63 premature infants (28–36 weeks of gestation)",
+    "anchor": "Table 2, row Li",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42794294_Fitz2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative-systematic review of human infant and child iron supplementation trials and cohorts (15 reports)",
+     "endpoint": "neurodevelopmental scales; iron status"
+    }
+   },
+   {
+    "proposition": "Table 2: in the same study there was no difference in motor scores between groups at 6 months.",
+    "snippet": "At 6 months: there were no significant differences in PDMS-2 scores between groups.",
+    "anchor": "Table 2, row Li, neurodevelopmental outcomes",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42794294_Fitz2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative-systematic review of human infant and child iron supplementation trials and cohorts (15 reports)",
+     "endpoint": "neurodevelopmental scales; iron status"
+    }
+   },
+   {
+    "proposition": "Discussion states that the white-matter and connectivity alteration 'appeared reversible' with iron, and that iron deficiency causes hypomyelination, going beyond the table's connectivity and motor scores.",
+    "snippet": "This alteration appeared reversible through administration of 2 mg/kg/day of iron beginning at 40 weeks of corrected age",
+    "anchor": "4.1 Heterogeneity of Findings",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42794294_Fitz2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative-systematic review of human infant and child iron supplementation trials and cohorts (15 reports)",
+     "endpoint": "neurodevelopmental scales; iron status"
+    }
+   },
+   {
+    "proposition": "Discussion says late-preterm and low-birth-weight infants consistently derived the greatest benefit; Table 2 shows Berglund (low birth weight) no IQ or executive-function difference at 7 years and Li no motor difference at 6 months.",
+    "snippet": "Among all populations included in this review, late-preterm infants and infants with low birth weight consistently derived the greatest neurodevelopmental benefit from IS.",
+    "anchor": "4.1 Heterogeneity of Findings",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42794294_Fitz2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative-systematic review of human infant and child iron supplementation trials and cohorts (15 reports)",
+     "endpoint": "neurodevelopmental scales; iron status"
+    }
+   },
+   {
+    "proposition": "Table 2 Berglund row: no IQ or executive-function differences at age 7.",
+    "snippet": "At age 7: No differences in IQ (WISC-IV) or executive functions (FTF)",
+    "anchor": "Table 2, row Berglund",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42794294_Fitz2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative-systematic review of human infant and child iron supplementation trials and cohorts (15 reports)",
+     "endpoint": "neurodevelopmental scales; iron status"
+    }
+   },
+   {
+    "proposition": "The negative dose-response for educational attainment rests on one coefficient (beta -0.13, p = 0.048) from the Chilean cohort, among many outcomes; the review cites two references for it.",
+    "snippet": "lower educational attainment at 21 years of age (β = −0.13, p = 0.048) [78,84]",
+    "anchor": "4.2 The Iron Paradox",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42794294_Fitz2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative-systematic review of human infant and child iron supplementation trials and cohorts (15 reports)",
+     "endpoint": "neurodevelopmental scales; iron status"
+    }
+   },
+   {
+    "proposition": "The U-shaped risk curve is called a suggestion from apparent inconsistency among findings.",
+    "snippet": "The apparent inconsistency among these findings suggests the existence of a U-shaped risk curve",
+    "anchor": "4. Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42794294_Fitz2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative-systematic review of human infant and child iron supplementation trials and cohorts (15 reports)",
+     "endpoint": "neurodevelopmental scales; iron status"
+    }
+   },
+   {
+    "proposition": "Citation mismatch: SIBDI is reference 88 in 4.1 and Table 2 but reference 77 in 4.5 (where 77 is the Swedish low-birth-weight trial in Table 2).",
+    "snippet": "including the SIBDI trial in Poland and Sweden [77]",
+    "anchor": "4.5 Public Health Implications",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42794294_Fitz2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative-systematic review of human infant and child iron supplementation trials and cohorts (15 reports)",
+     "endpoint": "neurodevelopmental scales; iron status"
+    }
+   },
+   {
+    "proposition": "Systemic versus cerebral iron: the review states infants may have normal haemoglobin despite cerebral iron deficiency, citing two references that are trials and not brain-iron measurements.",
+    "snippet": "infants may present with normal circulating hemoglobin concentrations despite substantial cerebral ID",
+    "anchor": "4.4 Limitations of Traditional Biomarkers",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42794294_Fitz2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative-systematic review of human infant and child iron supplementation trials and cohorts (15 reports)",
+     "endpoint": "neurodevelopmental scales; iron status"
+    }
+   },
+   {
+    "proposition": "Conclusion: clear benefit only in infants at increased biological risk; no support for routine supplementation in healthy term infants with adequate stores.",
+    "snippet": "IS provides clear neurodevelopmental benefits in infants at increased biological risk",
+    "anchor": "8. Conclusions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42794294_Fitz2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative-systematic review of human infant and child iron supplementation trials and cohorts (15 reports)",
+     "endpoint": "neurodevelopmental scales; iron status"
+    }
+   },
+   {
+    "proposition": "Strengths and limitations: few high-quality randomized trials in healthy infants.",
+    "snippet": "The number of high-quality randomized controlled trials specifically evaluating prophylactic oral IS in healthy infants remains limited.",
+    "anchor": "5. Strengths and Limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42794294_Fitz2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative-systematic review of human infant and child iron supplementation trials and cohorts (15 reports)",
+     "endpoint": "neurodevelopmental scales; iron status"
+    }
+   },
+   {
+    "proposition": "Figure 3 (PRISMA flow) states 'Date of last search: 15 May 2025' and 'No limits applied to language or publication status', against Methods 2.4 (search December 2025 to April 2026, a 10-year publication window). The image is supplied at 1600 x 1045 px and read at that size.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3 PRISMA 2020 flow: 884 identified, 182 duplicates, 702 screened, 432 excluded, 270 assessed, 255 excluded, 15 included; identification box reads 'Date of last search: 15 May 2025. No limits applied to language or publication status.'",
+    "anchor": "Figure 3, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42794294/children-13-01274-g003.webp",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "narrative-systematic review of human infant and child iron supplementation trials and cohorts (15 reports)",
+     "endpoint": "neurodevelopmental scales; iron status"
+    },
+    "contradicts": "entries[1]",
+    "contradicts_needle": "between December 2025 and April 2026"
+   },
+   {
+    "proposition": "Figure 3 breaks the 255 full-text exclusions into different categories (wrong population 102, wrong intervention 58, wrong outcome 36, wrong design 24, reviews/editorials/protocols 18, animal or in vitro 11, insufficient data 4, duplicate publication 2) from Methods 2.3 (design 98, maternal-only 36, age 21, multinutrient 74, comorbidities 11, no outcomes 15); both total 255 and cannot be the same tally.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3 exclusion list: Wrong population 102; Wrong intervention/exposure 58; Wrong outcome 36; Wrong study design 24; Reviews, editorials, letters, protocols 18; Animal or in vitro 11; Insufficient data 4; Duplicate publication 2; Other 0.",
+    "anchor": "Figure 3, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42794294/children-13-01274-g003.webp",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "narrative-systematic review of human infant and child iron supplementation trials and cohorts (15 reports)",
+     "endpoint": "neurodevelopmental scales; iron status"
+    },
+    "contradicts": "entries[4]",
+    "contradicts_needle": "inappropriate study design (n = 98)"
+   },
+   {
+    "proposition": "Figure 1 is an illustration of oligodendrocyte iron metabolism (uptake via transferrin receptor and DMT1, labile iron pool, ferritin storage, mitochondrial use, ferroportin export, IRP/IRE and hepcidin control) with a box 'Why iron is critical in oligodendrocytes' and a credit to an illustration tool at the lower right; no data and no WWOX.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 six numbered modules around an oligodendrocyte and myelinated axon; credit 'Created with LUNA Scientific Illustration'.",
+    "anchor": "Figure 1, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42794294/children-13-01274-g001.webp",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative-systematic review of human infant and child iron supplementation trials and cohorts (15 reports)",
+     "endpoint": "neurodevelopmental scales; iron status"
+    }
+   },
+   {
+    "proposition": "Figure 2 is a schematic of neurodevelopment from prenatal life to adolescence (neurogenesis, synaptogenesis peak in infancy, myelination from infancy to adolescence), adapted from a cited developmental review; no data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 five age panels Prenatal, Infancy, Early Childhood, Middle Childhood, Adolescence with bullet lists and key-process legend; credit 'Created with LUNA'.",
+    "anchor": "Figure 2, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42794294/children-13-01274-g002.webp",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative-systematic review of human infant and child iron supplementation trials and cohorts (15 reports)",
+     "endpoint": "neurodevelopmental scales; iron status"
+    }
+   }
+  ]
+ }
+}

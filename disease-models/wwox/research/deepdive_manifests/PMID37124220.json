@@ -1,0 +1,248 @@
+{
+ "schema_version": 2,
+ "pmid": "37124220",
+ "doi": "10.3389/fphar.2023.1185071",
+ "receipt": "FTR-20261019-37124220-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID37124220.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "A Hebei-based review group (byline only); the cited primary work (Mao, Jin and colleagues) is from the same laboratory family, so the review partly summarises its own group's rodent studies. Primary for ferroptosis-in-epilepsy rodent pharmacology; not a WWOX or DEE group."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "ferroptosis AND epilepsy",
+    "count": 157,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (iron OR ferroptosis)",
+    "count": 3,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts at the stated date."
+ },
+ "multihop": {
+  "references_enumerated": 92,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 37124220 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 37124220: publication types ['Journal Article', 'Review']; correction/retraction link markers in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 92,
+   "references_screened": 91,
+   "references_with_doi": 91,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID37124220_Jin2023_PMC.xml",
+   "sha256": "372be24ccdf1a37a637c5750569b28d2fb9750a1713343d06e558ee64b7134ee",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC10133701: abstract, body, Table 1 (JATS), two figure legends, 92 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10133701/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID37124220/fphar-14-1185071-g001.jpg",
+   "sha256": "5a520e280b15a266ece22808de5698435d69344f26b3bc415c8c6183cd82a642",
+   "kind": "figure",
+   "note": "Image g001 (Figure 1, core mechanisms of ferroptosis) from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10133701/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID37124220/fphar-14-1185071-g002.jpg",
+   "sha256": "2a2509282cb5e8498b62ac94fe8d8257789d3d7fbb3f7a69d5dee26275172c8e",
+   "kind": "figure",
+   "note": "Image g002 (Figure 2, pharmacological inhibition of ferroptosis in epilepsy) from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10133701/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC10133701/fullTextXML returned HTTP 200 (141737 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "The review dates the epilepsy-ferroptosis link to a single kainic acid rat study and states the field is at an initial stage.",
+    "snippet": "Since the first study to report that ferroptosis was involved in seizure-induced cell death in rats and the associated cognitive comorbidities of kainic acid (KA)-induced temporal lobe epilepsy (Ye et al., 2019)",
+    "anchor": "1 Introduction, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37124220_Jin2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The only human data point cited in the body: haematological findings in children with epilepsy (raised 4-HNE and NOX2, depleted GSH, inactivated GPX4); a cited result, no cohort detail in this review.",
+    "snippet": "Previous indications that ferroptosis is involved in epilepsy were substantiated by hematological findings in children with epilepsy, which showed a consistent increase in 4-hydroxynonenal (4-HNE) and NAPDH oxidase 2 (NOX2), depletion of GSH, and inactivation of GPX4 (Petrillo et al., 2021).",
+    "anchor": "3.1 The role of ferroptosis in epilepsy-associated neuronal death",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37124220_Jin2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Ferroptosis in a mitochondrial-disease epilepsy context: EPI-743 reduced lipid peroxidation in cells from patients with five distinct paediatric epilepsy syndromes (a cited cell study).",
+    "snippet": "Another report demonstrated the role of ferroptosis in the pathogenesis of mitochondrial disease-associated epilepsies and found that α-tocotrienol quinone (EPI-743) potently dose-dependently ameliorated ferroptosis in the cells of patient of five distinct pediatric epilepsy syndromes by reducing LPO and 15-hydroxyeicosatetraenoic acid (15-HETE), a specific 15-LO product (Kahn-Kirby et al., 2019).",
+    "anchor": "4 Pharmacological inhibition of ferroptosis to treat epilepsy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37124220_Jin2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Astrocyte route: A1 astrocytes were reported to induce neuronal ferroptosis through CXCL10/CXCR3 in PTZ-kindled mice (cited result).",
+    "snippet": "A recent study revealed a correlation between astrocytic activation and neuronal ferroptosis in C57BL/6J male mice models of PTZ kindling-induced epileptic seizures and showed that A1 astrocytes induce ferroptosis via the chemokine receptor CXCL10/CXCR3 axis in epilepsy (Liang et al., 2023).",
+    "anchor": "3.2 The role of astrocyte activation-induced neuronal ferroptosis in epilepsy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37124220_Jin2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Iron is described as a requirement for myelination and brain iron enters through transferrin/TfR1 at brain microvascular endothelium; iron handling is thus linked to the blood-brain barrier in the review's mechanism section.",
+    "snippet": "As an essential redox-active metal for neuronal activity and normal physiological function, iron plays a vital role in energy metabolism, biosynthesis, neurotransmission, and myelination (Crichton et al., 2011).",
+    "anchor": "2.2 Iron homeostasis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37124220_Jin2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The conclusion names oligodendrocyte, astrocyte and microglial involvement in ferroptosis as undetermined.",
+    "snippet": "Third, although neuron-glia interactions have a clear role in the pathophysiology of epilepsy, whether other cells, such as oligodendrocytes, astrocytes, and microglia, are involved in modulating ferroptosis has yet to be determined.",
+    "anchor": "5 Conclusions and perspectives",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37124220_Jin2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The conclusion calls ferrostatin an iron chelator causing systemic iron deprivation, while Table 1 lists ferrostatin-1 under GPX4 and P38 MAPK modes of action; the review does not reconcile the two statements.",
+    "snippet": "However, the potential drawbacks or limitations of the proposed pharmacological interventions such as ferrostatin as iron chelator causing systemic iron deprivation and thew role of multidrug resistance transporter P-glycoproteins that limit drug efficacy is uncertain",
+    "anchor": "5 Conclusions and perspectives",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37124220_Jin2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 1 models are chemically or traumatically induced seizures in mice and rats, or cell-line stress (glutamate, erastin, ferric ammonium citrate); the epilepsy-type column lists temporal lobe, posttraumatic and generalized clonic-tonic types, none genetic.",
+    "snippet": "Epilepsy typeFindingsMode of actionReferencesQuercetinKainic acid/Male C57BL/6J miceTemporal lobe epilepsy",
+    "anchor": "Table 1",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID37124220_Jin2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 shows the core ferroptosis machinery in three modules (GPX4 pathway incl. SLC7A11, iron metabolism incl. transferrin/TfR1/DMT1/FPN1/ferritin and the labile iron pool, lipid metabolism incl. ACSL4/LPCAT3), with antiferroptotic proteins orange and proferroptotic blue; no WWOX or disease gene is drawn.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 pathway scheme: GPX4/GSH/SLC7A11, iron import and export with the labile iron pool, PUFA-CoA to PL-PUFA-OOH to ferroptosis; orange = antiferroptotic, blue = proferroptotic.",
+    "anchor": "Figure 1, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID37124220/fphar-14-1185071-g001.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative review schematic (no data); mixed cell-line and rodent literature"
+    }
+   },
+   {
+    "proposition": "Figure 2 maps each compound onto a node of the same scheme (ferrostatin-1, lapatinib, apigenin, baicalein, quercetin, seratrodast, vitamin E at GPX4; ferrostatin-1 and vitamin B6 at FPN1) and ends in 'epilepsy'; the vitamin B6 attribution is not stated in the text or Table 1 of the review.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 the same scheme with compound boxes attached at SLC7A11, SIRT1/Nrf2, GSH, GPX4, FPN1, ACSL4 and ALOXs, ending in ferroptosis then epilepsy.",
+    "anchor": "Figure 2, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID37124220/fphar-14-1185071-g002.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative review schematic (no data); mixed cell-line and rodent literature"
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,613 @@
+{
+ "schema_version": 2,
+ "pmid": "41293173",
+ "doi": "10.3389/fimmu.2025.1683941",
+ "receipt": "FTR-20261019-41293173-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID41293173.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A Spanish haematology group (hospital and biomedical-research institute affiliations, single centre); primary for their own MDS patient material, not for iron biology in brain or WWOX. The cohort was enrolled 2009-2011 and published 2025; the design is a mechanistic, hypothesis-generating pre/post study by the authors' own description."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "deferasirox AND myelodysplastic syndromes AND oxidative stress",
+    "count": 18,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (iron OR ferroptosis)",
+    "count": 3,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts at the stated date."
+ },
+ "multihop": {
+  "references_enumerated": 39,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41293173 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 41293173: publication types ['Journal Article']; correction/retraction link markers in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 39,
+   "references_screened": 36,
+   "references_with_doi": 36,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41293173_GarciaDelgado2025_PMC.xml",
+   "sha256": "7ba34e2dfd38b23484f6f48b763da48cc015db86d2f0df2c05cb2fab1d3a8734",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC12640865: abstract, body, Table 1 (JATS), five figure legends with generated alt text, references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12640865/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41293173/fimmu-16-1683941-g001.jpg",
+   "sha256": "0647c97c2a6a0f8f4ae1250994af494bd74d66a5123931630d9d4e1e48aa6f68",
+   "kind": "figure",
+   "note": "Figure 1 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12640865/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41293173/fimmu-16-1683941-g002.jpg",
+   "sha256": "e384b6617ca3b9d5736c28be42b0ccfd912c8045ff74a10f478bf91f4c6357b1",
+   "kind": "figure",
+   "note": "Figure 2 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12640865/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41293173/fimmu-16-1683941-g003.jpg",
+   "sha256": "8b44db014007c94c8c0b2411e6bd8ea9f43036cfceaf9f99f293f22833d7e47f",
+   "kind": "figure",
+   "note": "Figure 3 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12640865/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41293173/fimmu-16-1683941-g004.jpg",
+   "sha256": "eb27deeda3242dfaa8d669778d5834a3c238c2d069b811454f75401657a5dcc0",
+   "kind": "figure",
+   "note": "Figure 4 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12640865/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41293173/fimmu-16-1683941-g005.jpg",
+   "sha256": "d9712143a94554c049735805ab3f3226d75a47281ae26139eacd4ea6d0b287ec",
+   "kind": "figure",
+   "note": "Figure 5 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12640865/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41293173/SupplementaryFile1.docx",
+   "sha256": "92d2bd03b1e40367b6c19f45e95f08c54a801af75e797193f1c3a5b464f633ed",
+   "kind": "supplement_binary",
+   "note": "Supplementary Word file 1 from the Europe PMC supplementaryFiles container; text reached through the derived text layer declared below.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12640865/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41293173/SupplementaryFile2.docx",
+   "sha256": "c62234c0f7d5642aae8a9d2799314fdc74fa5712a3f89002121174f405af73cc",
+   "kind": "supplement_binary",
+   "note": "Supplementary Word file 2 from the Europe PMC supplementaryFiles container; text reached through the derived text layer declared below.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12640865/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41293173/SupplementaryFile3.docx",
+   "sha256": "2a5011c3179c232c6bfd328503d7a04da9f8bace7c10ecdd35549238f5cbb437",
+   "kind": "supplement_binary",
+   "note": "Supplementary Word file 3 from the Europe PMC supplementaryFiles container; text reached through the derived text layer declared below.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12640865/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41293173_GarciaDelgado2025_supplement/SupplementaryFile1_FigS1_legend.txt",
+   "sha256": "07116e71a5ae023372549fc7fa8e915db9c96fb46e8b1e117062f614d2c588a3",
+   "kind": "supplement_text",
+   "note": "DERIVED text of SupplementaryFile1.docx (table rows as ' | ' lines); the embedded images, if any, were not extracted.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_python_zipfile_docx_text",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "07116e71a5ae023372549fc7fa8e915db9c96fb46e8b1e117062f614d2c588a3",
+    "derived_from": "files/figures/PMID41293173/SupplementaryFile1.docx",
+    "extractor": {
+     "name": "docx2txt.py (python zipfile + regex over word/document.xml; table rows joined with ' | ')",
+     "version": "python 3.12",
+     "call": "python3 docx2txt.py SupplementaryFile1.docx <out>"
+    }
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41293173_GarciaDelgado2025_supplement/SupplementaryFile2_TableS1_adjusted_p.txt",
+   "sha256": "c1dac82578877877169df388a6f34aca259725f6ce4bebae9f250df33e1a8048",
+   "kind": "supplement_text",
+   "note": "DERIVED text of SupplementaryFile2.docx (table rows as ' | ' lines); the embedded images, if any, were not extracted.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_python_zipfile_docx_text",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "c1dac82578877877169df388a6f34aca259725f6ce4bebae9f250df33e1a8048",
+    "derived_from": "files/figures/PMID41293173/SupplementaryFile2.docx",
+    "extractor": {
+     "name": "docx2txt.py (python zipfile + regex over word/document.xml; table rows joined with ' | ')",
+     "version": "python 3.12",
+     "call": "python3 docx2txt.py SupplementaryFile2.docx <out>"
+    }
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41293173_GarciaDelgado2025_supplement/SupplementaryFile3_summary_table.txt",
+   "sha256": "ed9dcb3c7f635ab56e9f68d6eee29536592f23f3c3b1b66c0495c2f438601aa3",
+   "kind": "supplement_text",
+   "note": "DERIVED text of SupplementaryFile3.docx (table rows as ' | ' lines); the embedded images, if any, were not extracted.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_python_zipfile_docx_text",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": true,
+    "result_sha256": "ed9dcb3c7f635ab56e9f68d6eee29536592f23f3c3b1b66c0495c2f438601aa3",
+    "derived_from": "files/figures/PMID41293173/SupplementaryFile3.docx",
+    "extractor": {
+     "name": "docx2txt.py (python zipfile + regex over word/document.xml; table rows joined with ' | ')",
+     "version": "python 3.12",
+     "call": "python3 docx2txt.py SupplementaryFile3.docx <out>"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID41293173/DataSheet1.pdf",
+   "sha256": "4a2dabead0ce85d106243bfafc849e73b42d4850c5b7c8c371f6c5c4bce46a1a",
+   "kind": "supplement_binary",
+   "note": "Cytometry reporting checklist PDF from the supplementaryFiles container; first page read, not analysed further.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12640865/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12640865/fullTextXML returned HTTP 200 (102866 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "Cohort and design: 23 transfusion-dependent low-risk MDS patients with ferritin above 1000 and at least 20 red-cell units in the previous year, analysed pre/post oral deferasirox, no concurrent immunomodulatory or hypomethylating treatment.",
+    "snippet": "Patients meeting the required standards were chosen based on a set of strict criteria, which included: (i) a diagnosis of low-risk MDS, (ii) baseline serum ferritin levels >1000 ng/mL, (iii) a history of having received 20 or more RBC units in the preceding year, (iv) treatment with deferasirox for at least six months, and (v) the absence of active infections, autoimmune disorders, or concurrent treatment with immunomodulatory or hypomethylating agents.",
+    "anchor": "Materials and methods, Study design and patient selection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41293173_GarciaDelgado2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human peripheral blood leukocytes by flow cytometry, transfusion-dependent low-risk MDS, deferasirox pre/post",
+     "genotype": "MDS (not genotype-defined)",
+     "comparator": "own pre-treatment sample; healthy controls shown only for endothelial cells in Figure 2"
+    }
+   },
+   {
+    "proposition": "Transfusion burden was not recorded; the transfusion exposure is inferred from the inclusion threshold only.",
+    "snippet": "The study did not specifically record transfusion burden data, but all patients had received 20 or more red blood cell units in the year before being included, thus meeting the threshold for significant clinical iron overload.",
+    "anchor": "Results, Reduction of iron overload",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41293173_GarciaDelgado2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human peripheral blood leukocytes by flow cytometry, transfusion-dependent low-risk MDS, deferasirox pre/post",
+     "genotype": "MDS (not genotype-defined)",
+     "comparator": "own pre-treatment sample; healthy controls shown only for endothelial cells in Figure 2"
+    }
+   },
+   {
+    "proposition": "Table 1 lists mean haemoglobin 7.72 g/dL at baseline and an IPSS-R split of 7 low and 16 'Intermediate I', although inclusion was 'low-risk MDS'.",
+    "snippet": "Hemoglobin (g/dL), mean (range)7.72 (6.3 – 8.7)",
+    "anchor": "Table 1",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41293173_GarciaDelgado2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human peripheral blood leukocytes by flow cytometry, transfusion-dependent low-risk MDS, deferasirox pre/post",
+     "genotype": "MDS (not genotype-defined)",
+     "comparator": "own pre-treatment sample; healthy controls shown only for endothelial cells in Figure 2"
+    }
+   },
+   {
+    "proposition": "Statistics: exploratory; no multiplicity correction applied in the main analysis; significance threshold p below 0.001.",
+    "snippet": "No correction for multiple testing was applied due to the exploratory nature of the study. A p-value <0.001 was considered statistically significant.",
+    "anchor": "Materials and methods, Statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41293173_GarciaDelgado2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human peripheral blood leukocytes by flow cytometry, transfusion-dependent low-risk MDS, deferasirox pre/post",
+     "genotype": "MDS (not genotype-defined)",
+     "comparator": "own pre-treatment sample; healthy controls shown only for endothelial cells in Figure 2"
+    }
+   },
+   {
+    "proposition": "Treatment duration stated in Methods as median nine months (range 6 to 11); the abstract states about six months (median).",
+    "snippet": "The median length of treatment was nine months, ranging from 6 to 11 months.",
+    "anchor": "Materials and methods, Therapeutic intervention",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41293173_GarciaDelgado2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human peripheral blood leukocytes by flow cytometry, transfusion-dependent low-risk MDS, deferasirox pre/post",
+     "genotype": "MDS (not genotype-defined)",
+     "comparator": "own pre-treatment sample; healthy controls shown only for endothelial cells in Figure 2"
+    }
+   },
+   {
+    "proposition": "Ferritin fell from 2090.87 to 946.39 ng/mL (about 55 percent); the post-treatment SEM (14.51) is one tenth of the baseline SEM (148.38) in the same 23 patients.",
+    "snippet": "A statistically significant reduction in serum ferritin was observed after chelation therapy, with mean post-treatment levels dropping to 946.39 ± 14.51 ng/mL (p<0.0001).",
+    "anchor": "Results, Reduction of iron overload",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41293173_GarciaDelgado2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human peripheral blood leukocytes by flow cytometry, transfusion-dependent low-risk MDS, deferasirox pre/post",
+     "genotype": "MDS (not genotype-defined)",
+     "comparator": "own pre-treatment sample; healthy controls shown only for endothelial cells in Figure 2"
+    }
+   },
+   {
+    "proposition": "Deferasirox effects 'beyond iron removal' are named by the authors, so chelation cannot be read as iron removal alone.",
+    "snippet": "Nevertheless, accumulating data suggest that chelation may exert pleiotropic biological effects, including anti-inflammatory, antioxidant, and anti-clonal properties, beyond iron removal.",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41293173_GarciaDelgado2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human peripheral blood leukocytes by flow cytometry, transfusion-dependent low-risk MDS, deferasirox pre/post",
+     "genotype": "MDS (not genotype-defined)",
+     "comparator": "own pre-treatment sample; healthy controls shown only for endothelial cells in Figure 2"
+    }
+   },
+   {
+    "proposition": "Mitochondrial readout is Rhodamine-123 fluorescence in leukocytes as a surrogate for membrane potential, rising from 15.58 to 39.84 MFI.",
+    "snippet": "Following chelation, leukocytes exhibited a significant increase in membrane potential MFI (15.58 ± 0.84 vs. 39.84 ± 1.42 MFI; p < 0.0001), indicative of improved mitochondrial function (Figure 3D; Supplementary Figures S1A, F).",
+    "anchor": "Results, Iron chelation and mitochondrial function",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41293173_GarciaDelgado2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human peripheral blood leukocytes by flow cytometry, transfusion-dependent low-risk MDS, deferasirox pre/post",
+     "genotype": "MDS (not genotype-defined)",
+     "comparator": "own pre-treatment sample; healthy controls shown only for endothelial cells in Figure 2"
+    }
+   },
+   {
+    "proposition": "The ROS sentence is worded as 'Pre-treatment ROS levels were markedly reduced' while the numbers show a fall after treatment (185.08 to 49.31); the text direction is inverted.",
+    "snippet": "Pre-treatment ROS levels were markedly reduced, specifically, hydrogen peroxide (H2O2, 185.08 ± 10.19 vs. 49.31 ± 4.36 MFI, as well as superoxide (O2-, 47.43 ± 2.79 vs. 14.87 ± 0.92 MFI; both p < 0.0001; Figure 3B).",
+    "anchor": "Results, Iron chelation and mitochondrial function",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41293173_GarciaDelgado2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human peripheral blood leukocytes by flow cytometry, transfusion-dependent low-risk MDS, deferasirox pre/post",
+     "genotype": "MDS (not genotype-defined)",
+     "comparator": "own pre-treatment sample; healthy controls shown only for endothelial cells in Figure 2"
+    }
+   },
+   {
+    "proposition": "Haematological parameters including haemoglobin did not change with chelation, and no correlation with the biological endpoints was found.",
+    "snippet": "No significant changes were observed in classical hematological parameters, nor were any correlations found between these variables and the biological endpoints assessed, pointing to a predominantly immunomodulatory effect of iron chelation therapy.",
+    "anchor": "Results, Pro-inflammatory interleukins and clinical status",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41293173_GarciaDelgado2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human peripheral blood leukocytes by flow cytometry, transfusion-dependent low-risk MDS, deferasirox pre/post",
+     "genotype": "MDS (not genotype-defined)",
+     "comparator": "own pre-treatment sample; healthy controls shown only for endothelial cells in Figure 2"
+    }
+   },
+   {
+    "proposition": "IFN-gamma rose (37.22 to 64.52 MFI) while IL-1, IL-3, IL-6 and TNF-alpha fell; cytokines were measured intracellularly by flow MFI, not in plasma.",
+    "snippet": "Conversely, IFN-γ expression increased significantly after treatment (37.22 ± 0.81 to 64.52 ± 2.19 MFI; p < 0.0001).",
+    "anchor": "Results, Pro-inflammatory interleukins and clinical status",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41293173_GarciaDelgado2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human peripheral blood leukocytes by flow cytometry, transfusion-dependent low-risk MDS, deferasirox pre/post",
+     "genotype": "MDS (not genotype-defined)",
+     "comparator": "own pre-treatment sample; healthy controls shown only for endothelial cells in Figure 2"
+    }
+   },
+   {
+    "proposition": "Text: at baseline MDS patients had reduced circulating endothelial progenitor and endothelial cell levels, and post-treatment values surpassed healthy controls (EPCs 0.06, ECs 0.30).",
+    "snippet": "At baseline, MDS patients exhibited reduced EPC and EC levels, consistent with impaired endothelial turnover.",
+    "anchor": "Results, Effect on endothelial progenitor cells",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41293173_GarciaDelgado2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human peripheral blood leukocytes by flow cytometry, transfusion-dependent low-risk MDS, deferasirox pre/post",
+     "genotype": "MDS (not genotype-defined)",
+     "comparator": "own pre-treatment sample; healthy controls shown only for endothelial cells in Figure 2"
+    }
+   },
+   {
+    "proposition": "Text gives the healthy-control endothelial cell value as 0.30 plus or minus 0.078 and the EPC value as 0.06 plus or minus 0.004.",
+    "snippet": "Importantly, post-treatment values for both EPCs and ECs not only recovered but surpassed those observed in healthy controls (EPCs: 0.06 ± 0.004; ECs: 0.30 ± 0.078; Figure 2).",
+    "anchor": "Results, Effect on endothelial progenitor cells",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41293173_GarciaDelgado2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human peripheral blood leukocytes by flow cytometry, transfusion-dependent low-risk MDS, deferasirox pre/post",
+     "genotype": "MDS (not genotype-defined)",
+     "comparator": "own pre-treatment sample; healthy controls shown only for endothelial cells in Figure 2"
+    }
+   },
+   {
+    "proposition": "Authors' own limitations: no comparator group (specificity not assessable), no clinical outcomes, no prespecified primary biomarker, cytokines by MFI not absolute plasma measurement.",
+    "snippet": "First, although the internal consistency of the biological signals observed is strong, the absence of a comparator group—such as patients receiving alternative iron chelators or no chelation—precludes conclusions about specificity.",
+    "anchor": "Discussion, Limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41293173_GarciaDelgado2025_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human peripheral blood leukocytes by flow cytometry, transfusion-dependent low-risk MDS, deferasirox pre/post",
+     "genotype": "MDS (not genotype-defined)",
+     "comparator": "own pre-treatment sample; healthy controls shown only for endothelial cells in Figure 2"
+    }
+   },
+   {
+    "proposition": "Supplementary Table S1 reports Benjamini-Hochberg q-values and Holm p-values as graded ladders (0.000556 up to 0.01, and 0.0018 down to 0.0001) for outcomes that all carry the same input p of 0.0001.",
+    "snippet": "Serum Ferritin (ng/mL) | <0.0001 | 0.0001 | 0.000556 | 0.0018",
+    "anchor": "Supplementary Table S1, row 1 (derived text of SupplementaryFile2)",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID41293173_GarciaDelgado2025_supplement/SupplementaryFile2_TableS1_adjusted_p.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human peripheral blood leukocytes by flow cytometry, transfusion-dependent low-risk MDS, deferasirox pre/post",
+     "genotype": "MDS (not genotype-defined)",
+     "comparator": "own pre-treatment sample; healthy controls shown only for endothelial cells in Figure 2"
+    }
+   },
+   {
+    "proposition": "Last row of the same table: the q-value equals 0.01 and the Holm value 0.0001 for IFN-gamma, again with input p 0.0001.",
+    "snippet": "IFN-γ (MFI) | <0.0001 | 0.0001 | 0.01 | 0.0001",
+    "anchor": "Supplementary Table S1, last row (derived text of SupplementaryFile2)",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID41293173_GarciaDelgado2025_supplement/SupplementaryFile2_TableS1_adjusted_p.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human peripheral blood leukocytes by flow cytometry, transfusion-dependent low-risk MDS, deferasirox pre/post",
+     "genotype": "MDS (not genotype-defined)",
+     "comparator": "own pre-treatment sample; healthy controls shown only for endothelial cells in Figure 2"
+    }
+   },
+   {
+    "proposition": "Figure 2 contradicts the text on the baseline: the healthy-control box for EPCs (yellow, about 0.06) lies below the pre-treatment box (blue, median about 0.1, whisker to 0.3), so pre-treatment EPC is not reduced against the controls drawn in the same panel. The image is supplied at 649 by 397 pixels, so the box positions are read approximately, but the ordering is unambiguous.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 box plots, y axis 0 to 0.8 labelled MFI: EPC group yellow healthy ~0.06, blue pre ~0.1 median, orange post ~0.4 median; EC group yellow ~0.12, blue ~0.2, orange ~0.4, with two outliers above 0.7 in the blue EC box.",
+    "anchor": "Figure 2, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41293173/fimmu-16-1683941-g002.jpg",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "human peripheral blood leukocytes by flow cytometry, transfusion-dependent low-risk MDS, deferasirox pre/post",
+     "genotype": "MDS (not genotype-defined)",
+     "comparator": "own pre-treatment sample; healthy controls shown only for endothelial cells in Figure 2"
+    },
+    "contradicts": "entries[11]",
+    "contradicts_needle": "MDS patients exhibited reduced EPC and EC levels"
+   },
+   {
+    "proposition": "Figure 2 also does not match the healthy-control EC number in the text: the yellow EC box sits at about 0.1-0.15, whereas the text gives 0.30 plus or minus 0.078; the figure and the text cannot both be the same control group's mean.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 EC group yellow box about 0.1 to 0.15 on the 0-0.8 axis; text value 0.30.",
+    "anchor": "Figure 2, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41293173/fimmu-16-1683941-g002.jpg",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "human peripheral blood leukocytes by flow cytometry, transfusion-dependent low-risk MDS, deferasirox pre/post",
+     "genotype": "MDS (not genotype-defined)",
+     "comparator": "own pre-treatment sample; healthy controls shown only for endothelial cells in Figure 2"
+    },
+    "contradicts": "entries[12]",
+    "contradicts_needle": "ECs: 0.30"
+   },
+   {
+    "proposition": "Figure 3: box plots of leukocyte H2O2 (A), superoxide (B), glutathione (C) and Rhodamine-123 (D); post-treatment distributions are non-overlapping with pre-treatment for A, B and D, with a wide post-treatment glutathione range (about 170 to 850). The y axes are MFI, not cell counts.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3 four box plots pre (green) vs post (orange) with asterisk; C post box about 300-600, whisker to ~850.",
+    "anchor": "Figure 3, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41293173/fimmu-16-1683941-g003.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human peripheral blood leukocytes by flow cytometry, transfusion-dependent low-risk MDS, deferasirox pre/post",
+     "genotype": "MDS (not genotype-defined)",
+     "comparator": "own pre-treatment sample; healthy controls shown only for endothelial cells in Figure 2"
+    }
+   },
+   {
+    "proposition": "Figure 4: cytokine bars with very small error bars for IL-3, IL-6, TNF-alpha and IFN-gamma; IL-1 carries two asterisks (p = 0.0013) and IFN-gamma rises; the legend labels read in Spanish ('Antes', 'Despues').",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 4 bar chart IL-1 ~101 to ~87, IL-3 ~82 to ~26, IL-6 ~80 to ~34, TNF-alpha ~17.5 to ~8.7, IFN-gamma ~37 to ~64.",
+    "anchor": "Figure 4, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41293173/fimmu-16-1683941-g004.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human peripheral blood leukocytes by flow cytometry, transfusion-dependent low-risk MDS, deferasirox pre/post",
+     "genotype": "MDS (not genotype-defined)",
+     "comparator": "own pre-treatment sample; healthy controls shown only for endothelial cells in Figure 2"
+    }
+   },
+   {
+    "proposition": "Figure 1 shows five vascular markers and monocyte-platelet aggregates falling after chelation; panel B's y axis is labelled MFI for a percentage and the x label reads 'Trombocyte-Monocyte', while the text describes 'T cells and monocytes'.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 A bars AnnV, ICAM-1, VCAM-1, E-sel, P-sel pre vs post; B single bar pair for % T-M with y label MFI.",
+    "anchor": "Figure 1, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41293173/fimmu-16-1683941-g001.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human peripheral blood leukocytes by flow cytometry, transfusion-dependent low-risk MDS, deferasirox pre/post",
+     "genotype": "MDS (not genotype-defined)",
+     "comparator": "own pre-treatment sample; healthy controls shown only for endothelial cells in Figure 2"
+    }
+   },
+   {
+    "proposition": "Figure 5 is the authors' conceptual model: transfusion-dependent iron overload to ROS, mitochondrial damage, cytokine and vascular activation, reversed by deferasirox; it is a model, not data, and draws causation from the pre/post design.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 5 flowchart: RBC transfusion dependency, deferasirox chelation, systemic iron burden down, ROS down, mGSH up, three arms (mitochondrial, cytokine, vascular), conclusion box.",
+    "anchor": "Figure 5, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41293173/fimmu-16-1683941-g005.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human peripheral blood leukocytes by flow cytometry, transfusion-dependent low-risk MDS, deferasirox pre/post",
+     "genotype": "MDS (not genotype-defined)",
+     "comparator": "own pre-treatment sample; healthy controls shown only for endothelial cells in Figure 2"
+    }
+   }
+  ]
+ }
+}

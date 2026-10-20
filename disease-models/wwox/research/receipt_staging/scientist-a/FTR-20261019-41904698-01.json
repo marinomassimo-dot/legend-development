@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-41904698-01",
+ "study_id": {
+  "pmid": "41904698",
+  "doi": "10.1177/00368504261440780"
+ },
+ "analysis_at": "2026-10-19T19:34:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a (Scientist A), interventions batch 2026-10-19 groups H1/H2, task INTERV-H1-A-20261019 on branch task/INTERV-H1-A-20261019, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN. Route: Europe PMC JATS body (PMC13067254) including the floats group (Tables 1-3) into the root files/ tree; the supplementaryFiles container holds the three tables as images and one equation image, no figures; the tables were read from the JATS text and the images were not separately opened. Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a staged JSON for the Orchestrator and not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID41904698_Nguyen2026_PMC.xml",
+ "source_fingerprint": "345683d8f466f344545e49164de184da3a30d40b576b67ec892e9b63d407c69b",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "not_present",
+  "figures": "not_present",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41904698.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID41904698.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "manifest",
+  "Narrative expert perspective: no methods, results, figures or limitations section; tables read from JATS text, table images not opened"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "event_at": "2026-10-19T19:34:00Z"
+}
