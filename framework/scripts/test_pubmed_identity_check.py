@@ -28,6 +28,22 @@ class Verdict(unittest.TestCase):
         self.assertEqual(m.verdict({"pmid": "1", "doi": None, "title": "t"}, None)["verdict"], "NO_DOI")
         self.assertEqual(m.verdict({"pmid": "1", "doi": "10.1/x", "title": "t"}, None)["verdict"], "CROSSREF_UNAVAILABLE")
 
+    def test_doi_comes_from_the_article_not_its_reference_list(self):
+        xml = ("<PubmedArticleSet><PubmedArticle><MedlineCitation><Article>"
+               "<ArticleTitle>Own title</ArticleTitle>"
+               "<AuthorList><Author><LastName>Hong</LastName></Author></AuthorList>"
+               "</Article></MedlineCitation><PubmedData><ArticleIdList>"
+               "<ArticleId IdType=\"doi\">10.1186/own</ArticleId></ArticleIdList>"
+               "<ReferenceList><Reference><ArticleIdList>"
+               "<ArticleId IdType=\"doi\">10.1016/cited</ArticleId>"
+               "</ArticleIdList></Reference></ReferenceList></PubmedData>"
+               "</PubmedArticle></PubmedArticleSet>")
+        orig = m._get
+        m._get = lambda url, *a, **k: xml
+        try:
+            self.assertEqual(m.fetch_pubmed("1")["doi"], "10.1186/own")
+        finally:
+            m._get = orig
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

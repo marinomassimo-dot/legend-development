@@ -3,7 +3,7 @@
  "pmid": "24008736",
  "doi": "10.1038/cddis.2013.308",
  "pmcid": "PMC3789168",
- "receipt": "FTR-20261003-24008736-02",
+ "receipt": "FTR-20261019-24008736-03",
  "landing": [
   "FTR-20261003-24008736-02",
   "disease-models/wwox/research/intake_wave_20261003w3_B.md"
@@ -216,7 +216,7 @@
    "path": "files/supplements/PMID24008736/cddis2013308x1.pdf",
    "sha256": "dc13d0427a4777bf4e09661df3e6cab669f005edb232adbc5d2cb4bda957004f",
    "kind": "supplement_binary",
-   "note": "DEPOSIT DEFECT, declared and fingerprinted rather than omitted: the file served under this article identifier is a different article s supplement. Identical bytes from the Europe PMC supplementaryFiles route. This article s Supplementary Figures 1-7 are not retrievable.",
+   "note": "DEPOSIT DEFECT, declared and fingerprinted rather than omitted: the file served under this article identifier is a different article s supplement. Identical bytes from the Europe PMC supplementaryFiles route. This article s Supplementary Figures 1-7 are not retrievable. SUPERSEDED 2026-10-20: this article's own Supplementary Figures 1-7 were retrieved from the publisher (Springer Nature MOESM12) and are declared below; the statement that they are not retrievable no longer holds.",
    "acquisition_recipe": {
     "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3789168.1/cddis2013308x1.pdf",
     "http_method": "GET",
@@ -225,6 +225,140 @@
     "acquired_on": "2026-10-03",
     "derived": false,
     "result_sha256": "dc13d0427a4777bf4e09661df3e6cab669f005edb232adbc5d2cb4bda957004f"
+   }
+  },
+  {
+   "path": "files/supplements/PMID24008736/PMID24008736_Tsai2013_MOESM12_ESM.pdf",
+   "sha256": "2e383c317795a8bc6abc59bf4618bedffaf97105c821dc516697eb9029e7886d",
+   "kind": "supplement_binary",
+   "note": "This article's own Supplementary Figures 1-7 and Supplementary Methods (12 pages), the Springer Nature supplementary file MOESM12, retrieved from the article page's own supplementary link. The file the PMC deposit serves as cddis2013308x1.pdf is a different article's supplement (declared in the earlier reading); this file replaces it as the article's supplement.",
+   "acquisition_recipe": {
+    "resolved_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fcddis.2013.308/MediaObjects/41419_2013_BFcddis2013308_MOESM12_ESM.pdf",
+    "http_method": "GET",
+    "tier": "publisher supplementary file (Springer Nature media server), link from the article page",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "2e383c317795a8bc6abc59bf4618bedffaf97105c821dc516697eb9029e7886d"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID24008736/esm-04.png",
+   "sha256": "b93f271614b680990b68f6b47a46bedc177a244b8de491eda2a5de0fa649dbc8",
+   "kind": "figure",
+   "note": "Page 4 of the supplementary PDF rendered at 90 dpi (Supplementary Figure 1b), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID24008736/PMID24008736_Tsai2013_MOESM12_ESM.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 90 -png (page 4)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "b93f271614b680990b68f6b47a46bedc177a244b8de491eda2a5de0fa649dbc8"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID24008736/esm-05.png",
+   "sha256": "516657040506083b5335ad619d105a9ad61aa4eb01ec14322773d82c7ae52f36",
+   "kind": "figure",
+   "note": "Page 5 of the supplementary PDF rendered at 90 dpi (Supplementary Figure 2), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID24008736/PMID24008736_Tsai2013_MOESM12_ESM.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 90 -png (page 5)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "516657040506083b5335ad619d105a9ad61aa4eb01ec14322773d82c7ae52f36"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID24008736/esm-06.png",
+   "sha256": "73293d0f1798f6945506ef0cc12b9ccb9180d5020340007f95598c045d8e363b",
+   "kind": "figure",
+   "note": "Page 6 of the supplementary PDF rendered at 90 dpi (Supplementary Figure 3), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID24008736/PMID24008736_Tsai2013_MOESM12_ESM.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 90 -png (page 6)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "73293d0f1798f6945506ef0cc12b9ccb9180d5020340007f95598c045d8e363b"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID24008736/esm-07.png",
+   "sha256": "462542d2e1d96e54a6194ea3934d6c103ae6be32b5b7c813e68d06d3423bb4ba",
+   "kind": "figure",
+   "note": "Page 7 of the supplementary PDF rendered at 90 dpi (Supplementary Figure 4), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID24008736/PMID24008736_Tsai2013_MOESM12_ESM.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 90 -png (page 7)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "462542d2e1d96e54a6194ea3934d6c103ae6be32b5b7c813e68d06d3423bb4ba"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID24008736/esm-08.png",
+   "sha256": "3075d5f3afab1d6fc406b1ece3a5c5c15eb3e05ad23198dd22aeb4e6648347b5",
+   "kind": "figure",
+   "note": "Page 8 of the supplementary PDF rendered at 90 dpi (Supplementary Figure 5), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID24008736/PMID24008736_Tsai2013_MOESM12_ESM.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 90 -png (page 8)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "3075d5f3afab1d6fc406b1ece3a5c5c15eb3e05ad23198dd22aeb4e6648347b5"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID24008736/esm-09.png",
+   "sha256": "35d616426517ba05c8fc3d1d522cecf8ed154d555fe81172feaa1a59ec85493f",
+   "kind": "figure",
+   "note": "Page 9 of the supplementary PDF rendered at 90 dpi (Supplementary Figure 6), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID24008736/PMID24008736_Tsai2013_MOESM12_ESM.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 90 -png (page 9)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "35d616426517ba05c8fc3d1d522cecf8ed154d555fe81172feaa1a59ec85493f"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID24008736/esm-11.png",
+   "sha256": "c8bc9dbc0471801926ded766455924a243ae8b90d6b833775cbc27e02544f87b",
+   "kind": "figure",
+   "note": "Page 11 of the supplementary PDF rendered at 90 dpi (Supplementary Figure 7), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID24008736/PMID24008736_Tsai2013_MOESM12_ESM.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 90 -png (page 11)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "c8bc9dbc0471801926ded766455924a243ae8b90d6b833775cbc27e02544f87b"
    }
   }
  ],
@@ -292,6 +426,71 @@
     "anchor": "Discussion, first paragraph",
     "panel_text_relation": "text_only",
     "artifact": "files/fulltext/PMID24008736_Tsai2013_PMC.xml"
+   },
+   {
+    "proposition": "The only germline Wwox arm of the paper is a single Western blot of MEF lysates stated in one sentence: LC3 protein is increased in heterozygous and null cells compared with wild type.",
+    "snippet": "increased expression of LC3-II protein was detected in the cytosolic protein extracts",
+    "anchor": "Results, WWOX and LC3, with Supplementary Figure 7",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24008736_Tsai2013_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human squamous carcinoma lines SCC-4, SCC-9 and SCC-15 under methotrexate or 5-FU; mouse embryonic fibroblasts for Supplementary Figure 7",
+     "genotype": "WWOX overexpression or dominant-negative in SCC lines; germline Wwox+/+, +/- and -/- (exon 1 deletion) MEF only in Supplementary Figure 7",
+     "endpoint": "LC3, Atg5, Atg12, mTOR binding, DNA ladder, viability"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Supplementary Figure 7: genotyping by PCR (593 bp wild type, 450 bp deletion) and a WWOX blot of MEF with normalised band values 1.0, 0.5 and 0.0 for +/+, +/- and -/-; an LC3 blot with LC3-II values 1.0, 1.9 and 1.7 for +/+, +/- and -/-; one blot per panel, no replicate or statistic, no lysosomal-inhibitor flux control, so a rise in LC3-II cannot be read as induced autophagy rather than blocked turnover; the heterozygote value is slightly above the null.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Suppl Fig 7a allele diagram and PCR gel 593 bp (WT) 450 bp (KO); 7b WWOX blot MEF +/+ +/- -/- with 1.0 0.5 0.0 and beta-actin; 7c LC3-I and LC3-II blot 17 kDa with 1.0 1.9 1.7 and beta-actin.",
+    "anchor": "Supplementary Figure 7, page 11 of the supplementary PDF, read as an image",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID24008736/esm-11.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human squamous carcinoma lines SCC-4, SCC-9 and SCC-15 under methotrexate or 5-FU; mouse embryonic fibroblasts for Supplementary Figure 7",
+     "genotype": "WWOX overexpression or dominant-negative in SCC lines; germline Wwox+/+, +/- and -/- (exon 1 deletion) MEF only in Supplementary Figure 7",
+     "endpoint": "LC3, Atg5, Atg12, mTOR binding, DNA ladder, viability"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Supplementary Figure 6b: SCC-15 cells expressing HA-mTOR with or without GFP-WWOX, immunoprecipitated with anti-mTOR and blotted for WWOX; a faint WWOX band appears only in the GFP-WWOX lane, the control IgG lane is blank, and the interaction is between overexpressed tagged proteins in one experiment; 6a shows overlapping fields in transfected cells.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Suppl Fig 6a GFP, mTOR or p-mTOR, DAPI and merge panels for pEGFPC1 and WWOX-pEGFPC1; 6b IB WWOX after IP mTOR with HA-mTOR and GFP-WWOX minus and plus, control IgG lane blank, mTOR and input mTOR blots.",
+    "anchor": "Supplementary Figure 6, page 9 of the supplementary PDF, read as an image",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID24008736/esm-09.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human squamous carcinoma lines SCC-4, SCC-9 and SCC-15 under methotrexate or 5-FU; mouse embryonic fibroblasts for Supplementary Figure 7",
+     "genotype": "WWOX overexpression or dominant-negative in SCC lines; germline Wwox+/+, +/- and -/- (exon 1 deletion) MEF only in Supplementary Figure 7",
+     "endpoint": "LC3, Atg5, Atg12, mTOR binding, DNA ladder, viability"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Supplementary Figures 4 and 5: in methotrexate-treated SCC-15 cells free Atg5 rises to about 1.7, the Atg12-Atg5 conjugate falls to 0.2 and free Atg12 to 0.0 over 72 h (Figure 4), and LC3 falls to 0.3 with methotrexate, not rescued by zVAD (0.4) and unchanged at 1.2 with MG132 with or without methotrexate (Figure 5); single blots with normalised numbers and no replicate.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Suppl Fig 4 blots Atg5 (32 kDa) 1.0 1.1 1.2 1.4 1.7, Atg12-Atg5 1.0 0.5 0.6 0.6 0.2, Atg12 (21 kDa) 1.0 0.7 0.1 0.0 0.0 at 0 12 24 48 72 h; Suppl Fig 5 LC3-I and LC3-II blot with MTX, zVAD-fmk, MG132 values 1.0 0.3 1.1 0.4 1.2 1.2.",
+    "anchor": "Supplementary Figures 4 and 5, pages 7 and 8 of the supplementary PDF, read as images",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID24008736/esm-07.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human squamous carcinoma lines SCC-4, SCC-9 and SCC-15 under methotrexate or 5-FU; mouse embryonic fibroblasts for Supplementary Figure 7",
+     "genotype": "WWOX overexpression or dominant-negative in SCC lines; germline Wwox+/+, +/- and -/- (exon 1 deletion) MEF only in Supplementary Figure 7",
+     "endpoint": "LC3, Atg5, Atg12, mTOR binding, DNA ladder, viability"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Supplementary Figures 1 to 3: methotrexate kills SCC-15 (about 95 percent apoptosis at day 5 by DAPI), SCC-4 about 52 and SCC-9 about 17 percent (Figure 1b; single bars per day, counts of 500 cells); the DNA ladder is strong in SCC-15 and absent in SCC-9 (Figure 2, band intensity values 1.0, 7.7, 12.2, 16.5); 5-FU raises WWOX in SCC-9 about 1.6 to 2.0 fold on one blot and lowers viability dose-dependently (Figure 3).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Suppl Fig 1b bar chart % Cell Death for SCC-4, SCC-9, SCC-15 at days 0-5; Suppl Fig 2 DNA ladder gel SCC-9 and SCC-15 at 0 24 48 72 h with values 1.0 7.7 12.2 16.5; Suppl Fig 3a WWOX blot values 1.0 1.6 1.7 2.0, 3b viability bars at 48 and 72 h for 5-FU 0 to 125 ug/ml.",
+    "anchor": "Supplementary Figures 1-3, pages 4 to 6 of the supplementary PDF, read as images",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID24008736/esm-05.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human squamous carcinoma lines SCC-4, SCC-9 and SCC-15 under methotrexate or 5-FU; mouse embryonic fibroblasts for Supplementary Figure 7",
+     "genotype": "WWOX overexpression or dominant-negative in SCC lines; germline Wwox+/+, +/- and -/- (exon 1 deletion) MEF only in Supplementary Figure 7",
+     "endpoint": "LC3, Atg5, Atg12, mTOR binding, DNA ladder, viability"
+    }
    }
   ]
  }

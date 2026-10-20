@@ -1,0 +1,347 @@
+{
+ "schema_version": 2,
+ "pmid": "29310447",
+ "doi": "10.1177/1535370217752350",
+ "receipt": "FTR-20261019-29310447-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named from wave-1 reading debts and deduplicated by the per-paper M0 packet and the receipt status check run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate and the analysis note; the discovery ledger is a shared single-writer file appended by the Orchestrator at integration."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A review by a student and the senior author of the Chang laboratory (National Cheng Kung University, from the affiliations), whose own papers supply most of the Tyr33, Ser14, Zfra and TGF-beta/Hyal-2 content. It is a secondary source written by the primary group: a statement about the laboratory's own models weighs as that laboratory's interpretation, and a statement about other groups' mouse or human data weighs as a restatement to be checked against the primary."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (phosphorylation OR Ser14 OR Tyr33)",
+    "count": 72,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND review[pt]",
+    "count": 90,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts, dated."
+ },
+ "multihop": {
+  "references_enumerated": 124,
+  "gene_direct_refs_in_source": [
+   "ref 53 Ludes-Meyers 2009 conditional allele (PMID 19936220)",
+   "ref 55 Aldaz 2014 (PMID 24932569)",
+   "ref 56 Tabarki commentary (PMID 25416187)",
+   "ref 65 Suzuki 2009 lde rat (PMID 19500159)",
+   "ref 66 Aqeilan 2004 Wwox and p73 (cited for knockout survival)",
+   "ref 62 Lee 2017 Zfra and triple-transgenic mice (PMID 29067327)",
+   "ref 25 Huang 2016 T-ALL maturation (JBC)",
+   "ref 67 Sze 2004 Tau (PMID 15126504)",
+   "ref 102 Hsu 2009 (PMID 19366691)",
+   "ref 27 Chang 2014 neuronal injury review (PMID 25537520)"
+  ],
+  "resolved": [
+   {
+    "pmid": "19936220",
+    "state": "complete receipts in the ledger"
+   },
+   {
+    "pmid": "24932569",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "19500159",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "29067327",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "19366691",
+    "state": "partial receipt staged by this actor (this wave)"
+   },
+   {
+    "pmid": "17567906",
+    "state": "complete receipt staged by this actor (this wave)"
+   }
+  ],
+  "queued": [
+   {
+    "pmid": "25416187",
+    "queue": "proposed in CC-20261019-SCIENTISTD-DEBT-01; no FT identifier minted by a Scientist",
+    "note": "Tabarki commentary on WWOX and the developing brain, cited by this review for the metabolic sentence; open in PMC; unread"
+   },
+   {
+    "pmid": "15126504",
+    "queue": "debt of this actor's lot, DEBT-WWOX-DIRECT-D-20261019",
+    "note": "Sze 2004 Tau; subscription"
+   },
+   {
+    "pmid": "27999774",
+    "queue": "proposed in CC-20261019-SCIENTISTD-DEBT-01; no FT identifier minted by a Scientist",
+    "note": "Hsu 2016 Hyal-2/WWOX/Smad4 review; unread"
+   }
+  ],
+  "note": "124 references enumerated from the Europe PMC references endpoint and the archived page. The two sentences of the review that bear on metabolism cite only reviews and one allele-generation paper."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 29310447 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed efetch for PMID 29310447: publication types ['Journal Article', \"Research Support, Non-U.S. Gov't\", \"Research Support, U.S. Gov't, Non-P.H.S.\", 'Review']; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 127,
+   "references_screened": 119,
+   "references_with_doi": 119,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 8
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID29310447_Huang2018_PMC5788152_wayback20250329.html",
+   "sha256": "63599da3ba71cd2c417561e23cf8d6152a56035e8e331b26eff7d1946e2bb6d3",
+   "kind": "article_text",
+   "note": "Internet Archive capture (2025-03-29) of the PMC article page for PMC5788152 (author manuscript deposit of an Experimental Biology and Medicine review), raw bytes with the id_ modifier; the Europe PMC fullTextXML endpoint returned HTTP 500 for this PMCID. Every text locator is matched against this surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://web.archive.org/web/20250329145413id_/https://pmc.ncbi.nlm.nih.gov/articles/PMC5788152/",
+    "http_method": "GET",
+    "tier": "Internet Archive Wayback capture of the PMC page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "63599da3ba71cd2c417561e23cf8d6152a56035e8e331b26eff7d1946e2bb6d3"
+   }
+  },
+  {
+   "path": "files/figures/PMID29310447/fig1.jpg",
+   "sha256": "b8231d6082f66148c108503336adf486896f07f257198e5d9add31c716226892",
+   "kind": "figure",
+   "note": "Figure 1 JPEG from the PMC blob store (WWOX domains and signalling-network schematic), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/427f/5788152/99764d1908eb/10.1177_1535370217752350-fig1.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "b8231d6082f66148c108503336adf486896f07f257198e5d9add31c716226892"
+   }
+  },
+  {
+   "path": "files/figures/PMID29310447/fig2.jpg",
+   "sha256": "e664254354a475d64a32d9a2e4404972014b36858e4282eb0fed7cc9b681f5f2",
+   "kind": "figure",
+   "note": "Figure 2 JPEG from the PMC blob store (T-cell maturation and pS14 schematic), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/427f/5788152/a74842b1be1c/10.1177_1535370217752350-fig2.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "e664254354a475d64a32d9a2e4404972014b36858e4282eb0fed7cc9b681f5f2"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The review states that no spontaneous tumour growth is shown in newborns of humans and rats lacking WWOX, in the same sentence block as its null-mutation phenotypes; the sentence has no primary-source citation of its own in the text.",
+    "snippet": "However, no spontaneous tumor growth is shown in the newborns of humans and rats.",
+    "anchor": "WWOX gene alterations in cancer, metabolic disorders, and neural diseases, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29310447_Huang2018_PMC5788152_wayback20250329.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of cultured-cell, rodent and human reports; no new experiment",
+     "genotype": "WWOX null, hypomorph and overexpression as reported in cited sources",
+     "endpoint": "none measured"
+    }
+   },
+   {
+    "proposition": "The review attributes to null mutations of WWOX in humans, mice and rats a metabolic phenotype of lipid, cholesterol and glucose metabolism; the four references behind the sentence are two reviews, an editorial and a commentary, not a primary report of a human biallelic-loss case.",
+    "snippet": "Null mutations of WWOX/Wwox in humans, mice, and rats lead to severe neural diseases (e.g. epilepsy, microcephaly, retinal degeneration, ataxia, and etc.), metabolic disorders associated with lipid, cholesterol and glucose metabolism, and early death.",
+    "anchor": "WWOX gene alterations in cancer, metabolic disorders, and neural diseases, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29310447_Huang2018_PMC5788152_wayback20250329.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of cultured-cell, rodent and human reports; no new experiment",
+     "genotype": "WWOX null, hypomorph and overexpression as reported in cited sources",
+     "endpoint": "none measured"
+    }
+   },
+   {
+    "proposition": "The review describes the Ludes-Meyers conditional-allele paper's animals as 'conditional Wwox knockout mice' with a metabolic defect; the paper generates the floxed allele and reports the knockout produced by germline Cre deletion.",
+    "snippet": "Conditional Wwox knockout mice suffer severe metabolic defect, growth retardation, reduced bone volume, hypocapnia, impaired hematopoiesis, leukopenia, and splenic atrophy.",
+    "anchor": "WWOX gene alterations in cancer, metabolic disorders, and neural diseases, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29310447_Huang2018_PMC5788152_wayback20250329.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of cultured-cell, rodent and human reports; no new experiment",
+     "genotype": "WWOX null, hypomorph and overexpression as reported in cited sources",
+     "endpoint": "none measured"
+    }
+   },
+   {
+    "proposition": "The survival of Wwox knockout mice is given as three weeks, citing a paper on the Wwox and p73 association and a paper on TRAPPC6A-delta rather than a knockout-mouse report; a companion paper by the same group gives about one month.",
+    "snippet": "Wwox knockout mice survive for three weeks",
+    "anchor": "WWOX gene alterations in cancer, metabolic disorders, and neural diseases, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29310447_Huang2018_PMC5788152_wayback20250329.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of cultured-cell, rodent and human reports; no new experiment",
+     "genotype": "WWOX null, hypomorph and overexpression as reported in cited sources",
+     "endpoint": "none measured"
+    }
+   },
+   {
+    "proposition": "The Ser14-phosphorylation model is a claim from the laboratory's own mouse experiment: Zfra lowers pS14-WWOX while total WWOX and pY33 are unchanged, with tumour growth and amyloid pathology both reduced.",
+    "snippet": "Zfra does not suppress the protein level of WWOX and its Tyr33 phosphorylation in control and Zfra-treated mice.",
+    "anchor": "Potential role of pS14-WWOX in disease progression",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29310447_Huang2018_PMC5788152_wayback20250329.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of cultured-cell, rodent and human reports; no new experiment",
+     "genotype": "WWOX null, hypomorph and overexpression as reported in cited sources",
+     "endpoint": "none measured"
+    }
+   },
+   {
+    "proposition": "A mitochondrial location of a pY33-WWOX/IkappaB-alpha/ERK complex is reported for resting T-ALL MOLT-4 cells, one leukaemia line.",
+    "snippet": "In resting MOLT-4, an endogenous pY33-WWOX/IκBα/ERK complex is present in the cytoplasm and mitochondria.",
+    "anchor": "WWOX in forced T-cell maturation via a novel IkappaB-alpha/WWOX/ERK signal pathway",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29310447_Huang2018_PMC5788152_wayback20250329.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of cultured-cell, rodent and human reports; no new experiment",
+     "genotype": "WWOX null, hypomorph and overexpression as reported in cited sources",
+     "endpoint": "none measured"
+    }
+   },
+   {
+    "proposition": "Relocation of WWOX to mitochondria after dissociation of a WWOX/MEK1 complex is reported in leukaemia T cells exposed to phorbol ester.",
+    "snippet": "Dissociation of the WWOX/MEK1 complex by phorbol myristate acetate (PMA) leads WWOX to relocate to the mitochondria to induce apoptosis, and MEK1 to the lipid rafts.",
+    "anchor": "Endogenous WWOX/MEK1 complex is a molecular switch for cancer cell death",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29310447_Huang2018_PMC5788152_wayback20250329.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of cultured-cell, rodent and human reports; no new experiment",
+     "genotype": "WWOX null, hypomorph and overexpression as reported in cited sources",
+     "endpoint": "none measured"
+    }
+   },
+   {
+    "proposition": "The testicular and hormonal phenotype of the lde/lde rat is explained in the review by WWOX acting as a steroid-binding cytosolic receptor, stated as unsurprising rather than shown.",
+    "snippet": "Without WWOX, it is not surprising to observe the defect in spermatogenesis.",
+    "anchor": "WWOX gene alterations in cancer, metabolic disorders, and neural diseases, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29310447_Huang2018_PMC5788152_wayback20250329.html",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "narrative review of cultured-cell, rodent and human reports; no new experiment",
+     "genotype": "WWOX null, hypomorph and overexpression as reported in cited sources",
+     "endpoint": "none measured"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 1: a schematic of the WWOX WW and SDR domains with TPC6A-delta, estrogen and D3 sites before and after Tyr33 phosphorylation, and a pie diagram of signalling networks; it carries no measured value.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1a domain schematic labelled WW, WW, SDR, TPC6A-delta, D3, Estrogen, Y33 with arrow 'Activation with Tyr33 phosphorylation'; Fig 1b pie of signalling networks (Wnt/Frizzled/Dvl, integrin alpha3, PKA/Ezrin, IkappaB-alpha/ERK, Brac1/ATM/ATR, Tax/LMP2A, TGF-beta1/Hyal2 and others).",
+    "anchor": "Figure 1, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29310447/fig1.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative review of cultured-cell, rodent and human reports; no new experiment",
+     "genotype": "WWOX null, hypomorph and overexpression as reported in cited sources",
+     "endpoint": "none measured"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 2: a schematic placing the pY33-WWOX/ERK/IkappaB-alpha complex at a mitochondrion and pS14-WWOX linked to cancer promotion and neurodegeneration with question marks on the kinases and phosphatases; it carries no measured value.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2a ionophore/PMA to a mitochondrion carrying pY33 WWOX, ERK and IkappaB-alpha, then ERK and pS14 WWOX to the nucleus and CD3/CD8; Fig 2b pY33 anticancer versus pS14 cancer-promoting and enhancing neurodegeneration with 'Kinases?' and 'Phosphatases?'.",
+    "anchor": "Figure 2, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29310447/fig2.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "narrative review of cultured-cell, rodent and human reports; no new experiment",
+     "genotype": "WWOX null, hypomorph and overexpression as reported in cited sources",
+     "endpoint": "none measured"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search returned inEPMC Y and isOpenAccess N for PMC5788152 (author manuscript) on 2026-10-19; fullTextXML returned HTTP 500; the Internet Archive capture of the PMC page returned HTTP 200 with the article body, two figures and the reference list.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

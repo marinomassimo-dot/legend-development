@@ -1,0 +1,285 @@
+{
+ "schema_version": 2,
+ "pmid": "28426730",
+ "doi": "10.1371/journal.pone.0176141",
+ "receipt": "FTR-20261019-28426730-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named from wave-1 reading debts and deduplicated by the per-paper M0 packet and the receipt status check run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate and the analysis note; the discovery ledger is a shared single-writer file appended by the Orchestrator at integration."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A Taiwanese hospital group (Chung Shan Medical University Hospital, from the affiliations) running candidate-SNP case-control work on WWOX in several cancers. Primary for a regional HCC series; not a WWOX loss-of-function or neurological group. Genotype counts weighed above the sentences claiming expression effects and biomarker utility."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (polymorphism OR SNP) AND hepatocellular",
+    "count": 6,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND rs12918952",
+    "count": 6,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts, dated."
+ },
+ "multihop": {
+  "references_enumerated": 63,
+  "gene_direct_refs_in_source": [
+   "Aqeilan 2007 targeted deletion (PMID 17360458)",
+   "Park 2004 WWOX downregulation in HCC (PMID 15266310)",
+   "Li 2012 WWOX and beta-catenin in HCC (PMID 23030478)",
+   "Hsu 2016 Hyal-2/WWOX/Smad4 (PMID 27999774)",
+   "Lo 2015 minireview (PMID 25595191)",
+   "Cheng 2016 Kozak variant (PMID 27655721)"
+  ],
+  "resolved": [
+   {
+    "pmid": "17360458",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "25595191",
+    "state": "complete receipt (staged by scientist-c)"
+   }
+  ],
+  "queued": [
+   {
+    "pmid": "15266310",
+    "queue": "proposed in CC-20261019-SCIENTISTD-DEBT-01; no FT identifier minted by a Scientist",
+    "note": "WWOX loss in HCC tissue; no receipt"
+   },
+   {
+    "pmid": "27655721",
+    "queue": "proposed in CC-20261019-SCIENTISTD-DEBT-01; no FT identifier minted by a Scientist",
+    "note": "Kozak-sequence variant in a Taiwanese series; no receipt"
+   }
+  ],
+  "note": "63 references enumerated from the Europe PMC references endpoint; forty are gene-direct by title and almost all concern tumour expression or SNPs. None bears on metabolism."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 28426730 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed efetch for PMID 28426730: publication types ['Journal Article']; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 63,
+   "references_screened": 56,
+   "references_with_doi": 56,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 7
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID28426730_Lee2017_PMC5398630.xml",
+   "sha256": "b061dfa64b1c4633d40bc6ef8a3ec595a7c9ee889103c7519a423612dfd75062",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC5398630 (CC BY): abstract, body, tables, figure legend, 63 references. Every text locator is matched against this surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5398630/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "b061dfa64b1c4633d40bc6ef8a3ec595a7c9ee889103c7519a423612dfd75062"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28426730_Lee2017_plos.pdf",
+   "sha256": "701b4db5bb4666adbcfc01b3924de65b174708a77f413440cb3207c92e52be31",
+   "kind": "article_binary",
+   "note": "Publisher PDF (14 pages) from PLOS ONE (printable file URL listed by Unpaywall), source of the Figure 1 page render.",
+   "acquisition_recipe": {
+    "resolved_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0176141&type=printable",
+    "http_method": "GET",
+    "tier": "publisher OA PDF (PLOS printable)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "701b4db5bb4666adbcfc01b3924de65b174708a77f413440cb3207c92e52be31"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID28426730/p-09.png",
+   "sha256": "f694b56cddc88592ee60c357643c6ffd528df2ca83358d7afba28d62d0501501",
+   "kind": "figure",
+   "note": "PDF page 9 rendered at 130 dpi (Figure 1A to 1E), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID28426730_Lee2017_plos.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 130 -f 9 -l 9 -png"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "f694b56cddc88592ee60c357643c6ffd528df2ca83358d7afba28d62d0501501"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The significant case-control finding is a protective rare allele: carriers of the rs73569323 T allele are 6 of 354 patients and 39 of 708 controls (Table 2), with no association for the other four SNPs.",
+    "snippet": "individuals carrying C/T or C/T+T/T at rs73569323 exhibited a 0.305-fold (95% CI: 0.126–0.741) or 0.299-fold (95% CI: 0.123–0.724; both p <0.05) lower risk of HCC, respectively.",
+    "anchor": "Results, Association between WWOX gene polymorphisms and HCC",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28426730_Lee2017_PMC5398630.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "hospital case-control series, Taiwan: 354 HCC patients and 708 health-examination controls; blood-derived DNA",
+     "genotype": "five common WWOX SNPs (germline, blood DNA)",
+     "endpoint": "HCC risk, clinicopathology, laboratory values, GTEx eQTL plot"
+    }
+   },
+   {
+    "proposition": "The vascular-invasion association of rs12918952 is a subgroup result (252 male patients, 28 carriers, 9 with invasion) among five SNPs and many clinical variables, with no multiplicity statement in the Methods.",
+    "snippet": "we observed that the trend of G/A+G/G genotype of WWOX rs12918952 for vascular invasion risk (p = 0.024) was higher in male patients with HCC.",
+    "anchor": "Results, Correlation between polymorphic genotypes of WWOX and clinical status of HCC",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28426730_Lee2017_PMC5398630.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "hospital case-control series, Taiwan: 354 HCC patients and 708 health-examination controls; blood-derived DNA",
+     "genotype": "five common WWOX SNPs (germline, blood DNA)",
+     "endpoint": "HCC risk, clinicopathology, laboratory values, GTEx eQTL plot"
+    }
+   },
+   {
+    "proposition": "The consequence class of rs12918952 is stated three ways in one paper: an exonic SNP that may change an amino acid, an Ala-179-Thr substitution, and a synonymous variant in exon 6.",
+    "snippet": "Rs12918952 and rs3764340, which are located in the exon of WWOX, were selected in this study since these 2 SNPs may result from amino acid changes",
+    "anchor": "Methods, SNP selection and genotyping",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28426730_Lee2017_PMC5398630.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "hospital case-control series, Taiwan: 354 HCC patients and 708 health-examination controls; blood-derived DNA",
+     "genotype": "five common WWOX SNPs (germline, blood DNA)",
+     "endpoint": "HCC risk, clinicopathology, laboratory values, GTEx eQTL plot"
+    }
+   },
+   {
+    "proposition": "The Discussion calls the same SNP synonymous while the Results and Figure 1 treat it as the Ala-179-Thr missense substitution near the cofactor-binding site.",
+    "snippet": "In addition, we identified one synonymous variant, rs12918952, in exon 6, which was significantly associated with the vascular invasion of HCC.",
+    "anchor": "Discussion, paragraph 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28426730_Lee2017_PMC5398630.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "hospital case-control series, Taiwan: 354 HCC patients and 708 health-examination controls; blood-derived DNA",
+     "genotype": "five common WWOX SNPs (germline, blood DNA)",
+     "endpoint": "HCC risk, clinicopathology, laboratory values, GTEx eQTL plot"
+    }
+   },
+   {
+    "proposition": "The Discussion claims the paper itself reports downregulated WWOX expression in HCC; no HCC-versus-normal expression measurement appears among the Methods, Results, tables or figure.",
+    "snippet": "Furthermore, we reported the additional finding that WWOX expression was downregulated in HCC, which strengthened the evidence of a link between polymorphic variations and susceptibility to HCC.",
+    "anchor": "Discussion, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28426730_Lee2017_PMC5398630.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "hospital case-control series, Taiwan: 354 HCC patients and 708 health-examination controls; blood-derived DNA",
+     "genotype": "five common WWOX SNPs (germline, blood DNA)",
+     "endpoint": "HCC risk, clinicopathology, laboratory values, GTEx eQTL plot"
+    }
+   },
+   {
+    "proposition": "The Results describe the eQTL trend as WWOX expression in human HCC, the Discussion as GTEx liver tissue, and the legend as whole blood; the panel title names a liver eQTL.",
+    "snippet": "Individuals carrying rs121918952-variant genotypes (GA or AA) showed a trend of decreased expression of WWOX compared with that of the wild-type homozygous GG genotype (Fig 1E).",
+    "anchor": "Results, Functional analysis of the WWOX rs12918952 locus",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28426730_Lee2017_PMC5398630.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "hospital case-control series, Taiwan: 354 HCC patients and 708 health-examination controls; blood-derived DNA",
+     "genotype": "five common WWOX SNPs (germline, blood DNA)",
+     "endpoint": "HCC risk, clinicopathology, laboratory values, GTEx eQTL plot"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 1E: a GTEx boxplot titled 'Liver eQTL rs12918952 ENSG00000186153.12' of rank-normalised expression for Homo Ref (N = 25), Het (N = 40) and Homo Alt (N = 32); the medians step down across the three classes and the boxes overlap. The class sizes imply an alternate-allele frequency near 54 percent, against about 5 percent A allele in this paper's controls, and the paper does not say which allele GTEx calls 'Alt'.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1E boxplot 'Liver eQTL rs12918952 ENSG00000186153.12', y-axis Rank Normalized Gene Expression -0.3 to 0.3, x-axis Homo Ref N = 25, Het N = 40, Homo Alt N = 32, overlapping boxes; panels 1A-1D are sequence alignments, a domain schematic and a homology-model ribbon diagram.",
+    "anchor": "Figure 1E, PDF page 9, read as an image at 130 dpi",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID28426730/p-09.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "GTEx liver donors (as labelled on the panel) against a Taiwanese case-control series",
+     "genotype": "rs12918952 genotype classes",
+     "endpoint": "rank-normalised WWOX expression"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search returned inEPMC Y and isOpenAccess Y for PMC5398630 on 2026-10-19; fullTextXML returned HTTP 200 with a body and the PLOS printable file returned a valid 14-page PDF.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

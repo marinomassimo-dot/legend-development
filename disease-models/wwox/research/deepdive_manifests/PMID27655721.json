@@ -1,0 +1,308 @@
+{
+ "schema_version": 2,
+ "pmid": "27655721",
+ "doi": "10.18632/oncotarget.12082",
+ "receipt": "FTR-20261019-27655721-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-02.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named from wave-1 reading debts and deduplicated by the per-paper M0 packet and the receipt status check run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate and the analysis note; the discovery ledger is a shared single-writer file appended by the Orchestrator at integration."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "The Taiwanese hospital group (Chung Shan Medical University Hospital, from the methods) that also produced the HCC SNP paper read in wave 1. Primary for a regional oral-cancer series; not a WWOX loss-of-function group. Genotype counts weighed above the translational-mechanism interpretation of a promoter-reporter result."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (polymorphism OR SNP) AND oral",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND Kozak",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts, dated."
+ },
+ "multihop": {
+  "references_enumerated": 56,
+  "gene_direct_refs_in_source": [
+   "ref 7 Aqeilan 2014 (PMID 25245215)",
+   "ref 11 Abu-Remaileh 2015 (PMID 26499798)",
+   "ref 12 Aqeilan 2009 steroidogenesis (PMID 18974271)",
+   "ref 17 Nunez 2005 (PMID 15982416)",
+   "ref 25 Paige 2001 (PMID 11572989)",
+   "ref 37 Ekizoglu 2015 (PMID 25612104)",
+   "ref 22 Schirmer 2016 Sp-site SNP (PMID 26857392)"
+  ],
+  "resolved": [
+   {
+    "pmid": "25245215",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "26499798",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "18974271",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "15982416",
+    "state": "complete receipt in the ledger"
+   },
+   {
+    "pmid": "11572989",
+    "state": "partial receipt in the ledger"
+   },
+   {
+    "pmid": "28426730",
+    "state": "complete receipt staged by this actor (wave 1), the same group's HCC paper with the same five SNPs"
+   }
+  ],
+  "queued": [
+   {
+    "pmid": "25612104",
+    "queue": "proposed in CC-20261019-SCIENTISTD-DEBT-02; no FT identifier minted by a Scientist",
+    "note": "Ekizoglu 2015, WWOX in head and neck cancer, PLoS One"
+   }
+  ],
+  "note": "56 references enumerated from the JATS; fifty are cancer genetics or methods. Metabolism and neurology are mentioned once each in the Introduction through one review."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 27655721 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed efetch for PMID 27655721: publication types ['Journal Article']; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 56,
+   "references_screened": 49,
+   "references_with_doi": 49,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 40,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 7
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID27655721_Cheng2016_PMC5342485.xml",
+   "sha256": "6eb3f879026928648b036bf6ddcb10730a53e0dab5d31a71de79d770daa77562",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC5342485 (CC BY): abstract, body, tables, figure legends, 56 references. Every text locator is matched against this surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5342485/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "6eb3f879026928648b036bf6ddcb10730a53e0dab5d31a71de79d770daa77562"
+   }
+  },
+  {
+   "path": "files/figures/PMID27655721/fig1.jpg",
+   "sha256": "2acf4dd9d99c2b883cea835b65f4154c99ae222beb439e0cf7095731cb0a9f2f",
+   "kind": "figure",
+   "note": "Figure 1 JPEG from the PMC blob store (locus map, ENCODE track, Kozak alignment, GTEx eQTL), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/33c3/5342485/98c9ba0f7f25/oncotarget-07-69384-g001.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "2acf4dd9d99c2b883cea835b65f4154c99ae222beb439e0cf7095731cb0a9f2f"
+   }
+  },
+  {
+   "path": "files/figures/PMID27655721/fig2.jpg",
+   "sha256": "2f6e272e563975fc6eed6c58788bf0034f7942bd67b6a1b8c23659210e6e06eb",
+   "kind": "figure",
+   "note": "Figure 2 JPEG from the PMC blob store (luciferase, mRNA, IHC), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/33c3/5342485/32e575214e9e/oncotarget-07-69384-g002.jpg",
+    "http_method": "GET",
+    "tier": "PMC figure blob (cdn.ncbi.nlm.nih.gov), URL from the archived article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "2f6e272e563975fc6eed6c58788bf0034f7942bd67b6a1b8c23659210e6e06eb"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The case and control groups differ enormously in exposure (betel-quid chewing 80 against 17 percent, smoking 88 against 53 percent), cases come from two hospitals and controls from a biobank, and the ORs are from models adjusted for these.",
+    "snippet": "Significant differences were observed in the distribution of betel-quid chewing (p < 0.001), cigarette smoking (p < 0.001), and alcohol consumption (p < 0.001) between the controls and patients with OSCC.",
+    "anchor": "Results, Association between WWOX single nucleotide polymorphisms and OSCC",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27655721_Cheng2016_PMC5342485.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "male oral squamous cell carcinoma case-control series, Taiwan (761 cases from two hospitals, 1199 Taiwan Biobank controls); GTEx eQTL; promoter-reporter assays in three oral cancer lines; tumour mRNA (34) and IHC (51)",
+     "genotype": "five common WWOX SNPs, blood DNA; rs11545028 5'UTR variant",
+     "endpoint": "cancer risk, stage, luciferase, mRNA, IHC"
+    }
+   },
+   {
+    "proposition": "The risk association is modest and is carried by the TT genotype (55 cases, 52 controls); the heterozygotes show no association.",
+    "snippet": "oral cancer patients with the WWOX polymorphic rs11545028 T/T and combination of CT and TT genotypes exhibited a 1.824-fold (95% CI: 1.224-2.716) and 1.227-fold (95% CI: 1.022-1.473; both p < 0.05) higher risk of OSCC than did patients with the corresponding WT homozygous gene.",
+    "anchor": "Results, Association between WWOX single nucleotide polymorphisms and OSCC",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27655721_Cheng2016_PMC5342485.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "male oral squamous cell carcinoma case-control series, Taiwan (761 cases from two hospitals, 1199 Taiwan Biobank controls); GTEx eQTL; promoter-reporter assays in three oral cancer lines; tumour mRNA (34) and IHC (51)",
+     "genotype": "five common WWOX SNPs, blood DNA; rs11545028 5'UTR variant",
+     "endpoint": "cancer risk, stage, luciferase, mRNA, IHC"
+    }
+   },
+   {
+    "proposition": "The variant is called a 'nonsense polymorphism in exon 1' in the Discussion, a 5'UTR variant in Table 1 and a Kozak-context variant elsewhere; a 5'UTR C>T change cannot be a nonsense change.",
+    "snippet": "Notably, we observed that the nonsense polymorphism rs11545028 C > T located in exon 1 conferred an increased risk of OSCC.",
+    "anchor": "Discussion, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27655721_Cheng2016_PMC5342485.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "male oral squamous cell carcinoma case-control series, Taiwan (761 cases from two hospitals, 1199 Taiwan Biobank controls); GTEx eQTL; promoter-reporter assays in three oral cancer lines; tumour mRNA (34) and IHC (51)",
+     "genotype": "five common WWOX SNPs, blood DNA; rs11545028 5'UTR variant",
+     "endpoint": "cancer risk, stage, luciferase, mRNA, IHC"
+    }
+   },
+   {
+    "proposition": "The reporter used to support a translational (Kozak) mechanism is described only as a promoter-region construct in a pGL3-Enhancer vector (the insert boundaries are not given); the paper itself infers 'translational initiation' from the lower luciferase of the T allele. That such a construct reports transcriptional output rather than translation initiation is my inference, not the paper's statement.",
+    "snippet": "A luciferase reporter plasmid encompassing the major allele (C) and minor allele (T) of rs11545028 in the promoter region of the WWOX gene was cloned into the pGL3-Enhancer Luciferase Reporter Vectors (Promega Corp., Madison, WI, USA), according to manufacturer instructions.",
+    "anchor": "Materials and methods, Construction of luciferase reporter plasmids",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27655721_Cheng2016_PMC5342485.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "male oral squamous cell carcinoma case-control series, Taiwan (761 cases from two hospitals, 1199 Taiwan Biobank controls); GTEx eQTL; promoter-reporter assays in three oral cancer lines; tumour mRNA (34) and IHC (51)",
+     "genotype": "five common WWOX SNPs, blood DNA; rs11545028 5'UTR variant",
+     "endpoint": "cancer risk, stage, luciferase, mRNA, IHC"
+    }
+   },
+   {
+    "proposition": "The conclusion that the T allele lowers translation initiation rests on the mRNA and IHC associations and the reporter, none of which measures translation; the mRNA is lower, which a transcriptional or stability effect would also give.",
+    "snippet": "Overall, our findings suggest that the rs11545028 T allele reduced the translation initiation rate, which subsequently reduced the WWOX expression, thus contributing to a more aggressive phenotype in OSCC.",
+    "anchor": "Discussion, paragraph 7",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27655721_Cheng2016_PMC5342485.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "male oral squamous cell carcinoma case-control series, Taiwan (761 cases from two hospitals, 1199 Taiwan Biobank controls); GTEx eQTL; promoter-reporter assays in three oral cancer lines; tumour mRNA (34) and IHC (51)",
+     "genotype": "five common WWOX SNPs, blood DNA; rs11545028 5'UTR variant",
+     "endpoint": "cancer risk, stage, luciferase, mRNA, IHC"
+    }
+   },
+   {
+    "proposition": "The expression analysis in tumour tissue uses 34 patients for mRNA and 51 for IHC, with the genotype classes pooled as C/T or T/T; the text gives no P value for the mRNA comparison.",
+    "snippet": "We found that OSCC patient who carry C/T or T/T of rs11545028 polymorphism have significantly lower mRNA levels of WWOX compare to C/C genotype (Figure 2B).",
+    "anchor": "Results, Functional analysis of the WWOX rs11545028 locus in clinical sample",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27655721_Cheng2016_PMC5342485.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "male oral squamous cell carcinoma case-control series, Taiwan (761 cases from two hospitals, 1199 Taiwan Biobank controls); GTEx eQTL; promoter-reporter assays in three oral cancer lines; tumour mRNA (34) and IHC (51)",
+     "genotype": "five common WWOX SNPs, blood DNA; rs11545028 5'UTR variant",
+     "endpoint": "cancer risk, stage, luciferase, mRNA, IHC"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 1D-F: GTEx rank-normalised WWOX expression by rs11545028 genotype in whole blood (N = 149, 147, 42; P = 0.011), skeletal muscle (160, 156, 45; P = 0.0016) and oesophagus mucosa (96, 117, 28; P = 0.027); the boxes overlap and the median shifts are small; Figure 1C places the C at position -5 within a Kozak window (GCCGCCRMAUGGCG consensus above the alignment) and shows it conserved in cow and mouse.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1D whole blood eQTL N=149, N=147, N=42 P=0.011; 1E muscle skeletal N=160, 156, 45 P=0.0016; 1F esophagus mucosa N=96, 117, 28 P=0.027; 1C alignment homo, bos, mus with red C at -5 and AUG highlighted green.",
+    "anchor": "Figure 1, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID27655721/fig1.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "male oral squamous cell carcinoma case-control series, Taiwan (761 cases from two hospitals, 1199 Taiwan Biobank controls); GTEx eQTL; promoter-reporter assays in three oral cancer lines; tumour mRNA (34) and IHC (51)",
+     "genotype": "five common WWOX SNPs, blood DNA; rs11545028 5'UTR variant",
+     "endpoint": "cancer risk, stage, luciferase, mRNA, IHC"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 2: relative luciferase activity of the T-allele construct is about 0.65 (HSC-3), about 0.08 (OECM-1) and about 0.68 (SCC-9) of the C allele, a roughly ten-fold fall in one line against about one-third in two; tumour WWOX mRNA is lower in C/T or T/T than C/C (P = 0.042, about 19 and 15 points); IHC weak/strong counts are C/C 11 and 22, C/T or T/T 12 and 6 with percentages that are column percentages (P = 0.022; a Fisher exact test on the same counts gives about 0.038, my own arithmetic).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2A bar chart rs11545028 C allele white and T allele blue in HSC-3, OECM-1, SCC-9; 2B dot plot relative WWOX mRNA levels C/C against C/T or T/T P=0.042; 2C and 2D IHC weak and strong fields; 2E table weak 11 (47.8%) and 12 (52.2%), strong 22 (78.6%) and 6 (21.4%), p 0.022.",
+    "anchor": "Figure 2, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID27655721/fig2.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "male oral squamous cell carcinoma case-control series, Taiwan (761 cases from two hospitals, 1199 Taiwan Biobank controls); GTEx eQTL; promoter-reporter assays in three oral cancer lines; tumour mRNA (34) and IHC (51)",
+     "genotype": "five common WWOX SNPs, blood DNA; rs11545028 5'UTR variant",
+     "endpoint": "cancer risk, stage, luciferase, mRNA, IHC"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search returned inEPMC Y and isOpenAccess Y for PMC5342485 on 2026-10-20; fullTextXML returned HTTP 200 with a body; both figure JPEGs were fetched from the PMC blob store named in the archived article page.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

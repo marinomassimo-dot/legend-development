@@ -1,0 +1,40 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-27339895-01",
+ "study_id": {
+  "pmid": "27339895",
+  "doi": "10.1074/jbc.M116.716167"
+ },
+ "analysis_at": "2026-10-19T19:48:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d (stated assumption of the Orchestrator), task DEBT-WWOX-DIRECT-D-20261019; context_policy QUESTION_DRIVEN (held: the Huang 2018 review read earlier in this wave, whose pY33/pS14 and mitochondrial statements for MOLT-4 cite this paper). Route: Internet Archive capture of the PMC page as the text surface and nine figure JPEGs from the PMC blob store named in it; Figures 1-9 inspected as images; whole article read. The supplementary index page, supplementary Fig. S1 and Videos S1 to S3 were not retrieved; the supplement is declared not read.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID27339895_Huang2016_PMC5016130_wayback20250308.html",
+ "source_fingerprint": "56a3abe79449b2e57d06cc19278f4f555ed19ce971e716ff1be78ab910bfb0f7",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID27339895.json",
+  "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "Figures 1-9 inspected as images (Figures 1, 2, 3, 4, 5, 6, 7, 8 and 9 viewed; 2, 3, 4, 5 and 8 declared)",
+  "supplementary index, Fig S1 and Videos S1-S3 not retrieved: declared debt"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

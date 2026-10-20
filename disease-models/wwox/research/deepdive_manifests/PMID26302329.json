@@ -2,7 +2,7 @@
  "schema_version": 2,
  "pmid": "26302329",
  "doi": "10.1371/journal.pone.0136356",
- "receipt": "FTR-20261003-26302329-01",
+ "receipt": "FTR-20261019-26302329-02",
  "context_policy": "SOURCE_FIRST",
  "landing": [
   "disease-models/wwox/research/fulltext_dossiers/PMID26302329.md",
@@ -249,6 +249,119 @@
     "acquired_on": "2026-10-02",
     "result_sha256": "1ba199ad4b20ab6bb624bf30532fc236e1d04bb9d9a67d31d5b345d76931cf3f"
    }
+  },
+  {
+   "path": "files/fulltext/PMID26302329_assets/pone.0136356.s002.tif",
+   "sha256": "13161a19722368a572ad3d645b5a7c16623037d5f056e19f3825306ddfea901b",
+   "kind": "supplement_binary",
+   "note": "Supplementary Figure S2 TIFF from the PLOS ONE supplementary files of PMC4547717.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4547717/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "13161a19722368a572ad3d645b5a7c16623037d5f056e19f3825306ddfea901b"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID26302329_assets/pone.0136356.s003.tif",
+   "sha256": "2db56d1dd14631fb2c6ebbc686ab09f77a1810b697688df4d7509c77deeb4bde",
+   "kind": "supplement_binary",
+   "note": "Supplementary Figure S3 TIFF from the PLOS ONE supplementary files of PMC4547717.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4547717/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "2db56d1dd14631fb2c6ebbc686ab09f77a1810b697688df4d7509c77deeb4bde"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID26302329_assets/pone.0136356.s004.tif",
+   "sha256": "f24f5fad98605a5fa40e034f6010996268ffda5946654d89cc4854b93632aa2c",
+   "kind": "supplement_binary",
+   "note": "Supplementary Figure S4 TIFF from the PLOS ONE supplementary files of PMC4547717.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4547717/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "f24f5fad98605a5fa40e034f6010996268ffda5946654d89cc4854b93632aa2c"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID26302329/fz_s001.png",
+   "sha256": "f962e5fe3413a5d83a8bb14a8ac9b16c1e7ed6b161d356266dfb1d9e84ea114b",
+   "kind": "figure",
+   "note": "Supplementary Figure S1 rendered to a 1400-pixel PNG with PyMuPDF from the declared TIFF, opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID26302329_assets/pone.0136356.s001.tif",
+    "extractor": {
+     "name": "PyMuPDF (fitz)",
+     "version": "1.24",
+     "call": "fitz.open(tif)[0].get_pixmap(matrix scaled to 1400 px)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "f962e5fe3413a5d83a8bb14a8ac9b16c1e7ed6b161d356266dfb1d9e84ea114b"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID26302329/fz_s002.png",
+   "sha256": "5b4b8ac9cab10b62500edb49ba058736219c8bb5b4689f30925f477b2399f12d",
+   "kind": "figure",
+   "note": "Supplementary Figure S2 rendered to a 1400-pixel PNG with PyMuPDF from the declared TIFF, opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID26302329_assets/pone.0136356.s002.tif",
+    "extractor": {
+     "name": "PyMuPDF (fitz)",
+     "version": "1.24",
+     "call": "fitz.open(tif)[0].get_pixmap(matrix scaled to 1400 px)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "5b4b8ac9cab10b62500edb49ba058736219c8bb5b4689f30925f477b2399f12d"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID26302329/fz_s003.png",
+   "sha256": "da1982c74da3b1f6ec47838e1e67353fa00db6e574890735a9de05cb6bbed34b",
+   "kind": "figure",
+   "note": "Supplementary Figure S3 rendered to a 1400-pixel PNG with PyMuPDF from the declared TIFF, opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID26302329_assets/pone.0136356.s003.tif",
+    "extractor": {
+     "name": "PyMuPDF (fitz)",
+     "version": "1.24",
+     "call": "fitz.open(tif)[0].get_pixmap(matrix scaled to 1400 px)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "da1982c74da3b1f6ec47838e1e67353fa00db6e574890735a9de05cb6bbed34b"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID26302329/fz_s004.png",
+   "sha256": "4c7f728bc6ce898516a165f90bb64a5645611490eb2eef66d6e77d31e299e586",
+   "kind": "figure",
+   "note": "Supplementary Figure S4 rendered to a 1400-pixel PNG with PyMuPDF from the declared TIFF, opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID26302329_assets/pone.0136356.s004.tif",
+    "extractor": {
+     "name": "PyMuPDF (fitz)",
+     "version": "1.24",
+     "call": "fitz.open(tif)[0].get_pixmap(matrix scaled to 1400 px)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "4c7f728bc6ce898516a165f90bb64a5645611490eb2eef66d6e77d31e299e586"
+   }
   }
  ],
  "verbatim_locators": {
@@ -321,6 +434,71 @@
     "artifact": "files/fulltext/PMID26302329_assets/pone.0136356.s001.tif",
     "panel_text_relation": "panel_only",
     "found_or_sought": "found"
+   },
+   {
+    "proposition": "The supplementary eye-size result supporting 'WWOX contributes to low-level Egr/TNF-alpha cell death' is that adult eyes of Wwox heterozygotes are larger than wild type under Egr/TNF-alpha expression.",
+    "snippet": "This indicates that WWOX can contribute to low level Egr/TNFα-mediated cell death.",
+    "anchor": "Results, WWOX contributes to Egr/TNFalpha-mediated cell death, with S1 Fig",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26302329_OKeefe2015_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Drosophila melanogaster eye and wing discs; Wwox alleles and RNAi; Egr/TNF alpha and hid overexpression; Scrib mutant clones",
+     "genotype": "Wwox1/+ and Wwox2/+ heterozygotes, Wwox1/Wwox2 transheterozygotes, RNAi, ORF overexpression",
+     "endpoint": "adult eye size, eye morphology, discs stained for WWOX"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Supplementary Figure S1: Egr/TNF-alpha expressing eyes of control, Wwox RNAi, Wwox1/+, Wwox2/+ and Wwox ORF flies (A-E, G); adult eye size (F) about 26.5, 29 and 32 times 10^4 pixels for +/+, Wwox1/+ and Wwox2/+ with about ten flies per genotype and significance marks of one and four asterisks; blots H and J show Wwox ORF expression against tubulin with a single lane per condition and bars I and K of about 0.3 to 0.35 for Wwox/tubulin.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] S1 Fig panels A-E and G fly eye photographs labelled Control, WWOX-IR#2, WWOX1/+, WWOX2/+, WWOX ORF; F dot plot 'Adult eye size' Pixels x 10^4 0-40 with +/+, WWOX1/+, WWOX2/+ and asterisks; H-K WWOX and Tubulin blots and bar charts.",
+    "anchor": "Supplementary Figure S1, read as an image",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID26302329/fz_s001.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "Drosophila melanogaster eye and wing discs; Wwox alleles and RNAi; Egr/TNF alpha and hid overexpression; Scrib mutant clones",
+     "genotype": "Wwox1/+ and Wwox2/+ heterozygotes, Wwox1/Wwox2 transheterozygotes, RNAi, ORF overexpression",
+     "endpoint": "adult eye size, eye morphology, discs stained for WWOX"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Supplementary Figure S2: eye photographs of p53 (A-C) and hid (D-F) overexpression with Wwox knocked down or overexpressed; the Wwox manipulation produces slight morphological differences in single examples; no quantification.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] S2 Fig six eye photographs A-F labelled p53, p53 with WWOX down, p53 with WWOX up, hid, hid with WWOX down, hid with WWOX up, scale bar 50 uM.",
+    "anchor": "Supplementary Figure S2, read as an image",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID26302329/fz_s002.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "Drosophila melanogaster eye and wing discs; Wwox alleles and RNAi; Egr/TNF alpha and hid overexpression; Scrib mutant clones",
+     "genotype": "Wwox1/+ and Wwox2/+ heterozygotes, Wwox1/Wwox2 transheterozygotes, RNAi, ORF overexpression",
+     "endpoint": "adult eye size, eye morphology, discs stained for WWOX"
+    }
+   },
+   {
+    "proposition": "The text states that the pattern of cytoplasmic WWOX expression is similar with ectopic Egr/TNF-alpha; Supplementary Figure S3 shows disc and confocal fields with WWOX in the cytoplasm around DAPI nuclei, single fields, no quantification.",
+    "snippet": "A similar pattern of cytoplasmic WWOX expression was observed in the presence of ectopic Egr/TNFα expression ( S3 Fig ).",
+    "anchor": "Results, WWOX localisation, with S3 Fig",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26302329_OKeefe2015_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Drosophila melanogaster eye and wing discs; Wwox alleles and RNAi; Egr/TNF alpha and hid overexpression; Scrib mutant clones",
+     "genotype": "Wwox1/+ and Wwox2/+ heterozygotes, Wwox1/Wwox2 transheterozygotes, RNAi, ORF overexpression",
+     "endpoint": "adult eye size, eye morphology, discs stained for WWOX"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Supplementary Figure S4: eye photographs of Scrib mutant clones (A), Scrib with one Wwox allele missing (B) and Scrib with transheterozygous Wwox loss (C); C shows a darker, disrupted central patch; one example per genotype, no quantification.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] S4 Fig three eye photographs labelled Scrib, Scrib; WWOX1/+, Scrib; WWOX1/WWOX2, scale bar 50 uM, the third with a dark central lesion.",
+    "anchor": "Supplementary Figure S4, read as an image",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID26302329/fz_s004.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "Drosophila melanogaster eye and wing discs; Wwox alleles and RNAi; Egr/TNF alpha and hid overexpression; Scrib mutant clones",
+     "genotype": "Wwox1/+ and Wwox2/+ heterozygotes, Wwox1/Wwox2 transheterozygotes, RNAi, ORF overexpression",
+     "endpoint": "adult eye size, eye morphology, discs stained for WWOX"
+    }
    }
   ],
   "source_fulltext_indexed": true,

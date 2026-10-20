@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-34210081-01",
+ "study_id": {
+  "pmid": "34210081",
+  "doi": "10.3390/cells10071637"
+ },
+ "analysis_at": "2026-10-19T19:51:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d (stated assumption of the Orchestrator), task DEBT-WWOX-DIRECT-D-20261019; context_policy QUESTION_DRIVEN (held: the Huang 2016 and Huang 2018 papers, which cite the Choo 2015 Drosophila primary; and this repository's knowledge that most mammalian WWOX metabolism primaries are already read). Route: Europe PMC JATS for PMC8305172 as the text surface and two figure JPEGs from the PMC blob store; both figures opened as images; whole article read; reference list read from the JATS. The MDPI publisher PDF returned HTTP 403 and was not used.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID34210081_Lee2021_PMC8305172.xml",
+ "source_fingerprint": "393f935d20c466db716e258434ca20ada4042e7ba761571ed710c94d899facab",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "not_present",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID34210081.json",
+  "disease-models/wwox/research/debts_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTISTD-DEBT-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "Figures 1 and 2 inspected as images",
+  "review without methods or results",
+  "no supplementary file, no limitations section"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
