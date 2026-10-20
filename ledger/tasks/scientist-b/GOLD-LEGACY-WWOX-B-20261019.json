@@ -1,0 +1,160 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Metabolic batch. Orchestrator assumption: scientist-d is a fourth equivalent Scientist under the shared contract roles/scientist.md (body 32); operator authorised up to four Scientists on 2026-10-19.",
+ "TASK_ID": "GOLD-LEGACY-WWOX-B-20261019",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-b",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "WWOX-direct papers whose only receipt is a legacy reconstruction or whose artefacts are absent from root files/: first, 39507621 (adult WWOX-DEE case with autonomic seizures and respiratory decline; manifest artefacts absent: restore with evidence_presence.py --search/--restore or re-acquire, then first_read naming the reconstruction); then the highest-value others from `python3 framework/scripts/unread_gold.py --help` sweep, ranked by relevance to metabolic, mitochondrial, autonomic and epilepsy-treatment questions. Maximum 15 papers.",
+ "SCOPE": {
+  "lot": "unread-gold sweep, WWOX-direct first",
+  "brief": "disease-models/wwox/research/metabolic_batch_dispatch_brief_20261019.md"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "per paper manifest PASS, receipt staged",
+  "analysis note gold_wave_20261019_scientist-b.md",
+  "DEFAULTS_TAKEN and STOP_LOG here"
+ ],
+ "DEPENDENCIES": [],
+ "REVIEW_REQUIREMENT": "Mirror ex post",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently",
+ "MILESTONE_PLAN": [
+  "TASK_ACK/CLAIM",
+  "per-paper M0-M5",
+  "analysis note",
+  "self-eval",
+  "report"
+ ],
+ "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
+ "CURRENT_STATE": "WAVE_1_COMPLETE — ten read, five parked, report pending integration",
+ "assigned_on": "2026-10-19",
+ "TASK_ACK": {
+  "TASK_ID": "GOLD-LEGACY-WWOX-B-20261019",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "DECISION": "ACCEPTED",
+  "ACTOR_ID": "scientist-b",
+  "acked_at": "2026-10-19T19:27:00Z",
+  "reading_mode": "PRIMARY_EVIDENCE_READ",
+  "note": "Dispatch brief, standing brief, roles/scientist.md and the state manifest read before the first paper; branch task/GOLD-LEGACY-WWOX-B-20261019 in .claude/worktrees/gold-b; receipts staged, never recorded."
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "GOLD-LEGACY-WWOX-B-20261019",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-b",
+  "claimed_at": "2026-10-19T19:27:00Z",
+  "durable_pointer": "ledger/tasks/scientist-b/GOLD-LEGACY-WWOX-B-20261019.json on branch task/GOLD-LEGACY-WWOX-B-20261019",
+  "claim_precondition_checked": "No other contract names these PMIDs; the lot is the unread-gold and artefact-absent WWOX-direct sweep."
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "the brief asked for first_read naming the legacy reconstruction for 39507621; the ledger holds a contemporaneous complete receipt after the legacy one and the validator refuses first_read after a real reading",
+   "default_taken": "reread_reason new_version_or_supplement with prior_receipt naming the contemporaneous receipt; the legacy receipt named in evidence_basis",
+   "why_safe": "the stricter reading of the validator, understating rather than overstating"
+  },
+  {
+   "condition": "no artefact bytes of the declared manifests were recoverable by SHA-256 search",
+   "default_taken": "re-acquired from PMC efetch and the PMC open-data bucket with no User-Agent; old text locators kept and re-pointed (path only), new locators appended; declared-absent artefacts dropped with their digests left in git history; regenerated page renders declared with new digests",
+   "why_safe": "no old locator text was rewritten; undeclared-revision check clean; every manifest PASS on the shared checkout"
+  },
+  {
+   "condition": "commit refused with VERDICT STALE because manifests and staged receipts stale derived surfaces",
+   "default_taken": "LEGEND_STALE_SURFACES_BECAUSE with a written reason on every path-scoped commit",
+   "why_safe": "the Orchestrator regenerates the shared derived surfaces after recording receipts; no ledger, state manifest or current file touched"
+  },
+  {
+   "condition": "two own locators were overstated after blind audit",
+   "default_taken": "corrected in place with a declared contradicts_locator carrying the audit verdict, and the dossier, commit candidate and receipt text brought into line",
+   "why_safe": "the declaration is the sanctioned route; the audit object names the verdict"
+  },
+  {
+   "condition": "figures of two author-manuscript papers are not served by any route",
+   "default_taken": "parked both with the cascade rather than make a text-only manifest that could not verify the earlier figure attestations",
+   "why_safe": "no claim made on unseen figures"
+  },
+  {
+   "condition": "context budget",
+   "default_taken": "reserve items 18974271, 17803050 and the saturated 42397075 not attempted",
+   "why_safe": "declared in the analysis note"
+  }
+ ],
+ "STOP_LOG": [
+  {
+   "class": "none",
+   "entry": "No stop was taken. One interruption (a session rate limit) was resumed from durable state at the coordinator's instruction, with every committed milestone skipped (RESUMED_FROM_MILESTONE: ten papers committed).",
+   "time_waited": "rate-limit interval"
+  }
+ ],
+ "WAVE_1_RESULT": {
+  "PMIDS_READ": [
+   "39507621",
+   "36779245",
+   "34747138",
+   "30755385",
+   "39416860",
+   "21075834",
+   "34634460",
+   "42422765",
+   "31340538",
+   "32581702"
+  ],
+  "PARKED": {
+   "25012504": "no lawful body reachable",
+   "25403906": "closed access, never read",
+   "27121845": "closed access, never read",
+   "24871327": "figures not served",
+   "30290271": "figures not served"
+  },
+  "manifests": "10 strict-validator PASS",
+  "receipts_staged": "disease-models/wwox/research/receipt_staging/scientist-b/ (FTR-20261019-<PMID>-01 for the ten)",
+  "commit_candidates": [
+   "CC-20261019-SCIENTIST-B-GOLD-CLINICAL-01",
+   "CC-20261019-SCIENTIST-B-GOLD-METAB-01"
+  ],
+  "analysis_note": "disease-models/wwox/research/gold_wave_20261019_scientist-b.md",
+  "self_eval": "disease-models/wwox/research/session_evaluations/2026-10-20_GOLD-LEGACY-WWOX-B-20261019.md",
+  "micro_upgrade": "framework/scripts/pmc_bucket_fetch.py",
+  "DEFAULTS_TAKEN": [
+   {
+    "condition": "the brief asked for first_read naming the legacy reconstruction for 39507621; the ledger holds a contemporaneous complete receipt after the legacy one and the validator refuses first_read after a real reading",
+    "default_taken": "reread_reason new_version_or_supplement with prior_receipt naming the contemporaneous receipt; the legacy receipt named in evidence_basis",
+    "why_safe": "the stricter reading of the validator, understating rather than overstating"
+   },
+   {
+    "condition": "no artefact bytes of the declared manifests were recoverable by SHA-256 search",
+    "default_taken": "re-acquired from PMC efetch and the PMC open-data bucket with no User-Agent; old text locators kept and re-pointed (path only), new locators appended; declared-absent artefacts dropped with their digests left in git history; regenerated page renders declared with new digests",
+    "why_safe": "no old locator text was rewritten; undeclared-revision check clean; every manifest PASS on the shared checkout"
+   },
+   {
+    "condition": "commit refused with VERDICT STALE because manifests and staged receipts stale derived surfaces",
+    "default_taken": "LEGEND_STALE_SURFACES_BECAUSE with a written reason on every path-scoped commit",
+    "why_safe": "the Orchestrator regenerates the shared derived surfaces after recording receipts; no ledger, state manifest or current file touched"
+   },
+   {
+    "condition": "two own locators were overstated after blind audit",
+    "default_taken": "corrected in place with a declared contradicts_locator carrying the audit verdict, and the dossier, commit candidate and receipt text brought into line",
+    "why_safe": "the declaration is the sanctioned route; the audit object names the verdict"
+   },
+   {
+    "condition": "figures of two author-manuscript papers are not served by any route",
+    "default_taken": "parked both with the cascade rather than make a text-only manifest that could not verify the earlier figure attestations",
+    "why_safe": "no claim made on unseen figures"
+   },
+   {
+    "condition": "context budget",
+    "default_taken": "reserve items 18974271, 17803050 and the saturated 42397075 not attempted",
+    "why_safe": "declared in the analysis note"
+   }
+  ],
+  "STOP_LOG": [
+   {
+    "class": "none",
+    "entry": "No stop was taken. One interruption (a session rate limit) was resumed from durable state at the coordinator's instruction, with every committed milestone skipped (RESUMED_FROM_MILESTONE: ten papers committed).",
+    "time_waited": "rate-limit interval"
+   }
+  ]
+ }
+}

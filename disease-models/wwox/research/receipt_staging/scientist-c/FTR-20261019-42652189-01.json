@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-42652189-01",
+ "study_id": {
+  "pmid": "42652189",
+  "doi": "10.3390/biomedicines14081807"
+ },
+ "event_at": "2026-10-19T19:35:02Z",
+ "analysis_at": "2026-10-19T19:35:02Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, interventions batch 2026-10-19, task INTERV-H4-C-20261019, branch task/INTERV-H4-C-20261019; context_policy SOURCE_FIRST. Route: Europe PMC REST fullTextXML (open access) saved to the shared checkout files/fulltext; whole article read from a text rendering of the JATS up to the reference list (56 references counted, not read); the six figures converted from webp and opened in two montages at 1000 px per panel. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID42652189_Alekseeva2026_PMC.xml",
+ "source_fingerprint": "075891751a76ba1fdba5de03a7b8926cbec60d7288fa213dd6c4f101ae4b904d",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42652189.json",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "A rat hyperbaric-oxygen seizure model; no limitations section; the text, the abstract and Figure 6 disagree in places, recorded as locators. Safety-direction paper for the hyperbaric oxygen item; not WWOX evidence and not a clinical-pressure study."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-10-19T20:30:00Z",
+ "event_at": "2026-10-19T20:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_present"
+ },
+ "event_id": "FTR-20261019-38542290-01",
+ "evidence_basis": [
+  "Whole JATS body read section by section; Table 1 read; all seven figures inspected as images.",
+  "FIND: WWOX is absent. In this shock model epinephrine restored pressure and survival but cardiac mitochondrial respiration stayed 29 to 40 percent below control and arterial lactate was 4.8 against 0.9 mmol/L at 60 min; the design has no epinephrine-in-healthy and no shock-only 60-minute group, so shock and epinephrine effects on respiration and lactate cannot be separated; the shortening fraction reaches 100 percent with a collapsed end-systolic diameter.",
+  "References enumerated (44) and screened for integrity, not read."
+ ],
+ "evidence_depth": "complete_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID38542290.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID38542290.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-B-H3-EPINEPHRINE-SAFETY-01.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "0099be1321ef02feeeef17a15fb65d1475417d925cb04a329bbf34866d417269",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID38542290_Oulehri2024_PMC10970273.xml",
+ "study_id": {
+  "doi": "10.3390/ijms25063316",
+  "pmid": "38542290"
+ },
+ "workflow": "scientist-b, interventions batch 2026-10-19 group H3, task branch task/INTERV-H3-B-20261019; context_policy SOURCE_FIRST. Route: Europe PMC JATS fetched with no User-Agent, figures from the PMC OA S3 bucket, all into the root files/ tree; figures inspected as images where stated; locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a JSON file for the integrator and was not appended at preparation time."
+}

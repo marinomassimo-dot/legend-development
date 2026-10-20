@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-10-20T02:00:00Z",
+ "event_at": "2026-10-20T02:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "captions_only"
+ },
+ "event_id": "FTR-20261019-42422765-01",
+ "evidence_basis": [
+  "Whole JATS body read; Figures 1 and 3 opened as images; Figures 2, 4-7 and the supplementary pages not re-opened in this pass (earlier receipts record them read), hence figures and supplementary captions_only here and the depth is partial.",
+  "Re-acquired PMC XML is byte-identical to the 2026-09-27 copy (same SHA-256).",
+  "NEW: glucose at P14 is corrected by CMV and partly by EF1-alpha without WT-like survival (CMV: 3 of 5 dead by day 32); the P10 partial correction by LD or HD is not significant against untreated KO; P20 and P30 panels contain no untreated KO."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID42422765.md",
+  "disease-models/wwox/research/gold_wave_20261019_scientist-b.md"
+ ],
+ "prior_receipt": "FTR-20260928-42422765-10",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "7bea83346b708e541d2c432e5da4029f69673e1abc3c6fe70926ad0e3ec2eef2",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID42422765_Obeid2026_PMC_2026-09-27.xml",
+ "study_id": {
+  "doi": "10.1016/j.omta.2026.201791",
+  "pmid": "42422765"
+ },
+ "workflow": "scientist-b gold wave 2026-10-19; QUESTION_DRIVEN (eleven earlier receipts); bytes re-acquired with no User-Agent; prepared as JSON for the integrator and not appended."
+}

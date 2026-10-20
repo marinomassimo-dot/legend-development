@@ -1,0 +1,258 @@
+{
+ "schema_version": 2,
+ "pmid": "40944047",
+ "doi": "10.3390/jcm14176289",
+ "pmcid": "PMC12428941",
+ "receipt": "FTR-20261019-40944047-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the interventions selection file's one-line 'why it matters' for this row and the group H5 header, plus the earlier readings of this lot done in this session (Yuskaitis, Phillips-Farfan, Salvati) and the registry theme records CLAIM 042 and DL-MECH-020 admitted after the first pass of the first paper. No registry record about this paper (none exists).",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/interventions_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a non-WWOX comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype; class-level literature only, BLOCK-1 caution carried in the analysis note."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the load-bearing triples were checked mechanically by locator_audit.py and are exposed in the analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "output_kind": "narrative_review",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Non-systematic narrative review of resuscitation fluid strategy, monitoring and transfusion in critically ill adults with traumatic brain injury (273 references, AI-assisted language editing). It supplies class-level statements on hypotonicity, fluid balance and blood-brain-barrier disruption in injured brains; none concerns children with a genetic encephalopathy, dextrose solutions as such (the text never mentions dextrose) or a low-calorie regimen, and it is not WWOX."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (fasting OR \"caloric restriction\" OR \"calorie restriction\" OR \"dietary restriction\")",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the four hits are type 2 diabetes association studies (fasting glucose), none a fasting or restriction intervention"
+   },
+   {
+    "query": "WWOX AND (mTOR OR mTORC1 OR AMPK)",
+    "count": 8,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (hypoglycemia OR hypoglycaemia OR dextrose OR \"glucose infusion\")",
+    "count": 21,
+    "source": "PubMed ESearch rettype=count 2026-10-19; hits are glucose-metabolism, glycolysis and association papers, none an infusion or dextrose intervention"
+   },
+   {
+    "query": "WWOX AND (edema OR oedema OR hyponatremia OR \"fluid overload\")",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the two hits are a high-altitude pulmonary oedema locus list and a zebrafish embryo knockdown paper"
+   },
+   {
+    "query": "WWOX AND (refeeding OR thiamine OR \"parenteral nutrition\")",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are PubMed search hits only (ESearch rettype=count, 2026-10-19), not a census; none of the WWOX hits tests the intervention of this group."
+ },
+ "multihop": {
+  "references_enumerated": 273,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted (273 entries by parsing the JATS reference block), not read item by item; no WWOX-directed reference seen in the body."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 40944047 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED for this PMID in the seven registry surfaces at commit 0c85331b341e; a statement about that query only. CLAIM 042 and DL-MECH-020 (ketogenic-diet lines) admitted for comparison after the first pass."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 273,
+   "references_screened": 249,
+   "references_with_doi": 249,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 24
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40944047_Ziaka2025_PMC.xml",
+   "sha256": "839ca9cb5cb0770ec7dee2d52000578e9e7f75e2f94b8fb4c859906de1677d88",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12428941/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "839ca9cb5cb0770ec7dee2d52000578e9e7f75e2f94b8fb4c859906de1677d88"
+   }
+  },
+  {
+   "path": "files/figures/PMID40944047/native/jcm-14-06289-g001.jpg",
+   "sha256": "2e622d59329d22972da17bccfd3108d2982b1ec359506b03990ca703f8d7aecf",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12428941.1/jcm-14-06289-g001.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "2e622d59329d22972da17bccfd3108d2982b1ec359506b03990ca703f8d7aecf"
+   }
+  },
+  {
+   "path": "files/figures/PMID40944047/native/jcm-14-06289-g002.jpg",
+   "sha256": "dc3ac5c559c1dd9f00f28602d7cfedca45bd18d753c5d87412c2127c41319ed3",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12428941.1/jcm-14-06289-g002.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "dc3ac5c559c1dd9f00f28602d7cfedca45bd18d753c5d87412c2127c41319ed3"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The review is a non-systematic PubMed search with no appraisal and an AI-assisted language edit; it covers critically ill adults with traumatic brain injury.",
+    "snippet": "A comprehensive, non-systematic literature search was conducted using PubMed to identify relevant studies focusing on fluid management in patients with TBI.",
+    "anchor": "Methods",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40944047_Ziaka2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Acute fall in plasma osmolality (water intoxication, hypotonic hyponatremia) drives water into the brain; the BBB is permeable to free water but not to solutes.",
+    "snippet": "Nevertheless, an acute decrease in plasma osmolality, as seen in water intoxication and hypotonic hyponatremia, creates an osmotic gradient that drives water into the brain compartment, leading to increased intracranial water content and brain edema [53,54,55].",
+    "anchor": "2.1.1 Blood-brain barrier disruption",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40944047_Ziaka2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors argue the brain's protective water shift to CSF may be impaired when the BBB is disrupted; stated as an argument ('one might argue'), not as a measurement.",
+    "snippet": "However, one might argue that in patients with a disrupted BBB, such as those with TBI, this protective mechanism is impaired, potentially exacerbating cerebral edema and increasing ICP.",
+    "anchor": "2.1.1 Blood-brain barrier disruption",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40944047_Ziaka2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the CENTER-TBI and OzENTER-TBI cohorts (2125 adults) a mean positive daily fluid balance and higher daily fluid input were associated with higher ICU mortality and worse outcomes.",
+    "snippet": "demonstrated that a mean positive daily fluid balance was associated with higher ICU mortality and worse functional outcomes.",
+    "anchor": "3.1.2 Volume status",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40944047_Ziaka2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A 351-patient retrospective study found both low and high fluid balance associated with poor short-term outcome.",
+    "snippet": "a retrospective study of 351 patients with moderate and severe TBI highlighted that both low and high fluid balance were associated with poor short-term outcomes.",
+    "anchor": "3.1.2 Volume status",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40944047_Ziaka2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review reports higher mortality with albumin than saline in the SAFE-TBI analysis and states the evidence is considered uncertain.",
+    "snippet": "Nonetheless, the evidence is considered uncertain [30].",
+    "anchor": "4.1.2 Albumin vs crystalloids",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40944047_Ziaka2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Balanced crystalloids are described as relatively hypotonic and, for TBI, linked to higher mortality in prehospital Ringer's lactate (PROMMTT secondary analysis), the SMART TBI subgroup and a meta-analysis (60% relative increase in death); the recommendation is that saline be preferred.",
+    "snippet": "Moreover, a recent systematic review and meta-analysis including 1896 patients with TBI found a 60% relative increase in the risk of death in the balanced crystalloids group compared to the saline group [225].",
+    "anchor": "4.1.3 Balanced crystalloids vs isotonic saline",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40944047_Ziaka2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Conclusions and take-home points call the cerebral-edema risk of balanced crystalloids theoretical.",
+    "snippet": "Balanced crystalloids are not suggested, as their use could theoretically be associated with the development or worsening of cerebral edema.",
+    "anchor": "6. Conclusions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40944047_Ziaka2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review states no consensus or standardised approach to resuscitation fluid management in TBI exists.",
+    "snippet": "A consensus or standardized approach to fluid resuscitation management in patients with TBI does not exist.",
+    "anchor": "6. Conclusions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40944047_Ziaka2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 is the authors' schematic of cytotoxic, ionic and vasogenic edema with intact versus impaired BBB, with time labels (minutes, immediately after, hours) not given a source in the caption.",
+    "snippet": "Visual attestation of Figure 1: three panels titled cytotoxic edema (within minutes after TBI, intact BBB), ionic edema (immediately after cytotoxic edema), vasogenic edema (hours after primary insult, impaired BBB), with a bar 'vasogenic edema exacerbates cytotoxic edema' leading to intracranial hypertension and secondary brain injury.",
+    "anchor": "Figure 1 (image jcm-14-06289-g001)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID40944047/native/jcm-14-06289-g001.jpg"
+    ],
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "conceptual schematic, adult TBI",
+     "endpoint": "edema types"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12428941/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure panel."
+ }
+}

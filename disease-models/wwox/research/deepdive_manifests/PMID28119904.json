@@ -1,0 +1,210 @@
+{
+ "schema_version": 2,
+ "pmid": "28119904",
+ "doi": "10.3389/fped.2016.00143",
+ "receipt": "FTR-20261019-28119904-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "The Siena neonatal biochemistry group (Buonocore, Perrone), long-standing authors on oxidative stress in newborns; the review is a secondary summary of trials and animal studies, with no new data, and concerns preterm infants. Weighted as a map of saturation-target trials, not as evidence for any disease."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "hyperoxia AND neonatal brain",
+    "count": 292,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (hyperoxia OR hyperbaric OR oxygen therapy)",
+    "count": 1,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches, not measurements."
+ },
+ "multihop": {
+  "references_enumerated": 79,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-direct reference. The five saturation-target trials (SUPPORT, BOOST II, COT, STOP-ROP, BOOST I) are named in the text; their primary reports were not opened.",
+  "disposition": "No gene-direct references."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 28119904 --hops 1; paper_packet.py packet --pmid 28119904; fulltext_receipts.py status --pmid 28119904",
+  "hits": 0,
+  "note": "No record in any of the seven searched registry surfaces and no prior receipt; an empty result is a statement about that query over those files."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication types Journal Article and Review.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 79,
+   "references_screened": 69,
+   "references_with_doi": 69,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 10
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID28119904_Perrone2016_PMC.xml",
+   "sha256": "e1411f5bc5f8c9e549755ef56fb8293888c2d9aa3eecf719d5b48bac79a3cfd3",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5220090/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "e1411f5bc5f8c9e549755ef56fb8293888c2d9aa3eecf719d5b48bac79a3cfd3"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Genre: a narrative review of oxygen toxicity and saturation targets in newborns, mainly preterm; it has no Methods section, no search description, no figures and no tables. WWOX and genetic encephalopathy are not discussed.",
+    "snippet": "This review focuses on the mechanisms of ROS production and ROS-induced toxic effects following oxygen administration in newborns",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28119904_Perrone2016_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Population limit: the vulnerability argument rests on preterm antioxidant immaturity and the premature infant is the named at-risk group.",
+    "snippet": "Therefore, premature infants are especially prone to oxidant injury, being unprepared for hyperoxic challenge of extrauterine life.",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28119904_Perrone2016_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Hyperoxia is linked to injury of lung, retina and red cells, and the retina mechanism involves HIF-1 alpha and VEGF in the developing vessels.",
+    "snippet": "the developing retinal endothelial cells activate various transcription factors, including HIF-1α and vascular endothelial growth factor",
+    "anchor": "Retina",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28119904_Perrone2016_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Long-term: neonatal hyperoxia in mice is linked to adult neurodevelopmental impairment (abnormal behaviour, memory deficits, small hippocampus) without intracranial pathology; this is rodent evidence cited in the review.",
+    "snippet": "neurodevelopmental impairments in adult life, as demonstrated by abnormal behavior, deficits in spatial and recognition memory, small hippocampal dimensions",
+    "anchor": "Long-term Effects",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28119904_Perrone2016_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Trial evidence: lowering the saturation target reduced severe retinopathy but raised death before discharge in SUPPORT and death and necrotising enterocolitis in BOOST II.",
+    "snippet": "the use of a lower range of oxygen saturation results in a decrease of occurrence of severe ROP and an increase of death before the discharge",
+    "anchor": "State of Knowledge, SUPPORT",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28119904_Perrone2016_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "BOOST II: restrictive oxygen use below 90 percent saturation raised death and necrotising enterocolitis.",
+    "snippet": "a restrictive use of oxygen, with target range of saturation below 90%, is associated with a higher risk of death and necrotizing enterocolitis",
+    "anchor": "State of Knowledge, BOOST II",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28119904_Perrone2016_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review's own advice is not unitary: abstract and text give an alarm range of 90 to 95 percent, one cited centre used below 85 and above 93 percent, and the final paragraph proposes alarms at 91 and 96 percent.",
+    "snippet": "it has been suggested to set the acoustic signals at 91 and 96%, with a delay time not longer than 20 s",
+    "anchor": "State of Knowledge, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28119904_Perrone2016_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The consensus statement: guidelines suggest a target of 90 to 95 percent for infants below 28 weeks of gestation up to 36 weeks postmenstrual age.",
+    "snippet": "the 2013 European Consensus Guidelines on the Management of Neonatal Respiratory Distress Syndrome in Preterm Infants suggested that SpO2 should be targeted at 90–95%",
+    "anchor": "State of Knowledge",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28119904_Perrone2016_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review concedes the optimum remains unknown and that pulse oximetry accuracy is itself controversial.",
+    "snippet": "the optimal target range for oxygen saturation in the sick newborns and, above all, in the extremely preterm babies is not clear",
+    "anchor": "State of Knowledge",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28119904_Perrone2016_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Its bottom line is to avoid both hypoxia and hyperoxia in infants needing oxygen, with no antioxidant intervention endorsed.",
+    "snippet": "the most careful approach is to avoid both hypoxia and hyperoxia in infants requiring oxygen supplementation",
+    "anchor": "State of Knowledge",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28119904_Perrone2016_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC5220090/fullTextXML returned HTTP 200 (102797 bytes) on 2026-10-19; the declared artefact is that response, byte for byte; the JATS holds no figure or table element (counted in session) and the Europe PMC supplementaryFiles request returned an empty bean.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}

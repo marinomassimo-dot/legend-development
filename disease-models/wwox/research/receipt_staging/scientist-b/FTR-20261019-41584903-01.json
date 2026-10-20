@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-10-19T20:30:00Z",
+ "event_at": "2026-10-19T20:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "not_present",
+  "figures": "not_present",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present"
+ },
+ "event_id": "FTR-20261019-41584903-01",
+ "evidence_basis": [
+  "Whole JATS body read section by section; the article has no figures or tables.",
+  "FIND: WWOX is absent. The one direct epinephrine statement is a provocation, not a therapy: arrhythmias can be induced by epinephrine plus caffeine in Scn8a DEE13 mice to mimic an ictal sympathetic surge. The HPA-axis SUDEP mechanism is cited to a 2021 review (ref 73) and a 2025 preprint (ref 102); one citation (ref 38, a potassium channel paper) does not match the statement it carries; one data set is labelled unpublished.",
+  "References enumerated (102) and screened for integrity; ref 38, 73 and 102 identities read from the JATS reference list; primaries not read."
+ ],
+ "evidence_depth": "complete_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41584903.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID41584903.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-B-H3-AUTONOMIC-HYPOGLYCAEMIA-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-B-H3-EPINEPHRINE-SAFETY-01.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "be260acadb96bb0886ec6efd3f46755f96b7662f378402445ef91c8172e73449",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID41584903_Wenker2026_PMC12823373.xml",
+ "study_id": {
+  "doi": "10.1177/15357597261416723",
+  "pmid": "41584903"
+ },
+ "workflow": "scientist-b, interventions batch 2026-10-19 group H3, task branch task/INTERV-H3-B-20261019; context_policy SOURCE_FIRST. Route: Europe PMC JATS fetched with no User-Agent, figures from the PMC OA S3 bucket, all into the root files/ tree; figures inspected as images where stated; locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a JSON file for the integrator and was not appended at preparation time."
+}

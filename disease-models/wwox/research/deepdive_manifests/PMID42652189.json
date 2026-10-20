@@ -1,0 +1,426 @@
+{
+ "schema_version": 2,
+ "pmid": "42652189",
+ "doi": "10.3390/biomedicines14081807",
+ "receipt": "FTR-20261019-42652189-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "A Sechenov Institute (St Petersburg) hyperbaric neurophysiology group; primary for the hyperbaric oxygen seizure model in rats, not a WWOX group. Observation (seizure latencies, NeuN counts at n = 8) is weighted above the AMPA-primacy interpretation, which rests on two drugs and shared or re-used control data."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "hyperbaric oxygen AND seizure",
+    "count": 555,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (hyperoxia OR hyperbaric OR oxygen therapy)",
+    "count": 1,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches, not measurements."
+ },
+ "multihop": {
+  "references_enumerated": 56,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-direct reference; WWOX is not named in the article.",
+  "disposition": "No gene-direct references."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42652189 --hops 1; paper_packet.py packet --pmid 42652189; fulltext_receipts.py status --pmid 42652189",
+  "hits": 0,
+  "note": "No record in any of the seven searched registry surfaces and no prior receipt; an empty result is a statement about that query over those files."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication type Journal Article.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 56,
+   "references_screened": 50,
+   "references_with_doi": 50,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 6
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42652189_Alekseeva2026_PMC.xml",
+   "sha256": "075891751a76ba1fdba5de03a7b8926cbec60d7288fa213dd6c4f101ae4b904d",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13509269/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "075891751a76ba1fdba5de03a7b8926cbec60d7288fa213dd6c4f101ae4b904d"
+   }
+  },
+  {
+   "path": "files/figures/PMID42652189/biomedicines-14-01807-g001.webp",
+   "sha256": "c22b7b698f826ccb4aedbba67596e0ee6dc66fcb9929b11686b17f52d1dd3f6b",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13509269 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID42652189/biomedicines-14-01807-g002.webp",
+   "sha256": "73ed40bdbdaa5172c8f863dd107b3cee48993e8fe68363561e76edcc3c61fe2d",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13509269 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID42652189/biomedicines-14-01807-g003.webp",
+   "sha256": "b050885454c475526b5f3ef0ad86943928e3b9ee811ca94d6a46240eef093ae1",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13509269 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID42652189/biomedicines-14-01807-g004.webp",
+   "sha256": "70cfd14f86aded67b85c7cba4ecd4bfa899ffbcba3c55ad92137505143a5d681",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13509269 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID42652189/biomedicines-14-01807-g005.webp",
+   "sha256": "7bff1200c867349f32336cd06bf9b46c18c807e927fed0407ac446da50144464",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13509269 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID42652189/biomedicines-14-01807-g006.webp",
+   "sha256": "deaf457b61a88eed8a2eb6ac7572e8561b304dde9e506d81fed5e33945789abf",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13509269 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/p42652189/g001.png",
+   "sha256": "72b35897dd18cbd437ad1af2b0544159dadc675dc981a75af2f3fbb456dc4f4b",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42652189/biomedicines-14-01807-g001.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "72b35897dd18cbd437ad1af2b0544159dadc675dc981a75af2f3fbb456dc4f4b"
+   }
+  },
+  {
+   "path": "files/figure_renders/p42652189/g002.png",
+   "sha256": "155bf5a27907a35d809c29553490a79aebb51905187eb94248f2f16185dca43b",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42652189/biomedicines-14-01807-g002.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "155bf5a27907a35d809c29553490a79aebb51905187eb94248f2f16185dca43b"
+   }
+  },
+  {
+   "path": "files/figure_renders/p42652189/g003.png",
+   "sha256": "c55db9508505f07cf84c3435497d75a5a11cb641eea74ec0e9d33e61bd3648db",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42652189/biomedicines-14-01807-g003.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "c55db9508505f07cf84c3435497d75a5a11cb641eea74ec0e9d33e61bd3648db"
+   }
+  },
+  {
+   "path": "files/figure_renders/p42652189/g004.png",
+   "sha256": "3eff4658c12a2c4ccaf370a7ae1a6481aaa3b26f07e4e0792262491f4718a078",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42652189/biomedicines-14-01807-g004.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "3eff4658c12a2c4ccaf370a7ae1a6481aaa3b26f07e4e0792262491f4718a078"
+   }
+  },
+  {
+   "path": "files/figure_renders/p42652189/g005.png",
+   "sha256": "93daea72400ec81ffa6dbe80d2585c152b24eb8a88b136d12cb807d94f5dbc1e",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42652189/biomedicines-14-01807-g005.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "93daea72400ec81ffa6dbe80d2585c152b24eb8a88b136d12cb807d94f5dbc1e"
+   }
+  },
+  {
+   "path": "files/figure_renders/p42652189/g006.png",
+   "sha256": "a0671484880a2cab3d37db212dd3bd17cf4e3e39160b1e58fa02719ceeec9262",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42652189/biomedicines-14-01807-g006.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "a0671484880a2cab3d37db212dd3bd17cf4e3e39160b1e58fa02719ceeec9262"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42652189_mA.png",
+   "sha256": "7ff535a5e937ad5fde62aca82d75241821a0c4998ec75862bdae31563c2fc937",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figure_renders/p42652189/g001.png",
+    "extractor": {
+     "name": "ImageMagick montage",
+     "version": "system package",
+     "call": "montage g001-g004 -tile 2x2 -geometry 1000x"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "7ff535a5e937ad5fde62aca82d75241821a0c4998ec75862bdae31563c2fc937"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42652189_mB.png",
+   "sha256": "6feda6d55b87e246865b7d08af2adb0f10468dab0c61cad3d07f885c2fff903b",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figure_renders/p42652189/g001.png",
+    "extractor": {
+     "name": "ImageMagick montage",
+     "version": "system package",
+     "call": "montage g005 g006 -tile 2x1 -geometry 1000x"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "6feda6d55b87e246865b7d08af2adb0f10468dab0c61cad3d07f885c2fff903b"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "System: adult male Wistar rats given 100 percent oxygen at 6 ATA (5 ATA for the glutamine-synthetase controls) until generalised seizure or 90 minutes; the authors state the exposure is a research seizure model, not a therapy. No WWOX and no children.",
+    "snippet": "high-pressure HBO2 exposure is explicitly employed in biomedical research not as a therapy but as a robust and reproducible experimental model",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42652189_Alekseeva2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Clinical context stated by the authors: therapeutic protocols use 1.5 to 2.5 ATA for 60 to 90 minutes, while 3 to 6 ATA is known to cause CNS oxygen toxicity.",
+    "snippet": "Clinical protocols typically utilize lower pressures (usually 1.5 to 2.5 ATA) for limited periods (60 to 90 min).",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42652189_Alekseeva2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Hyperoxic seizures are described as generalised tonic-clonic and preceded by prodromal facial and sensory symptoms; pressures above 2 ATA for tens of minutes raise risk.",
+    "snippet": "exposure to pressures above 2 ATA for prolonged periods (tens of minutes) significantly increases the risk of CNS-OT",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42652189_Alekseeva2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Memantine shortened the latency of every seizure stage and the stage 4 latency differed from control at 5 and 25 mg/kg.",
+    "snippet": "NMDA receptor blockade by memantine significantly accelerated seizure development under hyperbaric oxygen conditions",
+    "anchor": "Results 3.3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42652189_Alekseeva2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Perampanel at 1 and 5 mg/kg lengthened stage 3 and 4 latency; the lowest dose did nothing.",
+    "snippet": "administration of perampanel at doses of 1 and 5 mg/kg significantly prolonged the time to the onset of both Stage 3 and Stage 4 seizures",
+    "anchor": "Results 3.4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42652189_Alekseeva2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Perampanel delayed seizures but did not prevent them: seizures occurred in 7 of 8 treated animals against all control animals.",
+    "snippet": "seizures developed in only 7 out of 8 rats (87.5%) in each group",
+    "anchor": "Results 3.5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42652189_Alekseeva2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The combination was compared with monotherapy data re-used from earlier separate experiments, not with concurrent groups.",
+    "snippet": "the baseline data for memantine and perampanel monotherapies were utilized from our previous separate experiments",
+    "anchor": "Results 3.5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42652189_Alekseeva2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Neuronal result: perampanel alone preserved NeuN-positive cells in CA3 (p below 0.0001) and, as reported, CA1 (p 0.04), while the memantine plus perampanel combination did not protect CA1 or CA3.",
+    "snippet": "Pre-treatment with both memantine and perampanel prior to HBO2 exposure failed to provide a neuroprotective effect in both the CA1 and CA3 regions",
+    "anchor": "Results 3.6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42652189_Alekseeva2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion nevertheless says perampanel 'efficiently prevented hippocampal cell loss' and that memantine plus perampanel mitigated, contradicting the combination result of section 3.6.",
+    "snippet": "In sharp contrast, the non-competitive AMPA receptor antagonist perampanel efficiently prevented hippocampal cell loss.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42652189_Alekseeva2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Count mismatch: the Methods list 94 animals in the seizure-monitoring groups (14 + 16 + 8 + 24 + 24 + 8) and 134 in total, while the abstract gives n = 86 for monitoring.",
+    "snippet": "A total of 134 rats were used in this study.",
+    "anchor": "Methods 2.3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42652189_Alekseeva2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Iba-1 is described as marking astrocytes in the Methods, although it is a microglial marker; the text elsewhere calls it the microglia marker.",
+    "snippet": "Iba-1-positive astrocytes were quantified within an area extending from the stratum oriens to the stratum radiatum.",
+    "anchor": "Methods 2.4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42652189_Alekseeva2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mechanistic claims are speculative: the memantine acceleration is attributed to GluN2A zinc relief, cerebral blood flow, or interneuron disinhibition, none of which was tested.",
+    "snippet": "Third, in our opinion, classical NMDA receptors may be functionally bypassed during the initiation phase of hyperbaric seizures.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42652189_Alekseeva2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors describe the conclusion as novel and call AMPA receptors the definitive upstream trigger from one rat model and two drugs.",
+    "snippet": "Because these data are entirely novel, a direct comparison within hyperbaric physiology is limited",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42652189_Alekseeva2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figures 1 to 4: stage latencies (stage 4 about 45 min in untreated 6 ATA animals); MSO at 5 ATA shortened stage 4 from about 97 to about 73 and about 11 min (a different control group); memantine bars lower at 1, 5 and 25 mg/kg (stage 4 about 37 against about 25 to 32); perampanel raised stage 4 from about 37 to about 51, 69 and 57 min at 0.2, 1 and 5 mg/kg.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 A-B stage latencies; Figure 2 A-B MSO; Figure 3 A-B memantine; Figure 4 A-B perampanel box plots with asterisks.",
+    "anchor": "Figures 1-4",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42652189_mA.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 5 and Figure 6: Kaplan-Meier curves with the combination between perampanel and control; NeuN counts: CA1 control about 47, HBO2 about 41, HBO2 plus perampanel about 39.5 (below the HBO2 bar although a significance bracket links them), combination about 45.5; CA3 control about 58, HBO2 about 47, memantine about 45, perampanel about 56, combination about 49. The CA1 panel therefore disagrees with the text on both the perampanel and combination arms.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5A box plots, Figure 5B survival curves; Figure 6 D CA1 bars and E CA3 bars with * and **** brackets.",
+    "anchor": "Figures 5 and 6",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42652189_mB.png",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13509269/fullTextXML returned HTTP 200 (135718 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}

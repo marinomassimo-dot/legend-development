@@ -1,0 +1,691 @@
+{
+ "schema_version": 2,
+ "pmid": "35984507",
+ "doi": "10.1007/s00018-022-04508-7",
+ "receipt": "FTR-20261019-35984507-03",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A Coimbra group on diabetes-associated brain mitochondrial dysfunction using the WWOX phospho-Tyr33 antibody and the Zfra1-31 peptide supplied by the literature of another laboratory; it studies WWOX activation in a cell line and an animal model of type 2 diabetes, not biallelic loss of function. Weighted as primary evidence for pTyr33-WWOX in high glucose and as an unspecific pharmacological result for the peptide."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND mitochondria",
+    "count": 26,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches, not measurements."
+ },
+ "multihop": {
+  "references_enumerated": 67,
+  "gene_direct_refs_in_source": [
+   "22202011",
+   "14555208",
+   "15126504",
+   "18371080",
+   "26345274",
+   "29067327",
+   "29310447",
+   "25537520",
+   "19500159",
+   "24369382",
+   "27495153",
+   "32389029",
+   "17142102",
+   "34359949",
+   "24456803"
+  ],
+  "resolved": [
+   {
+    "pmid": "19500159",
+    "how": "Ref 23 (Suzuki rat lde mutation) has a complete receipted reading in LEGEND."
+   },
+   {
+    "pmid": "29067327",
+    "how": "Ref 20 (Zfra in triple-transgenic mice) has a partial receipt only; its Zfra aggregation claims are restated by this paper and not re-read here."
+   },
+   {
+    "pmid": "25537520",
+    "how": "Ref 22 has a partial receipt only; not re-read here."
+   }
+  ],
+  "queued": [
+   {
+    "queue": "CC-20261019-SCIENTIST-C-G3-01",
+    "why": "Refs 16 (Chang 2003, activation of WOX1), 17 (Sze 2004, tau phosphorylation), 18 (Lo 2008, MPP+ and Tyr33), 15 (Teng 2012), 19 (Tabarki 2015), 21 (Huang 2018) and 47 (Chang 2007) have no receipt of any kind; refs 24, 25, 45, 48 and 49 have partial receipts only. The two claims this paper leans on, the p53-WWOX mitochondrial complex (ref 16) and tyrosine 33 dependence of MPP+ death (ref 18), are the primaries for the mechanism; none is read in this task."
+   }
+  ],
+  "disposition": "Fifteen gene-direct references enumerated from the reference list (PMIDs resolved by DOI in this session); eight have an existing receipt (one complete, seven partial; refs 20 and 22 are listed under resolved as partial-only and are not re-read here); the other seven are queued."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 35984507 --hops 1; paper_packet.py packet; fulltext_receipts.py status --pmid 35984507",
+  "hits": 3,
+  "note": "Run after the first pass. Registry records and two prior partial receipts exist; the prior receipts record that no total-WWOX result and no genetic WWOX arm appears, which the figures here confirm."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link recorded for this paper.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 67,
+   "references_screened": 61,
+   "references_with_doi": 61,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 6
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID35984507_Carvalho2022_PMC11071800_wayback20240101.html",
+   "sha256": "c09df1fa15f38207d1ffd399a6dde3c5aab21be48a4fe9c23ebf4c1f3c969cec",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://web.archive.org/web/20250203091618/https://pmc.ncbi.nlm.nih.gov/articles/PMC11071800/",
+    "http_method": "GET",
+    "tier": "Internet Archive Wayback snapshot of the PMC article page (snapshot 2025-02-03)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "c09df1fa15f38207d1ffd399a6dde3c5aab21be48a4fe9c23ebf4c1f3c969cec"
+   }
+  },
+  {
+   "path": "files/figures/PMID35984507/18_2022_4508_Fig1_HTML.png",
+   "sha256": "2bb4ab6f08718d17ac2b8c4f26f84ac6baaf281baa6eb8bef68b255c61736c8c",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs00018-022-04508-7/MediaObjects/18_2022_4508_Fig1_HTML.png",
+    "http_method": "GET",
+    "tier": "Springer media server figure image",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "2bb4ab6f08718d17ac2b8c4f26f84ac6baaf281baa6eb8bef68b255c61736c8c"
+   }
+  },
+  {
+   "path": "files/figures/PMID35984507/18_2022_4508_Fig2_HTML.png",
+   "sha256": "56a2e99f42e191bbd0bc69bf3a137ca82b815422b3e699f1092e025e8338d175",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs00018-022-04508-7/MediaObjects/18_2022_4508_Fig2_HTML.png",
+    "http_method": "GET",
+    "tier": "Springer media server figure image",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "56a2e99f42e191bbd0bc69bf3a137ca82b815422b3e699f1092e025e8338d175"
+   }
+  },
+  {
+   "path": "files/figures/PMID35984507/18_2022_4508_Fig3_HTML.png",
+   "sha256": "bb4025922a8ee922f131eeb42914228e0d6dde975298f60e8422df9619cfc1cf",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs00018-022-04508-7/MediaObjects/18_2022_4508_Fig3_HTML.png",
+    "http_method": "GET",
+    "tier": "Springer media server figure image",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "bb4025922a8ee922f131eeb42914228e0d6dde975298f60e8422df9619cfc1cf"
+   }
+  },
+  {
+   "path": "files/figures/PMID35984507/18_2022_4508_Fig4_HTML.png",
+   "sha256": "5b0f38a7a1dff9476c5752bb0c8ee3819d0694479fa01d0f06ba5ea0d826277b",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs00018-022-04508-7/MediaObjects/18_2022_4508_Fig4_HTML.png",
+    "http_method": "GET",
+    "tier": "Springer media server figure image",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "5b0f38a7a1dff9476c5752bb0c8ee3819d0694479fa01d0f06ba5ea0d826277b"
+   }
+  },
+  {
+   "path": "files/figures/PMID35984507/18_2022_4508_Fig5_HTML.png",
+   "sha256": "cc635f578bf1a600d099416107b21863c0b5001326210fb24c69f5ad66e1d619",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs00018-022-04508-7/MediaObjects/18_2022_4508_Fig5_HTML.png",
+    "http_method": "GET",
+    "tier": "Springer media server figure image",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "cc635f578bf1a600d099416107b21863c0b5001326210fb24c69f5ad66e1d619"
+   }
+  },
+  {
+   "path": "files/figures/PMID35984507/18_2022_4508_Fig6_HTML.png",
+   "sha256": "a9c63053f0c67b8d91c206adb0498e84469a506d9ee4f7c3d0d7b1e618d5715b",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs00018-022-04508-7/MediaObjects/18_2022_4508_Fig6_HTML.png",
+    "http_method": "GET",
+    "tier": "Springer media server figure image",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "a9c63053f0c67b8d91c206adb0498e84469a506d9ee4f7c3d0d7b1e618d5715b"
+   }
+  },
+  {
+   "path": "files/figures/PMID35984507/18_2022_4508_Fig7_HTML.png",
+   "sha256": "0a941edeb6abc3d96450f3d49b7765a7b717f1820c481a3170e30cabbb33fa06",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs00018-022-04508-7/MediaObjects/18_2022_4508_Fig7_HTML.png",
+    "http_method": "GET",
+    "tier": "Springer media server figure image",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "0a941edeb6abc3d96450f3d49b7765a7b717f1820c481a3170e30cabbb33fa06"
+   }
+  },
+  {
+   "path": "files/figures/PMID35984507/18_2022_4508_Fig8_HTML.png",
+   "sha256": "5cd7290a0e0f3134064d97ba37e6d0ed90472fb55517de80df124e84d3bb8ed7",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs00018-022-04508-7/MediaObjects/18_2022_4508_Fig8_HTML.png",
+    "http_method": "GET",
+    "tier": "Springer media server figure image",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "5cd7290a0e0f3134064d97ba37e6d0ed90472fb55517de80df124e84d3bb8ed7"
+   }
+  },
+  {
+   "path": "files/figures/PMID35984507/18_2022_4508_Fig9_HTML.png",
+   "sha256": "a42bdb869e97c5b5fcdad5536b2790ec332ec6b00f61210b777d0c0345fd73b9",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs00018-022-04508-7/MediaObjects/18_2022_4508_Fig9_HTML.png",
+    "http_method": "GET",
+    "tier": "Springer media server figure image",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "a42bdb869e97c5b5fcdad5536b2790ec332ec6b00f61210b777d0c0345fd73b9"
+   }
+  },
+  {
+   "path": "files/figures/PMID35984507/18_2022_4508_Fig10_HTML.png",
+   "sha256": "074282171d238e6514d0e6fe1ad31d36607fb48fc9fca44889f8970aca7bdf69",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs00018-022-04508-7/MediaObjects/18_2022_4508_Fig10_HTML.png",
+    "http_method": "GET",
+    "tier": "Springer media server figure image",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "074282171d238e6514d0e6fe1ad31d36607fb48fc9fca44889f8970aca7bdf69"
+   }
+  },
+  {
+   "path": "files/supplements/PMID35984507/18_2022_4508_MOESM1_ESM.pdf",
+   "sha256": "4430b2099d4c8b9f050392b1921362fd07c723d3544b4b28df5d5f767dcf3d6a",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://static-content.springer.com/esm/art%3A10.1007%2Fs00018-022-04508-7/MediaObjects/18_2022_4508_MOESM1_ESM.pdf",
+    "http_method": "GET",
+    "tier": "Springer static-content ESM file",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "4430b2099d4c8b9f050392b1921362fd07c723d3544b4b28df5d5f767dcf3d6a"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID35984507_ESM-1.png",
+   "sha256": "69e0687e539ad342815e1372cbe8756e8948db57b3b38e137f67a6a9576de331",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID35984507/18_2022_4508_MOESM1_ESM.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 100 -png <pdf> files/figure_renders/PMID35984507_ESM"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "69e0687e539ad342815e1372cbe8756e8948db57b3b38e137f67a6a9576de331"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID35984507_ESM-2.png",
+   "sha256": "e4a003396c85f17eeceee601ea5e7306f747636662006ee0eaf72ff41b60c834",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID35984507/18_2022_4508_MOESM1_ESM.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 100 -png <pdf> files/figure_renders/PMID35984507_ESM"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "e4a003396c85f17eeceee601ea5e7306f747636662006ee0eaf72ff41b60c834"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID35984507_ESM-3.png",
+   "sha256": "b692175d12fc0a26be9970c9024512090889e2060fbf73da3c1c9460908f6d56",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID35984507/18_2022_4508_MOESM1_ESM.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 100 -png <pdf> files/figure_renders/PMID35984507_ESM"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "b692175d12fc0a26be9970c9024512090889e2060fbf73da3c1c9460908f6d56"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Stated purpose: test whether activated WWOX (Tyr33 phosphorylation) drives high-glucose mitochondrial and neuronal damage, with Zfra1-31 described as the specific WWOX inhibitor.",
+    "snippet": "the therapeutic potential of Zinc finger-like protein that regulates apoptosis 31-amino-acid protein (Zfra1-31), the specific inhibitor of WWOX",
+    "anchor": "Introduction, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35984507_Carvalho2022_PMC11071800_wayback20240101.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Design: Zfra1-31 at 20 micromolar given 3 h (early) or 24 h (late) after 25 mM glucose for 48 h; the untreated comparator is cells without peptide; no scrambled, inactive or genetic-WWOX arm is described.",
+    "snippet": "Cells not exposed to Zfra1-31 were also used as control cells.",
+    "anchor": "Methods, cells culture and treatment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35984507_Carvalho2022_PMC11071800_wayback20240101.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Total-WWOX antibody was in hand: the antibody table lists a total-WWOX reagent beside the phospho-Tyr33 reagent, yet no total-WWOX result appears in any figure.",
+    "snippet": "WWOX1:1000RabbitMerck Millipore (ABN413)",
+    "anchor": "Table 1 (antibody list)",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID35984507_Carvalho2022_PMC11071800_wayback20240101.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fractionation: lysates are split into supernatant (called cytosolic) and pellet (called membrane); no result reports WWOX or p53 in a mitochondrial or membrane fraction.",
+    "snippet": "The supernatants represent the cytosolic fractions and the resulting pellets the membrane fractions.",
+    "anchor": "Methods, cells' protein extraction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35984507_Carvalho2022_PMC11071800_wayback20240101.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Statistics: one-way ANOVA or Kruskal-Wallis on 4 to 8 assays, while the control bar of most panels is the normalising value with no variance.",
+    "snippet": "The statistical significance was determined using the one-way ANOVA when normal distribution was observed",
+    "anchor": "Methods, statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35984507_Carvalho2022_PMC11071800_wayback20240101.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Animal arm, 6 months: text gives cortical pTyr33-WWOX about +20% and hippocampal twofold in GK versus control.",
+    "snippet": "brain cortical (~ 20%) and hippocampal (twofold) pWWOX (tyr33) levels was observed in 6-month-old GK rats",
+    "anchor": "Results, increased levels of activated WWOX",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35984507_Carvalho2022_PMC11071800_wayback20240101.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Animal arm, 12 months: text gives a cortical decrease of about 20% from the younger GK animals and no hippocampal difference.",
+    "snippet": "in 12-month-old GK rats, a decrease (~ 20%) in pWWOX (tyr33) levels is observed in brain cortex",
+    "anchor": "Results, increased levels of activated WWOX",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35984507_Carvalho2022_PMC11071800_wayback20240101.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Timing claim: pTyr33-WWOX rises about 79% at 24 h in 25 mM glucose, before the roughly 15% viability fall at 48 h, and activation precedes mitochondrial dysfunction (supplement).",
+    "snippet": "WWOX activation preceded mitochondrial dysfunction and the increased production of ROS (SFig. 1).",
+    "anchor": "Results, increased levels of activated WWOX",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35984507_Carvalho2022_PMC11071800_wayback20240101.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Zfra1-31 effect on the WWOX signal: text says the peptide diminished pTyr33-WWOX by about 64% and raised viability by about 16%, without separating early and late arms.",
+    "snippet": "Zfra1-31 diminished (~ 64%) the levels of activated WWOX (pWWOX tyr33)",
+    "anchor": "Results, inhibition of WWOX activation by Zfra1-31 protects",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35984507_Carvalho2022_PMC11071800_wayback20240101.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "p53 and caspase 3 are said to be reduced by Zfra1-31 in both arms (34 to 47% and 21 to 50%).",
+    "snippet": "these alterations reduced by Zfra1-31 (~ 34 (LI)—47(EI) % and 21 (LI)—50 (EI) %, respectively)",
+    "anchor": "Results, inhibition of WWOX activation by Zfra1-31 protects",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35984507_Carvalho2022_PMC11071800_wayback20240101.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Respirometry: text reports proton leak lowered by about 65 to 70% in both arms.",
+    "snippet": "normalized mitochondrial proton leak by decreasing it ~ 65–70%, respectively",
+    "anchor": "Results, mitochondrial dysfunction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35984507_Carvalho2022_PMC11071800_wayback20240101.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Oxidative damage: text reports a twofold reduction in TBARS with early Zfra1-31 and about 90% rise in carbonyls with high glucose.",
+    "snippet": "the EI condition promoted a twofold reduction in the levels of this lipid peroxidation marker",
+    "anchor": "Results, oxidative stress and damage",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35984507_Carvalho2022_PMC11071800_wayback20240101.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Dynamics: Results call the Fis1 and Mfn2 rises non-significant, yet the Discussion lists a Fis1 increase as characterising the imbalance.",
+    "snippet": "characterized by an increase in protein levels of Fis1 and OPA-1 and a decrease in Mfn1 and pDRP1/DRP1",
+    "anchor": "Discussion, mitochondrial fission and fusion paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35984507_Carvalho2022_PMC11071800_wayback20240101.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Biogenesis: text gives ND1 up 42% and NRF1 down about 62% with late Zfra1-31.",
+    "snippet": "in LI condition, Zfra1-31 significantly increased (42%) ND1 and reduced (~ 62%) NRF1 levels",
+    "anchor": "Results, mitochondrial biogenesis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35984507_Carvalho2022_PMC11071800_wayback20240101.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Neurotoxic proteins: text says high glucose gave a twofold pTau and threefold Abeta rise that Zfra1-31 normalised.",
+    "snippet": "high glucose promoted a twofold increase in pTau (ser396) and a threefold increase in Aβ levels",
+    "anchor": "Results, neurotoxic proteins and synapse integrity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35984507_Carvalho2022_PMC11071800_wayback20240101.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mechanism claim: the pTyr33-WWOX and p53 complex is said to migrate to mitochondria and cause caspase activation, cited to earlier work; the paper itself reports p53 and caspase 3 totals only.",
+    "snippet": "Phosphorylated WWOX can bind to p53 in the cytosol and the complex can migrate to mitochondria",
+    "anchor": "Figure 10 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35984507_Carvalho2022_PMC11071800_wayback20240101.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Control peptide-alone effect: the Conclusions say Zfra1-31 does not affect mitochondria or cells under control conditions, but the data are not shown.",
+    "snippet": "does not affect mitochondria and cells function under control conditions (data not shown)",
+    "anchor": "Conclusions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35984507_Carvalho2022_PMC11071800_wayback20240101.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Limits: the authors state that in vivo efficacy is untested and that rat brain material limited the animal arm, so the neurotoxic-protein and synaptic panels exist only in cells.",
+    "snippet": "we were unable to perform key experiments done in neuronal cells such as the evaluation of the levels of neurotoxic proteins and synaptic integrity markers",
+    "anchor": "Conclusions, limitations paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35984507_Carvalho2022_PMC11071800_wayback20240101.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2A-B: pTyr33-WWOX over beta-actin is about 2.2 versus 1.0 (cortex, 6 months GK versus Wistar, star) and about 3.0 versus 1.0 (hippocampus, star, large SEM), i.e. roughly 120% and 200%, not 20% and twofold as the text puts it.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2A,B: bar charts Wistar and GK at 6 and 12 months for cortex (about 1.0, 2.2, 1.25, 0.9) and hippocampus (about 1.0, 3.0, 1.1, 1.3), significance bars star for 6 month GK versus Wistar, double star cortex 6 versus 12 month GK and p=0.08 hippocampus; blots of pTyr33-WWOX at 46 kDa and beta-actin at 42 kDa below each chart.",
+    "anchor": "Figure 2A-B",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35984507/18_2022_4508_Fig2_HTML.png",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "differentiated SH-SY5Y cells or Wistar and GK rat brain, Western blot of pTyr33-WWOX over beta-actin",
+     "endpoint": "fold change of pTyr33-WWOX signal"
+    },
+    "contradicts": "entries[5]",
+    "contradicts_needle": "cortical (~ 20%) and hippocampal (twofold)"
+   },
+   {
+    "proposition": "Figure 2A: 12-month GK cortex is about 0.9 against about 2.2 in 6-month GK (double star), a fall of about 60%, not about 20%; the cortical blot also shows visibly unequal beta-actin bands (the 6-month GK actin lane is weak and the 12-month lanes strong), so the ratio depends on the loading control.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2A blot: pTyr33-WWOX four lanes of similar intensity; beta-actin lanes 1 to 4 with lane 2 faint and lanes 3 and 4 dark.",
+    "anchor": "Figure 2A",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35984507/18_2022_4508_Fig2_HTML.png",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "differentiated SH-SY5Y cells or Wistar and GK rat brain, Western blot of pTyr33-WWOX over beta-actin",
+     "endpoint": "fold change of pTyr33-WWOX signal"
+    },
+    "contradicts": "entries[6]",
+    "contradicts_needle": "a decrease (~ 20%) in pWWOX (tyr33) levels"
+   },
+   {
+    "proposition": "Figure 2C-D: pTyr33-WWOX in 25 mM glucose is about 1.8 at 24 h and 1.75 at 48 h (stars, about +80%), 10 mM about 1.7 at 24 h and 1.8 at 48 h; viability is about 90% at 24 h in 25 mM (no star) and about 85% and 82% at 48 h (stars); n=6/7. The WWOX rise at 24 h is statistically starred while the viability fall is only starred at 48 h, as the text says.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2C: bars Control 1.0, Gluc 10 mM and 25 mM at 24 h (about 1.7 and 1.8), at 48 h (about 1.8 and 1.75); Figure 2D: viability Control 100, 10 mM 100, 25 mM about 90 at 24 h, then about 85 and 82 at 48 h with stars on the 48 h bars.",
+    "anchor": "Figure 2C-D",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35984507/18_2022_4508_Fig2_HTML.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 3A: pTyr33-WWOX is about 1.8 in 25 mM glucose, 1.15 in early and 1.15 in late Zfra1-31 (each p=0.08 against glucose), and 0.83 with Zfra1-31 alone; the only starred comparison against glucose is the Zfra1-31-alone control bar. Early and late arms are therefore not significant, and a fall of about 36% is the by-eye size of the early effect, not 64%. Figure 3B viability: glucose about 82, early about 98 (three stars), late about 94 (two stars), Zfra1-31 alone about 95 (two stars).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3A: bars Control 1.0, Gluc 25 mM about 1.8 (star vs control), EI about 1.15 and LI about 1.15 with p=0.08 on both comparisons, Zfra alone about 0.83 with a star; blot of three bands for pWWOX with the third lane thicker and beta-actin below; Figure 3B: viability bars with stars on all three Zfra arms.",
+    "anchor": "Figure 3A-B",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35984507/18_2022_4508_Fig3_HTML.png",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "differentiated SH-SY5Y cells or Wistar and GK rat brain, Western blot of pTyr33-WWOX over beta-actin",
+     "endpoint": "fold change of pTyr33-WWOX signal"
+    },
+    "contradicts": "entries[8]",
+    "contradicts_needle": "Zfra1-31 diminished (~ 64%)"
+   },
+   {
+    "proposition": "Figure 3C-D: p53 about 1.0, 1.58 in glucose (star), 1.1 early (p=0.09) and 1.24 late (p=0.21); caspase 3 about 100, 144 in glucose (double star), 92 early (star) and 122 late (p=0.29). Only the early caspase-3 comparison is significant; the p53 reductions are not.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3C: p53 bars and a three-lane blot of p53 at 53 kDa; Figure 3D: caspase 3 activity bars with p values 0.09, 0.21 on p53 and star and 0.29 on caspase.",
+    "anchor": "Figure 3C-D",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35984507/18_2022_4508_Fig3_HTML.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "differentiated SH-SY5Y cells in 25 mM glucose with 20 micromolar Zfra1-31",
+     "endpoint": "p53 band over beta-actin and DEVD-pNA caspase-3 activity"
+    },
+    "qualifies": "entries[9]",
+    "qualifies_needle": "reduced by Zfra1-31"
+   },
+   {
+    "proposition": "Figure 4A-H and I: mitochondrial H2O2 (MitoPY1) falls only non-significantly with Zfra1-31 (p=0.16, p=0.18); proton leak is about 140 in glucose against about 87 early and 80 late (star and double star), a fall of about 38 to 43% rather than 65 to 70%; ATP production and basal respiration changes are not significant; the representative Seahorse trace shows the glucose curve below the other three at every step.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4: nine panels A to I, bars for membrane potential, MitoPY1 with antimycin A positive control, basal respiration, maximal consumption, proton leak, ATP production, spare capacity, coupling efficiency, and an OCR trace (pmol per min) with oligomycin, two FCCP additions and rotenone plus antimycin A arrows; legend lines Controlo, Glucose, Glucose+Zfra 45h and 24h.",
+    "anchor": "Figure 4",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35984507/18_2022_4508_Fig4_HTML.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "differentiated SH-SY5Y cells in 25 mM glucose, Seahorse XF24 and plate-reader assays",
+     "endpoint": "proton leak as percent of control"
+    },
+    "qualifies": "entries[10]",
+    "qualifies_needle": "mitochondrial proton leak by decreasing it"
+   },
+   {
+    "proposition": "Figure 5: carbonyls about 197% of control in glucose (star), 80% early (star), 125% late (p=0.12); TBARS about 2.38 against 2.1 (control) and 2.1 early, i.e. a fall of about 12% (star), not twofold; the TBARS axis is labelled nmol per mg protein at the 10 to the minus 8 scale while the method states a molar coefficient giving nmol, a scale that looks off by orders of magnitude (INFERENZA, units not resolvable from the figure); nitrite axis starts at 3.0 and glucose against control is p=0.05.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5A carbonyl bars, 5B nitrite bars on an axis 3.0 to 4.0 with p=0.05, 0.24 and 0.09, 5C TBARS bars with 3 x 10 to the minus 8 axis.",
+    "anchor": "Figure 5",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35984507/18_2022_4508_Fig5_HTML.png",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "differentiated SH-SY5Y cells in 25 mM glucose",
+     "endpoint": "TBARS level"
+    },
+    "contradicts": "entries[11]",
+    "contradicts_needle": "twofold reduction in the levels of this lipid peroxidation marker"
+   },
+   {
+    "proposition": "Figure 6: Mfn1 about 0.77 in glucose (star), Mfn2 about 1.3 (p=0.21), Opa-1 about 1.4 (double star) with early Zfra1-31 about 1.05 (star) and late about 1.17 (p=0.05), pDRP1/DRP1 about 0.76 (star) with early about 1.05 (star), Fis1 about 1.4 (p=0.24) with early 0.84 (p=0.19) and late 1.03 (p=0.33); the Fis1 rise is not significant, as the Results say.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6: five panels A to E with western blots; Mfn1, Mfn2, Opa-1, pDRP1 over DRP1 and Fis1 bars, p values on non-significant comparisons.",
+    "anchor": "Figure 6",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35984507/18_2022_4508_Fig6_HTML.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "differentiated SH-SY5Y cells in 25 mM glucose",
+     "endpoint": "fission and fusion protein levels over beta-actin"
+    },
+    "qualifies": "entries[12]",
+    "qualifies_needle": "an increase in protein levels of Fis1 and OPA-1"
+   },
+   {
+    "proposition": "Figure 7: MTCO1 about 1.52 in glucose (double star) against 1.04 early (star) and 0.88 late (double star), falls of about 32% and 42% (text says 52% and 64%); ND1 about 0.6 with late about 1.08 (double star), a rise of about 80% (text says 42%); NRF1 about 1.72 against late 1.1 (star), a fall of about 36% (text says 62%); VDAC about 0.53 with p=0.37 and 0.30 on the rescue; SDHA early p=0.05. The magnitudes in the text do not match the panel bars as read by eye (INFERENZA).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7: five panels A to E, MTCO1, ND1, VDAC, SDHA and NRF1 bars with blots at 40, 36, 32, 70 and 68 kDa.",
+    "anchor": "Figure 7",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35984507/18_2022_4508_Fig7_HTML.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "differentiated SH-SY5Y cells in 25 mM glucose",
+     "endpoint": "mitochondrial protein levels over beta-actin"
+    },
+    "qualifies": "entries[13]",
+    "qualifies_needle": "significantly increased (42%) ND1"
+   },
+   {
+    "proposition": "Figure 8: mTOR phosphorylation unchanged; PI3K p110 about 0.65 (star); PI3K class III about 0.57 (star) with late about 1.37 (star); Atg7 about 0.6 (double star) with early about 1.1 (star); p62 about 1.43 (star); LC3-II over LC3-I about 1.38 (p=0.25); p62 flux about 0.47 (star), the last assayed with and without leupeptin plus ammonium chloride; most Zfra1-31 comparisons are not significant (p 0.05 to 0.45).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 8: ten panels A to J of autophagy proteins with blots; J shows paired lanes with and without Leup+NH4Cl.",
+    "anchor": "Figure 8",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35984507/18_2022_4508_Fig8_HTML.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 9: SNAP25 about 0.84 (star) with early about 1.2 (star); PSD95 and synaptophysin unchanged; pTau about 3.7 in glucose against control p=0.08 (not significant) and early p=0.08, late p=0.21; Abeta (6E10) about 4.9 (star) with early p=0.30 and late p=0.09; the Abeta blot shows bands at 100 to 130 and 40 to 68 kDa, not a monomer-size band, and the text calls pTau twofold and Abeta threefold where the bars read about 3.7 and 4.9.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 9: five panels A to E; SNAP25, PSD95, synaptophysin, pTau (ser396) and Abeta bars with blots; pTau blot at 50 to 79 kDa and Abeta 6E10 blot with two band groups.",
+    "anchor": "Figure 9",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35984507/18_2022_4508_Fig9_HTML.png",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "differentiated SH-SY5Y cells in 25 mM glucose",
+     "endpoint": "pTau (ser396) and 6E10-reactive bands over beta-actin"
+    },
+    "contradicts": "entries[14]",
+    "contradicts_needle": "twofold increase in pTau (ser396)"
+   },
+   {
+    "proposition": "Figure 10 is a model schematic: glucose raises stress, pTyr33-WWOX binds p53 and the complex enters mitochondria; Zfra1-31 blocks WWOX; arrows for ROS, ATP, membrane potential, caspase 3, carbonyls, TBARS, pTau and Abeta and ticks on defective autophagy, fission-fusion and biogenesis. It plots no data; the WWOX-p53 complex and its mitochondrial entry are drawn, not measured in this paper.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 10: left glucose to cellular stress to pWWOX particles, p53 particles, a mitochondrion with bound complexes, Zfra1-31 star with a blocking line, right-hand outcomes with paired blue and green arrows.",
+    "anchor": "Figure 10",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35984507/18_2022_4508_Fig10_HTML.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "schematic",
+     "endpoint": "proposed mechanism, no measurement"
+    },
+    "qualifies": "entries[15]",
+    "qualifies_needle": "Phosphorylated WWOX can bind to p53 in the cytosol"
+   },
+   {
+    "proposition": "Figure 1: timeline (seeding day 0, retinoic acid days 1, 4 and 7, glucose day 8, Zfra1-31 3 h or 24 h later, experiments day 10) and a four-panel micrograph (green, blue, red and merge) with no scale bar; the legend calls panel 4 representative images while the merge is what is shown.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1: A timeline arrow Day 0 to Day 10; B four micrographs numbered 1 to 4.",
+    "anchor": "Figure 1",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35984507/18_2022_4508_Fig1_HTML.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure S.1: membrane potential falls significantly only at 48 h (stars on 10 mM and 25 mM), about 82% at 24 h in 25 mM is unstarred; MitoPY1 rises about 120 to 130% across conditions with stars at 48 h and antimycin A about 150% (double star). The panels do not include viability although the caption and text say so, and the in-text cross-references use main-figure numbering.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S.1: A membrane potential bars Control, Gluc 10 mM, 25 mM at 24 h and 48 h with last bar labelled 25mM1; B MitoPY1 bars with antimycin A 10 micromolar.",
+    "anchor": "ESM page 2",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID35984507_ESM-2.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "differentiated SH-SY5Y cells in 10 or 25 mM glucose, 24 or 48 h",
+     "endpoint": "membrane potential (TMRM) and MitoPY1 fluorescence"
+    },
+    "qualifies": "entries[7]",
+    "qualifies_needle": "WWOX activation preceded mitochondrial dysfunction"
+   },
+   {
+    "proposition": "Figure S.2: p53 (C12 clone) rises in all four glucose conditions (about 3.4, 3.6 at 24 h, double star; 2.4, 3.1 at 48 h, star), n=5; caspase 3 rises only at 48 h (stars). p53 therefore rises before caspase 3, which supports the order, but no WWOX-p53 interaction is measured; the main text does not cite this figure. Table S.1: weight and glucose by group, with the 6-month glucose cell marked with two stars while the legend explains only four stars.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S.2: A p53 bars, B five-lane p53 blot at 53 kDa, C caspase 3 bars; Table S.1: body weight GK 370.00 against 471.60 and 415.00 against 512.50 grams, glucose 212.00 against 117.40 and 269.10 against 121.40 mg per dl.",
+    "anchor": "ESM pages 1 and 3",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID35984507_ESM-3.png",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "The article text is an archived copy of the PMC page (PMC11071800, Wayback snapshot 2025-02-03); the live PMC page and publisher page were not reachable by automated routes in this session. Text was indexed against the ten Springer figure files and the ESM file by their legends.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ },
+ "context_policy_note": "A deliberate resume of a HELD-partial row. Held before the first pass: that two prior partial receipts exist from an operator-supplied PDF text layer with figures captions_only and no manifest, and the registry revival trigger named in the dispatch (a report of total WWOX beside pTyr33-WWOX). Question: what do the figure panels and the supplement show about Zfra1-31 and mitochondrial homeostasis under high glucose, and do they match the text? The text, all ten figures and the three supplement pages were read and described before the prior receipts' evidence notes and the registry record were opened; those were read afterwards for comparison."
+}

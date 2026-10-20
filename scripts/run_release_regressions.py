@@ -111,6 +111,8 @@ PRIORITY_TESTS = (
     # no claim, dossier or prior locator reaches a reading through them.
     "framework/scripts/test_paper_packet.py",
     "framework/scripts/test_pubmed_identity_check.py",
+    "framework/scripts/test_staged_receipt_check.py",
+    "framework/scripts/test_pmc_bucket_fetch.py",
     "framework/scripts/test_phase_handoff.py",
     # Record-level access to the two large registries, with the Aqeilan adverse cases: identifier
     # ambiguity, identity versus incidental mention, a caveat mid-record, expansion by hop, and

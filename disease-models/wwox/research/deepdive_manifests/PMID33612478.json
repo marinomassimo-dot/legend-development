@@ -121,6 +121,71 @@
     "derived": false,
     "result_sha256": "fd40936559a65a8a85e34145f25f3910c463c6fd87930c3ae11b055c39a33344"
    }
+  },
+  {
+   "path": "files/figures/PMID33612478/aging-13-202514-g001.jpg",
+   "kind": "figure",
+   "note": "Figure 1, acquired 2026-10-20 from the PMC OA open-data bucket; first declared and opened as an image in the held-partial re-read.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7950260.1/aging-13-202514-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "a460d89f85fd0d636f36e9115256f6d2fdd895778a5e288c4ecefc8bd58ae06f"
+  },
+  {
+   "path": "files/figures/PMID33612478/aging-13-202514-g002.jpg",
+   "kind": "figure",
+   "note": "Figure 2, acquired 2026-10-20 from the PMC OA open-data bucket; first declared and opened as an image in the held-partial re-read.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7950260.1/aging-13-202514-g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "ff04d2db73f5c3092be80825a632bcfbe67154a2e6d083939753fdaabf9e7a1d"
+  },
+  {
+   "path": "files/figures/PMID33612478/aging-13-202514-g003.jpg",
+   "kind": "figure",
+   "note": "Figure 3, acquired 2026-10-20 from the PMC OA open-data bucket; first declared and opened as an image in the held-partial re-read.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7950260.1/aging-13-202514-g003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "9c077e4b5fe37e712e2642a5ba02c3475476451bf843cec6a1e193707cea2fad"
+  },
+  {
+   "path": "files/figures/PMID33612478/aging-13-202514-g004.jpg",
+   "kind": "figure",
+   "note": "Figure 4, acquired 2026-10-20 from the PMC OA open-data bucket; first declared and opened as an image in the held-partial re-read.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7950260.1/aging-13-202514-g004.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "d16d6c03c1b2cd4618536773476da9b9e9c5eb23d782005412224e7e2455c7e3"
+  },
+  {
+   "path": "files/figures/PMID33612478/aging-13-202514-g005.jpg",
+   "kind": "figure",
+   "note": "Figure 5, acquired 2026-10-20 from the PMC OA open-data bucket; first declared and opened as an image in the held-partial re-read.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7950260.1/aging-13-202514-g005.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "f7e0af172499bd666f3ab470cf0ae659aab18cdb2c38612356585040d57cce33"
   }
  ],
  "verbatim_locators": {
@@ -175,7 +240,104 @@
     "anchor": "Materials and methods, SNP selection, principle 4",
     "panel_text_relation": "text_only",
     "artifact": "files/fulltext/PMID33612478_Liu2021_PMC.xml"
+   },
+   {
+    "proposition": "The haplotype result is stated as a risk ratio per haplotype carrier status with no statement of how the very large effect of the rs2222896G-rs2548861T haplotype is reconciled with the small single-SNP effects.",
+    "snippet": "Dyslipidemia morbidity was increased in those with the rs2222896G-rs2548861G and rs2222896G-rs2548861T haplotypes compared to those without corresponding haplotypes",
+    "surface": "body",
+    "anchor": "Results, haplotype-environment interactions paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human population sample",
+     "genotype": "common SNPs rs2222896 and rs2548861 in WWOX (and two TUBB SNPs), not a WWOX perturbation",
+     "endpoint": "dyslipidaemia, adjusted odds ratio"
+    },
+    "artifact": "files/fulltext/PMID33612478_Liu2021_PMC.xml"
+   },
+   {
+    "proposition": "Figure 2 (hand reading): rs2222896-rs2548861 D' = 0.87 (normal) and 0.81 (dyslipidaemia), r2 = 0.35 and 0.22. The Discussion calls the LD between the two WWOX SNPs 'weak' on the basis of the 500 kb distance; by D' it is high and by r2 moderate-to-low. 'Weak' describes r2 only. The four-SNP matrix also shows D' of 0.34 to 0.79 between the WWOX and TUBB SNPs.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2, D-prime and r-squared matrices for rs2222896, rs2548861, rs3132584 and rs3130685 in the normal and dyslipidaemia groups.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33612478/aging-13-202514-g002.jpg",
+    "anchor": "Figure 2, native JPEG",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[0]",
+    "qualifies_needle": "resulting in a weak LD between them",
+    "experimental_context": {
+     "system": "human population sample",
+     "genotype": "common SNPs rs2222896 and rs2548861 in WWOX (and two TUBB SNPs), not a WWOX perturbation",
+     "endpoint": "D-prime, r-squared"
+    },
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "Table 6 prints the unadjusted odds ratio of the rs2222896G-rs2548861T haplotype as 111.055 with a 95% CI of 7.818-15.633, which cannot contain its own point estimate; the geometric midpoint of the interval is 11.05, so the printed value carries a stray digit (INFERENCE from the arithmetic; the paper does not say). The adjusted odds ratio in the Results and Figure 4 is 15.08 (9.24-24.60). The haplotype frequencies are about 0.020 in the normal group and 0.190 in the dyslipidaemia group (36 of 1728 versus 430 of 2258 haplotypes; the units are haplotypes, two per person).",
+    "snippet": "rs2222896G–rs2548861T36(0.020)430(0.190)272.7292.88× 10−6111.055(7.818–15.633)",
+    "surface": "body",
+    "anchor": "Table 6, row H4",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human population sample",
+     "genotype": "common SNPs rs2222896 and rs2548861 in WWOX (and two TUBB SNPs), not a WWOX perturbation",
+     "endpoint": "haplotype frequency and odds ratio"
+    },
+    "artifact": "files/fulltext/PMID33612478_Liu2021_PMC.xml"
+   },
+   {
+    "proposition": "Figure 4 (forest plots, hand reading): the rs2222896G-rs2548861T haplotype odds ratio is 15.08 (9.24-24.60) as a main effect and its interaction odds ratios with sex, smoking, BMI, age and FBS are 6.7 to 14.9 with very wide intervals (drinking spans 1 to about 40); the other three haplotypes show odds ratios 0.47 to 1.44. BMI above 24 and FBS 7.0 mmol/L or above are the consistent environmental terms (about 2.0 and 1.7-2.3). A haplotype of two common variants with an odds ratio of this size is outside what common variants usually give; the paper does not comment, and no replication cohort or phasing check is described.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4, forest plots of haplotype and environmental risk factors for dyslipidaemia and of haplotype-environment interactions, four haplotypes.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33612478/aging-13-202514-g004.jpg",
+    "anchor": "Figure 4, native JPEG",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[4]",
+    "qualifies_needle": "Dyslipidemia morbidity was increased",
+    "experimental_context": {
+     "system": "human population sample",
+     "genotype": "common SNPs rs2222896 and rs2548861 in WWOX (and two TUBB SNPs), not a WWOX perturbation",
+     "endpoint": "adjusted odds ratio with interactions"
+    },
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "Figure 1 (hand reading; A total cholesterol, B HDL-C, C LDL-C, D ApoA1, E ApoB, F ApoA1/ApoB, G triglyceride): in the normal group only WWOX rs2222896 shows marked differences (B, C, D); in the dyslipidaemia group rs3132584, rs2222896 and rs2548861 show them. The y-axis spans 0-6 to 0-8 mmol/L or g/L so the differences (about 0.1 unit) are not visible at the plotted scale and the panel carries no effect size; the effect sizes are in Tables 4 and 7 (about 0.1-0.2 per carrier). The analysis within the dyslipidaemia group compares lipids inside a group defined by lipid level (selection on the outcome).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1, bar charts of lipid traits A-G by genotype for TUBB rs3132584, TUBB rs3130685, WWOX rs2222896 and WWOX rs2548861 in normal and dyslipidaemia groups.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33612478/aging-13-202514-g001.jpg",
+    "anchor": "Figure 1, native JPEG",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human population sample",
+     "genotype": "common SNPs rs2222896 and rs2548861 in WWOX (and two TUBB SNPs), not a WWOX perturbation",
+     "endpoint": "serum lipid traits by genotype"
+    },
+    "found_or_sought": "sought - which SNP, which trait, which direction"
+   },
+   {
+    "proposition": "Figures 3 and 5: Figure 3 is a carrier-versus-non-carrier bar plot per haplotype and group, with significance stars and large triglyceride error bars; Figure 5 is a multifactor dimensionality-reduction style dendrogram of SNP-SNP, SNP-environment, haplotype-environment, gene-gene and gene-environment interactions (synergy, redundancy), with no effect sizes; the WWOX signal is not separable from the TUBB SNPs in the gene-gene panel (TUBB and WWOX loci cluster) and the interaction results are exploratory.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3 haplotype and lipid bar charts; Figure 5 interaction dendrograms for SNP-SNP, SNP-environment, gene-gene, haplotype-environment and gene-environment analyses.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33612478/aging-13-202514-g003.jpg",
+    "anchor": "Figures 3 and 5, native JPEGs",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human population sample",
+     "genotype": "common SNPs rs2222896 and rs2548861 in WWOX (and two TUBB SNPs), not a WWOX perturbation",
+     "endpoint": "haplotype-lipid associations; interaction trees"
+    },
+    "found_or_sought": "sought - is a WWOX-specific signal isolated"
    }
   ]
- }
+ },
+ "reading_history": [
+  {
+   "receipt": "FTR-20261019-33612478-02",
+   "reader": "scientist-c, HELD-PARTIAL-WWOX-C-20261019",
+   "context_policy": "QUESTION_DRIVEN",
+   "what_changed": "Acquired the five main figures from the PMC OA bucket, declared them and opened them as images; appended 6 entries. Found: Table 6 haplotype OR printed 111.055 with a CI that excludes it (stray digit); D-prime 0.87 against the Discussion word weak; effects of about 0.1 unit invisible at the Figure 1 scale; outcome-selected within-group comparisons; haplotype OR of 15 for two common SNPs unexplained.",
+   "outputs": [
+    "disease-models/wwox/research/held_wave_20261019_scientist-c.md"
+   ]
+  }
+ ]
 }

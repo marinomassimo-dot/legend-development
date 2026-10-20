@@ -1,0 +1,352 @@
+{
+ "schema_version": 2,
+ "pmid": "41324728",
+ "doi": "10.1007/s12035-025-05406-2",
+ "receipt": "FTR-20261019-41324728-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "A neurology department in Nanning combining a public-dataset bioinformatics screen with a rat model. Not a WWOX group. Observation (marker levels, counts at n = 3 to 10) is weighted above the autophagy-mediated neuroprotection claim; the bioinformatic classifier is weighted as hypothesis-generating."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "HIF-1alpha AND epilepsy",
+    "count": 57,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (HIF1A OR HIF-1alpha)",
+    "count": 12,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches, not measurements."
+ },
+ "multihop": {
+  "references_enumerated": 77,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-direct reference; WWOX is not named in the article.",
+  "disposition": "No gene-direct references."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41324728 --hops 1; paper_packet.py packet --pmid 41324728; fulltext_receipts.py status --pmid 41324728",
+  "hits": 0,
+  "note": "No record in any of the seven searched registry surfaces and no prior receipt; an empty result is a statement about that query over those files."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication type Journal Article.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 77,
+   "references_screened": 77,
+   "references_with_doi": 77,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41324728_Kuang2025_PMC.xml",
+   "sha256": "d6882c356c506f85a85513d3d94d8ad6dabe53f6a3ceea8c971d40da7a931eed",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12669306/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "d6882c356c506f85a85513d3d94d8ad6dabe53f6a3ceea8c971d40da7a931eed"
+   }
+  },
+  {
+   "path": "files/figures/PMID41324728/12035_2025_5406_Fig1_HTML.jpg",
+   "sha256": "e78e3976e77f6cbf59f88d0eea43ebb59326149e52a7152d0a61fb37bf7f0266",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12669306 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID41324728/12035_2025_5406_Fig2_HTML.jpg",
+   "sha256": "cc37c130b6b52a66c744ca670c3a19be437bac1073c208b113026614014e1387",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12669306 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID41324728/12035_2025_5406_Fig3_HTML.jpg",
+   "sha256": "2850e1c4f4413a17ef23c32f3e0b48365fde018b7085b8a16ed98249db993c64",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12669306 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID41324728/12035_2025_5406_Fig4_HTML.jpg",
+   "sha256": "72a523c85a361bcbae0349944dd1f74cad9c5b808525a50cf0934f07768a0197",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12669306 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID41324728/12035_2025_5406_Fig5_HTML.jpg",
+   "sha256": "940a56416cc9117aa008563c8fd6a9b54d4cbc888bb1c18f00d2de6d48e4d57e",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12669306 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID41324728/12035_2025_5406_Fig6_HTML.jpg",
+   "sha256": "b07be6249ef5987ebd1b19b28c24f15e4f834a805ff737342b13da5d20ce09ea",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12669306 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID41324728/12035_2025_5406_Fig7_HTML.jpg",
+   "sha256": "5a96b5be40a7f09a2def748efbffaaf45bf9c9a6ade96630c3ea4bab9ae40690",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12669306 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID41324728/12035_2025_5406_Fig8_HTML.jpg",
+   "sha256": "a1618f5091a14a45d88343aa4a139153cc0ec423c06c9f58239178f4c8088282",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12669306 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID41324728/12035_2025_5406_Fig9_HTML.jpg",
+   "sha256": "b3f23f18c46ccc1c12db9e310e2b413a64daaff5fe8c42e5eb1eb40dccee82d7",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12669306 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID41324728/12035_2025_5406_Fig10_HTML.jpg",
+   "sha256": "914217476145f8c1e4c8edf082d05fe6f312f68e225532d5d4bd149ed0cb4ce6",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12669306 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID41324728/12035_2025_5406_Fig11_HTML.jpg",
+   "sha256": "c4ff3c94ab9a3d5db4cd98a82694d315085322a19a18c713e39010b7c3ca806e",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12669306 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID41324728_mA.png",
+   "sha256": "316aca5f915e0416a25147095449b5a64e5782185702ba7ec82326386c20e99b",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID41324728/12035_2025_5406_Fig1_HTML.jpg",
+    "extractor": {
+     "name": "ImageMagick montage",
+     "version": "system package",
+     "call": "montage Fig1 Fig2 Fig3 Fig4 Fig5 Fig7 Fig8 -tile 3x3 -geometry 700x"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "316aca5f915e0416a25147095449b5a64e5782185702ba7ec82326386c20e99b"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID41324728_mB.png",
+   "sha256": "7cc3ca95e34e327b05d9be68e29bb2c6a1003d1f547d2c9e0f1a96f0b88168dc",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID41324728/12035_2025_5406_Fig1_HTML.jpg",
+    "extractor": {
+     "name": "ImageMagick montage",
+     "version": "system package",
+     "call": "montage Fig6 Fig9 Fig10 Fig11 -tile 2x2 -geometry 1000x"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "7cc3ca95e34e327b05d9be68e29bb2c6a1003d1f547d2c9e0f1a96f0b88168dc"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Design: public blood expression data (34 medication-free epilepsy cases, 50 controls) to pick autophagy genes, machine-learning classifiers, then LiCl-pilocarpine rats given the HIF-1 alpha translation inhibitor KC7F2 into the lateral ventricle. No oxygen exposure; WWOX not named.",
+    "snippet": "consisting of 50 and 34 blood samples obtained from healthy subjects (control group) and medication-free individuals with EP (EP group), respectively, was selected as the training set",
+    "anchor": "Methods, Data acquisition",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41324728_Kuang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The 'validation' set is a different tissue and population: 129 hippocampal specimens from patients operated for mesial temporal lobe epilepsy, against a blood-based training set.",
+    "snippet": "includes 129 Hip specimens obtained from patients undergoing selective amygdalo-hippocampectomy for mesial temporal lobe epilepsy",
+    "anchor": "Methods, Data acquisition",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41324728_Kuang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Model performance: AUCs 0.793, 0.807, 0.813 and 0.773 in cross-validation on the training data; the external check reports AUC 0.793.",
+    "snippet": "The AUC values calculated for each model were 0.793, 0.807, 0.813, and 0.773 for RF, SVM, XGB, and GLM, respectively.",
+    "anchor": "Results, Establishment of ML Models",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41324728_Kuang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Core gene claim: HIF-1 alpha rises and BNIP3 falls in epileptic rat hippocampus at n = 4 per group.",
+    "snippet": "unlike the control group, HIF-1α was mainly located in the Hip (CA1 region) and was significantly overexpressed",
+    "anchor": "Results, Validating the Implication of HIF-1α/BNIP3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41324728_Kuang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Intervention effect on seizures: KC7F2 prolonged latency to the first grade 4 seizure but did not change the number of spontaneous seizures.",
+    "snippet": "there were no significant variations in SRS count within 1 week among these groups",
+    "anchor": "Results, Impact of HIF-1α Suppression on Seizure Susceptibility",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41324728_Kuang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion reverses this: it says HIF-1 alpha inhibition 'reduced the number of SRS', contradicting the Results sentence above.",
+    "snippet": "demonstrating that HIF-1α inhibition effectively mitigated neuronal damage and reduced the number of SRS",
+    "anchor": "Discussion, HIF-1α paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41324728_Kuang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "KC7F2 was given 24 hours before pilocarpine, so the latency effect is a pre-treatment effect on acute induction, not treatment of established epilepsy.",
+    "snippet": "the LiCl-Pilo EP model was constructed 24h after KC7F2/DMSO injection",
+    "anchor": "Methods, Stereotactic Brain Injection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41324728_Kuang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Autophagy markers: LC3 II/I is higher and p62 lower in LiCl-Pilo; both reverse with KC7F2 (LC3 II/I down, p62 up).",
+    "snippet": "LC3 II/I was repressed in the Hip of KC7F2 + Pilo rats",
+    "anchor": "Results, last section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41324728_Kuang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Neuron and mitochondrial protection is read from H&E and Nissl counts and electron-microscopy mitochondrial area, with n = 4 per group.",
+    "snippet": "KC7F2 inhibition significantly improved the average mitochondrial area of Hip neurons",
+    "anchor": "Results, last section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41324728_Kuang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion calls the work 'the first mechanistic evidence' while the paper's own limitations list that the relation of HIF-1 alpha/BNIP3 to autophagy is not thoroughly investigated and that human samples are needed.",
+    "snippet": "the potential relationship between the HIF-1α/BNIP3 pathway and Apg has not been thoroughly investigated",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41324728_Kuang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Count of the DE-ATGs: the Results say eleven genes but list ten names.",
+    "snippet": "we obtained 11 identical DE-ATGs by intersecting these DEGs with the 222 ATGs, including FADD, BNIP3, CTSD, ERBB2, HIF-1α, GNAI3, CASP8/4, MAP1LC3A, NLRC4, and DAPK2",
+    "anchor": "Results, ATGs Identification in EP",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41324728_Kuang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 11G and H (HE and Nissl counts): LiCl-Pilo about 6 and about 3 neurons per 0.1 mm2 against control about 62 and about 75, KC7F2 about 33 and about 40; Figure 8A and B (same LiCl-Pilo versus control comparison, earlier cohort) read about 30 and about 20 against about 72 and about 55. The same group therefore shows roughly five-fold different neuron counts between Figure 8 and Figure 11.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 8 A-B bars HE-stained and Nissl-stained neurons per 0.1 mm2; Figure 11 G-H bars with *** and ## significance marks.",
+    "anchor": "Figures 8 and 11",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID41324728_mB.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figures 1 to 5, 7 and 8 and Figures 6, 9, 10 and 11 opened: flow chart; volcano, Venn and heat map; GO and KEGG bubble plots with HIF-1 signalling highlighted; correlation and hub network with HIF1A and BNIP3 boxed; residual and ROC plots (staircase ROC suggests a small test fold; the validation AUC of 0.793 carries a 0.587 to 0.953 interval); nomogram, calibration and decision curves; EEG traces, immunofluorescence, RT-qPCR and blots (control and treated lanes), co-immunoprecipitation (BNIP3 band in the HIF-1 alpha pull-down), KC7F2 time course, latency bar (about 19, 21 and 40 min) and spontaneous seizure count bars (about 3 per week in all groups).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5D ROC AUC 0.793 95 percent CI 0.587-0.953; Figure 10A latency bars; Figure 10B seizure-count bars ns; Figure 9B Co-IP bands.",
+    "anchor": "Figures 1-11",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID41324728_mA.png",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12669306/fullTextXML returned HTTP 200 (159844 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}

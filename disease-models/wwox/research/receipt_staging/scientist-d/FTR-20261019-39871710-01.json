@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-10-19T00:00:00Z",
+ "analysis_time_precision": "date_only",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "tables": "read",
+  "figures": "read",
+  "references": "not_read",
+  "supplementary": "read"
+ },
+ "event_at": "2026-10-19T18:42:54Z",
+ "event_id": "FTR-20261019-39871710-01",
+ "evidence_basis": [
+  "JATS body and Tables 1-2 read section by section from a text rendering; all three figure images opened.",
+  "Supplement s001 (docx: Supplementary Tables 1-2, Supporting Information 1-3, incl. the refeeding protocol) and s002 (docx: Supplementary Figure 1 legend) extracted and read; the Supplementary Figure 1 plot itself was not opened as an image, so supplementary is declared read for text only and depth is held at partial.",
+  "Reference list counted, not read."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID39871710.json",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-d.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "39112c5d9230535f1215e6b337ae030ea9f8d4c0fbf1906b4392b83fcc317797",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID39871710_Abbas2025_PMC.xml",
+ "study_id": {
+  "doi": "10.1002/jpn3.12466",
+  "pmid": "39871710"
+ },
+ "workflow": "scientist-d (stated assumption of the Orchestrator), interventions wave 2026-10-19, task INTERV-H5-D-20261019, branch task/INTERV-H5-D-20261019; context_policy QUESTION_DRIVEN. Route: Europe PMC REST fullTextXML into the shared checkout files/fulltext/; figures and supplements from the PMC Article Datasets open-data bucket where present; locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts."
+}

@@ -231,7 +231,7 @@
 - **L'indizio**: in tutti i tessuti la **perdita di WWOX aumenta l'infiammazione** — cervelletto: astro-microgliosi progressiva + perdita Purkinje (Wwox^P47T); sepsi: peggiore gliosi/apoptosi cerebrale dopo LPS; endotelio polmonare: ↑ IL-6/IL-8/IL-1β/MCP-1 con **↑ERK/JNK e ↓p38 MAPK**, via zyxin. WWOX normalmente *trattiene* il segnale pro-infiammatorio (scaffold WW su partner MAPK/NF-κB).
 - **Mappa ABC**: A=WWOX-loss · B=**de-repressione MAPK(ERK/JNK)/NF-κB → citochine → microglia/astrociti** · C=nodo infiammatorio druggabile (→ DL-REPO-002) · **Statement causale**: `WWOX —restrains→ inflammatory_MAPK/NFκB_signaling`; quindi `WWOX(loss) —increases→ IL1β/IL6/IL8/MCP1 + gliosis` · **Belief**: medio-alto (convergenza multi-tessuto, direzione univoca)
 - **Catena di ragionamento**: questo è l'**ancora meccanicistica** che rende REPO-002 direzionalmente valido e alza la priorità della **meta neuroinfiammazione (meta 6, pending)**. A livello di malattia: se la proteina SDR-mutata è globalmente instabile/assente ([[discovery_ledger_current#DL-MECH-008 — La funzione anti-Wnt di WWOX è WW-scaffold (sequestro DVL2), non enzimatica → potenzialmente *risparmiata* dalla variante SDR del genotipo di riferimento|DL-MECH-008]]), perde anche questo freno → l'asse infiammatorio è rilevante per lei. Nota: il modello di Aldaz è **P47T (WW1-scaffold)**, dominio diverso da quello del genotipo di riferimento (SDR) → il freno anti-infiammatorio potrebbe essere in parte funzione WW-scaffold; da verificare se è WW- o SDR-dipendente (lega a MECH-006 enzima-vs-scaffold).
-- **Perché conta**: apre un secondo asse terapeutico (a valle, sintomatico/rallentante) complementare alla gene therapy; e nomina biomarcatori di attività (GFAP/Iba1/citochine — ⚠️ Tier 3 distale, NON biomarker WWOX) · **Possibile passo successivo**: NS-020/021; chiarire se il freno infiammatorio è WW- o SDR-dipendente · **Interconnessioni**: [[discovery_ledger_current#DL-REPO-002 — Farmaco anti-neuroinfiammatorio riposizionato come leva per la LoF di WWOX (asse Aldaz): direzione RISOLTA (WWOX-loss → infiammazione ↑ → serve INIBIRE)|DL-REPO-002]], [[discovery_ledger_current#DL-MECH-008 — La funzione anti-Wnt di WWOX è WW-scaffold (sequestro DVL2), non enzimatica → potenzialmente *risparmiata* dalla variante SDR del genotipo di riferimento|DL-MECH-008]], [[discovery_ledger_current#DL-MECH-010 — WWOX *neuronale* (SynI) è SUFFICIENTE a riscattare fenotipi non-cell-autonomous (mielina, gliosi) e sistemici (glucosio) → il compartimento neuronale è il driver a monte; il promotore oligodendrocitario (MBP) è meno efficace|DL-MECH-010]] (gliosi downstream del neurone)
+- **Perché conta**: apre un secondo asse terapeutico (a valle, sintomatico/rallentante) complementare alla gene therapy; e nomina biomarcatori di attività (GFAP/Iba1/citochine — ⚠️ Tier 3 distale, NON biomarker WWOX) · **Possibile passo successivo**: NS-020/021; 🔵 pointer attached by `CC-20261019-SCIENTIST-A-LIPID-06` (source: PMID 41704776, a 2026 narrative review read in full, WWOX absent): a lipid-derived danger signal (very-long-chain ceramide converted to sphingosine 1-phosphate, then NF-kB or IMD signalling) is the review's proposed link between lipid dysmetabolism and glial inflammation, from one group's fly work, stated by the review as causally unproven. No S1P or sphingolipid measurement exists in any WWOX system; the direction of any WWOX lipid change is not given by it (the mouse CerS2 papers of the same lot show the opposite lesion, loss of very-long species, also with a glial response (astrocytic GFAP rise or an expanded microglial subset)). IPOTESI, not a claim; chiarire se il freno infiammatorio è WW- o SDR-dipendente · **Interconnessioni**: [[discovery_ledger_current#DL-REPO-002 — Farmaco anti-neuroinfiammatorio riposizionato come leva per la LoF di WWOX (asse Aldaz): direzione RISOLTA (WWOX-loss → infiammazione ↑ → serve INIBIRE)|DL-REPO-002]], [[discovery_ledger_current#DL-MECH-008 — La funzione anti-Wnt di WWOX è WW-scaffold (sequestro DVL2), non enzimatica → potenzialmente *risparmiata* dalla variante SDR del genotipo di riferimento|DL-MECH-008]], [[discovery_ledger_current#DL-MECH-010 — WWOX *neuronale* (SynI) è SUFFICIENTE a riscattare fenotipi non-cell-autonomous (mielina, gliosi) e sistemici (glucosio) → il compartimento neuronale è il driver a monte; il promotore oligodendrocitario (MBP) è meno efficace|DL-MECH-010]] (gliosi downstream del neurone)
 - 🔵 **Append-only, 2026-09-26 (`BATCH_20260926_ALDAZ`) — la gamba cerebellare di questa voce è più stretta di come è scritta.** Nel topo `Wwox^P47T/P47T` la gliosi quantificata per immunoistochimica (conteggi e frazioni d'area Gfap⁺/Iba1⁺) è **ippocampale** (CA1, CA3, DG); nel cervelletto il paper misura la degenerazione delle cellule di Purkinje e un aumento ≥ 2 volte degli mRNA di IL1β e TNFα (qRT-PCR, n = 6 per gruppo, Fig. 9d–e, a un'unica età non dichiarata); per le Purkinje le due età sono misurate ma nessun confronto fra età è disegnato. L'astrogliosi cresce con l'età; per la microglia la progressione è mostrata **solo nella morfologia**, e la progressione dell'**abbondanza** non è stata testata (nessun confronto 80 vs 250 giorni), il che non equivale a un'assenza. Statistiche su subfield/cellule di n = 3 topi. Vedi [[claim_registry_current#CLAIM 006]]. **Nessun altro contenuto di questa voce è modificato.**
 
 ---
@@ -256,7 +256,7 @@
 - **Interconnessioni**: [[discovery_ledger_current#DL-MECH-012 — WWOX è un *freno* del segnale infiammatorio: la sua perdita de-reprime microgliosi/astrogliosi e cascata citochinica (asse Aldaz, multi-tessuto)|DL-MECH-012]]
 
 ### DL-MECH-015 — WWOX/NME2/KAT1/SCD5/oleic-acid axis: ponte immunometabolico verso macrofagi M2
-- **Status**: maturing · **Tag**: INFERENZA/ESPANSIONE · **Fonte**: Liu et al. 2024, *J Immunother Cancer*, PMID 39500530 / PMCID PMC11552608, "WWOX tuning of oleic acid signaling orchestrates immunosuppressive macrophage polarization and sensitizes hepatocellular carcinoma to immunotherapy" (già integrato; riletto nel batch)
+- **Status**: maturing · **Tag**: INFERENZA/ESPANSIONE · **Fonte**: Liu et al. 2024, *J Immunother Cancer*, PMID 39500530 / PMCID PMC11552608, "WWOX tuning of oleic acid signaling orchestrates immunosuppressive macrophage polarization and sensitizes hepatocellular carcinoma to immunotherapy" (🔴 **source note corrected by `CC-20261019-SCIENTIST-A-LIPID-02`:** no receipt and no PAPER record existed for this PMID before 2026-10-19 (CORPUS-STUB-015, not_processed); the first full-text reading is `FTR-20261019-39500530-01`, complete, 22 locators. What it measured: WWOX knockdown or overexpression in four human HCC lines, in conditioned medium, about 1.3-fold more oleic acid with knockdown and 0.6 to 0.8-fold with overexpression, by ELISA and one untargeted metabolomics run, n = 5 versus 5; no germline loss, no neural cell, no tissue or serum lipid measurement; the oleate dose used on macrophages is not stated; the PD-1 resistance arm is confounded with 2.6-fold faster shWWOX tumour growth; the macrophage-depletion arms are all under anti-PD-1; the SCD inhibitor is dual SCD1/5 and was tested in Huh7 models with no shWWOX arm. Human SCD5 has no mouse or rat orthologue in Ensembl (REST query 2026-10-19), so the SCD5 arm of the minimal experiment needs human cells, not a Wwox-null mouse.)
 - **L'indizio**: WWOX deficiency aumenta SCD5 e oleic acid, promuove polarizzazione macrofagi M2; WWOX interagisce con NME2 e modula acetilazione KAT1/NME2; blocco SCD5 migliora anti-PD-1 nel modello HCC.
 - **Mappa ABC**: A=WWOX deficiency · B=NME2/KAT1/SCD5/OA → macrophage polarization · C=asse lipidico-immunitario misurabile/druggable · **Statement causale**: `WWOX(loss) —increases→ SCD5/OA`; `OA —promotes→ M2_macrophage_polarization` · **Belief**: medio per immunometabolismo WWOX; basso per trasferimento CNS/il genotipo di riferimento
 - **Perché conta**: rafforza l'idea che WWOX regoli immunometabolismo e fenotipo macrofagico/microgliale. SCD5/OA non è ancora target per il genotipo di riferimento; è un ponte da verificare in microglia/astroglia o modelli neuro-WWOX.
@@ -2295,7 +2295,7 @@ numero che era presentato come misura, e uno rafforza il meccanismo. Locator:
   1. la selettività dichiarata è smentita dalla figura stessa — il testo scrive *"did not affect control BM cells"*, ma in Fig 7C la vitalità del midollo di controllo scende da ~1,05 a ~0,73 a 40 µM: **effetto ridotto, non assente**;
   2. il trattamento abbassa **sia MCM7 sia c-Myc** (Fig 7B), quindi l'esperimento non separa i due bersagli;
   3. la maggiore sensibilità del DKO rispetto al SKO (Fig 7E) è affermata **senza alcun test statistico nel pannello** e su due repliche biologiche per gruppo.
-- 🔴 **Perché NON entra in BLOCK-1 oggi:** il bersaglio è MCM7 nell'osso; non esiste in questo paper alcun razionale CNS, nessuna misura di penetrazione della barriera, nessun legame con un genotipo WWOX-DEE. Promuoverlo richiederebbe che la direzione WWOX→MYC sia stabilita *nel cervello* e che il MYC neuronale sia un bersaglio con un readout prossimale — nessuna delle due condizioni è soddisfatta.
+- 🔴 **Perché NON entra in BLOCK-1 oggi:** il bersaglio è MCM7 nell'osso; non esiste in questo paper alcun razionale CNS, nessuna misura di penetrazione della barriera, nessun legame con un genotipo WWOX-DEE. Promuoverlo richiederebbe che la direzione WWOX→MYC sia stabilita *nel cervello* e che il MYC neuronale sia un bersaglio con un readout prossimale — nessuna delle due condizioni è soddisfatta. 🔴 **Caution attached by `CC-20261019-SCIENTIST-A-LIPID-05` (source: PMID 42454491, a 2026 narrative review, read in full, WWOX absent):** statins are named there as sterol-biosynthesis-inhibiting medications, and the review states that after the blood-brain barrier forms the developing brain depends almost entirely on its own sterol synthesis and that cholesterol is needed for myelin growth. Any CNS-directed or paediatric reading of this seed therefore carries a developing-brain sterol question that the source (an osteosarcoma bone paper) never raises; it belongs in the BLOCK-1 screen if the seed is ever promoted. IPOTESI; the review's own epidemiological association rests on its authors' separate database study and is not evidence about statins in any WWOX setting. Not medical advice.
 - **Interconnessioni:** `DL-METH-079` · PMID **29724996** (asse WWOX–proliferazione, `c-Myc` soppresso nel fegato).
 
 ### DL-METH-081 — **Le superfici-titolo si invertono, la scienza no**: seconda occorrenza consecutiva, e adesso è una classe
@@ -3816,3 +3816,392 @@ The same reading demonstrates a second, cheaper rule. **Four of this paper's fin
 - **Transfer limit:** assay design only. No affinity, residue, motif or conclusion of that paper applies to WWOX; the paper touches **no SDR domain of any protein**; and ⚠️ **WWOX is not in the authors' own list of WW-tandem proteins that may be autoinhibited**, so «WWOX is autoinhibited» must not be written from it. No WWOX allele is involved and nothing transfers across P47T, Q230P, G372R, A141T or P252A.
 - **Links:** [[paper_registry_current#CORPUS-STUB-181]] · `DL-MECH-115` · `DL-BIO-001` · `research/intake_wave_20261004w11_A.md`
 - **Not medical advice.**
+
+## Run 2026-10-19 — metabolic batch wave 1: leads staged by four Scientists
+
+Leads staged in the candidates of `BATCH_20261019_001` (groups G1 to G4). All are leads, none is a claim; each is a research-layer entry only.
+
+### DL-MECH-117 — Where WWOX and HIF1A transcripts are uncorrelated, the WWOX/HIF1A ratio's correlations with HIF1A-induced genes are carried by HIF1A, not by WWOX
+
+- **Tag:** INFERENZA
+- **Status:** open
+- **Created:** 2026-10-19 · `BATCH_20261019_001`, from `CC-20261019-SCIENTIST-B-G2-HUMAN-AXIS-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** In the gestational-diabetes leukocyte series ([[paper_registry_current#PAPER 262]]) WWOX and HIF1A transcripts are uncorrelated (rho -0.05 in cases, -0.12 in controls) while the ratio tracks HIF1A (rho -0.79); in the TCGA ratio analysis ([[paper_registry_current#PAPER 266]]) the favourable glioblastoma group has WWOX up and HIF1A down. Where two transcripts are uncorrelated, their ratio is dominated by the denominator by arithmetic coupling; so in these two data sets (one leukocyte series and one TCGA analysis) the ratio-based reading adds nothing about WWOX loss that HIF1A alone does not carry. This is a conditional on uncorrelated transcripts, not a general statement about ratio readings: it does not hold where WWOX and HIF1A are correlated, or where the ratio is validated against a separate WWOX measurement (recast at `BATCH_20261019_003`, Mirror F4).
+- **Falsifying experiment / counter:** A dataset in which WWOX and HIF1A protein or activity are measured separately and the ratio still adds information beyond HIF1A alone.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-118 — The effect-allele convention at rs17797882 conflicts between the Han Chinese and the Japanese reports, and the Japanese older-control odds ratios fall below 1
+
+- **Tag:** INFERENZA
+- **Status:** open
+- **Created:** 2026-10-19 · `BATCH_20261019_001`, from `CC-20261019-SCIENTIST-B-G2-HUMAN-AXIS-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** The Han Chinese report ([[paper_registry_current#PAPER 263]]) analysed the T allele as the reported risk allele (frequency about 0.24); the Japanese replication ([[paper_registry_current#PAPER 264]]) analysed C (about 0.79). With controls aged 50 or older the Japanese OR is 0.94 to 0.95 and with controls aged 60 or older 0.88 to 0.89, opposite to the original direction. Sign-dependent statements about this SNP cannot be carried until the effect allele is fixed.
+- **Falsifying experiment / counter:** The originating East Asian meta-analysis table, which fixes the effect allele.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-119 — A citation chain ends in an unreproduced datum: 'WWOX is related to HOMA-beta' rests on one nominal control-only coefficient
+
+- **Tag:** INFERENZA
+- **Status:** open
+- **Created:** 2026-10-19 · `BATCH_20261019_001`, from `CC-20261019-SCIENTIST-B-G2-HUMAN-AXIS-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** The mGWAS report ([[paper_registry_current#PAPER 265]]) states that WWOX is related to HOMA-beta, citing the Han Chinese replication ([[paper_registry_current#PAPER 263]]), whose only support is a nominal control-only coefficient (P 0.014, uncorrected for about 64 tests, uninterpretable scale) not reproduced by the Japanese replication ([[paper_registry_current#PAPER 264]], P 0.91). Any registry sentence relaying the statement must carry this chain.
+- **Falsifying experiment / counter:** A reproduction of the HOMA-beta association in an independent cohort with the effect allele fixed.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-120 — The sign of the metabolic target in WWOX loss must be fixed by a brain measurement before any dietary rationale is chosen
+
+- **Tag:** INFERENZA
+- **Status:** open
+- **Created:** 2026-10-19 · `BATCH_20261019_001`, from `CC-20261019-SCIENTIST-B-G2-KD-PRIOR-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** The metabolic-control literature supports both inhibiting glycolysis and supplying energy ([[paper_registry_current#PAPER 273]]); for WWOX loss the fibroblast lesion (lactate up) and the Wwox-null mouse (hypoglycaemic) point in different directions.
+- **Falsifying experiment / counter:** A brain energy measurement in Wwox-null or hypomorph tissue showing hypermetabolism or hypometabolism.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-121 — A ketogenic-diet response does not identify the mechanism of a lesion
+
+- **Tag:** INFERENZA
+- **Status:** open
+- **Created:** 2026-10-19 · `BATCH_20261019_001`, from `CC-20261019-SCIENTIST-B-G2-KD-PRIOR-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** In Glut1 deficiency, a known bypassable fuel defect, only 61 percent of 44 epileptic patients respond to the diet alone and at least 10 of 17 non-responders were first responsive ([[paper_registry_current#PAPER 269]]); across DEE syndromes the 50-percent responder fraction is 47 to 100 percent among the groups the review tabulates as responders, and 0 of 10 for CDKL5 in the same gene-level study, in small refractory-pre-selected cohorts ([[paper_registry_current#PAPER 268]]; the Glut1 figures rest on [[paper_registry_current#PAPER 269]], a `partial_fulltext_read` with Figures 2 and 4 at legend depth only). A response count in WOREE is not distinguishable from the DEE base rate (see the evidence boundary of CLAIM 042).
+- **Falsifying experiment / counter:** A WOREE or WWOX-DEE series with the exposed denominator, a defined response and a matched DEE comparator, or brain energy measurement paired with response.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-122 — Timing reverses the sign of a HIF1A intervention in hypoxic brain
+
+- **Tag:** ESPANSIONE
+- **Status:** open
+- **Created:** 2026-10-19 · `BATCH_20261019_001`, from `CC-20261019-SCIENTIST-B-G2-KD-PRIOR-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** A HIF-1 alpha inhibitor was protective at 0.5 h and harmful at 8 h after middle-cerebral-artery occlusion ([[paper_registry_current#PAPER 275]], restating primaries). Any HIF1A-directed rationale for WWOX loss needs a timing axis stated before it is entertained.
+- **Falsifying experiment / counter:** A primary showing the same direction at both times.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-123 — A diet exposure alone raises neonatal brain lactate about 2.7-fold, so a lactate difference in a Wwox-null brain is not by itself a HIF1A-driven glycolytic shift
+
+- **Tag:** INFERENZA
+- **Status:** open
+- **Created:** 2026-10-19 · `BATCH_20261019_001`, from `CC-20261019-SCIENTIST-B-G2-FRUCTOSE-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** High-fructose exposure moves whole-brain lactate from about 4 to about 11 umol/g in neonatal mice through microglial GLUT5 ([[paper_registry_current#PAPER 276]]).
+- **Falsifying experiment / counter:** Matched-diet Wwox-null versus wild-type brain lactate with cell-type resolution.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-124 — Two microglial fructose routes disagree: hexokinase to F6P in neonatal hypo-phagocytic microglia against KHK to NOX4-ROS in activated adult microglia
+
+- **Tag:** ESPANSIONE
+- **Status:** open
+- **Created:** 2026-10-19 · `BATCH_20261019_001`, from `CC-20261019-SCIENTIST-B-G2-FRUCTOSE-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** [[paper_registry_current#PAPER 276]] against [[paper_registry_current#PAPER 277]]; no single rule 'fructose makes microglia X'. Decision (not a claim): fructose/KHK is not a WWOX-DEE priority unless Wwox-null microglia show high Slc2a5 expression or a phagocytosis deficit (REVIVAL_TRIGGER).
+- **Falsifying experiment / counter:** Wwox-null microglia with high Slc2a5 or a phagocytosis deficit would revive it.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-125 — PUFA-triglyceride and lipid-droplet bridge: if WWOX deficiency limits oxidative phosphorylation even mildly, a lipid-droplet and PUFA-TG signature with higher GPX4 would follow
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-19 · `BATCH_20261019_001`, from `CC-20261019-SCIENTIST-C-G3-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** Source: [[paper_registry_current#PAPER 283]]. The repository holds WWOX loss as raising glycolysis in fibroblasts and as perturbing respiratory function in the fly. Readout in donor-derived WWOX-deficient fibroblasts: BODIPY area per cell, targeted TG lipidomics, GPX4.
+- **Falsifying experiment / counter:** No difference at equal passage between WWOX-deficient and matched control fibroblasts.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-126 — Replication-stress hypomorph dose: chronic low-dose replication stress lowers WWOX transcript by about 40 percent in a dividing non-cancer human cell type
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-19 · `BATCH_20261019_001`, from `CC-20261019-SCIENTIST-C-G3-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** Source: [[paper_registry_current#PAPER 280]] (one cell type, one schedule, mRNA only; the WWOX row sits in a figure panel and a supplementary table). Readout: WWOX protein and mitochondrial ROS in a donor-derived line under the same aphidicolin schedule.
+- **Falsifying experiment / counter:** A protein null closes the lead.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-127 — Junction microhomology of human WWOX copy-number alleles scored against a chance model, with PARK2 as comparator
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-19 · `BATCH_20261019_001`, from `CC-20261019-SCIENTIST-C-G3-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** Source: [[paper_registry_current#PAPER 288]]. The repository holds a murine WWOX-loss measurement shifting class-switch junctions toward long microhomology (CLAIM 029, in observation) and no record of the junction structure of human WWOX copy-number alleles.
+- **Falsifying experiment / counter:** Counter: germline events from earlier generations; a chance model that explains the microhomology.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-128 — BNIP3 and BNIP3L under WWOX loss: transcript plus LC3/TOMM20 colocalisation in the WWOX-deficient lines
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-19 · `BATCH_20261019_001`, from `CC-20261019-SCIENTIST-C-G3-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** Source: [[paper_registry_current#PAPER 289]] (a mitophagy review that cannot arbitrate CLAIM 010).
+- **Falsifying experiment / counter:** No change in either receptor or in colocalisation.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-129 — Iron observables in WWOX case reports: scan reports already in the repository for ferritin, haemoglobin or susceptibility imaging; record 'none stated' per report
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-19 · `BATCH_20261019_001`, from `CC-20261019-SCIENTIST-C-G3-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** Source: [[paper_registry_current#PAPER 290]]. No WWOX record holds any iron observable.
+- **Falsifying experiment / counter:** Reports state values and they are normal.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-130 — MAM terms against the WWOX interactome: look up the seven tether and channel proteins in the interactome paper already receipted
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-19 · `BATCH_20261019_001`, from `CC-20261019-SCIENTIST-C-G3-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** Source: [[paper_registry_current#PAPER 285]]. No WWOX record names any of the seven terms, so the MAM frame has no anchor; if none appears it stays vocabulary.
+- **Falsifying experiment / counter:** None of the seven appears.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-131 — Total WWOX beside pTyr33-WWOX with an inactive-peptide arm would separate peptide inhibition from WWOX consumption
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-19 · `BATCH_20261019_001`, from `CC-20261019-SCIENTIST-C-G3-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** Source: the Carvalho 2022 resume closed by this batch ([[paper_registry_current#PAPER 097]]); the missing total-WWOX blot is the standing gap.
+- **Falsifying experiment / counter:** Total WWOX unchanged and pTyr33 falling with the active peptide only.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-132 — Wwox-null brain HO-1, ferritin or labile iron under a registry-held HIF1A rise, independently of seizure-driven accumulation
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-19 · `BATCH_20261019_001`, from `CC-20261019-SCIENTIST-C-G3-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** Source: [[paper_registry_current#PAPER 279]] with a seizure-driven HIF-1a/HO-1 iron primary it cites. The HIF1A reading is non-neural, the null mouse is short-lived and the seizure-driven response cannot separate cause from consequence.
+- **Falsifying experiment / counter:** No difference in HO-1, ferritin or lipid-peroxidation readouts between Wwox-null and control cortex or hippocampus at a pre-lethal age.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-133 — Retrieve the WWOX VABAM anchor and read its treatment histories for co-administered hormonal therapy
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-19 · `BATCH_20261019_001`, from `CC-20261019-SCIENTISTD-G4-REGISTRY-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** Blocked on acquisition ([[paper_registry_current#PAPER 003]] has no receipt). Both non-WWOX cohorts, read at partial depth, associate hormonal therapy with symptomatic VABAM and neither associates it with the MRI finding alone; they point the same way and are underpowered (corrected at `BATCH_20261019_003`, Mirror B1; the earlier wording said they disagree) ([[paper_registry_current#PAPER 294]], [[paper_registry_current#PAPER 295]]).
+- **Falsifying experiment / counter:** Falsifier of 'hormonal co-therapy is irrelevant to WWOX VABAM': both WWOX children exposed. Falsifier of 'relevant': neither exposed.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-134 — ACTH-responsiveness and neurosteroid readouts (adrenal and brain DHEA, androstenedione, pregnenolone) in Wwox-null mice
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-19 · `BATCH_20261019_001`, from `CC-20261019-SCIENTISTD-G4-REGISTRY-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** ACTH efficacy in infantile spasms is proposed to run partly through neurosteroidogenesis ([[paper_registry_current#PAPER 302]], a review) and a gonadal steroidogenesis defect exists in Wwox-null mice (PAPER 076), confounded by systemic illness; the adrenal and neurosteroid readouts are in no source read. The cheapest first step is a literature check, not an animal experiment.
+- **Falsifying experiment / counter:** Normal adrenal and brain neurosteroid ratios in Wwox-null mice.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-135 — A single CSF monoamine panel (HVA, 5-HIAA, ratio, pterins, 3-O-methyldopa) with event EEG in a WWOX child with hypokinetic-rigid features, logged with drug and seizure state
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-19 · `BATCH_20261019_001`, from `CC-20261019-SCIENTISTD-G4-REGISTRY-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** Reads against the discriminator table of the wave note ([[paper_registry_current#PAPER 296]], [[paper_registry_current#PAPER 299]], [[paper_registry_current#PAPER 298]]). The owed measurement already exists as an unmeasured item in PAPER 145.
+- **Falsifying experiment / counter:** A panel inside the normal age range with the confounders recorded.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-METH-122 — Method: canonical splice-site alleles are classified likely pathogenic on predicted loss of function without an RNA study in the two SLC18A2 case reports; the same evidential step exists for a WWOX canonical splice-acceptor allele
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-19 · `BATCH_20261019_001`, from `CC-20261019-SCIENTISTD-G4-REGISTRY-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** [[paper_registry_current#PAPER 306]] and [[paper_registry_current#PAPER 307]]. A methodological observation about evidence strength, not a statement about any individual: a patient or cell RNA readout would move the allele from predicted to observed.
+- **Falsifying experiment / counter:** An RNA study showing the predicted effect.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-METH-123 — Method note for question 1 of the metabolic batch: species to read if a Wwox-null or P47T brain lipidomics is ever run
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-19 · `BATCH_20261019_001`, from `CC-20261019-SCIENTIST-A-LIPID-04` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** C16-C18 versus C22-C24 ceramides, sphingomyelins, hexosylceramides and sulfatides; white-matter imaging; raft-fraction lipids at P20; a neuron-OPC co-culture with independently genotyped partners separates cell-autonomous from non-cell-autonomous action ([[paper_registry_current#PAPER 252]], [[paper_registry_current#PAPER 253]]). No such measurement exists in the repository.
+- **Falsifying experiment / counter:** Not applicable (method note).
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-METH-124 — Method note: if brain sterol is ever measured in Wwox-null or P47T brain, a post-lanosterol profile by GC- or LC-MS; plasma cholesterol is not a proxy
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-19 · `BATCH_20261019_001`, from `CC-20261019-SCIENTIST-A-LIPID-05` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** Cholesterol, desmosterol, lathosterol, 7-dehydrocholesterol and lanosterol, as named by [[paper_registry_current#PAPER 258]]. No such measurement exists in the repository.
+- **Falsifying experiment / counter:** Not applicable (method note).
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+## Run 2026-10-20 — metabolic batch waves 2 and 3: leads staged by Scientists B, C and D
+
+Leads staged in the candidates of `BATCH_20261019_003` (groups H3, H4 and H5). All are leads, none is a claim; each is a research-layer entry only.
+
+### DL-MECH-136 — The class label "adrenergic" has no direction: across five readings the same receptor family is beneficial, harmful or both
+
+- **Tag:** INFERENZA
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_003`, from `CC-20261019-SCIENTIST-B-H3-ADRENERGIC-SEIZURE-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** A beta2 agonist prevented most limbic seizures in rat piriform cortex ([[paper_registry_current#PAPER 311]]), alpha2 agonists lengthened absence activity ([[paper_registry_current#PAPER 312]]), pan-adrenergic blockade lengthened each acute seizure while lowering later seizures ([[paper_registry_current#PAPER 313]]), alpha blockade after injury left seizures unchanged ([[paper_registry_current#PAPER 314]]) and each receptor subtype carries both protective and harmful findings in one review ([[paper_registry_current#PAPER 315]]). For WWOX the first question is therefore which receptor and which tissue, not whether adrenaline helps (INFERENZA from DATO as printed).
+- **Falsifying experiment / counter:** A WWOX-deficient system in which one named receptor-subtype manipulation has a measured seizure or survival effect would replace the class label with a direction.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-137 — A post-injury alpha-adrenergic effect on lactate and glucose exists in a developing-brain model; it is the only measured adrenergic effect on a metabolic readout in this wave
+
+- **Tag:** ESPANSIONE
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_003`, from `CC-20261019-SCIENTIST-B-H3-ADRENERGIC-SEIZURE-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** In the preterm fetal sheep after hypoxia-ischaemia, alpha blockade lowered post-insult lactate (4.1 against 1.6 mmol/L at 2 h) and glucose while seizures were unchanged ([[paper_registry_current#PAPER 314]]). No WWOX link.
+- **Falsifying experiment / counter:** A replication in a second developing-brain model, or a null result for lactate under alpha blockade.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-138 — A Wwox-null monoamine measurement (CSF or brain HVA, MHPG, 5-HIAA, 3-OMD) would be the cheapest first adrenergic datum
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_003`, from `CC-20261019-SCIENTIST-B-H3-ADRENERGIC-SEIZURE-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** No WWOX tissue has any adrenergic readout in the repository records (a null result of term queries; an empty result is not evidence about the literature). The template is the CSF monoamine panel of the movement-disorder DEE case report already in the registry ([[paper_registry_current#PAPER 299]]).
+- **Falsifying experiment / counter:** Monoamine metabolites within the age-matched range in a Wwox-null or patient series would remove the motivation for an adrenergic arm.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-139 — A resuscitation or metabolic surrogate can move without the patient-relevant outcome: any adrenergic hypothesis for WWOX must name its outcome first
+
+- **Tag:** INFERENZA
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_003`, from `CC-20261019-SCIENTIST-B-H3-EPINEPHRINE-SAFETY-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** Epinephrine raises return of circulation about 3.4-fold without improving neurological outcome ([[paper_registry_current#PAPER 316]]); the paediatric protocol takes time to return of circulation among those who achieve it as its primary outcome ([[paper_registry_current#PAPER 317]]); lactate and mitochondrial respiration stay impaired after epinephrine restored pressure and survival in the rat ([[paper_registry_current#PAPER 318]]).
+- **Falsifying experiment / counter:** A surrogate that predicts the outcome in a population relevant to WWOX would make the surrogate sufficient.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-METH-125 — Method rule: an epinephrine arm needs an epinephrine-alone control and a time-matched disease-only control before a respiratory or lactate change is read as a drug effect
+
+- **Tag:** INFERENZA
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_003`, from `CC-20261019-SCIENTIST-B-H3-EPINEPHRINE-SAFETY-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** The rat anaphylaxis study has neither control, so the attribution of impaired respiration to epinephrine is untestable by its own design ([[paper_registry_current#PAPER 318]]).
+- **Falsifying experiment / counter:** Not applicable (method note).
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-140 — The measurement panel a WWOX hypoglycaemia or movement-disorder case would need: glucose with insulin, glucagon, epinephrine, growth hormone, cortisol, free fatty acids and ketones at one time point, and CSF HVA, 5-HIAA, MHPG and 3-OMD with age-matched ranges
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_003`, from `CC-20261019-SCIENTIST-B-H3-AUTONOMIC-HYPOGLYCAEMIA-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** Counter-regulatory responses are blunted after antecedent hypoglycaemia ([[paper_registry_current#PAPER 323]]); a ketogenesis-defect crisis was normoglycaemic with none of these measured ([[paper_registry_current#PAPER 322]]); the CSF panel template is [[paper_registry_current#PAPER 299]]. None exists in the repository records for WWOX.
+- **Falsifying experiment / counter:** A WWOX case or model in which the panel is normal.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-141 — Counter-regulation versus energy failure in the Wwox-null mouse cannot be separated with a glucose value alone
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_003`, from `CC-20261019-SCIENTIST-B-H3-AUTONOMIC-HYPOGLYCAEMIA-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** A severe crisis can be normoglycaemic ([[paper_registry_current#PAPER 322]]); the null mouse is hypoglycaemic by a single reading ([[paper_registry_current#PAPER 005]]); neither separates a hormonal from a fuel lesion.
+- **Falsifying experiment / counter:** Paired glucose, insulin, glucagon and epinephrine in the null mouse at one time point that show a normal hormonal response to the low glucose.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-142 — Blood-pressure or autonomic data in WWOX-DEE cohorts are an open question; a gene-level association in one ancestry group is a reason to ask, not an answer
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_003`, from `CC-20261019-SCIENTIST-B-H3-WWOX-BP-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** WWOX is one of 17 genes with differential distributions in a young-onset hypertension scan, with no SNP at the stated threshold and replication only within the Han Chinese family study ([[paper_registry_current#PAPER 324]]).
+- **Falsifying experiment / counter:** A WWOX-DEE cohort with blood-pressure or heart-rate-variability data showing no difference from age-matched controls.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-143 — WWOX case-report oximetry scan: reports already in the repository can be scanned for overnight oximetry, polysomnography or breathing-pattern statements, recording "none stated" per report
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_003`, from `CC-20261019-SCIENTIST-C-H4-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** Absence of a statement is not absence of the finding. The adult WWOX case with respiratory decline ([[paper_registry_current#PAPER 015]]) is the nearest record.
+- **Falsifying experiment / counter:** Any report stating normal sleep oximetry.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-144 — Incubator-oxygen control for WWOX-null oligodendrocyte cultures: culture at 2 versus 20 percent oxygen
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_003`, from `CC-20261019-SCIENTIST-C-H4-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** Mouse OPC growth and survival differ about 2.6-fold in apoptosis between 2 and 20 percent oxygen ([[paper_registry_current#PAPER 336]]); any WWOX-null versus control myelination readout is confounded by oxygen unless it is matched.
+- **Falsifying experiment / counter:** A WWOX-null versus control myelination difference that is the same at both oxygen levels would remove the confound.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-145 — Tissue oxygen in a WWOX-null brain: the hyperoxia rationale of hypoxia therapy needs a measured tissue oxygen or iron-sulfur protein proxy
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_003`, from `CC-20261019-SCIENTIST-C-H4-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** Hypoxia rescued disease only where an electron-transport lesion lowers tissue oxygen use and raises tissue oxygen ([[paper_registry_current#PAPER 325]], [[paper_registry_current#PAPER 338]]); that precondition is not established for WWOX loss, so hypoxia or HIF logic cannot be transferred without it.
+- **Falsifying experiment / counter:** Tissue oxygen in a Wwox-null brain not raised relative to control.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-146 — Task fNIRS feasibility: cortical oxygenation by fNIRS is feasible at a patient conference in older, higher-functioning patients, but its own headline conflicts with its figures, so it is a feasibility datum and not a biomarker
+
+- **Tag:** ESPANSIONE
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_003`, from `CC-20261019-SCIENTIST-C-H4-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** [[paper_registry_current#PAPER 333]]: the title says reduced oxygenation, the body shows higher left-prefrontal HbO and mostly null intervals.
+- **Falsifying experiment / counter:** A pre-registered fNIRS contrast in a WWOX series with a matched comparator.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-147 — Neonatal oxygen-window caution: the only trial-derived numbers in the oxygen group are preterm saturation targets, and they do not apply to a genetic encephalopathy without a stated gap
+
+- **Tag:** DATO
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_003`, from `CC-20261019-SCIENTIST-C-H4-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** A 90 to 95 percent target is suggested for infants under 28 weeks and the lower target raised death in two preterm trials, as restated in a review ([[paper_registry_current#PAPER 334]]). Class level only.
+- **Falsifying experiment / counter:** Not applicable (class-level statement, not a hypothesis).
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-148 — A fasting seizure-threshold experiment in a Wwox-deficient mouse, prediction fixed before data
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_003`, from `CC-20261019-SCIENTISTD-H5-REGISTRY-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** Prediction: a 24 h fast lowers PTZ seizure incidence in Wwox+/+ and Wwox+/- animals as in the controls of the Depdc5 study (about 56% to about 22%; [[paper_registry_current#PAPER 340]]), because mTORC1 sensing is not shown to be altered by WWOX loss; the alternative is loss of protection as in the Depdc5 knockout. This is a plan for an experiment, not an indication for any fasting.
+- **Falsifying experiment / counter:** Falsifier of "fasting protection is intact": incidence unchanged in the deficient genotype with glucose lowered and ketones raised.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-149 — Resolve the cell-versus-organism polarity of nutrient stress in WWOX loss: a glucose-withdrawal experiment in Wwox-null neurons
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_003`, from `CC-20261019-SCIENTISTD-H5-REGISTRY-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** Wwox-null fibroblasts resisted serum-withdrawal death in the held WWOX-direct reading while the null mouse dies hypoglycaemic. A glucose-withdrawal (not serum) experiment in null neurons with ATP, ROS and viability readouts would say which direction applies to neurons.
+- **Falsifying experiment / counter:** Falsifier of "loss protects neurons from nutrient stress": null neurons die faster than wild-type under glucose withdrawal.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+
+### DL-MECH-150 — pWWOX and mitochondrial readouts in a WWOX-deficient neuron exposed to 10 and 25 mM glucose, with a genetic control for the peptide
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-20 · `BATCH_20261019_003`, from `CC-20261019-SCIENTISTD-H5-REGISTRY-01` (metabolic batch 2026-10-19). The candidate staged the lead; the integrator assigned the next free number.
+- **Causal statement:** The high-glucose damage reading of the held WWOX-direct reports is tested against the conditions they used, with knockdown cells as the control.
+- **Falsifying experiment / counter:** Falsifier of "WWOX activation mediates high-glucose damage": the damage is unchanged in knockdown cells.
+- **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
+- **Not medical advice.**
+

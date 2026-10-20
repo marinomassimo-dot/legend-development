@@ -286,6 +286,94 @@
     "anchor": "Supplementary Figure 4, panel B; supplementary image inspected at native resolution",
     "panel_text_relation": "panel_only",
     "found_or_sought": "found"
+   },
+   {
+    "proposition": "THE PAPER STATES A CAUSAL CHAIN (LOSS OF SUBCUTANEOUS FAT CAUSES HYPOTHERMIA) THAT IT DOES NOT TEST. It reports two co-occurring findings in a whole-body null at about P21; no intervention, ambient-temperature control, brown fat, core temperature, body weight, feeding or glycaemia is reported.",
+    "snippet": "The loss of subcutaneous fat causes hypothermia in Wwox–/– mice.",
+    "surface": "body",
+    "anchor": "Results, section on collagen, fat and hypothermia, last sentence",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "constitutive whole-body Wwox knockout mouse, skin and body temperature, about postnatal day 21",
+     "genotype": "Wwox-/- versus Wwox+/+ and Wwox+/-",
+     "endpoint": "subcutaneous fat layer; skin surface temperature"
+    },
+    "artifact": "files/fulltext/PMID33195192_Chou2020_PMC.xml"
+   },
+   {
+    "proposition": "Figure 8B-E (hand readings): subcutaneous fat layer about 270 and 270 um in +/+ and +/- versus about 10 um in -/- (n = 3 per genotype, ***); stromal thickness about 590, 570 versus 200 um; Nile red and toluidine blue show no fat depot in -/-; FABP4 shows a few shrunken adipocytes without lipid droplets; dorsal skin surface temperature about 35.8 (n=12), 36.5 (n=9) and 31.3 C (n=15), the heterozygote indistinguishable from wild type. The measurement is on shaved dorsal skin surface by fibre-optic probe, not core, and the statistical n for the fat layer is three. The correlation is real in this cohort; the causal arrow is the authors' inference. A failure-to-thrive animal near its death window loses fat and heat by many routes (see Figure 4 photographs), so fat loss and hypothermia are two readouts of one wasting state as well as possible cause and effect.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 8B-E, quantification of stromal and subcutaneous fat thickness, Nile red and toluidine blue staining, FABP4 immunostaining and skin surface temperature, Wwox+/+, +/-, -/-.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID33195192_Chou2020_supplement/fcell-08-558432-g008.jpg",
+    "anchor": "Figure 8B-E, native JPEG",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[8]",
+    "qualifies_needle": "causes hypothermia",
+    "experimental_context": {
+     "system": "constitutive whole-body Wwox knockout mouse, skin and body temperature, about postnatal day 21",
+     "genotype": "Wwox-/- versus Wwox+/+ and Wwox+/-",
+     "timepoint": "P21",
+     "endpoint": "fat layer thickness; FABP4; skin surface temperature"
+    },
+    "found_or_sought": "sought - question: systemic or metabolic confounders and the metabolic panels"
+   },
+   {
+    "proposition": "Figure 4 (litter photographs P2-P20): the Wwox-/- pup is clearly smaller than littermates from P4-P6 (slightly at P2, hard to judge) and the smallest at P14, P17 and P20 (blind audit correction: P2 was first written as clear). The article reports no body weight, glycaemia or food intake on any surface read; the P21 skin and fat comparisons are therefore made in runted animals about a week before the lethality window the Introduction states (death within 4 weeks).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4, photographs of Wwox+/+, +/- and -/- littermates from P2 to P20 beside the hair-cycle timeline.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID33195192_Chou2020_supplement/fcell-08-558432-g004.jpg",
+    "anchor": "Figure 4, native JPEG",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "constitutive whole-body Wwox knockout mouse, skin and body temperature, about postnatal day 21",
+     "genotype": "Wwox-/- versus Wwox+/+ and Wwox+/-",
+     "timepoint": "P2 to P20",
+     "endpoint": "litter photographs, hair cycle"
+    },
+    "found_or_sought": "found while looking for a growth or weight panel",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33195192.json",
+     "entry": 10,
+     "what_changed": "The P2 size statement was softened to slight at P2 and clear from P4-P6 after the blind audit.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "SUPPORTED"
+      ]
+     }
+    }
+   },
+   {
+    "proposition": "Figure 7A (hand reading): pERK-positive keratinocytes about 47% in +/+ versus about 24% in -/- (***) with the unit of analysis 25 regions from 3 mice (a region is not an animal; the P value is a pseudoreplicated one); Figure 7B p63 mean intensity about 6.8 versus 5.6 a.u. (**; 28 regions/4 mice). The ERK result is a region-level difference in whole-body nulls, qualified by the same-animal runting above.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7A pERK immunohistochemistry with percentage of pERK-positive cells; Figure 7B p63 and K5 immunofluorescence with mean intensity.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID33195192_Chou2020_supplement/fcell-08-558432-g007.jpg",
+    "anchor": "Figure 7A-B, native JPEG",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[0]",
+    "qualifies_needle": "significantly reduced levels of pERK and total ERK1/2 protein",
+    "experimental_context": {
+     "system": "constitutive whole-body Wwox knockout mouse, skin and body temperature, about postnatal day 21",
+     "genotype": "Wwox-/- versus Wwox+/+ and Wwox+/-",
+     "timepoint": "P21 for pERK, P21 for p63",
+     "endpoint": "pERK-positive cells; p63 intensity"
+    },
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "Figures 1-3, 5, 6 (hand readings): epidermal thickness about 7.5 versus 14.5 um (n = 3), hydration about 67 versus 80 a.u., Ki67 positive epidermal cells about 7% versus 14% (n = 5), K10 about 34% versus 39%, hair-follicle length equal at P0 and shorter from P3, junctional-zone Ki67 higher in -/- (about 52% versus 40%) while epidermal Ki67 is lower, K15 bulge cells about 10% versus 19%. A keratinocyte arm (shWWOX in HaCaT) carries two hairpins and a shLuc control. Nothing here is metabolic; the delayed onset (equal at P0, divergent from P3) and the runted animals fit a systemic growth effect superimposed on a local keratinocyte one, which the paper does not separate.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figures 1, 2, 3, 5 and 6, skin histology, K5/K10, Ki67, BrdU, hair-follicle length and K15 quantifications, Wwox+/+, +/-, -/- and shWWOX HaCaT.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID33195192_Chou2020_supplement/fcell-08-558432-g005.jpg",
+    "anchor": "Figures 1-3, 5, 6, native JPEGs",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "constitutive whole-body Wwox knockout mouse, skin and body temperature, about postnatal day 21",
+     "genotype": "Wwox-/- versus Wwox+/+ and Wwox+/-",
+     "timepoint": "P0 to P21",
+     "endpoint": "skin histology and proliferation"
+    },
+    "found_or_sought": "sought"
    }
   ]
  },
@@ -299,6 +387,15 @@
     "disease-models/wwox/research/fulltext_dossiers/PMID33195192.md",
     "disease-models/wwox/research/deepdive_manifests/PMID33195192.json",
     "disease-models/wwox/research/intake_wave_20261004w12_C.md"
+   ]
+  },
+  {
+   "receipt": "FTR-20261019-33195192-03",
+   "reader": "scientist-c, HELD-PARTIAL-WWOX-C-20261019",
+   "context_policy": "QUESTION_DRIVEN",
+   "what_changed": "Opened all eight main figures as images (the manifest already declared them); appended 5 entries and re-pointed none. Figure 8 (subcutaneous fat loss and hypothermia in the null) had no earlier locator: it is the metabolic content of this paper and its causal sentence is untested; no body weight, glycaemia or intake on any surface; Figure 4 photographs show runting.",
+   "outputs": [
+    "disease-models/wwox/research/held_wave_20261019_scientist-c.md"
    ]
   }
  ]

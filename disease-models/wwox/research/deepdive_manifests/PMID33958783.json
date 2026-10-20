@@ -1,182 +1,360 @@
 {
-  "schema_version": 2,
-  "pmid": "33958783",
-  "doi": "10.1038/s41588-021-00847-6",
-  "receipt": "FTR-20261004-33958783-01",
-  "context_policy": "SOURCE_FIRST",
-  "landing": [
-    "disease-models/wwox/research/fulltext_dossiers/PMID33958783.md",
-    "disease-models/wwox/research/intake_wave_20261004w7_A.md",
-    "disease-models/wwox/research/commit_candidates/CC-20261004W7-A-NEURONSPEC-01.md",
-    "disease-models/wwox/research/commit_candidates/CC-20261004W7-A-REGISTRY-01.md"
-  ],
-  "skills_considered": [
-    {"skill": "find-fulltext", "used": true},
-    {"skill": "legend-study-intake-triage", "used": true},
-    {"skill": "legend-deepdive", "used": true},
-    {"skill": "legend-discovery", "used": false, "reason": "The discovery ledger is not the reader's to write."},
-    {"skill": "legend-hypothesis-forge", "used": false, "reason": "A common non-coding variant in a progression survival model supplies no lever for a biallelic loss-of-function genotype class."},
-    {"skill": "legend-safety-triage", "used": false, "reason": "No compound is tested."},
-    {"skill": "legend-commit", "used": false, "reason": "Scientists do not touch the four current files."},
-    {"skill": "legend-locator-audit", "used": false, "reason": "A reader cannot audit their own locators."}
-  ],
-  "group_assessment": {
-    "total_publications": 1,
-    "publications_on_gene": 0,
-    "research_type": "computational",
-    "is_primary_group_for_disease": false,
-    "weighting": "The Harvard/Brigham Advanced Parkinson Research centre with a large international longitudinal consortium. Strong on survival genetics; no WWOX biology. This is the discovery source of the WWOX PD-progression SNP that wave 6 met second-hand in PMID 42135313."
+ "schema_version": 2,
+ "pmid": "33958783",
+ "doi": "10.1038/s41588-021-00847-6",
+ "receipt": "FTR-20261004-33958783-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID33958783.md",
+  "disease-models/wwox/research/intake_wave_20261004w7_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W7-A-NEURONSPEC-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W7-A-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
   },
-  "field_density": {
-    "queries": [
-      {"query": "registry_records.py get --pmid 33958783 (LEGEND)", "count": 0, "source": "LEGEND registries 2026-10-04"},
-      {"query": "fulltext_receipts.py status --pmid 33958783", "count": 0, "source": "receipt ledger 2026-10-04"}
-    ],
-    "note": "Wave 6 recorded this paper as a named reading debt: the discovery source of rs8050111, absent from LEGEND, cited from its abstract by the 2026 replication paper that was read instead."
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
   },
-  "multihop": {
-    "references_enumerated": 84,
-    "gene_direct_refs_in_source": ["24369382"],
-    "resolved": [
-      {"pmid": "24369382", "how": "Reference 49 (Mallaret 2014, SCAR12) is the paper's only WWOX-direct citation; LEGEND holds it in the corpus and in its registries, and it is cited here only to say what WWOX mutation causes."}
-    ],
-    "queued": [],
-    "disposition": "One gene-direct reference, resolved against material LEGEND already holds."
+  {
+   "skill": "legend-deepdive",
+   "used": true
   },
-  "corpus_crossquery": {
-    "query": "registry_records.py get --pmid 33958783; --theme rs8050111 after the first pass",
-    "hits": 0,
-    "note": "No registry record names this paper, although LEGEND carries the SNP through the 2026 replication study read in wave 6."
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is not the reader's to write."
   },
-  "retraction_check": {
-    "checked": true,
-    "result": "Checked 2026-10-04 via PubMed metadata (get_article_metadata): publication types ['Journal Article', 'Research Support, N.I.H., Extramural', 'Research Support, Non-U.S. Gov't']; no retraction, expression of concern or correction listed for PMID 33958783.",
-    "dependencies": {
-      "flagged": [],
-      "noted": [],
-      "paper_verdict": "SCREENED_CLEAN",
-      "reference_source": "network",
-      "references_declared": 83,
-      "references_screened": 80,
-      "references_with_doi": 80,
-      "schema": "retraction_check.dependencies/1",
-      "screened": true,
-      "snapshot": {"date": "2026-09-10", "days_since_fetch": 24, "rows": 72476, "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"},
-      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
-      "unscreenable": {"UNSCREENABLE_NO_DOI": 3}
-    }
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A common non-coding variant in a progression survival model supplies no lever for a biallelic loss-of-function genotype class."
   },
-  "source_artifacts": [
-    {
-      "path": "files/fulltext/PMID33958783_Liu2021_PMC.xml",
-      "sha256": "492656d60a9f96d23b4a085d2b5d8d17a4cf316d87cc85f321180218df0fc8b9",
-      "kind": "article_text",
-      "note": "NCBI efetch was used because Europe PMC's fullTextXML endpoint for PMC8459648 returned HTTP 500 on 2026-10-04, as it had when the record was triaged.",
-      "acquisition_recipe": {
-        "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=8459648&rettype=xml",
-        "http_method": "GET",
-        "tier": "ncbi_efetch_pmc",
-        "user_agent_policy": "none",
-        "acquired_on": "2026-10-04",
-        "derived": false,
-        "result_sha256": "492656d60a9f96d23b4a085d2b5d8d17a4cf316d87cc85f321180218df0fc8b9"
-      }
-    },
-    {
-      "path": "files/fulltext/PMID33958783_Liu2021_assets/nihms-1684407-f0008.jpg",
-      "sha256": "9a95207e09b385e7aeca8ca8a11b5bd3f6ed16b5581e6cf85911bfd3de66f092",
-      "kind": "figure",
-      "note": "Extended Data Fig. 5, the cell-type-specific expression panel for RIMS2, TMEM108 and WWOX. Acquired from the PMC author-manuscript instance bin; the figure label to file mapping was read from the JATS markup.",
-      "acquisition_recipe": {
-        "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/8459648/bin/nihms-1684407-f0008.jpg",
-        "http_method": "GET",
-        "tier": "pmc_instance_bin",
-        "user_agent_policy": "browser_like",
-        "acquired_on": "2026-10-04",
-        "derived": false,
-        "result_sha256": "9a95207e09b385e7aeca8ca8a11b5bd3f6ed16b5581e6cf85911bfd3de66f092"
-      }
-    }
-  ],
-  "verbatim_locators": {
-    "waived": false,
-    "source_fulltext_indexed": true,
-    "source_fulltext_indexed_evidence": "Europe PMC REST PMC8459648/fullTextXML returned HTTP 500 on 2026-10-04; NCBI efetch for the same PMCID returned HTTP 200 with a 158,809-byte body containing <body>. The record is indexed in PMC as an author manuscript (PMC8459648), so locators are anchored in the body, tables and figure legends rather than in the abstract.",
-    "entries": [
-      {
-        "proposition": "The authors class the WWOX result as suggestive, not as a discovered locus.",
-        "snippet": "Two suggestive association signals were located in Transmembrane Protein 108 (TMEM108; NC_000003.11:g.132985956A>C) and WW Domain Containing Oxidoreductase (WWOX; NC_000016.9:g.78281160A>G) loci, respectively",
-        "anchor": "Results, progression loci",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID33958783_Liu2021_PMC.xml",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "Genome-wide significance for WWOX is reached only in the combined discovery-plus-replication analysis; discovery alone is suggestive and replication alone is p<0.05.",
-        "snippet": "These loci achieved genome-wide significance (P < 5 × 10−8) in the combined analysis of discovery and replication populations with suggestive P < 5 × 10−5 in discovery and P < 0.05 in the replication cohort",
-        "anchor": "Results, progression loci",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID33958783_Liu2021_PMC.xml",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "The WWOX exposure is one imputed common variant, rs8050111, risk allele G, frequency 0.066, HR 2.12 (1.63-2.75), discovery p 1.08E-06, replication p 0.01, combined p 2.37E-08.",
-        "snippet": "16 78.28 rs8050111 G 0.066 2.12 1.63–2.75 1.08 × 10−6 0.01 2.37 × 10−8 WWOX",
-        "anchor": "Table 1 (re-extracted cell-wise)",
-        "surface": "table",
-        "artifact": "files/fulltext/PMID33958783_Liu2021_PMC.xml",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "The longitudinal cognitive-decline support for WWOX is a mixed-model p of 0.009.",
-        "snippet": "Patients carrying the WWOX variant had a more rapid longitudinal cognitive decline in MMSE scores compared to non-carriers with P = 0.009 in the LMM analysis",
-        "anchor": "Results, progression loci",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID33958783_Liu2021_PMC.xml",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "The figure that supports the WWOX survival claim uses a different genetic coding from Table 1, and its p values are uncorrected for multiple testing — the authors say so themselves.",
-        "snippet": "the HR and P values shown here for TMEM108 rs138073281 and WWOX rs8050111 are different from the HR and P values from the main analysis",
-        "anchor": "Extended Data Fig. 3 legend",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID33958783_Liu2021_PMC.xml",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "The paper states that WWOX, like the other two loci, is expressed specifically in dopamine and pyramidal neurons.",
-        "snippet": "TMEM108 and WWOX are both expressed in human brain (Extended Data Fig. 4) and specifically in dopamine and pyramidal neurons",
-        "anchor": "Results, progression loci, final sentence",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID33958783_Liu2021_PMC.xml",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "The panel cited for that sentence shows the opposite for WWOX: its laser-capture expression is as high in peripheral blood mononuclear cells and fibroblasts as in the two neuron classes, so the word 'specifically' holds for RIMS2 and TMEM108 and not for WWOX.",
-        "snippet": "[figure attestation — pixels cannot be quote-matched] Extended Data Fig. 5 (nihms-1684407-f0008.jpg), three panels on a shared log10(FPKM+0.01) axis over SNDA (n = 86), MCPY (n = 3), TCPY (n = 10), PBMC (n = 4) and FB (n = 3). RIMS2: neuron medians about 1.5-1.7 against PBMC about -1.9. TMEM108: neuron medians about 0.3-0.65 against PBMC about -1.0 and FB about -0.9. WWOX: SNDA about 0.35, MCPY about 0.2, TCPY about 0.1, PBMC about 0.5 and FB about 0.35 — the two non-neural classes sit at or above the neuronal medians.",
-        "anchor": "Extended Data Fig. 5, WWOX panel",
-        "surface": "figure",
-        "artifact": "files/fulltext/PMID33958783_Liu2021_assets/nihms-1684407-f0008.jpg",
-        "panel_text_relation": "text_contradicted_by_panel",
-        "contradicts": "entries[5]",
-        "contradicts_needle": "specifically in dopamine and pyramidal neurons"
-      },
-      {
-        "proposition": "The paper's only statement about what WWOX does is a one-clause citation of the SCAR12 primary; it carries no WWOX mechanism of its own.",
-        "snippet": "WWOX is mutated in autosomal recessive ataxia with mental retardation and epilepsy",
-        "anchor": "Results, progression loci",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID33958783_Liu2021_PMC.xml",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "rs8050111 is imputed, not directly genotyped, with an imputation R2 of 0.961 and a 98.9 per cent concordance check.",
-        "snippet": "Imputation average call rates (AvgCall) and imputation R2 values were for rs182987047, 0.998 and 0.98, respectively; for rs138073281, 0.996 and 0.888; for rs8050111, 0.997 and 0.961.",
-        "anchor": "Methods, genotype quality control",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID33958783_Liu2021_PMC.xml",
-        "panel_text_relation": "text_only"
-      }
-    ]
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is tested."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "A reader cannot audit their own locators."
   }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "computational",
+  "is_primary_group_for_disease": false,
+  "weighting": "The Harvard/Brigham Advanced Parkinson Research centre with a large international longitudinal consortium. Strong on survival genetics; no WWOX biology. This is the discovery source of the WWOX PD-progression SNP that wave 6 met second-hand in PMID 42135313."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "registry_records.py get --pmid 33958783 (LEGEND)",
+    "count": 0,
+    "source": "LEGEND registries 2026-10-04"
+   },
+   {
+    "query": "fulltext_receipts.py status --pmid 33958783",
+    "count": 0,
+    "source": "receipt ledger 2026-10-04"
+   }
+  ],
+  "note": "Wave 6 recorded this paper as a named reading debt: the discovery source of rs8050111, absent from LEGEND, cited from its abstract by the 2026 replication paper that was read instead."
+ },
+ "multihop": {
+  "references_enumerated": 84,
+  "gene_direct_refs_in_source": [
+   "24369382"
+  ],
+  "resolved": [
+   {
+    "pmid": "24369382",
+    "how": "Reference 49 (Mallaret 2014, SCAR12) is the paper's only WWOX-direct citation; LEGEND holds it in the corpus and in its registries, and it is cited here only to say what WWOX mutation causes."
+   }
+  ],
+  "queued": [],
+  "disposition": "One gene-direct reference, resolved against material LEGEND already holds."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 33958783; --theme rs8050111 after the first pass",
+  "hits": 0,
+  "note": "No registry record names this paper, although LEGEND carries the SNP through the 2026 replication study read in wave 6."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-04 via PubMed metadata (get_article_metadata): publication types ['Journal Article', 'Research Support, N.I.H., Extramural', 'Research Support, Non-U.S. Gov't']; no retraction, expression of concern or correction listed for PMID 33958783.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 83,
+   "references_screened": 80,
+   "references_with_doi": 80,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID33958783_Liu2021_PMC.xml",
+   "sha256": "492656d60a9f96d23b4a085d2b5d8d17a4cf316d87cc85f321180218df0fc8b9",
+   "kind": "article_text",
+   "note": "NCBI efetch was used because Europe PMC's fullTextXML endpoint for PMC8459648 returned HTTP 500 on 2026-10-04, as it had when the record was triaged.",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=8459648&rettype=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "492656d60a9f96d23b4a085d2b5d8d17a4cf316d87cc85f321180218df0fc8b9"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID33958783_Liu2021_assets/nihms-1684407-f0008.jpg",
+   "sha256": "9a95207e09b385e7aeca8ca8a11b5bd3f6ed16b5581e6cf85911bfd3de66f092",
+   "kind": "figure",
+   "note": "Extended Data Fig. 5, the cell-type-specific expression panel for RIMS2, TMEM108 and WWOX. Acquired from the PMC author-manuscript instance bin; the figure label to file mapping was read from the JATS markup.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/8459648/bin/nihms-1684407-f0008.jpg",
+    "http_method": "GET",
+    "tier": "pmc_instance_bin",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "9a95207e09b385e7aeca8ca8a11b5bd3f6ed16b5581e6cf85911bfd3de66f092"
+   }
+  },
+  {
+   "path": "files/supplement/PMID33958783/NIHMS1684407-supplement-Final_supplementary_file.pdf",
+   "kind": "supplement_binary",
+   "note": "Supplementary file (21 pages: Supplementary Figures 1-5 and Tables 1-5), acquired 2026-10-20 from the PMC OA open-data bucket.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8459648.1/NIHMS1684407-supplement-Final_supplementary_file.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "result_sha256": "153dc4a214f48b96b634adf54e6e7b5f029c4f538b36c61eabf679e63f8e58d0"
+   },
+   "sha256": "153dc4a214f48b96b634adf54e6e7b5f029c4f538b36c61eabf679e63f8e58d0"
+  },
+  {
+   "path": "files/supplement/PMID33958783/NIHMS1684407-supplement-Final_supplementary_file_p14_pdftotext.txt",
+   "kind": "supplement_text",
+   "note": "Derived text layer of PDF page 14 only (Supplementary Table 3). The whole-document text layer carries a C0 control character on another page and is therefore not declared; the page-14 extract is clean.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID33958783/NIHMS1684407-supplement-Final_supplementary_file.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -f 14 -l 14 -layout -nopgbrk Final_supplementary_file.pdf NIHMS1684407-supplement-Final_supplementary_file_p14_pdftotext.txt",
+     "join": "\n"
+    },
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "91d20117d6eed6f0b041cda3949f975bfcd98e4e3e19ca2aebd48815e32cc729"
+  },
+  {
+   "path": "files/supplement/PMID33958783/NIHMS1684407-supplement-Supplementary_Data_1.xlsx",
+   "kind": "supplement_binary",
+   "note": "Supplementary Data 1, one sheet of 97 data rows (PD susceptibility SNPs against progression); no WWOX-region row.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8459648.1/NIHMS1684407-supplement-Supplementary_Data_1.xlsx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "result_sha256": "55ff6291f7b91ae7e3ace7181f1da6d13844923c9e748dd27ed4698a6f0f518a"
+   },
+   "sha256": "55ff6291f7b91ae7e3ace7181f1da6d13844923c9e748dd27ed4698a6f0f518a"
+  },
+  {
+   "path": "files/supplement/PMID33958783/Supplementary_Data_1_dump.txt",
+   "kind": "supplement_text",
+   "note": "Cell-by-cell dump of the workbook (stdlib zipfile and regex, shared strings resolved); 98 lines including the header.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID33958783/NIHMS1684407-supplement-Supplementary_Data_1.xlsx",
+    "extractor": {
+     "name": "python stdlib zipfile + re",
+     "version": "3",
+     "call": "read xl/sharedStrings.xml and xl/worksheets/sheet1.xml, join cells by tab",
+     "join": "\n"
+    },
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "a839f278ee657e5d5461f5e8f6cc415591a61f4327d238d3c870991e928e3da4"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC8459648/fullTextXML returned HTTP 500 on 2026-10-04; NCBI efetch for the same PMCID returned HTTP 200 with a 158,809-byte body containing <body>. The record is indexed in PMC as an author manuscript (PMC8459648), so locators are anchored in the body, tables and figure legends rather than in the abstract.",
+  "entries": [
+   {
+    "proposition": "The authors class the WWOX result as suggestive, not as a discovered locus.",
+    "snippet": "Two suggestive association signals were located in Transmembrane Protein 108 (TMEM108; NC_000003.11:g.132985956A>C) and WW Domain Containing Oxidoreductase (WWOX; NC_000016.9:g.78281160A>G) loci, respectively",
+    "anchor": "Results, progression loci",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33958783_Liu2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Genome-wide significance for WWOX is reached only in the combined discovery-plus-replication analysis; discovery alone is suggestive and replication alone is p<0.05.",
+    "snippet": "These loci achieved genome-wide significance (P < 5 × 10−8) in the combined analysis of discovery and replication populations with suggestive P < 5 × 10−5 in discovery and P < 0.05 in the replication cohort",
+    "anchor": "Results, progression loci",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33958783_Liu2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The WWOX exposure is one imputed common variant, rs8050111, risk allele G, frequency 0.066, HR 2.12 (1.63-2.75), discovery p 1.08E-06, replication p 0.01, combined p 2.37E-08.",
+    "snippet": "16 78.28 rs8050111 G 0.066 2.12 1.63–2.75 1.08 × 10−6 0.01 2.37 × 10−8 WWOX",
+    "anchor": "Table 1 (re-extracted cell-wise)",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID33958783_Liu2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The longitudinal cognitive-decline support for WWOX is a mixed-model p of 0.009.",
+    "snippet": "Patients carrying the WWOX variant had a more rapid longitudinal cognitive decline in MMSE scores compared to non-carriers with P = 0.009 in the LMM analysis",
+    "anchor": "Results, progression loci",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33958783_Liu2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The figure that supports the WWOX survival claim uses a different genetic coding from Table 1, and its p values are uncorrected for multiple testing — the authors say so themselves.",
+    "snippet": "the HR and P values shown here for TMEM108 rs138073281 and WWOX rs8050111 are different from the HR and P values from the main analysis",
+    "anchor": "Extended Data Fig. 3 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33958783_Liu2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper states that WWOX, like the other two loci, is expressed specifically in dopamine and pyramidal neurons.",
+    "snippet": "TMEM108 and WWOX are both expressed in human brain (Extended Data Fig. 4) and specifically in dopamine and pyramidal neurons",
+    "anchor": "Results, progression loci, final sentence",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33958783_Liu2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The panel cited for that sentence shows the opposite for WWOX: its laser-capture expression is as high in peripheral blood mononuclear cells and fibroblasts as in the two neuron classes, so the word 'specifically' holds for RIMS2 and TMEM108 and not for WWOX.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Extended Data Fig. 5 (nihms-1684407-f0008.jpg), three panels on a shared log10(FPKM+0.01) axis over SNDA (n = 86), MCPY (n = 3), TCPY (n = 10), PBMC (n = 4) and FB (n = 3). RIMS2: neuron medians about 1.5-1.7 against PBMC about -1.9. TMEM108: neuron medians about 0.3-0.65 against PBMC about -1.0 and FB about -0.9. WWOX: SNDA about 0.35, MCPY about 0.2, TCPY about 0.1, PBMC about 0.5 and FB about 0.35 — the two non-neural classes sit at or above the neuronal medians.",
+    "anchor": "Extended Data Fig. 5, WWOX panel",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID33958783_Liu2021_assets/nihms-1684407-f0008.jpg",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[5]",
+    "contradicts_needle": "specifically in dopamine and pyramidal neurons"
+   },
+   {
+    "proposition": "The paper's only statement about what WWOX does is a one-clause citation of the SCAR12 primary; it carries no WWOX mechanism of its own.",
+    "snippet": "WWOX is mutated in autosomal recessive ataxia with mental retardation and epilepsy",
+    "anchor": "Results, progression loci",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33958783_Liu2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "rs8050111 is imputed, not directly genotyped, with an imputation R2 of 0.961 and a 98.9 per cent concordance check.",
+    "snippet": "Imputation average call rates (AvgCall) and imputation R2 values were for rs182987047, 0.998 and 0.98, respectively; for rs138073281, 0.996 and 0.888; for rs8050111, 0.997 and 0.961.",
+    "anchor": "Methods, genotype quality control",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33958783_Liu2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE SELECTION ROW CALLS THE WWOX LOCUS AN 'AD PROGRESSION SIGNAL'; THE PAPER AND ITS SUPPLEMENT ARE ABOUT PARKINSON'S DISEASE DEMENTIA, NOT ALZHEIMER'S DISEASE. Supplementary Table 3 lists the variants reaching genome-wide significance in the discovery cohort for progression from PD to PDD.",
+    "snippet": "Variants reaching genome-wide significance (P < 5 × 10-8) in the discovery population for association with risk of progression from",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID33958783/NIHMS1684407-supplement-Final_supplementary_file_p14_pdftotext.txt",
+    "anchor": "Supplementary Table 3 legend, PDF page 14",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Parkinson's disease cohorts, genome-wide survival analysis of progression to dementia",
+     "genotype": "common or low-frequency imputed variants near WWOX, human cohorts",
+     "endpoint": "progression to PD dementia, Cox model"
+    },
+    "found_or_sought": "sought - question: does the supplement carry a WWOX-locus datum the main text does not"
+   },
+   {
+    "proposition": "Supplementary Table 3 carries a SECOND WWOX-region variant, rs142789964 (chr16 78.52 Mb, hg19; risk allele T, frequency 0.014; HR 3.49, 95% CI 2.25-5.42; discovery P 2.72e-8, replication P 0.59, combined P 1.95e-6; nearest gene WWOX), distinct from the main-text rs8050111 (chr16 78.28 Mb; HR 2.12; discovery 1.08e-6, replication 0.01, combined 2.37e-8). The genome-wide-significant discovery variant does not replicate (P 0.59); the variant that replicates weakly (P 0.01) did not reach genome-wide significance in discovery. 'The WWOX locus' therefore names two signals about 240 kb apart with opposite discovery/replication profiles; neither is a coding or loss-of-function variant, and the nearest-gene label is positional.",
+    "snippet": "16      78.52     rs142789964     T      0.014   3.49     2.25-5.42        2.72 × 10-8          0.59        1.95 × 10-6      WWOX",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID33958783/NIHMS1684407-supplement-Final_supplementary_file_p14_pdftotext.txt",
+    "anchor": "Supplementary Table 3, row chr16 78.52 Mb",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Parkinson's disease cohorts, genome-wide survival analysis of progression to dementia",
+     "genotype": "common or low-frequency imputed variants near WWOX, human cohorts",
+     "endpoint": "hazard ratio for PDD, discovery and replication P"
+    },
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "Supplementary Figure 4a (Manhattan plot, discovery population, n = 2,650 patients with 11,744 visits, MAF at least 1%): chr16 shows a labelled WWOX peak just above the genome-wide line (about -log10 P 7.7) with a neighbouring cluster to about 7 (the rs8050111 region); the other labelled loci are IQCJ-SCHIP1, NKAIN3, RIMS2, RYR3 and POLR2A. The caption gives lambda-GC 1.107 (discovery) and 1.067 (combined). The WWOX peak in the discovery plot is the unreplicated Table 3 variant.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure 4a-c, Manhattan plot with labelled loci and quantile-quantile plots, PDF page 9 rendered at 110 dpi.",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID33958783/NIHMS1684407-supplement-Final_supplementary_file.pdf",
+    "anchor": "Supplementary Figure 4, PDF page 9 rendered with pdftoppm at 110 dpi",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "Parkinson's disease cohorts, genome-wide survival analysis of progression to dementia",
+     "genotype": "common or low-frequency imputed variants near WWOX, human cohorts",
+     "endpoint": "-log10 P by position"
+    },
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "Supplementary Data 1 (97 rows of PD susceptibility variants tested against progression, with Cox P, HR, Bonferroni, FDR, power and linear mixed model results) contains no variant in the WWOX region: its chromosome 16 rows lie at 19.3, 28.9, 31.0, 50.7, 52.6 and 53.0 Mb. WWOX is therefore absent from the susceptibility-versus-progression analysis.",
+    "snippet": "rs6500328\t16\t50736656\tA\t0.59850000000000003\t0.51966189467137502",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID33958783/Supplementary_Data_1_dump.txt",
+    "anchor": "Supplementary Data 1, chromosome 16 rows",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Parkinson's disease cohorts, genome-wide survival analysis of progression to dementia",
+     "genotype": "common or low-frequency imputed variants near WWOX, human cohorts",
+     "endpoint": "susceptibility variants versus progression"
+    },
+    "found_or_sought": "sought"
+   }
+  ]
+ },
+ "reading_history": [
+  {
+   "receipt": "FTR-20261019-33958783-02",
+   "reader": "scientist-c, HELD-PARTIAL-WWOX-C-20261019",
+   "context_policy": "QUESTION_DRIVEN",
+   "what_changed": "Acquired and declared the supplementary PDF and workbook from the PMC OA bucket (the supplement was not on disk); appended 4 entries. A second WWOX-region variant, genome-wide significant in discovery and not replicated, sits in Supplementary Table 3; the main-text rs8050111 is the weakly replicating one; the disease is Parkinsons dementia, not Alzheimers as the selection row says.",
+   "outputs": [
+    "disease-models/wwox/research/held_wave_20261019_scientist-c.md"
+   ]
+  }
+ ]
 }

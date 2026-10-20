@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-26578889-01",
+ "study_id": {
+  "pmid": "26578889",
+  "doi": "10.3389/fncel.2015.00431"
+ },
+ "event_at": "2026-10-19T19:23:15Z",
+ "analysis_at": "2026-10-19T19:23:15Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, interventions batch 2026-10-19, task INTERV-H4-C-20261019, branch task/INTERV-H4-C-20261019; context_policy SOURCE_FIRST. Route: Europe PMC REST fullTextXML (open access) saved to the shared checkout files/fulltext; whole article read from a text rendering of the JATS (the 45 references counted, not read); the five figures opened at 700 px per panel in one montage. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID26578889_LopezRamos2015_PMC.xml",
+ "source_fingerprint": "3e20986484b7dbd6121a123e917dc3f6fcdd0fd7f071e2597199a4e0fa8362a9",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID26578889.json",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "Hypobaric hypoxia in a glycogen-synthase knockout mouse: a substitute paper for the oxygen group, not WWOX evidence. The article has no limitations section; the text-versus-legend inconsistencies are recorded as locators."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

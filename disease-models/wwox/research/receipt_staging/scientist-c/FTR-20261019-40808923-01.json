@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-40808923-01",
+ "study_id": {
+  "pmid": "40808923",
+  "doi": "10.3389/fneur.2025.1635441"
+ },
+ "event_at": "2026-10-19T18:10:04Z",
+ "analysis_at": "2026-10-19T18:10:04Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, metabolic batch 2026-10-19, task METAB-G3-C-20261019, branch task/METAB-G3-C-20261019; context_policy SOURCE_FIRST. Route: Europe PMC REST fullTextXML (open access) saved to the shared checkout files/fulltext; whole article and reference list read from a text rendering of the JATS; the five figure images opened at native size from the Europe PMC supplementaryFiles bundle. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID40808923_Xu2025_PMC.xml",
+ "source_fingerprint": "ccc39322abd084576d863b416ea717db449869edd1703eaaa9f6dd83cd543a51",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "not_present",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID40808923.json",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "A narrative review: it has no Methods or Results section of its own; the limitations are the review's Research status and challenges section and section 3.3."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

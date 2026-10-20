@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-34354738-01",
+ "study_id": {
+  "pmid": "34354738",
+  "doi": "10.3389/fgene.2021.695172"
+ },
+ "event_at": "2026-10-19T18:35:41Z",
+ "analysis_at": "2026-10-19T18:35:41Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, metabolic batch 2026-10-19, task METAB-G3-C-20261019, branch task/METAB-G3-C-20261019; context_policy SOURCE_FIRST. Route: Europe PMC REST fullTextXML (open access) saved to the shared checkout files/fulltext; whole article, Methods and reference list read from a text rendering of the JATS; three figure images and the three one-page supplementary PDFs (rendered at 60 to 80 dpi) opened; the supplementary tables document (Data Sheet 4) read as text. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID34354738_Munk2021_PMC.xml",
+ "source_fingerprint": "d6d6e332c1368cd76336788eff6117830c320312e037d7a87241db0fe2329130",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID34354738.json",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "A Brief Research Report: it has no limitations section; the limits are stated inside the Discussion. The supplementary primer and construct tables are in Data Sheets 3 and 4."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

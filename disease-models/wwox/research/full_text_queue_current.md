@@ -255,7 +255,7 @@ through an authorised `BATCH_COMMIT`.
 **Priority:** MEDIUM
 **Why:** `Wwox` emerge come gene candidato per HDL per convergenza QTL murino × GWAS umano. Rilevante per la meta metabolica e, via colesterolo cerebrale, per l'asse mielina.
 **Current status:** `NEW` all'intake 2026-07-26; abstract letto, **full text NON letto**. PMCID PMC3090235 (open).
-**Next action:** full text deep extraction
+**Next action:** CLOSED 2026-10-19 (was: «full text deep extraction») — read in full (`FTR-20261019-21444760-01`, complete), landing [[paper_registry_current#PAPER 248]] (`CC-20261019-SCIENTIST-A-LIPID-01`, `BATCH_20261019_001`).
 
 ---
 
@@ -7443,6 +7443,7 @@ Expression Analysis for Cyto-Architectural Alterations in Substantia Nigra of Pa
 **Priority:** **LOW**
 **Why:** 🎯 **Method-only transfer** — the cell-composition-deconvolution caveat the metabolic node
 turns against its **own best datum**. 🔴 **Parkinson's substantia nigra**; no biology transfers.
+**Read 2026-10-19** (`FTR-20261019-35053314-01`, partial; `CC-20261019-SCIENTISTD-G4-REGISTRY-01`, `BATCH_20261019_001`): the paper names WWOX once, as a network-central protein of a database-built interactome, with no expression value; the method-only transfer rating stands; landing [[paper_registry_current#PAPER 300]].
 
 ## FT-168
 **Paper:** PMID 36882863 / PMCID PMC9990224 — Ghirardini E, … Baroncelli L, *Cell-specific
@@ -8330,6 +8331,60 @@ raggiungibile da qui.
 **Priority:** MEDIUM — the datum would decide an allele class the model does not otherwise hold, but no held claim rests on it and no acquisition would produce it: the experiment was not published.
 **Current status:** OPEN — both artefacts acquired and read; the owed datum is **not in them**. This is an authors-and-replication debt, not a surface debt.
 **Next action:** asking the reporting groups for the cDNA trace, or an RNA-seq / minigene replication with an NMD-inhibitor arm in a stated tissue, is the only route — neither source shows the experiment. **Author outreach is reserved to the operator and is not undertaken here.** Record any reply or replication as a new receipt, never by editing an existing one. Record created by `CC-20261004W9-C-DEEPINTRONIC-01`, number assigned by `BATCH_20261004_003`.
+
+---
+
+## FT-195
+**Paper:** PMID 29675105 — report of a WWOX polymorphism and hepatocellular carcinoma prognosis (2018), a WWOX-direct reference of the oleic-acid HCC paper
+**Priority:** MEDIUM (parent PMID 39500530)
+**Why:** a WWOX-direct reference of [[paper_registry_current#PAPER 250]] in neither the receipt ledger nor a per-paper queue entry
+**Current status:** OPEN — not acquired or read.
+**Next action:** acquire and read; parent is the HCC oleate paper. Record created by `CC-20261019-SCIENTIST-A-LIPID-02`, number assigned by `BATCH_20261019_001`.
+
+---
+
+## FT-196
+**Paper:** PMID 34015398 — report of toosendanin activation of WWOX in hepatocellular carcinoma (2021), a WWOX-direct reference of the oleic-acid HCC paper
+**Priority:** MEDIUM (parent PMID 39500530)
+**Why:** a WWOX-direct reference of [[paper_registry_current#PAPER 250]] in neither the receipt ledger nor a per-paper queue entry; also the primary behind the toosendanin commentary read in group G3
+**Current status:** OPEN — not acquired or read.
+**Next action:** acquire and read. Record created by `CC-20261019-SCIENTIST-A-LIPID-02`, number assigned by `BATCH_20261019_001`.
+
+---
+
+## FT-197
+**Paper:** PMID 40139278 — Yuan 2025, WWOX/MAF variants and cognition in Parkinson disease
+**Priority:** MEDIUM
+**Why:** WWOX genotype in a dopamine-deficit population
+**Current status:** `OA-but-bot-blocked` — open access but the publisher returns HTTP 403 to every automated route tried on 2026-10-19 (Europe PMC, OpenAlex, Semantic Scholar, direct publisher PDF and HTML with and without a browser User-Agent and DOI referrer); the cascade is in `metabolic_wave_20261019_scientist-d.md` section 6.
+**Next action:** an interactive browser fetch or an operator-supplied PDF. Record created by `CC-20261019-SCIENTISTD-G4-REGISTRY-01`, number assigned by `BATCH_20261019_001`.
+
+---
+
+## FT-198
+**Paper:** PMID 17909041 — Aqeilan 2007, Wwox with ErbB4 in breast cancer
+**Priority:** MEDIUM
+**Why:** a third source for the WWOX-ErbB4 link
+**Current status:** `OA-but-bot-blocked` — OpenAlex and Semantic Scholar both give the publisher's free PDF URL; direct fetch with plain and browser User-Agent returned HTTP 403 (2026-10-19).
+**Next action:** an interactive browser fetch or an operator-supplied PDF. Record created by `CC-20261019-SCIENTISTD-G4-REGISTRY-01`, number assigned by `BATCH_20261019_001`.
+
+---
+
+## FT-199
+**Paper:** PMID 39933386 — Martin 2025 (a candidate source on the ACTH and adrenal axis in the WWOX theme)
+**Priority:** MEDIUM
+**Why:** found by a self-chosen PubMed search inside the group G4 theme on 2026-10-19; it passed the three tests (substantive abstract, a question the paper could change, a lawful body)
+**Current status:** closed to retrieval on 2026-10-19 — no open copy through the routes tried (see the wave note section 6).
+**Next action:** operator-supplied PDF or a licensed route. Record created by `CC-20261019-SCIENTISTD-G4-REGISTRY-01`, number assigned by `BATCH_20261019_001`.
+
+---
+
+## FT-200
+**Paper:** PMID 33074286 — Kunkle 2021 (a candidate source in the group G4 theme)
+**Priority:** LOW
+**Why:** found by the same self-chosen search; it passed the same three tests
+**Current status:** closed to retrieval on 2026-10-19 — no open copy through the routes tried (see the wave note section 6).
+**Next action:** operator-supplied PDF or a licensed route. Record created by `CC-20261019-SCIENTISTD-G4-REGISTRY-01`, number assigned by `BATCH_20261019_001`.
 
 ---
 ## 🔴 CORRECTION 2026-09-23 — `PMID 29808465` is NOT without a DOI, and this file says both things

@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-19T00:00:00Z",
+ "analysis_time_precision": "date_only",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "tables": "read",
+  "figures": "read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-10-19T18:45:35Z",
+ "event_id": "FTR-20261019-41069084-01",
+ "evidence_basis": [
+  "JATS body and Tables 1-5 read section by section from a text rendering in four pages; both figure images opened.",
+  "Supplementary files (docx data S1-S2, figures S1-S2 pdf, tables S1-S2 docx) fetched into the bucket listing but not opened; reference list counted (40), not read."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41069084.json",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-d.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "d7c4605c96bd693f825f9a21fb05b572d96c122ceba3a3376039b8912a582563",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID41069084_Burst2026_PMC.xml",
+ "study_id": {
+  "doi": "10.1111/acem.70158",
+  "pmid": "41069084"
+ },
+ "workflow": "scientist-d (stated assumption of the Orchestrator), interventions wave 2026-10-19, task INTERV-H5-D-20261019, branch task/INTERV-H5-D-20261019; context_policy QUESTION_DRIVEN. Route: Europe PMC REST fullTextXML into the shared checkout files/fulltext/; figures and supplements from the PMC Article Datasets open-data bucket where present; locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts."
+}

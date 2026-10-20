@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-38074156-01",
+ "study_id": {
+  "pmid": "38074156",
+  "doi": "10.3389/fphar.2023.1230313"
+ },
+ "event_at": "2026-10-19T19:23:52Z",
+ "analysis_at": "2026-10-19T19:23:52Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, interventions batch 2026-10-19, task INTERV-H4-C-20261019, branch task/INTERV-H4-C-20261019; context_policy SOURCE_FIRST. Route: Europe PMC REST fullTextXML (open access) saved to the shared checkout files/fulltext; whole review read from a text rendering of the JATS up to the reference list (258 references counted, not read); the three figures opened in one montage. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID38074156_Ma2023_PMC.xml",
+ "source_fingerprint": "24b57ff293cf702fd6f324152bcdadd23696419ba3d888f593c33b3fc012bdde",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "not_present",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID38074156.json",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "A narrative review with no Results section or limitations section; its limits are recorded as locators. The 258 references were enumerated, not read, so the primaries behind the clinical statements (CPAP series, cohort studies) were not opened. Substitute for the intermittent-hypoxia item; not WWOX evidence."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

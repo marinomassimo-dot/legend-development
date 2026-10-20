@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-19T21:00:00Z",
+ "event_at": "2026-10-19T21:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "captions_only"
+ },
+ "event_id": "FTR-20261019-36779245-01",
+ "evidence_basis": [
+  "Whole JATS body, Tables 1-3 and Figures 1-4 opened as images (709 px width, the native size served); supplement docx text read in full, six embedded raster figures opened, two EMF graphics not rendered; Table S1 xlsx read as text.",
+  "NEW FINDINGS: ketogenic-diet continuation count; ECG and Breath polygraphy channels visible in Figure 1; Figure 1C channel labels are right-hemisphere while the caption says left; Figure 4A as drawn gives missense/missense about 0.62 against null/null about 0.26 with overlapping bands and no pairwise test; supplement Patient 6 RNA study is shown in the father and the legend says exon 6 where the text says exon 5."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID36779245.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID36779245.md",
+  "disease-models/wwox/research/gold_wave_20261019_scientist-b.md"
+ ],
+ "prior_receipt": "FTR-20260928-36779245-06",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "780f42de9b3982fa5bf9bf1e6bb76f71384c943aa197fb2d4de80be7ac7e7a34",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1111/epi.17542",
+  "pmid": "36779245"
+ },
+ "workflow": "scientist-b gold wave 2026-10-19; SOURCE_FIRST for the new locators; bytes re-acquired with no User-Agent (PMC efetch, PMC open-data bucket); locators verified by deepdive_manifest.py --verify-artifacts --require-current-schema; prepared as JSON for the integrator and not appended."
+}

@@ -55,3 +55,17 @@ Three WWOX-direct references of this paper are in neither the receipt ledger nor
 3. The inhibitor experiment is described as Huh7 cell-derived | For further drug sensitivity experiments, Huh7 cell-derived humanized orthotopic HCC mouse models were first constructed. | Supplementary file 1, Animal experiments, `files/fulltext/PMID39500530_LiuS2024_supplement/jitc-12-11-s001.DOCX`
 4. The supplementary ELISA method covers the WWOX kit only | We measured WWOX levels in serum from HCC patients using the Human WWOX ELISA Kit (Biorbyt, orb1146837). | Supplementary file 1, ELISA, same artefact
 5. WWOX residues 106-414 are needed for NME2 binding | We mapped the structural domains involved in the interaction between WWOX and NME2 and found that the WWOX (106-414) and NME2 (67-152) domains were necessary for their interaction (figure 5C). | Results, section 6, `files/fulltext/PMID39500530_LiuS2024_PMC.xml`
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_001` · 2026-10-19 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.20 -> WM_v7.21 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** not run — no baseline claim is narrowed and no MAJOR contingency is declared; the candidate's locator triples are carried for a later audit.
+**What landed:** 1 PAPER record(s) (PAPER 250) with their LIT records. Source note of `DL-MECH-015` corrected (op dry-run and applied). Three queue entries minted (FT-195, FT-196; the third reference is already queued).
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.

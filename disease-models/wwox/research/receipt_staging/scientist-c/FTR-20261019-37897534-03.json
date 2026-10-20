@@ -1,0 +1,39 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-37897534-03",
+ "study_id": {
+  "pmid": "37897534",
+  "doi": "10.1007/s00018-023-04950-1"
+ },
+ "event_at": "2026-10-19T21:00:00Z",
+ "analysis_at": "2026-10-19T21:00:00Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, task HELD-PARTIAL-WWOX-C-20261019, branch task/HELD-PARTIAL-WWOX-C-20261019; context_policy QUESTION_DRIVEN. Held before reading: the selection row and the prior receipt's owed sections. Stated question: which figure panels carry the ROS and NAC-rescue data, in which cells with what n and readout, and does any panel connect to a metabolic (mitochondrial, glucose, lactate) readout. Route: the Europe PMC JATS and seven figure JPEGs already in the shared files tree; Figures 3, 4, 5, 6 and 7 opened at native size (Figure 6 was recorded NOT READ after a classifier halt in an earlier wave and opened without incident; panel 6g enlarged with ImageMagick for viewing); Supplementary Figure 8 read from PDF page 15 rendered with pdftoppm at 130 dpi; other supplementary figure graphics not rendered, so supplementary coverage is stated captions_only. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID37897534_Cheng2023_PMC.xml",
+ "source_fingerprint": "e75eb12decfb3dddafda9b469101e416bd5130734dc8d86dfdf0d8b8cc273946",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "captions_only",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID37897534.json",
+  "disease-models/wwox/research/held_wave_20261019_scientist-c.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators"
+ ],
+ "prior_receipt": "FTR-20261004-37897534-02",
+ "reread_reason": "inadequate_prior_coverage"
+}

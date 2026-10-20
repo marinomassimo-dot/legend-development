@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-10-19T20:30:00Z",
+ "event_at": "2026-10-19T20:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "unavailable"
+ },
+ "event_id": "FTR-20261019-41885587-01",
+ "evidence_basis": [
+  "Whole JATS body read section by section; Table 1 read; all eleven retrieved image files inspected and mapped to figure labels; Figure 10 enlarged to count individual animals.",
+  "FIND: WWOX is absent. Alpha-adrenergic blockade after hypoxia-ischaemia in preterm fetal sheep did not change seizure measures, lowered post-insult lactate and glucose, and abolished the post-insult rise in short-term blood-pressure variability; the paper itself recalls that alpha blockade worsened mitochondrial failure and injury in the same paradigm. The reported sensitivity and specificity of the variability threshold (90 and 80 percent) are swapped against the counts in Figure 10 (8 of 10 and 9 of 10).",
+  "References enumerated (56) and screened for integrity, not read."
+ ],
+ "evidence_depth": "complete_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41885587.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID41885587.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-B-H3-ADRENERGIC-SEIZURE-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-B-H3-EPINEPHRINE-SAFETY-01.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "df89360a936c12b945fbb9ec4e1568f2f5b426917c554db064ef2dadc936f905",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID41885587_Dhillon2026_PMC13082192.xml",
+ "study_id": {
+  "doi": "10.1113/JP290169",
+  "pmid": "41885587"
+ },
+ "workflow": "scientist-b, interventions batch 2026-10-19 group H3, task branch task/INTERV-H3-B-20261019; context_policy SOURCE_FIRST. Route: Europe PMC JATS fetched with no User-Agent, figures from the PMC OA S3 bucket, all into the root files/ tree; figures inspected as images where stated; locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a JSON file for the integrator and was not appended at preparation time."
+}

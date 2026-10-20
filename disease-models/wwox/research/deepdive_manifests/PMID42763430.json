@@ -1,0 +1,442 @@
+{
+ "schema_version": 2,
+ "pmid": "42763430",
+ "doi": "10.1080/17590914.2026.2698260",
+ "receipt": "FTR-20261019-42763430-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "The Levison laboratory (Rutgers) with the Wood and Canoll groups, primary for glial progenitor culture methods; the paper is a methods article on mouse OPC culture. Not a WWOX group; the oxygen finding concerns culture oxygen, not therapy. Observation (growth curves, marker fractions) is weighted above the HIF-1 alpha explanation, which is not tested."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (oligodendrocyte OR myelin)",
+    "count": 9,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "hyperoxia AND neonatal brain",
+    "count": 292,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches, not measurements."
+ },
+ "multihop": {
+  "references_enumerated": 61,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-direct reference; WWOX is not named. The HIF-1 alpha and Olig2 mechanism is borrowed from two cited papers (Yuen 2014; Allan 2021), not opened here.",
+  "disposition": "No gene-direct references."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42763430 --hops 1; paper_packet.py packet --pmid 42763430; fulltext_receipts.py status --pmid 42763430",
+  "hits": 0,
+  "note": "No record in any of the seven searched registry surfaces and no prior receipt; an empty result is a statement about that query over those files."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication type Journal Article.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 61,
+   "references_screened": 60,
+   "references_with_doi": 60,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42763430_Moore2026_PMC.xml",
+   "sha256": "a3c84121b52affb19dea9c10d485d88def8b4c0a9ba1050fe1937720278c63f4",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13596923/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "a3c84121b52affb19dea9c10d485d88def8b4c0a9ba1050fe1937720278c63f4"
+   }
+  },
+  {
+   "path": "files/figures/PMID42763430/TASN_A_2698260_F0001_C.webp",
+   "sha256": "34b2715b7489171137773f284da7165cad0b51429b5509cc6d689def6c476728",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13596923 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID42763430/TASN_A_2698260_F0002_C.webp",
+   "sha256": "244b3e9c2fb48c063153d1fd827561156c1e4ce464896777c5496555fa7f6e74",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13596923 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID42763430/TASN_A_2698260_F0003_C.webp",
+   "sha256": "bb4f33dd742014bb6d1fb501810b98a575f6f78a761522cf521dabaad61536c9",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13596923 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID42763430/TASN_A_2698260_F0004_C.webp",
+   "sha256": "aa621d2157c57f936dab402f55b0459044223cd9d2bc9bf561b1d8e57ea6d98d",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13596923 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID42763430/TASN_A_2698260_F0005_C.webp",
+   "sha256": "b5af8fcf3118a015ec98d007c9762a3d4302891b65f3cd04dc6ad6b4b25f477d",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13596923 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID42763430/TASN_A_2698260_F0006_C.webp",
+   "sha256": "614e40e4145d2be16d2c87fd91f8a1ea333ea69d00d0955764ea13f58c8311b0",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13596923 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID42763430/TASN_A_2698260_F0007_C.webp",
+   "sha256": "beda52ffe956d0f73841b50aebacbb9e416e055d814f74c452e28e7174f41a6e",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13596923 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID42763430/TASN_A_2698260_UF0001_C.webp",
+   "sha256": "5279b797f4673b4707f8b8b8d67cd71a9fa895f9635c3979edcb3e61f66ffa83",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC13596923 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/p42763430/TASN_A_2698260_F0001_C.png",
+   "sha256": "3033d0e1332ccc07d906dfbf8fffb6e40647cf48257b6260ba542cc4890de517",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42763430/TASN_A_2698260_F0001_C.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "3033d0e1332ccc07d906dfbf8fffb6e40647cf48257b6260ba542cc4890de517"
+   }
+  },
+  {
+   "path": "files/figure_renders/p42763430/TASN_A_2698260_F0002_C.png",
+   "sha256": "00a626cf6a6bb56d6d770d63a00cfe915e5c375b28d98e886ceb078927f5c273",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42763430/TASN_A_2698260_F0002_C.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "00a626cf6a6bb56d6d770d63a00cfe915e5c375b28d98e886ceb078927f5c273"
+   }
+  },
+  {
+   "path": "files/figure_renders/p42763430/TASN_A_2698260_F0003_C.png",
+   "sha256": "dbd29e6359abbb9274a0e202eba7d400e01887b02ab2d92f9cb19c45b799982f",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42763430/TASN_A_2698260_F0003_C.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "dbd29e6359abbb9274a0e202eba7d400e01887b02ab2d92f9cb19c45b799982f"
+   }
+  },
+  {
+   "path": "files/figure_renders/p42763430/TASN_A_2698260_F0004_C.png",
+   "sha256": "dbf8f903a14de0b11a33aa3129e6a9f88ff48c7e056e08eb05ea3619c4239a78",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42763430/TASN_A_2698260_F0004_C.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "dbf8f903a14de0b11a33aa3129e6a9f88ff48c7e056e08eb05ea3619c4239a78"
+   }
+  },
+  {
+   "path": "files/figure_renders/p42763430/TASN_A_2698260_F0005_C.png",
+   "sha256": "0c1e412fd358e7093d53c0202980ae5ac9a399bb70f99394424a170ed7b2af8d",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42763430/TASN_A_2698260_F0005_C.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "0c1e412fd358e7093d53c0202980ae5ac9a399bb70f99394424a170ed7b2af8d"
+   }
+  },
+  {
+   "path": "files/figure_renders/p42763430/TASN_A_2698260_F0006_C.png",
+   "sha256": "d7be767e2a0567daaaebd9a3cb3996ae0e447ee5026eec85ccabbab98f952794",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42763430/TASN_A_2698260_F0006_C.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "d7be767e2a0567daaaebd9a3cb3996ae0e447ee5026eec85ccabbab98f952794"
+   }
+  },
+  {
+   "path": "files/figure_renders/p42763430/TASN_A_2698260_F0007_C.png",
+   "sha256": "60d21e6d11ddd4476259968941b294461c2397c9bfa050c97d8ab1b6d90ff467",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42763430/TASN_A_2698260_F0007_C.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "60d21e6d11ddd4476259968941b294461c2397c9bfa050c97d8ab1b6d90ff467"
+   }
+  },
+  {
+   "path": "files/figure_renders/p42763430/TASN_A_2698260_UF0001_C.png",
+   "sha256": "122cec51c791ebc70a96251ed963782f7513c0dfcaf1bac2dea37846bf65285b",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42763430/TASN_A_2698260_UF0001_C.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "system package (convert)",
+     "call": "convert <webp> <png>"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "122cec51c791ebc70a96251ed963782f7513c0dfcaf1bac2dea37846bf65285b"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42763430_mB.png",
+   "sha256": "be3f1b13043fdab43ec0fd6f37ecbe9dbfede9ca57473b0b5e186aa6098e2784",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figure_renders/p42763430/TASN_A_2698260_F0001_C.png",
+    "extractor": {
+     "name": "ImageMagick montage",
+     "version": "system package",
+     "call": "montage F0001 F0003 F0004 F0005 F0006 UF0001 -tile 3x2 -geometry 700x"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "be3f1b13043fdab43ec0fd6f37ecbe9dbfede9ca57473b0b5e186aa6098e2784"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "System: primary mouse (C57BL/6) neonatal forebrain oligodendrocyte progenitor cultures in a three-gas incubator; the 'hyperoxia' of the title is 20 percent oxygen, ordinary room-air culture, against 2 percent as physiological. It is not an in vivo or clinical oxygen exposure and WWOX is not studied.",
+    "snippet": "The OPCs were seeded at 3x104 cells/cm2 and maintained in either 2% O2, 5% CO2, 93% N2 or 20% O2, 5% CO2, 75% N2 @ 37 °C.",
+    "anchor": "Methods, Isolation and Purification",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42763430_Moore2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Result: mouse OPCs grew faster and were passaged every four days at 2 percent oxygen; at 20 percent they expanded little.",
+    "snippet": "OPCs grew at a significantly faster rate when cultured in B104CM + FGF-2 in 2% oxygen, and they could be passaged every 4 days",
+    "anchor": "Results, B104 and 2% oxygen section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42763430_Moore2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Apoptosis at 96 hours: 18.7 percent of cells at 20 percent oxygen against 7.2 percent at 2 percent; no difference at 24 hours.",
+    "snippet": "There were over twice as many apoptotic cells at 96 h in the 20% oxygen condition compared to the 2% oxygen condition (18.7 ± 5% vs. 7.2 ± 3%, p < 0.05 by Student’s t-test).",
+    "anchor": "Results, B104 and 2% oxygen section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42763430_Moore2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Species difference: rat OPCs were insensitive to oxygen, with a trend to better growth at 20 percent.",
+    "snippet": "rat OPCs were insensitive to oxygen. In fact, there was a trend toward better growth in the 20% oxygen incubator",
+    "anchor": "Results, B104 and 2% oxygen section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42763430_Moore2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Differentiation at 20 percent oxygen: 63 percent MBP-positive by day 7 in cells differentiated in 20 percent oxygen; the paper reports it without a 2 percent comparison panel quantified.",
+    "snippet": "When the cells were differentiated in an incubator containing 20% oxygen 63 ± 10% of the cells were MBP+ cells by day 7.",
+    "anchor": "Results, differentiation section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42763430_Moore2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The oxygen-differentiation link in the title is partly inferred: HIF-1 alpha was not measured; the Discussion says the authors suspect 2 percent oxygen induces HIF-1 alpha.",
+    "snippet": "Based on prior studies, we suspect that growing the mouse OPCs in 2% O2 induces expression of hypoxia inducible factor, HIF1α, that prevents their maturation.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42763430_Moore2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Sox10 falls between passage 0 and 3 but the authors say this was not associated with failure to reach O4 or MBP; MBP loss appears only by passage 6.",
+    "snippet": "but this was not associated with the ability of the cells to acquire O4 or MBP",
+    "anchor": "Results, Sox-10 section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42763430_Moore2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 7 is small: data from one to two experiments with four technical replicates.",
+    "snippet": "Data are from 1–2 experiments with 4 technical replicates per experiment.",
+    "anchor": "Figure 7 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42763430_Moore2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Stated significance threshold slip: a comparison reported as p below 0.5.",
+    "snippet": "the majority remained MBP negative (80.8 ± 10%, p < 0.5 vs. P3)",
+    "anchor": "Results, differentiation section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42763430_Moore2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Replicate level: at least three independent experiments in general, but some figures are 'representative' of two or three.",
+    "snippet": "Data are representative of two independent experiments.",
+    "anchor": "Figure 5 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42763430_Moore2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2: phase-contrast fields at 20 and 2 percent oxygen; 2C a single growth curve with no error bars, rising from about 1.2 to 2.5 million cells over two passages at 2 percent and flat near 1 million at 20 percent; 2F rat OPC growth higher at 20 percent oxygen than at 2 percent (about 4.6 against 2.9 x10^7 at passage 4).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2C blue squares 2% Oxygen rising, red circles 20% Oxygen flat; Figure 2F red circles 20% O2 above blue squares 2% O2.",
+    "anchor": "Figure 2",
+    "surface": "figure",
+    "artifact": "files/figure_renders/p42763430/TASN_A_2698260_F0002_C.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 7: Sox10-positive fraction about 0.6 at P0 falling to about 0.23 at P3 and P6 (ns between them); O4 over Sox10 not significantly different; MBP over O4 falling only at P6 (about 0.19 against about 0.63 at P3, n = 6 points, one near 0.5); the Sox10 fall precedes, and so does not match, the MBP fall.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7A Sox10+/DAPI+ P0 P3 P6 with ns, 7B O4+/Sox10+, 7C %MBP/O4 with ** at P6; panels D-F immunofluorescence O4 green, Sox10 red, DAPI blue.",
+    "anchor": "Figure 7",
+    "surface": "figure",
+    "artifact": "files/figure_renders/p42763430/TASN_A_2698260_F0007_C.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figures 1, 3 to 6 and the unnumbered graphical abstract opened: separation steps and morphology; A2B5/Olig2/Ki67 densities; NG2, O4 and A2B5 fractions under FGF-2 alone or with PDGF; flow cytometry at passage 3 and 6 (O4-positive 17 to 98 percent, GLAST 52 to 68 percent); T3 differentiation into MBP-positive sheet-forming cells at 2 and 20 percent oxygen.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 A-F phase contrast; Figure 3 A-C; Figure 4 A-D2; Figure 5 A-B2 flow plots; Figure 6 A-N immunofluorescence.",
+    "anchor": "Figures 1, 3-6",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42763430_mB.png",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13596923/fullTextXML returned HTTP 200 (157877 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}

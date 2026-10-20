@@ -1,0 +1,329 @@
+{
+ "schema_version": 2,
+ "pmid": "34354738",
+ "doi": "10.3389/fgene.2021.695172",
+ "receipt": "FTR-20261019-34354738-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A genome-stability laboratory working on common fragile sites in the DT40 cell line; WWOX is not named. Observation (FISH breakage counts, qPCR, image cytometry) is weighted above the interpretation about the function of large introns; the experiment is one deletion in one gene in one chicken line with two heterozygous clones and one homozygote."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "fragile site AND intron AND deletion",
+    "count": 41,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches, not measurements."
+ },
+ "multihop": {
+  "references_enumerated": 31,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "The reference list holds 31 reference elements in the JATS artefact (counted in the session); WWOX is not named anywhere in the article (case-insensitive count 0).",
+  "disposition": "No gene-direct references."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 34354738 --hops 1; paper_packet.py packet; fulltext_receipts.py status --pmid 34354738",
+  "hits": 0,
+  "note": "No record in any of the seven searched registry surfaces and no prior receipt; an empty result is a statement about that query over those files."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication type Journal Article.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 31,
+   "references_screened": 31,
+   "references_with_doi": 31,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID34354738_Munk2021_PMC.xml",
+   "sha256": "d6d6e332c1368cd76336788eff6117830c320312e037d7a87241db0fe2329130",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8329550/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "d6d6e332c1368cd76336788eff6117830c320312e037d7a87241db0fe2329130"
+   }
+  },
+  {
+   "path": "files/figures/PMID34354738/fgene-12-695172-g001.jpg",
+   "sha256": "e76e17c4ff4b3c0312cb5f3075ed01a77469d0935af66418a4b4dd91059fecc6",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC8329550 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID34354738/fgene-12-695172-g002.jpg",
+   "sha256": "5d27c710626d7a172631c2d90cbe78d321616cc2d5623dcd69eaa9c9df687b27",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC8329550 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID34354738/fgene-12-695172-g003.jpg",
+   "sha256": "dc7c07fb8bcc3ec52cea664c90ab789f0354c26dc006881cb3c16898cbc9597e",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC8329550 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID34354738/Data_Sheet_1.PDF",
+   "sha256": "8769932a7e051958abab590a34f4ff3d7d2f890c8f25a282c43c0a378f763abc",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC8329550 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID34354738/Data_Sheet_2.PDF",
+   "sha256": "87ca52bc2cb3e2c7f2cf0c062bcd84f0bb1bdb1ca908651b706734f4979eeb51",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC8329550 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID34354738/Data_Sheet_3.PDF",
+   "sha256": "dfc8e042b2f49e2165d21e3f725869ee0fdde20d64b36f6035c8fff3dbd092c4",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC8329550 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID34354738/Data_Sheet_4.docx",
+   "sha256": "eb88f51e38bcd9b0a81012ab72588d70413e3288405d29d908e26800597dd543",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC8329550 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "System: avian DT40 bursal lymphoblast cells, an 80 kb deletion of PRKN intron 7 made by CRISPR with a floxed blasticidin template; not human, not neural.",
+    "snippet": "we deleted 80 kb of intron 7 in PRKN in our model system, the avian cell line DT40",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34354738_Munk2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PRKN expression is reported unchanged by the deletion at protein reporter and mRNA level.",
+    "snippet": "No change in either PRKN2YFP transcript levels (Figure 2B) or total PRKN transcript levels (Figure 2C) were detected in any of the clones",
+    "anchor": "Results, 80-kb deletion expression section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34354738_Munk2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Text: parkin-2YFP levels are similar in the deleted and parental lines.",
+    "snippet": "The levels of parkin-2YFP were similar in the intron 7-deleted clone and the parental cell line.",
+    "anchor": "Results, 80-kb deletion expression section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34354738_Munk2021_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "chicken DT40 lymphoblast cell line, PRKN-2YFP background",
+     "genotype": "80 kb deletion in PRKN intron 7",
+     "comparator": "full-length PRKN, parental and heterozygous internal control",
+     "endpoint": "expression or breakage"
+    }
+   },
+   {
+    "proposition": "Figure 2A: the PRKN-2YFP fluorescence histograms of the homozygous deleted clone 27 lie slightly to the right of the full-length peak marker in all three replicates, with the full-length versus deleted comparison labelled n.s. (one clone, three replicates).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2A: three columns Rep1 to Rep3 of YFP-intensity histograms for PRKN WT/WT, PRKN FL/FL (2YFP) and PRKN delta-in7/delta-in7 clone 27; blue vertical line at the FL/FL peak; brackets with P<0.001, P=0.008 and n.s. at right.",
+    "anchor": "Figure 2A",
+    "surface": "figure",
+    "artifact": "files/figures/PMID34354738/fgene-12-695172-g002.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "chicken DT40 lymphoblast cell line, PRKN-2YFP background",
+     "genotype": "80 kb deletion in PRKN intron 7",
+     "comparator": "full-length PRKN, parental and heterozygous internal control",
+     "endpoint": "expression or breakage"
+    },
+    "qualifies": "entries[2]",
+    "qualifies_needle": "The levels of parkin-2YFP were similar"
+   },
+   {
+    "proposition": "PACRG, the co-regulated gene, is significantly lower in one heterozygous clone and attributed to clonal variation.",
+    "snippet": "While a significant decrease in PACRG transcript levels were detected in PRKNWT/Δ",
+    "anchor": "Results, 80-kb deletion expression section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34354738_Munk2021_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "chicken DT40 lymphoblast cell line, PRKN-2YFP background",
+     "genotype": "80 kb deletion in PRKN intron 7",
+     "comparator": "full-length PRKN, parental and heterozygous internal control",
+     "endpoint": "expression or breakage"
+    }
+   },
+   {
+    "proposition": "Figure 2D lower: PACRG mRNA is below the full-length value in all three deleted clones (about -0.65 log2 in clone 18, P = 0.01; about -0.27 in clone 29; about -0.17 in homozygous clone 27), significant in one only.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2D: scatter dot plot of relative PACRG mRNA (log2 FC) for PRKN FL/FL and clones 18, 29, 27 with three dots per group; clone 18 about -0.65 with P=0.01, clones 29 and 27 about -0.27 and -0.17, n.s.",
+    "anchor": "Figure 2D",
+    "surface": "figure",
+    "artifact": "files/figures/PMID34354738/fgene-12-695172-g002.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "chicken DT40 lymphoblast cell line, PRKN-2YFP background",
+     "genotype": "80 kb deletion in PRKN intron 7",
+     "comparator": "full-length PRKN, parental and heterozygous internal control",
+     "endpoint": "expression or breakage"
+    }
+   },
+   {
+    "proposition": "Fragility result: deleting about 12 percent of the gene gives about 50 percent less breakage.",
+    "snippet": "Notably, the deletion, which is equivalent to approximately 12% of the length of PRKN, resulted in an approximately 50% reduction of the fragility of the gene.",
+    "anchor": "Results, truncation section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34354738_Munk2021_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "chicken DT40 lymphoblast cell line, PRKN-2YFP background",
+     "genotype": "80 kb deletion in PRKN intron 7",
+     "comparator": "full-length PRKN, parental and heterozygous internal control",
+     "endpoint": "expression or breakage"
+    }
+   },
+   {
+    "proposition": "Figure 3C: after aphidicolin, breakage or constriction of the full-length allele is about 19 percent (parent, n = 270 alleles), 16 percent (clone 18, n = 171) and 18 percent (clone 29, n = 167) against about 8 and 10 percent for the deleted allele of the same cells, with P = 0.032 and 0.011 by Fisher exact test and n for the two alleles identical within each clone (paired alleles from the same spreads); DMSO baselines about 0.5 to 1.5 percent.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3C: bar chart breakage/constriction (percent of spreads) for DMSO (blue) and APH (red) in P2Y-TT full-length, and clone 18 and clone 29 full-length and delta-intron7 alleles, with n under each bar (210/270, 135/171, 121/167) and P values above the brackets.",
+    "anchor": "Figure 3C",
+    "surface": "figure",
+    "artifact": "files/figures/PMID34354738/fgene-12-695172-g003.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "chicken DT40 lymphoblast cell line, PRKN-2YFP background",
+     "genotype": "80 kb deletion in PRKN intron 7",
+     "comparator": "full-length PRKN, parental and heterozygous internal control",
+     "endpoint": "expression or breakage"
+    }
+   },
+   {
+    "proposition": "Karyotype caveat: two of fourteen clones from the targeting were trisomic for chromosome 3, read by the authors as a risk of mis-segregation when targeting PRKN.",
+    "snippet": "This suggests that there is a high risk of chromosome mis-segregation associated with targeting of the PRKN gene.",
+    "anchor": "Results, establishing cell lines section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34354738_Munk2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Figure 2F: of the screened clones plotted, two (clones 5 and 13) are largely or wholly chromosome 3 trisomic and the rest diploid; the screened set is the 14 clones the text counts.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure 2F: stacked bar chart % of spreads with chromosome 3 trisomy (orange) or diploidy (green) per clone; most clones are 100 percent diploid; two clones show orange bars.",
+    "anchor": "Supplementary Figure 2F",
+    "surface": "figure",
+    "artifact": "files/figures/PMID34354738/Data_Sheet_2.PDF",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Discussion states the expression result and the proposed explanations for lower fragility (shorter transit for RNA polymerase, replication timing) and that replication timing was not measured.",
+    "snippet": "However, further studies are needed to experimentally determine the effect of intron deletion on replication timing.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34354738_Munk2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Novelty claim of the authors: first controlled experiment on the function of an extremely large intron.",
+    "snippet": "This is to our knowledge the first controlled experiment addressing the function of an extremely large intron.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34354738_Munk2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Intro statement: PRKN loss switches cells to aerobic glycolysis (the Warburg effect), a mitochondrial-theme sentence with no data here.",
+    "snippet": "its loss has been shown to result in a switch to aerobic glycolysis, known as the Warburg effect",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34354738_Munk2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Figure 1C: the 2YFP-tagged PRKN allele remains fragile under aphidicolin (about 24 percent breakage in the tagged cell lines against about 30 percent in wild type), supporting use of the reporter.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure 1C: bar chart of breakage/constriction at PRKN for four DT40 lines under DMSO or APH with asterisks; APH bars about 24, 47, 18 and 30 percent, DMSO bars about 5 percent.",
+    "anchor": "Supplementary Figure 1C",
+    "surface": "figure",
+    "artifact": "files/figures/PMID34354738/Data_Sheet_1.PDF",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC8329550/fullTextXML returned HTTP 200 (83094 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}

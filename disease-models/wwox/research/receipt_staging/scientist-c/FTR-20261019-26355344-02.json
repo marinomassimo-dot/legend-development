@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-26355344-02",
+ "study_id": {
+  "pmid": "26355344",
+  "doi": "10.1038/cddis.2015.251"
+ },
+ "event_at": "2026-10-19T18:00:21Z",
+ "analysis_at": "2026-10-19T18:00:21Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, metabolic batch 2026-10-19, task METAB-G3-C-20261019, branch task/METAB-G3-C-20261019; context_policy QUESTION_DRIVEN. Route: NCBI efetch PMC JATS and the publisher PDF (both open access) saved to the shared checkout files/fulltext; whole article read from the JATS text; Figure 1 opened as a 200 dpi page render. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID26355344_PMC4650446_efetch.xml",
+ "source_fingerprint": "ef302d02ba39ae21d21e57c6e995952926525aef4e8d0f7b97bafd20c38553fb",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_present",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "not_present",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID26355344.json",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "GENRE FINDING (re-derived this session from the artefact): JATS article-type news, 2 PDF pages, one schematic figure, ten references, no abstract, no Methods, no Results, no table. The 'owed' sections of the earlier partial receipt do not exist in this deposit, so the earlier shallow coverage was the whole text; this event closes the row at complete depth for the article as published. The Europe PMC supplementaryFiles bundle for PMC4650446 was listed and contains only the figure image in two formats."
+ ],
+ "prior_receipt": "FTR-20260920-26355344-01",
+ "reread_reason": "inadequate_prior_coverage"
+}

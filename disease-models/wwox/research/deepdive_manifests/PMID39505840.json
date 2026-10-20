@@ -1,0 +1,410 @@
+{
+ "schema_version": 2,
+ "pmid": "39505840",
+ "doi": "10.1038/s41467-024-53430-y",
+ "receipt": "FTR-20261019-39505840-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-H3-ADRENERGIC-SEIZURE-01",
+  "interventions_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared (group H3 has no WWOX evidence to compare against)."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 20258,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Sun Q[au]' 20258; 'Sun Q[au] AND WWOX' 0 (surname-initial queries are ambiguous and are not evidence of authorship); last author 'Ding F[au]'.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Primary mouse study from a glymphatic-transport group, peer reviewed with a published review file that records reviewers doubting the central causal claim. Weigh as a descriptive study of a three-drug blockade in one acute model, not as proof that glymphatic flow mediates seizure control.",
+  "note": "Not a WWOX group."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 0
+   }
+  ],
+  "note": "WWOX does not occur in the article."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 140,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "dependency_integrity.py screen reference count, confirmed against <ref> elements in the JATS.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-directed reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --theme adrenergic / epinephrine / noradrenaline / catecholamine / autonomic / sympathetic (each exit 1, no record) and --theme SUDEP (2 of 1586 records)",
+  "hits": 0,
+  "finding": "No registry record carries any adrenergic term, so the laboratory holds nothing on catecholamines to compare with; an empty result is a statement about those queries over those files, not about the literature. SUDEP occurs in two records only as a reason to keep seizure control, not as a mechanism."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed efetch 2026-10-19 for this PMID (no CommentsCorrections element, publication types listed); JATS front matter",
+  "result": "No retraction, correction or expression of concern found in the PubMed record.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 140,
+   "references_screened": 136,
+   "references_with_doi": 136,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39505840_Sun2024_PMC11541706.xml",
+   "sha256": "d3206150963fce735fe7a023cb5dfa1fdcfdc21ac58d82ae21b9299dc3887537",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC11541706, 229,341 bytes; abstract, introduction, results, discussion, methods, Figures 1 to 7 legends and Table 1 present; the supplementary files are not in the JATS.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11541706/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "d3206150963fce735fe7a023cb5dfa1fdcfdc21ac58d82ae21b9299dc3887537"
+   }
+  },
+  {
+   "path": "files/figures/PMID39505840/41467_2024_53430_Fig1_HTML.jpg",
+   "sha256": "51564e13780db61dd99ed9546adf5cfbd1928070ba91468f14d11095ec337a78",
+   "kind": "figure",
+   "note": "Figure 1 (file Fig1): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11541706.1/41467_2024_53430_Fig1_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "51564e13780db61dd99ed9546adf5cfbd1928070ba91468f14d11095ec337a78"
+   }
+  },
+  {
+   "path": "files/figures/PMID39505840/41467_2024_53430_Fig2_HTML.jpg",
+   "sha256": "ea27aced6e1565051426aaaddea77c411fc5c0ec8752060a3355978a9c9d2d67",
+   "kind": "figure",
+   "note": "Figure 2 (file Fig2): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11541706.1/41467_2024_53430_Fig2_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "ea27aced6e1565051426aaaddea77c411fc5c0ec8752060a3355978a9c9d2d67"
+   }
+  },
+  {
+   "path": "files/figures/PMID39505840/41467_2024_53430_Fig3_HTML.jpg",
+   "sha256": "4d52b5143ebf06c861dbb33fc363aca9197d3f820e5f3bd9c170dab38daea7b4",
+   "kind": "figure",
+   "note": "Figure 3 (file Fig3): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11541706.1/41467_2024_53430_Fig3_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "4d52b5143ebf06c861dbb33fc363aca9197d3f820e5f3bd9c170dab38daea7b4"
+   }
+  },
+  {
+   "path": "files/figures/PMID39505840/41467_2024_53430_Fig4_HTML.jpg",
+   "sha256": "fd99dcaac97fb35d354101194dcf563667c4993d4882ffc1ee0dda07011d5ab4",
+   "kind": "figure",
+   "note": "Figure 4 (file Fig4): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11541706.1/41467_2024_53430_Fig4_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "fd99dcaac97fb35d354101194dcf563667c4993d4882ffc1ee0dda07011d5ab4"
+   }
+  },
+  {
+   "path": "files/figures/PMID39505840/41467_2024_53430_Fig5_HTML.jpg",
+   "sha256": "b13d3a25ad3b11ab80e51662acc6a4dfcb04c1f78755bbb20925d7f6e58ce3c9",
+   "kind": "figure",
+   "note": "Figure 5 (file Fig5): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11541706.1/41467_2024_53430_Fig5_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "b13d3a25ad3b11ab80e51662acc6a4dfcb04c1f78755bbb20925d7f6e58ce3c9"
+   }
+  },
+  {
+   "path": "files/figures/PMID39505840/41467_2024_53430_Fig6_HTML.jpg",
+   "sha256": "af629cb3eb8040592e3318ecf31b0ebb9a4924874499496d0be0cb0330c4a8fd",
+   "kind": "figure",
+   "note": "Figure 6 (file Fig6): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11541706.1/41467_2024_53430_Fig6_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "af629cb3eb8040592e3318ecf31b0ebb9a4924874499496d0be0cb0330c4a8fd"
+   }
+  },
+  {
+   "path": "files/figures/PMID39505840/41467_2024_53430_Fig7_HTML.jpg",
+   "sha256": "b3de965e9374ea98d34f0c07f3a894f107b291b1a1ae3a91e633544f8e08ff5f",
+   "kind": "figure",
+   "note": "Figure 7 (file Fig7): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11541706.1/41467_2024_53430_Fig7_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "b3de965e9374ea98d34f0c07f3a894f107b291b1a1ae3a91e633544f8e08ff5f"
+   }
+  },
+  {
+   "path": "files/supplement/PMID39505840_41467_2024_53430_MOESM1_ESM.pdf",
+   "sha256": "437ecd0fd952ab9ea0aebf6dc29e61af80d90c030cc7e914a46e01795cacd91e",
+   "kind": "supplement_binary",
+   "note": "Supplementary Information (Supplementary Figures S1 to S8 and legends), 1,567,161 bytes, from the Europe PMC supplementaryFiles zip; the legends were read, the figure images were not opened.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11541706/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementaryfiles_zip",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "437ecd0fd952ab9ea0aebf6dc29e61af80d90c030cc7e914a46e01795cacd91e"
+   }
+  },
+  {
+   "path": "files/supplement/PMID39505840_41467_2024_53430_MOESM2_ESM.pdf",
+   "sha256": "48df93c33cdca990519a6112f16ec6de333702d061d7b36ae336180cb371787b",
+   "kind": "supplement_binary",
+   "note": "Nature Portfolio Reporting Summary, 99,171 bytes, from the same zip; the text layer was extracted and not cited.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11541706/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementaryfiles_zip",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "48df93c33cdca990519a6112f16ec6de333702d061d7b36ae336180cb371787b"
+   }
+  },
+  {
+   "path": "files/supplement/PMID39505840_41467_2024_53430_MOESM3_ESM.pdf",
+   "sha256": "2f064a86cd9b236c9fa884a0f4dde91cb9093c3c346e8d065b188dcbf708aca9",
+   "kind": "supplement_binary",
+   "note": "Peer Review File, 7,680,174 bytes, from the same zip; the version 0 reports and the opening of version 1 were read.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11541706/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementaryfiles_zip",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "2f064a86cd9b236c9fa884a0f4dde91cb9093c3c346e8d065b188dcbf708aca9"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 229,341 bytes; abstract, introduction, results, discussion, methods, Figures 1 to 7 legends and Table 1 present; the supplementary files are not in the JATS.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: whole main article read including Methods and Table 1; all seven main figures inspected as images. Supplementary legends (S1 to S8) read from the supplementary PDF text layer but the supplementary figure images and the Source Data zip (MOESM4) were not opened, so supplementary is captions_only and the receipt is partial. The peer review file (version 0 reports of four reviewers, start of version 1) was read as context and is not quoted as evidence.",
+  "entries": [
+   {
+    "proposition": "DESIGN: adult FVB/2J mice (sex stated only in the title, male), intrahippocampal kainic acid, a cocktail of prazosin 6, propranolol 6 and atipamezole 0.6 mg/kg i.p. against vehicle; random allocation is stated, blinding is not.",
+    "snippet": "The PPA mixture contained prazosin hydrochloride (6 mg/kg; Sigma Aldrich, Cat. P7791), propranolol hydrochloride (6 mg/kg; Tocris Bioscience, Cat. 0624), and atipamezole hydrochloride (0.6 mg/kg",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39505840_Sun2024_PMC11541706.xml",
+    "anchor": "Methods, Treatment with pan-adrenergic inhibitor cocktail",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the acute status epilepticus the blockade prolonged individual convulsive seizures and the interval between them and the duration of phase 1 without changing the number of seizures; the abstract speaks of reduced severity.",
+    "snippet": "PPA treatment significantly prolonged the duration of individual seizures, the interval between seizures, and the duration of phase 1, but not the total number of seizures during phase 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39505840_Sun2024_PMC11541706.xml",
+    "anchor": "Results, Pan-adrenergic inhibition delays and shortens KA-induced status epilepticus",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 1 gives the acute numbers: seizure duration 115.0 against 204.2 s (P < 0.001), interval 8.2 against 20.3 min, and the total duration of phase 1 plus phase 2 26.1 against 19.9 h (P = 0.265, not significant).",
+    "snippet": "Duration of Phase 1 + Phase 226.1 ± 4.2 h19.9 ± 2.0 h0.265",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39505840_Sun2024_PMC11541706.xml",
+    "anchor": "Table 1, last row",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion states the major electrophysiological effect was a shortening of the period of abnormal activity, and a subheading asks why enhancing glymphatic flow shortens seizure duration, while Table 1 shows longer individual seizures and a non-significant change in total duration.",
+    "snippet": "The major electrophysiological effect of pan-adrenergic blockage after KA infusion was the shortening of the period of abnormal electrical activity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39505840_Sun2024_PMC11541706.xml",
+    "anchor": "Discussion, Why does seizure activity reduce glymphatic influx",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "MORTALITY: three-day blockade starting at 5 minutes reduced death in the first ten days (12 mice per group); the chronic-phase comparisons are therefore among survivors of unequal survival.",
+    "snippet": "PPA significantly reduced KA-induced mortality rate during the first ten days post KA infusion as compared with KA-Veh mice (Fig. 2C).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39505840_Sun2024_PMC11541706.xml",
+    "anchor": "Results, Pan-adrenergic inhibition improves behavioral outcomes",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DELAYED DOSING: starting the cocktail at 30 h did not shorten seizures nor rescue body weight or mortality; at two months only the number of convulsive seizures differed, not maximal Racine score or seizure-free days.",
+    "snippet": "At two months, the KA-PPA (30 h) group had a significant reduction in the number of convulsive seizures, but no difference in maximal Racine scale and number of convulsive seizure-free days at two months",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39505840_Sun2024_PMC11541706.xml",
+    "anchor": "Results, third paragraph after Fig. 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A single dose in chronic epilepsy lowered seizures only for about six hours and not over twelve (supplementary figure S8), an acute drug effect rather than a changed disease.",
+    "snippet": "The numbers of convulsive seizures during the 12 h post-drug administration were comparable between PPA and Veh groups (Fig. S8)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39505840_Sun2024_PMC11541706.xml",
+    "anchor": "Results, A single dose of PPA administered at the chronic phase",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "LOCUS: the glymphatic gain was not significant in the hippocampus, the region of the kainic acid focus; the authors attribute it to gliosis and to a tracer protocol not optimised for the hippocampus.",
+    "snippet": "even though we did not find significant glymphatic enhancement in the hippocampus (Fig. 5C,I)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39505840_Sun2024_PMC11541706.xml",
+    "anchor": "Discussion, Epileptogenesis and the partial rescue",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CAUSALITY: the cocktail blocks neuronal adrenoceptors directly; the authors say they cannot exclude that this contributes to the shortening of seizures, so the glymphatic mediation is an inference from correlation and the knockout.",
+    "snippet": "We cannot exclude the possibility that inhibition of neuronal NE receptors also contributes to the shortening of the seizure.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39505840_Sun2024_PMC11541706.xml",
+    "anchor": "Discussion, Why does seizure activity reduce glymphatic influx, last paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The aquaporin-4 knockout experiment uses another strain (C57BL/6, 6 months) from the FVB mice of the drug experiments; the authors note knockouts have adaptive changes and that four of five wild-type controls had no spontaneous seizures.",
+    "snippet": "we here observed that four of five wildtype mice did not exhibit spontaneous seizures during the four consecutive days of recording in the chronic phase",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39505840_Sun2024_PMC11541706.xml",
+    "anchor": "Results, Aqp4 knockout aggravated KA-induced SE",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Adrenergic receptor subtypes have both pro- and anti-seizure effects according to the paper own literature summary, so a blanket \"adrenergic\" direction does not exist even in the introduction to the discussion.",
+    "snippet": "The author argued that all three major subtypes of adrenergic receptors had both anti- and pro-seizure effects",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39505840_Sun2024_PMC11541706.xml",
+    "anchor": "Discussion, Pan-adrenergic inhibition reduces KA-induced status epilepticus",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A wording slip: the Discussion says the cocktail dampened astrogliosis and increased pro-inflammatory cytokine levels, while the Results state the pro-inflammatory cytokines were higher in the vehicle kainic acid group and the cocktail lowered one of them (G-CSF).",
+    "snippet": "PPA exerted a clear anti-inflammatory role by dampening astrogliosis and increasing pro-inflammatory cytokine levels after KA infusion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39505840_Sun2024_PMC11541706.xml",
+    "anchor": "Discussion, Epileptogenesis and the partial rescue",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2C survival curves (12 mice per group): about half of vehicle-treated kainic acid mice died by day 10 against about one in seven with the cocktail; read from the plot; Figure 2D shows chronic-phase differences in 6 against 7 surviving mice (seizure-free days not significant).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2 panel C Kaplan-Meier plot: Sham near 100 percent, KA-Veh falling to about 50 percent by day 10, KA-PPA about 85 percent; panel D four dot plots with n 6 and 7, asterisks on seizure numbers, duration and maximum Racine, ns on seizure-free days.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39505840/41467_2024_53430_Fig2_HTML.jpg",
+    "anchor": "Figure 2C and 2D, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "adult FVB mouse, intrahippocampal kainic acid status epilepticus model",
+     "genotype": "wild type",
+     "treatment": "prazosin 6 + propranolol 6 + atipamezole 0.6 mg/kg i.p. (PPA) or vehicle",
+     "comparator": "vehicle after kainic acid",
+     "timepoint": "survival to day 10; recording at 3 to 4 weeks",
+     "endpoint": "survival; seizures per 4-day EEG recording"
+    }
+   },
+   {
+    "proposition": "Figure 6G: the correlations of tracer influx with spike frequency, gliosis, neuron count and seizure duration are drawn across three group clusters (sham, KA-PPA, KA-vehicle) with R squared up to 0.874, so the figure shows group differences, not a within-group dose relation between influx and seizures.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6 panel G: four scatter plots of glymphatic influx (percent) against spike frequency, astrogliosis, AQP4 polarization, neuronal count, seizure number and duration, points grouped into three labelled clusters Sham, KA-PPA, KA-Veh with fitted lines and R2 values.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39505840/41467_2024_53430_Fig6_HTML.jpg",
+    "anchor": "Figure 6G, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "adult FVB mouse, intrahippocampal kainic acid status epilepticus model",
+     "genotype": "wild type",
+     "treatment": "prazosin 6 + propranolol 6 + atipamezole 0.6 mg/kg i.p. (PPA) or vehicle",
+     "comparator": "vehicle after kainic acid",
+     "timepoint": "3 to 4 weeks after kainic acid",
+     "endpoint": "tracer influx area fraction against chronic seizure and pathology measures"
+    }
+   },
+   {
+    "proposition": "Figure 7D: in the knockout comparison four of five wild-type mice have no seizures, so their seizure-duration points sit at zero and the duration contrast (P < 0.001) mixes incidence with duration.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7 panel D: dot plots for WT and Aqp4-/- with n 5 each, wild-type seizure durations at about zero for four mice and about 40 s for knockouts, asterisks on all four measures.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39505840/41467_2024_53430_Fig7_HTML.jpg",
+    "anchor": "Figure 7D, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "adult mouse C57BL/6 intrahippocampal kainic acid",
+     "genotype": "Aqp4 knockout against wild type littermates",
+     "treatment": "kainic acid only",
+     "endpoint": "seizures in four-day EEG at 3 to 4 weeks"
+    }
+   }
+  ]
+ }
+}

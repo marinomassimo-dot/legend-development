@@ -1,0 +1,298 @@
+{
+ "schema_version": 2,
+ "pmid": "40808923",
+ "doi": "10.3389/fneur.2025.1635441",
+ "receipt": "FTR-20261019-40808923-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "A neurosurgery and hyperbaric-medicine group writing a narrative review of ferroptosis in epilepsy; WWOX is named zero times. The review produces no measurement; its observations are secondhand and the interpretation (bidirectional loop, therapeutic targets) is the authors' own. Weighted as a map of readouts and of the evidence base's weakness, not as evidence."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "ferroptosis AND epilepsy",
+    "count": 157,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "WWOX AND ferroptosis",
+    "count": 3,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches on 2026-10-19, not measurements; the three WWOX-ferroptosis records are not this review."
+ },
+ "multihop": {
+  "references_enumerated": 93,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "The reference list holds 93 numbered entries (counted in the session from the artefact); WWOX is named zero times in the article (case-insensitive count 0 over the text rendering), so no gene-direct hop exists. Cited primaries behind secondary statements are not hopped here.",
+  "disposition": "No gene-direct references."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 40808923 --hops 1; paper_packet.py packet; fulltext_receipts.py status --pmid 40808923",
+  "hits": 0,
+  "note": "No record in any of the seven searched registry surfaces and no prior receipt; an empty result is a statement about that query over those files."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication types Journal Article and Review.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 93,
+   "references_screened": 92,
+   "references_with_doi": 92,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40808923_Xu2025_PMC.xml",
+   "sha256": "ccc39322abd084576d863b416ea717db449869edd1703eaaa9f6dd83cd543a51",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12344419/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "ccc39322abd084576d863b416ea717db449869edd1703eaaa9f6dd83cd543a51"
+   }
+  },
+  {
+   "path": "files/figures/PMID40808923/fneur-16-1635441-g001.jpg",
+   "sha256": "336d552cac979df6ef630dc278424d11401677497356000f5963e77a87c6a08e",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12344419 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID40808923/fneur-16-1635441-g002.jpg",
+   "sha256": "14bdd3b06a6130274eebe34f35b547d4367a2758be32b0e1fe239ba56edf1bc5",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12344419 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID40808923/fneur-16-1635441-g003.jpg",
+   "sha256": "3e2088175b8613920c6a472b82f0625d9ae7d4d65b2b8d03a29ee730d059c4d7",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12344419 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID40808923/fneur-16-1635441-g004.jpg",
+   "sha256": "f801b28aea7479bd54f9686fc26ad15a4dfcf8dc21ec792dcb4f8ba6ca6342e5",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12344419 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID40808923/fneur-16-1635441-g005.jpg",
+   "sha256": "0c7f566fab92a2c269d0c9ba714cc74c01b7253c3a8bf4dacf9d3e3e4c11d1d7",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12344419 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The review states its scope as mechanisms of ferroptosis and implications in epilepsy; no search method, inclusion rule or appraisal is described.",
+    "snippet": "This review article aims to comprehensively explore the mechanistic aspects of ferroptosis and its implications in epilepsy",
+    "anchor": "1. Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40808923_Xu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Animal evidence is dominated by injected iron or haemoglobin (FeCl3, post-traumatic epilepsy models), not genetic epilepsy models.",
+    "snippet": "cortical injection of hemoglobin or iron salts (FeCl3) into rats can induce chronic seizures",
+    "anchor": "3.1 Potential involvement of ferroptosis mechanisms in the pathogenesis of epilepsy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40808923_Xu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The one human iron-status case-control cited is a 130 versus 128 transferrin-saturation comparison (ref 55, a 2001 paper on iron overload without the HFE C282Y mutation).",
+    "snippet": "researchers analyzed transferrin saturation in 130 patients with epilepsy compared to 128 sex- and age-matched control subjects",
+    "anchor": "3.1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40808923_Xu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizures are said to activate a HIF-1a/HO-1 pathway that raises Fe2+ in hippocampal neurons (ref 60); this is the review's only link to the HIF1A axis.",
+    "snippet": "Several studies have reported that seizures can activate the hif-1a/HO-1 pathway, leading to abnormal iron metabolism and increased Fe2+ accumulation in hippocampal neurons.",
+    "anchor": "3.2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40808923_Xu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors caution against reading the ferroptosis-epilepsy relation as simply causal.",
+    "snippet": "it is not advisable to overemphasize the direct causal relationship between epilepsy and ferroptosis.",
+    "anchor": "3.2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40808923_Xu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Clinical limits stated by the review: no trial of ferroptosis inhibitors in epilepsy exists and imaging or fluid markers are not specific.",
+    "snippet": "No clinical trials have yet tested ferroptosis inhibitors in epilepsy patients, leaving human efficacy unproven despite promising preclinical data.",
+    "anchor": "3.3 Clinical evidence of ferroptosis in human epilepsy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40808923_Xu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The only genetic-epilepsy ferroptosis result in the review: patient-derived cells from five childhood epilepsy syndromes responding to EPI-743 (ref 17, mitochondrial-disease-related epilepsy).",
+    "snippet": "ameliorated ferroptosis in cells derived from patients with five distinct childhood epilepsy syndromes in a dose-dependent manner",
+    "anchor": "4.1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40808923_Xu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The proposed hippocampal iron MRI threshold is given without a source and the authors state it is not validated in epilepsy.",
+    "snippet": "setting an iron concentration threshold of >1.2 mg/g to identify high-risk epilepsy patients",
+    "anchor": "4.2 Implications of AMD research",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40808923_Xu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the AMD-derived diagnostic and delivery ideas are not validated in epilepsy.",
+    "snippet": "Although these measures have not yet been validated in epilepsy",
+    "anchor": "4.2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40808923_Xu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Text says valproate decreased lipid peroxides in a kainic acid mouse model (ref 85).",
+    "snippet": "VPA not only markedly decreased lipid peroxide levels but also suppressed Ptgs2 mRNA expression",
+    "anchor": "4.1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40808923_Xu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 1 describes valproate as leading to non-transferrin-bound iron and elevated oxidative stress, the opposite sign to the text, and cites (87), which in the reference list is a topiramate migraine paper.",
+    "snippet": "VPA contributes to iron metabolism in epilepsy, leading to the generation of non-transferrin-bound iron (NTBI) and an elevation in oxidative stress levels.",
+    "anchor": "Table 1, valproic acid row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID40808923_Xu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 1 attaches reference (55) to a DHEA oxidative-stress statement; ref 55 in the reference list is the iron-overload-without-C282Y epilepsy paper, so citation numbers in the table are not aligned with the list.",
+    "snippet": "The administration of DHEA has been demonstrated to exert inhibitory effects on lipid peroxidation",
+    "anchor": "Table 1, DHEA row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID40808923_Xu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Reference 55 as listed.",
+    "snippet": "Iron overload without the C282Y mutation in patients with epilepsy.",
+    "anchor": "Reference list, entry 55",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40808923_Xu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review links iron to myelination and catecholamine metabolism in one sentence, without data.",
+    "snippet": "Additionally, iron closely associates with myelin formation and catecholamine neurotransmitter metabolism in the nervous system (43, 44).",
+    "anchor": "3.1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40808923_Xu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 writes the Fenton reaction as Fe2+ + H2O2 giving Fe3+ + OH- + OH-, with the radical not distinguished from the hydroxide; a diagram, not data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 (Iron metabolism): FPN1 export of Fe2+ at top left, TfR1 and transferrin-bound Fe3+ at top, endosome with STEAP3 and DMT1, labile iron pool box, ferritin storage and ferritinophagy at left, heme from a mitochondrion at right, and at the bottom the line Fe2+ + H2O2 to Fe3+ + OH- + OH-.",
+    "anchor": "Figure 1",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40808923/fneur-16-1635441-g001.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 4 is a conceptual two-loop schematic (seizure to glutamate to System Xc- to GSH to GPX4 to lipid peroxidation to cell death; iron overload to Fenton to ROS to network excitability) with yellow stars at intervention points and no data, axes or citations inside the panel.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4: red-arrow loop from epileptic seizure through glutamate release, System Xc- inhibition, depletion of GSH, inactivation of GPX4, lipid peroxidation and neuronal cell death back to seizure; blue-arrow loop from iron overload through a Fenton reaction labelled 'Fe+ - Fention reaction' to ROS, neuronal overexcitation and synaptic disorders to the epilepsy network; stars on iron overload, GPX4 and ROS; no numeric data.",
+    "anchor": "Figure 4",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40808923/fneur-16-1635441-g004.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12344419/fullTextXML returned HTTP 200 (163588 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}

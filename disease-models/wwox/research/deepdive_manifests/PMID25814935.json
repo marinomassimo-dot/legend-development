@@ -1,0 +1,455 @@
+{
+ "schema_version": 2,
+ "pmid": "25814935",
+ "doi": "10.3389/fncel.2015.00090",
+ "pmcid": "PMC4356078",
+ "receipt": "FTR-20261019-25814935-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the interventions selection file's one-line 'why it matters' for this row and the group H5 header; after the first pass the comparison admitted CLAIM 042, DL-MECH-020 and the Yuskaitis reading of this same lot (fasting protection lost in a Depdc5 knockout).",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/interventions_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a non-WWOX comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype; class-level literature only, BLOCK-1 caution carried in the analysis note."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the load-bearing triples were checked mechanically by locator_audit.py and are exposed in the analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Twenty male Wistar rats (four groups of five) weaned at postnatal day 21, 15% caloric restriction for about 55-64 days, amygdala kindling, western blots and qPCR in hippocampus and temporal neocortex. The kindled and non-kindled animals were pooled into n = 10 per diet for the molecular data after showing they did not differ. The observation (higher after-discharge threshold, lower pPKB and pS6 under mild restriction; no change in kindling rate, glucose, beta-hydroxybutyrate or insulin) is firm as reported for this design; the inference that mTOR inhibition causes the anticonvulsant effect is correlational (tissue taken after kindling, one time point). Not a WWOX system and not a neonatal or feeding-protocol model."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (fasting OR \"caloric restriction\" OR \"calorie restriction\" OR \"dietary restriction\")",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the four hits are type 2 diabetes association studies (fasting glucose), none a fasting or restriction intervention"
+   },
+   {
+    "query": "WWOX AND (mTOR OR mTORC1 OR AMPK)",
+    "count": 8,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (hypoglycemia OR hypoglycaemia OR dextrose OR \"glucose infusion\")",
+    "count": 21,
+    "source": "PubMed ESearch rettype=count 2026-10-19; hits are glucose-metabolism, glycolysis and association papers, none an infusion or dextrose intervention"
+   },
+   {
+    "query": "WWOX AND (refeeding OR thiamine OR \"parenteral nutrition\")",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are PubMed search hits only (ESearch rettype=count, 2026-10-19), not a census; none of the WWOX hits tests the intervention of this group."
+ },
+ "multihop": {
+  "references_enumerated": 39,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list enumerated and read (39 entries, printed in full); none is WWOX-directed. McDaniel 2011 (ketogenic diet inhibits mTOR) and Greene 2001 (calorie restriction in epileptic EL mice) are the nearest primaries; Yuskaitis 2022 in this lot cites this paper."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 25814935 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED for this PMID in the seven registry surfaces at commit 0c85331b341e; a statement about that query only. CLAIM 042, DL-MECH-020 admitted for comparison after the first pass."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 39,
+   "references_screened": 38,
+   "references_with_doi": 38,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID25814935_PhillipsFarfan2015_PMC.xml",
+   "sha256": "7546d09cb04cba1f03c329f75120997a17fcf20989354030c238707348366376",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4356078/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "7546d09cb04cba1f03c329f75120997a17fcf20989354030c238707348366376"
+   }
+  },
+  {
+   "path": "files/figures/PMID25814935/native/fncel-09-00090-g0001.jpg",
+   "sha256": "1f65785760b062e80e66c774c988725d5e2403a72253a18e7eece0c2593761d9",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4356078.1/fncel-09-00090-g0001.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "1f65785760b062e80e66c774c988725d5e2403a72253a18e7eece0c2593761d9"
+   }
+  },
+  {
+   "path": "files/figures/PMID25814935/native/fncel-09-00090-g0002.jpg",
+   "sha256": "2d1ae8be776dfaaa5d22b3ee4eb2898afda54e0fdc74bb7629a06bb4dce3992f",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4356078.1/fncel-09-00090-g0002.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "2d1ae8be776dfaaa5d22b3ee4eb2898afda54e0fdc74bb7629a06bb4dce3992f"
+   }
+  },
+  {
+   "path": "files/figures/PMID25814935/native/fncel-09-00090-g0003.jpg",
+   "sha256": "edf466b852a245149fc58478bdaf76aab3653256d7054ac99a8a998e0f90ef4a",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4356078.1/fncel-09-00090-g0003.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "edf466b852a245149fc58478bdaf76aab3653256d7054ac99a8a998e0f90ef4a"
+   }
+  },
+  {
+   "path": "files/figures/PMID25814935/native/fncel-09-00090-g0004.jpg",
+   "sha256": "b817d0fa8fbc1c66f4920001be8a1dc22b3d6f09fd144f09b43673ecb7710a33",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4356078.1/fncel-09-00090-g0004.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "b817d0fa8fbc1c66f4920001be8a1dc22b3d6f09fd144f09b43673ecb7710a33"
+   }
+  },
+  {
+   "path": "files/figures/PMID25814935/native/fncel-09-00090-g0005.jpg",
+   "sha256": "d866588be80416bf64419fcf87ead7cb81901baf49d8a075b4c97aebd55b192c",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4356078.1/fncel-09-00090-g0005.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "d866588be80416bf64419fcf87ead7cb81901baf49d8a075b4c97aebd55b192c"
+   }
+  },
+  {
+   "path": "files/figures/PMID25814935/native/fncel-09-00090-g0006.jpg",
+   "sha256": "5fa268f47bd14cf792446a15b0c11fbde1345c62cefdd033a68ee319a62553e4",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4356078.1/fncel-09-00090-g0006.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "5fa268f47bd14cf792446a15b0c11fbde1345c62cefdd033a68ee319a62553e4"
+   }
+  },
+  {
+   "path": "files/supplements/PMID25814935/DataSheet1.DOC",
+   "sha256": "5b216a2e4d6101bf007f2a518c0154eccb76e46fd993d4f570c7184c2e3d511f",
+   "kind": "supplement_binary",
+   "note": "Supplementary Data (Word 97 document, six pages): statistical comparisons control versus kindled control, experimental versus kindled experimental, and ad libitum versus restricted. Text reached through a strings extraction that loses some table cells; a complete-read claim is withheld for that reason.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4356078.1/DataSheet1.DOC",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "5b216a2e4d6101bf007f2a518c0154eccb76e46fd993d4f570c7184c2e3d511f"
+   }
+  },
+  {
+   "path": "files/supplements/PMID25814935/Image1.TIF",
+   "sha256": "a9c1b277989c7785e9909cf44ef4a33f41660d029a4facf588bef226d5e71a0e",
+   "kind": "supplement_binary",
+   "note": "Supplementary figure: electrographic record fragment (sensory cortex and amygdala channels around a stimulus), converted to PNG and opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4356078.1/Image1.TIF",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "a9c1b277989c7785e9909cf44ef4a33f41660d029a4facf588bef226d5e71a0e"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The restriction was mild (15%) and given without vitamin or mineral supplementation to young rats.",
+    "snippet": "CR was accomplished by food restriction without vitamin or mineral supplementation; therefore the rats were subjected to mild CR (15%) to avoid any concerns relating to under-nutrition, especially given their young age.",
+    "anchor": "Introduction, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25814935_PhillipsFarfan2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Kindled and non-kindled animals were pooled for the molecular data (AL n = 10, CR n = 10); the four starting groups held five animals each (Methods group-assignment sentence, not quoted).",
+    "snippet": "Thus, control and kindled control data were pooled together (hereafter AL, n = 10) and the results for experimental and kindled experimental rats were combined (henceforth CR, n = 10) for all subsequent analysis.",
+    "anchor": "Materials and methods, Statistics",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25814935_PhillipsFarfan2015_PMC.xml",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25814935.json",
+     "entry": 1,
+     "what_changed": "five-per-cell attributed to the Methods sentence, not the quote",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ]
+     }
+    }
+   },
+   {
+    "proposition": "Restriction raised the after-discharge threshold and shortened after-discharge duration on three days only.",
+    "snippet": "CR significantly increased [t(1, 8) = −3.35, p = 0.01] the AD threshold (Figure 3A) and reduced the AD duration in days 14 [t(1, 8) = 2.73, p < 0.05], 15 [t(1, 8) = 4.63, p < 0.01] and 16 [t(1, 8) = 2.92, p < 0.05] of the kindling procedure (Figure 3B).",
+    "anchor": "Results, Electrical kindling of the amygdala",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25814935_PhillipsFarfan2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3A shows the CR threshold about 160% of the ad libitum value with a wide error bar and two asterisks; Figure 3B shows the duration curves close for days 1-12, CR points below ad libitum on days 13-16 (asterisks on days 14-16) and ad libitum points again higher on days 21-24 without asterisks.",
+    "snippet": "Visual attestation of Figure 3: panel A, after-discharge threshold (%), ad libitum 100 and CR near 160 with a wide error bar and two asterisks; panel B, after-discharge duration (s) against day of kindling, curves close for days 1-12, CR below ad libitum around days 13-16 with asterisks on days 14-16, ad libitum points higher again on days 21-24 without asterisks.",
+    "anchor": "Figure 3A, B (image fncel-09-00090-g0003)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID25814935/native/fncel-09-00090-g0003.jpg"
+    ],
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "young male Wistar rat, 15% caloric restriction, amygdala kindling",
+     "endpoint": "after-discharge threshold and duration"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25814935.json",
+     "entry": 3,
+     "what_changed": "panel B description corrected: not overlapping after day 16",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
+    }
+   },
+   {
+    "proposition": "Apart from the after-discharge threshold and the after-discharge duration on days 14-16, restriction did not alter the kindling rate or any other kindling parameter.",
+    "snippet": "However, CR did not significantly alter the AD duration in any other day nor did it affect any other kindling parameter",
+    "anchor": "Results, Electrical kindling of the amygdala",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25814935_PhillipsFarfan2015_PMC.xml",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25814935.json",
+     "entry": 4,
+     "what_changed": "exceptions (threshold, days 14-16) stated",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
+    }
+   },
+   {
+    "proposition": "The authors read the profile as anti-convulsant, not anti-epileptogenic.",
+    "snippet": "This suggests an anti-convulsive profile rather than an anti-epileptogenic action; which is totally independent from changes in glucose, insulin or β-HB.",
+    "anchor": "Discussion, Electrical kindling of the amygdala",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25814935_PhillipsFarfan2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fasting-state glucose, beta-hydroxybutyrate and insulin did not differ between restricted and ad libitum rats.",
+    "snippet": "On the other hand, fasting blood glucose and β-HB as well as plasma insulin (Figure 2) were similar between the groups",
+    "anchor": "Results, Bio-indexes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25814935_PhillipsFarfan2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2: blood beta-hydroxybutyrate near 0.9 then 0.55 mmol/l, glucose near 85 then 123 mg/dl, insulin near 1.4 ng/ml, with no difference between diets.",
+    "snippet": "Visual attestation of Figure 2: panel A beta-hydroxybutyrate about 0.9 initial and 0.55 mmol/l final in both diets; panel B glucose about 85 initial and 123 mg/dl final in both diets; panel C plasma insulin about 1.4 ng/ml, bars for the two diets level within error.",
+    "anchor": "Figure 2A-C (image fncel-09-00090-g0002)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID25814935/native/fncel-09-00090-g0002.jpg"
+    ],
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "young male Wistar rat after a 4 h fast",
+     "endpoint": "blood glucose, beta-hydroxybutyrate, plasma insulin"
+    }
+   },
+   {
+    "proposition": "Restriction significantly reduced pPKB and pS6 in cortex and hippocampus; the hippocampal pAMPK rise (p < 0.05) and the nonsignificant cortical trend (p = 0.16) are in the preceding sentence, not quoted.",
+    "snippet": "CR significantly reduced PKB/Akt and S6 phosphorylation in the Cx [PKB: t(1, 18) = 3.03, p < 0.01 and S6: t(1, 18) = 2.13, p < 0.05] and Hp [PKB: t(1, 18) = 3.13, p < 0.01 and S6: t(1, 18) = 2.39, p < 0.05], suggesting that CR inhibited the mTOR cascade.",
+    "anchor": "Results, mTOR signaling pathway",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25814935_PhillipsFarfan2015_PMC.xml",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25814935.json",
+     "entry": 8,
+     "what_changed": "proposition restricted to PKB and S6 as quoted; AMPK attributed to the adjacent sentence",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ]
+     }
+    }
+   },
+   {
+    "proposition": "Figure 5 shows pPKB/PKB and pS6/S6 lower under restriction in both regions, with pAMPK/AMPK higher in hippocampus only.",
+    "snippet": "Visual attestation of Figure 5: panel A pAMPK/AMPK about 1.3 versus 1.5 with an asterisk only in hippocampus; panel B pPKB/PKB lower in both regions (two asterisks); panel C pS6/S6 lower in both regions (one asterisk), with a wide error bar on the neocortical ad libitum bar.",
+    "anchor": "Figure 5A-C (image fncel-09-00090-g0005)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID25814935/native/fncel-09-00090-g0005.jpg"
+    ],
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "young male Wistar rat, hippocampus and temporal neocortex, after kindling",
+     "endpoint": "phospho/total AMPK, PKB, S6"
+    }
+   },
+   {
+    "proposition": "The mTOR readout was taken after the kindling series, so the state of the pathway at the time of the threshold measurements is unknown.",
+    "snippet": "Thus, the status of the mTOR pathway in the amygdala when the after-discharge threshold (postnatal day 55) and duration (postnatal days 55–75) were determined is unknown.",
+    "anchor": "Discussion, mTOR signaling cascade",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25814935_PhillipsFarfan2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Even mild restriction reduced weight gain in weanling rats, which the authors say may limit use in children.",
+    "snippet": "Unfortunately, even mild CR significantly reduced weight gain in weanling rats which may limit its use in children and adolescents due to concerns regarding their growth.",
+    "anchor": "Discussion, mTOR signaling cascade, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25814935_PhillipsFarfan2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "All rats progressed to generalised seizures at the same kindling rate; the authors say in the next sentence that this was probably due to the low degree of restriction (a hedge, not a finding).",
+    "snippet": "In addition, despite the presumed inhibition of the mTOR pathway all the rats progressed to generalized convulsive seizures with the same kindling rate.",
+    "anchor": "Discussion, mTOR signaling cascade, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25814935_PhillipsFarfan2015_PMC.xml",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25814935.json",
+     "entry": 12,
+     "what_changed": "hedge 'probably' added and sentence attributed",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ]
+     }
+    }
+   },
+   {
+    "proposition": "The authors conclude the effects were likely independent of glucose, beta-hydroxybutyrate, insulin and gene expression; the species and duration caveats on glucose and ketone effects are in the Discussion elsewhere, not in the quote.",
+    "snippet": "The effects of CR were likely independent from any changes in glucose, β-HB, insulin or gene expression (AMPKα1, AMPKα2, mTOR, S6K, TSC1, or TSC2) since none were modified by CR.",
+    "anchor": "Discussion, final paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25814935_PhillipsFarfan2015_PMC.xml",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25814935.json",
+     "entry": 13,
+     "what_changed": "'likely independent' restored; second clause attributed elsewhere",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
+    }
+   },
+   {
+    "proposition": "Figure 3B marks day 15 with three asterisks while the text reports p < 0.01 for that day; legend asterisk key ranges up to p ≤ 0.001 (noted by the blind audit of this reading).",
+    "snippet": "CR significantly increased [t(1, 8) = −3.35, p = 0.01] the AD threshold (Figure 3A) and reduced the AD duration in days 14 [t(1, 8) = 2.73, p < 0.05], 15 [t(1, 8) = 4.63, p < 0.01]",
+    "anchor": "Results, Electrical kindling of the amygdala; Figure 3B",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25814935_PhillipsFarfan2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC4356078/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure panel."
+ }
+}

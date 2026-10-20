@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-20T03:00:00Z",
+ "event_at": "2026-10-20T03:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present"
+ },
+ "event_id": "FTR-20261019-31340538-01",
+ "evidence_basis": [
+  "Whole JATS body read; Figures 1 and 2 opened as images; Figures 3-6 not re-opened (captions only here), so depth is partial.",
+  "NEW: Figure 1A heart N.D. is defined in the legend as not determined (low beta-actin), so the all-organs sentence is qualified, not contradicted; liver has the highest Wwox of the organs tested; no metabolic parameter measured in the lde/lde rat."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID31340538.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID31340538.md",
+  "disease-models/wwox/research/gold_wave_20261019_scientist-b.md"
+ ],
+ "prior_receipt": "FTR-20260806-31340538-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_version_or_supplement",
+ "source_fingerprint": "02d5615819012880f6054935cf8a7b700a78690e9e8835b3e5364be7b60cf00c",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID31340538_Tochigi2019_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.3390/ijms20143596",
+  "pmid": "31340538"
+ },
+ "workflow": "scientist-b gold wave 2026-10-19; QUESTION_DRIVEN; bytes re-acquired with no User-Agent; prepared as JSON for the integrator and not appended."
+}

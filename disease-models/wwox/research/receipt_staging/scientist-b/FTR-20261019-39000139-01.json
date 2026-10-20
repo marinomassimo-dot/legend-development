@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-10-19T20:30:00Z",
+ "event_at": "2026-10-19T20:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read"
+ },
+ "event_id": "FTR-20261019-39000139-01",
+ "evidence_basis": [
+  "Whole JATS body read section by section; all nine figures inspected as images; the supplementary primer table (the only supplement) read.",
+  "FIND: WWOX is absent. A 3-day 100 nM epinephrine exposure of MIN6 insulinoma cells followed by 2 days of washout raised glucose-stimulated insulin secretion and ER-stress transcripts; the article reports no ROS probe and no apoptosis assay although its conclusion states increased ROS and cell-fate impairment; receptor desensitisation is inferred from mRNA; no antagonist or oxidation control is present.",
+  "References enumerated (44) and screened for integrity, not read."
+ ],
+ "evidence_depth": "complete_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID39000139.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID39000139.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-B-H3-EPINEPHRINE-SAFETY-01.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "7a6f28d031ec21ffc32ea3259de3c0dcd7e3aeb1cfebfc5774d9342081ceba14",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID39000139_Zhang2024_PMC11241606.xml",
+ "study_id": {
+  "doi": "10.3390/ijms25137029",
+  "pmid": "39000139"
+ },
+ "workflow": "scientist-b, interventions batch 2026-10-19 group H3, task branch task/INTERV-H3-B-20261019; context_policy SOURCE_FIRST. Route: Europe PMC JATS fetched with no User-Agent, figures from the PMC OA S3 bucket, all into the root files/ tree; figures inspected as images where stated; locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a JSON file for the integrator and was not appended at preparation time."
+}

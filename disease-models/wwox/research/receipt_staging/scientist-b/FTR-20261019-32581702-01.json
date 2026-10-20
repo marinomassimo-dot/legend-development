@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-20T04:00:00Z",
+ "event_at": "2026-10-20T04:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read"
+ },
+ "event_id": "FTR-20261019-32581702-01",
+ "evidence_basis": [
+  "Whole JATS body read; Figures 1 and 3 opened as images, Figures 2 and 4 not re-opened (captions only); supplement Data_Sheet_1 read in full text and pages 2-4 viewed; Table_1 xlsx strings read only.",
+  "NEW: supplement shows the only protein-level human test is one fetus against one control (3 ROIs, p 0.5714); residue 304 labelled differently across three papers."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID32581702.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID32581702.md",
+  "disease-models/wwox/research/gold_wave_20261019_scientist-b.md"
+ ],
+ "prior_receipt": "FTR-20260810-32581702-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_version_or_supplement",
+ "source_fingerprint": "369100251faee767e1002188cb63f78622df88c1b2b8dde09f71c5dc89855e1f",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID32581702_Iacomino2020_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.3389/fnins.2020.00644",
+  "pmid": "32581702"
+ },
+ "workflow": "scientist-b gold wave 2026-10-19; QUESTION_DRIVEN; bytes re-acquired with no User-Agent; prepared as JSON for the integrator and not appended."
+}

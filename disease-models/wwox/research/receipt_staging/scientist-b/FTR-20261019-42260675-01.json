@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-10-19T20:30:00Z",
+ "event_at": "2026-10-19T20:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "not_present",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "unavailable"
+ },
+ "event_id": "FTR-20261019-42260675-01",
+ "evidence_basis": [
+  "Whole JATS body read section by section; Tables 1 and 2 read; Figures 1 to 3 inspected as images; the supplementary protocol and tables were not retrieved.",
+  "FIND: WWOX is absent. A paediatric (1 day to under 18 years) cluster quasi-randomised stepped-wedge protocol of intramuscular epinephrine at 5 to 10 times the IV dose in cardiac arrest; primary outcome time to return of circulation among patients who achieve it; no stopping rules; safety reasoning leans on anaphylaxis dosing; recruitment status 3 intervention patients of 139.",
+  "References enumerated (52) and screened for integrity, not read."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42260675.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID42260675.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-B-H3-EPINEPHRINE-SAFETY-01.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "22fcc5b4f51e2c14d71bf1ae461deb2c07fa767485b01f8d39a8e67b71d3fe3e",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID42260675_Idrees2026_PMC13471612.xml",
+ "study_id": {
+  "doi": "10.1186/s13063-026-09776-3",
+  "pmid": "42260675"
+ },
+ "workflow": "scientist-b, interventions batch 2026-10-19 group H3, task branch task/INTERV-H3-B-20261019; context_policy SOURCE_FIRST. Route: Europe PMC JATS fetched with no User-Agent, figures from the PMC OA S3 bucket, all into the root files/ tree; figures inspected as images where stated; locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a JSON file for the integrator and was not appended at preparation time."
+}

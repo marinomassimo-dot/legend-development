@@ -115,6 +115,32 @@
    "path": "files/fulltext/PMID24308844_Schuchardt2013_assets/nihms547377f6.jpg",
    "sha256": "fb57a5f0f919c5f4115350123d6e4904f1a63206d118ad4fc9a48d02ca198ce8",
    "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID24308844_Schuchardt2013_assets/nihms547377f1.jpg",
+   "kind": "figure",
+   "note": "Figure 1, retrieved 2026-10-20 from the PMC content-delivery blob address with no User-Agent (the landing page then served a reCAPTCHA; the blob addresses had been read from one successful landing-page response); Figures 2-6 re-retrieved the same way restored the five files the manifest declared and that were absent, and their SHA-256 values match the declared ones.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/d60e/3906126/e9ef49d81d09/nihms547377f1.jpg",
+    "http_method": "GET",
+    "tier": "pmc_blob_cdn",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "898c2d4653b53a0046444859e2c68b40b25eb60f924d1b42fa052a93567a7c6a"
+  },
+  {
+   "path": "files/fulltext/PMID24308844_Schuchardt2013_assets/nihms547377f7.jpg",
+   "kind": "figure",
+   "note": "Figure 7, retrieved 2026-10-20 from the PMC content-delivery blob address with no User-Agent (the landing page then served a reCAPTCHA; the blob addresses had been read from one successful landing-page response); Figures 2-6 re-retrieved the same way restored the five files the manifest declared and that were absent, and their SHA-256 values match the declared ones.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/d60e/3906126/46cdde888700/nihms547377f7.jpg",
+    "http_method": "GET",
+    "tier": "pmc_blob_cdn",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20"
+   },
+   "sha256": "749faff0d6e07329df312bffe25749405872b55b331226457903c357a1a391b1"
   }
  ],
  "verbatim_locators": {
@@ -316,9 +342,61 @@
     "artifact": "files/fulltext/PMID24308844_Schuchardt2013_PMC.xml",
     "anchor": "Results and Discussion, 'WW domains may lie in close proximity of each other within the WW1–WW2 tandem module of WWOX', paragraph preceding the light-scattering analysis",
     "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Methods are in vitro biophysics and simulation only: recombinant protein, synthetic peptides, isothermal titration calorimetry, analytical light scattering, homology modelling and molecular dynamics. There is no cell, tissue, animal, metabolite or WWOX-loss arm anywhere in the article, so the question whether any figure or table speaks to metabolism has a structural answer of no.",
+    "snippet": "Molecular dynamics (MD) simulations were performed with the GROMACS software (54) using the integrated AMBER99SB-ILDN force field (55).",
+    "surface": "body",
+    "anchor": "Materials and Methods, Molecular dynamics",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "recombinant human WWOX WW domains and ErbB4 peptides in vitro, and in silico models",
+     "genotype": "wild-type and Y85W WW2 constructs",
+     "endpoint": "method scope"
+    },
+    "artifact": "files/fulltext/PMID24308844_Schuchardt2013_PMC.xml"
+   },
+   {
+    "proposition": "Figure 1 (read as an image): panel a draws the ErbB4 modular cassette with three PPXY motifs and the twelve-residue peptide sequences; panel b draws WWOX (WW1, WW2 with an annotated Y85W lollipop, SDR; 414 residues). Both are schematics with no data; the Y85W annotation marks an engineered substitution, as the existing caption locator records.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1a-b, schematic of ErbB4 and WWOX domain architecture with PPXY peptide sequences.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID24308844_Schuchardt2013_assets/nihms547377f1.jpg",
+    "anchor": "Figure 1, native JPEG 150 dpi",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "recombinant human WWOX WW domains and ErbB4 peptides in vitro, and in silico models",
+     "genotype": "wild-type and Y85W WW2 constructs",
+     "endpoint": "schematic"
+    },
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "Figure 7 (read as an image): four ribbon snapshots at 0, 50, 100 and 200 ns of the WW1-WW2 tandem model; WW1 moves relative to WW2 and changes its orientation between snapshots, and the interdomain loop extends and folds back. This is the visual counterpart of the existing locators that the simulation does not reach equilibrium. Figures 2-6, previously read at the resolution PMC serves, were re-retrieved and their SHA-256 values match the manifest's declared values, which restores the evidence behind the figure locators already persisted.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7, structural snapshots of WW1 (green) and WW2 (blue) at 0, 50, 100 and 200 ns of molecular dynamics.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID24308844_Schuchardt2013_assets/nihms547377f7.jpg",
+    "anchor": "Figure 7, native JPEG 150 dpi",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "recombinant human WWOX WW domains and ErbB4 peptides in vitro, and in silico models",
+     "genotype": "wild-type and Y85W WW2 constructs",
+     "endpoint": "simulation snapshots"
+    },
+    "found_or_sought": "sought"
    }
   ],
   "caption_pass": "🔴 ADDED 2026-08-11, AND IT IS THE DEBT DL-METH-092 NAMED COMING DUE. This artifact is one of the seven where every <fig> sits OUTSIDE <body>; the original reading used a body-scoped extractor, so it never saw a single caption, and the absence of caption locators looked like a choice when it was an invisible surface. The seven captions were read in one pass and two of them carry statements worth anchoring — entries[17] and entries[18], APPENDED AT THE END so that no existing index shifts and no contradicts/qualifies pointer silently re-resolves at a different sentence. What the pass did NOT do: the seven panels remain uninspected, so this discharges the caption half of FT-055 and not the panel half. Cost of reading them: about a minute.",
   "note": "Coverage: body COMPLETE — Introduction, Materials and Methods, Results and Discussion, Conclusions and the reference list read in sequence from the JATS. Tables 1, 3 and 4 read cell by cell; Tables 2 and 5 through the running text only. FIGURES 1-7 NOT INSPECTED, waived by name with the cost stated, and the receipt is partial_fulltext_read for that reason alone. The waiver is the session's limit, not the paper's, and FT-055 carries it. 🔵 APPEND 2026-09-27 (wave-2 package splice_sdr): two locators appended at the END (entries 20-21) for a question the 2026-08 reading was not asked — does this paper say anything about WWOX SELF-association, and about which domain. Nothing earlier is renumbered or altered. The declared artifact was re-acquired by efetch db=pmc id=3906126 on 2026-09-27 because the fingerprinted bytes were absent from this checkout; the re-acquired file reproduces the recorded sha256 00da56df985d59b873d8ceea546fdb870138201aaa8c3e22badec660c30581ce exactly, so the manifest needed no new artifact entry."
- }
+ },
+ "reading_history": [
+  {
+   "receipt": "FTR-20261019-24308844-03",
+   "reader": "scientist-c, HELD-PARTIAL-WWOX-C-20261019",
+   "context_policy": "QUESTION_DRIVEN",
+   "what_changed": "Re-retrieved the seven figure files (the five declared ones had been absent from disk; their SHA-256 values match the declaration) and declared Figures 1 and 7, opened as images; appended 3 entries. The article is in vitro biophysics only: the metabolism question is answered no by method scope.",
+   "outputs": [
+    "disease-models/wwox/research/held_wave_20261019_scientist-c.md"
+   ]
+  }
+ ]
 }

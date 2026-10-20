@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-10-19T20:30:00Z",
+ "event_at": "2026-10-19T20:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "captions_only"
+ },
+ "event_id": "FTR-20261019-22479346-01",
+ "evidence_basis": [
+  "Whole JATS body read section by section; Tables 1 to 3 read; Figures 1 to 3 inspected as images; supplementary tables S1 to S4 read for the WWOX rows, methods S1 and S2 opened at their first lines only.",
+  "FIND: WWOX appears as one of 17 genes with differential allelic and expression distributions in a young-onset hypertension scan; it replicates in a Hong Kong Han Chinese family study but not in a British case-control study; no SNP reached the stated significance; the article reports mouse knockout phenotypes (hypoglycaemia, abnormal adrenal morphology) as if they were WWOX variant associations.",
+  "References enumerated (97) and screened for integrity, not read."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID22479346.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID22479346.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-B-H3-WWOX-BP-01.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "02ed85c90af8580c60acd98df4ac29fd8afa7de880a2ea5f087461a714a1b667",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID22479346_Yang2012_PMC3315540.xml",
+ "study_id": {
+  "doi": "10.1371/journal.pone.0032907",
+  "pmid": "22479346"
+ },
+ "workflow": "scientist-b, interventions batch 2026-10-19 group H3, task branch task/INTERV-H3-B-20261019; context_policy SOURCE_FIRST. Route: Europe PMC JATS fetched with no User-Agent, figures from the PMC OA S3 bucket, all into the root files/ tree; figures inspected as images where stated; locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a JSON file for the integrator and was not appended at preparation time."
+}
