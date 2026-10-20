@@ -43,7 +43,7 @@ edition: public
 ## 2. DISEASE-MODEL (WORKING-MODEL) VERSION
 
 ```yaml
-working_model_version: WM_v7.25
+working_model_version: WM_v7.26
 working_model_file: disease-models/wwox/registries/working_model_current.md
 narrative_view: disease-models/wwox/disease_model.md
 notes: "Canonical disease-level working model derived from public literature; disease_model.md is its narrative reader-facing view. The private individual-level record is not part of this edition."
@@ -106,12 +106,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261019_006
+last_batch_commit_id: BATCH_20261019_007
 last_batch_commit_date: 2026-10-20
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 3
-target_wm_version: WM_v7.25
-trigger: MANUAL (operator-authorised integration of the metabolic batch's wave 4, groups W1 and W2, of Scientists B, C and D, with the repairs of the Mirror review of batches 003 to 005, ACTOR_ID orchestrator by stated assumption, task ORCH-METABOLIC-BATCH-20261019). Three candidates, all propagated, none merged, none superseded. The registry debt of the wave is discharged: 27 PAPER records (PAPER 400 to PAPER 426, seven promotions of corpus placeholders kept as history) and 19 new LIT records (LIT-0680 to LIT-0698, seven LIT records promoted), including the seven complete readings that blocked BATCH_COMMIT with ORPHAN_COMPLETE_READ. No claim was created, none reversed, and no Status, Type or Summary changed. Mirror repairs M1 to M8 applied after each was checked against its source. The papers registry passed the re-raise point of its scale acknowledgement and the deferral was renewed; the sharding decision is the operator's.
+commit_candidates_propagated: 0
+target_wm_version: WM_v7.26
+trigger: MANUAL (operator-authorised follow-ups of the Mirror review of BATCH_20261019_006, findings A1 to A5, ACTOR_ID orchestrator by stated assumption, task ORCH-METABOLIC-BATCH-20261019). No candidate: each finding was checked against its source first. No record added, no claim created or reversed, and no Status, Type or Summary changed. A3: overlap of the three WWOX case rows of PAPER 425 with published patients is not excluded (stated in PAPER 425, DL-MECH-166 and DL-MECH-167). A1 (PAPER 400 and PAPER 414), A2 (transferability scale), A4 (DL-MECH-168 title), A5 (DL-MECH-117) reworded; B4: earliest-producer semantics stated once in the paper-registry header. The scale acknowledgement was not renewed and no registry-growing operation was made.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -125,7 +125,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261020_BATCH_20261019_006
+last_lint_id: LINT_20261020_BATCH_20261019_007
 last_lint_date: 2026-10-20
 last_lint_result: WARN
 ```
