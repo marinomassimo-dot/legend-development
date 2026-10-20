@@ -1,5 +1,5 @@
 {
- "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
  "_note": "Drug-repurposing P3 under the operator's roadmap v4 r14 (quoted at disease-models/wwox/research/drug_repurposing/roadmap_v4_r14_20261020.md). The roadmap is a plan, not an authority: where it and the repository's rules differ, the repository wins. ADOTTATO NEL_PIANO in it never means verified.",
  "TASK_ID": "REPURP-P3-EARLYBENEFIT-B-20261020",
  "DIRECTIVE_VERSION": 1,
@@ -31,6 +31,31 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-20"
+ "CURRENT_STATE": "IN_PROGRESS",
+ "assigned_on": "2026-10-20",
+ "TASK_ACK": {
+  "actor": "scientist-b",
+  "acked_on": "2026-10-20",
+  "directive_version": 1,
+  "generation": 1,
+  "mode": "PRIMARY_EVIDENCE_READ",
+  "state_manifest_current_state": "READY",
+  "read_before_start": [
+   "disease-models/wwox/research/metabolic_batch_dispatch_brief_20261019.md",
+   "framework/protocols/scientist_standing_brief.md (v3)",
+   "roles/scientist.md",
+   "framework/instruction/LEGEND_CORE.md 21c/21d/21e",
+   "framework/instruction/epistemic_discipline.md",
+   "framework/state/state_manifest_current.md",
+   "disease-models/wwox/research/drug_repurposing/roadmap_v4_r14_20261020.md (read-only; directory owned by a Harness agent)"
+  ]
+ },
+ "TASK_CLAIM": {
+  "actor": "scientist-b",
+  "claimed_on": "2026-10-20",
+  "worktree": ".claude/worktrees/lettore-b",
+  "branch": "task/REPURP-P3-EARLYBENEFIT-B-20261020"
+ },
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
 }
