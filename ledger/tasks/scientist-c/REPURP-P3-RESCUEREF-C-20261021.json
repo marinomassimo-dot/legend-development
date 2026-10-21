@@ -1,5 +1,5 @@
 {
- "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
  "_note": "The reconciliation of 2026-10-21 found that the rescue reference the operator's roadmap proposed to build from an abstract is already a complete read in this repository: PMID 42422765 = DOI 10.1016/j.omta.2026.201791 = PAPER 011 / CLAIM 011, 12 receipts, one complete_fulltext_read with 29 locators, a deep-dive manifest, a 55 KB locator dossier and both supplements on disk. This task binds the scaffold from that evidence instead of from the abstract.",
  "TASK_ID": "REPURP-P3-RESCUEREF-C-20261021",
  "DIRECTIVE_VERSION": 1,
@@ -31,6 +31,27 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-21"
+ "CURRENT_STATE": "IN_PROGRESS — acked and claimed 2026-10-21",
+ "assigned_on": "2026-10-21",
+ "TASK_ACK": {
+  "TASK_ID": "REPURP-P3-RESCUEREF-C-20261021",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "DECISION": "ACCEPTED",
+  "ACTOR_ID": "scientist-c",
+  "acked_at": "2026-10-21T06:05:00Z",
+  "reading_mode": "PRIMARY_EVIDENCE_READ (panel re-inspection scope)",
+  "context_policy": "QUESTION_DRIVEN — declared, not SOURCE_FIRST. The dispatch states LEGEND's current position (CLAIM 011 is flagged over 'dose-dependent' against a threshold) and the task is a re-read of named panels against a named question. What was admitted before opening the source: the task contract, the scaffold file, paper_packet.py packet output, fulltext_receipts.py status, CLAIM 011 whole record, the schema-v2 manifest and its 40 locator entries.",
+  "note": "Standing brief v3 read in full, with everything its section 0 enumerates: state_manifest_current current_state READY (line 139); roles/scientist.md in full; LEGEND_CORE 21c STOP POLICY, 21d DECISION AUTHORITY and 21e AGILE OPERATING MODE by name; fulltext_read_receipt.md from 'Before reading: duplicate-work gate' through 'Required receipt' and 'The repair instrument'; epistemic_discipline.md in full; scientist_reading_modes.md 3 and 4 in full. Worktree .claude/worktrees/lettore-c, branch task/REPURP-P3-RESCUEREF-C-20261021 from main a6c708e0."
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "REPURP-P3-RESCUEREF-C-20261021",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-c",
+  "claimed_at": "2026-10-21T06:05:00Z",
+  "durable_pointer": "ledger/tasks/scientist-c/REPURP-P3-RESCUEREF-C-20261021.json on branch task/REPURP-P3-RESCUEREF-C-20261021 in /home/desktop/legend-development/.claude/worktrees/lettore-c",
+  "claim_precondition_checked": "Annex A.3 rule 3 / scientist_reading_modes.md 2.2. paper_packet.py packet --pmid 42422765 reported 'peer work: none in flight'; paper_packet.py claim --pmid 42422765 --actor scientist-c returned exit 0 (CLAIMED). The staged-receipt directories of scientist-a, -b and -d were listed before anything was opened: no staged receipt for 42422765 exists under any peer. scientist-b is active on a correction branch for a different paper.",
+  "reading_claim": "/home/desktop/legend-development/.git/legend-reading-claims/42422765/scientist-c",
+  "c2_citation": "HANDOFF-C-2-PMID42422765 (scientist_reading_modes.md 2.4) — this contract names PMID 42422765 and is a SINGLE-OWNER reading, not a PARALLEL_READ_GROUP member. The C-2 working blob is not touched by this task; the manifest edited here is the canonical main one, edited forward."
+ }
 }
