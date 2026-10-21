@@ -1,0 +1,243 @@
+{
+ "schema_version": 2,
+ "pmid": "22938201",
+ "doi": "10.1186/1750-1172-7-58",
+ "receipt": "FTR-20261020-22938201-01",
+ "landing": [
+  "Gonzalez-Hilarion S, Beghyn T, Jia J, Debreuck N, Berte G, Mamchaoui K, Mouly V, Gruenert DC, Deprez B, Lejeune F. Rescue of nonsense mutations by amlexanox in human cells. Orphanet J Rare Dis 2012;7:58.",
+  "PMCID PMC3562214; open access, CC-BY (BioMed Central).",
+  "Read 2026-10-20 by scientist-a under task REPURP-P3-KNOWNROADS-A-20261020 (known-roads reconnaissance).",
+  "context_policy: SOURCE_FIRST (first_read; no LEGEND conclusion about amlexanox existed to be driven by — amlexanox is absent from every LEGEND registry and ledger)."
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "declined: both papers are PMC open access and the NCBI efetch JATS route returned a complete body on the first call, so no acquisition cascade was needed"
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "declined: no locator here narrows, reverses or corroborates a consolidated baseline claim, and no commit candidate of this task declares MAJOR — the two papers never mention WWOX"
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "declined: a BLOCK-1 ADMET/BBB triage would be an in-silico promotion step for a molecule this reconnaissance deliberately does not promote; the road is qualified, not ranked"
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "declined: optional toolkit, and the question here was a bounded census of what has been tested rather than a search for a new mechanism or a preregistered prediction"
+  },
+  {
+   "skill": "legend-session-self-eval",
+   "used": true
+  },
+  {
+   "skill": "legend-capability-scout",
+   "used": true
+  },
+  {
+   "skill": "legend-paperqa",
+   "used": false,
+   "reason": "declined: external API spend is reserved to the operator (standing brief section 1), and the corpus question was answered by registry_records.py and first-hand reading"
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 575,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "The observation (a marketed drug raises PTC-containing mRNA and yields some full-length protein in three patient-derived lines) is weighted HIGH: this group built the tethering NMD assay and the cell-model collaborations, and the measurements are the kind it makes routinely. The interpretation (that amlexanox is a dual NMD-inhibitor/read-through agent fit for therapeutic development) is weighted LOW: it is the group's own programme hypothesis, its two activities are declared mechanistically unresolved in the Conclusions, and no independent arm tests it here.",
+  "verdict": "Lille/Inserm NMD group (F. Lejeune, senior) with Institut Pasteur de Lille medicinal chemistry (B. Deprez) and two external cell-model providers (V. Mouly, Paris, DMD myoblasts; D.C. Gruenert, 6CFSMEo- CF airway line). The group's own prior work produced the first NMD-specific inhibitor NMDI 1, cited here as reference 20, so this paper extends its own programme and is not an independent test of its own hypothesis. No conflict declared. No WWOX connection of any kind.",
+  "counts_measured": "PubMed 2026-10-20: `Lejeune F[au]` = 575 records (the name is AMBIGUOUS and this count is an upper bound over several people, declared rather than cleaned); `Lejeune F[au] AND (nonsense OR NMD OR readthrough)` = 31, which is the figure that bears on method competence. `Lejeune F[au] AND WWOX` was not run separately because `amlexanox AND WWOX` and the repository-wide census already return zero.",
+  "independence_for_this_question": "This is the originating laboratory of the amlexanox read-through / NMD claim. Any corroboration must come from elsewhere; PMID 40544182, read in the same task, is that elsewhere."
+ },
+ "field_density": {
+  "measured": "PubMed, 2026-10-20: `amlexanox AND WWOX` = 0 records; `WWOX AND (ataluren OR readthrough OR \"nonsense suppression\" OR gentamicin OR PTC124 OR \"ELX-02\")` = 0 records; `amlexanox AND (readthrough OR read-through OR nonsense OR premature termination codon)` = 17 records.",
+  "reading": "The read-through literature on amlexanox exists and is small; its intersection with WWOX is empty. Per dismissal-ledger D-25 a query zero on a reagent is bounded by the index's reach, but here the zero is on a drug name in title/abstract space, where PubMed indexing does reach, and it is consistent with the repository's own census (`ataluren` 0, `read-through` 0, `PTC124` 0, `ELX-02` 0 across the whole repository, woree_therapeutic_class_census_20260921.md section 5).",
+  "queries": [
+   {
+    "query": "amlexanox AND WWOX",
+    "source": "PubMed ESearch",
+    "date": "2026-10-20",
+    "count": 0
+   },
+   {
+    "query": "WWOX AND (ataluren OR readthrough OR \"nonsense suppression\" OR gentamicin OR PTC124 OR \"ELX-02\")",
+    "source": "PubMed ESearch",
+    "date": "2026-10-20",
+    "count": 0
+   },
+   {
+    "query": "amlexanox AND (readthrough OR \"read-through\" OR nonsense OR premature termination codon)",
+    "source": "PubMed ESearch",
+    "date": "2026-10-20",
+    "count": 17
+   },
+   {
+    "query": "(Wwox OR WWOX) AND (pharmacological OR inhibitor OR treated OR administration) AND (seizure OR epilep* OR encephalopathy OR neuron*)",
+    "source": "PubMed ESearch",
+    "date": "2026-10-20",
+    "count": 42
+   }
+  ]
+ },
+ "multihop": {
+  "references_enumerated": 50,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [
+   "ref 20 (the group's own NMDI 1 paper) — not queued: a chemical-entity NMD inhibitor with no paediatric or CNS route, outside this task's scope.",
+   "refs 9/10 (PTC124 originating papers) — not queued here; the ataluren comparison is reached first-hand through PMID 40544182, read in the same task.",
+   "ref 31 (the claim that the truncated dystrophin of this cell line would be as functional as wild type) — QUEUED as the load-bearing unread citation of this reading: the paper's dystrophin functional argument rests on it and does not measure function."
+  ],
+  "note": "No reference in this paper concerns WWOX. The only citation this reading depends on and did not read is ref 31, named above; it is named in the dossier rather than treated as established."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --theme amlexanox (all seven registry surfaces) and `git grep -ril amlexanox` over the whole checkout",
+  "hits": 0,
+  "note": "Zero records on every registry and ledger surface. The only occurrences of the string in the checkout are in disease-models/wwox/research/drug_repurposing/ (a Harness-owned directory, read-only for this task) and in this task's own contract JSON. So this reading is the repository's first scientific contact with the molecule."
+ },
+ "retraction_check": {
+  "result": "none",
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 50,
+   "references_screened": 45,
+   "references_with_doi": 45,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 41,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 5
+   }
+  }
+ },
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "JATS body present and parsed; eight body sections plus seven figure captions and three supplementary-material captions enumerated from the artefact.",
+  "entries": [
+   {
+    "proposition": "Amlexanox was the single confirmed hit of a screen of marketed drugs, in a tethering assay that reports NMD inhibition and nothing about any disease gene.",
+    "snippet": "Amlexanox (Sequoia Research Products, UK) is the only one drug confirmed on the primary assay after screening.",
+    "anchor": "Results and discussion, first subsection ('Identification of amlexanox as an NMD inhibitor'), after the hit-rate sentence.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22938201_GonzalezHilarion2012_PMC_2026-10-20.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The screen's statistical discipline is one measurement per drug against a mean+3SD threshold — a hit-finding design, not an effect-size measurement.",
+    "snippet": "All drugs have been tested once. The hit selection threshold is the mean plus 3 standard deviation.",
+    "anchor": "Results and discussion, same subsection, immediately before the hit rates.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22938201_GonzalezHilarion2012_PMC_2026-10-20.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Every system in this paper is a non-neural human cell line and every allele tested is a nonsense allele. There is no animal arm, no neural arm and no missense arm anywhere in the work.",
+    "snippet": "To further characterize amlexanox, we determined whether it is able to increase the amount of endogenous nonsense mutation-containing mRNAs in cell lines issued from patients suffering from nonsense-mutation-mediated lung cancer, Duchenne muscular dystrophy (DMD) or cystic fibrosis (CF).",
+    "anchor": "Results and discussion, paragraph introducing the three patient-derived lines (Calu-6 lung, immortalised DMD myocytes, 6CFSMEo- CF airway epithelium).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22938201_GonzalezHilarion2012_PMC_2026-10-20.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the p53 line the product that is WELL detected is the TRUNCATED protein.",
+    "snippet": "After amlexanox treatment, a truncated p53 protein was well detected in Calu-6 cells.",
+    "anchor": "Results and discussion, subsection 'Amlexanox induces protein synthesis from nonsense mutation-containing mRNA', first paragraph.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22938201_GonzalezHilarion2012_PMC_2026-10-20.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The full-length product in the same line is explicitly 'very low' — so 'amlexanox makes full-length protein' is true of a minor species here.",
+    "snippet": "In addition, a very low level of full-length p53 was also detected when cells were treated with 1 to 25 μM amlexanox.",
+    "anchor": "Results and discussion, subsection 'Amlexanox induces protein synthesis from nonsense mutation-containing mRNA', first paragraph.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22938201_GonzalezHilarion2012_PMC_2026-10-20.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The one function measurement with a quantitative scale lands at about a fifth of a comparator that the authors themselves say over-expresses the protein — so no wild-type-referenced fraction of function is established anywhere in this paper.",
+    "snippet": "a set of measures of CFTR functionality in Calu-3 cells using the same SPQ assay is presented in supplemental Additional file 3: Figure S2 and shows that the CFTR activity that we measured in 6CFSMEo- cells after amlexanox treatment is about 20% of the CFTR activity that is measured in Calu-3 cells.",
+    "anchor": "Results and discussion, subsection 'Functional analysis of proteins generated after amlexanox treatment', CFTR paragraph, immediately after the SPQ dose-response sentence.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22938201_GonzalezHilarion2012_PMC_2026-10-20.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The dystrophin arm's functional claim is a CITATION, not a measurement in this work: the paper assumes the truncated product would be functional and then measures localisation.",
+    "snippet": "Truncated dystrophin from our DMD cell line would be as functional as the wild-type dystrophin [31]. Therefore, we analyzed the cellular localization of dystrophin in this cellular model.",
+    "anchor": "Results and discussion, subsection 'Functional analysis of proteins generated after amlexanox treatment', opening sentence of the dystrophin paragraph.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22938201_GonzalezHilarion2012_PMC_2026-10-20.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The concentration-response is not monotonic, and the authors cannot exclude toxicity as the reason — an exposure limit declared by the source itself.",
+    "snippet": "Furthermore, the decrease of the efficacy of amlexanox at 25 μM when compared to effect at 5 μM may be due to a cellular defense that inhibits the entrance of amlexanox into the cells when a specific concentration is reached. We cannot exclude some cellular toxicity at the highest concentration that we didn't detect in Figure 3A due to the difference of cellular model.",
+    "anchor": "Conclusions, penultimate technical paragraph.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22938201_GonzalezHilarion2012_PMC_2026-10-20.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Sensitivity is allele- and context-specific by the authors' own statement, so no transfer of an effect size from one PTC to another is licensed — and a missense substitution is not a PTC at all.",
+    "snippet": "We have observed with amlexanox some variations in the sensitivity of cells to treatment which would be due to the nature of the nonsense mutation, the nucleotide environment, and the nature of mRNA or the cell type. Therefore, each cell model with a nonsense mutation needs to be independently assayed to determine the most effective amlexanox working concentration.",
+    "anchor": "Conclusions, same paragraph as the DMD-sensitivity remark.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22938201_GonzalezHilarion2012_PMC_2026-10-20.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper's entire safety argument is historic use for other indications and other routes. It contains no paediatric datum, no CNS datum and no pharmacokinetic measurement of any kind.",
+    "snippet": "It has been used for more than 30 years per os or topically to treat asthma and aphthous ulcers [46,50]. Together with its activity on nonsense mutation containing genes, the relative safety of amlexanox and its current use as an oral treatment of asthma, encourage us to investigate in details its therapeutic potential in other pulmonary diseases",
+    "anchor": "Conclusions, final paragraph.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22938201_GonzalezHilarion2012_PMC_2026-10-20.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The mechanism by which the two activities (NMD inhibition, read-through) relate is declared unresolved by the authors — so 'dual-activity molecule' is a hypothesis in its own originating paper.",
+    "snippet": "If readthrough occurs after the pioneer round, it would suggest that NMD inhibition and read-through promotion are two distinct molecular intervention of amlexanox. Clearly, further analysis of the mode of action of amlexanox will be important for its development as a novel therapy for nonsense mutation mediated diseases.",
+    "anchor": "Conclusions, paragraph on the pioneer round of translation.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22938201_GonzalezHilarion2012_PMC_2026-10-20.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": "Ten locators, all from the running text of the JATS body, captured while the artefact was open. FIGURES WERE NOT INSPECTED AS IMAGES: the receipt declares figures `captions_only` and no panel value is asserted anywhere in this manifest or in the dossier. Three figure-level facts the dossier would have wanted (the exact fold changes in Figure 2, the viability curve of Figure 3A, the band identities of Figure 4) are therefore carried only as the authors' running-text statements, and are labelled as such. The two supplementary files that matter (Figure S1 glycosylation, Figure S2 the Calu-3 SPQ reference) were not fetched; the 20% figure above is the body's own sentence about Figure S2, not a reading of it.",
+  "artifact_locality_note": "The artefact lives in the shared checkout's gitignored files/ tree, acquired on 2026-10-20 by the recipe recorded below; the digest reproduced on the acquiring call. Nothing is claimed from a surface not listed in source_artifacts."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID22938201_GonzalezHilarion2012_PMC_2026-10-20.xml",
+   "sha256": "cc770e0b9b3ddc8745ec5dab8e6318a0509ca54d94e2ee4685a01da39ee08b6f",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC3562214&rettype=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_jats",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "result_sha256": "cc770e0b9b3ddc8745ec5dab8e6318a0509ca54d94e2ee4685a01da39ee08b6f",
+    "notes": "Structured surface preferred over PDF (standing brief M1). User-Agent sent empty (policy `none`) per the find-fulltext note on PMC. 116,886 bytes. Supplementary Additional files 1-3 NOT fetched and declared as a reading debt in verbatim_locators.note."
+   }
+  }
+ ]
+}
