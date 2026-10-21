@@ -1,0 +1,300 @@
+{
+ "schema_version": 2,
+ "pmid": "39762914",
+ "doi": "10.1186/s13023-024-03495-1",
+ "pmcid": "PMC11702139",
+ "receipt": "FTR-20261021-39762914-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Protocol paper of a national academic multicentre trial in tuberous sclerosis (TSC1/TSC2); NOT WWOX EVIDENCE; no results."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "\"tuberous sclerosis\"[Title/Abstract] AND (sirolimus[Title/Abstract] OR \"mTOR inhibitor*\"[Title/Abstract]) AND (pre-emptive[Title/Abstract] OR preventive[Title/Abstract] OR presymptomatic[Title/Abstract])",
+    "count": 19,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "\"pre-emptive\"[Title/Abstract] AND \"tuberous sclerosis\"[Title/Abstract]",
+    "count": 6,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 36,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 39762914 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 36,
+   "references_screened": 36,
+   "references_with_doi": 36,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39762914_Driedger2025_PMC.xml",
+   "sha256": "fc7b8491bb125e0a2a550d5897a3e44a5630ec5f773491deca14be0aaf66c8e8",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML; body, tables cell-wise, figure legends.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11702139/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "fc7b8491bb125e0a2a550d5897a3e44a5630ec5f773491deca14be0aaf66c8e8"
+   }
+  },
+  {
+   "path": "files/supplement/PMID39762914_r2/PMC11702139.1.pdf",
+   "sha256": "129bf2e955c684ca983e13963491fbf6c099d6bae7d70f30fed5738f402e8ac3",
+   "kind": "article_binary",
+   "note": "PMC open-data bucket PDF.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11702139.1/PMC11702139.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID39762914_r2/13023_2024_3495_Fig1_HTML.jpg",
+   "sha256": "6474b2159e9c262816f220892915d5dd83f0b5ff5d64d62226becc0b84552976",
+   "kind": "figure",
+   "note": "Figure 1 (trial schematic), native JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11702139.1/13023_2024_3495_Fig1_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID39762914_r2/13023_2024_3495_MOESM1_ESM.pdf",
+   "sha256": "70bdec96ec7d90dfb2065f97501ca6d8179c499daba541e8136a46d409532438",
+   "kind": "supplement_binary",
+   "note": "Additional file 1: the full trial protocol, version 06 of 1 October 2024, 110 pages.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11702139.1/13023_2024_3495_MOESM1_ESM.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID39762914_r2/13023_2024_3495_MOESM1_ESM.txt",
+   "sha256": "be5622d2716bb416f5e6fae86bfc5ad98a680e8884a6916a6315743a8df1cdd6",
+   "kind": "supplement_text",
+   "note": "Text layer of the protocol by pdftotext -layout with form feeds replaced by newlines; sections 3.3-3.4 and 9.6-9.9 read, other sections not read.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftotext",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID39762914_r2/13023_2024_3495_MOESM1_ESM.pdf",
+    "extractor": {
+     "name": "pdftotext",
+     "version": "24.02.0",
+     "call": "pdftotext -layout <pdf> - | tr '\\\\f' '\\\\n' > <txt> (page-separator form feeds replaced by newlines; no other change)"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Trial design: two-arm randomised observer-blind phase IIb trial of pre-emptive treatment in children diagnosed under four months, with neuropsychological outcome as primary.",
+    "snippet": "The clinical trial is designed as a two-armed, randomized, observer-blind, controlled phase IIb clinical trial for children < 4 months of age at inclusion.",
+    "anchor": "Study design and methods",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39762914_Driedger2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The control group receives standard care only, with no placebo, on the advice of the national regulator to reduce burden on neonates.",
+    "snippet": "no placebo will be administered to the control group. This directive was aimed at reducing the study-associated burden by avoiding daily intake of sham medication and reducing the number of required laboratory examinations.",
+    "anchor": "Study design and methods",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39762914_Driedger2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Blinding is of the outcome assessor only: an external observer who knows nothing of treatment, and caregivers asked not to disclose their group.",
+    "snippet": "Neuropsychologic testing and scoring will be performed by a blinded external observer, not involved in other study procedures.",
+    "anchor": "Blinding",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39762914_Driedger2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Randomisation is 1:1 by block, stratified by age group at inclusion.",
+    "snippet": "randomization is stratified by age groups (0 to < 2 months vs. 2 to < 4 months).",
+    "anchor": "Randomization",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39762914_Driedger2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Exposure is pharmacokinetically guided to a trough-level target range, with a prespecified adjustment table.",
+    "snippet": "Sirolimus trough levels will be measured at each study visit and dose adjustments will be made to achieve serum target levels of 5–10 ng/ml.",
+    "anchor": "Administration of investigational medicinal product",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39762914_Driedger2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Primary endpoint: Bayley-III cognitive scale at 24 months, two-sided Mann-Whitney test, 60 randomised; a 15-point difference is judged relevant.",
+    "snippet": "an improvement of 15 points in the BSID-III cognitive scale at the age of 24 months (e.g. a score of 75 in the control group and a score of 90 in the treatment group) will be considered relevant for reducing neuropsychological impairment",
+    "anchor": "Endpoint measurement and statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39762914_Driedger2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Secondary endpoints are descriptive: adaptive behaviour, autism scale, checklists and seizures analysed by group and time point.",
+    "snippet": "the Vineland Adaptive Behavior Scales 3 (VABS-3) and Autism Diagnostic Observation Schedule 2 (ADOS-2) total scales as well as selected respective subscales will be analysed descriptively by group and time point",
+    "anchor": "Endpoint measurement and statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39762914_Driedger2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Background states controlled clinical trials of pre-emptive mTOR inhibition in infants under 2 years are lacking.",
+    "snippet": "Pre-emptive initiation of mTOR inhibitor treatment may mitigate TSC-related neuropsychologic deficits, but controlled clinical trials in infants under 2 years are lacking",
+    "anchor": "Background",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39762914_Driedger2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Timeline: recruitment began in Q1 2024 and the overall duration is expected to be 82 months; an initial safety analysis follows five treated patients.",
+    "snippet": "The overall duration of the clinical trial is expected to be 82 months. Recruitment of subjects started in Q1 2024.",
+    "anchor": "Status and timeline",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39762914_Driedger2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the trial could turn symptomatic management into a disease-modifying approach.",
+    "snippet": "this trial could fundamentally transform the therapeutic management of TSC-related neuropsychiatric manifestations from a symptomatic to a targeted disease-modifying approach.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39762914_Driedger2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Protocol: no interim analysis for efficacy or futility; a data safety board meets repeatedly.",
+    "snippet": "No interim analyses regarding efficacy or futility are planned",
+    "anchor": "Protocol 9.6",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39762914_r2/13023_2024_3495_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Protocol sample size: 60 randomised from 120 assessed assuming 50 percent willingness.",
+    "snippet": "To randomize 60 patients, 120 patients need to be assessed for eligibility assuming 50% willingness to participate in the trial.",
+    "anchor": "Protocol 9.9",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39762914_r2/13023_2024_3495_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Protocol power: more than 95 percent only under a standard deviation of 15; falls to about 62 percent at a standard deviation of 25.",
+    "snippet": "Assuming that 30 patients per group can be randomized, a difference of 15 in the cognitive scale of BSID-III",
+    "anchor": "Protocol 9.9",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39762914_r2/13023_2024_3495_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 1: schematic of screening, eligibility, 1:1 randomisation to standard care or standard care plus the drug, visits and assessments.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 flow chart: inclusion and exclusion criteria; Eligible? yes or no; Screening; Randomisation 1:1; control arm standard of care and intervention arm standard of care plus the study drug; study visits 1 to 12 plus end-of-trial visit; clinical assessments, neuropsychological evaluation at 12 and 24 months with BSID-III, ADOS, VABS, TAND and M-CHAT-R, laboratory examinations, safety assessments with PK sampling, and EEG and abdominal sonography.",
+    "anchor": "Figure 1",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39762914_r2/13023_2024_3495_Fig1_HTML.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC11702139/fullTextXML returned HTTP 200 with a JATS body on 2026-10-21; the declared article_text artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}

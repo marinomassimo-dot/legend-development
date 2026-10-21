@@ -1,0 +1,333 @@
+{
+ "schema_version": 2,
+ "pmid": "33180985",
+ "doi": "10.1002/ana.25956",
+ "pmcid": "PMC7898885",
+ "receipt": "FTR-20261021-33180985-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Multicentre EPISTOP consortium; a TSC (TSC1/TSC2) trial, NOT WWOX EVIDENCE. Used only as a design precedent for pre-symptomatic treatment."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "tuberous sclerosis[Title/Abstract] AND vigabatrin[Title/Abstract] AND (preventive[Title/Abstract] OR pre-symptomatic[Title/Abstract])",
+    "count": 24,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "EPISTOP[Title/Abstract]",
+    "count": 22,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 33,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 33180985 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 33,
+   "references_screened": 31,
+   "references_with_doi": 31,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID33180985_Kotulska2021_PMC.xml",
+   "sha256": "e833f387efc3a5ed767ad2250b9c8a06805f9be700a33dfebc63e4b7a5a4bd8f",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML; body, tables cell-wise, figure legends.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7898885/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "e833f387efc3a5ed767ad2250b9c8a06805f9be700a33dfebc63e4b7a5a4bd8f"
+   }
+  },
+  {
+   "path": "files/supplement/PMID33180985_r2/PMC7898885.1.pdf",
+   "sha256": "4ed8de9e70ab6d0a5e4875da53c863a37198c922995f370858929373e124c1b5",
+   "kind": "article_binary",
+   "note": "PMC open-data bucket PDF; source of the page renders.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7898885.1/PMC7898885.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/page_renders/PMID33180985/PMC7898885.1_p7-07.png",
+   "sha256": "cdc301fc4e361bb7ce1e1e83a33e9b2641c73eee4b17a82108f08e8515ef6fda",
+   "kind": "figure",
+   "note": "Page 7 of the PDF rendered at 400 dpi (Figure 2 is a vector-flagged page by paper_packet rank); read as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm page render",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID33180985_r2/PMC7898885.1.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "pdftoppm version 24.02.0",
+     "call": "pdftoppm -r 400 -f 7 -l 7 -png on the declared article_pdf"
+    }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID33180985/PMC7898885.1_p4-04.png",
+   "sha256": "734b84503073ef28ba98bc19c9ad368360024c8a925a48ba6a674924cc427f04",
+   "kind": "figure",
+   "note": "Page 4 of the PDF rendered at 300 dpi (Figure 1 flow chart).",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm page render",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID33180985_r2/PMC7898885.1.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "pdftoppm version 24.02.0",
+     "call": "pdftoppm -r 300 -f 4 -l 4 -png on the declared article_pdf"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The trial was randomised at some sites only: ethics boards refused randomisation at four sites, which formed a parallel open-label trial.",
+    "snippet": "We had intended to perform a randomized controlled trial (RCT) at all 10 enrollment sites. However, the RCT was not approved by ethics boards at 4 sites",
+    "anchor": "Methods, Study Design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33180985_Kotulska2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Treating physicians and caregivers were blinded to the EEG data that triggered preventive treatment.",
+    "snippet": "The treating physicians and subjects' caregivers were blinded to EEG data, and they did not know whether the treatment was randomly allocated after EA or started conventionally because of seizures captured on video‐EEG.",
+    "anchor": "Methods, Randomization and Blinding",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33180985_Kotulska2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The primary endpoint was a time-to-event count-type outcome: time from birth to the first clinical seizure.",
+    "snippet": "The primary endpoint was the time from birth to the first CS.",
+    "anchor": "Methods, Outcome Measures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33180985_Kotulska2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Secondary endpoints included instrument-based neurodevelopmental outcomes (Bayley III cognitive score under 70, ADOS-2) beside seizure counts.",
+    "snippet": "autistic features (according to ADOS‐2) and neurodevelopmental delay (BSID‐III cognitive score < 70)",
+    "anchor": "Methods, Outcome Measures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33180985_Kotulska2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Treatment was triggered by a surrogate (epileptiform EEG activity) defined by a rule, before any seizure.",
+    "snippet": "Preventive treatment was given when EA was found on EEG prior to seizures.",
+    "anchor": "Methods, Procedures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33180985_Kotulska2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The study was powered for a 50 percent improvement of the primary endpoint with about 100 infants.",
+    "snippet": "The study was designed to have 80% power to detect a 50% improvement in the primary study endpoint, assuming that 70% of patients would have EA before the onset of seizures and 100 would be enrolled.",
+    "anchor": "Methods, Statistical Analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33180985_Kotulska2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Infants who had a seizure before epileptiform activity were excluded from the primary and secondary analyses, so the analysed set is conditional on the surrogate appearing first.",
+    "snippet": "subjects who developed CS or ES before EA were not eligible for randomization and thus were excluded from analysis of the primary and secondary outcomes.",
+    "anchor": "Methods, Statistical Analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33180985_Kotulska2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Two interventions were delivered together in every infant: serial video-EEG surveillance and the drug at epileptiform onset.",
+    "snippet": "Our study included 2 interventions: frequent video‐EEG monitoring from the time of diagnosis of TSC in all patients, and preventive antiepileptic treatment at the onset of EA if this occurred before seizures.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33180985_Kotulska2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The headline time-to-seizure medians for patients who developed seizures are conditional on having an event (the abstract quotes these).",
+    "snippet": "for patients who developed seizures: 364 days, 95% CI = 223–535 vs 124 days, 95% CI = 33–149",
+    "anchor": "Results, Primary Outcome",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33180985_Kotulska2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Drug-resistant epilepsy at 2 years was significant in the randomised part only at p 0.047 and not in the open-label part.",
+    "snippet": "At the age of 2 years, the frequency of drug‐resistant epilepsy was significantly lower in patients receiving preventive treatment than conventional treatment in the RCT (31% vs 77%, OR = 0.15, 95% CI = 0.02–0.98, p = 0.047), trended to significance in the OLT (23% vs 50%, OR = 0.35, 95% CI = 0.04–2.45, p = 0.40)",
+    "anchor": "Results, Key Secondary Outcomes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33180985_Kotulska2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The neurodevelopmental endpoint did not differ significantly between arms.",
+    "snippet": "but the difference was not significant (see Table 3).",
+    "anchor": "Results, Key Secondary Outcomes (paragraph after Table 4)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33180985_Kotulska2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors name three reasons the developmental endpoint may have shown no difference, including short follow-up.",
+    "snippet": "This may be due to the small number of patients studied, follow‐up to only age 2 years, and/or the benefit of intensive clinical care and seizure monitoring for those on conventional treatment.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33180985_Kotulska2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors cannot exclude that disease processes before the surrogate-triggered treatment already shape neuropsychiatric outcome.",
+    "snippet": "It cannot be excluded, however, that the complex processes leading to epilepsy might contribute to neuropsychiatric disorders in TSC prior to the onset of treatment triggered by the epileptiform EEG.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33180985_Kotulska2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The surrogate trigger missed nearly a quarter of infants and is an imperfect predictor.",
+    "snippet": "Monthly video‐EEG monitoring was not sufficient to identify EA prior to subclinical or clinical seizures in 22 patients (23%).",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33180985_Kotulska2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Inter-rater reliability of the trigger: seven cases without consensus on epileptiform activity.",
+    "snippet": "in 7 cases (7.4%) there was no consensus on the diagnosis of epileptiform activity.",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33180985_Kotulska2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A prior pilot used a historical control group.",
+    "snippet": "showed that starting antiepileptic treatment when EA or ES were first detected improved epilepsy‐related outcomes at the age of 2 years compared to a historical control group for which treatment was begun after clinical seizures.",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33180985_Kotulska2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors claim a possible change of the natural history of the epilepsy, stated with may.",
+    "snippet": "In conclusion, this EPISTOP study has shown that it may be possible to change the natural history of severe infantile epilepsy through early intervention with antiepileptic therapy.",
+    "anchor": "Discussion, conclusion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33180985_Kotulska2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Text reports the randomised-group seizure-free proportions with p 0.011, but the randomised panel prints log-rank p 0.009 and the open-label panel prints 0.011.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2, left panel \"Randomized group\": preventive curve plateaus at 46 percent and conventional at 15 percent, text in the panel \"Log-rank p = 0.009\"; right panel \"Observational group\": plateaus 50 percent and 17 percent, \"Log-rank p = 0.011\". Censoring ticks cluster on both plateaus near day 720 and are not steps; the last step of the preventive randomised curve is at about day 590.",
+    "anchor": "Figure 2, both panels, page render at 400 dpi",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID33180985/PMC7898885.1_p7-07.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Flow chart: 94 included, 22 had a seizure before randomisation (14 clinical and 8 electrographic), 54 eligible split 27 randomised and 27 open-label.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 flow chart: 101 assessed, 7 excluded for misdiagnosis, 94 included; EEG surveillance branches 7 never had EA or seizures, 22 had seizures before randomization, 54 eligible, 7 discordant EEG, 4 dropped out; 27 randomised (13 preventive, 14 conventional, 1 dropped out) and 27 open-label (12 and 15, 3 dropped out).",
+    "anchor": "Figure 1, page render at 300 dpi",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID33180985/PMC7898885.1_p4-04.png",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC7898885/fullTextXML returned HTTP 200 with a JATS body on 2026-10-21; the declared article_text artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}

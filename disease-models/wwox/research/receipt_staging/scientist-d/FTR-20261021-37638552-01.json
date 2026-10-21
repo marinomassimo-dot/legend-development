@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261021-37638552-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "37638552",
+  "doi": "10.1002/ana.26778"
+ },
+ "event_at": "2026-10-21T22:37:56Z",
+ "analysis_at": "2026-10-21T00:00:00Z",
+ "analysis_time_precision": "date_only",
+ "workflow": "scientist-d, ten-hour repurposing batch, task REPURP-10H-R4-D-20261021, branch task/repurp-r4-d; context_policy QUESTION_DRIVEN. Route: Europe PMC REST fullTextXML into the shared files/fulltext/; JATS body and tables read section by section from a text rendering; No figure was opened: the four figure files and the supplement are not in the PMC open-data bucket (HTTP 404 on the named objects), the Europe PMC image route returned a bot-challenge page (HTTP 403) and the NCBI route redirected; no access control was circumvented. Tables 1-4 and the text were read in full. Locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts. Receipt staged for the integrator, not appended.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID37638552_Bebin2023_PMC_r2.xml",
+ "source_fingerprint": "c98f3b0ce3b9a5f104b0b8608cb3199ab5f5e49539fc31495003a249d3b84cc8",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "unavailable",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "unavailable"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID37638552.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "JATS text rendering of the author manuscript read in full including Tables 1-4; figures (4) and the supplementary file not obtainable by a lawful route and declared unavailable."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

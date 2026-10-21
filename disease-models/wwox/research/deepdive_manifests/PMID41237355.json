@@ -1,0 +1,337 @@
+{
+ "schema_version": 2,
+ "pmid": "41237355",
+ "doi": "10.1212/WNL.0000000000214388",
+ "pmcid": "PMC12622971",
+ "receipt": "FTR-20261021-41237355-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Sponsor-run multicentre observational study (the sponsor is a developer of a gene-directed therapy for the same condition; eight participants transferred to that sponsor's trial); Dravet syndrome, SCN1A haploinsufficiency class; NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "BUTTERFLY[Title/Abstract] AND Dravet[Title/Abstract]",
+    "count": 3,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "Dravet[Title/Abstract] AND \"natural history\"[Title/Abstract] AND (Vineland[Title/Abstract] OR \"growth scale\"[Title/Abstract])",
+    "count": 6,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 32,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41237355 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 32,
+   "references_screened": 27,
+   "references_with_doi": 27,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 5
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41237355_Sullivan2025_PMC_r2.xml",
+   "sha256": "b83971979e38b7960c6b40b677c1c4345d31a44631e412005ae0b2076574c08c",
+   "kind": "article_text",
+   "note": "NCBI efetch JATS (via pmc_bucket_fetch.py).",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC12622971&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "b83971979e38b7960c6b40b677c1c4345d31a44631e412005ae0b2076574c08c"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41237355_r2/PMC12622971.1.pdf",
+   "sha256": "644b96ec8e735aa62a331f82bfdbc66ba98745ca09aad1ef35295eed63631ff8",
+   "kind": "article_binary",
+   "note": "PMC open-data bucket PDF.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12622971.1/PMC12622971.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID41237355_r2/WNL-2024-107323f1.jpg",
+   "sha256": "211a072f6e649f7bb41e7aacbeeb07102907e1bf05561d75c5d8fdfbbc334713",
+   "kind": "figure",
+   "note": "Figure 1 (patient disposition), native JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12622971.1/WNL-2024-107323f1.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID41237355_r2/WNL-2024-107323f2.jpg",
+   "sha256": "8d4e39a1abfd3536783b5b55c885d08000cb83ff610667e1f8bbb04816cc2b52",
+   "kind": "figure",
+   "note": "Figure 2 (Vineland-3 trajectories against population norms), native JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12622971.1/WNL-2024-107323f2.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID41237355_r2/WNL-2024-107323f3.jpg",
+   "sha256": "b70606343ffa0da440d3a9574c031898b1244fd2bb23503e6599997f15519f9b",
+   "kind": "figure",
+   "note": "Figure 3 (BSID-III trajectories against population norms), native JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12622971.1/WNL-2024-107323f3.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Design: multicentre prospective observational study of 36 patients aged 2 to 18 with six visits over 24 months, sized for exploratory and descriptive results.",
+    "snippet": "The number of patients was sufficiently sized to provide exploratory and descriptive results.",
+    "anchor": "Methods, Study design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41237355_Sullivan2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Vineland and Bayley raw scores were converted to growth scale values so that change over time can be measured on an equal-interval scale.",
+    "snippet": "Raw scores from the Vineland-3 were converted to growth scale values (GSVs), which are reflective of the patient's absolute level of performance on an equal interval scale and are useful for measuring change over time.",
+    "anchor": "Methods, Primary outcome measures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41237355_Sullivan2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Bayley scale was used outside its intended age range, chosen by chronological age and baseline test performance.",
+    "snippet": "Although the BSID-III is intended for use in patients up to the age of 42 months, in BUTTERFLY it was administered based on the patient's chronological age and baseline test performance",
+    "anchor": "Methods, Primary outcome measures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41237355_Sullivan2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Disease progression was modelled with repeated-measures mixed models using all patients with baseline and one later assessment, assuming data missing at random.",
+    "snippet": "Patients were included in disease progression models if they completed a baseline assessment and at least 1 postbaseline assessment.",
+    "anchor": "Methods, Disease progression modeling",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41237355_Sullivan2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Of 36 enrolled, 21 completed; 15 withdrew, 8 of them to a sponsor phase 1/2a trial of a gene-directed therapy.",
+    "snippet": "Overall, 21 patients completed the study, while 15 patients withdrew before end of study (noncompleters) (Figure 1).",
+    "anchor": "Results, Patient disposition",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41237355_Sullivan2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Eight participants left the natural history study to join the sponsor interventional trial.",
+    "snippet": "including 8 patients who transferred to the MONARCH phase 1/2a study (NCT04442295).",
+    "anchor": "Results, Patient disposition",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41237355_Sullivan2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Only two of six modelled Vineland subdomains changed significantly over 24 months: receptive communication and coping skills.",
+    "snippet": "Disease progression modeling performed using individual subdomain GSVs indicated a statistically significant improvement in Receptive Communication (+7.24; 95% CI 1.30–13.19; p = 0.02) and Coping Skills (+4.61; 95% CI 1.14–8.08; p = 0.01) through Month 24",
+    "anchor": "Results, Vineland-3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41237355_Sullivan2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The receptive communication gain was about three months of age-equivalent over 24 months.",
+    "snippet": "The estimated gain in age-equivalence over 24 months was 3 months for Receptive Communication.",
+    "anchor": "Results, Vineland-3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41237355_Sullivan2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Baseline score was a positive predictor of change; baseline seizure frequency was not a significant covariate for Vineland subdomains.",
+    "snippet": "Baseline seizure frequency was not a significant covariate across any of the analyzed Vineland-3 subdomains.",
+    "anchor": "Results, Vineland-3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41237355_Sullivan2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Bayley subtests showed no significant change and very wide intervals with 10 to 13 patients.",
+    "snippet": "Modeling indicated lack of statistically significant changes across all BSID-III subtests through Month 24",
+    "anchor": "Results, BSID-III",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41237355_Sullivan2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Convulsive seizure frequency did not change significantly over 24 months despite optimisation of standard care.",
+    "snippet": "Disease progression modeling indicated no significant change in convulsive seizure frequency through Month 24 in BUTTERFLY patients (+10.61; 95% CI −32.97 to 54.19; p = 0.63)",
+    "anchor": "Results, Convulsive seizure frequency",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41237355_Sullivan2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The caregiver global impression showed a change at p 0.04 while the clinician impression did not (p 0.30); the baseline seizure frequency predicted less improvement.",
+    "snippet": "Modeling for the CaGI-C, but not CGI-C, indicated a statistically significant change (p = 0.04 for CaGI-C; p = 0.30 for CGI-C) through Month 24.",
+    "anchor": "Results, CGI-C and CaGI-C",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41237355_Sullivan2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state a general plateau at about 2 years of developmental age despite standard care.",
+    "snippet": "showed a general plateau at a developmental age of approximately 2 years despite the use of recommended SOC ASMs",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41237355_Sullivan2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "About two thirds were at or below floor on one Vineland subdomain by age-equivalent at baseline.",
+    "snippet": "baseline data indicated that two-thirds of the patients scored at or below floor in the Coping Skills subdomain based on age-equivalent values.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41237355_Sullivan2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Limitations include substantial attrition, no enrolment guidelines (possible selection bias), recall bias, assessments outside validated age ranges and no neurotypical control group.",
+    "snippet": "The lack of a dedicated control group of neurotypical peers makes contextualizing the observed trajectories more challenging.",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41237355_Sullivan2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state future interventional studies must evaluate whether patients can regain their developmental trajectory.",
+    "snippet": "Future interventional studies will be crucial in evaluating the ability of patients across the age range to regain their developmental trajectory with targeted interventions.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41237355_Sullivan2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 2: individual patient GSV lines scatter by about 10 to 30 points between visits around flat or slowly rising mean progressions, with the dashed population-norm line constructed from the manual starting at the cohort mean age equivalent.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 six panels (receptive and expressive communication, gross and fine motor, coping and personal skills): thin grey lines for individual patients with visit-to-visit wiggles of several to a few tens of GSV points, a solid mean line nearly flat or slowly rising (gross motor falling) and a blue dashed population-norm line rising more steeply from the cohort baseline age-equivalent (19, 22, 23, 28, 24 and 28 months).",
+    "anchor": "Figure 2",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41237355_r2/WNL-2024-107323f2.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 1: 40 consented, 4 not enrolled, 36 enrolled with 12 per age group; 21 completed (8, 8 and 5 by age group) and 15 withdrew, 14 for other reasons including 8 transfers.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 flow chart: consented 40; screen failures 2; early discontinuation 2; enrolled 36 (12 per age group); completed 21 (58.3 percent: 8 aged 2-7, 8 aged 8-12, 5 aged 13-18); withdrawn 15 (41.7 percent): intercurrent illness 1, other 14 including 8 transferred to MONARCH.",
+    "anchor": "Figure 1",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41237355_r2/WNL-2024-107323f1.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 3: Bayley growth score equivalents trace a flat mean line against a rising population-norm line, with very few individual points per panel.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3 five panels (cognitive, receptive and expressive communication, gross and fine motor): solid mean line flat or declining (receptive and fine motor falling) with sparse individual points and wide scatter; blue dashed population line rising from the cohort baseline age-equivalent (16 to 20 months).",
+    "anchor": "Figure 3",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41237355_r2/WNL-2024-107323f3.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "NCBI efetch (pmc_bucket_fetch.py) returned a full JATS body on 2026-10-21; this is the declared article_text artefact.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}

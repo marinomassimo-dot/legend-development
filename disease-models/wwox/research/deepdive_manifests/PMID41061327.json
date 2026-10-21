@@ -1,0 +1,241 @@
+{
+ "schema_version": 2,
+ "pmid": "41061327",
+ "doi": "10.1016/j.pediatrneurol.2025.09.006",
+ "pmcid": "PMC12554379",
+ "receipt": "FTR-20261021-41061327-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Multicentre US academic consortium; 36-month follow-up of a placebo-controlled trial of pre-symptomatic treatment in tuberous sclerosis; NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "PREVeNT[Title/Abstract] AND (neurodevelopmental[Title/Abstract] OR autism[Title/Abstract])",
+    "count": 2089,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "vigabatrin[Title/Abstract] AND \"tuberous sclerosis\"[Title/Abstract] AND (36 months[Title/Abstract] OR autism[Title/Abstract])",
+    "count": 23,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 27,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41061327 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 27,
+   "references_screened": 21,
+   "references_with_doi": 21,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 6
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41061327_OKelley2025_PMC_r2.xml",
+   "sha256": "0c45146bf849fc98a6cb74d291623331f58584fce0c47cb97f6f529224d5173c",
+   "kind": "article_text",
+   "note": "NCBI efetch JATS of the author manuscript (not in the PMC open-data bucket).",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC12554379&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "0c45146bf849fc98a6cb74d291623331f58584fce0c47cb97f6f529224d5173c"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Design follows the primary trial; assessors blinded, developmental assessments at 6 to 36 months by Bayley-III and Vineland-II.",
+    "snippet": "Developmental assessments were obtained or supervised by psychologists who were blinded to participant treatment assignment, seizure control, and concomitant medications.",
+    "anchor": "Methods, Study design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41061327_OKelley2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The autism assessment battery was replaced during the pandemic: only three participants had the original battery at 36 months.",
+    "snippet": "Only three of the participants completed the 36-month visit utilizing the originally planned autism assessment battery pre-pandemic.",
+    "anchor": "Results, Autism symptoms",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41061327_OKelley2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The primary-style comparison at 36 months: no difference between early and delayed drug groups on cognitive scores.",
+    "snippet": "No difference in the vigabatrin versus delayed group was seen at 36 months (see Table 3).",
+    "anchor": "Results, Cognitive function",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41061327_OKelley2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Cognitive scores declined between 12 and 24 months in all groups and then stayed stable.",
+    "snippet": "Cognitive scores declined from 12 to 24 months but then remained stable between 24 and 36 months.",
+    "anchor": "Results, Cognitive function",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41061327_OKelley2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The group without seizures scored higher on every developmental measure.",
+    "snippet": "For all developmental measures, those in the watchful waiting group (i.e., never developed seizures) exhibited higher scores compared to the other cohorts.",
+    "anchor": "Results, Adaptive function",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41061327_OKelley2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No participant without epilepsy was diagnosed with autism; 31 percent overall were rated as having it.",
+    "snippet": "No participants without epilepsy were diagnosed with ASD.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41061327_OKelley2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Multiple tests were run with no multiplicity correction and the authors caution against definitive statistical statements.",
+    "snippet": "All statistical hypotheses were 2-sided with significance evaluated at an alpha level of 0.05 with no adjustments to multiple comparisons.",
+    "anchor": "Statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41061327_OKelley2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 3: the multivariate test of the adaptive subdomains at 36 months gives p 0.0495, while the text and conclusion state no significant differences.",
+    "snippet": "24 months (n=53) |  | 0.4888 36 months (n=49) |  | 0.0495",
+    "anchor": "Table 3, Vineland-II multivariate test",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41061327_OKelley2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 3: at 36 months the drug-minus-placebo difference was minus 4.33 on cognitive and minus 6.77 on adaptive composites (p 0.27 and 0.08).",
+    "snippet": "36 months of age (n=46) | −4.33 (Vigabatrin - placebo) | 0.2695",
+    "anchor": "Table 3, Bayley-III cognitive row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41061327_OKelley2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The trial participation itself may contribute to outcomes, independent of drug.",
+    "snippet": "patients’ participation in the trial itself may contribute to developmental outcomes in a manner that is not impacted by pharmacological treatment of seizures",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41061327_OKelley2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the median 44-day difference between groups and short time between treatments may explain the null result.",
+    "snippet": "Notably, the difference between placebo and treatment groups was a median of 44 days, and the short duration between time of treatment for both the treatment group and placebo group may be an additional factor in the lack of differences in outcomes.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41061327_OKelley2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state outcomes are indirectly impacted by study design itself, since closely monitored cohorts benefit from earlier diagnosis and referral.",
+    "snippet": "the outcomes of TSC are indirectly impacted by the study designs themselves, and each later cohort benefits from the clinical and research experiences of previous cohorts.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41061327_OKelley2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Attrition: participants who did not finish the 36-month visits were those less affected by the disease.",
+    "snippet": "participants who did not complete the final assessments were less impacted by TSC at 24 months, characterized as having no seizures or controlled seizures",
+    "anchor": "Limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41061327_OKelley2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The conclusion attributes the null result to trial design, genotype, close monitoring and the pandemic.",
+    "snippet": "This is likely due to multiple factors including trial design, differences in underlying genotype, close monitoring of participants, and impact of the COVID-19 pandemic.",
+    "anchor": "Conclusion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41061327_OKelley2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "NCBI efetch (pmc_bucket_fetch.py) returned a full JATS body on 2026-10-21; the PMC open-data bucket held no object for this record, so figures could not be fetched.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}

@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261021-42481851-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "42481851",
+  "doi": "10.1038/s41591-026-04527-y"
+ },
+ "event_at": "2026-10-21T22:27:09Z",
+ "analysis_at": "2026-10-21T00:00:00Z",
+ "analysis_time_precision": "date_only",
+ "workflow": "scientist-d, ten-hour repurposing batch, task REPURP-10H-R4-D-20261021, branch task/repurp-r4-d; context_policy QUESTION_DRIVEN. Route: Europe PMC REST fullTextXML into the shared files/fulltext/; JATS body and tables read section by section from a text rendering; Main Figures 1-4 opened as 300 dpi page renders (the plots are vector on those pages); the Extended Data figures and the reporting summary were not opened, so supplementary is declared captions_only and depth partial. Locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts. Receipt staged for the integrator, not appended.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID42481851_KimMcManus2026_PMC.xml",
+ "source_fingerprint": "eda796130cebea1ceb25e572b9a5ba7a9a6682d995d97e680b7105aad70e1005",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "captions_only"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42481851.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "JATS text rendering read in full including Tables 1-2; main Figures 1-4 inspected as images; Extended Data Figures 1-4 and the Nature reporting summary not read."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261021-42446932-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "42446932",
+  "doi": "10.1002/epi.70374"
+ },
+ "event_at": "2026-10-21T22:28:50Z",
+ "analysis_at": "2026-10-21T00:00:00Z",
+ "analysis_time_precision": "date_only",
+ "workflow": "scientist-d, ten-hour repurposing batch, task REPURP-10H-R4-D-20261021, branch task/repurp-r4-d; context_policy QUESTION_DRIVEN. Route: Europe PMC REST fullTextXML into the shared files/fulltext/; JATS body and tables read section by section from a text rendering; Figures 1-4 opened as the embedded 300 ppi rasters of PDF pages 4, 8, 9 and 10; the supplement docx was read as text (Table S1) but its Figure S1 EMF images were not opened. Locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts. Receipt staged for the integrator, not appended.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID42446932_McKee2026_PMC.xml",
+ "source_fingerprint": "f1bbfd41e7f755bf8b21010caf125e78b66a1304b8e6828d422926a644d9abe0",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "captions_only"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42446932.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "JATS text rendering read in full including Tables 1-2; Figures 1-4 inspected as images; supplementary Table S1 read; supplementary Figure S1 (EMF) not opened, so supplementary is declared captions_only and depth partial."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

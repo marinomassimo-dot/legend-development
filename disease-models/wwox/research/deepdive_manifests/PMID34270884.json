@@ -1,0 +1,287 @@
+{
+ "schema_version": 2,
+ "pmid": "34270884",
+ "doi": "10.1002/epi4.12526",
+ "pmcid": "PMC8408600",
+ "receipt": "FTR-20261021-34270884-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Workshop summary report (2018 NINDS workshop) by clinical and regulatory-science authors that include investigators of the trial it summarises; a consensus-style review, not primary evidence. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "antiepileptogenesis[Title/Abstract] AND \"disease modification\"[Title/Abstract]",
+    "count": 22,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "\"disease modification\"[Title/Abstract] AND epilepsy[Title/Abstract] AND (regulatory[Title/Abstract] OR labeling[Title/Abstract])",
+    "count": 9,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 53,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 34270884 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 53,
+   "references_screened": 46,
+   "references_with_doi": 46,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 7
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID34270884_French2021_PMC.xml",
+   "sha256": "51e644230c747c8f64a5ba85cbecb29ae575a1ee1cd19b7ef9924c928e431a87",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML; body, tables cell-wise, figure legends.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8408600/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "51e644230c747c8f64a5ba85cbecb29ae575a1ee1cd19b7ef9924c928e431a87"
+   }
+  },
+  {
+   "path": "files/supplement/PMID34270884_r2/PMC8408600.1.pdf",
+   "sha256": "0ffbe656325ad315150f4d92c3b379e71e03cb6b1737d9f69d3213978ad02d3c",
+   "kind": "article_binary",
+   "note": "PMC open-data bucket PDF; declared for completeness, the article carries no figure or table.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8408600.1/PMC8408600.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Definition used: epilepsy disease modification prevents or retards progression, or lessens or eliminates the manifestations once established.",
+    "snippet": "Epilepsy disease modification is a therapy that will prevent or retard progression in the seriousness of epilepsy (particularly relevant for known progressive epilepsy syndromes), or lessen or eliminate the manifestations of epilepsy, once it has been established.",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34270884_French2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "By this definition, preventing a comorbidity without an effect on seizures would not be called epilepsy disease modification.",
+    "snippet": "A disease‐modifying intervention could also prevent any of these comorbidities, although it would not be called epilepsy disease modification unless it also impacted seizures.",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34270884_French2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Standard add-on placebo-controlled trials followed by open-label extension cannot show disease modification.",
+    "snippet": "trial designs currently used for regulatory approval for antiseizure medicines (randomized placebo‐controlled add‐on trials, followed by open‐label extension studies) would not be able to demonstrate disease modification.",
+    "anchor": "Disease modification",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34270884_French2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Current regulatory expectation is an objective clinical endpoint such as seizure incidence.",
+    "snippet": "Traditional requirements by the US FDA are for objective clinical endpoints such as incidence of seizures.",
+    "anchor": "Antiepileptogenesis, Timing and duration of treatment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34270884_French2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A validated biomarker could later replace the clinical event as the outcome.",
+    "snippet": "Once validated biomarkers become available, the objective outcome event may be a reduction in a sensitive epilepsy biomarker rather than the occurrence of PTE.",
+    "anchor": "Antiepileptogenesis, Timing and duration of treatment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34270884_French2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Prevention trials with standard antiseizure drugs failed partly because patients at different risk were pooled.",
+    "snippet": "The failure of these studies may at least partly be explained by inclusion of patients at different risk of epilepsy, highlighting the need for reliable and clinically applicable biomarkers of epileptogenesis.",
+    "anchor": "Antiepileptogenesis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34270884_French2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Without predictive biomarkers, sample size and follow-up make prevention trials too expensive.",
+    "snippet": "Even with moderate‐to‐severe TBI, clinical trials are likely to be too expensive to consider without predictive biomarkers",
+    "anchor": "Antiepileptogenesis, Biomarkers",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34270884_French2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A biomarker must reflect the disease process rather than injury or recovery.",
+    "snippet": "The biomarkers need to properly reflect the epileptogenesis process rather than the injury or recovery process.",
+    "anchor": "Antiepileptogenesis, Biomarkers",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34270884_French2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The sketched disease-modification trial keeps the agent off during outcome assessment so that a symptomatic effect is not counted, and uses each patient as own control.",
+    "snippet": "(Treatment with investigational agent should not be continued during the outcome assessment, particularly if the intervention also had the potential to have antiseizure properties).",
+    "anchor": "Disease modification in adults",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34270884_French2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The sketched design is paired: a baseline period, treatment, then a post-treatment outcome period with a patient as own control.",
+    "snippet": "A paired design with each patient serving as his or her own control could be used.",
+    "anchor": "Disease modification in adults",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34270884_French2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Drug dose and schedule should rest on evidence of target engagement by a biomarker.",
+    "snippet": "Optimally, drug dose and schedule would be based upon evidence of target engagement using an appropriate biomarker.",
+    "anchor": "Disease modification in adults",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34270884_French2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Natural history of the slope of worsening and of spontaneous remission is needed for disease-modification trials.",
+    "snippet": "it will be vital to understand the slope of worsening, if any, and the likelihood of spontaneous remission.",
+    "anchor": "Potential major advances",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34270884_French2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A precedent for accepted disability scales: most multiple sclerosis trials use a community-accepted progression scale.",
+    "snippet": "notably most MS trials use a community recognized and commonly accepted disability progression scale.",
+    "anchor": "Regulatory considerations and labeling",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34270884_French2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Disease-modification claims require appropriate regulatory-acceptable designs and relevant outcome measures.",
+    "snippet": "disease modification claims for epilepsy therapies will require substantial evidence for these claims established by appropriate and regulatory acceptable clinical trial designs with relevant outcomes measures.",
+    "anchor": "Regulatory considerations and labeling",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34270884_French2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review states that no currently available epilepsy drug is disease-modifying, before or after seizures.",
+    "snippet": "Currently available pharmacological treatments of epilepsy are only seizure suppressing, and none is disease‐modifying or antiepileptogenic, whether introduced before or after clinical seizures.",
+    "anchor": "Disease modification",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34270884_French2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review itself describes the EPISTOP result as lower risk of seizures, drug resistance and spasms, not as a development result.",
+    "snippet": "Results of the EPISTOP study have been recently published documenting lower risk of clinical seizures (odds ratio [OR] = 0.21, P = .032), drug‐resistant epilepsy (OR = 0.23, P = .022), and infantile spasms (OR = 0, P < .001) in those treated with vigabatrin prior to overt seizure occurrence.",
+    "anchor": "Disease modification in children, TSC",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34270884_French2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors assert, without data here, that lessons from the TSC trials are likely to apply to other epileptic encephalopathies.",
+    "snippet": "the lessons learned from TSC are likely to be applicable in other epileptic encephalopathies.",
+    "anchor": "Disease modification in children, TSC",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34270884_French2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Interictal epileptiform discharges predicted epilepsy in 77 percent of seizure-naive TSC infants in one cited study.",
+    "snippet": "interictal epileptiform discharges identified impending epilepsy in the majority (77%) of seizure‐naïve infants with TSC.",
+    "anchor": "Disease modification in children, TSC",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34270884_French2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC8408600/fullTextXML returned HTTP 200 with a JATS body on 2026-10-21; the declared article_text artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}

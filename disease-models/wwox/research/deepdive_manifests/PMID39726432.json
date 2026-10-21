@@ -1,0 +1,348 @@
+{
+ "schema_version": 2,
+ "pmid": "39726432",
+ "doi": "10.1002/cns3.20070",
+ "pmcid": "PMC11670424",
+ "receipt": "FTR-20261021-39726432-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Academic phase 1 trial with industry-supplied drug formulation in five infants with tuberous sclerosis; funded by a patient foundation, the regulator orphan-products office and the supplier; NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "sirolimus[Title/Abstract] AND \"tuberous sclerosis\"[Title/Abstract] AND (infant*[Title/Abstract] OR preventive[Title/Abstract])",
+    "count": 32,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "\"STOP2A\"[Title/Abstract] OR \"TSC-STEPS\"[Title/Abstract]",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 75,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 39726432 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 75,
+   "references_screened": 69,
+   "references_with_doi": 69,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 6
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39726432_Capal2024_PMC.xml",
+   "sha256": "cf4372f98002fc946f2afd92b4221c92da935f6156208928e18c08bbc33000ee",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML; body, tables cell-wise, figure legends.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11670424/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "cf4372f98002fc946f2afd92b4221c92da935f6156208928e18c08bbc33000ee"
+   }
+  },
+  {
+   "path": "files/supplement/PMID39726432_r2/PMC11670424.1.pdf",
+   "sha256": "9310e449c56fb806cb3de2c6d12d46429b2597f068802e1d465d29e3f6713be7",
+   "kind": "article_binary",
+   "note": "PMC open-data bucket PDF (author manuscript).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11670424.1/PMC11670424.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID39726432_r2/nihms-2024698-f0001.jpg",
+   "sha256": "ad7338506dba9f6044d3ef4cccc73d76f16cb33c0b40d868a9e858b0582ba779",
+   "kind": "figure",
+   "note": "Figure 1 (predicted versus measured sirolimus levels), native JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11670424.1/nihms-2024698-f0001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID39726432_r2/nihms-2024698-f0002.jpg",
+   "sha256": "46afbd4656f2209b745b3b135e4cb9ce9e1e043c122c59d7dfb7768d74464c0e",
+   "kind": "figure",
+   "note": "Figure 2 (precision dosing recommendations), native JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11670424.1/nihms-2024698-f0002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID39726432_r2/NIHMS2024698-supplement-Supplementary_Tables.docx",
+   "sha256": "065c5464349e32f80795611508a104bb469c85add07b7ec4744b22889de0ee8e",
+   "kind": "supplement_binary",
+   "note": "Supporting Information: Tables S1-S3 (docx).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11670424.1/NIHMS2024698-supplement-Supplementary_Tables.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID39726432_r2/NIHMS2024698-supplement-Supplementary_Tables.txt",
+   "sha256": "26331142838d739be1345959994651a906da370a5e295d6a97f868e953cdc189",
+   "kind": "supplement_text",
+   "note": "Text of Tables S1-S3 by docx_to_text.py.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "docx_to_text",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID39726432_r2/NIHMS2024698-supplement-Supplementary_Tables.docx",
+    "extractor": {
+     "name": "framework/scripts/docx_to_text.py",
+     "version": "repository main 5dd4283f",
+     "call": "python3 framework/scripts/docx_to_text.py --out <txt> <docx>"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The study is a five-infant open-label phase 1 trial whose primary endpoint is safety; seizure and development outcomes are secondary and descriptive.",
+    "snippet": "The primary endpoint was safety of TAVT‐18 at 12 months.",
+    "anchor": "Methods, Study endpoints",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39726432_Capal2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The study was not powered for comparative analysis and was meant to inform safety and dosing for a larger randomised trial.",
+    "snippet": "This study was not powered for comparative analysis, as its purpose was to inform potential safety concerns and optimize sirolimus dosing for the larger, follow‐up randomized, placebo‐controlled clinical trial that is now underway (TSC‐STEPS).",
+    "anchor": "Methods, Statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39726432_Capal2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The original plan of six infants and a second randomised stage was changed after funding and drug-supply changes; five infants were enrolled.",
+    "snippet": "During STOP2A, new funding and a change in sirolimus supply required separating the second‐stage trial from STOP2A.",
+    "anchor": "Methods, Subject recruitment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39726432_Capal2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Efficacy was measured as time to seizure onset, age at onset, share with spasms and seizure frequency at 12 and 24 months.",
+    "snippet": "Efficacy was measured as the time to seizure onset after initiating treatment with sirolimus, as well as determination of infant age at time of seizure onset, percentage of infants with infantile spasms, and seizure frequency at the end of treatment (12 months) and final assessment (24 months).",
+    "anchor": "Methods, Study endpoints",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39726432_Capal2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Three of the five infants had epileptiform activity on EEG before treatment; none had seizures.",
+    "snippet": "Three of the five had epileptiform discharges detected on EEG prior to starting treatment with TAVT‐18. None had electrographic or electroclinical seizures at baseline.",
+    "anchor": "Results, Patient characteristics",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39726432_Capal2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Exposure was guided by a predictive model and drug blood levels to a target trough range, with out-of-range values explained by held doses or a premature switch.",
+    "snippet": "Overall, all but one out‐of‐range trough level could be explained clinically.",
+    "anchor": "Results, Precision dosing",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39726432_Capal2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The first measured troughs after the initial dose were below target in all infants; target range was reached for all by day 14.",
+    "snippet": "measured trough levels 24 h after treatment initiation in all infants were below target, ranging from 1.2 to 1.9 ng/mL (Figure 1).",
+    "anchor": "Results, Precision dosing",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39726432_Capal2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Safety: 92 adverse events, 34 related, 2 grade 3 (lipid), none life-threatening; 7.4 percent of doses held for an adverse event.",
+    "snippet": "In total there were 92 AEs, with 34 being possibly, probably, or definitely related to treatment (Table 2).",
+    "anchor": "Results, Safety profile",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39726432_Capal2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Two infants developed seizures in the first year and a third between 12 and 24 months; the two without seizures were the two with a normal baseline EEG.",
+    "snippet": "The remaining two infants never developed any seizures through 24 months of age; interestingly, these same infants were the only ones with normal EEG prior to initiating treatment with TAVT‐18.",
+    "anchor": "Results, Seizure and developmental outcomes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39726432_Capal2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 3: age at first seizure 319, 592 and 88 days with 178, 511 and 26 days of prior treatment; the third infant had spasms and focal seizures.",
+    "snippet": "Duration of sirolimus treatment prior to 1st seizure (days) | ‐‐ | 178 | 511 | ‐‐ | 26",
+    "anchor": "Table 3",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID39726432_Capal2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The efficacy discussion compares 2 of 5 with seizures in the first year against a historical 55 percent and notes it was not powered.",
+    "snippet": "Only two of the five infants (40%) developed seizures in the first year compared with a historical prevalence of seizures by age 12 months of 55% in TSC.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39726432_Capal2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Development: none of the five scored below 70 on composite cognitive or language scores at 24 months, compared with 45 and 38 percent in an external cohort; one infant of five had autism-range findings.",
+    "snippet": "with none of the five infants having composite cognitive and language scores <70 on the Bayley‐4 or PLS‐5 at 24 months, compared with rates of 45% and 38%, respectively, in the TACERN cohort.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39726432_Capal2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the PK-PD relation of the drug in TSC has never been verified.",
+    "snippet": "The assumption is that PK/PD characteristics for sirolimus in TSC are the same, although this has never been verified.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39726432_Capal2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors conclude the early effects are promising and call for larger trials.",
+    "snippet": "Effects of sirolimus on epilepsy prevention and cognitive/neurodevelopmental outcomes when initiated as early in life as possible, before the onset of EEG abnormalities and clinical seizures, is promising and supports the need for larger clinical trials to confirm safety and efficacy of sirolimus in infants with TSC.",
+    "anchor": "Conclusion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39726432_Capal2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplement Table S3: some 24-month developmental scores are missing for individual infants (cognitive for subject 004, language and motor for subjects 003 and 004).",
+    "snippet": "Cognitive Domain | 12 months | 95 | 90 | 110 | 85 | 70",
+    "anchor": "Supplementary Table S3",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39726432_r2/NIHMS2024698-supplement-Supplementary_Tables.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplement Table S3: the infant with seizures at 88 days (subject 005) had autism-spectrum clinical diagnosis at 24 months and the lowest adaptive scores.",
+    "snippet": "Clinical Diagnosis | 24 months | Not Autism | Not Autism | Not Autism | Not Autism | Autism Spectrum",
+    "anchor": "Supplementary Table S3, ADOS-2",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39726432_r2/NIHMS2024698-supplement-Supplementary_Tables.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 1: five infants with predicted blood-level bands and 3 to 5 measured troughs each shown from about day 20; several measured values lie outside the 5 to 15 band or on its edge, and the first days are not displayed.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 five panels (001-001 to 001-005), x axis from about day 20 to 320, y axis 0-30 ng/mL; blue predicted concentration bands rise stepwise; red dots measured troughs: 001-001 about 8, 6, 8 and 4 (last below 5); 001-002 about 8, 9 and 9; 001-003 about 15.5, 10.5, 4.5 and 3.5; 001-004 about 5.5, 9, 5.5; 001-005 about 8.5, 7, 15, 9; dotted lines at 5 and 15, red line at 10.",
+    "anchor": "Figure 1",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39726432_r2/nihms-2024698-f0001.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 2: the dose required to hold the target rose about three- to five-fold across infants over 6 to 9 months, and differed between infants; one dose recommendation was overridden.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 five panels dose per body surface area against time after start: 001-001 rising from about 0.25 to 0.7; 001-002 from 0.45 to 2.1 by 6 months; 001-003 from 0.3 to 1.3 with a red arrow at 6 months where the clinical team reduced the recommended dose for adverse events; 001-004 from 0.25 to 1.55 at 9 months; 001-005 from 0.25 to 1.7 at 6 months then 1.25 to 1.35.",
+    "anchor": "Figure 2",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39726432_r2/nihms-2024698-f0002.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC11670424/fullTextXML returned HTTP 200 with a JATS body on 2026-10-21; the declared article_text artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}

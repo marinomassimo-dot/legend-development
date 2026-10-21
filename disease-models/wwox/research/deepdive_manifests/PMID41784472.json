@@ -1,0 +1,474 @@
+{
+ "schema_version": 2,
+ "pmid": "41784472",
+ "doi": "10.1002/epi.70164",
+ "pmcid": "PMC13285253",
+ "receipt": "FTR-20261021-41784472-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Sponsor-funded phase 3 trial report; several authors are employees and stockholders of the sponsor, and the sponsor does not plan to share data. Dravet syndrome (SCN1A class); NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "soticlestat[Title/Abstract] AND (Dravet[Title/Abstract] OR \"Lennox-Gastaut\"[Title/Abstract])",
+    "count": 36,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "soticlestat[Title/Abstract] AND phase 3[Title/Abstract]",
+    "count": 5,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 34,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41784472 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 34,
+   "references_screened": 32,
+   "references_with_doi": 32,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41784472_Sullivan2026_PMC.xml",
+   "sha256": "7da54fe978234e24152d754a67895783a7b76306b8e4982dfb6ef9a272155d12",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML; body, tables cell-wise, figure legends.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13285253/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "7da54fe978234e24152d754a67895783a7b76306b8e4982dfb6ef9a272155d12"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41784472_r2/PMC13285253.1.pdf",
+   "sha256": "bc5d7567a7cc984133d6dbbbc73a7dbffb533eb9093e30f263a5b362a0423d71",
+   "kind": "article_binary",
+   "note": "PMC open-data bucket PDF; source of the page renders.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13285253.1/PMC13285253.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/page_renders/PMID41784472/PMC13285253.1_p5-05.png",
+   "sha256": "ace058d1aeded7d833974ef60fcc049c2c9942e834c1ed31116d75f289b6a96b",
+   "kind": "figure",
+   "note": "Figure 2 (CONSORT) page, 400 dpi render; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm page render",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID41784472_r2/PMC13285253.1.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 400 -f 5 -l 5 -png <pdf> <out>"
+    }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID41784472/PMC13285253.1_p7-07.png",
+   "sha256": "a49792e4f3f5d41b70a3f653862559abe8cf80f2853dec8ffa9788ef69c284d1",
+   "kind": "figure",
+   "note": "Figure 3 (convulsive seizure change) page, 400 dpi render; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm page render",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID41784472_r2/PMC13285253.1.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 400 -f 7 -l 7 -png <pdf> <out>"
+    }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID41784472/PMC13285253.1_p8-08.png",
+   "sha256": "16714a7c88bf65ffdaff7c16f20ec420bd5bc8752a73ff061f3e735c4c8b7242",
+   "kind": "figure",
+   "note": "Figure 4 (key secondary endpoints) page, 400 dpi render; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm page render",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID41784472_r2/PMC13285253.1.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 400 -f 8 -l 8 -png <pdf> <out>"
+    }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID41784472/p3img-000.png",
+   "sha256": "e01567bfc3b064eaa56a5e3dedfa6f04b279e1a7f282523947bf91d218a4c3af",
+   "kind": "figure",
+   "note": "Figure 1 / design overview: embedded 2068x482 raster of PDF page 3 (a whole-figure raster per rank); opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdfimages extraction",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID41784472_r2/PMC13285253.1.pdf",
+    "extractor": {
+     "name": "pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -f 3 -l 3 -png <pdf> p3img"
+    }
+   }
+  },
+  {
+   "path": "files/supplement/PMID41784472_r2/EPI-67-2796-s001.docx",
+   "sha256": "cd25b0e4ec0a6c6161168b58ff4e259df680f115b118f318e4883f6fc79f6b79",
+   "kind": "supplement_binary",
+   "note": "Data S1 supplementary appendix (docx): methods, results, Figures S1-S2, Tables S1-S3.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13285253.1/EPI-67-2796-s001.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID41784472_r2/EPI-67-2796-s001.txt",
+   "sha256": "a1a71a438805b2c491be6222b893fef8e611adac24031c7b10c3eb3df1e9c1c5",
+   "kind": "supplement_text",
+   "note": "Text of the supplementary appendix produced by docx_to_text.py (3 tables, 2 embedded images not text).",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "docx_to_text",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID41784472_r2/EPI-67-2796-s001.docx",
+    "extractor": {
+     "name": "framework/scripts/docx_to_text.py",
+     "version": "repository main 5dd4283f",
+     "call": "python3 framework/scripts/docx_to_text.py --out <txt> <docx>"
+    }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID41784472/s001media/image1.png",
+   "sha256": "fb8e89c185f13878a007ba9e298b8af35bead208e696115012f14b4abc24c813",
+   "kind": "figure",
+   "note": "Figure S1 (cumulative response curve), embedded PNG of the docx; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "zip member extraction",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID41784472_r2/EPI-67-2796-s001.docx",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "3.12",
+     "call": "zipfile.ZipFile(<docx>).read(\"word/media/image1.png\")"
+    }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID41784472/s001media/image2.png",
+   "sha256": "12214e01fd4c95a0c804ac25f29a373bf7827c1e3ecefbd7bcf08c5255cb2e71",
+   "kind": "figure",
+   "note": "Figure S2 (plasma 24HC by visit), embedded PNG of the docx; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "zip member extraction",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID41784472_r2/EPI-67-2796-s001.docx",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "3.12",
+     "call": "zipfile.ZipFile(<docx>).read(\"word/media/image2.png\")"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Eligibility required a minimum convulsive seizure count in the 12 weeks before screening and in the prospective baseline.",
+    "snippet": "Participants were required to have had ≥12 convulsive seizures over 12 weeks before screening and at least four convulsive seizures per 28 days during the 4–6‐week screening period.",
+    "anchor": "Methods, Eligibility",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41784472_Sullivan2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The primary endpoint was the percentage change in convulsive seizure frequency per 28 days; the endpoint was agreed with epileptologists before start.",
+    "snippet": "The primary endpoints were percentage change from baseline in convulsive seizure frequency per 28 days in participants receiving soticlestat compared with placebo during the full treatment period",
+    "anchor": "Methods, Study endpoints",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41784472_Sullivan2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Multiplicity was controlled by hierarchical gatekeeping; after a failed primary all later p-values are nominal.",
+    "snippet": "If a test was not statistically significant at a two‐sided 5% significance level, subsequent hypotheses were not tested, and any reported p‐values should be considered nominal (not adjusted for multiplicity).",
+    "anchor": "Methods, Statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41784472_Sullivan2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The phase 2 trial had reported a 50 percent placebo-adjusted median reduction in convulsive seizures in children with Dravet syndrome.",
+    "snippet": "demonstrated a statistically significant placebo‐adjusted median reduction in convulsive seizure frequency of 50.0% (95% confidence interval [CI] −74.2% to −24.7%, p = .0002).",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41784472_Sullivan2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The phase 3 primary result was a 15.64 percent difference with p 0.061 over the full treatment period.",
+    "snippet": "The difference was a reduction of 15.64% (95% CI = −31.30 to .24, p = .061).",
+    "anchor": "Results, Effect on convulsive seizure frequency",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41784472_Sullivan2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Positive outcomes cannot be declared for the key secondary endpoints because the primary missed.",
+    "snippet": "These key secondary endpoints showed nominal statistical significance, but because the primary endpoint did not reach statistical significance, positive outcomes cannot be declared for secondary endpoints.",
+    "anchor": "Results, Key secondary endpoints",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41784472_Sullivan2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Clinician-rated global impression of non-seizure symptoms (alertness, communication, disruptive behaviour) did not differ between arms.",
+    "snippet": "No meaningful differences were observed between treatment groups in CGI‐I Non‐Seizure Symptoms (i.e., alertness, communication, disruptive behaviors; Figure 4F–H).",
+    "anchor": "Results, Key secondary endpoints",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41784472_Sullivan2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors name a higher placebo response than in phase 2 and a more refractory population as contributors.",
+    "snippet": "Potential contributors to this narrowly missed statistical significance on the primary outcome are a higher placebo response than in the phase 2 study and a generally more refractory patient population",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41784472_Sullivan2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The same Discussion says the miss is unlikely to be due to a high placebo response.",
+    "snippet": "Narrowly missed significance on the primary endpoints is unlikely to be due to a high placebo response, as the placebo rate was in line with clinical trials of other approved drugs for the treatment of DS.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41784472_Sullivan2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The SCN1A-positive subgroup analysis was exploratory and nominal, p 0.045.",
+    "snippet": "showed a nominally significant reduction from baseline in convulsive seizure frequency (p = .045) with soticlestat versus placebo.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41784472_Sullivan2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Post hoc, the most treatment-resistant quartile had an unfavourable estimate.",
+    "snippet": "Participants in quartile 4, who were the most treatment‐resistant group, receiving nine or more ASMs, showed an unfavorable treatment effect of +15.0% compared with placebo",
+    "anchor": "Results, Effect on convulsive seizure frequency",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41784472_Sullivan2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that lowered plasma 24-hydroxycholesterol confirmed the pharmacological effect.",
+    "snippet": "Decreased plasma 24HC levels clearly confirmed the pharmacological effect of soticlestat (Figure S2).",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41784472_Sullivan2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors conclude the drug may have modest antiepileptic effects that failed to reach significance.",
+    "snippet": "The totality of the data from SKYLINE suggests that soticlestat may have modest antiepileptic effects, which failed to achieve statistical significance in patients with DS.",
+    "anchor": "Conclusions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41784472_Sullivan2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The study was funded by the manufacturer, and the sponsor does not plan to share data.",
+    "snippet": "Takeda does not plan to share data supporting the results reported in this article.",
+    "anchor": "Data availability statement",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41784472_Sullivan2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplement: median plasma 24HC fell about 80 percent on drug against about 4 percent on placebo.",
+    "snippet": "By the end of the full treatment period, median plasma 24HC levels had decreased by approximately 80% for soticlestat-treated participants compared with approximately 4% for placebo-treated participants.",
+    "anchor": "Supplementary results, Plasma 24HC levels",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41784472_r2/EPI-67-2796-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplement: no meaningful effect on all-seizure frequency.",
+    "snippet": "There was no meaningful effect on all-seizure frequency per 28 days for participants receiving soticlestat versus placebo during both the full treatment period and the maintenance period (Table S3).",
+    "anchor": "Supplementary results",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41784472_r2/EPI-67-2796-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplement: seizure-free days rose in both arms without a difference.",
+    "snippet": "Both treatment groups experienced an increase in percentage of seizure-free days, with no meaningful difference between the two groups (Table S3).",
+    "anchor": "Supplementary results",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41784472_r2/EPI-67-2796-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 3: bars are medians with IQR whiskers that overlap widely: placebo -8.64 and soticlestat -22.16 over the full period (n 71 and 73), -11.99 and -23.29 in maintenance (n 68 and 69), -12.70 and -23.34 in the SCN1A-positive subgroup (n 56 and 58).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3 panels A-C: bars -8.64 versus -22.16 (p = .061), -11.99 versus -23.29 (p = .089), -12.70 versus -23.34 (nominal p = .045); the vertical IQR whisker of each soticlestat bar spans roughly -54 to +23 (A) and every pair of whiskers overlaps; text under the panels gives differences -15.64, -14.29 and -17.38 percent with intervals; panel B maintenance n are 68 and 69.",
+    "anchor": "Figure 3, page 7 render at 400 dpi",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID41784472/PMC13285253.1_p7-07.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 4: the caregiver and clinician global impressions of improvement were 35.3 percent and 26.8 percent on placebo against 60.6 and 52.1 percent on drug; the three non-seizure sub-items were 25.4 versus 25.4, 31.0 versus 32.4 and 19.7 versus 23.9; quality-of-life change was +1.86 on placebo and -1.17 on drug (difference -3.03, nominal p .189).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 4 panels: A responders 9.9 vs 27.4 (nominal p .008); B 11.8 vs 30.4 (.010); C Care GI-I 35.3 vs 60.6 (.004); D CGI-I 26.8 vs 52.1 (.003); E seizure intensity and duration 24.6 vs 58.5 (<.001); F alertness 25.4 vs 25.4 (.741); G communication 31.0 vs 32.4 (.901); H disruptive behaviors 19.7 vs 23.9 (.693); I QI-Disability LS mean change 1.86 (placebo, n 53) vs -1.17 (soticlestat, n 56), difference -3.03 (-7.59 to 1.52), nominal p .189.",
+    "anchor": "Figure 4, page 8 render at 400 dpi",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID41784472/PMC13285253.1_p8-08.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 2: 182 assessed, 38 excluded, 144 randomised; 8 discontinued on placebo and 13 on drug (adverse events 4 and 11); all 144 analysed.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 CONSORT: assessed 182, excluded 38, randomized 144; allocated 71 placebo and 73 soticlestat; discontinued 8 and 13 (adverse event 4 and 11); analyzed 71 and 73.",
+    "anchor": "Figure 2, page 5 render at 400 dpi",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID41784472/PMC13285253.1_p5-05.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 1: 4 to 6 week baseline, 4 week titration, 12 week maintenance, taper and follow-up or entry to an open-label extension; stratified by age and region.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Design overview: screening/baseline 4-6 weeks, dose titration 4 weeks, maintenance 12 weeks, taper 1 week and follow-up 2 weeks or entry into an open-label extension; 1:1 randomization of 144 stratified by age and region.",
+    "anchor": "Figure 1 (design overview), embedded raster of PDF page 3",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID41784472/p3img-000.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig S2: median plasma 24HC fell from 92.30 to 18.20 ng/mL on drug and from 92.60 to 83.30 on placebo by the end of treatment.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S2 bars: baseline placebo 92.60 and soticlestat 92.30 (n 66 and 71); visit 9 87.60 and 16.60 (n 59 and 58); visit 11 83.30 and 18.20 (n 60 and 62).",
+    "anchor": "Supplementary Figure S2",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID41784472/s001media/image2.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig S1: cumulative response curve; the drug curve lies above placebo from no change up to about 85 percent reduction, and the two nearly coincide at the worsening end.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S1: x axis reduction from baseline in convulsive seizure frequency, -100 to >100 percent; y axis proportion of participants; the soticlestat curve (dashed, plus marks) lies above the placebo curve (solid, circles) between about 0 and 85 percent reduction; at the worsening end both curves start near 90 to 95 percent.",
+    "anchor": "Supplementary Figure S1",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID41784472/s001media/image1.png",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13285253/fullTextXML returned HTTP 200 with a JATS body on 2026-10-21; the declared article_text artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}

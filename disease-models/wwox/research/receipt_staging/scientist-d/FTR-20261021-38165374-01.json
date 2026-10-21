@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261021-38165374-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "38165374",
+  "doi": "10.1212/WNL.0000000000207958"
+ },
+ "event_at": "2026-10-21T22:40:50Z",
+ "analysis_at": "2026-10-21T00:00:00Z",
+ "analysis_time_precision": "date_only",
+ "workflow": "scientist-d, ten-hour repurposing batch, task REPURP-10H-R4-D-20261021, branch task/repurp-r4-d; context_policy QUESTION_DRIVEN. Route: Europe PMC REST fullTextXML into the shared files/fulltext/; JATS body and tables read section by section from a text rendering; Figures 1 and 2 (conceptual illustrations) opened as native JPEGs; Tables 1 and 2 read from the JATS. Locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts. Receipt staged for the integrator, not appended.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID38165374_Berg2024_PMC_r2.xml",
+ "source_fingerprint": "af9cf37590d2edd3eb21dfe52109234b34c257d0acbce5c1ea4054a0d007e6b5",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "not_present",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID38165374.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "JATS text rendering read in full including Tables 1-2; Figures 1-2 inspected; a narrative review with no Methods, Results or supplement (the e-references are in an online-only list)."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

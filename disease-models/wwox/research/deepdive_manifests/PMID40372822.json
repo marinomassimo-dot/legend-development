@@ -1,0 +1,302 @@
+{
+ "schema_version": 2,
+ "pmid": "40372822",
+ "doi": "10.1111/dmcn.16363",
+ "pmcid": "PMC12618951",
+ "receipt": "FTR-20261021-40372822-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Academic rehabilitation and neurology group working with a caregiver-led initiative; survey with qualitative coding; NOT WWOX EVIDENCE; no intervention and no measured change in any child."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "\"meaningful change\"[Title/Abstract] AND (caregiver*[Title/Abstract] OR parent*[Title/Abstract]) AND \"developmental and epileptic\"[Title/Abstract]",
+    "count": 11,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "\"Inchstone\"[Title/Abstract]",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 30,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 40372822 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 30,
+   "references_screened": 21,
+   "references_with_doi": 21,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 9
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40372822_Downs2025_PMC_r2.xml",
+   "sha256": "242133c97d0cff6a3ec52d3db93ff90ebd93614f3200abf8517b7baa3ce2e38d",
+   "kind": "article_text",
+   "note": "NCBI efetch JATS (via pmc_bucket_fetch.py).",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC12618951&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "242133c97d0cff6a3ec52d3db93ff90ebd93614f3200abf8517b7baa3ce2e38d"
+   }
+  },
+  {
+   "path": "files/supplement/PMID40372822_r2/PMC12618951.1.pdf",
+   "sha256": "7b00e06321faf4e2281140b8cbbaea054d483bbf3e25862b460ef004c478bc50",
+   "kind": "article_binary",
+   "note": "PMC open-data bucket PDF.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12618951.1/PMC12618951.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID40372822_r2/DMCN-67-1616-g001.jpg",
+   "sha256": "306de93bf1e8ce2269a632fb885859814338d6709c0a134e6017717264cabad6",
+   "kind": "figure",
+   "note": "Graphical abstract (the only figure of the article), native JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12618951.1/DMCN-67-1616-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID40372822_r2/DMCN-67-1616-s001.docx",
+   "sha256": "3d06d8641cbba1529b6e8cb979bf3b28dd00dbf345802373a56c1aa0b8254c33",
+   "kind": "supplement_binary",
+   "note": "Supplemental Table 1: all 86 codes by level of impairment (docx).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12618951.1/DMCN-67-1616-s001.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID40372822_r2/DMCN-67-1616-s001.txt",
+   "sha256": "304ca66e81fad6125863e6827508b76e9b3db3c2b2cf2ba131ba69f3e9a1b855",
+   "kind": "supplement_text",
+   "note": "Text of Supplemental Table 1 by docx_to_text.py.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "docx_to_text",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID40372822_r2/DMCN-67-1616-s001.docx",
+    "extractor": {
+     "name": "framework/scripts/docx_to_text.py",
+     "version": "repository main 5dd4283f",
+     "call": "python3 framework/scripts/docx_to_text.py --out <txt> <docx>"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Convergent mixed-methods survey of 267 parents of children with severe developmental impairments.",
+    "snippet": "A total of 267 parents completed the questionnaire.",
+    "anchor": "Results, Participants",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40372822_Downs2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Recruitment through advocacy groups of several DEE conditions via an online survey in 2023.",
+    "snippet": "Parental advocacy groups representing several DEEs within the DEE‐P Connections network (https://deepconnections.net/) invited their members to participate in a survey administered online in CLIRINX 14 between June and November 2023.",
+    "anchor": "Methods, Survey participants",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40372822_Downs2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Eligibility required severely impaired communication.",
+    "snippet": "Severely impaired communication was an essential eligibility criterion.",
+    "anchor": "Methods, Survey participants",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40372822_Downs2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Parents wrote the smallest improvement that would be important to them: a hypothetical wish, not a measured change.",
+    "snippet": "For each top domain, they described in open text the smallest improvement or step forward in that area that would be important to them or their child (i.e. a ‘wish’) and explained why that improvement would be important.",
+    "anchor": "Methods, Procedures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40372822_Downs2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Expressive communication was the priority for 79 percent, gross motor 39 percent and receptive communication 27 percent.",
+    "snippet": "expressive communication was the most frequently identified priority (79.4%) followed by gross motor skills (38.6%) and receptive communication (27.3%).",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40372822_Downs2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Most of the children had severe or profound communication impairment; 78 percent seldom or never communicated effectively even with familiar people.",
+    "snippet": "Seldom or never communicates effectively even with familiar people | 199 (78%)",
+    "anchor": "Table 1, communication rows",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID40372822_Downs2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Meaning and purpose codes (preferences, pain) occurred at all communication levels; non-verbal modes were more frequent with greater impairment.",
+    "snippet": "Codes for meaning and purpose (e.g. demonstrating preference, expressing emotions) were represented across all levels of communication impairment",
+    "anchor": "Results, Communication",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40372822_Downs2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "For children unable to walk, meaningful gross-motor codes concerned head control, leg strength for transfers and sitting.",
+    "snippet": "For example, codes for those unable to walk included gaining head control or leg strength to assist transfers, whereas codes for individuals with less impairment referred to independent walking.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40372822_Downs2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplement: among 85 wishes for children unable to walk, the most frequent code was sitting independently (20), then head control and assisting transfers.",
+    "snippet": "Walks with assistance / n=8 wishes | Unable to walk / n=85 wishes",
+    "anchor": "Supplemental Table 1, gross motor",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID40372822_r2/DMCN-67-1616-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplement: for children seldom or never communicating, the most frequent code was basic communication of needs, wants and likes (49).",
+    "snippet": "1 | Express feelings/emotions (n=2) | Basic communication of needs/wants/likes (n=6) | Basic communication of needs/wants/likes (n=49)",
+    "anchor": "Supplemental Table 1, expressive communication",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID40372822_r2/DMCN-67-1616-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The FDA is said to prefer individual worthwhile change over average-group minimal important differences.",
+    "snippet": "preferred by the US Food and Drug Administration over minimal clinical important difference values which are average group changes.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40372822_Downs2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Measurement implication: functional instruments should be paired with broader instruments such as quality of life.",
+    "snippet": "COAs of functioning should be accompanied by broader COAs, such as quality of life, to indicate whether the meaningful change has achieved wider impact in how the child lives.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40372822_Downs2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Limits: convenience sample, unable to probe responses, some responses non-specific, little epilepsy phenotype data.",
+    "snippet": "However, this was a convenience sample which might not be representative of the population. We were unable to probe the expressed concepts.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40372822_Downs2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 1 graphical abstract: 267 parents of children aged 12 months or older, mixed methods, directed content analysis giving 86 codes; common codes include communicating preferences, sitting, walking, grasping, eating.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Graphical abstract: Participants (n=267, parents of children at least 12 months, severe communication impairments, 88.4 percent genetic cause); Mixed methods (quantitative: communication, gross and fine motor, eating levels; qualitative: smallest meaningful improvement and why); Directed content analysis giving 86 codes; common, some spanning impairment levels and some specific codes; interpretation: codes indicate components for clinical-trial evaluations.",
+    "anchor": "Graphical abstract",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40372822_r2/DMCN-67-1616-g001.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "NCBI efetch (pmc_bucket_fetch.py) returned a full JATS body on 2026-10-21; this is the declared article_text artefact.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}

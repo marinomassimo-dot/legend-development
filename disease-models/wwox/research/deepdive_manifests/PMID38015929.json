@@ -1,0 +1,506 @@
+{
+ "schema_version": 2,
+ "pmid": "38015929",
+ "doi": "10.1093/brain/awad287",
+ "pmcid": "PMC10689925",
+ "receipt": "FTR-20261021-38015929-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Academic epilepsy-genetics group with a registry partner; retrospective natural-history and modelling paper; STXBP1 haploinsufficiency class; NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "STXBP1[Title/Abstract] AND \"natural history\"[Title/Abstract]",
+    "count": 16,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "\"virtual clinical trial*\"[Title/Abstract] AND epilep*[Title/Abstract]",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 55,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 38015929 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 55,
+   "references_screened": 51,
+   "references_with_doi": 51,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38015929_Xian2023_PMC.xml",
+   "sha256": "a31a389e9358a177f78099cc5c5ac3aafed7122fe2c33b2ca2b1f1ae6d9e7d34",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML; body, tables cell-wise, figure legends.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10689925/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "a31a389e9358a177f78099cc5c5ac3aafed7122fe2c33b2ca2b1f1ae6d9e7d34"
+   }
+  },
+  {
+   "path": "files/supplement/PMID38015929_r2/PMC10689925.1.pdf",
+   "sha256": "9f305a032b7f1c3b792cd6b85a283cb7418eab02d3305081dc4782a7ce6422c6",
+   "kind": "article_binary",
+   "note": "PMC open-data bucket PDF; source of the extracted figure rasters.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10689925.1/PMC10689925.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/page_renders/PMID38015929/p5img-000.png",
+   "sha256": "96994a1ad96d6d46f93577ff7a2949b249d307451d0b3535bf8a5fa756743708",
+   "kind": "figure",
+   "note": "Figure 1 (seizure landscape), embedded 200 ppi raster of PDF page 5; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdfimages extraction",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID38015929_r2/PMC10689925.1.pdf",
+    "extractor": {
+     "name": "pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -f 5 -l 5 -png <pdf> p5img"
+    }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID38015929/p7img-000.png",
+   "sha256": "c8bafa124a2759fb6552f7baf4ddc2760a7f7e9970a9a90d010d8d9a30183682",
+   "kind": "figure",
+   "note": "Figure 2 (PTV/deletions versus missense), embedded raster of PDF page 7; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdfimages extraction",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID38015929_r2/PMC10689925.1.pdf",
+    "extractor": {
+     "name": "pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -f 7 -l 7 -png <pdf> p7img"
+    }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID38015929/p8img-000.png",
+   "sha256": "24fc7b15ff652ad68c8eacdf7dc41954bfa42e06a6f6ec082d11bdba81e9b371",
+   "kind": "figure",
+   "note": "Figure 3 (developmental outcomes), embedded 200 ppi raster of PDF page 8; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdfimages extraction",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID38015929_r2/PMC10689925.1.pdf",
+    "extractor": {
+     "name": "pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -f 8 -l 8 -png <pdf> p8img"
+    }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID38015929/p10img-000.png",
+   "sha256": "8c58651c793d7b816e6effa5931438807d2361347830c377121fd9c440f373c4",
+   "kind": "figure",
+   "note": "Figure 4 (seizure forecasting), embedded raster of PDF page 10; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdfimages extraction",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID38015929_r2/PMC10689925.1.pdf",
+    "extractor": {
+     "name": "pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -f 10 -l 10 -png <pdf> p10img"
+    }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID38015929/p11img-000.png",
+   "sha256": "66a7ce21d3636fd3d0a17a7a4c462cff5365db2b8d0443dd4efeffdd2eaa1d33",
+   "kind": "figure",
+   "note": "Figure 5 (treatment strategies), embedded raster of PDF page 11; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdfimages extraction",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID38015929_r2/PMC10689925.1.pdf",
+    "extractor": {
+     "name": "pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -f 11 -l 11 -png <pdf> p11img"
+    }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID38015929/p12img-000.png",
+   "sha256": "e73fdd11935447561b32caaedef246e495275b1320cacd0085e9bc812b26ba73",
+   "kind": "figure",
+   "note": "Figure 6 (virtual trials), embedded raster of PDF page 12; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdfimages extraction",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID38015929_r2/PMC10689925.1.pdf",
+    "extractor": {
+     "name": "pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -f 12 -l 12 -png <pdf> p12img"
+    }
+   }
+  },
+  {
+   "path": "files/supplement/PMID38015929_r2/awad287_supplementary_data.pdf",
+   "sha256": "d139a984fc98784929fc7282906cb59b09ceadd1902ae25e0ae10f2728ad4149",
+   "kind": "supplement_binary",
+   "note": "Supplementary data PDF: methods, tables, figure captions (332 lines of text, supplementary figures not opened).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10689925.1/awad287_supplementary_data.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID38015929_r2/awad287_supplementary_data.txt",
+   "sha256": "52986d5674f43388cee135ef641b6a8cb899c4ee3828ffea04801322885da685",
+   "kind": "supplement_text",
+   "note": "Text layer of the supplementary PDF by pdftotext -layout with form feeds replaced by newlines.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftotext",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID38015929_r2/awad287_supplementary_data.pdf",
+    "extractor": {
+     "name": "pdftotext",
+     "version": "24.02.0",
+     "call": "pdftotext -layout <pdf> - | tr '\\\\f' '\\\\n' > <txt> (page-separator form feeds replaced by newlines; no other change)"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Retrospective reconstruction of seizure and developmental history from medical records and a registry, 162 individuals and 1281 patient-years.",
+    "snippet": "We assessed the genetic and clinical information of 162 individuals with STXBP1-related disorders, including 104 individuals at Children’s Hospital of Philadelphia and 58 additional individuals from the Ciitizen Natural History Study Patient Registry",
+    "anchor": "Methods, Inclusion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38015929_Xian2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizure outcome was coded on a six-level frequency scale from monthly to more than five a day.",
+    "snippet": "multiple daily seizures (>5 per day, SF score = 5), several daily seizures (2–5 per day, SF score = 4), daily seizures (SF score = 3), weekly seizures (SF score = 2), monthly seizures (SF score = 1) and no seizures (SF score = 0)",
+    "anchor": "Methods, Reconstruction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38015929_Xian2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Development was assessed from milestones and from routine-care standardised measures; where seizure frequency was unknown the cohort median for the month was imputed.",
+    "snippet": "For individuals in whom seizures were noted to be present but seizure frequency was unknown, we calculated the median seizure frequency within the cohort during the respective month.",
+    "anchor": "Methods, Reconstruction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38015929_Xian2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Standardised developmental measures were available for a small subset: 45 individuals with the gross motor measure, 21 with the fine motor scales, 9 with the manual ability scale, 23 with the communication classification.",
+    "snippet": "GMFM-66-IS | 45 individuals (IQR 1.6–5.4 years)",
+    "anchor": "Table 1, clinical exams",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID38015929_Xian2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizure outcome comparisons used remission defined as 12 consecutive months of seizure freedom.",
+    "snippet": "seizure remission, defined by at least 12 consecutive months of seizure freedom",
+    "anchor": "Methods, Statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38015929_Xian2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The virtual trials sampled 20 individuals with ongoing seizures and applied a simulated percentage reduction to their own observed frequencies.",
+    "snippet": "For each virtual trial, we sampled 20 individuals with ongoing seizures at the trial start and simulated a 6-month and 12-month period of 10%, 15% and 20% seizure reduction",
+    "anchor": "Methods, Framework for virtual clinical trials",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38015929_Xian2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplement: the trial duration and effect size reported per seizure type were chosen for the widest range of success probability.",
+    "snippet": "targeted seizure reduction (10%, 15%, 20%, or 50%) based on the distribution of OFTS that resulted in the widest range",
+    "anchor": "Supplementary methods, virtual clinical trials",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID38015929_r2/awad287_supplementary_data.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the virtual-trial methodology has not been validated in rare disorders.",
+    "snippet": "the methodology of virtual clinical trials in rare disorders has not yet been validated.",
+    "anchor": "Discussion, Epilepsy variability and virtual clinical trials",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38015929_Xian2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The second virtual-trial window was driven by repeated sampling of a few refractory individuals.",
+    "snippet": "While we found a second window between 7 and 10 years of life, this effect was driven by repeated sampling of a limited number of individuals with refractory seizures during this period.",
+    "anchor": "Results, Virtual clinical trials",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38015929_Xian2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Highest virtual probability of detecting a seizure-frequency effect was in early childhood, from 8 months to 3.5 years.",
+    "snippet": "We were able to achieve the highest OFTS (range 0.87 to >0.95) in early childhood between 8 months and 3.5 years of life (Fig. 6A)",
+    "anchor": "Results, Virtual clinical trials",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38015929_Xian2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Development: standardised raw scores and age equivalents showed a floor; fine motor age equivalent under 14 months even after 2 years.",
+    "snippet": "PDMS-2 percentiles demonstrated a floor effect after the first year of life, when visual motor integration dropped below the first percentile and the range for grasping remained less than the 20th percentile.",
+    "anchor": "Results, Development",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38015929_Xian2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Gross motor outcome plateaued in late childhood on the gross motor measure (median 58.9 after 5 years).",
+    "snippet": "an observed plateau of gross motor function outcome on the GMFM-66-IS in late childhood (median score of 58.9, IQR 54.9–61.2).",
+    "anchor": "Results, Development",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38015929_Xian2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Earlier epilepsy onset was associated with lower ambulation and verbal communication; no difference in gross motor score between ongoing seizures and seizure-free.",
+    "snippet": "We did not find a significant difference in GMFM-66-IS scores between individuals with ongoing seizures and individuals who were seizure-free.",
+    "anchor": "Results, Development",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38015929_Xian2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors suggest gross motor development as a primary endpoint described as comprehensive and modifiable.",
+    "snippet": "The wide range of outcomes suggest that gross motor development can be considered a primary end point as a comprehensive and modifiable measure.",
+    "anchor": "Discussion, Developmental outcomes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38015929_Xian2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Raw scores and out-of-age testing may be necessary for accuracy in this population.",
+    "snippet": "The use of raw scores rather than standard scores and testing children outside the intended age range for outcome measures may be necessary to accurately measure children with STXBP1.",
+    "anchor": "Discussion, Developmental outcomes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38015929_Xian2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Sub-group: seizure trajectories diverged by variant class; missense variants had more intractable seizures (p 0.006).",
+    "snippet": "The risk of intractable seizures was higher in individuals with missense variants (P = 0.006).",
+    "anchor": "Results, Epilepsy trajectories diverge",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38015929_Xian2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizure trajectories were forecastable better than chance in 87 percent, with about 50 percent of those with epilepsy in a predictable high-fidelity group.",
+    "snippet": "Predictions compared to a distribution of randomized frequencies through permutation testing demonstrated ‘better than chance forecasting’ across 87% of the cohort.",
+    "anchor": "Results, Longitudinal forecasting",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38015929_Xian2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The treatment-effect analysis compares months with and without each medication in the same retrospective records and is relative effectiveness, not a trial.",
+    "snippet": "The rationale behind this analysis was that the effect of a novel drug should have additional benefit over existing treatment strategies.",
+    "anchor": "Methods, Comparative effectiveness",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38015929_Xian2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Any antiseizure medication reduced seizure burden by about 50 percent within 5 months after initiation, and half of those with spasms had offset within 3 months.",
+    "snippet": "We found that the use of any ASM or combination of ASMs was able to reduce overall seizure burden by ∼50% within 5 months following initiation.",
+    "anchor": "Results, Treatment effects",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38015929_Xian2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Retrospective design limitations: over-representation of more severely affected subgroup, primarily paediatric cohort.",
+    "snippet": "the outcomes for early-to-late childhood in our study likely include over-representation of a more severely affected subgroup for whom data were available.",
+    "anchor": "Discussion, Limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38015929_Xian2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Disease-specific outcome measures with validated measures do not exist for STXBP1 and most rare neurogenetic conditions.",
+    "snippet": "disease-specific outcomes using validated measures for STXBP1 and most rare neurogenetic conditions currently do not exist.",
+    "anchor": "Discussion, Developmental outcomes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38015929_Xian2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 3: cross-sectional scatter of raw gross-motor measure against age (57 exams in 45 individuals), plateau about 55 to 65 beyond 6 years; fine motor raw scores for 21 individuals; milestone bars from 100 percent for vocalising to about 5 percent for verbal communication.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3A cumulative milestone curves with CDC 75th percentile dashed lines; B proportion achieved: ability to vocalize 35/35, roll over 121/135, walk 86/151, walk without assistance 45/99, use sentences 14/102, verbal communication 2/37; C GMFM-66 raw score against age 0 to 25 years, one dot per exam, cluster 5 to 50 under age 5 and 45 to 66 after 6 years; D PDMS-2 raw grasping and visual motor integration 0.5 to 5 years, 21 individuals.",
+    "anchor": "Figure 3, page 8 raster",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID38015929/p8img-000.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 6: the observed frequency of trial success varies from near 0 to near 1 across the age span with two shaded windows (about 0.7 to 4.9 and 7.2 to 12.3 years); panel B annotates a 50 percent reduction for infantile spasms while the Methods name 10, 15 and 20 percent.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 6A step curve of observed frequency of trial success versus age 0 to 20 years, annotated 6 month trial with targeted 20% reduction; shaded windows about 0.7-4.9 and 7.2-12.3 years; B infantile spasms 0-12 months annotated 6 month trial 50% reduction; C focal-onset 0-5 years annotated 20% reduction; D tonic seizures 0-5 years annotated 15% reduction.",
+    "anchor": "Figure 6, page 12 raster",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID38015929/p12img-000.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 1: cumulative seizure onset (n 72) reaches about 0.5 by a few months; the risk of refractory seizures (offset analysis, n 38) falls to about 0.25 only by 12 years, with wide bands.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1B cumulative onset n = 72 rising from about 0.43 at birth to about 0.9 by 2 years; Fig 1C seizure offset n = 38, risk of refractory seizures falling from 1.0 to about 0.5 at about 4 years and about 0.25 after 12 years, with a wide shaded band; Fig 1D per-type onset and offset curves for spasms (n 29), focal-onset (n 48) and tonic (n 20).",
+    "anchor": "Figure 1, page 5 raster",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID38015929/p5img-000.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 4: forecast trajectory for one individual against observed; the high-fidelity group (n 53) is mostly low seizure score, the low-fidelity group (n 25) stays at higher scores.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 4A observed against predicted seizure score for one individual from age 1 to 10 years; 4B high-fidelity subgroup (n = 53) with a mean line near 0.3 to 1 and low-fidelity subgroup (n = 25) with a mean line near 1.5 to 4; 4C lower-bound odds ratios of first-year seizure features, the seizure curve above 1 from about 5 months.",
+    "anchor": "Figure 4, page 10 raster",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID38015929/p10img-000.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 5B: spasm frequency falls within about 3 months after treatment initiation and most are seizure-free by 12 months; Fig 5C odds ratios for nine treatments with several intervals crossing 1.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 5B stacked response bars over 24 months after treatment initiation for seizures and for infantile spasms; Fig 5C odds ratios on a log axis for phenobarbital, vigabatrin, ACTH, levetiracetam, ketogenic diet, clobazam, topiramate, prednisolone and carbamazepine across three outcomes, with intervals for vigabatrin, ACTH, ketogenic diet, topiramate, prednisolone and carbamazepine in the seizure-reduction panel crossing 1.",
+    "anchor": "Figure 5, page 11 raster",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID38015929/p11img-000.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 2: -log10 p-value trace of the PTV/deletion versus missense difference in seizure frequency exceeds the dashed threshold mainly between about 0.8 and 2 years.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2A lower panel: -log10(p) trace rising above the dashed 1.3 threshold from about 0.8 to 2 years and falling below it after about 2 years; upper panels show monthly seizure-frequency distributions for PTV/deletions and missense variants over the first 3 years.",
+    "anchor": "Figure 2, page 7 raster",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID38015929/p7img-000.png",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC10689925/fullTextXML returned HTTP 200 with a JATS body on 2026-10-21; the declared article_text artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}

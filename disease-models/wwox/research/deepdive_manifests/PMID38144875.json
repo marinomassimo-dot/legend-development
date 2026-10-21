@@ -1,0 +1,337 @@
+{
+ "schema_version": 2,
+ "pmid": "38144875",
+ "doi": "10.1016/j.conctc.2023.101233",
+ "pmcid": "PMC10746402",
+ "receipt": "FTR-20261021-38144875-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Academic metabolic-disease and rehabilitation groups in one centre; protocol of aggregated n-of-1 trials of a dietary amino acid used as a drug in GRIN2B loss of function; no results; NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "GRIN2B[Title/Abstract] AND serine[Title/Abstract]",
+    "count": 20,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "\"n-of-1\"[Title/Abstract] AND serine[Title/Abstract]",
+    "count": 5,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 45,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 38144875 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 45,
+   "references_screened": 34,
+   "references_with_doi": 34,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 11
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38144875_denHollander2023_PMC.xml",
+   "sha256": "9838f8a178eafb1462ce2d9600be65af438a8b4e6f7590224fa9e1d7c847c218",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML; body, tables cell-wise, figure legends.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10746402/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "9838f8a178eafb1462ce2d9600be65af438a8b4e6f7590224fa9e1d7c847c218"
+   }
+  },
+  {
+   "path": "files/supplement/PMID38144875_r2/PMC10746402.1.pdf",
+   "sha256": "234f11ea6d6053382dc23d4f031ab69b25e5e11f30d00f9b8981dd69acc55c95",
+   "kind": "article_binary",
+   "note": "PMC open-data bucket PDF.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10746402.1/PMC10746402.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38144875_r2/gr1.jpg",
+   "sha256": "ebf3b42c008aa7b6072e239e7923de847ef31b9d25a5eb1a8fccfe81988f51c0",
+   "kind": "figure",
+   "note": "Figure 1 (NMDA receptor schematic), native JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10746402.1/gr1.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38144875_r2/gr2.jpg",
+   "sha256": "377c6c78df56001555d60fb3654811fc2175c3d8cb52d06852a80a824efa1ac3",
+   "kind": "figure",
+   "note": "Figure 2 (n-of-1 design timeline), native JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10746402.1/gr2.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38144875_r2/gr3.jpg",
+   "sha256": "9d6ae1d122da87fe2fcaba39123ac277fdc2c498b242cccd4c67043125c572aa",
+   "kind": "figure",
+   "note": "Figure 3 (PRPP model wheel), native JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10746402.1/gr3.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Design: two cycles of two three-month periods, one week washout each, 13 months in total, random order within each cycle.",
+    "snippet": "Each participant will undergo two cycles, each of two treatment periods. The duration of each treatment period will be three months (+1 week washout), making a total of 13 months per participant to complete the full trial.",
+    "anchor": "Methods and design, Study design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38144875_denHollander2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The washout is one week because of the 17-hour half-life of the amino acid, and is not used to assess effectiveness.",
+    "snippet": "The washout week will be added to the treatment period, and will not be used to assess effectiveness (half-life of L-serine is 17 h)",
+    "anchor": "Methods and design, Study design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38144875_denHollander2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The three-month period length rests on the team's own earlier case series.",
+    "snippet": "Previous case series conducted by our research team have proved evidence that significant alterations in the measured outcomes are reasonably expected to manifest within a three-month duration [22].",
+    "anchor": "Methods and design, Study design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38144875_denHollander2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A maximum of four patients because of cost restrictions.",
+    "snippet": "A maximum of four patients will be included due to cost restrictions.",
+    "anchor": "Study population and recruitment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38144875_denHollander2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The sample size has no formal statistical basis and relies on an earlier single-patient jump from 10 to 78 percent task mastery.",
+    "snippet": "The sample size of four patients is based on clinical considerations and has no formal statistical basis.",
+    "anchor": "Statistical considerations, Sample size",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38144875_denHollander2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Detectability is conditional on very large effects.",
+    "snippet": "we expect that we might be able to demonstrate an effect of L-serine in this series of four patients provided that the effects are indeed very large.",
+    "anchor": "Statistical considerations, Sample size",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38144875_denHollander2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Blinding: participants and investigators blinded; allocation by block randomisation implemented by the hospital pharmacist.",
+    "snippet": "Participants and investigators will be blinded for allocation.",
+    "anchor": "Randomization",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38144875_denHollander2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The primary outcome is an observer-scored task-analysis of two parent-filmed everyday activities per child, scored by trained occupational therapists.",
+    "snippet": "Per child, 2 activities will be measured (according to the guidelines). The videos are made by the parents/caregivers using the instructions from previous research [29].",
+    "anchor": "Primary outcomes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38144875_denHollander2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Primary comparison: difference in mean PRPP score at the end of each treatment period, averaged over cycles, in a linear mixed model.",
+    "snippet": "The primary outcome comparison and estimate for the average treatment effect will be based on the difference in the mean PRPP-Assessment at the end of each treatment period averaged over the two cycles",
+    "anchor": "Statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38144875_denHollander2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Only data from completed cycles will be analysed.",
+    "snippet": "Only data from completed cycles will be included in the analysis.",
+    "anchor": "Trial withdrawal and discontinuation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38144875_denHollander2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Secondary outcomes include an individualised goal scale, seizure and sleep logs, resting EEG with an excitation-inhibition measure, behaviour, stool scale, quality of life.",
+    "snippet": "we evaluate excitation-inhibition (E/I) ratios using a functional E/I measure.",
+    "anchor": "Secondary outcomes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38144875_denHollander2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Pharmacokinetic sampling of the amino acid is planned only in the open-label extension phase.",
+    "snippet": "blood samples for pharmacokinetics analyses will be collected at 0 (pre-dose), 60, and 150 min after L-serine ingestion during the extension phase",
+    "anchor": "Secondary outcomes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38144875_denHollander2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Prior evidence for the drug in this gene is uncontrolled: non-blinded, non-randomised case studies without placebo.",
+    "snippet": "Previous studies on the effect of L-serine in patients with GRIN2A- and GRIN2B-related NDD are non-blinded, non-randomized case studies with no placebo [17,18,22].",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38144875_denHollander2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Although a dietary supplement, the amino acid is treated as a drug with drug regulations applying.",
+    "snippet": "Despite L-serine being a dietary supplement, it is considered a drug in this context.",
+    "anchor": "Safety reviews",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38144875_denHollander2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion cites n-of-1 trials as Level 1 evidence.",
+    "snippet": "The Oxford Centre for Evidence-Based Medicine has designated n-of-1 trials as Level 1 evidence, placing them on par with systematic reviews of RCTs [44].",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38144875_denHollander2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "An open-label year after the trial lets results be analysed without withholding possible benefit.",
+    "snippet": "This gives patients the possibility to use L-serine for one extra year. Moreover, this enables us to analyze the results of the n-of-1 trial without withholding possible medication benefit.",
+    "anchor": "Study design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38144875_denHollander2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 2: the schematic runs A, B, B, A over 12 months with outcome stars at the end of each period, a PRPP square mid-period, a baseline before and an optional open-label study to 24 months.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 timeline: Baseline then Cycle one periods A and B, then B and A, each three months with an orange washout block and red star at the end, grey PRPP squares at about the midpoints; Follow-up after 12 months with a purple pharmacokinetics marker; optional open-label study to 24 months.",
+    "anchor": "Figure 2",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38144875_r2/gr2.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 1: a receptor schematic showing glycine or D-serine binding to GluN1 and glutamate to GluN2 subunits.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 NMDA receptor panels A and B with GluN1, GluN2A and GluN2B, glycine or D-serine sites on GluN1 and glutamate sites on GluN2.",
+    "anchor": "Figure 1",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38144875_r2/gr1.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 3: a conceptual wheel of the perceive, recall, plan and perform task-analysis model.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3 PRPP wheel with four quadrants perceive, recall, plan and perform, each divided into process names and strategy descriptors; reproduced from the instrument authors.",
+    "anchor": "Figure 3",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38144875_r2/gr3.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC10746402/fullTextXML returned HTTP 200 with a JATS body on 2026-10-21; the declared article_text artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}

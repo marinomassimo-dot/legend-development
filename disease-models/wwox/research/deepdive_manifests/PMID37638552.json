@@ -1,0 +1,287 @@
+{
+ "schema_version": 2,
+ "pmid": "37638552",
+ "doi": "10.1002/ana.26778",
+ "pmcid": "PMC10899525",
+ "receipt": "FTR-20261021-37638552-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Multicentre US academic consortium running a placebo-controlled phase IIb trial of pre-symptomatic treatment in tuberous sclerosis; the controlled test of the concept the EPISTOP trial raised; NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "PREVeNT[Title/Abstract] AND vigabatrin[Title/Abstract]",
+    "count": 71,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "vigabatrin[Title/Abstract] AND \"tuberous sclerosis\"[Title/Abstract] AND (preventive[Title/Abstract] OR pre-emptive[Title/Abstract]) AND placebo[Title/Abstract]",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 24,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 37638552 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 24,
+   "references_screened": 24,
+   "references_with_doi": 24,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID37638552_Bebin2023_PMC_r2.xml",
+   "sha256": "c98f3b0ce3b9a5f104b0b8608cb3199ab5f5e49539fc31495003a249d3b84cc8",
+   "kind": "article_text",
+   "note": "NCBI efetch JATS of the author manuscript (not in the PMC open-data bucket).",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC10899525&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "c98f3b0ce3b9a5f104b0b8608cb3199ab5f5e49539fc31495003a249d3b84cc8"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Design: phase IIb, multicentre, double-blind, placebo-controlled randomised trial in 12 centres.",
+    "snippet": "A Phase IIb multicentered randomized, double-blind, placebo controlled clinical trial was conducted at 12 TSC Clinics across the United States.",
+    "anchor": "Methods, Study design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37638552_Bebin2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Randomisation was triggered by a predetermined epileptiform EEG finding, not by seizures, read by two central readers.",
+    "snippet": "Emergence of specific, predetermined EEG biomarkers (sharps waves, (poly-) spikes), but not seizures",
+    "anchor": "Methods, Study evaluations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37638552_Bebin2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Placebo-arm infants were moved to open-label drug after their first seizure, blind to the investigators.",
+    "snippet": "Participants in the placebo group were transitioned to open label vigabatrin in blinded fashion following the occurrence of a first clinical or electrographic seizure.",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37638552_Bebin2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The transition came a median of 44 days after randomisation, so both arms were on the drug for much of the period.",
+    "snippet": "seizure onset and vigabatrin treatment initiation was between 3 to 610 days (median 44, IQR 21 – 90) after randomization.",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37638552_Bebin2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Assessors were blinded psychologists using Bayley-III and Vineland-II at 6, 12, 24 and 36 months.",
+    "snippet": "Clinical psychologists remained blinded throughout the study to the participants’ randomization arm, seizure control, and concomitant medication(s) while completing assessments.",
+    "anchor": "Methods, Study evaluations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37638552_Bebin2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The sample size assumed 22 of 24 placebo infants would develop seizures and a large drug effect modelled on a prior study.",
+    "snippet": "In the placebo arm, we expected 22 of 24 (0.917) participants would eventually develop seizures.",
+    "anchor": "Methods, Outcomes and statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37638552_Bebin2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Primary result: no difference in Bayley-III cognitive or Vineland-II composites at 12 or 24 months.",
+    "snippet": "No differences were found between participants randomized to vigabatrin or placebo with respect to Bayley-III cognitive composite or Vineland-II adaptive behavior composite standard scores at 12, 24 months of age.",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37638552_Bebin2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Drug-resistant epilepsy at 24 months was 48 versus 52 percent, against 28 versus 64 percent in the earlier open-label trial.",
+    "snippet": "We found no difference in drug-resistant epilepsy (DRE) at 24 months of age (48% in TSC infants randomized to early vigabatrin vs. 52% in TSC infants randomized to placebo)",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37638552_Bebin2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The earlier trial had reported a reduction in drug resistance of 28 versus 64 percent.",
+    "snippet": "In contrast, EPISTOP reported a reduction in DRE in the early vigabatrin group (28%) vs. conventional treatment (64%)",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37638552_Bebin2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Infantile spasms were later and less frequent on the drug (hazard ratio 0.263), but the comparison was not specified in advance and was not tested.",
+    "snippet": "These comparisons, however, were not specified a priori, and thus no statistical hypothesis testing was performed.",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37638552_Bebin2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the developmental rationale rested on the effect on spasms, with minimal rationale that GABA would be pro-cognitive.",
+    "snippet": "with minimal rationale that increased GABA would be pro-cognitive, the proposed improvement in neurocognition was based on the efficacy of vigabatrin in preventing infantile spasms in TSC",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37638552_Bebin2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Delaying or preventing spasms had no measurable effect on cognition at two years.",
+    "snippet": "our data demonstrates that delay or prevention of infantile spasms had no measurable effect on cognitive outcomes at two years of life.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37638552_Bebin2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors suggest exposure rather than timing may matter because the placebo arm soon received the drug.",
+    "snippet": "Perhaps timing of vigabatrin treatment initiation is less important than overall exposure to vigabatrin at these early ages in TSC infants.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37638552_Bebin2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Genotype was unevenly distributed: milder TSC1 and no-mutation cases enriched in the placebo arm.",
+    "snippet": "TSC1 mutations and NMI/VUS were enriched in the placebo group vs. the vigabatrin treatment group.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37638552_Bebin2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Infants randomised before 7 months had lower cognitive scores irrespective of arm.",
+    "snippet": "However, those randomized before 7 months’ age had lower cognitive measures irrespective of treatment group.",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37638552_Bebin2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors note that norm-referenced standard scores may mask within-person changes.",
+    "snippet": "We used norm-referenced standard scores as the primary outcome for assessing development, but these may mask changes in skills within and across individuals.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37638552_Bebin2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The EEG biomarker had a positive predictive value of 0.73 and a negative predictive value of 0.73.",
+    "snippet": "Thus, the positive predictive value of the EEG biomarker was 0.731(19/19+7=19/26), and a negative predictive value was 0.733 (11/11+4=11/15).",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37638552_Bebin2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 3: Bayley-III cognitive composite at 24 months 80.9 on drug and 83.9 on placebo.",
+    "snippet": "24 month | 80.9 (15.6) | 83.9 (17.3) | 85.0 (21.6) | 97.3 (16.9)",
+    "anchor": "Table 3, Bayley-III cognitive composite 24 month row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID37638552_Bebin2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 2 refractory percentages do not match their counts (9 of 29 printed as 28 percent; 12 of 27 as 22 percent).",
+    "snippet": "Refractory | 9 (28%) | 12 (22%) | 1 (25%) | 0 (0%) | ",
+    "anchor": "Table 2, Epilepsy control row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID37638552_Bebin2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Conclusion: EEG-triggered preventive treatment did not improve cognition or adaptive behaviour at 24 months.",
+    "snippet": "preventative treatment with vigabatrin based on EEG epileptiform activity did not improve cognition (measured by the Bayley-III) or adaptive behaviors (measured by the Vineland-II) at 24 months of age.",
+    "anchor": "Conclusions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37638552_Bebin2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "NCBI efetch (pmc_bucket_fetch.py) returned a full JATS body on 2026-10-21; the PMC open-data bucket held no object for this record, so figures and the supplement could not be fetched.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}

@@ -1,0 +1,403 @@
+{
+ "schema_version": 2,
+ "pmid": "42481851",
+ "doi": "10.1038/s41591-026-04527-y",
+ "pmcid": "PMC13472884",
+ "receipt": "FTR-20261021-42481851-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Two open-label single-patient studies of individualized antisense therapy at two academic sites, with an industry-style discovery platform; SCN2A gain-of-function class; NOT WWOX EVIDENCE and not a repurposing study (a genetic medicine), included for its endpoint and external-control design."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "\"antisense oligonucleotide*\"[Title/Abstract] AND SCN2A[Title/Abstract]",
+    "count": 25,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "\"n-of-1\"[Title/Abstract] AND \"antisense\"[Title/Abstract] AND (epilep*[Title/Abstract] OR encephalopath*[Title/Abstract])",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 20,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42481851 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 20,
+   "references_screened": 19,
+   "references_with_doi": 19,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42481851_KimMcManus2026_PMC.xml",
+   "sha256": "eda796130cebea1ceb25e572b9a5ba7a9a6682d995d97e680b7105aad70e1005",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML; body, tables cell-wise, figure legends.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13472884/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "eda796130cebea1ceb25e572b9a5ba7a9a6682d995d97e680b7105aad70e1005"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42481851_r2/PMC13472884.1.pdf",
+   "sha256": "ea243155c25bf72138c02b9c8323b25000e82edc6fa35a58887603641fb48289",
+   "kind": "article_binary",
+   "note": "PMC open-data bucket PDF; source of the page renders.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13472884.1/PMC13472884.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/page_renders/PMID42481851/PMC13472884.1_p3-03.png",
+   "sha256": "ddace37be2fdeb794e55c388ddb177fc10eca829ef9e9ad7c0784a7c14157a05",
+   "kind": "figure",
+   "note": "Figure 1 (seizure counts) page, 300 dpi render; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm page render",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42481851_r2/PMC13472884.1.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 300 -f 3 -l 3 -png <pdf> <out>"
+    }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID42481851/PMC13472884.1_p4-04.png",
+   "sha256": "6911dc876d113af52dc63a86f99599f3e4f431d27d881e5d41803aa98369b446",
+   "kind": "figure",
+   "note": "Figure 2 (neurodevelopment and communication) page, 300 dpi render; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm page render",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42481851_r2/PMC13472884.1.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 300 -f 4 -l 4 -png <pdf> <out>"
+    }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID42481851/PMC13472884.1_p5-05.png",
+   "sha256": "17daeadfd1e7c86edfa02cf698ebe14c3bdf798d6fecc63636b911c78baf3bc0",
+   "kind": "figure",
+   "note": "Figure 3 (additional endpoints, patient 1) page, 300 dpi render; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm page render",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42481851_r2/PMC13472884.1.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 300 -f 5 -l 5 -png <pdf> <out>"
+    }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID42481851/PMC13472884.1_p6-06.png",
+   "sha256": "9e06f65e56be34b5427ce2cba8aa61071b7295ff2779ad23e5bd2fd781b214b1",
+   "kind": "figure",
+   "note": "Figure 4 (additional endpoints, patient 2) page, 300 dpi render; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm page render",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42481851_r2/PMC13472884.1.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 300 -f 6 -l 6 -png <pdf> <out>"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Both patients were treated in open-label single-patient studies with no concurrent control.",
+    "snippet": "Open-label, first-in-human, investigational individualized allele-selective ASO therapy demonstrates positive safety and efficacy in two patients with different causal GOF and mixed GOF/LOF SCN2A variants and phenotypes",
+    "anchor": "Discussion, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42481851_KimMcManus2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The predefined primary endpoint was the change in the countable motor seizure frequency at 12 and 24 months, analysed per patient with a generalised linear model.",
+    "snippet": "For both patients, primary endpoints were predefined as the change from baseline in countable motor seizure frequency at 12 and 24 months after ASO administration.",
+    "anchor": "Methods, Primary endpoints",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42481851_KimMcManus2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Patient 1 pre-treatment recording lasted 90 days; patient 2 only 42 days.",
+    "snippet": "Patient 1’s seizures were recorded consecutively for 90 days in the pre-ASO period and 744 days in the post-ASO period.",
+    "anchor": "Results, Primary outcomes: seizures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42481851_KimMcManus2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Patient 2 baseline recording lasted 42 days against 480 days after.",
+    "snippet": "Patient 2’s seizures were recorded consecutively for 42 days in the pre-ASO period and 480 days in the post-ASO period.",
+    "anchor": "Results, Primary outcomes: seizures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42481851_KimMcManus2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Patient 1 prespecified seizure test was not significant.",
+    "snippet": "The treatment effect was not statistically significant (β = −0.298, 95% CI = −0.846 to 0.249, P = 0.286).",
+    "anchor": "Results, Primary outcomes: seizures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42481851_KimMcManus2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Patient 2 prespecified seizure test reported an estimated 90 percent reduction.",
+    "snippet": "Seizures after initiation of ASO were significantly reduced by an estimated 90% in prespecified statistical analysis (β = −2.338, 95% CI = −3.021 to −1.655, P < 0.001).",
+    "anchor": "Results, Primary outcomes: seizures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42481851_KimMcManus2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In patient 2 a higher dose level went with slightly more seizures in the model.",
+    "snippet": "higher ASO dosing was associated with slightly increased seizures compared to lower ASO doses for this patient",
+    "anchor": "Results, Primary outcomes: seizures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42481851_KimMcManus2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocols were amended during treatment, regulator-driven, and endpoints were added after improvement.",
+    "snippet": "Later amendments incorporated additional outcome measures due to patient improvement and developmental skills gained (including gait).",
+    "anchor": "Methods, Patients and study design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42481851_KimMcManus2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "For patient 2, early amendments expanded the primary endpoints beyond seizures to motor and gastrointestinal domains.",
+    "snippet": "For Patient 2, additional early amendments expanded the primary endpoints beyond seizure frequency to include assessments of motor and gastrointestinal domains.",
+    "anchor": "Methods, Patients and study design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42481851_KimMcManus2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors acknowledge that the minimal clinically important difference is difficult to define in n-of-1 settings and rely on predefined individualised goals.",
+    "snippet": "These n = 1 trials required predefined individualized treatment goals to assess meaningful change based on the concept of the minimal clinically important difference (MCID), the smallest response considered clinically impactful",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42481851_KimMcManus2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Neurodevelopmental success was defined as exceeding the child's own baseline annual rate of gain, with pretreatment windows of 14 months or only 4 months, and none for one domain.",
+    "snippet": "Fourteen months of pretreatment data were used for cognitive and expressive language subscales; four months of pretreatment data were used for fine and gross motor subscales. No pretreatment data were available for the receptive language subscale.",
+    "anchor": "Figure 2 caption",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42481851_KimMcManus2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors write that the children met prespecified outcomes by exceeding their baseline annual rates of gain.",
+    "snippet": "Patients met prespecified outcomes by exceeding baseline annual rates of gain after treatment with ASOs.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42481851_KimMcManus2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion states a disease-modifying effect from the open-label results.",
+    "snippet": "improvement in neurodevelopmental outcomes with disease-modifying effect, offering an alternative treatment paradigm",
+    "anchor": "Discussion, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42481851_KimMcManus2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that long-term follow-up will inform durability.",
+    "snippet": "Long-term follow-up will further inform the durability of safety and efficacy findings.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42481851_KimMcManus2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No ASO-related serious adverse events; table lists events including a possibly related tic and a fall attributed to patient 3 in a two-patient study.",
+    "snippet": "No ASO-related adverse events or serious adverse events were reported in either patient (Table 2).",
+    "anchor": "Results, Safety",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42481851_KimMcManus2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 2 lists an adverse event for a patient labelled 3 in a study of two patients.",
+    "snippet": "Fall | 3 | Moderate | No | No | No",
+    "anchor": "Table 2",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42481851_KimMcManus2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Design pre-clinical gating in patient-derived neurons: allele selectivity by IC50 for each ASO.",
+    "snippet": "the ASO demonstrated 42-fold selectivity in patient 1 and 53-fold selectivity in patient 2, based on IC50 values for mutant versus wild-type transcripts.",
+    "anchor": "Methods, ASO discovery and design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42481851_KimMcManus2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Time to access: regulator research IND and institutional approval for patient 1 within months.",
+    "snippet": "Rush University IRB approval was received under compassionate use in May 2023, and consent and enrollment occurred in June 2023",
+    "anchor": "Methods, Patients and study design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42481851_KimMcManus2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A separate cohort analysis found 3 of 19 patients had a compatible SNP configuration.",
+    "snippet": "Sixteen percent (that is, three patients) in our cohort were identified as having the correct SNP configuration amenable to treatment with the same ASO initially designed for Patient 2",
+    "anchor": "Results, Additional potential patients",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42481851_KimMcManus2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 1: patient 1 daily seizure average was 2.2 before and between 1.3 and 2.8 across later dosing intervals; patient 2 was 2.0 before, 4.6 around a coronavirus infection at the start, 1.3 to 1.4 early, 4.1 and 3.1 in two later intervals and 0 in the last interval; the percentage of seizure-free days in patient 2 varied from about 3 to about 98 percent across visits.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1a interval averages above the bars: prestudy 2.2, then 1.3, 1.6, 1.4, 2.2, 2.0, 2.2, 2.8, 1.3, 1.8, 1.9, 1.3; green line phenytoin level falling from about 28 to about 7 across the first 170 days. Fig 1b: prestudy 2.0; 4.6 (spike near a labelled coronavirus infection at day 1); 1.3; 1.4; 1.4; 4.1; 3.1; 0 in the last interval. Fig 1c: percent of days without seizures about 3 prestudy and about 47, 65, 33, 58, 12, 46 and 98 at days 21, 77, 168, 253, 336, 434 and 490.",
+    "anchor": "Figure 1, page 3 render at 300 dpi",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID42481851/PMC13472884.1_p3-03.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 2: patient 1 annualised gain in the cognitive subscale was lower after treatment than before (about 10 against 3), the receptive-language and expressive-language gains at 18 months were smaller at 24 months, and communication T-score changes are shown for both patients.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2a annualised change in growth scale value: cognitive about 10 pretreatment and 3 at 24 months; expressive language none pre and about 4 post; receptive language about 10 post with no pretreatment bar; fine motor about -6 pre and 3 post; gross motor about -12 pre and 7 post. Fig 2b change from baseline for receptive language about 25 at 18 months and 20 at 24 months; expressive about 12 then 8. Fig 2c-d ORCA T-score changes; Fig 2e D-FIS total 43 at baseline, 29 at 6 months and 26 at 12 months for patient 2.",
+    "anchor": "Figure 2, page 4 render at 300 dpi",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID42481851/PMC13472884.1_p4-04.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 3: patient 1 behaviour scale scores were already similar at pre-treatment and baseline and fell after treatment; hyperactivity rose again between 12 and 24 months.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3a RBS-R: irritability 17 pretreatment, 18 baseline, about 1 at 12 and at 24 months; stereotypic behaviour 11, 11, 7, 4; hyperactivity/noncompliance 25, 26, 10, 15. Fig 3b stereotypic 9, 11, 4, 7 and self-injurious 7, 8, 2 and no 24-month bar. Fig 3c sensory profile total scores near the maximum at pretreatment and baseline and near the normal line at 12 and 24 months.",
+    "anchor": "Figure 3, page 5 render at 300 dpi",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID42481851/PMC13472884.1_p5-05.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 4: the panel labelled change from baseline equals the 12-month value minus the pretreatment value, not the baseline value; the large domestic and community declines and the fine-motor gain largely occurred between the pretreatment and baseline assessments, before any dose.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 4b raw scores pretreatment/baseline/12 months: domestic about 38/10/10, community 36/10/10, fine motor 37/53/57, receptive 66/64/67, interpersonal 63/59/65; Fig 4a bars (captioned change from baseline): domestic about -28, community -26, fine motor +20, receptive +1, interpersonal +2 - each equal to the 12-month value minus the pretreatment value. Fig 4e ABC-C pretreatment/baseline/12 months: irritability 27/23/17, social withdrawal 11/5/1, stereotypy 12/7/3, hyperactivity 31/20/20. Fig 4c-d Bristol stool ratings mostly 5 throughout with a sustained 5 and fewer 6 to 7 ratings after about day 77.",
+    "anchor": "Figure 4, page 6 render at 300 dpi",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID42481851/PMC13472884.1_p6-06.png",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13472884/fullTextXML returned HTTP 200 with a JATS body on 2026-10-21; the declared article_text artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}
