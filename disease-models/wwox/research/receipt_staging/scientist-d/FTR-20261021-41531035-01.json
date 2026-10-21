@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261021-41531035-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "41531035",
+  "doi": "10.1002/epi.70095"
+ },
+ "event_at": "2026-10-21T22:43:47Z",
+ "analysis_at": "2026-10-21T00:00:00Z",
+ "analysis_time_precision": "date_only",
+ "workflow": "scientist-d, ten-hour repurposing batch, task REPURP-10H-R4-D-20261021, branch task/repurp-r4-d; context_policy QUESTION_DRIVEN. Route: Europe PMC REST fullTextXML into the shared files/fulltext/; JATS body and tables read section by section from a text rendering; Both figures opened as native JPEGs; the supplement table of instrument suitability was read from the docx text but its nine embedded images were not opened, so supplementary is declared captions_only and depth partial. Locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts. Receipt staged for the integrator, not appended.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID41531035_LiogierDArdhuy2026_PMC_r2.xml",
+ "source_fingerprint": "f5ffc20a1c18f15db4aaa3b5ecd64f0c8f9ba7e41bf925089588b675b222092c",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "captions_only"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41531035.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "JATS text rendering read in full including Tables 1-4; Figures 1-2 inspected; supplementary Table S3 read from text, embedded images not opened."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

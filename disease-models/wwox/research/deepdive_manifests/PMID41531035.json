@@ -1,0 +1,340 @@
+{
+ "schema_version": 2,
+ "pmid": "41531035",
+ "doi": "10.1002/epi.70095",
+ "pmcid": "PMC13075603",
+ "receipt": "FTR-20261021-41531035-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Pre-competitive industry-and-academic consortium (the study was informed by a regulator innovation meeting) of CDKL5 deficiency disorder; baseline cross-sectional report of a 3-year longitudinal study; NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "CANDID[Title/Abstract] AND CDKL5[Title/Abstract]",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "CDKL5[Title/Abstract] AND (\"outcome measure*\"[Title/Abstract] OR \"clinical outcome assessment*\"[Title/Abstract]) AND (floor[Title/Abstract] OR feasib*[Title/Abstract])",
+    "count": 6,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 31,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41531035 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 31,
+   "references_screened": 24,
+   "references_with_doi": 24,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 7
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41531035_LiogierDArdhuy2026_PMC_r2.xml",
+   "sha256": "f5ffc20a1c18f15db4aaa3b5ecd64f0c8f9ba7e41bf925089588b675b222092c",
+   "kind": "article_text",
+   "note": "NCBI efetch JATS (via pmc_bucket_fetch.py).",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC13075603&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "f5ffc20a1c18f15db4aaa3b5ecd64f0c8f9ba7e41bf925089588b675b222092c"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41531035_r2/PMC13075603.1.pdf",
+   "sha256": "069c47a9bc9eb05a8e64ab494dd13f3f158709a4bd4e9e773e9dbb7c416c41e2",
+   "kind": "article_binary",
+   "note": "PMC open-data bucket PDF.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13075603.1/PMC13075603.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID41531035_r2/EPI-67-1703-g001.jpg",
+   "sha256": "875138a5c351b443bd1938a66a9d39a2e3caa075e4b8958a212d863bfbe5ebb5",
+   "kind": "figure",
+   "note": "Figure 2 of the PDF numbering (Vineland-3 growth scale values by age), native JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13075603.1/EPI-67-1703-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID41531035_r2/EPI-67-1703-g002.jpg",
+   "sha256": "ae8f9c9bea6d5e7596ea463d6126d3e777c66bd351d70ca87cfc7be8c47c0678",
+   "kind": "figure",
+   "note": "Figure 1 (28-day seizure counts by age group), native JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13075603.1/EPI-67-1703-g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID41531035_r2/EPI-67-1703-s001.docx",
+   "sha256": "24d2ce18bcc620c0d5d6b77b8010ed90f8ff366e89c806b1a2383ad14dc4ccb4",
+   "kind": "supplement_binary",
+   "note": "Supplementary tables and figures (docx with nine embedded images).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13075603.1/EPI-67-1703-s001.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID41531035_r2/EPI-67-1703-s001.txt",
+   "sha256": "e20994ecd39437f866a32ba798df13bf283b18dbafdb0f1ba20ee6dd0cf8671b",
+   "kind": "supplement_text",
+   "note": "Text of the supplement by docx_to_text.py; embedded images not opened.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "docx_to_text",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID41531035_r2/EPI-67-1703-s001.docx",
+    "extractor": {
+     "name": "framework/scripts/docx_to_text.py",
+     "version": "repository main 5dd4283f",
+     "call": "python3 framework/scripts/docx_to_text.py --out <txt> <docx>"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The study was informed by a regulator innovation meeting and is described as the largest dataset for motor, cognitive and behavioural measures in this disorder.",
+    "snippet": "The CANDID study is a large observational CDD trial conducted to industry quality standards and informed by a Critical Path Innovation Meeting with the US Food and Drug Administration in 2021.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41531035_LiogierDArdhuy2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Gross motor 88-item scores were at floor for crawling, standing and walking up to age 12 and the instrument was discontinued at later visits.",
+    "snippet": "Up to age 12 years, most of the GMFM scores were at floor for the crawling, standing, and walking GMFM levels.",
+    "anchor": "Results, Gross Motor Function Measure-88",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41531035_LiogierDArdhuy2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The instrument had operational limits: a refused task scores zero and later tasks are not evaluated.",
+    "snippet": "For example, refusal to perform a task results in a “0” score, and subsequent tasks are not evaluated, even if the child can often perform them.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41531035_LiogierDArdhuy2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Bayley-4 growth scale values showed no floor or ceiling but scores stayed in the same range across age groups.",
+    "snippet": "Analyses of raw scores and GSVs showed no floor or ceiling effects. However, scores remained within the same range across age groups, indicating limited skills development but no regression",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41531035_LiogierDArdhuy2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Vineland-3 written, domestic and community subdomains showed floor effects; eight others had usable granularity.",
+    "snippet": "The most impacted subdomains were written, domestic, and community, all of which showed floor effects.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41531035_LiogierDArdhuy2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Growth scale values are not age-normed and reflect raw developmental progress, so they suit monitoring change over time or after treatment.",
+    "snippet": "Unlike scaled or composite scores, GSVs are not age‐normed, meaning they reflect raw developmental progress rather than a comparison to age‐matched peers.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41531035_LiogierDArdhuy2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No regression was seen in Vineland, Bayley or quality-of-life scores with age in this cross-sectional cohort; this must be confirmed longitudinally.",
+    "snippet": "This observation, however, will need to be confirmed with subsequent longitudinal data over the planned 3 years.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41531035_LiogierDArdhuy2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizure counts are very high: median 25 to 100 per 28 days across age groups; six patients seizure-free, none before 3 years.",
+    "snippet": "The median seizure count ranged from 25 to 100 seizures within 28 days, corresponding to 1–5 daily.",
+    "anchor": "Results, Seizures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41531035_LiogierDArdhuy2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizure diaries were available for 82 of 111 patients.",
+    "snippet": "Seizure diaries from 82 patients were available",
+    "anchor": "Results, Seizures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41531035_LiogierDArdhuy2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Quality-of-life scores are caregiver-reported and the independence domain was lowest.",
+    "snippet": "The QI‐Disability questionnaire revealed a significant impact on overall QOL, especially in the independence component",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41531035_LiogierDArdhuy2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplement Table S3: gross motor 88-item scale judged unsuitable for trials; Bayley-4, Vineland-3 and other scales judged suitable at baseline.",
+    "snippet": "Floor effects were observed in all age groups for Crawling, Standing and Walking dimensions, more specifically for the youngest age group where 62-95% of the participants were at floor",
+    "anchor": "Supplementary Table S3",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41531035_r2/EPI-67-1703-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplement Table S3: a cerebral visual impairment range scale showed clear impairment and was judged an exploratory tool.",
+    "snippet": "Mean scores around 40% (i.e. clear CVI). High inter-subject variability. Exploratory tool.",
+    "anchor": "Supplementary Table S3",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41531035_r2/EPI-67-1703-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A seizure honeymoon at 1 or 2 years does not usually coincide with developmental improvement.",
+    "snippet": "Many children experience a seizure “honeymoon” period at 1 or 2 years of age, which typically lasts 2–18 months and does not usually coincide with development improvement.",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41531035_LiogierDArdhuy2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The study is funded by a precompetitive consortium of seven companies.",
+    "snippet": "This work was funded by the CANDID precompetitive consortium (i.e., CANDID partners)",
+    "anchor": "Funding information",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41531035_LiogierDArdhuy2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Cerebral visual impairment severity was not considered when interpreting motor or Bayley scores, and 26 percent of seizure diaries were missing after a year.",
+    "snippet": "We acknowledge that CVI severity was not considered when interpreting GMFM or Bayley‐4 scores.",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41531035_LiogierDArdhuy2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 1 (28-day seizure counts): medians about 48 (0-2 y), 97 (3-5 y), 69 (6-12 y), 26 (13+ y) with outliers to 530 and interquartile ranges of 20 to over 100.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Boxplot of seizure count per 28 days by age group: medians about 48, 97, 69 and 26; interquartile boxes about 30-98, 22-120, 27-152 and 13-64; outliers up to about 530 in 3-5 years and 360 in 13+ years.",
+    "anchor": "Figure 1",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41531035_r2/EPI-67-1703-g002.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 2 (Vineland growth scale values by chronological age): eleven subdomain panels with individual points and fitted lines; written, domestic and community lie near the bottom of the scale and most others rise slowly with age.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Eleven panels (receptive and expressive language, written, personal care, domestic, community, interpersonal relationship, play and leisure, coping skills, fine motor, gross motor) with GSV about 0-160 on the y axis against chronological age 0-28 years; fitted blue lines rise gently in receptive language, interpersonal, fine and gross motor and are near flat in written, domestic and community.",
+    "anchor": "Figure 2",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41531035_r2/EPI-67-1703-g001.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "NCBI efetch (pmc_bucket_fetch.py) returned a full JATS body on 2026-10-21; this is the declared article_text artefact.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}
