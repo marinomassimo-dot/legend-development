@@ -1,0 +1,427 @@
+{
+ "schema_version": 2,
+ "pmid": "42875792",
+ "doi": "10.1186/s12967-026-08708-8",
+ "receipt": "FTR-20261021-42875792-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named and deduplicated by the Orchestrator's selection file; the per-paper M0 packet and receipt status were run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "The reading is a primary-evidence read of a NOT WWOX EVIDENCE paper; the dossier is the analysis note section, no WWOX commit candidate is implied."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No consolidated baseline claim is narrowed or reversed by this reading; a blind audit is declared OWED where a candidate proposes it."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Not requested; discovery leads are staged separately if any."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a candidate card; BLOCK-1 holds, class level only."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A leukodystrophy iPSC laboratory at Vanderbilt University Medical Center and the University of Colorado Anschutz (from the ethics statement and the sequencing core named), with patient collaborators; iPSC lines from a small number of patients. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "HIKESHI AND leukodystrophy",
+    "count": 7,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "proteasome inhibitor AND missense AND leukodystrophy",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "carfilzomib OR marizomib AND oligodendrocyte",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "PubMed counts, dated; a zero from a title/abstract query licenses 'no paper is indexed', never 'this was never measured' (D-37)."
+ },
+ "multihop": {
+  "references_enumerated": 120,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the JATS; none is WWOX-related."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42875792 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-21 via PubMed efetch for PMID 42875792: publication types ['Journal Article']; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 120,
+   "references_screened": 116,
+   "references_with_doi": 116,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42875792_RathanKumar2026_PMC13670827.xml",
+   "sha256": "4c16ca12f9cf10ad23f2236a840865c11118c933e033d23802f120e015c3d88d",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC13670827: whole article; every text locator is matched against it.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13670827/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "4c16ca12f9cf10ad23f2236a840865c11118c933e033d23802f120e015c3d88d",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID42875792/12967_2026_8708_Fig1_HTML.webp",
+   "sha256": "d717799737a3c9695d634c1e3cd3b31399db70209e266b9e5206b8fc08eda15a",
+   "kind": "figure",
+   "note": "Figure 1 image (WebP) from the Europe PMC supplementaryFiles container, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13670827/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "d717799737a3c9695d634c1e3cd3b31399db70209e266b9e5206b8fc08eda15a",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID42875792/12967_2026_8708_Fig2_HTML.webp",
+   "sha256": "61b664224c8ccb2df68cf4056204624c675ab7892ecf7d04ce177b468aebacad",
+   "kind": "figure",
+   "note": "Figure 2 image (WebP) from the Europe PMC supplementaryFiles container, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13670827/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "61b664224c8ccb2df68cf4056204624c675ab7892ecf7d04ce177b468aebacad",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID42875792/12967_2026_8708_Fig3_HTML.webp",
+   "sha256": "daec3a12f29e8159a81891ecd801b7330350f60ecc71cd687671628d10b9ddca",
+   "kind": "figure",
+   "note": "Figure 3 image (WebP) from the Europe PMC supplementaryFiles container, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13670827/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "daec3a12f29e8159a81891ecd801b7330350f60ecc71cd687671628d10b9ddca",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID42875792/12967_2026_8708_Fig4_HTML.webp",
+   "sha256": "1adf6876509ffa1f1606e3cf541613e03a9e56bda9a641636b9bfda78ee3d2db",
+   "kind": "figure",
+   "note": "Figure 4 image (WebP) from the Europe PMC supplementaryFiles container, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13670827/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "1adf6876509ffa1f1606e3cf541613e03a9e56bda9a641636b9bfda78ee3d2db",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID42875792/12967_2026_8708_Fig5_HTML.webp",
+   "sha256": "8d3276bb20f24e5e4e1791198f6655b509b2e1ca8e22c8d88fd425be0e1d80ea",
+   "kind": "figure",
+   "note": "Figure 5 image (WebP) from the Europe PMC supplementaryFiles container, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13670827/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "8d3276bb20f24e5e4e1791198f6655b509b2e1ca8e22c8d88fd425be0e1d80ea",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID42875792/12967_2026_8708_MOESM3_ESM.tif",
+   "sha256": "40d9f4786b8e91c9e2dc1077c35316e346082a3550f14e9adc36bffd79d6bb76",
+   "kind": "supplement_binary",
+   "note": "Supplementary Figure 3 TIFF as served (541 by 495 pixels).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13670827/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "40d9f4786b8e91c9e2dc1077c35316e346082a3550f14e9adc36bffd79d6bb76",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID42875792/SuppFig3_render.png",
+   "sha256": "17389413eb456fd4e9019c6a5dc1b41b487af44cb45343841bcd70b68b715d5d",
+   "kind": "figure",
+   "note": "Supplementary Figure 3 TIFF rendered to PNG at its native 541 by 495 pixels (the file itself is small), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID42875792/12967_2026_8708_MOESM3_ESM.tif",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.26.5",
+     "call": "page.get_pixmap(dpi=110) page 1",
+     "join": ""
+    },
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "17389413eb456fd4e9019c6a5dc1b41b487af44cb45343841bcd70b68b715d5d"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE (HIKESHI). In patient-derived iPSC extracts HIKESHI protein is barely detectable in homozygous cells and about a quarter to a third of control in heterozygous relatives, while HSP70, HSP90, GRP78 and HSP40 do not change.",
+    "snippet": "Immunoblotting for HIKESHI and HSPs (Fig. 1A) demonstrated a lack of detectable HIKESHI protein in HIKHOM extracts from iPSCs",
+    "anchor": "Results, first section, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42875792_RathanKumar2026_PMC13670827.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HIKESHI V54L (recessive missense, leukodystrophy) patient-derived iPSC lines differentiated to mixed neural cultures with oligodendrocytes (90 days, nanofiber plating), treated with two proteasome inhibitors every 48 hours; NOT a WWOX system",
+     "genotype": "HIKESHI V54L homozygous (HIKHOM), heterozygous relatives (HIKHet), unrelated controls (CON)",
+     "endpoint": "HIKESHI protein by Western blot, nuclear HSP70 after heat shock, MBP integrated intensity, Olig2/DAPI fraction, nuclear area and circularity"
+    }
+   },
+   {
+    "proposition": "Figure 1B read: HIKESHI about 100 percent of control for controls, about 30 for heterozygous, about 3 for homozygous (n = 4 lines each, per-line dots); Figure 1C: the four heat-shock proteins do not differ between genotypes.",
+    "snippet": "Immunoblotting quantification demonstrates a lack of detectable HIKESHI protein in HIKHOM iPSC cells",
+    "anchor": "Figure 1B-C (HIKESHI and heat-shock protein quantification)",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID42875792/12967_2026_8708_Fig1_HTML.webp",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "HIKESHI V54L (recessive missense, leukodystrophy) patient-derived iPSC lines differentiated to mixed neural cultures with oligodendrocytes (90 days, nanofiber plating), treated with two proteasome inhibitors every 48 hours; NOT a WWOX system",
+     "genotype": "HIKESHI V54L homozygous (HIKHOM), heterozygous relatives (HIKHet), unrelated controls (CON)",
+     "endpoint": "HIKESHI protein by Western blot, nuclear HSP70 after heat shock, MBP integrated intensity, Olig2/DAPI fraction, nuclear area and circularity"
+    },
+    "qualifies": "entries[0]",
+    "qualifies_needle": "Immunoblotting for HIKESHI and HSPs (Fig. 1A)"
+   },
+   {
+    "proposition": "The authors attribute the loss to degradation, with the transcript unchanged taken from a previous report and not measured here: mRNA is cited ('It was previously reported that the relative expression level of HIKESHI mRNA is unchanged'), and the proteasome route is a hypothesis tested only by the inhibitor treatment.",
+    "snippet": "It was previously reported that the relative expression level of HIKESHI mRNA is unchanged across CON, HIKHet, and HIKHOM genotypes",
+    "anchor": "Results, Carfilzomib treatment, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42875792_RathanKumar2026_PMC13670827.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HIKESHI V54L (recessive missense, leukodystrophy) patient-derived iPSC lines differentiated to mixed neural cultures with oligodendrocytes (90 days, nanofiber plating), treated with two proteasome inhibitors every 48 hours; NOT a WWOX system",
+     "genotype": "HIKESHI V54L homozygous (HIKHOM), heterozygous relatives (HIKHet), unrelated controls (CON)",
+     "endpoint": "HIKESHI protein by Western blot, nuclear HSP70 after heat shock, MBP integrated intensity, Olig2/DAPI fraction, nuclear area and circularity"
+    }
+   },
+   {
+    "proposition": "Protein recovery by the inhibitor class is partial and from a single dose-time series: about 20 percent of control at 100 nM for 48 hours in homozygous cells.",
+    "snippet": "Immunoblotting found restoration of HIKESHI protein to around 20% of CON cell amount at 100 nM carfilzomib treatment for 48 h.",
+    "anchor": "Results, Carfilzomib treatment, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42875792_RathanKumar2026_PMC13670827.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HIKESHI V54L (recessive missense, leukodystrophy) patient-derived iPSC lines differentiated to mixed neural cultures with oligodendrocytes (90 days, nanofiber plating), treated with two proteasome inhibitors every 48 hours; NOT a WWOX system",
+     "genotype": "HIKESHI V54L homozygous (HIKHOM), heterozygous relatives (HIKHet), unrelated controls (CON)",
+     "endpoint": "HIKESHI protein by Western blot, nuclear HSP70 after heat shock, MBP integrated intensity, Olig2/DAPI fraction, nuclear area and circularity"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure 3A read (rendered from the supplementary image): HIKESHI as percent of control in homozygous cells rises to about 24 percent at 100 nM (48 h), about 18 and 18.5 at 1 and 10 micromolar, about 10 at 24 h and about 11 at 10 micromolar 72 h; HSP70 rises from about 100 to about 350 percent of control at 24 h with 10 micromolar, i.e. a stress-response induction that confounds an HSP70-based read-out. Single series, no replicates drawn.",
+    "snippet": "Preliminary data treating HIKHOM cells at 24, 48, and 72 h across concentrations from 1 nM to 10",
+    "anchor": "Supplementary Figure 3A (dose-time series, HIKESHI and HSP70)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42875792/SuppFig3_render.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "HIKESHI V54L (recessive missense, leukodystrophy) patient-derived iPSC lines differentiated to mixed neural cultures with oligodendrocytes (90 days, nanofiber plating), treated with two proteasome inhibitors every 48 hours; NOT a WWOX system",
+     "genotype": "HIKESHI V54L homozygous (HIKHOM), heterozygous relatives (HIKHet), unrelated controls (CON)",
+     "endpoint": "HIKESHI protein by Western blot, nuclear HSP70 after heat shock, MBP integrated intensity, Olig2/DAPI fraction, nuclear area and circularity"
+    },
+    "qualifies": "entries[3]",
+    "qualifies_needle": "Immunoblotting found restoration of HIKESHI p"
+   },
+   {
+    "proposition": "The inhibitor itself induces HSP70, so an HSP70 change cannot be read as rescue; the authors say so and use nuclear localisation after heat shock as the function read-out.",
+    "snippet": "Therefore, this increase could be a result of the normal cell response rather than restoration of HIKESHI.",
+    "anchor": "Results, Carfilzomib treatment, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42875792_RathanKumar2026_PMC13670827.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HIKESHI V54L (recessive missense, leukodystrophy) patient-derived iPSC lines differentiated to mixed neural cultures with oligodendrocytes (90 days, nanofiber plating), treated with two proteasome inhibitors every 48 hours; NOT a WWOX system",
+     "genotype": "HIKESHI V54L homozygous (HIKHOM), heterozygous relatives (HIKHet), unrelated controls (CON)",
+     "endpoint": "HIKESHI protein by Western blot, nuclear HSP70 after heat shock, MBP integrated intensity, Olig2/DAPI fraction, nuclear area and circularity"
+    }
+   },
+   {
+    "proposition": "Function read-out 1: nuclear HSP70 after heat shock is restored by the inhibitor, shown as representative images only (Supplementary Figure 3B), with no quantification of the fraction of cells.",
+    "snippet": "However, carfilzomib treatment restored nuclear localization of HSP70.",
+    "anchor": "Results, Carfilzomib treatment, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42875792_RathanKumar2026_PMC13670827.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HIKESHI V54L (recessive missense, leukodystrophy) patient-derived iPSC lines differentiated to mixed neural cultures with oligodendrocytes (90 days, nanofiber plating), treated with two proteasome inhibitors every 48 hours; NOT a WWOX system",
+     "genotype": "HIKESHI V54L homozygous (HIKHOM), heterozygous relatives (HIKHet), unrelated controls (CON)",
+     "endpoint": "HIKESHI protein by Western blot, nuclear HSP70 after heat shock, MBP integrated intensity, Olig2/DAPI fraction, nuclear area and circularity"
+    }
+   },
+   {
+    "proposition": "Function read-out 2: myelin protein and oligodendrocyte-lineage fraction in homozygous cultures improve with 30 days of inhibitor treatment (days 30 to 60), with per-line replicates (n = 3 lines, 13 to 25 images each).",
+    "snippet": "Carfilzomib-treated HIKHOM cells had a significant increase in MBP+ protein compared to Vehicle-treated HIKHOM cells (Fig. 4B).",
+    "anchor": "Results, Carfilzomib treatment, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42875792_RathanKumar2026_PMC13670827.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HIKESHI V54L (recessive missense, leukodystrophy) patient-derived iPSC lines differentiated to mixed neural cultures with oligodendrocytes (90 days, nanofiber plating), treated with two proteasome inhibitors every 48 hours; NOT a WWOX system",
+     "genotype": "HIKESHI V54L homozygous (HIKHOM), heterozygous relatives (HIKHet), unrelated controls (CON)",
+     "endpoint": "HIKESHI protein by Western blot, nuclear HSP70 after heat shock, MBP integrated intensity, Olig2/DAPI fraction, nuclear area and circularity"
+    }
+   },
+   {
+    "proposition": "Figure 4B-C read: MBP integrated intensity about 2.4 million for vehicle homozygous against about 16 million treated and about 11 million for vehicle control; Olig2/DAPI about 0.11 vehicle against about 0.23 treated and about 0.24 control; the homozygous vehicle bar is the lowest of all and its error bar is tiny; control cultures also move (treated control MBP about 16 million).",
+    "snippet": "30-day Carfilzomib Treatment results in improvement of physiology and myelination of HIKHOM oligodendrocytes.",
+    "anchor": "Figure 4B-C (MBP and Olig2 fraction)",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID42875792/12967_2026_8708_Fig4_HTML.webp",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "HIKESHI V54L (recessive missense, leukodystrophy) patient-derived iPSC lines differentiated to mixed neural cultures with oligodendrocytes (90 days, nanofiber plating), treated with two proteasome inhibitors every 48 hours; NOT a WWOX system",
+     "genotype": "HIKESHI V54L homozygous (HIKHOM), heterozygous relatives (HIKHet), unrelated controls (CON)",
+     "endpoint": "HIKESHI protein by Western blot, nuclear HSP70 after heat shock, MBP integrated intensity, Olig2/DAPI fraction, nuclear area and circularity"
+    },
+    "qualifies": "entries[7]",
+    "qualifies_needle": "Carfilzomib-treated HIKHOM cells had a signif"
+   },
+   {
+    "proposition": "The exposure window is narrow and toxic outside it: days 60 to 90 or 30 to 90 of treatment reduced or abolished Olig2-positive cells and MBP in all genotypes, including controls.",
+    "snippet": "60 days of treatment from Day 30–90 appeared toxic and resulted in lack of detectable Olig2+ cells and MBP+ cells.",
+    "anchor": "Results, Carfilzomib treatment, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42875792_RathanKumar2026_PMC13670827.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HIKESHI V54L (recessive missense, leukodystrophy) patient-derived iPSC lines differentiated to mixed neural cultures with oligodendrocytes (90 days, nanofiber plating), treated with two proteasome inhibitors every 48 hours; NOT a WWOX system",
+     "genotype": "HIKESHI V54L homozygous (HIKHOM), heterozygous relatives (HIKHet), unrelated controls (CON)",
+     "endpoint": "HIKESHI protein by Western blot, nuclear HSP70 after heat shock, MBP integrated intensity, Olig2/DAPI fraction, nuclear area and circularity"
+    }
+   },
+   {
+    "proposition": "Second inhibitor (brain-penetrant by the authors' account): same pattern at day 30 to 60, with MBP about 8 million and Olig2/DAPI about 0.29 in treated homozygous cells (Figure 5B-C read), and toxicity with the 60-day courses.",
+    "snippet": "The 60-day marizomib treatment appeared to be less toxic than the 60-day carfilzomib treatment.",
+    "anchor": "Results, Marizomib treatment, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42875792_RathanKumar2026_PMC13670827.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HIKESHI V54L (recessive missense, leukodystrophy) patient-derived iPSC lines differentiated to mixed neural cultures with oligodendrocytes (90 days, nanofiber plating), treated with two proteasome inhibitors every 48 hours; NOT a WWOX system",
+     "genotype": "HIKESHI V54L homozygous (HIKHOM), heterozygous relatives (HIKHet), unrelated controls (CON)",
+     "endpoint": "HIKESHI protein by Western blot, nuclear HSP70 after heat shock, MBP integrated intensity, Olig2/DAPI fraction, nuclear area and circularity"
+    }
+   },
+   {
+    "proposition": "Specificity is not shown: the authors state proteasome inhibitors alter many proteins and specificity to HIKESHI rescue seems unlikely, and ubiquitination of HIKESHI was not measured.",
+    "snippet": "Proteasome inhibitors would be expected to alter levels of many proteins and specificity of these drugs to only Hikeshi rescue seems unlikely.",
+    "anchor": "Discussion, paragraph 8",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42875792_RathanKumar2026_PMC13670827.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HIKESHI V54L (recessive missense, leukodystrophy) patient-derived iPSC lines differentiated to mixed neural cultures with oligodendrocytes (90 days, nanofiber plating), treated with two proteasome inhibitors every 48 hours; NOT a WWOX system",
+     "genotype": "HIKESHI V54L homozygous (HIKHOM), heterozygous relatives (HIKHet), unrelated controls (CON)",
+     "endpoint": "HIKESHI protein by Western blot, nuclear HSP70 after heat shock, MBP integrated intensity, Olig2/DAPI fraction, nuclear area and circularity"
+    }
+   },
+   {
+    "proposition": "A heterozygous phenotype appears in culture (fewer Olig2 cells, less MBP) although carriers are healthy; the authors list culture stress and genomic background and could not make an isogenic line because of pseudogenes.",
+    "snippet": "We attempted to generate isogenic iPSC to further circumvent this issue but the presence of several HIKESHI pseudogenes has thwarted specific CRISPR based targeting.",
+    "anchor": "Discussion, paragraph 11",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42875792_RathanKumar2026_PMC13670827.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HIKESHI V54L (recessive missense, leukodystrophy) patient-derived iPSC lines differentiated to mixed neural cultures with oligodendrocytes (90 days, nanofiber plating), treated with two proteasome inhibitors every 48 hours; NOT a WWOX system",
+     "genotype": "HIKESHI V54L homozygous (HIKHOM), heterozygous relatives (HIKHet), unrelated controls (CON)",
+     "endpoint": "HIKESHI protein by Western blot, nuclear HSP70 after heat shock, MBP integrated intensity, Olig2/DAPI fraction, nuclear area and circularity"
+    }
+   },
+   {
+    "proposition": "Myelin quality was not assessed (electron microscopy failed on these cultures), and the authors suggest, from the toxicity limits, that any use would be a short intervention rather than chronic.",
+    "snippet": "we speculate that any treatment for HAL may be most efficacious and well tolerated as a short-term intervention during febrile illness or infections",
+    "anchor": "Discussion, paragraph 9",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42875792_RathanKumar2026_PMC13670827.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HIKESHI V54L (recessive missense, leukodystrophy) patient-derived iPSC lines differentiated to mixed neural cultures with oligodendrocytes (90 days, nanofiber plating), treated with two proteasome inhibitors every 48 hours; NOT a WWOX system",
+     "genotype": "HIKESHI V54L homozygous (HIKHOM), heterozygous relatives (HIKHet), unrelated controls (CON)",
+     "endpoint": "HIKESHI protein by Western blot, nuclear HSP70 after heat shock, MBP integrated intensity, Olig2/DAPI fraction, nuclear area and circularity"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST returned the whole article as fullTextXML for PMC13670827 (198 kB, 2026-10-21; PMC idconv maps the PMID to PMC13670827); five figures and seven supplements from the supplementaryFiles container.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a figure legend or an inspected figure."
+ }
+}

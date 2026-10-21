@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261021-42875792-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "42875792",
+  "doi": "10.1186/s12967-026-08708-8"
+ },
+ "event_at": "2026-10-21T22:45:01Z",
+ "analysis_at": "2026-10-21T22:45:01Z",
+ "analysis_time_precision": "second",
+ "workflow": "ad-hoc primary read by scientist-a under REPURP-10H-R1-A-20261021 (adjacent search): paper_packet claim, question written first, Europe PMC fullTextXML, five main figures opened as images, Supplementary Figure 3 opened; the other four supplementary images, a spreadsheet and a PDF not opened",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID42875792_RathanKumar2026_PMC13670827.xml",
+ "source_fingerprint": "4c16ca12f9cf10ad23f2236a840865c11118c933e033d23802f120e015c3d88d",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "captions_only",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42875792.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
