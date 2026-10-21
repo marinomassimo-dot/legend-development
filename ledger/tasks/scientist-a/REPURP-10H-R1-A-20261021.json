@@ -30,7 +30,7 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "CLAIMED",
+ "CURRENT_STATE": "COMPLETE",
  "assigned_on": "2026-10-21",
  "TASK_ACK": {
   "actor": "scientist-a",
@@ -47,7 +47,119 @@
   "reading_claims": [],
   "note": "Reading claims taken per paper with paper_packet.py claim."
  },
- "DEFAULTS_TAKEN": [],
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "Europe PMC supplementaryFiles and the PMC bucket carry figure images but not always supplementary documents readable on this host (binary .doc, tif, xlsx).",
+   "default": "Read all main figures as images; declare supplementary as not_read or captions_only; do not circumvent.",
+   "why_safe": "Understates coverage; no claim rests on an unread supplement.",
+   "what_would_have_been_different": "Supplementary Figures would have been opened; some selectivity-versus-wild-type claims are therefore marked unverified here."
+  },
+  {
+   "condition": "Task asked SOURCE_FIRST after reading the three dossiers FIRST.",
+   "default": "Read the dossiers first as instructed and declare in the self-evaluation that the context was QUESTION_DRIVEN in effect.",
+   "why_safe": "Disclosed, not hidden.",
+   "what_would_have_been_different": "A fresh-context first pass would have been SOURCE_FIRST."
+  },
+  {
+   "condition": "Two adjacent candidates (30232228, 25284778) had no lawful body.",
+   "default": "Parked with the cascade run (PMC idconv, Europe PMC, publisher request returning 403/301), no circumvention.",
+   "why_safe": "Access controls respected.",
+   "what_would_have_been_different": "An operator PDF would add the C180Y inhibitor arm."
+  },
+  {
+   "condition": "Receipts cannot be recorded in a parallel wave.",
+   "default": "Staged under research/receipt_staging/scientist-a/ for the Orchestrator.",
+   "why_safe": "Brief M4.",
+   "what_would_have_been_different": "None."
+  }
+ ],
  "STOP_LOG": [],
- "MILESTONE_LOG": []
+ "MILESTONE_LOG": [
+  {
+   "at": "2026-10-21",
+   "milestone": "all selected, HELD and adjacent readings done; note, verdicts, answers, commit candidate, self-eval written",
+   "staged_receipts": [
+    "FTR-20261021-29449567-01",
+    "FTR-20261021-29785012-01",
+    "FTR-20261021-30266908-01",
+    "FTR-20261021-31402619-01",
+    "FTR-20261021-32023956-01",
+    "FTR-20261021-33914734-01",
+    "FTR-20261021-34649609-01",
+    "FTR-20261021-38378758-01",
+    "FTR-20261021-38396641-01",
+    "FTR-20261021-38731820-01",
+    "FTR-20261021-38740822-01",
+    "FTR-20261021-39216838-01",
+    "FTR-20261021-40485335-01",
+    "FTR-20261021-41178115-01",
+    "FTR-20261021-42157447-01",
+    "FTR-20261021-42268630-01",
+    "FTR-20261021-42587736-02",
+    "FTR-20261021-42650175-02",
+    "FTR-20261021-42875792-01"
+   ],
+   "manifests_pass": [
+    "29449567",
+    "29785012",
+    "30266908",
+    "31402619",
+    "32023956",
+    "33914734",
+    "34649609",
+    "38378758",
+    "38396641",
+    "38731820",
+    "38740822",
+    "39216838",
+    "40485335",
+    "41178115",
+    "42157447",
+    "42268630",
+    "42587736",
+    "42650175",
+    "42875792"
+   ]
+  }
+ ],
+ "WAVE_1_RESULT": {
+  "DEFAULTS_TAKEN": [
+   {
+    "condition": "Europe PMC supplementaryFiles and the PMC bucket carry figure images but not always supplementary documents readable on this host (binary .doc, tif, xlsx).",
+    "default": "Read all main figures as images; declare supplementary as not_read or captions_only; do not circumvent.",
+    "why_safe": "Understates coverage; no claim rests on an unread supplement.",
+    "what_would_have_been_different": "Supplementary Figures would have been opened; some selectivity-versus-wild-type claims are therefore marked unverified here."
+   },
+   {
+    "condition": "Task asked SOURCE_FIRST after reading the three dossiers FIRST.",
+    "default": "Read the dossiers first as instructed and declare in the self-evaluation that the context was QUESTION_DRIVEN in effect.",
+    "why_safe": "Disclosed, not hidden.",
+    "what_would_have_been_different": "A fresh-context first pass would have been SOURCE_FIRST."
+   },
+   {
+    "condition": "Two adjacent candidates (30232228, 25284778) had no lawful body.",
+    "default": "Parked with the cascade run (PMC idconv, Europe PMC, publisher request returning 403/301), no circumvention.",
+    "why_safe": "Access controls respected.",
+    "what_would_have_been_different": "An operator PDF would add the C180Y inhibitor arm."
+   },
+   {
+    "condition": "Receipts cannot be recorded in a parallel wave.",
+    "default": "Staged under research/receipt_staging/scientist-a/ for the Orchestrator.",
+    "why_safe": "Brief M4.",
+    "what_would_have_been_different": "None."
+   }
+  ],
+  "STOP_LOG": [],
+  "parked": [
+   "30232228",
+   "25284778"
+  ],
+  "blocked_not_opened": "R1 BLOCKED rows excluded by the contract",
+  "owed_audits": [
+   "PB-4 narrowing",
+   "42157447 Figures 6 and 8 text-panel",
+   "38731820 Figure 6 N",
+   "32023956 Figure 1B correlation"
+  ]
+ }
 }
