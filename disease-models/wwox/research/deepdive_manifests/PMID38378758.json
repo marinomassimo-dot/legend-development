@@ -226,7 +226,7 @@
     }
    },
    {
-    "proposition": "The recombinant read is independent of endogenous protein because the endogenous protein is below detection in these cells.",
+    "proposition": "The authors could not detect endogenous Parkin in the cells and write that the recombinant read is LIKELY independent of endogenous Parkin; this is the authors' hedged inference from non-detection, not an established independence.",
     "snippet": "As we were unable to detect endogenous Parkin in the cells (Supplementary Fig. 1D), measurement of the cellular abundance of recombinant Parkin variants is likely independent of endogenous Parkin.",
     "anchor": "Results, A multiplexed assay for Parkin variant abundance, paragraph 3",
     "surface": "body",
@@ -236,10 +236,25 @@
      "system": "Parkin (PRKN) variants as N-terminal GFP fusions, IRES-mCherry, single-copy Tet-on landing pad in HEK293T cells; library-wide flow cytometry with proteasome/autophagy inhibitors, temperature shifts and a small-molecule Parkin activator; ClinVar and gnomAD annotation; NOT a WWOX system",
      "genotype": "Parkin missense and nonsense variants (9,219 of 9,300 possible); no WWOX",
      "endpoint": "GFP:mCherry abundance score and flow profiles of the whole library"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38378758.json",
+     "entry": 1,
+     "receipt": "FTR-20261021-38378758-01",
+     "what_changed": "OVERSHOOT repaired: the hedge 'likely' is restored. Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+      "triple": 1,
+      "audited_on": "2026-10-22"
+     }
     }
    },
    {
-    "proposition": "A destabilised disease variant (R42P) is reduced about 10-fold in abundance yet remains active when overexpressed, so the pathogenicity of that variant is linked to its low abundance: per-molecule function intact, quantity the lesion.",
+    "proposition": "The authors attribute the R42P result (about ten-fold low abundance, active when overexpressed in one mitophagy read-out) LIKELY to overexpression and say it SUGGESTS that the pathogenicity of that variant is linked to its low abundance. 'Per-molecule function intact' rests on one read-out in overexpression and is not established; the Discussion describes R42P as unfolded at the ubiquitin-like domain.",
     "snippet": "This is likely due to R42P being overexpressed in our system (Supplementary Fig. 1D) and suggests that the pathogenicity of the R42P variant is linked to its low abundance.",
     "anchor": "Results, A multiplexed assay for Parkin variant abundance, paragraph 3",
     "surface": "body",
@@ -249,6 +264,21 @@
      "system": "Parkin (PRKN) variants as N-terminal GFP fusions, IRES-mCherry, single-copy Tet-on landing pad in HEK293T cells; library-wide flow cytometry with proteasome/autophagy inhibitors, temperature shifts and a small-molecule Parkin activator; ClinVar and gnomAD annotation; NOT a WWOX system",
      "genotype": "Parkin missense and nonsense variants (9,219 of 9,300 possible); no WWOX",
      "endpoint": "GFP:mCherry abundance score and flow profiles of the whole library"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38378758.json",
+     "entry": 2,
+     "receipt": "FTR-20261021-38378758-01",
+     "what_changed": "OVERSHOOT repaired: 'function intact, quantity the lesion' was stated more strongly than 'likely' and 'suggests'. Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+      "triple": 2,
+      "audited_on": "2026-10-22"
+     }
     }
    },
    {
@@ -265,7 +295,7 @@
     }
    },
    {
-    "proposition": "Figure 3A-C read from the zoom insets: with bortezomib or the siRNA the low-abundance shoulder (GFP:mCherry about 0.1 to 0.5) rises slightly above the untreated trace while the wild-type peak is unchanged; with chloroquine the two traces coincide. The shift is visible but small against the wild-type peak and is not quantified in the text.",
+    "proposition": "Figure 3A-C: the authors report that proteasome inhibition and PSMD14 knock-down shift the peak of low-abundance variants towards a higher GFP:mCherry ratio and that no substantial changes were observed with chloroquine. On the panel (700 px JPEG upscaled, blind audit reading) the bortezomib trace shows the lower-ratio part of the shoulder reduced and a bump near 0.4 to 0.6 raised, i.e. a rightward shift and not a rise above the untreated trace; the wild-type peak count differs (about 28 thousand against 21 thousand) with different cell numbers (559,000 against 436,000); the chloroquine traces coincide.",
     "snippet": "Conversely, no substantial changes were observed with chloroquine (Fig. 3C).",
     "anchor": "Figure 3A-C (library flow histograms with and without bortezomib, siRNA against PSMD14, chloroquine)",
     "surface": "figure",
@@ -277,7 +307,22 @@
      "endpoint": "GFP:mCherry abundance score and flow profiles of the whole library"
     },
     "qualifies": "entries[3]",
-    "qualifies_needle": "The flow cytometry profile of the PRKN librar"
+    "qualifies_needle": "The flow cytometry profile of the PRKN librar",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38378758.json",
+     "entry": 4,
+     "receipt": "FTR-20261021-38378758-01",
+     "what_changed": "OVERSHOOT repaired: 'rises slightly above the untreated trace while the wild-type peak is unchanged' is replaced by the shift the panel shows and by the unequal wild-type peak counts and cell numbers. Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+      "triple": 4,
+      "audited_on": "2026-10-22"
+     }
+    }
    },
    {
     "proposition": "A 29 degree incubation removes the low-abundance population almost entirely, which the authors read as two effects at once (more stable variants and slower turnover generally), so a permissive-temperature read cannot separate folding rescue from reduced clearance.",
@@ -308,7 +353,7 @@
     "qualifies_needle": "Presumably this effect is the result of both "
    },
    {
-    "proposition": "THE PUBLISHED NEGATIVE: a small-molecule positive modulator of wild-type Parkin activity did not change variant abundance across the library.",
+    "proposition": "THE PUBLISHED NEGATIVE, as the source words it: treatment with the activator 'did not confer any substantial differences in Parkin abundance' (and, elsewhere, did not significantly increase abundance globally). Its scope is one compound, one concentration, one 24-hour exposure, read as a pooled flow histogram of the library with no per-variant sequencing read in the methods or text; the authors allow that it might stabilise variants near its binding domain. It is not a statement that no variant changed.",
     "snippet": "However, treatment with the activator did not confer any substantial differences in Parkin abundance (Fig. 3F).",
     "anchor": "Results, Low abundance variants are thermolabile proteasome targets, paragraph 3",
     "surface": "body",
@@ -318,6 +363,21 @@
      "system": "Parkin (PRKN) variants as N-terminal GFP fusions, IRES-mCherry, single-copy Tet-on landing pad in HEK293T cells; library-wide flow cytometry with proteasome/autophagy inhibitors, temperature shifts and a small-molecule Parkin activator; ClinVar and gnomAD annotation; NOT a WWOX system",
      "genotype": "Parkin missense and nonsense variants (9,219 of 9,300 possible); no WWOX",
      "endpoint": "GFP:mCherry abundance score and flow profiles of the whole library"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38378758.json",
+     "entry": 7,
+     "receipt": "FTR-20261021-38378758-01",
+     "what_changed": "OVERSHOOT repaired: 'did not change variant abundance across the library' dropped the authors' 'substantial' and 'globally' and the pooled-readout limit. Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+      "triple": 7,
+      "audited_on": "2026-10-22"
+     }
     }
    },
    {
@@ -390,7 +450,7 @@
     "qualifies_needle": "Because high abundance is a necessary, but no"
    },
    {
-    "proposition": "Not all low abundance is thermodynamic: 28 of 63 low-abundance variants at exposed, predicted-stable positions create a predicted quality-control degron (a neo-degron route), which a folding chaperone would not be expected to repair.",
+    "proposition": "28 of 63 low-abundance variants at exposed, predicted-stable positions create a predicted quality-control degron; the authors write that this SUGGESTS they cause low abundance by degron formation rather than by thermodynamic stability. The statement that a folding chaperone would not repair them is not in the source.",
     "snippet": "This suggests that these variants (at already solvent-exposed positions) cause low abundance by degron formation rather than affecting thermodynamic stability.",
     "anchor": "Results, Variant abundance correlates with stability and conservation, paragraph 1",
     "surface": "body",
@@ -400,6 +460,21 @@
      "system": "Parkin (PRKN) variants as N-terminal GFP fusions, IRES-mCherry, single-copy Tet-on landing pad in HEK293T cells; library-wide flow cytometry with proteasome/autophagy inhibitors, temperature shifts and a small-molecule Parkin activator; ClinVar and gnomAD annotation; NOT a WWOX system",
      "genotype": "Parkin missense and nonsense variants (9,219 of 9,300 possible); no WWOX",
      "endpoint": "GFP:mCherry abundance score and flow profiles of the whole library"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38378758.json",
+     "entry": 13,
+     "receipt": "FTR-20261021-38378758-01",
+     "what_changed": "OVERSHOOT repaired: the chaperone clause is removed; the degron is predicted and hedged. Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+      "triple": 13,
+      "audited_on": "2026-10-22"
+     }
     }
    },
    {
@@ -416,7 +491,7 @@
     }
    },
    {
-    "proposition": "The therapeutic reading is proposed, not tested: blocking degradation, stabilisers or pharmacological chaperones may raise abundance above a pathogenic threshold; the only compound tested here was the activator, with no effect.",
+    "proposition": "The therapeutic reading is proposed, not tested as a rescue: blocking degradation, stabilisers or pharmacological chaperones may raise abundance above a pathogenic threshold. The activator was the only candidate stabiliser tested, but bortezomib, siRNA against PSMD14 and low-temperature incubation were also used as degradation or stability probes and shifted the low-abundance population (Fig 3A-B, 3E).",
     "snippet": "Hence, potentially blocking Parkin degradation or developing small molecule stabilizers or pharmacological chaperones, such as those for TP53 and CFTR84,85, may restore cellular abundance and increase function above the pathogenic threshold.",
     "anchor": "Discussion, paragraph 7",
     "surface": "body",
@@ -426,6 +501,21 @@
      "system": "Parkin (PRKN) variants as N-terminal GFP fusions, IRES-mCherry, single-copy Tet-on landing pad in HEK293T cells; library-wide flow cytometry with proteasome/autophagy inhibitors, temperature shifts and a small-molecule Parkin activator; ClinVar and gnomAD annotation; NOT a WWOX system",
      "genotype": "Parkin missense and nonsense variants (9,219 of 9,300 possible); no WWOX",
      "endpoint": "GFP:mCherry abundance score and flow profiles of the whole library"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38378758.json",
+     "entry": 15,
+     "receipt": "FTR-20261021-38378758-01",
+     "what_changed": "UNDERSHOOT repaired: 'the only compound tested' understated the other probes. Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+      "triple": 15,
+      "audited_on": "2026-10-22"
+     }
     }
    }
   ],

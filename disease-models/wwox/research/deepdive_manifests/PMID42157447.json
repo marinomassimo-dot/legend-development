@@ -355,7 +355,7 @@
     "qualifies_needle": "inhibition is insufficient to rescue transpor"
    },
    {
-    "proposition": "Butyrate raises the immature, ER-retained GAT-1 pool: quantity up without trafficking, the dissociation of protein quantity from function inside one paper.",
+    "proposition": "The authors state that butyrate significantly increased the total amount of immature GAT-1 protein and interpret this as non-specific accumulation rather than productive trafficking. The panel qualifies the generality: in S295L butyrate raised the mature-to-immature ratio about 2.7-fold, total protein rose in wild type, S295L and V511M but not A288V, and butyrate raised uptake by about 7 to 18 percent across variants, so the dissociation of quantity from function is partial and variant-dependent.",
     "snippet": "In contrast, butyrate significantly increased the total amount of immature protein, suggesting that it drives non‐specific protein accumulation rather than productive trafficking.",
     "anchor": "Results, HDAC Inhibitors Failed to Rescue, paragraph 3",
     "surface": "body",
@@ -365,6 +365,21 @@
      "system": "GAT-1 (SLC6A1) loss-of-function missense variants: HEK293T cells transfected with rat GAT-1 variants (homozygous or 1:1 with wild type), forebrain crude synaptosomes and 24-hour EEG from two heterozygous knock-in mouse lines (A288V, S295L), after treatment with 4-phenylbutyrate, a bile-acid chaperone, histone deacetylase inhibitors, an eIF2alpha-dephosphorylation inhibitor, and ER chaperone overexpression or activation; NOT a WWOX system",
      "genotype": "SLC6A1 32 missense/nonsense variants; Slc6a1 +/A288V and +/S295L mice; no WWOX",
      "endpoint": "[3H]GABA uptake, total and mature GAT-1 protein by Western blot, synaptosomal uptake, EEG 4-8 Hz events"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42157447.json",
+     "entry": 8,
+     "receipt": "FTR-20261021-42157447-01",
+     "what_changed": "OVERSHOOT repaired: 'quantity up without trafficking' is the authors' interpretation, not a general result; the S295L ratio, the A288V exception and the small uptake gain qualify it (blind audit reading of Fig 5F-G at 709 px). Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+      "triple": 8,
+      "audited_on": "2026-10-22"
+     }
     }
    },
    {
@@ -465,7 +480,7 @@
     }
    },
    {
-    "proposition": "A mechanism claim from pattern similarity: the bile acid, which lacks HDAC activity, rescues with a similar variant-by-variant pattern as phenylbutyrate, offered as evidence of shared pharmacochaperoning; no direct binding, thermal-stability or folding measurement is reported.",
+    "proposition": "A mechanism claim from pattern similarity: the bile acid, which lacks HDAC inhibitory activity, rescues with a similar magnitude and pattern of variant rescue as phenylbutyrate, offered by the authors as strengthening a pharmacochaperone interpretation. Whether any direct binding, thermal-stability or folding measurement exists is NOT ESTABLISHED HERE: the text, legends and Methods were searched, but no supplement is cited or on disk and Figure 7 was not opened.",
     "snippet": "This interpretation is strengthened by the fact that TUDCA, which lacks HDAC inhibitory activity, achieved a similar magnitude and pattern of variant rescue as PBA.",
     "anchor": "Discussion, Pharmacochaperones Outperform HDAC Inhibitors, paragraph 1",
     "surface": "body",
@@ -475,10 +490,25 @@
      "system": "GAT-1 (SLC6A1) loss-of-function missense variants: HEK293T cells transfected with rat GAT-1 variants (homozygous or 1:1 with wild type), forebrain crude synaptosomes and 24-hour EEG from two heterozygous knock-in mouse lines (A288V, S295L), after treatment with 4-phenylbutyrate, a bile-acid chaperone, histone deacetylase inhibitors, an eIF2alpha-dephosphorylation inhibitor, and ER chaperone overexpression or activation; NOT a WWOX system",
      "genotype": "SLC6A1 32 missense/nonsense variants; Slc6a1 +/A288V and +/S295L mice; no WWOX",
      "endpoint": "[3H]GABA uptake, total and mature GAT-1 protein by Western blot, synaptosomal uptake, EEG 4-8 Hz events"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42157447.json",
+     "entry": 16,
+     "receipt": "FTR-20261021-42157447-01",
+     "what_changed": "UNVERIFIABLE repaired: the negative (no direct binding, thermal-stability or folding measurement) is restated as 'not established here'. Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNVERIFIABLE"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+      "triple": 16,
+      "audited_on": "2026-10-22"
+     }
     }
    },
    {
-    "proposition": "An ER-stress / eIF2alpha-phosphatase inhibitor with no direct chaperoning gave the strongest rescue for some variants, so quantity and function can be raised by stress-pathway modulation as well as by chaperone-like action.",
+    "proposition": "The authors conclude that both pharmacochaperoning and ER-stress modulation can partially rescue FUNCTION, with a variant-dependent effect. This quote carries function only. Quantity is not carried: in Fig 5F the stress-pathway compound raises wild-type-allele total protein about 2-fold but lowers it in A288V (about 0.65) and S295L (about 0.5), although the text says it increased (blind audit reading of a 709 px JPEG).",
     "snippet": "These results suggest that both pharmacochaperoning and ER stress modulation can partially rescue function, although the effect is variant‐dependent.",
     "anchor": "Results, ER Stress Modulators, paragraph 2",
     "surface": "body",
@@ -488,10 +518,25 @@
      "system": "GAT-1 (SLC6A1) loss-of-function missense variants: HEK293T cells transfected with rat GAT-1 variants (homozygous or 1:1 with wild type), forebrain crude synaptosomes and 24-hour EEG from two heterozygous knock-in mouse lines (A288V, S295L), after treatment with 4-phenylbutyrate, a bile-acid chaperone, histone deacetylase inhibitors, an eIF2alpha-dephosphorylation inhibitor, and ER chaperone overexpression or activation; NOT a WWOX system",
      "genotype": "SLC6A1 32 missense/nonsense variants; Slc6a1 +/A288V and +/S295L mice; no WWOX",
      "endpoint": "[3H]GABA uptake, total and mature GAT-1 protein by Western blot, synaptosomal uptake, EEG 4-8 Hz events"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42157447.json",
+     "entry": 17,
+     "receipt": "FTR-20261021-42157447-01",
+     "what_changed": "OVERSHOOT repaired: 'quantity and function can be raised by stress-pathway modulation' removed; only the function claim is carried, and the text-versus-panel conflict on total protein is recorded. Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+      "triple": 17,
+      "audited_on": "2026-10-22"
+     }
     }
    },
    {
-    "proposition": "Chaperone overexpression or activation raises wild-type and variant protein alike, and the small-molecule BiP activator has a non-monotonic concentration response (no effect at one intermediate concentration).",
+    "proposition": "No significant increase was observed at 5 micromolar of the BiP activator in either condition. This quote carries only that statement; the wider concentration pattern (non-monotonic in S295L, a threshold in wild type, which the authors call dose-dependent) is a panel reading by the blind audit and not carried here, and the wild-type-and-variant statement for chaperone overexpression is not carried by this quote.",
     "snippet": "No significant increase was observed at 5 μM in either condition.",
     "anchor": "Results, Chaperone Overexpression and BiP Activation, paragraph 3",
     "surface": "body",
@@ -501,6 +546,21 @@
      "system": "GAT-1 (SLC6A1) loss-of-function missense variants: HEK293T cells transfected with rat GAT-1 variants (homozygous or 1:1 with wild type), forebrain crude synaptosomes and 24-hour EEG from two heterozygous knock-in mouse lines (A288V, S295L), after treatment with 4-phenylbutyrate, a bile-acid chaperone, histone deacetylase inhibitors, an eIF2alpha-dephosphorylation inhibitor, and ER chaperone overexpression or activation; NOT a WWOX system",
      "genotype": "SLC6A1 32 missense/nonsense variants; Slc6a1 +/A288V and +/S295L mice; no WWOX",
      "endpoint": "[3H]GABA uptake, total and mature GAT-1 protein by Western blot, synaptosomal uptake, EEG 4-8 Hz events"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42157447.json",
+     "entry": 18,
+     "receipt": "FTR-20261021-42157447-01",
+     "what_changed": "OVERSHOOT repaired: the proposition asserted a non-monotonic response and a wild-type-and-variant rise that the quote does not carry. Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+      "triple": 18,
+      "audited_on": "2026-10-22"
+     }
     }
    },
    {
