@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261021-42587736-02",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "42587736",
+  "doi": "10.3390/cells15151327"
+ },
+ "event_at": "2026-10-21T22:38:48Z",
+ "analysis_at": "2026-10-21T22:38:48Z",
+ "analysis_time_precision": "second",
+ "workflow": "HELD-partial resume by scientist-a under REPURP-10H-R1-A-20261021: paper_packet claim, the question written before the owed sections were opened, then Methods and Results read from the already-held PMC XML and all six figure images opened, appended to the existing work manifest",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID42587736_Song2026_PMC_r2.xml",
+ "source_fingerprint": "3f4e65c6f4333f9b3033826eef145613cb6ff68951b5ad366d50ce90d3d42795",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42587736.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "The resume read the Methods, the Results and every figure image of the same XML the first reading used; the reader had seen the first reading's propositions in the manifest and its evidence-basis note before opening the owed sections (context QUESTION_DRIVEN in effect, the manifest's own context_policy field left as the first reading wrote it). Supplementary Figures and Tables (zip) retrieved, not read."
+ ],
+ "prior_receipt": "FTR-20261019-42587736-01",
+ "reread_reason": "inadequate_prior_coverage"
+}
