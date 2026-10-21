@@ -76,7 +76,8 @@
    "routing_row": "framework/scripts/README.md, beside the packet/claim/check rows",
    "not_a_gate": "exit 0 always; test_rank_exits_zero_and_changes_no_file compares every file's mtime_ns across a subprocess run",
    "cost": "about 5 s on a 35-surface paper with three multi-page PDFs; 22 s for the four acceptance tests, dominated by sha256 over a 25 MB supplement and get_drawings over 54 pages",
-   "reachable_where_the_obligation_is": "framework/protocols/scientist_standing_brief.md M2 already obliges reading 'every figure as an image at native resolution' and gave NO command for deciding which surface that is. One sentence there names `rank` and the vector case. A routing row makes a tool findable; the brief is where the reader meets the obligation, and principle 15 says an upgrade is kept for what it changed, not for having run. The method stays in the sub-command's own docstring — the brief names it and does not restate it."
+   "reachable_where_the_obligation_is": "framework/protocols/scientist_standing_brief.md M2 already obliges reading 'every figure as an image at native resolution' and gave NO command for deciding which surface that is. One sentence there names `rank` and the vector case. A routing row makes a tool findable; the brief is where the reader meets the obligation, and principle 15 says an upgrade is kept for what it changed, not for having run. The method stays in the sub-command's own docstring — the brief names it and does not restate it.",
+   "better_surface_nobody_had_identified": "A finding, not a feature: on PMID 42422765 the best surface for figures 1-6 is NOT the publisher PDF the Scientist identified. mmc2.pdf — a 25 MB supplement already on disk in three places — carries the same figures as 2906-3321 px rasters printed 418-478 pt wide, i.e. 500 effective ppi, against the publisher PDF's 300. Nobody had compared them, which is the whole point of the sub-command."
   },
   "N2_RETRACTION_WATCH_DECODE": {
    "result": "DONE",
@@ -111,7 +112,8 @@
    "lint": "framework/scripts/legend_lint.py VERDICT WARN, no BLOCK, rc 0",
    "receipts": "fulltext_receipts.py verify OK, 685 chained receipts, tail anchored in the state manifest",
    "main_merged_mid_task": "main advanced TWICE while this task ran. First from 94c7464b to f54afba1 (the Scientist's audit repairs on PMID 42422765), merged before the ledger append was finalised. Then to 8d67f7a4 (BATCH_20261019_008, MINOR, WM_v7.26 -> WM_v7.27), which adds a D-39 row to the very table this task appended below. That batch was in flight and uncommitted in the ROOT checkout when task_close was first dry-run: it refused on 16 dirty entries including the four scientific current files, correctly, and the remedy was its author's. Nothing of theirs was touched, moved or stashed. Their pending D-39 row was simulated against the new ratchet in a scratch clone BEFORE it landed — the ratchet stayed green — and the simulation was then confirmed by the real merge. Both merges were clean.",
-   "closed_world_assertion_withdrawn": "The first draft of the allocator addendum said 'the table's maximum id is now D-38, so max(D-nn)+1 returns D-39'. The other actor's in-flight batch was about to mint D-39, which would have made both halves of that sentence false — a closed-world assertion on live state, the class test_no_closed_world_assertions_on_live_state.py exists for. Reworded before landing to state that the maximum sits above the range and must be re-derived from the table, never from the sentence."
+   "closed_world_assertion_withdrawn": "The first draft of the allocator addendum said 'the table's maximum id is now D-38, so max(D-nn)+1 returns D-39'. The other actor's in-flight batch was about to mint D-39, which would have made both halves of that sentence false — a closed-world assertion on live state, the class test_no_closed_world_assertions_on_live_state.py exists for. Reworded before landing to state that the maximum sits above the range and must be re-derived from the table, never from the sentence.",
+   "release_battery_run2": "PASS on a fresh --no-hardlinks clone of bffa3b36: REGRESSION VERDICT PASS WITH SKIPS, 152 targets, 42 skipped, ZERO failing suites. The three suites this task changed are green there: framework/scripts/test_paper_packet.py 68.1s exit 0, framework/scripts/test_dependency_integrity.py 0.4s exit 0, scripts/test_detection_rule_citations_resolve.py 0.1s exit 0. The 42 skips are the gitignored corpus a clone does not carry, which is why both of N1's traps are tested on a synthetic PDF and not on the corpus."
   }
  },
  "DEFAULTS_TAKEN": [
@@ -150,6 +152,12 @@
    "default": "appended the provenance that makes them resolvable and stopped, naming the two BATCH_COMMIT repairs that remain",
    "why_safe": "an append adds no row and changes no citation; the reader can follow every number to something, and the record says plainly which of them is not canonical",
    "would_have_differed": "editing the two current files outside BATCH_COMMIT, or minting four rows from candidate text"
+  },
+  {
+   "condition": "main advanced three times during the task (f54afba1, 8d67f7a4 BATCH_20261019_008, 9ac211df BATCH_20261019_009), and the full battery can only run on one SHA",
+   "default": "ran the full battery on the last SHA this task authored, merged main afterwards through task_close, and re-ran gate, LINT, receipts and the directly affected suites on the merge result",
+   "why_safe": "section 21e's precondition is that no suite green BEFORE this change is red after it, and the change is this task's commits; each of main's batches ran its own battery at its own landing, and task_close verifies the generated surfaces on the merge result before merging",
+   "would_have_differed": "chasing a moving main with a full battery per merge would never terminate while the Orchestrator is landing batches"
   }
  ],
  "DECISIONS_TAKEN": [
