@@ -21,3 +21,36 @@ in with their dates rather than rewritten.
 
 Not medical advice. No dose, administration or individual recommendation appears in this
 directory.
+
+---
+
+## The rest of the capability, and where it lives
+
+This directory holds the **documents**. The **code** cannot live here: `framework/` is the generic
+engine and `disease-models/wwox/` is one disease model, so a tool that would work for another
+disease belongs to the engine (`ARCHITECTURE.md`). What follows is the routing, so this README is
+the single door even though the files are where the architecture puts them.
+
+| Component | Path | Origin | Stage, measured 2026-10-21 |
+|---|---|---|---|
+| Candidate-card builder | [`framework/scripts/repurposing_bridge.py`](../../../../framework/scripts/repurposing_bridge.py) | `codex/drug-repurposing-bridge`, landed 2026-10-20; extended the same day | **Runs, tested, enrolled.** 8 regressions green, routed in the scripts README, in the release battery. Builds non-canonical cards from explicitly qualified local assertions: no network, no ranking, no score, and the direction is a comparison on the same target, endpoint and context. States `MATCH_FOUND` / `NO_MATCH_FOUND` / `QUERY_ERROR` / `NOT_ATTEMPTED` with coverage on an independent axis, and carries the later P4 fields as `UNKNOWN` rather than absent |
+| Its design note | [`docs/repurposing_bridge_20261015.md`](../../../../docs/repurposing_bridge_20261015.md) | same branch | Documentation only |
+| Clinical-trial census | [`framework/scripts/clinical_census.py`](../../../../framework/scripts/clinical_census.py) | written 2026-10-20 after establishing no access already existed | **Runs, tested, enrolled, and has been run for real.** 21 regressions green. ClinicalTrials.gov API v2, read-only, key-less, standard library only. Its output of 2026-10-20 is the census in this directory |
+| Monarch / DGIdb slice | [`.claude/skills/legend-hypothesis-forge/scripts/kg_thin_slice.py`](../../../../.claude/skills/legend-hypothesis-forge/scripts/kg_thin_slice.py) | `codex/…` branch, then hardened 2026-10-20 | **Runs, tested, enrolled.** 22 regressions green. Separates genes from pathways before the DGIdb query, resolves identifiers with type and taxon, paginates for real or says it truncated, and reports `QUERY_ERROR` / `API_ERROR` / `INCOMPLETE` / `UNMATCHED` as states distinct from no result. The approved-only filter is now a choice, not a silent default |
+| Evidence-bridge reference | [`.claude/skills/legend-hypothesis-forge/references/evidence_bridge.md`](../../../../.claude/skills/legend-hypothesis-forge/references/evidence_bridge.md) and its example JSON | same branch | Reference for the skill |
+| Surface ranking for a figure read | [`framework/scripts/paper_packet.py`](../../../../framework/scripts/paper_packet.py) `rank` | 2026-10-21, provoked by this line of work | **Runs, tested, enrolled.** Run it before any figure read: it measures effective ppi per surface and flags a likely-vector figure rather than offering its raster |
+
+### Stage of the capability as a whole
+
+| Roadmap step | State |
+|---|---|
+| P0 preflight | **done and measured** — see `reconciliation_20261020.md` |
+| P1 installations | **not started, and deliberately so.** Nothing the plan proposed to install is installed; `_external_repos/` holds only its manifest, and there is no R interpreter, which blocks drugfindR twice |
+| P2 Monarch/DGIdb hardening | **done** |
+| P3 scientific qualification | **under way** — known roads censused (24, every disease-modification cell empty), early-benefit endpoints mapped, the rescue reference bound from the repository's own receipted reading (157 of 160 cells) |
+| P4 candidate cards | **not started.** The builder exists and is tested; no card has been produced, because P3 is what decides which candidates deserve one |
+| P5 two-path ranking | **not started**, and declared blocked in the reconciliation |
+| P6 / P7 / P8 | **not started**; P6 and P7 declared blocked (no GSE156243 bytes, no gold set) |
+
+Nothing in this capability has produced a therapeutic recommendation, and no output of it is a
+`DATO`. The clinical census is a retrieval record; the bridge's cards would be `IPOTESI`.
