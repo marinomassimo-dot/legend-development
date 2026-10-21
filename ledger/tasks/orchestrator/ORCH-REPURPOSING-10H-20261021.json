@@ -24,8 +24,8 @@
    "steps": [
     {
      "step": "Read-only selection of studies for groups R1-R4 with lawful bodies, dedup against registries and receipts",
-     "status": "IN_PROGRESS",
-     "evidence": "selector launched 2026-10-21 21:42 UTC; output scratchpad repurposing_selection_20261021.md, to be persisted under research/"
+     "status": "DONE",
+     "evidence": "64 studies, 16 per group, persisted as research/repurposing_batch_selection_20261021.md (d8b7bf38)"
     }
    ]
   },
@@ -34,11 +34,13 @@
    "steps": [
     {
      "step": "Dispatch Scientists A (R1), B (R2), C (R3), D (R4) on the selection",
-     "status": "TODO"
+     "status": "DONE",
+     "evidence": "four Scientists dispatched 2026-10-21 ~22:00 UTC; contracts REPURP-10H-R1..R4"
     },
     {
      "step": "Hourly watch for ten hours: detect a stopped Scientist (rate limit or finished lot) and restart it, continuing the lot or taking new studies",
-     "status": "TODO"
+     "status": "IN_PROGRESS",
+     "evidence": "cron 4b6b5252 hourly at :07, first fire 22:07 UTC"
     },
     {
      "step": "Integrate returns: record staged receipts with record_staged_receipts.py, BATCH_COMMIT of candidates, blind audit where a trigger fires or the author declares one, Mirror ex post, battery on the final SHA, push",
@@ -59,13 +61,42 @@
  "WATCH": {
   "interval": "hourly, 10 firings",
   "cycles_done": 0,
-  "roster": {},
+  "roster": {
+   "scientist-a": {
+    "group": "R1",
+    "agentId": "ab601f2e19d3a1d37",
+    "task": "REPURP-10H-R1-A-20261021",
+    "state": "RUNNING (dispatched)"
+   },
+   "scientist-b": {
+    "group": "R2",
+    "agentId": "a85b13d3c3c5f7071",
+    "task": "REPURP-10H-R2-B-20261021",
+    "state": "RUNNING (dispatched)"
+   },
+   "scientist-c": {
+    "group": "R3",
+    "agentId": "ab754106b9854e8bd",
+    "task": "REPURP-10H-R3-C-20261021",
+    "state": "RUNNING (dispatched)"
+   },
+   "scientist-d": {
+    "group": "R4",
+    "agentId": "aba610f58ef0e9b25",
+    "task": "REPURP-10H-R4-D-20261021",
+    "state": "RUNNING (dispatched)"
+   }
+  },
   "restart_rule": "a Scientist whose agent has stopped is resumed with SendMessage to its agentId: if it stopped on a rate limit, continue from durable state; if its lot is finished, hand it the next unclaimed studies of its group from the persisted selection; never start a duplicate agent for an actor that is still running",
   "cron_id": "4b6b5252",
   "log": [
    {
     "t": "2026-10-21T21:49Z",
     "event": "watch created: hourly at :07, first fire 22:07 UTC; scheduler is session-only and fires only while the REPL is idle; last watch is cycle 10 or the first after END_UTC, whichever is earlier"
+   },
+   {
+    "t": "2026-10-21T22:00Z",
+    "event": "four Scientists dispatched on groups R1-R4; roster recorded"
    }
   ]
  },
