@@ -12,7 +12,8 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from repurposing_bridge import build_card, normalise_label_lookup, normalise_p4_fields
+from repurposing_bridge import (build_card, normalise_label_lookup, normalise_p4_fields,
+                                normalise_translation)
 
 ROOT = Path(__file__).resolve().parents[2]
 spec = importlib.util.spec_from_file_location(
@@ -175,6 +176,69 @@ class BridgeTests(unittest.TestCase):
         self.assertEqual(card["directional_summary"], "UNRESOLVED")
         self.assertEqual(card["label_lookup"]["status"], "NOT_ATTEMPTED")
         self.assertIsNone(build_card(packet())["abstention"])
+
+    def test_reported_null_is_not_an_unmeasured_cell(self):
+        def with_direction(value, **ctx):
+            data = packet()
+            data["drug_assertions"][0]["direction"] = value
+            data["drug_assertions"][0]["context"].update(ctx)
+            return build_card(data)
+        null, unmeasured = with_direction("NO_CHANGE"), with_direction("UNKNOWN")
+        self.assertEqual(null["comparisons"][0]["status"], "NO_EFFECT_REPORTED")
+        self.assertEqual(unmeasured["comparisons"][0]["status"], "UNRESOLVED")
+        self.assertNotEqual(null["directional_summary"], unmeasured["directional_summary"])
+        self.assertNotIn("OPPOSES", null["directional_summary"])
+        self.assertNotIn("REINFORCES", null["directional_summary"])
+        self.assertTrue(any("not UNKNOWN" in line for line in null["limits"]))
+        # A null in a non-comparable cell stays unresolved but says it was measured.
+        off = with_direction("NO_CHANGE", genotype="other")
+        self.assertEqual(off["comparisons"][0]["status"], "UNRESOLVED")
+        self.assertTrue(any("measured null" in r for r in off["comparisons"][0]["reasons"]))
+        self.assertFalse(any("measured null" in r
+                             for r in unmeasured["comparisons"][0]["reasons"]))
+        # A null beside a positive is a conflict, never a pooled value; a null disease is refused.
+        data = packet()
+        second = copy.deepcopy(data["drug_assertions"][0])
+        second.update(id="drug-2", direction="NO_CHANGE")
+        data["drug_assertions"].append(second)
+        self.assertEqual(build_card(data)["directional_summary"], "CONFLICTING")
+        data = packet()
+        data["disease_assertion"]["direction"] = "NO_CHANGE"
+        self.assertEqual(build_card(data)["comparisons"][0]["status"], "UNRESOLVED")
+        # The label outcome still never moves the comparison.
+        data = packet()
+        data["drug_assertions"][0]["direction"] = "NO_CHANGE"
+        data["label_lookup"] = {"status": "NO_MATCH_FOUND", "queries": ["q"]}
+        self.assertEqual(build_card(data)["comparisons"], null["comparisons"])
+
+    def test_translation_is_reachable_and_stays_unknown_by_default(self):
+        default = build_card(packet())["translation"]
+        self.assertEqual(set(default.values()), {"UNKNOWN"})
+        data = packet()
+        data["translation"] = {"access": "synthetic access statement"}
+        filled = build_card(data)["translation"]
+        self.assertEqual(filled["access"], "synthetic access statement")
+        self.assertEqual(filled["time_to_benefit"], "UNKNOWN")
+        data["translation"]["time_to_benefit"] = "synthetic benefit statement"
+        both = build_card(data)["translation"]
+        self.assertNotEqual(both["access"], both["time_to_benefit"])
+        self.assertEqual(data["translation"], build_card(data)["input"]["translation"])
+        for bad in ({"access": ""}, {"time_to_access_score": "1"}, {"access": 3}, "x"):
+            with self.subTest(bad=bad), self.assertRaises(ValueError):
+                normalise_translation(bad)
+
+    def test_roadmap_rows_a_card_cannot_do_without(self):
+        data = packet()
+        data["p4_roadmap_fields"] = {"indication_and_transfer": "UNKNOWN",
+                                     "verification_scope": "synthetic", "other": "free"}
+        self.assertEqual(build_card(data)["input"]["p4_roadmap_fields"]["other"], "free")
+        for mutate in (lambda b: b.pop("verification_scope"),
+                       lambda b: b.update(indication_and_transfer="")):
+            broken = copy.deepcopy(data)
+            mutate(broken["p4_roadmap_fields"])
+            with self.assertRaises(ValueError):
+                build_card(broken)
+        self.assertNotIn("p4_roadmap_fields", build_card(packet())["input"])
 
     def test_kg_separates_pathways_and_declares_incomplete_coverage(self):
         raw = {"items": [

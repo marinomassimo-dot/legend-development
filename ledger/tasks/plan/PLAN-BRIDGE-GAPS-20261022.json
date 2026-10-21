@@ -1,0 +1,49 @@
+{
+  "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK record, as held by the owning actor",
+  "TASK_ID": "PLAN-BRIDGE-GAPS-20261022",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "plan",
+  "ACTOR_ID": "plan",
+  "ORIGIN": "ORCHESTRATOR",
+  "PRIORITY": "high",
+  "CURRENT_STATE": "CLOSED",
+  "assigned_on": "2026-10-22",
+  "OBJECTIVE": "Close the bridge gaps the early-benefit cards measured, without changing any existing card.",
+  "BOUNDARIES": [
+    "drug_repurposing/ directory, four scientific current files and manifests untouched",
+    "no push"
+  ],
+  "NEED_RESULTS": [
+    {
+      "need": "A no-change sign",
+      "result": "DONE. Direction NO_CHANGE; comparable cell gives status NO_EFFECT_REPORTED, never OPPOSES/REINFORCES; non-comparable stays UNRESOLVED with a 'measured null' reason; beside a positive it is CONFLICTING; a NO_CHANGE disease assertion is UNRESOLVED. Regression: test_reported_null_is_not_an_unmeasured_cell."
+    },
+    {
+      "need": "translation / time to access / time to benefit reachable",
+      "result": "DONE. Optional packet block translation over the card's existing six keys (access = time to access; time_to_benefit separate); defaults UNKNOWN; unknown keys refused. Reusing the existing keys, not adding new ones, is what keeps the nine cards byte-identical."
+    },
+    {
+      "need": "abstention own state",
+      "result": "DECLINED. The workaround (empty drug_assertions -> abstention marker, card_kind, status ASTENSIONE with a Missing datum, enforced by check_cards.py) is adequate; a new card field would alter all nine existing cards."
+    },
+    {
+      "need": "shared-origin grouping, evidence-class",
+      "result": "DECLINED. Not the same small change: grouping needs a new card field (changes cards whose assertions carry shared_origin, e.g. EB-VGB-01) and a new vocabulary for classes; both stay listed in cards_early/README."
+    },
+    {
+      "need": "19 unvalidated roadmap rows",
+      "result": "DONE for two: indication_and_transfer (is the evidence transferred from another disease) and verification_scope (what supports it, audited or not) are validated nonempty-or-UNKNOWN when p4_roadmap_fields is present. The two time rows are now covered by translation. The other rows are narrative that a card can carry as free text; validating them would be 17 fields of ceremony. Validation only, nothing rewritten."
+    }
+  ],
+  "DEFAULTS_TAKEN": [
+    "Chose validation-only for roadmap rows because any new always-present card field would break byte-identity of existing cards."
+  ],
+  "DECISIONS_TAKEN": [
+    "NO_CHANGE as a fourth sign with its own comparison status rather than a card-level flag.",
+    "Reused the existing translation keys; documented access as time to access."
+  ],
+  "STOP_LOG": [
+    "None."
+  ]
+}
