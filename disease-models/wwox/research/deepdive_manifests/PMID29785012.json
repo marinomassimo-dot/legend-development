@@ -1,0 +1,408 @@
+{
+ "schema_version": 2,
+ "pmid": "29785012",
+ "doi": "10.1038/s41588-018-0122-z",
+ "receipt": "FTR-20261021-29785012-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named and deduplicated by the Orchestrator's selection file; the per-paper M0 packet and receipt status were run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "The reading is a primary-evidence read of a NOT WWOX EVIDENCE paper; the dossier is the analysis note section, no WWOX commit candidate is implied."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No consolidated baseline claim is narrowed or reversed by this reading; a blind audit is declared OWED where a candidate proposes it."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Not requested; discovery leads are staged separately if any."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a candidate card; BLOCK-1 holds, class level only."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "A University of Washington genome-sciences group (Fowler and Shendure laboratories, from the affiliations) that develops multiplexed variant-effect assays; method paper on PTEN and TPMT. Publication counts not computed in this reading. NOT WWOX EVIDENCE; a method precedent."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "protein variant abundance AND deep mutational scanning",
+    "count": 25,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "VAMP-seq",
+    "count": 8,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "protein abundance AND missense AND chaperone AND variant-specific",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "PubMed counts, dated; a zero from a title/abstract query licenses 'no paper is indexed', never 'this was never measured' (D-37)."
+ },
+ "multihop": {
+  "references_enumerated": 60,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "60 references enumerated from the JATS; none is WWOX-related. The companion PTEN activity-plus-abundance paper is already in this lot (34649609)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 29785012 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-21 via PubMed efetch for PMID 29785012: publication types ['Journal Article', 'Research Support, N.I.H., Extramural', \"Research Support, Non-U.S. Gov't\"]; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 60,
+   "references_screened": 59,
+   "references_with_doi": 59,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID29785012_Matreyek2018_PMC5980760.xml",
+   "sha256": "bb8df710343cc1f23199a1df2b0eccacff4690d3047baea32a7b8df855969610",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC5980760: whole article; every text locator is matched against it.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5980760/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "bb8df710343cc1f23199a1df2b0eccacff4690d3047baea32a7b8df855969610",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID29785012_r2/nihms956040f1.jpg",
+   "sha256": "99ec74662d58d5b76b374532bbe190ee46c6eddd888beee5dc2d7afdb167a182",
+   "kind": "figure",
+   "note": "Figure 1 JPEG from the PMC open-data bucket, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "PMC open-data bucket via pmc_bucket_fetch.py (file extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "99ec74662d58d5b76b374532bbe190ee46c6eddd888beee5dc2d7afdb167a182",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID29785012_r2/nihms956040f2.jpg",
+   "sha256": "28f34762daec21f5f5d894ac51bc1daad1c2bc14a6893c963e280a440a3fb0f1",
+   "kind": "figure",
+   "note": "Figure 2 JPEG from the PMC open-data bucket, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "PMC open-data bucket via pmc_bucket_fetch.py (file extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "28f34762daec21f5f5d894ac51bc1daad1c2bc14a6893c963e280a440a3fb0f1",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID29785012_r2/nihms956040f3.jpg",
+   "sha256": "313093c25bcfe9809e8a94a0c844da6c9fbd38d3fe5c60abee241edcae59fa34",
+   "kind": "figure",
+   "note": "Figure 3 JPEG from the PMC open-data bucket, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "PMC open-data bucket via pmc_bucket_fetch.py (file extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "313093c25bcfe9809e8a94a0c844da6c9fbd38d3fe5c60abee241edcae59fa34",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID29785012_r2/nihms956040f4.jpg",
+   "sha256": "4159f0a56e4c481344bc175e206295f3480cae1890c246f895ed6cdc280006b1",
+   "kind": "figure",
+   "note": "Figure 4 JPEG from the PMC open-data bucket, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "PMC open-data bucket via pmc_bucket_fetch.py (file extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "4159f0a56e4c481344bc175e206295f3480cae1890c246f895ed6cdc280006b1",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID29785012_r2/nihms956040f5.jpg",
+   "sha256": "36bedeb2abf8b39df510acc87a2acd3788fa594b0260a50f6428b8ce23511f5b",
+   "kind": "figure",
+   "note": "Figure 5 JPEG from the PMC open-data bucket, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "PMC open-data bucket via pmc_bucket_fetch.py (file extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "36bedeb2abf8b39df510acc87a2acd3788fa594b0260a50f6428b8ce23511f5b",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID29785012_r2/nihms956040f6.jpg",
+   "sha256": "1fc1cceefd0a61bc83ede34b4efd21000d80563fc10b6a9afe75b79deaf8f50b",
+   "kind": "figure",
+   "note": "Figure 6 JPEG from the PMC open-data bucket, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "PMC open-data bucket via pmc_bucket_fetch.py (file extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "1fc1cceefd0a61bc83ede34b4efd21000d80563fc10b6a9afe75b79deaf8f50b",
+    "derived": false
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE (method). The assay reads steady-state abundance of a variant fused to EGFP, not an antibody signal: each cell expresses one variant, and mCherry is co-expressed as an expression control.",
+    "snippet": "Each cell expresses a single variant directly fused to EGFP. The stability of the variant dictates the abundance of the EGFP fusion and, accordingly, the green fluorescence signal of the cell. To control for expression, mCherry is either co-transcriptionally or co-translationally expressed.",
+    "anchor": "Results, Multiplex assessment of PTEN and TPMT variant abundance, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29785012_Matreyek2018_PMC5980760.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "VAMP-seq: N-terminally EGFP-tagged PTEN and TPMT variants expressed from one Tet-on landing-pad locus in engineered HEK293T cells (mCherry co-expressed), plus ClinVar, gnomAD, TCGA and a published thiopurine cohort; NOT a WWOX system",
+     "genotype": "PTEN (4,112 variants) and TPMT (3,689 variants); no WWOX",
+     "endpoint": "EGFP:mCherry ratio by FACS bins, abundance score 0 to 1"
+    }
+   },
+   {
+    "proposition": "The abundance read is made on an N-terminal EGFP fusion integrated at one genomic landing pad in HEK293T: a heterologous promoter and a non-neuronal cell, not the endogenous locus and not the cell type of the disease.",
+    "snippet": "Each wild type open reading frame was N-terminally tagged with EGFP and recombined into a single genomic locus of an engineered HEK 293T cell line17.",
+    "anchor": "Results, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29785012_Matreyek2018_PMC5980760.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "VAMP-seq: N-terminally EGFP-tagged PTEN and TPMT variants expressed from one Tet-on landing-pad locus in engineered HEK293T cells (mCherry co-expressed), plus ClinVar, gnomAD, TCGA and a published thiopurine cohort; NOT a WWOX system",
+     "genotype": "PTEN (4,112 variants) and TPMT (3,689 variants); no WWOX",
+     "endpoint": "EGFP:mCherry ratio by FACS bins, abundance score 0 to 1"
+    }
+   },
+   {
+    "proposition": "Figure 2a read: the library, wild type and known destabilised variants separate on the EGFP:mCherry axis (PTEN WT peak near 300, the Y68H peak near 20; TPMT A80P near 15 and WT near 120, approximate by log-axis position), the four-bin gates are drawn; Figure 2b shows nonsense variants at about 0 and synonymous variants at about 1.",
+    "snippet": "We assessed the EGFP:mCherry ratio by flow cytometry, and found that cells expressing wild type PTEN or TPMT had ~5-fold higher EGFP:mCherry ratios than the known low-abundance variants (Fig. 2a; Supplementary Fig. 1b, c).",
+    "anchor": "Figure 2a-b (EGFP:mCherry histograms with bin gates; abundance score density)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29785012_r2/nihms956040f2.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "VAMP-seq: N-terminally EGFP-tagged PTEN and TPMT variants expressed from one Tet-on landing-pad locus in engineered HEK293T cells (mCherry co-expressed), plus ClinVar, gnomAD, TCGA and a published thiopurine cohort; NOT a WWOX system",
+     "genotype": "PTEN (4,112 variants) and TPMT (3,689 variants); no WWOX",
+     "endpoint": "EGFP:mCherry ratio by FACS bins, abundance score 0 to 1"
+    },
+    "qualifies": "entries[0]",
+    "qualifies_needle": "Each cell expresses a single variant directly"
+   },
+   {
+    "proposition": "Abundance scores are noisy at single-variant level and needed eight replicate sorts: replicate correlations are moderate.",
+    "snippet": "Abundance scores correlated modestly well between replicates (mean Pearson’s r = 0.63, mean Spearman’s ρ = 0.62 for PTEN; and mean r = 0.73, mean ρ = 0.67 for TPMT; Supplementary Fig. 2).",
+    "anchor": "Results, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29785012_Matreyek2018_PMC5980760.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "VAMP-seq: N-terminally EGFP-tagged PTEN and TPMT variants expressed from one Tet-on landing-pad locus in engineered HEK293T cells (mCherry co-expressed), plus ClinVar, gnomAD, TCGA and a published thiopurine cohort; NOT a WWOX system",
+     "genotype": "PTEN (4,112 variants) and TPMT (3,689 variants); no WWOX",
+     "endpoint": "EGFP:mCherry ratio by FACS bins, abundance score 0 to 1"
+    }
+   },
+   {
+    "proposition": "Baseline stability sets how many missense variants lose abundance: a larger fraction of PTEN variants is low abundance than of TPMT, attributed to PTEN's lower thermostability. The equivalent baseline for a WWOX SDR domain is a missing measurement.",
+    "snippet": "A larger fraction of PTEN variants had low abundance scores than TPMT variants, possibly reflecting the lower thermostability of PTEN (Tm = 40.3 °C) relative to TPMT (Tm = ~60 °C) (Supplementary Fig 3f)20,21.",
+    "anchor": "Results, paragraph 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29785012_Matreyek2018_PMC5980760.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "VAMP-seq: N-terminally EGFP-tagged PTEN and TPMT variants expressed from one Tet-on landing-pad locus in engineered HEK293T cells (mCherry co-expressed), plus ClinVar, gnomAD, TCGA and a published thiopurine cohort; NOT a WWOX system",
+     "genotype": "PTEN (4,112 variants) and TPMT (3,689 variants); no WWOX",
+     "endpoint": "EGFP:mCherry ratio by FACS bins, abundance score 0 to 1"
+    }
+   },
+   {
+    "proposition": "The premise that most pathogenic variation is a stability lesion is cited, not measured, in this paper.",
+    "snippet": "In fact, as much as 75% of the pathogenic variation in monogenic disease is thought to disrupt thermodynamic stability and, consequently, alter abundance9,10.",
+    "anchor": "Introduction, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29785012_Matreyek2018_PMC5980760.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "VAMP-seq: N-terminally EGFP-tagged PTEN and TPMT variants expressed from one Tet-on landing-pad locus in engineered HEK293T cells (mCherry co-expressed), plus ClinVar, gnomAD, TCGA and a published thiopurine cohort; NOT a WWOX system",
+     "genotype": "PTEN (4,112 variants) and TPMT (3,689 variants); no WWOX",
+     "endpoint": "EGFP:mCherry ratio by FACS bins, abundance score 0 to 1"
+    }
+   },
+   {
+    "proposition": "Abundance is not function in the same paper: of 25 ClinVar pathogenic PTEN missense variants with a score, 16 were low abundance; four of the remainder are active-site variants known to be inactive without loss of abundance.",
+    "snippet": "Four were active site variants (p.His93Arg, p.Gly129Glu, p.Arg130Leu, and p.Thr131Ile) known to be inactive without loss of abundance.",
+    "anchor": "Results, New, potentially pathogenic low-abundance PTEN variants, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29785012_Matreyek2018_PMC5980760.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "VAMP-seq: N-terminally EGFP-tagged PTEN and TPMT variants expressed from one Tet-on landing-pad locus in engineered HEK293T cells (mCherry co-expressed), plus ClinVar, gnomAD, TCGA and a published thiopurine cohort; NOT a WWOX system",
+     "genotype": "PTEN (4,112 variants) and TPMT (3,689 variants); no WWOX",
+     "endpoint": "EGFP:mCherry ratio by FACS bins, abundance score 0 to 1"
+    }
+   },
+   {
+    "proposition": "Figure 4b read: the pathogenic histogram has a low-abundance mass at about 0.1 to 0.6 and a smaller group at about 0.7 to 1.2 (right of the dashed synonymous threshold near 0.7), i.e. several pathogenic variants with abundance in the wild-type range.",
+    "snippet": "for PTEN germline variants listed in ClinVar as known pathogenic (b), likely pathogenic (c), or variants of uncertain significance (d).",
+    "anchor": "Figure 4b (pathogenic ClinVar PTEN missense, abundance score histogram)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29785012_r2/nihms956040f4.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "VAMP-seq: N-terminally EGFP-tagged PTEN and TPMT variants expressed from one Tet-on landing-pad locus in engineered HEK293T cells (mCherry co-expressed), plus ClinVar, gnomAD, TCGA and a published thiopurine cohort; NOT a WWOX system",
+     "genotype": "PTEN (4,112 variants) and TPMT (3,689 variants); no WWOX",
+     "endpoint": "EGFP:mCherry ratio by FACS bins, abundance score 0 to 1"
+    },
+    "qualifies": "entries[6]",
+    "qualifies_needle": "Four were active site variants (p.His93Arg, p"
+   },
+   {
+    "proposition": "Known dominant-negative PTEN variants have wild-type-like or higher abundance: abundance cannot see a variant that is inactive and abundant.",
+    "snippet": "As expected, known dominant negative variants had WT-like or higher abundance scores (p.Cys124Ser = 1.14, p.Arg130Gly = 1.09, p.Gly129Glu = 0.76) .",
+    "anchor": "Results, Abundance data reveals mechanisms of PTEN dysregulation, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29785012_Matreyek2018_PMC5980760.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "VAMP-seq: N-terminally EGFP-tagged PTEN and TPMT variants expressed from one Tet-on landing-pad locus in engineered HEK293T cells (mCherry co-expressed), plus ClinVar, gnomAD, TCGA and a published thiopurine cohort; NOT a WWOX system",
+     "genotype": "PTEN (4,112 variants) and TPMT (3,689 variants); no WWOX",
+     "endpoint": "EGFP:mCherry ratio by FACS bins, abundance score 0 to 1"
+    }
+   },
+   {
+    "proposition": "For an enzyme (TPMT) a clinical function surrogate tracks the abundance score across six variants: Figure 5b shows A80P lowest on both axes (abundance about 0.3, dose intensity about 0.56) and R226Q highest (about 1.35 and 0.95), r 0.99 on n = 6 including wild type.",
+    "snippet": "Thiopurine dose intensity, which is affected by TPMT activity, is highly correlated with variant abundance (r = 0.99, ρ = 1, n = 6; Fig. 5b; Supplementary Fig. 7c).",
+    "anchor": "Results, Implications of TPMT abundance for drug treatment, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29785012_Matreyek2018_PMC5980760.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "VAMP-seq: N-terminally EGFP-tagged PTEN and TPMT variants expressed from one Tet-on landing-pad locus in engineered HEK293T cells (mCherry co-expressed), plus ClinVar, gnomAD, TCGA and a published thiopurine cohort; NOT a WWOX system",
+     "genotype": "PTEN (4,112 variants) and TPMT (3,689 variants); no WWOX",
+     "endpoint": "EGFP:mCherry ratio by FACS bins, abundance score 0 to 1"
+    }
+   },
+   {
+    "proposition": "Figure 5b read against its axes (n = 6 variants labelled A80P, Y240C, WT, S125L, R215H, R226Q; dashed regression line; r 0.99, rho 1 printed on the panel).",
+    "snippet": "A scatterplot of abundance score and mean 6-MP dose tolerated by individuals heterozygous for each variant.",
+    "anchor": "Figure 5b (average dosage intensity against abundance score)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29785012_r2/nihms956040f5.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "VAMP-seq: N-terminally EGFP-tagged PTEN and TPMT variants expressed from one Tet-on landing-pad locus in engineered HEK293T cells (mCherry co-expressed), plus ClinVar, gnomAD, TCGA and a published thiopurine cohort; NOT a WWOX system",
+     "genotype": "PTEN (4,112 variants) and TPMT (3,689 variants); no WWOX",
+     "endpoint": "EGFP:mCherry ratio by FACS bins, abundance score 0 to 1"
+    },
+    "qualifies": "entries[9]",
+    "qualifies_needle": "Thiopurine dose intensity, which is affected "
+   },
+   {
+    "proposition": "Limit stated by the authors: abundance cannot report variants that act through activity, localisation or splicing, and a WT-like score must not be read as benign.",
+    "snippet": "VAMP-seq cannot yield insight into variants that are pathogenic because of reduced enzymatic activity, altered localization, or effects on splicing.",
+    "anchor": "Discussion, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29785012_Matreyek2018_PMC5980760.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "VAMP-seq: N-terminally EGFP-tagged PTEN and TPMT variants expressed from one Tet-on landing-pad locus in engineered HEK293T cells (mCherry co-expressed), plus ClinVar, gnomAD, TCGA and a published thiopurine cohort; NOT a WWOX system",
+     "genotype": "PTEN (4,112 variants) and TPMT (3,689 variants); no WWOX",
+     "endpoint": "EGFP:mCherry ratio by FACS bins, abundance score 0 to 1"
+    }
+   },
+   {
+    "proposition": "Applicability limits: low signal or no wild-type versus variant difference for BRCA1 and LMNA; Figure 6 shows the LMNA and MLH1 histograms with overlap of wild type and low-abundance controls.",
+    "snippet": "However, BRCA1 and LMNA resulted in low EGFP signal or no difference in the EGFP:mCherry ratio between wild type and known low-abundance variants (Fig. 6 and data not shown).",
+    "anchor": "Results, General utility of VAMP-seq, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29785012_Matreyek2018_PMC5980760.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "VAMP-seq: N-terminally EGFP-tagged PTEN and TPMT variants expressed from one Tet-on landing-pad locus in engineered HEK293T cells (mCherry co-expressed), plus ClinVar, gnomAD, TCGA and a published thiopurine cohort; NOT a WWOX system",
+     "genotype": "PTEN (4,112 variants) and TPMT (3,689 variants); no WWOX",
+     "endpoint": "EGFP:mCherry ratio by FACS bins, abundance score 0 to 1"
+    }
+   },
+   {
+    "proposition": "The chaperone or degradation-modulator use is proposed, not performed: no small-molecule arm is reported in this paper.",
+    "snippet": "Combining VAMP-seq with small molecule modulators of chaperone or protein degradation machinery may even reveal variant-specific treatments that could rescue low-abundance variants.",
+    "anchor": "Discussion, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29785012_Matreyek2018_PMC5980760.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "VAMP-seq: N-terminally EGFP-tagged PTEN and TPMT variants expressed from one Tet-on landing-pad locus in engineered HEK293T cells (mCherry co-expressed), plus ClinVar, gnomAD, TCGA and a published thiopurine cohort; NOT a WWOX system",
+     "genotype": "PTEN (4,112 variants) and TPMT (3,689 variants); no WWOX",
+     "endpoint": "EGFP:mCherry ratio by FACS bins, abundance score 0 to 1"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST returned the whole article as fullTextXML for PMC5980760 (137 kB, 2026-10-21); the six figure JPEGs came from the PMC open-data bucket (pmc_bucket_fetch.py).",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a figure legend or an inspected figure."
+ }
+}
