@@ -302,12 +302,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Among seven modelled outcomes the one with an interval excluding zero was parent-rated purposeful hand movements; nystagmus and communication were null.",
+    "proposition": "Among seven modelled outcomes the only interval excluding zero was parent-rated purposeful hand movements (minus 1.27 to minus 0.003, which only just excludes zero); the nystagmus interval (minus 1.14 to 1.21) and the communication interval (minus 1.20 to 0.85) include zero and are not nulls.",
     "snippet": "Data suggested that treatment was associated with improvement in purposeful hand movements (treatment effect = −.65, 95% CrI = −1.27 to −.003) but not nystagmus (.05, 95% CrI = −1.14 to 1.21) or communication (−.19, 95% CrI = −1.20 to .85).",
     "anchor": "Results, Individualized outcome tracking",
     "surface": "body",
     "artifact": "files/fulltext/PMID41999155_Jha2026_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID41999155.json",
+     "entry": 6,
+     "what_changed": "Proposition rewritten after the blind audit (OVERSHOOT). Was: Among seven modelled outcomes the one with an interval excluding zero was parent-rated purposeful hand movements; nystagmus and communication were null. The quoted snippet, anchor and artefact are unchanged.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind audit of triples against the sources, recomputing numbers from the printed table or figure; persisted in disease-models/wwox/research/page_adjudications/locator_audit_R4_cards_20261022.md (commit 9f1a2843). The repair itself is unaudited."
+     }
+    }
    },
    {
     "proposition": "Neurophysiology during treatment: more epileptiform discharges on EEG and higher amacrine-cell ERG activity; the authors read this as a shift toward excitation.",

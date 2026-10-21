@@ -271,12 +271,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Bayley-III cognitive score at 2 years did not differ between arms in the randomised subset.",
+    "proposition": "Bayley-III cognitive score at 2 years in the randomised subset: estimated mean difference 4.90 with a 95 percent interval of -5.58 to 15.38 (p 0.3401), uncorrected model IIIa. The interval includes zero and also a 15-point difference: not statistically significant, which is a different statement from 'did not differ'.",
     "snippet": "For the BSID-III congnitive score at 2 years of age the uncorrected model IIIa shows an estimated mean difference of 4.90 (95%-CI from -5.58 to 15.38, p-value 0.3401).",
     "anchor": "Results, Secondary study endpoints",
     "surface": "body",
     "artifact": "files/fulltext/PMID39625912_Wied2024_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID39625912.json",
+     "entry": 8,
+     "what_changed": "Proposition rewritten after the blind audit (OVERSHOOT). Was: Bayley-III cognitive score at 2 years did not differ between arms in the randomised subset. The quoted snippet, anchor and artefact are unchanged.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind audit of triples against the sources, recomputing numbers from the printed table or figure; persisted in disease-models/wwox/research/page_adjudications/locator_audit_R4_cards_20261022.md (commit 9f1a2843). The repair itself is unaudited."
+     }
+    }
    },
    {
     "proposition": "Only the Bayley social-emotional composite reached p below 0.05, which the text calls an advantage of preventive treatment.",

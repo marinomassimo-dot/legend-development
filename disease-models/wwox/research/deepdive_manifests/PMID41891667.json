@@ -486,12 +486,24 @@
     "panel_text_relation": "panel_only"
    },
    {
-    "proposition": "Fig S3: cumulative response curves overlap from the worsening end to about 25 percent reduction, with the drug curve above placebo between about 25 and 85 percent.",
+    "proposition": "Fig S3: cumulative response curves coincide only between about minus 25 and plus 25 percent; between minus 100 and minus 25 percent the placebo curve lies above the drug curve by about 5 to 8 points of participants; the soticlestat curve lies above placebo between about 25 and 85 percent.",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S3: x axis reduction from baseline in MMD seizure frequency; the two curves coincide from about -25 to +25 percent and the soticlestat curve lies above placebo between about 25 and 85 percent; at the worsening end the placebo curve is above the drug curve.",
     "anchor": "Supplementary Figure S3",
     "surface": "figure",
     "artifact": "files/page_renders/PMID41891667/s001media/image3.png",
-    "panel_text_relation": "panel_only"
+    "panel_text_relation": "panel_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID41891667.json",
+     "entry": 23,
+     "what_changed": "Proposition rewritten after the blind audit (OVERSHOOT). Was: Fig S3: cumulative response curves overlap from the worsening end to about 25 percent reduction, with the drug curve above placebo between about 25 and 85 percent. The quoted snippet, anchor and artefact are unchanged.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind audit of triples against the sources, recomputing numbers from the printed table or figure; persisted in disease-models/wwox/research/page_adjudications/locator_audit_R4_cards_20261022.md (commit 9f1a2843). The repair itself is unaudited."
+     }
+    }
    },
    {
     "proposition": "Fig S1: the design schematic states N approximately 234 while 270 were randomised.",
