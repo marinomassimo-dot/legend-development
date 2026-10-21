@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "input_sha256": "a18010935432097cf57cb81e37da0bdc091e5864d089764d864d4cc7e7dfcdf2",
+  "epistemic_status": "IPOTESI",
+  "canonical": false,
+  "assessment": "REQUIRES_QUALIFICATION",
+  "directional_summary": "UNRESOLVED",
+  "comparisons": [
+    {
+      "assertion_id": "DR-B01-001",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "target_id: mismatch or unknown",
+        "endpoint: mismatch or unknown",
+        "context.disease_id: mismatch or unknown",
+        "context.genotype: mismatch or unknown",
+        "context.cell_type: mismatch or unknown",
+        "context.developmental_stage: mismatch or unknown"
+      ]
+    },
+    {
+      "assertion_id": "DR-B01-002",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "target_id: mismatch or unknown",
+        "endpoint: mismatch or unknown",
+        "context.disease_id: mismatch or unknown",
+        "context.genotype: mismatch or unknown",
+        "context.cell_type: mismatch or unknown",
+        "context.developmental_stage: mismatch or unknown",
+        "reported no change, in a cell that is not comparable: a measured null, not an unmeasured cell"
+      ]
+    }
+  ],
+  "abstention": null,
+  "label_lookup": {
+    "status": "NOT_ATTEMPTED",
+    "coverage": "UNKNOWN",
+    "method": "UNKNOWN",
+    "queries": [],
+    "source": "UNKNOWN",
+    "retrieved_at": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "active_ingredient": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "error": "UNKNOWN",
+    "coverage_limit": "UNKNOWN"
+  },
+  "p4_fields": {
+    "endpoint_pursued": "Production of full-length WWOX protein from an allele carrying a premature stop codon, then function; proximal readout: full-length versus truncated protein on N- and C-terminal reagents plus a WWOX function assay.",
+    "functional_evidence_available": "None for WWOX. Elsewhere: partial in one gene, a relevant negative on phenotypic rescue in the only comparator-controlled study.",
+    "temporal_or_model_limit": "Non-neural human cell lines, nonsense alleles only; no animal, no neural, no missense arm.",
+    "cellular_context": {
+      "target_expression": "UNKNOWN. Nonsense alleles exist in the WWOX records, but no PTC-context annotation (stop identity, +4 nucleotide) or count exists.",
+      "cells_tissue_stage": "Lung-cancer, myocyte, airway-epithelial, lymphoblastoid and dermal fibroblast lines; none neural.",
+      "coverage": "Allele and context specificity is stated by the originating authors: no effect size transfers from one PTC to another.",
+      "limits": "The reference missense allele has no premature stop codon. Read-through is not a mechanism for it at any dose by any agent. Other pharmacological actions of the molecule (NMD inhibition, TBK1/IKKe inhibition) are separate hypotheses, untested in any WWOX system."
+    }
+  },
+  "input": {
+    "axis": "B / premature-stop-codon read-through",
+    "route": "RECUPERO_PROFONDO",
+    "candidate": {
+      "id": "P4-B-01",
+      "name": "Amlexanox (qualified, NOT promoted)"
+    },
+    "disease_assertion": {
+      "id": "DA-Q230P-001",
+      "target_id": "WWOX:protein",
+      "endpoint": "WWOX protein detectable by Western blot (lysate fraction not separated)",
+      "direction": "DECREASE",
+      "source": "claim_registry_current CLAIM 019 (functional source: PAPER 041, a single-laboratory study)",
+      "locator": "CLAIM 019, paragraph 'DATO FUNZIONALE, CAUSA NON RISOLTA'; PAPER 041",
+      "epistemic_status": "DATO",
+      "reading_depth": "complete_fulltext_read",
+      "receipt": "FTR-20260923-29808465-02 (body); FTR-20261004-29808465-03 (figures)",
+      "context": {
+        "disease_id": "WWOX-DEE, Q230P-class missense (reference genotype class)",
+        "genotype": "p.Gln230Pro homozygous",
+        "species": "human",
+        "cell_type": "patient-derived fibroblast line (one donor line)",
+        "developmental_stage": "UNKNOWN"
+      },
+      "measured_result_note": "Transcript comparable to reference lines, protein band not detected. One membrane, one exposure, one donor line, no healthy fibroblast control, no densitometry, no n. No proteasome inhibitor, chaperone, synthesis, solubility or half-life measurement exists; the authors leave open impaired translation or premature degradation. The endpoint is 'mRNA normal + protein not detected', not a post-translational mechanism."
+    },
+    "drug_assertions": [
+      {
+        "id": "DR-B01-001",
+        "target_id": "p53, dystrophin and CFTR PTC-containing mRNA and protein",
+        "endpoint": "PTC transcript and protein level",
+        "direction": "INCREASE",
+        "source": "the originating 2012 NMD-screen paper (known-roads reading 1, 22938201); NOT WWOX EVIDENCE",
+        "locator": "disease-models/wwox/research/repurposing_known_roads_20261020_scientist-a.md § 4.3, reading 1",
+        "epistemic_status": "DATO",
+        "reading_depth": "partial_fulltext_read",
+        "context": {
+          "disease_id": "TP53, DMD and CFTR nonsense alleles (not WWOX)",
+          "genotype": "homozygous or compound-heterozygous nonsense alleles",
+          "species": "human",
+          "cell_type": "lung-cancer line, DMD myocytes, CF airway epithelial line",
+          "developmental_stage": "culture"
+        },
+        "measured_result_note": "In the p53 line a truncated protein was well detected and only a very low level of full-length protein; no wild-type-referenced fraction of function; concentration-response non-monotonic; allele- and context-specific by the authors' account.",
+        "receipt": "FTR-20261020-22938201-01"
+      },
+      {
+        "id": "DR-B01-002",
+        "target_id": "FANCF/FANCA full-length protein, survival, chromosomal aberrations, micronuclei",
+        "endpoint": "phenotypic rescue head-to-head with a comparator read-through agent",
+        "direction": "NO_CHANGE",
+        "source": "independent Fanconi-anaemia study (known-roads reading 2, 40544182); NOT WWOX EVIDENCE",
+        "locator": "disease-models/wwox/research/repurposing_known_roads_20261020_scientist-a.md § 4.3, reading 2",
+        "epistemic_status": "DATO",
+        "reading_depth": "partial_fulltext_read",
+        "context": {
+          "disease_id": "Fanconi anaemia (not WWOX)",
+          "genotype": "patient nonsense alleles in FANCA and FANCF",
+          "species": "human",
+          "cell_type": "lymphoblastoid and dermal fibroblast lines",
+          "developmental_stage": "culture"
+        },
+        "measured_result_note": "MEASURED NO PHENOTYPIC RESCUE (survival, aberrations, micronuclei) and NMD not relieved, while one protein arm showed no effect and another about 9 percent of control; the effect that was seen is attributed by the authors to TBK1/IKKe inhibition, not read-through. Encoded NO_CHANGE.",
+        "receipt": "FTR-20261020-40544182-01"
+      }
+    ],
+    "p4_fields": {
+      "endpoint_pursued": "Production of full-length WWOX protein from an allele carrying a premature stop codon, then function; proximal readout: full-length versus truncated protein on N- and C-terminal reagents plus a WWOX function assay.",
+      "functional_evidence_available": "None for WWOX. Elsewhere: partial in one gene, a relevant negative on phenotypic rescue in the only comparator-controlled study.",
+      "temporal_or_model_limit": "Non-neural human cell lines, nonsense alleles only; no animal, no neural, no missense arm.",
+      "cellular_context": {
+        "target_expression": "UNKNOWN. Nonsense alleles exist in the WWOX records, but no PTC-context annotation (stop identity, +4 nucleotide) or count exists.",
+        "cells_tissue_stage": "Lung-cancer, myocyte, airway-epithelial, lymphoblastoid and dermal fibroblast lines; none neural.",
+        "coverage": "Allele and context specificity is stated by the originating authors: no effect size transfers from one PTC to another.",
+        "limits": "The reference missense allele has no premature stop codon. Read-through is not a mechanism for it at any dose by any agent. Other pharmacological actions of the molecule (NMD inhibition, TBK1/IKKe inhibition) are separate hypotheses, untested in any WWOX system."
+      }
+    },
+    "p4_card": {
+      "identity": "Amlexanox, identified in a >1200-compound marketed-drug library screen for NMD inhibition; formulation relevant to any use: UNKNOWN.",
+      "indication_and_transfer": "WOREE as target only for PTC-bearing WWOX alleles. For the Q230P-class reference missense the mechanism is structurally inapplicable. The WWOX Foundation's reported individual experience and a 2024 poster abstract are one narrated experience and one uncontrolled account of it: not two replications and not confirmed efficacy.",
+      "novelty_for_woree": "NON_TROVATO_NELLA_RICERCA for WWOX: seven registry surfaces 0 records; PubMed 'amlexanox AND WWOX' 0 and the read-through-agent query 0, 2026-10-20 (known-roads § 4.1). Limits: a drug-name zero reaches titles and abstracts, not Methods; unpublished foundation-reported experience is unreachable by construction; the instrument was shown to read (17 amlexanox read-through records elsewhere).",
+      "state_of_known_roads": "not verified for WWOX; elsewhere partial and a relevant negative on phenotypic rescue.",
+      "pathway_and_objective": "RECUPERO_PROFONDO, for PTC alleles only.",
+      "expected_contribution": "Full-length protein from a PTC allele, function of it unmeasured; no contribution is stated for the missense class.",
+      "mechanism": "Target: translation termination at a premature stop codon and, separately, NMD; the dual mechanism is declared unresolved in its originating paper; direction: full-length protein up; context: nonsense alleles in non-neural cells.",
+      "sources": {
+        "internal": [
+          "disease-models/wwox/research/repurposing_known_roads_20261020_scientist-a.md § 4",
+          "CC-20261020-SCIENTIST-A-AMLEXANOX-01"
+        ],
+        "external_not_wwox_evidence": [
+          "originating NMD-screen claim",
+          "independent Fanconi-anaemia head-to-head study"
+        ]
+      },
+      "evidence_for_and_against": {
+        "for": [
+          "mRNA rose and protein appeared in three nonsense models of the originating study."
+        ],
+        "against": [
+          "The full-length species can be the minor one.",
+          "Independent comparator-controlled study: no phenotypic rescue, NMD not relieved; the authors write: \"Thus, this study suggests that a partial downregulation of p53 per se is not sufficient to produce phenotypic rescue in human cells.\"",
+          "The entire safety argument in the originating paper is historic use for other indications; no paediatric, CNS or pharmacokinetic datum."
+        ],
+        "transfer_limits": "No missense arm anywhere; allele- and context-specific by the authors' account."
+      },
+      "time_to_access": "UNKNOWN.",
+      "time_to_benefit": "UNKNOWN.",
+      "pharmacology": "UNKNOWN for WWOX. No pharmacokinetic or CNS datum in the sources.",
+      "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+      "scope_of_checks": {
+        "support_and_replication": "The dual-activity claim is not reproduced outside its originating laboratory; the two papers disagree on the NMD arm and this card does not adjudicate which is right.",
+        "formal_checks": "Both readings are partial_fulltext_read with figures captions_only; supplement of the independent study not fetched (declared debt).",
+        "card_inferences_owed_audit": "None added."
+      },
+      "question_history": [
+        "CC-20261020-SCIENTIST-A-AMLEXANOX-01",
+        "roadmap qualification: 'qualified, not promoted'"
+      ],
+      "predictions": "None; no engine, no score.",
+      "next_measurement": "For PTC alleles: the enumeration of WWOX PTC alleles with stop identity and +4 nucleotide, then a function measurement on any protein produced. For the missense class: none, the mechanism does not apply.",
+      "status": "deferred with reason",
+      "status_reason": "Ineligible by mechanism for the reference missense; for PTC alleles the eligible class has never been counted.",
+      "value_added": "Keeps a qualified road visible without letting protein quantity stand for function.",
+      "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (disease-models/wwox/research/drug_repurposing/clinical_census_20261020.md): seven separate queries returned no registered WOREE interventional study; the only synonym-driven record is one observational natural-history registry. Carried with the census's own caution: \"A missing hit does not prove that no study exists.\" It answers seven queries against one registry on one date; unregistered, differently worded, non-NLM or later-registered studies are not excluded."
+    },
+    "not_known": [
+      "Whether any WWOX PTC allele would be read through, and at what efficiency: no count of PTC alleles and no PTC-context annotation exist.",
+      "Whether full-length protein produced by read-through of a WWOX PTC would function.",
+      "About 57 percent of classifiable individuals in the largest genotype-classified cohort are null/null (as stated in the known-roads note): for them no recoverable endogenous substrate for any allele-specific lever is established."
+    ],
+    "evidence_against": [
+      "No phenotypic rescue in the one comparator-controlled study.",
+      "No premature stop codon in the reference missense."
+    ],
+    "bridge_gaps_exposed": [
+      "G-1 (closed in bridge b96e4cd9; packet rebuilt with NO_CHANGE)"
+    ],
+    "schema_version": 1,
+    "translation": {
+      "pediatric_suitability": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+      "cns_exposure": "UNKNOWN. No pharmacokinetic or CNS datum in the sources.",
+      "interactions": "UNKNOWN",
+      "access": "UNKNOWN",
+      "time_to_benefit": "UNKNOWN",
+      "functional_rescue": "UNKNOWN for WWOX; elsewhere a relevant negative on phenotypic rescue in the one comparator-controlled study."
+    },
+    "p4_roadmap_fields": {
+      "indication_and_transfer": "WOREE as target only for PTC-bearing WWOX alleles. For the Q230P-class reference missense the mechanism is structurally inapplicable. The WWOX Foundation's reported individual experience and a 2024 poster abstract are one narrated experience and one uncontrolled account of it: not two replications and not confirmed efficacy.",
+      "verification_scope": "{\"support_and_replication\": \"The dual-activity claim is not reproduced outside its originating laboratory; the two papers disagree on the NMD arm and this card does not adjudicate which is right.\", \"formal_checks\": \"Both readings are partial_fulltext_read with figures captions_only; supplement of the independent study not fetched (declared debt).\", \"card_inferences_owed_audit\": \"None added.\"}"
+    },
+    "label_lookup": {
+      "status": "NOT_ATTEMPTED"
+    },
+    "card_conventions": [
+      "IPOTESI throughout; the bridge forces it. No score, rank, probability or blended index is carried, and none may be derived from this card.",
+      "directional_summary compares signs only where target, endpoint and every context dimension match; UNRESOLVED means no matched comparison exists, which is a statement about the record, not about the biology.",
+      "NO_MATCH_FOUND is not 'does not exist'; NON_TROVATO_NELLA_RICERCA is not MAI_TENTATO.",
+      "label_lookup is NOT_ATTEMPTED on every card: the bridge has no network and no pharmacological-label search was run. It is not NO_MATCH_FOUND.",
+      "No dose, route, schedule or paediatric suitability appears; concentrations or exposures of the sources are deliberately not reproduced.",
+      "Every adjacent source is labelled NOT WWOX EVIDENCE at class level."
+    ],
+    "no_new_reading": "No paper was opened for this card; the sources are the repository's own receipted notes and records."
+  },
+  "translation": {
+    "pediatric_suitability": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+    "cns_exposure": "UNKNOWN. No pharmacokinetic or CNS datum in the sources.",
+    "interactions": "UNKNOWN",
+    "access": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN",
+    "functional_rescue": "UNKNOWN for WWOX; elsewhere a relevant negative on phenotypic rescue in the one comparator-controlled study."
+  },
+  "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+  "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "NO_CHANGE is a reported null effect on that endpoint and context: it is not UNKNOWN (not measured), not evidence of safety, and not proof of futility; a null in a non-comparable cell stays UNRESOLVED.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+  ]
+}

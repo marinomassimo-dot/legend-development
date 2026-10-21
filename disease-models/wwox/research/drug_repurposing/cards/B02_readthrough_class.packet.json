@@ -1,0 +1,115 @@
+{
+  "axis": "B / premature-stop-codon read-through",
+  "route": "RECUPERO_PROFONDO",
+  "candidate": {
+    "id": "P4-B-02",
+    "name": "PTC read-through class for WWOX nonsense alleles (ataluren-type and aminoglycoside-type agents)"
+  },
+  "disease_assertion": {
+    "id": "DA-PTC-001",
+    "target_id": "WWOX:protein",
+    "endpoint": "full-length WWOX protein from a premature-stop-codon allele",
+    "direction": "UNKNOWN",
+    "source": "known-roads § 4.4 (no measurement and no enumeration exist)",
+    "locator": "disease-models/wwox/research/repurposing_known_roads_20261020_scientist-a.md § 4.4",
+    "epistemic_status": "INFERENZA",
+    "reading_depth": "UNKNOWN",
+    "context": {
+      "disease_id": "WWOX-DEE, nonsense-allele class",
+      "genotype": "premature stop codon",
+      "species": "human",
+      "cell_type": "UNKNOWN",
+      "developmental_stage": "UNKNOWN"
+    }
+  },
+  "drug_assertions": [],
+  "p4_fields": {
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "No measurement exists in a WWOX system.",
+    "cellular_context": {
+      "target_expression": "UNKNOWN",
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "An enumeration is a list, not an experiment; nobody has made it."
+    }
+  },
+  "abstention_card": {
+    "kind": "ABSTENTION",
+    "missing_datum": "The enumeration: a count of WWOX nonsense alleles with stop-codon identity and the +4 nucleotide, which govern read-through efficiency. No published cohort separates splice from nonsense from frameshift from CNV; the class is pooled into 'null' and its size is unknown.",
+    "search_record": "NON_TROVATO_NELLA_RICERCA: ataluren, PTC124, ELX-02, read-through and nonsense suppression 0 across the repository; PubMed WWOX with those terms 0 (2026-10-20, title/abstract only).",
+    "adjacent_context_not_wwox_evidence": [
+      "the independent comparator-controlled study (known-roads § 4.3) is the only adjacent head-to-head and concerns amlexanox against ataluren in Fanconi-anaemia cells"
+    ],
+    "an_abstention_is_a_result": "The roadmap states it; this card names what would end it."
+  },
+  "p4_card": {
+    "identity": "PTC read-through class for WWOX nonsense alleles (ataluren-type and aminoglycoside-type agents)",
+    "indication_and_transfer": "WOREE as target; no candidate molecule is carded because the datum below is missing.",
+    "novelty_for_woree": "NON_TROVATO_NELLA_RICERCA: ataluren, PTC124, ELX-02, read-through and nonsense suppression 0 across the repository; PubMed WWOX with those terms 0 (2026-10-20, title/abstract only).",
+    "state_of_known_roads": "known-roads § 4.4, § 5",
+    "pathway_and_objective": "RECUPERO_PROFONDO.",
+    "expected_contribution": "UNKNOWN",
+    "mechanism": "UNKNOWN",
+    "sources": {
+      "internal": [
+        "known-roads § 4.4"
+      ],
+      "external_not_wwox_evidence": [
+        "the independent comparator-controlled study (known-roads § 4.3) is the only adjacent head-to-head and concerns amlexanox against ataluren in Fanconi-anaemia cells"
+      ]
+    },
+    "evidence_for_and_against": {
+      "for": [],
+      "against": [],
+      "transfer_limits": "An enumeration is a list, not an experiment; nobody has made it."
+    },
+    "time_to_access": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN",
+    "pharmacology": "UNKNOWN",
+    "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+    "scope_of_checks": {
+      "support_and_replication": "None.",
+      "formal_checks": "None; no assertion is supplied.",
+      "card_inferences_owed_audit": "Statements marked INFERENZA, if any, are OWED a blind audit by another actor."
+    },
+    "question_history": [
+      "known-roads § 4.4"
+    ],
+    "predictions": "None; no engine, no score.",
+    "next_measurement": "Make the PTC-allele enumeration with context annotation; it would populate or empty the class.",
+    "status": "abstention",
+    "value_added": "Names the missing datum so that the axis is a recorded gap and not a silence.",
+    "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (disease-models/wwox/research/drug_repurposing/clinical_census_20261020.md): seven separate queries returned no registered WOREE interventional study; the only synonym-driven record is one observational natural-history registry. Carried with the census's own caution: \"A missing hit does not prove that no study exists.\" It answers seven queries against one registry on one date; unregistered, differently worded, non-NLM or later-registered studies are not excluded."
+  },
+  "not_known": [
+    "The enumeration: a count of WWOX nonsense alleles with stop-codon identity and the +4 nucleotide, which govern read-through efficiency. No published cohort separates splice from nonsense from frameshift from CNV; the class is pooled into 'null' and its size is unknown."
+  ],
+  "evidence_against": [],
+  "bridge_gaps_exposed": [],
+  "schema_version": 1,
+  "translation": {
+    "pediatric_suitability": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "access": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN",
+    "functional_rescue": "UNKNOWN"
+  },
+  "p4_roadmap_fields": {
+    "indication_and_transfer": "WOREE as target; no candidate molecule is carded because the datum below is missing.",
+    "verification_scope": "{\"support_and_replication\": \"None.\", \"formal_checks\": \"None; no assertion is supplied.\", \"card_inferences_owed_audit\": \"Statements marked INFERENZA, if any, are OWED a blind audit by another actor.\"}"
+  },
+  "label_lookup": {
+    "status": "NOT_ATTEMPTED"
+  },
+  "card_conventions": [
+    "IPOTESI throughout; the bridge forces it. No score, rank, probability or blended index is carried, and none may be derived from this card.",
+    "directional_summary compares signs only where target, endpoint and every context dimension match; UNRESOLVED means no matched comparison exists, which is a statement about the record, not about the biology.",
+    "NO_MATCH_FOUND is not 'does not exist'; NON_TROVATO_NELLA_RICERCA is not MAI_TENTATO.",
+    "label_lookup is NOT_ATTEMPTED on every card: the bridge has no network and no pharmacological-label search was run. It is not NO_MATCH_FOUND.",
+    "No dose, route, schedule or paediatric suitability appears; concentrations or exposures of the sources are deliberately not reproduced.",
+    "Every adjacent source is labelled NOT WWOX EVIDENCE at class level."
+  ],
+  "no_new_reading": "No paper was opened for this card; the sources are the repository's own receipted notes and records."
+}

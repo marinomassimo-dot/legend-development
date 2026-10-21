@@ -1,0 +1,156 @@
+{
+  "axis": "C / restoration of WWOX expression",
+  "route": "RECUPERO_PROFONDO",
+  "candidate": {
+    "id": "P4-C-01",
+    "name": "AAV9-delivered human WWOX (neuron-directed gene replacement)"
+  },
+  "disease_assertion": {
+    "id": "DA-KO-SWD-001",
+    "target_id": "electrographic spike-wave discharges",
+    "endpoint": "spike-wave discharge rate per hour on continuous ECoG",
+    "direction": "INCREASE",
+    "source": "PAPER 011 / CLAIM 011 (rescue-reference scaffold, endpoint E1)",
+    "locator": "disease-models/wwox/research/drug_repurposing/woree_rescue_reference_scaffold.md § 2.1, row E1 (Figure 7E at 400 dpi, vector page render)",
+    "epistemic_status": "DATO",
+    "reading_depth": "complete_fulltext_read",
+    "receipt": "FTR-20260814-42422765-06; re-inspection FTR-20261021-42422765-01",
+    "context": {
+      "disease_id": "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+      "genotype": "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+      "species": "mouse",
+      "cell_type": "cortical electrocorticography, single epidural channel",
+      "developmental_stage": "about two to three weeks after birth"
+    },
+    "measured_result_note": "Wild-type versus knockout bracket marked highly significant; n = 5 pups per group by caption; blinded event screening declared for this panel; absence-type signature, not the convulsive repertoire of WOREE; the companion spike-count panel contradicts its own text (p value printed on the panel) and is a baseline, not a rescue measure."
+  },
+  "drug_assertions": [
+    {
+      "id": "DR-C01-001",
+      "target_id": "electrographic spike-wave discharges",
+      "endpoint": "spike-wave discharge rate per hour on continuous ECoG",
+      "direction": "DECREASE",
+      "source": "PAPER 011 / CLAIM 011 (same study, same panel)",
+      "locator": "disease-models/wwox/research/drug_repurposing/woree_rescue_reference_scaffold.md § 2.1, row E1",
+      "epistemic_status": "DATO",
+      "reading_depth": "complete_fulltext_read",
+      "receipt": "FTR-20260814-42422765-06; re-inspection FTR-20261021-42422765-01",
+      "context": {
+        "disease_id": "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+        "genotype": "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+        "species": "mouse",
+        "cell_type": "cortical electrocorticography, single epidural channel",
+        "developmental_stage": "about two to three weeks after birth"
+      },
+      "measured_result_note": "Treated knockout fell from a knockout level to a level not significantly different from wild type, at ONE vector level only: there is no low-level arm on this endpoint, so dose-dependence is NOT TESTED here and the measure must not be cited for a dose-dependent direction. Single-channel montage; limited cohort in the authors' words."
+    }
+  ],
+  "p4_fields": {
+    "endpoint_pursued": "Restoration of WWOX function by neuron-directed replacement; the single useful endpoint carried is spike-wave discharge rate. Other measured families (survival, growth and glycaemia, motor score, myelination, gliosis) are in p4_card and are NOT compared by the bridge, which holds one disease assertion per packet.",
+    "functional_evidence_available": "In the Wwox-null mouse, by one laboratory: SWD rate to wild-type level (single vector level); survival to 300 days at the higher vector level; a graded motor score; graded glycaemia at one age; WWOX protein graded; myelination qualitative only; gliosis binary against wild type with no untreated-null comparator in the quantified treated panels.",
+    "temporal_or_model_limit": "Constitutive null, not Q230P; one laboratory (the two papers share senior author and institution); no replication; earliest postnatal treatment ages only and NOT_MEASURED is not SMALLER; no tumour surveillance or overexpression-toxicity endpoint; SWD recorded over one week starting about two weeks after birth; threshold not located.",
+    "cellular_context": {
+      "target_expression": "Neuron-directed construct; WWOX protein graded by vector level and regionally uneven, supraphysiological in survivors and survivor-selected (PREMISE: NOBODY_LOOKED on the upper bound).",
+      "cells_tissue_stage": "Mouse brain regions; the cerebellum, the organ of the ataxic phenotype, is the region the vector reaches least and no efficacy endpoint was measured there; protein also reaches the sciatic nerve while liver stays at background.",
+      "coverage": "Oligodendrocyte-directed construct produced essentially no detectable protein, so the oligodendrocyte question is unanswered, not answered negatively.",
+      "limits": "Residual partial function in a missense context is a reason to expect a DIFFERENT result, not a larger one; the expected level of rescue in the reference genotype does not follow from this study in either direction."
+    }
+  },
+  "p4_card": {
+    "identity": "AAV9 carrying human WWOX cDNA under a neuronal promoter, with and without a post-transcriptional element; the promoter-comparison constructs are a different architecture. Whether any programme's clinical construct equals the mouse-study construct: UNKNOWN. Titre convention is undeclared by the source and no vector quantity is reproduced here.",
+    "indication_and_transfer": "WOREE (all genotypes carry some level of WWOX deficit) as target; origin: a constitutive-null mouse and human knockout and patient-derived organoids. Transfer to a Q230P-class missense or compound context is not established.",
+    "novelty_for_woree": "Already studied (two mouse papers, one laboratory). A gene-therapy programme for WOREE is recorded at grant level (census § 3); that is not a registered study.",
+    "state_of_known_roads": "partial: the only measured rescue in the corpus, complete on several R-class endpoints, with no S, C or D datum.",
+    "pathway_and_objective": "RECUPERO_PROFONDO.",
+    "expected_contribution": "Recovery of function by replacement (R-class demonstrated in the null mouse); nothing is stated for clinical benefit.",
+    "mechanism": "Target: WWOX gene dosage in neurons; type: replacement; direction: protein up; context: null mouse brain.",
+    "sources": {
+      "internal": [
+        "CLAIM 002, CLAIM 004, CLAIM 011 (flagged for review, NOT consolidated), CLAIM 040, TX-007, DL-MOL-005, DIS-021, DIS-023",
+        "disease-models/wwox/research/drug_repurposing/woree_rescue_reference_scaffold.md §§ 2, 3",
+        "disease-models/wwox/research/repurposing_known_roads_20261020_scientist-a.md § 2.1"
+      ],
+      "external_not_wwox_evidence": [],
+      "note": "Here the sources ARE WWOX evidence in the null mouse; the transfer to the reference genotype is the gap."
+    },
+    "evidence_for_and_against": {
+      "for": [
+        "SWD to a level not distinguishable from wild type in the strongest causal design of the corpus (blinded; single vector level).",
+        "Durable survival to 300 days at the higher vector level, comparable to the wild-type arm (which itself lost about 29 percent).",
+        "Graded WWOX protein, glycaemia at one age and motor score."
+      ],
+      "against": [
+        "Not independently replicated; 'replicated mWwox ~ hWWOX' is an intra-study control.",
+        "A THRESHOLD, NOT A CONTINUUM for survival: the lower level postpones death and reaches extinction; two dose points cannot locate a threshold (CLAIM 011 narrowing, proposed, blind-audit partly run).",
+        "Body weight is equal at the two levels at one age and the weight comparison is survivor-conditioned on the lower side: an equality between unequal denominators is not evidence of grading.",
+        "Myelination dose relation never quantified; gliosis result binary against wild type with no untreated-null comparator; SWD has no low-level arm.",
+        "No tumour surveillance of any kind in a pro-apoptotic tumour suppressor delivered irreversibly; no measured ceiling.",
+        "Treatment age window tested only at the earliest postnatal ages; later NOT_MEASURED.",
+        "Behaviour at 3 months has no untreated-null arm by construction and a text-versus-panel conflict, not adjudicated."
+      ],
+      "transfer_limits": "Null versus missense or compound context; mouse absence-type SWD versus human convulsive repertoire."
+    },
+    "time_to_access": "UNKNOWN. The census records a programme with a gene-therapy objective at grant level; no registered WOREE study; sponsor-declared authorisation, enrolment and first dose UNKNOWN.",
+    "time_to_benefit": "UNKNOWN in humans. In the mouse the SWD effect was recorded over one week starting about two weeks after birth; no earlier ECoG timepoint exists.",
+    "pharmacology": "Not applicable in the small-molecule sense: biodistribution regionally uneven; potency, selectivity and CNS exposure of a human product: UNKNOWN. The absolute vector quantity is uncertain by exactly a factor of two in the source and no figure is reproduced.",
+    "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+    "scope_of_checks": {
+      "support_and_replication": "One laboratory; no replication; support is intra-study.",
+      "formal_checks": "Rescue-reference fill: voluntary blind audit run on the new Figure 3B triples, 5 SUPPORTED, 2 OVERSHOOT, 1 UNDERSHOOT, 0 UNVERIFIABLE, all adverse verdicts repaired at source; verdict not certified by its author. CLAIM 011 remains flagged for review.",
+      "card_inferences_owed_audit": "None added; the 'threshold not a continuum' wording is the repository's NARROW adjudication and is carried as proposed."
+    },
+    "question_history": [
+      "CLAIM 011 flag of 2026-08-10 (dose-dependent over a threshold) -> NARROW adjudication CC-20261021-SCIENTIST-C-CLAIM011-DOSE-ADJUDICATION-01",
+      "DL-MOL-005, DIS-021, DIS-023",
+      "TX-007"
+    ],
+    "predictions": "None; no engine, no score.",
+    "next_measurement": "An intermediate-level arm, defined as a fraction of the primary's higher level (never in absolute quantity), carried to 300 days with survival, weight, glycaemia, ECoG and quantified myelin in the same animals; and an independent replication. Either would change whether this is a threshold or a steep continuum.",
+    "status": "hypothesis",
+    "status_reason": "Transfer to the reference genotype not established; no replication.",
+    "value_added": "Shows which endpoints carry a graded relation and which do not, so a single useful endpoint is not read as a dose-response.",
+    "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (disease-models/wwox/research/drug_repurposing/clinical_census_20261020.md): seven separate queries returned no registered WOREE interventional study; the only synonym-driven record is one observational natural-history registry. Carried with the census's own caution: \"A missing hit does not prove that no study exists.\" It answers seven queries against one registry on one date; unregistered, differently worded, non-NLM or later-registered studies are not excluded."
+  },
+  "not_known": [
+    "Whether a missense or compound context with partial residual function would respond more, less or differently.",
+    "The upper bound of safe expression and any tumour risk.",
+    "Whether treatment after the earliest postnatal ages helps less, equally or more.",
+    "The shape of the dose relation between the two tested vector levels.",
+    "Whether the source's result is reproduced by an independent laboratory."
+  ],
+  "evidence_against": [
+    "Threshold not continuum.",
+    "No replication.",
+    "No tumour surveillance."
+  ],
+  "bridge_gaps_exposed": [
+    "G-2 (open)",
+    "G-3 (closed in bridge b96e4cd9)"
+  ],
+  "reading_guard": "OPPOSES_DISEASE_CHANGE is a sign comparison on ONE endpoint inside the Wwox-null mouse context. It says nothing about the Q230P class, nothing about the other endpoints (which the bridge does not compare), nothing about dose-dependence, and nothing about efficacy or safety in any person.",
+  "schema_version": 1,
+  "translation": {
+    "pediatric_suitability": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+    "cns_exposure": "Not applicable in the small-molecule sense; biodistribution in the null mouse is regionally uneven. Human product: UNKNOWN.",
+    "interactions": "UNKNOWN",
+    "access": "UNKNOWN. A programme with a gene-therapy objective for WOREE is recorded at grant level; no registered WOREE interventional study on that registry on 2026-10-20 (a missing hit does not prove that none exists); authorisation, enrolment and first dose UNKNOWN.",
+    "time_to_benefit": "UNKNOWN in humans. In the null mouse the discharge effect was recorded over one week starting about two weeks after birth.",
+    "functional_rescue": "Demonstrated in the Wwox-null mouse on several endpoints by one laboratory (R-class), not replicated; in humans UNKNOWN."
+  },
+  "p4_roadmap_fields": {
+    "indication_and_transfer": "WOREE (all genotypes carry some level of WWOX deficit) as target; origin: a constitutive-null mouse and human knockout and patient-derived organoids. Transfer to a Q230P-class missense or compound context is not established.",
+    "verification_scope": "{\"support_and_replication\": \"One laboratory; no replication; support is intra-study.\", \"formal_checks\": \"Rescue-reference fill: voluntary blind audit run on the new Figure 3B triples, 5 SUPPORTED, 2 OVERSHOOT, 1 UNDERSHOOT, 0 UNVERIFIABLE, all adverse verdicts repaired at source; verdict not certified by its author. CLAIM 011 remains flagged for review.\", \"card_inferences_owed_audit\": \"None added; the 'threshold not a continuum' wording is the repository's NARROW adjudication and is carried as proposed.\"}"
+  },
+  "label_lookup": {
+    "status": "NOT_ATTEMPTED"
+  },
+  "card_conventions": [
+    "IPOTESI throughout; the bridge forces it. No score, rank, probability or blended index is carried, and none may be derived from this card.",
+    "directional_summary compares signs only where target, endpoint and every context dimension match; UNRESOLVED means no matched comparison exists, which is a statement about the record, not about the biology.",
+    "NO_MATCH_FOUND is not 'does not exist'; NON_TROVATO_NELLA_RICERCA is not MAI_TENTATO.",
+    "label_lookup is NOT_ATTEMPTED on every card: the bridge has no network and no pharmacological-label search was run. It is not NO_MATCH_FOUND.",
+    "No dose, route, schedule or paediatric suitability appears; concentrations or exposures of the sources are deliberately not reproduced.",
+    "Every adjacent source is labelled NOT WWOX EVIDENCE at class level."
+  ],
+  "no_new_reading": "No paper was opened for this card; the sources are the repository's own receipted notes and records."
+}

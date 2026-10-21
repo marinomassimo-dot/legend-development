@@ -1,5 +1,5 @@
 {
- "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
  "_note": "Part of the ten-hour repurposing batch ORCH-REPURPOSING-10H-20261021. Adjacent and transferable literature: every paper that is not WWOX evidence is labelled NOT WWOX EVIDENCE, at class level, no dose, no paediatric suitability presumed, not medical advice.",
  "TASK_ID": "REPURP-10H-P4-DEEP-A-20261022",
  "DIRECTIVE_VERSION": 1,
@@ -38,6 +38,95 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-21"
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-10-21",
+ "TASK_ACK": {
+  "actor": "scientist-a",
+  "at": "2026-10-21T20:00:00Z",
+  "directive_version": 1,
+  "generation": 1,
+  "understanding": "Roadmap P4 for RECUPERO_PROFONDO: shape the repository's own qualified material (known roads, R1, R3, rescue reference, clinical census) into candidate cards with framework/scripts/repurposing_bridge.py, Q230P-class recovery axis first, an explicit abstention for every axis without support; no score, rank, probability, dose, route, schedule or paediatric suitability; no new literature reading unless one panel decides a card; the bridge is not patched, gaps are recorded."
+ },
+ "TASK_CLAIM": {
+  "actor": "scientist-a",
+  "at": "2026-10-21T20:00:00Z",
+  "branch": "task/REPURP-10H-P4-DEEP-A-20261022",
+  "worktree": ".claude/worktrees/p4-a",
+  "reading_claims": [],
+  "note": "No paper is read in this task; no reading claim is taken. Outputs only under disease-models/wwox/research/drug_repurposing/cards/ and the note."
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "The bridge has no typed slot for most roadmap P4 fields.",
+   "default": "Carry them as extra top-level packet keys (p4_card, not_known, abstention_card, reading_guard) kept unchanged under input; validate locally with cards/check_cards.py.",
+   "why_safe": "Bridge keeps and checksums them without interpreting; check_cards.py fails an absent field.",
+   "what_would_have_been_different": "Typed slots would validate them."
+  },
+  {
+   "condition": "No network in the bridge; no pharmacological-label search run.",
+   "default": "label_lookup NOT_ATTEMPTED on all twelve.",
+   "why_safe": "Not NO_MATCH_FOUND; states no label fact.",
+   "what_would_have_been_different": "A search would fill product and coverage."
+  },
+  {
+   "condition": "A card's disease assertion must be one endpoint.",
+   "default": "Q230P fibroblast protein (axis A, B); null-mouse SWD (AAV9); organoid progenitors (A51); other endpoints kept in p4_card.",
+   "why_safe": "Cross-system rows resolve UNRESOLVED by design.",
+   "what_would_have_been_different": "Per-endpoint assertions (gap G-2)."
+  },
+  {
+   "condition": "Coordinator priority change during the task (R1 blind audit).",
+   "default": "Repair R1 at source on a fresh branch, land, then resume; rebuild the cards on the updated bridge and carry the repaired R1 wording.",
+   "why_safe": "Order set by the coordinator; nothing certified.",
+   "what_would_have_been_different": "none"
+  },
+  {
+   "condition": "Out-of-path candidates (early benefit).",
+   "default": "Not carded; scientist-d holds that path.",
+   "why_safe": "Recorded in README.",
+   "what_would_have_been_different": "More cards."
+  }
+ ],
+ "STOP_LOG": [],
+ "WAVE_1_RESULT": {
+  "DEFAULTS_TAKEN": [
+   {
+    "condition": "The bridge has no typed slot for most roadmap P4 fields.",
+    "default": "Carry them as extra top-level packet keys (p4_card, not_known, abstention_card, reading_guard) kept unchanged under input; validate locally with cards/check_cards.py.",
+    "why_safe": "Bridge keeps and checksums them without interpreting; check_cards.py fails an absent field.",
+    "what_would_have_been_different": "Typed slots would validate them."
+   },
+   {
+    "condition": "No network in the bridge; no pharmacological-label search run.",
+    "default": "label_lookup NOT_ATTEMPTED on all twelve.",
+    "why_safe": "Not NO_MATCH_FOUND; states no label fact.",
+    "what_would_have_been_different": "A search would fill product and coverage."
+   },
+   {
+    "condition": "A card's disease assertion must be one endpoint.",
+    "default": "Q230P fibroblast protein (axis A, B); null-mouse SWD (AAV9); organoid progenitors (A51); other endpoints kept in p4_card.",
+    "why_safe": "Cross-system rows resolve UNRESOLVED by design.",
+    "what_would_have_been_different": "Per-endpoint assertions (gap G-2)."
+   },
+   {
+    "condition": "Coordinator priority change during the task (R1 blind audit).",
+    "default": "Repair R1 at source on a fresh branch, land, then resume; rebuild the cards on the updated bridge and carry the repaired R1 wording.",
+    "why_safe": "Order set by the coordinator; nothing certified.",
+    "what_would_have_been_different": "none"
+   },
+   {
+    "condition": "Out-of-path candidates (early benefit).",
+    "default": "Not carded; scientist-d holds that path.",
+    "why_safe": "Recorded in README.",
+    "what_would_have_been_different": "More cards."
+   }
+  ],
+  "STOP_LOG": []
+ },
+ "MILESTONE_LOG": [
+  {
+   "at": "2026-10-22",
+   "milestone": "12 packets and cards (5 cards, 7 abstentions) over axes A-D, rebuilt on bridge b96e4cd9; note and self-evaluation written; no reading performed"
+  }
+ ]
 }
