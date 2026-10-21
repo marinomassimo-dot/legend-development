@@ -1,0 +1,304 @@
+{
+ "schema_version": 2,
+ "pmid": "29463073",
+ "doi": "10.4062/biomolther.2017.223",
+ "receipt": "FTR-20261021-29463073-01",
+ "landing": [
+  "FTR-20261021-29463073-01",
+  "repurposing_10h_scientist-b_20261021"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 369,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-21: 'Shin CY[au]' 369; with (WWOX OR Wwox) 0. Initials-level string, may pool homonyms.",
+  "research_type": "experimental_lab",
+  "weighting": "A neuropharmacology laboratory studying developmental toxicity of channel blockers; a small in-vitro study (rat embryonic cells, Student t-tests, N 3 to 13). Credible as a hypothesis-generating toxicity signal, not as a developmental-safety finding.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID29463073_Kim2018_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement about WWOX content of this surface."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 40,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-29463073-01",
+    "target": "Abdul-Wajid et al. 2015 (T-type channel blockade and neural tube closure defects)",
+    "question": "Is the neural-tube effect a T-type effect in vivo, in what species and exposure window, and is ethosuximide among the compounds tested?",
+    "status": "open - cited, not read"
+   },
+   {
+    "id": "MH-29463073-02",
+    "target": "Huang et al. 2015 (T-type blockade and silencing induce apoptosis through ER calcium release)",
+    "question": "Does the ER-stress mechanism explain the AKT and GSK3B dephosphorylation seen in progenitors?",
+    "status": "open - cited, not read"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 29463073, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "paper_packet.py packet at claim time: none prior; claimed by scientist-b."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-21",
+  "route": "PubMed esummary (JSON) for 29463073 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "pubtype [\"Journal Article\"]; no retraction, expression of concern or erratum is visible on the esummary record (the esummary JSON carries no CommentsCorrections list for this PMID, so that absence is a statement about this query).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 40,
+   "references_screened": 40,
+   "references_with_doi": 40,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID29463073_Kim2018_PMC_r2.xml",
+   "sha256": "633415985a88c98b6f0d6268eb5360ff6ce73feae1f6365ef118a53dc72d4eb2",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=6131011&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "633415985a88c98b6f0d6268eb5360ff6ce73feae1f6365ef118a53dc72d4eb2"
+   }
+  },
+  {
+   "path": "files/supplement/PMID29463073_r2/PMC6131011.1.pdf",
+   "sha256": "3fae57e6e10b8c0608deca0ed04f79da6f5ce9f568a8567fa7ad7103bc2119fb",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC6131011",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "3fae57e6e10b8c0608deca0ed04f79da6f5ce9f568a8567fa7ad7103bc2119fb"
+   }
+  },
+  {
+   "path": "files/figures/PMID29463073_r2/PMC6131011_p02_170dpi.png",
+   "sha256": "9dc2fbaf2575ba4cdc44959670fd9a937c080e681e3d9a4fa9006de0ebd83464",
+   "kind": "figure",
+   "note": "Page 2 of the PMC PDF rendered at 170 dpi; the deposit's figure jpgs are about 114 ppi, so the page render (carrying the figure at print size) was read.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "9dc2fbaf2575ba4cdc44959670fd9a937c080e681e3d9a4fa9006de0ebd83464",
+    "derived_from": "files/supplement/PMID29463073_r2/PMC6131011.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=170) on page 2",
+     "join": ""
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID29463073_r2/PMC6131011_p03_170dpi.png",
+   "sha256": "8f066f9d012243447ce29ffb0d9c952fe2e1ad773535cf4c8897d37a8572c201",
+   "kind": "figure",
+   "note": "Page 3 of the PMC PDF rendered at 170 dpi; the deposit's figure jpgs are about 114 ppi, so the page render (carrying the figure at print size) was read.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "8f066f9d012243447ce29ffb0d9c952fe2e1ad773535cf4c8897d37a8572c201",
+    "derived_from": "files/supplement/PMID29463073_r2/PMC6131011.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=170) on page 3",
+     "join": ""
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID29463073_r2/PMC6131011_p04_170dpi.png",
+   "sha256": "940714b1dd11f2019d43bb9934a9deb85b292b1038ae2e68a9f7752b9cdf9976",
+   "kind": "figure",
+   "note": "Page 4 of the PMC PDF rendered at 170 dpi; the deposit's figure jpgs are about 114 ppi, so the page render (carrying the figure at print size) was read.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "940714b1dd11f2019d43bb9934a9deb85b292b1038ae2e68a9f7752b9cdf9976",
+    "derived_from": "files/supplement/PMID29463073_r2/PMC6131011.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=170) on page 4",
+     "join": ""
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID29463073_r2/PMC6131011_p05_170dpi.png",
+   "sha256": "1e25d4da412e049468e6b331a5ef898e3d9a07800df26f045b6963d2a2ae1066",
+   "kind": "figure",
+   "note": "Page 5 of the PMC PDF rendered at 170 dpi; the deposit's figure jpgs are about 114 ppi, so the page render (carrying the figure at print size) was read.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "1e25d4da412e049468e6b331a5ef898e3d9a07800df26f045b6963d2a2ae1066",
+    "derived_from": "files/supplement/PMID29463073_r2/PMC6131011.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=170) on page 5",
+     "join": ""
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figures opened as images; every text snippet below was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet below sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "Material scope: the compounds are mibefradil, NNC55-0396, ML218, nickel and nifedipine, in rat embryonic day 14 cortical progenitor cultures, 24 h exposure. Ethosuximide is not among them and no antiseizure drug used in children is tested.",
+    "snippet": "Primary NPCs were isolated from the cerebral cortex of Sprague-Dawley (SD) rat embryos (embryonic day 14 or E14)",
+    "surface": "body",
+    "anchor": "Materials and Methods, Cell cultures",
+    "artifact": "files/fulltext/PMID29463073_Kim2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Viability: all T-type blockers except ML218 decreased progenitor viability; the L-type blocker nifedipine did not. The authors infer simultaneous Cav3.1 and Cav3.2 block is responsible.",
+    "snippet": "All of the T-type calcium channel blockers, except ML218, decreased NPC cellular viability.",
+    "surface": "body",
+    "anchor": "Results, T-type calcium channels are required for maintenance of NPC viability",
+    "artifact": "files/fulltext/PMID29463073_Kim2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Specificity limit: differentiated astrocytes (no Cav3 expression) were not affected, and neurons were affected only by the broader blocker; the authors cannot assign subtype roles because subtype-selective blockers do not exist and say so.",
+    "snippet": "In our study, we could not explain the subtype-specific roles of T-type calcium channels due to lack of subtype-specific blockers for CaV3.1, 3.2 and 3.3.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 3",
+    "artifact": "files/fulltext/PMID29463073_Kim2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mechanism: within 10 minutes the two blockers lowered phosphorylation of AKT (Ser473) and of GSK3 beta (Ser9) without changing ERK, JNK or p38. Ser9 phosphorylation inhibits GSK3 beta, so lower Ser9 phosphorylation corresponds to higher GSK3 beta activity; the paper does not measure GSK3 beta activity, and attributes cell death to the pathway as a possibility.",
+    "snippet": "Within 10 min of treatment, mibefradil and NNC55-0396 decreased AKT (Ser473) phosphorylation, without affecting ERK, JNK, or p38 signaling (Fig. 4C).",
+    "surface": "body",
+    "anchor": "Results, T-type calcium channel blockers rapidly decrease AKT phosphorylation",
+    "artifact": "files/fulltext/PMID29463073_Kim2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors' safety statement and its limit: they say their findings point to a possible safety issue for T-type blockers, especially in pregnancy, and explicitly state that in-vivo effects were not specified.",
+    "snippet": "Although we could not specify the in vivo effects of T-type calcium channel blockers, future studies of T-type calcium channels in developmental disorders such as autism, will provide insight into the essential role of these channels in neural development.",
+    "surface": "body",
+    "anchor": "Discussion, final paragraph",
+    "artifact": "files/fulltext/PMID29463073_Kim2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors note that mice lacking either Cav3.1 or Cav3.2 are not embryonic lethal, and read that as mutual compensation; single-gene null viability is therefore a counterpoint to the pharmacological toxicity signal.",
+    "snippet": "Indeed, either CaV3.1 or CaV3.2 knockout mice did not show embryo lethality (Kim et al., 2001; Harraz et al., 2015), suggesting that CaV3.1 and CaV3.2 can compensate for deficiency in another subunit.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 3",
+    "artifact": "files/fulltext/PMID29463073_Kim2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Developmental window: cortical Cav3.1 is high in the embryo, lower in the perinatal period and higher again from about postnatal day 11, by their blot. The blot (Figure 1C) is one lane per age with no quantification or n and the text describes the postnatal rise as smaller than the embryonic level.",
+    "snippet": "CaV3.1 expression was prominent during the prenatal period, transiently decreased during the perinatal period, and increased again by postnatal day 11, although this increase was to a lesser extent than that observed during the embryonic period.",
+    "surface": "body",
+    "anchor": "Results, CaV3.1 is the dominant subtype in neural progenitor cells",
+    "artifact": "files/fulltext/PMID29463073_Kim2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 4, page 5 render: pAKT over AKT falls to about 0.75 and 0.46 of control at two concentrations of NNC55-0396 and to about 0.57 and 0.35 at two of mibefradil; pGSK3 beta over GSK3 beta falls to about 0.65 and 0.5 (NNC) and about 0.67 and 0.33 (mibefradil), significance stars at the higher concentrations (N = 3 to 5). Panel C: pERK, pJNK, pP38 over total unchanged. These are in-vitro micromolar concentrations of research compounds, about the potency of those compounds on the channels and not the exposure of any clinical drug.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4B bars: pAKT/AKT 1.0, about 0.75, about 0.46 (NNC) and 1.0, about 0.57, about 0.35 (Mib); pGSK3B/GSK3B similar; Figure 4C bars near 1.0 for pERK, pP38, pJNK.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29463073_r2/PMC6131011_p05_170dpi.png",
+    "anchor": "Figure 4 panels A to C; page 5 render at 170 dpi",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2, page 3 render: NNC55-0396 viability steps from about 85 percent at 0.6 micromolar to about 50 percent at 1.2 and about 10 percent at 2.5; mibefradil to about 45 percent at 5 and about 30 at 10; ML218 stays near 100 to about 85 percent; nickel loses viability above 250 micromolar; nifedipine flat; astrocytes unaffected; neurons about 80 and 60 percent with mibefradil, not with NNC55-0396. A table in panel A assigns blocker-to-subtype mapping as the authors' reading.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2B NNC55-0396: bars about 100 to about 10 percent with stars from 0.6 micromolar; Figure 2D ML218: bars about 100 to about 85; Figure 2G astrocytes: N.S.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29463073_r2/PMC6131011_p03_170dpi.png",
+    "anchor": "Figure 2 panels A to H; page 3 render at 170 dpi",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 read as an image (page 2 render): panel A shows Cav3.1 strong in progenitors and neurons and nearly absent in astrocytes, Cav3.2 weaker in progenitors and strong in neurons, Cav3.3 only in neurons; panel C is a single blot with a strong Cav3.1 band at E14 and faint bands from P2 to P8, moderate by P18, with no replicate lanes or quantification.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1A: Cav3.1 bands in NPC and neuron lanes, faint in astrocyte lane; Cav3.3 band only in neuron lane; Figure 1C: E14 band strongest, P2 to P8 faint, P18 moderate.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29463073_r2/PMC6131011_p02_170dpi.png",
+    "anchor": "Figure 1 panels A and C; page 2 render at 170 dpi",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3 read as an image (page 4 render): more propidium-iodide positive cells after each blocker; cleaved caspase 3 over caspase 3 about 1.9 versus 1.0 and Bcl-2 over actin about 0.6 versus 0.95, one star each (N = 5 to 8).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3B: cleaved Cas-3/Cas-3 bars about 1.0, 1.9, 1.9; Bcl-2/actin bars about 0.95, 0.6, 0.6; stars on the two treated bars.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29463073_r2/PMC6131011_p04_170dpi.png",
+    "anchor": "Figure 3 panels A and B; page 4 render at 170 dpi",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}

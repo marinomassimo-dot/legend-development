@@ -132,3 +132,23 @@ Depth: `partial_fulltext_read` (whole PMC XML body read; Figures 2 and 3 as page
 
 **Comparison with the lead.** Axis A: partially; the behavioural endpoint has a genotype x drug design and is null, the EEG endpoint has no wild-type drug arm. Axis B: supports T-type (Cav3.1) dependence of the seizure in the mutant genetically. Axis C: partly (EEG broad suppression, dissociation). Axis D: none. **Net: increases the plausibility that an ethosuximide seizure effect in a null would be T-type mediated if it exists, and reinforces the symptomatic class.**
 
+## 7. PMID 29463073 (Kim 2018): T-type channel blockers reduce neural-progenitor viability, AKT and GSK3 beta phosphorylation. NOT WWOX EVIDENCE
+
+Depth: `complete_fulltext_read` (PMC XML; Figures 1 to 4 read as page renders at 170 dpi; no supplement). Manifest `PMID29463073.json` STRICT PASS, 12 locators. Receipt staged `FTR-20261021-29463073-01`.
+
+**What it establishes (DATO, in vitro, rat).** In embryonic day 14 cortical progenitor cultures Cav3.1 is the dominant T-type subtype (Cav3.2 weak, Cav3.3 absent); two research T-type blockers (NNC55-0396, mibefradil) and high nickel reduced viability at 24 h with cleaved caspase 3 up and Bcl-2 down, the Cav3.2/3.3 blocker ML218 and the L-type blocker nifedipine did not, and astrocytes were unaffected. Within 10 minutes the two blockers lowered phospho-AKT (Ser473) and phospho-GSK3 beta (Ser9) concentration-dependently with ERK, JNK and p38 unchanged.
+
+**What it does not support.**
+- *Ethosuximide is not tested*; neither is any antiseizure drug. The blockers are research compounds with micromolar channel potency; ethosuximide's own T-type potency is reported elsewhere in this group (the Gnb1 paper cites it as millimolar and disputed). Nothing here sizes a risk of ethosuximide.
+- *No in-vivo exposure.* The authors state they could not specify in-vivo effects; the single-gene knockouts of Cav3.1 or Cav3.2 are not embryonic lethal, which the authors read as compensation. The title ("Required to Maintain Viability") overstates a pharmacological result obtained with non-selective compounds and no genetic silencing, a limit the authors list as future work.
+- *Window.* The embryonic progenitor population is not the infant brain. The Cav3.1 developmental blot (Figure 1C) is one lane per age without quantification; it shows high embryonic and lower postnatal levels, so the age window argument for the infant (postnatal) brain is a transcription-level hint, not a measured exposure window.
+
+**Why it still matters for the lead and for the card.**
+1. *Safety signal that a repurposing card must carry, at class level.* Question 4 of the group asked whether a safety or developmental-toxicity signal exists. This is a hypothesis-generating signal for T-type block in progenitor cells and no more: a card should list "T-type blockers reduce progenitor viability in vitro (rat, research compounds); in-vivo and clinical significance unknown" with its evidence class, and a Wwox-specific reasoning is not needed. It should not be quantified or turned into an administration statement.
+2. *Direction relative to the Wwox-null biochemistry.* In the Wwox-null record (CLAIM 016) phospho-Ser9 GSK3 beta is lower in the null, read as de-repression of GSK3 beta (single-lane densitometry, not tested). In progenitor cells T-type block lowers the same marker. If the Wwox-null brain were also GSK3 beta-hyperactive in progenitor-like cells, a T-type blocker would push the same marker in the same direction as the lesion, opposite to the direction lithium acts. This is an IPOTESI built from two non-matching systems (a null mouse brain lane versus rat embryonic cells with research blockers); it is recorded as a reason to measure phospho-Ser9 in any Wwox-null ethosuximide experiment, not as a result.
+3. *Subtype dependence.* The viability effect needs Cav3.1 block (ML218, a Cav3.2/3.3 blocker, spares viability). A T-type drug with a different subtype profile may not carry the signal.
+
+**Figure audit.** Fig 1A/C (expression, one developmental blot), Fig 2 (viability bars across five blockers plus astrocytes and neurons), Fig 3 (PI staining, caspase 3, Bcl-2), Fig 4 (blots and bars, N = 3 to 5).
+
+**Comparison with the lead.** Axis A: none. Axis B: none on ethosuximide. Axis C: no negative for the contrast. Axis D: the group's developmental-toxicity signal, hypothesis-grade. **Net: adds a safety line and a measurement suggestion (phospho-Ser9) to the lead's follow-up; no change to its plausibility.**
+
