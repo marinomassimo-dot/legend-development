@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "input_sha256": "72da2b7fe527cdb64bdef3e98a96414175f2aa4bcb6623950c07fda96628940a",
+  "epistemic_status": "IPOTESI",
+  "canonical": false,
+  "assessment": "REQUIRES_QUALIFICATION",
+  "directional_summary": "UNRESOLVED",
+  "comparisons": [],
+  "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+  "label_lookup": {
+    "status": "NOT_ATTEMPTED",
+    "coverage": "UNKNOWN",
+    "method": "UNKNOWN",
+    "queries": [],
+    "source": "UNKNOWN",
+    "retrieved_at": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "active_ingredient": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "error": "UNKNOWN",
+    "coverage_limit": "UNKNOWN"
+  },
+  "p4_fields": {
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "No measurement exists in a WWOX system.",
+    "cellular_context": {
+      "target_expression": "UNKNOWN",
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "The direction is contested: a GSK3 inhibitor pushes Wnt the wrong way if WWOX loss hyper-activates it (DL-MOL-003); 'lower MYC/Wnt is better' is not a safe default."
+    }
+  },
+  "input": {
+    "axis": "D / downstream pathway (Wnt/MYC)",
+    "route": "RECUPERO_PROFONDO",
+    "candidate": {
+      "id": "P4-D-02",
+      "name": "Wnt-lowering (tankyrase-type) agents and GSK3 modulation as a downstream lever (TX-004)"
+    },
+    "disease_assertion": {
+      "id": "DA-WNT-001",
+      "target_id": "beta-catenin/TCF target transcripts",
+      "endpoint": "transcript level of target genes",
+      "direction": "INCREASE",
+      "source": "organoid differential-expression tables read cell-wise (known-roads § 2.4c)",
+      "locator": "disease-models/wwox/research/repurposing_known_roads_20261020_scientist-a.md § 2.4c",
+      "epistemic_status": "DATO",
+      "reading_depth": "partial_fulltext_read",
+      "context": {
+        "disease_id": "WWOX-deficient human cerebral organoid model (engineered knockout; NOT a patient allele)",
+        "genotype": "WWOX knockout (constitutive engineered null)",
+        "species": "human",
+        "cell_type": "cerebral organoid progenitors (SOX2+ MYC+)",
+        "developmental_stage": "organoid, culture weeks 8 to 15"
+      }
+    },
+    "drug_assertions": [],
+    "p4_fields": {
+      "endpoint_pursued": "UNKNOWN",
+      "functional_evidence_available": "UNKNOWN",
+      "temporal_or_model_limit": "No measurement exists in a WWOX system.",
+      "cellular_context": {
+        "target_expression": "UNKNOWN",
+        "cells_tissue_stage": "UNKNOWN",
+        "coverage": "UNKNOWN",
+        "limits": "The direction is contested: a GSK3 inhibitor pushes Wnt the wrong way if WWOX loss hyper-activates it (DL-MOL-003); 'lower MYC/Wnt is better' is not a safe default."
+      }
+    },
+    "abstention_card": {
+      "kind": "ABSTENTION",
+      "missing_datum": "A dose-by-timing series of Wnt/GSK3/CK1 modulation in a developing cortex with progenitor, layer-neuron and electrographic endpoints, in any WWOX system; and a measured activation step (reporter or nuclear/cytosolic beta-catenin). Never administered in any WWOX system; the transcript direction is the only measurement.",
+      "search_record": "NON_TROVATO_NELLA_RICERCA as a test (known-roads § 2.4c, 2026-10-20); R3 adjacent query on tankyrase inhibition with neuro and development returned 2 records, one read.",
+      "adjacent_context_not_wwox_evidence": [
+        "an esterified tankyrase-inhibitor prodrug in a Shank3b mouse separated toxicity from benefit by formulation, not by dose, from one dose pair (liver and gut toxicity in juveniles)",
+        "a GSK3 inhibitor in adult kainate epilepsy: Wnt activation reduced two of four histological markers in one model (opposite direction, different disease)"
+      ],
+      "an_abstention_is_a_result": "The roadmap states it; this card names what would end it."
+    },
+    "p4_card": {
+      "identity": "Wnt-lowering (tankyrase-type) agents and GSK3 modulation as a downstream lever (TX-004)",
+      "indication_and_transfer": "WOREE as target; no candidate molecule is carded because the datum below is missing.",
+      "novelty_for_woree": "NON_TROVATO_NELLA_RICERCA as a test (known-roads § 2.4c, 2026-10-20); R3 adjacent query on tankyrase inhibition with neuro and development returned 2 records, one read.",
+      "state_of_known_roads": "known-roads § 2.4(c), § 2.2; R3 §§ 1.2, 8",
+      "pathway_and_objective": "RECUPERO_PROFONDO.",
+      "expected_contribution": "UNKNOWN",
+      "mechanism": "UNKNOWN",
+      "sources": {
+        "internal": [
+          "TX-004, DL-MOL-003, DL-MECH-032"
+        ],
+        "external_not_wwox_evidence": [
+          "an esterified tankyrase-inhibitor prodrug in a Shank3b mouse separated toxicity from benefit by formulation, not by dose, from one dose pair (liver and gut toxicity in juveniles)",
+          "a GSK3 inhibitor in adult kainate epilepsy: Wnt activation reduced two of four histological markers in one model (opposite direction, different disease)"
+        ]
+      },
+      "evidence_for_and_against": {
+        "for": [],
+        "against": [],
+        "transfer_limits": "The direction is contested: a GSK3 inhibitor pushes Wnt the wrong way if WWOX loss hyper-activates it (DL-MOL-003); 'lower MYC/Wnt is better' is not a safe default."
+      },
+      "time_to_access": "UNKNOWN",
+      "time_to_benefit": "UNKNOWN",
+      "pharmacology": "UNKNOWN",
+      "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+      "scope_of_checks": {
+        "support_and_replication": "None.",
+        "formal_checks": "None; no assertion is supplied.",
+        "card_inferences_owed_audit": "Statements marked INFERENZA, if any, are OWED a blind audit by another actor."
+      },
+      "question_history": [
+        "TX-004, DL-MOL-003, DL-MECH-032"
+      ],
+      "predictions": "None; no engine, no score.",
+      "next_measurement": "Activation-step measurement (reporter, nuclear beta-catenin) in a WWOX-deficient neural system, then the dose-by-timing series.",
+      "status": "abstention",
+      "value_added": "Names the missing datum so that the axis is a recorded gap and not a silence.",
+      "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (disease-models/wwox/research/drug_repurposing/clinical_census_20261020.md): seven separate queries returned no registered WOREE interventional study; the only synonym-driven record is one observational natural-history registry. Carried with the census's own caution: \"A missing hit does not prove that no study exists.\" It answers seven queries against one registry on one date; unregistered, differently worded, non-NLM or later-registered studies are not excluded."
+    },
+    "not_known": [
+      "A dose-by-timing series of Wnt/GSK3/CK1 modulation in a developing cortex with progenitor, layer-neuron and electrographic endpoints, in any WWOX system; and a measured activation step (reporter or nuclear/cytosolic beta-catenin). Never administered in any WWOX system; the transcript direction is the only measurement.",
+      "Whether the activation step, as distinct from the transcriptional output, is increased."
+    ],
+    "evidence_against": [],
+    "bridge_gaps_exposed": [],
+    "schema_version": 1,
+    "label_lookup": {
+      "status": "NOT_ATTEMPTED"
+    },
+    "card_conventions": [
+      "IPOTESI throughout; the bridge forces it. No score, rank, probability or blended index is carried, and none may be derived from this card.",
+      "directional_summary compares signs only where target, endpoint and every context dimension match; UNRESOLVED means no matched comparison exists, which is a statement about the record, not about the biology.",
+      "NO_MATCH_FOUND is not 'does not exist'; NON_TROVATO_NELLA_RICERCA is not MAI_TENTATO.",
+      "label_lookup is NOT_ATTEMPTED on every card: the bridge has no network and no pharmacological-label search was run. It is not NO_MATCH_FOUND.",
+      "No dose, route, schedule or paediatric suitability appears; concentrations or exposures of the sources are deliberately not reproduced.",
+      "Every adjacent source is labelled NOT WWOX EVIDENCE at class level."
+    ],
+    "no_new_reading": "No paper was opened for this card; the sources are the repository's own receipted notes and records."
+  },
+  "translation": {
+    "pediatric_suitability": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "access": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN",
+    "functional_rescue": "UNKNOWN"
+  },
+  "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+  "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+  ]
+}

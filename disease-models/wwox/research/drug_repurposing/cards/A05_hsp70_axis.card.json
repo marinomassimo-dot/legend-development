@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "input_sha256": "ace4fc6aa77951fff5e2156920e9b4599e84ddd7686bbe428439fdc2f3a46d7f",
+  "epistemic_status": "IPOTESI",
+  "canonical": false,
+  "assessment": "REQUIRES_QUALIFICATION",
+  "directional_summary": "UNRESOLVED",
+  "comparisons": [],
+  "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+  "label_lookup": {
+    "status": "NOT_ATTEMPTED",
+    "coverage": "UNKNOWN",
+    "method": "UNKNOWN",
+    "queries": [],
+    "source": "UNKNOWN",
+    "retrieved_at": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "active_ingredient": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "error": "UNKNOWN",
+    "coverage_limit": "UNKNOWN"
+  },
+  "p4_fields": {
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "No measurement exists in a WWOX system.",
+    "cellular_context": {
+      "target_expression": "UNKNOWN",
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "'It is a chaperone' does not give the sign of the effect."
+    }
+  },
+  "input": {
+    "axis": "A / Q230P-class missense recovery",
+    "route": "RECUPERO_PROFONDO",
+    "candidate": {
+      "id": "P4-A-05",
+      "name": "HSP70-axis modulation (co-induction or inhibition)"
+    },
+    "disease_assertion": {
+      "id": "DA-Q230P-001",
+      "target_id": "WWOX:protein",
+      "endpoint": "WWOX protein detectable by Western blot (lysate fraction not separated)",
+      "direction": "DECREASE",
+      "source": "claim_registry_current CLAIM 019 (functional source: PAPER 041, a single-laboratory study)",
+      "locator": "CLAIM 019, paragraph 'DATO FUNZIONALE, CAUSA NON RISOLTA'; PAPER 041",
+      "epistemic_status": "DATO",
+      "reading_depth": "complete_fulltext_read",
+      "receipt": "FTR-20260923-29808465-02 (body); FTR-20261004-29808465-03 (figures)",
+      "context": {
+        "disease_id": "WWOX-DEE, Q230P-class missense (reference genotype class)",
+        "genotype": "p.Gln230Pro homozygous",
+        "species": "human",
+        "cell_type": "patient-derived fibroblast line (one donor line)",
+        "developmental_stage": "UNKNOWN"
+      },
+      "measured_result_note": "Transcript comparable to reference lines, protein band not detected. One membrane, one exposure, one donor line, no healthy fibroblast control, no densitometry, no n. No proteasome inhibitor, chaperone, synthesis, solubility or half-life measurement exists; the authors leave open impaired translation or premature degradation. The endpoint is 'mRNA normal + protein not detected', not a post-translational mechanism."
+    },
+    "drug_assertions": [],
+    "p4_fields": {
+      "endpoint_pursued": "UNKNOWN",
+      "functional_evidence_available": "UNKNOWN",
+      "temporal_or_model_limit": "No measurement exists in a WWOX system.",
+      "cellular_context": {
+        "target_expression": "UNKNOWN",
+        "cells_tissue_stage": "UNKNOWN",
+        "coverage": "UNKNOWN",
+        "limits": "'It is a chaperone' does not give the sign of the effect."
+      }
+    },
+    "abstention_card": {
+      "kind": "ABSTENTION",
+      "missing_datum": "The direction of effect of HSP70-axis modulation on Q230P: amplifying the axis may accelerate delivery of the mutant to degradation (HSC70 delivers it to the lysosome in the P252A bridge hypothesis), and blocking it stabilised an inactive insoluble protein in the adjacent enzyme. The sign for Q230P is unmeasured.",
+      "search_record": "NON_TROVATO_NELLA_RICERCA: the one candidate in this class (an arimoclomol-type co-inducer) was proposed and withdrawn the same day on direction grounds (D-03).",
+      "adjacent_context_not_wwox_evidence": [
+        "ASPA C152W: Hsp70/Hsp110-dependent degradation of newly synthesised protein; stabilisation gave insoluble, inactive protein",
+        "the proteasome-inhibitor precedent also induces HSP70, confounding an HSP70 readout"
+      ],
+      "an_abstention_is_a_result": "The roadmap states it; this card names what would end it."
+    },
+    "p4_card": {
+      "identity": "HSP70-axis modulation (co-induction or inhibition)",
+      "indication_and_transfer": "WOREE as target; no candidate molecule is carded because the datum below is missing.",
+      "novelty_for_woree": "NON_TROVATO_NELLA_RICERCA: the one candidate in this class (an arimoclomol-type co-inducer) was proposed and withdrawn the same day on direction grounds (D-03).",
+      "state_of_known_roads": "known-roads § 2.8 (D-03); R1 § 1 (33914734, 42875792)",
+      "pathway_and_objective": "RECUPERO_PROFONDO.",
+      "expected_contribution": "UNKNOWN",
+      "mechanism": "UNKNOWN",
+      "sources": {
+        "internal": [
+          "D-03"
+        ],
+        "external_not_wwox_evidence": [
+          "ASPA C152W: Hsp70/Hsp110-dependent degradation of newly synthesised protein; stabilisation gave insoluble, inactive protein",
+          "the proteasome-inhibitor precedent also induces HSP70, confounding an HSP70 readout"
+        ]
+      },
+      "evidence_for_and_against": {
+        "for": [],
+        "against": [],
+        "transfer_limits": "'It is a chaperone' does not give the sign of the effect."
+      },
+      "time_to_access": "UNKNOWN",
+      "time_to_benefit": "UNKNOWN",
+      "pharmacology": "UNKNOWN",
+      "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+      "scope_of_checks": {
+        "support_and_replication": "None.",
+        "formal_checks": "None; no assertion is supplied.",
+        "card_inferences_owed_audit": "Statements marked INFERENZA, if any, are OWED a blind audit by another actor."
+      },
+      "question_history": [
+        "D-03"
+      ],
+      "predictions": "None; no engine, no score.",
+      "next_measurement": "A chase paired with a chaperone-function perturbation on the exact variant from a detectable baseline.",
+      "status": "abstention",
+      "value_added": "Names the missing datum so that the axis is a recorded gap and not a silence.",
+      "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (disease-models/wwox/research/drug_repurposing/clinical_census_20261020.md): seven separate queries returned no registered WOREE interventional study; the only synonym-driven record is one observational natural-history registry. Carried with the census's own caution: \"A missing hit does not prove that no study exists.\" It answers seven queries against one registry on one date; unregistered, differently worded, non-NLM or later-registered studies are not excluded."
+    },
+    "not_known": [
+      "The direction of effect of HSP70-axis modulation on Q230P: amplifying the axis may accelerate delivery of the mutant to degradation (HSC70 delivers it to the lysosome in the P252A bridge hypothesis), and blocking it stabilised an inactive insoluble protein in the adjacent enzyme. The sign for Q230P is unmeasured."
+    ],
+    "evidence_against": [],
+    "bridge_gaps_exposed": [],
+    "schema_version": 1,
+    "label_lookup": {
+      "status": "NOT_ATTEMPTED"
+    },
+    "card_conventions": [
+      "IPOTESI throughout; the bridge forces it. No score, rank, probability or blended index is carried, and none may be derived from this card.",
+      "directional_summary compares signs only where target, endpoint and every context dimension match; UNRESOLVED means no matched comparison exists, which is a statement about the record, not about the biology.",
+      "NO_MATCH_FOUND is not 'does not exist'; NON_TROVATO_NELLA_RICERCA is not MAI_TENTATO.",
+      "label_lookup is NOT_ATTEMPTED on every card: the bridge has no network and no pharmacological-label search was run. It is not NO_MATCH_FOUND.",
+      "No dose, route, schedule or paediatric suitability appears; concentrations or exposures of the sources are deliberately not reproduced.",
+      "Every adjacent source is labelled NOT WWOX EVIDENCE at class level."
+    ],
+    "no_new_reading": "No paper was opened for this card; the sources are the repository's own receipted notes and records."
+  },
+  "translation": {
+    "pediatric_suitability": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "access": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN",
+    "functional_rescue": "UNKNOWN"
+  },
+  "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+  "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+  ]
+}

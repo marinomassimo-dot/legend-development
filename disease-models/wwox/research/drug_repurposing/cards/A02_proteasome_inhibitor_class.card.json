@@ -1,0 +1,265 @@
+{
+  "schema_version": 1,
+  "input_sha256": "41cfec0b025837ba21d8cba76aaaa17883092881bbd064a3eab90dff66f62dd4",
+  "epistemic_status": "IPOTESI",
+  "canonical": false,
+  "assessment": "REQUIRES_QUALIFICATION",
+  "directional_summary": "UNRESOLVED",
+  "comparisons": [
+    {
+      "assertion_id": "DR-A02-001",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "target_id: mismatch or unknown",
+        "endpoint: mismatch or unknown",
+        "context.disease_id: mismatch or unknown",
+        "context.genotype: mismatch or unknown",
+        "context.cell_type: mismatch or unknown",
+        "context.developmental_stage: mismatch or unknown"
+      ]
+    },
+    {
+      "assertion_id": "DR-A02-002",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "target_id: mismatch or unknown",
+        "endpoint: mismatch or unknown",
+        "context.disease_id: mismatch or unknown",
+        "context.genotype: mismatch or unknown",
+        "context.species: mismatch or unknown",
+        "context.cell_type: mismatch or unknown",
+        "context.developmental_stage: mismatch or unknown"
+      ]
+    },
+    {
+      "assertion_id": "DR-A02-003",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "target_id: mismatch or unknown",
+        "endpoint: mismatch or unknown",
+        "context.disease_id: mismatch or unknown",
+        "context.genotype: mismatch or unknown",
+        "context.species: mismatch or unknown",
+        "context.cell_type: mismatch or unknown",
+        "context.developmental_stage: mismatch or unknown",
+        "direction unknown"
+      ]
+    }
+  ],
+  "abstention": null,
+  "label_lookup": {
+    "status": "NOT_ATTEMPTED",
+    "coverage": "UNKNOWN",
+    "method": "UNKNOWN",
+    "queries": [],
+    "source": "UNKNOWN",
+    "retrieved_at": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "active_ingredient": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "error": "UNKNOWN",
+    "coverage_limit": "UNKNOWN"
+  },
+  "p4_fields": {
+    "endpoint_pursued": "Return of Q230P protein from an undetectable baseline by blocking its degradation, read as total, soluble and pellet protein and then function.",
+    "functional_evidence_available": "None for WWOX. In the closest precedent, a localisation and a myelin-marker readout moved with a partial protein return; a second precedent returned inactive insoluble protein.",
+    "temporal_or_model_limit": "Cell-culture precedents; a toxicity-bounded exposure window in the closest one; library flow shifts in others. No animal, no brain exposure.",
+    "cellular_context": {
+      "target_expression": "UNKNOWN for the relevant human neural cells.",
+      "cells_tissue_stage": "iPSC-derived oligodendrocytes (HIKESHI), HEK293T libraries, yeast; none WWOX.",
+      "coverage": "Drug selectivity is not a property of a proteasome inhibitor; target expression is a separate question.",
+      "limits": "Global degradation blockade is client-agnostic by design; whether Q230P is a proteasome substrate at all has never been measured."
+    }
+  },
+  "input": {
+    "axis": "A / Q230P-class missense recovery",
+    "route": "RECUPERO_PROFONDO",
+    "candidate": {
+      "id": "P4-A-02",
+      "name": "Proteasome-inhibitor class (degradation blockade) as a probe-derived recovery hypothesis"
+    },
+    "disease_assertion": {
+      "id": "DA-Q230P-001",
+      "target_id": "WWOX:protein",
+      "endpoint": "WWOX protein detectable by Western blot (lysate fraction not separated)",
+      "direction": "DECREASE",
+      "source": "claim_registry_current CLAIM 019 (functional source: PAPER 041, a single-laboratory study)",
+      "locator": "CLAIM 019, paragraph 'DATO FUNZIONALE, CAUSA NON RISOLTA'; PAPER 041",
+      "epistemic_status": "DATO",
+      "reading_depth": "complete_fulltext_read",
+      "receipt": "FTR-20260923-29808465-02 (body); FTR-20261004-29808465-03 (figures)",
+      "context": {
+        "disease_id": "WWOX-DEE, Q230P-class missense (reference genotype class)",
+        "genotype": "p.Gln230Pro homozygous",
+        "species": "human",
+        "cell_type": "patient-derived fibroblast line (one donor line)",
+        "developmental_stage": "UNKNOWN"
+      },
+      "measured_result_note": "Transcript comparable to reference lines, protein band not detected. One membrane, one exposure, one donor line, no healthy fibroblast control, no densitometry, no n. No proteasome inhibitor, chaperone, synthesis, solubility or half-life measurement exists; the authors leave open impaired translation or premature degradation. The endpoint is 'mRNA normal + protein not detected', not a post-translational mechanism."
+    },
+    "drug_assertions": [
+      {
+        "id": "DR-A02-001",
+        "target_id": "HIKESHI protein, V54L (recessive missense)",
+        "endpoint": "recovered mutant protein in patient iPSC-derived oligodendrocytes",
+        "direction": "INCREASE",
+        "source": "Rathan-Kumar 2026 (R1 reading 42875792); NOT WWOX EVIDENCE",
+        "locator": "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md § 3, 42875792",
+        "epistemic_status": "DATO",
+        "reading_depth": "partial_fulltext_read",
+        "context": {
+          "disease_id": "HIKESHI-related leukodystrophy (not WWOX)",
+          "genotype": "V54L homozygous",
+          "species": "human",
+          "cell_type": "iPSC-derived oligodendrocytes",
+          "developmental_stage": "culture stage"
+        },
+        "measured_result_note": "Recovery from about 3 to about 20 percent of control only, in one dose-time series without drawn replicates; the inhibitor also induces HSP70 and changes many proteins; other treatment windows were toxic to all genotypes including controls.",
+        "receipt": "FTR-20261021-42875792-01"
+      },
+      {
+        "id": "DR-A02-002",
+        "target_id": "Parkin and ASPA low-abundance variant populations",
+        "endpoint": "low-abundance shoulder of a variant library",
+        "direction": "INCREASE",
+        "source": "Clausen 2024 and Grønbæk-Thygesen 2024 (R1 readings 38378758, 38740822); NOT WWOX EVIDENCE",
+        "locator": "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md § 1",
+        "epistemic_status": "DATO",
+        "reading_depth": "partial_fulltext_read",
+        "context": {
+          "disease_id": "Parkin and ASPA variant libraries (not WWOX)",
+          "genotype": "single-site variant libraries",
+          "species": "human protein in HEK293T",
+          "cell_type": "HEK293T landing-pad cells",
+          "developmental_stage": "culture"
+        },
+        "measured_result_note": "Flow shift of a library, not a protein recovery measure; a lysosome-inhibitor control did nothing, placing the loss on the proteasome.",
+        "receipt": "FTR-20261021-38378758-01; FTR-20261021-38740822-01"
+      },
+      {
+        "id": "DR-A02-003",
+        "target_id": "ASPA C152W insoluble protein",
+        "endpoint": "activity of the stabilised protein",
+        "direction": "UNKNOWN",
+        "source": "Gersing 2021 (R1 reading 33914734); NOT WWOX EVIDENCE",
+        "locator": "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md § 1, 33914734",
+        "epistemic_status": "DATO",
+        "reading_depth": "partial_fulltext_read",
+        "context": {
+          "disease_id": "ASPA C152W (not WWOX)",
+          "genotype": "C152W",
+          "species": "yeast and human U2OS",
+          "cell_type": "U2OS",
+          "developmental_stage": "culture"
+        },
+        "measured_result_note": "MEASURED NO FUNCTION: stabilising the variant yielded protein that is insoluble and without measurable activity. Encoded UNKNOWN only because the bridge has no NO_CHANGE value (gap G-1).",
+        "receipt": "FTR-20261021-33914734-01"
+      }
+    ],
+    "p4_fields": {
+      "endpoint_pursued": "Return of Q230P protein from an undetectable baseline by blocking its degradation, read as total, soluble and pellet protein and then function.",
+      "functional_evidence_available": "None for WWOX. In the closest precedent, a localisation and a myelin-marker readout moved with a partial protein return; a second precedent returned inactive insoluble protein.",
+      "temporal_or_model_limit": "Cell-culture precedents; a toxicity-bounded exposure window in the closest one; library flow shifts in others. No animal, no brain exposure.",
+      "cellular_context": {
+        "target_expression": "UNKNOWN for the relevant human neural cells.",
+        "cells_tissue_stage": "iPSC-derived oligodendrocytes (HIKESHI), HEK293T libraries, yeast; none WWOX.",
+        "coverage": "Drug selectivity is not a property of a proteasome inhibitor; target expression is a separate question.",
+        "limits": "Global degradation blockade is client-agnostic by design; whether Q230P is a proteasome substrate at all has never been measured."
+      }
+    },
+    "p4_card": {
+      "identity": "Proteasome-inhibitor class, research-grade or oncology agents, discussed at class level only. No named agent is proposed; formulation: UNKNOWN.",
+      "indication_and_transfer": "WOREE (Q230P-class) as target. Origin: a recessive missense protein in patient iPSC oligodendrocytes plus library studies (NOT WWOX EVIDENCE). This is the closest measured precedent to the Q230P premise in R1 ('normal mRNA, protein absent', partial return with an inhibitor), at the cost of a narrow toxicity-bounded window.",
+      "novelty_for_woree": "NON_TROVATO_NELLA_RICERCA as a test in any WWOX system (registry-based, 2026-10-20). No inhibitor arm exists in the only Q230P study.",
+      "state_of_known_roads": "not verified for this disease; and exposure-or-toxicity limit shown by its own precedent (other windows toxic to controls).",
+      "pathway_and_objective": "RECUPERO_PROFONDO.",
+      "expected_contribution": "Recovery of residual protein only if Q230P is lost at the proteasome; function of any recovered protein is the unanswered question.",
+      "mechanism": "Target: the ubiquitin-proteasome pathway, not WWOX; type: blockade; direction: protein up if the variant is a proteasome substrate; context: unknown for Q230P.",
+      "sources": {
+        "internal": [
+          "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md §§ 3, 4 (PB-1)"
+        ],
+        "external_not_wwox_evidence": [
+          "HIKESHI patient iPSC study",
+          "Parkin atlas",
+          "ASPA abundance scan",
+          "ASPA C152W study"
+        ]
+      },
+      "evidence_for_and_against": {
+        "for": [
+          "A recessive missense protein returned from undetectable to a fraction with an inhibitor, with two function-adjacent readouts on the same cells."
+        ],
+        "against": [
+          "Recovery only to a fraction of control; the inhibitor also induces HSP70; specificity 'seems unlikely' by the authors' own account; toxic outside a narrow window including in controls.",
+          "A stabilised variant that was inactive and insoluble (ASPA C152W).",
+          "Lysosome inhibition did nothing in the libraries; route is protein-specific."
+        ],
+        "transfer_limits": "Cell lines, few and non-isogenic; no pellet lane in the closest precedent."
+      },
+      "time_to_access": "UNKNOWN. Not documented in the repository.",
+      "time_to_benefit": "UNKNOWN.",
+      "pharmacology": "UNKNOWN for WWOX; toxicity-bounded exposure window in the closest precedent (values not reproduced).",
+      "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+      "scope_of_checks": {
+        "support_and_replication": "No replication of the HIKESHI result is recorded.",
+        "formal_checks": "R1 receipts recorded, manifests PASS; R1 narrowings OWED a blind audit by another actor.",
+        "card_inferences_owed_audit": "None added beyond the R1 note."
+      },
+      "question_history": [
+        "R1 dossier premise PB (inhibitor arm first, chase second): KEEP",
+        "CLAIM 019 / CLAIM 030"
+      ],
+      "predictions": "None; no engine, no score.",
+      "next_measurement": "Inhibitor-first arm on the exact variant from a detectable baseline, read as soluble/pellet/total protein, with the proteasome and lysosome arms side by side, before any chase.",
+      "status": "hypothesis",
+      "status_reason": "Conditional on an unmeasured route. A probe to place the lesion before it is a candidate.",
+      "value_added": "Shows the closest recovery precedent and, in the same paper, the toxicity bound that makes the class a probe rather than an agent.",
+      "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (disease-models/wwox/research/drug_repurposing/clinical_census_20261020.md): seven separate queries returned no registered WOREE interventional study; the only synonym-driven record is one observational natural-history registry. Carried with the census's own caution: \"A missing hit does not prove that no study exists.\" It answers seven queries against one registry on one date; unregistered, differently worded, non-NLM or later-registered studies are not excluded."
+    },
+    "not_known": [
+      "Where the Q230P protein is lost: never made, made and cleared, made and insoluble, made and epitope-invisible, or truncated. No fractionation, inhibitor, synthesis or half-life datum exists for the exact variant.",
+      "Whether any recovered Q230P protein would carry WWOX function: there is no per-molecule WWOX function assay in the repository, and protein quantity does not imply function (six measured divergences in R1).",
+      "The share of destabilised-missense lesions that are stability lesions for a WWOX SDR-domain variant: the estimates carried in the literature are cited estimates, and the SDR-domain thermal stability is a missing measurement.",
+      "No drug has been given to any WWOX model carrying a missense or a splice allele (known-roads note, section 5).",
+      "Whether Q230P is a proteasome substrate at all."
+    ],
+    "evidence_against": [
+      "Insoluble, inactive stabilised variant (ASPA C152W).",
+      "Toxic windows including in controls."
+    ],
+    "bridge_gaps_exposed": [
+      "G-1"
+    ],
+    "schema_version": 1,
+    "label_lookup": {
+      "status": "NOT_ATTEMPTED"
+    },
+    "card_conventions": [
+      "IPOTESI throughout; the bridge forces it. No score, rank, probability or blended index is carried, and none may be derived from this card.",
+      "directional_summary compares signs only where target, endpoint and every context dimension match; UNRESOLVED means no matched comparison exists, which is a statement about the record, not about the biology.",
+      "NO_MATCH_FOUND is not 'does not exist'; NON_TROVATO_NELLA_RICERCA is not MAI_TENTATO.",
+      "label_lookup is NOT_ATTEMPTED on every card: the bridge has no network and no pharmacological-label search was run. It is not NO_MATCH_FOUND.",
+      "No dose, route, schedule or paediatric suitability appears; concentrations or exposures of the sources are deliberately not reproduced.",
+      "Every adjacent source is labelled NOT WWOX EVIDENCE at class level."
+    ],
+    "no_new_reading": "No paper was opened for this card; the sources are the repository's own receipted notes and records."
+  },
+  "translation": {
+    "pediatric_suitability": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "access": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN",
+    "functional_rescue": "UNKNOWN"
+  },
+  "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+  "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+  ]
+}

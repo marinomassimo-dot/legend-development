@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "input_sha256": "c630493956016b2eed2c39b61fef23d50b69bf7487ed7ab993d508e15143e22f",
+  "epistemic_status": "IPOTESI",
+  "canonical": false,
+  "assessment": "REQUIRES_QUALIFICATION",
+  "directional_summary": "UNRESOLVED",
+  "comparisons": [
+    {
+      "assertion_id": "DR-D01-001",
+      "status": "OPPOSES_DISEASE_CHANGE",
+      "reasons": []
+    },
+    {
+      "assertion_id": "DR-D01-002",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "target_id: mismatch or unknown",
+        "endpoint: mismatch or unknown",
+        "direction unknown"
+      ]
+    }
+  ],
+  "abstention": null,
+  "label_lookup": {
+    "status": "NOT_ATTEMPTED",
+    "coverage": "UNKNOWN",
+    "method": "UNKNOWN",
+    "queries": [],
+    "source": "UNKNOWN",
+    "retrieved_at": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "active_ingredient": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "error": "UNKNOWN",
+    "coverage_limit": "UNKNOWN"
+  },
+  "p4_fields": {
+    "endpoint_pursued": "Restoration of cortical neurogenesis in a WWOX-deficient neural model; progenitor identity is restored, layer-neuron production is not.",
+    "functional_evidence_available": "Cell-identity markers only; no WWOX-function biomarker, no electrophysiology, no seizure endpoint, no myelin readout.",
+    "temporal_or_model_limit": "Engineered knockout organoid, one dose level and one genotype, no treated-wild-type arm; the window between removing excess progenitors and preventing normal corticogenesis is measured nowhere.",
+    "cellular_context": {
+      "target_expression": "Wnt/beta-catenin target transcripts are on the up side in the knockout organoid tables; transcript only, raw p, 2 WT versus 4 KO organoids; the activation step (reporter, nuclear beta-catenin) is unmeasured.",
+      "cells_tissue_stage": "Human cortical organoid progenitors and early neurons, culture stage.",
+      "coverage": "Brain exposure of the compound class: not measured anywhere in the selected papers.",
+      "limits": "Canonical Wnt is required for neural progenitor proliferation and cortical patterning (BLOCK-1): the mechanism that removes excess progenitors is the same one that could prevent normal corticogenesis. Lowering MYC/Wnt is not a safe default (CLAIM 028 partner-dependence; restoring WWOX raises apoptotic sensitivity under stress, DL-THER-115)."
+    }
+  },
+  "input": {
+    "axis": "D / downstream pathway (Wnt/MYC)",
+    "route": "RECUPERO_PROFONDO",
+    "candidate": {
+      "id": "P4-D-01",
+      "name": "A51, a multi-kinase inhibitor (Wnt/MYC suppression); BLOCK-1 open"
+    },
+    "disease_assertion": {
+      "id": "DA-ORG-001",
+      "target_id": "SOX2+MYC+ progenitor fraction",
+      "endpoint": "fraction of SOX2+MYC+ progenitors in organoid sections",
+      "direction": "INCREASE",
+      "source": "DL-THER-089 (organoid source, one laboratory), CLAIM 003 family",
+      "locator": "discovery_ledger_current DL-THER-089, table of Suppl. Fig. 7F-G; disease-models/wwox/research/repurposing_known_roads_20261020_scientist-a.md § 2.4a",
+      "epistemic_status": "DATO",
+      "reading_depth": "UNKNOWN",
+      "receipt_reference": "FTR-20260810-42397075-04 (depth not restated here; held at UNKNOWN to understate)",
+      "context": {
+        "disease_id": "WWOX-deficient human cerebral organoid model (engineered knockout; NOT a patient allele)",
+        "genotype": "WWOX knockout (constitutive engineered null)",
+        "species": "human",
+        "cell_type": "cerebral organoid progenitors (SOX2+ MYC+)",
+        "developmental_stage": "organoid, culture weeks 8 to 15"
+      },
+      "measured_result_note": "Knockout above wild type. The panel values are NO LONGER RE-AUDITABLE: the published supplement exists in no checkout and the preprint does not contain the A51 experiment."
+    },
+    "drug_assertions": [
+      {
+        "id": "DR-D01-001",
+        "target_id": "SOX2+MYC+ progenitor fraction",
+        "endpoint": "fraction of SOX2+MYC+ progenitors in organoid sections",
+        "direction": "DECREASE",
+        "source": "DL-THER-089 (same experiment)",
+        "locator": "discovery_ledger_current DL-THER-089; disease-models/wwox/research/repurposing_known_roads_20261020_scientist-a.md § 2.4a",
+        "epistemic_status": "DATO",
+        "reading_depth": "UNKNOWN",
+        "receipt_reference": "FTR-20260810-42397075-04",
+        "context": {
+          "disease_id": "WWOX-deficient human cerebral organoid model (engineered knockout; NOT a patient allele)",
+          "genotype": "WWOX knockout (constitutive engineered null)",
+          "species": "human",
+          "cell_type": "cerebral organoid progenitors (SOX2+ MYC+)",
+          "developmental_stage": "organoid, culture weeks 8 to 15"
+        },
+        "measured_result_note": "Treated knockout not significantly different from wild type on this endpoint. No treated-wild-type arm, no dose-response, no randomisation or blinding, one of three experiments the paper excludes from independent differentiations. The compound suppresses two pathways: causal attribution to MYC inherits the ambiguity."
+      },
+      {
+        "id": "DR-D01-002",
+        "target_id": "SATB2+ and CTIP2+ layer-neuron fractions",
+        "endpoint": "fraction of layer neurons (SATB2+, CTIP2+)",
+        "direction": "UNKNOWN",
+        "source": "DL-THER-089 (same experiment)",
+        "locator": "discovery_ledger_current DL-THER-089; disease-models/wwox/research/repurposing_known_roads_20261020_scientist-a.md § 2.4a",
+        "epistemic_status": "DATO",
+        "reading_depth": "UNKNOWN",
+        "receipt_reference": "FTR-20260810-42397075-04",
+        "context": {
+          "disease_id": "WWOX-deficient human cerebral organoid model (engineered knockout; NOT a patient allele)",
+          "genotype": "WWOX knockout (constitutive engineered null)",
+          "species": "human",
+          "cell_type": "cerebral organoid progenitors (SOX2+ MYC+)",
+          "developmental_stage": "organoid, culture weeks 8 to 15"
+        },
+        "measured_result_note": "MEASURED NO RECOVERY: knockout-versus-treated not significant for both markers, CTIP2 remaining far below wild type. Encoded UNKNOWN only because the bridge has no NO_CHANGE value (gap G-1) and carried with the disease assertion's endpoint mismatch (gap G-2); UNKNOWN here does NOT mean owed. This row is the split that the first row hides."
+      }
+    ],
+    "p4_fields": {
+      "endpoint_pursued": "Restoration of cortical neurogenesis in a WWOX-deficient neural model; progenitor identity is restored, layer-neuron production is not.",
+      "functional_evidence_available": "Cell-identity markers only; no WWOX-function biomarker, no electrophysiology, no seizure endpoint, no myelin readout.",
+      "temporal_or_model_limit": "Engineered knockout organoid, one dose level and one genotype, no treated-wild-type arm; the window between removing excess progenitors and preventing normal corticogenesis is measured nowhere.",
+      "cellular_context": {
+        "target_expression": "Wnt/beta-catenin target transcripts are on the up side in the knockout organoid tables; transcript only, raw p, 2 WT versus 4 KO organoids; the activation step (reporter, nuclear beta-catenin) is unmeasured.",
+        "cells_tissue_stage": "Human cortical organoid progenitors and early neurons, culture stage.",
+        "coverage": "Brain exposure of the compound class: not measured anywhere in the selected papers.",
+        "limits": "Canonical Wnt is required for neural progenitor proliferation and cortical patterning (BLOCK-1): the mechanism that removes excess progenitors is the same one that could prevent normal corticogenesis. Lowering MYC/Wnt is not a safe default (CLAIM 028 partner-dependence; restoring WWOX raises apoptotic sensitivity under stress, DL-THER-115)."
+      }
+    },
+    "p4_card": {
+      "identity": "A51: per the organoid source \"a multi-kinase inhibitor (A51) established to suppress Wnt and MYC expression\". The R3 note treats it as the compound class of a phase-1 adult agent targeting CK1-alpha, CDK7 and CDK9; whether the organoid compound and the clinical agent are the same formulation is carried from that note and not verified here. NOT a MYC inhibitor.",
+      "indication_and_transfer": "WOREE as target; origin: a knockout human organoid, the only pharmacological intervention ever applied to a human WWOX-deficient neural model. No patient allele; no Q230P-class context.",
+      "novelty_for_woree": "Already studied in one organoid experiment (one laboratory). NON_TROVATO_NELLA_RICERCA in any animal or patient WWOX system.",
+      "state_of_known_roads": "partial (progenitors yes, layer neurons no), with an exposure-or-toxicity limit that is unmeasured rather than favourable.",
+      "pathway_and_objective": "RECUPERO_PROFONDO (downstream lever).",
+      "expected_contribution": "Compensation of a downstream signal; not recovery of WWOX function.",
+      "mechanism": "Targets: multiple kinases (CK1-alpha, CDK7, CDK9 per the R3 note); type: inhibition; direction: Wnt and MYC output down; context: organoid progenitors. The R3 reading of the leukaemia paper does not disentangle Wnt, MYC and CDK for A51.",
+      "sources": {
+        "internal": [
+          "DL-THER-089, DL-MECH-086, CLAIM 003, DL-MOL-003, TX-004",
+          "disease-models/wwox/research/repurposing_known_roads_20261020_scientist-a.md § 2.4",
+          "disease-models/wwox/research/repurposing_10h_scientist-c_20261021.md §§ 1.1, 5",
+          "CC-20261021-SCIENTIST-C-R3-A51-ATTRIBUTION-01"
+        ],
+        "external_not_wwox_evidence": [
+          "adult phase-1 study (liver, gastrointestinal, haematological, electrolyte toxicity)",
+          "mouse leukaemia study (attribution ambiguous, Myc readout confounded with blast burden)",
+          "CSNK1A1 variant families (proposed epileptogenic link, HEK293T only)",
+          "Cdk7 neuronal knockout (morphology and social behaviour cost, no seizure endpoint)"
+        ]
+      },
+      "evidence_for_and_against": {
+        "for": [
+          "Progenitor identity and pan-neuronal marking normalised in the knockout organoid."
+        ],
+        "against": [
+          "Layer-neuron production did not move (SATB2, CTIP2).",
+          "Causal attribution ambiguous: two pathways suppressed; the MYC lane is not shown suppressed in the one mutant line a clinical paper centres on.",
+          "Adults: a grade 3 hepatic failure at the highest tested level; pharmacokinetics sub-proportional at the top, so the label 'dose-dependent' for transaminase toxicity is not graded by the paper's own tabulation (R3 § 5); no CNS exposure or paediatric record.",
+          "A neurodevelopmental cost of losing Cdk7 in neurons is measured; CSNK1A1 loss is proposed epileptogenic via excess beta-catenin.",
+          "No measured window in which Wnt suppression in a developing brain is safe or unsafe in any selected paper; Wnt activation reduced two of four remodelling markers in an adult epilepsy model (opposite direction, different disease)."
+        ],
+        "transfer_limits": "Engineered null organoid versus patient allele; adult tumour pharmacology versus developing brain."
+      },
+      "time_to_access": "UNKNOWN. Not documented; no registered WOREE study and no paediatric exposure.",
+      "time_to_benefit": "UNKNOWN.",
+      "pharmacology": "Potency in organoids measured at one level (not reproduced); selectivity: not selective (multi-kinase); brain exposure: UNKNOWN; adult pharmacokinetics exist in the R3 note.",
+      "paediatrics_and_interactions": "No paediatric record exists in the selected records; the only human exposure data are adult. No suitability is presumed. Interactions: UNKNOWN.",
+      "scope_of_checks": {
+        "support_and_replication": "No replication; the review that restates the organoid work writes 'restored' where its own primary shows partial recovery and the significance bracket that would falsify the word is not drawn.",
+        "formal_checks": "R3 readings carry recorded receipts and manifests PASS; blind locator audit of all R3 manifests OWED. The A51 panel values cannot be re-audited against the source.",
+        "card_inferences_owed_audit": "None added."
+      },
+      "question_history": [
+        "DL-THER-089 (open, IPOTESI, BLOCK-1 open)",
+        "CC-20261021-SCIENTIST-C-R3-A51-ATTRIBUTION-01",
+        "DL-MOL-003 (direction gate kept a harmful GSK3 candidate out)"
+      ],
+      "predictions": "None; no engine, no score.",
+      "next_measurement": "A dose-by-timing series in a developing-cortex model with a treated wild-type arm, progenitor and layer-neuron endpoints and an electrographic endpoint; a selective MYC inhibitor to separate Wnt from MYC; and a brain-region exposure level in a young animal.",
+      "status": "controversial",
+      "status_reason": "BLOCK-1 open; causal attribution ambiguous; no paediatric record; direction of benefit not signed.",
+      "value_added": "Makes visible that the one directional match (progenitors) hides a non-match (layer neurons), and that the safety window is measured nowhere.",
+      "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (disease-models/wwox/research/drug_repurposing/clinical_census_20261020.md): seven separate queries returned no registered WOREE interventional study; the only synonym-driven record is one observational natural-history registry. Carried with the census's own caution: \"A missing hit does not prove that no study exists.\" It answers seven queries against one registry on one date; unregistered, differently worded, non-NLM or later-registered studies are not excluded."
+    },
+    "not_known": [
+      "Brain exposure of the compound class.",
+      "The therapeutic window between removing excess progenitors and preventing normal corticogenesis.",
+      "Which of Wnt, MYC and CDK suppression carries the progenitor effect.",
+      "Whether any of this holds in a patient-derived or missense context."
+    ],
+    "evidence_against": [
+      "Layer neurons not recovered.",
+      "Hepatic toxicity in adults.",
+      "Developing-brain cost of related targets."
+    ],
+    "bridge_gaps_exposed": [
+      "G-1",
+      "G-2"
+    ],
+    "reading_guard": "directional_summary is UNRESOLVED because the second assertion (layer neurons) cannot be compared; the first assertion's OPPOSES_DISEASE_CHANGE is a progenitor-identity match inside a knockout organoid and must not be read alone.",
+    "schema_version": 1,
+    "label_lookup": {
+      "status": "NOT_ATTEMPTED"
+    },
+    "card_conventions": [
+      "IPOTESI throughout; the bridge forces it. No score, rank, probability or blended index is carried, and none may be derived from this card.",
+      "directional_summary compares signs only where target, endpoint and every context dimension match; UNRESOLVED means no matched comparison exists, which is a statement about the record, not about the biology.",
+      "NO_MATCH_FOUND is not 'does not exist'; NON_TROVATO_NELLA_RICERCA is not MAI_TENTATO.",
+      "label_lookup is NOT_ATTEMPTED on every card: the bridge has no network and no pharmacological-label search was run. It is not NO_MATCH_FOUND.",
+      "No dose, route, schedule or paediatric suitability appears; concentrations or exposures of the sources are deliberately not reproduced.",
+      "Every adjacent source is labelled NOT WWOX EVIDENCE at class level."
+    ],
+    "no_new_reading": "No paper was opened for this card; the sources are the repository's own receipted notes and records."
+  },
+  "translation": {
+    "pediatric_suitability": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "access": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN",
+    "functional_rescue": "UNKNOWN"
+  },
+  "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+  "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+  ]
+}
