@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "e9948aa8dc70bf3c450e47f633674da42191f0efdc2313bae76433da62316a3c",
+  "input_sha256": "b650cb16d06f4c97ae7426fe606de213fffa8a303b5f961948c0e54eef2fd4d4",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "DIRECTIONAL_COMPARISON_ONLY",
@@ -121,8 +121,8 @@
           "Graded WWOX protein, glycaemia at one age and motor score."
         ],
         "against": [
-          "Not independently replicated; 'replicated mWwox ~ hWWOX' is an intra-study control.",
-          "A THRESHOLD, NOT A CONTINUUM for survival: the lower level postpones death and reaches extinction; two dose points cannot locate a threshold (CLAIM 011 narrowing, proposed, blind-audit partly run).",
+          "Not independently replicated within the repository; the source's mouse-versus-human construct comparison is an intra-study control, and the human-organoid source was not tested here.",
+          "SURVIVAL IS A STEP IN THESE DATA, BUT A STEP AND A STEEP CONTINUUM ARE INDISTINGUISHABLE: the lower level postpones death and reaches extinction; two dose points cannot locate a threshold; the adjudication in CLAIM 011 reads the step as strengthened, not established.",
           "Body weight is equal at the two levels at one age and the weight comparison is survivor-conditioned on the lower side: an equality between unequal denominators is not evidence of grading.",
           "Myelination dose relation never quantified; gliosis result binary against wild type with no untreated-null comparator; SWD has no low-level arm.",
           "No tumour surveillance of any kind in a pro-apoptotic tumour suppressor delivered irreversibly; no measured ceiling.",
@@ -138,7 +138,7 @@
       "scope_of_checks": {
         "support_and_replication": "One laboratory; no replication; support is intra-study.",
         "formal_checks": "Rescue-reference fill: voluntary blind audit run on the new Figure 3B triples, 5 SUPPORTED, 2 OVERSHOOT, 1 UNDERSHOOT, 0 UNVERIFIABLE, all adverse verdicts repaired at source; verdict not certified by its author. CLAIM 011 remains flagged for review.",
-        "card_inferences_owed_audit": "None added; the 'threshold not a continuum' wording is the repository's NARROW adjudication and is carried as proposed."
+        "card_inferences_owed_audit": "None added; the survival wording follows the CLAIM 011 adjudication now in the claim registry (a step, with a step and a steep continuum indistinguishable, the step reading strengthened and not established)."
       },
       "question_history": [
         "CLAIM 011 flag of 2026-08-10 (dose-dependent over a threshold) -> NARROW adjudication CC-20261021-SCIENTIST-C-CLAIM011-DOSE-ADJUDICATION-01",
@@ -160,8 +160,8 @@
       "Whether the source's result is reproduced by an independent laboratory."
     ],
     "evidence_against": [
-      "Threshold not continuum.",
-      "No replication.",
+      "Survival: a step and a steep continuum are indistinguishable; threshold not located.",
+      "No replication within the repository (two papers, one senior author and institution); the human-organoid AAV9-WWOX source was not tested for this claim.",
       "No tumour surveillance."
     ],
     "bridge_gaps_exposed": [
@@ -180,7 +180,7 @@
     },
     "p4_roadmap_fields": {
       "indication_and_transfer": "WOREE (all genotypes carry some level of WWOX deficit) as target; origin: a constitutive-null mouse and human knockout and patient-derived organoids. Transfer to a Q230P-class missense or compound context is not established.",
-      "verification_scope": "{\"support_and_replication\": \"One laboratory; no replication; support is intra-study.\", \"formal_checks\": \"Rescue-reference fill: voluntary blind audit run on the new Figure 3B triples, 5 SUPPORTED, 2 OVERSHOOT, 1 UNDERSHOOT, 0 UNVERIFIABLE, all adverse verdicts repaired at source; verdict not certified by its author. CLAIM 011 remains flagged for review.\", \"card_inferences_owed_audit\": \"None added; the 'threshold not a continuum' wording is the repository's NARROW adjudication and is carried as proposed.\"}"
+      "verification_scope": "{\"support_and_replication\": \"One laboratory; no replication; support is intra-study.\", \"formal_checks\": \"Rescue-reference fill: voluntary blind audit run on the new Figure 3B triples, 5 SUPPORTED, 2 OVERSHOOT, 1 UNDERSHOOT, 0 UNVERIFIABLE, all adverse verdicts repaired at source; verdict not certified by its author. CLAIM 011 remains flagged for review.\", \"card_inferences_owed_audit\": \"None added; the survival wording follows the CLAIM 011 adjudication now in the claim registry (a step, with a step and a steep continuum indistinguishable, the step reading strengthened and not established).\"}"
     },
     "label_lookup": {
       "status": "NOT_ATTEMPTED"

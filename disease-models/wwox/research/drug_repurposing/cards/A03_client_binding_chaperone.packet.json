@@ -39,7 +39,7 @@
   "abstention_card": {
     "kind": "ABSTENTION",
     "missing_datum": "A ligand known to bind the WWOX SDR domain, and a measured instability of Q230P that such a ligand could stabilise. No experimental structure of the SDR domain exists in the repository (CLAIM 019: AlphaFold and in-silico values only, IPOTESI).",
-    "search_record": "NON_TROVATO_NELLA_RICERCA: no WWOX-SDR ligand in the records (known-roads note, 2026-10-20); a title/abstract zero licenses only 'no paper is indexed'.",
+    "search_record": "NOT ESTABLISHED HERE, not a confirmed absence. Run 2026-10-21 (session clock), PubMed title/abstract: WWOX AND (cryo-EM OR crystal structure OR X-ray OR NMR structure OR AlphaFold) AND (SDR OR oxidoreductase domain OR full-length): 0 records; a broader WWOX AND (crystal OR docking OR small molecule OR inhibitor OR ligand OR NADPH OR steroid, further terms omitted) query returned 113 records that were not screened one by one. A title/abstract zero licenses only 'no paper is indexed'. One repository reading reports steroid substrates with apparent Km values for a WWOX fusion protein in a bacterial crude extract, unreplicated and with no purified-protein binding (PMID 21476439): a substrate screen, not a validated binder and not a stabilisation datum. The repository note of 2026-10-20 is the other basis.",
     "adjacent_context_not_wwox_evidence": [
       "GABRA1 receptor-binding modulators raised variant protein and current together (measured in HEK293T, one knock-in iPSC line)",
       "an approved active-site chaperone for a lysosomal enzyme: 'amenable' call differs for 12.9 percent of variants between two near-identical assays and no clinical correlation is established (Fabry GLA)"
@@ -49,7 +49,7 @@
   "p4_card": {
     "identity": "Client-binding pharmacological chaperone (ligand of the WWOX SDR domain)",
     "indication_and_transfer": "WOREE as target; no candidate molecule is carded because the datum below is missing.",
-    "novelty_for_woree": "NON_TROVATO_NELLA_RICERCA: no WWOX-SDR ligand in the records (known-roads note, 2026-10-20); a title/abstract zero licenses only 'no paper is indexed'.",
+    "novelty_for_woree": "NOT ESTABLISHED HERE, not a confirmed absence. Run 2026-10-21 (session clock), PubMed title/abstract: WWOX AND (cryo-EM OR crystal structure OR X-ray OR NMR structure OR AlphaFold) AND (SDR OR oxidoreductase domain OR full-length): 0 records; a broader WWOX AND (crystal OR docking OR small molecule OR inhibitor OR ligand OR NADPH OR steroid, further terms omitted) query returned 113 records that were not screened one by one. A title/abstract zero licenses only 'no paper is indexed'. One repository reading reports steroid substrates with apparent Km values for a WWOX fusion protein in a bacterial crude extract, unreplicated and with no purified-protein binding (PMID 21476439): a substrate screen, not a validated binder and not a stabilisation datum. The repository note of 2026-10-20 is the other basis.",
     "state_of_known_roads": "known-roads § 8 and R1 § 1 (39216838, 32023956)",
     "pathway_and_objective": "RECUPERO_PROFONDO.",
     "expected_contribution": "UNKNOWN",

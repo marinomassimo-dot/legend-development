@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "a317cfa159e006c7364a841c755d628d21d47512539627809eb70eece28883c8",
+  "input_sha256": "42fabcd98b6ff010d10a369e2d7f62f2746969ce243b6b42d0cf1bf46bd25fc4",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -72,14 +72,14 @@
     "abstention_card": {
       "kind": "ABSTENTION",
       "missing_datum": "A baseline: no aberrant-to-normal transcript ratio exists for any WWOX splice allele in any tissue, no WWOX splice allele has had its RNA examined with an NMD inhibitor, and no intragenic precedent exists. Without a baseline an efficacy endpoint has no denominator.",
-      "search_record": "NON_TROVATO_NELLA_RICERCA: 'antisense' and 'oligonucleotide' 0 across the whole WWOX literature in the records (known-roads § 2.8, 2026-10-20); of 20 relevant records three measured a transcript from a splice allele.",
+      "search_record": "NON_TROVATO_NELLA_RICERCA, bounded to the set searched. 'antisense' and 'oligonucleotide' were 0 in the 20-record splice-relevant census set (19 of 20 read at abstract depth; known-roads § 2.8, 2026-10-20), not across every WWOX record: the repository holds WWOX papers that use an antisense construct (PMID 19366691) or a morpholino knockdown (PMID 25649963), neither a splice-switching correction arm. A later three-query PubMed leg with a passing positive control (analysis/splice_allele_rna_evidence_20260922.md) supports the absence of an aberrant-to-normal ratio; PubMed zeros are not re-runnable offline. Of the 20 records three measured a transcript from a splice allele.",
       "adjacent_context_not_wwox_evidence": [],
       "an_abstention_is_a_result": "The roadmap states it; this card names what would end it."
     },
     "p4_card": {
       "identity": "Splice-correcting antisense oligonucleotide / editing for a splice-acceptor allele (TX-001)",
       "indication_and_transfer": "WOREE as target; no candidate molecule is carded because the datum below is missing.",
-      "novelty_for_woree": "NON_TROVATO_NELLA_RICERCA: 'antisense' and 'oligonucleotide' 0 across the whole WWOX literature in the records (known-roads § 2.8, 2026-10-20); of 20 relevant records three measured a transcript from a splice allele.",
+      "novelty_for_woree": "NON_TROVATO_NELLA_RICERCA, bounded to the set searched. 'antisense' and 'oligonucleotide' were 0 in the 20-record splice-relevant census set (19 of 20 read at abstract depth; known-roads § 2.8, 2026-10-20), not across every WWOX record: the repository holds WWOX papers that use an antisense construct (PMID 19366691) or a morpholino knockdown (PMID 25649963), neither a splice-switching correction arm. A later three-query PubMed leg with a passing positive control (analysis/splice_allele_rna_evidence_20260922.md) supports the absence of an aberrant-to-normal ratio; PubMed zeros are not re-runnable offline. Of the 20 records three measured a transcript from a splice allele.",
       "state_of_known_roads": "known-roads § 2.8, § 6",
       "pathway_and_objective": "RECUPERO_PROFONDO.",
       "expected_contribution": "UNKNOWN",

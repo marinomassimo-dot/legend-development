@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "7eebb5ed2106299775e78c6a0ff505d71140fcaa123daf83e69437036fc5236f",
+  "input_sha256": "cca82737dbba1f2921e6d0807a865f8f250ce8bd043c2044a02b09e39cb3268d",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -276,7 +276,7 @@
       "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
       "scope_of_checks": {
         "support_and_replication": "Rescue of the retained branch seen in two papers of one target family (GAT-1 variants); no replication in an enzyme-class or WWOX system.",
-        "formal_checks": "R1 readings carry recorded receipts and PASS manifests; the R1 narrowings are OWED a blind locator audit by another actor (an audit of some R1 triples is running in parallel; its outcome is not available to this card).",
+        "formal_checks": "R1 readings carry recorded receipts and PASS manifests. The blind audit of six R1 manifests has run (95 triples: 76 supported, 15 overshoot, 2 undershoot, 2 unverifiable; page_adjudications/locator_audit_R1_20261022.md) and its repairs were applied at source; those repairs are not themselves re-audited. This card was audited in page_adjudications/locator_audit_deep_cards_20261022.md; the defects named there are repaired here and the repair is not certified by its author.",
         "card_inferences_owed_audit": "The wrong-compartment transfer objection (INFERENZA)."
       },
       "question_history": [
@@ -294,7 +294,7 @@
     },
     "not_known": [
       "Where the Q230P protein is lost: never made, made and cleared, made and insoluble, made and epitope-invisible, or truncated. No fractionation, inhibitor, synthesis or half-life datum exists for the exact variant.",
-      "Whether any recovered Q230P protein would carry WWOX function: there is no per-molecule WWOX function assay in the repository, and protein quantity does not imply function (six measured divergences in R1).",
+      "Whether any recovered Q230P protein would carry WWOX function: there is no per-molecule WWOX function assay in the repository, and protein quantity does not imply function (in the R1 lot quantity and function diverged in some systems and function could not be measured in others).",
       "The share of destabilised-missense lesions that are stability lesions for a WWOX SDR-domain variant: the estimates carried in the literature are cited estimates, and the SDR-domain thermal stability is a missing measurement.",
       "No drug has been given to any WWOX model carrying a missense or a splice allele (known-roads note, section 5).",
       "Whether a cytosolic enzyme lesion behaves like the ER-retained branch at all.",
@@ -321,7 +321,7 @@
     },
     "p4_roadmap_fields": {
       "indication_and_transfer": "WOREE (Q230P-class missense) as target. Origin contexts: STXBP1, SLC6A1, GABRA1 and GAT-1 variants in cells, worm, fly, zebrafish and mouse (NOT WWOX EVIDENCE). Bridge limit: a chaperone of an ER-retained membrane protein is not shown to act on a cytosolic SDR enzyme; wild type is raised as well.",
-      "verification_scope": "{\"support_and_replication\": \"Rescue of the retained branch seen in two papers of one target family (GAT-1 variants); no replication in an enzyme-class or WWOX system.\", \"formal_checks\": \"R1 readings carry recorded receipts and PASS manifests; the R1 narrowings are OWED a blind locator audit by another actor (an audit of some R1 triples is running in parallel; its outcome is not available to this card).\", \"card_inferences_owed_audit\": \"The wrong-compartment transfer objection (INFERENZA).\"}"
+      "verification_scope": "{\"support_and_replication\": \"Rescue of the retained branch seen in two papers of one target family (GAT-1 variants); no replication in an enzyme-class or WWOX system.\", \"formal_checks\": \"R1 readings carry recorded receipts and PASS manifests. The blind audit of six R1 manifests has run (95 triples: 76 supported, 15 overshoot, 2 undershoot, 2 unverifiable; page_adjudications/locator_audit_R1_20261022.md) and its repairs were applied at source; those repairs are not themselves re-audited. This card was audited in page_adjudications/locator_audit_deep_cards_20261022.md; the defects named there are repaired here and the repair is not certified by its author.\", \"card_inferences_owed_audit\": \"The wrong-compartment transfer objection (INFERENZA).\"}"
     },
     "label_lookup": {
       "status": "NOT_ATTEMPTED"

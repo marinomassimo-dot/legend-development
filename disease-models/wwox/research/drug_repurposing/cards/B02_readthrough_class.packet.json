@@ -37,7 +37,7 @@
   "abstention_card": {
     "kind": "ABSTENTION",
     "missing_datum": "The enumeration: a count of WWOX nonsense alleles with stop-codon identity and the +4 nucleotide, which govern read-through efficiency. No published cohort separates splice from nonsense from frameshift from CNV; the class is pooled into 'null' and its size is unknown.",
-    "search_record": "NON_TROVATO_NELLA_RICERCA: ataluren, PTC124, ELX-02, read-through and nonsense suppression 0 across the repository; PubMed WWOX with those terms 0 (2026-10-20, title/abstract only).",
+    "search_record": "NON_TROVATO_NELLA_RICERCA, bounded. The zero for the agent names ataluren, PTC124 and ELX-02 was found in the sweep of the WWOX-literature bodies (analysis/wwox_nmd_assay_census_20260922.md) and not across the whole repository: analysis/woree_therapeutic_class_census_20260921.md carries a READ-THROUGH class row naming an ataluren class, and analysis/ft116_cohort_triage_20260921.md calls p.(Arg264Ter) a READ-THROUGH candidate; neither is a WWOX measurement. PubMed WWOX with those terms returned 0 on 2026-10-20 in title/abstract only; not re-runnable offline.",
     "adjacent_context_not_wwox_evidence": [
       "the independent comparator-controlled study (known-roads § 4.3) is the only adjacent head-to-head and concerns amlexanox against ataluren in Fanconi-anaemia cells"
     ],
@@ -46,7 +46,7 @@
   "p4_card": {
     "identity": "PTC read-through class for WWOX nonsense alleles (ataluren-type and aminoglycoside-type agents)",
     "indication_and_transfer": "WOREE as target; no candidate molecule is carded because the datum below is missing.",
-    "novelty_for_woree": "NON_TROVATO_NELLA_RICERCA: ataluren, PTC124, ELX-02, read-through and nonsense suppression 0 across the repository; PubMed WWOX with those terms 0 (2026-10-20, title/abstract only).",
+    "novelty_for_woree": "NON_TROVATO_NELLA_RICERCA, bounded. The zero for the agent names ataluren, PTC124 and ELX-02 was found in the sweep of the WWOX-literature bodies (analysis/wwox_nmd_assay_census_20260922.md) and not across the whole repository: analysis/woree_therapeutic_class_census_20260921.md carries a READ-THROUGH class row naming an ataluren class, and analysis/ft116_cohort_triage_20260921.md calls p.(Arg264Ter) a READ-THROUGH candidate; neither is a WWOX measurement. PubMed WWOX with those terms returned 0 on 2026-10-20 in title/abstract only; not re-runnable offline.",
     "state_of_known_roads": "known-roads § 4.4, § 5",
     "pathway_and_objective": "RECUPERO_PROFONDO.",
     "expected_contribution": "UNKNOWN",

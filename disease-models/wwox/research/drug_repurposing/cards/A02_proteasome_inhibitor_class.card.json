@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "dccbcd5b0b5c9f657fa9287cea5554fc87b8e9b7fc2e726af45ed87c7bbde972",
+  "input_sha256": "229bda0fb3e6636f189ecf56e5ef548103e4e5d8dd3350f3820f8be717cb127c",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -42,7 +42,7 @@
         "context.species: mismatch or unknown",
         "context.cell_type: mismatch or unknown",
         "context.developmental_stage: mismatch or unknown",
-        "reported no change, in a cell that is not comparable: a measured null, not an unmeasured cell"
+        "direction unknown"
       ]
     }
   ],
@@ -64,7 +64,7 @@
   },
   "p4_fields": {
     "endpoint_pursued": "Return of Q230P protein from an undetectable baseline by blocking its degradation, read as total, soluble and pellet protein and then function.",
-    "functional_evidence_available": "None for WWOX. In the closest precedent, a localisation and a myelin-marker readout moved with a partial protein return; a second precedent returned inactive insoluble protein.",
+    "functional_evidence_available": "None for WWOX. In the closest precedent, a localisation and a myelin-marker readout moved with a partial protein return; a second precedent returned insoluble protein in which no activity could be measured.",
     "temporal_or_model_limit": "Cell-culture precedents; a toxicity-bounded exposure window in the closest one; library flow shifts in others. No animal, no brain exposure.",
     "cellular_context": {
       "target_expression": "UNKNOWN for the relevant human neural cells.",
@@ -142,7 +142,7 @@
         "id": "DR-A02-003",
         "target_id": "ASPA C152W insoluble protein",
         "endpoint": "activity of the stabilised protein",
-        "direction": "NO_CHANGE",
+        "direction": "UNKNOWN",
         "source": "Gersing 2021 (R1 reading 33914734); NOT WWOX EVIDENCE",
         "locator": "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md § 1, 33914734",
         "epistemic_status": "DATO",
@@ -154,13 +154,13 @@
           "cell_type": "U2OS",
           "developmental_stage": "culture"
         },
-        "measured_result_note": "MEASURED NO FUNCTION: stabilising the variant yielded protein that is insoluble and without measurable activity. Encoded NO_CHANGE.",
+        "measured_result_note": "Stabilising the variant through the Hsp110 axis yielded protein that is insoluble; no enzyme activity could be measured in this study or was found in earlier mammalian-cell work, so activity is NOT MEASURED here, which is not a measured null. Encoded UNKNOWN.",
         "receipt": "FTR-20261021-33914734-01"
       }
     ],
     "p4_fields": {
       "endpoint_pursued": "Return of Q230P protein from an undetectable baseline by blocking its degradation, read as total, soluble and pellet protein and then function.",
-      "functional_evidence_available": "None for WWOX. In the closest precedent, a localisation and a myelin-marker readout moved with a partial protein return; a second precedent returned inactive insoluble protein.",
+      "functional_evidence_available": "None for WWOX. In the closest precedent, a localisation and a myelin-marker readout moved with a partial protein return; a second precedent returned insoluble protein in which no activity could be measured.",
       "temporal_or_model_limit": "Cell-culture precedents; a toxicity-bounded exposure window in the closest one; library flow shifts in others. No animal, no brain exposure.",
       "cellular_context": {
         "target_expression": "UNKNOWN for the relevant human neural cells.",
@@ -171,7 +171,7 @@
     },
     "p4_card": {
       "identity": "Proteasome-inhibitor class, research-grade or oncology agents, discussed at class level only. No named agent is proposed; formulation: UNKNOWN.",
-      "indication_and_transfer": "WOREE (Q230P-class) as target. Origin: a recessive missense protein in patient iPSC oligodendrocytes plus library studies (NOT WWOX EVIDENCE). This is the closest measured precedent to the Q230P premise in R1 ('normal mRNA, protein absent', partial return with an inhibitor), at the cost of a narrow toxicity-bounded window.",
+      "indication_and_transfer": "WOREE (Q230P-class) as target. Origin: a recessive missense protein in patient iPSC oligodendrocytes plus library studies (NOT WWOX EVIDENCE). This is the closest measured precedent to the Q230P premise in R1 ('normal mRNA, protein absent', partial return with an inhibitor; the transcript level is cited from an earlier report, and whether the paper examined it itself is not established), at the cost of a narrow toxicity-bounded window.",
       "novelty_for_woree": "NON_TROVATO_NELLA_RICERCA as a test in any WWOX system (registry-based, 2026-10-20). No inhibitor arm exists in the only Q230P study.",
       "state_of_known_roads": "not verified for this disease; and exposure-or-toxicity limit shown by its own precedent (other windows toxic to controls).",
       "pathway_and_objective": "RECUPERO_PROFONDO.",
@@ -190,11 +190,11 @@
       },
       "evidence_for_and_against": {
         "for": [
-          "A recessive missense protein returned from undetectable to a fraction with an inhibitor, with two function-adjacent readouts on the same cells."
+          "A recessive missense protein returned from barely detectable (about 3 percent of control) to a fraction with an inhibitor, with two function-adjacent readouts on the same cells."
         ],
         "against": [
           "Recovery only to a fraction of control; the inhibitor also induces HSP70; specificity 'seems unlikely' by the authors' own account; toxic outside a narrow window including in controls.",
-          "A stabilised variant that was inactive and insoluble (ASPA C152W).",
+          "A variant stabilised through the Hsp110 axis (not by proteasome blockade) that was insoluble and in which no enzyme activity could be measured (ASPA C152W).",
           "Lysosome inhibition did nothing in the libraries; route is protein-specific."
         ],
         "transfer_limits": "Cell lines, few and non-isogenic; no pellet lane in the closest precedent."
@@ -205,7 +205,7 @@
       "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
       "scope_of_checks": {
         "support_and_replication": "No replication of the HIKESHI result is recorded.",
-        "formal_checks": "R1 receipts recorded, manifests PASS; R1 narrowings OWED a blind audit by another actor.",
+        "formal_checks": "R1 receipts recorded, manifests PASS. The blind audit of six R1 manifests has run (95 triples: 76 supported, 15 overshoot, 2 undershoot, 2 unverifiable) and its repairs were applied at source; the repairs are not re-audited. This card was audited in page_adjudications/locator_audit_deep_cards_20261022.md; the defects named there are repaired here and the repair is not certified by its author.",
         "card_inferences_owed_audit": "None added beyond the R1 note."
       },
       "question_history": [
@@ -221,13 +221,13 @@
     },
     "not_known": [
       "Where the Q230P protein is lost: never made, made and cleared, made and insoluble, made and epitope-invisible, or truncated. No fractionation, inhibitor, synthesis or half-life datum exists for the exact variant.",
-      "Whether any recovered Q230P protein would carry WWOX function: there is no per-molecule WWOX function assay in the repository, and protein quantity does not imply function (six measured divergences in R1).",
+      "Whether any recovered Q230P protein would carry WWOX function: there is no per-molecule WWOX function assay in the repository, and protein quantity does not imply function (in the R1 lot quantity and function diverged in some systems and function could not be measured in others).",
       "The share of destabilised-missense lesions that are stability lesions for a WWOX SDR-domain variant: the estimates carried in the literature are cited estimates, and the SDR-domain thermal stability is a missing measurement.",
       "No drug has been given to any WWOX model carrying a missense or a splice allele (known-roads note, section 5).",
       "Whether Q230P is a proteasome substrate at all."
     ],
     "evidence_against": [
-      "Insoluble, inactive stabilised variant (ASPA C152W).",
+      "Insoluble stabilised variant with no measurable activity (ASPA C152W).",
       "Toxic windows including in controls."
     ],
     "bridge_gaps_exposed": [
@@ -240,11 +240,11 @@
       "interactions": "UNKNOWN",
       "access": "UNKNOWN",
       "time_to_benefit": "UNKNOWN",
-      "functional_rescue": "UNKNOWN for WWOX. Closest precedent: partial protein return with localisation and myelin-marker read-outs in cells; another precedent returned inactive insoluble protein."
+      "functional_rescue": "UNKNOWN for WWOX. Closest precedent: partial protein return with localisation and myelin-marker read-outs in cells; another precedent returned insoluble protein in which no activity could be measured."
     },
     "p4_roadmap_fields": {
-      "indication_and_transfer": "WOREE (Q230P-class) as target. Origin: a recessive missense protein in patient iPSC oligodendrocytes plus library studies (NOT WWOX EVIDENCE). This is the closest measured precedent to the Q230P premise in R1 ('normal mRNA, protein absent', partial return with an inhibitor), at the cost of a narrow toxicity-bounded window.",
-      "verification_scope": "{\"support_and_replication\": \"No replication of the HIKESHI result is recorded.\", \"formal_checks\": \"R1 receipts recorded, manifests PASS; R1 narrowings OWED a blind audit by another actor.\", \"card_inferences_owed_audit\": \"None added beyond the R1 note.\"}"
+      "indication_and_transfer": "WOREE (Q230P-class) as target. Origin: a recessive missense protein in patient iPSC oligodendrocytes plus library studies (NOT WWOX EVIDENCE). This is the closest measured precedent to the Q230P premise in R1 ('normal mRNA, protein absent', partial return with an inhibitor; the transcript level is cited from an earlier report, and whether the paper examined it itself is not established), at the cost of a narrow toxicity-bounded window.",
+      "verification_scope": "{\"support_and_replication\": \"No replication of the HIKESHI result is recorded.\", \"formal_checks\": \"R1 receipts recorded, manifests PASS. The blind audit of six R1 manifests has run (95 triples: 76 supported, 15 overshoot, 2 undershoot, 2 unverifiable) and its repairs were applied at source; the repairs are not re-audited. This card was audited in page_adjudications/locator_audit_deep_cards_20261022.md; the defects named there are repaired here and the repair is not certified by its author.\", \"card_inferences_owed_audit\": \"None added beyond the R1 note.\"}"
     },
     "label_lookup": {
       "status": "NOT_ATTEMPTED"
@@ -265,14 +265,13 @@
     "interactions": "UNKNOWN",
     "access": "UNKNOWN",
     "time_to_benefit": "UNKNOWN",
-    "functional_rescue": "UNKNOWN for WWOX. Closest precedent: partial protein return with localisation and myelin-marker read-outs in cells; another precedent returned inactive insoluble protein."
+    "functional_rescue": "UNKNOWN for WWOX. Closest precedent: partial protein return with localisation and myelin-marker read-outs in cells; another precedent returned insoluble protein in which no activity could be measured."
   },
   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
   "limits": [
     "Technical comparison is not efficacy, safety or experimental validation.",
     "Sources and receipt references are retained, not independently verified.",
     "Shared sources are not independent confirmations; scores are not pooled.",
-    "NO_CHANGE is a reported null effect on that endpoint and context: it is not UNKNOWN (not measured), not evidence of safety, and not proof of futility; a null in a non-comparable cell stays UNRESOLVED.",
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
   ]
 }
