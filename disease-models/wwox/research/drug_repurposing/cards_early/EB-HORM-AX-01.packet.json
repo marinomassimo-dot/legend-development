@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "route": "BENEFICIO_PRECOCE",
+  "candidate": {
+    "id": "EB-HORM-AX-01",
+    "name": "ACTH, corticosteroids and phenobarbital-containing regimens (class level)"
+  },
+  "disease_assertion": {
+    "id": "D-HORM-1",
+    "target_id": "epileptic_spasms",
+    "endpoint": "clinical cessation of epileptic spasms",
+    "direction": "INCREASE",
+    "source": "known-roads note 2.7",
+    "locator": "repurposing_known_roads_20261020_scientist-a.md section 2.7, row 'ACTH / corticosteroids...'",
+    "epistemic_status": "DATO",
+    "reading_depth": "queried_not_full_read",
+    "context": {
+      "disease_id": "WWOX-DEE with West syndrome or infantile spasms",
+      "genotype": "WWOX-null class (predicted null/null)",
+      "species": "human",
+      "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
+      "developmental_stage": "infancy"
+    }
+  },
+  "drug_assertions": [],
+  "label_lookup": {
+    "status": "NOT_ATTEMPTED"
+  },
+  "p4_fields": {
+    "endpoint_pursued": "clinical cessation of epileptic spasms, if and only if a comparator separates a WWOX-genotype response from ordinary West-syndrome pharmacology",
+    "functional_evidence_available": "none for the gene: six explicit responders in a per-patient supplement column of one curation, 'Yes' undefined, no control arm, dosing, duration or standardised follow-up",
+    "temporal_or_model_limit": "heterogeneous primary reports; West syndrome and hypsarrhythmia are frequent in this cohort and hormonal therapy is standard care for infantile spasms generally",
+    "cellular_context": {
+      "target_expression": "UNKNOWN",
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "no candidate, so no target-expression statement is made"
+    }
+  },
+  "p4_roadmap_fields": {
+    "identity": "Class level only; no named product, formulation or regimen.",
+    "indication_and_transfer": "Human WWOX-DEE reports, more than 21 heterogeneous primary reports tabulated in one curation.",
+    "novelty_for_woree": "Already used. Not a new idea.",
+    "known_roads_state": "Partial, confounded by West-syndrome pharmacology (known-roads note 2.7); visible only in the supplement while the running text calls the regimens flatly not effective.",
+    "path_and_objective": "BENEFICIO_PRECOCE.",
+    "expected_contribution": "Symptom, to be verified; unseparated from standard care.",
+    "mechanism": "UNKNOWN.",
+    "sources": "Known-roads note 2.7; CLAIM 001 (hormonal therapy as a VABAM co-factor in non-WWOX cohorts).",
+    "evidence_pro_contra": "Six explicit responders against an undefined response and no comparator.",
+    "time_to_access": "UNKNOWN. Clinical census 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven unfiltered queries on ClinicalTrials.gov API v2 returned no registered WOREE interventional study; the one WOREE record is an observational registry and natural-history study. Its own caution binds this card: «A missing hit does not prove that no study exists.» An NCT number proves neither recruitment nor first dosing. ",
+    "time_to_benefit": "UNKNOWN.",
+    "pharmacology": "UNKNOWN.",
+    "paediatrics_and_interactions": "UNKNOWN. Suitability not presumed.",
+    "verification_scope": "This card: audit OWED.",
+    "question_history": "Known-roads note 2.7.",
+    "predictions": "None.",
+    "next_measure": "In a matched non-WWOX West-syndrome series, what fraction responds to hormonal therapy, and how many WWOX responders would that fraction already explain?",
+    "status": "ASTENSIONE. Missing datum: a defined response and a matched West-syndrome base rate.",
+    "value_added": "Keeps a visible-but-confounded observation from being read as a WWOX-specific road."
+  },
+  "not_known": [
+    "definition of 'Yes' in the supplement",
+    "matched West-syndrome base rate",
+    "denominator of WWOX children treated",
+    "any comparator",
+    "time to benefit",
+    "time to access"
+  ],
+  "evaluation_frame": {
+    "source": "repurposing_10h_scientist-d_20261021.md, 'The answer in one page', DESIGN TABLE A and B. INFERENZA built from precedents that are all NOT WWOX EVIDENCE; the blind audit of that note's manifests is queued and had not returned when this card was written.",
+    "a_woree_evaluation_would_have_to_measure": [
+      "a repeated, instrument-matched baseline before any exposure, in a form that can move in a profoundly impaired child (growth-scale or raw-score forms rather than standard scores); the scatter of an untreated interval has never been measured in WOREE",
+      "a pharmacodynamic anchor: none exists for any WWOX-directed intervention (CLAIM 046), so engagement of the intended target cannot be shown at all",
+      "one prespecified endpoint with a rescue or withdrawal rule written before the observation window opens",
+      "survival, reported beside whatever endpoint is chosen",
+      "seizures only as a separate, declared family: a countable fraction, a diary or agreed reconstruction rule, and the seizure-free stratum reported apart (it is prognostic, not a treatment effect)"
+    ],
+    "and_could_not_claim": [
+      "disease modification or developmental benefit: the developmental-delay row of the one WOREE series reporting a response is identical in every column and two of the three responders had died",
+      "that seizure control protects development (CLAIM 031 forbids counting any symptomatic outcome as disease modification)",
+      "benefit from a pharmacodynamic move, a global impression or an own-baseline comparison",
+      "any effect smaller than the instrument's own untreated scatter",
+      "the word protection: nothing in this corpus has been measured as preserving a function that would otherwise have been lost"
+    ]
+  },
+  "must_never": [
+    "No score, rank, probability or blended index. 'Non-dominated' would be a statement about visible dimensions, never a number.",
+    "No dose, route, schedule, course or paediatric suitability. Accessibility of a drug, diet or supplement does not prove paediatric suitability.",
+    "A computational prediction is not DATO. No engine was run for this card.",
+    "Every adjacent source is labelled NOT WWOX EVIDENCE and is never promoted to WWOX evidence.",
+    "A missing hit is not proof of absence.",
+    "Symptomatic benefit is not slowing of disease; the word 'protection' is not licensed by any evidence on this card.",
+    "Where CLAIM 011 has been narrowed, 'dose-dependent' does not stand.",
+    "Nothing here is medical advice; it supports discussion with a treating clinical team and never substitutes for one."
+  ],
+  "card_kind": "ABSTENTION_CARD"
+}
