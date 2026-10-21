@@ -1,0 +1,288 @@
+{
+ "schema_version": 2,
+ "pmid": "40911604",
+ "doi": "10.1371/journal.pone.0330437",
+ "receipt": "FTR-20261021-40911604-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261021.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access XML, figures, PDF and supplement came from pmc_bucket_fetch.py in one call; no cascade needed."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Mouse lysosomal-storage (Npc1 missense) model; rapamycin delivered to pups through maternal drinking water from P10 to P21; measures microglia, climbing-fibre terminals and white-matter MBP in cerebellum. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries_text": [
+   "rapamycin AND microglia AND Niemann-Pick",
+   "mTORC1 AND microglia activation"
+  ],
+  "note": "Group R3 reading; queries are PubMed counts on 2026-10-21 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "rapamycin AND microglia AND Niemann-Pick",
+    "count": 1,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   },
+   {
+    "query": "mTORC1 AND microglia activation",
+    "count": 61,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 40911604; registry_records.py get --pmid 40911604 --hops 1",
+  "hits": 0,
+  "finding": "No receipt before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-21; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 33,
+   "references_screened": 28,
+   "references_with_doi": 28,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 5
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40911604_Murray2025_PMC_r2.xml",
+   "sha256": "246c0f3f7ab2eea3a99aae593d8e77259476657ba901405585ebf1d267eb6a3a",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=12412993",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "246c0f3f7ab2eea3a99aae593d8e77259476657ba901405585ebf1d267eb6a3a"
+   }
+  },
+  {
+   "path": "files/supplement/PMID40911604_r2/PMC12412993.1.pdf",
+   "sha256": "0eee1c7e5468c04c30f6eed6ca997e796d6a8695d374e7e1f21e80d74573a08a",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "0eee1c7e5468c04c30f6eed6ca997e796d6a8695d374e7e1f21e80d74573a08a"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID40911604_r3c/p11_150dpi.png",
+   "sha256": "ad28ff05af8166a774e5fe59f746e364ba4e10c73866f87eeadf8a90e7daf9b0",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40911604_r2/PMC12412993.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=150), page 11",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "ad28ff05af8166a774e5fe59f746e364ba4e10c73866f87eeadf8a90e7daf9b0"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID40911604_r3c/p12_150dpi.png",
+   "sha256": "84f2cad9a69e455e0f6678392e4f810c3f5ff5d3f18ebb5c10da4bc7f64acd28",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40911604_r2/PMC12412993.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=150), page 12",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "84f2cad9a69e455e0f6678392e4f810c3f5ff5d3f18ebb5c10da4bc7f64acd28"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID40911604_r3c/p13_150dpi.png",
+   "sha256": "bc41240764340944ec526d321cc1abaed270417e525d18059b6b6f82b0deade3",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40911604_r2/PMC12412993.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=150), page 13",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "bc41240764340944ec526d321cc1abaed270417e525d18059b6b6f82b0deade3"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Delivery: rapamycin 40 ug/mL in the drinking water of lactating dams (vehicle 0.5 percent ethanol), pups treated through milk from P10 to P21; pup dose and exposure are not measured.",
+    "snippet": "Lactating females were provided drinking water with 40ug/ml of rapamycin (RAP) or 0.5% ethanol as a vehicle (VEH) to treat Npc1nmf164 mouse pups through maternal lactation from P10 to P21.",
+    "anchor": "Results / Rapamycin reduces proliferation and phagocytic activity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40911604_Murray2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "There is no wild-type rapamycin arm and no vehicle-only wild-type arm of the same treatment, so the effect of rapamycin on normal development is not tested.",
+    "snippet": "Data are presented as mean ± SEM, n = 3-4 mice/group, *P < 0.05 and ***P < 0.001 by unpaired t-test (B-D) or One-way ANOVA with post-hoc Tukey (F-H).",
+    "anchor": "Fig. 7 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40911604_Murray2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Rapamycin raised MBP volume in the cerebellar white matter of Npc1 mutant pups at P21 (the myelin endpoint).",
+    "snippet": "rapamycin treatment significantly increased MBP immunolabeling in the cerebellar WMR of Npc1nmf164 mice compared to vehicle-treated Npc1nmf164 mice at P21 (Fig 7A–B)",
+    "anchor": "Results / Rapamycin reduces proliferation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40911604_Murray2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper states white-matter microglia were unchanged by rapamycin, so the myelin effect is not attributed to the microglial arm.",
+    "snippet": "Yet, no differences in the total volume of IBA1+ microglia and the mean volume of CD68+ phagosomes were found between vehicle- and rapamycin-treated Npc1nmf164 mice (Fig 7A,C–D).",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40911604_Murray2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Harm signal: rapamycin further shortened microglial processes and reduced terminal points in the molecular layer and increased process diameter, which the authors read as impaired postnatal microglial growth.",
+    "snippet": "However, rapamycin also impaired microglial processes development, underscoring mTORC1’s importance in postnatal microglial growth and differentiation.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40911604_Murray2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Rapamycin did not rescue the Tmem119-EGFP deficit (persistent immaturity of molecular-layer microglia).",
+    "snippet": "However, rapamycin treatment failed to rescue this phenotype, indicating that mTORC1 signaling does not directly regulate Tmem119 expression in this context.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40911604_Murray2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Rapamycin prevented loss of VGLUT2-positive climbing-fibre terminals in the molecular layer at P21; this is a synaptic, not an excitability, endpoint.",
+    "snippet": "We found that the significant decrease of VGLUT2+ in presynaptic terminals/axons observed in vehicle-treated Npc1nmf164 mice at P21 was prevented by rapamycin treatment when compared to wild-type mice (Fig 6A–B).",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40911604_Murray2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The glial arm: microglia numbers and morphology are the gliosis readout; astrocytic GFAP is not measured anywhere in the paper.",
+    "snippet": "Using rapamycin to inhibit mTORC1 in Npc1nmf164 mice during postnatal development, we found the impact of this pathway in postnatal microglia and the developmental pathology associated with NPC1 deficiency in Npc1nmf164 mice.",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40911604_Murray2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Group sizes are 3-4 mice; mixed sex; the authors say interpretation is by age and genotype alone.",
+    "snippet": "Although mixed-sex groups were used, due to limited sample sizes, all findings in this study were interpreted based on age and/or genotype differences alone.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40911604_Murray2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "mTORC1 hyperactivation in P7 Npc1 microglia is absent: pS6 was lower than in wild type at P7 and rose only by P10, so the premise that mTORC1 is hyperactive from birth is not supported by the data.",
+    "snippet": "Interestingly, at this postnatal stage (P7), the mean fluorescence intensity of pS6R was significantly reduced in IBA1+ PAM cells within the dWMR of Npc1nmf164 mice compared to wild-type controls (Fig 4A and C).",
+    "anchor": "Results / mTORC1 activation is delayed",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40911604_Murray2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 7 (150 dpi page 13): MBP volume vehicle about 8,700 versus rapamycin about 11,900 cubic micrometres (***), n = 3 per group with tight spread; white-matter IBA1 volume and CD68 mean volume unchanged; total microglial length shorter in vehicle Npc1 than wild type (*) with rapamycin not different from vehicle. No wild-type MBP bar is plotted, so the MBP result cannot be read as a return to wild-type.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] B MBP VEH ~8700 RAP ~11900 ***; F WT ~205, VEH ~140, RAP ~140",
+    "anchor": "Figure 7, page 13 at 150 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID40911604_r3c/p13_150dpi.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[2]",
+    "qualifies_needle": "rapamycin treatment significantly increased M"
+   },
+   {
+    "proposition": "Fig 5 (150 dpi page 11): molecular-layer IBA1 cell density wild type 0.00016, vehicle 0.00034, rapamycin 0.00025 per square micrometre; Tmem119-positive fraction 96, 74, 86 percent; total length 247, 197, 128 micrometres; terminal points 15, 17.5, 10; mean diameter 0.98, 0.90, 1.09: rapamycin makes microglia smaller than vehicle on three of three morphology measures.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] D * ** ***; G * ** ***; H * **; I * ***",
+    "anchor": "Figure 5, page 11 at 150 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID40911604_r3c/p11_150dpi.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[4]",
+    "qualifies_needle": "However, rapamycin also impaired microglial p"
+   },
+   {
+    "proposition": "Fig 6 (150 dpi page 12): VGLUT2 volume wild type ~2050, vehicle Npc1 ~910, rapamycin ~1800 cubic micrometres (** both); CD68 total volume per cell 148 versus 85 (*); engulfed VGLUT2 per CD68 volume unchanged (one vehicle point at 0.167).",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] B ** **; D *; E ns",
+    "anchor": "Figure 6, page 12 at 150 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID40911604_r3c/p12_150dpi.png",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch XML and PMC PDF fingerprinted; Figures 5, 6 and 7 inspected as 150 dpi page renders; Figures 1-4 and supplementary figures S1-S2 read from captions and Results text only.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}
