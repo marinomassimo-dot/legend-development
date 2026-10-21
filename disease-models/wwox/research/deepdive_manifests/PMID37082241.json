@@ -1,0 +1,254 @@
+{
+ "schema_version": 2,
+ "pmid": "37082241",
+ "doi": "10.3389/fphys.2023.1086243",
+ "receipt": "FTR-20261021-37082241-01",
+ "landing": [
+  "FTR-20261021-37082241-01",
+  "repurposing_10h_scientist-b_20261021"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 249,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-21: 'Arnold JC[au]' 249; with (WWOX OR Wwox) 0. Initials-level string, may pool homonyms.",
+  "research_type": "experimental_lab",
+  "weighting": "Cannabinoid-therapeutics laboratory with a rat EEG collaborator; a medicinal-chemistry-to-in-vivo screening paper. The compound is the laboratory's own new chemotype, so the authors have an interest in a positive result; the paper reports three negatives anyway.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID37082241_Harman2023_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement about WWOX content of this surface."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 73,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-37082241-01",
+    "target": "Calhoun et al. 2017 (Cacna1g as a genetic modifier of Scn1a epilepsy; knockdown of Cav3.1 reduces seizures and improves survival)",
+    "question": "Does a genetic Cav3.1 reduction give the genotype-dependent seizure benefit that the pharmacological compound here failed to give, and over what age window?",
+    "status": "open - cited, not read"
+   },
+   {
+    "id": "MH-37082241-02",
+    "target": "Lee et al. 2014 (Cav3.3 null mice have increased SWD susceptibility)",
+    "question": "Does isoform-specific loss of Cav3.3 aggravate where Cav3.1 loss protects, so that a pan-Cav3 drug could move in either direction?",
+    "status": "open - cited, not read"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 37082241, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "paper_packet.py packet at claim time: none prior; claimed by scientist-b."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-21",
+  "route": "PubMed esummary (JSON) for 37082241 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "pubtype [\"Journal Article\"]; no retraction, expression of concern or erratum is visible on the esummary record (the esummary JSON carries no CommentsCorrections list for this PMID, so that absence is a statement about this query).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 73,
+   "references_screened": 72,
+   "references_with_doi": 72,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID37082241_Harman2023_PMC_r2.xml",
+   "sha256": "0450aadf2e01ba5c120653b14600fc4be0069f660dca69025ba65593f7b68da9",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=10110893&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "0450aadf2e01ba5c120653b14600fc4be0069f660dca69025ba65593f7b68da9"
+   }
+  },
+  {
+   "path": "files/supplement/PMID37082241_r2/PMC10110893.1.pdf",
+   "sha256": "bb54a395c5ed83e674b3a0da044aca434ef57cf0b121db83dc03222f0b6eecae",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC10110893",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "bb54a395c5ed83e674b3a0da044aca434ef57cf0b121db83dc03222f0b6eecae"
+   }
+  },
+  {
+   "path": "files/figures/PMID37082241_r2/PMC10110893_p09_170dpi.png",
+   "sha256": "027ea04eb10d422ee154e14da653d19709a3d4ac562e5b32559fbf18403ead37",
+   "kind": "figure",
+   "note": "Page 9 of the PMC PDF rendered at 170 dpi (page render, not the embedded raster; rank.py flagged some figure pages probably-vector).",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "027ea04eb10d422ee154e14da653d19709a3d4ac562e5b32559fbf18403ead37",
+    "derived_from": "files/supplement/PMID37082241_r2/PMC10110893.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=170) on page 9",
+     "join": ""
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID37082241_r2/PMC10110893_p11_170dpi.png",
+   "sha256": "d047e5b52299f49bb2bf0f3455b205927ca8dea7ab8857867683ee60c99ea03b",
+   "kind": "figure",
+   "note": "Page 11 of the PMC PDF rendered at 170 dpi (page render, not the embedded raster; rank.py flagged some figure pages probably-vector).",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "d047e5b52299f49bb2bf0f3455b205927ca8dea7ab8857867683ee60c99ea03b",
+    "derived_from": "files/supplement/PMID37082241_r2/PMC10110893.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=170) on page 11",
+     "join": ""
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figures opened as images; every text snippet below was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet below sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "Headline negatives, in the authors' words: the new pan-Cav3 compound did not reduce spontaneous seizures in the Dravet-model mouse nor absence seizures in GAERS, and in GAERS it appeared to increase spike-and-wave incidence and duration.",
+    "snippet": "In conclusion, the MEPIRAPIM analogue SB2193 has acute anticonvulsant effects in the 6 Hz mouse model of psychomotor seizures but not the Scn1a +/− mouse model of Dravet syndrome, nor the GAERS model of absence epilepsy.",
+    "surface": "body",
+    "anchor": "Discussion, final paragraph; the aggravation in GAERS is stated at Discussion paragraph 9 (Surprisingly, SB2193 treatment increased SWD incidence and duration in GAERS over a 4-h recording period)",
+    "artifact": "files/fulltext/PMID37082241_Harman2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "These are not clean negatives about T-type block. The authors list the explanations they cannot exclude: brain exposure in the Dravet arm fell below the patch-clamp IC50, free fraction was not measured, potency was measured on human channels, off-target sodium-channel action is possible, and isoform effects may oppose each other (pan-Cav3 block may negate Cav3.1 benefit).",
+    "snippet": "Therefore, we cannot exclude the possibility that low brain concentrations of SB2193 may have contributed to the absence of a protective effect in the Scn1a +/− mice.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 5",
+    "artifact": "files/fulltext/PMID37082241_Harman2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The GAERS aggravation is attributed by the authors to possible off-target sodium-channel action, or to bioconversion to a cannabinoid-receptor agonist, neither of which was tested; the delayed time course (no effect in the first hour) is the stated reason for the bioconversion speculation.",
+    "snippet": "Given the close exofacial sequence homology of Cav3 channels with other voltage-gated ion channels, it is possible that this effect was due to off-target actions of SB2193 at other targets such as voltage-gated sodium channels.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 9",
+    "artifact": "files/fulltext/PMID37082241_Harman2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A subtype argument that matters for any pan-T-type reading: Cav3.3 null mice show increased SWD susceptibility, so Cav3.3 inhibition may be proconvulsant; the compound inhibits Cav3.1, 3.2 and 3.3 with IC50 in the same micromolar range for 3.2 and 3.3.",
+    "snippet": "Notably, Cav3.3 null mice exhibit increased susceptibility to SWDs suggesting that Cav3.3 inhibition may be proconvulsant (Lee et al., 2014).",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 6",
+    "artifact": "files/fulltext/PMID37082241_Harman2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors cite that ethosuximide was ineffective against seizures in an Scn1a zebrafish model, i.e. a second 'pan T-type' blocker in the same Dravet-type genotype with no seizure benefit (cited, not measured here).",
+    "snippet": "Consistent with our findings here, the pan T-type inhibitor ethosuximide was ineffective against seizures in an Scn1a +/− zebrafish model (Baraban et al., 2013).",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 6",
+    "artifact": "files/fulltext/PMID37082241_Harman2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The compound's own half-life in brain is short (about half an hour after a single injection). The authors state this as a fact of the pharmacokinetic table and not as a limit; it bears on how much Cav3 occupancy the GAERS and 6 Hz arms had across their recording windows.",
+    "snippet": "Elimination was rapid with short brain and plasma half-lives for SB2193 (plasma = 29 min, brain = 28 min)",
+    "surface": "body",
+    "anchor": "Results 3.3",
+    "artifact": "files/fulltext/PMID37082241_Harman2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 6, page 9 render: the Scn1a heterozygous control group has most animals at zero spontaneous generalised seizures in the 48 h window, with a handful at 0.04 to 0.34 per hour; treated animals are similar with two high ones at about 0.5 and 0.65 per hour. Survival curves in panel B end near 67 percent (control) against about 43 percent (compound) at postnatal day 30 (log-rank p = 0.09): not significant, and in the direction of worse survival on the compound.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6A: many circles at 0.0 in both groups, treated group with two circles at about 0.5 and 0.65; Figure 6B: black control curve ends near 67, blue SB2193 curve ends near 43.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID37082241_r2/PMC10110893_p09_170dpi.png",
+    "anchor": "Figure 6 panels A and B, page 9 render at 170 dpi",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 8, page 11 render: GAERS normalised incidence rises above baseline in the vehicle arm too (about 120 to about 170 percent of baseline across hours), so a time effect is present in the control; the treatment effect is about 150 to 250 percent at 30 and 100 mg/kg; raw incidence 30 mg/kg is higher than vehicle (about 305 versus about 230 counts) while 100 mg/kg is not significantly different on raw incidence. Panel I traces show denser ictal bursts at higher doses.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 8A: four coloured lines, vehicle about 120 to about 170 percent of baseline, 100 mg/kg line about 130 to about 250; Figure 8B: bars Veh about 230, 30 about 305 with a star, 100 about 290.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID37082241_r2/PMC10110893_p11_170dpi.png",
+    "anchor": "Figure 8 panels A, B and I; page 11 render at 170 dpi",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Conclusion as the authors state it: efficacy against one epilepsy or model may not extend to others and may worsen the phenotype, and single-target therapeutics are unlikely to treat multiple epilepsy types.",
+    "snippet": "The anti-seizure efficacy of an agent against one type of epilepsy or animal model may not necessarily extend to other epilepsies and models, and in some cases may worsen the seizure phenotype.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 10",
+    "artifact": "files/fulltext/PMID37082241_Harman2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}
