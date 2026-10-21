@@ -64,9 +64,9 @@
   "roster": {
    "scientist-a": {
     "group": "R1",
-    "agentId": "ab601f2e19d3a1d37",
+    "agentId": "ad55600ec51e52a43",
     "task": "REPURP-10H-P4-DEEP-A-20261022",
-    "state": "R1 closed (19 readings, landed 177721a4, receipts recorded b9e1e2fb); handed P4 deep-recovery cards at 22:3xZ",
+    "state": "P4 deep-recovery cards (relay agent started 22:3xZ)",
     "previous_agents": [
      "ab601f2e19d3a1d37"
     ]
@@ -112,6 +112,10 @@
    {
     "t": "2026-10-21T22:27Z",
     "event": "scientist-c closed R3 early (17 readings, context cost); 17 receipts recorded (ledger 702, 15e68516); relay agent started for R3b; blind audit of the highest-value R3 triples dispatched; candidate CC-20261021-SCIENTIST-C-R3-A51-ATTRIBUTION-01 held until the audit returns"
+   },
+   {
+    "t": "2026-10-21T22:40Z",
+    "event": "scientist-a closed R1 (19 readings, landed 177721a4, receipts 721 chained b9e1e2fb); handed roadmap P4 deep-recovery cards in a fresh agent; blind audit of the R1 owed triples dispatched; candidates CC-20261021-SCIENTIST-A-R1-PROTEOSTASIS-01 and ...-C-R3-A51-ATTRIBUTION-01 held until their audits return"
    }
   ],
   "audits": {
@@ -122,8 +126,10 @@
     "scope": "40665325 PK table and Fig 4; 38147624 Fig 6I and Fig 5 schedule; 42310739 duplicate F; 40156289 Fig 1B; then 35945201, 41980417"
    },
    "R1": {
-    "state": "TO_DISPATCH",
-    "scope": "PB-4 narrowing (polysome profiling 31402619); 42157447 Figs 6 and 8; 38731820 Fig 6 sample size; 32023956 Fig 1B text-versus-panel"
+    "state": "RUNNING",
+    "scope": "PB-4 narrowing (polysome profiling 31402619); 42157447 Figs 6 and 8; 38731820 Fig 6 sample size; 32023956 Fig 1B text-versus-panel",
+    "agentId": "a3c29605f071db51b",
+    "file": "page_adjudications/locator_audit_R1_20261022.md"
    }
   }
  },
