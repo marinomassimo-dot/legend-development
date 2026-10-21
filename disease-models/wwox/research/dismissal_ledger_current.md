@@ -100,6 +100,7 @@ Every rejection declares **what would revive it**. If the trigger fires, the rej
 | **D-22** | *two surfaces in the same repository that name the same paper agree about it* | 🔴 **FALSE here:** `paper_registry_current.md` and `wwox_splice_transcript_census_20260921.md` have named `PMID 30853297` with **different first authors** for as long as both have existed, and nothing noticed, because every check verifies a record against **itself** and none verifies two records against **each other**. The registry's byline is also the input to group-credibility and node-independence judgements, so the error propagates into decisions that never mention the paper. **Detection rule:** when two surfaces name the same identifier, they are two assertions about one fact — compare them. Cheapest form: on any PMID you are already handling, glance at every surface that names it before you use any of them. | A byline belonging to a different 2019 WWOX paper sat on `PAPER 025` for months. Added 2026-09-27 (`BATCH_20260927_003`, from `CC-20260921-PAPER025-IDENTITY-01`). |
 | **D-37** | *a title-and-abstract query that returns zero means the measurement was never made* | 🔴 **FALSE, and measured the same day it was nearly written.** Probing `WWOX AND ("visual evoked potential" OR electroretinogram OR DTI OR volumetry OR …)` on PubMed returns **0 results** (2026-10-21), and the full text of a WOREE case series read hours later carries, in its Discussion and its Table 1, a **visual evoked potential** performed in a patient (*«Patient 4 demonstrated undetected visual evoked potentials»*) and a **sleep study** that detected apnoea with hypopnoea. An instrument used once in a five-patient series is **mentioned in a body or a table and indexed in neither the title nor the abstract**, because it is not what the paper is about — which is exactly the condition under which a rare-disease endpoint census is run. **Detection rule:** a zero from a title/abstract query licenses *«no paper is INDEXED for this»*, never *«this was never measured»*. Before writing an instrument or modality negative, say which surface the zero is a zero of; the cheap upgrade is a full-text sweep of the case literature's bodies and tables, and it is cheaper than the negative is costly. | **Caught by `self`, one draft before the record.** The unbounded sentence would have been false, discoverable in one full text, and would have sat in the repository **discouraging the very sweep that disproves it** — the compounding false negative of [[epistemic_discipline]] § 2. Added 2026-10-21 by `scientist-b` (`REPURP-P3-EARLYBENEFIT-B-20261020`, reading `FTR-20261020-36537114-01`). ⚠️ **Id allocated as `D-37`, not as `max + 1`, and the reason is recorded rather than silent:** the allocator note above reserves `D-27`–`D-30` as not minted and names `D-30` as an alias of `D-26`, while `D-31`, `D-33`, `D-35` and `D-36` are **cited as detection rules elsewhere in the research layer** (`discovery_ledger_current.md`, `full_text_queue_current.md`) and appear in **no row of this table**. `max + 1` would therefore have collided with a live reference. 🔵 **Reported, not fixed** — those four dangling ids belong to other actors' records and are named here so the next allocator can see them. |
 | **D-38** | *a step in a survival curve is where the last marker before the drop sits, and a colour missing from the plot is a series that has ended* | 🔴 **Both false, and both failed in the same direction on the same panel — toward a LOWER reading of a treated arm.** Measured on Figure 3B of PMID 42422765 (`fig3_PMC13343157_p06_embedded_1744x1699.png`, 300 dpi, calibrated on its printed ticks), a blind audit returned `UNDERSHOOT` on a locator that put the high-dose arm's first step at ~day 24. It is at **~day 50.3**. Two independent traps produced the error. **(i) A censoring tick is not a step:** the red marker at ~day 22 spans 97.6–101.8 % — a marker centred ON the 100 % line, which Kaplan-Meier convention uses to mark censoring, read as the last point before a fall. **(ii) An overdrawn curve is not an absent curve:** red is absent from the image between days 27.8 and 49.8 because the navy wild-type line occupies those pixels at the same height, and a colour-mask sweep reports the gap as data rather than as occlusion. **Detection rule, both halves:** before calling a step, check whether the marker's pixels straddle the plateau value rather than hanging below it; and before calling a series ended, check whether another series sits at the same y over the gap, and check the arm's own survival at that age in the same figure. **Corollary measured in the same audit:** reading a marker's EDGE as its value is worth ±4 days here — the untreated arm's 0 % marker spans days 13.2–21.1 and is centred at ~day 17, and two successive records read its two opposite edges ("~day 20", then "~day 15"). State the span, not an edge. | `D-14` is adjacent and different: it is about a legend disagreeing with its figure, while this is about a figure disagreeing with a correct-looking measurement OF it. **Id allocated 2026-10-21 by `scientist-c` as `max(D-nn) + 1` = `D-38`** per the allocator note; `D-37` is the maximum present, and 38 also clears the four ids (`D-31`, `D-33`, `D-35`, `D-36`) cited elsewhere in the research layer with no row here, so this allocation cannot collide with the numbering repair in flight. |
+| **D-39** | *a read-through or NMD-inhibiting drug that restores full-length protein restores the phenotype* | 🔴 **Measured false in the one study that ran a comparator in the same patient-derived cells**: amlexanox raised full-length FANCA to about 9 % of healthy control and reduced p53 by about 40 %, and produced **no** improvement in survival under mitomycin C, **no** reduction of diepoxybutane-induced chromosomal aberrations and **no** significant reduction of micronuclei, while ataluren did all three. Its measured action was attributed by the authors to **TBK1/IKKε inhibition, not read-through**. The authors state the general form themselves: *«a partial downregulation of p53 per se is not sufficient to produce phenotypic rescue in human cells»*. And in the originating paper the full-length species can be the **minor** one — *«a truncated p53 protein was well detected»* against *«a very low level of full-length p53»* — while the only quantitative function measurement lands at *«about 20% of the CFTR activity … measured in Calu-3 cells»*, a comparator the authors themselves say over-expresses the protein | A whole therapeutic road was about to be weighted on protein-quantity data. **Detection rule: for any restoration lever — read-through, NMD inhibition, chaperone, boost or gene addition — ask for the FUNCTION endpoint in the same breath as the abundance endpoint, and ask it of the same cells. Abundance without function is half a result, and in this gene the inert half is already documented (`P282A`: stable and completely inert).** It is `D-04` seen from the pharmacological side |
 
 ### 🔢 Allocator addendum — appended 2026-10-21 (ACTOR_ID `plan`, `PLAN-SURFACE-RANKING-20261021`), append-only
 
@@ -479,4 +480,70 @@ the moment a fifth non-existent rule is cited from a live surface.
 - **Confine:** serum withdrawal, fibroblasts; not glucose, not neurons.
 - **`REVIVAL_TRIGGER`:** a glucose-withdrawal experiment in Wwox-null neurons (`DL-MECH-149`).
 - **Not medical advice.**
+
+### DIS-41 — «Amlexanox is a qualified therapeutic road for WOREE / WWOX-DEE» → ⏸️ **NOT ESTABLISHED — not tested in any WWOX system, and its phenotype-rescue arm is negative where it has been tested with a comparator**
+- **`PREMISE: DATO + INFERENZA`** (2026-10-20, `scientist-a`, `context_policy: SOURCE_FIRST`, two
+  first reads). **Sources:** PMID 22938201 (`FTR-20261020-22938201-01`), PMID 40544182
+  (`FTR-20261020-40544182-01`); neither mentions WWOX.
+- **What is rejected is a transfer, not either result.** Each paper is a valid measurement of its own
+  protocol.
+- **The WWOX side is empty, and it is `NON_TROVATO_NELLA_RICERCA`, never `MAI_TENTATO`.**
+  **Queries:** `amlexanox AND WWOX` = 0; `WWOX AND (ataluren OR readthrough OR "nonsense suppression"
+  OR gentamicin OR PTC124 OR "ELX-02")` = 0. **Sources:** PubMed ESearch; all seven LEGEND registry
+  surfaces via `registry_records.py --theme`; the whole working tree. **Date:** 2026-10-20.
+  **Limits:** a PubMed zero on a drug name reaches title/abstract space and not Methods (**`D-25`**:
+  the reagent miss rate in this gene has been 100%); the WWOX Foundation's reported individual
+  experience is **not formally published** and so is unreachable by any literature query by
+  construction; a conference poster abstract may never enter PubMed; and per **`D-18`** a
+  selector-based zero is untrustworthy until the selector matches more than zero somewhere — it
+  matches 17 records on amlexanox read-through, so the instrument reads.
+- 🔴 **The structural reason no amount of amlexanox data can bear on the missense allele.**
+  Read-through requires a premature termination codon. `p.(Gln230Pro)` is a **missense** substitution
+  with normal transcript level and protein not detected: **there is nothing to read through**, at any
+  exposure, by any agent. Every other pharmacological action of the molecule — NMD inhibition,
+  TBK1/IKKε inhibition, anti-inflammatory activity — is a **separate hypothesis requiring its own
+  evidence**, and none has been tested in a WWOX system. The nonsense alleles the repository does hold
+  are a different, **unenumerated** class: there is no count of WWOX PTC alleles and no PTC-context
+  annotation (stop-codon identity, +4 nucleotide), and no published cohort separates nonsense from
+  splice from frameshift from CNV.
+- 🔴 **And where it HAS been tested against a comparator, the protein gain did not become a phenotype
+  gain.** In patient-derived cells: *«On the contrary, we observed no effect on FANCF protein levels
+  following amlexanox treatment in these cells»*; *«neither amlexanox nor ataluren was able to rescue
+  FANCA transcription»*; and *«Conversely, amlexanox showed no effect on either MMC- or DEB-induced
+  genotoxicity in FA-A cells, despite a slight increase in FANCA protein synthesis and a significant
+  reduction of initial p53 levels»*. The authors' own general statement is the one that matters here:
+  *«a partial downregulation of p53 per se is not sufficient to produce phenotypic rescue in human
+  cells»*, and their own methodological demand is the gate — *«the need for a reliable experimental
+  pipeline to assess whether the minimal amount of neomorphic protein synthesized upon translational
+  read-through is actually followed by phenotypic rescue»*. The effect they could attribute was
+  pSTAT2 down about 50 %, which they ascribe to **TBK1/IKKε inhibition and not to read-through**.
+  ⚠️ Scope: the amlexanox arms are the paper's smallest (n = 3 on the genotoxicity endpoints), the
+  group's standing programme is the comparator (a declared directional interest), the systems are
+  lymphoblastoid and dermal and never neural, and the supplement was not fetched.
+- **`PREMISE_TAG` this record exists to expose:** 🔴 *«more full-length protein means restored
+  function»* · `PREMISE: DEFAULT_FROM_TEXTBOOK`. It belongs beside the existing
+  `DEFAULTS THAT BIT US` row *«stabilizing a protein restores its function»* (**`D-04`**) and the
+  WWOX-internal instance of the same error class, `P282A` — **stable and completely inert**. It is a
+  research target, not a foundation. **That row is allocated here as `D-39`.**
+- 🔴 **Two inferences explicitly refused here:** no paediatric suitability and no systemic
+  availability may be inferred from historic authorisations for other indications or other routes.
+  The 2012 paper's own safety sentence — *«used for more than 30 years per os or topically to treat
+  asthma and aphthous ulcers»* — is exactly that inference; it is recorded as the source's statement
+  and **not adopted**. That paper contains no paediatric datum, no CNS datum and no pharmacokinetic
+  measurement of any kind.
+- **Confine, stated so this record cannot be over-read:** this does **not** say amlexanox is inert,
+  and it does **not** close the nonsense-allele class as a therapeutic target. It says the molecule
+  has never been tested in a WWOX system, that read-through is not a mechanism for a missense
+  substitution, and that in the one comparator-controlled study its protein gain produced no
+  phenotypic rescue.
+- **`REVIVAL_TRIGGER`** — any one of: (a) amlexanox, or any read-through agent, administered to a
+  WWOX-deficient system (cell, organoid or animal) with a WWOX protein **and** a WWOX-dependent
+  functional readout; (b) a formally published protocol or case report of the reported individual
+  experience, carrying variant, endpoint, exposure, concomitant therapy and follow-up; (c) a
+  demonstration that amlexanox produces functional rescue — not protein quantity — at a WWOX PTC
+  allele in any system; (d) an enumeration of WWOX PTC alleles with stop-codon identity and the +4
+  nucleotide, which would at least make the eligible class countable.
+- **Re-audit hook:** rejection of a **therapeutic transfer**. Re-examine on any new `DATO` about
+  nonsense-allele rescue in WWOX, about NMD in a WWOX allele, or about TBK1/IKKε in a WWOX system.
+- **Record provenance:** created by `CC-20261020-SCIENTIST-A-AMLEXANOX-01` (Scientist A, task `REPURP-P3-KNOWNROADS-A-20261020`) at `BATCH_20261019_008`; `DIS-` number and the `D-39` id minted by the integrator. Sources land as [[paper_registry_current#PAPER 427]] and [[paper_registry_current#PAPER 428]].
 

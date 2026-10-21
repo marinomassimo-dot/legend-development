@@ -142,3 +142,19 @@ separates symptomatic benefit from disease modification, that is the load-bearin
 - Any WOREE series pairing a symptomatic endpoint with a developmental instrument measured at two
   timepoints — which would turn the non-modification argument above from three rows read together
   into a tested comparison.
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_008`
+
+Propagated by `BATCH_20261019_008` (2026-10-21, MINOR, `WM_v7.26` -> `WM_v7.27`; integrator ACTOR_ID `orchestrator` by stated assumption, task `ORCH-METABOLIC-BATCH-20261019`, operator authorisation).
+
+- **Landed:** one **evidence-boundary block** on `claim_registry_current#CLAIM 042`, verbatim from § 2, inserted after the existing `Evidence boundary` line and before `Source`. Nothing above it was replaced.
+- **The strengthened boundary landed as the audit repair wrote it:** the source **names patients 2 and 4 as previously published AND both are diet responders**, so a pooled count across WOREE series double-counts them and must name which individuals it counts.
+- **The artefact gap is carried, not discharged:** no PDF and no page render exists for that article anywhere under `files/`, so every signed or ranged value from it remains `PENDING_RE_ACQUISITION`.
+- **No change to `Status`, `Type`, `Pathway`, `Transferability`, `clinical relevance`, `Summary` or `Source`**; no new claim; no row in either `biomarker_endpoint/` file.
+- **`D-37` was already landed by its author** on 2026-10-21 and is **not duplicated here**; verified present as the table's `D-37` row.

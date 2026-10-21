@@ -230,3 +230,19 @@ candidate still awaits the Orchestrator.
 overdrawn by another curve at the same height read as its absence — is recorded as row **`D-38`**
 of the `DEFAULTS THAT BIT US` table in [[dismissal_ledger_current]], where the re-audit rule of
 `epistemic_discipline` § 2.3 points, not left as prose here.
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_008`
+
+Propagated by `BATCH_20261019_008` (2026-10-21, MINOR, `WM_v7.26` -> `WM_v7.27`; integrator ACTOR_ID `orchestrator` by stated assumption, task `ORCH-METABOLIC-BATCH-20261019`, operator authorisation).
+
+- **Landed:** the § 4a **Title** replacement on `claim_registry_current#CLAIM 011`, and the § 4b block appended to the 2026-08-10 flag, replacing nothing above it. `Status` stays `flagged for review`; `Type`, `Transferability`, `Source`, `Genotype/model relevance`, `PREMISE_TAG` and `REVIVAL_TRIGGER` are untouched.
+- **All five legs landed as the repair left them**, and leg 3 in its narrowed form: the body-weight equality at both doses is **survivor-conditioned on the low-dose side only** — an equality between unequal denominators — and is therefore **neither evidence of dose grading nor evidence of its absence**.
+- **The oligodendrocyte boundary landed in its strengthened form:** the four-asterisk bracket runs the wild-type arm to the MBP-treated bar, so that arm sits **significantly below wild type as well as not significant against untreated**, and the question is **unanswered rather than answered negatively** (different cassette, different dose, essentially no detectable protein).
+- **One integrator edit to the § 4b text, and only one:** the truncated digest of the native render was expanded to its full 64-hex value, re-measured from § 1 of this candidate. The publication gate reads a short hex run carrying letters as a legacy identifier. **No verdict, figure, quote or word of the adjudication changed.**
+- **`D-38` was already landed by its author** on 2026-10-21 and is **not duplicated here**; verified present as the table's `D-38` row.

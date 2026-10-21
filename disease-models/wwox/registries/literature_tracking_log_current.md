@@ -19063,3 +19063,51 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Note:** class-level record. Not medical advice.
 
 ---
+## LIT-0699
+**Short title:** Gonzalez-Hilarion 2012 — amlexanox rescues nonsense mutations in human cells: the originating claim of the amlexanox read-through road, NOT WWOX evidence
+**Authors:** Gonzalez-Hilarion S, Beghyn T, Jia J, Debreuck N, Berte G, Mamchaoui K, Mouly V, Gruenert DC, Deprez B, Lejeune F
+**Year:** 2012
+**Source type:** primary research — cell-based drug screen with validation in human cell lines
+**Journal/source:** *Orphanet J Rare Dis* 2012;7:58
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 22938201 / PMC3562214 / DOI 10.1186/1750-1172-7-58
+**Date discovered:** 2026-10-20 (Scientist A, drug-repurposing P3 known-roads reconnaissance)
+**Date processed:** 2026-10-20 (`FTR-20261020-22938201-01`)
+**Discovery source:** the operator's therapeutic roadmap — amlexanox listed among the known roads, flagged `DA_APPROFONDIRE`; the repository held no record of the molecule on any of the seven registry surfaces
+**Status:** processed
+**Status note:** record created by `CC-20261020-SCIENTIST-A-AMLEXANOX-01` and authored by the batch integrator at `BATCH_20261019_008`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — pharmacology of nonsense-mutation read-through and NMD inhibition
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/repurposing_known_roads_20261020_scientist-a.md` § 4
+**Next action:** none — read, registered, and the transfer it invites refused in writing (`DIS-41`)
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261020-22938201-01`; manifest `deepdive_manifests/PMID22938201.json`; landing [[paper_registry_current#PAPER 427]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0700
+**Short title:** Hristodor 2025 — read-through drugs in Fanconi anaemia: the independent comparator-controlled test of amlexanox, protein up and no phenotype gain, NOT WWOX evidence
+**Authors:** Hristodor AM, Cappelli E, Baldisseri E, Valli R, Montalbano G, Micheloni G, Porta G, Frattini A, Ravera S, Fioredda F, Lippi G, Dufour C, Cipolli M, Bezzerri V
+**Year:** 2025
+**Source type:** primary research — patient-derived cells, two drugs run head to head with shared endpoints
+**Journal/source:** *Cell Death Discov* 2025;11(1):286
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40544182 / PMC12182573 / DOI 10.1038/s41420-025-02571-0
+**Date discovered:** 2026-10-20 (Scientist A, drug-repurposing P3 known-roads reconnaissance)
+**Date processed:** 2026-10-20 (`FTR-20261020-40544182-01`)
+**Discovery source:** reached from the originating amlexanox paper's road (the only multihop edge of that reading that was closed rather than queued)
+**Status:** processed
+**Status note:** record created by `CC-20261020-SCIENTIST-A-AMLEXANOX-01` and authored by the batch integrator at `BATCH_20261019_008`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — pharmacology of nonsense-mutation read-through
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/repurposing_known_roads_20261020_scientist-a.md` § 4.3
+**Next action:** none — read, registered; its measured negative is the load-bearing content of `DIS-41` and of `D-39`
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261020-40544182-01`; manifest `deepdive_manifests/PMID40544182.json`; landing [[paper_registry_current#PAPER 428]]
+**Note:** class-level record. Not medical advice.
+
+---

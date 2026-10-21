@@ -43,7 +43,7 @@ edition: public
 ## 2. DISEASE-MODEL (WORKING-MODEL) VERSION
 
 ```yaml
-working_model_version: WM_v7.26
+working_model_version: WM_v7.27
 working_model_file: disease-models/wwox/registries/working_model_current.md
 narrative_view: disease-models/wwox/disease_model.md
 notes: "Canonical disease-level working model derived from public literature; disease_model.md is its narrative reader-facing view. The private individual-level record is not part of this edition."
@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261019_007
-last_batch_commit_date: 2026-10-20
+last_batch_commit_id: BATCH_20261019_008
+last_batch_commit_date: 2026-10-21
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 0
-target_wm_version: WM_v7.26
-trigger: MANUAL (operator-authorised follow-ups of the Mirror review of BATCH_20261019_006, findings A1 to A5, ACTOR_ID orchestrator by stated assumption, task ORCH-METABOLIC-BATCH-20261019). No candidate: each finding was checked against its source first. No record added, no claim created or reversed, and no Status, Type or Summary changed. A3: overlap of the three WWOX case rows of PAPER 425 with published patients is not excluded (stated in PAPER 425, DL-MECH-166 and DL-MECH-167). A1 (PAPER 400 and PAPER 414), A2 (transferability scale), A4 (DL-MECH-168 title), A5 (DL-MECH-117) reworded; B4: earliest-producer semantics stated once in the paper-registry header. The scale acknowledgement was not renewed and no registry-growing operation was made.
+commit_candidates_propagated: 3
+target_wm_version: WM_v7.27
+trigger: MANUAL (operator-authorised, ACTOR_ID orchestrator by stated assumption, task ORCH-METABOLIC-BATCH-20261019). Three drug-repurposing P3 candidates propagated, all MINOR. No claim created or reversed, and no Status, Type or Summary changed anywhere. Amlexanox qualified and NOT promoted (PAPER 427, PAPER 428, LIT-0699, LIT-0700, all NOT WWOX EVIDENCE; DIS-41 marks the WWOX side NON_TROVATO_NELLA_RICERCA with its queries, sources and date, never MAI_TENTATO; new DEFAULTS row D-39: protein quantity does not prove function). CLAIM 042 gains one evidence boundary only, with the artefact gap carried as PENDING_RE_ACQUISITION. CLAIM 011 dose flag ADJUDICATED, verdict NARROW, Status still flagged for review, Title rewritten; the body-weight equality is survivor-conditioned on the low-dose side only and is neither evidence of dose grading nor of its absence. Both audited candidates carry the declared limit that their audit repairs are themselves unaudited. The registry scale acknowledgement was NOT renewed: the trigger is measured cost, and growth_anchors reported no cost breach.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,8 +126,8 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261020_BATCH_20261019_007
-last_lint_date: 2026-10-20
+last_lint_id: LINT_20261021_BATCH_20261019_008
+last_lint_date: 2026-10-21
 last_lint_result: WARN
 ```
 
@@ -213,8 +213,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 55
-growth_anchor_head: 0ccecbb7c13c32a12467a24ee7821a37b3524ac97751f0b2bf7af80fb2111101
+growth_anchor_events: 56
+growth_anchor_head: 904d769bc5988993917ec1d35208cc61d7c5c273a6aba2beac9f64f5b648b173
 ```
 
 ```bash
@@ -262,7 +262,7 @@ baseline below must equal the live count, never preserve historical padding.
 
 ```yaml
 unread_premise_baseline: 0
-unread_premise_measured_on: 2026-10-20
+unread_premise_measured_on: 2026-10-21
 ```
 
 **It is a ratchet, not a wall.** Blocking on the whole legacy backlog would only teach sessions

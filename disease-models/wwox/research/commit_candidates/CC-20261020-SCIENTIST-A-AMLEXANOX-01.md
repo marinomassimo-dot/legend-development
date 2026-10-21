@@ -147,3 +147,18 @@ Orchestrator rather than staged here, because it belongs to a reading this task 
   for the cell-culture work.
 
 **Not medical advice.**
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_008`
+
+Propagated by `BATCH_20261019_008` (2026-10-21, MINOR, `WM_v7.26` -> `WM_v7.27`; integrator ACTOR_ID `orchestrator` by stated assumption, task `ORCH-METABOLIC-BATCH-20261019`, operator authorisation).
+
+- **Landed:** `PAPER 427` (PMID 22938201) and `PAPER 428` (PMID 40544182) in the paper registry, with `LIT-0699` and `LIT-0700` in the literature log — both graded **T4, NOT WWOX EVIDENCE**, `clinical relevance` BACKGROUND, `Claim links: none`. `DIS-41` in the dismissal ledger, verbatim from § 3, with the WWOX side marked `NON_TROVATO_NELLA_RICERCA` and its queries, sources and date intact — never `MAI_TENTATO`. The § 4 row is allocated **`D-39`** (`max(D-nn) + 1`; `D-38` was the maximum present) and landed verbatim in `DEFAULTS THAT BIT US`.
+- **Preserved, because they are the load-bearing points:** the independent comparator-controlled test relieved **no** NMD and improved **neither** survival under genotoxic challenge, **nor** chromosomal aberrations, **nor** micronuclei while the comparator improved all three, and the action it could attribute was ascribed by those authors to **TBK1/IKKε inhibition rather than read-through**; and read-through requires a premature termination codon, which the Q230P missense substitution does not have. **Protein quantity does not prove function.**
+- **No claim created, none reversed, no `Status`, `Type` or `Summary` changed.** No discovery lead was filed (§ 5 asked for none). No dose, route or schedule was reproduced in any landed record.
+- **One measured discrepancy, reported not repaired:** the candidate's § 2 declares 11 and 9 persisted locators; the two manifests on disk carry **6 each**. The registry records state the measured count. Nothing in the candidate's argument depends on it, and the manifests are the author's to correct.
