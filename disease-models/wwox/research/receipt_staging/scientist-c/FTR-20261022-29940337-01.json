@@ -5,8 +5,8 @@
   "pmid": "29940337",
   "doi": "10.1016/j.nbd.2018.06.015"
  },
- "event_at": "2026-10-22T05:30:00Z",
- "analysis_at": "2026-10-22T05:30:00Z",
+ "event_at": "2026-10-21T23:10:04Z",
+ "analysis_at": "2026-10-21T00:00:00Z",
  "analysis_time_precision": "minute",
  "workflow": "scientist-c, task REPURP-10H-R3b-C-20261022, PRIMARY_EVIDENCE_READ, SOURCE_FIRST (written question: is there a measured Wnt-direction effect in a developing brain with a safety statement); full XML text read, figure captions only; prepared as JSON for the integrator and not appended by this actor.",
  "evidence_depth": "partial_fulltext_read",

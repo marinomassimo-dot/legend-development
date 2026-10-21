@@ -5,8 +5,8 @@
   "pmid": "28504693",
   "doi": "10.1038/oncsis.2017.33"
  },
- "event_at": "2026-10-22T06:30:00Z",
- "analysis_at": "2026-10-22T06:30:00Z",
+ "event_at": "2026-10-21T23:10:04Z",
+ "analysis_at": "2026-10-21T00:00:00Z",
  "analysis_time_precision": "minute",
  "workflow": "scientist-c, task REPURP-10H-R3b-C-20261022, PRIMARY_EVIDENCE_READ, SOURCE_FIRST (written question: is the brain exposure of a CDK7 inhibitor measured or inferred); results, discussion and the in vivo methods paragraph read; supplementary pages 1 and 9 as page renders; prepared as JSON for the integrator and not appended by this actor.",
  "evidence_depth": "partial_fulltext_read",

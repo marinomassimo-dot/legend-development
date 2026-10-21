@@ -5,8 +5,8 @@
   "pmid": "35501379",
   "doi": "10.1038/s41593-022-01052-2"
  },
- "event_at": "2026-10-22T04:30:00Z",
- "analysis_at": "2026-10-22T04:30:00Z",
+ "event_at": "2026-10-21T23:10:04Z",
+ "analysis_at": "2026-10-21T00:00:00Z",
  "analysis_time_precision": "minute",
  "workflow": "scientist-c, task REPURP-10H-R3b-C-20261022, PRIMARY_EVIDENCE_READ, SOURCE_FIRST (the question was written before opening: is there a paper that pairs EEG with myelin after a drug); XML and the five main figure pages opened; prepared as JSON for the integrator and not appended by this actor.",
  "evidence_depth": "partial_fulltext_read",
