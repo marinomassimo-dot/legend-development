@@ -60,6 +60,22 @@
   "interval": "hourly, 10 firings",
   "cycles_done": 0,
   "roster": {},
-  "restart_rule": "a Scientist whose agent has stopped is resumed with SendMessage to its agentId: if it stopped on a rate limit, continue from durable state; if its lot is finished, hand it the next unclaimed studies of its group from the persisted selection; never start a duplicate agent for an actor that is still running"
- }
+  "restart_rule": "a Scientist whose agent has stopped is resumed with SendMessage to its agentId: if it stopped on a rate limit, continue from durable state; if its lot is finished, hand it the next unclaimed studies of its group from the persisted selection; never start a duplicate agent for an actor that is still running",
+  "cron_id": "4b6b5252",
+  "log": [
+   {
+    "t": "2026-10-21T21:49Z",
+    "event": "watch created: hourly at :07, first fire 22:07 UTC; scheduler is session-only and fires only while the REPL is idle; last watch is cycle 10 or the first after END_UTC, whichever is earlier"
+   }
+  ]
+ },
+ "DECISIONS_TAKEN": [
+  {
+   "what": "hourly watch as a recurring cron with a self-limiting cycle counter in this record, instead of ten one-shot jobs",
+   "why": "a recurring job survives a missed minute; the counter and END_UTC bound it to ten hours; it auto-expires at 7 days regardless",
+   "alternatives_rejected": "ten one-shots (ten ids to track and one missed fire loses an hour)",
+   "reversibility": "high",
+   "how_to_revert": "CronDelete 4b6b5252"
+  }
+ ]
 }
