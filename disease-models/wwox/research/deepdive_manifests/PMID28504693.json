@@ -1,0 +1,219 @@
+{
+ "schema_version": 2,
+ "pmid": "28504693",
+ "doi": "10.1038/oncsis.2017.33",
+ "receipt": "FTR-20261022-28504693-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022b.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access XML, article PDF, figures and supplementary PDF came from pmc_bucket_fetch.py in one call; no cascade needed."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Patient-derived high-grade glioma neurosphere lines and an orthotopic xenograft test of the covalent CDK7 inhibitor THZ1; Australian cancer institute; no WWOX content."
+ },
+ "field_density": {
+  "queries_text": [
+   "THZ1 AND (neurons OR brain OR memory) -> 14",
+   "(CDK7 OR CDK9 OR \"casein kinase 1\" OR CK1) inhibitor AND (brain penetration OR \"blood-brain barrier\" OR \"brain exposure\") AND mice -> 2"
+  ],
+  "note": "Group R3 relay reading; queries are PubMed counts on 2026-10-22 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "THZ1 AND (neurons OR brain OR memory)",
+    "count": 14,
+    "source": "PubMed 2026-10-22"
+   },
+   {
+    "query": "(CDK7 OR CDK9 OR \"casein kinase 1\" OR CK1) inhibitor AND (brain penetration OR \"blood-brain barrier\" OR \"brain exposure\") AND mice",
+    "count": 2,
+    "source": "PubMed 2026-10-22"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 28504693; registry_records.py get --pmid 28504693 --hops 0",
+  "hits": 0,
+  "finding": "No receipt before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-22; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 39,
+   "references_screened": 37,
+   "references_with_doi": 37,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID28504693_R3b_PMC_r2.xml",
+   "sha256": "a778bdd14ba061f1137ff99063de19ca017befd421623ef3f16f9c7fb09d3969",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=5523066",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "a778bdd14ba061f1137ff99063de19ca017befd421623ef3f16f9c7fb09d3969"
+   }
+  },
+  {
+   "path": "files/supplement/PMID28504693_r2/oncsis201733x1.pdf",
+   "sha256": "ca17df7a84994c1fd7956c092bc08b666c9761c7032e0b81dc81f72e3487bc4f",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "ca17df7a84994c1fd7956c092bc08b666c9761c7032e0b81dc81f72e3487bc4f"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID28504693_r3b/supp_p1-01.png",
+   "sha256": "a6597f2ef1087d660387c536a67b0d137c48173665fe04cd82f70cef8af623c6",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID28504693_r2/oncsis201733x1.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "poppler",
+     "call": "pdftoppm -r 200 -f 1 -l 1 -png (page render)",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "a6597f2ef1087d660387c536a67b0d137c48173665fe04cd82f70cef8af623c6"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID28504693_r3b/supp_p9-09.png",
+   "sha256": "ac581cd89991e8aea4d52a41f5aedb64f56d2b51e2e2a842ec8a6012652dc3d5",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID28504693_r2/oncsis201733x1.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "poppler",
+     "call": "pdftoppm -r 200 -f 9 -l 9 -png (page render)",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "ac581cd89991e8aea4d52a41f5aedb64f56d2b51e2e2a842ec8a6012652dc3d5"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "THZ1 kills patient-derived high-grade glioma lines with an IC50 under 100 nM on all eleven lines in a 7-day viability assay, in a caspase-redundant manner.",
+    "snippet": "THZ1 potently killed primary HGG cells, with an IC50<100 nM on all cell lines tested",
+    "anchor": "Results / THZ1 is highly effective at killing primary HGG",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28504693_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The text says normal fibroblasts and marrow stromal cells died after 7 days but not 3 days of THZ1.",
+    "snippet": "When THZ1 was administered to normal immortalized BJ fibroblasts and HS5 bone marrow stromal cells, cell death occurred after 7 days of incubation but not 3 days",
+    "anchor": "Results / THZ1 is highly effective at killing primary HGG",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28504693_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Fig 1c-e (200 dpi page render): normal BJ fibroblasts fall to about 10 percent viability by about 70-100 nM at 7 days (IC50 about 30-50 nM) and HS5 cells to about 0 percent by 100 nM; at 3 days BJ viability falls to about 55-65 percent from about 30 nM, so the 3-day curve is a partial loss, not no loss. The normal-cell 7-day IC50 lies in the same range as the glioma-line IC50 under 100 nM, so no selectivity window for normal cells is shown.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] BJ 3 d: ~100 to ~55-65 percent; BJ 7 d: ~100 to ~10, IC50 ~30-50 nM; HS5 7 d: to ~0 by 100 nM",
+    "anchor": "Supplementary Figure 1c-e",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID28504693_r3b/supp_p1-01.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mice with intracranial glioma xenografts given THZ1 showed no gain in survival over 40 days; from this the authors infer that THZ1 is not crossing the blood-brain barrier.",
+    "snippet": "indicating that THZ1 is not crossing the blood–brain barrier and cannot target CDK7 as a naked agent.",
+    "anchor": "Results (last paragraph)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28504693_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Fig 9 (200 dpi page render): Kaplan-Meier curves for vehicle and THZ1 10 mg/kg every second day for two weeks overlap, with steps of about 17 percent (about six mice per arm) and all mice dead by about day 32; no drug concentration in brain or tumour is shown, so the blood-brain-barrier conclusion is an inference from an absent survival effect, not a measured exposure.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] vehicle and THZ1 (10 mg/kg) curves overlap; last death ~day 32; steps ~17 percent",
+    "anchor": "Supplementary Figure 9",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID28504693_r3b/supp_p9-09.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Methods paragraph on the intracranial experiment, read in full, states no dose, interval or group size and ends with the ethics statement quoted; it points to an earlier schedule by citation, and the dose appears only in the supplementary figure caption.",
+    "snippet": "This study was in accordance with the Australian Code of Practice for the Care and Use of Animals for Scientific Purposes (2004).",
+    "anchor": "Methods / Intracranial orthografts",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28504693_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion repeats that THZ1 in its current format was unable to cross the blood-brain barrier and that structural optimisation or conjugate delivery would be needed.",
+    "snippet": "In its current format, THZ1 was unable to cross the blood–brain barrier and provide effective antitumor therapy.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28504693_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC XML fingerprinted; supplementary pages 1 and 9 (viability in normal cells; intracranial survival) opened as 200 dpi page renders; the six main figures were read as captions only and the other supplementary pages were not opened.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}
