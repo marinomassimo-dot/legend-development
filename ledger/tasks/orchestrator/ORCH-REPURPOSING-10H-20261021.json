@@ -64,9 +64,9 @@
   "roster": {
    "scientist-a": {
     "group": "R1",
-    "agentId": "a3c29605f071db51b",
+    "agentId": "aa4d5f436e85255dd",
     "task": "REPURP-10H-FILL-A-20261022",
-    "state": "R1 repair landed (2ef7991d; PB-4 NARROW did not survive, restated INCONCLUSIVE for a protein-loss lesion), P4 deep cards landed (e99474b4: 5 cards + 7 abstentions); relay FILL started",
+    "state": "FILL relay running: closing the data gaps the seven deep-recovery abstentions name",
     "previous_agents": [
      "ab601f2e19d3a1d37",
      "a3c29605f071db51b"
@@ -150,6 +150,10 @@
    {
     "t": "2026-10-21T23:5xZ",
     "event": "R2 landed and recorded; R3 repairs and R3b landed; R3c relay and R2b relay started; audit of the R3 repairs and R3b dispatched. Held from propagation: A51 attribution candidate (R3), R1 proteostasis candidate, R2 DL-MECH-170 candidate (audit discharged, repairs unaudited), early-cards candidate set. Orphans: ORPHAN_COMPLETE_READ lines clear only when an integrator batch adds the registry identity rows"
+   },
+   {
+    "t": "2026-10-21T23:3xZ",
+    "event": "scientist-a landed R1 repair (19 adverse triples fixed; PB-4 NARROW restated INCONCLUSIVE) and P4 deep cards (5 cards, 7 abstentions; bridge gaps G-1 and G-3 closed by Harness meanwhile, G-2 one endpoint per packet still open); FILL relay and deep-cards audit started; ids paired by launch description (scientist-a=aa4d5f..., auditor=a7ab5c...)"
    }
   ],
   "audits": {
@@ -184,8 +188,10 @@
     "scope": "51 repaired entries and 7 added anchors in six R3 manifests; six R3b readings"
    },
    "deep_cards": {
-    "state": "TO_DISPATCH",
-    "scope": "12 packets in cards/: A01 PBA class, A02 proteasome inhibitors, B01 amlexanox, C01 AAV9-WWOX, D01 A51 (cards); A03-A05, B02, C02, C03, D02 (abstentions)"
+    "state": "RUNNING",
+    "scope": "12 packets in cards/: A01 PBA class, A02 proteasome inhibitors, B01 amlexanox, C01 AAV9-WWOX, D01 A51 (cards); A03-A05, B02, C02, C03, D02 (abstentions)",
+    "agentId": "a7ab5c478c7244b8c",
+    "file": "page_adjudications/locator_audit_deep_cards_20261022.md"
    }
   },
   "harness": {
