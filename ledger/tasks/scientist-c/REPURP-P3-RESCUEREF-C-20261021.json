@@ -1,0 +1,36 @@
+{
+ "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_note": "The reconciliation of 2026-10-21 found that the rescue reference the operator's roadmap proposed to build from an abstract is already a complete read in this repository: PMID 42422765 = DOI 10.1016/j.omta.2026.201791 = PAPER 011 / CLAIM 011, 12 receipts, one complete_fulltext_read with 29 locators, a deep-dive manifest, a 55 KB locator dossier and both supplements on disk. This task binds the scaffold from that evidence instead of from the abstract.",
+ "TASK_ID": "REPURP-P3-RESCUEREF-C-20261021",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-c",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Bind the WOREE_RESCUE_REFERENCE scaffold's cells from the evidence the repository already holds for PMID 42422765, and adjudicate the review flag on CLAIM 011 over 'dose-dependent' against a threshold. Per endpoint family and per measure: figure or table, model, control, age, intervention, direction, duration, limits. Replace every TRANSCRIBED_FROM_ROADMAP cell you can bind with a sourced value, and leave NOT_YET_BOUND where the evidence does not reach.",
+ "SCOPE": {
+  "lot": "PMID 42422765's persisted surfaces, its 29 locators, its manifest and dossier, its two supplements, and CLAIM 011 with its review flag; no new acquisition expected",
+  "brief": "framework/protocols/scientist_standing_brief.md",
+  "target_file": "disease-models/wwox/research/drug_repurposing/woree_rescue_reference_scaffold.md"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "every bound cell carries figure/table, model, control, age, intervention, direction, duration and limits",
+  "the CLAIM 011 dose flag adjudicated with the panel re-inspected at native resolution, verdict KEEP/NARROW/REVERSE with evidence",
+  "commit candidate if a record or claim is touched",
+  "DEFAULTS_TAKEN and STOP_LOG here"
+ ],
+ "DEPENDENCIES": [],
+ "REVIEW_REQUIREMENT": "Mirror ex post",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently",
+ "MILESTONE_PLAN": [
+  "TASK_ACK/CLAIM",
+  "per-paper M0-M5",
+  "analysis note",
+  "self-eval",
+  "report"
+ ],
+ "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
+ "CURRENT_STATE": "ASSIGNED",
+ "assigned_on": "2026-10-21"
+}
