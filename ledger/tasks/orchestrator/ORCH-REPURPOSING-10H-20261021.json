@@ -92,10 +92,11 @@
    "scientist-d": {
     "group": "R4",
     "agentId": "a953e6e336bf10780",
-    "task": "REPURP-10H-P4-EARLY-D-20261022",
-    "state": "P4 early-benefit cards (relay agent started 22:5xZ)",
+    "task": "REPURP-10H-R4b-D-20261022",
+    "state": "P4 early cards LANDED (3902c7f2: 3 candidates + 6 abstentions); relay R4b started",
     "previous_agents": [
-     "aba610f58ef0e9b25"
+     "aba610f58ef0e9b25",
+     "a953e6e336bf10780"
     ]
    }
   },
@@ -138,6 +139,10 @@
    {
     "t": "2026-10-21T23:30Z",
     "event": "scientist-b exhausted context after 16+7 readings and 3 WWOX-direct re-reads; R2 not landed. Closure relay started: apply audit wording repairs (Cheng 6/6, Hussain 4 supported 1 overshoot, Steinberg 4/4), self-eval, task_close. Candidate CC-20261021-SCIENTIST-B-R2-DLMECH170-01 held until landed. Scientist-c relay landed R3b (58e66825) and is in repair branch task/repurp-r3-repair-c; scientist-d on P4 early cards worktree p4-early-d"
+   },
+   {
+    "t": "2026-10-21T23:40Z",
+    "event": "first candidate cards landed (cards_early/, 9 packets and 9 cards by the unmodified bridge, seven bridge gaps listed); auditor dispatched for the ten R4 manifests and the cards; Harness dispatched on bridge gaps (no-change sign, translation fields); scientist-d relay R4b on the four unread candidates plus new precedents"
    }
   ],
   "audits": {

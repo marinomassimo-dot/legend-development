@@ -1,0 +1,34 @@
+{
+ "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Part of the ten-hour repurposing batch ORCH-REPURPOSING-10H-20261021. Adjacent and transferable literature: every paper that is not WWOX evidence is labelled NOT WWOX EVIDENCE, at class level, no dose, no paediatric suitability presumed, not medical advice.",
+ "TASK_ID": "REPURP-10H-R4b-D-20261022",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-d",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Relay on group R4 in a fresh context: the four candidates the previous reader left unread (42389070, 42334048, 37045569, 36538782), then new adjacent precedents of repurposed or approved drugs evaluated in other monogenic developmental and epileptic encephalopathies, with extractable design choices; at most 12 readings; extend design tables A and B.",
+ "SCOPE": {
+  "lot": "group R4 of the selection file; BLOCKED rows excluded; HELD-partial only with a question written before opening the owed sections",
+  "brief": "framework/protocols/scientist_standing_brief.md"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "analysis note repurposing_10h_scientist-d_20261022b.md extending design tables A and B",
+  "per reading: manifest PASS and receipt staged, never recorded",
+  "DEFAULTS_TAKEN and STOP_LOG here"
+ ],
+ "DEPENDENCIES": [],
+ "REVIEW_REQUIREMENT": "Mirror ex post",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently",
+ "MILESTONE_PLAN": [
+  "TASK_ACK/CLAIM",
+  "per-paper M0-M5",
+  "analysis note",
+  "self-eval",
+  "report"
+ ],
+ "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
+ "CURRENT_STATE": "ASSIGNED",
+ "assigned_on": "2026-10-22"
+}
