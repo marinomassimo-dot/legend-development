@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261022-39409184-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "39409184",
+  "doi": "10.3390/ijms251910846"
+ },
+ "event_at": "2026-10-22T00:00:00Z",
+ "analysis_at": "2026-10-22T00:00:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-c, task REPURP-10H-R3c-C-20261022, PRIMARY_EVIDENCE_READ, SOURCE_FIRST (written question: does any paper pair EEG with a myelin readout after an intervention in a neurodevelopmental model); full text read, Figures 3 and 7 opened, other figures and supplement not opened; prepared as JSON for the integrator and not appended by this actor.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID39409184_Eckmann2024_PMC_r2.xml",
+ "source_fingerprint": "1d922bd972bd7fac609ca4553f5ca788ff9cc7117e090af6fe5706d620a1a6c0",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID39409184.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022c.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "results, methods, discussion, legends read; Figures 3 and 7 viewed as images; other figures and supplement not opened; see manifest"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

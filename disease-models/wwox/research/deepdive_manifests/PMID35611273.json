@@ -1,0 +1,218 @@
+{
+ "schema_version": 2,
+ "pmid": "35611273",
+ "doi": "10.1093/noajnl/vdac055",
+ "receipt": "FTR-20261022-35611273-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022c.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "PMC efetch XML by pmc_bucket_fetch.py; Figure 1 (JPEG) and supplementary Figure S1 (PDF) obtained from the Europe PMC supplementaryFiles archive (SHA-256 of the archive 47b7e464f5fff48924d050190c171b56f8f7330a096c6506264c3f40bd437c03)."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "Phase I trial (CONNECT consortium) of ribociclib (CDK4/6) plus everolimus (mTORC1) after radiotherapy in 19 children with newly diagnosed DIPG or high-grade glioma, enrolled ages 2 to 15; the only paediatric record read here for a CDK-class plus mTOR-class combination; no WWOX content."
+ },
+ "field_density": {
+  "queries_text": [
+   "(ribociclib OR palbociclib) AND everolimus AND (children OR pediatric) -> 5",
+   "everolimus AND children AND pharmacokinetics AND (ribociclib) -> 0"
+  ],
+  "note": "Group R3 relay c reading; queries are PubMed counts on 2026-10-22 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "(ribociclib OR palbociclib) AND everolimus AND (children OR pediatric)",
+    "count": 5,
+    "source": "PubMed 2026-10-22"
+   },
+   {
+    "query": "everolimus AND children AND pharmacokinetics AND (ribociclib)",
+    "count": 0,
+    "source": "PubMed 2026-10-22"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 35611273; registry_records.py get --pmid 35611273 --hops 0; fulltext_receipts.py status --pmid 35611273",
+  "hits": 0,
+  "finding": "No receipt, registry record or peer claim before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-22; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 40,
+   "references_screened": 40,
+   "references_with_doi": 40,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID35611273_Hanson2022_PMC_r2.xml",
+   "sha256": "cd1e6543fc4d4b8f81b26704a1bf44b3944600603f4f388e27ca556deec5bed5",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC9122788",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "cd1e6543fc4d4b8f81b26704a1bf44b3944600603f4f388e27ca556deec5bed5"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Nineteen patients enrolled, ranging in age from 2 to 15 years with a median of 6.5 years.",
+    "snippet": "19 (53%) enrolled, ranging in age from 2 to 15 years (median: 6.5 years; Table 1)",
+    "anchor": "Results / Patient Cohort",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35611273_Hanson2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Eligibility covered ages 1 to 30 years for DIPG and 1 to 21 years for high-grade glioma.",
+    "snippet": "imaging-confirmed DIPG (aged 1-30 years) or histologically confirmed HGG (1-21 years)",
+    "anchor": "Methods / Patient Eligibility",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35611273_Hanson2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Patients with controlled seizures on non-enzyme-inducing anticonvulsants were eligible.",
+    "snippet": "Patients with controlled seizures on non-enzyme-inducing anticonvulsants were eligible.",
+    "anchor": "Methods / Patient Eligibility",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35611273_Hanson2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The reported recommended phase 2 dose was ribociclib 170 mg per square metre on days 1 to 21 and everolimus 1.5 mg per square metre on days 1 to 28; the MTD was not reached.",
+    "snippet": "Thus, the RP2D was 170 mg/m2 days 1-21 for ribociclib and 1.5 mg/m2 days 1-28 for everolimus; the MTD was not reached.",
+    "anchor": "Results / Study Treatment and Toxicities",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35611273_Hanson2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "At dose level 3 one of six patients had a DLT (grade 3 lung infection) and none of six more in the expansion cohort.",
+    "snippet": "Of the six patients enrolled on dose level 3, one experienced a DLT (grade 3 lung infection). An additional six patients were enrolled on dose level 3 as an expansion cohort; none experienced a DLT.",
+    "anchor": "Results / Study Treatment and Toxicities",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35611273_Hanson2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The most common grade 3 or 4 toxicities were neutropenia (33 percent), leucopenia (17 percent) and lymphopenia (11 percent); 3 patients (17 percent) needed dose reduction or came off therapy for toxicity.",
+    "snippet": "The most common grade 3/4 toxicities were neutropenia (33%), leucopenia (17%), and lymphopenia (11%). Three patients (17%) required dose reduction or came off therapy due to toxicity.",
+    "anchor": "Results / Study Treatment and Toxicities",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35611273_Hanson2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "One patient left the study before cycle 9 with grade 4 cardiac toxicity (conduction disorder, prolonged QTc, ventricular tachycardia, arrhythmia) and recovered after stopping.",
+    "snippet": "A third patient came off study prior to cycle 9 due to grade 4 cardiac toxicity (conduction disorder with prolonged QTc, ventricular tachycardia, and arrhythmia; no history of previously diagnosed cardiac medical conditions); this patient recovered upon discontinuation of study medications.",
+    "anchor": "Results / Study Treatment and Toxicities",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35611273_Hanson2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The attributable-adverse-event table lists headache in 6 patients (33 percent) and intracranial haemorrhage in 1 (6 percent) under nervous system disorders.",
+    "snippet": "Nervous system disorders Headache 3 3 0 0 6 (33%) Intracranial hemorrhage 1 a 0 0 0 1 (6%)",
+    "anchor": "Adverse event table, nervous system rows",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID35611273_Hanson2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Steady-state everolimus AUC0-24h in combination was 1.9 +/- 0.9-fold that of everolimus alone.",
+    "snippet": "Steady-state everolimus AUC0-24 h values when given in combination were 1.9 ± 0.9-fold higher than steady-state everolimus AUC0-24 h administered alone",
+    "anchor": "Results / Pharmacokinetics",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35611273_Hanson2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors caution that the large interpatient variability limits interpretation of the possible effect of ribociclib on everolimus exposure.",
+    "snippet": "However, considering the large interpatient variabilities, results should be interpreted with caution.",
+    "anchor": "Discussion, second paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35611273_Hanson2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The combination RP2D (170 and 1.5 mg per square metre) is stated to be below the single-agent RP2Ds (350 and 5).",
+    "snippet": "the RP2D of ribociclib and everolimus in combination (170 mg/m2 days 1-21 and 1.5 mg/m2 days 1-28) is less than respective single-agent administration (350 mg/mg2 days 1-21 and 5 mg/m2 days 1-28)",
+    "anchor": "Discussion, third paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35611273_Hanson2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors infer, without a control arm, that dexamethasone mouthwash was effective against mucositis, comparing with a historical incidence above 30 percent for grade 3 or 4.",
+    "snippet": "supporting the efficacy of dexamethasone mouthwash for mucositis prevention (compared with >30% historical incidence of everolimus-related grade 3/4 mucositis36)",
+    "anchor": "Discussion, first paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35611273_Hanson2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The table footnote says the table covers only adverse events deemed attributable to the study agents, highest grade per participant.",
+    "snippet": "All AEs deemed attributable to study agents; reporting only the highest grade reported per participant during study treatment.",
+    "anchor": "Adverse event table footnote",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID35611273_Hanson2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC XML fingerprinted; abstract, introduction, methods, results, discussion and Tables 1-4 read; Figure 1 (concentration-time scatter) opened as an image; supplementary Figure S1 PDF not opened.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}

@@ -1,0 +1,204 @@
+{
+ "schema_version": 2,
+ "pmid": "33405376",
+ "doi": "10.1002/pbc.28879",
+ "receipt": "FTR-20261022-33405376-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022c.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "PMC efetch XML by pmc_bucket_fetch.py; Europe PMC supplementaryFiles answered 'not open access' (no lawful supplement or figure archive), so figures and the supplementary PK curves and genotype tables are unread (declared debt)."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "Phase I dose-finding trial (Pediatric Brain Tumor Consortium) of the CDK4/6 inhibitor palbociclib in children and young adults aged 4 to 21 years with progressive brain tumours; CDK4/6 is not the CDK7/9 or CK1-alpha class but is the nearest paediatric CDK-class safety record; no WWOX content."
+ },
+ "field_density": {
+  "queries_text": [
+   "(palbociclib OR ribociclib OR abemaciclib) AND (children OR pediatric OR adolescents) AND (recommended phase 2 dose OR dose-limiting toxicity OR neutropenia) AND (neuroblastoma OR glioma OR brain tumor OR solid tumors) -> 10",
+   "palbociclib AND pediatric AND pharmacokinetics -> 0"
+  ],
+  "note": "Group R3 relay c reading; queries are PubMed counts on 2026-10-22 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "(palbociclib OR ribociclib OR abemaciclib) AND (children OR pediatric OR adolescents) AND (recommended phase 2 dose OR dose-limiting toxicity OR neutropenia) AND (neuroblastoma OR glioma OR brain tumor OR solid tumors)",
+    "count": 10,
+    "source": "PubMed 2026-10-22"
+   },
+   {
+    "query": "palbociclib AND pediatric AND pharmacokinetics",
+    "count": 0,
+    "source": "PubMed 2026-10-22"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 33405376; registry_records.py get --pmid 33405376 --hops 0; fulltext_receipts.py status --pmid 33405376",
+  "hits": 0,
+  "finding": "No receipt, registry record or peer claim before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-22; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 30,
+   "references_screened": 29,
+   "references_with_doi": 29,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID33405376_Hanson2021_PMC_r2.xml",
+   "sha256": "90601db4cff2b6ec7bc35cc0c2fb3da07a31a89704a5bcdb6278db964a4339aa",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC8414988",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "90601db4cff2b6ec7bc35cc0c2fb3da07a31a89704a5bcdb6278db964a4339aa"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Children under 4 years were excluded and no pharmacokinetic data exist for them.",
+    "snippet": "Unfortunately, children <4 years of age were excluded from this study and no pharmacokinetic data is available.",
+    "anchor": "Discussion, second paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33405376_Hanson2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Eligible subjects were aged at least 4 and at most 21 years.",
+    "snippet": "Subjects were ≥4 years and ≤21 years of age with progressive or refractory brain tumors",
+    "anchor": "Methods / Eligibility",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33405376_Hanson2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "At dosage level 3 (95 mg/m2), 6 patients enrolled and 4 were evaluable; two of the 4 had grade 4 neutropenia, so the MTD was exceeded.",
+    "snippet": "At dosage level 3 (95mg/m2), there were 6 patients enrolled, 4 of which were evaluable (1 patient received less than the required amount of study agent due to progressive disease and 1 patient voluntarily withdrew after initiating protocol therapy).Two of the 4 patients developed grade 4 neutropenia. Hence the MTD was exceeded at dosage level 3",
+    "anchor": "Results / Toxicities",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33405376_Hanson2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In Stratum I the MTD was 75 mg/m2 with 2 of 12 patients having a DLT at that level.",
+    "snippet": "An MTD of 75 mg/m2 was established for Stratum I, with only 2/12 patients experiencing a DLT",
+    "anchor": "Results / Toxicities",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33405376_Hanson2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In Stratum II one of seven evaluable patients had a DLT, giving 75 mg/m2 as the MTD for both strata.",
+    "snippet": "One of 7 evaluable patients experienced a DLT, establishing 75mg/m2 as the MTD for both Stratum I and II.",
+    "anchor": "Results / Toxicities",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33405376_Hanson2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Higher steady-state Cmax and AUC0-24h were associated with grade 3 or 4 neutropenia (P = 0.014 and 0.009; OR 7.49, 95 percent CI 1.50 to 37.46, and OR 1.16, CI 1.04 to 1.30).",
+    "snippet": "Higher values of palbociclib steady state Cmax and AUC0–24hwere associated with severe (grade 3 or 4) neutropenia (p-values = 0.014 and 0.009, respectively). The odds ratio estimates (95% Wald confidence) were 7.49 (1.50–37.46) and 1.16 (1.04–1.30), respectively.",
+    "anchor": "Results / Exposure-toxicity associations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33405376_Hanson2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that mean Cmax and AUC0-Tlast rose proportionally between 50 and 95 mg/m2 with large inter-individual variability.",
+    "snippet": "Within 50 and 95 mg/m2, following single and repeated doses, mean palbociclibCmax and AUC0-Tlast increased in proportional manner; however, large inter-individual variability was observed among the pharmacokinetic parameters.",
+    "anchor": "Results / Pharmacokinetics",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33405376_Hanson2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The pharmacokinetic table gives a repeated-dose mean AUC to the last time point of 2219 (SD 1086) h.ng/mL in the 75 mg per square metre group.",
+    "snippet": "2219 ± 1086 2269 (521–4253) 30.5 ± 23.1",
+    "anchor": "Pharmacokinetic table, 75 mg/m2 Day 21 row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID33405376_Hanson2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The pharmacokinetic table gives a repeated-dose mean AUC to the last time point of 2294 (SD 828) h.ng/mL in the 95 mg per square metre group.",
+    "snippet": "2294 ± 828 2193 (1520–3168) 28.1 ± 10.3",
+    "anchor": "Pharmacokinetic table, 95 mg/m2 Day 21 row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID33405376_Hanson2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Stratum II adverse event table lists seizure with overall count 3(3), among 13 patients and 28 courses.",
+    "snippet": "Hypokalemia 3(3) 3(3) Seizure 3(3) 3(3) Alanine aminotransferase increased",
+    "anchor": "Adverse event table for Stratum II (grade 3 column by position in the XML table)",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID33405376_Hanson2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion states, citing an adult study, that tumour palbociclib concentration was greater than 0.06 micromolar, thought biologically effective.",
+    "snippet": "the tumor concentration of palbociclibwas greater than the 0.06 μM concentration felt to be biologically effective",
+    "anchor": "Discussion, third paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33405376_Hanson2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC XML fingerprinted; abstract, introduction, methods, results, discussion and Tables 1-6 read; no figure image or supplement lawfully available.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}

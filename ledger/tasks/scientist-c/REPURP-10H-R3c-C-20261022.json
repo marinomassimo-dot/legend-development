@@ -30,6 +30,21 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-22"
+ "CURRENT_STATE": "CLAIMED",
+ "assigned_on": "2026-10-22",
+ "TASK_ACK": {
+  "actor": "scientist-c",
+  "at": "2026-10-22",
+  "directive_version": 1,
+  "generation": 1
+ },
+ "TASK_CLAIM": {
+  "actor": "scientist-c",
+  "branch": "task/REPURP-10H-R3c-C-20261022",
+  "worktree": ".claude/worktrees/scientist-c-r3c",
+  "mode": "PRIMARY_EVIDENCE_READ",
+  "context_policy": "SOURCE_FIRST"
+ },
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
 }

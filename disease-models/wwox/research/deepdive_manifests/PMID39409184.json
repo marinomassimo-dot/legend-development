@@ -1,0 +1,228 @@
+{
+ "schema_version": 2,
+ "pmid": "39409184",
+ "doi": "10.3390/ijms251910846",
+ "receipt": "FTR-20261022-39409184-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022c.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "PMC efetch XML by pmc_bucket_fetch.py; Figures 1-7 (JPEG) and the supplementary zip obtained from the Europe PMC supplementaryFiles archive (SHA-256 of the archive c7241a82e35cbce839de9a0b6de3b1ac234996e395c85a720e74189c2ce5d23f)."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Foxg1 c.946del heterozygous mouse (a developmental epileptic encephalopathy gene, FOXG1 syndrome) with EEG, PTZ seizure susceptibility, cortical oligodendrocyte-lineage markers and a Plp1-targeting antisense oligonucleotide given at P0; the one paper found where an intervention is tested in a DEE-gene mouse that also has an EEG and a myelin-lineage phenotype, but EEG and myelin are not re-measured after the intervention; no WWOX content."
+ },
+ "field_density": {
+  "queries_text": [
+   "(EEG OR electroencephalography OR seizure) AND (myelin OR myelination OR g-ratio) AND (clemastine OR rapamycin OR drug treatment) AND mice -> 25",
+   "FOXG1 AND (PLP1 OR myelin) AND (antisense OR ASO) -> 1"
+  ],
+  "note": "Group R3 relay c reading; queries are PubMed counts on 2026-10-22 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "(EEG OR electroencephalography OR seizure) AND (myelin OR myelination OR g-ratio) AND (clemastine OR rapamycin OR drug treatment) AND mice",
+    "count": 25,
+    "source": "PubMed 2026-10-22"
+   },
+   {
+    "query": "FOXG1 AND (PLP1 OR myelin) AND (antisense OR ASO)",
+    "count": 1,
+    "source": "PubMed 2026-10-22"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 39409184; registry_records.py get --pmid 39409184 --hops 0; fulltext_receipts.py status --pmid 39409184",
+  "hits": 0,
+  "finding": "No receipt, registry record or peer claim before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-22; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 98,
+   "references_screened": 93,
+   "references_with_doi": 93,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 5
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39409184_Eckmann2024_PMC_r2.xml",
+   "sha256": "1d922bd972bd7fac609ca4553f5ca788ff9cc7117e090af6fe5706d620a1a6c0",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC11477415",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "1d922bd972bd7fac609ca4553f5ca788ff9cc7117e090af6fe5706d620a1a6c0"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The index patient had delayed myelination of the anterior corpus callosum, severe cerebral atrophy and pachygyria on MRI.",
+    "snippet": "MRI) revealed delayed myelination of the anterior portion of the corpus callosum, severe cerebral atrophy and pachygyria (Figure 1a)",
+    "anchor": "Results 2.1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39409184_Eckmann2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Cortex and corpus callosum volumes were 15.7 and 15.3 percent smaller in heterozygous mice than in wild type.",
+    "snippet": "cortex and corpus callosum volumes were 15.7 ± 5.9% and 15.3 ± 6.1% smaller in c946del+/Δ mice than in WT controls, respectively",
+    "anchor": "Results 2.3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39409184_Eckmann2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The text gives 63.6 percent of mutant mice and 12.5 percent of wild-type controls reaching generalised seizure stages after PTZ.",
+    "snippet": "63.6% of c946del+/Δ mice, but only 12.5% of the WT controls reaching generalised seizure stages",
+    "anchor": "Results 2.4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39409184_Eckmann2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The legend of the seizure figure gives n = 11 wild type and n = 8 mutant mice at 3 months.",
+    "snippet": "3-month-old mice (n = 11 WT, n = 8 c946del+/Δ)",
+    "anchor": "Figure 3 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39409184_Eckmann2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The legend of the seizure figure states that seizure severity was comparable between wild type and mutant mice.",
+    "snippet": "although seizure severity ( g ) was comparable between WT and c946del+/Δ mice",
+    "anchor": "Figure 3 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39409184_Eckmann2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Hippocampal telemetric EEG showed significantly more spike trains per day in mutants than in wild type.",
+    "snippet": "c946del+/Δ EEG recordings presented with significantly more spike trains per day (Figure 4b)",
+    "anchor": "Results 2.4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39409184_Eckmann2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The legend of the EEG figure gives n = 6 wild type and n = 5 mutant for the EEG analyses.",
+    "snippet": "Student’s t -test; n = 6 WT, n = 5 c946del+/Δ.",
+    "anchor": "Figure 4 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39409184_Eckmann2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Of the myelin-cluster genes only Plp1 protein was corroborated by Western blot; RPE65, MAL and CNP were unchanged at protein level.",
+    "snippet": "Of those, we only corroborated significantly increased levels of PLP1 protein in c946del+/Δ mice compared to WT controls, while RPE65, MAL and CNP were unchanged at the protein level",
+    "anchor": "Results 2.5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39409184_Eckmann2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "O4 and Olig2 labelling were increased in mutant cortex while CNPase labelling was comparable.",
+    "snippet": "both O4 and Olig2 expression were significantly increased in the cortex of c946del+/Δ mice compared to WT control brains (Figure 6b), while CNPase labelling was comparable",
+    "anchor": "Results 2.5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39409184_Eckmann2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Pups were given 30 micrograms of Plp1-targeting or control ASO by intracerebroventricular injection at P0.",
+    "snippet": "pups at P0 were administered 30 μg of either Plp1-targeting ASOs or control (non-targeting) ASO",
+    "anchor": "Methods 4.17",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39409184_Eckmann2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The legend of the ASO figure lists Western blot analysis and a grip-strength test at 3 months of age as the ASO readouts.",
+    "snippet": "followed by Western blot analysis and grip-strength test at 3 months of age",
+    "anchor": "Figure 7 legend (a)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39409184_Eckmann2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The legend of the ASO figure gives group sizes of 10, 13, 10 and 6.",
+    "snippet": "n = 10 +/+ ASO control, n = 13 +/Δ ASO control, n = 10 +/+ ASO PLP1, n = 6 +/Δ ASO PLP1",
+    "anchor": "Figure 7 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39409184_Eckmann2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The text states that ASO treatment restored PLP1 expression in mutant mice to wild-type levels at 3 months.",
+    "snippet": "ASO treatment restored increased PLP1 expression in c946del+/Δ mice to levels of WT controls at 3 months of age (Figure 7b)",
+    "anchor": "Results 2.6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39409184_Eckmann2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that the contribution of glial and white-matter changes to the network aberrations remains to be shown.",
+    "snippet": "To what degree the glial and white matter changes in c946del+/Δ brains contribute to the neuronal network aberrations remains to be shown.",
+    "anchor": "Discussion, third paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39409184_Eckmann2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC XML fingerprinted; body, methods and legends read; Figures 3 and 7 opened as images; Figures 1, 2, 4, 5, 6 and the supplementary zip not opened.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}
