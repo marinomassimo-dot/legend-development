@@ -1,0 +1,380 @@
+{
+ "schema_version": 2,
+ "pmid": "40156289",
+ "doi": "10.1093/hmg/ddaf030",
+ "receipt": "FTR-20261021-40156289-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261021.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access XML, figures, PDF and supplement came from pmc_bucket_fetch.py in one call; no cascade needed."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "weighting": "Two-family exome report plus HEK-293T overexpression assays; no neural cell, animal or patient-derived system. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries_text": [
+   "CSNK1A1 AND epilepsy",
+   "CSNK1A1 AND infantile spasms"
+  ],
+  "note": "Group R3 reading; queries are PubMed counts on 2026-10-21 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "CSNK1A1 AND epilepsy",
+    "count": 1,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   },
+   {
+    "query": "CSNK1A1 AND infantile spasms",
+    "count": 1,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 40156289; registry_records.py get --pmid 40156289 --hops 1",
+  "hits": 0,
+  "finding": "No receipt before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-21; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 32,
+   "references_screened": 32,
+   "references_with_doi": 32,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40156289_Ren2025_PMC_r2.xml",
+   "sha256": "9524324eccadc293511634674ac4312b33c24bfec2174849c0be20339ad92a75",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=12056308",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "9524324eccadc293511634674ac4312b33c24bfec2174849c0be20339ad92a75"
+   }
+  },
+  {
+   "path": "files/supplement/PMID40156289_r2/PMC12056308.1.pdf",
+   "sha256": "d1c5ddea5ebfb33ed2891d86df85dbf16ae68de997175eef37ed9c69fc8af3c2",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "d1c5ddea5ebfb33ed2891d86df85dbf16ae68de997175eef37ed9c69fc8af3c2"
+   }
+  },
+  {
+   "path": "files/supplement/PMID40156289_r2/supplementary_table_ddaf030.docx",
+   "sha256": "e1a56bf1bfe55ce246820d0c676847fbf38be5e452daf3075972fc95641a0cd8",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "e1a56bf1bfe55ce246820d0c676847fbf38be5e452daf3075972fc95641a0cd8"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID40156289_r3c/p04_embedded_2000x1439.png",
+   "sha256": "cd947318ed4d1447bb8ba0121f49650b26e7e19619877324ee42a05114b79153",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40156289_r2/PMC12056308.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 4",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "cd947318ed4d1447bb8ba0121f49650b26e7e19619877324ee42a05114b79153"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID40156289_r3c/p05_embedded_1980x2322.png",
+   "sha256": "a2792b6ccce01f4099a7401f94a5b2ba50f6cf8efe0c992d93ab2f94c1b3ef6b",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40156289_r2/PMC12056308.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 5",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "a2792b6ccce01f4099a7401f94a5b2ba50f6cf8efe0c992d93ab2f94c1b3ef6b"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID40156289_r3c/p06_embedded_1980x1509.png",
+   "sha256": "c413e0c9f0d5575f0a21af395a97f32666b396d6e042d431b671f4b2857abd4e",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40156289_r2/PMC12056308.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 6",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "c413e0c9f0d5575f0a21af395a97f32666b396d6e042d431b671f4b2857abd4e"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID40156289_r3c/p07_embedded_1950x1201.png",
+   "sha256": "56f1c1c5850cbcb54e2a337797d527e120cbbf5ffe62fd220da641950a2e10bb",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40156289_r2/PMC12056308.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 7",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "56f1c1c5850cbcb54e2a337797d527e120cbbf5ffe62fd220da641950a2e10bb"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Claim carried by the abstract-level headline: two de novo CSNK1A1 variants underlie infantile spasms; the exome evidence is two families.",
+    "snippet": "First, we performed the systematic trios-based WES in two independent ISS families and identified two de novo variants in exon 6 of CSNK1A1.",
+    "anchor": "Results / Clinical presentation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40156289_Ren2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Patient 1 had multiple congenital anomalies and died at one year; the phenotype is not isolated spasms.",
+    "snippet": "The child died of severe malnutrition at 1 year of age.",
+    "anchor": "Results / Clinical presentation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40156289_Ren2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Patient 1 congenital anomalies listed (heart, eye, chest wall).",
+    "snippet": "Cardiac ultrasound suggested congenital heart disease, manifested by cardiac ventricular septal defect, unclosed ductus arteriosus, and unclosed oval hole.",
+    "anchor": "Results / Clinical presentation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40156289_Ren2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Patient 2: seizures controlled with attacks every 3-6 months; intellectual and attention problems at eight years.",
+    "snippet": "The epileptic seizures were controlled but occurred once every 3–6 months.",
+    "anchor": "Results / Clinical presentation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40156289_Ren2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Treatment sentence names \"vinyl chloride\" as an antiseizure agent, which is evidently a translation error for an unnamed drug; the treatment history cannot be read as stated.",
+    "snippet": "the spasms were slightly controlled by treatment with adrenocorticotropic hormone, sodium valproate, topiramate, and vinyl chloride.",
+    "anchor": "Results / Clinical presentation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40156289_Ren2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Only the missense variant lowered CSNK1A1 mRNA and protein in the overexpression assay; the deletion did not.",
+    "snippet": "The results of qPCR and Western blot assays demonstrated that Mut remarkably reduced CSNK1A1 gene expression on both mRNA and protein level. However, no significant difference was observed between WT and Del despite the slight decreasing trend (Fig. 2F–H).",
+    "anchor": "Results / In silico predictions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40156289_Ren2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Co-IP reduction of beta-catenin binding and raised beta-catenin level are the central mechanistic claim.",
+    "snippet": "The results of immunoprecipitation indicated that, in both Mut and Del, the interaction between CSNK1A1 and β-catenin was considerably decreased (Fig. 3E).",
+    "anchor": "Results / Effects on protein-protein interaction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40156289_Ren2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Beta-catenin was raised in cells expressing either variant, with the missense higher than the deletion; the comparator is wild-type CSNK1A1 overexpression.",
+    "snippet": "Moreover, the intracellular level of β-catenin was strongly enhanced in both variants (Fig. 3F and G)",
+    "anchor": "Results / Effects on protein-protein interaction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40156289_Ren2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "MYC and CCND1 transcripts were higher with either variant; AXIN2 only with the missense.",
+    "snippet": "Therefore, we performed qPCR on genes AXIN2, MYC and CCND1 and observed significantly higher expression levels of MYC and CCND1 in both Mut and Del.",
+    "anchor": "Results / Effects on cell proliferation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40156289_Ren2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Proliferation was measured as EdU incorporation in HEK-293T cells.",
+    "snippet": "Compared with the WT, the EdU positive rates (percentage of cells that had undergone cell division) in cells transfected with Mut and Del were elevated (Fig. 4A and B).",
+    "anchor": "Results / Effects on cell proliferation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40156289_Ren2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors declare the model limits: small sample and in vitro only, mechanism incomplete.",
+    "snippet": "In vitro experiments, while providing valuable insights into the cellular and molecular mechanisms, cannot fully recapitulate the complex physiological environment of the human body.",
+    "anchor": "Discussion / limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40156289_Ren2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Method: HEK-293T transfected with GFP-tagged CSNK1A1 cDNA; the cells carry endogenous wild-type CSNK1A1, and there is no empty-vector arm in the text.",
+    "snippet": "HEK-293 T cells were transfected with EGFP-tagged CSNK1A1 and Flag-CTNNB1plasmids.",
+    "anchor": "Methods / Coimmunoprecipitation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40156289_Ren2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Statement that the mutations are expected to be loss of function is a prediction before the assays.",
+    "snippet": "The mutation sites of both variants are within the kinase domain of CSNK1A1, and they were therefore expected to show loss-of-function effects, which are speculated to be pathogenic.",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40156289_Ren2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplement Table 1 lists fourteen other variants in the patients (the table does not say which patient), including a de novo frameshift in ACTN1 and a TSC1 variant classed likely pathogenic, described as not directly linked to the phenotype.",
+    "snippet": "Table 1. Genetic variants not directly linked to the clinical phenotype of the ISS patients",
+    "anchor": "Supplementary Table 1",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID40156289_r2/supplementary_table_ddaf030.docx",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The supplement note admits that listed variants may relate to the phenotype and cannot be excluded.",
+    "snippet": "The listed variants may be related to the patient's clinical phenotype, but cannot fully explain the clinical presentation.",
+    "anchor": "Supplementary Table 1 note",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID40156289_r2/supplementary_table_ddaf030.docx",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 3E-G (300 ppi raster): the Flag-beta-catenin IP-GFP bands are very faint in all three lanes (WT visible, Mut and Del fainter) while the input band is far stronger for Mut and Del than WT; single blot, no band quantification printed; 3G bars WT 1.0, Mut about 1.8 (***), Del about 1.55 (**), Mut versus Del *.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] IP: GFP lanes WT Mut Del faint Flag-beta-catenin; Input Mut strongest; bars 1.0 / 1.8 / 1.55",
+    "anchor": "Figure 3E-G, embedded raster p.6",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID40156289_r3c/p06_embedded_1980x1509.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[6]",
+    "qualifies_needle": "The results of immunoprecipitation indicated "
+   },
+   {
+    "proposition": "Fig 2F-H: protein Mut about 0.62 of WT (n = 6 dots), Del about 0.91 ns; mRNA panel H has a y-axis starting at 0.7, Mut about 0.82 versus WT 1.0; ectopic cDNA plasmid transcripts would not be expected to depend on a coding variant, and no normalisation for transfection efficiency is described.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] CSNK1A1 protein level axis 0 to 1.5, Mut about 0.62; relative mRNA axis 0.7 to 1.2",
+    "anchor": "Figure 2F-H, embedded raster p.5",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID40156289_r3c/p05_embedded_1980x2322.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[5]",
+    "qualifies_needle": "The results of qPCR and Western blot assays d"
+   },
+   {
+    "proposition": "Fig 4B-C: EdU-positive rate WT about 20 percent, Mut about 36 (***), Del about 30 (*); qPCR bars about 1.25-1.5 fold with a single star; CTNNB1 mRNA unchanged; image fields differ in cell density between conditions.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] EdU positive rate (%) WT ~20, Mut ~36, Del ~30; MYC 1.47 and 1.5; CCND1 1.45 and 1.25",
+    "anchor": "Figure 4, embedded raster p.7",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID40156289_r3c/p07_embedded_1950x1201.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 1A-B: pedigrees show Family 1 with a single affected child and Family 2 with an affected son and unaffected brother (matching the text). The Family_1 proband trace in 1B shows overlapping peaks over a multi-base stretch (the pattern of a heterozygous multi-base indel) and the Family_2 proband trace a single-base change, whereas the text assigns the missense to patient 1 and the deletion to patient 2; panel labels do not name the variants. Adjudication of the assignment is owed to a blind audit.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Family_1 P trace overlapping peaks after position ~255; Family_2 P trace single base G where parents C",
+    "anchor": "Figure 1A-B, embedded raster p.4",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID40156289_r3c/p04_embedded_2000x1439.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 1C-F: EEG epochs carry no time or amplitude scale in the panels and no marking of hypsarrhythmia; the electrographic claim cannot be checked from the panels.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Panels C-F show multichannel traces without calibration bars",
+    "anchor": "Figure 1C-F, embedded raster p.4",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID40156289_r3c/p04_embedded_2000x1439.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 2A-E: structure models by homology (single model per variant, SWISS-MODEL template 6GZD); alignment shows Ala216 and His200-Ile201 invariant across five vertebrates.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] alignment stars across 190-230 for Danio Homo Mus Bos Xenopus",
+    "anchor": "Figure 2A-E, embedded raster p.5",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID40156289_r3c/p05_embedded_1980x2322.png",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch XML, PMC PDF and supplementary docx fingerprinted; figures 1-4 extracted at their embedded 300 ppi raster and inspected as images.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}

@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261021-42654068-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "42654068",
+  "doi": "10.3390/pharmaceutics18080951"
+ },
+ "event_at": "2026-10-21T22:38:00Z",
+ "analysis_at": "2026-10-21T22:38:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-c, task REPURP-10H-R3-C-20261021, PRIMARY_EVIDENCE_READ, QUESTION_DRIVEN; XML and figures acquired with pmc_bucket_fetch.py, figures inspected as images; prepared as JSON for the integrator and not appended by this actor.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID42654068_Autism_XAV2026_PMC_r2.xml",
+ "source_fingerprint": "09d45ebe54c2dcd578414033f9fa47e413aaa14503f8dcf6a285bae95a6c3909",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42654068.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261021.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "full text, figures as images and supplement read; see manifest"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

@@ -1,0 +1,314 @@
+{
+ "schema_version": 2,
+ "pmid": "38942888",
+ "doi": "10.1038/s41390-024-03326-w",
+ "receipt": "FTR-20261021-38942888-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261021.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access XML, figures, PDF and supplement came from pmc_bucket_fetch.py in one call; no cascade needed."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Neonatal mouse chronic-hypoxia white-matter injury with oral clemastine at four doses and a plasma PK arm; no seizure, EEG, behaviour or toxicity endpoint. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries_text": [
+   "clemastine AND neonatal AND hypoxia",
+   "clemastine AND minimum effective dose"
+  ],
+  "note": "Group R3 reading; queries are PubMed counts on 2026-10-21 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "clemastine AND neonatal AND hypoxia",
+    "count": 8,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   },
+   {
+    "query": "clemastine AND minimum effective dose",
+    "count": 3,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 38942888; registry_records.py get --pmid 38942888 --hops 1",
+  "hits": 0,
+  "finding": "No receipt before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-21; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 50,
+   "references_screened": 49,
+   "references_with_doi": 49,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38942888_Odell2024_PMC_r2.xml",
+   "sha256": "9d4809367efe52b774546237b2af1731ead515fba848f80940305ee09f15dc92",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=11502491",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "9d4809367efe52b774546237b2af1731ead515fba848f80940305ee09f15dc92"
+   }
+  },
+  {
+   "path": "files/supplement/PMID38942888_r2/PMC11502491.1.pdf",
+   "sha256": "de9108495077d3502e25e0518d19e0035b681a3648220cac6009bf53ba63587b",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "de9108495077d3502e25e0518d19e0035b681a3648220cac6009bf53ba63587b"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID38942888_r3c/p03_170dpi.png",
+   "sha256": "9b396a946fc9e04eb3ff10231ba1bfeaaf01a924afa0ad646dc04e01e383382f",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID38942888_r2/PMC11502491.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=170), page 3",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "9b396a946fc9e04eb3ff10231ba1bfeaaf01a924afa0ad646dc04e01e383382f"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID38942888_r3c/p04_170dpi.png",
+   "sha256": "2441961eda4a2a6aa47aa3158f08454da3924161265678540671c34b2ad68287",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID38942888_r2/PMC11502491.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=170), page 4",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "2441961eda4a2a6aa47aa3158f08454da3924161265678540671c34b2ad68287"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID38942888_r3c/p07_170dpi.png",
+   "sha256": "9fe8221edae2f3fe9b3608a074809ea5da95519dc8c02c78643d8fa3eaddca53",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID38942888_r2/PMC11502491.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=170), page 7",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "9fe8221edae2f3fe9b3608a074809ea5da95519dc8c02c78643d8fa3eaddca53"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Design: four doses (0.5, 2, 7.5, 10 mg/kg/day, fumarate-salt weight) by oral gavage P3 to P10 under 10 percent oxygen; a single hypoxia-plus-vehicle arm and a normoxia arm.",
+    "snippet": "Doses of clemastine (weighed and dosed based on the clemastine fumarate salt) were: 0.5, 2, 7.5, or 10 mg per kg of body weight.",
+    "anchor": "Methods / Chronic hypoxia and clemastine treatment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38942888_Odell2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The minimum effective dose is defined by a conjunction rule: lowest dose that raised myelination above vehicle by all measures tested.",
+    "snippet": "which we defined as the lowest dose that promoted myelination at P14 above vehicle control levels by all measures tested",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38942888_Odell2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Striatal MBP was significantly above vehicle already at 2 mg/kg (P = 0.003), so the 7.5 mg/kg label rests on the other measures (cell counts, corpus callosum area).",
+    "snippet": "MBP intensity was significantly higher in the 2 (p = 0.003), 7.5 (p < 0.001) and 10 (p < 0.001) mg/kg hypoxia groups and the normoxia group (p < 0.001)",
+    "anchor": "Results / Identification of minimum effective dose",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38942888_Odell2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors concede only four doses were tested and the true minimum could lie between 2 and 7.5 mg/kg/day.",
+    "snippet": "It is possible that the true MED lies between 2 and 7.5 mg/kg/day, a dose range that would encompass the exposure provided in the ReBUILD trial.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38942888_Odell2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Corpus callosum area rose only at 7.5 and 10 mg/kg (P below 0.05).",
+    "snippet": "Corpus callosum area was significantly increased in hypoxia plus 7.5 and 10 mg/kg clemastine groups and the normoxia group as compared to the vehicle group",
+    "anchor": "Results / Identification of minimum effective dose",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38942888_Odell2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Total oligodendrocyte-lineage density did not change; the effect is on maturation (mature cell density and OPC fraction).",
+    "snippet": "Simple main effects analyses showed that treatment group had a statistically significant effect on CC1+ cell density (p < 0.001) and OPCs/SOX10+ cells (p < 0.001), but not SOX10+ cell density (p = 0.08).",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38942888_Odell2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "At the minimum dose the g-ratio is a partial rescue only; normoxia remained lower than clemastine-treated.",
+    "snippet": "We concluded that clemastine treatment at the MED leads to a partial rescue of hypoxia-induced changes in myelin thickness at P14.",
+    "anchor": "Results / Further analysis of myelination",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38942888_Odell2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Durability: effect at 10 weeks is described as partial rescue; optic-nerve MBP was not significantly different from vehicle at 10 weeks (only normoxia exceeded vehicle).",
+    "snippet": "MBP intensity in optic nerves was also higher in normoxia compared to vehicle mice (p < 0.05, one-way ANOVA followed by post hoc Tukey’s test), and was not significantly different between normoxia and clemastine-MED mice.",
+    "anchor": "Results / durable effects",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38942888_Odell2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Safety statements are observational only: no formal toxicity study, no maximum tolerated dose, no behavioural outcome in this paper; side effects of muscarinic antagonism such as sedation are named by the authors as a limit on neonatal dosing.",
+    "snippet": "Clemastine has side effects attributed to muscarinic antagonism, such as sedation, that may limit high doses in neonates.",
+    "anchor": "Discussion / limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38942888_Odell2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say the treated mice did not appear sedated and had no overt behavioural abnormality, from visual observation only.",
+    "snippet": "Treated mice did not appear sedated and did not otherwise have any overt behavioral abnormalities.",
+    "anchor": "Results / PK",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38942888_Odell2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PK at 7.5 mg/kg: Cmax 44 ng/mL at 0.5 h, half-life 4.6 h, trough 0.97 ng/mL; the authors suggest dosing at least every 12 h might optimise effect (a mouse finding).",
+    "snippet": "The short half-life resulted in low concentrations (0.7 to 1.4 ng/ml) at the end of the 24-h dosing interval and suggests that a shorter dosing interval (such as ≤ every 12 h) could further optimize the pro-myelinating effects of clemastine in rodent models of myelin disorders.",
+    "anchor": "Results / PK",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38942888_Odell2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The PK arm used a separate group of 50 mice (4-5 per time point) under normoxia conditions per the Methods; no PK was measured in hypoxic pups where clearance may differ.",
+    "snippet": "Male and female C57BL/J mice were dosed by oral gavage with 7.5 mg/kg/day clemastine daily from P3 to P10.",
+    "anchor": "Methods / Plasma sample collection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38942888_Odell2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion states the minimum-effective-dose exposure is about three times that of the adult MS trial (an adult-human comparison, not a neonatal one).",
+    "snippet": "provides a daily exposure that is approximately three times higher than the previously demonstrated myelination-promoting dose of clemastine in adult humans with multiple sclerosis",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38942888_Odell2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 1e (170 dpi page 3): striatal MBP intensity vehicle about 175, 0.5 mg about 205 (ns), 2 about 265, 7.5 about 290, 10 about 320, normoxia about 410; sexes pooled across n of about 3-6 per sex per dose and about 11 at 7.5. Treated groups rise in order with dose but none reaches normoxia.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] e: Veh ~175 ns 0.5 ~205; 2 ~265 *; 7.5 ~290 *; 10 ~320 *; Norm ~410",
+    "anchor": "Figure 1e, page 3 at 170 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID38942888_r3c/p03_170dpi.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[2]",
+    "qualifies_needle": "MBP intensity was significantly higher in the"
+   },
+   {
+    "proposition": "Fig 2c-d (170 dpi page 4): SOX10 density ns across groups; OPC fraction vehicle about 0.69, 0.5 mg about 0.70, 2 mg about 0.67 (ns), 7.5 mg about 0.52, 10 mg about 0.50, normoxia about 0.56; 7.5 and 10 mg significant. The OPC fraction and CC1 density jump between 2 and 7.5 mg/kg with no dose point between.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] d: ns ns; * at 7.5; * at 10; * Norm; c ns",
+    "anchor": "Figure 2c-d, page 4 at 170 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID38942888_r3c/p04_170dpi.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[3]",
+    "qualifies_needle": "It is possible that the true MED lies between"
+   },
+   {
+    "proposition": "Fig 5 (170 dpi page 7): at 10 weeks striatal MBP vehicle about 182, clemastine-MED about 252 (*), normoxia about 288; corpus callosum area clemastine-MED about 1.67 not different from vehicle (ns) or normoxia (ns); optic nerve SOX10 and node density ns for clemastine against vehicle; n of about 4-6 per group in c and d.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] c * * ns; d ns ns *; f * for Norm only",
+    "anchor": "Figure 5, page 7 at 170 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID38942888_r3c/p07_170dpi.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[7]",
+    "qualifies_needle": "MBP intensity in optic nerves was also higher"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch XML and PMC PDF fingerprinted; Figures 1, 2 and 5 inspected as 170 dpi page renders; Figures 3, 4 and 6 read from captions and Results text; supplementary xlsx and PDF not opened.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}

@@ -1,0 +1,324 @@
+{
+ "schema_version": 2,
+ "pmid": "36615165",
+ "doi": "10.3390/jcm12010365",
+ "receipt": "FTR-20261021-36615165-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261021.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access XML, figures, PDF and supplement came from pmc_bucket_fetch.py in one call; no cascade needed."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "Retrospective two-centre chart review of 21 infants with tuberous sclerosis complex given oral sirolimus for tumours or seizures; a disease-class safety observation about an mTOR inhibitor, not WWOX data. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries_text": [
+   "sirolimus AND tuberous sclerosis",
+   "sirolimus AND infants AND safety"
+  ],
+  "note": "Group R3 reading; queries are PubMed counts on 2026-10-21 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "sirolimus AND tuberous sclerosis",
+    "count": 1050,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   },
+   {
+    "query": "sirolimus AND infants AND safety",
+    "count": 114,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 36615165; registry_records.py get --pmid 36615165 --hops 1",
+  "hits": 0,
+  "finding": "No receipt before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-21; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 46,
+   "references_screened": 42,
+   "references_with_doi": 42,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID36615165_Smialek2023_PMC_r2.xml",
+   "sha256": "53bc00e0fa904f94d67c05f18aef4258bd9f0d0398044e0e879f11fb5ade0397",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=9821318",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "53bc00e0fa904f94d67c05f18aef4258bd9f0d0398044e0e879f11fb5ade0397"
+   }
+  },
+  {
+   "path": "files/supplement/PMID36615165_r2/PMC9821318.1.pdf",
+   "sha256": "4daf56f324e60b7b19e54eafae04700876714dab733d461b3cb02f90108ea913",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "4daf56f324e60b7b19e54eafae04700876714dab733d461b3cb02f90108ea913"
+   }
+  },
+  {
+   "path": "files/figures/PMID36615165_r2/jcm-12-00365-g001.jpg",
+   "sha256": "7d00cc14403e6586bd10a8b619475a2cfc6ff6cab49f42fdf5f9fd6b541ba30c",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "7d00cc14403e6586bd10a8b619475a2cfc6ff6cab49f42fdf5f9fd6b541ba30c"
+   }
+  },
+  {
+   "path": "files/figures/PMID36615165_r2/jcm-12-00365-g002.jpg",
+   "sha256": "c3a5830d7e2e0c4c6474efd568c92695635dd51432cbaf41a953b87296d2f3c4",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "c3a5830d7e2e0c4c6474efd568c92695635dd51432cbaf41a953b87296d2f3c4"
+   }
+  },
+  {
+   "path": "files/figures/PMID36615165_r2/jcm-12-00365-g003.jpg",
+   "sha256": "da69754a1929f479da955bbea1092e460ffc6ff90aba80f79ac4171c71ec8a88",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "da69754a1929f479da955bbea1092e460ffc6ff90aba80f79ac4171c71ec8a88"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Cohort: 21 children treated with sirolimus before age two, retrospectively identified; four others on everolimus were excluded.",
+    "snippet": "Twenty-five patients at both clinical centers started mTOR inhibitor therapy under two years of age. Twenty-one were treated with sirolimus and four with everolimus.",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36615165_Smialek2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Exposure: median age at start 104 days (range 3-656), starting dose 0.5 mg/m2/day, target trough 3-4 ng/mL, achieved median 4.34 ng/mL (0.79-13.89). Class-level observation only; no dosing advice follows from it.",
+    "snippet": "The protocol for mTOR inhibitor initial dose was 0.5 mg/m2/day and varied between 0.01–0.07 mg/kg/day.",
+    "anchor": "Results / Sirolimus Dosing",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36615165_Smialek2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Every child had at least one adverse effect, graded mostly 1 or 2; none grade 4 or 5; none stopped for an adverse effect.",
+    "snippet": "None of the individuals discontinued the treatment due to the AE.",
+    "anchor": "Results / Long-Term mTOR Inhibitor Continuation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36615165_Smialek2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Most frequent adverse effects were anemia, thrombocytosis and hyperlipidemia; infections were reported in 17 to 50 percent of those assessed by age band; neutropenia 10 to 42 percent.",
+    "snippet": "Throughout the follow-up, infections were reported in 16.67% up to 50% of the patients, most common in individuals two years and older. On the other hand, neutropenia was reported in 10% up to 41.67% of the patients, and it was most prevalent in patients under six months of age.",
+    "anchor": "Results / The Safety Profile of Sirolimus Therapy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36615165_Smialek2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Hospitalisation for infection occurred in one child twice (varicella and an unidentified bacterial infection).",
+    "snippet": "One patient was hospitalized two times due to infections: varicella and not identified bacterial infection treated with antibiotics.",
+    "anchor": "Results / The Safety Profile of Sirolimus Therapy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36615165_Smialek2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Baseline abnormality contaminates the adverse-event counts: the authors split results by whether the abnormality pre-dated sirolimus.",
+    "snippet": "The prevalence of anemia, thrombocytosis, and hyperlipidemia was first calculated for all patients who had the factor tested. Then the frequency was estimated among the patients with normal hemoglobin and RBC, PLT, or serum lipids prior to the sirolimus administration.",
+    "anchor": "Results / The Safety Profile of Sirolimus Therapy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36615165_Smialek2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The stated follow-up in the text (median 12 months) conflicts with Table 1 (median 22, range 3-24 months).",
+    "snippet": "The median follow-up period was 12 months.",
+    "anchor": "Results / Long-Term mTOR Inhibitor Continuation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36615165_Smialek2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 1 follow-up row printed beside the text claim.",
+    "snippet": "mTORi treatment follow-up duration (months)",
+    "anchor": "Table 1",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID36615165_Smialek2023_PMC_r2.xml",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[6]",
+    "qualifies_needle": "The median follow-up period was 12 months."
+   },
+   {
+    "proposition": "Table 3 baseline row: at month 0, before any dose, 10 of 21 had anemia, 7 of 21 elevated platelets and 7 of 18 hyperlipidemia.",
+    "snippet": "Duration of the Treatment (Months)",
+    "anchor": "Table 3",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID36615165_Smialek2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion calls mTOR-inhibitor hyperlipidemia \"dose-dependent\" citing the literature; this cohort contains no dose-by-event analysis, and the sirolimus troughs were held in a narrow band.",
+    "snippet": "Hyperlipidemia caused by mTOR inhibitors is repeatable, reversible, and dose-dependent [31].",
+    "anchor": "Discussion / Hyperlipidemia",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36615165_Smialek2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Reversibility was not observed here: lipids were not followed after stopping.",
+    "snippet": "As we did not follow the patient’s lipid levels after therapy discontinuation, the reversibility of hyperlipidemia was not assessed.",
+    "anchor": "Discussion / Hyperlipidemia",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36615165_Smialek2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Two children with the highest lipids were on a ketogenic diet, itself a cause of hyperlipidemia.",
+    "snippet": "Two patients with the highest blood lipid levels were on a ketogenic diet at that time, also known to cause hyperlipidemia [32].",
+    "anchor": "Discussion / Hyperlipidemia",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36615165_Smialek2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Anemia in the 0-6 month group may reflect physiological infant anemia.",
+    "snippet": "in this specific group of patients, anemia may have been partially due to physiological anemia, which occurs in all infants between ten and twelve weeks of age",
+    "anchor": "Discussion / Anemia",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36615165_Smialek2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Thrombocytosis is the opposite of the thrombocytopenia usually reported with sirolimus; the authors found no literature explaining it.",
+    "snippet": "No literature on the sirolimus impact on PLT elevation was found.",
+    "anchor": "Discussion / Thrombocytosis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36615165_Smialek2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Trough levels here were at the low end of ranges used elsewhere, which the authors offer as a reason for low severity.",
+    "snippet": "In this study, blood trough levels remained in the lower spectrum of those ranges, which may contribute to the lower severity of the AEs.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36615165_Smialek2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Stated limitations: retrospective, small, recall and history-taking bias.",
+    "snippet": "The study was a retrospective data collection, which may be subject to patient, parent, and physician recall bias and differences in the history-taking methodology.",
+    "anchor": "Limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36615165_Smialek2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Conclusion wording: \"safe and well tolerated\" for a 100 percent adverse-event cohort of 21 patients with median 12 or 22 months follow-up.",
+    "snippet": "Sirolimus appears to be safe and well tolerated in young patients with TSC.",
+    "anchor": "Conclusions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36615165_Smialek2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No growth, neurodevelopmental, immunisation, vaccination or long-term outcome is reported in this paper.",
+    "snippet": "Further prospective studies are recommended to support the findings.",
+    "anchor": "Conclusions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36615165_Smialek2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figures 1-3 (106 ppi JPEGs; the only surface): bars of prevalence by treatment-duration band with the number tested varying from 7 to 21 per band; anemia 48 percent at month 0, 70 at 0-3, 37 at 3-6, 70 at 12-18; elevated platelets 33 percent at month 0; hyperlipidemia 39 percent at month 0 and 61 at 0-3. The denominator changes between bands, so the bars are not a single cohort followed.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 1 n=21,20,19,14,10,10,9,8; anemia 48 70 37 57 60 70 44 62; Fig 3 n=18,18,16,12,9,11,8,7",
+    "anchor": "Figures 1-3, JPEG surface",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36615165_r2/jcm-12-00365-g001.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[5]",
+    "qualifies_needle": "The prevalence of anemia, thrombocytosis, and"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch XML, PMC PDF and the three figure JPEGs (the only surfaces for the figures, 106 ppi) fingerprinted; tables read from the XML table markup.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}

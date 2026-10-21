@@ -1,0 +1,315 @@
+{
+ "schema_version": 2,
+ "pmid": "39762658",
+ "doi": "10.1038/s41593-024-01833-x",
+ "receipt": "FTR-20261021-39762658-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261021.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access XML, figures, PDF and supplement came from pmc_bucket_fetch.py in one call; no cascade needed."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Genetic lifelong microglia-deficient mouse (Csf1r FIRE deletion); a developmental biology study of synapses and seizure threshold, not a drug experiment. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries_text": [
+   "microglia AND synaptic pruning",
+   "Csf1r FIRE"
+  ],
+  "note": "Group R3 reading; queries are PubMed counts on 2026-10-21 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "microglia AND synaptic pruning",
+    "count": 2269,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   },
+   {
+    "query": "Csf1r FIRE",
+    "count": 23,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 39762658; registry_records.py get --pmid 39762658 --hops 1",
+  "hits": 0,
+  "finding": "No receipt before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-21; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 60,
+   "references_screened": 59,
+   "references_with_doi": 59,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39762658_OKeeffe2025_PMC_r2.xml",
+   "sha256": "f4b24273efe396b565adceaf04799bc61f1f54f8b7efa9fa17cfb9a3f26027b2",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=11802452",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "f4b24273efe396b565adceaf04799bc61f1f54f8b7efa9fa17cfb9a3f26027b2"
+   }
+  },
+  {
+   "path": "files/supplement/PMID39762658_r2/PMC11802452.1.pdf",
+   "sha256": "2b4a38b9d6e8e6f65d1f61b7986bc1aca2c79cc0bd0737611aebd1f503ddd5da",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "2b4a38b9d6e8e6f65d1f61b7986bc1aca2c79cc0bd0737611aebd1f503ddd5da"
+   }
+  },
+  {
+   "path": "files/figures/PMID39762658_r2/41593_2024_1833_Fig8_HTML.jpg",
+   "sha256": "1fc39bcb6a8c215ebd5c390c98711e79a93aee4ce8929924f6bdb57e90f27fda",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "1fc39bcb6a8c215ebd5c390c98711e79a93aee4ce8929924f6bdb57e90f27fda"
+   }
+  },
+  {
+   "path": "files/figures/PMID39762658_r2/41593_2024_1833_Fig7_HTML.jpg",
+   "sha256": "2ff78468ec74604c17911d1e1fa65599269d0730a2d83ef52d4d83c1c5c6aed4",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "2ff78468ec74604c17911d1e1fa65599269d0730a2d83ef52d4d83c1c5c6aed4"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID39762658_r3c/p26_150dpi.png",
+   "sha256": "9a9bfe3511e6e3f017facc4c18358c0b3bcb8f7a6b3c9a78e83656d7b9c436cc",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID39762658_r2/PMC11802452.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=150), page 26",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "9a9bfe3511e6e3f017facc4c18358c0b3bcb8f7a6b3c9a78e83656d7b9c436cc"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID39762658_r3c/p27_150dpi.png",
+   "sha256": "36ebc1858b461a69a9a0ae81d5ba98d85000544ca2d4d132a7000aef8c372ab8",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID39762658_r2/PMC11802452.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=150), page 27",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "36ebc1858b461a69a9a0ae81d5ba98d85000544ca2d4d132a7000aef8c372ab8"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Model: homozygous deletion of a Csf1r enhancer removes microglia for life while keeping circulating monocytes and perivascular macrophages; the brain develops with adaptation across the whole lifespan.",
+    "snippet": "These mice lack microglia throughout life, while still possessing circulating monocytes and other central nervous system (CNS)-resident (for example, perivascular) macrophages",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39762658_OKeeffe2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Central claim: synapse number, maturation, intrinsic properties and LGN segregation were largely normal in CA1, somatosensory cortex and LGN.",
+    "snippet": "Thus, microglia are not essential for several aspects of hippocampal CA1 synaptic and cellular development for which they have been proposed to have a role.",
+    "anchor": "Results / CA1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39762658_OKeeffe2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PTZ seizure latency and duration did not differ between genotypes (n = 9 and 11 mice).",
+    "snippet": "We detected no difference in seizure latency and duration in Csf1r∆FIRE/∆FIRE versus Csf1r+/+ mice when PTZ seizures were elicited under the same conditions (Fig. 8a).",
+    "anchor": "Results / Normal seizure susceptibility",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39762658_OKeeffe2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A difference was found in NMDAR decay time at P14 in layer 4 cortex (P = 0.016) that disappeared by P42; the authors call it precociously low.",
+    "snippet": "Interestingly, the weighted time constant of NMDAR-mediated EPSCs, which reflects the subunit composition of NMDARs, was slightly lower in Csf1r∆FIRE/∆FIRE neurons at P14 than WT, although this difference was no longer apparent at P42 (Fig. 4m).",
+    "anchor": "Results / The barrel cortex",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39762658_OKeeffe2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors report a small rise in astrocytic GFAP at P14 and in reactive markers at P42, suggesting reactivity increases with age.",
+    "snippet": "we observed a small increase in GFAP expression at P14 (Fig. 7e and Extended Data Fig. 8); by P42 our bulk RNA-seq data also showed an increase in reactive markers, including Gfap, Vim and Serpina3n",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39762658_OKeeffe2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that not every developmental process is microglia-independent: a cortical boundary cavity persists to P7 in these mice.",
+    "snippet": "some aspects of brain development have an absolute requirement for microglia",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39762658_OKeeffe2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say a different group found raised rheobase and reduced NMDAR charge transfer in the same mouse in hippocampus; the discrepancy is unresolved.",
+    "snippet": "Further studies are needed to rationalize these conflicting results.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39762658_OKeeffe2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mechanism space: the conclusion is stated as adaptability and that astrocytes may compensate; it does not say microglia are dispensable in disease.",
+    "snippet": "it is possible that in the context of control of synapse numbers and patterning, that astrocytes carry out functions that ordinarily are carried out by microglia.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39762658_OKeeffe2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Lifespan: the study spans P4 to P42 for synapse and electrophysiology and weeks for LFP; no myelin, white-matter or gliosis-in-injury endpoint is reported.",
+    "snippet": "Csf1r∆FIRE/∆FIRE mice have normal body and brain weight23, avoiding confounders of other microglia-deficient models",
+    "anchor": "Results / CA1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39762658_OKeeffe2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Pharmacological microglial ablation is called problematic by the authors: the CSF1R antagonist PLX5622 has effects beyond microglia.",
+    "snippet": "the CSF1R antagonist PLX5622 has effects on nonmicroglial cells, including circulating macrophages, T and B lymphocytes, and hematopoietic progenitors",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39762658_OKeeffe2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The statistical frame is nested t-tests on cells within animals; P = 0.062 for barrel-field rostro-caudal position and 0.081 for sEPSC amplitude are reported as not different.",
+    "snippet": "c, Caudal and rostral relative position of the barrel field (t(16) = 2.01, P = 0.062, Student’s two-tailed t-test), n = 10 Csf1r+/+ and n = 8 Csf1rΔFIRE/ΔFIRE mice.",
+    "anchor": "Fig. 4 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39762658_OKeeffe2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 8a (120 ppi JPEG): PTZ latency about 75 s in both genotypes, duration about 80 s versus 72 s with individual points spread 25-210 s; nine and eleven animals. A single 10-minute test, one convulsant dose, adult age. Fig 8d-g: theta and gamma relative power and PFC-HPC coherence overlap.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] a latency ~75 vs ~73; duration ~82 vs ~72",
+    "anchor": "Figure 8, publisher JPEG 120 ppi",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39762658_r2/41593_2024_1833_Fig8_HTML.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[2]",
+    "qualifies_needle": "We detected no difference in seizure latency "
+   },
+   {
+    "proposition": "Fig 7a-b (main, JPEG): GFAP volume fraction about 0.52 (WT) versus 0.40 (KO), synaptophysin puncta engulfed by GFAP-positive astrocytes 0.098 versus 0.072, five and four animals with wide spread (one WT point near 0.97 and 0.19); Fig 7e volcano shows Gfap labelled among upregulated genes at P14.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] a 0.52 vs 0.40; b 0.098 vs 0.072; e Gfap upregulated (red)",
+    "anchor": "Figure 7, publisher JPEG",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39762658_r2/41593_2024_1833_Fig7_HTML.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[4]",
+    "qualifies_needle": "we observed a small increase in GFAP expressi"
+   },
+   {
+    "proposition": "Extended Data Fig 8 (150 dpi page 27): neocortical astrocyte density by ALDH1L1 is unchanged but GFAP-positive percent and density are higher in KO overall (P = 0.0054 and 0.015, two-way ANOVA genotype effect, 4 versus 5 animals), with no single layer reaching significance.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] c F(1,35)=8.81 P=0.0054; d F(1,35)=6.55 P=0.015; no layer significant",
+    "anchor": "Extended Data Fig. 8, page 27 at 150 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID39762658_r3c/p27_150dpi.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[4]",
+    "qualifies_needle": "we observed a small increase in GFAP expressi"
+   },
+   {
+    "proposition": "Extended Data Fig 7 (150 dpi page 26): hippocampal GFAP percentages and densities are the same in both genotypes (P = 0.478 and 0.793) while ALDH1L1 astrocyte density per 100 square micrometres is lower in KO (about 24 versus 26.5, P = 0.024).",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] ALDH1L1 density 26.5 vs 24 P=0.024; GFAP ns",
+    "anchor": "Extended Data Fig. 7, page 26 at 150 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID39762658_r3c/p26_150dpi.png",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch XML and PMC PDF fingerprinted; main Figures 7 and 8 opened as the 120 ppi publisher JPEG, Extended Data Figs 7 and 8 as 150 dpi page renders; Figures 1-6, the other extended data and supplementary tables were read from captions and Results text only.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}

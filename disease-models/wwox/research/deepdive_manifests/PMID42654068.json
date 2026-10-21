@@ -1,0 +1,330 @@
+{
+ "schema_version": 2,
+ "pmid": "42654068",
+ "doi": "10.3390/pharmaceutics18080951",
+ "receipt": "FTR-20261021-42654068-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261021.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access XML, figures, PDF and supplement came from pmc_bucket_fetch.py in one call; no cascade needed."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Mouse Shank3b knockout autism model; a tankyrase inhibitor prodrug and a membrane-coated liposome given intravenously to 6-week-old mice for five days; social behaviour plus hepatic and intestinal toxicity. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries_text": [
+   "XAV939 AND autism",
+   "tankyrase inhibitor AND brain"
+  ],
+  "note": "Group R3 reading; queries are PubMed counts on 2026-10-21 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "XAV939 AND autism",
+    "count": 6,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   },
+   {
+    "query": "tankyrase inhibitor AND brain",
+    "count": 12,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 42654068; registry_records.py get --pmid 42654068 --hops 1",
+  "hits": 0,
+  "finding": "No receipt before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-21; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 37,
+   "references_screened": 36,
+   "references_with_doi": 36,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42654068_Autism_XAV2026_PMC_r2.xml",
+   "sha256": "09d45ebe54c2dcd578414033f9fa47e413aaa14503f8dcf6a285bae95a6c3909",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=13516923",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "09d45ebe54c2dcd578414033f9fa47e413aaa14503f8dcf6a285bae95a6c3909"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42654068_r2/PMC13516923.1.pdf",
+   "sha256": "8931358ebbf49e37535746fea36f0c66dfaa23515897bfcfcd1689e4b3fd104b",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "8931358ebbf49e37535746fea36f0c66dfaa23515897bfcfcd1689e4b3fd104b"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42654068_r2/pharmaceutics-18-00951-s001.zip",
+   "sha256": "fb3d6c6e205d54edb2a20176dc689be6eea78e6d85c3082e8f51caf4ad2910f1",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "fb3d6c6e205d54edb2a20176dc689be6eea78e6d85c3082e8f51caf4ad2910f1"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42654068_r3c/p11_embedded_4157x5880.png",
+   "sha256": "a7cdfc6b8dd02e4a6ba69a7b03e2034484b8bfaf9045b88460948a81bb131e5b",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42654068_r2/PMC13516923.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 11",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "a7cdfc6b8dd02e4a6ba69a7b03e2034484b8bfaf9045b88460948a81bb131e5b"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42654068_r3c/p13_embedded_4157x5480.png",
+   "sha256": "309f5ca13751e71cf6545a9a9944e0ffd36c8546d6d552b2d8c23a44e711572c",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42654068_r2/PMC13516923.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 13",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "309f5ca13751e71cf6545a9a9944e0ffd36c8546d6d552b2d8c23a44e711572c"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42654068_r3c/p14_embedded_4157x4379.png",
+   "sha256": "8c3ef51de0b7dfb186a9240449f9d45b742393ea9b969fef8e268408b2c0c2c3",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42654068_r2/PMC13516923.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 14",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "8c3ef51de0b7dfb186a9240449f9d45b742393ea9b969fef8e268408b2c0c2c3"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42654068_r3c/p15_embedded_2079x2305.png",
+   "sha256": "f3363a428488a0fb304d9228ac6c75d443f8c0f3300d8643ba844e21fe224cd5",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42654068_r2/PMC13516923.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 15",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "f3363a428488a0fb304d9228ac6c75d443f8c0f3300d8643ba844e21fe224cd5"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Dosing: XAV939-L1 5 mg/kg intravenously daily for five consecutive days in 6-week-old Shank3b-/- mice; behaviour 24 h after the last dose; the half dose 2.5 mg/kg given as free compound or coated.",
+    "snippet": "Six-week-old Shank3b-/- mice received daily intravenous injections of XAV939-L1 (5 mg/kg) for five consecutive days, and social behaviors were assessed 24 h after the final injection.",
+    "anchor": "Results / 3.3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42654068_Autism_XAV2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "At 5 mg/kg the prodrug raised AST, ALT, ALP and bile acids and inhibited Wnt in the small intestine; the authors name hepatotoxicity and enterotoxicity.",
+    "snippet": "These results indicate that, while intravenous XAV939-L1 effectively improves social function, it may induce potential peripheral side effects, such as hepatotoxicity and enterotoxicity.",
+    "anchor": "Results / 3.3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42654068_Autism_XAV2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "At 2.5 mg/kg the uncoated prodrug did not improve social behaviour but still disrupted intestinal villi and raised liver enzymes in wild-type mice: the toxic effect and the beneficial effect are separated by formulation, not by dose.",
+    "snippet": "In WT mice, H.E. staining showed that XAV939-L1 led to an obvious disruption of the intestinal villi at all segments of the intestine, while XAV939 did not (Figure 6A).",
+    "anchor": "Results / 3.5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42654068_Autism_XAV2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Brain exposure is read as a fluorescence signal of the Cy5.5 label in excised organs 12 h after 2.5 mg/kg (about 3.4-fold over free label), not as measured drug level; the label rides with the liposome.",
+    "snippet": "showed approximately a 3.4-times increase in Cy5.5 signal in the brain",
+    "anchor": "Results / 3.4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42654068_Autism_XAV2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Conversion of the prodrug to XAV939 was shown only in brain homogenate in vitro (about 60 percent loss of prodrug).",
+    "snippet": "XAV939-L1 decreased by approximately 60% and XAV939 increased dramatically from 1 h of incubation",
+    "anchor": "Results / 3.3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42654068_Autism_XAV2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors reason inhibiting Wnt and glycolysis is \"relatively safe\" because both are low in mature neurons, citing their own earlier finding that they fall to baseline at 2-3 postnatal weeks; this is a premise about adult brain, not a test in a developing one.",
+    "snippet": "Inhibiting Wnt signaling and glycolysis for treating ASD is relatively “safe” for brain function, because Wnt/glycolysis levels are low in mature neurons [26,27].",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42654068_Autism_XAV2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Unaddressed by the authors: the effectiveness-dosage relationship and effects on human neurons.",
+    "snippet": "The effectiveness–dosage relationship and the effects of XAV939-L1 on human neurons are also to be investigated.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42654068_Autism_XAV2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The reported brain-targeting route uses allogeneic neuron and astrocyte membranes; the authors list source and chronic immune response as shortcomings.",
+    "snippet": "The shortcomings of this strategy for clinical application are the source of the neuronal and astrocytic membranes and the chronic immune response if allogeneic neuron–astrocyte membranes were to be repeatedly used.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42654068_Autism_XAV2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Internal inconsistency in the chemistry: Results state L1 was made from XAV939 with acetyl chloride, while Methods synthesise L1 from a phenylurea and a thienopyrimidine and L2 from acetyl chloride; which compound carried the effect is therefore not readable from the text.",
+    "snippet": "The target product of XAV939-L1 was obtained via reaction of XAV939 with an acetyl chloride under organic base conditions (Figure 1B).",
+    "anchor": "Results / 3.1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42654068_Autism_XAV2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Behavioural testing was after five daily injections and no outcome beyond 24 h is reported; the Methods do not state blinding or exclusion criteria.",
+    "snippet": "Mice were trained for three consecutive days before the formal test.",
+    "anchor": "Methods / Behavioral tests",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42654068_Autism_XAV2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 3 (embedded 4157x5880): in Shank3b-/- mice 5 mg/kg XAV939-L1 moves social preference score from about -0.28 to +0.12 and novelty from about -0.28 to +0.08 (n about 10); contact frequency 16 to 24 and interaction time 48 to 72 s remain far below wild type (46, 137); USV calls 20 to 48 (WT 60). Blood enzymes N-Q have n = 3 mice per group (AST 130 to 212 U/L, ALT 32 to 56).",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] C *** ; F ** (16 vs 24) ; G ** (48 vs 72); N-Q n=3",
+    "anchor": "Figure 3, embedded raster p.11",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42654068_r3c/p11_embedded_4157x5880.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[0]",
+    "qualifies_needle": "Six-week-old Shank3b-/- mice received daily i"
+   },
+   {
+    "proposition": "Fig 5 (embedded 4157x4379): at 2.5 mg/kg, KO + L1 shows no social improvement (preference about -0.06, ns versus vehicle; novelty about -0.12, P *); KO + coated L1 preference about +0.40 (P ****), contact frequency 25 to 38, interaction time 63 to 113 s, still below wild type 43 and 165; one dose point and 10-11 animals.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] C ns ; **** ; F ns / *; G ns / **",
+    "anchor": "Figure 5, embedded raster p.14",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42654068_r3c/p14_embedded_4157x4379.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[2]",
+    "qualifies_needle": "In WT mice, H.E. staining showed that XAV939-"
+   },
+   {
+    "proposition": "Fig 4 (embedded 4157x5480): coated particle size 127 +/- 7 nm, zeta -24.5 mV; brain Cy5.5 radiance about 4.8e8 versus 1.4e8 (**** n = 5 per group), liver 6e9 versus 1e11, duodenum and jejunum lower and ileum ns; organ fluorescence 12 h after a single 2.5 mg/kg intravenous dose.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] G **** ; I **** ; K **** * ns",
+    "anchor": "Figure 4, embedded raster p.13",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42654068_r3c/p13_embedded_4157x5480.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[3]",
+    "qualifies_needle": "showed approximately a 3.4-times increase in "
+   },
+   {
+    "proposition": "Fig 6 (embedded 2079x2305): wild-type mice given 2.5 mg/kg XAV939-L1 show villous destruction in duodenum, jejunum and ileum on H&E; Axin-2 up 0.8 to 1.45 and active beta-catenin down 1.5 to 0.58 in intestine (n = 3 per group); ALT about 35 to 185 U/L, TBA about 3 to 13 umol/L; the coated particle leaves all unchanged.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] A villous loss; D ****; F-I ** *** ****",
+    "anchor": "Figure 6, embedded raster p.15",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42654068_r3c/p15_embedded_2079x2305.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[2]",
+    "qualifies_needle": "In WT mice, H.E. staining showed that XAV939-"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch XML and PMC PDF fingerprinted (the zip supplement was not opened); Figures 3, 4, 5 and 6 inspected as embedded 330-820 ppi rasters; Figs 1, 2 by caption only; no supplement images read.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}

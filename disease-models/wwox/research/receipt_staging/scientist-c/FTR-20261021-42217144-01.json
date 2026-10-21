@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261021-42217144-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "42217144",
+  "doi": "10.1007/s40272-026-00754-5"
+ },
+ "event_at": "2026-10-21T22:24:00Z",
+ "analysis_at": "2026-10-21T22:24:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-c, task REPURP-10H-R3-C-20261021, PRIMARY_EVIDENCE_READ, QUESTION_DRIVEN (the dispatch had the reader read the known-roads MYC section and the rescue-reference scaffold before the first paper); XML and figures acquired with pmc_bucket_fetch.py, figures inspected as images; prepared as JSON for the integrator and not appended by this actor.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID42217144_Taniguchi2026_PMC_r2.xml",
+ "source_fingerprint": "e8de12de1c864927d0f2551d3122b10ac7b7a8f70bef00cca1d7eac105d62ca6",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42217144.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261021.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "full text, figures as images and supplement read; see manifest"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

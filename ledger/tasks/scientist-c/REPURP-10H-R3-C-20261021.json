@@ -1,5 +1,5 @@
 {
- "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
  "_note": "Part of the ten-hour repurposing batch ORCH-REPURPOSING-10H-20261021. Adjacent and transferable literature: every paper that is not WWOX evidence is labelled NOT WWOX EVIDENCE, at class level, no dose, no paediatric suitability presumed, not medical advice.",
  "TASK_ID": "REPURP-10H-R3-C-20261021",
  "DIRECTIVE_VERSION": 1,
@@ -30,6 +30,36 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-21"
+ "CURRENT_STATE": "COMPLETED",
+ "assigned_on": "2026-10-21",
+ "TASK_ACK": {
+  "actor": "scientist-c",
+  "at": "2026-10-21",
+  "directive_version": 1,
+  "generation": 1
+ },
+ "TASK_CLAIM": {
+  "actor": "scientist-c",
+  "branch": "task/repurp-r3-c",
+  "worktree": ".claude/worktrees/scientist-c-r3",
+  "mode": "PRIMARY_EVIDENCE_READ",
+  "context_policy": "SOURCE_FIRST"
+ },
+ "DEFAULTS_TAKEN": [
+  "manifests QUESTION_DRIVEN (known-roads and scaffold read first)",
+  "publisher-JPEG-only figures read at that resolution and declared",
+  "docx/xlsx supplements read as text; supplementary figure images captions_only where not opened",
+  "partial receipts stated as partial_fulltext_read",
+  "registry comparison by PMID --hops 0 only",
+  "adjacent search stopped after one reading for context cost; four candidates left in the note"
+ ],
+ "STOP_LOG": [],
+ "RESULT": {
+  "readings": 17,
+  "manifests_pass": 17,
+  "receipts_staged": 17,
+  "commit_candidate": "CC-20261021-SCIENTIST-C-R3-A51-ATTRIBUTION-01",
+  "note": "disease-models/wwox/research/repurposing_10h_scientist-c_20261021.md",
+  "blind_audit": "OWED"
+ }
 }

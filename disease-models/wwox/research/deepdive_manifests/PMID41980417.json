@@ -1,0 +1,423 @@
+{
+ "schema_version": 2,
+ "pmid": "41980417",
+ "doi": "10.1016/j.neurot.2026.e00906",
+ "receipt": "FTR-20261021-41980417-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261021.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access XML, figures, PDF and supplement came from pmc_bucket_fetch.py in one call; no cascade needed."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Mouse inducible OPC-lineage Pdk1 knockout with clemastine from P21 to P58; measures myelin, synapses, c-Fos and memory; no seizure or EEG endpoint. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries_text": [
+   "clemastine AND myelination",
+   "Pdk1 AND oligodendrocyte"
+  ],
+  "note": "Group R3 reading; queries are PubMed counts on 2026-10-21 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "clemastine AND myelination",
+    "count": 102,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   },
+   {
+    "query": "Pdk1 AND oligodendrocyte",
+    "count": 8,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 41980417; registry_records.py get --pmid 41980417 --hops 1",
+  "hits": 0,
+  "finding": "No receipt before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-21; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 60,
+   "references_screened": 55,
+   "references_with_doi": 55,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 5
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41980417_Qiao2026_PMC_r2.xml",
+   "sha256": "4341e006bbc4bbb648b6228813716384c498b8ad5b74e4c5e4e2340ae662982c",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=13092863",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "4341e006bbc4bbb648b6228813716384c498b8ad5b74e4c5e4e2340ae662982c"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41980417_r2/PMC13092863.1.pdf",
+   "sha256": "f4eab00bc4d6991d5dd8101942679246ed3448227e42c4ef55030d018c742120",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "f4eab00bc4d6991d5dd8101942679246ed3448227e42c4ef55030d018c742120"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41980417_r2/mmc1.docx",
+   "sha256": "18c07588d1d34674d906d5e66b2fca0ddc84e196a2909f8ee8074325f9ca0c86",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "18c07588d1d34674d906d5e66b2fca0ddc84e196a2909f8ee8074325f9ca0c86"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID41980417_r3c/p04_embedded_1895x1729.png",
+   "sha256": "84d392a709dacef23cc964562646e4ef25eb7be0e967add914b23e1b3c288b9b",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41980417_r2/PMC13092863.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 4",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "84d392a709dacef23cc964562646e4ef25eb7be0e967add914b23e1b3c288b9b"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID41980417_r3c/p05_embedded_2012x1376.png",
+   "sha256": "631d2d216d6c4854598417d1b4ca2fb46e6dba8ec8c25cb0f1e25a12ae77f84e",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41980417_r2/PMC13092863.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 5",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "631d2d216d6c4854598417d1b4ca2fb46e6dba8ec8c25cb0f1e25a12ae77f84e"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID41980417_r3c/p07_embedded_1447x1907.png",
+   "sha256": "f4fa3d5d1673a3672b5b06d2ade0e28d52f386447142339197c2a11e59da43fd",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41980417_r2/PMC13092863.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 7",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "f4fa3d5d1673a3672b5b06d2ade0e28d52f386447142339197c2a11e59da43fd"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID41980417_r3c/p08_embedded_1895x1612.png",
+   "sha256": "dd00a1495abf8f1b657c53d6e846e99c5f9430f90b02d5c8ee18c3c5ba9b1a43",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41980417_r2/PMC13092863.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 8",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "dd00a1495abf8f1b657c53d6e846e99c5f9430f90b02d5c8ee18c3c5ba9b1a43"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID41980417_r3c/p09_embedded_1447x1864.png",
+   "sha256": "63a080e17ab4e4e4c7ab0c0b6292b812f368d0a48adb465bba02d9fa780f37bd",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41980417_r2/PMC13092863.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 9",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "63a080e17ab4e4e4c7ab0c0b6292b812f368d0a48adb465bba02d9fa780f37bd"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID41980417_r3c/p10_embedded_1895x1370.png",
+   "sha256": "186e62503a635adb2431cea08c649d8b3671a04c24cf865ad97251d162cd8f05",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41980417_r2/PMC13092863.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 10",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "186e62503a635adb2431cea08c649d8b3671a04c24cf865ad97251d162cd8f05"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID41980417_r3c/p10_embedded_1541x874.png",
+   "sha256": "998b7ffe4a84fcc7b918cd99317c211a59ccbe2e9db683043a8b22d04981f758",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41980417_r2/PMC13092863.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 10",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "998b7ffe4a84fcc7b918cd99317c211a59ccbe2e9db683043a8b22d04981f758"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT a dose-response: clemastine at one stated dose, given P21 to P58, i.e. after the knockout at P10-12 and after weaning, not in the infant window.",
+    "snippet": "clemastine fumarate (10 mg/kg), a first-generation antihistamine with established remyelination-promoting effects, was administered once daily from P21 to P58",
+    "anchor": "Methods / Animal models and treatments",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41980417_Qiao2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The model is an OPC-lineage kinase knockout induced at P10-12; the constitutive version had seizures and death before P21 and was not rescued here.",
+    "snippet": "In contrast to the constitutive Pdk1 cKO mouse model (Pdk1fl/fl;Olig1-Cre) [22], Pdk1 icKO mice remained viable and did not exhibit spontaneous seizures or early lethality.",
+    "anchor": "Results / Postnatal PDK1 deletion impairs OPC differentiation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41980417_Qiao2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors report that the constitutive model had severe seizures from P14; this paper does not test clemastine there.",
+    "snippet": "it displayed severe spontaneous seizures starting at P14 and early lethality by P21",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41980417_Qiao2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Hippocampal MBP, TrueGold area and Olig2, CC1 and ASPA counts rise with clemastine in the knockout.",
+    "snippet": "MBP immunostaining demonstrated markedly enhanced signal intensity in clemastine-treated Pdk1 icKO mice relative to saline-treated controls (Fig. 4F and G).",
+    "anchor": "Results / Clemastine rescues hippocampal hypomyelination",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41980417_Qiao2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 4 legend: Olig2 n = 3 per group, ASPA 3-4, MBP 5; the TrueGold legend gives P as ** and \"p < 0.001\".",
+    "snippet": "Data are presented as mean ± SEM (n = 3 per group; ∗∗, p < 0.01).",
+    "anchor": "Fig. 4 legend (C)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41980417_Qiao2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Hyperexcitability is not measured; neuronal activity is read as c-Fos-positive cell counts after behavioural testing and, in the knockout without treatment, as mEPSC amplitude and frequency from n = 3 animals.",
+    "snippet": "Data are presented as mean ± SEM (n = 3 per genotype; ∗∗, p < 0.01).",
+    "anchor": "Fig. 3 legend (I)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41980417_Qiao2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Clemastine effect on c-Fos is read as restored neuronal activation, a count of immediate-early-gene positive cells 60 min after behaviour.",
+    "snippet": "To further assess neuronal activity in vivo, hippocampal tissues were collected from mice 60 min following behavioral testing.",
+    "anchor": "Results / Deletion of PDK1 impairs synaptogenesis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41980417_Qiao2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The treated-control arm: clemastine did not alter VGlut1 puncta in control mice, the only evidence on a normal-brain effect in the paper.",
+    "snippet": "Notably, clemastine treatment did not significantly alter VGlut1+ puncta density in control mice, indicating that its effect was specific to the pathological condition (Fig. 5A and B).",
+    "anchor": "Results / Clemastine rescues hippocampal hypomyelination",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41980417_Qiao2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Gliosis: GFAP area is unchanged in the knockout, so astrocytic gliosis is not a phenotype of this model and was not a treatment target.",
+    "snippet": "No significant difference in GFAP expression was observed between genotypes.",
+    "anchor": "Fig. 2 legend (G,H)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41980417_Qiao2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No safety, exposure, body weight, sedation or histamine-related measure is reported for clemastine; the Discussion relies on an established-safety statement.",
+    "snippet": "Clemastine, an FDA-approved antihistamine with established clinical safety, has recently emerged as a potent promoter of OL differentiation and myelination",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41980417_Qiao2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mechanism: clemastine restores Akt T308 and S6 phosphorylation; the muscarinic M1 antagonism route is named as an unexplored alternative.",
+    "snippet": "Interestingly, clemastine has been reported to exert pro-myelination effects through antagonism of muscarinic receptor 1 (M1R) [59,60], raising the possibility of crosstalk",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41980417_Qiao2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Tamoxifen was given at 50 mg/kg for three days; no tamoxifen-treated Cre-negative or CreERT2-only control is described (controls are Pdk1 fl/fl littermates).",
+    "snippet": "Littermate Pdk1fl/fl mice were used as controls.",
+    "anchor": "Methods / Animal models",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41980417_Qiao2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplement states the g-ratio regression values (control 0.779, icKO 0.859 at P21) from 3 mice per genotype.",
+    "snippet": "Control: g-ratio = 0.77896741; Pdk1 icKO: g-ratio = 0.858915",
+    "anchor": "Supplementary Fig. S1",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41980417_r2/mmc1.docx",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 4 (300 ppi): Olig2 count control+saline ~150, icKO+saline ~107, icKO+clemastine ~158 (above control); ASPA 87, 59, 86; MBP relative area 1.0, 0.64, 1.0; myelin 1.0, 0.69, 0.99; clemastine arm for controls plotted and not different; markers per group 3 to 5.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] C Olig2 icKO saline ~107 vs clemastine ~158; G MBP 0.64 vs 1.0",
+    "anchor": "Figure 4, embedded raster p.8",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID41980417_r3c/p08_embedded_1895x1612.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[3]",
+    "qualifies_needle": "MBP immunostaining demonstrated markedly enha"
+   },
+   {
+    "proposition": "Fig 6 (300 ppi): Y-maze alternation icKO+saline ~50 percent, icKO+clemastine ~67, control ~68; discrimination index 0.48 versus 0.76; arm entries and speed ns; clemastine in controls does not change them.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] A ****; F DI icKO saline ~0.47 clemastine ~0.76",
+    "anchor": "Figure 6, embedded raster p.10",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID41980417_r3c/p10_embedded_1895x1370.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 7 (300 ppi): p-Akt T308/Akt icKO ~0.7 rising to ~1.07 with clemastine; p-S6/S6 ~0.6 rising to ~0.9; n = 5 per group; blots show two lanes per group.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] B * ; D ****; two lanes per group",
+    "anchor": "Figure 7, embedded raster p.10",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID41980417_r3c/p10_embedded_1541x874.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 5 (300 ppi): VGlut1 puncta icKO+saline ~9, icKO+clemastine ~15.5, control ~14; Homer1 4 versus 13 versus 16; c-Fos 12 versus 45 versus 42; markers per group 4 to 6.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] B ****; D ****; F **",
+    "anchor": "Figure 5, embedded raster p.9",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID41980417_r3c/p09_embedded_1447x1864.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 3 (300 ppi): untreated icKO shows VGlut1 and Homer1 puncta lower, c-Fos lower, mEPSC amplitude about 13 versus 15.5 pA and frequency about 0.43 versus 0.52 Hz with 14-15 plotted points per group from n = 3 animals (the plotted points are neurons, the stated n is animals).",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] I amplitude ** with ~15 neuron points; J frequency * ~15 points",
+    "anchor": "Figure 3, embedded raster p.7",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID41980417_r3c/p07_embedded_1447x1907.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 2 (300 ppi): Olig2 control ~172, icKO ~140; PDGFRa ns; CC1 95 versus 58; GFAP ns; TUNEL negative; the control Olig2 count (172) differs from the control count in Fig 4C (about 150), so the two figures cannot be read across.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] B Olig2 172 vs 140 ****; D ns; F ****; H ns",
+    "anchor": "Figure 2, embedded raster p.5",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID41980417_r3c/p05_embedded_2012x1376.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 1 (300 ppi): Pdk1 mRNA about 0.67 of control (n 4-5) and protein about 0.35; MBP relative area 0.59; TrueGold 0.66; Y-maze 53 versus 62 percent; NOR DI 0.47 versus 0.67; n = 11-12 in behaviour.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] B * ; D ***; F *; H ***; Ia **",
+    "anchor": "Figure 1, embedded raster p.4",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID41980417_r3c/p04_embedded_1895x1729.png",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch XML, PMC PDF and supplement docx fingerprinted; Figures 1-7 extracted at 300 ppi embedded rasters and inspected; supplementary figure images (TIFF in docx) not opened, text read.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}

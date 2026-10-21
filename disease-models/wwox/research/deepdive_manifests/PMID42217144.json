@@ -1,0 +1,324 @@
+{
+ "schema_version": 2,
+ "pmid": "42217144",
+ "doi": "10.1007/s40272-026-00754-5",
+ "receipt": "FTR-20261021-42217144-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261021.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access XML, figures, PDF and supplement came from pmc_bucket_fetch.py in one call; no cascade needed."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "weighting": "Ten-patient NICU chart review plus a spontaneous-report disproportionality analysis for a class (mTOR inhibitor) in lymphatic and vascular anomalies; it measures lipids, not neurodevelopment. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries_text": [
+   "sirolimus AND dyslipidemia",
+   "sirolimus AND VigiBase"
+  ],
+  "note": "Group R3 reading; queries are PubMed counts on 2026-10-21 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "sirolimus AND dyslipidemia",
+    "count": 296,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   },
+   {
+    "query": "sirolimus AND VigiBase",
+    "count": 1,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 42217144; registry_records.py get --pmid 42217144 --hops 1",
+  "hits": 0,
+  "finding": "No receipt before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-21; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 37,
+   "references_screened": 35,
+   "references_with_doi": 35,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42217144_Taniguchi2026_PMC_r2.xml",
+   "sha256": "e8de12de1c864927d0f2551d3122b10ac7b7a8f70bef00cca1d7eac105d62ca6",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=13379406",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "e8de12de1c864927d0f2551d3122b10ac7b7a8f70bef00cca1d7eac105d62ca6"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42217144_r2/PMC13379406.1.pdf",
+   "sha256": "45e2791abb3e7e99acddb4c0173ede996a6cbdbd530ba4d455cec55d528d938e",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "45e2791abb3e7e99acddb4c0173ede996a6cbdbd530ba4d455cec55d528d938e"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42217144_r2/40272_2026_754_MOESM1_ESM.pdf",
+   "sha256": "386c00fe71a0327c0d4a4b214d896b8decf54d234f23712bd3611ff3e9b3d42f",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "386c00fe71a0327c0d4a4b214d896b8decf54d234f23712bd3611ff3e9b3d42f"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42217144_r3c/p05_embedded_1427x2602.png",
+   "sha256": "b243a41c785feb7ea653874feff99787a4ac90057a82f2e1c3b5b611dd130ee9",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42217144_r2/PMC13379406.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 5",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "b243a41c785feb7ea653874feff99787a4ac90057a82f2e1c3b5b611dd130ee9"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42217144_r3c/p07_embedded_1500x1012.png",
+   "sha256": "3f82279d331c84baf4b6693abe07b2c92afd7546001df95e9342bdd5e927acc0",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42217144_r2/PMC13379406.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 7",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "3f82279d331c84baf4b6693abe07b2c92afd7546001df95e9342bdd5e927acc0"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Cohort: ten NICU infants, median 44.5 days at start, six preterm, indications lymphatic anomalies, haemangioma and one hemimegalencephaly.",
+    "snippet": "The indications were lymphatic malformation in four cases, generalized lymphatic anomaly in four cases, hemangioma in one case, and hemimegalencephaly in one case.",
+    "anchor": "Results / Retrospective Cohort",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42217144_Taniguchi2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Exposure: initial dose 0.02 mg/kg, adjusted to trough 5-15 ng/mL (a class-level observation; no recommendation follows).",
+    "snippet": "Sirolimus therapy was initiated at a dose of 0.02 mg/kg, and the dosage was subsequently adjusted based on trough levels to maintain a target concentration of 5–15 ng/mL.",
+    "anchor": "Methods / Study Design and Participants",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42217144_Taniguchi2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Thresholds are pragmatic, not validated for non-fasting NICU infants, and sampling was non-fasting.",
+    "snippet": "The definitions of dyslipidemia were based on previously published pediatric reference values [27, 28] and were used in this study as pragmatic classification thresholds rather than as diagnostic cutoffs specifically validated for non-fasting NICU neonates and infants",
+    "anchor": "Methods / Definition of Dyslipidemia",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42217144_Taniguchi2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "After sirolimus all ten had triglycerides in the high range and nine of ten total cholesterol; two of ten had no baseline lipids.",
+    "snippet": "whereas after treatment all ten patients were classified as high.",
+    "anchor": "Results / Retrospective Cohort",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42217144_Taniguchi2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Severity: grade 2 triglycerides in four of ten, grade 3 in one, no grade 4 or 5; no pancreatitis or symptoms; no interruption or discontinuation for lipids.",
+    "snippet": "No clinically apparent pancreatitis or other clinically significant symptoms attributable to dyslipidemia were documented in the medical records.",
+    "anchor": "Results / Retrospective Cohort",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42217144_Taniguchi2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Reversibility rests on n = 5 and uses unscheduled labs, so time to normalisation was not estimated.",
+    "snippet": "lipid abnormalities improved in all cases",
+    "anchor": "Results / Retrospective Cohort",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42217144_Taniguchi2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The pharmacovigilance extract: 17,802 sirolimus reports, 430 dyslipidemia reports, 248 infant (28 d-23 mo) and 48 neonatal reports.",
+    "snippet": "A total of 17,802 sirolimus-related reports were retrieved from VigiBase up to 1 September 2025, including 430 dyslipidemia reports.",
+    "anchor": "Results / Pharmacovigilance",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42217144_Taniguchi2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The age-stratified models compare sirolimus reports with all other drugs in the database, not infants with adults on sirolimus.",
+    "snippet": "reports involving all other drugs in the database served as the exposure reference",
+    "anchor": "Methods / Analytical Approach",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42217144_Taniguchi2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion reads the ratio of ratios as a \"developmental window of vulnerability\", which the authors elsewhere say cannot be read as incidence.",
+    "snippet": "The stark difference in aROR between infants and older children highlights a potential developmental window of vulnerability that closes as metabolic pathways mature.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42217144_Taniguchi2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors declare that reporting odds ratios reflect reporting patterns, not true incidence or risk, and that dose and duration could not be included.",
+    "snippet": "the absence of denominator data means that disproportionality estimates and reporting odds ratios reflect reporting patterns rather than true incidence or risk",
+    "anchor": "Discussion / limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42217144_Taniguchi2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Dose-dependence cannot be assessed: no weight, dose or duration in VigiBase; no concentration analysis in the cohort.",
+    "snippet": "Consequently, we cannot exclude the possibility that cumulative exposure or dose-dependent effects may have influenced the observed RORs.",
+    "anchor": "Discussion / limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42217144_Taniguchi2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Time to onset in infants rests on four reports and is called a composite-report estimate.",
+    "snippet": "this estimate was based on only four infant reports and reflects the onset of composite dyslipidemia reports rather than fraction-specific laboratory changes",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42217144_Taniguchi2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The conclusion recommends lipid screening at baseline and within 7-14 days and calls current monitoring protocols likely inadequate; this is the authors recommendation, recorded as theirs and not adopted here.",
+    "snippet": "Current monitoring protocols derived from older populations are likely inadequate.",
+    "anchor": "Conclusion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42217144_Taniguchi2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Confounders named by the authors: parenteral nutrition, sepsis, indication, concomitant drugs, and the NICU context as a possible reason the neonate signal is lower.",
+    "snippet": "dyslipidemia might be attributed to total parenteral nutrition (TPN) or sepsis rather than the drug, leading to underreporting",
+    "anchor": "Discussion / limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42217144_Taniguchi2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 2: the NA row carries N = 129, equal to the 45-64 year stratum N, and the Results text separately says 129 sirolimus reports had missing age; N (dyslipidemia reports) and report counts are different quantities that share the number.",
+    "snippet": "An additional 129 sirolimus-related reports had missing age information and were therefore not included in the age-stratified analyses.",
+    "anchor": "Results / Study Population",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42217144_Taniguchi2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 2 caption: the stratum N column and the ROR columns that carry the infant 147.08 estimate.",
+    "snippet": "Crude reporting odds ratios (RORs) and adjusted reporting odds ratios (aRORs) for dyslipidemia associated with sirolimus exposure, estimated separately within each age stratum",
+    "anchor": "Table 2 caption",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42217144_Taniguchi2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 2 (300 ppi): forest plot of adjusted ROR on a log axis: neonates 20.15 [3.72-109.32], infants 147.08 [79.66-271.54], children 15.77, adolescents 4.89, adults 2.31 to 3.39; the infant interval does not overlap any other stratum. The numerators are 3, 19, 42, 16, 60, 129, 27 and 5 reports (Table 2); from the paper own counts the share of sirolimus reports that are dyslipidemia is 19 of 248 (7.7 percent) in infants, 42 of 872 (4.8 percent) in 2-11 year olds, 16 of 596 (2.7 percent) in 12-17 year olds, 3 of 48 (6.3 percent) in neonates (arithmetic by this reader from the text and Table 2).",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Forest plot labels: Infants 147.08 [79.66 - 271.54]; Neonates 20.15 [3.72 - 109.32]; children 15.77 [10.64 - 23.38]",
+    "anchor": "Figure 2, embedded raster p.7",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42217144_r3c/p07_embedded_1500x1012.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[8]",
+    "qualifies_needle": "The stark difference in aROR between infants "
+   },
+   {
+    "proposition": "Fig 1 (300 ppi): individual trajectories for ten patients. Panels A,C,E (baseline available, 8 patients): TC rises above the 200 line in about five lines; TG in several lines returns to or below 100 mg/dL at later times (one near 75, one near 80 at about day 315-345) while others stay near 250; one TG spike near 545 mg/dL at about day 162. Panels B,D,F (no baseline, 2 patients): one patient starts at TC about 370 and falls to about 130 as the dose was halved; the other stays near 200.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] E brown line peak ~545 at day 162; B blue line TC 372 falling to 130",
+    "anchor": "Figure 1, embedded raster p.5",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42217144_r3c/p05_embedded_1427x2602.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[3]",
+    "qualifies_needle": "whereas after treatment all ten patients were"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch XML, PMC PDF and the READUS-PV checklist supplement fingerprinted; Figure 1 and Figure 2 extracted at 300 ppi and inspected; Tables 1-4 read from the XML table markup.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}

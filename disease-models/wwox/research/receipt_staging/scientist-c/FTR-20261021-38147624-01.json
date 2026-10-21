@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261021-38147624-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "38147624",
+  "doi": "10.1182/bloodadvances.2022008926"
+ },
+ "event_at": "2026-10-21T22:11:00Z",
+ "analysis_at": "2026-10-21T22:11:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-c, task REPURP-10H-R3-C-20261021, PRIMARY_EVIDENCE_READ, QUESTION_DRIVEN (the dispatch had the reader read the known-roads MYC section and the rescue-reference scaffold before the first paper); XML and figures acquired with pmc_bucket_fetch.py, figures inspected as images; prepared as JSON for the integrator and not appended by this actor.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID38147624_Fuchs2024_PMC_r2.xml",
+ "source_fingerprint": "b8c645ae97daf5d35777213530928433df2220cc629062a646ba7cc4c54d2858",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID38147624.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261021.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "full text, figures as images and supplement read; see manifest"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
