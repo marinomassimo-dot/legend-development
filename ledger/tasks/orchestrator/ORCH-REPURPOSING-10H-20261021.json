@@ -65,10 +65,11 @@
    "scientist-a": {
     "group": "R1",
     "agentId": "a3c29605f071db51b",
-    "task": "REPURP-10H-P4-DEEP-A-20261022",
-    "state": "P4 deep-recovery cards, worktree p4-a; R1 audit repair message delivered 23:1xZ (priority over cards)",
+    "task": "REPURP-10H-FILL-A-20261022",
+    "state": "R1 repair landed (2ef7991d; PB-4 NARROW did not survive, restated INCONCLUSIVE for a protein-loss lesion), P4 deep cards landed (e99474b4: 5 cards + 7 abstentions); relay FILL started",
     "previous_agents": [
-     "ab601f2e19d3a1d37"
+     "ab601f2e19d3a1d37",
+     "a3c29605f071db51b"
     ]
    },
    "scientist-b": {
@@ -181,6 +182,10 @@
     "file": "page_adjudications/locator_audit_R3_repairs_R3b_20261022.md",
     "state": "RUNNING",
     "scope": "51 repaired entries and 7 added anchors in six R3 manifests; six R3b readings"
+   },
+   "deep_cards": {
+    "state": "TO_DISPATCH",
+    "scope": "12 packets in cards/: A01 PBA class, A02 proteasome inhibitors, B01 amlexanox, C01 AAV9-WWOX, D01 A51 (cards); A03-A05, B02, C02, C03, D02 (abstentions)"
    }
   },
   "harness": {

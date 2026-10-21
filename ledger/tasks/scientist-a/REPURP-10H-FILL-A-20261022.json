@@ -1,0 +1,38 @@
+{
+ "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Part of the ten-hour repurposing batch ORCH-REPURPOSING-10H-20261021. Adjacent and transferable literature: every paper that is not WWOX evidence is labelled NOT WWOX EVIDENCE, at class level, no dose, no paediatric suitability presumed, not medical advice.",
+ "TASK_ID": "REPURP-10H-FILL-A-20261022",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-a",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Close the data gaps the deep-recovery abstentions NAME. Each of the seven abstention cards (A03 client-binding chaperone, A04 ER-proteostasis regulators, A05 HSP70 axis, B02 read-through class, C02 splice ASO, C03 CRISPRa boost, D02 Wnt/tankyrase) states the missing datum that made it an abstention. For each, search the literature for exactly that datum under the three tests, read what qualifies (at most 12 readings), and report whether the abstention can become a card, stays an abstention with a sharper missing datum, or is closed as unanswerable from the literature. Do not rebuild cards: hand the result to the card author's note.",
+ "SCOPE": {
+  "inputs": [
+   "disease-models/wwox/research/drug_repurposing/cards/ (read only; packets and cards)",
+   "disease-models/wwox/research/repurposing_10h_scientist-a_cards_20261022.md"
+  ],
+  "outputs": "your note and receipts only; do NOT edit cards/ (an auditor is reading it) and do NOT touch repurposing_bridge.py"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "analysis note repurposing_10h_scientist-a_20261022c.md with one section per abstention: the missing datum as the card states it, what was searched, what was found, verdict (becomes a card / stays an abstention with a sharper datum / unanswerable)",
+  "per reading: manifest PASS and receipt staged, never recorded",
+  "every numeral in a proposition appears in its quote or is anchored by an added entry",
+  "DEFAULTS_TAKEN and STOP_LOG here"
+ ],
+ "DEPENDENCIES": [],
+ "REVIEW_REQUIREMENT": "Mirror ex post",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently",
+ "MILESTONE_PLAN": [
+  "TASK_ACK/CLAIM",
+  "per-paper M0-M5",
+  "analysis note",
+  "self-eval",
+  "report"
+ ],
+ "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
+ "CURRENT_STATE": "ASSIGNED",
+ "assigned_on": "2026-10-22"
+}
