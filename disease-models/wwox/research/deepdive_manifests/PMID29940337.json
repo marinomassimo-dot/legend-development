@@ -1,0 +1,191 @@
+{
+ "schema_version": 2,
+ "pmid": "29940337",
+ "doi": "10.1016/j.nbd.2018.06.015",
+ "receipt": "FTR-20261022-29940337-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022b.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "PMC efetch XML obtained by pmc_bucket_fetch.py; the figure images are not in the open-data bucket and the Europe PMC supplementaryFiles endpoint returned no archive, so figures stay captions_only (declared debt)."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Preterm rabbit glycerol IVH model with intramuscular GSK-3 beta inhibitor and intracerebroventricular recombinant Wnt3A, plus six-versus-six human preterm autopsy brains; neonatology group; no WWOX content."
+ },
+ "field_density": {
+  "queries_text": [
+   "(Wnt inhibitor OR tankyrase inhibitor OR XAV939 OR \"Wnt signaling inhibition\" OR \"beta-catenin inhibition\") AND (neonatal OR postnatal OR \"developing brain\" OR juvenile) AND (seizure OR epilepsy OR cortical development OR myelination) -> 33"
+  ],
+  "note": "Group R3 relay reading; queries are PubMed counts on 2026-10-22 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "(Wnt inhibitor OR tankyrase inhibitor OR XAV939 OR \"Wnt signaling inhibition\" OR \"beta-catenin inhibition\") AND (neonatal OR postnatal OR \"developing brain\" OR juvenile) AND (seizure OR epilepsy OR cortical development OR myelination)",
+    "count": 33,
+    "source": "PubMed 2026-10-22"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 29940337; registry_records.py get --pmid 29940337 --hops 0",
+  "hits": 0,
+  "finding": "No receipt before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-22; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [
+    {
+     "citing_relation": "citation only: one of several references behind one Discussion sentence on GSK-3 beta suppression and neuroprotection in Parkinson disease models; no result, method or reagent of this paper depends on it",
+     "doi": "10.1096/fj.04-1551fje",
+     "nature": "Expression of concern",
+     "reason_verbatim": "Concerns/Issues about Data;Duplication of Data;Euphemisms for Duplication;Investigation by Journal/Publisher;Investigation by Third Party;Updated to Retraction;",
+     "retraction_date": "8/5/2024 0:00",
+     "retraction_pmid": "39102006",
+     "verdict": "FLAGGED_EXPRESSION_OF_CONCERN"
+    },
+    {
+     "citing_relation": "citation only: one of several references behind one Discussion sentence on GSK-3 beta suppression and neuroprotection in Parkinson disease models; no result, method or reagent of this paper depends on it",
+     "doi": "10.1096/fj.04-1551fje",
+     "nature": "Retraction",
+     "reason_verbatim": "Concerns/Issues about Data;Concerns/Issues about Methods;Investigation by Journal/Publisher;Investigation by Third Party;Objections by Author(s);Unreliable Results and/or Conclusions;Upgrade/Update of Prior Notice(s);",
+     "retraction_date": "4/29/2026 0:00",
+     "retraction_pmid": "42052797",
+     "verdict": "FLAGGED_RETRACTION"
+    }
+   ],
+   "noted": [],
+   "paper_verdict": "FLAGGED_RETRACTION",
+   "reference_source": "network",
+   "references_declared": 61,
+   "references_screened": 61,
+   "references_with_doi": 61,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID29940337_R3b_PMC_r2.xml",
+   "sha256": "b939d730728ce5d30caff6bbe680769b93a5727e1d44ad57e630a63135c5e286",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=6673662",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "b939d730728ce5d30caff6bbe680769b93a5727e1d44ad57e630a63135c5e286"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "In preterm rabbits with glycerol-induced IVH, activated beta-catenin, TCF4 and Axin2 are lower than in pups without IVH at day 7 and GSK-3 beta mRNA is higher; in six versus six human preterm brains activated beta-catenin and TCF4 are lower in white matter only.",
+    "snippet": "However, activated β-catenin levels were reduced in the white matter of preterm infants with IVH compared to controls without IVH (P<0.009), but not in the cortex or ganglionic eminence.",
+    "anchor": "Results / IVH downregulates Wnt-signaling in human preterm infants",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29940337_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A 7-day course of the GSK-3 beta inhibitor AR-A014418 (20 mg/kg intramuscularly twice daily from day 1, one dose) raises Axin2 mRNA, activated beta-catenin and TCF4 at day 7 in pups with IVH and shifts the inhibitory and activating GSK-3 beta phosphorylations in the expected direction.",
+    "snippet": "This indicates that AR-A014418 treatment effectively inhibits GSK-3β enzyme in rabbits with IVH.",
+    "anchor": "Results / IVH increases GSK-3 beta gene expression, and GSK-3 beta inhibition activates Wnt signaling",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29940337_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Myelin basic protein volume fraction in corpus callosum and corona radiata is reduced by IVH and higher with the inhibitor (stereology P = 0.001 versus vehicle), with MBP and MAG higher on western blot, but the g-ratio does not differ and the rise in myelinated axon density to about 150 percent is not significant.",
+    "snippet": "AR-A014418 treatment increased the mean density of myelinated axons to ~150% in rabbits with IVH, however the difference was not statistically significant.",
+    "anchor": "Results / GSK-3 beta inhibition restores myelination in rabbit pups with IVH",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29940337_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In preterm rabbit pups without IVH the inhibitor produced no difference in MBP; the result is cited as data not shown, so the safety side of the contrast is not documented in the paper.",
+    "snippet": "Western blot analyses using MBP antibody and stereological quantification of MBP reactivity in immunolabeled sections did not show difference in the myelination between AR-A014418- and vehicle-treated pups without IVH (data not shown).",
+    "anchor": "Results / GSK-3 beta inhibition restores myelination in rabbit pups with IVH",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29940337_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A single regimen of intracerebroventricular recombinant Wnt3A (500 ng at postnatal days 1, 3 and 6) raised activated beta-catenin at day 3 and Axin2 at day 7 but did not change MBP or neurological scores, and raised IL-1 beta and IL-6 mRNA and Notch intracellular domain at day 3.",
+    "snippet": "Together, the data suggests that rh-Wnt3A treatment does not restore myelination of the white matter in preterm rabbit pups with IVH, unlike GSK-3β inhibition.",
+    "anchor": "Results / rh-Wnt3A treatment does not enhance myelination",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29940337_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Neurological scores at day 14 are better with the inhibitor (gait, distance walked 60 s, righting reflex, hind arm movement; n = 10, 10 and 9 pups) and the authors report no apparent side effect of the inhibitor, but the observation window is 14 days and no EEG or seizure endpoint is reported.",
+    "snippet": "Importantly, we did not observe any apparent side effect attributable to AR-A014418 treatment among pups with IVH receiving this medication.",
+    "anchor": "Results / GSK-3 beta inhibition enhances neurological recovery, not rh-Wnt3A treatment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29940337_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The inhibitor lowers Iba1 microglia density and IL-1 beta mRNA at day 3 (not day 7) and lowers Notch intracellular domain, while Wnt3A raises it; the authors suggest, without testing, that Notch and inflammation mediate the myelin effect.",
+    "snippet": "Hence, it is plausible that AR-A014418-induced Notch downregulation contributed to OPC maturation and myelination in rabbits with IVH",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29940337_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that the lack of effect of Wnt3A, despite lowered Wnt signalling after IVH, suggests Wnt downregulation might not be the principal cause of the myelination failure, and that results cannot be compared with other disease models.",
+    "snippet": "This suggests that downregulation of Wnt signaling might not be the principal cause of myelination failure in IVH.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29940337_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC XML fingerprinted; text, tables-free body and all eleven figure captions read; no figure image was available, so no panel was inspected.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}
