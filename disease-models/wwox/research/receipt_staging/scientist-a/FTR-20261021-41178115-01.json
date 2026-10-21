@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261021-41178115-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "41178115",
+  "doi": "10.1021/acschemneuro.5c00227"
+ },
+ "event_at": "2026-10-21T22:28:29Z",
+ "analysis_at": "2026-10-21T22:28:29Z",
+ "analysis_time_precision": "second",
+ "workflow": "ad-hoc primary read by scientist-a under REPURP-10H-R1-A-20261021: paper_packet claim, Europe PMC fullTextXML, seven main figures opened as images; the supplementary PDF (Figures S1-S5, Table S1) retrieved, not read",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID41178115_Fu2025_PMC12679549.xml",
+ "source_fingerprint": "3f413aa8274b3f586b92cf16e1749e7d36389cefb04d7184987944d2602edee7",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41178115.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

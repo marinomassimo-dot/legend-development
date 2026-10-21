@@ -1,0 +1,438 @@
+{
+ "schema_version": 2,
+ "pmid": "41178115",
+ "doi": "10.1021/acschemneuro.5c00227",
+ "receipt": "FTR-20261021-41178115-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named and deduplicated by the Orchestrator's selection file; the per-paper M0 packet and receipt status were run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "The reading is a primary-evidence read of a NOT WWOX EVIDENCE paper; the dossier is the analysis note section, no WWOX commit candidate is implied."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No consolidated baseline claim is narrowed or reversed by this reading; a blind audit is declared OWED where a candidate proposes it."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Not requested; discovery leads are staged separately if any."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a candidate card; BLOCK-1 holds, class level only."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A proteostasis-network group (the same corresponding author as the pharmacological chaperone paper, 39216838) with chemical-biology collaborators; two authors hold patents and shares in a company that licensed the compounds. HEK293T stable lines plus one knock-in iPSC line. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "IRE1 AND XBP1s AND GABA-A receptor",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "proteostasis regulator AND GABRA1",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "unfolded protein response AND epilepsy AND variant",
+    "count": 20,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "PubMed counts, dated; a zero from a title/abstract query licenses 'no paper is indexed', never 'this was never measured' (D-37)."
+ },
+ "multihop": {
+  "references_enumerated": 55,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "55 references enumerated from the JATS; none is WWOX-related."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41178115 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-21 via PubMed efetch for PMID 41178115: publication types ['Journal Article']; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 68,
+   "references_screened": 68,
+   "references_with_doi": 68,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41178115_Fu2025_PMC12679549.xml",
+   "sha256": "3f413aa8274b3f586b92cf16e1749e7d36389cefb04d7184987944d2602edee7",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC12679549: whole article; every text locator is matched against it.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12679549/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "3f413aa8274b3f586b92cf16e1749e7d36389cefb04d7184987944d2602edee7",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID41178115/cn5c00227_0001.jpg",
+   "sha256": "e0235f1f2f807f87ec76a05f67cd4e553373ff60df843d00754788fde763df18",
+   "kind": "figure",
+   "note": "Figure 1 JPEG from the supplementaryFiles container, opened as an image; paired by figure_legend_pairs.py (files 0008 and 0010 are not article figures).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12679549/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "e0235f1f2f807f87ec76a05f67cd4e553373ff60df843d00754788fde763df18",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID41178115/cn5c00227_0002.jpg",
+   "sha256": "ddce6351c67ade7e94d91a000c33dc1f360b5d956ddf473311736e191301eb9f",
+   "kind": "figure",
+   "note": "Figure 2 JPEG from the supplementaryFiles container, opened as an image; paired by figure_legend_pairs.py (files 0008 and 0010 are not article figures).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12679549/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "ddce6351c67ade7e94d91a000c33dc1f360b5d956ddf473311736e191301eb9f",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID41178115/cn5c00227_0003.jpg",
+   "sha256": "62a67a93a9f9d70537ba7c8a0fd5df537c5abb16a20cf5c474253362adfe5bcb",
+   "kind": "figure",
+   "note": "Figure 3 JPEG from the supplementaryFiles container, opened as an image; paired by figure_legend_pairs.py (files 0008 and 0010 are not article figures).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12679549/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "62a67a93a9f9d70537ba7c8a0fd5df537c5abb16a20cf5c474253362adfe5bcb",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID41178115/cn5c00227_0004.jpg",
+   "sha256": "5a3240ab48d59f29ce78473674c7efffb6499e27e2cbb0e3fcad6c9a96291d33",
+   "kind": "figure",
+   "note": "Figure 4 JPEG from the supplementaryFiles container, opened as an image; paired by figure_legend_pairs.py (files 0008 and 0010 are not article figures).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12679549/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "5a3240ab48d59f29ce78473674c7efffb6499e27e2cbb0e3fcad6c9a96291d33",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID41178115/cn5c00227_0005.jpg",
+   "sha256": "06e70d2160c298d5eb6fcd3a9b6c26d5f02ab192d9d12dd1273ed42d91e3bf82",
+   "kind": "figure",
+   "note": "Figure 5 JPEG from the supplementaryFiles container, opened as an image; paired by figure_legend_pairs.py (files 0008 and 0010 are not article figures).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12679549/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "06e70d2160c298d5eb6fcd3a9b6c26d5f02ab192d9d12dd1273ed42d91e3bf82",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID41178115/cn5c00227_0006.jpg",
+   "sha256": "47a8bf7f9e237e7c75f8e38d990d9d5e33143d916d6651b368ff0dc6b7be6d25",
+   "kind": "figure",
+   "note": "Figure 6 JPEG from the supplementaryFiles container, opened as an image; paired by figure_legend_pairs.py (files 0008 and 0010 are not article figures).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12679549/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "47a8bf7f9e237e7c75f8e38d990d9d5e33143d916d6651b368ff0dc6b7be6d25",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID41178115/cn5c00227_0007.jpg",
+   "sha256": "d6f88c82621b28033a10e0d761a3dfda0b1a9d145164174e8e8cf9cfdee5b69b",
+   "kind": "figure",
+   "note": "Figure 7 JPEG from the supplementaryFiles container, opened as an image; paired by figure_legend_pairs.py (files 0008 and 0010 are not article figures).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12679549/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "d6f88c82621b28033a10e0d761a3dfda0b1a9d145164174e8e8cf9cfdee5b69b",
+    "derived": false
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE (GABRA1). Three research-tool IRE1/XBP1s activators raise total alpha1(D219N) post-transcriptionally (GABRA1 mRNA unchanged) by about 1.6- to 2.8-fold.",
+    "snippet": "IXA62, IXA554, and IXA105 increased the expression of α1­(D219N) proteins by 2.4-fold, 1.6-fold, and 2.8-fold, respectively",
+    "anchor": "Results, first section, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41178115_Fu2025_PMC12679549.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 missense variants D219N, G251D, P260L with beta2 and gamma2 in stable or transient HEK293T cells, and a heterozygous G251D human iPSC-derived GABAergic neuron line; three research compounds that activate the IRE1/XBP1s arm of the unfolded protein response; NOT a WWOX system",
+     "genotype": "GABRA1 D219N, G251D, P260L; no WWOX",
+     "endpoint": "total and surface alpha1, peak GABA current, solubility, PEGylation folding assay, endo H, cycloheximide chase, Dendra2 surface decay, proximity ligation"
+    }
+   },
+   {
+    "proposition": "The IRE1 inhibitor only partly removes the gain: with the inhibitor present the alpha1 increase is reduced but remains above vehicle for one compound, so dependence on IRE1 is partial (Figure 1D-F read: 62 about 2.45 to about 1.9 with inhibitor; 554 about 1.6 to about 1.2; 105 about 2.9 to about 1.6, against inhibitor alone near 1).",
+    "snippet": "Co-treatment of an IRE1 RNase active site inhibitor",
+    "anchor": "Figure 1D-F (alpha1(D219N) with compound, IRE1 inhibitor, both, thapsigargin)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41178115/cn5c00227_0001.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 missense variants D219N, G251D, P260L with beta2 and gamma2 in stable or transient HEK293T cells, and a heterozygous G251D human iPSC-derived GABAergic neuron line; three research compounds that activate the IRE1/XBP1s arm of the unfolded protein response; NOT a WWOX system",
+     "genotype": "GABRA1 D219N, G251D, P260L; no WWOX",
+     "endpoint": "total and surface alpha1, peak GABA current, solubility, PEGylation folding assay, endo H, cycloheximide chase, Dendra2 surface decay, proximity ligation"
+    },
+    "qualifies": "entries[0]",
+    "qualifies_needle": "IXA62, IXA554, and IXA105 increased the expre"
+   },
+   {
+    "proposition": "Selectivity for variant over wild type is stated with a supplementary figure that this reading did not open.",
+    "snippet": "indicating the selectivity of these IRE1 activators in the misfolding-prone pathogenic GABAAR variants",
+    "anchor": "Results, second section, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41178115_Fu2025_PMC12679549.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 missense variants D219N, G251D, P260L with beta2 and gamma2 in stable or transient HEK293T cells, and a heterozygous G251D human iPSC-derived GABAergic neuron line; three research compounds that activate the IRE1/XBP1s arm of the unfolded protein response; NOT a WWOX system",
+     "genotype": "GABRA1 D219N, G251D, P260L; no WWOX",
+     "endpoint": "total and surface alpha1, peak GABA current, solubility, PEGylation folding assay, endo H, cycloheximide chase, Dendra2 surface decay, proximity ligation"
+    }
+   },
+   {
+    "proposition": "Function is measured: peak GABA current of D219N rises 2.2- to 3.0-fold and surface alpha1 1.8- to 2.5-fold; surface and current gains are of the same size.",
+    "snippet": "The 100 μM GABA-induced peak currents were significantly increased to 2.2-fold by IXA62 treatment",
+    "anchor": "Results, second section, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41178115_Fu2025_PMC12679549.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 missense variants D219N, G251D, P260L with beta2 and gamma2 in stable or transient HEK293T cells, and a heterozygous G251D human iPSC-derived GABAergic neuron line; three research compounds that activate the IRE1/XBP1s arm of the unfolded protein response; NOT a WWOX system",
+     "genotype": "GABRA1 D219N, G251D, P260L; no WWOX",
+     "endpoint": "total and surface alpha1, peak GABA current, solubility, PEGylation folding assay, endo H, cycloheximide chase, Dendra2 surface decay, proximity ligation"
+    }
+   },
+   {
+    "proposition": "Figure 2 read: dose-response of total alpha1 (62 about 3.2-fold at the top concentration, EC50 about 7.6 micromolar; 554 about 2.3-fold, EC50 about 1.4); time course peaks at 24 to 48 h (62 about 4.9-fold at 48 h); surface biotinylation about 1.8, 2.4, 1.9-fold; Imax in vehicle about 1,300 pA and about 2,900, 4,000, 3,200 pA with the three compounds; GABA EC50 unchanged.",
+    "snippet": "indicating that the promoted receptor trafficking from ER to cell surface led to enhanced function",
+    "anchor": "Figure 2A-M (dose, time, surface, patch clamp)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41178115/cn5c00227_0002.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 missense variants D219N, G251D, P260L with beta2 and gamma2 in stable or transient HEK293T cells, and a heterozygous G251D human iPSC-derived GABAergic neuron line; three research compounds that activate the IRE1/XBP1s arm of the unfolded protein response; NOT a WWOX system",
+     "genotype": "GABRA1 D219N, G251D, P260L; no WWOX",
+     "endpoint": "total and surface alpha1, peak GABA current, solubility, PEGylation folding assay, endo H, cycloheximide chase, Dendra2 surface decay, proximity ligation"
+    },
+    "qualifies": "entries[3]",
+    "qualifies_needle": "The 100 μM GABA-induced peak currents were si"
+   },
+   {
+    "proposition": "The comparison with wild type is indirect: stable lines were not compared with wild type side by side, so the degree of rescue is estimated from a separate transient experiment.",
+    "snippet": "One limitation of our current evaluation is that we did not use native wild-type receptors side-by-side",
+    "anchor": "Discussion, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41178115_Fu2025_PMC12679549.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 missense variants D219N, G251D, P260L with beta2 and gamma2 in stable or transient HEK293T cells, and a heterozygous G251D human iPSC-derived GABAergic neuron line; three research compounds that activate the IRE1/XBP1s arm of the unfolded protein response; NOT a WWOX system",
+     "genotype": "GABRA1 D219N, G251D, P260L; no WWOX",
+     "endpoint": "total and surface alpha1, peak GABA current, solubility, PEGylation folding assay, endo H, cycloheximide chase, Dendra2 surface decay, proximity ligation"
+    }
+   },
+   {
+    "proposition": "Folding read-outs: detergent-solubility ratio, a PEGylation assay for the disulphide-bonded folded state, alpha1 dimers, and endo H resistance all move toward folded and exported forms.",
+    "snippet": "Both compound treatments enhanced the protein folding of α1­(D219N)",
+    "anchor": "Results, third section, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41178115_Fu2025_PMC12679549.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 missense variants D219N, G251D, P260L with beta2 and gamma2 in stable or transient HEK293T cells, and a heterozygous G251D human iPSC-derived GABAergic neuron line; three research compounds that activate the IRE1/XBP1s arm of the unfolded protein response; NOT a WWOX system",
+     "genotype": "GABRA1 D219N, G251D, P260L; no WWOX",
+     "endpoint": "total and surface alpha1, peak GABA current, solubility, PEGylation folding assay, endo H, cycloheximide chase, Dendra2 surface decay, proximity ligation"
+    }
+   },
+   {
+    "proposition": "Figure 3 read: soluble/pellet ratio about 1.9-fold (pellet band shrinks); folded fraction by PEGylation about 1.4 to 1.6-fold; non-reducing dimer about 6.5 to 7.3-fold; endo H-resistant fraction about 1.4 to 1.55-fold; BiP up slightly only for one compound; LMAN1 interaction up about 1.8-fold.",
+    "snippet": "IRE1/XBP1s activators IXA62 and IXA554 enhance the folding and trafficking of",
+    "anchor": "Figure 3A-F (solubility, PEGylation, dimers, endo H, chaperones)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41178115/cn5c00227_0003.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 missense variants D219N, G251D, P260L with beta2 and gamma2 in stable or transient HEK293T cells, and a heterozygous G251D human iPSC-derived GABAergic neuron line; three research compounds that activate the IRE1/XBP1s arm of the unfolded protein response; NOT a WWOX system",
+     "genotype": "GABRA1 D219N, G251D, P260L; no WWOX",
+     "endpoint": "total and surface alpha1, peak GABA current, solubility, PEGylation folding assay, endo H, cycloheximide chase, Dendra2 surface decay, proximity ligation"
+    },
+    "qualifies": "entries[6]",
+    "qualifies_needle": "Both compound treatments enhanced the protein"
+   },
+   {
+    "proposition": "A cycloheximide chase shows delayed degradation of the variant.",
+    "snippet": "The cycloheximide-chase assay showed that the degradation of α1­(D219N) proteins was significantly delayed",
+    "anchor": "Results, fourth section, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41178115_Fu2025_PMC12679549.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 missense variants D219N, G251D, P260L with beta2 and gamma2 in stable or transient HEK293T cells, and a heterozygous G251D human iPSC-derived GABAergic neuron line; three research compounds that activate the IRE1/XBP1s arm of the unfolded protein response; NOT a WWOX system",
+     "genotype": "GABRA1 D219N, G251D, P260L; no WWOX",
+     "endpoint": "total and surface alpha1, peak GABA current, solubility, PEGylation folding assay, endo H, cycloheximide chase, Dendra2 surface decay, proximity ligation"
+    }
+   },
+   {
+    "proposition": "Figure 4A-B read: vehicle falls to about 0.4 at 1 h and about 0.25 at 2 h; with the compounds about 0.7 to 0.85 at 1 h and about 0.5 to 0.55 at 2 h, converging toward about 0.15 to 0.3 by 4 h; the surface Dendra2 decay (Figure 4G) leaves about 0.4 to 0.5 of the signal at 8 h against about 0.15 in vehicle.",
+    "snippet": "Both IXA62 and IXA554 inhibit the ERAD of misfolding-prone",
+    "anchor": "Figure 4A-G (chase, ERAD factors, immunoprecipitation, surface Dendra2)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41178115/cn5c00227_0004.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 missense variants D219N, G251D, P260L with beta2 and gamma2 in stable or transient HEK293T cells, and a heterozygous G251D human iPSC-derived GABAergic neuron line; three research compounds that activate the IRE1/XBP1s arm of the unfolded protein response; NOT a WWOX system",
+     "genotype": "GABRA1 D219N, G251D, P260L; no WWOX",
+     "endpoint": "total and surface alpha1, peak GABA current, solubility, PEGylation folding assay, endo H, cycloheximide chase, Dendra2 surface decay, proximity ligation"
+    },
+    "qualifies": "entries[8]",
+    "qualifies_needle": "The cycloheximide-chase assay showed that the"
+   },
+   {
+    "proposition": "Two further variants respond: G251D total 1.8- to 3.1-fold and surface 2.3- to 3.1-fold with peak current 1.6- to 2.6-fold; P260L total 1.9- to 2.6-fold and surface only 1.4- to 1.9-fold (supplementary).",
+    "snippet": "IXA62, IXA554, and IXA105 increased total protein levels of α1­(G251D) by 2.6-fold, 1.8-fold, and 3.1-fold",
+    "anchor": "Results, fifth section, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41178115_Fu2025_PMC12679549.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 missense variants D219N, G251D, P260L with beta2 and gamma2 in stable or transient HEK293T cells, and a heterozygous G251D human iPSC-derived GABAergic neuron line; three research compounds that activate the IRE1/XBP1s arm of the unfolded protein response; NOT a WWOX system",
+     "genotype": "GABRA1 D219N, G251D, P260L; no WWOX",
+     "endpoint": "total and surface alpha1, peak GABA current, solubility, PEGylation folding assay, endo H, cycloheximide chase, Dendra2 surface decay, proximity ligation"
+    }
+   },
+   {
+    "proposition": "Figure 5 read: G251D total about 2.6, 1.8 and 3.1-fold; surface about 3.0, 3.1 and 2.3-fold; Imax about 1,000 pA vehicle against about 2,100, 2,600 and 1,600 pA.",
+    "snippet": "Three IRE1/XBP1s activators promote the functional surface expression",
+    "anchor": "Figure 5A-I (G251D total, surface, current, Dendra2)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41178115/cn5c00227_0005.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 missense variants D219N, G251D, P260L with beta2 and gamma2 in stable or transient HEK293T cells, and a heterozygous G251D human iPSC-derived GABAergic neuron line; three research compounds that activate the IRE1/XBP1s arm of the unfolded protein response; NOT a WWOX system",
+     "genotype": "GABRA1 D219N, G251D, P260L; no WWOX",
+     "endpoint": "total and surface alpha1, peak GABA current, solubility, PEGylation folding assay, endo H, cycloheximide chase, Dendra2 surface decay, proximity ligation"
+    },
+    "qualifies": "entries[10]",
+    "qualifies_needle": "IXA62, IXA554, and IXA105 increased total pro"
+   },
+   {
+    "proposition": "In iPSC-derived neurons the read-outs are surface immunofluorescence and proximity-ligation puncta; no current or seizure-relevant read-out; Figure 6 read: surface alpha1 about 450 to 900 and 670, gamma2 about 600 to 1,150 and 870 (arbitrary intensity).",
+    "snippet": "significantly increased the fluorescence intensities of the major endogenous subunits",
+    "anchor": "Results, sixth section, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41178115_Fu2025_PMC12679549.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 missense variants D219N, G251D, P260L with beta2 and gamma2 in stable or transient HEK293T cells, and a heterozygous G251D human iPSC-derived GABAergic neuron line; three research compounds that activate the IRE1/XBP1s arm of the unfolded protein response; NOT a WWOX system",
+     "genotype": "GABRA1 D219N, G251D, P260L; no WWOX",
+     "endpoint": "total and surface alpha1, peak GABA current, solubility, PEGylation folding assay, endo H, cycloheximide chase, Dendra2 surface decay, proximity ligation"
+    }
+   },
+   {
+    "proposition": "The authors name prolonged or high IRE1 activation as a cause of cell death through decay and stress-kinase pathways, so moderate activation is the premise, and two of the compounds were toxic to cells at the highest concentration tested.",
+    "snippet": "However, prolonged or high levels of IRE1 activation can mediate cell death",
+    "anchor": "Introduction, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41178115_Fu2025_PMC12679549.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 missense variants D219N, G251D, P260L with beta2 and gamma2 in stable or transient HEK293T cells, and a heterozygous G251D human iPSC-derived GABAergic neuron line; three research compounds that activate the IRE1/XBP1s arm of the unfolded protein response; NOT a WWOX system",
+     "genotype": "GABRA1 D219N, G251D, P260L; no WWOX",
+     "endpoint": "total and surface alpha1, peak GABA current, solubility, PEGylation folding assay, endo H, cycloheximide chase, Dendra2 surface decay, proximity ligation"
+    }
+   },
+   {
+    "proposition": "Conflict of interest: two authors are inventors on patents for the IRE1 activator compounds and hold shares in a company that licensed them (stated in the article's disclosure).",
+    "snippet": "RLW and JWK are inventors on patents describing IRE1 activator compounds.",
+    "anchor": "Competing interests statement",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41178115_Fu2025_PMC12679549.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 missense variants D219N, G251D, P260L with beta2 and gamma2 in stable or transient HEK293T cells, and a heterozygous G251D human iPSC-derived GABAergic neuron line; three research compounds that activate the IRE1/XBP1s arm of the unfolded protein response; NOT a WWOX system",
+     "genotype": "GABRA1 D219N, G251D, P260L; no WWOX",
+     "endpoint": "total and surface alpha1, peak GABA current, solubility, PEGylation folding assay, endo H, cycloheximide chase, Dendra2 surface decay, proximity ligation"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST returned the whole article as fullTextXML for PMC12679549 (162 kB, 2026-10-21); figures from the supplementaryFiles container.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a figure legend or an inspected figure."
+ }
+}
