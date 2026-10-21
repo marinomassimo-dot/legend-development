@@ -1,0 +1,164 @@
+{
+ "schema_version": 2,
+ "pmid": "28434841",
+ "doi": "10.1016/j.ccell.2017.03.011",
+ "receipt": "FTR-20261022-28434841-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022b.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "PMC efetch XML obtained by pmc_bucket_fetch.py; the open-data bucket held no figure images or supplement for this article, so figures and supplement stay unread (declared debt)."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Patient-derived diffuse intrinsic pontine glioma cultures and orthotopic xenografts; transcription inhibitors (bromodomain inhibitors, covalent CDK7 inhibitor THZ1, HDAC inhibitor); paediatric neuro-oncology groups; no WWOX content."
+ },
+ "field_density": {
+  "queries_text": [
+   "THZ1 AND (neurons OR brain OR memory) -> 14",
+   "(CDK7 OR CDK9 OR \"casein kinase 1\" OR CK1) inhibitor AND (brain penetration OR \"blood-brain barrier\" OR \"brain exposure\") AND mice -> 2"
+  ],
+  "note": "Group R3 relay reading; queries are PubMed counts on 2026-10-22 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "THZ1 AND (neurons OR brain OR memory)",
+    "count": 14,
+    "source": "PubMed 2026-10-22"
+   },
+   {
+    "query": "(CDK7 OR CDK9 OR \"casein kinase 1\" OR CK1) inhibitor AND (brain penetration OR \"blood-brain barrier\" OR \"brain exposure\") AND mice",
+    "count": 2,
+    "source": "PubMed 2026-10-22"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 28434841; registry_records.py get --pmid 28434841 --hops 0",
+  "hits": 0,
+  "finding": "No receipt before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-22; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 98,
+   "references_screened": 94,
+   "references_with_doi": 94,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID28434841_R3b_PMC_r2.xml",
+   "sha256": "9de03b3a791b4f2a5f061214ec14a8c06ec68729e3a5dec48a727ac1ec709229",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC5462626",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "9de03b3a791b4f2a5f061214ec14a8c06ec68729e3a5dec48a727ac1ec709229"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Eight patient-derived DIPG cultures have a median 72-hour THZ1 IC50 of 56 nM (range 28 to 533 nM).",
+    "snippet": "with a median 72-hour IC50 of 56 nM in eight patient–derived DIPG cell cultures tested (range: 28 to 533 nM)",
+    "anchor": "Results / CDK7 inhibition with THZ1 impairs DIPG growth",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28434841_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THZ1 brain parenchymal concentration was measured by LC-MS/MS: about 13.7 ng/g or about 24 nM after intraperitoneal dosing and about 600 nM after intravenous dosing; this is a measured exposure, unlike the inference of an absent survival effect.",
+    "snippet": "we quantified brain penetration and observed an average THZ1 brain parenchymal concentration of 13.7 ng/g or approximately 24 nM following i.p. dosing, and approximately 600 nM following i.v. dosing",
+    "anchor": "Results / CDK7 inhibition with THZ1 impairs DIPG growth",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28434841_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Intravenous dosing could be kept for only one week because of tail-vein sclerosis; intraperitoneal dosing in an aggressive xenograft gave only about 20 percent longer median survival.",
+    "snippet": "THZ1 administration resulted in a significant but modest (∼20%) increase in median survival when compared to vehicle-treated control mice",
+    "anchor": "Results / CDK7 inhibition with THZ1 impairs DIPG growth",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28434841_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Dose and schedule used by the paper: THZ1 10 mg/kg, intravenous or intraperitoneal as indicated, five days a week; the number of animals, the sampling time and the tissue matrix of the concentration measurement are not stated in the text read.",
+    "snippet": "Administration of THZ1 was performed systemically with intravenous tail vein or intraperitoneal injection (as indicated) five days per week (M-F) at 10 mg/kg.",
+    "anchor": "Methods / in vivo administration",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28434841_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors conclude that better brain delivery of CDK7 inhibitors is needed for translation, and a bromodomain inhibitor tested by the same method reached only about 150 nM in brain.",
+    "snippet": "with better brain tissue delivery required for optimal clinical translation",
+    "anchor": "Results / CDK7 inhibition with THZ1 impairs DIPG growth",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28434841_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No normal brain tissue, neuronal or behavioural safety endpoint is reported for THZ1 in this paper; the readouts are tumour cell viability, RNA polymerase II phosphorylation in tumour cultures, tumour burden and survival.",
+    "snippet": "Consistently, we observed loss of RNAPII CTD phosphorylation 24 hours after THZ1 treatment",
+    "anchor": "Results / CDK7 inhibition with THZ1 impairs DIPG growth (negative established across Results)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28434841_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC XML fingerprinted; body text and methods read; no figure image or supplementary file was on disk, so figure panels were not inspected (the brain-concentration panel and its n and time point are unread).",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}
