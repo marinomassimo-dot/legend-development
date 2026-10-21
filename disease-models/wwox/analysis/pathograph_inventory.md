@@ -325,11 +325,11 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 
 | Connective class (lexical) | Candidates |
 |---|---|
-| AMBIGUOUS_LEXICAL_FORM | 999 |
+| AMBIGUOUS_LEXICAL_FORM | 1000 |
 | ARROW | 18 |
 | ASSOCIATIVE | 74 |
 | CAUSAL | 277 |
-| DEPENDENCY | 81 |
+| DEPENDENCY | 80 |
 
 A connective class is a property of the word, not a verdict about the
 relationship. An `ASSOCIATIVE` connective does not make an edge `ASSOCIATED`.
@@ -376,6 +376,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 458 input files; digest
-`0dc2066e88f8dc57`. Sources: the claim, paper and
+`8eeb8a7483c95c87`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 

@@ -31,7 +31,7 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "CLOSED 2026-10-21. WOREE_RESCUE_REFERENCE bound and COUNTED, not estimated: the scaffold arrived with 40 cells (5 families x 8 columns), 20 TRANSCRIBED_FROM_ROADMAP and 20 NOT_YET_BOUND; it now carries 20 measure rows x 8 columns = 160 cells, of which 0 remain NOT_YET_BOUND and 0 remain TRANSCRIBED_FROM_ROADMAP. 157 cells are BOUND to a named panel, caption or verbatim quotation; 3 are UNKNOWN, all three in the `age` column and all three the same defect in the primary - Figure 6F and Supplementary Figure S7 panels E-H state no age for their treated arms anywhere in caption or Results. Three `intervention` cells are bound as an explicit absence (no low-dose arm exists for Figure 7E, Figure 4 or Figure 3H), which is a bound negative and not a gap. CLAIM 011 dose flag ADJUDICATED NARROW, with Figure 3B re-inspected as an image at 300 dpi and measured against its printed axes; candidate CC-20261021-SCIENTIST-C-CLAIM011-DOSE-ADJUDICATION-01, change class MINOR. Blind locator audit NOT mandatory (status is `flagged for review`; no persisted verbatim locator contradicted, corrected or replaced) and RECOMMENDED anyway; the Orchestrator routes it and nothing is propagated. Receipt FTR-20261021-42422765-01 STAGED, not recorded. Manifest STRICT PASS, 0 gaps, 48 entries over 24 artefacts. LINT 0 BLOCK, receipt chain OK, self-eval PASS. Diagnosis at research/session_evaluations/2026-10-21_scientist-c_REPURP-P3-RESCUEREF.md.",
+ "CURRENT_STATE": "CLOSED 2026-10-21. WOREE_RESCUE_REFERENCE bound and COUNTED, not estimated: the scaffold arrived with 40 cells (5 families x 8 columns), 20 TRANSCRIBED_FROM_ROADMAP and 20 NOT_YET_BOUND; it now carries 20 measure rows x 8 columns = 160 cells, of which 0 remain NOT_YET_BOUND and 0 remain TRANSCRIBED_FROM_ROADMAP. 157 cells are BOUND to a named panel, caption or verbatim quotation; 3 are UNKNOWN, all three in the `age` column and all three the same defect in the primary - Figure 6F and Supplementary Figure S7 panels E-H state no age for their treated arms anywhere in caption or Results. Three `intervention` cells are bound as an explicit absence (no low-dose arm exists for Figure 7E, Figure 4 or Figure 3H), which is a bound negative and not a gap. CLAIM 011 dose flag ADJUDICATED NARROW, with Figure 3B re-inspected as an image at 300 dpi and measured against its printed axes; candidate CC-20261021-SCIENTIST-C-CLAIM011-DOSE-ADJUDICATION-01, change class MINOR. Blind locator audit was not mandatory and was RUN anyway (3e5d0e64): 5 SUPPORTED, 2 OVERSHOOT, 1 UNDERSHOOT, all three adverse verdicts dose-bearing and all three repaired at source in WAVE_2_RESULT with contradicts_locator declarations. The NARROW verdict SURVIVES with its class unchanged; leg 2 strengthened, leg 3 narrowed further. Nothing is propagated and the repairs are themselves unaudited. Receipt FTR-20261021-42422765-01 STAGED, not recorded. Manifest STRICT PASS, 0 gaps, 48 entries over 24 artefacts. LINT 0 BLOCK, receipt chain OK, self-eval PASS. Diagnosis at research/session_evaluations/2026-10-21_scientist-c_REPURP-P3-RESCUEREF.md.",
  "assigned_on": "2026-10-21",
  "TASK_ACK": {
   "TASK_ID": "REPURP-P3-RESCUEREF-C-20261021",
@@ -98,5 +98,43 @@
    "what_would_differ": "The record would have carried a fabricated count of its own completeness - the exact failure this repository names as an assumption asserted with the confidence of a measurement."
   }
  ],
- "STOP_LOG": []
+ "STOP_LOG": [],
+ "WAVE_2_RESULT": {
+  "wave": "audit-repair, 2026-10-21, after the voluntary blind locator audit (3e5d0e64) this task recommended",
+  "audit": "disease-models/wwox/research/page_adjudications/locator_audit_PMID42422765_20261021.md — 8 triples, 5 SUPPORTED, 2 OVERSHOOT, 1 UNDERSHOOT, 0 UNVERIFIABLE; all three adverse verdicts dose-bearing",
+  "repairs": [
+   {
+    "entry": 40,
+    "verdict": "UNDERSHOOT",
+    "what": "HD holds 100 percent to ~day 50, not ~day 24: a censoring tick centred on the 100 percent line was read as a step, and 23 days in which the red curve is overdrawn by the navy WT curve at the same height were read as its absence. Secondary: the untreated-knockout 0 percent marker spans days 13-21, centred ~day 17; both '~day 20' and '~day 15' read an edge."
+   },
+   {
+    "entry": 41,
+    "verdict": "OVERSHOOT",
+    "what": "'the low-dose curve ends because the arm is extinct' withdrawn (3B: ~27-42 percent alive at day 60, extinct ~day 79); restated as the panel's own truncation, cause unstated, plus the survivor-conditioning limit on the weight equality."
+   },
+   {
+    "entry": 45,
+    "verdict": "OVERSHOOT",
+    "what": "panel H series transposed (MBP+W runs to ~day 21 at ~5.25 g; KO+RI is the one that ends, ~day 19 at ~4.2 g); panel I's four-asterisk bracket spans WT+RI to the MBP-treated bar, not WT vs KO+RI; and 'the 4e10 of Figures 2 and 3' named a dose Figure 3 does not contain."
+   }
+  ],
+  "verdict_survival": "NARROW SURVIVES, class unchanged (MINOR). Leg 2 (survival) STRENGTHENED - the step is wider than first recorded. Leg 3 (body weight) NARROWED FURTHER - the P30 equality is survivor-conditioned on the LD side (~79 percent alive) and not on the HD side (100 percent), so it is neither evidence of grading nor evidence of its absence. Legs 1, 4 and 5 untouched; entries 42/43/44 all SUPPORTED with every negative bounded. The oligodendrocyte boundary (not a leg) is STRENGTHENED by the panel-I repair. Nothing propagated.",
+  "gates": "locator_contradiction_audit.py --working-tree --fail-on-undeclared: 6 declared revisions, 0 undeclared. Manifest STRICT PASS, 0 gaps, 48 entries. LINT 0 BLOCK. Receipt FTR-20261021-42422765-02 STAGED, dry-run OK, not recorded.",
+  "DEFAULTS_TAKEN": [
+   {
+    "condition": "The reusable detection rule from entry 40 had no row in the DEFAULTS THAT BIT US table, and a Harness agent is repairing that table's numbering concurrently.",
+    "default": "Check the table first (D-14 is adjacent but is legend-versus-figure, not figure-versus-measurement; no row covers a censoring tick or an overdrawn curve), then allocate `max(D-nn) + 1` = D-38 per the allocator note and state in the row why that id cannot collide.",
+    "why_safe": "D-37 is the maximum present and 38 also clears the four ids (D-31, D-33, D-35, D-36) cited elsewhere with no row here, so the in-flight numbering repair cannot collide with it.",
+    "what_would_differ": "Leaving the rule in the card as prose would put it where the re-audit rule of epistemic_discipline 2.3 does not look."
+   },
+   {
+    "condition": "The repairs are themselves unaudited, and a second blind audit of a repair pass was not dispatched.",
+    "default": "State plainly in the candidate that the repairs are unaudited and leave the routing to the Orchestrator; do not self-certify.",
+    "why_safe": "Nothing is propagated; the candidate has not landed in any registry, so an adverse second-round verdict costs an edit and not a retraction.",
+    "what_would_differ": "Self-certifying would have broken producer-is-not-verifier on exactly the propositions a blind auditor has already corrected once."
+   }
+  ],
+  "STOP_LOG": []
+ }
 }
