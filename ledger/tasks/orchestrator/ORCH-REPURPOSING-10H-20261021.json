@@ -60,31 +60,31 @@
  },
  "WATCH": {
   "interval": "hourly, 10 firings",
-  "cycles_done": 0,
+  "cycles_done": 1,
   "roster": {
    "scientist-a": {
     "group": "R1",
     "agentId": "ab601f2e19d3a1d37",
     "task": "REPURP-10H-R1-A-20261021",
-    "state": "RUNNING (dispatched)"
+    "state": "RUNNING (measured 22:16Z via ListAgents, 16 min in; own worktree and branch present)"
    },
    "scientist-b": {
     "group": "R2",
     "agentId": "a85b13d3c3c5f7071",
     "task": "REPURP-10H-R2-B-20261021",
-    "state": "RUNNING (dispatched)"
+    "state": "RUNNING (measured 22:16Z via ListAgents, 16 min in; own worktree and branch present)"
    },
    "scientist-c": {
     "group": "R3",
     "agentId": "ab754106b9854e8bd",
     "task": "REPURP-10H-R3-C-20261021",
-    "state": "RUNNING (dispatched)"
+    "state": "RUNNING (measured 22:16Z via ListAgents, 16 min in; own worktree and branch present)"
    },
    "scientist-d": {
     "group": "R4",
     "agentId": "aba610f58ef0e9b25",
     "task": "REPURP-10H-R4-D-20261021",
-    "state": "RUNNING (dispatched)"
+    "state": "RUNNING (measured 22:16Z via ListAgents, 16 min in; own worktree and branch present)"
    }
   },
   "restart_rule": "a Scientist whose agent has stopped is resumed with SendMessage to its agentId: if it stopped on a rate limit, continue from durable state; if its lot is finished, hand it the next unclaimed studies of its group from the persisted selection; never start a duplicate agent for an actor that is still running",
@@ -97,6 +97,11 @@
    {
     "t": "2026-10-21T22:00Z",
     "event": "four Scientists dispatched on groups R1-R4; roster recorded"
+   },
+   {
+    "t": "2026-10-21T22:16Z",
+    "cycle": 1,
+    "event": "all four Scientists live (ListAgents); worktrees r1-a, r2-b, scientist-c-r3, r4-d each on its own task branch; nothing stopped, nothing restarted; nothing staged on main to record; main 5dd4283f clean and equal to the remote"
    }
   ]
  },
