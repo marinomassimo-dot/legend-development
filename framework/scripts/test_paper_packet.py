@@ -301,6 +301,14 @@ def _needs_local_corpus(case: unittest.TestCase, *pmids: str) -> None:
             case.skipTest(f"local corpus artefact absent for PMID {pmid}: {missing[0]}{more}")
 
 
+def _has_pymupdf() -> bool:
+    try:
+        import pymupdf  # noqa: F401, PLC0415
+    except ImportError:
+        return False
+    return True
+
+
 def _needs_page_crops(case: unittest.TestCase, pmid: str) -> None:
     folder = ROOT / f"disease-models/wwox/research/page_adjudications/PMID{pmid}"
     if not any(folder.glob("*.png")) if folder.is_dir() else True:
@@ -872,6 +880,272 @@ class PeerWorkIsVisibleBeforeTheSecondReading(unittest.TestCase):
                              capture_output=True, text=True)
         self.assertEqual(1, second.returncode, second.stderr)
         self.assertIn("scientist-c", second.stdout)
+
+
+# --------------------------------------------------------------------------- rank
+#
+# 🔴 THE TWO TRAPS ARE TESTED ON A SYNTHETIC PDF, NOT ON THE CORPUS, and that is deliberate.
+# `files/` is gitignored, so a fresh clone holds no publisher PDF and a corpus-only test of the
+# ranking would SKIP in exactly the run the release battery performs. So the measured geometry of
+# PMID 42422765 is rebuilt here with PyMuPDF — six whole-figure pages whose figure is one embedded
+# raster and no vector content, and one figure-7 page whose raster is a 759x515 fragment under 365
+# vector drawing commands — and the traps are asserted against that. The live corpus check below
+# is the Scientist's acceptance test and is allowed to skip.
+
+FIG_PAGE_PT = (603.0, 783.0)        # the publisher PDF's page box, measured 2026-10-21
+WHOLE_FIGURE_PX = (1744, 1699)      # page 6: Figure 3, one raster, 0 vector commands
+WHOLE_FIGURE_PLACED_PT = 418.0      # => 300 ppi
+CDN_FIGURE_PX = (726, 708)          # gr3.jpg, aspect 1.02542 — pairs with the above to 0.0011
+FRAGMENT_PX = (759, 515)            # page 11: Figure 7's ONLY raster, the ECoG traces alone
+FRAGMENT_PLACED_PT = 182.0
+CDN_FIGURE_7_PX = (729, 442)        # gr7.jpg, aspect 1.64932 — 0.106 from the fragment
+
+
+def _solid_png(width: int, height: int, shade: int = 160) -> bytes:
+    """A real PNG of the given pixel size, written without Pillow."""
+    import struct as _s
+    import zlib as _z
+    raw = b"".join(b"\x00" + bytes([shade, shade, shade]) * width for _ in range(height))
+
+    def chunk(tag: bytes, payload: bytes) -> bytes:
+        return (_s.pack(">I", len(payload)) + tag + payload
+                + _s.pack(">I", _z.crc32(tag + payload) & 0xFFFFFFFF))
+
+    return (b"\x89PNG\r\n\x1a\n"
+            + chunk(b"IHDR", _s.pack(">IIBBBBB", width, height, 8, 2, 0, 0, 0))
+            + chunk(b"IDAT", _z.compress(raw))
+            + chunk(b"IEND", b""))
+
+
+def _build_rank_workspace(root: Path) -> None:
+    """A workspace whose PDF reproduces the measured geometry the two traps were found in."""
+    pymupdf = __import__("pymupdf")
+    figures = root / "files/figures/PMID99999942"
+    figures.mkdir(parents=True)
+    (figures / "gr3.jpg").write_bytes(_solid_png(*CDN_FIGURE_PX))   # suffix is irrelevant to
+    (figures / "gr7.jpg").write_bytes(_solid_png(*CDN_FIGURE_7_PX))  # the header parser
+    supplement = root / "files/supplement/PMID99999942"
+    supplement.mkdir(parents=True)
+
+    document = pymupdf.open()
+    whole = document.new_page(width=FIG_PAGE_PT[0], height=FIG_PAGE_PT[1])
+    height_pt = FIG_PAGE_PT[0] * 0.0 + WHOLE_FIGURE_PLACED_PT * WHOLE_FIGURE_PX[1] / WHOLE_FIGURE_PX[0]
+    whole.insert_image(pymupdf.Rect(60, 60, 60 + WHOLE_FIGURE_PLACED_PT, 60 + height_pt),
+                       stream=_solid_png(*WHOLE_FIGURE_PX))
+    vector = document.new_page(width=FIG_PAGE_PT[0], height=FIG_PAGE_PT[1])
+    frag_h = FRAGMENT_PLACED_PT * FRAGMENT_PX[1] / FRAGMENT_PX[0]
+    vector.insert_image(pymupdf.Rect(60, 60, 60 + FRAGMENT_PLACED_PT, 60 + frag_h),
+                        stream=_solid_png(*FRAGMENT_PX))
+    # The vector panels the extracted raster does NOT carry: 365 drawing commands, the measured
+    # count on page 11 of the publisher PDF.
+    for index in range(365):
+        top = 300 + (index % 60) * 2.0
+        left = 60 + (index // 60) * 40.0
+        vector.draw_line(pymupdf.Point(left, top), pymupdf.Point(left + 30, top + 1))
+    document.save(str(supplement / "article.pdf"))
+    document.close()
+
+    manifests = root / "disease-models/wwox/research/deepdive_manifests"
+    manifests.mkdir(parents=True)
+    (manifests / "PMID99999942.json").write_text(json.dumps({"source_artifacts": [
+        {"path": "files/figures/PMID99999942/gr3.jpg", "kind": "figure"},
+        {"path": "files/figures/PMID99999942/gr7.jpg", "kind": "figure"},
+        {"path": "files/supplement/PMID99999942/article.pdf", "kind": "article_binary"},
+        # 🔴 trap (b): declared, enormous, and NOT on disk.
+        {"path": "files/figures/PMID99999942/fig3_8000x8000_native.png", "kind": "figure",
+         "sha256": "b" * 64},
+    ]}), encoding="utf-8")
+
+
+@unittest.skipUnless(pp.raster_size_second_instrument.__doc__ and _has_pymupdf(),
+                     "PyMuPDF absent: the rank traps are measured on a PDF")
+class TheRankingOfFigureSurfaces(unittest.TestCase):
+    """Which surface to open for a figure — and the two ways the obvious answer is wrong."""
+
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls._tmp = tempfile.TemporaryDirectory()
+        cls.root = Path(cls._tmp.name)
+        _build_rank_workspace(cls.root)
+        cls.report = pp.rank_surfaces(cls.root, "wwox", "99999942")
+        cls.rendered = pp.render_rank(cls.report, 0)
+
+    @classmethod
+    def tearDownClass(cls) -> None:
+        cls._tmp.cleanup()
+
+    def _page(self, number: int) -> list[dict]:
+        return [row for row in self.report["candidates"]
+                if f"article.pdf p.{number}" in row["surface"]]
+
+    # ---- the ranking does the thing it exists for ----------------------------------------
+
+    def test_the_embedded_raster_outranks_the_cdn_raster_of_the_same_figure(self) -> None:
+        """The measured defect: 300 ppi on disk, undeclared, while the reading used ~104 ppi."""
+        embedded = next(row for row in self._page(1) if row["route"] == "embedded")
+        cdn = next(row for row in self.report["candidates"] if row["surface"].endswith("gr3.jpg"))
+        self.assertLess(embedded["position"], cdn["position"])
+        self.assertAlmostEqual(300.0, embedded["ppi"], delta=1.0)
+        self.assertFalse(embedded["ppi_assumed"])
+        self.assertIn("pairs with gr3.jpg", " ".join(embedded["flags"]))
+        self.assertIn("extract the embedded image", embedded["read_this"])
+
+    def test_effective_ppi_is_measured_against_a_printed_size_and_never_invented(self) -> None:
+        cdn = next(row for row in self.report["candidates"] if row["surface"].endswith("gr3.jpg"))
+        # 726 px printed 418 pt (5.806 in) wide => 125 ppi, measured, not assumed.
+        self.assertAlmostEqual(125.0, cdn["ppi"], delta=1.0)
+        self.assertFalse(cdn["ppi_assumed"])
+        self.assertIn("418 pt wide", cdn["ppi_basis"])
+        # gr7 pairs with nothing inside the PDF, so its ppi is ASSUMED and says so, both in the
+        # field and in the rendered line, where a `~` is the reader's only warning.
+        gr7 = next(row for row in self.report["candidates"] if row["surface"].endswith("gr7.jpg"))
+        self.assertTrue(gr7["ppi_assumed"])
+        self.assertIn("assumed", gr7["ppi_basis"])
+        for row in self.report["candidates"]:
+            if row["ppi_assumed"]:
+                self.assertRegex(row["ppi_basis"], r"assumed|recommended|AMBIGUOUS|PAGE CROP")
+        self.assertIn("~", self.rendered)
+
+    def test_it_is_ordered_best_first_and_every_candidate_is_on_disk(self) -> None:
+        scores = [row["score"] for row in self.report["candidates"]]
+        self.assertEqual(scores, sorted(scores, reverse=True))
+        self.assertEqual([row["position"] for row in self.report["candidates"]],
+                         list(range(1, len(self.report["candidates"]) + 1)))
+
+    # ---- trap (a): "extract the embedded image" is the wrong rule for a vector figure -----
+
+    def test_a_vector_figure_is_flagged_and_its_page_render_outranks_its_raster(self) -> None:
+        rows = self._page(2)
+        render = next(row for row in rows if row["route"] == "page_render")
+        fragment = next(row for row in rows if row["route"] == "embedded")
+        self.assertLess(render["position"], fragment["position"],
+                        "the 759x515 fragment must never be offered as the best surface")
+        self.assertIn("LIKELY_VECTOR_FIGURE", " ".join(render["flags"]))
+        self.assertIn("RENDER THE PAGE", " ".join(render["flags"]))
+        self.assertIn("render", render["read_this"])
+        self.assertIn("do NOT extract", render["read_this"])
+        self.assertIn("FRAGMENT", " ".join(fragment["flags"]))
+
+    def test_the_fragment_is_demoted_although_its_own_ppi_is_the_highest_on_the_page(self) -> None:
+        """🔴 The trap is that the fragment's resolution is EXCELLENT. Only its content is partial."""
+        fragment = next(row for row in self._page(2) if row["route"] == "embedded")
+        self.assertAlmostEqual(300.0, fragment["ppi"], delta=1.0)
+        self.assertLess(fragment["score"], 0.0, "a high ppi must not carry a partial figure up")
+
+    def test_both_instruments_are_reported_with_their_measurements(self) -> None:
+        """Vector drawing count AND aspect-ratio pairing — the one that caught it in the field."""
+        render = next(row for row in self._page(2) if row["route"] == "page_render")
+        flag = " ".join(render["flags"])
+        self.assertIn("365 vector drawing command", flag)
+        self.assertIn("759x515", flag)
+        self.assertIn("gr7.jpg", flag)
+        self.assertRegex(flag, r"0\.10\d relative")
+        # And the whole-figure page carries neither signal, so it is not flagged.
+        whole = next(row for row in self._page(1) if row["route"] == "embedded")
+        self.assertEqual(0, whole["vector_drawings"])
+        self.assertNotIn("LIKELY_VECTOR_FIGURE", " ".join(whole["flags"]))
+        self.assertEqual([], [row for row in self._page(1) if row["route"] == "page_render"])
+
+    def test_an_unpaired_raster_alone_is_not_called_a_vector_figure(self) -> None:
+        """The flag is directional: a graphical abstract has no counterpart and is not vector."""
+        self.assertEqual(["article.pdf p.2 · PAGE RENDER at 400 dpi"],
+                         [row["surface"] for row in self.report["candidates"]
+                          if row["route"] == "page_render"])
+
+    # ---- trap (b): a surface that is not on disk is never preferred -----------------------
+
+    def test_a_declared_but_absent_surface_is_never_a_candidate(self) -> None:
+        names = [row["surface"] for row in self.report["candidates"]]
+        self.assertNotIn("files/figures/PMID99999942/fig3_8000x8000_native.png", names)
+        for name in names:
+            self.assertNotIn("8000x8000", name)
+        absent = [row for row in self.report["absent"]
+                  if row["path"].endswith("fig3_8000x8000_native.png")]
+        self.assertEqual(1, len(absent))
+        self.assertIn("ABSENT from disk", absent[0]["note"])
+        self.assertIn("acquire it first", absent[0]["note"])
+
+    def test_the_absent_surface_is_shown_whatever_the_limit(self) -> None:
+        self.assertIn("8000x8000", pp.render_rank(self.report, 1))
+        self.assertIn("ABSENT from disk", pp.render_rank(self.report, 1))
+
+    # ---- it is not a gate, and it writes nothing ------------------------------------------
+
+    def test_rank_exits_zero_and_changes_no_file(self) -> None:
+        before = {path: path.stat().st_mtime_ns for path in self.root.rglob("*")
+                  if path.is_file()}
+        done = subprocess.run([sys.executable, str(Path(pp.__file__)), "rank",
+                               "--pmid", "99999942", "--root", str(self.root), "--json"],
+                              capture_output=True, text=True)
+        self.assertEqual(0, done.returncode, done.stderr)
+        after = {path: path.stat().st_mtime_ns for path in self.root.rglob("*")
+                 if path.is_file()}
+        self.assertEqual(before, after, "rank must not write, least of all into a manifest")
+        self.assertEqual(self.report["candidates"], json.loads(done.stdout)["candidates"])
+
+    def test_the_human_view_truncates_but_the_json_does_not(self) -> None:
+        self.assertEqual(len(self.report["candidates"]),
+                         len(json.loads(json.dumps(self.report))["candidates"]))
+        short = pp.render_rank(self.report, 1)
+        self.assertIn("further candidate(s) ranked below", short)
+
+    def test_no_prior_conclusion_reaches_the_ranking(self) -> None:
+        """The firewall again, on the new surface: it reads paths, bytes and PDF geometry only."""
+        serialised = json.dumps(self.report, ensure_ascii=False) + self.rendered
+        for forbidden in pp.FORBIDDEN_SOURCES:
+            self.assertNotIn(forbidden.format(disease="wwox"), serialised)
+
+
+class TheRankingAcceptanceTestOnTheMeasuredPaper(unittest.TestCase):
+    """The Scientist's own acceptance test, on the paper the gap was measured on.
+
+    Skips on a fresh clone, where `files/` is absent — which is why the traps above do not.
+    """
+
+    RANK_PMID = "42422765"
+
+    def setUp(self) -> None:
+        _needs_local_corpus(self, self.RANK_PMID)
+        if not _has_pymupdf():
+            self.skipTest("PyMuPDF absent")
+        self.report = pp.rank_surfaces(ROOT, "wwox", self.RANK_PMID)
+
+    def test_a_publisher_pdf_raster_beats_every_cdn_jpeg_for_figures_1_to_6(self) -> None:
+        best = self.report["candidates"][0]
+        self.assertEqual("embedded", best["route"])
+        self.assertGreaterEqual(best["ppi"], 300.0)
+        cdn = [row for row in self.report["candidates"]
+               if row["surface"].endswith(("gr1.jpg", "gr2.jpg", "gr3.jpg", "gr4.jpg",
+                                           "gr5.jpg", "gr6.jpg"))]
+        self.assertEqual(6, len(cdn), "one row per CDN figure after the byte-identical dedupe")
+        for row in cdn:
+            self.assertLess(row["ppi"], 200.0)
+            self.assertLess(best["position"], row["position"])
+
+    def test_figure_7_is_a_page_render_and_never_its_embedded_raster(self) -> None:
+        page11 = [row for row in self.report["candidates"]
+                  if "PMC13343157.1.pdf p.11" in row["surface"]]
+        self.assertEqual(2, len(page11), "one page render and one fragment")
+        render = next(row for row in page11 if row["route"] == "page_render")
+        fragment = next(row for row in page11 if row["route"] == "embedded")
+        self.assertLess(render["position"], fragment["position"])
+        self.assertEqual((759, 515), (fragment["width"], fragment["height"]))
+        self.assertIn("LIKELY_VECTOR_FIGURE", " ".join(render["flags"]))
+        self.assertEqual(365, render["vector_drawings"])
+
+    def test_the_six_whole_figure_pages_are_not_flagged_as_vector(self) -> None:
+        for page in (3, 4, 6, 7, 9, 10):
+            rows = [row for row in self.report["candidates"]
+                    if f"PMC13343157.1.pdf p.{page}" in row["surface"]]
+            self.assertEqual(["embedded"], [row["route"] for row in rows], f"page {page}")
+            self.assertEqual(0, rows[0]["vector_drawings"], f"page {page}")
+
+    def test_the_cdn_jpegs_are_reported_at_the_resolution_the_reading_actually_had(self) -> None:
+        """~104-125 ppi is what sixteen figure attestations rested on. It is now on the screen."""
+        gr7 = [row for row in self.report["candidates"] if row["surface"].endswith("gr7.jpg")]
+        self.assertEqual(1, len(gr7))
+        self.assertAlmostEqual(104.0, gr7[0]["ppi"], delta=2.0)
+        self.assertTrue(gr7[0]["ppi_assumed"])
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

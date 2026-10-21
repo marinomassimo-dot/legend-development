@@ -100,6 +100,56 @@ Every rejection declares **what would revive it**. If the trigger fires, the rej
 | **D-22** | *two surfaces in the same repository that name the same paper agree about it* | 🔴 **FALSE here:** `paper_registry_current.md` and `wwox_splice_transcript_census_20260921.md` have named `PMID 30853297` with **different first authors** for as long as both have existed, and nothing noticed, because every check verifies a record against **itself** and none verifies two records against **each other**. The registry's byline is also the input to group-credibility and node-independence judgements, so the error propagates into decisions that never mention the paper. **Detection rule:** when two surfaces name the same identifier, they are two assertions about one fact — compare them. Cheapest form: on any PMID you are already handling, glance at every surface that names it before you use any of them. | A byline belonging to a different 2019 WWOX paper sat on `PAPER 025` for months. Added 2026-09-27 (`BATCH_20260927_003`, from `CC-20260921-PAPER025-IDENTITY-01`). |
 | **D-37** | *a title-and-abstract query that returns zero means the measurement was never made* | 🔴 **FALSE, and measured the same day it was nearly written.** Probing `WWOX AND ("visual evoked potential" OR electroretinogram OR DTI OR volumetry OR …)` on PubMed returns **0 results** (2026-10-21), and the full text of a WOREE case series read hours later carries, in its Discussion and its Table 1, a **visual evoked potential** performed in a patient (*«Patient 4 demonstrated undetected visual evoked potentials»*) and a **sleep study** that detected apnoea with hypopnoea. An instrument used once in a five-patient series is **mentioned in a body or a table and indexed in neither the title nor the abstract**, because it is not what the paper is about — which is exactly the condition under which a rare-disease endpoint census is run. **Detection rule:** a zero from a title/abstract query licenses *«no paper is INDEXED for this»*, never *«this was never measured»*. Before writing an instrument or modality negative, say which surface the zero is a zero of; the cheap upgrade is a full-text sweep of the case literature's bodies and tables, and it is cheaper than the negative is costly. | **Caught by `self`, one draft before the record.** The unbounded sentence would have been false, discoverable in one full text, and would have sat in the repository **discouraging the very sweep that disproves it** — the compounding false negative of [[epistemic_discipline]] § 2. Added 2026-10-21 by `scientist-b` (`REPURP-P3-EARLYBENEFIT-B-20261020`, reading `FTR-20261020-36537114-01`). ⚠️ **Id allocated as `D-37`, not as `max + 1`, and the reason is recorded rather than silent:** the allocator note above reserves `D-27`–`D-30` as not minted and names `D-30` as an alias of `D-26`, while `D-31`, `D-33`, `D-35` and `D-36` are **cited as detection rules elsewhere in the research layer** (`discovery_ledger_current.md`, `full_text_queue_current.md`) and appear in **no row of this table**. `max + 1` would therefore have collided with a live reference. 🔵 **Reported, not fixed** — those four dangling ids belong to other actors' records and are named here so the next allocator can see them. |
 
+### 🔢 Allocator addendum — appended 2026-10-21 (ACTOR_ID `plan`, `PLAN-SURFACE-RANKING-20261021`), append-only
+
+*No row above is added, removed or renumbered by this block. It is a **provenance statement**: it says
+what a reader should conclude on meeting a `D-` number that is cited as a detection rule and is not in
+the table. The head note of this section reserves `D-27`–`D-30`; it is silent about `D-31`–`D-36`, which
+are in the same state and which two live research surfaces cite. That silence was the reporting defect,
+and this block closes it without minting anything.*
+
+**Established by measurement, not from the batch records.** `git log -S'| **D-nn** |'` over this file
+returns **zero commits for every one of `D-27` … `D-36`**: no row for any of those ten ids has ever
+existed in this repository's history. So nothing was lost and nothing was silently renumbered — the ids
+were **proposed** by seven commit candidates of 2026-09-22 and the batches that adjudicated them
+(`BATCH_20260927_003`, `BATCH_20260927_004`) allocated the next free numbers instead, recording the
+mapping in each candidate's disposition. Three proposals were minted under lower ids. Four were never
+minted at all: their candidates closed **PROPAGATED with "no operation list"**, so the `D-` row fell out
+of scope while prose that already cited the proposed number stayed. **No queued work will produce them**
+— the candidates are closed.
+
+| Proposed id | State | Minted as | Where the formulation lives |
+|---|---|---|---|
+| `D-27`, `D-28`, `D-29` | never proposed by any candidate; skipped by the allocator | — | — |
+| `D-30` | proposed, minted under another id | `D-26` (the alias is in that row) | `CC-20260922-EXON7-NATURAL-EXPERIMENT-01` |
+| `D-31` | **proposed, NEVER MINTED**, and cited as a rule | — | `CC-20260922-POSTDIAGNOSIS-WINDOW-01` §1 |
+| `D-32` | proposed, minted under another id | `D-20` | `CC-20260922-POSTNATAL-SVZ-01` |
+| `D-33` | **proposed, NEVER MINTED**, and cited as a rule | — | `CC-20260922-TX007-DOSE-CHALLENGE-01` |
+| `D-34` | proposed, minted under another id | `D-21` | `CC-20260922-MODEL-HORIZON-01` |
+| `D-35` | **proposed, NEVER MINTED**, and cited as a rule | — | `CC-20260922-GTGT-CNS-QUALIFICATION-01` §4 |
+| `D-36` | **proposed, NEVER MINTED**, and cited as a rule | — | `CC-20260922-GTGT-CNS-QUALIFICATION-01` §4 |
+
+🔴 **What a reader does with `D-31`, `D-33`, `D-35` or `D-36` today.** Read it as a **citation to a
+proposed rule, not to a row of this table**, and open the candidate named beside it for the formulation.
+The four live citations are: `discovery_ledger_current.md` (`D-31` twice, `D-33`, `D-35`) and
+`full_text_queue_current.md` (`D-31`, `D-36`). **This block does not reproduce their wording**, because
+reproducing a detection rule here is how a row gets minted by accident; the candidates hold the text.
+
+🔴 **Two different repairs remain, and neither is this task's.** Minting the four rows is a `BATCH_COMMIT`
+act performed by the integrator from a commit candidate — the table is this ledger's canonical content.
+Repairing the four citations in place is also a `BATCH_COMMIT` act, on two research current files. Harness
+Engineering can append this provenance and nothing more, so it appended this and stopped. **Recorded
+rather than fixed, which is the repair that loses nothing** — the same disposition the head note's own
+`N6` finding took in 2026-09-28.
+
+🟢 **The allocator hazard itself is already closed, and that is why no row is minted in haste.** The
+table's maximum id is now `D-38`, so the head note's `max(D-nn) + 1` returns `D-39` and can no longer
+collide with a live reference. What remains is the dangling-citation defect, and
+[`scripts/test_detection_rule_citations_resolve.py`](../../../scripts/test_detection_rule_citations_resolve.py)
+now measures it: it parses the table above, holds the unresolved set at exactly these four, and goes red
+the moment a fifth non-existent rule is cited from a live surface.
+
+
 ---
 
 ## Active rejections
