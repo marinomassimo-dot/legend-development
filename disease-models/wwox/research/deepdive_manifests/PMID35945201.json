@@ -1,0 +1,515 @@
+{
+ "schema_version": 2,
+ "pmid": "35945201",
+ "doi": "10.1038/s41467-022-31961-6",
+ "receipt": "FTR-20261021-35945201-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261021.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access XML, figures, PDF and supplement came from pmc_bucket_fetch.py in one call; no cascade needed."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Mouse genetic models of Tsc1 loss in forebrain with genetic or shRNA Raptor reduction; measures myelin, gliosis and culture hyperactivity but not in vivo EEG. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries_text": [
+   "Raptor AND Tsc1",
+   "mTORC1 AND myelination AND tuberous sclerosis"
+  ],
+  "note": "Group R3 reading; queries are PubMed counts on 2026-10-21 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "Raptor AND Tsc1",
+    "count": 75,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   },
+   {
+    "query": "mTORC1 AND myelination AND tuberous sclerosis",
+    "count": 20,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 35945201; registry_records.py get --pmid 35945201 --hops 1",
+  "hits": 0,
+  "finding": "No receipt before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-21; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 102,
+   "references_screened": 101,
+   "references_with_doi": 101,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID35945201_Karalis2022_PMC_r2.xml",
+   "sha256": "2fd2e607cc410592070dd07317d2ba39bd2a39cf3ac7ff441ccae787eb010f26",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=9363483",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "2fd2e607cc410592070dd07317d2ba39bd2a39cf3ac7ff441ccae787eb010f26"
+   }
+  },
+  {
+   "path": "files/supplement/PMID35945201_r2/PMC9363483.1.pdf",
+   "sha256": "3d6b97d8b275e4e659e388bbb154f736ee0a8fe51429f297ad339f2a0a1aad92",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "3d6b97d8b275e4e659e388bbb154f736ee0a8fe51429f297ad339f2a0a1aad92"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID35945201_r3c/p03_130dpi.png",
+   "sha256": "a5f61246122b77ad1a19f6adbfe3cc7a6f01a76881b9c550455a23c929bcf037",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID35945201_r2/PMC9363483.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=130), page 3",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "a5f61246122b77ad1a19f6adbfe3cc7a6f01a76881b9c550455a23c929bcf037"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID35945201_r3c/p04_130dpi.png",
+   "sha256": "fc67ed566f0a42f0fce34ac887e31d56f46fb33e8e31dbb62f9fc016858a67c7",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID35945201_r2/PMC9363483.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=130), page 4",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "fc67ed566f0a42f0fce34ac887e31d56f46fb33e8e31dbb62f9fc016858a67c7"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID35945201_r3c/p05_130dpi.png",
+   "sha256": "b55988c94b831fd3ef6b2ae9cb20934bac0681f23ca368798cee21c608bbdce2",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID35945201_r2/PMC9363483.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=130), page 5",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "b55988c94b831fd3ef6b2ae9cb20934bac0681f23ca368798cee21c608bbdce2"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID35945201_r3c/p06_220dpi.png",
+   "sha256": "f47cf777388d6dd08534bfe213aa92f9b628b610097c488b839aca1fb24cea5c",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID35945201_r2/PMC9363483.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=220), page 6",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "f47cf777388d6dd08534bfe213aa92f9b628b610097c488b839aca1fb24cea5c"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID35945201_r3c/p07_220dpi.png",
+   "sha256": "4d41a50d446ac44acfa903eaf0f82d24aeedafe92ed98316df05654fd10de344",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID35945201_r2/PMC9363483.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=220), page 7",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "4d41a50d446ac44acfa903eaf0f82d24aeedafe92ed98316df05654fd10de344"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID35945201_r3c/p09_130dpi.png",
+   "sha256": "300672278cd505711318f273b89b5fb1e7a205f8f7bc39b69d9b5f9bee93abcd",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID35945201_r2/PMC9363483.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=130), page 9",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "300672278cd505711318f273b89b5fb1e7a205f8f7bc39b69d9b5f9bee93abcd"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID35945201_r3c/p10_130dpi.png",
+   "sha256": "30235416fc35204a7a14d79be40d22737672179c14a99f620d8710dcf4e92beb",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID35945201_r2/PMC9363483.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=130), page 10",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "30235416fc35204a7a14d79be40d22737672179c14a99f620d8710dcf4e92beb"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID35945201_r3c/p11_130dpi.png",
+   "sha256": "7a3d8b83a020788060808c5a83e50083193b8bd843c4970aadb7fd9e6fb4dbcd",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID35945201_r2/PMC9363483.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=130), page 11",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "7a3d8b83a020788060808c5a83e50083193b8bd843c4970aadb7fd9e6fb4dbcd"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID35945201_r3c/p13_130dpi.png",
+   "sha256": "945903fb526cbe9d3ae4815a82577b71e5ada75bf096a225229a313d9b277451",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID35945201_r2/PMC9363483.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=130), page 13",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "945903fb526cbe9d3ae4815a82577b71e5ada75bf096a225229a313d9b277451"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID35945201_r3c/p14_220dpi.png",
+   "sha256": "786bc794bd0bacb889bf9ae99076c22b23a94139494423a1cfa71bf25b6d272a",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID35945201_r2/PMC9363483.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=220), page 14",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "786bc794bd0bacb889bf9ae99076c22b23a94139494423a1cfa71bf25b6d272a"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Rapamycin benchmark in culture: chronic rapamycin lowers Akt S473 phosphorylation more than Tsc1 loss alone.",
+    "snippet": "Notably, we observed a strong reduction of p-Akt in both control and Tsc1-cKO neurons treated chronically with rapamycin, which was greater than with Tsc1 loss alone (Fig. 1h).",
+    "anchor": "Results / Chronic rapamycin",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35945201_Karalis2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Non-linear Raptor-to-signalling relation in culture: p-S6 stays elevated until Raptor falls below about 20 percent.",
+    "snippet": "We observed a non-linear relationship whereby p-S6 remained elevated in Tsc1-cKO cultures even when Raptor protein levels were reduced by up to 80% (Fig. 3c).",
+    "anchor": "Results / Downregulation of Raptor",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35945201_Karalis2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Survival extension is described as gene-dose-dependent across three Raptor genotypes (wild type, heterozygous, homozygous).",
+    "snippet": "Loss of Raptor extended the lifespan of Tsc1-cKO mice in a gene-dose-dependent manner, with homozygous Rptor deletion resulting in near normal survival",
+    "anchor": "Results / Genetic reduction of Raptor extends lifespan",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35945201_Karalis2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The dose that restores survival most (homozygous Raptor loss) produces a severely underdeveloped forebrain.",
+    "snippet": "we found decreased overall brain size, severely reduced cortical thickness, and lack of a clear hippocampal structure",
+    "anchor": "Results / Genetic downregulation of Raptor improves multiple phenotypes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35945201_Karalis2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Sex dependence of the heterozygous survival benefit: about 5 percent of males versus 40 percent of females survive past P40.",
+    "snippet": "By contrast, the Tsc1-cKO;Raptor-cHet male population steadily declined and only 5% of mice survived past P40",
+    "anchor": "Results / Genetic reduction of Raptor extends lifespan",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35945201_Karalis2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Heterozygous Raptor loss gives an intermediate phenotype, not normalisation, for architecture, hypertrophy and myelin.",
+    "snippet": "resulting in an intermediate phenotype between WT and Tsc1-cKO mice",
+    "anchor": "Results / Genetic downregulation of Raptor improves multiple phenotypes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35945201_Karalis2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 5k statistics: MBP intensity in KO;Het is still significantly below wild type (P = 0.0002) while above KO (P = 0.0025).",
+    "snippet": "WT vs KO, ****p < 0.0001; WT vs KO;Het, ***p = 0.0002; KO vs KO;Het, **p = 0.0025",
+    "anchor": "Fig. 5 legend (k)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35945201_Karalis2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Hyperexcitability is measured as calcium transients in cultured hippocampal neurons, not as EEG or seizures in animals.",
+    "snippet": "we used calcium imaging of hippocampal cultures from Tsc1fl/fl;Rptor;wtl/flEmx1-Cre+ mice to test whether Raptor reduction could prevent epileptiform activity.",
+    "anchor": "Results / Hyperexcitability",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35945201_Karalis2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that in vivo EEG was not done because of difficulty in young animals.",
+    "snippet": "Given the challenges of performing in vivo EEG analysis in very young animals",
+    "anchor": "Results / Hyperexcitability",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35945201_Karalis2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Network-event frequency and duration were not significantly reduced by Raptor reduction; only participation fraction was.",
+    "snippet": "While Raptor downregulation did not significantly reduce the frequency or duration of network activity, it was sufficient to reduce the proportion of neurons participating in network events",
+    "anchor": "Results / Hyperexcitability",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35945201_Karalis2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Statistical unit: the calcium comparison uses 20 culture wells from 6-7 preparations for the per-culture panel and 800 neurons per genotype for the per-neuron panels.",
+    "snippet": "n = 20 culture wells from 6 WT and 7 KO and KO;Het independent culture preps.",
+    "anchor": "Fig. 7 legend (k)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35945201_Karalis2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizures persisted after postnatal shRNA treatment.",
+    "snippet": "However, Tsc1-cKO mice treated with shRaptor still exhibited spontaneous behavioral seizures.",
+    "anchor": "Discussion / Therapeutic considerations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35945201_Karalis2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Postnatal shRptor is said to bring cortical MBP to near wild-type level.",
+    "snippet": "We found that shRptor boosted bulk cortical MBP fluorescence in Tsc1-cKO mice to near WT levels (Fig. 9a–e).",
+    "anchor": "Results / Postnatal Raptor reduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35945201_Karalis2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 9e statistics: KO + shRptor versus KO + shCtrl is not significant (P = 0.4833) and versus wild type is also not significant (P = 0.4833); n = 6 per group.",
+    "snippet": "Tsc1-KO+shCtrl vs Tsc1-KO+shRptor, p = 0.4833",
+    "anchor": "Fig. 9 legend (e)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35945201_Karalis2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Cell-of-origin of the myelin change is not established: Emx1-Cre also targets oligodendrocytes, and the non-cell-autonomous route is offered as hypothesis.",
+    "snippet": "Therefore, we hypothesize that the increased MBP expression observed here was likely a result of Raptor reduction in Tsc1-cKO neurons, which led to a non-cell-autonomous increase in cortical myelination.",
+    "anchor": "Results / Postnatal Raptor reduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35945201_Karalis2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Tsc1 het cultures do not show hyperactivity; the model needs complete Tsc1 loss.",
+    "snippet": "Together these data indicate that while loss of one copy of Tsc1 causes some alterations in Ca2+ dynamics in mouse hippocampal neurons, it is not sufficient to induce neuronal or network hyperactivity.",
+    "anchor": "Results / Heterozygous loss of Tsc1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35945201_Karalis2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the model is more severe than the human condition.",
+    "snippet": "However, the phenotypes are generally more severe than in individuals with TSC",
+    "anchor": "Discussion / heterozygous versus homozygous loss",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35945201_Karalis2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Unit of analysis for cell size and p-S6 in vivo is stated per mouse in the legend, with cumulative distributions across neurons tested separately.",
+    "snippet": "e Mean ± SEM cortical neuron soma area per mouse.",
+    "anchor": "Fig. 6 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35945201_Karalis2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 5k (220 dpi page 7): cortical MBP intensity WT about 13.3, KO about 7.3, KO;Het about 10 (arbitrary units x 1000), n = 8 mice; KO;Het remains below WT (***). Fig 5c shows the homozygous Raptor-KO brain strongly malformed.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] h cortex thickness WT ~980, KO ~1230, KO;Het ~1100; k MBP WT ~13.3 KO ~7.3 Het ~10",
+    "anchor": "Figure 5, page 7 at 220 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID35945201_r3c/p07_220dpi.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[5]",
+    "qualifies_needle": "resulting in an intermediate phenotype betwee"
+   },
+   {
+    "proposition": "Fig 9e-h (220 dpi page 14): KO + shRptor MBP about 330 versus KO + shCtrl about 255 and WT about 400, all brackets involving KO + shRptor ns; survival at P40 about 13 percent for KO + shRptor versus about 5 percent for KO + shCtrl; KO + shRptor weight about 8 g (females) and 11 g (males) at P35-40 against about 17 and 21 g in wild type.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] e brackets ns, ns, ** WT vs KO; f KO+shRptor curve ends ~13 percent; g h weights",
+    "anchor": "Figure 9e-h, page 14 at 220 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID35945201_r3c/p14_220dpi.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[12]",
+    "qualifies_needle": "We found that shRptor boosted bulk cortical M"
+   },
+   {
+    "proposition": "Fig 7k-o (130 dpi page 11): per-culture frequency WT about 7 per min, KO about 11.5, KO;Het about 9.3 (events/min); amplitude KO;Het not different from WT (ns) but KO higher; duration and AUC remain above WT in KO;Het.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] k * between KO and KO;Het; m ns WT vs KO;Het; n **** KO;Het vs WT",
+    "anchor": "Figure 7k-o, page 11 at 130 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID35945201_r3c/p11_130dpi.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[7]",
+    "qualifies_needle": "we used calcium imaging of hippocampal cultur"
+   },
+   {
+    "proposition": "Fig 6e,g,l,n,t (130 dpi page 9): per-mouse panels show cortical p-S6 ns across genotypes (WT, KO, KO;Het all ns), CA1 p-S6 KO above WT (*) and KO;Het ns against KO, CA1 GFAP KO above WT (**) with KO;Het ns against both; the p-S6 cumulative distributions across neurons differ at p < 0.0001.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] g ns ns ns; n * and ns; t ** ns ns",
+    "anchor": "Figure 6, page 9 at 130 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID35945201_r3c/p09_130dpi.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 4c-d (220 dpi page 6): median survival KO about P18-19, KO;Het about P24-25 with 26 percent alive at P40, KO;Raptor-KO about 100 percent (16 of 17) alive at P40; Rictor arms do not change survival.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] c lines Tsc1KO;RptorHet (42) crosses 50 percent near P25; Tsc1KO;RptorKO (17) stays near 100",
+    "anchor": "Figure 4, page 6 at 220 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID35945201_r3c/p06_220dpi.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 3c-d,g (130 dpi page 5): p-S6 stays above 100 percent of control until Raptor falls under about 20 percent while p-Akt rises sharply below 20 percent; the KO;Het DIV 18 box shows p-S6 about 130 percent and p-Akt about 70 percent of control.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] c p-S6 curve; d p-Akt curve; g Tsc1-KO;Raptor-Het DIV 18 box",
+    "anchor": "Figure 3, page 5 at 130 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID35945201_r3c/p05_130dpi.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[1]",
+    "qualifies_needle": "We observed a non-linear relationship whereby"
+   },
+   {
+    "proposition": "Fig 1 and Fig 2 (130 dpi pages 3-4): Tsc1 loss raises p-S6 and lowers p-Akt; rapamycin abolishes p-S6 and lowers p-Akt further; Rictor loss leaves p-S6 elevated; Raptor loss normalises p-S6 and p-Akt at DIV 14 (ns for p-S6).",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 1f p-S6 KO ~250 percent ; rapa ~0; Fig 2f p-S6 ns",
+    "anchor": "Figures 1-2, pages 3-4 at 130 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID35945201_r3c/p03_130dpi.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 8 (130 dpi page 13): shRptor lowers p-S6 and soma size in KO neurons in cortex and CA1 (cumulative distributions, n neurons pooled from 6 mice; KO + shRptor cortical p-S6 below wild type).",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] j k cumulative distributions shRptor curves to the left of KO shCtrl",
+    "anchor": "Figure 8, page 13 at 130 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID35945201_r3c/p13_130dpi.png",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch XML and PMC PDF fingerprinted; figures 1-9 read from the article PDF (page renders at 130-220 dpi); supplementary PDF text layer held but supplementary figure images were not opened.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}
