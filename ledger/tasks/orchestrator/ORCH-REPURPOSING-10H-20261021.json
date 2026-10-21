@@ -88,9 +88,9 @@
    },
    "scientist-d": {
     "group": "R4",
-    "agentId": "aba610f58ef0e9b25",
+    "agentId": "a953e6e336bf10780",
     "task": "REPURP-10H-P4-EARLY-D-20261022",
-    "state": "R4 closed (22 readings, landed 1e56a979, receipts 743 chained 81394c63); handed P4 early-benefit cards",
+    "state": "P4 early-benefit cards (relay agent started 22:5xZ)",
     "previous_agents": [
      "aba610f58ef0e9b25"
     ]
