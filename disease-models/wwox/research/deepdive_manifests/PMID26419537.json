@@ -1,0 +1,213 @@
+{
+ "schema_version": 2,
+ "pmid": "26419537",
+ "doi": "10.1186/s13024-015-0046-3",
+ "receipt": "FTR-20261021-26419537-01",
+ "landing": [
+  "FTR-20261021-26419537-01",
+  "repurposing_10h_scientist-b_20261021"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 3566,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-21: 'Morgan A[au]' 3566; with (WWOX OR Wwox) 0. A very common initials-level string: pooled homonyms, not a measure of the group.",
+  "research_type": "experimental_lab",
+  "weighting": "A Liverpool synaptic-protein laboratory (the same group's later knock-in paper is section 18); a worm screen with mammalian cell follow-up; group sizes per data point about 30 to 50 worms, mammalian qRT-PCR n = 3.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID26419537_Chen2015_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement about WWOX content of this surface."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 55,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-26419537-01",
+    "target": "Reference 27 and its companion (rolipram, an earlier dnj-14 screen)",
+    "question": "Does rolipram's effect require DAF-16 or is it distinct?",
+    "status": "open - cited, not read"
+   },
+   {
+    "id": "MH-26419537-02",
+    "target": "Reference 37 (the concentration that stimulates neuronal differentiation in stem cells)",
+    "question": "Is the 0.56 mg/mL concentration pharmacologically comparable to any exposure in the seizure literature of R2?",
+    "status": "open - cited, not read; concentrations in worm and cell experiments are not clinical exposures"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 26419537, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "paper_packet.py packet at claim time: none prior; claimed by scientist-b (adjacent search; the paper is the cited basis of the worm-ethosuximide statements in PMID 36282524)."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-21",
+  "route": "PubMed esummary (JSON) for 26419537 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "pubtype [\"Journal Article\", \"Research Support, Non-U.S. Gov't\"]; no retraction, expression of concern or erratum is visible on the esummary record (the esummary JSON carries no CommentsCorrections list for this PMID, so that absence is a statement about this query).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 55,
+   "references_screened": 55,
+   "references_with_doi": 55,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID26419537_Chen2015_PMC_r2.xml",
+   "sha256": "9cad3b47dfab6f78bd026a36d6c781ac46621fd383d06562c32cea9f35ec8606",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4587861&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "9cad3b47dfab6f78bd026a36d6c781ac46621fd383d06562c32cea9f35ec8606"
+   }
+  },
+  {
+   "path": "files/figures/PMID26419537_r2/13024_2015_46_Fig2_HTML.jpg",
+   "sha256": "6390cabd061b6d8a6bf012004634e4fe500f7660596a9303645ec72f57be08c5",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC4587861",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "6390cabd061b6d8a6bf012004634e4fe500f7660596a9303645ec72f57be08c5"
+   }
+  },
+  {
+   "path": "files/supplement/PMID26419537_r2/13024_2015_46_MOESM1_ESM.pdf",
+   "sha256": "1c614e041b48a30c1f270e67037fc30e4187b644420224aba0b238d6aa64d57c",
+   "kind": "supplement_binary",
+   "note": "Supplementary Table S1 (lifespan statistics, including wild-type N2 across concentrations) and Figures S1 to S13; not opened, so the wild-type results are taken from the Results text.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC4587861",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "1c614e041b48a30c1f270e67037fc30e4187b644420224aba0b238d6aa64d57c"
+   }
+  },
+  {
+   "path": "files/supplement/PMID26419537_r2/PMC4587861.1.pdf",
+   "sha256": "5e606125391a13c08fa585d10ac0e3262f303ed2f692896ca9dec66579a5ab8a",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC4587861",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "5e606125391a13c08fa585d10ac0e3262f303ed2f692896ca9dec66579a5ab8a"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figures opened as images; every text snippet below was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet below sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "Genotype-restricted benefit in worms with the wild-type arm shown: at none of the concentrations tested did ethosuximide change the lifespan of wild-type N2 worms, while it extended the lifespan of dnj-14 null worms to near wild-type; it also did not change wild-type worms' food-race chemosensory behaviour or locomotion.",
+    "snippet": "Notably, none of the concentrations used had any significant effect on the lifespan of wild-type N2 C. elegans (Additional file 2: Figure S1A; Additional file 1: Table S1).",
+    "surface": "body",
+    "anchor": "Results, Ethosuximide ameliorates C. elegans dnj-14 mutant phenotypes",
+    "artifact": "files/fulltext/PMID26419537_Chen2015_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A direct genetic test that the benefit does not need the worm T-type channel: in worms expressing a human mutant Tau, ethosuximide improved motility and lifespan to a similar extent with and without a loss-of-function mutation of the worm T-type channel gene cca-1. The test was made in the Tau model, not in the dnj-14 model (the two genes are both on the X chromosome and the double mutant is technically difficult).",
+    "snippet": "Taken together, these results indicate that the mechanism of ethosuximide action does not involve inhibition of CCA-1.",
+    "surface": "body",
+    "anchor": "Results, Ethosuximide action is independent of T-type calcium channels",
+    "artifact": "files/fulltext/PMID26419537_Chen2015_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mechanism proposed: transcriptomics found ethosuximide-responsive genes in common to the strains, enriched for DAF-16/FOXO targets; knocking down daf-16 by RNAi abolished the lifespan benefit in the dnj-14 mutant (and RNAi of an unrelated chaperone did not), so DAF-16 activity is needed in this model; the authors could not show nuclear translocation of the reporter and say the effect is below detection.",
+    "snippet": "These data therefore suggest that DAF-16 is essential for the therapeutic action of ethosuximide.",
+    "surface": "body",
+    "anchor": "Results, Ethosuximide's protective effect requires DAF-16",
+    "artifact": "files/fulltext/PMID26419537_Chen2015_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mammalian follow-up: in a differentiated mouse neuroblastoma line, ethosuximide at two higher concentrations raised mRNA of four classical FOXO target genes and lowered the fraction of cells with polyglutamine aggregates by about 20 percent, with no viability change. Concentrations are in the range of the worm optimum, not of any clinical exposure, and n = 3.",
+    "snippet": "Therefore, the ability of ethosuximide to modulate DAF-16/FOXO target gene expression is conserved from worms to mammals.",
+    "surface": "body",
+    "anchor": "Results, Ethosuximide modulates mammalian FOXO target gene expression",
+    "artifact": "files/fulltext/PMID26419537_Chen2015_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2 read as an image: panel a Tau thrashing doubled-ish on drug in both the Tau and the Tau; cca-1 strains at day 1 (about 2.2 to 5.4 and 2.8 to 5.3 thrashes per minute with stars) and day 3; panel b lifespan curves of Tau and Tau; cca-1 (green and red) overlap with and without drug shifting right similarly; panel e and f soluble Tau rises and RIPA-insoluble Tau falls with drug (about 26 to about 6 percent).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2a: Tau about 2.2 vs Tau+Etho about 5.4 and Tau;cca-1 about 2.8 vs Tau;cca-1+Etho about 5.3 at day 1; Figure 2f: RIPA fraction about 26 percent control vs about 6 percent ethosuximide.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID26419537_r2/13024_2015_46_Fig2_HTML.jpg",
+    "anchor": "Figure 2 panels a, b, e, f; deposit jpg as delivered",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}
