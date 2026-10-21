@@ -163,6 +163,10 @@
    {
     "t": "2026-10-21T23:2xZ",
     "event": "R4 + early-cards audit returned (9f1a2843). Manifest adverse rate 4 percent vs 16-36 percent for R1/R3 \u2014 scientist-d recomputed trial numbers and self-caught; cards: 8 of 9 carry a defect (KD sentence an inference from Table 1, VGB shared-origin conflation, ETX dependency stale, GROWTH contradicts CLAIM 011, DEV/PDANCHOR unbounded negatives, HORM/CBD context). Repair routed to scientist-d. check_cards.py passes all nine and does not check whether a quote supports its sentence"
+   },
+   {
+    "t": "2026-10-21T23:3xZ",
+    "event": "deep-recovery cards audit returned (c62088c9): 8 of 12 cards with a defect, most residues of wordings repaired or withdrawn elsewhere. Pattern across both card audits: cards freeze the state of the notes at the moment they were built; the structural checker cannot see staleness. Candidate for a Harness note-and-hash check: a card should record the commit of each note it cites and a checker should report when the cited note has moved"
    }
   ],
   "audits": {
@@ -197,7 +201,7 @@
     "scope": "51 repaired entries and 7 added anchors in six R3 manifests; six R3b readings"
    },
    "deep_cards": {
-    "state": "RUNNING",
+    "state": "RETURNED: 109 claims, 75 supported, 13 overshoot, 5 undershoot, 16 unverifiable; cards A03 A04 C03 hold, B01 holds on the key check, 8 carry a defect (stale or withdrawn wordings: R3 sub-proportional, NARROW survival wording, six-divergence count, zero-hit scopes); check_cards.py passed every defective card; repair routed to scientist-a aa4d5f436e85255dd",
     "scope": "12 packets in cards/: A01 PBA class, A02 proteasome inhibitors, B01 amlexanox, C01 AAV9-WWOX, D01 A51 (cards); A03-A05, B02, C02, C03, D02 (abstentions)",
     "agentId": "a7ab5c478c7244b8c",
     "file": "page_adjudications/locator_audit_deep_cards_20261022.md"
