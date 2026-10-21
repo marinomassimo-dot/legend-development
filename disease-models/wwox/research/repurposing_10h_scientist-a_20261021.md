@@ -219,3 +219,7 @@ Receipt `FTR-20261021-40485335-01` (partial_fulltext_read: all six figures and t
 
 *Comparison phase.* FIRST-PASS OBSERVATIONS COMPLETE -> PRIOR KNOWLEDGE ADMITTED FOR COMPARISON (registry: no record for this PMID, a statement about that query only).
 
+## 2 - HELD-partial rows (question written before the owed sections were opened)
+
+**42587736 (Song 2026, phenylbutyrate in GABRA1 variants; prior partial receipt `FTR-20261019-42587736-01`, owed: figures, methods, results).** Question fixed at 2026-10-21 before opening them: (a) in the mouse experiment, is there a per-animal read-out (animal-level points, not pooled blots) for the alpha1 change; (b) does the paper separate total from surface alpha1, and variant from wild-type protein, under the phenylbutyrate class; (c) what is the exposure window and read-out time. The answer feeds R1 questions 2, 3 and 5.
+
