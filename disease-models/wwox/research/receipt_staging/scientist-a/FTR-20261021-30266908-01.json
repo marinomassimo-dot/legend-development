@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261021-30266908-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "30266908",
+  "doi": "10.1038/s41467-018-06507-4"
+ },
+ "event_at": "2026-10-21T22:07:21Z",
+ "analysis_at": "2026-10-21T22:07:21Z",
+ "analysis_time_precision": "second",
+ "workflow": "ad-hoc primary read by scientist-a under REPURP-10H-R1-A-20261021: paper_packet claim, Europe PMC fullTextXML and supplementaryFiles container, all main figures opened as images, two supplementary pages rendered and opened, the other supplementary legends read as text",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID30266908_Guiberson2018_PMC6162227.xml",
+ "source_fingerprint": "ce24646e70385a7a7c962a99cb62bdb48c41a69ccfc2154166ef414c4ac72dfd",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "captions_only",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID30266908.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
