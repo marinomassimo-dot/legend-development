@@ -1,0 +1,370 @@
+{
+ "schema_version": 2,
+ "pmid": "35841234",
+ "doi": "10.1111/epi.17367",
+ "pmcid": "PMC9804149",
+ "receipt": "FTR-20261021-35841234-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Sponsor-funded phase 2 trial; three authors are employees and stockholders of the manufacturer. Dravet and Lennox-Gastaut syndromes; NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "soticlestat[Title/Abstract] AND (Dravet[Title/Abstract] OR \"Lennox-Gastaut\"[Title/Abstract]) AND phase 2[Title/Abstract]",
+    "count": 3,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "\"24-hydroxycholesterol\"[Title/Abstract] AND epilep*[Title/Abstract]",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 34,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 35841234 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 34,
+   "references_screened": 31,
+   "references_with_doi": 31,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID35841234_Hahn2022_PMC.xml",
+   "sha256": "52f570a8eb096e54a1f6b18dbae6e324dd0adb293bb129c7fb707e3536c66544",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML; body, tables cell-wise, figure legends.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9804149/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "52f570a8eb096e54a1f6b18dbae6e324dd0adb293bb129c7fb707e3536c66544"
+   }
+  },
+  {
+   "path": "files/figures/PMID35841234_r2/EPI-63-2671-g001.jpg",
+   "sha256": "34691d4b62d4c8240e4f5c1a9b8f641d7198a2cedeb8fdea20e9299d75fe19bb",
+   "kind": "figure",
+   "note": "Figure 4 (responders and global impressions), native 709x546 JPEG, about 101 ppi (the only figure surface on disk); opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9804149.1/EPI-63-2671-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID35841234_r2/EPI-63-2671-g002.jpg",
+   "sha256": "adcd4f978ee851a5867a6df608cfcdde51d1d461d08ccd4eeb271c2c3f671e3a",
+   "kind": "figure",
+   "note": "Figure 3 (seizure frequency change), native 709x546 JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9804149.1/EPI-63-2671-g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID35841234_r2/EPI-63-2671-g003.jpg",
+   "sha256": "c1482d24b1c34a5af2f096daa50471539947503ac228358e13b62e3101d450cd",
+   "kind": "figure",
+   "note": "Figure 2 (plasma 24HC), native 709x572 JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9804149.1/EPI-63-2671-g003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID35841234_r2/EPI-63-2671-g004.jpg",
+   "sha256": "d463abdce0a07632e7b136a3b22e802dc2814f6362ce4d2ec2ab9df5564260ad",
+   "kind": "figure",
+   "note": "Figure 1 (design and disposition), native 709x656 JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9804149.1/EPI-63-2671-g004.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID35841234_r2/EPI-63-2671-s001.docx",
+   "sha256": "c0544a3c98f273b65c4cbc9a9c00fafa81a0ed7c10dc6826a452755f39435c11",
+   "kind": "supplement_binary",
+   "note": "Tables S1-S3 (docx). Figure S1 is listed separately by the journal and was not obtained.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9804149.1/EPI-63-2671-s001.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID35841234_r2/EPI-63-2671-s001.txt",
+   "sha256": "bb2479a926d3ba61060b166f0ee7895f045e56f45b19914bacc380dd73c21ae9",
+   "kind": "supplement_text",
+   "note": "Text of Tables S1-S3 produced by docx_to_text.py (no embedded images).",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "docx_to_text",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID35841234_r2/EPI-63-2671-s001.docx",
+    "extractor": {
+     "name": "framework/scripts/docx_to_text.py",
+     "version": "repository main 5dd4283f",
+     "call": "python3 framework/scripts/docx_to_text.py --out <txt> <docx>"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The primary endpoint pooled convulsive seizures in Dravet syndrome and drop seizures in Lennox-Gastaut syndrome into one combined population, measured in the maintenance period.",
+    "snippet": "The primary endpoint was the change from baseline in frequency of convulsive seizures (DS) or drop seizures (LGS) in patients receiving soticlestat in the combined patient population during the maintenance period, compared with those receiving placebo.",
+    "anchor": "Methods, Efficacy endpoints",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35841234_Hahn2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The two populations were combined to increase power, with about 23 Dravet and 40 Lennox-Gastaut patients planned per arm.",
+    "snippet": "The two patient populations were combined for the primary endpoint analysis to increase the power of the study.",
+    "anchor": "Methods, Data analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35841234_Hahn2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The statistical analysis plan specified an efficacy analysis set for the primary analysis; the report uses the more inclusive modified intent-to-treat set instead.",
+    "snippet": "An efficacy analysis set, comprising a subset of the mITT analysis set, was specified in the study statistical analysis plan for the primary endpoint analysis.",
+    "anchor": "Methods, Data analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35841234_Hahn2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Primary result: placebo-adjusted median reduction of 30.21 percent in the combined population (p 0.0008).",
+    "snippet": "soticlestat demonstrated a placebo‐adjusted median reduction in seizure frequency of 30.21% (95% CI = −45.97% to −13.88%) during the maintenance period (p = .0008; Figure 3A).",
+    "anchor": "Results, Changes in seizure frequency",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35841234_Hahn2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Dravet subgroup: placebo-adjusted median reduction 50.00 percent (p 0.0002); Lennox-Gastaut: 17.08 percent, not significant.",
+    "snippet": "Patients with DS who received soticlestat demonstrated a statistically significant placebo‐adjusted median reduction in convulsive seizure frequency of 50.00% (95% CI = −74.15% to −24.68%, p = .0002) over the maintenance period",
+    "anchor": "Results, Changes in seizure frequency",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35841234_Hahn2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Responders with at least 50 percent reduction in Dravet syndrome: 30.8 percent on drug against 0 percent on placebo.",
+    "snippet": "This reduction was observed in 30.8% of patients with DS who received soticlestat versus 0% of those who received placebo",
+    "anchor": "Results, Treatment response",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35841234_Hahn2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Baseline drop-seizure frequency in the Lennox-Gastaut arms differed several-fold (mean 440.98 against 150.02) with very wide ranges.",
+    "snippet": "However, the baseline frequency for drop seizures in patients with LGS was more varied, with mean frequencies in the soticlestat and placebo groups of 440.98 (SD = 1133.542) and 150.02 (SD = 203.822), respectively (Table 1).",
+    "anchor": "Results, Baseline demographics",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35841234_Hahn2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say differences in baseline drop-seizure frequency suggest the drop-seizure definition was implemented differently.",
+    "snippet": "the observed differences in baseline seizure frequency, in otherwise similar populations as defined by inclusion/exclusion criteria, suggest a difference in how the definition of drop seizure was implemented.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35841234_Hahn2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Global functioning was assessed by investigator and caregiver impression-of-change scales.",
+    "snippet": "Global functioning was evaluated using the investigator‐ and caregiver‐reported Clinical Global Impression of Change (CGI‐C and Care GI‐C, respectively)",
+    "anchor": "Methods, Efficacy endpoints",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35841234_Hahn2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion states that global functioning was shown to improve with drug although the figure p-values are 0.06 to 0.11 apart from one 0.039.",
+    "snippet": "Global functioning was shown to improve with soticlestat treatment, with investigators and caregivers reporting a greater improvement with soticlestat than with placebo.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35841234_Hahn2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Plasma 24HC fell within two weeks and stayed lower; the authors say this indicates target engagement.",
+    "snippet": "These findings indicate engagement of soticlestat with CH24H, which is predominantly expressed in the brain, resulting in the observed systemic reductions of 24HC.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35841234_Hahn2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors note that 24HC fell similarly in both syndromes while a significant seizure reduction occurred only in Dravet syndrome.",
+    "snippet": "Although soticlestat treatment reduced plasma 24HC levels in both the DS and the LGS patient groups, a significant reduction in seizure frequency was only observed in patients with DS.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35841234_Hahn2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that, although early effective intervention may improve long-term developmental outcomes by reducing epileptic activity, treatment goals should go beyond seizures.",
+    "snippet": "Although early and effective intervention may potentially improve long‐term developmental outcomes by reducing epileptic activity, treatment goals should also go beyond seizure control and aim to address the nonseizure symptoms as well",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35841234_Hahn2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the results may not be generalisable to a real-world population.",
+    "snippet": "However, given the clinical trial setting, the results reported here may not be generalizable to a real‐world population.",
+    "anchor": "Discussion, strengths and limits",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35841234_Hahn2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplement: myoclonic and atypical-absence seizure-free days were similar between arms (73.26 and 72.07 percent), the safety check that the drug did not worsen those seizure types.",
+    "snippet": "Mean (SD) | 73.26 (39.543) | 72.07 (40.182)",
+    "anchor": "Supplementary Table S3",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID35841234_r2/EPI-63-2671-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 3: in Dravet syndrome the placebo median change was +10.12 percent (maintenance) and +7.04 (full period), against -36.5 and -33.76 on drug; the combined placebo median was +3.11 and 0.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3A combined: soticlestat -27.68 (n 69) vs placebo +3.11 (n 66) maintenance, placebo-adjusted -30.21 (-45.97 to -13.88), P = .0008; full period -29.77 vs 0, adjusted -25.06, P = .0024. Fig 3B DS (convulsive): soticlestat -36.5 (n 26) vs placebo +10.12 (n 24), adjusted -50.00 (-74.15 to -24.68), P = .0002; full period -33.76 vs +7.04 (n 25), adjusted -45.95, P = .0007. LGS (drop): -18.93 (n 43) vs -2.2 (n 42), adjusted -17.08 (-38.38 to 2.64), P = .1160; full -20.56 vs -5.98 (n 45), adjusted -14.81, P = .1279.",
+    "anchor": "Figure 3, panels A and B",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35841234_r2/EPI-63-2671-g002.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 4: in Dravet syndrome, 30.8 percent reduced seizures by at least 50 percent on drug and 0 percent on placebo; global impression p-values 0.1138 and 0.0799 (DS) and 0.0605 and 0.0393 (LGS).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 4A DS: >=50% reduction 30.8 (n 26) vs 0 (n 25); >=75% 19.2 vs 0; 100% 3.8 vs 0. LGS: >=50% 16.3 (n 43) vs 13.3 (n 45); >=75% 11.6 vs 0. Fig 4B: DS CGI-C 26.9 vs 8.0 (P = .1138), Care GI-C 57.7 vs 32.0 (P = .0799); LGS CGI-C 27.9 vs 11.1 (P = .0605), Care GI-C 51.2 vs 28.9 (P = .0393).",
+    "anchor": "Figure 4, panels A and B",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35841234_r2/EPI-63-2671-g001.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 2: mean plasma 24HC about 100 ng/mL at baseline falling to about 20 on drug and staying near 75 to 110 on placebo; sample numbers at several days are 3 to 12.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2A bars: baseline soticlestat about 100 (n 65) and placebo about 98 (n 65); day 15 about 26 (n 49) vs about 98 (n 44); day 29 n 10 and 12; day 60 n 4 and 5; day 98 n 3 and 4; day 141 about 22 (n 38) vs about 109 (n 33); error bars SD. Panel B shows DS and LGS drug groups lower than placebo at every day with n as small as 1 to 5 at days 29, 60 and 98.",
+    "anchor": "Figure 2, panels A and B",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35841234_r2/EPI-63-2671-g003.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 1: 141 enrolled (51 Dravet, 90 Lennox-Gastaut), 139 in the modified intent-to-treat set, 126 completed.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1B: enrolled 141 (DS 51; LGS 90); mITT 139 (placebo DS 25, LGS 45; soticlestat DS 26, LGS 43); completed 126 (placebo DS 22, LGS 38; soticlestat DS 24, LGS 42); two soticlestat LGS patients discontinued before mITT. Fig 1A: 8-week dose optimisation then 12-week maintenance.",
+    "anchor": "Figure 1, panels A and B",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35841234_r2/EPI-63-2671-g004.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC9804149/fullTextXML returned HTTP 200 with a JATS body on 2026-10-21; the declared article_text artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}
