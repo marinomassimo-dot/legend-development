@@ -60,13 +60,13 @@
  },
  "WATCH": {
   "interval": "hourly, 10 firings",
-  "cycles_done": 1,
+  "cycles_done": 2,
   "roster": {
    "scientist-a": {
     "group": "R1",
     "agentId": "aa4d5f436e85255dd",
     "task": "REPURP-10H-FILL-A-20261022",
-    "state": "FILL relay running: closing the data gaps the seven deep-recovery abstentions name",
+    "state": "FILL relay running: closing the data gaps the seven deep-recovery abstentions name | measured 23:18Z via ListAgents: running",
     "previous_agents": [
      "ab601f2e19d3a1d37",
      "a3c29605f071db51b"
@@ -76,7 +76,7 @@
     "group": "R2",
     "agentId": "a9be556c4afa30ad3",
     "task": "REPURP-10H-R2b-B-20261022",
-    "state": "R2b relay running (started ~00:00Z)",
+    "state": "R2b relay running (started ~00:00Z) | measured 23:18Z via ListAgents: running",
     "previous_agents": [
      "a85b13d3c3c5f7071",
      "a9ce64fa724e5f4ef"
@@ -86,7 +86,7 @@
     "group": "R3",
     "agentId": "a248f254237ba316a",
     "task": "REPURP-10H-R3c-C-20261022",
-    "state": "R3 repaired and landed (2b33a1fc, 51 repairs, unaudited), R3b landed (58e66825, 6 receipts recorded d334b690); relay R3c started",
+    "state": "R3 repaired and landed (2b33a1fc, 51 repairs, unaudited), R3b landed (58e66825, 6 receipts recorded d334b690); relay R3c started | measured 23:18Z via ListAgents: running",
     "previous_agents": [
      "ab754106b9854e8bd",
      "aa7339b0af1c43595"
@@ -96,7 +96,7 @@
     "group": "R4",
     "agentId": "a1b21908680566c50",
     "task": "REPURP-10H-R4b-D-20261022",
-    "state": "R4b relay (started 23:4xZ)",
+    "state": "R4b relay (started 23:4xZ) | measured 23:18Z via ListAgents: running",
     "previous_agents": [
      "aba610f58ef0e9b25",
      "a953e6e336bf10780"
@@ -154,6 +154,11 @@
    {
     "t": "2026-10-21T23:3xZ",
     "event": "scientist-a landed R1 repair (19 adverse triples fixed; PB-4 NARROW restated INCONCLUSIVE) and P4 deep cards (5 cards, 7 abstentions; bridge gaps G-1 and G-3 closed by Harness meanwhile, G-2 one endpoint per packet still open); FILL relay and deep-cards audit started; ids paired by launch description (scientist-a=aa4d5f..., auditor=a7ab5c...)"
+   },
+   {
+    "t": "2026-10-21T23:18Z",
+    "cycle": 2,
+    "event": "ListAgents: scientists a (aa4d5f436e85255dd), b (a9be556c4afa30ad3), c (a248f254237ba316a), d (a1b21908680566c50) all running; auditors for R3 repairs+R3b (a960bee50bb330853), R4+early cards (ab6f6eda93d6e9018), deep cards (a7ab5c478c7244b8c) and Harness bridge gaps (aa2c22a1eb7c2ebdb) running; no stop, no restart, no staged receipt unrecorded (ledger 775); main 7005e3b9 equals the remote; candidates held pending audits"
    }
   ],
   "audits": {
@@ -172,7 +177,7 @@
     "repair": "message to scientist-a agent a3c29605f071db51b; candidate CC-20261021-SCIENTIST-A-R1-PROTEOSTASIS-01 HELD"
    },
    "R4": {
-    "state": "TO_DISPATCH",
+    "state": "SUPERSEDED: merged into R4_and_early_cards (ab6f6eda93d6e9018)",
     "scope": "42481851 Fig 4 panel a caption versus content; 39625912; 33180985; 35841234; 41784472; 41891667; 41999155; 37537625; 39726432; 37638552"
    },
    "R4_and_early_cards": {
