@@ -1,0 +1,262 @@
+{
+ "schema_version": 2,
+ "pmid": "37275776",
+ "doi": "10.3389/fncel.2023.1175895",
+ "receipt": "FTR-20261021-37275776-01",
+ "landing": [
+  "FTR-20261021-37275776-01",
+  "repurposing_10h_scientist-b_20261021"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 150,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-21: 'Dascal N[au]' 150; with (WWOX OR Wwox) 0. Initials-level string, may pool homonyms.",
+  "research_type": "experimental_lab",
+  "weighting": "A multi-laboratory mouse-plus-oocyte study; the electrophysiology group is the senior author's (a GIRK/G-protein laboratory), the mouse genetics and EEG are a clinical-genetics institute. Credible for GIRK biophysics; EEG/MEA arms are from one mouse line.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID37275776_Colombo2023_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement about WWOX content of this surface."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 106,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-37275776-01",
+    "target": "Kobayashi et al. 2009 (ethosuximide inhibits GIRK channels in vitro; the paper's own basis for the GIRK arm)",
+    "question": "What ethosuximide concentrations inhibit GIRK versus Cav3 in the same expression system, and does that paper test a T-type channel alongside?",
+    "status": "open - cited, not read"
+   },
+   {
+    "id": "MH-37275776-02",
+    "target": "Teng et al. 2022 (Gnb1 K78R mouse, absence-like seizures linked to sensory regulation)",
+    "question": "Does a follow-up on the same mouse report ethosuximide in a T-type-null or Cav3.1 background?",
+    "status": "open - cited, not read"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 37275776, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "paper_packet.py packet 2026-10-21: no artefacts, no receipts, no peer claim; claimed by scientist-b."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-21",
+  "route": "PubMed esummary (JSON) for 37275776 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "pubtype [\"Journal Article\"]; no retraction, expression of concern or erratum is visible on the esummary record (the esummary JSON carries no CommentsCorrections list for this PMID, so that absence is a statement about this query).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 106,
+   "references_screened": 102,
+   "references_with_doi": 102,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID37275776_Colombo2023_PMC_r2.xml",
+   "sha256": "ff7f3eb90b042662c288199a666d013020d2cf293f2505aee8d04179c9ab6acb",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=10232839&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "ff7f3eb90b042662c288199a666d013020d2cf293f2505aee8d04179c9ab6acb"
+   }
+  },
+  {
+   "path": "files/supplement/PMID37275776_r2/PMC10232839.1.pdf",
+   "sha256": "283da77415d50f7728511743fca418d150778aab58e275a5ed9cfcb8e0b24545",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC10232839",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "283da77415d50f7728511743fca418d150778aab58e275a5ed9cfcb8e0b24545"
+   }
+  },
+  {
+   "path": "files/figures/PMID37275776_r2/PMC10232839_p13_embedded.png",
+   "sha256": "cb20e514df9a980fad55aa099392c86b912ebaa60bba184d490d91cb8242cb1c",
+   "kind": "figure",
+   "note": "Figure 4 as the embedded 300 ppi raster of PDF page 13 (rank.py: not flagged vector).",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "cb20e514df9a980fad55aa099392c86b912ebaa60bba184d490d91cb8242cb1c",
+    "derived_from": "files/supplement/PMID37275776_r2/PMC10232839.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF Pixmap",
+     "version": "1.28.2",
+     "call": "largest embedded image of PDF page 13 saved as PNG (2008x1617, 300 ppi)",
+     "join": ""
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID37275776_r2/PMC10232839_p17_embedded.png",
+   "sha256": "3d91e1e87cb4611ba2233a7c430202fcca13844f534057d1b965b639adb88f4e",
+   "kind": "figure",
+   "note": "Figure 7 as the embedded 300 ppi raster of PDF page 17.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "3d91e1e87cb4611ba2233a7c430202fcca13844f534057d1b965b639adb88f4e",
+    "derived_from": "files/supplement/PMID37275776_r2/PMC10232839.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF Pixmap",
+     "version": "1.28.2",
+     "call": "largest embedded image of PDF page 17 saved as PNG (1772x1206, 300 ppi)",
+     "join": ""
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figures opened as images; every text snippet below was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet below sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "Baseline difference that decides what a wild-type arm can show: wild-type mice have almost no SWDs per day (11.7 versus 1723 in the mutant), so a drug effect on SWD count in wild type is bounded at the floor. A mutant-only suppression on this endpoint is guaranteed by the baseline and is not evidence of a genotype-dependent drug action.",
+    "snippet": "while WT mice exhibited extremely rare SWDs (Figures 2B, C; mean ± SEM WT: 11.7 ± 6.5) in a 24 h period.",
+    "surface": "body",
+    "anchor": "Results, Excitability phenotypes in Gnb1K78R/+ mice",
+    "artifact": "files/fulltext/PMID37275776_Colombo2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Both valproate and ethosuximide nearly abolished SWDs in the mutant after acute treatment, with recovery within about one to one and a half hours; phenytoin did not reduce SWDs. Valproate is described in the Discussion as not inhibiting GIRK or T-type channels, so a drug that does neither also abolished the SWDs.",
+    "snippet": "Acute treatment of Gnb1K78R/+ mice with either ETX or VPA nearly abolished SWDs (Figure 4A).",
+    "surface": "body",
+    "anchor": "Results, Ethosuximide corrects EEG and network firing patterns",
+    "artifact": "files/fulltext/PMID37275776_Colombo2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 4A read as an image (300 ppi embedded raster): ethosuximide panel, mutant about 35 SWD counts before drug falling to about 1.5 at 30 min and back to about 6 at 1 h and about 20 at 1.5 h; wild type about 3 before drug and about 0 to 1.5 throughout. Stars mark mutant versus wild type at pre, 1 h and 1.5 h; the 30 min point is circled with no star. Valproate panel is the same shape from about 31 to about 2.5; phenytoin panel stays high (about 40 rising to about 64) in the mutant with wild type at 0. The wild-type arm exists and sits on the floor throughout.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4A: ETX mutant about 35 to about 1.5 at 30 min; WT about 3 to about 0; VPA mutant about 31 to about 2.5; PHT mutant about 40 to about 64.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID37275776_r2/PMC10232839_p13_embedded.png",
+    "anchor": "Figure 4 panel A, page 13 embedded raster 2008x1617",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors' argument for a non-T-type target is by elimination: ethosuximide is described as acting mainly on T-type channels with the extent of block at relevant concentrations disputed, phenytoin (which also has a T-type action) did not suppress, and Gβ1 is said not to regulate Cav3.2. No Cav3 current was measured in the mutant neurons or the mouse.",
+    "snippet": "Together, these considerations support the hypothesis that, in countering GNB1 K78R-related SWDs, ETX acts on a target other than both Na+ channels and T-type Ca2+ channels.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 4",
+    "artifact": "files/fulltext/PMID37275776_Colombo2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Controversy statement in the paper's own words: ethosuximide is thought to act mainly as a T-type blocker, but the extent of T-type block at physiologically relevant concentrations is disputed.",
+    "snippet": "ETX is thought to act mainly as a T-type Ca2+ channel blocker (Coulter et al., 1989), although controversy remains as to the extent of this block at physiologically relevant doses of ETX (Gomora et al., 2001; Crunelli and Leresche, 2002; Tringham et al., 2012).",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 4",
+    "artifact": "files/fulltext/PMID37275776_Colombo2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Methods mention Cav3.2 currents measured by two-electrode voltage clamp in oocytes, but on the body surface (Results and every figure legend) no Cav3.2 result is reported; the supplementary PDF was not opened, so the absence is a statement about the body only.",
+    "snippet": "Whole-cell GIRK and Cav3.2 currents in oocytes were measured using a two-electrode voltage clamp (TEVC) with Geneclamp 500 (Molecular Devices)",
+    "surface": "body",
+    "anchor": "Materials and Methods, Electrophysiology in oocytes",
+    "artifact": "files/fulltext/PMID37275776_Colombo2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Ethosuximide inhibits Gβγ-activated GIRK2 at far lower concentration than basal GIRK1/2 in oocytes: EC50 about 55 micromolar versus about 1.5 to 2 millimolar. The GIRK1/2 value lies at or above the top of the range the paper calls therapeutic, so how much GIRK block occurs at therapeutic exposure depends on the channel composition in the cell, which the paper says is unknown.",
+    "snippet": "Remarkably, Gβγ-activated GIRK2 was inhibited at much lower doses (Figures 7A–C), with an EC50 of ~55 μM (Figure 7 and Supplementary Figures 6A, B).",
+    "surface": "body",
+    "anchor": "Results, Ethosuximide differentially inhibits GIRK1/2 and GIRK2 channels",
+    "artifact": "files/fulltext/PMID37275776_Colombo2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 7B read as an image: Gβγ-activated GIRK2 inhibition curves cross 50 percent at about 0.03 to 0.06 millimolar for both wild-type and K78R Gβ, inside the shaded therapeutic range; GIRK1/2 without Gβγ crosses 50 percent at about 2 to 3 millimolar, to the right of the shaded range. Wild-type and K78R curves are similar or K78R slightly left: ethosuximide's GIRK block is not mutant-specific in the oocyte, so any genotype dependence must come from the larger Gβγ-driven GIRK current in the mutant cell.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7B: GIRK2+GβK78R curve (orange squares) 50 percent near 0.03 mM; GIRK2+GβWT (blue) near 0.06 mM; GIRK1/2 (black) near 2 to 3 mM; shaded band about 0.25 to 0.9 mM.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID37275776_r2/PMC10232839_p17_embedded.png",
+    "anchor": "Figure 7 panel B, page 17 embedded raster 1772x1206",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Null-like and missense genotypes differ: heterozygous Gnb1 deletion (haploinsufficiency) did not lower the electroconvulsive threshold while the K78R missense did. A drug effect or a seizure phenotype in a missense or gain-of-function allele cannot be assumed for a null allele of the same gene, and the converse holds for WWOX.",
+    "snippet": "Female and male Gnb1Del71/+ mice showed ECT values equivalent to WT controls (Figure 2A), demonstrating that Gnb1 haploinsufficiency does not lead to enhanced seizure susceptibility.",
+    "surface": "body",
+    "anchor": "Results, Excitability phenotypes in Gnb1K78R/+ mice",
+    "artifact": "files/fulltext/PMID37275776_Colombo2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The chronic in-vitro arm: ethosuximide corrected the mutant network's bursting at a middle concentration, did nothing at the lowest and over-suppressed network activity at the highest, a non-monotonic concentration response. It was applied to the mutant network only; no wild-type-treated networks are shown in the Figure 4B legend.",
+    "snippet": "At 250 μM, ETX did not affect the bursting phenotype, while at 750 μM, ETX did restore close-to-normal firing to the mutant network.",
+    "surface": "body",
+    "anchor": "Results, Ethosuximide corrects EEG and network firing patterns",
+    "artifact": "files/fulltext/PMID37275776_Colombo2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}

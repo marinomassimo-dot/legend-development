@@ -41,3 +41,27 @@ Depth: `complete_fulltext_read` (PMC XML body, Figures 1 and 2 as page renders a
 
 **OWED.** No claim is narrowed here; no blind audit is owed on this reading unless a commit candidate cites it.
 
+## 2. PMID 37275776 (Colombo 2023): Gnb1 K78R mouse, ethosuximide and GIRK channels. NOT WWOX EVIDENCE
+
+Depth: `partial_fulltext_read` (whole PMC XML body read; Figures 4 and 7 opened as 300 ppi embedded rasters; Figures 1, 2, 3, 5, 6 captions only; the supplementary PDF not opened). Owed: those figures and the supplement, none of which bears on the genotype question. Manifest `PMID37275776.json` STRICT PASS, 10 locators. Receipt staged `FTR-20261021-37275776-01`.
+
+**What it establishes (DATO, for this model).** A heterozygous Gnb1 K78R missense mouse has very frequent spike-and-wave discharges (about 1,700 per 24 h) where wild-type littermates have about 12. Acute ethosuximide and valproate nearly abolished them for roughly an hour; phenytoin did not. Chronic ethosuximide in cultured mutant cortical networks normalised bursting at a middle concentration and over-suppressed at the highest. In oocytes, ethosuximide inhibits GIRK channels, much more potently when the channel is Gbetagamma-activated (GIRK2 about 55 micromolar versus about 1.5 to 2 millimolar for basal GIRK1/2), and does so equally for wild-type and K78R Gbeta.
+
+**This paper is the strongest single caution for DL-MECH-170 in the group, for two reasons.**
+1. **The floor effect.** Figure 4A, read as an image, has the wild-type arm the lead wants: ethosuximide suppresses in the mutant and "does nothing" in wild type, because wild type has about 3 events at baseline and about 0 after. A genotype-restricted suppression of a seizure endpoint is the default outcome whenever the wild-type baseline is near zero; it is the baseline, not the drug action, that is genotype-specific. The lead is only immune to this if the wild-type PTZ-alone baseline in the Wwox assay is measurably above floor. Lithium significantly suppressing the same wild-type PTZ response (CLAIM 016 boundary note) is itself evidence that the wild-type PTZ baseline was above floor, which argues the floor explanation does not fully apply there. This is an INFERENZA from LEGEND's own record of the figure; the three PTZ-alone wild-type values should be read off Cheng 2020 Figure 7b before the lead keeps that protection (new question, below).
+2. **Ethosuximide may not be acting as a T-type blocker at all in a GIRK-driven model.** The authors argue, by elimination, that ethosuximide acted on "a target other than both Na+ channels and T-type Ca2+ channels", and propose GIRK block. They did not measure a Cav3 current in the mutant system: Methods mention Cav3.2 oocyte recordings but no Cav3.2 result appears on the body surface. Valproate abolished SWDs as well, and the paper cites it as inhibiting neither GIRK nor T-type, so SWD abolition is not a mechanism readout of either. Ethosuximide's GIRK block is the same for wild-type and mutant Gbeta in oocytes (Figure 7B), so any genotype dependence has to come from the mutant cell's larger Gbetagamma-GIRK drive, not from the drug.
+
+**What it does not support.** No T-type measurement; no Cav3 involvement shown or excluded; the GIRK argument rests on oocyte expression and on one mouse background; the in-vivo time course (about an hour) is acute pretreatment with SWD counts, not disease course. A heterozygous null of the same gene did not lower the seizure threshold while the missense did, which is a direct caution that null and missense genotypes of one gene do not share phenotype or, by extension, drug response.
+
+**Figure audit.**
+
+| Figure | Surface | Read | Against |
+|---|---|---|---|
+| 4A | p.13 embedded raster 2008x1617 | ETX mutant about 35 to about 1.5 at 30 min, wild type about 3 to about 0 | text: "nearly abolished SWDs"; legend n per arm |
+| 4B/C | same | chronic ETX: 250 uM no change, 750 uM near-normal burst duration, 2 mM over-suppression of firing | text and p-value table |
+| 7B | p.17 embedded raster 1772x1206 | GIRK2+Gbetagamma curves left of the shaded range midpoint; GIRK1/2 to the right | text EC50 values |
+
+**Comparison with the lead.** Axis A: a wild-type arm exists and is floored; this is the clearest published illustration of how a "genotype-specific" drug effect can be a baseline effect. Axis B: strong; the ethosuximide mechanism in a seizure model is contested between T-type, GIRK and unmeasured targets. Axis C: yes. Axis D: none. **Net for DL-MECH-170: narrows the lead's mechanism claim and adds one new falsifier question (the wild-type PTZ-alone baseline).**
+
+**OWED.** A blind locator audit is owed only if a commit candidate cites this paper's floor-effect point to narrow DL-MECH-170; none is written from this reading alone.
+
