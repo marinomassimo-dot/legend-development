@@ -1,0 +1,361 @@
+{
+ "schema_version": 2,
+ "pmid": "42268630",
+ "doi": "10.1002/prp2.70285",
+ "receipt": "FTR-20261021-42268630-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named and deduplicated by the Orchestrator's selection file; the per-paper M0 packet and receipt status were run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "The reading is a primary-evidence read of a NOT WWOX EVIDENCE paper; the dossier is the analysis note section, no WWOX commit candidate is implied."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No consolidated baseline claim is narrowed or reversed by this reading; a blind audit is declared OWED where a candidate proposes it."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Not requested; discovery leads are staged separately if any."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a candidate card; BLOCK-1 holds, class level only."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A zebrafish epilepsy-pharmacology group at the University of California, San Francisco (from the animal-care statement); the senior author declares a consultancy with a pharmaceutical company; funded in part by the patient foundation for the disease. Behavioural and local-field-potential assays in larvae, with no protein read-out. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "stxbp1 AND zebrafish AND phenylbutyrate",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "phenylbutyrate AND STXBP1",
+    "count": 6,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "4-phenylbutyrate AND missense AND pharmacological chaperone AND zebrafish",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "PubMed counts, dated; a zero from a title/abstract query licenses 'no paper is indexed', never 'this was never measured' (D-37)."
+ },
+ "multihop": {
+  "references_enumerated": 46,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "46 references enumerated from the JATS; none is WWOX-related. The worm Munc18-1 study it tests is in this lot (30266908); the SLC6A1 pharmacochaperoning paper (42157447) is the mechanism counterpart."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42268630 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-21 via PubMed efetch for PMID 42268630: publication types ['Journal Article']; CommentsCorrections RefTypes in the efetch record: ['UpdateOf'].",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 46,
+   "references_screened": 46,
+   "references_with_doi": 46,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42268630_Frick2026_PMC13251787.xml",
+   "sha256": "46339bfe62204c7a61143732ab88f2c4b1b3a81e76c820dceeedf0796d2fd949",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC13251787: whole article; every text locator is matched against it.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13251787/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "46339bfe62204c7a61143732ab88f2c4b1b3a81e76c820dceeedf0796d2fd949",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID42268630/PRP2-14-e70285-g001.jpg",
+   "sha256": "63c1b06c7865aac48d26a3ebfe78d71a3f200c03fc31164faccc74bfec92ca3d",
+   "kind": "figure",
+   "note": "Figure 1 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13251787/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "63c1b06c7865aac48d26a3ebfe78d71a3f200c03fc31164faccc74bfec92ca3d",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID42268630/PRP2-14-e70285-g002.jpg",
+   "sha256": "3b3247d638fa02caa6d03c2345d93a41e42c1ffab982d4532e8ce1a441415483",
+   "kind": "figure",
+   "note": "Figure 2 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13251787/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "3b3247d638fa02caa6d03c2345d93a41e42c1ffab982d4532e8ce1a441415483",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID42268630/PRP2-14-e70285-g003.jpg",
+   "sha256": "4c15816e3fba7eeabd49ef2ab77b708327495a701b88ef7371ece03a9bca01f4",
+   "kind": "figure",
+   "note": "Figure 3 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13251787/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "4c15816e3fba7eeabd49ef2ab77b708327495a701b88ef7371ece03a9bca01f4",
+    "derived": false
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE (STXBP1, zebrafish nulls). The negative is obtained in frameshift loss-of-function lines: the authors state 4-PBA may lack a molecular target in a null allele and that the findings may not exclude a role in patients with specific missense variants.",
+    "snippet": "Thus, it is possible with a null allele that",
+    "anchor": "Discussion, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42268630_Frick2026_PMC13251787.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Zebrafish larvae homozygous for frameshift loss-of-function alleles in stxbp1a (movement phenotype) and stxbp1b (spontaneous ictal-like activity, local field potential), bath-exposed to 4-phenylbutyrate and 16 virtually screened compounds; NOT a WWOX system",
+     "genotype": "stxbp1a and stxbp1b null-type frameshift alleles; no missense allele; no WWOX",
+     "endpoint": "total distance moved in 10 minutes; Type II ictal-like events per 15 minutes; larval toxicity checks"
+    }
+   },
+   {
+    "proposition": "No protein-level read-out exists in this paper: the stxbp1 paralogs have no validated antibodies, so neither quantity nor solubility of the protein was measured, before or after treatment.",
+    "snippet": "We were unable to directly assess stxbp1a or stxbp1b protein levels in larval zebrafish due to the lack of suitable validated antibodies for these paralogs.",
+    "anchor": "Discussion, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42268630_Frick2026_PMC13251787.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Zebrafish larvae homozygous for frameshift loss-of-function alleles in stxbp1a (movement phenotype) and stxbp1b (spontaneous ictal-like activity, local field potential), bath-exposed to 4-phenylbutyrate and 16 virtually screened compounds; NOT a WWOX system",
+     "genotype": "stxbp1a and stxbp1b null-type frameshift alleles; no missense allele; no WWOX",
+     "endpoint": "total distance moved in 10 minutes; Type II ictal-like events per 15 minutes; larval toxicity checks"
+    }
+   },
+   {
+    "proposition": "The exposure is far below the worm study that the zebrafish work tests: the authors give a roughly hundred-fold lower bath concentration for the mutant larvae because of toxicity (maximum tolerated concentration established in wild-type larvae).",
+    "snippet": "this treatment required a much higher concentration (5 mM) with associated toxicity concerns.",
+    "anchor": "Results, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42268630_Frick2026_PMC13251787.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Zebrafish larvae homozygous for frameshift loss-of-function alleles in stxbp1a (movement phenotype) and stxbp1b (spontaneous ictal-like activity, local field potential), bath-exposed to 4-phenylbutyrate and 16 virtually screened compounds; NOT a WWOX system",
+     "genotype": "stxbp1a and stxbp1b null-type frameshift alleles; no missense allele; no WWOX",
+     "endpoint": "total distance moved in 10 minutes; Type II ictal-like events per 15 minutes; larval toxicity checks"
+    }
+   },
+   {
+    "proposition": "Figure 1C read: wild-type larval survival after 48 h of bath exposure is 100 percent at 10 and 25 micromolar, about 70 percent at 50, about 60 at 75, about 10 at 100 and 0 at 250 and 1000 micromolar; the text fixes the usable ceiling at 50.",
+    "snippet": "was toxic to larval zebrafish at concentrations above 50",
+    "anchor": "Figure 1C (survival of wild-type larvae against 4-phenylbutyrate concentration)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42268630/PRP2-14-e70285-g001.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Zebrafish larvae homozygous for frameshift loss-of-function alleles in stxbp1a (movement phenotype) and stxbp1b (spontaneous ictal-like activity, local field potential), bath-exposed to 4-phenylbutyrate and 16 virtually screened compounds; NOT a WWOX system",
+     "genotype": "stxbp1a and stxbp1b null-type frameshift alleles; no missense allele; no WWOX",
+     "endpoint": "total distance moved in 10 minutes; Type II ictal-like events per 15 minutes; larval toxicity checks"
+    },
+    "qualifies": "entries[2]",
+    "qualifies_needle": "this treatment required a much higher concent"
+   },
+   {
+    "proposition": "Locomotion: 4-PBA did not move the stxbp1a movement deficit at either tested concentration and did not change wild-type or stxbp1b movement.",
+    "snippet": "failed to rescue the movement deficit seen in stxbp1a mutant larvae at 25 or 50",
+    "anchor": "Results, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42268630_Frick2026_PMC13251787.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Zebrafish larvae homozygous for frameshift loss-of-function alleles in stxbp1a (movement phenotype) and stxbp1b (spontaneous ictal-like activity, local field potential), bath-exposed to 4-phenylbutyrate and 16 virtually screened compounds; NOT a WWOX system",
+     "genotype": "stxbp1a and stxbp1b null-type frameshift alleles; no missense allele; no WWOX",
+     "endpoint": "total distance moved in 10 minutes; Type II ictal-like events per 15 minutes; larval toxicity checks"
+    }
+   },
+   {
+    "proposition": "Figure 1D read: stxbp1a bars sit at about 250 to 300 mm total distance at 0, 25 and 50 micromolar, against wild-type bars of about 650 to 1,150 mm; the treated stxbp1a bars do not rise above the untreated ones.",
+    "snippet": "Data are shown for age-matched WT, stxbp1b",
+    "anchor": "Figure 1D (total distance for wild type, stxbp1b and stxbp1a at 0, 25, 50 micromolar 4-PBA)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42268630/PRP2-14-e70285-g001.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Zebrafish larvae homozygous for frameshift loss-of-function alleles in stxbp1a (movement phenotype) and stxbp1b (spontaneous ictal-like activity, local field potential), bath-exposed to 4-phenylbutyrate and 16 virtually screened compounds; NOT a WWOX system",
+     "genotype": "stxbp1a and stxbp1b null-type frameshift alleles; no missense allele; no WWOX",
+     "endpoint": "total distance moved in 10 minutes; Type II ictal-like events per 15 minutes; larval toxicity checks"
+    },
+    "qualifies": "entries[4]",
+    "qualifies_needle": "failed to rescue the movement deficit seen in"
+   },
+   {
+    "proposition": "Seizure read-out: no change in ictal-like event frequency after 60 minutes of bath 4-PBA in stxbp1b larvae, with a small sample (nine larvae, from the Methods) and a short exposure.",
+    "snippet": "we observed no change in seizure event frequency during a 60 min",
+    "anchor": "Results, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42268630_Frick2026_PMC13251787.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Zebrafish larvae homozygous for frameshift loss-of-function alleles in stxbp1a (movement phenotype) and stxbp1b (spontaneous ictal-like activity, local field potential), bath-exposed to 4-phenylbutyrate and 16 virtually screened compounds; NOT a WWOX system",
+     "genotype": "stxbp1a and stxbp1b null-type frameshift alleles; no missense allele; no WWOX",
+     "endpoint": "total distance moved in 10 minutes; Type II ictal-like events per 15 minutes; larval toxicity checks"
+    }
+   },
+   {
+    "proposition": "Figure 1G read: Type II ictal events per 15 minutes, baseline median near 4 (range about 1 to 20) and after 4-PBA median near 6 (range about 1 to 24), p 0.8593 printed on the panel; the 95 percent interval on the difference printed in the legend spans about -7 to +8.5 events, i.e. wide.",
+    "snippet": "Individual value plot of ictal event frequency measured at baseline",
+    "anchor": "Figure 1G (ictal-like events per 15 min, baseline against 4-PBA)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42268630/PRP2-14-e70285-g001.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Zebrafish larvae homozygous for frameshift loss-of-function alleles in stxbp1a (movement phenotype) and stxbp1b (spontaneous ictal-like activity, local field potential), bath-exposed to 4-phenylbutyrate and 16 virtually screened compounds; NOT a WWOX system",
+     "genotype": "stxbp1a and stxbp1b null-type frameshift alleles; no missense allele; no WWOX",
+     "endpoint": "total distance moved in 10 minutes; Type II ictal-like events per 15 minutes; larval toxicity checks"
+    },
+    "qualifies": "entries[6]",
+    "qualifies_needle": "we observed no change in seizure event freque"
+   },
+   {
+    "proposition": "Assay quality is self-reported as satisfactory with a negative Z-prime (reported as -5.936) against published larval screens; by the conventional screening use of Z-prime (an external convention, not stated in this paper) a negative value means the control separation does not exceed the noise, so the assay's ability to detect a modest rescue is unestablished.",
+    "snippet": "considered satisfactory and consistent with published phenotypic larval zebrafish screens",
+    "anchor": "Methods, Analysis, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42268630_Frick2026_PMC13251787.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Zebrafish larvae homozygous for frameshift loss-of-function alleles in stxbp1a (movement phenotype) and stxbp1b (spontaneous ictal-like activity, local field potential), bath-exposed to 4-phenylbutyrate and 16 virtually screened compounds; NOT a WWOX system",
+     "genotype": "stxbp1a and stxbp1b null-type frameshift alleles; no missense allele; no WWOX",
+     "endpoint": "total distance moved in 10 minutes; Type II ictal-like events per 15 minutes; larval toxicity checks"
+    }
+   },
+   {
+    "proposition": "All stxbp1a comparisons are far from significance, so the negative is clean, not borderline, within the limits of the assay's sensitivity.",
+    "snippet": "with the vast majority above 0.80. There is no borderline signal in the mutant genotype across any drug, concentration, or compound class tested.",
+    "anchor": "Methods, Statistics",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42268630_Frick2026_PMC13251787.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Zebrafish larvae homozygous for frameshift loss-of-function alleles in stxbp1a (movement phenotype) and stxbp1b (spontaneous ictal-like activity, local field potential), bath-exposed to 4-phenylbutyrate and 16 virtually screened compounds; NOT a WWOX system",
+     "genotype": "stxbp1a and stxbp1b null-type frameshift alleles; no missense allele; no WWOX",
+     "endpoint": "total distance moved in 10 minutes; Type II ictal-like events per 15 minutes; larval toxicity checks"
+    }
+   },
+   {
+    "proposition": "After Bonferroni correction none of the screened compounds altered locomotion in either genotype; the nominal wild-type reductions are treated as false positives.",
+    "snippet": "However, following a Bonferroni correction for multiple comparisons, no drug significantly altered locomotion in either genotype",
+    "anchor": "Results, paragraph 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42268630_Frick2026_PMC13251787.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Zebrafish larvae homozygous for frameshift loss-of-function alleles in stxbp1a (movement phenotype) and stxbp1b (spontaneous ictal-like activity, local field potential), bath-exposed to 4-phenylbutyrate and 16 virtually screened compounds; NOT a WWOX system",
+     "genotype": "stxbp1a and stxbp1b null-type frameshift alleles; no missense allele; no WWOX",
+     "endpoint": "total distance moved in 10 minutes; Type II ictal-like events per 15 minutes; larval toxicity checks"
+    }
+   },
+   {
+    "proposition": "The text and Methods disagree on exposure duration for the screening (24 h in Results, 48 h in the Locomotion Assay Methods), so the exposure window is not unambiguous.",
+    "snippet": "Candidate drugs were administered for 24 h",
+    "anchor": "Results, paragraph 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42268630_Frick2026_PMC13251787.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Zebrafish larvae homozygous for frameshift loss-of-function alleles in stxbp1a (movement phenotype) and stxbp1b (spontaneous ictal-like activity, local field potential), bath-exposed to 4-phenylbutyrate and 16 virtually screened compounds; NOT a WWOX system",
+     "genotype": "stxbp1a and stxbp1b null-type frameshift alleles; no missense allele; no WWOX",
+     "endpoint": "total distance moved in 10 minutes; Type II ictal-like events per 15 minutes; larval toxicity checks"
+    }
+   },
+   {
+    "proposition": "Methods state a 48 h exposure with media changed every 24 h.",
+    "snippet": "Larvae were exposed to the drug for 48 h in an incubator in the dark",
+    "anchor": "Methods, Locomotion Assay",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42268630_Frick2026_PMC13251787.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Zebrafish larvae homozygous for frameshift loss-of-function alleles in stxbp1a (movement phenotype) and stxbp1b (spontaneous ictal-like activity, local field potential), bath-exposed to 4-phenylbutyrate and 16 virtually screened compounds; NOT a WWOX system",
+     "genotype": "stxbp1a and stxbp1b null-type frameshift alleles; no missense allele; no WWOX",
+     "endpoint": "total distance moved in 10 minutes; Type II ictal-like events per 15 minutes; larval toxicity checks"
+    }
+   },
+   {
+    "proposition": "The negative does not reach the missense question: the authors say the results may not exclude a role in patients with specific missense variants.",
+    "snippet": "may not exclude a potential role for",
+    "anchor": "Discussion, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42268630_Frick2026_PMC13251787.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Zebrafish larvae homozygous for frameshift loss-of-function alleles in stxbp1a (movement phenotype) and stxbp1b (spontaneous ictal-like activity, local field potential), bath-exposed to 4-phenylbutyrate and 16 virtually screened compounds; NOT a WWOX system",
+     "genotype": "stxbp1a and stxbp1b null-type frameshift alleles; no missense allele; no WWOX",
+     "endpoint": "total distance moved in 10 minutes; Type II ictal-like events per 15 minutes; larval toxicity checks"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST returned the whole article as fullTextXML for PMC13251787 (109 kB, 2026-10-21); figures from the supplementaryFiles container.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a figure legend or an inspected figure."
+ }
+}
