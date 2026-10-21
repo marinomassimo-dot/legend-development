@@ -352,3 +352,13 @@ Found by following the citation in Harman 2023 (section 4) to its primary, under
 
 **Comparison with the lead.** Axis A: genotype-dependent response across models; none within one assay. Axis B: none. Axis C: negative or aggravation in a developmental-epilepsy genotype. Axis D: none. **Net: context for "does ethosuximide response differ by genotype": yes across models, with sign differences.**
 
+## 22. PMID 35079122 (Cabungcal 2022): developmental oxidative stress and T-type hypofunction in the reticular nucleus. NOT WWOX EVIDENCE
+
+Adjacent search, question written first: "is there a non-channel gene model in which T-type current *falls*, and is the change age-gated?" Depth: `partial_fulltext_read` (whole PMC XML body; figures read as captions with statistics; supplement not opened). Manifest `PMID35079122.json` STRICT PASS, 4 locators. Receipt staged `FTR-20261021-35079122-01`.
+
+**What it establishes.** In glutathione-deficient (Gclm knockout) mice, reticular-nucleus neurons show reduced T-type and SK current density, less bursting (25 percent versus 71 percent at rest) and lower Cav3.3 expression in adulthood, but not at postnatal days 20 to 30; an early-life oxidative challenge brings the hypofunction forward in knockout and glutathione-depleted wild-type mice, and an antioxidant prevents it; a second developmental model (methylazoxymethanol exposure) shows the same current decrease. The authors discuss Cav3.2 redox sensitivity as one mechanism and say the mechanism needs further work.
+
+**Why it matters for the lead.** It answers the question as asked: yes, a non-channel lesion can *lower* T-type current in the same neurons where another (Cntnap2, section 8) *raises* it, and the change can be age-gated (absent at about three weeks, present in adults, brought forward by a developmental challenge). So the direction of the T-type change in a Wwox-deficient brain is not a default that can be assumed in either direction, nor is the age at which it would appear. If a Wwox-null brain were oxidatively stressed (a point the repository holds, if at all, outside this reading and unverified here) the redox precedent would predict T-type *hypofunction*, for which a T-type blocker would be mechanism-mismatched; that is an IPOTESI stated to make the point that the sign matters, not a claim about WWOX.
+
+**Comparison with the lead.** Axis A: none. Axis B: direction and age of T-type change differ by lesion. Axis C: a documented lesion class with T-type loss. Axis D: none. **Net: strengthens the case for measuring the T-type current in the Wwox null before building on the T-type reading.**
+
