@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261021-40372822-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "40372822",
+  "doi": "10.1111/dmcn.16363"
+ },
+ "event_at": "2026-10-21T22:40:12Z",
+ "analysis_at": "2026-10-21T00:00:00Z",
+ "analysis_time_precision": "date_only",
+ "workflow": "scientist-d, ten-hour repurposing batch, task REPURP-10H-R4-D-20261021, branch task/repurp-r4-d; context_policy QUESTION_DRIVEN. Route: Europe PMC REST fullTextXML into the shared files/fulltext/; JATS body and tables read section by section from a text rendering; The single figure is a graphical abstract (native JPEG, opened); Supplemental Table 1 read as docx text; the procedural flowchart (Figure S1, a PDF) was skimmed as text and not declared. Locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts. Receipt staged for the integrator, not appended.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID40372822_Downs2025_PMC_r2.xml",
+ "source_fingerprint": "242133c97d0cff6a3ec52d3db93ff90ebd93614f3200abf8517b7baa3ce2e38d",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID40372822.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "JATS text rendering read in full including Tables 1-4; graphical abstract inspected; Supplemental Table 1 read; Figure S1 flowchart skimmed."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

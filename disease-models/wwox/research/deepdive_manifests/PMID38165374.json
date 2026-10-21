@@ -1,0 +1,315 @@
+{
+ "schema_version": 2,
+ "pmid": "38165374",
+ "doi": "10.1212/WNL.0000000000207958",
+ "pmcid": "PMC10834124",
+ "receipt": "FTR-20261021-38165374-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Review by a mixed group of epidemiologist, neuropsychologists, an outcomes consultant, a deaf-blind education specialist, advocacy-organisation staff and an allied-health researcher; a consensus-style methods review, NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "\"patient-focused drug development\"[Title/Abstract] AND (epilep*[Title/Abstract] OR encephalopath*[Title/Abstract])",
+    "count": 3,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "\"fit-for-purpose\"[Title/Abstract] AND \"clinical outcome assessment*\"[Title/Abstract] AND neurodevelopmental[Title/Abstract]",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 41,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 38165374 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 42,
+   "references_screened": 31,
+   "references_with_doi": 31,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 11
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38165374_Berg2024_PMC_r2.xml",
+   "sha256": "af9cf37590d2edd3eb21dfe52109234b34c257d0acbce5c1ea4054a0d007e6b5",
+   "kind": "article_text",
+   "note": "NCBI efetch JATS (via pmc_bucket_fetch.py).",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC10834124&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "af9cf37590d2edd3eb21dfe52109234b34c257d0acbce5c1ea4054a0d007e6b5"
+   }
+  },
+  {
+   "path": "files/supplement/PMID38165374_r2/PMC10834124.1.pdf",
+   "sha256": "a97afdb4a3725d957156db97318bb4fad40c5eeb6aa90f8fa10d8d8cafaa1454",
+   "kind": "article_binary",
+   "note": "PMC open-data bucket PDF.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10834124.1/PMC10834124.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38165374_r2/WNL-2023-001974f1.jpg",
+   "sha256": "272de504feb645b89ea5d367b41e86e9081cbd2e3cd548e86a66b820ffbe87ef",
+   "kind": "figure",
+   "note": "Figure 1 (floor effects and falling standard scores), native JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10834124.1/WNL-2023-001974f1.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38165374_r2/WNL-2023-001974f2.jpg",
+   "sha256": "b7f1b96c92de725ce69f1b77c8ea95036f04928bc635018fbf09d850c012932c",
+   "kind": "figure",
+   "note": "Figure 2 (random and systematic measurement fluctuation), native JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10834124.1/WNL-2023-001974f2.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Regulatory approval on a surrogate endpoint is exceptional; evidence of clinical efficacy is typically required.",
+    "snippet": "Although FDA approval has been granted based on robust surrogate endpoints",
+    "anchor": "Precision medicine and rare diseases",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38165374_Berg2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DEEs have few natural history data to select non-seizure outcomes and no reliable biomarkers.",
+    "snippet": "There are few if any natural history data to guide selection of nonseizure trial outcomes and no reliable biomarkers.",
+    "anchor": "Precision medicine and rare diseases",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38165374_Berg2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A failed trial should reflect a true lack of effect and not a poor choice of outcome or its measurement.",
+    "snippet": "it is essential that the lack of measured therapeutic effect be due to a true lack of treatment effect and not to a poor choice of outcome or its measurement.",
+    "anchor": "Precision medicine and rare diseases",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38165374_Berg2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The clinical spectrum of a DEE gene now includes individuals who never have epilepsy.",
+    "snippet": "the clinical spectrum associated with any given “DEE gene” now includes individuals who never have epilepsy.",
+    "anchor": "Precision medicine and rare diseases",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38165374_Berg2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "More than half of DEE patients score more than 3 standard deviations below the norm on development, IQ and adaptive behaviour.",
+    "snippet": "Typically, more than half fall in a range represented by >3 SD below the norm-referenced mean",
+    "anchor": "Floor effects",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38165374_Berg2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Floor effects may hide a therapy that halts progression but does not reverse the state.",
+    "snippet": "It may also be a concern for therapies that halt disease progression but do not seem to reverse the disease state",
+    "anchor": "Floor effects",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38165374_Berg2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In DEEs, standardised scores decrease with age even with real gains, because the raw score needed to keep a given standard score rises.",
+    "snippet": "In the DEEs, standardized scores decrease with increasing age.",
+    "anchor": "Age standardization",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38165374_Berg2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizures, rescue medicines, medication changes, poor sleep and illness have systematic effects on outcome scores unrelated to the treatment.",
+    "snippet": "The occurrence of seizures, rescue medications, changes in medications, poor sleep, and illness all have systematic and sometimes large effects on the outcome",
+    "anchor": "Reliability of measures vs stability of underlying outcomes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38165374_Berg2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Raw and standardised scores gave dramatically different assessments of change in the same SCN2A cohort.",
+    "snippet": "Dramatically disparate assessments of difference and change were observed in a cohort of children with SCN2A-associated DEE when comparing the same set of Vineland data based on standardized vs raw scores.",
+    "anchor": "Alternative scoring",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38165374_Berg2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Cerebral visual impairment, common in DEE, can compromise performance-based testing.",
+    "snippet": "Cortical/cerebral visual impairment (CVI), a common finding in patients with DEE, may limit access to visual stimuli presented during performance-based testing, thereby compromising validity of results.",
+    "anchor": "Modifying for accessibility",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38165374_Berg2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Goal attainment scaling avoids floor and ceiling effects and is used in randomised trials.",
+    "snippet": "GAS avoids floor and ceiling effects and is increasingly used in randomized trials of, for example, cerebral palsy",
+    "anchor": "Include alternative types of COAs",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38165374_Berg2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The minimal clinically important difference is defined at the individual level for regulators, not as a group average.",
+    "snippet": "MCID is defined at the individual level (e.g., proportion of patients with >50% seizure reduction) rather than group level (average reduction in seizures for a group).",
+    "anchor": "Trial end points",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38165374_Berg2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A worthwhile change balances risks and costs against benefit and may exceed the minimum, for example for a repurposed approved drug against a novel gene therapy.",
+    "snippet": "A worthwhile change reflects a balancing of risks and costs vs potential benefits.",
+    "anchor": "Trial end points",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38165374_Berg2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review gives the repurposed drug versus gene therapy comparison as the example.",
+    "snippet": "an approved drug repurposed for a new indication vs a novel gene replacement therapy with uncertain risks.",
+    "anchor": "Trial end points",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38165374_Berg2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 2: a six-level mobility scale would not register a child who gains head control and sitting but not yet steps.",
+    "snippet": "Such a scale would be insensitive to changes in someone who is initially unable to sit independently or hold his head upright but who, over time, becomes able to do those things and even stand without support but not yet take steps.",
+    "anchor": "Table 2, component 7",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID38165374_Berg2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 2: three growth-scale points on a communication scale may not be noticeable, ten points may be.",
+    "snippet": "While a 3-point change in the GSV on the Vineland for communication might not result in noticeable and meaningful improvement in a person's communicative ability, a 10-point gain might reflect noticeable improvement by caregivers",
+    "anchor": "Table 2, component 8",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID38165374_Berg2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 1: a hypothetical child gains raw score every year yet stays on the floor of the standard score; standard score falls from 6 to 3 while raw score rises.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1A raw score of a hypothetical patient rising from about 2 at year 1 to 35 at year 5 inside a shaded floor region that rises to about 42; Fig 1B raw score rising from about 15 to 50 while the raw-score band corresponding to standard score 6 rises to about 61 and the patient's standard score falls from 6 to 3.",
+    "anchor": "Figure 1",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38165374_r2/WNL-2023-001974f1.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 2: a hypothetical outcome score fluctuates within a random-error band, with outliers from a seizure-free period and from hospitalisation; after a new therapy the series trends upward above the band.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2A fluctuating line with an unusual seizure-free period peaking above the random-error band and a hospitalisation trough far below it; Fig 2B the same background in grey with a purple series rising above the random-error band after therapy is initiated.",
+    "anchor": "Figure 2",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38165374_r2/WNL-2023-001974f2.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "NCBI efetch (pmc_bucket_fetch.py) returned a full JATS body on 2026-10-21; this is the declared article_text artefact.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}
