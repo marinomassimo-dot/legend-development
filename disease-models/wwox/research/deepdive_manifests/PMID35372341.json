@@ -1,0 +1,393 @@
+{
+ "schema_version": 2,
+ "pmid": "35372341",
+ "doi": "10.3389/fcell.2022.841548",
+ "receipt": "FTR-20261021-35372341-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261021.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access XML, figures, PDF and supplement came from pmc_bucket_fetch.py in one call; no cascade needed."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Wild-type neonatal mouse treated with clemastine; measures oligodendrocyte differentiation, callosal conduction velocity, EM myelin and microglia; the safety counterweight for pro-myelination cards. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries_text": [
+   "clemastine AND developmental myelination",
+   "clemastine AND microglia"
+  ],
+  "note": "Group R3 reading; queries are PubMed counts on 2026-10-21 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "clemastine AND developmental myelination",
+    "count": 10,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   },
+   {
+    "query": "clemastine AND microglia",
+    "count": 22,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 35372341; registry_records.py get --pmid 35372341 --hops 1",
+  "hits": 0,
+  "finding": "No receipt before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-21; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 44,
+   "references_screened": 44,
+   "references_with_doi": 44,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID35372341_Palma2022_PMC_r2.xml",
+   "sha256": "3655dee8230fc8de28874769693312fd8b85d3f5d54cd447efe35993d31003aa",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=8970281",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "3655dee8230fc8de28874769693312fd8b85d3f5d54cd447efe35993d31003aa"
+   }
+  },
+  {
+   "path": "files/supplement/PMID35372341_r2/PMC8970281.1.pdf",
+   "sha256": "6bd5a4a2b0c6e0a9568415c3315dda0342eb51542a2537739c740a45c31317c0",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "6bd5a4a2b0c6e0a9568415c3315dda0342eb51542a2537739c740a45c31317c0"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID35372341_r3c/p05_embedded_1500x1791.png",
+   "sha256": "2eed442efaa3cec4d31389499fae48f656fe639f8bc558384490ac4dbe59916f",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID35372341_r2/PMC8970281.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 5",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "2eed442efaa3cec4d31389499fae48f656fe639f8bc558384490ac4dbe59916f"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID35372341_r3c/p06_embedded_1749x504.png",
+   "sha256": "8f80b5043a9f5058bb1a657e635547d6993ade728cd239ce1827245ad9e96c0a",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID35372341_r2/PMC8970281.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 6",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "8f80b5043a9f5058bb1a657e635547d6993ade728cd239ce1827245ad9e96c0a"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID35372341_r3c/p07_embedded_1964x1445.png",
+   "sha256": "6b753e7722b4f569fdff78b3be768f15cec33bdc00f68eee7f8c771f12379c97",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID35372341_r2/PMC8970281.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 7",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "6b753e7722b4f569fdff78b3be768f15cec33bdc00f68eee7f8c771f12379c97"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID35372341_r3c/p08_embedded_1958x994.png",
+   "sha256": "28b9263bdbef3c47ece3adee3525433fb15609b7bb09daf010a3f16b7c471eef",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID35372341_r2/PMC8970281.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 8",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "28b9263bdbef3c47ece3adee3525433fb15609b7bb09daf010a3f16b7c471eef"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID35372341_r3c/p09_embedded_1629x2346.png",
+   "sha256": "63e1d8688b42c2d3539f5a130b3686170b57ae529269719d9697e11f74eb2bb7",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID35372341_r2/PMC8970281.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 9",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "63e1d8688b42c2d3539f5a130b3686170b57ae529269719d9697e11f74eb2bb7"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID35372341_r3c/p10_embedded_1953x2189.png",
+   "sha256": "d5758b3d1814238fb977d713d72537abc18ae74bf745e5aabebede50f7929d38",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID35372341_r2/PMC8970281.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 10",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "d5758b3d1814238fb977d713d72537abc18ae74bf745e5aabebede50f7929d38"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Dose and schedule are stated in the Methods: 50 mg/kg daily i.p. from P5 to P21 in wild-type mice (a single dose, in 10 percent DMSO).",
+    "snippet": "clemastine (#1453 Tocris; 50 mg/kg solved in 10% DMSO) by intraperitoneal injections from postnatal day 5 (P5) to P21",
+    "anchor": "Methods / Animal Treatments",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35372341_Palma2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Fig 1 legend gives the dose as micrograms per kilogram, the Results text gives milligrams and an end day of P20: three descriptions of the same schedule do not agree.",
+    "snippet": "Schematic representation of clemastine treatment (50 μg/kg; i.p.) during development.",
+    "anchor": "Fig. 1 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35372341_Palma2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Dose-dependence is not tested: one dose and a vehicle arm only.",
+    "snippet": "we treated mice with clemastine (50 mg/kg/day, i.p.) or vehicle from postnatal day 5–20",
+    "anchor": "Results / Clemastine Increases the Number of Mature Oligodendrocytes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35372341_Palma2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Cell differentiation went up: more APC-positive mature oligodendrocytes, fewer PDGFR-positive progenitors in corpus callosum.",
+    "snippet": "clemastine induced a significant increase in the proportion of APC+ OLs in corpus callosum as well as in the cerebral cortex (Figure 1B).",
+    "anchor": "Results / Clemastine Increases the Number of Mature Oligodendrocytes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35372341_Palma2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Conduction velocity of myelinated callosal fibres fell, with n = 10-12 slices or animals and P below 0.01 in the text.",
+    "snippet": "our results revealed that action potentials transmission was significantly slower in myelinated axons (N1) of clemastine treated mice compared to control mice (Figure 2, p < 0.01, n = 10–12).",
+    "anchor": "Results / Conduction Velocity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35372341_Palma2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The text states conduction velocity P below 0.01 while the Figure 2 legend and panel print a single asterisk (P below 0.05).",
+    "snippet": "(C) The input-output relationship for N1 myelinated fibers is left-shifted in clemastine-treated corpus callosum (n = 7–8). *p < 0.05.",
+    "anchor": "Fig. 2 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35372341_Palma2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Myelinated axon number in EM fell; n = 3 mice per group.",
+    "snippet": "We observed that the number of myelinated axons, quantified by TEM, was reduced after clemastine treatment (Figure 4A).",
+    "anchor": "Results / Clemastine Administration Reduces the Number of Nodes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35372341_Palma2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Myelin thinning (higher g-ratio) is claimed for axons of 0-0.5 micrometre diameter only; larger axons did not differ.",
+    "snippet": "G-ratio analysis revealed thinner myelin sheaths in small caliber axons (0–0.5 µm) of treated animals (Figure 4B), while no differences were found in axons from 0.5 to 1 µm diameter",
+    "anchor": "Results / Clemastine Administration Reduces the Number of Nodes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35372341_Palma2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Statistical unit of the g-ratio comparison: legend gives n = 3 mice per group with 100-150 axons per group.",
+    "snippet": "Graphs represent the mean g-ratios for small and bigger axons (100-150 axons in control and clemastine-treated mice) and the distribution of g-ratios for control and clemastine-treated mice (n = 3 mice per group).",
+    "anchor": "Fig. 4 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35372341_Palma2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Microglial changes: more complex morphology, lower iNOS and CD68, anti-inflammatory transcripts up, IGF and ApoE down; no change in microglial number or in myelin engulfment.",
+    "snippet": "Clemastine induced a massive reduction in the expression of iNOS, a proinflammatory marker, as well as the expression of the phagocytic marker CD68 (Figures 5E,F).",
+    "anchor": "Results / Clemastine Treatment Modifies the Expression of Activation Markers",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35372341_Palma2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CD11c-positive microglia fell after a shorter regimen (P5 to P10) in a different mouse line; the reduction is the proposed mechanism.",
+    "snippet": "we treated mice with clemastine from P5 to P10. Blinded analysis showed that clemastine reduced the number of microglia CD11c+ in corpus callosum in clemastine-treated mice (Figure 6E).",
+    "anchor": "Results / final paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35372341_Palma2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the myelination outcome: no increase in developmental myelination despite more oligodendrocyte differentiation.",
+    "snippet": "we found that developmental myelination is not increased after chronic clemastine treatment, even if clemastine induced an increase in oligodendrocyte differentiation.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35372341_Palma2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that blood-brain-barrier penetration was taken from an earlier study and the dose from other studies.",
+    "snippet": "The dose used in our study was similar to those used in other studies (30–50 mg/kg; Turski et al., 2018; Liu et al., 2016).",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35372341_Palma2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors close by calling for microglia-oligodendrocyte work; the paper itself measures no behaviour, seizure or EEG endpoint.",
+    "snippet": "More studies are needed to understand the microglia-oligodendrocyte crosstalk necessary for myelin health maintenance.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35372341_Palma2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 1 (300 ppi): APC-positive percent of Olig2 in corpus callosum about 67 versus 77; cortical RSP about 19 versus 28; SSp about 18 versus 25; PDGFR in cc about 29 versus 21; markers n = 6 per group; the legend gives n = 6.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] B cc ** ; ctx rsp * ; ssp * ; C cc *",
+    "anchor": "Figure 1, embedded raster p.5",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID35372341_r3c/p05_embedded_1500x1791.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 2 (300 ppi): N1 velocity about 0.507 versus 0.428 mm/s (*), N2 unchanged; the input-output curve is left-shifted with a single asterisk at 2 mA; sample markers are not plotted, bars with SEM only.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] B N1 * 0.50 vs 0.43; C * at 2 mA",
+    "anchor": "Figure 2, embedded raster p.6",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID35372341_r3c/p06_embedded_1749x504.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[4]",
+    "qualifies_needle": "our results revealed that action potentials t"
+   },
+   {
+    "proposition": "Fig 3 (300 ppi): nodes of Ranvier about 580 versus 385 per mm2 (*); node length unchanged; internode length 33 versus 42 micrometres, ns; MBP normalised to axonal density 1.07 versus 0.84 (*); NF-L ns.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] A * ; C *; B ns",
+    "anchor": "Figure 3, embedded raster p.7",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID35372341_r3c/p07_embedded_1964x1445.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 4 (300 ppi): myelinated axons per 1000 square micrometres about 288 versus 250 (*), three markers per group, one clemastine marker near 220; g-ratio 0-0.5 micrometre about 0.769 versus 0.788 (***) with three markers per group that overlap in range; the all-axon scatter regression lines for the two groups overlap. Three asterisks on a 0.019 difference between group means of three animals indicates the test used individual axons as units.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] A * ; B *** at 0-0.5; scatter regression lines overlap",
+    "anchor": "Figure 4, embedded raster p.8",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID35372341_r3c/p08_embedded_1958x994.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[0]",
+    "qualifies_needle": "clemastine (#1453 Tocris; 50 mg/kg solved in "
+   },
+   {
+    "proposition": "Fig 5 (300 ppi): microglia density and Iba1 unchanged; branches 190 versus 245 and junctions 93 versus 120 per cell (*); iNOS 1440 versus 290 and CD68 390 versus 255 (*); Chrm1 expression is highest in OPCs and similar in microglia and myelinating oligodendrocytes.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] D * * ****; E * ; F *",
+    "anchor": "Figure 5, embedded raster p.9",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID35372341_r3c/p09_embedded_1629x2346.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 6 (300 ppi): ApoE, CD36 and IGF down and arginase, Chi3l3, Clec7a up with four animals per group; myelin phagocytosis in vitro and MBP-containing microglia in vivo unchanged (about 6.9 percent); CD11c+ cells 24 versus 7 per 100 micrometres cubed with 3-4 animals.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] A * ; B ns; D ns; E *",
+    "anchor": "Figure 6, embedded raster p.10",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID35372341_r3c/p10_embedded_1953x2189.png",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch XML and PMC PDF fingerprinted; Figures 1-6 extracted at 300 ppi embedded rasters and inspected; the supplementary figures S1-S2 are in a separate file that was not retrieved.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}
