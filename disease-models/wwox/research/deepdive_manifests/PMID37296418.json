@@ -1,0 +1,279 @@
+{
+ "schema_version": 2,
+ "pmid": "37296418",
+ "doi": "10.1186/s12987-023-00433-4",
+ "receipt": "FTR-20261021-37296418-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261021.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access XML, figures, PDF and supplement came from pmc_bucket_fetch.py in one call; no cascade needed."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Neonatal hydrocephalus mouse (Ccdc39 prh) with a CSF1R inhibitor given P3-P7; measures microglia, myelin, ventricle volume and survival; no seizure or EEG endpoint. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries_text": [
+   "PLX5622 AND neonatal",
+   "microglia AND hydrocephalus AND myelination"
+  ],
+  "note": "Group R3 reading; queries are PubMed counts on 2026-10-21 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "PLX5622 AND neonatal",
+    "count": 10,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   },
+   {
+    "query": "microglia AND hydrocephalus AND myelination",
+    "count": 14,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 37296418; registry_records.py get --pmid 37296418 --hops 1",
+  "hits": 0,
+  "finding": "No receipt before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-21; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 101,
+   "references_screened": 90,
+   "references_with_doi": 90,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 11
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID37296418_Brown2023_PMC_r2.xml",
+   "sha256": "e0e126a9b17c9acbe717b556838d32ee7a4683d3e64972dfe4475efbf807626a",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=10251678",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "e0e126a9b17c9acbe717b556838d32ee7a4683d3e64972dfe4475efbf807626a"
+   }
+  },
+  {
+   "path": "files/supplement/PMID37296418_r2/PMC10251678.1.pdf",
+   "sha256": "ce3e19f24232a6cb9aceb85a98a5a2d0fa3b60bd3848237bd458aa5b03496338",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "ce3e19f24232a6cb9aceb85a98a5a2d0fa3b60bd3848237bd458aa5b03496338"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID37296418_r3c/p08_150dpi.png",
+   "sha256": "e9ede1e78ceed6f6bd8d1be8a97664fd45a2569540adccc2e82ad6a5c8acc1c9",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID37296418_r2/PMC10251678.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=150), page 8",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "e9ede1e78ceed6f6bd8d1be8a97664fd45a2569540adccc2e82ad6a5c8acc1c9"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID37296418_r3c/p14_150dpi.png",
+   "sha256": "fb2ae1012d35d58a5ae4c0dba3fc39133c2cd382eaf591ac91ca451affbf8c53",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID37296418_r2/PMC10251678.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=150), page 14",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "fb2ae1012d35d58a5ae4c0dba3fc39133c2cd382eaf591ac91ca451affbf8c53"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Ablation efficiency: at least 89 percent of microglia removed in cortex and white matter of both genotypes at P8.",
+    "snippet": "The PLX5622 treatment successfully ablated ≥ 89% microglia in all three areas above in both WT and prh mutants relative to untreated-WT and prh mutants, respectively",
+    "anchor": "Results / PLX5622 successfully ablated neonatal microglia",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37296418_Brown2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In healthy wild-type pups the same short treatment lowered white-matter CNPase myelination to the level of untreated hydrocephalic mutants at P8.",
+    "snippet": "PLX5622 treatment significantly decreased myelination in WTs to the level of prh mutants (****p < 0.0001, Fig. 4A, B).",
+    "anchor": "Results / PLX5622-mediated microglial ablation negatively impacts postnatal myelination",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37296418_Brown2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The OLIG2-positive oligodendrocyte-lineage density in corpus callosum of wild-type pups also fell with ablation (P = 0.011).",
+    "snippet": "OLIG2+ cells density in the corpus callosum was significantly reduced in PLX-WT relative to untreated WT (*p = 0.011, Fig. 4C, D)",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37296418_Brown2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the hydrocephalic mutant, ablation made ventricles larger (P = 0.0323 on raw volume) and did not improve grey-matter thinning, white-matter edema or survival.",
+    "snippet": "Remarkably, prh mutants treated from P3-P7 with PLX5622, had even further enlarged ventricular volume compared to their untreated counterparts in both raw and relative ventricular ratio to the total brain volume",
+    "anchor": "Results / PLX-treated prh mice have significantly larger ventricular volume",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37296418_Brown2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Recovery in wild-type: at P18-21, after 11-13 days off drug, myelination had recovered to untreated level (P = 0.9275).",
+    "snippet": "After withdrawing PLX5622 for 11–13 days, myelination was recovered in juvenile WT mice to comparable levels as untreated WT mice (Fig. 9, p = 0.9275).",
+    "anchor": "Results / Myelination recovery 13 days after PLX5622 cessation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37296418_Brown2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mutants: PLX-treated and repopulated mutants had 13.5 percent myelination versus 55 percent in untreated mutants (n = 6 and 5), a post-hoc P of 0.0167, in animals that survived to P18-21 (median survival of the line is 10 days), so the P20 comparison is conditioned on survival.",
+    "snippet": "PLX-prh, n = 6, 13.5 ± 13.6%, Two-way ANOVA, post hoc *p = 0.0167",
+    "anchor": "Results / Myelination recovery 13 days after PLX5622 cessation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37296418_Brown2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The untreated-mutant versus untreated-wild-type difference at P20 was not significant by the post-hoc test (P = 0.0919) and was significant only by an unadjusted two-group t-test, which the authors call a trend.",
+    "snippet": "The p-value of 0.0919 in post hoc test was considered a statistical trend that in two-group comparison between them with student t-test have reached significance (t-test; *p = 0.037).",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37296418_Brown2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the prh mutants have median survival of 10 days and typically do not survive to weaning.",
+    "snippet": "The prh mutants shows lower body weight and have median survival of 10 days and typically do not survive to weaning ages",
+    "anchor": "Results / Postnatal PLX5622 treatment did not affect growth or survival",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37296418_Brown2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Dose: PLX5622 50 mg/kg daily subcutaneously P3 to P7 (a single dose level) is stated in the Results; the Abstract says subcutaneous.",
+    "snippet": "the PLX5622 treatment (P3-7, 50 mg/kg) in the prh mutant did not improve myelination, if not worsened",
+    "anchor": "Results / Myelination recovery",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37296418_Brown2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors recognise sample limits in the juvenile mutants and conclude ablation of pro-inflammatory microglia gives no benefit.",
+    "snippet": "Although our data is limited by small sample size in juvenile mutants, PLX5622-mediated microglial ablation did not bring positive outcomes in neonatal hydrocephalus.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37296418_Brown2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "One wild-type pup in 24 died during PLX treatment, with slightly lower body weight.",
+    "snippet": "Postnatal PLX5622 treatment (P3-7) induced slightly lower body weight and 1 death out of 24 WT mice",
+    "anchor": "Results / Postnatal PLX5622 treatment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37296418_Brown2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Authors point to the unexamined role of hypoxia/ischaemia and call for detailed microglial development studies, so the mechanism of the harm is not established.",
+    "snippet": "Although we did not study the direct effect of PLX5622 on hypoxia/ischemia, future studies",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37296418_Brown2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 4 (150 dpi page 8): P8 white-matter CNPase myelination percent untreated WT about 30 (range 19-48), PLX WT about 3, untreated prh about 5, PLX prh about 2; OLIG2 density WT about 1950, PLX-WT about 1450, prh about 750, PLX-prh about 600 per mm2 (n above 8 in each group); the panel images show the CNPase signal confined to the corpus callosum in WT.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] B: WT 30; PLX-WT 3; prh 5; PLX-prh 2; D: 1950 / 1450 / 750 / 600",
+    "anchor": "Figure 4, page 8 at 150 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID37296418_r3c/p08_150dpi.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[1]",
+    "qualifies_needle": "PLX5622 treatment significantly decreased mye"
+   },
+   {
+    "proposition": "Fig 9 (150 dpi page 14): P18-21 myelination percent untreated WT about 90 (points 57-96), PLX-WT about 78 (points 45-96, two near 45), untreated prh about 64 (points 22-80, n = 5), PLX-prh about 13 (points 0-36, n = 6); stated n above 5 per group, with some groups plotted at fewer markers.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] B: WT ~90; PLX-WT ~78; prh ~64; PLX-prh ~13",
+    "anchor": "Figure 9, page 14 at 150 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID37296418_r3c/p14_150dpi.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[5]",
+    "qualifies_needle": "PLX-prh, n = 6, 13.5 ± 13.6%, Two-way ANOVA, "
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch XML and PMC PDF fingerprinted; Figures 4 and 9 inspected as 150 dpi page renders (the embedded rasters lack axis text and were not used for values); other figures, extracted Fig 1-3, 5-8 and the supplementary pptx read from captions and Results text only.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}
