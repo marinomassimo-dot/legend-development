@@ -30,6 +30,30 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-21"
+ "CURRENT_STATE": "CLAIMED",
+ "assigned_on": "2026-10-21",
+ "TASK_ACK": {
+  "actor": "scientist-b",
+  "acked_on": "2026-10-21",
+  "directive_version": 1,
+  "generation": 1,
+  "mode": "PRIMARY_EVIDENCE_READ",
+  "state_manifest_current_state": "READY",
+  "read_before_start": [
+   "framework/protocols/scientist_standing_brief.md (v3)",
+   "roles/scientist.md",
+   "framework/instruction/LEGEND_CORE.md 21c/21d/21e",
+   "framework/protocols/fulltext_read_receipt.md (Before reading to Required receipt)",
+   "framework/instruction/epistemic_discipline.md",
+   "disease-models/wwox/research/repurposing_batch_selection_20261021.md (group R2)"
+  ]
+ },
+ "TASK_CLAIM": {
+  "actor": "scientist-b",
+  "claimed_on": "2026-10-21",
+  "worktree": ".claude/worktrees/r2-b",
+  "branch": "task/repurp-10h-r2-b"
+ },
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
 }
