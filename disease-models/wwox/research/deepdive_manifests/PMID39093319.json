@@ -1,0 +1,277 @@
+{
+ "schema_version": 2,
+ "pmid": "39093319",
+ "doi": "10.1002/epi4.12975",
+ "pmcid": "PMC11296097",
+ "receipt": "FTR-20261021-39093319-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the R4b task's questions (a confirmed repurposed drug; a missense precedent; an external or natural-history comparator that held up; a pre-dose drift measurement) and the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261022b.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Paediatric epilepsy reference-centre group (French and US co-authors) conducting a PRISMA-style review of case reports and series in a gain-of-function channelopathy; a repurposed antiarrhythmic in a missense-driven disease; NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "KCNT1[Title/Abstract] AND quinidine[Title/Abstract]",
+    "count": 56,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "KCNT1[Title/Abstract] AND (\"n-of-1\"[Title/Abstract] OR \"natural history\"[Title/Abstract])",
+    "count": 3,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 54,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 39093319 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 54,
+   "references_screened": 53,
+   "references_with_doi": 53,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39093319_Gras2024_PMC.xml",
+   "sha256": "b62b95bc5c4f7b9e6abe117aead014580261e62f44f79c96d235b79102c8a17a",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML; body, tables cell-wise, figure legends.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11296097/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "b62b95bc5c4f7b9e6abe117aead014580261e62f44f79c96d235b79102c8a17a"
+   }
+  },
+  {
+   "path": "files/figures/PMID39093319_r2/EPI4-9-1176-g002.jpg",
+   "sha256": "236041270529f5e4a986254d1d358e827bb2b55039baad4e38d246234e472f9f",
+   "kind": "figure",
+   "note": "Figure 1 (PRISMA flow chart; file g002 is Figure 1 in the JATS), native JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11296097.1/EPI4-9-1176-g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID39093319_r2/EPI4-9-1176-g001.jpg",
+   "sha256": "dc66f705c60c26470d5ff7f73132ee3e03c78a9afd1079c7b9dd2652e34be33b",
+   "kind": "figure",
+   "note": "Figure 2 (reported benefit of the most prescribed anti-seizure medications; file g001 is Figure 2 in the JATS), native JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11296097.1/EPI4-9-1176-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The review pools 43 studies and 197 patients, nearly all case reports and series, and says it included them because treatment publications are scarce.",
+    "snippet": "We decided to include case reports and case series because of the scarcity of publications on treatments for KCNT1‐related epilepsy",
+    "anchor": "Methods, Selection of studies",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39093319_Gras2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No response threshold was used: a treatment counted as beneficial if frequency, duration or intensity fell, or quality of life improved, or if it was reported as beneficial even without details, or temporarily effective.",
+    "snippet": "we did not utilize a threshold (e.g., 50% reduction) to determine benefit as this information was not available in most published articles",
+    "anchor": "Methods, Data extraction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39093319_Gras2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Evidence levels: two studies of quinidine at the top level, one at level 2, one each at level 3 for cannabidiol and quinidine, all the rest level 4.",
+    "snippet": "the remaining studies had a level of proof of 4",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39093319_Gras2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Quinidine benefit was reported in 25 of 56 infants with migrating focal seizures (44.6 percent), and in none of 8 patients with sleep-related hypermotor epilepsy.",
+    "snippet": "None of the 8 patients observed any benefit from treatment with QUIN.",
+    "anchor": "Results, Quinidine",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39093319_Gras2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state persistence of benefit at 3 months was almost never documented and, where documented, was very low.",
+    "snippet": "the persistence of benefit at 3 months was almost never documented, and when it was, the persistence of efficacy at 3 months was very low",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39093319_Gras2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors note that the natural history is not considered in most reports: seizures tend to decrease over time, so a drug started shortly before that decline may be credited with it.",
+    "snippet": "There is a tendency for most patients with KCNT1‐related epilepsy to have a reduction in seizures over time, and if a therapy is initiated shortly before this natural decrease, both patients and families may attribute a reduction in seizures to a medication, when the effect is actually due to the normal course of the disease.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39093319_Gras2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors name expectation as a bias: parents who have waited long for a treatment may report benefit.",
+    "snippet": "This can lead to biases, such as the placebo effect which can be significant for parents who have been waiting so long for a treatment with high expectations on the benefit for their child.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39093319_Gras2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Subgroup fishing: benefit did not differ between variants in functional domains and others (19 of 44 against 6 of 12, p 0.75), but a regrouping of two domains gave 12 of 16 against 13 of 40 (p 0.007).",
+    "snippet": "Interestingly, we observed a statistical difference when RCK2 + NAD were grouped together versus the rest of the mutations (Fisher's exact test performed, 12/16 vs. 13/40, p = 0.007), as suggested by Fitzgerald et al.",
+    "anchor": "Results, Quinidine",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39093319_Gras2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In vitro and in vivo responses to quinidine disagreed for several of 14 variants tested in cells.",
+    "snippet": "Fourteen mutations have been examined in vitro, with in vitro and in vivo discrepancies in the response.",
+    "anchor": "Results, Quinidine",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39093319_Gras2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Cardiac conduction harm (QT prolongation in 7 of 31 non-responders) and the need for intensive monitoring are stated limits on use.",
+    "snippet": "the risk of potentially fatal cardiac arrythmias secondary to QUIN use, as well as the need for intensive monitoring, may limit the utility of this drug in practice",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39093319_Gras2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Cannabidiol and ketogenic diet were always prescribed together in the migrating-focal-seizure group, so their separate effects cannot be told apart.",
+    "snippet": "CBD was always simultaneously prescribed with KD in EIMFS patients, making it difficult to discern the distinct benefit of either",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39093319_Gras2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Conventional antiseizure medications were reported beneficial in about 10 percent of infants with migrating focal seizures, and combination effects could not be separated.",
+    "snippet": "it was impossible to determine the intrinsic value of each ASM",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39093319_Gras2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors advise N-of-1 methodology and natural-history data for future evaluation of therapies.",
+    "snippet": "The use of N of 1 methodologies and a better knowledge of natural history will help to better evaluate future therapies.",
+    "anchor": "Conclusion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39093319_Gras2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Review flow: 605 records, 338 after duplicates, 267 screened, 63 assessed in full text, 43 included.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 PRISMA: 605 identified (PubMed 226, EMbase 379); 338 after duplicates removed; 267 screened, 204 removed; 63 full-text assessed, 20 excluded; 43 studies included.",
+    "anchor": "Figure 1",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39093319_r2/EPI4-9-1176-g002.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 2: for the most prescribed medications in migrating focal seizures most reports are grey (no benefit information) or brown (no benefit), with only small green and orange segments.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 stacked bars: levetiracetam total 85, phenobarbital 87, topiramate 70 in all ages, mostly no benefit with small green or orange tails; potassium bromide total 20 with about 20 percent green and 8 percent orange; stiripentol 14 and nitrazepam 7 with blue segments for combination benefit; for sleep-related hypermotor epilepsy carbamazepine 19, valproate 16, topiramate 13.",
+    "anchor": "Figure 2",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39093319_r2/EPI4-9-1176-g001.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC11296097/fullTextXML returned HTTP 200 with a JATS body on 2026-10-21; the declared article_text artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}

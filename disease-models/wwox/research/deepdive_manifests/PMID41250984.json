@@ -1,0 +1,269 @@
+{
+ "schema_version": 2,
+ "pmid": "41250984",
+ "doi": "10.1002/epi4.70192",
+ "pmcid": "PMC12903803",
+ "receipt": "FTR-20261021-41250984-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the R4b task's questions (a confirmed repurposed drug; a missense precedent; an external or natural-history comparator that held up; a pre-dose drift measurement) and the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261022b.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Academic channelopathy group (clinical natural-history survey plus automated electrophysiology), foundation and NIH funding, authors with industry consulting; a missense-dominated developmental and epileptic encephalopathy used as a precedent for variant-function versus non-seizure severity; NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "KCNQ2[Title/Abstract] AND (\"developmental and epileptic encephalopathy\"[Title/Abstract]) AND (genotype[Title/Abstract] OR \"functional\"[Title/Abstract])",
+    "count": 30,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "KCNQ2[Title/Abstract] AND (\"sodium channel blocker\"[Title/Abstract] OR carbamazepine[Title/Abstract] OR retigabine[Title/Abstract])",
+    "count": 156,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 51,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41250984 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 51,
+   "references_screened": 50,
+   "references_with_doi": 50,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41250984_Bidwell2026_PMC.xml",
+   "sha256": "b8698a0c37d48a4e1e33e613d575c15a248e2018295fb7ea23c9f8de5d0fa92e",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML; body, tables cell-wise, figure legends.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12903803/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "b8698a0c37d48a4e1e33e613d575c15a248e2018295fb7ea23c9f8de5d0fa92e"
+   }
+  },
+  {
+   "path": "files/figures/PMID41250984_r2/EPI4-11-190-g001.jpg",
+   "sha256": "255c2c580f98aeab4847e6921709962a84f6e4b15df9fab1af8587bd07069e86",
+   "kind": "figure",
+   "note": "Figure 1 (volcano plots of variant function in the heterozygous state), native JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12903803.1/EPI4-11-190-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID41250984_r2/EPI4-11-190-g002.jpg",
+   "sha256": "22df59d09144222789b5728196b8f29101dca5bc68712c34678ad2e84b11fe1c",
+   "kind": "figure",
+   "note": "Figure 2 (phenotype severity score by functional class), native JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12903803.1/EPI4-11-190-g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The cohort is a parent-reported natural-history survey, cross-sectional with no longitudinal data; 48 individuals with 38 unique variants, 36 of them missense.",
+    "snippet": "Among the 48 participants, there were 38 unique KCNQ2 variants (36 missense, 1 in‐frame deletion, 1 frameshift).",
+    "anchor": "Results, Clinical and genetic findings",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41250984_Bidwell2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizure response to drugs is parent-reported as significant or complete reduction: 7 of 13 on carbamazepine, 13 of 17 on oxcarbazepine, 10 of 13 on phenytoin; the denominators are those who received each drug, with no control and no timing.",
+    "snippet": "Significant complete reduction of seizures in response to specific sodium channel blocking anti‐seizure medications was reported in 7 of 13 (54%) for carbamazepine, 13 of 17 (76%) for oxcarbazepine, and 10 of 13 (77%) for phenytoin.",
+    "anchor": "Results, Clinical and genetic findings",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41250984_Bidwell2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A good to excellent response to retigabine was reported in 3 of 4 individuals, and the variants of responders all responded to the drug in vitro.",
+    "snippet": "KCNQ2 variants associated with clinical responses to retigabine all showed significant in vitro responses to the drug",
+    "anchor": "Results, Correlation of variant function with clinical features",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41250984_Bidwell2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that timing of antiseizure medication use was not captured, so the question of early seizure control and development cannot be addressed here.",
+    "snippet": "Unfortunately, we had limited information about the timing of use of anti‐seizure medications in our study cohort.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41250984_Bidwell2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors cite earlier analyses showing a dissociation between ongoing seizures and severity of the non-seizure aspects of the disorder.",
+    "snippet": "Previous analyses demonstrated a dissociation between ongoing seizures and severity of the non‐seizure aspects of the disorder.",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41250984_Bidwell2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Functional class was assigned by current density relative to wild type (severe loss below 25 percent, moderate loss 25 to 75, wild-type-like 75 to 125, gain above 125) in a heterologous cell line with the partner subunit, and the classification was done blind to phenotype.",
+    "snippet": "Importantly, functional studies and classifications of impact on channel function were conducted blind to the specific phenotypes.",
+    "anchor": "Methods, Determination of variant function",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41250984_Bidwell2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No single non-seizure feature was associated with functional class; the composite severity score was modestly higher in severe loss than in moderate loss (p 0.02, rho 0.32).",
+    "snippet": "While no single phenotypic feature was associated with variant function, there was a modestly higher PSS in those with SLOF (median = 2; IQR 1–3) versus LOF (median = 1; IQR 1–2.5) variants (Mann–Whitney U yielded p = 0.02; Spearman rho coefficient = 0.32, p = 0.02)",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41250984_Bidwell2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The lower proportion of epileptic spasms among dominant-negative variants (2 of 19 against 7 of 18, p 0.04) is called a possible chance finding given the number of associations tested.",
+    "snippet": "Given the large number of associations we examined, this could be a chance finding.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41250984_Bidwell2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Severe mobility and communication impairment are common regardless of variant function (56 and 64 percent), which the authors propose as trial endpoint domains.",
+    "snippet": "Our data highlight several potential areas, particularly mobility and communication, which may provide appropriate domains for trial endpoints as they are severely impaired in large proportions of patients regardless of variant function.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41250984_Bidwell2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that a heterologous-cell classification can miss trafficking and localisation defects and that severe disease can come with minimal measured channel impact (for example a variant with wild-type-like biophysics that disrupts a binding partner).",
+    "snippet": "severe clinical phenotypes can be associated with variants having minimal impact on heterologously expressed channels",
+    "anchor": "Study limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41250984_Bidwell2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say a prospective longitudinal study is needed to learn the effect of early effective seizure therapy on long-term development and to define the therapeutic window for disease-modifying interventions.",
+    "snippet": "A prospective longitudinal study will be valuable to ascertain the impact of early and effective anti‐seizure therapy on long‐term developmental outcomes in KCNQ2‐DEE",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41250984_Bidwell2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Internal count check: the abstract gives 29 severe-loss, 13 loss, 3 gain and 2 wild-type-like participants (47 of 48), while Table 1 and the Results give 4 gain-of-function participants (29, 13, 2, 4 = 48).",
+    "snippet": "1 variant (2 individuals) exhibited WTL properties, and 3 variants (4 individuals) were classified as GOF when expressed in the homozygous state",
+    "anchor": "Results, Functional properties of KCNQ2 variants",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41250984_Bidwell2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 2: stacked severity-score bars by functional class: gain-of-function (n=3 scored) from 0 to 5 with about one third at 5, loss-of-function mostly scores 1 to 2, severe loss spans 0 to 5, wild-type-like (n=2) all at 1; every class contains scores of 0 to 2.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 percent of participants by PSS: GOF 33 at PSS 0, 33 at PSS 2, 33 at PSS 5; LOF 8 at 0, 50 at 1, 17 at 2, 17 at 3, 8 at 4; SLOF 18 at 0, 27 at 1, 18 at 2, 18 at 3, 9 at 4, 9 at 5; WT-like 100 at 1.",
+    "anchor": "Figure 2",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41250984_r2/EPI4-11-190-g002.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 1: in the heterozygous state about 12 variants lie at 0.2 to 0.6 of wild-type peak current at plus 40 mV above the significance line and about five lie below it; activation midpoint shifts are within a few millivolts for most variants.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1A volcano: x peak current fold WT 0.2 to 0.8, blue significant points at about 0.25 to 0.45 with -log p about 3.4 (P335A, F305L, E140Q, G256R, H328N, D282N, W269S, S247L, F304S), A265V, D563N and T234P at 0.45 to 0.6 with -log p about 1.9 to 2.1; Fig 1B shifts of -8 to +2 mV with P335A about -7.7 mV.",
+    "anchor": "Figure 1",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41250984_r2/EPI4-11-190-g001.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12903803/fullTextXML returned HTTP 200 with a JATS body on 2026-10-21; the declared article_text artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}

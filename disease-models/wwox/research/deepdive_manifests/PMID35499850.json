@@ -1,0 +1,299 @@
+{
+ "schema_version": 2,
+ "pmid": "35499850",
+ "doi": "10.1001/jamaneurol.2022.0829",
+ "pmcid": "PMC9062770",
+ "receipt": "FTR-20261021-35499850-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the R4b task's questions (a confirmed repurposed drug; a missense precedent; an external or natural-history comparator that held up; a pre-dose drift measurement) and the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261022b.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Multinational academic-industry phase 3 consortium (65 sites), sponsor-run, in Lennox-Gastaut syndrome; a repurposed drug whose seizure effect was later confirmed across indications; NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "fenfluramine[Title/Abstract] AND \"Lennox-Gastaut\"[Title/Abstract] AND randomized[Title/Abstract]",
+    "count": 23,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "fenfluramine[Title/Abstract] AND (\"Clinical Global Impression\"[Title/Abstract] OR \"executive function\"[Title/Abstract])",
+    "count": 27,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 34,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 35499850 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 34,
+   "references_screened": 27,
+   "references_with_doi": 27,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 7
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID35499850_Knupp2022_PMC.xml",
+   "sha256": "240acee571f4112120e540d00671c84fcb2e0c7b8adde8112f30b0ac1c0e434d",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML; body, tables cell-wise, figure legends.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9062770/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "240acee571f4112120e540d00671c84fcb2e0c7b8adde8112f30b0ac1c0e434d"
+   }
+  },
+  {
+   "path": "files/figures/PMID35499850_r2/jamaneurol-e220829-g001.jpg",
+   "sha256": "c79aaef3b3929e3ae907803bac78412a1716aa7222eac090a9b066e1ac8b9ad9",
+   "kind": "figure",
+   "note": "Figure 1 (CONSORT), native JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9062770.1/jamaneurol-e220829-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID35499850_r2/jamaneurol-e220829-g002.jpg",
+   "sha256": "8584bbd7994857a3c6b890875327069ac18d3469bd6c2116e22e8255206f4c56",
+   "kind": "figure",
+   "note": "Figure 2 (drop-seizure and global-impression responses), native JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9062770.1/jamaneurol-e220829-g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID35499850_r2/jamaneurol-e220829-g003.jpg",
+   "sha256": "a376f07aa1d48458706c3139fc340da07379fdb218bb3d20dfbeb1242bb7fa7b",
+   "kind": "figure",
+   "note": "Figure 3 (reduction by seizure type), native JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9062770.1/jamaneurol-e220829-g003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Design: double-blind placebo-controlled parallel-group phase 3 in 65 sites, 1:1:1 randomisation to two fenfluramine groups and placebo after a 4-week prospective baseline, 14 weeks of treatment.",
+    "snippet": "After a 4-week baseline to establish baseline seizure frequency, patients were randomized 1:1:1",
+    "anchor": "Methods, Trial procedures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35499850_Knupp2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Concomitant antiseizure medications, diet and stimulator settings could not change during the trial, which removes one confounder of a seizure count.",
+    "snippet": "Changes in antiseizure medications, dietary therapy, and vagus nerve stimulation settings were not permitted during the trial.",
+    "anchor": "Methods, Trial procedures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35499850_Knupp2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Primary endpoint is the percentage change in expert-panel-confirmed drop-seizure count versus placebo, a count; key secondaries include 50 percent responder rate and a clinician-rated global improvement scale.",
+    "snippet": "The primary end point was the percentage change from baseline in Epilepsy Study Consortium–confirmed drop seizures",
+    "anchor": "Methods, Efficacy end points",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35499850_Knupp2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Multiplicity was controlled by a serial gatekeeping hierarchy; nominal P values below a failed gate are explicitly not significance.",
+    "snippet": "End points were assessed for statistical significance only if all end points that were higher in the hierarchy were significant at the α = .05 level.",
+    "anchor": "Methods, Statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35499850_Knupp2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Sample size assumed a 30 percent or greater mean decrease against placebo and 50 percent SD.",
+    "snippet": "assuming an estimated mean decrease of 30% or greater in drop seizures for fenfluramine vs placebo and assuming 50% SD and 20% attrition",
+    "anchor": "Methods, Statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35499850_Knupp2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Primary result: the higher-dose group had an estimated median difference from placebo of minus 19.9 percentage points (interval minus 31.0 to minus 8.7, P .001); the placebo group itself fell by a median 7.6 percentage points.",
+    "snippet": "Patients who received 0.7 mg/kg/d of fenfluramine achieved an estimated median difference from placebo of −19.9 percentage points (95% CI, −31.0 to −8.7 percentage points; P = .001)",
+    "anchor": "Results, Drop seizure frequency",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35499850_Knupp2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The lower-dose group difference was minus 10.5 (interval minus 25.0 to 4.0, P .09), an interval that includes zero and is not a null.",
+    "snippet": "In the 0.2-mg/kg/d fenfluramine group, the estimated median difference from placebo was −10.5 (95% CI, −25.0 to 4.0 percentage points; P = .09)",
+    "anchor": "Results, Drop seizure frequency",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35499850_Knupp2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Responders (50 percent or more): 22 of 87 on the higher dose and 9 of 87 on placebo; at the 25 percent level, 29 of 87 (33 percent) improved on placebo.",
+    "snippet": "At the 25% or greater responder level, 46 of 87 patients (54%) in the 0.7-mg/kg/d fenfluramine group (P = .009), 41 of 89 patients (47%) in the 0.2-mg/kg/d fenfluramine group (P = .10), and 29 of 87 (33%) in the placebo group achieved reduction in drop seizure frequency.",
+    "anchor": "Results, Key secondary outcomes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35499850_Knupp2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Global impression: a clinically meaningful (much or very much) rating was given to 26 percent of the higher-dose group and 6 percent of placebo by investigators, 34 and 5 percent by caregivers; the any-improvement threshold separated the groups much less (49 versus 34 percent by investigators, P .06).",
+    "snippet": "The percentages of patients who were rated by investigators as having any improvement on the CGI-I scale were 49% (39 of 80 patients) in the 0.7-mg/kg/d fenfluramine group (P = .06), 45% (38 of 85 patients) in the 0.2-mg/kg/d fenfluramine group (P = .16), and 34% (27 of 80 patients) in the placebo group",
+    "anchor": "Results, Key secondary outcomes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35499850_Knupp2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Generalised tonic-clonic seizures (present in 46 percent) fell by 45.7 percent on the higher dose against a 3.7 percent increase on placebo, a nominal subgroup result.",
+    "snippet": "compared with an increase of 3.7% (n = 38) in the placebo group",
+    "anchor": "Results, Additional secondary outcomes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35499850_Knupp2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Baseline imbalance: median drop-seizure frequency per 28 days was 83 and 85 in the fenfluramine groups against 53 in the placebo group.",
+    "snippet": "The median (range) frequency was higher in the 0.7-mg/kg/d and 0.2-mg/kg/d fenfluramine groups than in the placebo group (83 [7-1803] and 85 [4-2943] vs 53 [2-1761] events per 28 days, respectively).",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35499850_Knupp2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No valvular heart disease or pulmonary hypertension was observed in the 14-week trial, with echocardiography at baseline, maintenance and end of trial.",
+    "snippet": "No cases of valvular heart disease or pulmonary arterial hypertension were observed at any time.",
+    "anchor": "Results, Adverse events",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35499850_Knupp2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors name short duration as the one limitation; no developmental or adaptive endpoint was measured, and the executive-function claim is cited to other work.",
+    "snippet": "A limitation of this study is its short duration.",
+    "anchor": "Limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35499850_Knupp2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 2A: median reduction in drop seizures about 26 on the higher dose, about 14 on the lower dose and about 7 on placebo over titration plus maintenance; panel C: clinically meaningful improvement about 26 and 20 against 6 percent by investigators and about 34 and 27 against 5 percent by caregivers.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 panels A-D: A median percentage reduction titration+maintenance 26 / 14 / 7.6 (P .001, .09) and maintenance-only about 27 / 18 / 7 (P .002, .08); B responder bars at >=25, >=50, >=75; C rated improvement from baseline, any improvement investigator 49/45/34, caregiver 61/44/37, clinically meaningful investigator 26/20/6, caregiver 34/27/5; D countable motor seizures 26 / 12 / 8.",
+    "anchor": "Figure 2",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35499850_r2/jamaneurol-e220829-g002.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 3: in generalised tonic-clonic seizures the placebo bar is below zero (an increase) while both fenfluramine bars are 45 to 60 percent reductions; in atonic seizures the placebo reduction (about 28 percent) exceeds the lower-dose reduction (about 4 percent).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3 panels A (combined) and B (maintenance only) bars by seizure type: GTC higher dose about 46, lower dose about 58, placebo about -4; tonic about 31, 21, 13; atonic about 34, 4, 28; tonic or atonic about 47, 14, 7; maintenance panel GTC 53, 62, -3; atonic 52, 12, 34.",
+    "anchor": "Figure 3",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35499850_r2/jamaneurol-e220829-g003.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 1: 335 screened, 72 excluded (32 for cardiovascular or cerebrovascular history), 263 randomised, 242 completed; 247 continued to the open-label extension.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 CONSORT: 335 screened, 72 excluded, 263 randomized 87/89/87, withdrew 10/7/4, completed 242, continued to OLE 247 (78/83/86).",
+    "anchor": "Figure 1",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35499850_r2/jamaneurol-e220829-g001.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC9062770/fullTextXML returned HTTP 200 with a JATS body on 2026-10-21; the declared article_text artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}

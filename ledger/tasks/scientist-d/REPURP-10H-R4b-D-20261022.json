@@ -1,5 +1,5 @@
 {
- "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
  "_note": "Part of the ten-hour repurposing batch ORCH-REPURPOSING-10H-20261021. Adjacent and transferable literature: every paper that is not WWOX evidence is labelled NOT WWOX EVIDENCE, at class level, no dose, no paediatric suitability presumed, not medical advice.",
  "TASK_ID": "REPURP-10H-R4b-D-20261022",
  "DIRECTIVE_VERSION": 1,
@@ -29,6 +29,57 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-22"
+ "CURRENT_STATE": "DONE",
+ "assigned_on": "2026-10-22",
+ "TASK_ACK": {
+  "actor": "scientist-d",
+  "at": "2026-10-21T23:00:00Z",
+  "note": "Relay on R4; branch task/r4b-d in .claude/worktrees/r4b-d; standing brief v3 read; context_policy QUESTION_DRIVEN."
+ },
+ "TASK_CLAIM": {
+  "actor": "scientist-d",
+  "at": "2026-10-21T23:00:00Z",
+  "lot": [
+   "42389070",
+   "42334048",
+   "37045569",
+   "36538782"
+  ]
+ },
+ "DEFAULTS_TAKEN": [
+  "Europe PMC REST XML for text; bucket PDF and figures; PMC page HTML for 39439575 because every XML route was restricted (no access control circumvented)",
+  "Receipts partial wherever a supplement or protocol was not read (35499850, 40162009, 41250984, 42286026, 39093319, 39439575)",
+  "Ten readings, not twelve: 42610455, 40336930 and 38427284 left unread (no lawful body, bot challenge, budget)",
+  "The audit repair (R4 manifests and cards) ran first on its own branch and task REPURP-10H-R4-REPAIR-D-20261022",
+  "Event identifiers use the host clock date 20261021"
+ ],
+ "STOP_LOG": [],
+ "RESULT": {
+  "readings": 10,
+  "carried_over": [
+   "42389070",
+   "42334048",
+   "37045569",
+   "36538782"
+  ],
+  "new": [
+   "35499850",
+   "40162009",
+   "41250984",
+   "42286026",
+   "39093319",
+   "39439575"
+  ],
+  "manifests": "all STRICT PASS",
+  "receipts": "staged, check_receipts OK, never recorded",
+  "note": "disease-models/wwox/research/repurposing_10h_scientist-d_20261022b.md",
+  "self_eval": "disease-models/wwox/research/session_evaluations/2026-10-22_repurposing_R4b_scientist-d.md",
+  "audit_owed": "every reading; list in the note",
+  "parked": [
+   "40336930",
+   "42610455",
+   "38427284",
+   "39887012"
+  ]
+ }
 }

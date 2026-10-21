@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261021-39439575-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "39439575",
+  "doi": "10.1212/CPJ.0000000000200391"
+ },
+ "event_at": "2026-10-21T23:28:59Z",
+ "analysis_at": "2026-10-21T00:00:00Z",
+ "analysis_time_precision": "date_only",
+ "workflow": "scientist-d, ten-hour repurposing batch, task REPURP-10H-R4b-D-20261022, branch task/r4b-d; context_policy QUESTION_DRIVEN. Route: Europe PMC REST fullTextXML into the shared files/fulltext/; JATS body and tables read section by section from a text rendering; The five figures were not obtained and are declared captions only; Tables 1 and 2 were read from the page text; the supplementary table (eTable 1) was not opened. Locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts. Receipt staged for the integrator, not appended.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID39439575_Berg2024comm_PMC_page.html",
+ "source_fingerprint": "b300c4ee1fe1c40b105e30a833740604421e87c0856c0bdb86c2d004163ec957",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID39439575.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261022b.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "PMC page text read section by section including Tables 1 and 2; figures captions only; eTable 1 not opened."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

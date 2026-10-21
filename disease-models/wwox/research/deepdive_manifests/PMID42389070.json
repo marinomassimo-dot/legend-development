@@ -1,0 +1,271 @@
+{
+ "schema_version": 2,
+ "pmid": "42389070",
+ "doi": "10.1016/j.ebr.2026.100876",
+ "pmcid": "PMC13320519",
+ "receipt": "FTR-20261021-42389070-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the R4b task's questions (a confirmed repurposed drug; a missense precedent; an external or natural-history comparator that held up; a pre-dose drift measurement) and the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261022b.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Two-author narrative review from an epilepsy centre, language edited with a generative tool by the authors own declaration, public research funding; it summarises primary trials it does not re-analyse; NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "fenfluramine[Title/Abstract] AND (review[Publication Type] OR \"narrative review\"[Title/Abstract]) AND (Dravet[Title/Abstract] OR \"Lennox-Gastaut\"[Title/Abstract])",
+    "count": 106,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "fenfluramine[Title/Abstract] AND (\"executive function\"[Title/Abstract] OR BRIEF[Title/Abstract])",
+    "count": 38,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 31,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42389070 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 31,
+   "references_screened": 22,
+   "references_with_doi": 22,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 9
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42389070_Janszky2026_PMC.xml",
+   "sha256": "2374779101818dd5165ce03e8359acea4ed7f74c585180470ecf87369839e754",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML; body, tables cell-wise, figure legends.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13320519/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "2374779101818dd5165ce03e8359acea4ed7f74c585180470ecf87369839e754"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42389070_r2/PMC13320519.1.pdf",
+   "sha256": "ec760a3d9a8b8134ac9f065cafaf8c13c7ad1e2e935e7c268df00dbdc0913f04",
+   "kind": "article_binary",
+   "note": "PMC open-data bucket PDF (publisher version); the review has two tables and no figures.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13320519.1/PMC13320519.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The review treats fenfluramine as a drug obtained through repositioning and approved for two syndromes.",
+    "snippet": "Low-dose fenfluramine (FFA), which has come to the fore through drug repositioning, has emerged as a separate therapeutic option",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42389070_Janszky2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The pivotal Dravet evidence is two randomised double-blind placebo-controlled phase 3 studies, with effect seen early in titration and a dose-response pattern between the pre-set doses.",
+    "snippet": "In both studies, the effect of treatment was observed early in the dose titration phase and was maintained during the maintenance phase, with a clear dose-response pattern between the predetermined doses",
+    "anchor": "Clinical efficacy in Dravet syndrome",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42389070_Janszky2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Time-based outcomes (longest seizure-free interval, time to first seizure) are reported as favouring the drug; the numbers in the review are rounded ranges taken from the primary trials, which were not available to this reader.",
+    "snippet": "Time-to-event analysis confirmed the magnitude of the effect: measures such as the longest seizure-free interval after baseline and time to first seizure favored FFA",
+    "anchor": "Clinical efficacy in Dravet syndrome",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42389070_Janszky2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Open-label extension and real-world data are used as confirmation of durability, with retention and healthcare utilisation as outcomes.",
+    "snippet": "Open-label extension data confirm these results, showing sustained efficacy over several years",
+    "anchor": "Clinical efficacy in Dravet syndrome",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42389070_Janszky2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Lennox-Gastaut evidence is one randomised double-blind study of 263 patients.",
+    "snippet": "In a randomized, double-blind study involving 263 patients",
+    "anchor": "Clinical efficacy in Lennox-Gastaut syndrome",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42389070_Janszky2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CDKL5 deficiency disorder: a six-patient open-label series and a phase 3 trial reported only as a company-level result, which the authors say must be interpreted cautiously until full peer review.",
+    "snippet": "however, these results should be interpreted cautiously until full peer-reviewed publication and regulatory evaluation are complete",
+    "anchor": "CDKL5 deficiency disorder section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42389070_Janszky2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Sunflower syndrome observations are uncontrolled and short, with expectation bias named as a limitation.",
+    "snippet": "Important limitations remain—small sample sizes, lack of randomized comparators, short follow-up, and potential expectation bias",
+    "anchor": "Other developmental and atypical epilepsies",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42389070_Janszky2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The executive-function improvements come from post hoc analyses of a caregiver-rated inventory; the review says they are only partly attributable to seizure reduction.",
+    "snippet": "Multiple analytical approaches suggest that these EF improvements are only partially attributable to a reduction in seizures",
+    "anchor": "Neurocognitive and behavioral outcomes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42389070_Janszky2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In Lennox-Gastaut the relation between change in fall seizures and change in the executive-function score is negligible to weak, and placebo-treated adults tended to worsen.",
+    "snippet": "correlations between changes in fall-associated seizures and changes in BRIEF-A scores were negligible to weak",
+    "anchor": "Neurocognitive and behavioral outcomes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42389070_Janszky2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors class the executive-function findings as hypothesis-generating because they are post hoc and caregiver-rated, not performance-based, and ask for prospective confirmation.",
+    "snippet": "they should be interpreted as hypothesis-generating and should be confirmed prospectively",
+    "anchor": "Neurocognitive and behavioral outcomes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42389070_Janszky2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Confounders named for caregiver-rated executive function: sedation, appetite and weight change, sleep consolidation and background polytherapy.",
+    "snippet": "potential confounder (sedation/drowsiness, appetite/weight change, sleep consolidation) and background polytherapy",
+    "anchor": "Neurocognitive and behavioral outcomes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42389070_Janszky2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Internal tension: the introduction says valvulopathy and pulmonary hypertension have not been reported in the antiepileptic range, while the safety section says post-marketing cases exist.",
+    "snippet": "in epilepsy programs, valvulopathy or pulmonary arterial hypertension (PAH) has not been reported in the antiepileptic dose range",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42389070_Janszky2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The safety section states that post-marketing experience has identified such cases and that monitoring remains essential.",
+    "snippet": "However, post-marketing experience has identified such cases, and therefore the continuous monitoring required by the label remains essential",
+    "anchor": "Safety and tolerability",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42389070_Janszky2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No direct comparative evidence between add-on drugs; the positioning claims rest on network comparisons with indirectness.",
+    "snippet": "although true, direct comparative evidence is still lacking",
+    "anchor": "Positioning among therapies",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42389070_Janszky2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Looking ahead the authors ask for confirmatory executive-function trials with objective endpoints.",
+    "snippet": "confirmatory EF trials with objective endpoints",
+    "anchor": "Conclusions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42389070_Janszky2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors declare a generative tool was used to improve language and readability.",
+    "snippet": "the authors used ChatGPT to improve language and readability",
+    "anchor": "Declaration of generative AI",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42389070_Janszky2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13320519/fullTextXML returned HTTP 200 with a JATS body on 2026-10-21; the declared article_text artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}

@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261021-42389070-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "42389070",
+  "doi": "10.1016/j.ebr.2026.100876"
+ },
+ "event_at": "2026-10-21T23:16:45Z",
+ "analysis_at": "2026-10-21T00:00:00Z",
+ "analysis_time_precision": "date_only",
+ "workflow": "scientist-d, ten-hour repurposing batch, task REPURP-10H-R4b-D-20261022, branch task/r4b-d; context_policy QUESTION_DRIVEN. Route: Europe PMC REST fullTextXML into the shared files/fulltext/; JATS body and tables read section by section from a text rendering; The review has no figures; Tables 1 and 2 were read from the JATS text (clinical algorithm and dose-ceiling tables are described only as the review reports them and are not carried into the note). Locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts. Receipt staged for the integrator, not appended.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID42389070_Janszky2026_PMC.xml",
+ "source_fingerprint": "2374779101818dd5165ce03e8359acea4ed7f74c585180470ecf87369839e754",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "read",
+  "figures": "not_present",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_present"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42389070.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261022b.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "Europe PMC JATS text rendering read in full including Tables 1 and 2; no figures or supplement exist."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
