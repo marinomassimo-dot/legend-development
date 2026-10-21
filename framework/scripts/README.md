@@ -224,6 +224,7 @@ refs or observe clones on other hosts. A missing or
 | **Benchmark J** — whether a record-scoped editor can replace BATCH_COMMIT's whole-file rewrite without losing a legitimate edit (J0 corpus labelling, J2 replay, over the repository's own history) | `framework/scripts/record_edit_bench.py j0` · `… j2` |
 | what model actually ran, per turn, and what the run cost — read from a transcript | `framework/scripts/session_model_census.py` |
 | what the runtime actually says about quota, with a timestamp — and when it says nothing | `framework/scripts/quota_state.py` |
+| whether every `D-nn` detection rule cited from a **live** surface resolves to a row of the `DEFAULTS THAT BIT US` table, to the allocator addendum's alias for it, or to a declared never-minted id — a ratchet on dangling rule citations, green at four declared and red at a fifth. Dated records that cite what they themselves proposed are out of scope by construction | `python3 scripts/test_detection_rule_citations_resolve.py` |
 | what a `` `<file>` §NN `` cross-reference costs the repository: the unresolvable ones, and then a per-directory table of **checked · unresolvable · gated** — the read a *widening* decision is made from, instead of re-deriving the per-prefix numbers by hand. Reports, never fails; the gated subset is the failing assertion of the same file, run with no arguments | `python3 scripts/test_section_references.py --census` |
 
 ## 11 · Disease-model analysis (public, WWOX)

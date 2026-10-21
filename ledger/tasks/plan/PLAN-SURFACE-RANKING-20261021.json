@@ -1,0 +1,206 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Operator directive 2026-10-21, relayed by the Orchestrator: three need-driven harness items, each measured in real work the same day. Lean, modular, no new gate or registry; answer a mistake with a tool or a habit; a check earns its place only if it will still be informative at the thousandth batch.",
+ "TASK_ID": "PLAN-SURFACE-RANKING-20261021",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "plan",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "N1 rank figure-bearing surfaces for a figure read, with the vector-figure trap and the absent-surface trap in the tests; N2 make dependency_integrity ingest a current Retraction Watch snapshot and report the snapshot's new age; N3 establish by measurement what happened to the dismissal ledger's D-31/D-33/D-35/D-36 and make the table and its references consistent without inventing content.",
+ "PRINCIPLES": [
+  "framework/master/harness_development_principles.md (T0, no gates, need-driven, look before building, measure value not compliance, one canonical home per rule)",
+  "LEGEND_CORE 21c STOP POLICY, 21d DECISION AUTHORITY, 21e AGILE OPERATING MODE",
+  "a test is not a gate: an automatic check that reports in seconds is welcome, anything that waits on a person is not",
+  "no scientific claim, no promotion of any output to DATO, zero external spend above the declared default",
+  "the four scientific current files and disease_model.md are not touched"
+ ],
+ "SCOPE": [
+  "N1: framework/scripts/paper_packet.py `rank` sub-command + framework/scripts/test_paper_packet.py + the routing row in framework/scripts/README.md",
+  "N2: framework/scripts/dependency_integrity.py (snapshot decoding and pin advance) + framework/scripts/test_dependency_integrity.py + framework/config/retraction_watch_pin.json",
+  "N3: disease-models/wwox/research/dismissal_ledger_current.md (append only) + scripts/test_detection_rule_citations_resolve.py + its routing row and battery enrolment"
+ ],
+ "BOUNDARIES": [
+  "disease-models/wwox/research/deepdive_manifests/, page_adjudications/ and drug_repurposing/ not touched: a blind auditor was reading PMID 42422765's surfaces concurrently and a Scientist was landing corrections",
+  "no new gate, registry, authority or approval step; no new framework; no new dependency",
+  "no change to LEGEND_CORE 21c/21d/21e",
+  "no push"
+ ],
+ "ACCEPTANCE_CRITERIA": [
+  "N1 ranks every figure-bearing surface a manifest declares or files/ holds, best-first, with measured pixel size, effective ppi where computable and the kind; flags a likely-vector figure and says render the page; never ranks an absent surface; is not a gate, blocks nothing and writes no manifest",
+  "N1 carries both measured traps as regressions that run on a fresh clone, and satisfies the Scientist's acceptance test on PMID 42422765",
+  "N2 ingests a 0x92 byte, the index still builds and resolves, and the snapshot's new age is reported",
+  "N3 states by measurement whether the rows were lost, never written or renumbered, and repairs only what an append can honestly repair",
+  "each code change has a regression, a routing row if a new entry point, and battery enrolment",
+  "release battery green on a fresh clone of the landed SHA; gate, LINT and receipts verify reported",
+  "DEFAULTS_TAKEN, DECISIONS_TAKEN, STOP_LOG in this record"
+ ],
+ "CURRENT_STATE": "COMPLETED",
+ "assigned_on": "2026-10-21",
+ "TASK_ACK": {
+  "state": "ACCEPTED",
+  "accepted_on": "2026-10-21",
+  "identity_basis": "ACTOR_ID plan assigned by the Orchestrator in the dispatch message of 2026-10-21; not inferred from a directory (AGENTS.md section 4)",
+  "interaction_mode": "AUTONOMOUS_COMPLETE",
+  "review_requirement": "none as a precondition (LEGEND_CORE 21e GATES); Mirror reviews ex post",
+  "scope_limit": "harness, plus one append to a non-canonical append-only research ledger"
+ },
+ "TASK_CLAIM": {
+  "claimed_by": "plan",
+  "claimed_on": "2026-10-21",
+  "timestamp_precision": "date only",
+  "branch": "task/PLAN-SURFACE-RANKING-20261021",
+  "worktree": ".claude/worktrees/plan-surface-ranking-20261021",
+  "uniqueness": "no competing claim exists for this TASK_ID + GENERATION"
+ },
+ "RESULTS": {
+  "N1_SURFACE_RANKING": {
+   "result": "DONE",
+   "entry_point": "python3 framework/scripts/paper_packet.py rank --pmid <PMID> [--json] [--limit N]",
+   "shape": "The Scientist's proposed `rank` was adopted and improved. It lists every figure-bearing surface the manifest declares or files/ holds, plus every figure-sized raster embedded in a PDF on disk and every page worth rendering, ordered best-first by measured effective ppi, each row naming the printed size its ppi was measured against and the route to open it. Always exits 0, writes nothing anywhere, and declares in its own output what it cannot see.",
+   "effective_ppi_is_measured_not_assumed": "Two deterministic routes: a raster whose aspect matches a PDF PAGE is a page render and its ppi is px_width / page_width_in; a raster whose aspect matches an image PLACED in a PDF takes that placement's printed width. With neither, the ppi is ASSUMED from a 7 in printed width, is printed with a `~`, and says so. On PMID 42422765 the assumption returns 104 ppi for gr7.jpg — the figure the paper's own manifest recorded by hand.",
+   "trap_a_vector_figure": "TWO instruments, both measured, and a disagreement is reported rather than resolved. (1) Vector drawing commands on the page outside its placed rasters: 0 on each of the publisher PDF's six whole-figure pages, 0 or 1 on every text page, 365 on the figure-7 page. (2) Aspect-ratio pairing against whole-figure rasters on disk, which is the instrument that caught it in the field: the six whole-figure embedded rasters pair to 0.0001-0.0011 relative, page 11's 759x515 fragment to no closer than 0.106. When the page carries vector content, the PAGE RENDER is emitted once for that page and the fragment is demoted below it explicitly (score -1), because the fragment's own ppi is 300 and only its CONTENT is partial.",
+   "trap_a_flag_is_directional": "An unpaired raster alone is NOT called a vector figure. A declared figure with no counterpart inside a PDF is 'no better surface on disk' — the graphical abstract ga1.jpg, 664x664, is exactly that case and a symmetric flag would have libelled it.",
+   "trap_b_absent_surfaces": "A declared-but-absent artefact, and a raster whose container header does not parse, are kept out of the ranked list entirely and reported under `absent` with the acquisition route. Both are printed whatever the --limit, because a truncated list would drop them first.",
+   "acceptance_test": "PASS on PMID 42422765: the top candidate is an embedded raster at 500 ppi; all six CDN JPEGs rank below it under 200 ppi; page 11 of PMC13343157.1.pdf yields exactly two candidates, the PAGE RENDER above the 759x515 fragment, with 365 vector drawings recorded; the six whole-figure pages carry 0 vector drawings and no page-render candidate.",
+   "found_by_running_it_and_fixed": [
+    "ppi chosen by the LARGEST value among aspect matches reported the 400 dpi render of mmc1.pdf p.9 as 585 ppi, from a coincidental 0.0041 match in a different supplement. Now chosen by the TIGHTEST aspect gap.",
+    "a coincidental 0.0046 aspect match to an unrelated 454x274 supplement panel reported gr7.jpg at 321 ppi, three times its real resolution — lifting the very CDN raster the sub-command exists to demote. A second, stricter tolerance (MEASURE_GAP 0.002) for the ppi basis refuses it; true pairs sit at 0.0001-0.0011.",
+    "mmc2.pdf is on this corpus's disk three times byte-identical, and each of the seven CDN JPEGs twice: 504 candidates where there were 103. Now deduped by sha256 and the collapse is reported.",
+    "one PAGE RENDER was emitted per unpaired raster, printing one supplement page three times with three different nearest neighbours. Now one per page.",
+    "every page of a PDF usually shares one aspect, so a page render matched all of them and the first visited was named: the 400 dpi render of the publisher PDF's page 11 was attributed to 'mmc1.pdf p.1'. Tied bases are now collected, the ppi reported only when they agree, and the page named only when one page matches.",
+    "a 1100x90 banner strip on page 10 of PMID 29724996's article PDF ranked FIRST at 600 ppi, because the pixel bound applied to the width only. It now applies to the shorter side.",
+    "page-adjudication crops ranked first for PMID 16223882 at ~418 assumed ppi: a 2924x145 caption band is not a figure and the printed-width assumption is simply wrong for it. No ppi is claimed for a crop and it is ranked last on purpose."
+   ],
+   "regressions": "framework/scripts/test_paper_packet.py — 12 new tests on a synthetic PDF that reproduces the measured geometry (so both traps run on a fresh clone, where files/ is absent and a corpus-only test would SKIP in exactly the run the battery performs), plus 4 that are the Scientist's acceptance test on the live corpus and are allowed to skip. Full suite 90 tests OK, 23 skipped.",
+   "routing_row": "framework/scripts/README.md, beside the packet/claim/check rows",
+   "not_a_gate": "exit 0 always; test_rank_exits_zero_and_changes_no_file compares every file's mtime_ns across a subprocess run",
+   "cost": "about 5 s on a 35-surface paper with three multi-page PDFs; 22 s for the four acceptance tests, dominated by sha256 over a 25 MB supplement and get_drawings over 54 pages"
+  },
+  "N2_RETRACTION_WATCH_DECODE": {
+   "result": "DONE",
+   "reproduced_first": "UnicodeDecodeError: 'utf-8' codec can't decode byte 0x92 in position 131, from both count_rows and load_index, on a synthetic snapshot carrying one Windows-1252 right single quotation mark in a title.",
+   "call_sites_measured_not_taken": "The brief named three call sites. `git grep` over the module finds TWO functions that decode the CSV — count_rows and load_index — reached from three places: build_pin (so the pin and staleness path), cmd_fetch, and every screen. Fixing the two functions fixes all three.",
+   "fix": "snapshot_lines(): streams the file in binary and decodes PER PHYSICAL LINE, UTF-8 first and cp1252 on a UnicodeDecodeError. cp1252 rather than errors='replace' because it decodes every byte 0x00-0xFF (so it can never raise) and recovers the actual character instead of substituting U+FFFD into a title that is passed verbatim into a manifest block. Per line rather than per file so a snapshot that is valid UTF-8 apart from some rows stays UTF-8 for the rest, and a genuine UTF-8 multi-byte character on a clean line is never mangled into two cp1252 characters. Each yielded line keeps its terminator, so csv.reader still handles a newline inside a quoted field.",
+   "second_defect_found_and_fixed": "`fetch` then `pin` — the sequence cmd_fetch's own output recommends — re-pinned the snapshot ALREADY named by the pin, because snapshot_path(read_pin()) prefers the pinned filename whenever it is still present. Measured with a 2026-09-10 and a 2026-10-02 snapshot both on disk: pin reported the 2026-09-10 one and printed a new `fetched` date beside the old filename, bytes, sha256 and row count. cmd_pin now pins the NEWEST snapshot on disk, says `advancing pin: <old> -> <new>`, and takes --snapshot to name one explicitly. Combined with the decode failure, that is how a snapshot reaches 41 days old with nobody having made a mistake.",
+   "snapshot_age_before": "41 days (pin fetched 2026-09-10, retractionwatch_20260910.csv, 72476 rows, 66609820 bytes)",
+   "snapshot_age_after": "0 days (pin fetched 2026-10-21, retractionwatch_20261021.csv, 73329 rows, 67729776 bytes, sha256 a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30); dependency_integrity.py verify prints VERIFIED and 'snapshot age: 0 day(s) since fetch'",
+   "live_decode_measurement": "19908 of the 73329 lines of the 2026-10-21 snapshot are not valid UTF-8 and were decoded as cp1252. The count is printed by `fetch` as a fact, not an error. Before the fix this snapshot could not be ingested at all.",
+   "regressions": "framework/scripts/test_dependency_integrity.py — ASnapshotThatIsNotUtf8StillBuilds (5 tests: the raw bytes really are undecodable, the rows count and the index builds and RESOLVES to FLAGGED_RETRACTION, the character is recovered not replaced, a valid UTF-8 row is not mangled by the fallback, the pin builds) and ThePinAdvancesToTheNewestSnapshot (2 tests). Full suite 71 tests OK, 2 skipped.",
+   "mutation_battery_target_updated": "M11 pins load_index's source line verbatim and went red when the function lost a `with open(...)` indentation level — the battery working as designed. The target was re-indented and the reason recorded beside it, not the assertion weakened.",
+   "spend": "zero. One key-less public HTTP GET to api.labs.crossref.org, no email address sent, no key, no paid service."
+  },
+  "N3_DISMISSAL_LEDGER_D_NUMBERS": {
+   "result": "DONE for the repair an append can honestly make; the other two repairs are named and NOT made",
+   "what_happened_established_by_measurement": "`git log -S'| **D-nn** |'` over dismissal_ledger_current.md returns ZERO commits for every id from D-27 to D-36. No row for any of those ten ids has ever existed in this repository's history. So they were not lost and they were not renumbered after being written: they were NEVER WRITTEN. This is a citation to repair, not a row to restore — the two repairs the brief distinguished, and the measurement picks the first.",
+   "why": "The ten ids were PROPOSED by seven commit candidates of 2026-09-22. BATCH_20260927_003 allocated D-18-D-22 and BATCH_20260927_004 allocated D-23, D-25, D-26, each recording the mapping in the candidate's disposition. Three proposals were minted under lower ids: D-30 -> D-26 (the alias is in that row), D-32 -> D-20, D-34 -> D-21. Four were never minted at all, because their candidates closed PROPAGATED with 'no operation list' while prose that already cited the proposed number stayed. No queued work will produce them: the candidates are closed.",
+   "census_wider_than_the_brief": "The brief named four. The live-surface census finds that D-27 through D-36 are ALL cited and none exists, 134 citations repository-wide with D-30 alone cited 52 times. Scoped to surfaces a reader consults as CURRENT — excluding dated records, which correctly cite what they themselves proposed — the unresolvable set is exactly the brief's four: D-31 (discovery_ledger_current.md twice, full_text_queue_current.md), D-33 and D-35 (discovery_ledger_current.md), D-36 (full_text_queue_current.md). D-27 and D-30 resolve through the head note and D-26's alias; D-17 is the operator's reservation.",
+   "repair_made": "An append-only dated ALLOCATOR ADDENDUM below the DEFAULTS THAT BIT US table. It adds, removes and renumbers no row. It records the measurement, maps every id from D-17 and D-27 to D-36 to its state and to the row it was minted as where there is one, names the candidate each formulation lives in, and tells a reader to read D-31/D-33/D-35/D-36 as citations to a PROPOSED rule and not to a row. It deliberately does NOT reproduce their wording: reproducing a detection rule there is how a row gets minted by accident.",
+   "repairs_not_made_and_why": "Minting the four rows is a BATCH_COMMIT act performed by the integrator from a commit candidate — the table is this ledger's canonical content. Repairing the four citations in place is also a BATCH_COMMIT act, on two research current files. Harness Engineering can append provenance and nothing more, so it appended and stopped, as the brief directed. Recorded rather than fixed — the same disposition the head note's own N6 finding took on 2026-09-28, and the same the integrator stated in BATCH_20260927_004: 'the ledger is append-only; a correction row is the repair'.",
+   "allocator_hazard_already_closed": "The table's maximum id is now D-38, so the head note's max(D-nn)+1 returns D-39 and can no longer collide with a live reference. What remained was purely the dangling-citation defect, which is why no row was minted in haste.",
+   "ratchet": "scripts/test_detection_rule_citations_resolve.py — 6 tests. It parses the table and the addendum, asserts every alias points at a row that exists, that no id is both minted and declared never minted, that every declared never-minted id is actually cited (so the baseline cannot be inflated with bookkeeping about nothing), and holds the unresolved set at zero-beyond-declared with the declared debt bounded at four. Red the moment a fifth non-existent rule is cited from a live surface; it tightens by itself when a BATCH_COMMIT mints one, with nothing to update in the test. It is a ratchet, not a gate: under a second, reports, waits on nobody, and will ask the same informative question at the thousandth batch. The baseline lives in the ledger's own addendum, not in the test, so the constraint is maintained where the content is.",
+   "scoping_defect_found_by_running_it": "The first cut counted the ledger's own allocator prose and reported D-27, D-28, D-29 and the D-39 in the sentence explaining that max+1 now returns D-39 — four findings about its own text, which is how a check teaches a reader to ignore it. The register does not cite itself and is now excluded."
+  },
+  "CLOSE": {
+   "release_battery": "see RELEASE_BATTERY below",
+   "gate": "scripts/public_release_gate.py VERDICT PASS, 0 BLOCK",
+   "lint": "framework/scripts/legend_lint.py VERDICT WARN, no BLOCK, rc 0",
+   "receipts": "fulltext_receipts.py verify OK, 685 chained receipts, tail anchored in the state manifest",
+   "main_merged_mid_task": "main advanced from 94c7464b to f54afba1 while this task ran (the Scientist's audit repairs on PMID 42422765). main was merged into the task branch before the ledger append was finalised, so the addendum sits on top of the current table including the D-38 row the merge brought in. No conflict."
+  }
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "The brief said `dependency_integrity.py` has three bare-utf-8 call sites on the snapshot CSV",
+   "default": "measured the population with git grep before fixing it, and fixed what is there: two decoding functions reached from three places",
+   "why_safe": "the fix covers every path either way; what changes is the report, which now states what was measured rather than what was relayed",
+   "would_have_differed": "nothing in the code; a third call site would have been invented in the report"
+  },
+  {
+   "condition": "The brief named the aspect-ratio detector as the one that caught the vector figure, and a page's vector drawing count turned out to separate the cases by three orders of magnitude (0 vs 365)",
+   "default": "kept BOTH instruments, made the drawing count decide the flag and the aspect pairing corroborate it, and made a disagreement between them a reported sentence rather than a silent preference",
+   "why_safe": "the aspect detector alone fires on every supplement figure with no CDN counterpart, which is a false positive in volume; the drawing count alone cannot tell a wholly vector figure page from a title page with rules (page 1 of the publisher PDF: 34 drawings, no figure). Each covers the other's blind spot and the residue is declared in `cannot_see`",
+   "would_have_differed": "with pairing alone, seven false LIKELY_VECTOR flags on one supplement; with the drawing count alone, a flag on the title page"
+  },
+  {
+   "condition": "A current Retraction Watch snapshot was needed to report the new age, and the only snapshots on disk were 41 and 19 days old",
+   "default": "ran `fetch`: one key-less public HTTP GET, no email, no key, zero spend, launched detached and waited on",
+   "why_safe": "zero external spend is the declared default and this endpoint is free and key-less; the alternative was to pin the 19-day-old snapshot and report an age that the fix had not actually been exercised against",
+   "would_have_differed": "the live 19908-line cp1252 measurement — the strongest evidence the fix was needed — would not exist"
+  },
+  {
+   "condition": "The rank human view is 103 candidates long on the measured paper",
+   "default": "--limit 15 by default, with every likely-vector page and every unrankable surface printed whatever the limit, and --json always complete",
+   "why_safe": "a 500-line answer is the noise this repository has twice named as what trains a reader to skim; the two things a reader must not miss are exempt from the truncation by construction",
+   "would_have_differed": "a complete list nobody reads, or a truncated list that drops the flag"
+  },
+  {
+   "condition": "`main` advanced mid-task with Scientist corrections to the paper this task measures",
+   "default": "merged main into the task branch before finalising, and re-ran the gate chain after the merge",
+   "why_safe": "the append had to land on the current table, which gained a D-38 row after the branch point; merging at landing would have discovered that at task_close",
+   "would_have_differed": "the addendum would have claimed D-37 was the maximum id"
+  },
+  {
+   "condition": "Four dangling citations live in two research current files this actor may not edit",
+   "default": "appended the provenance that makes them resolvable and stopped, naming the two BATCH_COMMIT repairs that remain",
+   "why_safe": "an append adds no row and changes no citation; the reader can follow every number to something, and the record says plainly which of them is not canonical",
+   "would_have_differed": "editing the two current files outside BATCH_COMMIT, or minting four rows from candidate text"
+  }
+ ],
+ "DECISIONS_TAKEN": [
+  {
+   "decision": "Two tolerances with two jobs: ASPECT_TOLERANCE 0.01 for 'is this the same figure', MEASURE_GAP 0.002 for 'how wide was this printed'",
+   "alternatives_rejected": "one tolerance for both; content hashing to verify a pairing",
+   "consulted": "the measured separations on PMID 42422765 (true pairs 0.0001-0.0011, fragment 0.106, the spurious ppi match 0.0046)",
+   "reversibility": "reversible",
+   "how_to_revert": "one constant"
+  },
+  {
+   "decision": "cp1252 per line rather than errors='replace' for the whole file",
+   "alternatives_rejected": "errors='replace' (loses the character into a verbatim-passed title); whole-file cp1252 (mangles genuine UTF-8 rows); probing the encoding first (reads 67 MB twice)",
+   "consulted": "the module's own failure-mode list; the manifest-block contract that passes title, journal and reason through verbatim",
+   "reversibility": "reversible",
+   "how_to_revert": "one function"
+  },
+  {
+   "decision": "cmd_pin pins the newest snapshot on disk by default, which is a behaviour change to a shipped command",
+   "alternatives_rejected": "leaving it and adding --newest; leaving it entirely and advancing the pin by hand each time",
+   "consulted": "cmd_fetch's own output ('next: dependency_integrity.py pin --write'), which makes the old behaviour a no-op in the sequence it recommends",
+   "reversibility": "reversible",
+   "how_to_revert": "restore snapshot_path(read_pin()) in cmd_pin; --snapshot already covers the explicit case"
+  },
+  {
+   "decision": "Repair N3 by an append that makes the citations RESOLVABLE, not by minting rows and not by editing the citing files",
+   "alternatives_rejected": "minting D-31/D-33/D-35/D-36 from their candidates' text (a BATCH_COMMIT act, and it would reproduce a detection rule into the canonical table from outside the discipline); editing discovery_ledger_current.md and full_text_queue_current.md (also BATCH_COMMIT); doing nothing and reporting",
+   "consulted": "the brief's own instruction to stop if the honest repair needs more than an append; the integrator's 2026-09-27 decision that 'the ledger is append-only; a correction row is the repair'; the D-26 row's existing D-30 alias as the established precedent for exactly this class",
+   "reversibility": "reversible",
+   "how_to_revert": "git revert the commit; the addendum is a contiguous block and the test reads its table, so removing both is one operation"
+  },
+  {
+   "decision": "Make the N3 check a ratchet bounded at the four declared, rather than a check that demands zero",
+   "alternatives_rejected": "asserting zero dangling citations (red on arrival, and a gate on scientific work this actor may not perform); no check at all",
+   "consulted": "harness_development_principles principle 3 (a test is not a gate) and the repository's existing debt ratchets in growth_anchors.py",
+   "reversibility": "reversible",
+   "how_to_revert": "remove the file and its enrolment and routing rows"
+  }
+ ],
+ "STOP_LOG": {
+  "class_1_reserved_act": 0,
+  "class_2_no_safe_default": 0,
+  "class_3_hindsight_defaults_appended_to_SAFE_DEFAULTS": 0,
+  "narrative": "Empty. No reserved act was touched: no publication to the public release repository, no history rewrite, no deletion of unique material (the two superseded Retraction Watch snapshots were left on disk), no external spend above the declared default of zero, no private-data exposure, and no change to LEGEND_CORE 21c/21d/21e. No class-2 condition arose: every ambiguity had a safe default and all six are in DEFAULTS_TAKEN. One condition came close to a stop and did not need one — the honest N3 repair exceeds what an append may do — and the brief had already supplied the default: append what can be appended, name what cannot, do not rewrite. It was executed and recorded rather than stopped for. No hindsight default is proposed for SAFE_DEFAULTS: none of the six conditions above lacked one."
+ },
+ "GOVERNANCE": {
+  "sections_read_before_first_act": [
+   "framework/state/state_manifest_current.md (current_state READY)",
+   "LEGEND_CORE 21c STOP POLICY",
+   "LEGEND_CORE 21d DECISION AUTHORITY",
+   "LEGEND_CORE 21e AGILE OPERATING MODE",
+   "framework/master/harness_development_principles.md"
+  ],
+  "canonical_files_touched": "none of the four scientific current files; disease_model.md untouched",
+  "append_only_ledger_touched": "disease-models/wwox/research/dismissal_ledger_current.md — one dated append below the DEFAULTS THAT BIT US table, no row added, removed or renumbered",
+  "reserved_paths_respected": "deepdive_manifests/, page_adjudications/ and drug_repurposing/ not modified by this task",
+  "push": "none"
+ }
+}

@@ -94,25 +94,35 @@ def minted_rows(text: str) -> set[str]:
     return set(MINTED_ROW.findall(text))
 
 
-def addendum_map(text: str) -> tuple[dict[str, str], set[str]]:
-    """(id -> the minted id it maps to), and the set of ids declared NEVER MINTED."""
+def addendum_map(text: str) -> tuple[dict[str, str], set[str], set[str]]:
+    """(id -> the minted id it maps to), the ids declared NEVER MINTED, and every id declared."""
     aliases: dict[str, str] = {}
     never: set[str] = set()
+    declared: set[str] = set()
     for ids, state, minted_as in ADDENDUM_ROW.findall(text):
         found = re.findall(r"D-\d\d", ids)
         target = re.findall(r"D-\d\d", minted_as)
+        declared.update(found)
         if "NEVER MINTED" in state.upper():
             never.update(found)
         elif target:
             for ident in found:
                 aliases[ident] = target[0]
-    return aliases, never
+    return aliases, never, declared
 
 
 def live_citations() -> dict[str, set[str]]:
+    """Which live surfaces cite which `D-nn`, excluding the ledger itself.
+
+    🔴 The ledger does not cite itself. It is the register: a number in its allocator note or its
+    addendum is bookkeeping ABOUT the numbering, not a rule being applied. Counting it made this
+    suite report `D-27`, `D-28`, `D-29` and the `D-39` in the sentence explaining that `max + 1`
+    now returns `D-39` — four findings about its own prose, which is how a check teaches a reader
+    to ignore it.
+    """
     out: dict[str, set[str]] = {}
     for path in tracked_markdown():
-        if not is_live_surface(path):
+        if not is_live_surface(path) or Path(path) == LEDGER.relative_to(ROOT):
             continue
         try:
             text = (ROOT / path).read_text(encoding="utf-8")
@@ -129,7 +139,7 @@ class EveryCitedDetectionRuleResolves(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.text = LEDGER.read_text(encoding="utf-8")
         cls.minted = minted_rows(cls.text)
-        cls.aliases, cls.never = addendum_map(cls.text)
+        cls.aliases, cls.never, cls.declared = addendum_map(cls.text)
         cls.cited = live_citations()
 
     def test_the_premise_holds_the_table_and_the_addendum_both_parse(self) -> None:
@@ -138,6 +148,8 @@ class EveryCitedDetectionRuleResolves(unittest.TestCase):
         self.assertIn("D-01", self.minted)
         self.assertIn("D-38", self.minted)
         self.assertNotIn("D-17", self.minted, "D-17 is reserved and must never be a row")
+        self.assertIn("D-17", self.declared,
+                      "D-17 is reserved by the operator and cited; the addendum must declare it")
         self.assertGreater(len(self.cited), 10, "no live surface cites a detection rule at all?")
 
     def test_every_alias_the_addendum_declares_points_at_a_row_that_exists(self) -> None:
@@ -154,15 +166,15 @@ class EveryCitedDetectionRuleResolves(unittest.TestCase):
     def test_the_unresolved_set_is_exactly_the_declared_debt_and_has_not_grown(self) -> None:
         """🔴 THE RATCHET. A fifth dangling citation from a live surface turns this red."""
         unresolved = {ident: sorted(where) for ident, where in sorted(self.cited.items())
-                      if ident not in self.minted and ident not in self.aliases
-                      and ident not in self.never and ident != "D-17"}
+                      if ident not in self.minted and ident not in self.declared}
         self.assertEqual(
             {}, unresolved,
             "a live surface cites a detection rule that is neither a row of the DEFAULTS table, "
             "nor mapped by the allocator addendum, nor declared never minted:\n  "
             + "\n  ".join(f"{k} cited in {', '.join(v)}" for k, v in unresolved.items())
             + "\nEither cite a row that exists, or declare the id in the addendum's mapping table "
-              "with what happened to it.")
+              "with what happened to it. Declaring is the cheaper repair and it loses nothing; "
+              "what is not allowed is a number a reader cannot follow anywhere.")
 
     def test_the_declared_debt_does_not_quietly_widen(self) -> None:
         """A declaration is a repair that loses nothing — and a growing one is a repair nobody made."""

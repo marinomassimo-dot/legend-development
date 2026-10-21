@@ -121,6 +121,7 @@ of scope while prose that already cited the proposed number stayed. **No queued 
 
 | Proposed id | State | Minted as | Where the formulation lives |
 |---|---|---|---|
+| `D-17` | RESERVED by the operator; no row, and the id is not to be reused | — | the head note of this section |
 | `D-27`, `D-28`, `D-29` | never proposed by any candidate; skipped by the allocator | — | — |
 | `D-30` | proposed, minted under another id | `D-26` (the alias is in that row) | `CC-20260922-EXON7-NATURAL-EXPERIMENT-01` |
 | `D-31` | **proposed, NEVER MINTED**, and cited as a rule | — | `CC-20260922-POSTDIAGNOSIS-WINDOW-01` §1 |
@@ -144,8 +145,10 @@ rather than fixed, which is the repair that loses nothing** — the same disposi
 `N6` finding took in 2026-09-28.
 
 🟢 **The allocator hazard itself is already closed, and that is why no row is minted in haste.** The
-table's maximum id is now `D-38`, so the head note's `max(D-nn) + 1` returns `D-39` and can no longer
-collide with a live reference. What remains is the dangling-citation defect, and
+table's maximum id now sits **above** this whole range, so the head note's `max(D-nn) + 1` can no longer
+return a number a live surface cites. **Re-derive that maximum from the table, never from this
+sentence** — the table grows, and a number written here would be stale by the next batch. What remains
+is the dangling-citation defect, and
 [`scripts/test_detection_rule_citations_resolve.py`](../../../scripts/test_detection_rule_citations_resolve.py)
 now measures it: it parses the table above, holds the unresolved set at exactly these four, and goes red
 the moment a fifth non-existent rule is cited from a live surface.
