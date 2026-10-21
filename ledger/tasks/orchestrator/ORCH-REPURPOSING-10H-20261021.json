@@ -89,8 +89,11 @@
    "scientist-d": {
     "group": "R4",
     "agentId": "aba610f58ef0e9b25",
-    "task": "REPURP-10H-R4-D-20261021",
-    "state": "RUNNING (measured 22:16Z via ListAgents, 16 min in; own worktree and branch present)"
+    "task": "REPURP-10H-P4-EARLY-D-20261022",
+    "state": "R4 closed (22 readings, landed 1e56a979, receipts 743 chained 81394c63); handed P4 early-benefit cards",
+    "previous_agents": [
+     "aba610f58ef0e9b25"
+    ]
    }
   },
   "restart_rule": "a Scientist whose agent has stopped is resumed with SendMessage to its agentId: if it stopped on a rate limit, continue from durable state; if its lot is finished, hand it the next unclaimed studies of its group from the persisted selection; never start a duplicate agent for an actor that is still running",
@@ -116,6 +119,10 @@
    {
     "t": "2026-10-21T22:40Z",
     "event": "scientist-a closed R1 (19 readings, landed 177721a4, receipts 721 chained b9e1e2fb); handed roadmap P4 deep-recovery cards in a fresh agent; blind audit of the R1 owed triples dispatched; candidates CC-20261021-SCIENTIST-A-R1-PROTEOSTASIS-01 and ...-C-R3-A51-ATTRIBUTION-01 held until their audits return"
+   },
+   {
+    "t": "2026-10-21T22:50Z",
+    "event": "scientist-d closed R4 (22 readings; design tables A 14 rows, B 7 rows); 22 receipts recorded; handed P4 early-benefit cards; R4 audit owed on ten manifests, queued behind the R1 and R3 audits"
    }
   ],
   "audits": {
@@ -130,6 +137,10 @@
     "scope": "PB-4 narrowing (polysome profiling 31402619); 42157447 Figs 6 and 8; 38731820 Fig 6 sample size; 32023956 Fig 1B text-versus-panel",
     "agentId": "a3c29605f071db51b",
     "file": "page_adjudications/locator_audit_R1_20261022.md"
+   },
+   "R4": {
+    "state": "TO_DISPATCH",
+    "scope": "42481851 Fig 4 panel a caption versus content; 39625912; 33180985; 35841234; 41784472; 41891667; 41999155; 37537625; 39726432; 37638552"
    }
   }
  },
