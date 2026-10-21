@@ -31,7 +31,7 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "IN_PROGRESS",
+ "CURRENT_STATE": "COMPLETE",
  "assigned_on": "2026-10-20",
  "TASK_ACK": {
   "actor": "scientist-b",
@@ -56,6 +56,116 @@
   "worktree": ".claude/worktrees/lettore-b",
   "branch": "task/REPURP-P3-EARLYBENEFIT-B-20261020"
  },
- "DEFAULTS_TAKEN": [],
- "STOP_LOG": []
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "The gap paper selected for the excitability/EEG family (PMID 42190144) is green OA but its only deposit serves an anti-bot proof-of-work challenge on every route.",
+   "default": "Park the paper with the full cascade recorded; do not solve the challenge.",
+   "why_safe": "A proof-of-work gate is an access control. Getting around one is not an act this actor takes on its own authority, and the lead it would have served keeps its IPOTESI tag and its low belief in the meantime. The debt is cheap to clear by an interactive session or an operator-supplied PDF, and it is recorded as such.",
+   "what_would_have_differed": "DL-MECH-003 would have been bound to a primary instead of to an abstract, and the WWOX-specific qEEG endpoint would have become either a measured negative or a real endpoint."
+  },
+  {
+   "condition": "The highest-value early-benefit paper (PMID 36537114) is closed access on every route, but a chunked gateway payload acquired by an earlier session already sat in the shared files/ tree, reported by paper_packet as 'on disk and undeclared'.",
+   "default": "Read that surface, declare it and fingerprint it, and understate coverage: results and discussion not_read although four discussion chunks were read end to end, figures captions_only, references not_present.",
+   "why_safe": "The bytes were lawfully acquired and are persisted; the reading extends coverage of what is held rather than acquiring better bytes, which do not exist. Understating coverage can only cause a future resume to re-read, never cause an overclaim.",
+   "what_would_have_differed": "Nothing available. Declaring the delivered sections 'read' would have asserted completeness the surface cannot support."
+  },
+  {
+   "condition": "The manifest schema requires an http(s) resolved_url, an HTTP method and a User-Agent policy for a non-derived artefact, and the route by which the earlier session fetched the gateway payload was never recorded.",
+   "default": "Use the schema's own `no_recipe` escape with a stated reason, and keep what the payload itself records (source, retrieved_at, query as executed, its two disclosures) instead of a reconstructed URL.",
+   "why_safe": "It is counted as a named gap by the validator, which is what it is. Inventing a plausible endpoint would have made an unreproducible recipe look reproducible — the worse of the two outcomes.",
+   "what_would_have_differed": "A replayable acquisition recipe, if the earlier session had recorded its route."
+  },
+  {
+   "condition": "All twelve locators failed byte-verification against the JSON escape form of the payload.",
+   "default": "Declare a derived plain-text artefact with derived_from and a versioned extractor, and anchor the locators to it.",
+   "why_safe": "The propositions were read on the chunk bodies, which are the same characters; the derivation is declared, fingerprinted and replayable from its stated call.",
+   "what_would_have_differed": "Nothing, except that a looser snippet would have hidden the escape problem instead of naming it."
+  },
+  {
+   "condition": "The reference list is absent from the delivered surface, so the dependency-integrity screen could only have run over author-year citations reconstructed by hand.",
+   "default": "Declare UNSCREENABLE_NO_REFERENCE_LIST and name the snapshot a screen would have used; do not screen a surrogate.",
+   "why_safe": "A verdict over a reconstructed list is a verdict about a different object. No proposition in the reading rests on a cited source, so the absence bounds nothing asserted.",
+   "what_would_have_differed": "A dependency verdict, had the reference list been on the surface."
+  },
+  {
+   "condition": "The id allocator of the DEFAULTS THAT BIT US table prescribes max(D-nn) + 1, while D-27 to D-30 are reserved as not minted and D-31, D-33, D-35 and D-36 are cited as detection rules elsewhere in the research layer with no row in that table.",
+   "default": "Allocate D-37, strictly above every id cited anywhere in the research layer, and state the deviation in the row itself.",
+   "why_safe": "The allocator's purpose is to prevent reuse and collision; max + 1 would have collided with a live reference. The deviation is recorded in the row and in the scout log rather than taken silently, and the four dangling ids are reported and not touched because they belong to other actors' records.",
+   "what_would_have_differed": "Nothing, had the table and its citers agreed."
+  },
+  {
+   "condition": "No standardised developmental or motor instrument could be sourced for the 'name the assay' column of the survival/function family; one search for a validated DEE outcome-measure set returned nothing.",
+   "default": "State the assay as a specification and tag the premise PREMISE: DEFAULT_FROM_TEXTBOOK in the note, explicitly as a research target rather than a foundation.",
+   "why_safe": "It is written as provisional by construction, which is what epistemic_discipline requires of a conclusion resting on a textbook default. It recommends nothing.",
+   "what_would_have_differed": "A sourced instrument, had one been found; it remains an open item."
+  }
+ ],
+ "STOP_LOG": [
+  {
+   "class": 3,
+   "what": "The session was interrupted by a runtime rate limit after the first milestone commit and before the manifest was written.",
+   "waited": "until the coordinator's resume message",
+   "outcome": "Resumed from durable state: branch and TASK_ACK commit verified, the uncommitted manifest draft found in the working tree and completed rather than rewritten, staged receipt directories of the peer actors re-checked before continuing. Nothing was redone.",
+   "hindsight_default": "Already the rule in SAFE_DEFAULTS: a limit counts only when the runtime has actually refused to continue, and the task record's committed milestones are what a resume reads. No new default is proposed."
+  },
+  {
+   "class": 0,
+   "what": "No stop was taken for any reserved act. Seven conditions that could have become questions for the operator were resolved as DEFAULTS_TAKEN above.",
+   "waited": "none",
+   "outcome": "continued"
+  }
+ ],
+ "completed_on": "2026-10-21",
+ "RESULT": {
+  "readings_completed": 1,
+  "readings_parked": 1,
+  "reading": {
+   "pmid": "36537114",
+   "doi": "10.1002/ajmg.a.63074",
+   "depth": "partial_fulltext_read (resume; reread_reason inadequate_prior_coverage)",
+   "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36537114.json — STRICT PASS, 0 gaps, 12 verbatim locators",
+   "staged_receipt": "disease-models/wwox/research/receipt_staging/scientist-b/FTR-20261020-36537114-01.json — staged_receipt_check OK, record --dry-run OK, NOT recorded",
+   "prior_receipt": "FTR-20260929-36537114-02"
+  },
+  "parked": {
+   "pmid": "42190144",
+   "reason": "closed on every route; the single green-OA deposit answers every request with an anti-bot proof-of-work challenge. Not circumvented. Declared debt; DL-MECH-003 keeps its IPOTESI tag and low belief, resting on an abstract.",
+   "cascade": [
+    "PMC id conversion: not found in PMC",
+    "Europe PMC core: Subscription required, no PMCID",
+    "Unpaywall: is_oa true, green, one repository location",
+    "OpenAlex: same single OA location",
+    "Semantic Scholar: same URL, GREEN, CC-BY",
+    "repository deposit direct, two domains x three paths x three User-Agent policies: challenge HTML each time",
+    "repository search API then the named file path: challenge",
+    "sanctioned fetcher: blocked by a bot challenge, Protected by Anubis"
+   ]
+  },
+  "outputs": [
+   "disease-models/wwox/research/repurposing_early_benefit_20261020_scientist-b.md",
+   "disease-models/wwox/research/fulltext_dossiers/PMID36537114_earlybenefit_20261020.md",
+   "disease-models/wwox/research/commit_candidates/CC-20261020-SCIENTIST-B-KETO-ENDPOINT-01.md",
+   "disease-models/wwox/research/deepdive_manifests/PMID36537114.json",
+   "disease-models/wwox/research/receipt_staging/scientist-b/FTR-20261020-36537114-01.json",
+   "disease-models/wwox/research/session_evaluations/2026-10-20_scientist-b_early_benefit_axis.md",
+   "disease-models/wwox/research/dismissal_ledger_current.md (row D-37)",
+   "disease-models/wwox/research/capability_scout_log.md"
+  ],
+  "commit_candidate": {
+   "id": "CC-20261020-SCIENTIST-B-KETO-ENDPOINT-01",
+   "target": "claim_registry_current#CLAIM 042 — evidence boundary only",
+   "target_wm_version": "WM_v7.27",
+   "change_class": "MINOR",
+   "blind_locator_audit": "OWED, declared on the candidate, not run"
+  },
+  "relations_qualified": 20,
+  "gates": {
+   "legend_lint": "WARN, no BLOCK (all warnings pre-existing)",
+   "public_release_gate": "PASS, 0 BLOCKS",
+   "fulltext_receipts_verify": "OK, 680 chained, tail anchored",
+   "session_self_eval": "PASS",
+   "paper_packet_check": "manifest ok; flag drift INSUFFICIENT_DATA (established nothing, not a pass)"
+  },
+  "micro_upgrade": "dismissal_ledger_current.md row D-37 — a title/abstract query returning zero licenses 'no paper is indexed for this', never 'this was never measured'; with the measured counterexample from this session's own reading"
+ }
 }
