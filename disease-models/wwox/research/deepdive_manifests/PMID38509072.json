@@ -1,0 +1,215 @@
+{
+ "schema_version": 2,
+ "pmid": "38509072",
+ "doi": "10.1038/s41467-024-46703-z",
+ "receipt": "FTR-20261022-38509072-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-a_20261022c.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Adjacent class-level paper read for one question (read-through eligibility by stop codon and nt +4); the manifest and the analysis note carry the product."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No lead is staged by this adjacent class-level reading; the question is answered in the analysis note."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 8,
+  "publications_on_gene": 0,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed esearch 2026-10-22: author string 'Mangkalaphiban K[au]' 8 records. A translation-fidelity group; not a WWOX group; NOT WWOX EVIDENCE. The paper re-analyses a published ribosome-profiling data set and adds a 15-allele CFTR reporter validation in HEK293 cells.",
+  "external_provenance": {
+   "source": "NCBI E-utilities esearch rettype=count, term as stated",
+   "date": "2026-10-22"
+  }
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "(readthrough[Title] OR read-through[Title]) AND (context[Title] OR determinants[Title] OR sequence[Title]) AND (nonsense[Title] OR \"premature termination\"[Title] OR \"stop codon\"[Title])",
+    "count": 12,
+    "source": "PubMed ESearch via the PubMed connector 2026-10-21"
+   }
+  ]
+ },
+ "multihop": {
+  "references_enumerated": 58,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "58 references declared; not read in this pass. The paper's data source (Wangen and Green, eLife) is the second source for the same ranking and is NOT queued here; no multi-hop expansion performed. The coverage key 'references' is declared not_read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 38509072 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED across claim_registry, discovery_ledger, dismissal_ledger, full_text_queue, literature_tracking_log, paper_registry and working_model at commit 888f358379d8. That is a statement about this query over these files, not evidence the laboratory does not know the paper."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-22 via PubMed get_article_metadata (publication types) and dependency_integrity.py screen: no retraction, expression of concern or correction notice among the publication types for PMID 38509072; reference list screened clean against the 2026-10-21 snapshot.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 58,
+   "references_screened": 55,
+   "references_with_doi": 55,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38509072_Mangkalaphiban2024_PMC_r2.xml",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC10954755&rettype=xml",
+    "http_method": "GET",
+    "tier": "NCBI PMC efetch XML via framework/scripts/pmc_bucket_fetch.py",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22"
+   },
+   "sha256": "6a15632005fe1bcda6fa566f32609f197fe3ed6224adac71db754cdb3da6dcd2"
+  },
+  {
+   "path": "files/figures/PMID38509072_r2/41467_2024_46703_Fig2_HTML.jpg",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10954755/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22"
+   },
+   "sha256": "50bc560678d2766b003ee18662e201565b49ea08e1590661e619fd0bd8ce7deb"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch returned a full JATS body (58 references, Methods, Results, Discussion) on 2026-10-22; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a supplement text layer or a figure image.",
+  "entries": [
+   {
+    "proposition": "Among the features predictive of readthrough efficiency in aminoglycoside-treated HEK293T cells are the identity of the stop codon and of the nucleotide immediately after it (nt +4).",
+    "snippet": "Among the features with high scores that are predictive of readthrough efficiency are the identities of the stop codon and the nucleotide immediately after it (nt +4) (Fig. 1)",
+    "anchor": "Results, first section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38509072_Mangkalaphiban2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "With nt +4 held constant the stop codons rank UGA > UAG > UAA from most to least readthrough-promoting, and with the stop codon held constant nt +4 ranks C > U > A/G.",
+    "snippet": "When nt +4 is held constant, the order of most to least readthrough-promoting stop codon is UGA > UAG > UAA (Fig. 2b, compare “A” columns from different stop codon panels to each other, and so on). When the stop codon is held constant, the order most to least readthrough-promoting nt +4 is C > U > A/G (Fig. 2b, compare different nt +4 columns to each other within a specific stop codon panel).",
+    "anchor": "Results, 'Known stop codon context influences readthrough efficiency'",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38509072_Mangkalaphiban2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The most readthrough-permissive stop codon plus nt +4 combination was UGAC and the most inhibiting was UAAG.",
+    "snippet": "the most readthrough-permissive combination, UGAC, had the highest increase in readthrough efficiency relative to the sample median, while the most readthrough-inhibiting combination, UAAG, had the highest decrease in readthrough efficiency across most samples (Fig. 2b)",
+    "anchor": "Results, 'Known stop codon context influences readthrough efficiency'",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38509072_Mangkalaphiban2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Cryo-EM work cited by the authors explains the low readthrough after a purine at nt +4, especially G.",
+    "snippet": "These stacking interactions are more stable with purines (A and G), which explains why stop codons followed by a purine, especially G, at nt +4 result in lower readthrough efficiency.",
+    "anchor": "Discussion, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38509072_Mangkalaphiban2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The model was tested on 15 premature termination codons from CFTR nonsense alleles in a dual-luciferase reporter, and 13 alleles were retained.",
+    "snippet": "All but two alleles, S434X UGA and UAA, of the 15 alleles tested have no other products that would contribute to the luciferase signals (see Materials and Methods for details), so we proceeded with 13 alleles in further analyses.",
+    "anchor": "Results, 'Random forest model can accurately predict outcomes of PTC readthrough'",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38509072_Mangkalaphiban2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Predicted readthrough correlated with the measured value with a Spearman coefficient of 0.27 in untreated and 0.7 in G418-treated cells.",
+    "snippet": "The predicted readthrough efficiency is positively correlated with average readthrough efficiency measured in both treatment conditions, with Spearman’s rank correlation coefficient (ρ) of 0.27 in untreated and 0.7 in the G418-treated condition (Fig. 4a).",
+    "anchor": "Results, 'Random forest model can accurately predict outcomes of PTC readthrough'",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38509072_Mangkalaphiban2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Prediction accuracy differed by stop codon: coefficients of 0.9 for UGA, 0.2 for UAG and 1 for UAA in the G418-treated panel.",
+    "snippet": "Spearman’s correlation coefficients for the data in Fig. 4a, G418-treated panel, for each stop codon are 0.9 for UGA, 0.2 for UAG, and 1 for UAA.",
+    "anchor": "Discussion, 'tRNA abundance and/or properties may influence...'",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38509072_Mangkalaphiban2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the reporter set, UAA alleles responded least to G418 and UGA alleles most.",
+    "snippet": "we observed a trend that UGA alleles as a group had the highest, followed by UAG, and UAA alleles the lowest increase in readthrough upon G418 treatment (Fig. 5a, b).",
+    "anchor": "Results, 'Mutations that result in UAA PTCs do not respond well to G418 treatment'",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38509072_Mangkalaphiban2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The endogenous-mRNA training data are readthrough measurements from HEK293T cells treated with aminoglycosides, re-analysed from a published ribosome-profiling data set.",
+    "snippet": "Readthrough efficiency data for HEK293T cells treated with different aminoglycosides were downloaded from Wangen and Green, eLife",
+    "anchor": "Methods, 'Data acquisition'",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38509072_Mangkalaphiban2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper states that its prediction was of readthrough after G418 treatment and that response to a drug is the quantity of therapeutic interest.",
+    "snippet": "it might not matter because the most important information for therapeutic purposes is readthrough level after drug treatment, which we showed to be accurate.",
+    "anchor": "Discussion, 'Potential applications of machine learning models'",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38509072_Mangkalaphiban2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2b shows, in the UAA panel, the G column of nt +4 as the most inhibiting in the aminoglycoside rows, and, in the UGA panel, the C column as the most promoting.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 2b, viewed as an image at the native JPEG: the UAA panel has its G column darkest blue (readthrough lower than the sample median) in the G418 and Paromomycin rows; the UGA panel has its C column darkest red (higher than the sample median) in the Untreated, Amikacin and aminoglycoside rows.",
+    "anchor": "Figure 2b",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38509072_r2/41467_2024_46703_Fig2_HTML.jpg",
+    "panel_text_relation": "text_confirmed_by_panel"
+   }
+  ]
+ }
+}

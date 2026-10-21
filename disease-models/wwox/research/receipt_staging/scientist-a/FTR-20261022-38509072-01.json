@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-22T09:00:00Z",
+ "event_at": "2026-10-22T09:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_id": "FTR-20261022-38509072-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Body text read section by section from the PMC XML. Figure 2 opened as an image at the native JPEG and its panels b and the text read together; Figures 1, 3, 4, 5 and 6 read as captions only. Supplementary Data 1 (raw dual-luciferase values) and the supplementary figures were acquired but not opened. The abstract was not used. No limitations section exists; the limits are in the Discussion. Depth partial."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID38509072.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-a_20261022c.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "6a15632005fe1bcda6fa566f32609f197fe3ed6224adac71db754cdb3da6dcd2",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID38509072_Mangkalaphiban2024_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1038/s41467-024-46703-z",
+  "pmid": "38509072"
+ },
+ "workflow": "scientist-a gap-filling task REPURP-10H-FILL-A-20261022; QUESTION_DRIVEN (the reader held the read-through abstention card and the WWOX nonsense-allele census before opening the paper); NOT WWOX EVIDENCE, class level; PMC XML acquired with no User-Agent through pmc_bucket_fetch.py; staged, not appended."
+}
