@@ -1,0 +1,265 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Operator directive 2026-10-20, relayed by the Orchestrator: place the two external drug-repurposing deliverables in the repository, reconcile the plan with what is really present, and implement the feasible increments in the roadmap's own priority order — preserving the scientific limits and the provenance, and distinguishing 'adopted in the plan' from 'verified implementation'.",
+ "TASK_ID": "PLAN-REPURPOSING-INTEGRATION-20261020",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "plan",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Place roadmap v4 r14 and scout register r20 verbatim under research/ with English provenance headers; measure what of the plan is actually present and runnable here; implement only the feasible increments the roadmap names and the code lacks, each with a regression; keep adoption, installation and verification three different statements.",
+ "PRINCIPLES": [
+  "framework/master/harness_development_principles.md (T0, no gates, need-driven, look before building, one canonical home per rule)",
+  "framework/protocols/file_generation_rule.md (complete, self-consistent, no placeholders)",
+  "the quoted deliverables are evidence of a plan, never of an installation: ADOTTATO NEL_PIANO is a planning decision",
+  "zero external spend, no new dependency, no new framework, no new gate, registry or approval step",
+  "the four scientific current files and disease_model.md are not touched; no computational output is promoted to DATO"
+ ],
+ "SCOPE": [
+  "TASK 1 placement: disease-models/wwox/research/drug_repurposing/{roadmap_v4_r14_20261020.md, scout_log_r20_20261020.md, README.md}",
+  "TASK 2 reconciliation: disease-models/wwox/research/drug_repurposing/reconciliation_20261020.md",
+  "TASK 3a bridge increment: framework/scripts/repurposing_bridge.py + its regressions + the input-contract reference",
+  "TASK 3b scaffold: disease-models/wwox/research/drug_repurposing/woree_rescue_reference_scaffold.md"
+ ],
+ "BOUNDARIES": [
+  "_external_repos/MANIFEST.md and .claude/skills/legend-hypothesis-forge/scripts/kg_thin_slice.py reserved to the actor working the clinical census in this same wave: read only, never edited",
+  "no install, no external spend, no contact with any service beyond the read-only public APIs the plan names",
+  "no ranking, no invented score, no promotion of a computational output to DATO",
+  "no change to LEGEND_CORE 21c/21d/21e",
+  "no push"
+ ],
+ "ACCEPTANCE_CRITERIA": [
+  "both deliverables placed verbatim with a provenance header stating origin, revision, date received, no-receipt, the meaning of ADOTTATO NEL_PIANO and that nothing changes the four current files",
+  "public_release_gate and legend_lint reported before and after placement",
+  "every component, step and asset the roadmap names carries one of PRESENT_AND_RUNNABLE / PRESENT_NOT_RUNNABLE / ABSENT / NOT_CHECKED with evidence measured today",
+  "real P0 measured; the roadmap's pathograph counts and baseline SHA re-measured and corrected in the reconciliation, not in the quoted document",
+  "each increment DONE with a regression or BLOCKED with a declared reason",
+  "release battery green on a fresh clone of the landed SHA",
+  "DEFAULTS_TAKEN, DECISIONS_TAKEN, STOP_LOG in this record"
+ ],
+ "CURRENT_STATE": "COMPLETED",
+ "assigned_on": "2026-10-20",
+ "TASK_ACK": {
+  "state": "ACCEPTED",
+  "accepted_on": "2026-10-20",
+  "identity_basis": "ACTOR_ID plan assigned by the Orchestrator in the dispatch message of 2026-10-20; not inferred from a directory (AGENTS.md section 4)",
+  "interaction_mode": "AUTONOMOUS_COMPLETE",
+  "review_requirement": "none as a precondition (LEGEND_CORE 21e GATES); Mirror reviews ex post",
+  "scope_limit": "harness and non-canonical research material only"
+ },
+ "TASK_CLAIM": {
+  "claimed_by": "plan",
+  "claimed_on": "2026-10-20",
+  "timestamp_precision": "date only",
+  "branch": "task/plan-repurposing-integration-20261020",
+  "worktree": ".claude/worktrees/plan-repurposing-integration-20261020",
+  "uniqueness": "no competing claim exists for this TASK_ID + GENERATION"
+ },
+ "RESULTS": {
+  "TASK_1_PLACEMENT": {
+   "result": "DONE",
+   "what": "Both deliverables placed verbatim under disease-models/wwox/research/drug_repurposing/, each under an English provenance header; a README routes to both and to the reconciliation. The Italian bodies were not translated or edited: the placed body of each file is byte-identical to the upload (roadmap 94,706 bytes, register 85,754 bytes).",
+   "upload_sha256": {
+    "roadmap": "232384d7913a5a1d7a80f8de155dee674cda6ac6da1cd05c8cdb96e6266c832b",
+    "scout_register": "b011abc5f23103edb69b8dbc8fb3fc65e911e1c64ece46b13f38d6f60251fb76"
+   },
+   "gate_before": "public_release_gate PASS, BLOCKS 0; legend_lint WARN (no BLOCK); growth_anchors PASS, unread_premises 0",
+   "gate_after_first_placement": "public_release_gate BLOCK_PUBLICATION, BLOCKS 2 — both BROKEN_MARKDOWN_LINK on the headers' forward link to reconciliation_20261020.md, which did not exist yet. No PMID, DOI, URL or drug name in either deliverable raised anything.",
+   "gate_after_complete": "public_release_gate PASS, BLOCKS 0; legend_lint WARN (no BLOCK), output identical to the pre-placement run except the EVIDENCE_AVAILABILITY line, which differs only because a linked worktree has no files/ (gitignored, hard-linked in the root checkout); growth_anchors PASS with unread_premises 0; fulltext_receipts verify OK, 680 chained receipts",
+   "unread_premise_note": "research/ is deliberately not in session_self_eval.PREMISE_GLOBS (analysis/, therapeutics/, meta/ are), so a PMID-listing record under research/ cannot move the UNREAD_PREMISE ratchet, whose baseline has zero headroom. Placement under research/ was the existing repository solution, not a new exemption, and no gate was loosened."
+  },
+  "TASK_2_RECONCILIATION": {
+   "result": "DONE",
+   "path": "disease-models/wwox/research/drug_repurposing/reconciliation_20261020.md",
+   "headline": "10 PRESENT_AND_RUNNABLE, 2 PRESENT_NOT_RUNNABLE, 14 ABSENT, 4 NOT_CHECKED. Nothing the plan proposed to install is installed; everything it proposed to reuse exists and runs; on the rescue reference the repository is far ahead of the plan.",
+   "pathograph_remeasured": "the roadmap's four figures are CONFIRMED, not stale: claims 47, distinct direct claim links 73, edges with an annotated relation 0 (all 46 UNTYPED / NO_DECLARED_RELATION_ANNOTATION / AWAITING_SCIENTIST_TYPING), nodes with an annotated biological scale 0 (all 47 NOT_ANNOTATED)",
+   "baseline_sha_corrected": "every SHA the plan names exists in this history; its newest (2ec8444a, 2026-10-15 14:13:51Z) is 323 commits and five days behind HEAD c9ce22bf (2026-10-20 20:44:15Z)",
+   "clinical_census_folded_in": "Section 4.4 cites, and does not re-run, the ClinicalTrials.gov API v2 census of 2026-10-20 produced by the parallel clinical-census actor (connector 91f8e60c, files in this same directory): seven unfiltered queries, all pagination exhausted, no QUERY_ERROR and no COVERAGE_INCOMPLETE; no registered WOREE interventional study on that registry on that date — WOREE, the spelled-out name and EIEE28 all resolve to one observational rare-disease registry record (NCT01793168); DEE28 and MZ-9138 return nothing; the sponsor record that exists (NCT07135050) is a different candidate for a different condition. NO_MATCH is kept strictly apart from absence. Two of this record's verdicts moved the same day (the ClinicalTrials.gov route, the Spectrum manifest row) and are folded in with their dates rather than rewritten.",
+   "rescue_reference_finding": "PMID 42422765 = DOI 10.1016/j.omta.2026.201791 = PMCID PMC13343157 is PAPER 011 / CLAIM 011 and carries 12 receipts, one of them FTR-20260814-42422765-06 complete_fulltext_read with 29 locators, plus a deep-dive manifest, a 55 KB locator dossier, both supplement PDFs and the JATS full text. CLAIM 011 is flagged for review over the same 'dose-dependent' phrasing the plan transcribes."
+  },
+  "TASK_3A_BRIDGE": {
+   "result": "DONE",
+   "what": "repurposing_bridge.py gains (1) label_lookup with status MATCH_FOUND / NO_MATCH_FOUND / QUERY_ERROR / NOT_ATTEMPTED and an independent coverage axis COMPLETE_FOR_QUERIES_RUN / COVERAGE_INCOMPLETE / UNKNOWN, with per-state limit lines and validation (a concluded search must list its queries, NOT_ATTEMPTED must not; MATCH_FOUND needs product identity or SPL id; QUERY_ERROR needs the error; COVERAGE_INCOMPLETE needs its limit; unknown fields refused); (2) p4_fields with endpoint_pursued, functional_evidence_available, temporal_or_model_limit and a cellular_context of target_expression / cells_tissue_stage / coverage / limits, always present and UNKNOWN rather than absent; (3) abstention NO_DRUG_ASSERTIONS_SUPPLIED, so an empty assertion list is a different fact from a search that returned nothing.",
+   "discipline_preserved": "no network, no lookup performed, no state inferred, no ranking, no score, no promotion; an outcome never moves directional_summary, assessment or comparisons, and NO_MATCH_FOUND neither drops a candidate nor becomes biological counterevidence. Card stays IPOTESI / canonical false.",
+   "regressions": "framework/scripts/test_repurposing_bridge.py: 5 tests -> 8, all PASS (test_label_lookup_states_stay_four_different_facts, test_later_p4_fields_are_present_and_unknown_not_absent, test_empty_assertion_list_is_an_abstention_not_an_empty_lookup)",
+   "docs": ".claude/skills/legend-hypothesis-forge/references/evidence_bridge.md records the two new optional blocks and their limits"
+  },
+  "TASK_3B_RESCUE_SCAFFOLD": {
+   "result": "DONE",
+   "path": "disease-models/wwox/research/drug_repurposing/woree_rescue_reference_scaffold.md",
+   "what": "the five endpoint families (excitability/EEG, myelination, neuroinflammation/gliosis, growth/metabolism, survival/function), each demanding figure/table, model, control, age, intervention, direction, duration and limits. Pre-filled only with what the roadmap itself attributes to Obeid et al.; every such cell marked TRANSCRIBED_FROM_ROADMAP + UNVERIFIED_BY_THIS_RECORD; unfilled cells marked NOT_YET_BOUND, which is reading debt and not a negative result.",
+   "receipt_check_outcome": "the task's premise 'this repository has no reading of that paper unless fulltext_receipts.py status --pmid says otherwise' was tested and says otherwise: 12 receipts exist. The scaffold therefore routes the filler to the receipted reading and its locators rather than to the roadmap, and names three divergences to resolve first (dose-dependent vs threshold per CLAIM 011's flag; the undeclared dose-unit convention, factor of two with an invariant HD/LD ratio; which endpoints the complete read resolved and in which direction).",
+   "limits_stated": "not Q230P evidence (Wwox-null full knockout, neither the missense allele nor a compound heterozygote) and not a reusable RNA-seq rescue signature (the primary's data availability is 'not relevant'; GSE156243 is a knockout-versus-wild-type organoid contrast, not this study's rescue arm). Not medical advice; no dose or administration for any person."
+  }
+ },
+ "DECLARED_BLOCKS": [
+  {"item": "P1 and P6 installations (OptimusKG, Open Targets client, MATRIX, ToolUniverse, AetherCell, NetworkCommons)", "reason": "installing anything was forbidden to this task; every service they need is reachable from here (12 of 12 probes HTTP 200), so the blocker is a decision, not the network"},
+  {"item": "drugfindR", "reason": "no R interpreter exists on this host at all (which R Rscript -> not found); provisioning one is an install"},
+  {"item": "ClinicalTrials.gov census", "reason": "no client of any kind exists in this repository (git grep -ril clinicaltrials over framework/, .claude/skills/, scripts/ returns nothing) and ToolUniverse is absent; the v2 API answers in 122 ms, so the thin adapter is feasible — but it belongs with the clinical-census work another actor holds this wave"},
+  {"item": "GSE156243 qualification", "reason": "the bytes are absent locally and fetching plus qualifying an observed input is a Scientist's act; this task fetched no data"},
+  {"item": "P5 ranking and P7 gold-set surface", "reason": "P5 would require inventing the ranking the plan forbids; P7 has no first real evaluation to attach to, which is the plan's own precondition"},
+  {"item": "_external_repos/MANIFEST.md spectrum-drug-tracker row", "reason": "measurably overstated (AUDITED, 'monogenic-DEE trial drugs and endpoints') and reserved to another actor in this wave; recorded in the reconciliation, not edited"}
+ ],
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "the two deliverables are in Italian and repository files are written in English",
+   "default": "quote the bodies verbatim and put the whole English frame in the provenance header, which says the body is quoted material",
+   "why_safe": "provenance of an external deliverable requires the received bytes; translating would create a derived document whose fidelity nobody could check",
+   "different_if": "a translation had been wanted, it would be a separate file beside the original, never a replacement"
+  },
+  {
+   "condition": "the first placement blocked the release gate on two BROKEN_MARKDOWN_LINK findings for a file that did not exist yet",
+   "default": "write the reconciliation the headers point to, rather than remove the pointers",
+   "why_safe": "the reconciliation was a required deliverable of the same task; the gate was satisfied by completing the work, not by loosening anything",
+   "different_if": "the reconciliation had been out of scope, the pointer would have been dropped"
+  },
+  {
+   "condition": "the task said the repository has no reading of Obeid et al. unless the receipt tool says otherwise",
+   "default": "ran the check, found 12 receipts including a complete read, and wrote the scaffold around the reading instead of around the roadmap",
+   "why_safe": "it corrects a premise downward in confidence about the external document and upward about the repository; no scientific content was authored by Harness Engineering",
+   "different_if": "the receipts had been absent, every cell would have been NOT_YET_BOUND with no route but re-acquisition"
+  },
+  {
+   "condition": "the roadmap's pathograph figures might have been stale and the instruction was to correct them",
+   "default": "re-measured, found all four still exact, and recorded them as confirmed rather than inventing a correction",
+   "why_safe": "the instruction was to measure, and a confirmed figure is a measurement result",
+   "different_if": "a drift had appeared, the measured number would stand beside the quoted one"
+  },
+  {
+   "condition": "the release battery's first run died silently at 90 of 149 targets: it had been launched as `nohup ... &` inside a backgrounded shell, and the child was killed when that launcher exited",
+   "default": "re-ran the whole battery with the runner itself as the background command's foreground process, so its lifetime is the task's, and read the verdict from the completion notification rather than from a name-matching poll",
+   "why_safe": "a battery is idempotent and the second run covered every target; no partial result was reported as a verdict",
+   "different_if": "the first run's 90 clean targets had been reported as the battery result, which would have been a verdict over a run that never finished. Hindsight default, and it generalises: wait on a job by PID:START or a completion file with framework/scripts/process_wait.py, never by process name — `pgrep -f run_release_regressions` also matched two other actors' waiter shells in this very window, which is exactly why the death looked like progress"
+  },
+  {
+   "condition": "the session stopped on a rate limit mid-closeout and resumed the next day; by then a parallel actor had written its own files into this task's directory and corrected the manifest row this record had reported as overstated",
+   "default": "checked durable state first (branch, worktree, directory contents, task record), kept every existing file untouched, folded the other actor's census in as a measured input with its commit SHA, and dated the verdicts that moved instead of rewriting them",
+   "why_safe": "nothing was redone and nothing of the peer's was overwritten; a reconciliation that silently updates its own verdicts stops being a measurement",
+   "different_if": "re-running the census would have cost a second set of live queries and produced a second record of the same fact"
+  },
+  {
+   "condition": "legend_lint's EVIDENCE_AVAILABILITY line differs between the root checkout and a linked worktree",
+   "default": "report the difference as an artefact of the worktree lacking the gitignored files/ tree, and re-run LINT in the root checkout after landing",
+   "why_safe": "no receipt, manifest or artefact was touched; the digest-mismatch count is 0 in both runs",
+   "different_if": "a digest mismatch had appeared, it would be a finding rather than an environment note"
+  }
+ ],
+ "DECISIONS_TAKEN": [
+  {
+   "what": "label_lookup carries the query outcome and the coverage on two independent axes rather than one five-valued enum",
+   "alternatives_rejected": "a single enum including COVERAGE_INCOMPLETE as a sibling of NO_MATCH_FOUND",
+   "who_consulted": "the roadmap's own text ('Un risultato può essere NO_MATCH_FOUND con copertura incompleta: tenere separati esito della query e copertura')",
+   "reversibility": "full",
+   "how_to_revert": "revert the bridge commit; no stored data depends on the shape"
+  },
+  {
+   "what": "unknown keys in label_lookup, p4_fields and cellular_context are refused with ValueError instead of being retained",
+   "alternatives_rejected": "keep unknown keys, as the raw input packet already does",
+   "who_consulted": "none",
+   "reversibility": "full",
+   "how_to_revert": "revert the bridge commit",
+   "why": "the raw packet is preserved verbatim under input anyway, so nothing is lost; refusing in the normalised block is what stops a typo becoming a field and stops a weight or score being smuggled into a tool whose whole discipline is that it does not score"
+  },
+  {
+   "what": "no lookup is performed and no state is inferred: label_lookup is declared by the caller",
+   "alternatives_rejected": "let the bridge call openFDA directly, which would have been easy and reachable",
+   "who_consulted": "none",
+   "reversibility": "n/a — nothing was added",
+   "how_to_revert": "n/a",
+   "why": "the tool's stated discipline is that it has no network; a bridge that queries becomes a client whose failure modes the card can no longer describe honestly"
+  },
+  {
+   "what": "the rescue scaffold states the divergence between the roadmap's 'dose-dependent' and CLAIM 011's threshold flag, and routes the filler to the claim",
+   "alternatives_rejected": "pre-fill the direction cells as the roadmap words them and stay silent",
+   "who_consulted": "CLAIM 011 and the receipt ledger, read not authored",
+   "reversibility": "full",
+   "how_to_revert": "delete the scaffold file; nothing depends on it",
+   "why": "a scaffold that imports a flagged phrasing would seed the flag into every card built from it"
+  },
+  {
+   "what": "the reconciliation uses a four-value verdict vocabulary and no fifth state",
+   "alternatives_rejected": "the external documents' own vocabulary (DA_APPROFONDIRE / APPROFONDITO / ADOTTATO NEL_PIANO / SCARTATO_CON_MOTIVO / IMPLEMENTAZIONE_VERIFICATA)",
+   "who_consulted": "none",
+   "reversibility": "full",
+   "how_to_revert": "rewrite the verdict column",
+   "why": "that vocabulary describes the plan's own decisions; this document measures this host, and reusing it would blur exactly the adoption-versus-verification line the operator asked to keep visible. No new taxonomy was introduced anywhere else."
+  }
+ ],
+ "STOP_LOG": [
+  {
+   "class": "1 (reserved act) avoided",
+   "what": "no reserved act was reached: no publication to the public release repository, no history rewrite, no deletion of unique material, no external spend, no private-data exposure, no change to 21c/21d/21e",
+   "time_waited": "0",
+   "outcome": "task completed autonomously; no operator stop"
+  },
+  {
+   "class": "2 (no safe default) avoided",
+   "what": "the two reserved files (_external_repos/MANIFEST.md, kg_thin_slice.py) each carry a measured, actionable finding (overstated Spectrum row; missing pagination)",
+   "time_waited": "0",
+   "outcome": "recorded in the reconciliation as findings for their owner rather than edited or queued as a question"
+  },
+  {
+   "class": "3 (hindsight default)",
+   "what": "the first placement blocked the gate on a forward link to a file not yet written",
+   "time_waited": "0",
+   "outcome": "hindsight default: when a provenance header points at a sibling deliverable of the same task, write the sibling in the same task rather than dropping the pointer or splitting the placement into two gated steps. Not appended to SAFE_DEFAULTS: it is narrower than the policy's entries and the repository already resolves it by ordinary completion."
+  }
+ ],
+ "MEASUREMENTS": {
+  "P0_20261020": {
+   "repo_sha": "c9ce22bf2aa199e41b7d1eb23211f8b11f2919e8",
+   "python": "3.12.3 (/usr/bin/python3)",
+   "pip": "24.0",
+   "uv": "present (~/.local/bin/uv)",
+   "absent_tooling": ["R", "Rscript", "conda", "mamba", "pipx", "docker", "git-lfs"],
+   "cpu_cores": 4,
+   "cpu_model": "AMD EPYC 9355P 32-Core Processor",
+   "mem_total_kb": 16376008,
+   "mem_available_kb": 10868248,
+   "disk_available": "161G of 193G (17% used)",
+   "tool_preflight": "7 tools, 6 present, ffmpeg absent, VERDICT usable",
+   "repurposing_packages_importable": "none of admet_ai, medchem, datamol, tooluniverse, torch, chemprop, rdkit, networkcommons, decoupler, anndata, scanpy, pandas; numpy 2.5.3 and requests 2.31.0 present",
+   "connectivity": "12 of 12 read-only unauthenticated probes HTTP 200 (Open Targets 208 ms, Monarch 618, DGIdb 588, openFDA 850, ClinicalTrials.gov v2 122, GEO suppl 855, Europe PMC 431, iLINCS 617, Hugging Face 286, PyPI 173, Bioconductor 869, GitHub 12)",
+   "tooluniverse_pypi_latest": "1.5.7 uploaded 2026-10-13T04:37:28, which measures the register's inference that #812/#813 are not in the installable wheel"
+  },
+  "pathograph_20261020": {
+   "claims_total": 47,
+   "claim_links_directed_distinct": 73,
+   "claim_link_occurrences": 104,
+   "edges_undirected": 46,
+   "edges_with_annotated_relation": 0,
+   "nodes_with_annotated_biological_scale": 0,
+   "propositions_scanned": 6921,
+   "candidates_emitted": 1440,
+   "locator_candidates": 1400,
+   "locator_candidates_bound_to_a_claim": 403,
+   "manifests_total": 452,
+   "manifests_bound_to_a_claim": 105,
+   "inputs_digest": "597d195c8bf7516eb67b1a8b713bb02568a71896baae5efa905b278c1e2bbcf5",
+   "inputs_files": 455,
+   "command": "python3 framework/scripts/pathograph.py --json --inputs-dirty-because \"measurement for drug-repurposing reconciliation\""
+  },
+  "baseline_sha_drift": {
+   "plan_newest_baseline": "2ec8444a9a1cc86736f4dba27882eebd0ba88f91 (2026-10-15 14:13:51 +0000)",
+   "head_today": "c9ce22bf2aa199e41b7d1eb23211f8b11f2919e8 (2026-10-20 20:44:15 +0000)",
+   "commits_behind": 323,
+   "all_named_shas_exist": true
+  },
+  "kg_thin_slice_live_20261020": "seed WWOX (HGNC:12799); Monarch coverage INCOMPLETE; Monarch KG neighbours 0; neighbours with known DGIdb drugs 1/1; WWOX 3 interactions, 2 approved (GEMCITABINE, SORAFENIB)",
+  "obeid_receipts": {"pmid": 42422765, "receipts": 12, "complete_fulltext_read": "FTR-20260814-42422765-06", "locators": 29}
+ },
+ "ACCEPTANCE": {
+  "work_commit": "612983bb",
+  "landed_sha": "af8d62204e8b3fafce71afd62f70dc760919bcba (merge 'repository: integrate task' on main, 2026-10-20, via framework/scripts/task_close.py; branch task/plan-repurposing-integration-20261020 deleted on landing)",
+  "closeout_branch": "task/plan-repurposing-closeout-20261021 (this record, the clinical-census fold-in and the README route; landed 2026-10-21)",
+  "release_battery_fresh_clone": "REGRESSION VERDICT: PASS WITH SKIPS (149 targets, 12 skipped), exit 0 — fresh clone of the landed SHA af8d6220 with files/ hard-linked (git clone -q . <dir> && cp -al files <dir>/files). No suite failed. Skips are corpus/environment-dependent (absent local page-adjudication images, one pinned artefact, the gitignored full-text corpus, no Stop hook and no live record in an isolated clone); no skip is counted as verification.",
+  "public_release_gate": "PASS, 0 blocks (task worktree, before landing)",
+  "legend_lint": "WARN, no BLOCK — output identical to the pre-placement run except the EVIDENCE_AVAILABILITY line, which differs only because a linked worktree has no files/",
+  "fulltext_receipts_verify": "OK, 680 chained receipts, tail anchored in the state manifest",
+  "growth_anchors": "PASS, unread_premises 0 (unchanged by the placement)",
+  "targeted_suites": "10 PASS before landing: tool_routing, section_references, link_targets, documented_commands, skill_packages, canonical_structure, release_surface, repository_surface_determinism, structured_data_integrity, public_claims_contract",
+  "bridge_regressions": "8 tests PASS (was 5)",
+  "pushed": "no — this actor pushed nothing; main was pushed in this window by another actor under the 21d push rule",
+  "scientific_delta": "zero: no current file, registry, ledger, receipt or disease_model.md was changed; no computational output promoted to DATO"
+ }
+}
