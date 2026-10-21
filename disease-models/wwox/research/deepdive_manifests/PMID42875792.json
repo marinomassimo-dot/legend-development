@@ -260,7 +260,7 @@
     "qualifies_needle": "Immunoblotting for HIKESHI and HSPs (Fig. 1A)"
    },
    {
-    "proposition": "The authors attribute the loss to degradation, with the transcript unchanged taken from a previous report and not measured here: mRNA is cited ('It was previously reported that the relative expression level of HIKESHI mRNA is unchanged'), and the proteasome route is a hypothesis tested only by the inhibitor treatment.",
+    "proposition": "The authors attribute the loss to degradation. The transcript being unchanged is taken from a previous report ('It was previously reported that the relative expression level of HIKESHI mRNA is unchanged'). Whether this paper examined the HIKESHI transcript in its own bulk RNA-seq on these lines is NOT STATED and not established here; the proteasome route is a hypothesis tested only by the inhibitor treatment.",
     "snippet": "It was previously reported that the relative expression level of HIKESHI mRNA is unchanged across CON, HIKHet, and HIKHOM genotypes",
     "anchor": "Results, Carfilzomib treatment, paragraph 1",
     "surface": "body",
@@ -270,6 +270,21 @@
      "system": "HIKESHI V54L (recessive missense, leukodystrophy) patient-derived iPSC lines differentiated to mixed neural cultures with oligodendrocytes (90 days, nanofiber plating), treated with two proteasome inhibitors every 48 hours; NOT a WWOX system",
      "genotype": "HIKESHI V54L homozygous (HIKHOM), heterozygous relatives (HIKHet), unrelated controls (CON)",
      "endpoint": "HIKESHI protein by Western blot, nuclear HSP70 after heat shock, MBP integrated intensity, Olig2/DAPI fraction, nuclear area and circularity"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42875792.json",
+     "entry": 2,
+     "receipt": "FTR-20261021-42875792-01",
+     "what_changed": "UNVERIFIABLE repaired: 'not measured here' is restated as 'not stated, not established here' because the paper runs bulk RNA-seq on these lines. Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNVERIFIABLE"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+      "triple": 2,
+      "audited_on": "2026-10-22"
+     }
     }
    },
    {

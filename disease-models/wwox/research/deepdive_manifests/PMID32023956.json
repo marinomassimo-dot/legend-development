@@ -237,7 +237,7 @@
     }
    },
    {
-    "proposition": "Figure 1B read: the panel box prints Pearson r 0.8771 with 95 percent interval 0.8381 to 0.9071 and R squared 0.7692, not 0.9448.",
+    "proposition": "Figure 1B read: the panel box prints Pearson r 0.8771 with 95 percent interval 0.8381 to 0.9071 and R squared 0.7692, not 0.9448. RESOLVED BY THE BLIND AUDIT (2026-10-22): the panel prints r 0.8771 with R squared 0.7692, mutually consistent, and the text's own R squared for this panel matches 0.8771; a marker-centroid measurement gives about 0.86 (error about plus or minus 0.03). The text value 0.9448 is the outlier and must not be quoted.",
     "snippet": "Linear correlation analysis of α-galactosidase A (α-Gal A) activity presented as absolute increase",
     "anchor": "Figure 1B (activity with the chaperone, in-house against GLP-validated)",
     "surface": "figure",
@@ -249,11 +249,26 @@
      "endpoint": "enzyme activity as percent of wild type, change after chaperone, amenability class, Bland-Altman agreement"
     },
     "contradicts": "entries[3]",
-    "contradicts_needle": "r = 0.9448"
+    "contradicts_needle": "r = 0.9448",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32023956.json",
+     "entry": 4,
+     "receipt": "FTR-20261021-32023956-01",
+     "what_changed": "Numeric conflict resolved by the blind audit in favour of the panel (r 0.8771); text value 0.9448 is the outlier. Verdict on the triple was SUPPORTED; the resolution is appended to the proposition. Unaudited by a second reader.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "SUPPORTED"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+      "triple": 4,
+      "audited_on": "2026-10-22"
+     }
+    }
    },
    {
-    "proposition": "The classification rule matters as much as the assay: swapping the amenability definition between datasets moved 9.6 percent of variants, and the most frequent non-amenable finding was no calculable fold change because baseline activity was zero.",
-    "snippet": "The most frequent finding among the non",
+    "proposition": "The authors report that the most frequent finding among the non-amenable variants was a non-calculable fold over baseline because baseline activity was zero, which they note is not an exclusion criterion if the absolute activity threshold is reached. The quote does not carry a claim that the classification rule matters as much as the assay.",
+    "snippet": "The most frequent finding among the non-amenable variants was a non-calculable fold over baseline due to a lack of baseline activity, which, however, is not an exclusion criterion for amenability as long as the 3% threshold absolute enzyme activity is reached.",
     "anchor": "Results 2.4, paragraph 2",
     "surface": "body",
     "artifact": "files/fulltext/PMID32023956_Lukas2020_PMC7037350.xml",
@@ -262,6 +277,21 @@
      "system": "GLA (alpha-galactosidase A) missense variants overexpressed in HEK293H cells, enzyme activity with and without an active-site-binding pharmacological chaperone, an in-house assay compared with a GLP-validated assay for 178 variants; published patient cohort observations discussed; NOT a WWOX system",
      "genotype": "GLA missense and small variants (178 compared); no WWOX",
      "endpoint": "enzyme activity as percent of wild type, change after chaperone, amenability class, Bland-Altman agreement"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32023956.json",
+     "entry": 5,
+     "receipt": "FTR-20261021-32023956-01",
+     "what_changed": "OVERSHOOT repaired: 'matters as much as the assay' removed; the authors in fact conclude that the residual discordance argues for an experimental discrepancy rather than one of definition (added entry). Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+      "triple": 5,
+      "audited_on": "2026-10-22"
+     }
     }
    },
    {
@@ -278,8 +308,8 @@
     }
    },
    {
-    "proposition": "High-baseline variants dominate the discordant calls and may be benign: about a third of differently classified variants have more than half of wild-type activity.",
-    "snippet": "may be benign with an uncertain clinical significance",
+    "proposition": "Among the differently classified variants, 34.8 percent (8 of 23) had high enzyme activity above 50 percent of wild type, which the authors call a high percentage; they say these variants may be benign with an uncertain clinical significance. The authors do not state that high-baseline variants dominate the discordant calls; 8 of 23 is a third, not a majority.",
+    "snippet": "a high percentage of 34.8% (8/23) of the differently classified variants had high enzyme activity >50%",
     "anchor": "Results 2.3, paragraph 1",
     "surface": "body",
     "artifact": "files/fulltext/PMID32023956_Lukas2020_PMC7037350.xml",
@@ -288,6 +318,21 @@
      "system": "GLA (alpha-galactosidase A) missense variants overexpressed in HEK293H cells, enzyme activity with and without an active-site-binding pharmacological chaperone, an in-house assay compared with a GLP-validated assay for 178 variants; published patient cohort observations discussed; NOT a WWOX system",
      "genotype": "GLA missense and small variants (178 compared); no WWOX",
      "endpoint": "enzyme activity as percent of wild type, change after chaperone, amenability class, Bland-Altman agreement"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32023956.json",
+     "entry": 7,
+     "receipt": "FTR-20261021-32023956-01",
+     "what_changed": "OVERSHOOT repaired: 'dominate' removed; the share is 8 of 23. Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+      "triple": 7,
+      "audited_on": "2026-10-22"
+     }
     }
    },
    {
@@ -343,9 +388,37 @@
     }
    },
    {
-    "proposition": "Conflict-of-interest disclosure: two authors received support from the manufacturer in the past and two are linked to a genetic testing company.",
+    "proposition": "Disclosure: two authors received financial support from Shire Pharmaceuticals in the past. The source does not state that this company manufactures the chaperone discussed in the paper.",
     "snippet": "The authors A.R. and J.L. received financial support from Shire Pharmaceuticals in the past.",
     "anchor": "Conflicts of Interest",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32023956_Lukas2020_PMC7037350.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GLA (alpha-galactosidase A) missense variants overexpressed in HEK293H cells, enzyme activity with and without an active-site-binding pharmacological chaperone, an in-house assay compared with a GLP-validated assay for 178 variants; published patient cohort observations discussed; NOT a WWOX system",
+     "genotype": "GLA missense and small variants (178 compared); no WWOX",
+     "endpoint": "enzyme activity as percent of wild type, change after chaperone, amenability class, Bland-Altman agreement"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32023956.json",
+     "entry": 12,
+     "receipt": "FTR-20261021-32023956-01",
+     "what_changed": "OVERSHOOT repaired: 'the manufacturer' was an inference from the company name and is removed. Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+      "triple": 12,
+      "audited_on": "2026-10-22"
+     }
+    }
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. Applying the authors' own amenability definition, 18.0 percent (32/178) of variants had a discordant classification with the earlier study; the authors conclude this argues for an experimental discrepancy rather than one of definition.",
+    "snippet": "In this analysis, 18.0% (32/178) of the variants had a discordant amenability classification with the earlier study [14], which argues for an experimental discrepancy rather than one of definition.",
+    "anchor": "Results 2.4, paragraph 2",
     "surface": "body",
     "artifact": "files/fulltext/PMID32023956_Lukas2020_PMC7037350.xml",
     "panel_text_relation": "text_only",

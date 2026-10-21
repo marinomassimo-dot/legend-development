@@ -284,8 +284,8 @@
     "qualifies_needle": "reduced the levels of wildtype and mutant pro"
    },
    {
-    "proposition": "Surface expression, drug condition: the drug raises surface alpha1 and beta2 to about wild type; surface gamma2 rises only to about 0.57 against 0.47 (not significant).",
-    "snippet": "However, for the α1 subunit, ZNS treatment rescued the reduction seen in the Q390X condition",
+    "proposition": "Surface expression with the drug, from the text: gamma2 rose to 0.572 against 0.474 for untreated Q390X, a trend that is not statistically different (p = 0.106) and remains below wild type; alpha1 was rescued to indistinguishable from wild type (0.998 against 0.747 untreated, p = 0.033); beta2 reached 0.934, not different from wild type, but the rise over the untreated Q390X condition failed to reach significance (p = 0.088).",
+    "snippet": "However, for the α1 subunit, ZNS treatment rescued the reduction seen in the Q390X condition (Q390X 0.747 ± 0.057, compared to WT 1 ± 0, p = 0.032; compared to ZNS 0.998 ± 0.074, p = 0.033), such that the ZNS-treated α1β2γ2/γ2(Q390X) + pcDNA condition was indistinguishable from WT (1 ± 0 WT vs. 0.998 ± 0.074 ZNS, p > 0.999) (Figure 3B,E).",
     "anchor": "Results 2.3, paragraph 3",
     "surface": "body",
     "artifact": "files/fulltext/PMID38731820_Poliquin2024_PMC11083348.xml",
@@ -294,6 +294,21 @@
      "system": "GABRG2 (GABA-A receptor gamma2 subunit) Q390X truncation: HEK293T cells co-transfected with alpha1, beta2 and wild-type or Q390X gamma2 and E3 ligases, and Gabrg2 +/Q390X knock-in mice treated with an existing antiseizure drug (EEG within animal; brain-region immunoblots in separate animals); NOT a WWOX system",
      "genotype": "Gabrg2 +/Q390X (nonsense, dominant-negative); HRD1, NEDD4L, UBE3A, RNF34, SEL1L; no WWOX",
      "endpoint": "total and surface subunit protein by Western blot, 5-7 Hz spike-and-wave discharges in 24 h, BiP and calnexin"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38731820.json",
+     "entry": 3,
+     "receipt": "FTR-20261021-38731820-01",
+     "what_changed": "OVERSHOOT repaired: the quote carried only alpha1; the proposition omitted that the beta2 rise over untreated Q390X is not significant and gave beta2 as rescued to about wild type. Values are now the text's own. Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+      "triple": 3,
+      "audited_on": "2026-10-22"
+     }
     }
    },
    {
@@ -377,7 +392,7 @@
     }
    },
    {
-    "proposition": "The Figure 6 legend states the sample size and the test: three female heterozygous mice and one-tailed paired t-tests.",
+    "proposition": "The Figure 6 legend states the sample size and the test: three female heterozygous mice and one-tailed paired t-tests. RESOLVED BY THE BLIND AUDIT (2026-10-22): the figure draws six animals and the reported baseline mean and standard error reproduce with n = 6, so the legend's N = 3 female is the outlier; the Methods say male and female mice were implanted.",
     "snippet": "N = 3 female heterozygous Gabrg2+/Q390X mice. One-tailed paired t-tests were used to determine significance.",
     "anchor": "Figure 6 legend (end)",
     "surface": "body",
@@ -387,6 +402,21 @@
      "system": "GABRG2 (GABA-A receptor gamma2 subunit) Q390X truncation: HEK293T cells co-transfected with alpha1, beta2 and wild-type or Q390X gamma2 and E3 ligases, and Gabrg2 +/Q390X knock-in mice treated with an existing antiseizure drug (EEG within animal; brain-region immunoblots in separate animals); NOT a WWOX system",
      "genotype": "Gabrg2 +/Q390X (nonsense, dominant-negative); HRD1, NEDD4L, UBE3A, RNF34, SEL1L; no WWOX",
      "endpoint": "total and surface subunit protein by Western blot, 5-7 Hz spike-and-wave discharges in 24 h, BiP and calnexin"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38731820.json",
+     "entry": 10,
+     "receipt": "FTR-20261021-38731820-01",
+     "what_changed": "Count conflict resolved by the blind audit in favour of the panel (six animals); legend N = 3 female is the outlier. Verdict on the triple was SUPPORTED; the resolution is appended to the proposition. Unaudited by a second reader.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "SUPPORTED"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+      "triple": 10,
+      "audited_on": "2026-10-22"
+     }
     }
    },
    {
@@ -470,7 +500,7 @@
     }
    },
    {
-    "proposition": "The surface benefit of removing the mutant subunit is stated as a possibility that may offset loss of wild-type total; it is not measured (no current or mIPSC read-out in this paper).",
+    "proposition": "The authors state as a possibility that removing the mutant subunit may offset the loss of wild-type total gamma2 through surface trafficking of functional receptors; no current or mIPSC read-out exists in this paper. Surface trafficking under HRD1 co-expression WAS measured and went the other way: surface gamma2 about 0.29 against about 0.47 for Q390X alone, alpha1 about 0.5 against about 0.75, beta2 about 0.42 against about 0.67 (blind audit panel reading of Fig 3D-F, a 783 px JPEG, not re-read by a second reader). The Discussion hypothesis is therefore not supported by the surface data in cells.",
     "snippet": "Although increased HRD1 activity may reduce the total amount of wildtype γ2 further, the increase in surface trafficking of functional receptors by removing γ2(Q390X) may offset the decrease in the total γ2 subunit.",
     "anchor": "Discussion 3.3",
     "surface": "body",
@@ -480,6 +510,21 @@
      "system": "GABRG2 (GABA-A receptor gamma2 subunit) Q390X truncation: HEK293T cells co-transfected with alpha1, beta2 and wild-type or Q390X gamma2 and E3 ligases, and Gabrg2 +/Q390X knock-in mice treated with an existing antiseizure drug (EEG within animal; brain-region immunoblots in separate animals); NOT a WWOX system",
      "genotype": "Gabrg2 +/Q390X (nonsense, dominant-negative); HRD1, NEDD4L, UBE3A, RNF34, SEL1L; no WWOX",
      "endpoint": "total and surface subunit protein by Western blot, 5-7 Hz spike-and-wave discharges in 24 h, BiP and calnexin"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38731820.json",
+     "entry": 17,
+     "receipt": "FTR-20261021-38731820-01",
+     "what_changed": "UNDERSHOOT repaired: 'not measured' understated what the source holds; surface trafficking under HRD1 was measured and lowered the surface subunits. Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+      "triple": 17,
+      "audited_on": "2026-10-22"
+     }
     }
    }
   ],
