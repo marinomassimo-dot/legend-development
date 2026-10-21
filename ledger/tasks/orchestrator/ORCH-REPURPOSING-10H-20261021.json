@@ -73,9 +73,9 @@
    },
    "scientist-b": {
     "group": "R2",
-    "agentId": "a9ce64fa724e5f4ef",
+    "agentId": "a9be556c4afa30ad3",
     "task": "REPURP-10H-R2b-B-20261022",
-    "state": "R2 CLOSED AND LANDED (190b389e; 26 receipts recorded 5b03d095, ledger 775); relay R2b started",
+    "state": "R2b relay running (started ~00:00Z)",
     "previous_agents": [
      "a85b13d3c3c5f7071",
      "a9ce64fa724e5f4ef"
