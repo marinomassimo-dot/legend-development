@@ -301,25 +301,44 @@ class PositiveControl(unittest.TestCase):
     def test_the_blank_nature_rows_are_unreachable_because_they_carry_no_doi(self):
         """Failure mode 8, measured rather than predicted.
 
-        218 rows in the pinned snapshot carry no RetractionNature. Every one of them
-        also carries no OriginalPaperDOI, so this method cannot see them at all. If a
-        future snapshot gives one of them a DOI, this test flips and the unclassified
-        branch stops being dead code — which is exactly when someone should look.
+        The question is whether `classify_nature`'s unclassified branch is reachable. It is
+        unreachable while no blank-nature row carries a DOI, and this test exists to say so the
+        moment one does.
+
+        🔴 **The class vanished upstream, and the stuck pin hid it for 19 days.** The 2026-09-10
+        snapshot carried 218 blank-nature rows, every one without a DOI. The 2026-10-02 snapshot
+        carries **0** and so does 2026-10-21: Retraction Watch classified them between those
+        dates, measured 2026-10-21 with an independent reader over all three files. The
+        2026-10-02 snapshot had been on disk since the day it was fetched and could not be pinned,
+        so this test went on asserting the 218 against a September file — the stale pin was also
+        hiding a real dataset change from the test that exists to notice it.
+
+        So the assertion is now written against the PURPOSE and not against one of its two worlds:
+        zero blank-nature rows is a STRONGER form of unreachable than "none of them has a DOI",
+        not a reason to fail. What must never pass silently is a blank-nature row WITH a DOI.
         """
         import csv as _csv
         _csv.field_size_limit(10 ** 9)
         path, _pin, _problems = di.verify_snapshot()
         blank = blank_with_doi = 0
-        with open(path, newline="", encoding="utf-8") as fh:
-            for row in _csv.DictReader(fh):
-                if not (row.get("RetractionNature") or "").strip():
-                    blank += 1
-                    if di.normalise_doi(row.get("OriginalPaperDOI")):
-                        blank_with_doi += 1
-        self.assertGreater(blank, 0, "the blank-nature class vanished from the snapshot")
+        # 🔴 Through `snapshot_lines`, not a bare `encoding="utf-8"` open. This test carried its
+        # own copy of the defect it was unrelated to, and it was invisible until a snapshot that
+        # is not valid UTF-8 was pinned on 2026-10-21: `UnicodeDecodeError: byte 0x92 in position
+        # 6514`. The module under test must not be the only place that can read its own data.
+        for row in _csv.DictReader(di.snapshot_lines(path)):
+            if not (row.get("RetractionNature") or "").strip():
+                blank += 1
+                if di.normalise_doi(row.get("OriginalPaperDOI")):
+                    blank_with_doi += 1
         self.assertEqual(
             blank_with_doi, 0,
-            "%d blank-nature rows now carry a DOI and are newly screenable" % blank_with_doi)
+            "%d blank-nature row(s) now carry a DOI and are newly screenable: "
+            "`classify_nature`'s unclassified branch has stopped being dead code and the "
+            "screening path for it needs a decision" % blank_with_doi)
+        if blank == 0:
+            print("\n      note: 0 blank-nature rows in the pinned snapshot "
+                  "(218 on 2026-09-10, 0 from 2026-10-02) — the class was classified upstream, "
+                  "and the unclassified branch is unreachable a fortiori")
 
     def test_a_malformed_doi_fails_closed_rather_than_clean(self):
         """A DOI prefix is 10. plus 4-9 digits. Anything else is UNSCREENABLE, not clean."""
@@ -887,6 +906,18 @@ class ThePinAdvancesToTheNewestSnapshot(unittest.TestCase):
         self.assertIn("advancing pin", printed)
         self.assertEqual("retractionwatch_20261021.csv",
                          json.loads(printed[printed.index("{"):])["filename"])
+
+    def test_redirecting_PIN_PATH_actually_redirects_read_pin(self) -> None:
+        """🔴 The premise of the two tests above, and it was false for an afternoon.
+
+        `read_pin` took `path=PIN_PATH` as a DEFAULT ARGUMENT, evaluated once at definition time,
+        so patching the module global did not reach it: both tests read the repository's real pin
+        and passed only because it happened to name the same snapshot this fixture calls old. They
+        went red the moment the real pin advanced to 2026-10-21. A test that is green for the wrong
+        reason is worse than a red one, so the premise is now asserted directly.
+        """
+        self.assertEqual(os.path.basename(self.old), di.read_pin()["filename"])
+        self.assertEqual("2026-09-10", di.read_pin()["fetched"])
 
     def test_an_explicit_snapshot_is_honoured(self) -> None:
         printed = self._pin(snapshot=self.old)

@@ -267,7 +267,19 @@ def snapshot_path(pin=None):
     return os.path.join(SNAPSHOT_DIR, found[-1]) if found else None
 
 
-def read_pin(path=PIN_PATH):
+def read_pin(path=None):
+    """🔴 PIN_PATH is resolved at CALL time, not bound into the signature as a default.
+
+    It used to read `def read_pin(path=PIN_PATH)`, and a default argument is evaluated once when
+    the function is defined — so a caller that redirects `dependency_integrity.PIN_PATH` at a
+    temporary file still read the repository's real pin. Measured 2026-10-21: two tests that patch
+    PIN_PATH to a fixture passed for a whole afternoon because the real pin happened to name the
+    same snapshot the fixture called "old", and went red the moment the real pin advanced — a test
+    that was green for the wrong reason, which is worse than a red one. `paper_pmids` and
+    `claim_paper_links` carry the same pattern against read-only registries; they are not fixed
+    here because nothing redirects them, and a change nobody needs is a change nobody tested.
+    """
+    path = path or PIN_PATH
     if not os.path.exists(path):
         return None
     with open(path, encoding="utf-8") as fh:
