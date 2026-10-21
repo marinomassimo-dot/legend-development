@@ -31,7 +31,7 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "CLOSED 2026-10-21. WOREE_RESCUE_REFERENCE bound: 15 measures across the five endpoint families, 120 of 120 cells written, 112 BOUND from a named panel or quotation, 5 UNKNOWN (looked for, not determinable: the age of Figure 6F, and the age of Supplementary Figure S7 panels E-H which its caption omits), 3 carrying an explicit NOT TESTED where no low-dose arm exists, and 0 left TRANSCRIBED_FROM_ROADMAP. CLAIM 011 dose flag ADJUDICATED NARROW with Figure 3B re-inspected as an image at 300 dpi and measured against its printed axes; the candidate is CC-20261021-SCIENTIST-C-CLAIM011-DOSE-ADJUDICATION-01, change class MINOR. Blind locator audit NOT mandatory (status is `flagged for review`, no persisted locator contradicted) and RECOMMENDED; the Orchestrator routes it. Receipt FTR-20261021-42422765-01 STAGED, not recorded. Manifest STRICT PASS, 0 gaps, 48 entries, 24 artefacts. LINT 0 BLOCK. Self-evaluation at research/session_evaluations/2026-10-21_scientist-c_REPURP-P3-RESCUEREF.md.",
+ "CURRENT_STATE": "CLOSED 2026-10-21. WOREE_RESCUE_REFERENCE bound and COUNTED, not estimated: the scaffold arrived with 40 cells (5 families x 8 columns), 20 TRANSCRIBED_FROM_ROADMAP and 20 NOT_YET_BOUND; it now carries 20 measure rows x 8 columns = 160 cells, of which 0 remain NOT_YET_BOUND and 0 remain TRANSCRIBED_FROM_ROADMAP. 157 cells are BOUND to a named panel, caption or verbatim quotation; 3 are UNKNOWN, all three in the `age` column and all three the same defect in the primary - Figure 6F and Supplementary Figure S7 panels E-H state no age for their treated arms anywhere in caption or Results. Three `intervention` cells are bound as an explicit absence (no low-dose arm exists for Figure 7E, Figure 4 or Figure 3H), which is a bound negative and not a gap. CLAIM 011 dose flag ADJUDICATED NARROW, with Figure 3B re-inspected as an image at 300 dpi and measured against its printed axes; candidate CC-20261021-SCIENTIST-C-CLAIM011-DOSE-ADJUDICATION-01, change class MINOR. Blind locator audit NOT mandatory (status is `flagged for review`; no persisted verbatim locator contradicted, corrected or replaced) and RECOMMENDED anyway; the Orchestrator routes it and nothing is propagated. Receipt FTR-20261021-42422765-01 STAGED, not recorded. Manifest STRICT PASS, 0 gaps, 48 entries over 24 artefacts. LINT 0 BLOCK, receipt chain OK, self-eval PASS. Diagnosis at research/session_evaluations/2026-10-21_scientist-c_REPURP-P3-RESCUEREF.md.",
  "assigned_on": "2026-10-21",
  "TASK_ACK": {
   "TASK_ID": "REPURP-P3-RESCUEREF-C-20261021",
@@ -90,6 +90,12 @@
    "default": "Do not declare a mandatory audit that the rules do not require; RECOMMEND a voluntary one, state the reasoning in full so it can be disputed, and stop short of propagating in either case.",
    "why_safe": "Nothing is propagated. No registry file is touched, the proposal travels as a commit candidate, and producer-is-not-verifier is preserved because this actor does not certify its own adjudication. If the Orchestrator judges the trigger to fire, the audit runs before the candidate lands and nothing has to be undone.",
    "what_would_differ": "Asserting the trigger fires would have been the safer-looking answer and the less accurate one; asserting it does not fire WITHOUT recommending the audit would have been the cheaper one."
+  },
+  {
+   "condition": "The first write of CURRENT_STATE asserted a cell count (120 of 120, 112 bound) that had been estimated rather than counted.",
+   "default": "Count the cells mechanically off the committed file and off main's version of it, and replace the asserted figures with the measured ones in the same task.",
+   "why_safe": "The correction is forward, in a later commit; the wrong figures are visible in history, which is where a corrected measurement belongs.",
+   "what_would_differ": "The record would have carried a fabricated count of its own completeness - the exact failure this repository names as an assumption asserted with the confidence of a measurement."
   }
  ],
  "STOP_LOG": []
