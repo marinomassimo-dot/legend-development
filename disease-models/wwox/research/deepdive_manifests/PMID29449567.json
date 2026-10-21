@@ -1,0 +1,324 @@
+{
+ "schema_version": 2,
+ "pmid": "29449567",
+ "doi": "10.1038/s41467-018-03106-1",
+ "receipt": "FTR-20261021-29449567-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named and deduplicated by the Orchestrator's selection file; the per-paper M0 packet and receipt status were run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "The reading is a primary-evidence read of a NOT WWOX EVIDENCE paper; the dossier is the analysis note section, no WWOX commit candidate is implied."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No consolidated baseline claim is narrowed or reversed by this reading; a blind audit is declared OWED where a candidate proposes it."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Not requested; discovery leads are staged separately if any."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a candidate card; BLOCK-1 holds, class level only."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "Cellzome (GlaxoSmithKline) and the European Molecular Biology Laboratory structural and computational biology unit (from the affiliations): an industrial-academic proteomics group; method and resource paper. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "dynamic SILAC AND protein turnover AND primary neurons",
+    "count": 5,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "protein half-life AND mass spectrometry AND non-dividing cells",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "pulsed SILAC AND missense variant AND turnover",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "PubMed counts, dated; a zero from a title/abstract query licenses 'no paper is indexed', never 'this was never measured' (D-37)."
+ },
+ "multihop": {
+  "references_enumerated": 43,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "43 references enumerated from the JATS; none is WWOX-related."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 29449567 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-21 via PubMed efetch for PMID 29449567: publication types ['Journal Article']; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 43,
+   "references_screened": 43,
+   "references_with_doi": 43,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID29449567_Mathieson2018_PMC5814408.xml",
+   "sha256": "22049b482118386f04ba9c08119fc246bfa402c403d17191a91928eebbf72b81",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC5814408: whole article; every text locator is matched against it.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5814408/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "22049b482118386f04ba9c08119fc246bfa402c403d17191a91928eebbf72b81",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID29449567/41467_2018_3106_Fig1_HTML.jpg",
+   "sha256": "7e7b8179f7d726dd14d08c5b31410a7726b68cbc0f9cd2a3a76ce89aff000bca",
+   "kind": "figure",
+   "note": "Figure 1 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5814408/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "7e7b8179f7d726dd14d08c5b31410a7726b68cbc0f9cd2a3a76ce89aff000bca",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID29449567/41467_2018_3106_Fig2_HTML.jpg",
+   "sha256": "7189cdeda6b681e41f23497e60937490cf6487f32e34aa4ea5a38554e90edc04",
+   "kind": "figure",
+   "note": "Figure 2 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5814408/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "7189cdeda6b681e41f23497e60937490cf6487f32e34aa4ea5a38554e90edc04",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID29449567/41467_2018_3106_Fig3_HTML.jpg",
+   "sha256": "4b11b7bfa3b165a4df4afa0ccb43b9cb43a62a4ee54ff12c47c1fcc4251bebfe",
+   "kind": "figure",
+   "note": "Figure 3 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5814408/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "4b11b7bfa3b165a4df4afa0ccb43b9cb43a62a4ee54ff12c47c1fcc4251bebfe",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID29449567/41467_2018_3106_Fig4_HTML.jpg",
+   "sha256": "57d59e6807883a33370f7d6c8a6336308f962da785b581c6942ba6bd1d7e3eb4",
+   "kind": "figure",
+   "note": "Figure 4 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5814408/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "57d59e6807883a33370f7d6c8a6336308f962da785b581c6942ba6bd1d7e3eb4",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID29449567/41467_2018_3106_Fig5_HTML.jpg",
+   "sha256": "03ebe237b8fb4ef6f1f68dca89c82237590aa6bf79f6c3a3ee3e240e28c0d48c",
+   "kind": "figure",
+   "note": "Figure 5 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5814408/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "03ebe237b8fb4ef6f1f68dca89c82237590aa6bf79f6c3a3ee3e240e28c0d48c",
+    "derived": false
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE (method). A pulse of heavy amino acids separates newly made from pre-existing protein by mass, so synthesis and degradation can be read without cycloheximide; half-lives from about 10 to over 1,000 hours are reported for thousands of proteins in non-dividing cells including mouse embryonic neurons.",
+    "snippet": "Peptides of pre-existing and newly synthesized proteins were distinguished by their mass due to incorporation of light or heavy arginine and lysine.",
+    "anchor": "Figure 1 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29449567_Mathieson2018_PMC5814408.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Dynamic SILAC mass spectrometry of protein turnover in five non-dividing primary cell types (human B cells, NK cells, monocytes, hepatocytes; mouse embryonic cortical neurons); proteome-wide half-lives; NOT a WWOX system and no variant protein",
+     "genotype": "Wild-type proteomes; no variant",
+     "endpoint": "protein half-lives, reproducibility between replicates, complex-level coherence"
+    }
+   },
+   {
+    "proposition": "Labelling windows range from 6 to 72 hours, so proteins with half-lives shorter than a few hours (as many destabilised variants have) fall outside the measured range; the abstract states a range from 10 hours and the fast example given is a kinase at about 9 to 11 hours in B cells.",
+    "snippet": "Janus kinase 3, which is predominantly expressed in the cells of hematopoietic lineage has a very short half-life between 9 and 11 h",
+    "anchor": "Results, Protein half-life determination, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29449567_Mathieson2018_PMC5814408.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Dynamic SILAC mass spectrometry of protein turnover in five non-dividing primary cell types (human B cells, NK cells, monocytes, hepatocytes; mouse embryonic cortical neurons); proteome-wide half-lives; NOT a WWOX system and no variant protein",
+     "genotype": "Wild-type proteomes; no variant",
+     "endpoint": "protein half-lives, reproducibility between replicates, complex-level coherence"
+    }
+   },
+   {
+    "proposition": "Coverage is 4,667 to 6,534 protein groups per cell type and a quality filter (regression R-squared above 0.85) kept 8,804 half-lives; a protein not detected cannot be given a half-life.",
+    "snippet": "This criterion was fulfilled by 8804 proteins taken together across the five cell types.",
+    "anchor": "Results, Protein half-life determination, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29449567_Mathieson2018_PMC5814408.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Dynamic SILAC mass spectrometry of protein turnover in five non-dividing primary cell types (human B cells, NK cells, monocytes, hepatocytes; mouse embryonic cortical neurons); proteome-wide half-lives; NOT a WWOX system and no variant protein",
+     "genotype": "Wild-type proteomes; no variant",
+     "endpoint": "protein half-lives, reproducibility between replicates, complex-level coherence"
+    }
+   },
+   {
+    "proposition": "Replicate agreement is high (R-squared of log half-lives 0.91 to 0.94; 98 percent of half-lives within two-fold), but cell types differ: hepatocytes and mouse neurons differ substantially from the haematopoietic cells.",
+    "snippet": "For 98% of all protein half-lives from the high-quality data set, the replicates differed by less than two-fold.",
+    "anchor": "Results, Protein half-life determination, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29449567_Mathieson2018_PMC5814408.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Dynamic SILAC mass spectrometry of protein turnover in five non-dividing primary cell types (human B cells, NK cells, monocytes, hepatocytes; mouse embryonic cortical neurons); proteome-wide half-lives; NOT a WWOX system and no variant protein",
+     "genotype": "Wild-type proteomes; no variant",
+     "endpoint": "protein half-lives, reproducibility between replicates, complex-level coherence"
+    }
+   },
+   {
+    "proposition": "Figure 2a read: half-lives of the same proteins correlate between cell types but scatter widely (log-log plots between neurons and the other types), so a half-life from one cell type is not a transferable number.",
+    "snippet": "Assessment of protein half-lives in different cell types.",
+    "anchor": "Figure 2a (replicate and cross-cell-type half-life scatter plots)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29449567/41467_2018_3106_Fig2_HTML.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Dynamic SILAC mass spectrometry of protein turnover in five non-dividing primary cell types (human B cells, NK cells, monocytes, hepatocytes; mouse embryonic cortical neurons); proteome-wide half-lives; NOT a WWOX system and no variant protein",
+     "genotype": "Wild-type proteomes; no variant",
+     "endpoint": "protein half-lives, reproducibility between replicates, complex-level coherence"
+    },
+    "qualifies": "entries[3]",
+    "qualifies_needle": "For 98% of all protein half-lives from the hi"
+   },
+   {
+    "proposition": "Complex subunits tend to turn over together, so the half-life of a protein is partly set by the assembly it belongs to; for a missense variant of a subunit this predicts different turnover in assembled and free states.",
+    "snippet": "A clear and significant trend (p-value < 0.001, Wilcoxon-rank test) for a more coherent half-life distribution of protein subunits within individual complexes becomes apparent for all cell types",
+    "anchor": "Results, Turnover of protein complexes, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29449567_Mathieson2018_PMC5814408.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Dynamic SILAC mass spectrometry of protein turnover in five non-dividing primary cell types (human B cells, NK cells, monocytes, hepatocytes; mouse embryonic cortical neurons); proteome-wide half-lives; NOT a WWOX system and no variant protein",
+     "genotype": "Wild-type proteomes; no variant",
+     "endpoint": "protein half-lives, reproducibility between replicates, complex-level coherence"
+    }
+   },
+   {
+    "proposition": "Figure 3 read: in each cell type the standard deviation of log half-lives among subunits of the same complex is lower than for shuffled assignments, with the chaperonin complex the tightest.",
+    "snippet": "Half-life variability among members of protein complexes is smaller than expected by chance.",
+    "anchor": "Figure 3 (variability of half-lives within complexes against shuffled controls)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29449567/41467_2018_3106_Fig3_HTML.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Dynamic SILAC mass spectrometry of protein turnover in five non-dividing primary cell types (human B cells, NK cells, monocytes, hepatocytes; mouse embryonic cortical neurons); proteome-wide half-lives; NOT a WWOX system and no variant protein",
+     "genotype": "Wild-type proteomes; no variant",
+     "endpoint": "protein half-lives, reproducibility between replicates, complex-level coherence"
+    },
+    "qualifies": "entries[5]",
+    "qualifies_needle": "A clear and significant trend (p-value < 0.00"
+   },
+   {
+    "proposition": "Sample preparation lyses cells in 2 percent SDS at 95 C with benzonase and clears by centrifugation, so the read is of the SDS-soluble proteome, with no separate pellet analysis.",
+    "snippet": "Cells were washed with PBS and the supernatant was removed completely before cells were lysed in 2% SDS for 3 min at 95 °C",
+    "anchor": "Methods, Sample preparation for MS",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29449567_Mathieson2018_PMC5814408.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Dynamic SILAC mass spectrometry of protein turnover in five non-dividing primary cell types (human B cells, NK cells, monocytes, hepatocytes; mouse embryonic cortical neurons); proteome-wide half-lives; NOT a WWOX system and no variant protein",
+     "genotype": "Wild-type proteomes; no variant",
+     "endpoint": "protein half-lives, reproducibility between replicates, complex-level coherence"
+    }
+   },
+   {
+    "proposition": "The authors state that in-vitro half-lives lose the in-vivo context.",
+    "snippet": "The half-lives measured in non-dividing cells in vitro should yield more accurate values at the cost of losing the endogenous in vivo context",
+    "anchor": "Discussion, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29449567_Mathieson2018_PMC5814408.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Dynamic SILAC mass spectrometry of protein turnover in five non-dividing primary cell types (human B cells, NK cells, monocytes, hepatocytes; mouse embryonic cortical neurons); proteome-wide half-lives; NOT a WWOX system and no variant protein",
+     "genotype": "Wild-type proteomes; no variant",
+     "endpoint": "protein half-lives, reproducibility between replicates, complex-level coherence"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST returned the whole article as fullTextXML for PMC5814408 (123 kB, 2026-10-21); five figure images from the supplementaryFiles container.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a figure legend or an inspected figure."
+ }
+}

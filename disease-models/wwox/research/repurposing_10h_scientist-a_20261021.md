@@ -197,3 +197,13 @@ Receipt `FTR-20261021-32023956-01` (partial_fulltext_read: four figure images op
 
 *Comparison phase.* FIRST-PASS OBSERVATIONS COMPLETE -> PRIOR KNOWLEDGE ADMITTED FOR COMPARISON (registry: no record for this PMID, a statement about that query only).
 
+### 29449567 - Mathieson 2018, proteome-wide protein turnover in primary non-dividing cells (dynamic SILAC) - NOT WWOX EVIDENCE
+
+Receipt `FTR-20261021-29449567-01` (partial_fulltext_read: all five figures opened; supplementary half-life tables retrieved, not read), manifest PASS, 9 locators. A method route for separating synthesis from degradation without a cycloheximide chase (the selection file's question).
+
+- **What the method gives (DATO).** A pulse of heavy lysine and arginine distinguishes newly made from pre-existing protein by mass; thousands of half-lives (10 to over 1,000 hours stated) are measured in non-dividing cells including mouse embryonic cortical neurons (6,534 protein groups there), with replicate R-squared of 0.91 to 0.94 (Figure 2, opened). Subunits of a complex turn over together more than by chance (Figure 3), so a protein's half-life reflects its assembly state.
+- **Bearing on PB (placement of the deficit).** Dynamic SILAC reads synthesis and decay of the same protein from one time series and needs no translation inhibitor; it is the proteomic counterpart of the chase-versus-inhibitor logic in the nascent-synthesis dossier, and it does not need an antibody. **Limits that matter for a Q230P-class protein**: (i) labelling windows run 6 to 72 hours, so a variant with a half-life of an hour or less (the GABRA1 G251D variant in 39216838 is near that) is outside the measured range, and its fast loss would show as "heavy protein never accumulates"; (ii) a protein that is not detected at all gets no half-life, so an undetectable variant needs targeted MS, not discovery proteomics; (iii) lysis is 2 percent SDS at 95 C with the clearing spin, so the read is of the SDS-soluble proteome and a pellet would be missed; (iv) half-lives differ strongly between cell types (hepatocytes and neurons depart from haematopoietic cells), so a number is not transferable, and the authors say in-vitro values lose the in-vivo context. Whether WWOX itself is among the detected proteins in these data sets (its supplementary half-life tables) was not checked here and is a cheap follow-up.
+- **No variant, no drug.** The paper tests nothing about missense variants or chaperones; its relevance is as a design option for question 1. NOT WWOX EVIDENCE.
+
+*Comparison phase.* FIRST-PASS OBSERVATIONS COMPLETE -> PRIOR KNOWLEDGE ADMITTED FOR COMPARISON (registry: no record for this PMID, a statement about that query only).
+
