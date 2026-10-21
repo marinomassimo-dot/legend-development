@@ -55,5 +55,38 @@
   "branch": "task/repurp-10h-r2-b"
  },
  "DEFAULTS_TAKEN": [],
- "STOP_LOG": []
+ "STOP_LOG": [],
+ "CHECKPOINT": {
+  "at": "2026-10-21",
+  "done_pmids": [
+   "36300716",
+   "37275776",
+   "42274296",
+   "37082241",
+   "30955423",
+   "42536722",
+   "29463073",
+   "40834072",
+   "32000863(targeted re-read)",
+   "40827489",
+   "35184274",
+   "41137852"
+  ],
+  "remaining_lot": [
+   "40068874",
+   "32878331",
+   "33704440",
+   "40825030",
+   "36282524"
+  ],
+  "then": [
+   "four Europe PMC WWOX/T-type full-text hits 41898755 41135097 42654085 41153369",
+   "FT-115 dated confirmation",
+   "HELD-partial (none in R2) then adjacent search",
+   "five questions into selection file",
+   "commit candidate CC-20261021-SCIENTIST-B-R2-*",
+   "self-eval, report"
+  ],
+  "notes": "Each reading: manifest PASS, receipt staged under research/receipt_staging/scientist-b/, note section appended in research/repurposing_10h_scientist-b_20261021.md. A resume re-reads this and git log on branch task/repurp-10h-r2-b."
+ }
 }
