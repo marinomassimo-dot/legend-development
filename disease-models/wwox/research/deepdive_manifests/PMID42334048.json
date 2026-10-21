@@ -1,0 +1,418 @@
+{
+ "schema_version": 2,
+ "pmid": "42334048",
+ "doi": "10.1002/epi.70342",
+ "pmcid": "PMC13592478",
+ "receipt": "FTR-20261021-42334048-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the R4b task's questions (a confirmed repurposed drug; a missense precedent; an external or natural-history comparator that held up; a pre-dose drift measurement) and the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261022b.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Spanish multicentre registry study, 18 hospitals, retrospective, industry unrestricted grant plus an investigator-initiated study grant from the drug supplier; a repurposed-and-approved drug in a real-world cohort; one WWOX-variant patient is a registry row, not a WWOX study; NOT WWOX EVIDENCE as a paper."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "fenfluramine[Title/Abstract] AND (\"developmental and epileptic encephalopath*\"[Title/Abstract]) AND (\"real-world\"[Title/Abstract] OR retrospective[Title/Abstract])",
+    "count": 17,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "fenfluramine[Title/Abstract] AND WWOX[Title/Abstract]",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 41,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42334048 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 41,
+   "references_screened": 39,
+   "references_with_doi": 39,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42334048_Villanueva2026_PMC.xml",
+   "sha256": "94e5f4689c5a00bff7a91d1dafd941394960f7d4fa635c84f799b7286bf5a8a2",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML; body, tables cell-wise, figure legends.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13592478/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "94e5f4689c5a00bff7a91d1dafd941394960f7d4fa635c84f799b7286bf5a8a2"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42334048_Villanueva2026_PMC.pdf",
+   "sha256": "e8b9b7bfb7a4e6dabd18eda05b2db3267f787c1ecd278621b2db95fb0202e2ce",
+   "kind": "article_binary",
+   "note": "PMC open-data bucket PDF (publisher version); source of the page renders.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13592478.1/PMC13592478.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/page_renders/PMID42334048/p-07.png",
+   "sha256": "b67ec9773d2368381bb8f54c2dc4557bfbe8cb8930301c5a37f5e4b9fde38c67",
+   "kind": "figure",
+   "note": "Figure 1 panels A and B (total and convulsive seizure responder bars), 300 dpi page render; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm page render",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/fulltext/PMID42334048_Villanueva2026_PMC.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 300 -f 7 -l 7 -png <pdf> <out>"
+    }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID42334048/p-08.png",
+   "sha256": "4e710d12e19ee1015f7ac694a75e54573d57de5e64a18c30054fd9b3100958c0",
+   "kind": "figure",
+   "note": "Figure 1 panels C and D (drop and other seizures), 300 dpi page render; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm page render",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/fulltext/PMID42334048_Villanueva2026_PMC.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 300 -f 8 -l 8 -png <pdf> <out>"
+    }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID42334048/p11img-000.png",
+   "sha256": "6cc6cd5cc0d5c609548e237aca31aabc40bc13a02a922b021f2ad1a56aba0769",
+   "kind": "figure",
+   "note": "Figure 2 (Clinical Global Impression by domain), embedded 1784x1047 raster of PDF page 11; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdfimages extraction",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/fulltext/PMID42334048_Villanueva2026_PMC.pdf",
+    "extractor": {
+     "name": "pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -f 11 -l 11 -png <pdf> p11img"
+    }
+   }
+  },
+  {
+   "path": "files/supplement/PMID42334048/EPI-67-4536-s001.docx",
+   "sha256": "fbdecd0a5f42fb0573de41eb3ec980a191ed69ec8b89c3c51fdceeac3b292a5b",
+   "kind": "supplement_binary",
+   "note": "Supplementary appendix (docx): Tables S1-S8, Figures S1-S2.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13592478.1/EPI-67-4536-s001.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID42334048/EPI-67-4536-s001.txt",
+   "sha256": "11459b423fbe586646ab20fed12011c17cd06cac36a6f3d51fe08d1d1fb3779d",
+   "kind": "supplement_text",
+   "note": "Text of the supplementary appendix by docx_to_text.py (12 tables, 3 embedded images opened separately).",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "docx_to_text",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42334048/EPI-67-4536-s001.docx",
+    "extractor": {
+     "name": "framework/scripts/docx_to_text.py",
+     "version": "repository main 0966f2d7",
+     "call": "python3 framework/scripts/docx_to_text.py --out <txt> <docx>"
+    }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID42334048/s001media/image1.png",
+   "sha256": "8d574236905c51c9e7776c925c795cf38869c4e72896c36ab81c4ac177efe54b",
+   "kind": "figure",
+   "note": "Supplementary Figure S1 (patient disposition), embedded PNG of the docx; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "zip member extraction",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42334048/EPI-67-4536-s001.docx",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "3.12",
+     "call": "zipfile.ZipFile(<docx>).read(\"word/media/image1.png\")"
+    }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID42334048/s001media/image2.png",
+   "sha256": "590da6e3f9739ac80cfdc33f26cc1bc54f9d4e6f001d73e70550c66e0a808972",
+   "kind": "figure",
+   "note": "Supplementary Figure S2A (treatment retention, all DEEs), embedded PNG of the docx; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "zip member extraction",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42334048/EPI-67-4536-s001.docx",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "3.12",
+     "call": "zipfile.ZipFile(<docx>).read(\"word/media/image2.png\")"
+    }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID42334048/s001media/image3.png",
+   "sha256": "e92bd01b620fe4a93c998a807168d8f9e2080ed7e0751052d743018629c5d66f",
+   "kind": "figure",
+   "note": "Supplementary Figure S2B (retention by diagnosis), embedded PNG of the docx; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "zip member extraction",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42334048/EPI-67-4536-s001.docx",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "3.12",
+     "call": "zipfile.ZipFile(<docx>).read(\"word/media/image3.png\")"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Design: multicentre retrospective observational registry study in 18 hospitals, no control group.",
+    "snippet": "This multicenter, retrospective, observational study was conducted in 18 Spanish hospitals",
+    "anchor": "Methods, Study design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42334048_Villanueva2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Patients outside the approved syndromes were treated under a compassionate-use programme at physician discretion, so the \"other DEE\" group is selected by prescribers.",
+    "snippet": "Although FFA is approved for DS and LGS, some patients with other DEEs were treated within a compassionate‐use program when deemed suitable by participating physicians.",
+    "anchor": "Methods, Study design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42334048_Villanueva2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Primary effectiveness endpoints are seizure counts and responder categories; non-seizure outcomes were clinician-recorded 7-point global impressions by domain, a secondary endpoint.",
+    "snippet": "Change in non‐seizure outcomes previously defined from baseline were evaluated using the 7‐point CGI scale, ranging from very much improved to very much worse.",
+    "anchor": "Methods, Data collection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42334048_Villanueva2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Of 166 patients, 83 had a genetic etiology; among the other-DEE group the genes listed include one patient with a WWOX variant (the variant is not given).",
+    "snippet": "one each in SCN1B and SCN8A (c.2952C>A, p.Asn984Lys, gain‐of‐function variant), WWOX, PCDH19, TSC1, and BCL11B",
+    "anchor": "Results, Table 1 footnote a",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42334048_Villanueva2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table S7 lists the WWOX row (n=1): no seizure freedom, not a 50 percent responder, no worsening, no adverse event at 3, 6 or 12 months. The paper draws no conclusion for any single gene.",
+    "snippet": "SCN1B (n=1) SCN8A (n=1) WWOX (n=1) Response | | | Seizure freedom | 1 (100) | 0 (0) | 0 (0) Responder rate (≥50%) | 1 (100) | 0 (0) | 0 (0) Worsening | 0 (0) | 0 (0) | 0 (0)",
+    "anchor": "Supplementary Table S7 (continued)",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID42334048/EPI-67-4536-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that, owing to small samples, no definitive conclusion can be drawn on etiology or genetic diagnosis.",
+    "snippet": "Owing to small sample sizes, we cannot draw definitive conclusions on the impact of etiology on effectiveness and safety.",
+    "anchor": "Results, Subgroup analysis by etiology",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42334048_Villanueva2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Median reduction in total seizures at 12 months was 68.8 percent (Wilcoxon p below .001).",
+    "snippet": "At 12 months, there was a median percentage reduction in seizure frequency of 68.8% for total seizures (p < .001; Wilcoxon test)",
+    "anchor": "Results, Seizure frequency",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42334048_Villanueva2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Within each diagnosis the 12-month responder proportion did not differ by age band (Table 3 prints 101 of 165, 32 of 42 and 21 of 40 as the all-ages cells); the table, not this sentence, carries the counts.",
+    "snippet": "Within each diagnosis category, there was no significant difference in the proportion of responders to FFA",
+    "anchor": "Results, Responders by age and DEE diagnosis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42334048_Villanueva2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Retention was 96.4, 86.1 and 77.1 percent at 3, 6 and 12 months; the text does not state how patients who stopped before 12 months enter the responder denominators.",
+    "snippet": "FFA treatment retention rates were 96.4% (160/166), 86.1% (143/166), and 77.1% (128/166) at 3, 6, and 12 months, respectively",
+    "anchor": "Results, Retention rates",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42334048_Villanueva2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Non-seizure outcome counts: improvement in cognition 51 of 86 (59.3 percent), behavior 36 of 88, sleep 18 of 74, caregiver 30 of 67 - fewer than half of the 166 patients have a rating in any domain.",
+    "snippet": "Between baseline and the 12‐month visit, 51 of 86 participants (59.3%), 36 of 88 (40.9%), 18 of 74 (24.3%), and 30 of 67 participants (44.8%) with CGI data showed improvements in cognition, behavior, sleep and caregiver domains, respectively",
+    "anchor": "Results, Non-seizures outcomes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42334048_Villanueva2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors acknowledge the global-impression scale is not a formal test.",
+    "snippet": "Although assessed using CGI rather than formal testing, these changes are clinically meaningful and reflect domains of high relevance to patients and caregivers.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42334048_Villanueva2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The limitations paragraph names retrospective design, no control group, recall and documentation bias and non-standardised titration and co-medication changes.",
+    "snippet": "Based on its retrospective, observational design and no control group, there is potential for selection and reporting biases.",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42334048_Villanueva2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2: the cognition improved bar for all DEEs (n=86) contains a large \"minimally improved\" segment (about 34 points of the 59 percent), and the \"other DEE\" group (n=20) shows about 45 percent improved cognition and 15 percent much worse behaviour.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 stacked bars by domain and group; All DEEs cognition n=86: very much improved about 8, much improved about 17, minimally improved about 34 (green total about 59), no change about 37, worse about 4; other DEE n=20 cognition: about 5 very much, 15 much, 25 minimally, 55 no change; other DEE behaviour n=20: about 15 much worse and about 10 minimally worse; sleep other DEE n=17 about 12 much worse.",
+    "anchor": "Figure 2",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID42334048/p11img-000.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 1A: at 12 months in all DEEs (N=166) the bars read 15 percent seizure free, 41 percent at least 75 percent reduction, 61 percent at least 50 percent reduction and 16 percent worsening; the 50-percent bar is cumulative.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1A total seizures, All DEEs N=166, 12 months: 100% bar 15, >=75% bar 41, >=50% bar 61, worsening 16; at 3 months 16, 29, 50, 12; at 6 months 17, 33, 48, 20; Dravet 12 months 33, 62, 76, 14; other DEE 12 months 15, 28, 53, 20.",
+    "anchor": "Figure 1A",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID42334048/p-07.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure S2B: retention at about 12 months is about 0.93 in Dravet, 0.74 in LGS and 0.68 in other DEEs; the text gives p 0.015 for the group difference.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig S2B Kaplan-Meier retention: DS (n=42) plateau about 0.93 after about 9.7 months; LGS (n=84) about 0.74 from about 7.8 months; Other DEEs (n=40) about 0.68 from about 9.6 months; censoring ticks from about 10 months.",
+    "anchor": "Supplementary Figure S2B",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID42334048/s001media/image3.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The paper reports no valvulopathy or pulmonary hypertension and no relevant laboratory disturbance in this cohort; the cardiac monitoring was echocardiography at baseline and every 6 months.",
+    "snippet": "No relevant laboratory disturbances were observed, and no cases of cardiac valvulopathy or pulmonary hypertension were reported.",
+    "anchor": "Results, Safety",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42334048_Villanueva2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13592478/fullTextXML returned HTTP 200 with a JATS body on 2026-10-21; the declared article_text artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}

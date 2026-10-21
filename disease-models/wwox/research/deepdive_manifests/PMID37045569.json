@@ -1,0 +1,299 @@
+{
+ "schema_version": 2,
+ "pmid": "37045569",
+ "doi": "10.1136/bmjopen-2022-068546",
+ "pmcid": "PMC10106014",
+ "receipt": "FTR-20261021-37045569-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the R4b task's questions (a confirmed repurposed drug; a missense precedent; an external or natural-history comparator that held up; a pre-dose drift measurement) and the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261022b.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Dutch urology consortium protocol for an intravesical product in an adult bladder-pain subtype, government-reimbursement-linked; a methods comparison of a parallel RCT against an aggregated N-of-1 analysis; a protocol with no results; NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "\"aggregated N-of-1\"[Title/Abstract] AND (randomised[Title/Abstract] OR randomized[Title/Abstract]) AND (protocol[Title/Abstract] OR trial[Title/Abstract])",
+    "count": 15,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "\"N-of-1\"[Title/Abstract] AND (\"developmental and epileptic encephalopath*\"[Title/Abstract] OR \"epileptic encephalopathy\"[Title/Abstract])",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'. The peer-review files in the PMC bucket (draft revisions and reviewer comments, two PDFs) were fetched but not read: they are not the article."
+ },
+ "multihop": {
+  "references_enumerated": 19,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 37045569 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 19,
+   "references_screened": 15,
+   "references_with_doi": 15,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID37045569_vanGinkel2023_PMC.xml",
+   "sha256": "111fb07dee4ac910f82598ef0f116f715305b6b2416bfaacf252924fa6537e08",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML; body, tables cell-wise, figure legends.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10106014/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "111fb07dee4ac910f82598ef0f116f715305b6b2416bfaacf252924fa6537e08"
+   }
+  },
+  {
+   "path": "files/supplement/PMID37045569_r2/PMC10106014.1.pdf",
+   "sha256": "1ae6ec9a79f18b42ca02bb44e2d958dec7eb2cda23a33a8908a39da1603f444b",
+   "kind": "article_binary",
+   "note": "PMC open-data bucket PDF (publisher version).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10106014.1/PMC10106014.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID37045569_r2/bmjopen-2022-068546f01.jpg",
+   "sha256": "35cc924b8b1f4e107755a0d4be4b3bb7d6e18cfa1cdd14d117232e1806931d64",
+   "kind": "figure",
+   "note": "Figure 1 (trial flow chart: standard RCT within an aggregated N-of-1 design), native JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10106014.1/bmjopen-2022-068546f01.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID37045569_r2/bmjopen-2022-068546f02.jpg",
+   "sha256": "1fe90e9675cf8bb25bc8a4ffcdbdb86b4f87157f789328613b1e1eda357e8c8a",
+   "kind": "figure",
+   "note": "Figure 2 (inclusion and randomisation flowchart), native JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10106014.1/bmjopen-2022-068546f02.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The protocol states the design: an RCT whose first period is the primary analysis, continued as an aggregated N-of-1 trial, with the N-of-1 analysis as the back-up if recruitment falls short.",
+    "snippet": "The outcome of the RCT design is the primary design for evaluation, with the aggregated N-of-1 design as a backup in case the inclusion numbers are not met for the RCT design.",
+    "anchor": "Methods and analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37045569_vanGinkel2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that an N-of-1 design applies only to chronic non-curable conditions where treatment must continue to suppress the symptom.",
+    "snippet": "N-of-1 trial methodology is limited to chronic non-curable diseases/symptoms and their treatments (treatment must be continued over time to supress the symptom or the disease).",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37045569_vanGinkel2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The stated advantage of the individual-control design is a smaller sample, half or less depending on evaluation cycles.",
+    "snippet": "Because treatment and placebo are evaluated in a single patient, a study needs far less patients (half or even less depending on evaluation cycles) for adequate power.",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37045569_vanGinkel2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Each patient receives three 6-week blinded periods with the intervention to placebo ratio 2 to 1, separated by 4-week wash-outs.",
+    "snippet": "The ratio of intervention to placebo periods is 2:1. In between treatments there are wash-out periods for 4 weeks.",
+    "anchor": "Methods, Figure 1 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37045569_vanGinkel2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The primary outcome is the maximum bladder pain over the last 3 days on a 0 to 10 visual analogue scale.",
+    "snippet": "The primary objective is the maximum VAS bladder pain score in the last 3 days on a scale of 0–10.",
+    "anchor": "Methods, Outcomes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37045569_vanGinkel2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Efficacy is defined as success on any one of three criteria: 2 points on pain, 2 points on the most dominant symptom, or at least 5 on a 7-point global response scale.",
+    "snippet": "efficacy of GAG therapy for BPS/IC with Hunner lesions is defined by three possibilities: (1) an improvement of 2 points on the VAS pain score, or (2) an improvement of 2 points on the VAS score on the most dominant symptom that is reported by individual patient, or (3) an improvement of ≥5 on a 7-point GRA scale.",
+    "anchor": "Efficacy and statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37045569_vanGinkel2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The 2-point threshold was set by an interview with a patient panel, not by an anchor-based or distribution-based estimate.",
+    "snippet": "The improvement of 2 points on the VAS pain score and the most dominant symptom was established by an interview with a patient panel, to consider the heterogeneous symptoms in patient with BPS/IC.",
+    "anchor": "Efficacy and statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37045569_vanGinkel2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Aggregated analysis uses hierarchical Bayesian modelling and includes every patient who completed at least one treatment and one placebo period.",
+    "snippet": "All patients who completed at least one treatment and one placebo period will be included within the aggregated analysis, with inclusion of all available data.",
+    "anchor": "Efficacy and statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37045569_vanGinkel2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Power: 58 patients for the parallel comparison (80 with drop-out) against 28 (38 with drop-out) for the aggregated N-of-1 analysis; the effect size comes from an unblinded comparison with another instillation and the placebo effect from a different trial.",
+    "snippet": "Cervigni et al used the same HA-CS instillation that is used in this study and showed a treatment effect of approximately −4 on a VAS pain scale (0–10) in comparison with unblinded Dimethylsulfoxide (DMSO) instillations.",
+    "anchor": "Power calculation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37045569_vanGinkel2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The sample size for the aggregated design is computed to reach 80 percent power at 28 patients, 38 after drop-out.",
+    "snippet": "For the aggregated-N-of-1 trial design, >80% power will be achieved at 28 patients, considering the drop-out numbers, the required sample size was calculated at a total of 38 patients.",
+    "anchor": "Power calculation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37045569_vanGinkel2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that no earlier trial compared an aggregated N-of-1 design directly with a traditional RCT, which is the stated purpose of this study.",
+    "snippet": "So far, no aggregated N-of-1 trial has been directly compared with a traditional RCT.",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37045569_vanGinkel2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Both analyses use the same patients and the first period of the N-of-1 design is the RCT, so the two designs are nested, not independent replications.",
+    "snippet": "The GETSBI study is a double-blind multidesign multicentre randomised placebo-controlled trial",
+    "anchor": "Methods and analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37045569_vanGinkel2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 1: Group A (n=40) receives placebo, then intervention, then intervention; Group B.1 (n=20) intervention, placebo, intervention; Group B.2 (n=20) intervention, intervention, placebo; each period has a 2-week run-in and run-out and 4-week wash-outs; the first period is labelled the standard RCT.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 flow chart: Gr A n=40 run-in 2w, placebo 6w 1d/wk, wash-out 4w, intervention 6w, wash-out 4w, intervention 6w, run-out 2w; Gr B.1 n=20 intervention, placebo, intervention; Gr B.2 n=20 intervention, intervention, placebo; brackets mark Standard RCT over the first period, Single cross-over RCT over two, Multi cross-over design over all three.",
+    "anchor": "Figure 1",
+    "surface": "figure",
+    "artifact": "files/figures/PMID37045569_r2/bmjopen-2022-068546f01.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 2: randomisation after eight exclusion criteria into Group A (40) and Group B (40), the latter split into two groups of 20; all 80 then enter an open phase of monthly instillations for 6 months.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 flowchart: inclusion box adult patients with Hunner lesions and VAS 4 or more; eight exclusion criteria; randomisation; Group A n=40 placebo, intervention, intervention; Group B n=40 split B.1 n=20 and B.2 n=20; Fase II n=80 monthly instillations for 6 months.",
+    "anchor": "Figure 2",
+    "surface": "figure",
+    "artifact": "files/figures/PMID37045569_r2/bmjopen-2022-068546f02.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The comparison of designs will be made on significance level and on correlation of outcomes, as average changes with standard deviation.",
+    "snippet": "The study models will be compared on efficacy (significance) level and on correlation level.",
+    "anchor": "Considerations methodology",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37045569_vanGinkel2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The sponsor frames the trial as evidence for a reimbursement decision, linking the design choice to a regulator-like requirement for objective measurements.",
+    "snippet": "as a requirement of the Dutch government for objective measurements",
+    "anchor": "Considerations methodology",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37045569_vanGinkel2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC10106014/fullTextXML returned HTTP 200 with a JATS body on 2026-10-21; the declared article_text artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}

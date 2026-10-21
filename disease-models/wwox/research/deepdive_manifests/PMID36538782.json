@@ -1,0 +1,362 @@
+{
+ "schema_version": 2,
+ "pmid": "36538782",
+ "doi": "10.1093/pm/pnac198",
+ "pmcid": "PMC10321763",
+ "receipt": "FTR-20261021-36538782-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the R4b task's questions (a confirmed repurposed drug; a missense precedent; an external or natural-history comparator that held up; a pre-dose drift measurement) and the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261022b.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Sponsor-funded phase 2a trial in a non-genetic adult pain syndrome by the drug sponsor plus UK site investigators, with sponsor-provided writing assistance; a third indication for the same enzyme inhibitor; NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "soticlestat[Title/Abstract] AND (pain[Title/Abstract] OR \"complex regional\"[Title/Abstract])",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "soticlestat[Title/Abstract] AND (24-hydroxycholesterol[Title/Abstract] OR 24HC[Title/Abstract]) AND (phase[Title/Abstract])",
+    "count": 3,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 37,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 36538782 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 37,
+   "references_screened": 32,
+   "references_with_doi": 32,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 5
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID36538782_Ratcliffe2023_PMC.xml",
+   "sha256": "2457233bce08f7252b031ba5f1f0eb02fc9ca0896a2fc94d95b4b89a357d689a",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML; body, tables cell-wise, figure legends.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10321763/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "2457233bce08f7252b031ba5f1f0eb02fc9ca0896a2fc94d95b4b89a357d689a"
+   }
+  },
+  {
+   "path": "files/supplement/PMID36538782_r2/PMC10321763.1.pdf",
+   "sha256": "1c30764cc42fc101e7c3f820742c479ffbdddb2f572dc5c47b6f5a800629e422",
+   "kind": "article_binary",
+   "note": "PMC open-data bucket PDF (author manuscript).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10321763.1/PMC10321763.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID36538782_r2/pnac198f1.jpg",
+   "sha256": "52a7dab74f9040b665f65caf0d25f051d0dcaa4206d23bfb72edf9467a3daa34",
+   "kind": "figure",
+   "note": "Figure 1 (study schematic and flowchart), native JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10321763.1/pnac198f1.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID36538782_r2/pnac198f2.jpg",
+   "sha256": "95e5763f0542559a22fcacdf4c16d897411195705e071b4e50b3e542329b3315",
+   "kind": "figure",
+   "note": "Figure 2 (weekly mean pain change from baseline, parts A and B), native JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10321763.1/pnac198f2.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID36538782_r2/pnac198f3.jpg",
+   "sha256": "f7cbc8876a4d88346a3bc6185c8774b9bf00b530609e38c87bced078adc06e40",
+   "kind": "figure",
+   "note": "Figure 3 (plasma 24HC by visit), native JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10321763.1/pnac198f3.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID36538782_r2/pnac198_supplementary_data.docx",
+   "sha256": "6e8d66592a30cc9f2ad4ecb7308cfadc78f8253ff20819779d4bf44fc06c0dc3",
+   "kind": "supplement_binary",
+   "note": "Supplementary data (docx): Tables S1-S2.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10321763.1/pnac198_supplementary_data.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID36538782_r2/pnac198_supplementary_data.txt",
+   "sha256": "eeaf994c938649b92c180a00a4c1825c61d9e45cc69939ef3ac9d7bcdafd86a7",
+   "kind": "supplement_text",
+   "note": "Text of the supplementary tables by docx_to_text.py (no embedded media).",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "docx_to_text",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID36538782_r2/pnac198_supplementary_data.docx",
+    "extractor": {
+     "name": "framework/scripts/docx_to_text.py",
+     "version": "repository main 0966f2d7",
+     "call": "python3 framework/scripts/docx_to_text.py --out <txt> <docx>"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Design: three-site UK phase 2a, 15-week randomised double-blind placebo-controlled part A followed by an optional open-label part B, 24 randomised 2 to 1.",
+    "snippet": "The study comprised two parts (Figure 1A): part A was a randomized, double-blind, placebo-controlled, parallel-group study consisting of a screening period, a 3-week titration period, a 12-week maintenance period, and a taper period and/or follow-up",
+    "anchor": "Methods, Study design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36538782_Ratcliffe2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Primary endpoint: change in mean 24-hour pain intensity on an 11-point numeric scale from baseline to week 15, from a three-times-daily electronic diary.",
+    "snippet": "The primary efficacy endpoint was change in mean 24-hour pain intensity NPS score (mean of three measurements collected during 1 day by electronic pain diary [E-diary]) from baseline to week 15 (end of part A).",
+    "anchor": "Methods, Outcomes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36538782_Ratcliffe2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Power: 24 participants gave at least 65 percent power to detect a 2-point difference at a two-sided significance level of 0.10, a proof-of-concept design that could not exclude a modest effect.",
+    "snippet": "a sample size of 24 participants (with a randomization ratio of 2:1 for soticlestat: placebo) was judged to be sufficient to achieve at least 65% power to detect a 2-point difference between soticlestat and placebo",
+    "anchor": "Methods, Statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36538782_Ratcliffe2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The baseline is a 7-day mean of the diary scores before randomisation; the diary was required for at least 6 of 7 days before enrolment, a pre-dose baseline with measured completeness above 90 percent.",
+    "snippet": "Participants were required to record their pain intensity scores for a minimum of 6 of 7 days before screening/enrollment, and then three times per day throughout the study.",
+    "anchor": "Methods, Procedures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36538782_Ratcliffe2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Primary result: change of minus 0.75 on drug and minus 0.41 on placebo, placebo-adjusted difference minus 0.34 with an interval from minus 1.55 to 0.88 (P 0.570); the interval includes zero and effects up to about 1.5 points of benefit, but its lower end does not reach the 2-point difference the study was powered to detect, so it is an underpowered result and not a demonstration of no effect.",
+    "snippet": "resulting in a statistically non-significant placebo-adjusted difference of –0.34 (–1.55, 0.88; P = .570)",
+    "anchor": "Results, Efficacy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36538782_Ratcliffe2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The placebo arm improved by 0.41 points on the primary scale and 2 of 9 placebo participants met the 30 percent responder definition, against 4 of 15 on drug.",
+    "snippet": "At week 15, four participants (26.7%) in the soticlestat group and two participants (22.2%) in the placebo group were classified as responders",
+    "anchor": "Results, Efficacy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36538782_Ratcliffe2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Global impression: improvement (much or minimally) at week 15 was reported by 7 of 15 on drug and 4 of 9 on placebo, i.e. 46.7 and 44.4 percent.",
+    "snippet": "An improvement in PGI-C status (much improved or minimally improved) from baseline to week 15 was reported by seven participants (46.7%) in the soticlestat group and four participants (44.4%) in the placebo group.",
+    "anchor": "Results, Efficacy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36538782_Ratcliffe2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "At week 29, after all participants had received the drug, 12 of 18 (66.7 percent) reported improvement; the authors state this cannot be separated from placebo effects of being in a study.",
+    "snippet": "Similarly, the improvements noted in the PGI-C at week 29 must be interpreted with caution because they cannot be disentangled from the possible placebo effects associated with being in a clinical study.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36538782_Ratcliffe2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The pharmacodynamic marker fell: mean plasma 24-hydroxycholesterol decreased by about 70 percent in the first 2 weeks on drug and stayed low, while placebo values stayed at baseline.",
+    "snippet": "mean plasma 24HC levels decreased by approximately 70% in the first 2 weeks of treatment and remained at reduced levels throughout study parts A and B",
+    "anchor": "Results, 24HC levels",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36538782_Ratcliffe2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors use the marker to infer adherence and that it supports use of 24HC as a biomarker of drug activity, while the clinical endpoint was null.",
+    "snippet": "This indicates that participants adhered to treatment and supports the use of 24HC as a biomarker for soticlestat activity.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36538782_Ratcliffe2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say the open-label part B cannot be analysed statistically because there is no control arm.",
+    "snippet": "any potential treatment effect throughout part B could not be assessed statistically because of the lack of a control arm",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36538782_Ratcliffe2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Imbalance despite randomisation: median time since symptom onset 11.3 versus 6.7 years and opioid use 73.3 versus 33.3 percent, drug versus placebo.",
+    "snippet": "However, some differences were observed in baseline clinical characteristics, with the soticlestat group having a median time since symptom onset of 11.3 years (range, 2.6–20.5 years) vs 6.7 years (range, 1.4–7.4 years) in the placebo group.",
+    "anchor": "Results, Participants",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36538782_Ratcliffe2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors propose the effect may be greater near onset, a duration-of-disease explanation offered after a null result.",
+    "snippet": "the likelihood of a response to soticlestat may be greater in individuals at the onset of CRPS",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36538782_Ratcliffe2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplement Table S2: mean PROMIS-29 physical function at part A was 36.38 on drug and 38.51 on placebo from baselines of 34.65 and 35.83, i.e. the placebo arm rose more in the completers, while main Table 2 prints changes of 2.4 on drug and 1.5 on placebo.",
+    "snippet": "Score, mean (SD) | 34.65 (4.743) | 35.83 (5.607) |  | 36.38 (4.965) | 38.51 (4.914) |  | 39.61 (7.599) | 39.20 (3.762)",
+    "anchor": "Supplementary Table S2, Physical function",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID36538782_r2/pnac198_supplementary_data.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 2: weekly mean change in pain from baseline; both arms are below zero by week 15, the drug line separates from the placebo line only after about week 17, when placebo participants have moved to open-label drug, and every error bar spans zero.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 weekly means with SD bars, weeks 1-29: soticlestat triangles from about -0.4 at week 1 to about -1.0 at week 15 and about -2.0 at week 29; placebo circles about 0 at week 1, about -0.75 at week 15 and about -1.0 at week 29; separation grows after about week 17; SD bars of both series include zero at most weeks.",
+    "anchor": "Figure 2",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36538782_r2/pnac198f2.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 3: plasma 24HC pre-dose about 51 ng/mL on drug (n=15) and 48 on placebo (n=8); week 2 about 16 on drug (n=13) against about 51 on placebo (n=6); week 7 about 15 against 55; at week 29 both groups are on drug and the placebo-then-drug group is about 15 (n=3).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3 bars mean +/- SD: pre-dose placebo about 48 (n=8), soticlestat about 51 (n=15); week 2 placebo about 51 (n=6), soticlestat about 16 (n=13); week 7 placebo about 55 (n=6), soticlestat about 15 (n=11); week 29 (all on drug) placebo-first about 15 (n=3), soticlestat about 22 (n=6).",
+    "anchor": "Figure 3",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36538782_r2/pnac198f3.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 1B: 57 screened, 33 screen failures, 24 randomised (15 drug, 9 placebo), 18 completed part A and entered part B, 14 completed part B.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1B flowchart: Screened n=57; screen failure n=33; Part A randomized n=24; soticlestat 15, placebo 9; completed Part A 12 and 6; Part B initiated 18; completed Part B 14.",
+    "anchor": "Figure 1",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36538782_r2/pnac198f1.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "One participant in part B had depression and suicidal ideation judged related to the drug; the authors note no suicidal ideation in other soticlestat studies.",
+    "snippet": "Of note, suicidal ideation has not been reported in any other soticlestat clinical study",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36538782_Ratcliffe2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC10321763/fullTextXML returned HTTP 200 with a JATS body on 2026-10-21; the declared article_text artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}
