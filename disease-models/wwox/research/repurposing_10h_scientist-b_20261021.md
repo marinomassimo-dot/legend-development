@@ -65,3 +65,22 @@ Depth: `partial_fulltext_read` (whole PMC XML body read; Figures 4 and 7 opened 
 
 **OWED.** A blind locator audit is owed only if a commit candidate cites this paper's floor-effect point to narrow DL-MECH-170; none is written from this reading alone.
 
+## 3. PMID 42274296 (Harman 2026): Gabrb3 D120N Lennox-Gastaut mouse, ethosuximide, a Cav3-selective inhibitor and cannabidiol. NOT WWOX EVIDENCE
+
+Depth: `complete_fulltext_read` (PMC XML; all five figures opened as 300 ppi embedded rasters; no supplement deposited). Manifest `PMID42274296.json` STRICT PASS, 11 locators. Receipt staged `FTR-20261021-42274296-01`.
+
+**What it establishes.** Heterozygous knock-in mice have spontaneous atypical absence seizures that untreated wild-type littermates lack entirely (0 of 6 against 7 of 7), and at postnatal day 16 a spasm phenotype (wild type 4 of 11 with some events, knock-in 10 of 10). In a vehicle-controlled Latin-square crossover within the knock-in, ethosuximide and ulixacaltamide (a Cav3-selective compound) each cut seizure incidence by about 64 percent and cannabidiol by about 46 percent; vigabatrin and cannabidiol lowered neonatal spasms.
+
+**Correction to the selection row.** The R2 table described it as a template in which "ethosuximide, a T-type blocker and cannabidiol each separate KI from wild-type littermates in a within-subject crossover". They do not. The crossover is vehicle versus drug within knock-in animals; wild-type animals were never dosed (Methods, locator 2; the spasm arm allocates only knock-in pups). The wild-type arm is an untreated phenotype control. This paper is therefore a design template for the within-subject half of a drug-by-genotype design and an example of its missing half.
+
+**What it does support, for the lead.**
+- *Cross-class T-type agreement, in a different model.* Ethosuximide and a structurally unrelated Cav3-selective inhibitor give the same size of reduction in the same knock-in (separate cohorts, n = 9 and n = 11, not compared statistically). This is the only paper in the group in which both sit side by side, and it is a point in favour of the lead's falsifier being answerable: a second T-type blocker of a different class can be run in the same assay. It is not evidence of genotype dependence, because neither was run in wild type. (Axis B, modest support; Axis A, no information.)
+- *The baseline is again a zero.* Wild-type atypical absence seizures are 0 of 6. As in the Gnb1 model, a mutant-only drug effect is built into the endpoint. In the Wwox PTZ assay the endpoint is provoked in all three genotypes, which is the one design feature that would let the contrast mean something.
+- *Injection stress inflates the vehicle baseline* (about 21 events per hour in vehicle-injected mutants against about 7 in uninjected animals): the authors' own observation, offered as a suggestion. In an acute-injection PTZ design with saline controls, per-genotype baselines can differ by handling, and the drug versus vehicle difference is measured on that elevated baseline.
+
+**What it does not support.** No wild-type drug data; no T-type measurement (the compound agreement is the evidence); spasm scoring is behavioural, un-EEG'd and not controlled for sedation (authors' limitations); the cannabidiol conflict-of-interest statement (a patent and consulting roles) frames the paper's emphasis, not the ethosuximide measurement.
+
+**Figure audit.** Fig 1B/C/E (WT at zero), Fig 2A/B (ethosuximide: 8 of 9 animals fall, one rises about 9 to about 20), Fig 3A/B (ulixacaltamide: two animals near 19 to 22 stay), Fig 4 (cannabidiol, read, not used), Fig 5A/B (WT spasm bar about 1.1, KI about 4.9, treated about 2.7 to 2.9), all as 300 ppi embedded rasters with the text.
+
+**Comparison with the lead.** Axis A: absent wild-type drug arm. Axis B: modest support that a second, selective Cav3 compound matches ethosuximide in a spike-and-wave-type model. Axis C: partial (injection confound, no WT dosing). **Net: none for genotype specificity; it raises the plausibility that the Wwox assay's mechanism could be tested with a second T-type blocker.**
+
