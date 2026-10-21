@@ -31,7 +31,7 @@
   "p4_fields": {
     "endpoint_pursued": "UNKNOWN: engagement of a WWOX-directed target cannot be shown at all today",
     "functional_evidence_available": "none: the three direct read-outs (transcript, immunoblot, tissue stain) have no limit of detection, linear range or calibrator, and the tissue read-out reached only fair inter-rater agreement; canine tumour matrix, no WWOX variant, no CNS tissue, no body fluid",
-    "temporal_or_model_limit": "the soticlestat phase 3 reports show a pharmacodynamic marker falling by about 80 per cent twice with no clinical effect: engagement is necessary and nowhere near sufficient (R4 note, NOT WWOX EVIDENCE)",
+    "temporal_or_model_limit": "the soticlestat phase 3 reports show a pharmacodynamic marker falling by about 80 per cent in both trials, with a missed primary in each: the first minus 15.64 per cent with interval minus 31.30 to 0.24 (p 0.061), which is a missed primary and not a null, the second minus 1.17 per cent with interval minus 13.02 to 9.99: engagement is necessary and nowhere near sufficient (R4 note, NOT WWOX EVIDENCE)",
     "cellular_context": {
       "target_expression": "UNKNOWN",
       "cells_tissue_stage": "UNKNOWN",
@@ -42,7 +42,7 @@
   "p4_roadmap_fields": {
     "identity": "Not a molecule. An axis.",
     "indication_and_transfer": "Any WWOX-directed intervention.",
-    "novelty_for_woree": "Not found in the research: no fluid marker has ever been measured in a WWOX carrier (early-benefit note 2b, indexing-level query).",
+    "novelty_for_woree": "Not established here: the early-benefit note's title-and-abstract-level query found no fluid marker measured in a WWOX carrier; the case-series bodies were not searched, so this is not an absence claim.",
     "known_roads_state": "UNKNOWN.",
     "path_and_objective": "Both paths need it; stated here under BENEFICIO_PRECOCE because it is the property that makes a symptomatic effect uninterpretable.",
     "expected_contribution": "None.",
@@ -67,9 +67,9 @@
     "any fluid marker in a WWOX carrier"
   ],
   "evaluation_frame": {
-    "source": "repurposing_10h_scientist-d_20261021.md, 'The answer in one page', DESIGN TABLE A and B. INFERENZA built from precedents that are all NOT WWOX EVIDENCE; the blind audit of that note's manifests is queued and had not returned when this card was written.",
+    "source": "repurposing_10h_scientist-d_20261021.md, 'The answer in one page', DESIGN TABLE A and B. INFERENZA built from precedents that are all NOT WWOX EVIDENCE; the manifests of that note were blind-audited on 2026-10-22 (207 of 215 triples supported, eight repaired; the repairs are unaudited).",
     "a_woree_evaluation_would_have_to_measure": [
-      "a repeated, instrument-matched baseline before any exposure, in a form that can move in a profoundly impaired child (growth-scale or raw-score forms rather than standard scores); the scatter of an untreated interval has never been measured in WOREE",
+      "a repeated, instrument-matched baseline before any exposure, in a form that can move in a profoundly impaired child (growth-scale or raw-score forms rather than standard scores); no measurement of the scatter of an untreated interval in WOREE is established here (the repository's series have one timepoint per patient; no wider search was run)",
       "a pharmacodynamic anchor: none exists for any WWOX-directed intervention (CLAIM 046), so engagement of the intended target cannot be shown at all",
       "one prespecified endpoint with a rescue or withdrawal rule written before the observation window opens",
       "survival, reported beside whatever endpoint is chosen",
@@ -80,7 +80,7 @@
       "that seizure control protects development (CLAIM 031 forbids counting any symptomatic outcome as disease modification)",
       "benefit from a pharmacodynamic move, a global impression or an own-baseline comparison",
       "any effect smaller than the instrument's own untreated scatter",
-      "the word protection: nothing in this corpus has been measured as preserving a function that would otherwise have been lost"
+      "the word protection: in the human precedents read for this frame none measured the preservation of a function that would otherwise have been lost; the repository's mouse rescue studies are outside this frame and the scope of 'this corpus' is not defined, so no wider negative is established here"
     ]
   },
   "must_never": [

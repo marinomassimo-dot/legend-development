@@ -296,12 +296,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Outpatient oral ketamine was followed by more than 30 seizure-free days, uncontrolled and unmeasured against a baseline.",
+    "proposition": "Outpatient oral ketamine was followed by more than 30 seizure-free days; whether this was measured against a baseline is NOT ESTABLISHED here. The quoted passage supports only the seizure-free interval; the source gives a pre-treatment seizure description and an inpatient seizure log reviewed as stable, so the earlier phrase 'unmeasured against a baseline' is withdrawn. Where looked: the article body (Results, Methods) and, per the audit, its two supplements; no search beyond them.",
     "snippet": "This regimen led to complete seizure-freedom for more than 30 days, with periods of improved wakefulness and diminished irritability, although the patient continued to experience intermittent dystonic spasms.",
     "anchor": "Results",
     "surface": "body",
     "artifact": "files/fulltext/PMID37537625_Lewis2023_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID37537625.json",
+     "entry": 10,
+     "what_changed": "Proposition rewritten after the blind audit (UNVERIFIABLE). Was: Outpatient oral ketamine was followed by more than 30 seizure-free days, uncontrolled and unmeasured against a baseline. The quoted snippet, anchor and artefact are unchanged.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNVERIFIABLE"
+      ],
+      "method": "Blind audit of triples against the sources, recomputing numbers from the printed table or figure; persisted in disease-models/wwox/research/page_adjudications/locator_audit_R4_cards_20261022.md (commit 9f1a2843). The repair itself is unaudited."
+     }
+    }
    },
    {
     "proposition": "The child died more than a year after the trial of respiratory insufficiency after a rhinovirus infection, judged unrelated.",

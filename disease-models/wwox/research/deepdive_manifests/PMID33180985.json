@@ -190,12 +190,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The primary endpoint was a time-to-event count-type outcome: time from birth to the first clinical seizure.",
+    "proposition": "The primary endpoint was a time-to-event outcome: the time from birth to the first clinical seizure. It is not a count outcome; 'count-type' was removed.",
     "snippet": "The primary endpoint was the time from birth to the first CS.",
     "anchor": "Methods, Outcome Measures",
     "surface": "body",
     "artifact": "files/fulltext/PMID33180985_Kotulska2021_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33180985.json",
+     "entry": 2,
+     "what_changed": "Proposition rewritten after the blind audit (OVERSHOOT). Was: The primary endpoint was a time-to-event count-type outcome: time from birth to the first clinical seizure. The quoted snippet, anchor and artefact are unchanged.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind audit of triples against the sources, recomputing numbers from the printed table or figure; persisted in disease-models/wwox/research/page_adjudications/locator_audit_R4_cards_20261022.md (commit 9f1a2843). The repair itself is unaudited."
+     }
+    }
    },
    {
     "proposition": "Secondary endpoints included instrument-based neurodevelopmental outcomes (Bayley III cognitive score under 70, ADOS-2) beside seizure counts.",

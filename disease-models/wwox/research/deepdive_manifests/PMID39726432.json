@@ -325,20 +325,44 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Fig 1: five infants with predicted blood-level bands and 3 to 5 measured troughs each shown from about day 20; several measured values lie outside the 5 to 15 band or on its edge, and the first days are not displayed.",
+    "proposition": "Fig 1: five infants with predicted blood-level bands and 3 or 4 measured troughs each (4, 3, 4, 3 and 4 by the attestation) shown from about day 20; several measured values lie outside the 5 to 15 band or on its edge, and the first days are not displayed.",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 five panels (001-001 to 001-005), x axis from about day 20 to 320, y axis 0-30 ng/mL; blue predicted concentration bands rise stepwise; red dots measured troughs: 001-001 about 8, 6, 8 and 4 (last below 5); 001-002 about 8, 9 and 9; 001-003 about 15.5, 10.5, 4.5 and 3.5; 001-004 about 5.5, 9, 5.5; 001-005 about 8.5, 7, 15, 9; dotted lines at 5 and 15, red line at 10.",
     "anchor": "Figure 1",
     "surface": "figure",
     "artifact": "files/figures/PMID39726432_r2/nihms-2024698-f0001.jpg",
-    "panel_text_relation": "panel_only"
+    "panel_text_relation": "panel_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID39726432.json",
+     "entry": 16,
+     "what_changed": "Proposition rewritten after the blind audit (OVERSHOOT). Was: Fig 1: five infants with predicted blood-level bands and 3 to 5 measured troughs each shown from about day 20; several measured values lie outside the 5 to 15 band or on its edge, and the first days are not displayed. The quoted snippet, anchor and artefact are unchanged.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind audit of triples against the sources, recomputing numbers from the printed table or figure; persisted in disease-models/wwox/research/page_adjudications/locator_audit_R4_cards_20261022.md (commit 9f1a2843). The repair itself is unaudited."
+     }
+    }
    },
    {
-    "proposition": "Fig 2: the dose required to hold the target rose about three- to five-fold across infants over 6 to 9 months, and differed between infants; one dose recommendation was overridden.",
+    "proposition": "Fig 2: the dose required to hold the target rose by about 2.9-fold (infant 1: 0.25 to 0.72) to about 6.8-fold (infant 5: 0.25 to 1.7) across infants over 6 to 9 months, and differed between infants; one dose recommendation was overridden. Ratios recomputed from the attested start and end values.",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 five panels dose per body surface area against time after start: 001-001 rising from about 0.25 to 0.7; 001-002 from 0.45 to 2.1 by 6 months; 001-003 from 0.3 to 1.3 with a red arrow at 6 months where the clinical team reduced the recommended dose for adverse events; 001-004 from 0.25 to 1.55 at 9 months; 001-005 from 0.25 to 1.7 at 6 months then 1.25 to 1.35.",
     "anchor": "Figure 2",
     "surface": "figure",
     "artifact": "files/figures/PMID39726432_r2/nihms-2024698-f0002.jpg",
-    "panel_text_relation": "panel_only"
+    "panel_text_relation": "panel_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID39726432.json",
+     "entry": 17,
+     "what_changed": "Proposition rewritten after the blind audit (UNDERSHOOT). Was: Fig 2: the dose required to hold the target rose about three- to five-fold across infants over 6 to 9 months, and differed between infants; one dose recommendation was overridden. The quoted snippet, anchor and artefact are unchanged.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ],
+      "method": "Blind audit of triples against the sources, recomputing numbers from the printed table or figure; persisted in disease-models/wwox/research/page_adjudications/locator_audit_R4_cards_20261022.md (commit 9f1a2843). The repair itself is unaudited."
+     }
+    }
    }
   ],
   "source_fulltext_indexed": true,

@@ -348,12 +348,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Time to access: regulator research IND and institutional approval for patient 1 within months.",
+    "proposition": "Time to access is not carried: the quote gives institutional review approval in May 2023 under compassionate use and consent and enrolment in June 2023, one month apart; the IND decision date, referral date and onset-to-access interval are not stated in this passage.",
     "snippet": "Rush University IRB approval was received under compassionate use in May 2023, and consent and enrollment occurred in June 2023",
     "anchor": "Methods, Patients and study design",
     "surface": "body",
     "artifact": "files/fulltext/PMID42481851_KimMcManus2026_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42481851.json",
+     "entry": 17,
+     "what_changed": "Proposition rewritten after the blind audit (OVERSHOOT). Was: Time to access: regulator research IND and institutional approval for patient 1 within months. The quoted snippet, anchor and artefact are unchanged.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind audit of triples against the sources, recomputing numbers from the printed table or figure; persisted in disease-models/wwox/research/page_adjudications/locator_audit_R4_cards_20261022.md (commit 9f1a2843). The repair itself is unaudited."
+     }
+    }
    },
    {
     "proposition": "A separate cohort analysis found 3 of 19 patients had a compatible SNP configuration.",

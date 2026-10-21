@@ -48,3 +48,18 @@ No stop. No act reserved to the operator was needed.
 ## 7. A question for discussion, never advice
 
 If a native surface of the one WOREE series reporting a response were available: how many children were placed on the diet, what was each child's seizure count before and after it, over what interval, on what co-medication? Until that is read, the three-of-five figure cannot be told apart from the base rate, and none of the three candidate cards can say which early-benefit card, if any, is worth taking to a clinical team as more than a question.
+
+
+## Repairs after the blind audit of 2026-10-22 (scientist-d; the repairs are UNAUDITED)
+
+Audit: `page_adjudications/locator_audit_R4_cards_20261022.md`. One card of nine held (mTOR class); eight carried a named defect; no quote failed verbatim; `check_cards.py` passed before and after, which is all it can say (it does not test whether a quote supports its sentence).
+
+- **KD card.** "Patients 2 and 4 named by the source" is now an inference from Table 1, whose last row attributes variants (not individuals) to earlier reports for four patients; the text gives only a count of two previously published; the registry's own scope qualifier on CLAIM 042 is restored.
+- **VGB card.** The two Shaukat children are one report and two patients (the earlier line conflated them); A-VGB-2 now pursues spasm burden because the source says partial response; A-VGB-9 carries `shared_origin`; the two Chong 2023 vigabatrin observations are added (A-VGB-10 resistant, A-VGB-11 improved only with the diet, direction UNKNOWN) and whether the resistant case overlaps a Shaukat child is recorded as not established.
+- **ETX card.** Updated to the landed R2 note (integration commit 190b389e, closure 743f9914): section 28 (Cacna1g up, Cacna1h down in adult P47T knock-in hippocampus, mRNA only) replaces the categorical "no Cav3 expression"; mouse age is preweaning per the R2 note; the route word is removed; the audited and still-unaudited parts of the R2 note are separated; non-WWOX sentences carry the label.
+- **GROWTH card.** The mouse sentence follows the current CLAIM 011 (dose-grading not shown on body weight or survival; low-dose equality survivor-conditioned); genotype string no longer copied from the diet series.
+- **DEV card.** The "uncoupled twice" count is restated (one child, plus a between-patient flat row); the instrument absence is bounded to the indexing level; the tuberous sclerosis sentence says not shown rather than did not carry.
+- **PDANCHOR card.** The first soticlestat phase 3 missed its primary (interval minus 31.30 to 0.24), which is not a null; the fluid-marker absence is restated as not established here.
+- **HORM and CBD cards.** Genotype and endpoint are no longer attributed beyond what the source rows carry.
+- **All nine.** The evaluation frame's categorical negatives (untreated scatter in WOREE; "nothing in this corpus measured as preserving a function") are restated as not established here, and the audit status of the R4 manifests is updated.
+- Not changed: the KD quote «did not significantly improve seizures and was suspended» is matched by the checker on secondary surfaces only; it was not re-sourced to the primary report in this repair.

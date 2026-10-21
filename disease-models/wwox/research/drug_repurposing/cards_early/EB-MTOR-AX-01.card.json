@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "d0da99237709e5a12eb3c4ff4d679db26d7bc518162c25a7f27c3c2462920442",
+  "input_sha256": "a22ef3817ba33b8f6647eea47743c48616339ca42796c34c839384c0f465ed31",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -101,9 +101,9 @@
       "growth effect"
     ],
     "evaluation_frame": {
-      "source": "repurposing_10h_scientist-d_20261021.md, 'The answer in one page', DESIGN TABLE A and B. INFERENZA built from precedents that are all NOT WWOX EVIDENCE; the blind audit of that note's manifests is queued and had not returned when this card was written.",
+      "source": "repurposing_10h_scientist-d_20261021.md, 'The answer in one page', DESIGN TABLE A and B. INFERENZA built from precedents that are all NOT WWOX EVIDENCE; the manifests of that note were blind-audited on 2026-10-22 (207 of 215 triples supported, eight repaired; the repairs are unaudited).",
       "a_woree_evaluation_would_have_to_measure": [
-        "a repeated, instrument-matched baseline before any exposure, in a form that can move in a profoundly impaired child (growth-scale or raw-score forms rather than standard scores); the scatter of an untreated interval has never been measured in WOREE",
+        "a repeated, instrument-matched baseline before any exposure, in a form that can move in a profoundly impaired child (growth-scale or raw-score forms rather than standard scores); no measurement of the scatter of an untreated interval in WOREE is established here (the repository's series have one timepoint per patient; no wider search was run)",
         "a pharmacodynamic anchor: none exists for any WWOX-directed intervention (CLAIM 046), so engagement of the intended target cannot be shown at all",
         "one prespecified endpoint with a rescue or withdrawal rule written before the observation window opens",
         "survival, reported beside whatever endpoint is chosen",
@@ -114,7 +114,7 @@
         "that seizure control protects development (CLAIM 031 forbids counting any symptomatic outcome as disease modification)",
         "benefit from a pharmacodynamic move, a global impression or an own-baseline comparison",
         "any effect smaller than the instrument's own untreated scatter",
-        "the word protection: nothing in this corpus has been measured as preserving a function that would otherwise have been lost"
+        "the word protection: in the human precedents read for this frame none measured the preservation of a function that would otherwise have been lost; the repository's mouse rescue studies are outside this frame and the scope of 'this corpus' is not defined, so no wider negative is established here"
       ]
     },
     "must_never": [
