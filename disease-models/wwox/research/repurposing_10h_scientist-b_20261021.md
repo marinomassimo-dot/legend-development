@@ -362,3 +362,24 @@ Adjacent search, question written first: "is there a non-channel gene model in w
 
 **Comparison with the lead.** Axis A: none. Axis B: direction and age of T-type change differ by lesion. Axis C: a documented lesion class with T-type loss. Axis D: none. **Net: strengthens the case for measuring the T-type current in the Wwox null before building on the T-type reading.**
 
+## 23. Design sketch for the lead's falsifier (INFERENZA from graphical estimates; not a protocol, not for any individual)
+
+Inputs are the figure readings in section 9 (approximate, from a moderate-resolution time course; per-animal values are not published): null late-phase PTZ-alone mean about 2.4 (SD about 1.7 from SEM at N = 6), null with ethosuximide about 0.8 (SD about 1.0), wild type about 0.3 and 0.4 (SD about 0.4). Racine stage is ordinal and was treated as continuous; normal approximation, two-sided 5 percent, a treatment-by-genotype contrast, 4,000 simulations per row, a numerical sketch run once in this session.
+
+| Scenario | Animals per cell | Power for the interaction contrast |
+|---|---|---|
+| Effect as read from Figure 7b | 6 | about 0.55 |
+| same | 10 | about 0.74 |
+| same | 15 | about 0.88 |
+| same | 20 | about 0.95 |
+| PTZ-alone null late level at about 1.2 (the level of the lithium experiment's own control cohort) with the same ethosuximide arm | 15 | about 0.18 |
+| same | 30 | about 0.28 |
+| same | 60 | about 0.46 |
+
+**Reading.** If the Figure 7b control cohort is representative, an interaction-tested comparison needs roughly 15 animals per cell for good power; if the other cohort's lower late level is representative, even 30 per cell has little power, because the effect nearly vanishes. The between-cohort variability (section 9, point 3) is therefore the main reason the lead cannot be adjudicated on a small design, and a concurrent same-day PTZ-alone control in every cell, a pre-specified late-phase endpoint and a stated per-genotype baseline are more important than a bigger N alone. The numbers are a sketch to size the problem and inherit every limit of the readings behind them.
+
+## 24. Parked, with the cascade run, and the adjacent rows not read
+
+- **41558409 (Ng 2026, clinical features associated with ethosuximide response in DEE with spike-wave activation in sleep; R2 BLOCKED row, highest value).** Cascade run 2026-10-21: Europe PMC core record has no PMCID and `isOpenAccess` N; OpenAlex, Unpaywall and Semantic Scholar all report a hybrid-OA CC-BY published version at the publisher PDF URL; a plain GET of that URL (no User-Agent) returns HTTP 403 with an anti-bot challenge page ("Just a moment..."), not a PDF; Crossref lists only Elsevier API links that need a credential and were not used. **Parked; no challenge was solved and no credential was used.** The operator can unlock it by supplying the PDF (CC-BY; licence permits it); it bears on ethosuximide response predictors by clinical feature in a DEE.
+- **Adjacent rows screened and not read in full (no receipt claimed):** 30175250 (Scn2a haploinsufficiency; the Methods and Results text names ethosuximide only in the mutant conditional-knockout arm, paired vehicle versus drug, no wild-type drug arm; it cites that a Cacna1a deletion in cortical layer VI cells upregulated T-type current in relay neurons: another non-channel-lesion T-type excess precedent); 32678276 (aged APP/PS1 spike-wave response to ethosuximide, levetiracetam and others; transgenic animals only); 39637158 (a review). None passes the "a question it could change" test better than the readings already made.
+
