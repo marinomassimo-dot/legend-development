@@ -1,0 +1,233 @@
+{
+ "schema_version": 2,
+ "pmid": "39439575",
+ "doi": "10.1212/CPJ.0000000000200391",
+ "pmcid": "PMC11492899",
+ "receipt": "FTR-20261021-39439575-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the R4b task's questions (a confirmed repurposed drug; a missense precedent; an external or natural-history comparator that held up; a pre-dose drift measurement) and the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261022b.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Academic clinical-trial-readiness group with a patient foundation as recruiter, parent-reported instruments in a convenience sample; SCN2A is a missense-dominated channelopathy; used here only for untreated 12-month change and test-retest figures; NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "SCN2A[Title/Abstract] AND (\"clinical trial readiness\"[Title/Abstract] OR \"clinical outcome assessment\"[Title/Abstract])",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "\"growth scale value\"[Title/Abstract] AND (SCN2A[Title/Abstract] OR Dravet[Title/Abstract] OR Angelman[Title/Abstract])",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 39439575 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 50,
+   "references_screened": 40,
+   "references_with_doi": 40,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 10
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39439575_Berg2024comm_PMC_page.html",
+   "sha256": "b300c4ee1fe1c40b105e30a833740604421e87c0856c0bdb86c2d004163ec957",
+   "kind": "article_text",
+   "note": "PMC article page saved byte for byte; text rendered by tag stripping for reading. Figures were not obtained: the figure image routes are not in the open-data bucket for this record and no access control was circumvented.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11492899/",
+    "http_method": "GET",
+    "tier": "PMC article page HTML (author manuscript; the bucket and XML routes are restricted for this record)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "b300c4ee1fe1c40b105e30a833740604421e87c0856c0bdb86c2d004163ec957"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Design: a cross-sectional study with a longitudinal follow-up, parents recruited through a foundation, repeat assessments at 6 and 12 months.",
+    "snippet": "The study protocol called for a repeat of the COAs at 6 and 12 months with follow-up continuing through February 2023.",
+    "anchor": "Methods, Data Collections and COAs",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39439575_Berg2024comm_PMC_page.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Test-retest reliability was assessed by asking parents to repeat selected forms about two weeks later, only some forms per parent.",
+    "snippet": "To assess test-retest reliability, parents were also assigned to complete COAs at approximately 2 weeks after completing them for a study time point.",
+    "anchor": "Methods, Data Collections and COAs",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39439575_Berg2024comm_PMC_page.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Of 65 participants, 55 completed all or almost all assessments over the year; 5 dropped out after baseline and 1 child died.",
+    "snippet": "The remaining 55 completed all or almost all the planned assessments over the course of a year.",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39439575_Berg2024comm_PMC_page.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The median Vineland-3 composite standardized score was 34, about 4.4 standard deviations below the norm mean; most communication standardized scores sat at the floor.",
+    "snippet": "The median Vineland-3 composite standardized score was 34 (IQR 26–46, max = 74).",
+    "anchor": "Results, Vineland Standardized Scores",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39439575_Berg2024comm_PMC_page.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Floor effects grow with age: expressive communication floor values rose from 25 percent at 12 to 23 months to 81, 96 and 94 percent at 2 to 4, 5 to 9 and 10 or more years.",
+    "snippet": "while 25% of those aged 12–23 months had floor values for expressive communication, this rose to 81%, 96%, and 94% in those aged 2–4, 5–9, and 10 years and older",
+    "anchor": "Results, Age",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39439575_Berg2024comm_PMC_page.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Untreated change over about a year: the standardized composite fell by 2.8 points per year (p 0.002) and the communication standardized score by 2.6; none of the other scores changed substantially.",
+    "snippet": "The Vineland ABC and communication-standardized scores demonstrated significant declines, −2.8 ( p = 0.002) and −2.6 ( p = 0.01) points per year, respectively.",
+    "anchor": "Results, Change over time",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39439575_Berg2024comm_PMC_page.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Growth scale values changed little in a year: receptive minus 1.5 (interval minus 4.32 to 1.33) and expressive plus 0.3 (interval minus 1.11 to 1.72); the intervals include zero, and bound the cohort mean change.",
+    "snippet": "The estimated change in the GSVs over the course of 1 year was −1.5 (95% CI −4.32 to 1.33) for receptive communication and 0.3 (95% CI −1.11 to 1.72) for expressive communication.",
+    "anchor": "Results, Change over time",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39439575_Berg2024comm_PMC_page.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "All test-retest intraclass correlations were above 0.90, including the Vineland standardized and growth scale values.",
+    "snippet": "All ICCs were >0.90 for all measures including Vineland standardized and GSV scores, indicating excellent test-retest validity",
+    "anchor": "Results, Test-Retest and Convergent Validity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39439575_Berg2024comm_PMC_page.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Convergence: growth scale values correlated at 0.7 to 0.9 with the raw-score communication instruments but mostly below 0.5 with the Vineland standardized scores.",
+    "snippet": "Correlations were mostly <0.5 with several below 0.3 for Vineland standardized scores with other scores, including the Vineland GSVs.",
+    "anchor": "Results, Test-Retest and Convergent Validity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39439575_Berg2024comm_PMC_page.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that knowing the likely magnitude and variability of change without treatment is critical for planning a trial, and report no substantial untreated change in the non-standardised scores over a year.",
+    "snippet": "As in the BUTTERFLY study, 46 we found no substantial change over the course of a year in any of the nonstandardized scores.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39439575_Berg2024comm_PMC_page.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors infer, but do not demonstrate, sensitivity to within-patient change from cross-sectional discrimination; they state growth scale values lack a normative reference and acceptance by the regulator is pending.",
+    "snippet": "From this, we can infer, if not directly demonstrate, likely sensitivity to within-patient changes over time should they occur in the context of a trial.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39439575_Berg2024comm_PMC_page.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Limitations stated: convenience sample recruited through a foundation (possible skew to severe), parent-report only, convergence with clinician assessment not yet shown in severely impaired populations.",
+    "snippet": "Such convergence still needs to be demonstrated specifically in severely impaired populations.",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39439575_Berg2024comm_PMC_page.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Cannabidiol trials using the standardized score may have been null in part because of floor effects, according to the authors, despite parents seeing meaningful non-seizure benefits.",
+    "snippet": "may have contributed to the null findings for the Vineland in the cannabidiol trials",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39439575_Berg2024comm_PMC_page.html",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "The PMC article page returned HTTP 200 with the full body on 2026-10-21; the Europe PMC XML route returned an error and the NCBI XML route is withheld by the publisher.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}
