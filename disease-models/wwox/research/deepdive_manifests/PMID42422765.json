@@ -823,8 +823,8 @@
     }
    },
    {
-    "proposition": "FIGURE 3B READ AT NATIVE RESOLUTION AND MEASURED AGAINST ITS PRINTED AXES - the manifest had no Figure 3B entry at all until now, while CLAIM 011's dose flag rested on a panel reading of it. Survival is a STEP on this panel and not a gradient: the low-dose arm reaches zero, the high-dose arm plateaus, and the high-dose plateau sits at or marginally above the wild-type control's own survival, which is what the caption's p = 0.78 means. Two numbers asserted in the flag's prose are corrected by measurement (death shifted from ~day 15, not ~day 20; plateau 76-77 percent, not ~80), and neither of them sat behind any locator.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3B Kaplan-Meier, axes read at x ticks 489.5/667.5/845.0/1023.0 px = 0/100/200/300 days and y ticks 373.0/216/59.5 px = 0/50/100 percent: KO+RI (n=10) first death ~day 9 and 0 percent by ~day 15; KO+WWOX LD (n=20) 100 percent to ~day 18 then 0 percent at ~day 78-81; KO+WWOX HD (n=30) 100 percent to ~day 24, ~92 percent at ~day 51, ~84 percent at ~day 69, then 76-77 percent flat from ~day 80 through day 300; WT+RI (n=20) 100 percent to ~day 45, ~89-90 percent to ~day 122, then 71-72 percent through day 300.",
+    "proposition": "FIGURE 3B READ AT NATIVE RESOLUTION AND MEASURED AGAINST ITS PRINTED AXES - the manifest had no Figure 3B entry at all until now, while CLAIM 011's dose flag rested on a panel reading of it. Survival is a STEP on this panel and not a gradient: the low-dose arm reaches zero at ~day 79 while the high-dose arm holds 100 percent to ~day 50 and then plateaus at or marginally above the wild-type control's own survival, which is what the caption's p = 0.78 means. Two numbers asserted in the flag's prose are corrected by measurement (the untreated knockout's zero marker is centred at ~day 17, not ~day 15 or ~day 20; the plateau is 76-77 percent, not ~80), and neither of them sat behind any locator. CORRECTED 2026-10-21 after a blind audit returned UNDERSHOOT: the panel says MORE for the high dose than this entry first recorded, and the cause is a reading lesson, not a measurement error - a censoring tick sitting on the 100 percent line was read as the last point before a drop, and the 23 days in which the red curve is hidden under the navy wild-type line at the same height were read as its absence.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3B Kaplan-Meier, axes read at x ticks 489.5/667.5/845.0/1023.0 px = 0/100/200/300 days and y ticks 373.0/216/59.5 px = 0/50/100 percent: KO+RI (n=10) first death ~day 9 and its 0 percent marker spans days 13.2 to 21.1, centred ~day 17; KO+WWOX LD (n=20) 100 percent to ~day 18 then 0 percent at ~day 79; KO+WWOX HD (n=30) holds 100 percent to ~day 50 - the red marker at ~day 22 is a CENSORING TICK centred on the 100 percent line (its pixels span 97.6 to 101.8 percent) and the red line is OVERDRAWN BY THE NAVY WT LINE from day 27.8 to day 49.8, where red is absent from the image entirely - with the first step 100 to ~92 percent at ~day 50.3, ~84 percent at ~day 69, then 76-77 percent flat from ~day 80 through day 300; WT+RI (n=20) 100 percent to ~day 45, ~89-90 percent to ~day 122, then 71-72 percent through day 300.",
     "surface": "figure",
     "artifact": "files/figures/PMID42422765_r2/native_renders_20261021/fig3_PMC13343157_p06_embedded_1744x1699.png",
     "anchor": "Figure 3, panel B, 300 dpi raster embedded on page 6 of the publisher PDF (1744x1699), 2.4x the linear detail of gr3.jpg (726x708) from which the 2026-08-10 flag was written",
@@ -837,11 +837,26 @@
      "endpoint": "survival to 300 days, body weight, blood glucose, MBP immunostaining, Iba1/GFAP area, ECoG spike and spike-wave discharge rate"
     },
     "qualifies": "entries[46]",
-    "qualifies_needle": "HD produced survival comparable to WT animals (p = 0.78)"
+    "qualifies_needle": "HD produced survival comparable to WT animals (p = 0.78)",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
+     "entry": 40,
+     "receipt": "FTR-20261021-42422765-01",
+     "what_changed": "UNDERSHOOT repaired at source. The high-dose arm holds 100 percent to ~day 50, not to ~day 24: the red marker at ~day 22 is a censoring tick centred on the 100 percent line, and red is absent from the image between days 27.8 and 49.8 because the navy wild-type curve is drawn over it at the same height. The first HD step is 100 to ~92 percent at ~day 50.3. Secondary, in the opposite direction: 'KO+RI 0 percent by ~day 15' sat at the early edge of a marker spanning days 13.2 to 21.1; the marker's span and its ~day 17 centre are now stated instead of an edge. Everything else in the entry reproduced, including the LD extinction at ~day 79, the 76-77 percent HD plateau and the 71-72 percent WT plateau.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_PMID42422765_20261021.md",
+      "triple": 40,
+      "audited_on": "2026-10-21"
+     }
+    }
    },
    {
-    "proposition": "THE DOSE DOES NOT GRADE BODY WEIGHT, WHICH NO RECORD IN THIS REPOSITORY HAD STATED. At P30 the two treated arms are superimposed, and the long-term panel's low-dose curve ends because the arm is extinct, not because the weight falls - so 'duration of the effect' and 'survival of the cohort' separate here exactly as the scaffold's column rules require.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3C weight at P30: WT+RI ~17.5 g, KO+LD ~15.3 g, KO+HD ~15.6 g, KO+RI last point at P15 ~4.7 g; NO significance marker of any kind is printed on panel C. Figure 3D to P180: WT+RI ~26.9 g and KO+HD ~26.0 g at day 180 with overlapping error bars, KO+LD last point ~day 60 at ~21 g, KO+RI last point ~day 15 at ~5 g; no significance marker printed on panel D either.",
+    "proposition": "THE DOSE DOES NOT GRADE BODY WEIGHT, WHICH NO RECORD IN THIS REPOSITORY HAD STATED. At P30 the two treated arms are superimposed and no significance marker of any kind is printed on either panel. 🔴 The comparison is SURVIVOR-CONDITIONED ON THE LOW-DOSE SIDE AND NOT ON THE HIGH-DOSE SIDE, which is a limit on the equality rather than a qualification of it: Figure 3B, the same figure, puts the LD arm at ~79 percent alive at P30 and ~30-40 percent alive at day 60, against 100 percent for HD at both ages. CORRECTED 2026-10-21 after a blind audit returned OVERSHOOT: this entry previously explained panel D's low-dose series ending at day 60 by saying the arm was extinct. It was not - extinction is ~day 79. A SERIES ENDING IS NOT A COHORT ENDING; the truncation is the panel's own and the source states no cause for it.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3C weight at P30: WT+RI ~17.5 g, KO+LD ~15.3 g, KO+HD ~15.6 g, KO+RI last point at P15 ~4.7 g; NO significance marker of any kind is printed on panel C. Figure 3D to P180: WT+RI ~26.9 g and KO+HD ~26.0 g at day 180 with overlapping error bars, KO+LD series TRUNCATED at day 60 at ~21 g with no cause stated on the panel or in its caption, KO+RI last point ~day 15 at ~5 g; no significance marker printed on panel D either. Measured on Figure 3B for the same ages: LD ~79 percent alive at day 30 and ~27-42 percent alive at day 60, HD 100 percent at both.",
     "surface": "figure",
     "artifact": "files/figures/PMID42422765_r2/native_renders_20261021/fig3_PMC13343157_p06_embedded_1744x1699.png",
     "anchor": "Figure 3, panels C and D, same 300 dpi surface",
@@ -852,6 +867,21 @@
      "genotype": "Wwox -/- full knockout; not a missense and not a compound heterozygote",
      "comparator": "WT injected with reference item (WT+RI) and KO injected with reference item (KO+RI)",
      "endpoint": "survival to 300 days, body weight, blood glucose, MBP immunostaining, Iba1/GFAP area, ECoG spike and spike-wave discharge rate"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
+     "entry": 41,
+     "receipt": "FTR-20261021-42422765-01",
+     "what_changed": "OVERSHOOT repaired at source. The quote reproduced exactly - every value, both terminations and the absence of any asterisk or ns on panels C and D - so 'weight is not dose-graded' stands. What failed was the explanation attached to it: 'the long-term panel's low-dose curve ends because the arm is extinct' is not what Figure 3 shows, since 3B puts LD at ~30-40 percent alive at day 60 and extinct only at ~day 79. The cell now records the series TRUNCATION with its cause unstated, and adds the limit the first version missed - the weight equality is survivor-conditioned on the LD side (~79 percent alive at P30) and not on the HD side (100 percent), so it could mask a dose effect in either direction.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_PMID42422765_20261021.md",
+      "triple": 41,
+      "audited_on": "2026-10-21"
+     }
     }
    },
    {
@@ -906,8 +936,8 @@
     "contradicts_needle": "significantly reduced both astrocyte reactivity and microglial density in a dose-responsive manner"
    },
    {
-    "proposition": "THE OLIGODENDROCYTE ARM PRODUCED NO BENEFIT AND NO DETECTABLE PROTEIN, AND THE SECOND FACT IS WHAT KEEPS THE FIRST FROM BEING A NEGATIVE RESULT ABOUT OLIGODENDROCYTES - read at 300 dpi. The MBP-promoter survival curve is indistinguishable from the untreated knockout and the P14 glucose bracket between them is printed ns, while panel M shows the MBP column essentially blank. The cassette also differs: the promoter-comparison vectors all carry WPRE at 4e10 vg, which is not the 4e10 of Figures 2 and 3.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 panel G: MBP+W (n=5) holds 100 percent to ~day 14 and reaches 0 percent at ~day 16-17, against KO+RI (n=6) 0 percent by ~day 17 and WT+RI 100 percent across the 50-day window. Panel H: MBP+W weight tracks KO+RI and ends ~5 g at ~day 17 against WT ~12.8 g at day 21. Panel I glucose at P14: WT+RI ~137, KO+RI ~58, KO+AAV9-MBP-hWWOX ~52, brackets **** (WT-KO+RI) and ns (KO+RI versus MBP+W). Panel M, WWOX immunohistochemistry in cortex, one column per promoter: EF1-Alpha weak and diffuse, CMV moderate, MBP essentially blank, SynI strong and cellular.",
+    "proposition": "THE OLIGODENDROCYTE ARM PRODUCED NO BENEFIT AND NO DETECTABLE PROTEIN, AND THE SECOND FACT IS WHAT KEEPS THE FIRST FROM BEING A NEGATIVE RESULT ABOUT OLIGODENDROCYTES - read at 300 dpi. The MBP-promoter survival curve is indistinguishable from the untreated knockout; at P14 the treated group is significantly BELOW wild type (the long **** bracket runs WT+RI to MBP+W) and NOT different from the untreated knockout (ns), which is the stronger form of 'no benefit'; and panel M shows the MBP column essentially blank. The cassette also differs from the dose study: the promoter-comparison vectors all carry WPRE at 4e10 vg, which is not the WPRE-free 4e10 of Figure 2. CORRECTED 2026-10-21 after a blind audit returned OVERSHOOT on two clauses of panel content and one dose clause.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 panel G: MBP+W (n=5) holds 100 percent to ~day 14 and reaches 0 percent at ~day 16-17, against KO+RI (n=6) 0 percent by ~day 17 and WT+RI 100 percent across the 50-day window. Panel H: the MBP+W (yellow) weight series runs to ~day 21 at ~5.25 g while the KO+RI (purple) series is the one that ENDS, at ~day 19 at ~4.2 g; WT+RI reaches ~12.7 g at day 21, so the MBP-treated animals remain far below wild type throughout. Panel I glucose at P14: WT+RI ~137, KO+RI ~58, KO+AAV9-MBP-hWWOX ~51, with a LONG bracket spanning the full panel from WT+RI to the MBP-treated bar labelled ****, and a short bracket between KO+RI and MBP+W labelled ns. Panel M, WWOX immunohistochemistry in cortex, one column per promoter: EF1-Alpha weak and diffuse, CMV moderate, MBP essentially blank, SynI strong and cellular.",
     "surface": "figure",
     "artifact": "files/figures/PMID42422765_r2/native_renders_20261021/fig1_PMC13343157_p03_embedded_1993x1968.png",
     "anchor": "Figure 1, panels G, H, I and M, 300 dpi raster embedded on page 3 of the publisher PDF (1993x1968)",
@@ -918,6 +948,21 @@
      "genotype": "Wwox -/- full knockout; not a missense and not a compound heterozygote",
      "comparator": "WT injected with reference item (WT+RI) and KO injected with reference item (KO+RI)",
      "endpoint": "survival to 300 days, body weight, blood glucose, MBP immunostaining, Iba1/GFAP area, ECoG spike and spike-wave discharge rate"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
+     "entry": 45,
+     "receipt": "FTR-20261021-42422765-01",
+     "what_changed": "OVERSHOOT repaired at source, three clauses, none of them the load-bearing negative. (i) Panel H: the MBP+W series does not end at ~day 17 - it runs to ~day 21 at ~5.25 g, and it is the KO+RI series that ends, at ~day 19 at ~4.2 g; the two were transposed. (ii) Panel I: the **** bracket is not WT versus KO+RI - it spans the full panel from WT+RI to the MBP-treated bar, as the long brackets in F and L do, and the Figure 1 caption's own sentence that no significant difference was found for the MBP group compared with KO+RI is the ns bracket. This makes the no-benefit statement STRONGER, not weaker. (iii) 'the 4e10 of Figures 2 and 3' named a dose Figure 3 does not contain - Figure 3 runs 1.23e11 and 2.63e11 only - so the comparison is now made against Figure 2 alone. The load-bearing ns between KO+RI and MBP+W, the blank MBP column in panel M and the survival curve in G all reproduced and are unchanged.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_PMID42422765_20261021.md",
+      "triple": 45,
+      "audited_on": "2026-10-21"
+     }
     }
    },
    {

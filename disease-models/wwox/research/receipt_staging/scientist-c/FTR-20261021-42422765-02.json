@@ -1,0 +1,45 @@
+{
+ "analysis_at": "2026-10-21T06:35:00Z",
+ "event_at": "2026-10-21T06:45:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "event_id": "FTR-20261021-42422765-02",
+ "evidence_basis": [
+  "REPAIR PASS after a blind adversarial locator audit, not a reading. The audit (page_adjudications/locator_audit_PMID42422765_20261021.md, commit 3e5d0e64) returned 5 SUPPORTED, 2 OVERSHOOT and 1 UNDERSHOOT over the eight entries FTR-20261021-42422765-01 added, and all three adverse verdicts bear on dose propositions. Each was re-inspected on the SAME declared surfaces before anything was drafted, per the order scientist_reading_modes.md 3.2 fixes: re-inspect at original resolution FIRST, then declare.",
+  "ENTRY 40, UNDERSHOOT, confirmed by my own re-measurement on fig3_PMC13343157_p06_embedded_1744x1699.png: the high-dose arm holds 100 percent to ~day 50, not ~day 24. The red marker at ~day 22 spans 97.6 to 101.8 percent, i.e. a marker centred ON the 100 percent line, and a colour-mask sweep finds red ABSENT from the image between days 27.8 and 49.8 because the navy wild-type line is drawn over it at the same height. First HD step 100 to ~92 percent at ~day 50.3. The untreated-knockout 0 percent marker spans days 13.2 to 21.1, centred ~day 17, so the prior '0 percent by ~day 15' read its early edge exactly as the claim prose it replaced had read its late edge.",
+  "ENTRY 41, OVERSHOOT, confirmed: Figure 3B puts the low-dose arm at ~27 to 42 percent alive at day 60, where panel D's low-dose series stops, and extinct only at ~day 79. A series ending is not a cohort ending; the truncation is the panel's and no cause is stated. Added in the repair, because the re-measurement surfaced it: the weight equality at P30 is survivor-conditioned on the low-dose side (~79 percent alive) and not on the high-dose side (100 percent).",
+  "ENTRY 45, OVERSHOOT, confirmed on fig1_PMC13343157_p03_embedded_1993x1968.png: in panel H the MBP-promoter series runs to ~day 21 at ~5.25 g while the untreated-knockout series is the one that ends, at ~day 19 at ~4.2 g - the two had been transposed; and in panel I the four-asterisk bracket spans the full panel from WT+RI to the MBP-treated bar, not WT versus untreated knockout, which makes the no-benefit statement stronger rather than weaker. The clause naming 'the 4e10 of Figures 2 and 3' named a dose Figure 3 does not contain.",
+  "All three repairs are declared in the manifest with contradicts_locator objects naming the audit file, the triple index and what changed. locator_contradiction_audit.py --working-tree --fail-on-undeclared: 6 declared revisions, 0 undeclared. Manifest STRICT PASS, 0 gaps.",
+  "ADJUDICATION CARRIED BY THIS EVENT: the NARROW verdict on CLAIM 011 SURVIVES and does not change class. Leg 2 (survival) is STRENGTHENED by the repair; leg 3 (body weight) is NARROWED FURTHER by the survivor-conditioning limit; legs 1, 4 and 5 are untouched; the oligodendrocyte boundary, which is not a leg of the dose verdict, is strengthened by the panel-I repair. Nothing propagated.",
+  "Reusable detection rule recorded as row D-38 of the DEFAULTS THAT BIT US table in dismissal_ledger_current.md: a censoring tick on a plateau is not a step, and a curve overdrawn by another curve at the same height is not an absent series."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
+  "disease-models/wwox/research/drug_repurposing/woree_rescue_reference_scaffold.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261021-SCIENTIST-C-CLAIM011-DOSE-ADJUDICATION-01.md",
+  "disease-models/wwox/research/dismissal_ledger_current.md"
+ ],
+ "prior_receipt": "FTR-20261021-42422765-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "8850ea32d27a638b4ab8a38bfc9281ac9bac269a70e8c27302dd1001f92cbee4",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/supplement/PMID42422765_r2/PMC13343157.1.pdf",
+ "study_id": {
+  "doi": "10.1016/j.omta.2026.201791",
+  "pmid": "42422765"
+ },
+ "workflow": "scientist-c, task REPURP-P3-RESCUEREF-C-20261021 audit-repair wave; three adverse blind-audit verdicts re-inspected on the same declared surfaces and repaired at source with contradicts_locator declarations; prepared as JSON for the integrator and not appended by this actor."
+}
