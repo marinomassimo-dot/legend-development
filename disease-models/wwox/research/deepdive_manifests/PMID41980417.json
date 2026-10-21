@@ -262,12 +262,26 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The model is an OPC-lineage kinase knockout induced at P10-12; the constitutive version had seizures and death before P21 and was not rescued here.",
+    "proposition": "Pdk1 icKO mice remained viable and did not exhibit spontaneous seizures or early lethality, unlike the constitutive Pdk1 cKO (Olig1-Cre) model; clemastine was tested only in the icKO (entry 2 and Methods). Induction at P10-12 is in Methods (entry 11).",
     "snippet": "In contrast to the constitutive Pdk1 cKO mouse model (Pdk1fl/fl;Olig1-Cre) [22], Pdk1 icKO mice remained viable and did not exhibit spontaneous seizures or early lethality.",
     "anchor": "Results / Postnatal PDK1 deletion impairs OPC differentiation",
     "surface": "body",
     "artifact": "files/fulltext/PMID41980417_Qiao2026_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID41980417.json",
+     "entry": 1,
+     "what_changed": "Quote carries viability and no seizures in the icKO; the induction age and the constitutive model details are in other entries. Proposition narrowed to the quote and cross-referenced.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 1,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "The authors report that the constitutive model had severe seizures from P14; this paper does not test clemastine there.",
@@ -278,76 +292,202 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Hippocampal MBP, TrueGold area and Olig2, CC1 and ASPA counts rise with clemastine in the knockout.",
+    "proposition": "MBP immunostaining was markedly enhanced in clemastine-treated Pdk1 icKO mice relative to saline-treated mutants (Fig 4F-G). The Olig2, ASPA, MBP and myelin-stain values after clemastine are attested in entry 13; CC1+ cells were not quantified after clemastine (CC1 appears only in genotype comparisons, entry 18).",
     "snippet": "MBP immunostaining demonstrated markedly enhanced signal intensity in clemastine-treated Pdk1 icKO mice relative to saline-treated controls (Fig. 4F and G).",
     "anchor": "Results / Clemastine rescues hippocampal hypomyelination",
     "surface": "body",
     "artifact": "files/fulltext/PMID41980417_Qiao2026_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID41980417.json",
+     "entry": 3,
+     "what_changed": "Auditor: Fig 4 and its Results quantify Olig2, ASPA, MBP and TrueGold after clemastine, never CC1. Proposition narrowed to the MBP statement and the CC1 omission stated.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 3,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
-    "proposition": "Fig 4 legend: Olig2 n = 3 per group, ASPA 3-4, MBP 5; the TrueGold legend gives P as ** and \"p < 0.001\".",
-    "snippet": "Data are presented as mean ± SEM (n = 3 per group; ∗∗, p < 0.01).",
+    "proposition": "Fig 4 legend: Olig2 n = 3 per group (p < 0.01) and ASPA n = 3-4 per group (p < 0.01) in saline- versus clemastine-treated mutants. The MBP n and the TrueGold star-versus-p mismatch are in other legend panels, not quoted here.",
+    "snippet": "(C) Quantification of Olig2+ cells. Clemastine treatment significantly increased the number of Olig2+ cells in Pdk1 icKO mice compared to saline-treated mutants. Data are presented as mean ± SEM (n = 3 per group; ∗∗, p < 0.01). (D) IHC staining for ASPA (green) in brain sections from the indicated experimental groups. Nuclei were counterstained with DAPI (blue). Scale bars: 200 μm (overview), 100 μm (magnified views). (E) Quantification of ASPA+ cells. Clemastine-treated Pdk1 icKO mice showed a significant increase in ASPA+ cell density compared to saline-treated mutants. Data are presented as mean ± SEM (n = 3–4 per group; ∗∗, p < 0.01).",
     "anchor": "Fig. 4 legend (C)",
     "surface": "body",
     "artifact": "files/fulltext/PMID41980417_Qiao2026_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID41980417.json",
+     "entry": 4,
+     "what_changed": "Quote widened to the Olig2 and ASPA legend panels; proposition narrowed to them.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 4,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
-    "proposition": "Hyperexcitability is not measured; neuronal activity is read as c-Fos-positive cell counts after behavioural testing and, in the knockout without treatment, as mEPSC amplitude and frequency from n = 3 animals.",
-    "snippet": "Data are presented as mean ± SEM (n = 3 per genotype; ∗∗, p < 0.01).",
+    "proposition": "Hyperexcitability was not measured (no EEG or excitability assay in the text or supplement). Neuronal activity is read as c-Fos+ cell counts (n = 6 per genotype) and, in the untreated knockout against controls, mEPSC amplitude and frequency (n = 3 animals per genotype); both are reduced in the knockout.",
+    "snippet": "Quantification of c-Fos+ cells showed a significant decrease in the hippocampus of Pdk1 icKO mice compared to controls. Data are presented as mean ± SEM (n = 6 per genotype; ∗, p < 0.05). (G) Represented mEPSC traces in control (black) and Pdk1 icKO (red) mice. Scale bar: 20 mV, 2 s. (H) Averaged mEPSC traces from control (black) and Pdk1 icKO (red) neurons. Aligned mEPSC peaks and the average trace are shown in dark color from a typical neuron. Scale bar: 20 mV, 20 ms. (I) Cumulative probability plot and quantification of mEPSC amplitudes. Pdk1 icKO mice exhibited a significant reduction in mEPSC amplitude compared to controls. Data are presented as mean ± SEM (n = 3 per genotype; ∗∗, p < 0.01). (J) Cumulative probability plot and quantification of mEPSC inter-event intervals. mEPSC frequency was significantly decreased in Pdk1 icKO mice. Data are presented as mean ± SEM (n = 3 per genotype; ∗, p < 0.05).",
     "anchor": "Fig. 3 legend (I)",
     "surface": "body",
     "artifact": "files/fulltext/PMID41980417_Qiao2026_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID41980417.json",
+     "entry": 5,
+     "what_changed": "Quote widened to the Fig 3 legend panels carrying c-Fos n = 6 and mEPSC n = 3 per genotype; proposition limited to them and the absence of an excitability assay.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 5,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
-    "proposition": "Clemastine effect on c-Fos is read as restored neuronal activation, a count of immediate-early-gene positive cells 60 min after behaviour.",
-    "snippet": "To further assess neuronal activity in vivo, hippocampal tissues were collected from mice 60 min following behavioral testing.",
+    "proposition": "In the icKO, clemastine significantly raised c-Fos+ cell counts versus saline (n = 6 per group, p < 0.01 in the legend); the authors read this as restored hippocampal neuronal activation. c-Fos is an immediate-early-gene positive cell count, not an excitability or EEG measure.",
+    "snippet": "We next assessed whether synaptic restoration translated into improved neuronal activity in vivo. Immunostaining for c-Fos revealed that clemastine treatment significantly increased the number of c-Fos+ cells in Pdk1 icKO mice, indicating restored hippocampal neuronal activation (Fig. 5E and F).",
     "anchor": "Results / Deletion of PDK1 impairs synaptogenesis",
     "surface": "body",
     "artifact": "files/fulltext/PMID41980417_Qiao2026_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID41980417.json",
+     "entry": 6,
+     "what_changed": "Auditor: the quote carried only the 60 min timing of the Fig 3 protocol; the clemastine c-Fos result is Fig 5E,F. Quote replaced by the Fig 5 Results sentence.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 6,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
-    "proposition": "The treated-control arm: clemastine did not alter VGlut1 puncta in control mice, the only evidence on a normal-brain effect in the paper.",
+    "proposition": "Clemastine did not significantly alter VGlut1+ puncta density in control mice (Fig 5A-B), which the authors read as specific to the pathological condition. It is not the only normal-brain readout: control plus clemastine arms are also plotted in Fig 4 (Olig2, ASPA, MBP and myelin, all ns against control; entry 13), Fig 5, Fig 6 and Fig 7.",
     "snippet": "Notably, clemastine treatment did not significantly alter VGlut1+ puncta density in control mice, indicating that its effect was specific to the pathological condition (Fig. 5A and B).",
     "anchor": "Results / Clemastine rescues hippocampal hypomyelination",
     "surface": "body",
     "artifact": "files/fulltext/PMID41980417_Qiao2026_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID41980417.json",
+     "entry": 7,
+     "what_changed": "Auditor: the control plus clemastine arms are plotted in Figs 4, 5, 6 and 7, so \"the only evidence on a normal-brain effect\" was wrong.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 7,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
-    "proposition": "Gliosis: GFAP area is unchanged in the knockout, so astrocytic gliosis is not a phenotype of this model and was not a treatment target.",
+    "proposition": "GFAP expression was not significantly different between genotypes (n = 6 per genotype, one marker, one region). This does not by itself show that gliosis is not a phenotype of the model or not a treatment target; the effect of clemastine on GFAP is not in this quote.",
     "snippet": "No significant difference in GFAP expression was observed between genotypes.",
     "anchor": "Fig. 2 legend (G,H)",
     "surface": "body",
     "artifact": "files/fulltext/PMID41980417_Qiao2026_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID41980417.json",
+     "entry": 8,
+     "what_changed": "Auditor: \"gliosis is not a phenotype\" and \"not a treatment target\" go beyond a single non-significant GFAP comparison.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 8,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
-    "proposition": "No safety, exposure, body weight, sedation or histamine-related measure is reported for clemastine; the Discussion relies on an established-safety statement.",
+    "proposition": "No body weight, exposure, histamine-related or sedation-labelled measure was found for clemastine in the text, legends or supplement; the Discussion relies on an established-safety statement. The source does report that arm entries and average locomotor speed were unchanged by clemastine (n = 10-11 per group, Fig 6B-C; entry 20), an activity measure that bears on sedation but is not a safety assessment.",
     "snippet": "Clemastine, an FDA-approved antihistamine with established clinical safety, has recently emerged as a potent promoter of OL differentiation and myelination",
     "anchor": "Discussion",
     "surface": "body",
     "artifact": "files/fulltext/PMID41980417_Qiao2026_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID41980417.json",
+     "entry": 9,
+     "what_changed": "Auditor UNDERSHOOT: the source reports arm entries and speed unchanged by clemastine. Proposition now says so and the legend is anchored in new entry 20.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 9,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "Mechanism: clemastine restores Akt T308 and S6 phosphorylation; the muscarinic M1 antagonism route is named as an unexplored alternative.",
-    "snippet": "Interestingly, clemastine has been reported to exert pro-myelination effects through antagonism of muscarinic receptor 1 (M1R) [59,60], raising the possibility of crosstalk",
+    "snippet": "Clemastine treatment was associated with restoration of Akt and mTORC1 signaling in Pdk1 icKO mice, providing a plausible mechanistic basis for its observed therapeutic effects. Interestingly, clemastine has been reported to exert pro-myelination effects through antagonism of muscarinic receptor 1 (M1R) [59,60], raising the possibility of crosstalk between M1R signaling and Akt-mTOR pathway regulation in oligodendroglial cells, which warrants further investigation.",
     "anchor": "Discussion",
     "surface": "body",
     "artifact": "files/fulltext/PMID41980417_Qiao2026_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID41980417.json",
+     "entry": 10,
+     "what_changed": "Quote widened to the sentence carrying the restoration of Akt and mTORC1 signalling beside the muscarinic M1 receptor alternative; proposition unchanged.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 10,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "Tamoxifen was given at 50 mg/kg for three days; no tamoxifen-treated Cre-negative or CreERT2-only control is described (controls are Pdk1 fl/fl littermates).",
-    "snippet": "Littermate Pdk1fl/fl mice were used as controls.",
+    "snippet": "Littermate Pdk1fl/fl mice were used as controls. For inducible recombination, tamoxifen (50 mg/kg) was administered once daily from P10 to P12.",
     "anchor": "Methods / Animal models",
     "surface": "body",
     "artifact": "files/fulltext/PMID41980417_Qiao2026_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID41980417.json",
+     "entry": 11,
+     "what_changed": "Quote widened to the tamoxifen sentence (50 mg/kg once daily P10 to P12); proposition unchanged; the absence of a tamoxifen-treated Cre-negative arm remains an established negative from the audit.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 11,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "Supplement states the g-ratio regression values (control 0.779, icKO 0.859 at P21) from 3 mice per genotype.",
@@ -408,11 +548,33 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Fig 1 (300 ppi): Pdk1 mRNA about 0.67 of control (n 4-5) and protein about 0.35; MBP relative area 0.59; TrueGold 0.66; Y-maze 53 versus 62 percent; NOR DI 0.47 versus 0.67; n = 11-12 in behaviour.",
+    "proposition": "Fig 1 (300 ppi): Pdk1 mRNA is about 0.67 in the icKO bar against about 0.92 in the control bar, a ratio of about 0.73 (n 4-5), and protein about 0.35; MBP relative area 0.59; TrueGold 0.66; Y-maze 53 versus 62 percent; NOR DI 0.47 versus 0.67; n = 11-12 in behaviour.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] B * ; D ***; F *; H ***; Ia **",
     "anchor": "Figure 1, embedded raster p.4",
     "surface": "figure",
     "artifact": "files/figure_renders/PMID41980417_r3c/p04_embedded_1895x1729.png",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID41980417.json",
+     "entry": 19,
+     "what_changed": "Auditor: Pdk1 mRNA about 0.67 is an absolute bar height; against a control bar of about 0.92 the ratio is about 0.73.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 19,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
+   },
+   {
+    "proposition": "Fig 6 legend: arm entries and average speed were not significantly different among groups, which the authors take as unaffected locomotor activity (n = 10-11 per group).",
+    "snippet": "No significant differences were observed in the number of arm entries (B) or average speed (C) among groups, indicating unaffected locomotor activity. Data are presented as mean ± SEM (n = 10–11 per group",
+    "anchor": "Figure 6 legend (A-C)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41980417_Qiao2026_PMC_r2.xml",
     "panel_text_relation": "text_only"
    }
   ],
