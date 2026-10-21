@@ -73,9 +73,12 @@
    },
    "scientist-b": {
     "group": "R2",
-    "agentId": "a85b13d3c3c5f7071",
+    "agentId": "a9ce64fa724e5f4ef",
     "task": "REPURP-10H-R2-B-20261021",
-    "state": "RUNNING (measured 22:16Z via ListAgents, 16 min in; own worktree and branch present)"
+    "state": "R2 CLOSURE RELAY (first agent a85b13d3c3c5f7071 read 26 papers and ran out of context before closing; branch task/repurp-10h-r2-b not landed)",
+    "previous_agents": [
+     "a85b13d3c3c5f7071"
+    ]
    },
    "scientist-c": {
     "group": "R3",
@@ -131,6 +134,10 @@
    {
     "t": "2026-10-21T23:20Z",
     "event": "CORRECTION: the roster had scientist-a's and the R1 auditor's agent ids swapped (the two were launched in one message and I paired the returned ids in the wrong order). The R1 repair message was first sent to the auditor ad55600ec51e52a43, which ignored it as out of its read-only perimeter and replied 'clean'; no file was changed. Re-sent to the correct agent a3c29605f071db51b. Lesson: pair returned agent ids to launches by the description in the result, never by position, and verify with ListAgents before the first message to a restarted actor"
+   },
+   {
+    "t": "2026-10-21T23:30Z",
+    "event": "scientist-b exhausted context after 16+7 readings and 3 WWOX-direct re-reads; R2 not landed. Closure relay started: apply audit wording repairs (Cheng 6/6, Hussain 4 supported 1 overshoot, Steinberg 4/4), self-eval, task_close. Candidate CC-20261021-SCIENTIST-B-R2-DLMECH170-01 held until landed. Scientist-c relay landed R3b (58e66825) and is in repair branch task/repurp-r3-repair-c; scientist-d on P4 early cards worktree p4-early-d"
    }
   ],
   "audits": {
