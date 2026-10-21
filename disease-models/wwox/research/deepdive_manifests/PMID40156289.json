@@ -201,36 +201,92 @@
   "waived": false,
   "entries": [
    {
-    "proposition": "Claim carried by the abstract-level headline: two de novo CSNK1A1 variants underlie infantile spasms; the exome evidence is two families.",
+    "proposition": "Trio exome sequencing in two independent infantile spasms families identified two de novo variants in exon 6 of CSNK1A1 (a missense and a six-base deletion, per the Results). The quote carries the identification in two families; that the variants cause infantile spasms is the authors' interpretation and rests on HEK-293T assays and two patients, not on the exome result alone.",
     "snippet": "First, we performed the systematic trios-based WES in two independent ISS families and identified two de novo variants in exon 6 of CSNK1A1.",
     "anchor": "Results / Clinical presentation",
     "surface": "body",
     "artifact": "files/fulltext/PMID40156289_Ren2025_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40156289.json",
+     "entry": 0,
+     "what_changed": "Auditor: the quote supports identification of two de novo variants in two families; \"underlie infantile spasms\" is a causal reading the quote does not carry. Proposition narrowed to identification.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 0,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
-    "proposition": "Patient 1 had multiple congenital anomalies and died at one year; the phenotype is not isolated spasms.",
+    "proposition": "Patient 1 died of severe malnutrition at 1 year of age (the congenital anomalies are stated in preceding sentences and are attested in entry 2).",
     "snippet": "The child died of severe malnutrition at 1 year of age.",
     "anchor": "Results / Clinical presentation",
     "surface": "body",
     "artifact": "files/fulltext/PMID40156289_Ren2025_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40156289.json",
+     "entry": 1,
+     "what_changed": "Auditor: the quote carries death at one year only; the anomalies are in other sentences. Proposition narrowed.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 1,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
-    "proposition": "Patient 1 congenital anomalies listed (heart, eye, chest wall).",
-    "snippet": "Cardiac ultrasound suggested congenital heart disease, manifested by cardiac ventricular septal defect, unclosed ductus arteriosus, and unclosed oval hole.",
+    "proposition": "Patient 1 congenital anomalies as listed: concave chest wall (congenital funnel chest), congenital glaucoma on fundus screening, and congenital heart disease (ventricular septal defect, unclosed ductus arteriosus, unclosed oval hole).",
+    "snippet": "The child’s chest wall was concave, suggesting congenital funnel chest. Fundus screening suggested congenital glaucoma. Cardiac ultrasound suggested congenital heart disease, manifested by cardiac ventricular septal defect, unclosed ductus arteriosus, and unclosed oval hole.",
     "anchor": "Results / Clinical presentation",
     "surface": "body",
     "artifact": "files/fulltext/PMID40156289_Ren2025_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40156289.json",
+     "entry": 2,
+     "what_changed": "Quote widened to the contiguous sentences carrying chest wall, eye and heart; proposition unchanged in substance.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 2,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
-    "proposition": "Patient 2: seizures controlled with attacks every 3-6 months; intellectual and attention problems at eight years.",
+    "proposition": "Patient 2: the epileptic seizures were controlled but occurred once every 3 to 6 months. (The age-8 intellectual and attention diagnosis is in a later sentence, not in this quote.)",
     "snippet": "The epileptic seizures were controlled but occurred once every 3–6 months.",
     "anchor": "Results / Clinical presentation",
     "surface": "body",
     "artifact": "files/fulltext/PMID40156289_Ren2025_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40156289.json",
+     "entry": 3,
+     "what_changed": "Auditor: the quote carries seizure frequency only. Proposition narrowed; the age-8 diagnosis is not claimed here.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 3,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "Treatment sentence names \"vinyl chloride\" as an antiseizure agent, which is evidently a translation error for an unnamed drug; the treatment history cannot be read as stated.",
@@ -257,44 +313,114 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Beta-catenin was raised in cells expressing either variant, with the missense higher than the deletion; the comparator is wild-type CSNK1A1 overexpression.",
-    "snippet": "Moreover, the intracellular level of β-catenin was strongly enhanced in both variants (Fig. 3F and G)",
+    "proposition": "Intracellular beta-catenin was strongly raised in cells expressing either variant, with more remaining in Mut (missense) than in Del cells; the wild-type comparator is the WT lane of Fig 3G (entry 15) and the Methods, not this quote.",
+    "snippet": "Moreover, the intracellular level of β-catenin was strongly enhanced in both variants (Fig. 3F and G), suggesting that the β-catenin degradation complex failed to control the concentration of β-catenin when the Wnt/β-catenin pathway was deactivated. Noticeably, more β-catenin remained in Mut cells than in Del cells.",
     "anchor": "Results / Effects on protein-protein interaction",
     "surface": "body",
     "artifact": "files/fulltext/PMID40156289_Ren2025_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40156289.json",
+     "entry": 7,
+     "what_changed": "Quote widened to the next sentences carrying the Mut-above-Del statement; the WT comparator is now attributed to entry 15.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 7,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "MYC and CCND1 transcripts were higher with either variant; AXIN2 only with the missense.",
-    "snippet": "Therefore, we performed qPCR on genes AXIN2, MYC and CCND1 and observed significantly higher expression levels of MYC and CCND1 in both Mut and Del.",
+    "snippet": "Therefore, we performed qPCR on genes AXIN2, MYC and CCND1 and observed significantly higher expression levels of MYC and CCND1 in both Mut and Del. However, among the two variants, only Mut resulted in higher level of AXIN2 transcription (Fig. 4C).",
     "anchor": "Results / Effects on cell proliferation",
     "surface": "body",
     "artifact": "files/fulltext/PMID40156289_Ren2025_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40156289.json",
+     "entry": 8,
+     "what_changed": "Quote widened to the contiguous sentence carrying AXIN2 only with Mut; proposition unchanged.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 8,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "Proliferation was measured as EdU incorporation in HEK-293T cells.",
-    "snippet": "Compared with the WT, the EdU positive rates (percentage of cells that had undergone cell division) in cells transfected with Mut and Del were elevated (Fig. 4A and B).",
+    "snippet": "HEK-293 T cells were transfected with WT, Mut or Del plasmid respectively, and were examined by an EdU assay. Compared with the WT, the EdU positive rates (percentage of cells that had undergone cell division) in cells transfected with Mut and Del were elevated (Fig. 4A and B).",
     "anchor": "Results / Effects on cell proliferation",
     "surface": "body",
     "artifact": "files/fulltext/PMID40156289_Ren2025_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40156289.json",
+     "entry": 9,
+     "what_changed": "Quote widened to the sentence carrying HEK-293T and the EdU assay; proposition unchanged.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 9,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "The authors declare the model limits: small sample and in vitro only, mechanism incomplete.",
-    "snippet": "In vitro experiments, while providing valuable insights into the cellular and molecular mechanisms, cannot fully recapitulate the complex physiological environment of the human body.",
+    "snippet": "Firstly, the sample size, although carefully selected, is relatively small. This may limit the statistical power to detect subtle associations between the gene variants and IS, and the results may not be fully representative of the entire ISS patient population. In vitro experiments, while providing valuable insights into the cellular and molecular mechanisms, cannot fully recapitulate the complex physiological environment of the human body. Finally, our understanding of the underlying mechanisms through which CSNK1A1 gene variants lead to ISS is still incomplete.",
     "anchor": "Discussion / limitations",
     "surface": "body",
     "artifact": "files/fulltext/PMID40156289_Ren2025_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40156289.json",
+     "entry": 10,
+     "what_changed": "Quote widened to the three limitation sentences (sample size, in vitro, incomplete mechanism); proposition unchanged.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 10,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
-    "proposition": "Method: HEK-293T transfected with GFP-tagged CSNK1A1 cDNA; the cells carry endogenous wild-type CSNK1A1, and there is no empty-vector arm in the text.",
+    "proposition": "Method: HEK-293T cells were transfected with EGFP-tagged CSNK1A1 and Flag-CTNNB1 plasmids. The source does not state whether the cells carry endogenous CSNK1A1 or whether the overexpressed protein is the only source, and no empty-vector arm appears in the text, Fig 2F, Fig 3E-F or Fig 4A (WT, Mut and Del only).",
     "snippet": "HEK-293 T cells were transfected with EGFP-tagged CSNK1A1 and Flag-CTNNB1plasmids.",
     "anchor": "Methods / Coimmunoprecipitation",
     "surface": "body",
     "artifact": "files/fulltext/PMID40156289_Ren2025_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40156289.json",
+     "entry": 11,
+     "what_changed": "Auditor: \"cells carry endogenous wild-type CSNK1A1\" is not stated in the source. That clause removed; the absence of an empty-vector arm (established by the audit) kept.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 11,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "Statement that the mutations are expected to be loss of function is a prediction before the assays.",
@@ -305,12 +431,26 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Supplement Table 1 lists fourteen other variants in the patients (the table does not say which patient), including a de novo frameshift in ACTN1 and a TSC1 variant classed likely pathogenic, described as not directly linked to the phenotype.",
+    "proposition": "Supplementary Table 1, titled \"Genetic variants not directly linked to the clinical phenotype of the ISS patients\", has thirteen variant rows (not fourteen), an Origin column (de novo, paternal, maternal) and no patient column; see entries 21 and 22 for the ACTN1 and TSC1 rows.",
     "snippet": "Table 1. Genetic variants not directly linked to the clinical phenotype of the ISS patients",
     "anchor": "Supplementary Table 1",
     "surface": "supplement",
     "artifact": "files/supplement/PMID40156289_r2/supplementary_table_ddaf030.docx",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40156289.json",
+     "entry": 13,
+     "what_changed": "Auditor: Supplementary Table 1 has 13 variant rows, not fourteen; the quote is only the title, so the row claims are anchored in new entries 21 and 22.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 13,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "The supplement note admits that listed variants may relate to the phenotype and cannot be excluded.",
@@ -349,12 +489,26 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Fig 1A-B: pedigrees show Family 1 with a single affected child and Family 2 with an affected son and unaffected brother (matching the text). The Family_1 proband trace in 1B shows overlapping peaks over a multi-base stretch (the pattern of a heterozygous multi-base indel) and the Family_2 proband trace a single-base change, whereas the text assigns the missense to patient 1 and the deletion to patient 2; panel labels do not name the variants. Adjudication of the assignment is owed to a blind audit.",
+    "proposition": "Fig 1A-B (embedded raster): pedigrees show Family 1 with a single affected child and Family 2 with an affected son and unaffected brother. The Family_1 proband trace in 1B shows overlapping peaks over a multi-base stretch after the junction, whose parental sequence contains GTATGT (the reverse complement of the deleted ACATAC) , and the Family_2 proband trace a single-base change G where the parents have C. The traces therefore fit Family_1 = deletion and Family_2 = missense, the OPPOSITE of the Results text, which assigns the missense (Mut, c.646G>C) to patient 1 and the deletion (Del, c.599_604delACATAC) to patient 2, and whose Discussion builds on that assignment (the missense, \"patient one suffered more serious clinical outcomes\"). The panel carries no variant labels and no position axis, so the \"~255\" position cannot be checked. UNRESOLVED source-internal conflict: neither assignment is adopted here, and every genotype-phenotype statement of the paper rests on the text assignment.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Family_1 P trace overlapping peaks after position ~255; Family_2 P trace single base G where parents C",
     "anchor": "Figure 1A-B, embedded raster p.4",
     "surface": "figure",
     "artifact": "files/figure_renders/PMID40156289_r3c/p04_embedded_2000x1439.png",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40156289.json",
+     "entry": 18,
+     "what_changed": "Auditor SUPPORTED the reading but pointed out what it means: the traces fit the opposite family-to-variant assignment from the text and the position cannot be checked. Proposition now states an unresolved source-internal conflict instead of a pending adjudication.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "SUPPORTED (unresolved source-internal conflict recorded)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 18,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "Fig 1C-F: EEG epochs carry no time or amplitude scale in the panels and no marking of hypsarrhythmia; the electrographic claim cannot be checked from the panels.",
@@ -370,6 +524,22 @@
     "anchor": "Figure 2A-E, embedded raster p.5",
     "surface": "figure",
     "artifact": "files/figure_renders/PMID40156289_r3c/p05_embedded_1980x2322.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table 1 row: ACTN1 NM_001130004.1, c.472_475delACAG (p.Thr158ProfsTer13), heterozygous, pathogenicity class LP, platelet-type bleeding disorder 15, origin de novo; a de novo frameshift in a gene the table classes as not directly linked to the phenotype.",
+    "snippet": "c.472_475delACAGp.Thr158ProfsTer13",
+    "anchor": "Supplementary Table 1, row 1 (ACTN1)",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID40156289_r2/supplementary_table_ddaf030.docx",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table 1 row: TSC1 NM_000368.4, c.1460C>G (p.Ser487Cys), heterozygous, population frequency 0.00185, pathogenicity class LP, listed diseases include tuberous sclerosis 1 and Taylor-type focal cortical dysplasia, origin paternal.",
+    "snippet": "Taylor-type focal cortical dysplasia; FCDT[-]3. Tuberous sclerosis 1; TSC1[AD]",
+    "anchor": "Supplementary Table 1, row 13 (TSC1)",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID40156289_r2/supplementary_table_ddaf030.docx",
     "panel_text_relation": "text_only"
    }
   ],
