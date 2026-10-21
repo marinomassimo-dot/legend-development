@@ -163,3 +163,15 @@ Receipt `FTR-20261021-41178115-01` (partial_fulltext_read: all seven main figure
 
 *Comparison phase.* FIRST-PASS OBSERVATIONS COMPLETE -> PRIOR KNOWLEDGE ADMITTED FOR COMPARISON (registry: no record for this PMID, a statement about that query only).
 
+### 38740822 - Grønbæk-Thygesen 2024, deep mutational scan of aspartoacylase abundance and toxicity - NOT WWOX EVIDENCE
+
+Receipt `FTR-20261021-38740822-01` (partial_fulltext_read: all seven figures opened as images; supplementary files retrieved, not read), manifest PASS, 14 locators. The enzyme-class abundance map for the same enzyme as 33914734.
+
+- **What it establishes (DATO, HEK293T, GFP fusion at one landing pad, undetectable endogenous enzyme).** 6,152 of 6,260 variants scored. **50 of 61 pathogenic missense variants score below 0.5** (Figure 6A, read from the image), the pathogenic variants that keep abundance are mostly at the catalytic site, and the three benign variants sit at about 0.8 to 1.0. For an enzyme, then, loss of abundance is the dominant pathogenic mechanism in this assay, with a catalytic-site minority that quantity-raising cannot fix. This is the nearest enzyme-class prior for "is a Q230P-class lesion a stability lesion by default": for ASPA, yes in about four of five pathogenic variants, as a measured quantity and in a non-native cell; the authors cite "about half" as the general figure and state it as an estimate.
+- **Route of loss (library-wide).** E1 inhibition and proteasome inhibition raise the low-abundance population, Hsp70 inhibition raises it modestly, chloroquine does not, 29 degrees removes most of it (which, as the authors and the Parkin paper note, also slows turnover generally) (Figure 4, read from the image). The substrate (N-acetyl-aspartate) had no effect, but its intracellular level is unknown, so substrate stabilisation was not tested.
+- **Quantity and function.** Function is not measured at all in this screen; the authors say activity mapping would be "more valuable from a clinical perspective" and that pathogenic variants need not affect abundance. Their therapeutic logic is conditional: blocking quality control helps "where the variant proteins, albeit structurally destabilized, are still functional", which is the premise a Q230P-class proposal would have to test first, and which the same group's yeast paper (33914734) shows can fail for C152W (stable-looking, inactive, insoluble when rescued).
+- **A caution on the read-out.** Low-abundance variants are poorly resolved (replicate correlation 0.77 for non-toxic and 0.09 for toxic low-abundance variants) because toxic variants are depleted; the toxicity itself (all toxic variants are below about 0.1 abundance; Figure 7B) is judged irrelevant to a recessive disease and an overexpression effect.
+- **Bearing on PA / PB / R1 questions 1 and 4.** Solubility was only spot-checked (five variants, mostly soluble); no synthesis read; the inhibitor arm is library-wide and flow-based. NOT WWOX EVIDENCE.
+
+*Comparison phase.* FIRST-PASS OBSERVATIONS COMPLETE -> PRIOR KNOWLEDGE ADMITTED FOR COMPARISON (registry: no record for this PMID, a statement about that query only).
+
