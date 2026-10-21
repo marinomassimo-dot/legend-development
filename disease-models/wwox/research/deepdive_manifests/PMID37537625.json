@@ -1,0 +1,367 @@
+{
+ "schema_version": 2,
+ "pmid": "37537625",
+ "doi": "10.1186/s13023-023-02756-9",
+ "pmcid": "PMC10398931",
+ "receipt": "FTR-20261021-37537625-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Single-hospital paediatric neurology and electrophysiology report of one child with a GRIN1 gain-of-function variant; invasive intervention; NOT WWOX EVIDENCE. The institutional review board deemed the treatment off-label care rather than research."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "GRIN1[Title/Abstract] AND (magnesium[Title/Abstract] OR ketamine[Title/Abstract])",
+    "count": 11,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "\"n-of-1\"[Title/Abstract] AND intrathecal[Title/Abstract]",
+    "count": 6,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 11,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 37537625 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 11,
+   "references_screened": 10,
+   "references_with_doi": 10,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID37537625_Lewis2023_PMC.xml",
+   "sha256": "0584c81fe7a9b05f70f1e07474936765bd7c5424f3834b2ce47ef59e7c19e50e",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML; body, tables cell-wise, figure legends.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10398931/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "0584c81fe7a9b05f70f1e07474936765bd7c5424f3834b2ce47ef59e7c19e50e"
+   }
+  },
+  {
+   "path": "files/supplement/PMID37537625_r2/PMC10398931.1.pdf",
+   "sha256": "c3ddf1dace59e141b2f88b8f25cf632e975b7e1ad618f933f227c8cdb1e9ce27",
+   "kind": "article_binary",
+   "note": "PMC open-data bucket PDF.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10398931.1/PMC10398931.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID37537625_r2/13023_2023_2756_Figa_HTML.jpg",
+   "sha256": "f33374081dbf364c060192291be4409cdb16b56033a94ebe7388b92c6eee1983",
+   "kind": "figure",
+   "note": "Figure 1 (in vitro table, magnesium inhibition curve, EEG dose response), native JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10398931.1/13023_2023_2756_Figa_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID37537625_r2/13023_2023_2756_MOESM1_ESM.docx",
+   "sha256": "0cf3d96c264ca2e866a50a8aab09988cb9723b7761a97c7ac65edd8937d1168c",
+   "kind": "supplement_binary",
+   "note": "Supplementary file 1: CENT 2015 checklist (docx).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10398931.1/13023_2023_2756_MOESM1_ESM.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID37537625_r2/13023_2023_2756_MOESM1_ESM.txt",
+   "sha256": "ea90b0aa3859141c7a37f296c62b9ef1a223c3ae9dd90ce76a36178dc77fec33",
+   "kind": "supplement_text",
+   "note": "Text of the CENT checklist by docx_to_text.py.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "docx_to_text",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID37537625_r2/13023_2023_2756_MOESM1_ESM.docx",
+    "extractor": {
+     "name": "framework/scripts/docx_to_text.py",
+     "version": "repository main 5dd4283f",
+     "call": "python3 framework/scripts/docx_to_text.py --out <txt> <docx>"
+    }
+   }
+  },
+  {
+   "path": "files/supplement/PMID37537625_r2/13023_2023_2756_MOESM5_ESM.docx",
+   "sha256": "7b1485a7b39c627529ccc9c66018990daeae67c28149a40c738e73b4fdedf439",
+   "kind": "supplement_binary",
+   "note": "Supplementary file 5: human-subjects considerations, clinical data and supplemental methods (docx).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10398931.1/13023_2023_2756_MOESM5_ESM.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID37537625_r2/13023_2023_2756_MOESM5_ESM.txt",
+   "sha256": "a4acfe43abbb0ef55b8e4e6df4274eb8fb777acbb915dd6cc80e708c0fef5885",
+   "kind": "supplement_text",
+   "note": "Text of the supplemental methods by docx_to_text.py.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "docx_to_text",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID37537625_r2/13023_2023_2756_MOESM5_ESM.docx",
+    "extractor": {
+     "name": "framework/scripts/docx_to_text.py",
+     "version": "repository main 5dd4283f",
+     "call": "python3 framework/scripts/docx_to_text.py --out <txt> <docx>"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Design: two successive ABA n-of-1 trials, intrathecal magnesium then ketamine, designed from the patient's in vitro findings.",
+    "snippet": "Two successive ABA (A = no treatment epoch; B = treatment epoch) n-of-1 treatment trials, using intrathecal magnesium and then ketamine, were designed and implemented based on our in vitro findings.",
+    "anchor": "Patient and methods",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37537625_Lewis2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Treatment was not randomised because of the invasive intervention.",
+    "snippet": "Treatment was not randomized given the invasive nature of the intervention.",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37537625_Lewis2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The magnesium trial was ended early because of hypotension.",
+    "snippet": "due to hypotension which responded to intervention.",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37537625_Lewis2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Result: marked fall in spike density and amplitude and rise in EEG complexity, with a clinical improvement in wakefulness and interaction (video).",
+    "snippet": "Intrathecal MgSO4 administration led to a marked reduction in spike density and amplitude (Figure 1 C&D) and increase in EEG complexity (Figure 1 E), correlating with a clinical improvement in wakefulness and interaction",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37537625_Lewis2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Clinical seizures fell from 13 to 8 over 24 hours pre and post.",
+    "snippet": "Clinical EEG indicated a reduction in seizures (tonic or behavioral arrest) from 13 to 8 (24 h pre-/post-treatment).",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37537625_Lewis2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In vitro: the variant reduced sensitivity to magnesium inhibition about seven-fold.",
+    "snippet": "A 7 fold reduction in the inhibition sensitivity to endogenous inhibitor Mg++ (based on IC50 potency) was evident.",
+    "anchor": "Figure 1 legend, panel B",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37537625_Lewis2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors claim level 2 evidence for short-term benefit.",
+    "snippet": "provides level 2 evidence (Oxford Centre for Evidence-Based Medicine) supporting a short-term benefit of IT MgSO4.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37537625_Lewis2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Authors: limitations are non-randomised, unblinded and short-term; they argue automatic quantitative neurophysiology reduces observer bias.",
+    "snippet": "Limitations of our study included the non-randomized, unblinded, and short-term nature of our trial.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37537625_Lewis2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Authors: it is unclear whether the neurophysiological benefit would translate into clinical improvements of value to the family.",
+    "snippet": "it is unclear whether this would translate into clinical improvements of value to the family, such as improved wakefulness, enhanced interaction or developmental milestone attainment.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37537625_Lewis2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Authors: the rapid clearance of CSF magnesium leaves sustained benefit unproven.",
+    "snippet": "Given the rapid clearance of CSF Mg++, it is also unclear if the short-term benefits (neurophysiology and seizure-control) we observed could be sustained over the long run",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37537625_Lewis2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Outpatient oral ketamine was followed by more than 30 seizure-free days, uncontrolled and unmeasured against a baseline.",
+    "snippet": "This regimen led to complete seizure-freedom for more than 30 days, with periods of improved wakefulness and diminished irritability, although the patient continued to experience intermittent dystonic spasms.",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37537625_Lewis2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The child died more than a year after the trial of respiratory insufficiency after a rhinovirus infection, judged unrelated.",
+    "snippet": "Unfortunately, he passed away due to respiratory insufficiency after contacting rhinovirus more than one year after his n-of-1 treatment trial.",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37537625_Lewis2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "An earlier mechanism-matched drug (memantine) was stopped after 5 days because seizures rose.",
+    "snippet": "memantine was trialed at age one year but was trialed for only 5 days as seizure burden rose at the time of initiation and the family self-discontinued the medication.",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37537625_Lewis2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Oral or intravenous magnesium was considered futile because of poor brain penetration.",
+    "snippet": "Oral and intravenous magnesium were discussed, but considered futile given published data indicating poor blood-brain barrier penetration",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37537625_Lewis2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplement: the hospital review board deemed the intervention off-label treatment, not research.",
+    "snippet": "The patient’s parents provided their consent to participate in this trial, although it was deemed “not research” (but rather off-label treatment) by the Phoenix Children’s Hospital IRB.",
+    "anchor": "Supplementary file 5, human subjects considerations",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID37537625_r2/13023_2023_2756_MOESM5_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplement: the evidence level is stated as level 2, downgraded slightly because the intervention was not blinded.",
+    "snippet": "This study was considered level 2 evidence based on Oxford Centre for Evidence-Based Medicine 2011 Levels of Evidence guidelines, downgraded slightly because the intervention in question was not blinded.",
+    "anchor": "Supplementary file 5",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID37537625_r2/13023_2023_2756_MOESM5_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplement: pre and post values over time-matched epochs were compared by paired t-tests assuming unequal variances.",
+    "snippet": "Pre- and post-treatment mean values and fold change were further compared using paired t-tests assuming unequal variances, with significance set at p<0.05.",
+    "anchor": "Supplementary file 5, Statistical analysis",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID37537625_r2/13023_2023_2756_MOESM5_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 1C-E: spike events fell from about 280 to under 20 after the lowest dose and stayed low; amplitude fell from 10.4 to 4 and rose with dose; complexity jumped from 3.2 to 6.1 and fell with dose; at the two washout epochs CSF magnesium was still 91 and 67 against 26 at baseline and values stayed away from baseline.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1C spike events baseline about 280 (458 epochs) then about 4, 12, 20, 5, 4, 4, 3 over the dose steps and two washout epochs with CSF Mg 26, 42, 57, 105, 260, 298, 91 and 67; stars on all treatment and washout epochs; Fig 1D amplitude about 10.4 at baseline, 4.1 at the first dose, rising to about 6.1 at the last dose, 6.6 and 6.1 in the washout epochs; Fig 1E complexity about 3.2 at baseline, 6.15 at the first dose, falling to about 4.3 and 4.5 in the washout epochs. Fig 1A in vitro table: magnesium IC50 21.3 for wild type and 154.2 for the variant, 7.2-fold effect; glutamate, glycine, proton and zinc parameters no effect.",
+    "anchor": "Figure 1",
+    "surface": "figure",
+    "artifact": "files/figures/PMID37537625_r2/13023_2023_2756_Figa_HTML.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC10398931/fullTextXML returned HTTP 200 with a JATS body on 2026-10-21; the declared article_text artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}

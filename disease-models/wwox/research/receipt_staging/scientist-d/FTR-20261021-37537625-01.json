@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261021-37537625-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "37537625",
+  "doi": "10.1186/s13023-023-02756-9"
+ },
+ "event_at": "2026-10-21T22:34:04Z",
+ "analysis_at": "2026-10-21T00:00:00Z",
+ "analysis_time_precision": "date_only",
+ "workflow": "scientist-d, ten-hour repurposing batch, task REPURP-10H-R4-D-20261021, branch task/repurp-r4-d; context_policy QUESTION_DRIVEN. Route: Europe PMC REST fullTextXML into the shared files/fulltext/; JATS body and tables read section by section from a text rendering; Figure 1 opened as the native JPEG; supplementary files 1 and 5 read as text; supplementary file 2 (a blank-form scoring sheet) skimmed and file 3 and 4 (videos) not obtained, so supplementary is declared unavailable for the unobtained items. Locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts. Receipt staged for the integrator, not appended.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID37537625_Lewis2023_PMC.xml",
+ "source_fingerprint": "0584c81fe7a9b05f70f1e07474936765bd7c5424f3834b2ce47ef59e7c19e50e",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "unavailable"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID37537625.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "JATS text rendering read in full; Figure 1 inspected as an image; supplementary files 1 (CENT checklist) and 5 (methods) read as text; the RoBiNT form (file 2) skimmed; video files 3-4 not obtained."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
