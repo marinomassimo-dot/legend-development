@@ -30,7 +30,7 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "IN_PROGRESS",
+ "CURRENT_STATE": "COMPLETE",
  "assigned_on": "2026-10-21",
  "TASK_ACK": {
   "TASK_ID": "REPURP-10H-R4-D-20261021",
@@ -46,6 +46,72 @@
   "timestamp": "2026-10-21T00:00:00Z",
   "durable_pointer": "branch task/repurp-r4-d, worktree .claude/worktrees/r4-d"
  },
- "DEFAULTS_TAKEN": [],
- "STOP_LOG": []
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "Article text source choice",
+   "default_taken": "Europe PMC REST, else NCBI efetch JATS via pmc_bucket_fetch.py; figures and PDFs from the PMC open-data bucket",
+   "why_safe": "Public open-access surfaces, hashed in the manifests",
+   "what_would_have_differed": "A different surface would not change a locator, only its provenance"
+  },
+  {
+   "condition": "Figure surface choice",
+   "default_taken": "300-400 dpi page render where paper_packet rank flagged vector pages, else embedded raster or native JPEG; docx via docx_to_text.py; supplement PDFs via pdftotext",
+   "why_safe": "Every surface is a declared source artifact with SHA-256",
+   "what_would_have_differed": "Operator might have preferred another extractor; the NUL-bearing pdf_text_extract output was refused, not stripped"
+  },
+  {
+   "condition": "Reading depth where a supplement or protocol was read in sections or a figure surface was unobtainable",
+   "default_taken": "Receipt depth partial (39625912, 41999155, 38015929, 42481851, 42446932, 39762914, 41531035); unobtainable sections declared unavailable",
+   "why_safe": "Understating depth is the safe direction; validator enforces it",
+   "what_would_have_differed": "Operator might have waited for a full re-read"
+  },
+  {
+   "condition": "HELD-partial row 36537114 re-receipt",
+   "default_taken": "Question written first and answered in the note; not re-receipted",
+   "why_safe": "Its manifest belongs to scientist-b; no write into another actor's files",
+   "what_would_have_differed": "Operator could assign a joint re-read"
+  },
+  {
+   "condition": "Paywalled and bot-challenged bodies (41904855, 40646322, 38677101, 41135308; figures/supplement of 37638552 and 41061327)",
+   "default_taken": "Parked with the cascade run; no circumvention",
+   "why_safe": "Access controls respected",
+   "what_would_have_differed": "Operator-supplied PDFs would convert parked rows to readings"
+  },
+  {
+   "condition": "Stale derived surfaces at commit",
+   "default_taken": "legend_commit.sh with the stale-surface deferral named in the standing brief",
+   "why_safe": "Derived surfaces are regenerated on main after landing",
+   "what_would_have_differed": "None for content"
+  },
+  {
+   "condition": "Blind locator audit of own claims",
+   "default_taken": "Declared OWED on 10 PMIDs rather than self-verified",
+   "why_safe": "Author does not verify own work; no baseline claim narrowed or reversed",
+   "what_would_have_differed": "Audit could change wording of note rows"
+  }
+ ],
+ "STOP_LOG": [],
+ "RESULT": {
+  "note": "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md",
+  "receipts_staged": 22,
+  "complete": 15,
+  "partial": 7,
+  "manifests_pass": 22,
+  "self_eval": "disease-models/wwox/research/session_evaluations/2026-10-21_repurposing_R4_scientist-d.md",
+  "commit_candidate": "disease-models/wwox/research/commit_candidates/CC-20261021-SCIENTISTD-R4-REGISTRY-01.md",
+  "five_questions": "entered in repurposing_batch_selection_20261021.md",
+  "micro_upgrade": "NONE (gap named: spec-to-manifest builder lives in scratchpad)",
+  "owed_audits": [
+   "42481851",
+   "39625912",
+   "33180985",
+   "35841234",
+   "41784472",
+   "41891667",
+   "41999155",
+   "37537625",
+   "39726432",
+   "37638552"
+  ]
+ }
 }
