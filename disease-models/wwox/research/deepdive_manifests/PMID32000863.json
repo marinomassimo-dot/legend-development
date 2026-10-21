@@ -277,7 +277,7 @@
     "panel_text_relation": "panel_only"
    },
    {
-    "proposition": "2026-10-21 (R2 repurposing batch, scientist-b), time-resolved reading of Figure 7b, wild-type panel: the PTZ-alone group (N = 20) rises to about 1.0 to 1.3 stage at 10 to 15 min and decays to about 0.2 to 0.3 by 45 to 60 min; the PTZ plus ethosuximide group (N = 16) lies below it at about 0.5 at 5 to 15 min and above it at about 0.5 to 0.9 at 25 to 40 min, converging after 45 min. The two curves cross rather than separate, and both stay at or below about 1.3 on a 0 to 6 axis, so the wild-type arm has a very low dynamic range (a floor) for any suppression.",
+    "proposition": "2026-10-21 (R2 repurposing batch, scientist-b), time-resolved reading of Figure 7b, wild-type panel: the PTZ-alone group (N = 20) rises to about 1.0 to 1.3 stage at 10 to 15 min and decays to about 0.2 to 0.3 from about 30 min to 60 min; the PTZ plus ethosuximide group (N = 16) lies below it at about 0.5 at 5 to 15 min and above it at about 0.5 to 0.9 at 25 to 40 min, converging after 45 min. The two curves cross rather than separate, and both stay at or below about 1.3 on a 0 to 6 axis, so the wild-type arm has a very low dynamic range (a floor) for any suppression.",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7b +/+: red PTZ curve peak about 1.3 near 15 min, falling to about 0.2 by 50 min; green PTZ+ETS about 0.5 at 5 to 15 min, about 0.8 at 30 to 35 min; legend N = 20 and N = 16; bracket n.s.",
     "surface": "figure",
     "artifact": "files/figures/PMID32000863_r2/Fig7_panel_b_crop.png",
@@ -292,10 +292,21 @@
      "comparator": "PTZ-alone Wwox+/+ group"
     },
     "qualifies": "entries[1]",
-    "qualifies_needle": "ethosuximide pretreatment had no effects on the behavior changes"
+    "qualifies_needle": "ethosuximide pretreatment had no effects on the behavior changes",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json",
+     "entry": 25,
+     "what_changed": "Late PTZ-alone wild-type values reach about 0.2 by about 30 min, so the decay window was widened from 'by 45 to 60 min' to 'from about 30 to 60 min'.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED with soft correction. The wording repair applied afterwards is not itself audited."
+      ]
+     }
+    }
    },
    {
-    "proposition": "2026-10-21: Figure 7b, null panel: the PTZ-alone group (N = 6) shows stage about 1 to 2.5 through the first 40 min with a sustained rise to about 2 to 2.8 from 45 to 60 min; the PTZ plus ethosuximide group (N = 6) overlaps the PTZ-alone group until about 35 min (about 1 to 1.8) and then stays at about 0.5 to 1.0 to 60 min. The separation behind the *** is confined to the second half of the hour and rests on the PTZ-alone group's late sustained phase, which the wild-type panel does not have (it decays to about 0.2 to 0.3). With N = 6 per arm and SEM bars of about 0.5 to 0.8 at late time points, the null effect is concentrated in a phase that exists only in the null.",
+    "proposition": "2026-10-21: Figure 7b, null panel: the PTZ-alone group (N = 6) shows stage about 1 to 2.5 through the first 40 min with late values of about 1.6 to 2.8 from 45 to 60 min, mostly about 2 to 2.8 (a dip to about 1.6 at 45 to 49 min); the PTZ plus ethosuximide group (N = 6) overlaps the PTZ-alone group until about 35 min (about 1 to 1.8) and then stays at about 0.5 to 1.0 to 60 min. The separation behind the *** is confined to the second half of the hour and rests on the PTZ-alone group's late phase, which the wild-type panel does not have (it decays to about 0.2 to 0.3). With N = 6 per arm and SEM bars of about 0.5 to 0.8 at late time points, the null effect is concentrated in a phase that exists only in the null.",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7b -/-: red PTZ N = 6, late values about 2 to 2.8 from 45 to 60 min; green PTZ+ETS N = 6, about 0.5 to 1.0 from 40 to 60 min; the two overlap from 5 to 35 min; bracket ***.",
     "surface": "figure",
     "artifact": "files/figures/PMID32000863_r2/Fig7_panel_b_crop.png",
@@ -310,18 +321,40 @@
      "comparator": "PTZ-alone Wwox-/- group"
     },
     "qualifies": "entries[1]",
-    "qualifies_needle": "ethosuximide pretreatment had no effects on the behavior changes"
+    "qualifies_needle": "ethosuximide pretreatment had no effects on the behavior changes",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json",
+     "entry": 26,
+     "what_changed": "Late red values are about 1.6 to 2.8 from 45 to 60 min (mostly 2 to 2.8, dip to about 1.6 at 45-49 min), not a smooth sustained 2 to 2.8; 'sustained' dropped.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED with soft correction. The wording repair applied afterwards is not itself audited."
+      ]
+     }
+    }
    },
    {
-    "proposition": "2026-10-21: Figure 7d null panel, the lithium experiment's own PTZ-alone control group (N = 6, a separate cohort from the ethosuximide experiment's N = 6): it peaks at about 3.5 stage at 5 to 6 min then sits at about 1 to 1.5 for the rest of the hour (late values about 0.3 to 1.7), against Figure 7b's PTZ-alone null group, which is about 1 to 2.5 early and about 2 to 2.8 late. The two PTZ-alone null control cohorts therefore differ in time profile by about as much as the ethosuximide arm differs from its own control in the late phase (about 2 to 2.8 against about 0.5 to 1.0).",
+    "proposition": "2026-10-21: Figure 7d null panel, the lithium experiment's own PTZ-alone control group (N = 6): it peaks at about 3.5 stage at 5 to 6 min then sits at about 1 to 1.5 for the rest of the hour (late values about 0.3 to 1.7), against Figure 7b's PTZ-alone null group, which is about 1 to 2.5 early and about 1.6 to 2.8 late. The two PTZ-alone null control cohorts therefore differ in late values by a comparable order to the ethosuximide effect in the late phase (about 1.0 between the two controls against about 1.5 for the drug effect, both read from the figure; whether the two control groups are separate cohorts is not stated in the Methods).",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7d -/-: red PTZ N = 6 peaks about 3.5 near 5 to 6 min then about 1 to 1.5; blue PTZ+LiCl N = 7 about 1.3 at peak then near 0; Figure 7b -/-: red PTZ N = 6 about 2 to 2.8 at 45 to 60 min.",
     "surface": "figure",
     "artifact": "files/figures/PMID32000863_r2/Fig7_panel_d_crop.png",
     "anchor": "Figure 7d lower panel (-/-) read against Figure 7b lower panel; crops of the declared PNG",
-    "panel_text_relation": "panel_only"
+    "panel_text_relation": "panel_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json",
+     "entry": 27,
+     "what_changed": "'differ by about as much' softened to 'a comparable order'; 'separate cohort' removed because the Methods do not state it; late null value range corrected to about 1.6 to 2.8.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED with mild overreach. The wording repair applied afterwards is not itself audited."
+      ]
+     }
+    }
    },
    {
-    "proposition": "2026-10-21: Figure 7d wild-type panel: the lithium experiment's PTZ-alone group (N = 12) has a peak of about 1.2 stage in the first minutes, about 0.5 to 1.0 up to 5 min and about 0.2 to 0.5 thereafter; PTZ plus lithium (N = 8) is about 0.2 at the start and about 0 after. The wild-type separation behind the **** is confined to roughly the first 5 to 10 min, where the PTZ-alone group is above about 0.5. This is the same low-range (floor-limited) wild-type response as in Figure 7b, and lithium produced a significant difference inside it, so a floor does not by itself prevent a drug effect from being detected; the two drugs also differ in schedule (lithium three times within 1 hour before PTZ; ethosuximide once 45 min before) and in control cohort.",
+    "proposition": "2026-10-21: Figure 7d wild-type panel: the lithium experiment's PTZ-alone group (N = 12) has a peak of about 1.2 stage in the first minutes, about 0.5 to 1.0 up to 5 min and about 0.2 to 0.5 thereafter; PTZ plus lithium (N = 8) is about 0.2 at the start and about 0 after. The wild-type separation behind the **** is confined to roughly the first 5 to 10 min, where the PTZ-alone group is above about 0.5. This is the same low-range (floor-limited) wild-type response as in Figure 7b, and lithium produced a significant difference inside it, so a floor does not by itself prevent a drug effect from being detected; the two drugs also differ in schedule (lithium three times within 1 hour before PTZ; ethosuximide once 45 min before) and in control group.",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7d +/+: red PTZ N = 12 about 1.2 at 0 to 1 min and about 0.3 afterwards; blue PTZ+LiCl N = 8 about 0.2 then about 0; bracket ****.",
     "surface": "figure",
     "artifact": "files/figures/PMID32000863_r2/Fig7_panel_d_crop.png",
@@ -336,7 +369,18 @@
      "comparator": "PTZ-alone Wwox+/+ group (separate cohort)"
     },
     "qualifies": "entries[0]",
-    "qualifies_needle": "suppressed PTZ-induced seizure activity"
+    "qualifies_needle": "suppressed PTZ-induced seizure activity",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json",
+     "entry": 28,
+     "what_changed": "'and in control cohort' reworded to 'control group' because cohort identity is not stated.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED. The wording repair applied afterwards is not itself audited."
+      ]
+     }
+    }
    },
    {
     "proposition": "The statistical method stated for the whole paper is one-way ANOVA across groups; no drug-by-genotype interaction term is described, and the per-genotype brackets in Figure 7b and 7d are the paper's only inference about drug effects. How the repeated minute-by-minute ordinal scores were collapsed for the test is not stated in the Methods.",

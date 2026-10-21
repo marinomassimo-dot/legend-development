@@ -1,5 +1,5 @@
 {
- "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
  "_note": "Part of the ten-hour repurposing batch ORCH-REPURPOSING-10H-20261021. Adjacent and transferable literature: every paper that is not WWOX evidence is labelled NOT WWOX EVIDENCE, at class level, no dose, no paediatric suitability presumed, not medical advice.",
  "TASK_ID": "REPURP-10H-R2-B-20261021",
  "DIRECTIVE_VERSION": 1,
@@ -30,7 +30,7 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "CLAIMED",
+ "CURRENT_STATE": "COMPLETED",
  "assigned_on": "2026-10-21",
  "TASK_ACK": {
   "actor": "scientist-b",
@@ -58,7 +58,8 @@
   "Parked bot-challenged/restricted bodies 25071191 (Lee 2014) and 41558409 (Ng 2026) with the cascade run; no challenge solved, no access control circumvented.",
   "Partial-depth readings where supplements or secondary figures were unopened; stated per receipt coverage.",
   "Xlsx/docx supplements converted to derived .txt artifacts with an inline extractor recipe; new routed tool supplement_symbol_search.py added.",
-  "Blind audits run voluntarily via three history-free subagents rather than left only OWED."
+  "Blind audits run voluntarily via three history-free subagents rather than left only OWED.",
+  "Closure relay: Steinberg verdict confirmed from the auditor's SubagentHandback message; no re-run needed. Repairs applied and declared unaudited."
  ],
  "STOP_LOG": [],
  "CHECKPOINT": {
@@ -93,5 +94,16 @@
    "self-eval, report"
   ],
   "notes": "Each reading: manifest PASS, receipt staged under research/receipt_staging/scientist-b/, note section appended in research/repurposing_10h_scientist-b_20261021.md. A resume re-reads this and git log on branch task/repurp-10h-r2-b."
+ },
+ "RESULT": {
+  "closed_on": "2026-10-21",
+  "summary": "Group R2 read (26 papers plus three WWOX-direct re-reads); three blind audits collected and wording repairs applied (repairs unaudited); receipts staged, not recorded; commit candidate CC-20261021-SCIENTIST-B-R2-DLMECH170-01 proposed, not propagated.",
+  "audit_verdicts": {
+   "32000863": "6/6 SUPPORTED, soft corrections",
+   "36828035": "3 SUPPORTED, 1 and 2 with anchor-label fix, 1 OVERSHOOT minor",
+   "34268881": "4/4 SUPPORTED, two wording fixes"
+  },
+  "self_evaluation": "disease-models/wwox/research/session_evaluations/2026-10-21_repurp_10h_r2_b_closure.md",
+  "context_note": "The previous context ended after 26 papers, three re-reads and three audit launches; closure ran in a relay context."
  }
 }
