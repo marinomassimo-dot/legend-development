@@ -4385,3 +4385,17 @@ Leads staged in the candidates of `BATCH_20261019_003` (groups H3, H4 and H5). A
 - **Falsifying experiment / counter:** Falsifier: 'WWOX loss does not alter these axes' fails if an abnormal value is measured in WWOX-null patients or models.
 - **Transfer limit to WWOX:** an adjacent or comparator source or a method note; no WWOX loss-of-function measurement exists for this lead unless stated. P47T, Q230P, G372R, A141T and P252A are not interchangeable.
 - **Not medical advice.**
+
+## Run 2026-10-21 — leads appended by the validated writer (discovery_lead.py)
+
+### DL-MECH-170 — Ethosuximide suppressed a provoked seizure genotype-specifically in the one assay that ran all three Wwox genotypes, and no follow-up exists
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-21 · deepdive_manifests/PMID32000863.json entries 1 and 17 (first-hand panel reading, Figure 7b inspected as an image); the reconnaissance that found it: disease-models/wwox/research/repurposing_known_roads_20261020_scientist-a.md section 2.3; the lithium contrast in the same figure: section 2.2 and the CLAIM 016 boundary note. Appended by `discovery_lead.py`.
+- **Causal statement:** In the single published experiment where lithium and ethosuximide were applied to the same animals in the same PTZ assay across +/+, +/- and -/- Wwox genotypes, ethosuximide's suppression was marked not significant in +/+ and +/- and significant in -/-, while lithium suppressed the seizure in wild type as significantly as in the null. If that contrast is real, a T-type calcium-channel block acts on something the loss of WWOX creates rather than on seizure threshold in general, which would make the T-type axis a mechanism to test rather than a symptomatic option. IPOTESI: the contrast is one figure from one laboratory and the paper's own text asserts the genotype specificity for ethosuximide while never stating the converse for lithium, so the asymmetry may be reporting rather than biology.
+- **Falsifying experiment / counter:** Repeat the three-genotype comparison with an explicit drug-by-genotype interaction test and an EEG or spontaneous-seizure endpoint rather than a provoked behavioural one. The lead is DISCARDED if the interaction is not significant, if ethosuximide suppresses in +/+ as it does in -/-, or if the original panel does not reproduce. It is also DISCARDED as a mechanism claim if a second T-type blocker of a different chemical class shows no genotype dependence.
+- **Transfer limit to WWOX:** One experiment, one laboratory, one assay, one species, acute intraperitoneal pretreatment, constitutive null genotype only, behavioural endpoint. A provoked-seizure threshold is not a spontaneous-seizure outcome and genotype-specific suppression of a provoked seizure is symptomatic-class at best: it says nothing about disease modification. No measurement exists in a missense or compound-heterozygous genotype, and FT-115 records that the repository holds no patient-level T-type evidence. Filing this lead is not a promotion of ethosuximide and carries no dose, route or paediatric suitability.
+- CLAIM 016
+- FT-115
+- **Not medical advice.**
