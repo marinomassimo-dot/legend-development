@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261022-31331032-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "31331032",
+  "doi": "10.3390/cells8070746"
+ },
+ "event_at": "2026-10-22T08:30:00Z",
+ "analysis_at": "2026-10-22T08:30:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-c, task REPURP-10H-R3b-C-20261022, PRIMARY_EVIDENCE_READ, SOURCE_FIRST (written question: is there a neural readout after a multi-CDK inhibitor in a seizure model); full text read, Figure 1 opened, Figures 2-7 captions only; prepared as JSON for the integrator and not appended by this actor.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID31331032_R3b_PMC_r2.xml",
+ "source_fingerprint": "2bdea8284a2e321bfde4842cf75ae4bf54a601a3616c0380a309d458d8e1a016",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID31331032.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022b.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "full text read; Figure 1 opened, other figures captions only; see manifest"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
