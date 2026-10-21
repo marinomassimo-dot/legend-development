@@ -1,0 +1,43 @@
+{
+ "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Part of the ten-hour repurposing batch ORCH-REPURPOSING-10H-20261021. Adjacent and transferable literature: every paper that is not WWOX evidence is labelled NOT WWOX EVIDENCE, at class level, no dose, no paediatric suitability presumed, not medical advice.",
+ "TASK_ID": "REPURP-10H-P4-DEEP-A-20261022",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-a",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Roadmap P4 for the RECUPERO_PROFONDO path, from the repository's OWN qualified records and with no new literature reading unless a card is decided by one panel: produce the first candidate cards (or explicit abstentions) with framework/scripts/repurposing_bridge.py, drawing on the known-roads note, the R1 note and its verdicts on the three historic dossiers, the R3 note, the rescue-reference scaffold and the clinical census.",
+ "SCOPE": {
+  "inputs": [
+   "disease-models/wwox/research/repurposing_known_roads_20261020_scientist-a.md",
+   "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md",
+   "disease-models/wwox/research/repurposing_10h_scientist-c_20261021.md",
+   "disease-models/wwox/research/drug_repurposing/woree_rescue_reference_scaffold.md",
+   "disease-models/wwox/research/drug_repurposing/clinical_census_20261020.md",
+   "docs/repurposing_bridge_20261015.md"
+  ],
+  "outputs": "disease-models/wwox/research/drug_repurposing/cards/ (new subdirectory, yours alone), one JSON packet per candidate plus the cards the bridge builds, and a README beside them"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "every card carries the roadmap's P4 fields, with UNKNOWN rather than absent",
+  "a card for an axis with no support is an explicit abstention naming the missing datum",
+  "no score, no ranking, no probability, no dose, no paediatric suitability",
+  "at least one card or abstention per axis the repository can support, and the Q230P recovery axis treated first",
+  "DEFAULTS_TAKEN and STOP_LOG here"
+ ],
+ "DEPENDENCIES": [],
+ "REVIEW_REQUIREMENT": "Mirror ex post",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently",
+ "MILESTONE_PLAN": [
+  "TASK_ACK/CLAIM",
+  "per-paper M0-M5",
+  "analysis note",
+  "self-eval",
+  "report"
+ ],
+ "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
+ "CURRENT_STATE": "ASSIGNED",
+ "assigned_on": "2026-10-21"
+}

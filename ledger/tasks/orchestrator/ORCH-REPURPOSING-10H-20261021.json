@@ -65,8 +65,11 @@
    "scientist-a": {
     "group": "R1",
     "agentId": "ab601f2e19d3a1d37",
-    "task": "REPURP-10H-R1-A-20261021",
-    "state": "RUNNING (measured 22:16Z via ListAgents, 16 min in; own worktree and branch present)"
+    "task": "REPURP-10H-P4-DEEP-A-20261022",
+    "state": "R1 closed (19 readings, landed 177721a4, receipts recorded b9e1e2fb); handed P4 deep-recovery cards at 22:3xZ",
+    "previous_agents": [
+     "ab601f2e19d3a1d37"
+    ]
    },
    "scientist-b": {
     "group": "R2",
@@ -117,6 +120,10 @@
     "file": "page_adjudications/locator_audit_R3_20261022.md",
     "state": "RUNNING",
     "scope": "40665325 PK table and Fig 4; 38147624 Fig 6I and Fig 5 schedule; 42310739 duplicate F; 40156289 Fig 1B; then 35945201, 41980417"
+   },
+   "R1": {
+    "state": "TO_DISPATCH",
+    "scope": "PB-4 narrowing (polysome profiling 31402619); 42157447 Figs 6 and 8; 38731820 Fig 6 sample size; 32023956 Fig 1B text-versus-panel"
    }
   }
  },
