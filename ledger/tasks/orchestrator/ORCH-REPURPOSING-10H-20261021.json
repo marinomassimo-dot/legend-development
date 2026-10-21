@@ -159,6 +159,10 @@
     "t": "2026-10-21T23:18Z",
     "cycle": 2,
     "event": "ListAgents: scientists a (aa4d5f436e85255dd), b (a9be556c4afa30ad3), c (a248f254237ba316a), d (a1b21908680566c50) all running; auditors for R3 repairs+R3b (a960bee50bb330853), R4+early cards (ab6f6eda93d6e9018), deep cards (a7ab5c478c7244b8c) and Harness bridge gaps (aa2c22a1eb7c2ebdb) running; no stop, no restart, no staged receipt unrecorded (ledger 775); main 7005e3b9 equals the remote; candidates held pending audits"
+   },
+   {
+    "t": "2026-10-21T23:2xZ",
+    "event": "R4 + early-cards audit returned (9f1a2843). Manifest adverse rate 4 percent vs 16-36 percent for R1/R3 \u2014 scientist-d recomputed trial numbers and self-caught; cards: 8 of 9 carry a defect (KD sentence an inference from Table 1, VGB shared-origin conflation, ETX dependency stale, GROWTH contradicts CLAIM 011, DEV/PDANCHOR unbounded negatives, HORM/CBD context). Repair routed to scientist-d. check_cards.py passes all nine and does not check whether a quote supports its sentence"
    }
   ],
   "audits": {
@@ -183,7 +187,7 @@
    "R4_and_early_cards": {
     "agentId": "ab6f6eda93d6e9018",
     "file": "page_adjudications/locator_audit_R4_cards_20261022.md",
-    "state": "RUNNING",
+    "state": "RETURNED: R4 manifests 215 triples 207 supported, 6 overshoot, 1 undershoot, 1 unverifiable; early cards 1 HOLDS, 8 named defects, no quote fails verbatim; repair routed to scientist-d relay a1b21908680566c50",
     "scope": "ten R4 manifests + nine early-benefit cards (priorities: published-individuals sentence on the diet card; shared-origin on the vigabatrin card; dependency on the unaudited R2 narrowing on the T-type card)"
    },
    "R3_repairs_R3b": {
