@@ -1,0 +1,206 @@
+{
+ "schema_version": 2,
+ "pmid": "40068874",
+ "doi": "10.1523/ENEURO.0423-24.2025",
+ "receipt": "FTR-20261021-40068874-01",
+ "landing": [
+  "FTR-20261021-40068874-01",
+  "repurposing_10h_scientist-b_20261021"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 204,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-21: 'Snutch TP[au]' 204; with (WWOX OR Wwox) 0. Initials-level string, may pool homonyms.",
+  "research_type": "experimental_lab",
+  "weighting": "A laboratory with long-standing T-type channel pharmacology and electrophysiology; a slice study in constitutive Cav3.2 knockout mice, cell counts rather than animal counts as the statistical unit in most comparisons.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID40068874_Sack2025_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement about WWOX content of this surface."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 100,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-40068874-01",
+    "target": "Aguado et al. 2016 (Cav3.2 expression rises from P0 to P21 and falls by P60 in rodent hippocampus)",
+    "question": "Is there an age-resolved Cav3.2 or Cav3.1 expression series in cortex and thalamus that would place a preweaning mouse (the Wwox PTZ assay age) on the curve?",
+    "status": "open - cited, not read"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 40068874, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "paper_packet.py packet at claim time: none prior; claimed by scientist-b."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-21",
+  "route": "PubMed esummary (JSON) for 40068874 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "pubtype [\"Journal Article\"]; no retraction, expression of concern or erratum is visible on the esummary record (the esummary JSON carries no CommentsCorrections list for this PMID, so that absence is a statement about this query).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 100,
+   "references_screened": 99,
+   "references_with_doi": 99,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40068874_Sack2025_PMC_r2.xml",
+   "sha256": "854ef2de9aac351cf2af23b408ba0e1db4acacdd5d34b4af64901193ba784952",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=11974363&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "854ef2de9aac351cf2af23b408ba0e1db4acacdd5d34b4af64901193ba784952"
+   }
+  },
+  {
+   "path": "files/supplement/PMID40068874_r2/PMC11974363.1.pdf",
+   "sha256": "0a4441a87ee85f8d0d6ebc732eb070250593badc5deb43092e954da2ba43d2ea",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC11974363",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "0a4441a87ee85f8d0d6ebc732eb070250593badc5deb43092e954da2ba43d2ea"
+   }
+  },
+  {
+   "path": "files/figures/PMID40068874_r2/PMC11974363_p08_embedded.png",
+   "sha256": "fbfd2af89d9f849106d9bb84fb2ea26b97a9e2311d8d5922bd641fefb09a321e",
+   "kind": "figure",
+   "note": "Figure 2 as the embedded 300 ppi raster of PDF page 8.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "fbfd2af89d9f849106d9bb84fb2ea26b97a9e2311d8d5922bd641fefb09a321e",
+    "derived_from": "files/supplement/PMID40068874_r2/PMC11974363.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF Pixmap",
+     "version": "1.28.2",
+     "call": "largest embedded image of PDF page 8 saved as PNG (1828x2491, 300 ppi)",
+     "join": ""
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figures opened as images; every text snippet below was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet below sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "Maturation-dependent role of the channel: low-threshold calcium spikes are frequent in immature dentate granule cells that fire one action potential (15 of 19 wild-type), and the proportion falls to 3 of 18 in Cav3.2 knockout (Fisher p = 0.0002). The spike is blocked by a pan-T-type blocker in wild-type cells and is insensitive to TTX. The channel contributes an excitability feature specific to immature cells.",
+    "snippet": "However, the overall proportion of immature GCs with LTCS was significantly reduced (KO n = 3/18 cells; Fisher's exact test, p = 0.0002; Fig. 2B).",
+    "surface": "body",
+    "anchor": "Results, Loss of T-type calcium channels impairs LTCS in immature GCs",
+    "artifact": "files/fulltext/PMID40068874_Sack2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Direction of the knockout effect is not uniform: in regular-spiking intermediate and mature granule cells loss of Cav3.2 increases excitability (shorter intervals between spikes; higher average firing frequency in mature cells), the opposite of what blocking a depolarising channel would predict if only the immature effect were considered. The authors suggest coupling to a calcium-activated potassium channel without testing it.",
+    "snippet": "Overall, these results indicate that loss of Cav3.2 channels in regular spiking GCs increases excitability.",
+    "surface": "body",
+    "anchor": "Results, Loss of Cav3.2 increases GC excitability in regular spiking cells",
+    "artifact": "files/fulltext/PMID40068874_Sack2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Subthreshold and frequency-following measures are unchanged by the knockout and the authors state the intrinsic effects of Cav3.2 loss on granule-cell excitability are relatively subtle despite a strong behavioural and epilepsy-development phenotype in this knockout, leaving the population responsible unidentified.",
+    "snippet": "Despite this strong phenotype, our results indicate that the effects of Cav3.2 KO on GC intrinsic excitability are relatively subtle.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 7",
+    "artifact": "files/fulltext/PMID40068874_Sack2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Age window: the experiments use juvenile mice because neurogenesis is faster at that age, giving a mix of maturation stages; the authors cite that hippocampal Cav3.2 expression rises from birth to about postnatal day 21 and falls by day 60, without measuring it. No cortical or thalamic age series is provided and the cells recorded are hippocampal granule cells.",
+    "snippet": "For instance, in the rodent hippocampus, Cav3.2 expression initially increases from P0 to P21 then decreases at P60 (Aguado et al., 2016).",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 4",
+    "artifact": "files/fulltext/PMID40068874_Sack2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Compensation limit: low-threshold spikes remain in about 17 percent of knockout immature cells, and the authors list Cav3.1, Cav3.3 and Cav2.3 as candidates, or compensation, so even a genetic loss of one subtype does not remove the current; a pharmacological block of 'T-type' is a different perturbation from a Cav3.2 null.",
+    "snippet": "indicating that Cav3.2 channels may not solely underlie LTCS.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 2",
+    "artifact": "files/fulltext/PMID40068874_Sack2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2 read as an image (page 8 embedded raster): panel A pie charts (wild type outward rectification 18 percent, rudimentary spike 14 percent, action potential 68 percent, N = 28; knockout 10, 28, 62 percent, N = 29); panel B stacked bars wild type 79 percent with low-threshold spike and 21 percent without, knockout 17 and 83; panel C example traces: action potential abolished by TTX and the slow depolarising hump abolished by the T-type blocker, leaving a passive response.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2B: WT 79 percent with LTCS, 21 percent without; KO 17 percent with, 83 percent without; Figure 2C: panels i TTX ii and Z944 iii.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40068874_r2/PMC11974363_p08_embedded.png",
+    "anchor": "Figure 2 panels A to C; page 8 embedded raster 1828x2491",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}
