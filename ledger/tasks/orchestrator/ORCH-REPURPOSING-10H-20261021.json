@@ -64,9 +64,9 @@
   "roster": {
    "scientist-a": {
     "group": "R1",
-    "agentId": "ad55600ec51e52a43",
+    "agentId": "a3c29605f071db51b",
     "task": "REPURP-10H-P4-DEEP-A-20261022",
-    "state": "P4 deep-recovery cards (relay agent started 22:3xZ)",
+    "state": "P4 deep-recovery cards, worktree p4-a; R1 audit repair message delivered 23:1xZ (priority over cards)",
     "previous_agents": [
      "ab601f2e19d3a1d37"
     ]
@@ -127,6 +127,10 @@
    {
     "t": "2026-10-21T23:00Z",
     "event": "R3 blind audit returned (deeb737c): 36 percent of audited triples overshoot. Dose proportionality of the multi-kinase inhibitor is not reproduced by the printed table either way (supralinear 1-21 mg; 1.27 for a 2.0 dose ratio 21-42 mg). Repair routed to scientist-c with priority; A51 candidate held"
+   },
+   {
+    "t": "2026-10-21T23:20Z",
+    "event": "CORRECTION: the roster had scientist-a's and the R1 auditor's agent ids swapped (the two were launched in one message and I paired the returned ids in the wrong order). The R1 repair message was first sent to the auditor ad55600ec51e52a43, which ignored it as out of its read-only perimeter and replied 'clean'; no file was changed. Re-sent to the correct agent a3c29605f071db51b. Lesson: pair returned agent ids to launches by the description in the result, never by position, and verify with ListAgents before the first message to a restarted actor"
    }
   ],
   "audits": {
@@ -138,10 +142,11 @@
     "repair": "message sent to scientist-c relay agent aa7339b0af1c43595 with priority over new readings; candidate CC-20261021-SCIENTIST-C-R3-A51-ATTRIBUTION-01 HELD from propagation"
    },
    "R1": {
-    "state": "RUNNING",
+    "state": "RETURNED: 95 triples, 76 supported, 15 overshoot, 2 undershoot, 2 unverifiable; all three narrowing triples (PB-4) overshoot",
     "scope": "PB-4 narrowing (polysome profiling 31402619); 42157447 Figs 6 and 8; 38731820 Fig 6 sample size; 32023956 Fig 1B text-versus-panel",
-    "agentId": "a3c29605f071db51b",
-    "file": "page_adjudications/locator_audit_R1_20261022.md"
+    "agentId": "ad55600ec51e52a43",
+    "file": "page_adjudications/locator_audit_R1_20261022.md",
+    "repair": "message to scientist-a agent a3c29605f071db51b; candidate CC-20261021-SCIENTIST-A-R1-PROTEOSTASIS-01 HELD"
    },
    "R4": {
     "state": "TO_DISPATCH",
@@ -156,6 +161,14 @@
    "alternatives_rejected": "ten one-shots (ten ids to track and one missed fire loses an hour)",
    "reversibility": "high",
    "how_to_revert": "CronDelete 4b6b5252"
+  }
+ ],
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "agent ids swapped in the roster",
+   "default": "recorded the error, re-sent to the correct agent, left the auditor's read-only boundary as the safeguard that held",
+   "why_safe": "the auditor refused to act; git status clean; no manifest or candidate touched",
+   "different_if": "an auditor with write scope would have edited manifests it must not touch"
   }
  ]
 }
