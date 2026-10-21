@@ -1,5 +1,5 @@
 {
- "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
  "_note": "Part of the ten-hour repurposing batch ORCH-REPURPOSING-10H-20261021. Adjacent and transferable literature: every paper that is not WWOX evidence is labelled NOT WWOX EVIDENCE, at class level, no dose, no paediatric suitability presumed, not medical advice.",
  "TASK_ID": "REPURP-10H-R4-D-20261021",
  "DIRECTIVE_VERSION": 1,
@@ -30,6 +30,22 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-21"
+ "CURRENT_STATE": "IN_PROGRESS",
+ "assigned_on": "2026-10-21",
+ "TASK_ACK": {
+  "TASK_ID": "REPURP-10H-R4-D-20261021",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "decision": "ACCEPTED",
+  "at": "2026-10-21T00:00:00Z"
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "REPURP-10H-R4-D-20261021",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-d",
+  "timestamp": "2026-10-21T00:00:00Z",
+  "durable_pointer": "branch task/repurp-r4-d, worktree .claude/worktrees/r4-d"
+ },
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
 }

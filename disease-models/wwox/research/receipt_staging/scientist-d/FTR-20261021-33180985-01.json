@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261021-33180985-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "33180985",
+  "doi": "10.1002/ana.25956"
+ },
+ "event_at": "2026-10-21T22:06:16Z",
+ "analysis_at": "2026-10-21T00:00:00Z",
+ "analysis_time_precision": "date_only",
+ "workflow": "scientist-d, ten-hour repurposing batch, task REPURP-10H-R4-D-20261021, branch task/repurp-r4-d; context_policy QUESTION_DRIVEN. Route: Europe PMC REST fullTextXML into the shared files/fulltext/; JATS body and tables read section by section from a text rendering; Figures 1 and 2 opened as page renders (300 and 400 dpi) from the PMC bucket PDF after paper_packet.py rank flagged the Figure 2 page as likely vector; the supplement (investigator list) is a bare .docx not read for content. Locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts. Receipt staged for the integrator, not appended.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID33180985_Kotulska2021_PMC.xml",
+ "source_fingerprint": "e833f387efc3a5ed767ad2250b9c8a06805f9be700a33dfebc63e4b7a5a4bd8f",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "unavailable"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID33180985.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "JATS text rendering read in full; Figure 1 and Figure 2 page renders inspected; Tables 1-5 read cell-wise."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
