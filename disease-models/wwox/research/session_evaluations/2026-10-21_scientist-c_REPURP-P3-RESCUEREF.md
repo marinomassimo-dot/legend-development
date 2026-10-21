@@ -135,20 +135,27 @@ information the packet holds and does not say.
 
 ```
 ATTRIBUTION_CENSUS
-incidents: 5
-machine: 3   blind_auditor: 0   peer: 0   self: 2
-severity_high: 2   of which self: 2
+incidents: 6
+machine: 3   blind_auditor: 0   peer: 0   self: 3
+severity_high: 3   of which self: 3
 undetected_known: 0
 ```
 
 **Counting.** The two manifest refusals are one incident (one rejection class, two instances);
 the `analysis_at`/`event_at` refusal is one; the figure-surface choice is one; the Figure 7
-vector case is one. `severity_high` counts the two that would have **reached the record**: a
-Figure 3B measurement taken from the 726 px CDN raster, and a Figure 7 read from its extracted
-raster that would have carried no panel numbers and could have been written up as "panel
-unreadable". Both were caught by **self** — by re-deriving the surface rather than by any gate,
-because no gate in this repository asks whether a better surface exists. `undetected_known: 0` is
-this diagnosis's structural blind spot and is left visible as such.
+vector case is one; and the sixth is the one that is least comfortable to write down.
+`severity_high` counts the three that would have **reached the record**: a Figure 3B measurement
+taken from the 726 px CDN raster; a Figure 7 read from its extracted raster, which carries no
+panel numbers and could have been written up as "panel unreadable"; and 🔴 **a cell count in
+`CURRENT_STATE` that was estimated and asserted as measured — "120 of 120 cells, 112 BOUND" —
+which was committed before it was counted.** The true figures are 160 cells, 0 `NOT_YET_BOUND`,
+0 `TRANSCRIBED_FROM_ROADMAP`, 3 `UNKNOWN`, counted mechanically off the committed file. That one
+did reach the record and was corrected forward in the same task, and it is the cleanest local
+instance of *an assumption asserted with the confidence of a measurement, in a place too small to
+look at twice* — a completeness figure about my own work, in a field nobody re-derives. All three
+were caught by **self**, by re-deriving rather than by any gate, because no gate in this
+repository asks whether a better surface exists or whether a self-reported count was counted.
+`undetected_known: 0` is this diagnosis's structural blind spot and is left visible as such.
 
 ## Part 4 — pointer
 
