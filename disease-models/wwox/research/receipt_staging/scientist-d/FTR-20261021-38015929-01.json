@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261021-38015929-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "38015929",
+  "doi": "10.1093/brain/awad287"
+ },
+ "event_at": "2026-10-21T22:25:04Z",
+ "analysis_at": "2026-10-21T00:00:00Z",
+ "analysis_time_precision": "date_only",
+ "workflow": "scientist-d, ten-hour repurposing batch, task REPURP-10H-R4-D-20261021, branch task/repurp-r4-d; context_policy QUESTION_DRIVEN. Route: Europe PMC REST fullTextXML into the shared files/fulltext/; JATS body and tables read section by section from a text rendering; Figures 1-6 opened as the embedded 200 ppi rasters of the PDF pages (rank showed no whole-figure JPEG better than these); supplementary methods read from the text layer; supplementary tables and figures S1-S7 not opened. Locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts. Receipt staged for the integrator, not appended.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID38015929_Xian2023_PMC.xml",
+ "source_fingerprint": "a31a389e9358a177f78099cc5c5ac3aafed7122fe2c33b2ca2b1f1ae6d9e7d34",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "captions_only"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID38015929.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "JATS text rendering read in full including Tables 1-2; Figures 1-6 inspected as images; supplementary methods (outcome measures, forecasting, comparative effectiveness, virtual trials) read from the PDF text layer; supplementary tables and Figures S1-S7 not read, so supplementary is declared captions_only and depth partial."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
