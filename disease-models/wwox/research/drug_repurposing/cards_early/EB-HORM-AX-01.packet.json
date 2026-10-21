@@ -8,15 +8,15 @@
   "disease_assertion": {
     "id": "D-HORM-1",
     "target_id": "epileptic_spasms",
-    "endpoint": "clinical cessation of epileptic spasms",
+    "endpoint": "clinical response as the curation records it ('Yes' undefined; West syndrome frequent in the cohort)",
     "direction": "INCREASE",
     "source": "known-roads note 2.7",
     "locator": "repurposing_known_roads_20261020_scientist-a.md section 2.7, row 'ACTH / corticosteroids...'",
     "epistemic_status": "DATO",
     "reading_depth": "queried_not_full_read",
     "context": {
-      "disease_id": "WWOX-DEE with West syndrome or infantile spasms",
-      "genotype": "WWOX-null class (predicted null/null)",
+      "disease_id": "WWOX-related epilepsy, heterogeneous curation of more than 21 reports (West syndrome frequent)",
+      "genotype": "not carried by the source row (heterogeneous reports; allele classes not stated)",
       "species": "human",
       "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
       "developmental_stage": "infancy"
@@ -64,12 +64,13 @@
     "denominator of WWOX children treated",
     "any comparator",
     "time to benefit",
-    "time to access"
+    "time to access",
+    "genotype class of the six explicit responders (not carried by the source row)"
   ],
   "evaluation_frame": {
-    "source": "repurposing_10h_scientist-d_20261021.md, 'The answer in one page', DESIGN TABLE A and B. INFERENZA built from precedents that are all NOT WWOX EVIDENCE; the blind audit of that note's manifests is queued and had not returned when this card was written.",
+    "source": "repurposing_10h_scientist-d_20261021.md, 'The answer in one page', DESIGN TABLE A and B. INFERENZA built from precedents that are all NOT WWOX EVIDENCE; the manifests of that note were blind-audited on 2026-10-22 (207 of 215 triples supported, eight repaired; the repairs are unaudited).",
     "a_woree_evaluation_would_have_to_measure": [
-      "a repeated, instrument-matched baseline before any exposure, in a form that can move in a profoundly impaired child (growth-scale or raw-score forms rather than standard scores); the scatter of an untreated interval has never been measured in WOREE",
+      "a repeated, instrument-matched baseline before any exposure, in a form that can move in a profoundly impaired child (growth-scale or raw-score forms rather than standard scores); no measurement of the scatter of an untreated interval in WOREE is established here (the repository's series have one timepoint per patient; no wider search was run)",
       "a pharmacodynamic anchor: none exists for any WWOX-directed intervention (CLAIM 046), so engagement of the intended target cannot be shown at all",
       "one prespecified endpoint with a rescue or withdrawal rule written before the observation window opens",
       "survival, reported beside whatever endpoint is chosen",
@@ -80,7 +81,7 @@
       "that seizure control protects development (CLAIM 031 forbids counting any symptomatic outcome as disease modification)",
       "benefit from a pharmacodynamic move, a global impression or an own-baseline comparison",
       "any effect smaller than the instrument's own untreated scatter",
-      "the word protection: nothing in this corpus has been measured as preserving a function that would otherwise have been lost"
+      "the word protection: in the human precedents read for this frame none measured the preservation of a function that would otherwise have been lost; the repository's mouse rescue studies are outside this frame and the scope of 'this corpus' is not defined, so no wider negative is established here"
     ]
   },
   "must_never": [

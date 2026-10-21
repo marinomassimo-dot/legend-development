@@ -16,7 +16,7 @@
     "reading_depth": "partial_fulltext_read",
     "context": {
       "disease_id": "WOREE (WWOX-related epileptic encephalopathy)",
-      "genotype": "biallelic WWOX, series class (the three responders carry splice-region or exon-deletion alleles on both sides; no missense responder)",
+      "genotype": "biallelic WWOX, series class (failure to thrive is recorded in all five columns, not tied to the responders)",
       "species": "human",
       "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
       "developmental_stage": "paediatric (infancy to childhood)"
@@ -30,7 +30,7 @@
   "p4_fields": {
     "endpoint_pursued": "head circumference, height and weight against age-expected SD scores at a stated age, repeated",
     "functional_evidence_available": "none for any intervention; the only human values sit on a surface that strips signs and ranges",
-    "temporal_or_model_limit": "one timepoint per patient in the only series; in the Wwox-null mouse growth and glycaemia moved at the high dose of a gene therapy only and a systemic null is metabolically decompensated at P18, so a growth endpoint there measures the whole animal",
+    "temporal_or_model_limit": "one timepoint per patient in the only series; in the Wwox-null mouse the current CLAIM 011 reads dose-grading as shown on expression, P20 glycaemia and motor score and NOT on survival or body weight (the two treated arms are superimposed at P30, and the low-dose series stops at day 60, so equality on that side is conditioned on survivors); a systemic null is metabolically decompensated at P18, so a growth endpoint there measures the whole animal",
     "cellular_context": {
       "target_expression": "UNKNOWN",
       "cells_tissue_stage": "UNKNOWN",
@@ -66,9 +66,9 @@
     "age-expected trajectory for this disease"
   ],
   "evaluation_frame": {
-    "source": "repurposing_10h_scientist-d_20261021.md, 'The answer in one page', DESIGN TABLE A and B. INFERENZA built from precedents that are all NOT WWOX EVIDENCE; the blind audit of that note's manifests is queued and had not returned when this card was written.",
+    "source": "repurposing_10h_scientist-d_20261021.md, 'The answer in one page', DESIGN TABLE A and B. INFERENZA built from precedents that are all NOT WWOX EVIDENCE; the manifests of that note were blind-audited on 2026-10-22 (207 of 215 triples supported, eight repaired; the repairs are unaudited).",
     "a_woree_evaluation_would_have_to_measure": [
-      "a repeated, instrument-matched baseline before any exposure, in a form that can move in a profoundly impaired child (growth-scale or raw-score forms rather than standard scores); the scatter of an untreated interval has never been measured in WOREE",
+      "a repeated, instrument-matched baseline before any exposure, in a form that can move in a profoundly impaired child (growth-scale or raw-score forms rather than standard scores); no measurement of the scatter of an untreated interval in WOREE is established here (the repository's series have one timepoint per patient; no wider search was run)",
       "a pharmacodynamic anchor: none exists for any WWOX-directed intervention (CLAIM 046), so engagement of the intended target cannot be shown at all",
       "one prespecified endpoint with a rescue or withdrawal rule written before the observation window opens",
       "survival, reported beside whatever endpoint is chosen",
@@ -79,7 +79,7 @@
       "that seizure control protects development (CLAIM 031 forbids counting any symptomatic outcome as disease modification)",
       "benefit from a pharmacodynamic move, a global impression or an own-baseline comparison",
       "any effect smaller than the instrument's own untreated scatter",
-      "the word protection: nothing in this corpus has been measured as preserving a function that would otherwise have been lost"
+      "the word protection: in the human precedents read for this frame none measured the preservation of a function that would otherwise have been lost; the repository's mouse rescue studies are outside this frame and the scope of 'this corpus' is not defined, so no wider negative is established here"
     ]
   },
   "must_never": [

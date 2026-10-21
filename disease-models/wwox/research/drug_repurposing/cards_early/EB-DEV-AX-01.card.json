@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "dd718f55898fee181e382c364753a8513488addaec00fe3dd89668e6f383bd37",
+  "input_sha256": "718fc5790dd2c6b80fdf596424a6426549e0d82ea24345f9accdb8e2b9bae5a1",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -24,7 +24,7 @@
   },
   "p4_fields": {
     "endpoint_pursued": "a within-patient developmental measure (growth-scale or raw-score form) across an intervention, against a repeated pre-intervention baseline",
-    "functional_evidence_available": "none: no standardised developmental, motor or seizure-severity instrument has been applied in a WWOX cohort (indexing-level probe, early-benefit note 1.5)",
+    "functional_evidence_available": "not established here: the early-benefit note's title-and-abstract-level query found no WWOX paper indexed for a standardised developmental, motor or seizure-severity instrument; that is an indexing result, not 'never used', and the case-series bodies were not searched",
     "temporal_or_model_limit": "no instrument responsiveness shown for any profoundly impaired population in the R4 precedents; no WOREE-validated instrument exists",
     "cellular_context": {
       "target_expression": "UNKNOWN",
@@ -64,7 +64,7 @@
     },
     "p4_fields": {
       "endpoint_pursued": "a within-patient developmental measure (growth-scale or raw-score form) across an intervention, against a repeated pre-intervention baseline",
-      "functional_evidence_available": "none: no standardised developmental, motor or seizure-severity instrument has been applied in a WWOX cohort (indexing-level probe, early-benefit note 1.5)",
+      "functional_evidence_available": "not established here: the early-benefit note's title-and-abstract-level query found no WWOX paper indexed for a standardised developmental, motor or seizure-severity instrument; that is an indexing result, not 'never used', and the case-series bodies were not searched",
       "temporal_or_model_limit": "no instrument responsiveness shown for any profoundly impaired population in the R4 precedents; no WOREE-validated instrument exists",
       "cellular_context": {
         "target_expression": "UNKNOWN",
@@ -77,12 +77,12 @@
       "identity": "Not a molecule. An axis.",
       "indication_and_transfer": "Human WOREE.",
       "novelty_for_woree": "Not applicable.",
-      "known_roads_state": "Every disease-modification cell in the known-roads census is empty. Seizure control has twice been uncoupled from development in this disease (CLAIM 031; the series' flat developmental row).",
+      "known_roads_state": "Every disease-modification cell in the known-roads census is empty. The repository holds one child whose seizure improvement came with profound developmental impairment (CLAIM 031, counted once across CLAIM 031 and CLAIM 033) and a developmental row that is identical across the five columns of the series at one timepoint per patient, a between-patient label and not a within-patient change.",
       "path_and_objective": "BENEFICIO_PRECOCE is not licensed to claim this axis; it belongs to RECUPERO_PROFONDO if anywhere.",
       "expected_contribution": "None claimable. 'Protection' is not licensed.",
       "mechanism": "Not applicable.",
       "sources": "CLAIM 031, CLAIM 042, known-roads note 0 and 7, R4 note.",
-      "evidence_pro_contra": "In the controlled non-WWOX trials a replicated symptomatic effect (fewer infantile spasms) did not carry to development at 24 or 36 months (R4 note, NOT WWOX EVIDENCE).",
+      "evidence_pro_contra": "In the non-WWOX tuberous sclerosis trials (NOT WWOX EVIDENCE) a symptomatic effect on infantile spasms was not shown to carry to development: in the placebo-controlled trial the spasm comparison was not prespecified and not tested, and in the European trial the spasm difference was p 0.096 in the randomised part (significant only in the open-label and pooled parts) while developmental differences were not significant with wide intervals. Not shown is not the same as did not carry (R4 note, audit-corrected).",
       "time_to_access": "Not applicable.",
       "time_to_benefit": "UNKNOWN; the shortest sufficient follow-up in the precedents is 12 months for instrument change and 24 to 36 months for developmental trials, none WOREE.",
       "pharmacology": "Not applicable.",
@@ -95,14 +95,14 @@
       "value_added": "States why no early-benefit card on this page can be read as slowing the disease."
     },
     "not_known": [
-      "any developmental instrument applied in a WWOX cohort",
-      "untreated scatter in WOREE",
+      "any developmental instrument applied in a WWOX cohort (not established; indexing-level search only)",
+      "untreated scatter in WOREE (no measurement established here)",
       "within-patient change under any intervention"
     ],
     "evaluation_frame": {
-      "source": "repurposing_10h_scientist-d_20261021.md, 'The answer in one page', DESIGN TABLE A and B. INFERENZA built from precedents that are all NOT WWOX EVIDENCE; the blind audit of that note's manifests is queued and had not returned when this card was written.",
+      "source": "repurposing_10h_scientist-d_20261021.md, 'The answer in one page', DESIGN TABLE A and B. INFERENZA built from precedents that are all NOT WWOX EVIDENCE; the manifests of that note were blind-audited on 2026-10-22 (207 of 215 triples supported, eight repaired; the repairs are unaudited).",
       "a_woree_evaluation_would_have_to_measure": [
-        "a repeated, instrument-matched baseline before any exposure, in a form that can move in a profoundly impaired child (growth-scale or raw-score forms rather than standard scores); the scatter of an untreated interval has never been measured in WOREE",
+        "a repeated, instrument-matched baseline before any exposure, in a form that can move in a profoundly impaired child (growth-scale or raw-score forms rather than standard scores); no measurement of the scatter of an untreated interval in WOREE is established here (the repository's series have one timepoint per patient; no wider search was run)",
         "a pharmacodynamic anchor: none exists for any WWOX-directed intervention (CLAIM 046), so engagement of the intended target cannot be shown at all",
         "one prespecified endpoint with a rescue or withdrawal rule written before the observation window opens",
         "survival, reported beside whatever endpoint is chosen",
@@ -113,7 +113,7 @@
         "that seizure control protects development (CLAIM 031 forbids counting any symptomatic outcome as disease modification)",
         "benefit from a pharmacodynamic move, a global impression or an own-baseline comparison",
         "any effect smaller than the instrument's own untreated scatter",
-        "the word protection: nothing in this corpus has been measured as preserving a function that would otherwise have been lost"
+        "the word protection: in the human precedents read for this frame none measured the preservation of a function that would otherwise have been lost; the repository's mouse rescue studies are outside this frame and the scope of 'this corpus' is not defined, so no wider negative is established here"
       ]
     },
     "must_never": [

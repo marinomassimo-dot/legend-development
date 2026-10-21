@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "a58f6753c75e0d3b85d7df3b8f806bf95c283cb14a3a6df6d2ba097db49579f6",
+  "input_sha256": "4b253f86b549b931424da7615e7e84bc6af228de64e5909c390709f0a4a977b2",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -98,7 +98,7 @@
           "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
           "developmental_stage": "paediatric (infancy to childhood)"
         },
-        "shared_origin": "one case series; two of the three responders (patients 2 and 4) are previously published individuals named by the source",
+        "shared_origin": "one case series; the text says two of the five patients were previously published; Table 1's last row attributes variants (not individuals) to earlier reports for four patients, so reading patients 2 and 4 as the two is an inference from the table (the registry's own qualifier on CLAIM 042: the row reports whether a variant was reported elsewhere, so it names candidates while the three-new/two-published split is the text's)",
         "note": "Uncontrolled, unblinded, retrospective; the denominator of children placed on the diet is not stated, so three of five is a count of responders against cohort size and not a response rate; no count, score, latency or duration on the delivered surface."
       },
       {
@@ -161,7 +161,7 @@
       "expected_contribution": "Symptom (seizure control), to be verified. No compensation, function recovery or protection is claimed. Not disease modification.",
       "mechanism": "Target, type of action, direction and context all UNKNOWN for WOREE. The metabolic-bypass rationale is a hypothesis with no brain energy measurement behind it in WOREE.",
       "sources": "Internal, WWOX: CLAIM 042, CLAIM 031, CLAIM 001, known-roads note 2.7, early-benefit note row 14 and 1.4/1.5, R4 note HELD-partial answer for the series. External: none read for this card. The authors of the series hedge and recommend in the same breath: «It may be premature to assert the potential beneficial effects of a ketogenic diet as they need to be evaluated carefully in a larger cohort» and the diet «should be considered»; both halves are theirs.",
-      "evidence_pro_contra": "Pro: three clinician-reported responders in one series. Contra or unknown: no denominator; no count; development unchanged in 5 of 5 columns; two of the three responders had died within roughly two years; two of the three responders (patients 2 and 4) are previously published individuals named by the source, so any pooled count across WOREE series double-counts them and must name which individuals it counts; the one missense-allele column carries a second de novo likely-pathogenic variant in another gene (confounder); co-medication during the diet is not reported in the retrieved passages; the Results narratives of the responders were never delivered (8 of the article's chunks held).",
+      "evidence_pro_contra": "Pro: three clinician-reported responders in one series. Contra or unknown: no denominator; no count; development unchanged in 5 of 5 columns; two of the three responders had died within roughly two years; the text says two of the five patients were previously published, and Table 1's variant-attribution row makes patients 2 and 4 the candidates (an inference from the table; the source does not name them), so any pooled count across WOREE series may double-count them and must name which individuals it counts; the one missense-allele column carries a second de novo likely-pathogenic variant in another gene (confounder); co-medication during the diet is not reported in the retrieved passages; the Results narratives of the responders were never delivered (8 of the article's chunks held).",
       "time_to_access": "UNKNOWN. Documented obstacles to administrability were assessed in no record read. CLAIM 042 calls the diet a «clinically available intervention»; that phrase is not an access assessment and not paediatric suitability. Clinical census 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven unfiltered queries on ClinicalTrials.gov API v2 returned no registered WOREE interventional study; the one WOREE record is an observational registry and natural-history study. Its own caution binds this card: «A missing hit does not prove that no study exists.» An NCT number proves neither recruitment nor first dosing. A compassionate-use report elsewhere in the repository is news-level, n = 1, and is not a datum for this card.",
       "time_to_benefit": "UNKNOWN, separately from access. No latency or duration appears on the delivered surface; the narratives where it would appear are not covered. The shortest sufficient follow-up in the non-WOREE precedents is 12 months for instrument change (R4 note), which is not a WOREE estimate.",
       "pharmacology": "UNKNOWN. No exposure measure appears in any record read. Not applicable in the drug sense.",
@@ -171,7 +171,7 @@
       "predictions": "None. No engine was run.",
       "next_measure": "Does the Results narrative of the series give the number of children placed on the diet, a seizure count before and after, the interval to response and the co-medication? Closing that needs a native surface of the article (on the operator's PDF list); no access control is to be circumvented.",
       "status": "IPOTESI (symptomatic only). Not a recommendation for any child.",
-      "value_added": "Makes four things visible at once that a bare 'three of five improved' hides: the absent denominator, the double-counted published individuals, the flat developmental row, and the untested reference genotype class."
+      "value_added": "Makes four things visible at once that a bare 'three of five improved' hides: the absent denominator, the possibly double-counted published individuals (two of five by the text; which two is an inference from Table 1), the flat developmental row, and the untested reference genotype class."
     },
     "not_known": [
       "number of children placed on the diet",
@@ -186,9 +186,9 @@
       "whether any developmental measure moved within a patient"
     ],
     "evaluation_frame": {
-      "source": "repurposing_10h_scientist-d_20261021.md, 'The answer in one page', DESIGN TABLE A and B. INFERENZA built from precedents that are all NOT WWOX EVIDENCE; the blind audit of that note's manifests is queued and had not returned when this card was written.",
+      "source": "repurposing_10h_scientist-d_20261021.md, 'The answer in one page', DESIGN TABLE A and B. INFERENZA built from precedents that are all NOT WWOX EVIDENCE; the manifests of that note were blind-audited on 2026-10-22 (207 of 215 triples supported, eight repaired; the repairs are unaudited).",
       "a_woree_evaluation_would_have_to_measure": [
-        "a repeated, instrument-matched baseline before any exposure, in a form that can move in a profoundly impaired child (growth-scale or raw-score forms rather than standard scores); the scatter of an untreated interval has never been measured in WOREE",
+        "a repeated, instrument-matched baseline before any exposure, in a form that can move in a profoundly impaired child (growth-scale or raw-score forms rather than standard scores); no measurement of the scatter of an untreated interval in WOREE is established here (the repository's series have one timepoint per patient; no wider search was run)",
         "a pharmacodynamic anchor: none exists for any WWOX-directed intervention (CLAIM 046), so engagement of the intended target cannot be shown at all",
         "one prespecified endpoint with a rescue or withdrawal rule written before the observation window opens",
         "survival, reported beside whatever endpoint is chosen",
@@ -199,7 +199,7 @@
         "that seizure control protects development (CLAIM 031 forbids counting any symptomatic outcome as disease modification)",
         "benefit from a pharmacodynamic move, a global impression or an own-baseline comparison",
         "any effect smaller than the instrument's own untreated scatter",
-        "the word protection: nothing in this corpus has been measured as preserving a function that would otherwise have been lost"
+        "the word protection: in the human precedents read for this frame none measured the preservation of a function that would otherwise have been lost; the repository's mouse rescue studies are outside this frame and the scope of 'this corpus' is not defined, so no wider negative is established here"
       ]
     },
     "must_never": [

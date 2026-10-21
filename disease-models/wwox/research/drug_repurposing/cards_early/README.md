@@ -32,9 +32,9 @@ proof that none exists.
 
 | Card | Kind | The ONE endpoint it pursues | Status | What is NOT known (headline) |
 |---|---|---|---|---|
-| `EB-KD-01` ketogenic diet | candidate | clinician-reported seizure control (symptomatic only) | IPOTESI | the number of children placed on the diet; any seizure count, latency or duration; the reference genotype class (no diet entry); two of the three responders (patients 2 and 4) are previously published individuals named by the source, so any pooled count double-counts them; development unchanged in every column and two of the three responders had died |
+| `EB-KD-01` ketogenic diet | candidate | clinician-reported seizure control (symptomatic only) | IPOTESI | the number of children placed on the diet; any seizure count, latency or duration; the reference genotype class (no diet entry); the text says two of the five patients were previously published and the table makes patients 2 and 4 the candidates (an inference; the source does not name them), so a pooled count may double-count them; development unchanged in every column and two of the three responders had died |
 | `EB-VGB-01` vigabatrin | candidate | clinical cessation of epileptic spasms with a stated criterion | CONTROVERSA | electrographic outcome in any WWOX report; whether hormonal therapy was concurrent in the WWOX MRI-abnormality reports (the anchor has no receipt); the exposure limit (VABAM) is on the same card as the efficacy reports; CLAIM 031 forbids reading any of it as disease modification |
-| `EB-ETX-01` ethosuximide (T-type contrast, DL-MECH-170) | candidate | late-phase PTZ-provoked seizure score in an interaction-tested three-genotype design (preclinical; no human endpoint defined) | IPOTESI | the drug-by-genotype interaction; mouse age; any T-type measurement in a Wwox system; a class-level developmental safety signal (research T-type blockers reduce progenitor viability in vitro, not ethosuximide) |
+| `EB-ETX-01` ethosuximide (T-type contrast, DL-MECH-170) | candidate | late-phase PTZ-provoked seizure score in an interaction-tested three-genotype design (preclinical; no human endpoint defined) | IPOTESI | the drug-by-genotype interaction; exact mouse age (preweaning per the R2 note); any T-type current or protein measurement in a Wwox system (an mRNA observation exists); a class-level developmental safety signal (research T-type blockers reduce progenitor viability in vitro, not ethosuximide) |
 | `EB-GROWTH-AX-01` growth | abstention | head circumference, height, weight against age-expected SD scores | ASTENSIONE | the growth values (the held extraction strips signs and ranges) and any intervention measured against them |
 | `EB-DEV-AX-01` development / disease modification | abstention | a within-patient developmental measure against a repeated baseline | ASTENSIONE | any developmental instrument ever applied in a WWOX cohort; untreated scatter |
 | `EB-PDANCHOR-AX-01` pharmacodynamic anchor | abstention | none can be named | ASTENSIONE | a calibrated WWOX read-out with a limit of detection in a living-patient matrix (CLAIM 046) |
@@ -42,10 +42,14 @@ proof that none exists.
 | `EB-CBD-AX-01` cannabidiol | abstention | seizure control, if a response is first defined | ASTENSIONE | any WWOX-system test of cannabidiol; a review sentence attributes an organoid effect to WWOX-deficient organoids and its own citation does not support it |
 | `EB-MTOR-AX-01` mTOR-inhibitor class | abstention | none supported | ASTENSIONE | direction of mTOR activity in a WWOX system; the infant safety record is in tuberous sclerosis and does not transfer |
 
-**The T-type card does not wait on scientist-b.** The R2 note exists (branch `task/repurp-10h-r2-b`, commit
-`2de3fd28`) but had **not landed on `main`** when this was written, and its narrowing of DL-MECH-170 is
-declared in that note as owed a blind audit by someone else. The card carries that narrowing as
-**proposed and unaudited**; it will need a one-line check of the cited section numbers once the note lands.
+**The T-type card and the R2 note.** The R2 note has landed on `main` (integration commit `190b389e`; closure
+commit `743f9914`, three blind audits collected at closure). Its narrowing of DL-MECH-170 and its wording repairs
+remain owed a blind audit by someone else, and the card carries that narrowing as **proposed and unaudited**.
+Section 28 of that note (an mRNA observation in an adult P47T knock-in hippocampus) is carried on the card.
+**2026-10-22 repair:** after the blind audit of these cards the packets were corrected as the audit named (the
+repairs are themselves unaudited): the KD source-naming sentence is now an inference; the VGB shared-origin
+and sign handling; the ETX dependency; and the evaluation frame's categorical negatives are restated as
+'not established here'.
 
 ## The evaluation frame (R4 note, DESIGN TABLES A and B)
 
@@ -62,7 +66,7 @@ That frame is `INFERENZA` from precedents in other diseases.
 The bridge's `directional_summary` is `UNRESOLVED` on all nine, and that is the intended reading: it is
 what the cards are designed to show. `OPPOSES_DISEASE_CHANGE` on `A-KD-1` or on `A-VGB-1..3` is a sign
 comparison on one endpoint in one source, **not efficacy**: the diet comparison is a single series, and
-`A-VGB-1` and `A-VGB-2` are the same paper, so they are one source counted twice by the bridge. The
+`A-VGB-1` and `A-VGB-2` come from one report that describes two children: one reporting origin, two patients (corrected 2026-10-22; the earlier wording conflated report and patient). The
 assertions that make the card unresolved (other genotype class, other endpoint, harm, development) were
 **put in on purpose**, so that the unmeasured cells sit beside the measured one.
 
@@ -113,5 +117,5 @@ assertion, not a bridge property.
   quoted; none was recorded or staged here.
 * **Blind audit OWED on every card**, by someone other than the author, with priority on: the "double-counted
   published individuals" sentence on `EB-KD-01`, the shared-origin handling on `EB-VGB-01`, and the T-type
-  card's use of the unaudited R2 narrowing.
-* Mechanical check: `python3 check_cards.py --extra-source <path to the R2 note>` until the R2 note lands.
+  card's use of the unaudited R2 narrowing. The first audit (2026-10-22) is in `page_adjudications/locator_audit_R4_cards_20261022.md`.
+* Mechanical check: `python3 check_cards.py`; `--extra-source <path>` is no longer needed for the R2 note, which has landed.

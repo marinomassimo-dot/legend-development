@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "bf8d3f17f66ccd4ef7de4dd323cccfe460aabd527d31a13f454751b71dc8828f",
+  "input_sha256": "500f44286a9485412e2fe0ca7d826ba96c306cd28d8f2f87cf6f5000a9346573",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -13,8 +13,10 @@
     },
     {
       "assertion_id": "A-VGB-2",
-      "status": "OPPOSES_DISEASE_CHANGE",
-      "reasons": []
+      "status": "UNRESOLVED",
+      "reasons": [
+        "endpoint: mismatch or unknown"
+      ]
     },
     {
       "assertion_id": "A-VGB-3",
@@ -71,6 +73,28 @@
       "reasons": [
         "target_id: mismatch or unknown",
         "endpoint: mismatch or unknown",
+        "direction unknown"
+      ]
+    },
+    {
+      "assertion_id": "A-VGB-10",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "endpoint: mismatch or unknown",
+        "context.disease_id: mismatch or unknown",
+        "context.genotype: mismatch or unknown",
+        "context.developmental_stage: mismatch or unknown",
+        "reported no change, in a cell that is not comparable: a measured null, not an unmeasured cell"
+      ]
+    },
+    {
+      "assertion_id": "A-VGB-11",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "endpoint: mismatch or unknown",
+        "context.disease_id: mismatch or unknown",
+        "context.genotype: mismatch or unknown",
+        "context.developmental_stage: mismatch or unknown",
         "direction unknown"
       ]
     }
@@ -144,13 +168,13 @@
           "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
           "developmental_stage": "infancy"
         },
-        "shared_origin": "Shaukat 2018 (children 1 and 2)",
+        "shared_origin": "Shaukat 2018: one report describing two children (one reporting origin; two patients, whose outcomes are separate observations)",
         "note": "n = 1; concurrent therapy; at two years the child was profoundly delayed anyway (CLAIM 031)."
       },
       {
         "id": "A-VGB-2",
         "target_id": "epileptic_spasms",
-        "endpoint": "clinical cessation of epileptic spasms",
+        "endpoint": "epileptic spasm burden (partial response; cessation not reached; residual cluster spasms at 11 months)",
         "direction": "DECREASE",
         "source": "Shaukat 2018, child 2, as carried by CLAIM 001",
         "locator": "CLAIM 001 Summary: partial response; residual cluster spasms at 11 months despite four antiseizure drugs",
@@ -163,8 +187,8 @@
           "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
           "developmental_stage": "infancy"
         },
-        "shared_origin": "Shaukat 2018 (children 1 and 2)",
-        "note": "A partial response; the bridge carries a sign, not a magnitude, so 'partial' lives in this note. Same paper as A-VGB-1: not an independent confirmation."
+        "shared_origin": "Shaukat 2018: one report describing two children (one reporting origin; two patients, whose outcomes are separate observations)",
+        "note": "A partial response, so the endpoint here is spasm burden and not cessation (corrected after the blind audit of 2026-10-22; the bridge carries a sign, not a magnitude, so 'partial' lives in this note). Same report as A-VGB-1 (one source) but a second patient, so an observation that is separate from A-VGB-1 while sharing a reporting origin."
       },
       {
         "id": "A-VGB-3",
@@ -291,7 +315,46 @@
           "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
           "developmental_stage": "infancy"
         },
-        "note": "CLAIM 031 forbids counting any symptomatic outcome as disease modification. The authors' qualifier 'in some of these cases' has an ambiguous scope that CLAIM 031 does not resolve."
+        "note": "CLAIM 031 forbids counting any symptomatic outcome as disease modification. The authors' qualifier 'in some of these cases' has an ambiguous scope that CLAIM 031 does not resolve.",
+        "shared_origin": "Shaukat 2018, the same report as A-VGB-1 and A-VGB-2 (secondary surface: CLAIM 031)"
+      },
+      {
+        "id": "A-VGB-10",
+        "target_id": "epileptic_spasms",
+        "endpoint": "seizure control on vigabatrin (criterion not carried by the registry entry)",
+        "direction": "NO_CHANGE",
+        "source": "Chong 2023 case series, one vigabatrin-resistant case, as carried by CLAIM 001",
+        "locator": "CLAIM 001 Summary: «Chong 2023: un caso resistente al vigabatrin»",
+        "epistemic_status": "DATO",
+        "reading_depth": "queried_not_full_read",
+        "context": {
+          "disease_id": "WOREE (WWOX-related epileptic encephalopathy)",
+          "genotype": "series class; the allele of these cases is not carried by this card",
+          "species": "human",
+          "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
+          "developmental_stage": "infancy to childhood"
+        },
+        "shared_origin": "Chong 2023 (the same series as the diet card EB-KD-01)",
+        "note": "One case; endpoint and criterion are not carried by the registry entry. Whether this case overlaps a Shaukat child is NOT established here: Chong's Table 1 cites the Shaukat report for one patient's variants."
+      },
+      {
+        "id": "A-VGB-11",
+        "target_id": "epileptic_spasms",
+        "endpoint": "seizure control on vigabatrin in combination with the ketogenic diet (criterion not carried)",
+        "direction": "UNKNOWN",
+        "source": "Chong 2023 case series, one case improved only in combination with the diet, as carried by CLAIM 001",
+        "locator": "CLAIM 001 Summary: «uno migliora in combinazione con KD»",
+        "epistemic_status": "DATO",
+        "reading_depth": "queried_not_full_read",
+        "context": {
+          "disease_id": "WOREE (WWOX-related epileptic encephalopathy)",
+          "genotype": "series class; the allele of these cases is not carried by this card",
+          "species": "human",
+          "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
+          "developmental_stage": "infancy to childhood"
+        },
+        "shared_origin": "Chong 2023 (the same series as the diet card EB-KD-01)",
+        "note": "Direction is UNKNOWN on purpose: with two concurrent interventions the response cannot be attributed to either; the same patient may also appear on the diet card."
       }
     ],
     "label_lookup": {
@@ -317,7 +380,7 @@
       "expected_contribution": "Symptom (spasm control) to be verified against an exposure limit. Not disease modification (CLAIM 031).",
       "mechanism": "GABA-transaminase inhibition (the drug's known class action). Context in WOREE: UNKNOWN; the organoid-derived rationale does not predict the clinical outcomes.",
       "sources": "Internal, WWOX: CLAIM 001, CLAIM 031, CLAIM 002, known-roads note 2.7. Adjacent, NOT WWOX EVIDENCE: two cohorts on VABAM and hormonal therapy (CLAIM 001 wave note). The repository's own position for the reference genotype is caution (CLAIM 001, Clinical meaning); this card neither strengthens nor relaxes it.",
-      "evidence_pro_contra": "Pro: spasm resolution in one WWOX-null child and clinical control in another, partial response in a third. Contra: ineffective in two others; freedom was clinical not electrographic in one; VABAM in two WWOX-DEE cases; developmental outcome unfavourable despite spasm resolution. Hormonal therapy is associated with symptomatic VABAM in two non-WWOX cohorts; whether it was present in the WWOX VABAM reports is unknown here.",
+      "evidence_pro_contra": "Pro: spasm resolution in one WWOX-null child and clinical control in another, partial response in a third. Contra: reported ineffective in two others (A-VGB-5 and A-VGB-6) and, separately, in the Chong series one resistant case and one improved only in combination with the diet (the Chong observations are on this card as A-VGB-10 and A-VGB-11); freedom was clinical not electrographic in one; VABAM in two WWOX-DEE cases; developmental outcome unfavourable despite spasm resolution. Hormonal therapy is associated with symptomatic VABAM in two non-WWOX cohorts; whether it was present in the WWOX VABAM reports is unknown here.",
       "time_to_access": "UNKNOWN. Not assessed in any record read. Clinical census 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven unfiltered queries on ClinicalTrials.gov API v2 returned no registered WOREE interventional study; the one WOREE record is an observational registry and natural-history study. Its own caution binds this card: «A missing hit does not prove that no study exists.» An NCT number proves neither recruitment nor first dosing. ",
       "time_to_benefit": "UNKNOWN. No latency is recorded in the reports; one report defines response as cessation of at least four weeks, which is a definition, not a time.",
       "pharmacology": "UNKNOWN for WOREE: exposure, CNS exposure and selectivity not measured in any record read.",
@@ -337,12 +400,13 @@
       "any latency to response",
       "exposure and CNS exposure",
       "time to access",
-      "paediatric suitability"
+      "paediatric suitability",
+      "whether the Chong vigabatrin-resistant case overlaps a Shaukat child (not established)"
     ],
     "evaluation_frame": {
-      "source": "repurposing_10h_scientist-d_20261021.md, 'The answer in one page', DESIGN TABLE A and B. INFERENZA built from precedents that are all NOT WWOX EVIDENCE; the blind audit of that note's manifests is queued and had not returned when this card was written.",
+      "source": "repurposing_10h_scientist-d_20261021.md, 'The answer in one page', DESIGN TABLE A and B. INFERENZA built from precedents that are all NOT WWOX EVIDENCE; the manifests of that note were blind-audited on 2026-10-22 (207 of 215 triples supported, eight repaired; the repairs are unaudited).",
       "a_woree_evaluation_would_have_to_measure": [
-        "a repeated, instrument-matched baseline before any exposure, in a form that can move in a profoundly impaired child (growth-scale or raw-score forms rather than standard scores); the scatter of an untreated interval has never been measured in WOREE",
+        "a repeated, instrument-matched baseline before any exposure, in a form that can move in a profoundly impaired child (growth-scale or raw-score forms rather than standard scores); no measurement of the scatter of an untreated interval in WOREE is established here (the repository's series have one timepoint per patient; no wider search was run)",
         "a pharmacodynamic anchor: none exists for any WWOX-directed intervention (CLAIM 046), so engagement of the intended target cannot be shown at all",
         "one prespecified endpoint with a rescue or withdrawal rule written before the observation window opens",
         "survival, reported beside whatever endpoint is chosen",
@@ -353,7 +417,7 @@
         "that seizure control protects development (CLAIM 031 forbids counting any symptomatic outcome as disease modification)",
         "benefit from a pharmacodynamic move, a global impression or an own-baseline comparison",
         "any effect smaller than the instrument's own untreated scatter",
-        "the word protection: nothing in this corpus has been measured as preserving a function that would otherwise have been lost"
+        "the word protection: in the human precedents read for this frame none measured the preservation of a function that would otherwise have been lost; the repository's mouse rescue studies are outside this frame and the scope of 'this corpus' is not defined, so no wider negative is established here"
       ]
     },
     "must_never": [
@@ -381,6 +445,7 @@
     "Technical comparison is not efficacy, safety or experimental validation.",
     "Sources and receipt references are retained, not independently verified.",
     "Shared sources are not independent confirmations; scores are not pooled.",
+    "NO_CHANGE is a reported null effect on that endpoint and context: it is not UNKNOWN (not measured), not evidence of safety, and not proof of futility; a null in a non-comparable cell stays UNRESOLVED.",
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
   ]
 }
