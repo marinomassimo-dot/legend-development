@@ -5,8 +5,8 @@
   "pmid": "30266908",
   "doi": "10.1038/s41467-018-06507-4"
  },
- "event_at": "2026-10-21T22:07:21Z",
- "analysis_at": "2026-10-21T22:07:21Z",
+ "event_at": "2026-10-21T22:12:25Z",
+ "analysis_at": "2026-10-21T22:12:25Z",
  "analysis_time_precision": "second",
  "workflow": "ad-hoc primary read by scientist-a under REPURP-10H-R1-A-20261021: paper_packet claim, Europe PMC fullTextXML and supplementaryFiles container, all main figures opened as images, two supplementary pages rendered and opened, the other supplementary legends read as text",
  "evidence_depth": "partial_fulltext_read",

@@ -43,7 +43,7 @@
   "publications_on_gene": 0,
   "research_type": "adjacent_method_expert",
   "is_primary_group_for_disease": false,
-  "weighting": "A University of Washington genome-sciences group (Fowler and Shendure laboratories, from the affiliations) that develops multiplexed variant-effect assays; method paper on PTEN and TPMT. Publication counts not computed in this reading. NOT WWOX EVIDENCE; a method precedent."
+  "weighting": "Authors at the Department of Genome Sciences, University of Washington, with clinical-pharmacology and pathology co-authors (from the author list and affiliations); method paper on PTEN and TPMT. Publication counts not computed in this reading. NOT WWOX EVIDENCE; a method precedent."
  },
  "field_density": {
   "queries": [

@@ -1,0 +1,365 @@
+{
+ "schema_version": 2,
+ "pmid": "34649609",
+ "doi": "10.1186/s13073-021-00984-x",
+ "receipt": "FTR-20261021-34649609-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named and deduplicated by the Orchestrator's selection file; the per-paper M0 packet and receipt status were run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "The reading is a primary-evidence read of a NOT WWOX EVIDENCE paper; the dossier is the analysis note section, no WWOX commit candidate is implied."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No consolidated baseline claim is narrowed or reversed by this reading; a blind audit is declared OWED where a candidate proposes it."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Not requested; discovery leads are staged separately if any."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a candidate card; BLOCK-1 holds, class level only."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "Department of Pathology, Case Western Reserve University and Department of Genome Sciences, University of Washington (from the affiliation lines); the first author is the first author of the VAMP-seq method paper. Computational and cell-based variant-effect mapping on PTEN; publication counts not computed in this reading. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "PTEN AND variant AND abundance AND activity",
+    "count": 16,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "deep mutational scanning AND abundance AND activity AND dominant negative",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "missense AND abundance AND function AND discordant",
+    "count": 3,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "PubMed counts, dated; a zero from a title/abstract query licenses 'no paper is indexed', never 'this was never measured' (D-37)."
+ },
+ "multihop": {
+  "references_enumerated": 59,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the JATS; none is WWOX-related. The activity dataset used is Mighell 2018 (the yeast read-out) and the Cleveland Clinic cohort paper (Mighell 2020, 32442409, BLOCKED in the selection file: PMC page present, full-text XML refused)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 34649609 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-21 via PubMed efetch for PMID 34649609: publication types ['Journal Article', 'Research Support, N.I.H., Extramural', \"Research Support, Non-U.S. Gov't\"]; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 59,
+   "references_screened": 53,
+   "references_with_doi": 53,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 6
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID34649609_Matreyek2021_PMC8518224.xml",
+   "sha256": "c281f9484143d8d4f8390389986dfc7663291498503740271f31c120ae485718",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC8518224: whole article; every text locator is matched against it.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8518224/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "c281f9484143d8d4f8390389986dfc7663291498503740271f31c120ae485718",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID34649609/13073_2021_984_Fig1_HTML.jpg",
+   "sha256": "e59cf04d33e36fa98402265999c1f306ad09c370aea3b9b47f8bc8281b3ce28f",
+   "kind": "figure",
+   "note": "Figure 1 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8518224/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "e59cf04d33e36fa98402265999c1f306ad09c370aea3b9b47f8bc8281b3ce28f",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID34649609/13073_2021_984_Fig2_HTML.jpg",
+   "sha256": "130afd811008ccef7b8cdcaa422dc7353172dd9fa06fe4b3519ef5996d95b569",
+   "kind": "figure",
+   "note": "Figure 2 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8518224/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "130afd811008ccef7b8cdcaa422dc7353172dd9fa06fe4b3519ef5996d95b569",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID34649609/13073_2021_984_Fig3_HTML.jpg",
+   "sha256": "049b9c324a008a762e0d722123525ac07221fb9998bda2ee6190ecfd1d635484",
+   "kind": "figure",
+   "note": "Figure 3 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8518224/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "049b9c324a008a762e0d722123525ac07221fb9998bda2ee6190ecfd1d635484",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID34649609/13073_2021_984_Fig4_HTML.jpg",
+   "sha256": "e034fb3aa14041663b0f073b0cee7e1ffc05cf51ade7e1299027a9c10d848cd9",
+   "kind": "figure",
+   "note": "Figure 4 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8518224/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "e034fb3aa14041663b0f073b0cee7e1ffc05cf51ade7e1299027a9c10d848cd9",
+    "derived": false
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE (PTEN). When abundance in human cells and lipid-phosphatase activity in yeast are scored for the same variants, about half are WT-like on both and about a fifth lose both.",
+    "snippet": "The majority of variants were in agreement with both assays, as 51% of the classified variants were WT-like for both properties (Fig. 2A, green), while 21% exhibited loss of both activity and abundance (Fig. 2A, purple).",
+    "anchor": "Results, Classification of PTEN variants by abundance and activity, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34649609_Matreyek2021_PMC8518224.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "PTEN variants: VAMP-seq abundance in HEK293T landing-pad cells integrated with a published yeast lipid-phosphatase activity dataset, ClinVar, a clinical cohort and cancer genomics databases, plus pAkt Westerns in HEK293T; NOT a WWOX system",
+     "genotype": "PTEN missense variants (4,721 scored for abundance, 4,178 with both assays); no WWOX",
+     "endpoint": "abundance score, phosphatase activity score, four-way class, pAkt T308"
+    }
+   },
+   {
+    "proposition": "Figure 2A read from the printed counts: loss of abundance and activity n = 502, loss of activity only n = 148, loss of abundance only n = 512, WT-like n = 1,215 (sum 2,377; shares 21, 6, 22 and 51 percent).",
+    "snippet": "The remaining 28% of variants exhibited discrepancies between the two assays, pointing to subtler molecular phenotypes than near-complete losses of phosphatase activity through loss of intracellular abundance.",
+    "anchor": "Figure 2A (scatter of abundance score against activity score, four quadrant counts)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID34649609/13073_2021_984_Fig2_HTML.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "PTEN variants: VAMP-seq abundance in HEK293T landing-pad cells integrated with a published yeast lipid-phosphatase activity dataset, ClinVar, a clinical cohort and cancer genomics databases, plus pAkt Westerns in HEK293T; NOT a WWOX system",
+     "genotype": "PTEN missense variants (4,721 scored for abundance, 4,178 with both assays); no WWOX",
+     "endpoint": "abundance score, phosphatase activity score, four-way class, pAkt T308"
+    },
+    "qualifies": "entries[0]",
+    "qualifies_needle": "The majority of variants were in agreement wi"
+   },
+   {
+    "proposition": "A fifth of variants lose abundance with activity scored normal: quantity and function came apart in the data, in the direction 'less protein, activity retained' (in a yeast read-out).",
+    "snippet": "The remaining variants, accounting for 22% of the total classified variants, were loss of abundance only (Fig. 2A, turquoise).",
+    "anchor": "Results, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34649609_Matreyek2021_PMC8518224.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "PTEN variants: VAMP-seq abundance in HEK293T landing-pad cells integrated with a published yeast lipid-phosphatase activity dataset, ClinVar, a clinical cohort and cancer genomics databases, plus pAkt Westerns in HEK293T; NOT a WWOX system",
+     "genotype": "PTEN missense variants (4,721 scored for abundance, 4,178 with both assays); no WWOX",
+     "endpoint": "abundance score, phosphatase activity score, four-way class, pAkt T308"
+    }
+   },
+   {
+    "proposition": "The yeast activity read is insensitive to partial protein loss: activity falls only when abundance is reduced at least 5-fold, so 'activity retained' at low abundance is partly a range limit of the activity assay and a cross-system comparison (human-cell abundance, yeast activity).",
+    "snippet": "The variants in this panel only consistently showed reduced activity when their measured abundances were profoundly reduced, by at least 5-fold (Fig. 2B).",
+    "anchor": "Results, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34649609_Matreyek2021_PMC8518224.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "PTEN variants: VAMP-seq abundance in HEK293T landing-pad cells integrated with a published yeast lipid-phosphatase activity dataset, ClinVar, a clinical cohort and cancer genomics databases, plus pAkt Westerns in HEK293T; NOT a WWOX system",
+     "genotype": "PTEN missense variants (4,721 scored for abundance, 4,178 with both assays); no WWOX",
+     "endpoint": "abundance score, phosphatase activity score, four-way class, pAkt T308"
+    }
+   },
+   {
+    "proposition": "Figure 2B read: low-abundance variants (x about 0.1 to 0.3, for example F206G, D115G, V54G, Y29G) sit at activity about 1, while the variants with activity near 0 are the ones at the lowest abundance (C136R, Y68N near x 0.1) or in the active-site class; the cluster at x near 1 holds WT, P354Q and S294R.",
+    "snippet": "Variants at known catalysis affecting residues 45, 124, and 129, as well as PIP2 binding residues 1 through 13, were removed from the analysis.",
+    "anchor": "Figure 2B (activity score against individually assessed EGFP fluorescence, 20 variants)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID34649609/13073_2021_984_Fig2_HTML.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "PTEN variants: VAMP-seq abundance in HEK293T landing-pad cells integrated with a published yeast lipid-phosphatase activity dataset, ClinVar, a clinical cohort and cancer genomics databases, plus pAkt Westerns in HEK293T; NOT a WWOX system",
+     "genotype": "PTEN missense variants (4,721 scored for abundance, 4,178 with both assays); no WWOX",
+     "endpoint": "abundance score, phosphatase activity score, four-way class, pAkt T308"
+    },
+    "qualifies": "entries[3]",
+    "qualifies_needle": "The variants in this panel only consistently "
+   },
+   {
+    "proposition": "Of 40 low-abundance variants that are ClinVar pathogenic or sit in a clinical cohort, about half lose activity too; the authors say loss-of-abundance-only pathogenicity is possible but cannot be separated from assay noise or insensitivity.",
+    "snippet": "Thus, it is tempting to speculate that at least some of these loss of abundance only variants are pathogenic by sole virtue of their lowered abundance despite scoring as WT-like or indeterminate in the yeast activity assay.",
+    "anchor": "Results, paragraph 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34649609_Matreyek2021_PMC8518224.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "PTEN variants: VAMP-seq abundance in HEK293T landing-pad cells integrated with a published yeast lipid-phosphatase activity dataset, ClinVar, a clinical cohort and cancer genomics databases, plus pAkt Westerns in HEK293T; NOT a WWOX system",
+     "genotype": "PTEN missense variants (4,721 scored for abundance, 4,178 with both assays); no WWOX",
+     "endpoint": "abundance score, phosphatase activity score, four-way class, pAkt T308"
+    }
+   },
+   {
+    "proposition": "Abundant but inactive variants exist and some act dominantly: two of four tested loss-of-activity-only variants raised pAkt in cells that also carry wild-type PTEN.",
+    "snippet": "Along with the known dominant-negative variant Cys124Ser, the Arg130Pro and Asp92His variants exhibited markedly increased pAkt levels (Fig. 4B).",
+    "anchor": "Results, Identifying potential dominant-negative variants, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34649609_Matreyek2021_PMC8518224.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "PTEN variants: VAMP-seq abundance in HEK293T landing-pad cells integrated with a published yeast lipid-phosphatase activity dataset, ClinVar, a clinical cohort and cancer genomics databases, plus pAkt Westerns in HEK293T; NOT a WWOX system",
+     "genotype": "PTEN missense variants (4,721 scored for abundance, 4,178 with both assays); no WWOX",
+     "endpoint": "abundance score, phosphatase activity score, four-way class, pAkt T308"
+    }
+   },
+   {
+    "proposition": "Abundance and activity maps alone were not enough to call a dominant negative.",
+    "snippet": "Importantly, the large-scale variant effect datasets alone were not sufficient to identify dominant-negative PTEN variants.",
+    "anchor": "Discussion, paragraph 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34649609_Matreyek2021_PMC8518224.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "PTEN variants: VAMP-seq abundance in HEK293T landing-pad cells integrated with a published yeast lipid-phosphatase activity dataset, ClinVar, a clinical cohort and cancer genomics databases, plus pAkt Westerns in HEK293T; NOT a WWOX system",
+     "genotype": "PTEN missense variants (4,721 scored for abundance, 4,178 with both assays); no WWOX",
+     "endpoint": "abundance score, phosphatase activity score, four-way class, pAkt T308"
+    }
+   },
+   {
+    "proposition": "The two read-outs are complementary: the activity assay finds abundant-but-inactive variants the abundance assay misses, and the abundance assay finds hypomorphic variants outside the activity assay's dynamic range.",
+    "snippet": "The yeast PTEN activity assay directly assesses catalytic activity, thus identifying a large swath of abundant but inactive variants that would be missed with the abundance assay.",
+    "anchor": "Discussion, paragraph 7",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34649609_Matreyek2021_PMC8518224.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "PTEN variants: VAMP-seq abundance in HEK293T landing-pad cells integrated with a published yeast lipid-phosphatase activity dataset, ClinVar, a clinical cohort and cancer genomics databases, plus pAkt Westerns in HEK293T; NOT a WWOX system",
+     "genotype": "PTEN missense variants (4,721 scored for abundance, 4,178 with both assays); no WWOX",
+     "endpoint": "abundance score, phosphatase activity score, four-way class, pAkt T308"
+    }
+   },
+   {
+    "proposition": "Partial protein loss is linked, in the authors' reading of the literature, to milder presentations (autism spectrum disorder, developmental disability) and gross activity loss to cancer and severe cases: a dose-response framing relevant to hypomorph-versus-null comparisons. It is a literature statement in the Discussion, not a result of this paper's data.",
+    "snippet": "Thus, each assay provides complementary experimental readouts that have together improved our ability to delineate how PTEN genotype impacts phenotype.",
+    "anchor": "Discussion, paragraph 7 (preceding sentence cites refs 33, 51-53)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34649609_Matreyek2021_PMC8518224.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "PTEN variants: VAMP-seq abundance in HEK293T landing-pad cells integrated with a published yeast lipid-phosphatase activity dataset, ClinVar, a clinical cohort and cancer genomics databases, plus pAkt Westerns in HEK293T; NOT a WWOX system",
+     "genotype": "PTEN missense variants (4,721 scored for abundance, 4,178 with both assays); no WWOX",
+     "endpoint": "abundance score, phosphatase activity score, four-way class, pAkt T308"
+    }
+   },
+   {
+    "proposition": "Loss-of-abundance-only variants are depleted in tumours, interpreted as partial activity being enough to prevent oncogenesis: quantity loss alone was tolerated in that selection.",
+    "snippet": "Loss of abundance only variants also appeared to be depleted, likely due to the fact that, by definition, these variants retain at least partial activity, which may be sufficient to counteract oncogenesis in most circumstances.",
+    "anchor": "Results, paragraph 8",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34649609_Matreyek2021_PMC8518224.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "PTEN variants: VAMP-seq abundance in HEK293T landing-pad cells integrated with a published yeast lipid-phosphatase activity dataset, ClinVar, a clinical cohort and cancer genomics databases, plus pAkt Westerns in HEK293T; NOT a WWOX system",
+     "genotype": "PTEN missense variants (4,721 scored for abundance, 4,178 with both assays); no WWOX",
+     "endpoint": "abundance score, phosphatase activity score, four-way class, pAkt T308"
+    }
+   },
+   {
+    "proposition": "Figure 3A read: loss-of-abundance-only somatic frequencies (coloured dots) sit at about 0.01 to 0.12 against a null of about 0.2 (grey bar); loss of both sits at about 0.1 to 0.7 against a null of about 0.2.",
+    "snippet": "Each nucleotide within the PTEN cDNA was computationally substituted to every other nucleotide to create a list of all possible single-nucleotide variants",
+    "anchor": "Figure 3A (frequency of observed somatic missense/nonsense variants by class, log axis)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID34649609/13073_2021_984_Fig3_HTML.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "PTEN variants: VAMP-seq abundance in HEK293T landing-pad cells integrated with a published yeast lipid-phosphatase activity dataset, ClinVar, a clinical cohort and cancer genomics databases, plus pAkt Westerns in HEK293T; NOT a WWOX system",
+     "genotype": "PTEN missense variants (4,721 scored for abundance, 4,178 with both assays); no WWOX",
+     "endpoint": "abundance score, phosphatase activity score, four-way class, pAkt T308"
+    },
+    "qualifies": "entries[10]",
+    "qualifies_needle": "Loss of abundance only variants also appeared"
+   },
+   {
+    "proposition": "In the blots of this paper the cleared Triton lysate supernatant is run (21,100 g, 10 min, supernatant collected), so the Western abundance panels read a soluble fraction; the VAMP-seq fluorescence is read on whole cells.",
+    "snippet": "The lysed cells were spun at 21,100xg for 10 min at 4°C, and the supernatant was collected into a separate tube.",
+    "anchor": "Methods, Western blotting",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34649609_Matreyek2021_PMC8518224.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "PTEN variants: VAMP-seq abundance in HEK293T landing-pad cells integrated with a published yeast lipid-phosphatase activity dataset, ClinVar, a clinical cohort and cancer genomics databases, plus pAkt Westerns in HEK293T; NOT a WWOX system",
+     "genotype": "PTEN missense variants (4,721 scored for abundance, 4,178 with both assays); no WWOX",
+     "endpoint": "abundance score, phosphatase activity score, four-way class, pAkt T308"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST returned the whole article as fullTextXML for PMC8518224 (151 kB, 2026-10-21); figures from the supplementaryFiles container.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a figure legend or an inspected figure."
+ }
+}

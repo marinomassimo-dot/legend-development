@@ -5,8 +5,8 @@
   "pmid": "29785012",
   "doi": "10.1038/s41588-018-0122-z"
  },
- "event_at": "2026-10-21T22:10:29Z",
- "analysis_at": "2026-10-21T22:10:29Z",
+ "event_at": "2026-10-21T22:12:24Z",
+ "analysis_at": "2026-10-21T22:12:24Z",
  "analysis_time_precision": "second",
  "workflow": "ad-hoc primary read by scientist-a under REPURP-10H-R1-A-20261021: paper_packet claim, Europe PMC fullTextXML, six figures from the PMC open-data bucket opened as images; the two Word supplements (Supplementary Note and Reporting Summary, binary .doc) were retrieved but not readable with the tools on this host and are declared not_read",
  "evidence_depth": "partial_fulltext_read",

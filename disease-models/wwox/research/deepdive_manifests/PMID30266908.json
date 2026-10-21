@@ -43,7 +43,7 @@
   "publications_on_gene": 0,
   "research_type": "experimental_lab",
   "is_primary_group_for_disease": false,
-  "weighting": "Weill Cornell (Brodsky-type neuro cell biology and a Epilepsy Foundation funded group, from the acknowledgements). A cell-biology group on STXBP1/Munc18-1, a non-WWOX gene; publication counts not computed in this reading. NOT WWOX EVIDENCE; a class-level precedent for missense destabilisation and chemical-chaperone rescue."
+  "weighting": "Weill Cornell Medicine (from the animal-care statement) with Epilepsy Foundation and NIH support named in the acknowledgements. A cell-biology group on STXBP1/Munc18-1, a non-WWOX gene; publication counts not computed in this reading. NOT WWOX EVIDENCE; a class-level precedent for missense destabilisation and chemical-chaperone rescue."
  },
  "field_density": {
   "queries": [

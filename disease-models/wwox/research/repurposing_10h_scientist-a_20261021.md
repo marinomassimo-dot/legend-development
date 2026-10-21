@@ -49,3 +49,16 @@ Receipt `FTR-20261021-29785012-01` (partial_fulltext_read: all six figures opene
 
 *Comparison phase.* FIRST-PASS OBSERVATIONS COMPLETE -> PRIOR KNOWLEDGE ADMITTED FOR COMPARISON (registry: one mention, the FT-113 queue entry listing this paper as a method citation "not read"; that debt is paid here for this paper by a partial reading).
 
+### 34649609 - Matreyek 2021, PTEN abundance paired with activity for thousands of variants - NOT WWOX EVIDENCE
+
+Receipt `FTR-20261021-34649609-01` (partial_fulltext_read: all four figures opened; the supplementary Word file and score table not read), manifest PASS, 13 locators. This is the direct test of "quantity of protein is not function" for missense variants, on one protein, in two assays.
+
+- **What it establishes (DATO, PTEN).** Of 2,377 variants scored in both a human-cell abundance assay (VAMP-seq) and a published yeast lipid-phosphatase activity assay, 51 percent are wild-type-like on both, 21 percent lose both, **22 percent lose abundance only and 6 percent lose activity only** (Figure 2A counts read from the panel: 1,215, 502, 512, 148). Both discordant classes exist, in both directions.
+- **"Less protein, activity retained" is partly an assay-range artefact, and the paper says so.** In a 20-variant panel activity fell only when abundance was down at least 5-fold (Figure 2B, opened), so a mildly reduced abundance does not register in the yeast activity read, and the comparison crosses systems (human cell abundance, yeast activity, both overexpressed). The authors list noise, insensitivity to subtle activity loss and "alterations in function not captured by the yeast activity assay" as reasons the loss-of-abundance-only pathogenic variants might look discordant, while noting some may be pathogenic through lowered abundance alone.
+- **"More protein, no function" is real and some of it acts dominantly.** Abundant-but-inactive variants are numerous; two of four tested raised pAkt in cells that also carried wild-type PTEN (Figure 4B, opened), and five did not. The authors state the datasets alone could not call a dominant negative; cancer-genomics incidence was needed.
+- **Selection patterns bear on dose.** Loss-of-abundance-only variants are depleted in tumours (retained partial activity is thought to suffice) and the authors cite literature in which partial protein loss associates with milder neurodevelopmental presentations and gross activity loss with cancer and severe disease. That is a literature statement in the Discussion, not a result here (labelled as such in the manifest).
+- **Method detail relevant to PA.** The abundance Western read is a cleared Triton supernatant (21,100 g, supernatant kept); the VAMP-seq fluorescence is whole-cell. INFERENZA, not stated in the paper: an EGFP fusion that aggregates may still fluoresce, so VAMP-seq abundance would be total rather than soluble abundance. If true, VAMP-seq cannot see the S/P split PA needs; the paper does not measure it.
+- **Answers to R1 question 2 in part:** yes, a published precedent where the two came apart exists, with the direction and the assay-range caveat above. NOT WWOX EVIDENCE.
+
+*Comparison phase.* FIRST-PASS OBSERVATIONS COMPLETE -> PRIOR KNOWLEDGE ADMITTED FOR COMPARISON (registry: no record for this PMID, a statement about that query only).
+
