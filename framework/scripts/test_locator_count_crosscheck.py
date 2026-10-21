@@ -159,5 +159,206 @@ class DepthLineDrift(unittest.TestCase):
         self.assertTrue(first["problems"][1].startswith("depth_differs"))
         self.assertEqual(["unknown_receipt: FTR-20260109-22222222-02"], second["problems"])
 
+class TheWideSweep(unittest.TestCase):
+    """D-40 (2026-10-21). The defect the narrow pattern could not see, and the four states.
+
+    `DECLARATION_RE` requires the count as the first token inside the parenthesis. The two
+    records D-40 was written into say `(schema v2, **11** persisted verbatim locators`, so
+    they were never in its population at all: the check was green on a defect it was built
+    for. Every wording below is copied from a live `paper_registry_current.md` sentence.
+    """
+
+    MANIFESTS = {"11111111": (11, Path("PMID11111111.json")),
+                 "22222222": (28, Path("PMID22222222.json")),
+                 "33333333": (29, Path("PMID33333333.json"))}
+
+    def states(self, text, manifests=None, key_counts=None):
+        return [(f.get("state"), f.get("excluded"), f["declared"])
+                for f in lcc.sweep(text, manifests or self.MANIFESTS, key_counts)]
+
+    def test_a_correct_count_passes_in_the_d40_wording(self):
+        """The exact shape of PAPER 427 after its repair: count not first in the parenthesis."""
+        text = ("**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261020-11111111-01`; "
+                "manifest `deepdive_manifests/PMID11111111.json` (schema v2, **11** persisted "
+                "verbatim locators, all 11 on the body surface)\n")
+        self.assertEqual([("agrees", None, 11)], self.states(text))
+
+    def test_the_len_mapping_trap_is_a_fixture_and_cannot_be_repeated(self):
+        """🔴 THE DEFECT ITSELF. A manifest whose `verbatim_locators` mapping has SIX keys and
+        ELEVEN entries, and a registry sentence asserting the key count. The checker must name
+        both numbers, call it a disagreement, and recognise the mis-measurement by name — if it
+        ever agreed here it would have repeated D-40 instead of catching it."""
+        manifest = {"pmid": "11111111", "verbatim_locators": {
+            "waived": False, "source_fulltext_indexed": True,
+            "source_fulltext_indexed_evidence": "x", "note": "y",
+            "artifact_locality_note": "z",
+            "entries": [{"proposition": str(i)} for i in range(11)]}}
+        self.assertEqual(6, lcc.manifest_key_count(manifest),
+                         "len() on the mapping is 6 — the wrong answer, derived on purpose")
+        self.assertEqual(11, lcc.manifest_entry_count(manifest))
+        text = ("manifest `deepdive_manifests/PMID11111111.json` (schema v2, **6** persisted "
+                "verbatim locators, exact text match verified)\n")
+        found = lcc.sweep(text, self.MANIFESTS, {"11111111": 6})
+        self.assertEqual("disagrees", found[0]["state"])
+        self.assertEqual(6, found[0]["declared"])
+        self.assertEqual(11, found[0]["actual"])
+        self.assertTrue(found[0]["d40_signature"],
+                        "6 asserted against a 6-key mapping holding 11 entries is not a stale "
+                        "total, it is the mis-measurement, and the report must say so")
+
+    def test_a_wrong_count_is_named_with_both_numbers_in_the_report(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / lcc.MANIFEST_DIR.format(disease="wwox")).mkdir(parents=True)
+            (root / lcc.MANIFEST_DIR.format(disease="wwox") / "PMID11111111.json").write_text(
+                json.dumps({"pmid": "11111111", "verbatim_locators": {
+                    "waived": False, "entries": [{"p": i} for i in range(11)]}}))
+            registry = root / lcc.REGISTRY.format(disease="wwox")
+            registry.parent.mkdir(parents=True)
+            registry.write_text("manifest `deepdive_manifests/PMID11111111.json` "
+                                "(schema v2, **4** persisted verbatim locators)\n")
+            with contextlib.redirect_stdout(io.StringIO()) as buf:
+                code = lcc.main([str(root), "--sweep", "--max-disagreements", "0"])
+        out = buf.getvalue()
+        self.assertEqual(1, code, "a disagreement above the ceiling must exit non-zero")
+        self.assertIn("asserts 4", out)
+        self.assertIn("holds 11", out)
+
+    def test_an_absent_manifest_is_reported_absent_and_never_counted_clean(self):
+        text = "manifest `deepdive_manifests/PMID99999999.json` (9 verbatim locators)\n"
+        self.assertEqual([("manifest_absent", None, 9)], self.states(text))
+
+    def test_an_unparsable_sentence_is_reported_not_silently_clean(self):
+        """Live wording, lines 6856/6880/6905: a count and no manifest path anywhere in the
+        clause. Guessing a file for it would invent the link the tool exists to check."""
+        text = ("**Evidence depth:** receipt `FTR-20260806-19500159-01`; manifest schema-v2 "
+                "con **30 locator** verificati (24 corpo, 2 tabella, 4 figura)\n")
+        rows = lcc.sweep(text, self.MANIFESTS)
+        self.assertEqual("unparsed", rows[0]["state"])
+        self.assertEqual(30, rows[0]["declared"])
+        self.assertIsNone(rows[0]["actual"])
+        self.assertEqual({"agrees": 0, "disagrees": 0, "manifest_absent": 0, "unparsed": 1},
+                         lcc.tally(rows))
+
+    def test_the_measured_wordings_are_all_reached(self):
+        """Each line is a live registry wording the narrow pattern missed."""
+        wordings = [
+            ("manifest `deepdive_manifests/PMID11111111.json` (11 locators, schema v2)", "agrees"),
+            ("manifest `deepdive_manifests/PMID11111111.json` (11 verbatim locators, PASS)", "agrees"),
+            ("manifest `deepdive_manifests/PMID11111111.json` (11 locator, validatore PASS)", "agrees"),
+            ("manifest `deepdive_manifests/PMID11111111.json`, **11** verbatim locators — 5 "
+             "persisted", "agrees"),
+            ("11 locator verificati in `deepdive_manifests/PMID11111111.json` (validatore PASS)",
+             "agrees"),
+            ("manifest `deepdive_manifests/PMID22222222.json` (schema v2, **28** persisted "
+             "verbatim locators)", "agrees"),
+        ]
+        for line, expected in wordings:
+            with self.subTest(line=line):
+                rows = lcc.sweep(line + "\n", self.MANIFESTS)
+                self.assertEqual(1, len(rows), "exactly one assertion on this line")
+                self.assertEqual(expected, rows[0]["state"])
+
+    def test_a_retired_quotation_is_excluded_rather_than_counted_wrong(self):
+        """Both D-40 repairs keep the superseded figure on the line, inside «…». Verifying it
+        would report a disagreement the registry has already resolved in writing."""
+        text = ("manifest `deepdive_manifests/PMID11111111.json` (schema v2, **11** persisted "
+                "verbatim locators) [corrected 2026-10-21 from «6 persisted verbatim locators» "
+                "by `BATCH_20261019_009`]\n")
+        self.assertEqual([("agrees", None, 11), (None, "retired_quotation", 6)],
+                         self.states(text))
+
+    def test_a_subset_mention_is_not_the_total(self):
+        text = ("manifest `deepdive_manifests/PMID33333333.json` (29 locators, 3 declared gaps; "
+                "the first 20 locators quote an absent artefact)\n")
+        self.assertEqual([("agrees", None, 29), (None, "subset_mention", 20)],
+                         self.states(text))
+
+    def test_a_number_that_names_a_figure_is_not_a_count(self):
+        """Live, line 7333: *"the only Figure 3 locator"*. A bare `\\d+ locator` reads three."""
+        self.assertEqual([], self.states("the only Figure 3 locator, `entries[7]`, reads panel F\n"))
+
+    def test_a_clause_barrier_blocks_a_false_attribution(self):
+        """Also line 7333: a count about THIS paper sitting after an ERRATUM's manifest path.
+        Attributing across the closing parenthesis would manufacture a disagreement."""
+        text = ("read as its own source (`FTR-1`, manifest `deepdive_manifests/PMID11111111.json` "
+                "PASS 0 gaps), and checked against this paper's 38 locators\n")
+        self.assertEqual([("unparsed", None, 38)], self.states(text))
+
+
+class TheRatchet(unittest.TestCase):
+    def test_the_ceiling_is_a_ceiling_and_not_an_equality(self):
+        """Repairing a registry count is a `BATCH_COMMIT` act by the integrator. A suite that
+        went red the day one was repaired would be a gate on scientific work
+        (`harness_development_principles.md` principle 3), so the live assertion is `<=` — and
+        the tool prints its own instruction to come down whenever there is headroom."""
+        manifests = lcc.load_manifests(REPO, "wwox")
+        registry = REPO / lcc.REGISTRY.format(disease="wwox")
+        found = lcc.sweep(registry.read_text(encoding="utf-8"), manifests,
+                          lcc.load_key_counts(REPO, "wwox"))
+        counts = lcc.tally(found)
+        self.assertLessEqual(
+            counts["disagrees"], lcc.BASELINE_DISAGREEMENTS,
+            "a NEW locator-count disagreement: re-derive from the manifest, and remember the "
+            "repair is a BATCH_COMMIT act. Disagreeing now: " + ", ".join(
+                f"PMID {f['pmid']} line {f['line']} ({f['declared']} vs {f['actual']})"
+                for f in found if f.get("state") == "disagrees"))
+        self.assertLessEqual(
+            counts["unparsed"], lcc.BASELINE_UNPARSED,
+            "a NEW unparsed count assertion: the registry's wordings moved and the pattern did "
+            "not follow. An unparsed sentence is a distinct state, never a clean one.")
+        self.assertLessEqual(counts["manifest_absent"], lcc.BASELINE_MANIFEST_ABSENT,
+                             "a declaration whose manifest is gone is never clean")
+
+    def test_headroom_prints_the_instruction_to_lower_the_ceiling(self):
+        """How it tightens by itself: a ceiling with headroom says so, in the output, on every
+        run — so a baseline can only ever move down."""
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / lcc.MANIFEST_DIR.format(disease="wwox")).mkdir(parents=True)
+            (root / lcc.MANIFEST_DIR.format(disease="wwox") / "PMID11111111.json").write_text(
+                json.dumps({"pmid": "11111111",
+                            "verbatim_locators": {"entries": [{"p": 1}]}}))
+            registry = root / lcc.REGISTRY.format(disease="wwox")
+            registry.parent.mkdir(parents=True)
+            registry.write_text("manifest `deepdive_manifests/PMID11111111.json` (1 locator)\n")
+            with contextlib.redirect_stdout(io.StringIO()) as buf:
+                code = lcc.main([str(root), "--sweep"])
+        self.assertEqual(0, code)
+        self.assertIn("RATCHET HAS HEADROOM", buf.getvalue())
+        self.assertIn("lower BASELINE_DISAGREEMENTS to 0", buf.getvalue())
+
+    def test_a_sweep_that_parses_nothing_is_an_error_not_a_pass(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            registry = root / lcc.REGISTRY.format(disease="wwox")
+            registry.parent.mkdir(parents=True)
+            registry.write_text("## PAPER 001\nno counts here at all\n")
+            with contextlib.redirect_stdout(io.StringIO()) as buf:
+                code = lcc.main([str(root), "--sweep"])
+        self.assertEqual(2, code)
+        self.assertIn("NO ASSERTIONS PARSED", buf.getvalue())
+
+    def test_the_sweep_reaches_more_than_the_narrow_pattern(self):
+        """The whole reason `--sweep` exists: the narrow population did not contain D-40."""
+        manifests = lcc.load_manifests(REPO, "wwox")
+        text = (REPO / lcc.REGISTRY.format(disease="wwox")).read_text(encoding="utf-8")
+        narrow = lcc.scan(text, manifests)
+        wide = [f for f in lcc.sweep(text, manifests) if not f.get("excluded")]
+        self.assertGreater(len(wide), len(narrow),
+                           "if the wide parse stops reaching further than the narrow one, the "
+                           "wordings have collapsed or the pattern has broken")
+
+    def test_json_mode_carries_the_ceiling_and_the_four_counts(self):
+        with contextlib.redirect_stdout(io.StringIO()) as buf:
+            lcc.main([str(REPO), "--sweep", "--json"])
+        payload = json.loads(buf.getvalue())
+        self.assertEqual(lcc.BASELINE_DISAGREEMENTS, payload["ceiling"])
+        self.assertEqual(set(lcc.STATES), set(payload["counts"]))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

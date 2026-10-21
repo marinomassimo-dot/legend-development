@@ -1175,3 +1175,65 @@ service, no new dependency, no patient-level material.
 
 **Next surgical micro-step:** Harness Engineering triages the ranking sub-command above against
 the acceptance test named; nothing in the scientific layer waits on it.
+
+---
+
+## 2026-10-21 · `plan` · `PLAN-LOCATOR-COUNT-CHECK-20261021` — for PMID 42422765 the best figure surface is the SUPPLEMENT, not the publisher PDF, and it is 500 ppi
+
+**CHANGE = NONE (no tool, no gate, no registry). A MEASURED FACT, recorded where the next reader
+of this paper will meet it**, because the entry above fixed an acceptance test on a premise that
+measurement does not support, and a reader who follows it reaches the second-best surface.
+
+**What the entry above specified:** *"run it over PMID 42422765 and it must prefer the publisher
+PDF for Figures 1–6"*. `paper_packet.py rank` was built to that test and then measured the
+surfaces instead of assuming them. It does not prefer the publisher PDF. It ranks
+**`mmc2.pdf`** first, and the figures it is asked about are in there.
+
+**Measured 2026-10-21 by `paper_packet.py rank --pmid 42422765` (PyMuPDF geometry, each ppi against
+the printed width it was measured at — 103 figure-bearing candidates on disk, 0 not rankable):**
+
+| candidate surface for Figures 1–6 | what it holds | measured |
+|---|---|---|
+| `files/supplement/PMID42422765/mmc2.pdf` pp. 3, 4, 6, 7, 9, 10 | embedded rasters 3321×3280, 2906×3769, 2906×2832, 2906×2875, 2906×3052, 2906×2695 | **500 ppi** (printed 418–478 pt wide) |
+| `files/supplement/PMID42422765_r2/PMC13343157.1.pdf` pp. 4, 6, 7, 9, 10 | the SAME whole figures, embedded 1744 px wide | **300 ppi** (printed 418 pt) |
+| `files/fulltext/figures/PMID42422765/gr1.jpg` … `gr6.jpg` | the PMC CDN web assets, 726–738 px wide | **111–125 ppi** |
+
+`rank` pairs them by aspect ratio and says so in one line each — *"pairs with `gr1.jpg` to 0.0002
+relative — the same whole figure at higher resolution"* — so this is the same figure at three
+resolutions, not three different things. **1.67× over the publisher PDF, 4× over the CDN JPEGs.**
+
+**`mmc2.pdf` is on disk in three places, byte-identical, sha256
+`523b09e47b52620cacda9826bce88ac77dd8de65626f5148e2c8630383869cb4`** (25 838 791 bytes):
+
+  - `files/supplement/PMID42422765/mmc2.pdf`
+  - `files/supplement/PMID42422765_r2/mmc2.pdf`
+  - `files/fulltext/PMID42422765_Obeid2026_assets/mmc2.pdf`
+
+Three copies, since 2026-09-28 for the first two, and **nobody had compared them with anything.**
+`rank` collapses 11 byte-identical duplicate surfaces for this paper to one row each, so the
+duplication costs a reader nothing — but it also means the 500 ppi surface was present and unread
+on three paths at once while every figure attestation for this paper rested on 104–125 ppi.
+
+**No adjudication is withdrawn and none needs redoing.** A Scientist adjudicated a claim on these
+figures at 300 dpi two hours before this measurement; a blind auditor cross-checked its waypoints
+against the **printed axes**, which is resolution-independent, so the verdict stands on its own
+evidence. What changes is only the choice the NEXT reader makes. That adjudication, its manifest
+and its dossier belong to their authors and are untouched by this entry.
+
+**THE RULE, one line:** `rank` now answers *which surface do I open for this figure*, so
+**run `python3 framework/scripts/paper_packet.py rank --pmid <PMID>` before a figure read** and
+open what it names — never the surface habit reaches for, and never the one a prior entry's
+acceptance test named before anybody measured. It writes nothing, gates nothing and exits 0.
+Routed in [`framework/scripts/README.md`](../../../framework/scripts/README.md) § 2.
+
+**Why a supplement can beat the article PDF, stated once so it generalises:** the publisher
+downsamples figures to the article's own print target; a supplementary "all figures" PDF is often
+assembled from the author-submitted originals and never downsampled. So *"the publisher PDF is the
+authoritative surface"* is a claim about provenance, not about resolution, and the two come apart.
+Nothing here is specific to this paper — which is why it is `rank`'s question and not a note.
+
+**Cost / API / privacy risk:** none. Local PyMuPDF geometry only; no network, no paid service, no
+new dependency, no individual-level material.
+
+**Next surgical micro-step:** none pending. The generic fix is shipped and routed; this entry is
+the measured fact it produced.

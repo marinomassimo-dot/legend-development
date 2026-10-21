@@ -38,7 +38,35 @@ reading was adequate, or whether the manifest should hold more. `deepdive_manife
 `locator_audit.py` and `dossier_quote_audit.py` own those questions. **This one only asks
 whether a number in one file still describes another file.**
 
-Exit codes: 0 every declaration matches · 1 at least one mismatch · 2 usage/IO error.
+🔴 D-40, 2026-10-21 — THE SAME MISTAKE, MADE AGAIN, WHILE THIS TOOL WAS GREEN ON IT
+-----------------------------------------------------------------------------------
+Thirteen months of docstring above named the `len()` trap, and on 2026-10-20 a batch
+integrator fell into it anyway: it re-measured two manifests with `len(d['verbatim_locators'])`,
+got **6** for both, reported the candidate's declared 11 and 9 as wrong, and wrote 6 into two
+`paper_registry_current.md` records. `BATCH_20261019_009` repaired them the next day. It was
+caught only because the Orchestrator re-measured a number offered as a finding.
+
+**This tool was not blind to the trap. It was blind to the SENTENCE.** `DECLARATION_RE` wants
+the count as the first token inside the parenthesis — `(30 locators` — and both records write
+`(schema v2, **11** persisted verbatim locators`. Neither was in its population of 34. The
+check existed, was correct, ran, and could not see the defect it was built for.
+
+So `--sweep` (below) parses the measured VARIETY of the wordings instead of one of them, and
+reports **four distinct states**: agrees · disagrees · manifest absent · **unparsed**. The
+fourth is the lesson of D-40 in the shape of an output: a sentence this parser cannot read is
+a state of its own, never a clean one, and never silence.
+
+It is a RATCHET, not a gate. `--sweep` exits non-zero only above the baselines measured on
+2026-10-21 (`BASELINE_DISAGREEMENTS`, `BASELINE_UNPARSED`, `BASELINE_MANIFEST_ABSENT`), which
+only ever come down. REPAIR IS NOT THIS TOOL'S ACT: a registry sentence moves only through
+`BATCH_COMMIT`, by the integrator.
+
+    python3 framework/scripts/locator_count_crosscheck.py .            # the narrow 34
+    python3 framework/scripts/locator_count_crosscheck.py . --sweep    # the wide parse + ratchet
+    python3 framework/scripts/locator_count_crosscheck.py . --depth    # receipt/depth drift (N10)
+
+Exit codes: 0 every declaration matches (`--sweep`: at or below baseline) · 1 at least one
+mismatch (`--sweep`: above a baseline) · 2 usage/IO error, or a scan that parsed nothing.
 Read-only: it modifies nothing, ever.
 """
 from __future__ import annotations
@@ -56,10 +84,100 @@ MANIFEST_DIR = "disease-models/{disease}/research/deepdive_manifests"
 # Anchored on the manifest path so a bare "(7 locators" in prose is never mistaken for a
 # declaration about a specific file — the defect this tool reports is a broken *link*
 # between two named artefacts, not a loose number.
+#
+# 🔴 KEPT, AND NO LONGER THE ONLY PATTERN (D-40, 2026-10-21). This one requires the count to
+# be the FIRST token inside the parenthesis, and the registry does not write it that way any
+# more: `… .json` (schema v2, **11** persisted verbatim locators, …)` is invisible to it, and
+# those were exactly the two records the D-40 defect was written into. It is retained because
+# the 34 declarations it reaches are a measured, reproducible subset and
+# `test_locator_count_crosscheck` pins them; `ASSERTION_RE` below is what the sweep now uses.
 DECLARATION_RE = re.compile(
     r"deepdive_manifests/PMID(?P<pmid>\d{6,8})\.json`?\s*\(\s*(?P<count>\d+)\s+locators",
     re.IGNORECASE,
 )
+
+# ---------------------------------------------------------------------------------------
+# 🔴 THE WIDER SWEEP (D-40). Measured variety first, pattern second.
+# ---------------------------------------------------------------------------------------
+# The registry asserts a locator count in at least these wordings, all live on 2026-10-21:
+#
+#     (30 locators, schema v2, 3 declared gaps)          the shape DECLARATION_RE knows
+#     (schema v2, **11** persisted verbatim locators,    D-40's own shape: count not first
+#     (9 verbatim locators, PASS with artefact verification)
+#     (6 locator su pagina resa, validatore PASS)        Italian, singular, no plural `s`
+#     `… .json`, **7** verbatim locators — 5 persisted   count after the path, no parenthesis
+#     20 locator verificati in `deepdive_manifests/…`    count BEFORE the path
+#     manifest schema-v2 con **32 locator** verificati   count with NO manifest path at all
+#
+# So the number may be bold, singular, Italian, before or after the path, inside or outside a
+# parenthesis, and separated from the path by prose. The last line above names no file, and a
+# pattern that guessed a file for it would invent the link it exists to check: that is the
+# UNPARSED state, and it is reported, never counted clean.
+ASSERTION_RE = re.compile(
+    r"(?:\*\*)?(?P<count>\d{1,3})(?:\*\*)?\s+"
+    r"(?:persisted\s+|verificati\s+|persistiti\s+)?(?:verbatim\s+)?"
+    r"locator(?:s|i)?\b",
+    re.IGNORECASE,
+)
+
+MANIFEST_RE = re.compile(r"deepdive_manifests/PMID(?P<pmid>\d{6,9})\.json")
+
+# A number that belongs to a NOUN is not a count of locators. "the only Figure 3 locator",
+# "entries 6 and 7", "Table 2 locator" — the number names the thing, not the quantity. Live
+# example: `paper_registry_current.md` line 7333 writes *"the only Figure 3 locator"*, which a
+# bare `\d+ locator` reads as an assertion of three.
+COUNTED_NOUN_BEFORE = re.compile(
+    r"(?:fig(?:ure|\.)?|table|tabella|entry|entries|panel|pannello|page|pagina|p\.|pp\.|"
+    r"exon|intron|pmid|pmc|supplementary|§)\s*$",
+    re.IGNORECASE,
+)
+
+# A quantity that is explicitly a PART of the total is not the total.
+SUBSET_BEFORE = re.compile(
+    r"\b(?:first|last|other|another|further|remaining|additional|new|only|of\s+which|"
+    r"altri|altre|primi|prime|ultimi|restanti|nuovi)\s+$",
+    re.IGNORECASE,
+)
+
+# A count the registry quotes in order to RETIRE it. Both D-40 repairs read
+# `[corrected 2026-10-21 from «6 persisted verbatim locators» by BATCH_20261019_009]`: the
+# superseded figure is still on the line, verbatim, inside guillemets. Verifying it against
+# the manifest would report a disagreement the registry has already resolved in writing.
+QUOTE_OPEN, QUOTE_CLOSE = "«", "»"
+
+# What may NOT sit between a count and the manifest path it is attributed to. Each of these
+# closes the clause: past one of them the number and the path are two different statements.
+# This is what keeps line 7333's *"checked directly against this paper's 38 locators"* from
+# being attributed to the erratum manifest named in the parenthesis before it.
+ATTRIBUTION_BARRIERS = (";", "—", ")", "]", "[", QUOTE_OPEN, QUOTE_CLOSE, ". ")
+
+#: Measured on 2026-10-21 over `paper_registry_current.md` by this tool's own `--sweep`:
+#: **59 assertions reached**, 4 excluded (1 subset mention, 3 retired quotations), 55 in the
+#: four states — **36 agree, 14 disagree, 0 manifest absent, 5 unparsed**.
+#:
+#: The 14 are a CEILING and every one of them UNDERSTATES its manifest. Six are the tail the
+#: narrow `DECLARATION_RE` already saw on 2026-09-21 (PMID 36779245, 32581702, 31340538,
+#: 39416860, 42397075 — twice, lines 55 and 7383 — and 33255508). Eight are NEW, found only
+#: because the wider pattern reaches the Italian, the singular, the "verbatim locators" and
+#: the count-before-the-path wordings: PMID 33914858 (6 vs 40), 34747138 (20 vs 29),
+#: 35328751 (7 vs 28), 33612478 (4 vs 10), 42589397 (7 vs 10), 39952983 (14 vs 21),
+#: 35460704 (6 vs 11). Two of those eight — 33914858 and 35460704 — assert exactly **6**
+#: against a `verbatim_locators` mapping of exactly **6 keys**, which is the D-40 signature
+#: and is flagged as such in the report. They are REPORTED, not repaired: a registry
+#: sentence moves only through `BATCH_COMMIT`, and that is the integrator's act.
+#:
+#: Lowering this number is the only direction it moves.
+BASELINE_DISAGREEMENTS = 14
+#: Five, and each is a sentence that asserts a count while naming no manifest in its clause:
+#: three 2026-08 Italian records written before the path was part of the sentence (lines 6856,
+#: 6880, 6905, *"manifest schema-v2 con N locator verificati"*) and two on line 7333, where the
+#: paper's own 38 locators are discussed beside an ERRATUM's manifest — attributing them to the
+#: nearest path would have invented the very link this tool exists to check. Also a ceiling.
+BASELINE_UNPARSED = 5
+#: Zero, and it must stay zero: a declaration whose manifest is gone is never clean.
+BASELINE_MANIFEST_ABSENT = 0
+
+STATES = ("agrees", "disagrees", "manifest_absent", "unparsed")
 
 
 def manifest_entry_count(manifest: dict) -> int | None:
@@ -77,6 +195,22 @@ def manifest_entry_count(manifest: dict) -> int | None:
     if isinstance(locators, list):
         return len(locators)
     return None
+
+
+def manifest_key_count(manifest: dict) -> int | None:
+    """`len(manifest["verbatim_locators"])` — THE WRONG ANSWER, derived on purpose.
+
+    D-40 (2026-10-21): an integrator re-measured two manifests with `len(d['verbatim_locators'])`
+    and got 6 for both, because the key holds a MAPPING whose six keys are `waived`,
+    `source_fulltext_indexed`, `source_fulltext_indexed_evidence`, `entries`, `note` and
+    `artifact_locality_note`. The candidate's own counts, 11 and 9, were right.
+
+    This tool derives the wrong number so that it can SAY SO: when a disagreeing assertion
+    equals the key count, the registry's figure is not merely stale, it is the signature of
+    that mistake, and the repair is a different one (re-derive, do not assume the manifest grew).
+    """
+    locators = manifest.get("verbatim_locators")
+    return len(locators) if isinstance(locators, dict) else None
 
 
 def load_manifests(root: Path, disease: str) -> dict[str, tuple[int | None, Path]]:
@@ -115,6 +249,115 @@ def scan(text: str, manifests: dict[str, tuple[int | None, Path]]) -> list[dict]
             ),
         })
     return findings
+
+
+def _in_quotation(line: str, position: int) -> bool:
+    """Is `position` inside a «…» quotation — a figure the registry quotes to retire it?"""
+    opened = line.count(QUOTE_OPEN, 0, position)
+    closed = line.count(QUOTE_CLOSE, 0, position)
+    return opened > closed
+
+
+def _clean_gap(line: str, start: int, end: int) -> bool:
+    """Nothing between a count and a manifest path that closes the clause."""
+    gap = line[start:end]
+    return not any(barrier in gap for barrier in ATTRIBUTION_BARRIERS)
+
+
+def sweep_line(line: str, number: int) -> list[dict]:
+    """Every locator-count assertion on one registry line, with the manifest it is about.
+
+    Returns one row per assertion. `pmid` is the manifest the count is attributed to, or ""
+    when no manifest path sits in the same clause — the UNPARSED case, which is a state of
+    this parser and never a state of the registry.
+    """
+    manifests = list(MANIFEST_RE.finditer(line))
+    rows: list[dict] = []
+    for match in ASSERTION_RE.finditer(line):
+        before = line[:match.start()]
+        quote = line[max(0, match.start() - 90):match.end() + 40].strip()
+        if COUNTED_NOUN_BEFORE.search(before[-24:]):
+            continue  # "the only Figure 3 locator" — the number names the thing
+        if _in_quotation(line, match.start()):
+            rows.append({"line": number, "excluded": "retired_quotation",
+                         "declared": int(match.group("count")), "quote": quote})
+            continue
+        if SUBSET_BEFORE.search(before[-24:]):
+            rows.append({"line": number, "excluded": "subset_mention",
+                         "declared": int(match.group("count")), "quote": quote})
+            continue
+        best: tuple[int, str] | None = None
+        for manifest in manifests:
+            if manifest.end() <= match.start():
+                if not _clean_gap(line, manifest.end(), match.start()):
+                    continue
+                distance = match.start() - manifest.end()
+            elif manifest.start() >= match.end():
+                if not _clean_gap(line, match.end(), manifest.start()):
+                    continue
+                distance = manifest.start() - match.end()
+            else:
+                continue
+            if best is None or distance < best[0]:
+                best = (distance, manifest.group("pmid"))
+        rows.append({"line": number, "excluded": None,
+                     "declared": int(match.group("count")),
+                     "pmid": best[1] if best else "", "quote": quote})
+    return rows
+
+
+def load_key_counts(root: Path, disease: str) -> dict[str, int]:
+    """Per PMID, the wrong number — see `manifest_key_count`."""
+    out: dict[str, int] = {}
+    directory = root / MANIFEST_DIR.format(disease=disease)
+    if not directory.is_dir():
+        return out
+    for path in sorted(directory.glob("PMID*.json")):
+        try:
+            manifest = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        pmid, keys = str(manifest.get("pmid") or ""), manifest_key_count(manifest)
+        if pmid and keys is not None:
+            out[pmid] = keys
+    return out
+
+
+def sweep(text: str, manifests: dict[str, tuple[int | None, Path]],
+          key_counts: dict[str, int] | None = None) -> list[dict]:
+    """The whole registry: one row per locator-count assertion, in file order."""
+    key_counts = key_counts or {}
+    findings: list[dict] = []
+    for number, line in enumerate(text.splitlines(), start=1):
+        for row in sweep_line(line, number):
+            if row["excluded"]:
+                findings.append(row)
+                continue
+            pmid = row["pmid"]
+            if not pmid:
+                findings.append({**row, "state": "unparsed", "actual": None,
+                                 "manifest": None})
+                continue
+            actual, path = manifests.get(pmid, (None, None))
+            state = ("manifest_absent" if actual is None else
+                     "agrees" if actual == row["declared"] else "disagrees")
+            findings.append({**row, "actual": actual,
+                             "manifest": path.name if path else None,
+                             "state": state,
+                             "key_count": key_counts.get(pmid),
+                             "d40_signature": bool(
+                                 state == "disagrees"
+                                 and key_counts.get(pmid) == row["declared"])})
+    return findings
+
+
+def tally(findings: list[dict]) -> dict[str, int]:
+    counts = {state: 0 for state in STATES}
+    for finding in findings:
+        if finding.get("excluded"):
+            continue
+        counts[finding["state"]] += 1
+    return counts
 
 
 DEPTH_LINE_RE = re.compile(r"^\*\*Evidence depth:\*\*(?P<body>.*)$", re.M)
@@ -182,6 +425,84 @@ def scan_depth(text: str, root: Path, disease: str) -> list[dict]:
     return findings
 
 
+def report_sweep(args, registry: Path) -> int:
+    """`--sweep`: the four states, the two excluded populations, and the ratchet.
+
+    A RATCHET, NOT A GATE (`harness_development_principles.md` principle 3). It runs in under
+    a second, waits on nobody and exits non-zero only ABOVE the ceiling measured on
+    2026-10-21, so the known understatement tail stays visible and countable while a NEW
+    disagreement is loud. Repairing a registry sentence is a `BATCH_COMMIT` act that belongs
+    to the integrator; a suite that went red the day one of them was repaired would be a gate
+    on scientific work, which is why the ceiling is a ≤ and not an =, and why a ceiling with
+    headroom prints its own instruction to come down.
+    """
+    manifests = load_manifests(args.root, args.disease)
+    findings = sweep(registry.read_text(encoding="utf-8"), manifests,
+                     load_key_counts(args.root, args.disease))
+    counts = tally(findings)
+    ceiling = (BASELINE_DISAGREEMENTS if args.max_disagreements is None
+               else args.max_disagreements)
+
+    if args.json:
+        print(json.dumps({"ceiling": ceiling, "counts": counts,
+                          "baseline_unparsed": BASELINE_UNPARSED,
+                          "findings": findings}, indent=2))
+    else:
+        for finding in findings:
+            if finding.get("excluded"):
+                continue
+            where = f"{registry.name}:{finding['line']}"
+            if finding["state"] == "disagrees":
+                delta = finding["actual"] - finding["declared"]
+                mark = (" 🔴 D-40 SIGNATURE: the asserted figure equals "
+                        f"len(verbatim_locators) = {finding['key_count']}, the MAPPING's key "
+                        "count — not a stale total but a mis-measurement"
+                        if finding["d40_signature"] else "")
+                print(f"  [DISAGREES] {where} — PMID {finding['pmid']}: the registry asserts "
+                      f"{finding['declared']}, {finding['manifest']} holds "
+                      f"{finding['actual']} ({delta:+d}){mark}")
+            elif finding["state"] == "manifest_absent":
+                print(f"  [MANIFEST ABSENT] {where} — PMID {finding['pmid']}: asserts "
+                      f"{finding['declared']} locators, manifest absent or unreadable — "
+                      f"NOT counted clean")
+            elif finding["state"] == "unparsed":
+                print(f"  [UNPARSED] {where} — asserts {finding['declared']} locators and "
+                      f"names no manifest in the clause: …{finding['quote']}…")
+        excluded = [f for f in findings if f.get("excluded")]
+        for finding in excluded:
+            print(f"  [excluded: {finding['excluded']}] {registry.name}:{finding['line']} — "
+                  f"{finding['declared']}: …{finding['quote']}…")
+
+        total = sum(counts.values())
+        print(f"\nassertions reached: {total + len(excluded)} "
+              f"({len(excluded)} excluded as subset mentions or retired quotations)")
+        print(f"agrees: {counts['agrees']} | disagrees: {counts['disagrees']} "
+              f"(ceiling {ceiling}) | manifest absent: {counts['manifest_absent']} | "
+              f"unparsed: {counts['unparsed']} (declared {BASELINE_UNPARSED})")
+        if not total:
+            print("NO ASSERTIONS PARSED — a FAILURE of the scan, not a clean registry.")
+            return 2
+        if counts["disagrees"] < ceiling:
+            print(f"🟢 RATCHET HAS HEADROOM: lower BASELINE_DISAGREEMENTS to "
+                  f"{counts['disagrees']}. A ceiling only ever comes down.")
+        if counts["unparsed"] > BASELINE_UNPARSED:
+            print(f"🔴 A NEW UNPARSED ASSERTION: the wordings moved and the pattern did not "
+                  f"follow. An unparsed sentence is not a clean one.")
+        if counts["disagrees"] > ceiling or counts["unparsed"] > BASELINE_UNPARSED \
+                or counts["manifest_absent"] > BASELINE_MANIFEST_ABSENT:
+            print("VERDICT: ABOVE BASELINE — re-derive from the manifests; do not retype. "
+                  "A registry sentence moves only through BATCH_COMMIT.")
+            return 1
+        print("VERDICT: AT OR BELOW BASELINE.")
+        return 0
+
+    if not sum(counts.values()):
+        return 2
+    return 1 if (counts["disagrees"] > ceiling
+                 or counts["unparsed"] > BASELINE_UNPARSED
+                 or counts["manifest_absent"] > BASELINE_MANIFEST_ABSENT) else 0
+
+
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -191,12 +512,21 @@ def main(argv=None) -> int:
     parser.add_argument("--depth", action="store_true",
                         help="check the `**Evidence depth:**` lines against manifest and "
                              "ledger instead of the locator counts (N10, 2026-10-20)")
+    parser.add_argument("--sweep", action="store_true",
+                        help="the wider parse (D-40): every count assertion in any wording, "
+                             "four states — agrees / disagrees / manifest absent / unparsed")
+    parser.add_argument("--max-disagreements", type=int, default=None,
+                        help=f"ceiling for --sweep (default {BASELINE_DISAGREEMENTS}, "
+                             "the measured tail; lowering it is the only direction)")
     args = parser.parse_args(argv)
 
     registry = args.root / REGISTRY.format(disease=args.disease)
     if not registry.exists():
         print(f"ERROR: {registry} not found", file=sys.stderr)
         return 2
+
+    if args.sweep:
+        return report_sweep(args, registry)
 
     if args.depth:
         rows = scan_depth(registry.read_text(encoding="utf-8"), args.root, args.disease)

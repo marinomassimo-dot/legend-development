@@ -1,0 +1,162 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Orchestrator dispatch 2026-10-21. Two need-driven items, both earned by real defects of the preceding 24 hours: N1 a checker for the locator counts a registry record asserts about a manifest (detection rule D-40), N2 the record of a measured surface fact found while building `rank`. No new gate, no new registry, no scientific claim, zero spend.",
+ "TASK_ID": "PLAN-LOCATOR-COUNT-CHECK-20261021",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "plan",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "N1 build the checker that reads a locator count a paper-registry record asserts ABOUT a named manifest against the manifest on disk, in the wordings the registry actually uses, with four distinct states and a measured baseline; N2 record in the capability scout log the measured surface fact for PMID 42422765 that `rank` produced.",
+ "PRINCIPLES": [
+  "framework/master/harness_development_principles.md — T0, no gates, need-driven, LOOK BEFORE BUILDING (principle 14), one canonical home per rule (principle 5), measure value not compliance (principle 15), a test is not a gate (principle 3)",
+  "LEGEND_CORE 21c STOP POLICY, 21d DECISION AUTHORITY, 21e AGILE OPERATING MODE",
+  "no scientific claim, no DATO promotion, zero external spend above the declared default (zero)",
+  "the four scientific current files are not touched: repairing a registry sentence is a BATCH_COMMIT act and belongs to the integrator"
+ ],
+ "SCOPE": [
+  "N1: framework/scripts/locator_count_crosscheck.py (extended, NOT a second tool) + framework/scripts/test_locator_count_crosscheck.py + the routing row in framework/scripts/README.md + enrolment in scripts/run_release_regressions.py",
+  "N2: disease-models/wwox/research/capability_scout_log.md (one append)"
+ ],
+ "BOUNDARIES": [
+  "disease-models/wwox/research/dismissal_ledger_current.md, discovery_ledger_current.md and full_text_queue_current.md not touched: an integrator was running BATCH_20261019_010 on all three",
+  "the four scientific current files not touched (working_model, claim_registry, paper_registry, literature_tracking_log)",
+  "no manifest, dossier or page adjudication edited: they belong to their authors",
+  "no new gate, registry, authority or approval step; no new dependency; no push"
+ ],
+ "ACCEPTANCE_CRITERIA": [
+  "N1 parses the registry's locator-count assertions in the measured variety of their wordings, reports how many it reaches and how many it cannot parse, and treats agreement / disagreement / manifest-absent / unparsed as four distinct states",
+  "N1 exits non-zero only above a baseline measured now, kept where the repository already keeps one, and the baseline only ever comes down",
+  "N1 carries as regressions: a correct count passes; a wrong count is named with both numbers; the exact len(mapping) trap as a fixture; an absent manifest reported absent; an unparsable sentence reported",
+  "N1 routed in framework/scripts/README.md and enrolled in scripts/run_release_regressions.py",
+  "N1 run over the live corpus with its four counts reported, and any further disagreement REPORTED and not repaired",
+  "N2 names the three paths, the measured ppi of each candidate surface, and the one-line rule that `rank` answers this question before a figure read"
+ ],
+ "CURRENT_STATE": "CLOSED",
+ "assigned_on": "2026-10-21",
+ "TASK_ACK": {
+  "state": "ACCEPTED",
+  "accepted_on": "2026-10-21",
+  "identity_basis": "ACTOR_ID plan assigned by the Orchestrator in the dispatch message of 2026-10-21; not inferred from a directory (AGENTS.md section 4)",
+  "interaction_mode": "AUTONOMOUS_COMPLETE",
+  "review_requirement": "none as a precondition (LEGEND_CORE 21e GATES); Mirror reviews ex post",
+  "scope_limit": "harness, plus one append to a non-canonical append-only research ledger"
+ },
+ "TASK_CLAIM": {
+  "claimed_by": "plan",
+  "claimed_on": "2026-10-21",
+  "timestamp_precision": "date only",
+  "branch": "task/PLAN-LOCATOR-COUNT-CHECK-20261021",
+  "worktree": ".claude/worktrees/plan-locator-count",
+  "uniqueness": "no competing claim exists for this TASK_ID + GENERATION"
+ },
+ "RESULTS": {
+  "N1_LOCATOR_COUNT_CHECKER": {
+   "result": "DONE",
+   "entry_point": "python3 framework/scripts/locator_count_crosscheck.py . --sweep [--json] [--max-disagreements N]",
+   "the_finding_that_shaped_the_whole_item": "THE CHECKER ALREADY EXISTED. `framework/scripts/locator_count_crosscheck.py` was written on 2026-09-21 for this exact question, and its docstring already named the len(mapping) trap verbatim — *«`verbatim_locators` is an object, not a list. `len()` on it returns 6 … Any count of 6 in this repository should be read twice.»* It was correct, it ran, and it was GREEN on D-40. Its `DECLARATION_RE` requires the count to be the first token inside the parenthesis — `(30 locators` — and both D-40 records write `(schema v2, **11** persisted verbatim locators`. Neither record was ever in its population of 34. The repository was not missing a check; it was missing REACH. So this task extended the existing tool instead of shipping a second one (harness_development_principles principle 14 LOOK BEFORE BUILDING, principle 5 one canonical home).",
+   "measured_variety_before_the_pattern_was_written": "Seven live wordings, each copied into a regression: `(30 locators, schema v2` · `(schema v2, **11** persisted verbatim locators` · `(9 verbatim locators, PASS` · `(6 locator su pagina resa` (Italian, singular, no plural s) · `` `….json`, **7** verbatim locators — 5 persisted `` (no parenthesis) · `20 locator verificati in `deepdive_manifests/…`` (count BEFORE the path) · `manifest schema-v2 con **32 locator** verificati` (NO path at all — the unparsed case).",
+   "reach": "34 declarations under the narrow pattern -> 59 assertions reached, of which 4 excluded with a named reason (1 subset mention, 3 retired quotations) and 55 placed in the four states.",
+   "four_states_live_2026_10_21": {
+    "agrees": 36,
+    "disagrees": 14,
+    "manifest_absent": 0,
+    "unparsed": 5,
+    "excluded_with_reason": 4
+   },
+   "the_d40_records_now_read_correctly": "PAPER 427 (PMID 22938201) asserts 11 and the manifest holds 11; PAPER 428 (PMID 40544182) asserts 9 and the manifest holds 9. Both AGREE. The retired «6 persisted verbatim locators» each record still quotes inside guillemets is excluded as a retired quotation rather than verified — verifying a figure the registry has already withdrawn in writing would manufacture a disagreement.",
+   "eight_new_disagreements_reported_not_repaired": "Beyond the six the narrow pattern already saw (PMID 36779245, 32581702, 31340538, 39416860, 42397075 twice, 33255508), the wider parse found eight: PMID 33914858 (asserts 6, manifest holds 40), 34747138 (20 vs 29), 35328751 (7 vs 28), 33612478 (4 vs 10), 42589397 (7 vs 10), 39952983 (14 vs 21), 35460704 (6 vs 11). Every one UNDERSTATES. REPORTED ONLY: a registry sentence moves through BATCH_COMMIT, by the integrator.",
+   "two_of_the_eight_carry_the_d40_signature": "PMID 33914858 and PMID 35460704 each assert exactly 6 against a `verbatim_locators` mapping of exactly 6 keys. That is not a stale total, it is the arithmetic of `len(mapping)`, and the repair is a different one. The tool derives the wrong number on purpose (`manifest_key_count`) so that it can say D-40 SIGNATURE in the report instead of leaving the integrator to guess whether the manifest merely grew.",
+   "ratchet_not_gate": "`--sweep` exits non-zero only above BASELINE_DISAGREEMENTS=14, BASELINE_UNPARSED=5, BASELINE_MANIFEST_ABSENT=0, all measured 2026-10-21 and all documented with the records they name. It runs in under a second, waits on nobody and will ask the same informative question at the thousandth batch.",
+   "regressions": "26 tests, all green. New: the D-40 wording passing when correct; the len(mapping) trap as a fixture (6-key mapping, 11 entries, registry asserting 6 — the checker must disagree AND name the mis-measurement); a wrong count named with both numbers through the real CLI; an absent manifest reported absent; an unparsable sentence reported as unparsed with a tallied state of its own; the clause barrier that stops line 7333's count being attributed to an erratum's manifest; 'the only Figure 3 locator' not read as a count of three.",
+   "routing_and_enrolment": "framework/scripts/README.md § 3 carries a second row for the `--sweep` mode (test_tool_routing green). scripts/run_release_regressions.py enrols framework/scripts/test_locator_count_crosscheck.py beside test_locator_contradiction_audit.py, with the reason in the comment."
+  },
+  "N2_SURFACE_FACT_FOR_PMID_42422765": {
+   "result": "DONE",
+   "where": "disease-models/wwox/research/capability_scout_log.md, one append, CHANGE = NONE",
+   "the_measured_fact": "For Figures 1–6 the best surface on disk is the SUPPLEMENT, not the publisher PDF. `mmc2.pdf` carries them as embedded rasters at 500 ppi (pp. 3, 4, 6, 7, 9, 10; 3321x3280, 2906x3769, 2906x2832, 2906x2875, 2906x3052, 2906x2695; printed 418–478 pt wide). `PMC13343157.1.pdf` carries the same whole figures at 300 ppi, 1744 px wide. The PMC CDN assets gr1.jpg–gr6.jpg are 111–125 ppi. 1.67x over the publisher PDF, 4x over the JPEGs. `rank` pairs them by aspect to 0.0002–0.0006 relative, so it is the same figure at three resolutions.",
+   "three_paths_byte_identical": [
+    "files/supplement/PMID42422765/mmc2.pdf",
+    "files/supplement/PMID42422765_r2/mmc2.pdf",
+    "files/fulltext/PMID42422765_Obeid2026_assets/mmc2.pdf"
+   ],
+   "sha256": "523b09e47b52620cacda9826bce88ac77dd8de65626f5148e2c8630383869cb4",
+   "it_also_corrects_the_entry_above_it": "The Scientist's 2026-10-21 scout entry set `rank`'s acceptance test as *«it must prefer the publisher PDF for Figures 1–6»*. Measurement does not support that premise: `rank` prefers mmc2.pdf, and a reader following the acceptance test reaches the second-best surface. The generalisable half is stated once in the entry — a publisher downsamples figures to the article's print target, an author-submitted 'all figures' supplement often is not downsampled, so 'authoritative' is a claim about provenance and not about resolution.",
+   "no_adjudication_redone": "A Scientist adjudicated a claim on these figures at 300 dpi two hours before the measurement; a blind auditor cross-checked its waypoints against the PRINTED AXES, which is resolution-independent, so the verdict stands on its own evidence. No manifest, dossier or page adjudication was edited: they belong to their authors."
+  }
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "The dispatch said to BUILD the checker; a checker for the same question already existed and was green on the defect.",
+   "default": "Extend the existing `locator_count_crosscheck.py` with a `--sweep` mode rather than ship a second tool, and keep the narrow `DECLARATION_RE` and its 34-declaration population intact beside it.",
+   "why_it_is_safe": "harness_development_principles principle 14 (look before building) and principle 5 (one canonical home per rule) both point one way, and `test_tool_routing.py` requires every shipped tool to be routed exactly once — a second tool answering the same question would have split the rule across two files and two baselines.",
+   "what_would_have_been_different": "A new script would have duplicated the manifest loader, the entries-not-keys logic and the anti-vacuity guard, and the next reader would have had to discover which of the two to run."
+  },
+  {
+   "condition": "The dispatch named the baseline as 'where the repository already keeps them'; the two precedents keep it in two different places.",
+   "default": "Module constants in the tool (`BASELINE_DISAGREEMENTS`, `BASELINE_UNPARSED`, `BASELINE_MANIFEST_ABSENT`), each documented with the records it counts — the `manifest_receipt_provenance.py` shape.",
+   "why_it_is_safe": "There is no content-side home for this baseline: the content side is `paper_registry_current.md` itself, which this actor must not edit and which moves only through BATCH_COMMIT. The detection-rule precedent could put its baseline in the ledger's own addendum only because the ledger is where that content lives.",
+   "what_would_have_been_different": "A baseline key in `framework/state/state_manifest_current.md` would have self-lowered through `growth_anchors.py --write`, at the cost of a new state-manifest key and a new writer path for a tool that is meant to write nothing."
+  },
+  {
+   "condition": "`manifest_receipt_provenance.py`'s live test asserts ceiling == measured; copying that would turn the release battery red the day an integrator repaired one registry count.",
+   "default": "Assert `measured <= baseline` in the enrolled suite, and have the tool PRINT 'RATCHET HAS HEADROOM: lower BASELINE_DISAGREEMENTS to N' on every run that has headroom (pinned by its own regression).",
+   "why_it_is_safe": "It is the same ratchet — the number can only come down and a new defect is loud — without the suite becoming a gate on scientific work (principle 3, and the warning `test_detection_rule_citations_resolve.py` states in its own docstring). The deviation is documented in `report_sweep`'s docstring and in the test that carries it.",
+   "what_would_have_been_different": "With an equality assertion, BATCH_20261019_010's integrator could have landed a correct repair and found the battery red with nothing wrong."
+  },
+  {
+   "condition": "Two of line 7333's count assertions and three 2026-08 Italian records cannot be attributed to a manifest at all.",
+   "default": "Report them as UNPARSED, a fourth state with its own baseline of 5, rather than attributing them to the nearest path.",
+   "why_it_is_safe": "Line 7333 discusses THIS paper's 38 locators beside an ERRATUM's manifest; nearest-path attribution would have invented the very link the tool exists to check, and reported a false disagreement as a finding — the exact failure mode of D-40 one layer up.",
+   "what_would_have_been_different": "Two fabricated disagreements in the first live run, offered to the integrator as repairs."
+  },
+  {
+   "condition": "The dispatch reported `grep -c` finding 34 locator-count assertions in the registry.",
+   "default": "Re-measure rather than inherit: 34 is the narrow tool's own declaration count. A pattern built on the measured variety of the wordings reaches 59.",
+   "why_it_is_safe": "§21c SAFE_DEFAULTS — a prior-report figure not re-derivable in minutes is treated as a hypothesis; this one was re-derivable in seconds, and the re-derivation is what found the eight further disagreements.",
+   "what_would_have_been_different": "A checker scoped to 34 assertions would have validated the same history the old one already validated, and found none of the eight."
+  }
+ ],
+ "DECISIONS_TAKEN": [
+  {
+   "decision": "Extend rather than add: `--sweep` is a mode of `locator_count_crosscheck.py`, and `DECLARATION_RE` with its 34-declaration population stays beside it.",
+   "authority": "§21d — harness, not reserved; §21e T0.",
+   "how_to_revert": "Delete the `--sweep` block, `ASSERTION_RE` and the `TheWideSweep`/`TheRatchet` test classes; the narrow mode is untouched by this change and keeps working."
+  },
+  {
+   "decision": "The tool derives `len(verbatim_locators)` — the WRONG number — on purpose, to label a disagreement D-40 SIGNATURE when an asserted figure equals the mapping's key count.",
+   "authority": "§21d — harness.",
+   "how_to_revert": "Remove `manifest_key_count`, `load_key_counts` and the `d40_signature` field; the four states are unaffected."
+  },
+  {
+   "decision": "Three lexical exclusions — a number that names a noun (Figure 3 locator), a subset mention (the first 20 locators), a count quoted inside «…» to retire it — are excluded from the four states and REPORTED with their reason, never silently dropped.",
+   "authority": "§21d — harness.",
+   "how_to_revert": "Delete `COUNTED_NOUN_BEFORE`, `SUBSET_BEFORE` and the `_in_quotation` branch; the live disagreement count then rises by 3 with no defect behind it."
+  },
+  {
+   "decision": "Enrol `framework/scripts/test_locator_count_crosscheck.py` in the release battery with `<=` assertions.",
+   "authority": "§21e — the implementer lands at T0 with the regression suites green; enrolment is not a gate.",
+   "how_to_revert": "Remove the one line from `PRIORITY_TESTS`."
+  },
+  {
+   "decision": "The eight further disagreements are REPORTED to the Orchestrator and written into this record and into the tool's own baseline comment; not one registry byte is edited.",
+   "authority": "§21e — the SCIENTIFIC discipline is unchanged: the four current files move only through BATCH_COMMIT.",
+   "how_to_revert": "Nothing to revert; the repair, when it comes, is a batch."
+  }
+ ],
+ "STOP_LOG": [
+  {
+   "class": "none",
+   "stops_taken": 0,
+   "stops_avoided": 2,
+   "detail": "Avoided 1 — discovering that the tool to be built already existed is a condition with a safe default (extend it, record the default), not a question for the operator. Avoided 2 — fourteen live disagreements in a canonical registry is a finding for the integrator and a baseline for the ratchet, not a reserved act and not a reason to hold the task; §21e reserves the repair to BATCH_COMMIT, which is why reporting is the complete discharge of it."
+  }
+ ],
+ "GOVERNANCE": {
+  "reserved_acts_touched": "none",
+  "external_spend": "zero",
+  "scientific_current_files_touched": "none",
+  "privacy": "no individual-level material; the surface fact is about figure resolution in a published paper",
+  "push": "none"
+ }
+}
