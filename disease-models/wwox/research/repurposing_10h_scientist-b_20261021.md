@@ -283,3 +283,23 @@ Depth: `partial_fulltext_read` (whole PMC XML body; Figure 1 as an image; Figure
 
 **Comparison with the lead.** Axis A: none. Axis B: T-type gain-of-function is a documented human disease mechanism for DEE; no WWOX link. Axis C: none. Axis D: none. **Net: context; supports the existence of a T-type excess mechanism class, no change to the lead's plausibility from this paper alone.**
 
+## 16. PMID 33704440 (El Ghaleb 2021): CACNA1I (Cav3.3) gain-of-function variants in neurodevelopmental disease. NOT WWOX EVIDENCE
+
+Depth: `partial_fulltext_read` (whole PMC XML body; figures captions only; supplementary data not opened). Manifest `PMID33704440.json` STRICT PASS, 5 locators. Receipt staged `FTR-20261021-33704440-01`. Read together with section 17 (same laboratory, companion paper).
+
+**What it establishes.** Four heterozygous missense variants of the T-type channel gene CACNA1I in six individuals with neurodevelopmental disease and seizures in four. In HEK cells all four behave as gain of function; a computer model of reticular-thalamic neurons gives hyperexcitability; in mouse chromaffin cells two variants shift the firing mode. The authors propose two parallel mechanisms (calcium toxicity from early life; altered thalamic firing) and say it is uncertain how much each contributes to seizures.
+
+**The one human ethosuximide datum in R2.** The Discussion states, in one sentence, that treatment of patient 1 (de novo I860N, daily myoclonic seizures, refractory) with ethosuximide "resulted in improved control of seizures, in particular in a reduction of myoclonic seizures". There is no dose, endpoint, seizure count, concurrent treatment or time course; the Results state this patient's rarer convulsive seizures had not responded to treatment before. It is an uncontrolled single-patient report in a **mechanism-matched** (T-type gain-of-function) channelopathy, not an effect size, and not a statement about any other gene. It is the strongest statement in the group that T-type excess in humans can be treated by a T-type-active drug, and also the cleanest illustration of what a genotype-specific ethosuximide effect would look like if the mechanism is the gene's own.
+
+**Comparison with the lead.** Axis A: a human mechanism-matched case, no comparator. Axis B: supports T-type excess as a treatable seizure mechanism. Axis C: single patient with prior refractory course; no control. Axis D: none. **Net: raises the plausibility of the idea "T-type blockers act on what a T-type-excess genotype creates" but only for genotypes that create T-type excess, which no Wwox measurement shows.**
+
+## 17. PMID 40825030 (El Ghaleb 2025): paired CACNA1I variants with opposite channel effects. NOT WWOX EVIDENCE
+
+Depth: `partial_fulltext_read` (whole PMC XML body and Table 1; figures captions only). Manifest `PMID40825030.json` STRICT PASS, 5 locators. Receipt staged `FTR-20261021-40825030-01`.
+
+**What it establishes.** Three new activation-gate variants in four patients. M1425V and A398E are gain of function; A398V is a partial loss of function (smaller current, faster gating, lower excitability in the model). The gain-of-function A398E patient has seizures; the two unrelated A398V patients have developmental delay and microcephaly without seizures; the M1425V patient has staring spells and psychosis without seizures. The authors conclude substantial gain of function leads to seizures, whereas both gain and loss of function cause neurodevelopmental disease.
+
+**Answer to the group's directionality test.** Gain, not loss, tracks seizures in these data (four variants, a handful of patients, one gain-of-function carrier without seizures: a correlation, not a law). For a repurposing card this gives a sharp statement: **the genotype decides whether T-type block is mechanism-matched** (gain-of-function carriers) **or mismatched** (loss-of-function carriers, for whom reducing a channel already low would be the wrong direction). The paper has no drug data and does not claim any.
+
+**Comparison with the lead.** Axis A: none (no drug). Axis B: direction-of-effect matters. Axis C: a loss-of-function T-type genotype exists in which seizures are absent, so "T-type mechanism" is not a general epilepsy lever. Axis D: none. **Net: sets a precondition on any T-type argument for WWOX: show which direction the channel moves in the Wwox-deficient system.**
+
