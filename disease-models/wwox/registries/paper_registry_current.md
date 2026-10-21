@@ -14823,6 +14823,50 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Note:** class-level record; no individual-level detail. Not medical advice.
 
 ---
+## PAPER 427
+**Short title:** Gonzalez-Hilarion 2012 — amlexanox rescues nonsense mutations in human cells: the single confirmed hit of a marketed-drug NMD-inhibitor screen, with its dual mechanism declared unresolved by the authors
+**Full title:** Rescue of nonsense mutations by amlexanox in human cells
+**Authors:** Gonzalez-Hilarion S, Beghyn T, Jia J, Debreuck N, Berte G, Mamchaoui K, Mouly V, Gruenert DC, Deprez B, Lejeune F
+**Year:** 2012
+**Source type:** primary research — cell-based drug screen with validation in human cell lines
+**Journal/source:** *Orphanet Journal of Rare Diseases* 2012;7:58
+**Identifier:** PMID 22938201 / PMC3562214 / DOI 10.1186/1750-1172-7-58
+**Status:** processed
+**Record provenance:** created by `CC-20261020-SCIENTIST-A-AMLEXANOX-01` (Scientist A, task `REPURP-P3-KNOWNROADS-A-20261020`, drug-repurposing P3 known-roads reconnaissance) at `BATCH_20261019_008`; identity from the manifest's own landing citation, checked against the receipt; number minted by the integrator.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261020-22938201-01`; manifest `deepdive_manifests/PMID22938201.json` (schema v2, 6 persisted verbatim locators, exact text match verified against the fingerprinted artefact); artefact `files/fulltext/PMID22938201_GonzalezHilarion2012_PMC_2026-10-20.xml` (sha256 `cc770e0b9b3ddc8745ec5dab8e6318a0509ca54d94e2ee4685a01da39ee08b6f`); unread or absent (receipt): figures `captions_only`, references `not_read`, supplementary `not_read`, limitations `not_present`
+**Primary pathway:** none for this gene — pharmacology of nonsense-mutation read-through and NMD inhibition
+**Model/species:** human cell lines — lung-cancer, Duchenne myocyte and cystic-fibrosis airway lines, all carrying **nonsense** alleles, all **non-neural**
+**Genotype/model:** premature-termination-codon alleles of other genes; **no WWOX allele of any kind**
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the article does not mention WWOX, contains no WWOX measurement and carries no WWOX patient.** It is an earned null for the gene: it bounds what may be *said* about the amlexanox road and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** The originating claim of the amlexanox road: amlexanox is *«the only one drug confirmed on the primary assay after screening»* of a library of more than 1200 marketed drugs on a tethering assay that reports NMD inhibition and nothing about any disease gene, and it yields some full-length protein. Registered with the limits the article itself carries: **all drugs were tested once** against a mean + 3 SD threshold — a hit-finding design, not an effect-size measurement; the full-length species can be the **minor** one (*«a truncated p53 protein was well detected»* against *«a very low level of full-length p53»*); the dual mechanism, read-through versus NMD inhibition, is declared **unresolved in the paper itself**; and the only quantitative function measurement lands at *«about 20% of the CFTR activity … measured in Calu-3 cells»*, a comparator the authors themselves say over-expresses the protein. 🔴 **Two inferences refused at registration, so this record cannot be over-read:** the article's own sentence that the molecule has been *«used for more than 30 years per os or topically to treat asthma and aphthous ulcers»* is recorded as the source's statement and **not adopted** — neither paediatric suitability nor systemic availability follows from a historic authorisation for another indication or another route, and this paper contains no paediatric datum, no CNS datum and no pharmacokinetic measurement of any kind. Reference-list integrity `SCREENED_CLEAN` (snapshot 2026-09-10).
+**LIT link:** [[literature_tracking_log_current#LIT-0699]]
+**Note:** class-level record; no individual-level detail. No dose, route or schedule is reproduced, including for the cell-culture work. Not medical advice.
+
+---
+## PAPER 428
+**Short title:** Hristodor 2025 — read-through drugs in Fanconi anaemia: the independent comparator-controlled test in which amlexanox raised protein, did not relieve NMD, and improved no phenotype endpoint while the comparator improved all three
+**Full title:** Development of translational read-through-inducing drugs as novel therapeutic options for patients with Fanconi anemia
+**Authors:** Hristodor AM, Cappelli E, Baldisseri E, Valli R, Montalbano G, Micheloni G, Porta G, Frattini A, Ravera S, Fioredda F, Lippi G, Dufour C, Cipolli M, Bezzerri V
+**Year:** 2025
+**Source type:** primary research — patient-derived cells, two drugs run head to head with shared endpoints
+**Journal/source:** *Cell Death Discovery* 2025;11(1):286
+**Identifier:** PMID 40544182 / PMC12182573 / DOI 10.1038/s41420-025-02571-0
+**Status:** processed
+**Record provenance:** created by `CC-20261020-SCIENTIST-A-AMLEXANOX-01` (Scientist A, task `REPURP-P3-KNOWNROADS-A-20261020`, drug-repurposing P3 known-roads reconnaissance) at `BATCH_20261019_008`; identity from the manifest's own landing citation, checked against the receipt; number minted by the integrator.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261020-40544182-01`; manifest `deepdive_manifests/PMID40544182.json` (schema v2, 6 persisted verbatim locators, exact text match verified against the fingerprinted artefact); artefact `files/fulltext/PMID40544182_Hristodor2025_PMC_2026-10-20.xml` (sha256 `5c891d7f4c690a384da794b691d4bc50488adc5b7daa621d9c20040f72507374`); unread or absent (receipt): figures `captions_only`, references `not_read`, supplementary `not_read`, tables and limitations `not_present`
+**Primary pathway:** none for this gene — pharmacology of nonsense-mutation read-through
+**Model/species:** human patient-derived cells — Fanconi-anaemia lymphoblastoid lines and primary fibroblasts; **never neural**
+**Genotype/model:** nonsense alleles of two Fanconi-anaemia genes; **no WWOX allele of any kind**
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the article does not mention WWOX, contains no WWOX measurement and carries no WWOX patient.** It is an earned null for the gene; what is rejected on its evidence is a **transfer**, never the result itself, which is a valid measurement of its own protocol
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** 🔴 **The measured point that bounds the whole amlexanox road, and it bounds it because it is comparator-controlled in the same patient-derived cells.** Amlexanox raised full-length protein in one gene and **not** in the other (*«On the contrary, we observed no effect on FANCF protein levels following amlexanox treatment in these cells»*); it **did not relieve NMD** (*«neither amlexanox nor ataluren was able to rescue FANCA transcription»*); and it **did not improve survival under genotoxic challenge, did not reduce chromosomal aberrations and did not significantly reduce micronuclei, while the comparator did all three** (*«Conversely, amlexanox showed no effect on either MMC- or DEB-induced genotoxicity in FA-A cells, despite a slight increase in FANCA protein synthesis and a significant reduction of initial p53 levels»*). The one effect the authors could attribute — pSTAT2 down about 50 percent — they ascribe to **TBK1/IKKε inhibition and not to read-through**. Their own general statement is the transferable one: *«a partial downregulation of p53 per se is not sufficient to produce phenotypic rescue in human cells»*, and so is their methodological demand — *«the need for a reliable experimental pipeline to assess whether the minimal amount of neomorphic protein synthesized upon translational read-through is actually followed by phenotypic rescue»*. 🔴 **Protein quantity is not function**, which is the lesson this record carries into the repository (`D-39`, and `D-04` seen from the pharmacological side). ⚠️ Limits, and they cut both ways: the amlexanox arms are the paper's smallest (n = 3 on the genotoxicity endpoints), the comparator is the group's standing programme and therefore a declared directional interest, the systems are lymphoblastoid and dermal and never neural, and the supplement was not fetched. Reference-list integrity `SCREENED_CLEAN` (snapshot 2026-09-10).
+**LIT link:** [[literature_tracking_log_current#LIT-0700]]
+**Note:** class-level record; no individual-level detail. No dose, route or schedule is reproduced, including for the cell-culture work. Not medical advice.
+
+---
 ## CORPUS-STUB-181
 **Corpus paper no:** 181
 **Full title:** Intramolecular autoinhibition regulates the selectivity of PRPF40A tandem WW domains for proline-rich motifs

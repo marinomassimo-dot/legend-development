@@ -210,9 +210,43 @@ Canonical audit trail of numbered claims relevant to the Working Model.
 ---
 
 ## CLAIM 011
-**Title:** AAV9-hSynI-hWWOX: dose-dependent durable rescue in Wwox-null murine model su domini multipli inclusi ECoG/SWD, mielinizzazione e gliosi
+**Title:** AAV9-hSynI-hWWOX in Wwox-null murine model: durable survival rescue at the high dose only, with dose-grading demonstrated on expression, P20 glycaemia and motor score and NOT on survival, body weight, ECoG/SWD, myelination or gliosis
 **Status:** flagged for review
 🔴 **Flagged 2026-08-10 (`CC-20260810-CLAIM011-REVIEW`) — «dose-dependent» descrive un continuo dove il pannello mostra una soglia.** La Figura 3B di PMID 42422765, letta all'immagine (`gr3.jpg`, sha256 `c63f930c…4997d`): **LD = 1.23 × 10¹¹ vg**, **HD = 2.63 × 10¹¹ vg** *come stampati* (2026-09-27, `CC-20260922-CLAIM011-DOSE-ENDPOINTS-01`: i valori sono confermati **nel corpo del testo e in tre didascalie**, non solo sul pannello — *«For translational relevance, we evaluated two clinically applicable doses: an LD (1.23 × 1011 vg) and a higher dose (HD, 2.63 × 1011 vg) (Figure 3A).»*, citato con la **schiacciatura dell'esponente** che la superficie JATS introduce). ⚠️ **La convenzione dell'unità non è mai dichiarata dal primario** — `vg` nudo su tutte le superfici, `hemisphere` non adiacente ad alcuna dose, e **nessuna dose nei Methods** (verificato: 0 occorrenze di `vg`, `1.23`, `2.63`; l'unica quantità vettoriale è *«Viral titers were determined by RT-qPCR using bGH primers.»*); l'iniezione è ICV bilaterale, *«delivering 2.0 μL/hemisphere»*, una per emisfero (*«The procedure was repeated for the contralateral hemisphere.»*). La dose **assoluta** ricevuta dall'animale è quindi incerta **di un fattore esattamente 2**: **LD ∈ [1.23, 2.46] × 10¹¹ vg**, **HD ∈ [2.63, 5.26] × 10¹¹ vg**. 🟢 **Il rapporto è invariante: `HD/LD = 2.1382` sotto ogni lettura permessa**, quindi **nulla di ciò che questo flag argomenta dipende dall'ambiguità**: il braccio a dose bassa **non recupera la sopravvivenza** — sposta la morte da ~20 a ~90 giorni e poi la curva raggiunge lo zero, mentre l'alta dose plateau a ~80% fino a 300 giorni. A **P20** la dose bassa non ha corretto l'ipoglicemia, l'alta sì. Non è una differenza graduata su un asse: è qualitativa, e colloca una **soglia** fra 1.23 e 2.63 × 10¹¹ vg. Le parole del paper — *«dose-dependent»*, *«graded improvement»*, *«a clear dose-response relationship»* — sono tutte vere dei dati e tutte descrivono un continuo; la claim ne ha ereditato il lessico. Chi non apre il pannello B porta con sé *«più dose, più beneficio»* invece di *«sotto soglia, nessuna sopravvivenza»*, e le due credenze raccomandano trial diversi. 🔴 `PREMISE_TAG`: ogni inferenza del tipo *«una dose più bassa e più sicura aiuterebbe comunque»* legge la dose-risposta come continuo, e il pannello B la **rifiuta** per la sopravvivenza in questo modello. ⚠️ **Non-linearità (2026-09-27, `CC-20260826-DOSE-DECISION-TABLE-01`, `BATCH_20260927_004`) — scritta al livello che la fonte sostiene, non a quello che il candidato proponeva.** **Testo verificato:** l'espressione cresce con la dose **per regione e non in scala**, *«Immunoblot analyses at P30 revealed a marked dose-dependent increase in WWOX protein, most prominently in the cortex and to a lesser extent in the hippocampus, midbrain, and cerebellum»*; e **un singolo elemento della cassetta domina la dose**, perché *«increasing the vector dose in the absence of WPRE failed to recapitulate the expression levels achieved with lower dose (LD) containing WPRE (Figure S3F)»*. ✅ **Attestazione risolta il 2026-09-28 (`BATCH_20260928_007`, `FTR-20260928-42422765-10`) — i byte esistono e i numeri sono STAMPATI sul blot, non stimati** (`files/supplement/PMID42422765/mmc1.pdf`, sha256 `dd4919a80af937037309eddd2939db4f11af230e00849bf4b362832bcb5572e9`, p. 4 resa a 600 dpi; acquisita via Europe PMC supplementaryFiles per PMC13343157). I moltiplicatori per regione sono **confermati alla lettera**: al raddoppio della dose (4 × 10¹⁰ → 8 × 10¹⁰ vg, entrambi senza WPRE) la densitometria S3E stampa **cortex 3.0, ippocampo 3.0, mesencefalo 5.5, cervelletto 16.7**, relativi al braccio 4 × 10¹⁰; il secondo blot di S3E stampa per `AAV9-WWOX-WPRE (4E10)` **4.0 / 3.8 / 3.6 / 7.4** relativi a `AAV9-WWOX (8E10)` senza WPRE. 🔴 **L'equivalenza di dose del WPRE era sbagliata di un ordine di grandezza e si corregge qui: non ≈44× ma >4.4×** [corretto 2026-09-28 da «≈**44×**» da `BATCH_20260928_007`]. S3F accosta `KO+W-WPRE (6E10vg)` a `KO+W (2.63E11vg)` — 2.63 × 10¹¹ / 6 × 10¹⁰ = **4.38** — ed è **solo immagini, senza densitometria**; poiché il braccio senza WPRE a 4.4× più vettore *non raggiunge* quello con WPRE (*«increasing the vector dose in the absence of WPRE failed to recapitulate the expression levels achieved with lower dose (LD) containing WPRE»*), il valore è un **limite inferiore qualitativo**. ⚠️ In quella frase del corpo *«lower dose (LD)»* indica il braccio a **6 × 10¹⁰ vg**, **non** la LD dello studio di dose (1.23 × 10¹¹ vg). Ciò che **non** dipende da quei byte: la soglia LD/HD **non è una costante biologica** e non va citata senza configurazione del vettore e finestra di follow-up. `REVIVAL_TRIGGER` **(riscritto 2026-09-27, `BATCH_20260927_004` — due candidati fusi in una sola frase: `CC-20260922-CLAIM011-DOSE-ENDPOINTS-01` Δ2 per la forma del trigger, `CC-20260826-DOSE-ADJUDICATION-01` per il confine di configurazione):** un braccio a dose intermedia localizzerebbe la soglia, ed è l'esperimento più informativo che questo paper implica — ma **va definito come frazione della HD del primario** (una dose fra 1× e 2.14× la LD), **non in vg assoluti**, perché la convenzione dell'unità non è dichiarata e il numero assoluto non è riproducibile da un altro laboratorio. Un secondo trigger, molto più economico, è una **dichiarazione esplicita della convenzione** da parte degli autori. ⚠️ **Confine di configurazione:** la soglia è una soglia **per questo vettore, questo lotto e questa consegna** — il predecessore dello stesso laboratorio, con la stessa architettura WPRE-free, riporta *«prolonged life span»* a una dose **3–6× più bassa** (Repudi 2021, ≈4 × 10¹⁰ GC totali per aritmetica su due frasi della fonte), quindi il numero **non è una costante biologica**. Il trigger deve riportare anche le **copie di genoma consegnate per regione**, non solo la dose iniettata. Riscrittura rinviata: la Figura 3B risolve sopravvivenza e glicemia, **non** gli altri domini della claim (ECoG/SWD, mielinizzazione, gliosi), ✅ **Condizione di rinvio assolta il 2026-08-14** — `FTR-20260814-42422765-06`, `complete_fulltext_read`, 29 locator (16 attestazioni di figura, 13 snippet di corpo). La lettura completa esiste; i tre domini sono risolti **e non tutti nella stessa direzione**, quindi la riscrittura resta **scientificamente aperta** ed è tracciata in `CC-20260826-AAV9-ENDPOINT-SPLIT-01`. **Il rinvio non è più un blocco di completezza di lettura.**
+> ✅ **Flag ADJUDICATED 2026-10-21 (`CC-20261021-SCIENTIST-C-CLAIM011-DOSE-ADJUDICATION-01`,
+> `FTR-20261021-42422765-01`) — verdict NARROW, with Figure 3B re-inspected as an image at native
+> resolution (300 dpi raster embedded in the publisher PDF, sha256 `9152439cab8c2d56ee8312fd0b955d6aeb6411cdb10471786b4534ca6c753d3b`, 1744 × 1699,
+> against the 726 px CDN file the flag was written from) and the curves read off the printed
+> axes.** *«Dose-dependent» is true of this study's expression, P20 glycaemia and motor measures
+> and false of its survival, weight, ECoG, myelination and gliosis measures,* and the Title bound
+> it to the three where it is weakest. **Survival is a step, not a gradient:** LD reaches **0 % at
+> ~day 79** while HD holds **100 % to ~day 50** and then plateaus at **76–77 % through day 300**, against a `WT+RI` control that
+> itself ends at **71–72 %** — so *«comparable to WT»* includes a wild-type arm that lost ~29 % of
+> its animals. 🔴 **But LD is not nothing:** the caption prints LD vs `KO+RI` p < 0.0001 and death
+> is postponed from a marker centred at ~day 17 to ~day 79; a postponement ending in an extinct arm is not a
+> durable rescue, and that distinction, not «more dose more benefit», is what recommends different
+> trials. 🔴 **And LD is not uniformly worse: on body weight LD = HD** (15.3 vs 15.6 g at P30,
+> Fig 3C, with **no significance marker printed on panel C or D at all**) — an equality that is
+> **survivor-conditioned on the LD side only** (Fig 3B: ≈ 79 % alive at P30 against 100 % for HD),
+> so it is neither evidence of grading nor evidence of its absence. 🔴 **The three domains
+> the old Title named cannot carry the word:** Figure 7E has **no low-dose arm** (HD only, *n* = 5
+> per group, SWD/hour KO ≈ 0.635 → HD ≈ 0.13, `****`, `ns` against WT ≈ 0.03, 7 days of recording
+> from ~P14); myelination is **never quantified in any treated arm** (Fig 6E, the only MBP
+> quantification, is WT vs KO; 6F and S7I are representative images and 6F lacks an untreated-KO
+> column); gliosis is **binary with no disease comparator** (S7H % GFAP: WT ≈ 1.75, LD ≈ 3.05
+> `**`, HD ≈ 1.9 `ns`; S7F % Iba1 all `ns`; **neither panel contains a `KO+RI` arm**, and the
+> wild-type value moves ≈ 2× between S7D and S7H). ⚠️ **The flag's own inference is narrowed too:**
+> two dose points cannot *locate* a threshold — a step and a steep continuum are indistinguishable
+> — so what the panel refuses is **linear interpolation of durable benefit**, not the existence of
+> intermediate behaviour. The step reading is **strengthened, not established**, by four dose
+> levels across two figures (Fig 2B's 4 × 10¹⁰ and 8 × 10¹⁰ hSynI/WPRE-free arms, no survivors;
+> then 1.23 × 10¹¹ and 2.63 × 10¹¹) — **different cohorts in different experiments**, with the
+> text-versus-panel discrepancy at 8 × 10¹⁰ still unresolved in favour of the text. 🟢 **Nothing in
+> this adjudication depends on the unit ambiguity**, and the `PREMISE_TAG` on the dose ceiling,
+> the configuration boundary and the `REVIVAL_TRIGGER` are unchanged and re-affirmed: an
+> **intermediate-dose arm, defined as a fraction of the primary's HD**, remains the single most
+> informative experiment this paper implies, and it should carry survival, weight, glycaemia,
+> ECoG **and quantified MBP in the same animals** to 300 days.
 **Type:** DATO preclinico (full text reviewed)
 **Pathway:** P7 — gene therapy readiness; P4 — myelination; P6 indiretto
 **Genotype/model relevance:** murino / Wwox-null full KO severo; genotipo caution alta: full KO ≠ the reference genotype N/M compound het; i design principles (neuron targeting, dose, early window) sono trasferibili alla logica di trial-readiness; il livello di rescue atteso nel genotipo di riferimento è potenzialmente superiore (funzione residua parziale)
@@ -815,6 +849,82 @@ If comparable studies conflict:
 **Summary:** Chong et al. 2023 report that «the institution of a ketogenic diet in patients 1, 2, and 4 notably improved seizure control», and Table 1 marks those three patients «Responded to ketogenic diet». The authors hedge in the discussion — «It may be premature to assert the potential beneficial effects of a ketogenic diet as they need to be evaluated carefully in a larger cohort» — and conclude more strongly that it «should be considered». Earlier reports cited by the same paper describe ketogenic-diet use in WOREE «with varying degrees of success».
 **Clinical meaning:** Non cambia la pratica e non è parere medico. Documents that a ketogenic diet has been used in WOREE with reported seizure improvement in some patients, which is information for discussion with a treating clinical team, not an indication.
 **Evidence boundary:** n = 5; uncontrolled, unblinded, retrospective case series; no seizure-frequency measure, no timing or duration of the diet, and no definition of «responded» in the retrieved text; the denominator of patients exposed to the diet is **not stated**, so «3/5» must not be read as a response rate; responses are reported only in patients whose alleles are splice-region changes or exon deletions on both sides, and the single Q230P carrier has **no** ketogenic-diet entry — neither response nor non-response — so nothing here transfers to the Q230P-bearing genotype class; the authors' conclusion («should be considered»; «the seizures in most patients responded») is stronger than their own discussion («may be premature») and than their own count of three; the paper calls all five genotypes «predicted null» although patient 5 carries a missense allele, and patient 5 also carries a de novo likely-pathogenic *GRIA4* variant, so her seizure course is confounded; co-medication during the diet is not reported in the retrieved passages. `PREMISE_TAG`: any statement that the ketogenic diet «works» in WOREE, or in the reference genotype, rests on this series and on uncontrolled earlier reports only. `REVIVAL_TRIGGER`: a report with the number exposed, a seizure-frequency endpoint, or any documented diet exposure in a Q230P carrier. Base-rate context (wave 2026-10-19, `CC-20261019-SCIENTIST-B-G2-KD-PRIOR-01`, `BATCH_20261019_001`): across DEE syndromes and genes ketogenic-diet responder fractions at the 50 percent threshold are reported at roughly 47 to 100 percent among the groups that review tabulates as responders, **and 0 of 10 for CDKL5 in the same gene-level study**, so the span of that study is 0 to 100 percent, in small, refractory-pre-selected cohorts ([[paper_registry_current#PAPER 268]], a review restating its primaries), and in Glut1 deficiency, where the lesion is a known bypassable fuel shortage, 39 percent of epileptic patients are not controlled by the diet alone, with secondary loss of response in at least ten of 44 ([[paper_registry_current#PAPER 269]], a `partial_fulltext_read`: Figures 2 and 4 at legend depth only). A WOREE response count with an unstated denominator is therefore not distinguishable from the DEE base rate and does not identify an energy lesion in either direction. `PREMISE_TAG`: this addition rests on the two cited readings (DATO as printed; one is a review restating its primaries and the other a partial full-text read with two figures at legend depth) and on this claim's own caveat; the 47 to 100 percent range omits CDKL5 0 of 10 and is a range among responding groups, not the span of the gene-level study. *(CDKL5 0 of 10 and the partial depth added at `BATCH_20261019_003`, Mirror F1.)* `REVIVAL_TRIGGER`: a WOREE or WWOX-DEE series with the exposed denominator, a defined response and a matched DEE comparator, or brain energy measurement paired with response.
+> **Evidence boundary — which endpoint moved, and which did not (2026-10-20,
+> `CC-20261020-SCIENTIST-B-KETO-ENDPOINT-01`, read on the surface this repository holds;
+> `FTR-20261020-36537114-01`).** The benefit in this series is a **clinician-reported improvement in
+> seizure control**: *«However, the institution of a ketogenic diet in patients 1, 2, and 4 notably
+> improved seizure control.»* **On the surface this repository holds** there is no seizure count, no
+> frequency, no severity scale, no EEG change, no latency from institution to response and no
+> persistence criterion — not in that sentence and not in Table 1, whose Epilepsy row records only
+> seizure types and the fact of a response — so **effect size, time to benefit and duration are
+> `UNKNOWN`** here. ⚠️ **Scope of that absence, corrected 2026-10-21 after the blind audit (triple 0,
+> `OVERSHOOT`): the per-patient narratives are NOT COVERED** — the held surface delivers 8 of the
+> article's chunks and the narratives of patients 1, 2 and 4, which is the one place a seizure count
+> would appear, are absent. The absence is therefore asserted **of the delivered surface**, never of
+> the article.
+> ⚠️ **The authors hedge AND recommend, and both halves are theirs (corrected 2026-10-21 after the
+> blind audit, triple 1, `UNDERSHOOT` — the first wording kept only the hedge and so made the paper
+> more cautious than it is).** They write *«It may be premature to assert the potential beneficial
+> effects of a ketogenic diet as they need to be evaluated carefully in a larger cohort»* **and, in the
+> next sentence of the same chunk**, *«However, these findings suggest that the implementation of a
+> ketogenic diet may help to improve the control of epilepsy in certain patients with WOREE
+> syndrome»*; the abstract reports *«epilepsy that responded to a ketogenic diet in three patients»*
+> and the summary concludes *«The institution of a ketogenic diet should be considered for the
+> treatment of epilepsy in these patients.»* **The asymmetry this claim must not reintroduce is making
+> a source sound as though it supports the reader's conclusion — in either direction.** What the
+> boundary below rests on is the **absent measurement**, not on the authors being more doubtful than
+> they are.
+> 🔴 **And the same table refuses a disease-modifying reading of it.** The *«Developmental delay»* row
+> is **identical in all five columns** — *«Profound developmental delay»* five times, the three
+> responders included — and the *«Recent status»* row reads *«Died at 2years 4months |Died at 2years
+> |Alive at 8years |Alive at 6years |Alive at 7years»*, i.e. **two of the three patients described as
+> responding had died**, within roughly two years. The symptomatic endpoint moved; the developmental
+> endpoint did not move in any column; and survival in the responders is not what a disease-modifying
+> reading would predict. **A symptomatic benefit in WOREE does not demonstrate a slowing of the
+> disease**, and here that is printed rather than inferred (`PREMISE: DATO` for each row;
+> `PREMISE: INFERENZA` for reading the three rows together as a non-modification argument — the paper
+> draws no such comparison and reports no statistical test of any kind).
+> ⚠️ **The exposure denominator is absent, measured on the delivered chunks:** the surface states that
+> three patients responded and **never states how many were placed on the diet**, so *«three of five»*
+> is a count of responders against cohort size, not a response rate.
+> 🔴 **And two of the three responders are previously published individuals, named by the source
+> (strengthened 2026-10-21 after the blind audit, triple 9, `UNDERSHOOT`; the first wording said the
+> surface does not say which two, and it does).** The text declares *«…five patients with WOREE
+> syndrome, including three new and two previously published patients whose data have been updated»*;
+> **Table 1's last row**, *«CNVs or SNVs reported in other studies or ClinVar database»*, attributes
+> **patients 2 and 4** to *«Piard et al. (2019)»* (patient 3 to *«Shaukat et al. (2018)»*, patient 5 to
+> *«BenSalem et al. (2015)»*), and the patient-4 sentence of the same table's chunk adds *«(published
+> in figure S2; Dharmadhikari et al., 2019)»* — while **patients 1, 2 and 4 are the three described as
+> responding to the diet**. So the boundary is not *«we cannot tell, therefore do not pool»* but the
+> stronger and more specific one: **two of the three diet responders are named prior individuals, any
+> pooled count across WOREE series double-counts them, and such a count must name which individuals it
+> is counting.** ⚠️ One scope qualifier the row's own header imposes: it reports whether a **variant**
+> was reported elsewhere, so it names the candidates while the three-new/two-published split is the
+> text's.
+> 🔵 **What the series carries as a quantitative KIND of endpoint, with its values pending:** growth
+> is reported as **occipitofrontal circumference, height and weight against SD scores and percentiles
+> at a stated age** for the three surviving columns, with **failure to thrive in 5/5**. 🔴 **The VALUES
+> are `PENDING_RE_ACQUISITION` and no signed or ranged number from this paper may be cited (corrected
+> 2026-10-21 after the blind audit, triple 5, `UNVERIFIABLE` — the defect is wider than this candidate
+> first declared).** The held extraction strips hyphens and minus signs from **prose and numeric tokens
+> throughout the document**, not only from the SD scores — *«shortchain»*, *«lossoffunction»*,
+> *«exons 68»* (6–8), *«34weeks»* (3–4 weeks), *«50th75th»* (50th–75th), *«< 3SD»* (< −3 SD) — and a
+> scan for U+2000–U+21FF returns the empty set, so **no numeric token is reliable for its sign or for
+> single-value-versus-range**. **No PDF, page render or figure render exists for this PMID anywhere
+> under `files/`.** Re-acquisition of a native surface for DOI 10.1002/ajmg.a.63074 is on the
+> operator's PDF list, and an access control is not to be circumvented for it. **EEG, by contrast, is a
+> qualitative pattern description in every column** — hypsarrhythmia, background slowing, multifocal
+> discharges — with no density, no background score and no repeat interval. 🔵 **Two measurements
+> nobody had recorded exist here at n = 1:** a **visual evoked potential**, *«Patient 4 demonstrated
+> undetected visual evoked potentials suggesting central involvement»*, and a **sleep study**,
+> *«Sleep apnea with hypopnea detected by sleep study»*. Both are single patients, single timepoints,
+> no parameter and no comparator — endpoint *existence*, not endpoint *validation*. They also bound a
+> negative: a dated PubMed probe for VEP, ERG, DTI, MRS and volumetry against WWOX returns **zero**,
+> so that absence is an **indexing** absence and not an absence of measurement. 🔴 **And no WWOX
+> read-out of any kind exists in this paper** — no protein, no transcript, no activity — so whatever
+> changed in those three children, **nothing measured the gene**, and the observation is not evidence
+> about WWOX functional state. **Not medical advice; no dose, schedule or dietary course is implied,
+> and paediatric suitability is not presumed for anything.**
 **Source:** [[paper_registry_current#PAPER 017]] (Chong et al. 2023, PMID 36537114; publisher passages via Scholar Gateway, receipt `FTR-20260929-36537114-02`; blind locator audit 2026-09-29, T1–T5 SUPPORTED)
 **Wikilinks:** [[paper_registry_current#PAPER 017]] · [[claim_registry_current#CLAIM 001]] · [[claim_registry_current#CLAIM 009]]
 **Impact on Working Model:** replaces the model prose «seizure improvement in 3/5 WOREE patients» with a pointer to this claim and its denominator caveat; no BLOCCO 1 change, no therapeutic score.
