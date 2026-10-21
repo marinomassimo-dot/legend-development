@@ -1,0 +1,56 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "REPURP-R3-REPAIR-C-20261022",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-c",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Repair at source the manifests of six R3 readings after the blind locator audit (locator_audit_R3_20261022.md), then correct the commit candidate and the R3 note so nothing stale contradicts the manifests.",
+ "SCOPE": {
+  "papers": [
+   "40665325",
+   "38147624",
+   "42310739",
+   "40156289",
+   "35945201",
+   "41980417"
+  ],
+  "audit": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "every non-supported triple repaired and declared with contradicts_locator",
+  "locator_contradiction_audit --working-tree --fail-on-undeclared clean",
+  "manifests PASS",
+  "candidate and note corrected; repairs declared unaudited"
+ ],
+ "CURRENT_STATE": "COMPLETED",
+ "TASK_ACK": {
+  "actor": "scientist-c",
+  "at": "2026-10-22",
+  "directive_version": 1,
+  "generation": 1
+ },
+ "TASK_CLAIM": {
+  "actor": "scientist-c",
+  "branch": "task/repurp-r3-repair-c",
+  "worktree": ".claude/worktrees/scientist-c-r3fix",
+  "mode": "REPAIR"
+ },
+ "DEFAULTS_TAKEN": [
+  "spans widened by contiguous passage only, never stitched; where widening would duplicate another entry's quote the proposition was narrowed instead",
+  "surfaces re-inspected at original resolution before changing a figure reading (38147624 Figs 1 and 6, 42310739 Fig 1A)",
+  "missing facts anchored in new entries rather than extra claims in old ones",
+  "the two source defects (42310739 p value, 40156289 family-variant assignment) recorded as source defects/unresolved, not as findings",
+  "no new dismissal-ledger row minted; D-22 covers the substantive shape"
+ ],
+ "STOP_LOG": [],
+ "RESULT": {
+  "triples_repaired": 51,
+  "manifests_pass": 6,
+  "new_entries": 7,
+  "repairs_audited": "NO",
+  "candidate": "CC-20261021-SCIENTIST-C-R3-A51-ATTRIBUTION-01 (HELD)",
+  "self_eval": "disease-models/wwox/research/session_evaluations/self_eval_scientist-c_R3_repair_20261022.md"
+ }
+}

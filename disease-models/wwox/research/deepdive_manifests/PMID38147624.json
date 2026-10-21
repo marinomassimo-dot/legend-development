@@ -295,12 +295,26 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "A51 reduced Myc protein in marrow of tertiary leukaemias (mouse leukaemia, 5 mg/kg/day regimen, no neural tissue).",
+    "proposition": "The text states that vehicle-treated leukaemias showed strong Myc induction and that A51 significantly reduced it (Fig 6I; mouse leukaemia, 5 mg/kg/day regimen, no neural tissue). The panel is one unquantified blot (6 untreated and 10 A51 lanes) with no statistic in the figure, legend or Methods, and Myc follows blast percentage (entry 21), so the reduction by A51 is stated, not demonstrated.",
     "snippet": "Interestingly, vehicle-treated leukemias showed a strong induction of Myc, whereas A51 treatment significantly reduced the expression (Figure 6I).",
     "anchor": "Results / Leukemic growth",
     "surface": "body",
     "artifact": "files/fulltext/PMID38147624_Fuchs2024_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38147624.json",
+     "entry": 3,
+     "what_changed": "Auditor: quote is the text claim \"significantly reduced\", but Fig 6I is a single unquantified blot with no statistic and a blast-percentage confound. Proposition now says the effect is stated, not demonstrated.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 3,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "The collaborative transformation rests on one animal.",
@@ -319,12 +333,26 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The CK1 inhibitor D4476 did not separate Csnk1a1+/- cells or blasts from wild type, so the selective effect of A51 is not carried by the CK1-alpha arm alone on this evidence.",
+    "proposition": "The CK1 inhibitor D4476 was not significantly more efficient in Csnk1a1-/+ Hoxb8-Flt3 cells and blasts than in WT Hoxb8-Flt3 cells (in vitro, one drug). The source does not use this to say where within A51 the selective effect sits; no inference about a CK1-alpha versus CDK7/9 attribution is drawn from this comparison.",
     "snippet": "Direct Csnk1a1 inhibition using D4476 was not significantly more efficient in Csnk1a1–/+ Hoxb8-Flt3 cells and blasts than in WT Hoxb8-Flt3 cells.",
     "anchor": "Results / Leukemic blasts can be cultured ex vivo",
     "surface": "body",
     "artifact": "files/fulltext/PMID38147624_Fuchs2024_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38147624.json",
+     "entry": 6,
+     "what_changed": "Auditor: the inference that the A51 effect is not carried by the CK1-alpha arm is not in the source. Inference removed; proposition limited to what the quote carries.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 6,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "Text claims blood counts normalised and spleen reduced under A51.",
@@ -376,27 +404,69 @@
    },
    {
     "proposition": "Supplement: A51 5 mg/kg/day, 5 days per week, for 3 weeks from day 8 (single dose level in vivo).",
-    "snippet": "continued once daily for 3 weeks (5",
+    "snippet": "A51 treatment (5 mg/kg/day) or control treatment started at day 8 post-transplant and continued once daily for 3 weeks (5 days/week).",
     "anchor": "Supplemental methods / Animal studies",
     "surface": "supplement",
     "artifact": "files/supplement/PMID38147624_r2/BLOODA_ADV-2022-008926-mmc1.txt",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38147624.json",
+     "entry": 13,
+     "what_changed": "Quote was a fragment cut at \"(5\"; widened to the contiguous sentence carrying dose, start day, duration and 5 days per week. Proposition unchanged.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 13,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
-    "proposition": "The figure legend of Figure 5 states dosing until 4 weeks after transplant, whereas the supplement states 3 weeks of dosing; the two descriptions of the schedule differ.",
+    "proposition": "The Figure 5 legend states A51 5 mg/kg per day from 8 days after transplant, 5 days per week until 4 weeks after transplant (euthanasia). This is compatible with the supplement (3 weeks of dosing from day 8 ends at about day 29, about 4 weeks after transplant); the schedule conflict flagged in the earlier note is withdrawn.",
     "snippet": "A51-treated mice received A51 compound (5 mg/kg per day) starting at 8 days after transplant, 5 days per week until 4 weeks after transplant (euthanasia).",
     "anchor": "Figure 5 legend",
     "surface": "body",
     "artifact": "files/fulltext/PMID38147624_Fuchs2024_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38147624.json",
+     "entry": 14,
+     "what_changed": "Auditor: the two descriptions are compatible (day 8 plus three weeks ends about four weeks after transplant). The earlier flag of a schedule conflict is withdrawn.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 14,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
-    "proposition": "In vitro screen: 24-hour MTT, duplicate wells, A51 range 10 to 316 nM.",
-    "snippet": "The cells were cultured for 24 hours after which the proliferation was measured according to protocol of the MTT Cell",
+    "proposition": "In vitro screen: compounds and DMSO controls added in duplicate wells, cells cultured 24 hours, then an MTT proliferation assay. (The A51 concentration range shown in Fig 4G is attested in entry 19, not here.)",
+    "snippet": "The different compounds and their DMSO controls were added to the wells in duplicate in their own medium. Blasts in α-MEM (Hyclone) containing 10% FBS (Capricorn), 1% P/S (Sigma-Aldrich), Flt-3 (5ng/mL, Peprotech) and IL-7 (3ng/mL, Peprotech). HoxB8-Flt3 cells in IMDM (Gibco) containing 10% FBS (Capricorn), 1% P/S (Sigma-Aldrich), Flt-3 (40ng/mL, Peprotech) and B-estradiol (1μM Sigma-Aldrich). The cells were cultured for 24 hours after which the proliferation was measured according to protocol of the MTT Cell Growth Assay Kit",
     "anchor": "Supplemental methods / MTT assay",
     "surface": "supplement",
     "artifact": "files/supplement/PMID38147624_r2/BLOODA_ADV-2022-008926-mmc1.txt",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38147624.json",
+     "entry": 15,
+     "what_changed": "Quote widened to the duplicate-wells sentence and the 24-hour MTT sentence; the 10 to 316 nM range was removed from this proposition because it is not in the quoted span.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 15,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "Leukaemia mice were sacrificed when sick with beginning hind-limb paralysis (a disease sign in the model, not a treatment readout).",
@@ -447,30 +517,72 @@
     "qualifies_needle": "Blood counts were normalized upon treatment w"
    },
    {
-    "proposition": "Fig 6H-I (300 dpi page 10): in 6H a single faint Myc band appears only in the Csnk1a1-/+ p53 lane (one blot, no replicate shown); in 6I the Myc band intensity follows the printed bone-marrow blast percentage (weak where blasts are 3-62 percent, strong in lanes at 93-99 percent, including A51-treated animals), so the Myc drop under A51 is confounded by blast burden.",
-    "snippet": "[figure attestation — pixels cannot be quote-matched] BM blast % 67 78 91 93 96 97 | 3 34 54 62 70 76 80 93 94 99; Myc strong in A51 lanes with 93, 94, 99",
+    "proposition": "Fig 6H-I (300 dpi page 10): in 6H a single faint Myc band appears only in the Csnk1a1-/+ p53 lane (one blot, no replicate shown). In 6I Myc is strong in the untreated lanes; in the A51 lanes bands appear at blast percentages of about 62, 70, 93 and 94 and none is visible at 3, 34, 54, 76, 80 or 99 (the 99 lane carries no Myc band). Myc therefore tracks blast percentage only partly (the 99 percent lane contradicts \"strong Myc at high blast burden\"), and the blot is unquantified with 6 untreated and 10 A51 lanes, so the A51-versus-blast-burden contribution cannot be separated.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] BM blast % 67 78 91 93 96 97 | 3 34 54 62 70 76 80 93 94 99; Myc bands in A51 lanes at 62, 70, 93, 94; no Myc band at 99",
     "anchor": "Figure 6H-I, page 10 at 300 dpi",
     "surface": "figure",
     "artifact": "files/figure_renders/PMID38147624_r3c/fig_p10_300dpi.png",
     "panel_text_relation": "panel_qualifies_text",
     "qualifies": "entries[3]",
-    "qualifies_needle": "Interestingly, vehicle-treated leukemias show"
+    "qualifies_needle": "Interestingly, vehicle-treated leukemias show",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38147624.json",
+     "entry": 21,
+     "what_changed": "Auditor: the 99 percent A51 lane has no Myc band, contradicting the stated blast-percentage pattern. Surface re-inspected at original resolution before the change.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 21,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
-    "proposition": "Fig 2B (200 dpi page 5): alive fractions at 156 days read about 100 percent (Mx1Cre ntg), 80 (Mx1Cre p53), 40 (Csnk p53), 60 (Csnk/Egr1 p53), 60 (Egr1 p53); deaths in all p53-edited groups, the text attributing them to thymic lymphoma; group sizes are not printed.",
+    "proposition": "Fig 2B (200 dpi page 5): alive fractions at 156 days read about 100 percent (Mx1Cre ntg), 80 (Mx1Cre p53), 40 (Csnk p53), 60 (Csnk/Egr1 p53), 60 (Egr1 p53); deaths in all p53-edited groups, the text attributing them to thymic lymphoma. The panel prints no group sizes; whether Supplementary Fig 2D gives them could not be established because that panel is not rendered in the supplement PDF on disk.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] stacked alive/dead bars; Csnk p53 bar about 40 percent alive",
     "anchor": "Figure 2B, page 5 at 200 dpi",
     "surface": "figure",
     "artifact": "files/figure_renders/PMID38147624_r3c/fig_p05_200dpi.png",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38147624.json",
+     "entry": 22,
+     "what_changed": "Auditor UNVERIFIABLE: \"group sizes are not printed\" cannot be established from the surfaces on disk. Proposition now states only that the panel prints none and that the supplementary panel is unavailable.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNVERIFIABLE"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 22,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
-    "proposition": "Figs 1A-E, 1G-J (200 dpi page 3): WBC and progenitor frequencies similar across genotypes; first-plating colonies higher for Csnk1a1fl/+ and lower for Egr1-/+; second plating higher in all three mutants; competition assays favour Csnk1a1fl/+ and Egr1-/+ over Mx1-Cre.",
+    "proposition": "Fig 1 (200 dpi page 3): colony-forming potential first plating Csnk1a1fl/+ about 82 versus Mx1-Cre about 66, second plating about 27 versus about 13. Peripheral measures are NOT similar across genotypes: 1A shows lower white cell counts for the compound genotype (about 10.5 versus about 15 at week 7, about 13 versus 17 at week 11) and 1B shows higher CD11b+ output for Egr1-/+ and the compound genotype (starred). In competition assays Csnk1a1fl/+ and Egr1-/+ rise above Mx1-Cre in PBS and all three mutants in IFN.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Colony forming potential 1st plating Csnk ~82 versus Mx1-Cre ~66; 2nd plating ~27 versus ~13",
     "anchor": "Figure 1, page 3 at 200 dpi",
     "surface": "figure",
     "artifact": "files/figure_renders/PMID38147624_r3c/fig_p03_200dpi.png",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38147624.json",
+     "entry": 23,
+     "what_changed": "Auditor: \"WBC and progenitor frequencies similar\" is contradicted by Fig 1A and 1B. Surface re-inspected at original resolution; proposition corrected.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 23,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "Fig 3 (200 dpi page 6): secondary recipients with blast morphology, flow histograms and an exome filter leaving a single OncoKB overlap in the primary transplant only.",

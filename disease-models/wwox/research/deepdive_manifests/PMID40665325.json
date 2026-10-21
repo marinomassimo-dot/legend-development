@@ -243,28 +243,70 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The recommended phase 2 dose was set at the 21 mg level after hepatic DLTs at 42 mg; the 42 mg level was stopped for liver-injury risk.",
-    "snippet": "Due to the potential for serious drug-induced liver injury, the 42 mg dose level was discontinued, even though the criteria for the MTD were not met.",
+    "proposition": "Two DLTs were reported in cycle 1: a grade 3 alkaline phosphatase elevation at 21 mg and, at 42 mg, encephalopathy with grade 3 hepatic failure meeting Hy law criteria (one hepatic DLT at 42 mg, not several). The 42 mg level was discontinued for potential serious liver injury although MTD criteria were not met, and 21 mg (15 patients) was declared the MTD/RP2D.",
+    "snippet": "One patient developed grade 3 alkaline phosphatase elevation at the 21 mg dose following treatment with BTX A51 that resolved to baseline 4 days after holding treatment. Another patient experienced encephalopathy and grade 3 hepatic failure with AST, ALT, and bilirubin elevations meeting criteria for Hy’s law at the 42 mg dose. The patient’s liver studies and encephalopathy resolved within 2 weeks after discontinuing BTX A51. Due to the potential for serious drug-induced liver injury, the 42 mg dose level was discontinued, even though the criteria for the MTD were not met. After a total of 15 patients enrolled on the next highest dose level 21 mg, the phase 1a trial was stopped and 21 mg administered 3 days per week for 28 days out of a 28-day cycle was declared the MTD/ RP2D.",
     "anchor": "Results / Adverse events and DLTs",
     "surface": "body",
     "artifact": "files/fulltext/PMID40665325_Ball2025_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40665325.json",
+     "entry": 2,
+     "what_changed": "Proposition said hepatic DLTs (plural) at 42 mg; the source reports one hepatic DLT at 42 mg and a second DLT (alkaline phosphatase) at 21 mg. Quote widened to the contiguous passage that carries both DLTs, the discontinuation and the RP2D sentence.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 2,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "One DLT at 42 mg was grade 3 hepatic failure meeting Hy law criteria together with encephalopathy; both resolved within two weeks of stopping (adult haematology cohort).",
-    "snippet": "Another patient experienced encephalopathy and grade 3 hepatic failure with AST, ALT, and bilirubin elevations meeting criteria for Hy’s law at the 42 mg dose.",
+    "snippet": "Another patient experienced encephalopathy and grade 3 hepatic failure with AST, ALT, and bilirubin elevations meeting criteria for Hy’s law at the 42 mg dose. The patient’s liver studies and encephalopathy resolved within 2 weeks after discontinuing BTX A51.",
     "anchor": "Results / Adverse events and DLTs",
     "surface": "body",
     "artifact": "files/fulltext/PMID40665325_Ball2025_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40665325.json",
+     "entry": 3,
+     "what_changed": "Quote widened to the next sentence, which carries the two-week resolution the proposition states; proposition unchanged.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 3,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
-    "proposition": "Six deaths without overt progression included an intracranial haemorrhage; no attribution to the drug is stated in the text.",
-    "snippet": "Six deaths occurred in the absence of overt disease progression due to lung infection, cardiac arrest, intracranial hemorrhage, fungal infection, and septic shock.",
+    "proposition": "Eleven deaths occurred during treatment and within 28 days of the last dose; five were attributed to disease progression and six occurred without overt progression (lung infection, cardiac arrest, intracranial hemorrhage, fungal infection, septic shock). The body sentence gives no attribution to the drug; the Abstract of the same paper states that no treatment-related deaths occurred (an abstract statement, not a body locator).",
+    "snippet": "Overall, there were 11 deaths among patients during the study treatment and within 28 days of the last dose. Five of these deaths were attributed to disease progression. Six deaths occurred in the absence of overt disease progression due to lung infection, cardiac arrest, intracranial hemorrhage, fungal infection, and septic shock.",
     "anchor": "Results / Adverse events and DLTs",
     "surface": "body",
     "artifact": "files/fulltext/PMID40665325_Ball2025_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40665325.json",
+     "entry": 4,
+     "what_changed": "Auditor found UNDERSHOOT: the source states no treatment-related deaths, which is more than \"no attribution is stated\". Proposition now says so and the quote now carries the eleven-death count and the five attributed to progression.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 4,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "The paper states the transaminase toxicity \"appeared dose-dependent\" by contrasting the 21 and 42 mg levels with lower ones; no per-dose tabulation of the 7 events is given, and the same paragraph reports 1 of 15 at the 21 mg RP2D, which is one of the two levels the claim names as highest-incidence.",
@@ -275,12 +317,26 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "PK claim: plasma PK described as dose-proportional from 1 to 42 mg; mean half-life 28 h.",
-    "snippet": "Plasma PK of BTX A51 was dose-proportional between 1 and 42 mg with accumulation based on AUC between Day 1 and Day 5.",
+    "proposition": "The main text states that plasma PK was dose-proportional between 1 and 42 mg with accumulation between Day 1 and Day 5, and gives a mean half-life of 28 h (range 17 to 45 h). This is the authors' statement; the cited Supplemental Table 3 does not reproduce proportionality (entry 21).",
+    "snippet": "Plasma PK of BTX A51 was dose-proportional between 1 and 42 mg with accumulation based on AUC between Day 1 and Day 5. The mean half-life was 28 h (range, 17 to 45 h, supplemental Table 3).",
     "anchor": "Results / PK and PD",
     "surface": "body",
     "artifact": "files/fulltext/PMID40665325_Ball2025_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40665325.json",
+     "entry": 6,
+     "what_changed": "Quote widened to the half-life sentence the proposition cites; proposition now labels dose-proportionality as the authors' statement that the cited table does not reproduce (audit recomputation).",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 6,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "Pharmacodynamics were measured on CD34-positive marrow cells of three patients only, at the 21 and 42 mg levels.",
@@ -299,12 +355,26 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The cell-line claim: MYC and MDM2 fall after 100 nM A51 for 24 h in five AML lines (a leukaemia system, not neural).",
+    "proposition": "The text states that A51 lowered Pol II CTD phosphorylation at Ser2 or Ser5 in five AML lines (Fig. 4) and that this resulted in a marked decrease in MYC and MDM2 expression (a leukaemia system, not neural). That is the authors' text claim: the Fig 4 blot (entry 15) shows cMYC faint in both lanes of OCI-AML-5 and a faint MDM2 baseline in OCI-AML-3 and HL-60, so MYC suppression is not demonstrable in every line.",
     "snippet": "This resulted in a marked decrease in the expression of oncogenes such as MYC and MDM2.",
     "anchor": "Results / Clinical efficacy (cell lines)",
     "surface": "body",
     "artifact": "files/fulltext/PMID40665325_Ball2025_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40665325.json",
+     "entry": 9,
+     "what_changed": "Auditor: Fig 4 does not show MYC suppression in OCI-AML-5 and the concentration/time (100 nM, 24 h) came from the caption, not the quote. Proposition reduced to the text claim with the panel limitation; concentration removed; quote unchanged (widening would duplicate entry 10).",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 9,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "The statement that A51 reduced CTD phosphorylation in all five lines, including HL-60.",
@@ -323,28 +393,70 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Statement that the 21 mg dose may suffice for maximum biological effect because no MIC-1 or immunostaining difference between 21 and 42 mg was seen.",
-    "snippet": "Therefore, the 21 mg dose may be sufficient to achieve maximum biological effects.",
+    "proposition": "The authors conclude the 21 mg dose may be sufficient for maximum biological effect because, despite the small number of patients at 42 mg, they saw no difference in MIC-1 by ELISA or in MCL1, p53 or RNA polymerase II phosphorylation by immunostaining between 21 and 42 mg. No statistical test is cited; Supplementary Fig 1 shows 42 mg bars of 262, 130 and 1412 percent against about 140-165 at 21 mg.",
+    "snippet": "Although limited by the small number of patients receiving the 42 mg dose, we did not observe differences in MIC-1 by ELISA or MCL1, p53, RNA polymerase II phosphorylation by immunostaining between patients receiving the 21 and 42 mg dose. Therefore, the 21 mg dose may be sufficient to achieve maximum biological effects.",
     "anchor": "Discussion",
     "surface": "body",
     "artifact": "files/fulltext/PMID40665325_Ball2025_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40665325.json",
+     "entry": 12,
+     "what_changed": "Quote widened to carry the no-difference premise and the concession of small numbers (the previous sentence); proposition now states the premise and the limits.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 12,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
-    "proposition": "Responses were found only in RUNX1-mutated patients, at 11 or 21 mg; none at 42 mg (n = 5).",
-    "snippet": "We did not observe any responses among the five patients treated at the 42 mg dose.",
+    "proposition": "Three patients attained complete remission with incomplete count recovery (10%), all at 11 mg or 21 mg (2 of 15 at the RP2D of 21 mg); no response was seen among the five patients treated at 42 mg.",
+    "snippet": "In this study, the anti-leukemic activity of BTX A51 was most apparent at higher doses. Although peripheral blast count reductions were observed at all dose levels, the three patients attaining complete remission with incomplete count recovery (10%) received BTXA51 at 11 mg or 21 mg. Among patients at the recommended phase II dose of 21 mg, we observed a CRi in 2 out of the 15 patients treated (13%). We did not observe any responses among the five patients treated at the 42 mg dose.",
     "anchor": "Discussion",
     "surface": "body",
     "artifact": "files/fulltext/PMID40665325_Ball2025_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40665325.json",
+     "entry": 13,
+     "what_changed": "Proposition said responses were only in RUNX1-mutated patients; that is stated in a later, non-adjacent sentence and was removed here. Quote widened to the contiguous passage carrying 11 or 21 mg and 2 of 15.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 13,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
-    "proposition": "The sponsor funded the study and analysed the data.",
-    "snippet": "The study sponsor analyzed the data and conducted statistical analyses.",
+    "proposition": "The sponsor (BioTheryx, Inc.) sponsored data analyses and manuscript preparation, and the study sponsor analysed the data and conducted statistical analyses (a financial interest in the compound is declared elsewhere; the funding sentence is in Acknowledgements and is not quoted here).",
+    "snippet": "BioTheryx, Inc. sponsored data analyses and manuscript preparation. The study sponsor analyzed the data and conducted statistical analyses.",
     "anchor": "Declarations",
     "surface": "body",
     "artifact": "files/fulltext/PMID40665325_Ball2025_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40665325.json",
+     "entry": 14,
+     "what_changed": "Proposition said the sponsor funded the study; funding is stated in separate sentences. Quote widened to the sponsor-analysis passage and the claim reduced to it.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 14,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "Fig. 4 (vector page, rendered at 300 dpi): pSER5 CTD in HL-60 is not visibly reduced by A51 (bands near equal), pSER2 reduction in MV-4-11, OCI-AML-3, HL-60 is modest; MYC in OCI-AML-5 is near-absent in BOTH lanes so MYC suppression is not demonstrable in the RUNX1-mutant line; p53 rises only in OCI-AML-5; single blot per line, no quantification, no replicate stated.",
@@ -399,14 +511,28 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Supplementary Table 3 (PK): at 21 mg versus 42 mg the Day 5 AUC is 3773 versus 4773 and Day 1 Cmax 120 versus 99 ng/mL, so a doubling of dose does not double exposure; this qualifies the main-text statement of dose-proportionality.",
+    "proposition": "Supplemental Table 3 as printed (N = 1, 1, 3, 3, 3, 8, 5 patients at 1, 3, 5, 8, 11, 21, 42 mg): Day 5 AUC 43.0, 600, 702, 937, 1820, 3773, 4773 ng*h/mL, i.e. per mg 43.0, 200, 140, 117, 166, 180, 114; Day 1 AUC 36.1, 125, 233, 573, 828, 2137 and BLANK at 42 mg (per mg 36.1 to 101.8); Day 1 Cmax 120 at 21 mg versus 99 at 42 mg, Day 5 Cmax 130 versus 155. Exposure is therefore not constant per mg: it rises more than proportionally from 1 to 21 mg (log-log slope about 1.38 for Day 5 AUC and 1.36 for Day 1 AUC, recomputed here and by the audit) and from 21 to 42 mg the Day 5 AUC rises 1.27-fold (3773 to 4773) for a 2-fold dose, Day 5 Cmax 1.19-fold, Day 1 Cmax falls (0.83-fold). The CVs are 22 to 79 percent and N is 1 at two dose levels, so the table supports neither \"dose-proportional between 1 and 42 mg\" (entry 6) nor a sub-proportionality test; the earlier note's correction (\"sub-proportional at the top level\") rests on one 21-versus-42 comparison with n = 8 and 5 and is withdrawn as a general statement.",
     "snippet": "Supplemental Table 3. Summary of BTX-A51 Pharmacokinetics",
     "anchor": "Supplemental Table 3, MOESM1 docx",
     "surface": "supplement",
     "artifact": "files/supplement/PMID40665325_r2/13045_2025_1724_MOESM1_ESM.docx",
     "panel_text_relation": "panel_qualifies_text",
     "qualifies": "entries[6]",
-    "qualifies_needle": "Plasma PK of BTX A51 was dose-proportional be"
+    "qualifies_needle": "Plasma PK of BTX A51 was dose-proportional be",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40665325.json",
+     "entry": 21,
+     "what_changed": "Auditor UNDERSHOOT: the table shows more than the proposition (supralinear from 1 to 21 mg; blank Day 1 AUC at 42 mg) and does not reproduce either the main-text proportionality statement or the earlier sub-proportional correction. Proposition rewritten to state exactly what the table shows.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 21,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    }
   ],
   "source_fulltext_indexed": true,
