@@ -1,0 +1,209 @@
+{
+ "schema_version": 2,
+ "pmid": "27616982",
+ "doi": "10.3389/fnana.2016.00083",
+ "receipt": "FTR-20261022-27616982-01",
+ "landing": [
+  "FTR-20261022-27616982-01",
+  "repurposing_10h_scientist-b_20261022b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 260,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-22: 'Lujan R[au]' 260; with (WWOX OR Wwox) 0. Initials-level author string, may pool homonyms.",
+  "research_type": "experimental_lab",
+  "weighting": "Transferable literature (NOT WWOX EVIDENCE); the group has no WWOX publications on this string; credibility is judged from the design in the paper, not the laboratory.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID27616982_Aguado2016_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement (it licenses nothing about the literature outside this file)."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 70,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-27616982-01",
+    "target": "Reference: Yunker 2003, Cav3.1 western blots in forebrain and hindbrain",
+    "question": "Does a western-blot ontogeny exist for Cav3.1 in thalamus specifically, and with how many animals per age?",
+    "status": "open - cited, not read"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 27616982, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "registry_records.py get --pmid and fulltext_receipts.py status --pmid returned nothing; paper_packet.py claim succeeded for scientist-b."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-22",
+  "route": "PubMed esummary for 27616982 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "No retraction, expression of concern or erratum is visible on the PubMed record for this PMID in the queries run; that absence is a statement about those queries.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 62,
+   "references_screened": 61,
+   "references_with_doi": 61,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID27616982_Aguado2016_PMC_r2.xml",
+   "sha256": "7f24e8bae36cd775281b57149473d4d2da2bd74c1655ef3081b26f70a76e5497",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4999439&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "7f24e8bae36cd775281b57149473d4d2da2bd74c1655ef3081b26f70a76e5497"
+   }
+  },
+  {
+   "path": "files/figures/PMID27616982_r2/fnana-10-00083-g0003.jpg",
+   "sha256": "2533d15e4b63cf58e6ec1b6a544b78b380ca2451e01799754c741f1460915fe0",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC4999439",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "2533d15e4b63cf58e6ec1b6a544b78b380ca2451e01799754c741f1460915fe0"
+   },
+   "note": "Figure 3 raster (JPEG) opened as an image; native surface. Figure 4 (Cav3.2) read as caption and text only."
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figure rasters opened as images where stated; every text snippet was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "Histoblots were taken at seven ages from P0 to P90 with three animals per group.",
+    "snippet": "For histoblotting, the animals used were from different litters and were grouped as follows: P0, P5, P10, P15, P21, P60 and P90 (n = 3 per group).",
+    "surface": "body",
+    "anchor": "Materials and Methods, Tissue Preparation",
+    "artifact": "files/fulltext/PMID27616982_Aguado2016_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Figure 3 legend states that Cav3.1 expression increased progressively during postnatal development in the cerebellum and thalamus.",
+    "snippet": "This quantitative analysis indicates that Cav3.1 expression increased progressively during postnatal development in the Cb and Th.",
+    "surface": "body",
+    "anchor": "Figure 3 legend, panel B",
+    "artifact": "files/fulltext/PMID27616982_Aguado2016_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Results text says the cerebellar molecular-layer Cav3.1 rose to a peak at P21 and decreased slightly at P60 and that the thalamus showed a similar pattern.",
+    "snippet": "However, in the ml of the Cb, the expression of Cav3.1 increased from its lowest expression at P0 to a peak at P21 and decreased slightly at P60 (Figures 3A,B). A similar developmental expression pattern was found in the Th (Figures 3A,B).",
+    "surface": "body",
+    "anchor": "Results, Expression Patterns of Cav3.1 and Cav3.2 During Postnatal Development",
+    "artifact": "files/fulltext/PMID27616982_Aguado2016_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "mouse brain histoblot densitometry, postnatal ages P0 to P60",
+     "cell_line": "OF-1 mice, whole-brain sections",
+     "endpoint": "Cav3.1 protein pixel density"
+    }
+   },
+   {
+    "proposition": "Figure 3B thalamus bars read as an image (pixel density, arbitrary units): P0 about 3, P5 about 5, P10 about 14, P15 about 16, P21 about 23, P60 about 27, the highest bar at P60; the cerebellar molecular-layer bars peak at P21 (about 70) and are about 67 at P60.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3B Th: P0 about 3, P5 about 5, P10 about 14, P15 about 16, P21 about 23, P60 about 27; Cb: P21 about 70, P60 about 67.",
+    "surface": "figure",
+    "anchor": "Figure 3 panel B (JPEG raster)",
+    "artifact": "files/figures/PMID27616982_r2/fnana-10-00083-g0003.jpg",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "mouse brain histoblot densitometry, postnatal ages P0 to P60",
+     "cell_line": "OF-1 mice, whole-brain sections",
+     "endpoint": "Cav3.1 protein pixel density"
+    },
+    "contradicts": "entries[2]",
+    "contradicts_needle": "A similar developmental expression pattern was found in the Th"
+   },
+   {
+    "proposition": "In the hippocampal subfields Cav3.2 was weak at P0, rose to a peak at P21 and decreased at P60.",
+    "snippet": "weak Cav3.2 expression was detected at P0, increased progressively to reach a peak at P21 and then decreased at P60",
+    "surface": "body",
+    "anchor": "Results, Cav3.2 developmental paragraph",
+    "artifact": "files/fulltext/PMID27616982_Aguado2016_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The figure legend reports densitometry from four independent experiments averaged, a group description stated separately from the Methods group size.",
+    "snippet": "densitometric measurements from four independent experiments were averaged",
+    "surface": "body",
+    "anchor": "Figure 3 legend, panel B",
+    "artifact": "files/fulltext/PMID27616982_Aguado2016_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Antibody specificity for Cav3.2 was characterised with two wild-type and three Cav3.2-knockout mice.",
+    "snippet": "two wild-type and three Cav3.2-knockout mice (C57BL6/J strain) were used",
+    "surface": "body",
+    "anchor": "Materials and Methods, Tissue Preparation",
+    "artifact": "files/fulltext/PMID27616982_Aguado2016_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}

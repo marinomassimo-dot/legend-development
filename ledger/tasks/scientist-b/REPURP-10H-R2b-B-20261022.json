@@ -1,5 +1,5 @@
 {
- "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
  "_note": "Part of the ten-hour repurposing batch ORCH-REPURPOSING-10H-20261021. Adjacent and transferable literature: every paper that is not WWOX evidence is labelled NOT WWOX EVIDENCE, at class level, no dose, no paediatric suitability presumed, not medical advice.",
  "TASK_ID": "REPURP-10H-R2b-B-20261022",
  "DIRECTIVE_VERSION": 1,
@@ -30,7 +30,7 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
+ "CURRENT_STATE": "COMPLETED",
  "assigned_on": "2026-10-22",
  "CHECKPOINT": {
   "at": "2026-10-21",
@@ -64,5 +64,50 @@
    "self-eval, report"
   ],
   "notes": "Each reading: manifest PASS, receipt staged under research/receipt_staging/scientist-b/, note section appended in research/repurposing_10h_scientist-b_20261021.md. A resume re-reads this and git log on branch task/repurp-10h-r2-b."
+ },
+ "TASK_ACK": {
+  "actor": "scientist-b",
+  "acked_on": "2026-10-22",
+  "directive_version": 1,
+  "generation": 1,
+  "mode": "PRIMARY_EVIDENCE_READ",
+  "state_manifest_current_state": "READY",
+  "read_before_start": [
+   "framework/protocols/scientist_standing_brief.md (v3)",
+   "roles/scientist.md (by the standing brief; not re-read in this relay)",
+   "LEGEND_CORE 21c/21d/21e (by the dispatch brief)",
+   "disease-models/wwox/research/repurposing_10h_scientist-b_20261021.md (sections 0, 9, 23, 24)",
+   "disease-models/wwox/research/repurposing_batch_selection_20261021.md (group R2)",
+   "DL-MECH-170 and its falsifier"
+  ]
+ },
+ "TASK_CLAIM": {
+  "actor": "scientist-b",
+  "claimed_on": "2026-10-22",
+  "worktree": ".claude/worktrees/r2b-b",
+  "branch": "task/repurp-10h-r2b-b"
+ },
+ "DEFAULTS_TAKEN": [
+  "Read five papers (cap twelve) plus one WWOX-direct dataset, stopping on the brief's own relay guidance rather than filling the cap; remaining screened rows parked or left unread with reasons in the note.",
+  "Parked, no challenge solved and no rate limit looped: PPR862391 (bioRxiv 429, Europe PMC full-text 500), 26758833 (publisher bars XML, PDF not served), 41187802, 22589250, 31953800; 39637158 (review) and four title-screened Europe PMC hits not opened.",
+  "GEO deposits GSE158681 and GSE158682 read as data without a receipt: the deposits carry no PubMed link and merge two papers' abstracts; identity tied to the laboratory only. Transcript mapping partial (current Ensembl lookup against an older annotation) and declared; no differential-expression test on n = 2.",
+  "Coverage values understated where long paragraphs were printed truncated; evidence_basis names the exact spans read.",
+  "Worktree files/ directory holds a stub XML (publisher-restricted) and a retraction_watch symlink only; evidence artefacts live in the shared files/ tree and manifests were verified with --artifact-workspace. A cleanup of the stub was refused by the permission classifier and not retried.",
+  "Two leads staged (lead_trimethadione, lead_wwox_ttype_mrna), not numbered; no commit candidate written; the held R2 candidate and manifests untouched."
+ ],
+ "STOP_LOG": [],
+ "RESULT": {
+  "closed_on": "2026-10-22",
+  "summary": "Five full-text readings (34483921, 30175250, 32678276, 27616982, 32751129) with manifests PASS and receipts staged, one WWOX-direct dataset reading (Wwox null and neuronal-deletion RNA-seq, P17: Cacna1h and Cacna1i lower, Cacna1g not up), two leads staged, analysis note written. A direct genotype-by-treatment test of a T-type-class drug exists in another mutant and runs opposite to DL-MECH-170; the age window of thalamic Cav3.1 protein is low before P10; no paper tests ethosuximide by age. DL-MECH-170 is neither narrowed nor promoted.",
+  "audit_status": "locator audits for 34483921, 30175250 and 32678276 are OWED (blind auditor by someone else); none performed here.",
+  "note": "disease-models/wwox/research/repurposing_10h_scientist-b_20261022b.md",
+  "self_evaluation": "disease-models/wwox/research/session_evaluations/2026-10-22_repurp_10h_r2b_b.md",
+  "staged_receipts": [
+   "FTR-20261022-27616982-01",
+   "FTR-20261022-30175250-01",
+   "FTR-20261022-32678276-01",
+   "FTR-20261022-32751129-01",
+   "FTR-20261022-34483921-01"
+  ]
  }
 }

@@ -1,0 +1,189 @@
+{
+ "schema_version": 2,
+ "pmid": "32678276",
+ "doi": "10.1038/s41598-020-68845-y",
+ "receipt": "FTR-20261022-32678276-01",
+ "landing": [
+  "FTR-20261022-32678276-01",
+  "repurposing_10h_scientist-b_20261022b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 254,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-22: 'Tanila H[au]' 254; with (WWOX OR Wwox) 0. Initials-level author string, may pool homonyms.",
+  "research_type": "experimental_lab",
+  "weighting": "Transferable literature (NOT WWOX EVIDENCE); the group has no WWOX publications on this string; credibility is judged from the design in the paper, not the laboratory.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID32678276_Kam2020_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement (it licenses nothing about the literature outside this file)."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 55,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-32678276-01",
+    "target": "Reference 10: Nygaard 2015, four antiepileptic drugs in two amyloid mouse lines",
+    "question": "Does that paper report ethosuximide against a wild-type arm, and in which behavioural state?",
+    "status": "open - cited, not read"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 32678276, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "registry_records.py get --pmid and fulltext_receipts.py status --pmid returned nothing; paper_packet.py claim succeeded for scientist-b."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-22",
+  "route": "PubMed esummary for 32678276 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "No retraction, expression of concern or erratum is visible on the PubMed record for this PMID in the queries run; that absence is a statement about those queries.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 55,
+   "references_screened": 52,
+   "references_with_doi": 52,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID32678276_Kam2020_PMC_r2.xml",
+   "sha256": "3ba5ccc817d47cb1b49d02989462db244c9d65a0462f41f7bff23a360bb32d80",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=7366932&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "3ba5ccc817d47cb1b49d02989462db244c9d65a0462f41f7bff23a360bb32d80"
+   }
+  },
+  {
+   "path": "files/figures/PMID32678276_r2/41598_2020_68845_Fig4_HTML.jpg",
+   "sha256": "8d0cb08f9a1b538fba9b9b7610a95f5c154b93c4ec82e0fa06e9b26c52271ed9",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC7366932",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "8d0cb08f9a1b538fba9b9b7610a95f5c154b93c4ec82e0fa06e9b26c52271ed9"
+   },
+   "note": "Figure 4 raster (JPEG) opened as an image; native surface."
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figure rasters opened as images where stated; every text snippet was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "Two saline sessions separated by intervening drug treatments did not differ on any measured parameter (paired t-test, all p > 0.05), so only the first saline session was used as the comparator.",
+    "snippet": "Firstly, no statistically significant difference in any measured parameter was found between two saline sessions after intervening drug treatments (all p values > 0.05 in paired t-test), so we used only the first saline session in the comparison with other drug treatments.",
+    "surface": "body",
+    "anchor": "Results, SWD responses section",
+    "artifact": "files/fulltext/PMID32678276_Kam2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion states that ethosuximide was effective against SWDs in the aged transgenic mice during the mixed state and neutral in sleep and waking immobility.",
+    "snippet": "we found ethosuximide effective against SWDs in aged APP/PS1 mice during the mixed state but being neutral in sleep and waking immobility.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 2",
+    "artifact": "files/fulltext/PMID32678276_Kam2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The experimental animals were eleven male transgenic mice aged 17 to 18 months.",
+    "snippet": "Eleven 17- to 18-month-old male APPswe/PS1dE9 (APP/PS1) mice",
+    "surface": "body",
+    "anchor": "Methods, Animals",
+    "artifact": "files/fulltext/PMID32678276_Kam2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that the behavioural state proved an important determinant of the SWD responses and that all significant drug effects except atropine were seen only in a certain state.",
+    "snippet": "The behavioral state proved to be an important determinant of the SWD responses to treatment, since all significant drug effects, with the exception of atropine, were seen only in a certain state.",
+    "surface": "body",
+    "anchor": "Introduction/Results overview paragraph",
+    "artifact": "files/fulltext/PMID32678276_Kam2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The mechanism paragraph attributes ethosuximide's action to reduction of T-type calcium currents in thalamic neurons by citation; no current was measured in this paper.",
+    "snippet": "ESM reduces T-type Ca2+ currents in thalamic neurons34",
+    "surface": "body",
+    "anchor": "Discussion, paragraph on spectral effects",
+    "artifact": "files/fulltext/PMID32678276_Kam2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 4 top row read as an image (SWD event number per hour of state): sleep saline about 128 and ethosuximide about 115, no star; waking immobility saline about 88 and ethosuximide about 40, no star; mixed state saline about 108 and ethosuximide about 17, starred.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4 top row bars: Sleep Saline about 128, ESM about 115; Waking immobility Saline about 88, ESM about 40; Mixed Saline about 108, ESM about 17 with *.",
+    "surface": "figure",
+    "anchor": "Figure 4, top row (JPEG raster)",
+    "artifact": "files/figures/PMID32678276_r2/41598_2020_68845_Fig4_HTML.jpg",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}

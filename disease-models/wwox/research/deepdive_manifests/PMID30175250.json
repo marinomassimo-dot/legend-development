@@ -1,0 +1,218 @@
+{
+ "schema_version": 2,
+ "pmid": "30175250",
+ "doi": "10.1038/s42003-018-0099-2",
+ "receipt": "FTR-20261022-30175250-01",
+ "landing": [
+  "FTR-20261022-30175250-01",
+  "repurposing_10h_scientist-b_20261022b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 1197,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-22: 'Yamakawa K[au]' 1197; with (WWOX OR Wwox) 0. Initials-level author string, may pool homonyms.",
+  "research_type": "experimental_lab",
+  "weighting": "Transferable literature (NOT WWOX EVIDENCE); the group has no WWOX publications on this string; credibility is judged from the design in the paper, not the laboratory.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID30175250_Ogiwara2018_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement (it licenses nothing about the literature outside this file)."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 67,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-30175250-01",
+    "target": "Reference 59: Bomben 2016, layer VI Cacna1a deletion and T-type current in relay neurons",
+    "question": "Does the cited paper quantify the T-type current increase against a wild-type arm, and at what age? (parked: body not lawfully retrievable)",
+    "status": "open - cited, parked in the R2b note"
+   },
+   {
+    "id": "MH-30175250-02",
+    "target": "Reference 38: the earlier Scn2a knockout mouse",
+    "question": "Did that earlier paper test ethosuximide in the heterozygous knockout with a wild-type comparison?",
+    "status": "open - cited, not read"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 30175250, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "registry_records.py get --pmid and fulltext_receipts.py status --pmid returned nothing; paper_packet.py claim succeeded for scientist-b."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-22",
+  "route": "PubMed esummary for 30175250 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "No retraction, expression of concern or erratum is visible on the PubMed record for this PMID in the queries run; that absence is a statement about those queries.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 67,
+   "references_screened": 66,
+   "references_with_doi": 66,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID30175250_Ogiwara2018_PMC_r2.xml",
+   "sha256": "67a85498d40851a25d8580408b9d5a5e9043c1bd667be1bdc007d8186eaa4fab",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=6115194&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "67a85498d40851a25d8580408b9d5a5e9043c1bd667be1bdc007d8186eaa4fab"
+   }
+  },
+  {
+   "path": "files/figures/PMID30175250_r2/nihms-984331-f0005.jpg",
+   "sha256": "bab43b14f392df553d80a5349ad55c7cf2e18b5e572c3338c99bc34c7e790a8e",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC6115194",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "bab43b14f392df553d80a5349ad55c7cf2e18b5e572c3338c99bc34c7e790a8e"
+   },
+   "note": "Figure 5 raster (JPEG) opened as an image; the raster is the native surface, no PDF render was needed."
+  },
+  {
+   "path": "files/supplement/PMID30175250_r2/NIHMS984331-supplement-1.pdf",
+   "sha256": "5e00abf37fe381f12df913a83e61fabaaf16e1e68aad88e4e07cbb78695ab49a",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC6115194",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "5e00abf37fe381f12df913a83e61fabaaf16e1e68aad88e4e07cbb78695ab49a"
+   },
+   "note": "Supplementary PDF, 21 pages; PyMuPDF text search for ethosuximide returned no page (the same search finds the gene name, so the layer is live)."
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figure rasters opened as images where stated; every text snippet was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "In the conditional heterozygous deletion in dorsal-telencephalic excitatory neurons, seizures were compared between vehicle and ethosuximide within animals by a paired t-test (t(5) = 5.683, P = 0.0024).",
+    "snippet": "Absence-like seizures in Scn2a fl/+ / Emx1 -Cre mice were effectively suppressed by intraperitoneal injection of ethosuximide, a specific anti-absence drug (paired t -test, vehicle vs. ethosuximide, t (5) = 5.683, ** P = 0.0024)",
+    "surface": "body",
+    "anchor": "Results, section on conditional deletion (Fig. 5)",
+    "artifact": "files/fulltext/PMID30175250_Ogiwara2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The figure legend gives N = 6 for the ethosuximide panel.",
+    "snippet": "efficiently suppressed SWDs in Scn2a fl/+ / Emx1 -Cre mice ( N = 6 )",
+    "surface": "body",
+    "anchor": "Figure 5 legend, panel f",
+    "artifact": "files/fulltext/PMID30175250_Ogiwara2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion states that ethosuximide-sensitive absence-like seizures with bilateral SWDs were demonstrated in mice heterozygous for the patient-derived RX nonsense knock-in mutation.",
+    "snippet": "Here we demonstrated ethosuximide-sensitive absence-like seizures with bilateral SWDs in mice heterozygous for a patient-derived Scn2a -RX nonsense knock-in mutation originally described in a patient with epileptic encephalopathy",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 1",
+    "artifact": "files/fulltext/PMID30175250_Ogiwara2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The figure legend states that all recorded mice were over 8 weeks of age.",
+    "snippet": "All recorded mice were over 8 weeks of age.",
+    "surface": "body",
+    "anchor": "Figure 5 legend, panels d and e",
+    "artifact": "files/fulltext/PMID30175250_Ogiwara2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Results sentence places the ECoG-EMG recordings of the conditional-deletion mice at 6-8 weeks of age, a different age statement from the figure legend.",
+    "snippet": "ECoG-EMG recordings at 6–8 weeks of age detected absence-like seizures with SWDs with EMG suppression in Scn2a fl/+ / Emx1 -Cre",
+    "surface": "body",
+    "anchor": "Results, section on conditional deletion",
+    "artifact": "files/fulltext/PMID30175250_Ogiwara2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion cites, as the authors' own earlier report, that a selective Cacna1a deletion in layer VI pyramidal cells caused upregulation of T-type calcium current in thalamic relay neurons and absence epilepsy (cited, not measured in this paper).",
+    "snippet": "Recently, we reported that a selective Cacna1a gene deletion in cortical layer VI pyramidal cells, which innervate thalamic relay neurons and reticular thalamic neurons, caused upregulation of T-type calcium current in thalamic relay neurons and resulted in absence epilepsy in mice",
+    "surface": "body",
+    "anchor": "Discussion, mechanism paragraph",
+    "artifact": "files/fulltext/PMID30175250_Ogiwara2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 5f read as an image: vehicle group about 35 SWDs per 2.5 h (individual points about 8 to 60), ethosuximide group about 1 to 2; six points per group joined by the paired design; ** bracket.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5f: vehicle about 35 SWDs for 2.5 hr, points about 8 to 60; ethosuximide about 1 to 2; six points per group; ** bracket.",
+    "surface": "figure",
+    "anchor": "Figure 5 panel f (JPEG raster)",
+    "artifact": "files/figures/PMID30175250_r2/nihms-984331-f0005.jpg",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}

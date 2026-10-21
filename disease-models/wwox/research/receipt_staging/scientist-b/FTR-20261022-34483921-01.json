@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-10-22T10:00:00Z",
+ "event_at": "2026-10-22T10:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "event_id": "FTR-20261022-34483921-01",
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "QUESTION_DRIVEN reading (the missing drug-by-genotype interaction test of DL-MECH-170 was the question). Read in full: abstract, Introduction, Materials and Methods, every Results section (phenytoin, trimethadione, NBQX) with legends. The Discussion was read only as far as its first two paragraphs (the printed span ends in the sodium-channel paragraph); the rest was not read.",
+  "Figure 2 (JPEG raster, native surface) opened as an image and every point read (integer Racine scores); Figures 1 and 3 read as captions only. The PMC page lists a supplement; none was opened."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID34483921.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-b_20261022b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "3999183c9ec83da4a15fbfa2d133b2062ba735ce2001a564c6a913430dce39a1",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID34483921_Iizumi2021_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.3389/fphar.2021.711737",
+  "pmid": "34483921"
+ },
+ "workflow": "scientist-b repurposing batch R2b relay 2026-10-22; QUESTION_DRIVEN; NOT WWOX EVIDENCE; PMC efetch XML acquired with no User-Agent; prepared as JSON for the integrator and staged, not appended."
+}

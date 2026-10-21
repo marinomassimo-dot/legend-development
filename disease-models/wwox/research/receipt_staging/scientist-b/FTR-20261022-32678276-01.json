@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-10-22T10:00:00Z",
+ "event_at": "2026-10-22T10:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "not_present"
+ },
+ "event_id": "FTR-20261022-32678276-01",
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "QUESTION_DRIVEN targeted reading (DL-MECH-170 held before opening). Read: abstract, Methods (animals, drugs, design, EEG and statistics paragraphs; paragraphs over about 1,500 characters were printed truncated), Results (every section, with the long paragraphs printed truncated), and the Discussion paragraphs on ethosuximide, levetiracetam, mechanism and limits; the Introduction and the other Discussion paragraphs were not read.",
+  "Figure 4 (JPEG raster, native surface) opened as an image; Figures 1 to 3 and 5 to 7 read as captions only. Table 1 (drug, animal number, dose) was read as text; the exact N for ethosuximide is taken from that table (eight)."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID32678276.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-b_20261022b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "3ba5ccc817d47cb1b49d02989462db244c9d65a0462f41f7bff23a360bb32d80",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID32678276_Kam2020_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1038/s41598-020-68845-y",
+  "pmid": "32678276"
+ },
+ "workflow": "scientist-b repurposing batch R2b relay 2026-10-22; QUESTION_DRIVEN; NOT WWOX EVIDENCE; PMC efetch XML acquired with no User-Agent; prepared as JSON for the integrator and staged, not appended."
+}

@@ -1,0 +1,13 @@
+{
+ "kind": "MECH",
+ "title": "A direct genotype-by-treatment test of a T-type blocker exists in one mouse mutant and runs opposite to the DL-MECH-170 direction: trimethadione lost its effect in the hyperexcitable mutant",
+ "tag": "DATO + INFERENZA",
+ "status": "open",
+ "source": "scientist-b, task REPURP-10H-R2b-B-20261022; deepdive_manifests/PMID34483921.json (GluA1 C811S palmitoylation-deficient mouse, PTZ seizure score, wild-type and mutant arms, two-way ANOVA with interaction); receipt FTR-20261022-34483921-01 (staged). NOT WWOX EVIDENCE.",
+ "causal_statement": "DATO (printed numbers; the trimethadione interaction F recomputes from them to 20.4 against 20.43 printed; the phenytoin interaction recomputes to 23.7 against 26.22 printed, not reproduced exactly): in a mouse mutant with raised seizure susceptibility, trimethadione (an oxazolidinedione, described by the authors as acting through T-type channels by citation, no current measured) lowered the PTZ seizure score in wild type (4.86 to 1.43) and much less in the mutant (4.90 to 4.00), genotype x treatment interaction F(1,43) = 20.43. Phenytoin behaved the same way; the AMPA antagonist did not interact. INFERENZA: this is the only direct drug-by-genotype interaction test of a T-type-class anticonvulsant found for DL-MECH-170 in the searches of 2026-10-22 (PubMed title/abstract queries and a Europe PMC full-text query for genotype-by-treatment wording, titles screened; a zero or a single hit licenses only 'no other paper found in those queries'), and it shows that the interaction can be detected at group sizes of 6 to 20, that it can run in the direction OPPOSITE to the lead (effect lost, not gained, in the mutant), and that a shared PBS control and a ceiling in both vehicle groups shape it. It does not test, and so neither supports nor undermines, the Wwox contrast; it removes the premise that 'a hyperexcitable genotype shows more T-type-blocker effect'.",
+ "falsifier": "Run trimethadione or ethosuximide and a second class in the Wwox three-genotype design with a concurrent vehicle arm per genotype and an interaction test; the present reading is refuted as a general rule if a hyperexcitable genotype shows a larger blocker effect than wild type in a second independent mutant.",
+ "transfer_limit": "One mouse mutant of an AMPA-receptor palmitoylation site, adult males, one provoked endpoint (PTZ, Racine score 0 to 6 over a 20-minute observation, ceiling in both vehicle groups), one blocker class by citation of mechanism, no genotype with a seizure-resistance phenotype; heteroscedastic ordinal data analysed by ANOVA. Not WWOX evidence, symptomatic class, carries no dose, route or paediatric suitability. Not medical advice.",
+ "links": [
+  "[[DL-MECH-170]]"
+ ]
+}
