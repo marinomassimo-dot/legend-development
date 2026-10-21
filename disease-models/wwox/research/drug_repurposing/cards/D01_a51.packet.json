@@ -78,11 +78,11 @@
   "p4_card": {
     "identity": "A51: per the organoid source \"a multi-kinase inhibitor (A51) established to suppress Wnt and MYC expression\". The R3 note treats it as the compound class of a phase-1 adult agent targeting CK1-alpha, CDK7 and CDK9; whether the organoid compound and the clinical agent are the same formulation is carried from that note and not verified here. NOT a MYC inhibitor.",
     "indication_and_transfer": "WOREE as target; origin: a knockout human organoid, the only pharmacological intervention ever applied to a human WWOX-deficient neural model. No patient allele; no Q230P-class context.",
-    "novelty_for_woree": "Already studied in one organoid experiment (one laboratory). NON_TROVATO_NELLA_RICERCA in any animal or patient WWOX system.",
+    "novelty_for_woree": "Already studied in one organoid experiment (one laboratory). NON_TROVATO_NELLA_RICERCA in any animal or patient WWOX system, not established here: no dedicated query is recorded for this compound.",
     "state_of_known_roads": "partial (progenitors yes, layer neurons no), with an exposure-or-toxicity limit that is unmeasured rather than favourable.",
     "pathway_and_objective": "RECUPERO_PROFONDO (downstream lever).",
     "expected_contribution": "Compensation of a downstream signal; not recovery of WWOX function.",
-    "mechanism": "Targets: multiple kinases (CK1-alpha, CDK7, CDK9 per the R3 note); type: inhibition; direction: Wnt and MYC output down; context: organoid progenitors. The R3 reading of the leukaemia paper does not disentangle Wnt, MYC and CDK for A51.",
+    "mechanism": "Targets: multiple kinases (CK1-alpha, CDK7, CDK9 per the R3 note); type: inhibition; direction: Wnt and MYC output down; context: organoid progenitors. The R3 reading of the leukaemia paper does not disentangle Wnt, MYC and CDK for A51, and the Myc effect is stated, not demonstrated (repaired R3 wording).",
     "sources": {
       "internal": [
         "DL-THER-089, DL-MECH-086, CLAIM 003, DL-MOL-003, TX-004",
@@ -99,12 +99,12 @@
     },
     "evidence_for_and_against": {
       "for": [
-        "Progenitor identity and pan-neuronal marking normalised in the knockout organoid."
+        "Progenitor identity and pan-neuronal marking (NeuN) read as recovered in the discovery ledger in the knockout organoid; not significant against wild type is not equivalence."
       ],
       "against": [
         "Layer-neuron production did not move (SATB2, CTIP2).",
         "Causal attribution ambiguous: two pathways suppressed; the MYC lane is not shown suppressed in the one mutant line a clinical paper centres on.",
-        "Adults: a grade 3 hepatic failure at the highest tested level; pharmacokinetics sub-proportional at the top, so the label 'dose-dependent' for transaminase toxicity is not graded by the paper's own tabulation (R3 § 5); no CNS exposure or paediatric record.",
+        "Adults: a grade 3 hepatic failure at the highest tested level; the pharmacokinetic table (very few measurements at two levels, wide variability) supports neither dose proportionality nor its absence, so the label 'dose-dependent' for transaminase toxicity is not graded by the paper's own tabulation (R3 § 5); no CNS exposure or paediatric record.",
         "A neurodevelopmental cost of losing Cdk7 in neurons is measured; CSNK1A1 loss is proposed epileptogenic via excess beta-catenin.",
         "No measured window in which Wnt suppression in a developing brain is safe or unsafe in any selected paper; Wnt activation reduced two of four remodelling markers in an adult epilepsy model (opposite direction, different disease)."
       ],
@@ -115,8 +115,8 @@
     "pharmacology": "Potency in organoids measured at one level (not reproduced); selectivity: not selective (multi-kinase); brain exposure: UNKNOWN; adult pharmacokinetics exist in the R3 note.",
     "paediatrics_and_interactions": "No paediatric record exists in the selected records; the only human exposure data are adult. No suitability is presumed. Interactions: UNKNOWN.",
     "scope_of_checks": {
-      "support_and_replication": "No replication; the review that restates the organoid work writes 'restored' where its own primary shows partial recovery and the significance bracket that would falsify the word is not drawn.",
-      "formal_checks": "R3 readings carry recorded receipts and manifests PASS; blind locator audit of all R3 manifests OWED. The A51 panel values cannot be re-audited against the source.",
+      "support_and_replication": "No replication of the organoid work is recorded in the selected papers.",
+      "formal_checks": "R3 readings carry recorded receipts and manifests PASS; the blind locator audit ran on six R3 readings (129 triples: 46 overshoot, 4 undershoot, 1 unverifiable) and the repairs are unaudited. The A51 panel values cannot be re-audited against the source.",
       "card_inferences_owed_audit": "None added."
     },
     "question_history": [
@@ -158,7 +158,7 @@
   },
   "p4_roadmap_fields": {
     "indication_and_transfer": "WOREE as target; origin: a knockout human organoid, the only pharmacological intervention ever applied to a human WWOX-deficient neural model. No patient allele; no Q230P-class context.",
-    "verification_scope": "{\"support_and_replication\": \"No replication; the review that restates the organoid work writes 'restored' where its own primary shows partial recovery and the significance bracket that would falsify the word is not drawn.\", \"formal_checks\": \"R3 readings carry recorded receipts and manifests PASS; blind locator audit of all R3 manifests OWED. The A51 panel values cannot be re-audited against the source.\", \"card_inferences_owed_audit\": \"None added.\"}"
+    "verification_scope": "{\"support_and_replication\": \"No replication of the organoid work is recorded in the selected papers.\", \"formal_checks\": \"R3 readings carry recorded receipts and manifests PASS; the blind locator audit ran on six R3 readings (129 triples: 46 overshoot, 4 undershoot, 1 unverifiable) and the repairs are unaudited. The A51 panel values cannot be re-audited against the source.\", \"card_inferences_owed_audit\": \"None added.\"}"
   },
   "label_lookup": {
     "status": "NOT_ATTEMPTED"

@@ -46,7 +46,7 @@
     },
     {
       "id": "DR-B01-002",
-      "target_id": "FANCF/FANCA full-length protein, survival, chromosomal aberrations, micronuclei",
+      "target_id": "survival, chromosomal aberrations and micronuclei (phenotypic rescue)",
       "endpoint": "phenotypic rescue head-to-head with a comparator read-through agent",
       "direction": "NO_CHANGE",
       "source": "independent Fanconi-anaemia study (known-roads reading 2, 40544182); NOT WWOX EVIDENCE",
@@ -60,7 +60,7 @@
         "cell_type": "lymphoblastoid and dermal fibroblast lines",
         "developmental_stage": "culture"
       },
-      "measured_result_note": "MEASURED NO PHENOTYPIC RESCUE (survival, aberrations, micronuclei) and NMD not relieved, while one protein arm showed no effect and another about 9 percent of control; the effect that was seen is attributed by the authors to TBK1/IKKe inhibition, not read-through. Encoded NO_CHANGE.",
+      "measured_result_note": "MEASURED NO PHENOTYPIC RESCUE (survival, aberrations, micronuclei) and NMD not relieved, while full-length protein was induced in one arm (FANCA, about 9 percent of control) and not in the other; the endpoint encoded here is the phenotypic rescue only, so the protein induction is stated in this note and not in the direction code; the effect that was seen is attributed by the authors to TBK1/IKKe inhibition, not read-through. Encoded NO_CHANGE for the phenotypic endpoint.",
       "receipt": "FTR-20261020-40544182-01"
     }
   ],
@@ -127,7 +127,7 @@
   "not_known": [
     "Whether any WWOX PTC allele would be read through, and at what efficiency: no count of PTC alleles and no PTC-context annotation exist.",
     "Whether full-length protein produced by read-through of a WWOX PTC would function.",
-    "About 57 percent of classifiable individuals in the largest genotype-classified cohort are null/null (as stated in the known-roads note): for them no recoverable endogenous substrate for any allele-specific lever is established."
+    "About 57 percent of classifiable individuals in the largest genotype-classified cohort are null/null (56.8 percent in the abstract of the 2025 Neurology cohort of 50 individuals from 45 families, PMID 40875931, confirmed by PubMed abstract on 2026-10-21; the null class pools nonsense, frameshift, splice and deletion alleles, so it is not a nonsense count): for them no recoverable endogenous substrate for any allele-specific lever is established."
   ],
   "evidence_against": [
     "No phenotypic rescue in the one comparator-controlled study.",

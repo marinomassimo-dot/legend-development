@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "23b2a4839e74483cbaf3065aa054581b92661ed919473c3f1398d0610407ceaf",
+  "input_sha256": "5bdf78195026de0b23146d6d39c33d5334a28ca4a70228a9e2611ef07dbadc5f",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -74,7 +74,7 @@
     "abstention_card": {
       "kind": "ABSTENTION",
       "missing_datum": "Where Q230P is surveilled: WWOX is cytosolic, and no measurement places the variant in ER or cytosolic quality control. Without that, a UPR or ERAD modulator has no stated target in this lesion.",
-      "search_record": "NON_TROVATO_NELLA_RICERCA: no WWOX test of any such agent in the records (2026-10-20).",
+      "search_record": "NOT ESTABLISHED HERE, not a confirmed absence. The records of 2026-10-20 hold no WWOX test of any such agent. Query run 2026-10-21 (session clock), PubMed title/abstract: WWOX AND (HSP70 OR HSC70 OR Hsp90 OR chaperone OR heat shock OR HSPA8 OR endoplasmic reticulum OR unfolded protein response OR ERAD): 11 records, none a test of a UPR or ERAD modulator on a WWOX variant. The only placement statements in the repository are an unmeasured remark in the first Q230P report that ER quality control is the likelier cause of protein loss (a Discussion sentence, with no ER fractionation or inhibitor in its Methods or Results as searched by string) and, for a different SDR missense (P252A), a lysosome-sensitive and proteasome-inhibitor-insensitive loss in non-neural cells (repository reading of PMID 41124647). Limits: title/abstract only; zeros not re-runnable offline.",
       "adjacent_context_not_wwox_evidence": [
         "selective IRE1/XBP1s activators raised post-transcriptionally variant protein, surface protein and current for GABRA1 variants (research compounds, not approved drugs; HEK293T and one iPSC line)",
         "HRD1 co-expression lowered mutant and wild-type subunit alike and lowered surface receptor: the wrong sign for a loss-of-function lesion"
@@ -84,7 +84,7 @@
     "p4_card": {
       "identity": "ER-proteostasis regulators (IRE1/XBP1s arm activators, ERAD modulators)",
       "indication_and_transfer": "WOREE as target; no candidate molecule is carded because the datum below is missing.",
-      "novelty_for_woree": "NON_TROVATO_NELLA_RICERCA: no WWOX test of any such agent in the records (2026-10-20).",
+      "novelty_for_woree": "NOT ESTABLISHED HERE, not a confirmed absence. The records of 2026-10-20 hold no WWOX test of any such agent. Query run 2026-10-21 (session clock), PubMed title/abstract: WWOX AND (HSP70 OR HSC70 OR Hsp90 OR chaperone OR heat shock OR HSPA8 OR endoplasmic reticulum OR unfolded protein response OR ERAD): 11 records, none a test of a UPR or ERAD modulator on a WWOX variant. The only placement statements in the repository are an unmeasured remark in the first Q230P report that ER quality control is the likelier cause of protein loss (a Discussion sentence, with no ER fractionation or inhibitor in its Methods or Results as searched by string) and, for a different SDR missense (P252A), a lysosome-sensitive and proteasome-inhibitor-insensitive loss in non-neural cells (repository reading of PMID 41124647). Limits: title/abstract only; zeros not re-runnable offline.",
       "state_of_known_roads": "R1 § 1 (41178115, 38731820); known-roads § 2.8 (DIS-004 wrong compartment)",
       "pathway_and_objective": "RECUPERO_PROFONDO.",
       "expected_contribution": "UNKNOWN",
