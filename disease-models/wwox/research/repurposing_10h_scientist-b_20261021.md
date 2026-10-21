@@ -203,3 +203,17 @@ Depth: `partial_fulltext_read` (whole PMC XML body; Figures 6 and 7 as 200 dpi p
 
 **Comparison with the lead.** Axis A: strongest published interaction-tested comparison in R2 (and it is mostly null for genotype). Axis B: site-of-action inference is weak (memantine equal). Axis C: yes, the interaction null on number. Axis D: none. **Net: reduces confidence that an ethosuximide benefit is genotype-restricted as such; keeps the lead alive only as a statement about a derived measure in a floor-limited arm.**
 
+## 11. PMID 35184274 (Riban 2022): stiripentol suppresses spike-wave discharges and blocks T-type channels. NOT WWOX EVIDENCE
+
+Depth: `partial_fulltext_read` (whole PMC XML body; Figures 1, 3 and 4 as page renders; Figure 2 caption only). Manifest `PMID35184274.json` STRICT PASS, 8 locators. Receipt staged `FTR-20261021-35184274-01`.
+
+**What it establishes.** Stiripentol suppressed spike-wave discharges in two rat models without a mutation-versus-wild-type comparison (a low-dose pentylenetetrazol model in non-epileptic rats, and the WAG/Rij genetic absence strain, including after a delta-GABA-A agonist aggravated the discharges), and blocked the three human T-type isoforms in vitro at about 37 to 69 micromolar (n = 3 cells per concentration).
+
+**What it does not support, and why it still matters here.**
+- *Not a clean second T-type class.* Stiripentol is a GABA-A modulator first (alpha3 and delta preference); the authors say they cannot separate T-type from GABA-A alpha3 effects in vivo and can only argue both are involved. So it is not the "different-class T-type blocker" the lead's falsifier names; at most it is an additional drug whose profile includes T-type block. No firing, no occupancy, no selectivity panel beyond Cav3.
+- *A PTZ-provoked response in animals without any mutation is pharmacologically suppressible by a T-type-active drug* (and the vehicle response decays within about 40 min on its own, so the window for any drug effect is the first 40 minutes). This echoes the Cntnap2 paper's wild-type latency result and is the second item in R2 showing a T-type-active drug acting on a PTZ-provoked response without a mutation.
+- *Industry authorship* (four of five employees of the drug's marketing-authorisation holder).
+- Dravet-syndrome framing: the authors suggest T-type block could be involved in stiripentol's specificity in Dravet syndrome, whereas the Harman 2023 paper (section 4) found a T-type inhibitor ineffective in a Dravet mouse. The two papers are not reconciled by either; stiripentol's effect in Dravet is attributed by the authors to absence-type seizures, not to the convulsive ones.
+
+**Comparison with the lead.** Axis A: none (no genotype comparison). Axis B: weak support that a second, differently-built drug with T-type block suppresses PTZ responses in animals without a mutation; dilutes the "genotype-specific" reading. Axis C: GABA-A mechanism is an explicit alternative. Axis D: none (rat, acute). **Net: marginal; adds a model of "provoked response in wild type is suppressible by a T-type-active drug", which the Wwox wild-type panels need to be read against.**
+
