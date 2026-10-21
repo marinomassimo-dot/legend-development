@@ -34,9 +34,9 @@ annotations is reported below whatever it happens to be.
 | Nodes carrying a biological scale | 0 |
 | Deep-dive manifests read | 517 |
 | …of which bound to at least one claim | 106 |
-| Propositions scanned | 8053 |
-| …carrying a relational connective | 1609 |
-| …locator-backed candidates | 1569 |
+| Propositions scanned | 8055 |
+| …carrying a relational connective | 1615 |
+| …locator-backed candidates | 1575 |
 | …locator-backed and bound to a claim | 409 |
 
 The scanned population is three declared surfaces and no others: every claim
@@ -320,12 +320,12 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 | Source | Candidates |
 |---|---|
 | claim_title | 21 |
-| locator_proposition | 1569 |
+| locator_proposition | 1575 |
 | working_model_mirror_title | 19 |
 
 | Connective class (lexical) | Candidates |
 |---|---|
-| AMBIGUOUS_LEXICAL_FORM | 1128 |
+| AMBIGUOUS_LEXICAL_FORM | 1134 |
 | ARROW | 18 |
 | ASSOCIATIVE | 76 |
 | CAUSAL | 302 |
@@ -376,6 +376,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 520 input files; digest
-`0c1e8d441bb4c2f9`. Sources: the claim, paper and
+`ab42fb77248c8ec0`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
