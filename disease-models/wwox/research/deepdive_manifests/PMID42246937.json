@@ -1,0 +1,346 @@
+{
+ "schema_version": 2,
+ "pmid": "42246937",
+ "doi": "10.1002/epi.70308",
+ "pmcid": "PMC13525577",
+ "receipt": "FTR-20261021-42246937-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "ILAE-style review by DEE clinicians and neuropsychologists, several with industry advisory roles listed in the conflict statement; a narrative instrument review, NOT WWOX EVIDENCE. One single-patient figure."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "(\"developmental and epileptic encephalopath*\"[Title/Abstract]) AND (\"clinical outcome assessment*\"[Title/Abstract] OR \"outcome measure*\"[Title/Abstract])",
+    "count": 50,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "\"floor effect*\"[Title/Abstract] AND (Vineland[Title/Abstract] OR Bayley[Title/Abstract]) AND epilep*[Title/Abstract]",
+    "count": 5,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 80,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42246937 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 80,
+   "references_screened": 61,
+   "references_with_doi": 61,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 19
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42246937_Correale2026_PMC.xml",
+   "sha256": "8a0574216b641a4ee4b4fa77a938da63f4bc5c9bc0dd79bb801fbc78a19221d2",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML; body, tables cell-wise, figure legends.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13525577/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "8a0574216b641a4ee4b4fa77a938da63f4bc5c9bc0dd79bb801fbc78a19221d2"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42246937_r2/PMC13525577.1.pdf",
+   "sha256": "8d2ce9153bb20b93d73400f3c06cd43d57a531a588b9ca6eaf2aa390d89037b5",
+   "kind": "article_binary",
+   "note": "PMC open-data bucket PDF; source of the page render.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13525577.1/PMC13525577.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/page_renders/PMID42246937/PMC13525577.1_p9-09.png",
+   "sha256": "fe5a36328e3d42120d12e293952fe4f906369269e787175b1c45017f7595a9f8",
+   "kind": "figure",
+   "note": "PDF page 9 rendered at 400 dpi (the page carries Figure 1 and was flagged likely vector by paper_packet rank); opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm page render",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42246937_r2/PMC13525577.1.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 400 -f 9 -l 9 -png <pdf> <out>"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Disease-specific cognitive and behavioural outcome assessments are lacking for most DEEs.",
+    "snippet": "Disease‐specific COAs for cognition and behavior are lacking for most DEEs.",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42246937_Correale2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Developmental impairment in DEE arises from the combination of epileptic activity and underlying aetiology.",
+    "snippet": "Developmental impairment arises from the combined effect of epileptic activity and underlying etiologies,",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42246937_Correale2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Repurposing is named as a growing strategy for DEEs.",
+    "snippet": "increasing interest has been given to drug repurposing strategies aimed at identifying existing, well‐tolerated drugs that may be effective in specific genetic epilepsies.",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42246937_Correale2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Wechsler standard scores do not go below 40 and the simplest items presume a developmental age near 3 years.",
+    "snippet": "In addition, standard scores on Wechsler tests do not go below 40.",
+    "anchor": "Selecting instruments (Floor effects)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42246937_Correale2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In a Dravet cohort standard cognitive measures showed pronounced floor effects and limited ability to capture change.",
+    "snippet": "standard cognitive measures, including Wechsler scales and the Bayley Scales of Infant and Toddler Development, showed pronounced floor effects and limited ability to capture change over time",
+    "anchor": "Selecting instruments (Floor effects)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42246937_Correale2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fixed-threshold responder definitions on standardised tests may miss meaningful within-patient change.",
+    "snippet": "Traditional responder definitions based on fixed thresholds on standardized tests may be insufficient, as small within‐patient changes can be meaningful even when standardized scores show minimal or no improvement.",
+    "anchor": "Selecting instruments (Definition of a Responder)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42246937_Correale2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Responders may be identified by subtle functional improvements, stabilisation or re-emergence of micro-skills anchored to the individual.",
+    "snippet": "Responder definitions may be more informative when anchored to individual contexts rather than normative expectations, recognizing stabilization, reemergence of microskills, or modest shifts in participation as potential indicators of benefit.",
+    "anchor": "Selecting instruments (Definition of a Responder)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42246937_Correale2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Interpretation may rely on disorder-specific natural history rather than comparison with typical development.",
+    "snippet": "Rather than comparison with typically developing populations, interpretation may benefit from reference to disorder‐specific natural history data.",
+    "anchor": "Selecting instruments",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42246937_Correale2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Children with a developmental age under about 3 years may be unable to engage with Wechsler-type tasks, so a floor is reached before true ability is.",
+    "snippet": "Children with significant delays (developmental age < 3 years) may be unable to meaningfully engage with the tasks.",
+    "anchor": "Selecting instruments (Floor effects)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42246937_Correale2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Behaviour checklists normed on typically developing children lack ID-specific norms and may over- or under-estimate problems.",
+    "snippet": "Both the SDQ and CBCL lack ID‐specific norms, and thus these tools may over‐ or underestimate behavioral problems.",
+    "anchor": "Assessing behavior and emotions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42246937_Correale2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Autism screening and diagnostic tools may be unreliable in severe or profound ID.",
+    "snippet": "may demonstrate reduced reliability and validity when applied to children with severe/profound ID",
+    "anchor": "Assessing behavior and emotions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42246937_Correale2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Age equivalents showed stability or gains in subdomains when standardised scores were unchanged or declined (fenfluramine in infants with Dravet syndrome, as described by the review).",
+    "snippet": "This allowed for the demonstration of stability or gains in specific subdomains, even when standardized scores remained unchanged or declined.",
+    "anchor": "Box 2, Age Equivalents",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42246937_Correale2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Goal attainment scaling defines individualised observable goals with caregivers rated on a standardised scale; it needs rigorous goal-setting.",
+    "snippet": "GAS allowed individualized, observable goals to be defined with caregivers and then rated on a standardized scale.",
+    "anchor": "Box 2, Goal Attainment Scaling",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42246937_Correale2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Caregivers may value stability as meaningful and follow-up should use multiple time points.",
+    "snippet": "For some children and families, achieving stability as opposed to developmental progress may be seen as meaningful by caregivers.",
+    "anchor": "Other issues, Follow-up period",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42246937_Correale2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A follow-up of 12 months or more is advised where natural history is limited.",
+    "snippet": "it may be more informative to allow follow‐up periods that are sufficiently long (12+ months) to observe subtle developmental shifts, rather than scheduling retests at very short intervals",
+    "anchor": "Other issues, Follow-up period",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42246937_Correale2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In Dravet longitudinal data over 12 to 24 months changes in adaptive functioning were small and domain-specific.",
+    "snippet": "over 12–24 months, changes in adaptive functioning are small and domain‐specific",
+    "anchor": "Other issues, Follow-up period",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42246937_Correale2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "One to three Vineland-III raw-score points may be considered meaningful by caregivers and clinicians.",
+    "snippet": "even 1–3 Vineland‐III raw score points (≈2–3 GSV points) may be considered meaningful by caregivers/clinicians",
+    "anchor": "Other issues, Follow-up period",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42246937_Correale2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Blinded assessors reduce risk of bias; dichotomising continuous measures loses information; missing data are to be anticipated.",
+    "snippet": "Risk of bias can also be reduced by having evaluations conducted by blinded assessors who are not involved in other aspects of the trial",
+    "anchor": "Other issues, Ensuring quality administration",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42246937_Correale2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Dichotomising is discouraged.",
+    "snippet": "Dichotomizing continuous measures into simple categories (e.g., converting a continuous variable into a binary outcome) can lead to a loss of valuable information and should be avoided whenever possible.",
+    "anchor": "Other issues, Ensuring quality administration",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42246937_Correale2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Missing data and variability should be anticipated rather than treated as exceptional.",
+    "snippet": "In studies involving children with DEEs, missing data and increased variability should be anticipated rather than treated as exceptional.",
+    "anchor": "Other issues, Ensuring quality administration",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42246937_Correale2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Within-patient control through trajectory is proposed where natural history is unavailable.",
+    "snippet": "allow the child to serve as their own control to evaluate treatment impact on developmental progress, decline, or maintenance.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42246937_Correale2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review states more validation work is needed on how existing measures perform in DEEs.",
+    "snippet": "There remains also a clear need for further validation work to determine how well existing cognitive and behavioral measures perform in children with DEEs.",
+    "anchor": "Conclusions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42246937_Correale2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 1: one child, interpersonal relationships domain, 38 to 44 months: raw score 9 to 14, age equivalent 4 to 7 months, growth scale value 30 to 46.7, V-scale standard score 2 to 2.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 bar chart and table (single child with a HUWE1 variant): T1 at 38 months chronological age raw 9, V-scale 2, age equivalent 4 months, GSV 30; T7 at 44 months raw 14, V-scale 2, age equivalent 7 months, GSV 46.7.",
+    "anchor": "Figure 1, page 9 render at 400 dpi",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID42246937/PMC13525577.1_p9-09.png",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13525577/fullTextXML returned HTTP 200 with a JATS body on 2026-10-21; the declared article_text artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}
