@@ -30,6 +30,24 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-21"
+ "CURRENT_STATE": "CLAIMED",
+ "assigned_on": "2026-10-21",
+ "TASK_ACK": {
+  "actor": "scientist-a",
+  "at": "2026-10-21T08:00:00Z",
+  "directive_version": 1,
+  "generation": 1,
+  "understanding": "Group R1 (Q230P-class missense proteostasis): read the 16 selected papers in tier order as primaries, NOT WWOX EVIDENCE at class level, to qualify or refute the premise of three recovered historic Q230P dossiers (UNREAD_PREMISE); KEEP/DISCARD/INCONCLUSIVE per proposal; answer the five R1 questions; receipts staged, never recorded; then HELD-partial rows with a written question, then adjacent searches."
+ },
+ "TASK_CLAIM": {
+  "actor": "scientist-a",
+  "at": "2026-10-21T08:00:00Z",
+  "branch": "task/REPURP-10H-R1-A-20261021",
+  "worktree": ".claude/worktrees/r1-a",
+  "reading_claims": [],
+  "note": "Reading claims taken per paper with paper_packet.py claim."
+ },
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": [],
+ "MILESTONE_LOG": []
 }
