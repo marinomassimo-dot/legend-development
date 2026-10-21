@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261021-32023956-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "32023956",
+  "doi": "10.3390/ijms21030956"
+ },
+ "event_at": "2026-10-21T22:32:42Z",
+ "analysis_at": "2026-10-21T22:32:42Z",
+ "analysis_time_precision": "second",
+ "workflow": "ad-hoc primary read by scientist-a under REPURP-10H-R1-A-20261021: paper_packet claim, Europe PMC fullTextXML, four figure images opened; the tables (Tables 1 to 4, A1 and A2) were not opened individually",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID32023956_Lukas2020_PMC7037350.xml",
+ "source_fingerprint": "b2e27552a0c0f3ad7f44a103cadc4ea121725f8aab3d72466fba46af3d8f676e",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID32023956.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

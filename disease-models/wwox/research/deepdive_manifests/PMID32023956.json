@@ -1,0 +1,363 @@
+{
+ "schema_version": 2,
+ "pmid": "32023956",
+ "doi": "10.3390/ijms21030956",
+ "receipt": "FTR-20261021-32023956-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named and deduplicated by the Orchestrator's selection file; the per-paper M0 packet and receipt status were run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "The reading is a primary-evidence read of a NOT WWOX EVIDENCE paper; the dossier is the analysis note section, no WWOX commit candidate is implied."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No consolidated baseline claim is narrowed or reversed by this reading; a blind audit is declared OWED where a candidate proposes it."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Not requested; discovery leads are staged separately if any."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a candidate card; BLOCK-1 holds, class level only."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "University Medical Center Rostock neurology and neuroscience centre with a genetic-testing company co-author (from the affiliations and disclosures); HEK293H overexpression and a comparison with a regulatory assay. NOT WWOX EVIDENCE; class-level lesson on chaperone amenability calls."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "pharmacological chaperone AND amenability AND Fabry",
+    "count": 43,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "migalastat AND amenable AND variants",
+    "count": 28,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "chaperone responsiveness AND inter-assay",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "PubMed counts, dated; a zero from a title/abstract query licenses 'no paper is indexed', never 'this was never measured' (D-37)."
+ },
+ "multihop": {
+  "references_enumerated": 25,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "25 references enumerated from the JATS; none is WWOX-related."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 32023956 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-21 via PubMed efetch for PMID 32023956: publication types ['Journal Article']; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 25,
+   "references_screened": 23,
+   "references_with_doi": 23,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID32023956_Lukas2020_PMC7037350.xml",
+   "sha256": "b2e27552a0c0f3ad7f44a103cadc4ea121725f8aab3d72466fba46af3d8f676e",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC7037350: whole article; every text locator is matched against it.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7037350/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "b2e27552a0c0f3ad7f44a103cadc4ea121725f8aab3d72466fba46af3d8f676e",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID32023956/ijms-21-00956-g001.jpg",
+   "sha256": "91e386e6b33cfee9730182d3d00b8fe6973d898e2ead1ed24998ce53355341fc",
+   "kind": "figure",
+   "note": "Figure image g001 from the supplementaryFiles container, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7037350/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "91e386e6b33cfee9730182d3d00b8fe6973d898e2ead1ed24998ce53355341fc",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID32023956/ijms-21-00956-g002.jpg",
+   "sha256": "89285a45cce1490bb55fa0a2a052ef97976c9c9208a359febb7ce50cebb2e550",
+   "kind": "figure",
+   "note": "Figure image g002 from the supplementaryFiles container, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7037350/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "89285a45cce1490bb55fa0a2a052ef97976c9c9208a359febb7ce50cebb2e550",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID32023956/ijms-21-00956-g0A1.jpg",
+   "sha256": "1d8ba7579cc6bd6a635021856e5eccf09adcbc0b1c9015c312b1ce40b6ce1cfa",
+   "kind": "figure",
+   "note": "Figure image g0A1 from the supplementaryFiles container, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7037350/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "1d8ba7579cc6bd6a635021856e5eccf09adcbc0b1c9015c312b1ce40b6ce1cfa",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID32023956/ijms-21-00956-g0A2.jpg",
+   "sha256": "b5c59fabc7bffc1edfa4693eac2099efcd9bf207e739abbf63197b487e754fc4",
+   "kind": "figure",
+   "note": "Figure image g0A2 from the supplementaryFiles container, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7037350/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "b5c59fabc7bffc1edfa4693eac2099efcd9bf207e739abbf63197b487e754fc4",
+    "derived": false
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE (GLA, a lysosomal enzyme; approved pharmacological chaperone class). Between two similar cell assays the amenable/non-amenable call disagrees for 12.9 percent of 178 variants.",
+    "snippet": "The relatively weak inter-assay correlation observed in the Bland",
+    "anchor": "Results 2.3, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32023956_Lukas2020_PMC7037350.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GLA (alpha-galactosidase A) missense variants overexpressed in HEK293H cells, enzyme activity with and without an active-site-binding pharmacological chaperone, an in-house assay compared with a GLP-validated assay for 178 variants; published patient cohort observations discussed; NOT a WWOX system",
+     "genotype": "GLA missense and small variants (178 compared); no WWOX",
+     "endpoint": "enzyme activity as percent of wild type, change after chaperone, amenability class, Bland-Altman agreement"
+    }
+   },
+   {
+    "proposition": "Agreement analysis: Bland-Altman limits are wide (baseline activity about -194 to +179 percent difference, with the chaperone about -151 to +176, activity change about -243 to +228), the authors read it as significant disagreement depending on the laboratory.",
+    "snippet": "This analysis indicated significant disagreement in the measurement of enzyme activity depending on the examining laboratory.",
+    "anchor": "Results 2.2, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32023956_Lukas2020_PMC7037350.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GLA (alpha-galactosidase A) missense variants overexpressed in HEK293H cells, enzyme activity with and without an active-site-binding pharmacological chaperone, an in-house assay compared with a GLP-validated assay for 178 variants; published patient cohort observations discussed; NOT a WWOX system",
+     "genotype": "GLA missense and small variants (178 compared); no WWOX",
+     "endpoint": "enzyme activity as percent of wild type, change after chaperone, amenability class, Bland-Altman agreement"
+    }
+   },
+   {
+    "proposition": "Figure 2 read: percent differences between assays scatter across about -200 to +200 percent at low activity (most variants cluster near zero activity) and narrow at high activity; the activity-change panel carries one extreme point near -750 percent; limits of agreement printed on the panels as listed.",
+    "snippet": "analysis of α-Gal A activity for GLA variants expressed as percentage difference in activity (%WT)",
+    "anchor": "Figure 2a-c (Bland-Altman, in-house against GLP-validated assay)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID32023956/ijms-21-00956-g002.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "GLA (alpha-galactosidase A) missense variants overexpressed in HEK293H cells, enzyme activity with and without an active-site-binding pharmacological chaperone, an in-house assay compared with a GLP-validated assay for 178 variants; published patient cohort observations discussed; NOT a WWOX system",
+     "genotype": "GLA missense and small variants (178 compared); no WWOX",
+     "endpoint": "enzyme activity as percent of wild type, change after chaperone, amenability class, Bland-Altman agreement"
+    },
+    "qualifies": "entries[1]",
+    "qualifies_needle": "This analysis indicated significant disagreem"
+   },
+   {
+    "proposition": "Text and panel disagree on one correlation: the text gives r 0.9448 for activity with the chaperone, the panel prints r 0.8771 (R-squared 0.7692, which equals 0.8771 squared) for Figure 1B; the other two panels match the text (baseline r 0.8729; change r 0.7992).",
+    "snippet": "Moreover, a similar correlation was observed between the two datasets comparing the α-Gal A activity with DGJ (r = 0.9448",
+    "anchor": "Results 2.2, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32023956_Lukas2020_PMC7037350.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GLA (alpha-galactosidase A) missense variants overexpressed in HEK293H cells, enzyme activity with and without an active-site-binding pharmacological chaperone, an in-house assay compared with a GLP-validated assay for 178 variants; published patient cohort observations discussed; NOT a WWOX system",
+     "genotype": "GLA missense and small variants (178 compared); no WWOX",
+     "endpoint": "enzyme activity as percent of wild type, change after chaperone, amenability class, Bland-Altman agreement"
+    }
+   },
+   {
+    "proposition": "Figure 1B read: the panel box prints Pearson r 0.8771 with 95 percent interval 0.8381 to 0.9071 and R squared 0.7692, not 0.9448.",
+    "snippet": "Linear correlation analysis of α-galactosidase A (α-Gal A) activity presented as absolute increase",
+    "anchor": "Figure 1B (activity with the chaperone, in-house against GLP-validated)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID32023956/ijms-21-00956-g001.jpg",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "GLA (alpha-galactosidase A) missense variants overexpressed in HEK293H cells, enzyme activity with and without an active-site-binding pharmacological chaperone, an in-house assay compared with a GLP-validated assay for 178 variants; published patient cohort observations discussed; NOT a WWOX system",
+     "genotype": "GLA missense and small variants (178 compared); no WWOX",
+     "endpoint": "enzyme activity as percent of wild type, change after chaperone, amenability class, Bland-Altman agreement"
+    },
+    "contradicts": "entries[3]",
+    "contradicts_needle": "r = 0.9448"
+   },
+   {
+    "proposition": "The classification rule matters as much as the assay: swapping the amenability definition between datasets moved 9.6 percent of variants, and the most frequent non-amenable finding was no calculable fold change because baseline activity was zero.",
+    "snippet": "The most frequent finding among the non",
+    "anchor": "Results 2.4, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32023956_Lukas2020_PMC7037350.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GLA (alpha-galactosidase A) missense variants overexpressed in HEK293H cells, enzyme activity with and without an active-site-binding pharmacological chaperone, an in-house assay compared with a GLP-validated assay for 178 variants; published patient cohort observations discussed; NOT a WWOX system",
+     "genotype": "GLA missense and small variants (178 compared); no WWOX",
+     "endpoint": "enzyme activity as percent of wild type, change after chaperone, amenability class, Bland-Altman agreement"
+    }
+   },
+   {
+    "proposition": "A single absolute threshold gave the best agreement at 7 percent, which reduced the number of amenable variants.",
+    "snippet": "Interestingly, the best achievable agreement was found at a threshold of 7%.",
+    "anchor": "Results 2.4, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32023956_Lukas2020_PMC7037350.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GLA (alpha-galactosidase A) missense variants overexpressed in HEK293H cells, enzyme activity with and without an active-site-binding pharmacological chaperone, an in-house assay compared with a GLP-validated assay for 178 variants; published patient cohort observations discussed; NOT a WWOX system",
+     "genotype": "GLA missense and small variants (178 compared); no WWOX",
+     "endpoint": "enzyme activity as percent of wild type, change after chaperone, amenability class, Bland-Altman agreement"
+    }
+   },
+   {
+    "proposition": "High-baseline variants dominate the discordant calls and may be benign: about a third of differently classified variants have more than half of wild-type activity.",
+    "snippet": "may be benign with an uncertain clinical significance",
+    "anchor": "Results 2.3, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32023956_Lukas2020_PMC7037350.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GLA (alpha-galactosidase A) missense variants overexpressed in HEK293H cells, enzyme activity with and without an active-site-binding pharmacological chaperone, an in-house assay compared with a GLP-validated assay for 178 variants; published patient cohort observations discussed; NOT a WWOX system",
+     "genotype": "GLA missense and small variants (178 compared); no WWOX",
+     "endpoint": "enzyme activity as percent of wild type, change after chaperone, amenability class, Bland-Altman agreement"
+    }
+   },
+   {
+    "proposition": "The authors state there is no established correlation between the in-vitro activity increase and clinical benefit.",
+    "snippet": "To date, there is no established correlation between the biochemical enzyme activity increase induced by DGJ and the clinical benefit.",
+    "anchor": "Discussion, paragraph 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32023956_Lukas2020_PMC7037350.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GLA (alpha-galactosidase A) missense variants overexpressed in HEK293H cells, enzyme activity with and without an active-site-binding pharmacological chaperone, an in-house assay compared with a GLP-validated assay for 178 variants; published patient cohort observations discussed; NOT a WWOX system",
+     "genotype": "GLA missense and small variants (178 compared); no WWOX",
+     "endpoint": "enzyme activity as percent of wild type, change after chaperone, amenability class, Bland-Altman agreement"
+    }
+   },
+   {
+    "proposition": "A variant classed amenable in both assays showed no benefit in a patient study (biochemical responsiveness moderate), and a presumed amenable variant required a switch back to replacement therapy for biomarker escalation: a quantity-up, function-flat case at the clinical level.",
+    "snippet": "did not show a beneficial outcome",
+    "anchor": "Discussion, paragraph 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32023956_Lukas2020_PMC7037350.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GLA (alpha-galactosidase A) missense variants overexpressed in HEK293H cells, enzyme activity with and without an active-site-binding pharmacological chaperone, an in-house assay compared with a GLP-validated assay for 178 variants; published patient cohort observations discussed; NOT a WWOX system",
+     "genotype": "GLA missense and small variants (178 compared); no WWOX",
+     "endpoint": "enzyme activity as percent of wild type, change after chaperone, amenability class, Bland-Altman agreement"
+    }
+   },
+   {
+    "proposition": "The chaperone is an active-site inhibitor and may totally inhibit variants with very low baseline activity, and non-amenable variants showed a rise in a disease biomarker during treatment in an earlier cohort.",
+    "snippet": "It should also be considered that DGJ is an active site",
+    "anchor": "Discussion, paragraph 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32023956_Lukas2020_PMC7037350.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GLA (alpha-galactosidase A) missense variants overexpressed in HEK293H cells, enzyme activity with and without an active-site-binding pharmacological chaperone, an in-house assay compared with a GLP-validated assay for 178 variants; published patient cohort observations discussed; NOT a WWOX system",
+     "genotype": "GLA missense and small variants (178 compared); no WWOX",
+     "endpoint": "enzyme activity as percent of wild type, change after chaperone, amenability class, Bland-Altman agreement"
+    }
+   },
+   {
+    "proposition": "Correlation across overexpression systems is good, but weaker between overexpression and patient-derived cells.",
+    "snippet": "A less pronounced correlation was determined when comparing enzyme activity between overexpression systems and cells derived from patients.",
+    "anchor": "Discussion, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32023956_Lukas2020_PMC7037350.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GLA (alpha-galactosidase A) missense variants overexpressed in HEK293H cells, enzyme activity with and without an active-site-binding pharmacological chaperone, an in-house assay compared with a GLP-validated assay for 178 variants; published patient cohort observations discussed; NOT a WWOX system",
+     "genotype": "GLA missense and small variants (178 compared); no WWOX",
+     "endpoint": "enzyme activity as percent of wild type, change after chaperone, amenability class, Bland-Altman agreement"
+    }
+   },
+   {
+    "proposition": "Conflict-of-interest disclosure: two authors received support from the manufacturer in the past and two are linked to a genetic testing company.",
+    "snippet": "The authors A.R. and J.L. received financial support from Shire Pharmaceuticals in the past.",
+    "anchor": "Conflicts of Interest",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32023956_Lukas2020_PMC7037350.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GLA (alpha-galactosidase A) missense variants overexpressed in HEK293H cells, enzyme activity with and without an active-site-binding pharmacological chaperone, an in-house assay compared with a GLP-validated assay for 178 variants; published patient cohort observations discussed; NOT a WWOX system",
+     "genotype": "GLA missense and small variants (178 compared); no WWOX",
+     "endpoint": "enzyme activity as percent of wild type, change after chaperone, amenability class, Bland-Altman agreement"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST returned the whole article as fullTextXML for PMC7037350 (286 kB, 2026-10-21); the four figure images from the supplementaryFiles container.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a figure legend or an inspected figure."
+ }
+}
