@@ -91,9 +91,9 @@
    },
    "scientist-d": {
     "group": "R4",
-    "agentId": "a953e6e336bf10780",
+    "agentId": "a1b21908680566c50",
     "task": "REPURP-10H-R4b-D-20261022",
-    "state": "P4 early cards LANDED (3902c7f2: 3 candidates + 6 abstentions); relay R4b started",
+    "state": "R4b relay (started 23:4xZ)",
     "previous_agents": [
      "aba610f58ef0e9b25",
      "a953e6e336bf10780"
@@ -163,8 +163,22 @@
    "R4": {
     "state": "TO_DISPATCH",
     "scope": "42481851 Fig 4 panel a caption versus content; 39625912; 33180985; 35841234; 41784472; 41891667; 41999155; 37537625; 39726432; 37638552"
+   },
+   "R4_and_early_cards": {
+    "agentId": "ab6f6eda93d6e9018",
+    "file": "page_adjudications/locator_audit_R4_cards_20261022.md",
+    "state": "RUNNING",
+    "scope": "ten R4 manifests + nine early-benefit cards (priorities: published-individuals sentence on the diet card; shared-origin on the vigabatrin card; dependency on the unaudited R2 narrowing on the T-type card)"
    }
-  }
+  },
+  "harness": {
+   "bridge_gaps": {
+    "agentId": "aa2c22a1eb7c2ebdb",
+    "task": "PLAN-BRIDGE-GAPS-20261022",
+    "state": "RUNNING"
+   }
+  },
+  "id_pairing_rule": "pair returned agent ids to launches by the description in each launch result, never by position; verify with ListAgents before the first message to a restarted actor"
  },
  "DECISIONS_TAKEN": [
   {
