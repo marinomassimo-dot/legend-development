@@ -1,0 +1,68 @@
+{
+ "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Part of the ten-hour repurposing batch ORCH-REPURPOSING-10H-20261021. Adjacent and transferable literature: every paper that is not WWOX evidence is labelled NOT WWOX EVIDENCE, at class level, no dose, no paediatric suitability presumed, not medical advice.",
+ "TASK_ID": "REPURP-10H-R2b-B-20261022",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-b",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Relay on group R2 in a fresh context: the screened-but-unread candidates of the R2 note (the GIRK-ethosuximide preprint PPR862391 and its published version if open, 30175250, 32678276, 39637158), then new adjacent searches for what the R2 note leaves open: a DIRECT interaction test of a T-type blocker by genotype in any developmental model; developmental-age dependence of the T-type current and of ethosuximide sensitivity; and the WWOX-direct angle (does any WWOX LoF model report CACNA1G/H/I expression or T-current beyond the P47T hippocampal RNA-seq). At most 12 readings.",
+ "SCOPE": {
+  "lot": "group R2 of the selection file; BLOCKED rows excluded; HELD-partial only with a question written before opening the owed sections",
+  "brief": "framework/protocols/scientist_standing_brief.md"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "analysis note repurposing_10h_scientist-b_20261022b.md",
+  "per reading: manifest PASS and receipt staged, never recorded",
+  "every numeral in a proposition appears in its quote or is anchored by an added entry",
+  "DEFAULTS_TAKEN and STOP_LOG here"
+ ],
+ "DEPENDENCIES": [],
+ "REVIEW_REQUIREMENT": "Mirror ex post",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently",
+ "MILESTONE_PLAN": [
+  "TASK_ACK/CLAIM",
+  "per-paper M0-M5",
+  "analysis note",
+  "self-eval",
+  "report"
+ ],
+ "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
+ "CURRENT_STATE": "ASSIGNED",
+ "assigned_on": "2026-10-22",
+ "CHECKPOINT": {
+  "at": "2026-10-21",
+  "done_pmids": [
+   "36300716",
+   "37275776",
+   "42274296",
+   "37082241",
+   "30955423",
+   "42536722",
+   "29463073",
+   "40834072",
+   "32000863(targeted re-read)",
+   "40827489",
+   "35184274",
+   "41137852"
+  ],
+  "remaining_lot": [
+   "40068874",
+   "32878331",
+   "33704440",
+   "40825030",
+   "36282524"
+  ],
+  "then": [
+   "four Europe PMC WWOX/T-type full-text hits 41898755 41135097 42654085 41153369",
+   "FT-115 dated confirmation",
+   "HELD-partial (none in R2) then adjacent search",
+   "five questions into selection file",
+   "commit candidate CC-20261021-SCIENTIST-B-R2-*",
+   "self-eval, report"
+  ],
+  "notes": "Each reading: manifest PASS, receipt staged under research/receipt_staging/scientist-b/, note section appended in research/repurposing_10h_scientist-b_20261021.md. A resume re-reads this and git log on branch task/repurp-10h-r2-b."
+ }
+}

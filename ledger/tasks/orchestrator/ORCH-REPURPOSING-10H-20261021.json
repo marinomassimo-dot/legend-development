@@ -74,19 +74,21 @@
    "scientist-b": {
     "group": "R2",
     "agentId": "a9ce64fa724e5f4ef",
-    "task": "REPURP-10H-R2-B-20261021",
-    "state": "R2 CLOSURE RELAY (first agent a85b13d3c3c5f7071 read 26 papers and ran out of context before closing; branch task/repurp-10h-r2-b not landed)",
+    "task": "REPURP-10H-R2b-B-20261022",
+    "state": "R2 CLOSED AND LANDED (190b389e; 26 receipts recorded 5b03d095, ledger 775); relay R2b started",
     "previous_agents": [
-     "a85b13d3c3c5f7071"
+     "a85b13d3c3c5f7071",
+     "a9ce64fa724e5f4ef"
     ]
    },
    "scientist-c": {
     "group": "R3",
-    "agentId": "aa7339b0af1c43595",
-    "task": "REPURP-10H-R3b-C-20261022",
-    "state": "RELAY: first agent ab754106b9854e8bd closed R3 (17 readings, landed d9bd8bbd, stopped for context cost); relay agent started 22:2xZ",
+    "agentId": "a248f254237ba316a",
+    "task": "REPURP-10H-R3c-C-20261022",
+    "state": "R3 repaired and landed (2b33a1fc, 51 repairs, unaudited), R3b landed (58e66825, 6 receipts recorded d334b690); relay R3c started",
     "previous_agents": [
-     "ab754106b9854e8bd"
+     "ab754106b9854e8bd",
+     "aa7339b0af1c43595"
     ]
    },
    "scientist-d": {
@@ -143,6 +145,10 @@
    {
     "t": "2026-10-21T23:40Z",
     "event": "first candidate cards landed (cards_early/, 9 packets and 9 cards by the unmodified bridge, seven bridge gaps listed); auditor dispatched for the ten R4 manifests and the cards; Harness dispatched on bridge gaps (no-change sign, translation fields); scientist-d relay R4b on the four unread candidates plus new precedents"
+   },
+   {
+    "t": "2026-10-21T23:5xZ",
+    "event": "R2 landed and recorded; R3 repairs and R3b landed; R3c relay and R2b relay started; audit of the R3 repairs and R3b dispatched. Held from propagation: A51 attribution candidate (R3), R1 proteostasis candidate, R2 DL-MECH-170 candidate (audit discharged, repairs unaudited), early-cards candidate set. Orphans: ORPHAN_COMPLETE_READ lines clear only when an integrator batch adds the registry identity rows"
    }
   ],
   "audits": {
@@ -169,6 +175,12 @@
     "file": "page_adjudications/locator_audit_R4_cards_20261022.md",
     "state": "RUNNING",
     "scope": "ten R4 manifests + nine early-benefit cards (priorities: published-individuals sentence on the diet card; shared-origin on the vigabatrin card; dependency on the unaudited R2 narrowing on the T-type card)"
+   },
+   "R3_repairs_R3b": {
+    "agentId": "a960bee50bb330853",
+    "file": "page_adjudications/locator_audit_R3_repairs_R3b_20261022.md",
+    "state": "RUNNING",
+    "scope": "51 repaired entries and 7 added anchors in six R3 manifests; six R3b readings"
    }
   },
   "harness": {
