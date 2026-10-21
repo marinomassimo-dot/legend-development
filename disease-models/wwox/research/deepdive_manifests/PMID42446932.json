@@ -1,0 +1,412 @@
+{
+ "schema_version": 2,
+ "pmid": "42446932",
+ "doi": "10.1002/epi.70374",
+ "pmcid": "PMC13675783",
+ "receipt": "FTR-20261021-42446932-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Multicentre academic consortium with patient-advocacy partners and an FDA-compliant data structure; protocol paper with preliminary data; STXBP1 and SYNGAP1 haploinsufficiency class; NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "STXBP1[Title/Abstract] AND SYNGAP1[Title/Abstract] AND \"natural history\"[Title/Abstract]",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "\"clinical trial readiness\"[Title/Abstract] AND \"natural history\"[Title/Abstract] AND (epilep*[Title/Abstract] OR neurodevelopment*[Title/Abstract])",
+    "count": 12,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 65,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42446932 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 65,
+   "references_screened": 54,
+   "references_with_doi": 54,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 11
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42446932_McKee2026_PMC.xml",
+   "sha256": "f1bbfd41e7f755bf8b21010caf125e78b66a1304b8e6828d422926a644d9abe0",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML; body, tables cell-wise, figure legends.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13675783/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "f1bbfd41e7f755bf8b21010caf125e78b66a1304b8e6828d422926a644d9abe0"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42446932_r2/PMC13675783.1.pdf",
+   "sha256": "8ab2f55869967451a37ee0806646b9adaddb568fbf47875c7ad717c2d8f073f4",
+   "kind": "article_binary",
+   "note": "PMC open-data bucket PDF; source of the extracted figure rasters.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13675783.1/PMC13675783.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/page_renders/PMID42446932/p4img-000.png",
+   "sha256": "62f44ac5adf80892dbc6d2813ac3ff0b6e1502205971290ea6b3e323ded4e240",
+   "kind": "figure",
+   "note": "Figure 1 (protocol and recruitment), embedded 300 ppi raster of PDF page 4; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdfimages extraction",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42446932_r2/PMC13675783.1.pdf",
+    "extractor": {
+     "name": "pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -f 4 -l 4 -png <pdf> p4img"
+    }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID42446932/p8img-000.png",
+   "sha256": "f1dd93eb868c72221af4f2ca0d0130863247e5464e3c94eeb1e0ec72190f1450",
+   "kind": "figure",
+   "note": "Figure 2 (retrospective seizure histories), embedded raster of PDF page 8; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdfimages extraction",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42446932_r2/PMC13675783.1.pdf",
+    "extractor": {
+     "name": "pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -f 8 -l 8 -png <pdf> p8img"
+    }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID42446932/p9img-000.png",
+   "sha256": "8db247bdfa10fc37e08803abd0bbd7d0868b00c1707e688226c3352cbeee5548",
+   "kind": "figure",
+   "note": "Figure 3 (GMFM-66 by age), embedded raster of PDF page 9; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdfimages extraction",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42446932_r2/PMC13675783.1.pdf",
+    "extractor": {
+     "name": "pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -f 9 -l 9 -png <pdf> p9img"
+    }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID42446932/p10img-000.png",
+   "sha256": "1db7d58f3275550af3f6a523b781c445fc99d6415b6a47f803ce09bc63b748c4",
+   "kind": "figure",
+   "note": "Figure 4 (Vineland-3 raw scores), embedded raster of PDF page 10; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdfimages extraction",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42446932_r2/PMC13675783.1.pdf",
+    "extractor": {
+     "name": "pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -f 10 -l 10 -png <pdf> p10img"
+    }
+   }
+  },
+  {
+   "path": "files/supplement/PMID42446932_r2/EPI-67-5448-s001.docx",
+   "sha256": "3ab2a80c612df8a7a03a5fd9385c76dd913e846c8ad3283bf633da56196777be",
+   "kind": "supplement_binary",
+   "note": "Supplemental material (docx): Figure S1 demographics (three EMF images) and Table S1 floor and ceiling.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13675783.1/EPI-67-5448-s001.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID42446932_r2/EPI-67-5448-s001.txt",
+   "sha256": "963021764a5e1abcad03983cb64afb5bae9230c64a60123164f09fe3806249ad",
+   "kind": "supplement_text",
+   "note": "Text of the supplement by docx_to_text.py (Figure S1 images are EMF and were not opened).",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "docx_to_text",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42446932_r2/EPI-67-5448-s001.docx",
+    "extractor": {
+     "name": "framework/scripts/docx_to_text.py",
+     "version": "repository main 5dd4283f",
+     "call": "python3 framework/scripts/docx_to_text.py --out <txt> <docx>"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Two aims: cross-sectional capture of the phenotypic breadth and a longitudinal subset of about 200 followed every 6 months.",
+    "snippet": "The NHS has two main aims: first, to cross‐sectionally evaluate as many individuals as possible to fully capture the phenotypic breadth of the disorders; and second, to follow a subset of 200 individuals longitudinally every 6 months",
+    "anchor": "Methods, Study design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42446932_McKee2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Outcome measures were chosen by landscape analysis of other DEE protocols and review with advocacy foundations.",
+    "snippet": "These tools were chosen based on a landscape analysis of NHS and clinical trial protocols for other similar DEEs (i.e., Dravet syndrome, Angelman syndrome), as well as literature review of STXBP1‐RD, SYNGAP1‐RD, and other DEEs with similar presentations.",
+    "anchor": "Methods, Developmental and parent-reported outcome measures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42446932_McKee2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizures are reconstructed retrospectively month by month from records and family conversations, and so far only at one site.",
+    "snippet": "To date, the seizure reconstruction has only been performed for individuals enrolled at the CHOP site.",
+    "anchor": "Methods, Seizure history reconstruction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42446932_McKee2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Months with unknown seizure frequency are excluded from the reconstruction.",
+    "snippet": "If unknown, the participant's data were excluded for that month.",
+    "anchor": "Methods, Seizure history reconstruction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42446932_McKee2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Retention: about half returned for a second visit and a third had more than two assessments in STXBP1.",
+    "snippet": "Of the 164 individuals with STXBP1‐RD, 89 (54.2%) have returned for a second visit and 53 (32.3%) have had >2 assessments.",
+    "anchor": "Results, Feasibility",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42446932_McKee2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Some participants with a baseline visit over a year ago have not returned.",
+    "snippet": "21 individuals with STXBP1‐RD and 34 individuals with SYNGAP1‐RD had baseline visits more than 1 year ago and have not returned for a second visit, suggesting they may be lost to follow‐up.",
+    "anchor": "Results, Feasibility",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42446932_McKee2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Countable seizures are present in only about a quarter of the STXBP1 cohort until age 10.",
+    "snippet": "for STXBP1‐RD, only approximately 25% of the cohort until 10 years of age.",
+    "anchor": "Results, Seizure reconstruction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42446932_McKee2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Protocol completion was 89 percent in STXBP1 at one site; 99 percent completed at least the gross motor measure.",
+    "snippet": "89% (n = 87/106) of individuals with STXBP1‐RD were able to complete the entire protocol, with 99% (n = 105) of individuals being able to complete at least the GMFM‐66.",
+    "anchor": "Results, Standardized clinical outcomes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42446932_McKee2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Floor and ceiling effects were defined as the number of individuals achieving the minimum or maximum raw score and were found negligible.",
+    "snippet": "Floor and ceiling effects, as defined by the number of individuals who achieved a minimum or maximum raw score, were negligible for STXBP1‐RD and SYNGAP1‐RD (Table S1).",
+    "anchor": "Results, Standardized clinical outcomes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42446932_McKee2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Responsiveness to change over time has not yet been established.",
+    "snippet": "In addition, further longitudinal data collection is needed to determine whether these measures are responsive to change over time.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42446932_McKee2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Clinical global impression scales are needed to benchmark score changes against what caregivers perceive.",
+    "snippet": "the development of clinical global impression scales 45 for both STXBP1‐RD and SYNGAP1‐RD is necessary to benchmark changes in outcome measures to the perceived changes that caregivers report.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42446932_McKee2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Growth scale values may be preferred where available, because norm-referenced scores are limited past the normative age.",
+    "snippet": "As such, growth scale values may be preferred if available for any specific outcome measure.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42446932_McKee2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "If seizures cannot be counted, trials may need EEG-based counting or biomarkers as surrogate endpoints.",
+    "snippet": "If counting seizures is not possible, trials may need to rely on EEG‐based seizure counting or biomarkers as surrogate endpoints.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42446932_McKee2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The analysis plan is growth-curve mixed-effects models to estimate within-participant change and minimally detectable change.",
+    "snippet": "Longitudinal developmental outcomes (assessed approximately every 6 months) will be analyzed using growth‐curve models implemented as linear mixed‐effects models",
+    "anchor": "Methods, Data organization and statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42446932_McKee2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The regulator is said to favour existing measures over disease-specific measures.",
+    "snippet": "The use of existing measures accelerates the process of obtaining natural history data and is currently favored by the FDA over the development of disease‐specific measures.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42446932_McKee2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplement: gross motor measure floor and ceiling 0 and 1 percent in SYNGAP1 (n 115), 0 and 0 in STXBP1 (n 106).",
+    "snippet": "Gross Motor Function Measure-66 | 115 | 0% | 1% | 106 | 0% | 0%",
+    "anchor": "Table S1",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID42446932_r2/EPI-67-5448-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 1: cumulative enrolment ends at about 155 for STXBP1 and about 115 for SYNGAP1 while the text reports 164 and 159.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 left panel: cumulative enrolment curves from August 2023 to November 2025 ending near 155 (STXBP1, navy) and near 115 (SYNGAP1, green); the middle panel lists domains evaluated and quantitative EEG, evoked potentials and movement sensors; the right panel shows the consortium with a data coordinating center, advocacy organisations, industry partners and researchers.",
+    "anchor": "Figure 1, page 4 raster",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID42446932/p4img-000.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 2: proportion of the observed cohort with seizures stays under about 0.25 in STXBP1 and rises to about 0.5 between 2 and 5 years in SYNGAP1.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2A STXBP1 (n 107): stacked severity bars with the share of cohort having any seizure about 0.2 at birth to 0.1 near age 2 and about 0.25 by 6 to 7 years; Fig 2B SYNGAP1 (n 100): near zero until about 12 months, about 0.3 by 24 months and about 0.5 around 4 to 5 years, with levels up to more than 50 seizures per day in an expanded scale.",
+    "anchor": "Figure 2, page 8 raster",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID42446932/p8img-000.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 3: gross motor raw scores by age show a lower cluster of 10 to 30 in STXBP1 up to about 12 years and a quadratic trend peaking around 10 years; SYNGAP1 higher.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3A STXBP1 (n 105) GMFM-66 raw score against age 0 to 27 years: a lower cluster at about 10 to 30 for ages 0.5 to 12, a main cloud at 45 to 80 and a dashed trend peaking near 60 at about 12 years; Fig 3B SYNGAP1 (n 115) cloud 45 to 100 with trend peaking near 78 at about 13 years; cross-sectional single assessment per person.",
+    "anchor": "Figure 3, page 9 raster",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID42446932/p9img-000.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 4: Vineland-3 raw scores in registry data span near zero to the registry maximum across ages with most individuals at the low end.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 4 five panels of Vineland-3 raw scores (communication, daily living, socialization, adaptive behavior composite, motor skills) against age 0 to 65 years for STXBP1 (n 67 Simons plus n 45 RARE-X, top row) and SYNGAP1 (n 39, bottom row) over a grey cloud of 1346 individuals with 107 other disorders; most STXBP1 points lie below 50 on communication and daily living.",
+    "anchor": "Figure 4, page 10 raster",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID42446932/p10img-000.png",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13675783/fullTextXML returned HTTP 200 with a JATS body on 2026-10-21; the declared article_text artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}
