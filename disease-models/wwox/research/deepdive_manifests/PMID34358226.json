@@ -1,0 +1,204 @@
+{
+ "schema_version": 2,
+ "pmid": "34358226",
+ "doi": "10.1371/journal.pone.0252282",
+ "receipt": "FTR-20261022-34358226-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022c.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "PMC efetch XML by pmc_bucket_fetch.py; Figures 1-8 (JPEG) and supplementary PDFs obtained from the Europe PMC supplementaryFiles archive (SHA-256 of the archive c85d95baa489e7b4897ac141a24eb9e3b1d56d78f6ddb7741995e01e1b7f9641); Figure 7 opened, supplementary PDFs not opened."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Adult (7-week) mouse pilocarpine and kainate status epilepticus with a time course of Wnt, metabolic and mTOR changes peaking at day 5, 2-deoxyglucose, and a germline knockout of the Wnt repressor HBP1; direction of the Wnt manipulation is activation (opposite to Wnt suppression); no WWOX content."
+ },
+ "field_density": {
+  "queries_text": [
+   "(Wnt OR beta-catenin OR GSK3 OR casein kinase 1) AND (critical period OR developmental window OR postnatal day OR neonatal) AND (cortex OR hippocampus) AND (excitability OR seizures OR interneuron OR epileptogenesis) AND (inhibition OR knockdown OR conditional) -> 4",
+   "Wnt AND HBP1 AND seizure -> 1"
+  ],
+  "note": "Group R3 relay c reading; queries are PubMed counts on 2026-10-22 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "(Wnt OR beta-catenin OR GSK3 OR casein kinase 1) AND (critical period OR developmental window OR postnatal day OR neonatal) AND (cortex OR hippocampus) AND (excitability OR seizures OR interneuron OR epileptogenesis) AND (inhibition OR knockdown OR conditional)",
+    "count": 4,
+    "source": "PubMed 2026-10-22"
+   },
+   {
+    "query": "Wnt AND HBP1 AND seizure",
+    "count": 1,
+    "source": "PubMed 2026-10-22"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 34358226; registry_records.py get --pmid 34358226 --hops 0; fulltext_receipts.py status --pmid 34358226",
+  "hits": 0,
+  "finding": "No receipt, registry record or peer claim before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-22; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 118,
+   "references_screened": 111,
+   "references_with_doi": 111,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 7
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID34358226_Warburg2021_PMC_r2.xml",
+   "sha256": "37154cab5c26619ae365d6b1f931bb8ccd8f9c71b1b6cccc5eaed658c7dd3e78",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC8345866",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "37154cab5c26619ae365d6b1f931bb8ccd8f9c71b1b6cccc5eaed658c7dd3e78"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "After pilocarpine status epilepticus, inhibitory GSK3 beta phosphorylation and beta-catenin rose slightly by day 3, peaked at day 5 and returned to control by day 7.",
+    "snippet": "there was a slight induction of pGSK3βS9 by day 3, reached a maximum by 5 days and then declined to control levels by 7 days post-SE",
+    "anchor": "Results / Wnt signaling is activated during the epileptogenic period",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34358226_Warburg2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors report that a porcupine inhibitor and a tankyrase inhibitor failed to affect basal or induced hippocampal Wnt signalling and attribute this to a likely lack of blood-brain barrier penetration.",
+    "snippet": "both LGK974 (a PORCN inhibitor) and XAV939 (a tankyrase inhibitor) failed to affect basal or induced hippocampal Wnt signaling. A likely reason is that these compounds did not penetrate the BBB.",
+    "anchor": "Results / Constitutive Wnt signaling in a genetic model",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34358226_Warburg2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Spontaneous seizures in HBP1 knockout mice were first observed by the animal facility and then confirmed by the authors, and HBP1 is described as a Wnt-pathway inhibitor.",
+    "snippet": "spontaneous seizures in HBP1-/- mice were initially observed by our animal facilities and subsequently confirmed ourselves",
+    "anchor": "Results / Constitutive Wnt signaling in a genetic model",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34358226_Warburg2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Basal beta-catenin and the pGSK-S9 marker are stated to be elevated in HBP1 heterozygotes and additionally so in knockouts.",
+    "snippet": "basal β-catenin and pGSKS9 were elevated in HBP1+/- mice, and additionally so in HBP1-/- mice relative to HBP1+/+ controls",
+    "anchor": "Results / Constitutive Wnt signaling in a genetic model",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34358226_Warburg2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "With pilocarpine at 220 mg/kg no HBP1 knockout mouse survived more than an hour; at 150 mg/kg knockouts had no survival past one day and heterozygotes reduced survival.",
+    "snippet": "pilocarpine (220 mg/kg see Methods) and found that no HBP1-/- mice survived seizure induction for more than an hour. Titration of the pilocarpine dose down to 150 mg/kg still demonstrated significant sensitivity for HBP1-/- mice (no survival past 1 day) while HBP1+/- mice had reduced survival compared to HBP1+/+ mice",
+    "anchor": "Results / Constitutive Wnt signaling in a genetic model",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34358226_Warburg2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "At 135 mg/kg pilocarpine knockouts had the highest number of severe (Racine 5) seizures with heterozygotes intermediate.",
+    "snippet": "Further titration of pilocarpine dosing to 135 mg/kg resulted in sufficient survival to observe a clear gene dosage effect for HBP1 genotypes, with HBP1-/- mice presenting with the highest number of severe seizures (Racine Scale 5) relative to HBP1+/+ mice, with HBP1+/- mice having an intermediate in severity (Fig 7K)",
+    "anchor": "Results / Constitutive Wnt signaling in a genetic model",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34358226_Warburg2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The survival panel legend gives n = 5 mice per group.",
+    "snippet": "Survival curves were made for the first 5 days after seizure induction. (n = 5 mice for each group).",
+    "anchor": "Fig 7 legend (J)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34358226_Warburg2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The seizure-count panel legend gives n = 11 to 17 mice per group.",
+    "snippet": "on the number and severity of seizures on a 5-point modified Racine scale [ 73 ]. (n = 11–17 mice for each group).",
+    "anchor": "Fig 7 legend (K)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34358226_Warburg2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "2-deoxyglucose was given at 250 mg/kg once daily from day 1 to day 5 after status epilepticus.",
+    "snippet": "Control and pilocarpine mice were treated with 2-deoxyglucose 250 mg/kg [74] once daily from day 1 to day 5 post-SE.",
+    "anchor": "Methods / Seizure induction and drug administration",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34358226_Warburg2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mice were 7 weeks old and received 220 mg/kg pilocarpine (FVBN).",
+    "snippet": "7-week old male FVBN (The Jackson laboratory) mice were injected intraperitoneally with 220 mg/kg pilocarpine (Sigma-Aldrich) in neutral saline.",
+    "anchor": "Methods / Seizure induction and drug administration",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34358226_Warburg2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors suggest a therapeutic window in early epileptogenesis and state that future work must test whether intervening in it attenuates chronic seizures.",
+    "snippet": "Clearly, future work will be required to determine if therapeutic intervention during the early epileptogenic window defined in this paper attenuates the onset of chronic seizures in epilepsies.",
+    "anchor": "Discussion, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34358226_Warburg2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC XML fingerprinted; full text and Figure 7 legend read; Figure 7 opened as an image (small panels); Figures 1-6 and 8 and supplementary files not opened.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}

@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261022-34358226-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "34358226",
+  "doi": "10.1371/journal.pone.0252282"
+ },
+ "event_at": "2026-10-22T00:00:00Z",
+ "analysis_at": "2026-10-22T00:00:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-c, task REPURP-10H-R3c-C-20261022, PRIMARY_EVIDENCE_READ, SOURCE_FIRST (written question: is there a measured time window or direction effect of Wnt modulation on seizure susceptibility); text read in full, Figure 7 opened; prepared as JSON for the integrator and not appended by this actor.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID34358226_Warburg2021_PMC_r2.xml",
+ "source_fingerprint": "37154cab5c26619ae365d6b1f931bb8ccd8f9c71b1b6cccc5eaed658c7dd3e78",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID34358226.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022c.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "full text read; Figure 7 opened as image, other figures and supplement not opened; see manifest"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
