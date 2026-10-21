@@ -1,0 +1,65 @@
+{
+ "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Operator directive 2026-10-21 (23:41 CEST): launch a long ten-hour research batch, Orchestrator chooses the subject, at most four Scientists, and an hourly watch for ten hours that restarts any Scientist stopped by a token rate limit or by a finished lot \u2014 continuing or moving to new studies. Standing authorisations (procedi sempre; push is the backup) and the section 21d reserved list bind. Identity orchestrator is a stated assumption.",
+ "TASK_ID": "ORCH-REPURPOSING-10H-20261021",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Ten-hour research batch on the drug-repurposing line for WOREE / WWOX-DEE: advance roadmap P3 (scientific qualification) to the point where P4 candidate cards can be produced for both paths, with up to four Scientists on adjacent and transferable literature, then produce the first cards from the repository's own qualified records.",
+ "SUBJECT_DECISION": {
+  "chosen": "Repurposing P3/P4, four groups: R1 Q230P-class missense proteostasis (qualify the premise of three recovered historic dossiers); R2 T-type calcium-channel axis and genotype-specific antiseizure pharmacology (DL-MECH-170); R3 downstream pathways with neurological evidence (Wnt/MYC/GSK3/mTOR, neuroinflammation-myelin pharmacology, paediatric safety class); R4 repurposing precedents and design in other monogenic DEEs (endpoints, symptomatic-versus-modifying separation, N-of-1 and external controls)",
+  "why": "the WWOX-direct lawful-body pool is exhausted (previous batches); P3 is half done and P4 has produced no card; the reconciliation showed the infrastructure is ready and the science is the limit; the four groups map to the roadmap's open questions rather than to a keyword",
+  "alternatives_rejected": "a fifth fresh WWOX-literature sweep (selector found fewer than 12 selectable studies last time); installing the external components (nothing needs them yet and there is no R interpreter)",
+  "reversibility": "high"
+ },
+ "START_UTC": "2026-10-21T21:45:00Z",
+ "END_UTC": "2026-10-22T07:45:00Z",
+ "MAX_SCIENTISTS": 4,
+ "AUTHORISED_QUEUE_20261021": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_SELECT": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Read-only selection of studies for groups R1-R4 with lawful bodies, dedup against registries and receipts",
+     "status": "IN_PROGRESS",
+     "evidence": "selector launched 2026-10-21 21:42 UTC; output scratchpad repurposing_selection_20261021.md, to be persisted under research/"
+    }
+   ]
+  },
+  "OBJ_SCIENTISTS": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Dispatch Scientists A (R1), B (R2), C (R3), D (R4) on the selection",
+     "status": "TODO"
+    },
+    {
+     "step": "Hourly watch for ten hours: detect a stopped Scientist (rate limit or finished lot) and restart it, continuing the lot or taking new studies",
+     "status": "TODO"
+    },
+    {
+     "step": "Integrate returns: record staged receipts with record_staged_receipts.py, BATCH_COMMIT of candidates, blind audit where a trigger fires or the author declares one, Mirror ex post, battery on the final SHA, push",
+     "status": "TODO"
+    }
+   ]
+  },
+  "OBJ_P4_CARDS": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "First candidate cards (repurposing_bridge.py) from the qualified records, both paths, with explicit abstention where support is missing; no ranking score",
+     "status": "TODO"
+    }
+   ]
+  }
+ },
+ "WATCH": {
+  "interval": "hourly, 10 firings",
+  "cycles_done": 0,
+  "roster": {},
+  "restart_rule": "a Scientist whose agent has stopped is resumed with SendMessage to its agentId: if it stopped on a rate limit, continue from durable state; if its lot is finished, hand it the next unclaimed studies of its group from the persisted selection; never start a duplicate agent for an actor that is still running"
+ }
+}
