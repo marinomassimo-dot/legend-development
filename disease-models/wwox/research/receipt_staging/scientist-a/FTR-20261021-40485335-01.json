@@ -3,10 +3,10 @@
  "record_kind": "contemporaneous_receipt",
  "study_id": {
   "pmid": "40485335",
-  "doi": "10.1096/fj.202500615R"
+  "doi": "10.1096/fj.202403159RR"
  },
- "event_at": "2026-10-21T22:35:33Z",
- "analysis_at": "2026-10-21T22:35:33Z",
+ "event_at": "2026-10-21T22:35:52Z",
+ "analysis_at": "2026-10-21T22:35:52Z",
  "analysis_time_precision": "second",
  "workflow": "ad-hoc primary read by scientist-a under REPURP-10H-R1-A-20261021: paper_packet claim, Europe PMC fullTextXML, all six figures and the graphical abstract opened as images and paired to captions with figure_legend_pairs.py (file numbers differ from figure numbers); Tables 1 to 3 read from the XML; supplementary figures S1 to S4 (tif) retrieved, not read",
  "evidence_depth": "partial_fulltext_read",

@@ -1,7 +1,7 @@
 {
  "schema_version": 2,
  "pmid": "40485335",
- "doi": "10.1096/fj.202500615R",
+ "doi": "10.1096/fj.202403159RR",
  "receipt": "FTR-20261021-40485335-01",
  "context_policy": "SOURCE_FIRST",
  "landing": [
@@ -83,13 +83,13 @@
   "dependencies": {
    "flagged": [],
    "noted": [],
-   "paper_verdict": "UNSCREENABLE_FETCH_FAILED",
-   "reference_source": "error:HTTPError",
-   "references_declared": 0,
-   "references_screened": 0,
-   "references_with_doi": 0,
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 72,
+   "references_screened": 72,
+   "references_with_doi": 72,
    "schema": "retraction_check.dependencies/1",
-   "screened": false,
+   "screened": true,
    "snapshot": {
     "date": "2026-10-21",
     "days_since_fetch": 0,
