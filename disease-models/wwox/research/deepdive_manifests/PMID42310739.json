@@ -1,0 +1,317 @@
+{
+ "schema_version": 2,
+ "pmid": "42310739",
+ "doi": "10.1186/s12929-026-01269-4",
+ "receipt": "FTR-20261021-42310739-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261021.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access XML, figures, PDF and supplement came from pmc_bucket_fetch.py in one call; no cascade needed."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Adult male heterozygous Tsc2 mouse treated with an adenosine-transport inhibitor for 10 weeks; measures behaviour, diffusion MRI, myelin, oligodendrocyte stages, pS6 and cFos; no EEG or seizure. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries_text": [
+   "ENT1 inhibitor AND tuberous sclerosis",
+   "adenosine AND oligodendrocyte maturation"
+  ],
+  "note": "Group R3 reading; queries are PubMed counts on 2026-10-21 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "ENT1 inhibitor AND tuberous sclerosis",
+    "count": 1,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   },
+   {
+    "query": "adenosine AND oligodendrocyte maturation",
+    "count": 74,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 42310739; registry_records.py get --pmid 42310739 --hops 1",
+  "hits": 0,
+  "finding": "No receipt before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-21; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 85,
+   "references_screened": 83,
+   "references_with_doi": 83,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42310739_Hsieh2026_PMC_r2.xml",
+   "sha256": "0a01f9dc8e350a0c7eb4d760bf3ff7cb079b3a16edc39c84506b5b8648c2c72b",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=13274077",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "0a01f9dc8e350a0c7eb4d760bf3ff7cb079b3a16edc39c84506b5b8648c2c72b"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42310739_r2/PMC13274077.1.pdf",
+   "sha256": "c5cd631f8725d0a7f10a6ec00c42167d0999237b222658370a88b9c7cdf9b309",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "c5cd631f8725d0a7f10a6ec00c42167d0999237b222658370a88b9c7cdf9b309"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42310739_r2/12929_2026_1269_MOESM4_ESM.docx",
+   "sha256": "2fda120035da0ead6da95012a1d9a918fb6f568b774254e07757082eb6192817",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "2fda120035da0ead6da95012a1d9a918fb6f568b774254e07757082eb6192817"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42310739_r3c/p06_embedded_1961x1593.png",
+   "sha256": "5860783f00a379d688501efe2ce720a3c4edad8ef8b764acba2ab267f340e5f4",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42310739_r2/PMC13274077.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 6",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "5860783f00a379d688501efe2ce720a3c4edad8ef8b764acba2ab267f340e5f4"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42310739_r3c/p10_embedded_1547x2480.png",
+   "sha256": "ba9d4ab5e68ebb2c175cdda10d2f578790903f34096de6769242d8deca572311",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42310739_r2/PMC13274077.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 10",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "ba9d4ab5e68ebb2c175cdda10d2f578790903f34096de6769242d8deca572311"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42310739_r3c/p16_embedded_1957x2481.png",
+   "sha256": "96ba4f53aca038169ad855f03d58c0223359af88c6f773add608abd36040a113",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42310739_r2/PMC13274077.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 16",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "96ba4f53aca038169ad855f03d58c0223359af88c6f773add608abd36040a113"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Dose given: J4 0.06 mg/mL in drinking water with 1 percent HPbetaCD, estimated 10.2 mg/kg/day, for 10 weeks from 6 weeks of age; the dose is an estimate from assumed water intake and one dose level was tested.",
+    "snippet": "Thus, the dose of 0.06 mg/ml J4 in drinking water would approximately give an overall dose of 10.2 mg/kg/day for the mice in this study.",
+    "anchor": "Methods / Drug treatments",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42310739_Hsieh2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Adult male mice only, 6-12 weeks old; not a developmental window.",
+    "snippet": "Only male animals (6-week-old to 12-week-old) were used and female mice were not used due to hormonal cycle variability",
+    "anchor": "Methods / Animals",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42310739_Hsieh2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The model has normal-appearing white matter by T2 MRI and no apparent MBP difference in white matter; the diffusion MRI differences are what J4 reverses.",
+    "snippet": "the WM regions did not display any apparent differences in MBP staining when comparing the WT Veh, Tsc2+/– Veh, and Tsc2+/– J4 groups",
+    "anchor": "Results / J4 enhanced myelin sheath integrity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42310739_Hsieh2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizures are absent from the model and from the study.",
+    "snippet": "The Tsc2+/– mice employed in this study display cognitive dysfunction and ASD-like features in the absence of brain hamartomas and spontaneous seizures",
+    "anchor": "Results, first paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42310739_Hsieh2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Hyperactivity is measured as cFos-positive cell counts; with J4, retrosplenial cFos fell below the wild-type level, so the treatment did not stop at normalisation.",
+    "snippet": "whereas cFos levels in Tsc2+/– J4 mice were significantly reduced compared with WT Veh controls (layer II–III, p = 0.0176; layer V, p = 0.0261).",
+    "anchor": "Results / J4 mitigated the excessive expression of pS6 and cFos",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42310739_Hsieh2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Group sizes in histology: three animals per group (F(2,6)); the TEM comparison uses N = 3, 3 and 4 animals but regression across individual axons.",
+    "snippet": "Pairwise linear regression comparisons revealed that WT Veh and Tsc2+/– Veh exhibited similar slopes but significantly different intercepts (F(1, 1215) = 58.06, p < 0.0001)",
+    "anchor": "Results / J4 enhanced myelin sheath integrity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42310739_Hsieh2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Onion-bulb count: 3 animals per group; J4 restores the count to wild-type level.",
+    "snippet": "Quantification of the number of myelin bulbs observed in the fornix across groups. Bars represent group means with individual data points from different animals.",
+    "anchor": "Fig. 4 legend (E)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42310739_Hsieh2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Behavioural testing was by investigators aware of group allocation; only analysis was blinded.",
+    "snippet": "Behavioral testing was performed by investigators aware of group allocation; all behavioral data analyses were conducted by investigators blinded to group identity.",
+    "anchor": "Methods / Novel object recognition test",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42310739_Hsieh2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "J4 effects in OPC and OL counts are significant only in the corpus callosum and cingulum, not in cortex; CNPase change is a trend (P = 0.0792).",
+    "snippet": "J4 treatment showed a trend toward increased CNPase immunoreactivity compared with Tsc2+/– Veh, although this difference did not reach statistical significance (p = 0.0792)",
+    "anchor": "Results / J4 modulated OL-lineage populations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42310739_Hsieh2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors list limitations: males only, mild model, mechanism of myelin effect unclear, lineage progression not shown, adenosine not measured.",
+    "snippet": "the direct measurement of adenosine and the downstream molecular pathways through which adenosine receptor signaling influences oligodendroglial maturation are not yet fully defined in this present study",
+    "anchor": "Limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42310739_Hsieh2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Normal-brain treated arm: WT mice receiving J4 show a slightly thicker myelin regression (P = 0.0158 in text) while the OFT and NOR show no change; the only measure of J4 in a non-mutant brain.",
+    "snippet": "while WT J4 group showed a slight increase of myelin thickness when compared to WT Veh controls (F(1, 974) = 1.986, p = 0.0158)",
+    "anchor": "Results / J4 enhanced myelin sheath integrity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42310739_Hsieh2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The same sentence reports F(1, 974) = 1.986 for both a nonsignificant slope comparison (P = 0.1591) and a significant one (P = 0.0158): one F value cannot give two P values at identical degrees of freedom, so one of the two is mis-typed.",
+    "snippet": "There were no significant changes in the slopes between WT Veh vs. WT J4 groups (F(1, 974) = 1.986, p = 0.1591) (Fig. 4C).",
+    "anchor": "Results / J4 enhanced myelin sheath integrity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42310739_Hsieh2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 1 (300 ppi): open-field center time WT ~108 s, Tsc2+/- vehicle ~52 s, J4 ~89 s (* both); NOR discrimination index vehicle mutant about -0.02 against about 0.34 for WT and 0.37 for J4; N = 9, 9, 9 and 8 (one mutant J4 mouse is missing against nine per mutant vehicle).",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] C * ; E ****; legend N=9,9,9,8",
+    "anchor": "Figure 1, embedded raster p.6",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42310739_r3c/p06_embedded_1961x1593.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 4 (300 ppi): TEM panels with arrowed abnormal myelin in Tsc2+/- vehicle; g-ratio and myelin-thickness scatter with regression lines that overlap heavily (all axons plotted, N = 3, 3 and 4 animals); onion bulbs per 100 square micrometres about 2.3 (vehicle mutant) versus 0.6 and 0.55; the whole-brain MBP images look alike.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] C **** ; D **** ; E * *; N=3,3,4",
+    "anchor": "Figure 4, embedded raster p.10",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42310739_r3c/p10_embedded_1547x2480.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[5]",
+    "qualifies_needle": "Pairwise linear regression comparisons reveal"
+   },
+   {
+    "proposition": "Fig 7 (300 ppi): SS cortex cFos layer II-III about 11 (WT) versus 26 (mutant) with three points per group; J4 reduces pS6 and cFos counts in SS layers to roughly half in a two-group test with 3 animals each; RSP layer V cFos about 12 WT, 25 mutant vehicle, 7 mutant J4 (below WT).",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] C *** ; E * ; J ** ; L **** ; n=3",
+    "anchor": "Figure 7, embedded raster p.16",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42310739_r3c/p16_embedded_1957x2481.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[4]",
+    "qualifies_needle": "whereas cFos levels in Tsc2+/– J4 mice were s"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch XML, PMC PDF and the MOESM4 docx fingerprinted; Figures 1, 4, 5, 7 (and 3, 6, 8 by their captions) extracted at 300 ppi from the PDF; Figures 1, 4 and 7 inspected as images; Figures 3, 5, 6 and 8 are read from captions and Results text only.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}
