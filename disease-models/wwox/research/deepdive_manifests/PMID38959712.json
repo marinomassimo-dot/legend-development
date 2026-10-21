@@ -1,0 +1,345 @@
+{
+ "schema_version": 2,
+ "pmid": "38959712",
+ "doi": "10.1016/j.ejpn.2024.06.005",
+ "pmcid": "PMC11283350",
+ "receipt": "FTR-20261021-38959712-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Secondary (non-seizure) analysis of a sponsor-run randomised trial in CDKL5 deficiency disorder; NOT WWOX EVIDENCE. The article does not state whether the non-seizure analyses were pre-specified."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "ganaxolone[Title/Abstract] AND (CDKL5[Title/Abstract] OR \"CDKL5 deficiency\"[Title/Abstract])",
+    "count": 22,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "ganaxolone[Title/Abstract] AND (behaviour[Title/Abstract] OR behavior[Title/Abstract] OR \"quality of life\"[Title/Abstract])",
+    "count": 26,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 40,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 38959712 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 40,
+   "references_screened": 37,
+   "references_with_doi": 37,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38959712_Downs2024_PMC_r2.xml",
+   "sha256": "873e4639fdbeaeebee630b81045d3ad8e172a533f9add242c1f5876a30dde877",
+   "kind": "article_text",
+   "note": "NCBI efetch JATS of the author manuscript; the Europe PMC REST route returned HTTP 500 for this record.",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC11283350&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "873e4639fdbeaeebee630b81045d3ad8e172a533f9add242c1f5876a30dde877"
+   }
+  },
+  {
+   "path": "files/supplement/PMID38959712_r2/PMC11283350.1.pdf",
+   "sha256": "71ef587024b51c78f6bcc5744754af16fdf972753278763e195286a37669cb7b",
+   "kind": "article_binary",
+   "note": "PMC open-data bucket PDF (author manuscript).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11283350.1/PMC11283350.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38959712_r2/nihms-2007019-f0001.jpg",
+   "sha256": "1aaa1c8c19302465f3c9b0a636eaba0fa748d8da4ceda5f98453f438617dc9d2",
+   "kind": "figure",
+   "note": "Figure 1 (trial profile), native 2100x1158 JPEG, 300 ppi per paper_packet rank; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11283350.1/nihms-2007019-f0001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38959712_r2/nihms-2007019-f0002.jpg",
+   "sha256": "c7de93f36aeab108be68dc60a95df1d910b9625da935a1b2b06d82e2cf64a991",
+   "kind": "figure",
+   "note": "Figure 2 (forest plot ADAMS), native 2100x1148 JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11283350.1/nihms-2007019-f0002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38959712_r2/nihms-2007019-f0003.jpg",
+   "sha256": "a20063a722a44d6f6f2e90539975907b7bda25af0c783a0013a29397ae22c379",
+   "kind": "figure",
+   "note": "Figure 3 (forest plot QI-Disability), native 2100x1272 JPEG; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11283350.1/nihms-2007019-f0003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The trial was double-blind placebo-controlled, with randomisation 1:1, adjunctive to existing antiseizure medicines, over 17 weeks.",
+    "snippet": "Participants were randomized (1:1) to receive either ganaxolone or placebo, as adjunctive therapy to their existing antiseizure medications, which was administered 3 times daily over a 17-week period.",
+    "anchor": "Methods, Study design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38959712_Downs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The sample size was set on the seizure primary outcome only.",
+    "snippet": "A sample size of 100 patients (50 per group) was required to give 92 % power at a onesided α of 0•025 to detect a between-group difference of 30 % in the percentage change in 28-day major motor seizure frequency",
+    "anchor": "Methods, Study design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38959712_Downs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Non-seizure outcomes were measured by proxy- or parent-reported questionnaires (ADAMS, sleep habits, quality of life), not by a clinician-administered developmental instrument.",
+    "snippet": "Behaviour was measured using the Anxiety, Depression and Mood Scale (ADAMS), developed as a proxy-report measure to screen mental health in individuals with intellectual disability",
+    "anchor": "Methods, Outcome variables",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38959712_Downs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Developmental skills were a baseline covariate from a study-modified 15-item score taken from routine clinical exams, not an outcome.",
+    "snippet": "For the Modified CDKL5 Development Score, data were collected during routine clinical exams and one point was allocated per item giving a maximum possible score of 15.",
+    "anchor": "Methods, Covariates",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38959712_Downs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Missing post-treatment data were handled by full-information maximum likelihood; groups were analysed as randomised.",
+    "snippet": "The effects of ganaxolone on post treatment scores for behaviour, sleep and QOL were assessed with Analysis of Covariance (ANCOVA) in their original assigned groups",
+    "anchor": "Methods, Analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38959712_Downs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Two ADAMS subscales were significant at p 0.025 and 0.046; the upper interval bound of the second sits at the line of no effect.",
+    "snippet": "Effects were statistically significant for the Manic/Hyperactive subscale (effect size = −1.27, 95 % Confidence Interval (CI) −2.38 to −0.16, p = 0.025) and for the Compulsive Behavior subscale (effect size = −0.58, 95%CI −1.14 to −0.01, p = 0.046)",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38959712_Downs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Depressed Mood moved in the unfavourable direction, not significantly.",
+    "snippet": "Depressed Mood scores were increased but not significantly (effect size = 0.82, 95%CI −0.22 to 1.86, p = 0.122)",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38959712_Downs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The total quality-of-life score was higher in the active arm but not significantly.",
+    "snippet": "The post treatment total QI-Disability score was 2.64 (95%CI −1.74, 7.02) points higher in the ganaxolone group.",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38959712_Downs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the upper confidence limits for both significant behaviour effects are close to the line of no effect.",
+    "snippet": "although the effect sizes were between small and medium and the upper CI values for both domains were close to the line of no effect.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38959712_Downs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The sample was sized for seizures and may be inadequate for behaviour and quality of life; the clinically meaningful difference is unknown.",
+    "snippet": "The sample size was calculated to evaluate a 30 % reduction in the primary seizure outcome, but this sample size may be inadequate to detect meaningful differences in non-seizure outcomes such as behaviour and QOL.",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38959712_Downs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors do not know which differences are clinically meaningful.",
+    "snippet": "Further, we do not know what differences in the outcomes are clinically meaningful for patients and their families.",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38959712_Downs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors note quality of life may need longer than 17 weeks.",
+    "snippet": "It is feasible that it takes longer than 17 weeks to observe differences in QOL and that ongoing surveillance of ganaxolone could indicate different effects.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38959712_Downs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The seizure-behaviour link was explored only by within-arm correlation because mediation analysis was underpowered.",
+    "snippet": "The sample size was too small for mediation analyses to explore linkages between ganaxolone use and effects on seizures and non-seizure outcomes",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38959712_Downs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Raw mean ADAMS manic/hyperactive scores fell in both arms: 7.0 to 4.8 on ganaxolone and 6.3 to 5.2 on placebo.",
+    "snippet": "Manic/Hyperactive (/15)a N = 89 | 4.8 (3.8) | 5.2 (4.1)",
+    "anchor": "Table 1, post-treatment ADAMS rows (baseline 7.0 and 6.3 in the rows above)",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID38959712_Downs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Baseline development score was imbalanced between arms (median 2 against 4).",
+    "snippet": "Median (IQR) Baseline Development Score (/15)a N = 100 | 2 (1–5) | 4 (1–7)",
+    "anchor": "Table 1",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID38959712_Downs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Daytime sleepiness data were available for 78 children only.",
+    "snippet": "Mean (SD) Post-treatment Daytime Sleepiness subscale score (/24)a N = 78 | 12.6 (2.7) | 12.2 (3.6)",
+    "anchor": "Table 1",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID38959712_Downs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Correlation of seizure change with compulsive behaviour has opposite signs in the two arms.",
+    "snippet": "Compulsive Behaviour | 0.33 (p = 0.04) | −0.35 (p = 0.02)",
+    "anchor": "Table 3",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID38959712_Downs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 1: 114 assessed, 13 screen failures, 101 randomised (50 and 51), 2 and 4 discontinued, 48 and 47 completed; all 101 in the intention-to-treat and full-information analyses.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 trial profile: 114 assessed, 13 screen failures, 101 randomised; 50 ganaxolone (2 discontinued: 1 adverse event, 1 consent withdrawal; 48 completed) and 51 placebo (4 discontinued for adverse events; 47 completed); 50 and 51 included in the ITT primary analysis and in the FIML analysis of secondary outcomes.",
+    "anchor": "Figure 1",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38959712_r2/nihms-2007019-f0001.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 2: forest plot of five ADAMS effects; only manic/hyperactive (-1.27) and compulsive (-0.58) have intervals excluding zero, the compulsive interval upper whisker ending at zero; depressed mood +0.82 is on the unfavourable side.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 forest plot: points -1.27 (Manic/Hyperactive, whiskers about -2.4 to -0.2), 0.82 (Depressed Mood, about -0.2 to 1.9), -0.03 (Social Avoidance), -0.02 (General Anxiety), -0.58 (Compulsive Behaviour, upper whisker at the zero line, label spelled Compusive); y axis Ganaxolone Effect (95% CI).",
+    "anchor": "Figure 2",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38959712_r2/nihms-2007019-f0002.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 3: forest plot of six quality-of-life domains and total; every interval spans zero.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3 forest plot: points 0.27, 1.22, -0.26, 4.74, 4.99, 4.49 and Total 2.64; every vertical whisker crosses the zero line (Total about -1.7 to 7.0).",
+    "anchor": "Figure 3",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38959712_r2/nihms-2007019-f0003.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC11283350/fullTextXML returned HTTP 500 on 2026-10-21; NCBI efetch (pmc_bucket_fetch.py) returned a full JATS body, which is the declared article_text artefact.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}
