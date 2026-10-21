@@ -88,6 +88,15 @@ PRIORITY_TESTS = (
     # blind - the fourth Annex C.1 R4 trigger, added 2026-09-10. It reports a ratio
     # and never blocks; what the suite pins is that the ratio is honest.
     "framework/scripts/test_locator_contradiction_audit.py",
+    # No gate reads a count a registry record asserts ABOUT a manifest against the manifest it
+    # describes — which is how D-40 happened on 2026-10-20: an integrator ran
+    # `len(d['verbatim_locators'])` over a MAPPING, got its six key names, and wrote 6 into two
+    # records whose candidate had declared 11 and 9 correctly. A checker already existed and was
+    # green, because its pattern wanted the count as the first token inside the parenthesis and
+    # both records write `(schema v2, **11** persisted verbatim locators`. Enrolled now that the
+    # parse reaches the measured variety of the wordings and carries a baseline: a ratchet, never
+    # red on a repair, because repairing a registry sentence is the integrator's BATCH_COMMIT act.
+    "framework/scripts/test_locator_count_crosscheck.py",
     # Parses the required ATTRIBUTION_CENSUS block and the two §21c keys. Also a
     # ratio, never a block: a measurement that can fail a build gets written to
     # pass the build.
