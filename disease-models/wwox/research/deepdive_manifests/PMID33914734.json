@@ -1,0 +1,447 @@
+{
+ "schema_version": 2,
+ "pmid": "33914734",
+ "doi": "10.1371/journal.pgen.1009539",
+ "receipt": "FTR-20261021-33914734-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named and deduplicated by the Orchestrator's selection file; the per-paper M0 packet and receipt status were run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "The reading is a primary-evidence read of a NOT WWOX EVIDENCE paper; the dossier is the analysis note section, no WWOX commit candidate is implied."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No consolidated baseline claim is narrowed or reversed by this reading; a blind audit is declared OWED where a candidate proposes it."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Not requested; discovery leads are staged separately if any."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a candidate card; BLOCK-1 holds, class level only."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A protein-quality-control group at the University of Copenhagen and Stockholm University (from the affiliations in the XML; counts not computed in this reading) working in yeast and human cells with molecular dynamics. Methods are growth reporters, blots and microscopy in overexpression systems. NOT WWOX EVIDENCE; a class-level mechanism precedent."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "aspartoacylase AND C152W",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "missense AND de novo folding AND proteasomal degradation AND Hsp70",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "Hsp110 AND protein quality control AND variant",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "PubMed counts, dated; a zero from a title/abstract query licenses 'no paper is indexed', never 'this was never measured' (D-37)."
+ },
+ "multihop": {
+  "references_enumerated": 89,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the JATS; none is WWOX-related. The deep mutational scan of the same enzyme is in this lot (38740822)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 33914734 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-21 via PubMed efetch for PMID 33914734: publication types ['Journal Article', \"Research Support, Non-U.S. Gov't\"]; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 89,
+   "references_screened": 79,
+   "references_with_doi": 79,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 10
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID33914734_Gersing2021_PMC8084241.xml",
+   "sha256": "b21196f0f48864b045617e2d78f5e99ef215776f6cfca90d6fe4565be8ad63ea",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC8084241: whole article; every text locator is matched against it.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8084241/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "b21196f0f48864b045617e2d78f5e99ef215776f6cfca90d6fe4565be8ad63ea",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID33914734/pgen.1009539.g001.jpg",
+   "sha256": "2a7a59fe0524ddee324f1280c6361dd58afaa382ad2e90eb486ce243611ac49f",
+   "kind": "figure",
+   "note": "Figure 1 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8084241/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "2a7a59fe0524ddee324f1280c6361dd58afaa382ad2e90eb486ce243611ac49f",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID33914734/pgen.1009539.g002.jpg",
+   "sha256": "bee7b248eee5225b153f34e49472d94e7982471f2496ea95f884a4e07a747a52",
+   "kind": "figure",
+   "note": "Figure 2 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8084241/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "bee7b248eee5225b153f34e49472d94e7982471f2496ea95f884a4e07a747a52",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID33914734/pgen.1009539.g003.jpg",
+   "sha256": "fe58975c54846b5a9603bdbcfb669a6cf5199d234334973524628b9738c513ac",
+   "kind": "figure",
+   "note": "Figure 3 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8084241/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "fe58975c54846b5a9603bdbcfb669a6cf5199d234334973524628b9738c513ac",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID33914734/pgen.1009539.g004.jpg",
+   "sha256": "05b0178dca69d33ea4d8fb07f1ec8854c2ff0cae9d6d55d292a5f49f4af6a1b0",
+   "kind": "figure",
+   "note": "Figure 4 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8084241/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "05b0178dca69d33ea4d8fb07f1ec8854c2ff0cae9d6d55d292a5f49f4af6a1b0",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID33914734/pgen.1009539.g005.jpg",
+   "sha256": "48c8e6e874628da08d11b7ecea8bdc9fe81328a0d01c1c3743857f7759eb34b2",
+   "kind": "figure",
+   "note": "Figure 5 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8084241/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "48c8e6e874628da08d11b7ecea8bdc9fe81328a0d01c1c3743857f7759eb34b2",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID33914734/pgen.1009539.g006.jpg",
+   "sha256": "bfbf173672ea1ee795ccb18082f464baf79213bb47b4e98b59aea4a83fddf7ef",
+   "kind": "figure",
+   "note": "Figure 6 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8084241/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "bfbf173672ea1ee795ccb18082f464baf79213bb47b4e98b59aea4a83fddf7ef",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID33914734/pgen.1009539.g007.jpg",
+   "sha256": "b85c954ad8fe39a9a3f871d7b1a374b4a4975078c2c1373686788daa6fd59387",
+   "kind": "figure",
+   "note": "Figure 7 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8084241/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "b85c954ad8fe39a9a3f871d7b1a374b4a4975078c2c1373686788daa6fd59387",
+    "derived": false
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE (ASPA, a homodimeric enzyme). The variant was known to have low protein but wild-type-like thermal stability and very low activity: a stability-normal, quantity-low, activity-low case.",
+    "snippet": "The C152W variant is associated with greatly reduced protein levels [15], although biophysical experiments suggest a wild-type like thermal stability [21].",
+    "anchor": "Introduction, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33914734_Gersing2021_PMC8084241.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA) C152W as a Ura3-HA-GFP fusion in Saccharomyces cerevisiae (CUP1 promoter; deletion and temperature-sensitive chaperone and ligase strains) and as an RGS-His fusion transiently expressed in human U2OS cells; NOT a WWOX system",
+     "genotype": "ASPA wild type and C152W; no WWOX",
+     "endpoint": "growth reporter, Western blot level, cycloheximide chase, soluble versus insoluble fraction, aggregates"
+    }
+   },
+   {
+    "proposition": "Proteasome inhibition restores the C152W protein in yeast (growth reporter and Western blot).",
+    "snippet": "Consistent with the reporter growth readout, the protein level of ASPA C152W was restored upon proteasomal inhibition (Fig 2C).",
+    "anchor": "Results, Proteasomal degradation and aggregation of ASPA C152W, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33914734_Gersing2021_PMC8084241.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA) C152W as a Ura3-HA-GFP fusion in Saccharomyces cerevisiae (CUP1 promoter; deletion and temperature-sensitive chaperone and ligase strains) and as an RGS-His fusion transiently expressed in human U2OS cells; NOT a WWOX system",
+     "genotype": "ASPA wild type and C152W; no WWOX",
+     "endpoint": "growth reporter, Western blot level, cycloheximide chase, soluble versus insoluble fraction, aggregates"
+    }
+   },
+   {
+    "proposition": "Figure 2C read: with bortezomib the C152W band rises to a level close to the wild-type band in the short exposure; tubulin is flat. Figure 2D read: the soluble lane of C152W is weaker than wild type and its pellet lane is similar to wild type.",
+    "snippet": "Western blot of ASPA protein levels in wild-type yeast expressing the indicated ASPA variant in presence of 0.1 mM CuSO4 and treated with DMSO (-) or bortezomib (BZ, +) for three hours.",
+    "anchor": "Figure 2C-D (bortezomib Western; soluble and insoluble fractions)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33914734/pgen.1009539.g002.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA) C152W as a Ura3-HA-GFP fusion in Saccharomyces cerevisiae (CUP1 promoter; deletion and temperature-sensitive chaperone and ligase strains) and as an RGS-His fusion transiently expressed in human U2OS cells; NOT a WWOX system",
+     "genotype": "ASPA wild type and C152W; no WWOX",
+     "endpoint": "growth reporter, Western blot level, cycloheximide chase, soluble versus insoluble fraction, aggregates"
+    },
+    "qualifies": "entries[1]",
+    "qualifies_needle": "Consistent with the reporter growth readout, "
+   },
+   {
+    "proposition": "Molecular dynamics at three temperatures find no substantial difference between wild type and C152W: the native state is structurally preserved, so the loss is not a native-state instability.",
+    "snippet": "Notably, we did not observe any substantial differences between the two variants.",
+    "anchor": "Results, Exposure of a degron, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33914734_Gersing2021_PMC8084241.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA) C152W as a Ura3-HA-GFP fusion in Saccharomyces cerevisiae (CUP1 promoter; deletion and temperature-sensitive chaperone and ligase strains) and as an RGS-His fusion transiently expressed in human U2OS cells; NOT a WWOX system",
+     "genotype": "ASPA wild type and C152W; no WWOX",
+     "endpoint": "growth reporter, Western blot level, cycloheximide chase, soluble versus insoluble fraction, aggregates"
+    }
+   },
+   {
+    "proposition": "The loss is of newly synthesised protein: without Hsp110 function the C152W level rises but degradation after translation is blocked is unchanged between permissive and restrictive temperature, which places the Hsp70/Hsp110 axis at de novo folding and not at the mature pool.",
+    "snippet": "There was no difference between the degradation of ASPA C152W at the two temperatures in absence of translation, indicating that Hsp110 and thus Hsp70 are mainly required for the degradation of newly synthesized ASPA (S4 Fig).",
+    "anchor": "Results, ASPA degradation depends on Hsp70 and Hsp110, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33914734_Gersing2021_PMC8084241.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA) C152W as a Ura3-HA-GFP fusion in Saccharomyces cerevisiae (CUP1 promoter; deletion and temperature-sensitive chaperone and ligase strains) and as an RGS-His fusion transiently expressed in human U2OS cells; NOT a WWOX system",
+     "genotype": "ASPA wild type and C152W; no WWOX",
+     "endpoint": "growth reporter, Western blot level, cycloheximide chase, soluble versus insoluble fraction, aggregates"
+    }
+   },
+   {
+    "proposition": "Hsp110 loss stabilises C152W but the stabilised protein is insoluble: in yeast the accumulated protein is in the pellet.",
+    "snippet": "The ASPA C152W protein that accumulated in absence of Hsp110 function was insoluble (Fig 4E).",
+    "anchor": "Results, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33914734_Gersing2021_PMC8084241.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA) C152W as a Ura3-HA-GFP fusion in Saccharomyces cerevisiae (CUP1 promoter; deletion and temperature-sensitive chaperone and ligase strains) and as an RGS-His fusion transiently expressed in human U2OS cells; NOT a WWOX system",
+     "genotype": "ASPA wild type and C152W; no WWOX",
+     "endpoint": "growth reporter, Western blot level, cycloheximide chase, soluble versus insoluble fraction, aggregates"
+    }
+   },
+   {
+    "proposition": "In human U2OS cells C152W is found only in the insoluble fraction, and the protein accumulating after knock-down of two Hsp110 family members is insoluble too.",
+    "snippet": "It was completely insoluble, and accordingly also the accumulated protein in HSPH1 and HSPA4 knock-down cells was found in the insoluble fraction (Figs 6F and S7B).",
+    "anchor": "Results, The degradation pathway is conserved in human cells, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33914734_Gersing2021_PMC8084241.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA) C152W as a Ura3-HA-GFP fusion in Saccharomyces cerevisiae (CUP1 promoter; deletion and temperature-sensitive chaperone and ligase strains) and as an RGS-His fusion transiently expressed in human U2OS cells; NOT a WWOX system",
+     "genotype": "ASPA wild type and C152W; no WWOX",
+     "endpoint": "growth reporter, Western blot level, cycloheximide chase, soluble versus insoluble fraction, aggregates"
+    }
+   },
+   {
+    "proposition": "Figure 6F read: the C152W soluble lanes are empty with control and HSPH1 siRNA; the pellet lane carries a faint band with control siRNA and a clearly stronger band with siRNA against HSPH1; wild type has strong soluble and moderate pellet signal. A soluble-only blot would have shown no C152W protein at all.",
+    "snippet": "The soluble (S) and insoluble (P) fractions of protein were separated in cell extracts treated as in E prior to Western blotting.",
+    "anchor": "Figure 6F (U2OS, soluble and pellet fractions after control or HSPH1 siRNA)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33914734/pgen.1009539.g006.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA) C152W as a Ura3-HA-GFP fusion in Saccharomyces cerevisiae (CUP1 promoter; deletion and temperature-sensitive chaperone and ligase strains) and as an RGS-His fusion transiently expressed in human U2OS cells; NOT a WWOX system",
+     "genotype": "ASPA wild type and C152W; no WWOX",
+     "endpoint": "growth reporter, Western blot level, cycloheximide chase, soluble versus insoluble fraction, aggregates"
+    },
+    "qualifies": "entries[6]",
+    "qualifies_needle": "It was completely insoluble, and accordingly "
+   },
+   {
+    "proposition": "The human degradation is proteasomal and Hsp70-dependent: Hsp70 inhibition strongly raises C152W.",
+    "snippet": "Inhibiting Hsp70 resulted in strong stabilization of ASPA C152W (Fig 6D), showing that Hsp70 also mediates ASPA degradation in human cells.",
+    "anchor": "Results, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33914734_Gersing2021_PMC8084241.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA) C152W as a Ura3-HA-GFP fusion in Saccharomyces cerevisiae (CUP1 promoter; deletion and temperature-sensitive chaperone and ligase strains) and as an RGS-His fusion transiently expressed in human U2OS cells; NOT a WWOX system",
+     "genotype": "ASPA wild type and C152W; no WWOX",
+     "endpoint": "growth reporter, Western blot level, cycloheximide chase, soluble versus insoluble fraction, aggregates"
+    }
+   },
+   {
+    "proposition": "Function was not rescued or even measurable: no enzyme activity was detected for C152W in this study or earlier ones in mammalian cells.",
+    "snippet": "Unfortunately, similar to the previous reports, we were unable to detect any enzyme activity.",
+    "anchor": "Results, Proteasomal degradation and aggregation, paragraph 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33914734_Gersing2021_PMC8084241.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA) C152W as a Ura3-HA-GFP fusion in Saccharomyces cerevisiae (CUP1 promoter; deletion and temperature-sensitive chaperone and ligase strains) and as an RGS-His fusion transiently expressed in human U2OS cells; NOT a WWOX system",
+     "genotype": "ASPA wild type and C152W; no WWOX",
+     "endpoint": "growth reporter, Western blot level, cycloheximide chase, soluble versus insoluble fraction, aggregates"
+    }
+   },
+   {
+    "proposition": "The authors state the quantity-not-function limit for this very variant: stabilising it by the Hsp110 route produced insoluble protein and may not be relevant for it, only for variants with residual solubility and activity.",
+    "snippet": "Although targeting Hsp110 to stabilize ASPA C152W resulted in the accumulation of insoluble protein, it might still be a relevant target for other ASPA variants that are at least partially soluble and contain residual activity.",
+    "anchor": "Discussion, paragraph 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33914734_Gersing2021_PMC8084241.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA) C152W as a Ura3-HA-GFP fusion in Saccharomyces cerevisiae (CUP1 promoter; deletion and temperature-sensitive chaperone and ligase strains) and as an RGS-His fusion transiently expressed in human U2OS cells; NOT a WWOX system",
+     "genotype": "ASPA wild type and C152W; no WWOX",
+     "endpoint": "growth reporter, Western blot level, cycloheximide chase, soluble versus insoluble fraction, aggregates"
+    }
+   },
+   {
+    "proposition": "Chaperone or degradation targets are not universal: low abundance variants may also affect catalysis.",
+    "snippet": "However, low abundance protein variants, including ASPA C152W, might also affect enzyme catalysis in addition to stability and/or folding [32], and therefore targeting molecular chaperones is not a universal therapeutic strategy.",
+    "anchor": "Introduction, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33914734_Gersing2021_PMC8084241.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA) C152W as a Ura3-HA-GFP fusion in Saccharomyces cerevisiae (CUP1 promoter; deletion and temperature-sensitive chaperone and ligase strains) and as an RGS-His fusion transiently expressed in human U2OS cells; NOT a WWOX system",
+     "genotype": "ASPA wild type and C152W; no WWOX",
+     "endpoint": "growth reporter, Western blot level, cycloheximide chase, soluble versus insoluble fraction, aggregates"
+    }
+   },
+   {
+    "proposition": "The soluble/insoluble split used here is a 13,000 g, 30 minute spin of a bead-beaten yeast lysate, with the pellet resuspended and run, and loading controls specific to each fraction (tubulin for soluble, Pma1 for insoluble).",
+    "snippet": "Subsequently, 150 μL of the supernatant was transferred to an Eppendorf tube and samples were centrifuged (13000 g, 30 min, 4°C) to separate soluble and insoluble protein.",
+    "anchor": "Methods, ASPA solubility",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33914734_Gersing2021_PMC8084241.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA) C152W as a Ura3-HA-GFP fusion in Saccharomyces cerevisiae (CUP1 promoter; deletion and temperature-sensitive chaperone and ligase strains) and as an RGS-His fusion transiently expressed in human U2OS cells; NOT a WWOX system",
+     "genotype": "ASPA wild type and C152W; no WWOX",
+     "endpoint": "growth reporter, Western blot level, cycloheximide chase, soluble versus insoluble fraction, aggregates"
+    }
+   },
+   {
+    "proposition": "The aggregates seen by microscopy are not toxic and are not significantly more frequent for C152W than wild type; the difference is in the number of aggregates per cell (two or three).",
+    "snippet": "The aggregates formed by ASPA C152W are unlikely to contribute to the pathogenicity of this variant, as they did not display cellular toxicity (S1B and S1C Fig).",
+    "anchor": "Results, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33914734_Gersing2021_PMC8084241.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA) C152W as a Ura3-HA-GFP fusion in Saccharomyces cerevisiae (CUP1 promoter; deletion and temperature-sensitive chaperone and ligase strains) and as an RGS-His fusion transiently expressed in human U2OS cells; NOT a WWOX system",
+     "genotype": "ASPA wild type and C152W; no WWOX",
+     "endpoint": "growth reporter, Western blot level, cycloheximide chase, soluble versus insoluble fraction, aggregates"
+    }
+   },
+   {
+    "proposition": "Yeast Hsp104 has no metazoan homologue; expressing it in human cells lowered, not raised, C152W, so the disaggregase arm does not transfer as a rescue.",
+    "snippet": "Since there is no known metazoan homolog of Hsp104, we attempted to express yeast Hsp104 in human cells to promote solubilisation of ASPA C152W.",
+    "anchor": "Results, The degradation pathway is conserved in human cells, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33914734_Gersing2021_PMC8084241.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA) C152W as a Ura3-HA-GFP fusion in Saccharomyces cerevisiae (CUP1 promoter; deletion and temperature-sensitive chaperone and ligase strains) and as an RGS-His fusion transiently expressed in human U2OS cells; NOT a WWOX system",
+     "genotype": "ASPA wild type and C152W; no WWOX",
+     "endpoint": "growth reporter, Western blot level, cycloheximide chase, soluble versus insoluble fraction, aggregates"
+    }
+   },
+   {
+    "proposition": "The abundance-plus-function pairing is proposed, not done: VAMP-seq on ASPA combined with a function assay would identify the variants for which targeting quality control is relevant.",
+    "snippet": "To this end, we propose that the multiplexed genetic assay variant abundance by massively parallel sequencing (VAMP-seq) could be applied [77].",
+    "anchor": "Discussion, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33914734_Gersing2021_PMC8084241.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA) C152W as a Ura3-HA-GFP fusion in Saccharomyces cerevisiae (CUP1 promoter; deletion and temperature-sensitive chaperone and ligase strains) and as an RGS-His fusion transiently expressed in human U2OS cells; NOT a WWOX system",
+     "genotype": "ASPA wild type and C152W; no WWOX",
+     "endpoint": "growth reporter, Western blot level, cycloheximide chase, soluble versus insoluble fraction, aggregates"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST returned the whole article as fullTextXML for PMC8084241 (237 kB, 2026-10-21); figures from the supplementaryFiles container.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a figure legend or an inspected figure."
+ }
+}
