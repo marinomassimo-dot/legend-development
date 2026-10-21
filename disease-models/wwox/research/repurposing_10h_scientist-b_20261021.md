@@ -217,3 +217,16 @@ Depth: `partial_fulltext_read` (whole PMC XML body; Figures 1, 3 and 4 as page r
 
 **Comparison with the lead.** Axis A: none (no genotype comparison). Axis B: weak support that a second, differently-built drug with T-type block suppresses PTZ responses in animals without a mutation; dilutes the "genotype-specific" reading. Axis C: GABA-A mechanism is an explicit alternative. Axis D: none (rat, acute). **Net: marginal; adds a model of "provoked response in wild type is suppressible by a T-type-active drug", which the Wwox wild-type panels need to be read against.**
 
+## 12. PMID 41137852 (Balestrini 2026): clinical and genetic landscape of absence seizures in monogenic epilepsies. NOT WWOX EVIDENCE
+
+Depth: `partial_fulltext_read` (whole PMC XML body and tables; Figures 1 to 3 captions only; three supplementary docx files not opened). Manifest `PMID41137852.json` STRICT PASS, 7 locators. Receipt staged `FTR-20261021-41137852-01`. WWOX does not occur in the paper (count 0 on the XML); the cohort has no WWOX case.
+
+**What it establishes (DATO, retrospective, 17 Italian centres, 160 patients with an EEG-documented absence seizure and a pathogenic or likely pathogenic variant).** Absence seizures occur across 56 monogenic etiologies (most often SLC2A1, SLC6A1, SYNGAP1, CHD2, SCN1A), 58 percent with onset before 3 years; developmental delay 54 percent, intellectual disability 65 percent, drug-resistant epilepsy 54 percent. Treatment effect as recorded by the clinicians: valproate effective in 102 of 142 treated, **ethosuximide in 72 of 106 (68 percent)**, benzodiazepines 49 percent, lamotrigine 49 percent, levetiracetam 5 of 63 (8 percent).
+
+**Why it matters for the lead (class level).**
+1. *A human anchor for gene-dependent ethosuximide response.* Table 2 shows ethosuximide effectiveness differing by gene in small groups: SLC2A1 88 percent of 17 treated, SCN1A 78 percent of 9, SYNGAP1 55 percent of 9, CHD2 60 percent of 5, CACNA1A 25 percent of 4, NEXMIF 0 percent of 4. The authors do not test heterogeneity, groups are 1 to 17 patients, drugs were mostly prescribed for the whole syndrome ("not necessarily specific efficacy for absences"), and the label is a clinician judgement. It supports, weakly, that response to a T-type-active drug differs between genotypes within one seizure type, which is the kind of observation the lead is a murine instance of; it does not tell whether any such difference reflects T-type biology or something else (NEXMIF 0 of 4 and CACNA1A 1 of 4 are numerically poor but tiny).
+2. *Symptomatic reading.* The series reports no association of ethosuximide response with neurodevelopmental outcome; independent predictors of poor development were early delay, drug resistance and early absence onset. This is the clinical counterpart of the question 5 finding in the digenic mouse (seizure control without comorbidity control), and the paper does not test it.
+3. *Selection bias stated by the authors* (testing was pursued in severe cases); the answer to "which drugs work by genotype" is for a referral population.
+
+**Comparison with the lead.** Axis A: weak human-level supporting observation of genotype-dependent response, without any wild-type-equivalent. Axis B: none. Axis C: heterogeneity table has no test and tiny cells. Axis D: none. **Net: context only.**
+
