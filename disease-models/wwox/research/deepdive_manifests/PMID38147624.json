@@ -1,0 +1,488 @@
+{
+ "schema_version": 2,
+ "pmid": "38147624",
+ "doi": "10.1182/bloodadvances.2022008926",
+ "receipt": "FTR-20261021-38147624-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261021.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access XML, figures, PDF and supplement came from pmc_bucket_fetch.py in one call; no cascade needed."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Mouse haematopoietic leukaemia model (Csnk1a1 haploinsufficiency plus Trp53 editing); no neural readout. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries_text": [
+   "Csnk1a1 AND haploinsufficiency",
+   "BTX-A51 OR \"A51\" AND casein kinase"
+  ],
+  "note": "Group R3 reading; queries are PubMed counts on 2026-10-21 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "Csnk1a1 AND haploinsufficiency",
+    "count": 16,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   },
+   {
+    "query": "BTX-A51 OR \"A51\" AND casein kinase",
+    "count": 6,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 38147624; registry_records.py get --pmid 38147624 --hops 1",
+  "hits": 0,
+  "finding": "No receipt before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-21; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 41,
+   "references_screened": 40,
+   "references_with_doi": 40,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38147624_Fuchs2024_PMC_r2.xml",
+   "sha256": "b8c645ae97daf5d35777213530928433df2220cc629062a646ba7cc4c54d2858",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=10847877",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "b8c645ae97daf5d35777213530928433df2220cc629062a646ba7cc4c54d2858"
+   }
+  },
+  {
+   "path": "files/supplement/PMID38147624_r2/PMC10847877.1.pdf",
+   "sha256": "914c8f1246c032b3fc88226cabcd86432617e3d78d81ec258328890b1cc4be6e",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "914c8f1246c032b3fc88226cabcd86432617e3d78d81ec258328890b1cc4be6e"
+   }
+  },
+  {
+   "path": "files/supplement/PMID38147624_r2/BLOODA_ADV-2022-008926-mmc1.pdf",
+   "sha256": "a3fd1cfb516c13324ea75cbed554c135a4d37d2fafcff2e2db8e8c6326325789",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "a3fd1cfb516c13324ea75cbed554c135a4d37d2fafcff2e2db8e8c6326325789"
+   }
+  },
+  {
+   "path": "files/supplement/PMID38147624_r2/BLOODA_ADV-2022-008926-mmc1.txt",
+   "sha256": "b9bfa4ca9b7481a8700ce1fe6f1d18ddbd978e186a46c797bab6375f54b3599b",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID38147624_r2/BLOODA_ADV-2022-008926-mmc1.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -nopgbrk <pdf> <txt> (reading-order mode, no -layout)",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "b9bfa4ca9b7481a8700ce1fe6f1d18ddbd978e186a46c797bab6375f54b3599b"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID38147624_r3c/fig_p03_200dpi.png",
+   "sha256": "c985717946c1ffbea52700d1a3467cf0b17cb696cbd1e5d4a311ddae3f44b8e3",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID38147624_r2/PMC10847877.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=200), page 3",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "c985717946c1ffbea52700d1a3467cf0b17cb696cbd1e5d4a311ddae3f44b8e3"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID38147624_r3c/fig_p05_200dpi.png",
+   "sha256": "b7091fda4570ea7b0e8d3f992b17cca8860edf80e9d1d7df015b77b2b2f97b4f",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID38147624_r2/PMC10847877.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=200), page 5",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "b7091fda4570ea7b0e8d3f992b17cca8860edf80e9d1d7df015b77b2b2f97b4f"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID38147624_r3c/fig_p06_200dpi.png",
+   "sha256": "f8f6b464ea0ff3f6c5e5ea805037b08a526786931219f784b0792e4856e2e47f",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID38147624_r2/PMC10847877.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=200), page 6",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "f8f6b464ea0ff3f6c5e5ea805037b08a526786931219f784b0792e4856e2e47f"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID38147624_r3c/fig_p08_300dpi.png",
+   "sha256": "2be19f4f5a3dcd1c4da81484a36c8808d698391902cd7bf1e8571a9765aa3194",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID38147624_r2/PMC10847877.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=300), page 8",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "2be19f4f5a3dcd1c4da81484a36c8808d698391902cd7bf1e8571a9765aa3194"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID38147624_r3c/fig_p09_300dpi.png",
+   "sha256": "87c7669e33e3fdce93bc375355c6c6d1aa04a67dc722354cad0bad5af7d676dd",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID38147624_r2/PMC10847877.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=300), page 9",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "87c7669e33e3fdce93bc375355c6c6d1aa04a67dc722354cad0bad5af7d676dd"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID38147624_r3c/fig_p10_300dpi.png",
+   "sha256": "357abe09ef9a982c9721d6a0676973fe1213390e3ccd1a30f9ffc80dffb7141c",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID38147624_r2/PMC10847877.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=300), page 10",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "357abe09ef9a982c9721d6a0676973fe1213390e3ccd1a30f9ffc80dffb7141c"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID38147624_r3c/fig1F_crop_p03_400dpi.png",
+   "sha256": "e0962d9121222c8fd541f4e4039d421133b9fc98e0ca227544bf027226b83361",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID38147624_r2/PMC10847877.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=400, clip=Rect(0.54w,0.27h,0.93w,0.40h)), page 3",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "e0962d9121222c8fd541f4e4039d421133b9fc98e0ca227544bf027226b83361"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Prior-work premise carried by the paper: Csnk1a1 haploinsufficiency activates Wnt and raises Myc in haematopoietic stem cells (citing earlier work, not shown here).",
+    "snippet": "Our previous work demonstrated that Csnk1a1 haploinsufficiency leads to a proliferative advantage of HSCs by activation of Wnt signaling and Myc upregulation",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38147624_Fuchs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper reports Wnt as up in leukaemic blasts by pathway-footprint inference and points to Figure 1 for the same in Csnk1a1-haploinsufficient cells.",
+    "snippet": "Pathway footprint analysis predicted downregulation of p53 pathways, as expected, and NF-κb and hypoxia pathways, whereas MAPK and Wnt signaling were upregulated (Figure 6C-D), as also seen in Csnk1a1 haploinsufficient hematopoietic stem cells (compare Figure 1).",
+    "anchor": "Results / Leukemic growth is driven by Wnt and Myc signaling",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38147624_Fuchs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Myc protein is claimed up only in the double-hit blasts, not in Csnk1a1 haploinsufficiency alone (a leukaemia-specific change).",
+    "snippet": "Myc induction was only observed in the Csnk1a1/Trp53 mutant blasts but not in Csnk1a1 haploinsufficiency or WT cells alone, indicating that Myc induction is leukemia specific.",
+    "anchor": "Results / Leukemic growth",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38147624_Fuchs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A51 reduced Myc protein in marrow of tertiary leukaemias (mouse leukaemia, 5 mg/kg/day regimen, no neural tissue).",
+    "snippet": "Interestingly, vehicle-treated leukemias showed a strong induction of Myc, whereas A51 treatment significantly reduced the expression (Figure 6I).",
+    "anchor": "Results / Leukemic growth",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38147624_Fuchs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The collaborative transformation rests on one animal.",
+    "snippet": "Leukemia with blast dissemination and splenomegaly developed in the blood of 1 Csnk1a1–/+ Trp53 mouse (Figure 2C-E).",
+    "anchor": "Results / Collaborative effect of Trp53 mutations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38147624_Fuchs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Selectivity of A51 for the double-hit blasts is stated for the higher dose of the A51 range.",
+    "snippet": "However, direct Csnk1a1 and Cdk7/9 inhibition with compound A51 notably caused growth arrest selectively in Trp53 mutant blasts at higher dose (Figure 4G).",
+    "anchor": "Results / Leukemic blasts can be cultured ex vivo",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38147624_Fuchs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The CK1 inhibitor D4476 did not separate Csnk1a1+/- cells or blasts from wild type, so the selective effect of A51 is not carried by the CK1-alpha arm alone on this evidence.",
+    "snippet": "Direct Csnk1a1 inhibition using D4476 was not significantly more efficient in Csnk1a1–/+ Hoxb8-Flt3 cells and blasts than in WT Hoxb8-Flt3 cells.",
+    "anchor": "Results / Leukemic blasts can be cultured ex vivo",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38147624_Fuchs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Text claims blood counts normalised and spleen reduced under A51.",
+    "snippet": "Blood counts were normalized upon treatment with A51 (Figure 5B), and in particular, the spleen size was reduced (Figure 5C)",
+    "anchor": "Results / A51 cotargeting",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38147624_Fuchs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Marrow blast reduction is stated as not significant.",
+    "snippet": "Blasts in the bone marrow were reduced (even if not significant) in A51-treated leukemias",
+    "anchor": "Results / A51 cotargeting",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38147624_Fuchs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Discussion frames A51 as effective at inhibiting growth of the double-hit blasts in vitro and in vivo.",
+    "snippet": "Targeting Csnk1a1 and the transcriptional kinases CDK7/9 using compound A51 can be effective at inhibiting growth of Csnk1a1/Trp53 mutated blasts in vitro and in vivo.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38147624_Fuchs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors attribute the pro-proliferative phenotype to Wnt dosage.",
+    "snippet": "As we and others have shown, the pro-proliferative phenotype is dependent on Wnt-signaling dosage.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38147624_Fuchs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Network model: Wnt up through GSK3B and Lrp6 to Lef1 is a CARNIVAL prediction, not a measurement.",
+    "snippet": "Predictions suggest that Csnk1a1 haploinsufficiency led to upregulation of the Wnt-pathway, via upregulation of GSK3B and through Lrp6, ultimately culminating in Lef1 upregulation",
+    "anchor": "Results / Leukemic growth",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38147624_Fuchs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Competing interest: a co-author consults for the company advancing A51.",
+    "snippet": "Y.B.-N. is a consultant for Edgewood Oncology, a company advancing A51 clinical development for AML/high-risk MDS.",
+    "anchor": "Conflict-of-interest disclosure",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38147624_Fuchs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplement: A51 5 mg/kg/day, 5 days per week, for 3 weeks from day 8 (single dose level in vivo).",
+    "snippet": "continued once daily for 3 weeks (5",
+    "anchor": "Supplemental methods / Animal studies",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID38147624_r2/BLOODA_ADV-2022-008926-mmc1.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The figure legend of Figure 5 states dosing until 4 weeks after transplant, whereas the supplement states 3 weeks of dosing; the two descriptions of the schedule differ.",
+    "snippet": "A51-treated mice received A51 compound (5 mg/kg per day) starting at 8 days after transplant, 5 days per week until 4 weeks after transplant (euthanasia).",
+    "anchor": "Figure 5 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38147624_Fuchs2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In vitro screen: 24-hour MTT, duplicate wells, A51 range 10 to 316 nM.",
+    "snippet": "The cells were cultured for 24 hours after which the proliferation was measured according to protocol of the MTT Cell",
+    "anchor": "Supplemental methods / MTT assay",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID38147624_r2/BLOODA_ADV-2022-008926-mmc1.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Leukaemia mice were sacrificed when sick with beginning hind-limb paralysis (a disease sign in the model, not a treatment readout).",
+    "snippet": "Mice were monitored closely and sacrificed after four weeks when they appeared sick and showed",
+    "anchor": "Supplemental methods / Animal studies",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID38147624_r2/BLOODA_ADV-2022-008926-mmc1.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 1F (crop at 400 dpi from vector page 3): the Hallmark WNT_BETA_CATENIN_SIGNALING row is negative-NES (purple) in the Egr1+/- and Csnk1a1fl/+ columns and blank in the compound column; MYC_TARGETS_V1 is positive in Csnk1a1fl/+ and compound. So the one panel the text points to for Wnt in Csnk1a1-haploinsufficient cells does not show Wnt up.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] WNT_BETA_CATENIN_SIGNALING row purple in columns Egr1-/+ and Csnk1a1fl/+; blank in Csnk1a1fl/+ Egr1-/+",
+    "anchor": "Figure 1F, page 3 crop at 400 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID38147624_r3c/fig1F_crop_p03_400dpi.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[1]",
+    "qualifies_needle": "Pathway footprint analysis predicted downregu"
+   },
+   {
+    "proposition": "Fig 6D (300 dpi page 10): PROGENy WNT score is small and pale (about +0.7, lowest -log10 P class) against MAPK about +3; the Wnt-up statement for the blasts is a weak pathway-footprint output.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] WNT bar about 0.7 pale shade; MAPK bar about 3 darker shade; p53, NFkB, hypoxia negative",
+    "anchor": "Figure 6D, page 10 at 300 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID38147624_r3c/fig_p10_300dpi.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[1]",
+    "qualifies_needle": "Pathway footprint analysis predicted downregu"
+   },
+   {
+    "proposition": "Fig 4G (300 dpi page 8): at A51 10, 31.6 and 100 nM the three genotypes sit at about 40-50 percent viability together; only at 316.2 nM do the Csnk1a1+/- p53 blasts fall to about 25 percent against about 50 percent for the others. One concentration separates them; wild-type cells already lose half their viability at 10 nM.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] A51 panel: MxCre ~50, Csnk-/+ ~45, Csnk-/+p53 ~38 at 10 nM; ~25 versus ~50 at 316.2 nM",
+    "anchor": "Figure 4G, page 8 at 300 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID38147624_r3c/fig_p08_300dpi.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[5]",
+    "qualifies_needle": "However, direct Csnk1a1 and Cdk7/9 inhibition"
+   },
+   {
+    "proposition": "Fig 5B-D (300 dpi page 9): control n = 6, A51 n = 10; printed P: blood blasts 0.0709, marrow blasts 0.1352, marrow cellularity 0.0002; WBC, platelet and spleen/body-weight panels print no P value, with overlapping points; marrow cellularity remains about 80 percent in A51 mice.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] 0.0709 ; 0.1352 ; 0.0002; no bracket on WBC, platelets or spleen/body weight",
+    "anchor": "Figure 5B-D, page 9 at 300 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID38147624_r3c/fig_p09_300dpi.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[7]",
+    "qualifies_needle": "Blood counts were normalized upon treatment w"
+   },
+   {
+    "proposition": "Fig 6H-I (300 dpi page 10): in 6H a single faint Myc band appears only in the Csnk1a1-/+ p53 lane (one blot, no replicate shown); in 6I the Myc band intensity follows the printed bone-marrow blast percentage (weak where blasts are 3-62 percent, strong in lanes at 93-99 percent, including A51-treated animals), so the Myc drop under A51 is confounded by blast burden.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] BM blast % 67 78 91 93 96 97 | 3 34 54 62 70 76 80 93 94 99; Myc strong in A51 lanes with 93, 94, 99",
+    "anchor": "Figure 6H-I, page 10 at 300 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID38147624_r3c/fig_p10_300dpi.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[3]",
+    "qualifies_needle": "Interestingly, vehicle-treated leukemias show"
+   },
+   {
+    "proposition": "Fig 2B (200 dpi page 5): alive fractions at 156 days read about 100 percent (Mx1Cre ntg), 80 (Mx1Cre p53), 40 (Csnk p53), 60 (Csnk/Egr1 p53), 60 (Egr1 p53); deaths in all p53-edited groups, the text attributing them to thymic lymphoma; group sizes are not printed.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] stacked alive/dead bars; Csnk p53 bar about 40 percent alive",
+    "anchor": "Figure 2B, page 5 at 200 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID38147624_r3c/fig_p05_200dpi.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figs 1A-E, 1G-J (200 dpi page 3): WBC and progenitor frequencies similar across genotypes; first-plating colonies higher for Csnk1a1fl/+ and lower for Egr1-/+; second plating higher in all three mutants; competition assays favour Csnk1a1fl/+ and Egr1-/+ over Mx1-Cre.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Colony forming potential 1st plating Csnk ~82 versus Mx1-Cre ~66; 2nd plating ~27 versus ~13",
+    "anchor": "Figure 1, page 3 at 200 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID38147624_r3c/fig_p03_200dpi.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 3 (200 dpi page 6): secondary recipients with blast morphology, flow histograms and an exome filter leaving a single OncoKB overlap in the primary transplant only.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Annotated in OncoKB single bar (primary transplant); none at oncogene level",
+    "anchor": "Figure 3, page 6 at 200 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID38147624_r3c/fig_p06_200dpi.png",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch XML, PMC PDF, supplement PDF and its text layer fingerprinted; Figures 1-6 inspected as page renders (vector pages rendered at 200-300 dpi).",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}
