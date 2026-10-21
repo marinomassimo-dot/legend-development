@@ -1,0 +1,76 @@
+{
+ "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Part of the ten-hour repurposing batch ORCH-REPURPOSING-10H-20261021. Adjacent and transferable literature: every paper that is not WWOX evidence is labelled NOT WWOX EVIDENCE, at class level, no dose, no paediatric suitability presumed, not medical advice.",
+ "TASK_ID": "REPURP-10H-GSE156243-B-20261022",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-b",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Roadmap first observed-transcriptomic input: qualify GSE156243 (WWOX-knockout versus wild-type human brain organoids, week 15) as an input, and run the simplest exploratory reversal query with the thresholds declared BEFORE looking at any drug. The plan marks it blocked only because the bytes were never fetched; the reconciliation measured the GEO supplementary directory reachable and the three originals at about 0.54 MB.",
+ "SCOPE": {
+  "inputs": [
+   "disease-models/wwox/research/drug_repurposing/roadmap_v4_r14_20261020.md section 'GSE156243 \u2014 primo input del ramo trascrittomico osservato' (a plan, not an authority)",
+   "disease-models/wwox/research/drug_repurposing/reconciliation_20261020.md"
+  ],
+  "outputs": "files/ for the originals (gitignored, with sha256); a qualification note and a results folder under disease-models/wwox/research/drug_repurposing/gse156243/ (new, yours alone); a staged receipt only if a paper reading is involved",
+  "forbidden": "repurposing_bridge.py, cards/, cards_early/ and the roadmap copies"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "originals fetched from the official GEO supplementary directory, sha256 recorded, compared with the digests the roadmap quotes",
+  "contrast and design recovered from GEO and the paper (clone, batch, replicate unit; 4 KO and 2 WT after QC exclusion of two WT) before any inference",
+  "padj<=0.01 and padj<=0.05 lists both produced and the p-value-only list NOT called FDR-controlled",
+  "gene universe = genes actually tested, symbols validated against the tool's current vocabulary with ENSG kept",
+  "bulk-composition and maturation markers annotated; dropping them is a sensitivity analysis, not deconvolution",
+  "at least one reversal query run with declared thresholds and the ORIGINAL tool response stored; every result labelled exploratory",
+  "a plain target-to-drug lookup compared against it, and what changed in the choice of next experiment stated",
+  "DEFAULTS_TAKEN and STOP_LOG here"
+ ],
+ "DEPENDENCIES": [],
+ "REVIEW_REQUIREMENT": "Mirror ex post",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently",
+ "MILESTONE_PLAN": [
+  "TASK_ACK/CLAIM",
+  "per-paper M0-M5",
+  "analysis note",
+  "self-eval",
+  "report"
+ ],
+ "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
+ "CURRENT_STATE": "ASSIGNED",
+ "assigned_on": "2026-10-22",
+ "CHECKPOINT": {
+  "at": "2026-10-21",
+  "done_pmids": [
+   "36300716",
+   "37275776",
+   "42274296",
+   "37082241",
+   "30955423",
+   "42536722",
+   "29463073",
+   "40834072",
+   "32000863(targeted re-read)",
+   "40827489",
+   "35184274",
+   "41137852"
+  ],
+  "remaining_lot": [
+   "40068874",
+   "32878331",
+   "33704440",
+   "40825030",
+   "36282524"
+  ],
+  "then": [
+   "four Europe PMC WWOX/T-type full-text hits 41898755 41135097 42654085 41153369",
+   "FT-115 dated confirmation",
+   "HELD-partial (none in R2) then adjacent search",
+   "five questions into selection file",
+   "commit candidate CC-20261021-SCIENTIST-B-R2-*",
+   "self-eval, report"
+  ],
+  "notes": "Each reading: manifest PASS, receipt staged under research/receipt_staging/scientist-b/, note section appended in research/repurposing_10h_scientist-b_20261021.md. A resume re-reads this and git log on branch task/repurp-10h-r2-b."
+ }
+}

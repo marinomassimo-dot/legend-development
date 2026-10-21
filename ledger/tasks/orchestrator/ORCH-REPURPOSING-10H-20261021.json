@@ -75,11 +75,12 @@
    "scientist-b": {
     "group": "R2",
     "agentId": "a9be556c4afa30ad3",
-    "task": "REPURP-10H-R2b-B-20261022",
-    "state": "R2b relay running (started ~00:00Z) | measured 23:18Z via ListAgents: running",
+    "task": "REPURP-10H-GSE156243-B-20261022",
+    "state": "R2b readings committed on branch task/repurp-10h-r2b-b (932e0e3f), landing blocked by an untracked peer file (the R3-repairs auditor, still writing); GSE156243 qualification relay started",
     "previous_agents": [
      "a85b13d3c3c5f7071",
-     "a9ce64fa724e5f4ef"
+     "a9ce64fa724e5f4ef",
+     "a9be556c4afa30ad3"
     ]
    },
    "scientist-c": {
@@ -167,6 +168,10 @@
    {
     "t": "2026-10-21T23:3xZ",
     "event": "deep-recovery cards audit returned (c62088c9): 8 of 12 cards with a defect, most residues of wordings repaired or withdrawn elsewhere. Pattern across both card audits: cards freeze the state of the notes at the moment they were built; the structural checker cannot see staleness. Candidate for a Harness note-and-hash check: a card should record the commit of each note it cites and a checker should report when the cited note has moved"
+   },
+   {
+    "t": "2026-10-21T23:35Z",
+    "event": "scientist-b R2b: first direct drug-by-genotype interaction test found (trimethadione in a GluA1 C811S mouse) and it runs OPPOSITE to DL-MECH-170 (drug works in wild type, mostly fails in the hyperexcitable mutant; both vehicle groups at a ceiling); P47T RNA-seq (GSE158681/2) shows Cacna1i lower in all four comparisons, Cacna1g no consistent direction \u2014 contradicts the earlier P47T 'CACNA1G up' reading, to be reconciled; DL-MECH-170 neither narrowed nor promoted. B then handed the roadmap's first transcriptomic input GSE156243"
    }
   ],
   "audits": {
