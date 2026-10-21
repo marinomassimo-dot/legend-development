@@ -1,0 +1,45 @@
+{
+ "analysis_at": "2026-10-21T06:05:00Z",
+ "event_at": "2026-10-21T06:20:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "captions_only",
+  "references": "not_read"
+ },
+ "event_id": "FTR-20261021-42422765-01",
+ "evidence_basis": [
+  "TARGETED PANEL RE-INSPECTION, not a re-read of the article. context_policy QUESTION_DRIVEN, declared: the dispatch stated LEGEND's current position on the CLAIM 011 dose flag before the source was re-opened.",
+  "The 726 px PMC CDN rasters that carried every prior figure attestation were replaced, for the panels below, by the 300 dpi rasters embedded in the publisher PDF (PMC13343157.1.pdf, 17 pp., Elsevier) and by 400 dpi page renders of the two surfaces whose plots are vector. Figure 7 is the case that justifies the page render: its only embedded raster is 759x515 and carries the ECoG traces alone, so an extracted-image read would have missed every number on panels B, C and E.",
+  "Figures inspected as images at native resolution this session: Figure 1 (G, H, I, M), Figure 3 (B, C, D, E-H), Figure 6 (C, D, E, F), Figure 7 (B, C, E) and Supplementary Figure S7 (B, D, F, H, I with its caption). Figure-to-file pairing taken from figure_legend_pairs.py over the JATS XML and cross-checked by aspect ratio against the PDF's embedded images.",
+  "Sections read verbatim from the JATS XML this session: the two Results sections on myelination/neuroinflammation and on epileptiform activity, the Methods subsection 'Surgery and ECoG data acquisition', and all eight figure captions. The Methods as a whole, the Abstract, Introduction, Discussion and Limitations were NOT re-read, and the coverage map understates rather than overstates on that account.",
+  "MEASURED, Figure 3B against its printed axes (x ticks 0/100/200/300 days, y ticks 0/50/100 percent): KO+RI reaches 0 percent at ~day 15; KO+WWOX LD reaches 0 percent at ~day 78-81; KO+WWOX HD plateaus at 76-77 percent from ~day 80 through day 300; and WT+RI itself ends at 71-72 percent. Two values asserted in the CLAIM 011 flag's prose are corrected by this measurement, and neither sat behind any persisted verbatim locator - the manifest carried no Figure 3B entry at all before this event.",
+  "MEASURED, dose behaviour is endpoint-specific: body weight at P30 is LD 15.3 g versus HD 15.6 g with no significance marker printed on Figure 3C or 3D; Figure 7E contains no low-dose arm; Figure 6E, the only MBP quantification in the paper, contains no treated arm and Figure 6F contains no untreated-KO column; and in Supplementary Figure S7 the wild-type reference value moves about two-fold between the disease-baseline panels and the treated-arm panels of the same figure, on different axis ranges.",
+  "CONFIRMED, not contradicted: the Figure 7C text-versus-panel conflict (printed 0.2000 against the running text's 'significant elevation') holds at 400 dpi. No persisted verbatim locator is contradicted, corrected or replaced by this event; six locator entries and two body quotations are ADDED and none is edited.",
+  "Manifest schema v2 STRICT PASS, 0 gaps, 48 locator entries over 24 declared artefacts, after the additions."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
+  "disease-models/wwox/research/drug_repurposing/woree_rescue_reference_scaffold.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261021-SCIENTIST-C-CLAIM011-DOSE-ADJUDICATION-01.md"
+ ],
+ "prior_receipt": "FTR-20261019-42422765-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "8850ea32d27a638b4ab8a38bfc9281ac9bac269a70e8c27302dd1001f92cbee4",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/supplement/PMID42422765_r2/PMC13343157.1.pdf",
+ "study_id": {
+  "doi": "10.1016/j.omta.2026.201791",
+  "pmid": "42422765"
+ },
+ "workflow": "scientist-c, task REPURP-P3-RESCUEREF-C-20261021; QUESTION_DRIVEN targeted panel re-inspection at native resolution to adjudicate the CLAIM 011 dose flag and to bind the WOREE_RESCUE_REFERENCE card; surfaces already on disk, nothing acquired; prepared as JSON for the integrator and not appended by this actor."
+}
