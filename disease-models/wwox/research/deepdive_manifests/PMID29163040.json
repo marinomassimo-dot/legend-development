@@ -1,0 +1,352 @@
+{
+ "schema_version": 2,
+ "pmid": "29163040",
+ "doi": "10.3389/fnmol.2017.00365",
+ "receipt": "FTR-20261022-29163040-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022b.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Article XML, figures and the supplementary figure were already on disk (XML and figures by the prior session; the supplementary TIFF re-fetched from the Europe PMC supplementaryFiles endpoint because the earlier file in supplement/ was the article PDF, not the supplement)."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Pharmacological Cdk7 inhibition (covalent inhibitor THZ1) in mouse cortical cultures, acute hippocampal slices and by intracerebroventricular injection in adult male mice; no WWOX content, no drug of the repurposing class under study; a class-mechanism precedent."
+ },
+ "field_density": {
+  "queries_text": [
+   "THZ1 AND (neurons OR brain OR memory) -> 14"
+  ],
+  "note": "Group R3 relay reading; queries are PubMed counts on 2026-10-22 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "THZ1 AND (neurons OR brain OR memory)",
+    "count": 14,
+    "source": "PubMed 2026-10-22"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 29163040; registry_records.py get --pmid 29163040 --hops 0",
+  "hits": 0,
+  "finding": "No receipt before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-22; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 35,
+   "references_screened": 35,
+   "references_with_doi": 35,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID29163040_He2017_PMC_r2.xml",
+   "sha256": "8760a2bcaa99c06ac17ceb68be1d564f3ec7f3d3da147e62785ab19e5bbd8477",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "tier": "pmc_efetch_xml",
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=5681959",
+    "http_method": "GET",
+    "user_agent_policy": "none",
+    "note": "acquired in a prior session; the route is recorded from the PMCID, the file fingerprint was verified this session",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "8760a2bcaa99c06ac17ceb68be1d564f3ec7f3d3da147e62785ab19e5bbd8477"
+   }
+  },
+  {
+   "path": "files/figures/PMID29163040_r2/fnmol-10-00365-g0001.jpg",
+   "sha256": "2205d0cd2b1052535df0f0158e03c6e11b1695cc53889993c37e82ab2fdeb6e9",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5681959/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementary_files",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "2205d0cd2b1052535df0f0158e03c6e11b1695cc53889993c37e82ab2fdeb6e9"
+   }
+  },
+  {
+   "path": "files/figures/PMID29163040_r2/fnmol-10-00365-g0002.jpg",
+   "sha256": "8c950dfe104be4a93fa803dc78bdcd3f29ec1c9aed76fc1349af48343f480da7",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5681959/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementary_files",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "8c950dfe104be4a93fa803dc78bdcd3f29ec1c9aed76fc1349af48343f480da7"
+   }
+  },
+  {
+   "path": "files/figures/PMID29163040_r2/fnmol-10-00365-g0003.jpg",
+   "sha256": "50ff0db446eed04a1296a6ff320ab1a6b6f1dfdbf483fb2eaeb5b854ec766503",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5681959/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementary_files",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "50ff0db446eed04a1296a6ff320ab1a6b6f1dfdbf483fb2eaeb5b854ec766503"
+   }
+  },
+  {
+   "path": "files/figures/PMID29163040_r2/fnmol-10-00365-g0004.jpg",
+   "sha256": "64e033ba6a981df5fbf9cc980a96a3c2f0583d628d978061c0c5a0af70d9cbe5",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5681959/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementary_files",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "64e033ba6a981df5fbf9cc980a96a3c2f0583d628d978061c0c5a0af70d9cbe5"
+   }
+  },
+  {
+   "path": "files/figures/PMID29163040_r2/fnmol-10-00365-g0005.jpg",
+   "sha256": "c3b74067c6a72d8136344726d5c51cac99982fac27728beb3b1d782dd9b0927f",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5681959/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementary_files",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "c3b74067c6a72d8136344726d5c51cac99982fac27728beb3b1d782dd9b0927f"
+   }
+  },
+  {
+   "path": "files/figures/PMID29163040_r2/fnmol-10-00365-g0006.jpg",
+   "sha256": "1d67873efc530afe7bdba53634077f9e9708373ce72833d9b69b210e295529dc",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5681959/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementary_files",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "1d67873efc530afe7bdba53634077f9e9708373ce72833d9b69b210e295529dc"
+   }
+  },
+  {
+   "path": "files/supplement/PMID29163040_r2/eupmc_supp/Image_1.tif",
+   "sha256": "a7e0fc0713e5e3f23279cf9b406e33e6c564e927043ce818530aa67c49857482",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5681959/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementary_files",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "a7e0fc0713e5e3f23279cf9b406e33e6c564e927043ce818530aa67c49857482"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "In cultured cortical neurons the covalent Cdk7 inhibitor lowers phosphorylation of RNA polymerase II CTD serines 2, 5 and 7 over a five-point concentration series; 10 nM does nothing, 50 nM already lowers each by roughly two thirds, 500 and 1000 nM are comparable.",
+    "snippet": "we probed phosphorylation levels of residues Ser 2, Ser 5 and Ser 7 on RNAPII CTD after 4-h incubation of THZ1 at final concentrations of 10, 50, 250, 500 and 1000 nM",
+    "anchor": "Results / Irreversible Inhibition of Neuronal Cdk7 by THZ1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29163040_He2017_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The text names 500 and 1000 nM as the concentrations of greatest effect; the bar chart shows the main step between 10 and 50 nM with a plateau from 250 nM, so the printed sentence understates the lower points.",
+    "snippet": "Fig 2B (publisher JPEG): p-Ser2 about 100 (10 nM), 33 (50 nM), 26 (250), 20 (500), 16 (1000); p-Ser5 and p-Ser7 similar; stars on every bar from 50 nM",
+    "anchor": "Figure 2B",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29163040_r2/fnmol-10-00365-g0002.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Inhibition after a 4 h exposure does not recover for 8 h after washout in cultured neurons, as expected for a covalent binder.",
+    "snippet": "The WB results show that the phosphorylation levels did not recover at least 8 h after the washout of THZ1 by conditioned media from sister cultures",
+    "anchor": "Results / Irreversible Inhibition of Neuronal Cdk7 by THZ1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29163040_He2017_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Activity blockade by TTX lowers IEG mRNAs (Npas4, c-Fos, Nr4a1, Egr1, Arc) and RNAPII CTD phosphorylation; the inhibitor lowers the same IEGs further in the absence of any stimulus.",
+    "snippet": "Similarly, in the presence of THZ1, which induced drastic decrease of phosphorylation levels of Ser 2, Ser 5 and Ser 7 on the RNAPII CTD",
+    "anchor": "Results / Cdk7 Activity Is Required to Maintain Gene Expression at Basal Level",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29163040_He2017_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 3D: 500 nM at 2 h and 4 h lowers Npas4 to about 0.45 and 0.1 of vehicle, c-Fos to about 0.23 and 0.02, Nr4a1 to about 0.18 and 0.12; Arc, Homer1a and c-Jun fall only to about 0.6-0.8.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Npas4 ~0.45/~0.1; cFos ~0.23/~0.02; Nr4a1 ~0.18/~0.12 of vehicle (2 h/4 h); Arc, Homer1a, c-Jun ~0.5-0.8",
+    "anchor": "Figure 3D",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29163040_r2/fnmol-10-00365-g0003.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Bicuculline-induced IEG mRNA (up to about 60-fold) and RNAPII CTD phosphorylation are largely prevented by a 4 h THZ1 pre-incubation.",
+    "snippet": "Bicuculine-induced drastic upregulation of IEG mRNA levels were largely prevented by THZ1 pre-incubation",
+    "anchor": "Results / Cdk7 Is Critical for Activity-Driven Expression of the Neuronal IEGs",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29163040_He2017_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 4C: Npas4 about 59-fold and c-Fos about 46-fold over vehicle after bicuculline; with the inhibitor about 8 and 4-fold; every one of seven IEGs significantly lower.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Npas4 ~59 vs ~8; cFos ~46 vs ~4; Arc ~18 vs ~1; Homer1a ~11 vs ~4; c-Jun ~12 vs ~2",
+    "anchor": "Figure 4C",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29163040_r2/fnmol-10-00365-g0004.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In acute hippocampal slices the inhibitor leaves early LTP (two trains) unchanged but lowers late LTP (four trains) throughout the recording; the authors note the first 1-2 h of late LTP should not need transcription, so the effect is not purely transcriptional.",
+    "snippet": "This is noteworthy that the first 1–2 h of L-LTP induced by 4xHFS does not require transcription",
+    "anchor": "Results / Cdk7 Activity Is Essential to Long-Lasting Synaptic Plasticity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29163040_He2017_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 5A-B: E-LTP fEPSP slope about 140 percent in both groups (n.s.); L-LTP about 175 percent at 200 min in vehicle against about 130 percent with the inhibitor (p<0.001); n = 6 and 7 slices.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] E-LTP ~140 both, n.s.; L-LTP ~175 (DMSO) vs ~130 (THZ1) at 200 min, ***",
+    "anchor": "Figure 5A-B",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29163040_r2/fnmol-10-00365-g0005.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The pre-incubation time before the slice experiment is not stated consistently: 2 h in the Results sentence, 4 h in the Methods and the Figure 5 legend.",
+    "snippet": "we pre-incubated acute hippocampal slices in the perfusate containing 500 nM THZ1 or equivalent volume of DMSO for 2 h before fEPSP recordings",
+    "anchor": "Results / Cdk7 Activity Is Essential to Long-Lasting Synaptic Plasticity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29163040_He2017_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A single intracerebroventricular dose of 20 micrograms per mouse lowered RNAPII CTD phosphorylation in whole-brain lysate 6 h later; this is a pharmacodynamic readout in brain, not a drug concentration.",
+    "snippet": "Six hours after injection of 20 μg of THZ1 or equal volume of DMSO through implanted cannula connected via a catheter, we prepared whole brain lysates and probed the phosphorylation levels of RNAPII CTD",
+    "anchor": "Results / Cdk7 Activity Is Necessary for the Formation of Long-Term Memory",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29163040_He2017_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 6B: whole-brain RNAPII CTD phosphorylation after the injection is about 62 (Ser2), 66 (Ser5) and 49 (Ser7) percent of vehicle; n = 6.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] p-Ser2 ~62 **; p-Ser5 ~66 *; p-Ser7 ~49 ***, percent of DMSO",
+    "anchor": "Figure 6B",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29163040_r2/fnmol-10-00365-g0006.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The injected mice show no difference in distance or speed; short-term object and cued-fear memory are intact, long-term (24 h) memory is impaired in both tasks.",
+    "snippet": "These data suggest that THZ1 does not disrupt learning process or STM as evidenced by the tests 2 h after exposure, but specifically affected LTM, which requires gene transcription.",
+    "anchor": "Results / Cdk7 Activity Is Necessary for the Formation of Long-Term Memory",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29163040_He2017_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 6K and 6N: 24 h discrimination index about 65 percent (vehicle) against about 50 (inhibitor); 24 h cued freezing about 35 against about 18 percent; n = 10 per group; one dose, one injection route, male adults.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] 24 h DI ~65 vs ~50 **; freezing ~35 vs ~18 *; 2 h tests equal",
+    "anchor": "Figure 6K, 6N",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29163040_r2/fnmol-10-00365-g0006.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Cdk7 protein in cortex is low through E14.5, P0 and P7 and rises at P30 and P60 even though mRNA falls, so the target is present at far lower protein level in early development than in the adult.",
+    "snippet": "However, in contrast to the gradual reduction at mRNA level, Cdk7 protein level significantly increased at adult ages in mice",
+    "anchor": "Results / Expression of Cdk7 in the Mouse Cortex",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29163040_He2017_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 1B: Cdk7 protein is about 18 to 23 percent of its P60 value at E14.5, P0 and P7 and about 113 percent at P30 (n = 3).",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] E14.5 ~18; P0 ~18; P7 ~23; P30 ~113; P60 100 (percent of P60)",
+    "anchor": "Figure 1B",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29163040_r2/fnmol-10-00365-g0001.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary figure S1 (native TIFF): in culture Cdk7 protein rises about 2.3-fold from DIV1 to DIV9 and DIV15; error bars and n are not stated in the figure.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Cdk7 protein DIV1 100, DIV5 about 173, DIV9 about 228*, DIV15 about 230*",
+    "anchor": "Supplementary Figure S1A",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID29163040_r2/eupmc_supp/Image_1.tif",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors advise caution about neurological side effects of Cdk7 inhibitors in clinical use and propose, as a hypothesis not tested here, that the inhibitor might lower seizure susceptibility as a bromodomain inhibitor did.",
+    "snippet": "Hypothetically, THZ1 may exert therapeutic effects comparable to Jq1, in terms of decreasing seizure susceptibility.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29163040_He2017_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No seizure, EEG or susceptibility measurement is reported: behaviour is mobility, object recognition and cued freezing only.",
+    "snippet": "Therefore caution should be taken in potential clinical trials to avoid risk of neurological side effects.",
+    "anchor": "Discussion (final paragraph); negative established by Methods and Results as a whole",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29163040_He2017_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC XML fingerprinted; six main figures opened as publisher JPEGs (about 1,000 px wide, no raster of higher resolution exists: the PDF embeds the same figures at 294-300 ppi but the JPEGs were read; legibility confirmed for every bar and star) and the supplementary figure TIFF opened at native size.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}
