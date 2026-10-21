@@ -117,6 +117,69 @@
     "tier": "pmc_oa_opendata_s3",
     "user_agent_policy": "none"
    }
+  },
+  {
+   "path": "files/supplement/PMID42650175/genes-17-00983-g001.webp",
+   "sha256": "7d808f0f0ec994af657816e5ad8779d98f8efd992548d62f3a228cfe168d3f08",
+   "kind": "figure",
+   "note": "Figure 1 image (WebP) acquired by the first reading (scientist-b) and found on disk; opened as an image in the resumed reading of 2026-10-21; its route was not recorded by the first reading.",
+   "acquisition_recipe": {
+    "no_recipe": "the first reading did not record the route; the file sits beside the other bytes the packet lists for this PMID"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42650175/genes-17-00983-g002.webp",
+   "sha256": "dcc400bb62b655e3aa5cedff2fe4a7e19d8995fde3dc9f06e6d6613e5fb866f4",
+   "kind": "figure",
+   "note": "Figure 2 image (WebP) acquired by the first reading (scientist-b) and found on disk; opened as an image in the resumed reading of 2026-10-21; its route was not recorded by the first reading.",
+   "acquisition_recipe": {
+    "no_recipe": "the first reading did not record the route; the file sits beside the other bytes the packet lists for this PMID"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42650175/genes-17-00983-g003.webp",
+   "sha256": "41243d7f4c7a3cf88b615e5a1f7cf51f8a4529fd25e2e0f215028ca378236640",
+   "kind": "figure",
+   "note": "Figure 3 image (WebP) acquired by the first reading (scientist-b) and found on disk; opened as an image in the resumed reading of 2026-10-21; its route was not recorded by the first reading.",
+   "acquisition_recipe": {
+    "no_recipe": "the first reading did not record the route; the file sits beside the other bytes the packet lists for this PMID"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42650175/genes-17-00983-g004.webp",
+   "sha256": "1a7c95f3770dc12ffa83deb9083ad2c2a0fc0c4a5d70a7ce75fdc803608daae3",
+   "kind": "figure",
+   "note": "Figure 4 image (WebP) acquired by the first reading (scientist-b) and found on disk; opened as an image in the resumed reading of 2026-10-21; its route was not recorded by the first reading.",
+   "acquisition_recipe": {
+    "no_recipe": "the first reading did not record the route; the file sits beside the other bytes the packet lists for this PMID"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42650175/genes-17-00983-g005.webp",
+   "sha256": "64bf9369a3d93c45859562a9856141c365680acf3ae5894e03f73f02dc90c23e",
+   "kind": "figure",
+   "note": "Figure 5 image (WebP) acquired by the first reading (scientist-b) and found on disk; opened as an image in the resumed reading of 2026-10-21; its route was not recorded by the first reading.",
+   "acquisition_recipe": {
+    "no_recipe": "the first reading did not record the route; the file sits beside the other bytes the packet lists for this PMID"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42650175/genes-17-00983-g006.webp",
+   "sha256": "f60fed051b31dc5b694f9dc880e7b017fbf37682a735a28a5dc938620c82b71a",
+   "kind": "figure",
+   "note": "Figure 6 image (WebP) acquired by the first reading (scientist-b) and found on disk; opened as an image in the resumed reading of 2026-10-21; its route was not recorded by the first reading.",
+   "acquisition_recipe": {
+    "no_recipe": "the first reading did not record the route; the file sits beside the other bytes the packet lists for this PMID"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42650175/genes-17-00983-g007.webp",
+   "sha256": "0e36ec4f1244a449030d64e6d1e2492cc629d48dc7b68f2f238ac1e03e18409c",
+   "kind": "figure",
+   "note": "Figure 7 image (WebP) acquired by the first reading (scientist-b) and found on disk; opened as an image in the resumed reading of 2026-10-21; its route was not recorded by the first reading.",
+   "acquisition_recipe": {
+    "no_recipe": "the first reading did not record the route; the file sits beside the other bytes the packet lists for this PMID"
+   }
   }
  ],
  "verbatim_locators": {
@@ -202,6 +265,116 @@
      "system": "HEK293T cells and human iPSC-derived astrocytes and cortical neurons expressing rat GAT-1-EYFP variants (SLC6A1 p.Ala305Val); membrane transporter, ER trafficking (NOT WWOX evidence)",
      "genotype": "de novo SLC6A1 missense, heterozygous modelled by 1:1 cDNA co-expression",
      "comparator": "wild-type GAT-1; Ala305Thr and Ser295Leu comparators"
+    }
+   },
+   {
+    "proposition": "HELD-resume question (a): the uptake rescue is reported as a ratio to wild type from batches of cells, N = 5 to 6 batches per condition, with each batch plotted as a dot.",
+    "snippet": "In A, N = 6 batches of cells; in B, N = 5",
+    "anchor": "Figure 5 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42650175_Delahanty2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) variants A305V, A305T, A288V, S295L as YFP-tagged constructs in HEK293T cells and human iPSC-derived astrocytes and neurons, heterozygous-like co-expression with wild-type cDNA, phenylbutyrate, bile-acid chaperone and salubrinal; NOT a WWOX system",
+     "genotype": "SLC6A1 A305V (novel, uncertain significance), A305T, A288V, S295L",
+     "endpoint": "[3H]GABA uptake relative to wild type, ER overlap, total YFP fluorescence, band intensities"
+    }
+   },
+   {
+    "proposition": "Figure 5A-C read (file g005): per-batch dots are plotted; heterozygous A305V vehicle about 0.59 (HEK), 0.66 (astrocytes), 0.66 (neurons) of wild type; with phenylbutyrate about 1.00, 1.04, 1.03; bile acid and salubrinal about 0.82 to 0.92; the figure panels carry the title 'relative to A305V het' while the bars are normalised to wild type = 1; the image gives salubrinal at 15 micromolar and the legend at 30.",
+    "snippet": "The mutant GAT-1 Ala305Val mutant transporters were rescued by pharmacological compounds across cell types.",
+    "anchor": "Figure 5A-C (uptake of heterozygous A305V across cell types)",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID42650175/genes-17-00983-g005.webp",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) variants A305V, A305T, A288V, S295L as YFP-tagged constructs in HEK293T cells and human iPSC-derived astrocytes and neurons, heterozygous-like co-expression with wild-type cDNA, phenylbutyrate, bile-acid chaperone and salubrinal; NOT a WWOX system",
+     "genotype": "SLC6A1 A305V (novel, uncertain significance), A305T, A288V, S295L",
+     "endpoint": "[3H]GABA uptake relative to wild type, ER overlap, total YFP fluorescence, band intensities"
+    },
+    "qualifies": "entries[6]",
+    "qualifies_needle": "In A, N = 6 batches of cells; in B, N = 5"
+   },
+   {
+    "proposition": "Question (b): the 'augmentation' arm is extra wild-type cDNA and the 'dual therapy' arm is a wild-type plus A305V co-expression with phenylbutyrate, which is the same cell condition as the heterozygous arm of Figure 5; the text reports the same condition at 1.01 in Figure 5A and 1.18 in Figure 6B.",
+    "snippet": "This suggests that the combined approach of PBA plus the wildtype gene augmentation is more favorable than either approach alone.",
+    "anchor": "Results 5.6, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42650175_Delahanty2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) variants A305V, A305T, A288V, S295L as YFP-tagged constructs in HEK293T cells and human iPSC-derived astrocytes and neurons, heterozygous-like co-expression with wild-type cDNA, phenylbutyrate, bile-acid chaperone and salubrinal; NOT a WWOX system",
+     "genotype": "SLC6A1 A305V (novel, uncertain significance), A305T, A288V, S295L",
+     "endpoint": "[3H]GABA uptake relative to wild type, ER overlap, total YFP fluorescence, band intensities"
+    }
+   },
+   {
+    "proposition": "Figure 6A-C read (file g006): extra wild-type cDNA raises A305V uptake from about 0.33 to about 0.7, 1.1 and 1.4 of wild type (0.5 microgram wild-type control as reference); with equal mutant and wild-type cDNA the phenylbutyrate series reads about 0.65, 0.81, 0.97, 1.18 (A305V) and 0.49, 0.65, 0.83, 1.04 (S295L); no arm shows wild-type cDNA plus the same phenylbutyrate without mutant, although phenylbutyrate raises wild-type protein in the other GAT-1 and GABRA1 papers of this lot, so a wild-type-dosage effect cannot be separated from rescue of the mutant.",
+    "snippet": "Augmentation of the wildtype GAT-1 cDNA dose-dependently increased the GABA uptake",
+    "anchor": "Figure 6A-C (augmentation dose and phenylbutyrate series)",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID42650175/genes-17-00983-g006.webp",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) variants A305V, A305T, A288V, S295L as YFP-tagged constructs in HEK293T cells and human iPSC-derived astrocytes and neurons, heterozygous-like co-expression with wild-type cDNA, phenylbutyrate, bile-acid chaperone and salubrinal; NOT a WWOX system",
+     "genotype": "SLC6A1 A305V (novel, uncertain significance), A305T, A288V, S295L",
+     "endpoint": "[3H]GABA uptake relative to wild type, ER overlap, total YFP fluorescence, band intensities"
+    },
+    "qualifies": "entries[8]",
+    "qualifies_needle": "This suggests that the combined approach"
+   },
+   {
+    "proposition": "Question (c): protein and function are measured on the same variant in the phenylbutyrate arm only: ER overlap falls and total YFP fluorescence returns to about wild type with the phenylbutyrate class, but the augmentation arm has no protein read-out.",
+    "snippet": "The mutant GABA transporters GAT-1 p.Ala305Val were retained inside the endoplasmic reticulum but were relieved by 4-phenylbutyrate in the human astrocytes.",
+    "anchor": "Figure 4 legend (title)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42650175_Delahanty2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) variants A305V, A305T, A288V, S295L as YFP-tagged constructs in HEK293T cells and human iPSC-derived astrocytes and neurons, heterozygous-like co-expression with wild-type cDNA, phenylbutyrate, bile-acid chaperone and salubrinal; NOT a WWOX system",
+     "genotype": "SLC6A1 A305V (novel, uncertain significance), A305T, A288V, S295L",
+     "endpoint": "[3H]GABA uptake relative to wild type, ER overlap, total YFP fluorescence, band intensities"
+    }
+   },
+   {
+    "proposition": "Figure 4B-C read (file g004): ER overlap about 24 percent (wild type), 76 (A305V), 36 (A305V with the phenylbutyrate class); total YFP fluorescence about 50, 25 and 47 (arbitrary); per-image dots (about 8 to 10) are plotted; the fluorescence is a tagged-protein quantity in cells imaged live, not a surface measurement.",
+    "snippet": "(B) The GAT-1YFP fluorescence o",
+    "anchor": "Figure 4B-C (ER overlap and total fluorescence)",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID42650175/genes-17-00983-g004.webp",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) variants A305V, A305T, A288V, S295L as YFP-tagged constructs in HEK293T cells and human iPSC-derived astrocytes and neurons, heterozygous-like co-expression with wild-type cDNA, phenylbutyrate, bile-acid chaperone and salubrinal; NOT a WWOX system",
+     "genotype": "SLC6A1 A305V (novel, uncertain significance), A305T, A288V, S295L",
+     "endpoint": "[3H]GABA uptake relative to wild type, ER overlap, total YFP fluorescence, band intensities"
+    },
+    "qualifies": "entries[10]",
+    "qualifies_needle": "The mutant GABA transporters GAT-1 p.Ala305Val were retained"
+   },
+   {
+    "proposition": "The nine computational stability predictions do not agree in sign for A305V (Figure 2B read: bars about -0.3, +0.4, -0.8, -0.1, +1.1, -1.9, 0.0, -0.2, -0.65 kcal/mol); the legend says negative values indicate destabilisation, and the Results state the prediction supports destabilisation validated in cells (mature band about 0.2 of wild type, immature band about 1.8, Figure 2C-E).",
+    "snippet": "Negative values indicate destabilization.",
+    "anchor": "Figure 2 legend (panel B)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42650175_Delahanty2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) variants A305V, A305T, A288V, S295L as YFP-tagged constructs in HEK293T cells and human iPSC-derived astrocytes and neurons, heterozygous-like co-expression with wild-type cDNA, phenylbutyrate, bile-acid chaperone and salubrinal; NOT a WWOX system",
+     "genotype": "SLC6A1 A305V (novel, uncertain significance), A305T, A288V, S295L",
+     "endpoint": "[3H]GABA uptake relative to wild type, ER overlap, total YFP fluorescence, band intensities"
+    }
+   },
+   {
+    "proposition": "The proband carrying the novel variant is described as seizure-free since 2022 on clobazam (Figure 1C table): the reported seizure freedom is not attributed to the phenylbutyrate class in this paper's own patient table.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1C patient table rows: current seizure status; current antiseizure medication (a benzodiazepine-class drug, seizure-free since initiation).",
+    "anchor": "Figure 1C (patient table)",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID42650175/genes-17-00983-g001.webp",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) variants A305V, A305T, A288V, S295L as YFP-tagged constructs in HEK293T cells and human iPSC-derived astrocytes and neurons, heterozygous-like co-expression with wild-type cDNA, phenylbutyrate, bile-acid chaperone and salubrinal; NOT a WWOX system",
+     "genotype": "SLC6A1 A305V (novel, uncertain significance), A305T, A288V, S295L",
+     "endpoint": "[3H]GABA uptake relative to wild type, ER overlap, total YFP fluorescence, band intensities"
     }
    }
   ]
