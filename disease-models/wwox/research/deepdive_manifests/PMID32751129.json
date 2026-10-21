@@ -1,0 +1,158 @@
+{
+ "schema_version": 2,
+ "pmid": "32751129",
+ "doi": "10.3390/cells9081800",
+ "receipt": "FTR-20261022-32751129-01",
+ "landing": [
+  "FTR-20261022-32751129-01",
+  "repurposing_10h_scientist-b_20261022b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 71,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-22: 'Bouron A[au]' 71; with (WWOX OR Wwox) 0. Initials-level author string, may pool homonyms.",
+  "research_type": "experimental_lab",
+  "weighting": "Transferable literature (NOT WWOX EVIDENCE); the group has no WWOX publications on this string; credibility is judged from the design in the paper, not the laboratory.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID32751129_Bouron2020_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement (it licenses nothing about the literature outside this file)."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 110,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-32751129-01",
+    "target": "GEO series GSE154677: the RNA-seq dataset behind the transcript table",
+    "question": "Does the deposit give replicate number per age and transcript-level TPM for Cacna1g, Cacna1h and Cacna1i?",
+    "status": "open - cited, not opened"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 32751129, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "registry_records.py get --pmid and fulltext_receipts.py status --pmid returned nothing; paper_packet.py claim succeeded for scientist-b."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-22",
+  "route": "PubMed esummary for 32751129 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "No retraction, expression of concern or erratum is visible on the PubMed record for this PMID in the queries run; that absence is a statement about those queries.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 102,
+   "references_screened": 99,
+   "references_with_doi": 99,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID32751129_Bouron2020_PMC_r2.xml",
+   "sha256": "efc9f05e237a1b8e1e1882a84bf7e0a8e0ed45030c80b96d02f2fb7bcad5473f",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=7465657&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "efc9f05e237a1b8e1e1882a84bf7e0a8e0ed45030c80b96d02f2fb7bcad5473f"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figure rasters opened as images where stated; every text snippet was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "Cacna1g and Cacna1h were the only voltage-gated calcium channel genes expressed at all time points and the most expressed of the family, with TPM values from about 10 to about 35.",
+    "snippet": "two genes (Cacna1g and Cacna1h) were expressed at all time points. They code for Cav3.1 (Cacna1g) and Cav3.2 (Cacna1h), two low-threshold T-type Ca2+ channels. These two genes were the most expressed VGCC genes with TPM values ranging from ≈10 to ≈35",
+    "surface": "body",
+    "anchor": "Results 3.1.1, Voltage-Gated Ca2+ Channels",
+    "artifact": "files/fulltext/PMID32751129_Bouron2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Cacna1g mRNA was the major voltage-gated calcium channel transcript at E11 and E13, Cacna1h predominated at E17 and PN1, and Cacna1h rose about tenfold from E11 to PN1.",
+    "snippet": "At E11 and E13, Cacna1g mRNA (Cav3.1) was the major VGCC transcript, whereas Cacna1h mRNA (Cav3.2) predominated at E17 and PN1, showing a clear shift in the expression pattern of genes encoding T-type VGCC. Cacna1h was the most strongly induced gene with a number of transcripts increasing by a factor ≈10 from E11 to PN1.",
+    "surface": "body",
+    "anchor": "Results 3.1.1",
+    "artifact": "files/fulltext/PMID32751129_Bouron2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Cacna1i (Cav3.3) was not detected at E11 and E13 and increased thereafter.",
+    "snippet": "Five transcripts were not detected at the beginning of corticogenesis (E11 and E13); however, their abundance increased thereafter: Cacna1c (Cav1.2, L-type), Cacna1a (Cav2.1, P/Q-type), Cacna1b (Cav2.2, N-type), Cacna1e (Cav2.3, R-type), and Cacna1i (Cav3.3, T-type)",
+    "surface": "body",
+    "anchor": "Results 3.1.1",
+    "artifact": "files/fulltext/PMID32751129_Bouron2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The complete dataset is deposited at GEO accession GSE154677 and the results are expressed in transcripts per million.",
+    "snippet": "The complete dataset is accessible on the GEO repository at the following address: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE154677.",
+    "surface": "body",
+    "anchor": "Results 3.1, first paragraph",
+    "artifact": "files/fulltext/PMID32751129_Bouron2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}

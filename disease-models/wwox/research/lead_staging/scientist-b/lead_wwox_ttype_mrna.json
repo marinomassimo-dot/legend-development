@@ -1,0 +1,14 @@
+{
+ "kind": "MECH",
+ "title": "Wwox-null and neuronal-deletion hippocampus at P17 shows LOWER T-type transcripts (Cacna1h, Cacna1i), not higher, and no consistent Cacna1g change: a counter-reading to the P47T CACNA1G-up observation",
+ "tag": "DATO + INFERENZA",
+ "status": "open",
+ "source": "scientist-b, task REPURP-10H-R2b-B-20261022; public GEO deposits GSE158681 (hippocampus, null, Syn-Cre and Nestin-Cre deletion, P17) and GSE158682 (cortex, Syn-Cre), TPM tables read as supplementary data of the Aqeilan-laboratory Wwox neuronal-deletion work (the deposits carry no PubMed link; the summary text merges two papers); sha256 52ff4f078fc3d7600dceb716ddb26bbb2c6bb4134736a388a39d10915399e483 and 77aecf5cdd194ad638e2e7c5886e04f2583d6c425c6dea22ed3b131be2e8060f. WWOX-DIRECT data; no receipt (a dataset, not a paper reading).",
+ "causal_statement": "DATO (group means of summed transcript TPM, n = 2 to 4 per group, transcripts matched to a current Ensembl annotation, Wwox itself falling to 0.06 to 0.32 of control as the internal positive control): hippocampus, Wwox-null vs wild type, Cacna1h 0.47, Cacna1i 0.50, Cacna1g 0.73; Syn-Cre deletion Cacna1h 0.73, Cacna1i 0.46, Cacna1g 1.06; Nestin-Cre deletion Cacna1h 0.90, Cacna1i 0.33, Cacna1g 0.49; cortex Syn-Cre Cacna1h 0.92, Cacna1i 0.52, Cacna1g 0.82. Cacna1i is lower in all four comparisons; Cacna1g has no consistent direction and is not up. INFERENZA: a T-type excess is not visible at the mRNA level at P17 in these Wwox-deficient brains; this does not bear on current density, which is unmeasured, and cell-composition changes (reduced interneuron and oligodendrocyte populations are reported elsewhere) could produce the transcript differences without any change in neuronal T-type expression. It sits against, not with, the P47T knock-in observation (adult, Cacna1g up and Cacna1h down) and it does not rescue or refute DL-MECH-170, which concerns an ethosuximide effect, not T-type expression.",
+ "falsifier": "Whole-cell T-type current density, or Cacna1g/h/i in situ or single-nucleus counts by cell type (a single-nucleus hippocampal deposit, GSE158684, exists for the Syn-Cre deletion), in Wwox-null thalamic reticular and relay neurons at a fixed postnatal age. The mRNA reading is refuted if cell-type-resolved counts show the opposite direction.",
+ "transfer_limit": "Mouse, bulk RNA, P17, n = 2 to 4 per group, no differential-expression test run (n = 2 does not support one), gene sums use a partial transcript mapping (8 of 15 current Cacna1h transcripts matched; 9 of 27 for Wwox), whole hippocampus and cortex, not thalamus or reticular nucleus, the structures that matter to the absence-type circuit; constitutive null and neuronal deletion only. Class level, no dose, no paediatric suitability, not medical advice.",
+ "links": [
+  "[[DL-MECH-170]]",
+  "[[CLAIM 016]]"
+ ]
+}

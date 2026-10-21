@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-22T10:00:00Z",
+ "event_at": "2026-10-22T10:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_present"
+ },
+ "event_id": "FTR-20261022-32751129-01",
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "QUESTION_DRIVEN targeted reading (T-type gene ontogeny during cortical formation). Read: the Materials and Methods section (animals, cultures, imaging; the RNA-seq methods are not described in it and point to a reference and the GEO accession), the Results section 3.1 opening and 3.1.1 Voltage-Gated Ca2+ Channels, and the limitations paragraph. The rest of the Results and the Discussion were not read. No figure opened (Figure 1A named in the text was not viewed)."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID32751129.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-b_20261022b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "efc9f05e237a1b8e1e1882a84bf7e0a8e0ed45030c80b96d02f2fb7bcad5473f",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID32751129_Bouron2020_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.3390/cells9081800",
+  "pmid": "32751129"
+ },
+ "workflow": "scientist-b repurposing batch R2b relay 2026-10-22; QUESTION_DRIVEN; NOT WWOX EVIDENCE; PMC efetch XML acquired with no User-Agent; prepared as JSON for the integrator and staged, not appended."
+}

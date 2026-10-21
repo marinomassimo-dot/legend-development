@@ -1,0 +1,205 @@
+{
+ "schema_version": 2,
+ "pmid": "34483921",
+ "doi": "10.3389/fphar.2021.711737",
+ "receipt": "FTR-20261022-34483921-01",
+ "landing": [
+  "FTR-20261022-34483921-01",
+  "repurposing_10h_scientist-b_20261022b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 10504,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-22: 'Hayashi T[au]' 10504; with (WWOX OR Wwox) 0. Initials-level author string, may pool homonyms.",
+  "research_type": "experimental_lab",
+  "weighting": "Transferable literature (NOT WWOX EVIDENCE); the group has no WWOX publications on this string; credibility is judged from the design in the paper, not the laboratory.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID34483921_Iizumi2021_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement (it licenses nothing about the literature outside this file)."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 60,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-34483921-01",
+    "target": "Itoh 2018: GluA1 C811S mice, PTZ susceptibility and valproate, phenobarbital and diazepam",
+    "question": "Was the genotype-by-treatment interaction tested for each drug and is the PTZ-alone control shared across drugs?",
+    "status": "open - cited, not read"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 34483921, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "registry_records.py get --pmid and fulltext_receipts.py status --pmid returned nothing; paper_packet.py claim succeeded for scientist-b."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-22",
+  "route": "PubMed esummary for 34483921 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "No retraction, expression of concern or erratum is visible on the PubMed record for this PMID in the queries run; that absence is a statement about those queries.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 41,
+   "references_screened": 38,
+   "references_with_doi": 38,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID34483921_Iizumi2021_PMC_r2.xml",
+   "sha256": "3999183c9ec83da4a15fbfa2d133b2062ba735ce2001a564c6a913430dce39a1",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=8416418&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "3999183c9ec83da4a15fbfa2d133b2062ba735ce2001a564c6a913430dce39a1"
+   }
+  },
+  {
+   "path": "files/figures/PMID34483921_r2/fphar-12-711737-g002.jpg",
+   "sha256": "2a8a9d56d220d82490996cdaeed599ee66671dcba7b0faa720b81819f27dd2ba",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC8416418",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "2a8a9d56d220d82490996cdaeed599ee66671dcba7b0faa720b81819f27dd2ba"
+   },
+   "note": "Figure 2 raster (JPEG) opened as an image; native surface, every point is an integer Racine score so the individual points were read exactly."
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figure rasters opened as images where stated; every text snippet was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "Trimethadione versus vehicle on the PTZ seizure score: mutant 4.00 +/- 0.82 (n = 6) against 4.90 +/- 0.07 (n = 20); wild type 1.43 +/- 0.37 (n = 7) against 4.86 +/- 0.14 (n = 14); two-way ANOVA genotype x treatment interaction F(1,43) = 20.43, p < 0.0001.",
+    "snippet": "Figure 2: 4.90 ± 0.07, n = 20 for PBS-injected GluA1C811S mice; 4.00 ± 0.82, n = 6 for TMZ-injected GluA1C811S mice), compared with wild-type mice (Barton et al., 2005; Pastore et al., 2014) (Figure 2: 4.86 ± 0.14, n = 14 for PBS-injected wild-type mice; 1.43 ± 0.37, n = 7 for TMZ-injected wild-type mice, Two-way ANOVA, genotype × treatment interaction F 1, 43 = 20.43, p < 0.0001",
+    "surface": "body",
+    "anchor": "Results, trimethadione section",
+    "artifact": "files/fulltext/PMID34483921_Iizumi2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Phenytoin versus vehicle: wild type 2.70 +/- 0.33 (n = 12) against 4.86 +/- 0.14 (n = 14); mutant 4.58 +/- 0.23 (n = 12) against 4.90 +/- 0.07 (n = 20); genotype x treatment interaction F(1,54) = 26.22, p < 0.0001.",
+    "snippet": "Figure 1: 4.86 ± 0.14, n = 14 for PBS-injected wild-type mice; 2.70 ± 0.33, n = 12 for PHT-injected wild-type mice) as previously reported (Klein et al., 2015; Song et al., 2018). On the other hand, PHT showed reduced anticonvulsive effects on PTZ-injected GluA1C811S mice (Figure 1: 4.90 ± 0.07, n = 20 for PBS-injected GluA1C811S mice; 4.58 ± 0.23, n = 12 for PHT-injected GluA1C811S mice, Two-way ANOVA, genotype × treatment interaction F 1, 54 = 26.22, p < 0.0001",
+    "surface": "body",
+    "anchor": "Results, phenytoin section",
+    "artifact": "files/fulltext/PMID34483921_Iizumi2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PBS-injected wild-type and mutant mice did not differ on the seizure score (p = 0.8575).",
+    "snippet": "There was no obvious difference between PBS-injected wild-type and GluA1C811S mice (p = 0.8575).",
+    "surface": "body",
+    "anchor": "Results, phenytoin section",
+    "artifact": "files/fulltext/PMID34483921_Iizumi2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The statistics section names two-way ANOVA followed by Fisher's LSD test.",
+    "snippet": "Two-way ANOVA followed by Fisher’s LSD test was used to compare two groups.",
+    "surface": "body",
+    "anchor": "Methods, Statistical Analysis",
+    "artifact": "files/fulltext/PMID34483921_Iizumi2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mice were used at 3 months of age for the phenytoin and trimethadione experiments and at 7 weeks for the NBQX experiment.",
+    "snippet": "Mice were used at the age of 3 months for phenytoin (PHT) and trimethadione (TMZ) experiments and 7 weeks for 2,3-dioxo-6-nitro-7-sulfamoyl-benzo[f]quinoxaline (NBQX) experiment.",
+    "surface": "body",
+    "anchor": "Methods, Experimental Animals",
+    "artifact": "files/fulltext/PMID34483921_Iizumi2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Trimethadione is described as an oxazolidinedione derivative whose anti-seizure activity is attributed to inhibiting T-type calcium channels by citation; no channel current was measured in this paper.",
+    "snippet": "we tested trimethadione (TMZ), an oxazolidinedione derivative, which possesses anti-seizure activity by inhibiting T-type VGCCs (Zamponi et al., 2009).",
+    "surface": "body",
+    "anchor": "Results, trimethadione section",
+    "artifact": "files/fulltext/PMID34483921_Iizumi2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "For the AMPA-receptor antagonist the genotype x treatment interaction was not significant (F(3,61) = 2.157, p = 0.1023) in the first of three dose series.",
+    "snippet": "Figure 3A: Two-way ANOVA, genotype × treatment interaction F 3, 61 = 2.157, p = 0.1023",
+    "surface": "body",
+    "anchor": "Results, NBQX section",
+    "artifact": "files/fulltext/PMID34483921_Iizumi2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2 read as an image: wild-type trimethadione points 3, 2, 2, 1, 1, 1, 0 (n = 7, mean 1.43); mutant trimethadione points 6, 5, 5, 2, 1 plus a sixth inferred at 5 from the printed mean 4.00 (n = 6); both vehicle groups sit at 5 with one wild-type point at 3 and one mutant point at 4.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2: WT TMZ points 3, 2, 2, 1, 1, 1, 0 (n = 7, mean 1.43); mutant TMZ points 6, 5, 5, 2, 1 plus a sixth inferred at 5 from the printed mean 4.00 (n = 6); vehicle groups at 5 with one WT point at 3 and one mutant point at 4.",
+    "surface": "figure",
+    "anchor": "Figure 2 (JPEG raster)",
+    "artifact": "files/figures/PMID34483921_r2/fphar-12-711737-g002.jpg",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}

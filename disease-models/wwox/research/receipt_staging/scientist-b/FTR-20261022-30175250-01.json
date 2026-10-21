@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-10-22T10:00:00Z",
+ "event_at": "2026-10-22T10:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "event_id": "FTR-20261022-30175250-01",
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "QUESTION_DRIVEN targeted reading: the reader held DL-MECH-170 before opening the paper. Read in full: the abstract; every sentence of the body that names ethosuximide (all seven string hits located by a text search of the persisted XML: abstract, Figure 5 legend, Results, Discussion twice, Methods); the Results paragraphs on the two knock-out lines and the conditional deletion; the Discussion paragraph on the thalamic mechanism; the Methods paragraph on recording and drug injection. Introduction, the remaining Methods and Results, and the rest of the Discussion were not read.",
+  "Figure 5 (JPEG raster, native surface) opened as an image; the other eight figures read as captions only. The 21-page supplementary PDF was searched by text for ethosuximide with no hit; its content was not read."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID30175250.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-b_20261022b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "67a85498d40851a25d8580408b9d5a5e9043c1bd667be1bdc007d8186eaa4fab",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID30175250_Ogiwara2018_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1038/s42003-018-0099-2",
+  "pmid": "30175250"
+ },
+ "workflow": "scientist-b repurposing batch R2b relay 2026-10-22; QUESTION_DRIVEN; NOT WWOX EVIDENCE; PMC efetch XML acquired with no User-Agent; prepared as JSON for the integrator and staged, not appended."
+}
