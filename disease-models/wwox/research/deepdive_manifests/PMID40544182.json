@@ -1,0 +1,226 @@
+{
+ "schema_version": 2,
+ "pmid": "40544182",
+ "doi": "10.1038/s41420-025-02571-0",
+ "receipt": "FTR-20261020-40544182-01",
+ "landing": [
+  "Hristodor AM, Cappelli E, Baldisseri E, Valli R, Montalbano G, Micheloni G, Porta G, Frattini A, Ravera S, Fioredda F, Lippi G, Dufour C, Cipolli M, Bezzerri V. Development of translational read-through-inducing drugs as novel therapeutic options for patients with Fanconi anemia. Cell Death Discov 2025;11(1):286.",
+  "PMCID PMC12182573; open access.",
+  "Read 2026-10-20 by scientist-a under task REPURP-P3-KNOWNROADS-A-20261020, as the independent test of the amlexanox read-through claim made by PMID 22938201 (read in the same task).",
+  "context_policy: SOURCE_FIRST (first_read). The two readings were taken in publication order and the 2012 paper's claims were held as the source's claims, not as a LEGEND position."
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "declined: both papers are PMC open access and the NCBI efetch JATS route returned a complete body on the first call, so no acquisition cascade was needed"
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "declined: no locator here narrows, reverses or corroborates a consolidated baseline claim, and no commit candidate of this task declares MAJOR — the two papers never mention WWOX"
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "declined: a BLOCK-1 ADMET/BBB triage would be an in-silico promotion step for a molecule this reconnaissance deliberately does not promote; the road is qualified, not ranked"
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "declined: optional toolkit, and the question here was a bounded census of what has been tested rather than a search for a new mechanism or a preregistered prediction"
+  },
+  {
+   "skill": "legend-session-self-eval",
+   "used": true
+  },
+  {
+   "skill": "legend-capability-scout",
+   "used": true
+  },
+  {
+   "skill": "legend-paperqa",
+   "used": false,
+   "reason": "declined: external API spend is reserved to the operator (standing brief section 1), and the corpus question was answered by registry_records.py and first-hand reading"
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 63,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "The observations are weighted HIGH and the comparative design is the reason: the two drugs were run head-to-head in the same patient-derived lines with the same endpoints, so the amlexanox negative is internally controlled rather than inferred across studies. The interpretation is weighted MEDIUM-LOW and in one specific direction: this group's standing programme is ataluren (its references 14 and 22, Shwachman-Diamond syndrome), which is a declared directional interest in favour of the comparator. That is a reason to read the amlexanox arm as the one they had least incentive to make work, and also a reason not to take the ataluren arm at face value. The amlexanox arms are also the smallest in the paper (n = 3 on the genotoxicity endpoints).",
+  "verdict": "Verona Cystic Fibrosis Centre (V. Bezzerri, senior) with Gaslini haematology (Genoa), Insubria genomics and CNR-IRGB. Independent of the Lille group that originated the amlexanox claim: no shared author, no shared institution. Cell models from two public biobanks (Telethon Network Genetic Biobanks / Gaslini; NIGMS Coriell GM16757).",
+  "counts_measured": "PubMed 2026-10-20: `Bezzerri V[au]` = 63 records; zero concern WWOX (`amlexanox AND WWOX` = 0 and no WWOX record on any registry surface names this PMID).",
+  "independence_for_this_question": "Independent replication attempt of the amlexanox claim, with ataluren as the in-study comparator."
+ },
+ "field_density": {
+  "measured": "Same PubMed measurements as the companion manifest PMID22938201.json: `amlexanox AND WWOX` = 0; `WWOX AND (ataluren OR readthrough OR PTC124 OR ELX-02 OR gentamicin OR \"nonsense suppression\")` = 0 (2026-10-20).",
+  "reading": "Neither paper of this pair mentions WWOX. Both are earned nulls for the gene: they bound what may be SAID about the amlexanox road, and assert nothing about WWOX biology.",
+  "queries": [
+   {
+    "query": "amlexanox AND WWOX",
+    "source": "PubMed ESearch",
+    "date": "2026-10-20",
+    "count": 0
+   },
+   {
+    "query": "WWOX AND (ataluren OR readthrough OR \"nonsense suppression\" OR gentamicin OR PTC124 OR \"ELX-02\")",
+    "source": "PubMed ESearch",
+    "date": "2026-10-20",
+    "count": 0
+   },
+   {
+    "query": "amlexanox AND (readthrough OR \"read-through\" OR nonsense OR premature termination codon)",
+    "source": "PubMed ESearch",
+    "date": "2026-10-20",
+    "count": 17
+   },
+   {
+    "query": "(Wwox OR WWOX) AND (pharmacological OR inhibitor OR treated OR administration) AND (seizure OR epilep* OR encephalopathy OR neuron*)",
+    "source": "PubMed ESearch",
+    "date": "2026-10-20",
+    "count": 42
+   }
+  ]
+ },
+ "multihop": {
+  "references_enumerated": 43,
+  "gene_direct_refs_in_source": [],
+  "resolved": [
+   "ref 19/20 (the amlexanox dual-activity claim) resolves to PMID 22938201, read first-hand in this same task — the only multihop edge of this reading that was closed rather than queued."
+  ],
+  "queued": [
+   "ref 42 (the cystic-fibrosis-derived premise that ~10% of functional protein suffices to rescue the phenotype in a recessive disease) — QUEUED as the load-bearing unread citation: the Discussion's optimism about 9-11% rests on it, and it is a transfer from one gene and one protein class to another.",
+   "refs 5/24 (tp53 knockdown rescuing haematopoietic defects in Fanca/Fancd2 mice) — not queued; it is the rationale for the p53 endpoint, not an amlexanox datum."
+  ],
+  "note": "No reference in this paper concerns WWOX."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 40544182 (all surfaces) and get --theme amlexanox",
+  "hits": 0,
+  "note": "Neither this PMID nor the molecule is held on any registry or ledger surface before this reading."
+ },
+ "retraction_check": {
+  "result": "none",
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 43,
+   "references_screened": 43,
+   "references_with_doi": 43,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 41,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "JATS body present and parsed; four body sections plus eight figure captions and two supplementary-material containers enumerated from the artefact.",
+  "entries": [
+   {
+    "proposition": "Amlexanox did NOTHING in one of the two nonsense-mutated genes tested, in patient-derived cells.",
+    "snippet": "On the contrary, we observed no effect on FANCF protein levels following amlexanox treatment in these cells (Fig. 1B).",
+    "anchor": "Results, first subsection, after the FANCF baseline (~40% of healthy control) and the FANCA baseline (just under 5%).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40544182_Hristodor2025_PMC_2026-10-20.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the other gene it raised full-length protein to about 9% of healthy control, against about 11% for the comparator.",
+    "snippet": "In this case, both ataluren and amlexanox were able to significantly induce FANCA full-length protein synthesis to almost 11% and 9% of healthy controls, respectively (Fig. 1C).",
+    "anchor": "Results, first subsection, after the FANCF baseline (~40% of healthy control) and the FANCA baseline (just under 5%).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40544182_Hristodor2025_PMC_2026-10-20.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The NMD-inhibition arm of the 2012 claim was tested here and did NOT reproduce: NMD was active in the cells and amlexanox did not restore the transcript.",
+    "snippet": "We observed that NMD is activated in these cells, resulting in a 3-fold reduction of FANCA mRNA. However, neither amlexanox nor ataluren was able to rescue FANCA transcription (Supplementary Fig. 1A, B).",
+    "anchor": "Results, first subsection, immediately after the FANCA protein result.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40544182_Hristodor2025_PMC_2026-10-20.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE RELEVANT NEGATIVE: the protein gain did not become a phenotype gain. Amlexanox failed on both functional endpoints while the comparator in the same cells succeeded.",
+    "snippet": "Conversely, amlexanox showed no effect on either MMC- or DEB-induced genotoxicity in FA-A cells (Fig. 4), despite a slight increase in FANCA protein synthesis and a significant reduction of initial p53 levels.",
+    "anchor": "Results, third subsection ('Ataluren, but not amlexanox, mitigates genotoxic damage...'), final sentence.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40544182_Hristodor2025_PMC_2026-10-20.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the general lesson themselves, and it is the lesson the known-roads reconnaissance needs: an intermediate marker moving is not a phenotype rescued.",
+    "snippet": "Thus, this study suggests that a partial downregulation of p53 per se is not sufficient to produce phenotypic rescue in human cells.",
+    "anchor": "Discussion, paragraph comparing the two drugs on the genotoxic endpoints.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40544182_Hristodor2025_PMC_2026-10-20.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The measured effect of amlexanox in this system is attributed by its own authors to a mechanism that is NOT read-through — TBK1/IKK-epsilon inhibition read out as a fall in pSTAT2.",
+    "snippet": "In this model, amlexanox significantly reduced pSTAT2 levels (by almost 50%) after 24 h of incubation (Fig. 5C). Interestingly, treatment with NF-κB inhibitors resulted in similar pSTAT2 reduction, suggesting that the overall effect of amlexanox is mainly due to its inhibitory effects on the TBK1/IKKε pathway.",
+    "anchor": "Results, fourth subsection, after the IL-6 / TNF-alpha negative.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40544182_Hristodor2025_PMC_2026-10-20.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper's own closing methodological demand is the gate this reconnaissance should put on the amlexanox road.",
+    "snippet": "These findings emphasize the need for a reliable experimental pipeline to assess whether the minimal amount of neomorphic protein synthesized upon translational read-through is actually followed by phenotypic rescue.",
+    "anchor": "Discussion, final paragraph.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40544182_Hristodor2025_PMC_2026-10-20.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Scope limit to carry with every number above: the amlexanox arms are the smallest in the paper, and the systems are haematopoietic and dermal, never neural.",
+    "snippet": "Mitomycin C test of FA-F (A) and FA-A (B) LCL, after 24 h incubation with amlexanox 25μM (n = 3).",
+    "anchor": "Figure 4 caption, first sentence (caption read from the artefact; the panels were NOT inspected as images).",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID40544182_Hristodor2025_PMC_2026-10-20.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The 10%-suffices premise that makes 9% sound adequate is imported from another disease, by citation, and is not measured here.",
+    "snippet": "Nevertheless, it should be noted that experience from Cystic Fibrosis highly effective modulator therapies revealed that a restoration of 10% of functional protein should be sufficient to significantly rescue the phenotype in inherited recessive diseases [42].",
+    "anchor": "Discussion, second paragraph, immediately after the amlexanox 9% figure.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40544182_Hristodor2025_PMC_2026-10-20.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": "Eight locators from the JATS body and one figure caption, captured while the artefact was open. FIGURES WERE NOT INSPECTED AS IMAGES — the receipt declares figures `captions_only`, and no panel value, bracket or significance mark is asserted here. The Supplementary Data and Original Data containers (which hold Supplementary Table 1, the genetics of the cell models, and Supplementary Figures 1-4) were NOT fetched; consequently the exact nonsense alleles of each line, and the transcript panels behind the NMD negative, are carried as the running text's statements only. That is a declared debt and it is the first thing to close if this road is ever re-opened.",
+  "artifact_locality_note": "Artefact in the shared checkout's gitignored files/ tree, acquired 2026-10-20 by the recipe below; digest reproduced on the acquiring call."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40544182_Hristodor2025_PMC_2026-10-20.xml",
+   "sha256": "5c891d7f4c690a384da794b691d4bc50488adc5b7daa621d9c20040f72507374",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC12182573&rettype=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_jats",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-20",
+    "result_sha256": "5c891d7f4c690a384da794b691d4bc50488adc5b7daa621d9c20040f72507374",
+    "notes": "115,441 bytes. Supplementary Data and Original Data containers NOT fetched; declared as a reading debt in verbatim_locators.note."
+   }
+  }
+ ]
+}

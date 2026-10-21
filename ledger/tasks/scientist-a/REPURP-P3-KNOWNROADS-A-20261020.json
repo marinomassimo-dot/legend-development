@@ -1,5 +1,5 @@
 {
- "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
  "_note": "Drug-repurposing P3 under the operator's roadmap v4 r14 (quoted at disease-models/wwox/research/drug_repurposing/roadmap_v4_r14_20261020.md). The roadmap is a plan, not an authority: where it and the repository's rules differ, the repository wins. ADOTTATO NEL_PIANO in it never means verified.",
  "TASK_ID": "REPURP-P3-KNOWNROADS-A-20261020",
  "DIRECTIVE_VERSION": 1,
@@ -7,7 +7,7 @@
  "OWNER": "orchestrator",
  "ACTOR_ID": "scientist-a",
  "PRIORITY": "HIGH",
- "OBJECTIVE": "Reconnaissance of the known therapeutic roads for WOREE, as the roadmap's first scientific task: for each, what was really tested \u2014 molecule identified, model, genotype, endpoint, controls, result, limit. Separate symptomatic benefit, rescue of an experimental phenotype, clinical benefit and disease modification. Examples named by the operator, not an exhaustive list: lithium, ethosuximide, the ZFRA peptide, MYC-linked antitumour interventions, and amlexanox (flagged DA_APPROFONDIRE).",
+ "OBJECTIVE": "Reconnaissance of the known therapeutic roads for WOREE, as the roadmap's first scientific task: for each, what was really tested — molecule identified, model, genotype, endpoint, controls, result, limit. Separate symptomatic benefit, rescue of an experimental phenotype, clinical benefit and disease modification. Examples named by the operator, not an exhaustive list: lithium, ethosuximide, the ZFRA peptide, MYC-linked antitumour interventions, and amlexanox (flagged DA_APPROFONDIRE).",
  "SCOPE": {
   "lot": "current records first (claim registry, therapeutic ledgers, dismissal ledger with its REVIVAL_TRIGGERs, paper/literature registries by record via registry_records.py), then lawful full texts for the gaps; max 12 readings",
   "brief": "disease-models/wwox/research/metabolic_batch_dispatch_brief_20261019.md",
@@ -31,6 +31,128 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-20"
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-10-20",
+ "TASK_ACK": {
+  "actor": "scientist-a",
+  "at": "2026-10-20T21:50:00Z",
+  "directive_version": 1,
+  "generation": 1,
+  "understanding": "Reconnaissance of what has really been TESTED on the known therapeutic roads for WOREE/WWOX-DEE, per candidate: molecule, model, genotype, endpoint, controls, result, limit; the four outcomes (symptomatic benefit, rescue of an experimental phenotype, clinical benefit, disease modification) kept apart; repository first by record, then at most 12 lawful full texts for the gaps; receipts staged, never recorded."
+ },
+ "TASK_CLAIM": {
+  "actor": "scientist-a",
+  "at": "2026-10-20T21:50:00Z",
+  "branch": "task/REPURP-P3-KNOWNROADS-A-20261020",
+  "worktree": ".claude/worktrees/lettore",
+  "reading_claims": [
+   "22938201",
+   "40544182"
+  ],
+  "note": "Reading claims taken with paper_packet.py claim --actor scientist-a; no peer had either PMID in flight and no peer staged receipt exists for either."
+ },
+ "MILESTONE_LOG": [
+  {
+   "milestone": "TASK_ACK/CLAIM",
+   "state": "done",
+   "evidence": "this record; .git/legend-reading-claims/{22938201,40544182}/scientist-a"
+  },
+  {
+   "milestone": "repository reconnaissance by record",
+   "state": "done",
+   "evidence": "repurposing_known_roads_20261020_scientist-a.md sections 2, 3, 5, 7 — claim registry, therapeutic strategies tracker, therapeutic-hypotheses ledger, dismissal ledger with its REVIVAL_TRIGGERs, discovery-ledger molecule and therapy leads, experiment ledger, paper and literature registries read by record via registry_records.py; the two large registries never loaded whole and never grepped"
+  },
+  {
+   "milestone": "per-paper M0-M5, PMID 22938201",
+   "state": "done",
+   "evidence": "manifest PMID22938201.json MANIFEST STRICT PASS 0 gaps 11 locators; staged receipt FTR-20261020-22938201-01 (staged_receipt_check OK, record --dry-run OK)"
+  },
+  {
+   "milestone": "per-paper M0-M5, PMID 40544182",
+   "state": "done",
+   "evidence": "manifest PMID40544182.json MANIFEST STRICT PASS 0 gaps 9 locators; staged receipt FTR-20261020-40544182-01 (staged_receipt_check OK, record --dry-run OK)"
+  },
+  {
+   "milestone": "analysis note",
+   "state": "done",
+   "evidence": "disease-models/wwox/research/repurposing_known_roads_20261020_scientist-a.md"
+  },
+  {
+   "milestone": "commit candidate",
+   "state": "done",
+   "evidence": "disease-models/wwox/research/commit_candidates/CC-20261020-SCIENTIST-A-AMLEXANOX-01.md (MINOR)"
+  },
+  {
+   "milestone": "self-eval",
+   "state": "done",
+   "evidence": "disease-models/wwox/research/session_evaluations/2026-10-20_REPURP-P3-KNOWNROADS-A_scientist-a.md"
+  },
+  {
+   "milestone": "report",
+   "state": "done",
+   "evidence": "SubagentHandback to the Orchestrator"
+  }
+ ],
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "The contract permits up to 12 readings and the repository already held first-hand, manifest-persisted panel locators for every known road except one.",
+   "default": "Read 2 papers, both for the single road with zero repository records (amlexanox), and use persisted locators for the rest.",
+   "why_safe": "Re-reading a paper whose panels were already read from the image and verified character-for-character against a fingerprinted artefact duplicates work the repository has paid for; the duplicate-work check exists to prevent exactly that. A ceiling is not a quota.",
+   "what_would_have_been_different": "Ten more readings would have re-derived locators that already exist, at the cost of the context needed to write the census."
+  },
+  {
+   "condition": "Figures of both new readings were not inspected as images.",
+   "default": "Declare coverage figures: captions_only in both receipts and assert no panel value, fold change, bracket or significance mark anywhere in the note, the manifests or the candidate.",
+   "why_safe": "Understating coverage is the protocol's own instruction and the assertions made rest only on running text that was matched verbatim against the artefact. The debt is declared in both receipts and in section 8 of the note.",
+   "what_would_have_been_different": "Rendering the panels would have let the note quote exact fold changes; none of its conclusions needs one."
+  },
+  {
+   "condition": "Supplements of both new readings were not fetched (Additional files 1-3; Supplementary Data / Original Data).",
+   "default": "Record supplementary: not_read and name the debt, in reading order, in section 8 of the note.",
+   "why_safe": "No claim in the note or the candidate rests on a supplementary surface; the exact alleles and the transcript panels behind the NMD negative are carried as the running text's statements and labelled as such.",
+   "what_would_have_been_different": "The exact nonsense alleles of each line would be named rather than described."
+  },
+  {
+   "condition": "dependency_integrity.py screen refused when run from the task worktree ('snapshot absent'), because files/ lives only in the shared checkout.",
+   "default": "Run the screen from the shared checkout root with --manifest-dir pointing at the worktree's manifest directory.",
+   "why_safe": "It is the evidence-locality rule of the standing brief applied as written: the artefact tree is shared, the manifest is on the branch. Both screens returned SCREENED_CLEAN against the 2026-09-10 snapshot.",
+   "what_would_have_been_different": "Nothing scientific; without it both manifests would have stayed BLOCK on retraction_check.dependencies."
+  },
+  {
+   "condition": "dependency_integrity.py fetch crashed with a UnicodeDecodeError on a freshly downloaded Retraction Watch CSV (byte 0x92, a Windows-1252 quote) while building the pin.",
+   "default": "Do not re-fetch; use the held 2026-09-10 snapshot, which the screen accepts (41 days old, 72,476 rows), and record the defect as this task's micro-upgrade finding rather than editing a shared framework script mid-task while a Harness agent is active.",
+   "why_safe": "The screen's verdict does not depend on the newer snapshot, and the staleness is recorded inside each manifest's dependency block. Reporting a tool defect is preferable to patching a shared script whose owner is working in parallel.",
+   "what_would_have_been_different": "A fresher snapshot; neither paper is flagged in either snapshot era, so no verdict changes."
+  },
+  {
+   "condition": "The 'clinical benefit' column of every road is empty on registry evidence (Harness clinical census, 2026-10-20).",
+   "default": "Record it as a FINDING with the census's own caveat attached verbatim in substance ('a missing hit does not prove that no study exists'), not as a gap in the reconnaissance, and mark every C cell UNKNOWN or not verified rather than negative.",
+   "why_safe": "It is what the census itself instructs, and the alternative (reading absence as proof) is the false-negative asymmetry this repository's dismissal ledger exists to prevent.",
+   "what_would_have_been_different": "Nothing; the alternative would have manufactured a negative."
+  }
+ ],
+ "STOP_LOG": [],
+ "DECISIONS_TAKEN": [
+  {
+   "what": "Classify amlexanox NON_TROVATO_NELLA_RICERCA for WWOX rather than MAI_TENTATO, with query, sources, date and limits recorded.",
+   "alternatives_rejected": "MAI_TENTATO (insufficient evidence: an unpublished individual experience is unreachable by any literature query by construction, and per D-25 a PubMed zero does not reach Methods).",
+   "consulted": "none (the contract states the rule)",
+   "reversibility": "fully reversible — it is a labelled classification in a research note and a PROPOSED candidate",
+   "how_to_revert": "amend the note's section 4.1 and the candidate's section 3"
+  },
+  {
+   "what": "Write one commit candidate (MINOR) rather than none or several: two registry identity records, one dismissal-ledger record, one proposed DEFAULTS THAT BIT US row. No discovery lead.",
+   "alternatives_rejected": "A discovery lead for amlexanox, refused because filing a lead would be a promotion by filing for a road the reconnaissance declines to promote.",
+   "consulted": "none",
+   "reversibility": "fully reversible — PROPOSED, not propagated",
+   "how_to_revert": "delete the candidate file before any BATCH_COMMIT"
+  },
+  {
+   "what": "Report the ethosuximide genotype-specificity contrast as the census's most under-exploited observation, without proposing a molecule.",
+   "alternatives_rejected": "Promoting ethosuximide into the therapeutic tracker, refused: one experiment, one laboratory, one assay, a provoked-seizure behavioural endpoint, constitutive-null genotype only, and S-class at best.",
+   "consulted": "none",
+   "reversibility": "fully reversible",
+   "how_to_revert": "the statement lives in one section of the note"
+  }
+ ]
 }
