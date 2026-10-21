@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261021-42286026-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "42286026",
+  "doi": "10.1038/s41598-026-55285-3"
+ },
+ "event_at": "2026-10-21T23:22:00Z",
+ "analysis_at": "2026-10-21T00:00:00Z",
+ "analysis_time_precision": "date_only",
+ "workflow": "scientist-d, ten-hour repurposing batch, task REPURP-10H-R4b-D-20261022, branch task/r4b-d; context_policy QUESTION_DRIVEN. Route: Europe PMC REST fullTextXML into the shared files/fulltext/; JATS body and tables read section by section from a text rendering; Figures 1-3 opened as the embedded 300 ppi rasters of the PDF pages. The supplementary document (Supplementary Fig. S1, heterozygous-state currents) was fetched but not read, which is why the receipt is partial. Locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts. Receipt staged for the integrator, not appended.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID42286026_Xiong2026_PMC.xml",
+ "source_fingerprint": "1cb601ecef5a60f36892ad227a22353832ad716e60f002f6e5bc89380ae79a59",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42286026.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261022b.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "Europe PMC JATS text rendering read in full including Table 1; Figures 1-3 inspected as images; supplementary document not read."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

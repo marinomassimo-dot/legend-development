@@ -1,0 +1,312 @@
+{
+ "schema_version": 2,
+ "pmid": "42286026",
+ "doi": "10.1038/s41598-026-55285-3",
+ "pmcid": "PMC13518877",
+ "receipt": "FTR-20261021-42286026-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the R4b task's questions (a confirmed repurposed drug; a missense precedent; an external or natural-history comparator that held up; a pre-dose drift measurement) and the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261022b.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Single-centre hospital group combining a four-patient open-label observation with heterologous patch-clamp of the patients variants; a repurposed anticonvulsant in a missense-dominated encephalopathy; NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "gabapentin[Title/Abstract] AND KCNQ2[Title/Abstract]",
+    "count": 5,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "KCNQ2[Title/Abstract] AND (retigabine[Title/Abstract] OR \"precision therapy\"[Title/Abstract] OR \"Kv7 opener\"[Title/Abstract]) AND (patients[Title/Abstract])",
+    "count": 38,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 31,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42286026 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 31,
+   "references_screened": 30,
+   "references_with_doi": 30,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42286026_Xiong2026_PMC.xml",
+   "sha256": "1cb601ecef5a60f36892ad227a22353832ad716e60f002f6e5bc89380ae79a59",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML; body, tables cell-wise, figure legends.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13518877/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "1cb601ecef5a60f36892ad227a22353832ad716e60f002f6e5bc89380ae79a59"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42286026_r2/PMC13518877.1.pdf",
+   "sha256": "8be27cd16f8dfd157eed39e698ccc38dd301236ed49baa547cef329315100185",
+   "kind": "article_binary",
+   "note": "PMC open-data bucket PDF; source of the figure rasters (the bucket held no separate figure files).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13518877.1/PMC13518877.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/page_renders/PMID42286026/img-000.png",
+   "sha256": "5c8cb66da73b51bd8442b89982a4f3ff94204bfe2a6be0412882887bd9ebd19b",
+   "kind": "figure",
+   "note": "Figure 1 (variant topology, alignment, homomeric currents), embedded 1675x1515 raster of PDF page 4; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdfimages extraction",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42286026_r2/PMC13518877.1.pdf",
+    "extractor": {
+     "name": "pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -f 4 -l 4 -png <pdf> img"
+    }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID42286026/img-001.png",
+   "sha256": "d025ecadb6b679ec4dae39a589231f8f2f99122ea2c288473d8f971b3d125be2",
+   "kind": "figure",
+   "note": "Figure 2 (heteromeric Kv7.2/Kv7.3 currents), embedded 1619x1053 raster of PDF page 5; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdfimages extraction",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42286026_r2/PMC13518877.1.pdf",
+    "extractor": {
+     "name": "pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -f 5 -l 5 -png <pdf> img"
+    }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID42286026/img-002.png",
+   "sha256": "2bc42f4374d13e75253a644cb15c3bf69a47ca6abad6d51bf02b3db4d0df2a27",
+   "kind": "figure",
+   "note": "Figure 3 (EEG recordings before and after treatment), embedded 1629x1618 raster of PDF page 6; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdfimages extraction",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42286026_r2/PMC13518877.1.pdf",
+    "extractor": {
+     "name": "pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -f 6 -l 6 -png <pdf> img"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The clinical evaluation is four patients on open-label add-on treatment with no control group; cognition was reported by parents without a standardised instrument.",
+    "snippet": "the clinical observations are based on open‑label add‑on treatment without a control group. Third, the cognitive improvements reported by parents were not assessed using standardized neuropsychological instruments.",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42286026_Xiong2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors did not test the drug on the mutant channels, so the proposed genotype-response link is untested.",
+    "snippet": "First, we did not directly test the ability of gabapentin to activate each mutant channel in vitro, as would be required to establish a mechanistic link between genotype and drug response.",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42286026_Xiong2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors call their explanation for the one non-responder speculative and note the drug has other targets.",
+    "snippet": "However, we emphasize that this interpretation remains speculative, as we did not directly test gabapentin’s effect on these mutant channels.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42286026_Xiong2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizure freedom was assessed by video-EEG before and after initiation because clinical observation of seizures was hard.",
+    "snippet": "Because seizure identification solely by clinical observation was challenging, video‑EEG recordings were performed before and after gabapentin initiation to evaluate its therapeutic effect",
+    "anchor": "Results, Different response to gabapentin",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42286026_Xiong2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Three patients had earlier seizure-free periods on a sodium-channel blocker that ended in relapse after about 6 to 7 months, so a remission of that length can occur without the studied drug.",
+    "snippet": "Three of the four patients responded to oxcarbazepine (OXC), with Patient 3 remaining seizure‑free for nearly three years, whereas Patients 2 and 4 experienced seizure relapse after approximately six months.",
+    "anchor": "Results, Clinical features and genetic results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42286026_Xiong2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Patient 2 became seizure-free only after 1 year and 5 months of exposure and patient 4 within 3 months, each against a background of fluctuating earlier courses.",
+    "snippet": "became seizure‑free after 1 year and 5 months on a low dose",
+    "anchor": "Results, Different response to gabapentin",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42286026_Xiong2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Patient 1 did not respond on EEG or seizures, yet the parents reported improved auditory responsiveness and babbling; the authors note improved alertness in this patient too.",
+    "snippet": "However, the parents reported cognitive improvements (increased auditory responsiveness and babbling) after gabapentin initiation.",
+    "anchor": "Results, Different response to gabapentin",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42286026_Xiong2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Parent-reported cognitive gains were described in all four patients including the non-responder, while motor improvement was absent in the three seizure-free patients; the authors say the improvements were similar across patients.",
+    "snippet": "Nevertheless, the cognitive improvements for the four patients with gabapentin in the study were similar based on their parents’ observations.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42286026_Xiong2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A dose increase in patient 4 gave no further progress, the only dose-response observation.",
+    "snippet": "but further dose increase to 20 mg/kg/d did not lead to additional significant progress",
+    "anchor": "Results, Different response to gabapentin",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42286026_Xiong2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The mixed loss-and-gain description of the S4 variant rests on the homomeric channel; with its physiological partner subunit the variant keeps large currents (344.9 against 421.4 pA/pF at plus 60 mV, P above 0.05).",
+    "snippet": "p.L200P co‑expressed with KCNQ3 retained much larger currents (344.9 ± 49.0 pA/pF vs. 421.4 ± 50.5 pA/pF at + 60 mV, P > 0.05, Fig. 2b)",
+    "anchor": "Results, Functional analyses",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42286026_Xiong2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The sample is four patients carrying four different variants, three of them in the same segment, so no replicate exists for any variant class.",
+    "snippet": "Four KCNQ2-DEE patients were included (Table 1).",
+    "anchor": "Results, Clinical features",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42286026_Xiong2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors conclude gabapentin may be considered as an add-on in KCNQ2-DEE, particularly severe loss-of-function S6 variants, while stating the evidence is hypothesis-generating.",
+    "snippet": "our study provides real‑world, hypothesis‑generating data on the use of gabapentin in KCNQ2‑DEE",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42286026_Xiong2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 1d-e: the S4 variant L200P gives smaller currents than wild type below about 20 mV and larger above, with an activation midpoint shifted from about minus 12 to plus 21 mV; the three S6 variants give no current; Fig 2b: with KCNQ3 the L200P current curve lies below the wild-type curve at nearly all voltages, about 150 against 270 pA/pF at 0 mV.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1d current density: WT rises to about 118 pA/pF at +60; L200P below WT at -20 mV (***) and 0 mV, crosses at about +15 mV, about 298 at +60 (**); A294V, F305del, F305I flat near 0. Fig 1e G/Gmax midpoint WT about -12 mV, L200P about +21 mV. Fig 2b heteromeric: WT+KCNQ3 about 270 at 0 mV and 420 at +60; L200P+KCNQ3 about 150 at 0 mV and 345 at +60; A294V+KCNQ3 about 50 at +60; F305del and F305I about 0.",
+    "anchor": "Figures 1 and 2",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID42286026/img-001.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 3: EEG panels are single epochs; after gabapentin, patient 1 still shows hypsarrhythmia in sleep and patient 4 still shows bilateral frontal sharp waves, spikes and spike-wave complexes in sleep; the figure carries no counts or time series.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3 eight EEG epochs: (a) patient 1 sleep hypsarrhythmia before and after gabapentin, awake limb elevation with tremor before, awake fast rhythm with sharp waves after lamotrigine; (b) patient 4 sleep multifocal sharp waves before, awake staring and immobility before, sleep bilateral frontal sharp waves spikes and spike-slow wave complexes after gabapentin.",
+    "anchor": "Figure 3",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID42286026/img-002.png",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13518877/fullTextXML returned HTTP 200 with a JATS body on 2026-10-21; the declared article_text artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}

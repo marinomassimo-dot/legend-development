@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261021-41250984-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "41250984",
+  "doi": "10.1002/epi4.70192"
+ },
+ "event_at": "2026-10-21T23:21:07Z",
+ "analysis_at": "2026-10-21T00:00:00Z",
+ "analysis_time_precision": "date_only",
+ "workflow": "scientist-d, ten-hour repurposing batch, task REPURP-10H-R4b-D-20261022, branch task/r4b-d; context_policy QUESTION_DRIVEN. Route: Europe PMC REST fullTextXML into the shared files/fulltext/; JATS body and tables read section by section from a text rendering; Figures 1 and 2 opened as the native JPEGs. Supporting information (a PDF with tables and figures S1-S5 and a spreadsheet dataset) was fetched but not read, which is why the receipt is partial. Locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts. Receipt staged for the integrator, not appended.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID41250984_Bidwell2026_PMC.xml",
+ "source_fingerprint": "b8698a0c37d48a4e1e33e613d575c15a248e2018295fb7ea23c9f8de5d0fa92e",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41250984.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261022b.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "Europe PMC JATS text rendering read in full including Table 1; Figures 1-2 inspected as images; supporting PDF and dataset not read."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
