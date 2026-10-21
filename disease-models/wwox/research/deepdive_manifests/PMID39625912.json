@@ -1,0 +1,406 @@
+{
+ "schema_version": 2,
+ "pmid": "39625912",
+ "doi": "10.1371/journal.pone.0312936",
+ "pmcid": "PMC11614242",
+ "receipt": "FTR-20261021-39625912-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Biostatistics re-analysis of the EPISTOP data by methodologists of a rare-disease statistics programme; TSC trial data, NOT WWOX EVIDENCE. Credible methods paper; it re-analyses a 27-infant randomised subset and tests only one bias model."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "EPISTOP[Title/Abstract] AND (bias[Title/Abstract] OR methodolog*[Title/Abstract])",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "rare disease[Title/Abstract] AND clinical trial[Title/Abstract] AND (allocation bias[Title/Abstract] OR selection bias[Title/Abstract])",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 42,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 39625912 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 42,
+   "references_screened": 20,
+   "references_with_doi": 20,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 22
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39625912_Wied2024_PMC.xml",
+   "sha256": "323ec2e26426921ac05359d9ffba50b954efc56fbd4b1447b51444e1eccfdae3",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML; body, tables cell-wise, figure legends.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11614242/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "323ec2e26426921ac05359d9ffba50b954efc56fbd4b1447b51444e1eccfdae3"
+   }
+  },
+  {
+   "path": "files/supplement/PMID39625912_r2/PMC11614242.1.pdf",
+   "sha256": "dffb0dc9f051158974bf9303a71333b646093e15a045c47ef42867f361fc6028",
+   "kind": "article_binary",
+   "note": "PMC open-data bucket PDF.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11614242.1/PMC11614242.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID39625912_r2/pone.0312936.s001.pdf",
+   "sha256": "7b6ba0a6c09ab5008334d74f2d45711c94041c6cab3693650cf5b36ad1f93172",
+   "kind": "supplement_binary",
+   "note": "S1: the final clinical protocol of the EPISTOP trial, version 05, 56 pages.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11614242.1/pone.0312936.s001.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID39625912_r2/pone.0312936.s001.txt",
+   "sha256": "5ef9867ba6a6e2ead60aabc310e80a57a4d4786d76875d1b5844084dcab310f3",
+   "kind": "supplement_text",
+   "note": "Text layer of S1 (protocol).",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftotext",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID39625912_r2/pone.0312936.s001.pdf",
+    "extractor": {
+     "name": "pdftotext",
+     "version": "24.02.0",
+     "call": "pdftotext <pdf> - | tr '\\f' '\\n' > <txt> (page-separator form feeds replaced by newlines; no other change)"
+    }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID39625912/p7img-000.png",
+   "sha256": "42e08dc03deaa8e70d934ea7791e780a305e188626818b94a54c127b98bcb662",
+   "kind": "figure",
+   "note": "Figure 1 (Kaplan-Meier, time from birth to first seizure): embedded raster of PDF page 7, 1259x949, about 302 ppi; read as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdfimages extraction",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID39625912_r2/PMC11614242.1.pdf",
+    "extractor": {
+     "name": "pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -f 7 -l 7 -png <pdf> p7img"
+    }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID39625912/p7img-001.png",
+   "sha256": "0b9a6463986be83c344d1978a8970d38f4b7805f808549612e55f18683130b84",
+   "kind": "figure",
+   "note": "Figure 2 (Kaplan-Meier, time from study entry to first seizure): embedded raster of PDF page 7, 1259x949; read as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdfimages extraction",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID39625912_r2/PMC11614242.1.pdf",
+    "extractor": {
+     "name": "pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -f 7 -l 7 -png <pdf> p7img"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The reanalysis is described by its authors as non-preplanned and re-creates the randomisation sequence because details were missing.",
+    "snippet": "This is a non-preplanned secondary analysis of the randomized, open label, multicenter two arm parallel group EPISTOP trial",
+    "anchor": "Methods, Study design and randomization",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39625912_Wied2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The allocation sequence was reconstructed from the order of actual treatment because information on the randomisation procedure was missing.",
+    "snippet": "The randomization sequence was recreated by the implemented allocation to treatment in consecutive order, i.e. allocation sequence, due to missing information and details on the underlying randomization procedure.",
+    "anchor": "Methods, Statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39625912_Wied2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Ethics committees split on randomisation: at two sites preventive treatment was considered accepted so no trial was needed; at the others only conventional treatment was acceptable.",
+    "snippet": "in 2 the benefit of the preventive treatment was accepted and there were no further needs for a trial and decreasing the chances for the patients under placebo arm.",
+    "anchor": "Discussion, national cultural vision on trial design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39625912_Wied2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Unblinding risk in rare-disease trials where lack of progression is visible to blinded staff.",
+    "snippet": "In clinical trials for rare diseases with no improvement, it’s problematic that blinded study personnel can observe when patients don’t progress or improve.",
+    "anchor": "Discussion, first paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39625912_Wied2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Registry-level base rate: few rare-disease trials, many uncompleted or unpublished at four years.",
+    "snippet": "only 11.5% of the clinical trials registered on clinicaltrials.gov focus on rare diseases [8] with an estimated 30.2% and 31.5% of these trials remaining uncompleted or unpublished at 4 years, respectively [9]",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39625912_Wied2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the randomised subset 8 of 13 preventive and 12 of 14 conventional infants had a seizure in this reanalysis.",
+    "snippet": "In the preventive group, 8 patients experienced at least one seizure and in the conventional group, 12.",
+    "anchor": "Results, Primary study endpoint",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39625912_Wied2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The uncorrected models reproduce the published hazard ratio 2.91 and a second uncorrected model gives 2.89; the abstract labels the 2.89 line as bias-corrected.",
+    "snippet": "The uncorrected models Ia and IIa show hazard ratios of 2.91 (95%-CI from 1.11 to 7.67, p-value 0.0306) and 2.89 (95%-CI from 1.10 to 7.58, p-value 0.0316), respectively.",
+    "anchor": "Results, Primary study endpoint",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39625912_Wied2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Bias-corrected models give hazard ratios 2.82 and 2.77 with wide intervals close to 1.",
+    "snippet": "A look at the bias-corrected analyses (models Ib and IIb) shows that the estimated hazard ratio and the associated confidence intervals are in very similar ranges (2.82 for model Ib and 2.77 for model IIb).",
+    "anchor": "Results, Primary study endpoint",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39625912_Wied2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Bayley-III cognitive score at 2 years did not differ between arms in the randomised subset.",
+    "snippet": "For the BSID-III congnitive score at 2 years of age the uncorrected model IIIa shows an estimated mean difference of 4.90 (95%-CI from -5.58 to 15.38, p-value 0.3401).",
+    "anchor": "Results, Secondary study endpoints",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39625912_Wied2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Only the Bayley social-emotional composite reached p below 0.05, which the text calls an advantage of preventive treatment.",
+    "snippet": "The BSID SE value alone indicates a significant advantage of preventive over conventional therapy with vigabatrin.",
+    "anchor": "Results, Secondary study endpoints",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39625912_Wied2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 5 footnote defines the mean difference as conventional minus preventive; Table 4 means for the social-emotional composite are lower in the preventive arm.",
+    "snippet": "MD: estimated mean difference of conserverative—preventive group.",
+    "anchor": "Table 5 footnote",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID39625912_Wied2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 4 social-emotional composite means: preventive arm lower than conventional.",
+    "snippet": "BSID SE | 78.78 (15.37) | 100.00 (28.84)",
+    "anchor": "Table 4, row BSID SE",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID39625912_Wied2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Nine Bayley endpoints, each in two models, were tested without a stated multiplicity correction; the table repeats an identical row for two different endpoints in the corrected model.",
+    "snippet": "IIIb | 0.82 | -0.52 to 2.16 | 0.2154",
+    "anchor": "Table 5, final row (BSID GAC IIIb) - identical to the BSID E. Language IIIb row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID39625912_Wied2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that the reanalysis confirms there is no additional bias introduced by randomization.",
+    "snippet": "The statistical re-analysis of this trial raw data supports the published results and reinforces that there is no additional bias introduced by randomization",
+    "anchor": "Discussion, reuse of data",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39625912_Wied2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The statistics body describes a design-based permutation test as supporting the finding with p 0.029.",
+    "snippet": "The utilization of their R-package “interval” resulted in a p-value of 0.02934, which supports the findings presented in Table 3.",
+    "anchor": "Discussion, reuse of data",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39625912_Wied2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A regulator pilot supports repurposing of established medicines for not-for-profit and academic evidence generation.",
+    "snippet": "EMA launched also a pilot project to support the repurposing of medicines in order to support not-for-profit organizations and academia to gather or generate sufficient evidence on the use of an established medicine in a new indication",
+    "anchor": "Discussion, innovation and acceleration",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39625912_Wied2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Protocol v05: the primary endpoint of the trial was biomarker collection, not a clinical outcome.",
+    "snippet": "Primary endpoint of the study is the collection of a set of molecular and clinical biomarkers in full analysis set of patients",
+    "anchor": "S1 protocol, Objectives and endpoints",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39625912_r2/pone.0312936.s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Protocol v05: the key secondary endpoint is better epilepsy outcome after EEG-triggered diagnosis; time to seizure onset is one of several listed parameters, with the neuropsychological battery.",
+    "snippet": "Key secondary endpoint is better epilepsy outcome in patients diagnosed as epileptic after electroencephalographic epileptiform discharges",
+    "anchor": "S1 protocol, Objectives and endpoints",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39625912_r2/pone.0312936.s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Protocol v05 summary words the same key secondary endpoint as better neurodevelopmental outcome.",
+    "snippet": "Key secondary endpoint is better neurodevelopmental outcome in patients diagnosed as",
+    "anchor": "S1 protocol, Protocol summary",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39625912_r2/pone.0312936.s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol blinds the treating neurologist: the EEG report goes to a central randomiser who returns only epilepsy or no epilepsy (treat or not).",
+    "snippet": "The treating neurologist will receive only the diagnosis: epilepsy or no epilepsy (meaning: treat or not treat, respectively).",
+    "anchor": "S1 protocol, scheme of study blinding",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39625912_r2/pone.0312936.s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Protocol early-stopping rule for benefit at an interim analysis at 70 percent of randomised patients.",
+    "snippet": "The statistical significance of P-value of 0.01 at interim analysis as evidence to stop early for benefit is required.",
+    "anchor": "S1 protocol, Early stopping rules",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39625912_r2/pone.0312936.s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Protocol sample size: 60 randomised infants, power above 80 percent for a 50 to 60 percent effect on clinical seizure development.",
+    "snippet": "Given a set of 60 patients, with 30 going to group A and 30 to group B, our power to detect this difference in clinical seizure development is higher than 80%.",
+    "anchor": "S1 protocol, Statistical analyses",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39625912_r2/pone.0312936.s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 1: preventive randomised curve plateaus at about 0.385 after a last step near day 615; censoring ticks at about days 710 to 765 lie on the plateau; conventional plateaus at about 0.143 with two ticks.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 (time from birth to first seizure): red preventive curve steps down to about 0.385 at about day 615 and runs flat to about day 765 with four censoring ticks between about days 710 and 765; blue conventional curve steps to about 0.143 at about day 440 with two ticks at about days 710 and 725.",
+    "anchor": "Figure 1, embedded raster of PDF page 7",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID39625912/p7img-000.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 2: same plateaus on the study-entry time axis (0.385 and 0.143).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2 (time from entering study to first seizure): red preventive curve plateau about 0.385 after the last step near day 550, with censoring ticks near days 665, 705 and a cluster near 730; blue conventional plateau about 0.143 after day 390 with two ticks near days 680 and 690.",
+    "anchor": "Figure 2, embedded raster of PDF page 7",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID39625912/p7img-001.png",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC11614242/fullTextXML returned HTTP 200 with a JATS body on 2026-10-21; the declared article_text artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}
