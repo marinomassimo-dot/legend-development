@@ -313,7 +313,17 @@ class TheRatchet(unittest.TestCase):
 
     def test_headroom_prints_the_instruction_to_lower_the_ceiling(self):
         """How it tightens by itself: a ceiling with headroom says so, in the output, on every
-        run — so a baseline can only ever move down."""
+        run — so a baseline can only ever move down.
+
+        🔴 THE CEILING IS PASSED EXPLICITLY, and that is the point of this test rather than an
+        detail of it. Until 2026-10-21 this fixture asserted the headroom message while
+        leaving the ceiling to `BASELINE_DISAGREEMENTS`, so it was really asserting that the
+        live baseline is greater than zero — and it went red the moment
+        `BATCH_20261019_011` repaired all fourteen disagreements and lowered that baseline to
+        0, which is the one event the ratchet exists to reward. A test of the
+        tightening MECHANISM must not fail when the mechanism is used, so the ceiling is now
+        this fixture's own.
+        """
         import tempfile
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -325,7 +335,7 @@ class TheRatchet(unittest.TestCase):
             registry.parent.mkdir(parents=True)
             registry.write_text("manifest `deepdive_manifests/PMID11111111.json` (1 locator)\n")
             with contextlib.redirect_stdout(io.StringIO()) as buf:
-                code = lcc.main([str(root), "--sweep"])
+                code = lcc.main([str(root), "--sweep", "--max-disagreements", "3"])
         self.assertEqual(0, code)
         self.assertIn("RATCHET HAS HEADROOM", buf.getvalue())
         self.assertIn("lower BASELINE_DISAGREEMENTS to 0", buf.getvalue())

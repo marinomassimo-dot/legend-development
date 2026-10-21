@@ -151,28 +151,49 @@ QUOTE_OPEN, QUOTE_CLOSE = "«", "»"
 # being attributed to the erratum manifest named in the parenthesis before it.
 ATTRIBUTION_BARRIERS = (";", "—", ")", "]", "[", QUOTE_OPEN, QUOTE_CLOSE, ". ")
 
-#: Measured on 2026-10-21 over `paper_registry_current.md` by this tool's own `--sweep`:
-#: **59 assertions reached**, 4 excluded (1 subset mention, 3 retired quotations), 55 in the
-#: four states — **36 agree, 14 disagree, 0 manifest absent, 5 unparsed**.
+#: 🟢 ZERO since `BATCH_20261019_011` (2026-10-21). Measured by this tool's own `--sweep`
+#: after that batch: **72 assertions reached**, 17 excluded (1 subset mention, 16 retired
+#: quotations), 55 in the four states — **50 agree, 0 disagree, 0 manifest absent, 5
+#: unparsed**.
 #:
-#: The 14 are a CEILING and every one of them UNDERSTATES its manifest. Six are the tail the
-#: narrow `DECLARATION_RE` already saw on 2026-09-21 (PMID 36779245, 32581702, 31340538,
-#: 39416860, 42397075 — twice, lines 55 and 7383 — and 33255508). Eight are NEW, found only
-#: because the wider pattern reaches the Italian, the singular, the "verbatim locators" and
-#: the count-before-the-path wordings: PMID 33914858 (6 vs 40), 34747138 (20 vs 29),
-#: 35328751 (7 vs 28), 33612478 (4 vs 10), 42589397 (7 vs 10), 39952983 (14 vs 21),
-#: 35460704 (6 vs 11). Two of those eight — 33914858 and 35460704 — assert exactly **6**
-#: against a `verbatim_locators` mapping of exactly **6 keys**, which is the D-40 signature
-#: and is flagged as such in the report. They are REPORTED, not repaired: a registry
-#: sentence moves only through `BATCH_COMMIT`, and that is the integrator's act.
+#: The 14 this constant used to hold were all repaired in that one batch, and the fourteen
+#: records are named here so a future reader can see which population the zero was measured
+#: over: PMID 42397075 (TWICE — `PAPER 001` line 55 and `PAPER 094` line 7383, 30 → 44),
+#: 33914858 (`PAPER 004`, 6 → 40), 34747138 (`PAPER 005`, 20 → 29), 36779245 (`PAPER 018`,
+#: 30 → 39), 32581702 (`PAPER 020`, 21 → 25), 31340538 (`PAPER 021`, 11 → 15), 35328751
+#: (`PAPER 023`, 7 → 28), 33612478 (`CORPUS-STUB-109`, 4 → 10), 39416860 (`PAPER 093`,
+#: 11 → 17), 33255508 (`PAPER 095`, 8 → 14), 42589397 (`PAPER 118`, 7 → 10), 39952983
+#: (`PAPER 135`, 14 → 21), 35460704 (`PAPER 156`, 6 → 11).
 #:
-#: Lowering this number is the only direction it moves.
-BASELINE_DISAGREEMENTS = 14
+#: 🔴 AND THE D-40 SIGNATURE WAS A FALSE POSITIVE ON BOTH ROWS IT FIRED ON — a correction to
+#: this file's own earlier note, which read that 33914858 and 35460704 were *"the D-40
+#: signature"* because each asserted exactly **6** against a 6-key mapping. The integrator of
+#: `BATCH_20261019_011` did not take the label on trust: `git log` on each manifest shows
+#: BOTH holding exactly **6 `entries`** at commit `28faaf0a` (2026-10-03), and the registry
+#: sentences were written the same day in `59fba0bc`. Both counts were therefore DERIVED
+#: CORRECTLY and merely went stale. **All fourteen were stale totals; none was a
+#: mis-measurement.** The signature is a heuristic over a coincidence — `len(entries)` is
+#: free to equal the key count — so it is a hint to re-derive, never a finding. Reading it as
+#: a finding would have produced the mirror image of D-40: a repair note asserting that a
+#: true sentence had never been true.
+#:
+#: Lowering this number is the only direction it moves. It is now zero, so any disagreement
+#: at all is a NEW one and this ratchet goes red on it.
+BASELINE_DISAGREEMENTS = 0
 #: Five, and each is a sentence that asserts a count while naming no manifest in its clause:
 #: three 2026-08 Italian records written before the path was part of the sentence (lines 6856,
 #: 6880, 6905, *"manifest schema-v2 con N locator verificati"*) and two on line 7333, where the
 #: paper's own 38 locators are discussed beside an ERRATUM's manifest — attributing them to the
 #: nearest path would have invented the very link this tool exists to check. Also a ceiling.
+#:
+#: 🔵 RE-MEASURED AND DELIBERATELY NOT LOWERED by `BATCH_20261019_011` (2026-10-21), which
+#: lowered `BASELINE_DISAGREEMENTS` to 0 in the same commit. The five are unchanged because
+#: none of them is a count DISAGREEMENT to repair: three are 2026-08 Italian records whose
+#: sentence names no manifest, and two are line 7333's, where the paper's own total is
+#: discussed beside an ERRATUM's manifest — the case the brief for that batch singled out as
+#: unrepairable honestly, because writing the paper's figure next to the erratum's path would
+#: assert exactly the link this tool refuses to guess. A ceiling that did not move is
+#: reported as not having moved, not quietly re-derived downward.
 BASELINE_UNPARSED = 5
 #: Zero, and it must stay zero: a declaration whose manifest is gone is never clean.
 BASELINE_MANIFEST_ABSENT = 0

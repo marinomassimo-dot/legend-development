@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261019_010
+last_batch_commit_id: BATCH_20261019_011
 last_batch_commit_date: 2026-10-21
 last_batch_commit_type: MANUAL
 commit_candidates_propagated: 0
 target_wm_version: WM_v7.27
-trigger: MANUAL (operator-authorised repair batch, ACTOR_ID orchestrator by stated assumption, task ORCH-METABOLIC-BATCH-20261019). Repair of four prose citations that pointed at detection-rule ids which never existed: Harness Engineering established by measurement (git log -S over the ledger, zero commits for every id D-27 through D-36) that D-31, D-33, D-35 and D-36 were proposed by closed 2026-09-22 candidates and never minted as rows of DEFAULTS THAT BIT US. The four citing sentences in discovery_ledger_current.md (DL-MOL-005, DL-MECH-011) and full_text_queue_current.md (FT-142) now say so, name the candidate each formulation lives in and quote that formulation, with the superseded wording quoted beside each repair per prompt_batch_commit.md 7.2. No row was minted: the mint was DECLINED and the reasoning recorded in the ledger's allocator addendum and in batch_report_BATCH_20261019_010.md. No candidate. NO WORKING-MODEL BUMP: the rule in section 2 bumps only for a BATCH_COMMIT that modifies the disease model, and a detection-rule citation in a research ledger's prose changes no claim, block, status, type, summary, support or uncertainty - the same reasoning BATCH_20261019_009 applied to a provenance sentence; WM_v7.27 is preserved with its date, its history note and its changelog row untouched.
+trigger: MANUAL (operator-authorised repair batch, ACTOR_ID orchestrator by stated assumption, task ORCH-METABOLIC-BATCH-20261019). Repair of every locator-count disagreement in paper_registry_current.md: fourteen count assertions across thirteen records (PAPER 001, 004, 005, 018, 020, 021, 023, 093, 094, 095, 118, 135, 156 and CORPUS-STUB-109; PAPER 001 and PAPER 094 assert the same manifest's count) each named a deep-dive manifest and understated it. Every one was re-derived first-hand from the manifest on disk as len(verbatim_locators['entries']) and corrected in place with the superseded wording quoted beside the new value per prompt_batch_commit.md 7.2, keeping each sentence's attribution to the receipt it already named rather than re-pointing it at the later reading, and naming that later reading instead. ALL FOURTEEN WERE STALE TOTALS: git log on each manifest shows the asserted figure equal to the entry count on the day its sentence was written. The D-40 len(mapping) signature the tool raised on PAPER 004 and PAPER 156 was contested against the source and is a FALSE POSITIVE on both - both manifests held exactly 6 entries at commit 28faaf0a, the day those sentences were written in 59fba0bc - so no repair of the mis-measurement class was owed or made. locator_count_crosscheck.py --sweep: 14 disagreements before, 0 after; agrees 36 -> 50; unparsed 5 before and after. BASELINE_DISAGREEMENTS lowered 14 -> 0 in the same commit with the fourteen records named in the constant's note; BASELINE_UNPARSED deliberately held at 5, because the five are not count disagreements and two of them discuss a paper's own total beside an erratum's manifest, which is the case that cannot be repaired honestly. No claim, Status, Type, Summary, block or baseline touched; no PAPER or LIT record created. NO WORKING-MODEL BUMP: section 2 bumps only for a BATCH_COMMIT that modifies the disease model, and a locator-count figure in a provenance sentence changes no claim, support or uncertainty - the same reasoning BATCH_20261019_009 applied to a provenance sentence and BATCH_20261019_010 to a detection-rule citation; WM_v7.27 is preserved with its date, its history note and its changelog row untouched.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,7 +126,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261021_BATCH_20261019_010
+last_lint_id: LINT_20261021_BATCH_20261019_011
 last_lint_date: 2026-10-21
 last_lint_result: WARN
 ```
