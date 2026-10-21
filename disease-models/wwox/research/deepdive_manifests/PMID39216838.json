@@ -1,0 +1,520 @@
+{
+ "schema_version": 2,
+ "pmid": "39216838",
+ "doi": "10.1016/j.phrs.2024.107356",
+ "receipt": "FTR-20261021-39216838-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named and deduplicated by the Orchestrator's selection file; the per-paper M0 packet and receipt status were run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "The reading is a primary-evidence read of a NOT WWOX EVIDENCE paper; the dossier is the analysis note section, no WWOX commit candidate is implied."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No consolidated baseline claim is narrowed or reversed by this reading; a blind audit is declared OWED where a candidate proposes it."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Not requested; discovery leads are staged separately if any."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a candidate card; BLOCK-1 holds, class level only."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Departments of Physiology and Biophysics, Biochemistry and Genetics at Case Western Reserve University (from the affiliations); a proteostasis-network group whose earlier proteostasis-regulator work on the same receptors is cited by the authors. HEK293T overexpression plus one knock-in iPSC line. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "pharmacological chaperone AND GABA-A receptor AND epilepsy",
+    "count": 13,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "GABRA1 AND variant AND trafficking",
+    "count": 12,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "hispidulin AND GABA-A receptor",
+    "count": 11,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "PubMed counts, dated; a zero from a title/abstract query licenses 'no paper is indexed', never 'this was never measured' (D-37)."
+ },
+ "multihop": {
+  "references_enumerated": 76,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "76 references enumerated from the JATS; none is WWOX-related. The authors' earlier proteostasis-regulator papers (references 14 to 17, 23, 30, 31) are the adjacent set; the IRE1 activation paper in this lot (41178115) is one of them."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 39216838 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-21 via PubMed efetch for PMID 39216838: publication types ['Journal Article']; CommentsCorrections RefTypes in the efetch record: ['UpdateOf'].",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 76,
+   "references_screened": 74,
+   "references_with_doi": 74,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39216838_Wang2024_PMC11457296.xml",
+   "sha256": "d2e624527d0beea8fd3fe833ac6560cc5ca47ac7a92cad503df0e5aded3bc1d5",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC11457296: whole article; every text locator is matched against it.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11457296/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "d2e624527d0beea8fd3fe833ac6560cc5ca47ac7a92cad503df0e5aded3bc1d5",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID39216838_r2/nihms-2024199-f0001.jpg",
+   "sha256": "04ee6be1e28e2880e22bb66e73ef5605124ab6b728e62d2a78aee09052eeed75",
+   "kind": "figure",
+   "note": "Figure 1 JPEG from the PMC open-data bucket (pmc_bucket_fetch.py), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "PMC open-data bucket via pmc_bucket_fetch.py (file extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "04ee6be1e28e2880e22bb66e73ef5605124ab6b728e62d2a78aee09052eeed75",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID39216838_r2/nihms-2024199-f0002.jpg",
+   "sha256": "dce962f7852f7667112fa1dd8af116dbcc33522931908e3b07e5d71c22e22295",
+   "kind": "figure",
+   "note": "Figure 2 JPEG from the PMC open-data bucket (pmc_bucket_fetch.py), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "PMC open-data bucket via pmc_bucket_fetch.py (file extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "dce962f7852f7667112fa1dd8af116dbcc33522931908e3b07e5d71c22e22295",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID39216838_r2/nihms-2024199-f0003.jpg",
+   "sha256": "1ff435a6bcf4de80dc7706e8e8d5ab7b40a1229c41a0d5ea089e0b1f5d314303",
+   "kind": "figure",
+   "note": "Figure 3 JPEG from the PMC open-data bucket (pmc_bucket_fetch.py), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "PMC open-data bucket via pmc_bucket_fetch.py (file extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "1ff435a6bcf4de80dc7706e8e8d5ab7b40a1229c41a0d5ea089e0b1f5d314303",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID39216838_r2/nihms-2024199-f0004.jpg",
+   "sha256": "b8f57fee847634033a78ba1d3781c932b95f54d2e0945da50c39208ec623f2b6",
+   "kind": "figure",
+   "note": "Figure 4 JPEG from the PMC open-data bucket (pmc_bucket_fetch.py), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "PMC open-data bucket via pmc_bucket_fetch.py (file extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "b8f57fee847634033a78ba1d3781c932b95f54d2e0945da50c39208ec623f2b6",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID39216838_r2/nihms-2024199-f0005.jpg",
+   "sha256": "eda99c71cd7a54f4c6c97e6c8722848874a1c8f05d5f2fec4fca7baaeb8ce0cd",
+   "kind": "figure",
+   "note": "Figure 5 JPEG from the PMC open-data bucket (pmc_bucket_fetch.py), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "PMC open-data bucket via pmc_bucket_fetch.py (file extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "eda99c71cd7a54f4c6c97e6c8722848874a1c8f05d5f2fec4fca7baaeb8ce0cd",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID39216838_r2/nihms-2024199-f0006.jpg",
+   "sha256": "cc991f2234350e1848d6e44385309ebdfeebdb0b174634ac9950d768ba84a6ae",
+   "kind": "figure",
+   "note": "Figure 6 JPEG from the PMC open-data bucket (pmc_bucket_fetch.py), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "PMC open-data bucket via pmc_bucket_fetch.py (file extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "cc991f2234350e1848d6e44385309ebdfeebdb0b174634ac9950d768ba84a6ae",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID39216838_r2/nihms-2024199-f0007.jpg",
+   "sha256": "17e63515731828541bf8b62dcfd04645d5bc139bb97cd9f89fda449956483a11",
+   "kind": "figure",
+   "note": "Figure 7 JPEG from the PMC open-data bucket (pmc_bucket_fetch.py), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "PMC open-data bucket via pmc_bucket_fetch.py (file extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "17e63515731828541bf8b62dcfd04645d5bc139bb97cd9f89fda449956483a11",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID39216838_r2/nihms-2024199-f0008.jpg",
+   "sha256": "7ad95911138d95629c3f1990b76e99621408b910677d413a434cf23b9a01c251",
+   "kind": "figure",
+   "note": "Figure 8 JPEG from the PMC open-data bucket (pmc_bucket_fetch.py), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "PMC open-data bucket via pmc_bucket_fetch.py (file extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "7ad95911138d95629c3f1990b76e99621408b910677d413a434cf23b9a01c251",
+    "derived": false
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE (GABRA1, a pentameric ion-channel subunit). Of eight missense variants, five lower total alpha1 protein and seven lower surface alpha1 in HEK293T cells; the protein losses are variant-specific and partial.",
+    "snippet": "Western blot analysis demonstrated that five variations (S76R, R214C, D219N, P260L, and A322D) reduced the total α1 subunit protein levels significantly compared to wild type",
+    "anchor": "Results, first section, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39216838_Wang2024_PMC11457296.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 subunit missense variants (S76R, R214C, D219N, G251D, P260L, M263T, T289P, A322D) with beta2 and gamma2 in HEK293T cells (transient and stable), and a heterozygous G251D knock-in human iPSC line differentiated to GABAergic neurons; two positive allosteric modulators of the receptor tested as pharmacological chaperones; NOT a WWOX system",
+     "genotype": "GABRA1 eight missense variants; no WWOX",
+     "endpoint": "total and surface alpha1 by Western blot and biotinylation, pellet-to-supernatant ratio, peak GABA current, FRET, endo H, cycloheximide chase, proximity ligation"
+    }
+   },
+   {
+    "proposition": "Figure 1C-D read: total alpha1 (percent of wild type) A322D about 25, D219N about 52, P260L about 25, R214C about 37, S76R about 62, G251D about 86 and T289P about 83 (not significant), M263T about 59; surface alpha1: A322D about 12, D219N about 45, P260L about 28, R214C about 22, S76R about 54, G251D about 63, M263T about 67, T289P about 98 (not significant).",
+    "snippet": "Eight variants are selected for further characterization and colored in green.",
+    "anchor": "Figure 1C-D (total and surface alpha1, percent of wild type)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39216838_r2/nihms-2024199-f0001.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 subunit missense variants (S76R, R214C, D219N, G251D, P260L, M263T, T289P, A322D) with beta2 and gamma2 in HEK293T cells (transient and stable), and a heterozygous G251D knock-in human iPSC line differentiated to GABAergic neurons; two positive allosteric modulators of the receptor tested as pharmacological chaperones; NOT a WWOX system",
+     "genotype": "GABRA1 eight missense variants; no WWOX",
+     "endpoint": "total and surface alpha1 by Western blot and biotinylation, pellet-to-supernatant ratio, peak GABA current, FRET, endo H, cycloheximide chase, proximity ligation"
+    },
+    "qualifies": "entries[0]",
+    "qualifies_needle": "Western blot analysis demonstrated that five "
+   },
+   {
+    "proposition": "A solubility read exists: the lysate is cleared at 20,000 g and the supernatant kept as 'total protein', while the pellet is washed and re-suspended in SDS sample buffer, so a pellet-to-supernatant ratio is measured.",
+    "snippet": "the supernatant was collected as total proteins",
+    "anchor": "Methods, Western blot analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39216838_Wang2024_PMC11457296.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 subunit missense variants (S76R, R214C, D219N, G251D, P260L, M263T, T289P, A322D) with beta2 and gamma2 in HEK293T cells (transient and stable), and a heterozygous G251D knock-in human iPSC line differentiated to GABAergic neurons; two positive allosteric modulators of the receptor tested as pharmacological chaperones; NOT a WWOX system",
+     "genotype": "GABRA1 eight missense variants; no WWOX",
+     "endpoint": "total and surface alpha1 by Western blot and biotinylation, pellet-to-supernatant ratio, peak GABA current, FRET, endo H, cycloheximide chase, proximity ligation"
+    }
+   },
+   {
+    "proposition": "Aggregation propensity (pellet/supernatant ratio) rises for only one variant, G251D (about 2.8-fold), with D219N about 1.9-fold; the other six do not differ from wild type: loss of protein is mostly clearance, with a minority pellet phenotype.",
+    "snippet": "Intriguingly, the G251D variation led to the most dramatic increase of the aggregation propensity by 2.8-fold compared to wild type",
+    "anchor": "Results, first section, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39216838_Wang2024_PMC11457296.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 subunit missense variants (S76R, R214C, D219N, G251D, P260L, M263T, T289P, A322D) with beta2 and gamma2 in HEK293T cells (transient and stable), and a heterozygous G251D knock-in human iPSC line differentiated to GABAergic neurons; two positive allosteric modulators of the receptor tested as pharmacological chaperones; NOT a WWOX system",
+     "genotype": "GABRA1 eight missense variants; no WWOX",
+     "endpoint": "total and surface alpha1 by Western blot and biotinylation, pellet-to-supernatant ratio, peak GABA current, FRET, endo H, cycloheximide chase, proximity ligation"
+    }
+   },
+   {
+    "proposition": "Figure 1E read: pellet/supernatant ratios: wild type 1.0, A322D about 1.4, D219N about 1.9 (one asterisk), P260L about 1.1, R214C about 0.9, S76R about 1.05, G251D about 2.8 (three asterisks), M263T about 0.95, T289P about 1.45, all but the two named not significant.",
+    "snippet": "The variants are classified into three categories: mild (pathogenic probability",
+    "anchor": "Figure 1E (insoluble to soluble alpha1 ratio)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39216838_r2/nihms-2024199-f0001.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 subunit missense variants (S76R, R214C, D219N, G251D, P260L, M263T, T289P, A322D) with beta2 and gamma2 in HEK293T cells (transient and stable), and a heterozygous G251D knock-in human iPSC line differentiated to GABAergic neurons; two positive allosteric modulators of the receptor tested as pharmacological chaperones; NOT a WWOX system",
+     "genotype": "GABRA1 eight missense variants; no WWOX",
+     "endpoint": "total and surface alpha1 by Western blot and biotinylation, pellet-to-supernatant ratio, peak GABA current, FRET, endo H, cycloheximide chase, proximity ligation"
+    },
+    "qualifies": "entries[3]",
+    "qualifies_needle": "Intriguingly, the G251D variation led to the "
+   },
+   {
+    "proposition": "All eight variants lose function by patch clamp: peak currents are reduced compared with wild type (wild type about 6.3 nA, the lowest variants about 1.6 to 1.9 nA).",
+    "snippet": "peak current amplitudes were significantly reduced for all eight",
+    "anchor": "Results, second section, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39216838_Wang2024_PMC11457296.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 subunit missense variants (S76R, R214C, D219N, G251D, P260L, M263T, T289P, A322D) with beta2 and gamma2 in HEK293T cells (transient and stable), and a heterozygous G251D knock-in human iPSC line differentiated to GABAergic neurons; two positive allosteric modulators of the receptor tested as pharmacological chaperones; NOT a WWOX system",
+     "genotype": "GABRA1 eight missense variants; no WWOX",
+     "endpoint": "total and surface alpha1 by Western blot and biotinylation, pellet-to-supernatant ratio, peak GABA current, FRET, endo H, cycloheximide chase, proximity ligation"
+    }
+   },
+   {
+    "proposition": "The screen of known receptor ligands finds modulators that raise total protein of all three variants tested.",
+    "snippet": "Hispidulin, TP003, and Midazolam increased total protein levels for all three α1 DAVs",
+    "anchor": "Results, third section, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39216838_Wang2024_PMC11457296.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 subunit missense variants (S76R, R214C, D219N, G251D, P260L, M263T, T289P, A322D) with beta2 and gamma2 in HEK293T cells (transient and stable), and a heterozygous G251D knock-in human iPSC line differentiated to GABAergic neurons; two positive allosteric modulators of the receptor tested as pharmacological chaperones; NOT a WWOX system",
+     "genotype": "GABRA1 eight missense variants; no WWOX",
+     "endpoint": "total and surface alpha1 by Western blot and biotinylation, pellet-to-supernatant ratio, peak GABA current, FRET, endo H, cycloheximide chase, proximity ligation"
+    }
+   },
+   {
+    "proposition": "Selectivity for variants over wild type is stated for total alpha1 but rests on a Supplementary Figure (S4) that this reading did not open.",
+    "snippet": "Importantly, Hispidulin and TP003 had minimal effects on wild type α1 protein levels",
+    "anchor": "Results, third section, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39216838_Wang2024_PMC11457296.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 subunit missense variants (S76R, R214C, D219N, G251D, P260L, M263T, T289P, A322D) with beta2 and gamma2 in HEK293T cells (transient and stable), and a heterozygous G251D knock-in human iPSC line differentiated to GABAergic neurons; two positive allosteric modulators of the receptor tested as pharmacological chaperones; NOT a WWOX system",
+     "genotype": "GABRA1 eight missense variants; no WWOX",
+     "endpoint": "total and surface alpha1 by Western blot and biotinylation, pellet-to-supernatant ratio, peak GABA current, FRET, endo H, cycloheximide chase, proximity ligation"
+    }
+   },
+   {
+    "proposition": "Surface expression rises 1.5- to 3.3-fold in the treated variants (two modulators); for the weaker modulator three variants do not reach significance.",
+    "snippet": "Cell surface biotinylation assays demonstrated that Hispidulin treatment",
+    "anchor": "Results, fourth section, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39216838_Wang2024_PMC11457296.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 subunit missense variants (S76R, R214C, D219N, G251D, P260L, M263T, T289P, A322D) with beta2 and gamma2 in HEK293T cells (transient and stable), and a heterozygous G251D knock-in human iPSC line differentiated to GABAergic neurons; two positive allosteric modulators of the receptor tested as pharmacological chaperones; NOT a WWOX system",
+     "genotype": "GABRA1 eight missense variants; no WWOX",
+     "endpoint": "total and surface alpha1 by Western blot and biotinylation, pellet-to-supernatant ratio, peak GABA current, FRET, endo H, cycloheximide chase, proximity ligation"
+    }
+   },
+   {
+    "proposition": "Function is measured on the same variants: peak GABA currents rise (for example A322D about 0.75 to 3.0 nA) and are not significantly different from wild type in most cases.",
+    "snippet": "led to peak current amplitudes that were not significantly different from those in wild type receptors",
+    "anchor": "Results, fourth section, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39216838_Wang2024_PMC11457296.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 subunit missense variants (S76R, R214C, D219N, G251D, P260L, M263T, T289P, A322D) with beta2 and gamma2 in HEK293T cells (transient and stable), and a heterozygous G251D knock-in human iPSC line differentiated to GABAergic neurons; two positive allosteric modulators of the receptor tested as pharmacological chaperones; NOT a WWOX system",
+     "genotype": "GABRA1 eight missense variants; no WWOX",
+     "endpoint": "total and surface alpha1 by Western blot and biotinylation, pellet-to-supernatant ratio, peak GABA current, FRET, endo H, cycloheximide chase, proximity ligation"
+    }
+   },
+   {
+    "proposition": "Figure 4A-C read: surface alpha1 fold-change (stronger modulator) A322D about 3.3, D219N about 1.75, P260L about 2.4, R214C about 3.1, S76R about 3.1, G251D about 3.0, M263T about 2.95, T289P about 2.7; Imax (pA, DMSO to treated) A322D about 750 to 3000, D219N about 1800 to 3200, P260L about 300 to 740, R214C about 500 to 1400, S76R about 780 to 2100, G251D about 560 to 1430, M263T about 940 to 2600, T289P about 540 to 2100; Figure 4C wild-type scatter runs about 80 to 135 percent with treated variant bars not significantly different.",
+    "snippet": "Quantification of the surface α1 band intensities was shown on the bottom panels (n = 3).",
+    "anchor": "Figure 4A-C (surface biotinylation, current peaks, percent of wild type)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39216838_r2/nihms-2024199-f0004.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 subunit missense variants (S76R, R214C, D219N, G251D, P260L, M263T, T289P, A322D) with beta2 and gamma2 in HEK293T cells (transient and stable), and a heterozygous G251D knock-in human iPSC line differentiated to GABAergic neurons; two positive allosteric modulators of the receptor tested as pharmacological chaperones; NOT a WWOX system",
+     "genotype": "GABRA1 eight missense variants; no WWOX",
+     "endpoint": "total and surface alpha1 by Western blot and biotinylation, pellet-to-supernatant ratio, peak GABA current, FRET, endo H, cycloheximide chase, proximity ligation"
+    },
+    "qualifies": "entries[9]",
+    "qualifies_needle": "led to peak current amplitudes that were not "
+   },
+   {
+    "proposition": "The comparison with wild type combines two experiments to avoid transfection-efficiency differences, so 'not different from wild type' (small n, wide scatter) is not an equivalence test.",
+    "snippet": "We quantified the percentage to wild type peak current amplitudes by combining data from Fig. 2a and Fig. 4b to prevent the potential discrepancies resulting from different transfection efficiency.",
+    "anchor": "Results, fourth section, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39216838_Wang2024_PMC11457296.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 subunit missense variants (S76R, R214C, D219N, G251D, P260L, M263T, T289P, A322D) with beta2 and gamma2 in HEK293T cells (transient and stable), and a heterozygous G251D knock-in human iPSC line differentiated to GABAergic neurons; two positive allosteric modulators of the receptor tested as pharmacological chaperones; NOT a WWOX system",
+     "genotype": "GABRA1 eight missense variants; no WWOX",
+     "endpoint": "total and surface alpha1 by Western blot and biotinylation, pellet-to-supernatant ratio, peak GABA current, FRET, endo H, cycloheximide chase, proximity ligation"
+    }
+   },
+   {
+    "proposition": "The modulators are themselves positive allosteric modulators of the receptor; the authors state they may add current once receptors reach the surface, and the Methods give no statement that the compounds were removed before recording (0 occurrences of 'washout' in the article XML).",
+    "snippet": "Since Hispidulin and TP003 are PAMs of GABAA receptors, in addition to their pharmacological chaperone effects",
+    "anchor": "Discussion, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39216838_Wang2024_PMC11457296.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 subunit missense variants (S76R, R214C, D219N, G251D, P260L, M263T, T289P, A322D) with beta2 and gamma2 in HEK293T cells (transient and stable), and a heterozygous G251D knock-in human iPSC line differentiated to GABAergic neurons; two positive allosteric modulators of the receptor tested as pharmacological chaperones; NOT a WWOX system",
+     "genotype": "GABRA1 eight missense variants; no WWOX",
+     "endpoint": "total and surface alpha1 by Western blot and biotinylation, pellet-to-supernatant ratio, peak GABA current, FRET, endo H, cycloheximide chase, proximity ligation"
+    }
+   },
+   {
+    "proposition": "Mechanism read-outs: assembly (FRET), ER-to-Golgi trafficking (endo H) and chaperone interactions (immunoprecipitation) change with treatment while chaperone protein levels and the unfolded-protein-response transcripts do not; mRNA of the variant and partners is unchanged.",
+    "snippet": "quantitative RT-PCR demonstrated that Hispidulin or TP003 treatment did not change the mRNA levels of",
+    "anchor": "Results, fifth section, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39216838_Wang2024_PMC11457296.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 subunit missense variants (S76R, R214C, D219N, G251D, P260L, M263T, T289P, A322D) with beta2 and gamma2 in HEK293T cells (transient and stable), and a heterozygous G251D knock-in human iPSC line differentiated to GABAergic neurons; two positive allosteric modulators of the receptor tested as pharmacological chaperones; NOT a WWOX system",
+     "genotype": "GABRA1 eight missense variants; no WWOX",
+     "endpoint": "total and surface alpha1 by Western blot and biotinylation, pellet-to-supernatant ratio, peak GABA current, FRET, endo H, cycloheximide chase, proximity ligation"
+    }
+   },
+   {
+    "proposition": "Figure 5 read: FRET efficiency alpha1(G251D)-beta2 about 21 percent with vehicle and about 42 and 40 with the two modulators; endo H resistant to total alpha1 ratio about 0.45 against about 0.7; co-precipitated BiP, calnexin, LMAN1 and gamma2 rise about 2- to 3-fold; qPCR bars for the three alpha1 variant, beta2 and gamma2 mRNAs and for BiP, XBP1s and CHOP sit at about 1 to 1.35 and are not significant.",
+    "snippet": "Hispidulin and TP003 promote the folding, assembly, and forward trafficking of misfolding-prone",
+    "anchor": "Figure 5A-F (FRET, endo H, immunoprecipitation, qPCR)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39216838_r2/nihms-2024199-f0005.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 subunit missense variants (S76R, R214C, D219N, G251D, P260L, M263T, T289P, A322D) with beta2 and gamma2 in HEK293T cells (transient and stable), and a heterozygous G251D knock-in human iPSC line differentiated to GABAergic neurons; two positive allosteric modulators of the receptor tested as pharmacological chaperones; NOT a WWOX system",
+     "genotype": "GABRA1 eight missense variants; no WWOX",
+     "endpoint": "total and surface alpha1 by Western blot and biotinylation, pellet-to-supernatant ratio, peak GABA current, FRET, endo H, cycloheximide chase, proximity ligation"
+    },
+    "qualifies": "entries[13]",
+    "qualifies_needle": "quantitative RT-PCR demonstrated that Hispidu"
+   },
+   {
+    "proposition": "Cycloheximide chase on a stably expressed variant: treatment keeps the remaining protein higher at early time points.",
+    "snippet": "significantly increased the remaining protein levels of",
+    "anchor": "Results, sixth section, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39216838_Wang2024_PMC11457296.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 subunit missense variants (S76R, R214C, D219N, G251D, P260L, M263T, T289P, A322D) with beta2 and gamma2 in HEK293T cells (transient and stable), and a heterozygous G251D knock-in human iPSC line differentiated to GABAergic neurons; two positive allosteric modulators of the receptor tested as pharmacological chaperones; NOT a WWOX system",
+     "genotype": "GABRA1 eight missense variants; no WWOX",
+     "endpoint": "total and surface alpha1 by Western blot and biotinylation, pellet-to-supernatant ratio, peak GABA current, FRET, endo H, cycloheximide chase, proximity ligation"
+    }
+   },
+   {
+    "proposition": "Figure 6A read: vehicle falls to about 0.52 at 0.5 and 1 h, about 0.13 at 2 h and about 0.09 at 4 h; with either modulator the level stays at about 0.92 to 1.03 at 0.5 and 1 h but falls to about 0.18 to 0.27 at 2 h and about 0.1 at 4 h (not significant at 2 and 4 h): the stabilisation is early and transient and the variant remains short-lived (a half-life of about one hour in vehicle).",
+    "snippet": "Hispidulin and TP003 inhibit the ERAD of the misfolding-prone",
+    "anchor": "Figure 6A (cycloheximide chase of alpha1(G251D))",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39216838_r2/nihms-2024199-f0006.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 subunit missense variants (S76R, R214C, D219N, G251D, P260L, M263T, T289P, A322D) with beta2 and gamma2 in HEK293T cells (transient and stable), and a heterozygous G251D knock-in human iPSC line differentiated to GABAergic neurons; two positive allosteric modulators of the receptor tested as pharmacological chaperones; NOT a WWOX system",
+     "genotype": "GABRA1 eight missense variants; no WWOX",
+     "endpoint": "total and surface alpha1 by Western blot and biotinylation, pellet-to-supernatant ratio, peak GABA current, FRET, endo H, cycloheximide chase, proximity ligation"
+    },
+    "qualifies": "entries[15]",
+    "qualifies_needle": "significantly increased the remaining protein"
+   },
+   {
+    "proposition": "In the human iPSC-derived neurons the read-outs are surface immunofluorescence intensity and proximity-ligation puncta; no current was recorded in these neurons.",
+    "snippet": "One limitation of our study is that we did not analyze macroscopic current kinetic properties",
+    "anchor": "Discussion, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39216838_Wang2024_PMC11457296.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 subunit missense variants (S76R, R214C, D219N, G251D, P260L, M263T, T289P, A322D) with beta2 and gamma2 in HEK293T cells (transient and stable), and a heterozygous G251D knock-in human iPSC line differentiated to GABAergic neurons; two positive allosteric modulators of the receptor tested as pharmacological chaperones; NOT a WWOX system",
+     "genotype": "GABRA1 eight missense variants; no WWOX",
+     "endpoint": "total and surface alpha1 by Western blot and biotinylation, pellet-to-supernatant ratio, peak GABA current, FRET, endo H, cycloheximide chase, proximity ligation"
+    }
+   },
+   {
+    "proposition": "Brain exposure and blood-brain barrier crossing are cited from other studies, not measured here.",
+    "snippet": "Hispidulin and TP003 are membrane permeable and cross the blood-brain barrier",
+    "anchor": "Discussion, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39216838_Wang2024_PMC11457296.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 subunit missense variants (S76R, R214C, D219N, G251D, P260L, M263T, T289P, A322D) with beta2 and gamma2 in HEK293T cells (transient and stable), and a heterozygous G251D knock-in human iPSC line differentiated to GABAergic neurons; two positive allosteric modulators of the receptor tested as pharmacological chaperones; NOT a WWOX system",
+     "genotype": "GABRA1 eight missense variants; no WWOX",
+     "endpoint": "total and surface alpha1 by Western blot and biotinylation, pellet-to-supernatant ratio, peak GABA current, FRET, endo H, cycloheximide chase, proximity ligation"
+    }
+   },
+   {
+    "proposition": "The paper contrasts two classes: proteostasis regulators act through the proteostasis network without binding the receptor; pharmacological chaperones bind the client directly, which is the basis for client specificity.",
+    "snippet": "pharmacological chaperones directly bind their target proteins to stabilize them",
+    "anchor": "Introduction, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39216838_Wang2024_PMC11457296.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABA-A receptor alpha1 subunit missense variants (S76R, R214C, D219N, G251D, P260L, M263T, T289P, A322D) with beta2 and gamma2 in HEK293T cells (transient and stable), and a heterozygous G251D knock-in human iPSC line differentiated to GABAergic neurons; two positive allosteric modulators of the receptor tested as pharmacological chaperones; NOT a WWOX system",
+     "genotype": "GABRA1 eight missense variants; no WWOX",
+     "endpoint": "total and surface alpha1 by Western blot and biotinylation, pellet-to-supernatant ratio, peak GABA current, FRET, endo H, cycloheximide chase, proximity ligation"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST returned the whole article as fullTextXML for PMC11457296 (215 kB, 2026-10-21); the eight figures and the supplements came from the PMC open-data bucket (pmc_bucket_fetch.py).",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a figure legend or an inspected figure."
+ }
+}
