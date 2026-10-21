@@ -1,0 +1,162 @@
+{
+ "schema_version": 2,
+ "pmid": "28919853",
+ "doi": "10.3389/fncel.2017.00267",
+ "receipt": "FTR-20261022-28919853-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022c.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "PMC efetch XML by pmc_bucket_fetch.py; figure JPEGs obtained from the Europe PMC supplementaryFiles archive (SHA-256 of the archive 255de5b2e835fd8ec5ee71793167658df71162cf76cc8cff1097fc4936916f53), none opened."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Adult male rat lithium-pilocarpine status epilepticus with intracerebroventricular infusion of a CDK5 inhibitor (roscovitine), an NADPH-oxidase inhibitor and a DRP1 inhibitor; readout is parvalbumin cell count and mitochondrial length in dentate gyrus; same group and infusion method as the roscovitine paper read in the previous relay; CDK5 is not the CDK7/9 class; no WWOX content."
+ },
+ "field_density": {
+  "queries_text": [
+   "roscovitine AND (status epilepticus OR seizure) AND (rat OR mouse) -> 0",
+   "CDK5 inhibitor AND parvalbumin AND status epilepticus -> 0"
+  ],
+  "note": "Group R3 relay c reading; queries are PubMed counts on 2026-10-22 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "roscovitine AND (status epilepticus OR seizure) AND (rat OR mouse)",
+    "count": 0,
+    "source": "PubMed 2026-10-22"
+   },
+   {
+    "query": "CDK5 inhibitor AND parvalbumin AND status epilepticus",
+    "count": 0,
+    "source": "PubMed 2026-10-22"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 28919853; registry_records.py get --pmid 28919853 --hops 0; fulltext_receipts.py status --pmid 28919853",
+  "hits": 0,
+  "finding": "No receipt, registry record or peer claim before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-22; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 51,
+   "references_screened": 51,
+   "references_with_doi": 51,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID28919853_CDK5astro2017_PMC_r2.xml",
+   "sha256": "910c013103dd8d92f040301462b87079f215a7ad3a5856816e6f23b863fa5b13",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC5585136",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "910c013103dd8d92f040301462b87079f215a7ad3a5856816e6f23b863fa5b13"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The osmotic pumps contained vehicle, apocynin 150 micromolar, roscovitine 100 micromolar or Mdivi-1 50 micromolar.",
+    "snippet": "containing (1) vehicle, (2) apocynin (150 μM), (3) roscovitine (100 μM) or (4) Mdivi-1 (50 μM)",
+    "anchor": "Methods / Intracerebroventricular Infusion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28919853_CDK5astro2017_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state, without data, that in a pilot and an earlier study these concentrations did not affect seizure latency or severity after pilocarpine.",
+    "snippet": "In a pilot study and our previous study (Hyun et al., 2017), the concentration of each compound could not affect the seizure latency and its severity in response to pilocarpine.",
+    "anchor": "Methods / Intracerebroventricular Infusion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28919853_CDK5astro2017_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Six hours after status epilepticus 81.7 percent of PV cells carried CDK5-Y15 phosphorylation against 19.6 percent in controls.",
+    "snippet": "19.6% of PV cells contained CDK5-Y15 phosphorylation in control animals (Figures 4A,B). Six hour after SE, the phosphorylation of CDK5-tyrosine (Y) 15 site was significantly elevated only in PV cells. Thus, 81.7% of PV cells contained CDK5-Y15 phosphorylation",
+    "anchor": "Results / p47Phox-Mediated CDK5 Activation in PV Cell Following SE",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28919853_CDK5astro2017_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Roscovitine attenuated status-epilepticus-induced PV cell loss without altering p47Phox expression.",
+    "snippet": "roscovitine attenuated SE-induced PV cell loss without altered p47Phox expression in PV cells (p < 0.05 vs. vehicle, Figures 5A–D)",
+    "anchor": "Results / p47Phox-Mediated CDK5 Activation in PV Cell Following SE",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28919853_CDK5astro2017_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The roscovitine panel legend gives n = 7 per group.",
+    "snippet": "(∗p < 0.05 vs. vehicle; n = 7, respectively)",
+    "anchor": "Fig 5 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28919853_CDK5astro2017_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say that PV cell loss allows uncontrolled discharges and is a cause of epileptogenic processes, citing earlier work.",
+    "snippet": "Thus, the PV cell loss allows the development of uncontrolled discharges and one of important causes of epileptogenic processes (Sloviter, 1991; Sloviter et al., 2003).",
+    "anchor": "Discussion, second paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28919853_CDK5astro2017_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC XML fingerprinted; abstract, methods, results, discussion and legends read; no figure image opened.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}
