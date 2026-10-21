@@ -11,7 +11,9 @@
 - **The four scientific current files, `disease_model.md`, `drug_repurposing/` and
   `repurposing_bridge.py` were not touched.** Receipts are staged, never recorded. One commit candidate
   is written (section 7).
-- **Blind locator audit: OWED** on every reading below and on the candidate. A producer does not verify their own.
+- **Blind locator audit: DONE on six readings (40665325, 38147624, 42310739, 40156289, 35945201, 41980417); OWED on the other eleven and on the candidate.** The six manifests were repaired by the producer on 2026-10-22 and **the repairs are unaudited**. A producer does not verify their own.
+
+> **CORRECTED 2026-10-22 after the blind locator audit of six of these readings** (`page_adjudications/locator_audit_R3_20261022.md`: 129 triples, 78 supported, 46 overshoot, 4 undershoot, 1 unverifiable). The manifests were repaired at source by the producer; **the repairs are unaudited**. Changes in this note: the A51 pharmacokinetic statement and its row in section 5 (the table reproduces neither proportionality nor the earlier sub-proportional correction), the hepatic dose-limiting statement (one hepatic DLT at 42 mg, the other DLT was alkaline phosphatase at 21 mg), the Myc-under-A51 statement and the withdrawn schedule conflict (38147624), the family-to-variant conflict and the variant count (40156289), three statistics and the age range of 42310739, the Rictor and p-Akt statements of 35945201, and the gliosis, normal-brain and safety statements of 41980417. Papers not audited (the other ten readings) are unchanged and remain unaudited.
 
 ## 0 · What was read, and how deeply
 
@@ -50,12 +52,15 @@ mine included). Peer directories were checked before each paper (`paper_packet.p
 
 **40665325 (BTX A51, phase 1, adults).** 31 adults, median age 75 (22-84), eight dose levels 1-42 mg; the
 42 mg level was stopped after a grade 3 hepatic failure meeting Hy's law with encephalopathy that resolved
-within two weeks; the level of 21 mg three days a week for 28 days was set as recommended phase 2 dose. The
+within two weeks (the only hepatic DLT; the second cycle-1 DLT was a grade 3 alkaline phosphatase rise at 21 mg); the level of 21 mg three days a week for 28 days was set as recommended phase 2 dose. The
 text calls transaminase toxicity "dose-dependent" because it was commoner at 21 and 42 mg, and in the same
 paragraph reports 1 of 15 events at 21 mg; the paper tabulates no event count per dose. The supplementary
-pharmacokinetic table (read from the docx) shows Day 5 AUC 3773 at 21 mg against 4773 at 42 mg and Cmax
-120 versus 99, while the text says "dose-proportional between 1 and 42 mg": a doubling of dose gave
-about a quarter more exposure at the top. The p53 and MCL1 pharmacodynamics are from CD34-positive marrow
+pharmacokinetic table (read from the docx; N = 1, 1, 3, 3, 3, 8, 5 at 1, 3, 5, 8, 11, 21, 42 mg) does **not** reproduce the text's "dose-proportional
+between 1 and 42 mg": per-mg Day 5 AUC runs 43, 200, 140, 117, 166, 180, 114; the log-log slope from 1 to 21 mg is about 1.38 (Day 5 AUC) and 1.36 (Day 1 AUC), so
+exposure rises faster than dose; from 21 to 42 mg the Day 5 AUC rises 1.27-fold (3773 to 4773) for a 2-fold dose, Day 5 Cmax 1.19-fold, Day 1 Cmax falls
+0.83-fold, and the 42 mg Day 1 AUC cell is blank. With CVs of 22 to 79 percent and N = 1 at two levels the table supports neither proportionality nor a
+sub-proportionality claim (an earlier version of this note called the top step sub-proportional; that single 21-versus-42 comparison is withdrawn as a general statement).
+The Abstract states that no treatment-related death occurred; six of eleven on-study deaths happened without overt progression. The p53 and MCL1 pharmacodynamics are from CD34-positive marrow
 cells of **three** patients, one cell per condition shown, no quantification. In Figure 4 (vector page rendered at 300 dpi) the
 RUNX1-mutant line OCI-AML-5 shows MYC faint in **both** lanes, so MYC suppression is not demonstrated in the one mutant line
 the paper centres on; pSer5 in HL-60 is not visibly reduced; each line is a single blot without quantification.
@@ -66,31 +71,29 @@ haematological, hypokalaemia) as the class record in adults and says nothing abo
 
 **38147624 (Csnk1a1+/- with Trp53 edited, mouse leukaemia).** The transformation rests on **one animal**
 (one leukaemic mouse of the Csnk1a1+/- Trp53 group). A51 at 5 mg/kg/day (supplement: five days a week for three
-weeks; the Figure 5 legend says until week four, an internal conflict) reduced blood counts and spleen weight
+weeks from day 8; the Figure 5 legend says until four weeks after transplant: the two are compatible, day 8 plus three weeks ending about four weeks after transplant; a schedule conflict flagged in an earlier version is withdrawn) reduced blood counts and spleen weight
 in a tertiary transplant model but marrow blasts only to P = 0.1352 (blood blasts 0.0709, marrow cellularity 0.0002; WBC, platelet and spleen
 panels print no P). The selective effect on the double-hit blasts appears at **one** concentration
-(316 nM: about 25 versus about 50 percent viability), and the CK1 inhibitor D4476 did not separate the
-genotypes, so attribution to the CK1-alpha arm is not carried by the data. The Myc protein "reduction" under A51
-(Fig. 6I) tracks the printed bone-marrow blast percentage lane by lane: strong Myc bands remain in A51-treated
-animals with 93-99 percent blasts, so the Myc effect is confounded with blast burden. Figure 1F (400 dpi crop of the vector page) does **not** show the
+(316 nM: about 25 versus about 50 percent viability), and the CK1 inhibitor D4476 was not significantly more efficient in the Csnk1a1+/- cells and blasts than in wild type; the source draws no attribution
+from that comparison and none is drawn here. The Myc protein "reduction" under A51
+(Fig. 6I) is one unquantified blot (6 untreated and 10 A51 lanes) with no statistic in the figure, legend or Methods: the reduction is stated in the text, not demonstrated. The bands follow the printed
+bone-marrow blast percentage only partly (A51 lanes show bands at about 62, 70, 93 and 94 percent and none at 99 percent), so the Myc effect is confounded with blast burden but not simply explained by it. Fig 1A and 1B also show that white cell counts and CD11b+ output are not similar across the genotypes. Figure 1F (400 dpi crop of the vector page) does **not** show the
 Hallmark Wnt/beta-catenin set up in the Csnk1a1-haploinsufficient LSKs: it is negative or blank in that column
 while the Myc set is positive; the Wnt-up statement for blasts rests on a pathway-footprint tool whose Wnt score is
 pale and small (about 0.7 against MAPK about 3), and the Lrp6/GSK3B/Lef1 chain is a CARNIVAL prediction.
 **Answer to the attribution question:** this paper does not disentangle Wnt, MYC and CDK for A51. It gives one
-concentration at which a p53-mutant leukaemic line is more sensitive, one in-vivo dose level in leukaemia, and a Myc readout confounded with
-cell burden. A co-author is a consultant to the company advancing A51.
+concentration at which a p53-mutant leukaemic line is more sensitive, one in-vivo dose level in leukaemia, and a Myc readout that is one unquantified blot. A co-author is a consultant to the company advancing A51.
 
 **40156289 (CSNK1A1 variants, infantile spasms).** Two families; patient 1 had multiple congenital anomalies
 and died at one year, patient 2 is a nine-year-old with controlled seizures every 3-6 months. Both are
-exome-trio de novo; the supplement lists fourteen other variants "not directly linked", including a de novo
+exome-trio de novo; the supplement lists thirteen other variants "not directly linked", including a de novo
 ACTN1 frameshift and a TSC1 variant, admitted as possibly related to the phenotype. The mechanism is entirely
 **HEK-293T overexpression** of GFP-tagged CSNK1A1: the missense lowered mRNA and protein, the deletion did not;
 beta-catenin co-IP lower and cellular beta-catenin higher for both; MYC and CCND1 mRNA about 1.25-1.5-fold
 higher; EdU about 20 percent versus 36 and 30. Fig. 3E's pulled-down band is faint in all lanes (one blot, no
 quantification), and a deletion that does not lower CSNK1A1 protein still "reduces" binding. The sentence
 that "vinyl chloride" slightly controlled the spasms is a translation artefact, so the treatment history is
-unreadable. The Figure 1B sequencing traces assign the variants to the probands in a way the reader cannot
-check from the panel labels (flagged for the audit, not adjudicated).
+unreadable. The Figure 1B sequencing traces fit Family_1 = the six-base deletion and Family_2 = the missense, the opposite of the Results text (missense in patient 1, deletion in patient 2), on which the Discussion builds its genotype-phenotype statement; the panel has no variant labels and no position axis. This is an **unresolved conflict inside the source**; neither assignment is adopted. The HEK-293T arm has no empty-vector control in the text and the source does not state endogenous CK1-alpha status.
 **Answer:** CK1-alpha loss of function is **proposed** as epileptogenic through excess beta-catenin, in two families and in a non-neural cell
 line. It is not a measured seizure signal in any neural system.
 
@@ -137,16 +140,15 @@ graded function.
 
 **41980417 (clemastine, Pdk1 OPC-lineage knockout, induced at P10-12).** Clemastine 10 mg/kg/day from P21 to P58
 (single dose; the knockout was induced at P10-12): hippocampal MBP area 0.64 to 1.0, TrueGold 0.69 to 0.99, Olig2, ASPA, VGlut1/Homer1 puncta and c-Fos counts and
-Y-maze/NOR performance all return to control level (three to six animals per group). Clemastine in controls did not alter VGlut1 puncta. No GFAP change exists in the model, so gliosis is not tested; no EEG,
-seizure or toxicity measure; mEPSC rests on three animals (about 15 neurons plotted).
+Y-maze/NOR performance all return to control level (three to six animals per group). Clemastine in controls did not alter VGlut1 puncta. GFAP is not significantly different between genotypes (one marker, n = 6), which does not show that gliosis is not a phenotype or a treatment target; no EEG,
+seizure, body-weight, exposure, histamine or sedation-labelled measure (arm entries and speed are unchanged by clemastine); control plus clemastine arms are plotted in Figs 4 to 7 and are not different from control; mEPSC rests on three animals (about 15 neurons plotted).
 **Negative:** the model removes an oligodendrocyte kinase and the drug is given after weaning, outside the infant window; the constitutive version of the model
 (seizures, death before P21) is not treated in this paper.
 
-**42310739 (J4, Tsc2+/- adult male mice).** 0.06 mg/mL in drinking water for 10 weeks from 6 weeks of age (an estimated 10.2 mg/kg/day assuming water intake): open-field
+**42310739 (J4, Tsc2+/- adult male mice).** 0.06 mg/mL in drinking water for 10 weeks from 6 weeks of age (Fig 1A runs to 16 weeks, while the Methods give the animal age as 6 to 12 weeks: inconsistent inside the source; an estimated 10.2 mg/kg/day assuming water intake): open-field
 centre time, NOR discrimination index (-0.02 to 0.37), diffusion MRI of fornix and callosal body, cortical and hippocampal MBP/PLP, onion-bulb count (2.3 to 0.6 per 100 square micrometres), OPC and APC counts, pS6 and **cFos counts
-(a proxy for hyperactivity)**. Histology is three animals per group; the EM g-ratio regression uses individual axons (3, 3 and 4 animals). In the retrosplenial cortex the treated cFos falls **below** the wild-type level (layer V about 7 against 12).
-In wild-type mice the drug gave a slightly thicker myelin regression (P = 0.0158) from the same F statistic quoted for P = 0.1591 in the sentence before (F(1,974) = 1.986 is printed for both,
-so one of the two P values is mistyped). Males only; adenosine itself was not measured.
+(a proxy for hyperactivity)**. Histology is three animals per group in most panels (onion bulbs: 3, 3 and 4 animals); the EM g-ratio regression uses individual axons. In the retrosplenial cortex the treated cFos falls **below** the wild-type level (layer V about 7 against 12).
+In wild-type mice the text prints F(1,974) = 1.986 with p = 0.0158 for a myelin-thickness comparison and the same F with p = 0.1591 for the slope comparison in the next sentence; that F corresponds to p of about 0.159, so p = 0.0158 is a defect in the source and no finding about J4 on wild-type myelin thickness is drawn. Males only; adenosine itself was not measured.
 **Negative:** no seizure phenotype exists in this model; a single drinking-water concentration.
 
 **40911604 (rapamycin, Npc1 mouse, pups through the milk P10-P21).** Rapamycin 40 ug/mL in the dam's water: cerebellar white-matter MBP volume rose about 8,700 to 11,900 cubic micrometres (n = 3 per group), VGLUT2 terminals preserved, microglial
@@ -204,7 +206,7 @@ in the selection file).
 ## 3 · The five questions of group R3
 
 **Q1. Organ toxicity, exposure and PD of the class behind the organoid intervention; does Csnk1a1 or Cdk7 loss reveal a neurodevelopmental or seizure cost?**
-Answered at the level the papers allow. Adults: liver (dose-limiting), GI, haematology, electrolytes; exposure close to proportional to 21 mg with a sub-proportional rise to 42 mg; PD shown in three patients. Csnk1a1: a **proposed** seizure/beta-catenin link in two infantile-spasms families and HEK cells, no neural model; Cdk7 loss in postmitotic cortical neurons costs morphology, cortical thickness and social behaviour with no seizure endpoint; Csnk1a1 haploinsufficiency
+Answered at the level the papers allow. Adults: liver (dose-limiting), GI, haematology, electrolytes; exposure rising faster than dose from 1 to 21 mg and about 1.27-fold for a 2-fold dose from 21 to 42 mg (neither the text's proportionality nor an earlier sub-proportional correction is reproduced by the table; one hepatic DLT at 42 mg); PD shown in three patients. Csnk1a1: a **proposed** seizure/beta-catenin link in two infantile-spasms families and HEK cells, no neural model; Cdk7 loss in postmitotic cortical neurons costs morphology, cortical thickness and social behaviour with no seizure endpoint; Csnk1a1 haploinsufficiency
 alone produced no malignancy in the leukaemia model but its attribution of A51 effects is unresolved. **Unanswerable from the selection:** brain exposure of A51, any CNS adverse-event series, and any neural measurement after a CK1-alpha/CDK7/9 inhibitor. The missing measurement is a brain-region
 PK or CSF level plus a neurodevelopmental readout in a young animal at more than one dose.
 
@@ -233,7 +235,7 @@ CLAIM 011 was narrowed because two dose points cannot locate a threshold and an 
 | Claim as printed | Dose points / denominators | Verdict |
 |---|---|---|
 | A51 hepatic toxicity "dose-dependent" (40665325) | levels not tabulated per event; 1 of 15 at the recommended level | **not graded** by the paper's own data; PK not proportional at the top |
-| A51 PK "dose-proportional 1-42 mg" | Table: AUC 3773 (21 mg) versus 4773 (42 mg), n = 8 and 5 | **narrowed**: sub-proportional at the top level |
+| A51 PK "dose-proportional 1-42 mg" | Supplemental Table 3: seven dose levels, N = 1, 1, 3, 3, 3, 8, 5; Day 5 AUC per mg 43 to 200; 21 to 42 mg Day 5 AUC 1.27-fold for 2-fold dose; Day 1 AUC blank at 42 mg | **not reproduced**: supralinear 1 to 21 mg (slope about 1.38), 1.27-fold at the top step; CV 22-79 percent and N = 1 at two levels support neither proportionality nor sub-proportionality (audit recomputation; repair unaudited) |
 | A51 selective for double-hit blasts (38147624) | one separating concentration of five | **threshold claimed, not located**; the other four overlap |
 | Wnt5a rescue of neurites (42154236) | 0, 50, 100 ng/mL; 50 is ns | **two effective points of three**; no threshold |
 | Raptor "gene-dose-dependent" survival (35945201) | 0, 1, 2 gene copies | **three genotypes**, each a different phenotype and with a sex split; not a graded function |
@@ -248,7 +250,7 @@ CLAIM 011 was narrowed because two dose points cannot locate a threshold and an 
 - `DEFAULTS_TAKEN`, also in the task JSON: (1) manifests declare `QUESTION_DRIVEN`; (2) figures with only a publisher JPEG as surface were read at that resolution and declared (36615165; Fig. 7-8 of 39762658; ESM Fig. 1 of 42401046);
   (3) papers whose supplement is a docx or xlsx were read as text and supplementary figure images were declared `captions_only` where not opened; (4) receipts for partial readings state `partial_fulltext_read`
   with the unread surface named; (5) the registry comparison used `registry_records.py get --hops 0` only (a PMID-only query).
-- **OWED:** a blind locator audit (`legend-locator-audit`) on all 16 manifests; the three highest-value triples are 40665325 entries on the PK table and on Fig. 4, 38147624's Fig. 6I-versus-blast reading, 42310739's duplicate F statistic. A **second** reader should also check the Figure 1B trace assignment in 40156289 and the Figure 5 legend schedule in 38147624, both flagged and not adjudicated.
+- **OWED:** a blind audit of the repairs to the six audited manifests, and a first blind audit of the other ten readings of the group and of the 42654068 reading. The audit's findings on the six are summarised in the banner above; the earlier owed items (the Figure 1B trace assignment in 40156289 and the Figure 5 schedule in 38147624) are now settled as, respectively, an unresolved source-internal conflict and a withdrawn conflict.
 - **Not done:** no PubMed-wide census was run for these classes; a zero from a title/abstract query would licence only "no paper is indexed", never "never measured" (dismissal ledger D-37).
 
 ## 7 · Commit candidate

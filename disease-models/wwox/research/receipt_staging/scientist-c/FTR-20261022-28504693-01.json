@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261022-28504693-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "28504693",
+  "doi": "10.1038/oncsis.2017.33"
+ },
+ "event_at": "2026-10-22T06:30:00Z",
+ "analysis_at": "2026-10-22T06:30:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-c, task REPURP-10H-R3b-C-20261022, PRIMARY_EVIDENCE_READ, SOURCE_FIRST (written question: is the brain exposure of a CDK7 inhibitor measured or inferred); results, discussion and the in vivo methods paragraph read; supplementary pages 1 and 9 as page renders; prepared as JSON for the integrator and not appended by this actor.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID28504693_R3b_PMC_r2.xml",
+ "source_fingerprint": "a778bdd14ba061f1137ff99063de19ca017befd421623ef3f16f9c7fb09d3969",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "captions_only"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID28504693.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022b.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "results and discussion read; main figures captions only; supplementary pages 1 and 9 opened; methods read only for the in vivo paragraph; see manifest"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

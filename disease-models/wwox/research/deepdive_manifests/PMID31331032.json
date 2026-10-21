@@ -1,0 +1,171 @@
+{
+ "schema_version": 2,
+ "pmid": "31331032",
+ "doi": "10.3390/cells8070746",
+ "receipt": "FTR-20261022-31331032-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022b.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access XML, article PDF and figures came from pmc_bucket_fetch.py in one call; no cascade needed."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Pilocarpine status epilepticus in adult male Sprague-Dawley rats with a multi-CDK inhibitor (roscovitine) infused into the lateral ventricle; Korean neuroscience group; no WWOX content."
+ },
+ "field_density": {
+  "queries_text": [
+   "(CDK inhibitor OR cyclin-dependent kinase inhibitor OR roscovitine OR flavopiridol OR dinaciclib OR palbociclib) AND (seizure OR epilepsy OR neuronal excitability) AND (mice OR rat) -> 34"
+  ],
+  "note": "Group R3 relay reading; queries are PubMed counts on 2026-10-22 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "(CDK inhibitor OR cyclin-dependent kinase inhibitor OR roscovitine OR flavopiridol OR dinaciclib OR palbociclib) AND (seizure OR epilepsy OR neuronal excitability) AND (mice OR rat)",
+    "count": 34,
+    "source": "PubMed 2026-10-22"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 31331032; registry_records.py get --pmid 31331032 --hops 0",
+  "hits": 0,
+  "finding": "No receipt before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-22; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [
+    {
+     "citing_relation": "citation only: one of two references behind a Discussion sentence that p38 MAPK inhibition suppresses microglial phagocytosis and MCP-1 synthesis; the paper's own p38 inhibitor result (SB202190) does not depend on it",
+     "doi": "10.1371/journal.pone.0040813",
+     "nature": "Expression of concern",
+     "reason_verbatim": "Conflict of Interest;",
+     "retraction_date": "1/11/2023 0:00",
+     "retraction_pmid": "36630371",
+     "verdict": "FLAGGED_EXPRESSION_OF_CONCERN"
+    }
+   ],
+   "noted": [],
+   "paper_verdict": "FLAGGED_EXPRESSION_OF_CONCERN",
+   "reference_source": "network",
+   "references_declared": 42,
+   "references_screened": 42,
+   "references_with_doi": 42,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID31331032_R3b_PMC_r2.xml",
+   "sha256": "2bdea8284a2e321bfde4842cf75ae4bf54a601a3616c0380a309d458d8e1a016",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=6678318",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "2bdea8284a2e321bfde4842cf75ae4bf54a601a3616c0380a309d458d8e1a016"
+   }
+  },
+  {
+   "path": "files/figures/PMID31331032_r2/cells-08-00746-g001.jpg",
+   "sha256": "e2e9f4d4ea3b7a132d28dde98b14bad61ce681553208fa1881c203f6032d30a8",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "e2e9f4d4ea3b7a132d28dde98b14bad61ce681553208fa1881c203f6032d30a8"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Roscovitine was infused into the right lateral ventricle by osmotic pump (100 micromolar in the pump, 7 days) instead of given systemically; the authors cite, without measuring it, that the compound crosses the blood-brain barrier but leaves adult rat brain in under 30 minutes.",
+    "snippet": "Roscovitine penetrates the brain-blood barrier (BBB), but is rapidly eliminated from brains in adult rats (<30 min)",
+    "anchor": "Methods / Surgery and drug infusion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31331032_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say that in a pilot and earlier studies the infusion did not cause behavioural or neurological defects and did not change seizure susceptibility or severity to pilocarpine in normal animals; no data are shown here.",
+    "snippet": "each treatment did not show behavioral and neurological defects and could not change the seizure susceptibility and seizure severity in response to pilocarpine in normal animals",
+    "anchor": "Methods / Surgery and drug infusion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31331032_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "After status epilepticus the inhibitor lowered CD68-positive amoeboid cells in the frontoparietal cortex (text: about 38 percent reduction), microglial MCP-1 (to 48 percent of vehicle), LAMP1 and p38 MAPK phosphorylation in microglia, with n = 7 per group; Iba-1 area was not changed.",
+    "snippet": "it resulted in ~ 38% reductions in the number of CD68 amoeboid/round cells without altering that of CD68 hyper-ramified cells in the FPC",
+    "anchor": "Results / The effects of roscovitine on microglia activation and monocyte infiltration following SE",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31331032_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 1C (publisher JPEG): CD68 amoeboid cells per 10^4 square micrometres read about 32 (vehicle) and about 12 (roscovitine), a fall of about 62 percent, while the text reports about 38 percent; the two agree only if 38 percent is read as the remaining fraction. The Iba-1 area (Fig 1B) is raised after status epilepticus in both arms (about 2.8 and 2.4 fold of control).",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 1C amoeboid ~32 (vehicle) vs ~12 (roscovitine) *; ramified ~12 vs ~14; Fig 1B Iba-1 ~2.8 vs ~2.4 fold, both * vs control",
+    "anchor": "Figure 1B-C",
+    "surface": "figure",
+    "artifact": "files/figures/PMID31331032_r2/cells-08-00746-g001.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Roscovitine is described as a non-selective CDK5 inhibitor that also acts on Cdc2, CDK2, CDK9 and protein kinase A; the study does not separate which target explains the microglial effect and uses no EEG or seizure endpoint.",
+    "snippet": "However, roscovitine also affects the activities of Cdc2, CDK2, CDK9 and protein kinase A",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31331032_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC XML fingerprinted; the Figure 1 JPEG was opened (publisher JPEG, about 760 px wide); Figures 2-7 were read as captions only.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}

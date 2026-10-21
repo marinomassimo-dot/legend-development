@@ -1,0 +1,98 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "REPURP-10H-R1-REPAIR-A-20261022",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-a",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Repair at source the 19 adverse triples (15 OVERSHOOT, 2 UNDERSHOOT, 2 UNVERIFIABLE) of the blind audit disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md over six R1 manifests, with declared contradicts_locator; correct the R1 note and hold the commit candidate; restate PB-4.",
+ "SCOPE": {
+  "manifests": [
+   "31402619",
+   "42157447",
+   "38731820",
+   "32023956",
+   "38378758",
+   "42875792"
+  ],
+  "also": [
+   "repurposing_10h_scientist-a_20261021.md",
+   "CC-20261021-SCIENTIST-A-R1-PROTEOSTASIS-01.md"
+  ]
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "every adverse triple repaired with contradicts_locator",
+  "locator_contradiction_audit --working-tree --fail-on-undeclared clean",
+  "manifests PASS",
+  "repairs declared UNAUDITED",
+  "PB-4 restated, CC held with surviving parts in its header"
+ ],
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-10-22",
+ "TASK_ACK": {
+  "actor": "scientist-a",
+  "at": "2026-10-22T09:00:00Z",
+  "directive_version": 1,
+  "generation": 1,
+  "understanding": "Repair the adverse triples of the R1 blind audit at source, correct note and candidate, certify nothing."
+ },
+ "TASK_CLAIM": {
+  "actor": "scientist-a",
+  "at": "2026-10-22T09:00:00Z",
+  "branch": "task/REPURP-10H-R1-REPAIR-A-20261022",
+  "worktree": ".claude/worktrees/r1fix-a",
+  "reading_claims": [],
+  "note": "No new reading; sources re-opened only as exact text for replacement snippets from files already on disk."
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "A failed quote could be repaired by a new snippet or by narrowing the proposition to what the quote carries.",
+   "default": "Narrow the proposition; change the snippet only where an exact contiguous sentence from the shared artefact carries the narrowed claim, and add an entry (31402619, 32023956) for the authors' opposite reading.",
+   "why_safe": "Understates; snippets are verified verbatim by deepdive_manifest --verify-artifacts.",
+   "what_would_have_been_different": "A second reader might prefer other quotes."
+  },
+  {
+   "condition": "Figure-panel values in repairs (38731820 surface subunits, 42157447 Fig 5F, 38378758 Fig 3) come from the auditor's reading of 709 px JPEGs; the repairer did not re-open the figures.",
+   "default": "Carry them as 'about' values attributed to the blind audit and say they are not re-read by a second reader.",
+   "why_safe": "Attributed, not asserted.",
+   "what_would_have_been_different": "A re-reading could change a digit."
+  },
+  {
+   "condition": "The 42157447 Fig 8 digits (0.0004) cannot be resolved on a 709 px surface and the ranker offered no better one.",
+   "default": "Record UNRESOLVED at that resolution.",
+   "why_safe": "The conclusion does not depend on it.",
+   "what_would_have_been_different": "A better surface would settle it."
+  }
+ ],
+ "STOP_LOG": [],
+ "MILESTONE_LOG": [
+  {
+   "at": "2026-10-22",
+   "milestone": "23 manifest entries declared (19 adverse repaired, 2 numeric resolutions, 2 added entries); R1 note corrected; CC held; PB-4 restated INCONCLUSIVE for a protein-loss lesion; all repairs UNAUDITED"
+  }
+ ],
+ "WAVE_1_RESULT": {
+  "DEFAULTS_TAKEN": [
+   {
+    "condition": "A failed quote could be repaired by a new snippet or by narrowing the proposition to what the quote carries.",
+    "default": "Narrow the proposition; change the snippet only where an exact contiguous sentence from the shared artefact carries the narrowed claim, and add an entry (31402619, 32023956) for the authors' opposite reading.",
+    "why_safe": "Understates; snippets are verified verbatim by deepdive_manifest --verify-artifacts.",
+    "what_would_have_been_different": "A second reader might prefer other quotes."
+   },
+   {
+    "condition": "Figure-panel values in repairs (38731820 surface subunits, 42157447 Fig 5F, 38378758 Fig 3) come from the auditor's reading of 709 px JPEGs; the repairer did not re-open the figures.",
+    "default": "Carry them as 'about' values attributed to the blind audit and say they are not re-read by a second reader.",
+    "why_safe": "Attributed, not asserted.",
+    "what_would_have_been_different": "A re-reading could change a digit."
+   },
+   {
+    "condition": "The 42157447 Fig 8 digits (0.0004) cannot be resolved on a 709 px surface and the ranker offered no better one.",
+    "default": "Record UNRESOLVED at that resolution.",
+    "why_safe": "The conclusion does not depend on it.",
+    "what_would_have_been_different": "A better surface would settle it."
+   }
+  ],
+  "STOP_LOG": []
+ }
+}

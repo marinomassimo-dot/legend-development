@@ -1,0 +1,320 @@
+{
+ "schema_version": 2,
+ "pmid": "35501379",
+ "doi": "10.1038/s41593-022-01052-2",
+ "receipt": "FTR-20261022-35501379-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022b.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access XML, article PDF and supplementary files came from pmc_bucket_fetch.py in one call; no cascade needed."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Two absence-epilepsy rodent models (Wag/Rij rats, Scn8a heterozygous mice) with EEG, electron-microscopy myelin measures and one anti-seizure drug, one HDAC inhibitor and a genetic OPC TrkB deletion; Stanford neurology and neuroscience groups; no WWOX content."
+ },
+ "field_density": {
+  "queries_text": [
+   "(clemastine OR remyelination OR myelin) AND (EEG OR electroencephalogram OR \"seizure threshold\") AND (treatment OR drug) AND (mouse OR mice OR rat) -> 45"
+  ],
+  "note": "Group R3 relay reading; queries are PubMed counts on 2026-10-22 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "(clemastine OR remyelination OR myelin) AND (EEG OR electroencephalogram OR \"seizure threshold\") AND (treatment OR drug) AND (mouse OR mice OR rat)",
+    "count": 45,
+    "source": "PubMed 2026-10-22"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 35501379; registry_records.py get --pmid 35501379 --hops 0",
+  "hits": 0,
+  "finding": "No receipt before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-22; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 55,
+   "references_screened": 52,
+   "references_with_doi": 52,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID35501379_R3b_PMC_r2.xml",
+   "sha256": "bbcc9f8b2385a85cec47418f42d57690ed1059422e967263ea69566548f34a3a",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=9076538",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "bbcc9f8b2385a85cec47418f42d57690ed1059422e967263ea69566548f34a3a"
+   }
+  },
+  {
+   "path": "files/supplement/PMID35501379_r2/PMC9076538.1.pdf",
+   "sha256": "056fbed9b2a1ac84f4574b26ae1cc498e590f8f9cef13f7321508b2ad9921b16",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "056fbed9b2a1ac84f4574b26ae1cc498e590f8f9cef13f7321508b2ad9921b16"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID35501379_r3b/p3-03.png",
+   "sha256": "b58a351940998115afb55f0b149479c01bc9256e42aa3a63e0bd4551e52c7f37",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID35501379_r2/PMC9076538.1.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "poppler",
+     "call": "pdftoppm -r 300 -f 3 -l 3 -png (page render; figures are vector)",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "b58a351940998115afb55f0b149479c01bc9256e42aa3a63e0bd4551e52c7f37"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID35501379_r3b/p4-04.png",
+   "sha256": "7d52ad86fc30ddb7542786da7e852dff91a7d196b50b6c98d562d966a07eab87",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID35501379_r2/PMC9076538.1.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "poppler",
+     "call": "pdftoppm -r 300 -f 4 -l 4 -png (page render; figures are vector)",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "7d52ad86fc30ddb7542786da7e852dff91a7d196b50b6c98d562d966a07eab87"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID35501379_r3b/p6-06.png",
+   "sha256": "bfbb3ac8dc0db64bab227ae5f1b2552c98638d2892f8c2606a138af9ebaf1684",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID35501379_r2/PMC9076538.1.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "poppler",
+     "call": "pdftoppm -r 300 -f 6 -l 6 -png (page render; figures are vector)",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "bfbb3ac8dc0db64bab227ae5f1b2552c98638d2892f8c2606a138af9ebaf1684"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID35501379_r3b/p8-08.png",
+   "sha256": "65c121d9643834c654af5895333db883cc08aa93032de1035f1f91cb8ed412e7",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID35501379_r2/PMC9076538.1.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "poppler",
+     "call": "pdftoppm -r 300 -f 8 -l 8 -png (page render; figures are vector)",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "65c121d9643834c654af5895333db883cc08aa93032de1035f1f91cb8ed412e7"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID35501379_r3b/p9-09.png",
+   "sha256": "ad8cc37fd43c17edaec2fd00de25a2d572e75dcde257e2833948df719ded4b88",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID35501379_r2/PMC9076538.1.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "poppler",
+     "call": "pdftoppm -r 300 -f 9 -l 9 -png (page render; figures are vector)",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "ad8cc37fd43c17edaec2fd00de25a2d572e75dcde257e2833948df719ded4b88"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Callosal oligodendrogenesis and thicker myelin appear in the absence-seizure network only after seizure onset in Wag/Rij rats: dividing OPCs rise 69 percent and mature oligodendrocytes 56 percent at 6 months, and the mean g-ratio falls from 0.7368 to 0.6862; at 1.5 months, before onset, none differ.",
+    "snippet": "We found an increase in mean myelin sheath thickness (decreased g-ratio) in 6-month-old Wag/Rij rats compared to controls (control: 0.7368 ± 0.0036, Wag/Rij: 0.6862 ± 0.0099",
+    "anchor": "Results / Increased seizure network myelination after epilepsy onset",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35501379_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 1c, 1e, 1i (300 dpi page render): 6-month Ki67+ OPCs about 6,700 (control) against about 11,300 (Wag/Rij), mature oligodendrocytes about 375,000 against about 580,000, mean g-ratio about 0.735 against about 0.685 (***); at 1.5 months NS. The colour key of the g-ratio scatter panels 1g and 1h assigns red to control and black to Wag/Rij, the reverse of the caption and of panels c, e and i.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Ki67 OPC 6 mo ~6.7k vs ~11.3k *; oligodendrocytes ~375k vs ~580k *; g-ratio ~0.735 vs ~0.685 ***; 1g/1h legend colours reversed relative to caption",
+    "anchor": "Figure 1 (page 3)",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID35501379_r3b/p3-03.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Ethosuximide at about 300 mg/kg/day in drinking water, begun before onset, gave a mean plasma level of 101.3 microgram per mL, abolished or reduced seizures at 6.5 months on EEG, and normalised callosal g-ratio in Wag/Rij rats without changing it in controls; this is an EEG-and-myelin pairing after a drug, in an adult-onset absence model.",
+    "snippet": "ETX robustly decreased or prevented seizures, as expected",
+    "anchor": "Results / Seizures are necessary for aberrant callosal myelination",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35501379_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Dose and exposure stated by the paper: ethosuximide at 2.5 mg per mL in drinking water, about 300 mg/kg/day, plasma 101.3 plus or minus 10.33 microgram per mL (n = 20 rats), one dose.",
+    "snippet": "This dosing led to a mean plasma concentration of 101.3 ± 10.33 µg ml−1 (mean ± s.e.m., n = 20 rats), without signs of toxicity",
+    "anchor": "Results / Seizures are necessary for aberrant callosal myelination",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35501379_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 2b and 2e (300 dpi page render): seizures per hour about 22 (Wag/Rij vehicle) against about 0 (ethosuximide); mean g-ratio about 0.715 (Wag/Rij vehicle) against about 0.755 (Wag/Rij ethosuximide) and about 0.745-0.755 in controls; n = 3 rats per myelin group.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] seizures/h Wag/Rij VEH ~22 vs ETX ~0 **; g-ratio ~0.715 vs ~0.755 **; control VEH/ETX ~0.745/~0.755 NS; n = 3-4 rats per group",
+    "anchor": "Figure 2 (page 4)",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID35501379_r3b/p4-04.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the Scn8a heterozygous mouse, callosal OPC proliferation and oligodendrocytes are equal to wild type at P21 and higher at P45 (33 and 88 percent), with thicker myelin and more myelinated axons.",
+    "snippet": "Before seizure onset (P21), callosal OPC proliferation and oligodendrocyte number were equivalent in Scn8a+/mut mice and littermate wild-type control mice",
+    "anchor": "Results / Increased myelination in a second model",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35501379_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 3d, 3h, 3i: P45 mature oligodendrocytes about 110,000 (wild type) against about 208,000 (mutant), g-ratio about 0.75 against about 0.72, percent myelinated axons about 13 against about 21; all NS at P21; n = 3-8 per group.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] oligodendrocytes P45 ~110k vs ~208k **; g-ratio ~0.75 vs ~0.72 *; % myelinated ~13 vs ~21 *",
+    "anchor": "Figure 3 (page 6)",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID35501379_r3b/p6-06.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Genetic blockade of activity-dependent myelination (tamoxifen-induced TrkB deletion in OPCs) prevents the g-ratio change and lowers seizures per hour by 51 percent at 4 months and 70 percent at 6 months; at 3 months the difference is not significant.",
+    "snippet": "In contrast, Scn8a+/mut mice with OPC-specific loss of TrkB expression that lack activity-regulated myelination exhibit substantially fewer seizures per hour",
+    "anchor": "Results / Myelin plasticity promotes generalized epilepsy progression",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35501379_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Ictal theta coherence between the somatosensory cortices is lower in the OPC knockout mutants than in mutants with intact myelin plasticity, by a two-tailed t-test with P = 0.047 (n = 6 and 7 mice); the effect is small and the groups overlap.",
+    "snippet": "We found that ictal EEG coherence between the somatosensory cortices was substantially diminished in Scn8a+/mut OPC cKO mice that lack activity-dependent myelination",
+    "anchor": "Results / Myelin plasticity promotes ictal synchrony",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35501379_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 4c, 4f, 4i: g-ratio about 0.70 (mutant) against about 0.745 (mutant OPC knockout); seizures per hour at 6 months about 35 against about 10; at 3 months about 4 against about 2 (NS); ictal theta coherence about 0.87 against about 0.81 with overlapping points.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] g-ratio ~0.70 vs ~0.745 **; sz/h 6 mo ~35 vs ~10 *; 3 mo NS; coherence ~0.87 vs ~0.81 *, dots overlap",
+    "anchor": "Figure 4 (page 8)",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID35501379_r3b/p8-08.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Pharmacological blockade of oligodendrogenesis with the pan-HDAC inhibitor trichostatin A, daily from P28 to P45 at 10 mg per kg intraperitoneally, lowers mature callosal oligodendrocytes to the wild-type level and seizures per hour at P45 by about 35 percent (64.33 against 42) without changing seizure duration; the groups were equal at P28.",
+    "snippet": "TSA treatment between P28 and P45 led to decreased seizure burden at P45",
+    "anchor": "Results / Blockade of myelin plasticity abrogates epilepsy progression",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35501379_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 5a-c: schedule TSA 10 mg per kg intraperitoneally daily from P28, EEG at P28 and P45; oligodendrocytes at P50 about 127,000 (mutant vehicle) against about 102,000 (mutant TSA); seizures per hour at P45 about 64 against about 42 (*); equal at P28 (about 28 both); one dose, one window, n = 5-6 mutants per arm.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] oligodendrocytes mutant VEH ~127k vs TSA ~102k *; sz/h P45 ~64 vs ~42 *; P28 ~28 both NS; wild type n = 3 (VEH)",
+    "anchor": "Figure 5 (page 9)",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID35501379_r3b/p9-09.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors do not conclude that BDNF antagonism or any myelin-lowering approach is a therapy, and state that more myelin is not necessarily better and that seizure-related plasticity can raise myelination beyond a normal optimum; the models are absence epilepsies and the data are subtle (g-ratio change of about 0.05).",
+    "snippet": "More myelin is not necessarily better, and seizure-related plasticity that increases myelination of axons beyond a normal optimum could disrupt the normal function",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35501379_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EEG seizure counts come from 3 to 4 hours of recording scored by a blinded reviewer, and coherence is computed by an adapted wavelet coherence routine.",
+    "snippet": "seizures from 3–4 hours of EEG recording were visually identified, marked and tabulated by a blinded reviewer using custom MATLAB software",
+    "anchor": "Methods / EEG analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35501379_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC XML fingerprinted; the five main figures were opened as 300 dpi page renders of the article PDF (the figure pages are vector); extended data figures and the xlsx and pdf supplements were not opened.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}

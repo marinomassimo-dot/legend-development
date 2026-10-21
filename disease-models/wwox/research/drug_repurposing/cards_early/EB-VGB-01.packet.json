@@ -1,0 +1,266 @@
+{
+  "schema_version": 1,
+  "route": "BENEFICIO_PRECOCE",
+  "candidate": {
+    "id": "EB-VGB-01",
+    "name": "Vigabatrin (GABA-transaminase inhibitor, antiseizure drug)"
+  },
+  "disease_assertion": {
+    "id": "D-VGB-1",
+    "target_id": "epileptic_spasms",
+    "endpoint": "clinical cessation of epileptic spasms",
+    "direction": "INCREASE",
+    "source": "CLAIM 001 efficacy side (two WWOX-null children with West syndrome, as carried by the claim)",
+    "locator": "disease-models/wwox/registries/claim_registry_current.md, CLAIM 001 Summary, efficacy side",
+    "epistemic_status": "DATO",
+    "reading_depth": "queried_not_full_read",
+    "context": {
+      "disease_id": "WWOX-DEE with West syndrome or infantile spasms",
+      "genotype": "WWOX-null class (predicted null/null)",
+      "species": "human",
+      "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
+      "developmental_stage": "infancy"
+    },
+    "note": "Spasms are the presenting feature in the cited children; the comparison is on clinical spasm cessation only."
+  },
+  "drug_assertions": [
+    {
+      "id": "A-VGB-1",
+      "target_id": "epileptic_spasms",
+      "endpoint": "clinical cessation of epileptic spasms",
+      "direction": "DECREASE",
+      "source": "Shaukat 2018, child 1, as carried by CLAIM 001",
+      "locator": "CLAIM 001 Summary: vigabatrin added after a partial response to prednisolone, «the spasms resolved»",
+      "epistemic_status": "DATO",
+      "reading_depth": "queried_not_full_read",
+      "context": {
+        "disease_id": "WWOX-DEE with West syndrome or infantile spasms",
+        "genotype": "WWOX-null class (predicted null/null)",
+        "species": "human",
+        "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
+        "developmental_stage": "infancy"
+      },
+      "shared_origin": "Shaukat 2018 (children 1 and 2)",
+      "note": "n = 1; concurrent therapy; at two years the child was profoundly delayed anyway (CLAIM 031)."
+    },
+    {
+      "id": "A-VGB-2",
+      "target_id": "epileptic_spasms",
+      "endpoint": "clinical cessation of epileptic spasms",
+      "direction": "DECREASE",
+      "source": "Shaukat 2018, child 2, as carried by CLAIM 001",
+      "locator": "CLAIM 001 Summary: partial response; residual cluster spasms at 11 months despite four antiseizure drugs",
+      "epistemic_status": "DATO",
+      "reading_depth": "queried_not_full_read",
+      "context": {
+        "disease_id": "WWOX-DEE with West syndrome or infantile spasms",
+        "genotype": "WWOX-null class (predicted null/null)",
+        "species": "human",
+        "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
+        "developmental_stage": "infancy"
+      },
+      "shared_origin": "Shaukat 2018 (children 1 and 2)",
+      "note": "A partial response; the bridge carries a sign, not a magnitude, so 'partial' lives in this note. Same paper as A-VGB-1: not an independent confirmation."
+    },
+    {
+      "id": "A-VGB-3",
+      "target_id": "epileptic_spasms",
+      "endpoint": "clinical cessation of epileptic spasms",
+      "direction": "DECREASE",
+      "source": "Nagarajan 2023 as carried by CLAIM 001 (intake wave 3 note)",
+      "locator": "CLAIM 001 additional efficacy observations (a)",
+      "epistemic_status": "DATO",
+      "reading_depth": "queried_not_full_read",
+      "context": {
+        "disease_id": "WWOX-DEE with West syndrome or infantile spasms",
+        "genotype": "WWOX-null class (predicted null/null)",
+        "species": "human",
+        "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
+        "developmental_stage": "infancy"
+      },
+      "note": "n = 1; response defined clinically (cessation for at least four weeks) with no electrographic criterion; no safety imaging reported."
+    },
+    {
+      "id": "A-VGB-4",
+      "target_id": "epileptic_spasms",
+      "endpoint": "electrographic (video-EEG) cessation of epileptic spasms",
+      "direction": "UNKNOWN",
+      "source": "You 2024 as carried by CLAIM 001",
+      "locator": "CLAIM 001 wave 2 note (a): video-EEG still recorded focal electrical attacks and spasms «not noticed at home by her parents»",
+      "epistemic_status": "DATO",
+      "reading_depth": "queried_not_full_read",
+      "context": {
+        "disease_id": "WWOX-DEE with West syndrome or infantile spasms",
+        "genotype": "WWOX-null class (predicted null/null)",
+        "species": "human",
+        "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
+        "developmental_stage": "infancy"
+      },
+      "note": "Reported freedom is clinical, not electrographic. The endpoint differs from the card's pursued one, which is exactly why it is shown as unresolved."
+    },
+    {
+      "id": "A-VGB-5",
+      "target_id": "epileptic_spasms",
+      "endpoint": "clinical cessation of epileptic spasms",
+      "direction": "UNKNOWN",
+      "source": "Riva 2022 as carried by CLAIM 001",
+      "locator": "CLAIM 001 wave 2 note (b): ineffective in a predicted null/null child with first-day onset, who did not have West syndrome",
+      "epistemic_status": "DATO",
+      "reading_depth": "queried_not_full_read",
+      "context": {
+        "disease_id": "WWOX-DEE (not West syndrome)",
+        "genotype": "WWOX-null class (predicted null/null)",
+        "species": "human",
+        "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
+        "developmental_stage": "neonatal onset"
+      },
+      "note": "A reported null effect. The bridge has no 'no change' sign, so it is encoded UNKNOWN; the sentence here is the datum."
+    },
+    {
+      "id": "A-VGB-6",
+      "target_id": "epileptic_spasms",
+      "endpoint": "clinical cessation of epileptic spasms",
+      "direction": "UNKNOWN",
+      "source": "Serce Pehlevan 2026 as carried by CLAIM 001",
+      "locator": "CLAIM 001 additional efficacy observations (b): vigabatrin added to phenobarbital did not stop spasms",
+      "epistemic_status": "DATO",
+      "reading_depth": "queried_not_full_read",
+      "context": {
+        "disease_id": "WWOX-DEE",
+        "genotype": "homozygous missense class",
+        "species": "human",
+        "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
+        "developmental_stage": "infancy"
+      },
+      "note": "A reported null effect in a missense genotype; no 'no change' sign available."
+    },
+    {
+      "id": "A-VGB-7",
+      "target_id": "brain_MRI_abnormality",
+      "endpoint": "vigabatrin-associated brain abnormality on MRI (VABAM)",
+      "direction": "INCREASE",
+      "source": "Choi 2026 as carried by CLAIM 001 (safety anchor)",
+      "locator": "CLAIM 001 Summary: VABAM associated with vigabatrin in two WWOX-DEE cases",
+      "epistemic_status": "DATO",
+      "reading_depth": "UNKNOWN",
+      "context": {
+        "disease_id": "WWOX-DEE with West syndrome or infantile spasms",
+        "genotype": "WWOX-null class (predicted null/null)",
+        "species": "human",
+        "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
+        "developmental_stage": "infancy"
+      },
+      "note": "The WWOX VABAM anchor still has no receipt in the ledger, so whether hormonal therapy was concurrent in those reports is unknown to this repository. A harm assertion on an endpoint other than the pursued one."
+    },
+    {
+      "id": "A-VGB-8",
+      "target_id": "brain_MRI_abnormality",
+      "endpoint": "VABAM-like MRI abnormality",
+      "direction": "INCREASE",
+      "source": "Stevering 2025 as carried by CLAIM 001 wave note (NOT WWOX EVIDENCE)",
+      "locator": "CLAIM 001 wave note 2026-10-19: vigabatrin independently associated with VABAM in a tuberous sclerosis cohort; abnormalities also in children never given vigabatrin",
+      "epistemic_status": "DATO",
+      "reading_depth": "partial_fulltext_read",
+      "context": {
+        "disease_id": "tuberous sclerosis (NOT WWOX EVIDENCE)",
+        "genotype": "not WWOX",
+        "species": "human",
+        "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
+        "developmental_stage": "infancy"
+      },
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "note": "Adjacent cohort, kept to size the exposure limit and the hormonal-therapy confounder. Both non-WWOX cohorts are underpowered and carry rival explanations."
+    },
+    {
+      "id": "A-VGB-9",
+      "target_id": "developmental_trajectory",
+      "endpoint": "developmental outcome at two years",
+      "direction": "UNKNOWN",
+      "source": "Shaukat 2018 as quoted in CLAIM 031 (secondary surface)",
+      "locator": "CLAIM 031 Summary: «The developmental outcome was unfavourable with profound impairment despite improvement of epileptic activity»",
+      "epistemic_status": "DATO",
+      "reading_depth": "queried_not_full_read",
+      "context": {
+        "disease_id": "WWOX-DEE with West syndrome or infantile spasms",
+        "genotype": "WWOX-null class (predicted null/null)",
+        "species": "human",
+        "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
+        "developmental_stage": "infancy"
+      },
+      "note": "CLAIM 031 forbids counting any symptomatic outcome as disease modification. The authors' qualifier 'in some of these cases' has an ambiguous scope that CLAIM 031 does not resolve."
+    }
+  ],
+  "label_lookup": {
+    "status": "NOT_ATTEMPTED"
+  },
+  "p4_fields": {
+    "endpoint_pursued": "clinical cessation of epileptic spasms with a stated criterion (one report used cessation for at least four weeks); symptomatic only; electrographic confirmation is absent in the reports",
+    "functional_evidence_available": "none for the gene. Clinical spasm control in n = 1 reports; at least one report shows clinical freedom with persisting electrographic attacks",
+    "temporal_or_model_limit": "single-patient reports in predicted-null genotypes, short follow-up, concurrent therapies, no comparator; exposure limit (VABAM on MRI) documented in WWOX-DEE and in non-WWOX cohorts",
+    "cellular_context": {
+      "target_expression": "UNKNOWN",
+      "cells_tissue_stage": "whole organism, infancy; the depolarising-GABA rationale from organoids (CLAIM 002) does not predict these outcomes and is not a response predictor (CLAIM 001 epistemic note)",
+      "coverage": "UNKNOWN",
+      "limits": "mechanism valid as mechanism, not as a predictor of clinical response"
+    }
+  },
+  "p4_roadmap_fields": {
+    "identity": "Vigabatrin, an antiseizure drug already in clinical use for infantile spasms in other contexts. Formulation not carried; no dose, route or schedule.",
+    "indication_and_transfer": "Target population itself (WWOX-DEE with spasms), reports of single children. Genotype varies across reports (predicted-null genotypes in most, a missense in one); CLAIM 001 is a safety claim transferable at T1.",
+    "novelty_for_woree": "Already used in WWOX-DEE: CLAIM 001 names eight reporting sources; not a new idea. Its WWOX exposure limit is the finding.",
+    "known_roads_state": "Partial plus exposure-or-toxicity limit; CLAIM 001 status is conflicting evidence and is confirmed as correctly conflicting: efficacy on spasms (n = 2 and n = 1) against MRI toxicity (n = 2).",
+    "path_and_objective": "BENEFICIO_PRECOCE only.",
+    "expected_contribution": "Symptom (spasm control) to be verified against an exposure limit. Not disease modification (CLAIM 031).",
+    "mechanism": "GABA-transaminase inhibition (the drug's known class action). Context in WOREE: UNKNOWN; the organoid-derived rationale does not predict the clinical outcomes.",
+    "sources": "Internal, WWOX: CLAIM 001, CLAIM 031, CLAIM 002, known-roads note 2.7. Adjacent, NOT WWOX EVIDENCE: two cohorts on VABAM and hormonal therapy (CLAIM 001 wave note). The repository's own position for the reference genotype is caution (CLAIM 001, Clinical meaning); this card neither strengthens nor relaxes it.",
+    "evidence_pro_contra": "Pro: spasm resolution in one WWOX-null child and clinical control in another, partial response in a third. Contra: ineffective in two others; freedom was clinical not electrographic in one; VABAM in two WWOX-DEE cases; developmental outcome unfavourable despite spasm resolution. Hormonal therapy is associated with symptomatic VABAM in two non-WWOX cohorts; whether it was present in the WWOX VABAM reports is unknown here.",
+    "time_to_access": "UNKNOWN. Not assessed in any record read. Clinical census 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven unfiltered queries on ClinicalTrials.gov API v2 returned no registered WOREE interventional study; the one WOREE record is an observational registry and natural-history study. Its own caution binds this card: «A missing hit does not prove that no study exists.» An NCT number proves neither recruitment nor first dosing. ",
+    "time_to_benefit": "UNKNOWN. No latency is recorded in the reports; one report defines response as cessation of at least four weeks, which is a definition, not a time.",
+    "pharmacology": "UNKNOWN for WOREE: exposure, CNS exposure and selectivity not measured in any record read.",
+    "paediatrics_and_interactions": "Paediatric safety is the limit itself (VABAM). Interactions: concurrent hormonal therapy is a candidate confounder or co-factor for the MRI finding in non-WWOX cohorts. Suitability is not presumed.",
+    "verification_scope": "Supported by: single-patient reports; CLAIM 001 itself has had two receipted readings of efficacy papers; the safety anchor has no receipt. Reproduced: no. This card: no audit yet, OWED.",
+    "question_history": "CLAIM 001 (waves 2026-07-10, 2026-10-03, 2026-10-19), CLAIM 031, CLAIM 002.",
+    "predictions": "None. No engine was run.",
+    "next_measure": "Was hormonal therapy given concurrently in the WWOX reports of MRI abnormality, and was the MRI repeated after withdrawal? The anchor paper has no receipt in the ledger: reading it is the cheapest closing step.",
+    "status": "CONTROVERSA (conflicting evidence).",
+    "value_added": "Puts the exposure limit and the clinical-versus-electrographic gap on the same card as the efficacy reports, and shows that two 'no effect' reports cannot be signed in the bridge."
+  },
+  "not_known": [
+    "electrographic spasm outcome in any WWOX report",
+    "whether hormonal therapy was concurrent in the WWOX VABAM reports",
+    "MRI follow-up after withdrawal",
+    "response in the reference genotype class",
+    "any latency to response",
+    "exposure and CNS exposure",
+    "time to access",
+    "paediatric suitability"
+  ],
+  "evaluation_frame": {
+    "source": "repurposing_10h_scientist-d_20261021.md, 'The answer in one page', DESIGN TABLE A and B. INFERENZA built from precedents that are all NOT WWOX EVIDENCE; the blind audit of that note's manifests is queued and had not returned when this card was written.",
+    "a_woree_evaluation_would_have_to_measure": [
+      "a repeated, instrument-matched baseline before any exposure, in a form that can move in a profoundly impaired child (growth-scale or raw-score forms rather than standard scores); the scatter of an untreated interval has never been measured in WOREE",
+      "a pharmacodynamic anchor: none exists for any WWOX-directed intervention (CLAIM 046), so engagement of the intended target cannot be shown at all",
+      "one prespecified endpoint with a rescue or withdrawal rule written before the observation window opens",
+      "survival, reported beside whatever endpoint is chosen",
+      "seizures only as a separate, declared family: a countable fraction, a diary or agreed reconstruction rule, and the seizure-free stratum reported apart (it is prognostic, not a treatment effect)"
+    ],
+    "and_could_not_claim": [
+      "disease modification or developmental benefit: the developmental-delay row of the one WOREE series reporting a response is identical in every column and two of the three responders had died",
+      "that seizure control protects development (CLAIM 031 forbids counting any symptomatic outcome as disease modification)",
+      "benefit from a pharmacodynamic move, a global impression or an own-baseline comparison",
+      "any effect smaller than the instrument's own untreated scatter",
+      "the word protection: nothing in this corpus has been measured as preserving a function that would otherwise have been lost"
+    ]
+  },
+  "must_never": [
+    "No score, rank, probability or blended index. 'Non-dominated' would be a statement about visible dimensions, never a number.",
+    "No dose, route, schedule, course or paediatric suitability. Accessibility of a drug, diet or supplement does not prove paediatric suitability.",
+    "A computational prediction is not DATO. No engine was run for this card.",
+    "Every adjacent source is labelled NOT WWOX EVIDENCE and is never promoted to WWOX evidence.",
+    "A missing hit is not proof of absence.",
+    "Symptomatic benefit is not slowing of disease; the word 'protection' is not licensed by any evidence on this card.",
+    "Where CLAIM 011 has been narrowed, 'dose-dependent' does not stand.",
+    "Nothing here is medical advice; it supports discussion with a treating clinical team and never substitutes for one."
+  ],
+  "card_kind": "CANDIDATE_CARD"
+}

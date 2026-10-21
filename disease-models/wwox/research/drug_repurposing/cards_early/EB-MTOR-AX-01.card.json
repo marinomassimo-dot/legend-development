@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "input_sha256": "d0da99237709e5a12eb3c4ff4d679db26d7bc518162c25a7f27c3c2462920442",
+  "epistemic_status": "IPOTESI",
+  "canonical": false,
+  "assessment": "REQUIRES_QUALIFICATION",
+  "directional_summary": "UNRESOLVED",
+  "comparisons": [],
+  "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+  "label_lookup": {
+    "status": "NOT_ATTEMPTED",
+    "coverage": "UNKNOWN",
+    "method": "UNKNOWN",
+    "queries": [],
+    "source": "UNKNOWN",
+    "retrieved_at": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "active_ingredient": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "error": "UNKNOWN",
+    "coverage_limit": "UNKNOWN"
+  },
+  "p4_fields": {
+    "endpoint_pursued": "UNKNOWN: no WOREE-relevant endpoint is supported for this class",
+    "functional_evidence_available": "none in a WWOX system; the class evidence comes from genetic mTOR-pathway reduction in a Tsc1 model (NOT WWOX EVIDENCE)",
+    "temporal_or_model_limit": "the infant record is in tuberous sclerosis, an mTOR-driven disease; it does not transfer to WOREE",
+    "cellular_context": {
+      "target_expression": "UNKNOWN",
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "no candidate, so no target-expression statement is made"
+    }
+  },
+  "input": {
+    "schema_version": 1,
+    "route": "BENEFICIO_PRECOCE",
+    "candidate": {
+      "id": "EB-MTOR-AX-01",
+      "name": "mTOR-inhibitor class (sirolimus), infant safety record only"
+    },
+    "disease_assertion": {
+      "id": "D-MTOR-1",
+      "target_id": "mTOR_pathway_activity",
+      "endpoint": "mTOR pathway activity in a WWOX-deficient system",
+      "direction": "UNKNOWN",
+      "source": "DIS-37 premise and R3 note 1.3",
+      "locator": "dismissal_ledger_current.md DIS-37 PREMISE: PubMed counts of 2026-10-19; R3 note section 1.3",
+      "epistemic_status": "INFERENZA",
+      "reading_depth": "queried_not_full_read",
+      "context": {
+        "disease_id": "WWOX loss",
+        "genotype": "UNKNOWN",
+        "species": "UNKNOWN",
+        "cell_type": "UNKNOWN",
+        "developmental_stage": "UNKNOWN"
+      },
+      "note": "The repository records WWOX-with-mTOR-or-AMPK counts at title and abstract level and a blocked WWOX/mTOR paper whose full text is unread; direction in a WWOX system is not established here."
+    },
+    "drug_assertions": [],
+    "label_lookup": {
+      "status": "NOT_ATTEMPTED"
+    },
+    "p4_fields": {
+      "endpoint_pursued": "UNKNOWN: no WOREE-relevant endpoint is supported for this class",
+      "functional_evidence_available": "none in a WWOX system; the class evidence comes from genetic mTOR-pathway reduction in a Tsc1 model (NOT WWOX EVIDENCE)",
+      "temporal_or_model_limit": "the infant record is in tuberous sclerosis, an mTOR-driven disease; it does not transfer to WOREE",
+      "cellular_context": {
+        "target_expression": "UNKNOWN",
+        "cells_tissue_stage": "UNKNOWN",
+        "coverage": "UNKNOWN",
+        "limits": "no candidate, so no target-expression statement is made"
+      }
+    },
+    "p4_roadmap_fields": {
+      "identity": "Sirolimus, mTOR-inhibitor class; no formulation, dose, trough target or schedule is carried.",
+      "indication_and_transfer": "Origin: tuberous sclerosis infants (NOT WWOX EVIDENCE). Bridge to WOREE: not established.",
+      "novelty_for_woree": "Not found in the research for a WWOX-deficient system at this card's depth. The mTOR/autophagy stubs and the blocked paper are an owed read (FT-074; DIS-37 revival trigger).",
+      "known_roads_state": "UNKNOWN.",
+      "path_and_objective": "Declared BENEFICIO_PRECOCE for this card because only the safety record is visible; the pathway rationale belongs to the deep-recovery path (scientist-a's cards), which this card does not enter.",
+      "expected_contribution": "None claimed.",
+      "mechanism": "UNKNOWN in WOREE.",
+      "sources": "R3 note 1.5 (NOT WWOX EVIDENCE): in 21 infants with tuberous sclerosis «All 21 had at least one adverse effect», mainly haematological and metabolic, no grade 4 or 5 and no discontinuation for an adverse effect; in ten neonatal-unit infants all had raised triglycerides; an infant spontaneous-report reporting ratio the authors call hypothesis-generating. The statement that sirolimus hyperlipidaemia is dose-dependent is a literature claim not shown in the infant cohort (R3 note section 5); no dose-response claim is carried here.",
+      "evidence_pro_contra": "Visible: infant adverse-effect record and the monitoring items the authors name. Absent: any benefit signal in WOREE.",
+      "time_to_access": "UNKNOWN. Clinical census 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven unfiltered queries on ClinicalTrials.gov API v2 returned no registered WOREE interventional study; the one WOREE record is an observational registry and natural-history study. Its own caution binds this card: «A missing hit does not prove that no study exists.» An NCT number proves neither recruitment nor first dosing. ",
+      "time_to_benefit": "UNKNOWN.",
+      "pharmacology": "UNKNOWN for WOREE.",
+      "paediatrics_and_interactions": "A paediatric record exists for this class in another disease; it is not an authorisation for this one and not a suitability statement. Interactions: UNKNOWN.",
+      "verification_scope": "R3 readings: blind locator audit OWED (declared in that note). This card: audit OWED.",
+      "question_history": "R3 note; FT-074; DIS-37.",
+      "predictions": "None.",
+      "next_measure": "Does the blocked WWOX/mTOR paper (full text unread) report a direction of mTOR activity in a WWOX-deficient system?",
+      "status": "ASTENSIONE. Missing datum: a direction of mTOR activity in a WWOX system and any WOREE endpoint.",
+      "value_added": "Shows that an infant safety record can exist while the benefit axis is empty, so safety visibility is not candidacy."
+    },
+    "not_known": [
+      "direction of mTOR activity in a WWOX-deficient system",
+      "full text of the blocked WWOX/mTOR paper",
+      "any WOREE endpoint for this class",
+      "growth effect"
+    ],
+    "evaluation_frame": {
+      "source": "repurposing_10h_scientist-d_20261021.md, 'The answer in one page', DESIGN TABLE A and B. INFERENZA built from precedents that are all NOT WWOX EVIDENCE; the blind audit of that note's manifests is queued and had not returned when this card was written.",
+      "a_woree_evaluation_would_have_to_measure": [
+        "a repeated, instrument-matched baseline before any exposure, in a form that can move in a profoundly impaired child (growth-scale or raw-score forms rather than standard scores); the scatter of an untreated interval has never been measured in WOREE",
+        "a pharmacodynamic anchor: none exists for any WWOX-directed intervention (CLAIM 046), so engagement of the intended target cannot be shown at all",
+        "one prespecified endpoint with a rescue or withdrawal rule written before the observation window opens",
+        "survival, reported beside whatever endpoint is chosen",
+        "seizures only as a separate, declared family: a countable fraction, a diary or agreed reconstruction rule, and the seizure-free stratum reported apart (it is prognostic, not a treatment effect)"
+      ],
+      "and_could_not_claim": [
+        "disease modification or developmental benefit: the developmental-delay row of the one WOREE series reporting a response is identical in every column and two of the three responders had died",
+        "that seizure control protects development (CLAIM 031 forbids counting any symptomatic outcome as disease modification)",
+        "benefit from a pharmacodynamic move, a global impression or an own-baseline comparison",
+        "any effect smaller than the instrument's own untreated scatter",
+        "the word protection: nothing in this corpus has been measured as preserving a function that would otherwise have been lost"
+      ]
+    },
+    "must_never": [
+      "No score, rank, probability or blended index. 'Non-dominated' would be a statement about visible dimensions, never a number.",
+      "No dose, route, schedule, course or paediatric suitability. Accessibility of a drug, diet or supplement does not prove paediatric suitability.",
+      "A computational prediction is not DATO. No engine was run for this card.",
+      "Every adjacent source is labelled NOT WWOX EVIDENCE and is never promoted to WWOX evidence.",
+      "A missing hit is not proof of absence.",
+      "Symptomatic benefit is not slowing of disease; the word 'protection' is not licensed by any evidence on this card.",
+      "Where CLAIM 011 has been narrowed, 'dose-dependent' does not stand.",
+      "Nothing here is medical advice; it supports discussion with a treating clinical team and never substitutes for one."
+    ],
+    "card_kind": "ABSTENTION_CARD"
+  },
+  "translation": {
+    "pediatric_suitability": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "access": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN",
+    "functional_rescue": "UNKNOWN"
+  },
+  "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+  "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+  ]
+}

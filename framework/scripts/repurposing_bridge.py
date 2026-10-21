@@ -22,7 +22,8 @@ from pathlib import Path
 
 
 CONTEXT = ("disease_id", "genotype", "species", "cell_type", "developmental_stage")
-SIGNS = {"INCREASE": 1, "DECREASE": -1, "UNKNOWN": None}
+# NO_CHANGE is a REPORTED null effect on the cell; UNKNOWN is a cell nobody measured.
+SIGNS = {"INCREASE": 1, "DECREASE": -1, "NO_CHANGE": 0, "UNKNOWN": None}
 TAGS = {"DATO", "INFERENZA", "IPOTESI", "ESPANSIONE"}
 READING = {"complete_fulltext_read", "partial_fulltext_read", "abstract_only",
            "retrieved_not_read", "queried_not_full_read", "UNKNOWN"}
@@ -32,6 +33,9 @@ LOOKUP_METHOD = {"primary", "alternative", "primary_then_alternative", "UNKNOWN"
 LOOKUP_TEXT = ("source", "retrieved_at", "client_version", "product_name", "active_ingredient",
                "formulation", "spl_id", "error", "coverage_limit")
 P4_TEXT = ("endpoint_pursued", "functional_evidence_available", "temporal_or_model_limit")
+TRANSLATION = ("pediatric_suitability", "cns_exposure", "interactions", "access",
+               "time_to_benefit", "functional_rescue")  # access = time to access
+ROADMAP_REQUIRED = ("indication_and_transfer", "verification_scope")
 P4_CONTEXT = ("target_expression", "cells_tissue_stage", "coverage", "limits")
 
 
@@ -107,6 +111,35 @@ def normalise_p4_fields(block: object) -> dict:
     return out
 
 
+def normalise_translation(block: object) -> dict:
+    """Let a packet state the translation fields; each stays UNKNOWN until it does."""
+    if block is None:
+        block = {}
+    if not isinstance(block, dict):
+        raise ValueError("translation must be an object")
+    if set(block) - set(TRANSLATION):
+        raise ValueError(f"unknown translation field(s): {sorted(set(block) - set(TRANSLATION))}")
+    out = {}
+    for field in TRANSLATION:
+        value = block.get(field, "UNKNOWN")
+        if not isinstance(value, str) or not value.strip():
+            raise ValueError(f"translation {field} must be a nonempty string or UNKNOWN")
+        out[field] = value
+    return out
+
+
+def check_roadmap_rows(block: object) -> None:
+    """Validate, never rewrite: the two roadmap rows a card cannot do without."""
+    if block is None:
+        return
+    if not isinstance(block, dict):
+        raise ValueError("p4_roadmap_fields must be an object")
+    for field in ROADMAP_REQUIRED:
+        value = block.get(field)
+        if not isinstance(value, str) or not value.strip():
+            raise ValueError(f"p4_roadmap_fields {field} must be a nonempty string or UNKNOWN")
+
+
 def validate_assertion(row: dict) -> None:
     if not isinstance(row, dict):
         raise ValueError("assertion must be an object")
@@ -151,6 +184,8 @@ def build_card(payload: dict) -> dict:
         raise ValueError("assertion identifiers must be unique")
     lookup = normalise_label_lookup(payload.get("label_lookup"))
     p4_fields = normalise_p4_fields(payload.get("p4_fields"))
+    translation = normalise_translation(payload.get("translation"))
+    check_roadmap_rows(payload.get("p4_roadmap_fields"))
     results = []
     for row in assertions:
         reasons = []
@@ -162,7 +197,13 @@ def build_card(payload: dict) -> dict:
                 reasons.append(f"context.{key}: mismatch or unknown")
         if disease["direction"] == "UNKNOWN" or row["direction"] == "UNKNOWN":
             reasons.append("direction unknown")
+        if disease["direction"] == "NO_CHANGE":
+            reasons.append("disease direction is NO_CHANGE: there is no change to oppose or reinforce")
+        if row["direction"] == "NO_CHANGE" and reasons:
+            reasons.append("reported no change, in a cell that is not comparable: "
+                           "a measured null, not an unmeasured cell")
         status = "UNRESOLVED" if reasons else (
+            "NO_EFFECT_REPORTED" if row["direction"] == "NO_CHANGE" else
             "OPPOSES_DISEASE_CHANGE" if SIGNS[disease["direction"]] != SIGNS[row["direction"]]
             else "REINFORCES_DISEASE_CHANGE")
         results.append({"assertion_id": row["id"], "status": status, "reasons": reasons})
@@ -173,6 +214,10 @@ def build_card(payload: dict) -> dict:
     limits = ["Technical comparison is not efficacy, safety or experimental validation.",
               "Sources and receipt references are retained, not independently verified.",
               "Shared sources are not independent confirmations; scores are not pooled."]
+    if any(row["direction"] == "NO_CHANGE" for row in assertions):
+        limits.append("NO_CHANGE is a reported null effect on that endpoint and context: it is "
+                      "not UNKNOWN (not measured), not evidence of safety, and not proof of "
+                      "futility; a null in a non-comparable cell stays UNRESOLVED.")
     if lookup["status"] == "NOT_ATTEMPTED":
         limits.append("No pharmacological-label search was run: the label is unknown here, "
                       "which is not NO_MATCH_FOUND and not an absent label.")
@@ -199,9 +244,7 @@ def build_card(payload: dict) -> dict:
         "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED" if not results else None,
         "label_lookup": lookup, "p4_fields": p4_fields,
         "input": copy.deepcopy(payload),
-        "translation": {key: "UNKNOWN" for key in (
-            "pediatric_suitability", "cns_exposure", "interactions", "access",
-            "time_to_benefit", "functional_rescue")},
+        "translation": translation,
         "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
         "limits": limits,
     }

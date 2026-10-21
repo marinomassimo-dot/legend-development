@@ -186,28 +186,70 @@
   "waived": false,
   "entries": [
    {
-    "proposition": "Dose given: J4 0.06 mg/mL in drinking water with 1 percent HPbetaCD, estimated 10.2 mg/kg/day, for 10 weeks from 6 weeks of age; the dose is an estimate from assumed water intake and one dose level was tested.",
-    "snippet": "Thus, the dose of 0.06 mg/ml J4 in drinking water would approximately give an overall dose of 10.2 mg/kg/day for the mice in this study.",
+    "proposition": "Dose given: J4 0.06 mg/mL in drinking water with 1 percent HPbetaCD as vehicle, total treatment time 10 weeks (Fig 1A: from 6 to 16 weeks of age, entry 15); the authors estimate about 10.2 mg/kg/day from an assumed intake of 0.17 mL/g/day (0.06 x 0.17 x 1000 = 10.2, recomputed). The dose is an estimate from assumed water intake and one dose level was tested.",
+    "snippet": "J4 treatment was given ad libitum in the drinking water at the concentration of 0.06 mg/ml. J4 was dissolved in the drinking water containing 1% HPβCD, which served as the vehicle. The total treatment time was 10 weeks. The average daily intake for a laboratory mouse was estimated to be 0.17 ml/g/day [49]. Thus, the dose of 0.06 mg/ml J4 in drinking water would approximately give an overall dose of 10.2 mg/kg/day for the mice in this study.",
     "anchor": "Methods / Drug treatments",
     "surface": "body",
     "artifact": "files/fulltext/PMID42310739_Hsieh2026_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42310739.json",
+     "entry": 0,
+     "what_changed": "Quote widened to the passage carrying the vehicle, the 10-week duration and the assumed intake; the start age (6 weeks) now rests on the new Fig 1A entry 15.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 0,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
-    "proposition": "Adult male mice only, 6-12 weeks old; not a developmental window.",
+    "proposition": "Only male animals were used. The text gives their age as 6 to 12 weeks, but the Fig 1A timeline (entry 15) runs treatment from 6 to 16 weeks of age with behavioural testing near 14 weeks and sample collection at 16 weeks, so the age statement and the timeline differ inside the source. Adult males, not a developmental window.",
     "snippet": "Only male animals (6-week-old to 12-week-old) were used and female mice were not used due to hormonal cycle variability",
     "anchor": "Methods / Animals",
     "surface": "body",
     "artifact": "files/fulltext/PMID42310739_Hsieh2026_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42310739.json",
+     "entry": 1,
+     "what_changed": "Auditor UNDERSHOOT: Fig 1A shows treatment from 6 to 16 weeks of age, not 6 to 12. Surface re-inspected at 300 ppi; the age discrepancy is now stated as a source-internal difference.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 1,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
-    "proposition": "The model has normal-appearing white matter by T2 MRI and no apparent MBP difference in white matter; the diffusion MRI differences are what J4 reverses.",
-    "snippet": "the WM regions did not display any apparent differences in MBP staining when comparing the WT Veh, Tsc2+/– Veh, and Tsc2+/– J4 groups",
+    "proposition": "MBP immunostaining of white matter regions showed no apparent difference between WT Veh, Tsc2+/- Veh and Tsc2+/- J4, whereas transmission electron microscopy showed ultrastructural abnormalities in the myelin sheath of Tsc2+/- Veh mice. The T2 normal-appearing white matter and the J4 reversal of diffusion MRI metrics are stated in other paragraphs, not in this quote.",
+    "snippet": "the WM regions did not display any apparent differences in MBP staining when comparing the WT Veh, Tsc2+/– Veh, and Tsc2+/– J4 groups. However, transmission electron microscopy (TEM) revealed ultrastructural abnormalities in the myelin sheath of Tsc2+/– Veh mice (Fig. 4B).",
     "anchor": "Results / J4 enhanced myelin sheath integrity",
     "surface": "body",
     "artifact": "files/fulltext/PMID42310739_Hsieh2026_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42310739.json",
+     "entry": 2,
+     "what_changed": "Proposition narrowed to the MBP and TEM statements the widened quote carries; T2 and diffusion statements are in other paragraphs.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 2,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "Seizures are absent from the model and from the study.",
@@ -226,20 +268,48 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Group sizes in histology: three animals per group (F(2,6)); the TEM comparison uses N = 3, 3 and 4 animals but regression across individual axons.",
+    "proposition": "Pairwise linear regression across individual axons: WT Veh and Tsc2+/- Veh had similar slopes but significantly different intercepts, F(1, 1215) = 58.06, p < 0.0001 (an axon-level regression; the animal numbers are N = 3, 3 and 4 per Fig 4, entry 13).",
     "snippet": "Pairwise linear regression comparisons revealed that WT Veh and Tsc2+/– Veh exhibited similar slopes but significantly different intercepts (F(1, 1215) = 58.06, p < 0.0001)",
     "anchor": "Results / J4 enhanced myelin sheath integrity",
     "surface": "body",
     "artifact": "files/fulltext/PMID42310739_Hsieh2026_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42310739.json",
+     "entry": 5,
+     "what_changed": "Proposition narrowed to the regression statement; group sizes are attested in entry 13, not in this quote.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 5,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
-    "proposition": "Onion-bulb count: 3 animals per group; J4 restores the count to wild-type level.",
-    "snippet": "Quantification of the number of myelin bulbs observed in the fornix across groups. Bars represent group means with individual data points from different animals.",
+    "proposition": "Onion-bulb (myelin bulb) count in the fornix: elevated in Tsc2+/- Veh and markedly reduced after J4 (one-way ANOVA F(2, 7) = 6.727, p = 0.0234; Bonferroni WT Veh vs Tsc2+/- Veh p = 0.0375, Tsc2+/- J4 vs Tsc2+/- Veh p = 0.0243). F(2, 7) implies 10 animals: N = 3, 3 and 4 (WT Veh, Tsc2+/- Veh, Tsc2+/- J4) as labelled in Fig 4 (entry 13), not three per group.",
+    "snippet": "Moreover, the occurrence of abnormal myelin structures, such as onion bulb formations, was elevated in Tsc2+/– Veh mice but markedly reduced following J4 treatment (Fig. 4E; F(2, 7) = 6.727, p = 0.0234, one-way ANOVA; Bonferroni post hoc comparisons: WT Veh vs. Tsc2+/– Veh, p = 0.0375; Tsc2+/– J4 vs. Tsc2+/– Veh, p = 0.0243).",
     "anchor": "Fig. 4 legend (E)",
     "surface": "body",
     "artifact": "files/fulltext/PMID42310739_Hsieh2026_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42310739.json",
+     "entry": 6,
+     "what_changed": "Auditor: N is 3, 3 and 4 animals, not three per group. Quote replaced by the Results sentence that carries the ANOVA and the post hoc values; the Fig 4E legend alone carried no numbers.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 6,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "Behavioural testing was by investigators aware of group allocation; only analysis was blinded.",
@@ -250,28 +320,70 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "J4 effects in OPC and OL counts are significant only in the corpus callosum and cingulum, not in cortex; CNPase change is a trend (P = 0.0792).",
-    "snippet": "J4 treatment showed a trend toward increased CNPase immunoreactivity compared with Tsc2+/– Veh, although this difference did not reach statistical significance (p = 0.0792)",
+    "proposition": "CNPase: significantly reduced in the Tsc2+/- Veh retrosplenial cortex (F(2, 6) = 9.935, p = 0.0125) and not significantly changed in corpus callosum white matter (F(2, 6) = 4.697, p = 0.0592); J4 showed a trend toward increase versus Tsc2+/- Veh that did not reach significance (p = 0.0792). OPC and OL count findings are in other sentences, and the cingulum result cited to a supplementary figure was not read.",
+    "snippet": "CNPase immunoreactivity was significantly reduced in the RSP Ctx of Tsc2+/– Veh mice (F(2, 6) = 9.935, p = 0.0125; one-way ANOVA; Bonferroni post hoc comparisons: WT Veh vs. Tsc2+/– Veh, p = 0.0141; Fig. 6M). In contrast, no significant changes were detected in the WM corpus callosum (F(2, 6) = 4.697, p = 0.0592; one-way ANOVA; Fig. 6N). J4 treatment showed a trend toward increased CNPase immunoreactivity compared with Tsc2+/– Veh, although this difference did not reach statistical significance (p = 0.0792), and no significant changes were observed between WT Veh and Tsc2+/– J4 (p = 0.5926).",
     "anchor": "Results / J4 modulated OL-lineage populations",
     "surface": "body",
     "artifact": "files/fulltext/PMID42310739_Hsieh2026_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42310739.json",
+     "entry": 8,
+     "what_changed": "Quote widened to the CNPase paragraph; proposition narrowed to CNPase and the unread cingulum limitation stated.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 8,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
-    "proposition": "The authors list limitations: males only, mild model, mechanism of myelin effect unclear, lineage progression not shown, adenosine not measured.",
-    "snippet": "the direct measurement of adenosine and the downstream molecular pathways through which adenosine receptor signaling influences oligodendroglial maturation are not yet fully defined in this present study",
+    "proposition": "Among the limitations the authors list: the mechanism linking mTOR-pathway effects to myelination is unclear, lineage progression from OPCs to mature oligodendrocytes is not directly shown, and adenosine was not directly measured with its downstream receptor pathways undefined. Males only and the mild model are discussed elsewhere in the paragraph and are not claimed here.",
+    "snippet": "Third, while our data suggest that J4 may indirectly modulate mTOR signaling and dampen neuronal hyperactivity, the precise mechanistic relationship between these pathways and myelination remains unclear and warrants further investigation. Fourth, our findings are consistent with enhanced oligodendroglial maturation in WM regions following J4 treatment, yet the current data do not directly demonstrate lineage progression from OPCs to mature oligodendrocytes. Finally, although J4 is known to elevate extracellular adenosine levels through ENT1 inhibition, the direct measurement of adenosine and the downstream molecular pathways through which adenosine receptor signaling influences oligodendroglial maturation are not yet fully defined in this present study and require further investigation.",
     "anchor": "Limitations",
     "surface": "body",
     "artifact": "files/fulltext/PMID42310739_Hsieh2026_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42310739.json",
+     "entry": 9,
+     "what_changed": "Quote widened to the third, fourth and final limitations; proposition reduced to those three.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 9,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
-    "proposition": "Normal-brain treated arm: WT mice receiving J4 show a slightly thicker myelin regression (P = 0.0158 in text) while the OFT and NOR show no change; the only measure of J4 in a non-mutant brain.",
+    "proposition": "Normal-brain treated arm: WT mice receiving J4 are compared with WT Veh for myelin thickness; the text prints F(1, 974) = 1.986, p = 0.0158, but F(1, 974) = 1.986 corresponds to p of about 0.159 (the same F and p = 0.1591 are printed for the slope comparison in the next sentence), so the printed p = 0.0158 is a defect in the SOURCE (a mis-typed p or F). No finding about the J4 effect on WT myelin thickness is drawn here; whether that comparison is significant cannot be decided from the text. OFT and NOR show no change in WT J4 (Fig 1). The only measure of J4 in a non-mutant brain.",
     "snippet": "while WT J4 group showed a slight increase of myelin thickness when compared to WT Veh controls (F(1, 974) = 1.986, p = 0.0158)",
     "anchor": "Results / J4 enhanced myelin sheath integrity",
     "surface": "body",
     "artifact": "files/fulltext/PMID42310739_Hsieh2026_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42310739.json",
+     "entry": 10,
+     "what_changed": "Coordinator and auditor: F(1, 974) = 1.986 gives p of about 0.159, so p = 0.0158 is a typo in the source; recorded as a source defect, not as a finding about the effect.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "SUPPORTED (source defect recorded)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 10,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "The same sentence reports F(1, 974) = 1.986 for both a nonsignificant slope comparison (P = 0.1591) and a significant one (P = 0.0158): one F value cannot give two P values at identical degrees of freedom, so one of the two is mis-typed.",
@@ -308,6 +420,14 @@
     "panel_text_relation": "panel_qualifies_text",
     "qualifies": "entries[4]",
     "qualifies_needle": "whereas cFos levels in Tsc2+/– J4 mice were s"
+   },
+   {
+    "proposition": "Fig 1A (300 ppi): the study timeline runs from weaning, normal chow, treatment start at 6 weeks of age with 0.06 mg/mL J4 or vehicle to 16 weeks of age; MRI at about 10 weeks (4 weeks of treatment), behavioural tests NOR and OFT at about 14 weeks (8 weeks of treatment), sample collection for protein, IHC and TEM at 16 weeks.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] timeline 6 wk start treatment; 10 wk MRI (4 wk treatment); 14 wk behaviour (8 wk treatment); 16 wk end, sample collection",
+    "anchor": "Figure 1A",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42310739_r3c/p06_embedded_1961x1593.png",
+    "panel_text_relation": "text_only"
    }
   ],
   "source_fulltext_indexed": true,

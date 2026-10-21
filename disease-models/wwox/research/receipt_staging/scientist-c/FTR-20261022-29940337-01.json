@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261022-29940337-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "29940337",
+  "doi": "10.1016/j.nbd.2018.06.015"
+ },
+ "event_at": "2026-10-22T05:30:00Z",
+ "analysis_at": "2026-10-22T05:30:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-c, task REPURP-10H-R3b-C-20261022, PRIMARY_EVIDENCE_READ, SOURCE_FIRST (written question: is there a measured Wnt-direction effect in a developing brain with a safety statement); full XML text read, figure captions only; prepared as JSON for the integrator and not appended by this actor.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID29940337_R3b_PMC_r2.xml",
+ "source_fingerprint": "b939d730728ce5d30caff6bbe680769b93a5727e1d44ad57e630a63135c5e286",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID29940337.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022b.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "full text read; figure images unavailable (captions only); see manifest"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

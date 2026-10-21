@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "route": "BENEFICIO_PRECOCE",
+  "candidate": {
+    "id": "EB-ETX-01",
+    "name": "Ethosuximide (T-type calcium-channel blocker class contrast; lead DL-MECH-170)"
+  },
+  "disease_assertion": {
+    "id": "D-ETX-1",
+    "target_id": "PTZ_provoked_seizure_response_late_phase",
+    "endpoint": "PTZ-provoked behavioural seizure score, late phase of the hour (graphical reading)",
+    "direction": "INCREASE",
+    "source": "Cheng 2020, Figure 7b, as re-read in the R2 note (section 9)",
+    "locator": "R2 note repurposing_10h_scientist-b_20261021.md section 9, point 2: the null arm has a sustained late phase that the wild type does not",
+    "epistemic_status": "INFERENZA",
+    "reading_depth": "partial_fulltext_read",
+    "context": {
+      "disease_id": "Wwox loss (murine)",
+      "genotype": "Wwox -/- constitutive null",
+      "species": "mouse",
+      "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
+      "developmental_stage": "UNKNOWN"
+    },
+    "note": "Graphical reading from a moderate-resolution time course, N = 6 in the null arm. Mouse age is not carried by the notes read: developmental_stage is UNKNOWN on purpose."
+  },
+  "drug_assertions": [
+    {
+      "id": "A-ETX-1",
+      "target_id": "PTZ_provoked_seizure_response_late_phase",
+      "endpoint": "PTZ-provoked behavioural seizure score, late phase of the hour (graphical reading)",
+      "direction": "DECREASE",
+      "source": "Cheng 2020 Figure 7b (WWOX-direct, one laboratory), restated by the R2 note",
+      "locator": "deepdive_manifests/PMID32000863.json: «Pretreatment of an antiepileptic drug ethosuximide suppressed PTZ-induced seizure in Wwox−/− mice (Fig. 7b), although ethosuximide pretreatment had no effects on the behavior changes in Wwox+/+ and Wwox+/− mice treated with a low dose of PTZ.»",
+      "epistemic_status": "DATO",
+      "reading_depth": "complete_fulltext_read",
+      "context": {
+        "disease_id": "Wwox loss (murine)",
+        "genotype": "Wwox -/- constitutive null",
+        "species": "mouse",
+        "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
+        "developmental_stage": "UNKNOWN"
+      },
+      "receipt": "FTR-20260804-32000863-01; targeted re-read FTR-20261021-32000863-03 (staged, scientist-b)",
+      "shared_origin": "one experiment, one laboratory",
+      "note": "R2 reading: the effect is confined to the second half of the hour, the PTZ-alone null control cohort differs between the ethosuximide and the lithium experiments by about as much as the late effect, and the paper reports per-genotype brackets with no drug-by-genotype interaction test."
+    },
+    {
+      "id": "A-ETX-2",
+      "target_id": "PTZ_provoked_seizure_response_late_phase",
+      "endpoint": "PTZ-provoked behavioural seizure score, late phase of the hour (graphical reading)",
+      "direction": "UNKNOWN",
+      "source": "Cheng 2020 Figure 7b, restated by the R2 note (section 9, point 1)",
+      "locator": "R2 note section 9: the wild-type ethosuximide curve crosses the PTZ-alone curve instead of separating; the wild type has no late phase to suppress",
+      "epistemic_status": "INFERENZA",
+      "reading_depth": "partial_fulltext_read",
+      "context": {
+        "disease_id": "Wwox loss (murine)",
+        "genotype": "Wwox +/+ wild type",
+        "species": "mouse",
+        "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
+        "developmental_stage": "UNKNOWN"
+      },
+      "note": "Neither a protective effect nor a clear absence. Whether the contrast is a floor effect, a baseline effect or a real null-specific effect is not distinguished by these data."
+    },
+    {
+      "id": "A-ETX-3",
+      "target_id": "neural_progenitor_viability",
+      "endpoint": "viability of embryonic cortical progenitors in vitro",
+      "direction": "DECREASE",
+      "source": "Kim 2018 as read in the R2 note section 7 (NOT WWOX EVIDENCE)",
+      "locator": "R2 note section 7: two research T-type blockers lowered viability and phospho-AKT and phospho-GSK3 beta; ethosuximide was not tested",
+      "epistemic_status": "DATO",
+      "reading_depth": "complete_fulltext_read",
+      "context": {
+        "disease_id": "none (NOT WWOX EVIDENCE)",
+        "genotype": "wild-type rat embryonic cortical culture",
+        "species": "rat",
+        "cell_type": "embryonic cortical progenitor",
+        "developmental_stage": "embryonic day 14"
+      },
+      "receipt": "FTR-20261021-29463073-01 (staged, scientist-b)",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "compound_tested": "research T-type blockers, not ethosuximide",
+      "note": "Hypothesis-generating class-level safety signal only: in vitro, research compounds, Cav3.1-dependent; in vivo and clinical significance unknown; not an administration statement and not a statement about ethosuximide."
+    }
+  ],
+  "label_lookup": {
+    "status": "NOT_ATTEMPTED"
+  },
+  "p4_fields": {
+    "endpoint_pursued": "late-phase PTZ-provoked behavioural seizure score in a three-genotype design with an explicit drug-by-genotype interaction test and a concurrent same-day PTZ-alone control (the falsifier of DL-MECH-170); no human endpoint is yet defined for this candidate",
+    "functional_evidence_available": "one mouse experiment, one laboratory, symptomatic class; no T-type current measured in any Wwox system; no human T-type evidence in WWOX",
+    "temporal_or_model_limit": "acute intraperitoneal pretreatment, constitutive null genotype only, provoked behavioural endpoint, graphical effect confined to the late phase; no missense or compound-heterozygous genotype; no spontaneous-seizure or EEG endpoint",
+    "cellular_context": {
+      "target_expression": "UNKNOWN: no T-type current or Cav3 expression measured in any Wwox system (R2 sections 3 and 13)",
+      "cells_tissue_stage": "UNKNOWN; whole-animal behavioural endpoint; in ethosuximide-sensitive models the T-type current is reduced in relay (GAERS) or reticular neurons, so its sign is per lesion",
+      "coverage": "none for WWOX",
+      "limits": "target expression is not drug selectivity or exposure; a channel's contribution to excitability differs between immature and mature neurons of one structure (R2 section 14), so an age-blind reading of 'T-type block lowers excitability' is unsafe"
+    }
+  },
+  "p4_roadmap_fields": {
+    "identity": "Ethosuximide, an approved antiseizure drug; the class contrast is T-type calcium-channel block. Formulation not carried; no dose, route or schedule.",
+    "indication_and_transfer": "Origin: the Wwox-null mouse PTZ experiment (WWOX-direct), not another disease. Transfer to human WOREE: untested; one experiment, one laboratory, symptomatic class at best.",
+    "novelty_for_woree": "Not found in the research (dated queries 2026-10-21, R2 note section 13): no abstract-indexed paper for WWOX with ethosuximide, and one hit for WWOX with T-type terms that holds gene counts only. By dismissal-ledger D-37 this licenses 'no abstract-indexed paper', not 'never measured': the one Wwox ethosuximide assay sits inside a paper whose abstract lacks the term.",
+    "known_roads_state": "Partial (known-roads note 2.3), now narrowed by the R2 note: not a clean genotype-specific effect. The lithium arm of the same figure suppressed in all three genotypes (relevant negative on specificity).",
+    "path_and_objective": "BENEFICIO_PRECOCE (symptomatic class). The lead would become a mechanism to test only if the falsifier survives; it is not a RECUPERO_PROFONDO candidate.",
+    "expected_contribution": "Symptom (provoked seizure). Not disease modification: in a digenic absence mouse the ethosuximide effect and a Cav3.1 deletion suppressed the seizure and left a quantified comorbidity untouched (R2 section 6).",
+    "mechanism": "Premise: T-type block pulls back an excess created by loss of WWOX. UNKNOWN in WWOX. Non-T-type routes reported for ethosuximide in non-WWOX systems: GIRK block, a reticular-nucleus site, broad cortical effects, a FOXO-pathway effect in worms; none shown in a Wwox system. T-type excess is a recognised cause of disease in humans (gain-of-function variants in the T-type channel genes) but is not shown in a WWOX null. Candidate extra read-out proposed by R2: phospho-Ser9 GSK3 beta in any Wwox-null ethosuximide experiment (an IPOTESI from two non-matching systems).",
+    "sources": "Internal, WWOX: DL-MECH-170, CLAIM 016 and its lithium boundary note, Cheng 2020 manifest, FT-115. In-flight, not landed when written: R2 note (scientist-b, branch task/repurp-10h-r2-b, commit 2de3fd28); its narrowing of DL-MECH-170 is declared OWED a blind audit by someone else. Adjacent, NOT WWOX EVIDENCE: the R2 papers (Gnb1, Gabrb3, Hcn1, Cntnap2, Grin2b, digenic absence, worm and relay-neuron strain studies).",
+    "evidence_pro_contra": "Pro: in one three-genotype experiment ethosuximide's effect was marked significant in the null panel only. Contra: late-phase restriction; cohort variability as large as the effect; the wild-type baseline is small but not zero, and lithium was still detected inside the same low range (so a pure floor effect is not established); no interaction test; Gnb1 mouse shows the default outcome of a mutant-only effect when the wild-type baseline is near zero; mechanism may be non-T-type; GAERS has less T-type current than its control.",
+    "time_to_access": "UNKNOWN. Not assessed in any record read. Clinical census 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven unfiltered queries on ClinicalTrials.gov API v2 returned no registered WOREE interventional study; the one WOREE record is an observational registry and natural-history study. Its own caution binds this card: «A missing hit does not prove that no study exists.» An NCT number proves neither recruitment nor first dosing. FT-115 (no patient-level T-type evidence) was confirmed at full-text depth for four documents (R2 section 13) and is not retired as a statement about the literature.",
+    "time_to_benefit": "UNKNOWN. No human age-at-treatment datum of any kind exists; no experiment in any WWOX model varies age at treatment beyond mouse P5 (early-benefit note, section 4).",
+    "pharmacology": "UNKNOWN for a Wwox system. The R2 note carries, from papers it read, that ethosuximide's own T-type potency is in the millimolar range and disputed at relevant concentrations; exposure and CNS exposure in WOREE: UNKNOWN.",
+    "paediatrics_and_interactions": "UNKNOWN. Class-level signal only: T-type blockers reduce progenitor viability in vitro (research compounds, rat, Cav3.1-dependent), significance unknown. In a DEE mouse model some antiseizure drug classes aggravated spiking, so 'an antiseizure drug suppresses in the mutant' is not a safe default and a falsifier needs a harm arm. Suitability not presumed.",
+    "verification_scope": "Supported by: one experiment (Cheng 2020). R2 re-read depth: partial, receipt staged, not recorded. The narrowing of the lead and of the CLAIM 016 framing is unaudited: blind locator audit OWED. This card: no audit yet, OWED.",
+    "question_history": "DL-MECH-170 (open), CLAIM 016, FT-115, known-roads note 2.3, R2 note.",
+    "predictions": "None. No engine was run.",
+    "next_measure": "Is the late-phase ethosuximide effect in the null reproduced, with a drug-by-genotype interaction test, a concurrent same-day PTZ-alone control in every cell and a per-genotype baseline stated? The R2 design sketch says power depends mainly on which control cohort is representative, not on N alone.",
+    "status": "IPOTESI (open lead, narrowed by an unaudited reading).",
+    "value_added": "Replaces 'the drug the paper did not favour behaved genotype-specifically' with the time-resolved reading, the cohort-variability problem, the non-T-type mechanisms and a class-level developmental safety line."
+  },
+  "not_known": [
+    "drug-by-genotype interaction test",
+    "mouse age in the experiment (not carried by the notes read)",
+    "any T-type measurement in a Wwox system",
+    "spontaneous-seizure or EEG endpoint",
+    "missense or compound-heterozygous genotype",
+    "any human endpoint",
+    "exposure and CNS exposure",
+    "time to access",
+    "time to benefit",
+    "paediatric suitability"
+  ],
+  "evaluation_frame": {
+    "source": "repurposing_10h_scientist-d_20261021.md, 'The answer in one page', DESIGN TABLE A and B. INFERENZA built from precedents that are all NOT WWOX EVIDENCE; the blind audit of that note's manifests is queued and had not returned when this card was written.",
+    "a_woree_evaluation_would_have_to_measure": [
+      "a repeated, instrument-matched baseline before any exposure, in a form that can move in a profoundly impaired child (growth-scale or raw-score forms rather than standard scores); the scatter of an untreated interval has never been measured in WOREE",
+      "a pharmacodynamic anchor: none exists for any WWOX-directed intervention (CLAIM 046), so engagement of the intended target cannot be shown at all",
+      "one prespecified endpoint with a rescue or withdrawal rule written before the observation window opens",
+      "survival, reported beside whatever endpoint is chosen",
+      "seizures only as a separate, declared family: a countable fraction, a diary or agreed reconstruction rule, and the seizure-free stratum reported apart (it is prognostic, not a treatment effect)"
+    ],
+    "and_could_not_claim": [
+      "disease modification or developmental benefit: the developmental-delay row of the one WOREE series reporting a response is identical in every column and two of the three responders had died",
+      "that seizure control protects development (CLAIM 031 forbids counting any symptomatic outcome as disease modification)",
+      "benefit from a pharmacodynamic move, a global impression or an own-baseline comparison",
+      "any effect smaller than the instrument's own untreated scatter",
+      "the word protection: nothing in this corpus has been measured as preserving a function that would otherwise have been lost"
+    ]
+  },
+  "must_never": [
+    "No score, rank, probability or blended index. 'Non-dominated' would be a statement about visible dimensions, never a number.",
+    "No dose, route, schedule, course or paediatric suitability. Accessibility of a drug, diet or supplement does not prove paediatric suitability.",
+    "A computational prediction is not DATO. No engine was run for this card.",
+    "Every adjacent source is labelled NOT WWOX EVIDENCE and is never promoted to WWOX evidence.",
+    "A missing hit is not proof of absence.",
+    "Symptomatic benefit is not slowing of disease; the word 'protection' is not licensed by any evidence on this card.",
+    "Where CLAIM 011 has been narrowed, 'dose-dependent' does not stand.",
+    "Nothing here is medical advice; it supports discussion with a treating clinical team and never substitutes for one."
+  ],
+  "card_kind": "CANDIDATE_CARD"
+}

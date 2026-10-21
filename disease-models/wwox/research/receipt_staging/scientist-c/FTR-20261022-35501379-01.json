@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261022-35501379-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "35501379",
+  "doi": "10.1038/s41593-022-01052-2"
+ },
+ "event_at": "2026-10-22T04:30:00Z",
+ "analysis_at": "2026-10-22T04:30:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-c, task REPURP-10H-R3b-C-20261022, PRIMARY_EVIDENCE_READ, SOURCE_FIRST (the question was written before opening: is there a paper that pairs EEG with myelin after a drug); XML and the five main figure pages opened; prepared as JSON for the integrator and not appended by this actor.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID35501379_R3b_PMC_r2.xml",
+ "source_fingerprint": "bbcc9f8b2385a85cec47418f42d57690ed1059422e967263ea69566548f34a3a",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID35501379.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022b.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "full text and the five main figures as page renders read; extended data figures and supplementary files not opened; see manifest"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

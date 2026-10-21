@@ -256,8 +256,8 @@
     }
    },
    {
-    "proposition": "The method reads which mRNAs sit on ribosomes, not the amount of the mutant protein: 176 mRNAs differ in polysome association, but most altered mRNAs were raised in monosome and polysome fractions alike, which the authors read as transcript-level change, so polysome profiling by itself does not separate translational from transcript regulation.",
-    "snippet": "Most mRNAs with altered translation rates were increased in monosome and polysome fractions from 2b5ho mouse brains, indicating that these mRNAs were regulated at transcript level.",
+    "proposition": "For the 33 mRNAs flagged by monosome-versus-polysome distribution and checked by qPCR on several candidates, most were raised in monosome and polysome fractions alike, which the authors read as regulation at transcript level. This sentence does NOT describe the 176 mRNAs with altered polysome association, which the authors read as altered synthesis of the encoded proteins (see the added entry). The paper itself separates the two regimes at the mRNA level for candidates (fraction-resolved qPCR, Fig 1B), so no limitation of polysome-based evidence in general follows from this quote; the restricted claim is only that the 176-mRNA headline does not read the mutant protein.",
+    "snippet": "We verified the microarray findings for several candidates with qPCR (Fig. 1B). Most mRNAs with altered translation rates were increased in monosome and polysome fractions from 2b5ho mouse brains, indicating that these mRNAs were regulated at transcript level.",
     "anchor": "Results, paragraph 2",
     "surface": "body",
     "artifact": "files/fulltext/PMID31402619_Abbink2019_PMC6689685.xml",
@@ -266,10 +266,25 @@
      "system": "Vanishing white matter (VWM): knock-in mice with missense mutations in eIF2B subunits (2b5ho, 2b4ho2b5he), cultured mouse astrocytes, and post-mortem human white matter; polysomal profiling of forebrain and a daily-injection trial of an eIF2B activator-class compound; NOT a WWOX system",
      "genotype": "Eif2b5 Arg191His and Eif2b4 Arg484Trp (homozygous or crossed); no WWOX",
      "endpoint": "polysome-associated mRNAs, ATF4-regulated transcripts, neuroscore, balance beam, gait, astrocyte and myelin markers, drug levels in blood and brain"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31402619.json",
+     "entry": 1,
+     "receipt": "FTR-20261021-31402619-01",
+     "what_changed": "OVERSHOOT repaired: the proposition attributed to the authors a transcript-level reading of the 176 mRNAs and generalised to 'polysome profiling by itself does not separate translational from transcript regulation'. The quote concerns the 33 mRNAs flagged by distribution; the 176 are read by the authors as altered synthesis; the paper adds its own separating controls. The narrowing now holds only for the 176-mRNA headline and for the absence of any mutant eIF2B protein read. Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+      "triple": 1,
+      "audited_on": "2026-10-22"
+     }
     }
    },
    {
-    "proposition": "The profiling method is a cleared cytoplasmic lysate: 0.5 percent Triton and 0.5 percent deoxycholate, with nuclei, membranes and debris removed by a spin and the supernatant loaded on a sucrose gradient, so any insoluble pool is discarded by design.",
+    "proposition": "Sample preparation as described in the supplementary methods: the forebrain lysate is triturated and centrifuged for 10 minutes at 4 degrees C; the source describes the spin as removing nuclei, membranes and debris at an unstated g-force. Whether an insoluble pool of any protein is retained or lost is NOT stated in the source and is not claimed here.",
     "snippet": "triturated three times with a 23G needle and centrifuged for 10min at 4",
     "anchor": "Supplementary Materials and Methods, Sample preparation",
     "surface": "supplement",
@@ -279,10 +294,25 @@
      "system": "Vanishing white matter (VWM): knock-in mice with missense mutations in eIF2B subunits (2b5ho, 2b4ho2b5he), cultured mouse astrocytes, and post-mortem human white matter; polysomal profiling of forebrain and a daily-injection trial of an eIF2B activator-class compound; NOT a WWOX system",
      "genotype": "Eif2b5 Arg191His and Eif2b4 Arg484Trp (homozygous or crossed); no WWOX",
      "endpoint": "polysome-associated mRNAs, ATF4-regulated transcripts, neuroscore, balance beam, gait, astrocyte and myelin markers, drug levels in blood and brain"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31402619.json",
+     "entry": 2,
+     "receipt": "FTR-20261021-31402619-01",
+     "what_changed": "OVERSHOOT repaired: 'so any insoluble pool is discarded by design' is not in the source and is removed; the quote carries only the spin. Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+      "triple": 2,
+      "audited_on": "2026-10-22"
+     }
     }
    },
    {
-    "proposition": "The paper reports no measurement of the mutant eIF2B protein level or solubility (0 occurrences of 'abundance' or 'eIF2B protein' in the article XML; the supplementary methods list Western blots for eIF2alpha phosphorylation and 4E-BP1 only): the treatment is evaluated by pathway read-outs and function, not by recovery of mutant protein quantity.",
+    "proposition": "The Discussion states the mechanism of the activator class (stabilisation of eIF2B complex formation) with literature citations, not as a measurement of the mutant complex in this paper. ABSENCE CLAIM, established by search and not carried by this quote: no measurement of mutant eIF2B protein level or solubility was found in the article text, figure legends, supplementary methods, the antibody table or the supplementary file captions (supplementary figure images were not opened). Protein read-outs that do exist concern products and pathway state: 4E-BP1 and eIF2alpha phosphorylation immunoblots, an MBP immunoblot (Supplementary Figure 9) and protein-synthesis measurements in astrocytes.",
     "snippet": "ISRIB stabilizes the eIF2B complex formation through interaction with the eIF2Bδ:eIF2Bβ interface33, 34.",
     "anchor": "Discussion, paragraph 6",
     "surface": "body",
@@ -292,6 +322,21 @@
      "system": "Vanishing white matter (VWM): knock-in mice with missense mutations in eIF2B subunits (2b5ho, 2b4ho2b5he), cultured mouse astrocytes, and post-mortem human white matter; polysomal profiling of forebrain and a daily-injection trial of an eIF2B activator-class compound; NOT a WWOX system",
      "genotype": "Eif2b5 Arg191His and Eif2b4 Arg484Trp (homozygous or crossed); no WWOX",
      "endpoint": "polysome-associated mRNAs, ATF4-regulated transcripts, neuroscore, balance beam, gait, astrocyte and myelin markers, drug levels in blood and brain"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31402619.json",
+     "entry": 3,
+     "receipt": "FTR-20261021-31402619-01",
+     "what_changed": "OVERSHOOT repaired: the quote does not carry the negative; the negative stands on a search of the named surfaces and is now declared as such. The inventory 'Western blots for eIF2alpha phosphorylation and 4E-BP1 only' was wrong: Supplementary Figure 9 reports an MBP immunoblot. Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+      "triple": 3,
+      "audited_on": "2026-10-22"
+     }
     }
    },
    {
@@ -419,6 +464,19 @@
     "proposition": "Translational limits stated by the authors: low solubility, human bioavailability needing optimisation, and a soluble derivative reported in a separate study.",
     "snippet": "Additionally, ISRIB has low solubility and its bioavailability in humans needs optimization.",
     "anchor": "Discussion, paragraph 9",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31402619_Abbink2019_PMC6689685.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Vanishing white matter (VWM): knock-in mice with missense mutations in eIF2B subunits (2b5ho, 2b4ho2b5he), cultured mouse astrocytes, and post-mortem human white matter; polysomal profiling of forebrain and a daily-injection trial of an eIF2B activator-class compound; NOT a WWOX system",
+     "genotype": "Eif2b5 Arg191His and Eif2b4 Arg484Trp (homozygous or crossed); no WWOX",
+     "endpoint": "polysome-associated mRNAs, ATF4-regulated transcripts, neuroscore, balance beam, gait, astrocyte and myelin markers, drug levels in blood and brain"
+    }
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. For the 176 mRNAs with altered level of polysome association the authors ignored the distribution between monosome and polysome fractions and read the result as altered synthesis of the encoded proteins; this is the headline analysis of the paper, and it is the one that says nothing about the mutant eIF2B protein itself.",
+    "snippet": "We focused on differences in mRNA levels within the polysome fractions, without taking into account their distribution between monosome and polysome fractions. We identified 176 mRNAs with altered level of polysome association in 2b5ho compared to WT forebrain (115 up and 61 down, Data S3), indicating altered synthesis of the encoded proteins.",
+    "anchor": "Results, Increased expression of ATF4-driven transcriptome, paragraph 2",
     "surface": "body",
     "artifact": "files/fulltext/PMID31402619_Abbink2019_PMC6689685.xml",
     "panel_text_relation": "text_only",

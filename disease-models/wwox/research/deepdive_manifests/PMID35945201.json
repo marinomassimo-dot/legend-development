@@ -325,11 +325,25 @@
    },
    {
     "proposition": "Sex dependence of the heterozygous survival benefit: about 5 percent of males versus 40 percent of females survive past P40.",
-    "snippet": "By contrast, the Tsc1-cKO;Raptor-cHet male population steadily declined and only 5% of mice survived past P40",
+    "snippet": "While Tsc1-cKO;Raptor-cHet males and females had identical median survival, the length of lifespan extension was sex-dependent. After P26, the surviving female population stabilized with 40% of Tsc1-cKO;Raptor-cHet females surviving past P40 (Supplementary Fig. 5b and Supplementary Table 1). By contrast, the Tsc1-cKO;Raptor-cHet male population steadily declined and only 5% of mice survived past P40",
     "anchor": "Results / Genetic reduction of Raptor extends lifespan",
     "surface": "body",
     "artifact": "files/fulltext/PMID35945201_Karalis2022_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35945201.json",
+     "entry": 4,
+     "what_changed": "Quote widened to the contiguous passage that carries the females at 40 percent beside the males at 5 percent; proposition unchanged.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 4,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "Heterozygous Raptor loss gives an intermediate phenotype, not normalisation, for architecture, hypertrophy and myelin.",
@@ -373,11 +387,25 @@
    },
    {
     "proposition": "Statistical unit: the calcium comparison uses 20 culture wells from 6-7 preparations for the per-culture panel and 800 neurons per genotype for the per-neuron panels.",
-    "snippet": "n = 20 culture wells from 6 WT and 7 KO and KO;Het independent culture preps.",
+    "snippet": "k Mean ± SEM Ca2+ transient frequency per culture. Dots represent values from individual cultures. n = 20 culture wells from 6 WT and 7 KO and KO;Het independent culture preps. One-way ANOVA, p < 0.0001, F(2, 57) = 15.82; WT vs KO, ****p < 0.0001; WT vs KO;Het, *p = 0.0178; KO vs KO;Het, *p = 0.0226; Sidak’s multiple comparisons tests. l Scatter dot plot of Ca2+ transient frequency per neuron. n=800 neurons per genotype.",
     "anchor": "Fig. 7 legend (k)",
     "surface": "body",
     "artifact": "files/fulltext/PMID35945201_Karalis2022_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35945201.json",
+     "entry": 10,
+     "what_changed": "Quote widened to carry both the per-culture n and the 800 neurons per genotype; proposition unchanged.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 10,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "Seizures persisted after postnatal shRNA treatment.",
@@ -397,19 +425,47 @@
    },
    {
     "proposition": "Fig 9e statistics: KO + shRptor versus KO + shCtrl is not significant (P = 0.4833) and versus wild type is also not significant (P = 0.4833); n = 6 per group.",
-    "snippet": "Tsc1-KO+shCtrl vs Tsc1-KO+shRptor, p = 0.4833",
+    "snippet": "n = 6 animals per condition. Kruskal–Wallis, p = 0.0114; WT+shCtrl vs WT+shRptor, p > 0.9999; WT+shCtrl vs Tsc1-KO+shCtrl, **p = 0.0077; WT+shCtrl vs Tsc1-KO+shRptor, p = 0.4833; Tsc1-KO+shCtrl vs Tsc1-KO+shRptor, p = 0.4833",
     "anchor": "Fig. 9 legend (e)",
     "surface": "body",
     "artifact": "files/fulltext/PMID35945201_Karalis2022_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35945201.json",
+     "entry": 13,
+     "what_changed": "Quote widened to the legend passage carrying both p = 0.4833 comparisons and n = 6 per condition; proposition unchanged.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 13,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
-    "proposition": "Cell-of-origin of the myelin change is not established: Emx1-Cre also targets oligodendrocytes, and the non-cell-autonomous route is offered as hypothesis.",
-    "snippet": "Therefore, we hypothesize that the increased MBP expression observed here was likely a result of Raptor reduction in Tsc1-cKO neurons, which led to a non-cell-autonomous increase in cortical myelination.",
+    "proposition": "Cell-of-origin of the myelin change is not established: it was previously shown that Rptor deletion from oligodendrocytes reduces myelination, and the authors offer, as a hypothesis, that Raptor reduction in Tsc1-cKO neurons led to a non-cell-autonomous increase in cortical myelination. (Emx1-Cre also targeting some glial cells including oligodendrocytes is stated in the sentence before and is not quoted.)",
+    "snippet": "It was previously shown that Rptor deletion from oligodendrocytes reduces myelination69,72. Therefore, we hypothesize that the increased MBP expression observed here was likely a result of Raptor reduction in Tsc1-cKO neurons, which led to a non-cell-autonomous increase in cortical myelination.",
     "anchor": "Results / Postnatal Raptor reduction",
     "surface": "body",
     "artifact": "files/fulltext/PMID35945201_Karalis2022_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35945201.json",
+     "entry": 14,
+     "what_changed": "Quote widened to include the prior report that Rptor deletion in oligodendrocytes reduces myelination; the Emx1-Cre glial-expression sentence is stated in the proposition as unquoted because quoting it would duplicate entry 12.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT (span)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 14,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "The Tsc1 het cultures do not show hyperactivity; the model needs complete Tsc1 loss.",
@@ -474,12 +530,26 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Fig 4c-d (220 dpi page 6): median survival KO about P18-19, KO;Het about P24-25 with 26 percent alive at P40, KO;Raptor-KO about 100 percent (16 of 17) alive at P40; Rictor arms do not change survival.",
+    "proposition": "Fig 4c-d (220 dpi page 6): median survival KO about P18-19, KO;Het about P24-25 with 26 percent alive at P40, KO;Raptor-KO about 100 percent (16 of 17) alive at P40. Rictor arms (text, entry 26): heterozygous Rictor loss did not change survival, homozygous Rictor loss shifted the median survival slightly from P18 to P20 and no Tsc1-cKO;Rictor-cKO animal survived past P24; so the Rictor arms are not without effect on survival, only far smaller than the Raptor arms.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] c lines Tsc1KO;RptorHet (42) crosses 50 percent near P25; Tsc1KO;RptorKO (17) stays near 100",
     "anchor": "Figure 4, page 6 at 220 dpi",
     "surface": "figure",
     "artifact": "files/figure_renders/PMID35945201_r3c/p06_220dpi.png",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35945201.json",
+     "entry": 22,
+     "what_changed": "Auditor: \"Rictor arms do not change survival\" is contradicted by the text (median P18 to P20). Proposition corrected and the text sentence anchored in new entry 26.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 22,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "Fig 3c-d,g (130 dpi page 5): p-S6 stays above 100 percent of control until Raptor falls under about 20 percent while p-Akt rises sharply below 20 percent; the KO;Het DIV 18 box shows p-S6 about 130 percent and p-Akt about 70 percent of control.",
@@ -492,12 +562,26 @@
     "qualifies_needle": "We observed a non-linear relationship whereby"
    },
    {
-    "proposition": "Fig 1 and Fig 2 (130 dpi pages 3-4): Tsc1 loss raises p-S6 and lowers p-Akt; rapamycin abolishes p-S6 and lowers p-Akt further; Rictor loss leaves p-S6 elevated; Raptor loss normalises p-S6 and p-Akt at DIV 14 (ns for p-S6).",
+    "proposition": "Fig 1 and Fig 2 (130 dpi pages 3-4): Tsc1 loss raises p-S6 and lowers p-Akt; rapamycin abolishes p-S6 and lowers p-Akt further; Rictor loss leaves p-S6 elevated. Fig 2f (Tsc1 and Raptor both deleted, DIV 14) shows p-S6 not different from control (p-S6 p = 0.6616, ns) but p-Akt Ser473 (p = 0.0283) and p-4EBP1 T37 (p = 0.0146) different from control, so Raptor loss does NOT normalise p-Akt (or p-4EBP1) at DIV14 (entry 27).",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 1f p-S6 KO ~250 percent ; rapa ~0; Fig 2f p-S6 ns",
     "anchor": "Figures 1-2, pages 3-4 at 130 dpi",
     "surface": "figure",
     "artifact": "files/figure_renders/PMID35945201_r3c/p03_130dpi.png",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35945201.json",
+     "entry": 24,
+     "what_changed": "Auditor: Raptor loss does not normalise p-Akt at DIV14 (Fig 2f p-Akt * with p = 0.0283; p-S6 ns). Proposition corrected and the legend values anchored in new entry 27.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "triple": 24,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "Fig 8 (130 dpi page 13): shRptor lowers p-S6 and soma size in KO neurons in cortex and CA1 (cumulative distributions, n neurons pooled from 6 mice; KO + shRptor cortical p-S6 below wild type).",
@@ -505,6 +589,22 @@
     "anchor": "Figure 8, page 13 at 130 dpi",
     "surface": "figure",
     "artifact": "files/figure_renders/PMID35945201_r3c/p13_130dpi.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Text: heterozygous loss of Rictor did not affect survival of Tsc1-cKO mice, homozygous loss only slightly shifted the median survival from P18 to P20, and no Tsc1-cKO;Rictor-cKO animal survived past P24.",
+    "snippet": "heterozygous loss of Rictor did not affect the survival of Tsc1-cKO mice and homozygous loss of Rictor only slightly shifted the median survival from P18 to P20, with no Tsc1-cKO;Rictor-cKO animals surviving past P24",
+    "anchor": "Results / Genetic reduction of Raptor, but not Rictor",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35945201_Karalis2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 2f legend: in Tsc1;Raptor double-deleted hippocampal cultures at DIV 14 (n = 9 wells from 3 cultures per genotype) Tsc1 and Raptor are lowered (p < 0.0001), p-S6 Ser240/244 is not different (p = 0.6616), p-4EBP1 T37 differs (p = 0.0146) and p-Akt Ser473 differs (p = 0.0283), by two-sided Welch t tests.",
+    "snippet": "p-S6 Ser240/244 p = 0.6616; p-4EBP1 T37 *p = 0.0146; p-Akt Ser473 *p = 0.0283; two-sided Welch’s t tests.",
+    "anchor": "Figure 2 legend (f)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35945201_Karalis2022_PMC_r2.xml",
     "panel_text_relation": "text_only"
    }
   ],

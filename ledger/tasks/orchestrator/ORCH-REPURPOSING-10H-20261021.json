@@ -64,18 +64,21 @@
   "roster": {
    "scientist-a": {
     "group": "R1",
-    "agentId": "ad55600ec51e52a43",
+    "agentId": "a3c29605f071db51b",
     "task": "REPURP-10H-P4-DEEP-A-20261022",
-    "state": "P4 deep-recovery cards (relay agent started 22:3xZ)",
+    "state": "P4 deep-recovery cards, worktree p4-a; R1 audit repair message delivered 23:1xZ (priority over cards)",
     "previous_agents": [
      "ab601f2e19d3a1d37"
     ]
    },
    "scientist-b": {
     "group": "R2",
-    "agentId": "a85b13d3c3c5f7071",
+    "agentId": "a9ce64fa724e5f4ef",
     "task": "REPURP-10H-R2-B-20261021",
-    "state": "RUNNING (measured 22:16Z via ListAgents, 16 min in; own worktree and branch present)"
+    "state": "R2 CLOSURE RELAY (first agent a85b13d3c3c5f7071 read 26 papers and ran out of context before closing; branch task/repurp-10h-r2-b not landed)",
+    "previous_agents": [
+     "a85b13d3c3c5f7071"
+    ]
    },
    "scientist-c": {
     "group": "R3",
@@ -88,9 +91,13 @@
    },
    "scientist-d": {
     "group": "R4",
-    "agentId": "aba610f58ef0e9b25",
-    "task": "REPURP-10H-R4-D-20261021",
-    "state": "RUNNING (measured 22:16Z via ListAgents, 16 min in; own worktree and branch present)"
+    "agentId": "a1b21908680566c50",
+    "task": "REPURP-10H-R4b-D-20261022",
+    "state": "R4b relay (started 23:4xZ)",
+    "previous_agents": [
+     "aba610f58ef0e9b25",
+     "a953e6e336bf10780"
+    ]
    }
   },
   "restart_rule": "a Scientist whose agent has stopped is resumed with SendMessage to its agentId: if it stopped on a rate limit, continue from durable state; if its lot is finished, hand it the next unclaimed studies of its group from the persisted selection; never start a duplicate agent for an actor that is still running",
@@ -116,22 +123,62 @@
    {
     "t": "2026-10-21T22:40Z",
     "event": "scientist-a closed R1 (19 readings, landed 177721a4, receipts 721 chained b9e1e2fb); handed roadmap P4 deep-recovery cards in a fresh agent; blind audit of the R1 owed triples dispatched; candidates CC-20261021-SCIENTIST-A-R1-PROTEOSTASIS-01 and ...-C-R3-A51-ATTRIBUTION-01 held until their audits return"
+   },
+   {
+    "t": "2026-10-21T22:50Z",
+    "event": "scientist-d closed R4 (22 readings; design tables A 14 rows, B 7 rows); 22 receipts recorded; handed P4 early-benefit cards; R4 audit owed on ten manifests, queued behind the R1 and R3 audits"
+   },
+   {
+    "t": "2026-10-21T23:00Z",
+    "event": "R3 blind audit returned (deeb737c): 36 percent of audited triples overshoot. Dose proportionality of the multi-kinase inhibitor is not reproduced by the printed table either way (supralinear 1-21 mg; 1.27 for a 2.0 dose ratio 21-42 mg). Repair routed to scientist-c with priority; A51 candidate held"
+   },
+   {
+    "t": "2026-10-21T23:20Z",
+    "event": "CORRECTION: the roster had scientist-a's and the R1 auditor's agent ids swapped (the two were launched in one message and I paired the returned ids in the wrong order). The R1 repair message was first sent to the auditor ad55600ec51e52a43, which ignored it as out of its read-only perimeter and replied 'clean'; no file was changed. Re-sent to the correct agent a3c29605f071db51b. Lesson: pair returned agent ids to launches by the description in the result, never by position, and verify with ListAgents before the first message to a restarted actor"
+   },
+   {
+    "t": "2026-10-21T23:30Z",
+    "event": "scientist-b exhausted context after 16+7 readings and 3 WWOX-direct re-reads; R2 not landed. Closure relay started: apply audit wording repairs (Cheng 6/6, Hussain 4 supported 1 overshoot, Steinberg 4/4), self-eval, task_close. Candidate CC-20261021-SCIENTIST-B-R2-DLMECH170-01 held until landed. Scientist-c relay landed R3b (58e66825) and is in repair branch task/repurp-r3-repair-c; scientist-d on P4 early cards worktree p4-early-d"
+   },
+   {
+    "t": "2026-10-21T23:40Z",
+    "event": "first candidate cards landed (cards_early/, 9 packets and 9 cards by the unmodified bridge, seven bridge gaps listed); auditor dispatched for the ten R4 manifests and the cards; Harness dispatched on bridge gaps (no-change sign, translation fields); scientist-d relay R4b on the four unread candidates plus new precedents"
    }
   ],
   "audits": {
    "R3": {
     "agentId": "ab9cbdf9ae6a65a7b",
     "file": "page_adjudications/locator_audit_R3_20261022.md",
-    "state": "RUNNING",
-    "scope": "40665325 PK table and Fig 4; 38147624 Fig 6I and Fig 5 schedule; 42310739 duplicate F; 40156289 Fig 1B; then 35945201, 41980417"
+    "state": "RETURNED: 129 triples, 78 supported, 46 overshoot (29 span-only, 22 substantive remain), 4 undershoot, 1 unverifiable",
+    "scope": "40665325 PK table and Fig 4; 38147624 Fig 6I and Fig 5 schedule; 42310739 duplicate F; 40156289 Fig 1B; then 35945201, 41980417",
+    "repair": "message sent to scientist-c relay agent aa7339b0af1c43595 with priority over new readings; candidate CC-20261021-SCIENTIST-C-R3-A51-ATTRIBUTION-01 HELD from propagation"
    },
    "R1": {
-    "state": "RUNNING",
+    "state": "RETURNED: 95 triples, 76 supported, 15 overshoot, 2 undershoot, 2 unverifiable; all three narrowing triples (PB-4) overshoot",
     "scope": "PB-4 narrowing (polysome profiling 31402619); 42157447 Figs 6 and 8; 38731820 Fig 6 sample size; 32023956 Fig 1B text-versus-panel",
-    "agentId": "a3c29605f071db51b",
-    "file": "page_adjudications/locator_audit_R1_20261022.md"
+    "agentId": "ad55600ec51e52a43",
+    "file": "page_adjudications/locator_audit_R1_20261022.md",
+    "repair": "message to scientist-a agent a3c29605f071db51b; candidate CC-20261021-SCIENTIST-A-R1-PROTEOSTASIS-01 HELD"
+   },
+   "R4": {
+    "state": "TO_DISPATCH",
+    "scope": "42481851 Fig 4 panel a caption versus content; 39625912; 33180985; 35841234; 41784472; 41891667; 41999155; 37537625; 39726432; 37638552"
+   },
+   "R4_and_early_cards": {
+    "agentId": "ab6f6eda93d6e9018",
+    "file": "page_adjudications/locator_audit_R4_cards_20261022.md",
+    "state": "RUNNING",
+    "scope": "ten R4 manifests + nine early-benefit cards (priorities: published-individuals sentence on the diet card; shared-origin on the vigabatrin card; dependency on the unaudited R2 narrowing on the T-type card)"
    }
-  }
+  },
+  "harness": {
+   "bridge_gaps": {
+    "agentId": "aa2c22a1eb7c2ebdb",
+    "task": "PLAN-BRIDGE-GAPS-20261022",
+    "state": "RUNNING"
+   }
+  },
+  "id_pairing_rule": "pair returned agent ids to launches by the description in each launch result, never by position; verify with ListAgents before the first message to a restarted actor"
  },
  "DECISIONS_TAKEN": [
   {
@@ -140,6 +187,14 @@
    "alternatives_rejected": "ten one-shots (ten ids to track and one missed fire loses an hour)",
    "reversibility": "high",
    "how_to_revert": "CronDelete 4b6b5252"
+  }
+ ],
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "agent ids swapped in the roster",
+   "default": "recorded the error, re-sent to the correct agent, left the auditor's read-only boundary as the safeguard that held",
+   "why_safe": "the auditor refused to act; git status clean; no manifest or candidate touched",
+   "different_if": "an auditor with write scope would have edited manifests it must not touch"
   }
  ]
 }

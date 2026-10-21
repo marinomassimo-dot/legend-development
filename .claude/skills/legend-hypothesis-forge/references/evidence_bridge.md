@@ -13,7 +13,7 @@ python3 framework/scripts/test_repurposing_bridge.py
 
 Input schema version 1 requires candidate id/name, one route, one disease_assertion and
 an array of drug_assertions (empty means abstention). Each assertion declares id, target_id,
-endpoint, direction (INCREASE/DECREASE/UNKNOWN), source, locator, epistemic_status and context.
+endpoint, direction (INCREASE/DECREASE/NO_CHANGE/UNKNOWN), source, locator, epistemic_status and context.
 The context contains disease_id, genotype, species, cell_type and developmental_stage;
 UNKNOWN is explicit and prevents a resolved comparison. Reading depth defaults to UNKNOWN.
 A complete_fulltext_read declaration requires a receipt reference but the tool does not
@@ -75,3 +75,15 @@ response, a query failure and incomplete coverage remain distinct.
 The example uses fictitious identifiers and assertions. It demonstrates plumbing, not WOREE
 evidence. No ZIP recovery, external installation, live query or experimental validation is
 claimed. To disable the increment, omit the optional command and continue the existing forge.
+
+## Reported null, translation fields, roadmap rows (2026-10-22)
+
+`NO_CHANGE` is a REPORTED null effect; `UNKNOWN` is a cell nobody measured. On a comparable cell
+NO_CHANGE yields `NO_EFFECT_REPORTED` (never OPPOSES/REINFORCES, never pooled with them: beside a
+positive it is CONFLICTING); in a non-comparable cell it stays UNRESOLVED but the reason says it was
+a measured null. A disease assertion with NO_CHANGE is UNRESOLVED. An optional `translation` object
+(keys `pediatric_suitability`, `cns_exposure`, `interactions`, `access`, `time_to_benefit`,
+`functional_rescue`; `access` means time to access) fills the card's `translation`; each defaults to
+UNKNOWN, unknown keys are refused. If a packet carries `p4_roadmap_fields`, the two rows
+`indication_and_transfer` and `verification_scope` must be nonempty strings (UNKNOWN allowed); the
+block is validated, never rewritten. Packets without these inputs build exactly as before.
