@@ -1,0 +1,469 @@
+{
+ "schema_version": 2,
+ "pmid": "41999155",
+ "doi": "10.1002/epi.70253",
+ "pmcid": "PMC13360919",
+ "receipt": "FTR-20261021-41999155-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-d_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS from Europe PMC REST on the first request; figures and PDF from the PMC open-data bucket."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Design extraction for the group R4 question, not a lead hunt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A precedent in another disease supplies no WWOX lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for WWOX by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The reader cannot audit their own locators; audit declared OWED in the analysis note."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Single-site academic n-of-1 trial of a repurposed drug in one child with a KCNC1 gain-of-function variant (a different mechanism, ion-channel gain of function, from WWOX loss); NOT WWOX EVIDENCE. Funded by a national rare-disease clinical-trials network."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "\"n-of-1\"[Title/Abstract] AND (KCNC1[Title/Abstract] OR fluoxetine[Title/Abstract])",
+    "count": 3,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "\"single patient trial\"[Title/Abstract] AND (repurpos*[Title/Abstract] OR \"drug repurposing\"[Title/Abstract])",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "Title/abstract-level counts license 'no paper is indexed', never 'this was never measured'."
+ },
+ "multihop": {
+  "references_enumerated": 49,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted from the JATS (ref elements); no WWOX-directed reference identified; references not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41999155 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "No record in the registry surfaces on this query; a statement about that query only, not about what the laboratory knows."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction in the ESummary record consulted on 2026-10-21; dependency screen block follows.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 49,
+   "references_screened": 46,
+   "references_with_doi": 46,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41999155_Jha2026_PMC.xml",
+   "sha256": "1e7a8ba2efeaab568a2b650ee870b096751df00bd6f7f0951ca313f5b8c965c7",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML; body, tables cell-wise, figure legends.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13360919/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "1e7a8ba2efeaab568a2b650ee870b096751df00bd6f7f0951ca313f5b8c965c7"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41999155_r2/PMC13360919.1.pdf",
+   "sha256": "8694fd57e10684b03be1168e83f7947f167558ebb49235a8b6419c5452e461fb",
+   "kind": "article_binary",
+   "note": "PMC open-data bucket PDF; source of the page render.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13360919.1/PMC13360919.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/page_renders/PMID41999155/PMC13360919.1_p8-08.png",
+   "sha256": "f046c51712842aaff97bf3ab44e5d7f056a96c5bb067518f854363b2546c4b83",
+   "kind": "figure",
+   "note": "PDF page 8 (Figure 2 ITS plot, Tables 3 and 4), 400 dpi render; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm page render",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID41999155_r2/PMC13360919.1.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 400 -f 8 -l 8 -png <pdf> <out>"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID41999155_r2/EPI-67-3644-g002.jpg",
+   "sha256": "a2b3c95fa19a6e5305101841dd0c1f74b55b4dd2dc6a597545f65d54d25c7cc1",
+   "kind": "figure",
+   "note": "Figure 1 (trial timeline), native 709x179 JPEG, about 101 ppi; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13360919.1/EPI-67-3644-g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID41999155_r2/EPI-67-3644-s001.docx",
+   "sha256": "38313a6555719320e565168cb3f35291c9814be4fbe7b391efd4aa4c2c1264c4",
+   "kind": "supplement_binary",
+   "note": "Data S1: supplemental figure S1, model-selection appendix A, interview guide appendix B (docx).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13360919.1/EPI-67-3644-s001.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID41999155_r2/EPI-67-3644-s001.txt",
+   "sha256": "b1c006bd532c464c3d22e8d1b35d47f9970bf34b26c3d73d8507cab2fc98ada1",
+   "kind": "supplement_text",
+   "note": "Text of Data S1 by docx_to_text.py.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "docx_to_text",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID41999155_r2/EPI-67-3644-s001.docx",
+    "extractor": {
+     "name": "framework/scripts/docx_to_text.py",
+     "version": "repository main 5dd4283f",
+     "call": "python3 framework/scripts/docx_to_text.py --out <txt> <docx>"
+    }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID41999155/s001media/image1.png",
+   "sha256": "5fbd2ffdef13b1df876c325cfd500cb32649c5ca6fce2eb6ce2714fd8691fe67",
+   "kind": "figure",
+   "note": "Figure S1 (six ITS panels), embedded PNG of Data S1; opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "zip member extraction",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID41999155_r2/EPI-67-3644-s001.docx",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "3.12",
+     "call": "zipfile.ZipFile(<docx>).read(\"word/media/image1.png\")"
+    }
+   }
+  },
+  {
+   "path": "files/supplement/PMID41999155_r2/EPI-67-3644-s002.docx",
+   "sha256": "ed7d9368f13a285585eaa1cdd8aaa8dcdd4a2e054d54ef34fb8d4b40d51efc88",
+   "kind": "supplement_binary",
+   "note": "Data S2: abbreviated summary protocol of the trial (docx, about 470 thousand characters including reference-manager field code).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13360919.1/EPI-67-3644-s002.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID41999155_r2/EPI-67-3644-s002.txt",
+   "sha256": "9150a2658dbe4b537d1b1c49e942c6a8f4916ecad96b0257d709aa1eb4218128",
+   "kind": "supplement_text",
+   "note": "Text of Data S2 by docx_to_text.py; synopsis, endpoints and statistical considerations read, other sections not read.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "docx_to_text",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/supplement/PMID41999155_r2/EPI-67-3644-s002.docx",
+    "extractor": {
+     "name": "framework/scripts/docx_to_text.py",
+     "version": "repository main 5dd4283f",
+     "call": "python3 framework/scripts/docx_to_text.py --out <txt> <docx>"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Design: randomised, blinded transition moments with a fixed placebo, active, placebo sequence; the sequence itself was not randomised.",
+    "snippet": "Transition moments (i.e., the active start and stop moments and dose titrations) were randomized and blinded, but the treatment sequence was fixed.",
+    "anchor": "Methods, Trial design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41999155_Jha2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Design: an adaptive decision point at week 29 reviewed data graphically with the family while blind to allocation.",
+    "snippet": "The study design included an adaptive decision point involving a blinded graphical review of study data with the participant's family at week 29.",
+    "anchor": "Methods, Trial design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41999155_Jha2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Rationale: a non-stable developmental baseline was expected, with delayed onset and long drug half-life ruling out multiple crossovers.",
+    "snippet": "we expected the participant to display ongoing developmental gains over time, although the rate and shape of developmental progress at study outset were unclear",
+    "anchor": "Methods, Design rationale",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41999155_Jha2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The primary instrument was a parent-completed questionnaire never studied as a trial endpoint nor in profound disability, with no minimal clinically important difference.",
+    "snippet": "However, the EMQ has not been previously studied as a trial endpoint nor in populations with profound disabilities, with no prior minimal clinically important difference established.",
+    "anchor": "Methods, Motor development",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41999155_Jha2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Primary result: a 6.61-point gain with a credible interval that includes zero.",
+    "snippet": "The intervention was associated with a 6.61‐point increase in motor development on the EMQ (95% CrI = −.53 to 14.78), with no evidence of a time by treatment interaction",
+    "anchor": "Results, Motor development",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41999155_Jha2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The child had a positive baseline developmental slope of about half a point a week.",
+    "snippet": "The EMQ total model estimates indicated a significant positive baseline rate of change in motor development (time effect = .52 points per week, 95% CrI = .28–.91).",
+    "anchor": "Results, Motor development",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41999155_Jha2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Among seven modelled outcomes the one with an interval excluding zero was parent-rated purposeful hand movements; nystagmus and communication were null.",
+    "snippet": "Data suggested that treatment was associated with improvement in purposeful hand movements (treatment effect = −.65, 95% CrI = −1.27 to −.003) but not nystagmus (.05, 95% CrI = −1.14 to 1.21) or communication (−.19, 95% CrI = −1.20 to .85).",
+    "anchor": "Results, Individualized outcome tracking",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41999155_Jha2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Neurophysiology during treatment: more epileptiform discharges on EEG and higher amacrine-cell ERG activity; the authors read this as a shift toward excitation.",
+    "snippet": "An increase/worsening of epileptiform discharges on EEG was detected in multiple brain regions while on active treatment, compared to an EEG prior to treatment.",
+    "anchor": "Results, Clinical assessments",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41999155_Jha2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors cannot say whether the EEG change is the drug, age-related progression or fluctuation.",
+    "snippet": "It is unclear whether the EEG changes represent a fluctuation in, or progression of, the underlying condition with age",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41999155_Jha2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Withdrawal period: six weeks of irritability in the second placebo period, with other causes not excluded.",
+    "snippet": "There was a notable period of irritability during the second placebo period; this was potentially associated with withdrawal/discontinuation effects of the medication, which resolved completely after 6 weeks.",
+    "anchor": "Results, Adverse events",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41999155_Jha2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Authors: credible intervals crossed zero for several outcomes so benefit is not certain.",
+    "snippet": "CrIs crossed zero for several outcomes; therefore, benefits of treatment are not certain.",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41999155_Jha2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Authors: knowledge of the order of periods could have introduced expectancy bias.",
+    "snippet": "Knowledge of the order of treatment periods (placebo–fluoxetine–placebo) could have introduced a degree of expectancy bias",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41999155_Jha2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Authors: a design with multiple crossovers could have increased confidence given the rapid response.",
+    "snippet": "Given the (unexpected) rapid response to treatment, an n‐of‐1 design with multiple treatment crossovers (i.e., ABAB) could have increased confidence in the results.",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41999155_Jha2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Authors: an unstable developmental baseline may have reduced power to detect treatment change.",
+    "snippet": "the presence of an unstable baseline trend in development, demonstrated by the effect of time in EMQ score modeling, may have reduced the model's power to detect clear treatment‐related changes.",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41999155_Jha2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Authors: gross-motor subscale may have hit a floor; cognitive and adaptive scales were too infrequent to model.",
+    "snippet": "patterns on the MSEL and VABS should only be interpreted descriptively, as they were not sufficiently frequent to detect change.",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41999155_Jha2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Time to access: design, regulatory no-objection letter and ethics approval took about six months for one child.",
+    "snippet": "The study design and start‐up procedures were completed within 6 months, including protocol development (month 1), regulatory approval (NOL; month 2), and research ethics approval (months 4 and 5).",
+    "anchor": "Methods, Trial design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41999155_Jha2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Post-trial follow-up was an uncontrolled clinical continuation.",
+    "snippet": "Following completion of the trial and a period of observation off treatment, the family elected to resume fluoxetine as part of clinical care.",
+    "anchor": "Results, Follow-up",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41999155_Jha2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Authors translate the effect as about three months of motor development beyond the child's own baseline rate.",
+    "snippet": "Treatment was associated with approximately 3 months of increased motor development beyond the baseline rate of change in a child without seizures.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41999155_Jha2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 2: the mean weekly EMQ total did not fall after withdrawal (-109 on the later active period, -108 in the second placebo period; baseline -133).",
+    "snippet": "Total | −133 | −120 (4.7) | −114 (3.9) | −109 (3.4) | −108 (5.7)",
+    "anchor": "Table 2, EMQ Total row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41999155_Jha2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplement model comparison: the model preferred by leave-one-out assumes the outcome returns to the pre-intervention level and slope after treatment ends.",
+    "snippet": "This model assumes the outcome returns to the pre-intervention level and slope after treatment cessation.",
+    "anchor": "Data S1, Appendix A, Model A",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41999155_r2/EPI-67-3644-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Protocol synopsis: the primary endpoint is defined as a significant (p below 0.05) treatment-related improvement on the parent-reported EMQ after adjusting for time in a linear model.",
+    "snippet": "The primary endpoint is defined by a significant (p<0.05) treatment-related improvement in motor development on the Early Motor Questionnaire (EMQ) (a parent report measure), after adjusting for time associated effects in a linear model.",
+    "anchor": "Data S2, Protocol synopsis, Endpoints",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41999155_r2/EPI-67-3644-s002.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Protocol statistics section: primary analysis graphical review then Bayesian regression of treatment, time and their interaction.",
+    "snippet": "Subsequently, we will use Bayesian regression analysis, including variables for treatment, time, and time*treatment, to determine whether a significant effect of treatment on motor development",
+    "anchor": "Data S2, Statistical considerations",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41999155_r2/EPI-67-3644-s002.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Protocol: the week 29 interim review is graphical, with no statistical tests, and may end the trial for clear benefit or clear no benefit.",
+    "snippet": "No statistical tests will be conducted at this stage.",
+    "anchor": "Data S2, Planned interim analyses",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41999155_r2/EPI-67-3644-s002.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 2: the weekly total EMQ rose in the first weeks, stepped up near the first randomised transition at about week 9, stayed on a plateau of about -108 to -112 through the later phases and did not fall after the second transition near week 35; the last observations were the highest.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 observed dots and posterior median: baseline about -133 at week 1 rising to about -125 by week 7; step to about -116 around week 9 (first dashed line at about week 8.5); plateau about -112 to -110 to week 21 (blue dashed line); about -108 to -105 after week 22; second dashed line at about week 34.5; after it observations about -111, -116, -103, -103, -112, -103 with the posterior median ending near -108; shaded credible band about 15 points wide.",
+    "anchor": "Figure 2, page 8 render at 400 dpi",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID41999155/PMC13360919.1_p8-08.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig 1: timeline of the fixed placebo, random start, low dose, change, high dose, stop, placebo sequence with measurement visits at weeks 1, 5, 9, 13, 17, 21, 25, 29, 33 and 37.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 timeline bar: Placebo (to 8 weeks), Random start, Low dose, Change, High dose, Stop, Placebo to about 40 weeks; below the axis visits at week 1 (MSEL, VABS, CGI-S), 5 (CGI-I), 9, 13 (MSEL VABS CGI-I), 17, 21, 25, 29 (MSEL, VABS, CGI-S), 33, 37 (MSEL, VABS, CGI-S).",
+    "anchor": "Figure 1 (timeline)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41999155_r2/EPI-67-3644-g002.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Fig S1: after withdrawal, the parent-rated nystagmus and communication scores returned to baseline values (6 and 5) from lower values during active treatment, while purposeful hand movements stayed at about 4.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S1 panels D, E, F (MYMOP-2): communication about 5 at baseline, about 4 during treatment, 3 in weeks about 32-35, then back to 5 after the second dashed line; purposeful hand movements about 5 to 6 at start, about 4 thereafter and unchanged after withdrawal; nystagmus 6 at baseline, 5 during treatment, 3 in weeks about 32-35, then 6 after withdrawal. Panels A-C EMQ perception-action and fine-motor rising throughout, gross motor drifting downward.",
+    "anchor": "Supplementary Figure S1",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID41999155/s001media/image1.png",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13360919/fullTextXML returned HTTP 200 with a JATS body on 2026-10-21; the declared article_text artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure attestation."
+ }
+}
