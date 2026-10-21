@@ -119,15 +119,21 @@ re-read of this corpus can produce it.
 Figure 1 panels G, H, I and M, read at 300 dpi (`fig1_…_1993x1968.png`): the **MBP-promoter**
 construct `AAV9-MBP-hWWOX-WPRE` (4 × 10¹⁰ vg, *n* = 5) produced **no benefit on any endpoint it
 was measured on** — survival identical to `KO+RI` (both arms at 0 % by ~day 16–17, panel G), body
-weight tracking `KO+RI` (panel H), and P14 glucose ≈ 52 mg/dL against `KO+RI` ≈ 58 and WT ≈ 137,
-with the bracket printed **`ns`** between `KO+RI` and MBP+W and `****` between WT and `KO+RI`
-(panel I). 🔴 **This does not show that oligodendrocytes are useless as a pharmacological target,
+weight far below wild type throughout, the MBP+W series running to ~day 21 at ≈ 5.25 g against
+WT ≈ 12.7 g (panel H), and P14 glucose ≈ 51 mg/dL against `KO+RI` ≈ 58 and WT ≈ 137, with a **long
+`****` bracket spanning the full panel from `WT+RI` to the MBP-treated bar** and a short **`ns`**
+bracket between `KO+RI` and MBP+W (panel I) — so the treated group is significantly **below** wild
+type and **not different from untreated**, which is the stronger form of "no benefit"
+[two clauses corrected 2026-10-21 after a blind audit returned `OVERSHOOT` on manifest entry 45:
+the MBP+W and `KO+RI` weight series had been transposed — it is `KO+RI` that ends, at ~day 19 at
+≈ 4.2 g — and the `****` bracket had been read as WT versus `KO+RI`]. 🔴 **This does not show that oligodendrocytes are useless as a pharmacological target,
 and the card must not be cited as if it did.** Panel M shows WWOX immunoreactivity in cortex as
 **essentially blank in the MBP column** while the synapsin column is strong and cellular
 (manifest entry 17): the construct produced **essentially no detectable protein**, so the
 oligodendrocyte question is **unanswered by this experiment rather than answered negatively**.
 The configuration differs too — the promoter-comparison vectors all carry WPRE and were given at
-4 × 10¹⁰ vg, which is **not** the 4 × 10¹⁰ of Figures 2 and 3 (manifest entry 16) — and panel M
+4 × 10¹⁰ vg, which is **not** the WPRE-free 4 × 10¹⁰ of Figure 2 (manifest entry 16; **Figure 3
+has no 4 × 10¹⁰ dose at all** — corrected in the same audit repair) — and panel M
 images **cortex**, where oligodendrocyte density is lower than in white matter, with no
 corpus-callosum column shown. The authors' own Discussion sentence, *"expression in
 oligodendrocytes alone is insufficient to confer benefit"*, is their interpretation of this
@@ -160,7 +166,7 @@ panel at a stated age.
 | # | figure_or_table | model | control | age | intervention | direction | duration | limits |
 |---|---|---|---|---|---|---|---|---|
 | **W1** | **Figure 3C**, 300 dpi (`fig3_…_1744x1699.png`) | `KO` | `WT+RI` and `KO+RI` | P0 → **P30**, sampled every 5 days | `W` at `LD` **and** `HD` | 🔴 **increase, and NOT dose-graded.** Weight at P30: WT ≈ 17.5 g, **LD ≈ 15.3 g, HD ≈ 15.6 g** — the two treated arms are superimposed. `KO+RI` ends at P15 at ≈ 4.7 g | to P30 | 🔴 **No significance markers are printed on panel C at all** — no asterisk, no `ns`, on any pair. Both treated arms remain slightly below WT at P30 and the panel does not test whether that gap is significant |
-| **W2** | **Figure 3D**, same surface | `KO` | `WT+RI`, `KO+RI` | P0 → **P180** | `W` at `LD` **and** `HD` | **increase, sustained at HD.** WT ≈ 26.9 g and HD ≈ 26.0 g at P180, error bars overlapping throughout. 🔴 **The LD curve ends at ~day 60 at ≈ 21 g** — near the WT value at that age — because the LD animals die, not because the weight fell | HD followed to **180 days**; LD to ~60 days; `KO+RI` to ~15 days | 🔴 **Duration of the LD arm is survival-limited, and the panel must not be read as LD growth failing.** On body weight the low dose is **not** the failure the survival curve shows it to be. No significance markers on panel D either |
+| **W2** | **Figure 3D**, same surface | `KO` | `WT+RI`, `KO+RI` | P0 → **P180** | `W` at `LD` **and** `HD` | **increase, sustained at HD.** WT ≈ 26.9 g and HD ≈ 26.0 g at P180, error bars overlapping throughout. 🔴 **The LD series is TRUNCATED at ~day 60 at ≈ 21 g** — near the WT value at that age — and **the panel states no cause for the truncation**; Figure 3B, the same figure, puts the LD arm at ≈ 27–42 % alive at day 60 and extinct only at ~day 79, so **a series ending is not a cohort ending** [corrected 2026-10-21, blind audit `OVERSHOOT` on manifest entry 41, which had explained the ending as extinction] | HD followed to **180 days**; LD series to ~60 days; `KO+RI` to ~15 days | 🔴 **The panel must not be read as LD growth failing, and must not be read as LD growth succeeding either.** 🔴 **The weight comparison is survivor-conditioned on the LD side and not on the HD side**: Fig 3B puts LD at ≈ 79 % alive at P30 and ≈ 27–42 % at day 60, against 100 % for HD at both ages, so the equality of W1 is between unequal denominators and **could mask a dose effect in either direction**. No significance markers on panel D either |
 | **W3** | **Figure 3E** | `KO` | `WT+RI` **and** `KO+RI` | **P10** | `W` at `LD` **and** `HD` | **partial and not significant against the disease state.** Glucose mg/dL: WT ≈ 130, `KO+RI` ≈ 95 (`*` against WT), LD ≈ 105, HD ≈ 113 — **both treated arms `ns` against WT and `ns` against `KO+RI`** | single timepoint | 🔴 The only glucose panel that still **has** an untreated-KO arm, and in it neither dose is significantly different from untreated. The running text's *"from P10 both doses partially corrected hypoglycemia"* is qualified by this panel (manifest entries 36/37, `panel_qualifies_text`) |
 | **W4** | **Figure 3F** | `KO` | `WT+RI` only | **P20** | `W` at `LD` **and** `HD` | 🟢 **graded — this is the family's genuine dose-response.** WT ≈ 145, **LD ≈ 128 (`*` against WT)**, **HD ≈ 147 (`ns` against WT, `**` against LD)** | single timepoint | 🔴 **No `KO+RI` arm: those animals are dead by P20**, so the comparison is treated-against-wild-type only. This is the one glycaemic measure on which LD and HD separate |
 | **W5** | **Figure 3G** | `KO` | `WT+RI` only | **P30** | `W` at `LD` **and** `HD` | **no difference.** All three groups ≈ 160–170 mg/dL; all printed brackets `ns` | single timepoint | No `KO+RI` arm, same reason. By P30 the dose separation of W4 has closed |
@@ -178,7 +184,7 @@ in it. That gap is an `IPOTESI` to be tested, not a limitation to be waived.
 
 | # | figure_or_table | model | control | age | intervention | direction | duration | limits |
 |---|---|---|---|---|---|---|---|---|
-| **S1** | **Figure 3B**, 300 dpi (`fig3_…_1744x1699.png`), re-inspected at native resolution and measured against the printed axes — **the adjudication panel of §3** | `KO` | **`WT+RI` (*n* = 20) and `KO+RI` (*n* = 10)**, both plotted | ICV at P0–P1; followed to **300 days** | `W` at `LD` (*n* = 20) **and** `HD` (*n* = 30) | 🔴 **increase at both doses, but only HD is durable, and the two are qualitatively different.** Measured off the axes: `KO+RI` first death ~day 9, **0 % by ~day 15**; **`LD` holds 100 % to ~day 18, declines, and reaches 0 % at ~day 78–81**; **`HD` holds 100 % to ~day 24 and plateaus at 76–77 % from ~day 80 through day 300**; `WT+RI` is at 100 % to ~day 45, ≈ 89–90 % to ~day 122, and **≈ 71–72 % from ~day 126 through day 300**. Caption statistics: HD vs WT **p = 0.78**, HD vs LD p < 0.0001, LD vs `KO+RI` p < 0.0001 | HD: effect held to **300 days**, the end of the plot. LD: ~80 days, at which point the arm is extinct | 🔴 **Read the duration of the effect, not the survival of the cohort.** LD's benefit is a **postponement of death**, not a durable rescue; HD's plateau sits **at or marginally above the wild-type control's own survival** (76–77 % vs 71–72 %), which is what `p = 0.78` says and which also means *"comparable to WT"* here includes a wild-type arm that itself lost ~29 % of its animals over 300 days. Two doses cannot locate a threshold (§3.1). The absolute dose is uncertain by exactly a factor of two (§3.2) |
+| **S1** | **Figure 3B**, 300 dpi (`fig3_…_1744x1699.png`), re-inspected at native resolution and measured against the printed axes — **the adjudication panel of §3** | `KO` | **`WT+RI` (*n* = 20) and `KO+RI` (*n* = 10)**, both plotted | ICV at P0–P1; followed to **300 days** | `W` at `LD` (*n* = 20) **and** `HD` (*n* = 30) | 🔴 **increase at both doses, but only HD is durable, and the two are qualitatively different.** Measured off the axes: `KO+RI` first death ~day 9, its **0 % marker spanning days 13–21 and centred ~day 17**; **`LD` holds 100 % to ~day 18, declines, and reaches 0 % at ~day 79**; **`HD` holds 100 % to ~day 50**, steps to ~92 % at ~day 50.3 and ~84 % at ~day 69, **then plateaus at 76–77 % from ~day 80 through day 300**; `WT+RI` is at 100 % to ~day 45, ≈ 89–90 % to ~day 122, and **≈ 71–72 % from ~day 126 through day 300**. Caption statistics: HD vs WT **p = 0.78**, HD vs LD p < 0.0001, LD vs `KO+RI` p < 0.0001 | HD: effect held to **300 days**, the end of the plot. LD: ~79 days, at which point the arm is extinct | 🔴 **Read the duration of the effect, not the survival of the cohort.** LD's benefit is a **postponement of death**, not a durable rescue; HD's plateau sits **at or marginally above the wild-type control's own survival** (76–77 % vs 71–72 %), which is what `p = 0.78` says and which also means *"comparable to WT"* here includes a wild-type arm that itself lost ~29 % of its animals over 300 days. Two doses cannot locate a threshold (§3.1). The absolute dose is uncertain by exactly a factor of two (§3.2). 🔴 **Two reading traps on this panel, both corrected 2026-10-21 after a blind audit returned `UNDERSHOOT` on manifest entry 40 (see §3.4):** the red marker at ~day 22 is a **censoring tick on the 100 % line**, not the last point before a drop, and red is **absent from the image between days 27.8 and 49.8** because the navy wild-type curve is drawn over it at the same height. The first HD step is at ~day 50.3, not ~day 24 |
 | **S2** | **Figure S8A–S8D**, 200 dpi render (manifest entry 10; not re-opened in this fill) | `KO` | `KO+RI` (*n* = 6), dead by ~day 15 | injection at **P1 (*n* = 6), P2 (*n* = 6), P3 (*n* = 3), P5 (*n* = 7)**; weight and glucose at **P14** | `W` at **HD only**, timing varied | **increase.** S8B: the **P1 and P5** arms plateau near **75 % to 300 days**. S8C/S8D: `***` and `**` for WT vs KO, and a **single `ns` spanning all five treated timepoints against WT** | to 300 days for P1 and P5 | 🔴 **The 300-day plot shows only P1 and P5**; P2, P3 and P4 appear solely in the 40-day panel, and **P3 is an *n* = 3 arm that lost animals** (down to ~67 % at ~day 24). 🔴 **The tested window is P1–P5** on the panels, while the Methods heading and the Discussion both write *P0–P5* and the main cohorts were injected at P0–P1. 🔴 **`NOT_MEASURED` is not `SMALLER`:** the authors state *"Therapeutic rescue beyond this early postnatal window was not explored, as* Wwox*-null mice rapidly deteriorate with progressive neurological dysfunction and early lethality, precluding effective intervention at later stages."* That is a statement about what was not done and why — it is **not** a measurement that later treatment helps less. Nothing in this corpus bounds efficacy after P5 in either direction |
 | **S3** | **Figure 4B–4K**, 104 ppi (manifest entries 0/1/2; not re-opened in this fill — see §3.3) | `KO` | **`WT` only (*n* = 9) against `KO+HD` (*n* = 10)** | behaviour at **3 months**; injection at P0–P1 | `W` at **HD only** | **mixed, and partly counter-directional.** The text states *"Locomotor activity parameters … showed no significant differences between groups (Figures 4B, 4D–4G)"*, while the same figure prints an asterisk on 4D (velocity) and 4E (distance), and panel **4K reports treated animals with significantly higher rotarod latency than WT** | single session at 3 months | 🔴 **There is no untreated-disease arm, by construction:** *"Behavioral testing could not be performed in untreated* Wwox*-null mice due to severe morbidity and early lethality, and LD-treated mice did not survive to P90; therefore, analyses were limited to WT and HD-treated groups."* 🔴 **No cognitive endpoint is measured anywhere in the study.** The 4D/4E text-versus-panel conflict is a persisted, declared contradiction whose figure bytes the blind audit returned `UNVERIFIABLE_SURFACE`; it is **not adjudicated here** (§3.3). No multiplicity correction is declared by either side |
 | **S4** | **Figure S4A–S4E**, 300 dpi render (manifest entry 27; not re-opened in this fill) | `KO` | `WT` and `KO` | not stated on the panel | `W` at `LD` **and** `HD` | 🟢 **graded.** Composite motor score: WT ≈ 0, KO ≈ 3.6, **LD ≈ 1.8**, **HD ≈ 0.3**; **WT–HD `ns`**, **LD–HD `***`**. The low dose is genuinely intermediate | single assessment | Fertility (S4C–S4D) rests on roughly **three plotted observations per group** and has **no untreated-KO comparator**. The motor measure is the clearest graded dose-response in the whole study and it is in a supplement, not in the main figures |
@@ -211,9 +217,9 @@ of others**, and the title binds it to exactly the three where it is weakest.
 
 | Endpoint | LD | HD | Is it dose-graded? |
 |---|---|---|---|
-| Survival (3B) | 0 % by ~day 78–81 | 76–77 % plateau to day 300 | 🔴 **no — step** |
+| Survival (3B) | 0 % at ~day 79 | 100 % to ~day 50, then 76–77 % plateau to day 300 | 🔴 **no — step** |
 | Body weight P30 (3C) | 15.3 g | 15.6 g | 🔴 **no — equal** |
-| Body weight to P180 (3D) | tracks WT to ~day 60, arm then extinct | tracks WT to day 180 | level equal; **duration** differs |
+| Body weight to P180 (3D) | series truncated at ~day 60 at ≈ 21 g, cause unstated; ≈ 27–42 % alive then | tracks WT to day 180 | level equal; **duration** differs; 🔴 survivor-conditioned on the LD side |
 | Glucose P10 (3E) | ns vs WT **and ns vs KO** | ns vs WT and ns vs KO | no |
 | Glucose P20 (3F) | `*` vs WT | `ns` vs WT, `**` vs LD | 🟢 **yes** |
 | Glucose P30 (3G) | ns | ns | no — difference closed |
@@ -235,7 +241,7 @@ of others**, and the title binds it to exactly the three where it is weakest.
    *Durable* rescue is a property of the **high dose alone** in this study: the LD curve reaches
    zero. LD does significantly extend life against `KO+RI` (p < 0.0001) — so "LD does nothing"
    would be a **reversal in the wrong direction and is refused here** — but a benefit that ends
-   in an extinct arm at ~80 days is a postponement, not a durable rescue, and the two recommend
+   in an extinct arm at ~day 79 is a postponement, not a durable rescue, and the two recommend
    different trials exactly as the flag says.
 3. **NARROW** it for **body weight**, where the flag is silent and the panel is explicit:
    **LD = HD at P30** (15.3 vs 15.6 g, with no significance marker printed on the panel at all).
@@ -254,14 +260,14 @@ of others**, and the title binds it to exactly the three where it is weakest.
    **strengthened, not established,** by assembling four dose levels across two figures — Figure
    2B's `AAV9-hSynI-hWWOX` arms at 4 × 10¹⁰ (*n* = 3) and 8 × 10¹⁰ (*n* = 5), same promoter, same
    WPRE-free architecture, **no survivors in either** (manifest entry 14), against 1.23 × 10¹¹
-   (extinct at ~80 days) and 2.63 × 10¹¹ (76–77 % at 300 days) — so durable survival reads
+   (extinct at ~day 79) and 2.63 × 10¹¹ (76–77 % at 300 days) — so durable survival reads
    0 / 0 / 0 / ~76 % across four doses. 🔴 **The arms are different cohorts in different
    experiments**, and manifest entry 14 already records that the running text claims 8 × 10¹⁰
    rescued lethality where the panel reading does not; that discrepancy is carried unresolved,
    with the presumption left in favour of the text.
 6. 🔴 **Two numbers in the flag's prose are corrected by measurement.** The flag writes that LD
    *"shifts death from ~20 to ~90 days"* and that HD *"plateaus at ~80 % to 300 days"*. Measured
-   off the axes: `KO+RI` reaches 0 % at **~day 15**, LD at **~day 78–81**, and the HD plateau is
+   off the axes: `KO+RI`'s 0 % marker is **centred at ~day 17** and spans days 13–21, LD reaches 0 % at **~day 79**, and the HD plateau is
    **76–77 %**. 🔴 **Neither value sits behind a persisted verbatim locator** — the manifest's 40
    entries contain no Figure 3B entry at all, which is why §4 adds one — so this corrects claim
    **prose**, not a locator, and the fourth mandatory audit trigger does not fire on it. The
@@ -316,6 +322,46 @@ Figure 4's bytes **are** now reachable — `gr4.jpg` is on disk and the publishe
 panel at 300 dpi on page 7 — but adjudicating it is a different question from this task's, it
 would touch a different part of the claim, and settling it inside a dose adjudication would
 bury it. It is reported as the next measurement worth making (§5).
+
+### 3.4 🔴 The blind audit, and whether the NARROW verdict survives it
+
+The voluntary audit recommended in §3.1 was run on 2026-10-21 over the eight entries this fill
+added — blind, on the declared surfaces, with Figure 3B independently re-calibrated from its own
+printed ticks. Verdict file:
+[`page_adjudications/locator_audit_PMID42422765_20261021.md`](../page_adjudications/locator_audit_PMID42422765_20261021.md).
+**5 SUPPORTED · 2 OVERSHOOT · 1 UNDERSHOOT · 0 UNVERIFIABLE**, and **all three adverse verdicts are
+dose-bearing**. All three are repaired at source, in the manifest entry each concerns, each
+carrying its own `contradicts_locator` object with the audit file and triple index.
+
+**The verdict survives, the class does not change, and one leg moves.** Leg by leg:
+
+| Leg of the NARROW verdict | Audit | Outcome |
+|---|---|---|
+| 1 · KEEP *dose-dependent* for expression, P20 glycaemia, motor score | untouched | **stands** |
+| 2 · NARROW for **survival** — durable rescue is HD-only; LD reaches zero; LD is not nothing | entry 40 `UNDERSHOOT` | **stands, and is STRENGTHENED.** The repair makes the high-dose arm *better*, not worse: 100 % held to ~day 50 rather than ~day 24, against an LD arm extinct at ~day 79. The step is wider than first recorded |
+| 3 · NARROW for **body weight** — LD = HD at P30, no significance marker | entry 41 `OVERSHOOT` | 🔴 **stands, and is NARROWED FURTHER.** The quote reproduced exactly, including the absence of any marker, so the equality holds; what failed was the *explanation*. And the repair surfaces a limit the first version missed: the equality is **survivor-conditioned on the LD side only** (≈ 79 % alive at P30, ≈ 27–42 % at day 60, against 100 % for HD), so it could mask a dose effect **in either direction** |
+| 4 · NARROW the Title's three named domains — ECoG has no LD arm, myelination unquantified, gliosis binary without a KO comparator | entries 42, 43, 44 all `SUPPORTED`, with every negative bounded rather than assumed | **stands** |
+| 5 · NARROW the flag's own inference — two dose points cannot *locate* a threshold | untouched | **stands** |
+
+Entry 45's `OVERSHOOT` bears on the **oligodendrocyte boundary**, not on any leg of the dose
+verdict. Its load-bearing negative — `ns` between `KO+RI` and MBP+W, a blank MBP column in panel M,
+no benefit on any measured endpoint — reproduced in full, and one repair makes it **stronger**: the
+`****` bracket runs `WT+RI` to the MBP-treated bar, so the treated group is significantly *below*
+wild type as well as indistinguishable from untreated.
+
+🔴 **No leg fails, so nothing is further narrowed beyond leg 3 and no propagation gate is tripped.**
+The adjudication remains `NARROW`, change class `MINOR`, and it is still not certified by its own
+author.
+
+**The reading lesson from entry 40, which is the one worth keeping.** Two traps on one Kaplan-Meier
+panel, both of which produce a *lower* reading of a treated arm and neither of which any gate in
+this repository detects: a **censoring tick sitting on the 100 % line** reads as the last point
+before a drop, and a **curve overdrawn by another curve at the same height** reads as the curve's
+absence. Measured here: the red HD marker at ~day 22 spans 97.6–101.8 % — a marker centred on 100,
+not a step — and red is absent from the image between days 27.8 and 49.8 because the navy wild-type
+line occupies those pixels. The detection rule is written into the dismissal ledger's
+`DEFAULTS THAT BIT US` table as row **`D-38`**, where the re-audit rule of
+`epistemic_discipline` §2.3 points, rather than being left here as prose.
 
 ## 4 · What this fill owes forward
 

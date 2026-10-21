@@ -14,14 +14,23 @@
   **targeted re-inspection of named panels at native resolution**, receipt **staged**
   `FTR-20261021-42422765-01`, manifest `deepdive_manifests/PMID42422765.json` (schema v2),
   six new locator entries, **no existing entry edited**.
-- **Blind locator audit:** 🔴 **NOT RUN — and not mandatory.** `CLAIM 011`'s `Status` is
+- **Blind locator audit:** ✅ **RUN 2026-10-21, voluntarily, and it earned itself.** Blind
+  auditor over all eight entries this reading added, on the declared surfaces, with Figure 3B
+  independently re-calibrated from its printed ticks. Verdict file
+  [`page_adjudications/locator_audit_PMID42422765_20261021.md`](../page_adjudications/locator_audit_PMID42422765_20261021.md).
+  **5 SUPPORTED · 2 OVERSHOOT · 1 UNDERSHOOT · 0 UNVERIFIABLE**, and **all three adverse verdicts
+  are dose-bearing.** All three are **repaired at source**, each with its own `contradicts_locator`
+  object naming the audit file and triple index; `locator_contradiction_audit.py --working-tree
+  --fail-on-undeclared` reports 6 declared revisions and **0 undeclared**. 🔴 **The verdict survives
+  and the class does not change** — §6 below is the leg-by-leg adjudication, and one leg (body
+  weight) is **narrowed further** by the repair. Why it was run although not mandatory: `CLAIM 011`'s `Status` is
   `flagged for review`, not `consolidated baseline`; the change class is MINOR, not MAJOR; this
-  reading closes no research direction; and it **contradicts, corrects or replaces no persisted
-  verbatim locator** — it *confirms* two (manifest entries 3 and 5) at 400 dpi. None of the four
-  mandatory triggers fires. 🟢 **A voluntary audit is nevertheless recommended** over the six new
-  triples before this lands, because the claim's `clinical relevance` is HIGH and it feeds
-  `CLAIM 031` and `CLAIM 040`. **Producer is not verifier: the author of this adjudication does
-  not certify it.** The Orchestrator routes the audit.
+  reading closed no research direction; and at the time it contradicted no persisted locator. None
+  of the four mandatory triggers fired — **and the audit found three adverse verdicts anyway, on
+  the propositions the verdict rests on**, which is the measured argument for running it wherever
+  the stakes are high rather than only where a trigger fires. **Producer is still not verifier:
+  the author of this adjudication does not certify it, and the three repairs below are themselves
+  unaudited.**
 - **Not medical advice. No dose, route, schedule or paediatric suitability for any person;
   class level only.**
 
@@ -52,9 +61,9 @@ weakest.
 
 | Endpoint | LD (1.23 × 10¹¹ vg as printed) | HD (2.63 × 10¹¹ vg as printed) | Graded? |
 |---|---|---|---|
-| Survival, Fig 3B | **0 % at ~day 78–81** | **76–77 % plateau to day 300** | 🔴 step |
+| Survival, Fig 3B | **0 % at ~day 79** | **100 % to ~day 50, then 76–77 % plateau to day 300** | 🔴 step |
 | Body weight P30, Fig 3C | 15.3 g | 15.6 g | 🔴 equal |
-| Body weight to P180, Fig 3D | tracks WT to ~day 60, arm then extinct | tracks WT to day 180 | level equal, duration differs |
+| Body weight to P180, Fig 3D | series truncated at ~day 60 at ≈ 21 g, cause unstated; ≈ 27–42 % alive then | tracks WT to day 180 | level equal, duration differs; 🔴 survivor-conditioned on the LD side |
 | Glucose P10, Fig 3E | ns vs WT **and ns vs KO+RI** | ns vs WT and ns vs KO+RI | no |
 | Glucose P20, Fig 3F | `*` vs WT | `ns` vs WT, `**` vs LD | 🟢 yes |
 | Glucose P30, Fig 3G | ns | ns | no |
@@ -73,11 +82,16 @@ weakest.
    P20 glycaemia, composite motor score.
 2. **NARROW** it for **survival**. *Durable* rescue is a high-dose-only property: the LD curve
    reaches **zero**. 🔴 **"LD does nothing" is refused**: the caption prints LD vs `KO+RI`
-   p < 0.0001 and the measured curve shows death postponed from ~day 15 to ~day 78–81. A
-   postponement that ends in an extinct arm is not a durable rescue, and the two beliefs
-   recommend different trials, which is the flag's point and is upheld.
+   p < 0.0001 and the measured curve shows death postponed from a marker centred at ~day 17 to
+   ~day 79. A postponement that ends in an extinct arm is not a durable rescue, and the two
+   beliefs recommend different trials, which is the flag's point and is upheld.
 3. **NARROW** it for **body weight**, where the flag is silent: **LD = HD at P30** (15.3 vs
-   15.6 g), with **no significance marker printed on panel 3C or 3D at all**.
+   15.6 g), with **no significance marker printed on panel 3C or 3D at all**. 🔴 **Narrowed further
+   after the audit:** that equality is **survivor-conditioned on the LD side and not on the HD
+   side** — Figure 3B puts LD at ≈ 79 % alive at P30 and ≈ 27–42 % at day 60, against 100 % for HD
+   — so it is an equality between unequal denominators and **could mask a dose effect in either
+   direction**. It remains not evidence of grading; it is now explicitly not evidence of its
+   absence either.
 4. **NARROW the Title's three named domains.** `ECoG/SWD` has **no low-dose arm**, so it cannot
    support a dose-dependent claim at all; **myelination** is unquantified in every treated arm
    (Fig 6E, the only MBP quantification, contains no treated arm; 6F and S7I are representative
@@ -89,7 +103,7 @@ weakest.
    continuum are indistinguishable. What the panel **refuses** is linear interpolation of durable
    benefit. The step reading is **strengthened, not established**, by four dose levels across two
    figures — Fig 2B's hSynI, WPRE-free arms at 4 × 10¹⁰ (*n* = 3) and 8 × 10¹⁰ (*n* = 5) with no
-   survivors (manifest entry 14), then 1.23 × 10¹¹ extinct at ~80 days and 2.63 × 10¹¹ at 76–77 %
+   survivors (manifest entry 14), then 1.23 × 10¹¹ extinct at ~day 79 and 2.63 × 10¹¹ at 76–77 %
    to 300 days — but those are **different cohorts in different experiments**, and entry 14
    already carries an unresolved discrepancy between the running text and the panel for 8 × 10¹⁰,
    with the presumption left in favour of the text.
@@ -98,7 +112,7 @@ weakest.
 
 | Flag prose | Measured on the 300 dpi panel against its printed axes |
 |---|---|
-| LD *"shifts death from ~20 to ~90 days"* | `KO+RI` reaches 0 % at **~day 15** (first death ~day 9); LD reaches 0 % at **~day 78–81** |
+| LD *"shifts death from ~20 to ~90 days"* | `KO+RI`'s 0 % marker **spans days 13–21 and is centred at ~day 17** (first death ~day 9); LD reaches 0 % at **~day 79**. 🔴 *Both the flag's "~20" and this candidate's own first "~day 15" read an edge of that marker rather than its span* |
 | HD *"plateaus at ~80 % to 300 days"* | HD plateaus at **76–77 %** from ~day 80 through day 300 |
 | *(absent from the flag)* | 🔴 **`WT+RI` itself ends at 71–72 %** — 100 % to ~day 45, ≈ 89–90 % to ~day 122, then 71–72 % to day 300. The high-dose arm therefore sits **at or marginally above its own wild-type control**, which is what the caption's `p = 0.78` says and what *"comparable to WT"* conceals |
 
@@ -129,13 +143,15 @@ with
 > axes.** *«Dose-dependent» is true of this study's expression, P20 glycaemia and motor measures
 > and false of its survival, weight, ECoG, myelination and gliosis measures,* and the Title bound
 > it to the three where it is weakest. **Survival is a step, not a gradient:** LD reaches **0 % at
-> ~day 78–81** and HD plateaus at **76–77 % through day 300**, against a `WT+RI` control that
+> ~day 79** while HD holds **100 % to ~day 50** and then plateaus at **76–77 % through day 300**, against a `WT+RI` control that
 > itself ends at **71–72 %** — so *«comparable to WT»* includes a wild-type arm that lost ~29 % of
 > its animals. 🔴 **But LD is not nothing:** the caption prints LD vs `KO+RI` p < 0.0001 and death
-> is postponed from ~day 15 to ~day 78–81; a postponement ending in an extinct arm is not a
+> is postponed from a marker centred at ~day 17 to ~day 79; a postponement ending in an extinct arm is not a
 > durable rescue, and that distinction, not «more dose more benefit», is what recommends different
 > trials. 🔴 **And LD is not uniformly worse: on body weight LD = HD** (15.3 vs 15.6 g at P30,
-> Fig 3C, with **no significance marker printed on panel C or D at all**). 🔴 **The three domains
+> Fig 3C, with **no significance marker printed on panel C or D at all**) — an equality that is
+> **survivor-conditioned on the LD side only** (Fig 3B: ≈ 79 % alive at P30 against 100 % for HD),
+> so it is neither evidence of grading nor evidence of its absence. 🔴 **The three domains
 > the old Title named cannot carry the word:** Figure 7E has **no low-dose arm** (HD only, *n* = 5
 > per group, SWD/hour KO ≈ 0.635 → HD ≈ 0.13, `****`, `ns` against WT ≈ 0.03, 7 days of recording
 > from ~P14); myelination is **never quantified in any treated arm** (Fig 6E, the only MBP
@@ -185,3 +201,32 @@ ENDPOINT-SPLIT-01` already tracks it.
 - It asserts **no reusable RNA-seq rescue signature**: there is no rescue-versus-knockout
   transcriptomic contrast in this study, and GSE156243 is a knockout-versus-wild-type organoid
   contrast that must not be merged with it.
+
+## 6 · The blind audit, and whether the verdict survives it — leg by leg
+
+| Leg | Audit verdict on the entry it rests on | Outcome |
+|---|---|---|
+| 1 · KEEP *dose-dependent* for expression, P20 glycaemia, motor score | untouched by the audit | **stands** |
+| 2 · NARROW for **survival** | entry 40 `UNDERSHOOT` | **stands, and is STRENGTHENED.** The repair makes the high-dose arm better, not worse: 100 % held to ~day 50 rather than ~day 24. The step is wider than first recorded, and the two facts it rests on — LD to zero, and an HD plateau above the WT arm — both reproduced |
+| 3 · NARROW for **body weight** | entry 41 `OVERSHOOT` | 🔴 **stands, and is NARROWED FURTHER.** The quote reproduced exactly, marker-absence included, so the equality holds; the *explanation* failed, and the repair surfaces survivor-conditioning on the LD side |
+| 4 · NARROW the Title's three named domains | entries 42, 43, 44 all `SUPPORTED`, every negative bounded rather than assumed | **stands** |
+| 5 · NARROW the flag's own inference | untouched | **stands** |
+| — · the oligodendrocyte boundary (§5, not a leg of the dose verdict) | entry 45 `OVERSHOOT` on three non-load-bearing clauses | **stands, and one repair STRENGTHENS it**: the `****` bracket runs `WT+RI` to the MBP-treated bar, so that arm is significantly *below* wild type as well as `ns` against untreated |
+
+🔴 **No leg fails. The verdict remains NARROW, the change class remains MINOR, and no propagation
+gate is tripped.** Nothing was propagated before the audit and nothing is propagated now; the
+candidate still awaits the Orchestrator.
+
+**The three repairs, at source**, each declared in the manifest entry it concerns with a
+`contradicts_locator` object carrying the audit file, the triple index and what changed:
+
+| Entry | Verdict | What changed |
+|---|---|---|
+| 40 | `UNDERSHOOT` | HD holds 100 % to **~day 50**, not ~day 24 — the red marker at ~day 22 is a **censoring tick** spanning 97.6–101.8 % on the 100 % line, and red is **absent from the image between days 27.8 and 49.8** because the navy WT curve is drawn over it at the same height. Secondary, in the opposite direction: the `KO+RI` 0 % marker **spans days 13–21, centred ~day 17**, so both "~day 20" and "~day 15" read an edge |
+| 41 | `OVERSHOOT` | "the low-dose curve ends because the arm is extinct" **withdrawn** — 3B puts LD at ≈ 27–42 % alive at day 60 and extinct only at ~day 79. Restated as the panel's own **truncation, cause unstated**, plus the survivor-conditioning limit |
+| 45 | `OVERSHOOT` | Panel H: the MBP+W and `KO+RI` series were **transposed** — MBP+W runs to ~day 21 at ≈ 5.25 g, `KO+RI` ends at ~day 19 at ≈ 4.2 g. Panel I: the `****` bracket spans **`WT+RI` to the MBP-treated bar**, not WT vs `KO+RI`. And "the 4 × 10¹⁰ of Figures 2 and 3" named a dose **Figure 3 does not contain** |
+
+**The reusable detection rule** — a censoring tick on a plateau read as a step, and a curve
+overdrawn by another curve at the same height read as its absence — is recorded as row **`D-38`**
+of the `DEFAULTS THAT BIT US` table in [[dismissal_ledger_current]], where the re-audit rule of
+`epistemic_discipline` § 2.3 points, not left as prose here.
