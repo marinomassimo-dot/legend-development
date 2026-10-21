@@ -230,3 +230,34 @@ Depth: `partial_fulltext_read` (whole PMC XML body and tables; Figures 1 to 3 ca
 
 **Comparison with the lead.** Axis A: weak human-level supporting observation of genotype-dependent response, without any wild-type-equivalent. Axis B: none. Axis C: heterogeneity table has no test and tiny cells. Axis D: none. **Net: context only.**
 
+## 13. The WWOX and T-type full-text confirmation, dated 2026-10-21 (retiring or confirming the FT-115 absence claim)
+
+**State of FT-115 as it enters this note.** The queue entry rests on one cohort paper (PMID 41510857, complete receipt `FTR-20261019-41510857-01`) that reports **gene counts only, no patient-level data**: WWOX in 4 and CACNA1H in 6 of 261 diagnosed patients, no variant names, no T-type text. FT-115 is therefore a negative about *what that paper contains*, plus the dated queries below; it is not a measurement that no human T-type evidence in WWOX exists.
+
+**Dated queries, 2026-10-21 (this scientist, through the shared throttle).**
+
+| Index | Query | Count | Result |
+|---|---|---|---|
+| PubMed | WWOX AND (CACNA1G OR CACNA1H OR CACNA1I OR "T-type" OR Cav3.1 OR Cav3.2 OR Cav3.3 OR "calcium channel") | 1 | 41510857 only |
+| PubMed | (WWOX OR Wwox OR WOX1) AND ethosuximide | 0 | none; by dismissal-ledger D-37 this licenses "no abstract-indexed paper", not "never measured" (the Wwox ethosuximide assay is inside Cheng 2020, whose abstract lacks the term) |
+| PubMed | (WWOX OR Wwox) AND (thalamus OR thalamic OR "reticular nucleus" OR "spike-and-wave" OR "absence seizure") | 1 | 26345274 (a five-case CNS-involvement report; title level, not opened) |
+| PubMed | (WWOX OR Wwox) AND ("calcium channel" OR "voltage-gated calcium") | 0 | none |
+| PubMed | (WWOX OR Wwox) AND lithium | 1 | 32000863 |
+| Europe PMC full text | (WWOX OR Wwox) AND ethosuximide | 16 | reviews, case reports and two WWOX papers with complete receipts; no Wwox ethosuximide assay other than Cheng 2020 |
+| Europe PMC full text | (WWOX OR Wwox) AND (CACNA1G OR CACNA1H OR CACNA1I) | 71 | gene lists, cohort tables, methylation papers, reviews |
+| Europe PMC full text | the same with "T-type", Cav3.1, Cav3.2, Cav3.3 added | 79 | as above |
+| Europe PMC full text | (WWOX OR Wwox) AND "T-type calcium" | 3 | 36803844 (pancreatic-cyst methylation markers: WWOX and CACNA1G are separate markers), and two conference abstract compendia (PMC6778823; PMC9063679, whose Europe PMC full-text XML is a 150-byte stub, so no per-abstract reading was possible) |
+
+**The four hits the selector title-screened (opened at full-text XML depth, Europe PMC `fullTextXML`, cc by; targeted paragraph and table search for WWOX and T-type tokens, not a section-by-section reading, so no receipt is claimed; the XML digests are in the table).**
+
+| PMID | What it is | WWOX mentions | T-type tokens | Paragraph or table row containing both | SHA-256 of the XML read |
+|---|---|---|---|---|---|
+| 41898755 | review: cannabidiol in developmental epilepsy with organoids | 12 | one paragraph on cannabidiol channel targets | none | `042089b060635b3377ebc31f544eaaeab0b14ec1c454da3f3f2a953586134bfd` |
+| 41135097 | review: cerebral organoid models of neurological disorders | 8 | calcium-channel disease paragraphs unrelated to WWOX | none | `c2bae8181497b6b6a567a7215c0228bb34eb14aca9f4557fd8c8b91eda41ab90` |
+| 42654085 | review: epilepsy as a multiscale network disorder | 2 (one in an organoid sentence, one in the abbreviation list) | calcium-channel paragraphs | none | `e01d06cda4709f51ad9b030a1c49294fc2973b5f43cb8b97058b129ee161f39d` |
+| 41153369 | Turkish single-centre DEE cohort (already read in full: `FTR-20261003-41153369-01`, owed none, queue FT-107) | 15 (a homozygous p.L239R case in a consanguineous infant with hypsarrhythmia, plus the 55-gene panel list) | CACNA1H appears only in a comparison-cohort table row, CACNA1A on the panel list | none | `b62eb5908448190f44f93222ae3c1fc2a6d40356d3beaf0b1016c16ec84592cf` |
+
+Verdict: **FT-115's absence claim is confirmed at full-text depth for these four, as an absence of any paragraph or table row linking WWOX to a T-type gene or channel, and is not retired as a statement about the literature**; it stays what the queue said, narrowed to its true scope (one cohort, gene counts only; plus the dated queries above; plus the four hits). Pubmed identity check: 41135097 returns `AUTHOR_MISMATCH` because Crossref lists no first author, with title overlap 1.0 (a metadata gap, not an identity problem).
+
+**One new finding from the 41898755 read, not about T-type.** The review states that in "an organoid model of Dravet syndrome and WWOX deficiency (WOREE syndrome), CBD treatment restored interneuron-mediated inhibitory tone and significantly reduced spontaneous epileptiform discharges and high-frequency oscillations", citing its reference 75. Reference 75 is Santos 2023 (PMID 37566028), a study of oxygen-glucose-deprivation hyperexcitability in human cerebral organoids; its PubMed record (abstract) contains neither WWOX nor Dravet, and its abstract reports cannabidiol and bumetanide on the oxygen-glucose-deprivation model. The paper body was not read (a PubMed-record statement, not a reading). **The sentence attributing a cannabidiol effect to WWOX-deficient organoids is therefore not supported by its own citation as far as the cited record shows.** It must not be used as evidence for a cannabidiol effect in WWOX models; the WWOX organoid papers in the repository (Steinberg 2021, PMID 34268881 and its relatives) are about the phenotype and ASO/gene rescue, not cannabidiol. Recorded as a caution for the repurposing cards, and as a commit-candidate point.
+
