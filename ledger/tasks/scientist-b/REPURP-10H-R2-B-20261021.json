@@ -54,7 +54,12 @@
   "worktree": ".claude/worktrees/r2-b",
   "branch": "task/repurp-10h-r2-b"
  },
- "DEFAULTS_TAKEN": [],
+ "DEFAULTS_TAKEN": [
+  "Parked bot-challenged/restricted bodies 25071191 (Lee 2014) and 41558409 (Ng 2026) with the cascade run; no challenge solved, no access control circumvented.",
+  "Partial-depth readings where supplements or secondary figures were unopened; stated per receipt coverage.",
+  "Xlsx/docx supplements converted to derived .txt artifacts with an inline extractor recipe; new routed tool supplement_symbol_search.py added.",
+  "Blind audits run voluntarily via three history-free subagents rather than left only OWED."
+ ],
  "STOP_LOG": [],
  "CHECKPOINT": {
   "at": "2026-10-21",
