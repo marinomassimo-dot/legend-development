@@ -1071,3 +1071,44 @@ catalytic-dead control, a titration. The missing item is the experiment, not the
 - **Gap:** the trial-then-record procedure for staged receipts was a hand sequence repeated seven times, and its first form (a symlinked evidence tree) failed for a reason unrelated to the receipts.
 - **Change:** `framework/scripts/record_staged_receipts.py` (dry run by default, `--apply` records, never commits), with `test_record_staged_receipts.py`, a routing row and release-regression enrolment.
 - **Not built, named:** a one-command regeneration of the four ledger-derived surfaces with the dirty-input reason filled from the staged actors; a Mirror-side check that a harness brief's "must not change" list is honoured by the diff.
+
+## 2026-10-21 — scientist-b, early-benefit axis (task `REPURP-P3-EARLYBENEFIT-B-20261020`)
+
+**Capability gap that emerged (with evidence).** This repository writes *instrument and modality
+negatives* — "no WWOX paper uses this scale / this imaging modality / this electrophysiological
+test" — and it has no discipline for the surface such a negative is a negative **of**. Measured
+here: a PubMed probe for `WWOX AND ("visual evoked potential" OR electroretinogram OR DTI OR
+"magnetic resonance spectroscopy" OR volumetry)` returns **0** (2026-10-21), and the full text of
+a WOREE case series read the same session carries a **visual evoked potential** in a patient and a
+**sleep study** that detected apnoea with hypopnoea, both in a Discussion paragraph and a
+phenotype table. A title-and-abstract index cannot see an instrument used once in a five-patient
+series, which is the normal case in a rare disease — so the probe's zero was about **indexing**
+and the draft sentence about it would have been **false**. The cost class is the one
+`epistemic_discipline` § 2 names as the expensive one: a false negative is silent, permanent and
+self-reinforcing, and this one would have discouraged the very sweep that disproves it.
+
+**CHANGE (proportional micro-upgrade, shipped).** The rule is written into the one place the
+re-audit rule of `epistemic_discipline` § 2.3 points at — row **`D-37`** of the `DEFAULTS THAT BIT
+US` table in [[dismissal_ledger_current]], with its detection rule ("say which surface the zero is
+a zero of") and the measured counterexample. Shipped as a row, not as a promise, and the three
+instrument negatives in
+[`repurposing_early_benefit_20261020_scientist-b.md`](repurposing_early_benefit_20261020_scientist-b.md)
+§ 2 are written in the bounded form the row requires, each with its dated query.
+
+**Found while allocating the id, and reported rather than fixed:** `D-31`, `D-33`, `D-35` and
+`D-36` are cited as detection rules in `discovery_ledger_current.md` and
+`full_text_queue_current.md` and exist in **no row** of that table, while the table's own
+allocator note reserves `D-27`–`D-30`. So `max(D-nn) + 1` as the note prescribes would have
+collided with a live reference; `D-37` was allocated instead and the deviation is stated in the
+row. The four dangling ids belong to other actors' records and were not touched.
+
+**Named, not built.** (1) A full-text instrument sweep over the WOREE case literature's bodies and
+tables — it would convert three indexing negatives into measured ones and is the cheapest decisive
+move this axis produced; (2) a check that an id cited as `D-nn` anywhere in the research layer
+resolves to a row of that table, which is the generic form of the dangling-reference finding above
+and the same defect class as `D-22` (two surfaces, one fact, never compared).
+
+**Cost / API / privacy risk:** none. Key-less PubMed reads only; no paid service, no new dependency.
+
+**Next surgical micro-step:** none required to close this gap; the sweep in (1) is scientific work
+for a future task, not a harness change.
