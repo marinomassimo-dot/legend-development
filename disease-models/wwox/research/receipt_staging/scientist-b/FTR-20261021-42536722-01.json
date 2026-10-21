@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-21T12:00:00Z",
+ "event_at": "2026-10-21T12:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_read"
+ },
+ "event_id": "FTR-20261021-42536722-01",
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "Figures 2 and 3 opened as page renders at 200 dpi; Figures 1, 4 and 5 read as captions only (digenic phenotype, PV-specific deletion, chemogenetics); the supplementary PDF (figs. S1-S10) not opened. Depth partial; the unread parts concern the PV arm and not the ethosuximide or Cacna1g arms."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42536722.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-b_20261021.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "b66912f62c014a3b604fe62c7192185681225b1bff06e4b2fba90ce6e5626270",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID42536722_Miao2026_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1126/sciadv.aec6065",
+  "pmid": "42536722"
+ },
+ "workflow": "scientist-b repurposing batch R2 2026-10-21; QUESTION_DRIVEN (the reader held DL-MECH-170 and CLAIM 016 before opening the paper); NOT WWOX EVIDENCE; PMC efetch XML acquired with no User-Agent through pmc_bucket_fetch.py; prepared as JSON for the integrator and staged, not appended."
+}

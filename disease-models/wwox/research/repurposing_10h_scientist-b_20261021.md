@@ -116,3 +116,19 @@ Depth: `complete_fulltext_read` of a narrative review (no Methods, Results, tabl
 
 **Figure audit.** Fig 1 (adapted peri-event histograms, WAG/Rij): firing peaks at the EEG spike across cortex, reticular and most relay nuclei, IAM flat, CL-PC paused. Fig 2: a cartoon with no data.
 
+## 6. PMID 42536722 (Miao 2026): digenic Cacng2/Cacna1a absence mouse, ethosuximide, Cacna1g deletion and PV interneurons. NOT WWOX EVIDENCE
+
+Depth: `partial_fulltext_read` (whole PMC XML body read; Figures 2 and 3 as page renders at 200 dpi because the pages were flagged probably-vector; Figures 1, 4, 5 captions only; supplementary PDF not opened; none of the unread parts concern the ethosuximide or Cacna1g arms). Manifest `PMID42536722.json` STRICT PASS, 9 locators. Receipt staged `FTR-20261021-42536722-01`.
+
+**What it establishes.** In a mouse that is heterozygous for two absence-epilepsy genes (neither heterozygote alone is epileptic), ethosuximide abolished spike-and-wave discharges for about two hours in all twelve mutants and did not correct a social-novelty deficit; deleting Cacna1g (Cav3.1) removed the T-type current and the discharges and also did not correct the deficit; chemogenetic activation of parvalbumin interneurons did both.
+
+**Why it matters for the lead, in two parts.**
+1. *A genetic test of T-type dependence runs in the same genotype as the drug.* Removing Cav3.1 prevents the seizure in the mutant, in agreement with ethosuximide: this is the strongest design in the group for "is the drug effect a T-type effect in this genotype", by epistasis rather than by a second compound. It is not a drug-by-genotype test (ethosuximide was not run in wild type on the EEG endpoint, and wild type has no discharges to suppress), and it says nothing of a null allele of an unrelated gene.
+2. *Symptomatic, not modifying.* The ethosuximide effect and the Cav3.1 deletion both suppress the seizure and leave the quantified comorbidity untouched. This is the answer to the group's fifth question for this paper: in this model, a T-type effect on seizure does not carry a disease-modifying signal on a measured cognitive-social endpoint. The Wwox lead is already tagged symptomatic-class; this gives a worked example of why that tag must stay.
+
+**Smaller observations.** (a) Ethosuximide produced broad-band cortical power suppression, so the drug has a footprint beyond the spike-wave band that the authors themselves read as going beyond canonical thalamic T-type action; (b) the controls were dosed on the social test and the group difference was unchanged, so a genotype-by-drug contrast does exist on that behavioural endpoint and is null; (c) the effect lasts about two hours with recurrence, consistent with acute pretreatment designs.
+
+**Figure audit.** Fig 2B-F (page 4 render): SWD duration per 30 min near zero in sections 3 to 7 and no difference at section 8; power spectrum halved at the peak; social-novelty group difference present before and after. Fig 3C/E/I/J (page 5 render): rebound spikes and T-type current abolished in the triple mutant; triple mutant still has a social-novelty difference versus its control.
+
+**Comparison with the lead.** Axis A: partially; the behavioural endpoint has a genotype x drug design and is null, the EEG endpoint has no wild-type drug arm. Axis B: supports T-type (Cav3.1) dependence of the seizure in the mutant genetically. Axis C: partly (EEG broad suppression, dissociation). Axis D: none. **Net: increases the plausibility that an ethosuximide seizure effect in a null would be T-type mediated if it exists, and reinforces the symptomatic class.**
+
