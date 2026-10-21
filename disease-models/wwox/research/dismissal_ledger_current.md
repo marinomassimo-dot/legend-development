@@ -155,6 +155,14 @@ is the dangling-citation defect, and
 now measures it: it parses the table above, holds the unresolved set at exactly these four, and goes red
 the moment a fifth non-existent rule is cited from a live surface.
 
+🟠 **Adjudicated 2026-10-21 by `BATCH_20261019_010` (ACTOR_ID `orchestrator`, task `ORCH-METABOLIC-BATCH-20261019`): the four citations are REPAIRED and the four rows are DECLINED, not minted.** The second of the two repairs this block left open is done — `discovery_ledger_current.md` (`DL-MOL-005`, `DL-MECH-011`) and `full_text_queue_current.md` (`FT-142`) now state, inside each citing sentence, that the id was proposed and never minted, name the candidate its formulation lives in, and quote that formulation, so each rule is usable without a row. The first repair — minting `D-31`, `D-33`, `D-35`, `D-36` — is **declined**, and the reasoning is recorded here so the next allocator does not decide it again from scratch:
+
+1. **Two dated batches already decided it the other way, deliberately.** `CC-20260922-MODEL-HORIZON-01`'s disposition records that the batch minting `D-21` rewrote the candidate's `D-31` reference *«as prose, because no such row exists in this ledger»*, and `CC-20260922-GTGT-CNS-QUALIFICATION-01`'s records that *«the `D-35` and `D-36` dismissal rows are operator directives and this batch skips the optional D-rows»*. Minting them now reverses two adjudications with **no new evidence** — nothing was measured after 2026-09-27 that those batches did not have.
+2. **The substance is already where it is read.** `D-21`'s cost cell carries the window lesson in prose; `DL-MOL-005`'s own append-only rectification *is* the `D-33` lesson applied to the datum it governs; and the four citing sentences now carry each formulation verbatim. A row would add a second home for wording whose only source is a **closed** candidate that nobody propagated.
+3. **A mistake is answered with a habit or a tool, not with more rows** (`framework/master/harness_development_principles.md`, principle 3). Both exist: this addendum, and `scripts/test_detection_rule_citations_resolve.py`. A row minted because a sentence cites a number is the purchase of tidiness the `D-26` row already refuses (*«no gap `D-27`–`D-30` is created for tidiness»*).
+
+🔵 **Consequence for the ratchet, stated rather than hidden.** The declared debt stays at **four** and the suite does not tighten: the declaration is what makes the four citations resolve, and the suite's own `test_every_id_the_addendum_declares_never_minted_is_actually_cited` requires each declared id to remain cited — so a complete citation repair cannot lower the count, and minting is the only move that can. The baseline was **not** edited. What the repair does change is the kind of debt: four numbers that resolved only through this addendum are now four sentences that carry their own rule.
+
 
 ---
 

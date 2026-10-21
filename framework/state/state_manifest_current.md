@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261019_009
+last_batch_commit_id: BATCH_20261019_010
 last_batch_commit_date: 2026-10-21
 last_batch_commit_type: MANUAL
 commit_candidates_propagated: 0
 target_wm_version: WM_v7.27
-trigger: MANUAL (operator-authorised correction batch, ACTOR_ID orchestrator by stated assumption, task ORCH-METABOLIC-BATCH-20261019). Repair of one false count this integrator wrote into two canonical records at BATCH_20261019_008: the Evidence depth sentence of PAPER 427 and PAPER 428 said 6 persisted verbatim locators; the manifests carry 11 and 9, exactly as the candidate declared. Corrected in place with the superseded wording quoted in each record, and the error recorded as DEFAULTS THAT BIT US row D-40 (sizing a JSON mapping instead of its entries array returns the schema key count, identically for two unrelated files). No candidate. NO WORKING-MODEL BUMP: the manifest rule above bumps only for a BATCH_COMMIT that modifies the disease model, and a locator count in a provenance sentence changes no claim, block, status, support or uncertainty; WM_v7.27 is preserved with its date, its history note and its changelog row untouched. The registry scale acknowledgement was not renewed.
+trigger: MANUAL (operator-authorised repair batch, ACTOR_ID orchestrator by stated assumption, task ORCH-METABOLIC-BATCH-20261019). Repair of four prose citations that pointed at detection-rule ids which never existed: Harness Engineering established by measurement (git log -S over the ledger, zero commits for every id D-27 through D-36) that D-31, D-33, D-35 and D-36 were proposed by closed 2026-09-22 candidates and never minted as rows of DEFAULTS THAT BIT US. The four citing sentences in discovery_ledger_current.md (DL-MOL-005, DL-MECH-011) and full_text_queue_current.md (FT-142) now say so, name the candidate each formulation lives in and quote that formulation, with the superseded wording quoted beside each repair per prompt_batch_commit.md 7.2. No row was minted: the mint was DECLINED and the reasoning recorded in the ledger's allocator addendum and in batch_report_BATCH_20261019_010.md. No candidate. NO WORKING-MODEL BUMP: the rule in section 2 bumps only for a BATCH_COMMIT that modifies the disease model, and a detection-rule citation in a research ledger's prose changes no claim, block, status, type, summary, support or uncertainty - the same reasoning BATCH_20261019_009 applied to a provenance sentence; WM_v7.27 is preserved with its date, its history note and its changelog row untouched.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,7 +126,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261021_BATCH_20261019_009
+last_lint_id: LINT_20261021_BATCH_20261019_010
 last_lint_date: 2026-10-21
 last_lint_result: WARN
 ```
