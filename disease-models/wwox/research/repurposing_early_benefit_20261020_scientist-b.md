@@ -25,8 +25,21 @@
 ## 0 · The answer in one page
 
 **Measurable, today, in a human child with WOREE:** growth (occipitofrontal circumference, height,
-weight as SD scores at a stated age) and seizure occurrence by clinical description. That is
-approximately all, and only the first is quantitative.
+weight against SD scores at a stated age) and seizure occurrence by clinical description. That is
+approximately all, and only the first is quantitative **as a kind of measurement** — the published
+values this repository can reach are `PENDING_RE_ACQUISITION` (§ 1.4).
+
+> 🔴 **Corrected 2026-10-21 after a blind locator audit** of the reading behind §§ 1.4, 1.5 and row 14
+> ([`page_adjudications/locator_audit_PMID36537114_20261021.md`](page_adjudications/locator_audit_PMID36537114_20261021.md);
+> 12 of 12 triples, **8 SUPPORTED · 1 OVERSHOOT · 2 UNDERSHOOT · 1 UNVERIFIABLE · 0 NOT_IN_SOURCE**).
+> Four corrections travel through this note and each is marked where it lands: the **surface defect is
+> global**, not confined to the growth minus signs, so no signed or ranged value from that paper is
+> citable; the **absence of a counted seizure endpoint** is asserted of the delivered surface only; the
+> **authors hedge *and* recommend**, and carrying only the hedge made them sound more doubtful than
+> they are; and the independence boundary is **stronger**, not vaguer, than the first draft said —
+> the source **names** the previously published patients and **two of them are diet responders**.
+> A correction that strengthens a boundary is the outcome an audit is for, and it is recorded here in
+> the same breath as the three that narrow one.
 
 **Everything else in the five endpoint families is either qualitative, preclinical, or absent.**
 The two endpoint files this repository keeps for exactly this purpose —
@@ -49,11 +62,20 @@ twice.** A symptomatic benefit does not demonstrate a slowing of the disease:
 - in the only WOREE series reporting a therapeutic response of any kind, the *«Developmental delay»*
   row is **identical in all five columns** — the three diet responders included — and **two of the
   three responders had died**, at two years and at two years four months (PMID 36537114, read for this
-  task, `FTR-20261020-36537114-01`).
+  task, `FTR-20261020-36537114-01`; both rows **SUPPORTED** by the blind audit, triples 2 and 3).
 
 So in this disease the non-equivalence is not a methodological caution imported from the roadmap. It
 is printed in two independent sources, and any early-benefit candidate scored on a seizure endpoint
 must carry it.
+
+⚠️ **And it must be carried without the mirror-image error.** The authors of that series **hedge and
+recommend in the same breath** — *«It may be premature to assert the potential beneficial effects»*
+and *«The institution of a ketogenic diet should be considered for the treatment of epilepsy in these
+patients»*. The first draft of this note quoted only the hedge, which the blind audit returned as
+`UNDERSHOOT` (triple 1): it made the source sound as if it supported this note's conclusion. **The
+non-modification argument rests on the absent measurement and on the two rows above, never on the
+authors being more doubtful than they are** — and nothing in it is a reason for or against a dietary
+intervention for any child.
 
 **The word *protection* is not available on any endpoint in this corpus.** Nothing has been measured
 as preserving a function that would otherwise have been lost — the one intervention that improves
@@ -103,7 +125,7 @@ not a scorecard and assigns no weights.
 
 | | |
 |---|---|
-| **Human, measurable now** | **Occipitofrontal circumference, height and weight as SD scores or percentiles at a stated age**, plus failure to thrive. In the series read for this task these are printed for the three surviving columns, with **failure to thrive in 5/5** and an age of onset given for one. ⚠️ **The minus signs are absent from the extracted surface** this repository holds; the values are read as **magnitudes only**, and a reading that needs the sign must open the typeset table. |
+| **Human, measurable now** | **Occipitofrontal circumference, height and weight against SD scores or percentiles at a stated age**, plus failure to thrive. In the series read for this task the **kind** of measurement is established — printed for the three surviving columns, with **failure to thrive in 5/5** and an age of onset given for one. 🔴 **The VALUES are `PENDING_RE_ACQUISITION`, and this is wider than the first draft of this note declared (corrected 2026-10-21, blind audit triple 5, `UNVERIFIABLE`).** The held extraction strips hyphens and minus signs from **prose and numeric tokens throughout the document** — `shortchain`, `lossoffunction`, `exons 68` (6–8), `34weeks` (3–4 weeks), `50th75th` (50th–75th), `< 3SD` (< −3 SD) — and a scan for U+2000–U+21FF returns the empty set, so **no numeric token from that paper is reliable for its sign or for single-value-versus-range**, and reading them as signed magnitudes (as the first draft did) is not available either. **No PDF, page render or figure render exists for this PMID anywhere under `files/`**; re-acquisition of a native surface for DOI 10.1002/ajmg.a.63074 is on the operator's PDF list, and an access control is not to be circumvented for it. *(The audit wrote «every hyphen in the document»; this reading's own qualification is that hyphens survive inside citation-anchor fragments such as `#ajmga63074-bib-0010` — which reaches no prose or numeric token, so the consequence is unchanged.)* ⚠️ The clause the first draft attached here — that this is *«the only human WOREE endpoint of that kind in the records this repository holds»* — is **withdrawn from the locator** as a statement about this repository that no quote from the paper can support; it survives only as this note's own reading, in the row below. |
 | **Why it matters** | It is **standardised, repeatable, clinically obtainable without a specialised laboratory, has an age-expected trajectory as its comparator, and is already being collected in routine care** — the four properties `clinical_monitoring_endpoints_current.md` scores highest. It is the first plausible row that file could ever carry, and this note deliberately **does not write that row**: population is a `BATCH_COMMIT` act. |
 | **Preclinical, measured** | Growth and glycaemia rescued by neuronal AAV9-hSynI-WWOX — **at high dose only**: at P20 the low dose **had not** corrected hypoglycaemia and the high dose had (`CLAIM 011`). CNS-only restoration reversing hypoglycaemia is the striking result of the family (`CLAIM 004`). |
 | **What it does not support** | A systemic read-out after a brain-directed intervention needs its own mechanism statement, and none is measured. Separately, a systemic `Wwox`-null mouse at **P18 is metabolically decompensated**, so **any** brain phenotype in that window carries a quantified systemic confounder (`CLAIM 036`) — which means a growth or glycaemia endpoint in that model measures the animal's whole condition, not a neural effect. Elevated BUN recurs across rodent models with **two competing explanations, renal insufficiency or seizure-driven hypercatabolism, neither ever tested**; creatinine recurrence is `UNDETERMINED` (`CLAIM 038`). |
@@ -184,7 +206,7 @@ recommendation and no dose below is transferred.
 | 11 | `P47T` → hippocampal astrogliosis | ↑, and rising with age; **microglial abundance progression untested** | mouse · `P47T` knock-in · 80 and 250 days · WT; **n = 3 mice, subfields/cells as the unit** | `CLAIM 006` | `DATO` + prudent `INFERENZA`; **T3, genotype caution mandatory** | **partial** |
 | 12 | Systemic WWOX loss → whole-animal metabolic state | decompensated at P18 | mouse · systemic `Wwox`-null · P18 · WT | `CLAIM 036` | `DATO` (measures) + `INFERENZA` (scope as confounder) | **exposure limit** — it bounds every brain endpoint read in that window |
 | 13 | WWOX loss → renal/catabolic markers (BUN, creatinine) | BUN ↑ across models; creatinine ↑ **in the rat only**, recurrence `UNDETERMINED` | rat `lde/lde` and mouse null · juvenile/adult · WT | `CLAIM 038` | `DATO` (the measures) + `IPOTESI` (**both** explanations) | **inconclusive** — renal insufficiency vs seizure-driven hypercatabolism, never tested |
-| 14 | Ketogenic diet → seizure control | ↑ (clinician-reported) in 3 patients; **development unchanged in 5/5; 2 of the 3 responders died by 2 y 4 m**; exposure denominator **absent** | **human** · biallelic predicted-null WOREE · paediatric · **uncontrolled, no comparator** | PMID 36537114 / `CLAIM 042` + this reading (`FTR-20261020-36537114-01`) | `DATO` (uncontrolled case series) + `INFERENZA` | **partial, symptomatic only** — explicitly **not** disease modification |
+| 14 | Ketogenic diet → seizure control | ↑ (clinician-reported) in 3 patients; **development unchanged in 5/5; 2 of the 3 responders died by 2 y 4 m**; exposure denominator **absent**; no count, score, latency or duration **on the delivered surface** (the per-patient narratives are **not covered**); **2 of the 3 responders are prior published individuals named by the source** (Table 1's last row → Piard 2019 for patients 2 and 4; chunk 18 → Dharmadhikari 2019 for patient 4), so a pooled count double-counts them and must name which | **human** · biallelic predicted-null WOREE · paediatric · **uncontrolled, no comparator** | PMID 36537114 / `CLAIM 042` + this reading (`FTR-20261020-36537114-01`), **audited 2026-10-21**, triples 0, 1, 5, 9 repaired at source | `DATO` (uncontrolled case series) + `INFERENZA`; ⚠️ the authors **hedge and recommend** — they call it *«premature to assert»* **and** write that the diet *«should be considered»* | **partial, symptomatic only** — explicitly **not** disease modification |
 | 15 | Lithium → PTZ-induced seizures | ↓ **in all three genotypes, wild type included** | mouse · `Wwox` +/+, +/−, −/− · acute pretreatment · WT comparator present | `CLAIM 016` / `TX-005` | `DATO`; `EVID` carried on the **failed specificity test**, not the rationale | **relevant negative** — specificity was testable in that assay and was not found |
 | 16 | Vigabatrin → spasms / brain MRI | spasms ↓ in some reports; **VABAM documented** in WWOX-DEE | **human** · WWOX-DEE · infancy · conflicting reports | `CLAIM 001` | `DATO`, **conflicting evidence** | **exposure-or-toxicity limit** |
 | 17 | Seizure control → developmental outcome | **no effect demonstrated**; deficit **precedes** seizures and did not improve when spasms resolved | **human** · WOREE · two years of follow-up · within-patient | `DL-MECH-039` (Shaukat 2018) via `HYP-20260709-07` | `INFERENZA`, strongly supported | **relevant negative** — the axis-defining one |
@@ -289,14 +311,23 @@ hypothesis resting on an abstract**, and this note states it as nothing more.
 ## 7 · Where this leaves the axis, in four lines
 
 1. A legitimate early benefit on **one** endpoint is available in principle, and the endpoint most
-   nearly ready is **growth**, because it is quantitative, repeatable, already collected, and has an
-   age-expected trajectory to be compared against.
+   nearly ready is **growth**, because it is quantitative *as a kind of measurement*, repeatable,
+   already collected, and has an age-expected trajectory to be compared against. 🔴 **It is not yet
+   usable as a baseline:** the only values this repository can reach are on a surface that strips every
+   sign and range, so they are `PENDING_RE_ACQUISITION`, and **a native surface for that article is
+   therefore the single cheapest unblocking acquisition on this axis** (§ 1.4).
 2. The endpoint everyone reaches for first — **seizures** — is the one this disease has twice shown to
    be **uncoupled from developmental outcome**. It remains worth pursuing for quality of life, status
    epilepticus and SUDEP, and it must never be scored as disease modification.
 3. **No pharmacodynamic endpoint exists**, so no candidate can currently demonstrate that it is acting
    on WWOX at all; the measured floor for one is `CLAIM 046`.
-4. The cheapest decisive moves are three, and none needs a new model: clear the parked qEEG primary;
-   read the three cited dietary reports for their endpoints (`MH-36537114-03`); and sweep the WOREE
-   case literature's **bodies and tables** for instrument mentions, which would convert three indexing
-   negatives into measured ones.
+4. The cheapest decisive moves are four, and none needs a new model: **acquire a native surface for
+   DOI 10.1002/ajmg.a.63074** (it unblocks the growth values, the exposure denominator and the
+   seizure-count question in one acquisition, since all three live in the chunks the held surface is
+   missing); clear the parked qEEG primary; read the three cited dietary reports for their endpoints
+   (`MH-36537114-03`); and sweep the WOREE case literature's **bodies and tables** for instrument
+   mentions, which would convert three indexing negatives into measured ones.
+5. **And one methodological result worth keeping.** The blind audit of this axis's single reading
+   returned **4 adverse verdicts in 12 triples after every other gate had passed** — one of which
+   *strengthened* the boundary it corrected, and one of which widened a declared artefact defect into
+   a standing acquisition debt. An owed audit is a debt, not a discharge; this one paid for itself.

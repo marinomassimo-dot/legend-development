@@ -26,14 +26,14 @@
    "reason": "paper_packet.py packet reported depth=partial_fulltext_read with two prior receipts and the sections a resume owes. Nothing to deduplicate; this is a resume, not an intake."
   },
   {
-   "skill": "legend-locator-audit",
-   "used": false,
-   "reason": "OWED, and named as owed in the commit candidate. Two propositions here bear on a registry claim already propagated (CLAIM 042), and one entry carries a declared surface defect - the minus signs of the growth SD scores are absent from the extracted text - which is exactly the class of defect a blind audit catches."
-  },
-  {
    "skill": "legend-hypothesis-forge",
    "used": false,
    "reason": "Not applicable. The reading produces an endpoint qualification and a bounded negative, not a therapeutic lever."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": true,
+   "reason": "Declared OWED by this manifest's first revision and RUN on 2026-10-21 by a blind auditor that received only the 12 (proposition, quote, anchor) triples and the two persisted artefacts: 8 SUPPORTED, 1 OVERSHOOT, 2 UNDERSHOOT, 1 UNVERIFIABLE, 0 NOT_IN_SOURCE. All four adverse verdicts repaired at source here. Verdict file: disease-models/wwox/research/page_adjudications/locator_audit_PMID36537114_20261021.md"
   }
  ],
  "group_assessment": {
@@ -159,20 +159,50 @@
   "abstract_anchoring_waived": "The abstract of this paper is three sentences of phenotype summary and carries none of the propositions below. It names the ketogenic diet once, as 'epilepsy that responded to a ketogenic diet in three patients', and that sentence is the overstatement this reading exists to bound: it carries no endpoint, no exposure denominator, no window, no comparator and no developmental outcome, and the abstract contains no EEG, growth, visual, sleep or mortality value at all. Anchoring these entries to it would attach each measured bound to the sentence it narrows.",
   "entries": [
    {
-    "proposition": "The ketogenic-diet benefit in this cohort is a clinician-reported improvement in seizure control in three named patients, with no counted, scored or instrumented endpoint behind the word 'improved'.",
+    "proposition": "On the delivered surface the ketogenic-diet benefit is a clinician-reported improvement in seizure control in three named patients: the Discussion sentence carries no count, score or instrument, and neither does Table 1, whose Epilepsy row records only seizure types and the fact of a response. Whether a seizure quantity is reported in the per-patient narratives is NOT COVERED - chunks 3-17 are absent from this surface.",
     "snippet": "However, the institution of a ketogenic diet in patients 1, 2, and 4 notably improved seizure control.",
     "surface": "body",
     "artifact": "files/fulltext/PMID36537114_Chong2023_SGchunks_text_2026-10-21.txt",
     "anchor": "Discussion, delivered chunk 22",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36537114.json",
+     "entry": 0,
+     "receipt": "FTR-20261020-36537114-01",
+     "what_changed": "OVERSHOOT repaired: the absence clause said the paper has no counted, scored or instrumented endpoint; the per-patient narratives (chunks 3-17) are not on this surface, so the absence is now asserted OF THE DELIVERED SURFACE and the narratives are declared NOT COVERED.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_PMID36537114_20261021.md",
+      "triple": 0,
+      "audited_on": "2026-10-21"
+     }
+    }
    },
    {
-    "proposition": "The authors themselves decline to assert a beneficial effect of the diet, and name cohort size as the reason.",
-    "snippet": "It may be premature to assert the potential beneficial effects of a ketogenic diet as they need to be evaluated carefully in a larger cohort.",
+    "proposition": "The authors hedge AND recommend, and both halves are the source's: they decline to assert the effect and name cohort size as the reason, then state in the same chunk that the findings 'may help to improve the control of epilepsy in certain patients', report the three responders in the abstract, and conclude that the diet 'should be considered for the treatment of epilepsy in these patients'. Carrying only the hedge makes the paper more cautious than it is.",
+    "snippet": "It may be premature to assert the potential beneficial effects of a ketogenic diet as they need to be evaluated carefully in a larger cohort. However, these findings suggest that the implementation of a ketogenic diet may help to improve the control of epilepsy in certain patients with WOREE syndrome.",
     "surface": "body",
     "artifact": "files/fulltext/PMID36537114_Chong2023_SGchunks_text_2026-10-21.txt",
-    "anchor": "Discussion, delivered chunk 22",
-    "panel_text_relation": "text_only"
+    "anchor": "Discussion, delivered chunk 22, two consecutive sentences; the recommending half is corroborated by the summary paragraph of chunk 25 ('The institution of a ketogenic diet should be considered for the treatment of epilepsy in these patients.') and by the abstract in chunk 0",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36537114.json",
+     "entry": 1,
+     "receipt": "FTR-20261020-36537114-01",
+     "what_changed": "UNDERSHOOT repaired: the entry kept the authors' hedge and dropped their recommendation. The snippet now spans both consecutive sentences and the proposition carries both halves. The asymmetry not to reintroduce is making a source sound as if it supports the reader's conclusion - in EITHER direction.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_PMID36537114_20261021.md",
+      "triple": 1,
+      "audited_on": "2026-10-21"
+     }
+    }
    },
    {
     "proposition": "Developmental status is identical across all five columns, the three diet responders included: in this series the symptomatic observation and the developmental outcome do not move together.",
@@ -199,13 +229,28 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Growth in this cohort is reported as SD scores and percentiles for occipitofrontal circumference, height and weight at a stated age - a quantitative, repeatable, clinically obtainable measurement, and the only human WOREE endpoint of that kind in the records this repository holds.",
+    "proposition": "Growth in this cohort is reported as occipitofrontal circumference, height and weight against SD scores and percentiles at a stated age - the KIND of measurement is established; the VALUES are PENDING RE-ACQUISITION and no signed or ranged number from this paper may be cited until a native surface exists.",
     "snippet": "OFC: 2 SD\nWeight: 1.5 SD\nHeight: 3.0 SD (at 8years)",
     "surface": "table",
     "artifact": "files/fulltext/PMID36537114_Chong2023_SGchunks_text_2026-10-21.txt",
     "anchor": "Table 1, row 'Updated growth parameter', third column; delivered in chunks 2 and 18",
     "panel_text_relation": "text_only",
-    "declared_surface_defect": "The minus signs are absent from this extracted surface. The three values are read here as the MAGNITUDES of SD scores and not as signed numbers: the direction comes from the row's own context, the same table calling this patient microcephalic from two months, and not from the characters quoted. Same class of defect as an exponent flattened by an extraction route. No proposition in this reading uses the sign, and a reading that needs it must open the typeset table."
+    "declared_surface_defect": "PENDING_RE_ACQUISITION. The blind audit measured the defect wider than this reading had declared it: the extraction strips hyphens and minus signs from PROSE AND NUMERIC TOKENS THROUGHOUT the document, not only from the growth SD scores - 'shortchain', 'lossoffunction', 'exons 68' (6-8), '34weeks' (3-4 weeks), '50th75th' (50th-75th), '< 3SD' (< -3 SD), 'microcephaly ( 3 SD' - and a scan for U+2000-U+21FF returns the empty set. (Hyphens survive only inside citation-anchor fragments such as '#ajmga63074-bib-0010'; that is this reading's own qualification of the audit's wording, and it does not reach a single prose or numeric token.) CONSEQUENCE: no numeric token from this surface is reliable for its SIGN or for single-value-versus-range. There is NO PDF, page render or figure render for this PMID anywhere under files/. Re-acquisition of a native surface for DOI 10.1002/ajmg.a.63074 is on the operator's PDF list; an access control is not to be circumvented for it.",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36537114.json",
+     "entry": 5,
+     "receipt": "FTR-20261020-36537114-01",
+     "what_changed": "UNVERIFIABLE accepted, on two counts. (1) The surface defect is global, not confined to the SD minus signs, so every signed or ranged value from this paper is marked PENDING RE-ACQUISITION instead of being read as a magnitude. (2) The closing clause 'the only human WOREE endpoint of that kind in the records this repository holds' is WITHDRAWN from this entry: it is a statement about this repository that no quote from this paper can support, and a locator is not the place for it.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNVERIFIABLE"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_PMID36537114_20261021.md",
+      "triple": 5,
+      "audited_on": "2026-10-21"
+     }
+    }
    },
    {
     "proposition": "A visual evoked potential was performed in one WOREE patient of this series and was undetectable bilaterally - so a VEP does exist as a performed measurement in WOREE, qualitatively and at n = 1.",
@@ -232,12 +277,27 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Two of the five patients were previously published and are updated here; the delivered surface does not say which two, so no diet response in this series can be counted as a new independent observation without resolving that.",
+    "proposition": "Two of the three diet responders are previously published individuals NAMED BY THE SOURCE, so a pooled count across WOREE series double-counts them. The paper declares three new and two previously published patients; Table 1's last row attributes patients 2 and 4 to Piard et al. (2019) - and chunk 18 attributes patient 4's homozygous exon-6 deletion to Dharmadhikari et al. (2019) - while patients 1, 2 and 4 are the three described as responding to the diet. Any pooled count must therefore name which individuals it is counting.",
     "snippet": "we present the molecular and clinical findings of five patients with WOREE syndrome, including three new and two previously published patients whose data have been updated",
     "surface": "body",
     "artifact": "files/fulltext/PMID36537114_Chong2023_SGchunks_text_2026-10-21.txt",
-    "anchor": "Discussion, summary paragraph, delivered chunk 25",
-    "panel_text_relation": "text_only"
+    "anchor": "Discussion, summary paragraph, delivered chunk 25; the per-patient attributions are Table 1's last row, 'CNVs or SNVs reported in other studies or ClinVar database' (chunks 2 and 18), and the patient-4 sentence of chunk 18, '(published in figure S2; Dharmadhikari et al., 2019)'",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36537114.json",
+     "entry": 9,
+     "receipt": "FTR-20261020-36537114-01",
+     "what_changed": "UNDERSHOOT repaired, and the correction REVERSES the direction of the caution. The entry said the surface does not say which two patients were previously published; it does, in Table 1's last row and in chunk 18, and the two it names are BOTH diet responders. The boundary is therefore not 'we cannot tell, so do not pool' but the stronger and more specific 'two of the three responders are named prior individuals, so any pooled count double-counts them and must name which'. Note the attribution row's own header scope: it reports whether a VARIANT was reported elsewhere, so the row names the candidates and the three-new/two-published split comes from the text.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_PMID36537114_20261021.md",
+      "triple": 9,
+      "audited_on": "2026-10-21"
+     }
+    }
    },
    {
     "proposition": "Delayed myelination for age is an MRI finding in one column of this series, reported as a radiological impression and not as a quantity.",
@@ -255,6 +315,28 @@
     "anchor": "Table 1, row 'Failure to thrive'; delivered in chunks 2 and 18",
     "panel_text_relation": "text_only"
    }
-  ]
+  ],
+  "blind_locator_audit": {
+   "performed": true,
+   "at": "2026-10-21",
+   "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_PMID36537114_20261021.md",
+   "auditors": 1,
+   "triples_audited": 12,
+   "of": 12,
+   "verdicts": {
+    "SUPPORTED": 8,
+    "OVERSHOOT": 1,
+    "UNDERSHOOT": 2,
+    "UNVERIFIABLE": 1,
+    "NOT_IN_SOURCE": 0
+   },
+   "repaired_at_source": [
+    0,
+    1,
+    5,
+    9
+   ],
+   "note": "Every adverse verdict is repaired in the entry it concerns, each with its own contradicts_locator object. Triple 9's repair makes the boundary STRONGER than the reading's original, which is the outcome an audit is for; triple 5's is an artefact gap and is marked PENDING_RE_ACQUISITION rather than resolved. The reading was not redone: the audit's surface is the surface this reading had."
+  }
  }
 }
