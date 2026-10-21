@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261021-31402619-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "31402619",
+  "doi": "10.1002/acn3.50826"
+ },
+ "event_at": "2026-10-21T22:17:31Z",
+ "analysis_at": "2026-10-21T22:17:31Z",
+ "analysis_time_precision": "second",
+ "workflow": "ad-hoc primary read by scientist-a under REPURP-10H-R1-A-20261021: paper_packet claim, Europe PMC fullTextXML, seven main figures from the supplementaryFiles container opened as images, the Supplementary Materials and Methods Word file read as text; supplementary figures, data files and tables not opened (the supplementary figure titles were read as listed in the article)",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID31402619_Abbink2019_PMC6689685.xml",
+ "source_fingerprint": "52eb6a4e75c1b84acd479e549794c9df43597b08cd98dc446428d31d4a0bbcb2",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "captions_only",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID31402619.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

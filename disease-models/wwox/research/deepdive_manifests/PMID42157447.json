@@ -1,0 +1,524 @@
+{
+ "schema_version": 2,
+ "pmid": "42157447",
+ "doi": "10.1002/acn3.70430",
+ "receipt": "FTR-20261021-42157447-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named and deduplicated by the Orchestrator's selection file; the per-paper M0 packet and receipt status were run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "The reading is a primary-evidence read of a NOT WWOX EVIDENCE paper; the dossier is the analysis note section, no WWOX commit candidate is implied."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No consolidated baseline claim is narrowed or reversed by this reading; a blind audit is declared OWED where a candidate proposes it."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Not requested; discovery leads are staged separately if any."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a candidate card; BLOCK-1 holds, class level only."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A Vanderbilt University Medical Center laboratory (from the animal-care statement) that characterised the SLC6A1 and GABRG2 knock-in lines and runs the open-label phase 1 programme named in the paper; the authors thus hold both the preclinical and the clinical interest. HEK293T overexpression plus two knock-in mouse lines. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "SLC6A1 AND phenylbutyrate",
+    "count": 22,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "GAT-1 AND missense AND chaperone",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "4-phenylbutyrate AND histone deacetylase AND pharmacochaperone",
+    "count": 3,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "PubMed counts, dated; a zero from a title/abstract query licenses 'no paper is indexed', never 'this was never measured' (D-37)."
+ },
+ "multihop": {
+  "references_enumerated": 35,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "35 references enumerated from the JATS; none is WWOX-related. The sister GABRG2 and GABRA1 papers in this lot (38731820, 39216838, 41178115, 42587736) are the same laboratory family."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42157447 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-21 via PubMed efetch for PMID 42157447: publication types ['Journal Article']; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 35,
+   "references_screened": 33,
+   "references_with_doi": 33,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42157447_DeLeeuw2026_PMC13394997.xml",
+   "sha256": "9090b797bb7084def2c13d2c5e5c35bbac5af2e6cb7415375490b33398c70232",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC13394997: whole article; every text locator is matched against it.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13394997/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "9090b797bb7084def2c13d2c5e5c35bbac5af2e6cb7415375490b33398c70232",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID42157447/ACN3-9999-0-g001.jpg",
+   "sha256": "f58ec9adc00ac47e4271f1a5d99bdae8026c54b402424a24acc1883d98259bb8",
+   "kind": "figure",
+   "note": "Image file g001 (article figure 6) from the supplementaryFiles container, opened as an image; paired to its caption with figure_legend_pairs.py, not by file number.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13394997/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "f58ec9adc00ac47e4271f1a5d99bdae8026c54b402424a24acc1883d98259bb8",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID42157447/ACN3-9999-0-g002.jpg",
+   "sha256": "52a2742447d1083af9df09f22f9728442b36016f765157f951ddb1ccfebd6a6e",
+   "kind": "figure",
+   "note": "Image file g002 (article figure 7) from the supplementaryFiles container, opened as an image; paired to its caption with figure_legend_pairs.py, not by file number.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13394997/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "52a2742447d1083af9df09f22f9728442b36016f765157f951ddb1ccfebd6a6e",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID42157447/ACN3-9999-0-g003.jpg",
+   "sha256": "13c4a55cbf083cc84373c6c1228e930a2cea67cf3d498bcd7f885dcc642b167b",
+   "kind": "figure",
+   "note": "Image file g003 (article figure 4) from the supplementaryFiles container, opened as an image; paired to its caption with figure_legend_pairs.py, not by file number.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13394997/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "13c4a55cbf083cc84373c6c1228e930a2cea67cf3d498bcd7f885dcc642b167b",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID42157447/ACN3-9999-0-g004.jpg",
+   "sha256": "d171312de573b0d2f13cd10148c4f7b14460db2cbfe141cedffa692928b8df7d",
+   "kind": "figure",
+   "note": "Image file g004 (article figure 5) from the supplementaryFiles container, opened as an image; paired to its caption with figure_legend_pairs.py, not by file number.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13394997/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "d171312de573b0d2f13cd10148c4f7b14460db2cbfe141cedffa692928b8df7d",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID42157447/ACN3-9999-0-g005.jpg",
+   "sha256": "12f4d025761a0e326c876771696415ff933607bb6320ca30562a5090545dfbdd",
+   "kind": "figure",
+   "note": "Image file g005 (article figure 1) from the supplementaryFiles container, opened as an image; paired to its caption with figure_legend_pairs.py, not by file number.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13394997/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "12f4d025761a0e326c876771696415ff933607bb6320ca30562a5090545dfbdd",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID42157447/ACN3-9999-0-g006.jpg",
+   "sha256": "503e66837e83f7845251d9ecf8b2a53b0573e977142ad02e50eb13abf2b9acd1",
+   "kind": "figure",
+   "note": "Image file g006 (article figure 8) from the supplementaryFiles container, opened as an image; paired to its caption with figure_legend_pairs.py, not by file number.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13394997/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "503e66837e83f7845251d9ecf8b2a53b0573e977142ad02e50eb13abf2b9acd1",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID42157447/ACN3-9999-0-g007.jpg",
+   "sha256": "51f5e75f00e84cfa5d90aec91478181445535881e901cb63885df3cb6738499d",
+   "kind": "figure",
+   "note": "Image file g007 (article figure 2) from the supplementaryFiles container, opened as an image; paired to its caption with figure_legend_pairs.py, not by file number.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13394997/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "51f5e75f00e84cfa5d90aec91478181445535881e901cb63885df3cb6738499d",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID42157447/ACN3-9999-0-g008.jpg",
+   "sha256": "8bbddf81c1fd1c313004b61bbe336210eafc6f8011d72da3ceec1d03095b3bd4",
+   "kind": "figure",
+   "note": "Image file g008 (article figure 3) from the supplementaryFiles container, opened as an image; paired to its caption with figure_legend_pairs.py, not by file number.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13394997/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "8bbddf81c1fd1c313004b61bbe336210eafc6f8011d72da3ceec1d03095b3bd4",
+    "derived": false
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE (SLC6A1, a membrane transporter). All 32 variants lose GABA uptake in HEK293T; in the 1:1 'heterozygous' condition the residual uptake averages 56.5 to 80.2 percent of wild type.",
+    "snippet": "The remaining GABA uptake activity averaged 56.5% to 80.2% of WT levels, corresponding to a 19.8% to 43.5% loss of function.",
+    "anchor": "Results, Partial to Complete Loss of Function, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42157447_DeLeeuw2026_PMC13394997.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) loss-of-function missense variants: HEK293T cells transfected with rat GAT-1 variants (homozygous or 1:1 with wild type), forebrain crude synaptosomes and 24-hour EEG from two heterozygous knock-in mouse lines (A288V, S295L), after treatment with 4-phenylbutyrate, a bile-acid chaperone, histone deacetylase inhibitors, an eIF2alpha-dephosphorylation inhibitor, and ER chaperone overexpression or activation; NOT a WWOX system",
+     "genotype": "SLC6A1 32 missense/nonsense variants; Slc6a1 +/A288V and +/S295L mice; no WWOX",
+     "endpoint": "[3H]GABA uptake, total and mature GAT-1 protein by Western blot, synaptosomal uptake, EEG 4-8 Hz events"
+    }
+   },
+   {
+    "proposition": "Figure 1C read (file g005): heterozygous bars run from about 0.55 (E16X, K448X) to about 0.8 (G234S) of wild type, all below 1.",
+    "snippet": "Baseline GABA uptake function in heterozygous SLC6A1 variants compared to WT.",
+    "anchor": "Figure 1C (heterozygous variants, uptake as fraction of wild type)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42157447/ACN3-9999-0-g005.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) loss-of-function missense variants: HEK293T cells transfected with rat GAT-1 variants (homozygous or 1:1 with wild type), forebrain crude synaptosomes and 24-hour EEG from two heterozygous knock-in mouse lines (A288V, S295L), after treatment with 4-phenylbutyrate, a bile-acid chaperone, histone deacetylase inhibitors, an eIF2alpha-dephosphorylation inhibitor, and ER chaperone overexpression or activation; NOT a WWOX system",
+     "genotype": "SLC6A1 32 missense/nonsense variants; Slc6a1 +/A288V and +/S295L mice; no WWOX",
+     "endpoint": "[3H]GABA uptake, total and mature GAT-1 protein by Western blot, synaptosomal uptake, EEG 4-8 Hz events"
+    },
+    "qualifies": "entries[0]",
+    "qualifies_needle": "The remaining GABA uptake activity averaged 5"
+   },
+   {
+    "proposition": "Quantity and function are measured together in HEK293T for four variants: total GAT-1 protein rises from a small fraction of wild type with the phenylbutyrate class.",
+    "snippet": "Densitometry quantification revealed that both PBA and TUDCA significantly increased total GAT‐1 protein in all four variants (Figure 4G).",
+    "anchor": "Results, ER Stress Modulators, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42157447_DeLeeuw2026_PMC13394997.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) loss-of-function missense variants: HEK293T cells transfected with rat GAT-1 variants (homozygous or 1:1 with wild type), forebrain crude synaptosomes and 24-hour EEG from two heterozygous knock-in mouse lines (A288V, S295L), after treatment with 4-phenylbutyrate, a bile-acid chaperone, histone deacetylase inhibitors, an eIF2alpha-dephosphorylation inhibitor, and ER chaperone overexpression or activation; NOT a WWOX system",
+     "genotype": "SLC6A1 32 missense/nonsense variants; Slc6a1 +/A288V and +/S295L mice; no WWOX",
+     "endpoint": "[3H]GABA uptake, total and mature GAT-1 protein by Western blot, synaptosomal uptake, EEG 4-8 Hz events"
+    }
+   },
+   {
+    "proposition": "Figure 4G read (file g003): vehicle bars sit at about 0.1 to 0.17 of wild type; PBA bars about 0.9 (D52Y), 1.0 (V125M), 1.05 (A357V) and 1.38 (G566H); TUDCA bars about 0.7, 0.72, 0.95 and 1.02; the legend does not say which allele the antibody reports in the 1:1 condition (a vehicle level near 0.15 is below the 0.5 expected if the wild-type co-expressed protein were counted).",
+    "snippet": "Densitometric quantification showed that both PBA and TUDCA significantly increased total GAT",
+    "anchor": "Figure 4G (normalised GAT-1 integrated density, four heterozygous variants, wild type = 1)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42157447/ACN3-9999-0-g003.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) loss-of-function missense variants: HEK293T cells transfected with rat GAT-1 variants (homozygous or 1:1 with wild type), forebrain crude synaptosomes and 24-hour EEG from two heterozygous knock-in mouse lines (A288V, S295L), after treatment with 4-phenylbutyrate, a bile-acid chaperone, histone deacetylase inhibitors, an eIF2alpha-dephosphorylation inhibitor, and ER chaperone overexpression or activation; NOT a WWOX system",
+     "genotype": "SLC6A1 32 missense/nonsense variants; Slc6a1 +/A288V and +/S295L mice; no WWOX",
+     "endpoint": "[3H]GABA uptake, total and mature GAT-1 protein by Western blot, synaptosomal uptake, EEG 4-8 Hz events"
+    },
+    "qualifies": "entries[2]",
+    "qualifies_needle": "Densitometry quantification revealed that bot"
+   },
+   {
+    "proposition": "Function after the phenylbutyrate class is a modest per-variant increase over each variant's own untreated uptake (19.2 to 39.5 percent for phenylbutyrate; 15.8 to 32.2 for the bile acid).",
+    "snippet": "PBA treatment resulted in a significant increase in uptake across all 32 variants, with the increase in uptake ranging from",
+    "anchor": "Results, PBA and TUDCA Restored GABA Uptake, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42157447_DeLeeuw2026_PMC13394997.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) loss-of-function missense variants: HEK293T cells transfected with rat GAT-1 variants (homozygous or 1:1 with wild type), forebrain crude synaptosomes and 24-hour EEG from two heterozygous knock-in mouse lines (A288V, S295L), after treatment with 4-phenylbutyrate, a bile-acid chaperone, histone deacetylase inhibitors, an eIF2alpha-dephosphorylation inhibitor, and ER chaperone overexpression or activation; NOT a WWOX system",
+     "genotype": "SLC6A1 32 missense/nonsense variants; Slc6a1 +/A288V and +/S295L mice; no WWOX",
+     "endpoint": "[3H]GABA uptake, total and mature GAT-1 protein by Western blot, synaptosomal uptake, EEG 4-8 Hz events"
+    }
+   },
+   {
+    "proposition": "Figure 2B-C read (file g007): all variant bars sit at about 1.2 to 1.4 of their own vehicle; the wild-type bar also sits above 1 (about 1.12 to 1.15), so the treatment is not specific to variant protein; the heterozygous baseline in Figure 1C is already 0.55 to 0.8, so the arithmetic of the two figures puts treated variants at roughly 0.7 to 1.1 of untreated wild type, not uniformly 'to or above wild type'.",
+    "snippet": "PBA significantly increased GABA uptake across all 32 variants, restoring function to or above WT levels.",
+    "anchor": "Figure 2B (uptake of heterozygous variants after PBA, each normalised to its own vehicle)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42157447/ACN3-9999-0-g007.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) loss-of-function missense variants: HEK293T cells transfected with rat GAT-1 variants (homozygous or 1:1 with wild type), forebrain crude synaptosomes and 24-hour EEG from two heterozygous knock-in mouse lines (A288V, S295L), after treatment with 4-phenylbutyrate, a bile-acid chaperone, histone deacetylase inhibitors, an eIF2alpha-dephosphorylation inhibitor, and ER chaperone overexpression or activation; NOT a WWOX system",
+     "genotype": "SLC6A1 32 missense/nonsense variants; Slc6a1 +/A288V and +/S295L mice; no WWOX",
+     "endpoint": "[3H]GABA uptake, total and mature GAT-1 protein by Western blot, synaptosomal uptake, EEG 4-8 Hz events"
+    },
+    "qualifies": "entries[4]",
+    "qualifies_needle": "PBA treatment resulted in a significant incre"
+   },
+   {
+    "proposition": "HDAC inhibition: the two HDAC inhibitors gave a small, variable increase or none, and the authors conclude pan-HDAC inhibition is insufficient to rescue function.",
+    "snippet": "inhibition is insufficient to rescue transporter function in the context of SLC6A1 variants.",
+    "anchor": "Results, HDAC Inhibitors Had a Modest and Variable Upregulation, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42157447_DeLeeuw2026_PMC13394997.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) loss-of-function missense variants: HEK293T cells transfected with rat GAT-1 variants (homozygous or 1:1 with wild type), forebrain crude synaptosomes and 24-hour EEG from two heterozygous knock-in mouse lines (A288V, S295L), after treatment with 4-phenylbutyrate, a bile-acid chaperone, histone deacetylase inhibitors, an eIF2alpha-dephosphorylation inhibitor, and ER chaperone overexpression or activation; NOT a WWOX system",
+     "genotype": "SLC6A1 32 missense/nonsense variants; Slc6a1 +/A288V and +/S295L mice; no WWOX",
+     "endpoint": "[3H]GABA uptake, total and mature GAT-1 protein by Western blot, synaptosomal uptake, EEG 4-8 Hz events"
+    }
+   },
+   {
+    "proposition": "Figure 3B-C read (file g008): butyrate bars about 1.05 to 1.2 of vehicle (wild type about 1.15); SAHA bars about 0.9 to 1.2, all labelled not significant on the panel.",
+    "snippet": "Controls included empty-vector (pcDNA) and WT treated with CI-966 [50 μM], a known GAT-1 inhibitor.",
+    "anchor": "Figure 3B-C (uptake after butyrate and after SAHA, each normalised to own vehicle)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42157447/ACN3-9999-0-g008.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) loss-of-function missense variants: HEK293T cells transfected with rat GAT-1 variants (homozygous or 1:1 with wild type), forebrain crude synaptosomes and 24-hour EEG from two heterozygous knock-in mouse lines (A288V, S295L), after treatment with 4-phenylbutyrate, a bile-acid chaperone, histone deacetylase inhibitors, an eIF2alpha-dephosphorylation inhibitor, and ER chaperone overexpression or activation; NOT a WWOX system",
+     "genotype": "SLC6A1 32 missense/nonsense variants; Slc6a1 +/A288V and +/S295L mice; no WWOX",
+     "endpoint": "[3H]GABA uptake, total and mature GAT-1 protein by Western blot, synaptosomal uptake, EEG 4-8 Hz events"
+    },
+    "qualifies": "entries[6]",
+    "qualifies_needle": "inhibition is insufficient to rescue transpor"
+   },
+   {
+    "proposition": "Butyrate raises the immature, ER-retained GAT-1 pool: quantity up without trafficking, the dissociation of protein quantity from function inside one paper.",
+    "snippet": "In contrast, butyrate significantly increased the total amount of immature protein, suggesting that it drives non‐specific protein accumulation rather than productive trafficking.",
+    "anchor": "Results, HDAC Inhibitors Failed to Rescue, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42157447_DeLeeuw2026_PMC13394997.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) loss-of-function missense variants: HEK293T cells transfected with rat GAT-1 variants (homozygous or 1:1 with wild type), forebrain crude synaptosomes and 24-hour EEG from two heterozygous knock-in mouse lines (A288V, S295L), after treatment with 4-phenylbutyrate, a bile-acid chaperone, histone deacetylase inhibitors, an eIF2alpha-dephosphorylation inhibitor, and ER chaperone overexpression or activation; NOT a WWOX system",
+     "genotype": "SLC6A1 32 missense/nonsense variants; Slc6a1 +/A288V and +/S295L mice; no WWOX",
+     "endpoint": "[3H]GABA uptake, total and mature GAT-1 protein by Western blot, synaptosomal uptake, EEG 4-8 Hz events"
+    }
+   },
+   {
+    "proposition": "Figure 5F-G read (file g004): phenylbutyrate raises total HA-tagged wild-type GAT-1 to about 1.4 to 2.5 of vehicle and the mature-to-immature ratio from about 1 to 3.3 to 4.6; butyrate raises total protein about 2.8-fold in S295L and about 1 in A288V while the ratio stays near 1.1 to 1.2 in wild type and A288V but reaches about 2.7 in S295L (four asterisks), a result the text paragraph does not list.",
+    "snippet": "Butyrate failed to increase this ratio in WT (p = 0.9572), A288V (p = 0.3665), and showed only a weak effect in V511M (*p = 0.0190).",
+    "anchor": "Figure 5F-G (total protein and mature-to-immature ratio after PBA, butyrate, salubrinal)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42157447/ACN3-9999-0-g004.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) loss-of-function missense variants: HEK293T cells transfected with rat GAT-1 variants (homozygous or 1:1 with wild type), forebrain crude synaptosomes and 24-hour EEG from two heterozygous knock-in mouse lines (A288V, S295L), after treatment with 4-phenylbutyrate, a bile-acid chaperone, histone deacetylase inhibitors, an eIF2alpha-dephosphorylation inhibitor, and ER chaperone overexpression or activation; NOT a WWOX system",
+     "genotype": "SLC6A1 32 missense/nonsense variants; Slc6a1 +/A288V and +/S295L mice; no WWOX",
+     "endpoint": "[3H]GABA uptake, total and mature GAT-1 protein by Western blot, synaptosomal uptake, EEG 4-8 Hz events"
+    },
+    "qualifies": "entries[8]",
+    "qualifies_needle": "In contrast, butyrate significantly increased"
+   },
+   {
+    "proposition": "In mice, forebrain synaptosomal uptake in the knock-in lines is partly restored by phenylbutyrate and not by butyrate; the paper states the fraction of wild-type activity restored.",
+    "snippet": "restoring 64.7% of WT transporter activity (Figure 6B)",
+    "anchor": "Results, PBA Restored GABA Uptake in Knock-In Mice, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42157447_DeLeeuw2026_PMC13394997.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) loss-of-function missense variants: HEK293T cells transfected with rat GAT-1 variants (homozygous or 1:1 with wild type), forebrain crude synaptosomes and 24-hour EEG from two heterozygous knock-in mouse lines (A288V, S295L), after treatment with 4-phenylbutyrate, a bile-acid chaperone, histone deacetylase inhibitors, an eIF2alpha-dephosphorylation inhibitor, and ER chaperone overexpression or activation; NOT a WWOX system",
+     "genotype": "SLC6A1 32 missense/nonsense variants; Slc6a1 +/A288V and +/S295L mice; no WWOX",
+     "endpoint": "[3H]GABA uptake, total and mature GAT-1 protein by Western blot, synaptosomal uptake, EEG 4-8 Hz events"
+    }
+   },
+   {
+    "proposition": "Figure 6 read (file g001): the panel letters on the image are A = PBA, B = butyrate (A288V) and C = PBA, D = butyrate (S295L); the text and the legend assign the opposite letters (butyrate to A and C, PBA to B and D). The conclusions agree with the image (PBA bar significant, butyrate not significant) but the lettering does not.",
+    "snippet": "(A) 3H GABA uptake in crude synaptosomes from Slc6a1+/A288V knock-in mice.",
+    "anchor": "Figure 6 panels A-D (x-axis labels read on the image)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42157447/ACN3-9999-0-g001.jpg",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) loss-of-function missense variants: HEK293T cells transfected with rat GAT-1 variants (homozygous or 1:1 with wild type), forebrain crude synaptosomes and 24-hour EEG from two heterozygous knock-in mouse lines (A288V, S295L), after treatment with 4-phenylbutyrate, a bile-acid chaperone, histone deacetylase inhibitors, an eIF2alpha-dephosphorylation inhibitor, and ER chaperone overexpression or activation; NOT a WWOX system",
+     "genotype": "SLC6A1 32 missense/nonsense variants; Slc6a1 +/A288V and +/S295L mice; no WWOX",
+     "endpoint": "[3H]GABA uptake, total and mature GAT-1 protein by Western blot, synaptosomal uptake, EEG 4-8 Hz events"
+    },
+    "contradicts": "entries[10]",
+    "contradicts_needle": "(Figure 6B)"
+   },
+   {
+    "proposition": "EEG: butyrate increased seizure-event counts in S295L mice, as stated in the text with a p value of 0.0119.",
+    "snippet": "butyrate treatment significantly increased the number of seizure events compared to baseline (p = 0.0119)",
+    "anchor": "Results, Drug Treatment and Seizure Endpoints, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42157447_DeLeeuw2026_PMC13394997.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) loss-of-function missense variants: HEK293T cells transfected with rat GAT-1 variants (homozygous or 1:1 with wild type), forebrain crude synaptosomes and 24-hour EEG from two heterozygous knock-in mouse lines (A288V, S295L), after treatment with 4-phenylbutyrate, a bile-acid chaperone, histone deacetylase inhibitors, an eIF2alpha-dephosphorylation inhibitor, and ER chaperone overexpression or activation; NOT a WWOX system",
+     "genotype": "SLC6A1 32 missense/nonsense variants; Slc6a1 +/A288V and +/S295L mice; no WWOX",
+     "endpoint": "[3H]GABA uptake, total and mature GAT-1 protein by Western blot, synaptosomal uptake, EEG 4-8 Hz events"
+    }
+   },
+   {
+    "proposition": "Figure 8C and 8F read (file g006): the p values printed on the panels are P = 0.0004 (S295L butyrate, baseline about 50 to butyrate about 105 events) and P = 0.7252 (A288V butyrate), not the 0.0119 and 0.1046 given in the text and legend; the direction and the conclusion are the same (butyrate worse in S295L, no benefit in A288V).",
+    "snippet": "Quantification of seizure events in Slc6a1+/S295L mice (4-8 Hz frequency range).",
+    "anchor": "Figure 8C and 8F (seizure events in 4-8 Hz range, butyrate against baseline)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42157447/ACN3-9999-0-g006.jpg",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) loss-of-function missense variants: HEK293T cells transfected with rat GAT-1 variants (homozygous or 1:1 with wild type), forebrain crude synaptosomes and 24-hour EEG from two heterozygous knock-in mouse lines (A288V, S295L), after treatment with 4-phenylbutyrate, a bile-acid chaperone, histone deacetylase inhibitors, an eIF2alpha-dephosphorylation inhibitor, and ER chaperone overexpression or activation; NOT a WWOX system",
+     "genotype": "SLC6A1 32 missense/nonsense variants; Slc6a1 +/A288V and +/S295L mice; no WWOX",
+     "endpoint": "[3H]GABA uptake, total and mature GAT-1 protein by Western blot, synaptosomal uptake, EEG 4-8 Hz events"
+    },
+    "contradicts": "entries[12]",
+    "contradicts_needle": "(p = 0.0119)"
+   },
+   {
+    "proposition": "Phenylbutyrate reduces 4-8 Hz event counts in both lines; Figure 8D and 8G read: S295L about 145 to about 35 events, A288V about 92 to about 28.",
+    "snippet": "PBA treatment led to a significant reduction in seizure frequency in the same Slc6a1+/S295L mice",
+    "anchor": "Results, Drug Treatment and Seizure Endpoints, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42157447_DeLeeuw2026_PMC13394997.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) loss-of-function missense variants: HEK293T cells transfected with rat GAT-1 variants (homozygous or 1:1 with wild type), forebrain crude synaptosomes and 24-hour EEG from two heterozygous knock-in mouse lines (A288V, S295L), after treatment with 4-phenylbutyrate, a bile-acid chaperone, histone deacetylase inhibitors, an eIF2alpha-dephosphorylation inhibitor, and ER chaperone overexpression or activation; NOT a WWOX system",
+     "genotype": "SLC6A1 32 missense/nonsense variants; Slc6a1 +/A288V and +/S295L mice; no WWOX",
+     "endpoint": "[3H]GABA uptake, total and mature GAT-1 protein by Western blot, synaptosomal uptake, EEG 4-8 Hz events"
+    }
+   },
+   {
+    "proposition": "The treatment window is a 24-hour recording before and after seven days of daily treatment, with baseline and treated recordings compared within the same animal.",
+    "snippet": "Mice were then treated daily with either butyrate or PBA",
+    "anchor": "Results, Drug Treatment and Seizure Endpoints, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42157447_DeLeeuw2026_PMC13394997.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) loss-of-function missense variants: HEK293T cells transfected with rat GAT-1 variants (homozygous or 1:1 with wild type), forebrain crude synaptosomes and 24-hour EEG from two heterozygous knock-in mouse lines (A288V, S295L), after treatment with 4-phenylbutyrate, a bile-acid chaperone, histone deacetylase inhibitors, an eIF2alpha-dephosphorylation inhibitor, and ER chaperone overexpression or activation; NOT a WWOX system",
+     "genotype": "SLC6A1 32 missense/nonsense variants; Slc6a1 +/A288V and +/S295L mice; no WWOX",
+     "endpoint": "[3H]GABA uptake, total and mature GAT-1 protein by Western blot, synaptosomal uptake, EEG 4-8 Hz events"
+    }
+   },
+   {
+    "proposition": "A mechanism claim from pattern similarity: the bile acid, which lacks HDAC activity, rescues with a similar variant-by-variant pattern as phenylbutyrate, offered as evidence of shared pharmacochaperoning; no direct binding, thermal-stability or folding measurement is reported.",
+    "snippet": "This interpretation is strengthened by the fact that TUDCA, which lacks HDAC inhibitory activity, achieved a similar magnitude and pattern of variant rescue as PBA.",
+    "anchor": "Discussion, Pharmacochaperones Outperform HDAC Inhibitors, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42157447_DeLeeuw2026_PMC13394997.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) loss-of-function missense variants: HEK293T cells transfected with rat GAT-1 variants (homozygous or 1:1 with wild type), forebrain crude synaptosomes and 24-hour EEG from two heterozygous knock-in mouse lines (A288V, S295L), after treatment with 4-phenylbutyrate, a bile-acid chaperone, histone deacetylase inhibitors, an eIF2alpha-dephosphorylation inhibitor, and ER chaperone overexpression or activation; NOT a WWOX system",
+     "genotype": "SLC6A1 32 missense/nonsense variants; Slc6a1 +/A288V and +/S295L mice; no WWOX",
+     "endpoint": "[3H]GABA uptake, total and mature GAT-1 protein by Western blot, synaptosomal uptake, EEG 4-8 Hz events"
+    }
+   },
+   {
+    "proposition": "An ER-stress / eIF2alpha-phosphatase inhibitor with no direct chaperoning gave the strongest rescue for some variants, so quantity and function can be raised by stress-pathway modulation as well as by chaperone-like action.",
+    "snippet": "These results suggest that both pharmacochaperoning and ER stress modulation can partially rescue function, although the effect is variant‐dependent.",
+    "anchor": "Results, ER Stress Modulators, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42157447_DeLeeuw2026_PMC13394997.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) loss-of-function missense variants: HEK293T cells transfected with rat GAT-1 variants (homozygous or 1:1 with wild type), forebrain crude synaptosomes and 24-hour EEG from two heterozygous knock-in mouse lines (A288V, S295L), after treatment with 4-phenylbutyrate, a bile-acid chaperone, histone deacetylase inhibitors, an eIF2alpha-dephosphorylation inhibitor, and ER chaperone overexpression or activation; NOT a WWOX system",
+     "genotype": "SLC6A1 32 missense/nonsense variants; Slc6a1 +/A288V and +/S295L mice; no WWOX",
+     "endpoint": "[3H]GABA uptake, total and mature GAT-1 protein by Western blot, synaptosomal uptake, EEG 4-8 Hz events"
+    }
+   },
+   {
+    "proposition": "Chaperone overexpression or activation raises wild-type and variant protein alike, and the small-molecule BiP activator has a non-monotonic concentration response (no effect at one intermediate concentration).",
+    "snippet": "No significant increase was observed at 5 μM in either condition.",
+    "anchor": "Results, Chaperone Overexpression and BiP Activation, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42157447_DeLeeuw2026_PMC13394997.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) loss-of-function missense variants: HEK293T cells transfected with rat GAT-1 variants (homozygous or 1:1 with wild type), forebrain crude synaptosomes and 24-hour EEG from two heterozygous knock-in mouse lines (A288V, S295L), after treatment with 4-phenylbutyrate, a bile-acid chaperone, histone deacetylase inhibitors, an eIF2alpha-dephosphorylation inhibitor, and ER chaperone overexpression or activation; NOT a WWOX system",
+     "genotype": "SLC6A1 32 missense/nonsense variants; Slc6a1 +/A288V and +/S295L mice; no WWOX",
+     "endpoint": "[3H]GABA uptake, total and mature GAT-1 protein by Western blot, synaptosomal uptake, EEG 4-8 Hz events"
+    }
+   },
+   {
+    "proposition": "Methods caveat: control values were reused across experiments because of the scale of the design.",
+    "snippet": "Due to the scale of experimental conditions tested, control values (pcDNA and CI‐966 treated) were reused across certain experiments",
+    "anchor": "Methods, Radioactive 3H-Labeled GABA Uptake Assay",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42157447_DeLeeuw2026_PMC13394997.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) loss-of-function missense variants: HEK293T cells transfected with rat GAT-1 variants (homozygous or 1:1 with wild type), forebrain crude synaptosomes and 24-hour EEG from two heterozygous knock-in mouse lines (A288V, S295L), after treatment with 4-phenylbutyrate, a bile-acid chaperone, histone deacetylase inhibitors, an eIF2alpha-dephosphorylation inhibitor, and ER chaperone overexpression or activation; NOT a WWOX system",
+     "genotype": "SLC6A1 32 missense/nonsense variants; Slc6a1 +/A288V and +/S295L mice; no WWOX",
+     "endpoint": "[3H]GABA uptake, total and mature GAT-1 protein by Western blot, synaptosomal uptake, EEG 4-8 Hz events"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST returned the whole article as fullTextXML for PMC13394997 (135 kB, 2026-10-21); figures from the supplementaryFiles container.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a figure legend or an inspected figure."
+ }
+}

@@ -1,0 +1,382 @@
+{
+ "schema_version": 2,
+ "pmid": "38396641",
+ "doi": "10.3390/ijms25041963",
+ "receipt": "FTR-20261021-38396641-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named and deduplicated by the Orchestrator's selection file; the per-paper M0 packet and receipt status were run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "The reading is a primary-evidence read of a NOT WWOX EVIDENCE paper; the dossier is the analysis note section, no WWOX commit candidate is implied."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No consolidated baseline claim is narrowed or reversed by this reading; a blind audit is declared OWED where a candidate proposes it."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Not requested; discovery leads are staged separately if any."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a candidate card; BLOCK-1 holds, class level only."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "computational",
+  "is_primary_group_for_disease": false,
+  "weighting": "Department of Physics and Astronomy, Clemson University (from the affiliation); a computational biophysics group that built the database and the stability predictors it uses; no experiments. NOT WWOX EVIDENCE; a class-level prior."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "monogenic disorders AND folding free energy AND pathogenic missense",
+    "count": 3,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "protein stability AND pathogenic missense AND proportion",
+    "count": 14,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "small molecule stabilizers AND missense AND monogenic",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "PubMed counts, dated; a zero from a title/abstract query licenses 'no paper is indexed', never 'this was never measured' (D-37)."
+ },
+ "multihop": {
+  "references_enumerated": 63,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "63 references enumerated from the JATS; none is WWOX-related."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 38396641 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-21 via PubMed efetch for PMID 38396641: publication types ['Journal Article']; CommentsCorrections RefTypes in the efetch record: ['UpdateOf'].",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 63,
+   "references_screened": 62,
+   "references_with_doi": 62,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38396641_Pandey2024_PMC10888012.xml",
+   "sha256": "e6797f214cd8de463737579ba5c6aece3aae0fd88eb10b5be5e5fcc4137fcf88",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC10888012: whole article; every text locator is matched against it.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10888012/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "e6797f214cd8de463737579ba5c6aece3aae0fd88eb10b5be5e5fcc4137fcf88",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38396641/ijms-25-01963-g001.jpg",
+   "sha256": "473464596b8374b23cd76ea5ad576f7b9a70a1a9814106c018566b6791de63e0",
+   "kind": "figure",
+   "note": "Figure image g001 from the supplementaryFiles container, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10888012/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "473464596b8374b23cd76ea5ad576f7b9a70a1a9814106c018566b6791de63e0",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38396641/ijms-25-01963-g002a.jpg",
+   "sha256": "f0d78e0c2f7f2ab1731c1ad0797f06b8a8ef77f8377de2139688057437ab7941",
+   "kind": "figure",
+   "note": "Figure image g002a from the supplementaryFiles container, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10888012/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "f0d78e0c2f7f2ab1731c1ad0797f06b8a8ef77f8377de2139688057437ab7941",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38396641/ijms-25-01963-g002b.jpg",
+   "sha256": "7931eeabce05cc6ca5490f2d66ef1cdfa23523b2c94513c7899cbfb2b2e0c016",
+   "kind": "figure",
+   "note": "Figure image g002b from the supplementaryFiles container, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10888012/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "7931eeabce05cc6ca5490f2d66ef1cdfa23523b2c94513c7899cbfb2b2e0c016",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38396641/ijms-25-01963-g003a.jpg",
+   "sha256": "80855540156e2c7cbee97a048cf152ca129299ba433cc0492d6d9e851292bb3c",
+   "kind": "figure",
+   "note": "Figure image g003a from the supplementaryFiles container, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10888012/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "80855540156e2c7cbee97a048cf152ca129299ba433cc0492d6d9e851292bb3c",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38396641/ijms-25-01963-g003b.jpg",
+   "sha256": "8f891d788f1d47298d02476b9a9a580307f7e2d139f665227a4d7280289e1064",
+   "kind": "figure",
+   "note": "Figure image g003b from the supplementaryFiles container, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10888012/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "8f891d788f1d47298d02476b9a9a580307f7e2d139f665227a4d7280289e1064",
+    "derived": false
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE (computational). The headline 'about 70 percent of pathogenic mutations destabilise' is a predicted-ddG statement, not a measured abundance or stability.",
+    "snippet": "It is interesting to note that approximately 70% of the pathogenic mutations result in decreased protein stability, implying that the loss of structural integrity is a common mechanism underlying disease development.",
+    "anchor": "Discussion, paragraph 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38396641_Pandey2024_PMC10888012.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Computational analysis: ClinVar-derived database of monogenic-disorder missense variants (686 to 768 proteins; 1,934 to 2,559 pathogenic and 1,405 to 1,763 benign), predicted folding free-energy change from three sequence-based predictors and predicted solvent exposure; no experiment; NOT a WWOX system",
+     "genotype": "Pathogenic and benign missense variants across many genes; no WWOX",
+     "endpoint": "predicted ddG, area under the ROC curve, true-positive rate at an MCC-optimal cut-off"
+    }
+   },
+   {
+    "proposition": "The method is three sequence-based predictors of folding free energy, chosen because many proteins have no structure.",
+    "snippet": "We only focused on sequence-based methods because there are a sufficient number of cases in the monogenic disorder dataset where protein structure remains unknown.",
+    "anchor": "Methods 4.2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38396641_Pandey2024_PMC10888012.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Computational analysis: ClinVar-derived database of monogenic-disorder missense variants (686 to 768 proteins; 1,934 to 2,559 pathogenic and 1,405 to 1,763 benign), predicted folding free-energy change from three sequence-based predictors and predicted solvent exposure; no experiment; NOT a WWOX system",
+     "genotype": "Pathogenic and benign missense variants across many genes; no WWOX",
+     "endpoint": "predicted ddG, area under the ROC curve, true-positive rate at an MCC-optimal cut-off"
+    }
+   },
+   {
+    "proposition": "Predicted destabilisation is common among benign variants too: the distributions of the two classes overlap considerably and most predicted values of both are negative.",
+    "snippet": "There is considerable overlap between the folding free energy profiles of benign and pathogenic mutations.",
+    "anchor": "Results 2.2, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38396641_Pandey2024_PMC10888012.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Computational analysis: ClinVar-derived database of monogenic-disorder missense variants (686 to 768 proteins; 1,934 to 2,559 pathogenic and 1,405 to 1,763 benign), predicted folding free-energy change from three sequence-based predictors and predicted solvent exposure; no experiment; NOT a WWOX system",
+     "genotype": "Pathogenic and benign missense variants across many genes; no WWOX",
+     "endpoint": "predicted ddG, area under the ROC curve, true-positive rate at an MCC-optimal cut-off"
+    }
+   },
+   {
+    "proposition": "Figure 1 read: for every predictor both the benign (blue) and pathogenic (orange) histograms are centred below zero (about -0.5 to -1), the pathogenic one shifted left with a tail to about -3; INPS-SEQ shows the clearest separation, I-mutant 2.0 the least.",
+    "snippet": "Distribution of change in folding free energy using different predictors for monogenic disorder dataset 1 (no likely cases).",
+    "anchor": "Figure 1 (ddG distributions by predictor, whole set and by class)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38396641/ijms-25-01963-g001.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Computational analysis: ClinVar-derived database of monogenic-disorder missense variants (686 to 768 proteins; 1,934 to 2,559 pathogenic and 1,405 to 1,763 benign), predicted folding free-energy change from three sequence-based predictors and predicted solvent exposure; no experiment; NOT a WWOX system",
+     "genotype": "Pathogenic and benign missense variants across many genes; no WWOX",
+     "endpoint": "predicted ddG, area under the ROC curve, true-positive rate at an MCC-optimal cut-off"
+    },
+    "qualifies": "entries[2]",
+    "qualifies_needle": "There is considerable overlap between the fol"
+   },
+   {
+    "proposition": "The fraction of pathogenic variants called destabilising depends on the predictor and cut-off: at the MCC-optimal cut-off the true-positive rate is 0.44 (SAAFEC-SEQ), 0.18 (I-mutant 2.0), 0.68 (INPS-SEQ), 0.64 (average of all), with false-positive rates 0.14, 0.12, 0.25 and 0.32; the 70 percent figure matches the more permissive predictors, at which about a quarter to a third of benign variants are also flagged.",
+    "snippet": "Performance comparison of change folding free energy method, RSA method, and logistic regression model with leading pathogenicity predictors on MOGEDO.",
+    "anchor": "Table 3 (cut-offs, TPR and FPR for each ddG predictor)",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID38396641_Pandey2024_PMC10888012.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Computational analysis: ClinVar-derived database of monogenic-disorder missense variants (686 to 768 proteins; 1,934 to 2,559 pathogenic and 1,405 to 1,763 benign), predicted folding free-energy change from three sequence-based predictors and predicted solvent exposure; no experiment; NOT a WWOX system",
+     "genotype": "Pathogenic and benign missense variants across many genes; no WWOX",
+     "endpoint": "predicted ddG, area under the ROC curve, true-positive rate at an MCC-optimal cut-off"
+    }
+   },
+   {
+    "proposition": "The discriminating power of stability alone is moderate: an average AUC of 0.71 over all predictors, 0.77 for the best pair, and 0.71 for the enzyme class.",
+    "snippet": "Considering all predictors, the average folding free energy change yielded an area under the curve value of 0.71 for MOGEDO datasets.",
+    "anchor": "Results 2.2, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38396641_Pandey2024_PMC10888012.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Computational analysis: ClinVar-derived database of monogenic-disorder missense variants (686 to 768 proteins; 1,934 to 2,559 pathogenic and 1,405 to 1,763 benign), predicted folding free-energy change from three sequence-based predictors and predicted solvent exposure; no experiment; NOT a WWOX system",
+     "genotype": "Pathogenic and benign missense variants across many genes; no WWOX",
+     "endpoint": "predicted ddG, area under the ROC curve, true-positive rate at an MCC-optimal cut-off"
+    }
+   },
+   {
+    "proposition": "Figure 3a read: the enzyme-class ROC curves give AUC 0.72 (SAAFEC-SEQ), 0.53 (I-mutant 2.0), 0.76 (INPS-SEQ), 0.77 (average of the two best), 0.71 (all).",
+    "snippet": "Both datasets are dominated by the enzyme functional category, followed by the transport/translocation/cargo protein and transcriptional regulation.",
+    "anchor": "Figure 3a (enzyme-class ROC, dataset 1)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38396641/ijms-25-01963-g003a.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Computational analysis: ClinVar-derived database of monogenic-disorder missense variants (686 to 768 proteins; 1,934 to 2,559 pathogenic and 1,405 to 1,763 benign), predicted folding free-energy change from three sequence-based predictors and predicted solvent exposure; no experiment; NOT a WWOX system",
+     "genotype": "Pathogenic and benign missense variants across many genes; no WWOX",
+     "endpoint": "predicted ddG, area under the ROC curve, true-positive rate at an MCC-optimal cut-off"
+    },
+    "qualifies": "entries[5]",
+    "qualifies_needle": "Considering all predictors, the average foldi"
+   },
+   {
+    "proposition": "Over-stabilisation is flagged as a risk: a stabiliser must match, not exceed, the loss, since over-stable protein may be dysfunctional (literature examples cited).",
+    "snippet": "Over-stabilizing proteins may lead to dysfunction and disease manifestation, as demonstrated in the literature [29,30].",
+    "anchor": "Discussion, paragraph 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38396641_Pandey2024_PMC10888012.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Computational analysis: ClinVar-derived database of monogenic-disorder missense variants (686 to 768 proteins; 1,934 to 2,559 pathogenic and 1,405 to 1,763 benign), predicted folding free-energy change from three sequence-based predictors and predicted solvent exposure; no experiment; NOT a WWOX system",
+     "genotype": "Pathogenic and benign missense variants across many genes; no WWOX",
+     "endpoint": "predicted ddG, area under the ROC curve, true-positive rate at an MCC-optimal cut-off"
+    }
+   },
+   {
+    "proposition": "The authors state that function can fail by routes other than folding stability, and restrict their analysis to folding free energy.",
+    "snippet": "Moreover, the impact of missense mutations on protein function extends beyond changes in stability alone.",
+    "anchor": "Introduction, paragraph 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38396641_Pandey2024_PMC10888012.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Computational analysis: ClinVar-derived database of monogenic-disorder missense variants (686 to 768 proteins; 1,934 to 2,559 pathogenic and 1,405 to 1,763 benign), predicted folding free-energy change from three sequence-based predictors and predicted solvent exposure; no experiment; NOT a WWOX system",
+     "genotype": "Pathogenic and benign missense variants across many genes; no WWOX",
+     "endpoint": "predicted ddG, area under the ROC curve, true-positive rate at an MCC-optimal cut-off"
+    }
+   },
+   {
+    "proposition": "The authors acknowledge opposing views, with some studies stressing protein-protein interaction disruption as the main cause, and attribute the difference possibly to the database used.",
+    "snippet": "There are opposing views in the literature regarding the major cause of pathogenicity, with some studies emphasizing the disruption of protein–protein interactions as the primary cause [55].",
+    "anchor": "Discussion, paragraph 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38396641_Pandey2024_PMC10888012.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Computational analysis: ClinVar-derived database of monogenic-disorder missense variants (686 to 768 proteins; 1,934 to 2,559 pathogenic and 1,405 to 1,763 benign), predicted folding free-energy change from three sequence-based predictors and predicted solvent exposure; no experiment; NOT a WWOX system",
+     "genotype": "Pathogenic and benign missense variants across many genes; no WWOX",
+     "endpoint": "predicted ddG, area under the ROC curve, true-positive rate at an MCC-optimal cut-off"
+    }
+   },
+   {
+    "proposition": "Figure 2 read: stability-based ROC is best for hydrophobic-to-hydrophobic substitutions (AUC 0.84) and worst for polar-to-hydrophobic (0.68) and small-to-small (0.76 best predictor, 0.58 to 0.63 for others).",
+    "snippet": "The best AUC was obtained for the hydrophobic–hydrophobic category, with a value of 0.84",
+    "anchor": "Results 2.3, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38396641_Pandey2024_PMC10888012.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Computational analysis: ClinVar-derived database of monogenic-disorder missense variants (686 to 768 proteins; 1,934 to 2,559 pathogenic and 1,405 to 1,763 benign), predicted folding free-energy change from three sequence-based predictors and predicted solvent exposure; no experiment; NOT a WWOX system",
+     "genotype": "Pathogenic and benign missense variants across many genes; no WWOX",
+     "endpoint": "predicted ddG, area under the ROC curve, true-positive rate at an MCC-optimal cut-off"
+    }
+   },
+   {
+    "proposition": "Figure 2a read: hydrophobic-hydrophobic AUC 0.84 for the INPS-SEQ-containing curves and 0.56 for I-mutant 2.0.",
+    "snippet": "ROC curve for monogenic disorder dataset 1 (no likely cases) for different categories of amino acid mutations.",
+    "anchor": "Figure 2a-f (ROC by chemical class of substitution)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38396641/ijms-25-01963-g002a.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Computational analysis: ClinVar-derived database of monogenic-disorder missense variants (686 to 768 proteins; 1,934 to 2,559 pathogenic and 1,405 to 1,763 benign), predicted folding free-energy change from three sequence-based predictors and predicted solvent exposure; no experiment; NOT a WWOX system",
+     "genotype": "Pathogenic and benign missense variants across many genes; no WWOX",
+     "endpoint": "predicted ddG, area under the ROC curve, true-positive rate at an MCC-optimal cut-off"
+    },
+    "qualifies": "entries[10]",
+    "qualifies_needle": "The best AUC was obtained for the hydrophobic"
+   },
+   {
+    "proposition": "Figure 2g-i read: large-to-large 0.75, large-to-small 0.76 and aliphatic-aliphatic 0.83 for the best pair; Figure 3e-h (scaffold, receptor, signalling, regulatory) 0.75, 0.78, 0.70 and 0.72 for the best pair.",
+    "snippet": "ROC curve for Monogenic Disorder Dataset 1 (no likely cases) for different functional categories.",
+    "anchor": "Figures 2g-i and 3e-h (ROC panels, g002b and g003b)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38396641/ijms-25-01963-g003b.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Computational analysis: ClinVar-derived database of monogenic-disorder missense variants (686 to 768 proteins; 1,934 to 2,559 pathogenic and 1,405 to 1,763 benign), predicted folding free-energy change from three sequence-based predictors and predicted solvent exposure; no experiment; NOT a WWOX system",
+     "genotype": "Pathogenic and benign missense variants across many genes; no WWOX",
+     "endpoint": "predicted ddG, area under the ROC curve, true-positive rate at an MCC-optimal cut-off"
+    },
+    "qualifies": "entries[5]",
+    "qualifies_needle": "Considering all predictors, the average foldi"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST returned the whole article as fullTextXML for PMC10888012 (190 kB, 2026-10-21); five figure images from the supplementaryFiles container; Table 3 read from the XML.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a figure legend or an inspected figure."
+ }
+}

@@ -213,6 +213,15 @@ Selected: 16 (tier 1 highest). All are NOT WWOX EVIDENCE.
 4. What fraction of pathogenic missense variants are stability lesions, and does stabilisation overshoot into dysfunction (38396641, 33914734)? Is a Q230P-class stability lesion the default expectation or a hypothesis to test first?
 5. Which degradation-pathway modulators have been shown to change a mutant protein level in a mouse with a seizure or pathology endpoint (38731820, 41178115, 31402619), and what exposure window did they use?
 
+**Answers, scientist-a, 2026-10-21 (full text and reasoning in `repurposing_10h_scientist-a_20261021.md` section 5; all NOT WWOX EVIDENCE):**
+
+1. *Narrowed.* One experiment can separate "made then degraded" from "never made" only from a detectable baseline with an inhibitor or chase paired with a read of the same protein (cleanest negative control: Hsp110 temperature-sensitive chase in 33914734; chloroquine-null library reads in 38378758 and 38740822). No primary reads nascent chains with a protein read. Missing: a WWOX read from a detectable baseline.
+2. *Answered.* Quantity and function together in 9 of 17; function not measured in 5; they came apart in 6 (34649609, 38378758, 33914734, 42157447, 32023956, 40485335).
+3. *Narrowed.* Evidence for a chaperone-like action over HDAC inhibition is inferential (42157447); the class raises wild-type protein everywhere and rescues the fully retained branch, not the partly trafficked one (40485335); the one negative is a null-allele zebrafish with no protein read (42268630, INCONCLUSIVE for missense). No enzyme-class precedent of the class in this lot. Missing: Q230P total, soluble and function under the class.
+4. *Narrowed.* Estimates 44 to 77 percent (predicted 70 percent in 38396641, 44 percent to 77 percent by predictor), measured 82 percent for one enzyme (38740822) with a catalytic minority; for Q230P a hypothesis to test first.
+5. *Narrowed.* Four mouse studies with a mutant-level or pathology endpoint (38731820, 42587736, 42157447, 31402619), exposure seven days daily (three) or chronic from 6 to 8 weeks (one); none measured brain exposure beside the protein level.
+
+
 ### R2 five questions
 
 1. Is a genotype-restricted ethosuximide effect plausible, given that ethosuximide suppressed an HCN1 DEE model but a different Cav3 inhibitor failed in Dravet and aggravated spike-wave discharges (36300716, 37082241)? What does a within-subject design with a wild-type arm look like (42274296)?

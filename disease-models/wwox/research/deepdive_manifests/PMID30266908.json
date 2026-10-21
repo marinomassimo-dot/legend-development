@@ -1,0 +1,521 @@
+{
+ "schema_version": 2,
+ "pmid": "30266908",
+ "doi": "10.1038/s41467-018-06507-4",
+ "receipt": "FTR-20261021-30266908-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named and deduplicated by the Orchestrator's selection file; the per-paper M0 packet and receipt status were run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "The reading is a primary-evidence read of a NOT WWOX EVIDENCE paper; the dossier is the analysis note section, no WWOX commit candidate is implied."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No consolidated baseline claim is narrowed or reversed by this reading; a blind audit is declared OWED where a candidate proposes it."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Not requested; discovery leads are staged separately if any."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a candidate card; BLOCK-1 holds, class level only."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Weill Cornell Medicine (from the animal-care statement) with Epilepsy Foundation and NIH support named in the acknowledgements. A cell-biology group on STXBP1/Munc18-1, a non-WWOX gene; publication counts not computed in this reading. NOT WWOX EVIDENCE; a class-level precedent for missense destabilisation and chemical-chaperone rescue."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "Munc18-1 AND chaperone",
+    "count": 38,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "STXBP1 AND phenylbutyrate",
+    "count": 6,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "Munc18-1 AND aggregation AND missense",
+    "count": 5,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "PubMed counts, dated; a zero from a title/abstract query licenses 'no paper is indexed', never 'this was never measured' (D-37)."
+ },
+ "multihop": {
+  "references_enumerated": 69,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "69 references enumerated from the JATS; none is WWOX-related. One reference title reads 'Increased polyubiquitination and proteasomal degradation of a Munc18-1 disease-linked mutant causes temperature-sensitive defect in exocytosis' (the C180Y precedent, cited as reference 29 in the Introduction); it carries the inhibitor arm this paper lacks and is carried to the adjacent-search reserve of this task."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 30266908 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note, section on this paper."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-21 via PubMed efetch for PMID 30266908: publication types ['Journal Article', 'Research Support, N.I.H., Extramural', \"Research Support, Non-U.S. Gov't\"]; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 69,
+   "references_screened": 68,
+   "references_with_doi": 68,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID30266908_Guiberson2018_PMC6162227.xml",
+   "sha256": "ce24646e70385a7a7c962a99cb62bdb48c41a69ccfc2154166ef414c4ac72dfd",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC6162227 (CC BY): whole article; every text locator is matched against it.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6162227/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "ce24646e70385a7a7c962a99cb62bdb48c41a69ccfc2154166ef414c4ac72dfd",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID30266908/41467_2018_6507_Fig3_HTML.jpg",
+   "sha256": "c3be9b18d81b46bf0993a2c961707753d1c98dc9d1dd2cc4796806ab7c425b70",
+   "kind": "figure",
+   "note": "Figure 3 JPEG (total level, CHX chase, Dendra2) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6162227/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "c3be9b18d81b46bf0993a2c961707753d1c98dc9d1dd2cc4796806ab7c425b70",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID30266908/41467_2018_6507_Fig4_HTML.jpg",
+   "sha256": "50ffb0bccdab7c56429d8fc557e7bf24e592f7a6598609f9f4b17a4c190010c5",
+   "kind": "figure",
+   "note": "Figure 4 JPEG (Triton solubility, limited proteolysis, aggregates) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6162227/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "50ffb0bccdab7c56429d8fc557e7bf24e592f7a6598609f9f4b17a4c190010c5",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID30266908/41467_2018_6507_Fig5_HTML.jpg",
+   "sha256": "b36dfc88561f3a1b2d21bf8ee067710fac476875c24c6059aa1e2fcc84653657",
+   "kind": "figure",
+   "note": "Figure 5 JPEG (dominant-negative, co-IP, solubility of co-expressed WT) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6162227/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "b36dfc88561f3a1b2d21bf8ee067710fac476875c24c6059aa1e2fcc84653657",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID30266908/41467_2018_6507_Fig6_HTML.jpg",
+   "sha256": "7f57bbb74eaf32dac38f7b6da6a7ced913b1ac0b47e523c575e0a4e9c9d9a135",
+   "kind": "figure",
+   "note": "Figure 6 JPEG (chaperones: total level, Triton solubility, antibody uptake) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6162227/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "7f57bbb74eaf32dac38f7b6da6a7ced913b1ac0b47e523c575e0a4e9c9d9a135",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID30266908/41467_2018_6507_Fig7_HTML.jpg",
+   "sha256": "0685569c9a00d08874b3614e43481f2094c40d16a2e8ff563608352bc118fd8f",
+   "kind": "figure",
+   "note": "Figure 7 JPEG (worm rescue) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6162227/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "0685569c9a00d08874b3614e43481f2094c40d16a2e8ff563608352bc118fd8f",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID30266908/41467_2018_6507_Fig1_HTML.jpg",
+   "sha256": "64fb52d39df15a73e6f59df443251d8f17851fc4a19ecf814a92eb2529e3399e",
+   "kind": "figure",
+   "note": "Figure 1 JPEG (worm phenotypes) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6162227/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "64fb52d39df15a73e6f59df443251d8f17851fc4a19ecf814a92eb2529e3399e",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID30266908/41467_2018_6507_Fig2_HTML.jpg",
+   "sha256": "b4b079a3e84041446e0db9e3894148e7ea67380010a07a908c563ce4c1083601",
+   "kind": "figure",
+   "note": "Figure 2 JPEG (MEA and antibody uptake) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6162227/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "b4b079a3e84041446e0db9e3894148e7ea67380010a07a908c563ce4c1083601",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID30266908/41467_2018_6507_Fig8_HTML.jpg",
+   "sha256": "0480391154eee007308d54bcf0434b2070a5340d4b80750e0c2d8d400038173f",
+   "kind": "figure",
+   "note": "Figure 8 JPEG (model scheme) registered, not opened for evidence.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6162227/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "0480391154eee007308d54bcf0434b2070a5340d4b80750e0c2d8d400038173f",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID30266908/41467_2018_6507_MOESM1_ESM.pdf",
+   "sha256": "26434c3351f4c0f84b2de802244c297dec039abfc16af4dc43231264fd62631f",
+   "kind": "supplement_binary",
+   "note": "Supplementary Information PDF (18 supplementary figures); pages 7 and 19 rendered and opened; the other figure legends read as text.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6162227/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "26434c3351f4c0f84b2de802244c297dec039abfc16af4dc43231264fd62631f",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID30266908/SuppFig4_p7.png",
+   "sha256": "e5e111c1c02836e60d5bf4890b4a149e22810cf665852bcf98e3b631e1beaf74",
+   "kind": "figure",
+   "note": "Rendered page 7 of the supplement at 110 dpi (Supplementary Figure 4: mRNA, total levels, CHX, Dendra2), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID30266908/41467_2018_6507_MOESM1_ESM.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.26.5",
+     "call": "page.get_pixmap(dpi=110) page 7",
+     "join": ""
+    },
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "e5e111c1c02836e60d5bf4890b4a149e22810cf665852bcf98e3b631e1beaf74"
+   }
+  },
+  {
+   "path": "files/figures/PMID30266908/SuppFig12_p19.png",
+   "sha256": "0a563990b66afb062e25ecf683162fa5f596ae50c051f35a8ff36be0b530ca1c",
+   "kind": "figure",
+   "note": "Rendered page 19 of the supplement at 110 dpi (Supplementary Figure 12: chaperone screen), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID30266908/41467_2018_6507_MOESM1_ESM.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.26.5",
+     "call": "page.get_pixmap(dpi=110) page 19",
+     "join": ""
+    },
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "0a563990b66afb062e25ecf683162fa5f596ae50c051f35a8ff36be0b530ca1c"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE (STXBP1, mouse neurons, lentiviral cDNA). Four of five missense variants leave total protein below 10 percent of wild type in direct-to-Laemmli lysates, while the mRNA of the transgene is unchanged (Supplementary Fig. 4a-c): a 'normal transcript, little protein' pattern for missense variants.",
+    "snippet": "Compared to WT Munc18-1, all mutants exhibited a significant reduction in protein levels, with four out of the five mutants resulting in protein levels below 10% of WT levels (Fig. 3a). This change was not due to changes in mRNA levels (Supplementary Fig. 4a–c).",
+    "anchor": "Results, Mutants of Munc18-1 are metabolically unstable, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30266908_Guiberson2018_PMC6162227.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Munc18-1 (STXBP1) missense variants: lentiviral/transfected cDNA in Munc18-1-null or heterozygous mouse cortical neurons, HEK293T and Neuro2a cells, yeast, and C. elegans unc-18 transgenic and CRISPR knock-in worms; NOT a WWOX system",
+     "genotype": "Munc18-1 P335L R406H P480L G544D G544V (worm P334L R405H P479L G544D); no WWOX",
+     "endpoint": "total and Triton-soluble protein, turnover, aggregation, synaptic vesicle recycling, worm locomotion, aldicarb and heat paralysis"
+    }
+   },
+   {
+    "proposition": "Figure 3a read against its printed 0-100 axis: P335L about 65 percent of WT, R406H about 8, P480L about 4, G544D about 4, G544V about 7 (bars and SEM marks overlap near zero, values approximate). The four low variants are the ones the text calls below 10 percent.",
+    "snippet": "Total protein levels of Munc18-1. WT and mutant Munc18-1b were expressed in primary neurons infected with lentiviral vectors expressing cre recombinase.",
+    "anchor": "Figure 3a (primary neurons, total Munc18-1b as percent of WT, normalised to synaptophysin-1)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID30266908/41467_2018_6507_Fig3_HTML.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Munc18-1 (STXBP1) missense variants: lentiviral/transfected cDNA in Munc18-1-null or heterozygous mouse cortical neurons, HEK293T and Neuro2a cells, yeast, and C. elegans unc-18 transgenic and CRISPR knock-in worms; NOT a WWOX system",
+     "genotype": "Munc18-1 P335L R406H P480L G544D G544V (worm P334L R405H P479L G544D); no WWOX",
+     "endpoint": "total and Triton-soluble protein, turnover, aggregation, synaptic vesicle recycling, worm locomotion, aldicarb and heat paralysis"
+    },
+    "qualifies": "entries[0]",
+    "qualifies_needle": "Compared to WT Munc18-1, all mutants exhibite"
+   },
+   {
+    "proposition": "The reduced level is turnover, measured by two translation-independent or translation-blocked read-outs (cycloheximide chase and Dendra2 photoconversion), not by a degradation-inhibitor rescue: the paper reports no proteasome or lysosome inhibitor arm (0 occurrences of MG132 or bafilomycin in the article XML; the single chloroquine is the transfection step).",
+    "snippet": "Overall, these data support a direct effect of mutations on the metabolic stability of Munc18-1, and suggest structural destabilization of Munc18-1 as an underlying cause of Munc18-1-linked encephalopathies.",
+    "anchor": "Results, Mutants of Munc18-1 are metabolically unstable, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30266908_Guiberson2018_PMC6162227.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Munc18-1 (STXBP1) missense variants: lentiviral/transfected cDNA in Munc18-1-null or heterozygous mouse cortical neurons, HEK293T and Neuro2a cells, yeast, and C. elegans unc-18 transgenic and CRISPR knock-in worms; NOT a WWOX system",
+     "genotype": "Munc18-1 P335L R406H P480L G544D G544V (worm P334L R405H P479L G544D); no WWOX",
+     "endpoint": "total and Triton-soluble protein, turnover, aggregation, synaptic vesicle recycling, worm locomotion, aldicarb and heat paralysis"
+    }
+   },
+   {
+    "proposition": "The solubility assay is a mild-detergent split: 0.1 percent Triton X-100 in PBS, one hour at 4 C, a 10-minute 13,000 g spin, soluble supernatant and pellet adjusted to equal volume and both run; the pellet is therefore measured, not discarded, which is the S/P arrangement a fractionation design needs.",
+    "snippet": "Insoluble material was pelleted by centrifugation (10 min at 13,000gav and 4 °C), the Triton X-100 soluble supernatant was transferred to a fresh tube, and the pellet was adjusted to the same volume with PBS.",
+    "anchor": "Methods, Triton X-100 solubilization assay",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30266908_Guiberson2018_PMC6162227.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Munc18-1 (STXBP1) missense variants: lentiviral/transfected cDNA in Munc18-1-null or heterozygous mouse cortical neurons, HEK293T and Neuro2a cells, yeast, and C. elegans unc-18 transgenic and CRISPR knock-in worms; NOT a WWOX system",
+     "genotype": "Munc18-1 P335L R406H P480L G544D G544V (worm P334L R405H P479L G544D); no WWOX",
+     "endpoint": "total and Triton-soluble protein, turnover, aggregation, synaptic vesicle recycling, worm locomotion, aldicarb and heat paralysis"
+    }
+   },
+   {
+    "proposition": "Total protein is read from a direct hot-Laemmli lysate with sonication and boiling, so the low mutant total in Fig. 3a is not a soluble-fraction artefact of a clearing spin.",
+    "snippet": "Samples were then sonicated and boiled for 10 min at 100 °C before separation by SDS-PAGE.",
+    "anchor": "Methods, Total protein levels",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30266908_Guiberson2018_PMC6162227.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Munc18-1 (STXBP1) missense variants: lentiviral/transfected cDNA in Munc18-1-null or heterozygous mouse cortical neurons, HEK293T and Neuro2a cells, yeast, and C. elegans unc-18 transgenic and CRISPR knock-in worms; NOT a WWOX system",
+     "genotype": "Munc18-1 P335L R406H P480L G544D G544V (worm P334L R405H P479L G544D); no WWOX",
+     "endpoint": "total and Triton-soluble protein, turnover, aggregation, synaptic vesicle recycling, worm locomotion, aldicarb and heat paralysis"
+    }
+   },
+   {
+    "proposition": "Mutant protein that remains is less soluble in 0.1 percent Triton: Figure 4a TX-soluble fraction about 80 percent of total for WT, about 65 for P335L and roughly 25 to 45 for the other four.",
+    "snippet": "We found a significant reduction in the solubility for mutant Munc18-1 in primary neurons (Fig. 4a).",
+    "anchor": "Results, Mutations in Munc18-1 promote insolubility and aggregation, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30266908_Guiberson2018_PMC6162227.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Munc18-1 (STXBP1) missense variants: lentiviral/transfected cDNA in Munc18-1-null or heterozygous mouse cortical neurons, HEK293T and Neuro2a cells, yeast, and C. elegans unc-18 transgenic and CRISPR knock-in worms; NOT a WWOX system",
+     "genotype": "Munc18-1 P335L R406H P480L G544D G544V (worm P334L R405H P479L G544D); no WWOX",
+     "endpoint": "total and Triton-soluble protein, turnover, aggregation, synaptic vesicle recycling, worm locomotion, aldicarb and heat paralysis"
+    }
+   },
+   {
+    "proposition": "Figure 4a bars read against the 0-100 axis (WT near 80, P335L near 65, R406H near 28, P480L near 30, G544D near 45, G544V near 40 percent TX-soluble; alpha-tubulin control near 60 to 65 in every lane).",
+    "snippet": "Equal volumes of soluble and insoluble fractions were analyzed by quantitative immunoblotting (α-tubulin = control).",
+    "anchor": "Figure 4a (primary neurons, TX-soluble Munc18-1b percent of total)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID30266908/41467_2018_6507_Fig4_HTML.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Munc18-1 (STXBP1) missense variants: lentiviral/transfected cDNA in Munc18-1-null or heterozygous mouse cortical neurons, HEK293T and Neuro2a cells, yeast, and C. elegans unc-18 transgenic and CRISPR knock-in worms; NOT a WWOX system",
+     "genotype": "Munc18-1 P335L R406H P480L G544D G544V (worm P334L R405H P479L G544D); no WWOX",
+     "endpoint": "total and Triton-soluble protein, turnover, aggregation, synaptic vesicle recycling, worm locomotion, aldicarb and heat paralysis"
+    },
+    "qualifies": "entries[5]",
+    "qualifies_needle": "We found a significant reduction in the solub"
+   },
+   {
+    "proposition": "Insoluble aggregates are not cleared at the rate of soluble mutant and are not toxic by MTT and nuclear counts, so insolubility here is a stable pool, not a death signal.",
+    "snippet": "Although these insoluble aggregates were not cleared at the same rate as soluble Munc18-1 mutants, as assessed by a cycloheximide chase experiments of Triton X-100 soluble and insoluble fractions in Neuro2a cells (Supplementary Figs. 7a and 7b), aggregates were not toxic, as determined by an MTT assay (Supplementary Figs. 7c and 7d) and counting of neuronal nuclei in primary neurons and in Neuro2a cells (Supplementary Fig. 7e).",
+    "anchor": "Results, Mutations in Munc18-1 promote insolubility and aggregation, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30266908_Guiberson2018_PMC6162227.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Munc18-1 (STXBP1) missense variants: lentiviral/transfected cDNA in Munc18-1-null or heterozygous mouse cortical neurons, HEK293T and Neuro2a cells, yeast, and C. elegans unc-18 transgenic and CRISPR knock-in worms; NOT a WWOX system",
+     "genotype": "Munc18-1 P335L R406H P480L G544D G544V (worm P334L R405H P479L G544D); no WWOX",
+     "endpoint": "total and Triton-soluble protein, turnover, aggregation, synaptic vesicle recycling, worm locomotion, aldicarb and heat paralysis"
+    }
+   },
+   {
+    "proposition": "The chaperone screen raised the level of WILD-TYPE Munc18-1 as well as the mutant: the effect is not mutant-specific.",
+    "snippet": "Three chemical chaperones stabilized the levels of mutant and wild-type Munc18-1 in transfected HEK293T cells: 4-phenylbutyrate, sorbitol, and trehalose (Supplementary Figs. 12a and 12b).",
+    "anchor": "Results, Chemical chaperones augment Munc18-1 levels and solubility, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30266908_Guiberson2018_PMC6162227.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Munc18-1 (STXBP1) missense variants: lentiviral/transfected cDNA in Munc18-1-null or heterozygous mouse cortical neurons, HEK293T and Neuro2a cells, yeast, and C. elegans unc-18 transgenic and CRISPR knock-in worms; NOT a WWOX system",
+     "genotype": "Munc18-1 P335L R406H P480L G544D G544V (worm P334L R405H P479L G544D); no WWOX",
+     "endpoint": "total and Triton-soluble protein, turnover, aggregation, synaptic vesicle recycling, worm locomotion, aldicarb and heat paralysis"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure 12a: in the same screen sodium butyrate (5 mM) raised wild-type Munc18-1 to about 195 percent of control, a value of the same size as 4-phenylbutyrate (about 180); both are HDAC-inhibitor-class compounds acting on a transfected cDNA, and no mRNA was measured under treatment, so a transcriptional contribution is not excluded by this paper.",
+    "snippet": "Rescue of Munc18-1 levels. HEK293T cells were transfected with cDNA expressing WT or G544D Munc18-1 in absence or presence of the indicated chemical chaperone.",
+    "anchor": "Supplementary Figure 12a (HEK293T, WT and G544D, 12 conditions)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID30266908/SuppFig12_p19.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "HEK293T cells transfected with Munc18-1b cDNA (WT, G544D); NOT a WWOX system",
+     "genotype": "Munc18-1 WT and G544D; no WWOX",
+     "endpoint": "total Munc18-1 normalised to untreated control"
+    },
+    "qualifies": "entries[8]",
+    "qualifies_needle": "Three chemical chaperones stabilized the leve"
+   },
+   {
+    "proposition": "Figure 6a normalises each genotype's treated bars to its OWN untreated control (control bar fixed at 100), so a chaperone increase of roughly 1.1 to 1.7 fold is a change from a baseline that Fig. 3a puts below 10 percent of wild type for four variants; the figure does not show treated mutant as a fraction of treated or untreated wild type.",
+    "snippet": "Total protein levels were quantified 7 days after infection by immunoblotting, normalized to the levels of the post-synaptic protein PSD-93.",
+    "anchor": "Figure 6a (primary cortical neurons; panels per genotype, control = 100)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID30266908/41467_2018_6507_Fig6_HTML.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Munc18-1 (STXBP1) missense variants: lentiviral/transfected cDNA in Munc18-1-null or heterozygous mouse cortical neurons, HEK293T and Neuro2a cells, yeast, and C. elegans unc-18 transgenic and CRISPR knock-in worms; NOT a WWOX system",
+     "genotype": "Munc18-1 P335L R406H P480L G544D G544V (worm P334L R405H P479L G544D); no WWOX",
+     "endpoint": "total and Triton-soluble protein, turnover, aggregation, synaptic vesicle recycling, worm locomotion, aldicarb and heat paralysis"
+    },
+    "qualifies": "entries[8]",
+    "qualifies_needle": "Three chemical chaperones stabilized the leve"
+   },
+   {
+    "proposition": "Quantity and function are measured together in neurons: Triton-soluble fraction rises with the three chaperones (Fig. 6b) and the antibody-uptake read-out of vesicle recycling is reported restored to WT level (Fig. 6c, d).",
+    "snippet": "We found 4-phenylbutyrate, sorbitol, and trehalose to significantly rescue the deficits in neurotransmitter release associated with mutations in Munc18-1, restoring synaptic function back to WT levels (Fig. 6c, d and Supplementary Fig. 14).",
+    "anchor": "Results, Chemical chaperones restore synaptic deficits, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30266908_Guiberson2018_PMC6162227.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Munc18-1 (STXBP1) missense variants: lentiviral/transfected cDNA in Munc18-1-null or heterozygous mouse cortical neurons, HEK293T and Neuro2a cells, yeast, and C. elegans unc-18 transgenic and CRISPR knock-in worms; NOT a WWOX system",
+     "genotype": "Munc18-1 P335L R406H P480L G544D G544V (worm P334L R405H P479L G544D); no WWOX",
+     "endpoint": "total and Triton-soluble protein, turnover, aggregation, synaptic vesicle recycling, worm locomotion, aldicarb and heat paralysis"
+    }
+   },
+   {
+    "proposition": "Figure 6d read against its axis: several treated mutant bars reach or exceed the untreated WT bar (for example G544D control near 33 and PB near 75 against an untreated WT near 55, P480L control near 22 and PB near 80), while the per-mutant bar order is not monotonic with the Fig. 6a fold increase; the WT bars in Fig. 6d and in Fig. 2i sit on different pixel scales (about 55 against about 12.5), so values cannot be pooled across the two figures.",
+    "snippet": "Uptake of synaptotagmin-1 antibody during high K+ stimulation.",
+    "anchor": "Figure 6d (number of pixels above intensity 15, per genotype and treatment)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID30266908/41467_2018_6507_Fig6_HTML.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Munc18-1 (STXBP1) missense variants: lentiviral/transfected cDNA in Munc18-1-null or heterozygous mouse cortical neurons, HEK293T and Neuro2a cells, yeast, and C. elegans unc-18 transgenic and CRISPR knock-in worms; NOT a WWOX system",
+     "genotype": "Munc18-1 P335L R406H P480L G544D G544V (worm P334L R405H P479L G544D); no WWOX",
+     "endpoint": "total and Triton-soluble protein, turnover, aggregation, synaptic vesicle recycling, worm locomotion, aldicarb and heat paralysis"
+    },
+    "qualifies": "entries[11]",
+    "qualifies_needle": "We found 4-phenylbutyrate, sorbitol, and treh"
+   },
+   {
+    "proposition": "Wild-type Munc18-1 is co-reduced in solubility by about a quarter when a mutant is co-expressed: the mutant acts on the wild-type pool (a dominant-negative or co-aggregation reading), which is specific to a hetero-oligomeric client and not a property a recessive or homozygous missense lesion needs.",
+    "snippet": "Strikingly, presence of mutant Munc18-1 reduced the solubility of co-expressed WT Munc18-1 by ~25%, in both primary neurons and in Neuro2a cells (Fig. 5d and Supplementary Fig. 10a), suggesting co-aggregation of mutant and WT Munc18-1.",
+    "anchor": "Results, Mutations in Munc18-1 cause a dominant-negative phenotype, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30266908_Guiberson2018_PMC6162227.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Munc18-1 (STXBP1) missense variants: lentiviral/transfected cDNA in Munc18-1-null or heterozygous mouse cortical neurons, HEK293T and Neuro2a cells, yeast, and C. elegans unc-18 transgenic and CRISPR knock-in worms; NOT a WWOX system",
+     "genotype": "Munc18-1 P335L R406H P480L G544D G544V (worm P334L R405H P479L G544D); no WWOX",
+     "endpoint": "total and Triton-soluble protein, turnover, aggregation, synaptic vesicle recycling, worm locomotion, aldicarb and heat paralysis"
+    }
+   },
+   {
+    "proposition": "The authors name the limit of the chaperone class themselves: high concentration and lack of specificity; they state pharmacological chaperones as a next step, so no variant-specific chaperone was tested.",
+    "snippet": "A common criticism for the usage of chemical chaperones is the need for a high concentration and their lack of specificity.",
+    "anchor": "Discussion, paragraph 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30266908_Guiberson2018_PMC6162227.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Munc18-1 (STXBP1) missense variants: lentiviral/transfected cDNA in Munc18-1-null or heterozygous mouse cortical neurons, HEK293T and Neuro2a cells, yeast, and C. elegans unc-18 transgenic and CRISPR knock-in worms; NOT a WWOX system",
+     "genotype": "Munc18-1 P335L R406H P480L G544D G544V (worm P334L R405H P479L G544D); no WWOX",
+     "endpoint": "total and Triton-soluble protein, turnover, aggregation, synaptic vesicle recycling, worm locomotion, aldicarb and heat paralysis"
+    }
+   },
+   {
+    "proposition": "Figure 7a-c worm rescue: the chaperones act in the worm as read by locomotion, aldicarb paralysis and heat paralysis; P479L heat paralysis shows the three chaperones with small and mixed effects (stars on sorbitol and trehalose only), so rescue is not uniform across alleles.",
+    "snippet": "4-Phenylbutyrate, sorbitol, and trehalose rescued the locomotion impairments (Fig. 7a and Supplementary Figs. 15a and 15b)",
+    "anchor": "Results, Chemical chaperones restore synaptic deficits, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30266908_Guiberson2018_PMC6162227.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Munc18-1 (STXBP1) missense variants: lentiviral/transfected cDNA in Munc18-1-null or heterozygous mouse cortical neurons, HEK293T and Neuro2a cells, yeast, and C. elegans unc-18 transgenic and CRISPR knock-in worms; NOT a WWOX system",
+     "genotype": "Munc18-1 P335L R406H P480L G544D G544V (worm P334L R405H P479L G544D); no WWOX",
+     "endpoint": "total and Triton-soluble protein, turnover, aggregation, synaptic vesicle recycling, worm locomotion, aldicarb and heat paralysis"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST returned the whole article as fullTextXML (HTTP 200, 157 kB) for PMC6162227 on 2026-10-21; figures and the supplement PDF came from the supplementaryFiles container of the same PMCID.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a figure legend or an inspected figure."
+ }
+}

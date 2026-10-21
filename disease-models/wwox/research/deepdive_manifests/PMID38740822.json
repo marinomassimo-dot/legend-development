@@ -1,0 +1,423 @@
+{
+ "schema_version": 2,
+ "pmid": "38740822",
+ "doi": "10.1038/s41467-024-48481-0",
+ "receipt": "FTR-20261021-38740822-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named and deduplicated by the Orchestrator's selection file; the per-paper M0 packet and receipt status were run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "The reading is a primary-evidence read of a NOT WWOX EVIDENCE paper; the dossier is the analysis note section, no WWOX commit candidate is implied."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No consolidated baseline claim is narrowed or reversed by this reading; a blind audit is declared OWED where a candidate proposes it."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Not requested; discovery leads are staged separately if any."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a candidate card; BLOCK-1 holds, class level only."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Departments at the University of Copenhagen and the University of Washington Genome Sciences (from the affiliations), a protein-quality-control group with the same landing-pad VAMP-seq workflow as the Parkin atlas (38378758) (from the text); computational and flow-cytometry variant mapping with an RNA-sequencing follow-up. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "aspartoacylase AND deep mutational scanning",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "aspartoacylase AND protein abundance AND variant",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "Canavan disease AND misfolding",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "PubMed counts, dated; a zero from a title/abstract query licenses 'no paper is indexed', never 'this was never measured' (D-37)."
+ },
+ "multihop": {
+  "references_enumerated": 103,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the JATS; none is WWOX-related. The yeast C152W paper (33914734) and the Parkin atlas (38378758) are in this lot."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 38740822 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-21 via PubMed efetch for PMID 38740822: publication types ['Journal Article']; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 103,
+   "references_screened": 102,
+   "references_with_doi": 102,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38740822_Gronbaek2024_PMC11091098.xml",
+   "sha256": "6b0512a00fec5ae457a77b7d94e8863ff64d79f23aaf68d874c0b66ce0385170",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC11091098: whole article; every text locator is matched against it.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11091098/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "6b0512a00fec5ae457a77b7d94e8863ff64d79f23aaf68d874c0b66ce0385170",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38740822/41467_2024_48481_Fig1_HTML.jpg",
+   "sha256": "3376bdfcfb8e8f8553a3562c45c16e537227f2489dcc6d17ddb843eb48756ef7",
+   "kind": "figure",
+   "note": "Figure 1 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11091098/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "3376bdfcfb8e8f8553a3562c45c16e537227f2489dcc6d17ddb843eb48756ef7",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38740822/41467_2024_48481_Fig2_HTML.jpg",
+   "sha256": "ab3a8b2c4125e4bb2c54ce490e939bf059d365a7a79ad9156eb386320b0e2010",
+   "kind": "figure",
+   "note": "Figure 2 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11091098/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "ab3a8b2c4125e4bb2c54ce490e939bf059d365a7a79ad9156eb386320b0e2010",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38740822/41467_2024_48481_Fig3_HTML.jpg",
+   "sha256": "e8752944866785ee5510c127d6f6d00274e1a02fcb81948fcf4d582eabbb2e8c",
+   "kind": "figure",
+   "note": "Figure 3 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11091098/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "e8752944866785ee5510c127d6f6d00274e1a02fcb81948fcf4d582eabbb2e8c",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38740822/41467_2024_48481_Fig4_HTML.jpg",
+   "sha256": "5573b2b84783b8cd5fa14c2e73454519b313042c69dc984fa854df6d752f9911",
+   "kind": "figure",
+   "note": "Figure 4 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11091098/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "5573b2b84783b8cd5fa14c2e73454519b313042c69dc984fa854df6d752f9911",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38740822/41467_2024_48481_Fig5_HTML.jpg",
+   "sha256": "7344ae7bc8dc87af63e7c5482fdfe35e3628b7d1fa126d25ac042e37b8e46be2",
+   "kind": "figure",
+   "note": "Figure 5 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11091098/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "7344ae7bc8dc87af63e7c5482fdfe35e3628b7d1fa126d25ac042e37b8e46be2",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38740822/41467_2024_48481_Fig6_HTML.jpg",
+   "sha256": "5bfe8ff272648533e80e40695e7bc6f269da7d4d14768464b23b0329ac52459e",
+   "kind": "figure",
+   "note": "Figure 6 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11091098/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "5bfe8ff272648533e80e40695e7bc6f269da7d4d14768464b23b0329ac52459e",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38740822/41467_2024_48481_Fig7_HTML.jpg",
+   "sha256": "c3ed9d8c84331b8b60bba71a07ffdab404f003cefc52fd93282f19a0218d180b",
+   "kind": "figure",
+   "note": "Figure 7 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11091098/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "c3ed9d8c84331b8b60bba71a07ffdab404f003cefc52fd93282f19a0218d180b",
+    "derived": false
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE (ASPA, an enzyme). Most pathogenic missense variants of this enzyme are low-abundance in HEK293T: 50 of 61 pathogenic variants score below 0.5.",
+    "snippet": "Conversely, 50 out of 61 pathogenic variants displayed an abundance score lower than 0.5 (Fig. 6A).",
+    "anchor": "Results, Most disease-linked ASPA variants have reduced abundance, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38740822_Gronbaek2024_PMC11091098.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA, a zinc-dependent homodimeric hydrolase): N-terminal GFP fusion with IRES-mCherry at a single Tet-on landing pad in HEK293T cells, 6,152 variants (VAMP-seq), library-wide inhibitor and temperature perturbations, a competitive growth (toxicity) screen; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "ASPA missense and nonsense variants (about 98 percent of 6,260 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score, toxicity score (growth slope), flow profiles under perturbation"
+    }
+   },
+   {
+    "proposition": "Figure 6A read: the pathogenic raincloud has a dense mass at about 0 to 0.2 and a tail to about 1.07; the blue (catalytic-site) points sit at high abundance (about 0.6 to 1.07); the three benign variants sit at about 0.82 to 1.0; VUS split into low (about 0 to 0.1) and high (about 0.5 to 1.0) groups.",
+    "snippet": "Comparisons of the abundance scores for ASPA missense variants listed in the Source Data File as pathogenic",
+    "anchor": "Figure 6A (abundance of pathogenic, uncertain-significance and benign variants)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38740822/41467_2024_48481_Fig6_HTML.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA, a zinc-dependent homodimeric hydrolase): N-terminal GFP fusion with IRES-mCherry at a single Tet-on landing pad in HEK293T cells, 6,152 variants (VAMP-seq), library-wide inhibitor and temperature perturbations, a competitive growth (toxicity) screen; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "ASPA missense and nonsense variants (about 98 percent of 6,260 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score, toxicity score (growth slope), flow profiles under perturbation"
+    },
+    "qualifies": "entries[0]",
+    "qualifies_needle": "Conversely, 50 out of 61 pathogenic variants "
+   },
+   {
+    "proposition": "The pathogenic variants that keep abundance are mostly at the catalytic site: pathogenic by function, not by quantity.",
+    "snippet": "Among the remaining pathogenic high-abundance variants, most were at catalytic sites",
+    "anchor": "Results, same section, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38740822_Gronbaek2024_PMC11091098.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA, a zinc-dependent homodimeric hydrolase): N-terminal GFP fusion with IRES-mCherry at a single Tet-on landing pad in HEK293T cells, 6,152 variants (VAMP-seq), library-wide inhibitor and temperature perturbations, a competitive growth (toxicity) screen; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "ASPA missense and nonsense variants (about 98 percent of 6,260 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score, toxicity score (growth slope), flow profiles under perturbation"
+    }
+   },
+   {
+    "proposition": "Library-wide route: ubiquitin E1 inhibition, proteasome inhibition and Hsp70 inhibition raise abundance; the lysosomal inhibitor has little effect; the substrate has no effect.",
+    "snippet": "Treating the cells with an inhibitor of the E1 ubiquitin-activating enzyme (MLN7243) led to an increased abundance (Fig. 4D).",
+    "anchor": "Results, Most destabilized ASPA variants are heat-labile PQC and proteasome targets, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38740822_Gronbaek2024_PMC11091098.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA, a zinc-dependent homodimeric hydrolase): N-terminal GFP fusion with IRES-mCherry at a single Tet-on landing pad in HEK293T cells, 6,152 variants (VAMP-seq), library-wide inhibitor and temperature perturbations, a competitive growth (toxicity) screen; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "ASPA missense and nonsense variants (about 98 percent of 6,260 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score, toxicity score (growth slope), flow profiles under perturbation"
+    }
+   },
+   {
+    "proposition": "Figure 4 read: bortezomib (E) and E1 inhibitor (D) lift the low-abundance shoulder (GFP:mCherry about 0.05 to 0.2) visibly; chloroquine (F) overlaps the control; the Hsp70 inhibitor (G) raises the low peak slightly; N-acetyl-aspartate (H) overlaps the control; 29 degrees (C) reduces the low peak to a shoulder and 39.5 degrees (B) deepens it.",
+    "snippet": "Histograms displaying the distributions of the GFP:mCherry ratios of the ASPA library",
+    "anchor": "Figure 4A-H (library flow histograms under perturbations)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38740822/41467_2024_48481_Fig4_HTML.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA, a zinc-dependent homodimeric hydrolase): N-terminal GFP fusion with IRES-mCherry at a single Tet-on landing pad in HEK293T cells, 6,152 variants (VAMP-seq), library-wide inhibitor and temperature perturbations, a competitive growth (toxicity) screen; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "ASPA missense and nonsense variants (about 98 percent of 6,260 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score, toxicity score (growth slope), flow profiles under perturbation"
+    },
+    "qualifies": "entries[3]",
+    "qualifies_needle": "Treating the cells with an inhibitor of the E"
+   },
+   {
+    "proposition": "The substrate did not change the library distribution, but the intracellular substrate concentration is unknown (the authors' own caveat): substrate-mediated stabilisation was not shown here.",
+    "snippet": "Since ASPA folding and stability could potentially be affected by substrate binding, we also analyzed the library distribution in the presence of NAA.",
+    "anchor": "Results, same section, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38740822_Gronbaek2024_PMC11091098.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA, a zinc-dependent homodimeric hydrolase): N-terminal GFP fusion with IRES-mCherry at a single Tet-on landing pad in HEK293T cells, 6,152 variants (VAMP-seq), library-wide inhibitor and temperature perturbations, a competitive growth (toxicity) screen; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "ASPA missense and nonsense variants (about 98 percent of 6,260 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score, toxicity score (growth slope), flow profiles under perturbation"
+    }
+   },
+   {
+    "proposition": "Toxicity upon prolonged expression of low-abundance variants (a competitive growth screen over 9 days); all toxic variants are low-abundance, but the authors judge it irrelevant to the recessive disease and an overexpression consequence.",
+    "snippet": "Canavan disease is a recessive disorder33, so this toxicity phenotype is unlikely to be directly relevant to the development of the disease.",
+    "anchor": "Results, Certain ASPA variants become toxic upon prolonged expression, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38740822_Gronbaek2024_PMC11091098.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA, a zinc-dependent homodimeric hydrolase): N-terminal GFP fusion with IRES-mCherry at a single Tet-on landing pad in HEK293T cells, 6,152 variants (VAMP-seq), library-wide inhibitor and temperature perturbations, a competitive growth (toxicity) screen; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "ASPA missense and nonsense variants (about 98 percent of 6,260 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score, toxicity score (growth slope), flow profiles under perturbation"
+    }
+   },
+   {
+    "proposition": "Figure 7B read: toxicity is a steep function of abundance: toxic variants (score about 0.8 to 1.0) all lie at abundance about 0 to 0.1, while abundance above about 0.3 gives toxicity near 0 (Spearman -0.77); toxicity correlates with predicted destabilisation (rho 0.53).",
+    "snippet": "Correlation between abundance and toxicity scores for all missense variants.",
+    "anchor": "Figure 7B-D (toxicity against abundance, Rosetta and GEMME)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38740822/41467_2024_48481_Fig7_HTML.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA, a zinc-dependent homodimeric hydrolase): N-terminal GFP fusion with IRES-mCherry at a single Tet-on landing pad in HEK293T cells, 6,152 variants (VAMP-seq), library-wide inhibitor and temperature perturbations, a competitive growth (toxicity) screen; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "ASPA missense and nonsense variants (about 98 percent of 6,260 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score, toxicity score (growth slope), flow profiles under perturbation"
+    },
+    "qualifies": "entries[6]",
+    "qualifies_needle": "Canavan disease is a recessive disorder33, so"
+   },
+   {
+    "proposition": "Resolution at the low end is poor: replicate correlation for low-abundance non-toxic variants is 0.77 but only 0.09 for toxic ones, so the abundance score cannot rank variants near zero.",
+    "snippet": "Thus, the average Spearman replica correlation of 951 non-toxic variants (toxicity score <0.4) with abundance score <0.2 is 0.77, but only 0.09 for 1529 toxic variants",
+    "anchor": "Discussion, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38740822_Gronbaek2024_PMC11091098.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA, a zinc-dependent homodimeric hydrolase): N-terminal GFP fusion with IRES-mCherry at a single Tet-on landing pad in HEK293T cells, 6,152 variants (VAMP-seq), library-wide inhibitor and temperature perturbations, a competitive growth (toxicity) screen; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "ASPA missense and nonsense variants (about 98 percent of 6,260 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score, toxicity score (growth slope), flow profiles under perturbation"
+    }
+   },
+   {
+    "proposition": "Thermodynamic stability predictions explain abundance only moderately (rho about -0.47, residue medians about -0.55), with outliers in both directions and degron-introducing substitutions not captured.",
+    "snippet": "Overall, the thermodynamic stability predictions correlated with the experimental abundance scores",
+    "anchor": "Results, The abundance of ASPA variants correlates with predicted thermodynamic folding stability, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38740822_Gronbaek2024_PMC11091098.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA, a zinc-dependent homodimeric hydrolase): N-terminal GFP fusion with IRES-mCherry at a single Tet-on landing pad in HEK293T cells, 6,152 variants (VAMP-seq), library-wide inhibitor and temperature perturbations, a competitive growth (toxicity) screen; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "ASPA missense and nonsense variants (about 98 percent of 6,260 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score, toxicity score (growth slope), flow profiles under perturbation"
+    }
+   },
+   {
+    "proposition": "The share of destabilised disease variants is cited as an estimate: about half of disease-causing missense variants are thought to lead to destabilisation and degradation.",
+    "snippet": "about half of disease-causing missense variants are thought to lead to protein destabilization and degradation",
+    "anchor": "Introduction, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38740822_Gronbaek2024_PMC11091098.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA, a zinc-dependent homodimeric hydrolase): N-terminal GFP fusion with IRES-mCherry at a single Tet-on landing pad in HEK293T cells, 6,152 variants (VAMP-seq), library-wide inhibitor and temperature perturbations, a competitive growth (toxicity) screen; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "ASPA missense and nonsense variants (about 98 percent of 6,260 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score, toxicity score (growth slope), flow profiles under perturbation"
+    }
+   },
+   {
+    "proposition": "The authors state a therapeutic logic with an explicit condition: blocking quality-control E3s or stabilisers would help where the destabilised variants are still functional; many disease variants are partially functional; and enzyme-activity mapping would be more valuable clinically.",
+    "snippet": "In turn, this could potentially broadly alleviate genetic disorders where the variant proteins, albeit structurally destabilized, are still functional.",
+    "anchor": "Discussion, paragraph 7",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38740822_Gronbaek2024_PMC11091098.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA, a zinc-dependent homodimeric hydrolase): N-terminal GFP fusion with IRES-mCherry at a single Tet-on landing pad in HEK293T cells, 6,152 variants (VAMP-seq), library-wide inhibitor and temperature perturbations, a competitive growth (toxicity) screen; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "ASPA missense and nonsense variants (about 98 percent of 6,260 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score, toxicity score (growth slope), flow profiles under perturbation"
+    }
+   },
+   {
+    "proposition": "The method is run on an overexpressed GFP fusion in a non-oligodendrocyte line with undetectable endogenous protein, which the authors state may differ from the disease cell type.",
+    "snippet": "However, as these cells also do not express detectable levels of ASPA, we cannot exclude that the PQC of ASPA would be different in e.g. oligodendrocytes",
+    "anchor": "Discussion, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38740822_Gronbaek2024_PMC11091098.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA, a zinc-dependent homodimeric hydrolase): N-terminal GFP fusion with IRES-mCherry at a single Tet-on landing pad in HEK293T cells, 6,152 variants (VAMP-seq), library-wide inhibitor and temperature perturbations, a competitive growth (toxicity) screen; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "ASPA missense and nonsense variants (about 98 percent of 6,260 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score, toxicity score (growth slope), flow profiles under perturbation"
+    }
+   },
+   {
+    "proposition": "A solubility check was run on five variants after sonication, 15,000 g for 30 minutes, with the pellet resuspended to the supernatant volume; the five were largely in the soluble fraction.",
+    "snippet": "The resulting whole-cell lysates were then centrifuged for 30 min at 15,000 × g at 4 °C.",
+    "anchor": "Methods, Solubility of ASPA variants",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38740822_Gronbaek2024_PMC11091098.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Aspartoacylase (ASPA, a zinc-dependent homodimeric hydrolase): N-terminal GFP fusion with IRES-mCherry at a single Tet-on landing pad in HEK293T cells, 6,152 variants (VAMP-seq), library-wide inhibitor and temperature perturbations, a competitive growth (toxicity) screen; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "ASPA missense and nonsense variants (about 98 percent of 6,260 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score, toxicity score (growth slope), flow profiles under perturbation"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST returned the whole article as fullTextXML for PMC11091098 (226 kB, 2026-10-21); figures from the supplementaryFiles container.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a figure legend or an inspected figure."
+ }
+}

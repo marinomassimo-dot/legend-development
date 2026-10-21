@@ -1,0 +1,410 @@
+{
+ "schema_version": 2,
+ "pmid": "40485335",
+ "doi": "10.1096/fj.202403159RR",
+ "receipt": "FTR-20261021-40485335-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named and deduplicated by the Orchestrator's selection file; the per-paper M0 packet and receipt status were run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "The reading is a primary-evidence read of a NOT WWOX EVIDENCE paper; the dossier is the analysis note section, no WWOX commit candidate is implied."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No consolidated baseline claim is narrowed or reversed by this reading; a blind audit is declared OWED where a candidate proposes it."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Not requested; discovery leads are staged separately if any."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a candidate card; BLOCK-1 holds, class level only."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "The Institute of Pharmacology of the Medical University of Vienna with a co-author from an electrophysiology instrument company (from the affiliations); HEK293 overexpression, membrane-vesicle electrophysiology and flies. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "GAT-1 AND G443 AND chaperone",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "SLC6A1 AND glycerol AND 4-phenylbutyrate",
+    "count": 3,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "SLC6A1 AND Drosophila AND seizure",
+    "count": 3,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "PubMed counts, dated; a zero from a title/abstract query licenses 'no paper is indexed', never 'this was never measured' (D-37)."
+ },
+ "multihop": {
+  "references_enumerated": 72,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the JATS; none is WWOX-related."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 40485335 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-21 via PubMed efetch for PMID 40485335: publication types ['Journal Article']; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 72,
+   "references_screened": 72,
+   "references_with_doi": 72,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40485335_Shah2025_PMC12146831.xml",
+   "sha256": "7cf47b9080ec95603ada7891b49d07d0174aa145e5f4c2833777afe85062af4c",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC12146831: whole article; every text locator is matched against it.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12146831/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "7cf47b9080ec95603ada7891b49d07d0174aa145e5f4c2833777afe85062af4c",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID40485335/FSB2-39-e70614-g001.jpg",
+   "sha256": "53f62ebc533bd69b9fa63e292c9980a202509f3881089cb40b5d9238366329f3",
+   "kind": "figure",
+   "note": "Image file g001 from the supplementaryFiles container; file numbers do not equal figure numbers (paired with figure_legend_pairs.py), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12146831/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "53f62ebc533bd69b9fa63e292c9980a202509f3881089cb40b5d9238366329f3",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID40485335/FSB2-39-e70614-g002.jpg",
+   "sha256": "ca3b33b6206e59612615f389df3ed54a5e6db77aab1e5bbdd46c679308fd907a",
+   "kind": "figure",
+   "note": "Image file g002 from the supplementaryFiles container; file numbers do not equal figure numbers (paired with figure_legend_pairs.py), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12146831/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "ca3b33b6206e59612615f389df3ed54a5e6db77aab1e5bbdd46c679308fd907a",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID40485335/FSB2-39-e70614-g003.jpg",
+   "sha256": "dae795b7ef4cf269ada46ec420c27c68795d148729eb83690ea247bc412cbe6f",
+   "kind": "figure",
+   "note": "Image file g003 from the supplementaryFiles container; file numbers do not equal figure numbers (paired with figure_legend_pairs.py), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12146831/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "dae795b7ef4cf269ada46ec420c27c68795d148729eb83690ea247bc412cbe6f",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID40485335/FSB2-39-e70614-g004.jpg",
+   "sha256": "e6ea9a1a3a4a916579fed1bb49198361ae1d6b60f87b457986a6662c985d9723",
+   "kind": "figure",
+   "note": "Image file g004 from the supplementaryFiles container; file numbers do not equal figure numbers (paired with figure_legend_pairs.py), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12146831/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "e6ea9a1a3a4a916579fed1bb49198361ae1d6b60f87b457986a6662c985d9723",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID40485335/FSB2-39-e70614-g005.jpg",
+   "sha256": "c54e16de799e4b3b8f66ec9c29e514f303b5f9e0653be6dc71924aacb4bffeca",
+   "kind": "figure",
+   "note": "Image file g005 from the supplementaryFiles container; file numbers do not equal figure numbers (paired with figure_legend_pairs.py), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12146831/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "c54e16de799e4b3b8f66ec9c29e514f303b5f9e0653be6dc71924aacb4bffeca",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID40485335/FSB2-39-e70614-g006.jpg",
+   "sha256": "e1dff4c0cff60726bbf8074aa8eab27504469f7ee28c512b9ff21a64b9960f52",
+   "kind": "figure",
+   "note": "Image file g006 from the supplementaryFiles container; file numbers do not equal figure numbers (paired with figure_legend_pairs.py), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12146831/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "e1dff4c0cff60726bbf8074aa8eab27504469f7ee28c512b9ff21a64b9960f52",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID40485335/FSB2-39-e70614-g007.jpg",
+   "sha256": "450fe08b8571c046b608d1af918406e629194064bc0b85dc56837ce266101b36",
+   "kind": "figure",
+   "note": "Image file g007 from the supplementaryFiles container; file numbers do not equal figure numbers (paired with figure_legend_pairs.py), opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12146831/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "450fe08b8571c046b608d1af918406e629194064bc0b85dc56837ce266101b36",
+    "derived": false
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE (SLC6A1). Two variants of one conserved glycine differ in fate: G443V is fully ER-retained (only core-glycosylated), G443D partly reaches the plasma membrane; neither transports GABA.",
+    "snippet": "In contrast, the G443V variant presented only core",
+    "anchor": "Results, In Vitro Characterization, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40485335_Shah2025_PMC12146831.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "hGAT-1 (SLC6A1 GABA transporter) variants G443D and G443V in HEK293 cells (Endo H, confocal, thermal stability, radioligand uptake, membrane-vesicle electrophysiology) and in transgenic Drosophila (astrocytic or GABAergic-neuron expression, heat-induced seizure-like episodes), with chemical chaperones; NOT a WWOX system",
+     "genotype": "SLC6A1 G443D and G443V (conserved glycine); no WWOX",
+     "endpoint": "[3H]GABA uptake (single concentration and kinetics), mature versus core glycoform, surface or presynaptic expression, seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Figure 1A-C read (file g005): Endo H blots show a mature band for wild type, a trace for G443D and none for G443V; confocal overlays show G443V co-localised with the ER marker and G443D partly at the membrane; mature-band thermal stability of G443D falls to about 0.5 to 0.6 of its room-temperature level against about 0.8 to 0.9 for wild type.",
+    "snippet": "In vitro characterization of epilepsy variants of residue G443 in hGAT",
+    "anchor": "Figure 1A-D (Endo H, confocal, thermal stability)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40485335/FSB2-39-e70614-g005.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "hGAT-1 (SLC6A1 GABA transporter) variants G443D and G443V in HEK293 cells (Endo H, confocal, thermal stability, radioligand uptake, membrane-vesicle electrophysiology) and in transgenic Drosophila (astrocytic or GABAergic-neuron expression, heat-induced seizure-like episodes), with chemical chaperones; NOT a WWOX system",
+     "genotype": "SLC6A1 G443D and G443V (conserved glycine); no WWOX",
+     "endpoint": "[3H]GABA uptake (single concentration and kinetics), mature versus core glycoform, surface or presynaptic expression, seizure-like episodes"
+    },
+    "qualifies": "entries[0]",
+    "qualifies_needle": "In contrast, the G443V variant presented only"
+   },
+   {
+    "proposition": "Both variants lose transport in kinetics and in membrane-vesicle electrophysiology; the partly surface-trafficked variant G443D has lost the steady-state transport phase and has reduced pre-steady-state currents, so trafficking alone does not equal function.",
+    "snippet": "neither mutant had appreciable GABA uptake",
+    "anchor": "Results, In Vitro Characterization, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40485335_Shah2025_PMC12146831.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "hGAT-1 (SLC6A1 GABA transporter) variants G443D and G443V in HEK293 cells (Endo H, confocal, thermal stability, radioligand uptake, membrane-vesicle electrophysiology) and in transgenic Drosophila (astrocytic or GABAergic-neuron expression, heat-induced seizure-like episodes), with chemical chaperones; NOT a WWOX system",
+     "genotype": "SLC6A1 G443D and G443V (conserved glycine); no WWOX",
+     "endpoint": "[3H]GABA uptake (single concentration and kinetics), mature versus core glycoform, surface or presynaptic expression, seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "The chaperone response is allele-specific: the phenylbutyrate class failed on the partially trafficked G443D but rescued the fully retained G443V; glycerol helped G443D.",
+    "snippet": "However, in the present study, 4",
+    "anchor": "Results, Rescue by Pharmacochaperoning, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40485335_Shah2025_PMC12146831.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "hGAT-1 (SLC6A1 GABA transporter) variants G443D and G443V in HEK293 cells (Endo H, confocal, thermal stability, radioligand uptake, membrane-vesicle electrophysiology) and in transgenic Drosophila (astrocytic or GABAergic-neuron expression, heat-induced seizure-like episodes), with chemical chaperones; NOT a WWOX system",
+     "genotype": "SLC6A1 G443D and G443V (conserved glycine); no WWOX",
+     "endpoint": "[3H]GABA uptake (single concentration and kinetics), mature versus core glycoform, surface or presynaptic expression, seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Figure 3A-C read (file g007), uptake as percent of untreated wild type at a single sub-saturating substrate concentration: wild type with phenylbutyrate about 180, with three modulators and an HSP inhibitor about 180 to 215; G443D untreated near 0, glycerol about 6; G443V untreated about 0.8, phenylbutyrate about 8, glycerol about 5; several compounds raise wild type, i.e. the effect is not specific to the variant.",
+    "snippet": "Small molecule in vitro screening for their rescue potential on G443 variants.",
+    "anchor": "Figure 3A-C (single-concentration uptake screen)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40485335/FSB2-39-e70614-g007.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "hGAT-1 (SLC6A1 GABA transporter) variants G443D and G443V in HEK293 cells (Endo H, confocal, thermal stability, radioligand uptake, membrane-vesicle electrophysiology) and in transgenic Drosophila (astrocytic or GABAergic-neuron expression, heat-induced seizure-like episodes), with chemical chaperones; NOT a WWOX system",
+     "genotype": "SLC6A1 G443D and G443V (conserved glycine); no WWOX",
+     "endpoint": "[3H]GABA uptake (single concentration and kinetics), mature versus core glycoform, surface or presynaptic expression, seizure-like episodes"
+    },
+    "qualifies": "entries[3]",
+    "qualifies_needle": "However, in the present study, 4"
+   },
+   {
+    "proposition": "In kinetics the rescued variants have a changed substrate affinity and reach a fraction of wild-type capacity: Vmax about 165 (G443D with glycerol, Km about 23 micromolar) and about 117 (G443V with the phenylbutyrate class, Km about 39) against wild type Vmax about 298 (Km about 6.5) untreated and about 556 and about 812 when wild type is treated with the same two modulators.",
+    "snippet": "The kinetic parameters indicated that glycerol and 4",
+    "anchor": "Results, Rescue by Pharmacochaperoning, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40485335_Shah2025_PMC12146831.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "hGAT-1 (SLC6A1 GABA transporter) variants G443D and G443V in HEK293 cells (Endo H, confocal, thermal stability, radioligand uptake, membrane-vesicle electrophysiology) and in transgenic Drosophila (astrocytic or GABAergic-neuron expression, heat-induced seizure-like episodes), with chemical chaperones; NOT a WWOX system",
+     "genotype": "SLC6A1 G443D and G443V (conserved glycine); no WWOX",
+     "endpoint": "[3H]GABA uptake (single concentration and kinetics), mature versus core glycoform, surface or presynaptic expression, seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Figure 4 read (file g003): wild-type uptake curves rise with glycerol (to about 500 at 100 micromolar) and with the phenylbutyrate class (to about 700) over the untreated about 290; rescued variants reach about 130 (G443D, glycerol) and about 80 (G443V) at 100 micromolar; mature bands of the variants are visible only after treatment.",
+    "snippet": "Functional and biochemical validation of G443D and G443V rescue by chemical chaperones in vitro.",
+    "anchor": "Figure 4A-G (kinetics and Endo H blots with and without modulators)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40485335/FSB2-39-e70614-g003.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "hGAT-1 (SLC6A1 GABA transporter) variants G443D and G443V in HEK293 cells (Endo H, confocal, thermal stability, radioligand uptake, membrane-vesicle electrophysiology) and in transgenic Drosophila (astrocytic or GABAergic-neuron expression, heat-induced seizure-like episodes), with chemical chaperones; NOT a WWOX system",
+     "genotype": "SLC6A1 G443D and G443V (conserved glycine); no WWOX",
+     "endpoint": "[3H]GABA uptake (single concentration and kinetics), mature versus core glycoform, surface or presynaptic expression, seizure-like episodes"
+    },
+    "qualifies": "entries[5]",
+    "qualifies_needle": "The kinetic parameters indicated that glycero"
+   },
+   {
+    "proposition": "Wild-type protein is also raised by the modulators and is trapped by one variant: co-expression with G443V reduces wild-type mature protein and uptake, which a chaperone overexpression reverses, whereas G443D does not interfere.",
+    "snippet": "whereas G443D had no effect on WT activity",
+    "anchor": "Results, Rescue by Pharmacochaperoning, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40485335_Shah2025_PMC12146831.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "hGAT-1 (SLC6A1 GABA transporter) variants G443D and G443V in HEK293 cells (Endo H, confocal, thermal stability, radioligand uptake, membrane-vesicle electrophysiology) and in transgenic Drosophila (astrocytic or GABAergic-neuron expression, heat-induced seizure-like episodes), with chemical chaperones; NOT a WWOX system",
+     "genotype": "SLC6A1 G443D and G443V (conserved glycine); no WWOX",
+     "endpoint": "[3H]GABA uptake (single concentration and kinetics), mature versus core glycoform, surface or presynaptic expression, seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "In flies, both variants give about 40 percent seizure-like episodes after heat, with no locomotor defect (Figure 5J-K read from file g002: about 45 and 43 percent against about 7 for wild type).",
+    "snippet": "A little over 40% of flies exhibited seizure susceptibility for both G443D and G443V",
+    "anchor": "Results, In Vivo Studies, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40485335_Shah2025_PMC12146831.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "hGAT-1 (SLC6A1 GABA transporter) variants G443D and G443V in HEK293 cells (Endo H, confocal, thermal stability, radioligand uptake, membrane-vesicle electrophysiology) and in transgenic Drosophila (astrocytic or GABAergic-neuron expression, heat-induced seizure-like episodes), with chemical chaperones; NOT a WWOX system",
+     "genotype": "SLC6A1 G443D and G443V (conserved glycine); no WWOX",
+     "endpoint": "[3H]GABA uptake (single concentration and kinetics), mature versus core glycoform, surface or presynaptic expression, seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "In vivo rescue follows the allele pattern: the phenylbutyrate class raises G443V astrocytic expression 14-fold and lowers its seizure-like episodes, while G443D seizure behaviour is unchanged; glycerol effects are not significant.",
+    "snippet": "The seizure phenotype of G443D flies stayed unaltered upon 4",
+    "anchor": "Results, In Vivo Studies, paragraph 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40485335_Shah2025_PMC12146831.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "hGAT-1 (SLC6A1 GABA transporter) variants G443D and G443V in HEK293 cells (Endo H, confocal, thermal stability, radioligand uptake, membrane-vesicle electrophysiology) and in transgenic Drosophila (astrocytic or GABAergic-neuron expression, heat-induced seizure-like episodes), with chemical chaperones; NOT a WWOX system",
+     "genotype": "SLC6A1 G443D and G443V (conserved glycine); no WWOX",
+     "endpoint": "[3H]GABA uptake (single concentration and kinetics), mature versus core glycoform, surface or presynaptic expression, seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Figure 6G-I read (file g004): G443D seizure-like episodes about 46, 42 and 49 percent for control, glycerol and the phenylbutyrate class; G443V about 43, 32 and 20 percent (three asterisks for the phenylbutyrate class); G443V astrocytic volume median about 20 control, about 70 glycerol, about 230 treated micrometres cubed with a range to about 1,150. Exposure is dietary for 48 hours in flies.",
+    "snippet": "Pharmacological treatment ameliorates the neuronal and glial expression and activity of G443V mutant.",
+    "anchor": "Figure 6G-I (flies: seizure-like episodes and expression volume)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40485335/FSB2-39-e70614-g004.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "hGAT-1 (SLC6A1 GABA transporter) variants G443D and G443V in HEK293 cells (Endo H, confocal, thermal stability, radioligand uptake, membrane-vesicle electrophysiology) and in transgenic Drosophila (astrocytic or GABAergic-neuron expression, heat-induced seizure-like episodes), with chemical chaperones; NOT a WWOX system",
+     "genotype": "SLC6A1 G443D and G443V (conserved glycine); no WWOX",
+     "endpoint": "[3H]GABA uptake (single concentration and kinetics), mature versus core glycoform, surface or presynaptic expression, seizure-like episodes"
+    },
+    "qualifies": "entries[9]",
+    "qualifies_needle": "The seizure phenotype of G443D flies stayed u"
+   },
+   {
+    "proposition": "Computational stability predictions call both variants destabilising (three predictors), which the authors report without a measured stability of the rescued protein.",
+    "snippet": "To assess the impact of the mutations on protein stability, we used three support vector machine",
+    "anchor": "Results, In Vitro Characterization, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40485335_Shah2025_PMC12146831.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "hGAT-1 (SLC6A1 GABA transporter) variants G443D and G443V in HEK293 cells (Endo H, confocal, thermal stability, radioligand uptake, membrane-vesicle electrophysiology) and in transgenic Drosophila (astrocytic or GABAergic-neuron expression, heat-induced seizure-like episodes), with chemical chaperones; NOT a WWOX system",
+     "genotype": "SLC6A1 G443D and G443V (conserved glycine); no WWOX",
+     "endpoint": "[3H]GABA uptake (single concentration and kinetics), mature versus core glycoform, surface or presynaptic expression, seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Heat-shock-protein inhibitors partly rescued G443V but were not pursued because of cytotoxicity.",
+    "snippet": "we did not pursue further studies with these compounds due to their cytotoxic effects",
+    "anchor": "Results, Rescue by Pharmacochaperoning, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40485335_Shah2025_PMC12146831.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "hGAT-1 (SLC6A1 GABA transporter) variants G443D and G443V in HEK293 cells (Endo H, confocal, thermal stability, radioligand uptake, membrane-vesicle electrophysiology) and in transgenic Drosophila (astrocytic or GABAergic-neuron expression, heat-induced seizure-like episodes), with chemical chaperones; NOT a WWOX system",
+     "genotype": "SLC6A1 G443D and G443V (conserved glycine); no WWOX",
+     "endpoint": "[3H]GABA uptake (single concentration and kinetics), mature versus core glycoform, surface or presynaptic expression, seizure-like episodes"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST returned the whole article as fullTextXML for PMC12146831 (198 kB, 2026-10-21); seven image files from the supplementaryFiles container.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a figure legend or an inspected figure."
+ }
+}
