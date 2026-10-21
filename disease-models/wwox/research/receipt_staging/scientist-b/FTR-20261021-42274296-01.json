@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-10-21T12:00:00Z",
+ "event_at": "2026-10-21T12:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_present"
+ },
+ "event_id": "FTR-20261021-42274296-01",
+ "evidence_basis": [
+  "coverage_map",
+  "dossier"
+ ],
+ "evidence_depth": "complete_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42274296.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-b_20261021.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "37ca8bc4903ec5184c0b90401d4642f922a03559a75dbc1b45e6c58009d57900",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID42274296_Harman2026_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1002/epi4.70289",
+  "pmid": "42274296"
+ },
+ "workflow": "scientist-b repurposing batch R2 2026-10-21; QUESTION_DRIVEN (the reader held DL-MECH-170 and CLAIM 016 before opening the paper); NOT WWOX EVIDENCE; PMC efetch XML acquired with no User-Agent through pmc_bucket_fetch.py; prepared as JSON for the integrator and staged, not appended."
+}

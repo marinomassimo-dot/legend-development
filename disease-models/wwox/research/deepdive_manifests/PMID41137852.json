@@ -1,0 +1,200 @@
+{
+ "schema_version": 2,
+ "pmid": "41137852",
+ "doi": "10.1111/epi.18655",
+ "receipt": "FTR-20261021-41137852-01",
+ "landing": [
+  "FTR-20261021-41137852-01",
+  "repurposing_10h_scientist-b_20261021"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 1131,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-21: 'Guerrini R[au]' 1131; with (WWOX OR Wwox) 1 (one hit, not opened). Initials-level string, may pool homonyms.",
+  "research_type": "descriptive_clinical",
+  "weighting": "A 17-centre Italian network retrospective series by a leading epilepsy-genetics group; credible for what clinicians recorded, with the authors' own referral-bias and retrospective caveats.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID41137852_Balestrini2026_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; WWOX is absent from this paper's body: the cohort contains no WWOX case and the gene list does not include it."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 45,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-41137852-01",
+    "target": "Reference 17 (ILAE definition of drug-resistant epilepsy)",
+    "question": "Is the 'effective' label for a drug a clinician judgement of absence frequency reduction, with what threshold?",
+    "status": "open - cited, not read"
+   },
+   {
+    "id": "MH-41137852-02",
+    "target": "Supplementary tables of this paper",
+    "question": "Do the per-patient supplementary tables allow re-computing the per-gene ethosuximide denominators?",
+    "status": "open - three supplementary docx files deposited, not opened in this reading"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 41137852, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "paper_packet.py packet at claim time: none prior; claimed by scientist-b."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-21",
+  "route": "PubMed esummary (JSON) for 41137852 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "pubtype [\"Journal Article\", \"Multicenter Study\"]; no retraction, expression of concern or erratum is visible on the esummary record (the esummary JSON carries no CommentsCorrections list for this PMID, so that absence is a statement about this query).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 45,
+   "references_screened": 45,
+   "references_with_doi": 45,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41137852_Balestrini2026_PMC_r2.xml",
+   "sha256": "fbffa1f62649055058ae131c573e42b4da3ea8a2a00da4fdc07d1c3caa186dff",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=12893263&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "fbffa1f62649055058ae131c573e42b4da3ea8a2a00da4fdc07d1c3caa186dff"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41137852_r2/PMC12893263.1.pdf",
+   "sha256": "48168412c8b7fac991236c7c6df20410c97bcc4d6f277cc53033b2d8b883c3b2",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC12893263",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "48168412c8b7fac991236c7c6df20410c97bcc4d6f277cc53033b2d8b883c3b2"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figures opened as images; every text snippet below was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet below sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "Human reference rate: ethosuximide was recorded as effective in reducing absence frequency in about two thirds of those who received it (72 of 106), against valproate 102 of 142. The authors state the drugs were often prescribed for the whole epilepsy syndrome, so the percentages may reflect overall seizure burden and not absence-specific efficacy.",
+    "snippet": "The following treatments were reported as effective in reducing absence frequency: valproate (effective in 102/142, 72%), ethosuximide (in 72/106, 68%)",
+    "surface": "body",
+    "anchor": "Results, Treatment response",
+    "artifact": "files/fulltext/PMID41137852_Balestrini2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Authors' own limit on the response percentages.",
+    "snippet": "We note that these medications were often prescribed to address the full epilepsy syndrome rather than absence seizures in isolation.",
+    "surface": "body",
+    "anchor": "Results, Treatment response",
+    "artifact": "files/fulltext/PMID41137852_Balestrini2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The ethosuximide response differs by gene in small groups: for example SLC2A1 17 treated, 88 percent effective; SCN1A 9 treated, 78 percent; SYNGAP1 9 treated, 55 percent; CHD2 5 treated, 60 percent; CACNA1A 4 treated, 25 percent; NEXMIF 4 treated, 0 percent; SCN8A 2 treated, 100 percent. Counts are per-gene treated denominators; the table does not test heterogeneity across genes and several cells are 1 to 4 patients.",
+    "snippet": "NEXMIF (n = 5) | 80% | 5 (40%) | – | 2 (0%) | – | 4 (0%)",
+    "surface": "body",
+    "anchor": "Table 2 (Genetic etiology and treatment efficacy), NEXMIF row; the SLC2A1 row reads 17 (88%), the SCN1A row 9 (78%), the CACNA1A row 4 (25%) in the ETS column",
+    "artifact": "files/fulltext/PMID41137852_Balestrini2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The SLC2A1 row of Table 2 gives ethosuximide in 17 treated with 88 percent effective, the highest among the genes with at least 10 patients.",
+    "snippet": "SLC2A1 (n = 28) | 36% | 11 (54%) | – | 2 (0%) | – | 17 (88%)",
+    "surface": "body",
+    "anchor": "Table 2, SLC2A1 row, ETS column",
+    "artifact": "files/fulltext/PMID41137852_Balestrini2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A paediatric-onset human series is not a mechanistic test: the authors conclude traditional drugs including ethosuximide were commonly used and often effective, and that more than half the cohort remained drug-resistant. They draw no conclusion about the T-type mechanism or about why ethosuximide response differs by gene.",
+    "snippet": "Although traditional ASMs such as valproate and ethosuximide were commonly used and often effective in controlling absence seizures, more than half of the cohort remained drug‐resistant at last follow‐up",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 9",
+    "artifact": "files/fulltext/PMID41137852_Balestrini2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Selection bias, in the authors' words: genetic testing was typically pursued in more severe phenotypes, so the high proportion with developmental disorder and drug resistance should not be generalised.",
+    "snippet": "We acknowledge that, considering the population of patients with absence seizures at large, our cohort is likely biased toward individuals with more severe phenotypes",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 6",
+    "artifact": "files/fulltext/PMID41137852_Balestrini2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The cohort contains patients with developmental delay (54 percent), intellectual disability (65 percent) and drug-resistant epilepsy (54 percent). Predictors of poor developmental outcome were early developmental delay, drug resistance and early absence onset in a multivariable model; the series does not report whether ethosuximide response predicts or changes neurodevelopmental outcome.",
+    "snippet": "we confirmed early developmental delay, drug‐resistant epilepsy, and early absence onset as independent predictors of unfavorable outcomes (Table 3).",
+    "surface": "body",
+    "anchor": "Results, Genotype-phenotype correlations",
+    "artifact": "files/fulltext/PMID41137852_Balestrini2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}

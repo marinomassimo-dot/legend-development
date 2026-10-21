@@ -1,0 +1,194 @@
+{
+ "schema_version": 2,
+ "pmid": "24953239",
+ "doi": "10.1007/s00424-014-1549-4",
+ "receipt": "FTR-20261021-24953239-01",
+ "landing": [
+  "FTR-20261021-24953239-01",
+  "repurposing_10h_scientist-b_20261021"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 204,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-21: 'Snutch TP[au]' 204; with (WWOX OR Wwox) 0. Initials-level string, may pool homonyms.",
+  "research_type": "experimental_lab",
+  "weighting": "A Brisbane and Vancouver thalamic-physiology collaboration with T-type pharmacology expertise (the same senior author as the Cav3.2 maturation paper, section 14); slice recordings with cell counts as the unit and a stated discrepancy with an earlier acutely-dissociated-cell study.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID24953239_Kanyshkova2015_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement about WWOX content of this surface."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 51,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-24953239-01",
+    "target": "Reference 47 (Tsakiridou et al. 1995, T-type currents in acutely dissociated GAERS thalamic neurons)",
+    "question": "Which preparation difference explains the opposite result for T-type current density in the same strain pair?",
+    "status": "open - cited, not read"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 24953239, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "paper_packet.py packet at claim time: none prior; claimed by scientist-b (adjacent search: T-type measurements in an absence strain versus its non-epileptic control)."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-21",
+  "route": "PubMed esummary (JSON) for 24953239 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "pubtype [\"Journal Article\", \"Research Support, Non-U.S. Gov't\"]; no retraction, expression of concern or erratum is visible on the esummary record (the esummary JSON carries no CommentsCorrections list for this PMID, so that absence is a statement about this query).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 51,
+   "references_screened": 49,
+   "references_with_doi": 49,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID24953239_Kanyshkova2015_PMC_r2.xml",
+   "sha256": "e740709956fa13e6ce38dedc976a6775aa83f47287afa87a52d262c4ea953f5e",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4435665&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "e740709956fa13e6ce38dedc976a6775aa83f47287afa87a52d262c4ea953f5e"
+   }
+  },
+  {
+   "path": "files/figures/PMID24953239_r2/424_2014_1549_Fig5_HTML.jpg",
+   "sha256": "d90a812f9a5c2de0646607ee46eb7299cf38a501e90c396a3c349d5e9c92107a",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC4435665",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "d90a812f9a5c2de0646607ee46eb7299cf38a501e90c396a3c349d5e9c92107a"
+   }
+  },
+  {
+   "path": "files/supplement/PMID24953239_r2/PMC4435665.1.pdf",
+   "sha256": "378e5943b554a5f1b251146e9f852457419d2f3d124bdeb40d0af85b442941e3",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC4435665",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "378e5943b554a5f1b251146e9f852457419d2f3d124bdeb40d0af85b442941e3"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figures opened as images; every text snippet below was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet below sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "The epileptic absence strain has a SMALLER T-type current than its non-epileptic control in relay neurons, not a larger one: peak T-type current density at P7 to P9 is about 15.9 versus about 21.2 pA per pF (p < 0.05), with Cav3.1 mRNA and protein reduced in adult tissue; a high-voltage current is slightly increased.",
+    "snippet": "Interestingly, VB neuron T-type current density was found to be significantly decreased in P7–P9 GAERS compared to NEC at membrane potentials between −60 and −40 mV",
+    "surface": "body",
+    "anchor": "Results, T-type calcium current density is decreased in GAERS VB neurons",
+    "artifact": "files/fulltext/PMID24953239_Kanyshkova2015_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Relay-neuron burst firing is suppressed in the epileptic strain, in adult and pre-epileptic animals under long hyperpolarisation, and the authors attribute this mainly to an increased Ih current, with the reduced T-type current making no significant contribution once Ih is blocked.",
+    "snippet": "The decreased T-type current density might contribute to the suppressed burst-firing in GAERS, although since a non-significant increase was observed for the current injection required to burst-fire between NEC and GAERS in the presence of Ih blockade (Fig. 6b), it appears that the small decrease in T-type current density has no significant contribution.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 4",
+    "artifact": "files/fulltext/PMID24953239_Kanyshkova2015_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A T-type blocker abolished hyperpolarisation-induced burst firing in relay neurons of both strains, establishing that bursting in these cells needs the T-type channel while the strain difference in bursting does not come from it; the authors say what part ventrobasal neurons play in seizure propagation in this strain remains to be elucidated.",
+    "snippet": "What part, if any, VB neurons play in absence seizure propagation thus remains to be elucidated for the GAERS genetic model of absence seizures.",
+    "surface": "body",
+    "anchor": "Discussion, final paragraph",
+    "artifact": "files/fulltext/PMID24953239_Kanyshkova2015_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors note a prior gain-of-function Cav3.2 variant in the epileptic strain (restricted to reticular neurons, not relay neurons) and an earlier study that found no strain difference in T-type current in acutely dissociated cells and one that found increased Cav3.1 mRNA by in-situ hybridisation; they explain their discrepancy by preparation (intact slice versus dissociated cells, current density versus absolute current) and say a dissection error could affect the P9 mRNA comparison.",
+    "snippet": "This contrasts our findings of reduced T-type calcium current density in GAERS VB neurons.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 5",
+    "artifact": "files/fulltext/PMID24953239_Kanyshkova2015_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 5 read as an image: panel b T-type current density curves for the non-epileptic control (filled squares) peak about -21 pA per pF at -50 mV against about -16 for GAERS (open circles) with stars from -60 to -40 mV, and the Z944 curve near 0; panel c high-voltage current slightly larger in GAERS at -10 to 0 mV; panel e Cav3.1 mRNA about 1.6 versus 1.2 (two stars); panel g Cav3.1 protein about 3.7 versus 1.7 (three stars); panel a burst firing present before and abolished by Z944.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5b: NEC peak about -21, GAERS about -16 pA/pF, stars -60 to -40 mV; Figure 5g: Cav3.1/vinculin about 3.7 versus about 1.7, three stars.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID24953239_r2/424_2014_1549_Fig5_HTML.jpg",
+    "anchor": "Figure 5 panels a to g; deposit jpg as delivered",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}

@@ -1,0 +1,279 @@
+{
+ "schema_version": 2,
+ "pmid": "36300716",
+ "doi": "10.1111/epi.17447",
+ "receipt": "FTR-20261021-36300716-01",
+ "landing": [
+  "FTR-20261021-36300716-01",
+  "repurposing_10h_scientist-b_20261021"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 232,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-21: 'Reid CA[au]' 232; 'Reid CA[au] AND (WWOX OR Wwox)' 0. Initials-level string, may pool homonyms.",
+  "research_type": "experimental_lab",
+  "weighting": "Senior author's laboratory built and characterised the Hcn1 M294L knock-in used here; the screen is a within-laboratory pharmacology study, with valproate and lamotrigine arms re-used from the laboratory's own earlier paper (the Results say so). Credible for the HCN1 model; no WWOX standing.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID36300716_Bleakley2023_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement about WWOX content of this surface."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 24,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-36300716-01",
+    "target": "The laboratory's earlier paper on the same knock-in (valproate and lamotrigine data re-used here)",
+    "question": "Does that paper carry a wild-type group on the same ECoG spike endpoint, i.e. a measured baseline spike rate in non-mutant littermates against which an ethosuximide effect could be called genotype-specific?",
+    "status": "open - reference listed in this paper's own text as the source of the valproate and lamotrigine arms; not read here"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 36300716, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "paper_packet.py packet 2026-10-21: no artefacts, no receipts, no peer claim; claimed by scientist-b. Nothing prior existed."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-21",
+  "route": "PubMed esummary (JSON) for 36300716 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "pubtype [\"Journal Article\", \"Research Support, Non-U.S. Gov't\"]; no retraction, expression of concern or erratum is visible on the esummary record (the esummary JSON carries no CommentsCorrections list for this PMID, so that absence is a statement about this query).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 24,
+   "references_screened": 24,
+   "references_with_doi": 24,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID36300716_Bleakley2023_PMC_r2.xml",
+   "sha256": "b21db697f6cb5d0f7aa67326c441bca33a994928b431970a5c5eadf8348baad4",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=10953365&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "b21db697f6cb5d0f7aa67326c441bca33a994928b431970a5c5eadf8348baad4"
+   }
+  },
+  {
+   "path": "files/supplement/PMID36300716_r2/EPI-64-e1-s001.docx",
+   "sha256": "4083626cca2665a9084494f6712a962a32c868b671e09f494be01b81e5252dc1",
+   "kind": "supplement_binary",
+   "note": "",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC10953365",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "4083626cca2665a9084494f6712a962a32c868b671e09f494be01b81e5252dc1"
+   }
+  },
+  {
+   "path": "files/supplement/PMID36300716_r2/PMC10953365.1.pdf",
+   "sha256": "632a59b046bbc0e5ecf56392ed09645f68e32a02a4cdfd55e120cb05765a0950",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC10953365",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "632a59b046bbc0e5ecf56392ed09645f68e32a02a4cdfd55e120cb05765a0950"
+   }
+  },
+  {
+   "path": "files/figures/PMID36300716_r2/PMC10953365_p04_200dpi.png",
+   "sha256": "bfd4d17b7ea6994dc961ae492a36d64a981d042f1cf8ae07a7729e8f08a7c1e8",
+   "kind": "figure",
+   "note": "Page 4 of the PMC PDF (Figure 1) rendered at 200 dpi; the page was rendered, not the embedded raster, because paper_packet.py rank flagged LIKELY_VECTOR_FIGURE for the page.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "bfd4d17b7ea6994dc961ae492a36d64a981d042f1cf8ae07a7729e8f08a7c1e8",
+    "derived_from": "files/supplement/PMID36300716_r2/PMC10953365.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=200) on page 4",
+     "join": ""
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID36300716_r2/PMC10953365_p06_200dpi.png",
+   "sha256": "f9fd5548bea860018e37cb93a0da710d9174696f3ac1a6cdda64b7614eb8fef3",
+   "kind": "figure",
+   "note": "Page 6 of the PMC PDF (Figure 2) rendered at 200 dpi, same reason.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "f9fd5548bea860018e37cb93a0da710d9174696f3ac1a6cdda64b7614eb8fef3",
+    "derived_from": "files/supplement/PMID36300716_r2/PMC10953365.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=200) on page 6",
+     "join": ""
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID36300716_r2/EPI-64-e1-s001_figS1.png",
+   "sha256": "dda7ab3637a41583d4453d123d77c2d93dd78789ebd38d98a533434147bfa4d2",
+   "kind": "figure",
+   "note": "Supplementary Figure S1 (vehicle controls) extracted from the docx; native TIFF resolution preserved.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "dda7ab3637a41583d4453d123d77c2d93dd78789ebd38d98a533434147bfa4d2",
+    "derived_from": "files/supplement/PMID36300716_r2/EPI-64-e1-s001.docx",
+    "extractor": {
+     "name": "PyMuPDF Pixmap",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(word/media/image1.tiff) saved as PNG (1482x2096), the single embedded figure of the docx",
+     "join": ""
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figures opened as images; every text snippet below was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet below sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "Ethosuximide reduced interictal ECoG spike frequency in Hcn1 M294L heterozygous knock-in mice, a significant within-animal reduction (N = 14) on an endpoint that is spiking, not seizures. This is a drug effect in mutants; the paper reports no wild-type arm for it.",
+    "snippet": "Ethosuximide (yellow) caused a significant reduction in ECoG spike frequency, p = .0004 (N = 14).",
+    "surface": "body",
+    "anchor": "Figure 1 legend, panel B",
+    "artifact": "files/fulltext/PMID36300716_Bleakley2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Every animal studied carried the mutation: selection was by genotype and only heterozygous knock-in mice are described in Methods. A drug-by-genotype contrast (mutant versus wild type) was therefore not made in this paper, so the paper cannot say the ethosuximide effect depends on genotype.",
+    "snippet": "Mice were selected to enter the study based on genotype, with all mice that were heterozygous for the Hcn1M294L variant in selected litters used.",
+    "surface": "body",
+    "anchor": "Materials and Methods, Study design",
+    "artifact": "files/fulltext/PMID36300716_Bleakley2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The endpoint is a surrogate. The authors say spontaneous seizures are too rare to quantify drug efficacy, so interictal spikes are used; the ethosuximide result is a spike-rate result.",
+    "snippet": "Spontaneous seizures in Hcn1M294L mice occur too rarely to be effectively used as a quantifiable measure of drug efficacy.",
+    "surface": "body",
+    "anchor": "Materials and Methods, Data analysis",
+    "artifact": "files/fulltext/PMID36300716_Bleakley2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Design strength: repeated-measures and counterbalanced, each mouse receiving up to four drugs with their own vehicle controls, with drugs expected to worsen activity given last. This is the within-subject drug-by-state design the R2 question asks about, but its second factor is drug and baseline, not genotype.",
+    "snippet": "This study followed a repeated‐measures, counterbalanced design, where each mouse received up to four ASMs and their respective vehicle controls.",
+    "surface": "body",
+    "anchor": "Materials and Methods, Study design",
+    "artifact": "files/fulltext/PMID36300716_Bleakley2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Direction depends on the drug, not on channel family alone: sodium-channel-blocking drugs and the KCNQ opener raised spiking and sometimes triggered seizures in this model, while ethosuximide, valproate, levetiracetam and diazepam lowered it. The authors conclude sodium-channel blockers should be contraindicated in gain-of-function HCN1 DEE, a statement about this class in this model.",
+    "snippet": "Collectively, these data strongly indicate that ASMs with sodium channel block as a primary mechanism of action should be contraindicated in GOF HCN1 DEE.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 1",
+    "artifact": "files/fulltext/PMID36300716_Bleakley2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1B, read as an image on the page render: the ethosuximide pair plot shows 14 baseline-to-drug lines with a lower post-drug cluster but several animals at or near their baseline and one with a high post-drug value, and panel C puts the ethosuximide mean at roughly 60 percent of baseline against roughly 15 to 20 percent for levetiracetam and diazepam. The effect is partial and variable between animals.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1B ethosuximide panel: paired baseline versus drug points with an asterisk; panel C bars: ethosuximide about 60 percent of baseline, levetiracetam and diazepam about 15 to 20 percent.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36300716_r2/PMC10953365_p04_200dpi.png",
+    "anchor": "Figure 1 panels B and C, page render at 200 dpi (the PDF's embedded raster is 600 ppi; the page, not the raster, was read because the page was flagged probably-vector)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2A, read as an image: ethosuximide changed no ECoG spectral band (delta, theta, alpha, beta bars all near 100 percent of baseline, no asterisk), whereas diazepam lowered delta and valproate lowered theta and alpha. Ethosuximide reduced spikes without a spectral signature, so spectral power cannot report its effect here.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2A ethosuximide inset: four bars about 95 to 107 percent of baseline, no asterisk; diazepam inset: delta bar about 60 percent with an asterisk.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36300716_r2/PMC10953365_p06_200dpi.png",
+    "anchor": "Figure 2A, page 6 render at 200 dpi",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Limit stated by the authors: pharmacoresponsiveness may differ with the precise channel change of each variant; loss-of-function variants are expected to behave differently from gain-of-function ones. The ethosuximide result is stated for one gain-of-function variant.",
+    "snippet": "patients with HCN1 epilepsy might have different pharmacoresponsiveness depending upon the precise changes to channel function caused by their particular pathogenic variant.",
+    "surface": "body",
+    "anchor": "Discussion, penultimate paragraph",
+    "artifact": "files/fulltext/PMID36300716_Bleakley2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Vehicle controls, Supplementary Figure S1 read as an image: saline moves individual animals' spike rates widely in both directions between the two recording bins (for example about 0.77 to 0.3 and about 0.3 to 0.87 spikes per minute), while 10 percent DMSO alone raises spiking (asterisk) and corn oil and solutol plus DMSO do not. The per-animal test-retest noise of the endpoint is large against the group ethosuximide change (Table S1 text, not locator-verified: about 0.4 to 0.2 spikes per minute).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S1 panel A saline pair plot: lines crossing in both directions, one from about 0.3 to about 0.87; panel B DMSO pair plot with an asterisk.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36300716_r2/EPI-64-e1-s001_figS1.png",
+    "anchor": "Supplementary Figure S1 panels A and B, native 1482x2096 extracted from the docx",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}

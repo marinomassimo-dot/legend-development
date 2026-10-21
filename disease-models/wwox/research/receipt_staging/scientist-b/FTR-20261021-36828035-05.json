@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-21T22:58:00Z",
+ "event_at": "2026-10-21T22:58:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "not_present",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_id": "FTR-20261021-36828035-05",
+ "evidence_basis": [
+  "Targeted re-read for one new question (does any Wwox-deficient dataset in the repository list a T-type gene?): the Results paragraphs defining the RNA-seq differential-expression sets, the RNA-seq methods paragraph, and Supplementary File 1 (the four differential-expression sheets) searched for Cacna1 family symbols and flattened to a derived text artifact. Section-level coverage is stated conservatively: only Results is marked read; the supplementary value is not_read because only one workbook was opened and only by gene-symbol lookup and counts, not read through.",
+  "Five locators appended to the manifest (entries 65 to 69); no earlier locator contradicted."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-b_20261021.md"
+ ],
+ "prior_receipt": "FTR-20260927-36828035-04",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "004c59b54b5f57e462ccb39643b5f3adb44e7ecaef5eff8d786cb77c3568fd22",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID36828035_Hussain2023_PMC.xml and files/supplement/PMID36828035/NIHMS1957654-supplement-Supplementary_data.xlsx",
+ "study_id": {
+  "doi": "10.1016/j.pneurobio.2023.102425",
+  "pmid": "36828035"
+ },
+ "workflow": "scientist-b repurposing batch R2 2026-10-21; QUESTION_DRIVEN (the reader held DL-MECH-170 and the group's questions); WWOX-DIRECT primary re-read for a new question; prepared as JSON for the integrator and staged, not appended."
+}

@@ -1,0 +1,201 @@
+{
+ "schema_version": 2,
+ "pmid": "24002024",
+ "doi": "10.1038/ncomms3410",
+ "receipt": "FTR-20261021-24002024-01",
+ "landing": [
+  "FTR-20261021-24002024-01",
+  "repurposing_10h_scientist-b_20261021"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 134,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-21: 'Baraban SC[au]' 134; with (WWOX OR Wwox) 0. Initials-level string, may pool homonyms.",
+  "research_type": "experimental_lab",
+  "weighting": "The zebrafish epilepsy-screening laboratory that established the scn1Lab model; a model-building and drug-screening paper whose per-drug electrophysiology uses seven fish per drug.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID24002024_Baraban2013_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement about WWOX content of this surface."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 49,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-24002024-01",
+    "target": "The scn1Lab mutant's response to a Cav3 blocker with selectivity data",
+    "question": "Is the absence of an ethosuximide effect in scn1Lab matched by a selective Cav3 compound (a mechanism test the paper does not run)?",
+    "status": "open - no such paper selected in R2"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 24002024, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "paper_packet.py packet at claim time: none prior; claimed by scientist-b (adjacent search; the paper is cited by Harman 2023, PMID 37082241, for 'ethosuximide was ineffective' in an Scn1a zebrafish)."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-21",
+  "route": "PubMed esummary (JSON) for 24002024 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "pubtype [\"Journal Article\", \"Research Support, N.I.H., Extramural\", \"Research Support, Non-U.S. Gov't\"]; no retraction, expression of concern or erratum is visible on the esummary record (the esummary JSON carries no CommentsCorrections list for this PMID, so that absence is a statement about this query).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 49,
+   "references_screened": 46,
+   "references_with_doi": 46,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID24002024_Baraban2013_PMC_r2.xml",
+   "sha256": "913cba147822c55277d93611fbfc03e3c33b6aac926583bdba14eab26585a5ca",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3891590&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "913cba147822c55277d93611fbfc03e3c33b6aac926583bdba14eab26585a5ca"
+   }
+  },
+  {
+   "path": "files/supplement/PMID24002024_r2/NIHMS513486-supplement-1.pdf",
+   "sha256": "3dccf9f5354d9f9276736cf2e4b990af6b6ad8a26d62b288b15481ae3e45ff23",
+   "kind": "supplement_binary",
+   "note": "Supplementary tables (compound lists, lethal compounds) and figures; not opened.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC3891590",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "3dccf9f5354d9f9276736cf2e4b990af6b6ad8a26d62b288b15481ae3e45ff23"
+   }
+  },
+  {
+   "path": "files/supplement/PMID24002024_r2/PMC3891590.1.pdf",
+   "sha256": "84d18a71d262ef54dc57fd208869a45270a56bed7ab6efde4acb449576e2d2b2",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC3891590",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "84d18a71d262ef54dc57fd208869a45270a56bed7ab6efde4acb449576e2d2b2"
+   }
+  },
+  {
+   "path": "files/figures/PMID24002024_r2/nihms513486f5.jpg",
+   "sha256": "c47c60aeaf7eb3911f6120653978aa7d58e00d55c3554b32fe761d6f3004c161",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC3891590",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "c47c60aeaf7eb3911f6120653978aa7d58e00d55c3554b32fe761d6f3004c161"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figures opened as images; every text snippet below was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet below sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "The primary statement behind the citation 'ethosuximide was ineffective against seizures in an Scn1a zebrafish model' in the Harman 2023 paper: of nine antiseizure drugs bath-applied at one concentration to scn1Lab mutant larvae (seven fish per drug), valproate, diazepam, potassium bromide and stiripentol reduced epileptiform activity; carbamazepine, ethosuximide and vigabatrin made it more frequent in some fish (ethosuximide in 4 of 7). It is a negative with a tendency to aggravation in individual fish, not a significant aggravation.",
+    "snippet": "As expected, most AEDs had no effect and epileptiform activity became more frequent following exposure to carbamazepine (in 2 of 7 fish), ethosuximide (4 of 7 fish) or vigabatrin (6 of 7 fish).",
+    "surface": "body",
+    "anchor": "Results, Pharmacological evaluation of scn1Lab mutant zebrafish",
+    "artifact": "files/fulltext/PMID24002024_Baraban2013_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Design limits of the pharmacology: one bath concentration per drug, seven fish per drug, a recording before and after application in the same fish, no concurrent vehicle-exposed fish described for the electrophysiology, no wild-type comparison (wild-type larvae do not have the discharges), and the mutants are scored for epileptiform events recorded in agar-embedded larvae.",
+    "snippet": "All drugs were bath applied at a concentration of 1 mM; seven fish were tested for each drug.",
+    "surface": "body",
+    "anchor": "Results, Pharmacological evaluation of scn1Lab mutant zebrafish",
+    "artifact": "files/fulltext/PMID24002024_Baraban2013_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors conclude the pharmacological profile of the mutants resembles that of Dravet patients, whose seizures respond poorly to most drugs; the ketogenic diet reduced behaviour toward control levels in 7 of 10 mutants. The comparison to patients is by pattern, not by a clinical dataset.",
+    "snippet": "These results demonstrate that the pharmacological profile for scn1Lab mutants resembles that seen in children with DS.",
+    "surface": "body",
+    "anchor": "Results, Pharmacological evaluation of scn1Lab mutant zebrafish",
+    "artifact": "files/fulltext/PMID24002024_Baraban2013_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 5 read as an image: panel A heat map of seven fish per drug: the ethosuximide row has fish 1 and 6 strongly excited (100+ and about 60 to 79 percent), fish 2 and 5 mildly excited, fish 3 unchanged, fish 7 mildly inhibited; the valproate, stiripentol, diazepam and potassium bromide rows are dark blue (inhibition) in most fish; panel B ethosuximide bar about +30 percent change in burst frequency with a large error bar and no star while valproate, stiripentol, diazepam, bromide carry stars; panel D fractional time seizing: ethosuximide bars equal before and after.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5A ethosuximide row: red in fish 1 and orange in fish 6, yellow in 2 and 5, white in 3, light blue in 7; Figure 5B ethosuximide bar positive with no star; Figure 5D Etx before and after about 2.0 and 2.4 percent.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID24002024_r2/nihms513486f5.jpg",
+    "anchor": "Figure 5 panels A, B and D; author-manuscript jpg as delivered",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}

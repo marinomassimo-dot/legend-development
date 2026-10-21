@@ -1,0 +1,254 @@
+{
+ "schema_version": 2,
+ "pmid": "42536722",
+ "doi": "10.1126/sciadv.aec6065",
+ "receipt": "FTR-20261021-42536722-01",
+ "landing": [
+  "FTR-20261021-42536722-01",
+  "repurposing_10h_scientist-b_20261021"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 209,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-21: 'Noebels JL[au]' 209; with (WWOX OR Wwox) 1 (one hit, not opened). Initials-level string, may pool homonyms.",
+  "research_type": "experimental_lab",
+  "weighting": "A long-standing absence-epilepsy genetics laboratory (stargazer/tottering mouse models) with a behavioural-neuroscience co-lead; two authors disclose current employment and shares at a company (Competing interests statement), not tied to ethosuximide or the T-type arms.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID42536722_Miao2026_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement about WWOX content of this surface."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 55,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-42536722-01",
+    "target": "Reference 12 in the paper: monogenic Cacna1a absence models rely on Cav3.1-mediated burst firing",
+    "question": "Is the Cav3.1 dependence demonstrated by genetic epistasis in that earlier model too, and with what age window?",
+    "status": "open - cited, not read"
+   },
+   {
+    "id": "MH-42536722-02",
+    "target": "Reference 3 (persistence of cognitive deficits when seizures are controlled)",
+    "question": "What quantitative evidence, in patients, shows comorbidities persisting after ethosuximide-achieved seizure freedom?",
+    "status": "open - cited, not read"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 42536722, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "paper_packet.py packet at claim time: none prior; claimed by scientist-b."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-21",
+  "route": "PubMed esummary (JSON) for 42536722 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "pubtype [\"Journal Article\"]; no retraction, expression of concern or erratum is visible on the esummary record (the esummary JSON carries no CommentsCorrections list for this PMID, so that absence is a statement about this query).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 55,
+   "references_screened": 54,
+   "references_with_doi": 54,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42536722_Miao2026_PMC_r2.xml",
+   "sha256": "b66912f62c014a3b604fe62c7192185681225b1bff06e4b2fba90ce6e5626270",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=13426438&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "b66912f62c014a3b604fe62c7192185681225b1bff06e4b2fba90ce6e5626270"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42536722_r2/PMC13426438.1.pdf",
+   "sha256": "998345c88e77979bf7929f2e8da76dba40f9292aaa3a2304e70e72f13112dd30",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC13426438",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "998345c88e77979bf7929f2e8da76dba40f9292aaa3a2304e70e72f13112dd30"
+   }
+  },
+  {
+   "path": "files/figures/PMID42536722_r2/PMC13426438_p04_200dpi.png",
+   "sha256": "43ba117085731823a7f6d2a9a8c12cdb77cd91f6196fbb1167b5d8c26d37439e",
+   "kind": "figure",
+   "note": "Page 4 of the PMC PDF rendered at 200 dpi; rank.py flagged the figure page LIKELY_VECTOR_FIGURE, so the page was rendered and the embedded raster not used.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "43ba117085731823a7f6d2a9a8c12cdb77cd91f6196fbb1167b5d8c26d37439e",
+    "derived_from": "files/supplement/PMID42536722_r2/PMC13426438.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=200) on page 4",
+     "join": ""
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID42536722_r2/PMC13426438_p05_200dpi.png",
+   "sha256": "694edfd50bb161d8a6ab063dffa383f75c5b1789e7eddaabc51003d6c2bd80c3",
+   "kind": "figure",
+   "note": "Page 5 of the PMC PDF rendered at 200 dpi; rank.py flagged the figure page LIKELY_VECTOR_FIGURE, so the page was rendered and the embedded raster not used.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "694edfd50bb161d8a6ab063dffa383f75c5b1789e7eddaabc51003d6c2bd80c3",
+    "derived_from": "files/supplement/PMID42536722_r2/PMC13426438.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=200) on page 5",
+     "join": ""
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figures opened as images; every text snippet below was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet below sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "Ethosuximide abolished spike-and-wave discharges in the first hour in all twelve digenic mice after systemic injection, with recurrence as the drug declined. The EEG drug experiment is in mutants only; no wild-type mouse is reported to have been dosed on the EEG endpoint.",
+    "snippet": "We found that SWDs were abolished in the first hour after treatment in all DiGstg+Ca1A mice (N = 12) upon systemic injection of ETX",
+    "surface": "body",
+    "anchor": "Results, Ethosuximide suppresses seizures but fails to rescue the social deficit",
+    "artifact": "files/fulltext/PMID42536722_Miao2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Ethosuximide produced a broad-band reduction of cortical EEG power across frequencies, beyond SWD power, and the authors read this as an effect beyond the canonical thalamic T-type action. This is an observation of the drug's cortical-activity footprint, not a mechanistic dissection.",
+    "snippet": "EEG power spectrum analysis revealed broad-band cortical suppression following ETX administration, suggesting effects beyond its canonical action on thalamic T-type calcium channels (38).",
+    "surface": "body",
+    "anchor": "Discussion, Dissociation between seizures and neurocognitive behavior deficits",
+    "artifact": "files/fulltext/PMID42536722_Miao2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizure suppression did not rescue the social-novelty deficit with ethosuximide in a repeated three-chamber design, the controls being dosed too: the group difference in social novelty (control versus digenic) was present before and after the drug. A symptomatic effect on the seizure endpoint without effect on this comorbidity.",
+    "snippet": "we found that ETX treatment did not rescue the social deficits in DiGstg+Ca1A mice (Fig. 2E).",
+    "surface": "body",
+    "anchor": "Results, Ethosuximide suppresses seizures but fails to rescue the social deficit",
+    "artifact": "files/fulltext/PMID42536722_Miao2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Genetic ablation of Cacna1g (Cav3.1) in the digenic background removed the T-type current and rebound bursting in thalamocortical relay neurons and prevented spontaneous SWDs. This is a genetic epistasis test of T-type dependence of the seizure in the mutant, a different kind of evidence from a drug effect, and it agrees with ethosuximide.",
+    "snippet": "demonstrating that CaV3.1 is critical for the generation of SWDs in both monogenic and digenic absence seizure models.",
+    "surface": "body",
+    "anchor": "Results, CaV3.1 ablation prevents seizure generation",
+    "artifact": "files/fulltext/PMID42536722_Miao2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Cacna1g deletion also did not rescue social novelty, and the triple mutant still shows a trend of elevated 5 to 8 Hz power: seizures removed while cortical abnormality and the behaviour remain. The authors name this dissociation themselves and note possible effects of Cav3.1 loss on locomotion.",
+    "snippet": "Interestingly, peak normalized power spectra showed that TriGstg+Ca1A+Ca1G mice exhibited a trend toward elevated EEG power relative to WT controls at 5–8 Hz range (Fig. 3, G and H).",
+    "surface": "body",
+    "anchor": "Results, CaV3.1 ablation prevents seizure generation, paragraph 2; non-rescue of social novelty stated in the following paragraph",
+    "artifact": "files/fulltext/PMID42536722_Miao2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the limits of the T-type conclusion: it is unclear which T-type-expressing neuron population mediates the effect, and seizure suppression should not be assumed to normalise cognitive and social outcomes.",
+    "snippet": "While T-type channels remain an attractive seizure-control target, these results caution against assuming that seizure suppression will normalize cognitive and social outcomes.",
+    "surface": "body",
+    "anchor": "Discussion, T-type calcium channels as a therapeutic target",
+    "artifact": "files/fulltext/PMID42536722_Miao2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2 read as an image on the page render: panels B and C show SWD duration per 30 minutes collapsing from sections 1 and 2 (baseline) to near zero in sections 3 to 5, stars at 6 and 7, and no difference by section 8, i.e. the effect lasts about 2 hours and is gone by hour 4; panel D, broad drop of power with the peak near 3 Hz reduced from about 95 to about 58 microvolt squared; panel E, control (triangles, N = 17) shows social novelty before and after ETX and digenic (circles, N = 16) does not, with stars on the group difference both times; panel F, distance travelled not different between groups, before or after.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2C: sections 1-2 baseline, stars *** at sections 3-5, ** at 6-7, n.s. at 8; Figure 2D: before-ETX peak about 95, after about 58; Figure 2E: star on social-novelty group difference before and after.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42536722_r2/PMC13426438_p04_200dpi.png",
+    "anchor": "Figure 2 panels B to F; page 4 render at 200 dpi",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3 read as an image: Cacna1g-null cells lose the rebound spikes (about 5 in digenic cells, 0 in triple mutants) and the T-type current (digenic peak about 1.4 nA at -45 mV, flat at 0 in triple); EEG of the triple mutant shows no SWD; the social-novelty plot for the triple mutant versus its control carries a star (P = 0.042) while the Cacna1g-only knockout is not different from its control.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3C: bar about 5 versus 0 rebound spikes; Figure 3E: IT amplitude curve rising to about 1.4 nA versus flat at 0; Figure 3J: social-novelty bracket with a star for TriG versus Ctrl.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42536722_r2/PMC13426438_p05_200dpi.png",
+    "anchor": "Figure 3 panels C, E, I, J; page 5 render at 200 dpi",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Genetic background of the comparison: the controls named in the paper are wild type, the two single heterozygous lines and (for the triple mutant) a Cacna1g-only knockout, giving a genuine genotype ladder on the EEG endpoint; but a drug-by-genotype contrast on the EEG endpoint requires drug in more than one rung, and only the digenic rung was dosed.",
+    "snippet": "Phenotypic characterization compared DiGstg+Ca1A mice, Cacng2+/stg mice, Cacna1a+/− mice, and wildtype controls using video-EEG for spontaneous SWDs and power spectrum analysis.",
+    "surface": "body",
+    "anchor": "Materials and Methods, Characterization of digenic compound haploinsufficiency",
+    "artifact": "files/fulltext/PMID42536722_Miao2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}

@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-21T12:00:00Z",
+ "event_at": "2026-10-21T12:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_read"
+ },
+ "event_id": "FTR-20261021-37082241-01",
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "Figure 6 and Figure 8 (and Figure 5) opened as page renders at 170 dpi; Figures 1-4 and 7 read as captions only (structure, potency curves, docking, 6 Hz bar chart); supplementary files (Table S1 mass transitions, Figures S1 and S2) not opened. Depth therefore partial; none of the unread sections bears on the genotype question."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID37082241.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-b_20261021.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "0450aadf2e01ba5c120653b14600fc4be0069f660dca69025ba65593f7b68da9",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID37082241_Harman2023_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.3389/fphys.2023.1086243",
+  "pmid": "37082241"
+ },
+ "workflow": "scientist-b repurposing batch R2 2026-10-21; QUESTION_DRIVEN (the reader held DL-MECH-170 and CLAIM 016 before opening the paper); NOT WWOX EVIDENCE; PMC efetch XML acquired with no User-Agent through pmc_bucket_fetch.py; prepared as JSON for the integrator and staged, not appended."
+}

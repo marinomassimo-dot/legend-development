@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-21T23:02:00Z",
+ "event_at": "2026-10-21T23:02:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "not_present",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_id": "FTR-20261021-34268881-08",
+ "evidence_basis": [
+  "Targeted re-read for one new question (does a WWOX-deficient dataset in the repository list a T-type gene?): the RNA-seq Results paragraph, the RNA-seq methods paragraph, and Tables EV1 and EV2 (flattened to a derived text artifact and searched for Cacna1 family symbols). Section-level coverage is stated conservatively: only Results is marked read; the supplementary value is not_read because the workbooks were searched by symbol, not read through.",
+  "Four locators appended to the manifest (entries 39 to 42); no earlier locator contradicted."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-b_20261021.md"
+ ],
+ "prior_receipt": "FTR-20261004-34268881-07",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "de340289bc6704c9b9ec752f81afed64a02211a83d95d675a1d46f40be6304f6",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml and files/fulltext/PMID34268881_assets/Table_EV1_EV2_derived.txt (derived from the declared Tables EV1 and EV2 workbooks)",
+ "study_id": {
+  "doi": "10.15252/emmm.202013610",
+  "pmid": "34268881"
+ },
+ "workflow": "scientist-b repurposing batch R2 2026-10-21; QUESTION_DRIVEN; WWOX-DIRECT primary re-read for a new question; prepared as JSON for the integrator and staged, not appended."
+}

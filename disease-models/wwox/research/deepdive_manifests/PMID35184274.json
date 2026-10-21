@@ -1,0 +1,264 @@
+{
+ "schema_version": 2,
+ "pmid": "35184274",
+ "doi": "10.1111/epi.17201",
+ "receipt": "FTR-20261021-35184274-01",
+ "landing": [
+  "FTR-20261021-35184274-01",
+  "repurposing_10h_scientist-b_20261021"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 45,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-21: 'Verleye M[au]' 45; with (WWOX OR Wwox) 0. Initials-level string, may pool homonyms.",
+  "research_type": "experimental_lab",
+  "weighting": "Industry laboratory: four of five authors are full-time employees of the marketing-authorisation holder of stiripentol (Conflict of interest statement). Measurements are in-house; the framing of a new mechanism for the company's drug is the authors' interest.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID35184274_Riban2022_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement about WWOX content of this surface."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 53,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-35184274-01",
+    "target": "Reference 9 (alpha2/3/5 GABA-A agonists have antiabsence properties in a genetic model)",
+    "question": "Can a GABA-A alpha3 mechanism alone reproduce the stiripentol effect, i.e. is the T-type component dispensable?",
+    "status": "open - cited, not read"
+   },
+   {
+    "id": "MH-35184274-02",
+    "target": "Reference 48 (ethosuximide and mibefradil attenuate SWDs and thalamocortical burst firing in WAG/Rij)",
+    "question": "What ethosuximide exposure and thalamic recording supports burst-firing attenuation in WAG/Rij?",
+    "status": "open - cited, not read"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 35184274, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "paper_packet.py packet at claim time: none prior; claimed by scientist-b."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-21",
+  "route": "PubMed esummary (JSON) for 35184274 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "pubtype [\"Journal Article\"]; no retraction, expression of concern or erratum is visible on the esummary record (the esummary JSON carries no CommentsCorrections list for this PMID, so that absence is a statement about this query).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 53,
+   "references_screened": 48,
+   "references_with_doi": 48,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 5
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID35184274_Riban2022_PMC_r2.xml",
+   "sha256": "3d7fedcaa512a8d88c839dd53379c9bde0efa58c3d703f715315cb60706b6949",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=9314114&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "3d7fedcaa512a8d88c839dd53379c9bde0efa58c3d703f715315cb60706b6949"
+   }
+  },
+  {
+   "path": "files/supplement/PMID35184274_r2/PMC9314114.1.pdf",
+   "sha256": "8b5854ef36851c9d1eff254c5df6a74fcb1145ff0d99f1e1ac8be099d0e2468c",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC9314114",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "8b5854ef36851c9d1eff254c5df6a74fcb1145ff0d99f1e1ac8be099d0e2468c"
+   }
+  },
+  {
+   "path": "files/figures/PMID35184274_r2/PMC9314114_p05_170dpi.png",
+   "sha256": "1336f7d7ede414330fd7d5e3f86869dfabf75e05db9d456b238f01b008a4f065",
+   "kind": "figure",
+   "note": "Page 5 of the PMC PDF rendered at 170 dpi (page render; rank.py flagged figure pages 5 to 7 probably-vector, page 8 carries a 482 ppi raster read here as a lower-resolution page render).",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "1336f7d7ede414330fd7d5e3f86869dfabf75e05db9d456b238f01b008a4f065",
+    "derived_from": "files/supplement/PMID35184274_r2/PMC9314114.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=170) on page 5",
+     "join": ""
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID35184274_r2/PMC9314114_p07_170dpi.png",
+   "sha256": "9ca16c025a9572135fc7171073215e74db1c5efddc469f655325bed8b7f82878",
+   "kind": "figure",
+   "note": "Page 7 of the PMC PDF rendered at 170 dpi (page render; rank.py flagged figure pages 5 to 7 probably-vector, page 8 carries a 482 ppi raster read here as a lower-resolution page render).",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "9ca16c025a9572135fc7171073215e74db1c5efddc469f655325bed8b7f82878",
+    "derived_from": "files/supplement/PMID35184274_r2/PMC9314114.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=170) on page 7",
+     "join": ""
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID35184274_r2/PMC9314114_p08_120dpi.png",
+   "sha256": "b442522adfacebe333fdef333430676032d4e0e2878a4e6a090dec0497e07019",
+   "kind": "figure",
+   "note": "Page 8 of the PMC PDF rendered at 120 dpi (page render; rank.py flagged figure pages 5 to 7 probably-vector, page 8 carries a 482 ppi raster read here as a lower-resolution page render).",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "b442522adfacebe333fdef333430676032d4e0e2878a4e6a090dec0497e07019",
+    "derived_from": "files/supplement/PMID35184274_r2/PMC9314114.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=120) on page 8",
+     "join": ""
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figures opened as images; every text snippet below was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet below sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "Model scope: the low-dose pentylenetetrazol arm uses non-epileptic rats with no baseline spike-wave discharges, in which a provoked electrographic spike-wave response is generated and measured, a pharmacological model without a genotype; the second is a genetic absence strain (WAG/Rij). No genotype comparison with a drug exists in the paper.",
+    "snippet": "No spontaneous SWDs were recorded in these series of animals, and all the rats were included for further experiments.",
+    "surface": "body",
+    "anchor": "Results, STP inhibits SWDs in the low-dose PTZ model",
+    "artifact": "files/fulltext/PMID35184274_Riban2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A low-dose PTZ spike-wave response in non-epileptic (wild-type) rats is suppressed by a drug that the paper reports also inhibits T-type channels, i.e. a PTZ-provoked response in animals without the mutation can be pharmacologically suppressed, and the response itself is sustained for about 40 min and then declines rapidly.",
+    "snippet": "STP administered before PTZ (20 mg/kg ip) almost completely abolished the generation of SWD at the maximal dose of 300 mg/kg (Figure 1B,C).",
+    "surface": "body",
+    "anchor": "Results, STP inhibits SWDs in the low-dose PTZ model (the numeric doses are the paper's rat protocol and are not carried into any recommendation)",
+    "artifact": "files/fulltext/PMID35184274_Riban2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The compound blocks the three human T-type isoforms with IC50 values of about 37 to 69 micromolar (Cav3.3 most), and the blocking was defined from three cells per concentration. The authors argue the concentrations are in the range reported in plasma at therapeutic exposure; they did not measure brain concentrations, receptor occupancy or region selectivity.",
+    "snippet": "The IC50 values were determined to be 69.16 μmol·L–1 for CaV3.1 (Hill coefficient = 1.71), 64.35 μmol·L–1 for CaV3.2 (Hill coefficient = 1.68), and 36.6 μmol·L–1 for Cav 3.3 (Hill coefficient = 1.19).",
+    "surface": "body",
+    "anchor": "Results, STP inhibits voltage-dependent calcium channels in vitro",
+    "artifact": "files/fulltext/PMID35184274_Riban2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors cannot separate T-type block from GABA-A alpha3 modulation in vivo (local intracerebral injection is not feasible for the compound) and conclude only that both could be involved. The T-type mechanism is therefore a correlation of in-vitro IC50 with in-vivo efficacy, not a demonstration.",
+    "snippet": "Therefore, the respective involvement of GABAergic alpha3 subunit‐containing receptors and of low‐threshold calcium channel modulation is difficult to assess",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 9",
+    "artifact": "files/fulltext/PMID35184274_Riban2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Efficacy against SWDs aggravated by a delta-subunit GABA-A agonist: the compound reduced the aggravated SWD number from about 113 to about 6 and cumulated duration from about 470 s to about 18 s in 40 min (n = 10, paired), which the authors take as evidence the effect is not mediated by delta-subunit GABA-A receptors. Figure 3B read as an image: vehicle plus agonist box about 530 s median cumulated duration against about 10 s with the compound, star ***.",
+    "snippet": "STP administration 15 min before THIP completely blocked THIP effect on SWDs, and still displayed antiabsence properties",
+    "surface": "body",
+    "anchor": "Results, STP inhibits SWDs aggravated after administration of THIP in WAG/Rij rats",
+    "artifact": "files/fulltext/PMID35184274_Riban2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1B read as an image (page 5 render): cumulated duration in the vehicle arm falls from about 71 s in 0 to 20 min to about 20 s in 40 to 60 min even without drug, so the post-PTZ SWD burden decays by itself in about 40 minutes; the lower drug dose is about 22 s at 0 to 20 min and equal to vehicle at 40 to 60 min; the higher dose near 0 throughout; SEM bars on the vehicle series are about 25 s. The drug effect is therefore concentrated in the first 40 min where the vehicle response exists.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1B upper: veh about 71, 50, 20 s; STP(150) about 22, 25, 20 s; STP(300) about 0, 5, 4 s, stars at 0-20 and 20-40 min.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35184274_r2/PMC9314114_p05_170dpi.png",
+    "anchor": "Figure 1B; page 5 render at 170 dpi",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 4B read as an image (page 8 render): residual-current curves for Cav3.1, Cav3.2 and Cav3.3 versus stiripentol concentration fall from near 100 percent at 5 micromolar to below 10 percent at 300 micromolar; points carry small error bars from n = 3 cells; the fitted Hill curves pass through the points at 50 to 150 micromolar for Cav3.1 and Cav3.2, with a looser fit for Cav3.3 at the low end.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4B: three concentration-response panels; Cav3.1 residual about 65 percent at 50 micromolar and about 10 percent at 300; Cav3.3 about 80 percent at 5 to 15 and about 5 at 300.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35184274_r2/PMC9314114_p08_120dpi.png",
+    "anchor": "Figure 4 panels A and B; page 8 render at 120 dpi",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Industry authorship: four of five authors are full-time employees of the stiripentol marketing-authorisation holder, as stated in the paper's conflict-of-interest statement.",
+    "snippet": "V.R., I.H., L.R., and M.V. are full‐time employees at Biocodex.",
+    "surface": "body",
+    "anchor": "Conflict of interest statement",
+    "artifact": "files/fulltext/PMID35184274_Riban2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}

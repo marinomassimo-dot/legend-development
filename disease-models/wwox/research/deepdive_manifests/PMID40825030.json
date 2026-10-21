@@ -1,0 +1,186 @@
+{
+ "schema_version": 2,
+ "pmid": "40825030",
+ "doi": "10.1371/journal.pgen.1011828",
+ "receipt": "FTR-20261021-40825030-01",
+ "landing": [
+  "FTR-20261021-40825030-01",
+  "repurposing_10h_scientist-b_20261021"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 110,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-21: 'Flucher BE[au]' 110; with (WWOX OR Wwox) 0. Initials-level string, may pool homonyms.",
+  "research_type": "experimental_lab",
+  "weighting": "The same laboratory as the 2021 paper; four patients across three variants; HEK cell electrophysiology, a TRN neuron computer model and structure modelling.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID40825030_ElGhaleb2025_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement about WWOX content of this surface."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 62,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-40825030-01",
+    "target": "Reference 4 (Baez-Nieto 2022, CACNA1I rare variants in schizophrenia)",
+    "question": "Do partial loss-of-function CACNA1I variants in a psychiatric cohort show a seizure-free profile consistent with A398V?",
+    "status": "open - cited, not read"
+   },
+   {
+    "id": "MH-40825030-02",
+    "target": "PMID 33704440 (the companion, read as section 16)",
+    "question": "Does gain of function at the same residues predict seizure in the two papers?",
+    "status": "read - see section 16"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 40825030, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "paper_packet.py packet at claim time: none prior; claimed by scientist-b."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-21",
+  "route": "PubMed esummary (JSON) for 40825030 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "pubtype [\"Journal Article\"]; no retraction, expression of concern or erratum is visible on the esummary record (the esummary JSON carries no CommentsCorrections list for this PMID, so that absence is a statement about this query).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 62,
+   "references_screened": 56,
+   "references_with_doi": 56,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 6
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40825030_ElGhaleb2025_PMC_r2.xml",
+   "sha256": "2feb094be950aec1d186378c8f334b9e50d916a78aaaa9dd76a30fd729eed9b1",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=12396757&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "2feb094be950aec1d186378c8f334b9e50d916a78aaaa9dd76a30fd729eed9b1"
+   }
+  },
+  {
+   "path": "files/supplement/PMID40825030_r2/PMC12396757.1.pdf",
+   "sha256": "41abf2424b6f9250f8810805440fe7274b047e25e8703d985eb48db047162761",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC12396757",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "41abf2424b6f9250f8810805440fe7274b047e25e8703d985eb48db047162761"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figures opened as images; every text snippet below was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet below sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "Direction determines the phenotype. Two substitutions at one residue, A398E and A398V, have opposite effects on channel function and on seizures: the gain-of-function A398E patient developed generalised tonic-clonic seizures controlled on medication, while two unrelated A398V patients (partial loss of function) had developmental delay and microcephaly with no seizures.",
+    "snippet": "Seizures were also absent in the two unrelated patients with the A398V variant, correlating with the lack of hyperexcitability in the A398V NEURON model.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 3",
+    "artifact": "files/fulltext/PMID40825030_ElGhaleb2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors' reading of seizure risk from this and the earlier paper: substantial gain of Cav3.3 function leads to seizures, whereas both gain and loss of function can cause neurodevelopmental disease. This is a correlation across few patients; one gain-of-function patient (M1425V) had staring spells and no seizures.",
+    "snippet": "The hyperexcitability of TRN neurons expressing the gain-of-function variants correlates with the seizure phenotype in the patients with the M1425I and A398E variants.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 3",
+    "artifact": "files/fulltext/PMID40825030_ElGhaleb2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Generalisation by the authors: loss-of-function variants in voltage-gated calcium channels are linked to less severe developmental disorders with epilepsy a less frequent comorbidity than for gain-of-function variants. A T-type blocker would therefore be a mechanism-matched intervention for gain-of-function carriers and a mismatched or possibly harmful one for loss-of-function carriers: the genotype decides, and the paper shows no drug data of any kind.",
+    "snippet": "Generally, loss-of-function variants in voltage-gated calcium channels are linked to less severe cases of ID/DD, and epilepsy is less often a comorbidity compared to gain-of-function variants linked to ID/DD.",
+    "surface": "body",
+    "anchor": "Discussion, final paragraph",
+    "artifact": "files/fulltext/PMID40825030_ElGhaleb2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Patient 4 (M1425V) had moderate intellectual disability, attention deficit and later psychosis with life-long staring spells but no seizures, a gain-of-function carrier without epilepsy, with behavioural and sleep abnormalities; the authors note the milder phenotype compared with M1425I correlates with milder gating effects.",
+    "snippet": "The 25-year-old male patient 4 with the p.(Met1425Val) variant had microcephaly, moderate ID, attention deficit hyperactivity disorder, rigidity, and hyperacusis.",
+    "surface": "body",
+    "anchor": "Results, Four unrelated patients with a neurodevelopmental disorder",
+    "artifact": "files/fulltext/PMID40825030_ElGhaleb2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Limits stated by the authors: the TRN neuron result is a computer simulation (heterozygous state mimicked as a 1:1 mix of channels) and the patients' mechanism of disease (calcium toxicity versus altered firing) is not resolved; further animal-model research is needed to say which pathways underlie the diverse phenotypes.",
+    "snippet": "Further research in animal models will have to elucidate which pathways, underlying the diverse neurodevelopmental phenotype, are affected by reduced versus increased CaV3.3 activity.",
+    "surface": "body",
+    "anchor": "Discussion, final paragraph",
+    "artifact": "files/fulltext/PMID40825030_ElGhaleb2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}

@@ -1,0 +1,295 @@
+{
+ "schema_version": 2,
+ "pmid": "40834072",
+ "doi": "10.1126/sciadv.adw4682",
+ "receipt": "FTR-20261021-40834072-01",
+ "landing": [
+  "FTR-20261021-40834072-01",
+  "repurposing_10h_scientist-b_20261021"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 200,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-21: 'Huguenard JR[au]' 200; with (WWOX OR Wwox) 0. Initials-level string, may pool homonyms.",
+  "research_type": "experimental_lab",
+  "weighting": "A leading thalamocortical-circuit laboratory (the same senior author as the burst-firing controversy review) with a Korean behavioural-genetics co-lead; experiments use slice electrophysiology, photometry and behaviour in a Cntnap2 null.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID40834072_Jang2025_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement about WWOX content of this surface."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 105,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-40834072-01",
+    "target": "Reference 49: reticular thalamus burst firing in a Dravet-syndrome mouse (Scn1a)",
+    "question": "Is a T-type blocker's effect in the Dravet-type mouse genotype-dependent on the same two-factor design?",
+    "status": "open - cited, not read"
+   },
+   {
+    "id": "MH-40834072-02",
+    "target": "Reference 18: SHANK3 knockout thalamocortical hyperactivity and early lamotrigine rescue",
+    "question": "Does early treatment persist beyond acute effect, which would bear on window and modification questions?",
+    "status": "open - cited, not read"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 40834072, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "paper_packet.py packet at claim time: none prior; claimed by scientist-b."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-21",
+  "route": "PubMed esummary (JSON) for 40834072 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "pubtype [\"Journal Article\", \"Research Support, N.I.H., Extramural\", \"Research Support, Non-U.S. Gov't\"]; no retraction, expression of concern or erratum is visible on the esummary record (the esummary JSON carries no CommentsCorrections list for this PMID, so that absence is a statement about this query).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 105,
+   "references_screened": 104,
+   "references_with_doi": 104,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40834072_Jang2025_PMC_r2.xml",
+   "sha256": "bcaddfdb89a9c61711dbe388a557fb97232b36f16e7306cf53b4354dc0ecf651",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=12366697&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "bcaddfdb89a9c61711dbe388a557fb97232b36f16e7306cf53b4354dc0ecf651"
+   }
+  },
+  {
+   "path": "files/supplement/PMID40834072_r2/PMC12366697.1.pdf",
+   "sha256": "b3f2c04757059c6478e54d0d378942bce76c640d6832e921a26fc0eada12c2c8",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC12366697",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "b3f2c04757059c6478e54d0d378942bce76c640d6832e921a26fc0eada12c2c8"
+   }
+  },
+  {
+   "path": "files/supplement/PMID40834072_r2/sciadv.adw4682_sm.pdf",
+   "sha256": "81d2dcc11580f0d5ce50709e6f6260c44e9ba5bcd6253fef9c1b479474f22254",
+   "kind": "supplement_binary",
+   "note": "Supplementary figures and captions S1 to S8 (PDF); only Figure S6 was opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC12366697",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "81d2dcc11580f0d5ce50709e6f6260c44e9ba5bcd6253fef9c1b479474f22254"
+   }
+  },
+  {
+   "path": "files/figures/PMID40834072_r2/PMC12366697_p09_embedded.png",
+   "sha256": "9e0f5ebe39ff150a908e2f93bfeed4b846de1cda0b6fd395150b0ce2c57530cc",
+   "kind": "figure",
+   "note": "Figure 6 as the embedded raster of PDF page 9 (rank.py reported no vector flag).",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "9e0f5ebe39ff150a908e2f93bfeed4b846de1cda0b6fd395150b0ce2c57530cc",
+    "derived_from": "files/supplement/PMID40834072_r2/PMC12366697.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF Pixmap",
+     "version": "1.28.2",
+     "call": "largest embedded image of PDF page 9 saved as PNG (1860x2061)",
+     "join": ""
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID40834072_r2/PMC12366697_p05_embedded.png",
+   "sha256": "55642e9bc8d180ad66f17ed74fb7621b67f39892f513dd2522dc2da2b863e150",
+   "kind": "figure",
+   "note": "Figure 3 as the embedded raster of PDF page 5.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "55642e9bc8d180ad66f17ed74fb7621b67f39892f513dd2522dc2da2b863e150",
+    "derived_from": "files/supplement/PMID40834072_r2/PMC12366697.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF Pixmap",
+     "version": "1.28.2",
+     "call": "largest embedded image of PDF page 5 saved as PNG (2239x2130)",
+     "join": ""
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID40834072_r2/sm_p07_embedded.png",
+   "sha256": "23f27e9673fd38605d79933fc8b0c173ef8083668db5d49edf6fbd754b041601",
+   "kind": "figure",
+   "note": "Supplementary Figure S6 (Z944 on RT activity, latency to spike-wave discharge, rheobase) as the embedded raster of the supplement PDF page 7.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "23f27e9673fd38605d79933fc8b0c173ef8083668db5d49edf6fbd754b041601",
+    "derived_from": "files/supplement/PMID40834072_r2/sciadv.adw4682_sm.pdf",
+    "extractor": {
+     "name": "PyMuPDF Pixmap",
+     "version": "1.28.2",
+     "call": "largest embedded image of supplementary PDF page 7 saved as PNG (1073x559)",
+     "join": ""
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figures opened as images; every text snippet below was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet below sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "Design: a genotype-by-drug 2 x 2 in which each animal received either vehicle or the T-type blocker (separate cohorts per condition, alternated), analysed by two-way ANOVA with Tukey's post hoc comparisons. This is the design the lead's falsifier asks for in form, but the paper reports pairwise brackets and no interaction term.",
+    "snippet": "Each animal received either vehicle or Z944, not both, and treatment conditions were alternated across independent cohorts (Fig. 6A).",
+    "surface": "body",
+    "anchor": "Results, Acute systemic inhibition of the T-type calcium channel restores behavioral deficits in Cntnap2-/- mice",
+    "artifact": "files/fulltext/PMID40834072_Jang2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Genotype contrast on one behavioural endpoint: in the open field the T-type blocker lowered knockout hyperlocomotion with no effect in wild type, as the authors state; panel B (page 9 embedded raster) shows knockout vehicle about 5,900 cm over 20 min against wild-type about 3,800, and about 4,200 for both blocker groups, with the wild-type blocker group looking higher in the first 5-minute bin (about 1,350 versus about 1,000 cm) than wild-type vehicle. So the text's 'no effect in wild type' holds on the total but the time course shows an early wild-type increase.",
+    "snippet": "Z944 reduced hyperlocomotor activity in Cntnap2−/− mice, with no effect in Cntnap2+/+ mice (Fig. 6B).",
+    "surface": "body",
+    "anchor": "Results, Acute systemic inhibition of the T-type calcium channel",
+    "artifact": "files/fulltext/PMID40834072_Jang2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A wild-type effect in the opposite direction is reported on one endpoint: the blocker restored reciprocal interaction time in knockout animals but also decreased it in wild-type animals. Read as an image, Figure 6G has wild-type vehicle about 118 s, wild-type blocker about 88 s with a star, knockout vehicle about 60 s, knockout blocker about 95 s.",
+    "snippet": "In the reciprocal interaction test, Z944 rescued social interaction time in Cntnap2−/− mice (Fig. 6G), although it unexpectedly decreased the interaction time in Cntnap2+/+ mice as well.",
+    "surface": "body",
+    "anchor": "Results, Acute systemic inhibition of the T-type calcium channel",
+    "artifact": "files/fulltext/PMID40834072_Jang2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 6 read as an image (page 9 embedded raster, 1860x2061): panel C social index vehicle wild type about 0.38, vehicle knockout about -0.05, blocker wild type about 0.35 with a wide spread including values near -0.3, blocker knockout about 0.43; panel D grooming time knockout vehicle about 82 s down to about 40 s on blocker, wild type about 40 s and about 55 s; panel E grooming events and panel F digging not different. Group sizes about 9 to 13 per cell.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6C social index bars about 0.38, -0.05, 0.35, 0.43; Figure 6D grooming time bars about 40, 82, 55, 40 s; Figure 6G interaction bars about 118, 60, 88, 95 s with stars.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40834072_r2/PMC12366697_p09_embedded.png",
+    "anchor": "Figure 6 panels B to G; page 9 embedded raster",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The blocker acted on a pentylenetetrazole-provoked endpoint in both genotypes in this paper: it increased latency to spike-wave discharge in wild-type and knockout animals, within animal (authors, Results). Read as an image on supplementary Figure S6B, paired baseline-to-drug lines for wild-type (grey) and knockout (orange) mice all rise, from about 50 to 150 s at baseline to about 120 to 600 s after the drug, with stars for the pooled comparison. A T-type blocker lengthens the latency of a provoked electrographic response in wild-type animals as in the mutant.",
+    "snippet": "significantly reduced the number of events without affecting the average event amplitude and FWHM (fig. S6A) and increased latency to SWDs (fig. S6B) in both genotypes.",
+    "surface": "body",
+    "anchor": "Results, Acute systemic inhibition of the T-type calcium channel (the sentence's opening dose clause is deliberately not quoted)",
+    "artifact": "files/fulltext/PMID40834072_Jang2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Figure S6 image: panel A shows reticular-nucleus photometry event counts falling in both genotypes after the blocker (stars), panel B latency to spike-wave rising in both genotypes, panel C slice rheobase rising in both genotypes (wild type about 38 to about 73 pA, knockout about 22 to about 50 pA), panel D action potential counts falling.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S6B: grey (WT) and orange (KO) paired lines rising to between about 120 and 600 s; Figure S6C: rheobase pairs rising with ** for both genotypes.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40834072_r2/sm_p07_embedded.png",
+    "anchor": "Supplementary Figure S6 panels A to D; supplement PDF page 7 embedded raster 1073x559",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mutant physiology (the reason a blocker would act on the knockout): reticular-nucleus neurons from the knockout show higher burst firing, more rebound bursts and a larger low-threshold inward current density (about 1.5-fold to 2-fold at the more hyperpolarised holding potentials), read from Figure 3H as an image: at -105 mV about 2.9 pA/pF against about 1.5. The authors state the limit that somatic voltage clamp cannot isolate T currents from distal dendritic bursting and potassium-channel masking.",
+    "snippet": "Note however that small-conductance calcium-activated potassium channels in RT neurons can be activated by T-type currents in dendrites, resulting in a partial masking of the actual inward Ca2+current (49, 77, 87, 102).",
+    "surface": "body",
+    "anchor": "Discussion, Limitations of the study",
+    "artifact": "files/fulltext/PMID40834072_Jang2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No spontaneous seizures were seen in the knockout; its seizure phenotype is only a lowered threshold to a low-dose convulsant. A drug acting on that endpoint is acting on provoked susceptibility, the same axis as the Wwox PTZ assay and not on spontaneous seizures.",
+    "snippet": "yet we found no evidence of spontaneous seizures of any type, including absence seizures.",
+    "surface": "body",
+    "anchor": "Discussion, Comorbidities in ASD and Cntnap2 mice as an animal model",
+    "artifact": "files/fulltext/PMID40834072_Jang2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors compare their blocker to ethosuximide as less selective with broader pharmacology, and say they did not test whether the blocker reduces slice oscillations in the knockout, so the circuit mechanism of the behavioural rescue is inferred.",
+    "snippet": "Although we did not check whether Z944 affects intrathalamic oscillations in Cntnap2−/− mice, we would expect it to reduce them",
+    "surface": "body",
+    "anchor": "Discussion, Pharmacological and neuromodulatory strategies for RT dysfunction in ASD",
+    "artifact": "files/fulltext/PMID40834072_Jang2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state their pharmacology does not by itself establish that T-type channels in the reticular nucleus are the cause of the behaviours; the inhibitory chemogenetic result is the supporting causal evidence.",
+    "snippet": "While the pharmacological approach with Z944 did not directly establish a causal role of T-type calcium channels in RT per se, in ASD behaviors",
+    "surface": "body",
+    "anchor": "Discussion, Pharmacological and neuromodulatory strategies, paragraph 2",
+    "artifact": "files/fulltext/PMID40834072_Jang2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}

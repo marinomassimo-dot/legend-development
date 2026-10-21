@@ -1,0 +1,217 @@
+{
+ "schema_version": 2,
+ "pmid": "36282524",
+ "doi": "10.1093/hmg/ddac263",
+ "receipt": "FTR-20261021-36282524-01",
+ "landing": [
+  "FTR-20261021-36282524-01",
+  "repurposing_10h_scientist-b_20261021"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 47,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-21: 'Barclay JW[au]' 47; with (WWOX OR Wwox) 0. Initials-level string, may pool homonyms.",
+  "research_type": "experimental_lab",
+  "weighting": "A C. elegans neurobiology laboratory (small group by publication count) building CRISPR knock-in models of a rare neurodegeneration; the drug screen is a four-compound pilot.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID36282524_Barker2023_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement about WWOX content of this surface."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 48,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-36282524-01",
+    "target": "References 26 and 27 (ethosuximide rescues dnj-14 null worms via DAF-16/FOXO)",
+    "question": "Did the earlier work include a wild-type plus ethosuximide arm and a FOXO-pathway readout?",
+    "status": "open - cited, not read"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 36282524, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "paper_packet.py packet at claim time: none prior; claimed by scientist-b."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-21",
+  "route": "PubMed esummary (JSON) for 36282524 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "pubtype [\"Journal Article\", \"Research Support, Non-U.S. Gov't\"]; no retraction, expression of concern or erratum is visible on the esummary record (the esummary JSON carries no CommentsCorrections list for this PMID, so that absence is a statement about this query).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 48,
+   "references_screened": 44,
+   "references_with_doi": 44,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID36282524_Barker2023_PMC_r2.xml",
+   "sha256": "ff53be5b6a98d2cb8ba1f4abab6b72b28b18d37dea3b2ee44ff74ec1c5249c67",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=10196665&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "ff53be5b6a98d2cb8ba1f4abab6b72b28b18d37dea3b2ee44ff74ec1c5249c67"
+   }
+  },
+  {
+   "path": "files/supplement/PMID36282524_r2/PMC10196665.1.pdf",
+   "sha256": "f790eaf2ac14996c806af9f33af38e36ab2990b0346617c991e6b7396f797fec",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC10196665",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "f790eaf2ac14996c806af9f33af38e36ab2990b0346617c991e6b7396f797fec"
+   }
+  },
+  {
+   "path": "files/figures/PMID36282524_r2/ddac263f5.jpg",
+   "sha256": "55daa65a9eebab850fb354867e45df575a8465dd2e772b40be36ba2894f3a933",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC10196665",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "55daa65a9eebab850fb354867e45df575a8465dd2e772b40be36ba2894f3a933"
+   }
+  },
+  {
+   "path": "files/supplement/PMID36282524_r2/supplementary_data_ddac263.pdf",
+   "sha256": "475846ff0b0e4bb925a77f8506cff87ceebb78625d73b035e5d7333942b59d07",
+   "kind": "supplement_binary",
+   "note": "Supplementary Table S1 (compound concentrations) and supplementary figures; not opened.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC10196665",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "475846ff0b0e4bb925a77f8506cff87ceebb78625d73b035e5d7333942b59d07"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figures opened as images; every text snippet below was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet below sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "In a four-compound pilot screen, ethosuximide was the only compound that restored the chemotaxis defect of the knock-in worms to wild-type level; rolipram and two iron chelators did not. The screen compared treated mutants with wild-type N2 controls that were not treated: this paper has no wild-type plus ethosuximide arm.",
+    "snippet": "The initial screen, carried out on dnj-14(L116Δ) ANCL mutants, revealed ethosuximide as the only compound able to rescue the chemotaxis defect to the levels of the wild-type N2 controls (Fig. 5A).",
+    "surface": "body",
+    "anchor": "Results, Screen for compounds that rescue ANCL dnj-14 mutants identifies ethosuximide",
+    "artifact": "files/fulltext/PMID36282524_Barker2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Ethosuximide also rescued heterozygous mutant worms (one wild-type and one mutant copy), the genotype that mimics the patients; the effect was against a vehicle control in the same genotype.",
+    "snippet": "Similarly, we found that both heterozygous ANCL mutant worms had significant improvement in chemotaxis when grown under the presence of ethosuximide, compared with that of the vehicle control, DMSO (Fig. 5C).",
+    "surface": "body",
+    "anchor": "Results, Screen for compounds that rescue ANCL dnj-14 mutants identifies ethosuximide",
+    "artifact": "files/fulltext/PMID36282524_Barker2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A statement that the cited earlier work found no significant effect of ethosuximide and rolipram on wild-type worms, which would make the rescue genotype-restricted in worms; this paper does not itself show that arm, and the reference is cited, not read here.",
+    "snippet": "Ethosuximide and rolipram were selected as they have previously been reported to rescue the lifespan and chemotaxis phenotype of other dnj-14 mutant alleles but had no significant effect on wild-type worms (26,27).",
+    "surface": "body",
+    "anchor": "Results, Screen for compounds that rescue ANCL dnj-14 mutants identifies ethosuximide",
+    "artifact": "files/fulltext/PMID36282524_Barker2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mechanism: the rescue also happens in null worms that have no protein, so it is not a correction of the mutant protein; the authors think it acts through a distinct pathway downstream of the transcription factor DAF-16/FOXO acting in parallel to the protein's neuroprotective function, based on previous findings, and say the precise mechanism is unknown. No T-type channel is invoked and none was tested.",
+    "snippet": "Hence, it seems most probable that the rescuing effect of the drug comes from the activation of a distinct pathway(s) that acts in parallel to CSP’s neuroprotective mechanism(s).",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 8",
+    "artifact": "files/fulltext/PMID36282524_Barker2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Authors' caveats: the lack of an effect of iron chelators and rolipram should not be read as evidence against them (one concentration, cuticle penetration, dominant-negative versus null mechanism); and the palmitoylation or aggregation state of the worm protein could not be tested.",
+    "snippet": "However, it is important to stress that the lack of effect seen in this study should not be interpreted as evidence against the proposed therapeutic use of iron chelators for ANCL patients.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 8",
+    "artifact": "files/fulltext/PMID36282524_Barker2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 5 read as an image (the bucket jpg): panels A and B show cumulative percentage of worms on the food spot over 120 min; the ethosuximide curve for both homozygous knock-ins climbs to about 95 percent, close to the wild-type N2 curve and well above the vehicle curves (about 62 and 75 percent at 120 min); rolipram and the iron chelators sit with or below the vehicle curves. Panel C: heterozygous worms with vehicle reach about 65 and 45 percent and with ethosuximide about 95 and 90 percent. There is no wild-type N2 plus ethosuximide curve in any panel.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5A and 5B: N2 black curve about 93 to 99 percent at 120 min; ethosuximide curves about 95 to 98; DMSO curves about 62 to 75; Figure 5C: ethosuximide dashed curves about 90 to 95 versus DMSO solid curves about 44 to 65.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36282524_r2/ddac263f5.jpg",
+    "anchor": "Figure 5 panels A to C; bucket jpg 774 px wide as delivered",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}

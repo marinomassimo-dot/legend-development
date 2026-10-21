@@ -1,0 +1,254 @@
+{
+ "schema_version": 2,
+ "pmid": "40827489",
+ "doi": "10.1111/epi.18606",
+ "receipt": "FTR-20261021-40827489-01",
+ "landing": [
+  "FTR-20261021-40827489-01",
+  "repurposing_10h_scientist-b_20261021"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 23,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-21: 'Gonzalez-Sulser A[au]' 23; with (WWOX OR Wwox) 0. Initials-level string, may pool homonyms.",
+  "research_type": "experimental_lab",
+  "weighting": "A small laboratory (23 PubMed records on the senior-author string) reporting a new rat model; the model, drug experiments and statistics are from one group, with group sizes of 5 (wild type), 12 and 4 animals in the drug experiments.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID40827489_Hristova2025_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement about WWOX content of this surface."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 89,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-40827489-01",
+    "target": "Reference 38 and 39: reticular thalamic Cav3 block in GAERS",
+    "question": "Does reticular-nucleus infusion of a T-type blocker reduce SWD in GAERS with a non-T-type comparator control?",
+    "status": "open - cited, not read"
+   },
+   {
+    "id": "MH-40827489-02",
+    "target": "Reference 47: Grin2b Trp373 loss-of-function rat with reduced PTZ threshold",
+    "question": "Does that rat show a drug-by-genotype ethosuximide response on a provoked endpoint?",
+    "status": "open - cited, not read"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 40827489, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "paper_packet.py packet at claim time: none prior; claimed by scientist-b."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-21",
+  "route": "PubMed esummary (JSON) for 40827489 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "pubtype [\"Journal Article\"]; no retraction, expression of concern or erratum is visible on the esummary record (the esummary JSON carries no CommentsCorrections list for this PMID, so that absence is a statement about this query).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 89,
+   "references_screened": 85,
+   "references_with_doi": 85,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40827489_Hristova2025_PMC_r2.xml",
+   "sha256": "d5be37b8442d94f4d777298a6419e3fd634cd865955971cc446d630b45da51b7",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=12779324&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "d5be37b8442d94f4d777298a6419e3fd634cd865955971cc446d630b45da51b7"
+   }
+  },
+  {
+   "path": "files/supplement/PMID40827489_r2/PMC12779324.1.pdf",
+   "sha256": "148bc8027303b1337c7f00527d5635b0c718e9d40c24098df5bdfdd91ea3e50a",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC12779324",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "148bc8027303b1337c7f00527d5635b0c718e9d40c24098df5bdfdd91ea3e50a"
+   }
+  },
+  {
+   "path": "files/figures/PMID40827489_r2/PMC12779324_p13_200dpi.png",
+   "sha256": "4569643e590a398ed4fe2dad1c684c9c0a725f979cb656a9db6141888d6a57df",
+   "kind": "figure",
+   "note": "Page 13 of the PMC PDF rendered at 200 dpi; rank.py flagged the figure pages LIKELY_VECTOR_FIGURE with raster pairing ambiguous, so the page was rendered.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "4569643e590a398ed4fe2dad1c684c9c0a725f979cb656a9db6141888d6a57df",
+    "derived_from": "files/supplement/PMID40827489_r2/PMC12779324.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=200) on page 13",
+     "join": ""
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID40827489_r2/PMC12779324_p14_200dpi.png",
+   "sha256": "1056bb6a2e2c2808be6fb8771f1fb66faec194fd5f60607526911df6d02c7010",
+   "kind": "figure",
+   "note": "Page 14 of the PMC PDF rendered at 200 dpi; rank.py flagged the figure pages LIKELY_VECTOR_FIGURE with raster pairing ambiguous, so the page was rendered.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "1056bb6a2e2c2808be6fb8771f1fb66faec194fd5f60607526911df6d02c7010",
+    "derived_from": "files/supplement/PMID40827489_r2/PMC12779324.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=200) on page 14",
+     "join": ""
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figures opened as images; every text snippet below was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet below sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "A wild-type arm that exists and has its own baseline: wild-type Long-Evans littermates show some spike-wave discharges (a subset), at far lower totals than the heterozygotes (less than a minute per day against about 60 min), so drug effects can be measured in both genotypes on a non-zero baseline for event number.",
+    "snippet": "The Long–Evans rat strain is known to spontaneously exhibit SWDs, 42 , 43 which have been described as alpha mu rhythms related to attentiveness and tactile sensory processing.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 2",
+    "artifact": "files/fulltext/PMID40827489_Hristova2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Ethosuximide reduced SWD number in both genotypes; the statistics in the Figure 6 legend give treatment effect p = .0049, genotype p = .53 and treatment-by-genotype interaction p = .71 for number: no genotype dependence on this endpoint.",
+    "snippet": "Treatment with ethosuximide successfully blocked SWD events in both groups (linear mixed model, effect of treatment F = 6.48, df = 2, p = .0049; genotype F = .42, df = 1, p = .53; treatment × genotype F = .34, df = 2, p = .71;",
+    "surface": "body",
+    "anchor": "Figure 6 legend",
+    "artifact": "files/fulltext/PMID40827489_Hristova2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A genotype-restricted effect is reported on one endpoint and the authors' own explanation is a floor: average SWD duration fell with ethosuximide and with memantine in the heterozygotes but not in wild type (interaction p = .044), and the authors say this may stem from the significantly fewer and shorter seizures in wild type; they offer an alternative of distinct mechanisms between genotypes without testing it.",
+    "snippet": "The specific effect on Grin2b +/− rats, but not wild‐types, may stem from the significantly fewer and shorter seizures observed in Grin2b +/+ animals.",
+    "surface": "body",
+    "anchor": "Results, Pharmacological blockade of SWDs",
+    "artifact": "files/fulltext/PMID40827489_Hristova2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Total seizure duration fell with ethosuximide in both genotypes (treatment effect p = .0011, interaction p = .34); the duration interaction is therefore confined to average duration while number and total duration show none. The wild-type group size is 5 and the heterozygous 12.",
+    "snippet": "Total seizure duration was also significantly reduced following ethosuximide treatment in both Grin2b+/− and wild‐type rats",
+    "surface": "body",
+    "anchor": "Figure 6 legend",
+    "artifact": "files/fulltext/PMID40827489_Hristova2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 6 read as an image (page 13 render): panel B ethosuximide takes the number of SWDs to about 10 percent of baseline in wild type (saline about 78 percent) and about 3 percent in heterozygotes (saline about 117); panel C average duration: wild type saline about 80, ethosuximide about 57 (not different, with several wild-type animals at 0 and one at about 127), heterozygote saline about 108, ethosuximide about 26 with *** stars; panel D total duration wild type about 78 to about 10, heterozygote about 138 to about 2, each with stars. Individual animals are shown as joined points; wild type has five animals.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6B bars: WT saline about 78, memantine about 85, ethosuximide about 10; Het about 117, 95, 3; Figure 6C: WT about 80, 69, 57; Het about 108, 45, 26 with stars.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40827489_r2/PMC12779324_p13_200dpi.png",
+    "anchor": "Figure 6 panels B to D; page 13 render at 200 dpi",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Site of action: bilateral infusion of ethosuximide into the reticular thalamic nucleus reduced SWD number in the heterozygotes (n = 4), as did memantine, an NMDA-receptor channel blocker; neither reduced average duration. Memantine, which is not a T-type blocker, produced the same reduction, so reticular-nucleus efficacy of ethosuximide here does not by itself identify T-type block as the mechanism. Four animals, no wild-type infusion arm.",
+    "snippet": "Infusion of ethosuximide and memantine into the nRT of Grin2b +/− animals led to a significant decrease in the amount of SWDs compared to saline (Figure 7B,C).",
+    "surface": "body",
+    "anchor": "Results, Pharmacological blockade of SWDs, paragraph 3",
+    "artifact": "files/fulltext/PMID40827489_Hristova2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 7C read as an image (page 14 render): average number of SWDs about 120 percent of baseline with saline against about 12 (memantine) and about 24 (ethosuximide), duration bars not different, total duration reduced; n = 4 joined points per condition; cannula histology (Figure 7B) places the track in the rostral nRT. No off-target control site (for example an adjacent nucleus) is shown.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7C: number bars saline about 120, memantine about 12, ethosuximide about 24, stars **; duration bars about 107, 68, 71 not significant.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40827489_r2/PMC12779324_p14_200dpi.png",
+    "anchor": "Figure 7 panels B and C; page 14 render at 200 dpi",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Authors' limit: ethosuximide and memantine through the reticular nucleus shifted firing from burst to tonic mode is an inference ('likely'), not a measurement here; no firing data are shown. They also say once seizures start the sustaining dynamics are largely unaffected by either drug.",
+    "snippet": "Direct infusion of ethosuximide or memantine into the nRT acutely reduced SWD occurrence, likely by shifting thalamic firing output from burst to tonic mode via blockade of T‐type calcium channels and NMDARs.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 8",
+    "artifact": "files/fulltext/PMID40827489_Hristova2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Design: randomised, weighted order, a 24 h washout between treatments, time-matched post-injection windows 30 min after injection; baseline sessions precede each treatment. Within-animal across treatments and across genotypes, which is the design form the lead's falsifier asks for, with the weakness of small wild-type n.",
+    "snippet": "Treatment order was randomized and weighted across animals to minimize the risk of treatment carry‐over effects.",
+    "surface": "body",
+    "anchor": "Methods, Pharmacology experiments",
+    "artifact": "files/fulltext/PMID40827489_Hristova2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}

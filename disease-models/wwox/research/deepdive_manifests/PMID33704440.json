@@ -1,0 +1,195 @@
+{
+ "schema_version": 2,
+ "pmid": "33704440",
+ "doi": "10.1093/brain/awab101",
+ "receipt": "FTR-20261021-33704440-01",
+ "landing": [
+  "FTR-20261021-33704440-01",
+  "repurposing_10h_scientist-b_20261021"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 110,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-21: 'Flucher BE[au]' 110; with (WWOX OR Wwox) 0. Initials-level string, may pool homonyms.",
+  "research_type": "experimental_lab",
+  "weighting": "An Innsbruck calcium-channel laboratory with clinical-genetics collaborators; n = 6 patients across four variants, HEK cell electrophysiology, a computer model and mouse chromaffin cells; the same group wrote the companion paper (section 17).",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID33704440_ElGhaleb2021_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement about WWOX content of this surface."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 58,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-33704440-01",
+    "target": "Reference 11 (Chemin 2018) CACNA1G gain-of-function in cerebellar atrophy",
+    "question": "Is the ethosuximide-responsive seizure phenotype specific to the S6 gate gain-of-function variants?",
+    "status": "open - cited, not read (companion read as PMID 32878331 section 15)"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 33704440, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "paper_packet.py packet at claim time: none prior; claimed by scientist-b."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-21",
+  "route": "PubMed esummary (JSON) for 33704440 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "pubtype [\"Case Reports\", \"Journal Article\", \"Research Support, Non-U.S. Gov't\"]; no retraction, expression of concern or erratum is visible on the esummary record (the esummary JSON carries no CommentsCorrections list for this PMID, so that absence is a statement about this query).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 58,
+   "references_screened": 53,
+   "references_with_doi": 53,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 5
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID33704440_ElGhaleb2021_PMC_r2.xml",
+   "sha256": "0e85ac67397026878b675694e3dd2ed265a68715c3a309448b7ef9bb7d9fdb61",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=8422349&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "0e85ac67397026878b675694e3dd2ed265a68715c3a309448b7ef9bb7d9fdb61"
+   }
+  },
+  {
+   "path": "files/supplement/PMID33704440_r2/PMC8422349.1.pdf",
+   "sha256": "030e747f014b9a6e6627f0ad96059918c38d3d7167528ed74d7268c5048b4ea3",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC8422349",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "030e747f014b9a6e6627f0ad96059918c38d3d7167528ed74d7268c5048b4ea3"
+   }
+  },
+  {
+   "path": "files/supplement/PMID33704440_r2/awab101_Supplementary_Data.pdf",
+   "sha256": "fa4deb27b4d2bf20b1f38669fb54bd86cca4c5d24f4c5fb3b699fd1400ea18be",
+   "kind": "supplement_binary",
+   "note": "Supplementary Tables 1 and 2 and Supplementary Figure 1 (clinical and variant tables); not opened.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC8422349",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "fa4deb27b4d2bf20b1f38669fb54bd86cca4c5d24f4c5fb3b699fd1400ea18be"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figures opened as images; every text snippet below was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet below sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "The central finding: four heterozygous missense CACNA1I variants (three de novo or unproven) in six individuals with neurodevelopmental disease, with seizures in four, all behaving as gain of function in cell-line electrophysiology (hyperpolarising shifts of activation and inactivation, slowed kinetics, window current increased), the effect strongest in I860N and weakest in I860M, which tracks the milder clinical course in the family carrying I860M.",
+    "snippet": "All four disease-associated Cav3.3 variants show substantial gain-of-function effects on the gating properties.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 4",
+    "artifact": "files/fulltext/PMID33704440_ElGhaleb2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A single-patient treatment observation: one patient (case 1, de novo I860N) was treated with the non-selective T-type blocker ethosuximide, with improved seizure control, mostly fewer myoclonic seizures. It is reported in one Discussion sentence with no dose, endpoint, seizure counts, concurrent medication or time course; the Results state the same patient had daily myoclonic seizures and rare convulsive seizures that 'did not respond to treatment'. This is an uncontrolled anecdote in a mechanism-matched (T-type gain-of-function) channelopathy, not an effect size, and it is the only human ethosuximide-in-a-T-type-gain-of-function datum in R2.",
+    "snippet": "As a case in point, targeted treatment of Patient 1 with the non-selective T-type channel blocker ethosuximide resulted in improved control of seizures, in particular in a reduction of myoclonic seizures.",
+    "surface": "body",
+    "anchor": "Discussion, final paragraph",
+    "artifact": "files/fulltext/PMID33704440_ElGhaleb2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mechanism claim as the authors frame it: two parallel mechanisms, calcium toxicity from increased resting and action-potential-driven calcium entry in neurons expressing the variants from early development, and altered firing mode in thalamic neurons; the authors write it is uncertain how much developmental versus acute excitability changes contribute to network hyperexcitability and seizures, and they do not exclude a glial contribution.",
+    "snippet": "At present it remains uncertain to what extent deficiencies in early neuronal development and acutely altered excitability contribute to hyper-excitability on the network level and consequently to seizures.",
+    "surface": "body",
+    "anchor": "Discussion, penultimate paragraph",
+    "artifact": "files/fulltext/PMID33704440_ElGhaleb2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In a computer model of reticular-thalamic neurons, all four variants lowered the current needed to start firing and lengthened bursts beyond the stimulus, strongest for I860N. This is a simulation with parameters set from HEK-cell recordings, not recordings from neurons.",
+    "snippet": "Together, the data from the computer simulations of TRN neurons indicate that the altered gating properties of the Cav3.3 mutants cause a neuronal gain-of-function effect with severe hyper-excitability.",
+    "surface": "body",
+    "anchor": "Results, The mutant Cav3.3 channels increase neuronal firing in a model of thalamic neurons",
+    "artifact": "files/fulltext/PMID33704440_ElGhaleb2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Phenotype breadth: of six patients, seizures were described in four, controlled on medication in two (cases 5 and 6, onset at 2 weeks and 2 years), refractory in case 1, late-onset in case 2; severe developmental delay, hypotonia, cortical visual impairment and feeding difficulties dominate. The syndrome is a neurodevelopmental disorder with seizures as one feature.",
+    "snippet": "Seizures began at age 2 weeks in Patient 5 and at 2 years in Patient 6 and are controlled on medication.",
+    "surface": "body",
+    "anchor": "Results, Heterozygous missense variants in the CACNA1I gene cause a spectrum of neurological symptoms",
+    "artifact": "files/fulltext/PMID33704440_ElGhaleb2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}

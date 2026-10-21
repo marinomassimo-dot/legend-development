@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-21T12:00:00Z",
+ "event_at": "2026-10-21T12:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_read"
+ },
+ "event_id": "FTR-20261021-32878331-01",
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "Whole PMC XML body read; Figure 1 opened as an image; Figures 2 to 4 (kinetics, recovery, rate dependence) read as captions and tables; Supplementary Figure S1 not opened. Depth partial."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID32878331.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-b_20261021.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "62f9cfa0c340cf87e60466d3ee28af81fd35b5dc9744080b0d5edee3721143d1",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID32878331_Berecki2020_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.3390/ijms21176333",
+  "pmid": "32878331"
+ },
+ "workflow": "scientist-b repurposing batch R2 2026-10-21; QUESTION_DRIVEN (the reader held DL-MECH-170 and CLAIM 016 before opening the paper); NOT WWOX EVIDENCE; PMC efetch XML acquired with no User-Agent through pmc_bucket_fetch.py; prepared as JSON for the integrator and staged, not appended."
+}

@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-21T12:00:00Z",
+ "event_at": "2026-10-21T12:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_present"
+ },
+ "event_id": "FTR-20261021-40068874-01",
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "Whole PMC XML body read; Figure 2 opened as a 300 ppi image; Figures 1 and 3 to 8 read as captions with their statistics. Depth partial."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID40068874.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-b_20261021.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "854ef2de9aac351cf2af23b408ba0e1db4acacdd5d34b4af64901193ba784952",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID40068874_Sack2025_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1523/ENEURO.0423-24.2025",
+  "pmid": "40068874"
+ },
+ "workflow": "scientist-b repurposing batch R2 2026-10-21; QUESTION_DRIVEN (the reader held DL-MECH-170 and CLAIM 016 before opening the paper); NOT WWOX EVIDENCE; PMC efetch XML acquired with no User-Agent through pmc_bucket_fetch.py; prepared as JSON for the integrator and staged, not appended."
+}

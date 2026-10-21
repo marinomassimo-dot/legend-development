@@ -1,0 +1,215 @@
+{
+ "schema_version": 2,
+ "pmid": "32878331",
+ "doi": "10.3390/ijms21176333",
+ "receipt": "FTR-20261021-32878331-01",
+ "landing": [
+  "FTR-20261021-32878331-01",
+  "repurposing_10h_scientist-b_20261021"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 764,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-21: 'Petrou S[au]' 764; with (WWOX OR Wwox) 0. Initials-level string, may pool homonyms.",
+  "research_type": "experimental_lab",
+  "weighting": "A channelopathy laboratory (electrophysiology in HEK cells) with two clinical collaborators; n = 2 patients; variant classification and de novo status partly unproven (paternal DNA unavailable for one case).",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID32878331_Berecki2020_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement about WWOX content of this surface."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 46,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-32878331-01",
+    "target": "Chemin et al. 2018 (de novo CACNA1G variants in childhood cerebellar atrophy, gain of function)",
+    "question": "Do the gain-of-function CACNA1G patients have seizures in proportion, and with what ASM response, that would index T-type excess as seizure-driving?",
+    "status": "open - cited, not read"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 32878331, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "paper_packet.py packet at claim time: none prior; claimed by scientist-b."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-21",
+  "route": "PubMed esummary (JSON) for 32878331 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "pubtype [\"Case Reports\", \"Journal Article\"]; no retraction, expression of concern or erratum is visible on the esummary record (the esummary JSON carries no CommentsCorrections list for this PMID, so that absence is a statement about this query).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 46,
+   "references_screened": 46,
+   "references_with_doi": 46,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID32878331_Berecki2020_PMC_r2.xml",
+   "sha256": "62f9cfa0c340cf87e60466d3ee28af81fd35b5dc9744080b0d5edee3721143d1",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=7503748&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "62f9cfa0c340cf87e60466d3ee28af81fd35b5dc9744080b0d5edee3721143d1"
+   }
+  },
+  {
+   "path": "files/supplement/PMID32878331_r2/PMC7503748.1.pdf",
+   "sha256": "d849ad983f57244922ea4851dae36c301d17efe1f4e1e0d49b408b53feee957a",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC7503748",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "d849ad983f57244922ea4851dae36c301d17efe1f4e1e0d49b408b53feee957a"
+   }
+  },
+  {
+   "path": "files/figures/PMID32878331_r2/ijms-21-06333-g001.jpg",
+   "sha256": "3d44565d93d766dd07a27f376e4f2d2030755e73b6d53291025556c3c5cf45c1",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC7503748",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "3d44565d93d766dd07a27f376e4f2d2030755e73b6d53291025556c3c5cf45c1"
+   }
+  },
+  {
+   "path": "files/supplement/PMID32878331_r2/ijms-21-06333-s001.pdf",
+   "sha256": "524dd63d50a14fbc905e725331cebe97b4fd0849c98aa71f240db76ec6797d06",
+   "kind": "supplement_binary",
+   "note": "Supplementary Figure S1 (clinical EEG, case 1); not opened.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC7503748",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "524dd63d50a14fbc905e725331cebe97b4fd0849c98aa71f240db76ec6797d06"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figures opened as images; every text snippet below was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet below sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "Two patients with missense CACNA1G variants and infantile-onset DEE-type presentations. Case 1 (L909F, gain of function) had refractory seizures with regression and ataxia and was seizure free for two years on single-drug treatment at age 9 (Results 2.1); case 2 (L208P, mixed) had myoclonic jerks from 4 months and stopped medication at 4 years after a few years without observable spells, yet is the more severely affected child overall. Seizure burden did not track the severity of the biophysical defect, and the case descriptions carry no antiseizure-drug response data bearing on T-type block.",
+    "snippet": "Anti-seizure medication (ASM) was discontinued at 4 years of age after a few years of no observable spells.",
+    "surface": "body",
+    "anchor": "Results 2.1, case 2 description (case 1 course in the same subsection)",
+    "artifact": "files/fulltext/PMID32878331_Berecki2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "L909F is described as a gain of function (hyperpolarising shift of activation by about 4.5 mV, slower deactivation); L208P as mixed gain and loss (activation and inactivation shifted hyperpolarised, slow inactivation and deactivation, slow recovery from inactivation, reduced availability at repetitive stimulation). The authors infer clinical severity correlates with functional severity, from two patients.",
+    "snippet": "Our electrophysiological data are congruent with the clinical findings of a milder phenotype for the L909F patient versus the L208P (Table 1).",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 2",
+    "artifact": "files/fulltext/PMID32878331_Berecki2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that Cacna1g knockout mice are less prone to absence epilepsy, and that Cacna1g levels act as a genetic modifier in two other seizure models (higher levels increase spontaneous seizures in an Scn2a model, lower levels reduce them in a Dravet-type model, with better survival), proposing Cav3.1 as a possible target in SCN1A and SCN2A epilepsy. All of this is cited, not measured here.",
+    "snippet": "Similarly, in a mouse model of Dravet syndrome due to Scn1a mutation, decreased Cacna1g expression results in a partial amelioration of disease phenotypes with improved survival and reduced spontaneous seizure frequency [37].",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 5",
+    "artifact": "files/fulltext/PMID32878331_Berecki2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A statement of what the electrophysiology cannot yet say about neurons: the full-scale neuron-level consequences of the variants are unknown, the authors speculate L208P could not support burst firing because of low availability at high stimulation rate, and propose dynamic-clamp work. So the gain-of-function label rests on HEK-cell current properties, not on neuronal firing.",
+    "snippet": "Clearly, more work remains to be done in order to fully understand the neuron-scale mechanisms caused by pathogenic Cav3.1 variants.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 3",
+    "artifact": "files/fulltext/PMID32878331_Berecki2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Cav3.1 expression is present at birth, region- and age-dependent and rises through postnatal development; isoform b is the fetal isoform and longer splice variants predominate in the adult brain. The channel in a preweaning animal is therefore of a different splice composition from the adult one.",
+    "snippet": "Isoform b is normally found in the fetal brain, whereas the transcripts of the longer splice variants predominate in the adult brain [30].",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 4",
+    "artifact": "files/fulltext/PMID32878331_Berecki2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 read as an image: panel E activation curves show L208P (blue) and M1508V (green) left of wild type (black) by about 10 to 15 mV and L909F (red) by about 4 to 5 mV; panel F inactivation curves for L208P and M1508V sit left of wild type by about 5 mV while L909F overlaps it; panel D peak current density is similar between variants but the voltage of peak current is shifted left for all three variants.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1E: half-activation WT about -32, L208P about -42, L909F about -37, M1508V about -44 mV; Figure 1F: inactivation curves for WT and L909F overlap near -62 mV, L208P and M1508V near -67 mV.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID32878331_r2/ijms-21-06333-g001.jpg",
+    "anchor": "Figure 1 panels D to F; bucket jpg 764 px wide as delivered",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}

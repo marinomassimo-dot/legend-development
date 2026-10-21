@@ -206,6 +206,24 @@
    "path": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-s008.xlsx",
    "sha256": "f55a64419c4e3f3b4b9b532ec8e4eec333f5fceb833f9bb5f72293c3226afc86",
    "kind": "table"
+  },
+  {
+   "path": "files/fulltext/PMID34268881_assets/Table_EV1_EV2_derived.txt",
+   "sha256": "4ba54d5e707d730d97c38ff39384bb13635bd3575ce5786432589d929b51002a",
+   "kind": "supplement_text",
+   "note": "Tables EV1 (1,246 upregulated genes) and EV2 (1,021 downregulated genes) of the supplementary data, both declared workbooks, flattened to tab-separated text with a tag column (EV1_up, EV2_down). 2,273 lines including the two title lines and two header lines.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "4ba54d5e707d730d97c38ff39384bb13635bd3575ce5786432589d929b51002a",
+    "derived_from": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-s006.xlsx",
+    "extractor": {
+     "name": "xlsx_to_text (python zipfile and regex over sharedStrings and sheet XML, helpers from framework/scripts/supplement_symbol_search.py)",
+     "version": "1.0",
+     "call": "inline script, 2026-10-21: both workbooks (s006 then s005), every row, cells joined by tab, prefixed by EV1_up or EV2_down; the second source workbook is files/fulltext/PMID34268881_assets/EMMM-13-e13610-s005.xlsx",
+     "join": ""
+    }
+   }
   }
  ],
  "verbatim_locators": {
@@ -566,8 +584,63 @@
     "anchor": "Tables EV1 and EV2, 'symbol' column, all rows; read cell-wise from xl/worksheets/sheet1.xml",
     "panel_text_relation": "panel_only",
     "found_or_sought": "found"
+   },
+   {
+    "proposition": "2026-10-21 (R2 batch, scientist-b): the lists the supplementary tables carry are defined by the authors as genes with a fold change above 1.2 (or below 1/1.2) and a P below 0.01 (that this P is unadjusted is the reader's inference from the tables: the Methods give alpha 0.01, the Figure EV3 legend names the Wald test, and CACNA1E has P 0.0097 with an adjusted P of 0.067), after a 15,370-gene tested set; so a gene absent from both lists is one that is not clearly changed under that rule, not one shown absent or unexpressed (the Fig 4 legend gives wild type n = 2 against knockout n = 4, so absence from the lists is weak evidence of no change).",
+    "snippet": "1,246 genes were upregulated in WWOX‐KO COs and showed both a fold change greater than 1.2 (FC > 1.2) and a significant P‐value (P < 0.01), and 1,021 genes were downregulated (FC < 1/1.2, P < 0.01) (Fig EV3B; Tables EV1 and EV2).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+    "anchor": "Results, RNA-seq paragraph",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+     "entry": 39,
+     "what_changed": "'unadjusted' marked as the reader's inference from the tables; WT n=2 against KO n=4 added as a limit on the absence reading.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED, minor caveats. The wording repair applied afterwards is not itself audited."
+      ]
+     }
+    }
+   },
+   {
+    "proposition": "Sample size and exclusions of the transcriptome: eight organoids were sequenced (four per genotype); one wild-type sample failed quality control (quoted), and the sentences that follow the quoted span exclude a second wild-type sample that clustered with neither group, leaving six samples (the figure legend gives two wild type and four knockout at week 15); genes were filtered to a minimal overall count of 10 across the six samples before the DESeq2 test.",
+    "snippet": "A total of 8 CO samples were sequenced (4 WT COs and 4 KO COs)—one WT sample failed our preliminary quality control (low read count and low transcriptome mapping rate).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+    "anchor": "Methods, RNA sequencing and analysis",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A T-type gene search of the two tables (tool run 2026-10-21 over the declared workbooks): none of CACNA1G, CACNA1H or CACNA1I is in either the upregulated or the downregulated list; the pore-forming alpha1 subunit genes that are listed, both in the upregulated list, are CACNA1A (P/Q-type) and CACNA1E (R-type); auxiliary subunits are also listed (CACNA2D2 and CACNA2D3 up, CACNB3 down). The first of the two rows follows.",
+    "snippet": "EV1_up\tENSG00000141837\tCACNA1A\t773\t8.6299999999999997E-5\t2.9199999999999999E-3\t0.61\tcalcium_voltage-gated_channel_subunit_alpha1_A_\tprotein_coding",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID34268881_assets/Table_EV1_EV2_derived.txt",
+    "anchor": "Table EV1, row for CACNA1A (derived text line 861); columns ensg, symbol, EntrezID, pvalue, padj, log2FoldChange",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+     "entry": 41,
+     "what_changed": "'voltage-gated calcium channel genes' narrowed to 'pore-forming alpha1 subunit genes'; auxiliary subunits listed.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED, wording fix. The wording repair applied afterwards is not itself audited."
+      ]
+     }
+    }
+   },
+   {
+    "proposition": "Second listed voltage-gated calcium channel gene: CACNA1E (R-type), upregulated, with an adjusted P value of 0.067 and a log2 fold change of 0.6; the table's inclusion rule is the unadjusted P and fold change given above, so a row can carry an adjusted P above 0.05.",
+    "snippet": "EV1_up\tENSG00000198216\tCACNA1E\t777\t9.6900000000000007E-3\t6.7000000000000004E-2\t0.6\tcalcium_voltage-gated_channel_subunit_alpha1_E_\tprotein_coding",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID34268881_assets/Table_EV1_EV2_derived.txt",
+    "anchor": "Table EV1, row for CACNA1E (derived text line 864)",
+    "panel_text_relation": "text_only"
    }
-  ]
+  ],
+  "note": "2026-10-21 (R2 batch, scientist-b, QUESTION_DRIVEN, receipt FTR-20261021-34268881-08): four entries appended for the question 'does a WWOX-deficient dataset list a T-type gene'; Tables EV1 and EV2 flattened to a derived text artifact; no earlier entry changed or contradicted."
  },
  "reading_history": [
   {

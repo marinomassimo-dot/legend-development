@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-21T12:00:00Z",
+ "event_at": "2026-10-21T12:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_present"
+ },
+ "event_id": "FTR-20261021-40825030-01",
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "Whole PMC XML body and Table 1 read; Figures 1 to 7 read as captions only (the deposit carries 28 small equation-style images only); supporting-information legends read, the data not opened. Depth partial."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID40825030.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-b_20261021.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "2feb094be950aec1d186378c8f334b9e50d916a78aaaa9dd76a30fd729eed9b1",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID40825030_ElGhaleb2025_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1371/journal.pgen.1011828",
+  "pmid": "40825030"
+ },
+ "workflow": "scientist-b repurposing batch R2 2026-10-21; QUESTION_DRIVEN (the reader held DL-MECH-170 and CLAIM 016 before opening the paper); NOT WWOX EVIDENCE; PMC efetch XML acquired with no User-Agent through pmc_bucket_fetch.py; prepared as JSON for the integrator and staged, not appended."
+}

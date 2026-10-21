@@ -1,0 +1,239 @@
+{
+ "schema_version": 2,
+ "pmid": "35243344",
+ "doi": "10.1093/braincomms/fcac010",
+ "receipt": "FTR-20261021-35243344-01",
+ "landing": [
+  "FTR-20261021-35243344-01",
+  "repurposing_10h_scientist-b_20261021"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 188,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-21: 'Tanaka KF[au]' 188; with (WWOX OR Wwox) 0. Initials-level string, may pool homonyms.",
+  "research_type": "experimental_lab",
+  "weighting": "A Tokyo optogenetic-tool laboratory; the paper describes an unplanned toxicity of an opsin as a new model; slice electrophysiology uses three mice per group as the statistical unit (degrees of freedom 4) and the ethosuximide arm uses four mice.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID35243344_Yang2022_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement about WWOX content of this surface."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 44,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-35243344-01",
+    "target": "Reference 35 (Cav3.2 and Cav3.3 double knockout: TRN rebound bursts abolished, gamma-butyrolactone spike-wave discharges persist and remain ethosuximide-sensitive)",
+    "question": "Is the primary (Lee 2014, PMID 25071191) readable at a lawful full-text surface, so that the double-knockout ethosuximide result can be read first-hand?",
+    "status": "open - parked this session: the PMC deposit is a restricted stub and the publisher and Europe PMC PDF routes serve an anti-bot challenge"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 35243344, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "paper_packet.py packet at claim time: none prior; claimed by scientist-b (adjacent search: ethosuximide effect where TRN T-current is reduced)."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-21",
+  "route": "PubMed esummary (JSON) for 35243344 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "pubtype [\"Journal Article\"]; no retraction, expression of concern or erratum is visible on the esummary record (the esummary JSON carries no CommentsCorrections list for this PMID, so that absence is a statement about this query).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 44,
+   "references_screened": 41,
+   "references_with_doi": 41,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID35243344_Yang2022_PMC_r2.xml",
+   "sha256": "571b443a3db5271eb15007f67f784a7c927ca671c8ee901fec9e343826f5c12f",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=8887905&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "571b443a3db5271eb15007f67f784a7c927ca671c8ee901fec9e343826f5c12f"
+   }
+  },
+  {
+   "path": "files/supplement/PMID35243344_r2/PMC8887905.1.pdf",
+   "sha256": "3e7fec131f0158a68c0994c673bc2b90eddd3380812680d9c570f175c4812b92",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC8887905",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "3e7fec131f0158a68c0994c673bc2b90eddd3380812680d9c570f175c4812b92"
+   }
+  },
+  {
+   "path": "files/supplement/PMID35243344_r2/fcac010_supplementary_data.docx",
+   "sha256": "6a2201e504cfc97307115891ccd86d05596261e815b89ae4c477c452f6f51abb",
+   "kind": "supplement_binary",
+   "note": "Supplementary Table 1 and Supplementary Figure 1; not opened.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC8887905",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "6a2201e504cfc97307115891ccd86d05596261e815b89ae4c477c452f6f51abb"
+   }
+  },
+  {
+   "path": "files/figures/PMID35243344_r2/PMC8887905_p10_embedded.png",
+   "sha256": "d7b94cd3c57f7a5a3b73afe3877355bb46a2600cbbbbf5bfb094bed2f301db06",
+   "kind": "figure",
+   "note": "Figure 4 (EEG, ethosuximide, baclofen) as the embedded raster of PDF page 10.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "d7b94cd3c57f7a5a3b73afe3877355bb46a2600cbbbbf5bfb094bed2f301db06",
+    "derived_from": "files/supplement/PMID35243344_r2/PMC8887905.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF Pixmap",
+     "version": "1.28.2",
+     "call": "largest embedded image of PDF page 10 saved as PNG (1262x1001)",
+     "join": ""
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID35243344_r2/PMC8887905_p12_embedded.png",
+   "sha256": "ecfbd4eea835ffc263b6b720f3e126ba2aee3b317b4b81e957258049e9cfb123",
+   "kind": "figure",
+   "note": "Figure 6 (rebound bursting and T-current in TRN PV neurons) as the embedded raster of PDF page 12.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "ecfbd4eea835ffc263b6b720f3e126ba2aee3b317b4b81e957258049e9cfb123",
+    "derived_from": "files/supplement/PMID35243344_r2/PMC8887905.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF Pixmap",
+     "version": "1.28.2",
+     "call": "largest embedded image of PDF page 12 saved as PNG (1199x1344)",
+     "join": ""
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figures opened as images; every text snippet below was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet below sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "Ethosuximide abolished spontaneous spike-wave discharges in these mutant-model mice, while baclofen worsened them; the ethosuximide arm is within-animal before and after in four mice with no wild-type or vehicle arm described, since control mice do not have the discharges.",
+    "snippet": "Ethosuximide had an acute effect on the frequency of SWDs and abolished SWDs 30 min after treatment (Fig. 4C and E).",
+    "surface": "body",
+    "anchor": "Results, PV-ArchT mice displayed an absence seizure phenotype",
+    "artifact": "files/fulltext/PMID35243344_Yang2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The measured T-type current is LOWER, not higher, in the model's reticular-nucleus PV neurons: peak T-current about 155 pA against about 699 pA in control and rebound bursts impaired, with three mice per group as the statistical unit.",
+    "snippet": "ArchT-expressing TRN PV cells possessed significantly lower peak current than controls (Fig. 6F) (155 ± 68 pA for PV-ArchT versus 699 ± 36 pA for controls, t4 = −7, P = 0.006: Fig. 6G).",
+    "surface": "body",
+    "anchor": "Results, ArchT expression impaired hyperpolarization-induced rebound excitation in TRN PV-positive neurons",
+    "artifact": "files/fulltext/PMID35243344_Yang2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors face the tension themselves: T-current is impaired, yet ethosuximide works; they look for T-type mRNA upregulation and find none, and say that alterations in mRNA do not account for the ethosuximide-sensitive component, so the efficacy of ethosuximide here is not explained by a measured T-type gain. Their abstract's phrase 'suggesting a gain of function of T-type calcium channels' is an inference not supported by the measured current or the transcript data.",
+    "snippet": "These negative data indicate that alterations in Cav mRNA expression levels could not account for the ethosuximide-sensitive component of cortical and thalamic hyperactivity.",
+    "surface": "body",
+    "anchor": "Results, Thalamic hyperactivity was synchronized to cortical SWDs in PV-ArchT mice",
+    "artifact": "files/fulltext/PMID35243344_Yang2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors cite that in Cav3.2 and Cav3.3 double knockout mice, in which TRN rebound bursts are abolished, gamma-butyrolactone-induced discharges still occur and remain highly sensitive to ethosuximide (a second line of evidence that ethosuximide efficacy does not require the TRN T-type rebound mechanism). This is cited, not read here; the primary is parked (restricted deposit).",
+    "snippet": "Moreover, GBL-induced SWDs were highly sensitive to the T-type Ca2+ channel blocker, ethosuximide.35",
+    "surface": "body",
+    "anchor": "Discussion, Do cortical SWDs require the rebound excitation of TRN PV-positive neurons?",
+    "artifact": "files/fulltext/PMID35243344_Yang2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The model rests on an opsin's cell-type toxicity, not on a human-genotype lesion: the authors say ArchT expressed without light caused abnormal waves and had a toxic effect on PV cells, and that the phenotype regressed when expression was switched off. Face and predictive validity are claimed from discharges plus ethosuximide response.",
+    "snippet": "indicating that ArchT expression—even without light activation—had a toxic effect on PV-positive cells.",
+    "surface": "body",
+    "anchor": "Results, PV-ArchT mice displayed an absence seizure phenotype",
+    "artifact": "files/fulltext/PMID35243344_Yang2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 6 read as an image (page 12 raster): rebound bursts per cell about 2.2 in controls (three mice) versus about 1.0 in PV-ArchT (three mice), star; T-current peak about 700 pA versus about 155 pA, three stars with the per-mouse points of about 700 to 750 against about 40 to 275; Figure 4E: ethosuximide before about 23 events per hour (range about 8 to 50) falling to about 1 (four mice), baclofen about 33 rising to about 63.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6B bars about 2.2 and about 1.0; Figure 6G bars about 699 and about 155 pA with three dots each; Figure 4E before and after lines for four mice.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35243344_r2/PMC8887905_p12_embedded.png",
+    "anchor": "Figure 6 panels A to G (page 12 raster) and Figure 4 panel E (page 10 raster, PMC8887905_p10_embedded.png)",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}

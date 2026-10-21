@@ -1,0 +1,322 @@
+{
+ "schema_version": 2,
+ "pmid": "42274296",
+ "doi": "10.1002/epi4.70289",
+ "receipt": "FTR-20261021-42274296-01",
+ "landing": [
+  "FTR-20261021-42274296-01",
+  "repurposing_10h_scientist-b_20261021"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 249,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-21: 'Arnold JC[au]' 249; with (WWOX OR Wwox) 0. Initials-level string, may pool homonyms.",
+  "research_type": "experimental_lab",
+  "weighting": "Cannabinoid-therapeutics laboratory; the senior author declares a patent on cannabinoid epilepsy therapies and consulting for cannabis-industry bodies (Conflict of interest statement). Measurements are within-subject EEG counts; framing favours the cannabidiol arm, which is not the arm this reading uses.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID42274296_Harman2026_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement about WWOX content of this surface."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 61,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-42274296-01",
+    "target": "Reference 12 in the paper: the initial Gabrb3 D120N characterisation that first reported ethosuximide and clobazam in this model",
+    "question": "Did that characterisation dose wild-type littermates with ethosuximide on the EEG endpoint? This paper doses knock-in animals only.",
+    "status": "open - cited, not read"
+   },
+   {
+    "id": "MH-42274296-02",
+    "target": "Reference 16: ulixacaltamide in GAERS",
+    "question": "Is the Cav3-selective compound's effect in GAERS genotype-compared against a non-epileptic control strain?",
+    "status": "open - cited, not read"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 42274296, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "paper_packet.py packet at claim time: none prior; claimed by scientist-b."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-21",
+  "route": "PubMed esummary (JSON) for 42274296 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "pubtype [\"Journal Article\"]; no retraction, expression of concern or erratum is visible on the esummary record (the esummary JSON carries no CommentsCorrections list for this PMID, so that absence is a statement about this query).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 61,
+   "references_screened": 61,
+   "references_with_doi": 61,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42274296_Harman2026_PMC_r2.xml",
+   "sha256": "37ca8bc4903ec5184c0b90401d4642f922a03559a75dbc1b45e6c58009d57900",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=13395050&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "37ca8bc4903ec5184c0b90401d4642f922a03559a75dbc1b45e6c58009d57900"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42274296_r2/PMC13395050.1.pdf",
+   "sha256": "69647b076f7b75655bde67c303485ffc512ccd4a743eb3d0c6043c78065f217c",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC13395050",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "69647b076f7b75655bde67c303485ffc512ccd4a743eb3d0c6043c78065f217c"
+   }
+  },
+  {
+   "path": "files/figures/PMID42274296_r2/PMC13395050_p05_embedded.png",
+   "sha256": "012c24985ea8fa566bb2727ea1dc4be8e59dd0fb6d65fbaee5cc3f59886c596e",
+   "kind": "figure",
+   "note": "Figure 1 as the embedded 300 ppi raster of PDF page 5 (rank.py: not flagged vector).",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "012c24985ea8fa566bb2727ea1dc4be8e59dd0fb6d65fbaee5cc3f59886c596e",
+    "derived_from": "files/supplement/PMID42274296_r2/PMC13395050.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF Pixmap",
+     "version": "1.28.2",
+     "call": "largest embedded image of PDF page 5 saved as PNG (1548x1786, 300 ppi)",
+     "join": ""
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID42274296_r2/PMC13395050_p06_embedded.png",
+   "sha256": "b65018a8ae88f51a0dcc94b554e1885ad33df9caa2ca368640c11abbeeee64af",
+   "kind": "figure",
+   "note": "Figure 2 as the embedded 300 ppi raster of PDF page 6 (rank.py: not flagged vector).",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "b65018a8ae88f51a0dcc94b554e1885ad33df9caa2ca368640c11abbeeee64af",
+    "derived_from": "files/supplement/PMID42274296_r2/PMC13395050.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF Pixmap",
+     "version": "1.28.2",
+     "call": "largest embedded image of PDF page 6 saved as PNG (1548x1377, 300 ppi)",
+     "join": ""
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID42274296_r2/PMC13395050_p07_embedded.png",
+   "sha256": "ff346e6b79019ec42ca957b9129090d456631689cbba806db604f075586a4e8e",
+   "kind": "figure",
+   "note": "Figure 3 as the embedded 300 ppi raster of PDF page 7 (rank.py: not flagged vector).",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "ff346e6b79019ec42ca957b9129090d456631689cbba806db604f075586a4e8e",
+    "derived_from": "files/supplement/PMID42274296_r2/PMC13395050.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF Pixmap",
+     "version": "1.28.2",
+     "call": "largest embedded image of PDF page 7 saved as PNG (1548x1258, 300 ppi)",
+     "join": ""
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID42274296_r2/PMC13395050_p08_embedded.png",
+   "sha256": "4bf1656f78517f58b409595fb5efa8c348afb6162446e5aa4c786517e669fa96",
+   "kind": "figure",
+   "note": "Figure 4 as the embedded 300 ppi raster of PDF page 8 (rank.py: not flagged vector).",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "4bf1656f78517f58b409595fb5efa8c348afb6162446e5aa4c786517e669fa96",
+    "derived_from": "files/supplement/PMID42274296_r2/PMC13395050.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF Pixmap",
+     "version": "1.28.2",
+     "call": "largest embedded image of PDF page 8 saved as PNG (1548x1382, 300 ppi)",
+     "join": ""
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID42274296_r2/PMC13395050_p09_embedded.png",
+   "sha256": "f4de1757119311e3ab066c6a01fbb7f47c5c88b3ea99e0a67350124d29364bad",
+   "kind": "figure",
+   "note": "Figure 5 as the embedded 300 ppi raster of PDF page 9 (rank.py: not flagged vector).",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "f4de1757119311e3ab066c6a01fbb7f47c5c88b3ea99e0a67350124d29364bad",
+    "derived_from": "files/supplement/PMID42274296_r2/PMC13395050.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF Pixmap",
+     "version": "1.28.2",
+     "call": "largest embedded image of PDF page 9 saved as PNG (1541x844, 300 ppi)",
+     "join": ""
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figures opened as images; every text snippet below was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet below sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "Untreated wild-type littermates had no atypical absence seizures (0 of 6) while all knock-in mice had them (7 of 7). The wild-type arm is at an absolute zero baseline for this endpoint.",
+    "snippet": "No WT (0/6) and all KI animals (7/7) displayed atypical absence seizures (mean ± SEM 7.4 ± 3.1; range 1–21)",
+    "surface": "body",
+    "anchor": "Results, first subsection",
+    "artifact": "files/fulltext/PMID42274296_Harman2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The drug experiments were run in knock-in mice only. The crossover design is vehicle versus drug within the same mutant animal; wild-type mice were not dosed on the seizure endpoint, so the paper has no wild-type drug arm and cannot separate knock-in from wild-type drug response. The selection row's phrase 'separate KI from wild-type littermates in a within-subject crossover' is not what the Methods describe.",
+    "snippet": "KI mice were randomized to treatment order using a Latin‐square design with a one‐week washout period between experiments.",
+    "surface": "body",
+    "anchor": "Methods, Electroencephalogram recording and analysis",
+    "artifact": "files/fulltext/PMID42274296_Harman2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Ethosuximide reduced cumulative atypical absence seizure incidence by about two thirds in the mutant, paired within animal (n = 9).",
+    "snippet": "reduced total seizure incidence by 64% (vehicle 21.4 ± 4.7, range 5–45 vs. ethosuximide 7.7 ± 1.8, range 1–20; t(8) = 2.6, p = 0.03)",
+    "surface": "body",
+    "anchor": "Results, Antiseizure drugs reduce atypical absence seizures",
+    "artifact": "files/fulltext/PMID42274296_Harman2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A Cav3-selective inhibitor (ulixacaltamide) produced the same size of reduction in seizure incidence as ethosuximide in this knock-in (about 64 percent, n = 11), in a different compound class. The two were given in separate cohorts and the paper does not compare them statistically.",
+    "snippet": "reduced total seizure incidence by 64% (vehicle 21.1 ± 2.8, range 5–44 vs. ulixacaltamide 7.5 ± 2.3, range 0–22; t(10) = 3.5, p = 0.006)",
+    "surface": "body",
+    "anchor": "Results, Antiseizure drugs reduce atypical absence seizures",
+    "artifact": "files/fulltext/PMID42274296_Harman2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors treat ethosuximide as primarily Cav3-acting with additional Cav1, sodium and potassium actions, and use ulixacaltamide to isolate Cav3. Their inference that Cav3 channels are rational targets rests on the compound agreement, with no channel measurement in the model.",
+    "snippet": "While its primary mechanism involves Cav3 inhibition, it also modulates Cav1, sodium, and potassium conductances.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 3",
+    "artifact": "files/fulltext/PMID42274296_Harman2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Injection stress is a stated confound: vehicle-treated knock-in animals had markedly more seizures (about 21 per hour, vehicle rows) than the uninjected animals of Figure 1 (about 7), and the authors suggest the procedure itself may precipitate seizures. Any effect of a drug versus vehicle in an injected mutant is measured on an injection-elevated baseline.",
+    "snippet": "suggesting that procedural stress associated with intraperitoneal injections may precipitate seizures in Gabrb3 +/D120N mice.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 6",
+    "artifact": "files/fulltext/PMID42274296_Harman2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1B read as an image: six wild-type circles all at zero events and seven knock-in dots from about 1 to about 21 (bar about 7.4); panels C and E show wild type flat at zero across all six 10 min bins.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1B: six open circles at 0 for WT; seven filled circles for KI between about 1 and about 21; Figure 1C and 1E: WT line at 0 in every bin.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42274296_r2/PMC13395050_p05_embedded.png",
+    "anchor": "Figure 1 panels B, C, E; page 5 embedded raster 1548x1786",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2A read as an image (ethosuximide): nine paired animals; eight fall, one rises from about 9 to about 20; vehicle bar about 21, drug bar about 8. Figure 2B: vehicle incidence per 10 min bin rises from about 2 to about 4.4 across the hour while drug stays about 0.5 to about 2.3, with stars at 10 to 50 min. The drug effect is clear but not complete, and not uniform across animals.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2A: nine connecting lines, one ascending from about 9 to about 20; stars on the drug bar; Figure 2B: stars at 10, 20, 30 (four stars), 40 and 50 min.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42274296_r2/PMC13395050_p06_embedded.png",
+    "anchor": "Figure 2 panels A and B; page 6 embedded raster 1548x1377",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3A read as an image (ulixacaltamide): eleven pairs, most falling toward zero, two animals staying near 19 to 22 events; Figure 3B stars at 10 to 50 min but not 60 min. Same direction as ethosuximide, similar residual non-responders.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3A: eleven connecting lines, most descending to 0 to about 10, two ending near 19 and 22; Figure 3B: stars at 10, 20, 30, 40 and 50 min.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42274296_r2/PMC13395050_p07_embedded.png",
+    "anchor": "Figure 3 panels A and B; page 7 embedded raster 1548x1258",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Spasm arm: a subset of wild-type pups also showed spasm-like events (4 of 11) against all knock-in pups (10 of 10), and only knock-in pups were allocated to drug or vehicle. The wild-type spasm floor is above zero, and the paper says its spasm scoring is behavioural without EEG confirmation and not controlled for sedation.",
+    "snippet": "To assess sensitivity to ASMs, KI pups were randomly allocated to receive vigabatrin, CBD, or vehicle.",
+    "surface": "body",
+    "anchor": "Methods, Spasms",
+    "artifact": "files/fulltext/PMID42274296_Harman2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 5 read as an image: wild-type spasms bar about 1.1 (dots 0 to 4) against knock-in about 4.9; in panel B vehicle about 4.9, vigabatrin about 2.9 and cannabidiol about 2.7 with a bimodal cannabidiol spread (seven animals at 1, others 2 to 8). Treated knock-in values stay above the wild-type mean.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5A: WT bar about 1.1 with dots 0 to 4, KI bar about 4.9; Figure 5B: three KI groups, cannabidiol bar about 2.7 with a cluster at 1.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42274296_r2/PMC13395050_p09_embedded.png",
+    "anchor": "Figure 5 panels A and B; page 9 embedded raster 1541x844",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}

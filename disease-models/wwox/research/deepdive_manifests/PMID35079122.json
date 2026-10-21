@@ -1,0 +1,185 @@
+{
+ "schema_version": 2,
+ "pmid": "35079122",
+ "doi": "10.1038/s41380-021-01425-2",
+ "receipt": "FTR-20261021-35079122-01",
+ "landing": [
+  "FTR-20261021-35079122-01",
+  "repurposing_10h_scientist-b_20261021"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 60,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-21: 'Steullet P[au]' 60; with (WWOX OR Wwox) 0. Initials-level string, may pool homonyms.",
+  "research_type": "experimental_lab",
+  "weighting": "A Lausanne redox-neurobiology group; slice electrophysiology with cell counts of about 9 to 24 per group and a schizophrenia-model framing.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID35079122_Cabungcal2022_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement about WWOX content of this surface."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 63,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-35079122-01",
+    "target": "Reference 28 (TRN activity and sleep in freely behaving Gclm-KO mice)",
+    "question": "Does the reduced bursting in vivo translate to a spike-wave or seizure phenotype, i.e. does T-type hypofunction in TRN protect or predispose?",
+    "status": "open - cited, not read"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 35079122, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "paper_packet.py packet at claim time: none prior; claimed by scientist-b (adjacent search for an age-dependent T-type change in a non-channel-gene model)."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-21",
+  "route": "PubMed esummary (JSON) for 35079122 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "pubtype [\"Journal Article\", \"Research Support, Non-U.S. Gov't\"]; no retraction, expression of concern or erratum is visible on the esummary record (the esummary JSON carries no CommentsCorrections list for this PMID, so that absence is a statement about this query).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 63,
+   "references_screened": 63,
+   "references_with_doi": 63,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID35079122_Cabungcal2022_PMC_r2.xml",
+   "sha256": "3e6eaf4583ef910bc921ede40c32ccca98d17f27b2947499eca1b2ab8d226e8b",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=9126813&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "3e6eaf4583ef910bc921ede40c32ccca98d17f27b2947499eca1b2ab8d226e8b"
+   }
+  },
+  {
+   "path": "files/supplement/PMID35079122_r2/41380_2021_1425_MOESM1_ESM.docx",
+   "sha256": "06530ac6ba744f4f0aebc775e0d70e2051715f5bb2e11e7bf74b62c8237c6f04",
+   "kind": "supplement_binary",
+   "note": "Supplementary methods and tables; not opened.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC9126813",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "06530ac6ba744f4f0aebc775e0d70e2051715f5bb2e11e7bf74b62c8237c6f04"
+   }
+  },
+  {
+   "path": "files/supplement/PMID35079122_r2/PMC9126813.1.pdf",
+   "sha256": "5f3521859d82f1b3c33c5d4bdaf4c4acddd371b9f6bad1b40efd9f4fc677e18d",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC9126813",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "5f3521859d82f1b3c33c5d4bdaf4c4acddd371b9f6bad1b40efd9f4fc677e18d"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figures opened as images; every text snippet below was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet below sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "Direction opposite to the Cntnap2 null: in adult glutathione-deficient (Gclm knockout) mice the reticular-nucleus neurons have lower T-type current density, weaker rebound bursting and a more negative potential needed for burst firing; the proportion of neurons bursting at rest was 25 percent (3 of 12) versus 71 percent in wild type (Fisher p = 0.02).",
+    "snippet": "We found a lower proportion of neurons displaying bursting behavior at resting membrane potential (RMP) in KO (25.0%, 3/12) compared to WT mice (71.4%, 10/13, Fisher exact test, p = 0.02)",
+    "surface": "body",
+    "anchor": "Results, Altered bursting profile of TRN neurons in adult Gclm-KO mice",
+    "artifact": "files/fulltext/PMID35079122_Cabungcal2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Age dependence within one model: the T-type and SK current densities of knockout reticular neurons did not differ from wild type at postnatal days 20 to 30, and hypofunction emerged in adulthood (days 60 to 75); an additional early-life oxidative challenge (days 10 to 20) precipitated the hypofunction in peripubertal knockout mice and in wild-type mice with transient glutathione deficit; an antioxidant treatment prevented it.",
+    "snippet": "Thus, hypofunction of T-Ca2+ channels in TRN of Gclm-KO mice emerges later during late adolescence/early adulthood.",
+    "surface": "body",
+    "anchor": "Results, Normal T-Ca2+ and SK currents in peripubertal Gclm-KO mice",
+    "artifact": "files/fulltext/PMID35079122_Cabungcal2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A redox mechanism the authors propose: Cav3.2 current is redox sensitive (oxidising agents decrease and reducing agents increase it) and reduced Cav3.3 expression was found in adult knockout reticular nucleus; the hypofunction is attributed to oxidative stress, with the authors noting the mechanism warrants further investigation.",
+    "snippet": "Thus, oxidizing and reducing molecules respectively decrease and enhance CaV3.2-dependent currents in TRN neurons [51].",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 8",
+    "artifact": "files/fulltext/PMID35079122_Cabungcal2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Two different non-channel lesions move the same neurons' T-type current in opposite directions (Cntnap2 null: increased, section 8; glutathione deficiency and the MAM model: decreased), and a decrease can be age-gated. Direction cannot be inferred from the fact that a non-channel gene is lost.",
+    "snippet": "The finding that OxS is accompanied with a decrease of T-Ca2+ currents in TRN neurons of MAM mice, similarly to GBR-treated Gclm-KO mice, further supports that OxS causes hypofunction of T-Ca2+ channels.",
+    "surface": "body",
+    "anchor": "Results, OxS reduced T-Ca2+ and SK current densities in TRN neurons of MAM mice",
+    "artifact": "files/fulltext/PMID35079122_Cabungcal2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}
