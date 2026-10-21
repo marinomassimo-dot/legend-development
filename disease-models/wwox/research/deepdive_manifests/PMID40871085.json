@@ -3,7 +3,7 @@
  "pmid": "40871085",
  "doi": "10.3390/pharmaceutics17081065",
  "receipt": "FTR-20261021-40871085-01",
- "context_policy": "SOURCE_FIRST",
+ "context_policy": "QUESTION_DRIVEN",
  "landing": [
   "disease-models/wwox/research/repurposing_10h_scientist-c_20261021.md",
   "disease-models/wwox/research/repurposing_batch_selection_20261021.md"

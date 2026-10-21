@@ -229,6 +229,15 @@ Selected: 16 (tier 1 highest). All are NOT WWOX EVIDENCE.
 4. Which classes have a documented harm in developing myelin or microglia (35372341, 37296418, 39762658) that a repurposing card must record as a counter-indication?
 5. What is the infant and paediatric safety record of the mTOR, GSK3 and CDK-adjacent classes (36615165, 42217144, 40871085), and what monitoring does it imply?
 
+
+### R3 answers (scientist-c, 2026-10-21; readings in `repurposing_10h_scientist-c_20261021.md`; all NOT WWOX EVIDENCE; blind audit OWED)
+
+1. Organ toxicity in adults is hepatic (dose-limiting at the top level), gastro-intestinal, haematological and electrolyte, with sub-proportional exposure at 42 mg; PD rests on three patients. CSNK1A1 loss is *proposed* epileptogenic in two families and HEK-293T cells; neuronal Cdk7 loss costs neurite growth, cortical thickness and social behaviour; no seizure endpoint in either. A51 attribution is not resolved by the Csnk1a1 paper. Unanswerable here: brain exposure and any neural readout after the compound.
+2. Wnt activation reduced histological remodelling in adult kainate models (two of four markers in one, one of four in the other; no EEG). No measured window of safe suppression exists in the selection; the measurement owed is a dose-by-timing series in developing cortex with an electrographic endpoint.
+3. Measured myelin effects in genetic models: clemastine (Pdk1 knockout), rapamycin (Npc1), J4 (Tsc2+/-), genetic Raptor reduction (Tsc1). Hyperexcitability measured with the same intervention: Raptor (culture calcium; seizures persisted in vivo) and J4 (cFos counts). No paper pairs EEG with myelin after a drug.
+4. Counter-indications to record: clemastine in healthy neonatal mice reduced callosal conduction, nodes and myelinated axon count; CSF1R inhibition in neonates lowered myelination in healthy pups and worsened ventricles and later myelination in the hydrocephalic mutant; rapamycin shortened microglial processes.
+5. Infant record: sirolimus in 21 infants with tuberous sclerosis (all had adverse effects, mostly haematological and lipid; no grade 4-5); infant dyslipidaemia reporting signal (aROR 147, a reporting ratio, hypothesis-generating); tideglusib has no child in its PK data (simulation); the CDK7/9 plus CK1-alpha class has no paediatric record.
+
 ### R4 five questions
 
 1. Which of the selected trials separated a symptomatic effect from a change in disease course, and with what design (pre-symptomatic start in 33180985 and 39625912; non-seizure outcomes in 38959712; neuropsychological outcome in 39762914)?

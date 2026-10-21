@@ -8,7 +8,7 @@
  "event_at": "2026-10-21T22:08:00Z",
  "analysis_at": "2026-10-21T22:08:00Z",
  "analysis_time_precision": "minute",
- "workflow": "scientist-c, task REPURP-10H-R3-C-20261021, PRIMARY_EVIDENCE_READ, SOURCE_FIRST; XML and figures acquired with pmc_bucket_fetch.py, figures inspected as images; prepared as JSON for the integrator and not appended by this actor.",
+ "workflow": "scientist-c, task REPURP-10H-R3-C-20261021, PRIMARY_EVIDENCE_READ, QUESTION_DRIVEN (the dispatch had the reader read the known-roads MYC section and the rescue-reference scaffold before the first paper); XML and figures acquired with pmc_bucket_fetch.py, figures inspected as images; prepared as JSON for the integrator and not appended by this actor.",
  "evidence_depth": "complete_fulltext_read",
  "source_locator": "files/fulltext/PMID40665325_Ball2025_PMC_r2.xml",
  "source_fingerprint": "79ad06302408535f8267d9d9b476d65bdb2497510aeed544b538381d8e96b7b5",

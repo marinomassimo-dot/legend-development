@@ -3,7 +3,7 @@
  "pmid": "35945201",
  "doi": "10.1038/s41467-022-31961-6",
  "receipt": "FTR-20261021-35945201-01",
- "context_policy": "SOURCE_FIRST",
+ "context_policy": "QUESTION_DRIVEN",
  "landing": [
   "disease-models/wwox/research/repurposing_10h_scientist-c_20261021.md",
   "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
