@@ -1,0 +1,34 @@
+{
+ "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Part of the ten-hour repurposing batch ORCH-REPURPOSING-10H-20261021. Adjacent and transferable literature: every paper that is not WWOX evidence is labelled NOT WWOX EVIDENCE, at class level, no dose, no paediatric suitability presumed, not medical advice.",
+ "TASK_ID": "REPURP-10H-R3b-C-20261022",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-c",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Relay on group R3 in a fresh context: read PMID 29163040 (acquired, unread); confirm the parked cascades for 29603837, 27852007 and 36717229 without circumvention; run new adjacent searches for the previous note's unanswered parts (brain exposure and neural readout of the multi-kinase inhibitor class; a safe Wnt suppression window; any paper pairing EEG with myelin after a drug); at most 12 readings.",
+ "SCOPE": {
+  "lot": "group R3 of the selection file; BLOCKED rows excluded; HELD-partial only with a question written before opening the owed sections",
+  "brief": "framework/protocols/scientist_standing_brief.md"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "analysis note repurposing_10h_scientist-c_20261022b.md",
+  "per reading: manifest PASS and receipt staged, never recorded",
+  "DEFAULTS_TAKEN and STOP_LOG here"
+ ],
+ "DEPENDENCIES": [],
+ "REVIEW_REQUIREMENT": "Mirror ex post",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently",
+ "MILESTONE_PLAN": [
+  "TASK_ACK/CLAIM",
+  "per-paper M0-M5",
+  "analysis note",
+  "self-eval",
+  "report"
+ ],
+ "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
+ "CURRENT_STATE": "ASSIGNED",
+ "assigned_on": "2026-10-21"
+}

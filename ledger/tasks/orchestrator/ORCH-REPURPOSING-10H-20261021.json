@@ -76,9 +76,12 @@
    },
    "scientist-c": {
     "group": "R3",
-    "agentId": "ab754106b9854e8bd",
-    "task": "REPURP-10H-R3-C-20261021",
-    "state": "RUNNING (measured 22:16Z via ListAgents, 16 min in; own worktree and branch present)"
+    "agentId": "aa7339b0af1c43595",
+    "task": "REPURP-10H-R3b-C-20261022",
+    "state": "RELAY: first agent ab754106b9854e8bd closed R3 (17 readings, landed d9bd8bbd, stopped for context cost); relay agent started 22:2xZ",
+    "previous_agents": [
+     "ab754106b9854e8bd"
+    ]
    },
    "scientist-d": {
     "group": "R4",
@@ -102,8 +105,20 @@
     "t": "2026-10-21T22:16Z",
     "cycle": 1,
     "event": "all four Scientists live (ListAgents); worktrees r1-a, r2-b, scientist-c-r3, r4-d each on its own task branch; nothing stopped, nothing restarted; nothing staged on main to record; main 5dd4283f clean and equal to the remote"
+   },
+   {
+    "t": "2026-10-21T22:27Z",
+    "event": "scientist-c closed R3 early (17 readings, context cost); 17 receipts recorded (ledger 702, 15e68516); relay agent started for R3b; blind audit of the highest-value R3 triples dispatched; candidate CC-20261021-SCIENTIST-C-R3-A51-ATTRIBUTION-01 held until the audit returns"
    }
-  ]
+  ],
+  "audits": {
+   "R3": {
+    "agentId": "ab9cbdf9ae6a65a7b",
+    "file": "page_adjudications/locator_audit_R3_20261022.md",
+    "state": "RUNNING",
+    "scope": "40665325 PK table and Fig 4; 38147624 Fig 6I and Fig 5 schedule; 42310739 duplicate F; 40156289 Fig 1B; then 35945201, 41980417"
+   }
+  }
  },
  "DECISIONS_TAKEN": [
   {
