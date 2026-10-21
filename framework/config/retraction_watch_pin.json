@@ -1,12 +1,12 @@
 {
-  "bytes": 66609820,
-  "fetched": "2026-09-10",
-  "filename": "retractionwatch_20260910.csv",
+  "bytes": 67729776,
+  "fetched": "2026-10-21",
+  "filename": "retractionwatch_20261021.csv",
   "licence": "CC0 ASSERTED, NOT VERIFIED",
-  "licence_verification": "Crossref asserts CC0 for the Retraction Watch dataset under the 2023 agreement, and this run could not confirm it: the data endpoint sends no licence header and api.labs.crossref.org/openapi.json declares MIT for the API SOFTWARE, which is a different object. The MANIFEST row carries the same caveat and is AUDITED rather than REPRODUCED for exactly this reason. Verify before redistributing any row. Written long-form because a bare \"CC0\" in a machine-read field is the assurance the prose beside it declines to give.",
+  "licence_verification": "Crossref asserts CC0 for the Retraction Watch dataset under the 2023 agreement, and this run could not confirm it: the data endpoint sends no licence header and api.labs.crossref.org/openapi.json declares MIT for the API SOFTWARE, which is a different object. The MANIFEST row carries the same caveat and is AUDITED rather than REPRODUCED for exactly this reason. Verify before redistributing any row.",
   "note": "The snapshot itself is ~66 MB and lives under files/, which is gitignored. This pin is what is versioned. Re-fetch with `dependency_integrity.py fetch`; a changed row count is a signal, not an error. No email address is sent to the endpoint.",
   "resource": "Retraction Watch database, hosted by Crossref",
-  "rows": 72476,
-  "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5",
+  "rows": 73329,
+  "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30",
   "url": "https://api.labs.crossref.org/data/retractionwatch"
 }

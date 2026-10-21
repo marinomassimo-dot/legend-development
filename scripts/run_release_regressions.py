@@ -58,6 +58,10 @@ PRIORITY_TESTS = (
     "scripts/test_canonical_structure.py",
     "scripts/test_analysis_package_contract.py",
     "scripts/test_scientific_consistency.py",
+    # Beside `test_scientific_consistency` because it is the same question one layer down: a
+    # detection rule cited from a live surface must resolve to a row a reader can open. Added
+    # 2026-10-21 after `D-31`, `D-33`, `D-35` and `D-36` were found cited and never minted.
+    "scripts/test_detection_rule_citations_resolve.py",
     "scripts/test_public_prose_quality.py",
     "scripts/test_deepdive_method_contract.py",
     "scripts/test_fulltext_trace_contract.py",

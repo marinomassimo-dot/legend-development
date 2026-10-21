@@ -301,25 +301,44 @@ class PositiveControl(unittest.TestCase):
     def test_the_blank_nature_rows_are_unreachable_because_they_carry_no_doi(self):
         """Failure mode 8, measured rather than predicted.
 
-        218 rows in the pinned snapshot carry no RetractionNature. Every one of them
-        also carries no OriginalPaperDOI, so this method cannot see them at all. If a
-        future snapshot gives one of them a DOI, this test flips and the unclassified
-        branch stops being dead code — which is exactly when someone should look.
+        The question is whether `classify_nature`'s unclassified branch is reachable. It is
+        unreachable while no blank-nature row carries a DOI, and this test exists to say so the
+        moment one does.
+
+        🔴 **The class vanished upstream, and the stuck pin hid it for 19 days.** The 2026-09-10
+        snapshot carried 218 blank-nature rows, every one without a DOI. The 2026-10-02 snapshot
+        carries **0** and so does 2026-10-21: Retraction Watch classified them between those
+        dates, measured 2026-10-21 with an independent reader over all three files. The
+        2026-10-02 snapshot had been on disk since the day it was fetched and could not be pinned,
+        so this test went on asserting the 218 against a September file — the stale pin was also
+        hiding a real dataset change from the test that exists to notice it.
+
+        So the assertion is now written against the PURPOSE and not against one of its two worlds:
+        zero blank-nature rows is a STRONGER form of unreachable than "none of them has a DOI",
+        not a reason to fail. What must never pass silently is a blank-nature row WITH a DOI.
         """
         import csv as _csv
         _csv.field_size_limit(10 ** 9)
         path, _pin, _problems = di.verify_snapshot()
         blank = blank_with_doi = 0
-        with open(path, newline="", encoding="utf-8") as fh:
-            for row in _csv.DictReader(fh):
-                if not (row.get("RetractionNature") or "").strip():
-                    blank += 1
-                    if di.normalise_doi(row.get("OriginalPaperDOI")):
-                        blank_with_doi += 1
-        self.assertGreater(blank, 0, "the blank-nature class vanished from the snapshot")
+        # 🔴 Through `snapshot_lines`, not a bare `encoding="utf-8"` open. This test carried its
+        # own copy of the defect it was unrelated to, and it was invisible until a snapshot that
+        # is not valid UTF-8 was pinned on 2026-10-21: `UnicodeDecodeError: byte 0x92 in position
+        # 6514`. The module under test must not be the only place that can read its own data.
+        for row in _csv.DictReader(di.snapshot_lines(path)):
+            if not (row.get("RetractionNature") or "").strip():
+                blank += 1
+                if di.normalise_doi(row.get("OriginalPaperDOI")):
+                    blank_with_doi += 1
         self.assertEqual(
             blank_with_doi, 0,
-            "%d blank-nature rows now carry a DOI and are newly screenable" % blank_with_doi)
+            "%d blank-nature row(s) now carry a DOI and are newly screenable: "
+            "`classify_nature`'s unclassified branch has stopped being dead code and the "
+            "screening path for it needs a decision" % blank_with_doi)
+        if blank == 0:
+            print("\n      note: 0 blank-nature rows in the pinned snapshot "
+                  "(218 on 2026-09-10, 0 from 2026-10-02) — the class was classified upstream, "
+                  "and the unclassified branch is unreachable a fortiori")
 
     def test_a_malformed_doi_fails_closed_rather_than_clean(self):
         """A DOI prefix is 10. plus 4-9 digits. Anything else is UNSCREENABLE, not clean."""
@@ -692,8 +711,11 @@ class MutationBattery(unittest.TestCase):
     # --- M11
     def test_mutation_dropping_rows_from_the_index_is_caught(self):
         """Only the first row per DOI kept — the adjudication material disappears."""
-        mut = load_mutated(('            index.setdefault(doi, []).append({',
-                            '            index.setdefault(doi, [])[:0] or index[doi].append({'))
+        # The indentation is part of the target: `load_index` lost a `with open(...)` level on
+        # 2026-10-21 when its decoding moved into `snapshot_lines`, and this battery is what said
+        # so rather than silently mutating nothing.
+        mut = load_mutated(('        index.setdefault(doi, []).append({',
+                            '        index.setdefault(doi, [])[:0] or index[doi].append({'))
         # The shipped module keeps both rows for a twice-flagged DOI:
         self.assertEqual(len(self.index["10.1000/twice"]), 2)
         self.assertEqual(len(di.screen_reference("10.1000/twice", self.index)["rows"]), 2)
@@ -776,6 +798,132 @@ class MutationBattery(unittest.TestCase):
             len(mutation_tests), len(invariants),
             "%d mutations for %d named invariants" % (len(mutation_tests), len(invariants)))
 
+
+
+CP1252_QUOTE = b"\x92"   # Windows-1252 RIGHT SINGLE QUOTATION MARK, invalid as UTF-8
+
+
+def _snapshot_with_a_cp1252_byte(folder, name="retractionwatch_20261021.csv"):
+    """A snapshot CSV that is valid UTF-8 everywhere except one title. The measured case."""
+    path = os.path.join(folder, name)
+    header = (b"Record ID,Title,Journal,OriginalPaperDOI,OriginalPaperPubMedID,"
+              b"RetractionNature,RetractionPubMedID,RetractionDate,Reason\n")
+    bad = (b"1,The host" + CP1252_QUOTE + b"s response to infection,J Test,"
+           b"10.1000/first,11111111,Retraction,99999991,2026/02/01 0:00,+Error in Data\n")
+    # A row that is genuinely UTF-8 multi-byte, so a whole-file cp1252 fallback would mangle it
+    # and a per-line one cannot.
+    utf8 = ("2,Rodr\u00edguez on \u03b2-catenin,J Test,10.1000/second,11111112,"
+            "Correction,99999992,2026/03/01 0:00,+Error in Text\n").encode("utf-8")
+    with open(path, "wb") as fh:
+        fh.write(header + bad + utf8)
+    return path
+
+
+class ASnapshotThatIsNotUtf8StillBuilds(unittest.TestCase):
+    """🔴 Byte 0x92 in a title used to kill the pin build, and the pin could then only age.
+
+    Measured 2026-10-21. `UnicodeDecodeError: 'utf-8' codec can't decode byte 0x92` was raised by
+    `count_rows` and by `load_index`, which are reached from `build_pin` (so from the pin and
+    staleness path), from `cmd_fetch` and from every `screen`. The visible consequence was not the
+    traceback: it was that the pinned snapshot stayed at the last one that happened to be pure
+    ASCII, 41 days old, and every new manifest carried that block.
+    """
+
+    def setUp(self) -> None:
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.path = _snapshot_with_a_cp1252_byte(self.tmp.name)
+
+    def test_the_raw_bytes_really_are_undecodable_as_utf8(self) -> None:
+        """The premise of every assertion below, asserted rather than assumed."""
+        with open(self.path, "rb") as fh:
+            raw = fh.read()
+        self.assertIn(CP1252_QUOTE, raw)
+        with self.assertRaises(UnicodeDecodeError):
+            raw.decode("utf-8")
+
+    def test_the_rows_are_counted_and_the_index_builds_and_resolves(self) -> None:
+        report = {}
+        self.assertEqual(2, di.count_rows(self.path, report))
+        self.assertEqual(1, report["fallback_lines"], "only the offending line uses the fallback")
+        index = di.load_index(self.path)
+        # DOIs are ASCII, so the index is unaffected by the codec — and it must still RESOLVE.
+        self.assertIn("10.1000/first", index)
+        row = index["10.1000/first"][0]
+        self.assertEqual("Retraction", row["nature"])
+        screened = di.screen_reference("10.1000/first", index)
+        self.assertEqual("FLAGGED_RETRACTION", screened["verdict"])
+
+    def test_the_character_is_recovered_not_replaced(self) -> None:
+        """cp1252, not errors="replace": the title is passed verbatim into a manifest block."""
+        title = di.load_index(self.path)["10.1000/first"][0]["title"]
+        self.assertEqual("The host\u2019s response to infection", title)
+        self.assertNotIn("\ufffd", title)
+
+    def test_a_valid_utf8_row_is_not_mangled_by_the_fallback(self) -> None:
+        """Per-line, not per-file: a whole-file cp1252 read would give 'RodrÃ\xadguez'."""
+        title = di.load_index(self.path)["10.1000/second"][0]["title"]
+        self.assertEqual("Rodr\u00edguez on \u03b2-catenin", title)
+
+    def test_the_pin_builds_over_it(self) -> None:
+        pin = di.build_pin(self.path)
+        self.assertEqual(2, pin["rows"])
+        self.assertEqual(os.path.basename(self.path), pin["filename"])
+        self.assertEqual(64, len(pin["sha256"]))
+
+
+class ThePinAdvancesToTheNewestSnapshot(unittest.TestCase):
+    """🔴 `fetch` then `pin` used to re-pin the snapshot already named by the pin.
+
+    Measured 2026-10-21 with a 2026-09-10 and a 2026-10-02 snapshot both on disk: `pin` reported
+    the older one, because `snapshot_path(read_pin())` prefers the pinned filename whenever it is
+    still present. The command's own output says "next: pin --write", so a no-op there is how a
+    snapshot ages without anybody making a mistake.
+    """
+
+    def setUp(self) -> None:
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.old = _snapshot_with_a_cp1252_byte(self.tmp.name, "retractionwatch_20260910.csv")
+        self.new = _snapshot_with_a_cp1252_byte(self.tmp.name, "retractionwatch_20261021.csv")
+        self.pin_file = os.path.join(self.tmp.name, "pin.json")
+        with open(self.pin_file, "w", encoding="utf-8") as fh:
+            json.dump({"filename": os.path.basename(self.old), "fetched": "2026-09-10"}, fh)
+        for name, value in (("SNAPSHOT_DIR", self.tmp.name), ("PIN_PATH", self.pin_file)):
+            original = getattr(di, name)
+            setattr(di, name, value)
+            self.addCleanup(setattr, di, name, original)
+
+    def _pin(self, **kwargs):
+        args = type("A", (), {"write": False, "snapshot": None, **kwargs})()
+        out = io.StringIO()
+        with redirect_stdout(out):
+            self.assertEqual(0, di.cmd_pin(args))
+        return out.getvalue()
+
+    def test_pin_names_the_newest_snapshot_and_says_it_advanced(self) -> None:
+        printed = self._pin()
+        self.assertIn("advancing pin", printed)
+        self.assertEqual("retractionwatch_20261021.csv",
+                         json.loads(printed[printed.index("{"):])["filename"])
+
+    def test_redirecting_PIN_PATH_actually_redirects_read_pin(self) -> None:
+        """🔴 The premise of the two tests above, and it was false for an afternoon.
+
+        `read_pin` took `path=PIN_PATH` as a DEFAULT ARGUMENT, evaluated once at definition time,
+        so patching the module global did not reach it: both tests read the repository's real pin
+        and passed only because it happened to name the same snapshot this fixture calls old. They
+        went red the moment the real pin advanced to 2026-10-21. A test that is green for the wrong
+        reason is worse than a red one, so the premise is now asserted directly.
+        """
+        self.assertEqual(os.path.basename(self.old), di.read_pin()["filename"])
+        self.assertEqual("2026-09-10", di.read_pin()["fetched"])
+
+    def test_an_explicit_snapshot_is_honoured(self) -> None:
+        printed = self._pin(snapshot=self.old)
+        self.assertEqual("retractionwatch_20260910.csv",
+                         json.loads(printed[printed.index("{"):])["filename"])
+        self.assertNotIn("advancing pin", printed)
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

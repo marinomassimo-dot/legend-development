@@ -103,6 +103,59 @@ Every rejection declares **what would revive it**. If the trigger fires, the rej
 | **D-39** | *a read-through or NMD-inhibiting drug that restores full-length protein restores the phenotype* | 🔴 **Measured false in the one study that ran a comparator in the same patient-derived cells**: amlexanox raised full-length FANCA to about 9 % of healthy control and reduced p53 by about 40 %, and produced **no** improvement in survival under mitomycin C, **no** reduction of diepoxybutane-induced chromosomal aberrations and **no** significant reduction of micronuclei, while ataluren did all three. Its measured action was attributed by the authors to **TBK1/IKKε inhibition, not read-through**. The authors state the general form themselves: *«a partial downregulation of p53 per se is not sufficient to produce phenotypic rescue in human cells»*. And in the originating paper the full-length species can be the **minor** one — *«a truncated p53 protein was well detected»* against *«a very low level of full-length p53»* — while the only quantitative function measurement lands at *«about 20% of the CFTR activity … measured in Calu-3 cells»*, a comparator the authors themselves say over-expresses the protein | A whole therapeutic road was about to be weighted on protein-quantity data. **Detection rule: for any restoration lever — read-through, NMD inhibition, chaperone, boost or gene addition — ask for the FUNCTION endpoint in the same breath as the abundance endpoint, and ask it of the same cells. Abundance without function is half a result, and in this gene the inert half is already documented (`P282A`: stable and completely inert).** It is `D-04` seen from the pharmacological side |
 | **D-40** | *(meta)* *`len()` of the thing I asked for is the size of what is in it* | 🔴 **FALSE whenever the node is a mapping and not a list, and the wrong answer arrives as a plausible small integer.** `BATCH_20261019_008` re-measured two manifests' locator counts with a loop that did `len(d['verbatim_locators'])`. In both files that key holds an **object**, not an array — `waived`, `source_fulltext_indexed`, `source_fulltext_indexed_evidence`, `entries`, `note`, `artifact_locality_note` — so `len()` returned **6, the number of wrapper keys**, identically for both files. The true counts are `len(d['verbatim_locators']['entries'])` = **11** and **9**, exactly what the candidate had declared. The integrator then reported the candidate as wrong, wrote `6 persisted verbatim locators` into two canonical `PAPER` records, and offered the discrepancy as a finding — a miscount wearing the clothes of a careful verification. **Two tells were visible and both were read as corroboration:** the two unrelated files returned the *same* number (a count of a shared schema, not of two different readings), and that number disagreed with the author's declaration in the *same direction for both*. **Detection rule:** never size a JSON node without asserting its type — `assert isinstance(x, list)` before `len(x)`, or name the leaf (`['entries']`) explicitly; and when a re-measurement contradicts an author's declaration, the first hypothesis is that the instrument is wrong, not the author (`D-05`, `D-06`: implementation wins silently). A count that lands identically on two different artefacts is measuring something they share. | A correct declaration was published as a defect, and a false count landed in `PAPER 427` and `PAPER 428` until the coordinator re-measured it the same day. **Id allocated 2026-10-21 by `orchestrator` as `max(D-nn) + 1` = `D-40`**; `D-39` was the maximum present. Repaired in place by `BATCH_20261019_009` with the superseded wording quoted in each record. |
 
+### 🔢 Allocator addendum — appended 2026-10-21 (ACTOR_ID `plan`, `PLAN-SURFACE-RANKING-20261021`), append-only
+
+*No row above is added, removed or renumbered by this block. It is a **provenance statement**: it says
+what a reader should conclude on meeting a `D-` number that is cited as a detection rule and is not in
+the table. The head note of this section reserves `D-27`–`D-30`; it is silent about `D-31`–`D-36`, which
+are in the same state and which two live research surfaces cite. That silence was the reporting defect,
+and this block closes it without minting anything.*
+
+**Established by measurement, not from the batch records.** `git log -S'| **D-nn** |'` over this file
+returns **zero commits for every one of `D-27` … `D-36`**: no row for any of those ten ids has ever
+existed in this repository's history. So nothing was lost and nothing was silently renumbered — the ids
+were **proposed** by seven commit candidates of 2026-09-22 and the batches that adjudicated them
+(`BATCH_20260927_003`, `BATCH_20260927_004`) allocated the next free numbers instead, recording the
+mapping in each candidate's disposition. Three proposals were minted under lower ids. Four were never
+minted at all: their candidates closed **PROPAGATED with "no operation list"**, so the `D-` row fell out
+of scope while prose that already cited the proposed number stayed. **No queued work will produce them**
+— the candidates are closed.
+
+| Proposed id | State | Minted as | Where the formulation lives |
+|---|---|---|---|
+| `D-17` | RESERVED by the operator; no row, and the id is not to be reused | — | the head note of this section |
+| `D-27`, `D-28`, `D-29` | never proposed by any candidate; skipped by the allocator | — | — |
+| `D-30` | proposed, minted under another id | `D-26` (the alias is in that row) | `CC-20260922-EXON7-NATURAL-EXPERIMENT-01` |
+| `D-31` | **proposed, NEVER MINTED**, and cited as a rule | — | `CC-20260922-POSTDIAGNOSIS-WINDOW-01` §1 |
+| `D-32` | proposed, minted under another id | `D-20` | `CC-20260922-POSTNATAL-SVZ-01` |
+| `D-33` | **proposed, NEVER MINTED**, and cited as a rule | — | `CC-20260922-TX007-DOSE-CHALLENGE-01` |
+| `D-34` | proposed, minted under another id | `D-21` | `CC-20260922-MODEL-HORIZON-01` |
+| `D-35` | **proposed, NEVER MINTED**, and cited as a rule | — | `CC-20260922-GTGT-CNS-QUALIFICATION-01` §4 |
+| `D-36` | **proposed, NEVER MINTED**, and cited as a rule | — | `CC-20260922-GTGT-CNS-QUALIFICATION-01` §4 |
+
+🔴 **What a reader does with `D-31`, `D-33`, `D-35` or `D-36` today.** Read it as a **citation to a
+proposed rule, not to a row of this table**, and open the candidate named beside it for the formulation.
+The four live citations are: `discovery_ledger_current.md` (`D-31` twice, `D-33`, `D-35`) and
+`full_text_queue_current.md` (`D-31`, `D-36`). **This block does not reproduce their wording**, because
+reproducing a detection rule here is how a row gets minted by accident; the candidates hold the text.
+
+🔴 **Two different repairs remain, and neither is this task's.** Minting the four rows is a `BATCH_COMMIT`
+act performed by the integrator from a commit candidate — the table is this ledger's canonical content.
+Repairing the four citations in place is also a `BATCH_COMMIT` act, on two research current files. Harness
+Engineering can append this provenance and nothing more, so it appended this and stopped. **Recorded
+rather than fixed, which is the repair that loses nothing** — the same disposition the head note's own
+`N6` finding took in 2026-09-28.
+
+🟢 **The allocator hazard itself is already closed, and that is why no row is minted in haste.** The
+table's maximum id now sits **above** this whole range, so the head note's `max(D-nn) + 1` can no longer
+return a number a live surface cites. **Re-derive that maximum from the table, never from this
+sentence** — the table grows, and a number written here would be stale by the next batch. What remains
+is the dangling-citation defect, and
+[`scripts/test_detection_rule_citations_resolve.py`](../../../scripts/test_detection_rule_citations_resolve.py)
+now measures it: it parses the table above, holds the unresolved set at exactly these four, and goes red
+the moment a fifth non-existent rule is cited from a live surface.
+
+
 ---
 
 ## Active rejections

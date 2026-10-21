@@ -267,18 +267,71 @@ def snapshot_path(pin=None):
     return os.path.join(SNAPSHOT_DIR, found[-1]) if found else None
 
 
-def read_pin(path=PIN_PATH):
+def read_pin(path=None):
+    """🔴 PIN_PATH is resolved at CALL time, not bound into the signature as a default.
+
+    It used to read `def read_pin(path=PIN_PATH)`, and a default argument is evaluated once when
+    the function is defined — so a caller that redirects `dependency_integrity.PIN_PATH` at a
+    temporary file still read the repository's real pin. Measured 2026-10-21: two tests that patch
+    PIN_PATH to a fixture passed for a whole afternoon because the real pin happened to name the
+    same snapshot the fixture called "old", and went red the moment the real pin advanced — a test
+    that was green for the wrong reason, which is worse than a red one. `paper_pmids` and
+    `claim_paper_links` carry the same pattern against read-only registries; they are not fixed
+    here because nothing redirects them, and a change nobody needs is a change nobody tested.
+    """
+    path = path or PIN_PATH
     if not os.path.exists(path):
         return None
     with open(path, encoding="utf-8") as fh:
         return json.load(fh)
 
 
-def count_rows(path):
+# 🔴 THE SNAPSHOT IS NOT ALWAYS UTF-8, AND A BARE encoding="utf-8" TURNS THAT INTO AN OUTAGE.
+# Measured 2026-10-21: a current Retraction Watch snapshot carries byte 0x92 in a title — a
+# Windows-1252 right single quotation mark, from a publisher's metadata — and
+# `UnicodeDecodeError: 'utf-8' codec can't decode byte 0x92` killed the pin build at
+# `count_rows`. The consequence was not an error message anybody acted on: the pin simply stayed
+# at the last snapshot that happened to be pure ASCII, 41 days old, and every new manifest carried
+# that stale `retraction_check.dependencies` block. A dependency check whose snapshot can only age
+# is a check that will eventually report clean about a paper retracted after it.
+#
+# cp1252 rather than errors="replace", and PER LINE rather than for the whole file. cp1252 decodes
+# every byte 0x00-0xFF, so this can never raise, and it recovers the actual character instead of
+# substituting U+FFFD into a title that is passed through verbatim into a manifest block. Per line,
+# because only the offending line should be read through the fallback: a snapshot that is valid
+# UTF-8 apart from three rows stays UTF-8 for all the others, and a UTF-8 multi-byte character on
+# a clean line is never mangled into two cp1252 characters. DOIs are ASCII, so the index this
+# feeds is unaffected either way — what the fallback saves is the TITLE, the JOURNAL and the
+# REASON, the three fields a reader actually reads.
+SNAPSHOT_FALLBACK_CODEC = "cp1252"
+
+
+def snapshot_lines(path, report=None):
+    """Decoded physical lines of a snapshot CSV: UTF-8, falling back to cp1252 line by line.
+
+    Streams, so a 67 MB snapshot is read once and never held in memory. `report`, when a dict is
+    passed, receives `fallback_lines` — the count of lines that were not valid UTF-8, which is a
+    fact worth printing and not worth failing on.
+
+    Each yielded string keeps its line terminator, so `csv.reader` still handles a newline inside
+    a quoted field exactly as it does for a file opened with `newline=""`.
+    """
+    fallbacks = 0
+    with open(path, "rb") as fh:
+        for raw in fh:
+            try:
+                yield raw.decode("utf-8")
+            except UnicodeDecodeError:
+                fallbacks += 1
+                yield raw.decode(SNAPSHOT_FALLBACK_CODEC)
+    if report is not None:
+        report["fallback_lines"] = fallbacks
+
+
+def count_rows(path, report=None):
     n = 0
-    with open(path, newline="", encoding="utf-8") as fh:
-        for _ in csv.DictReader(fh):
-            n += 1
+    for _ in csv.DictReader(snapshot_lines(path, report)):
+        n += 1
     return n
 
 
@@ -363,27 +416,29 @@ def days_since_fetch(pin):
 
 # --- the index ------------------------------------------------------------
 
-def load_index(path):
-    """doi -> list of row dicts. Every row is kept (failure mode 4)."""
+def load_index(path, report=None):
+    """doi -> list of row dicts. Every row is kept (failure mode 4).
+
+    Decoding goes through `snapshot_lines`: see the note there on byte 0x92.
+    """
     index = {}
-    with open(path, newline="", encoding="utf-8") as fh:
-        for row in csv.DictReader(fh):
-            doi = normalise_doi(row.get("OriginalPaperDOI"))
-            if not doi:
-                continue
-            index.setdefault(doi, []).append({
-                "record_id": (row.get("Record ID") or "").strip(),
-                "title": (row.get("Title") or "").strip(),
-                "journal": (row.get("Journal") or "").strip(),
-                "original_doi": doi,
-                "original_pmid": (row.get("OriginalPaperPubMedID") or "").strip(),
-                "nature": (row.get("RetractionNature") or "").strip(),
-                "verdict": classify_nature(row.get("RetractionNature")),
-                "retraction_pmid": (row.get("RetractionPubMedID") or "").strip(),
-                "retraction_date": (row.get("RetractionDate") or "").strip(),
-                # Reason is passed through verbatim and never parsed (failure mode 5).
-                "reason": (row.get("Reason") or "").strip(),
-            })
+    for row in csv.DictReader(snapshot_lines(path, report)):
+        doi = normalise_doi(row.get("OriginalPaperDOI"))
+        if not doi:
+            continue
+        index.setdefault(doi, []).append({
+            "record_id": (row.get("Record ID") or "").strip(),
+            "title": (row.get("Title") or "").strip(),
+            "journal": (row.get("Journal") or "").strip(),
+            "original_doi": doi,
+            "original_pmid": (row.get("OriginalPaperPubMedID") or "").strip(),
+            "nature": (row.get("RetractionNature") or "").strip(),
+            "verdict": classify_nature(row.get("RetractionNature")),
+            "retraction_pmid": (row.get("RetractionPubMedID") or "").strip(),
+            "retraction_date": (row.get("RetractionDate") or "").strip(),
+            # Reason is passed through verbatim and never parsed (failure mode 5).
+            "reason": (row.get("Reason") or "").strip(),
+        })
     return index
 
 
@@ -722,17 +777,34 @@ def cmd_fetch(args):
     dest = fetch_snapshot()
     sha, size = _digest_and_size(dest)
     print("fetched %s\n  bytes=%d\n  sha256=%s" % (dest, size, sha))
-    print("  rows=%d" % count_rows(dest))
+    report = {}
+    print("  rows=%d" % count_rows(dest, report))
+    if report.get("fallback_lines"):
+        print("  %d line(s) were not valid UTF-8 and were decoded as %s — a fact, not an error"
+              % (report["fallback_lines"], SNAPSHOT_FALLBACK_CODEC))
     print("no email address was sent to the endpoint")
     print("next: dependency_integrity.py pin --write")
     return 0
 
 
 def cmd_pin(args):
-    path = snapshot_path(read_pin())
+    # 🔴 PIN THE NEWEST SNAPSHOT ON DISK, not the one already pinned. `snapshot_path(read_pin())`
+    # returns the PINNED file whenever it is still present, so `fetch` followed by the `pin` its
+    # own output recommends re-pinned the old snapshot and printed a new `fetched` date beside the
+    # old filename, bytes, sha256 and row count. Measured 2026-10-21: with a 2026-09-10 and a
+    # 2026-10-02 snapshot both on disk, `pin` reported the 2026-09-10 one. Combined with the 0x92
+    # decode failure above, that is how a snapshot reaches 41 days old with nobody having made a
+    # mistake. `--snapshot` names one explicitly when the newest is not what is wanted.
+    current = read_pin()
+    path = args.snapshot or snapshot_path(None)
     if path is None:
         sys.stderr.write("no snapshot under %s (run: fetch)\n" % SNAPSHOT_DIR)
         return 3
+    if not os.path.exists(path):
+        sys.stderr.write("no such snapshot: %s\n" % path)
+        return 3
+    if current and current.get("filename") != os.path.basename(path):
+        print("advancing pin: %s -> %s" % (current.get("filename"), os.path.basename(path)))
     pin = build_pin(path)
     if args.write:
         os.makedirs(os.path.dirname(PIN_PATH), exist_ok=True)
@@ -1013,8 +1085,10 @@ def build_parser():
 
     sub.add_parser("fetch", help="download the CC0 snapshot (key-less, no email sent)")
 
-    q = sub.add_parser("pin", help="compute the pin over the local snapshot")
+    q = sub.add_parser("pin", help="compute the pin over the NEWEST local snapshot")
     q.add_argument("--write", action="store_true", help="write %s" % PIN_PATH)
+    q.add_argument("--snapshot", default=None,
+                   help="pin this snapshot file instead of the newest one on disk")
 
     sub.add_parser("verify", help="verify the local snapshot against the pin")
     sub.add_parser("control", help="run the positive control (PMID 16223882)")

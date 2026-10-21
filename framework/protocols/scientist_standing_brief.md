@@ -105,7 +105,13 @@ take the next paper in your reserve list.
 resume; a context holding LEGEND's conclusion declares `QUESTION_DRIVEN`
 ([`fulltext_read_receipt.md`](fulltext_read_receipt.md#before-reading-context-policy)). Then the
 whole article, section by section, and every figure **as an image at native resolution** — a
-caption read is `captions_only`. Pair images to captions from the XML
+caption read is `captions_only`. **Which surface IS the native one is a measurement, not a habit:**
+`python3 framework/scripts/paper_packet.py rank --pmid <PMID>` orders every figure-bearing surface
+on disk by measured effective ppi, and flags the figure whose panels are probably **vector**, where
+extracting the embedded raster returns a fragment and the PAGE must be rendered instead. It gates
+nothing and writes nothing; what it prevents is reading at 104 ppi while a 300 dpi raster sits
+undeclared in a PDF on disk, which is how sixteen figure attestations were written on one paper.
+Pair images to captions from the XML
 (`figure_legend_pairs.py <xml> --figures <dir>`): file numbers are not figure numbers. Capture every
 locator **while the document is open** into `verbatim_locators`. The abstract is never an
 evidentiary surface. Four rules, each in its normative home:
