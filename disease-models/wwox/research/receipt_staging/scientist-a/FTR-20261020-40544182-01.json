@@ -1,0 +1,42 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261020-40544182-01",
+ "study_id": {
+  "pmid": "40544182",
+  "doi": "10.1038/s41420-025-02571-0"
+ },
+ "analysis_at": "2026-10-20T22:30:00Z",
+ "event_at": "2026-10-20T22:30:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a (Scientist A), drug-repurposing P3 known-roads reconnaissance, task REPURP-P3-KNOWNROADS-A-20261020 on branch task/REPURP-P3-KNOWNROADS-A-20261020; context_policy SOURCE_FIRST (first_read). Read as the independent test of the amlexanox read-through claim of PMID 22938201, read first in the same task and in publication order. Route: NCBI efetch PMC JATS for PMC12182573 with an empty User-Agent, into the shared root files/ tree. The whole body was read section by section; FIGURES WERE NOT INSPECTED AS IMAGES and coverage records figures as captions_only; the Supplementary Data and Original Data containers (Supplementary Table 1 with the cell models' genetics, Supplementary Figures 1-4) were not fetched and supplementary is recorded as not_read, which is a declared reading debt. Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema (MANIFEST STRICT PASS, 0 gaps, 9 locators, exact text match against the artefact). Prepared as a staged JSON and NOT appended: the Orchestrator records staged receipts in event-ID order.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID40544182_Hristodor2025_PMC_2026-10-20.xml",
+ "source_fingerprint": "5c891d7f4c690a384da794b691d4bc50488adc5b7daa621d9c20040f72507374",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID40544182.json",
+  "disease-models/wwox/research/repurposing_known_roads_20261020_scientist-a.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "No table-wrap element exists in the article body; tables are recorded as not_present and the only tabular object named (Supplementary Table 1) sits in the unfetched supplement",
+  "No limitations section exists; the limits quoted in the manifest are sentences of the Discussion and of the figure captions",
+  "Figures read as captions only - no panel value, bracket or significance mark is asserted from this reading; the group sizes quoted come from the captions' own printed n",
+  "Reference-list integrity screened: dependency_integrity.py SCREENED_CLEAN over 43 of 43 references, snapshot 2026-09-10"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
