@@ -1,0 +1,436 @@
+{
+ "schema_version": 2,
+ "pmid": "31402619",
+ "doi": "10.1002/acn3.50826",
+ "receipt": "FTR-20261021-31402619-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named and deduplicated by the Orchestrator's selection file; the per-paper M0 packet and receipt status were run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "The reading is a primary-evidence read of a NOT WWOX EVIDENCE paper; the dossier is the analysis note section, no WWOX commit candidate is implied."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No consolidated baseline claim is narrowed or reversed by this reading; a blind audit is declared OWED where a candidate proposes it."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Not requested; discovery leads are staged separately if any."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a candidate card; BLOCK-1 holds, class level only."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Child Neurology and Pathology departments of Amsterdam University Medical Centers (from the affiliations in the XML); a leukodystrophy group using knock-in mice and patient tissue; one author declares a pending patent on a different compound in the same disease. NOT WWOX EVIDENCE; a class-level precedent for a modulator tested on a missense disease with a myelin endpoint."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "vanishing white matter AND ISRIB",
+    "count": 10,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "eIF2B AND missense AND integrated stress response",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "polysome profiling AND missense AND mouse brain",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "PubMed counts, dated; a zero from a title/abstract query licenses 'no paper is indexed', never 'this was never measured' (D-37)."
+ },
+ "multihop": {
+  "references_enumerated": 43,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "43 references enumerated from the JATS; none is WWOX-related."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 31402619 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-21 via PubMed efetch for PMID 31402619: publication types ['Journal Article', \"Research Support, Non-U.S. Gov't\"]; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 43,
+   "references_screened": 42,
+   "references_with_doi": 42,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID31402619_Abbink2019_PMC6689685.xml",
+   "sha256": "52eb6a4e75c1b84acd479e549794c9df43597b08cd98dc446428d31d4a0bbcb2",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC6689685: whole article; every text locator is matched against it.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6689685/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "52eb6a4e75c1b84acd479e549794c9df43597b08cd98dc446428d31d4a0bbcb2",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID31402619/ACN3-6-1407-g001.jpg",
+   "sha256": "f6a9952c60c165f69d186e6105ad90a854285e4480c48616272f8270126149ca",
+   "kind": "figure",
+   "note": "Figure 1 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6689685/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "f6a9952c60c165f69d186e6105ad90a854285e4480c48616272f8270126149ca",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID31402619/ACN3-6-1407-g002.jpg",
+   "sha256": "2e7cd70bd19566a83c4ba557f6c412a3804623585b5514ed701b4be14fa0d65b",
+   "kind": "figure",
+   "note": "Figure 2 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6689685/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "2e7cd70bd19566a83c4ba557f6c412a3804623585b5514ed701b4be14fa0d65b",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID31402619/ACN3-6-1407-g003.jpg",
+   "sha256": "d87dfcee99f507c52aa5e0bb1322ceca99d2f2525e9a2048333ea23a207dba34",
+   "kind": "figure",
+   "note": "Figure 3 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6689685/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "d87dfcee99f507c52aa5e0bb1322ceca99d2f2525e9a2048333ea23a207dba34",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID31402619/ACN3-6-1407-g004.jpg",
+   "sha256": "503d06e13b91b3260b3b400676e0ec8b55156bbe02fa2834b1ff2d39af1bb6b0",
+   "kind": "figure",
+   "note": "Figure 4 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6689685/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "503d06e13b91b3260b3b400676e0ec8b55156bbe02fa2834b1ff2d39af1bb6b0",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID31402619/ACN3-6-1407-g005.jpg",
+   "sha256": "982ed96b1f0d5a4b2c1d30b1e5c660bd94aa72b33f9275ad68a6043e820d44fe",
+   "kind": "figure",
+   "note": "Figure 5 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6689685/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "982ed96b1f0d5a4b2c1d30b1e5c660bd94aa72b33f9275ad68a6043e820d44fe",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID31402619/ACN3-6-1407-g006.jpg",
+   "sha256": "7ddc56e87ccb4130fe348154ddb61cf249693a3943e3395dd747744e82ef7c2f",
+   "kind": "figure",
+   "note": "Figure 6 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6689685/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "7ddc56e87ccb4130fe348154ddb61cf249693a3943e3395dd747744e82ef7c2f",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID31402619/ACN3-6-1407-g007.jpg",
+   "sha256": "89fedbdc7415c5e22f1ccb35a59885645b378a2963fe3a2a2935399789eefe24",
+   "kind": "figure",
+   "note": "Figure 7 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6689685/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "89fedbdc7415c5e22f1ccb35a59885645b378a2963fe3a2a2935399789eefe24",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID31402619/ACN3-6-1407-s009.docx",
+   "sha256": "5dbfa78fc2b3f1b1c667a4a00525a28ac738037e721b03d4b1c8af703ea7b864",
+   "kind": "supplement_binary",
+   "note": "Supplementary Materials and Methods (Word): the article body carries no Methods section, so the methods were read from this file; its text is matched through the verifier.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6689685/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "5dbfa78fc2b3f1b1c667a4a00525a28ac738037e721b03d4b1c8af703ea7b864",
+    "derived": false
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE (eIF2B, a translation-initiation factor with recessive missense alleles). Polysomal profiling of knock-in forebrain shows bulk translation is not grossly changed by the mutation.",
+    "snippet": "The polysomal profiles from WT and 2b5ho samples were similar, showing that bulk mRNA translation was not grossly affected by the mutation (Fig. S1).",
+    "anchor": "Results, Increased expression of ATF4-driven transcriptome, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31402619_Abbink2019_PMC6689685.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Vanishing white matter (VWM): knock-in mice with missense mutations in eIF2B subunits (2b5ho, 2b4ho2b5he), cultured mouse astrocytes, and post-mortem human white matter; polysomal profiling of forebrain and a daily-injection trial of an eIF2B activator-class compound; NOT a WWOX system",
+     "genotype": "Eif2b5 Arg191His and Eif2b4 Arg484Trp (homozygous or crossed); no WWOX",
+     "endpoint": "polysome-associated mRNAs, ATF4-regulated transcripts, neuroscore, balance beam, gait, astrocyte and myelin markers, drug levels in blood and brain"
+    }
+   },
+   {
+    "proposition": "The method reads which mRNAs sit on ribosomes, not the amount of the mutant protein: 176 mRNAs differ in polysome association, but most altered mRNAs were raised in monosome and polysome fractions alike, which the authors read as transcript-level change, so polysome profiling by itself does not separate translational from transcript regulation.",
+    "snippet": "Most mRNAs with altered translation rates were increased in monosome and polysome fractions from 2b5ho mouse brains, indicating that these mRNAs were regulated at transcript level.",
+    "anchor": "Results, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31402619_Abbink2019_PMC6689685.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Vanishing white matter (VWM): knock-in mice with missense mutations in eIF2B subunits (2b5ho, 2b4ho2b5he), cultured mouse astrocytes, and post-mortem human white matter; polysomal profiling of forebrain and a daily-injection trial of an eIF2B activator-class compound; NOT a WWOX system",
+     "genotype": "Eif2b5 Arg191His and Eif2b4 Arg484Trp (homozygous or crossed); no WWOX",
+     "endpoint": "polysome-associated mRNAs, ATF4-regulated transcripts, neuroscore, balance beam, gait, astrocyte and myelin markers, drug levels in blood and brain"
+    }
+   },
+   {
+    "proposition": "The profiling method is a cleared cytoplasmic lysate: 0.5 percent Triton and 0.5 percent deoxycholate, with nuclei, membranes and debris removed by a spin and the supernatant loaded on a sucrose gradient, so any insoluble pool is discarded by design.",
+    "snippet": "triturated three times with a 23G needle and centrifuged for 10min at 4",
+    "anchor": "Supplementary Materials and Methods, Sample preparation",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID31402619/ACN3-6-1407-s009.docx",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Vanishing white matter (VWM): knock-in mice with missense mutations in eIF2B subunits (2b5ho, 2b4ho2b5he), cultured mouse astrocytes, and post-mortem human white matter; polysomal profiling of forebrain and a daily-injection trial of an eIF2B activator-class compound; NOT a WWOX system",
+     "genotype": "Eif2b5 Arg191His and Eif2b4 Arg484Trp (homozygous or crossed); no WWOX",
+     "endpoint": "polysome-associated mRNAs, ATF4-regulated transcripts, neuroscore, balance beam, gait, astrocyte and myelin markers, drug levels in blood and brain"
+    }
+   },
+   {
+    "proposition": "The paper reports no measurement of the mutant eIF2B protein level or solubility (0 occurrences of 'abundance' or 'eIF2B protein' in the article XML; the supplementary methods list Western blots for eIF2alpha phosphorylation and 4E-BP1 only): the treatment is evaluated by pathway read-outs and function, not by recovery of mutant protein quantity.",
+    "snippet": "ISRIB stabilizes the eIF2B complex formation through interaction with the eIF2Bδ:eIF2Bβ interface33, 34.",
+    "anchor": "Discussion, paragraph 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31402619_Abbink2019_PMC6689685.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Vanishing white matter (VWM): knock-in mice with missense mutations in eIF2B subunits (2b5ho, 2b4ho2b5he), cultured mouse astrocytes, and post-mortem human white matter; polysomal profiling of forebrain and a daily-injection trial of an eIF2B activator-class compound; NOT a WWOX system",
+     "genotype": "Eif2b5 Arg191His and Eif2b4 Arg484Trp (homozygous or crossed); no WWOX",
+     "endpoint": "polysome-associated mRNAs, ATF4-regulated transcripts, neuroscore, balance beam, gait, astrocyte and myelin markers, drug levels in blood and brain"
+    }
+   },
+   {
+    "proposition": "Function endpoints were measured: balance beam slips fall in treated mutant mice (read from Figure 5C: 2b5ho about 16 to 5.5 slips, 2b4ho2b5he about 19 to 1.3, wild type about 1.3 to 2.5).",
+    "snippet": "Motor tests at the end of the experiment revealed that ISRIB improved performance of VWM mice in Balance Beam tests (Fig. 5C).",
+    "anchor": "Results, ISRIB injections differentially normalize clinical signs, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31402619_Abbink2019_PMC6689685.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Vanishing white matter (VWM): knock-in mice with missense mutations in eIF2B subunits (2b5ho, 2b4ho2b5he), cultured mouse astrocytes, and post-mortem human white matter; polysomal profiling of forebrain and a daily-injection trial of an eIF2B activator-class compound; NOT a WWOX system",
+     "genotype": "Eif2b5 Arg191His and Eif2b4 Arg484Trp (homozygous or crossed); no WWOX",
+     "endpoint": "polysome-associated mRNAs, ATF4-regulated transcripts, neuroscore, balance beam, gait, astrocyte and myelin markers, drug levels in blood and brain"
+    }
+   },
+   {
+    "proposition": "Figure 5C-D read: placebo bars for both genotypes sit far from wild type; treatment moves the 2b4ho2b5he bars to near the wild-type level on slips, support diagonal, speed, cadence and stance, and moves the 2b5ho bars partway.",
+    "snippet": "average number of slips on balance beam",
+    "anchor": "Figure 5C-D (balance beam slips and CatWalk gait, by genotype and treatment)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID31402619/ACN3-6-1407-g005.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Vanishing white matter (VWM): knock-in mice with missense mutations in eIF2B subunits (2b5ho, 2b4ho2b5he), cultured mouse astrocytes, and post-mortem human white matter; polysomal profiling of forebrain and a daily-injection trial of an eIF2B activator-class compound; NOT a WWOX system",
+     "genotype": "Eif2b5 Arg191His and Eif2b4 Arg484Trp (homozygous or crossed); no WWOX",
+     "endpoint": "polysome-associated mRNAs, ATF4-regulated transcripts, neuroscore, balance beam, gait, astrocyte and myelin markers, drug levels in blood and brain"
+    },
+    "qualifies": "entries[4]",
+    "qualifies_needle": "Motor tests at the end of the experiment reve"
+   },
+   {
+    "proposition": "The effect is allele-dependent: gait effects are less consistent and less pronounced in the 2b5ho (Arg191His, epsilon subunit) than in the 2b4ho2b5he (delta Arg484Trp) mice.",
+    "snippet": "ISRIB effects on gait parameters were less consistent and less pronounced in 2b5ho than in 2b4ho2b5he mice (Fig. 5D, Fig. S8).",
+    "anchor": "Results, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31402619_Abbink2019_PMC6689685.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Vanishing white matter (VWM): knock-in mice with missense mutations in eIF2B subunits (2b5ho, 2b4ho2b5he), cultured mouse astrocytes, and post-mortem human white matter; polysomal profiling of forebrain and a daily-injection trial of an eIF2B activator-class compound; NOT a WWOX system",
+     "genotype": "Eif2b5 Arg191His and Eif2b4 Arg484Trp (homozygous or crossed); no WWOX",
+     "endpoint": "polysome-associated mRNAs, ATF4-regulated transcripts, neuroscore, balance beam, gait, astrocyte and myelin markers, drug levels in blood and brain"
+    }
+   },
+   {
+    "proposition": "Treatment normalises only part of the pathway read-outs: eIF2alpha phosphorylation is unchanged and ATF4-regulated mRNAs fall most clearly in the 2b4ho2b5he mice.",
+    "snippet": "ISRIB did not affect eIF2α phosphorylation levels in 2b5ho and 2b4ho2b5he mice, despite reduced Gadd34 mRNA levels (Fig. 6A).",
+    "anchor": "Results, ISRIB impacts expression of ISR mRNA markers, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31402619_Abbink2019_PMC6689685.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Vanishing white matter (VWM): knock-in mice with missense mutations in eIF2B subunits (2b5ho, 2b4ho2b5he), cultured mouse astrocytes, and post-mortem human white matter; polysomal profiling of forebrain and a daily-injection trial of an eIF2B activator-class compound; NOT a WWOX system",
+     "genotype": "Eif2b5 Arg191His and Eif2b4 Arg484Trp (homozygous or crossed); no WWOX",
+     "endpoint": "polysome-associated mRNAs, ATF4-regulated transcripts, neuroscore, balance beam, gait, astrocyte and myelin markers, drug levels in blood and brain"
+    }
+   },
+   {
+    "proposition": "Myelin read-outs improve in one genotype only: mature myelin transcripts, MBP and MOG staining are restored in 2b4ho2b5he mice, not in 2b5ho.",
+    "snippet": "ISRIB effects on myelin in VWM mice were evident in mature myelin Mbp and Mog mRNA levels, MBP protein levels and MOG immunohistochemistry in 2b4ho2b5he mice only (Fig. 6F and G, Fig. S9).",
+    "anchor": "Results, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31402619_Abbink2019_PMC6689685.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Vanishing white matter (VWM): knock-in mice with missense mutations in eIF2B subunits (2b5ho, 2b4ho2b5he), cultured mouse astrocytes, and post-mortem human white matter; polysomal profiling of forebrain and a daily-injection trial of an eIF2B activator-class compound; NOT a WWOX system",
+     "genotype": "Eif2b5 Arg191His and Eif2b4 Arg484Trp (homozygous or crossed); no WWOX",
+     "endpoint": "polysome-associated mRNAs, ATF4-regulated transcripts, neuroscore, balance beam, gait, astrocyte and myelin markers, drug levels in blood and brain"
+    }
+   },
+   {
+    "proposition": "Figure 6F-G read: Mbp and Mog mRNA bars for placebo 2b4ho2b5he sit below wild type (Mbp about 2.1 against about 3.3; Mog about 0.08 against about 0.11) and the treated bar returns to or above wild type; the 2b5ho placebo and treated bars are both near 2.7 to 3.1 (Mbp); the MOG staining panel is brown in treated and weak in placebo.",
+    "snippet": "ISRIB restored levels of mature myelin mRNA markers in 2b4ho2b5he mice.",
+    "anchor": "Figure 6F-G (myelin transcripts and MOG immunohistochemistry)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID31402619/ACN3-6-1407-g006.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Vanishing white matter (VWM): knock-in mice with missense mutations in eIF2B subunits (2b5ho, 2b4ho2b5he), cultured mouse astrocytes, and post-mortem human white matter; polysomal profiling of forebrain and a daily-injection trial of an eIF2B activator-class compound; NOT a WWOX system",
+     "genotype": "Eif2b5 Arg191His and Eif2b4 Arg484Trp (homozygous or crossed); no WWOX",
+     "endpoint": "polysome-associated mRNAs, ATF4-regulated transcripts, neuroscore, balance beam, gait, astrocyte and myelin markers, drug levels in blood and brain"
+    },
+    "qualifies": "entries[8]",
+    "qualifies_needle": "ISRIB effects on myelin in VWM mice were evid"
+   },
+   {
+    "proposition": "Treatment does not fully normalise the system; the authors state it leads to a better-compensated system that still partly depends on reduced eIF2alpha phosphorylation.",
+    "snippet": "Both findings suggest that ISRIB treatment does not fully normalize eIF2B activity, but leads to a better compensated system that still in part depends on reduced eIF2α phosphorylation.",
+    "anchor": "Discussion, paragraph 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31402619_Abbink2019_PMC6689685.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Vanishing white matter (VWM): knock-in mice with missense mutations in eIF2B subunits (2b5ho, 2b4ho2b5he), cultured mouse astrocytes, and post-mortem human white matter; polysomal profiling of forebrain and a daily-injection trial of an eIF2B activator-class compound; NOT a WWOX system",
+     "genotype": "Eif2b5 Arg191His and Eif2b4 Arg484Trp (homozygous or crossed); no WWOX",
+     "endpoint": "polysome-associated mRNAs, ATF4-regulated transcripts, neuroscore, balance beam, gait, astrocyte and myelin markers, drug levels in blood and brain"
+    }
+   },
+   {
+    "proposition": "Drug exposure was measured in blood and brain and was above the reported potency in all genotypes, so the genotype difference in effect is not an exposure difference.",
+    "snippet": "cannot be attributed to differences in ISRIB bioavailability in brain.",
+    "anchor": "Results, ISRIB impacts expression of ISR mRNA markers, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31402619_Abbink2019_PMC6689685.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Vanishing white matter (VWM): knock-in mice with missense mutations in eIF2B subunits (2b5ho, 2b4ho2b5he), cultured mouse astrocytes, and post-mortem human white matter; polysomal profiling of forebrain and a daily-injection trial of an eIF2B activator-class compound; NOT a WWOX system",
+     "genotype": "Eif2b5 Arg191His and Eif2b4 Arg484Trp (homozygous or crossed); no WWOX",
+     "endpoint": "polysome-associated mRNAs, ATF4-regulated transcripts, neuroscore, balance beam, gait, astrocyte and myelin markers, drug levels in blood and brain"
+    }
+   },
+   {
+    "proposition": "Mutation-specific sensitivity: the authors propose the compound may preferentially impact eIF2B with complex-destabilising mutations and that testing on patient cells may be required before use, i.e. a missense-specific response that depends on the lesion's mechanism.",
+    "snippet": "ISRIB may preferentially impact eIF2B with",
+    "anchor": "Discussion, paragraph 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31402619_Abbink2019_PMC6689685.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Vanishing white matter (VWM): knock-in mice with missense mutations in eIF2B subunits (2b5ho, 2b4ho2b5he), cultured mouse astrocytes, and post-mortem human white matter; polysomal profiling of forebrain and a daily-injection trial of an eIF2B activator-class compound; NOT a WWOX system",
+     "genotype": "Eif2b5 Arg191His and Eif2b4 Arg484Trp (homozygous or crossed); no WWOX",
+     "endpoint": "polysome-associated mRNAs, ATF4-regulated transcripts, neuroscore, balance beam, gait, astrocyte and myelin markers, drug levels in blood and brain"
+    }
+   },
+   {
+    "proposition": "Translational limits stated by the authors: low solubility, human bioavailability needing optimisation, and a soluble derivative reported in a separate study.",
+    "snippet": "Additionally, ISRIB has low solubility and its bioavailability in humans needs optimization.",
+    "anchor": "Discussion, paragraph 9",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31402619_Abbink2019_PMC6689685.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Vanishing white matter (VWM): knock-in mice with missense mutations in eIF2B subunits (2b5ho, 2b4ho2b5he), cultured mouse astrocytes, and post-mortem human white matter; polysomal profiling of forebrain and a daily-injection trial of an eIF2B activator-class compound; NOT a WWOX system",
+     "genotype": "Eif2b5 Arg191His and Eif2b4 Arg484Trp (homozygous or crossed); no WWOX",
+     "endpoint": "polysome-associated mRNAs, ATF4-regulated transcripts, neuroscore, balance beam, gait, astrocyte and myelin markers, drug levels in blood and brain"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST returned the whole article as fullTextXML for PMC6689685 (124 kB, 2026-10-21); the article body has no Methods section, which sits in the Supplementary Materials and Methods Word file from the supplementaryFiles container.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a figure legend or an inspected figure."
+ }
+}
