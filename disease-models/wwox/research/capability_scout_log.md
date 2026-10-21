@@ -1237,3 +1237,29 @@ new dependency, no individual-level material.
 
 **Next surgical micro-step:** none pending. The generic fix is shipped and routed; this entry is
 the measured fact it produced.
+
+## 2026-10-21 · scientist-a · REPURP-10H-P4-DEEP-A-20261022 · the candidate-card builder cannot represent a measured null
+
+**Gap (new; the log was searched for "measured null", "NO_CHANGE" and "repurposing_bridge" and holds
+no entry for it).** `framework/scripts/repurposing_bridge.py` accepts `direction` INCREASE, DECREASE
+or UNKNOWN only. A measured "not significant, not rescued" has no value of its own, so building the
+first twelve P4 packets forced five measured nulls to be entered as UNKNOWN (`DR-A01-003`,
+`DR-A01-004`, `DR-A02-003`, `DR-B01-002`, `DR-D01-002` under
+`disease-models/wwox/research/drug_repurposing/cards/`), and the built card then reads `direction
+unknown` for a result that was measured, indistinguishable from one never measured; the bridge, its
+documentation and the roadmap read UNKNOWN as *owed*. **Two related gaps from the same build:**
+one `disease_assertion` per packet, so a multi-endpoint candidate has one endpoint compared and every
+other measured endpoint is forced to "endpoint: mismatch"; and the card's `translation` block is a
+constant UNKNOWN with no input path and one `access` key where the roadmap demands separate
+`time_to_access` and `time_to_benefit`. The roadmap's other P4 fields have no typed slot.
+
+**Change made:** none to the bridge (a Harness agent owns it). Compensation shipped inside the
+scientist's own subdirectory: every null assertion carries a `measured_result_note` that states
+"MEASURED NO ..., UNKNOWN does NOT mean owed", and `cards/check_cards.py` is a disease-agnostic-in-spirit
+offline regression that fails a card with an absent P4 field, a score/rank key, a dose-looking
+token, an abstention without its missing datum, or a receipt id absent from the ledger.
+
+**Proposed fix, for Harness Engineering:** a declared fourth direction value (e.g. NO_CHANGE) that
+requires a comparator and a test, compares to nothing and is never pooled, with its own `limits` line;
+typed slots for the remaining P4 fields with the same UNKNOWN-not-absent rule; and a list of disease
+assertions keyed by endpoint. Cost: hours. **Cost / API / privacy risk:** none.
