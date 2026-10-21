@@ -30,7 +30,7 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "IN_PROGRESS",
+ "CURRENT_STATE": "COMPLETED",
  "assigned_on": "2026-10-21",
  "TASK_ACK": {
   "actor": "scientist-c",
@@ -45,6 +45,21 @@
   "mode": "PRIMARY_EVIDENCE_READ",
   "context_policy": "SOURCE_FIRST"
  },
- "DEFAULTS_TAKEN": [],
- "STOP_LOG": []
+ "DEFAULTS_TAKEN": [
+  "manifests QUESTION_DRIVEN (known-roads and scaffold read first)",
+  "publisher-JPEG-only figures read at that resolution and declared",
+  "docx/xlsx supplements read as text; supplementary figure images captions_only where not opened",
+  "partial receipts stated as partial_fulltext_read",
+  "registry comparison by PMID --hops 0 only",
+  "adjacent search stopped after one reading for context cost; four candidates left in the note"
+ ],
+ "STOP_LOG": [],
+ "RESULT": {
+  "readings": 17,
+  "manifests_pass": 17,
+  "receipts_staged": 17,
+  "commit_candidate": "CC-20261021-SCIENTIST-C-R3-A51-ATTRIBUTION-01",
+  "note": "disease-models/wwox/research/repurposing_10h_scientist-c_20261021.md",
+  "blind_audit": "OWED"
+ }
 }
