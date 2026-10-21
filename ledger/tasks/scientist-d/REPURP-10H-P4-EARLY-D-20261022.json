@@ -1,5 +1,5 @@
 {
- "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
  "_note": "Part of the ten-hour repurposing batch ORCH-REPURPOSING-10H-20261021. Adjacent and transferable literature: every paper that is not WWOX evidence is labelled NOT WWOX EVIDENCE, at class level, no dose, no paediatric suitability presumed, not medical advice.",
  "TASK_ID": "REPURP-10H-P4-EARLY-D-20261022",
  "DIRECTIVE_VERSION": 1,
@@ -39,6 +39,70 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-21"
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-10-21",
+ "TASK_ACK": {
+  "TASK_ID": "REPURP-10H-P4-EARLY-D-20261022",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "decision": "ACCEPTED",
+  "at": "2026-10-21T00:00:00Z"
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "REPURP-10H-P4-EARLY-D-20261022",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-d",
+  "timestamp": "2026-10-21T00:00:00Z",
+  "durable_pointer": "branch task/repurp-p4-early-d, worktree .claude/worktrees/p4-early-d"
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "No pharmacological-label client in the repository and no network in the bridge",
+   "default_taken": "label_lookup omitted on all nine cards, giving NOT_ATTEMPTED, never NO_MATCH_FOUND",
+   "why_safe": "the state says no search was run",
+   "what_would_have_differed": "a sanctioned label search would populate MATCH_FOUND, NO_MATCH_FOUND or QUERY_ERROR with its coverage"
+  },
+  {
+   "condition": "R2 note (T-type axis) exists only on branch task/repurp-10h-r2-b, commit 2de3fd28, not on main",
+   "default_taken": "built the T-type card from the branch copy, carried its narrowing of DL-MECH-170 as proposed and unaudited, cited by section number",
+   "why_safe": "labelled on the card; section-number check owed after landing",
+   "what_would_have_differed": "waiting would have left the T-type contrast without a card"
+  },
+  {
+   "condition": "The bridge requires a disease_assertion even for an axis with no disease direction, and has no field for most roadmap rows",
+   "default_taken": "an honest UNKNOWN disease assertion; the 19 uncovered roadmap rows, not_known, evaluation_frame and must_never as extras kept verbatim under input; presence enforced by check_cards.py",
+   "why_safe": "the extras survive unchanged and are checkable; no patch to repurposing_bridge.py",
+   "what_would_have_differed": "a bridge change, which a Harness agent owns"
+  },
+  {
+   "condition": "Whole-organism endpoints have no cell type",
+   "default_taken": "NOT_APPLICABLE_WHOLE_ORGANISM, stated on each assertion",
+   "why_safe": "avoids a context mismatch that is not biology",
+   "what_would_have_differed": "every comparison would be UNRESOLVED for a formal reason"
+  },
+  {
+   "condition": "Mouse age of the Wwox ethosuximide experiment is not carried by the notes read",
+   "default_taken": "developmental_stage UNKNOWN, so the comparison is UNRESOLVED",
+   "why_safe": "the age is a datum nobody read for this task",
+   "what_would_have_differed": "opening the primary again, which the brief limited to one decisive panel"
+  },
+  {
+   "condition": "session_self_eval.py returns FAIL on 22 ORPHAN_COMPLETE_READ lines",
+   "default_taken": "reported, not fixed",
+   "why_safe": "they belong to R3 and R4 receipts awaiting registry records; this task recorded or staged no receipt",
+   "what_would_have_differed": "nothing in this task"
+  }
+ ],
+ "STOP_LOG": [],
+ "RESULT": {
+  "cards": 9,
+  "candidate_cards": 3,
+  "abstention_cards": 6,
+  "directory": "disease-models/wwox/research/drug_repurposing/cards_early/",
+  "note": "disease-models/wwox/research/repurposing_10h_scientist-d_cards_20261022.md",
+  "self_evaluation": "disease-models/wwox/research/session_evaluations/2026-10-21_repurposing_P4_early_scientist-d.md",
+  "checker": "python3 disease-models/wwox/research/drug_repurposing/cards_early/check_cards.py --extra-source <R2 note> : PASS",
+  "owed": "blind audit of every card by another actor; section-number check of the R2 citations after it lands; Harness decision on seven bridge gaps",
+  "receipts_recorded_or_staged": 0
+ }
 }

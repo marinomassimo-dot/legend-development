@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "route": "BENEFICIO_PRECOCE",
+  "candidate": {
+    "id": "AXIS:pharmacodynamic-anchor",
+    "name": "Pharmacodynamic anchor axis (no candidate)"
+  },
+  "disease_assertion": {
+    "id": "D-PD-1",
+    "target_id": "WWOX_readout",
+    "endpoint": "validated WWOX read-out in a matrix obtainable from a living patient",
+    "direction": "UNKNOWN",
+    "source": "CLAIM 046 (the measurement properties of the three direct read-outs)",
+    "locator": "disease-models/wwox/registries/claim_registry_current.md, CLAIM 046",
+    "epistemic_status": "DATO",
+    "reading_depth": "partial_fulltext_read",
+    "context": {
+      "disease_id": "none (canine tumour tissue and cell lines)",
+      "genotype": "no WWOX variant",
+      "species": "dog and mouse",
+      "cell_type": "mast cell tumour tissue and lines",
+      "developmental_stage": "not applicable"
+    },
+    "evidence_label": "NOT WWOX EVIDENCE",
+    "note": "Disease direction is not applicable to an assay axis; UNKNOWN. The measurement properties come from canine tumour tissue."
+  },
+  "drug_assertions": [],
+  "label_lookup": {
+    "status": "NOT_ATTEMPTED"
+  },
+  "p4_fields": {
+    "endpoint_pursued": "UNKNOWN: engagement of a WWOX-directed target cannot be shown at all today",
+    "functional_evidence_available": "none: the three direct read-outs (transcript, immunoblot, tissue stain) have no limit of detection, linear range or calibrator, and the tissue read-out reached only fair inter-rater agreement; canine tumour matrix, no WWOX variant, no CNS tissue, no body fluid",
+    "temporal_or_model_limit": "the soticlestat phase 3 reports show a pharmacodynamic marker falling by about 80 per cent twice with no clinical effect: engagement is necessary and nowhere near sufficient (R4 note, NOT WWOX EVIDENCE)",
+    "cellular_context": {
+      "target_expression": "UNKNOWN",
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "no candidate, so no target-expression statement is made"
+    }
+  },
+  "p4_roadmap_fields": {
+    "identity": "Not a molecule. An axis.",
+    "indication_and_transfer": "Any WWOX-directed intervention.",
+    "novelty_for_woree": "Not found in the research: no fluid marker has ever been measured in a WWOX carrier (early-benefit note 2b, indexing-level query).",
+    "known_roads_state": "UNKNOWN.",
+    "path_and_objective": "Both paths need it; stated here under BENEFICIO_PRECOCE because it is the property that makes a symptomatic effect uninterpretable.",
+    "expected_contribution": "None.",
+    "mechanism": "Not applicable.",
+    "sources": "CLAIM 046, early-benefit note 2, R4 note.",
+    "evidence_pro_contra": "See functional evidence above.",
+    "time_to_access": "Not applicable.",
+    "time_to_benefit": "Not applicable.",
+    "pharmacology": "Not applicable.",
+    "paediatrics_and_interactions": "Not applicable.",
+    "verification_scope": "This card: audit OWED.",
+    "question_history": "CLAIM 046.",
+    "predictions": "None.",
+    "next_measure": "Can a WWOX assay report a concentration against a recombinant calibrator, with a stated limit of detection, in a matrix obtainable from a living patient?",
+    "status": "ASTENSIONE. Missing datum: a calibrated WWOX read-out in a living-patient matrix.",
+    "value_added": "Makes explicit that none of the cards above can show it acts on WWOX."
+  },
+  "not_known": [
+    "calibrated WWOX read-out",
+    "limit of detection",
+    "living-patient matrix",
+    "any fluid marker in a WWOX carrier"
+  ],
+  "evaluation_frame": {
+    "source": "repurposing_10h_scientist-d_20261021.md, 'The answer in one page', DESIGN TABLE A and B. INFERENZA built from precedents that are all NOT WWOX EVIDENCE; the blind audit of that note's manifests is queued and had not returned when this card was written.",
+    "a_woree_evaluation_would_have_to_measure": [
+      "a repeated, instrument-matched baseline before any exposure, in a form that can move in a profoundly impaired child (growth-scale or raw-score forms rather than standard scores); the scatter of an untreated interval has never been measured in WOREE",
+      "a pharmacodynamic anchor: none exists for any WWOX-directed intervention (CLAIM 046), so engagement of the intended target cannot be shown at all",
+      "one prespecified endpoint with a rescue or withdrawal rule written before the observation window opens",
+      "survival, reported beside whatever endpoint is chosen",
+      "seizures only as a separate, declared family: a countable fraction, a diary or agreed reconstruction rule, and the seizure-free stratum reported apart (it is prognostic, not a treatment effect)"
+    ],
+    "and_could_not_claim": [
+      "disease modification or developmental benefit: the developmental-delay row of the one WOREE series reporting a response is identical in every column and two of the three responders had died",
+      "that seizure control protects development (CLAIM 031 forbids counting any symptomatic outcome as disease modification)",
+      "benefit from a pharmacodynamic move, a global impression or an own-baseline comparison",
+      "any effect smaller than the instrument's own untreated scatter",
+      "the word protection: nothing in this corpus has been measured as preserving a function that would otherwise have been lost"
+    ]
+  },
+  "must_never": [
+    "No score, rank, probability or blended index. 'Non-dominated' would be a statement about visible dimensions, never a number.",
+    "No dose, route, schedule, course or paediatric suitability. Accessibility of a drug, diet or supplement does not prove paediatric suitability.",
+    "A computational prediction is not DATO. No engine was run for this card.",
+    "Every adjacent source is labelled NOT WWOX EVIDENCE and is never promoted to WWOX evidence.",
+    "A missing hit is not proof of absence.",
+    "Symptomatic benefit is not slowing of disease; the word 'protection' is not licensed by any evidence on this card.",
+    "Where CLAIM 011 has been narrowed, 'dose-dependent' does not stand.",
+    "Nothing here is medical advice; it supports discussion with a treating clinical team and never substitutes for one."
+  ],
+  "card_kind": "ABSTENTION_CARD"
+}

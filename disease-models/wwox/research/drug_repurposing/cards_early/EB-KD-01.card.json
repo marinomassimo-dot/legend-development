@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "input_sha256": "a58f6753c75e0d3b85d7df3b8f806bf95c283cb14a3a6df6d2ba097db49579f6",
+  "epistemic_status": "IPOTESI",
+  "canonical": false,
+  "assessment": "REQUIRES_QUALIFICATION",
+  "directional_summary": "UNRESOLVED",
+  "comparisons": [
+    {
+      "assertion_id": "A-KD-1",
+      "status": "OPPOSES_DISEASE_CHANGE",
+      "reasons": []
+    },
+    {
+      "assertion_id": "A-KD-2",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "context.genotype: mismatch or unknown",
+        "direction unknown"
+      ]
+    },
+    {
+      "assertion_id": "A-KD-3",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "target_id: mismatch or unknown",
+        "endpoint: mismatch or unknown",
+        "direction unknown"
+      ]
+    }
+  ],
+  "abstention": null,
+  "label_lookup": {
+    "status": "NOT_ATTEMPTED",
+    "coverage": "UNKNOWN",
+    "method": "UNKNOWN",
+    "queries": [],
+    "source": "UNKNOWN",
+    "retrieved_at": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "active_ingredient": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "error": "UNKNOWN",
+    "coverage_limit": "UNKNOWN"
+  },
+  "p4_fields": {
+    "endpoint_pursued": "clinician-reported seizure control, symptomatic only (the endpoint type the only WOREE therapeutic report used); no count, score, latency, duration or exposure denominator on the delivered surface",
+    "functional_evidence_available": "none for the gene: no WWOX read-out of any kind in the source, so whatever changed in those children nothing measured WWOX; a clinician statement only",
+    "temporal_or_model_limit": "uncontrolled retrospective human case series of five children, one timepoint per patient, no comparator, no latency; two of the three responders had died within roughly two years and the developmental row is identical in all five columns",
+    "cellular_context": {
+      "target_expression": "NOT_APPLICABLE: a dietary intervention with no molecular target in any record read; no WWOX expression measured in the series",
+      "cells_tissue_stage": "whole organism, paediatric patients; no tissue measured",
+      "coverage": "UNKNOWN",
+      "limits": "no brain energy measurement paired with response (CLAIM 042 revival trigger); a response count with an unstated denominator is not distinguishable from the DEE base rate"
+    }
+  },
+  "input": {
+    "schema_version": 1,
+    "route": "BENEFICIO_PRECOCE",
+    "candidate": {
+      "id": "EB-KD-01",
+      "name": "Ketogenic diet (dietary intervention; composition and course not carried)"
+    },
+    "disease_assertion": {
+      "id": "D-KD-1",
+      "target_id": "seizure_burden",
+      "endpoint": "clinician-reported seizure control",
+      "direction": "INCREASE",
+      "source": "CLAIM 042 evidence boundary (the registry's reading of the WOREE case series, Table 1)",
+      "locator": "disease-models/wwox/registries/claim_registry_current.md, CLAIM 042, blockquote 'which endpoint moved, and which did not'",
+      "epistemic_status": "DATO",
+      "reading_depth": "partial_fulltext_read",
+      "context": {
+        "disease_id": "WOREE (WWOX-related epileptic encephalopathy)",
+        "genotype": "biallelic WWOX, series class (the three responders carry splice-region or exon-deletion alleles on both sides; no missense responder)",
+        "species": "human",
+        "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
+        "developmental_stage": "paediatric (infancy to childhood)"
+      },
+      "note": "Seizures are a feature of the series; the direction is the disease side of the comparison (more seizure burden than unaffected children). Only the delivered chunks of the article are covered."
+    },
+    "drug_assertions": [
+      {
+        "id": "A-KD-1",
+        "target_id": "seizure_burden",
+        "endpoint": "clinician-reported seizure control",
+        "direction": "DECREASE",
+        "source": "Chong 2023 case series as carried by CLAIM 042 (previously blind-audited reading, scientist-b)",
+        "locator": "CLAIM 042 Summary: «the institution of a ketogenic diet in patients 1, 2, and 4 notably improved seizure control»; Table 1 marks the three «Responded to ketogenic diet»",
+        "epistemic_status": "DATO",
+        "reading_depth": "partial_fulltext_read",
+        "context": {
+          "disease_id": "WOREE (WWOX-related epileptic encephalopathy)",
+          "genotype": "biallelic WWOX, series class (the three responders carry splice-region or exon-deletion alleles on both sides; no missense responder)",
+          "species": "human",
+          "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
+          "developmental_stage": "paediatric (infancy to childhood)"
+        },
+        "shared_origin": "one case series; two of the three responders (patients 2 and 4) are previously published individuals named by the source",
+        "note": "Uncontrolled, unblinded, retrospective; the denominator of children placed on the diet is not stated, so three of five is a count of responders against cohort size and not a response rate; no count, score, latency or duration on the delivered surface."
+      },
+      {
+        "id": "A-KD-2",
+        "target_id": "seizure_burden",
+        "endpoint": "clinician-reported seizure control",
+        "direction": "UNKNOWN",
+        "source": "CLAIM 042 evidence boundary",
+        "locator": "CLAIM 042 Genotype/model relevance: the one Q230P carrier has no ketogenic-diet entry in the source",
+        "epistemic_status": "DATO",
+        "reading_depth": "partial_fulltext_read",
+        "context": {
+          "disease_id": "WOREE (WWOX-related epileptic encephalopathy)",
+          "genotype": "Q230P-bearing compound heterozygous class (the reference genotype class)",
+          "species": "human",
+          "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
+          "developmental_stage": "paediatric (infancy to childhood)"
+        },
+        "note": "Neither response nor non-response is recorded for this class. UNKNOWN here is an unmeasured cell, not a null effect."
+      },
+      {
+        "id": "A-KD-3",
+        "target_id": "developmental_trajectory",
+        "endpoint": "developmental delay row of Table 1 (clinical label, one timepoint)",
+        "direction": "UNKNOWN",
+        "source": "CLAIM 042 evidence boundary",
+        "locator": "CLAIM 042 blockquote: the row reads «Profound developmental delay» five times, the three responders included",
+        "epistemic_status": "DATO",
+        "reading_depth": "partial_fulltext_read",
+        "context": {
+          "disease_id": "WOREE (WWOX-related epileptic encephalopathy)",
+          "genotype": "biallelic WWOX, series class (the three responders carry splice-region or exon-deletion alleles on both sides; no missense responder)",
+          "species": "human",
+          "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
+          "developmental_stage": "paediatric (infancy to childhood)"
+        },
+        "note": "The bridge has no sign for 'no difference between columns': an identical row is encoded UNKNOWN and the sentence in this note is the datum. The row is a between-patient label at one timepoint, not a within-patient change under treatment."
+      }
+    ],
+    "label_lookup": {
+      "status": "NOT_ATTEMPTED"
+    },
+    "p4_fields": {
+      "endpoint_pursued": "clinician-reported seizure control, symptomatic only (the endpoint type the only WOREE therapeutic report used); no count, score, latency, duration or exposure denominator on the delivered surface",
+      "functional_evidence_available": "none for the gene: no WWOX read-out of any kind in the source, so whatever changed in those children nothing measured WWOX; a clinician statement only",
+      "temporal_or_model_limit": "uncontrolled retrospective human case series of five children, one timepoint per patient, no comparator, no latency; two of the three responders had died within roughly two years and the developmental row is identical in all five columns",
+      "cellular_context": {
+        "target_expression": "NOT_APPLICABLE: a dietary intervention with no molecular target in any record read; no WWOX expression measured in the series",
+        "cells_tissue_stage": "whole organism, paediatric patients; no tissue measured",
+        "coverage": "UNKNOWN",
+        "limits": "no brain energy measurement paired with response (CLAIM 042 revival trigger); a response count with an unstated denominator is not distinguishable from the DEE base rate"
+      }
+    },
+    "p4_roadmap_fields": {
+      "identity": "Ketogenic diet, a dietary therapy. Formulation, ratio, course and monitoring are in no record this card reads and none is carried. Not a molecule: no identifier.",
+      "indication_and_transfer": "Target population itself (human WOREE), not a bridge from another disease. Limit: all three reported responders carry splice-region or exon-deletion alleles on both sides; the one missense carrier has no diet entry, so nothing transfers to the reference genotype class (CLAIM 042: T2, not demonstrated).",
+      "novelty_for_woree": "Already used in WOREE (CLAIM 042; earlier reports cited by the same source describe use «with varying degrees of success»). Not a new repurposing idea; the open question is the quality of the existing evidence. No new search was run for this card.",
+      "known_roads_state": "Inconclusive (known-roads note 2.7): the exposed denominator is absent, 'responded' is undefined, and a DEE base-rate comparison spans 0 to 100 per cent. In another report the diet «did not significantly improve seizures and was suspended» in a biallelic-null WOREE patient; tried in three and continued in one in another cohort.",
+      "path_and_objective": "BENEFICIO_PRECOCE only. Not RECUPERO_PROFONDO: nothing in the source measured the gene.",
+      "expected_contribution": "Symptom (seizure control), to be verified. No compensation, function recovery or protection is claimed. Not disease modification.",
+      "mechanism": "Target, type of action, direction and context all UNKNOWN for WOREE. The metabolic-bypass rationale is a hypothesis with no brain energy measurement behind it in WOREE.",
+      "sources": "Internal, WWOX: CLAIM 042, CLAIM 031, CLAIM 001, known-roads note 2.7, early-benefit note row 14 and 1.4/1.5, R4 note HELD-partial answer for the series. External: none read for this card. The authors of the series hedge and recommend in the same breath: «It may be premature to assert the potential beneficial effects of a ketogenic diet as they need to be evaluated carefully in a larger cohort» and the diet «should be considered»; both halves are theirs.",
+      "evidence_pro_contra": "Pro: three clinician-reported responders in one series. Contra or unknown: no denominator; no count; development unchanged in 5 of 5 columns; two of the three responders had died within roughly two years; two of the three responders (patients 2 and 4) are previously published individuals named by the source, so any pooled count across WOREE series double-counts them and must name which individuals it counts; the one missense-allele column carries a second de novo likely-pathogenic variant in another gene (confounder); co-medication during the diet is not reported in the retrieved passages; the Results narratives of the responders were never delivered (8 of the article's chunks held).",
+      "time_to_access": "UNKNOWN. Documented obstacles to administrability were assessed in no record read. CLAIM 042 calls the diet a «clinically available intervention»; that phrase is not an access assessment and not paediatric suitability. Clinical census 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven unfiltered queries on ClinicalTrials.gov API v2 returned no registered WOREE interventional study; the one WOREE record is an observational registry and natural-history study. Its own caution binds this card: «A missing hit does not prove that no study exists.» An NCT number proves neither recruitment nor first dosing. A compassionate-use report elsewhere in the repository is news-level, n = 1, and is not a datum for this card.",
+      "time_to_benefit": "UNKNOWN, separately from access. No latency or duration appears on the delivered surface; the narratives where it would appear are not covered. The shortest sufficient follow-up in the non-WOREE precedents is 12 months for instrument change (R4 note), which is not a WOREE estimate.",
+      "pharmacology": "UNKNOWN. No exposure measure appears in any record read. Not applicable in the drug sense.",
+      "paediatrics_and_interactions": "Paediatric suitability is not presumed: a diet is not safe because it is food (early-benefit note). Adverse effects: UNKNOWN in the records read. Interaction with antiseizure co-medication: UNKNOWN (co-medication not reported in the retrieved passages).",
+      "verification_scope": "Supported by: one uncontrolled case series. Reading audited: the early-benefit reading of the series was blind-audited 2026-10-21 (12 triples: 8 supported, 1 overshoot, 2 undershoot, 1 unverifiable; adverse ones repaired at source). Reproduced: no. Replicated: no. This card: no audit yet, OWED to someone other than its author.",
+      "question_history": "CLAIM 042 (including its revival triggers), CLAIM 031, CLAIM 001, early-benefit note, R4 note HELD-partial row. No hypothesis or run entries beyond these.",
+      "predictions": "None. No engine was run.",
+      "next_measure": "Does the Results narrative of the series give the number of children placed on the diet, a seizure count before and after, the interval to response and the co-medication? Closing that needs a native surface of the article (on the operator's PDF list); no access control is to be circumvented.",
+      "status": "IPOTESI (symptomatic only). Not a recommendation for any child.",
+      "value_added": "Makes four things visible at once that a bare 'three of five improved' hides: the absent denominator, the double-counted published individuals, the flat developmental row, and the untested reference genotype class."
+    },
+    "not_known": [
+      "number of children placed on the diet",
+      "any seizure count, score, latency or duration",
+      "co-medication during the diet",
+      "response in the reference genotype class",
+      "any WWOX read-out",
+      "any adverse-effect record in WOREE",
+      "paediatric suitability",
+      "time to benefit",
+      "time to access",
+      "whether any developmental measure moved within a patient"
+    ],
+    "evaluation_frame": {
+      "source": "repurposing_10h_scientist-d_20261021.md, 'The answer in one page', DESIGN TABLE A and B. INFERENZA built from precedents that are all NOT WWOX EVIDENCE; the blind audit of that note's manifests is queued and had not returned when this card was written.",
+      "a_woree_evaluation_would_have_to_measure": [
+        "a repeated, instrument-matched baseline before any exposure, in a form that can move in a profoundly impaired child (growth-scale or raw-score forms rather than standard scores); the scatter of an untreated interval has never been measured in WOREE",
+        "a pharmacodynamic anchor: none exists for any WWOX-directed intervention (CLAIM 046), so engagement of the intended target cannot be shown at all",
+        "one prespecified endpoint with a rescue or withdrawal rule written before the observation window opens",
+        "survival, reported beside whatever endpoint is chosen",
+        "seizures only as a separate, declared family: a countable fraction, a diary or agreed reconstruction rule, and the seizure-free stratum reported apart (it is prognostic, not a treatment effect)"
+      ],
+      "and_could_not_claim": [
+        "disease modification or developmental benefit: the developmental-delay row of the one WOREE series reporting a response is identical in every column and two of the three responders had died",
+        "that seizure control protects development (CLAIM 031 forbids counting any symptomatic outcome as disease modification)",
+        "benefit from a pharmacodynamic move, a global impression or an own-baseline comparison",
+        "any effect smaller than the instrument's own untreated scatter",
+        "the word protection: nothing in this corpus has been measured as preserving a function that would otherwise have been lost"
+      ]
+    },
+    "must_never": [
+      "No score, rank, probability or blended index. 'Non-dominated' would be a statement about visible dimensions, never a number.",
+      "No dose, route, schedule, course or paediatric suitability. Accessibility of a drug, diet or supplement does not prove paediatric suitability.",
+      "A computational prediction is not DATO. No engine was run for this card.",
+      "Every adjacent source is labelled NOT WWOX EVIDENCE and is never promoted to WWOX evidence.",
+      "A missing hit is not proof of absence.",
+      "Symptomatic benefit is not slowing of disease; the word 'protection' is not licensed by any evidence on this card.",
+      "Where CLAIM 011 has been narrowed, 'dose-dependent' does not stand.",
+      "Nothing here is medical advice; it supports discussion with a treating clinical team and never substitutes for one."
+    ],
+    "card_kind": "CANDIDATE_CARD"
+  },
+  "translation": {
+    "pediatric_suitability": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "access": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN",
+    "functional_rescue": "UNKNOWN"
+  },
+  "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+  "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+  ]
+}

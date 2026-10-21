@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "input_sha256": "ed6d4405512f28926577230e4023062d5ff18b434295afeec95f595bb98e5aa8",
+  "epistemic_status": "IPOTESI",
+  "canonical": false,
+  "assessment": "REQUIRES_QUALIFICATION",
+  "directional_summary": "UNRESOLVED",
+  "comparisons": [],
+  "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+  "label_lookup": {
+    "status": "NOT_ATTEMPTED",
+    "coverage": "UNKNOWN",
+    "method": "UNKNOWN",
+    "queries": [],
+    "source": "UNKNOWN",
+    "retrieved_at": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "active_ingredient": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "error": "UNKNOWN",
+    "coverage_limit": "UNKNOWN"
+  },
+  "p4_fields": {
+    "endpoint_pursued": "head circumference, height and weight against age-expected SD scores at a stated age, repeated",
+    "functional_evidence_available": "none for any intervention; the only human values sit on a surface that strips signs and ranges",
+    "temporal_or_model_limit": "one timepoint per patient in the only series; in the Wwox-null mouse growth and glycaemia moved at the high dose of a gene therapy only and a systemic null is metabolically decompensated at P18, so a growth endpoint there measures the whole animal",
+    "cellular_context": {
+      "target_expression": "UNKNOWN",
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "no candidate, so no target-expression statement is made"
+    }
+  },
+  "input": {
+    "schema_version": 1,
+    "route": "BENEFICIO_PRECOCE",
+    "candidate": {
+      "id": "AXIS:growth",
+      "name": "Growth endpoint axis (an endpoint, not an intervention; no candidate)"
+    },
+    "disease_assertion": {
+      "id": "D-GR-1",
+      "target_id": "somatic_growth",
+      "endpoint": "head circumference, height and weight against age-expected SD scores",
+      "direction": "DECREASE",
+      "source": "early-benefit note 1.4 (failure to thrive in 5 of 5 in the WOREE series; values pending)",
+      "locator": "repurposing_early_benefit_20261020_scientist-b.md section 1.4, 'Human, measurable now'",
+      "epistemic_status": "DATO",
+      "reading_depth": "partial_fulltext_read",
+      "context": {
+        "disease_id": "WOREE (WWOX-related epileptic encephalopathy)",
+        "genotype": "biallelic WWOX, series class (the three responders carry splice-region or exon-deletion alleles on both sides; no missense responder)",
+        "species": "human",
+        "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
+        "developmental_stage": "paediatric (infancy to childhood)"
+      },
+      "note": "The KIND of measurement is established; the VALUES are PENDING_RE_ACQUISITION because the held extraction strips minus signs and ranges throughout the document, so no signed number is carried."
+    },
+    "drug_assertions": [],
+    "label_lookup": {
+      "status": "NOT_ATTEMPTED"
+    },
+    "p4_fields": {
+      "endpoint_pursued": "head circumference, height and weight against age-expected SD scores at a stated age, repeated",
+      "functional_evidence_available": "none for any intervention; the only human values sit on a surface that strips signs and ranges",
+      "temporal_or_model_limit": "one timepoint per patient in the only series; in the Wwox-null mouse growth and glycaemia moved at the high dose of a gene therapy only and a systemic null is metabolically decompensated at P18, so a growth endpoint there measures the whole animal",
+      "cellular_context": {
+        "target_expression": "UNKNOWN",
+        "cells_tissue_stage": "UNKNOWN",
+        "coverage": "UNKNOWN",
+        "limits": "no candidate, so no target-expression statement is made"
+      }
+    },
+    "p4_roadmap_fields": {
+      "identity": "Not a molecule. An endpoint axis.",
+      "indication_and_transfer": "Human WOREE, routine-care measurement; the first plausible row the structure-only endpoint file could carry. This card does not write that row (population is a BATCH_COMMIT act).",
+      "novelty_for_woree": "Not applicable.",
+      "known_roads_state": "No intervention has a growth measurement in WOREE. UNKNOWN.",
+      "path_and_objective": "BENEFICIO_PRECOCE.",
+      "expected_contribution": "Quantitative as a kind of measurement, repeatable, already collected in routine care, with an age-expected trajectory as comparator. A good early-benefit endpoint and a bad specificity argument: it moves with feeding route, infection, diet and seizure burden.",
+      "mechanism": "Not applicable.",
+      "sources": "Internal: early-benefit note 1.4 and 7, CLAIM 042 evidence boundary, CLAIM 011 (mouse, high dose only; 'dose-dependent' does not stand for survival and weight), CLAIM 036.",
+      "evidence_pro_contra": "Pro: standardised, clinically obtainable. Contra: unspecific; the values are unreachable on the held surface.",
+      "time_to_access": "Not applicable to an endpoint; the intervention that would be measured has UNKNOWN access.",
+      "time_to_benefit": "UNKNOWN.",
+      "pharmacology": "Not applicable.",
+      "paediatrics_and_interactions": "Not applicable.",
+      "verification_scope": "Early-benefit reading audited 2026-10-21 (see EB-KD-01). This card: audit OWED.",
+      "question_history": "Early-benefit note; CLAIM 042.",
+      "predictions": "None.",
+      "next_measure": "Can a native surface of the series be acquired so that the growth values, the exposure denominator and the seizure-count question are all read in one acquisition?",
+      "status": "ASTENSIONE. Missing datum: the growth values and any intervention measured against them.",
+      "value_added": "Names the cheapest unblocking acquisition on the early-benefit axis."
+    },
+    "not_known": [
+      "growth values in the only human series",
+      "any intervention with a growth measurement in WOREE",
+      "a repeated pre-intervention baseline",
+      "age-expected trajectory for this disease"
+    ],
+    "evaluation_frame": {
+      "source": "repurposing_10h_scientist-d_20261021.md, 'The answer in one page', DESIGN TABLE A and B. INFERENZA built from precedents that are all NOT WWOX EVIDENCE; the blind audit of that note's manifests is queued and had not returned when this card was written.",
+      "a_woree_evaluation_would_have_to_measure": [
+        "a repeated, instrument-matched baseline before any exposure, in a form that can move in a profoundly impaired child (growth-scale or raw-score forms rather than standard scores); the scatter of an untreated interval has never been measured in WOREE",
+        "a pharmacodynamic anchor: none exists for any WWOX-directed intervention (CLAIM 046), so engagement of the intended target cannot be shown at all",
+        "one prespecified endpoint with a rescue or withdrawal rule written before the observation window opens",
+        "survival, reported beside whatever endpoint is chosen",
+        "seizures only as a separate, declared family: a countable fraction, a diary or agreed reconstruction rule, and the seizure-free stratum reported apart (it is prognostic, not a treatment effect)"
+      ],
+      "and_could_not_claim": [
+        "disease modification or developmental benefit: the developmental-delay row of the one WOREE series reporting a response is identical in every column and two of the three responders had died",
+        "that seizure control protects development (CLAIM 031 forbids counting any symptomatic outcome as disease modification)",
+        "benefit from a pharmacodynamic move, a global impression or an own-baseline comparison",
+        "any effect smaller than the instrument's own untreated scatter",
+        "the word protection: nothing in this corpus has been measured as preserving a function that would otherwise have been lost"
+      ]
+    },
+    "must_never": [
+      "No score, rank, probability or blended index. 'Non-dominated' would be a statement about visible dimensions, never a number.",
+      "No dose, route, schedule, course or paediatric suitability. Accessibility of a drug, diet or supplement does not prove paediatric suitability.",
+      "A computational prediction is not DATO. No engine was run for this card.",
+      "Every adjacent source is labelled NOT WWOX EVIDENCE and is never promoted to WWOX evidence.",
+      "A missing hit is not proof of absence.",
+      "Symptomatic benefit is not slowing of disease; the word 'protection' is not licensed by any evidence on this card.",
+      "Where CLAIM 011 has been narrowed, 'dose-dependent' does not stand.",
+      "Nothing here is medical advice; it supports discussion with a treating clinical team and never substitutes for one."
+    ],
+    "card_kind": "ABSTENTION_CARD"
+  },
+  "translation": {
+    "pediatric_suitability": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "access": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN",
+    "functional_rescue": "UNKNOWN"
+  },
+  "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+  "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+  ]
+}

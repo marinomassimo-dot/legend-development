@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "route": "BENEFICIO_PRECOCE",
+  "candidate": {
+    "id": "EB-CBD-AX-01",
+    "name": "Cannabidiol (class level)"
+  },
+  "disease_assertion": {
+    "id": "D-CBD-1",
+    "target_id": "seizure_burden",
+    "endpoint": "clinician-reported seizure control",
+    "direction": "INCREASE",
+    "source": "known-roads note 2.7",
+    "locator": "repurposing_known_roads_20261020_scientist-a.md section 2.7, row 'Cannabidiol'",
+    "epistemic_status": "DATO",
+    "reading_depth": "queried_not_full_read",
+    "context": {
+      "disease_id": "WOREE (WWOX-related epileptic encephalopathy)",
+      "genotype": "biallelic WWOX, series class (the three responders carry splice-region or exon-deletion alleles on both sides; no missense responder)",
+      "species": "human",
+      "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
+      "developmental_stage": "paediatric (infancy to childhood)"
+    }
+  },
+  "drug_assertions": [],
+  "label_lookup": {
+    "status": "NOT_ATTEMPTED"
+  },
+  "p4_fields": {
+    "endpoint_pursued": "clinician-reported seizure control, if a response is first defined",
+    "functional_evidence_available": "none: continuation in 4 of 4 patients who started it in one cohort is a continuation pattern, not an efficacy measure; ineffective in one severe case",
+    "temporal_or_model_limit": "a review sentence attributing a cannabidiol effect to WWOX-deficient organoids is not supported by its own citation as far as the cited record shows (R2 note section 13); whether any WWOX organoid paper tested cannabidiol was not checked",
+    "cellular_context": {
+      "target_expression": "UNKNOWN",
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "no candidate, so no target-expression statement is made"
+    }
+  },
+  "p4_roadmap_fields": {
+    "identity": "Cannabidiol, class level; no formulation, product, dose or route.",
+    "indication_and_transfer": "Human WOREE and WWOX-DEE cohort observations; the organoid statement is unsupported.",
+    "novelty_for_woree": "Already used in cohorts; effect in a WWOX system not found. The check of a WWOX organoid paper (Steinberg 2021) for cannabidiol was not run: a registry query is owed, not a finding.",
+    "known_roads_state": "Inconclusive (known-roads note 2.7).",
+    "path_and_objective": "BENEFICIO_PRECOCE.",
+    "expected_contribution": "Symptom, if shown.",
+    "mechanism": "UNKNOWN in WOREE.",
+    "sources": "Known-roads note 2.7; R2 note section 13 (NOT WWOX EVIDENCE for the review; the cited paper's body was not read).",
+    "evidence_pro_contra": "Continuation pattern against a severe case with no effect.",
+    "time_to_access": "UNKNOWN. Clinical census 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven unfiltered queries on ClinicalTrials.gov API v2 returned no registered WOREE interventional study; the one WOREE record is an observational registry and natural-history study. Its own caution binds this card: «A missing hit does not prove that no study exists.» An NCT number proves neither recruitment nor first dosing. ",
+    "time_to_benefit": "UNKNOWN.",
+    "pharmacology": "UNKNOWN.",
+    "paediatrics_and_interactions": "UNKNOWN. Suitability not presumed.",
+    "verification_scope": "This card: audit OWED.",
+    "question_history": "Known-roads note 2.7; R2 note.",
+    "predictions": "None.",
+    "next_measure": "Did any WWOX organoid or animal paper test cannabidiol? One registry query answers it.",
+    "status": "ASTENSIONE. Missing datum: any WWOX-system test of cannabidiol and a defined response.",
+    "value_added": "Records a citation trap so that an unsupported sentence is not carried as WWOX evidence."
+  },
+  "not_known": [
+    "any WWOX-system test of cannabidiol",
+    "definition of response",
+    "denominator",
+    "time to benefit",
+    "time to access"
+  ],
+  "evaluation_frame": {
+    "source": "repurposing_10h_scientist-d_20261021.md, 'The answer in one page', DESIGN TABLE A and B. INFERENZA built from precedents that are all NOT WWOX EVIDENCE; the blind audit of that note's manifests is queued and had not returned when this card was written.",
+    "a_woree_evaluation_would_have_to_measure": [
+      "a repeated, instrument-matched baseline before any exposure, in a form that can move in a profoundly impaired child (growth-scale or raw-score forms rather than standard scores); the scatter of an untreated interval has never been measured in WOREE",
+      "a pharmacodynamic anchor: none exists for any WWOX-directed intervention (CLAIM 046), so engagement of the intended target cannot be shown at all",
+      "one prespecified endpoint with a rescue or withdrawal rule written before the observation window opens",
+      "survival, reported beside whatever endpoint is chosen",
+      "seizures only as a separate, declared family: a countable fraction, a diary or agreed reconstruction rule, and the seizure-free stratum reported apart (it is prognostic, not a treatment effect)"
+    ],
+    "and_could_not_claim": [
+      "disease modification or developmental benefit: the developmental-delay row of the one WOREE series reporting a response is identical in every column and two of the three responders had died",
+      "that seizure control protects development (CLAIM 031 forbids counting any symptomatic outcome as disease modification)",
+      "benefit from a pharmacodynamic move, a global impression or an own-baseline comparison",
+      "any effect smaller than the instrument's own untreated scatter",
+      "the word protection: nothing in this corpus has been measured as preserving a function that would otherwise have been lost"
+    ]
+  },
+  "must_never": [
+    "No score, rank, probability or blended index. 'Non-dominated' would be a statement about visible dimensions, never a number.",
+    "No dose, route, schedule, course or paediatric suitability. Accessibility of a drug, diet or supplement does not prove paediatric suitability.",
+    "A computational prediction is not DATO. No engine was run for this card.",
+    "Every adjacent source is labelled NOT WWOX EVIDENCE and is never promoted to WWOX evidence.",
+    "A missing hit is not proof of absence.",
+    "Symptomatic benefit is not slowing of disease; the word 'protection' is not licensed by any evidence on this card.",
+    "Where CLAIM 011 has been narrowed, 'dose-dependent' does not stand.",
+    "Nothing here is medical advice; it supports discussion with a treating clinical team and never substitutes for one."
+  ],
+  "card_kind": "ABSTENTION_CARD"
+}
