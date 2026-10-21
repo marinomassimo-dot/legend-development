@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261019_008
+last_batch_commit_id: BATCH_20261019_009
 last_batch_commit_date: 2026-10-21
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 3
+commit_candidates_propagated: 0
 target_wm_version: WM_v7.27
-trigger: MANUAL (operator-authorised, ACTOR_ID orchestrator by stated assumption, task ORCH-METABOLIC-BATCH-20261019). Three drug-repurposing P3 candidates propagated, all MINOR. No claim created or reversed, and no Status, Type or Summary changed anywhere. Amlexanox qualified and NOT promoted (PAPER 427, PAPER 428, LIT-0699, LIT-0700, all NOT WWOX EVIDENCE; DIS-41 marks the WWOX side NON_TROVATO_NELLA_RICERCA with its queries, sources and date, never MAI_TENTATO; new DEFAULTS row D-39: protein quantity does not prove function). CLAIM 042 gains one evidence boundary only, with the artefact gap carried as PENDING_RE_ACQUISITION. CLAIM 011 dose flag ADJUDICATED, verdict NARROW, Status still flagged for review, Title rewritten; the body-weight equality is survivor-conditioned on the low-dose side only and is neither evidence of dose grading nor of its absence. Both audited candidates carry the declared limit that their audit repairs are themselves unaudited. The registry scale acknowledgement was NOT renewed: the trigger is measured cost, and growth_anchors reported no cost breach.
+trigger: MANUAL (operator-authorised correction batch, ACTOR_ID orchestrator by stated assumption, task ORCH-METABOLIC-BATCH-20261019). Repair of one false count this integrator wrote into two canonical records at BATCH_20261019_008: the Evidence depth sentence of PAPER 427 and PAPER 428 said 6 persisted verbatim locators; the manifests carry 11 and 9, exactly as the candidate declared. Corrected in place with the superseded wording quoted in each record, and the error recorded as DEFAULTS THAT BIT US row D-40 (sizing a JSON mapping instead of its entries array returns the schema key count, identically for two unrelated files). No candidate. NO WORKING-MODEL BUMP: the manifest rule above bumps only for a BATCH_COMMIT that modifies the disease model, and a locator count in a provenance sentence changes no claim, block, status, support or uncertainty; WM_v7.27 is preserved with its date, its history note and its changelog row untouched. The registry scale acknowledgement was not renewed.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,7 +126,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261021_BATCH_20261019_008
+last_lint_id: LINT_20261021_BATCH_20261019_009
 last_lint_date: 2026-10-21
 last_lint_result: WARN
 ```
