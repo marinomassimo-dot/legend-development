@@ -342,3 +342,13 @@ Depth: `partial_fulltext_read` (whole PMC XML body; Figure 11 as an image; suppl
 
 **Comparison with the lead.** Axis A: wild-type arm with drug, same-direction responses. Axis B: none. Axis C: spike-wave discharges did not respond to ethosuximide in the model that has them (small n). Axis D: none. **Net: another support for "baseline decides restriction".**
 
+## 21. PMID 24002024 (Baraban 2013): the scn1Lab zebrafish drug-screen paper behind the "ethosuximide was ineffective in an Scn1a zebrafish" sentence. NOT WWOX EVIDENCE
+
+Found by following the citation in Harman 2023 (section 4) to its primary, under the adjacent-search tests. Depth: `partial_fulltext_read` (whole PMC XML body; Figure 5 as an image; supplement not opened). Manifest `PMID24002024.json` STRICT PASS, 4 locators. Receipt staged `FTR-20261021-24002024-01`.
+
+**Primary versus secondary.** The paper bath-applied nine antiseizure drugs at one concentration to scn1Lab mutant larvae (seven fish per drug): valproate, diazepam, potassium bromide and stiripentol reduced the epileptiform events; carbamazepine, ethosuximide and vigabatrin made them more frequent in some fish, ethosuximide in 4 of 7 (Figure 5A heat map; the mean change for ethosuximide in Figure 5B is positive, large-error and unstarred). The secondary's "ineffective" is a fair summary of the statistics; the primary adds an individual-fish tendency toward aggravation that is not a significant aggravation. There is no wild-type comparison, since wild-type larvae do not have the discharges (the same floor logic as sections 2 and 3), and no concurrent vehicle fish is described for the electrophysiology.
+
+**What it adds to the lead.** A negative for ethosuximide in a Dravet-type genotype, with the opposite-sign tendency, alongside positives in other genotypes (HCN1 [1], Gnb1 [2], Gabrb3 [3], digenic [6], Nlg2 [19], Grin2b [10]). This is the pattern "ethosuximide's seizure effect depends on genotype" at the level of a literature-wide pattern; as a mechanism it carries no T-type information (valproate, diazepam, bromide, stiripentol all worked here). It reinforces that a genotype-by-ethosuximide table can be drawn across models, whose entries differ in the sign, which is the correct context in which to hold the single Wwox contrast.
+
+**Comparison with the lead.** Axis A: genotype-dependent response across models; none within one assay. Axis B: none. Axis C: negative or aggravation in a developmental-epilepsy genotype. Axis D: none. **Net: context for "does ethosuximide response differ by genotype": yes across models, with sign differences.**
+
