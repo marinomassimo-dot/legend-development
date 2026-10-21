@@ -26,10 +26,16 @@ Vocabulary used below, one of four per item, and nothing else:
 
 | | Items | |
 |---|---:|---|
-| `PRESENT_AND_RUNNABLE` | 10 | the LEGEND-side reuse surfaces, plus the rescue reference, plus the bridge |
+| `PRESENT_AND_RUNNABLE` | 11 | the LEGEND-side reuse surfaces, plus the rescue reference, plus the bridge, plus the ClinicalTrials.gov census that landed the same day (§ 4.4) |
 | `PRESENT_NOT_RUNNABLE` | 2 | `legend-safety-triage` (its two predictors are not installed), `_external_repos/MANIFEST.md` as a component census (one row measurably overstates its scope) |
 | `ABSENT` | 14 | every third-party component the plan names: OptimusKG, Open Targets client, MATRIX, ADMET-AI, medchem, drugfindR, ToolUniverse, MAP, NOCAP-AIVC, NetworkCommons/MOON, Spectrum code, RepurposeAgent, AetherCell, GSE156243 bytes |
 | `NOT_CHECKED` | 4 | P3 axis selection, P5 ranking, P6d real inference, P8b delegation comparison — three are scientific acts, one needs an install |
+
+> **Dated as of 2026-10-20, and two rows moved the same day.** The clinical-census actor working
+> in parallel landed a ClinicalTrials.gov connector (`91f8e60c`) and corrected the Spectrum
+> manifest row (`461bcc28`) after these counts were taken; both changes are folded into § 4.3,
+> § 4.4 and § 7 rather than silently rewritten, because a reconciliation whose verdicts drift
+> without their date stops being a measurement.
 
 Three sentences, which is the honest summary:
 
@@ -198,11 +204,38 @@ it calls for. The quoted documents were deliberately left uncorrected.
 | **MAP** (MAGIC-AI4Med) | `ABSENT` | not present; its demo needs preprocessed control cells and a checkpoint. No `torch` here |
 | **NOCAP-AIVC** (Brain-Organoid-AIVC) | `ABSENT` | not present; the register's own note that the CellFM checkpoint is ~67 GB stands unchallenged — 161 G free would hold it, which is a resource fact, not a reason |
 | **NetworkCommons / MOON** | `ABSENT` | not present; its declared dependencies (`decoupler` 1.x, `anndata` ≤ 0.10.8) are not installed, and `MANIFEST.md` carries no row for it. Its GPL-3 licence makes external use, not vendoring, the right shape — as the register says |
-| **Spectrum drug tracker** | `ABSENT` as code; row `PRESENT_NOT_RUNNABLE` | no clone on disk; `MANIFEST.md` row at `200238a6c692`, MIT, status `AUDITED`, scope overstated (§ 4.2). Its legacy ClinicalTrials.gov endpoint is retired; **this repository has no ClinicalTrials.gov client of any kind** — `git grep -ril clinicaltrials` over `framework/`, `.claude/skills/` and `scripts/` returns nothing — while the official v2 API answered a WWOX query in 122 ms |
+| **Spectrum drug tracker** | `ABSENT` as code; its manifest row **corrected 2026-10-20** | no clone on disk; `MANIFEST.md` row at `200238a6c692`, MIT. When this reconciliation was first written the row still read "monogenic-DEE trial drugs and endpoints" with status `AUDITED`, which overstated its WOREE coverage; the correction landed the same day in `461bcc28` (capability overstated, WOREE suitability excluded, status unchanged), by the actor who held that file. Its legacy ClinicalTrials.gov endpoint is retired |
+| **ClinicalTrials.gov access** | **`PRESENT_AND_RUNNABLE` since `91f8e60c`** | when this reconciliation was first written there was no client of any kind here. `framework/scripts/clinical_census.py` now exists with its regressions — public API v2, read-only, key-less, standard library, zero spend — and its 2026-10-20 run is in this directory (§ 4.4) |
 | **GSE156243** | `ABSENT` | no file matching `*GSE156243*` anywhere under `files/`. The GEO supplementary directory is reachable (HEAD 200); the three originals the plan qualifies total ≈0.54 MB. Not fetched here: qualifying an observed input is a Scientist's act, and this task fetched no data |
 | **RepurposeAgent** (NLM-DIR) | `ABSENT` | not present. Its external `data.zip` is ~5.1 GB by the register's reading of the FTP index; not fetched. Licence still unidentified upstream, so vendoring remains undecidable, exactly as the register says |
 | **AetherCell** | `ABSENT` | not present, no weights, no `torch`. Research License v1.0 restricts the uses its § 5 lists, including use of outputs for treatment selection — which this repository would not do anyway |
 | **Obeid et al. rescue reference** | **`PRESENT_AND_RUNNABLE`** | § 5 |
+
+### 4.4 The clinical census the plan's P4/monitoring branch asked for — measured, not by this record
+
+The roadmap's "Censimento clinico" asks for separate queries on WOREE, WWOX-related epileptic
+encephalopathy, EIEE28, DEE28, WWOX, MZ-9138 and the relevant sponsor, with no phase or placebo
+pre-filter, keeping the synonym that found each record and distinguishing MATCH / NO_MATCH /
+QUERY_ERROR / COVERAGE_INCOMPLETE. **That census was run on 2026-10-20 by the actor who held the
+clinical-census task, not by this record**, and its result is a hard input here rather than
+something to re-run: [`clinical_census_20261020.md`](clinical_census_20261020.md), its data file
+and its stored per-page responses. Reproduced as a measurement, with its own limits intact:
+
+- Seven queries, no pre-filter, all pagination exhausted; **no query ended `QUERY_ERROR` or
+  `COVERAGE_INCOMPLETE`**; 84 distinct identifiers after deduplication.
+- **There is no registered WOREE interventional study on this registry.** WOREE, the spelled-out
+  name and EIEE28 all resolve to **one** identifier, `NCT01793168` — an observational
+  rare-disease registry and natural-history study whose condition list carries many disorders.
+- **DEE28 and MZ-9138 return nothing.** The sponsor query returns `NCT07135050`, a phase 1/2
+  AAV9 study for **a different condition with a different candidate** (MZ-1866, Pitt Hopkins
+  Syndrome) — recorded because the sponsor query returned it, not because it bears on WOREE.
+- A missing hit is an answer about seven queries against one registry on one date: it does not
+  prove no study exists, and `NO_MATCH` is not absence.
+
+What this settles for the plan: its MZ-9138 bookkeeping was right to keep PROJECT_ACTIVE apart
+from TRIAL_REGISTRATION / ENROLLMENT / FIRST_DOSE, and the registry now answers the registration
+question with a measured `NO_MATCH` rather than an `UNKNOWN`. It settles nothing about an IND,
+which need not be public, and nothing about the compassionate event the roadmap records.
 
 ---
 
@@ -282,16 +315,17 @@ branch blocks no other branch.
 2. **drugfindR specifically** — blocked twice over: no R interpreter on this host, and installing
    one is an install. Next action if wanted: decide whether an R/Bioconductor environment is
    worth provisioning *before* any iLINCS work, since drugfindR is otherwise unreachable.
-3. **A ClinicalTrials.gov census** — no client exists anywhere in this repository and ToolUniverse
-   is absent, so the plan's "reuse the existing access first" has no existing access to reuse.
-   The v2 API answers in 122 ms. Writing the thin adapter is a small, feasible increment — and it
-   belongs with the clinical-census work another actor holds this wave, not here.
+3. **A ClinicalTrials.gov census** — *block lifted the same day, by the actor who held it.*
+   When this reconciliation was first written no client existed here. `clinical_census.py` and
+   its 2026-10-20 run now answer the plan's census step; § 4.4 records the result, and this
+   record did not re-run it.
 4. **GSE156243 qualification** — the bytes are absent and fetching plus qualifying them is a
    Scientist's act on an observed input, not a harness act.
 5. **P5 and P7** — P5 would require inventing a ranking the plan forbids; P7 has no first real
    evaluation to attach to. Both stay open on purpose.
-6. **The `spectrum-drug-tracker` manifest row** — measurably overstated, and reserved to another
-   actor in this wave. Recorded here, not edited.
+6. **The `spectrum-drug-tracker` manifest row** — measurably overstated when measured here, and
+   reserved to another actor in this wave, so recorded rather than edited. *That actor corrected
+   it the same day (`461bcc28`); the block is closed and no edit by this record was needed.*
 
 ---
 
