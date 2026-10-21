@@ -167,5 +167,30 @@
    "paper_packet_check": "manifest ok; flag drift INSUFFICIENT_DATA (established nothing, not a pass)"
   },
   "micro_upgrade": "dismissal_ledger_current.md row D-37 — a title/abstract query returning zero licenses 'no paper is indexed for this', never 'this was never measured'; with the measured counterexample from this session's own reading"
+ },
+ "FOLLOW_UP_TASK": {
+  "task_id": "REPURP-P3-EARLYBENEFIT-B-AUDIT-20261021",
+  "origin": "blind locator audit run by the Orchestrator on this task's reading; a finding is a new task, never a hold",
+  "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_PMID36537114_20261021.md",
+  "audit_commit": "545dd670",
+  "verdicts": {
+   "triples": 12,
+   "SUPPORTED": 8,
+   "OVERSHOOT": 1,
+   "UNDERSHOOT": 2,
+   "UNVERIFIABLE": 1,
+   "NOT_IN_SOURCE": 0
+  },
+  "repaired_at_source": {
+   "triple_0_OVERSHOOT": "the absence of a counted seizure endpoint is scoped to the delivered surface; the per-patient narratives (chunks 3-17) declared NOT COVERED",
+   "triple_1_UNDERSHOOT": "both halves of the authors' position carried - they hedge AND recommend; the snippet now spans both consecutive sentences",
+   "triple_5_UNVERIFIABLE": "the surface defect is global across prose and numeric tokens, so every signed or ranged value is PENDING_RE_ACQUISITION; the 'only endpoint of that kind in this repository' clause withdrawn from the locator",
+   "triple_9_UNDERSHOOT": "boundary STRENGTHENED: the source names patients 2 and 4 as previously published and both are diet responders, so a pooled count double-counts them and must name which"
+  },
+  "declared": "each repair carries a contradicts_locator object with the audit file, the triple index and what changed; locator_contradiction_audit.py --working-tree --fail-on-undeclared: 5 declared, 0 undeclared, exit 0",
+  "reading_redone": false,
+  "reading_redone_note": "The audit's surface is the surface this reading had; no re-read was performed and no new receipt was created. The staged receipt FTR-20261020-36537114-01 stands.",
+  "standing_debt": "A native-resolution surface for DOI 10.1002/ajmg.a.63074 does not exist on disk (no PDF, page render or figure render for this PMID under files/). On the operator's PDF list. Until it exists, no signed or ranged value from that paper is citable; an access control is not to be circumvented for it.",
+  "census_revised": "ATTRIBUTION_CENSUS revised in the session evaluation: incidents 9, machine 3, blind_auditor 4, self 2, severity_high 6 of which self 2, undetected_known 4 - superseding the pre-audit 2-of-2."
  }
 }

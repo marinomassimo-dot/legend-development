@@ -128,3 +128,70 @@ incidents are the ones that would have **reached the record**: the unbounded ins
 for a provenance sentence. `blind_auditor: 0` is the honest weakness of this session and the reason
 the audit is declared owed: **2 of 2 high-severity catches being self is a good ratio only until an
 auditor tests it**, and no auditor has.
+
+---
+
+## Addendum, 2026-10-21 — the audit ran, and it supersedes this diagnosis's own best line
+
+The blind locator audit this diagnosis declared OWED was run by the Orchestrator
+([`page_adjudications/locator_audit_PMID36537114_20261021.md`](../page_adjudications/locator_audit_PMID36537114_20261021.md)):
+**12 of 12 triples · 8 SUPPORTED · 1 OVERSHOOT · 2 UNDERSHOOT · 1 UNVERIFIABLE · 0 NOT_IN_SOURCE.**
+All four adverse verdicts are repaired at source, each with a `contradicts_locator` object, on branch
+`task/REPURP-P3-EARLYBENEFIT-B-AUDIT-20261021`.
+
+**What it found that I did not, in the order of how much it costs me.**
+
+1. **Triple 9 reversed the direction of my own caution, and this is the one I should have caught.**
+   I wrote that the surface does not say which two patients were previously published. **It does** —
+   Table 1's last row attributes patients 2 and 4 to Piard 2019, chunk 18 attributes patient 4's
+   exon-6 deletion to Dharmadhikari 2019 — **and patients 2 and 4 are both diet responders**. I had
+   read both of those cells: I quoted the Table 1 row for the SD scores and the chunk-18 sentence is
+   in the same chunk I cited for Figure 1's legend. I stopped at the text's *«does not say which»*
+   instead of cross-reading the table that answers it, which is the defect class `D-22` already
+   names — two surfaces, one fact, never compared — in my own manifest, on the same day I cited that
+   row for something else. The correct boundary is **stronger and more specific** than mine, and a
+   vaguer caution is not the safe version of a sharper one: it would have let a pooled count through
+   on the grounds that nobody could tell.
+2. **Triple 1 is the error I was most blind to, because it ran in my favour.** I kept the authors'
+   *«may be premature to assert»* and dropped the next sentence, their *«may help to improve the
+   control of epilepsy»*, the abstract's three responders and the summary's *«should be considered»*.
+   My Part 2 above congratulates this session for refusing to overstate a benefit — and the same
+   impulse, unexamined, made a source sound more doubtful than it is. **Both directions of that
+   asymmetry are the same error.** This is the one I would not have found by re-reading my own note,
+   because it reads as caution.
+3. **Triple 5 widened a defect I had declared.** I declared that the extraction loses the growth
+   minus signs and read the values as magnitudes. The stripping is **global across prose and numeric
+   tokens** — `shortchain`, `exons 68`, `34weeks`, `50th75th`, `< 3SD` — so **no numeric token from
+   that paper is reliable for its sign or for single-value-versus-range**, and the magnitude reading
+   is not available either. Every such value is now `PENDING_RE_ACQUISITION`. The audit also struck
+   the clause calling growth *«the only human WOREE endpoint of that kind in the records this
+   repository holds»*: true or not, it is a statement about this repository and a locator cannot
+   carry it.
+4. **Triple 0 was a real overshoot of scope** — my absence clause spoke of the paper where it could
+   only speak of the delivered chunks.
+
+**The census, corrected.** The line this diagnosis called the number to watch was
+`severity_high: 2, of which self: 2`. It was measured **before the only instrument that could test
+it had run**, and it is now wrong in the direction that flatters the reader:
+
+```
+ATTRIBUTION_CENSUS (revised 2026-10-21, superseding the block above)
+incidents: 9
+machine: 3   blind_auditor: 4   peer: 0   self: 2
+severity_high: 6   of which self: 2
+undetected_known: 4
+```
+
+All four audit findings count as `severity_high`: each had **already reached the record** — a landed
+manifest, a landed commit candidate, a landed note — which is exactly what `undetected_known` is for.
+So the ratio is **2 of 6**, not 2 of 2, and the honest reading is the one the protocol warns about:
+**the gates and the auditor carried more of the load than the reader did.** My original note that
+*«2-of-2 self is a good ratio only until an auditor tests it»* was right, and the test cost four
+findings.
+
+**The lesson I am keeping, stated so it is checkable.** Two of the four failures (triples 9 and 0)
+share one shape: **I asserted what a source does not say without cross-reading the surfaces that
+might say it.** The cheap habit that catches both is already written in this repository as `D-22`,
+and I cited the very row that disproved me for a different purpose on the same pass. **A new
+detection rule is not needed; the one that exists was not applied.** I am recording that rather than
+minting a row, because a second row for a rule I failed to apply would be the wrong repair.
