@@ -123,14 +123,19 @@
    {
     "t": "2026-10-21T22:50Z",
     "event": "scientist-d closed R4 (22 readings; design tables A 14 rows, B 7 rows); 22 receipts recorded; handed P4 early-benefit cards; R4 audit owed on ten manifests, queued behind the R1 and R3 audits"
+   },
+   {
+    "t": "2026-10-21T23:00Z",
+    "event": "R3 blind audit returned (deeb737c): 36 percent of audited triples overshoot. Dose proportionality of the multi-kinase inhibitor is not reproduced by the printed table either way (supralinear 1-21 mg; 1.27 for a 2.0 dose ratio 21-42 mg). Repair routed to scientist-c with priority; A51 candidate held"
    }
   ],
   "audits": {
    "R3": {
     "agentId": "ab9cbdf9ae6a65a7b",
     "file": "page_adjudications/locator_audit_R3_20261022.md",
-    "state": "RUNNING",
-    "scope": "40665325 PK table and Fig 4; 38147624 Fig 6I and Fig 5 schedule; 42310739 duplicate F; 40156289 Fig 1B; then 35945201, 41980417"
+    "state": "RETURNED: 129 triples, 78 supported, 46 overshoot (29 span-only, 22 substantive remain), 4 undershoot, 1 unverifiable",
+    "scope": "40665325 PK table and Fig 4; 38147624 Fig 6I and Fig 5 schedule; 42310739 duplicate F; 40156289 Fig 1B; then 35945201, 41980417",
+    "repair": "message sent to scientist-c relay agent aa7339b0af1c43595 with priority over new readings; candidate CC-20261021-SCIENTIST-C-R3-A51-ATTRIBUTION-01 HELD from propagation"
    },
    "R1": {
     "state": "RUNNING",
