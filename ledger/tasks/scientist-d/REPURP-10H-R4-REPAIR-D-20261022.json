@@ -1,0 +1,47 @@
+{
+ "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "REPURP-10H-R4-REPAIR-D-20261022",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-d",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Repair the eight R4 manifest entries and the eight defective early-benefit cards named by the blind audit locator_audit_R4_cards_20261022.md; the repairs are unaudited.",
+ "CURRENT_STATE": "DONE",
+ "TASK_ACK": {
+  "actor": "scientist-d"
+ },
+ "TASK_CLAIM": {
+  "actor": "scientist-d"
+ },
+ "RESULT": {
+  "manifests_repaired": [
+   "42481851#17",
+   "39625912#8",
+   "33180985#2",
+   "41891667#23",
+   "41999155#6",
+   "39726432#16",
+   "39726432#17",
+   "37537625#10"
+  ],
+  "cards_repaired": [
+   "KD",
+   "VGB",
+   "ETX",
+   "GROWTH",
+   "DEV",
+   "PDANCHOR",
+   "HORM",
+   "CBD",
+   "evaluation frame on all nine"
+  ],
+  "checks": "deepdive_manifest STRICT PASS on seven manifests; locator_contradiction_audit --working-tree no undeclared revision; check_cards.py PASS",
+  "audit_owed": "every repair is unaudited; blind audit OWED"
+ },
+ "DEFAULTS_TAKEN": [
+  "route and dose words removed from the ETX card rather than rewritten",
+  "A-VGB-2 endpoint changed (not the sign) because the source says partial response",
+  "Chong vigabatrin observations added as A-VGB-10 (NO_CHANGE) and A-VGB-11 (UNKNOWN)",
+  "KD quote matched only on secondary surfaces left as is"
+ ],
+ "STOP_LOG": []
+}
