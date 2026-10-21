@@ -1124,3 +1124,54 @@ and the same defect class as `D-22` (two surfaces, one fact, never compared).
 
 **Next surgical micro-step:** none required to close this gap; the sweep in (1) is scientific work
 for a future task, not a harness change.
+
+---
+
+## 2026-10-21 · `scientist-c` · `REPURP-P3-RESCUEREF-C-20261021` — the packet knows which surfaces exist and does not say which is best to read
+
+**GAP (reusable, disease-agnostic, named with its evidence).** `paper_packet.py packet` lists
+artefacts that are **present on disk and undeclared** — for PMID 42422765 it listed the publisher
+PDF and all seven r2 figure files — and it is the one command a reader runs before opening
+anything. It does not rank those surfaces for the act about to be performed. So a reader who
+wants a figure learns that fourteen files exist and not that one of them is 2.4× better than the
+one habit reaches for.
+
+**Measured, this session.** Every one of the sixteen figure attestations persisted for this paper
+rests on 726 × 708-class PMC CDN JPEGs described in the manifest as *"read at 104 effective ppi"*.
+The publisher PDF, on disk and undeclared since 2026-10-19, carries the same figures as **300 dpi
+embedded rasters** (Figure 3: 1744 × 1699). The adjudication this task was dispatched for — a
+survival panel whose printed axes had to be read to the day — was impossible to do honestly at the
+lower resolution and routine at the higher one. Nobody chose the worse surface; nobody compared
+them, because nothing asks.
+
+🔴 **And the second half of the gap is the one that bites silently.** Choosing *"extract the
+embedded image"* as a rule would have been wrong for exactly one of this paper's eight figures:
+**Figure 7's quantitative panels are vector**, its only embedded raster is 759 × 515 and carries
+the ECoG traces alone. An extracted-image read of Figure 7 returns a surface with **no numbers on
+it at all**, which a careful reader would plausibly write up as *"panel unreadable"* — a false
+negative about an endpoint family, from a correct-looking method. What detected it here was an
+aspect-ratio comparison: seven of eight figures matched a PDF image to within 0.002, Figure 7 was
+off by 0.18.
+
+**CHANGE = PRACTICE, shipped where the next reader of this paper will meet it, not as a tool.**
+Before a figure is read, `pdfimages -list` on any publisher PDF held for the paper, with each
+embedded image's aspect ratio compared against the CDN rasters. One command; two answers no
+existing check asks — *is a better surface available*, and *is this figure vector*. It is written
+into §0 of
+[`drug_repurposing/woree_rescue_reference_scaffold.md`](drug_repurposing/woree_rescue_reference_scaffold.md)
+and into the artefact notes of `deepdive_manifests/PMID42422765.json`, where the pairing rule and
+the Figure 7 exception are stated with their measurements.
+
+**Named, not built — deliberately, and the reason matters.** A `paper_packet.py` sub-command that
+ranks figure surfaces (resolution, vector-versus-raster, aspect-ratio pairing against the declared
+figure files) is the generic fix and it is **Harness Engineering's to build, at T0, not a
+Scientist's to improvise mid-adjudication**. It is proposed here with its acceptance test already
+available: run it over PMID 42422765 and it must prefer the publisher PDF for Figures 1–6 and a
+**page render** for Figure 7, for the stated reason. A tool that returns the embedded raster for
+Figure 7 has reproduced the defect this entry exists to prevent.
+
+**Cost / API / privacy risk:** none. Local poppler-utils 24.02.0 only; no network, no paid
+service, no new dependency, no patient-level material.
+
+**Next surgical micro-step:** Harness Engineering triages the ranking sub-command above against
+the acceptance test named; nothing in the scientific layer waits on it.
