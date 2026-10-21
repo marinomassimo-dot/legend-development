@@ -1,0 +1,436 @@
+{
+ "schema_version": 2,
+ "pmid": "38378758",
+ "doi": "10.1038/s41467-024-45829-4",
+ "receipt": "FTR-20261021-38378758-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named and deduplicated by the Orchestrator's selection file; the per-paper M0 packet and receipt status were run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "The reading is a primary-evidence read of a NOT WWOX EVIDENCE paper; the dossier is the analysis note section, no WWOX commit candidate is implied."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No consolidated baseline claim is narrowed or reversed by this reading; a blind audit is declared OWED where a candidate proposes it."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Not requested; discovery leads are staged separately if any."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a candidate card; BLOCK-1 holds, class level only."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A protein-quality-control and variant-effect group (the affiliation lines and source-data statement are in the XML; publication counts not computed in this reading). Methods are standard VAMP-seq with library-wide inhibitor and temperature perturbations. NOT WWOX EVIDENCE; a class-level negative and mechanism precedent."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "Parkin AND variant abundance",
+    "count": 17,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "PRKN AND deep mutational scanning",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "pharmacological chaperone AND destabilised variants AND abundance",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "PubMed counts, dated; a zero from a title/abstract query licenses 'no paper is indexed', never 'this was never measured' (D-37)."
+ },
+ "multihop": {
+  "references_enumerated": 94,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the JATS; none is WWOX-related. The Parkin activator study (reference 48) and the quality-control degron predictor are adjacent-search reserve items."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 38378758 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-21 via PubMed efetch for PMID 38378758: publication types ['Journal Article', \"Research Support, Non-U.S. Gov't\"]; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 94,
+   "references_screened": 92,
+   "references_with_doi": 92,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38378758_Clausen2024_PMC10879094.xml",
+   "sha256": "a8e2eba966a9424550f918669a4f320d66ee594b9b736831f30f1910501b6510",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC10879094: whole article; every text locator is matched against it.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10879094/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "a8e2eba966a9424550f918669a4f320d66ee594b9b736831f30f1910501b6510",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38378758/41467_2024_45829_Fig1_HTML.jpg",
+   "sha256": "63c2d08953fb149e0c4fbf7b7425569dea53ac2410d49ae7536c35b8e2b61626",
+   "kind": "figure",
+   "note": "Figure 1 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10879094/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "63c2d08953fb149e0c4fbf7b7425569dea53ac2410d49ae7536c35b8e2b61626",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38378758/41467_2024_45829_Fig2_HTML.jpg",
+   "sha256": "bb4990a37c62b0f48ed569bd1a48a09d96cad689645323425cd56d6b79a55ad8",
+   "kind": "figure",
+   "note": "Figure 2 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10879094/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "bb4990a37c62b0f48ed569bd1a48a09d96cad689645323425cd56d6b79a55ad8",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38378758/41467_2024_45829_Fig3_HTML.jpg",
+   "sha256": "f622a6daf4a84774c080e79a5721c39390541c04675ab5ef7f3cb93d67bbb04e",
+   "kind": "figure",
+   "note": "Figure 3 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10879094/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "f622a6daf4a84774c080e79a5721c39390541c04675ab5ef7f3cb93d67bbb04e",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38378758/41467_2024_45829_Fig4_HTML.jpg",
+   "sha256": "dbf42e273bd8e56df5ac2d3651519c994c812df2353dfb933013f1fb3e21d981",
+   "kind": "figure",
+   "note": "Figure 4 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10879094/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "dbf42e273bd8e56df5ac2d3651519c994c812df2353dfb933013f1fb3e21d981",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38378758/41467_2024_45829_Fig5_HTML.jpg",
+   "sha256": "6e14ea0305f82a9c2f183a607d069a4c55cbc1dee69a3e366972afbf6e397af7",
+   "kind": "figure",
+   "note": "Figure 5 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10879094/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "6e14ea0305f82a9c2f183a607d069a4c55cbc1dee69a3e366972afbf6e397af7",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38378758/41467_2024_45829_Fig6_HTML.jpg",
+   "sha256": "cb0d70039678ef3fa7435355fea74f4d05a2f143e531058e6a7bc541197498f5",
+   "kind": "figure",
+   "note": "Figure 6 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10879094/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "cb0d70039678ef3fa7435355fea74f4d05a2f143e531058e6a7bc541197498f5",
+    "derived": false
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE (Parkin). Endogenous Parkin is not detectable in the cells, and the whole map rests on overexpressed fusions; the authors name this as a limit.",
+    "snippet": "In the present study we therefore rely on overexpression of the Parkin variants.",
+    "anchor": "Discussion, paragraph 7",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38378758_Clausen2024_PMC10879094.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Parkin (PRKN) variants as N-terminal GFP fusions, IRES-mCherry, single-copy Tet-on landing pad in HEK293T cells; library-wide flow cytometry with proteasome/autophagy inhibitors, temperature shifts and a small-molecule Parkin activator; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "Parkin missense and nonsense variants (9,219 of 9,300 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score and flow profiles of the whole library"
+    }
+   },
+   {
+    "proposition": "The recombinant read is independent of endogenous protein because the endogenous protein is below detection in these cells.",
+    "snippet": "As we were unable to detect endogenous Parkin in the cells (Supplementary Fig. 1D), measurement of the cellular abundance of recombinant Parkin variants is likely independent of endogenous Parkin.",
+    "anchor": "Results, A multiplexed assay for Parkin variant abundance, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38378758_Clausen2024_PMC10879094.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Parkin (PRKN) variants as N-terminal GFP fusions, IRES-mCherry, single-copy Tet-on landing pad in HEK293T cells; library-wide flow cytometry with proteasome/autophagy inhibitors, temperature shifts and a small-molecule Parkin activator; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "Parkin missense and nonsense variants (9,219 of 9,300 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score and flow profiles of the whole library"
+    }
+   },
+   {
+    "proposition": "A destabilised disease variant (R42P) is reduced about 10-fold in abundance yet remains active when overexpressed, so the pathogenicity of that variant is linked to its low abundance: per-molecule function intact, quantity the lesion.",
+    "snippet": "This is likely due to R42P being overexpressed in our system (Supplementary Fig. 1D) and suggests that the pathogenicity of the R42P variant is linked to its low abundance.",
+    "anchor": "Results, A multiplexed assay for Parkin variant abundance, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38378758_Clausen2024_PMC10879094.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Parkin (PRKN) variants as N-terminal GFP fusions, IRES-mCherry, single-copy Tet-on landing pad in HEK293T cells; library-wide flow cytometry with proteasome/autophagy inhibitors, temperature shifts and a small-molecule Parkin activator; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "Parkin missense and nonsense variants (9,219 of 9,300 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score and flow profiles of the whole library"
+    }
+   },
+   {
+    "proposition": "Library-wide degradation route: proteasome inhibition and knock-down of a proteasome subunit shift the low-abundance population up, chloroquine does not.",
+    "snippet": "The flow cytometry profile of the PRKN library showed that proteasome inhibition (Fig. 3A) shifted the peak of low abundance variants towards a higher GFP:mCherry ratio, an effect which was also observed upon knock-down of the proteasome subunit PSMD14 with siRNA (Fig. 3B).",
+    "anchor": "Results, Low abundance variants are thermolabile proteasome targets, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38378758_Clausen2024_PMC10879094.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Parkin (PRKN) variants as N-terminal GFP fusions, IRES-mCherry, single-copy Tet-on landing pad in HEK293T cells; library-wide flow cytometry with proteasome/autophagy inhibitors, temperature shifts and a small-molecule Parkin activator; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "Parkin missense and nonsense variants (9,219 of 9,300 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score and flow profiles of the whole library"
+    }
+   },
+   {
+    "proposition": "Figure 3A-C read from the zoom insets: with bortezomib or the siRNA the low-abundance shoulder (GFP:mCherry about 0.1 to 0.5) rises slightly above the untreated trace while the wild-type peak is unchanged; with chloroquine the two traces coincide. The shift is visible but small against the wild-type peak and is not quantified in the text.",
+    "snippet": "Conversely, no substantial changes were observed with chloroquine (Fig. 3C).",
+    "anchor": "Figure 3A-C (library flow histograms with and without bortezomib, siRNA against PSMD14, chloroquine)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38378758/41467_2024_45829_Fig3_HTML.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Parkin (PRKN) variants as N-terminal GFP fusions, IRES-mCherry, single-copy Tet-on landing pad in HEK293T cells; library-wide flow cytometry with proteasome/autophagy inhibitors, temperature shifts and a small-molecule Parkin activator; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "Parkin missense and nonsense variants (9,219 of 9,300 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score and flow profiles of the whole library"
+    },
+    "qualifies": "entries[3]",
+    "qualifies_needle": "The flow cytometry profile of the PRKN librar"
+   },
+   {
+    "proposition": "A 29 degree incubation removes the low-abundance population almost entirely, which the authors read as two effects at once (more stable variants and slower turnover generally), so a permissive-temperature read cannot separate folding rescue from reduced clearance.",
+    "snippet": "Presumably this effect is the result of both an increased thermodynamic stability of the Parkin variants and a general reduction of protein turnover at the lowered temperature.",
+    "anchor": "Results, Low abundance variants are thermolabile proteasome targets, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38378758_Clausen2024_PMC10879094.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Parkin (PRKN) variants as N-terminal GFP fusions, IRES-mCherry, single-copy Tet-on landing pad in HEK293T cells; library-wide flow cytometry with proteasome/autophagy inhibitors, temperature shifts and a small-molecule Parkin activator; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "Parkin missense and nonsense variants (9,219 of 9,300 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score and flow profiles of the whole library"
+    }
+   },
+   {
+    "proposition": "Figure 3E read: at 29 degrees the low-abundance peak seen at 37 degrees (centred near 0.3 to 0.5) is nearly gone and the main peak sharpens and shifts right to about 2.5; Figure 3D at 39.5 degrees deepens the low shoulder.",
+    "snippet": "Representative flow cytometry profiles for landing pad cells expressing the PRKN library",
+    "anchor": "Figure 3D-E (library flow histograms at 37, 39.5 and 29 degrees)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38378758/41467_2024_45829_Fig3_HTML.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Parkin (PRKN) variants as N-terminal GFP fusions, IRES-mCherry, single-copy Tet-on landing pad in HEK293T cells; library-wide flow cytometry with proteasome/autophagy inhibitors, temperature shifts and a small-molecule Parkin activator; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "Parkin missense and nonsense variants (9,219 of 9,300 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score and flow profiles of the whole library"
+    },
+    "qualifies": "entries[5]",
+    "qualifies_needle": "Presumably this effect is the result of both "
+   },
+   {
+    "proposition": "THE PUBLISHED NEGATIVE: a small-molecule positive modulator of wild-type Parkin activity did not change variant abundance across the library.",
+    "snippet": "However, treatment with the activator did not confer any substantial differences in Parkin abundance (Fig. 3F).",
+    "anchor": "Results, Low abundance variants are thermolabile proteasome targets, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38378758_Clausen2024_PMC10879094.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Parkin (PRKN) variants as N-terminal GFP fusions, IRES-mCherry, single-copy Tet-on landing pad in HEK293T cells; library-wide flow cytometry with proteasome/autophagy inhibitors, temperature shifts and a small-molecule Parkin activator; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "Parkin missense and nonsense variants (9,219 of 9,300 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score and flow profiles of the whole library"
+    }
+   },
+   {
+    "proposition": "The negative is library-wide and the authors bound it: the compound may stabilise only variants in the region or domain where it binds, and it was also unsuccessful in a cell mitophagy study.",
+    "snippet": "Accordingly, we note that BIO-2007817 was also unsuccessful in increasing mitophagy in cell-based studies48, and might only stabilize variants localized to the region or domain where the compound binds.",
+    "anchor": "Results, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38378758_Clausen2024_PMC10879094.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Parkin (PRKN) variants as N-terminal GFP fusions, IRES-mCherry, single-copy Tet-on landing pad in HEK293T cells; library-wide flow cytometry with proteasome/autophagy inhibitors, temperature shifts and a small-molecule Parkin activator; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "Parkin missense and nonsense variants (9,219 of 9,300 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score and flow profiles of the whole library"
+    }
+   },
+   {
+    "proposition": "Figure 3F read: the treated and untreated library histograms overlie each other across the whole range, including the low-abundance shoulder near 0.5 to 1.",
+    "snippet": "Representative flow cytometry profiles for landing pad cells expressing the PRKN library untreated (-) (n = 407,000 cells) or treated (+) (n = 426,000 cells) with 10 μM Parkin activator BIO-2007817 for 24 hours.",
+    "anchor": "Figure 3F (library flow histogram with and without the Parkin activator)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38378758/41467_2024_45829_Fig3_HTML.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Parkin (PRKN) variants as N-terminal GFP fusions, IRES-mCherry, single-copy Tet-on landing pad in HEK293T cells; library-wide flow cytometry with proteasome/autophagy inhibitors, temperature shifts and a small-molecule Parkin activator; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "Parkin missense and nonsense variants (9,219 of 9,300 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score and flow profiles of the whole library"
+    },
+    "qualifies": "entries[7]",
+    "qualifies_needle": "However, treatment with the activator did not"
+   },
+   {
+    "proposition": "Abundance is necessary, not sufficient: half of the known disease-linked missense variants have wild-type-range abundance, and the abundance score separates pathogenic from benign worse than conservation or stability predictions (AUC 0.69 against 0.79).",
+    "snippet": "The ability of the abundance score to predict disease variants was analysed by a receiver operating characteristic (ROC) resulting in an area under the curve (AUC) of 0.69 (Fig. 6C).",
+    "anchor": "Results, Parkin abundance for identification of pathogenic variants, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38378758_Clausen2024_PMC10879094.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Parkin (PRKN) variants as N-terminal GFP fusions, IRES-mCherry, single-copy Tet-on landing pad in HEK293T cells; library-wide flow cytometry with proteasome/autophagy inhibitors, temperature shifts and a small-molecule Parkin activator; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "Parkin missense and nonsense variants (9,219 of 9,300 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score and flow profiles of the whole library"
+    }
+   },
+   {
+    "proposition": "Because high abundance is a necessary, but not sufficient criterion for a variant to be functional, the abundance score is on its own not sufficiently powerful to separate all pathogenic and benign variants.",
+    "snippet": "Because high abundance is a necessary, but not sufficient criterion for a variant to be functional, the abundance score is on its own not sufficiently powerful to separate all pathogenic and benign variants.",
+    "anchor": "Discussion, paragraph 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38378758_Clausen2024_PMC10879094.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Parkin (PRKN) variants as N-terminal GFP fusions, IRES-mCherry, single-copy Tet-on landing pad in HEK293T cells; library-wide flow cytometry with proteasome/autophagy inhibitors, temperature shifts and a small-molecule Parkin activator; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "Parkin missense and nonsense variants (9,219 of 9,300 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score and flow profiles of the whole library"
+    }
+   },
+   {
+    "proposition": "Figure 6B read: the pathogenic distribution runs from about 0 to 1.17 with a median near 0.5 and six of twelve above 0.5; the benign set lies at about 0.48 to 1.03.",
+    "snippet": "The benign variants all displayed abundance scores similar to WT, while half of the PD-linked variants (6 of 12) displayed abundance scores lower than 0.5 (Fig. 6B).",
+    "anchor": "Figure 6B (abundance scores of 12 pathogenic and 15 benign variants)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38378758/41467_2024_45829_Fig6_HTML.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Parkin (PRKN) variants as N-terminal GFP fusions, IRES-mCherry, single-copy Tet-on landing pad in HEK293T cells; library-wide flow cytometry with proteasome/autophagy inhibitors, temperature shifts and a small-molecule Parkin activator; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "Parkin missense and nonsense variants (9,219 of 9,300 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score and flow profiles of the whole library"
+    },
+    "qualifies": "entries[11]",
+    "qualifies_needle": "Because high abundance is a necessary, but no"
+   },
+   {
+    "proposition": "Not all low abundance is thermodynamic: 28 of 63 low-abundance variants at exposed, predicted-stable positions create a predicted quality-control degron (a neo-degron route), which a folding chaperone would not be expected to repair.",
+    "snippet": "This suggests that these variants (at already solvent-exposed positions) cause low abundance by degron formation rather than affecting thermodynamic stability.",
+    "anchor": "Results, Variant abundance correlates with stability and conservation, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38378758_Clausen2024_PMC10879094.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Parkin (PRKN) variants as N-terminal GFP fusions, IRES-mCherry, single-copy Tet-on landing pad in HEK293T cells; library-wide flow cytometry with proteasome/autophagy inhibitors, temperature shifts and a small-molecule Parkin activator; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "Parkin missense and nonsense variants (9,219 of 9,300 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score and flow profiles of the whole library"
+    }
+   },
+   {
+    "proposition": "The share of pathogenic missense variants that act by lost abundance is cited as an estimate from other work, with different ceilings in different parts of the paper.",
+    "snippet": "Recent estimates indicate that as much as 60% of pathogenic missense variants cause loss of protein abundance33,34",
+    "anchor": "Introduction, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38378758_Clausen2024_PMC10879094.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Parkin (PRKN) variants as N-terminal GFP fusions, IRES-mCherry, single-copy Tet-on landing pad in HEK293T cells; library-wide flow cytometry with proteasome/autophagy inhibitors, temperature shifts and a small-molecule Parkin activator; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "Parkin missense and nonsense variants (9,219 of 9,300 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score and flow profiles of the whole library"
+    }
+   },
+   {
+    "proposition": "The therapeutic reading is proposed, not tested: blocking degradation, stabilisers or pharmacological chaperones may raise abundance above a pathogenic threshold; the only compound tested here was the activator, with no effect.",
+    "snippet": "Hence, potentially blocking Parkin degradation or developing small molecule stabilizers or pharmacological chaperones, such as those for TP53 and CFTR84,85, may restore cellular abundance and increase function above the pathogenic threshold.",
+    "anchor": "Discussion, paragraph 7",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38378758_Clausen2024_PMC10879094.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Parkin (PRKN) variants as N-terminal GFP fusions, IRES-mCherry, single-copy Tet-on landing pad in HEK293T cells; library-wide flow cytometry with proteasome/autophagy inhibitors, temperature shifts and a small-molecule Parkin activator; ClinVar and gnomAD annotation; NOT a WWOX system",
+     "genotype": "Parkin missense and nonsense variants (9,219 of 9,300 possible); no WWOX",
+     "endpoint": "GFP:mCherry abundance score and flow profiles of the whole library"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST returned the whole article as fullTextXML for PMC10879094 (214 kB, 2026-10-21); figures from the supplementaryFiles container.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a figure legend or an inspected figure."
+ }
+}
