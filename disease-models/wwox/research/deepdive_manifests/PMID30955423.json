@@ -1,0 +1,254 @@
+{
+ "schema_version": 2,
+ "pmid": "30955423",
+ "doi": "10.1177/1535759719835355",
+ "receipt": "FTR-20261021-30955423-01",
+ "landing": [
+  "FTR-20261021-30955423-01",
+  "repurposing_10h_scientist-b_20261021"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 215,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-21: 'Huguenard J[au]' 215; with (WWOX OR Wwox) 0. Initials-level string, may pool homonyms.",
+  "research_type": "adjacent_method_expert",
+  "weighting": "A single-author narrative review by a senior investigator of thalamocortical absence circuits (and the field's leading proponent of the burst-firing model), summarising three recent primary studies. Authority for the circuit; a review is not primary evidence for any of the three summarised measurements.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID30955423_Huguenard2019_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement about WWOX content of this surface."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 49,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-30955423-01",
+    "target": "McCafferty et al. 2018 (silicon-probe recording and TTA-P2 reverse microdialysis in GAERS)",
+    "question": "What exactly is the Cav3 antagonist concentration response by region and what is the reduction in seizure incidence at each, and was ethosuximide itself ever applied by the same route?",
+    "status": "open - cited, not read"
+   },
+   {
+    "id": "MH-30955423-02",
+    "target": "Sorokin et al. 2016 (optogenetic induction and abort of absence seizures through thalamic burst manipulation)",
+    "question": "Does the abort-by-depolarisation result hold against a firing-rate control that does not alter burst mode?",
+    "status": "open - cited, not read"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 30955423, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "paper_packet.py packet at claim time: none prior; claimed by scientist-b."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-21",
+  "route": "PubMed esummary (JSON) for 30955423 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "pubtype [\"Journal Article\"]; no retraction, expression of concern or erratum is visible on the esummary record (the esummary JSON carries no CommentsCorrections list for this PMID, so that absence is a statement about this query).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 49,
+   "references_screened": 47,
+   "references_with_doi": 47,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID30955423_Huguenard2019_PMC_r2.xml",
+   "sha256": "8e509d70be3881275cdedf001aa15d66445db1586cd4222088a07ece9a94a85f",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=6610415&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "8e509d70be3881275cdedf001aa15d66445db1586cd4222088a07ece9a94a85f"
+   }
+  },
+  {
+   "path": "files/figures/PMID30955423_r2/10.1177_1535759719835355-fig1.jpg",
+   "sha256": "ac5765b875846dd6bc59191a03f68332b2fc9cc929ad93d81feb360a93d09753",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC6610415",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "ac5765b875846dd6bc59191a03f68332b2fc9cc929ad93d81feb360a93d09753"
+   }
+  },
+  {
+   "path": "files/figures/PMID30955423_r2/10.1177_1535759719835355-fig2.jpg",
+   "sha256": "1d747d85d714301d710b4981bfa9a1b15ed5355506451d2c816b66f5b1e0823c",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC6610415",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "1d747d85d714301d710b4981bfa9a1b15ed5355506451d2c816b66f5b1e0823c"
+   }
+  },
+  {
+   "path": "files/supplement/PMID30955423_r2/PMC6610415.1.pdf",
+   "sha256": "09cb802a8e881f5ea866cb8f721898d9489ceb3a8bf0827cfc609c04e8a8acc7",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC6610415",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "09cb802a8e881f5ea866cb8f721898d9489ceb3a8bf0827cfc609c04e8a8acc7"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figures opened as images; every text snippet below was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet below sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "The textbook working model, as the review states it: ethosuximide and related succinimides and oxazolidinediones block thalamic Cav3 channels to stop absence seizures. This is the one body sentence that names ethosuximide.",
+    "snippet": "The current working model is that ethosuximide and related succinimides and oxazolidinediones block thalamic CaV3 channels to exert their seizure-blocking effects.",
+    "surface": "body",
+    "anchor": "Introduction, paragraph 3",
+    "artifact": "files/fulltext/PMID30955423_Huguenard2019_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Scope of the 'challenge' to the ethosuximide mechanism: the review's three studies manipulate or record thalamic bursting by optogenetics, silicon probes and a Cav3-selective antagonist (TTA-P2) in stargazer mice, WAG/Rij and GAERS rats and a gamma-butyrolactone model. The body describes no ethosuximide experiment. The doubt about ethosuximide in the abstract is an inference from burst-firing studies, not a measurement of ethosuximide.",
+    "snippet": "They delivered various concentrations of TTA-P2, a potent and specific antagonist of CaV3 family members45 into sensory cortex or various locations in dorsal thalamus while monitoring seizure incidence and unit firing activity.",
+    "surface": "body",
+    "anchor": "Reduced Thalamic Activity and Bursting During SWD, paragraph 3",
+    "artifact": "files/fulltext/PMID30955423_Huguenard2019_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The challenge is to the site and mode, not to Cav3 involvement. The Cav3 antagonist suppressed seizures at all cortical and thalamic sites tried, needing higher concentration away from the reticular thalamus; the author reads this as the effect being mediated by diffusion to reticular thalamus, and lists the alternative that a smaller reticular nucleus is simply more uniformly reached by a point-source probe (critical mass).",
+    "snippet": "This suggested that absence seizures were relatively insensitive to CaV3 channel blockade in TC cells, and the authors propose that effects seen were a result of diffusion of the channel blocker to RT and that reduction in RT bursting was primarily responsible for the seizure reduction.",
+    "surface": "body",
+    "anchor": "Reduced Thalamic Activity and Bursting During SWD, paragraph 3",
+    "artifact": "files/fulltext/PMID30955423_Huguenard2019_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review's own conclusion keeps Cav3 central: the evidence still suggests thalamic Cav3 channels, especially in the reticular nucleus, are critical to spike-and-wave generation; and the model is revised to say that blocking Cav3 in either reticular or relay cells suppresses absences, with the reticular effect potentially stronger.",
+    "snippet": "Overall, the evidence continues to suggest that CaV3 channels in thalamus are critical for generation of SWD, especially those in RT nucleus.",
+    "surface": "body",
+    "anchor": "Conclusions, paragraph 3",
+    "artifact": "files/fulltext/PMID30955423_Huguenard2019_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Quoted in full so the revised model is not shortened: the reviewer's revision of the original model.",
+    "snippet": "Overall, these recent findings require a revision of the original model to add that blockade of CaV3 channels in either RT or TC cells will suppress absences, with the effect on RT cells potentially more powerful at the network level than the originally proposed effect on TC cells, and that the level of network synchrony during seizures may be much lower than previously thought.",
+    "surface": "body",
+    "anchor": "Conclusions, final paragraph",
+    "artifact": "files/fulltext/PMID30955423_Huguenard2019_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Measurement limits acknowledged by the author: spike-sorting during the ictal spike under-reports activity (about 80 percent under-reporting during such epochs by his own experience), so both the reported decrease of relay-cell firing and the low incidence of relay bursting during seizures are biased by method.",
+    "snippet": "Typically, we observe 10 to 20 action potentials on individual electrodes per epileptic spike, of which only a few can be unambiguously isolated, leading to underreporting of spike counts by ∼80% during such epochs.",
+    "surface": "body",
+    "anchor": "Reduced Thalamic Activity and Bursting During SWD, paragraph 5",
+    "artifact": "files/fulltext/PMID30955423_Huguenard2019_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A stargazer-mouse imaging study found reduced activity in primary visual cortex during spike-wave seizures (80 percent of neurons down); the author cautions this region is not the seizure focus. Evidence is from one model and a non-focal region.",
+    "snippet": "In V1, primary visual cortex, neural activity was largely decreased, with 80% of neurons showing reductions in GCaMP signals during SWD seizures compared to baseline.",
+    "surface": "body",
+    "anchor": "Neuronal Quiescence During Seizures, paragraph 2",
+    "artifact": "files/fulltext/PMID30955423_Huguenard2019_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Optogenetic induction of seizures by rebound bursting was shown only in animals with absence seizures; whether it works in a naive animal is untested. The circuit result is conditional on an epileptic background, which parallels the question of whether a drug effect on a seizure network can be read off a non-epileptic genotype.",
+    "snippet": "the triggering of SWD and associated seizures by eNpHR triggered hyperpolarization, and presumed postinhibitory rebound was only proven in animal models with known absence seizures, so it remains to be determined whether coordinated postinhibitory rebound is sufficient to evoke seizures in naive nonepileptic animals.",
+    "surface": "body",
+    "anchor": "Manipulations of Thalamic Burst Firing, paragraph 3",
+    "artifact": "files/fulltext/PMID30955423_Huguenard2019_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 read as an image: peri-event histograms in the WAG/Rij rat (adapted from earlier work) show firing in cortex, reticular thalamus and most relay nuclei peaking at the EEG spike, with the interanteromedial nucleus flat and the centrolateral-paracentral group showing a pause around the spike. It is adapted data, not a new measurement, and carries no drug.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1: EEG spike at top; histograms for cortex, RT, VPL, VPM, VL lateral and medial, MDL peaking at the spike; IAM flat; CL-PC with a pause.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID30955423_r2/10.1177_1535759719835355-fig1.jpg",
+    "anchor": "Figure 1, bucket jpg as delivered (a scanned adaptation; rank.py found no higher-resolution surface flagged)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2 read as an image is a hand-drawn schematic (cortex, reticular thalamus, relay neuron, rebound bursts, plus and minus synapses) and contains no measured data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2: cartoon of cortex, RT and TC neurons with trace sketches of EPSP-driven bursts in RT and post-inhibitory rebound bursts in TC.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID30955423_r2/10.1177_1535759719835355-fig2.jpg",
+    "anchor": "Figure 2, bucket jpg as delivered",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}
