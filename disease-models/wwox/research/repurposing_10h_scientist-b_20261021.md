@@ -273,3 +273,13 @@ Depth: `partial_fulltext_read` (whole PMC XML body; Figure 2 as a 300 ppi image;
 
 **Comparison with the lead.** Axis A: none. Axis B: direction depends on cell type and maturation. Axis C: a knockout of one subtype raised excitability in some cell classes. Axis D: none. **Net: age-window caveat for the lead.**
 
+## 15. PMID 32878331 (Berecki 2020): two CACNA1G missense variants in infantile-onset DEE. NOT WWOX EVIDENCE
+
+Depth: `partial_fulltext_read` (whole PMC XML body; Figure 1 as an image; Figures 2 to 4 captions and tables; supplementary Figure S1 not opened). Manifest `PMID32878331.json` STRICT PASS, 6 locators. Receipt staged `FTR-20261021-32878331-01`.
+
+**What it establishes.** Two children with CACNA1G (Cav3.1) missense variants and an infantile-onset developmental and epileptic encephalopathy without cerebellar atrophy. In HEK cells L909F behaves as a gain of function (activation shifted about 4.5 mV hyperpolarised, slower deactivation) and L208P as mixed gain and loss (activation and inactivation shifted, slower inactivation, slow recovery from inactivation, reduced availability at repetitive stimulation).
+
+**Why it matters here (answer to the group's comparator question).** It is the human T-type channelopathy comparator for DEE: T-type *gain* (and mixed) variants are associated with an early severe encephalopathy with seizures, ataxia and hypotonia, so T-type excess is a recognised cause of seizures and neurodevelopmental disease in humans, not only in mice. That is compatible with the premise of a T-type blocker pulling back an excess; it does not show that a WWOX null has T-type excess (nothing here or in the Wwox literature measures a T-type current in a Wwox system). Its limits are strong: two patients, de novo status unproven in one, HEK-cell currents without neuronal firing (the authors say so), phenotype severity not following the seizure burden, and no antiseizure-drug response bearing on T-type block. The Cav3.1 splice composition differs fetal-to-adult (isoform b fetal), a reminder that a preweaning brain and an adult one carry different channel populations.
+
+**Comparison with the lead.** Axis A: none. Axis B: T-type gain-of-function is a documented human disease mechanism for DEE; no WWOX link. Axis C: none. Axis D: none. **Net: context; supports the existence of a T-type excess mechanism class, no change to the lead's plausibility from this paper alone.**
+
