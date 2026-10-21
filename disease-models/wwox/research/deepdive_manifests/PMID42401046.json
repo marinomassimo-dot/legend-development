@@ -1,0 +1,388 @@
+{
+ "schema_version": 2,
+ "pmid": "42401046",
+ "doi": "10.1016/j.biopha.2026.119737",
+ "receipt": "FTR-20261021-42401046-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261021.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access XML, figures, PDF and supplement came from pmc_bucket_fetch.py in one call; no cascade needed."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Adult mouse kainate temporal-lobe epilepsy models; a GSK3 inhibitor is used as a Wnt activator and the endpoints are granule-cell histology and Axin2, with no seizure, EEG or behaviour readout. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries_text": [
+   "Wnt AND epileptogenesis",
+   "SB415286 AND epilepsy"
+  ],
+  "note": "Group R3 reading; queries are PubMed counts on 2026-10-21 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "Wnt AND epileptogenesis",
+    "count": 27,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   },
+   {
+    "query": "SB415286 AND epilepsy",
+    "count": 3,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 42401046; registry_records.py get --pmid 42401046 --hops 1",
+  "hits": 0,
+  "finding": "No receipt before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-21; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 74,
+   "references_screened": 70,
+   "references_with_doi": 70,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42401046_Helton2026_PMC_r2.xml",
+   "sha256": "7c98bf14d109aa993c9a4000c1b9f5ef9939f140eba466da38dd165e31c1d2dd",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=13479836",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "7c98bf14d109aa993c9a4000c1b9f5ef9939f140eba466da38dd165e31c1d2dd"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42401046_r2/PMC13479836.1.pdf",
+   "sha256": "d25f37e90408d75b6de5d3313dbf8fc62aa89477429977cda150d55d266575b7",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "d25f37e90408d75b6de5d3313dbf8fc62aa89477429977cda150d55d266575b7"
+   }
+  },
+  {
+   "path": "files/figures/PMID42401046_r2/nihms-2199027-f0001.jpg",
+   "sha256": "2812759e75548b1c4cdc06c0b0e965706564b84a6a41f12b493dd9a5f0b17568",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "2812759e75548b1c4cdc06c0b0e965706564b84a6a41f12b493dd9a5f0b17568"
+   }
+  },
+  {
+   "path": "files/figures/PMID42401046_r2/nihms-2199027-f0002.jpg",
+   "sha256": "1c451e2d4793e9f842538c9ef77caea5cf279afe1202bb02bc783bf490ccfc39",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "1c451e2d4793e9f842538c9ef77caea5cf279afe1202bb02bc783bf490ccfc39"
+   }
+  },
+  {
+   "path": "files/figures/PMID42401046_r2/nihms-2199027-f0003.jpg",
+   "sha256": "3fd5e429075a00a1483aa936f461d58fa720522e7719e11060ca62592e7bfc21",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "3fd5e429075a00a1483aa936f461d58fa720522e7719e11060ca62592e7bfc21"
+   }
+  },
+  {
+   "path": "files/figures/PMID42401046_r2/nihms-2199027-f0004.jpg",
+   "sha256": "7a6905cfbe9b00a862cc73c73401a0b3164a70f2b41c88ca152d1ee9bd81bc80",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "7a6905cfbe9b00a862cc73c73401a0b3164a70f2b41c88ca152d1ee9bd81bc80"
+   }
+  },
+  {
+   "path": "files/figures/PMID42401046_r2/nihms-2199027-f0005.jpg",
+   "sha256": "63df5ae4b147879664c1b72b67048db5202e59a4c192d699cd780a4efa2f99cb",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "63df5ae4b147879664c1b72b67048db5202e59a4c192d699cd780a4efa2f99cb"
+   }
+  },
+  {
+   "path": "files/figures/PMID42401046_r2/nihms-2199027-f0006.jpg",
+   "sha256": "fb2cabaaf6f054ab2362c2e47faba64fc588f690f42591b963547fa37597e135",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "fb2cabaaf6f054ab2362c2e47faba64fc588f690f42591b963547fa37597e135"
+   }
+  },
+  {
+   "path": "files/figures/PMID42401046_r2/NIHMS2199027-supplement-MMC1.jpg",
+   "sha256": "a00d110b6a464d5f303deac6a2e17d73cc521fa6208cbe56130c0ea9759ca179",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "a00d110b6a464d5f303deac6a2e17d73cc521fa6208cbe56130c0ea9759ca179"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Mice were adults (8-10 weeks): this is not a developing-brain model, and the drug was given for 14 days starting 24 h after kainate.",
+    "snippet": "Animal experiments were performed using 8–10-week-old wild-type C57Bl6/J mice",
+    "anchor": "Methods / Animal husbandry",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42401046_Helton2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Dose: SB415286 10 mg/kg/day i.p. in a DMSO and polyethylene glycol vehicle, a single dose level.",
+    "snippet": "SB415286 was dosed at 10 mg/kg/day IP [51–53].",
+    "anchor": "Methods / Drug treatments",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42401046_Helton2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The compound is a GSK3-beta inhibitor used to activate canonical Wnt; its activity as a kinase inhibitor in the mouse brain is the mechanism, not a selective Wnt ligand.",
+    "snippet": "SB415286 is a highly selective CNS-penetrant anilinomaleimide GSK3b inhibitor with established beta-catenin activating properties [43] and a half-life of 20 h [51].",
+    "anchor": "Results, first paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42401046_Helton2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Axin2 rose after a single dose and stayed up at 24 h (about 5- and 7-fold on the paper figures).",
+    "snippet": "Wnt activity increased 5 ± 0.94 fold 3-hours after SB415286 treatment and remained 7 ± 1.25 fold increased after 24-hours",
+    "anchor": "Results, first paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42401046_Helton2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The epilepsy outcome is histological: dispersion, migration, cell count and primary dendrite angle of POMC-GFP immature granule cells. Seizures were scored behaviourally only for 2 h at kainate induction to define status epilepticus.",
+    "snippet": "Seizures were scored behaviorally for 2-hours after completion of surgery in the IHK model and after initiation of injections in the IPK model by modified Racine scale",
+    "anchor": "Methods / Seizure scoring",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42401046_Helton2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the unilateral model SB415286 reduced dispersion, migration and the contralateral cell count increase.",
+    "snippet": "When animals were treated with Wnt activator SB415286, granule cell dispersion (Fig. 3C, p < 0.01) and granule cell radial migration (Fig. 3D, p < 0.001) were significantly reduced in the ipsilateral dentate gyrus after IHK",
+    "anchor": "Results / IHK",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42401046_Helton2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the bilateral model SB415286 had no effect on dispersion, migration or granule cell count; only dendrite angle changed.",
+    "snippet": "Wnt activation with SB415286 had no effect on granule cell layer dispersion, granule cell migration and granule cell count after IPK or IPS (Fig. 4B–D).",
+    "anchor": "Results / IPK",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42401046_Helton2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Dendrite angle in IPK was prevented by SB415286; this is the only histological marker rescued in the bilateral model.",
+    "snippet": "We also observed that pro-epileptogenic remodeling of proximal dendrites was prevented with Wnt activation after IPK (Fig. 4E).",
+    "anchor": "Results / IPK",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42401046_Helton2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Wnt signalling (Axin2) was below baseline only in the ipsilateral epileptogenic zone after IHK and unchanged on the contralateral side; SB415286 restored baseline.",
+    "snippet": "In the hemisphere contralateral to IHK injection, Wnt signaling levels in immature dentate granule cells were unchanged after IHK, compared to intrahippocampal saline controls (Fig. 5C–D).",
+    "anchor": "Results / Axin2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42401046_Helton2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "SB415286 raised Axin2 above baseline in saline-treated control mice, i.e. an over-activation arm exists.",
+    "snippet": "As expected, SB415286 treatment in intrahippocampal saline injected control mice increased Wnt activity above baseline in both hemispheres.",
+    "anchor": "Results / Axin2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42401046_Helton2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Counter-indication carried from earlier work by the same authors: a related GSK3 inhibitor impaired cognitive testing in non-epileptic control mice, which the authors read as supra-physiological Wnt in a normal brain.",
+    "snippet": "in our prior work we observed that saline control mice treated with Wnt activator Chir99021 demonstrated impaired cognitive testing compared to vehicle treated controls",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42401046_Helton2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Each group has n = 6; the statistics section states male and female mice were pooled.",
+    "snippet": "For each experiment, n per group was 6, male and female mice were used",
+    "anchor": "Methods / Statistics",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42401046_Helton2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors themselves tie the finding to earlier work on a related GSK3 inhibitor, where seizure burden fell in the unilateral model, and note that earlier work did not change dispersion, migration or neurogenesis.",
+    "snippet": "Furthermore, Wnt activation using Chir99021 during epileptogenesis in the IHK model of unilateral TLE reduced seizure burden during treatment and after treatment withdrawal",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42401046_Helton2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 3 (300 ppi): ipsilateral GCL width about 147 versus 112 micrometres (**), migration about 58 versus 29 (***), ipsilateral cell count remains near 10,000 per mm3 against about 115,000 in saline controls and ns between vehicle and SB415286; contralateral count about 200,000 falls to about 143,000 (*); n = 6 dots per group; the SB415286 ipsilateral groups have wide spread (width 75-150).",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] C ** 147 vs 112; D *** 58 vs 29; E ipsilateral ns, contralateral *",
+    "anchor": "Figure 3, JPEG 1795x1871 (matches PDF embed at 300 ppi)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42401046_r2/nihms-2199027-f0003.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[5]",
+    "qualifies_needle": "When animals were treated with Wnt activator "
+   },
+   {
+    "proposition": "Fig 4 (300 ppi): IPK dispersion ns; migration IPK about 21 versus IPS about 14, SB415286 arm about 21 (ns); cell count IPK about 157,000 versus IPS about 85,000 and SB415286 arm about 153,000 (ns); only the dendrite-angle cumulative curves separate (IPK vehicle right-shifted; SB415286 overlaps saline).",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] B ns; C IPK+Veh ~21 IPK+SB ~21; D ns; E * between IPK groups",
+    "anchor": "Figure 4, JPEG 1601x2100 (300 ppi)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42401046_r2/nihms-2199027-f0004.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[6]",
+    "qualifies_needle": "Wnt activation with SB415286 had no effect on"
+   },
+   {
+    "proposition": "Fig 5 (300 ppi): Axin2 mean pixel intensity in the ipsilateral zone IHK+vehicle about -7 (negative after background subtraction; individual points -28 to +23), IHS+vehicle about 15, IHK+SB about 25, IHS+SB about 33; contralateral: IHK+Veh about 14, IHK+SB about 22, IHS+Veh about 14, IHS+SB about 30 (*).",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] B IHK+Veh ~-7; IHK+SB ~25; IHS+Veh ~15; IHS+SB ~33; D IHS+SB ~30 *",
+    "anchor": "Figure 5, JPEG 1796x1767 (300 ppi)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42401046_r2/nihms-2199027-f0005.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[8]",
+    "qualifies_needle": "In the hemisphere contralateral to IHK inject"
+   },
+   {
+    "proposition": "Fig 6 (300 ppi): IPK Axin2 vehicle about 5, IPK+SB about 20.5, IPS+vehicle about 17.5, IPS+SB about 31; the Wnt decrease in IPK is a bar with points from -2 to 11 (n = 6).",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] IPK+Veh ~5; IPK+SB ~20.5; IPS+Veh ~17.5; IPS+SB ~31",
+    "anchor": "Figure 6, JPEG 1797x773 (300 ppi)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42401046_r2/nihms-2199027-f0006.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 1 (300 ppi): single-dose Axin2 pixel intensity vehicle about 5 and 6 versus SB415286 about 25 (3 h) and 32 (24 h); no error bars on a replicate count in the panel beyond SEM; the 3 h versus 24 h bracket is **.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] C vehicle ~5.3 and 6.3; SB415286 ~25 and 32",
+    "anchor": "Figure 1, JPEG 1795x670 (300 ppi)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42401046_r2/nihms-2199027-f0001.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[3]",
+    "qualifies_needle": "Wnt activity increased 5 ± 0.94 fold 3-hours "
+   },
+   {
+    "proposition": "ESM Fig 1 (about 500 ppi): percent body weight change over 14 days; IHK groups gain about 7-9 percent by day 14 (asterisks marked) while saline groups sit near 0; IPK groups lose about 10 percent on days 1-2 and recover; the SB415286 arm and vehicle arm overlap in each model.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] IHK+SB ~9 percent at day 14; IPK -11 percent at day 1",
+    "anchor": "Supplementary Fig. 1 (MMC1)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42401046_r2/NIHMS2199027-supplement-MMC1.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 2 (300 ppi): schema: daily i.p. vehicle or SB415286 from day 1 to day 14 after kainate, histology at day 14; no EEG, no video-EEG, no recurrent seizure counting after day 14.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Timeline day 0 to 14; Histology at 14",
+    "anchor": "Figure 2, JPEG",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42401046_r2/nihms-2199027-f0002.jpg",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch XML, PMC PDF and the figure JPEGs fingerprinted; main Figures 1-6 and the ESM weight figure opened as images at the surfaces rank selected (300 ppi); ESM Figures MMC2-4 (Racine, dendrite tracing) not opened.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}
