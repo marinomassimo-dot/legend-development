@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261021-40665325-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "40665325",
+  "doi": "10.1186/s13045-025-01724-z"
+ },
+ "event_at": "2026-10-21T22:08:00Z",
+ "analysis_at": "2026-10-21T22:08:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-c, task REPURP-10H-R3-C-20261021, PRIMARY_EVIDENCE_READ, SOURCE_FIRST; XML and figures acquired with pmc_bucket_fetch.py, figures inspected as images; prepared as JSON for the integrator and not appended by this actor.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID40665325_Ball2025_PMC_r2.xml",
+ "source_fingerprint": "79ad06302408535f8267d9d9b476d65bdb2497510aeed544b538381d8e96b7b5",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID40665325.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261021.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "full text, 6 figure surfaces and supplement docx read; see manifest"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

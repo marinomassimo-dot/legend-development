@@ -1,0 +1,416 @@
+{
+ "schema_version": 2,
+ "pmid": "40665325",
+ "doi": "10.1186/s13045-025-01724-z",
+ "receipt": "FTR-20261021-40665325-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261021.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access XML, figures, PDF and supplement came from pmc_bucket_fetch.py in one call; no cascade needed."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "Industry-sponsored phase 1 in adult AML/MDS; no neural, Wnt, WWOX or paediatric measurement. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries_text": [
+   "BTX-A51",
+   "casein kinase 1 alpha inhibitor AND neurodevelopment"
+  ],
+  "note": "Group R3 reading of the drug-class safety record; field density not queried for this paper.",
+  "queries": [
+   {
+    "query": "BTX-A51",
+    "count": 6,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   },
+   {
+    "query": "casein kinase 1 alpha inhibitor AND neurodevelopment",
+    "count": 0,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 40665325; registry_records.py get --pmid 40665325 --hops 1",
+  "hits": 0,
+  "finding": "No receipt before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed esummary checked on 2026-10-21 by pubmed_identity_check (MATCH); no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 36,
+   "references_screened": 36,
+   "references_with_doi": 36,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40665325_Ball2025_PMC_r2.xml",
+   "sha256": "79ad06302408535f8267d9d9b476d65bdb2497510aeed544b538381d8e96b7b5",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=12265154",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "79ad06302408535f8267d9d9b476d65bdb2497510aeed544b538381d8e96b7b5"
+   }
+  },
+  {
+   "path": "files/supplement/PMID40665325_r2/PMC12265154.1.pdf",
+   "sha256": "7cb0d516aa71c5a0a69238170111cfea298288ca3c1d3c2f49de15f5570d9816",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "7cb0d516aa71c5a0a69238170111cfea298288ca3c1d3c2f49de15f5570d9816"
+   }
+  },
+  {
+   "path": "files/supplement/PMID40665325_r2/13045_2025_1724_MOESM1_ESM.docx",
+   "sha256": "037f4b73f418802bfa0fce1d3348dc28543a23fdf391eb3d47cd1afd760ba31d",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "037f4b73f418802bfa0fce1d3348dc28543a23fdf391eb3d47cd1afd760ba31d"
+   }
+  },
+  {
+   "path": "files/figures/PMID40665325_r2/13045_2025_1724_Fig1_HTML.jpg",
+   "sha256": "cd7ccab15f284c0aeb332449b9ae80d6f1322f388968244aa5d5d91fe47bc0f7",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "cd7ccab15f284c0aeb332449b9ae80d6f1322f388968244aa5d5d91fe47bc0f7"
+   }
+  },
+  {
+   "path": "files/figures/PMID40665325_r2/13045_2025_1724_Fig3_HTML.jpg",
+   "sha256": "e26c59bbdec747cbdd88ca8dbf302a80fe2b11a9e62316df9319bc2cf7f5d5bc",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "e26c59bbdec747cbdd88ca8dbf302a80fe2b11a9e62316df9319bc2cf7f5d5bc"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID40665325_r3c/fig4_p08_300dpi.png",
+   "sha256": "8b38678b3be123a5874ee30712898e7a07160ccd8a054b53cdd41df33caf4d7f",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40665325_r2/PMC12265154.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=300), page 8",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "8b38678b3be123a5874ee30712898e7a07160ccd8a054b53cdd41df33caf4d7f"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID40665325_r3c/fig2_p06_embedded_1946x1226.png",
+   "sha256": "9c59be8f3166515eb2757814f6a6bc7a9585431f23598b54e929a13021172621",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40665325_r2/PMC12265154.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "fitz.Pixmap(doc, xref) of the embedded image on page 6",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "9c59be8f3166515eb2757814f6a6bc7a9585431f23598b54e929a13021172621"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID40665325_r3c/fig5_p09_embedded_1946x1230.png",
+   "sha256": "4ba13584b0b307fb75e6031c881639e33715d7f4d92530c784faed17c89e0e9c",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40665325_r2/PMC12265154.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "fitz.Pixmap(doc, xref) of the embedded image on page 9",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "4ba13584b0b307fb75e6031c881639e33715d7f4d92530c784faed17c89e0e9c"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID40665325_r3c/suppfig1_docx_image1.png",
+   "sha256": "68dc61e85af3fca8d2292780a52406acd63a4a4a0b11e2a1c7bd7afd721b3565",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40665325_r2/13045_2025_1724_MOESM1_ESM.docx",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "zipfile read of word/media/image1.png",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "68dc61e85af3fca8d2292780a52406acd63a4a4a0b11e2a1c7bd7afd721b3565"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE. The trial enrolled adults only; no paediatric exposure exists in this study.",
+    "snippet": "Eligible patients were age ≥ 18 years or older",
+    "anchor": "Patients and methods / Patients",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40665325_Ball2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Median age and range of the cohort (adults, oldest 84; youngest 22).",
+    "snippet": "The median age for the cohort was 75 years (22–84 years).",
+    "anchor": "Results / Patients",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40665325_Ball2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The recommended phase 2 dose was set at the 21 mg level after hepatic DLTs at 42 mg; the 42 mg level was stopped for liver-injury risk.",
+    "snippet": "Due to the potential for serious drug-induced liver injury, the 42 mg dose level was discontinued, even though the criteria for the MTD were not met.",
+    "anchor": "Results / Adverse events and DLTs",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40665325_Ball2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "One DLT at 42 mg was grade 3 hepatic failure meeting Hy law criteria together with encephalopathy; both resolved within two weeks of stopping (adult haematology cohort).",
+    "snippet": "Another patient experienced encephalopathy and grade 3 hepatic failure with AST, ALT, and bilirubin elevations meeting criteria for Hy’s law at the 42 mg dose.",
+    "anchor": "Results / Adverse events and DLTs",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40665325_Ball2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Six deaths without overt progression included an intracranial haemorrhage; no attribution to the drug is stated in the text.",
+    "snippet": "Six deaths occurred in the absence of overt disease progression due to lung infection, cardiac arrest, intracranial hemorrhage, fungal infection, and septic shock.",
+    "anchor": "Results / Adverse events and DLTs",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40665325_Ball2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper states the transaminase toxicity \"appeared dose-dependent\" by contrasting the 21 and 42 mg levels with lower ones; no per-dose tabulation of the 7 events is given, and the same paragraph reports 1 of 15 at the 21 mg RP2D, which is one of the two levels the claim names as highest-incidence.",
+    "snippet": "Any grade treatment-related transaminase toxicity was observed in 7 patients and appeared dose-dependent, occurring more frequently at the highest 21 mg and 42 mg dose levels. At the RP2D, only 1 out of 15 patients had transaminase elevation.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40665325_Ball2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PK claim: plasma PK described as dose-proportional from 1 to 42 mg; mean half-life 28 h.",
+    "snippet": "Plasma PK of BTX A51 was dose-proportional between 1 and 42 mg with accumulation based on AUC between Day 1 and Day 5.",
+    "anchor": "Results / PK and PD",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40665325_Ball2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Pharmacodynamics were measured on CD34-positive marrow cells of three patients only, at the 21 and 42 mg levels.",
+    "snippet": "Immunocytochemistry studies were performed on CD34 + cells isolated from bone marrow aspirates collected from 3 patients treated at the 21 mg and 42 mg levels, including a responder (Fig. 2).",
+    "anchor": "Results / PK and PD",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40665325_Ball2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Serum MIC-1 (p53 surrogate) was evaluated in 8 patients and described as variable at day 2 and elevated at day 5.",
+    "snippet": "The serum MIC-onefold change from baseline was variable on day 2 and remained elevated on day 5.",
+    "anchor": "Results / PK and PD",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40665325_Ball2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The cell-line claim: MYC and MDM2 fall after 100 nM A51 for 24 h in five AML lines (a leukaemia system, not neural).",
+    "snippet": "This resulted in a marked decrease in the expression of oncogenes such as MYC and MDM2.",
+    "anchor": "Results / Clinical efficacy (cell lines)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40665325_Ball2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The statement that A51 reduced CTD phosphorylation in all five lines, including HL-60.",
+    "snippet": "A51 treatment induced a significant reduction in Pol II CTD phosphorylation at Ser2 or Ser5 in RUNX1 mutant (OCI AML-5) and RUNX1 WT (MV4-11, THP-1, OCI AML-3, and HL-60) AML cell lines (Fig. 4).",
+    "anchor": "Results / Clinical efficacy (cell lines)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40665325_Ball2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The IC50 comparison RUNX1-mutant versus NRAS/IDH2-mutant blasts carries a p-value in the text.",
+    "snippet": "Further, RUNX1-mutated CD34 + primary AML blasts cocultured with HUVEC-AD52 were more sensitive to BTX A51 than NRAS and IDH2 mutated CD34 + primary AML blasts (IC50 19 nM vs. 38 nM, p < 0.01, Fig. 5B-C).",
+    "anchor": "Results / Clinical efficacy (ex vivo)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40665325_Ball2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Statement that the 21 mg dose may suffice for maximum biological effect because no MIC-1 or immunostaining difference between 21 and 42 mg was seen.",
+    "snippet": "Therefore, the 21 mg dose may be sufficient to achieve maximum biological effects.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40665325_Ball2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Responses were found only in RUNX1-mutated patients, at 11 or 21 mg; none at 42 mg (n = 5).",
+    "snippet": "We did not observe any responses among the five patients treated at the 42 mg dose.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40665325_Ball2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The sponsor funded the study and analysed the data.",
+    "snippet": "The study sponsor analyzed the data and conducted statistical analyses.",
+    "anchor": "Declarations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40665325_Ball2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig. 4 (vector page, rendered at 300 dpi): pSER5 CTD in HL-60 is not visibly reduced by A51 (bands near equal), pSER2 reduction in MV-4-11, OCI-AML-3, HL-60 is modest; MYC in OCI-AML-5 is near-absent in BOTH lanes so MYC suppression is not demonstrable in the RUNX1-mutant line; p53 rises only in OCI-AML-5; single blot per line, no quantification, no replicate stated.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] pSER5 CTD HL-60 lanes - and + similar band density; cMYC OCI-AML-5 faint in both lanes; p53 band only in OCI-AML-5.",
+    "anchor": "Figure 4, page render p.8 at 300 dpi (vector page; embedded raster would be a fragment)",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID40665325_r3c/fig4_p08_300dpi.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[10]",
+    "qualifies_needle": "A51 treatment induced a significant reduction"
+   },
+   {
+    "proposition": "Fig. 5A-C: each concentration carries one plotted point per curve (no replicate spread); the NRAS series has a point near 126 percent; the ** bracket in 5C spans the 10 nM fold-change bars (RUNX1 mutant about 0.7 versus NRAS/IDH2 about 1.6), not an IC50 comparison; at 30 nM both groups sit near 0.5.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] 5A one marker per concentration for A51 and VEN; 5B NRAS marker near 126 at ~10 nM; 5C bracket ** over RUNX1 mut 10 nM versus NRAS/IDH2 10 nM.",
+    "anchor": "Figure 5 A-C, embedded raster 1946x1230 from p.9 (300 ppi)",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID40665325_r3c/fig5_p09_embedded_1946x1230.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[11]",
+    "qualifies_needle": "Further, RUNX1-mutated CD34 + primary AML bla"
+   },
+   {
+    "proposition": "Fig. 3B: 12 patients with paired marrow; 5 show a reduction (MSK005 -16, MDA006 -55, MDA002 -57, MDA001 -80, COH002 -92 percent); bars labelled 85, 38, 32, 29 and 10 percent are increases; two bars are clipped at the +100 percent axis edge.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] MDA006 - 21 mg -55%; MDA002 - 21 mg -57%; MDA001 - 11 mg -80%; COH002 - 21 mg -92%; MSK005 - 5 mg -16%.",
+    "anchor": "Figure 3B, 778x447 JPEG (the only surface; the PDF embeds no higher-resolution copy)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40665325_r2/13045_2025_1724_Fig3_HTML.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig. 2: confocal images of CD34-positive cells from 3 patients (P1-P3), screening versus cycle 2 day 1; MCL1 and p-Pol II signal weaker, p53 and p-H2AX stronger after treatment; one nucleus shown per condition, no quantification.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] P1-P3 Screen versus C2D1 rows; one cell per cell; scale bar only.",
+    "anchor": "Figure 2, embedded raster 1946x1226 from p.6 (300 ppi)",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID40665325_r3c/fig2_p06_embedded_1946x1226.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig. 1 swimmer plot: dose cohorts 1, 3, 5, 8, 11, 21 (3 weeks), 21 (4 weeks), 42 mg; three CRi at 11 and 21 mg; treatment stopped early in many 21 mg patients.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] MDA001 11 mg CRi; COH002 and MDA002 21 mg (3x/wk for 3 weeks) CRi.",
+    "anchor": "Figure 1, 778x339 JPEG",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40665325_r2/13045_2025_1724_Fig1_HTML.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Fig. 1 (docx image): percent change from baseline in serum MIC-1; three bars are labelled 42 mg and five 21 mg while the footnote says all patients received 21 mg; one 42 mg bar is clipped at 300 with the label 1412%; the C1D5 bar is missing for one patient; several C1D5 bars sit at about 70-85 percent.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] All patients received 21 mg BTX-A51; COH003 42 mg; 1412%; C1D5 below 100 for COH003, COH007, COH008.",
+    "anchor": "Supplementary Figure 1, image1.png inside the MOESM1 docx",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID40665325_r3c/suppfig1_docx_image1.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table 3 (PK): at 21 mg versus 42 mg the Day 5 AUC is 3773 versus 4773 and Day 1 Cmax 120 versus 99 ng/mL, so a doubling of dose does not double exposure; this qualifies the main-text statement of dose-proportionality.",
+    "snippet": "Supplemental Table 3. Summary of BTX-A51 Pharmacokinetics",
+    "anchor": "Supplemental Table 3, MOESM1 docx",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID40665325_r2/13045_2025_1724_MOESM1_ESM.docx",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[6]",
+    "qualifies_needle": "Plasma PK of BTX A51 was dose-proportional be"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Full text XML from the PMC efetch route, PDF and the supplement docx from the PMC open-data bucket, fingerprinted; figures read as images (vector page rendered).",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}
