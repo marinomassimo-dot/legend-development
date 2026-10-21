@@ -1,0 +1,490 @@
+{
+ "schema_version": 2,
+ "pmid": "38731820",
+ "doi": "10.3390/ijms25094601",
+ "receipt": "FTR-20261021-38731820-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named and deduplicated by the Orchestrator's selection file; the per-paper M0 packet and receipt status were run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "The reading is a primary-evidence read of a NOT WWOX EVIDENCE paper; the dossier is the analysis note section, no WWOX commit candidate is implied."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No consolidated baseline claim is narrowed or reversed by this reading; a blind audit is declared OWED where a candidate proposes it."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Not requested; discovery leads are staged separately if any."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a candidate card; BLOCK-1 holds, class level only."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A Vanderbilt University neuroscience laboratory that states it has extensively characterised the Gabrg2+/Q390X line (from the text and affiliations) with a Meharry Medical College co-author; HEK293T overexpression and a small within-animal EEG experiment. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "GABRG2 AND Q390X AND proteostasis",
+    "count": 3,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "HRD1 AND GABA-A receptor AND epilepsy",
+    "count": 3,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   },
+   {
+    "query": "zonisamide AND HRD1",
+    "count": 5,
+    "source": "PubMed ESearch rettype=count 2026-10-21"
+   }
+  ],
+  "note": "PubMed counts, dated; a zero from a title/abstract query licenses 'no paper is indexed', never 'this was never measured' (D-37)."
+ },
+ "multihop": {
+  "references_enumerated": 72,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "72 references enumerated from the JATS; none is WWOX-related. The sister GABA-A proteostasis papers in this lot are 39216838 and 41178115; the earlier HRD1 inhibitor study (reference 37) is an adjacent-search reserve item."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 38731820 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-21 via PubMed efetch for PMID 38731820: publication types ['Journal Article']; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 72,
+   "references_screened": 69,
+   "references_with_doi": 69,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38731820_Poliquin2024_PMC11083348.xml",
+   "sha256": "56c4d87b5eeda80116ba5be971b2c3440034a759038839e7bd46d8bf530ff335",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC11083348: whole article; every text locator is matched against it.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11083348/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "56c4d87b5eeda80116ba5be971b2c3440034a759038839e7bd46d8bf530ff335",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38731820/ijms-25-04601-g001.jpg",
+   "sha256": "e7893aed15f1f7f916f282b2bbe5496bd1d86010a9dd626f1208fc3bbc156043",
+   "kind": "figure",
+   "note": "Figure 1 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11083348/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "e7893aed15f1f7f916f282b2bbe5496bd1d86010a9dd626f1208fc3bbc156043",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38731820/ijms-25-04601-g002.jpg",
+   "sha256": "bd192c7ae1e306852faf95d21b703fde85b4cda59fbee0f990fd33f8a319be01",
+   "kind": "figure",
+   "note": "Figure 2 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11083348/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "bd192c7ae1e306852faf95d21b703fde85b4cda59fbee0f990fd33f8a319be01",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38731820/ijms-25-04601-g003.jpg",
+   "sha256": "ae93a868405791ac8e4ccde76a37aaa9e59334092c0415c531ee329973f6a58b",
+   "kind": "figure",
+   "note": "Figure 3 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11083348/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "ae93a868405791ac8e4ccde76a37aaa9e59334092c0415c531ee329973f6a58b",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38731820/ijms-25-04601-g004.jpg",
+   "sha256": "e2cd9f58bec9e8c6702266f00673dd7519d21684f431afd57e02102a8f510f78",
+   "kind": "figure",
+   "note": "Figure 4 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11083348/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "e2cd9f58bec9e8c6702266f00673dd7519d21684f431afd57e02102a8f510f78",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38731820/ijms-25-04601-g005.jpg",
+   "sha256": "f5d91efbdf833de50eac2899b16a300456ac07c3c9839c57320950caf257671f",
+   "kind": "figure",
+   "note": "Figure 5 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11083348/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "f5d91efbdf833de50eac2899b16a300456ac07c3c9839c57320950caf257671f",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38731820/ijms-25-04601-g006.jpg",
+   "sha256": "c80290f58f96365fc7505d64b6a9b6da43c0519e9356ac1d47c16396299c853c",
+   "kind": "figure",
+   "note": "Figure 6 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11083348/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "c80290f58f96365fc7505d64b6a9b6da43c0519e9356ac1d47c16396299c853c",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38731820/ijms-25-04601-g007.jpg",
+   "sha256": "edd6e6a8e2bcc0f5b681151f1daae109c0ded0c8bffcc92c74c063d6ccfc5522",
+   "kind": "figure",
+   "note": "Figure 7 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11083348/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "edd6e6a8e2bcc0f5b681151f1daae109c0ded0c8bffcc92c74c063d6ccfc5522",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID38731820/ijms-25-04601-g008.jpg",
+   "sha256": "63a4f23d9699f8a57c2e82ed27a589a75ea3462eb846df9bb4d087d6cfb86137",
+   "kind": "figure",
+   "note": "Figure 8 JPEG opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11083348/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "63a4f23d9699f8a57c2e82ed27a589a75ea3462eb846df9bb4d087d6cfb86137",
+    "derived": false
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE (GABRG2 truncation, dominant negative). Of four E3 ligases tried, only HRD1 lowered the Q390X subunit (monomer, dimer and total).",
+    "snippet": "Likewise, HRD1 overexpression reduced the γ2(Q390X) subunit expression, while other E3 ligases had no effect on the γ2(Q390X) subunit.",
+    "anchor": "Results 2.2, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38731820_Poliquin2024_PMC11083348.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABRG2 (GABA-A receptor gamma2 subunit) Q390X truncation: HEK293T cells co-transfected with alpha1, beta2 and wild-type or Q390X gamma2 and E3 ligases, and Gabrg2 +/Q390X knock-in mice treated with an existing antiseizure drug (EEG within animal; brain-region immunoblots in separate animals); NOT a WWOX system",
+     "genotype": "Gabrg2 +/Q390X (nonsense, dominant-negative); HRD1, NEDD4L, UBE3A, RNF34, SEL1L; no WWOX",
+     "endpoint": "total and surface subunit protein by Western blot, 5-7 Hz spike-and-wave discharges in 24 h, BiP and calnexin"
+    }
+   },
+   {
+    "proposition": "HRD1 lowers wild type and mutant alike: the effect is not mutant-selective.",
+    "snippet": "reduced the levels of wildtype and mutant protein equally",
+    "anchor": "Results 2.2, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38731820_Poliquin2024_PMC11083348.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABRG2 (GABA-A receptor gamma2 subunit) Q390X truncation: HEK293T cells co-transfected with alpha1, beta2 and wild-type or Q390X gamma2 and E3 ligases, and Gabrg2 +/Q390X knock-in mice treated with an existing antiseizure drug (EEG within animal; brain-region immunoblots in separate animals); NOT a WWOX system",
+     "genotype": "Gabrg2 +/Q390X (nonsense, dominant-negative); HRD1, NEDD4L, UBE3A, RNF34, SEL1L; no WWOX",
+     "endpoint": "total and surface subunit protein by Western blot, 5-7 Hz spike-and-wave discharges in 24 h, BiP and calnexin"
+    }
+   },
+   {
+    "proposition": "Figure 2 read: with HRD1, wild-type gamma2 monomers about 0.55, Q390X monomers about 0.68, Q390X dimers about 0.6 and total Q390X about 0.66 of the empty-vector control; in the mixed condition total gamma2 falls to about 0.68 and wild-type gamma2 to about 0.65.",
+    "snippet": "A graph of the IDVs of the γ2(Q390X) dimers",
+    "anchor": "Figure 2B-H (E3 ligase overexpression, monomer, dimer, total, mixed)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38731820/ijms-25-04601-g002.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "GABRG2 (GABA-A receptor gamma2 subunit) Q390X truncation: HEK293T cells co-transfected with alpha1, beta2 and wild-type or Q390X gamma2 and E3 ligases, and Gabrg2 +/Q390X knock-in mice treated with an existing antiseizure drug (EEG within animal; brain-region immunoblots in separate animals); NOT a WWOX system",
+     "genotype": "Gabrg2 +/Q390X (nonsense, dominant-negative); HRD1, NEDD4L, UBE3A, RNF34, SEL1L; no WWOX",
+     "endpoint": "total and surface subunit protein by Western blot, 5-7 Hz spike-and-wave discharges in 24 h, BiP and calnexin"
+    },
+    "qualifies": "entries[1]",
+    "qualifies_needle": "reduced the levels of wildtype and mutant pro"
+   },
+   {
+    "proposition": "Surface expression, drug condition: the drug raises surface alpha1 and beta2 to about wild type; surface gamma2 rises only to about 0.57 against 0.47 (not significant).",
+    "snippet": "However, for the α1 subunit, ZNS treatment rescued the reduction seen in the Q390X condition",
+    "anchor": "Results 2.3, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38731820_Poliquin2024_PMC11083348.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABRG2 (GABA-A receptor gamma2 subunit) Q390X truncation: HEK293T cells co-transfected with alpha1, beta2 and wild-type or Q390X gamma2 and E3 ligases, and Gabrg2 +/Q390X knock-in mice treated with an existing antiseizure drug (EEG within animal; brain-region immunoblots in separate animals); NOT a WWOX system",
+     "genotype": "Gabrg2 +/Q390X (nonsense, dominant-negative); HRD1, NEDD4L, UBE3A, RNF34, SEL1L; no WWOX",
+     "endpoint": "total and surface subunit protein by Western blot, 5-7 Hz spike-and-wave discharges in 24 h, BiP and calnexin"
+    }
+   },
+   {
+    "proposition": "Figure 3D-F values read: surface gamma2 WT 1.0, Q390X 0.47, HRD about 0.29, SEL about 0.33, H+S about 0.28, drug about 0.57; surface alpha1 WT 1.0, Q390X about 0.75, HRD about 0.5, SEL about 0.62, H+S about 0.42, drug about 1.0; surface beta2 Q390X about 0.67, HRD about 0.42, SEL about 0.53, H+S about 0.37, drug about 0.93. The text paragraph describes only the drug condition; the HRD1 conditions fall below the Q390X baseline on every subunit.",
+    "snippet": "Membranes were immunoblotted for γ2",
+    "anchor": "Figure 3A-F (surface biotinylation, HRD1, SEL1L, both, and the drug against Q390X and wild type)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38731820/ijms-25-04601-g003.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "GABRG2 (GABA-A receptor gamma2 subunit) Q390X truncation: HEK293T cells co-transfected with alpha1, beta2 and wild-type or Q390X gamma2 and E3 ligases, and Gabrg2 +/Q390X knock-in mice treated with an existing antiseizure drug (EEG within animal; brain-region immunoblots in separate animals); NOT a WWOX system",
+     "genotype": "Gabrg2 +/Q390X (nonsense, dominant-negative); HRD1, NEDD4L, UBE3A, RNF34, SEL1L; no WWOX",
+     "endpoint": "total and surface subunit protein by Western blot, 5-7 Hz spike-and-wave discharges in 24 h, BiP and calnexin"
+    },
+    "qualifies": "entries[3]",
+    "qualifies_needle": "However, for the α1 subunit, ZNS treatment re"
+   },
+   {
+    "proposition": "The drug did not change total gamma2(Q390X) in cells, so the surface gain is not a clearance of the mutant subunit.",
+    "snippet": "ZNS treatment did not change γ2(Q390X) subunit expression in the mutant conditions",
+    "anchor": "Results 2.4, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38731820_Poliquin2024_PMC11083348.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABRG2 (GABA-A receptor gamma2 subunit) Q390X truncation: HEK293T cells co-transfected with alpha1, beta2 and wild-type or Q390X gamma2 and E3 ligases, and Gabrg2 +/Q390X knock-in mice treated with an existing antiseizure drug (EEG within animal; brain-region immunoblots in separate animals); NOT a WWOX system",
+     "genotype": "Gabrg2 +/Q390X (nonsense, dominant-negative); HRD1, NEDD4L, UBE3A, RNF34, SEL1L; no WWOX",
+     "endpoint": "total and surface subunit protein by Western blot, 5-7 Hz spike-and-wave discharges in 24 h, BiP and calnexin"
+    }
+   },
+   {
+    "proposition": "HRD1 was not induced by the drug in receptor-expressing cells, and only slightly in untransfected cells (a small rise at two mid concentrations and cell loss at the highest).",
+    "snippet": "However, we failed to observe the upregulation of HRD1 in the cells expressing the wildtype α1β2γ2 or the mutant α1β2γ2(Q390X) receptors.",
+    "anchor": "Results 2.5, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38731820_Poliquin2024_PMC11083348.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABRG2 (GABA-A receptor gamma2 subunit) Q390X truncation: HEK293T cells co-transfected with alpha1, beta2 and wild-type or Q390X gamma2 and E3 ligases, and Gabrg2 +/Q390X knock-in mice treated with an existing antiseizure drug (EEG within animal; brain-region immunoblots in separate animals); NOT a WWOX system",
+     "genotype": "Gabrg2 +/Q390X (nonsense, dominant-negative); HRD1, NEDD4L, UBE3A, RNF34, SEL1L; no WWOX",
+     "endpoint": "total and surface subunit protein by Western blot, 5-7 Hz spike-and-wave discharges in 24 h, BiP and calnexin"
+    }
+   },
+   {
+    "proposition": "In mice the ligase and its partner were unchanged by the drug.",
+    "snippet": "HRD1 and Sel1L expression were unchanged",
+    "anchor": "Results 2.8, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38731820_Poliquin2024_PMC11083348.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABRG2 (GABA-A receptor gamma2 subunit) Q390X truncation: HEK293T cells co-transfected with alpha1, beta2 and wild-type or Q390X gamma2 and E3 ligases, and Gabrg2 +/Q390X knock-in mice treated with an existing antiseizure drug (EEG within animal; brain-region immunoblots in separate animals); NOT a WWOX system",
+     "genotype": "Gabrg2 +/Q390X (nonsense, dominant-negative); HRD1, NEDD4L, UBE3A, RNF34, SEL1L; no WWOX",
+     "endpoint": "total and surface subunit protein by Western blot, 5-7 Hz spike-and-wave discharges in 24 h, BiP and calnexin"
+    }
+   },
+   {
+    "proposition": "The 'dose-dependent' degradation rests on two HRD1 amounts compared with each other (the lower amount fixed at 1), with no empty-vector arm in that panel.",
+    "snippet": "The γ2(Q390X) subunit protein was reduced to a greater degree with a higher amount of HRD1 cDNA at all three",
+    "anchor": "Results 2.5.1, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38731820_Poliquin2024_PMC11083348.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABRG2 (GABA-A receptor gamma2 subunit) Q390X truncation: HEK293T cells co-transfected with alpha1, beta2 and wild-type or Q390X gamma2 and E3 ligases, and Gabrg2 +/Q390X knock-in mice treated with an existing antiseizure drug (EEG within animal; brain-region immunoblots in separate animals); NOT a WWOX system",
+     "genotype": "Gabrg2 +/Q390X (nonsense, dominant-negative); HRD1, NEDD4L, UBE3A, RNF34, SEL1L; no WWOX",
+     "endpoint": "total and surface subunit protein by Western blot, 5-7 Hz spike-and-wave discharges in 24 h, BiP and calnexin"
+    }
+   },
+   {
+    "proposition": "EEG endpoint: fewer spike-and-wave discharges and less time seizing after seven days of daily treatment, within animal against its own baseline.",
+    "snippet": "mice 3 months of age that were treated with ZNS had fewer",
+    "anchor": "Results 2.5.2, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38731820_Poliquin2024_PMC11083348.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABRG2 (GABA-A receptor gamma2 subunit) Q390X truncation: HEK293T cells co-transfected with alpha1, beta2 and wild-type or Q390X gamma2 and E3 ligases, and Gabrg2 +/Q390X knock-in mice treated with an existing antiseizure drug (EEG within animal; brain-region immunoblots in separate animals); NOT a WWOX system",
+     "genotype": "Gabrg2 +/Q390X (nonsense, dominant-negative); HRD1, NEDD4L, UBE3A, RNF34, SEL1L; no WWOX",
+     "endpoint": "total and surface subunit protein by Western blot, 5-7 Hz spike-and-wave discharges in 24 h, BiP and calnexin"
+    }
+   },
+   {
+    "proposition": "The Figure 6 legend states the sample size and the test: three female heterozygous mice and one-tailed paired t-tests.",
+    "snippet": "N = 3 female heterozygous Gabrg2+/Q390X mice. One-tailed paired t-tests were used to determine significance.",
+    "anchor": "Figure 6 legend (end)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38731820_Poliquin2024_PMC11083348.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABRG2 (GABA-A receptor gamma2 subunit) Q390X truncation: HEK293T cells co-transfected with alpha1, beta2 and wild-type or Q390X gamma2 and E3 ligases, and Gabrg2 +/Q390X knock-in mice treated with an existing antiseizure drug (EEG within animal; brain-region immunoblots in separate animals); NOT a WWOX system",
+     "genotype": "Gabrg2 +/Q390X (nonsense, dominant-negative); HRD1, NEDD4L, UBE3A, RNF34, SEL1L; no WWOX",
+     "endpoint": "total and surface subunit protein by Western blot, 5-7 Hz spike-and-wave discharges in 24 h, BiP and calnexin"
+    }
+   },
+   {
+    "proposition": "Figure 6C and 6E read: the paired lines are six, one per colour (purple, green, red, orange, blue, yellow), not three; counts at baseline run from about 1 to 37 per 24 h and fall to about 0 to 13 on treatment; one animal starts near 1 and cannot fall. The reported baseline mean 15.58 matches six animals (37, 20.5, 13, 12, 10, 1), so six, not three, were analysed. Duration of events (Figure 6D) is not consistently reduced (one animal rises).",
+    "snippet": "Total number of 5-7 Hz SWDs in 24 h, during baseline and after ZNS treatment.",
+    "anchor": "Figure 6C-E (per-animal baseline and treated, 5-7 Hz SWDs)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38731820/ijms-25-04601-g006.jpg",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "GABRG2 (GABA-A receptor gamma2 subunit) Q390X truncation: HEK293T cells co-transfected with alpha1, beta2 and wild-type or Q390X gamma2 and E3 ligases, and Gabrg2 +/Q390X knock-in mice treated with an existing antiseizure drug (EEG within animal; brain-region immunoblots in separate animals); NOT a WWOX system",
+     "genotype": "Gabrg2 +/Q390X (nonsense, dominant-negative); HRD1, NEDD4L, UBE3A, RNF34, SEL1L; no WWOX",
+     "endpoint": "total and surface subunit protein by Western blot, 5-7 Hz spike-and-wave discharges in 24 h, BiP and calnexin"
+    },
+    "contradicts": "entries[10]",
+    "contradicts_needle": "N = 3 female"
+   },
+   {
+    "proposition": "There is no vehicle-injected EEG group: the comparison is a 24 hour baseline recording against a 24 hour recording after seven days of treatment in the same animals.",
+    "snippet": "After recovering from headmount surgery for 7 days, a 24 h baseline recording was acquired",
+    "anchor": "Methods 4.6, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38731820_Poliquin2024_PMC11083348.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABRG2 (GABA-A receptor gamma2 subunit) Q390X truncation: HEK293T cells co-transfected with alpha1, beta2 and wild-type or Q390X gamma2 and E3 ligases, and Gabrg2 +/Q390X knock-in mice treated with an existing antiseizure drug (EEG within animal; brain-region immunoblots in separate animals); NOT a WWOX system",
+     "genotype": "Gabrg2 +/Q390X (nonsense, dominant-negative); HRD1, NEDD4L, UBE3A, RNF34, SEL1L; no WWOX",
+     "endpoint": "total and surface subunit protein by Western blot, 5-7 Hz spike-and-wave discharges in 24 h, BiP and calnexin"
+    }
+   },
+   {
+    "proposition": "The EEG animals and the protein-measurement animals are different groups at different ages: the EEG mice were implanted around two to three months, the brain-region lysates came from animals treated from one to one and a half months.",
+    "snippet": "male and female Gabrg2+/Q390X mice were surgically implanted with headmounts",
+    "anchor": "Methods 4.6, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38731820_Poliquin2024_PMC11083348.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABRG2 (GABA-A receptor gamma2 subunit) Q390X truncation: HEK293T cells co-transfected with alpha1, beta2 and wild-type or Q390X gamma2 and E3 ligases, and Gabrg2 +/Q390X knock-in mice treated with an existing antiseizure drug (EEG within animal; brain-region immunoblots in separate animals); NOT a WWOX system",
+     "genotype": "Gabrg2 +/Q390X (nonsense, dominant-negative); HRD1, NEDD4L, UBE3A, RNF34, SEL1L; no WWOX",
+     "endpoint": "total and surface subunit protein by Western blot, 5-7 Hz spike-and-wave discharges in 24 h, BiP and calnexin"
+    }
+   },
+   {
+    "proposition": "The authors credit the benefit to a plural mechanism and give the drug's direct ion-channel actions among them.",
+    "snippet": "In addition to its direct effect on ion channels via altering the fast inactivation threshold of voltage-dependent sodium channels",
+    "anchor": "Discussion 3.4, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38731820_Poliquin2024_PMC11083348.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABRG2 (GABA-A receptor gamma2 subunit) Q390X truncation: HEK293T cells co-transfected with alpha1, beta2 and wild-type or Q390X gamma2 and E3 ligases, and Gabrg2 +/Q390X knock-in mice treated with an existing antiseizure drug (EEG within animal; brain-region immunoblots in separate animals); NOT a WWOX system",
+     "genotype": "Gabrg2 +/Q390X (nonsense, dominant-negative); HRD1, NEDD4L, UBE3A, RNF34, SEL1L; no WWOX",
+     "endpoint": "total and surface subunit protein by Western blot, 5-7 Hz spike-and-wave discharges in 24 h, BiP and calnexin"
+    }
+   },
+   {
+    "proposition": "The mechanism offered is hedged: reduced ER stress and a moderate rise of HRD1, with HRD1 unchanged in the mouse and ER chaperones not responding in the mutant mice.",
+    "snippet": "This is at least partially due to the fact that ZNS can reduce ER stress and moderately enhance HRD1.",
+    "anchor": "Discussion 3.4, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38731820_Poliquin2024_PMC11083348.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABRG2 (GABA-A receptor gamma2 subunit) Q390X truncation: HEK293T cells co-transfected with alpha1, beta2 and wild-type or Q390X gamma2 and E3 ligases, and Gabrg2 +/Q390X knock-in mice treated with an existing antiseizure drug (EEG within animal; brain-region immunoblots in separate animals); NOT a WWOX system",
+     "genotype": "Gabrg2 +/Q390X (nonsense, dominant-negative); HRD1, NEDD4L, UBE3A, RNF34, SEL1L; no WWOX",
+     "endpoint": "total and surface subunit protein by Western blot, 5-7 Hz spike-and-wave discharges in 24 h, BiP and calnexin"
+    }
+   },
+   {
+    "proposition": "A ceiling effect is raised for the ER chaperones in the mutant mice.",
+    "snippet": "The elevated expression of BiP at baseline and lack of response to ZNS raise the possibility of a ceiling effect",
+    "anchor": "Discussion 3.5, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38731820_Poliquin2024_PMC11083348.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABRG2 (GABA-A receptor gamma2 subunit) Q390X truncation: HEK293T cells co-transfected with alpha1, beta2 and wild-type or Q390X gamma2 and E3 ligases, and Gabrg2 +/Q390X knock-in mice treated with an existing antiseizure drug (EEG within animal; brain-region immunoblots in separate animals); NOT a WWOX system",
+     "genotype": "Gabrg2 +/Q390X (nonsense, dominant-negative); HRD1, NEDD4L, UBE3A, RNF34, SEL1L; no WWOX",
+     "endpoint": "total and surface subunit protein by Western blot, 5-7 Hz spike-and-wave discharges in 24 h, BiP and calnexin"
+    }
+   },
+   {
+    "proposition": "The surface benefit of removing the mutant subunit is stated as a possibility that may offset loss of wild-type total; it is not measured (no current or mIPSC read-out in this paper).",
+    "snippet": "Although increased HRD1 activity may reduce the total amount of wildtype γ2 further, the increase in surface trafficking of functional receptors by removing γ2(Q390X) may offset the decrease in the total γ2 subunit.",
+    "anchor": "Discussion 3.3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38731820_Poliquin2024_PMC11083348.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GABRG2 (GABA-A receptor gamma2 subunit) Q390X truncation: HEK293T cells co-transfected with alpha1, beta2 and wild-type or Q390X gamma2 and E3 ligases, and Gabrg2 +/Q390X knock-in mice treated with an existing antiseizure drug (EEG within animal; brain-region immunoblots in separate animals); NOT a WWOX system",
+     "genotype": "Gabrg2 +/Q390X (nonsense, dominant-negative); HRD1, NEDD4L, UBE3A, RNF34, SEL1L; no WWOX",
+     "endpoint": "total and surface subunit protein by Western blot, 5-7 Hz spike-and-wave discharges in 24 h, BiP and calnexin"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST returned the whole article as fullTextXML for PMC11083348 (174 kB, 2026-10-21); figures from the supplementaryFiles container.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a figure legend or an inspected figure."
+ }
+}
