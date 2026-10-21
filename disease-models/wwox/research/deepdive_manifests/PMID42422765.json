@@ -352,6 +352,105 @@
      "join": ""
     }
    }
+  },
+  {
+   "path": "files/supplement/PMID42422765_r2/PMC13343157.1.pdf",
+   "sha256": "8850ea32d27a638b4ab8a38bfc9281ac9bac269a70e8c27302dd1001f92cbee4",
+   "kind": "article_binary",
+   "note": "Publisher PDF of the article (Elsevier, 17 pp.), already on disk and undeclared until 2026-10-21. Declared here because it is the surface that carries every main figure as a 300 dpi embedded raster, 2.4x the linear detail of the 726 px PMC CDN JPEGs the earlier reads used, and because Figure 7's plots are vector in it.",
+   "acquisition_recipe": {
+    "no_recipe": "present in files/supplement/PMID42422765_r2/ from the 2026-10-19 re-acquisition wave; that wave's note names no route for this file and none is invented here"
+   }
+  },
+  {
+   "path": "files/figures/PMID42422765_r2/native_renders_20261021/fig1_PMC13343157_p03_embedded_1993x1968.png",
+   "sha256": "36089c2f67646ef3543002fd94507f1d2d5556283b3173edf31aae7cff6b3dd2",
+   "kind": "figure",
+   "note": "Figure 1 at native resolution: the raster embedded on page 3 of the publisher PDF, 1993x1968 at 300 dpi. Figure-to-file pairing confirmed by figure_legend_pairs.py over the JATS XML and cross-checked by aspect ratio (gr1 738x729 = 1.0127 against this image 1.0127).",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "36089c2f67646ef3543002fd94507f1d2d5556283b3173edf31aae7cff6b3dd2",
+    "derived_from": "files/supplement/PMID42422765_r2/PMC13343157.1.pdf",
+    "extractor": {
+     "name": "poppler-utils pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -png -f 3 -l 3",
+     "join": ""
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID42422765_r2/native_renders_20261021/fig3_PMC13343157_p06_embedded_1744x1699.png",
+   "sha256": "9152439cab8c2d56ee8312fd0b955d6aeb6411cdb10471786b4534ca6c753d3b",
+   "kind": "figure",
+   "note": "Figure 3 at native resolution: the raster embedded on page 6 of the publisher PDF, 1744x1699 at 300 dpi. Aspect ratio 1.0265 against gr3.jpg 726x708 = 1.0254. This is the surface the 2026-10-21 dose adjudication read.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "9152439cab8c2d56ee8312fd0b955d6aeb6411cdb10471786b4534ca6c753d3b",
+    "derived_from": "files/supplement/PMID42422765_r2/PMC13343157.1.pdf",
+    "extractor": {
+     "name": "poppler-utils pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -png -f 6 -l 6",
+     "join": ""
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID42422765_r2/native_renders_20261021/fig6_PMC13343157_p10_embedded_1744x1617.png",
+   "sha256": "2fb1c5e3a10c595c6c2023977103d959364464dee3cd7b684da6111e6744a83e",
+   "kind": "figure",
+   "note": "Figure 6 at native resolution: the raster embedded on page 10 of the publisher PDF, 1744x1617 at 300 dpi. Aspect ratio 1.0785 against gr6.jpg 726x673 = 1.0787.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "2fb1c5e3a10c595c6c2023977103d959364464dee3cd7b684da6111e6744a83e",
+    "derived_from": "files/supplement/PMID42422765_r2/PMC13343157.1.pdf",
+    "extractor": {
+     "name": "poppler-utils pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -png -f 10 -l 10",
+     "join": ""
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID42422765_r2/native_renders_20261021/fig7_PMC13343157_p11_pagerender_400dpi.png",
+   "sha256": "409c46a23bb56f71fa2030d37c55473d4641bb60ba7f8c3598aec055f24894f8",
+   "kind": "figure",
+   "note": "Figure 7 as a 400 dpi PAGE render (3350x4350) rather than an extracted image, because Figure 7's quantitative panels are VECTOR in the PDF: the only raster on page 11 is 759x515 and carries the ECoG traces alone. An extracted-image read of this figure would have missed every number on panels B, C and E.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "409c46a23bb56f71fa2030d37c55473d4641bb60ba7f8c3598aec055f24894f8",
+    "derived_from": "files/supplement/PMID42422765_r2/PMC13343157.1.pdf",
+    "extractor": {
+     "name": "poppler-utils pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 400 -f 11 -l 11 -png",
+     "join": ""
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID42422765_r2/native_renders_20261021/figS7_mmc1_p09_pagerender_400dpi.png",
+   "sha256": "8bddedc97603c7cd573cdd17a1e9ddefc3abe997877876623feb5cbf407a05cf",
+   "kind": "figure",
+   "note": "Supplementary Figure S7 as a 400 dpi page render (3402x4394) of page 9 of mmc1.pdf. Supersedes nothing: the existing 200 dpi render of the same page stays declared and the locators that cite it are unchanged.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-21",
+    "result_sha256": "8bddedc97603c7cd573cdd17a1e9ddefc3abe997877876623feb5cbf407a05cf",
+    "derived_from": "files/fulltext/PMID42422765_Obeid2026_assets/mmc1.pdf",
+    "extractor": {
+     "name": "poppler-utils pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 400 -f 9 -l 9 -png",
+     "join": ""
+    }
+   }
   }
  ],
  "verbatim_locators": {
@@ -722,6 +821,122 @@
      "comparator": "WT and KO injected with reference item (RI)",
      "endpoint": "blood glucose mg/dL at P10, P14, P20, P30, P180"
     }
+   },
+   {
+    "proposition": "FIGURE 3B READ AT NATIVE RESOLUTION AND MEASURED AGAINST ITS PRINTED AXES - the manifest had no Figure 3B entry at all until now, while CLAIM 011's dose flag rested on a panel reading of it. Survival is a STEP on this panel and not a gradient: the low-dose arm reaches zero, the high-dose arm plateaus, and the high-dose plateau sits at or marginally above the wild-type control's own survival, which is what the caption's p = 0.78 means. Two numbers asserted in the flag's prose are corrected by measurement (death shifted from ~day 15, not ~day 20; plateau 76-77 percent, not ~80), and neither of them sat behind any locator.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3B Kaplan-Meier, axes read at x ticks 489.5/667.5/845.0/1023.0 px = 0/100/200/300 days and y ticks 373.0/216/59.5 px = 0/50/100 percent: KO+RI (n=10) first death ~day 9 and 0 percent by ~day 15; KO+WWOX LD (n=20) 100 percent to ~day 18 then 0 percent at ~day 78-81; KO+WWOX HD (n=30) 100 percent to ~day 24, ~92 percent at ~day 51, ~84 percent at ~day 69, then 76-77 percent flat from ~day 80 through day 300; WT+RI (n=20) 100 percent to ~day 45, ~89-90 percent to ~day 122, then 71-72 percent through day 300.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42422765_r2/native_renders_20261021/fig3_PMC13343157_p06_embedded_1744x1699.png",
+    "anchor": "Figure 3, panel B, 300 dpi raster embedded on page 6 of the publisher PDF (1744x1699), 2.4x the linear detail of gr3.jpg (726x708) from which the 2026-08-10 flag was written",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "Wwox-null FVB mice (KO), Aqeilan 2007 targeted-deletion allele, bilateral ICV at P0-P1 of AAV9-hSynI-hWWOX (WPRE-free) at LD 1.23e11 vg or HD 2.63e11 vg as printed, 2.0 uL/hemisphere",
+     "genotype": "Wwox -/- full knockout; not a missense and not a compound heterozygote",
+     "comparator": "WT injected with reference item (WT+RI) and KO injected with reference item (KO+RI)",
+     "endpoint": "survival to 300 days, body weight, blood glucose, MBP immunostaining, Iba1/GFAP area, ECoG spike and spike-wave discharge rate"
+    },
+    "qualifies": "entries[46]",
+    "qualifies_needle": "HD produced survival comparable to WT animals (p = 0.78)"
+   },
+   {
+    "proposition": "THE DOSE DOES NOT GRADE BODY WEIGHT, WHICH NO RECORD IN THIS REPOSITORY HAD STATED. At P30 the two treated arms are superimposed, and the long-term panel's low-dose curve ends because the arm is extinct, not because the weight falls - so 'duration of the effect' and 'survival of the cohort' separate here exactly as the scaffold's column rules require.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3C weight at P30: WT+RI ~17.5 g, KO+LD ~15.3 g, KO+HD ~15.6 g, KO+RI last point at P15 ~4.7 g; NO significance marker of any kind is printed on panel C. Figure 3D to P180: WT+RI ~26.9 g and KO+HD ~26.0 g at day 180 with overlapping error bars, KO+LD last point ~day 60 at ~21 g, KO+RI last point ~day 15 at ~5 g; no significance marker printed on panel D either.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42422765_r2/native_renders_20261021/fig3_PMC13343157_p06_embedded_1744x1699.png",
+    "anchor": "Figure 3, panels C and D, same 300 dpi surface",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "Wwox-null FVB mice (KO), Aqeilan 2007 targeted-deletion allele, bilateral ICV at P0-P1 of AAV9-hSynI-hWWOX (WPRE-free) at LD 1.23e11 vg or HD 2.63e11 vg as printed, 2.0 uL/hemisphere",
+     "genotype": "Wwox -/- full knockout; not a missense and not a compound heterozygote",
+     "comparator": "WT injected with reference item (WT+RI) and KO injected with reference item (KO+RI)",
+     "endpoint": "survival to 300 days, body weight, blood glucose, MBP immunostaining, Iba1/GFAP area, ECoG spike and spike-wave discharge rate"
+    }
+   },
+   {
+    "proposition": "FIGURE 7E CONTAINS NO LOW-DOSE ARM, SO THE ECoG DOMAIN CANNOT SUPPORT A DOSE-DEPENDENT CLAIM AT ALL - read from a 400 dpi PAGE render because this figure's quantitative panels are vector in the PDF. The rescue itself is real and is the study's single cleanest CNS-electrophysiological endpoint: the treated arm is statistically indistinguishable from wild type. Panel 7C's printed 0.2000 against the running text's 'significant elevation' is CONFIRMED at 400 dpi, not contradicted, and at this resolution 7C resolves two distinct WT markers and three distinct KO markers against a caption stating n = 5 per group - markers may overlap at identical values and the panel cannot discriminate, so this is recorded as a limit of the panel and not as evidence against the caption.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7E spike-wave discharges/hour, three groups only (WT, KO, HD): WT points ~0.00/0.00/0.02/0.04/0.06 mean ~0.03; KO points ~0.32/0.62/0.70/0.74/0.80 mean ~0.635 with SEM ~0.555-0.715; KO+HD points ~0.00/0.09/0.11/0.18/0.26 mean ~0.13 with SEM ~0.085-0.17; brackets printed **** (WT-KO), **** (KO-HD) and ns (WT-HD). Figure 7C: '0.2000' printed above the WT-KO bracket, WT two resolvable markers at ~2.1 and ~2.3, KO three resolvable markers at ~7.9, ~8.2 and ~11.9, mean ~9.3.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42422765_r2/native_renders_20261021/fig7_PMC13343157_p11_pagerender_400dpi.png",
+    "anchor": "Figure 7, panels C and E, 400 dpi page render of page 11 of the publisher PDF (3350x4350)",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "Wwox-null FVB mice (KO), Aqeilan 2007 targeted-deletion allele, bilateral ICV at P0-P1 of AAV9-hSynI-hWWOX (WPRE-free) at LD 1.23e11 vg or HD 2.63e11 vg as printed, 2.0 uL/hemisphere",
+     "genotype": "Wwox -/- full knockout; not a missense and not a compound heterozygote",
+     "comparator": "WT injected with reference item (WT+RI) and KO injected with reference item (KO+RI)",
+     "endpoint": "survival to 300 days, body weight, blood glucose, MBP immunostaining, Iba1/GFAP area, ECoG spike and spike-wave discharge rate"
+    },
+    "qualifies": "entries[4]",
+    "qualifies_needle": "Averaged spike counts further confirmed a significant elevation in spike activity in KO animals"
+   },
+   {
+    "proposition": "THE ONLY MBP QUANTIFICATION IN THE PAPER HAS NO TREATED ARM, AND THE PANEL THAT HAS THE TREATED ARMS HAS NO UNTREATED-KO COLUMN - re-confirmed at 300 dpi and sharpened. The second half is new: Figure 6F's three columns are WT, LD and HD, so within that panel the treated arms are compared to wild type only and the disease baseline sits in 6A/6B at a different age and magnification. No age is stated for panel F anywhere in its caption or in the Results paragraph that cites it.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6E, the sole MBP quantification, prints KO relative to WT as 48 percent (corpus callosum), 30 percent (cortex), 50 percent (striatum) and 70 percent (anterior commissure), WT versus KO only; 6C brain weight WT ~465 mg versus KO ~247 mg (****); 6D CC thickness WT ~322 versus KO ~230 (**). Figure 6F is a 3x3 grid of representative micrographs, columns WT / LD / HD and rows corpus callosum / striatum / cortex, with no axis, no bar, no significance marker and no untreated-KO column.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42422765_r2/native_renders_20261021/fig6_PMC13343157_p10_embedded_1744x1617.png",
+    "anchor": "Figure 6, panels C, D, E and F, 300 dpi raster embedded on page 10 of the publisher PDF (1744x1617)",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "Wwox-null FVB mice (KO), Aqeilan 2007 targeted-deletion allele, bilateral ICV at P0-P1 of AAV9-hSynI-hWWOX (WPRE-free) at LD 1.23e11 vg or HD 2.63e11 vg as printed, 2.0 uL/hemisphere",
+     "genotype": "Wwox -/- full knockout; not a missense and not a compound heterozygote",
+     "comparator": "WT injected with reference item (WT+RI) and KO injected with reference item (KO+RI)",
+     "endpoint": "survival to 300 days, body weight, blood glucose, MBP immunostaining, Iba1/GFAP area, ECoG spike and spike-wave discharge rate"
+    },
+    "qualifies": "entries[7]",
+    "qualifies_needle": "whereas LD treatment produced only partial recovery relative to HD"
+   },
+   {
+    "proposition": "THE GLIOSIS PANELS CANNOT BE READ ACROSS ONE ANOTHER, WHICH IS A STRONGER LIMIT THAN 'no untreated-KO arm in S7E-S7H' ALONE. At 400 dpi the wild-type reference value itself moves about two-fold between the disease-baseline panels and the treated-arm panels of the same supplementary figure, on different axis ranges, so the text's 'significantly reduced ... in a dose-responsive manner' has neither a comparator inside the treated panels nor a defensible one outside them. The only significant treated-arm result is the LOW dose being worse than wild type.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] S7B % Iba1 area at P20: WT ~4.5, KO ~7.6, bracket *. S7D % GFAP area at P20: WT ~3.7, KO ~23.7, bracket ***, axis 0-30. S7F % Iba1 area, groups WT / LD / HD only: ~9.3 / ~16.2 / ~10.8, both printed brackets ns, axis 0-20. S7H % GFAP area, groups WT / LD / HD only: ~1.75 / ~3.05 / ~1.9, brackets ** (WT-LD) and ns (WT-HD), axis 0-4. S7I: three representative MBP micrographs labelled WT-RI, KO+W-LD, KO+W-HD at ~P90, no quantification. The S7 caption gives P20 for panels A-D and states no age for panels E-H.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42422765_r2/native_renders_20261021/figS7_mmc1_p09_pagerender_400dpi.png",
+    "anchor": "Supplementary Figure S7, panels B, D, F, H and I with its caption, 400 dpi page render of page 9 of mmc1.pdf (3402x4394)",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "Wwox-null FVB mice (KO), Aqeilan 2007 targeted-deletion allele, bilateral ICV at P0-P1 of AAV9-hSynI-hWWOX (WPRE-free) at LD 1.23e11 vg or HD 2.63e11 vg as printed, 2.0 uL/hemisphere",
+     "genotype": "Wwox -/- full knockout; not a missense and not a compound heterozygote",
+     "comparator": "WT injected with reference item (WT+RI) and KO injected with reference item (KO+RI)",
+     "endpoint": "survival to 300 days, body weight, blood glucose, MBP immunostaining, Iba1/GFAP area, ECoG spike and spike-wave discharge rate"
+    },
+    "contradicts": "entries[47]",
+    "contradicts_needle": "significantly reduced both astrocyte reactivity and microglial density in a dose-responsive manner"
+   },
+   {
+    "proposition": "THE OLIGODENDROCYTE ARM PRODUCED NO BENEFIT AND NO DETECTABLE PROTEIN, AND THE SECOND FACT IS WHAT KEEPS THE FIRST FROM BEING A NEGATIVE RESULT ABOUT OLIGODENDROCYTES - read at 300 dpi. The MBP-promoter survival curve is indistinguishable from the untreated knockout and the P14 glucose bracket between them is printed ns, while panel M shows the MBP column essentially blank. The cassette also differs: the promoter-comparison vectors all carry WPRE at 4e10 vg, which is not the 4e10 of Figures 2 and 3.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 panel G: MBP+W (n=5) holds 100 percent to ~day 14 and reaches 0 percent at ~day 16-17, against KO+RI (n=6) 0 percent by ~day 17 and WT+RI 100 percent across the 50-day window. Panel H: MBP+W weight tracks KO+RI and ends ~5 g at ~day 17 against WT ~12.8 g at day 21. Panel I glucose at P14: WT+RI ~137, KO+RI ~58, KO+AAV9-MBP-hWWOX ~52, brackets **** (WT-KO+RI) and ns (KO+RI versus MBP+W). Panel M, WWOX immunohistochemistry in cortex, one column per promoter: EF1-Alpha weak and diffuse, CMV moderate, MBP essentially blank, SynI strong and cellular.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42422765_r2/native_renders_20261021/fig1_PMC13343157_p03_embedded_1993x1968.png",
+    "anchor": "Figure 1, panels G, H, I and M, 300 dpi raster embedded on page 3 of the publisher PDF (1993x1968)",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "Wwox-null FVB mice (KO), Aqeilan 2007 targeted-deletion allele, bilateral ICV at P0-P1 of AAV9-hSynI-hWWOX (WPRE-free) at LD 1.23e11 vg or HD 2.63e11 vg as printed, 2.0 uL/hemisphere",
+     "genotype": "Wwox -/- full knockout; not a missense and not a compound heterozygote",
+     "comparator": "WT injected with reference item (WT+RI) and KO injected with reference item (KO+RI)",
+     "endpoint": "survival to 300 days, body weight, blood glucose, MBP immunostaining, Iba1/GFAP area, ECoG spike and spike-wave discharge rate"
+    }
+   },
+   {
+    "proposition": "The Figure 3B caption's own statistics, quoted so that the panel entry above has a text sentence to qualify rather than qualifying claim prose. Three facts the caption fixes: the high dose is NOT distinguishable from wild type (p = 0.78), the high dose IS distinguishable from the low dose, and the LOW DOSE IS ALSO SIGNIFICANTLY BETTER THAN THE UNTREATED KNOCKOUT - which is why 'the low dose does nothing' is refused by this reading.",
+    "snippet": "HD produced survival comparable to WT animals (p = 0.78), and significantly extended survival relative to the LD group (p < 0.0001) and the KO + RI controls (p < 0.0001). LD also significantly improved survival compared with the KO + RI controls (p < 0.0001).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC_2026-09-27.xml",
+    "anchor": "Figure 3 caption, panel B description",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The sentence the S7 panels contradict: the authors claim a significant, dose-responsive reduction of astrogliosis and microglial density, citing the four panels that contain no untreated-KO arm.",
+    "snippet": "Neuronal WWOX restoration significantly reduced both astrocyte reactivity and microglial density in a dose-responsive manner, indicating effective resolution of neuroinflammation (Figures S7E–S7H).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC_2026-09-27.xml",
+    "anchor": "Results, myelination and neuroinflammation section, second paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
    }
   ],
   "note": "2026-10-19 gold wave, scientist-b: the 2026-08 HTML and the eight supplementary page renders are absent; the PMC XML re-acquired today is byte-identical (SHA-256) to the 2026-09-27 copy already declared, so earlier HTML locators re-point to it, and the page renders are regenerated from the declared mmc1.pdf (same pages and dpi, new digests; their earlier panel claims were NOT re-read here). New locators: the glucose panels of Figures 1 and 3, which the earlier 36 locators did not cover beyond the P0 to P5 window."

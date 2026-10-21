@@ -1,5 +1,5 @@
 {
- "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
  "_note": "The reconciliation of 2026-10-21 found that the rescue reference the operator's roadmap proposed to build from an abstract is already a complete read in this repository: PMID 42422765 = DOI 10.1016/j.omta.2026.201791 = PAPER 011 / CLAIM 011, 12 receipts, one complete_fulltext_read with 29 locators, a deep-dive manifest, a 55 KB locator dossier and both supplements on disk. This task binds the scaffold from that evidence instead of from the abstract.",
  "TASK_ID": "REPURP-P3-RESCUEREF-C-20261021",
  "DIRECTIVE_VERSION": 1,
@@ -31,6 +31,72 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-21"
+ "CURRENT_STATE": "CLOSED 2026-10-21. WOREE_RESCUE_REFERENCE bound and COUNTED, not estimated: the scaffold arrived with 40 cells (5 families x 8 columns), 20 TRANSCRIBED_FROM_ROADMAP and 20 NOT_YET_BOUND; it now carries 20 measure rows x 8 columns = 160 cells, of which 0 remain NOT_YET_BOUND and 0 remain TRANSCRIBED_FROM_ROADMAP. 157 cells are BOUND to a named panel, caption or verbatim quotation; 3 are UNKNOWN, all three in the `age` column and all three the same defect in the primary - Figure 6F and Supplementary Figure S7 panels E-H state no age for their treated arms anywhere in caption or Results. Three `intervention` cells are bound as an explicit absence (no low-dose arm exists for Figure 7E, Figure 4 or Figure 3H), which is a bound negative and not a gap. CLAIM 011 dose flag ADJUDICATED NARROW, with Figure 3B re-inspected as an image at 300 dpi and measured against its printed axes; candidate CC-20261021-SCIENTIST-C-CLAIM011-DOSE-ADJUDICATION-01, change class MINOR. Blind locator audit NOT mandatory (status is `flagged for review`; no persisted verbatim locator contradicted, corrected or replaced) and RECOMMENDED anyway; the Orchestrator routes it and nothing is propagated. Receipt FTR-20261021-42422765-01 STAGED, not recorded. Manifest STRICT PASS, 0 gaps, 48 entries over 24 artefacts. LINT 0 BLOCK, receipt chain OK, self-eval PASS. Diagnosis at research/session_evaluations/2026-10-21_scientist-c_REPURP-P3-RESCUEREF.md.",
+ "assigned_on": "2026-10-21",
+ "TASK_ACK": {
+  "TASK_ID": "REPURP-P3-RESCUEREF-C-20261021",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "DECISION": "ACCEPTED",
+  "ACTOR_ID": "scientist-c",
+  "acked_at": "2026-10-21T06:05:00Z",
+  "reading_mode": "PRIMARY_EVIDENCE_READ (panel re-inspection scope)",
+  "context_policy": "QUESTION_DRIVEN — declared, not SOURCE_FIRST. The dispatch states LEGEND's current position (CLAIM 011 is flagged over 'dose-dependent' against a threshold) and the task is a re-read of named panels against a named question. What was admitted before opening the source: the task contract, the scaffold file, paper_packet.py packet output, fulltext_receipts.py status, CLAIM 011 whole record, the schema-v2 manifest and its 40 locator entries.",
+  "note": "Standing brief v3 read in full, with everything its section 0 enumerates: state_manifest_current current_state READY (line 139); roles/scientist.md in full; LEGEND_CORE 21c STOP POLICY, 21d DECISION AUTHORITY and 21e AGILE OPERATING MODE by name; fulltext_read_receipt.md from 'Before reading: duplicate-work gate' through 'Required receipt' and 'The repair instrument'; epistemic_discipline.md in full; scientist_reading_modes.md 3 and 4 in full. Worktree .claude/worktrees/lettore-c, branch task/REPURP-P3-RESCUEREF-C-20261021 from main a6c708e0."
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "REPURP-P3-RESCUEREF-C-20261021",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-c",
+  "claimed_at": "2026-10-21T06:05:00Z",
+  "durable_pointer": "ledger/tasks/scientist-c/REPURP-P3-RESCUEREF-C-20261021.json on branch task/REPURP-P3-RESCUEREF-C-20261021 in /home/desktop/legend-development/.claude/worktrees/lettore-c",
+  "claim_precondition_checked": "Annex A.3 rule 3 / scientist_reading_modes.md 2.2. paper_packet.py packet --pmid 42422765 reported 'peer work: none in flight'; paper_packet.py claim --pmid 42422765 --actor scientist-c returned exit 0 (CLAIMED). The staged-receipt directories of scientist-a, -b and -d were listed before anything was opened: no staged receipt for 42422765 exists under any peer. scientist-b is active on a correction branch for a different paper.",
+  "reading_claim": "/home/desktop/legend-development/.git/legend-reading-claims/42422765/scientist-c",
+  "c2_citation": "HANDOFF-C-2-PMID42422765 (scientist_reading_modes.md 2.4) — this contract names PMID 42422765 and is a SINGLE-OWNER reading, not a PARALLEL_READ_GROUP member. The C-2 working blob is not touched by this task; the manifest edited here is the canonical main one, edited forward."
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "The publisher PDF and seven r2 figure files were on disk but UNDECLARED in the manifest, and every prior figure attestation rested on 726 px PMC CDN rasters.",
+   "default": "Declare the publisher PDF and five derived native-resolution renders as source_artifacts with acquisition recipes, and read the adjudication panels from them.",
+   "why_safe": "Additive. No existing artefact entry and no existing locator was edited; digests are verified by the strict validator; the renders live in the SHARED checkout's files/ tree, not the worktree, per the evidence-locality rule.",
+   "what_would_differ": "Reading Figure 3B at 726 px would have left the flag's approximate values (~20 to ~90 days, ~80 percent) unmeasured and would not have surfaced that the wild-type control arm itself ends at 71-72 percent."
+  },
+  {
+   "condition": "Figure 7's aspect ratio did not match any image embedded in the publisher PDF (1.649 against 1.474), while the other seven matched to within 0.002.",
+   "default": "Render page 11 at 400 dpi instead of extracting the embedded image, and record WHY in the artefact note.",
+   "why_safe": "A page render is a superset of the embedded raster; the recipe names the extractor and its version, so the derivation replays.",
+   "what_would_differ": "The extracted raster is 759x515 and carries the ECoG traces ALONE. Every number on panels B, C and E would have been absent, and the panel could have been written up as unreadable."
+  },
+  {
+   "condition": "The strict manifest validator refused four new relation pointers, first for being unpointed and then for a missing *_needle fragment.",
+   "default": "Add the two MISSING body quotations the relations should have pointed at - the Figure 3B caption statistics and the S7 gliosis sentence - rather than pointing the new panels at approximate neighbouring entries.",
+   "why_safe": "Both quotations verify verbatim against the declared JATS XML; the result is 48 entries, STRICT PASS, 0 gaps.",
+   "what_would_differ": "Satisfying the check with a near-neighbour pointer would have left the relation prose in a JSON field, which is the exact failure the check describes."
+  },
+  {
+   "condition": "fulltext_receipts.py record --dry-run refused analysis_at later than event_at, because the writer stamps event_at at append time and the declared times sat ahead of the clock.",
+   "default": "Move both declared timestamps behind the wall clock, keeping analysis_at strictly earlier than event_at.",
+   "why_safe": "Both values describe this session and are now earlier than the append the Orchestrator will perform; staged_receipt_check and the dry run both return OK.",
+   "what_would_differ": "Nothing scientific; the staged receipt would simply have been refused at append."
+  },
+  {
+   "condition": "The first commit of this task (TASK_ACK/TASK_CLAIM) was made before the attribution trailer was applied, and amending it would touch history.",
+   "default": "Leave that commit as it stands, carry the trailer on every subsequent commit, and record the omission here.",
+   "why_safe": "History rewrite is reserved to the operator (21d). One commit without a trailer is a visible, recorded defect; an amend to avoid recording it is not.",
+   "what_would_differ": "Nothing, except that the omission would be invisible."
+  },
+  {
+   "condition": "CLAIM 011's Status is `flagged for review`, not `consolidated baseline`, and no persisted verbatim locator is contradicted, corrected or replaced - so none of legend-locator-audit's four mandatory triggers fires on this narrowing.",
+   "default": "Do not declare a mandatory audit that the rules do not require; RECOMMEND a voluntary one, state the reasoning in full so it can be disputed, and stop short of propagating in either case.",
+   "why_safe": "Nothing is propagated. No registry file is touched, the proposal travels as a commit candidate, and producer-is-not-verifier is preserved because this actor does not certify its own adjudication. If the Orchestrator judges the trigger to fire, the audit runs before the candidate lands and nothing has to be undone.",
+   "what_would_differ": "Asserting the trigger fires would have been the safer-looking answer and the less accurate one; asserting it does not fire WITHOUT recommending the audit would have been the cheaper one."
+  },
+  {
+   "condition": "The first write of CURRENT_STATE asserted a cell count (120 of 120, 112 bound) that had been estimated rather than counted.",
+   "default": "Count the cells mechanically off the committed file and off main's version of it, and replace the asserted figures with the measured ones in the same task.",
+   "why_safe": "The correction is forward, in a later commit; the wrong figures are visible in history, which is where a corrected measurement belongs.",
+   "what_would_differ": "The record would have carried a fabricated count of its own completeness - the exact failure this repository names as an assumption asserted with the confidence of a measurement."
+  }
+ ],
+ "STOP_LOG": []
 }
