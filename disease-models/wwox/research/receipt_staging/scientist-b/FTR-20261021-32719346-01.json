@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-10-21T12:00:00Z",
+ "event_at": "2026-10-21T12:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_read"
+ },
+ "event_id": "FTR-20261021-32719346-01",
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "Whole PMC XML body read; Figure 5 opened as an image (the deposit's 41467 jpg as delivered); other figures captions; the supplementary PDF carrying the wild-type, PAK3 and FMR1 ethosuximide results (Supplementary Figures 7 to 9) not opened, so those results are taken from the Results text and stated as the authors' report. Depth partial.",
+  "The dependency screen flagged one retracted reference (6) in a grouped background citation; relation recorded as citation only."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID32719346.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-b_20261021.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "17449c0ba4e8a323710b3ecccb0a23fab69bc1a2738066f206d1e6e312acfa0e",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID32719346_Liu2020_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1038/s41467-020-17560-3",
+  "pmid": "32719346"
+ },
+ "workflow": "scientist-b repurposing batch R2 2026-10-21; QUESTION_DRIVEN (the reader held DL-MECH-170 and CLAIM 016 before opening the paper); NOT WWOX EVIDENCE; PMC efetch XML acquired with no User-Agent through pmc_bucket_fetch.py; prepared as JSON for the integrator and staged, not appended."
+}

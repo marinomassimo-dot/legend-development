@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-21T12:00:00Z",
+ "event_at": "2026-10-21T12:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_read"
+ },
+ "event_id": "FTR-20261021-31781019-01",
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "Whole PMC XML body read; Figure 11 opened as an image (the deposit's 11th figure jpg, low resolution as delivered); other figures captions; supplementary tables not opened. Depth partial."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID31781019.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-b_20261021.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "7b732a85e8ae9a163638e32917c0062dc65cb2f3d96c2a37d802774d8f652e9b",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID31781019_Kam2019_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.3389/fneur.2019.01151",
+  "pmid": "31781019"
+ },
+ "workflow": "scientist-b repurposing batch R2 2026-10-21; QUESTION_DRIVEN (the reader held DL-MECH-170 and CLAIM 016 before opening the paper); NOT WWOX EVIDENCE; PMC efetch XML acquired with no User-Agent through pmc_bucket_fetch.py; prepared as JSON for the integrator and staged, not appended."
+}

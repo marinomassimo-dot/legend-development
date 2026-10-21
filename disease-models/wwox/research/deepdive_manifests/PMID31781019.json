@@ -1,0 +1,217 @@
+{
+ "schema_version": 2,
+ "pmid": "31781019",
+ "doi": "10.3389/fneur.2019.01151",
+ "receipt": "FTR-20261021-31781019-01",
+ "landing": [
+  "FTR-20261021-31781019-01",
+  "repurposing_10h_scientist-b_20261021"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 254,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-21: 'Tanila H[au]' 254; with (WWOX OR Wwox) 0. Initials-level string, may pool homonyms.",
+  "research_type": "experimental_lab",
+  "weighting": "A Kuopio laboratory with a long record on transgenic Alzheimer-model mouse EEG; heterogeneity between animals is high and the authors say they could not apply a two-way ANOVA; n per genotype is single digits.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID31781019_Kam2019_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement about WWOX content of this surface."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 44,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-31781019-01",
+    "target": "Reference 13 (non-sedative effective doses of ethosuximide and levetiracetam in APP/PS1 mice)",
+    "question": "Is there an ethosuximide wild-type-littermate dose-response on spike classes that exist in wild type?",
+    "status": "open - cited, not read"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 31781019, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "paper_packet.py packet at claim time: none prior; claimed by scientist-b (adjacent search, task REPURP-10H-R2-B-20261021)."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-21",
+  "route": "PubMed esummary (JSON) for 31781019 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "pubtype [\"Journal Article\"]; no retraction, expression of concern or erratum is visible on the esummary record (the esummary JSON carries no CommentsCorrections list for this PMID, so that absence is a statement about this query).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 44,
+   "references_screened": 42,
+   "references_with_doi": 42,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID31781019_Kam2019_PMC_r2.xml",
+   "sha256": "7b732a85e8ae9a163638e32917c0062dc65cb2f3d96c2a37d802774d8f652e9b",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=6861424&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "7b732a85e8ae9a163638e32917c0062dc65cb2f3d96c2a37d802774d8f652e9b"
+   }
+  },
+  {
+   "path": "files/supplement/PMID31781019_r2/PMC6861424.1.pdf",
+   "sha256": "62f993570affaae4ac86c27784049bbbe69379ea801b555f543fcf89397657a8",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC6861424",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "62f993570affaae4ac86c27784049bbbe69379ea801b555f543fcf89397657a8"
+   }
+  },
+  {
+   "path": "files/supplement/PMID31781019_r2/Table_1.DOCX",
+   "sha256": "d639a51310395f7a791e1501fc9d99a07778c0baeaf70e967a7797fac7896f6f",
+   "kind": "supplement_binary",
+   "note": "Supplementary tables of per-mouse spike counts; not opened.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC6861424",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "d639a51310395f7a791e1501fc9d99a07778c0baeaf70e967a7797fac7896f6f"
+   }
+  },
+  {
+   "path": "files/figures/PMID31781019_r2/fneur-10-01151-g0011.jpg",
+   "sha256": "e8206bac8cc9ce52ef69ddf063a195b0b3733a0063dd5f53becc1129424a2348",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC6861424",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "e8206bac8cc9ce52ef69ddf063a195b0b3733a0063dd5f53becc1129424a2348"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figures opened as images; every text snippet below was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet below sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "Design: saline, ethosuximide and levetiracetam in a counterbalanced within-animal sequence with at least 6 days between treatments, blinded analysis, in transgenic and wild-type littermates, so spike classes present in both genotypes can be compared by genotype and drug.",
+    "snippet": "The washout period between treatments was at least 6 days for each animal. The order of drugs was counterbalanced, and the person conducting the recording and analysis was blinded to the treatment.",
+    "surface": "body",
+    "anchor": "Methods, Drug Treatments",
+    "artifact": "files/fulltext/PMID31781019_Kam2019_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Genotype-restricted phenomena exist only for rare spike classes: spike-wave discharges, cortico-hippocampal spikes with afterhyperpolarisation and giant spikes were seen almost exclusively in the transgenic mice and only in a subset of them, while the common classes did not differ by genotype.",
+    "snippet": "Cortical spikes were slightly more common in APP/PS1 mice (p = 0.045), while SWDs (p = 0.04), CH spikes with after hyperpolarization (p = 0.02) and giant spikes (p = 0.008) were detected almost exclusively in APP/PS1 mice, but only in a subset of them as seen from large error bars in Figure 11.",
+    "surface": "body",
+    "anchor": "Results, Only SWDs, CH-Spikes With After Hyperpolarization and Giant Spikes Were Clearly Overrepresented in APP/PS1 Mice",
+    "artifact": "files/fulltext/PMID31781019_Kam2019_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Ethosuximide effects on classes present in both genotypes track each other: the authors write that, in as much as spikes were present in wild-type mice, their response to the drugs seemed to follow the pattern of the transgenic mice; the spike-wave discharges, the one absence-type class, did not respond to ethosuximide in either genotype.",
+    "snippet": "In as much as spikes were present in wild-type mice, their response to AEDs seemed to follow the pattern of APP/PS1 mice (Figure 11).",
+    "surface": "body",
+    "anchor": "Results, The Spike Types Differ in Their Response to Ethosuximide and Levetiracetam",
+    "artifact": "files/fulltext/PMID31781019_Kam2019_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Spike-wave discharges did not respond to either drug in the whole sample or in either genotype alone (statistics F(2, 6) = 2.0, p = 0.21 for the pooled sample, with wild type p = 0.70 and transgenic p = 0.22), on very few animals.",
+    "snippet": "SWDs did not respond to AED treatment [All: F(2, 6) = 2.0, p = 0.21; WT: F(2, 4) = 0.4, p = 0.70; TG: F(2, 6) = 2.0, p = 0.22].",
+    "surface": "body",
+    "anchor": "Results, The Spike Types Differ in Their Response to Ethosuximide and Levetiracetam",
+    "artifact": "files/fulltext/PMID31781019_Kam2019_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Statistical limit stated by the authors: heterogeneity between individual animals was high (counts consistent between two saline sessions within an animal) and so a two-way ANOVA could not be applied; per-genotype one-way tests with 3 to 6 degrees of freedom were used. No treatment-by-genotype test exists in the paper.",
+    "snippet": "Due to the high inter-individual variability in the spike occurrence, we could not apply a two-way ANOVA model.",
+    "surface": "body",
+    "anchor": "Results, The Spike Types Differ in Their Response to Ethosuximide and Levetiracetam",
+    "artifact": "files/fulltext/PMID31781019_Kam2019_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 11 read as an image: panel B (cortico-hippocampal spikes) falls with ethosuximide in both wild type (black, about 19 to about 5 per hour) and transgenic (red, about 22 to about 6); panel C (spindle-associated spikes) rises in both; panel F (fast-spindle spikes) falls in both; panel D (spike-wave discharges) shows a transgenic subset at about 400 per hour on saline and no clear fall on ethosuximide; panel H (giant spikes) shows transgenic only with stars for levetiracetam and not ethosuximide.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 11B: black WT dots about 19 on saline, about 5 on Esm; red TG dots about 22 on saline, about 6 on Esm; Figure 11D: single TG outliers near 400 and 570 per hour.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID31781019_r2/fneur-10-01151-g0011.jpg",
+    "anchor": "Figure 11 panels B to H; deposit jpg as delivered (low resolution; counts above are visual estimates)",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}

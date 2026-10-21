@@ -1,0 +1,227 @@
+{
+ "schema_version": 2,
+ "pmid": "32719346",
+ "doi": "10.1038/s41467-020-17560-3",
+ "receipt": "FTR-20261021-32719346-01",
+ "landing": [
+  "FTR-20261021-32719346-01",
+  "repurposing_10h_scientist-b_20261021"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py (PMC efetch XML, figures and PDF from the PMC open-data bucket); the XML was a full article body, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched by this reading; a blind audit becomes owed if a commit candidate narrows or reverses a claim."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed for a transferable-literature reading whose question was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 8525,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-21: 'Jia Z[au]' 8525 (a very common initials-level string: pooled homonyms, not a measure of the group); with (WWOX OR Wwox) 0.",
+  "research_type": "experimental_lab",
+  "weighting": "A Toronto synaptic-physiology laboratory; the common author string makes the PubMed count meaningless; credibility rests on the paper's own measurements. Group sizes in the behaviour experiments are about 8 to 14.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID32719346_Liu2020_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement about WWOX content of this surface."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 68,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-32719346-01",
+    "target": "Supplementary Figures 7 to 9 (ethosuximide in wild type, PAK3 transgenic and FMR1 knockout)",
+    "question": "What are the group sizes and statistics of the non-SWD controls, and was a vehicle-injected group run alongside?",
+    "status": "open - supplement deposited, not opened in this reading"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 32719346, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "paper_packet.py packet at claim time: none prior; claimed by scientist-b (adjacent search, task REPURP-10H-R2-B-20261021)."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-21",
+  "route": "PubMed esummary (JSON) for 32719346 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "pubtype [\"Journal Article\", \"Research Support, Non-U.S. Gov't\"]; no retraction, expression of concern or erratum is visible on the esummary record (the esummary JSON carries no CommentsCorrections list for this PMID, so that absence is a statement about this query).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [
+    {
+     "citing_relation": "citation only - reference 6 sits in a grouped background citation (refs 4 to 8) for the statement that ASD shows high rates of comorbid seizures, depression, anxiety and sleep problems; none of this paper's measurements, reagents or methods depend on it",
+     "doi": "10.1016/j.ridd.2013.04.021",
+     "nature": "Retraction",
+     "reason_verbatim": "Conflict of Interest;Compromised Peer Review;",
+     "retraction_date": "1/6/2023 0:00",
+     "retraction_pmid": "36621407",
+     "verdict": "FLAGGED_RETRACTION"
+    }
+   ],
+   "noted": [],
+   "paper_verdict": "FLAGGED_RETRACTION",
+   "reference_source": "network",
+   "references_declared": 68,
+   "references_screened": 65,
+   "references_with_doi": 65,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID32719346_Liu2020_PMC_r2.xml",
+   "sha256": "17449c0ba4e8a323710b3ecccb0a23fab69bc1a2738066f206d1e6e312acfa0e",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=7385104&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "17449c0ba4e8a323710b3ecccb0a23fab69bc1a2738066f206d1e6e312acfa0e"
+   }
+  },
+  {
+   "path": "files/figures/PMID32719346_r2/41467_2020_17560_Fig5_HTML.jpg",
+   "sha256": "9573abad8de311180bd482855900941983a27a889dac17819944b8996b814242",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC7385104",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "9573abad8de311180bd482855900941983a27a889dac17819944b8996b814242"
+   }
+  },
+  {
+   "path": "files/supplement/PMID32719346_r2/41467_2020_17560_MOESM1_ESM.pdf",
+   "sha256": "4fc0b2cfb5348951a5696b349fc971878c738b67bb69b77ce560ab5a171f2542",
+   "kind": "supplement_binary",
+   "note": "Supplementary figures including S7 to S9 (ethosuximide in wild type, PAK3 and FMR1 mice); not opened.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC7385104",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "4fc0b2cfb5348951a5696b349fc971878c738b67bb69b77ce560ab5a171f2542"
+   }
+  },
+  {
+   "path": "files/supplement/PMID32719346_r2/PMC7385104.1.pdf",
+   "sha256": "d414cd1e3d102c2b636b2a0fcf4fedc2b020d61bc8efe24f2d4c3301a9d98c4f",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC7385104",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "d414cd1e3d102c2b636b2a0fcf4fedc2b020d61bc8efe24f2d4c3301a9d98c4f"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; figures opened as images; every text snippet below was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet below sits in the body, a figure legend or a figure image.",
+  "entries": [
+   {
+    "proposition": "Epilepsy-like phenotype is knockout-specific: spontaneous spike-wave discharges with behavioural arrest occur in Neuroligin 2 knockout mice and not in wild-type, Neuroligin 1 or Neuroligin 3 knockout mice; systemic ethosuximide abolished the discharges in all tested knockouts with a vehicle control showing no effect. The restriction is to the animals that have the discharges.",
+    "snippet": "ETX abolished SWDs in all tested mice whereas control vehicle had no effect (Fig. 2a).",
+    "surface": "body",
+    "anchor": "Results, NLG2 KO mice exhibit SWDs and behavior arrests",
+    "artifact": "files/fulltext/PMID32719346_Liu2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Behavioural effects were assessed in the same animals before and after ethosuximide (open field, elevated plus maze, three-chamber social test), which improved locomotion, anxiety-like measures and social recognition memory in the knockouts. The Methods describe tests 30 min before and after the injection; no vehicle-injected behavioural group is described, so practice and injection effects are not separated from drug effect in these before-and-after comparisons.",
+    "snippet": "For the ETX treatment, tests were done 30 min prior to and after the systemic or local injection.",
+    "surface": "body",
+    "anchor": "Methods, Behavior test (open field)",
+    "artifact": "files/fulltext/PMID32719346_Liu2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A drug-by-genotype design with several comparison genotypes: ethosuximide had no effect on locomotion, anxiety or social recognition memory in wild-type mice, and did not rescue the social memory deficit of two other autism-related models (PAK3 transgenic; FMR1 knockout) that lack absence seizures. The authors conclude ethosuximide acts in the Neuroligin 2 knockout through blocking the discharges. Group sizes and statistics for these controls are in the supplementary figures that were not opened here.",
+    "snippet": "To test the possibility that ETX might ameliorate the behavioral deficits of NLG2 KO mice through mechanisms independent of the SWDs, we first performed ETX injection experiments in WT mice but found that ETX had no effects on locomotion, anxiety and social recognition memory",
+    "surface": "body",
+    "anchor": "Results, ETX alleviates behavior deficits in NLG2 KO mice",
+    "artifact": "files/fulltext/PMID32719346_Liu2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Local delivery points to the thalamus: ethosuximide or diazepam injected into the ventrobasal thalamus, but not the cortex, diminished the discharges, partially, and the authors give drug diffusion as the explanation for incomplete blockade; other brain regions may contribute.",
+    "snippet": "the SWDs appear to originate from or at least critically depend on the thalamus because local injections of ETX or diazepam to the thalamus, but not to the cortex, diminished the SWDs.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 4",
+    "artifact": "files/fulltext/PMID32719346_Liu2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Self-stated limit on mechanism: the partial rescue leaves open that ethosuximide acts through other mechanisms independent of the discharges, and the study does not test T-type channels; diazepam (a GABA-A modulator) also blocks the discharges in the knockout, so a drug effect on the discharges does not itself identify the target.",
+    "snippet": "we cannot rule out the possibility that ETX may also act through other mechanisms independent of the SWDs and/or other brain regions also contribute to these behavioral deficits in NLG2 KO mice.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 11",
+    "artifact": "files/fulltext/PMID32719346_Liu2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 5 read as an image: panels a and b show knockout mice (n about 11 to 13) before and after ethosuximide with stars on total distance, speed, mobile time, freezing time, open-arm time and entries; panels c and d show sociability (S1 versus empty) unchanged in both genotypes and the novel-mouse preference (S2 versus S1) restored in knockouts after the drug (ns before, ** after) while wild type is a clear preference before and after; panel e local thalamic injection raises distance and mobile time. The plots are before and after points on the same animals without a vehicle arm.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5d: WT S1 about 18 versus S2 about 83 before and after; NLG2 KO before S1 about 48 versus S2 about 52 (ns), after S1 about 23 versus S2 about 77 (**).",
+    "surface": "figure",
+    "artifact": "files/figures/PMID32719346_r2/41467_2020_17560_Fig5_HTML.jpg",
+    "anchor": "Figure 5 panels a to e; bucket jpg as delivered",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}
