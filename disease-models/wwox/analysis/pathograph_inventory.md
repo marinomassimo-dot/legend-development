@@ -32,12 +32,12 @@ annotations is reported below whatever it happens to be.
 | …undirected edges they collapse into | 46 |
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
-| Deep-dive manifests read | 454 |
-| …of which bound to at least one claim | 105 |
-| Propositions scanned | 6941 |
-| …carrying a relational connective | 1443 |
-| …locator-backed candidates | 1403 |
-| …locator-backed and bound to a claim | 403 |
+| Deep-dive manifests read | 455 |
+| …of which bound to at least one claim | 106 |
+| Propositions scanned | 6953 |
+| …carrying a relational connective | 1444 |
+| …locator-backed candidates | 1404 |
+| …locator-backed and bound to a claim | 404 |
 
 The scanned population is three declared surfaces and no others: every claim
 `Title`, every row of the working model's BLOCK 2 mirror, and every
@@ -320,12 +320,12 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 | Source | Candidates |
 |---|---|
 | claim_title | 21 |
-| locator_proposition | 1403 |
+| locator_proposition | 1404 |
 | working_model_mirror_title | 19 |
 
 | Connective class (lexical) | Candidates |
 |---|---|
-| AMBIGUOUS_LEXICAL_FORM | 994 |
+| AMBIGUOUS_LEXICAL_FORM | 995 |
 | ARROW | 18 |
 | ASSOCIATIVE | 74 |
 | CAUSAL | 277 |
@@ -359,7 +359,7 @@ its sentence is a reading, and this tool does not perform readings.
 | CLAIM 016 | claim_title | `contribute to` | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency |
 | CLAIM 018 | claim_title | `causes` | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in humans |
 
-Showing 12 of 443 bound candidates; the
+Showing 12 of 444 bound candidates; the
 complete set, with evidence and provenance, is in the export. The worklist
 in cost order — what needs an annotation, what needs a type, what needs a
 decomposition, what needs a reading — is printed by:
@@ -375,7 +375,7 @@ carried no connective from the lexicon.
 
 ## Provenance
 
-Derived from 457 input files; digest
-`d8442a60a5184479`. Sources: the claim, paper and
+Derived from 458 input files; digest
+`e072da763b8b8ea2`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
