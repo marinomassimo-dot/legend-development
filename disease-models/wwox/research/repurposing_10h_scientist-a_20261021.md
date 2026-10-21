@@ -239,3 +239,15 @@ Receipt `FTR-20261021-40485335-01` (partial_fulltext_read: all six figures and t
 - **(c) Protein beside function.** Only the phenylbutyrate arm has a protein-side read-out: ER overlap falls (about 76 to about 36 percent) and total tagged-protein fluorescence returns to about wild type (about 25 to about 47 against about 50) in live astrocytes (Figure 4, opened); the augmentation arm has none. The nine computational stability predictions do not agree in sign (Figure 2B read: from about -1.9 to about +1.1 kcal/mol), while the biochemical read (mature band about 0.2, immature band about 1.8 of wild type) does support a trafficking defect. The proband's own table (Figure 1C) lists seizure freedom on a different, benzodiazepine-class drug, not on the phenylbutyrate class; the variant is of uncertain significance.
 - **Effect on R1 question 2.** An uptake ratio that reaches or passes 1.0 after treatment is a ratio to a wild-type well, in a condition that already contains a wild-type allele; it does not show that the mutant protein carries function.
 
+## 3 - Adjacent search in group R1 (after the lot and the HELD rows)
+
+Queries run through the shared throttle (`eutils.py`), 2026-10-21, title/abstract fields; a zero licenses "no paper is indexed for that query", never "this was never measured" (D-37). Candidates were taken only where the abstract is substantive, a lawful body exists and one stated question could change a card.
+
+| PMID | Why considered | Abstract substantive | Lawful body | Decision |
+|---|---|---|---|---|
+| 42875792 | Repurposed proteasome inhibitors in iPSC oligodendrocytes of a missense leukodystrophy (HIKESHI V54L): protein recovery plus a localisation and a myelination read-out | yes | PMC13670827, Europe PMC XML (cc by-nc-nd) | READ (below) |
+| 30232228 | Repurposed antifungal as an allosteric pharmacological chaperone of a destabilised enzyme with measured activity in vitro, ex vivo and in a mouse model (congenital erythropoietic porphyria) | yes | none: not in PMC (idconv "not found"), Europe PMC not open access, journal behind subscription | PARKED, no circumvention |
+| 25284778 | The Munc18-1 C180Y paper the first primary cites: K48 polyubiquitination, proteasomal not lysosomal degradation, temperature-permissive rescue | yes | none located: not in PMC (idconv "not found"), Europe PMC no PMCID, publisher page returns HTTP 403 to a plain request (bot challenge) | PARKED with the cascade named; an operator PDF would carry the inhibitor arm the 2018 chaperone paper lacks |
+
+Question for 42875792, fixed before the body was opened: does a proteasome-inhibitor class that restores some mutant protein in patient-derived oligodendrocytes also move a function read-out (nuclear HSP70 on heat shock) and a lineage or myelination read-out, in a leukodystrophy, with what exposure and what toxicity limit; and is the recovered protein quantified per cell line.
+
