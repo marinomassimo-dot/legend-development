@@ -1,0 +1,260 @@
+{
+ "schema_version": 2,
+ "pmid": "36537114",
+ "doi": "10.1002/ajmg.a.63074",
+ "receipt": "FTR-20261020-36537114-01",
+ "landing": [
+  "FTR-20261020-36537114-01",
+  "disease-models/wwox/research/fulltext_dossiers/PMID36537114_earlybenefit_20261020.md",
+  "disease-models/wwox/research/repurposing_early_benefit_20261020_scientist-b.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261020-SCIENTIST-B-KETO-ENDPOINT-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline and exhausted before the reading. The article is closed access: PMC id conversion answers 'Identifier not found in PMC'; OpenAlex reports oa_status 'closed' with no OA location; Unpaywall returns no oa_url. No lawful new surface exists, so the reading was performed on the surface this repository already holds."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. The question is an endpoint question on one phenotype table and four delivered discussion chunks, not a mechanism dossier: the whole surface fits one pass."
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "paper_packet.py packet reported depth=partial_fulltext_read with two prior receipts and the sections a resume owes. Nothing to deduplicate; this is a resume, not an intake."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, and named as owed in the commit candidate. Two propositions here bear on a registry claim already propagated (CLAIM 042), and one entry carries a declared surface defect - the minus signs of the growth SD scores are absent from the extracted text - which is exactly the class of defect a blind audit catches."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "Not applicable. The reading produces an endpoint qualification and a bounded negative, not a therapeutic lever."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 234,
+  "publications_on_gene": 1,
+  "counts_measured": "PubMed esearch 2026-10-21 on the senior author: 'Scaglia F[au]' 234; 'Scaglia F[au] AND WWOX' 1. First author for comparison: 'Chong SC[au]' 171; 'Chong SC[au] AND WWOX' 1. Both author strings are initials-level and may pool homonyms; the counts are reported as the query's answer, not as a disambiguated bibliography.",
+  "research_type": "descriptive_clinical",
+  "weighting": "A multi-centre clinical-genetics consortium reporting a retrospective diagnostic-laboratory series, and the senior author's single WWOX publication. There is no experimental arm of any kind: every statement in the paper is a clinical observation or a variant call. That is the right provenance for a phenotype and endpoint question and the wrong provenance for a mechanism, which is how the reading uses it - no mechanistic proposition is taken from it.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "occurrences of the string WWOX in the persisted source payload",
+    "route": "local count over files/fulltext/PMID36537114_Chong2023_ScholarGateway_20260929.json",
+    "count": 78
+   }
+  ],
+  "note": "The gene is the subject of the series, so density says nothing discriminating here. The measurement that matters for this reading is the opposite one: the surface carries no WWOX assay, no protein, no transcript and no functional readout, because the paper has none."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "NOT POSSIBLE ON THIS SURFACE, and declared rather than approximated. The payload delivers 8 chunks (indices 0, 1, 2, 18, 22, 23, 24, 25); the reference list is not among them. In-text citations resolvable from the delivered chunks were collected by author-year into the queue below, and no PMID was derived from them in this session.",
+  "queue": [
+   {
+    "id": "MH-36537114-01",
+    "target": "Piard et al. 2019 - the comparator cohort this paper measures itself against on four endpoints (age at seizure onset, respiratory involvement, growth retardation and microcephaly rates, eye contact)",
+    "question": "Does the comparator cohort quantify any of these endpoints with an instrument, or are its rates counts of qualitative descriptors too? The disagreements this paper reports - 80 percent against 40 percent respiratory, its own near-universal failure to thrive against 6 percent growth retardation - are interpretable only if both cohorts ascertained the endpoint the same way.",
+    "status": "open - that cohort is held and read in this repository, so the question is asked of the existing reading, not of a new acquisition"
+   },
+   {
+    "id": "MH-36537114-02",
+    "target": "Havali et al. 2021 - head circumference below -3 SD in all six patients of another cohort",
+    "question": "Is that a measured series of occipitofrontal circumferences with ages, i.e. a usable growth-endpoint denominator for WOREE, or a count of a clinical label? Cited here and read nowhere in this repository.",
+    "status": "open"
+   },
+   {
+    "id": "MH-36537114-03",
+    "target": "Johannsen 2018, Ko 2018, Riva 2022 - the three prior ketogenic-diet reports this paper cites as 'varying degrees of success'",
+    "question": "What endpoint did each use, over what window, with what exposure denominator? Three citations carrying the word success are the whole published base of the only dietary early-benefit observation in WOREE, and none of the three is read for its diet arm here.",
+    "status": "open - the highest-value queue item this reading produces"
+   },
+   {
+    "id": "MH-36537114-04",
+    "target": "Repudi et al. 2021 - cited by this paper as the proof of concept for WWOX gene therapy",
+    "question": "None new. Noted only because a clinical series imports a preclinical rescue as a proof of concept; that rescue's comparator limits are held in this repository and are neither strengthened nor weakened by being cited here.",
+    "status": "closed - no action"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared root files/ tree already hold an artefact for PMID 36537114, and does any other actor hold a reading claim on it?",
+  "hits": 1,
+  "finding": "One artefact, present and previously undeclared: files/fulltext/PMID36537114_Chong2023_ScholarGateway_20260929.json, reported by paper_packet.py as 'on disk and undeclared'. This manifest declares it, fingerprints it, and declares the plain-text extraction derived from it. paper_packet.py reported no peer work in flight, and the reading was claimed for scientist-b before it began; the staged-receipt directories of scientist-a, -c and -d carry no event for this PMID."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-21",
+  "route": "PubMed esummary for 36537114",
+  "result": "pubtype ['Journal Article', 'Research Support, N.I.H., Extramural']; the references / CommentsCorrections list is empty. No retraction, no expression of concern, no erratum on this paper.",
+  "hold": false,
+  "dependencies": {
+   "schema": "retraction_check.dependencies/1",
+   "screened": false,
+   "paper_verdict": "UNSCREENABLE_NO_REFERENCE_LIST",
+   "reference_source": "none",
+   "references_declared": 0,
+   "references_screened": 0,
+   "references_with_doi": 0,
+   "flagged": [],
+   "noted": [],
+   "unscreenable": {},
+   "snapshot": {
+    "date": "2026-10-02",
+    "rows": 72870,
+    "sha256": "746cfa17507e17939b8ef793d9f449299043e1b314810e6a8817f1d2716be782"
+   },
+   "tool": "dependency_integrity.py (not invoked for this paper; the snapshot above is the one a screen would have used, named so the absence is dated)",
+   "reason": "The reference list is not on the delivered surface, so a dependency screen could only have run against a list reconstructed from in-text author-year citations. That is a reconstruction, not the paper's dependency set, and a verdict over it would not be a verdict about this paper. Declared UNSCREENABLE rather than run on a surrogate. It bounds nothing the reading asserts: no proposition below rests on a cited source."
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID36537114_Chong2023_ScholarGateway_20260929.json",
+   "sha256": "8e2f19186b843000427b53c66c755bcbdd1a0aeb1088d119b258ea9f0fb4ba9b",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "no_recipe": "No route can be shown for these bytes and none is invented. The payload was fetched by an earlier session (2026-09-29) through a publisher gateway whose endpoint, HTTP method and User-Agent policy that session did not record, and this reading made no gateway call: paper_packet.py reported the file as 'on disk and undeclared' and it is declared here for the first time. What the payload itself records is kept instead of a reconstructed URL - its provenance block names source 'scholar_gateway', retrieved_at 2026-09-29T21:18:33.650Z, the query as executed, and two disclosures that travel with every quotation taken from it: 'Results retrieved by Wiley Scholar Gateway' and 'Summary generated by AI - verify claims against source documents'. It delivers 8 of the article's chunks (indices 0, 1, 2, 18, 22, 23, 24, 25). Every quotation in this manifest is article text from a chunk body, never the gateway's summary field, and every locator names its chunk. A replay is therefore not reproducible from this manifest, which is a declared gap and the reason the derived text artefact below carries the full extractor call."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID36537114_Chong2023_SGchunks_text_2026-10-21.txt",
+   "sha256": "b3a6d7a077c020ba402ae29556d9a8eba825c0d8d729216613d0d3cc69322ad9",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": null,
+    "http_method": null,
+    "tier": "local_derivation",
+    "user_agent_policy": "not_applicable",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "derived_from": "files/fulltext/PMID36537114_Chong2023_ScholarGateway_20260929.json",
+    "extractor": {
+     "name": "sg_chunks_to_text",
+     "version": "1.0",
+     "call": "python3 -I <scratchpad>/scientist-b/bin/sg_chunks_to_text.py files/fulltext/PMID36537114_Chong2023_ScholarGateway_20260929.json files/fulltext/PMID36537114_Chong2023_SGchunks_text_2026-10-21.txt"
+    },
+    "result_sha256": "b3a6d7a077c020ba402ae29556d9a8eba825c0d8d729216613d0d3cc69322ad9",
+    "note": "Concatenates the delivered chunk bodies in ascending chunk_index under '===== CHUNK n =====' headers, with no normalisation of the chunk text itself. It exists so the locators below verify against bytes rather than against a JSON escape form; the propositions were read on the chunk bodies, which are the same characters."
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": false,
+  "source_fulltext_indexed_evidence": "The source is not a full text and is not indexed as one: 8 chunks of the article are present and chunk indices 3-17 and 19-21 are absent, so no section can be asserted complete. Each entry names the chunk it came from. Table 1 is delivered twice, in chunks 2 and 18, which is why several snippets occur twice in the derived text.",
+  "abstract_anchoring_waived": "The abstract of this paper is three sentences of phenotype summary and carries none of the propositions below. It names the ketogenic diet once, as 'epilepsy that responded to a ketogenic diet in three patients', and that sentence is the overstatement this reading exists to bound: it carries no endpoint, no exposure denominator, no window, no comparator and no developmental outcome, and the abstract contains no EEG, growth, visual, sleep or mortality value at all. Anchoring these entries to it would attach each measured bound to the sentence it narrows.",
+  "entries": [
+   {
+    "proposition": "The ketogenic-diet benefit in this cohort is a clinician-reported improvement in seizure control in three named patients, with no counted, scored or instrumented endpoint behind the word 'improved'.",
+    "snippet": "However, the institution of a ketogenic diet in patients 1, 2, and 4 notably improved seizure control.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36537114_Chong2023_SGchunks_text_2026-10-21.txt",
+    "anchor": "Discussion, delivered chunk 22",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors themselves decline to assert a beneficial effect of the diet, and name cohort size as the reason.",
+    "snippet": "It may be premature to assert the potential beneficial effects of a ketogenic diet as they need to be evaluated carefully in a larger cohort.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36537114_Chong2023_SGchunks_text_2026-10-21.txt",
+    "anchor": "Discussion, delivered chunk 22",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Developmental status is identical across all five columns, the three diet responders included: in this series the symptomatic observation and the developmental outcome do not move together.",
+    "snippet": "|Developmental delay |Profound developmental delay |Profound developmental delay |Profound developmental delay |Profound developmental delay |Profound developmental delay |",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID36537114_Chong2023_SGchunks_text_2026-10-21.txt",
+    "anchor": "Table 1, row 'Developmental delay'; delivered in chunks 2 and 18",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Two patients of the series had died at the time of writing, and they are the first two columns - that is, two of the three patients described as responding to the diet.",
+    "snippet": "|Recent status |Died at 2years 4months |Died at 2years |Alive at 8years |Alive at 6years |Alive at 7years |",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID36537114_Chong2023_SGchunks_text_2026-10-21.txt",
+    "anchor": "Table 1, row 'Recent status'; delivered in chunks 2 and 18",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The one column of the table that carries the SDR missense worked-example allele has no ketogenic-diet entry in its epilepsy cell, which is what the claim registry already states and what this reading binds to the row.",
+    "snippet": "|Infantile spasms at onset, later evolved into tonicclonic seizures |",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID36537114_Chong2023_SGchunks_text_2026-10-21.txt",
+    "anchor": "Table 1, row 'Epilepsy', fifth column; delivered in chunks 2 and 18",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Growth in this cohort is reported as SD scores and percentiles for occipitofrontal circumference, height and weight at a stated age - a quantitative, repeatable, clinically obtainable measurement, and the only human WOREE endpoint of that kind in the records this repository holds.",
+    "snippet": "OFC: 2 SD\nWeight: 1.5 SD\nHeight: 3.0 SD (at 8years)",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID36537114_Chong2023_SGchunks_text_2026-10-21.txt",
+    "anchor": "Table 1, row 'Updated growth parameter', third column; delivered in chunks 2 and 18",
+    "panel_text_relation": "text_only",
+    "declared_surface_defect": "The minus signs are absent from this extracted surface. The three values are read here as the MAGNITUDES of SD scores and not as signed numbers: the direction comes from the row's own context, the same table calling this patient microcephalic from two months, and not from the characters quoted. Same class of defect as an exponent flattened by an extraction route. No proposition in this reading uses the sign, and a reading that needs it must open the typeset table."
+   },
+   {
+    "proposition": "A visual evoked potential was performed in one WOREE patient of this series and was undetectable bilaterally - so a VEP does exist as a performed measurement in WOREE, qualitatively and at n = 1.",
+    "snippet": "Patient 4 demonstrated undetected visual evoked potentials suggesting central involvement.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36537114_Chong2023_SGchunks_text_2026-10-21.txt",
+    "anchor": "Discussion, delivered chunk 23",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A sleep study was performed in one patient of this series and detected sleep apnoea with hypopnoea - so polysomnography also exists as a performed measurement in WOREE, at n = 1, with no parameter reported.",
+    "snippet": "|Sleep apnea with hypopnea detected by sleep study |",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID36537114_Chong2023_SGchunks_text_2026-10-21.txt",
+    "anchor": "Table 1, row 'Respiratory features', second column; delivered in chunks 2 and 18",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EEG in this cohort is a qualitative pattern description in every column - hypsarrhythmia, background slowing, multifocal discharges - with no quantitative parameter, no discharge density, no background score and no repeat interval.",
+    "snippet": "|EEG |Multifocal epilepsy with slow and acute waves disorganization, left frontotemporal focus |Hypsarrhythmia |Hypsarrhythmia, later evolved into a pattern of background slowing along with multiple epileptiform discharges |Hypsarrhythmia |Multifocal spike discharges and slow wave activity, |",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID36537114_Chong2023_SGchunks_text_2026-10-21.txt",
+    "anchor": "Table 1, row 'EEG'; delivered in chunks 2 and 18",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Two of the five patients were previously published and are updated here; the delivered surface does not say which two, so no diet response in this series can be counted as a new independent observation without resolving that.",
+    "snippet": "we present the molecular and clinical findings of five patients with WOREE syndrome, including three new and two previously published patients whose data have been updated",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36537114_Chong2023_SGchunks_text_2026-10-21.txt",
+    "anchor": "Discussion, summary paragraph, delivered chunk 25",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Delayed myelination for age is an MRI finding in one column of this series, reported as a radiological impression and not as a quantity.",
+    "snippet": "Decreased cerebral white matter volume and severe hypoplastic corpus callosum. Delayed myelination pattern for age",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID36537114_Chong2023_SGchunks_text_2026-10-21.txt",
+    "anchor": "Table 1, row 'Brain MRI findings', second column; delivered in chunks 2 and 18",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Failure to thrive is present in all five columns, with an age of onset given for one - which is what makes growth a candidate early-benefit endpoint in this disease rather than an incidental observation.",
+    "snippet": "|Failure to thrive |Yes, from 12months |Yes |Yes |Yes |Yes |",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID36537114_Chong2023_SGchunks_text_2026-10-21.txt",
+    "anchor": "Table 1, row 'Failure to thrive'; delivered in chunks 2 and 18",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
