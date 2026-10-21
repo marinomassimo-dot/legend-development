@@ -67,7 +67,7 @@
       "id": "DR-A02-003",
       "target_id": "ASPA C152W insoluble protein",
       "endpoint": "activity of the stabilised protein",
-      "direction": "UNKNOWN",
+      "direction": "NO_CHANGE",
       "source": "Gersing 2021 (R1 reading 33914734); NOT WWOX EVIDENCE",
       "locator": "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md § 1, 33914734",
       "epistemic_status": "DATO",
@@ -79,7 +79,7 @@
         "cell_type": "U2OS",
         "developmental_stage": "culture"
       },
-      "measured_result_note": "MEASURED NO FUNCTION: stabilising the variant yielded protein that is insoluble and without measurable activity. Encoded UNKNOWN only because the bridge has no NO_CHANGE value (gap G-1).",
+      "measured_result_note": "MEASURED NO FUNCTION: stabilising the variant yielded protein that is insoluble and without measurable activity. Encoded NO_CHANGE.",
       "receipt": "FTR-20261021-33914734-01"
     }
   ],
@@ -156,9 +156,21 @@
     "Toxic windows including in controls."
   ],
   "bridge_gaps_exposed": [
-    "G-1"
+    "G-1 (closed in bridge b96e4cd9; packet rebuilt with NO_CHANGE)"
   ],
   "schema_version": 1,
+  "translation": {
+    "pediatric_suitability": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+    "cns_exposure": "UNKNOWN.",
+    "interactions": "UNKNOWN",
+    "access": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN",
+    "functional_rescue": "UNKNOWN for WWOX. Closest precedent: partial protein return with localisation and myelin-marker read-outs in cells; another precedent returned inactive insoluble protein."
+  },
+  "p4_roadmap_fields": {
+    "indication_and_transfer": "WOREE (Q230P-class) as target. Origin: a recessive missense protein in patient iPSC oligodendrocytes plus library studies (NOT WWOX EVIDENCE). This is the closest measured precedent to the Q230P premise in R1 ('normal mRNA, protein absent', partial return with an inhibitor), at the cost of a narrow toxicity-bounded window.",
+    "verification_scope": "{\"support_and_replication\": \"No replication of the HIKESHI result is recorded.\", \"formal_checks\": \"R1 receipts recorded, manifests PASS; R1 narrowings OWED a blind audit by another actor.\", \"card_inferences_owed_audit\": \"None added beyond the R1 note.\"}"
+  },
   "label_lookup": {
     "status": "NOT_ATTEMPTED"
   },

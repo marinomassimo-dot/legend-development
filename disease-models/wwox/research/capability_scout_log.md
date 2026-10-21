@@ -1263,3 +1263,5 @@ token, an abstention without its missing datum, or a receipt id absent from the 
 requires a comparator and a test, compares to nothing and is never pooled, with its own `limits` line;
 typed slots for the remaining P4 fields with the same UNKNOWN-not-absent rule; and a list of disease
 assertions keyed by endpoint. Cost: hours. **Cost / API / privacy risk:** none.
+
+**Update 2026-10-22 (same entry):** the measured-null and `translation` gaps were closed by Harness commit `b96e4cd9` before the cards landed (NO_CHANGE direction; translation fields reachable; two roadmap rows validated); the cards were rebuilt. Still open: one `disease_assertion` per packet (G-2), and typed slots for the other roadmap P4 fields.

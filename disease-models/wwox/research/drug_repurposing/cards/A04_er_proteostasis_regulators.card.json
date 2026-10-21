@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "c5aa23aa1cb0b2ec83f4dd0513392305e42193aeb6366cca0afe68072abb6acb",
+  "input_sha256": "23b2a4839e74483cbaf3065aa054581b92661ed919473c3f1398d0610407ceaf",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -127,6 +127,18 @@
     "evidence_against": [],
     "bridge_gaps_exposed": [],
     "schema_version": 1,
+    "translation": {
+      "pediatric_suitability": "UNKNOWN",
+      "cns_exposure": "UNKNOWN",
+      "interactions": "UNKNOWN",
+      "access": "UNKNOWN",
+      "time_to_benefit": "UNKNOWN",
+      "functional_rescue": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+      "indication_and_transfer": "WOREE as target; no candidate molecule is carded because the datum below is missing.",
+      "verification_scope": "{\"support_and_replication\": \"None.\", \"formal_checks\": \"None; no assertion is supplied.\", \"card_inferences_owed_audit\": \"Statements marked INFERENZA, if any, are OWED a blind audit by another actor.\"}"
+    },
     "label_lookup": {
       "status": "NOT_ATTEMPTED"
     },

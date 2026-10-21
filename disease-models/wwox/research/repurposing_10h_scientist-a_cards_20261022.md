@@ -94,32 +94,29 @@ between the organoid compound and the clinical-stage agent is carried from the R
 verified here. `P4-D-02` records that no Wnt-lowering agent has been given to any WWOX system and
 that "lower MYC/Wnt is better" is not a safe default.
 
-## 3 · Gaps in the bridge exposed by building the cards (not patched; a Harness agent owns it)
+## 3 · Gaps in the bridge exposed by building the cards (not patched by me; a Harness agent owns it)
 
-The one that matters most is **G-1**; the others are recorded so the Harness agent has them.
+Updated 2026-10-22: the first build exposed three gaps; Harness commit `b96e4cd9` closed two of them
+before the cards landed, and the cards were rebuilt.
 
-- **G-1 · the bridge cannot represent a measured null.** `direction` is INCREASE, DECREASE or
-  UNKNOWN. A measured "not significant, not rescued" has no value of its own and must be entered as
-  UNKNOWN, which the bridge, its documentation and the roadmap read as *owed*. Exposed by five
-  assertions: `DR-A01-003` (GAT-1 G443D not rescued), `DR-A01-004` (null zebrafish), `DR-A02-003`
-  (stabilised, inactive ASPA variant), `DR-B01-002` (no phenotypic rescue head to head), `DR-D01-002`
-  (layer neurons). In the built card each reads `direction unknown`, indistinguishable from "never
-  measured". The packets compensate in prose (`measured_result_note`: "MEASURED NO ... UNKNOWN does
-  NOT mean owed"), which no consumer of the card is obliged to read. Precisely what is missing: a
-  declared fourth value such as NO_CHANGE with a required comparator and test, which compares to
-  nothing and is never pooled.
-- **G-2 · one `disease_assertion` per packet.** A multi-endpoint candidate (AAV9: five endpoint
-  families; A51: progenitors and layer neurons) can have only one endpoint compared; every other
-  measured endpoint is forced to `UNRESOLVED` with "endpoint: mismatch or unknown", which reads as a
-  context failure although the data exist. The cards keep the other families in `p4_card` and out of
-  `drug_assertions`.
-- **G-3 · P4 fields have no home and `translation` has no input.** Of the roadmap's 21 P4 fields the
-  bridge has typed slots for two (the label search and the cellular context); the rest travel as untyped extra keys that
-  survive under `input` but are validated by nothing (`check_cards.py` compensates locally). The
-  card's own `translation` block is a constant UNKNOWN with no way to fill it, has one `access` key
-  where the roadmap demands `time_to_access` and `time_to_benefit` as separate fields, and on the
-  AAV9 card sits beside a packet that documents more (a grant-level programme, a mouse result). It is
-  consistent with "in humans" but a reader of the card alone cannot see that.
+- **G-1 · the bridge could not represent a measured null: CLOSED by `b96e4cd9`.** `direction` had no
+  value for "not significant, not rescued", so five measured nulls had to be entered as UNKNOWN,
+  which reads as *owed*. The bridge now has `NO_CHANGE`; the five assertions (`DR-A01-003`,
+  `DR-A01-004`, `DR-A02-003`, `DR-B01-002`, `DR-D01-002`) use it, and in a non-comparable cell the
+  card says "a measured null, not an unmeasured cell".
+- **G-3 · `translation` had no input path and P4 rows had no home: CLOSED in the part that mattered.**
+  `translation` (with `access` and `time_to_benefit`) is now filled from the packet, and the two roadmap
+  rows `indication_and_transfer` and `verification_scope` are validated. The other roadmap fields
+  still travel as untyped extra keys that the bridge keeps unchanged and does not validate
+  (`check_cards.py` compensates locally); and `access` still stands for time to access under a name
+  that does not say so.
+- **G-2 · one `disease_assertion` per packet: STILL OPEN, and now the one gap.** A multi-endpoint
+  candidate (AAV9: five endpoint families; A51: progenitors and layer neurons) can have only one
+  endpoint compared; every other measured endpoint is forced to `UNRESOLVED` with "endpoint:
+  mismatch or unknown", which reads as a context failure although the data exist. The cards keep the
+  other families in `p4_card` and out of `drug_assertions`. Precisely what is missing: a list of
+  disease assertions keyed by endpoint, each compared only with the drug assertions on the same
+  endpoint.
 
 ## 4 · DEFAULTS_TAKEN, OWED, STOP
 
@@ -128,7 +125,7 @@ The one that matters most is **G-1**; the others are recorded so the Harness age
   in the knockout organoid for A51. Context strings differ on purpose, so cross-system rows resolve
   to `UNRESOLVED`; this is the bridge working as designed.
 - **Understated depths.** The A51 organoid reading is held at `UNKNOWN` depth because the sources do
-  not restate it; direction for measured nulls is `UNKNOWN` (G-1).
+  not restate it; measured nulls are `NO_CHANGE` after the bridge change (G-1, now closed in the bridge).
 - **Out of scope, not discarded.** BENEFICIO_PRECOCE candidates (ethosuximide, lithium, pro-myelinating
   agents, mTOR and symptomatic agents) are not carded. Lithium's relevant negative on specificity and
   its Wnt-direction conflict are in the known-roads note and would be a natural controversial-direction
@@ -161,9 +158,17 @@ which is itself the result they are for.
 
 ## 6 · Self-evaluation (short form; the full diagnosis is under `session_evaluations/`)
 
-The upgrade the work forced is the bridge's missing representation of a measured null (G-1), written
-where the Harness agent will find it and compensated in every packet. The failure this batch
+The upgrade the work forced was the bridge's missing representation of a measured null (G-1), written
+where the Harness agent found it; it is now closed and the cards rebuilt with it. The failure this batch
 risked most was making a card look like a result: `OPPOSES_DISEASE_CHANGE` on `P4-C-01` and `P4-D-01`
 reads as good news, so each carries a `reading_guard` and the A51 card shows the non-match next to
 the match. A second risk, naming a first author the notes did not give, was caught on a self-review
 before the run and removed.
+
+## 7 · After the R1 blind audit (2026-10-22)
+
+The audit of the R1 manifests overshot 15 triples, among them all three behind the PB-4 narrowing. No
+card of this set cites PB-4 or the polysome limitation; the corrected R1 statements that the cards use
+(butyrate as a partial, variant-dependent dissociation; a binding or folding measurement "not
+established here"; the Parkin negative as one compound, one concentration, a pooled readout) were
+carried into `P4-A-01` and `DR-A01-005`. The repairs are unaudited; the cards inherit that.

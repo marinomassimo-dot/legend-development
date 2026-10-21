@@ -23,18 +23,18 @@ dimensions that this set does not make.
 
 | Id | Axis | Candidate | State (roadmap vocabulary) | Bridge `directional_summary` | `input_sha256` (bridge, full) |
 |---|---|---|---|---|---|
-| `P4-A-01` | A · Q230P-class missense recovery | 4-phenylbutyrate class and bile-acid chemical chaperones | controversial | UNRESOLVED | `8bda86b67c901931ef690d628385e4f55211909abf92cd7b88125c813d1a2600` |
-| `P4-A-02` | A | Proteasome-inhibitor class (degradation blockade) | hypothesis | UNRESOLVED | `41cfec0b025837ba21d8cba76aaaa17883092881bbd064a3eab90dff66f62dd4` |
-| `P4-A-03` | A | Client-binding pharmacological chaperone | abstention | UNRESOLVED | `054448dd02c82f48fd30f4037313e102771b109e4940886d867792b3e2807e65` |
-| `P4-A-04` | A | ER-proteostasis regulators (UPR/ERAD) | abstention | UNRESOLVED | `c5aa23aa1cb0b2ec83f4dd0513392305e42193aeb6366cca0afe68072abb6acb` |
-| `P4-A-05` | A | HSP70-axis modulation | abstention | UNRESOLVED | `ace4fc6aa77951fff5e2156920e9b4599e84ddd7686bbe428439fdc2f3a46d7f` |
-| `P4-B-01` | B · premature-stop-codon read-through | Amlexanox (qualified, not promoted) | deferred with reason | UNRESOLVED | `57dcf9652760c6feba88f6cd7a323f3e4852cb154d8603dbfee77307b0646dd7` |
-| `P4-B-02` | B | PTC read-through class for nonsense alleles | abstention | UNRESOLVED | `28153494c7191320dc2ec30b3c1988909b20193c5dde40439fe46af0134ab9f2` |
-| `P4-C-01` | C · restoration of WWOX expression | AAV9-delivered human WWOX | hypothesis | OPPOSES_DISEASE_CHANGE (inside the Wwox-null mouse, one endpoint) | `1ca52c7262409654926f5a15d6f7cb97581dc44dc7ca6a1bf9e71dfcdcfd7bb2` |
-| `P4-C-02` | C | Splice-correcting ASO / editing | abstention | UNRESOLVED | `b84a5d002bc4ed655b0296dfcb7cc96ea351bac95754c41f4c18ca054fefa842` |
-| `P4-C-03` | C | Endogenous boost (CRISPRa or equivalent) | abstention | UNRESOLVED | `9a9a3bda677f320f9859cbe66a603609a9b8a47a71883860a7e85d553c18f73b` |
-| `P4-D-01` | D · downstream pathway (Wnt/MYC) | A51, a multi-kinase inhibitor; BLOCK-1 open | controversial | UNRESOLVED (one assertion opposes, one is not comparable) | `c630493956016b2eed2c39b61fef23d50b69bf7487ed7ab993d508e15143e22f` |
-| `P4-D-02` | D | Wnt-lowering (tankyrase-type) agents and GSK3 modulation | abstention | UNRESOLVED | `72da2b7fe527cdb64bdef3e98a96414175f2aa4bcb6623950c07fda96628940a` |
+| `P4-A-01` | A · Q230P-class missense recovery | 4-phenylbutyrate class and bile-acid chemical chaperones | controversial | UNRESOLVED | `7eebb5ed2106299775e78c6a0ff505d71140fcaa123daf83e69437036fc5236f` |
+| `P4-A-02` | A | Proteasome-inhibitor class (degradation blockade) | hypothesis | UNRESOLVED | `dccbcd5b0b5c9f657fa9287cea5554fc87b8e9b7fc2e726af45ed87c7bbde972` |
+| `P4-A-03` | A | Client-binding pharmacological chaperone | abstention | UNRESOLVED | `5e4ae43e3b1ee1d1b0c18c2ad4c8eba69a9f0ec180e9ba6a519cd90c02b40bd6` |
+| `P4-A-04` | A | ER-proteostasis regulators (UPR/ERAD) | abstention | UNRESOLVED | `23b2a4839e74483cbaf3065aa054581b92661ed919473c3f1398d0610407ceaf` |
+| `P4-A-05` | A | HSP70-axis modulation | abstention | UNRESOLVED | `77435531ca722e59b67e2bf0e0150ce4099563bd9be2a642f60a4bb9c3068dfe` |
+| `P4-B-01` | B · premature-stop-codon read-through | Amlexanox (qualified, not promoted) | deferred with reason | UNRESOLVED | `a18010935432097cf57cb81e37da0bdc091e5864d089764d864d4cc7e7dfcdf2` |
+| `P4-B-02` | B | PTC read-through class for nonsense alleles | abstention | UNRESOLVED | `50d6bb33272ddd378d91c41338cfefa18a44ae383d25e9a60b887be2f88b2ae4` |
+| `P4-C-01` | C · restoration of WWOX expression | AAV9-delivered human WWOX | hypothesis | OPPOSES_DISEASE_CHANGE (inside the Wwox-null mouse, one endpoint) | `e9948aa8dc70bf3c450e47f633674da42191f0efdc2313bae76433da62316a3c` |
+| `P4-C-02` | C | Splice-correcting ASO / editing | abstention | UNRESOLVED | `a317cfa159e006c7364a841c755d628d21d47512539627809eb70eece28883c8` |
+| `P4-C-03` | C | Endogenous boost (CRISPRa or equivalent) | abstention | UNRESOLVED | `590778e336c1fa7916033cbd7c318846c8b7e09d0388cfde0b3aeb64b6817e1e` |
+| `P4-D-01` | D · downstream pathway (Wnt/MYC) | A51, a multi-kinase inhibitor; BLOCK-1 open | controversial | UNRESOLVED (one assertion opposes, one is not comparable) | `5978fe7b62a9ab3ddc85d17df967f6c44e10eedf2c8e6aa92c1c158b3c64f053` |
+| `P4-D-02` | D | Wnt-lowering (tankyrase-type) agents and GSK3 modulation | abstention | UNRESOLVED | `870d6aabd0537095f1b1ca658ab4c5351dbf37210f33164e7e3a0ce4a88409ba` |
 
 `UNRESOLVED` on almost every card is the honest result and not a defect: **no drug assertion
 exists in a context that matches the disease assertion**, because no drug has been given to any
@@ -53,9 +53,18 @@ sign comparison inside an engineered-null mouse on one endpoint; its packet carr
 - `NON_TROVATO_NELLA_RICERCA` is the novelty state for most candidates; it is never `MAI_TENTATO`.
   Each such state names where it came from (registry-based, dated 2026-10-20 or 2026-10-21) and
   that **no new query was run for the cards**.
-- A measured null (not significant, not rescued) is recorded in an assertion's
-  `measured_result_note` and encoded as direction `UNKNOWN` because the bridge has no value for it.
-  There `UNKNOWN` does **not** mean owed. This is gap G-1 in the note.
+- A measured null (not significant, not rescued) is encoded `NO_CHANGE`, which the bridge (commit
+  `b96e4cd9`, after the first build of these cards) now distinguishes from `UNKNOWN`: five
+  assertions use it (`DR-A01-003`, `DR-A01-004`, `DR-A02-003`, `DR-B01-002`, `DR-D01-002`). In a
+  cell that is not comparable it stays `UNRESOLVED`, with the reason that it is a measured null.
+  `UNKNOWN` therefore still means owed.
+- The cards were rebuilt after that bridge change; `translation` (including `access` = time to
+  access and `time_to_benefit`) is now filled from the packet, and `p4_roadmap_fields` carries the
+  two roadmap rows the bridge validates.
+- After the blind audit of R1 (2026-10-22) the R1 statements used here were re-read against the repaired note:
+  no card cites the withdrawn PB-4 limitation of polysome-based evidence; `DR-A01-005` and the
+  `P4-A-01` text were corrected (butyrate is a partial, variant-dependent dissociation of quantity
+  from function; a binding, thermal-stability or folding measurement is "not established here").
 - Statements marked INFERENZA in a card are owed a blind audit by someone else; so are the
   card-level syntheses. The audit of some R1 triples that another actor is running in parallel
   was not available to these cards.

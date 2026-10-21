@@ -39,7 +39,7 @@
 - What caught each failure before an overclaim: see census.
 - Disease-agnostic micro-upgrade shipped: the bridge gap record G-1..G-3 in the capability scout log, and a card-consistency regression (`cards/check_cards.py`).
 - Regression/evidence that makes the upgrade persistent: `check_cards.py` re-derives every card from its packet and fails on an absent P4 field.
-- Residual risk and next decisive action: a reader may still take `UNKNOWN` for owed where it encodes a measured null (G-1); the fix is a Harness change to the bridge. Blind audit of the INFERENZA statements.
+- Residual risk and next decisive action: G-1 (measured null encoded as UNKNOWN) was closed by Harness commit b96e4cd9 and the cards rebuilt with NO_CHANGE; G-2 (one disease assertion per packet) remains open. Blind audit of the INFERENZA statements.
 
 ## Attribution census
 
@@ -62,3 +62,7 @@ undetected_known: 0
 ## Capability outcome
 
 Gap recorded as new in `capability_scout_log.md` (measured null, one disease assertion per packet, `translation` block with no input path); change to the bridge: none, it belongs to a Harness agent.
+
+## Update 2026-10-22
+
+The R1 blind audit (19 adverse triples) was repaired in a separate task; no card cited the withdrawn PB-4 limitation. DR-A01-005 and P4-A-01 were corrected for the repaired R1 wording; cards rebuilt against the new bridge. Unaudited.

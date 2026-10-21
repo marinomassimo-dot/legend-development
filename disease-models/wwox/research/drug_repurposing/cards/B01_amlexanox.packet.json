@@ -48,7 +48,7 @@
       "id": "DR-B01-002",
       "target_id": "FANCF/FANCA full-length protein, survival, chromosomal aberrations, micronuclei",
       "endpoint": "phenotypic rescue head-to-head with a comparator read-through agent",
-      "direction": "UNKNOWN",
+      "direction": "NO_CHANGE",
       "source": "independent Fanconi-anaemia study (known-roads reading 2, 40544182); NOT WWOX EVIDENCE",
       "locator": "disease-models/wwox/research/repurposing_known_roads_20261020_scientist-a.md § 4.3, reading 2",
       "epistemic_status": "DATO",
@@ -60,7 +60,7 @@
         "cell_type": "lymphoblastoid and dermal fibroblast lines",
         "developmental_stage": "culture"
       },
-      "measured_result_note": "MEASURED NO PHENOTYPIC RESCUE (survival, aberrations, micronuclei) and NMD not relieved, while one protein arm showed no effect and another about 9 percent of control; the effect that was seen is attributed by the authors to TBK1/IKKe inhibition, not read-through. Encoded UNKNOWN only because the bridge has no NO_CHANGE value (gap G-1).",
+      "measured_result_note": "MEASURED NO PHENOTYPIC RESCUE (survival, aberrations, micronuclei) and NMD not relieved, while one protein arm showed no effect and another about 9 percent of control; the effect that was seen is attributed by the authors to TBK1/IKKe inhibition, not read-through. Encoded NO_CHANGE.",
       "receipt": "FTR-20261020-40544182-01"
     }
   ],
@@ -134,9 +134,21 @@
     "No premature stop codon in the reference missense."
   ],
   "bridge_gaps_exposed": [
-    "G-1"
+    "G-1 (closed in bridge b96e4cd9; packet rebuilt with NO_CHANGE)"
   ],
   "schema_version": 1,
+  "translation": {
+    "pediatric_suitability": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+    "cns_exposure": "UNKNOWN. No pharmacokinetic or CNS datum in the sources.",
+    "interactions": "UNKNOWN",
+    "access": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN",
+    "functional_rescue": "UNKNOWN for WWOX; elsewhere a relevant negative on phenotypic rescue in the one comparator-controlled study."
+  },
+  "p4_roadmap_fields": {
+    "indication_and_transfer": "WOREE as target only for PTC-bearing WWOX alleles. For the Q230P-class reference missense the mechanism is structurally inapplicable. The WWOX Foundation's reported individual experience and a 2024 poster abstract are one narrated experience and one uncontrolled account of it: not two replications and not confirmed efficacy.",
+    "verification_scope": "{\"support_and_replication\": \"The dual-activity claim is not reproduced outside its originating laboratory; the two papers disagree on the NMD arm and this card does not adjudicate which is right.\", \"formal_checks\": \"Both readings are partial_fulltext_read with figures captions_only; supplement of the independent study not fetched (declared debt).\", \"card_inferences_owed_audit\": \"None added.\"}"
+  },
   "label_lookup": {
     "status": "NOT_ATTEMPTED"
   },

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "c630493956016b2eed2c39b61fef23d50b69bf7487ed7ab993d508e15143e22f",
+  "input_sha256": "5978fe7b62a9ab3ddc85d17df967f6c44e10eedf2c8e6aa92c1c158b3c64f053",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -17,7 +17,7 @@
       "reasons": [
         "target_id: mismatch or unknown",
         "endpoint: mismatch or unknown",
-        "direction unknown"
+        "reported no change, in a cell that is not comparable: a measured null, not an unmeasured cell"
       ]
     }
   ],
@@ -98,7 +98,7 @@
         "id": "DR-D01-002",
         "target_id": "SATB2+ and CTIP2+ layer-neuron fractions",
         "endpoint": "fraction of layer neurons (SATB2+, CTIP2+)",
-        "direction": "UNKNOWN",
+        "direction": "NO_CHANGE",
         "source": "DL-THER-089 (same experiment)",
         "locator": "discovery_ledger_current DL-THER-089; disease-models/wwox/research/repurposing_known_roads_20261020_scientist-a.md § 2.4a",
         "epistemic_status": "DATO",
@@ -111,7 +111,7 @@
           "cell_type": "cerebral organoid progenitors (SOX2+ MYC+)",
           "developmental_stage": "organoid, culture weeks 8 to 15"
         },
-        "measured_result_note": "MEASURED NO RECOVERY: knockout-versus-treated not significant for both markers, CTIP2 remaining far below wild type. Encoded UNKNOWN only because the bridge has no NO_CHANGE value (gap G-1) and carried with the disease assertion's endpoint mismatch (gap G-2); UNKNOWN here does NOT mean owed. This row is the split that the first row hides."
+        "measured_result_note": "MEASURED NO RECOVERY: knockout-versus-treated not significant for both markers, CTIP2 remaining far below wild type. Encoded NO_CHANGE; it stays UNRESOLVED because the single disease assertion is on a different endpoint (gap G-2). This row is the split that the first row hides."
       }
     ],
     "p4_fields": {
@@ -193,11 +193,23 @@
       "Developing-brain cost of related targets."
     ],
     "bridge_gaps_exposed": [
-      "G-1",
-      "G-2"
+      "G-1 (closed in bridge b96e4cd9)",
+      "G-2 (open)"
     ],
     "reading_guard": "directional_summary is UNRESOLVED because the second assertion (layer neurons) cannot be compared; the first assertion's OPPOSES_DISEASE_CHANGE is a progenitor-identity match inside a knockout organoid and must not be read alone.",
     "schema_version": 1,
+    "translation": {
+      "pediatric_suitability": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+      "cns_exposure": "UNKNOWN. Brain exposure of the compound class was not measured in any selected paper.",
+      "interactions": "UNKNOWN",
+      "access": "UNKNOWN",
+      "time_to_benefit": "UNKNOWN",
+      "functional_rescue": "UNKNOWN for WWOX; in the organoid, progenitor identity normalised and layer-neuron production did not."
+    },
+    "p4_roadmap_fields": {
+      "indication_and_transfer": "WOREE as target; origin: a knockout human organoid, the only pharmacological intervention ever applied to a human WWOX-deficient neural model. No patient allele; no Q230P-class context.",
+      "verification_scope": "{\"support_and_replication\": \"No replication; the review that restates the organoid work writes 'restored' where its own primary shows partial recovery and the significance bracket that would falsify the word is not drawn.\", \"formal_checks\": \"R3 readings carry recorded receipts and manifests PASS; blind locator audit of all R3 manifests OWED. The A51 panel values cannot be re-audited against the source.\", \"card_inferences_owed_audit\": \"None added.\"}"
+    },
     "label_lookup": {
       "status": "NOT_ATTEMPTED"
     },
@@ -212,18 +224,19 @@
     "no_new_reading": "No paper was opened for this card; the sources are the repository's own receipted notes and records."
   },
   "translation": {
-    "pediatric_suitability": "UNKNOWN",
-    "cns_exposure": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+    "cns_exposure": "UNKNOWN. Brain exposure of the compound class was not measured in any selected paper.",
     "interactions": "UNKNOWN",
     "access": "UNKNOWN",
     "time_to_benefit": "UNKNOWN",
-    "functional_rescue": "UNKNOWN"
+    "functional_rescue": "UNKNOWN for WWOX; in the organoid, progenitor identity normalised and layer-neuron production did not."
   },
   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
   "limits": [
     "Technical comparison is not efficacy, safety or experimental validation.",
     "Sources and receipt references are retained, not independently verified.",
     "Shared sources are not independent confirmations; scores are not pooled.",
+    "NO_CHANGE is a reported null effect on that endpoint and context: it is not UNKNOWN (not measured), not evidence of safety, and not proof of futility; a null in a non-comparable cell stays UNRESOLVED.",
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
   ]
 }

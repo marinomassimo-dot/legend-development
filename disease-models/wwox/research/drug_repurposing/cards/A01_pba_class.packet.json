@@ -67,7 +67,7 @@
       "id": "DR-A01-003",
       "target_id": "SLC6A1:GAT-1 protein, variant G443D (partly trafficked, inactive)",
       "endpoint": "functional rescue",
-      "direction": "UNKNOWN",
+      "direction": "NO_CHANGE",
       "source": "Shah 2025 (R1 reading 40485335); NOT WWOX EVIDENCE",
       "locator": "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md § 1, 40485335",
       "epistemic_status": "DATO",
@@ -79,14 +79,14 @@
         "cell_type": "HEK293 and fly astrocytes",
         "developmental_stage": "adult flies and cell line"
       },
-      "measured_result_note": "MEASURED NO RESCUE (behaviour unchanged). Encoded UNKNOWN only because the bridge has no NO_CHANGE value (gap G-1); UNKNOWN here does NOT mean owed.",
+      "measured_result_note": "MEASURED NO RESCUE (behaviour unchanged). Encoded NO_CHANGE: a reported null, not an unmeasured cell.",
       "receipt": "FTR-20261021-40485335-01"
     },
     {
       "id": "DR-A01-004",
       "target_id": "stxbp1a/stxbp1b null alleles",
       "endpoint": "movement deficit and ictal-like events",
-      "direction": "UNKNOWN",
+      "direction": "NO_CHANGE",
       "source": "Frick 2026 (R1 reading 42268630); NOT WWOX EVIDENCE",
       "locator": "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md § 1, 42268630",
       "epistemic_status": "DATO",
@@ -98,7 +98,7 @@
         "cell_type": "whole larva",
         "developmental_stage": "larva"
       },
-      "measured_result_note": "MEASURED NO RESCUE in null alleles, protein not measured, bath concentration bounded by larval toxicity, assay separation of controls unestablished; INCONCLUSIVE for a protein-expressing missense allele. Encoded UNKNOWN for the same reason as DR-A01-003 (gap G-1).",
+      "measured_result_note": "MEASURED NO RESCUE in null alleles, protein not measured, bath concentration bounded by larval toxicity, assay separation of controls unestablished; INCONCLUSIVE for a protein-expressing missense allele. Encoded NO_CHANGE.",
       "receipt": "FTR-20261021-42268630-01"
     },
     {
@@ -117,7 +117,7 @@
         "cell_type": "HEK293T; synaptosomes",
         "developmental_stage": "mixed"
       },
-      "measured_result_note": "Quantity-up, function-flat case: the HDAC-inhibitor comparator raised the immature pool without function and worsened an EEG count in one line; the mechanism ascribed to the phenylbutyrate arm (chaperone rather than HDAC inhibition) is inferential, with no direct binding or folding measurement.",
+      "measured_result_note": "The HDAC-inhibitor comparator raised the total amount of immature protein with a small, variant-dependent function gain (the authors read non-specific accumulation; partial dissociation of quantity from function, not a clean quantity-up, function-flat case) and worsened an EEG count in one line; the mechanism ascribed to the phenylbutyrate arm (chaperone rather than HDAC inhibition) is inferential, and a direct binding, thermal-stability or folding measurement is NOT ESTABLISHED HERE.",
       "receipt": "FTR-20261021-42157447-01"
     }
   ],
@@ -161,7 +161,7 @@
       ],
       "against": [
         "Wild type is raised in every target: the effect is not mutant-specific.",
-        "Not rescued: the partly trafficked G443D; null zebrafish (protein not measured); butyrate raised the immature pool without function.",
+        "Not rescued: the partly trafficked G443D; null zebrafish (protein not measured); butyrate raised total immature protein with a small, variant-dependent function gain.",
         "Mouse exposures were short (days); no brain exposure measured beside mutant protein; the human arm of one paper is one uncontrolled child.",
         "No enzyme-class precedent for the class; the enzyme precedents use degradation blockade or an active-site binder."
       ],
@@ -204,10 +204,22 @@
     "Rationale withdrawn once in this repository."
   ],
   "bridge_gaps_exposed": [
-    "G-1",
-    "G-3"
+    "G-1 (closed in bridge b96e4cd9; packet rebuilt with NO_CHANGE)",
+    "G-3 (closed in bridge b96e4cd9; translation block now filled)"
   ],
   "schema_version": 1,
+  "translation": {
+    "pediatric_suitability": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+    "cns_exposure": "UNKNOWN. Brain exposure of the class beside mutant-protein level was not measured in any R1 paper.",
+    "interactions": "UNKNOWN",
+    "access": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN",
+    "functional_rescue": "UNKNOWN for WWOX. In other proteins protein and function were measured together: partial, non-selective, variant-dependent."
+  },
+  "p4_roadmap_fields": {
+    "indication_and_transfer": "WOREE (Q230P-class missense) as target. Origin contexts: STXBP1, SLC6A1, GABRA1 and GAT-1 variants in cells, worm, fly, zebrafish and mouse (NOT WWOX EVIDENCE). Bridge limit: a chaperone of an ER-retained membrane protein is not shown to act on a cytosolic SDR enzyme; wild type is raised as well.",
+    "verification_scope": "{\"support_and_replication\": \"Rescue of the retained branch seen in two papers of one target family (GAT-1 variants); no replication in an enzyme-class or WWOX system.\", \"formal_checks\": \"R1 readings carry recorded receipts and PASS manifests; the R1 narrowings are OWED a blind locator audit by another actor (an audit of some R1 triples is running in parallel; its outcome is not available to this card).\", \"card_inferences_owed_audit\": \"The wrong-compartment transfer objection (INFERENZA).\"}"
+  },
   "label_lookup": {
     "status": "NOT_ATTEMPTED"
   },

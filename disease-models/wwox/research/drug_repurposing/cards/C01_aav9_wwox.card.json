@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "1ca52c7262409654926f5a15d6f7cb97581dc44dc7ca6a1bf9e71dfcdcfd7bb2",
+  "input_sha256": "e9948aa8dc70bf3c450e47f633674da42191f0efdc2313bae76433da62316a3c",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "DIRECTIONAL_COMPARISON_ONLY",
@@ -165,11 +165,23 @@
       "No tumour surveillance."
     ],
     "bridge_gaps_exposed": [
-      "G-2",
-      "G-3"
+      "G-2 (open)",
+      "G-3 (closed in bridge b96e4cd9)"
     ],
     "reading_guard": "OPPOSES_DISEASE_CHANGE is a sign comparison on ONE endpoint inside the Wwox-null mouse context. It says nothing about the Q230P class, nothing about the other endpoints (which the bridge does not compare), nothing about dose-dependence, and nothing about efficacy or safety in any person.",
     "schema_version": 1,
+    "translation": {
+      "pediatric_suitability": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+      "cns_exposure": "Not applicable in the small-molecule sense; biodistribution in the null mouse is regionally uneven. Human product: UNKNOWN.",
+      "interactions": "UNKNOWN",
+      "access": "UNKNOWN. A programme with a gene-therapy objective for WOREE is recorded at grant level; no registered WOREE interventional study on that registry on 2026-10-20 (a missing hit does not prove that none exists); authorisation, enrolment and first dose UNKNOWN.",
+      "time_to_benefit": "UNKNOWN in humans. In the null mouse the discharge effect was recorded over one week starting about two weeks after birth.",
+      "functional_rescue": "Demonstrated in the Wwox-null mouse on several endpoints by one laboratory (R-class), not replicated; in humans UNKNOWN."
+    },
+    "p4_roadmap_fields": {
+      "indication_and_transfer": "WOREE (all genotypes carry some level of WWOX deficit) as target; origin: a constitutive-null mouse and human knockout and patient-derived organoids. Transfer to a Q230P-class missense or compound context is not established.",
+      "verification_scope": "{\"support_and_replication\": \"One laboratory; no replication; support is intra-study.\", \"formal_checks\": \"Rescue-reference fill: voluntary blind audit run on the new Figure 3B triples, 5 SUPPORTED, 2 OVERSHOOT, 1 UNDERSHOOT, 0 UNVERIFIABLE, all adverse verdicts repaired at source; verdict not certified by its author. CLAIM 011 remains flagged for review.\", \"card_inferences_owed_audit\": \"None added; the 'threshold not a continuum' wording is the repository's NARROW adjudication and is carried as proposed.\"}"
+    },
     "label_lookup": {
       "status": "NOT_ATTEMPTED"
     },
@@ -184,12 +196,12 @@
     "no_new_reading": "No paper was opened for this card; the sources are the repository's own receipted notes and records."
   },
   "translation": {
-    "pediatric_suitability": "UNKNOWN",
-    "cns_exposure": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+    "cns_exposure": "Not applicable in the small-molecule sense; biodistribution in the null mouse is regionally uneven. Human product: UNKNOWN.",
     "interactions": "UNKNOWN",
-    "access": "UNKNOWN",
-    "time_to_benefit": "UNKNOWN",
-    "functional_rescue": "UNKNOWN"
+    "access": "UNKNOWN. A programme with a gene-therapy objective for WOREE is recorded at grant level; no registered WOREE interventional study on that registry on 2026-10-20 (a missing hit does not prove that none exists); authorisation, enrolment and first dose UNKNOWN.",
+    "time_to_benefit": "UNKNOWN in humans. In the null mouse the discharge effect was recorded over one week starting about two weeks after birth.",
+    "functional_rescue": "Demonstrated in the Wwox-null mouse on several endpoints by one laboratory (R-class), not replicated; in humans UNKNOWN."
   },
   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
   "limits": [
