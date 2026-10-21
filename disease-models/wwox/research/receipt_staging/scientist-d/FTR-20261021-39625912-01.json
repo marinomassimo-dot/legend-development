@@ -5,11 +5,11 @@
   "pmid": "39625912",
   "doi": "10.1371/journal.pone.0312936"
  },
- "event_at": "2026-10-21T22:10:17Z",
+ "event_at": "2026-10-21T22:10:48Z",
  "analysis_at": "2026-10-21T00:00:00Z",
  "analysis_time_precision": "date_only",
  "workflow": "scientist-d, ten-hour repurposing batch, task REPURP-10H-R4-D-20261021, branch task/repurp-r4-d; context_policy QUESTION_DRIVEN. Route: Europe PMC REST fullTextXML into the shared files/fulltext/; JATS body and tables read section by section from a text rendering; Figures 1 and 2 (Kaplan-Meier) extracted as embedded 302 ppi rasters from the PMC bucket PDF page 7 and opened as images; S1 (56-page protocol) text layer extracted with pdftotext (the pdf_text_extract.py output carried a NUL-bearing trailing object and was refused by the validator) and its summary, objectives, blinding, stopping and statistics sections read; S2 CONSORT checklist (6 pages; fonts without a ToUnicode map) skimmed and not declared as an artefact. Locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts. Receipt staged for the integrator, not appended.",
- "evidence_depth": "complete_fulltext_read",
+ "evidence_depth": "partial_fulltext_read",
  "source_locator": "files/fulltext/PMID39625912_Wied2024_PMC.xml",
  "source_fingerprint": "323ec2e26426921ac05359d9ffba50b954efc56fbd4b1447b51444e1eccfdae3",
  "source_kind": "fulltext_local",
