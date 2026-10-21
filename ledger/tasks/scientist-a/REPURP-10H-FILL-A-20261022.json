@@ -1,5 +1,5 @@
 {
- "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
  "_note": "Part of the ten-hour repurposing batch ORCH-REPURPOSING-10H-20261021. Adjacent and transferable literature: every paper that is not WWOX evidence is labelled NOT WWOX EVIDENCE, at class level, no dose, no paediatric suitability presumed, not medical advice.",
  "TASK_ID": "REPURP-10H-FILL-A-20261022",
  "DIRECTIVE_VERSION": 1,
@@ -33,6 +33,14 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-22"
+ "CURRENT_STATE": "DONE",
+ "assigned_on": "2026-10-22",
+ "TASK_ACK": "2026-10-22 scientist-a",
+ "DEFAULTS_TAKEN": [
+  "re-opened stored artefacts of already-read papers instead of formal rereads; one new formal reading (38509072)",
+  "ClinVar table and RefSeq CDS used as databases",
+  "session-clock dates"
+ ],
+ "STOP_LOG": [],
+ "RESULT": "disease-models/wwox/research/repurposing_10h_scientist-a_20261022c.md; receipt FTR-20261022-38509072-01 staged"
 }
