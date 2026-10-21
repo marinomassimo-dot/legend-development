@@ -160,6 +160,21 @@ snapshot would silently discard whatever a concurrent actor appended while the b
 ABORT leaves their appends standing; that is the lesser loss, and it is stated so nobody
 "completes" the declaration by adding them.
 
+🔴 **The exclusion's premise is "appends", and 2026-10-21 showed a batch that does not append.**
+`BATCH_20261019_010` repaired four detection-rule **citations inside existing records** of
+`discovery_ledger_current.md` and `full_text_queue_current.md` — an in-place rewrite of an
+append-only ledger, which is a legitimate batch act and is not what the paragraph above assumes.
+For that class the reasoning does not reverse (a pre-batch restore would still discard a
+concurrent actor's appends), so **these paths stay out of the declaration**; what changes is that
+the batch owes the case an explicit route instead of improvising one. The route, used and verified
+in that batch: snapshot the specific records by hand before the op, and restore with the
+**base-qualified** form of the fallback below (`git show <PRE_BATCH_COMMIT>:<path>`), never
+`git checkout -- <path>`, which once the propagation is staged or committed restores the batch's
+own output rather than the pre-batch value. Record in
+the batch report which ledger records were rewritten in place and which route was held ready.
+Do not add these paths to the declaration to make the problem go away: an unconditional restore of
+an append-only ledger trades a recoverable loss for a silent one.
+
 Record the snapshot path **and the pre-batch commit SHA** in `legend_activity_log.md`.
 
 🔴 **PRE_BATCH_COMMIT — recorded here because Phase 3 is the only moment it is knowable.**
