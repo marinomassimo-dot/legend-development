@@ -1,0 +1,549 @@
+{
+ "schema_version": 2,
+ "pmid": "42154236",
+ "doi": "10.1007/s00018-026-06139-8",
+ "receipt": "FTR-20261021-42154236-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261021.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access XML, figures, PDF and supplement came from pmc_bucket_fetch.py in one call; no cascade needed."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Mouse genetic loss of Cdk7 in postmitotic cortical glutamatergic neurons (Nex-Cre) plus primary neuron culture; not a pharmacological study of the A51 class. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries_text": [
+   "Cdk7 AND cortical neurons",
+   "Cdk7 AND Wnt5a"
+  ],
+  "note": "Group R3 reading; queries are PubMed counts on 2026-10-21 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "Cdk7 AND cortical neurons",
+    "count": 7,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   },
+   {
+    "query": "Cdk7 AND Wnt5a",
+    "count": 1,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 42154236; registry_records.py get --pmid 42154236 --hops 1",
+  "hits": 0,
+  "finding": "No receipt before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-21; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 82,
+   "references_screened": 80,
+   "references_with_doi": 80,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42154236_Verteneuil2026_PMC_r2.xml",
+   "sha256": "ef97b3c7060c38abda579d7a49037570c338078de8cc4c609599c2c14ba3e41c",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=13350628",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "ef97b3c7060c38abda579d7a49037570c338078de8cc4c609599c2c14ba3e41c"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42154236_r2/PMC13350628.1.pdf",
+   "sha256": "dfeec63961c01605a78a7da8898ece361a5b2010c72e29c14c3093ec3bc9b18b",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "dfeec63961c01605a78a7da8898ece361a5b2010c72e29c14c3093ec3bc9b18b"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42154236_r2/18_2026_6139_MOESM4_ESM.xlsx",
+   "sha256": "23317106b96a7fe6ce29df6ad93d28b52d9716239d04be37e96211e43a189b10",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "23317106b96a7fe6ce29df6ad93d28b52d9716239d04be37e96211e43a189b10"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42154236_r3c/p03_embedded_2056x1724.png",
+   "sha256": "dfc1aeff2b76f7c1a00e441544962dde2952c189d65fcb408e50d3c1b1e20d30",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42154236_r2/PMC13350628.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 3",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "dfc1aeff2b76f7c1a00e441544962dde2952c189d65fcb408e50d3c1b1e20d30"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42154236_r3c/p04_embedded_2056x2224.png",
+   "sha256": "e80df44f9bd533ce563d7c71ee475ea0deecce761e69e773050c485902f61e43",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42154236_r2/PMC13350628.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 4",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "e80df44f9bd533ce563d7c71ee475ea0deecce761e69e773050c485902f61e43"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42154236_r3c/p06_embedded_2056x2069.png",
+   "sha256": "749038ca47f8bcb934dbdd03d85265d19234d8280beb230c1014bda67067b8f0",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42154236_r2/PMC13350628.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 6",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "749038ca47f8bcb934dbdd03d85265d19234d8280beb230c1014bda67067b8f0"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42154236_r3c/p07_embedded_2056x1974.png",
+   "sha256": "8d47a917baab995b220a2b9a0292cd0a53a076c3f4376551c1e43f15ab21ced6",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42154236_r2/PMC13350628.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 7",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "8d47a917baab995b220a2b9a0292cd0a53a076c3f4376551c1e43f15ab21ced6"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42154236_r3c/p08_embedded_2056x2750.png",
+   "sha256": "d30f49626f6d5a32b288b18daf2d577aaa61755ee23c901f692e021aa70eefa9",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42154236_r2/PMC13350628.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 8",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "d30f49626f6d5a32b288b18daf2d577aaa61755ee23c901f692e021aa70eefa9"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID42154236_r3c/p10_embedded_2056x2591.png",
+   "sha256": "ad3d8623a5f1a7a02df086ff50044f07d0ce33e3caed3d5e1f7280f20605e5a4",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42154236_r2/PMC13350628.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 10",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "ad3d8623a5f1a7a02df086ff50044f07d0ce33e3caed3d5e1f7280f20605e5a4"
+   }
+  },
+  {
+   "path": "files/figures/PMID42154236_r2/18_2026_6139_Fig7_ESM.png",
+   "sha256": "406848290295b21e77593ed28779cb6b0f0a49904b8134df9764a3ef7033c3ec",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "406848290295b21e77593ed28779cb6b0f0a49904b8134df9764a3ef7033c3ec"
+   }
+  },
+  {
+   "path": "files/figures/PMID42154236_r2/18_2026_6139_Fig8_ESM.png",
+   "sha256": "6612a07e8cb469a80cf44f4430b1f6557b5c22b74301d72bb19671b4c33cd601",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "6612a07e8cb469a80cf44f4430b1f6557b5c22b74301d72bb19671b4c33cd601"
+   }
+  },
+  {
+   "path": "files/figures/PMID42154236_r2/18_2026_6139_Fig9_ESM.png",
+   "sha256": "55b39e07da34a9dc70bf19a34fc31b7ff7ad409fda1d1d08c575fd3347132211",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "55b39e07da34a9dc70bf19a34fc31b7ff7ad409fda1d1d08c575fd3347132211"
+   }
+  },
+  {
+   "path": "files/figures/PMID42154236_r2/18_2026_6139_Fig10_ESM.png",
+   "sha256": "d94304a6291a7c4c1b4521bbb2a5af6f9c4ed52a5112ff9244e400dd127de4d1",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "d94304a6291a7c4c1b4521bbb2a5af6f9c4ed52a5112ff9244e400dd127de4d1"
+   }
+  },
+  {
+   "path": "files/figures/PMID42154236_r2/18_2026_6139_Fig11_ESM.png",
+   "sha256": "5f612ba5606ce70dfc0e8f61db4c7c14dc2a89fa79c3abf1ab6cbd6179428ce4",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "5f612ba5606ce70dfc0e8f61db4c7c14dc2a89fa79c3abf1ab6cbd6179428ce4"
+   }
+  },
+  {
+   "path": "files/figures/PMID42154236_r2/18_2026_6139_Fig12_ESM.png",
+   "sha256": "4dbce8ddbeea8f0e42d487fbe274743d9dae1c13a76cab3bc1e9f3e25d76dbdb",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "4dbce8ddbeea8f0e42d487fbe274743d9dae1c13a76cab3bc1e9f3e25d76dbdb"
+   }
+  },
+  {
+   "path": "files/figures/PMID42154236_r2/18_2026_6139_Fig13_ESM.png",
+   "sha256": "edb5708dbc24e99749987184568fbcdd5b6099cc54354baa84d113fcc49fe4c9",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "edb5708dbc24e99749987184568fbcdd5b6099cc54354baa84d113fcc49fe4c9"
+   }
+  },
+  {
+   "path": "files/figures/PMID42154236_r2/18_2026_6139_Fig14_ESM.png",
+   "sha256": "faff63e86b23884805baf2e85f84e9d344c2d68eea6ebb05d0ef6ac9fbe4dc74",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "faff63e86b23884805baf2e85f84e9d344c2d68eea6ebb05d0ef6ac9fbe4dc74"
+   }
+  },
+  {
+   "path": "files/figures/PMID42154236_r2/18_2026_6139_Fig15_ESM.png",
+   "sha256": "7649090253ab852b03a6717c51d84ed58e163d712074e053047e2f41ab0956f9",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "7649090253ab852b03a6717c51d84ed58e163d712074e053047e2f41ab0956f9"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Genetic loss of Cdk7 confined to postmitotic cortical glutamatergic neurons (Nex-Cre) reduced brain weight and thinned cortex and corpus callosum at P21.",
+    "snippet": "Besides striking size and weight differences, the thickness of the cortex and the corpus callosum (CC) were significantly reduced in P21 Cdk7-cKO compared to Ctrl brains (Fig. 2a-e).",
+    "anchor": "Results / Cdk7 is required for the morphological maturation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42154236_Verteneuil2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Statistics of the thickness and density measures are one-sided Mann-Whitney tests on three animals per genotype, where P = 0.05 is the smallest value the test can return.",
+    "snippet": "n = 7-8 animals per genotype (b), n = 3 animals per genotype (d, e, g, h, j, k, p)",
+    "anchor": "Fig. 2 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42154236_Verteneuil2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Neuron number and layer markers were unchanged: the thinning is attributed to neurite loss rather than neuron loss.",
+    "snippet": "These data suggest that the cortical thinning observed in Cdk7-cKO brains is not related to defects in migration or survival.",
+    "anchor": "Results / Cdk7 is required for the morphological maturation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42154236_Verteneuil2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Dendritic length and branching fall in layer II/III neurons in vivo; the n is 30 neurons from 3 animals per genotype.",
+    "snippet": "We performed Golgi-Cox impregnation to label dendrites [32] and observed a significant reduction of the total dendritic length and branching in Cdk7-cKO cortical neurons (Fig. 2l-n).",
+    "anchor": "Results / Cdk7 is required for the morphological maturation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42154236_Verteneuil2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Behaviour: only social measures differ; marble burying, T-maze, open field and novel-object tests are reported as non-different, with 5-7 animals per group in the object test.",
+    "snippet": "Altogether, Cdk7-deficient mice exhibited normal locomotor activity and memory function, lacked repetitive behaviors but exhibited atypical social behaviors, including limited social olfaction and a lack of sociability.",
+    "anchor": "Results / Cdk7-deficient mice exhibit social deficits",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42154236_Verteneuil2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Only 4 of the 7 Wnt5a-pathway genes tested by RT-qPCR reach P below 0.05 (one-sided tests, no multiplicity correction); Wnt5a itself is reported with P = 0.0601.",
+    "snippet": "Out of the 7 dysregulated genes tested, 5 showed consistent downregulation by RT-qPCR, including 4 that reached statistical significance",
+    "anchor": "Results / Cdk7 loss partially alters Wnt5a signaling",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42154236_Verteneuil2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The pharmacological arm: the CDK7 inhibitor YKL-5-124 is said to cause a rapid and important decrease of Wnt5a transcript, supported by a supplementary panel.",
+    "snippet": "We treated cortical neurons at DIV5 with YKL-5–124, a specific Cdk7 inhibitor [13], and observed a rapid and important decrease of Wnt5a transcript, suggesting that Cdk7 may directly controls its expression (Supplementary Fig. 8).",
+    "anchor": "Results / Cdk7 loss partially alters Wnt5a signaling",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42154236_Verteneuil2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The supplementary legend for the YKL-5-124 panel states one or two technical replicates per condition from two dams, with SD bars.",
+    "snippet": "n = 1-2 technical replicate(s) per condition from two biologically independent dams.",
+    "anchor": "Supplementary Fig. 9 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42154236_Verteneuil2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Wnt5a rescue: 100 ng/mL raised total neurite length by 52.4 percent in Cdk7-KO neurons and 50 ng/mL did not (two doses; one effective).",
+    "snippet": "We observed an increase of 52.4% in total neuritic length in Cdk7-KO neurons treated with Wnt5a at 100 ng/mL (Fig. 6b, c). Of note, the rescue was only partial.",
+    "anchor": "Results / Cdk7 loss partially alters Wnt5a signaling",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42154236_Verteneuil2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Dunn comparison for the 50 ng/mL arm against vehicle is not significant (P above 0.9999), so a dose threshold cannot be located from two doses.",
+    "snippet": "PCre−GFP + Vehicle vs. Cre−GFP + Wnt5a 50 ng/mL > 0.9999",
+    "anchor": "Fig. 6 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42154236_Verteneuil2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors frame the Wnt5a pathway as a new therapeutic target for neuritogenesis disorders; this is a discussion statement, not a tested intervention in vivo.",
+    "snippet": "This pathway may thus constitute a new therapeutic target for patients suffering from neurodevelopmental disorders associated with altered neuritogenesis.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42154236_Verteneuil2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the canonical/non-canonical Wnt distinction: canonical signalling sets progenitor pools and layer identity, Wnt5a acts on postmitotic morphology.",
+    "snippet": "On the other hand, non-canonical Wnt signaling (PCP & Wnt/Calcium Pathways) controls neuronal morphogenesis and maturation through ligands such as Wnt5a and Wnt7a",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42154236_Verteneuil2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Cdk7 and cyclin H Western blots rest on a single sample per age and genotype.",
+    "snippet": "Cdk7 and cyclin H western Blot experiments were carried out on one sample per age and per genotype.",
+    "anchor": "Methods / Protein extraction and Western blots",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42154236_Verteneuil2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No change in RNA polymerase II Ser5 phosphorylation was seen in Cdk7-cKO brains (data not shown), attributed to compensation.",
+    "snippet": "Accordingly, we could not detect in Cdk7-cKO brains any change in the phosphorylation level of Ser5 residues of the CTD, the main residues by which Cdk7 is thought to activate transcription (data not shown).",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42154236_Verteneuil2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 6c (300 ppi): vehicle-treated Cre-GFP neurons have a median total neurite length of about 75 micrometres, 100 ng/mL Wnt5a about 120, 50 ng/mL about the vehicle value, and GFP control about 220; the rescue reaches roughly half of control.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Cre-GFP + Vehicle median ~75; Wnt5a 100 ~120; GFP + Vehicle ~220 micrometres",
+    "anchor": "Figure 6c, embedded raster p.10",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42154236_r3c/p10_embedded_2056x2591.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 5g (300 ppi): Wnt5a n = 7-8 per genotype, control mean 1.0 versus cKO about 0.72, P 0.0601; Plcb4 unchanged; Fzd10 P 0.197; Plcb3, Nfatc1, Plce1, Prkcd P between 0.0145 and 0.0472.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Wnt5a panel P = 0.0601; Plcb4 P = 0.4556; Fzd10 P = 0.1972",
+    "anchor": "Figure 5g, embedded raster p.8",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42154236_r3c/p08_embedded_2056x2750.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[5]",
+    "qualifies_needle": "Out of the 7 dysregulated genes tested, 5 sho"
+   },
+   {
+    "proposition": "Fig 5b-f: 976 differentially expressed genes at FDR below 0.1, 862 down and 114 up; RNA-seq n = 5 animals per genotype.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] 976 DEGs; 114 (11.7%) upregulated; 862 (88.3%) downregulated",
+    "anchor": "Figure 5b-c, embedded raster p.8",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42154236_r3c/p08_embedded_2056x2750.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Fig. 9 (ESM Fig9, 902x460): Wnt5a relative expression after YKL-5-124 at 10, 50 and 100 nM; vehicle rises from 1.0 at 2 h to about 1.46 at 4 h and falls to about 0.56 at 24 h; at 24 h the 100 nM bar (about 0.77) sits above vehicle; one or two dots per bar, SD bars, no test.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] 4h vehicle ~1.46; 4h YKL 100 nM ~0.63; 24h vehicle ~0.56; 24h YKL 100 nM ~0.77",
+    "anchor": "Supplementary Fig. 9, ESM PNG",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42154236_r2/18_2026_6139_Fig9_ESM.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[6]",
+    "qualifies_needle": "We treated cortical neurons at DIV5 with YKL-"
+   },
+   {
+    "proposition": "Fig 4 (300 ppi): marble burying and T-maze ns; olfactory task shows lower sniffing for urine G3 and G4 only (** and *); three-chamber interactions about 45 versus 25 and time about 125 versus 52 seconds, n = 11-12.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 4 h interactions ** ; i time ****; f G3 ** G4 *",
+    "anchor": "Figure 4, embedded raster p.7",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42154236_r3c/p07_embedded_2056x1974.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 2 (300 ppi): brain weight about 420 versus 345 mg; cortical thickness about 1350 versus 1130 micrometres and corpus callosum about 230 versus 172 with three animals per group, * only; NeuN density up; Sholl curves lower.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] b brain weight *** ; d cortical thickness * ; e corpus callosum * ; h NeuN density *",
+    "anchor": "Figure 2, embedded raster p.4",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42154236_r3c/p04_embedded_2056x2224.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 3 (300 ppi): nucleofected Cre-GFP neurons lose Cdk7 signal and show shorter neurites at DIV5 (about 300 versus 620 micrometres; n = 11 and 15 neurons from two cultures).",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] c Total neuritic length GFP ~620 vs Cre-GFP ~300; *** ",
+    "anchor": "Figure 3, embedded raster p.6",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42154236_r3c/p06_embedded_2056x2069.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 1 (300 ppi): Cdk7 protein in cKO cortex falls progressively (relative about 0.85 at E15.5, 0.5 at P0, 0.3 at P7, 0.6 at P30; one sample per age) and is lost from NeuN-positive nuclei at P21 by immunostaining.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] c relative expression Cdk7-cKO E15.5 0.85 P0 0.48 P7 0.30 P30 0.6",
+    "anchor": "Figure 1, embedded raster p.3",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID42154236_r3c/p03_embedded_2056x1724.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Figs 7, 8, 10-15 (ESM PNG files): marker qPCR of sorted neurons; IPA axonal-guidance diagram; Cdk7 depletion in culture (shown twice, ESM Fig10 and Fig14); cyclin H blot and staining; cortical thickness at P0, P3, P7 (n = 3 per genotype, P7 only); DAPI and layer counts; open field and novel-object data with 5-7 animals per group.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] ESM Fig12 P7 cortical thickness * with three animals; ESM Fig15 n = 5-7 for novel object recognition",
+    "anchor": "Supplementary figures ESM Fig7-15",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42154236_r2/18_2026_6139_Fig12_ESM.png",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch XML, PMC PDF, ESM figures and IPA table fingerprinted; main figures 1-6 extracted at 300 ppi raster, ESM figures 7-15 opened at their native PNG.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}
