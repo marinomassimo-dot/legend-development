@@ -1,0 +1,376 @@
+{
+ "schema_version": 2,
+ "pmid": "40871085",
+ "doi": "10.3390/pharmaceutics17081065",
+ "receipt": "FTR-20261021-40871085-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261021.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access XML, figures, PDF and supplement came from pmc_bucket_fetch.py in one call; no cascade needed."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "computational",
+  "is_primary_group_for_disease": false,
+  "weighting": "Population pharmacokinetic modelling of a GSK3 inhibitor from healthy elderly adults and 16 adolescents and adults with myotonic dystrophy; the paediatric content is a simulation, not a measurement. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "queries_text": [
+   "tideglusib",
+   "tideglusib AND children"
+  ],
+  "note": "Group R3 reading; queries are PubMed counts on 2026-10-21 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "tideglusib",
+    "count": 166,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   },
+   {
+    "query": "tideglusib AND children",
+    "count": 12,
+    "source": "PubMed ESearch 2026-10-21 (title/abstract not restricted)"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 40871085; registry_records.py get --pmid 40871085 --hops 1",
+  "hits": 0,
+  "finding": "No receipt before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-21; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 34,
+   "references_screened": 32,
+   "references_with_doi": 32,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40871085_DiDeo2025_PMC_r2.xml",
+   "sha256": "ff5454ae87e3ec3e75b8fb1c2ada078cc123aa560b80bae8bdabef3c0c69e10e",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=12389255",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "ff5454ae87e3ec3e75b8fb1c2ada078cc123aa560b80bae8bdabef3c0c69e10e"
+   }
+  },
+  {
+   "path": "files/supplement/PMID40871085_r2/PMC12389255.1.pdf",
+   "sha256": "7160c7d0c1b2b4911b9f53ee83376c06be35ac4cde78464c4de14d021121474c",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "7160c7d0c1b2b4911b9f53ee83376c06be35ac4cde78464c4de14d021121474c"
+   }
+  },
+  {
+   "path": "files/supplement/PMID40871085_r2/pharmaceutics-17-01065-s001.zip",
+   "sha256": "92d4bf1f1f216e8ea82ad61d76e60bfd3ec74f871dfc57f387a6ccd27f1c1ebd",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "92d4bf1f1f216e8ea82ad61d76e60bfd3ec74f871dfc57f387a6ccd27f1c1ebd"
+   }
+  },
+  {
+   "path": "files/supplement/PMID40871085_r2/s001/pharmaceutics-3503192-supplementary.pdf",
+   "sha256": "d4f98678f32fcc536f2d7a96ef3a8af32e0958bb3d001e1af37af5ef994ceb9f",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40871085_r2/pharmaceutics-17-01065-s001.zip",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "3.12",
+     "call": "zipfile extract of pharmaceutics-3503192-supplementary.pdf",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "d4f98678f32fcc536f2d7a96ef3a8af32e0958bb3d001e1af37af5ef994ceb9f"
+   }
+  },
+  {
+   "path": "files/supplement/PMID40871085_r2/s001/supp.txt",
+   "sha256": "79c552e7e6143d771b637a530e67bca86dd4dfef1deebfa05613e74375a02a4e",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40871085_r2/s001/pharmaceutics-3503192-supplementary.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -nopgbrk <pdf> <txt> (reading-order mode)",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "79c552e7e6143d771b637a530e67bca86dd4dfef1deebfa05613e74375a02a4e"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID40871085_r3c/p13_embedded_1955x1608.png",
+   "sha256": "e4c4ae14441081d8535b31158d81522e7f13a797e3786276d415f70da7834583",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40871085_r2/PMC12389255.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref) of the embedded image on page 13",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "e4c4ae14441081d8535b31158d81522e7f13a797e3786276d415f70da7834583"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID40871085_r3c/p12_160dpi.png",
+   "sha256": "cb25ed77fbd35b782b719c2d40660b3e722784c6bd018c8b8848de569a47f6c3",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40871085_r2/PMC12389255.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=160), page 12",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "cb25ed77fbd35b782b719c2d40660b3e722784c6bd018c8b8848de569a47f6c3"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID40871085_r3c/p13_160dpi.png",
+   "sha256": "807a9ef39b1d52e83c80a8bf7b159cd2c1ae2d26a5dcdbb45783152ccc537d43",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40871085_r2/PMC12389255.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=160), page 13",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "807a9ef39b1d52e83c80a8bf7b159cd2c1ae2d26a5dcdbb45783152ccc537d43"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID40871085_r3c/p14_160dpi.png",
+   "sha256": "95245a93652b41dcce178238575e2f73b367be945d06cf8f20bcdc63167d5c2c",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40871085_r2/PMC12389255.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=160), page 14",
+     "join": ""
+    },
+    "acquired_on": "2026-10-21",
+    "result_sha256": "95245a93652b41dcce178238575e2f73b367be945d06cf8f20bcdc63167d5c2c"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "No child was measured: the DM-1 patients were 13.8 to 34.9 years (mean 20.9), 16 in total; the healthy volunteers were aged 60 to 74.",
+    "snippet": "The age of patients included in the analysis ranged from 13.8 to 34.9 years [mean: 20.9, s.d. = 5.9 years]",
+    "anchor": "Results / Data and Demographic Characteristics",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40871085_DiDeo2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Tideglusib was given as 400 or 1000 mg once daily in the DM-1 phase II study for 12 weeks (two dose points, 8 patients each).",
+    "snippet": "Subjects were assigned to either 400 mg or 1000 mg q.d. doses of tideglusib according to a 1:1 ratio.",
+    "anchor": "Methods / Phase II Study",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40871085_DiDeo2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PK evidence: the model says bioavailability is dose-dependent but with a two-level step (400 mg versus higher), not a continuous curve.",
+    "snippet": "Instead, bioavailability and absorption rate constant were dichotomized into two levels, with exposure data following a 400 mg dose as reference.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40871085_DiDeo2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Abstract and Conclusions call the dependence \"dose-dependent bioavailability\" and a less-than-proportional rise in exposure; the model parameterises that with two levels fitted to 6 healthy-adult dose groups and 2 patient dose levels, so no threshold or gradation is located.",
+    "snippet": "Our parameterisation suggests that oral bioavailability decreases with increasing doses, even though we have not been able to quantify these changes in a continuous manner.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40871085_DiDeo2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Body weight as a covariate: the text claims higher exposure at lower weight in both populations.",
+    "snippet": "Despite the relatively large interindividual variability, it seems that higher exposure is expected to occur in subjects with lower body weight (Figure 5).",
+    "anchor": "Results / Influence of Body Weight",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40871085_DiDeo2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Pharmacokinetic extrapolation to children assumes the adult 1000 mg exposure is the efficacy target and that PK-PD is the same in children.",
+    "snippet": "assuming that the exposures observed in adults and adolescents following 1000 mg q.d. dose are clinically relevant and can be considered as a target for efficacy",
+    "anchor": "Results / Dose Rationale",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40871085_DiDeo2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Paediatric clearance maturation is not modelled: the authors state no maturation function and no age-dependent exponent were included, and the primary metabolic route in vivo is incompletely known.",
+    "snippet": "neither a maturation function nor an age-dependent allometric exponent were included in the simulated scenarios",
+    "anchor": "Discussion / limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40871085_DiDeo2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The model scales on weight only (5 to 75 kg uniform virtual population of 71 per band), so an infant of 5 kg is predicted on allometry alone.",
+    "snippet": "Scenarios consisted of a virtual population of 71 patients per weight band, and dose level, considering a uniform distribution of weight ranging from 5 to 75 kg.",
+    "anchor": "Methods / Effect of Body Weight",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40871085_DiDeo2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No safety or tolerability result of tideglusib in any child is reported; the tolerability reference for the lower-dose scenario is an adult 400 mg value, said to address tolerability concerns in the youngest.",
+    "snippet": "For completeness, to address potential tolerability concerns in the youngest subjects, a weight-banded regimen has been explored considering the 400 mg as the reference dose in adults (Table S4).",
+    "anchor": "Results / Dose Rationale",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40871085_DiDeo2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Liver signals: transaminase elevations were seen with earlier formulations given with food, twice daily and at highest doses; the authors reason this may reflect GSK3 inhibition and liver repair, which is interpretation.",
+    "snippet": "Abnormalities in serum transaminases have been observed, particularly in a twice-daily dosing regimens, when the drug was administered with food and at the highest doses.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40871085_DiDeo2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Food: the text finds no effect of food or meal type with 30 records spread over meal categories of 1 to 3 patients each.",
+    "snippet": "There was no evidence of an effect of food or meal type on the predicted exposure to tideglusib.",
+    "anchor": "Results / Influence of Type and Time of Food Intake",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40871085_DiDeo2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Sponsor interest: three authors are employees of the sponsor and the sponsor funded two authors.",
+    "snippet": "Joseph Horrigan, Alison McMorn, and Stuart Evans are all employees for AMO Pharma, who were the Sponsors of this clinical trial.",
+    "anchor": "Declarations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40871085_DiDeo2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplement Table S4 proposes a lower weight-banded titration (100 mg below 20 kg, 200 mg to 45 kg, 400 mg above); simulation outputs list the share above the adult 95th percentile (0.00 to 2.04 percent). A recorded observation of a simulation, not a dose.",
+    "snippet": "Proposed lower weight-banded dosing regimen for tideglusib in paediatric and adult patients with DM-1",
+    "anchor": "Supplementary Table S4",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID40871085_r2/s001/supp.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig 5 (360 ppi raster): at 400 mg (left) AUC and Cmax are flat against body weight with a near-zero slope (DM-1 n = 8, healthy n = 9), while at 1000 mg (right) the dashed trend slopes down (AUC about 3600 at 45 kg to about 1100 at 120 kg) resting on eight DM-1 points whose spread (1600 to 5700 at 45-75 kg) exceeds the trend; the two highest points (about 6100 healthy, 5700 patient) are at 60 and 75 kg. So the weight relation is visible at the higher dose only.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] 400 mg trend ~flat; 1000 mg trend slopes from ~3600 to ~1100; 8 blue points",
+    "anchor": "Figure 5, embedded raster p.13",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID40871085_r3c/p13_embedded_1955x1608.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[4]",
+    "qualifies_needle": "Despite the relatively large interindividual "
+   },
+   {
+    "proposition": "Fig 6 (160 dpi page 14): simulated AUC and Cmax for weight bands 5 to 70 kg; the 5th-95th whiskers of the 100 mg band at 5-10 kg and the 200 mg band reach about 2000 ng/mL for Cmax; medians fall inside the adult reference band in most bands and below it for the smallest 100 mg weights; plotted points are simulation, not observation.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Cmax medians ~600 to 1100; whiskers to ~2300 at 20 kg",
+    "anchor": "Figure 6, page 14 at 160 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID40871085_r3c/p14_160dpi.png",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[5]",
+    "qualifies_needle": "assuming that the exposures observed in adult"
+   },
+   {
+    "proposition": "Fig 4 (160 dpi page 12): predicted AUC and Cmax by time of first meal, 400 and 1000 mg, below and above 60 kg; three meal types with 1-3 subjects per cell; the 1000 mg <60 kg cell sits at about 3400-4500 AUC and the >=60 kg cell near 1700 except one at about 5700, so weight and dose differences are larger than any meal-type difference visible.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] AUC 1000 mg <60 kg ~3400-4500; >=60 kg ~1700 with one ~5700",
+    "anchor": "Figure 4, page 12 at 160 dpi",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID40871085_r3c/p12_160dpi.png",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch XML, PMC PDF and the supplement PDF (extracted from the zip) fingerprinted; Figures 4-6 inspected as page renders at 160 dpi and Figure 5 as the 360 ppi embedded raster; Figures 1-3 (model structure, VPC) read as captions only.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}
