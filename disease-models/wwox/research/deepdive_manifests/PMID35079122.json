@@ -2,8 +2,9 @@
  "schema_version": 2,
  "pmid": "35079122",
  "doi": "10.1038/s41380-021-01425-2",
- "receipt": "FTR-20261021-35079122-01",
+ "receipt": "FTR-20261022-35079122-02",
  "landing": [
+  "FTR-20261022-35079122-02",
   "FTR-20261021-35079122-01",
   "repurposing_10h_scientist-b_20261021"
  ],
@@ -139,6 +140,51 @@
     "derived": false,
     "result_sha256": "5f3521859d82f1b3c33c5d4bdaf4c4acddd371b9f6bad1b40efd9f4fc677e18d"
    }
+  },
+  {
+   "path": "files/figures/PMID35079122_r2/41380_2021_1425_Fig2_HTML.jpg",
+   "sha256": "f50e92b08fe14966de12a4c76190c9a65bd83572ed003af5a00f4c5d3645d64a",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC9126813",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "f50e92b08fe14966de12a4c76190c9a65bd83572ed003af5a00f4c5d3645d64a"
+   },
+   "note": "Figure raster (JPEG, 120 to 150 ppi, the Springer html image) opened as an image; the PDF holds 300 ppi embedded rasters of the same figures (not used)."
+  },
+  {
+   "path": "files/figures/PMID35079122_r2/41380_2021_1425_Fig3_HTML.jpg",
+   "sha256": "59471be4908fd447a7c9c8bbcc037be5426910a709a55b93c7e124af3034c537",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC9126813",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "59471be4908fd447a7c9c8bbcc037be5426910a709a55b93c7e124af3034c537"
+   },
+   "note": "Figure raster (JPEG, 120 to 150 ppi, the Springer html image) opened as an image; the PDF holds 300 ppi embedded rasters of the same figures (not used)."
+  },
+  {
+   "path": "files/figures/PMID35079122_r2/41380_2021_1425_Fig4_HTML.jpg",
+   "sha256": "76c03d2a987b4752edfecafcc81d0775be80f9e245fa827225ec8537491c76c2",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC9126813",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "76c03d2a987b4752edfecafcc81d0775be80f9e245fa827225ec8537491c76c2"
+   },
+   "note": "Figure raster (JPEG, 120 to 150 ppi, the Springer html image) opened as an image; the PDF holds 300 ppi embedded rasters of the same figures (not used)."
   }
  ],
  "verbatim_locators": {
@@ -148,20 +194,44 @@
   "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet below sits in the body, a figure legend or a figure image.",
   "entries": [
    {
-    "proposition": "Direction opposite to the Cntnap2 null: in adult glutathione-deficient (Gclm knockout) mice the reticular-nucleus neurons have lower T-type current density, weaker rebound bursting and a more negative potential needed for burst firing; the proportion of neurons bursting at rest was 25 percent (3 of 12) versus 71 percent in wild type (Fisher p = 0.02).",
+    "proposition": "The authors report a lower proportion of reticular neurons bursting at resting membrane potential in the knockout than in wild type (25.0 percent, 3 of 12, against 71.4 percent, 10 of 13; Fisher exact test p = 0.02).",
     "snippet": "We found a lower proportion of neurons displaying bursting behavior at resting membrane potential (RMP) in KO (25.0%, 3/12) compared to WT mice (71.4%, 10/13, Fisher exact test, p = 0.02)",
     "surface": "body",
     "anchor": "Results, Altered bursting profile of TRN neurons in adult Gclm-KO mice",
     "artifact": "files/fulltext/PMID35079122_Cabungcal2022_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35079122.json",
+     "entry": 0,
+     "what_changed": "2026-10-22 advisory strength scan: the proposition carried wording or claims the quote does not contain; narrowed to the quote (the dropped inference is in the note, not this locator). Prior wording began: Direction opposite to the Cntnap2 null: in adult glutathione-deficient (Gclm kno",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "ADVISORY_STRENGTH_SCAN"
+      ],
+      "method": "locator_audit.py --strength-scan (advisory), run 2026-10-22; no blind audit; the narrowing only brings the proposition inside its quote"
+     }
+    }
    },
    {
-    "proposition": "Age dependence within one model: the T-type and SK current densities of knockout reticular neurons did not differ from wild type at postnatal days 20 to 30, and hypofunction emerged in adulthood (days 60 to 75); an additional early-life oxidative challenge (days 10 to 20) precipitated the hypofunction in peripubertal knockout mice and in wild-type mice with transient glutathione deficit; an antioxidant treatment prevented it.",
+    "proposition": "The authors write that hypofunction of the T-type channels in the reticular nucleus of the knockout mice emerges later, during late adolescence or early adulthood.",
     "snippet": "Thus, hypofunction of T-Ca2+ channels in TRN of Gclm-KO mice emerges later during late adolescence/early adulthood.",
     "surface": "body",
     "anchor": "Results, Normal T-Ca2+ and SK currents in peripubertal Gclm-KO mice",
     "artifact": "files/fulltext/PMID35079122_Cabungcal2022_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35079122.json",
+     "entry": 1,
+     "what_changed": "2026-10-22 advisory strength scan: the proposition carried wording or claims the quote does not contain; narrowed to the quote (the dropped inference is in the note, not this locator). Prior wording began: Age dependence within one model: the T-type and SK current densities of knockout",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "ADVISORY_STRENGTH_SCAN"
+      ],
+      "method": "locator_audit.py --strength-scan (advisory), run 2026-10-22; no blind audit; the narrowing only brings the proposition inside its quote"
+     }
+    }
    },
    {
     "proposition": "A redox mechanism the authors propose: Cav3.2 current is redox sensitive (oxidising agents decrease and reducing agents increase it) and reduced Cav3.3 expression was found in adult knockout reticular nucleus; the hypofunction is attributed to oxidative stress, with the authors noting the mechanism warrants further investigation.",
@@ -172,11 +242,71 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Two different non-channel lesions move the same neurons' T-type current in opposite directions (Cntnap2 null: increased, section 8; glutathione deficiency and the MAM model: decreased), and a decrease can be age-gated. Direction cannot be inferred from the fact that a non-channel gene is lost.",
+    "proposition": "The authors write that the finding of a decrease of T-type currents with oxidative stress in the reticular neurons of the MAM mice, as in the treated knockout mice, further supports that oxidative stress causes hypofunction of T-type channels.",
     "snippet": "The finding that OxS is accompanied with a decrease of T-Ca2+ currents in TRN neurons of MAM mice, similarly to GBR-treated Gclm-KO mice, further supports that OxS causes hypofunction of T-Ca2+ channels.",
     "surface": "body",
     "anchor": "Results, OxS reduced T-Ca2+ and SK current densities in TRN neurons of MAM mice",
     "artifact": "files/fulltext/PMID35079122_Cabungcal2022_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35079122.json",
+     "entry": 3,
+     "what_changed": "2026-10-22 advisory strength scan: the proposition carried wording or claims the quote does not contain; narrowed to the quote (the dropped inference is in the note, not this locator). Prior wording began: Two different non-channel lesions move the same neurons' T-type current in oppos",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "ADVISORY_STRENGTH_SCAN"
+      ],
+      "method": "locator_audit.py --strength-scan (advisory), run 2026-10-22; no blind audit; the narrowing only brings the proposition inside its quote"
+     }
+    }
+   },
+   {
+    "proposition": "A figure legend title states that an additional oxidative challenge during early life is required to precipitate hypofunction of the T-type channels in reticular neurons of young mice.",
+    "snippet": "An additional oxidative challenge during early-life is required to precipitate hypofunction of T-Ca2+ channels in TRN neurons of young (PND20-30) mice.",
+    "surface": "body",
+    "anchor": "Figure 2 legend title",
+    "artifact": "files/fulltext/PMID35079122_Cabungcal2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A figure legend title states that treatment with the antioxidant N-acetyl-L-cysteine prevents oxidative stress and the T-type channel hypofunction in young treated knockout mice.",
+    "snippet": "N-acetyl-L-cysteine (NAC) treatment prevents oxidative stress and hypofunction of T-Ca2+ channels in TRN neurons of young GBR-treated Gclm-KO mice.",
+    "surface": "body",
+    "anchor": "Figure 3 legend title",
+    "artifact": "files/fulltext/PMID35079122_Cabungcal2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A figure legend title states that oxidative stress and T-type channel hypofunction are concomitantly present in the reticular nucleus of a neurodevelopmental mouse model relevant to psychosis.",
+    "snippet": "Concomitant presence of oxidative stress and hypofunction of T-Ca2+ channels in TRN of a neurodevelopmental mouse model relevant to psychosis (MAM mice).",
+    "surface": "body",
+    "anchor": "Figure 4 legend title",
+    "artifact": "files/fulltext/PMID35079122_Cabungcal2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2 read as an image: in young mice the T-type current density in reticular neurons is about minus 7 pA/pF for wild type and for untreated knockout and about minus 3.5 for the knockout with the early-life oxidative challenge and for wild type given the glutathione inhibitor plus the challenge (stars); the current at resting potential and the burst thresholds do not differ; the SK current follows the T-type current in all groups (proportional plot, panel E).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2D, F: T-Ca current wild type about -7, KO about -7, KO+GBR about -3.5, WT+BSO+GBR about -3.7 pA/pF (stars); thresholds ns; SK follows T-Ca.",
+    "surface": "figure",
+    "anchor": "Figure 2 panels A-F (JPEG raster)",
+    "artifact": "files/figures/PMID35079122_r2/41380_2021_1425_Fig2_HTML.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3 read as an image: after antioxidant treatment the oxidative-damage marker falls (about 3.8 against 0.4 arbitrary units; three stars), the parvalbumin cell count recovers (about 300 to about 470), and the T-type current density returns to about minus 7 pA/pF, with a larger current at resting potential than wild type (about minus 6 against minus 3 pA/pF; two stars); adding glutathione acutely raises the T-type current in the challenged knockout cells (stars at minus 50 to minus 70 mV).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3B-M: 8-oxo-dG about 3.8 (KO GBR) vs 0.4 (NAC) a.u. (***); PV count about 300 -> 470; T-Ca about -3.5 -> -7 pA/pF; RMP current about -6 vs -3 (**); GSH raises T-Ca in KO GBR cells (*).",
+    "surface": "figure",
+    "anchor": "Figure 3 panels B-M (JPEG raster)",
+    "artifact": "files/figures/PMID35079122_r2/41380_2021_1425_Fig3_HTML.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 4 read as an image (MAM model): the oxidative-damage marker is higher (about 1.7 against 0.6 arbitrary units; three stars), parvalbumin and PNN-positive cell counts are lower (about 350 against 500 and 225 against 370; three stars), the T-type current density is about minus 3 against minus 7 pA/pF (two stars) and the SK current is lower; burst thresholds do not differ.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4B-I: 8-oxo-dG about 1.7 vs 0.6 (***); PV about 350 vs 500, PNN+PV about 225 vs 370 (***); T-Ca about -3 vs -7 pA/pF (**); thresholds ns.",
+    "surface": "figure",
+    "anchor": "Figure 4 panels B-I (JPEG raster)",
+    "artifact": "files/figures/PMID35079122_r2/41380_2021_1425_Fig4_HTML.jpg",
     "panel_text_relation": "text_only"
    }
   ],

@@ -1,0 +1,76 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Part of the ten-hour repurposing batch ORCH-REPURPOSING-10H-20261021. Adjacent and transferable literature: every paper that is not WWOX evidence is labelled NOT WWOX EVIDENCE, at class level, no dose, no paediatric suitability presumed, not medical advice.",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-b",
+ "PRIORITY": "HIGH",
+ "DEPENDENCIES": [],
+ "REVIEW_REQUIREMENT": "Mirror ex post",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently",
+ "MILESTONE_PLAN": [
+  "TASK_ACK/CLAIM",
+  "per-paper M0-M5",
+  "analysis note",
+  "self-eval",
+  "report"
+ ],
+ "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
+ "TASK_ID": "REPURP-10H-R2E-B-20261022",
+ "OBJECTIVE": "Complete about eight of the 12 remaining owed first-relay R2 receipts, ordered by relevance to DL-MECH-170/171/172; every image read must return an image or the value is not written.",
+ "SCOPE": {
+  "inputs": [
+   "owed_sections.py",
+   "paper_packet.py rank",
+   "page_adjudications/locator_audit_R1c_R2c_20261022.md"
+  ],
+  "outputs": "completing staged receipts FTR-20261022-<PMID>-02, manifests, note repurposing_10h_scientist-b_20261022e.md",
+  "forbidden": "repurposing_bridge.py, cards/, cards_early/, roadmap copies, the four current files"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "completing receipts staged, not recorded",
+  "strength scan before commit",
+  "no figure value from a non-image read"
+ ],
+ "assigned_on": "2026-10-22",
+ "TASK_ACK": {
+  "by": "scientist-b",
+  "on": "2026-10-22"
+ },
+ "TASK_CLAIM": {
+  "by": "scientist-b",
+  "branch": "task/repurp-10h-r2e-b",
+  "worktree": ".claude/worktrees/r2e-b",
+  "on": "2026-10-22"
+ },
+ "DEFAULTS_TAKEN": [
+  "seven completions: 37082241, 32878331, 33704440, 40825030, 35079122, 35184274, 40068874",
+  "five first-relay receipts left owed: 24002024, 26419537, 31781019, 36282524, 41137852",
+  "every image read returned an image; none UNVERIFIED",
+  "strength-scan narrowings with contradicts_locator on 37082241 #2,#3; 33704440 #2; 35079122 #0,#1,#3; 35184274 #4; 40068874 #2",
+  "no ledger or registry writes beyond this task record"
+ ],
+ "STOP_LOG": [],
+ "CURRENT_STATE": "DONE_PENDING_LANDING",
+ "RESULT": {
+  "completed": [
+   "37082241",
+   "32878331",
+   "33704440",
+   "40825030",
+   "35079122",
+   "35184274",
+   "40068874"
+  ],
+  "owed": [
+   "24002024",
+   "26419537",
+   "31781019",
+   "36282524",
+   "41137852"
+  ],
+  "note": "disease-models/wwox/research/repurposing_10h_scientist-b_20261022f.md"
+ }
+}

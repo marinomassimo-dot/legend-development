@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-22T00:00:00Z",
+ "event_at": "2026-10-22T04:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "captions_only"
+ },
+ "event_id": "FTR-20261022-40825030-02",
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "Completing pass (owed: figures captions_only). Figures 2, 3 and 6 opened as images (embedded rasters from the PDF; each read returned an image); Figures 1, 4, 5, 7 and 8 were read as legends only in this pass (the Figure 4 to 5 values are given by the supplementary pooled-wild-type table, not quoted here); the three supplementary Excel tables and S1 Fig are listed in the article and were not read as locators: supplementary = captions_only."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID40825030.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-b_20261022f.md"
+ ],
+ "prior_receipt": "FTR-20261021-40825030-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "2feb094be950aec1d186378c8f334b9e50d916a78aaaa9dd76a30fd729eed9b1",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID40825030_ElGhaleb2025_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1371/journal.pgen.1011828",
+  "pmid": "40825030"
+ },
+ "workflow": "scientist-b repurposing batch R2e completing pass 2026-10-22; SOURCE_FIRST for the owed sections; NOT WWOX EVIDENCE; prepared as JSON for the integrator and staged, not appended."
+}

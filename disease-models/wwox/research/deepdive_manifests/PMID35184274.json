@@ -2,8 +2,9 @@
  "schema_version": 2,
  "pmid": "35184274",
  "doi": "10.1111/epi.17201",
- "receipt": "FTR-20261021-35184274-01",
+ "receipt": "FTR-20261022-35184274-02",
  "landing": [
+  "FTR-20261022-35184274-02",
   "FTR-20261021-35184274-01",
   "repurposing_10h_scientist-b_20261021"
  ],
@@ -186,6 +187,66 @@
      "join": ""
     }
    }
+  },
+  {
+   "path": "files/figures/PMID35184274_r2/EPI-63-1200-g001.jpg",
+   "sha256": "2bc497392af57fe4f64b25c5c864b6cecdfb00c782d8da267223a01f809f96e1",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC9314114",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "2bc497392af57fe4f64b25c5c864b6cecdfb00c782d8da267223a01f809f96e1"
+   },
+   "note": "Figure raster (JPEG, about 100 ppi, the Wiley html image; file numbers differ from figure numbers) opened as an image. The PDF holds 450 to 480 ppi rasters of the same figures (not used for these values)."
+  },
+  {
+   "path": "files/figures/PMID35184274_r2/EPI-63-1200-g002.jpg",
+   "sha256": "8273dcd6d86d2b5bbb9c345363b25e9246b25f9f6905ca635ef9b16d2e04ac20",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC9314114",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "8273dcd6d86d2b5bbb9c345363b25e9246b25f9f6905ca635ef9b16d2e04ac20"
+   },
+   "note": "Figure raster (JPEG, about 100 ppi, the Wiley html image; file numbers differ from figure numbers) opened as an image. The PDF holds 450 to 480 ppi rasters of the same figures (not used for these values)."
+  },
+  {
+   "path": "files/figures/PMID35184274_r2/EPI-63-1200-g003.jpg",
+   "sha256": "b9a37a79682896823ea21ca3de0bb138341fa4007eae7e9427ec279b1780c8a1",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC9314114",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "b9a37a79682896823ea21ca3de0bb138341fa4007eae7e9427ec279b1780c8a1"
+   },
+   "note": "Figure raster (JPEG, about 100 ppi, the Wiley html image; file numbers differ from figure numbers) opened as an image. The PDF holds 450 to 480 ppi rasters of the same figures (not used for these values)."
+  },
+  {
+   "path": "files/figures/PMID35184274_r2/EPI-63-1200-g004.jpg",
+   "sha256": "ebcac08c31382d090da90cee06e6042503320452ed356f51f3aca08f9ce5cdec",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC9314114",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "ebcac08c31382d090da90cee06e6042503320452ed356f51f3aca08f9ce5cdec"
+   },
+   "note": "Figure raster (JPEG, about 100 ppi, the Wiley html image; file numbers differ from figure numbers) opened as an image. The PDF holds 450 to 480 ppi rasters of the same figures (not used for these values)."
   }
  ],
  "verbatim_locators": {
@@ -227,12 +288,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Efficacy against SWDs aggravated by a delta-subunit GABA-A agonist: the compound reduced the aggravated SWD number from about 113 to about 6 and cumulated duration from about 470 s to about 18 s in 40 min (n = 10, paired), which the authors take as evidence the effect is not mediated by delta-subunit GABA-A receptors. Figure 3B read as an image: vehicle plus agonist box about 530 s median cumulated duration against about 10 s with the compound, star ***.",
+    "proposition": "The authors report that administration of the compound 15 minutes before the delta-subunit GABA-A agonist completely blocked the agonist's effect on spike-and-wave discharges and still displayed antiabsence properties.",
     "snippet": "STP administration 15 min before THIP completely blocked THIP effect on SWDs, and still displayed antiabsence properties",
     "surface": "body",
     "anchor": "Results, STP inhibits SWDs aggravated after administration of THIP in WAG/Rij rats",
     "artifact": "files/fulltext/PMID35184274_Riban2022_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35184274.json",
+     "entry": 4,
+     "what_changed": "2026-10-22 advisory strength scan: the proposition carried wording or claims the quote does not contain; narrowed to the quote (the dropped inference is in the note, not this locator). Prior wording began: Efficacy against SWDs aggravated by a delta-subunit GABA-A agonist: the compound",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "ADVISORY_STRENGTH_SCAN"
+      ],
+      "method": "locator_audit.py --strength-scan (advisory), run 2026-10-22; no blind audit; the narrowing only brings the proposition inside its quote"
+     }
+    }
    },
    {
     "proposition": "Figure 1B read as an image (page 5 render): cumulated duration in the vehicle arm falls from about 71 s in 0 to 20 min to about 20 s in 40 to 60 min even without drug, so the post-PTZ SWD burden decays by itself in about 40 minutes; the lower drug dose is about 22 s at 0 to 20 min and equal to vehicle at 40 to 60 min; the higher dose near 0 throughout; SEM bars on the vehicle series are about 25 s. The drug effect is therefore concentrated in the first 40 min where the vehicle response exists.",
@@ -256,6 +329,54 @@
     "surface": "body",
     "anchor": "Conflict of interest statement",
     "artifact": "files/fulltext/PMID35184274_Riban2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A figure legend states that the anti-seizure compound inhibits voltage-dependent calcium channels.",
+    "snippet": "Stiripentol (STP) inhibits voltage‐dependent calcium channels.",
+    "surface": "body",
+    "anchor": "Figure 4 legend title",
+    "artifact": "files/fulltext/PMID35184274_Riban2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A figure legend states that the compound retained its suppressive effect on spike-and-wave discharges in the inbred absence rat after a delta-subunit GABA-A agonist increased them.",
+    "snippet": "Gaboxadol hydrochloride (THIP) increased spike‐and‐wave discharges (SWDs) in the WAG/Rij rat, and stiripentol (STP) retained its suppressive effect on SWDs at the dose of 300 mg/kg.",
+    "surface": "body",
+    "anchor": "Figure 3 legend title",
+    "artifact": "files/fulltext/PMID35184274_Riban2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The file EPI-63-1200-g002 is Figure 4 (file and figure numbers differ): concentration-effect curves for the three human T-type channels in cell lines: residual current about 64 percent for Cav3.1, 61 for Cav3.2 and 43 for Cav3.3 at 50 micromolar, about 36, 42 and 28 percent at 100 micromolar, and about 9, 4 and 6 percent at 300 micromolar (three cells per concentration).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4B (file g002): residual current at 50 uM Cav3.1 about 64%, Cav3.2 about 61%, Cav3.3 about 43%; at 100 uM about 36, 42, 28%; at 300 uM about 9, 4, 6%; n = 3 cells per point.",
+    "surface": "figure",
+    "anchor": "Figure 4 panel B (file g002, JPEG raster)",
+    "artifact": "files/figures/PMID35184274_r2/EPI-63-1200-g002.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The file EPI-63-1200-g003 is Figure 3: after the delta-subunit GABA-A agonist the spike-wave cumulated duration is about 530 s in the vehicle-combination group against near 10 s with the compound (three stars), number about 120 against about 5 (three stars) and mean duration about 4.2 against about 2.7 s (one star); the original numerical values are plotted as box plots.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3B (file g003): THIP+LV cumulated duration about 530 vs about 10 s (***), number about 120 vs about 5 (***), mean duration about 4.2 vs 2.7 s (*).",
+    "surface": "figure",
+    "anchor": "Figure 3 panel B (file g003, JPEG raster)",
+    "artifact": "files/figures/PMID35184274_r2/EPI-63-1200-g003.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The file EPI-63-1200-g004 is Figure 2 (inbred absence rat): cumulated spike-wave duration vehicle about 45 s (median), lower dose about 29 s (one star), higher dose about 5 s (three stars); number about 10, 9 and 1 (two stars for the higher dose); mean duration about 4.4 against about 4.1 s for the lower dose (one star).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2B (file g004): cumulated duration veh about 45 s, low dose about 29 (*), high dose about 5 (***); number about 10, 9, 1 (**); mean duration about 4.4 vs 4.1 (*).",
+    "surface": "figure",
+    "anchor": "Figure 2 panel B (file g004, JPEG raster)",
+    "artifact": "files/figures/PMID35184274_r2/EPI-63-1200-g004.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The file EPI-63-1200-g001 is Figure 1 (low-dose convulsant in non-epileptic rats): the cumulated discharge duration in the first 20 minutes is about 72 s with vehicle, about 22 s at the lower dose and about 0 at the higher dose, and at 40 to 60 minutes the three groups are about 19 to 20 s; discharge number falls from about 36 to about 10 and 0 in the first 20 minutes and returns toward about 12, 11 and 3 at 40 to 60 minutes.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1B (file g001): cumulated duration 0-20 min veh about 72 s, low dose about 22, high dose about 0; 40-60 min about 19-20 s; number about 36 -> 10 and 0 (0-20 min), about 12, 11, 3 (40-60 min).",
+    "surface": "figure",
+    "anchor": "Figure 1 panel B (file g001, JPEG raster)",
+    "artifact": "files/figures/PMID35184274_r2/EPI-63-1200-g001.jpg",
     "panel_text_relation": "text_only"
    }
   ],

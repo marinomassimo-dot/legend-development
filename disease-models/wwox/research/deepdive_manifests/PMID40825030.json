@@ -2,8 +2,9 @@
  "schema_version": 2,
  "pmid": "40825030",
  "doi": "10.1371/journal.pgen.1011828",
- "receipt": "FTR-20261021-40825030-01",
+ "receipt": "FTR-20261022-40825030-02",
  "landing": [
+  "FTR-20261022-40825030-02",
   "FTR-20261021-40825030-01",
   "repurposing_10h_scientist-b_20261021"
  ],
@@ -132,6 +133,69 @@
     "derived": false,
     "result_sha256": "41abf2424b6f9250f8810805440fe7274b047e25e8703d985eb48db047162761"
    }
+  },
+  {
+   "path": "files/figures/PMID40825030_r3/p8-000.png",
+   "sha256": "18a4f49135a5a43604193be66335570115abec489d74af2c53ed45719777bae8",
+   "kind": "figure",
+   "note": "Figure 2 (PDF page 8 embedded raster, 300 ppi class) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "18a4f49135a5a43604193be66335570115abec489d74af2c53ed45719777bae8",
+    "derived_from": "files/supplement/PMID40825030_r2/PMC12396757.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 8 -l 8 -png PMC12396757.1.pdf p8"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID40825030_r3/p9-000.png",
+   "sha256": "c5219319d9e051050f80d801cf05d81187b516002bfe7cc9c37c9dbc30d2cd03",
+   "kind": "figure",
+   "note": "Figure 3 (PDF page 9 embedded raster, 300 ppi class) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "c5219319d9e051050f80d801cf05d81187b516002bfe7cc9c37c9dbc30d2cd03",
+    "derived_from": "files/supplement/PMID40825030_r2/PMC12396757.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 9 -l 9 -png PMC12396757.1.pdf p9"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID40825030_r3/p13-000.png",
+   "sha256": "fafb10fa8dff3572c95f74222207ed3c0aa38c2ae14eaac2dac223cacbb049d6",
+   "kind": "figure",
+   "note": "Figure 6 (PDF page 13 embedded raster, 300 ppi class) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "fafb10fa8dff3572c95f74222207ed3c0aa38c2ae14eaac2dac223cacbb049d6",
+    "derived_from": "files/supplement/PMID40825030_r2/PMC12396757.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 13 -l 13 -png PMC12396757.1.pdf p13"
+    }
+   }
   }
  ],
  "verbatim_locators": {
@@ -178,6 +242,62 @@
     "surface": "body",
     "anchor": "Discussion, final paragraph",
     "artifact": "files/fulltext/PMID40825030_ElGhaleb2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A figure legend states that the disease-associated substitutions A398E/V and M1425V/I have distinct effects on calcium channel activation.",
+    "snippet": "Distinct effects on calcium channel activation of CACNA1I disease-associated amino acid substitutions A398E/V and M1425V/I.",
+    "surface": "body",
+    "anchor": "Figure 2 legend title",
+    "artifact": "files/fulltext/PMID40825030_ElGhaleb2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A figure legend states that all Cav3.3 variants left-shift the voltage dependence of inactivation.",
+    "snippet": "All CaV3.3 variants left-shift the voltage dependence of inactivation.",
+    "surface": "body",
+    "anchor": "Figure 4 legend title",
+    "artifact": "files/fulltext/PMID40825030_ElGhaleb2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A figure legend states that three variants left-shift the window current while the A398V variant completely abolishes it.",
+    "snippet": "Three CaV3.3 variants left-shift the window current, while the A398V completely abolishes the window current.",
+    "surface": "body",
+    "anchor": "Figure 5 legend title",
+    "artifact": "files/fulltext/PMID40825030_ElGhaleb2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A figure legend states that the computer modelling predicts increased electrical activity at rest and after hyperpolarising pulses for three variants and quiescence at rest for the A398V variant.",
+    "snippet": "NEURON computer modelling predicts increased electrical activity at rest and in response to hyperpolarizing pulses for three variants of CaV3.3 and quiescence at rest for the A398V variant.",
+    "surface": "body",
+    "anchor": "Figure 6 legend title",
+    "artifact": "files/fulltext/PMID40825030_ElGhaleb2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2 read as an image (cells expressing the channel): peak density is smaller for A398V (about minus 18 against minus 50 pA/pF; one star), not different for A398E, M1425V or M1425I; half-activation is more negative for A398E (about minus 49 against minus 38 mV; four stars), M1425V (about minus 50 against minus 38) and M1425I (about minus 49), and less negative for A398V (about minus 34 mV; two stars).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2G, I, K, M: Ipeak A398V about -18 vs WT about -50 pA/pF (*); V1/2 act A398E about -49, M1425V about -50, M1425I about -49 vs WT about -38 mV (****); A398V about -34 (**).",
+    "surface": "figure",
+    "anchor": "Figure 2 panels F-M (page 8 raster)",
+    "artifact": "files/figures/PMID40825030_r3/p8-000.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3 read as an image (kinetics): the inactivation time constant is about 190 ms for A398E against about 80 ms for wild type (two stars) and about 25 to 45 ms for A398V (stars), and about 330 to 410 ms for M1425V and about 480 to 730 ms for M1425I against about 120 to 190 ms (stars); the deactivation time constant at minus 60 mV is about 40 ms for A398E, about 42 for M1425V and about 60 for M1425I against about 5 to 7 ms for wild type (three stars), and about 1.5 ms for A398V.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3B, C, E, F: tau inactivation A398E about 190 vs WT about 80 ms; A398V about 25-45; M1425V about 330-410, M1425I about 480-730 vs WT about 120-190; tau deactivation at -60 mV A398E about 40, M1425V about 42, M1425I about 60 vs WT about 6 ms (***), A398V about 1.5.",
+    "surface": "figure",
+    "anchor": "Figure 3 panels A-F (page 9 raster)",
+    "artifact": "files/figures/PMID40825030_r3/p9-000.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 6 read as an image (simulated reticular-nucleus neuron): the A398E, M1425V and M1425I simulations fire more often at rest than the wild-type simulation and produce longer, denser bursts after the hyperpolarising pulse, while the A398V simulation is silent at rest and fires a single spike after the pulse; the wild-type simulation fires about 14 spikes in the first 3000 ms.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6A-H: AE, MV, MI fire more at rest and longer bursts after the pulse than WT; AV silent at rest, single spike after the pulse; WT about 14 spikes in 3 s.",
+    "surface": "figure",
+    "anchor": "Figure 6 panels A-H (page 13 raster)",
+    "artifact": "files/figures/PMID40825030_r3/p13-000.png",
     "panel_text_relation": "text_only"
    }
   ],
