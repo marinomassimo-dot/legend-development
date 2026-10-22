@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-22T00:00:00Z",
+ "event_at": "2026-10-22T04:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "captions_only"
+ },
+ "event_id": "FTR-20261022-35243344-02",
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "Completing pass (owed: figures captions_only, supplementary not_read). Main Figures 1 to 5, 7 and 8 opened as images from the PDF-embedded rasters (Figure 6 was read as an image in the first pass); the supplementary Word file (two figures, one table; 1.9 kB of text) read in full and both supplementary figures opened as images. The supplementary video (a still frame appears on a PDF page) was not opened as a movie; it is named in the article as video material and is a declared minor debt. Supplementary is recorded as captions_only because the supplementary movie material was not opened as video (no video tool here); every supplementary figure and table was read."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID35243344.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-b_20261022e.md"
+ ],
+ "prior_receipt": "FTR-20261021-35243344-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "571b443a3db5271eb15007f67f784a7c927ca671c8ee901fec9e343826f5c12f",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID35243344_Yang2022_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1093/braincomms/fcac010",
+  "pmid": "35243344"
+ },
+ "workflow": "scientist-b repurposing batch R2d completing pass 2026-10-22; SOURCE_FIRST for the owed sections; NOT WWOX EVIDENCE; rasters extracted from the PMC open-data PDF (about 200 ppi); prepared as JSON for the integrator and staged, not appended."
+}

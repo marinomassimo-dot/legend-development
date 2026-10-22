@@ -2,8 +2,9 @@
  "schema_version": 2,
  "pmid": "42536722",
  "doi": "10.1126/sciadv.aec6065",
- "receipt": "FTR-20261021-42536722-01",
+ "receipt": "FTR-20261022-42536722-02",
  "landing": [
+  "FTR-20261022-42536722-02",
   "FTR-20261021-42536722-01",
   "repurposing_10h_scientist-b_20261021"
  ],
@@ -168,6 +169,210 @@
      "join": ""
     }
    }
+  },
+  {
+   "path": "files/figures/PMID42536722_r3/main-03.png",
+   "sha256": "c1a236387ba2676a45e490a68df9bf7bd1716d041849ac7b614a3fb70f5c48c1",
+   "kind": "figure",
+   "note": "Figure 1 (PDF page 3) rendered at 150 ppi and opened as an image; the embedded rasters of these figures are 600 ppi fragments, so the page render was read.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "c1a236387ba2676a45e490a68df9bf7bd1716d041849ac7b614a3fb70f5c48c1",
+    "derived_from": "files/supplement/PMID42536722_r2/PMC13426438.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 150 -png -f 3 -l 3 PMC13426438.1.pdf main"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID42536722_r3/main-04.png",
+   "sha256": "4727a622c4ce205924f477fa947ccb0fbe774785629b4f0d4bc64855fb6cd2e1",
+   "kind": "figure",
+   "note": "Figure 2 (PDF page 4) rendered at 150 ppi and opened as an image; the embedded rasters of these figures are 600 ppi fragments, so the page render was read.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "4727a622c4ce205924f477fa947ccb0fbe774785629b4f0d4bc64855fb6cd2e1",
+    "derived_from": "files/supplement/PMID42536722_r2/PMC13426438.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 150 -png -f 4 -l 4 PMC13426438.1.pdf main"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID42536722_r3/main-05.png",
+   "sha256": "fc8643e7f2025ecb3043df63a4ba27c46896d31770977e2120e5af308565813b",
+   "kind": "figure",
+   "note": "Figure 3 (PDF page 5) rendered at 150 ppi and opened as an image; the embedded rasters of these figures are 600 ppi fragments, so the page render was read.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "fc8643e7f2025ecb3043df63a4ba27c46896d31770977e2120e5af308565813b",
+    "derived_from": "files/supplement/PMID42536722_r2/PMC13426438.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 150 -png -f 5 -l 5 PMC13426438.1.pdf main"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID42536722_r3/main-06.png",
+   "sha256": "41cf7fbee1710e6bc4494688a7037cf39f4b3a9b4982b3ce0bcfc4dc0c9aae8e",
+   "kind": "figure",
+   "note": "Figure 4 (PDF page 6) rendered at 150 ppi and opened as an image; the embedded rasters of these figures are 600 ppi fragments, so the page render was read.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "41cf7fbee1710e6bc4494688a7037cf39f4b3a9b4982b3ce0bcfc4dc0c9aae8e",
+    "derived_from": "files/supplement/PMID42536722_r2/PMC13426438.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 150 -png -f 6 -l 6 PMC13426438.1.pdf main"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID42536722_r3/main-07.png",
+   "sha256": "3ce033d6c370d76c53aa23006bcb8b2f076e828d4785e6a5a2799bc18766dc53",
+   "kind": "figure",
+   "note": "the text page with the Results on the chemogenetic experiment (PDF page 7) rendered at 150 ppi and opened as an image; the embedded rasters of these figures are 600 ppi fragments, so the page render was read.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "3ce033d6c370d76c53aa23006bcb8b2f076e828d4785e6a5a2799bc18766dc53",
+    "derived_from": "files/supplement/PMID42536722_r2/PMC13426438.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 150 -png -f 7 -l 7 PMC13426438.1.pdf main"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID42536722_r3/main-08.png",
+   "sha256": "1dab22a9fd46d72251bc73472778a3b525c8d26c2aefd13b4741a2607bf58687",
+   "kind": "figure",
+   "note": "Figure 5 (PDF page 8) rendered at 150 ppi and opened as an image; the embedded rasters of these figures are 600 ppi fragments, so the page render was read.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "1dab22a9fd46d72251bc73472778a3b525c8d26c2aefd13b4741a2607bf58687",
+    "derived_from": "files/supplement/PMID42536722_r2/PMC13426438.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 150 -png -f 8 -l 8 PMC13426438.1.pdf main"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID42536722_r3/sm-04.png",
+   "sha256": "c9c794f45cced05ddbfb42d20d3a7c0a6a9f31e218951bce5f4730522be7f622",
+   "kind": "figure",
+   "note": "Supplementary Figure S3 (supplement PDF page 4) rendered at 70 ppi and opened as an image; the supplement figure is vector-bearing.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "c9c794f45cced05ddbfb42d20d3a7c0a6a9f31e218951bce5f4730522be7f622",
+    "derived_from": "files/supplement/PMID42536722_r2/sciadv.aec6065_sm.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 70 -png -f 4 -l 4 sciadv.aec6065_sm.pdf sm"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID42536722_r3/sm-10.png",
+   "sha256": "2ada82ec89f31a60fd366855c1b496cd35611fa2b9962d938ca580e99af0079d",
+   "kind": "figure",
+   "note": "Supplementary Figure S7 (supplement PDF page 10) rendered at 70 ppi and opened as an image; the supplement figure is vector-bearing.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "2ada82ec89f31a60fd366855c1b496cd35611fa2b9962d938ca580e99af0079d",
+    "derived_from": "files/supplement/PMID42536722_r2/sciadv.aec6065_sm.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 70 -png -f 10 -l 10 sciadv.aec6065_sm.pdf sm"
+    }
+   }
+  },
+  {
+   "path": "files/supplement/PMID42536722_r2/sciadv.aec6065_sm.pdf",
+   "sha256": "2ef0a22ce1148b127e89170bcf41df80323058e7e088562703b1eff1c87b355e",
+   "kind": "supplement_binary",
+   "note": "Supplementary Materials PDF (13 pages, Figs. S1 to S10; fonts carry Unicode maps) from the PMC open-data bucket.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13426438.1/sciadv.aec6065_sm.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "2ef0a22ce1148b127e89170bcf41df80323058e7e088562703b1eff1c87b355e"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42536722_r2/sciadv.aec6065_sm.txt",
+   "sha256": "9f23d7af9bd76a76c95a674e5f0239ff08e87dab4b2917130363beb252e4e363",
+   "kind": "supplement_text",
+   "note": "DERIVED text layer of PDF pages 4 (Fig. S3) and 10 (Fig. S7) of the Supplementary Materials PDF by pdftotext -layout -nopgbrk, one call per page, concatenated; the other pages were not derived because the whole-document extraction carries a control character on a later page.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftotext_layout_nopgbrk",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "9f23d7af9bd76a76c95a674e5f0239ff08e87dab4b2917130363beb252e4e363",
+    "derived_from": "files/supplement/PMID42536722_r2/sciadv.aec6065_sm.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk -f 4 -l 4 sciadv.aec6065_sm.pdf - ; pdftotext -layout -nopgbrk -f 10 -l 10 sciadv.aec6065_sm.pdf -  (concatenated)"
+    }
+   }
   }
  ],
  "verbatim_locators": {
@@ -201,28 +406,64 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Genetic ablation of Cacna1g (Cav3.1) in the digenic background removed the T-type current and rebound bursting in thalamocortical relay neurons and prevented spontaneous SWDs. This is a genetic epistasis test of T-type dependence of the seizure in the mutant, a different kind of evidence from a drug effect, and it agrees with ethosuximide.",
+    "proposition": "The authors state that, with the Cav3.1 gene deleted, the finding demonstrates Cav3.1 to be critical for the generation of spike-wave discharges in both a monogenic and the digenic absence seizure model.",
     "snippet": "demonstrating that CaV3.1 is critical for the generation of SWDs in both monogenic and digenic absence seizure models.",
     "surface": "body",
     "anchor": "Results, CaV3.1 ablation prevents seizure generation",
     "artifact": "files/fulltext/PMID42536722_Miao2026_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42536722.json",
+     "entry": 3,
+     "what_changed": "2026-10-22 advisory strength scan: the proposition carried words and claims the quote does not contain; narrowed to the quote (the dropped inference is carried in the note, not in this locator). Prior wording began: Genetic ablation of Cacna1g (Cav3.1) in the digenic background removed the T-typ",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "ADVISORY_STRENGTH_SCAN"
+      ],
+      "method": "locator_audit.py --strength-scan (advisory), run 2026-10-22; no blind audit; the narrowing only brings the proposition inside its quote"
+     }
+    }
    },
    {
-    "proposition": "The Cacna1g deletion also did not rescue social novelty, and the triple mutant still shows a trend of elevated 5 to 8 Hz power: seizures removed while cortical abnormality and the behaviour remain. The authors name this dissociation themselves and note possible effects of Cav3.1 loss on locomotion.",
+    "proposition": "The authors report that peak-normalised power spectra of the triple mutant showed a trend toward elevated EEG power relative to wild type at 5 to 8 Hz.",
     "snippet": "Interestingly, peak normalized power spectra showed that TriGstg+Ca1A+Ca1G mice exhibited a trend toward elevated EEG power relative to WT controls at 5–8 Hz range (Fig. 3, G and H).",
     "surface": "body",
     "anchor": "Results, CaV3.1 ablation prevents seizure generation, paragraph 2; non-rescue of social novelty stated in the following paragraph",
     "artifact": "files/fulltext/PMID42536722_Miao2026_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42536722.json",
+     "entry": 4,
+     "what_changed": "2026-10-22 advisory strength scan: the proposition carried words and claims the quote does not contain; narrowed to the quote (the dropped inference is carried in the note, not in this locator). Prior wording began: The Cacna1g deletion also did not rescue social novelty, and the triple mutant s",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "ADVISORY_STRENGTH_SCAN"
+      ],
+      "method": "locator_audit.py --strength-scan (advisory), run 2026-10-22; no blind audit; the narrowing only brings the proposition inside its quote"
+     }
+    }
    },
    {
-    "proposition": "The authors state the limits of the T-type conclusion: it is unclear which T-type-expressing neuron population mediates the effect, and seizure suppression should not be assumed to normalise cognitive and social outcomes.",
+    "proposition": "The authors write that, while T-type channels remain an attractive seizure-control target, their results caution against assuming that seizure suppression will normalise cognitive and social outcomes.",
     "snippet": "While T-type channels remain an attractive seizure-control target, these results caution against assuming that seizure suppression will normalize cognitive and social outcomes.",
     "surface": "body",
     "anchor": "Discussion, T-type calcium channels as a therapeutic target",
     "artifact": "files/fulltext/PMID42536722_Miao2026_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42536722.json",
+     "entry": 5,
+     "what_changed": "2026-10-22 advisory strength scan: the proposition carried words and claims the quote does not contain; narrowed to the quote (the dropped inference is carried in the note, not in this locator). Prior wording began: The authors state the limits of the T-type conclusion: it is unclear which T-typ",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "ADVISORY_STRENGTH_SCAN"
+      ],
+      "method": "locator_audit.py --strength-scan (advisory), run 2026-10-22; no blind audit; the narrowing only brings the proposition inside its quote"
+     }
+    }
    },
    {
     "proposition": "Figure 2 read as an image on the page render: panels B and C show SWD duration per 30 minutes collapsing from sections 1 and 2 (baseline) to near zero in sections 3 to 5, stars at 6 and 7, and no difference by section 8, i.e. the effect lasts about 2 hours and is gone by hour 4; panel D, broad drop of power with the peak near 3 Hz reduced from about 95 to about 58 microvolt squared; panel E, control (triangles, N = 17) shows social novelty before and after ETX and digenic (circles, N = 16) does not, with stars on the group difference both times; panel F, distance travelled not different between groups, before or after.",
@@ -241,11 +482,135 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Genetic background of the comparison: the controls named in the paper are wild type, the two single heterozygous lines and (for the triple mutant) a Cacna1g-only knockout, giving a genuine genotype ladder on the EEG endpoint; but a drug-by-genotype contrast on the EEG endpoint requires drug in more than one rung, and only the digenic rung was dosed.",
+    "proposition": "The Methods say the phenotypic characterisation compared the digenic mice, the Cacng2 heterozygous mice, the Cacna1a heterozygous mice and wild-type controls with video-EEG for spontaneous spike-wave discharges and power-spectrum analysis.",
     "snippet": "Phenotypic characterization compared DiGstg+Ca1A mice, Cacng2+/stg mice, Cacna1a+/− mice, and wildtype controls using video-EEG for spontaneous SWDs and power spectrum analysis.",
     "surface": "body",
     "anchor": "Materials and Methods, Characterization of digenic compound haploinsufficiency",
     "artifact": "files/fulltext/PMID42536722_Miao2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42536722.json",
+     "entry": 8,
+     "what_changed": "2026-10-22 advisory strength scan: the proposition carried words and claims the quote does not contain; narrowed to the quote (the dropped inference is carried in the note, not in this locator). Prior wording began: Genetic background of the comparison: the controls named in the paper are wild t",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "ADVISORY_STRENGTH_SCAN"
+      ],
+      "method": "locator_audit.py --strength-scan (advisory), run 2026-10-22; no blind audit; the narrowing only brings the proposition inside its quote"
+     }
+    }
+   },
+   {
+    "proposition": "The authors report that almost all mice of the PV-specific Cacna1a deletion on the Cacng2 heterozygous background (11 of 12 recorded) showed more than one spike-wave discharge in 4 hours of recording.",
+    "snippet": "Almost all DiGstg+PV-Ca1A mice (11/12 mice recorded) showed more than one SWD during 4-hr EEG recording period",
+    "surface": "body",
+    "anchor": "Results, Heterozygous PV-specific Cacna1a deletion",
+    "artifact": "files/fulltext/PMID42536722_Miao2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that, like ethosuximide, clozapine treatment dramatically suppressed cortical activities across a broad frequency range in the chemogenetic mice.",
+    "snippet": "clozapine treatment dramatically suppressed cortical activities across a broad frequency range",
+    "surface": "body",
+    "anchor": "Results, Activating PV interneurons ameliorates absence seizures",
+    "artifact": "files/fulltext/PMID42536722_Miao2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors report that the chemogenetic mice were almost immobile after the higher clozapine dose.",
+    "snippet": "The ePV-DiGstg+Ca1A mice were almost immobile after receiving",
+    "surface": "body",
+    "anchor": "Results, Activating PV interneurons ameliorates absence seizures",
+    "artifact": "files/fulltext/PMID42536722_Miao2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors report that clozapine alone did not rescue the social-novelty deficit in mice lacking the designer receptor, which they take to show that clozapine itself cannot account for the behavioural rescue.",
+    "snippet": "Clozapine treatment alone did not rescue the social novelty deficit in DREADD-negative mice",
+    "surface": "body",
+    "anchor": "Results, Activating PV interneurons ameliorates absence seizures",
+    "artifact": "files/fulltext/PMID42536722_Miao2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that deleting the Cav3.1 channel abolishes bursting in thalamocortical neurons and the generation of spike-wave discharges but fails to rescue the social deficits.",
+    "snippet": "genetic deletion of CaV3.1 channels abolishes bursting in thalamocortical neurons and the generation of SWDs but fails to rescue social deficits",
+    "surface": "body",
+    "anchor": "Results, CaV3.1 ablation section, closing sentence",
+    "artifact": "files/fulltext/PMID42536722_Miao2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Both male and female mice were used, and the number of animals per experiment is stated in the figure legends.",
+    "snippet": "Both male and female mice were used. The number of animals per experiment is stated in the figure legends.",
+    "surface": "body",
+    "anchor": "Materials and Methods, Mice",
+    "artifact": "files/fulltext/PMID42536722_Miao2026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The supplementary legend states that the vehicle injection did not stop the absence seizures in the chemogenetic mice and had no impact on the power spectrum.",
+    "snippet": "Vehicle treatment does not stop absence seizures in ePV-DiGstg+Ca1A mice.",
+    "surface": "supplement",
+    "anchor": "Supplementary Fig. S7 legend",
+    "artifact": "files/supplement/PMID42536722_r2/sciadv.aec6065_sm.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The supplementary legend states that ethosuximide broadly suppresses cortical activities.",
+    "snippet": "Ethosuximide broadly suppresses cortical activities.",
+    "surface": "supplement",
+    "anchor": "Supplementary Fig. S3 legend",
+    "artifact": "files/supplement/PMID42536722_r2/sciadv.aec6065_sm.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 read as an image: in the digenic mice 15 of 15 recorded show epilepsy against 1 of 17 of the heterozygous Cacna1a line and none of 20 wild type and 12 Cacng2 mice; the spike-wave frequency about 20 per hour in the digenic line; in the three-chamber test sociability is intact in both groups but social novelty is lost in the digenic mice (preference index about 0, P = 0.47) with controls clearly positive (about 0.3).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1E-M: epilepsy 15/15 digenic vs 1/17 Cacna1a+/-, 0/12 Cacng2+/stg, 0/20 WT; SWD about 20/h; social novelty digenic about 0 (P = 0.47) vs ctrl about 0.3.",
+    "surface": "figure",
+    "anchor": "Figure 1 panels E, F, M (page 3 render)",
+    "artifact": "files/figures/PMID42536722_r3/main-03.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2 read as an image: ethosuximide takes the total spike-wave duration per 30 minutes from about 100 s before to near zero in the next 90 minutes (three stars; 12 mice) with recovery of a few discharges at 3 hours; broad suppression of EEG power across all frequencies; distance travelled unchanged (about 22 against 25 m); social-novelty preference index of the digenic mice remains lower than control after ethosuximide (star), sociability unchanged.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2: ETX SWD duration per 30 min about 100 s -> near 0 (***, N = 12) with partial return by 3 h; power broadly lower; distance unchanged; social novelty remains lower than Ctrl (*) after ETX.",
+    "surface": "figure",
+    "anchor": "Figure 2 panels B-F (page 4 render)",
+    "artifact": "files/figures/PMID42536722_r3/main-04.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3 read as an image: Cacna1g-null cells lose the rebound spikes (about 5 in the digenic against 0 in the triple mutant, three stars) and the T-type current (peak about 1.4 nA at minus 45 mV against about 0); no spontaneous spike-wave discharge in the Cacna1g knockout (9 mice) or the triple mutant (7 mice); social-novelty preference remains lost in the triple mutant (star against control, P = 0.042) and sociability is intact.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3C-J: rebound spikes about 5 vs 0 (***); T-current about 1.4 nA vs about 0 (***); no SWD in Ca1G KO (N = 9) or triple (N = 7); triple mutant social novelty lost (*, P = 0.042).",
+    "surface": "figure",
+    "anchor": "Figure 3 panels C-J (page 5 render)",
+    "artifact": "files/figures/PMID42536722_r3/main-05.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 4 read as an image: PV-specific Cacna1a deletion alone: 4 of 12 mice with epilepsy; with Cacng2 haploinsufficiency 11 of 12; spike-wave frequency about 30 per hour in the combined line against near 0 in the single-deletion line; both show social-novelty deficits; open-field distance about 28 in controls against about 24 in the single-deletion line (two stars) and unchanged in the combined line.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4C-I: epilepsy 4/12 PV-Ca1A vs 11/12 DiGstg+PV-Ca1A; SWD about 30/h in the combined line; social novelty reduced in both; open-field distance lower in PV-Ca1A (**), not in combined.",
+    "surface": "figure",
+    "anchor": "Figure 4 panels C-I (page 6 render)",
+    "artifact": "files/figures/PMID42536722_r3/main-06.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 5 read as an image: designer-receptor activation of parvalbumin cells raises the membrane potential from about minus 68 to about minus 52 mV (three stars) and lowers rheobase; in the chemogenetic mice the low-dose clozapine takes the total spike-wave duration per 30 minutes from about 200 s to about zero from the third half hour on (stars, seven mice) and lifts oscillatory gamma power (P = 0.052); social-novelty preference, impaired before, is not different from control after (P = 0.56).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5C-O: Vm about -68 -> -52 mV (***); SWD duration per 30 min about 200 s -> near 0 from section 3 (*), N = 7; gamma power P = 0.052; social novelty P = 0.56 after Cloz vs 1.9e-4 before.",
+    "surface": "figure",
+    "anchor": "Figure 5 panels C-O (page 8 render)",
+    "artifact": "files/figures/PMID42536722_r3/main-08.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Figures S3 and S7 read as images: S3 power spectra after ethosuximide are broadly lower in episodes 1 to 5 and a bump at the discharge frequency returns in episode 6 (arrow); S7 vehicle leaves the discharges and the power spectrum unchanged.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] S3: spectrum suppressed ep.1-5, bump returns ep.6; S7: vehicle no change.",
+    "surface": "figure",
+    "anchor": "Supplementary Figures S3 and S7 (supplement PDF page renders)",
+    "artifact": "files/figures/PMID42536722_r3/sm-04.png",
     "panel_text_relation": "text_only"
    }
   ],

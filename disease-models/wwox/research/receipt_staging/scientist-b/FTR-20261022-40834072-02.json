@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-22T00:00:00Z",
+ "event_at": "2026-10-22T04:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "captions_only"
+ },
+ "event_id": "FTR-20261022-40834072-02",
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "Completing pass (owed: figures captions_only, supplementary captions_only). Main Figures 1, 2, 4, 5, 7 opened as images from the PDF-embedded rasters ranked 310 to 333 ppi (Figures 3 and 6 were read as images in the first pass); Supplementary Figures S1 to S8 opened as images from the supplement PDF rasters; the supplementary movie legends were read in the text layer and the movies themselves were not opened (movies are not an artifact obtained here; declared). Supplementary is recorded as captions_only because the supplementary movie material was not opened as video (no video tool here); every supplementary figure and table was read."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID40834072.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-b_20261022e.md"
+ ],
+ "prior_receipt": "FTR-20261021-40834072-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "bcaddfdb89a9c61711dbe388a557fb97232b36f16e7306cf53b4354dc0ecf651",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID40834072_Jang2025_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1126/sciadv.adw4682",
+  "pmid": "40834072"
+ },
+ "workflow": "scientist-b repurposing batch R2d completing pass 2026-10-22; SOURCE_FIRST for the owed sections (figures and supplementary figures); NOT WWOX EVIDENCE; rasters extracted from the PMC open-data PDF (paper_packet.py rank: 310 to 333 ppi for the main figures); prepared as JSON for the integrator and staged, not appended."
+}

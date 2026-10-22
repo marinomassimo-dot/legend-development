@@ -360,12 +360,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Figure 6C read as an image (three-chamber test): vehicle wild type spends about 325 s with the social partner against about 135 s with the object (three stars); vehicle knockout about 225 s against about 240 s; Z944 wild type about 345 s against about 130 s and Z944 knockout about 350 s against about 145 s; social index vehicle wild type about 0.37, vehicle knockout about minus 0.05, Z944 wild type about 0.34 and Z944 knockout about 0.42.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6C: social vs object time: WT veh about 325 vs 135 s; KO veh about 225 vs 240; WT Z944 about 345 vs 130; KO Z944 about 350 vs 145; social index WT veh 0.37, KO veh -0.05, WT Z944 0.34, KO Z944 0.42.",
+    "proposition": "Figure 6C read as an image (three-chamber test): vehicle wild type spends about 325 s with the social partner against about 135 s with the object (three stars); vehicle knockout about 225 s against about 240 s; Z944 wild type about 345 s against about 160 s and Z944 knockout about 350 s against about 145 s; social index vehicle wild type about 0.37, vehicle knockout about minus 0.05, Z944 wild type about 0.34 and Z944 knockout about 0.42.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6C: social vs object time: WT veh about 325 vs 135 s; KO veh about 225 vs 240; WT Z944 about 345 vs 160; KO Z944 about 350 vs 145; social index WT veh 0.37, KO veh -0.05, WT Z944 0.34, KO Z944 0.42.",
     "surface": "figure",
     "anchor": "Figure 6 panel C (embedded raster)",
     "artifact": "files/figures/PMID40166234_r1/pg33-001.png",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40166234.json",
+     "entry": 16,
+     "what_changed": "2026-10-22 blind audit: the wild-type Z944 object-chamber bar reads about 160 s (bar top about 162), not about 130; corrected after re-opening the panel this session; the other values are unchanged. Prior wording began: Figure 6C read as an image (three-chamber test): vehicle wild type spends about ",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind audit, triple plus source; verdict table in disease-models/wwox/research/page_adjudications/locator_audit_R1c_R2c_20261022.md; the repair itself is unaudited"
+     }
+    }
    },
    {
     "proposition": "Figure 6D to G read as an image: grooming time about 40 s (wild type vehicle), about 82 s (knockout vehicle), about 55 s (wild type Z944) and about 40 s (knockout Z944); interaction time about 120, 60, 88 and 95 s in the same order; the number of grooming events and digging time show no star.",

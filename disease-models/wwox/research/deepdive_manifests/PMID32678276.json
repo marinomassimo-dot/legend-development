@@ -375,11 +375,39 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Figures 1 to 3 read as images: Figure 1 shows spike-wave discharge examples (red) in the right frontal channel under saline, ethosuximide, levetiracetam, atropine, beta-hydroxybutyrate and pyruvate; Figure 2 a 3 h session with EEG, EMG and staging and spectra for slow-wave sleep, spindle and REM; Figure 3 shows atropine moving time about 41 min per recording hour against about 11 for saline (two stars) and ethosuximide about 7 with no star.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Figures 1-3: SWD examples; 3 h session staging; Fig 3 ATR about 41 vs saline about 11 min per hour (**), ESM about 7 no star.",
+    "proposition": "Figure 3 read as an image: atropine raises the moving time per recording hour to about 41 min against about 11 min for saline (two stars); ethosuximide is about 7 min with no star; the other drugs are about 8 to 13 min with no star.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3: ATR about 41 min/h (**), saline about 11, ESM about 7, other drugs about 8-13, no star.",
     "surface": "figure",
     "anchor": "Figures 1, 2, 3 (JPEG rasters)",
     "artifact": "files/figures/PMID32678276_r2/41598_2020_68845_Fig3_HTML.jpg",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32678276.json",
+     "entry": 17,
+     "what_changed": "2026-10-22 blind audit flag: the entry cited Figures 1 to 3 while the cited file was Figure 3 only; narrowed to Figure 3 and Figures 1 and 2 now carry their own entries after being opened this session. Prior wording began: Figures 1 to 3 read as images: Figure 1 shows spike-wave discharge examples (red",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "SUPPORTED_WITH_FLAG"
+      ],
+      "method": "Blind audit, triple plus source; verdict table in disease-models/wwox/research/page_adjudications/locator_audit_R1c_R2c_20261022.md; the repair itself is unaudited"
+     }
+    }
+   },
+   {
+    "proposition": "Figure 1 read as an image: spike-wave discharge examples (red) in a two-channel EEG segment under saline, ethosuximide, levetiracetam, atropine, beta-hydroxybutyrate and pyruvate; the ethosuximide and atropine examples are shorter than the saline example.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1: SWD examples (red) under saline, ESM, LEV, ATR, BHB, PYR; ESM and ATR examples shorter.",
+    "surface": "figure",
+    "anchor": "Figure 1 (JPEG raster)",
+    "artifact": "files/figures/PMID32678276_r2/41598_2020_68845_Fig1_HTML.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2 read as an image: a three-hour recording of cortical EEG, EMG and video-based staging (moving, waking immobility, sleep), with power spectra for slow-wave sleep (peak below 5 Hz), a spindle (peak about 12 Hz) and REM sleep (peak about 8 Hz).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2: 3 h EEG, EMG and staging; spectra SWS peak below 5 Hz, spindle about 12 Hz, REM about 8 Hz.",
+    "surface": "figure",
+    "anchor": "Figure 2 (JPEG raster)",
+    "artifact": "files/figures/PMID32678276_r2/41598_2020_68845_Fig2_HTML.jpg",
     "panel_text_relation": "text_only"
    }
   ],

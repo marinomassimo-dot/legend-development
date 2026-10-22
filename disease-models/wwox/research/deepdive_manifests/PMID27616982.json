@@ -405,19 +405,75 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Figure 4B read as an image (Cav3.2): the hippocampal and septal bars rise through P21 and fall at P60 in most subfields (CA1 stratum radiatum about 48 at P21 against about 40 at P60), cerebellar molecular layer about 41 at P21; thalamus is not plotted in this panel.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4B: CA1 sr about 48 at P21, about 40 at P60; Cb ml about 41 at P21; no thalamus group in the panel.",
+    "proposition": "Figure 4B read as an image (Cav3.2 protein pixel density by region and age): CA1 stratum radiatum rises to about 48 at P21 and is about 40 at P60 and most hippocampal subfields rise through P21 and fall at P60; the septum is about 29 at both P21 and P60 (flat); the cerebellar molecular layer is about 41 at P21 and about 40 to 41 at P60; the thalamus is not plotted in this panel.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4B: CA1 sr about 48 (P21) vs about 40 (P60); septum about 29 at P21 and P60; Cb ml about 41; no thalamus group.",
     "surface": "figure",
     "anchor": "Figure 4 panel B (JPEG raster)",
     "artifact": "files/figures/PMID27616982_r2/fnana-10-00083-g0004.jpg",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID27616982.json",
+     "entry": 17,
+     "what_changed": "2026-10-22 blind audit: the septum is flat (about 29 at both ages), so 'hippocampal and septal bars rise through P21 and fall at P60' held for hippocampal subfields only; rewritten from the panel re-opened this session. Prior wording began: Figure 4B read as an image (Cav3.2): the hippocampal and septal bars rise throug",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "SUPPORTED_WITH_FLAG"
+      ],
+      "method": "Blind audit, triple plus source; verdict table in disease-models/wwox/research/page_adjudications/locator_audit_R1c_R2c_20261022.md; the repair itself is unaudited"
+     }
+    }
    },
    {
-    "proposition": "Figures 5 to 9 read as images: pre-embedding immunogold electron micrographs and bar graphs; Cav3.1 gold particles on spines and shafts of cerebellar Purkinje cells and hippocampal interneurons (Figure 5), Cav3.2 in CA1 spines and presynaptic terminals (Figures 6, 7) and in cerebellar parallel-fibre terminals and spines (Figures 8, 9); the Cav3.2 knockout micrographs (Figures 6H, 8E) show essentially no immunogold labelling.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Figures 5-9: immunogold micrographs and compartment bar graphs; Cav3.2 KO panels 6H and 8E show essentially no gold labelling.",
+    "proposition": "Figure 6 read as an image (page raster): pre-embedding immunogold micrographs of Cav3.2 in hippocampal CA1 strata oriens, radiatum and lacunosum-moleculare show gold particles along spines, dendritic shafts and presynaptic terminals, and the Cav3.2 knockout panel (H) shows essentially no gold labelling.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6: immunogold in CA1 so, sr, slm, interneuron dendrite, apical dendrite; KO panel H nearly no gold.",
     "surface": "figure",
     "anchor": "Figures 5 to 9 (JPEG rasters)",
     "artifact": "files/figures/PMID27616982_r2/fnana-10-00083-g0006.jpg",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID27616982.json",
+     "entry": 18,
+     "what_changed": "2026-10-22 blind audit flag: the entry cited Figures 5 to 9 while only part was opened; narrowed to Figure 6 and the other figures now carry their own entries after being opened this session. Prior wording began: Figures 5 to 9 read as images: pre-embedding immunogold electron micrographs and",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "SUPPORTED_WITH_FLAG"
+      ],
+      "method": "Blind audit, triple plus source; verdict table in disease-models/wwox/research/page_adjudications/locator_audit_R1c_R2c_20261022.md; the repair itself is unaudited"
+     }
+    }
+   },
+   {
+    "proposition": "Figure 5 read as an image: Cav3.1 immunogold in hippocampal CA1 interneurons (light micrograph A, somata and dendrites B-C) and in cerebellar Purkinje-cell spines at parallel-fibre synapses (D-F); quantification G-I shows about 74 percent of postsynaptic particles in spines, linear density highest in spines (about 9.7 gold per micrometre) and about 32 percent of spine particles within 60 nm of the synapse edge.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5: Cav3.1 immunogold, interneurons and Purkinje spines; spine density about 9.7 gold/um; about 32% within 60 nm of synapse edge.",
+    "surface": "figure",
+    "anchor": "Figure 5 (JPEG raster)",
+    "artifact": "files/figures/PMID27616982_r2/fnana-10-00083-g0005.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 7 read as an image: quantification of Cav3.2 in CA1 shows about 82 percent postsynaptic particles, about 82 percent of spine particles at the plasma membrane, linear density about 7.3 (stratum oriens) and about 8.3 (stratum radiatum) gold per micrometre on spines against about 1.4 in stratum lacunosum-moleculare, and about 10 percent of particles within 60 nm of the synapse edge.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7: Cav3.2 CA1 about 82% postsynaptic; spine density about 7.3 (so), 8.3 (sr), 1.4 (slm); about 10% within 60 nm.",
+    "surface": "figure",
+    "anchor": "Figure 7 (JPEG raster)",
+    "artifact": "files/figures/PMID27616982_r2/fnana-10-00083-g0007.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 8 read as an image: Cav3.2 immunogold on Purkinje-cell spines at parallel-fibre contacts and in parallel-fibre terminals, with the Cav3.2 knockout panel (E) showing essentially no gold labelling.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 8: Cav3.2 immunogold on Purkinje spines and pf terminals; KO panel E nearly no gold.",
+    "surface": "figure",
+    "anchor": "Figure 8 (JPEG raster)",
+    "artifact": "files/figures/PMID27616982_r2/fnana-10-00083-g0008.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 9 read as an image: quantification of Cav3.2 in cerebellar Purkinje cells shows about 76 percent postsynaptic particles, about 73 percent of spine particles at the plasma membrane, linear density about 8.2 gold per micrometre on spines against near zero on somata, and about 15 percent of particles within 60 nm of the synapse edge.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 9: Cav3.2 Purkinje about 76% postsynaptic; spine density about 8.2 gold/um; about 15% within 60 nm.",
+    "surface": "figure",
+    "anchor": "Figure 9 (JPEG raster)",
+    "artifact": "files/figures/PMID27616982_r2/fnana-10-00083-g0009.jpg",
     "panel_text_relation": "text_only"
    }
   ],

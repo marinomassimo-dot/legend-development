@@ -2,8 +2,9 @@
  "schema_version": 2,
  "pmid": "40834072",
  "doi": "10.1126/sciadv.adw4682",
- "receipt": "FTR-20261021-40834072-01",
+ "receipt": "FTR-20261022-40834072-02",
  "landing": [
+  "FTR-20261022-40834072-02",
   "FTR-20261021-40834072-01",
   "repurposing_10h_scientist-b_20261021"
  ],
@@ -201,6 +202,279 @@
      "join": ""
     }
    }
+  },
+  {
+   "path": "files/figures/PMID40834072_r3/main_p2-000.png",
+   "sha256": "7f90ab289a78fc5705fce612c8e345175f090f1004aafea255a55a24e87df3a6",
+   "kind": "figure",
+   "note": "Figure 1 (main text page 2 raster, 2241 x 1631 px, 311 ppi) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "7f90ab289a78fc5705fce612c8e345175f090f1004aafea255a55a24e87df3a6",
+    "derived_from": "files/supplement/PMID40834072_r2/PMC12366697.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 2 -l 2 -png PMC12366697.1.pdf main_p2"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID40834072_r3/main_p4-000.png",
+   "sha256": "03f7727dc88eda9c55d92483772bbdb73c6ef47da358901e3a72f09a8f103ca5",
+   "kind": "figure",
+   "note": "Figure 2 (page 4 raster, 1809 x 2368 px, 333 ppi) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "03f7727dc88eda9c55d92483772bbdb73c6ef47da358901e3a72f09a8f103ca5",
+    "derived_from": "files/supplement/PMID40834072_r2/PMC12366697.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 4 -l 4 -png PMC12366697.1.pdf main_p4"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID40834072_r3/main_p6-000.png",
+   "sha256": "985b5e55b961235d2749d515a9bcd0ca45ba7ff0f88762b23c35bd73f0ced912",
+   "kind": "figure",
+   "note": "Figure 4 (page 6 raster, 2238 x 1319 px, 310 ppi) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "985b5e55b961235d2749d515a9bcd0ca45ba7ff0f88762b23c35bd73f0ced912",
+    "derived_from": "files/supplement/PMID40834072_r2/PMC12366697.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 6 -l 6 -png PMC12366697.1.pdf main_p6"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID40834072_r3/main_p7-000.png",
+   "sha256": "45983bf82a34432119aeb5341ec342290a1d280e5bb26d47b2d2ec89b5b690cc",
+   "kind": "figure",
+   "note": "Figure 5 (page 7 raster, 2239 x 2275 px, 323 ppi) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "45983bf82a34432119aeb5341ec342290a1d280e5bb26d47b2d2ec89b5b690cc",
+    "derived_from": "files/supplement/PMID40834072_r2/PMC12366697.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 7 -l 7 -png PMC12366697.1.pdf main_p7"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID40834072_r3/main_p10-000.png",
+   "sha256": "79ec0fe6799ed657f654761fa5b0404e357c63d406f6640ecf57b4889e0680a6",
+   "kind": "figure",
+   "note": "Figure 7 (page 10 raster, 2030 x 2368 px, 326 ppi) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "79ec0fe6799ed657f654761fa5b0404e357c63d406f6640ecf57b4889e0680a6",
+    "derived_from": "files/supplement/PMID40834072_r2/PMC12366697.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 10 -l 10 -png PMC12366697.1.pdf main_p10"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID40834072_r3/sm_p2-000.png",
+   "sha256": "de6da15ec19a1957646a31380e6d47a0fb599020e3cde7e6a828b1f12cba871e",
+   "kind": "figure",
+   "note": "Supplementary Figure S1 raster opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "de6da15ec19a1957646a31380e6d47a0fb599020e3cde7e6a828b1f12cba871e",
+    "derived_from": "files/supplement/PMID40834072_r2/sciadv.adw4682_sm.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 2 -l 2 -png sciadv.adw4682_sm.pdf sm_p2"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID40834072_r3/sm_p3-000.png",
+   "sha256": "972221f1c51d32d275d88dba6ad6c221c298f381e9073766db8da0151eed8e61",
+   "kind": "figure",
+   "note": "Supplementary Figure S2 raster opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "972221f1c51d32d275d88dba6ad6c221c298f381e9073766db8da0151eed8e61",
+    "derived_from": "files/supplement/PMID40834072_r2/sciadv.adw4682_sm.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 3 -l 3 -png sciadv.adw4682_sm.pdf sm_p3"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID40834072_r3/sm_p4-000.png",
+   "sha256": "8b36114906cba5c9d52d723ab55eb01027069c835ba3f06cc968cc63678578f9",
+   "kind": "figure",
+   "note": "Supplementary Figure S3 raster opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "8b36114906cba5c9d52d723ab55eb01027069c835ba3f06cc968cc63678578f9",
+    "derived_from": "files/supplement/PMID40834072_r2/sciadv.adw4682_sm.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 4 -l 4 -png sciadv.adw4682_sm.pdf sm_p4"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID40834072_r3/sm_p5-000.png",
+   "sha256": "fe169318126c21b3c0768fdb9015ee2affed8d940da79c5c6536f78df5c89d3d",
+   "kind": "figure",
+   "note": "Supplementary Figure S4 raster opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "fe169318126c21b3c0768fdb9015ee2affed8d940da79c5c6536f78df5c89d3d",
+    "derived_from": "files/supplement/PMID40834072_r2/sciadv.adw4682_sm.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 5 -l 5 -png sciadv.adw4682_sm.pdf sm_p5"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID40834072_r3/sm_p6-000.png",
+   "sha256": "791a6fabd2dd451eadb937c2213b567d51ed4e16c270d05a80409c95e46818bf",
+   "kind": "figure",
+   "note": "Supplementary Figure S5 raster opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "791a6fabd2dd451eadb937c2213b567d51ed4e16c270d05a80409c95e46818bf",
+    "derived_from": "files/supplement/PMID40834072_r2/sciadv.adw4682_sm.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 6 -l 6 -png sciadv.adw4682_sm.pdf sm_p6"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID40834072_r3/sm_p7-000.png",
+   "sha256": "f6693082925ed8c57db2c29ae584608a83f64992fca1052b6717abe413aa7e97",
+   "kind": "figure",
+   "note": "Supplementary Figure S6 raster (page 7) opened as an image again in the completing pass.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "f6693082925ed8c57db2c29ae584608a83f64992fca1052b6717abe413aa7e97",
+    "derived_from": "files/supplement/PMID40834072_r2/sciadv.adw4682_sm.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 7 -l 7 -png sciadv.adw4682_sm.pdf sm_p7"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID40834072_r3/sm_p8-000.png",
+   "sha256": "bc26622a516b1f882de91a5cd5ea4b13983fac1f943088b3952c609fb546652d",
+   "kind": "figure",
+   "note": "Supplementary Figure S7 raster opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "bc26622a516b1f882de91a5cd5ea4b13983fac1f943088b3952c609fb546652d",
+    "derived_from": "files/supplement/PMID40834072_r2/sciadv.adw4682_sm.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 8 -l 8 -png sciadv.adw4682_sm.pdf sm_p8"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID40834072_r3/sm_p9-000.png",
+   "sha256": "a5efae4bac643fe54c9978801b7b7e9d4a723b5ae358a2af88b15d59f3e30149",
+   "kind": "figure",
+   "note": "Supplementary Figure S8 raster opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "a5efae4bac643fe54c9978801b7b7e9d4a723b5ae358a2af88b15d59f3e30149",
+    "derived_from": "files/supplement/PMID40834072_r2/sciadv.adw4682_sm.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 9 -l 9 -png sciadv.adw4682_sm.pdf sm_p9"
+    }
+   }
   }
  ],
  "verbatim_locators": {
@@ -274,12 +548,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The authors compare their blocker to ethosuximide as less selective with broader pharmacology, and say they did not test whether the blocker reduces slice oscillations in the knockout, so the circuit mechanism of the behavioural rescue is inferred.",
+    "proposition": "The authors say they did not check whether the blocker affects intrathalamic oscillations in the knockout and expect it to reduce them, so the circuit mechanism of its behavioural effect is an expectation, not a measurement.",
     "snippet": "Although we did not check whether Z944 affects intrathalamic oscillations in Cntnap2−/− mice, we would expect it to reduce them",
     "surface": "body",
     "anchor": "Discussion, Pharmacological and neuromodulatory strategies for RT dysfunction in ASD",
     "artifact": "files/fulltext/PMID40834072_Jang2025_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40834072.json",
+     "entry": 8,
+     "what_changed": "2026-10-22 advisory strength scan: the proposition carried 'rescue' and a second claim (comparison with ethosuximide) that the quote does not contain; proposition narrowed to the quote. Prior wording began: The authors compare their blocker to ethosuximide as less selective with broader",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "ADVISORY_STRENGTH_SCAN"
+      ],
+      "method": "locator_audit.py --strength-scan (advisory), run 2026-10-22; no blind audit; the narrowing only brings the proposition inside its quote"
+     }
+    }
    },
    {
     "proposition": "The authors state their pharmacology does not by itself establish that T-type channels in the reticular nucleus are the cause of the behaviours; the inhibitory chemogenetic result is the supporting causal evidence.",
@@ -287,6 +573,78 @@
     "surface": "body",
     "anchor": "Discussion, Pharmacological and neuromodulatory strategies, paragraph 2",
     "artifact": "files/fulltext/PMID40834072_Jang2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Published Figure 1B read as an image: final seizure stage after the low convulsant dose in wild type is no seizure 1 of 11, spike-wave 5 of 11, myoclonic jerk 3 of 11, tonic-clonic 2 of 11, death 0 of 11, and in knockout 0 of 10, 2 of 10, 3 of 10, 2 of 10 and 3 of 10; final seizure score about 1.5 against about 2.6 (one star); latency to spike-wave about 103 against about 57 s and to myoclonic jerk about 140 against about 78 s (one star each). Counting every animal beyond the spike-wave stage this is 5 of 11 wild type and 8 of 10 knockout, not the 4 of 11 and 6 of 10 of the preprint text.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1B-D: final stage WT NS 1/11, SWD 5/11, MJ 3/11, GTCS 2/11, death 0/11; KO 0/10, 2/10, 3/10, 2/10, 3/10; score about 1.5 vs 2.6 (*); SWD latency about 103 vs 57 s (*); MJ latency about 140 vs 78 s (*).",
+    "surface": "figure",
+    "anchor": "Figure 1 panels B-D (page 2 raster)",
+    "artifact": "files/figures/PMID40834072_r3/main_p2-000.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1E to H read as an image: knockout open-field distance about 49 against about 34 (one star), three-chamber social time wild type about 325 s against about 165 s (two stars) and knockout about 230 against about 225 (ns), social index about 0.31 against about 0.01 (two stars), grooming about 45 against about 16 s (two stars), reciprocal interaction about 62 against about 119 s (two stars).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1E-H: distance KO about 49 vs WT about 34 (*); social WT about 325 vs 165 s (**), KO 230 vs 225 (ns); SI 0.31 vs 0.01 (**); grooming 45 vs 16 s (**); interaction 62 vs 119 s (**).",
+    "surface": "figure",
+    "anchor": "Figure 1 panels E-H (page 2 raster)",
+    "artifact": "files/figures/PMID40834072_r3/main_p2-000.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2 read as an image: knockout slices show more spontaneous bursts (about 1050 against about 100; one star) and longer total oscillation duration (about 45 against about 2 s; one star); electrically evoked oscillation duration about 1.3 against about 0.85 s (two stars) and bursts about 200 against about 128 (two stars); optogenetically evoked duration about 1.9 against about 0.9 s (three stars) and bursts about 23 against about 11 (one star); oscillation frequency unchanged (about 8 Hz electrical, about 6 Hz optogenetic).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2: spontaneous bursts KO about 1050 vs WT about 100 (*); evoked duration electrical about 1.3 vs 0.85 s (**), optogenetic about 1.9 vs 0.9 s (***); frequency unchanged.",
+    "surface": "figure",
+    "anchor": "Figure 2 panels C-E (page 4 raster)",
+    "artifact": "files/figures/PMID40834072_r3/main_p4-000.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 4 read as an image: sIPSC frequency in knockout reticular neurons about 5.4 against about 3 Hz (two stars) with amplitude, rise time and half-width unchanged; paired-pulse ratio about 0.54 against about 0.38 at 50 ms (two stars) and about 0.62 against about 0.50 at 100 ms (one star), converging by 500 ms; failure rate similar in both genotypes at 2 to 30 Hz.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4A, D, E: sIPSC frequency about 5.4 vs 3 Hz (**); PPR 50 ms about 0.54 vs 0.38 (**), 100 ms about 0.62 vs 0.50 (*); failure rate similar.",
+    "surface": "figure",
+    "anchor": "Figure 4 panels A, D, E (page 6 raster)",
+    "artifact": "files/figures/PMID40834072_r3/main_p6-000.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 5 read as an image: reticular fibre-photometry event number in the light about 22 (wild type) against about 39 (knockout; one star) and in the dark about 31 against about 36 (ns); dark average dF/F about 3.6 against about 5.5 (one star); social interaction raises events in both genotypes (two stars wild type, one star knockout); object no change; low-dose convulsant raises knockout events from about 45 to about 95 (one star) and not wild type.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5D-G: events light WT about 22 vs KO about 39 (*); dark dF/F about 3.6 vs 5.5 (*); social B->S rises in both; PTZ raises KO about 45 -> about 95 (*), WT no change.",
+    "surface": "figure",
+    "anchor": "Figure 5 panels D-G (page 7 raster)",
+    "artifact": "files/figures/PMID40834072_r3/main_p7-000.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 7 read as an image (hM4Di with C21, males): open-field distance knockout vehicle about 8100 against wild type about 5300 cm (two stars) and knockout C21 about 5800 (one star against knockout vehicle); social index about 0.37 wild type against about minus 0.08 knockout (one star), C21 knockout about 0.21; grooming time about 47 wild type, about 105 knockout vehicle, about 170 wild type C21 and about 55 knockout C21 (stars between wild type vehicle and both, and knockout vehicle versus wild type C21); interaction time about 120, 65, 58 and 83 s.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7E-J: distance KO veh about 8100 vs WT about 5300 (**), KO C21 about 5800 (*); SI 0.37 vs -0.08 (*); grooming about 47, 105, 170, 55 s; interaction about 120, 65, 58, 83 s.",
+    "surface": "figure",
+    "anchor": "Figure 7 panels E-J (page 10 raster)",
+    "artifact": "files/figures/PMID40834072_r3/main_p10-000.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Figures S1 to S5 read as images: S1 correlations (latency to spike-wave against social index r = 0.7105; distance travelled against social index r = -0.5794; n = 11); S2 passive properties and first-spike properties similar, last-spike fast after-hyperpolarisation lower in knockout (one star); S3 spontaneous IPSC and EPSC properties similar; S4 PV-Cre knockout replicates the social, grooming and interaction deficits (stars); S5 air-puff and tail-pinch peak dF/F about 3.7 against about 2.0 and about 4.6 against about 2.4 (one star each).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary S1-S5: r = 0.7105 and -0.5794 (n = 11); S2 last-spike fAHP lower in KO (*); S3 no difference; S4 deficits replicate in PV-Cre line; S5 peak dF/F KO about 3.7 vs 2.0 (air puff), about 4.6 vs 2.4 (tail pinch).",
+    "surface": "figure",
+    "anchor": "Supplementary Figures S1-S5 (supplement PDF rasters, pages 2-6)",
+    "artifact": "files/figures/PMID40834072_r3/sm_p2-000.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Figure S6 read as an image again: latency to spike-wave in the same animals at baseline about 30 to 160 s and with the blocker about 120 to 600 s in both genotypes (three stars; paired comparison of a baseline session with the drug session, no repeated vehicle session shown); reticular rheobase wild type about 38 to 73 pA and knockout about 22 to 50 pA with the blocker (two stars each) and action potentials at 90 pA fall from about 20 to 10 (wild type) and from about 36 to 22 (knockout).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary S6: SWD latency baseline about 30-160 s vs Z944 about 120-600 s, both genotypes (***, paired baseline vs drug session); rheobase WT 38->73, KO 22->50 pA (**); APs at 90 pA WT 20->10, KO 36->22.",
+    "surface": "figure",
+    "anchor": "Supplementary Figure S6 (supplement PDF page 7 raster)",
+    "artifact": "files/figures/PMID40834072_r3/sm_p7-000.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Figures S7 and S8 read as images: S7 habituation distance knockout vehicle about 4500 against wild type about 3200 cm (one star) and normalised by the blocker (about 3200); social sniffing knockout vehicle about 52 against wild type about 140 s (two stars) restored to about 115 with the blocker; S8 hM3Dq with C21 lowers the wild-type social index from about 0.62 to about 0.15 (two stars) and raises grooming (two stars).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary S7-S8: habituation distance KO veh about 4500 vs WT about 3200 cm (*), Z944 about 3200; social sniffing KO veh about 52 vs WT about 140 s (**), Z944 about 115; S8 WT SI 0.62 -> 0.15 (**) with C21.",
+    "surface": "figure",
+    "anchor": "Supplementary Figures S7-S8 (supplement PDF pages 8-9 rasters)",
+    "artifact": "files/figures/PMID40834072_r3/sm_p8-000.png",
     "panel_text_relation": "text_only"
    }
   ],
