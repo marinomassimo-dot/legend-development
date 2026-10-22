@@ -19579,7 +19579,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date processed:** 2026-10-21 (`FTR-20261021-24953239-01`)
 **Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
 **Status:** processed
-**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read` (updated 2026-10-22 by `BATCH_20261019_014` to the standing receipt `FTR-20261022-24953239-02`; superseded wording «`partial_fulltext_read`»), never upgraded from its receipt.
 **Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
 **Transferability:** T4 — NOT WWOX EVIDENCE
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
@@ -19587,7 +19587,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Working Model impact:** none
 **Report mentions:** research/repurposing_10h_scientist-b_20261021.md
 **Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-24953239-01` ; manifest `deepdive_manifests/PMID24953239.json`; landing [[paper_registry_current#PAPER 448]]
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261022-24953239-02` ; manifest `deepdive_manifests/PMID24953239.json`; landing [[paper_registry_current#PAPER 448]]
 **Note:** class-level record. Not medical advice.
 
 ---
@@ -19699,7 +19699,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date processed:** 2026-10-21 (`FTR-20261021-32719346-01`)
 **Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
 **Status:** processed
-**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read` (updated 2026-10-22 by `BATCH_20261019_014` to the standing receipt `FTR-20261022-32719346-02`; superseded wording «`partial_fulltext_read`»), never upgraded from its receipt.
 **Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
 **Transferability:** T4 — NOT WWOX EVIDENCE
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
@@ -19707,7 +19707,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Working Model impact:** none
 **Report mentions:** research/repurposing_10h_scientist-b_20261021.md
 **Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-32719346-01` ; manifest `deepdive_manifests/PMID32719346.json`; landing [[paper_registry_current#PAPER 453]]
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-32719346-02` ; manifest `deepdive_manifests/PMID32719346.json`; landing [[paper_registry_current#PAPER 453]]
 **Note:** class-level record. Not medical advice.
 
 ---
@@ -19819,7 +19819,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date processed:** 2026-10-21 (`FTR-20261021-35243344-01`)
 **Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
 **Status:** processed
-**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read` (updated 2026-10-22 by `BATCH_20261019_014` to the standing receipt `FTR-20261022-35243344-02`; superseded wording «`partial_fulltext_read`»), never upgraded from its receipt.
 **Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
 **Transferability:** T4 — NOT WWOX EVIDENCE
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
@@ -19827,7 +19827,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Working Model impact:** none
 **Report mentions:** research/repurposing_10h_scientist-b_20261021.md
 **Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-35243344-01` ; manifest `deepdive_manifests/PMID35243344.json`; landing [[paper_registry_current#PAPER 458]]
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-35243344-02` ; manifest `deepdive_manifests/PMID35243344.json`; landing [[paper_registry_current#PAPER 458]]
 **Note:** class-level record. Not medical advice.
 
 ---
@@ -19915,7 +19915,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date processed:** 2026-10-21 (`FTR-20261021-37275776-01`)
 **Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
 **Status:** processed
-**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read` (updated 2026-10-22 by `BATCH_20261019_014` to the standing receipt `FTR-20261022-37275776-02`; superseded wording «`partial_fulltext_read`»), never upgraded from its receipt.
 **Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
 **Transferability:** T4 — NOT WWOX EVIDENCE
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
@@ -19923,7 +19923,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Working Model impact:** none
 **Report mentions:** research/repurposing_10h_scientist-b_20261021.md
 **Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-37275776-01` ; manifest `deepdive_manifests/PMID37275776.json`; landing [[paper_registry_current#PAPER 462]]
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-37275776-02` ; manifest `deepdive_manifests/PMID37275776.json`; landing [[paper_registry_current#PAPER 462]]
 **Note:** class-level record. Not medical advice.
 
 ---
@@ -19987,7 +19987,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date processed:** 2026-10-21 (`FTR-20261021-40827489-01`)
 **Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
 **Status:** processed
-**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read` (updated 2026-10-22 by `BATCH_20261019_014` to the standing receipt `FTR-20261022-40827489-02`; superseded wording «`partial_fulltext_read`»), never upgraded from its receipt.
 **Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
 **Transferability:** T4 — NOT WWOX EVIDENCE
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
@@ -19995,7 +19995,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Working Model impact:** none
 **Report mentions:** research/repurposing_10h_scientist-b_20261021.md
 **Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-40827489-01` ; manifest `deepdive_manifests/PMID40827489.json`; landing [[paper_registry_current#PAPER 465]]
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-40827489-02` ; manifest `deepdive_manifests/PMID40827489.json`; landing [[paper_registry_current#PAPER 465]]
 **Note:** class-level record. Not medical advice.
 
 ---
@@ -20011,7 +20011,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date processed:** 2026-10-21 (`FTR-20261021-40834072-01`)
 **Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
 **Status:** processed
-**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read` (updated 2026-10-22 by `BATCH_20261019_014` to the standing receipt `FTR-20261022-40834072-02`; superseded wording «`partial_fulltext_read`»), never upgraded from its receipt.
 **Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
 **Transferability:** T4 — NOT WWOX EVIDENCE
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
@@ -20019,7 +20019,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Working Model impact:** none
 **Report mentions:** research/repurposing_10h_scientist-b_20261021.md
 **Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-40834072-01` ; manifest `deepdive_manifests/PMID40834072.json`; landing [[paper_registry_current#PAPER 466]]
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-40834072-02` ; manifest `deepdive_manifests/PMID40834072.json`; landing [[paper_registry_current#PAPER 466]]
 **Note:** class-level record. Not medical advice.
 
 ---
@@ -20083,7 +20083,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date processed:** 2026-10-21 (`FTR-20261021-42536722-01`)
 **Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
 **Status:** processed
-**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read` (updated 2026-10-22 by `BATCH_20261019_014` to the standing receipt `FTR-20261022-42536722-02`; superseded wording «`partial_fulltext_read`»), never upgraded from its receipt.
 **Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
 **Transferability:** T4 — NOT WWOX EVIDENCE
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
@@ -20091,7 +20091,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Working Model impact:** none
 **Report mentions:** research/repurposing_10h_scientist-b_20261021.md
 **Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-42536722-01` ; manifest `deepdive_manifests/PMID42536722.json`; landing [[paper_registry_current#PAPER 469]]
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-42536722-02` ; manifest `deepdive_manifests/PMID42536722.json`; landing [[paper_registry_current#PAPER 469]]
 **Note:** class-level record. Not medical advice.
 
 ---
@@ -20803,7 +20803,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date processed:** 2026-10-21 (`FTR-20261021-39625912-01`)
 **Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
 **Status:** processed
-**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read` (updated 2026-10-22 by `BATCH_20261019_014` to the standing receipt `FTR-20261022-39625912-02`; superseded wording «`partial_fulltext_read`»), never upgraded from its receipt.
 **Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
 **Transferability:** T4 — NOT WWOX EVIDENCE
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
@@ -20811,7 +20811,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Working Model impact:** none
 **Report mentions:** research/repurposing_10h_scientist-d_20261021.md
 **Next action:** none — read and registered
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-39625912-01` ; manifest `deepdive_manifests/PMID39625912.json`; landing [[paper_registry_current#PAPER 499]]
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261022-39625912-02` ; manifest `deepdive_manifests/PMID39625912.json`; landing [[paper_registry_current#PAPER 499]]
 **Note:** class-level record. Not medical advice.
 
 ---
@@ -20971,7 +20971,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date processed:** 2026-10-21 (`FTR-20261021-41999155-01`)
 **Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
 **Status:** processed
-**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read` (updated 2026-10-22 by `BATCH_20261019_014` to the standing receipt `FTR-20261022-41999155-02`; superseded wording «`partial_fulltext_read`»), never upgraded from its receipt.
 **Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
 **Transferability:** T4 — NOT WWOX EVIDENCE
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
@@ -20979,7 +20979,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Working Model impact:** none
 **Report mentions:** research/repurposing_10h_scientist-d_20261021.md
 **Next action:** none — read and registered
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-41999155-01` ; manifest `deepdive_manifests/PMID41999155.json`; landing [[paper_registry_current#PAPER 506]]
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261022-41999155-02` ; manifest `deepdive_manifests/PMID41999155.json`; landing [[paper_registry_current#PAPER 506]]
 **Note:** class-level record. Not medical advice.
 
 ---
@@ -20995,7 +20995,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date processed:** 2026-10-21 (`FTR-20261021-38015929-01`)
 **Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
 **Status:** processed
-**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read` (updated 2026-10-22 by `BATCH_20261019_014` to the standing receipt `FTR-20261022-38015929-02`; superseded wording «`partial_fulltext_read`»), never upgraded from its receipt.
 **Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
 **Transferability:** T4 — NOT WWOX EVIDENCE
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
@@ -21003,7 +21003,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Working Model impact:** none
 **Report mentions:** research/repurposing_10h_scientist-d_20261021.md
 **Next action:** none — read and registered
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-38015929-01` ; manifest `deepdive_manifests/PMID38015929.json`; landing [[paper_registry_current#PAPER 507]]
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261022-38015929-02` ; manifest `deepdive_manifests/PMID38015929.json`; landing [[paper_registry_current#PAPER 507]]
 **Note:** class-level record. Not medical advice.
 
 ---
@@ -21019,7 +21019,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date processed:** 2026-10-21 (`FTR-20261021-42481851-01`)
 **Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
 **Status:** processed
-**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read` (updated 2026-10-22 by `BATCH_20261019_014` to the standing receipt `FTR-20261022-42481851-02`; superseded wording «`partial_fulltext_read`»), never upgraded from its receipt.
 **Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
 **Transferability:** T4 — NOT WWOX EVIDENCE
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
@@ -21027,7 +21027,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Working Model impact:** none
 **Report mentions:** research/repurposing_10h_scientist-d_20261021.md
 **Next action:** none — read and registered
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-42481851-01` ; manifest `deepdive_manifests/PMID42481851.json`; landing [[paper_registry_current#PAPER 508]]
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261022-42481851-02` ; manifest `deepdive_manifests/PMID42481851.json`; landing [[paper_registry_current#PAPER 508]]
 **Note:** class-level record. Not medical advice.
 
 ---
@@ -21043,7 +21043,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date processed:** 2026-10-21 (`FTR-20261021-42446932-01`)
 **Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
 **Status:** processed
-**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read` (updated 2026-10-22 by `BATCH_20261019_014` to the standing receipt `FTR-20261022-42446932-02`; superseded wording «`partial_fulltext_read`»), never upgraded from its receipt.
 **Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
 **Transferability:** T4 — NOT WWOX EVIDENCE
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
@@ -21051,7 +21051,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Working Model impact:** none
 **Report mentions:** research/repurposing_10h_scientist-d_20261021.md
 **Next action:** none — read and registered
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-42446932-01` ; manifest `deepdive_manifests/PMID42446932.json`; landing [[paper_registry_current#PAPER 509]]
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261022-42446932-02` ; manifest `deepdive_manifests/PMID42446932.json`; landing [[paper_registry_current#PAPER 509]]
 **Note:** class-level record. Not medical advice.
 
 ---
@@ -21067,7 +21067,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date processed:** 2026-10-21 (`FTR-20261021-39762914-01`)
 **Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
 **Status:** processed
-**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read` (updated 2026-10-22 by `BATCH_20261019_014` to the standing receipt `FTR-20261022-39762914-02`; superseded wording «`partial_fulltext_read`»), never upgraded from its receipt.
 **Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
 **Transferability:** T4 — NOT WWOX EVIDENCE
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
@@ -21075,7 +21075,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Working Model impact:** none
 **Report mentions:** research/repurposing_10h_scientist-d_20261021.md
 **Next action:** none — read and registered
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-39762914-01` ; manifest `deepdive_manifests/PMID39762914.json`; landing [[paper_registry_current#PAPER 510]]
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-39762914-02` ; manifest `deepdive_manifests/PMID39762914.json`; landing [[paper_registry_current#PAPER 510]]
 **Note:** class-level record. Not medical advice.
 
 ---
@@ -21283,7 +21283,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date processed:** 2026-10-21 (`FTR-20261021-41531035-01`)
 **Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
 **Status:** processed
-**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read` (updated 2026-10-22 by `BATCH_20261019_014` to the standing receipt `FTR-20261022-41531035-02`; superseded wording «`partial_fulltext_read`»), never upgraded from its receipt.
 **Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
 **Transferability:** T4 — NOT WWOX EVIDENCE
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
@@ -21291,7 +21291,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Working Model impact:** none
 **Report mentions:** research/repurposing_10h_scientist-d_20261021.md
 **Next action:** none — read and registered
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-41531035-01` ; manifest `deepdive_manifests/PMID41531035.json`; landing [[paper_registry_current#PAPER 519]]
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261022-41531035-02` ; manifest `deepdive_manifests/PMID41531035.json`; landing [[paper_registry_current#PAPER 519]]
 **Note:** class-level record. Not medical advice.
 
 ---
@@ -21307,7 +21307,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date processed:** 2026-10-21 (`FTR-20261021-35499850-01`)
 **Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
 **Status:** processed
-**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read` (updated 2026-10-22 by `BATCH_20261019_014` to the standing receipt `FTR-20261022-35499850-02`; superseded wording «`partial_fulltext_read`»), never upgraded from its receipt.
 **Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
 **Transferability:** T4 — NOT WWOX EVIDENCE
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
@@ -21315,7 +21315,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Working Model impact:** none
 **Report mentions:** research/repurposing_10h_scientist-d_20261022b.md
 **Next action:** none — read and registered
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-35499850-01` ; manifest `deepdive_manifests/PMID35499850.json`; landing [[paper_registry_current#PAPER 520]]
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-35499850-02` ; manifest `deepdive_manifests/PMID35499850.json`; landing [[paper_registry_current#PAPER 520]]
 **Note:** class-level record. Not medical advice.
 
 ---
@@ -21379,7 +21379,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date processed:** 2026-10-21 (`FTR-20261021-39093319-01`)
 **Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
 **Status:** processed
-**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read` (updated 2026-10-22 by `BATCH_20261019_014` to the standing receipt `FTR-20261022-39093319-02`; superseded wording «`partial_fulltext_read`»), never upgraded from its receipt.
 **Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
 **Transferability:** T4 — NOT WWOX EVIDENCE
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
@@ -21387,7 +21387,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Working Model impact:** none
 **Report mentions:** research/repurposing_10h_scientist-d_20261022b.md
 **Next action:** none — read and registered
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-39093319-01` ; manifest `deepdive_manifests/PMID39093319.json`; landing [[paper_registry_current#PAPER 523]]
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261022-39093319-02` ; manifest `deepdive_manifests/PMID39093319.json`; landing [[paper_registry_current#PAPER 523]]
 **Note:** class-level record. Not medical advice.
 
 ---
@@ -21403,7 +21403,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date processed:** 2026-10-21 (`FTR-20261021-39439575-01`)
 **Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
 **Status:** processed
-**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read` (updated 2026-10-22 by `BATCH_20261019_014` to the standing receipt `FTR-20261022-39439575-02`; superseded wording «`partial_fulltext_read`»), never upgraded from its receipt.
 **Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
 **Transferability:** T4 — NOT WWOX EVIDENCE
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
@@ -21411,7 +21411,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Working Model impact:** none
 **Report mentions:** research/repurposing_10h_scientist-d_20261022b.md
 **Next action:** none — read and registered
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-39439575-01` ; manifest `deepdive_manifests/PMID39439575.json`; landing [[paper_registry_current#PAPER 524]]
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-39439575-02` ; manifest `deepdive_manifests/PMID39439575.json`; landing [[paper_registry_current#PAPER 524]]
 **Note:** class-level record. Not medical advice.
 
 ---
@@ -21427,7 +21427,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date processed:** 2026-10-21 (`FTR-20261021-40162009-01`)
 **Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
 **Status:** processed
-**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read` (updated 2026-10-22 by `BATCH_20261019_014` to the standing receipt `FTR-20261022-40162009-02`; superseded wording «`partial_fulltext_read`»), never upgraded from its receipt.
 **Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
 **Transferability:** T4 — NOT WWOX EVIDENCE
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
@@ -21435,7 +21435,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Working Model impact:** none
 **Report mentions:** research/repurposing_10h_scientist-d_20261022b.md
 **Next action:** none — read and registered
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-40162009-01` ; manifest `deepdive_manifests/PMID40162009.json`; landing [[paper_registry_current#PAPER 525]]
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261022-40162009-02` ; manifest `deepdive_manifests/PMID40162009.json`; landing [[paper_registry_current#PAPER 525]]
 **Note:** class-level record. Not medical advice.
 
 ---
@@ -21451,7 +21451,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date processed:** 2026-10-21 (`FTR-20261021-41250984-01`)
 **Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
 **Status:** processed
-**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read` (updated 2026-10-22 by `BATCH_20261019_014` to the standing receipt `FTR-20261022-41250984-02`; superseded wording «`partial_fulltext_read`»), never upgraded from its receipt.
 **Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
 **Transferability:** T4 — NOT WWOX EVIDENCE
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
@@ -21459,7 +21459,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Working Model impact:** none
 **Report mentions:** research/repurposing_10h_scientist-d_20261022b.md
 **Next action:** none — read and registered
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-41250984-01` ; manifest `deepdive_manifests/PMID41250984.json`; landing [[paper_registry_current#PAPER 526]]
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261022-41250984-02` ; manifest `deepdive_manifests/PMID41250984.json`; landing [[paper_registry_current#PAPER 526]]
 **Note:** class-level record. Not medical advice.
 
 ---
@@ -21475,7 +21475,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date processed:** 2026-10-21 (`FTR-20261021-42286026-01`)
 **Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
 **Status:** processed
-**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read` (updated 2026-10-22 by `BATCH_20261019_014` to the standing receipt `FTR-20261022-42286026-02`; superseded wording «`partial_fulltext_read`»), never upgraded from its receipt.
 **Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
 **Transferability:** T4 — NOT WWOX EVIDENCE
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
@@ -21483,7 +21483,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Working Model impact:** none
 **Report mentions:** research/repurposing_10h_scientist-d_20261022b.md
 **Next action:** none — read and registered
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-42286026-01` ; manifest `deepdive_manifests/PMID42286026.json`; landing [[paper_registry_current#PAPER 527]]
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261022-42286026-02` ; manifest `deepdive_manifests/PMID42286026.json`; landing [[paper_registry_current#PAPER 527]]
 **Note:** class-level record. Not medical advice.
 
 ---
@@ -21988,6 +21988,199 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Report mentions:** `research/repurposing_10h_scientist-b_20261022d.md`
 **Next action:** none — read and registered
 **Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-40166234-01`; manifest `deepdive_manifests/PMID40166234.json`; landing [[paper_registry_current#PAPER 548]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## LIT-0821
+**Short title:** Ramosaj 2025 — OTC pharmacological chaperones in hiPSC-derived and patient hepatocytes (substitute)
+**Authors:** Ramosaj A, Borsuk M, Underhaug J, Mathis D, Matsumoto S, Keogh A, Banz V, Pandey AV, Gougeard N, Rubio V, Martinez A, Allegri G, … et al. (16 authors listed on PubMed)
+**Year:** 2025
+**Source type:** primary research — compound screen and cellular models of an enzyme deficiency
+**Journal/source:** *J Inherit Metab Dis* 2025;48(3):e70043
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40421674 / PMC12107682 / DOI 10.1002/jimd.70043
+**Date discovered:** 2026-10-22 (first receipt `FTR-20261022-40421674-01`)
+**Date processed:** 2026-10-22 (`FTR-20261022-40421674-01`)
+**Discovery source:** the scientist-a R1d lot of 2026-10-22 (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_014`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — pharmacological chaperones, enzyme stability and activity, protein-versus-function pairing
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/repurposing_10h_scientist-a_r1d_20261022.md`
+**Next action:** none — read and registered
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261022-40421674-01`; manifest `deepdive_manifests/PMID40421674.json`; landing [[paper_registry_current#PAPER 549]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0822
+**Short title:** Beaufort 2024 — HTRA1 conformational defects: correctors, ligands and a knock-in mouse (substitute)
+**Authors:** Beaufort N, Ingendahl L, Merdanovic M, Schmidt A, Podlesainski D, Richter T, Neumann T, Kuszner M, Vetter IR, Stege P, Burston SG, Filipovic A, … et al. (38 authors listed on PubMed)
+**Year:** 2024
+**Source type:** primary research — biochemistry, cell and knock-in mouse
+**Journal/source:** *Nat Commun* 2024;15(1):5944
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39013852 / PMC11252331 / DOI 10.1038/s41467-024-49982-8
+**Date discovered:** 2026-10-22 (first receipt `FTR-20261022-39013852-01`)
+**Date processed:** 2026-10-22 (`FTR-20261022-39013852-01`)
+**Discovery source:** the scientist-a R1d lot of 2026-10-22 (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_014`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — conformational correction of a protease variant, oligomer state versus activity
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/repurposing_10h_scientist-a_r1d_20261022.md`
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-39013852-01`; manifest `deepdive_manifests/PMID39013852.json`; landing [[paper_registry_current#PAPER 550]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0823
+**Short title:** Peng 2025 — Krabbe disease GALC missense variants: activity, secretion and psychosine (substitute)
+**Authors:** Peng H, Lam YW, Lau KF, Zhou Z, Herdt AR, Gelb MH, Lee CW
+**Year:** 2025
+**Source type:** primary research — variant-panel expression study in a knockout cell line
+**Journal/source:** *J Biol Chem* 2025;301(7):110315
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40449593 / PMC12256330 / DOI 10.1016/j.jbc.2025.110315
+**Date discovered:** 2026-10-22 (first receipt `FTR-20261022-40449593-01`)
+**Date processed:** 2026-10-22 (`FTR-20261022-40449593-01`)
+**Discovery source:** the scientist-a R1d lot of 2026-10-22 (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_014`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — lysosomal enzyme variant quantity versus function
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/repurposing_10h_scientist-a_r1d_20261022.md`
+**Next action:** none — read and registered
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261022-40449593-01`; manifest `deepdive_manifests/PMID40449593.json`; landing [[paper_registry_current#PAPER 551]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0824
+**Short title:** Fan 2026 — novel GLA variant in Fabry cardiomyopathy and amenability to an active-site chaperone (substitute)
+**Authors:** Fan Y, Cui C, Zhang X, Hu C, Xu A, Wang L, Li H, Zhu X, Niu F
+**Year:** 2026
+**Source type:** primary research — pedigree report with cell-model functional work
+**Journal/source:** *Open Heart* 2026;13(1):e004016
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42161426 / PMC13202032 / DOI 10.1136/openhrt-2026-004016
+**Date discovered:** 2026-10-22 (first receipt `FTR-20261022-42161426-01`)
+**Date processed:** 2026-10-22 (`FTR-20261022-42161426-01`)
+**Discovery source:** the scientist-a R1d lot of 2026-10-22 (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_014`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — enzyme variant, protein presence versus activity, active-site chaperone
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/repurposing_10h_scientist-a_r1d_20261022.md`
+**Next action:** none — read and registered
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261022-42161426-01`; manifest `deepdive_manifests/PMID42161426.json`; landing [[paper_registry_current#PAPER 552]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0825
+**Short title:** Choi 2025 — HDAC6 inhibitor in a Pah missense mouse model of phenylketonuria (substitute)
+**Authors:** Choi JE, Park S, Song H, Hwang IT, Jung SC, Kim HS
+**Year:** 2025
+**Source type:** primary research — mouse model
+**Journal/source:** *Sci Rep* 2025;15(1):44998
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41274966 / PMC12748783 / DOI 10.1038/s41598-025-29143-7
+**Date discovered:** 2026-10-22 (first receipt `FTR-20261022-41274966-01`)
+**Date processed:** 2026-10-22 (`FTR-20261022-41274966-01`)
+**Discovery source:** the scientist-a R1d lot of 2026-10-22 (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_014`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — proteostasis modulation of an enzyme missense variant, protein versus function readout
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/repurposing_10h_scientist-a_r1d_20261022.md`
+**Next action:** none — read and registered
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261022-41274966-01`; manifest `deepdive_manifests/PMID41274966.json`; landing [[paper_registry_current#PAPER 553]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0826
+**Short title:** Thiel 2026 — oral zinc in GNAO1-related disorders, open-label single-arm pilot (substitute, precedent)
+**Authors:** Thiel M, Martakis K, Duran I, Dafsari HS, Schiller P, Weliwitage J, Hero B, Larasati Y, Koval A, Katanaev VL, Koy A
+**Year:** 2026
+**Source type:** open-label single-arm pilot trial
+**Journal/source:** *eClinicalMedicine* 2026;98:104092
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42542632 / PMC13427569 / DOI 10.1016/j.eclinm.2026.104092
+**Date discovered:** 2026-10-22 (first receipt `FTR-20261022-42542632-01`)
+**Date processed:** 2026-10-22 (`FTR-20261022-42542632-01`)
+**Discovery source:** the scientist-d R4c lot of 2026-10-22 (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_014`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and external-comparator precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/repurposing_r4c_scientist-d_20261022.md`
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-42542632-01`; manifest `deepdive_manifests/PMID42542632.json`; landing [[paper_registry_current#PAPER 554]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0827
+**Short title:** Aartsma-Rus 2026 — eligibility for individualised antisense treatment in neurodevelopmental disease, consensus (substitute, precedent)
+**Authors:** Aartsma-Rus A, de Gusmao CM, Demarest S, van Roon-Mom W, Graessner H, Bush LW, Kogel C, Yu TW, Synofzik M, Schuele R
+**Year:** 2026
+**Source type:** consensus statement (review)
+**Journal/source:** *Cell Rep Med* 2026;7(9):102989
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42594875 / PMC13589468 / DOI 10.1016/j.xcrm.2026.102989
+**Date discovered:** 2026-10-22 (first receipt `FTR-20261022-42594875-01`)
+**Date processed:** 2026-10-22 (`FTR-20261022-42594875-01`)
+**Discovery source:** the scientist-d R4c lot of 2026-10-22 (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_014`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — N-of-1 and individualised antisense eligibility criteria across neurodevelopmental diseases
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/repurposing_r4c_scientist-d_20261022.md`
+**Next action:** none — read and registered
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261022-42594875-01`; manifest `deepdive_manifests/PMID42594875.json`; landing [[paper_registry_current#PAPER 555]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0828
+**Short title:** Acosta 2026 — outcome strategies for clinical trials in neuropaediatric rare diseases, expert review (substitute, precedent)
+**Authors:** Acosta MT, Aibar JA, Arango C, Cirauqui EA, Baeza C, Berry-Kravis E, Bishop KI, Busner J, Chapman C, Chaumette B, Del Cerro I, Diaz JC, … et al. (34 authors listed on PubMed)
+**Year:** 2026
+**Source type:** expert review
+**Journal/source:** *Neurosci Appl* 2026;5:107021
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42494992 / PMC13393641 / DOI 10.1016/j.nsa.2026.107021
+**Date discovered:** 2026-10-22 (first receipt `FTR-20261022-42494992-01`)
+**Date processed:** 2026-10-22 (`FTR-20261022-42494992-01`)
+**Discovery source:** the scientist-d R4c lot of 2026-10-22 (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_014`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — outcome assessment, digital health technologies and natural-history data in neuropaediatric rare-disease trials
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/repurposing_r4c_scientist-d_20261022.md`
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-42494992-01`; manifest `deepdive_manifests/PMID42494992.json`; landing [[paper_registry_current#PAPER 556]]
 **Note:** class-level record. Not medical advice.
 
 ---

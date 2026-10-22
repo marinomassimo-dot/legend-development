@@ -41,3 +41,13 @@ Completing receipts (staged under `receipt_staging/scientist-d/`, each names its
 
 ### LOCATOR TRIPLES FOR BLIND AUDIT
 49 triples audited blind by a separate agent: 45 SUPPORTED, 4 not (1 NOT_IN_SOURCE, 3 OVERSHOOT); all narrowed before landing, `contradicts_locator` on the three already-committed entries; record in `page_adjudications/locator_audit_R4c_20261022.md`.
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_014`
+
+Propagated by `BATCH_20261019_014` (2026-10-22, MINOR, `WM_v7.27` preserved; integrator ACTOR_ID `integrator`, task `INTEG-BATCH-20261019-014`). The candidate has no ops and proposes no claim; what it supports was landed as registry presence only.
+
+- **Landed:** `PAPER` and `LIT` identity records for 42542632, 42594875 and 42494992 (T4, NOT WWOX EVIDENCE, WWOX count 0 measured on the text artefacts, identity from PubMed 2026-10-22, findings not restated); the evidence depth, receipt, coverage, locator count and surfaces of the records of 38015929, 40162009, 41531035, 42446932, 42481851 and 42286026 brought to their standing `-02` receipts (already in the ledger); the blind audit file `page_adjudications/locator_audit_R4c_20261022.md` cited as a sample audit (45 SUPPORTED of 49; the four adverse triples were narrowed before landing) for the manifests it names, and 42481851, which it does not name, left with its audit owed.
+- **Not landed:** the three staged leads of section 4 (all `IPOTESI`, none appended to any ledger); the Chong 2023 reading-queue entry (still closed); no claim, dose or suitability statement.

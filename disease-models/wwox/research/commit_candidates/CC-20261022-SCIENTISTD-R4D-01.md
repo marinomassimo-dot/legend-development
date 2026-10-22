@@ -45,3 +45,13 @@ The nine R4c receipts (`FTR-20261022-<PMID>-01` and `-02` of the previous lot) a
 
 ### LOCATOR TRIPLES FOR BLIND AUDIT
 87 triples audited blind by two separate agents: 30 SUPPORTED, 57 not (all NARROW, none unsupported); all narrowed before landing, no already-landed entry changed; record in `page_adjudications/locator_audit_R4d_20261022.md`.
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_014`
+
+Propagated by `BATCH_20261019_014` (2026-10-22, MINOR, `WM_v7.27` preserved; integrator ACTOR_ID `integrator`, task `INTEG-BATCH-20261019-014`). The candidate has no ops and proposes no claim; what it supports was landed as registry depth only.
+
+- **Landed:** the evidence depth, receipt, coverage, locator count and surfaces of the records of 35499850, 39093319, 41250984, 39439575, 39625912, 39762914 and 41999155 brought to their standing `-02` receipts (already in the ledger; depth `complete` for 39093319, 41250984, 39625912, 41999155 and `partial` for the other three, as the receipts hold it); `page_adjudications/locator_audit_R4d_20261022.md` cited as a sample audit (30 SUPPORTED, 57 NARROW, none unsupported; all narrowed before landing).
+- **Not landed:** the three staged leads of section 4 (all `IPOTESI`); the two limits paragraphs are drafting guidance in the note and add no field to any card; the P5 comparison is a non-canonical file already committed by its author.
