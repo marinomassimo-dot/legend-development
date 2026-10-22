@@ -456,7 +456,7 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 **Journal/source:** *Acta Neuropathologica Communications*
 **Identifier:** PMID 32000863 / DOI 10.1186/s40478-020-0883-3
 **Status:** processed
-**Evidence depth:** complete_fulltext_read — `FTR-20260804-32000863-01`; manifest `deepdive_manifests/PMID32000863.json` (25 locators, schema v2, strict PASS, 3 declared gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
+**Evidence depth:** complete_fulltext_read — `FTR-20260804-32000863-01`; manifest `deepdive_manifests/PMID32000863.json` (31 locators [corrected 2026-10-22 from «25 locators» by `BATCH_20261019_012` — a **stale total**, not a mis-measurement: the manifest held exactly 25 entries until 2026-10-21, when the R2 re-read `FTR-20261021-32000863-03` appended the six entries 26 to 31 (git: the manifest at the commit before that append holds 25), so the figure's attribution to `FTR-20260804-32000863-01` stands for entries 1 to 25. Re-derived today from the manifest on disk as `len(verbatim_locators['entries'])`], schema v2, strict PASS, 3 declared gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
 **Primary pathway:** P3 — prenatal structure / GSK3β
 **Secondary pathway:** P4 / P1
 **Model/species:** mouse
@@ -14867,6 +14867,2672 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Note:** class-level record; no individual-level detail. No dose, route or schedule is reproduced, including for the cell-culture work. Not medical advice.
 
 ---
+## PAPER 429
+**Short title:** Mathieson 2018 — protein turnover measured systematically in primary cells
+**Full title:** Systematic analysis of protein turnover in primary cells.
+**Authors:** Mathieson T, Franken H, Kosinski J, Kurzawa N, Zinn N, Sweetman G, Poeckel D, Ratnu VS, Schramm M, Becher I, Steidel M, Noh KM, … et al. (16 authors listed on PubMed)
+**Year:** 2018
+**Source type:** primary research — proteomics method and resource
+**Journal/source:** *Nat Commun* 2018;9(1):689
+**Identifier:** PMID 29449567 / PMC5814408 / DOI 10.1038/s41467-018-03106-1
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-29449567-01`, which was in the ledger with no registry identity; reader: group R1, `research/repurposing_10h_scientist-a_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-29449567-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID29449567.json` (schema v2, **9** persisted verbatim locators; surfaces: 7 body, 2 figure); artefact `files/fulltext/PMID29449567_Mathieson2018_PMC5814408.xml` (sha256 `22049b482118386f04ba9c08119fc246bfa402c403d17191a91928eebbf72b81`); unread or absent (receipt): supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Model/species:** primary mouse and human cells (proteome-wide turnover)
+**Genotype/model:** none — a turnover resource across the proteome; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R1 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — missense-protein proteostasis precedents (chaperones, degradation and variant-abundance work in other proteins) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — proteomics method and resource; primary mouse and human cells (proteome-wide turnover). Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-a_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0701]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 430
+**Short title:** Matreyek 2018 — VAMP-seq: protein variant abundance by massively parallel sequencing
+**Full title:** Multiplex assessment of protein variant abundance by massively parallel sequencing.
+**Authors:** Matreyek KA, Starita LM, Stephany JJ, Martin B, Chiasson MA, Gray VE, Kircher M, Khechaduri A, Dines JN, Hause RJ, Bhatia S, Evans WE, … et al. (16 authors listed on PubMed)
+**Year:** 2018
+**Source type:** primary research — method paper
+**Journal/source:** *Nat Genet* 2018;50(6):874-882
+**Identifier:** PMID 29785012 / PMC5980760 / DOI 10.1038/s41588-018-0122-z
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-29785012-01`, which was in the ledger with no registry identity; reader: group R1, `research/repurposing_10h_scientist-a_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-29785012-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID29785012.json` (schema v2, **14** persisted verbatim locators; surfaces: 11 body, 3 figure); artefact `files/fulltext/PMID29785012_Matreyek2018_PMC5980760.xml` (sha256 `bb8df710343cc1f23199a1df2b0eccacff4690d3047baea32a7b8df855969610`); unread or absent (receipt): supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Model/species:** human cell line (library of variants of two proteins, PTEN and TPMT)
+**Genotype/model:** variant libraries of PTEN and TPMT; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R1 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — missense-protein proteostasis precedents (chaperones, degradation and variant-abundance work in other proteins) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — method paper; human cell line (library of variants of two proteins, PTEN and TPMT). Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-a_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0702]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 431
+**Short title:** Guiberson 2018 — Munc18-1 (STXBP1) missense dysfunction rescued by chemical chaperones
+**Full title:** Mechanism-based rescue of Munc18-1 dysfunction in varied encephalopathies by chemical chaperones.
+**Authors:** Guiberson NGL, Pineda A, Abramov D, Kharel P, Carnazza KE, Wragg RT, Dittman JS, Burré J
+**Year:** 2018
+**Source type:** primary research — cell-biology mechanism and rescue
+**Journal/source:** *Nat Commun* 2018;9(1):3986
+**Identifier:** PMID 30266908 / PMC6162227 / DOI 10.1038/s41467-018-06507-4
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-30266908-01`, which was in the ledger with no registry identity; reader: group R1, `research/repurposing_10h_scientist-a_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-30266908-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID30266908.json` (schema v2, **16** persisted verbatim locators; surfaces: 11 body, 5 figure); artefact `files/fulltext/PMID30266908_Guiberson2018_PMC6162227.xml` (sha256 `ce24646e70385a7a7c962a99cb62bdb48c41a69ccfc2154166ef414c4ac72dfd`); unread or absent (receipt): supplementary `captions_only`, tables `not_present`
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Model/species:** cell-biology models of Munc18-1 missense variants
+**Genotype/model:** STXBP1/Munc18-1 variants; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R1 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — missense-protein proteostasis precedents (chaperones, degradation and variant-abundance work in other proteins) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — cell-biology mechanism and rescue; cell-biology models of Munc18-1 missense variants. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-a_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0703]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 432
+**Short title:** Abbink 2019 — vanishing white matter: integrated stress response as a therapy target
+**Full title:** Vanishing white matter: deregulated integrated stress response as therapy target.
+**Authors:** Abbink TEM, Wisse LE, Jaku E, Thiecke MJ, Voltolini-González D, Fritsen H, Bobeldijk S, Ter Braak TJ, Polder E, Postma NL, Bugiani M, Struijs EA, … et al. (18 authors listed on PubMed)
+**Year:** 2019
+**Source type:** primary research — knock-in mouse and patient tissue
+**Journal/source:** *Ann Clin Transl Neurol* 2019;6(8):1407-1422
+**Identifier:** PMID 31402619 / PMC6689685 / DOI 10.1002/acn3.50826
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-31402619-01`, which was in the ledger with no registry identity; reader: group R1, `research/repurposing_10h_scientist-a_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R1_20261022.md` and `locator_audit_deep_cards_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-31402619-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID31402619.json` (schema v2, **15** persisted verbatim locators; surfaces: 12 body, 2 figure, 1 supplement); artefact `files/fulltext/PMID31402619_Abbink2019_PMC6689685.xml` (sha256 `52eb6a4e75c1b84acd479e549794c9df43597b08cd98dc446428d31d4a0bbcb2`); unread or absent (receipt): supplementary `captions_only`, tables `not_present`
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Model/species:** knock-in mice and patient tissue (leukodystrophy, myelin endpoint)
+**Genotype/model:** EIF2B-related missense disease; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R1 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — missense-protein proteostasis precedents (chaperones, degradation and variant-abundance work in other proteins) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — knock-in mouse and patient tissue; knock-in mice and patient tissue (leukodystrophy, myelin endpoint). Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-a_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0704]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 433
+**Short title:** Lukas 2020 — Fabry disease: amenability of GLA variants to a pharmacological chaperone
+**Full title:** Assessment of Gene Variant Amenability for Pharmacological Chaperone Therapy with 1-Deoxygalactonojirimycin in Fabry Disease.
+**Authors:** Lukas J, Cimmaruta C, Liguori L, Pantoom S, Iwanov K, Petters J, Hund C, Bunschkowski M, Hermann A, Cubellis MV, Rolfs A
+**Year:** 2020
+**Source type:** primary research — cell-based amenability assay
+**Journal/source:** *Int J Mol Sci* 2020;21(3)
+**Identifier:** PMID 32023956 / PMC7037350 / DOI 10.3390/ijms21030956
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-32023956-01`, which was in the ledger with no registry identity; reader: group R1, `research/repurposing_10h_scientist-a_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R1_20261022.md` and `locator_audit_deep_cards_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-32023956-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID32023956.json` (schema v2, **14** persisted verbatim locators; surfaces: 12 body, 2 figure); artefact `files/fulltext/PMID32023956_Lukas2020_PMC7037350.xml` (sha256 `b2e27552a0c0f3ad7f44a103cadc4ea121725f8aab3d72466fba46af3d8f676e`); unread or absent (receipt): supplementary `not_present`, tables `not_read`
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Model/species:** HEK293H overexpression of GLA variants, compared with a regulatory assay
+**Genotype/model:** GLA variants; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R1 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — missense-protein proteostasis precedents (chaperones, degradation and variant-abundance work in other proteins) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — cell-based amenability assay; HEK293H overexpression of GLA variants, compared with a regulatory assay. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-a_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0705]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 434
+**Short title:** Gersing 2021 — degradation pathway of a disease-linked aspartoacylase variant
+**Full title:** Mapping the degradation pathway of a disease-linked aspartoacylase variant.
+**Authors:** Gersing SK, Wang Y, Grønbæk-Thygesen M, Kampmeyer C, Clausen L, Willemoës M, Andréasson C, Stein A, Lindorff-Larsen K, Hartmann-Petersen R
+**Year:** 2021
+**Source type:** primary research — yeast and human-cell degradation mapping
+**Journal/source:** *PLoS Genet* 2021;17(4):e1009539
+**Identifier:** PMID 33914734 / PMC8084241 / DOI 10.1371/journal.pgen.1009539
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-33914734-01`, which was in the ledger with no registry identity; reader: group R1, `research/repurposing_10h_scientist-a_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_deep_cards_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-33914734-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID33914734.json` (schema v2, **16** persisted verbatim locators; surfaces: 14 body, 2 figure); artefact `files/fulltext/PMID33914734_Gersing2021_PMC8084241.xml` (sha256 `b21196f0f48864b045617e2d78f5e99ef215776f6cfca90d6fe4565be8ad63ea`); unread or absent (receipt): supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Model/species:** yeast and human cells (overexpression), with molecular dynamics
+**Genotype/model:** aspartoacylase (ASPA) variants; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R1 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — missense-protein proteostasis precedents (chaperones, degradation and variant-abundance work in other proteins) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — yeast and human-cell degradation mapping; yeast and human cells (overexpression), with molecular dynamics. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-a_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0706]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 435
+**Short title:** Matreyek 2021 — PTEN variant activity and abundance integrated into variant subgroups
+**Full title:** Integrating thousands of PTEN variant activity and abundance measurements reveals variant subgroups and new dominant negatives in cancers.
+**Authors:** Matreyek KA, Stephany JJ, Ahler E, Fowler DM
+**Year:** 2021
+**Source type:** primary research — computational integration with cell-based mapping
+**Journal/source:** *Genome Med* 2021;13(1):165
+**Identifier:** PMID 34649609 / PMC8518224 / DOI 10.1186/s13073-021-00984-x
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-34649609-01`, which was in the ledger with no registry identity; reader: group R1, `research/repurposing_10h_scientist-a_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-34649609-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID34649609.json` (schema v2, **13** persisted verbatim locators; surfaces: 10 body, 3 figure); artefact `files/fulltext/PMID34649609_Matreyek2021_PMC8518224.xml` (sha256 `c281f9484143d8d4f8390389986dfc7663291498503740271f31c120ae485718`); unread or absent (receipt): supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Model/species:** human cell variant-effect datasets for PTEN
+**Genotype/model:** PTEN variants; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R1 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — missense-protein proteostasis precedents (chaperones, degradation and variant-abundance work in other proteins) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — computational integration with cell-based mapping; human cell variant-effect datasets for PTEN. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-a_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0707]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 436
+**Short title:** Clausen 2024 — a mutational atlas for Parkin proteostasis
+**Full title:** A mutational atlas for Parkin proteostasis.
+**Authors:** Clausen L, Voutsinos V, Cagiada M, Johansson KE, Grønbæk-Thygesen M, Nariya S, Powell RL, Have MKN, Oestergaard VH, Stein A, Fowler DM, Lindorff-Larsen K, Hartmann-Petersen R
+**Year:** 2024
+**Source type:** primary research — VAMP-seq variant atlas with library-wide perturbations
+**Journal/source:** *Nat Commun* 2024;15(1):1541
+**Identifier:** PMID 38378758 / PMC10879094 / DOI 10.1038/s41467-024-45829-4
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-38378758-01`, which was in the ledger with no registry identity; reader: group R1, `research/repurposing_10h_scientist-a_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R1_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-38378758-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID38378758.json` (schema v2, **16** persisted verbatim locators; surfaces: 12 body, 4 figure); artefact `files/fulltext/PMID38378758_Clausen2024_PMC10879094.xml` (sha256 `a8e2eba966a9424550f918669a4f320d66ee594b9b736831f30f1910501b6510`); unread or absent (receipt): supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Model/species:** human cell landing-pad VAMP-seq library of Parkin (PRKN) variants
+**Genotype/model:** PRKN variants; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R1 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — missense-protein proteostasis precedents (chaperones, degradation and variant-abundance work in other proteins) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — VAMP-seq variant atlas with library-wide perturbations; human cell landing-pad VAMP-seq library of Parkin (PRKN) variants. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-a_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading. The Parkin negative is bounded as the audited reading bounded it: one compound at one concentration for one 24-hour exposure, a pooled flow histogram, a local effect allowed by the authors, who wrote that it «did not confer any substantial differences»; it was not the only probe (bortezomib, PSMD14 siRNA and cold incubation also shifted the population). It supports «one activity modulator was not a global abundance stabiliser», never «small molecules cannot stabilise».
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0708]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 437
+**Short title:** Pandey 2024 — monogenic disorders and protein-folding free energy
+**Full title:** Most Monogenic Disorders Are Caused by Mutations Altering Protein Folding Free Energy.
+**Authors:** Pandey P, Alexov E
+**Year:** 2024
+**Source type:** computational analysis — no experiments
+**Journal/source:** *Int J Mol Sci* 2024;25(4)
+**Identifier:** PMID 38396641 / PMC10888012 / DOI 10.3390/ijms25041963
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-38396641-01`, which was in the ledger with no registry identity; reader: group R1, `research/repurposing_10h_scientist-a_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-38396641-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID38396641.json` (schema v2, **13** persisted verbatim locators; surfaces: 8 body, 4 figure, 1 table); artefact `files/fulltext/PMID38396641_Pandey2024_PMC10888012.xml` (sha256 `e6797f214cd8de463737579ba5c6aece3aae0fd88eb10b5be5e5fcc4137fcf88`); unread or absent (receipt): supplementary `not_read`
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Model/species:** database of disease mutations with stability predictors (in silico)
+**Genotype/model:** many genes; WWOX not measured
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R1 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — missense-protein proteostasis precedents (chaperones, degradation and variant-abundance work in other proteins) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: computational analysis — no experiments; database of disease mutations with stability predictors (in silico). Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-a_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0709]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 438
+**Short title:** Poliquin 2024 — GABRG2 Q390X: ER chaperones and mutant-protein degradation
+**Full title:** Modulating Endoplasmic Reticulum Chaperones and Mutant Protein Degradation in GABRG2(Q390X) Associated with Genetic Epilepsy with Febrile Seizures Plus and Dravet Syndrome.
+**Authors:** Poliquin S, Nwosu G, Randhave K, Shen W, Flamm C, Kang JQ
+**Year:** 2024
+**Source type:** primary research — cell and small animal EEG
+**Journal/source:** *Int J Mol Sci* 2024;25(9)
+**Identifier:** PMID 38731820 / PMC11083348 / DOI 10.3390/ijms25094601
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-38731820-01`, which was in the ledger with no registry identity; reader: group R1, `research/repurposing_10h_scientist-a_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R1_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-38731820-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID38731820.json` (schema v2, **18** persisted verbatim locators; surfaces: 15 body, 3 figure); artefact `files/fulltext/PMID38731820_Poliquin2024_PMC11083348.xml` (sha256 `56c4d87b5eeda80116ba5be971b2c3440034a759038839e7bd46d8bf530ff335`); unread or absent (receipt): supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Model/species:** HEK293T overexpression and a small within-animal EEG experiment
+**Genotype/model:** GABRG2 Q390X; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R1 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — missense-protein proteostasis precedents (chaperones, degradation and variant-abundance work in other proteins) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — cell and small animal EEG; HEK293T overexpression and a small within-animal EEG experiment. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-a_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0710]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 439
+**Short title:** Grønbæk-Thygesen 2024 — deep mutational scanning of aspartoacylase: degradation against toxicity
+**Full title:** Deep mutational scanning reveals a correlation between degradation and toxicity of thousands of aspartoacylase variants.
+**Authors:** Grønbæk-Thygesen M, Voutsinos V, Johansson KE, Schulze TK, Cagiada M, Pedersen L, Clausen L, Nariya S, Powell RL, Stein A, Fowler DM, Lindorff-Larsen K, Hartmann-Petersen R
+**Year:** 2024
+**Source type:** primary research — deep mutational scan with flow cytometry and RNA-sequencing follow-up
+**Journal/source:** *Nat Commun* 2024;15(1):4026
+**Identifier:** PMID 38740822 / PMC11091098 / DOI 10.1038/s41467-024-48481-0
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-38740822-01`, which was in the ledger with no registry identity; reader: group R1, `research/repurposing_10h_scientist-a_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-38740822-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID38740822.json` (schema v2, **14** persisted verbatim locators; surfaces: 11 body, 3 figure); artefact `files/fulltext/PMID38740822_Gronbaek2024_PMC11091098.xml` (sha256 `6b0512a00fec5ae457a77b7d94e8863ff64d79f23aaf68d874c0b66ce0385170`); unread or absent (receipt): supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Model/species:** human cell landing-pad library of ASPA variants
+**Genotype/model:** ASPA variants; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R1 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — missense-protein proteostasis precedents (chaperones, degradation and variant-abundance work in other proteins) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — deep mutational scan with flow cytometry and RNA-sequencing follow-up; human cell landing-pad library of ASPA variants. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-a_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0711]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 440
+**Short title:** Wang 2024 — pharmacological chaperones restore GABA(A) receptor variant proteostasis
+**Full title:** Pharmacological chaperones restore proteostasis of epilepsy-associated GABA(A) receptor variants.
+**Authors:** Wang YJ, Seibert H, Ahn LY, Schaffer AE, Mu TW
+**Year:** 2024
+**Source type:** primary research — cell overexpression with one knock-in iPSC line
+**Journal/source:** *Pharmacol Res* 2024;208:107356
+**Identifier:** PMID 39216838 / PMC11457296 / DOI 10.1016/j.phrs.2024.107356
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-39216838-01`, which was in the ledger with no registry identity; reader: group R1, `research/repurposing_10h_scientist-a_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-39216838-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID39216838.json` (schema v2, **20** persisted verbatim locators; surfaces: 15 body, 5 figure); artefact `files/fulltext/PMID39216838_Wang2024_PMC11457296.xml` (sha256 `d2e624527d0beea8fd3fe833ac6560cc5ca47ac7a92cad503df0e5aded3bc1d5`); unread or absent (receipt): supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Model/species:** HEK293T overexpression plus one knock-in iPSC line
+**Genotype/model:** epilepsy-associated GABA(A) receptor variants; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R1 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — missense-protein proteostasis precedents (chaperones, degradation and variant-abundance work in other proteins) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — cell overexpression with one knock-in iPSC line; HEK293T overexpression plus one knock-in iPSC line. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-a_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0712]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 441
+**Short title:** Shah 2025 — GAT-1 (SLC6A1) glycine-443 mutations: rescue
+**Full title:** Rescue of Epilepsy-Associated Mutations of the Highly Conserved Glycine Residue 443 in the Human GABA Transporter 1.
+**Authors:** Shah N, Kovalchuk V, Zerlotti R, Cole K, Bazzone A, Sitte HH, Hummel T, Kasture AS, Sucic S
+**Year:** 2025
+**Source type:** primary research — cell, vesicle electrophysiology and fly
+**Journal/source:** *FASEB J* 2025;39(11):e70614
+**Identifier:** PMID 40485335 / PMC12146831 / DOI 10.1096/fj.202403159RR
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-40485335-01`, which was in the ledger with no registry identity; reader: group R1, `research/repurposing_10h_scientist-a_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-40485335-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID40485335.json` (schema v2, **13** persisted verbatim locators; surfaces: 9 body, 4 figure); artefact `files/fulltext/PMID40485335_Shah2025_PMC12146831.xml` (sha256 `7cf47b9080ec95603ada7891b49d07d0174aa145e5f4c2833777afe85062af4c`); unread or absent (receipt): supplementary `not_read`
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Model/species:** HEK293 overexpression, membrane-vesicle electrophysiology and flies
+**Genotype/model:** SLC6A1/GAT-1 G443 variants; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R1 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — missense-protein proteostasis precedents (chaperones, degradation and variant-abundance work in other proteins) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — cell, vesicle electrophysiology and fly; HEK293 overexpression, membrane-vesicle electrophysiology and flies. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-a_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0713]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 442
+**Short title:** Fu 2025 — GABA(A) receptor trafficking-deficient variants: IRE1 activation
+**Full title:** Improving Proteostasis of Trafficking-Deficient GABA(A) Receptor Variants by Activating IRE1.
+**Authors:** Fu X, Wang YJ, Lee K, Ahn LY, Chen X, Harvey BT, Wang M, Seibert H, Zhang PP, Guerrero A, Schaffer AE, Richards CI, … et al. (15 authors listed on PubMed)
+**Year:** 2025
+**Source type:** primary research — stable cell lines with one knock-in iPSC line
+**Journal/source:** *ACS Chem Neurosci* 2025;16(23):4429-4445
+**Identifier:** PMID 41178115 / PMC12679549 / DOI 10.1021/acschemneuro.5c00227
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-41178115-01`, which was in the ledger with no registry identity; reader: group R1, `research/repurposing_10h_scientist-a_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-41178115-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID41178115.json` (schema v2, **15** persisted verbatim locators; surfaces: 10 body, 5 figure); artefact `files/fulltext/PMID41178115_Fu2025_PMC12679549.xml` (sha256 `3f413aa8274b3f586b92cf16e1749e7d36389cefb04d7184987944d2602edee7`); unread or absent (receipt): supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Model/species:** HEK293T stable lines plus one knock-in iPSC line
+**Genotype/model:** GABA(A) receptor variants; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R1 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — missense-protein proteostasis precedents (chaperones, degradation and variant-abundance work in other proteins) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — stable cell lines with one knock-in iPSC line; HEK293T stable lines plus one knock-in iPSC line. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-a_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0714]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 443
+**Short title:** DeLeeuw 2026 — 4-phenylbutyrate in SLC6A1 disorders: pharmacochaperoning over HDAC inhibition
+**Full title:** Unraveling 4-Phenylbutyrate's Therapeutic Role in SLC6A1 Disorders: Pharmacochaperoning Over HDAC Inhibition.
+**Authors:** DeLeeuw MB, Randhave K, Anand E, Debbie Song Z, Shen W, Kang JQ
+**Year:** 2026
+**Source type:** primary research — cell overexpression and knock-in mice
+**Journal/source:** *Ann Clin Transl Neurol* 2026
+**Identifier:** PMID 42157447 / PMC13394997 / DOI 10.1002/acn3.70430
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-42157447-01`, which was in the ledger with no registry identity; reader: group R1, `research/repurposing_10h_scientist-a_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R1_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-42157447-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID42157447.json` (schema v2, **20** persisted verbatim locators; surfaces: 13 body, 7 figure); artefact `files/fulltext/PMID42157447_DeLeeuw2026_PMC13394997.xml` (sha256 `9090b797bb7084def2c13d2c5e5c35bbac5af2e6cb7415375490b33398c70232`); unread or absent (receipt): supplementary `not_present`, tables `not_present`
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Model/species:** HEK293T overexpression plus two knock-in mouse lines (SLC6A1 and GABRG2)
+**Genotype/model:** SLC6A1 and GABRG2 variants; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R1 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — missense-protein proteostasis precedents (chaperones, degradation and variant-abundance work in other proteins) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — cell overexpression and knock-in mice; HEK293T overexpression plus two knock-in mouse lines (SLC6A1 and GABRG2). Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-a_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0715]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 444
+**Short title:** Frick 2026 — zebrafish phenotype screen argues against repurposing 4-phenylbutyrate for STXBP1 disorders
+**Full title:** Virtual Screening and Zebrafish Phenotype-Based Evaluation Argues Against Repurposing 4-Phenylbutyrate for STXBP1-Related Disorders.
+**Authors:** Frick A, Whyte-Fagundes P, Baraban SC
+**Year:** 2026
+**Source type:** primary research — virtual screening and zebrafish larval assays
+**Journal/source:** *Pharmacol Res Perspect* 2026;14(3):e70285
+**Identifier:** PMID 42268630 / PMC13251787 / DOI 10.1002/prp2.70285
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-42268630-01`, which was in the ledger with no registry identity; reader: group R1, `research/repurposing_10h_scientist-a_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-42268630-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID42268630.json` (schema v2, **14** persisted verbatim locators; surfaces: 11 body, 3 figure); artefact `files/fulltext/PMID42268630_Frick2026_PMC13251787.xml` (sha256 `46339bfe62204c7a61143732ab88f2c4b1b3a81e76c820dceeedf0796d2fd949`); unread or absent (receipt): supplementary `not_read`
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Model/species:** zebrafish larvae (behaviour and local field potential), null-allele model
+**Genotype/model:** stxbp1 null allele; protein not measured; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R1 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — missense-protein proteostasis precedents (chaperones, degradation and variant-abundance work in other proteins) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — virtual screening and zebrafish larval assays; zebrafish larvae (behaviour and local field potential), null-allele model. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-a_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading. It is a null-allele zebrafish negative with the protein unmeasured, and must be cited as that: a behavioural and field-potential negative in larvae is not a statement about protein abundance or function.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0716]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 445
+**Short title:** Rathan-Kumar 2026 — HIKESHI leukodystrophy iPSC model: proteasome inhibitors and hypomyelination
+**Full title:** Proteasome inhibitors rescue hypomyelination in iPSC based model of HIKESHI-associated leukodystrophy.
+**Authors:** Rathan-Kumar S, Martino-Wojciechowski M, Rabinski T, Vatine GD, Ess KC
+**Year:** 2026
+**Source type:** primary research — patient-derived iPSC model
+**Journal/source:** *J Transl Med* 2026;24(1)
+**Identifier:** PMID 42875792 / PMC13670827 / DOI 10.1186/s12967-026-08708-8
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-42875792-01`, which was in the ledger with no registry identity; reader: group R1, `research/repurposing_10h_scientist-a_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R1_20261022.md` and `locator_audit_deep_cards_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-42875792-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID42875792.json` (schema v2, **14** persisted verbatim locators; surfaces: 11 body, 3 figure); artefact `files/fulltext/PMID42875792_RathanKumar2026_PMC13670827.xml` (sha256 `4c16ca12f9cf10ad23f2236a840865c11118c933e033d23802f120e015c3d88d`); unread or absent (receipt): supplementary `captions_only`
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Model/species:** iPSC-derived cells from a small number of patients
+**Genotype/model:** HIKESHI variants; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R1 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — missense-protein proteostasis precedents (chaperones, degradation and variant-abundance work in other proteins) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — patient-derived iPSC model; iPSC-derived cells from a small number of patients. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-a_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0717]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 446
+**Short title:** Mangkalaphiban 2024 — stop-codon context predicts nonsense read-through efficiency
+**Full title:** Extended stop codon context predicts nonsense codon readthrough efficiency in human cells.
+**Authors:** Mangkalaphiban K, Fu L, Du M, Thrasher K, Keeling KM, Bedwell DM, Jacobson A
+**Year:** 2024
+**Source type:** primary research — re-analysis of ribosome-profiling data with a reporter validation
+**Journal/source:** *Nat Commun* 2024;15(1):2486
+**Identifier:** PMID 38509072 / PMC10954755 / DOI 10.1038/s41467-024-46703-z
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261022-38509072-01`, which was in the ledger with no registry identity; reader: group R1, `research/repurposing_10h_scientist-a_20261022c.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261022-38509072-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID38509072.json` (schema v2, **11** persisted verbatim locators; surfaces: 10 body, 1 figure); artefact `files/fulltext/PMID38509072_Mangkalaphiban2024_PMC_r2.xml` (sha256 `6a15632005fe1bcda6fa566f32609f197fe3ed6224adac71db754cdb3da6dcd2`); unread or absent (receipt): abstract `not_read`, figures `captions_only`, limitations `not_present`, references `not_read`, supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Model/species:** human cells (HEK293 reporters) and published ribosome-profiling data
+**Genotype/model:** premature-termination-codon contexts across genes; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R1 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — missense-protein proteostasis precedents (chaperones, degradation and variant-abundance work in other proteins) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — re-analysis of ribosome-profiling data with a reporter validation; human cells (HEK293 reporters) and published ribosome-profiling data. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-a_20261022c.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0718]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 447
+**Short title:** Baraban 2013 — scn1Lab zebrafish drug screen identifies clemizole
+**Full title:** Drug screening in Scn1a zebrafish mutant identifies clemizole as a potential Dravet syndrome treatment.
+**Authors:** Baraban SC, Dinday MT, Hortopan GA
+**Year:** 2013
+**Source type:** primary research — model-building and drug screen
+**Journal/source:** *Nat Commun* 2013;4:2410
+**Identifier:** PMID 24002024 / PMC3891590 / DOI 10.1038/ncomms3410
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-24002024-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261021.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-24002024-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID24002024.json` (schema v2, **4** persisted verbatim locators; surfaces: 3 body, 1 figure); artefact `files/fulltext/PMID24002024_Baraban2013_PMC_r2.xml` (sha256 `913cba147822c55277d93611fbfc03e3c33b6aac926583bdba14eab26585a5ca`); unread or absent (receipt): figures `captions_only`, supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** zebrafish larvae (scn1Lab mutant)
+**Genotype/model:** scn1a loss-of-function zebrafish; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — model-building and drug screen; zebrafish larvae (scn1Lab mutant). Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0719]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 448
+**Short title:** Cain 2015 — thalamocortical neurons, burst firing and Ih in a genetic absence model
+**Full title:** Thalamocortical neurons display suppressed burst-firing due to an enhanced Ih current in a genetic model of absence epilepsy.
+**Authors:** Cain SM, Tyson JR, Jones KL, Snutch TP
+**Year:** 2015
+**Source type:** primary research — slice electrophysiology
+**Journal/source:** *Pflugers Arch* 2015;467(6):1367-82
+**Identifier:** PMID 24953239 / PMC4435665 / DOI 10.1007/s00424-014-1549-4
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-24953239-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261021.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-24953239-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID24953239.json` (schema v2, **5** persisted verbatim locators; surfaces: 4 body, 1 figure); artefact `files/fulltext/PMID24953239_Kanyshkova2015_PMC_r2.xml` (sha256 `e740709956fa13e6ce38dedc976a6775aa83f47287afa87a52d262c4ea953f5e`); unread or absent (receipt): figures `captions_only`, supplementary `not_present`, tables `not_present`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** thalamic slices from an absence-epilepsy strain and its control strain
+**Genotype/model:** strain difference; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — slice electrophysiology; thalamic slices from an absence-epilepsy strain and its control strain. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0720]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 449
+**Short title:** Chen 2015 — ethosuximide, DAF-16/FOXO targets and neurodegeneration phenotypes
+**Full title:** Ethosuximide ameliorates neurodegenerative disease phenotypes by modulating DAF-16/FOXO target gene expression.
+**Authors:** Chen X, McCue HV, Wong SQ, Kashyap SS, Kraemer BC, Barclay JW, Burgoyne RD, Morgan A
+**Year:** 2015
+**Source type:** primary research — worm screen with mammalian-cell follow-up
+**Journal/source:** *Mol Neurodegener* 2015;10:51
+**Identifier:** PMID 26419537 / PMC4587861 / DOI 10.1186/s13024-015-0046-3
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-26419537-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261021.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-26419537-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID26419537.json` (schema v2, **5** persisted verbatim locators; surfaces: 4 body, 1 figure); artefact `files/fulltext/PMID26419537_Chen2015_PMC_r2.xml` (sha256 `9cad3b47dfab6f78bd026a36d6c781ac46621fd383d06562c32cea9f35ec8606`); unread or absent (receipt): figures `captions_only`, supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** C. elegans models with mammalian cell follow-up
+**Genotype/model:** worm neurodegeneration models; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — worm screen with mammalian-cell follow-up; C. elegans models with mammalian cell follow-up. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0721]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 450
+**Short title:** Kim 2018 — T-type channels and viability of neural progenitor cells
+**Full title:** T-Type Calcium Channels Are Required to Maintain Viability of Neural Progenitor Cells.
+**Authors:** Kim JW, Oh HA, Lee SH, Kim KC, Eun PH, Ko MJ, Gonzales ELT, Seung H, Kim S, Bahn GH, Shin CY
+**Year:** 2018
+**Source type:** primary research — in-vitro developmental-toxicity study
+**Journal/source:** *Biomol Ther (Seoul)* 2018;26(5):439-445
+**Identifier:** PMID 29463073 / PMC6131011 / DOI 10.4062/biomolther.2017.223
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-29463073-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261021.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-29463073-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID29463073.json` (schema v2, **11** persisted verbatim locators; surfaces: 7 body, 4 figure); artefact `files/fulltext/PMID29463073_Kim2018_PMC_r2.xml` (sha256 `633415985a88c98b6f0d6268eb5360ff6ce73feae1f6365ef118a53dc72d4eb2`); unread or absent (receipt): supplementary `not_present`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** rat embryonic neural progenitor cells in vitro
+**Genotype/model:** wild-type cells with channel blockers; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — in-vitro developmental-toxicity study; rat embryonic neural progenitor cells in vitro. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0722]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 451
+**Short title:** Huguenard 2019 — spikes, bursts and synchrony in absence epilepsy: a controversy
+**Full title:** Current Controversy: Spikes, Bursts, and Synchrony in Generalized Absence Epilepsy: Unresolved Questions Regarding Thalamocortical Synchrony in Absence Epilepsy.
+**Authors:** Huguenard J
+**Year:** 2019
+**Source type:** narrative review (single author)
+**Journal/source:** *Epilepsy Curr* 2019;19(2):105-111
+**Identifier:** PMID 30955423 / PMC6610415 / DOI 10.1177/1535759719835355
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-30955423-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261021.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-30955423-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID30955423.json` (schema v2, **10** persisted verbatim locators; surfaces: 8 body, 2 figure); artefact `files/fulltext/PMID30955423_Huguenard2019_PMC_r2.xml` (sha256 `8e509d70be3881275cdedf001aa15d66445db1586cd4222088a07ece9a94a85f`); unread or absent (receipt): methods `not_present`, results `not_present`, supplementary `not_present`, tables `not_present`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** thalamocortical circuit (review of three primary studies)
+**Genotype/model:** no genotype of its own; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: narrative review (single author); thalamocortical circuit (review of three primary studies). Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0723]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 452
+**Short title:** Gureviciene 2019 — epileptic spiking in APP/PS1 mice
+**Full title:** Characterization of Epileptic Spiking Associated With Brain Amyloidosis in APP/PS1 Mice.
+**Authors:** Gureviciene I, Ishchenko I, Ziyatdinova S, Jin N, Lipponen A, Gurevicius K, Tanila H
+**Year:** 2019
+**Source type:** primary research — EEG characterisation with a drug arm
+**Journal/source:** *Front Neurol* 2019;10:1151
+**Identifier:** PMID 31781019 / PMC6861424 / DOI 10.3389/fneur.2019.01151
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-31781019-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261021.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-31781019-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID31781019.json` (schema v2, **6** persisted verbatim locators; surfaces: 5 body, 1 figure); artefact `files/fulltext/PMID31781019_Kam2019_PMC_r2.xml` (sha256 `7b732a85e8ae9a163638e32917c0062dc65cb2f3d96c2a37d802774d8f652e9b`); unread or absent (receipt): figures `captions_only`, supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** APP/PS1 and control mice (EEG)
+**Genotype/model:** APP/PS1 transgenes; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — EEG characterisation with a drug arm; APP/PS1 and control mice (EEG). Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0724]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 453
+**Short title:** Cao 2020 — Neuroligin 2 regulates absence seizures via GABAergic transmission
+**Full title:** Neuroligin 2 regulates absence seizures and behavioral arrests through GABAergic transmission within the thalamocortical circuitry.
+**Authors:** Cao F, Liu JJ, Zhou S, Cortez MA, Snead OC, Han J, Jia Z
+**Year:** 2020
+**Source type:** primary research — mouse genetics and circuit physiology
+**Journal/source:** *Nat Commun* 2020;11(1):3744
+**Identifier:** PMID 32719346 / PMC7385104 / DOI 10.1038/s41467-020-17560-3
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-32719346-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261021.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-32719346-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID32719346.json` (schema v2, **6** persisted verbatim locators; surfaces: 5 body, 1 figure); artefact `files/fulltext/PMID32719346_Liu2020_PMC_r2.xml` (sha256 `17449c0ba4e8a323710b3ecccb0a23fab69bc1a2738066f206d1e6e312acfa0e`); unread or absent (receipt): figures `captions_only`, supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** Nlgn2 mouse lines (EEG, slice, behaviour)
+**Genotype/model:** Nlgn2 mutant lines; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — mouse genetics and circuit physiology; Nlgn2 mouse lines (EEG, slice, behaviour). Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0725]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 454
+**Short title:** Berecki 2020 — novel missense CACNA1G variants in infantile-onset DEE
+**Full title:** Novel Missense CACNA1G Mutations Associated with Infantile-Onset Developmental and Epileptic Encephalopathy.
+**Authors:** Berecki G, Helbig KL, Ware TL, Grinton B, Skraban CM, Marsh ED, Berkovic SF, Petrou S
+**Year:** 2020
+**Source type:** case reports with channel electrophysiology
+**Journal/source:** *Int J Mol Sci* 2020;21(17)
+**Identifier:** PMID 32878331 / PMC7503748 / DOI 10.3390/ijms21176333
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-32878331-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261021.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-32878331-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID32878331.json` (schema v2, **6** persisted verbatim locators; surfaces: 5 body, 1 figure); artefact `files/fulltext/PMID32878331_Berecki2020_PMC_r2.xml` (sha256 `62f9cfa0c340cf87e60466d3ee28af81fd35b5dc9744080b0d5edee3721143d1`); unread or absent (receipt): figures `captions_only`, supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** two patients and HEK cell electrophysiology
+**Genotype/model:** CACNA1G missense variants; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: case reports with channel electrophysiology; two patients and HEK cell electrophysiology. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0726]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 455
+**Short title:** El 2021 — CACNA1I gain-of-function variants and neurodevelopmental disorders
+**Full title:** CACNA1I gain-of-function mutations differentially affect channel gating and cause neurodevelopmental disorders.
+**Authors:** El Ghaleb Y, Schneeberger PE, Fernández-Quintero ML, Geisler SM, Pelizzari S, Polstra AM, van Hagen JM, Denecke J, Campiglio M, Liedl KR, Stevens CA, Person RE, … et al. (18 authors listed on PubMed)
+**Year:** 2021
+**Source type:** case reports with channel electrophysiology and modelling
+**Journal/source:** *Brain* 2021;144(7):2092-2106
+**Identifier:** PMID 33704440 / PMC8422349 / DOI 10.1093/brain/awab101
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-33704440-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261021.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-33704440-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID33704440.json` (schema v2, **5** persisted verbatim locators; surfaces: 5 body); artefact `files/fulltext/PMID33704440_ElGhaleb2021_PMC_r2.xml` (sha256 `0e85ac67397026878b675694e3dd2ed265a68715c3a309448b7ef9bb7d9fdb61`); unread or absent (receipt): figures `captions_only`, supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** six patients, HEK cell electrophysiology, a computer model and mouse chromaffin cells
+**Genotype/model:** CACNA1I gain-of-function variants; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: case reports with channel electrophysiology and modelling; six patients, HEK cell electrophysiology, a computer model and mouse chromaffin cells. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0727]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 456
+**Short title:** El 2022 — developmental oxidative stress and T-type hypofunction in thalamic reticular nucleus
+**Full title:** Developmental oxidative stress leads to T-type Ca(2+) channel hypofunction in thalamic reticular nucleus of mouse models pertinent to schizophrenia.
+**Authors:** El Khoueiry C, Cabungcal JH, Rovó Z, Fournier M, Do KQ, Steullet P
+**Year:** 2022
+**Source type:** primary research — slice electrophysiology
+**Journal/source:** *Mol Psychiatry* 2022;27(4):2042-2051
+**Identifier:** PMID 35079122 / PMC9126813 / DOI 10.1038/s41380-021-01425-2
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-35079122-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261021.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-35079122-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID35079122.json` (schema v2, **4** persisted verbatim locators; surfaces: 4 body); artefact `files/fulltext/PMID35079122_Cabungcal2022_PMC_r2.xml` (sha256 `3e6eaf4583ef910bc921ede40c32ccca98d17f27b2947499eca1b2ab8d226e8b`); unread or absent (receipt): figures `captions_only`, supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** mouse models pertinent to schizophrenia (thalamic reticular nucleus slices)
+**Genotype/model:** oxidative-stress models; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — slice electrophysiology; mouse models pertinent to schizophrenia (thalamic reticular nucleus slices). Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0728]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 457
+**Short title:** Riban 2022 — stiripentol inhibits spike-and-wave discharges: a T-type mechanism
+**Full title:** Stiripentol inhibits spike-and-wave discharges in animal models of absence seizures: A new mechanism of action involving T-type calcium channels.
+**Authors:** Riban V, Heulard I, Reversat L, Si Hocine H, Verleye M
+**Year:** 2022
+**Source type:** primary research — animal absence models, industry laboratory
+**Journal/source:** *Epilepsia* 2022;63(5):1200-1210
+**Identifier:** PMID 35184274 / PMC9314114 / DOI 10.1111/epi.17201
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-35184274-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261021.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-35184274-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID35184274.json` (schema v2, **8** persisted verbatim locators; surfaces: 6 body, 2 figure); artefact `files/fulltext/PMID35184274_Riban2022_PMC_r2.xml` (sha256 `3d7fedcaa512a8d88c839dd53379c9bde0efa58c3d703f715315cb60706b6949`); unread or absent (receipt): figures `captions_only`, supplementary `not_present`, tables `not_present`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** rodent absence models and channel assays
+**Genotype/model:** absence-seizure models; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — animal absence models, industry laboratory; rodent absence models and channel assays. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0729]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 458
+**Short title:** Abdelaal 2022 — thalamic reticular nucleus PV-cell dysfunction induces spike-and-wave discharges
+**Full title:** Dysfunction of parvalbumin-expressing cells in the thalamic reticular nucleus induces cortical spike-and-wave discharges and an unconscious state.
+**Authors:** Abdelaal MS, Midorikawa M, Suzuki T, Kobayashi K, Takata N, Miyata M, Mimura M, Tanaka KF
+**Year:** 2022
+**Source type:** primary research — slice electrophysiology and EEG, unplanned opsin toxicity model
+**Journal/source:** *Brain Commun* 2022;4(2):fcac010
+**Identifier:** PMID 35243344 / PMC8887905 / DOI 10.1093/braincomms/fcac010
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-35243344-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261021.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-35243344-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID35243344.json` (schema v2, **6** persisted verbatim locators; surfaces: 5 body, 1 figure); artefact `files/fulltext/PMID35243344_Yang2022_PMC_r2.xml` (sha256 `571b443a3db5271eb15007f67f784a7c927ca671c8ee901fec9e343826f5c12f`); unread or absent (receipt): figures `captions_only`, supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** mouse thalamic reticular nucleus (PV cells)
+**Genotype/model:** opsin toxicity model; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — slice electrophysiology and EEG, unplanned opsin toxicity model; mouse thalamic reticular nucleus (PV cells). Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0730]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 459
+**Short title:** Barker 2023 — C. elegans NCL model identifies ethosuximide
+**Full title:** A Caenorhabditis elegans model of autosomal dominant adult-onset neuronal ceroid lipofuscinosis identifies ethosuximide as a potential therapeutic.
+**Authors:** Barker E, Morgan A, Barclay JW
+**Year:** 2023
+**Source type:** primary research — worm model with a four-compound pilot screen
+**Journal/source:** *Hum Mol Genet* 2023;32(11):1772-1785
+**Identifier:** PMID 36282524 / PMC10196665 / DOI 10.1093/hmg/ddac263
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-36282524-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261021.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-36282524-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID36282524.json` (schema v2, **6** persisted verbatim locators; surfaces: 5 body, 1 figure); artefact `files/fulltext/PMID36282524_Barker2023_PMC_r2.xml` (sha256 `ff53be5b6a98d2cb8ba1f4abab6b72b28b18d37dea3b2ee44ff74ec1c5249c67`); unread or absent (receipt): figures `captions_only`, supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** C. elegans knock-in model of adult-onset neuronal ceroid lipofuscinosis
+**Genotype/model:** adult-onset NCL knock-in model; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — worm model with a four-compound pilot screen; C. elegans knock-in model of adult-onset neuronal ceroid lipofuscinosis. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0731]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 460
+**Short title:** Bleakley 2023 — antiseizure medication efficacy in an HCN1 DEE mouse
+**Full title:** Efficacy of antiseizure medication in a mouse model of HCN1 developmental and epileptic encephalopathy.
+**Authors:** Bleakley LE, McKenzie CE, Reid CA
+**Year:** 2023
+**Source type:** primary research — within-laboratory pharmacology screen
+**Journal/source:** *Epilepsia* 2023;64(1):e1-e8
+**Identifier:** PMID 36300716 / PMC10953365 / DOI 10.1111/epi.17447
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-36300716-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261021.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-36300716-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID36300716.json` (schema v2, **9** persisted verbatim locators; surfaces: 6 body, 3 figure); artefact `files/fulltext/PMID36300716_Bleakley2023_PMC_r2.xml` (sha256 `b21db697f6cb5d0f7aa67326c441bca33a994928b431970a5c5eadf8348baad4`); unread or absent (receipt): tables `not_present`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** Hcn1 M294L knock-in mouse
+**Genotype/model:** HCN1 variant; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — within-laboratory pharmacology screen; Hcn1 M294L knock-in mouse. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0732]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 461
+**Short title:** Harman 2023 — synthetic cannabinoids inhibit T-type channels with divergent seizure effects
+**Full title:** MEPIRAPIM-derived synthetic cannabinoids inhibit T-type calcium channels with divergent effects on seizures in rodent models of epilepsy.
+**Authors:** Harman T, Udoh M, McElroy DL, Anderson LL, Kevin RC, Banister SD, Ametovski A, Markham J, Bladen C, Doohan PT, Greba Q, Laprairie RB, … et al. (16 authors listed on PubMed)
+**Year:** 2023
+**Source type:** primary research — medicinal chemistry to in-vivo screening
+**Journal/source:** *Front Physiol* 2023;14:1086243
+**Identifier:** PMID 37082241 / PMC10110893 / DOI 10.3389/fphys.2023.1086243
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-37082241-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261021.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-37082241-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID37082241.json` (schema v2, **9** persisted verbatim locators; surfaces: 7 body, 2 figure); artefact `files/fulltext/PMID37082241_Harman2023_PMC_r2.xml` (sha256 `0450aadf2e01ba5c120653b14600fc4be0069f660dca69025ba65593f7b68da9`); unread or absent (receipt): figures `captions_only`, supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** channel assays and rodent seizure models
+**Genotype/model:** wild-type animals and cells; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — medicinal chemistry to in-vivo screening; channel assays and rodent seizure models. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0733]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 462
+**Short title:** Colombo 2023 — GNB1 encephalopathy mouse: GIRK signalling
+**Full title:** Epilepsy in a mouse model of GNB1 encephalopathy arises from altered potassium (GIRK) channel signaling and is alleviated by a GIRK inhibitor.
+**Authors:** Colombo S, Reddy HP, Petri S, Williams DJ, Shalomov B, Dhindsa RS, Gelfman S, Krizay D, Bera AK, Yang M, Peng Y, Makinson CD, … et al. (16 authors listed on PubMed)
+**Year:** 2023
+**Source type:** primary research — mouse EEG, multi-electrode arrays and oocyte electrophysiology
+**Journal/source:** *Front Cell Neurosci* 2023;17:1175895
+**Identifier:** PMID 37275776 / PMC10232839 / DOI 10.3389/fncel.2023.1175895
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-37275776-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261021.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-37275776-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID37275776.json` (schema v2, **10** persisted verbatim locators; surfaces: 8 body, 2 figure); artefact `files/fulltext/PMID37275776_Colombo2023_PMC_r2.xml` (sha256 `ff7f3eb90b042662c288199a666d013020d2cf293f2505aee8d04179c9ab6acb`); unread or absent (receipt): figures `captions_only`, supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** Gnb1 mouse line and Xenopus oocytes
+**Genotype/model:** GNB1 variant; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — mouse EEG, multi-electrode arrays and oocyte electrophysiology; Gnb1 mouse line and Xenopus oocytes. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0734]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 463
+**Short title:** Sack 2025 — Cav3.2 contributions to dentate granule cell excitability by maturational stage
+**Full title:** Maturational Stage-Dependent Contributions of the Cav3.2 T-Type Calcium Channel to Dentate Gyrus Granule Cell Excitability.
+**Authors:** Sack AS, Garcia E, Snutch TP
+**Year:** 2025
+**Source type:** primary research — slice electrophysiology
+**Journal/source:** *eNeuro* 2025;12(4)
+**Identifier:** PMID 40068874 / PMC11974363 / DOI 10.1523/ENEURO.0423-24.2025
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-40068874-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261021.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-40068874-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID40068874.json` (schema v2, **6** persisted verbatim locators; surfaces: 5 body, 1 figure); artefact `files/fulltext/PMID40068874_Sack2025_PMC_r2.xml` (sha256 `854ef2de9aac351cf2af23b408ba0e1db4acacdd5d34b4af64901193ba784952`); unread or absent (receipt): figures `captions_only`, supplementary `not_present`, tables `not_present`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** constitutive Cav3.2 knockout mouse slices
+**Genotype/model:** Cacna1h knockout; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — slice electrophysiology; constitutive Cav3.2 knockout mouse slices. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0735]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 464
+**Short title:** El 2025 — two pairs of CACNA1I variants with opposite effects on channel function
+**Full title:** Two pairs of CACNA1I (CaV3.3) variants with opposite effects on channel function cause neurodevelopmental disorders of varying severity.
+**Authors:** El Ghaleb Y, Fernández-Quintero ML, Campiglio M, Tuluc P, Höing AS, Kortüm F, Motazacker MM, Jansen IE, Elting MW, Plomp AS, Fischer AM, Siu VM, Kutsche K, Flucher BE
+**Year:** 2025
+**Source type:** case reports with channel electrophysiology and modelling
+**Journal/source:** *PLoS Genet* 2025;21(8):e1011828
+**Identifier:** PMID 40825030 / PMC12396757 / DOI 10.1371/journal.pgen.1011828
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-40825030-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261021.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-40825030-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID40825030.json` (schema v2, **5** persisted verbatim locators; surfaces: 5 body); artefact `files/fulltext/PMID40825030_ElGhaleb2025_PMC_r2.xml` (sha256 `2feb094be950aec1d186378c8f334b9e50d916a78aaaa9dd76a30fd729eed9b1`); unread or absent (receipt): figures `captions_only`, supplementary `not_present`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** four patients, HEK cell electrophysiology and a neuron computer model
+**Genotype/model:** CACNA1I variants (gain and loss of function); no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: case reports with channel electrophysiology and modelling; four patients, HEK cell electrophysiology and a neuron computer model. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0736]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 465
+**Short title:** Hristova 2025 — absence seizures and sleep-wake abnormalities in a Grin2b rat
+**Full title:** Absence seizures and sleep-wake abnormalities in a rat model of GRIN2B neurodevelopmental disorder.
+**Authors:** Hristova K, Fasol MCM, McLaughlin N, Nawaz MS, Taskiran M, Buller-Peralta I, Harris AP, Sutherland A, Bassi A, Ocampo-Garces A, Escudero J, Kind PC, Gonzalez-Sulser A
+**Year:** 2025
+**Source type:** primary research — new rat model with drug arms
+**Journal/source:** *Epilepsia* 2025;66(12):4996-5013
+**Identifier:** PMID 40827489 / PMC12779324 / DOI 10.1111/epi.18606
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-40827489-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261021.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-40827489-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID40827489.json` (schema v2, **9** persisted verbatim locators; surfaces: 7 body, 2 figure); artefact `files/fulltext/PMID40827489_Hristova2025_PMC_r2.xml` (sha256 `d5be37b8442d94f4d777298a6419e3fd634cd865955971cc446d630b45da51b7`); unread or absent (receipt): figures `captions_only`, supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** Grin2b rat model (EEG)
+**Genotype/model:** Grin2b mutant rat; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — new rat model with drug arms; Grin2b rat model (EEG). Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0737]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 466
+**Short title:** Jang 2025 — reticular thalamic hyperexcitability in the Cntnap2 model of autism
+**Full title:** Reticular thalamic hyperexcitability drives autism spectrum disorder behaviors in the Cntnap2 model of autism.
+**Authors:** Jang SS, Takahashi F, Huguenard JR
+**Year:** 2025
+**Source type:** primary research — slice electrophysiology, photometry and behaviour
+**Journal/source:** *Sci Adv* 2025;11(34):eadw4682
+**Identifier:** PMID 40834072 / PMC12366697 / DOI 10.1126/sciadv.adw4682
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-40834072-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261021.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-40834072-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID40834072.json` (schema v2, **10** persisted verbatim locators; surfaces: 8 body, 2 figure); artefact `files/fulltext/PMID40834072_Jang2025_PMC_r2.xml` (sha256 `bcaddfdb89a9c61711dbe388a557fb97232b36f16e7306cf53b4354dc0ecf651`); unread or absent (receipt): figures `captions_only`, supplementary `captions_only`, tables `not_present`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** Cntnap2 null mouse
+**Genotype/model:** Cntnap2 null; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — slice electrophysiology, photometry and behaviour; Cntnap2 null mouse. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0738]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 467
+**Short title:** Balestrini 2026 — epilepsies with absence seizures and single-gene aetiology
+**Full title:** Clinical and genetic landscape of epilepsies with absence seizures and single-gene etiology.
+**Authors:** Balestrini S, Galli I, Ricci ML, Parrini E, Mei D, Mastrangelo M, Pisani F, Filippi C, Giordano L, Cesaroni E, Marini C, Cerulli Irelli E, … et al. (30 authors listed on PubMed)
+**Year:** 2026
+**Source type:** retrospective multicentre case series
+**Journal/source:** *Epilepsia* 2026;67(1):272-290
+**Identifier:** PMID 41137852 / PMC12893263 / DOI 10.1111/epi.18655
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-41137852-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261021.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-41137852-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID41137852.json` (schema v2, **7** persisted verbatim locators; surfaces: 7 body); artefact `files/fulltext/PMID41137852_Balestrini2026_PMC_r2.xml` (sha256 `fbffa1f62649055058ae131c573e42b4da3ea8a2a00da4fdc07d1c3caa186dff`); unread or absent (receipt): figures `captions_only`, supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** human patients (17-centre network)
+**Genotype/model:** many genes; WWOX not measured
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: retrospective multicentre case series; human patients (17-centre network). Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0739]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 468
+**Short title:** Harman 2026 — cannabidiol in a Gabrb3 D120N mouse of Lennox-Gastaut syndrome
+**Full title:** Cannabidiol reduces atypical absence seizures and epileptic spasms in a Gabrb3(+/D120N) mouse model of Lennox-Gastaut syndrome.
+**Authors:** Harman T, Sharman LA, Yip KL, Bedoya-Pérez M, Janve V, Arnold JC
+**Year:** 2026
+**Source type:** primary research — within-subject EEG
+**Journal/source:** *Epilepsia Open* 2026;11(4):1263-1275
+**Identifier:** PMID 42274296 / PMC13395050 / DOI 10.1002/epi4.70289
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-42274296-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261021.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-42274296-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID42274296.json` (schema v2, **11** persisted verbatim locators; surfaces: 7 body, 4 figure); artefact `files/fulltext/PMID42274296_Harman2026_PMC_r2.xml` (sha256 `37ca8bc4903ec5184c0b90401d4642f922a03559a75dbc1b45e6c58009d57900`); unread or absent (receipt): supplementary `not_present`, tables `not_present`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** Gabrb3 +/D120N mouse
+**Genotype/model:** GABRB3 variant; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — within-subject EEG; Gabrb3 +/D120N mouse. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0740]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 469
+**Short title:** Miao 2026 — PV interneuron activation rescues seizures in digenic absence epilepsy mice
+**Full title:** Parvalbumin interneuron activation rescues both seizures and impaired social novelty in digenic absence epilepsy mice.
+**Authors:** Miao QL, Okoh J, Asan AS, Karedia S, Pan JQ, Costa-Mattioli M, Noebels JL
+**Year:** 2026
+**Source type:** primary research — mouse genetics and behaviour
+**Journal/source:** *Sci Adv* 2026;12(31):eaec6065
+**Identifier:** PMID 42536722 / PMC13426438 / DOI 10.1126/sciadv.aec6065
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-42536722-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261021.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-42536722-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID42536722.json` (schema v2, **9** persisted verbatim locators; surfaces: 7 body, 2 figure); artefact `files/fulltext/PMID42536722_Miao2026_PMC_r2.xml` (sha256 `b66912f62c014a3b604fe62c7192185681225b1bff06e4b2fba90ce6e5626270`); unread or absent (receipt): figures `captions_only`, supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** stargazer/tottering-type digenic absence mouse
+**Genotype/model:** digenic absence-epilepsy model; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — mouse genetics and behaviour; stargazer/tottering-type digenic absence mouse. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0741]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 470
+**Short title:** Aguado 2016 — ontogeny of Cav3.1 and Cav3.2 in mouse hippocampus and cerebellum
+**Full title:** Ontogenic Changes and Differential Localization of T-type Ca(2+) Channel Subunits Cav3.1 and Cav3.2 in Mouse Hippocampus and Cerebellum.
+**Authors:** Aguado C, García-Madrona S, Gil-Minguez M, Luján R
+**Year:** 2016
+**Source type:** primary research — expression and localisation
+**Journal/source:** *Front Neuroanat* 2016;10:83
+**Identifier:** PMID 27616982 / PMC4999439 / DOI 10.3389/fnana.2016.00083
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261022-27616982-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261022b.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261022-27616982-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID27616982.json` (schema v2, **7** persisted verbatim locators; surfaces: 6 body, 1 figure); artefact `files/fulltext/PMID27616982_Aguado2016_PMC_r2.xml` (sha256 `7f24e8bae36cd775281b57149473d4d2da2bd74c1655ef3081b26f70a76e5497`); unread or absent (receipt): discussion `not_read`, figures `captions_only`, introduction `not_read`, limitations `not_present`, methods `not_read`, results `not_read`, supplementary `not_present`, tables `not_present`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** wild-type mouse brain across development
+**Genotype/model:** wild type; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — expression and localisation; wild-type mouse brain across development. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261022b.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0742]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 471
+**Short title:** Ogiwara 2018 — Nav1.2 haplodeficiency in excitatory neurons causes absence-like seizures
+**Full title:** Nav1.2 haplodeficiency in excitatory neurons causes absence-like seizures in mice.
+**Authors:** Ogiwara I, Miyamoto H, Tatsukawa T, Yamagata T, Nakayama T, Atapour N, Miura E, Mazaki E, Ernst SJ, Cao D, Ohtani H, Itohara S, … et al. (19 authors listed on PubMed)
+**Year:** 2018
+**Source type:** primary research — conditional mouse genetics and EEG
+**Journal/source:** *Commun Biol* 2018;1:96
+**Identifier:** PMID 30175250 / PMC6115194 / DOI 10.1038/s42003-018-0099-2
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261022-30175250-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261022b.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261022-30175250-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID30175250.json` (schema v2, **7** persisted verbatim locators; surfaces: 6 body, 1 figure); artefact `files/fulltext/PMID30175250_Ogiwara2018_PMC_r2.xml` (sha256 `67a85498d40851a25d8580408b9d5a5e9043c1bd667be1bdc007d8186eaa4fab`); unread or absent (receipt): discussion `not_read`, figures `captions_only`, introduction `not_read`, limitations `not_present`, methods `not_read`, results `not_read`, supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** Scn2a conditional haplodeficient mice
+**Genotype/model:** Scn2a haplodeficiency; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — conditional mouse genetics and EEG; Scn2a conditional haplodeficient mice. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261022b.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0743]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 472
+**Short title:** Jin 2020 — spike-wave discharges in aged APP/PS1 mice and response to drug classes
+**Full title:** Response of spike-wave discharges in aged APP/PS1 Alzheimer model mice to antiepileptic, metabolic and cholinergic drugs.
+**Authors:** Jin N, Ziyatdinova S, Gureviciene I, Tanila H
+**Year:** 2020
+**Source type:** primary research — EEG pharmacology
+**Journal/source:** *Sci Rep* 2020;10(1):11851
+**Identifier:** PMID 32678276 / PMC7366932 / DOI 10.1038/s41598-020-68845-y
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261022-32678276-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261022b.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261022-32678276-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID32678276.json` (schema v2, **6** persisted verbatim locators; surfaces: 5 body, 1 figure); artefact `files/fulltext/PMID32678276_Kam2020_PMC_r2.xml` (sha256 `3ba5ccc817d47cb1b49d02989462db244c9d65a0462f41f7bff23a360bb32d80`); unread or absent (receipt): discussion `not_read`, figures `captions_only`, introduction `not_read`, limitations `not_present`, supplementary `not_present`, tables `not_read`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** aged APP/PS1 mice
+**Genotype/model:** APP/PS1 transgenes; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — EEG pharmacology; aged APP/PS1 mice. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261022b.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0744]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 473
+**Short title:** Bouron 2020 — transcriptomic profile of Ca2+ transport systems in mouse cortical development
+**Full title:** Transcriptomic Profiling of Ca2+ Transport Systems During the Formation of the Cerebral Cortex in Mice.
+**Authors:** Bouron A
+**Year:** 2020
+**Source type:** primary research — transcriptomics
+**Journal/source:** *Cells* 2020;9(8)
+**Identifier:** PMID 32751129 / PMC7465657 / DOI 10.3390/cells9081800
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261022-32751129-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261022b.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261022-32751129-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID32751129.json` (schema v2, **4** persisted verbatim locators; surfaces: 4 body); artefact `files/fulltext/PMID32751129_Bouron2020_PMC_r2.xml` (sha256 `efc9f05e237a1b8e1e1882a84bf7e0a8e0ed45030c80b96d02f2fb7bcad5473f`); unread or absent (receipt): abstract `not_read`, discussion `not_read`, figures `not_read`, introduction `not_read`, limitations `not_read`, results `not_read`, supplementary `not_present`, tables `not_read`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** wild-type mouse cortex across development
+**Genotype/model:** wild type; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — transcriptomics; wild-type mouse cortex across development. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261022b.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0745]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 474
+**Short title:** Iizumi 2021 — anticonvulsant effects in AMPA receptor palmitoylation-deficient mice
+**Full title:** Reduced Effect of Anticonvulsants on AMPA Receptor Palmitoylation-Deficient Mice.
+**Authors:** Iizumi M, Oota-Ishigaki A, Yamashita M, Hayashi T
+**Year:** 2021
+**Source type:** primary research — mouse pharmacology with two-way analysis
+**Journal/source:** *Front Pharmacol* 2021;12:711737
+**Identifier:** PMID 34483921 / PMC8416418 / DOI 10.3389/fphar.2021.711737
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261022-34483921-01`, which was in the ledger with no registry identity; reader: group R2, `research/repurposing_10h_scientist-b_20261022b.md`; the group's commit candidate carries one discovery-ledger counter-evidence note (DL-MECH-170) that narrows and promotes nothing; this record carries none of it. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261022-34483921-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID34483921.json` (schema v2, **8** persisted verbatim locators; surfaces: 7 body, 1 figure); artefact `files/fulltext/PMID34483921_Iizumi2021_PMC_r2.xml` (sha256 `3999183c9ec83da4a15fbfa2d133b2062ba735ce2001a564c6a913430dce39a1`); unread or absent (receipt): discussion `not_read`, figures `captions_only`, limitations `not_present`, supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Model/species:** GluA1 C811S palmitoylation-deficient mouse and wild type
+**Genotype/model:** Gria1 palmitoylation-site mutant; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R2 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — the T-type calcium-channel and ethosuximide evidence behind DL-MECH-170 — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — mouse pharmacology with two-way analysis; GluA1 C811S palmitoylation-deficient mouse and wild type. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-b_20261022b.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**LIT link:** [[literature_tracking_log_current#LIT-0746]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 475
+**Short title:** Palma 2022 — clemastine impairs developmental myelination
+**Full title:** Clemastine Induces an Impairment in Developmental Myelination.
+**Authors:** Palma A, Chara JC, Montilla A, Otxoa-de-Amezaga A, Ruíz-Jaén F, Planas AM, Matute C, Pérez-Samartín A, Domercq M
+**Year:** 2022
+**Source type:** primary research — wild-type mouse pharmacology with electron microscopy
+**Journal/source:** *Front Cell Dev Biol* 2022;10:841548
+**Identifier:** PMID 35372341 / PMC8970281 / DOI 10.3389/fcell.2022.841548
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-35372341-01`, which was in the ledger with no registry identity; reader: group R3, `research/repurposing_10h_scientist-c_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-35372341-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID35372341.json` (schema v2, **20** persisted verbatim locators; surfaces: 14 body, 6 figure); artefact `files/fulltext/PMID35372341_Palma2022_PMC_r2.xml` (sha256 `3655dee8230fc8de28874769693312fd8b85d3f5d54cd447efe35993d31003aa`); unread or absent (receipt): limitations `not_present`, supplementary `unavailable`
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Model/species:** wild-type neonatal mouse
+**Genotype/model:** wild type with a drug; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R3 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — downstream-pathway precedents (Wnt and GSK3, CDK7/9, mTOR, myelination and microglia) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — wild-type mouse pharmacology with electron microscopy; wild-type neonatal mouse. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-c_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0747]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 476
+**Short title:** Karalis 2022 — Raptor reduction in Tsc1-loss mouse models
+**Full title:** Raptor downregulation rescues neuronal phenotypes in mouse models of Tuberous Sclerosis Complex.
+**Authors:** Karalis V, Caval-Holme F, Bateup HS
+**Year:** 2022
+**Source type:** primary research — mouse genetics and culture
+**Journal/source:** *Nat Commun* 2022;13(1):4665
+**Identifier:** PMID 35945201 / PMC9363483 / DOI 10.1038/s41467-022-31961-6
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-35945201-01`, which was in the ledger with no registry identity; reader: group R3, `research/repurposing_10h_scientist-c_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R3_20261022.md` and `locator_audit_R3_repairs_R3b_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-35945201-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID35945201.json` (schema v2, **28** persisted verbatim locators; surfaces: 20 body, 8 figure); artefact `files/fulltext/PMID35945201_Karalis2022_PMC_r2.xml` (sha256 `2fd2e607cc410592070dd07317d2ba39bd2a39cf3ac7ff441ccae787eb010f26`); unread or absent (receipt): supplementary `captions_only`
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Model/species:** mouse forebrain Tsc1 loss with genetic or shRNA Raptor reduction
+**Genotype/model:** Tsc1 loss; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R3 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — downstream-pathway precedents (Wnt and GSK3, CDK7/9, mTOR, myelination and microglia) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — mouse genetics and culture; mouse forebrain Tsc1 loss with genetic or shRNA Raptor reduction. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-c_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0748]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 477
+**Short title:** Śmiałek 2023 — sirolimus safety in infants with tuberous sclerosis: a retrospective review
+**Full title:** Safety of Sirolimus in Patients with Tuberous Sclerosis Complex under Two Years of Age-A Bicenter Retrospective Study.
+**Authors:** Śmiałek D, Jóźwiak S, Kotulska K
+**Year:** 2023
+**Source type:** retrospective two-centre chart review
+**Journal/source:** *J Clin Med* 2023;12(1)
+**Identifier:** PMID 36615165 / PMC9821318 / DOI 10.3390/jcm12010365
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-36615165-01`, which was in the ledger with no registry identity; reader: group R3, `research/repurposing_10h_scientist-c_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-36615165-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID36615165.json` (schema v2, **19** persisted verbatim locators; surfaces: 16 body, 2 table, 1 figure); artefact `files/fulltext/PMID36615165_Smialek2023_PMC_r2.xml` (sha256 `53bc00e0fa904f94d67c05f18aef4258bd9f0d0398044e0e879f11fb5ade0397`); unread or absent (receipt): supplementary `not_present`
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Model/species:** human infants with tuberous sclerosis (21)
+**Genotype/model:** TSC1/TSC2; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R3 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — downstream-pathway precedents (Wnt and GSK3, CDK7/9, mTOR, myelination and microglia) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: retrospective two-centre chart review; human infants with tuberous sclerosis (21). Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-c_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0749]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 478
+**Short title:** Brown 2023 — microglial ablation in a Ccdc39 hydrocephalus mouse
+**Full title:** Early postnatal microglial ablation in the Ccdc39 mouse model reveals adverse effects on brain development and in neonatal hydrocephalus.
+**Authors:** Brown FN, Iwasawa E, Shula C, Fugate EM, Lindquist DM, Mangano FT, Goto J
+**Year:** 2023
+**Source type:** primary research — mouse genetics and pharmacology
+**Journal/source:** *Fluids Barriers CNS* 2023;20(1):42
+**Identifier:** PMID 37296418 / PMC10251678 / DOI 10.1186/s12987-023-00433-4
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-37296418-01`, which was in the ledger with no registry identity; reader: group R3, `research/repurposing_10h_scientist-c_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-37296418-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID37296418.json` (schema v2, **14** persisted verbatim locators; surfaces: 12 body, 2 figure); artefact `files/fulltext/PMID37296418_Brown2023_PMC_r2.xml` (sha256 `e0e126a9b17c9acbe717b556838d32ee7a4683d3e64972dfe4475efbf807626a`); unread or absent (receipt): figures `captions_only`, limitations `not_present`, supplementary `not_read`
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Model/species:** neonatal Ccdc39 prh hydrocephalus mouse
+**Genotype/model:** Ccdc39 mutant; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R3 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — downstream-pathway precedents (Wnt and GSK3, CDK7/9, mTOR, myelination and microglia) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — mouse genetics and pharmacology; neonatal Ccdc39 prh hydrocephalus mouse. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-c_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0750]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 479
+**Short title:** Fuchs 2024 — Csnk1a1 haploinsufficiency and mutant p53 in Myc induction and leukaemic transformation
+**Full title:** Collaborative effect of Csnk1a1 haploinsufficiency and mutant p53 in Myc induction can promote leukemic transformation.
+**Authors:** Fuchs SNR, Stalmann USA, Snoeren IAM, Bindels E, Schmitz S, Banjanin B, Hoogenboezem RM, van Herk S, Saad M, Walter W, Haferlach T, Seillier L, … et al. (18 authors listed on PubMed)
+**Year:** 2024
+**Source type:** primary research — mouse haematopoietic model
+**Journal/source:** *Blood Adv* 2024;8(3):766-779
+**Identifier:** PMID 38147624 / PMC10847877 / DOI 10.1182/bloodadvances.2022008926
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-38147624-01`, which was in the ledger with no registry identity; reader: group R3, `research/repurposing_10h_scientist-c_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R3_20261022.md` and `locator_audit_R3_repairs_R3b_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-38147624-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID38147624.json` (schema v2, **25** persisted verbatim locators; surfaces: 14 body, 8 figure, 3 supplement); artefact `files/fulltext/PMID38147624_Fuchs2024_PMC_r2.xml` (sha256 `b8c645ae97daf5d35777213530928433df2220cc629062a646ba7cc4c54d2858`); unread or absent (receipt): limitations `not_present`
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Model/species:** mouse haematopoietic leukaemia model
+**Genotype/model:** Csnk1a1 haploinsufficiency with Trp53 editing; no neural readout; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R3 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — downstream-pathway precedents (Wnt and GSK3, CDK7/9, mTOR, myelination and microglia) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — mouse haematopoietic model; mouse haematopoietic leukaemia model. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-c_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading. Whether the effect seen in this system is carried by the CK1-alpha arm, a CDK arm or Myc is not settled by it; the attribution question is held with the group's candidate and no attribution is written here.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0751]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 480
+**Short title:** Odell 2024 — dose-finding of clemastine in a mouse model of preterm white-matter injury
+**Full title:** Minimum effective dose of clemastine in a mouse model of preterm white matter injury.
+**Authors:** Odell EP, Jabassini N, Schniedewind B, Pease-Raissi SE, Frymoyer A, Christians U, Green AJ, Chan JR, Ostrem BEL
+**Year:** 2024
+**Source type:** primary research — mouse dose-finding with a plasma arm
+**Journal/source:** *Pediatr Res* 2024;96(4):933-941
+**Identifier:** PMID 38942888 / PMC11502491 / DOI 10.1038/s41390-024-03326-w
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-38942888-01`, which was in the ledger with no registry identity; reader: group R3, `research/repurposing_10h_scientist-c_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-38942888-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID38942888.json` (schema v2, **16** persisted verbatim locators; surfaces: 13 body, 3 figure); artefact `files/fulltext/PMID38942888_Odell2024_PMC_r2.xml` (sha256 `9d4809367efe52b774546237b2af1731ead515fba848f80940305ee09f15dc92`); unread or absent (receipt): figures `captions_only`, limitations `not_present`, supplementary `not_read`
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Model/species:** neonatal mouse chronic-hypoxia white-matter injury
+**Genotype/model:** wild type with hypoxia; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R3 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — downstream-pathway precedents (Wnt and GSK3, CDK7/9, mTOR, myelination and microglia) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — mouse dose-finding with a plasma arm; neonatal mouse chronic-hypoxia white-matter injury. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-c_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0752]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 481
+**Short title:** O'Keeffe 2025 — cortical and thalamic synaptic development without microglia
+**Full title:** Typical development of synaptic and neuronal properties can proceed without microglia in the cortex and thalamus.
+**Authors:** O'Keeffe M, Booker SA, Walsh D, Li M, Henley C, Simões de Oliveira L, Liu M, Wang X, Banqueri M, Ridley K, Dissanayake KN, Martinez-Gonzalez C, … et al. (27 authors listed on PubMed)
+**Year:** 2025
+**Source type:** primary research — genetic microglia-deficient mouse
+**Journal/source:** *Nat Neurosci* 2025;28(2):268-279
+**Identifier:** PMID 39762658 / PMC11802452 / DOI 10.1038/s41593-024-01833-x
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-39762658-01`, which was in the ledger with no registry identity; reader: group R3, `research/repurposing_10h_scientist-c_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-39762658-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID39762658.json` (schema v2, **15** persisted verbatim locators; surfaces: 11 body, 4 figure); artefact `files/fulltext/PMID39762658_OKeeffe2025_PMC_r2.xml` (sha256 `f4b24273efe396b565adceaf04799bc61f1f54f8b7efa9fa17cfb9a3f26027b2`); unread or absent (receipt): figures `captions_only`, limitations `not_present`, supplementary `captions_only`
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Model/species:** Csf1r FIRE deletion mouse
+**Genotype/model:** Csf1r regulatory-element deletion; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R3 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — downstream-pathway precedents (Wnt and GSK3, CDK7/9, mTOR, myelination and microglia) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — genetic microglia-deficient mouse; Csf1r FIRE deletion mouse. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-c_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0753]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 482
+**Short title:** Ren 2025 — CSNK1A1 de novo variants in infantile spasms
+**Full title:** The role of CSNK1A1 and its de novo mutations in infantile spasms syndrome.
+**Authors:** Ren D, Yang Z, Hu J, Ji L, Bi Y, Yuan F, Yan Y, Peng J, Li K, Yang K, Liu L, Mao X, … et al. (17 authors listed on PubMed)
+**Year:** 2025
+**Source type:** case report (two families) with cell overexpression
+**Journal/source:** *Hum Mol Genet* 2025;34(10):905-913
+**Identifier:** PMID 40156289 / PMC12056308 / DOI 10.1093/hmg/ddaf030
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-40156289-01`, which was in the ledger with no registry identity; reader: group R3, `research/repurposing_10h_scientist-c_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R3_20261022.md` and `locator_audit_R3_repairs_R3b_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-40156289-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID40156289.json` (schema v2, **23** persisted verbatim locators; surfaces: 13 body, 6 figure, 4 supplement); artefact `files/fulltext/PMID40156289_Ren2025_PMC_r2.xml` (sha256 `9524324eccadc293511634674ac4312b33c24bfec2174849c0be20339ad92a75`); unread or absent (receipt): limitations `not_present`
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Model/species:** two-family exome report and HEK-293T overexpression
+**Genotype/model:** CSNK1A1 variants; no neural cell, animal or patient-derived system; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R3 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — downstream-pathway precedents (Wnt and GSK3, CDK7/9, mTOR, myelination and microglia) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: case report (two families) with cell overexpression; two-family exome report and HEK-293T overexpression. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-c_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0754]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 483
+**Short title:** Ball 2025 — first-in-human phase 1 of a CK1-alpha and CDK7/9 inhibitor in adult MDS and AML
+**Full title:** Phase I first-in-human dose escalation study of the oral casein kinase 1α and cyclin dependent kinase 7/9 inhibitor BTX A51 in advanced MDS and AML.
+**Authors:** Ball BJ, Xiao W, Borthakur G, Nguyen LXT, Valerio M, Venkatachalam A, Marcucci G, Stein AS, Thai DL, Cook DN, Chan K, Persaud S, … et al. (16 authors listed on PubMed)
+**Year:** 2025
+**Source type:** phase 1 trial, adult haematological malignancy
+**Journal/source:** *J Hematol Oncol* 2025;18(1):73
+**Identifier:** PMID 40665325 / PMC12265154 / DOI 10.1186/s13045-025-01724-z
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-40665325-01`, which was in the ledger with no registry identity; reader: group R3, `research/repurposing_10h_scientist-c_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R3_20261022.md` and `locator_audit_R3_repairs_R3b_20261022.md`, `locator_audit_deep_cards_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-40665325-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID40665325.json` (schema v2, **22** persisted verbatim locators; surfaces: 15 body, 6 figure, 1 supplement); artefact `files/fulltext/PMID40665325_Ball2025_PMC_r2.xml` (sha256 `79ad06302408535f8267d9d9b476d65bdb2497510aeed544b538381d8e96b7b5`); unread or absent (receipt): limitations `not_present`
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Model/species:** adult patients with MDS or AML
+**Genotype/model:** advanced haematological malignancy; no neural, paediatric or WWOX measurement
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R3 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — downstream-pathway precedents (Wnt and GSK3, CDK7/9, mTOR, myelination and microglia) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: phase 1 trial, adult haematological malignancy; adult patients with MDS or AML. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-c_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading. No dose or tolerability claim is carried by this record, and the reading is adult haematological oncology only.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0755]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 484
+**Short title:** Di 2025 — population pharmacokinetics of a GSK3 inhibitor in myotonic dystrophy type 1
+**Full title:** Population Pharmacokinetics of Tideglusib in Congenital and Childhood Myotonic Dystrophy Type 1: Influence of Demographic and Clinical Factors on Systemic Exposure.
+**Authors:** Di Deo A, Oosterholt S, Horrigan J, Evans S, McMorn A, Della Pasqua O
+**Year:** 2025
+**Source type:** pharmacokinetic modelling
+**Journal/source:** *Pharmaceutics* 2025;17(8)
+**Identifier:** PMID 40871085 / PMC12389255 / DOI 10.3390/pharmaceutics17081065
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-40871085-01`, which was in the ledger with no registry identity; reader: group R3, `research/repurposing_10h_scientist-c_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-40871085-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID40871085.json` (schema v2, **16** persisted verbatim locators; surfaces: 12 body, 3 figure, 1 supplement); artefact `files/fulltext/PMID40871085_DiDeo2025_PMC_r2.xml` (sha256 `ff5454ae87e3ec3e75b8fb1c2ada078cc123aa560b80bae8bdabef3c0c69e10e`); unread or absent (receipt): figures `captions_only`, limitations `not_present`
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Model/species:** healthy elderly adults and adolescents and adults with myotonic dystrophy (paediatric content is simulation)
+**Genotype/model:** myotonic dystrophy type 1; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R3 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — downstream-pathway precedents (Wnt and GSK3, CDK7/9, mTOR, myelination and microglia) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: pharmacokinetic modelling; healthy elderly adults and adolescents and adults with myotonic dystrophy (paediatric content is simulation). Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-c_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0756]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 485
+**Short title:** Murray 2025 — mTORC1 signalling and microglia activation in an Npc1 missense mouse
+**Full title:** Role of mTORC1 signaling in postnatal microglia activation preceding neurodegeneration in a mouse model for Niemann-Pick disease Type C.
+**Authors:** Murray CE, Betancourt-Trompa DS, Martinez MS, Carson JM, Walsh LJ, Remillard WC, Fordyce KB, Reddy R, Soto I
+**Year:** 2025
+**Source type:** primary research — mouse lysosomal-storage model
+**Journal/source:** *PLoS One* 2025;20(9):e0330437
+**Identifier:** PMID 40911604 / PMC12412993 / DOI 10.1371/journal.pone.0330437
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-40911604-01`, which was in the ledger with no registry identity; reader: group R3, `research/repurposing_10h_scientist-c_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-40911604-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID40911604.json` (schema v2, **13** persisted verbatim locators; surfaces: 10 body, 3 figure); artefact `files/fulltext/PMID40911604_Murray2025_PMC_r2.xml` (sha256 `246c0f3f7ab2eea3a99aae593d8e77259476657ba901405585ebf1d267eb6a3a`); unread or absent (receipt): figures `captions_only`, limitations `not_present`, supplementary `captions_only`
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Model/species:** Npc1 missense mouse (cerebellum)
+**Genotype/model:** Npc1 variant; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R3 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — downstream-pathway precedents (Wnt and GSK3, CDK7/9, mTOR, myelination and microglia) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — mouse lysosomal-storage model; Npc1 missense mouse (cerebellum). Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-c_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0757]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 486
+**Short title:** Qiao 2026 — enhancing myelin regeneration reverses cognitive deficits in an intellectual-disability mouse
+**Full title:** Targeting enhancing myelin regeneration reverses cognitive deficits in a mouse model of intellectual disability.
+**Authors:** Qiao P, Wang H, Qu P, Guo L, Zhou Y, Zeng T, Chen J, Li J, Hu Y, Chen G
+**Year:** 2026
+**Source type:** primary research — inducible OPC-lineage knockout with a drug arm
+**Journal/source:** *Neurotherapeutics* 2026;23(3):e00906
+**Identifier:** PMID 41980417 / PMC13092863 / DOI 10.1016/j.neurot.2026.e00906
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-41980417-01`, which was in the ledger with no registry identity; reader: group R3, `research/repurposing_10h_scientist-c_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R3_20261022.md` and `locator_audit_R3_repairs_R3b_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-41980417-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID41980417.json` (schema v2, **21** persisted verbatim locators; surfaces: 13 body, 7 figure, 1 supplement); artefact `files/fulltext/PMID41980417_Qiao2026_PMC_r2.xml` (sha256 `4341e006bbc4bbb648b6228813716384c498b8ad5b74e4c5e4e2340ae662982c`); unread or absent (receipt): limitations `not_present`, supplementary `captions_only`
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Model/species:** inducible OPC-lineage Pdk1 knockout mouse
+**Genotype/model:** Pdk1 conditional knockout; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R3 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — downstream-pathway precedents (Wnt and GSK3, CDK7/9, mTOR, myelination and microglia) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — inducible OPC-lineage knockout with a drug arm; inducible OPC-lineage Pdk1 knockout mouse. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-c_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0758]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 487
+**Short title:** Verteneuil 2026 — Cdk7 promotes neuritogenesis in cortical neurons and social behaviour
+**Full title:** Cdk7 promotes neuritogenesis in cortical neurons and contributes to social behavior in mice.
+**Authors:** Verteneuil S, Van Hees L, Lassance JM, Lejon C, D'aes T, Marlier Q, Quatresooz P, Delacroix L, Nguyen L, Malgrange B, Vandenbosch R
+**Year:** 2026
+**Source type:** primary research — conditional knockout and neuron culture
+**Journal/source:** *Cell Mol Life Sci* 2026;83(1)
+**Identifier:** PMID 42154236 / PMC13350628 / DOI 10.1007/s00018-026-06139-8
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-42154236-01`, which was in the ledger with no registry identity; reader: group R3, `research/repurposing_10h_scientist-c_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-42154236-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID42154236.json` (schema v2, **23** persisted verbatim locators; surfaces: 14 body, 9 figure); artefact `files/fulltext/PMID42154236_Verteneuil2026_PMC_r2.xml` (sha256 `ef97b3c7060c38abda579d7a49037570c338078de8cc4c609599c2c14ba3e41c`); unread or absent (receipt): limitations `not_present`
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Model/species:** mouse Cdk7 loss in postmitotic cortical glutamatergic neurons and primary neurons
+**Genotype/model:** Cdk7 conditional knockout; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R3 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — downstream-pathway precedents (Wnt and GSK3, CDK7/9, mTOR, myelination and microglia) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — conditional knockout and neuron culture; mouse Cdk7 loss in postmitotic cortical glutamatergic neurons and primary neurons. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-c_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0759]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 488
+**Short title:** Taniguchi 2026 — sirolimus and dyslipidaemia in neonates and infants
+**Full title:** Sirolimus Therapy and Dyslipidemia in Neonates and Infants: A Retrospective Cohort and Pharmacovigilance Analysis.
+**Authors:** Taniguchi A, Chrétien B, Maeda T, Ueda K, Miura R, Tanaka R, Suzuki T, Muramatsu Y, Sato Y, Nishida K
+**Year:** 2026
+**Source type:** retrospective cohort with pharmacovigilance analysis
+**Journal/source:** *Paediatr Drugs* 2026;28(4):417-427
+**Identifier:** PMID 42217144 / PMC13379406 / DOI 10.1007/s40272-026-00754-5
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-42217144-01`, which was in the ledger with no registry identity; reader: group R3, `research/repurposing_10h_scientist-c_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-42217144-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID42217144.json` (schema v2, **18** persisted verbatim locators; surfaces: 15 body, 2 figure, 1 table); artefact `files/fulltext/PMID42217144_Taniguchi2026_PMC_r2.xml` (sha256 `e8de12de1c864927d0f2551d3122b10ac7b7a8f70bef00cca1d7eac105d62ca6`); unread or absent (receipt): limitations `not_present`
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Model/species:** ten-patient NICU chart review plus spontaneous-report analysis
+**Genotype/model:** lymphatic and vascular anomalies; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R3 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — downstream-pathway precedents (Wnt and GSK3, CDK7/9, mTOR, myelination and microglia) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: retrospective cohort with pharmacovigilance analysis; ten-patient NICU chart review plus spontaneous-report analysis. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-c_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0760]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 489
+**Short title:** Hsieh 2026 — ENT1 inhibitor J4 in a tuberous sclerosis mouse model
+**Full title:** ENT1 inhibitor J4 restores cognitive function and white-matter integrity in a mouse model of tuberous sclerosis complex.
+**Authors:** Hsieh CC, Tsou YS, Huang NK, Chen TC, Li SJ, Chang CW, Lin WX, Tung SY, Chern Y, Chen YY, Lee YC
+**Year:** 2026
+**Source type:** primary research — adult mouse pharmacology with imaging
+**Journal/source:** *J Biomed Sci* 2026;33(1)
+**Identifier:** PMID 42310739 / PMC13274077 / DOI 10.1186/s12929-026-01269-4
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-42310739-01`, which was in the ledger with no registry identity; reader: group R3, `research/repurposing_10h_scientist-c_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R3_20261022.md` and `locator_audit_R3_repairs_R3b_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-42310739-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID42310739.json` (schema v2, **16** persisted verbatim locators; surfaces: 12 body, 4 figure); artefact `files/fulltext/PMID42310739_Hsieh2026_PMC_r2.xml` (sha256 `0a01f9dc8e350a0c7eb4d760bf3ff7cb079b3a16edc39c84506b5b8648c2c72b`); unread or absent (receipt): figures `captions_only`, limitations `not_present`, supplementary `captions_only`
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Model/species:** adult male heterozygous Tsc2 mouse
+**Genotype/model:** Tsc2 heterozygosity; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R3 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — downstream-pathway precedents (Wnt and GSK3, CDK7/9, mTOR, myelination and microglia) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — adult mouse pharmacology with imaging; adult male heterozygous Tsc2 mouse. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-c_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0761]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 490
+**Short title:** Helton 2026 — Wnt activation during epileptogenesis in temporal lobe epilepsy models
+**Full title:** Wnt activation during epileptogenesis prevents pathological immature dentate granule cell morphological changes in animal models of unilateral and bilateral temporal lobe epilepsy.
+**Authors:** Helton C, Rodgers N, Gupta K
+**Year:** 2026
+**Source type:** primary research — adult mouse kainate models
+**Journal/source:** *Biomed Pharmacother* 2026;201:119737
+**Identifier:** PMID 42401046 / PMC13479836 / DOI 10.1016/j.biopha.2026.119737
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-42401046-01`, which was in the ledger with no registry identity; reader: group R3, `research/repurposing_10h_scientist-c_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-42401046-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID42401046.json` (schema v2, **20** persisted verbatim locators; surfaces: 13 body, 7 figure); artefact `files/fulltext/PMID42401046_Helton2026_PMC_r2.xml` (sha256 `7c98bf14d109aa993c9a4000c1b9f5ef9939f140eba466da38dd165e31c1d2dd`); unread or absent (receipt): limitations `not_present`, supplementary `captions_only`
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Model/species:** adult mouse kainate temporal-lobe epilepsy models (histology and Axin2)
+**Genotype/model:** wild type with kainate; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R3 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — downstream-pathway precedents (Wnt and GSK3, CDK7/9, mTOR, myelination and microglia) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — adult mouse kainate models; adult mouse kainate temporal-lobe epilepsy models (histology and Axin2). Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-c_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0762]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 491
+**Short title:** Liu 2026 — brain-targeted delivery of an esterified tankyrase inhibitor in an autism model
+**Full title:** Biomimetic Brain-Targeted Delivery of Esterified XAV939 for Treating Autism-Associated Social Deficits.
+**Authors:** Liu H, Wang YR, Wang M, Yu T, Liu D, Wang J, Gao Y, Hu Y, Ma H, Gao F, Wu S, Wei Z, Wang Y
+**Year:** 2026
+**Source type:** primary research — mouse pharmacology and toxicity
+**Journal/source:** *Pharmaceutics* 2026;18(8)
+**Identifier:** PMID 42654068 / PMC13516923 / DOI 10.3390/pharmaceutics18080951
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-42654068-01`, which was in the ledger with no registry identity; reader: group R3, `research/repurposing_10h_scientist-c_20261021.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-42654068-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID42654068.json` (schema v2, **14** persisted verbatim locators; surfaces: 10 body, 4 figure); artefact `files/fulltext/PMID42654068_Autism_XAV2026_PMC_r2.xml` (sha256 `09d45ebe54c2dcd578414033f9fa47e413aaa14503f8dcf6a285bae95a6c3909`); unread or absent (receipt): figures `captions_only`, limitations `not_present`, supplementary `not_read`
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Model/species:** Shank3b knockout mouse
+**Genotype/model:** Shank3b knockout; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R3 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — downstream-pathway precedents (Wnt and GSK3, CDK7/9, mTOR, myelination and microglia) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — mouse pharmacology and toxicity; Shank3b knockout mouse. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-c_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0763]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 492
+**Short title:** Nagaraja 2017 — transcriptional dependencies in diffuse intrinsic pontine glioma
+**Full title:** Transcriptional Dependencies in Diffuse Intrinsic Pontine Glioma.
+**Authors:** Nagaraja S, Vitanza NA, Woo PJ, Taylor KR, Liu F, Zhang L, Li M, Meng W, Ponnuswami A, Sun W, Ma J, Hulleman E, … et al. (16 authors listed on PubMed)
+**Year:** 2017
+**Source type:** primary research — patient-derived cultures and xenografts
+**Journal/source:** *Cancer Cell* 2017;31(5):635-652.e6
+**Identifier:** PMID 28434841 / PMC5462626 / DOI 10.1016/j.ccell.2017.03.011
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261022-28434841-01`, which was in the ledger with no registry identity; reader: group R3, `research/repurposing_10h_scientist-c_20261022b.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R3_repairs_R3b_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261022-28434841-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID28434841.json` (schema v2, **6** persisted verbatim locators; surfaces: 6 body); artefact `files/fulltext/PMID28434841_R3b_PMC_r2.xml` (sha256 `9de03b3a791b4f2a5f061214ec14a8c06ec68729e3a5dec48a727ac1ec709229`); unread or absent (receipt): figures `captions_only`, limitations `not_present`, methods `not_read`, supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Model/species:** patient-derived DIPG cultures and orthotopic xenografts
+**Genotype/model:** tumour cells; no WWOX content
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R3 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — downstream-pathway precedents (Wnt and GSK3, CDK7/9, mTOR, myelination and microglia) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — patient-derived cultures and xenografts; patient-derived DIPG cultures and orthotopic xenografts. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-c_20261022b.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0764]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 493
+**Short title:** Greenall 2017 — CDK7 as a therapeutic target in high-grade glioma
+**Full title:** Cyclin-dependent kinase 7 is a therapeutic target in high-grade glioma.
+**Authors:** Greenall SA, Lim YC, Mitchell CB, Ensbey KS, Stringer BW, Wilding AL, O'Neill GM, McDonald KL, Gough DJ, Day BW, Johns TG
+**Year:** 2017
+**Source type:** primary research — patient-derived neurospheres and xenograft
+**Journal/source:** *Oncogenesis* 2017;6(5):e336
+**Identifier:** PMID 28504693 / PMC5523066 / DOI 10.1038/oncsis.2017.33
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261022-28504693-01`, which was in the ledger with no registry identity; reader: group R3, `research/repurposing_10h_scientist-c_20261022b.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R3_repairs_R3b_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261022-28504693-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID28504693.json` (schema v2, **7** persisted verbatim locators; surfaces: 5 body, 2 figure); artefact `files/fulltext/PMID28504693_R3b_PMC_r2.xml` (sha256 `a778bdd14ba061f1137ff99063de19ca017befd421623ef3f16f9c7fb09d3969`); unread or absent (receipt): figures `captions_only`, limitations `not_present`, methods `not_read`, supplementary `captions_only`, tables `not_present`
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Model/species:** patient-derived high-grade glioma neurospheres and an orthotopic xenograft
+**Genotype/model:** tumour cells; no WWOX content
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R3 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — downstream-pathway precedents (Wnt and GSK3, CDK7/9, mTOR, myelination and microglia) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — patient-derived neurospheres and xenograft; patient-derived high-grade glioma neurospheres and an orthotopic xenograft. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-c_20261022b.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0765]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 494
+**Short title:** He 2017 — Cdk7 required for activity-dependent neuronal gene expression and memory
+**Full title:** Cdk7 Is Required for Activity-Dependent Neuronal Gene Expression, Long-Lasting Synaptic Plasticity and Long-Term Memory.
+**Authors:** He G, Yang X, Wang G, Qi J, Mao R, Wu Z, Zhou Z
+**Year:** 2017
+**Source type:** primary research — pharmacological inhibition in neurons and mice
+**Journal/source:** *Front Mol Neurosci* 2017;10:365
+**Identifier:** PMID 29163040 / PMC5681959 / DOI 10.3389/fnmol.2017.00365
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261022-29163040-01`, which was in the ledger with no registry identity; reader: group R3, `research/repurposing_10h_scientist-c_20261022b.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R3_repairs_R3b_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261022-29163040-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID29163040.json` (schema v2, **19** persisted verbatim locators; surfaces: 11 body, 8 figure); artefact `files/fulltext/PMID29163040_He2017_PMC_r2.xml` (sha256 `8760a2bcaa99c06ac17ceb68be1d564f3ec7f3d3da147e62785ab19e5bbd8477`); unread or absent (receipt): limitations `not_present`, tables `not_present`
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Model/species:** mouse cortical cultures, acute hippocampal slices and adult mice
+**Genotype/model:** wild type with a Cdk7 inhibitor; no WWOX content
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R3 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — downstream-pathway precedents (Wnt and GSK3, CDK7/9, mTOR, myelination and microglia) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — pharmacological inhibition in neurons and mice; mouse cortical cultures, acute hippocampal slices and adult mice. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-c_20261022b.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0766]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 495
+**Short title:** Dohare 2018 — GSK-3beta inhibition enhances myelination in preterm IVH, but not Wnt3A
+**Full title:** Glycogen synthase kinase-3β inhibition enhances myelination in preterm newborns with intraventricular hemorrhage, but not recombinant Wnt3A.
+**Authors:** Dohare P, Cheng B, Ahmed E, Yadala V, Singla P, Thomas S, Kayton R, Ungvari Z, Ballabh P
+**Year:** 2018
+**Source type:** primary research — preterm rabbit model with human autopsy comparison
+**Journal/source:** *Neurobiol Dis* 2018;118:22-39
+**Identifier:** PMID 29940337 / PMC6673662 / DOI 10.1016/j.nbd.2018.06.015
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261022-29940337-01`, which was in the ledger with no registry identity; reader: group R3, `research/repurposing_10h_scientist-c_20261022b.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R3_repairs_R3b_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261022-29940337-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID29940337.json` (schema v2, **10** persisted verbatim locators; surfaces: 10 body); artefact `files/fulltext/PMID29940337_R3b_PMC_r2.xml` (sha256 `b939d730728ce5d30caff6bbe680769b93a5727e1d44ad57e630a63135c5e286`); unread or absent (receipt): figures `captions_only`, limitations `not_present`, supplementary `not_present`, tables `not_present`
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Model/species:** preterm rabbit glycerol IVH model and six-versus-six human preterm autopsy brains
+**Genotype/model:** wild type with haemorrhage; no WWOX content
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R3 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — downstream-pathway precedents (Wnt and GSK3, CDK7/9, mTOR, myelination and microglia) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — preterm rabbit model with human autopsy comparison; preterm rabbit glycerol IVH model and six-versus-six human preterm autopsy brains. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-c_20261022b.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0767]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 496
+**Short title:** Kim 2019 — roscovitine attenuates microglia activation after status epilepticus
+**Full title:** Roscovitine Attenuates Microglia Activation and Monocyte Infiltration via p38 MAPK Inhibition in the Rat Frontoparietal Cortex Following Status Epilepticus.
+**Authors:** Kim JE, Park H, Choi SH, Kong MJ, Kang TC
+**Year:** 2019
+**Source type:** primary research — adult rat pharmacology
+**Journal/source:** *Cells* 2019;8(7)
+**Identifier:** PMID 31331032 / PMC6678318 / DOI 10.3390/cells8070746
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261022-31331032-01`, which was in the ledger with no registry identity; reader: group R3, `research/repurposing_10h_scientist-c_20261022b.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R3_repairs_R3b_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261022-31331032-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID31331032.json` (schema v2, **5** persisted verbatim locators; surfaces: 4 body, 1 figure); artefact `files/fulltext/PMID31331032_R3b_PMC_r2.xml` (sha256 `2bdea8284a2e321bfde4842cf75ae4bf54a601a3616c0380a309d458d8e1a016`); unread or absent (receipt): figures `captions_only`, limitations `not_present`, supplementary `not_present`, tables `not_present`
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Model/species:** adult male rat pilocarpine status epilepticus
+**Genotype/model:** wild type with chemoconvulsant; no WWOX content
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R3 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — downstream-pathway precedents (Wnt and GSK3, CDK7/9, mTOR, myelination and microglia) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — adult rat pharmacology; adult male rat pilocarpine status epilepticus. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-c_20261022b.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0768]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 497
+**Short title:** Knowles 2022 — maladaptive myelination promotes generalised epilepsy progression
+**Full title:** Maladaptive myelination promotes generalized epilepsy progression.
+**Authors:** Knowles JK, Xu H, Soane C, Batra A, Saucedo T, Frost E, Tam LT, Fraga D, Ni L, Villar K, Talmi S, Huguenard JR, Monje M
+**Year:** 2022
+**Source type:** primary research — rodent absence models with electron microscopy
+**Journal/source:** *Nat Neurosci* 2022;25(5):596-606
+**Identifier:** PMID 35501379 / PMC9076538 / DOI 10.1038/s41593-022-01052-2
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261022-35501379-01`, which was in the ledger with no registry identity; reader: group R3, `research/repurposing_10h_scientist-c_20261022b.md`; the group's commit candidate is held from propagation pending an audit of the producer's repairs, and none of its claim-level proposals is carried by this record. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R3_repairs_R3b_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261022-35501379-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID35501379.json` (schema v2, **14** persisted verbatim locators; surfaces: 9 body, 5 figure); artefact `files/fulltext/PMID35501379_R3b_PMC_r2.xml` (sha256 `bbcc9f8b2385a85cec47418f42d57690ed1059422e967263ea69566548f34a3a`); unread or absent (receipt): limitations `not_present`, supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Model/species:** Wag/Rij rats and Scn8a heterozygous mice
+**Genotype/model:** absence-epilepsy models; no WWOX content
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R3 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — downstream-pathway precedents (Wnt and GSK3, CDK7/9, mTOR, myelination and microglia) — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: primary research — rodent absence models with electron microscopy; Wag/Rij rats and Scn8a heterozygous mice. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-c_20261022b.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**LIT link:** [[literature_tracking_log_current#LIT-0769]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 498
+**Short title:** Kotulska 2021 — EPISTOP: prevention of epilepsy in infants with tuberous sclerosis
+**Full title:** Prevention of Epilepsy in Infants with Tuberous Sclerosis Complex in the EPISTOP Trial.
+**Authors:** Kotulska K, Kwiatkowski DJ, Curatolo P, Weschke B, Riney K, Jansen F, Feucht M, Krsek P, Nabbout R, Jansen AC, Wojdan K, Sijko K, … et al. (26 authors listed on PubMed)
+**Year:** 2021
+**Source type:** randomised open-label trial
+**Journal/source:** *Ann Neurol* 2021;89(2):304-314
+**Identifier:** PMID 33180985 / PMC7898885 / DOI 10.1002/ana.25956
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-33180985-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261021.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R4_cards_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-33180985-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID33180985.json` (schema v2, **19** persisted verbatim locators; surfaces: 17 body, 2 figure); artefact `files/fulltext/PMID33180985_Kotulska2021_PMC.xml` (sha256 `e833f387efc3a5ed767ad2250b9c8a06805f9be700a33dfebc63e4b7a5a4bd8f`); unread or absent (receipt): supplementary `unavailable`
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** infants with tuberous sclerosis
+**Genotype/model:** TSC1/TSC2; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: randomised open-label trial; infants with tuberous sclerosis. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0770]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 499
+**Short title:** Wied 2024 — EPISTOP secondary analysis: methodological insights for rare-disease trials
+**Full title:** Methodological insights from the EPISTOP trial to designing clinical trials in rare diseases-A secondary analysis of a randomized clinical trial.
+**Authors:** Wied S, Hilgers RD, Heussen N, Kotulska K, Dirani M, Kuchenbuch M, Jozwiak S, Nabbout R
+**Year:** 2024
+**Source type:** secondary analysis of a randomised trial
+**Journal/source:** *PLoS One* 2024;19(12):e0312936
+**Identifier:** PMID 39625912 / PMC11614242 / DOI 10.1371/journal.pone.0312936
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-39625912-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261021.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R4_cards_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-39625912-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID39625912.json` (schema v2, **24** persisted verbatim locators; surfaces: 13 body, 6 supplement, 3 table, 2 figure); artefact `files/fulltext/PMID39625912_Wied2024_PMC.xml` (sha256 `323ec2e26426921ac05359d9ffba50b954efc56fbd4b1447b51444e1eccfdae3`); unread or absent (receipt): supplementary `captions_only`
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** infants with tuberous sclerosis (27-infant randomised subset)
+**Genotype/model:** TSC1/TSC2; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: secondary analysis of a randomised trial; infants with tuberous sclerosis (27-infant randomised subset). Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0771]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 500
+**Short title:** French 2021 — antiepileptogenesis and disease modification: clinical and regulatory issues
+**Full title:** Antiepileptogenesis and disease modification: Clinical and regulatory issues.
+**Authors:** French JA, Bebin M, Dichter MA, Engel J Jr, Hartman AL, Jóźwiak S, Klein P, McNamara J Sr, Twyman R, Vespa P
+**Year:** 2021
+**Source type:** workshop consensus review (regulatory)
+**Journal/source:** *Epilepsia Open* 2021;6(3):483-492
+**Identifier:** PMID 34270884 / PMC8408600 / DOI 10.1002/epi4.12526
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-34270884-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261021.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-34270884-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID34270884.json` (schema v2, **18** persisted verbatim locators; surfaces: 18 body); artefact `files/fulltext/PMID34270884_French2021_PMC.xml` (sha256 `51e644230c747c8f64a5ba85cbecb29ae575a1ee1cd19b7ef9924c928e431a87`); unread or absent (receipt): figures `not_present`, limitations `not_present`, methods `not_present`, results `not_present`, supplementary `not_present`, tables `not_present`
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** epilepsy in general (review)
+**Genotype/model:** no genotype of its own; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: workshop consensus review (regulatory); epilepsy in general (review). Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0772]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 501
+**Short title:** Downs 2024 — ganaxolone on non-seizure outcomes in CDKL5 deficiency disorder
+**Full title:** Effects of ganaxolone on non-seizure outcomes in CDKL5 Deficiency Disorder: Double-blind placebo-controlled randomized trial.
+**Authors:** Downs J, Jacoby P, Specchio N, Cross H, Amin S, Bahi-Buisson N, Rajaraman R, Suter B, Devinsky O, Aimetti A, Busse G, Olson HE, … et al. (15 authors listed on PubMed)
+**Year:** 2024
+**Source type:** placebo-controlled randomised trial, secondary analysis
+**Journal/source:** *Eur J Paediatr Neurol* 2024;51:140-146
+**Identifier:** PMID 38959712 / PMC11283350 / DOI 10.1016/j.ejpn.2024.06.005
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-38959712-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261021.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-38959712-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID38959712.json` (schema v2, **20** persisted verbatim locators; surfaces: 13 body, 4 table, 3 figure); artefact `files/fulltext/PMID38959712_Downs2024_PMC_r2.xml` (sha256 `873e4639fdbeaeebee630b81045d3ad8e172a533f9add242c1f5876a30dde877`); unread or absent (receipt): supplementary `not_present`
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** children with CDKL5 deficiency disorder
+**Genotype/model:** CDKL5; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: placebo-controlled randomised trial, secondary analysis; children with CDKL5 deficiency disorder. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0773]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 502
+**Short title:** Correale 2026 — cognitive and behavioural clinical outcome assessments in DEE
+**Full title:** Cognitive and behavioral clinical outcome assessments in children with developmental and epileptic encephalopathies: Issues and instruments.
+**Authors:** Correale C, Specchio N, Downs J, Cross JH, Cappelletti S, Palacio-Navarro A, Geuens S, Valente K, Brunklaus A, Reilly C
+**Year:** 2026
+**Source type:** narrative review of instruments
+**Journal/source:** *Epilepsia* 2026;67(8):3878-3893
+**Identifier:** PMID 42246937 / PMC13525577 / DOI 10.1002/epi.70308
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-42246937-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261021.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-42246937-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID42246937.json` (schema v2, **23** persisted verbatim locators; surfaces: 22 body, 1 figure); artefact `files/fulltext/PMID42246937_Correale2026_PMC.xml` (sha256 `8a0574216b641a4ee4b4fa77a938da63f4bc5c9bc0dd79bb801fbc78a19221d2`); unread or absent (receipt): limitations `not_present`, methods `not_present`, results `not_present`, supplementary `not_present`
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** developmental and epileptic encephalopathies (review)
+**Genotype/model:** no genotype of its own; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: narrative review of instruments; developmental and epileptic encephalopathies (review). Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0774]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 503
+**Short title:** Sullivan 2026 — soticlestat as adjunctive therapy in Dravet syndrome (phase 3)
+**Full title:** Soticlestat as an adjunctive therapy in children and young adults with Dravet syndrome.
+**Authors:** Sullivan J, Valente K, Villanueva V, Strzelczyk A, Nabbout R, Nakagawa E, Zhang Y, Zolnowska M, Khan Y, Dong C, Hsiao S, Sheikh SI, … et al. (15 authors listed on PubMed)
+**Year:** 2026
+**Source type:** phase 3 randomised trial
+**Journal/source:** *Epilepsia* 2026;67(6):2796-2807
+**Identifier:** PMID 41784472 / PMC13285253 / DOI 10.1002/epi.70164
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-41784472-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261021.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R4_cards_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-41784472-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID41784472.json` (schema v2, **23** persisted verbatim locators; surfaces: 14 body, 6 figure, 3 supplement); artefact `files/fulltext/PMID41784472_Sullivan2026_PMC.xml` (sha256 `7da54fe978234e24152d754a67895783a7b76306b8e4982dfb6ef9a272155d12`)
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** children and young adults with Dravet syndrome
+**Genotype/model:** SCN1A class; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: phase 3 randomised trial; children and young adults with Dravet syndrome. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0775]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 504
+**Short title:** Guerrini 2026 — soticlestat as adjunctive therapy in Lennox-Gastaut syndrome (phase 3)
+**Full title:** A phase 3, randomized clinical trial of soticlestat as adjunctive therapy for Lennox-Gastaut syndrome.
+**Authors:** Guerrini R, Marsh ED, Liao WP, Imai K, Kravljanac R, Altmann A, Hahn CD, Auvin S, Schiemann J, Khan Y, Mitra P, Sheikh SI, … et al. (16 authors listed on PubMed)
+**Year:** 2026
+**Source type:** phase 3 randomised trial
+**Journal/source:** *Epilepsia* 2026;67(7):3420-3431
+**Identifier:** PMID 41891667 / PMC13360899 / DOI 10.1002/epi.70216
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-41891667-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261021.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R4_cards_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-41891667-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID41891667.json` (schema v2, **25** persisted verbatim locators; surfaces: 15 body, 7 figure, 2 supplement, 1 table); artefact `files/fulltext/PMID41891667_Guerrini2026_PMC.xml` (sha256 `b89e2f98378f59ce5a5aef43f83c8dc71aa0f4cd0f57167bfa24c9bb87ad8b3d`)
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** patients with Lennox-Gastaut syndrome
+**Genotype/model:** heterogeneous aetiologies; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: phase 3 randomised trial; patients with Lennox-Gastaut syndrome. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0776]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 505
+**Short title:** Hahn 2022 — ELEKTRA: soticlestat phase 2 in Dravet and Lennox-Gastaut syndromes
+**Full title:** A phase 2, randomized, double-blind, placebo-controlled study to evaluate the efficacy and safety of soticlestat as adjunctive therapy in pediatric patients with Dravet syndrome or Lennox-Gastaut syndrome (ELEKTRA).
+**Authors:** Hahn CD, Jiang Y, Villanueva V, Zolnowska M, Arkilo D, Hsiao S, Asgharnejad M, Dlugos D
+**Year:** 2022
+**Source type:** phase 2 randomised trial
+**Journal/source:** *Epilepsia* 2022;63(10):2671-2683
+**Identifier:** PMID 35841234 / PMC9804149 / DOI 10.1111/epi.17367
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-35841234-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261021.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R4_cards_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-35841234-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID35841234.json` (schema v2, **19** persisted verbatim locators; surfaces: 14 body, 4 figure, 1 supplement); artefact `files/fulltext/PMID35841234_Hahn2022_PMC.xml` (sha256 `52f570a8eb096e54a1f6b18dbae6e324dd0adb293bb129c7fb707e3536c66544`); unread or absent (receipt): supplementary `unavailable`
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** paediatric patients with Dravet or Lennox-Gastaut syndrome
+**Genotype/model:** SCN1A class and heterogeneous aetiologies; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: phase 2 randomised trial; paediatric patients with Dravet or Lennox-Gastaut syndrome. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0777]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 506
+**Short title:** Jha 2026 — n-of-1 gene-directed drug repurposing trial for an ultrarare condition
+**Full title:** An n-of-1 gene-directed drug repurposing trial for an ultrarare genetic condition.
+**Authors:** Jha V, Tsetsos C, Bedford M, Costain G, Vohra S, Diaz Martinez JP, Heon E, Vorstman J, Gorodetsky C, Vincent A, Rapley J, Anderson L, Anagnostou E, Baribeau DA
+**Year:** 2026
+**Source type:** single-patient trial
+**Journal/source:** *Epilepsia* 2026;67(7):3644-3656
+**Identifier:** PMID 41999155 / PMC13360919 / DOI 10.1002/epi.70253
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-41999155-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261021.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R4_cards_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-41999155-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID41999155.json` (schema v2, **26** persisted verbatim locators; surfaces: 18 body, 4 supplement, 3 figure, 1 table); artefact `files/fulltext/PMID41999155_Jha2026_PMC.xml` (sha256 `1e7a8ba2efeaab568a2b650ee870b096751df00bd6f7f0951ca313f5b8c965c7`); unread or absent (receipt): supplementary `captions_only`
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** one child with a KCNC1 gain-of-function variant
+**Genotype/model:** KCNC1 gain of function; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: single-patient trial; one child with a KCNC1 gain-of-function variant. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0778]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 507
+**Short title:** Xian 2023 — clinical and developmental outcomes in STXBP1-related disorders
+**Full title:** Delineating clinical and developmental outcomes in STXBP1-related disorders.
+**Authors:** Xian J, Thalwitzer KM, McKee J, Sullivan KR, Brimble E, Fitch E, Toib J, Kaufman MC, deCampo D, Cunningham K, Pierce SR, Goss J, … et al. (19 authors listed on PubMed)
+**Year:** 2023
+**Source type:** natural-history cohort with modelling
+**Journal/source:** *Brain* 2023;146(12):5182-5197
+**Identifier:** PMID 38015929 / PMC10689925 / DOI 10.1093/brain/awad287
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-38015929-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261021.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-38015929-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID38015929.json` (schema v2, **27** persisted verbatim locators; surfaces: 19 body, 6 figure, 1 table, 1 supplement); artefact `files/fulltext/PMID38015929_Xian2023_PMC.xml` (sha256 `a31a389e9358a177f78099cc5c5ac3aafed7122fe2c33b2ca2b1f1ae6d9e7d34`); unread or absent (receipt): supplementary `captions_only`
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** patients with STXBP1-related disorders
+**Genotype/model:** STXBP1 haploinsufficiency class; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: natural-history cohort with modelling; patients with STXBP1-related disorders. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0779]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 508
+**Short title:** Kim-McManus 2026 — individualised antisense oligonucleotides for SCN2A-related DEE
+**Full title:** Individualized antisense oligonucleotides for SCN2A-related developmental epileptic encephalopathy.
+**Authors:** Kim-McManus O, Mignon L, Douville J, Pu H, Parisien C, Glass S, Bennett CF, Celso J, Robbins K, Ung H, Olson H, Kingsmore SF, … et al. (16 authors listed on PubMed)
+**Year:** 2026
+**Source type:** two open-label single-patient studies
+**Journal/source:** *Nat Med* 2026;32(8):2838-2845
+**Identifier:** PMID 42481851 / PMC13472884 / DOI 10.1038/s41591-026-04527-y
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-42481851-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261021.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R4_cards_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-42481851-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID42481851.json` (schema v2, **23** persisted verbatim locators; surfaces: 18 body, 4 figure, 1 table); artefact `files/fulltext/PMID42481851_KimMcManus2026_PMC.xml` (sha256 `eda796130cebea1ceb25e572b9a5ba7a9a6682d995d97e680b7105aad70e1005`); unread or absent (receipt): supplementary `captions_only`
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** two patients with SCN2A gain-of-function DEE
+**Genotype/model:** SCN2A gain of function; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: two open-label single-patient studies; two patients with SCN2A gain-of-function DEE. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0780]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 509
+**Short title:** McKee 2026 — prospective natural-history protocol for clinical-trial readiness in synaptic disorders
+**Full title:** A prospective natural history study protocol for clinical trial readiness in synaptic disorders.
+**Authors:** McKee JL, Ruggiero SM, Cunningham K, Coyne J, McSalley I, Kaufman MC, Bane B, Chisari T, Toib J, Glatts C, Tefft S, Orlando JM, … et al. (39 authors listed on PubMed)
+**Year:** 2026
+**Source type:** study protocol with preliminary data
+**Journal/source:** *Epilepsia* 2026;67(10):5448-5463
+**Identifier:** PMID 42446932 / PMC13675783 / DOI 10.1002/epi.70374
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-42446932-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261021.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-42446932-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID42446932.json` (schema v2, **20** persisted verbatim locators; surfaces: 15 body, 4 figure, 1 supplement); artefact `files/fulltext/PMID42446932_McKee2026_PMC.xml` (sha256 `f1bbfd41e7f755bf8b21010caf125e78b66a1304b8e6828d422926a644d9abe0`); unread or absent (receipt): supplementary `captions_only`
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** STXBP1 and SYNGAP1 synaptic disorders
+**Genotype/model:** haploinsufficiency class; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: study protocol with preliminary data; STXBP1 and SYNGAP1 synaptic disorders. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0781]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 510
+**Short title:** Driedger 2025 — PROTECT: long-term outcome of pre-emptive mTOR inhibitor treatment in tuberous sclerosis
+**Full title:** Long-term neuropsychologic outcome of pre-emptive mTOR inhibitor treatment in children with tuberous sclerosis complex (TSC) under 4 months of age (PROTECT), a two-arm, randomized, observer-blind, controlled phase IIb national multicentre clinical trial: study protocol.
+**Authors:** Driedger JH, Schröter J, PROTECT-Study Group, Syrbe S, Saffari A
+**Year:** 2025
+**Source type:** trial protocol (no results)
+**Journal/source:** *Orphanet J Rare Dis* 2025;20(1):2
+**Identifier:** PMID 39762914 / PMC11702139 / DOI 10.1186/s13023-024-03495-1
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-39762914-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261021.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-39762914-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID39762914.json` (schema v2, **14** persisted verbatim locators; surfaces: 10 body, 3 supplement, 1 figure); artefact `files/fulltext/PMID39762914_Driedger2025_PMC.xml` (sha256 `fc7b8491bb125e0a2a550d5897a3e44a5630ec5f773491deca14be0aaf66c8e8`); unread or absent (receipt): limitations `not_present`, results `not_present`, supplementary `captions_only`
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** infants with tuberous sclerosis
+**Genotype/model:** TSC1/TSC2; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: trial protocol (no results); infants with tuberous sclerosis. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0782]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 511
+**Short title:** Capal 2024 — preventative sirolimus in tuberous sclerosis: phase 1 safety and efficacy
+**Full title:** Preventative treatment of tuberous sclerosis complex with sirolimus: Phase I safety and efficacy results.
+**Authors:** Capal JK, Ritter DM, Franz DN, Griffith M, Currans K, Kent B, Bebin EM, Northrup H, Koenig MK, Mizuno T, Vinks AA, Galandi SL, … et al. (20 authors listed on PubMed)
+**Year:** 2024
+**Source type:** phase 1 trial
+**Journal/source:** *Ann Child Neurol Soc* 2024;2(2):106-119
+**Identifier:** PMID 39726432 / PMC11670424 / DOI 10.1002/cns3.20070
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-39726432-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261021.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R4_cards_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-39726432-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID39726432.json` (schema v2, **18** persisted verbatim locators; surfaces: 13 body, 2 supplement, 2 figure, 1 table); artefact `files/fulltext/PMID39726432_Capal2024_PMC.xml` (sha256 `cf4372f98002fc946f2afd92b4221c92da935f6156208928e18c08bbc33000ee`)
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** five infants with tuberous sclerosis
+**Genotype/model:** TSC1/TSC2; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: phase 1 trial; five infants with tuberous sclerosis. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0783]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 512
+**Short title:** den 2023 — L-serine in GRIN2B loss of function: aggregated n-of-1 protocol
+**Full title:** Effectiveness of L-serine supplementation in children with a GRIN2B loss-of-function mutation: Rationale and protocol for single patient (n-of-1) multiple cross-over trials.
+**Authors:** den Hollander B, Rothuizen-Lindenschot M, Geertjens L, Vaz FM, Brands MM, Le HL, van Eeghen AM, van de Ven PM, Cornel MC, Jacobs BAW, Bruining H, van Karnebeek CD
+**Year:** 2023
+**Source type:** n-of-1 trial protocol (no results)
+**Journal/source:** *Contemp Clin Trials Commun* 2023;36:101233
+**Identifier:** PMID 38144875 / PMC10746402 / DOI 10.1016/j.conctc.2023.101233
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-38144875-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261021.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-38144875-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID38144875.json` (schema v2, **19** persisted verbatim locators; surfaces: 16 body, 3 figure); artefact `files/fulltext/PMID38144875_denHollander2023_PMC.xml` (sha256 `9838f8a178eafb1462ce2d9600be65af438a8b4e6f7590224fa9e1d7c847c218`); unread or absent (receipt): limitations `not_present`, results `not_present`, supplementary `not_present`
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** children with GRIN2B loss of function
+**Genotype/model:** GRIN2B loss of function; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: n-of-1 trial protocol (no results); children with GRIN2B loss of function. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0784]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 513
+**Short title:** Lewis 2023 — intrathecal magnesium for GRIN1 gain-of-function
+**Full title:** Intrathecal magnesium delivery for Mg++-insensitive NMDA receptor activity due to GRIN1 mutation.
+**Authors:** Lewis SA, Shetty S, Gamble S, Heim J, Zhao N, Stitt G, Pankratz M, Mangum T, Marku I, Rosenberg RB, Wilfong AA, Fahey MC, … et al. (16 authors listed on PubMed)
+**Year:** 2023
+**Source type:** single-patient case report
+**Journal/source:** *Orphanet J Rare Dis* 2023;18(1):225
+**Identifier:** PMID 37537625 / PMC10398931 / DOI 10.1186/s13023-023-02756-9
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-37537625-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261021.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R4_cards_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-37537625-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID37537625.json` (schema v2, **18** persisted verbatim locators; surfaces: 14 body, 3 supplement, 1 figure); artefact `files/fulltext/PMID37537625_Lewis2023_PMC.xml` (sha256 `0584c81fe7a9b05f70f1e07474936765bd7c5424f3834b2ce47ef59e7c19e50e`); unread or absent (receipt): supplementary `unavailable`, tables `not_present`
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** one child with a GRIN1 variant
+**Genotype/model:** GRIN1 gain of function; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: single-patient case report; one child with a GRIN1 variant. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0785]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 514
+**Short title:** Bebin 2023 — PREVeNT: early treatment with vigabatrin in tuberous sclerosis
+**Full title:** Early Treatment with Vigabatrin Does Not Decrease Focal Seizures or Improve Cognition in Tuberous Sclerosis Complex: The PREVeNT Trial.
+**Authors:** Bebin EM, Peters JM, Porter BE, McPherson TO, O'Kelley S, Sahin M, Taub KS, Rajaraman R, Randle SC, McClintock WM, Koenig MK, Frost MD, … et al. (22 authors listed on PubMed)
+**Year:** 2023
+**Source type:** placebo-controlled randomised trial
+**Journal/source:** *Ann Neurol* 2023
+**Identifier:** PMID 37638552 / PMC10899525 / DOI 10.1002/ana.26778
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-37638552-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261021.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. A blind locator audit covered this manifest (`research/page_adjudications/locator_audit_R4_cards_20261022.md`); the per-triple verdicts and the repairs are there and in the manifest, and the producer's repairs after an audit are unaudited unless a later audit file says otherwise.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-37638552-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID37638552.json` (schema v2, **20** persisted verbatim locators; surfaces: 18 body, 2 table); artefact `files/fulltext/PMID37638552_Bebin2023_PMC_r2.xml` (sha256 `c98f3b0ce3b9a5f104b0b8608cb3199ab5f5e49539fc31495003a249d3b84cc8`); unread or absent (receipt): figures `unavailable`, supplementary `unavailable`
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** infants with tuberous sclerosis
+**Genotype/model:** TSC1/TSC2; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: placebo-controlled randomised trial; infants with tuberous sclerosis. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0786]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 515
+**Short title:** O'Kelley 2025 — PREVeNT neurodevelopmental outcomes at 36 months
+**Full title:** Neurodevelopmental Outcomes From the PREVeNT Trial.
+**Authors:** O'Kelley SE, Capal JK, McPherson TO, Patrick KE, Pearson DA, Davis PE, Currans K, Byars AW, Porter BE, Sahin M, Taub KS, Rajaraman R, … et al. (24 authors listed on PubMed)
+**Year:** 2025
+**Source type:** placebo-controlled randomised trial, follow-up
+**Journal/source:** *Pediatr Neurol* 2025;173:88-97
+**Identifier:** PMID 41061327 / PMC12554379 / DOI 10.1016/j.pediatrneurol.2025.09.006
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-41061327-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261021.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-41061327-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID41061327.json` (schema v2, **14** persisted verbatim locators; surfaces: 12 body, 2 table); artefact `files/fulltext/PMID41061327_OKelley2025_PMC_r2.xml` (sha256 `0c45146bf849fc98a6cb74d291623331f58584fce0c47cb97f6f529224d5173c`); unread or absent (receipt): figures `unavailable`, supplementary `not_present`
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** children with tuberous sclerosis
+**Genotype/model:** TSC1/TSC2; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: placebo-controlled randomised trial, follow-up; children with tuberous sclerosis. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0787]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 516
+**Short title:** Downs 2025 — caregiver-reported meaningful change in functional domains in DEE
+**Full title:** Caregiver-reported meaningful change in functional domains for individuals with developmental and epileptic encephalopathy: A convergent mixed-methods design.
+**Authors:** Downs J, Haywood S, Ludwig NN, Wojnaroski M, Hommer R, Muzyczka K, Hecker J, Conecker G, Keeley J, Berg AT
+**Year:** 2025
+**Source type:** convergent mixed-methods survey
+**Journal/source:** *Dev Med Child Neurol* 2025;67(12):1616-1627
+**Identifier:** PMID 40372822 / PMC12618951 / DOI 10.1111/dmcn.16363
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-40372822-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261021.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-40372822-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID40372822.json` (schema v2, **14** persisted verbatim locators; surfaces: 10 body, 2 supplement, 1 table, 1 figure); artefact `files/fulltext/PMID40372822_Downs2025_PMC_r2.xml` (sha256 `242133c97d0cff6a3ec52d3db93ff90ebd93614f3200abf8517b7baa3ce2e38d`)
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** caregivers of individuals with DEE
+**Genotype/model:** DEE in general; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: convergent mixed-methods survey; caregivers of individuals with DEE. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0788]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 517
+**Short title:** Berg 2024 — FDA patient-focused drug development guidance: trial readiness in rare DEE
+**Full title:** FDA Patient-Focused Drug Development Guidances: Considerations for Trial Readiness in Rare Developmental and Epileptic Encephalopathies.
+**Authors:** Berg AT, Ludwig NN, Wojnaroski M, Chapman CAT, Hommer R, Conecker G, Hecker JZ, Downs J
+**Year:** 2024
+**Source type:** consensus-style methods review
+**Journal/source:** *Neurology* 2024;102(1):e207958
+**Identifier:** PMID 38165374 / PMC10834124 / DOI 10.1212/WNL.0000000000207958
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-38165374-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261021.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-38165374-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID38165374.json` (schema v2, **18** persisted verbatim locators; surfaces: 14 body, 2 table, 2 figure); artefact `files/fulltext/PMID38165374_Berg2024_PMC_r2.xml` (sha256 `af9cf37590d2edd3eb21dfe52109234b34c257d0acbce5c1ea4054a0d007e6b5`); unread or absent (receipt): limitations `not_present`, methods `not_present`, results `not_present`, supplementary `not_present`
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** rare DEE (review)
+**Genotype/model:** no genotype of its own; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: consensus-style methods review; rare DEE (review). Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0789]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 518
+**Short title:** Sullivan 2025 — BUTTERFLY: natural history of Dravet syndrome over 24 months
+**Full title:** Natural History of Children and Adolescents With Dravet Syndrome: A 24-Month Follow-Up.
+**Authors:** Sullivan J, Wirrell EC, Knupp KG, Ciliberto M, Ziobro J, Chen DY, Flamini JR, Zafar M, LaVallee N, Stepanians M, Ventola P, Chavan TS, … et al. (15 authors listed on PubMed)
+**Year:** 2025
+**Source type:** multicentre observational study
+**Journal/source:** *Neurology* 2025;105(11):e214388
+**Identifier:** PMID 41237355 / PMC12622971 / DOI 10.1212/WNL.0000000000214388
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-41237355-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261021.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-41237355-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID41237355.json` (schema v2, **19** persisted verbatim locators; surfaces: 16 body, 3 figure); artefact `files/fulltext/PMID41237355_Sullivan2025_PMC_r2.xml` (sha256 `b83971979e38b7960c6b40b677c1c4345d31a44631e412005ae0b2076574c08c`); unread or absent (receipt): supplementary `unavailable`
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** children and adolescents with Dravet syndrome
+**Genotype/model:** SCN1A class; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: multicentre observational study; children and adolescents with Dravet syndrome. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0790]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 519
+**Short title:** Liogier 2026 — CANDID: baseline and feasibility of outcome measures in CDKL5 deficiency disorder
+**Full title:** Baseline characteristics and feasibility of clinical outcome measures in CDKL5 deficiency disorder: The CANDID observational study.
+**Authors:** Liogier d'Ardhuy X, CANDID Partners, Cimms T, Lindsten K, Rizzo M, Skrinar A, St Wecker P, Mingorance A, Devinsky O
+**Year:** 2026
+**Source type:** observational baseline report
+**Journal/source:** *Epilepsia* 2026;67(4):1703-1721
+**Identifier:** PMID 41531035 / PMC13075603 / DOI 10.1002/epi.70095
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-41531035-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261021.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-41531035-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID41531035.json` (schema v2, **17** persisted verbatim locators; surfaces: 13 body, 2 supplement, 2 figure); artefact `files/fulltext/PMID41531035_LiogierDArdhuy2026_PMC_r2.xml` (sha256 `f5ffc20a1c18f15db4aaa3b5ecd64f0c8f9ba7e41bf925089588b675b222092c`); unread or absent (receipt): supplementary `captions_only`
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** patients with CDKL5 deficiency disorder
+**Genotype/model:** CDKL5; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: observational baseline report; patients with CDKL5 deficiency disorder. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261021.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0791]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 520
+**Short title:** Knupp 2022 — fenfluramine for seizures in Lennox-Gastaut syndrome (phase 3)
+**Full title:** Efficacy and Safety of Fenfluramine for the Treatment of Seizures Associated With Lennox-Gastaut Syndrome: A Randomized Clinical Trial.
+**Authors:** Knupp KG, Scheffer IE, Ceulemans B, Sullivan JE, Nickels KC, Lagae L, Guerrini R, Zuberi SM, Nabbout R, Riney K, Shore S, Agarwal A, … et al. (18 authors listed on PubMed)
+**Year:** 2022
+**Source type:** phase 3 randomised trial
+**Journal/source:** *JAMA Neurol* 2022;79(6):554-564
+**Identifier:** PMID 35499850 / PMC9062770 / DOI 10.1001/jamaneurol.2022.0829
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-35499850-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261022b.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-35499850-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID35499850.json` (schema v2, **16** persisted verbatim locators; surfaces: 13 body, 3 figure); artefact `files/fulltext/PMID35499850_Knupp2022_PMC.xml` (sha256 `240acee571f4112120e540d00671c84fcb2e0c7b8adde8112f30b0ac1c0e434d`); unread or absent (receipt): supplementary `not_read`
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** patients with Lennox-Gastaut syndrome
+**Genotype/model:** heterogeneous aetiologies; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: phase 3 randomised trial; patients with Lennox-Gastaut syndrome. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261022b.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0792]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 521
+**Short title:** Ratcliffe 2023 — soticlestat in adults with complex regional pain syndrome (phase 2a)
+**Full title:** Randomized controlled study to evaluate the efficacy and safety of soticlestat as adjunctive therapy in adults with complex regional pain syndrome.
+**Authors:** Ratcliffe S, Arkilo D, Asgharnejad M, Bhattacharya S, Harden RN
+**Year:** 2023
+**Source type:** randomised controlled trial
+**Journal/source:** *Pain Med* 2023;24(7):872-880
+**Identifier:** PMID 36538782 / PMC10321763 / DOI 10.1093/pm/pnac198
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-36538782-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261022b.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-36538782-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID36538782.json` (schema v2, **18** persisted verbatim locators; surfaces: 14 body, 3 figure, 1 supplement); artefact `files/fulltext/PMID36538782_Ratcliffe2023_PMC.xml` (sha256 `2457233bce08f7252b031ba5f1f0eb02fc9ca0896a2fc94d95b4b89a357d689a`)
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** adults with complex regional pain syndrome
+**Genotype/model:** non-genetic adult pain syndrome; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: randomised controlled trial; adults with complex regional pain syndrome. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261022b.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0793]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 522
+**Short title:** van 2023 — GETSBI: parallel RCT compared with an aggregated n-of-1 analysis (bladder pain)
+**Full title:** Study protocol of a multicentre double-blind RCT, comparing a traditional RCT with an aggregated N-of-1 trial: GAG therapy Efficacy Trial Solution for Bladder pain syndrome/Interstitial cystitis (GETSBI study).
+**Authors:** van Ginkel C, Baars C, Heesakkers J, Martens F, Janssen D
+**Year:** 2023
+**Source type:** trial protocol (no results)
+**Journal/source:** *BMJ Open* 2023;13(4):e068546
+**Identifier:** PMID 37045569 / PMC10106014 / DOI 10.1136/bmjopen-2022-068546
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-37045569-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261022b.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-37045569-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID37045569.json` (schema v2, **16** persisted verbatim locators; surfaces: 14 body, 2 figure); artefact `files/fulltext/PMID37045569_vanGinkel2023_PMC.xml` (sha256 `111fb07dee4ac910f82598ef0f116f715305b6b2416bfaacf252924fa6537e08`); unread or absent (receipt): results `not_present`, supplementary `not_present`, tables `not_present`
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** adults with a bladder-pain subtype
+**Genotype/model:** non-genetic adult condition; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: trial protocol (no results); adults with a bladder-pain subtype. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261022b.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0794]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 523
+**Short title:** Gras 2024 — antiseizure medications and alternative therapies in KCNT1-related epilepsy
+**Full title:** Efficacy of anti-seizure medications and alternative therapies (ketogenic diet, CBD, and quinidine) in KCNT1-related epilepsy: A systematic review.
+**Authors:** Gras M, Bearden D, West J, Nabbout R
+**Year:** 2024
+**Source type:** systematic review of case reports and series
+**Journal/source:** *Epilepsia Open* 2024;9(4):1176-1191
+**Identifier:** PMID 39093319 / PMC11296097 / DOI 10.1002/epi4.12975
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-39093319-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261022b.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-39093319-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID39093319.json` (schema v2, **15** persisted verbatim locators; surfaces: 13 body, 2 figure); artefact `files/fulltext/PMID39093319_Gras2024_PMC.xml` (sha256 `b62b95bc5c4f7b9e6abe117aead014580261e62f44f79c96d235b79102c8a17a`); unread or absent (receipt): supplementary `not_read`
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** patients with KCNT1-related epilepsy
+**Genotype/model:** KCNT1 gain of function; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: systematic review of case reports and series; patients with KCNT1-related epilepsy. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261022b.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0795]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 524
+**Short title:** Berg 2025 — communication impairment in SCN2A: clinical trials readiness study
+**Full title:** Assessing Communication Impairments in a Rare Neurodevelopmental Disorder: The SCN2A Clinical Trials Readiness Study.
+**Authors:** Berg AT, Nili AN, Evans L, Paltell KC, Kaiser AJE, Anderson EL, Egan SM, Kaat AJ, Nesbitt G, Myers LS
+**Year:** 2025
+**Source type:** cross-sectional and untreated-change study with parent-reported instruments
+**Journal/source:** *Neurol Clin Pract* 2025;15(1):e200391
+**Identifier:** PMID 39439575 / PMC11492899 / DOI 10.1212/CPJ.0000000000200391
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-39439575-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261022b.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-39439575-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID39439575.json` (schema v2, **13** persisted verbatim locators; surfaces: 13 body); artefact `files/fulltext/PMID39439575_Berg2024comm_PMC_page.html` (sha256 `b300c4ee1fe1c40b105e30a833740604421e87c0856c0bdb86c2d004163ec957`); unread or absent (receipt): figures `captions_only`, supplementary `not_read`
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** patients with SCN2A-related disorder (convenience sample)
+**Genotype/model:** SCN2A; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: cross-sectional and untreated-change study with parent-reported instruments; patients with SCN2A-related disorder (convenience sample). Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261022b.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0796]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 525
+**Short title:** Schulz 2025 — real-world outcomes in CLN2 disease treated with cerliponase alfa
+**Full title:** Real-world clinical outcomes of patients with CLN2 disease treated with cerliponase alfa.
+**Authors:** Schulz A, Schwering C, Wibbeler E, Westermann LM, Hagenah L, Lezius S, Jha A, Hunt A, Slasor P, Reisewitz P, Nickel M
+**Year:** 2025
+**Source type:** registry analysis
+**Journal/source:** *Front Neurol* 2025;16:1516026
+**Identifier:** PMID 40162009 / PMC11951263 / DOI 10.3389/fneur.2025.1516026
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-40162009-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261022b.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-40162009-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID40162009.json` (schema v2, **15** persisted verbatim locators; surfaces: 12 body, 2 figure, 1 supplement); artefact `files/fulltext/PMID40162009_Schulz2025_PMC.xml` (sha256 `a7f996c3a5c18885ec47f533d240028a198cb13ea6083a8b04694065975c7a97`); unread or absent (receipt): supplementary `captions_only`
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** patients with CLN2 disease
+**Genotype/model:** CLN2 (TPP1); no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: registry analysis; patients with CLN2 disease. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261022b.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0797]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 526
+**Short title:** Bidwell 2026 — KCNQ2 DEE: neurodevelopmental features and Kv7.2 dysfunction
+**Full title:** Neurodevelopmental features in KCNQ2 developmental and epileptic encephalopathy may have limited associations with K(V)7.2 dysfunction.
+**Authors:** Bidwell JS, Vanoye CG, Desai RR, Berg AT, George AL Jr
+**Year:** 2026
+**Source type:** natural-history survey with automated electrophysiology
+**Journal/source:** *Epilepsia Open* 2026;11(1):190-199
+**Identifier:** PMID 41250984 / PMC12903803 / DOI 10.1002/epi4.70192
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-41250984-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261022b.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-41250984-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID41250984.json` (schema v2, **14** persisted verbatim locators; surfaces: 12 body, 2 figure); artefact `files/fulltext/PMID41250984_Bidwell2026_PMC.xml` (sha256 `b8698a0c37d48a4e1e33e613d575c15a248e2018295fb7ea23c9f8de5d0fa92e`); unread or absent (receipt): supplementary `not_read`
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** patients with KCNQ2 DEE and heterologous cells
+**Genotype/model:** KCNQ2 variants; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: natural-history survey with automated electrophysiology; patients with KCNQ2 DEE and heterologous cells. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261022b.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0798]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 527
+**Short title:** Xiong 2026 — gabapentin in KCNQ2-DEE
+**Full title:** Assessment of gabapentin efficacy in patients with KCNQ2-developmental epileptic encephalopathy.
+**Authors:** Xiong J, You X, Li H, Chen C, Duan H, Chen S, Cao X, He F, Fei Y, Xiao Z, Peng J
+**Year:** 2026
+**Source type:** four-patient open-label observation with patch-clamp of the variants
+**Journal/source:** *Sci Rep* 2026;16(1)
+**Identifier:** PMID 42286026 / PMC13518877 / DOI 10.1038/s41598-026-55285-3
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-42286026-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261022b.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261021-42286026-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID42286026.json` (schema v2, **14** persisted verbatim locators; surfaces: 12 body, 2 figure); artefact `files/fulltext/PMID42286026_Xiong2026_PMC.xml` (sha256 `1cb601ecef5a60f36892ad227a22353832ad716e60f002f6e5bc89380ae79a59`); unread or absent (receipt): supplementary `not_read`
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** four patients and heterologous cells
+**Genotype/model:** KCNQ2 variants; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: four-patient open-label observation with patch-clamp of the variants; four patients and heterologous cells. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261022b.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0799]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 528
+**Short title:** Villanueva 2026 — fenfluramine effectiveness in DEE: a Spanish multicentre registry
+**Full title:** Effectiveness and tolerability of fenfluramine in pediatric and adult patients with developmental and epileptic encephalopathies: A multicenter, retrospective, real-world clinical-practice study.
+**Authors:** Villanueva V, González-Alguacil E, Smeyers P, Hernández S, Soto-Insuga V, Fernández-Cabrera A, Olivié L, de Santos T, Parejo B, Iacampo L, Ortuño B, Aparicio J, … et al. (30 authors listed on PubMed)
+**Year:** 2026
+**Source type:** retrospective multicentre registry study
+**Journal/source:** *Epilepsia* 2026;67(9):4536-4550
+**Identifier:** PMID 42334048 / PMC13592478 / DOI 10.1002/epi.70342
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-42334048-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261022b.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-42334048-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID42334048.json` (schema v2, **16** persisted verbatim locators; surfaces: 11 body, 3 figure, 1 table, 1 supplement); artefact `files/fulltext/PMID42334048_Villanueva2026_PMC.xml` (sha256 `94e5f4689c5a00bff7a91d1dafd941394960f7d4fa635c84f799b7286bf5a8a2`)
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** paediatric and adult patients with DEE (18 hospitals)
+**Genotype/model:** many genes; one WWOX-variant patient appears as a registry row
+**Transferability:** 🔴 T4 — **NOT WWOX EVIDENCE: WWOX occurs once in the article, as one patient among a registry, with no WWOX measurement and no case-level datum.** A count or a list entry carries nothing that could transfer (registry header scale)
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: retrospective multicentre registry study; paediatric and adult patients with DEE (18 hospitals). Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261022b.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading. One WWOX-variant patient appears as a registry row among the cohort; WWOX is a list entry and not a study here, which is why the record is T4.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0800]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 529
+**Short title:** Janszky 2026 — fenfluramine in Dravet and Lennox-Gastaut syndromes: a narrative review
+**Full title:** Fenfluramine for seizures in Dravet syndrome and Lennox-Gastaut syndrome: Mechanisms, clinical evidence, safety, and practical integration.
+**Authors:** Janszky J, Janszky J Jr, Horváth R
+**Year:** 2026
+**Source type:** narrative review (two authors)
+**Journal/source:** *Epilepsy Behav Rep* 2026;35:100876
+**Identifier:** PMID 42389070 / PMC13320519 / DOI 10.1016/j.ebr.2026.100876
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261021-42389070-01`, which was in the ledger with no registry identity; reader: group R4, `research/repurposing_10h_scientist-d_20261022b.md`; the group's commit candidate asks for exactly these identity records and proposes no claim change. Identity (title, authors, journal, identifiers) from the PubMed record of 2026-10-22, checked against the receipt's study identifiers. No blind locator audit has run on this manifest; one is OWED, and nothing in this record depends on the locators being right.
+**Evidence depth:** `complete_fulltext_read` (**complete full text**) — receipt `FTR-20261021-42389070-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID42389070.json` (schema v2, **16** persisted verbatim locators; surfaces: 16 body); artefact `files/fulltext/PMID42389070_Janszky2026_PMC.xml` (sha256 `2374779101818dd5165ce03e8359acea4ed7f74c585180470ecf87369839e754`); unread or absent (receipt): figures `not_present`, methods `not_present`, supplementary `not_present`
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Model/species:** Dravet and Lennox-Gastaut syndromes (review)
+**Genotype/model:** no genotype of its own; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in group R4 of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`) — precedents for trial design, outcome measures, natural history and external controls in other developmental and epileptic encephalopathies and rare diseases — as a class-level precedent; the reader's own group assessment calls it NOT WWOX EVIDENCE. Design as this record describes it: narrative review (two authors); Dravet and Lennox-Gastaut syndromes (review). Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_10h_scientist-d_20261022b.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0801]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 530
+**Short title:** Hsu 2017 — Hyaluronan activates Hyal-2/WWOX/Smad4 signalling; bubbling cell death on overexpression
+**Full title:** Hyaluronan activates Hyal-2/WWOX/Smad4 signaling and causes bubbling cell death when the signaling complex is overexpressed.
+**Authors:** Hsu LJ, Hong Q, Chen ST, Kuo HL, Schultz L, Heath J, Lin SR, Lee MH, Li DZ, Li ZL, Cheng HC, Armand G, Chang NS
+**Year:** 2017
+**Source type:** primary research — cell-culture signalling
+**Journal/source:** *Oncotarget* 2017;8(12):19137-19155
+**Identifier:** PMID 27845895 / PMC5386674 / DOI 10.18632/oncotarget.13268
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20260921-27845895-01`, which was in the ledger with no registry identity of its own (the PMID was cited inside other records only). Identity from the PubMed record of 2026-10-22. No blind locator audit is recorded for this reading.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20260921-27845895-01`; no deep-dive manifest for this PMID exists in the repository; artefact `files/fulltext/PMID27845895_PMC_MCPtext.txt` (sha256 `3e52aa0bddfc6ee15e32b33793b6ae3b8672313850b9ccda14e2e6b4c835d6c7`) — **not present on the checkout this record was authored on**, so its WWOX content was not re-counted; unread or absent (receipt): figures `unavailable`, limitations `not_present`, references `unavailable`, supplementary `unavailable`, tables `unavailable`
+**Primary pathway:** WWOX signalling / DNA damage / cancer context (see Role)
+**Model/species:** cultured cells (complex overexpression)
+**Genotype/model:** WWOX measured in a Hyal-2/WWOX/Smad4 complex outside a loss-of-function neural system
+**Transferability:** T3 — WWOX is the subject and is measured, but outside a loss-of-function neural system (cultured cells, complex overexpression). It orders the source by distance and moves no claim
+**clinical relevance:** BACKGROUND (WWOX-subject paper outside a loss-of-function neural system). Not medical advice.
+**Claim links:** 027 — named only because `CLAIM 027` cites this PMID in its evidence boundary; this record changes nothing in that claim, whose support stands exactly as `CLAIM 027` states it
+**Role:** Primary research — cell-culture signalling read because WWOX is its subject. See the audit and manifest for the locator-level content; this record is an identity record and states only the bounds below. The audit of this paper (`analysis/hyal2_wwox_smad4_audit_20260921.md`) concluded PARTIALLY SUPPORTED, WITH A SOURCING DEFECT AND A DIRECTION PROBLEM: the knowledge-base sentence that cites it is a verbatim quotation of the abstract, the Results prose, the Figure 2 legend and the Discussion state the effect more weakly (a delay, not a failure), and every cell-death endpoint arises only in cells overexpressing the complex, so the paper cannot support a node in which loss of the complex causes neuronal death. Whether `CORPUS P214` (an unresolved placeholder, Identifier PENDING) is this paper is NOT established and is not asserted here; that placeholder is left untouched.
+**Next action:** none — registered for identity
+**LIT link:** [[literature_tracking_log_current#LIT-0802]]
+**Note:** no individual-level detail. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 531
+**Short title:** Kałuzińska-Kołat 2023 — glioblastoma cell-line landscapes: patients who do not benefit from WWOX expression
+**Full title:** Molecular landscapes of glioblastoma cell lines revealed a group of patients that do not benefit from WWOX tumor suppressor expression.
+**Authors:** Kałuzińska-Kołat Ż, Kołat D, Kośla K, Płuciennik E, Bednarek AK
+**Year:** 2023
+**Source type:** primary research — bioinformatics over tumour transcriptomes plus one lentiviral overexpression experiment
+**Journal/source:** *Front Neurosci* 2023;17:1260409
+**Identifier:** PMID 37781246 / PMC10540236 / DOI 10.3389/fnins.2023.1260409
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261004-37781246-02`, which was in the ledger with no registry identity of its own (the PMID was cited inside other records only). Identity from the PubMed record of 2026-10-22. No blind locator audit is recorded for this reading.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261004-37781246-02` (the reading whose coverage this line reports); the manifest was produced by the earlier `FTR-20261002-37781246-01` and extended by `FTR-20261004-37781246-02`; manifest `deepdive_manifests/PMID37781246.json` (schema v2, **8** persisted verbatim locators; surfaces: 6 body, 2 figure); artefact `files/fulltext/PMID37781246_KaluzinskaKolat2023_PMC.xml` (sha256 `ad0fde9050e2eacfb882741e5de0d3c426f005353fd80dba6727e90b9738af07`); unread or absent (receipt): figures `captions_only`, references `not_read`, tables `not_present`
+**Primary pathway:** WWOX signalling / DNA damage / cancer context (see Role)
+**Model/species:** glioblastoma cell lines and public tumour expression data
+**Genotype/model:** WWOX raised by lentiviral overexpression in glioblastoma cells; cancer cells, not a loss-of-function neural system
+**Transferability:** T3 — WWOX is the subject and is measured, but outside a loss-of-function neural system (glioblastoma cells and tumour transcriptomes). It orders the source by distance and moves no claim
+**clinical relevance:** BACKGROUND (WWOX-subject paper outside a loss-of-function neural system). Not medical advice.
+**Claim links:** none
+**Role:** Primary research — bioinformatics over tumour transcriptomes plus one lentiviral overexpression experiment read because WWOX is its subject. See the audit and manifest for the locator-level content; this record is an identity record and states only the bounds below. Raising WWOX increased proliferation in one of four glioblastoma lines in the preceding study, a result this article carries and does not measure; the authors hedge their headline claim to a co-occurrence and refuse the causal reading themselves. Not independent of the same department's `PMID 34204789` (`PAPER 127`): the two must not be counted as corroborating sources.
+**Next action:** none — registered for identity
+**LIT link:** [[literature_tracking_log_current#LIT-0803]]
+**Note:** no individual-level detail. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 532
+**Short title:** Petrozziello 2026 — WWOX contributes to DNA damage but not somatic instability in Huntington disease
+**Full title:** WWOX contributes to DNA damage, but not somatic instability in Huntington's disease.
+**Authors:** Petrozziello T, McLean ZL, Boudi A, Huntress SS, Granucci EJ, Field GA, Monsanto RZB, Castillo Torres AL, Roy JCL, Kesavan M, Wu M, Doherty N, … et al. (19 authors listed on PubMed)
+**Year:** 2026
+**Source type:** preprint — Huntington disease neurons and cells with WWOX added
+**Journal/source:** *bioRxiv* 2026
+**Identifier:** PMID 42395553 / PMC13320983 / DOI 10.64898/2026.06.24.734331
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20261004-42395553-02`, which was in the ledger with no registry identity of its own (the PMID was cited inside other records only). Identity from the PubMed record of 2026-10-22. No blind locator audit is recorded for this reading.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261004-42395553-02` (the reading whose coverage this line reports); the manifest was produced by the earlier `FTR-20261002-42395553-01` and extended by `FTR-20261004-42395553-02`; manifest `deepdive_manifests/PMID42395553.json` (schema v2, **16** persisted verbatim locators; surfaces: 8 body, 8 figure); artefact `files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.txt` (sha256 `d6a73e97f03edee920598c5fb84cc7906c4d35b11cb5de3188f83b99ae84e7b3`); unread or absent (receipt): figures `captions_only`, supplementary `captions_only`
+**Primary pathway:** WWOX signalling / DNA damage / cancer context (see Role)
+**Model/species:** isogenic Huntington disease neurons, a neuroblastoma line and recombinant protein
+**Genotype/model:** WWOX added (recombinant protein and overexpression), not lost; a gain-side measurement
+**Transferability:** T3 — WWOX is the subject and is measured, but outside a loss-of-function neural system (Huntington disease cells with WWOX added, a preprint). It orders the source by distance and moves no claim
+**clinical relevance:** BACKGROUND (WWOX-subject paper outside a loss-of-function neural system). Not medical advice.
+**Claim links:** none
+**Role:** Preprint — Huntington disease neurons and cells with WWOX added read because WWOX is its subject. See the audit and manifest for the locator-level content; this record is an identity record and states only the bounds below. A bioRxiv preprint, not peer reviewed. The reported toxicity is to extracellular recombinant protein applied to the medium and is genotype-independent (control neurons were killed too, with no interaction), the damage marker moved while the repeat-instability endpoint did not, and the WWOX reagents are a single commercial antibody and a single commercial recombinant protein. It is the source of the DNA-damage observation that `DIS-028` sets against WWOX loss; the two papers do not cite each other.
+**Next action:** none — registered for identity
+**LIT link:** [[literature_tracking_log_current#LIT-0804]]
+**Note:** no individual-level detail. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 533
+**Short title:** Santini 2014 — ATM kinase activity modulates ITCH E3-ubiquitin ligase activity
+**Full title:** ATM kinase activity modulates ITCH E3-ubiquitin ligase activity.
+**Authors:** Santini S, Stagni V, Giambruno R, Fianco G, Di Benedetto A, Mottolese M, Pellegrini M, Barilà D
+**Year:** 2014
+**Source type:** primary research — transfection, immunoprecipitation, pull-down and mouse work
+**Journal/source:** *Oncogene* 2014;33(9):1113-23
+**Identifier:** PMID 23435430 / PMC3938399 / DOI 10.1038/onc.2013.52
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20260811-23435430-01`, which was in the ledger with no registry identity (an older single reading whose output lives in the research or analysis layer). Identity from the PubMed record of 2026-10-22. No corpus placeholder matching this paper by title, first author and year was found, so none is promoted. No blind locator audit is recorded for this reading.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20260811-23435430-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID23435430.json` (schema v2, **17** persisted verbatim locators; surfaces: 13 body, 4 figure); artefact `files/fulltext/PMID23435430_Santini2014_EPMC.xml` (sha256 `cd0b414ad9604e93aa7b6f2c27848aa53608861d749118b2517ef3cf61e512bf`) — **not present on the checkout this record was authored on**, so its WWOX content was not re-counted; unread or absent (receipt): figures `captions_only`, limitations `not_present`, supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — ATM kinase activity modulates ITCH E3-ubiquitin ligase activity
+**Model/species:** cell lines and mouse work (eight figures)
+**Genotype/model:** ITCH/ATM biochemistry; WWOX not the subject
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: WWOX is not the subject of the article.** The read artefact is not on the checkout this record was authored on, so the WWOX count was **not re-measured at registration** and the grade rests on the subject of the paper and on the research note that read it; re-grade if a re-read finds WWOX measured
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** A single reading from an earlier session (`2026-08-11`), registered here because a receipt exists and an identity record did not. It was read for a question of the research layer, not for WWOX biology; its findings, and the question it served, are in the research or analysis note(s) its receipt names, and are **not restated** in this identity record. The authors hedge their own mechanism in print («putative»), which is why its unmarked statements can be read more literally; the discovery-ledger chain that cites it rests on that word.
+**Next action:** none — registered for identity; re-grade the transferability if a re-read finds WWOX measured
+**LIT link:** [[literature_tracking_log_current#LIT-0805]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 534
+**Short title:** Sanai 2011 — corridors of migrating neurons in the infant human brain
+**Full title:** Corridors of migrating neurons in the human brain and their decline during infancy.
+**Authors:** Sanai N, Nguyen T, Ihrie RA, Mirzadeh Z, Tsai HH, Wong M, Gupta N, Berger MS, Huang E, Garcia-Verdugo JM, Rowitch DH, Alvarez-Buylla A
+**Year:** 2011
+**Source type:** primary research — human postmortem tissue
+**Journal/source:** *Nature* 2011;478(7369):382-6
+**Identifier:** PMID 21964341 / PMC3197903 / DOI 10.1038/nature10487
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20260927-21964341-01`, which was in the ledger with no registry identity (an older single reading whose output lives in the research or analysis layer). Identity from the PubMed record of 2026-10-22. No corpus placeholder matching this paper by title, first author and year was found, so none is promoted. No blind locator audit is recorded for this reading.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20260927-21964341-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID21964341.json` (schema v2, **6** persisted verbatim locators; surfaces: 6 body); artefact `files/fulltext/PMID21964341_Sanai2011_PMC.xml` (sha256 `09ea3f432ae9468ac85c935c9051b31990e5f01238dabd6f433ae7ed5351347e`); unread or absent (receipt): figures `captions_only`, limitations `not_present`, references `not_read`, supplementary `unavailable`, tables `not_present`
+**Primary pathway:** none for this gene — corridors of migrating neurons in the infant human brain
+**Model/species:** human subventricular zone specimens aged 0-17 years
+**Genotype/model:** wild-type human brain; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** A single reading from an earlier session (`2026-09-27`), registered here because a receipt exists and an identity record did not. It was read for a question of the research layer, not for WWOX biology; its findings, and the question it served, are in the research or analysis note(s) its receipt names, and are **not restated** in this identity record.
+**Next action:** none — registered for identity; re-grade the transferability if a re-read finds WWOX measured
+**LIT link:** [[literature_tracking_log_current#LIT-0806]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 535
+**Short title:** Semple 2013 — brain development in rodents and humans: maturation benchmarks across species
+**Full title:** Brain development in rodents and humans: Identifying benchmarks of maturation and vulnerability to injury across species.
+**Authors:** Semple BD, Blomgren K, Gimlin K, Ferriero DM, Noble-Haeusslein LJ
+**Year:** 2013
+**Source type:** review
+**Journal/source:** *Prog Neurobiol* 2013;106-107:1-16
+**Identifier:** PMID 23583307 / PMC3737272 / DOI 10.1016/j.pneurobio.2013.04.001
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20260927-23583307-01`, which was in the ledger with no registry identity (an older single reading whose output lives in the research or analysis layer). Identity from the PubMed record of 2026-10-22. No corpus placeholder matching this paper by title, first author and year was found, so none is promoted. No blind locator audit is recorded for this reading.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20260927-23583307-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID23583307.json` (schema v2, **5** persisted verbatim locators; surfaces: 5 body); artefact `files/fulltext/PMID23583307_Semple2013_PMC.xml` (sha256 `7688c87c068e224470dd50663714ec1ed2749b896f8806bf64b7b5db4790ce1a`); unread or absent (receipt): discussion `not_read`, figures `captions_only`, limitations `not_present`, methods `not_present`, references `not_read`, results `not_present`, supplementary `not_present`
+**Primary pathway:** none for this gene — brain development in rodents and humans: maturation benchmarks across species
+**Model/species:** rodent and human brain development (review)
+**Genotype/model:** no genotype of its own; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** A single reading from an earlier session (`2026-09-27`), registered here because a receipt exists and an identity record did not. It was read for a question of the research layer, not for WWOX biology; its findings, and the question it served, are in the research or analysis note(s) its receipt names, and are **not restated** in this identity record.
+**Next action:** none — registered for identity; re-grade the transferability if a re-read finds WWOX measured
+**LIT link:** [[literature_tracking_log_current#LIT-0807]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 536
+**Short title:** Nascimento 2024 — protracted neuronal recruitment in the temporal lobes of young children
+**Full title:** Protracted neuronal recruitment in the temporal lobes of young children.
+**Authors:** Nascimento MA, Biagiotti S, Herranz-Pérez V, Santiago S, Bueno R, Ye CJ, Abel TJ, Zhang Z, Rubio-Moll JS, Kriegstein AR, Yang Z, Garcia-Verdugo JM, … et al. (15 authors listed on PubMed)
+**Year:** 2024
+**Source type:** primary research — single-nucleus RNA sequencing of human tissue
+**Journal/source:** *Nature* 2024;626(8001):1056-1065
+**Identifier:** PMID 38122823 / PMC10901738 / DOI 10.1038/s41586-023-06981-x
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20260927-38122823-01`, which was in the ledger with no registry identity (an older single reading whose output lives in the research or analysis layer). Identity from the PubMed record of 2026-10-22. No corpus placeholder matching this paper by title, first author and year was found, so none is promoted. No blind locator audit is recorded for this reading.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20260927-38122823-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID38122823.json` (schema v2, **7** persisted verbatim locators; surfaces: 7 body); artefact `files/fulltext/PMID38122823_Nascimento2023_PMC.xml` (sha256 `9b3c52cfd966e877b087813592ad83e792aa642ec5c3e77761a5b70c05d7a323`); unread or absent (receipt): discussion `not_read`, figures `captions_only`, introduction `not_read`, limitations `not_read`, references `not_read`, supplementary `unavailable`, tables `captions_only`
+**Primary pathway:** none for this gene — protracted neuronal recruitment in the temporal lobes of young children
+**Model/species:** human postmortem temporal lobe
+**Genotype/model:** wild-type human brain; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read artefact contains no occurrence of WWOX** (counted on the artefact on disk at registration), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** A single reading from an earlier session (`2026-09-27`), registered here because a receipt exists and an identity record did not. It was read for a question of the research layer, not for WWOX biology; its findings, and the question it served, are in the research or analysis note(s) its receipt names, and are **not restated** in this identity record.
+**Next action:** none — registered for identity; re-grade the transferability if a re-read finds WWOX measured
+**LIT link:** [[literature_tracking_log_current#LIT-0808]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 537
+**Short title:** Fu 2025 — multi-task learning of shared genetic risk for late-onset epilepsy and Alzheimer disease
+**Full title:** Multi-task learning identifies shared genetic risk for late-onset epilepsy and alzheimer's disease.
+**Authors:** Fu M, Tran T, Pasaniuc B, Vossel K, Chang TS
+**Year:** 2025
+**Source type:** primary research — genetic association
+**Journal/source:** *Sci Rep* 2025;16(1):2517
+**Identifier:** PMID 41390778 / PMC12820071 / DOI 10.1038/s41598-025-32329-8
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20260921-41390778-01`, which was in the ledger with no registry identity (an older single reading whose output lives in the research or analysis layer). Identity from the PubMed record of 2026-10-22. No corpus placeholder matching this paper by title, first author and year was found, so none is promoted. No blind locator audit is recorded for this reading.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20260921-41390778-01`; no deep-dive manifest for this PMID exists in the repository; artefact `files/fulltext/PMID41390778_PMC_MCPtext.txt` (sha256 `cfc25b0b25f0665eb8e060a35c0f3af5947f518501fc37846dc970be9cce14a9`) — **not present on the checkout this record was authored on**, so its WWOX content was not re-counted; unread or absent (receipt): figures `unavailable`, references `unavailable`, supplementary `unavailable`, tables `unavailable`
+**Primary pathway:** none for this gene — multi-task learning of shared genetic risk for late-onset epilepsy and Alzheimer disease
+**Model/species:** human GWAS summary statistics
+**Genotype/model:** common-variant association; WWOX not the subject
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: WWOX is not the subject of the article.** The read artefact is not on the checkout this record was authored on, so the WWOX count was **not re-measured at registration** and the grade rests on the subject of the paper and on the research note that read it; re-grade if a re-read finds WWOX measured
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** A single reading from an earlier session (`2026-09-20`), registered here because a receipt exists and an identity record did not. It was read for a question of the research layer, not for WWOX biology; its findings, and the question it served, are in the research or analysis note(s) its receipt names, and are **not restated** in this identity record.
+**Next action:** none — registered for identity; re-grade the transferability if a re-read finds WWOX measured
+**LIT link:** [[literature_tracking_log_current#LIT-0809]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 538
+**Short title:** Hamilton 2011 — Alzheimer disease genes and cognitive ageing in the Lothian Birth Cohorts
+**Full title:** Alzheimer's disease genes are associated with measures of cognitive ageing in the lothian birth cohorts of 1921 and 1936.
+**Authors:** Hamilton G, Harris SE, Davies G, Liewald DC, Tenesa A, Starr JM, Porteous D, Deary IJ
+**Year:** 2011
+**Source type:** primary research — cohort genetic association
+**Journal/source:** *Int J Alzheimers Dis* 2011;2011:505984
+**Identifier:** PMID 21766012 / PMC3132531 / DOI 10.4061/2011/505984
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20260921-21766012-01`, which was in the ledger with no registry identity (an older single reading whose output lives in the research or analysis layer). Identity from the PubMed record of 2026-10-22. No corpus placeholder matching this paper by title, first author and year was found, so none is promoted. No blind locator audit is recorded for this reading.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20260921-21766012-01` (the latest of 2 events: `FTR-20260921-21766012-01`, `FTR-20260921-21766012-02`); no deep-dive manifest for this PMID exists in the repository; artefact `files/fulltext/PMID21766012_PMC_MCPtext.txt` (sha256 `f43340a183e86522f0dc4f55db9a234e1ca342d3cf633e07a910019350fbbe26`) — **not present on the checkout this record was authored on**, so its WWOX content was not re-counted; unread or absent (receipt): abstract `unavailable`, figures `unavailable`, references `unavailable`, supplementary `unavailable`, tables `unavailable`
+**Primary pathway:** none for this gene — Alzheimer disease genes and cognitive ageing in the Lothian Birth Cohorts
+**Model/species:** human ageing cohorts
+**Genotype/model:** common-variant association; WWOX not the subject
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: WWOX is not the subject of the article.** The read artefact is not on the checkout this record was authored on, so the WWOX count was **not re-measured at registration** and the grade rests on the subject of the paper and on the research note that read it; re-grade if a re-read finds WWOX measured
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** A single reading from an earlier session (`2026-09-20`), registered here because a receipt exists and an identity record did not. It was read for a question of the research layer, not for WWOX biology; its findings, and the question it served, are in the research or analysis note(s) its receipt names, and are **not restated** in this identity record.
+**Next action:** none — registered for identity; re-grade the transferability if a re-read finds WWOX measured
+**LIT link:** [[literature_tracking_log_current#LIT-0810]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 539
+**Short title:** Park 2020 — blood-based transcriptional risk scores and Alzheimer disease biomarkers
+**Full title:** Association of blood-based transcriptional risk scores with biomarkers for Alzheimer disease.
+**Authors:** Park YH, Hodges A, Simmons A, Lovestone S, Weiner MW, Kim S, Saykin AJ, Nho K, AddNeuroMed consortium and the Alzheimer's Disease Neuroimaging Initiative
+**Year:** 2020
+**Source type:** primary research — cohort transcriptomics
+**Journal/source:** *Neurol Genet* 2020;6(6):e517
+**Identifier:** PMID 33134515 / PMC7577551 / DOI 10.1212/NXG.0000000000000517
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20260921-33134515-01`, which was in the ledger with no registry identity (an older single reading whose output lives in the research or analysis layer). Identity from the PubMed record of 2026-10-22. No corpus placeholder matching this paper by title, first author and year was found, so none is promoted. No blind locator audit is recorded for this reading.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20260921-33134515-01`; no deep-dive manifest for this PMID exists in the repository; artefact `files/fulltext/PMID33134515_PMC_MCPtext.txt` (sha256 `16fff9c826cf2b630a3aa84e96d382353da352ef047546b93607a2f46d559b0c`) — **not present on the checkout this record was authored on**, so its WWOX content was not re-counted; unread or absent (receipt): figures `unavailable`, references `unavailable`, supplementary `unavailable`, tables `unavailable`
+**Primary pathway:** none for this gene — blood-based transcriptional risk scores and Alzheimer disease biomarkers
+**Model/species:** human cohorts (blood transcriptome)
+**Genotype/model:** transcriptional risk score; WWOX not the subject
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: WWOX is not the subject of the article.** The read artefact is not on the checkout this record was authored on, so the WWOX count was **not re-measured at registration** and the grade rests on the subject of the paper and on the research note that read it; re-grade if a re-read finds WWOX measured
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** A single reading from an earlier session (`2026-09-21`), registered here because a receipt exists and an identity record did not. It was read for a question of the research layer, not for WWOX biology; its findings, and the question it served, are in the research or analysis note(s) its receipt names, and are **not restated** in this identity record.
+**Next action:** none — registered for identity; re-grade the transferability if a re-read finds WWOX measured
+**LIT link:** [[literature_tracking_log_current#LIT-0811]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 540
+**Short title:** Biar 2026 — integrated scaled approach to resolve TSC2 variants of uncertain significance
+**Full title:** An integrated, scaled approach to resolve TSC2 variants of uncertain significance.
+**Authors:** Biar CG, Wang ZR, Camp ND, Holmes DL, Wheelock MK, Pendyala S, McGee AV, Gupta P, McEwen AE, Tejura M, Richardson ME, Weyandt JD, … et al. (25 authors listed on PubMed)
+**Year:** 2026
+**Source type:** primary research — variant effect mapping
+**Journal/source:** *Nat Commun* 2026;17(1)
+**Identifier:** PMID 42425971 / PMC13478581 / DOI 10.1038/s41467-026-75442-6
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20260921-42425971-01`, which was in the ledger with no registry identity (an older single reading whose output lives in the research or analysis layer). Identity from the PubMed record of 2026-10-22. No corpus placeholder matching this paper by title, first author and year was found, so none is promoted. No blind locator audit is recorded for this reading.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20260921-42425971-01`; no deep-dive manifest for this PMID exists in the repository; artefact `files/fulltext/PMID42425971_PMC_MCPtext.txt` (sha256 `e41bad155ff5d73084740cc9e114053c26c000e3de4948372fd71590074bc150`) — **not present on the checkout this record was authored on**, so its WWOX content was not re-counted; unread or absent (receipt): figures `unavailable`, references `unavailable`, supplementary `unavailable`, tables `unavailable`
+**Primary pathway:** none for this gene — integrated scaled approach to resolve TSC2 variants of uncertain significance
+**Model/species:** human cell variant-effect assays for TSC2
+**Genotype/model:** TSC2 variants; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: WWOX is not the subject of the article.** The read artefact is not on the checkout this record was authored on, so the WWOX count was **not re-measured at registration** and the grade rests on the subject of the paper and on the research note that read it; re-grade if a re-read finds WWOX measured
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** A single reading from an earlier session (`2026-09-21`), registered here because a receipt exists and an identity record did not. It was read for a question of the research layer, not for WWOX biology; its findings, and the question it served, are in the research or analysis note(s) its receipt names, and are **not restated** in this identity record.
+**Next action:** none — registered for identity; re-grade the transferability if a re-read finds WWOX measured
+**LIT link:** [[literature_tracking_log_current#LIT-0812]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 541
+**Short title:** Voutsinos 2025 — a complete map of human cytosolic degrons and their relevance for disease
+**Full title:** A complete map of human cytosolic degrons and their relevance for disease.
+**Authors:** Voutsinos V, Johansson KE, Larsen FB, Grønbæk-Thygesen M, Jonsson N, Holm-Olesen E, Tesei G, Stein A, Fowler DM, Lindorff-Larsen K, Hartmann-Petersen R
+**Year:** 2025
+**Source type:** preprint — degron mapping
+**Journal/source:** *bioRxiv* 2025
+**Identifier:** PMID 40463067 / PMC12132302 / DOI 10.1101/2025.05.10.653233
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20260921-40463067-01`, which was in the ledger with no registry identity (an older single reading whose output lives in the research or analysis layer). Identity from the PubMed record of 2026-10-22. No corpus placeholder matching this paper by title, first author and year was found, so none is promoted. No blind locator audit is recorded for this reading.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20260921-40463067-01`; no deep-dive manifest for this PMID exists in the repository; artefact `files/fulltext/PMID40463067_PMC_MCPtext.txt` (sha256 `a1fbcf30fc119516370bc95589fb2572838963000fd884cdf69da5bb94f36469`) — **not present on the checkout this record was authored on**, so its WWOX content was not re-counted; unread or absent (receipt): abstract `not_read`, discussion `not_read`, figures `unavailable`, introduction `not_read`, limitations `not_read`, references `unavailable`, supplementary `unavailable`, tables `unavailable`
+**Primary pathway:** none for this gene — a complete map of human cytosolic degrons and their relevance for disease
+**Model/species:** human cell degron screens
+**Genotype/model:** proteome-wide degron map; WWOX not the subject
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: WWOX is not the subject of the article.** The read artefact is not on the checkout this record was authored on, so the WWOX count was **not re-measured at registration** and the grade rests on the subject of the paper and on the research note that read it; re-grade if a re-read finds WWOX measured
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** A single reading from an earlier session (`2026-09-21`), registered here because a receipt exists and an identity record did not. It was read for a question of the research layer, not for WWOX biology; its findings, and the question it served, are in the research or analysis note(s) its receipt names, and are **not restated** in this identity record.
+**Next action:** none — registered for identity; re-grade the transferability if a re-read finds WWOX measured
+**LIT link:** [[literature_tracking_log_current#LIT-0813]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 542
+**Short title:** Aragon-Ramirez 2026 — Golgi CATCHR complexes as hubs for vesicle tethering and fusion
+**Full title:** Golgi CATCHR complexes function as organizing hubs for vesicle tethering and fusion.
+**Authors:** Aragon-Ramirez WS, Khakurel A, Pokrovskaya I, Sumya FT, Lupashin VV
+**Year:** 2026
+**Source type:** preprint
+**Journal/source:** *bioRxiv* 2026
+**Identifier:** PMID 42523332 / PMC13405132 / DOI 10.64898/2026.06.16.732723
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20260921-42523332-01`, which was in the ledger with no registry identity (an older single reading whose output lives in the research or analysis layer). Identity from the PubMed record of 2026-10-22. No corpus placeholder matching this paper by title, first author and year was found, so none is promoted. No blind locator audit is recorded for this reading.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20260921-42523332-01`; no deep-dive manifest for this PMID exists in the repository; artefact `files/fulltext/PMID42523332_PMC_MCPtext.txt` (sha256 `7f2da97ba52357412af1e8f5e6b8c746e305b91197f4cad98ebe3af89f14bcbd`) — **not present on the checkout this record was authored on**, so its WWOX content was not re-counted; unread or absent (receipt): abstract `not_read`, figures `unavailable`, introduction `not_read`, limitations `not_read`, methods `not_read`, references `unavailable`, supplementary `captions_only`, tables `unavailable`
+**Primary pathway:** none for this gene — Golgi CATCHR complexes as hubs for vesicle tethering and fusion
+**Model/species:** cell biology of tethering complexes
+**Genotype/model:** no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: WWOX is not the subject of the article.** The read artefact is not on the checkout this record was authored on, so the WWOX count was **not re-measured at registration** and the grade rests on the subject of the paper and on the research note that read it; re-grade if a re-read finds WWOX measured
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** A single reading from an earlier session (`2026-09-21`), registered here because a receipt exists and an identity record did not. It was read for a question of the research layer, not for WWOX biology; its findings, and the question it served, are in the research or analysis note(s) its receipt names, and are **not restated** in this identity record.
+**Next action:** none — registered for identity; re-grade the transferability if a re-read finds WWOX measured
+**LIT link:** [[literature_tracking_log_current#LIT-0814]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 543
+**Short title:** Schultz 2018 — mutant NPC1 degradation by selective ER autophagy and MARCH6-dependent ERAD
+**Full title:** Coordinate regulation of mutant NPC1 degradation by selective ER autophagy and MARCH6-dependent ERAD.
+**Authors:** Schultz ML, Krus KL, Kaushik S, Dang D, Chopra R, Qi L, Shakkottai VG, Cuervo AM, Lieberman AP
+**Year:** 2018
+**Source type:** primary research — patient fibroblasts
+**Journal/source:** *Nat Commun* 2018;9(1):3671
+**Identifier:** PMID 30202070 / PMC6131187 / DOI 10.1038/s41467-018-06115-2
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20260922-30202070-01`, which was in the ledger with no registry identity (an older single reading whose output lives in the research or analysis layer). Identity from the PubMed record of 2026-10-22. No corpus placeholder matching this paper by title, first author and year was found, so none is promoted. No blind locator audit is recorded for this reading.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20260922-30202070-01`; no deep-dive manifest for this PMID exists in the repository; artefact `PMC6131187 via get_full_text_article(pmc_ids=["PMC6131187"]) (PubMed MCP). Licence CC BY, verified open access by get_copyright_status before the fetch.` — **not present on the checkout this record was authored on**, so its WWOX content was not re-counted; unread or absent (receipt): figures `not_read`, limitations `not_present`, references `not_read`, supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — mutant NPC1 degradation by selective ER autophagy and MARCH6-dependent ERAD
+**Model/species:** primary patient fibroblasts (NPC1 I1061T)
+**Genotype/model:** NPC1 variant; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: WWOX is not the subject of the article.** The read artefact is not on the checkout this record was authored on, so the WWOX count was **not re-measured at registration** and the grade rests on the subject of the paper and on the research note that read it; re-grade if a re-read finds WWOX measured
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** A single reading from an earlier session (`2026-09-22`), registered here because a receipt exists and an identity record did not. It was read for a question of the research layer, not for WWOX biology; its findings, and the question it served, are in the research or analysis note(s) its receipt names, and are **not restated** in this identity record.
+**Next action:** none — registered for identity; re-grade the transferability if a re-read finds WWOX measured
+**LIT link:** [[literature_tracking_log_current#LIT-0815]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 544
+**Short title:** Georgakilas 2014 — common fragile sites: structural domains or functional units under oncogenic stress
+**Full title:** Are common fragile sites merely structural domains or highly organized "functional" units susceptible to oncogenic stress?
+**Authors:** Georgakilas AG, Tsantoulis P, Kotsinas A, Michalopoulos I, Townsend P, Gorgoulis VG
+**Year:** 2014
+**Source type:** review (book-length chapter)
+**Journal/source:** *Cell Mol Life Sci* 2014;71(23):4519-44
+**Identifier:** PMID 25238782 / PMC4232749 / DOI 10.1007/s00018-014-1717-x
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_012` (ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`) as the PAPER/LIT identity record of receipt `FTR-20260921-25238782-01`, which was in the ledger with no registry identity (an older single reading whose output lives in the research or analysis layer). Identity from the PubMed record of 2026-10-22. No corpus placeholder matching this paper by title, first author and year was found, so none is promoted. No blind locator audit is recorded for this reading.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20260921-25238782-01`; no deep-dive manifest for this PMID exists in the repository; artefact `files/fulltext/PMID25238782_PMC_MCPtext.txt` (sha256 `3c51d26fe676c756a62525dbeb6d3115ed1c2923b98efad41e23b3ab03b7239c`) — **not present on the checkout this record was authored on**, so its WWOX content was not re-counted; unread or absent (receipt): figures `unavailable`, limitations `not_present`, methods `not_present`, references `unavailable`, supplementary `unavailable`, tables `unavailable`
+**Primary pathway:** none for this gene — common fragile sites: structural domains or functional units under oncogenic stress
+**Model/species:** common fragile sites in cancer (review)
+**Genotype/model:** fragile-site biology; WWOX not measured by this record
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: WWOX is not the subject of the article.** The read artefact is not on the checkout this record was authored on, so the WWOX count was **not re-measured at registration** and the grade rests on the subject of the paper and on the research note that read it; re-grade if a re-read finds WWOX measured
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** A single reading from an earlier session (`2026-09-20`), registered here because a receipt exists and an identity record did not. It was read for a question of the research layer, not for WWOX biology; its findings, and the question it served, are in the research or analysis note(s) its receipt names, and are **not restated** in this identity record.
+**Next action:** none — registered for identity; re-grade the transferability if a re-read finds WWOX measured
+**LIT link:** [[literature_tracking_log_current#LIT-0816]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
 ## CORPUS-STUB-181
 **Corpus paper no:** 181
 **Full title:** Intramolecular autoinhibition regulates the selectivity of PRPF40A tandem WW domains for proline-rich motifs

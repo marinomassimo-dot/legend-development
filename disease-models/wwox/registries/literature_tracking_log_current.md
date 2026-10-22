@@ -19111,3 +19111,2785 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Note:** class-level record. Not medical advice.
 
 ---
+## LIT-0701
+**Short title:** Mathieson 2018 — protein turnover measured systematically in primary cells
+**Authors:** Mathieson T, Franken H, Kosinski J, Kurzawa N, Zinn N, Sweetman G, Poeckel D, Ratnu VS, Schramm M, Becher I, Steidel M, Noh KM, … et al. (16 authors listed on PubMed)
+**Year:** 2018
+**Source type:** primary research — proteomics method and resource
+**Journal/source:** *Nat Commun* 2018;9(1):689
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 29449567 / PMC5814408 / DOI 10.1038/s41467-018-03106-1
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-29449567-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-29449567-01`)
+**Discovery source:** reached by group R1 (missense-protein proteostasis precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-a_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-29449567-01` ; manifest `deepdive_manifests/PMID29449567.json`; landing [[paper_registry_current#PAPER 429]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0702
+**Short title:** Matreyek 2018 — VAMP-seq: protein variant abundance by massively parallel sequencing
+**Authors:** Matreyek KA, Starita LM, Stephany JJ, Martin B, Chiasson MA, Gray VE, Kircher M, Khechaduri A, Dines JN, Hause RJ, Bhatia S, Evans WE, … et al. (16 authors listed on PubMed)
+**Year:** 2018
+**Source type:** primary research — method paper
+**Journal/source:** *Nat Genet* 2018;50(6):874-882
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 29785012 / PMC5980760 / DOI 10.1038/s41588-018-0122-z
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-29785012-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-29785012-01`)
+**Discovery source:** reached by group R1 (missense-protein proteostasis precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-a_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-29785012-01` ; manifest `deepdive_manifests/PMID29785012.json`; landing [[paper_registry_current#PAPER 430]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0703
+**Short title:** Guiberson 2018 — Munc18-1 (STXBP1) missense dysfunction rescued by chemical chaperones
+**Authors:** Guiberson NGL, Pineda A, Abramov D, Kharel P, Carnazza KE, Wragg RT, Dittman JS, Burré J
+**Year:** 2018
+**Source type:** primary research — cell-biology mechanism and rescue
+**Journal/source:** *Nat Commun* 2018;9(1):3986
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 30266908 / PMC6162227 / DOI 10.1038/s41467-018-06507-4
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-30266908-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-30266908-01`)
+**Discovery source:** reached by group R1 (missense-protein proteostasis precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-a_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-30266908-01` ; manifest `deepdive_manifests/PMID30266908.json`; landing [[paper_registry_current#PAPER 431]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0704
+**Short title:** Abbink 2019 — vanishing white matter: integrated stress response as a therapy target
+**Authors:** Abbink TEM, Wisse LE, Jaku E, Thiecke MJ, Voltolini-González D, Fritsen H, Bobeldijk S, Ter Braak TJ, Polder E, Postma NL, Bugiani M, Struijs EA, … et al. (18 authors listed on PubMed)
+**Year:** 2019
+**Source type:** primary research — knock-in mouse and patient tissue
+**Journal/source:** *Ann Clin Transl Neurol* 2019;6(8):1407-1422
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 31402619 / PMC6689685 / DOI 10.1002/acn3.50826
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-31402619-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-31402619-01`)
+**Discovery source:** reached by group R1 (missense-protein proteostasis precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-a_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-31402619-01` ; manifest `deepdive_manifests/PMID31402619.json`; landing [[paper_registry_current#PAPER 432]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0705
+**Short title:** Lukas 2020 — Fabry disease: amenability of GLA variants to a pharmacological chaperone
+**Authors:** Lukas J, Cimmaruta C, Liguori L, Pantoom S, Iwanov K, Petters J, Hund C, Bunschkowski M, Hermann A, Cubellis MV, Rolfs A
+**Year:** 2020
+**Source type:** primary research — cell-based amenability assay
+**Journal/source:** *Int J Mol Sci* 2020;21(3)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 32023956 / PMC7037350 / DOI 10.3390/ijms21030956
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-32023956-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-32023956-01`)
+**Discovery source:** reached by group R1 (missense-protein proteostasis precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-a_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-32023956-01` ; manifest `deepdive_manifests/PMID32023956.json`; landing [[paper_registry_current#PAPER 433]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0706
+**Short title:** Gersing 2021 — degradation pathway of a disease-linked aspartoacylase variant
+**Authors:** Gersing SK, Wang Y, Grønbæk-Thygesen M, Kampmeyer C, Clausen L, Willemoës M, Andréasson C, Stein A, Lindorff-Larsen K, Hartmann-Petersen R
+**Year:** 2021
+**Source type:** primary research — yeast and human-cell degradation mapping
+**Journal/source:** *PLoS Genet* 2021;17(4):e1009539
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 33914734 / PMC8084241 / DOI 10.1371/journal.pgen.1009539
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-33914734-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-33914734-01`)
+**Discovery source:** reached by group R1 (missense-protein proteostasis precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-a_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-33914734-01` ; manifest `deepdive_manifests/PMID33914734.json`; landing [[paper_registry_current#PAPER 434]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0707
+**Short title:** Matreyek 2021 — PTEN variant activity and abundance integrated into variant subgroups
+**Authors:** Matreyek KA, Stephany JJ, Ahler E, Fowler DM
+**Year:** 2021
+**Source type:** primary research — computational integration with cell-based mapping
+**Journal/source:** *Genome Med* 2021;13(1):165
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 34649609 / PMC8518224 / DOI 10.1186/s13073-021-00984-x
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-34649609-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-34649609-01`)
+**Discovery source:** reached by group R1 (missense-protein proteostasis precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-a_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-34649609-01` ; manifest `deepdive_manifests/PMID34649609.json`; landing [[paper_registry_current#PAPER 435]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0708
+**Short title:** Clausen 2024 — a mutational atlas for Parkin proteostasis
+**Authors:** Clausen L, Voutsinos V, Cagiada M, Johansson KE, Grønbæk-Thygesen M, Nariya S, Powell RL, Have MKN, Oestergaard VH, Stein A, Fowler DM, Lindorff-Larsen K, Hartmann-Petersen R
+**Year:** 2024
+**Source type:** primary research — VAMP-seq variant atlas with library-wide perturbations
+**Journal/source:** *Nat Commun* 2024;15(1):1541
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 38378758 / PMC10879094 / DOI 10.1038/s41467-024-45829-4
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-38378758-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-38378758-01`)
+**Discovery source:** reached by group R1 (missense-protein proteostasis precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-a_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-38378758-01` ; manifest `deepdive_manifests/PMID38378758.json`; landing [[paper_registry_current#PAPER 436]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0709
+**Short title:** Pandey 2024 — monogenic disorders and protein-folding free energy
+**Authors:** Pandey P, Alexov E
+**Year:** 2024
+**Source type:** computational analysis — no experiments
+**Journal/source:** *Int J Mol Sci* 2024;25(4)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 38396641 / PMC10888012 / DOI 10.3390/ijms25041963
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-38396641-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-38396641-01`)
+**Discovery source:** reached by group R1 (missense-protein proteostasis precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-a_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-38396641-01` ; manifest `deepdive_manifests/PMID38396641.json`; landing [[paper_registry_current#PAPER 437]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0710
+**Short title:** Poliquin 2024 — GABRG2 Q390X: ER chaperones and mutant-protein degradation
+**Authors:** Poliquin S, Nwosu G, Randhave K, Shen W, Flamm C, Kang JQ
+**Year:** 2024
+**Source type:** primary research — cell and small animal EEG
+**Journal/source:** *Int J Mol Sci* 2024;25(9)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 38731820 / PMC11083348 / DOI 10.3390/ijms25094601
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-38731820-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-38731820-01`)
+**Discovery source:** reached by group R1 (missense-protein proteostasis precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-a_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-38731820-01` ; manifest `deepdive_manifests/PMID38731820.json`; landing [[paper_registry_current#PAPER 438]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0711
+**Short title:** Grønbæk-Thygesen 2024 — deep mutational scanning of aspartoacylase: degradation against toxicity
+**Authors:** Grønbæk-Thygesen M, Voutsinos V, Johansson KE, Schulze TK, Cagiada M, Pedersen L, Clausen L, Nariya S, Powell RL, Stein A, Fowler DM, Lindorff-Larsen K, Hartmann-Petersen R
+**Year:** 2024
+**Source type:** primary research — deep mutational scan with flow cytometry and RNA-sequencing follow-up
+**Journal/source:** *Nat Commun* 2024;15(1):4026
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 38740822 / PMC11091098 / DOI 10.1038/s41467-024-48481-0
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-38740822-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-38740822-01`)
+**Discovery source:** reached by group R1 (missense-protein proteostasis precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-a_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-38740822-01` ; manifest `deepdive_manifests/PMID38740822.json`; landing [[paper_registry_current#PAPER 439]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0712
+**Short title:** Wang 2024 — pharmacological chaperones restore GABA(A) receptor variant proteostasis
+**Authors:** Wang YJ, Seibert H, Ahn LY, Schaffer AE, Mu TW
+**Year:** 2024
+**Source type:** primary research — cell overexpression with one knock-in iPSC line
+**Journal/source:** *Pharmacol Res* 2024;208:107356
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39216838 / PMC11457296 / DOI 10.1016/j.phrs.2024.107356
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-39216838-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-39216838-01`)
+**Discovery source:** reached by group R1 (missense-protein proteostasis precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-a_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-39216838-01` ; manifest `deepdive_manifests/PMID39216838.json`; landing [[paper_registry_current#PAPER 440]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0713
+**Short title:** Shah 2025 — GAT-1 (SLC6A1) glycine-443 mutations: rescue
+**Authors:** Shah N, Kovalchuk V, Zerlotti R, Cole K, Bazzone A, Sitte HH, Hummel T, Kasture AS, Sucic S
+**Year:** 2025
+**Source type:** primary research — cell, vesicle electrophysiology and fly
+**Journal/source:** *FASEB J* 2025;39(11):e70614
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40485335 / PMC12146831 / DOI 10.1096/fj.202403159RR
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-40485335-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-40485335-01`)
+**Discovery source:** reached by group R1 (missense-protein proteostasis precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-a_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-40485335-01` ; manifest `deepdive_manifests/PMID40485335.json`; landing [[paper_registry_current#PAPER 441]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0714
+**Short title:** Fu 2025 — GABA(A) receptor trafficking-deficient variants: IRE1 activation
+**Authors:** Fu X, Wang YJ, Lee K, Ahn LY, Chen X, Harvey BT, Wang M, Seibert H, Zhang PP, Guerrero A, Schaffer AE, Richards CI, … et al. (15 authors listed on PubMed)
+**Year:** 2025
+**Source type:** primary research — stable cell lines with one knock-in iPSC line
+**Journal/source:** *ACS Chem Neurosci* 2025;16(23):4429-4445
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41178115 / PMC12679549 / DOI 10.1021/acschemneuro.5c00227
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-41178115-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-41178115-01`)
+**Discovery source:** reached by group R1 (missense-protein proteostasis precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-a_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-41178115-01` ; manifest `deepdive_manifests/PMID41178115.json`; landing [[paper_registry_current#PAPER 442]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0715
+**Short title:** DeLeeuw 2026 — 4-phenylbutyrate in SLC6A1 disorders: pharmacochaperoning over HDAC inhibition
+**Authors:** DeLeeuw MB, Randhave K, Anand E, Debbie Song Z, Shen W, Kang JQ
+**Year:** 2026
+**Source type:** primary research — cell overexpression and knock-in mice
+**Journal/source:** *Ann Clin Transl Neurol* 2026
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42157447 / PMC13394997 / DOI 10.1002/acn3.70430
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-42157447-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-42157447-01`)
+**Discovery source:** reached by group R1 (missense-protein proteostasis precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-a_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-42157447-01` ; manifest `deepdive_manifests/PMID42157447.json`; landing [[paper_registry_current#PAPER 443]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0716
+**Short title:** Frick 2026 — zebrafish phenotype screen argues against repurposing 4-phenylbutyrate for STXBP1 disorders
+**Authors:** Frick A, Whyte-Fagundes P, Baraban SC
+**Year:** 2026
+**Source type:** primary research — virtual screening and zebrafish larval assays
+**Journal/source:** *Pharmacol Res Perspect* 2026;14(3):e70285
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42268630 / PMC13251787 / DOI 10.1002/prp2.70285
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-42268630-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-42268630-01`)
+**Discovery source:** reached by group R1 (missense-protein proteostasis precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-a_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-42268630-01` ; manifest `deepdive_manifests/PMID42268630.json`; landing [[paper_registry_current#PAPER 444]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0717
+**Short title:** Rathan-Kumar 2026 — HIKESHI leukodystrophy iPSC model: proteasome inhibitors and hypomyelination
+**Authors:** Rathan-Kumar S, Martino-Wojciechowski M, Rabinski T, Vatine GD, Ess KC
+**Year:** 2026
+**Source type:** primary research — patient-derived iPSC model
+**Journal/source:** *J Transl Med* 2026;24(1)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42875792 / PMC13670827 / DOI 10.1186/s12967-026-08708-8
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-42875792-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-42875792-01`)
+**Discovery source:** reached by group R1 (missense-protein proteostasis precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-a_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-42875792-01` ; manifest `deepdive_manifests/PMID42875792.json`; landing [[paper_registry_current#PAPER 445]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0718
+**Short title:** Mangkalaphiban 2024 — stop-codon context predicts nonsense read-through efficiency
+**Authors:** Mangkalaphiban K, Fu L, Du M, Thrasher K, Keeling KM, Bedwell DM, Jacobson A
+**Year:** 2024
+**Source type:** primary research — re-analysis of ribosome-profiling data with a reporter validation
+**Journal/source:** *Nat Commun* 2024;15(1):2486
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 38509072 / PMC10954755 / DOI 10.1038/s41467-024-46703-z
+**Date discovered:** 2026-10-22 (first receipt `FTR-20261022-38509072-01`)
+**Date processed:** 2026-10-22 (`FTR-20261022-38509072-01`)
+**Discovery source:** reached by group R1 (missense-protein proteostasis precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — proteostasis of missense proteins: chaperone, degradation and variant-abundance precedents
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-a_20261022c.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-38509072-01` ; manifest `deepdive_manifests/PMID38509072.json`; landing [[paper_registry_current#PAPER 446]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0719
+**Short title:** Baraban 2013 — scn1Lab zebrafish drug screen identifies clemizole
+**Authors:** Baraban SC, Dinday MT, Hortopan GA
+**Year:** 2013
+**Source type:** primary research — model-building and drug screen
+**Journal/source:** *Nat Commun* 2013;4:2410
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 24002024 / PMC3891590 / DOI 10.1038/ncomms3410
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-24002024-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-24002024-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261021.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-24002024-01` ; manifest `deepdive_manifests/PMID24002024.json`; landing [[paper_registry_current#PAPER 447]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0720
+**Short title:** Cain 2015 — thalamocortical neurons, burst firing and Ih in a genetic absence model
+**Authors:** Cain SM, Tyson JR, Jones KL, Snutch TP
+**Year:** 2015
+**Source type:** primary research — slice electrophysiology
+**Journal/source:** *Pflugers Arch* 2015;467(6):1367-82
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 24953239 / PMC4435665 / DOI 10.1007/s00424-014-1549-4
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-24953239-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-24953239-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261021.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-24953239-01` ; manifest `deepdive_manifests/PMID24953239.json`; landing [[paper_registry_current#PAPER 448]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0721
+**Short title:** Chen 2015 — ethosuximide, DAF-16/FOXO targets and neurodegeneration phenotypes
+**Authors:** Chen X, McCue HV, Wong SQ, Kashyap SS, Kraemer BC, Barclay JW, Burgoyne RD, Morgan A
+**Year:** 2015
+**Source type:** primary research — worm screen with mammalian-cell follow-up
+**Journal/source:** *Mol Neurodegener* 2015;10:51
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 26419537 / PMC4587861 / DOI 10.1186/s13024-015-0046-3
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-26419537-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-26419537-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261021.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-26419537-01` ; manifest `deepdive_manifests/PMID26419537.json`; landing [[paper_registry_current#PAPER 449]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0722
+**Short title:** Kim 2018 — T-type channels and viability of neural progenitor cells
+**Authors:** Kim JW, Oh HA, Lee SH, Kim KC, Eun PH, Ko MJ, Gonzales ELT, Seung H, Kim S, Bahn GH, Shin CY
+**Year:** 2018
+**Source type:** primary research — in-vitro developmental-toxicity study
+**Journal/source:** *Biomol Ther (Seoul)* 2018;26(5):439-445
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 29463073 / PMC6131011 / DOI 10.4062/biomolther.2017.223
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-29463073-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-29463073-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261021.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-29463073-01` ; manifest `deepdive_manifests/PMID29463073.json`; landing [[paper_registry_current#PAPER 450]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0723
+**Short title:** Huguenard 2019 — spikes, bursts and synchrony in absence epilepsy: a controversy
+**Authors:** Huguenard J
+**Year:** 2019
+**Source type:** narrative review (single author)
+**Journal/source:** *Epilepsy Curr* 2019;19(2):105-111
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 30955423 / PMC6610415 / DOI 10.1177/1535759719835355
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-30955423-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-30955423-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261021.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-30955423-01` ; manifest `deepdive_manifests/PMID30955423.json`; landing [[paper_registry_current#PAPER 451]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0724
+**Short title:** Gureviciene 2019 — epileptic spiking in APP/PS1 mice
+**Authors:** Gureviciene I, Ishchenko I, Ziyatdinova S, Jin N, Lipponen A, Gurevicius K, Tanila H
+**Year:** 2019
+**Source type:** primary research — EEG characterisation with a drug arm
+**Journal/source:** *Front Neurol* 2019;10:1151
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 31781019 / PMC6861424 / DOI 10.3389/fneur.2019.01151
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-31781019-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-31781019-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261021.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-31781019-01` ; manifest `deepdive_manifests/PMID31781019.json`; landing [[paper_registry_current#PAPER 452]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0725
+**Short title:** Cao 2020 — Neuroligin 2 regulates absence seizures via GABAergic transmission
+**Authors:** Cao F, Liu JJ, Zhou S, Cortez MA, Snead OC, Han J, Jia Z
+**Year:** 2020
+**Source type:** primary research — mouse genetics and circuit physiology
+**Journal/source:** *Nat Commun* 2020;11(1):3744
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 32719346 / PMC7385104 / DOI 10.1038/s41467-020-17560-3
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-32719346-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-32719346-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261021.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-32719346-01` ; manifest `deepdive_manifests/PMID32719346.json`; landing [[paper_registry_current#PAPER 453]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0726
+**Short title:** Berecki 2020 — novel missense CACNA1G variants in infantile-onset DEE
+**Authors:** Berecki G, Helbig KL, Ware TL, Grinton B, Skraban CM, Marsh ED, Berkovic SF, Petrou S
+**Year:** 2020
+**Source type:** case reports with channel electrophysiology
+**Journal/source:** *Int J Mol Sci* 2020;21(17)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 32878331 / PMC7503748 / DOI 10.3390/ijms21176333
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-32878331-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-32878331-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261021.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-32878331-01` ; manifest `deepdive_manifests/PMID32878331.json`; landing [[paper_registry_current#PAPER 454]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0727
+**Short title:** El 2021 — CACNA1I gain-of-function variants and neurodevelopmental disorders
+**Authors:** El Ghaleb Y, Schneeberger PE, Fernández-Quintero ML, Geisler SM, Pelizzari S, Polstra AM, van Hagen JM, Denecke J, Campiglio M, Liedl KR, Stevens CA, Person RE, … et al. (18 authors listed on PubMed)
+**Year:** 2021
+**Source type:** case reports with channel electrophysiology and modelling
+**Journal/source:** *Brain* 2021;144(7):2092-2106
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 33704440 / PMC8422349 / DOI 10.1093/brain/awab101
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-33704440-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-33704440-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261021.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-33704440-01` ; manifest `deepdive_manifests/PMID33704440.json`; landing [[paper_registry_current#PAPER 455]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0728
+**Short title:** El 2022 — developmental oxidative stress and T-type hypofunction in thalamic reticular nucleus
+**Authors:** El Khoueiry C, Cabungcal JH, Rovó Z, Fournier M, Do KQ, Steullet P
+**Year:** 2022
+**Source type:** primary research — slice electrophysiology
+**Journal/source:** *Mol Psychiatry* 2022;27(4):2042-2051
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 35079122 / PMC9126813 / DOI 10.1038/s41380-021-01425-2
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-35079122-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-35079122-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261021.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-35079122-01` ; manifest `deepdive_manifests/PMID35079122.json`; landing [[paper_registry_current#PAPER 456]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0729
+**Short title:** Riban 2022 — stiripentol inhibits spike-and-wave discharges: a T-type mechanism
+**Authors:** Riban V, Heulard I, Reversat L, Si Hocine H, Verleye M
+**Year:** 2022
+**Source type:** primary research — animal absence models, industry laboratory
+**Journal/source:** *Epilepsia* 2022;63(5):1200-1210
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 35184274 / PMC9314114 / DOI 10.1111/epi.17201
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-35184274-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-35184274-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261021.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-35184274-01` ; manifest `deepdive_manifests/PMID35184274.json`; landing [[paper_registry_current#PAPER 457]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0730
+**Short title:** Abdelaal 2022 — thalamic reticular nucleus PV-cell dysfunction induces spike-and-wave discharges
+**Authors:** Abdelaal MS, Midorikawa M, Suzuki T, Kobayashi K, Takata N, Miyata M, Mimura M, Tanaka KF
+**Year:** 2022
+**Source type:** primary research — slice electrophysiology and EEG, unplanned opsin toxicity model
+**Journal/source:** *Brain Commun* 2022;4(2):fcac010
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 35243344 / PMC8887905 / DOI 10.1093/braincomms/fcac010
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-35243344-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-35243344-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261021.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-35243344-01` ; manifest `deepdive_manifests/PMID35243344.json`; landing [[paper_registry_current#PAPER 458]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0731
+**Short title:** Barker 2023 — C. elegans NCL model identifies ethosuximide
+**Authors:** Barker E, Morgan A, Barclay JW
+**Year:** 2023
+**Source type:** primary research — worm model with a four-compound pilot screen
+**Journal/source:** *Hum Mol Genet* 2023;32(11):1772-1785
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 36282524 / PMC10196665 / DOI 10.1093/hmg/ddac263
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-36282524-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-36282524-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261021.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-36282524-01` ; manifest `deepdive_manifests/PMID36282524.json`; landing [[paper_registry_current#PAPER 459]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0732
+**Short title:** Bleakley 2023 — antiseizure medication efficacy in an HCN1 DEE mouse
+**Authors:** Bleakley LE, McKenzie CE, Reid CA
+**Year:** 2023
+**Source type:** primary research — within-laboratory pharmacology screen
+**Journal/source:** *Epilepsia* 2023;64(1):e1-e8
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 36300716 / PMC10953365 / DOI 10.1111/epi.17447
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-36300716-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-36300716-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261021.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-36300716-01` ; manifest `deepdive_manifests/PMID36300716.json`; landing [[paper_registry_current#PAPER 460]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0733
+**Short title:** Harman 2023 — synthetic cannabinoids inhibit T-type channels with divergent seizure effects
+**Authors:** Harman T, Udoh M, McElroy DL, Anderson LL, Kevin RC, Banister SD, Ametovski A, Markham J, Bladen C, Doohan PT, Greba Q, Laprairie RB, … et al. (16 authors listed on PubMed)
+**Year:** 2023
+**Source type:** primary research — medicinal chemistry to in-vivo screening
+**Journal/source:** *Front Physiol* 2023;14:1086243
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 37082241 / PMC10110893 / DOI 10.3389/fphys.2023.1086243
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-37082241-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-37082241-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261021.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-37082241-01` ; manifest `deepdive_manifests/PMID37082241.json`; landing [[paper_registry_current#PAPER 461]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0734
+**Short title:** Colombo 2023 — GNB1 encephalopathy mouse: GIRK signalling
+**Authors:** Colombo S, Reddy HP, Petri S, Williams DJ, Shalomov B, Dhindsa RS, Gelfman S, Krizay D, Bera AK, Yang M, Peng Y, Makinson CD, … et al. (16 authors listed on PubMed)
+**Year:** 2023
+**Source type:** primary research — mouse EEG, multi-electrode arrays and oocyte electrophysiology
+**Journal/source:** *Front Cell Neurosci* 2023;17:1175895
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 37275776 / PMC10232839 / DOI 10.3389/fncel.2023.1175895
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-37275776-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-37275776-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261021.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-37275776-01` ; manifest `deepdive_manifests/PMID37275776.json`; landing [[paper_registry_current#PAPER 462]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0735
+**Short title:** Sack 2025 — Cav3.2 contributions to dentate granule cell excitability by maturational stage
+**Authors:** Sack AS, Garcia E, Snutch TP
+**Year:** 2025
+**Source type:** primary research — slice electrophysiology
+**Journal/source:** *eNeuro* 2025;12(4)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40068874 / PMC11974363 / DOI 10.1523/ENEURO.0423-24.2025
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-40068874-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-40068874-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261021.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-40068874-01` ; manifest `deepdive_manifests/PMID40068874.json`; landing [[paper_registry_current#PAPER 463]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0736
+**Short title:** El 2025 — two pairs of CACNA1I variants with opposite effects on channel function
+**Authors:** El Ghaleb Y, Fernández-Quintero ML, Campiglio M, Tuluc P, Höing AS, Kortüm F, Motazacker MM, Jansen IE, Elting MW, Plomp AS, Fischer AM, Siu VM, Kutsche K, Flucher BE
+**Year:** 2025
+**Source type:** case reports with channel electrophysiology and modelling
+**Journal/source:** *PLoS Genet* 2025;21(8):e1011828
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40825030 / PMC12396757 / DOI 10.1371/journal.pgen.1011828
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-40825030-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-40825030-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261021.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-40825030-01` ; manifest `deepdive_manifests/PMID40825030.json`; landing [[paper_registry_current#PAPER 464]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0737
+**Short title:** Hristova 2025 — absence seizures and sleep-wake abnormalities in a Grin2b rat
+**Authors:** Hristova K, Fasol MCM, McLaughlin N, Nawaz MS, Taskiran M, Buller-Peralta I, Harris AP, Sutherland A, Bassi A, Ocampo-Garces A, Escudero J, Kind PC, Gonzalez-Sulser A
+**Year:** 2025
+**Source type:** primary research — new rat model with drug arms
+**Journal/source:** *Epilepsia* 2025;66(12):4996-5013
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40827489 / PMC12779324 / DOI 10.1111/epi.18606
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-40827489-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-40827489-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261021.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-40827489-01` ; manifest `deepdive_manifests/PMID40827489.json`; landing [[paper_registry_current#PAPER 465]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0738
+**Short title:** Jang 2025 — reticular thalamic hyperexcitability in the Cntnap2 model of autism
+**Authors:** Jang SS, Takahashi F, Huguenard JR
+**Year:** 2025
+**Source type:** primary research — slice electrophysiology, photometry and behaviour
+**Journal/source:** *Sci Adv* 2025;11(34):eadw4682
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40834072 / PMC12366697 / DOI 10.1126/sciadv.adw4682
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-40834072-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-40834072-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261021.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-40834072-01` ; manifest `deepdive_manifests/PMID40834072.json`; landing [[paper_registry_current#PAPER 466]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0739
+**Short title:** Balestrini 2026 — epilepsies with absence seizures and single-gene aetiology
+**Authors:** Balestrini S, Galli I, Ricci ML, Parrini E, Mei D, Mastrangelo M, Pisani F, Filippi C, Giordano L, Cesaroni E, Marini C, Cerulli Irelli E, … et al. (30 authors listed on PubMed)
+**Year:** 2026
+**Source type:** retrospective multicentre case series
+**Journal/source:** *Epilepsia* 2026;67(1):272-290
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41137852 / PMC12893263 / DOI 10.1111/epi.18655
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-41137852-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-41137852-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261021.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-41137852-01` ; manifest `deepdive_manifests/PMID41137852.json`; landing [[paper_registry_current#PAPER 467]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0740
+**Short title:** Harman 2026 — cannabidiol in a Gabrb3 D120N mouse of Lennox-Gastaut syndrome
+**Authors:** Harman T, Sharman LA, Yip KL, Bedoya-Pérez M, Janve V, Arnold JC
+**Year:** 2026
+**Source type:** primary research — within-subject EEG
+**Journal/source:** *Epilepsia Open* 2026;11(4):1263-1275
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42274296 / PMC13395050 / DOI 10.1002/epi4.70289
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-42274296-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-42274296-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261021.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-42274296-01` ; manifest `deepdive_manifests/PMID42274296.json`; landing [[paper_registry_current#PAPER 468]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0741
+**Short title:** Miao 2026 — PV interneuron activation rescues seizures in digenic absence epilepsy mice
+**Authors:** Miao QL, Okoh J, Asan AS, Karedia S, Pan JQ, Costa-Mattioli M, Noebels JL
+**Year:** 2026
+**Source type:** primary research — mouse genetics and behaviour
+**Journal/source:** *Sci Adv* 2026;12(31):eaec6065
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42536722 / PMC13426438 / DOI 10.1126/sciadv.aec6065
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-42536722-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-42536722-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261021.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-42536722-01` ; manifest `deepdive_manifests/PMID42536722.json`; landing [[paper_registry_current#PAPER 469]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0742
+**Short title:** Aguado 2016 — ontogeny of Cav3.1 and Cav3.2 in mouse hippocampus and cerebellum
+**Authors:** Aguado C, García-Madrona S, Gil-Minguez M, Luján R
+**Year:** 2016
+**Source type:** primary research — expression and localisation
+**Journal/source:** *Front Neuroanat* 2016;10:83
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 27616982 / PMC4999439 / DOI 10.3389/fnana.2016.00083
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261022-27616982-01`)
+**Date processed:** 2026-10-21 (`FTR-20261022-27616982-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261022b.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-27616982-01` ; manifest `deepdive_manifests/PMID27616982.json`; landing [[paper_registry_current#PAPER 470]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0743
+**Short title:** Ogiwara 2018 — Nav1.2 haplodeficiency in excitatory neurons causes absence-like seizures
+**Authors:** Ogiwara I, Miyamoto H, Tatsukawa T, Yamagata T, Nakayama T, Atapour N, Miura E, Mazaki E, Ernst SJ, Cao D, Ohtani H, Itohara S, … et al. (19 authors listed on PubMed)
+**Year:** 2018
+**Source type:** primary research — conditional mouse genetics and EEG
+**Journal/source:** *Commun Biol* 2018;1:96
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 30175250 / PMC6115194 / DOI 10.1038/s42003-018-0099-2
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261022-30175250-01`)
+**Date processed:** 2026-10-21 (`FTR-20261022-30175250-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261022b.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-30175250-01` ; manifest `deepdive_manifests/PMID30175250.json`; landing [[paper_registry_current#PAPER 471]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0744
+**Short title:** Jin 2020 — spike-wave discharges in aged APP/PS1 mice and response to drug classes
+**Authors:** Jin N, Ziyatdinova S, Gureviciene I, Tanila H
+**Year:** 2020
+**Source type:** primary research — EEG pharmacology
+**Journal/source:** *Sci Rep* 2020;10(1):11851
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 32678276 / PMC7366932 / DOI 10.1038/s41598-020-68845-y
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261022-32678276-01`)
+**Date processed:** 2026-10-21 (`FTR-20261022-32678276-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261022b.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-32678276-01` ; manifest `deepdive_manifests/PMID32678276.json`; landing [[paper_registry_current#PAPER 472]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0745
+**Short title:** Bouron 2020 — transcriptomic profile of Ca2+ transport systems in mouse cortical development
+**Authors:** Bouron A
+**Year:** 2020
+**Source type:** primary research — transcriptomics
+**Journal/source:** *Cells* 2020;9(8)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 32751129 / PMC7465657 / DOI 10.3390/cells9081800
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261022-32751129-01`)
+**Date processed:** 2026-10-21 (`FTR-20261022-32751129-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261022b.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-32751129-01` ; manifest `deepdive_manifests/PMID32751129.json`; landing [[paper_registry_current#PAPER 473]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0746
+**Short title:** Iizumi 2021 — anticonvulsant effects in AMPA receptor palmitoylation-deficient mice
+**Authors:** Iizumi M, Oota-Ishigaki A, Yamashita M, Hayashi T
+**Year:** 2021
+**Source type:** primary research — mouse pharmacology with two-way analysis
+**Journal/source:** *Front Pharmacol* 2021;12:711737
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 34483921 / PMC8416418 / DOI 10.3389/fphar.2021.711737
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261022-34483921-01`)
+**Date processed:** 2026-10-21 (`FTR-20261022-34483921-01`)
+**Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-b_20261022b.md
+**Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-34483921-01` ; manifest `deepdive_manifests/PMID34483921.json`; landing [[paper_registry_current#PAPER 474]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0747
+**Short title:** Palma 2022 — clemastine impairs developmental myelination
+**Authors:** Palma A, Chara JC, Montilla A, Otxoa-de-Amezaga A, Ruíz-Jaén F, Planas AM, Matute C, Pérez-Samartín A, Domercq M
+**Year:** 2022
+**Source type:** primary research — wild-type mouse pharmacology with electron microscopy
+**Journal/source:** *Front Cell Dev Biol* 2022;10:841548
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 35372341 / PMC8970281 / DOI 10.3389/fcell.2022.841548
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-35372341-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-35372341-01`)
+**Discovery source:** reached by group R3 (downstream-pathway precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-c_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-35372341-01` ; manifest `deepdive_manifests/PMID35372341.json`; landing [[paper_registry_current#PAPER 475]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0748
+**Short title:** Karalis 2022 — Raptor reduction in Tsc1-loss mouse models
+**Authors:** Karalis V, Caval-Holme F, Bateup HS
+**Year:** 2022
+**Source type:** primary research — mouse genetics and culture
+**Journal/source:** *Nat Commun* 2022;13(1):4665
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 35945201 / PMC9363483 / DOI 10.1038/s41467-022-31961-6
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-35945201-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-35945201-01`)
+**Discovery source:** reached by group R3 (downstream-pathway precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-c_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-35945201-01` ; manifest `deepdive_manifests/PMID35945201.json`; landing [[paper_registry_current#PAPER 476]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0749
+**Short title:** Śmiałek 2023 — sirolimus safety in infants with tuberous sclerosis: a retrospective review
+**Authors:** Śmiałek D, Jóźwiak S, Kotulska K
+**Year:** 2023
+**Source type:** retrospective two-centre chart review
+**Journal/source:** *J Clin Med* 2023;12(1)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 36615165 / PMC9821318 / DOI 10.3390/jcm12010365
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-36615165-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-36615165-01`)
+**Discovery source:** reached by group R3 (downstream-pathway precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-c_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-36615165-01` ; manifest `deepdive_manifests/PMID36615165.json`; landing [[paper_registry_current#PAPER 477]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0750
+**Short title:** Brown 2023 — microglial ablation in a Ccdc39 hydrocephalus mouse
+**Authors:** Brown FN, Iwasawa E, Shula C, Fugate EM, Lindquist DM, Mangano FT, Goto J
+**Year:** 2023
+**Source type:** primary research — mouse genetics and pharmacology
+**Journal/source:** *Fluids Barriers CNS* 2023;20(1):42
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 37296418 / PMC10251678 / DOI 10.1186/s12987-023-00433-4
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-37296418-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-37296418-01`)
+**Discovery source:** reached by group R3 (downstream-pathway precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-c_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-37296418-01` ; manifest `deepdive_manifests/PMID37296418.json`; landing [[paper_registry_current#PAPER 478]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0751
+**Short title:** Fuchs 2024 — Csnk1a1 haploinsufficiency and mutant p53 in Myc induction and leukaemic transformation
+**Authors:** Fuchs SNR, Stalmann USA, Snoeren IAM, Bindels E, Schmitz S, Banjanin B, Hoogenboezem RM, van Herk S, Saad M, Walter W, Haferlach T, Seillier L, … et al. (18 authors listed on PubMed)
+**Year:** 2024
+**Source type:** primary research — mouse haematopoietic model
+**Journal/source:** *Blood Adv* 2024;8(3):766-779
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 38147624 / PMC10847877 / DOI 10.1182/bloodadvances.2022008926
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-38147624-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-38147624-01`)
+**Discovery source:** reached by group R3 (downstream-pathway precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-c_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-38147624-01` ; manifest `deepdive_manifests/PMID38147624.json`; landing [[paper_registry_current#PAPER 479]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0752
+**Short title:** Odell 2024 — dose-finding of clemastine in a mouse model of preterm white-matter injury
+**Authors:** Odell EP, Jabassini N, Schniedewind B, Pease-Raissi SE, Frymoyer A, Christians U, Green AJ, Chan JR, Ostrem BEL
+**Year:** 2024
+**Source type:** primary research — mouse dose-finding with a plasma arm
+**Journal/source:** *Pediatr Res* 2024;96(4):933-941
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 38942888 / PMC11502491 / DOI 10.1038/s41390-024-03326-w
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-38942888-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-38942888-01`)
+**Discovery source:** reached by group R3 (downstream-pathway precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-c_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-38942888-01` ; manifest `deepdive_manifests/PMID38942888.json`; landing [[paper_registry_current#PAPER 480]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0753
+**Short title:** O'Keeffe 2025 — cortical and thalamic synaptic development without microglia
+**Authors:** O'Keeffe M, Booker SA, Walsh D, Li M, Henley C, Simões de Oliveira L, Liu M, Wang X, Banqueri M, Ridley K, Dissanayake KN, Martinez-Gonzalez C, … et al. (27 authors listed on PubMed)
+**Year:** 2025
+**Source type:** primary research — genetic microglia-deficient mouse
+**Journal/source:** *Nat Neurosci* 2025;28(2):268-279
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39762658 / PMC11802452 / DOI 10.1038/s41593-024-01833-x
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-39762658-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-39762658-01`)
+**Discovery source:** reached by group R3 (downstream-pathway precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-c_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-39762658-01` ; manifest `deepdive_manifests/PMID39762658.json`; landing [[paper_registry_current#PAPER 481]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0754
+**Short title:** Ren 2025 — CSNK1A1 de novo variants in infantile spasms
+**Authors:** Ren D, Yang Z, Hu J, Ji L, Bi Y, Yuan F, Yan Y, Peng J, Li K, Yang K, Liu L, Mao X, … et al. (17 authors listed on PubMed)
+**Year:** 2025
+**Source type:** case report (two families) with cell overexpression
+**Journal/source:** *Hum Mol Genet* 2025;34(10):905-913
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40156289 / PMC12056308 / DOI 10.1093/hmg/ddaf030
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-40156289-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-40156289-01`)
+**Discovery source:** reached by group R3 (downstream-pathway precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-c_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-40156289-01` ; manifest `deepdive_manifests/PMID40156289.json`; landing [[paper_registry_current#PAPER 482]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0755
+**Short title:** Ball 2025 — first-in-human phase 1 of a CK1-alpha and CDK7/9 inhibitor in adult MDS and AML
+**Authors:** Ball BJ, Xiao W, Borthakur G, Nguyen LXT, Valerio M, Venkatachalam A, Marcucci G, Stein AS, Thai DL, Cook DN, Chan K, Persaud S, … et al. (16 authors listed on PubMed)
+**Year:** 2025
+**Source type:** phase 1 trial, adult haematological malignancy
+**Journal/source:** *J Hematol Oncol* 2025;18(1):73
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40665325 / PMC12265154 / DOI 10.1186/s13045-025-01724-z
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-40665325-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-40665325-01`)
+**Discovery source:** reached by group R3 (downstream-pathway precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-c_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-40665325-01` ; manifest `deepdive_manifests/PMID40665325.json`; landing [[paper_registry_current#PAPER 483]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0756
+**Short title:** Di 2025 — population pharmacokinetics of a GSK3 inhibitor in myotonic dystrophy type 1
+**Authors:** Di Deo A, Oosterholt S, Horrigan J, Evans S, McMorn A, Della Pasqua O
+**Year:** 2025
+**Source type:** pharmacokinetic modelling
+**Journal/source:** *Pharmaceutics* 2025;17(8)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40871085 / PMC12389255 / DOI 10.3390/pharmaceutics17081065
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-40871085-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-40871085-01`)
+**Discovery source:** reached by group R3 (downstream-pathway precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-c_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-40871085-01` ; manifest `deepdive_manifests/PMID40871085.json`; landing [[paper_registry_current#PAPER 484]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0757
+**Short title:** Murray 2025 — mTORC1 signalling and microglia activation in an Npc1 missense mouse
+**Authors:** Murray CE, Betancourt-Trompa DS, Martinez MS, Carson JM, Walsh LJ, Remillard WC, Fordyce KB, Reddy R, Soto I
+**Year:** 2025
+**Source type:** primary research — mouse lysosomal-storage model
+**Journal/source:** *PLoS One* 2025;20(9):e0330437
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40911604 / PMC12412993 / DOI 10.1371/journal.pone.0330437
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-40911604-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-40911604-01`)
+**Discovery source:** reached by group R3 (downstream-pathway precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-c_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-40911604-01` ; manifest `deepdive_manifests/PMID40911604.json`; landing [[paper_registry_current#PAPER 485]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0758
+**Short title:** Qiao 2026 — enhancing myelin regeneration reverses cognitive deficits in an intellectual-disability mouse
+**Authors:** Qiao P, Wang H, Qu P, Guo L, Zhou Y, Zeng T, Chen J, Li J, Hu Y, Chen G
+**Year:** 2026
+**Source type:** primary research — inducible OPC-lineage knockout with a drug arm
+**Journal/source:** *Neurotherapeutics* 2026;23(3):e00906
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41980417 / PMC13092863 / DOI 10.1016/j.neurot.2026.e00906
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-41980417-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-41980417-01`)
+**Discovery source:** reached by group R3 (downstream-pathway precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-c_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-41980417-01` ; manifest `deepdive_manifests/PMID41980417.json`; landing [[paper_registry_current#PAPER 486]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0759
+**Short title:** Verteneuil 2026 — Cdk7 promotes neuritogenesis in cortical neurons and social behaviour
+**Authors:** Verteneuil S, Van Hees L, Lassance JM, Lejon C, D'aes T, Marlier Q, Quatresooz P, Delacroix L, Nguyen L, Malgrange B, Vandenbosch R
+**Year:** 2026
+**Source type:** primary research — conditional knockout and neuron culture
+**Journal/source:** *Cell Mol Life Sci* 2026;83(1)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42154236 / PMC13350628 / DOI 10.1007/s00018-026-06139-8
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-42154236-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-42154236-01`)
+**Discovery source:** reached by group R3 (downstream-pathway precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-c_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-42154236-01` ; manifest `deepdive_manifests/PMID42154236.json`; landing [[paper_registry_current#PAPER 487]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0760
+**Short title:** Taniguchi 2026 — sirolimus and dyslipidaemia in neonates and infants
+**Authors:** Taniguchi A, Chrétien B, Maeda T, Ueda K, Miura R, Tanaka R, Suzuki T, Muramatsu Y, Sato Y, Nishida K
+**Year:** 2026
+**Source type:** retrospective cohort with pharmacovigilance analysis
+**Journal/source:** *Paediatr Drugs* 2026;28(4):417-427
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42217144 / PMC13379406 / DOI 10.1007/s40272-026-00754-5
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-42217144-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-42217144-01`)
+**Discovery source:** reached by group R3 (downstream-pathway precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-c_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-42217144-01` ; manifest `deepdive_manifests/PMID42217144.json`; landing [[paper_registry_current#PAPER 488]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0761
+**Short title:** Hsieh 2026 — ENT1 inhibitor J4 in a tuberous sclerosis mouse model
+**Authors:** Hsieh CC, Tsou YS, Huang NK, Chen TC, Li SJ, Chang CW, Lin WX, Tung SY, Chern Y, Chen YY, Lee YC
+**Year:** 2026
+**Source type:** primary research — adult mouse pharmacology with imaging
+**Journal/source:** *J Biomed Sci* 2026;33(1)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42310739 / PMC13274077 / DOI 10.1186/s12929-026-01269-4
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-42310739-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-42310739-01`)
+**Discovery source:** reached by group R3 (downstream-pathway precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-c_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-42310739-01` ; manifest `deepdive_manifests/PMID42310739.json`; landing [[paper_registry_current#PAPER 489]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0762
+**Short title:** Helton 2026 — Wnt activation during epileptogenesis in temporal lobe epilepsy models
+**Authors:** Helton C, Rodgers N, Gupta K
+**Year:** 2026
+**Source type:** primary research — adult mouse kainate models
+**Journal/source:** *Biomed Pharmacother* 2026;201:119737
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42401046 / PMC13479836 / DOI 10.1016/j.biopha.2026.119737
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-42401046-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-42401046-01`)
+**Discovery source:** reached by group R3 (downstream-pathway precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-c_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-42401046-01` ; manifest `deepdive_manifests/PMID42401046.json`; landing [[paper_registry_current#PAPER 490]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0763
+**Short title:** Liu 2026 — brain-targeted delivery of an esterified tankyrase inhibitor in an autism model
+**Authors:** Liu H, Wang YR, Wang M, Yu T, Liu D, Wang J, Gao Y, Hu Y, Ma H, Gao F, Wu S, Wei Z, Wang Y
+**Year:** 2026
+**Source type:** primary research — mouse pharmacology and toxicity
+**Journal/source:** *Pharmaceutics* 2026;18(8)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42654068 / PMC13516923 / DOI 10.3390/pharmaceutics18080951
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-42654068-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-42654068-01`)
+**Discovery source:** reached by group R3 (downstream-pathway precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-c_20261021.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-42654068-01` ; manifest `deepdive_manifests/PMID42654068.json`; landing [[paper_registry_current#PAPER 491]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0764
+**Short title:** Nagaraja 2017 — transcriptional dependencies in diffuse intrinsic pontine glioma
+**Authors:** Nagaraja S, Vitanza NA, Woo PJ, Taylor KR, Liu F, Zhang L, Li M, Meng W, Ponnuswami A, Sun W, Ma J, Hulleman E, … et al. (16 authors listed on PubMed)
+**Year:** 2017
+**Source type:** primary research — patient-derived cultures and xenografts
+**Journal/source:** *Cancer Cell* 2017;31(5):635-652.e6
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 28434841 / PMC5462626 / DOI 10.1016/j.ccell.2017.03.011
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261022-28434841-01`)
+**Date processed:** 2026-10-21 (`FTR-20261022-28434841-01`)
+**Discovery source:** reached by group R3 (downstream-pathway precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-c_20261022b.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-28434841-01` ; manifest `deepdive_manifests/PMID28434841.json`; landing [[paper_registry_current#PAPER 492]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0765
+**Short title:** Greenall 2017 — CDK7 as a therapeutic target in high-grade glioma
+**Authors:** Greenall SA, Lim YC, Mitchell CB, Ensbey KS, Stringer BW, Wilding AL, O'Neill GM, McDonald KL, Gough DJ, Day BW, Johns TG
+**Year:** 2017
+**Source type:** primary research — patient-derived neurospheres and xenograft
+**Journal/source:** *Oncogenesis* 2017;6(5):e336
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 28504693 / PMC5523066 / DOI 10.1038/oncsis.2017.33
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261022-28504693-01`)
+**Date processed:** 2026-10-21 (`FTR-20261022-28504693-01`)
+**Discovery source:** reached by group R3 (downstream-pathway precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-c_20261022b.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-28504693-01` ; manifest `deepdive_manifests/PMID28504693.json`; landing [[paper_registry_current#PAPER 493]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0766
+**Short title:** He 2017 — Cdk7 required for activity-dependent neuronal gene expression and memory
+**Authors:** He G, Yang X, Wang G, Qi J, Mao R, Wu Z, Zhou Z
+**Year:** 2017
+**Source type:** primary research — pharmacological inhibition in neurons and mice
+**Journal/source:** *Front Mol Neurosci* 2017;10:365
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 29163040 / PMC5681959 / DOI 10.3389/fnmol.2017.00365
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261022-29163040-01`)
+**Date processed:** 2026-10-21 (`FTR-20261022-29163040-01`)
+**Discovery source:** reached by group R3 (downstream-pathway precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-c_20261022b.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261022-29163040-01` ; manifest `deepdive_manifests/PMID29163040.json`; landing [[paper_registry_current#PAPER 494]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0767
+**Short title:** Dohare 2018 — GSK-3beta inhibition enhances myelination in preterm IVH, but not Wnt3A
+**Authors:** Dohare P, Cheng B, Ahmed E, Yadala V, Singla P, Thomas S, Kayton R, Ungvari Z, Ballabh P
+**Year:** 2018
+**Source type:** primary research — preterm rabbit model with human autopsy comparison
+**Journal/source:** *Neurobiol Dis* 2018;118:22-39
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 29940337 / PMC6673662 / DOI 10.1016/j.nbd.2018.06.015
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261022-29940337-01`)
+**Date processed:** 2026-10-21 (`FTR-20261022-29940337-01`)
+**Discovery source:** reached by group R3 (downstream-pathway precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-c_20261022b.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-29940337-01` ; manifest `deepdive_manifests/PMID29940337.json`; landing [[paper_registry_current#PAPER 495]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0768
+**Short title:** Kim 2019 — roscovitine attenuates microglia activation after status epilepticus
+**Authors:** Kim JE, Park H, Choi SH, Kong MJ, Kang TC
+**Year:** 2019
+**Source type:** primary research — adult rat pharmacology
+**Journal/source:** *Cells* 2019;8(7)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 31331032 / PMC6678318 / DOI 10.3390/cells8070746
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261022-31331032-01`)
+**Date processed:** 2026-10-21 (`FTR-20261022-31331032-01`)
+**Discovery source:** reached by group R3 (downstream-pathway precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-c_20261022b.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-31331032-01` ; manifest `deepdive_manifests/PMID31331032.json`; landing [[paper_registry_current#PAPER 496]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0769
+**Short title:** Knowles 2022 — maladaptive myelination promotes generalised epilepsy progression
+**Authors:** Knowles JK, Xu H, Soane C, Batra A, Saucedo T, Frost E, Tam LT, Fraga D, Ni L, Villar K, Talmi S, Huguenard JR, Monje M
+**Year:** 2022
+**Source type:** primary research — rodent absence models with electron microscopy
+**Journal/source:** *Nat Neurosci* 2022;25(5):596-606
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 35501379 / PMC9076538 / DOI 10.1038/s41593-022-01052-2
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261022-35501379-01`)
+**Date processed:** 2026-10-21 (`FTR-20261022-35501379-01`)
+**Discovery source:** reached by group R3 (downstream-pathway precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — downstream-pathway pharmacology and genetics (Wnt/GSK3, CDK7/9, mTOR, myelination, microglia) in non-WWOX systems
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-c_20261022b.md
+**Next action:** none — read and registered; claim-level use is held with the group candidate
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-35501379-01` ; manifest `deepdive_manifests/PMID35501379.json`; landing [[paper_registry_current#PAPER 497]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0770
+**Short title:** Kotulska 2021 — EPISTOP: prevention of epilepsy in infants with tuberous sclerosis
+**Authors:** Kotulska K, Kwiatkowski DJ, Curatolo P, Weschke B, Riney K, Jansen F, Feucht M, Krsek P, Nabbout R, Jansen AC, Wojdan K, Sijko K, … et al. (26 authors listed on PubMed)
+**Year:** 2021
+**Source type:** randomised open-label trial
+**Journal/source:** *Ann Neurol* 2021;89(2):304-314
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 33180985 / PMC7898885 / DOI 10.1002/ana.25956
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-33180985-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-33180985-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261021.md
+**Next action:** none — read and registered
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-33180985-01` ; manifest `deepdive_manifests/PMID33180985.json`; landing [[paper_registry_current#PAPER 498]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0771
+**Short title:** Wied 2024 — EPISTOP secondary analysis: methodological insights for rare-disease trials
+**Authors:** Wied S, Hilgers RD, Heussen N, Kotulska K, Dirani M, Kuchenbuch M, Jozwiak S, Nabbout R
+**Year:** 2024
+**Source type:** secondary analysis of a randomised trial
+**Journal/source:** *PLoS One* 2024;19(12):e0312936
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39625912 / PMC11614242 / DOI 10.1371/journal.pone.0312936
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-39625912-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-39625912-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261021.md
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-39625912-01` ; manifest `deepdive_manifests/PMID39625912.json`; landing [[paper_registry_current#PAPER 499]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0772
+**Short title:** French 2021 — antiepileptogenesis and disease modification: clinical and regulatory issues
+**Authors:** French JA, Bebin M, Dichter MA, Engel J Jr, Hartman AL, Jóźwiak S, Klein P, McNamara J Sr, Twyman R, Vespa P
+**Year:** 2021
+**Source type:** workshop consensus review (regulatory)
+**Journal/source:** *Epilepsia Open* 2021;6(3):483-492
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 34270884 / PMC8408600 / DOI 10.1002/epi4.12526
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-34270884-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-34270884-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261021.md
+**Next action:** none — read and registered
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-34270884-01` ; manifest `deepdive_manifests/PMID34270884.json`; landing [[paper_registry_current#PAPER 500]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0773
+**Short title:** Downs 2024 — ganaxolone on non-seizure outcomes in CDKL5 deficiency disorder
+**Authors:** Downs J, Jacoby P, Specchio N, Cross H, Amin S, Bahi-Buisson N, Rajaraman R, Suter B, Devinsky O, Aimetti A, Busse G, Olson HE, … et al. (15 authors listed on PubMed)
+**Year:** 2024
+**Source type:** placebo-controlled randomised trial, secondary analysis
+**Journal/source:** *Eur J Paediatr Neurol* 2024;51:140-146
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 38959712 / PMC11283350 / DOI 10.1016/j.ejpn.2024.06.005
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-38959712-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-38959712-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261021.md
+**Next action:** none — read and registered
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-38959712-01` ; manifest `deepdive_manifests/PMID38959712.json`; landing [[paper_registry_current#PAPER 501]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0774
+**Short title:** Correale 2026 — cognitive and behavioural clinical outcome assessments in DEE
+**Authors:** Correale C, Specchio N, Downs J, Cross JH, Cappelletti S, Palacio-Navarro A, Geuens S, Valente K, Brunklaus A, Reilly C
+**Year:** 2026
+**Source type:** narrative review of instruments
+**Journal/source:** *Epilepsia* 2026;67(8):3878-3893
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42246937 / PMC13525577 / DOI 10.1002/epi.70308
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-42246937-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-42246937-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261021.md
+**Next action:** none — read and registered
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-42246937-01` ; manifest `deepdive_manifests/PMID42246937.json`; landing [[paper_registry_current#PAPER 502]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0775
+**Short title:** Sullivan 2026 — soticlestat as adjunctive therapy in Dravet syndrome (phase 3)
+**Authors:** Sullivan J, Valente K, Villanueva V, Strzelczyk A, Nabbout R, Nakagawa E, Zhang Y, Zolnowska M, Khan Y, Dong C, Hsiao S, Sheikh SI, … et al. (15 authors listed on PubMed)
+**Year:** 2026
+**Source type:** phase 3 randomised trial
+**Journal/source:** *Epilepsia* 2026;67(6):2796-2807
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41784472 / PMC13285253 / DOI 10.1002/epi.70164
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-41784472-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-41784472-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261021.md
+**Next action:** none — read and registered
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-41784472-01` ; manifest `deepdive_manifests/PMID41784472.json`; landing [[paper_registry_current#PAPER 503]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0776
+**Short title:** Guerrini 2026 — soticlestat as adjunctive therapy in Lennox-Gastaut syndrome (phase 3)
+**Authors:** Guerrini R, Marsh ED, Liao WP, Imai K, Kravljanac R, Altmann A, Hahn CD, Auvin S, Schiemann J, Khan Y, Mitra P, Sheikh SI, … et al. (16 authors listed on PubMed)
+**Year:** 2026
+**Source type:** phase 3 randomised trial
+**Journal/source:** *Epilepsia* 2026;67(7):3420-3431
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41891667 / PMC13360899 / DOI 10.1002/epi.70216
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-41891667-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-41891667-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261021.md
+**Next action:** none — read and registered
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-41891667-01` ; manifest `deepdive_manifests/PMID41891667.json`; landing [[paper_registry_current#PAPER 504]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0777
+**Short title:** Hahn 2022 — ELEKTRA: soticlestat phase 2 in Dravet and Lennox-Gastaut syndromes
+**Authors:** Hahn CD, Jiang Y, Villanueva V, Zolnowska M, Arkilo D, Hsiao S, Asgharnejad M, Dlugos D
+**Year:** 2022
+**Source type:** phase 2 randomised trial
+**Journal/source:** *Epilepsia* 2022;63(10):2671-2683
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 35841234 / PMC9804149 / DOI 10.1111/epi.17367
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-35841234-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-35841234-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261021.md
+**Next action:** none — read and registered
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-35841234-01` ; manifest `deepdive_manifests/PMID35841234.json`; landing [[paper_registry_current#PAPER 505]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0778
+**Short title:** Jha 2026 — n-of-1 gene-directed drug repurposing trial for an ultrarare condition
+**Authors:** Jha V, Tsetsos C, Bedford M, Costain G, Vohra S, Diaz Martinez JP, Heon E, Vorstman J, Gorodetsky C, Vincent A, Rapley J, Anderson L, Anagnostou E, Baribeau DA
+**Year:** 2026
+**Source type:** single-patient trial
+**Journal/source:** *Epilepsia* 2026;67(7):3644-3656
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41999155 / PMC13360919 / DOI 10.1002/epi.70253
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-41999155-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-41999155-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261021.md
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-41999155-01` ; manifest `deepdive_manifests/PMID41999155.json`; landing [[paper_registry_current#PAPER 506]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0779
+**Short title:** Xian 2023 — clinical and developmental outcomes in STXBP1-related disorders
+**Authors:** Xian J, Thalwitzer KM, McKee J, Sullivan KR, Brimble E, Fitch E, Toib J, Kaufman MC, deCampo D, Cunningham K, Pierce SR, Goss J, … et al. (19 authors listed on PubMed)
+**Year:** 2023
+**Source type:** natural-history cohort with modelling
+**Journal/source:** *Brain* 2023;146(12):5182-5197
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 38015929 / PMC10689925 / DOI 10.1093/brain/awad287
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-38015929-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-38015929-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261021.md
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-38015929-01` ; manifest `deepdive_manifests/PMID38015929.json`; landing [[paper_registry_current#PAPER 507]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0780
+**Short title:** Kim-McManus 2026 — individualised antisense oligonucleotides for SCN2A-related DEE
+**Authors:** Kim-McManus O, Mignon L, Douville J, Pu H, Parisien C, Glass S, Bennett CF, Celso J, Robbins K, Ung H, Olson H, Kingsmore SF, … et al. (16 authors listed on PubMed)
+**Year:** 2026
+**Source type:** two open-label single-patient studies
+**Journal/source:** *Nat Med* 2026;32(8):2838-2845
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42481851 / PMC13472884 / DOI 10.1038/s41591-026-04527-y
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-42481851-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-42481851-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261021.md
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-42481851-01` ; manifest `deepdive_manifests/PMID42481851.json`; landing [[paper_registry_current#PAPER 508]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0781
+**Short title:** McKee 2026 — prospective natural-history protocol for clinical-trial readiness in synaptic disorders
+**Authors:** McKee JL, Ruggiero SM, Cunningham K, Coyne J, McSalley I, Kaufman MC, Bane B, Chisari T, Toib J, Glatts C, Tefft S, Orlando JM, … et al. (39 authors listed on PubMed)
+**Year:** 2026
+**Source type:** study protocol with preliminary data
+**Journal/source:** *Epilepsia* 2026;67(10):5448-5463
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42446932 / PMC13675783 / DOI 10.1002/epi.70374
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-42446932-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-42446932-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261021.md
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-42446932-01` ; manifest `deepdive_manifests/PMID42446932.json`; landing [[paper_registry_current#PAPER 509]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0782
+**Short title:** Driedger 2025 — PROTECT: long-term outcome of pre-emptive mTOR inhibitor treatment in tuberous sclerosis
+**Authors:** Driedger JH, Schröter J, PROTECT-Study Group, Syrbe S, Saffari A
+**Year:** 2025
+**Source type:** trial protocol (no results)
+**Journal/source:** *Orphanet J Rare Dis* 2025;20(1):2
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39762914 / PMC11702139 / DOI 10.1186/s13023-024-03495-1
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-39762914-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-39762914-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261021.md
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-39762914-01` ; manifest `deepdive_manifests/PMID39762914.json`; landing [[paper_registry_current#PAPER 510]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0783
+**Short title:** Capal 2024 — preventative sirolimus in tuberous sclerosis: phase 1 safety and efficacy
+**Authors:** Capal JK, Ritter DM, Franz DN, Griffith M, Currans K, Kent B, Bebin EM, Northrup H, Koenig MK, Mizuno T, Vinks AA, Galandi SL, … et al. (20 authors listed on PubMed)
+**Year:** 2024
+**Source type:** phase 1 trial
+**Journal/source:** *Ann Child Neurol Soc* 2024;2(2):106-119
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39726432 / PMC11670424 / DOI 10.1002/cns3.20070
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-39726432-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-39726432-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261021.md
+**Next action:** none — read and registered
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-39726432-01` ; manifest `deepdive_manifests/PMID39726432.json`; landing [[paper_registry_current#PAPER 511]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0784
+**Short title:** den 2023 — L-serine in GRIN2B loss of function: aggregated n-of-1 protocol
+**Authors:** den Hollander B, Rothuizen-Lindenschot M, Geertjens L, Vaz FM, Brands MM, Le HL, van Eeghen AM, van de Ven PM, Cornel MC, Jacobs BAW, Bruining H, van Karnebeek CD
+**Year:** 2023
+**Source type:** n-of-1 trial protocol (no results)
+**Journal/source:** *Contemp Clin Trials Commun* 2023;36:101233
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 38144875 / PMC10746402 / DOI 10.1016/j.conctc.2023.101233
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-38144875-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-38144875-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261021.md
+**Next action:** none — read and registered
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-38144875-01` ; manifest `deepdive_manifests/PMID38144875.json`; landing [[paper_registry_current#PAPER 512]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0785
+**Short title:** Lewis 2023 — intrathecal magnesium for GRIN1 gain-of-function
+**Authors:** Lewis SA, Shetty S, Gamble S, Heim J, Zhao N, Stitt G, Pankratz M, Mangum T, Marku I, Rosenberg RB, Wilfong AA, Fahey MC, … et al. (16 authors listed on PubMed)
+**Year:** 2023
+**Source type:** single-patient case report
+**Journal/source:** *Orphanet J Rare Dis* 2023;18(1):225
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 37537625 / PMC10398931 / DOI 10.1186/s13023-023-02756-9
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-37537625-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-37537625-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261021.md
+**Next action:** none — read and registered
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-37537625-01` ; manifest `deepdive_manifests/PMID37537625.json`; landing [[paper_registry_current#PAPER 513]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0786
+**Short title:** Bebin 2023 — PREVeNT: early treatment with vigabatrin in tuberous sclerosis
+**Authors:** Bebin EM, Peters JM, Porter BE, McPherson TO, O'Kelley S, Sahin M, Taub KS, Rajaraman R, Randle SC, McClintock WM, Koenig MK, Frost MD, … et al. (22 authors listed on PubMed)
+**Year:** 2023
+**Source type:** placebo-controlled randomised trial
+**Journal/source:** *Ann Neurol* 2023
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 37638552 / PMC10899525 / DOI 10.1002/ana.26778
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-37638552-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-37638552-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261021.md
+**Next action:** none — read and registered
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-37638552-01` ; manifest `deepdive_manifests/PMID37638552.json`; landing [[paper_registry_current#PAPER 514]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0787
+**Short title:** O'Kelley 2025 — PREVeNT neurodevelopmental outcomes at 36 months
+**Authors:** O'Kelley SE, Capal JK, McPherson TO, Patrick KE, Pearson DA, Davis PE, Currans K, Byars AW, Porter BE, Sahin M, Taub KS, Rajaraman R, … et al. (24 authors listed on PubMed)
+**Year:** 2025
+**Source type:** placebo-controlled randomised trial, follow-up
+**Journal/source:** *Pediatr Neurol* 2025;173:88-97
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41061327 / PMC12554379 / DOI 10.1016/j.pediatrneurol.2025.09.006
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-41061327-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-41061327-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261021.md
+**Next action:** none — read and registered
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-41061327-01` ; manifest `deepdive_manifests/PMID41061327.json`; landing [[paper_registry_current#PAPER 515]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0788
+**Short title:** Downs 2025 — caregiver-reported meaningful change in functional domains in DEE
+**Authors:** Downs J, Haywood S, Ludwig NN, Wojnaroski M, Hommer R, Muzyczka K, Hecker J, Conecker G, Keeley J, Berg AT
+**Year:** 2025
+**Source type:** convergent mixed-methods survey
+**Journal/source:** *Dev Med Child Neurol* 2025;67(12):1616-1627
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40372822 / PMC12618951 / DOI 10.1111/dmcn.16363
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-40372822-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-40372822-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261021.md
+**Next action:** none — read and registered
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-40372822-01` ; manifest `deepdive_manifests/PMID40372822.json`; landing [[paper_registry_current#PAPER 516]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0789
+**Short title:** Berg 2024 — FDA patient-focused drug development guidance: trial readiness in rare DEE
+**Authors:** Berg AT, Ludwig NN, Wojnaroski M, Chapman CAT, Hommer R, Conecker G, Hecker JZ, Downs J
+**Year:** 2024
+**Source type:** consensus-style methods review
+**Journal/source:** *Neurology* 2024;102(1):e207958
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 38165374 / PMC10834124 / DOI 10.1212/WNL.0000000000207958
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-38165374-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-38165374-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261021.md
+**Next action:** none — read and registered
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-38165374-01` ; manifest `deepdive_manifests/PMID38165374.json`; landing [[paper_registry_current#PAPER 517]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0790
+**Short title:** Sullivan 2025 — BUTTERFLY: natural history of Dravet syndrome over 24 months
+**Authors:** Sullivan J, Wirrell EC, Knupp KG, Ciliberto M, Ziobro J, Chen DY, Flamini JR, Zafar M, LaVallee N, Stepanians M, Ventola P, Chavan TS, … et al. (15 authors listed on PubMed)
+**Year:** 2025
+**Source type:** multicentre observational study
+**Journal/source:** *Neurology* 2025;105(11):e214388
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41237355 / PMC12622971 / DOI 10.1212/WNL.0000000000214388
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-41237355-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-41237355-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261021.md
+**Next action:** none — read and registered
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-41237355-01` ; manifest `deepdive_manifests/PMID41237355.json`; landing [[paper_registry_current#PAPER 518]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0791
+**Short title:** Liogier 2026 — CANDID: baseline and feasibility of outcome measures in CDKL5 deficiency disorder
+**Authors:** Liogier d'Ardhuy X, CANDID Partners, Cimms T, Lindsten K, Rizzo M, Skrinar A, St Wecker P, Mingorance A, Devinsky O
+**Year:** 2026
+**Source type:** observational baseline report
+**Journal/source:** *Epilepsia* 2026;67(4):1703-1721
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41531035 / PMC13075603 / DOI 10.1002/epi.70095
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-41531035-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-41531035-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261021.md
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-41531035-01` ; manifest `deepdive_manifests/PMID41531035.json`; landing [[paper_registry_current#PAPER 519]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0792
+**Short title:** Knupp 2022 — fenfluramine for seizures in Lennox-Gastaut syndrome (phase 3)
+**Authors:** Knupp KG, Scheffer IE, Ceulemans B, Sullivan JE, Nickels KC, Lagae L, Guerrini R, Zuberi SM, Nabbout R, Riney K, Shore S, Agarwal A, … et al. (18 authors listed on PubMed)
+**Year:** 2022
+**Source type:** phase 3 randomised trial
+**Journal/source:** *JAMA Neurol* 2022;79(6):554-564
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 35499850 / PMC9062770 / DOI 10.1001/jamaneurol.2022.0829
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-35499850-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-35499850-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261022b.md
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-35499850-01` ; manifest `deepdive_manifests/PMID35499850.json`; landing [[paper_registry_current#PAPER 520]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0793
+**Short title:** Ratcliffe 2023 — soticlestat in adults with complex regional pain syndrome (phase 2a)
+**Authors:** Ratcliffe S, Arkilo D, Asgharnejad M, Bhattacharya S, Harden RN
+**Year:** 2023
+**Source type:** randomised controlled trial
+**Journal/source:** *Pain Med* 2023;24(7):872-880
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 36538782 / PMC10321763 / DOI 10.1093/pm/pnac198
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-36538782-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-36538782-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261022b.md
+**Next action:** none — read and registered
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-36538782-01` ; manifest `deepdive_manifests/PMID36538782.json`; landing [[paper_registry_current#PAPER 521]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0794
+**Short title:** van 2023 — GETSBI: parallel RCT compared with an aggregated n-of-1 analysis (bladder pain)
+**Authors:** van Ginkel C, Baars C, Heesakkers J, Martens F, Janssen D
+**Year:** 2023
+**Source type:** trial protocol (no results)
+**Journal/source:** *BMJ Open* 2023;13(4):e068546
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 37045569 / PMC10106014 / DOI 10.1136/bmjopen-2022-068546
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-37045569-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-37045569-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261022b.md
+**Next action:** none — read and registered
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-37045569-01` ; manifest `deepdive_manifests/PMID37045569.json`; landing [[paper_registry_current#PAPER 522]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0795
+**Short title:** Gras 2024 — antiseizure medications and alternative therapies in KCNT1-related epilepsy
+**Authors:** Gras M, Bearden D, West J, Nabbout R
+**Year:** 2024
+**Source type:** systematic review of case reports and series
+**Journal/source:** *Epilepsia Open* 2024;9(4):1176-1191
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39093319 / PMC11296097 / DOI 10.1002/epi4.12975
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-39093319-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-39093319-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261022b.md
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-39093319-01` ; manifest `deepdive_manifests/PMID39093319.json`; landing [[paper_registry_current#PAPER 523]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0796
+**Short title:** Berg 2025 — communication impairment in SCN2A: clinical trials readiness study
+**Authors:** Berg AT, Nili AN, Evans L, Paltell KC, Kaiser AJE, Anderson EL, Egan SM, Kaat AJ, Nesbitt G, Myers LS
+**Year:** 2025
+**Source type:** cross-sectional and untreated-change study with parent-reported instruments
+**Journal/source:** *Neurol Clin Pract* 2025;15(1):e200391
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39439575 / PMC11492899 / DOI 10.1212/CPJ.0000000000200391
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-39439575-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-39439575-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261022b.md
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-39439575-01` ; manifest `deepdive_manifests/PMID39439575.json`; landing [[paper_registry_current#PAPER 524]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0797
+**Short title:** Schulz 2025 — real-world outcomes in CLN2 disease treated with cerliponase alfa
+**Authors:** Schulz A, Schwering C, Wibbeler E, Westermann LM, Hagenah L, Lezius S, Jha A, Hunt A, Slasor P, Reisewitz P, Nickel M
+**Year:** 2025
+**Source type:** registry analysis
+**Journal/source:** *Front Neurol* 2025;16:1516026
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40162009 / PMC11951263 / DOI 10.3389/fneur.2025.1516026
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-40162009-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-40162009-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261022b.md
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-40162009-01` ; manifest `deepdive_manifests/PMID40162009.json`; landing [[paper_registry_current#PAPER 525]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0798
+**Short title:** Bidwell 2026 — KCNQ2 DEE: neurodevelopmental features and Kv7.2 dysfunction
+**Authors:** Bidwell JS, Vanoye CG, Desai RR, Berg AT, George AL Jr
+**Year:** 2026
+**Source type:** natural-history survey with automated electrophysiology
+**Journal/source:** *Epilepsia Open* 2026;11(1):190-199
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41250984 / PMC12903803 / DOI 10.1002/epi4.70192
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-41250984-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-41250984-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261022b.md
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-41250984-01` ; manifest `deepdive_manifests/PMID41250984.json`; landing [[paper_registry_current#PAPER 526]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0799
+**Short title:** Xiong 2026 — gabapentin in KCNQ2-DEE
+**Authors:** Xiong J, You X, Li H, Chen C, Duan H, Chen S, Cao X, He F, Fei Y, Xiao Z, Peng J
+**Year:** 2026
+**Source type:** four-patient open-label observation with patch-clamp of the variants
+**Journal/source:** *Sci Rep* 2026;16(1)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42286026 / PMC13518877 / DOI 10.1038/s41598-026-55285-3
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-42286026-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-42286026-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261022b.md
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-42286026-01` ; manifest `deepdive_manifests/PMID42286026.json`; landing [[paper_registry_current#PAPER 527]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0800
+**Short title:** Villanueva 2026 — fenfluramine effectiveness in DEE: a Spanish multicentre registry
+**Authors:** Villanueva V, González-Alguacil E, Smeyers P, Hernández S, Soto-Insuga V, Fernández-Cabrera A, Olivié L, de Santos T, Parejo B, Iacampo L, Ortuño B, Aparicio J, … et al. (30 authors listed on PubMed)
+**Year:** 2026
+**Source type:** retrospective multicentre registry study
+**Journal/source:** *Epilepsia* 2026;67(9):4536-4550
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42334048 / PMC13592478 / DOI 10.1002/epi.70342
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-42334048-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-42334048-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261022b.md
+**Next action:** none — read and registered
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-42334048-01` ; manifest `deepdive_manifests/PMID42334048.json`; landing [[paper_registry_current#PAPER 528]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0801
+**Short title:** Janszky 2026 — fenfluramine in Dravet and Lennox-Gastaut syndromes: a narrative review
+**Authors:** Janszky J, Janszky J Jr, Horváth R
+**Year:** 2026
+**Source type:** narrative review (two authors)
+**Journal/source:** *Epilepsy Behav Rep* 2026;35:100876
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42389070 / PMC13320519 / DOI 10.1016/j.ebr.2026.100876
+**Date discovered:** 2026-10-21 (first receipt `FTR-20261021-42389070-01`)
+**Date processed:** 2026-10-21 (`FTR-20261021-42389070-01`)
+**Discovery source:** reached by group R4 (trial-design, outcome-measure and natural-history precedents) of the ten-hour repurposing batch
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — trial-design, outcome-measure and natural-history precedents in other developmental and epileptic encephalopathies
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** research/repurposing_10h_scientist-d_20261022b.md
+**Next action:** none — read and registered
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261021-42389070-01` ; manifest `deepdive_manifests/PMID42389070.json`; landing [[paper_registry_current#PAPER 529]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0802
+**Short title:** Hsu 2017 — Hyaluronan activates Hyal-2/WWOX/Smad4 signalling; bubbling cell death on overexpression
+**Authors:** Hsu LJ, Hong Q, Chen ST, Kuo HL, Schultz L, Heath J, Lin SR, Lee MH, Li DZ, Li ZL, Cheng HC, Armand G, Chang NS
+**Year:** 2017
+**Source type:** primary research — cell-culture signalling
+**Journal/source:** *Oncotarget* 2017;8(12):19137-19155
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 27845895 / PMC5386674 / DOI 10.18632/oncotarget.13268
+**Date discovered:** 2026-09-20 (first receipt `FTR-20260921-27845895-01`)
+**Date processed:** 2026-09-20 (`FTR-20260921-27845895-01`)
+**Discovery source:** cited inside other registry records; read in an earlier intake session
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** WWOX signalling / DNA damage / cancer context (see Role)
+**Transferability:** T3
+**clinical relevance:** BACKGROUND (WWOX-subject paper outside a loss-of-function neural system). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** the research or analysis note(s) named by its receipt
+**Next action:** none — registered for identity
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20260921-27845895-01`; landing [[paper_registry_current#PAPER 530]]
+**Note:** Not medical advice.
+
+---
+## LIT-0803
+**Short title:** Kałuzińska-Kołat 2023 — glioblastoma cell-line landscapes: patients who do not benefit from WWOX expression
+**Authors:** Kałuzińska-Kołat Ż, Kołat D, Kośla K, Płuciennik E, Bednarek AK
+**Year:** 2023
+**Source type:** primary research — bioinformatics over tumour transcriptomes plus one lentiviral overexpression experiment
+**Journal/source:** *Front Neurosci* 2023;17:1260409
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 37781246 / PMC10540236 / DOI 10.3389/fnins.2023.1260409
+**Date discovered:** 2026-10-02 (first receipt `FTR-20261002-37781246-01`)
+**Date processed:** 2026-10-04 (`FTR-20261004-37781246-02`)
+**Discovery source:** cited inside other registry records; read in an earlier intake session
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** WWOX signalling / DNA damage / cancer context (see Role)
+**Transferability:** T3
+**clinical relevance:** BACKGROUND (WWOX-subject paper outside a loss-of-function neural system). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** the research or analysis note(s) named by its receipt
+**Next action:** none — registered for identity
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261004-37781246-02` ; manifest `deepdive_manifests/PMID37781246.json`; landing [[paper_registry_current#PAPER 531]]
+**Note:** Not medical advice.
+
+---
+## LIT-0804
+**Short title:** Petrozziello 2026 — WWOX contributes to DNA damage but not somatic instability in Huntington disease
+**Authors:** Petrozziello T, McLean ZL, Boudi A, Huntress SS, Granucci EJ, Field GA, Monsanto RZB, Castillo Torres AL, Roy JCL, Kesavan M, Wu M, Doherty N, … et al. (19 authors listed on PubMed)
+**Year:** 2026
+**Source type:** preprint — Huntington disease neurons and cells with WWOX added
+**Journal/source:** *bioRxiv* 2026
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42395553 / PMC13320983 / DOI 10.64898/2026.06.24.734331
+**Date discovered:** 2026-10-02 (first receipt `FTR-20261002-42395553-01`)
+**Date processed:** 2026-10-04 (`FTR-20261004-42395553-02`)
+**Discovery source:** cited inside other registry records; read in an earlier intake session
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** WWOX signalling / DNA damage / cancer context (see Role)
+**Transferability:** T3
+**clinical relevance:** BACKGROUND (WWOX-subject paper outside a loss-of-function neural system). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** the research or analysis note(s) named by its receipt
+**Next action:** none — registered for identity
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261004-42395553-02` ; manifest `deepdive_manifests/PMID42395553.json`; landing [[paper_registry_current#PAPER 532]]
+**Note:** Not medical advice.
+
+---
+## LIT-0805
+**Short title:** Santini 2014 — ATM kinase activity modulates ITCH E3-ubiquitin ligase activity
+**Authors:** Santini S, Stagni V, Giambruno R, Fianco G, Di Benedetto A, Mottolese M, Pellegrini M, Barilà D
+**Year:** 2014
+**Source type:** primary research — transfection, immunoprecipitation, pull-down and mouse work
+**Journal/source:** *Oncogene* 2014;33(9):1113-23
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 23435430 / PMC3938399 / DOI 10.1038/onc.2013.52
+**Date discovered:** 2026-08-11 (first receipt `FTR-20260811-23435430-01`)
+**Date processed:** 2026-08-11 (`FTR-20260811-23435430-01`)
+**Discovery source:** an earlier single reading of the research layer (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — ATM kinase activity modulates ITCH E3-ubiquitin ligase activity
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** the research or analysis note(s) named by its receipt
+**Next action:** none — registered for identity; re-grade the transferability if a re-read finds WWOX measured
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20260811-23435430-01` ; manifest `deepdive_manifests/PMID23435430.json`; landing [[paper_registry_current#PAPER 533]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0806
+**Short title:** Sanai 2011 — corridors of migrating neurons in the infant human brain
+**Authors:** Sanai N, Nguyen T, Ihrie RA, Mirzadeh Z, Tsai HH, Wong M, Gupta N, Berger MS, Huang E, Garcia-Verdugo JM, Rowitch DH, Alvarez-Buylla A
+**Year:** 2011
+**Source type:** primary research — human postmortem tissue
+**Journal/source:** *Nature* 2011;478(7369):382-6
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 21964341 / PMC3197903 / DOI 10.1038/nature10487
+**Date discovered:** 2026-09-27 (first receipt `FTR-20260927-21964341-01`)
+**Date processed:** 2026-09-27 (`FTR-20260927-21964341-01`)
+**Discovery source:** an earlier single reading of the research layer (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — corridors of migrating neurons in the infant human brain
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** the research or analysis note(s) named by its receipt
+**Next action:** none — registered for identity; re-grade the transferability if a re-read finds WWOX measured
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20260927-21964341-01` ; manifest `deepdive_manifests/PMID21964341.json`; landing [[paper_registry_current#PAPER 534]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0807
+**Short title:** Semple 2013 — brain development in rodents and humans: maturation benchmarks across species
+**Authors:** Semple BD, Blomgren K, Gimlin K, Ferriero DM, Noble-Haeusslein LJ
+**Year:** 2013
+**Source type:** review
+**Journal/source:** *Prog Neurobiol* 2013;106-107:1-16
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 23583307 / PMC3737272 / DOI 10.1016/j.pneurobio.2013.04.001
+**Date discovered:** 2026-09-27 (first receipt `FTR-20260927-23583307-01`)
+**Date processed:** 2026-09-27 (`FTR-20260927-23583307-01`)
+**Discovery source:** an earlier single reading of the research layer (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — brain development in rodents and humans: maturation benchmarks across species
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** the research or analysis note(s) named by its receipt
+**Next action:** none — registered for identity; re-grade the transferability if a re-read finds WWOX measured
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20260927-23583307-01` ; manifest `deepdive_manifests/PMID23583307.json`; landing [[paper_registry_current#PAPER 535]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0808
+**Short title:** Nascimento 2024 — protracted neuronal recruitment in the temporal lobes of young children
+**Authors:** Nascimento MA, Biagiotti S, Herranz-Pérez V, Santiago S, Bueno R, Ye CJ, Abel TJ, Zhang Z, Rubio-Moll JS, Kriegstein AR, Yang Z, Garcia-Verdugo JM, … et al. (15 authors listed on PubMed)
+**Year:** 2024
+**Source type:** primary research — single-nucleus RNA sequencing of human tissue
+**Journal/source:** *Nature* 2024;626(8001):1056-1065
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 38122823 / PMC10901738 / DOI 10.1038/s41586-023-06981-x
+**Date discovered:** 2026-09-27 (first receipt `FTR-20260927-38122823-01`)
+**Date processed:** 2026-09-27 (`FTR-20260927-38122823-01`)
+**Discovery source:** an earlier single reading of the research layer (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — protracted neuronal recruitment in the temporal lobes of young children
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** the research or analysis note(s) named by its receipt
+**Next action:** none — registered for identity; re-grade the transferability if a re-read finds WWOX measured
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20260927-38122823-01` ; manifest `deepdive_manifests/PMID38122823.json`; landing [[paper_registry_current#PAPER 536]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0809
+**Short title:** Fu 2025 — multi-task learning of shared genetic risk for late-onset epilepsy and Alzheimer disease
+**Authors:** Fu M, Tran T, Pasaniuc B, Vossel K, Chang TS
+**Year:** 2025
+**Source type:** primary research — genetic association
+**Journal/source:** *Sci Rep* 2025;16(1):2517
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41390778 / PMC12820071 / DOI 10.1038/s41598-025-32329-8
+**Date discovered:** 2026-09-20 (first receipt `FTR-20260921-41390778-01`)
+**Date processed:** 2026-09-20 (`FTR-20260921-41390778-01`)
+**Discovery source:** an earlier single reading of the research layer (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — multi-task learning of shared genetic risk for late-onset epilepsy and Alzheimer disease
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** the research or analysis note(s) named by its receipt
+**Next action:** none — registered for identity; re-grade the transferability if a re-read finds WWOX measured
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20260921-41390778-01`; landing [[paper_registry_current#PAPER 537]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0810
+**Short title:** Hamilton 2011 — Alzheimer disease genes and cognitive ageing in the Lothian Birth Cohorts
+**Authors:** Hamilton G, Harris SE, Davies G, Liewald DC, Tenesa A, Starr JM, Porteous D, Deary IJ
+**Year:** 2011
+**Source type:** primary research — cohort genetic association
+**Journal/source:** *Int J Alzheimers Dis* 2011;2011:505984
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 21766012 / PMC3132531 / DOI 10.4061/2011/505984
+**Date discovered:** 2026-09-20 (first receipt `FTR-20260921-21766012-01`)
+**Date processed:** 2026-09-20 (`FTR-20260921-21766012-01`)
+**Discovery source:** an earlier single reading of the research layer (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — Alzheimer disease genes and cognitive ageing in the Lothian Birth Cohorts
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** the research or analysis note(s) named by its receipt
+**Next action:** none — registered for identity; re-grade the transferability if a re-read finds WWOX measured
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20260921-21766012-01`; landing [[paper_registry_current#PAPER 538]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0811
+**Short title:** Park 2020 — blood-based transcriptional risk scores and Alzheimer disease biomarkers
+**Authors:** Park YH, Hodges A, Simmons A, Lovestone S, Weiner MW, Kim S, Saykin AJ, Nho K, AddNeuroMed consortium and the Alzheimer's Disease Neuroimaging Initiative
+**Year:** 2020
+**Source type:** primary research — cohort transcriptomics
+**Journal/source:** *Neurol Genet* 2020;6(6):e517
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 33134515 / PMC7577551 / DOI 10.1212/NXG.0000000000000517
+**Date discovered:** 2026-09-21 (first receipt `FTR-20260921-33134515-01`)
+**Date processed:** 2026-09-21 (`FTR-20260921-33134515-01`)
+**Discovery source:** an earlier single reading of the research layer (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — blood-based transcriptional risk scores and Alzheimer disease biomarkers
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** the research or analysis note(s) named by its receipt
+**Next action:** none — registered for identity; re-grade the transferability if a re-read finds WWOX measured
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20260921-33134515-01`; landing [[paper_registry_current#PAPER 539]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0812
+**Short title:** Biar 2026 — integrated scaled approach to resolve TSC2 variants of uncertain significance
+**Authors:** Biar CG, Wang ZR, Camp ND, Holmes DL, Wheelock MK, Pendyala S, McGee AV, Gupta P, McEwen AE, Tejura M, Richardson ME, Weyandt JD, … et al. (25 authors listed on PubMed)
+**Year:** 2026
+**Source type:** primary research — variant effect mapping
+**Journal/source:** *Nat Commun* 2026;17(1)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42425971 / PMC13478581 / DOI 10.1038/s41467-026-75442-6
+**Date discovered:** 2026-09-21 (first receipt `FTR-20260921-42425971-01`)
+**Date processed:** 2026-09-21 (`FTR-20260921-42425971-01`)
+**Discovery source:** an earlier single reading of the research layer (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — integrated scaled approach to resolve TSC2 variants of uncertain significance
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** the research or analysis note(s) named by its receipt
+**Next action:** none — registered for identity; re-grade the transferability if a re-read finds WWOX measured
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20260921-42425971-01`; landing [[paper_registry_current#PAPER 540]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0813
+**Short title:** Voutsinos 2025 — a complete map of human cytosolic degrons and their relevance for disease
+**Authors:** Voutsinos V, Johansson KE, Larsen FB, Grønbæk-Thygesen M, Jonsson N, Holm-Olesen E, Tesei G, Stein A, Fowler DM, Lindorff-Larsen K, Hartmann-Petersen R
+**Year:** 2025
+**Source type:** preprint — degron mapping
+**Journal/source:** *bioRxiv* 2025
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40463067 / PMC12132302 / DOI 10.1101/2025.05.10.653233
+**Date discovered:** 2026-09-21 (first receipt `FTR-20260921-40463067-01`)
+**Date processed:** 2026-09-21 (`FTR-20260921-40463067-01`)
+**Discovery source:** an earlier single reading of the research layer (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — a complete map of human cytosolic degrons and their relevance for disease
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** the research or analysis note(s) named by its receipt
+**Next action:** none — registered for identity; re-grade the transferability if a re-read finds WWOX measured
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20260921-40463067-01`; landing [[paper_registry_current#PAPER 541]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0814
+**Short title:** Aragon-Ramirez 2026 — Golgi CATCHR complexes as hubs for vesicle tethering and fusion
+**Authors:** Aragon-Ramirez WS, Khakurel A, Pokrovskaya I, Sumya FT, Lupashin VV
+**Year:** 2026
+**Source type:** preprint
+**Journal/source:** *bioRxiv* 2026
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42523332 / PMC13405132 / DOI 10.64898/2026.06.16.732723
+**Date discovered:** 2026-09-21 (first receipt `FTR-20260921-42523332-01`)
+**Date processed:** 2026-09-21 (`FTR-20260921-42523332-01`)
+**Discovery source:** an earlier single reading of the research layer (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — Golgi CATCHR complexes as hubs for vesicle tethering and fusion
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** the research or analysis note(s) named by its receipt
+**Next action:** none — registered for identity; re-grade the transferability if a re-read finds WWOX measured
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20260921-42523332-01`; landing [[paper_registry_current#PAPER 542]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0815
+**Short title:** Schultz 2018 — mutant NPC1 degradation by selective ER autophagy and MARCH6-dependent ERAD
+**Authors:** Schultz ML, Krus KL, Kaushik S, Dang D, Chopra R, Qi L, Shakkottai VG, Cuervo AM, Lieberman AP
+**Year:** 2018
+**Source type:** primary research — patient fibroblasts
+**Journal/source:** *Nat Commun* 2018;9(1):3671
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 30202070 / PMC6131187 / DOI 10.1038/s41467-018-06115-2
+**Date discovered:** 2026-09-22 (first receipt `FTR-20260922-30202070-01`)
+**Date processed:** 2026-09-22 (`FTR-20260922-30202070-01`)
+**Discovery source:** an earlier single reading of the research layer (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — mutant NPC1 degradation by selective ER autophagy and MARCH6-dependent ERAD
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** the research or analysis note(s) named by its receipt
+**Next action:** none — registered for identity; re-grade the transferability if a re-read finds WWOX measured
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20260922-30202070-01`; landing [[paper_registry_current#PAPER 543]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0816
+**Short title:** Georgakilas 2014 — common fragile sites: structural domains or functional units under oncogenic stress
+**Authors:** Georgakilas AG, Tsantoulis P, Kotsinas A, Michalopoulos I, Townsend P, Gorgoulis VG
+**Year:** 2014
+**Source type:** review (book-length chapter)
+**Journal/source:** *Cell Mol Life Sci* 2014;71(23):4519-44
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 25238782 / PMC4232749 / DOI 10.1007/s00018-014-1717-x
+**Date discovered:** 2026-09-20 (first receipt `FTR-20260921-25238782-01`)
+**Date processed:** 2026-09-20 (`FTR-20260921-25238782-01`)
+**Discovery source:** an earlier single reading of the research layer (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — common fragile sites: structural domains or functional units under oncogenic stress
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** the research or analysis note(s) named by its receipt
+**Next action:** none — registered for identity; re-grade the transferability if a re-read finds WWOX measured
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20260921-25238782-01`; landing [[paper_registry_current#PAPER 544]]
+**Note:** class-level record. Not medical advice.
