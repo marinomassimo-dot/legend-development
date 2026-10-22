@@ -1,0 +1,476 @@
+{
+ "schema_version": 2,
+ "pmid": "42594875",
+ "doi": "10.1016/j.xcrm.2026.102989",
+ "receipt": "FTR-20261022-42594875-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/repurposing_r4c_scientist-d_20261022.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261022-SCIENTISTD-R4C-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named from wave-1 reading debts and deduplicated by the per-paper M0 packet and the receipt status check run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate and the analysis note; the discovery ledger is a shared single-writer file appended by the Orchestrator at integration."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A European and North American group of individualised-treatment investigators (Leiden, Boston, Tubingen, Colorado, Heidelberg, from the affiliations), several of whom lead the consortia the text cites; a consensus perspective of eight voters, not a data group; not a WWOX group. A PRECEDENT for N-of-1 eligibility and window reasoning. The supplement's voting record is weighed above the text's summary of consensus."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND antisense",
+    "count": 9,
+    "source": "PubMed ESearch rettype=count 2026-10-22"
+   },
+   {
+    "query": "individualized antisense AND neurodevelopmental",
+    "count": 57,
+    "source": "PubMed ESearch rettype=count 2026-10-22"
+   }
+  ],
+  "note": "PubMed counts, dated."
+ },
+ "multihop": {
+  "references_enumerated": 32,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "32 references enumerated from the JATS; none is WWOX-related (0 occurrences of WWOX counted)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42594875 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note; SUBSTITUTE rows carry no WWOX record by construction."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-22 via PubMed efetch for PMID 42594875: publication types ['Journal Article', 'Review']; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 32,
+   "references_screened": 29,
+   "references_with_doi": 29,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 1,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42594875_AartsmaRus2026_PMC13589468.xml",
+   "sha256": "505342c722a1eb8fde16af40356b17fecbada359dd0d2913e1f48d9593141a37",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC13589468 (CC BY-NC 4.0): perspective: Summary, one figure, 32 references; the consensus box is not in the JATS. Every text locator is matched against this surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13589468/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "505342c722a1eb8fde16af40356b17fecbada359dd0d2913e1f48d9593141a37"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42594875_r1/mmc1.pdf",
+   "sha256": "76d21450852902582262373eec3b37a9d173904f6a12c21e4b6851a3d3a933fa",
+   "kind": "supplement_binary",
+   "note": "Data S1 (5 pages, voting iterations and the evolution of the two consensus statements) from the Europe PMC supplementaryFiles container.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13589468/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "76d21450852902582262373eec3b37a9d173904f6a12c21e4b6851a3d3a933fa"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42594875_r1/mmc1.txt",
+   "sha256": "a640c0360211537057ef7215b3e189f27393d7aee00f977e112ba1af39eb12a3",
+   "kind": "supplement_text",
+   "note": "Text layer of Data S1 by pdftotext -layout.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftotext",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42594875_r1/mmc1.pdf",
+    "extractor": {
+     "name": "pdftotext",
+     "version": "24.02.0",
+     "call": "pdftotext -layout mmc1.pdf - | tr '\\f' '\\n' > mmc1.txt (page-separator form feeds replaced by newlines; no other change)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "a640c0360211537057ef7215b3e189f27393d7aee00f977e112ba1af39eb12a3"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42594875_r1/mmc2.pdf",
+   "sha256": "224201d2055358aa01865039c2203819517774bf4d5c48d4f5e4c7897e3f523f",
+   "kind": "supplement_binary",
+   "note": "Document S2 (12 pages: the article PDF plus Data S1), same container; its Data S1 text was compared with mmc1 and is identical.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13589468/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "224201d2055358aa01865039c2203819517774bf4d5c48d4f5e4c7897e3f523f"
+   }
+  },
+  {
+   "path": "files/figures/PMID42594875/gr1.webp",
+   "sha256": "0417c1261bee5b0663d5a8c166b9f279a86dbd0dcb9b2964319417259d1f4078",
+   "kind": "figure",
+   "note": "Figure 1 WEBP (schematic of steps to assess eligibility), same container.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13589468/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "0417c1261bee5b0663d5a8c166b9f279a86dbd0dcb9b2964319417259d1f4078"
+   }
+  },
+  {
+   "path": "files/figures/PMID42594875/gr1_view.png",
+   "sha256": "d2246b21d3033727cc44d29b4fe8fd54c72df93a1e18840203d18b7b57029aca",
+   "kind": "figure",
+   "note": "Figure 1 converted to PNG for viewing (ImageMagick convert), opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "ImageMagick convert",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/figures/PMID42594875/gr1.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "6.9.12",
+     "call": "convert gr1.webp gr1_view.png"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "d2246b21d3033727cc44d29b4fe8fd54c72df93a1e18840203d18b7b57029aca"
+   }
+  },
+  {
+   "path": "files/figures/PMID42594875/ga1.webp",
+   "sha256": "7197d0c698b160cd9d15a644a7f0ccbd3b0e19a95d1c5c081bc1d2c91a7cb0ad",
+   "kind": "figure",
+   "note": "Graphical abstract WEBP, same container.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13589468/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "7197d0c698b160cd9d15a644a7f0ccbd3b0e19a95d1c5c081bc1d2c91a7cb0ad"
+   }
+  },
+  {
+   "path": "files/figures/PMID42594875/ga1_view.png",
+   "sha256": "7a0e388ab6117f6138d966df51e923c49697fe63bacb57fcb897d11069fd043b",
+   "kind": "figure",
+   "note": "Graphical abstract converted to PNG for viewing, opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "ImageMagick convert",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/figures/PMID42594875/ga1.webp",
+    "extractor": {
+     "name": "ImageMagick convert",
+     "version": "6.9.12",
+     "call": "convert ga1.webp ga1_view.png"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "7a0e388ab6117f6138d966df51e923c49697fe63bacb57fcb897d11069fd043b"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE (consensus perspective on individualised antisense treatment in neurodevelopmental disease; precedent for N-of-1 design and eligibility). The statements come from a workshop of a rare-disease project's work package, with no new patient data.",
+    "snippet": "In a workshop organized by the n=few treatment work package (WP12) of the ERDERA project, consensus statements were conceived",
+    "anchor": "Introduction, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42594875_AartsmaRus2026_PMC13589468.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "consensus perspective (workshop of an EU rare-disease project, eight voters) on eligibility for individualised antisense oligonucleotide development in neurodevelopmental diseases; no new patient data; NOT a WWOX system",
+     "genotype": "class level (loss-of-function and gain-of-function variants in unnamed neurodevelopmental genes); no WWOX",
+     "endpoint": "eligibility criteria, therapeutic window, symptom versus disease modification"
+    }
+   },
+   {
+    "proposition": "The consensus was by a five-finger vote and voters were allowed to vote only when they felt they had the required expertise.",
+    "snippet": "Individuals were allowed to vote only when they felt they had the required background and expertise.",
+    "anchor": "Approach toward consensus statements",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42594875_AartsmaRus2026_PMC13589468.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "consensus perspective (workshop of an EU rare-disease project, eight voters) on eligibility for individualised antisense oligonucleotide development in neurodevelopmental diseases; no new patient data; NOT a WWOX system",
+     "genotype": "class level (loss-of-function and gain-of-function variants in unnamed neurodevelopmental genes); no WWOX",
+     "endpoint": "eligibility criteria, therapeutic window, symptom versus disease modification"
+    }
+   },
+   {
+    "proposition": "Statement 2 was voted by eight participants: two votes of 5, five of 4 and one of 3.",
+    "snippet": "Vote distribution: N = 8 participants voting; 2 × 5, 5 × 4, 1 × 3.",
+    "anchor": "Data S1, Statement 2",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID42594875_r1/mmc1.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "consensus perspective (workshop of an EU rare-disease project, eight voters) on eligibility for individualised antisense oligonucleotide development in neurodevelopmental diseases; no new patient data; NOT a WWOX system",
+     "genotype": "class level (loss-of-function and gain-of-function variants in unnamed neurodevelopmental genes); no WWOX",
+     "endpoint": "eligibility criteria, therapeutic window, symptom versus disease modification"
+    }
+   },
+   {
+    "proposition": "The first statement was softened during voting: 'definitive data' became 'evidence' and 'evidence-based estimate' became 'estimate', so the evidence standard stated for N-of-1 decisions was softened.",
+    "snippet": "The statement was softened and made more appropriate for N-of-1 decision-making.",
+    "anchor": "Data S1, Statement 1, Resolution",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID42594875_r1/mmc1.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "consensus perspective (workshop of an EU rare-disease project, eight voters) on eligibility for individualised antisense oligonucleotide development in neurodevelopmental diseases; no new patient data; NOT a WWOX system",
+     "genotype": "class level (loss-of-function and gain-of-function variants in unnamed neurodevelopmental genes); no WWOX",
+     "endpoint": "eligibility criteria, therapeutic window, symptom versus disease modification"
+    }
+   },
+   {
+    "proposition": "Statement 2 lists, as a consideration for whether a phenotype aspect may be modifiable, that responsiveness of the targeted symptom to symptomatic treatment suggests a dynamic and thus potentially modifiable nature.",
+    "snippet": "Responsiveness of the targeted symptom(s) to symptomatic treatment suggests a dynamic and thus potentially modifiable nature.",
+    "anchor": "Data S1, Statement 2, final statement",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID42594875_r1/mmc1.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "consensus perspective (workshop of an EU rare-disease project, eight voters) on eligibility for individualised antisense oligonucleotide development in neurodevelopmental diseases; no new patient data; NOT a WWOX system",
+     "genotype": "class level (loss-of-function and gain-of-function variants in unnamed neurodevelopmental genes); no WWOX",
+     "endpoint": "eligibility criteria, therapeutic window, symptom versus disease modification"
+    }
+   },
+   {
+    "proposition": "The authors say these aspects are based on current understanding and may change as evidence accumulates.",
+    "snippet": "These aspects are based on current understanding and knowledge and may change in the future with further accumulation of knowledge and evidence.",
+    "anchor": "Consensus statements, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42594875_AartsmaRus2026_PMC13589468.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "consensus perspective (workshop of an EU rare-disease project, eight voters) on eligibility for individualised antisense oligonucleotide development in neurodevelopmental diseases; no new patient data; NOT a WWOX system",
+     "genotype": "class level (loss-of-function and gain-of-function variants in unnamed neurodevelopmental genes); no WWOX",
+     "endpoint": "eligibility criteria, therapeutic window, symptom versus disease modification"
+    }
+   },
+   {
+    "proposition": "The text states that seizures return when ASO treatment is stopped and reads this as confirming that the effect is due to the ASO, so the effect described depends on continued treatment.",
+    "snippet": "However, when ASO treatment is stopped, seizures return, which confirms that this treatment effect is due to the effect of the ASOs on protein production.",
+    "anchor": "Evaluation of disease suitability, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42594875_AartsmaRus2026_PMC13589468.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "consensus perspective (workshop of an EU rare-disease project, eight voters) on eligibility for individualised antisense oligonucleotide development in neurodevelopmental diseases; no new patient data; NOT a WWOX system",
+     "genotype": "class level (loss-of-function and gain-of-function variants in unnamed neurodevelopmental genes); no WWOX",
+     "endpoint": "eligibility criteria, therapeutic window, symptom versus disease modification"
+    }
+   },
+   {
+    "proposition": "The text says it is unclear whether the developmental therapeutic window fully closes or differs by genetic aetiology.",
+    "snippet": "While there is evidence that there is some development-related therapeutic window for several neurodevelopmental diseases, it is presently unclear if that window fully closes and if the treatment window differs for different genetic etiologies.",
+    "anchor": "Evaluation of disease suitability, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42594875_AartsmaRus2026_PMC13589468.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "consensus perspective (workshop of an EU rare-disease project, eight voters) on eligibility for individualised antisense oligonucleotide development in neurodevelopmental diseases; no new patient data; NOT a WWOX system",
+     "genotype": "class level (loss-of-function and gain-of-function variants in unnamed neurodevelopmental genes); no WWOX",
+     "endpoint": "eligibility criteria, therapeutic window, symptom versus disease modification"
+    }
+   },
+   {
+    "proposition": "In the Angelman mouse reinstatement study, behavioural deficits were restored only when expression was activated at conception, while motor deficits were also restored at newborn and juvenile ages, so the window differs by symptom within one disease.",
+    "snippet": "When Ube3a expression was activated at conception, motor function, behavioral deficits, and anxiety were restored. However, when gene expression was activated in newborn (0 days old) or juvenile mice (3 weeks of age), only the motor deficits were restored.",
+    "anchor": "Case for individualized ASO development, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42594875_AartsmaRus2026_PMC13589468.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "consensus perspective (workshop of an EU rare-disease project, eight voters) on eligibility for individualised antisense oligonucleotide development in neurodevelopmental diseases; no new patient data; NOT a WWOX system",
+     "genotype": "class level (loss-of-function and gain-of-function variants in unnamed neurodevelopmental genes); no WWOX",
+     "endpoint": "eligibility criteria, therapeutic window, symptom versus disease modification"
+    }
+   },
+   {
+    "proposition": "For the Dravet antisense, the mouse window was lost between postnatal day 2 and 14, while in humans it persisted into adolescence, which the authors call preliminary.",
+    "snippet": "Notably, while preliminary, these findings suggest that the treatment window, which appeared to be lost between day 2 and day 14 in mice, persisted into adolescence in humans.",
+    "anchor": "Case for individualized ASO development, paragraph 7",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42594875_AartsmaRus2026_PMC13589468.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "consensus perspective (workshop of an EU rare-disease project, eight voters) on eligibility for individualised antisense oligonucleotide development in neurodevelopmental diseases; no new patient data; NOT a WWOX system",
+     "genotype": "class level (loss-of-function and gain-of-function variants in unnamed neurodevelopmental genes); no WWOX",
+     "endpoint": "eligibility criteria, therapeutic window, symptom versus disease modification"
+    }
+   },
+   {
+    "proposition": "Individualised antisense development usually takes one to three years, and clinical benefit must still be expected when the drug is available.",
+    "snippet": "development of these ASOs takes time (usually 1–3 years), and clinical benefit from the treatment should still be expected at the time when the ASO is available.",
+    "anchor": "Introduction, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42594875_AartsmaRus2026_PMC13589468.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "consensus perspective (workshop of an EU rare-disease project, eight voters) on eligibility for individualised antisense oligonucleotide development in neurodevelopmental diseases; no new patient data; NOT a WWOX system",
+     "genotype": "class level (loss-of-function and gain-of-function variants in unnamed neurodevelopmental genes); no WWOX",
+     "endpoint": "eligibility criteria, therapeutic window, symptom versus disease modification"
+    }
+   },
+   {
+    "proposition": "By November 2025 the FDA had reviewed 49 n-of-1 investigational new drug applications covering 35 unique antisense oligonucleotides for 82 patients.",
+    "snippet": "To date, the FDA has reviewed 49 n-of-1 investigational new drug (IND) applications, encompassing 35 unique ASOs, for the intended treatment of 82 patients (CDER, November 2025).",
+    "anchor": "Introduction, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42594875_AartsmaRus2026_PMC13589468.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "consensus perspective (workshop of an EU rare-disease project, eight voters) on eligibility for individualised antisense oligonucleotide development in neurodevelopmental diseases; no new patient data; NOT a WWOX system",
+     "genotype": "class level (loss-of-function and gain-of-function variants in unnamed neurodevelopmental genes); no WWOX",
+     "endpoint": "eligibility criteria, therapeutic window, symptom versus disease modification"
+    }
+   },
+   {
+    "proposition": "Eligibility is limited to patients without an available treatment or those in whom treatments have failed (Scenario 1).",
+    "snippet": "only patients without an available treatment or those in which treatments have failed should be considered for individualized ASO development.",
+    "anchor": "Scenario 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42594875_AartsmaRus2026_PMC13589468.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "consensus perspective (workshop of an EU rare-disease project, eight voters) on eligibility for individualised antisense oligonucleotide development in neurodevelopmental diseases; no new patient data; NOT a WWOX system",
+     "genotype": "class level (loss-of-function and gain-of-function variants in unnamed neurodevelopmental genes); no WWOX",
+     "endpoint": "eligibility criteria, therapeutic window, symptom versus disease modification"
+    }
+   },
+   {
+    "proposition": "A knockdown antisense is not an option for loss-of-function variants and might even exacerbate symptoms, so mechanism (gain or loss of function) decides eligibility.",
+    "snippet": "while they are not a therapeutic option and might even exacerbate symptoms caused by loss-of-function variants.",
+    "anchor": "Scenario 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42594875_AartsmaRus2026_PMC13589468.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "consensus perspective (workshop of an EU rare-disease project, eight voters) on eligibility for individualised antisense oligonucleotide development in neurodevelopmental diseases; no new patient data; NOT a WWOX system",
+     "genotype": "class level (loss-of-function and gain-of-function variants in unnamed neurodevelopmental genes); no WWOX",
+     "endpoint": "eligibility criteria, therapeutic window, symptom versus disease modification"
+    }
+   },
+   {
+    "proposition": "For structural malformation such as lissencephaly, the authors state postnatal treatment would not reverse the cortical architecture set early in development.",
+    "snippet": "Postnatal treatment would not be able to reverse the cortical architecture established early in embryonic development.",
+    "anchor": "Scenario 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42594875_AartsmaRus2026_PMC13589468.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "consensus perspective (workshop of an EU rare-disease project, eight voters) on eligibility for individualised antisense oligonucleotide development in neurodevelopmental diseases; no new patient data; NOT a WWOX system",
+     "genotype": "class level (loss-of-function and gain-of-function variants in unnamed neurodevelopmental genes); no WWOX",
+     "endpoint": "eligibility criteria, therapeutic window, symptom versus disease modification"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 1: a five-box flow (variant-level, disease-level, patient-level assessment, multidisciplinary decision and evidence integration, iterative re-evaluation and data sharing) in which the disease-level box lists 'Discuss expected scope of benefit (symptom vs disease modification)'; a schematic with no data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 disease-level box reads 'Discuss expected scope of benefit (symptom vs disease modification)' and 'Evidence for therapeutic window'.",
+    "anchor": "Figure 1, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42594875/gr1_view.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "consensus perspective (workshop of an EU rare-disease project, eight voters) on eligibility for individualised antisense oligonucleotide development in neurodevelopmental diseases; no new patient data; NOT a WWOX system",
+     "genotype": "class level (loss-of-function and gain-of-function variants in unnamed neurodevelopmental genes); no WWOX",
+     "endpoint": "eligibility criteria, therapeutic window, symptom versus disease modification"
+    }
+   },
+   {
+    "proposition": "PANEL READING, graphical abstract: general criteria (variant ASO eligible, disease with brain or eye tissue and unmet need, individual, rarity under 30 patients worldwide) and neurodevelopmental-specific criteria (pathomechanism understood, therapeutic window) leading to 'More uncertainty'.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] The graphical abstract reads 'Rarity <30 worldwide', 'Pathomechanism Understood?', 'Therapeutic window Timing of treatment vs expected benefit' and 'More uncertainty'.",
+    "anchor": "Graphical abstract, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42594875/ga1_view.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "consensus perspective (workshop of an EU rare-disease project, eight voters) on eligibility for individualised antisense oligonucleotide development in neurodevelopmental diseases; no new patient data; NOT a WWOX system",
+     "genotype": "class level (loss-of-function and gain-of-function variants in unnamed neurodevelopmental genes); no WWOX",
+     "endpoint": "eligibility criteria, therapeutic window, symptom versus disease modification"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML for PMC13589468 returned HTTP 200 on 2026-10-22 (open access, CC BY-NC); the supplementaryFiles zip carried Data S1, Document S2 and the figures.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

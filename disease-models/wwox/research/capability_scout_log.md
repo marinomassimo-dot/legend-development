@@ -1265,3 +1265,17 @@ typed slots for the remaining P4 fields with the same UNKNOWN-not-absent rule; a
 assertions keyed by endpoint. Cost: hours. **Cost / API / privacy risk:** none.
 
 **Update 2026-10-22 (same entry):** the measured-null and `translation` gaps were closed by Harness commit `b96e4cd9` before the cards landed (NO_CHANGE direction; translation fields reachable; two roadmap rows validated); the cards were rebuilt. Still open: one `disease_assertion` per packet (G-2), and typed slots for the other roadmap P4 fields.
+
+---
+
+## 2026-10-22 · scientist-d · R4c (repurposing group R4 follow-up lot)
+
+**Gap (with evidence).** `docx_to_text.py` lists embedded images as "not read as text", but a supplementary Word file whose figures are EMF could not be opened at all: no ImageMagick delegate, no LibreOffice or Inkscape on the host, PyMuPDF does not read EMF. The three Figure S1 panels of PMID 42446932 were owed for a day for that reason alone; they carry one uncompressed EMF+ bitmap each.
+
+**CHANGE (proportional micro-upgrade, shipped).** `framework/scripts/docx_media_extract.py` writes every `word/media/` file unchanged and decodes an EMF+ bitmap (24bppRGB, 32bppRGB, 32bppARGB, 32bppPARGB) to PNG with the standard library; vector EMF, compressed bitmaps and other pixel formats are reported "not decoded", and transparent areas of a decoded bitmap come out black (said in the output). Offline suite `test_docx_media_extract.py` (4 tests: unchanged media, decode, pixel order, refusals), enrolled in the release battery and routed in `framework/scripts/README.md`; run on the real file it reproduces the three 844 x 595 images read by hand.
+
+**Named, not built.** A converter for WEBP and TIFF figures (ImageMagick `convert` handles WEBP here; TIFF went through PyMuPDF in wave 2) and a manifest-spec builder that writes the derived-artefact recipe from the extractor's own output; both are scratch code in every Scientist's session.
+
+**Cost / API / privacy risk:** none; no keyed API, no unlawful source.
+
+**Next surgical micro-step:** none required.

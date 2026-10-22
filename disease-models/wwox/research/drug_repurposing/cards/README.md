@@ -33,7 +33,7 @@ dimensions that this set does not make.
 | `P4-C-01` | C · restoration of WWOX expression | AAV9-delivered human WWOX | hypothesis | OPPOSES_DISEASE_CHANGE (inside the Wwox-null mouse, one endpoint) | `e9948aa8dc70bf3c450e47f633674da42191f0efdc2313bae76433da62316a3c` |
 | `P4-C-02` | C | Splice-correcting ASO / editing | abstention | UNRESOLVED | `a317cfa159e006c7364a841c755d628d21d47512539627809eb70eece28883c8` |
 | `P4-C-03` | C | Endogenous boost (CRISPRa or equivalent) | abstention | UNRESOLVED | `590778e336c1fa7916033cbd7c318846c8b7e09d0388cfde0b3aeb64b6817e1e` |
-| `P4-D-01` | D · downstream pathway (Wnt/MYC) | A51, a multi-kinase inhibitor; BLOCK-1 open | controversial | UNRESOLVED (one assertion opposes, one is not comparable) | `5978fe7b62a9ab3ddc85d17df967f6c44e10eedf2c8e6aa92c1c158b3c64f053` |
+| `P4-D-01` | D · downstream pathway (Wnt/MYC) | A51, a multi-kinase inhibitor; BLOCK-1 open | controversial | UNRESOLVED (one assertion opposes, one is not comparable) | `309bdb13c11de85bfed3d8654750001949e20178f62857c7d1aac4071447c87b` |
 | `P4-D-02` | D | Wnt-lowering (tankyrase-type) agents and GSK3 modulation | abstention | UNRESOLVED | `870d6aabd0537095f1b1ca658ab4c5351dbf37210f33164e7e3a0ce4a88409ba` |
 
 `UNRESOLVED` on almost every card is the honest result and not a defect: **no drug assertion

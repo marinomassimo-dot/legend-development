@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261022-42446932-02",
+  "study_id": {
+    "pmid": "42446932",
+    "doi": "10.1002/epi.70374"
+  },
+  "analysis_at": "2026-10-22T04:06:00Z",
+  "analysis_time_precision": "minute",
+  "workflow": "scientist-d, task R4c-D-20261022, resume of the partial receipt FTR-20261021-42446932-01 (owed: the three Figure S1 images). Route: the supplementary docx already on disk; its text (Table S1 and the Figure S1 legend) read in full; the three embedded EMF images could not be rendered by the tools present, so the single embedded uncompressed bitmap of each was decoded with a short standard-library script and opened as an image (transparent areas render black). Locators appended; nothing in the prior manifest was changed.",
+  "evidence_depth": "complete_fulltext_read",
+  "source_locator": "files/fulltext/PMID42446932_McKee2026_PMC.xml",
+  "source_fingerprint": "f1bbfd41e7f755bf8b21010caf125e78b66a1304b8e6828d422926a644d9abe0",
+  "source_kind": "fulltext_local",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "read",
+    "methods": "read",
+    "results": "read",
+    "figures": "read",
+    "tables": "read",
+    "discussion": "read",
+    "limitations": "read",
+    "supplementary": "read"
+  },
+  "outputs": [
+    "disease-models/wwox/research/deepdive_manifests/PMID42446932.json"
+  ],
+  "evidence_basis": [
+    "coverage_map",
+    "manifest",
+    "supplementary Table S1 and legend read and all three Figure S1 images opened"
+  ],
+  "prior_receipt": "FTR-20261021-42446932-01",
+  "reread_reason": "inadequate_prior_coverage",
+  "event_at": "2026-10-22T04:06:00Z"
+}

@@ -3,7 +3,7 @@
  "pmid": "38015929",
  "doi": "10.1093/brain/awad287",
  "pmcid": "PMC10689925",
- "receipt": "FTR-20261021-38015929-01",
+ "receipt": "FTR-20261022-38015929-02",
  "context_policy": "QUESTION_DRIVEN",
  "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
  "landing": [
@@ -277,6 +277,166 @@
      "call": "pdftotext -layout <pdf> - | tr '\\\\f' '\\\\n' > <txt> (page-separator form feeds replaced by newlines; no other change)"
     }
    }
+  },
+  {
+   "path": "files/page_renders/PMID38015929/suppimg-007.png",
+   "sha256": "265328045bb6357ecfb4a9ab871779e1da5520ba4360fb529755ca0ada8a3b86",
+   "kind": "figure",
+   "note": "Supplementary PDF image 007 (virtual clinical trial schematic), opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdfimages extraction",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID38015929_r2/awad287_supplementary_data.pdf",
+    "extractor": {
+     "name": "pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -png <pdf> i (image 007 of the supplementary PDF, copied unchanged)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "265328045bb6357ecfb4a9ab871779e1da5520ba4360fb529755ca0ada8a3b86"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID38015929/suppimg-011.png",
+   "sha256": "d639d7f6af266049a1c87a2c456886e9172be2c59bfc72c16bb4be877b60209a",
+   "kind": "figure",
+   "note": "Supplementary PDF image 011 (Supplementary Figure 3, grouped recurrent variants, -log10 p by age), opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdfimages extraction",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID38015929_r2/awad287_supplementary_data.pdf",
+    "extractor": {
+     "name": "pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -png <pdf> i (image 011 of the supplementary PDF, copied unchanged)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "d639d7f6af266049a1c87a2c456886e9172be2c59bfc72c16bb4be877b60209a"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID38015929/suppimg-016.png",
+   "sha256": "fc99d4331c91a4eb10e4cbbb94758c6532db76b84c2264c76afbbe72a0af05d7",
+   "kind": "figure",
+   "note": "Supplementary PDF image 016 (Supplementary Figure 4, PDMS-2 age equivalent versus age), opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdfimages extraction",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID38015929_r2/awad287_supplementary_data.pdf",
+    "extractor": {
+     "name": "pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -png <pdf> i (image 016 of the supplementary PDF, copied unchanged)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "fc99d4331c91a4eb10e4cbbb94758c6532db76b84c2264c76afbbe72a0af05d7"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID38015929/suppimg-017.png",
+   "sha256": "3776c490c3e79bdea26cb88830a17d2b80f17a974fd57253234e4daff6c77fcf",
+   "kind": "figure",
+   "note": "Supplementary PDF image 017 (Supplementary Figure 5, odds ratios for not achieving milestones by onset subgroup), opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdfimages extraction",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID38015929_r2/awad287_supplementary_data.pdf",
+    "extractor": {
+     "name": "pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -png <pdf> i (image 017 of the supplementary PDF, copied unchanged)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "3776c490c3e79bdea26cb88830a17d2b80f17a974fd57253234e4daff6c77fcf"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID38015929/suppimg-018.png",
+   "sha256": "bd45db86a9f89192488f5fb82fb60c9629840f92833ac4d5f5ade1eacf6eb231",
+   "kind": "figure",
+   "note": "Supplementary PDF image 018 (Supplementary Figure 6 upper, GMFM score by epilepsy status), opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdfimages extraction",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID38015929_r2/awad287_supplementary_data.pdf",
+    "extractor": {
+     "name": "pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -png <pdf> i (image 018 of the supplementary PDF, copied unchanged)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "bd45db86a9f89192488f5fb82fb60c9629840f92833ac4d5f5ade1eacf6eb231"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID38015929/suppimg-019.png",
+   "sha256": "8696c160116616928a083300f129dc2917ec5b1b225a22be32696264334541cf",
+   "kind": "figure",
+   "note": "Supplementary PDF image 019 (Supplementary Figure 6 lower, GMFM score by spasms status), opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdfimages extraction",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID38015929_r2/awad287_supplementary_data.pdf",
+    "extractor": {
+     "name": "pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -png <pdf> i (image 019 of the supplementary PDF, copied unchanged)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "8696c160116616928a083300f129dc2917ec5b1b225a22be32696264334541cf"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID38015929/suppimg-020.png",
+   "sha256": "de05c434712403d99de8e7f09a0c57699988f71136ba69bb8e9c84d4d878b156",
+   "kind": "figure",
+   "note": "Supplementary PDF image 020 (Supplementary Figure 7 panel A1), opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdfimages extraction",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID38015929_r2/awad287_supplementary_data.pdf",
+    "extractor": {
+     "name": "pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -png <pdf> i (image 020 of the supplementary PDF, copied unchanged)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "de05c434712403d99de8e7f09a0c57699988f71136ba69bb8e9c84d4d878b156"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID38015929/suppimg-021.png",
+   "sha256": "1e55262feabab2bba3211e66923aef650cb28f7def40466ed03701ccffd789ab",
+   "kind": "figure",
+   "note": "Supplementary PDF image 021 (Supplementary Figure 7 panels A2, A3 on a combined page image; the page image 022 pair), opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdfimages extraction",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID38015929_r2/awad287_supplementary_data.pdf",
+    "extractor": {
+     "name": "pdfimages",
+     "version": "24.02.0",
+     "call": "pdfimages -png <pdf> i (image 021 of the supplementary PDF, copied unchanged)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "1e55262feabab2bba3211e66923aef650cb28f7def40466ed03701ccffd789ab"
+   }
   }
  ],
  "verbatim_locators": {
@@ -497,6 +657,138 @@
     "surface": "figure",
     "artifact": "files/page_renders/PMID38015929/p7img-000.png",
     "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE (STXBP1). Supplementary Table 1 prints the in-frame indel share as 0.03 percent of 104 and 0.02 percent of 58, which are 2.9 and 1.7 percent by the printed counts (3 and 1); the other percentages in the table follow the counts.",
+    "snippet": "In-frame indels 3 (0.03%) 1 (0.02%)",
+    "anchor": "Supplementary Table 1, genetic spectrum",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID38015929_r2/awad287_supplementary_data.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table 1 prints the registry's age IQR upper bound as 101 years while the range printed for the same registry ends at 34.7 years.",
+    "snippet": "IQR 2.6 – 12.8 years IQR 3.1 – 101 years",
+    "anchor": "Supplementary Table 1, age distribution",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID38015929_r2/awad287_supplementary_data.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The onset-versus-rolling-over association in Supplementary Table 2 (P = 0.02) rests on 8 individuals who did not achieve the milestone, as the table's own footnote says.",
+    "snippet": "Only 8 of 69 individuals did not achieve the milestone of rolling over, limiting interpretation of correlation.",
+    "anchor": "Supplementary Table 2, footnote c",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID38015929_r2/awad287_supplementary_data.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The single decision tree for unpredictable seizures has seven leaves holding 55, 2, 7, 16, 9, 9 and 2 percent of individuals; the two 2 percent leaves (leaf 2, probability 1.00, and leaf 7, probability 0.00) would be about one or two people if the tree used the 78 individuals of the forecasting analysis, a denominator the supplement does not state for the tree (inference).",
+    "snippet": "Percent of all individuals 55% 2% 7% 16% 9% 9% 2%",
+    "anchor": "Supplementary Table 3, last row",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID38015929_r2/awad287_supplementary_data.txt",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38015929.json",
+     "entry": 30,
+     "what_changed": "Proposition said the 1.00 and 0.00 leaf probabilities rest on one or two people; only the two 2 percent leaves do, and the 78-person denominator is stated for the forecasting analysis, not the tree. Reworded as inference.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R4c_20261022.md",
+      "triple": 30,
+      "note": "narrowed as the auditor advised; the narrowing itself is unaudited"
+     }
+    }
+   },
+   {
+    "proposition": "The supplementary methods state 1,000 simulated trials per month; the supplementary schematic of the same procedure labels the step 'Run trial 100 times with sampling'.",
+    "snippet": "We ran 1,000 simulated trials for each month across the age span",
+    "anchor": "Supplementary methods, virtual clinical trials",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID38015929_r2/awad287_supplementary_data.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The supplementary methods state the virtual trials sample 20 individuals with ongoing seizures and simulate seizure reductions of 10, 15 and 20 percent over 6 or 12 months, with significance by a rank-sum test against the same individuals' observed natural history.",
+    "snippet": "randomly sampling 20 individuals with ongoing seizures and simulated a 6-month and 12-month period of 10%, 15%, and 20% seizure reduction.",
+    "anchor": "Supplementary methods, virtual clinical trials",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID38015929_r2/awad287_supplementary_data.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, supplementary virtual-trial schematic (image 007): the schematic box reads 'Run trial 100 times with sampling' beside a sliding-window plot over 36 months, whereas the methods text says 1,000 simulated trials; the example trial is 6 months with 20 percent reduction.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Image 007 reads 'Run trial 100 times with sampling' and 'Example virtual trial: Trial duration of 6 months, Targeted seizure reduction of 20%' over a 36-month plot of seizures in 67 individuals.",
+    "anchor": "Supplementary virtual-trial schematic, read as an image",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID38015929/suppimg-007.png",
+    "panel_text_relation": "panel_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38015929.json",
+     "entry": 33,
+     "what_changed": "Proposition named a plot of 67 individuals; the schematic image names no number of individuals. Words \"of 67 individuals\" deleted.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "NOT_IN_SOURCE"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R4c_20261022.md",
+      "triple": 33,
+      "note": "narrowed as the auditor advised; the narrowing itself is unaudited"
+     }
+    }
+   },
+   {
+    "proposition": "PANEL READING, Supplementary Figure 3 grouped hotspot panel (image 011): the legend text says the grouped association was 'less robust with only an increase in tonic seizures between 7 and 8 months'; the panel's focal-onset trace also rises above the dashed significance line near 2.8 years and between about 3.8 and 4.2 years, and the all-seizure trace reaches the line near 1.2 years (approximate readings; no confidence band).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Image 011 titled 'Recurrent variants: p.Arg406[xxx], p.Arg292[xxx], p.Arg551[xxx]': the green tonic trace peaks near 2.7 at about 0.7 years; the blue focal-onset trace exceeds the dashed line near 2.8 and between about 3.8 and 4.2 years.",
+    "anchor": "Supplementary Figure 3, grouped panel, read as an image",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID38015929/suppimg-011.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "PANEL READING, Supplementary Figure 4 (image 016): PDMS-2 grasping and visual-motor-integration age equivalents plotted against age lie almost all below the identity line (one grasping point sits near it), and no value in the panel exceeds about 2.9 years of age equivalent.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Image 016: age equivalent (years) against age (years) with an identity line; all points below it except one grasping point near 2.75 years.",
+    "anchor": "Supplementary Figure 4, read as an image",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID38015929/suppimg-016.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "PANEL READING, Supplementary Figure 5 (image 017): odds ratios for not achieving each milestone in the neonatal, under-6-month and under-12-month onset groups are drawn on a log axis with several intervals running off the right edge (rolling over in all three groups; grasping in the under-12-month group), so those intervals are clipped, and the head-control odds ratio sits near or below 1 in the neonatal group.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Image 017: black roll-over markers at the right axis edge in all three groups; the orange grasp marker at the edge in the Onset < 12 months group; the red head-posture marker left of 1.0 in the neonatal group.",
+    "anchor": "Supplementary Figure 5, read as an image",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID38015929/suppimg-017.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "PANEL READING, Supplementary Figure 6 (images 018 and 019): GMFM raw scores against age for individuals with epilepsy (many) and without epilepsy (about a dozen points, mostly under 8 years), and a second panel splitting epileptic spasms from other seizure types; densities are drawn at the side, no test statistic or p-value is printed on either panel, and the legend only names the Wilcoxon test.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Images 018 and 019: GMFM score (%) against age 0-25 years; grey 'No epilepsy' points mostly under 8 years; side densities; no p-value text on the panels.",
+    "anchor": "Supplementary Figure 6, read as images",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID38015929/suppimg-018.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "PANEL READING, Supplementary Figure 7 (images 020 and 021): odds ratios of treatment response by syndrome are above 1 for early-onset epileptic encephalopathy and West syndrome and below 1 for the developmental and epileptic encephalopathy group and Lennox-Gastaut syndrome in all three analyses (A1 reducing frequency, A2 reducing or maintaining freedom, A3 maintaining freedom); the Lennox-Gastaut interval is clipped at the left edge in A1, and the reference group of the odds ratios is not named in the legend.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Images 020 and 021: A1, A2 and A3 dot plots with EOEE and WS right of 1.0 and DEE and LGS left of 1.0; the LGS marker at the left axis edge in A1.",
+    "anchor": "Supplementary Figure 7, read as images",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID38015929/suppimg-020.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The legend of Supplementary Figure 7 says the odds ratios indicate relative effectiveness of any anti-seizure medication or treatment strategy but names no comparison group.",
+    "snippet": "Odds ratios indicate the relative effectiveness of any anti-seizure medications (ASM) or treatment strategy in reducing seizure frequency and/or maintaining seizure freedom.",
+    "anchor": "Supplementary Figure 7 legend",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID38015929_r2/awad287_supplementary_data.txt",
+    "panel_text_relation": "text_only"
    }
   ],
   "source_fulltext_indexed": true,
