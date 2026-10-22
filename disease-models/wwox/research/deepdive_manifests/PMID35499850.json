@@ -220,12 +220,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Responders (50 percent or more): 22 of 87 on the higher dose and 9 of 87 on placebo; at the 25 percent level, 29 of 87 (33 percent) improved on placebo.",
+    "proposition": "Maintenance-period sentence: at the 25 percent or greater responder level, 46 of 87 patients (54 percent) on the higher dose, 41 of 89 (47 percent) on the lower dose and 29 of 87 (33 percent) on placebo achieved a reduction in drop seizure frequency; this sentence follows the maintenance-period 50-percent results and is not the titration-plus-maintenance figure (the next entry).",
     "snippet": "At the 25% or greater responder level, 46 of 87 patients (54%) in the 0.7-mg/kg/d fenfluramine group (P = .009), 41 of 89 patients (47%) in the 0.2-mg/kg/d fenfluramine group (P = .10), and 29 of 87 (33%) in the placebo group achieved reduction in drop seizure frequency.",
     "anchor": "Results, Key secondary outcomes",
     "surface": "body",
     "artifact": "files/fulltext/PMID35499850_Knupp2022_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35499850.json",
+     "entry": 7,
+     "what_changed": "Proposition narrowed after the blind audit (OVERSHOOT). Was: Responders (50 percent or more): 22 of 87 on the higher dose and 9 of 87 on placebo; at the 25 percent level, 29 of 87 (33 percent) improved on placebo. The original mixed periods: it gave the 50-percent figures of the titration-plus-maintenance period (22 of 87, 9 of 87) beside the maintenance-period 25-percent placebo figure (29 of 87). The quoted snippet, anchor and artefact are unchanged unless stated.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind audit of triples against the sources; persisted in disease-models/wwox/research/page_adjudications/locator_audit_R4b_R2b_20261022.md (commit ae343793). The repair itself is unaudited (blind audit OWED)."
+     }
+    }
    },
    {
     "proposition": "Global impression: a clinically meaningful (much or very much) rating was given to 26 percent of the higher-dose group and 6 percent of placebo by investigators, 34 and 5 percent by caregivers; the any-improvement threshold separated the groups much less (49 versus 34 percent by investigators, P .06).",
@@ -290,6 +302,22 @@
     "surface": "figure",
     "artifact": "files/figures/PMID35499850_r2/jamaneurol-e220829-g001.jpg",
     "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Titration-plus-maintenance period: 50-percent or greater responders were 22 of 87 (25 percent) on the higher dose and 9 of 87 (10 percent) on placebo; at the 25 percent level the placebo group had 27 of 87 (31 percent) in that period.",
+    "snippet": "A greater proportion of patients in the 0.7-mg/kg/d fenfluramine group (22 of 87 [25%]; P = .02) and the 0.2-mg/kg/d fenfluramine group (25 of 89 [28%]; P = .005) experienced a 50% or greater reduction in drop seizure frequency compared with patients in the placebo group (9 of 87 [10%])",
+    "anchor": "Results, Key secondary outcomes",
+    "surface": "body",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID35499850_Knupp2022_PMC.xml"
+   },
+   {
+    "proposition": "The titration-plus-maintenance 25-percent responder placebo figure is 27 of 87 (31 percent), against 29 of 87 (33 percent) in the maintenance-only sentence.",
+    "snippet": "More patients in the active treatment groups achieved a 25% or greater reduction in drop seizures compared with placebo (27 of 87 [31%]) during the titration and maintenance period.",
+    "anchor": "Results, Key secondary outcomes",
+    "surface": "body",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID35499850_Knupp2022_PMC.xml"
    }
   ],
   "source_fulltext_indexed": true,

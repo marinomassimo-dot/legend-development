@@ -284,12 +284,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The sponsor frames the trial as evidence for a reimbursement decision, linking the design choice to a regulator-like requirement for objective measurements.",
-    "snippet": "as a requirement of the Dutch government for objective measurements",
+    "proposition": "The authors give a requirement of the Dutch government for objective measurements as part of their reason for restricting inclusion to patients with Hunner lesions; it is the reason for the inclusion restriction, not for the N-of-1 design choice, and the passage carries no reimbursement framing.",
+    "snippet": "in collusion, and as a requirement of the Dutch government for objective measurements, we decided to only include patients with BPS/IC with Hunner lesions",
     "anchor": "Considerations methodology",
     "surface": "body",
     "artifact": "files/fulltext/PMID37045569_vanGinkel2023_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID37045569.json",
+     "entry": 15,
+     "what_changed": "Proposition narrowed after the blind audit (OVERSHOOT). Was: The sponsor frames the trial as evidence for a reimbursement decision, linking the design choice to a regulator-like requirement for objective measurements. The original said the sponsor frames the trial as evidence for a reimbursement decision and linked the requirement to the design choice; the source links it to restricting inclusion to Hunner-lesion patients. The quoted snippet, anchor and artefact are unchanged unless stated. The snippet is extended to the surrounding clause so that it carries the inclusion restriction.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind audit of triples against the sources; persisted in disease-models/wwox/research/page_adjudications/locator_audit_R4b_R2b_20261022.md (commit ae343793). The repair itself is unaudited (blind audit OWED)."
+     }
+    }
    }
   ],
   "source_fulltext_indexed": true,

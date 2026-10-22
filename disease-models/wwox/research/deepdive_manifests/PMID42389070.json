@@ -176,12 +176,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "CDKL5 deficiency disorder: a six-patient open-label series and a phase 3 trial reported only as a company-level result, which the authors say must be interpreted cautiously until full peer review.",
+    "proposition": "CDKL5 deficiency disorder: the review gives a six-patient open-label series and a phase 3 trial, and says the phase 3 results should be interpreted cautiously until full peer-reviewed publication and regulatory evaluation are complete (this entry quotes only that caution; the next entry quotes what the review says the trial found).",
     "snippet": "however, these results should be interpreted cautiously until full peer-reviewed publication and regulatory evaluation are complete",
     "anchor": "CDKL5 deficiency disorder section",
     "surface": "body",
     "artifact": "files/fulltext/PMID42389070_Janszky2026_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42389070.json",
+     "entry": 5,
+     "what_changed": "Proposition narrowed after the blind audit (OVERSHOOT). Was: CDKL5 deficiency disorder: a six-patient open-label series and a phase 3 trial reported only as a company-level result, which the authors say must be interpreted cautiously until full peer review. The original added 'reported only as a company-level result', which is not in the source: the review cites the trial to a conference abstract and states a statistically significant reduction against placebo. The quoted snippet, anchor and artefact are unchanged unless stated.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind audit of triples against the sources; persisted in disease-models/wwox/research/page_adjudications/locator_audit_R4b_R2b_20261022.md (commit ae343793). The repair itself is unaudited (blind audit OWED)."
+     }
+    }
    },
    {
     "proposition": "Sunflower syndrome observations are uncontrolled and short, with expectation bias named as a limitation.",
@@ -262,6 +274,14 @@
     "surface": "body",
     "artifact": "files/fulltext/PMID42389070_Janszky2026_PMC.xml",
     "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review states that the phase 3 CDKL5 trial reported statistically significant reductions in countable motor seizure frequency against placebo, citing a conference abstract (reference 23) alongside an earlier open-label report; no peer-reviewed report of the trial is cited.",
+    "snippet": "the phase 3 GEMZ trial in CDD reported statistically significant reductions in countable motor seizure frequency",
+    "anchor": "CDKL5 deficiency disorder section",
+    "surface": "body",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID42389070_Janszky2026_PMC.xml"
    }
   ],
   "source_fulltext_indexed": true,
