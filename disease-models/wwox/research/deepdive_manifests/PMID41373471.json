@@ -1,0 +1,911 @@
+{
+ "schema_version": 2,
+ "pmid": "41373471",
+ "doi": "10.3390/ijms262311310",
+ "receipt": "FTR-20261022-41373471-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-a_r1c_20261022.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: PMC efetch XML, the PDF and the supplement zip were returned by pmc_bucket_fetch.py."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Primary-evidence read of a NOT WWOX EVIDENCE paper under the Scientist brief; the analysis note is the dossier."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No consolidated baseline claim is narrowed, reversed or removed; a blind audit of the text-versus-panel relations is declared OWED."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a candidate; class level only."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 5,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed ESearch 2026-10-22: Ruggieri AG[au] AND SIL1 5; Sucic-type WWOX query not applicable; SIL1 AND WWOX 0.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A group that previously reported the R111X patient fibroblast line (HF-P1) and whose earlier SIL1 papers this one cites; the HF-P1 comparisons are therefore the same laboratory's own earlier material, not an independent replication. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "SIL1 AND proteasome",
+    "count": 2,
+    "source": "PubMed ESearch count 2026-10-22"
+   },
+   {
+    "query": "SIL1 AND WWOX",
+    "count": 0,
+    "source": "PubMed ESearch count 2026-10-22"
+   },
+   {
+    "query": "Ruggieri AG[au] AND SIL1",
+    "count": 5,
+    "source": "PubMed ESearch count 2026-10-22"
+   }
+  ],
+  "note": "WWOX does not occur in the article; counts are title/abstract-level and license 'no paper is indexed', never 'never measured' (D-37)."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 66,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS: 66; none WWOX-direct.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-direct reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --pmid 41373471 --hops 0 and paper_packet.py packet (before the read)",
+  "hits": 0,
+  "finding": "NO RECORD MATCHED before this reading (a statement about that query, not about what the laboratory knows)."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-22",
+  "route": "dependency_integrity.py screen --manifest-block; PubMed efetch CommentsCorrections",
+  "result": "PubMed efetch 2026-10-22: publication types [Journal Article, Case Reports]; no CommentsCorrections entry; dependency screen SCREENED_CLEAN.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 66,
+   "references_screened": 52,
+   "references_with_doi": 52,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 1,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 14
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41373471_Ruggieri2025_PMC_r2.xml",
+   "sha256": "7dd8a0c0f832b53fbd1954e955b351a8571e85fdc97f14713de8d1e529020bb3",
+   "kind": "article_text",
+   "note": "PMC efetch JATS for PMC12691736 (Int J Mol Sci 2025, CC BY), retrieved with pmc_bucket_fetch.py.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC12691736&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "result_sha256": "7dd8a0c0f832b53fbd1954e955b351a8571e85fdc97f14713de8d1e529020bb3"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41373471_r2/PMC12691736.1.pdf",
+   "sha256": "14d02e42c1d33580debdf0c6c666e7f762d6f536cc4f019c6f26d40cba10a4cd",
+   "kind": "article_binary",
+   "note": "Article PDF from the PMC open-data bucket; the page renders below are the figure surfaces opened.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12691736.1/PMC12691736.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "result_sha256": "14d02e42c1d33580debdf0c6c666e7f762d6f536cc4f019c6f26d40cba10a4cd"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41373471_r2/ijms-26-11310-s001.zip",
+   "sha256": "7aea0ad4d3fdb0b4d79a1e7d5529653e658f1b1aa6c8713e81d2b668074df5ad",
+   "kind": "supplement_binary",
+   "note": "Supplementary Materials container (one PDF of Figures S1 to S5 and eight xlsx tables S1 to S8), from the PMC open-data bucket.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12691736.1/ijms-26-11310-s001.zip",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "result_sha256": "7aea0ad4d3fdb0b4d79a1e7d5529653e658f1b1aa6c8713e81d2b668074df5ad"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41373471_r3/ijms-3935520-Supplementary_Figures.pdf",
+   "sha256": "80965c9ae6e5d5cc7f0306c008235c49d629299bc667706b7b20d26e2665d07c",
+   "kind": "article_binary",
+   "note": "Supplementary Figures PDF, six pages (cover page, Figures S1 to S5), extracted from the zip with Python zipfile into a fresh directory; captions quoted from the rendered page.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41373471_r2/ijms-26-11310-s001.zip",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "stdlib",
+     "call": "ZipFile.extractall of the member 'ijms-3935520-supplementary/Supplementary Figures.pdf'",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID41373471_r2/pages_220dpi/PMC12691736.1_p4_220dpi.png",
+   "sha256": "8b1aad2fb7885c310791cbe65d17a43997b3b5324d79e9faa2f7f440acec29f7",
+   "kind": "figure",
+   "note": "Printed page 4 of the article PDF rendered at 220 dpi and opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41373471_r2/PMC12691736.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=220).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID41373471_r2/pages_220dpi/PMC12691736.1_p5_220dpi.png",
+   "sha256": "f48039812855299975256e2e4a20cc48746827ec289ca38b66dbd18253d85dbf",
+   "kind": "figure",
+   "note": "Printed page 5 of the article PDF rendered at 220 dpi and opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41373471_r2/PMC12691736.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=220).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID41373471_r2/pages_220dpi/PMC12691736.1_p7_220dpi.png",
+   "sha256": "566eeaafdd0fc61c367741f895e4b2fa500fb11f192cfca1fdd8cacaa513791a",
+   "kind": "figure",
+   "note": "Printed page 7 of the article PDF rendered at 220 dpi and opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41373471_r2/PMC12691736.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=220).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID41373471_r2/pages_220dpi/PMC12691736.1_p8_220dpi.png",
+   "sha256": "29d63be440c8dad20b21147eb84b9cb9b2ab2a14174c1edd19507c3eaffe2d9a",
+   "kind": "figure",
+   "note": "Printed page 8 of the article PDF rendered at 220 dpi and opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41373471_r2/PMC12691736.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=220).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID41373471_r2/pages_220dpi/PMC12691736.1_p9_220dpi.png",
+   "sha256": "1821116295a6c4fb1331cbd66e47dbb9661e55ce23bc1a66f38d9473a48b3e11",
+   "kind": "figure",
+   "note": "Printed page 9 of the article PDF rendered at 220 dpi and opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41373471_r2/PMC12691736.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=220).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID41373471_r2/pages_220dpi/PMC12691736.1_p10_220dpi.png",
+   "sha256": "84815ab777edb5f201c72662875215ab5ef457308a28ea9bfbd21d8400c5f35b",
+   "kind": "figure",
+   "note": "Printed page 10 of the article PDF rendered at 220 dpi and opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41373471_r2/PMC12691736.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=220).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID41373471_r2/pages_220dpi/PMC12691736.1_p11_220dpi.png",
+   "sha256": "56115f87f3ca6d1ca0e67d1db84b207a6e36a1d2c858d94fd5d5be1a0700c585",
+   "kind": "figure",
+   "note": "Printed page 11 of the article PDF rendered at 220 dpi and opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41373471_r2/PMC12691736.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=220).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID41373471_r2/pages_220dpi/PMC12691736.1_p12_220dpi.png",
+   "sha256": "c71bb2e274e4ff179a6b68bb396a753fd1c9070798c33f02ccfb405d95aa8b7d",
+   "kind": "figure",
+   "note": "Printed page 12 of the article PDF rendered at 220 dpi and opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41373471_r2/PMC12691736.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=220).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41373471_r3/ijms-3935520-Supplementary_Figures_p2_200dpi.png",
+   "sha256": "8bac9b966ab8287eba802ea8b61e7fc8d0e89c3da5eecce5fdc9b9bec3ac0d0d",
+   "kind": "figure",
+   "note": "Page 2 of the supplement PDF rendered at 200 dpi and opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41373471_r3/ijms-3935520-Supplementary_Figures.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=200).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41373471_r3/ijms-3935520-Supplementary_Figures_p3_200dpi.png",
+   "sha256": "0b2812eb4791aa972b36b0225f34a44182682febb7b3e7e963257747980bb55c",
+   "kind": "figure",
+   "note": "Page 3 of the supplement PDF rendered at 200 dpi and opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41373471_r3/ijms-3935520-Supplementary_Figures.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=200).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41373471_r3/ijms-3935520-Supplementary_Figures_p4_200dpi.png",
+   "sha256": "fbcc9d02a75bf8751aa39f20d81f95029c1c1b2e7d6045ece722ce359baff9a9",
+   "kind": "figure",
+   "note": "Page 4 of the supplement PDF rendered at 200 dpi and opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41373471_r3/ijms-3935520-Supplementary_Figures.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=200).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41373471_r3/ijms-3935520-Supplementary_Figures_p5_200dpi.png",
+   "sha256": "096141a9368a40e91ed30e917b5e5a1d6bcbfe4faf29b3b179230113e85bbbd1",
+   "kind": "figure",
+   "note": "Page 5 of the supplement PDF rendered at 200 dpi and opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41373471_r3/ijms-3935520-Supplementary_Figures.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=200).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41373471_r3/ijms-3935520-Supplementary_Figures_p6_200dpi.png",
+   "sha256": "7a65f2b2a88e9b15adf18e9b1a5cd3ac3d94b6aef5ccbb47580e2278fe17a263",
+   "kind": "figure",
+   "note": "Page 6 of the supplement PDF rendered at 200 dpi and opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41373471_r3/ijms-3935520-Supplementary_Figures.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=200).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch JATS for PMC12691736 retrieved 2026-10-22, 169,578 bytes; the whole body is indexed locally for exact-text checks.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "QUESTION_DRIVEN: the reader held the P5 cards on the proteasome-inhibitor class (the Q230P premise 'normal transcript, protein absent' in one patient fibroblast line) when opening the paper. Class-level substitute, NOT WWOX EVIDENCE. Read: abstract, introduction, methods, results, every main figure (printed pages 4, 5, 7 to 12 rendered at 220 dpi and opened), the supplement PDF (Figures S1 to S5 rendered and opened) and the eight xlsx tables (S1 differential-protein list scanned for SIL1, S2 to S6 enrichment lists read at the term level, S7 antibodies and S8 primers as tables); the Discussion carries the limits.",
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE. Text: Sil1 expression is reduced by about 80% in the patient fibroblasts relative to wild-type fibroblasts, read as protein instability.",
+    "snippet": "Western blotting and IF analysis showed that Sil1 expression is reduced, by about 80%, in comparison to WT fibroblasts suggesting a protein instability consequent to the amino acid change (Figure 4A,B).",
+    "anchor": "Results 2.5, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41373471_Ruggieri2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    }
+   },
+   {
+    "proposition": "Figure 4A and 4B as drawn: one blot with three lanes (control, HF-P2, HF-P1) separated by a dotted line; HF-P2 about 0.18 of control (two stars), HF-P1 undetectable; the control bar has no spread because it is normalised to 1; the number of experiments is not stated on the panel; the immunofluorescence shows weaker signal in HF-P2.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4A-B (printed page 8)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41373471_r2/pages_220dpi/PMC12691736.1_p8_220dpi.png",
+    "anchor": "Figure 4A-B (printed page 8)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    }
+   },
+   {
+    "proposition": "Text: Sil1 mRNA is higher than in control fibroblasts in HF-P2, and reduced 5-fold in HF-P1 (nonsense allele), probably through nonsense-mediated decay.",
+    "snippet": "Sil1 mRNA expression levels, assessed by RT-qPCR, were higher than control healthy fibroblasts (Figure 4C). In contrast, mRNA expression was reduced 5-fold in HF-P1, probably due to the activation of nonsense-mediated mRNA decay (Figure 4C).",
+    "anchor": "Results 2.5, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41373471_Ruggieri2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    }
+   },
+   {
+    "proposition": "Figure 4C as drawn (axis log2 fold change): HF-P2 about +1.05 (two stars), HF-P1 about -2.7 (four stars). On a log2 axis -2.7 is about 6.5-fold lower, not 5-fold; +1.05 is about 2-fold higher. The legend says the t-test compares HF-P2 with HF-P1, while the stars sit above each bar.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4C (printed page 8)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41373471_r2/pages_220dpi/PMC12691736.1_p8_220dpi.png",
+    "anchor": "Figure 4C (printed page 8)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    },
+    "qualifies": "entries[2]",
+    "qualifies_needle": "mRNA expression was reduced 5-fold in HF-P1"
+   },
+   {
+    "proposition": "Introduction text: the patient fibroblasts showed 10 times less Sil1 protein, which increases with a proteasome inhibitor.",
+    "snippet": "Fibroblasts isolated from the patient carrying the p.E342K variant showed 10 times less Sil1 protein, which increases when the cells are treated with a proteasome inhibitor.",
+    "anchor": "Introduction, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41373471_Ruggieri2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    }
+   },
+   {
+    "proposition": "Figures 4A and 5A as drawn: untreated HF-P2 is about 0.18 of control in 4A (about 5.5-fold less) and about 0.45 of control in 5A (about 2.2-fold less, mean of three experiments); neither panel shows 10 times less.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5A (printed page 9) read beside Figure 4A (page 8)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41373471_r2/pages_220dpi/PMC12691736.1_p9_220dpi.png",
+    "anchor": "Figure 5A (printed page 9) read beside Figure 4A (page 8)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    },
+    "qualifies": "entries[4]",
+    "qualifies_needle": "showed 10 times less Sil1 protein"
+   },
+   {
+    "proposition": "Text: the proteasome inhibitor MG-132 significantly increased Sil1 in HF-P2 and did not significantly affect Sil1 in healthy control cells.",
+    "snippet": "which indeed significantly increased Sil1 expression (Figure 5A). The same treatment did not significantly affect Sil1 levels in healthy control cells (Figure 5A).",
+    "anchor": "Results 2.5, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41373471_Ruggieri2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    }
+   },
+   {
+    "proposition": "Figure 5A as drawn (three experiments, paired t-test, one star): control about 1.0 untreated and about 1.0 with MG-132; HF-P2 about 0.45 untreated and about 1.07 with MG-132, so the treated patient level reaches the control level; one representative blot above. This is a Western-blot readout of protein quantity only, with no activity or function measure.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5A (printed page 9)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41373471_r2/pages_220dpi/PMC12691736.1_p9_220dpi.png",
+    "anchor": "Figure 5A (printed page 9)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    }
+   },
+   {
+    "proposition": "Text: MG-132 produced numerous Sil1 dots partially co-localised with the lysosomal marker LAMP2 in control and HF-P2 cells, indicating lysosomes could be an alternative route of degradation of unfolded Sil1.",
+    "snippet": "showed the formation of numerous Sil1 dots partially co-localised with the lysosomal marker LAMP2 in both control and HF-P2 cells (Figure 5B). These data indicate that lysosomes could be an alternative way for the degradation of unfolded Sil1.",
+    "anchor": "Results 2.5, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41373471_Ruggieri2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    }
+   },
+   {
+    "proposition": "Figure 5B as drawn: one field per condition (control and HF-P2, with and without MG-132), green Sil1 dots and red LAMP2 compartments, an inset for each treated line; no co-localisation measure, no count and no number of cells on the panel. The dots appear in treated control cells as well, where Sil1 is normal.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5B (printed page 9)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41373471_r2/pages_220dpi/PMC12691736.1_p9_220dpi.png",
+    "anchor": "Figure 5B (printed page 9)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    },
+    "qualifies": "entries[8]",
+    "qualifies_needle": "partially co-localised with the lysosomal marker LAMP2"
+   },
+   {
+    "proposition": "Discussion text: protein degradation depended on a functional proteasome, and its inhibition shunted misfolded proteins into the lysosomal compartment (citing earlier studies).",
+    "snippet": "Consistent with previous studies, protein degradation depended on a functional proteasome, and its inhibition shunted misfolded proteins into the lysosomal compartment [47].",
+    "anchor": "Discussion, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41373471_Ruggieri2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure S2 as drawn: one HF-P2 blot, without and with MG-132; the ubiquitin smear is much stronger with MG-132 across the lane, the Sil1 band is stronger, and the loading band is similar. This shows the inhibitor acted and that Sil1 rose in the same sample; it carries no control line and no replicate.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure S2 (page 3 of the supplement PDF)",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID41373471_r3/ijms-3935520-Supplementary_Figures_p3_200dpi.png",
+    "anchor": "Supplementary Figure S2 (page 3 of the supplement PDF)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    }
+   },
+   {
+    "proposition": "Text: the efficacy of MG-132 treatment was confirmed by increased levels of ubiquitinated proteins (Supplementary Figure S2).",
+    "snippet": "The efficacy of MG-132 treatment was confirmed by increased levels of ubiquitinated proteins (Supplementary Figure S2).",
+    "anchor": "Results 2.5, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41373471_Ruggieri2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    }
+   },
+   {
+    "proposition": "Text: the p.E342K and p.L457P variants were about 10 times lower than Sil1 wild type on native gels.",
+    "snippet": "The amount of p.E342K and p.L457P variants was very low, about 10 times lower than that of Sil1 WT (Figure 3C).",
+    "anchor": "Results 2.4, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41373471_Ruggieri2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    }
+   },
+   {
+    "proposition": "Figure 3A to 3C as drawn: whole-cell lysate Sil1 is similar for wild type, p.E342K and p.L457P (about 1.0, 0.9, 0.9); in the medium p.E342K and p.L457P are about 0.15 of wild type (four and three stars); native-gel Sil1 about 0.15 of wild type for both variants (three and four stars), shown at two exposures.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3A-C (printed page 7)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41373471_r2/pages_220dpi/PMC12691736.1_p7_220dpi.png",
+    "anchor": "Figure 3A-C (printed page 7)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    }
+   },
+   {
+    "proposition": "Text: in the urea-solubilised pellet the three recombinant proteins appear in comparable amounts, taken as confirming that p.E342K and p.L457P are poorly soluble.",
+    "snippet": "Western blotting analysis of proteins solubilised in urea buffer showed comparable amounts of the three recombinant proteins, confirming that p.E342K and p.L457P are poorly soluble (Figure 3D).",
+    "anchor": "Results 2.4, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41373471_Ruggieri2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    }
+   },
+   {
+    "proposition": "Figure 3D as drawn: urea-pellet Sil1 relative to wild type is about 1.0 for wild type, about 2.5 for p.E342K (error bar reaching about 4.2) and about 1.1 for p.L457P; no star on any bar. The p.E342K mean is not comparable to wild type in the sense of the text; the spread is wide and no test is marked. The inference that the variants are poorly soluble rests on the native-gel panel 3C plus this pellet signal, which is a direct sign of an insoluble pool.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3D (printed page 7)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41373471_r2/pages_220dpi/PMC12691736.1_p7_220dpi.png",
+    "anchor": "Figure 3D (printed page 7)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    },
+    "qualifies": "entries[15]",
+    "qualifies_needle": "showed comparable amounts of the three recombinant proteins"
+   },
+   {
+    "proposition": "Text: immunofluorescence showed numerous COS7 cells containing Sil1 aggregates with p.E342K or p.L457P and only a few with wild type.",
+    "snippet": "Finally, immunofluorescence (IF) microscopy revealed numerous cells containing Sil1 aggregates when COS7 cells were transfected with either the p.E342K or p.L457P variant, whereas only a few cells expressing Sil1 WT showed aggregates (Figure 3E).",
+    "anchor": "Results 2.4, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41373471_Ruggieri2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    }
+   },
+   {
+    "proposition": "Figure 3E as drawn: three fields (wild type, p.E342K, p.L457P) with Sil1 green and the ER marker HSP47 red, and enlarged single cells below; the variants show dense green clumps; no cell count, no fraction of cells with aggregates and no number of fields on the panel.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3E (printed page 7)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41373471_r2/pages_220dpi/PMC12691736.1_p7_220dpi.png",
+    "anchor": "Figure 3E (printed page 7)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    },
+    "qualifies": "entries[17]",
+    "qualifies_needle": "revealed numerous cells containing Sil1 aggregates"
+   },
+   {
+    "proposition": "Text: the circular-dichroism profile of wild-type Sil1 fits a mixed alpha-beta fold while that of p.E342K shows a loss of alpha-helix structure.",
+    "snippet": "However, the CD profile of Sil WT was consistent with mixed alpha-beta folding, while that of p.E342K showed a loss of alpha-helix structure (Figure 2D).",
+    "anchor": "Results 2.3, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41373471_Ruggieri2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    }
+   },
+   {
+    "proposition": "Figure 2D as drawn: mean ellipticity in millidegrees (not normalised to concentration) for wild type at 4 micromolar (minimum about -10.5 near 205 nm) and p.E342K at 1.5 micromolar (about -2 over the same region); the legend of the panel names the two concentrations. The amplitude difference is partly a concentration difference; the shape difference rests on a weak signal. Figure 2E: with trifluoroethanol a small negative feature near 222 nm appears and is gone at 30 minutes.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2D-E (printed page 5)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41373471_r2/pages_220dpi/PMC12691736.1_p5_220dpi.png",
+    "anchor": "Figure 2D-E (printed page 5)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    },
+    "qualifies": "entries[19]",
+    "qualifies_needle": "showed a loss of alpha-helix structure"
+   },
+   {
+    "proposition": "Text: the close correlation between the HF-P2 and HF-P1 proteomics supports that p.E342K is a pathological variant.",
+    "snippet": "The close correlation observed between HF-P2 and HF-P1 proteomics further supports the hypothesis that p.E342K is a pathological variant.",
+    "anchor": "Results 2.7, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41373471_Ruggieri2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    }
+   },
+   {
+    "proposition": "Figure 8A as drawn: scatter of protein log fold changes HF-P2 against HF-P1 with r = 0.5477 printed on the panel; a broad cloud with the extreme proteins labelled. Figure 7: three replicates of one patient line against three of one control line (the legend calls them biological in 7A,B and technical in 7D).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 8A (printed page 12); Figure 7 (page 11)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41373471_r2/pages_220dpi/PMC12691736.1_p12_220dpi.png",
+    "anchor": "Figure 8A (printed page 12); Figure 7 (page 11)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    },
+    "qualifies": "entries[21]",
+    "qualifies_needle": "The close correlation observed between HF-P2 and HF-P1"
+   },
+   {
+    "proposition": "Figure 7 legend: the heat map uses three biological replicates for HF-CTRL and HF-P2.",
+    "snippet": "denote the three biological replicates corresponding to HF-CTRL and HF-P2, respectively.",
+    "anchor": "Figure 7 legend, panels A and B",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41373471_Ruggieri2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    }
+   },
+   {
+    "proposition": "Figure 7 legend: the principal component analysis is described across three technical replicates.",
+    "snippet": "across three technical replicates.",
+    "anchor": "Figure 7 legend, panel D",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41373471_Ruggieri2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    }
+   },
+   {
+    "proposition": "Text: the expression of all twelve earlier-identified genes was also changed in HF-P2 and ten moved in the same direction as in HF-P1 (Supplementary Figure S3).",
+    "snippet": "Interestingly, the expression of all these genes was also changed in HF-P2 cells and ten of them moved in the same direction as HF-P1 cells (Supplementary Figure S3).",
+    "anchor": "Results 2.5, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41373471_Ruggieri2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure S3 as drawn (thirteen genes including SIL1; log fold change): HF-P2 bars carry stars for VCAN (four), NRN1 (one), ELAPOR2 (two), GPC4 (one), SIL1 (two), LXN (two), EXPH5 (two) and ALDH1A1 (four) and none for ACAN, PCOLCE2, CTHRC1, CTTNBP2 and PCDH7; excluding SIL1, ten of twelve share the sign with HF-P1 (ACAN and CTTNBP2 are opposite). So five of twelve have no star in HF-P2.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure S3 (page 4 of the supplement PDF)",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID41373471_r3/ijms-3935520-Supplementary_Figures_p4_200dpi.png",
+    "anchor": "Supplementary Figure S3 (page 4 of the supplement PDF)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    },
+    "qualifies": "entries[25]",
+    "qualifies_needle": "the expression of all these genes was also changed in HF-P2 cells"
+   },
+   {
+    "proposition": "Text: altered expression was confirmed by Western blot for all proteins analysed (Supplementary Figure S4).",
+    "snippet": "Consistent with the proteomic measurements, altered expression was confirmed for all proteins analysed (Supplementary Figure S4).",
+    "anchor": "Results 2.7, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41373471_Ruggieri2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure S4 as drawn: one lane each for control, HF-P2 and HF-P1 for PDLIM5, KCTD12, CTHRC1, CKB and FHL1 with a loading band; no quantification; for PDLIM5 the control and HF-P2 bands look alike by eye (INFERENZA, no measurement); the legend lists Sil1 among the analysed proteins and names only control and HF-P2, but there is no Sil1 blot on the page and a third lane (HF-P1) is present.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure S4 (page 5 of the supplement PDF)",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID41373471_r3/ijms-3935520-Supplementary_Figures_p5_200dpi.png",
+    "anchor": "Supplementary Figure S4 (page 5 of the supplement PDF)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    },
+    "qualifies": "entries[27]",
+    "qualifies_needle": "altered expression was confirmed for all proteins analysed"
+   },
+   {
+    "proposition": "Supplementary Figure S4 legend names Sil1 among the proteins analysed and names control and HF-P2 cells.",
+    "snippet": "analyse the expression of PDLIM5, KCTD12, CTHRC1, CKB, FHL1 and Sil1 as indicated.",
+    "anchor": "Supplementary Figure S4 legend",
+    "surface": "rendered_text",
+    "artifact": "files/supplement/PMID41373471_r3/ijms-3935520-Supplementary_Figures.pdf",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    },
+    "page_anchor": {
+     "page": 5,
+     "dpi": 200,
+     "render_call": "PyMuPDF 1.28.2 page.get_pixmap(dpi=200)",
+     "source_pdf_sha256": "80965c9ae6e5d5cc7f0306c008235c49d629299bc667706b7b20d26e2665d07c",
+     "crop_published": false,
+     "crop_note": "The whole rendered page is published as the declared page PNG (page 5) and is reproducible from the declared digest with the render call above."
+    }
+   },
+   {
+    "proposition": "Supplementary Figure S4 as drawn: blots for PDLIM5, KCTD12, CTHRC1, CKB and FHL1 with loading bands and three lanes (control, HF-P2, HF-P1); there is no Sil1 blot on the page, although the legend lists Sil1 among the proteins analysed and names only control and HF-P2.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure S4 (page 5 of the supplement PDF)",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID41373471_r3/ijms-3935520-Supplementary_Figures_p5_200dpi.png",
+    "anchor": "Supplementary Figure S4 (page 5 of the supplement PDF)",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    },
+    "contradicts": "entries[29]",
+    "contradicts_needle": "FHL1 and Sil1 as indicated"
+   },
+   {
+    "proposition": "Text: the proliferation rate of HF-P2 cells was comparable to the control cells (Supplementary Figure S1C).",
+    "snippet": "Consistently, the proliferation rate of HF-P2 cells was comparable to that of the control cells (Supplementary Figure S1C).",
+    "anchor": "Results 2.5, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41373471_Ruggieri2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure S1 as drawn: cell-cycle histograms and stacked bars of G0/G1, S and G2/M look alike for control and HF-P2; the EdU bar for HF-P2 is about 87 percent of control with an error bar and no test marked; the wound-density curves overlap over 24 hours; one legend entry in 1D reads 'SIL1 GRECIA'.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure S1 (page 2 of the supplement PDF)",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID41373471_r3/ijms-3935520-Supplementary_Figures_p2_200dpi.png",
+    "anchor": "Supplementary Figure S1 (page 2 of the supplement PDF)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    }
+   },
+   {
+    "proposition": "Text: the morphological analysis uncovered cellular alterations characteristic of MSS and supports that p.E342K is a pathological variant.",
+    "snippet": "This morphological analysis uncovered new cellular alterations characteristic of MSS and supports the hypothesis that p.E342K is a pathological variant of Sil1.",
+    "anchor": "Results 2.6, last sentence",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41373471_Ruggieri2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    }
+   },
+   {
+    "proposition": "Figure 6 as drawn: three rows of electron micrographs for control, HF-P1 and HF-P2 with arrows for vacuoles, asterisks for lipid droplets and a letter f for fibrillar material; one cell per row; no counts or per-cell scoring on the page.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6 (printed page 10)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41373471_r2/pages_220dpi/PMC12691736.1_p10_220dpi.png",
+    "anchor": "Figure 6 (printed page 10)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    },
+    "qualifies": "entries[33]",
+    "qualifies_needle": "uncovered new cellular alterations characteristic of MSS"
+   },
+   {
+    "proposition": "Limits stated by the authors: the findings rest on a single patient, and no rescue experiments were done in patient-derived fibroblasts.",
+    "snippet": "First, the findings are based on a single patient, which inherently restricts the generalizability and statistical strength of our conclusions. Second, we did not perform rescue experiments in patient-derived fibroblasts, which would have provided stronger evidence linking the observed phenotype to the p.E342K variant.",
+    "anchor": "Discussion, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41373471_Ruggieri2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    }
+   },
+   {
+    "proposition": "Text: the calculated change in stability is -1.062 kcal/mol from one web-server predictor, read as a destabilising effect.",
+    "snippet": "The calculated change in protein stability (ΔΔG) was −1.062 kcal/mol, indicating a destabilising effect of the mutation.",
+    "anchor": "Results 2.2, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41373471_Ruggieri2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary human skin fibroblasts from one patient homozygous for SIL1 p.E342K (HF-P2), one patient with a nonsense allele (HF-P1) and one healthy-donor line; COS7 cells expressing SIL1 constructs; recombinant Sil1; NOT a WWOX system (a soluble ER co-chaperone, not a cytosolic enzyme)",
+     "genotype": "SIL1 c.1024G>A p.E342K homozygous; p.L457P and R111X comparators; wild type",
+     "endpoint": "Sil1 protein level, Sil1 mRNA level, solubility, proteasome-inhibitor response, proteomics"
+    }
+   }
+  ]
+ }
+}
