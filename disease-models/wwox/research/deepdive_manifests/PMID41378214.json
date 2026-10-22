@@ -616,7 +616,7 @@
     }
    },
    {
-    "proposition": "Figure 6J and 6K as drawn: R44Q about 24 percent at 1 minute, about 32 at 2, about 30 at 3 and about 43 at 5 minutes; wild-type hGAT-1 about 5 to 8 percent throughout; the w1118 line zero; in 6K about ten points for wild type, eleven for R44Q and about seven overlapping at zero for w1118, with the lettered comparison marks. The wild-type fraction reads about 5 to 8, not about 10.",
+    "proposition": "Figure 6J and 6K as drawn: R44Q about 24 percent at 1 minute, about 32 at 2, about 30 at 3 and about 43 at 5 minutes; wild-type hGAT-1 about 5 to 8 percent throughout; the w1118 line zero; in 6K about ten points for wild type (five at about 10 and five at zero), ten for R44Q (four, four and two in three rows) and about six overlapping at zero for w1118, with the lettered comparison marks. The wild-type fraction reads about 5 to 8, not about 10.",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6J-K (printed page 14)",
     "surface": "figure",
     "artifact": "files/figures/PMID41378214_r2/pages_220dpi/PMC12685850.1_p14_220dpi.png",
@@ -632,11 +632,11 @@
     "contradicts_locator": {
      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID41378214.json",
      "entry": 25,
-     "what_changed": "Count re-check of a neighbour: 'about eight to ten points per bar' in Figure 6K became ten for wild type, eleven for R44Q and about seven overlapping at zero for w1118; page render re-opened; no blind audit yet (owed).",
+     "what_changed": "AUDIT: blind audit R1d repairs: R44Q has ten points (4+4+2), not eleven; the zero-line count for the vehicle line re-counted as about six; page render re-opened.",
      "audit": {
-      "auditors": 0,
+      "auditors": 1,
       "verdicts": [
-       "CORRECTED"
+       "OVERSHOOT"
       ]
      }
     }
