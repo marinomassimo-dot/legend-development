@@ -177,11 +177,14 @@ def artefacts(root: Path, disease: str, pmid: str, manifest: dict | None) -> lis
     """
     rows: list[dict[str, Any]] = []
     declared_paths: set[str] = set()
+    declared_digests: set[str] = set()
     for item in (manifest or {}).get("source_artifacts") or []:
         if not isinstance(item, dict):
             continue
         rel = str(item.get("path") or "")
         declared_paths.add(rel)
+        if re.fullmatch(r"[a-f0-9]{64}", str(item.get("sha256") or "").strip().lower()):
+            declared_digests.add(str(item["sha256"]).strip().lower())
         path = root / rel
         row = {"path": rel, "kind": str(item.get("kind") or ""), "declared": True,
                "present": path.is_file(), "digest": "",
@@ -208,8 +211,18 @@ def artefacts(root: Path, disease: str, pmid: str, manifest: dict | None) -> lis
             rel = str(path.relative_to(root))
             if rel in declared_paths:
                 continue
-            rows.append({"path": rel, "kind": "", "declared": False, "present": True,
-                         "digest": "", "recipe": False})
+            row = {"path": rel, "kind": "", "declared": False, "present": True,
+                   "digest": "", "recipe": False}
+            # 🔴 A BYTE COPY OF A DECLARED CONTAINER IS NOT AN UNDECLARED CONTAINER. A re-acquisition
+            # (PMID34268881, R2, 2026-10-22: files/supplement/PMID34268881_r2/ re-downloaded the six
+            # Expanded View files already declared under _assets/) lands the same bytes under a new
+            # path; the binary-supplement procedure exists so that a container is fingerprinted, and
+            # these bytes already are. Only an exact sha256 match to a declared digest qualifies;
+            # a different file, or the same name with different bytes, stays undeclared.
+            if declared_digests and path.suffix.lower() in BINARY_SUPPLEMENT_SUFFIXES \
+                    and sha256_file(path) in declared_digests:
+                row["copy_of_declared"] = True
+            rows.append(row)
     return rows
 
 
@@ -1347,7 +1360,7 @@ def technical_facts(root: Path, disease: str, pmid: str, manifest: dict | None,
                                     if Path(str(row["path"])).suffix.lower() in BINARY_SUPPLEMENT_SUFFIXES),
         "binary_undeclared": sorted(Path(str(row["path"])).name for row in present
                                     if Path(str(row["path"])).suffix.lower() in BINARY_SUPPLEMENT_SUFFIXES
-                                    and not row["declared"]),
+                                    and not row["declared"] and not row.get("copy_of_declared")),
         "supplement_declared": any("supplement" in str(row["path"]).lower()
                                    or str(row.get("kind", "")).startswith("supplement")
                                    for row in rows if row["declared"]),

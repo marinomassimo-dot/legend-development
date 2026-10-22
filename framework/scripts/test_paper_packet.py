@@ -1147,5 +1147,40 @@ class TheRankingAcceptanceTestOnTheMeasuredPaper(unittest.TestCase):
         self.assertAlmostEqual(104.0, gr7[0]["ppi"], delta=2.0)
         self.assertTrue(gr7[0]["ppi_assumed"])
 
+class ABinaryCopyOfADeclaredContainerIsNotUndeclared(unittest.TestCase):
+    """PMID34268881's R2 re-acquisition put byte copies of six declared Expanded View files under
+    files/supplement/PMID..._r2/ and the live test for declared containers went red (2026-10-22).
+    Hermetic: a throwaway root, so no local corpus is needed."""
+
+    PMID = "11111111"
+
+    def _state(self, copy_bytes: bytes) -> dict:
+        import hashlib
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            declared = root / f"files/fulltext/PMID{self.PMID}_assets/s002.xlsx"
+            declared.parent.mkdir(parents=True)
+            declared.write_bytes(b"original bytes")
+            copy = root / f"files/supplement/PMID{self.PMID}_r2/s002.xlsx"
+            copy.parent.mkdir(parents=True)
+            copy.write_bytes(copy_bytes)
+            manifest = {"source_artifacts": [{
+                "kind": "table", "path": f"files/fulltext/PMID{self.PMID}_assets/s002.xlsx",
+                "sha256": hashlib.sha256(b"original bytes").hexdigest()}]}
+            rows = pp.artefacts(root, "wwox", self.PMID, manifest)
+            facts = pp.technical_facts(root, "wwox", self.PMID, manifest, rows)
+            return {row["key"]: row for row in pp.procedures(facts, None, None)}["binary_supplement"]
+
+    def test_an_exact_byte_copy_of_a_declared_container_does_not_open_the_procedure(self) -> None:
+        row = self._state(b"original bytes")
+        self.assertEqual(row["state"], pp.NOT_NEEDED, row)
+
+    def test_a_different_file_under_the_same_name_is_still_undeclared(self) -> None:
+        """The counter-case: same name and place, other bytes, is a container nobody fingerprinted."""
+        row = self._state(b"other bytes")
+        self.assertEqual(row["state"], pp.OPEN, row)
+        self.assertIn("undeclared", row["reason"])
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

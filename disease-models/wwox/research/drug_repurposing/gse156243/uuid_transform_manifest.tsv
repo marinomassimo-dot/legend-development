@@ -1,4 +1,3 @@
-# Hyphens inside UUIDs removed (8-4-4-4-12 hex); reason: publication-gate false positive on UUID fragments; no other byte changed; verbatim_sha256 is of the original kept under files/geo/GSE156243/tool_responses_verbatim/
 file	verbatim_sha256	verbatim_bytes	transformed_sha256	transformed_bytes	losslessness
 tool_responses/S0_sigcom_ranktwosided_request.json	8f4cc52f58b0cef4b2b11df35002118458b0d9262e1484bd7c4435591fcc4a1b	33074	3c47a931e2bf467ae597a72c5e396209b96e5077544aac4faee195c2b731aeb4	29774	LOSSLESS
 tool_responses/S0_sigcom_ranktwosided_response.json	e85a6db3ee3dd86d5f4d86c5ecda547944a510bdbaa12665ab3e0abd5eb0350e	83337	a3b1a4ca4db0935675dce8e85ba7c74c4a1afcc0bb175d20e10494ae06f3e395	82537	LOSSLESS
