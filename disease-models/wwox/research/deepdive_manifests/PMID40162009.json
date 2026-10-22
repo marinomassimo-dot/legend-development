@@ -3,7 +3,7 @@
  "pmid": "40162009",
  "doi": "10.3389/fneur.2025.1516026",
  "pmcid": "PMC11951263",
- "receipt": "FTR-20261021-40162009-01",
+ "receipt": "FTR-20261022-40162009-02",
  "context_policy": "QUESTION_DRIVEN",
  "context_policy_note": "Held before reading: the R4b task's questions (a confirmed repurposed drug; a missense precedent; an external or natural-history comparator that held up; a pre-dose drift measurement) and the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
  "landing": [
@@ -163,6 +163,66 @@
      "call": "python3 framework/scripts/docx_to_text.py --out <txt> <docx>"
     }
    }
+  },
+  {
+   "path": "files/figures/PMID40162009_r2/suppS1.jpeg",
+   "sha256": "d113160c574611011f1135bbcce26e700230e4a2246581199323de5354898bdb",
+   "kind": "figure",
+   "note": "Supplementary Figure S1 (matched-pair ML score trajectories by baseline age band), the docx image1.jpeg, opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "docx media extraction",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID40162009_r2/Supplementary_file_1.docx",
+    "extractor": {
+     "name": "zipfile (Python standard library)",
+     "version": "3.12",
+     "call": "read word/media/image1.jpeg from the docx, written unchanged"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "d113160c574611011f1135bbcce26e700230e4a2246581199323de5354898bdb"
+   }
+  },
+  {
+   "path": "files/figures/PMID40162009_r2/suppS2.jpeg",
+   "sha256": "93771a714191c74e1b8d2dd0da638fac18f49494dc24e101f493aa632f61421d",
+   "kind": "figure",
+   "note": "Supplementary Figure S2 (Kaplan-Meier, time to unreversed 2-point decline or score 0, three-criteria matched cohorts), the docx image2.jpeg, opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "docx media extraction",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID40162009_r2/Supplementary_file_1.docx",
+    "extractor": {
+     "name": "zipfile (Python standard library)",
+     "version": "3.12",
+     "call": "read word/media/image2.jpeg from the docx, written unchanged"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "93771a714191c74e1b8d2dd0da638fac18f49494dc24e101f493aa632f61421d"
+   }
+  },
+  {
+   "path": "files/figures/PMID40162009_r2/suppS3.jpeg",
+   "sha256": "46c20f09bbec155b48787880f0537d76c9008c380ef422bb4a45d147185b729b",
+   "kind": "figure",
+   "note": "Supplementary Figure S3 (Kaplan-Meier, time to unreversed score 0, three-criteria matched cohorts), the docx image3.jpeg, opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "docx media extraction",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID40162009_r2/Supplementary_file_1.docx",
+    "extractor": {
+     "name": "zipfile (Python standard library)",
+     "version": "3.12",
+     "call": "read word/media/image3.jpeg from the docx, written unchanged"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "46c20f09bbec155b48787880f0537d76c9008c380ef422bb4a45d147185b729b"
+   }
   }
  ],
  "verbatim_locators": {
@@ -286,6 +346,54 @@
     "anchor": "Figure 1B",
     "surface": "figure",
     "artifact": "files/figures/PMID40162009_r2/fneur-16-1516026-g001.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE (CLN2 disease, enzyme replacement versus natural history). In the three-criteria sensitivity analysis (matched on baseline age, exact baseline score and genotype, 18 pairs) the rate of decline was 0.49 points per 48 weeks treated against 2.07 in controls, a difference of 1.58 (interval 0.76 to 2.40).",
+    "snippet": "Mean (SD) 2.07 (1.61) 0.49 (0.43) Median (min, max) 2.18 (0.00, 5.60) 0.47 (0.00, 1.33)",
+    "anchor": "Supplementary Table S4",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID40162009_r2/Supplementary_file_1.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Even in the three-criteria matched set the treated group had a later mean onset than controls (3.4 against 2.9 years, P = 0.06) and more often first presented with seizures (89 against 61 percent, P = 0.05), so onset age and presenting symptom were not balanced by matching on age, score and genotype.",
+    "snippet": "Age at disease onset, years Mean (SD) n = 17 / 2.9 (0.8) n = 17 / 3.4 (0.8) 0.06",
+    "anchor": "Supplementary Table S3",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID40162009_r2/Supplementary_file_1.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The sensitivity-analysis matching is stated as baseline age within 12 months, exact baseline score and genotype (0, 1 or 2 common alleles).",
+    "snippet": "Patients matched based on baseline age (± 12 months), baseline ML score (exact match), and genotype (0, 1, or 2 common alleles).",
+    "anchor": "Supplementary Table S4, footnote",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID40162009_r2/Supplementary_file_1.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Supplementary Figure S2 (image S2): in the three-criteria sensitivity analysis the hazard ratio for time to unreversed 2-point decline or score 0 is printed as 0.16 (0.06 to 0.46), P = 0.0006, weaker than the main-analysis ratio of 0.08; numbers at risk fall to 3 controls by month 15 and 1 by month 21, and the treated curve is flat near 0.4 after month 25 with 3 or fewer patients at risk.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S2 reads 'HR (95% CI) = 0.16 (0.06, 0.46); p = 0.0006' with at-risk rows ERT-treated 18 18 16 15 14 10 8 5 5 3 2 and NH 18 18 16 9 4 3 3 1.",
+    "anchor": "Supplementary Figure S2, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40162009_r2/suppS2.jpeg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "PANEL READING, Supplementary Figure S3 (image S3): for time to unreversed score 0 the hazard ratio is printed as 0.10 (0.02 to 0.47), P = 0.004, against 0.07 in the main analysis; the treated curve drops once near month 25 and is flat at about 0.83 thereafter; 3 controls remain at risk by month 21.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S3 reads 'HR (95% CI) = 0.10 (0.02, 0.47); p = 0.004'; the treated curve steps from about 0.94 to about 0.83 near month 25.",
+    "anchor": "Supplementary Figure S3, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40162009_r2/suppS3.jpeg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "PANEL READING, Supplementary Figure S1 (image S1): matched-pair ML score trajectories drawn in panels by baseline age band (under 3, 3 to under 4, 4 to under 5, 5 to under 6, 6 or more years); in most pairs the control line (NH) falls to a lower score than the treated line over the same ages, in a few pairs the lines overlap, in some pairs the control line has only one or two points after baseline, and the 6-or-more band includes a pair with no control line after baseline; each panel is one pair, no pooled estimate is on the figure.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S1 panels headed 'Age at baseline: < 3 years', '3 to < 4 years', '4 to < 5 years', '5 to < 6 years', '≥ 6 years'; ERT-treated blue, NH orange.",
+    "anchor": "Supplementary Figure S1, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40162009_r2/suppS1.jpeg",
     "panel_text_relation": "panel_only"
    }
   ],

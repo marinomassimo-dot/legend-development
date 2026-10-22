@@ -3,7 +3,7 @@
  "pmid": "42481851",
  "doi": "10.1038/s41591-026-04527-y",
  "pmcid": "PMC13472884",
- "receipt": "FTR-20261021-42481851-01",
+ "receipt": "FTR-20261022-42481851-02",
  "context_policy": "QUESTION_DRIVEN",
  "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
  "landing": [
@@ -206,6 +206,81 @@
      "call": "pdftoppm -r 300 -f 6 -l 6 -png <pdf> <out>"
     }
    }
+  },
+  {
+   "path": "files/supplement/PMID42481851_r2/41591_2026_4527_MOESM1_ESM.pdf",
+   "sha256": "ac0c337eae014d93529a273ba23b8905c01c880845bed50c4d771fe389da35a3",
+   "kind": "supplement_binary",
+   "note": "Supplementary information (the Nature Portfolio Reporting Summary, 3 pages, image-only, no text layer) from the PMC open-data bucket, SHA-256 checked identical to a fresh download on 2026-10-22.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13472884.1/41591_2026_4527_MOESM1_ESM.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "result_sha256": "ac0c337eae014d93529a273ba23b8905c01c880845bed50c4d771fe389da35a3"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID42481851/MOESM1_reporting_p1.png",
+   "sha256": "6ce5898e404b62a2b8f5bbfea1f7f1e53dac306abc3b0d6a91fd95037a603b26",
+   "kind": "figure",
+   "note": "Page 1 of the Reporting Summary rendered at 110 dpi, opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm render",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42481851_r2/41591_2026_4527_MOESM1_ESM.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 110 -png <pdf> p (page 1)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "6ce5898e404b62a2b8f5bbfea1f7f1e53dac306abc3b0d6a91fd95037a603b26"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID42481851/MOESM1_reporting_p2.png",
+   "sha256": "f2a734033f96c8a42f00d17207487ebdfe1ae60eb59459e27d830363eb1ec15f",
+   "kind": "figure",
+   "note": "Page 2 of the Reporting Summary rendered at 110 dpi, opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm render",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42481851_r2/41591_2026_4527_MOESM1_ESM.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 110 -png <pdf> p (page 2)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "f2a734033f96c8a42f00d17207487ebdfe1ae60eb59459e27d830363eb1ec15f"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID42481851/MOESM1_reporting_p3.png",
+   "sha256": "7fac8b6580d5abacda3791a3b2f86db50620a54b886c86d04f7397a121990272",
+   "kind": "figure",
+   "note": "Page 3 of the Reporting Summary rendered at 110 dpi, opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm render",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42481851_r2/41591_2026_4527_MOESM1_ESM.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 110 -png <pdf> p (page 3)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "7fac8b6580d5abacda3791a3b2f86db50620a54b886c86d04f7397a121990272"
+   }
   }
  ],
  "verbatim_locators": {
@@ -405,6 +480,54 @@
     "anchor": "Figure 4, page 6 render at 300 dpi",
     "surface": "figure",
     "artifact": "files/page_renders/PMID42481851/PMC13472884.1_p6-06.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE (SCN2A antisense, first-in-human single-patient trials). The Reporting Summary states the sample size as two investigator-initiated, open-label, single-centre, single-patient trials under separate investigational new drug applications, with allele-selective antisense delivered intrathecally by lumbar injection and predefined safety and efficacy measures tailored to individual phenotype.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Page 2, Life sciences study design, Sample size box reads 'authorized by the FDA for two investigator-initiated, open-label, single center, single patient (n=1) clinical trials for distinct pathogenic SRD variants with predefined safety and efficacy measures tailored to individual phenotype.'",
+    "anchor": "Reporting Summary p.2, Sample size (110 dpi page render, read as an image)",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID42481851/MOESM1_reporting_p2.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The Reporting Summary states randomisation was not applicable and the design was open label, with no data exclusions and replication of doses within individual participants.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Page 2 boxes read 'There were no data exclusions.', 'Dosing schema as authorized by the FDA included replication of doses within individual participants.', 'Randomization is not applicable by study design', 'The study design was open label as authorized by the FDA.'",
+    "anchor": "Reporting Summary p.2, Data exclusions to Blinding (110 dpi page render, read as an image)",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID42481851/MOESM1_reporting_p2.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "In the statistics checklist the item on assumptions or corrections such as adjustment for multiple comparisons, and the items on effect sizes, Bayesian analysis and hierarchical designs, are marked not applicable; the items on exact sample size, test used, covariates, central tendency with uncertainty and test statistics are marked confirmed.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Page 1 Statistics: the n/a column is crossed for 'A description of any assumptions or corrections, such as tests of normality and adjustment for multiple comparisons', for Bayesian analysis, for hierarchical designs and for effect sizes; the Confirmed column is crossed for the other six items.",
+    "anchor": "Reporting Summary p.1, Statistics (110 dpi page render, read as an image)",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID42481851/MOESM1_reporting_p1.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "A single registry number is given for the clinical data section of both single-patient trials, and outcomes are described as predefined and tailored to phenotype.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Page 3 Clinical data reads 'Clinical trial registration NCT06314490', 'Outcomes were predefined and selected tailored to phenotype'.",
+    "anchor": "Reporting Summary p.3, Clinical data (110 dpi page render, read as an image)",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID42481851/MOESM1_reporting_p3.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Data availability: clinical data may be requested from the corresponding author one year after publication by qualified researchers with a response within 90 days, under a data sharing agreement; the EEG analysis code is stated to be public.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Page 1 Software and code box, Data analysis, reads 'EEG analysis as described in Methods and Supplementary materials was performed in Python and is made publicly available at: https:// github.com/ungTNL/scn2aEEG'; the Data box on pages 1 and 2 reads 'Access to the clinical data in this paper may be requested from the corresponding author after one year from publication by qualified researchers with response provided within 90 days'; page 2 continues 'Data will be provided following review and approval of a research proposal and execution of a Data Sharing agreement'.",
+    "anchor": "Reporting Summary p.1 to p.2, Data and Software (110 dpi page render, read as an image)",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID42481851/MOESM1_reporting_p1.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The participants section describes two nonverbal paediatric patients with cognitive impairment and severe neurodevelopmental delay, and says race, ethnicity and other socially relevant groupings could not be broadly reported because of the rarity of the disease.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Page 2 Reporting on sex and gender box reads 'Study consisted of two nonverbal pediatric patients with cognitive impairment and severe neurodevelopmental delay.'",
+    "anchor": "Reporting Summary p.2, Research involving human participants (110 dpi page render, read as an image)",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID42481851/MOESM1_reporting_p2.png",
     "panel_text_relation": "panel_only"
    }
   ],
