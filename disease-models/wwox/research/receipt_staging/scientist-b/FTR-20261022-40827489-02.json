@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-22T00:00:00Z",
+ "event_at": "2026-10-22T04:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "captions_only"
+ },
+ "event_id": "FTR-20261022-40827489-02",
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "Completing pass (owed: figures captions_only, supplementary not_read). Main Figures 1 to 5 opened as page renders (Figures 6 and 7 were read as page renders in the first pass). Supplementary Word file obtained from the PMC open-data bucket: all legends, both tables and the supplementary methods read as text; Supplementary Figures 11 and 12 opened as images; Supplementary Figures 1 to 10 are read as legends only and the companion video (55 MB) was not opened (no video tool here). Supplementary = captions_only, a declared debt."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID40827489.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-b_20261022e.md"
+ ],
+ "prior_receipt": "FTR-20261021-40827489-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "d5be37b8442d94f4d777298a6419e3fd634cd865955971cc446d630b45da51b7",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID40827489_Hristova2025_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1111/epi.18606",
+  "pmid": "40827489"
+ },
+ "workflow": "scientist-b repurposing batch R2d completing pass 2026-10-22; SOURCE_FIRST for the owed sections; NOT WWOX EVIDENCE; page renders at 150 ppi of the PMC open-data PDF; prepared as JSON for the integrator and staged, not appended."
+}

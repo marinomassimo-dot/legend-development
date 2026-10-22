@@ -2,8 +2,9 @@
  "schema_version": 2,
  "pmid": "40827489",
  "doi": "10.1111/epi.18606",
- "receipt": "FTR-20261021-40827489-01",
+ "receipt": "FTR-20261022-40827489-02",
  "landing": [
+  "FTR-20261022-40827489-02",
   "FTR-20261021-40827489-01",
   "repurposing_10h_scientist-b_20261021"
  ],
@@ -168,6 +169,189 @@
      "join": ""
     }
    }
+  },
+  {
+   "path": "files/figures/PMID40827489_r3/page4-04.png",
+   "sha256": "066be6dda1b1cdfa269bd993d871f96cee5d40943cc3eceaaa746906c6bf1d25",
+   "kind": "figure",
+   "note": "Figure 1 (PDF page 4) rendered at 150 ppi and opened as an image (the page carries a 300 ppi embedded raster; the render was read for printed bar values and star brackets).",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "066be6dda1b1cdfa269bd993d871f96cee5d40943cc3eceaaa746906c6bf1d25",
+    "derived_from": "files/supplement/PMID40827489_r2/PMC12779324.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 150 -png -f 4 -l 4 PMC12779324.1.pdf page4"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID40827489_r3/page5-05.png",
+   "sha256": "f73695398e3819e5fac924ae482fb70d001c43663c40315e9ba8d88a7e036647",
+   "kind": "figure",
+   "note": "Figure 2 (PDF page 5) rendered at 150 ppi and opened as an image (the page carries a 300 ppi embedded raster; the render was read for printed bar values and star brackets).",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "f73695398e3819e5fac924ae482fb70d001c43663c40315e9ba8d88a7e036647",
+    "derived_from": "files/supplement/PMID40827489_r2/PMC12779324.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 150 -png -f 5 -l 5 PMC12779324.1.pdf page5"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID40827489_r3/page7-07.png",
+   "sha256": "3dc62f60e24847893f80bb3d6b6b124cc5d5b17c22e213ac47c3e19b296708bd",
+   "kind": "figure",
+   "note": "Figure 3 (PDF page 7) rendered at 150 ppi and opened as an image (the page carries a 300 ppi embedded raster; the render was read for printed bar values and star brackets).",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "3dc62f60e24847893f80bb3d6b6b124cc5d5b17c22e213ac47c3e19b296708bd",
+    "derived_from": "files/supplement/PMID40827489_r2/PMC12779324.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 150 -png -f 7 -l 7 PMC12779324.1.pdf page7"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID40827489_r3/page9-09.png",
+   "sha256": "65d498d96df7b280f43c3fa67ccd5a2b1d2c5588bc8c055a3acfcde874843454",
+   "kind": "figure",
+   "note": "Figure 4 (PDF page 9) rendered at 150 ppi and opened as an image (the page carries a 300 ppi embedded raster; the render was read for printed bar values and star brackets).",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "65d498d96df7b280f43c3fa67ccd5a2b1d2c5588bc8c055a3acfcde874843454",
+    "derived_from": "files/supplement/PMID40827489_r2/PMC12779324.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 150 -png -f 9 -l 9 PMC12779324.1.pdf page9"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID40827489_r3/page11-11.png",
+   "sha256": "581e69f24906c498e6757a29c7a79fb409cbb146854e31148c3f9258248fd1d5",
+   "kind": "figure",
+   "note": "Figure 5 (PDF page 11) rendered at 150 ppi and opened as an image (the page carries a 300 ppi embedded raster; the render was read for printed bar values and star brackets).",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "581e69f24906c498e6757a29c7a79fb409cbb146854e31148c3f9258248fd1d5",
+    "derived_from": "files/supplement/PMID40827489_r2/PMC12779324.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 150 -png -f 11 -l 11 PMC12779324.1.pdf page11"
+    }
+   }
+  },
+  {
+   "path": "files/supplement/PMID40827489_r2/docx_media/image11.png",
+   "sha256": "9ec1a5bfcffaa1bab27c6c413f551c1823bf31add8cf78793892c8843a52c687",
+   "kind": "figure",
+   "note": "Supplementary Figure 11, the embedded PNG of the supplementary Word file, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "9ec1a5bfcffaa1bab27c6c413f551c1823bf31add8cf78793892c8843a52c687",
+    "derived_from": "files/supplement/PMID40827489_r2/EPI-66-4996-s001.docx",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "unzip word/media/image11.png from EPI-66-4996-s001.docx (python zipfile)"
+    }
+   }
+  },
+  {
+   "path": "files/supplement/PMID40827489_r2/docx_media/image12.png",
+   "sha256": "5edd4ee6ea9f1038639daa5914316ab45bc8746c2a428a97c3d5d56b1133f458",
+   "kind": "figure",
+   "note": "Supplementary Figure 12, the embedded PNG of the supplementary Word file, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "5edd4ee6ea9f1038639daa5914316ab45bc8746c2a428a97c3d5d56b1133f458",
+    "derived_from": "files/supplement/PMID40827489_r2/EPI-66-4996-s001.docx",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "unzip word/media/image12.png from EPI-66-4996-s001.docx (python zipfile)"
+    }
+   }
+  },
+  {
+   "path": "files/supplement/PMID40827489_r2/EPI-66-4996-s001.docx",
+   "sha256": "e0bd665dbc07f4fbf57a31144a77bf70c2deeb005a0147cef740cc8e1e629a2e",
+   "kind": "supplement_binary",
+   "note": "Supplementary Information Word file (12 supplementary figures, 2 tables, supplementary methods; 3,292,432 bytes) from the PMC open-data bucket; the companion video file (55,303,652 bytes) was not opened.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12779324.1/EPI-66-4996-s001.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "e0bd665dbc07f4fbf57a31144a77bf70c2deeb005a0147cef740cc8e1e629a2e"
+   }
+  },
+  {
+   "path": "files/supplement/PMID40827489_r2/EPI-66-4996-s001.txt",
+   "sha256": "2d34b9c4f96962600f910fd08876cab79c055fb52e3edb86d8c72affb0ecad54",
+   "kind": "supplement_text",
+   "note": "DERIVED text of the Word file: word/document.xml with markup stripped, one line per paragraph, HTML entities decoded.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftotext_layout_nopgbrk",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "2d34b9c4f96962600f910fd08876cab79c055fb52e3edb86d8c72affb0ecad54",
+    "derived_from": "files/supplement/PMID40827489_r2/EPI-66-4996-s001.docx",
+    "extractor": {
+     "name": "python zipfile + re (stdlib)",
+     "version": "3.12",
+     "call": "read word/document.xml from EPI-66-4996-s001.docx, replace </w:p> by newline, strip tags, html.unescape"
+    }
+   }
   }
  ],
  "verbatim_locators": {
@@ -246,6 +430,86 @@
     "surface": "body",
     "anchor": "Methods, Pharmacology experiments",
     "artifact": "files/fulltext/PMID40827489_Hristova2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the absolute-value analysis the ethosuximide effect on the number of seizure events is reported in both genotypes with no genotype-by-treatment interaction (F = 0.84, P = 0.44).",
+    "snippet": "Treatment with ethosuximide blocked SWD events in both Grin2b+/- and Grin2b+/+ rats (Linear Mixed Model, effect of treatment F = 5.69, DF = 2, P = 0.0091; genotype F = 2.08, DF = 1, P = 0.18; treatment x genotype F = 0.84, DF = 2, P = 0.44;",
+    "surface": "supplement",
+    "anchor": "Supplementary Figure 11 legend",
+    "artifact": "files/supplement/PMID40827489_r2/EPI-66-4996-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "For average seizure duration the authors report a significant treatment-by-genotype interaction (F = 5.65, P = 0.0089), with ethosuximide and memantine shortening the average duration in the heterozygous rats and no significant effect in wild type.",
+    "snippet": "Memantine and ethosuximide decreased the average duration of SWDs in Grin2b+/- rats, while no significant effect observed in wild-type controls (Linear Mixed Model, effect of treatment F = 15.16, DF = 2, P < 0.0001; genotype F = 2.19, DF = 1, P = 0.16; treatment x genotype F = 5.65, DF = 2, P = 0.0089",
+    "surface": "supplement",
+    "anchor": "Supplementary Figure 11 legend",
+    "artifact": "files/supplement/PMID40827489_r2/EPI-66-4996-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "For total seizure duration ethosuximide is reported to reduce it in both genotypes with no interaction (F = 1.28, P = 0.29).",
+    "snippet": "Ultimately, ethosuximide led to a significant reduction in total SWD duration in both Grin2b+/- and wild-type animals (Linear Mixed Model, effect of treatment F = 3.85, DF = 2, P = 0.034; genotype F = 2.28, DF = 1, P = 0.16; treatment x genotype F = 1.28, DF = 2, P = 0.29",
+    "surface": "supplement",
+    "anchor": "Supplementary Figure 11 legend",
+    "artifact": "files/supplement/PMID40827489_r2/EPI-66-4996-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the authors' analysis of reticular-nucleus infusion in heterozygous rats, neither ethosuximide nor memantine significantly changed seizure number relative to saline (P = 0.11).",
+    "snippet": "Treatment with ethosuximide and memantine does not block SWD events in Grin2b+/- animals relative to saline control treatment (Linear Mixed Model, effect of treatment F = 3.33, DF = 2, P = 0.11).",
+    "surface": "supplement",
+    "anchor": "Supplementary Figure 12 legend",
+    "artifact": "files/supplement/PMID40827489_r2/EPI-66-4996-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Wild-type animals entered the pharmacology experiments only if they showed seizures at baseline: four further wild-type rats were implanted and recorded but excluded because they did not display seizures during baseline recording days.",
+    "snippet": "A further four Grin2b+/+ rats were implanted and recorded, but were excluded from pharmacological experiments as they did not display seizures during baseline recording days.",
+    "surface": "supplement",
+    "anchor": "Supplementary Methods, Surgery",
+    "artifact": "files/supplement/PMID40827489_r2/EPI-66-4996-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the sleep and seizure recordings, four heterozygous and nine wild-type rats descended from one wild-type founder were excluded because their seizure rates were higher than other founders' descendants and obscured genotype differences.",
+    "snippet": "Four Grin2b+/- and nine Grin2b+/+ rats that were descendants of one specific wild-type founder rat were excluded as they exhibited higher rates of absence seizures than descendants from other founders, which obfuscated genotype differences.",
+    "surface": "supplement",
+    "anchor": "Supplementary Methods, Surgery",
+    "artifact": "files/supplement/PMID40827489_r2/EPI-66-4996-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that sample sizes were not estimated because these were the first recordings from this rat line.",
+    "snippet": "Sample size estimates were not performed as these were the first recordings from this rat line.",
+    "surface": "supplement",
+    "anchor": "Supplementary Methods, Surgery",
+    "artifact": "files/supplement/PMID40827489_r2/EPI-66-4996-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figures 1 to 5 read as images (page renders): Figure 1C glutamate-receptor subunit GluN2B protein reduced to about 0.57 of wild type in homogenate and about 0.56 in synaptosome (three stars) with GluN2A, GluR1 and PSD95 unchanged; Figure 2B-C number of seizure events per 24 h about 720 in heterozygous rats against about 30 in wild type (three stars), mean duration about 4.6 against about 0.9 s and total about 3,600 against about 100 s; Figure 3 less REM sleep (about 45 against about 64 min) with fewer, longer bouts and shorter wake bouts; Figure 4 power spectra differ mainly in NREM beta (three stars); Figure 5C seizures present in about 33 percent of wild-type and all heterozygous rats.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figures 1-5: GluN2B about 0.57/0.56 of WT (***); SWD events about 720 vs 30 per 24 h; duration about 4.6 vs 0.9 s; REM about 45 vs 64 min; NREM beta *** ; SWD present in about 33% WT vs all KO.",
+    "surface": "figure",
+    "anchor": "Figures 1 to 5 (page renders)",
+    "artifact": "files/figures/PMID40827489_r3/page5-05.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Figure 11 read as an image (absolute values, same animals under saline, memantine and ethosuximide): number of events wild type about 45 (saline) falling to about 5 with ethosuximide (two stars) and heterozygous about 75 falling to about 2 (two stars); mean duration wild type about 3.0 against about 1.9 with ethosuximide (no star) and heterozygous about 6.4 against about 1.3 (three stars); total duration wild type about 155 against about 20 (one star) and heterozygous about 525 against about 5 (one star). Wild-type group n = 5, heterozygous n = 12.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Fig 11: events WT about 45 -> 5 (**), KO about 75 -> 2 (**); mean duration WT 3.0 -> 1.9 (ns), KO 6.4 -> 1.3 (***); total WT 155 -> 20 (*), KO 525 -> 5 (*); n 5 and 12.",
+    "surface": "figure",
+    "anchor": "Supplementary Figure 11 B-D (embedded PNG)",
+    "artifact": "files/supplement/PMID40827489_r2/docx_media/image11.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Figure 12 read as an image (reticular infusion, four heterozygous rats, lines per animal): number of events about 36 with saline, about 9 with memantine and about 22 with ethosuximide; mean duration about 3.0, 2.1 and 2.1 s; total duration about 125, 22 and 85 s; individual animals diverge (one ethosuximide point rises above its saline value), no star on any bar.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Fig 12: events about 36 / 9 / 22 (saline / memantine / ETX), no star; one ETX animal above its saline value; n = 4.",
+    "surface": "figure",
+    "anchor": "Supplementary Figure 12 C (embedded PNG)",
+    "artifact": "files/supplement/PMID40827489_r2/docx_media/image12.png",
     "panel_text_relation": "text_only"
    }
   ],
