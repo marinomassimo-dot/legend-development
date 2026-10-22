@@ -2,8 +2,9 @@
  "schema_version": 2,
  "pmid": "34483921",
  "doi": "10.3389/fphar.2021.711737",
- "receipt": "FTR-20261022-34483921-01",
+ "receipt": "FTR-20261022-34483921-02",
  "landing": [
+  "FTR-20261022-34483921-02",
   "FTR-20261022-34483921-01",
   "repurposing_10h_scientist-b_20261022b"
  ],
@@ -127,6 +128,36 @@
     "result_sha256": "2a8a9d56d220d82490996cdaeed599ee66671dcba7b0faa720b81819f27dd2ba"
    },
    "note": "Figure 2 raster (JPEG) opened as an image; native surface, every point is an integer Racine score so the individual points were read exactly."
+  },
+  {
+   "path": "files/figures/PMID34483921_r2/fphar-12-711737-g001.jpg",
+   "sha256": "3b39a8cc9841ac244449d2ff9122fcc295389dbd73af25a49abaae7f7a8d8802",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC8416418",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "3b39a8cc9841ac244449d2ff9122fcc295389dbd73af25a49abaae7f7a8d8802"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the PMC open-data bucket holds only this raster for the figure)."
+  },
+  {
+   "path": "files/figures/PMID34483921_r2/fphar-12-711737-g003.jpg",
+   "sha256": "4ad5849ef6852989737b3c6071e72648124f5eaa197c7f2aac8d9e2e4d38ae43",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC8416418",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "4ad5849ef6852989737b3c6071e72648124f5eaa197c7f2aac8d9e2e4d38ae43"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the PMC open-data bucket holds only this raster for the figure)."
   }
  ],
  "verbatim_locators": {
@@ -152,12 +183,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "PBS-injected wild-type and mutant mice did not differ on the seizure score (p = 0.8575).",
+    "proposition": "The authors report no obvious difference between PBS-injected wild-type and mutant mice (p = 0.8575).",
     "snippet": "There was no obvious difference between PBS-injected wild-type and GluA1C811S mice (p = 0.8575).",
     "surface": "body",
     "anchor": "Results, phenytoin section",
     "artifact": "files/fulltext/PMID34483921_Iizumi2021_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34483921.json",
+     "entry": 2,
+     "what_changed": "2026-10-22 advisory strength scan found 'did not differ' stronger than the quote's 'no obvious difference'; proposition narrowed to the quote. Prior wording began: PBS-injected wild-type and mutant mice did not differ on the seizure score (p = ",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "ADVISORY_STRENGTH_SCAN"
+      ],
+      "method": "locator_audit.py --strength-scan (advisory word scan of proposition against quote), run 2026-10-22; no blind audit; the narrowing only brings the proposition inside its quote"
+     }
+    }
    },
    {
     "proposition": "The statistics section names two-way ANOVA followed by Fisher's LSD test.",
@@ -197,6 +240,54 @@
     "surface": "figure",
     "anchor": "Figure 2 (JPEG raster)",
     "artifact": "files/figures/PMID34483921_r2/fphar-12-711737-g002.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors suggest that the difference in anticonvulsive effect between phenytoin and trimethadione may depend on each drug's target.",
+    "snippet": "Difference of anticonvulsive effect between PHT and TMZ may depend on each target.",
+    "surface": "body",
+    "anchor": "Discussion, second paragraph",
+    "artifact": "files/fulltext/PMID34483921_Iizumi2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion states that phenytoin is useful for tonic-clonic and focal seizures but not absence seizures in humans (an authors' statement about clinical use, not a result of this paper).",
+    "snippet": "As clinical treatment, PHT is useful for the prevention of tonic-clonic seizures and focal seizures, but not absence seizures in human",
+    "surface": "body",
+    "anchor": "Discussion, second paragraph",
+    "artifact": "files/fulltext/PMID34483921_Iizumi2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "With the AMPA-receptor antagonist given first, the authors report a similar level of anticonvulsive effect in wild-type and palmitoylation-deficient mice (Figure 3).",
+    "snippet": "similar level of anticonvulsive effects was observed in both wild-type and palmitoylation-deficient GluA1C811S mice (Figure 3)",
+    "surface": "body",
+    "anchor": "Discussion, second paragraph",
+    "artifact": "files/fulltext/PMID34483921_Iizumi2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Data Availability Statement refers to supplementary material; the article XML contains no supplementary-material element, so no supplement was available to read.",
+    "snippet": "The original contributions presented in the study are included in the article/supplementary material, further inquiries can be directed to the corresponding author.",
+    "surface": "body",
+    "anchor": "Data Availability Statement",
+    "artifact": "files/fulltext/PMID34483921_Iizumi2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 read as an image: wild-type vehicle points sit at 5 with one at 3; mutant vehicle points sit at 5 with one at 4; wild-type phenytoin points range from 1 to 5, the bulk at 2 and 3; mutant phenytoin points are mostly 5 with points at 4 and 3; a four-star bracket joins wild-type vehicle with wild-type phenytoin and another joins wild-type phenytoin with mutant phenytoin; no star joins mutant vehicle with mutant phenytoin.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1: WT vehicle at 5 with one point at 3; mutant vehicle at 5 with one at 4; WT PHT 1 to 5, bulk at 2 and 3; mutant PHT mostly 5 with 4 and 3; **** WT vehicle vs WT PHT; **** WT PHT vs mutant PHT; no bracket mutant vehicle vs mutant PHT.",
+    "surface": "figure",
+    "anchor": "Figure 1 (JPEG raster)",
+    "artifact": "files/figures/PMID34483921_r2/fphar-12-711737-g001.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3 read as an image: at the lowest NBQX dose both genotype series stay near 5 with one star at the first time point; at the two higher doses both series fall to about 3.5 to 4 at 5 to 15 minutes with one or two stars and return toward 4 to 5 by 30 minutes.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3 panels A to C: 30 mg/kg both series near 5; 60 and 100 mg/kg both fall to about 3.5 to 4 at 5 to 15 min with one or two stars, back to 4 to 5 at 30 min.",
+    "surface": "figure",
+    "anchor": "Figure 3 panels A, B and C (JPEG raster)",
+    "artifact": "files/figures/PMID34483921_r2/fphar-12-711737-g003.jpg",
     "panel_text_relation": "text_only"
    }
   ],
