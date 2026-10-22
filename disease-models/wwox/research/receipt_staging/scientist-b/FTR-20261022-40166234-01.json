@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-22T00:00:00Z",
+ "event_at": "2026-10-22T05:10:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "captions_only"
+ },
+ "event_id": "FTR-20261022-40166234-01",
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "QUESTION_DRIVEN reading of a bioRxiv preprint (version posted 2025-03-22, not peer reviewed; the PMC record is a restricted stub): Introduction, every Results section, Discussion and Methods read in full from the PDF text layer; the four figure rasters of Figure 3 panels E-H and Figure 6 panels C-G were opened as images, the remaining figures and the supplementary figures were read as legends only (captions_only, a declared debt). No transcript or protein assay is described in the text."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID40166234.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-b_20261022d.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "b001c3a8d6cdf683c4005a72a9111c1f74971014b2e23b060d5c1e556cc87a1a",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID40166234_Jang2025_bioRxiv.pdf",
+ "study_id": {
+  "doi": "10.1101/2025.03.21.644680",
+  "pmid": "40166234"
+ },
+ "workflow": "scientist-b repurposing batch R2c 2026-10-22; QUESTION_DRIVEN; NOT WWOX EVIDENCE; bioRxiv PDF acquired with a browser-like user agent; prepared as JSON for the integrator and staged, not appended."
+}

@@ -2,8 +2,9 @@
  "schema_version": 2,
  "pmid": "30175250",
  "doi": "10.1038/s42003-018-0099-2",
- "receipt": "FTR-20261022-30175250-01",
+ "receipt": "FTR-20261022-30175250-02",
  "landing": [
+  "FTR-20261022-30175250-02",
   "FTR-20261022-30175250-01",
   "repurposing_10h_scientist-b_20261022b"
  ],
@@ -148,6 +149,162 @@
     "result_sha256": "5e00abf37fe381f12df913a83e61fabaaf16e1e68aad88e4e07cbb78695ab49a"
    },
    "note": "Supplementary PDF, 21 pages; PyMuPDF text search for ethosuximide returned no page (the same search finds the gene name, so the layer is live)."
+  },
+  {
+   "path": "files/figures/PMID30175250_r2/nihms-984331-f0001.jpg",
+   "sha256": "0ee20507a54087266c5ea43967154927b97e748d398a2470961e037a39c42e6b",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC6115194",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "0ee20507a54087266c5ea43967154927b97e748d398a2470961e037a39c42e6b"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the NIHMS file is the only copy)."
+  },
+  {
+   "path": "files/figures/PMID30175250_r2/nihms-984331-f0002.jpg",
+   "sha256": "0b5f04630b50c0e3ea875c1d52ae024d0fadec520eb34900df5590133e55b844",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC6115194",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "0b5f04630b50c0e3ea875c1d52ae024d0fadec520eb34900df5590133e55b844"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the NIHMS file is the only copy)."
+  },
+  {
+   "path": "files/figures/PMID30175250_r2/nihms-984331-f0003.jpg",
+   "sha256": "2768fdfb95e65fdc153412be07f094400a585aad56e30bc4392f1a52df914606",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC6115194",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "2768fdfb95e65fdc153412be07f094400a585aad56e30bc4392f1a52df914606"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the NIHMS file is the only copy)."
+  },
+  {
+   "path": "files/figures/PMID30175250_r2/nihms-984331-f0004.jpg",
+   "sha256": "81a70fb91b7b5dbe8d1fc0f56592009134daa20e10968a6717d4b1ad93b2260d",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC6115194",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "81a70fb91b7b5dbe8d1fc0f56592009134daa20e10968a6717d4b1ad93b2260d"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the NIHMS file is the only copy)."
+  },
+  {
+   "path": "files/figures/PMID30175250_r2/nihms-984331-f0006.jpg",
+   "sha256": "b59624fc189d648bb0d6dbe253317874964e958f51505194453199ddccc13851",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC6115194",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "b59624fc189d648bb0d6dbe253317874964e958f51505194453199ddccc13851"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the NIHMS file is the only copy)."
+  },
+  {
+   "path": "files/figures/PMID30175250_r2/nihms-984331-f0007.jpg",
+   "sha256": "70186ba3388bde7399e946603f374d5ce2ceb36c29755e49f8a291a798f87421",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC6115194",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "70186ba3388bde7399e946603f374d5ce2ceb36c29755e49f8a291a798f87421"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the NIHMS file is the only copy)."
+  },
+  {
+   "path": "files/figures/PMID30175250_r2/nihms-984331-f0008.jpg",
+   "sha256": "c77d46a4e7a99318d460ab0100d85f78ced337495088a006ec467951fcb7c312",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC6115194",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "c77d46a4e7a99318d460ab0100d85f78ced337495088a006ec467951fcb7c312"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the NIHMS file is the only copy)."
+  },
+  {
+   "path": "files/figures/PMID30175250_r2/nihms-984331-f0009.jpg",
+   "sha256": "f112ae36579c6d9550f093ce7489bbf65c97d74fe3617f682a5c6c0ec1bf879c",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC6115194",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "f112ae36579c6d9550f093ce7489bbf65c97d74fe3617f682a5c6c0ec1bf879c"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the NIHMS file is the only copy)."
+  },
+  {
+   "path": "files/supplement/PMID30175250/supp1.pdf",
+   "sha256": "5e00abf37fe381f12df913a83e61fabaaf16e1e68aad88e4e07cbb78695ab49a",
+   "kind": "supplement_binary",
+   "note": "Supplementary Information PDF (21 pages, 6,196,261 bytes) from the publisher's static-content address; legends and tables read through the text layer, panels not opened as images.",
+   "acquisition_recipe": {
+    "resolved_url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs42003-018-0099-2/MediaObjects/42003_2018_99_MOESM1_ESM.pdf",
+    "http_method": "GET",
+    "tier": "publisher_static_content",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "5e00abf37fe381f12df913a83e61fabaaf16e1e68aad88e4e07cbb78695ab49a"
+   }
+  },
+  {
+   "path": "files/supplement/PMID30175250/supp1.txt",
+   "sha256": "3c4fd0a9083668394480b9e99e5c86118e4b0076f4af6a2b3c966db00327651f",
+   "kind": "supplement_text",
+   "note": "DERIVED text layer of supp1.pdf by pdftotext -layout -nopgbrk; legends and two tables.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftotext_layout_nopgbrk",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "3c4fd0a9083668394480b9e99e5c86118e4b0076f4af6a2b3c966db00327651f",
+    "derived_from": "files/supplement/PMID30175250/supp1.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk supp1.pdf supp1.txt"
+    }
+   }
   }
  ],
  "verbatim_locators": {
@@ -223,6 +380,150 @@
       "method": "Blind audit, triple plus source; verdict table in disease-models/wwox/research/page_adjudications/locator_audit_R4b_R2b_20261022.md; the repair itself is unaudited"
      }
     }
+   },
+   {
+    "proposition": "In heterozygous Scn2a nonsense knock-in mice the authors report a higher prevalence and a greater incidence of epileptiform discharges than in wild-type mice (Fisher's exact P = 0.0455; Mann-Whitney P = 0.0025).",
+    "snippet": "Scn2aRX/+ mice had a higher prevalence and a greater incidence of epileptiform discharges than Scn2a+/+ mice (prevalence rate: Fisher’s exact test, *P = 0.0455, hourly incidence: Mann–Whitney test, U = 0, **P = 0.0025, Fig. 2b)",
+    "surface": "body",
+    "anchor": "Results, first section, second paragraph",
+    "artifact": "files/fulltext/PMID30175250_Ogiwara2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2 read as an image: panel b prints prevalence 2/5 for wild type and 7/7 for the heterozygotes; the wild-type bar is near 0 and the heterozygous bar near 1 discharge per hour with one point near 4.3; panel d and e latency points shorter in the heterozygotes for sudden immobility and myoclonus (star), not for clonic or tonic-clonic convulsion.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2: prevalence 2/5 (+/+) vs 7/7 (RX/+); RX/+ bar about 1 SWD per hour, one point near 4.3; PTZ latency panels star for sudden immobility and myoclonus only.",
+    "surface": "figure",
+    "anchor": "Figure 2 panels b, d, e (JPEG raster)",
+    "artifact": "files/figures/PMID30175250_r2/nihms-984331-f0002.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In Scn2aKO/+ mice two prolonged non-convulsive seizures were seen in 2 out of 6 animals recorded.",
+    "snippet": "ECoG monitoring further revealed two prolonged non-convulsive seizures with duration of 30–45 s in 2 out of 6 Scn2aKO/+ mice examined (Fig. 3b)",
+    "surface": "body",
+    "anchor": "Results, second paragraph of the first section",
+    "artifact": "files/fulltext/PMID30175250_Ogiwara2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In heterozygous Scn2a knockout mice, local field potential discharges were significantly raised in medial prefrontal cortex and caudate putamen (each P = 0.0286) and were not different from wild type in the ventroposterior thalamus (P > 0.9999).",
+    "snippet": "Mann–Whitney test, medial prefrontal cortex: U = 0, *P = 0.0286; visual cortex: U = 8, P > 0.9999; basolateral amygdala: U = 3, P = 0.2571; hippocampus CA1: U = 4, P = 0.4286; caudate putamen: U = 0, *P = 0.0286; ventroposterior thalamus: U = 7.5, P > 0.9999",
+    "surface": "body",
+    "anchor": "Figure 3 legend, panel d",
+    "artifact": "files/fulltext/PMID30175250_Ogiwara2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In mice with Scn2a deleted in dorsal telencephalic excitatory neurons, local field potential discharges were also significantly raised in the ventroposterior thalamus (U = 0, P = 0.0286), together with the somatosensory cortex, medial prefrontal cortex, basolateral amygdala and caudate putamen.",
+    "snippet": "Mann–Whitney test, ECoG, somatosensory cortex: U = 0, *P = 0.0286; LFP, medial prefrontal cortex: U = 0, *P = 0.0286; visual cortex: U = 6, P > 0.999; basolateral amygdala: U = 0, *P = 0.0268; hippocampus CA1: U = 4, P = 0.4286; caudate putamen: U = 0, *P = 0.0268; ventroposterior thalamus: U = 0, *P = 0.0286",
+    "surface": "body",
+    "anchor": "Figure 5 legend, panel h",
+    "artifact": "files/fulltext/PMID30175250_Ogiwara2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors report seizures about ten times more frequent in the excitatory-neuron deletion than in the knock-in heterozygotes (U = 2, P = 0.0088).",
+    "snippet": "Absence-like seizures appeared ~ 10 × more frequently in Scn2afl/+/Emx1-Cre than in Scn2aRX/+ mice (Mann–Whitney test, Scn2aRX/+ vs. Scn2afl/+/Emx1-Cre: U = 2, **P = 0.0088)",
+    "surface": "body",
+    "anchor": "Results, section on seizures in mice with Nav1.2 deletion in excitatory neurons",
+    "artifact": "files/fulltext/PMID30175250_Ogiwara2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 5 read as an image: panel d shows control near 0 and the Emx1-Cre heterozygotes with a bar near 9 discharges per hour and points spread from about 1 to 16, while the Vgat-Cre heterozygotes and their controls sit near 0; panel h shows ventroposterior thalamus about 3 per hour with one star, caudate putamen about 16, medial prefrontal cortex about 12; panel b shows Vgat-Cre heterozygote survival falling to 20 of 30 by day 30 while Emx1-Cre heterozygotes stay at 39 of 39.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5 d: Cntl about 0, fl/+,Emx1-Cre bar about 9 per hour (points about 1 to 16), Vgat-Cre about 0; h: thalamus about 3 (*), caudate putamen about 16, medial prefrontal about 12; b: Vgat-Cre 20/30, Emx1-Cre 39/39.",
+    "surface": "figure",
+    "anchor": "Figure 5 panels b, d, h (JPEG raster)",
+    "artifact": "files/figures/PMID30175250_r2/nihms-984331-f0005.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors cite their earlier report that deletion of Cacna1a in cortical layer VI cells raised T-type current in thalamic relay neurons and caused absence epilepsy, and suggest impaired cortical excitatory input to thalamus may explain the ethosuximide-sensitive seizures in Scn2a-deficient mice (a suggestion, not tested here).",
+    "snippet": "Recently, we reported that a selective Cacna1a gene deletion in cortical layer VI pyramidal cells, which innervate thalamic relay neurons and reticular thalamic neurons, caused upregulation of T-type calcium current in thalamic relay neurons and resulted in absence epilepsy in mice59, suggesting that impaired cortical excitatory input to thalamic regions may cause rebound burst of thalamocortical relay neurons and leads to thalamocortical hyper-synchronous oscillations as may be the case for ethosuximide-sensitive absence-like seizures in Scn2a-deficient mice",
+    "surface": "body",
+    "anchor": "Discussion, paragraph on circuit mechanisms",
+    "artifact": "files/fulltext/PMID30175250_Ogiwara2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors offer, as an untested alternative, that removing Nav1.2 from excitatory neurons may shift excitation and inhibition toward inhibition, with hyperpolarization and low-threshold rebound firing through de-inactivation of T-type calcium currents.",
+    "snippet": "selective Nav1.2 elimination in excitatory neurons may shift an excitation/inhibition balance toward inhibition, which enhances hyperpolarization of neurons and low threshold rebound burst-firing via de-inactivation of T-type calcium currents, increasing the risk of SWD generation",
+    "surface": "body",
+    "anchor": "Discussion, paragraph on circuit mechanisms",
+    "artifact": "files/fulltext/PMID30175250_Ogiwara2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that the circuit basis of the absence-like seizures in the Scn2a-deficient mice requires further study.",
+    "snippet": "Thus, the circuit basis for the development of absence-like seizures in mice with Scn2a-deficiency requires further study.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph on circuit mechanisms, last sentence",
+    "artifact": "files/fulltext/PMID30175250_Ogiwara2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "ECoG recordings were analysed off-line blind to genotype.",
+    "snippet": "analyzed off-line using a software, SleepSign (Kissei Comtec, Nagano, Japan), blind to the genotype",
+    "surface": "body",
+    "anchor": "Methods, Electrocorticography-electromyography recordings",
+    "artifact": "files/fulltext/PMID30175250_Ogiwara2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The ethosuximide control was an equal volume of saline given intraperitoneally.",
+    "snippet": "or vehicle (the same volume of saline) was intraperitoneally injected.",
+    "surface": "body",
+    "anchor": "Methods, Electrocorticography-electromyography recordings",
+    "artifact": "files/fulltext/PMID30175250_Ogiwara2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The only gene-expression assay in the Methods is a TaqMan panel for sodium channel alpha and beta subunits; no calcium channel gene is named in it, so this paper measures no T-type transcript.",
+    "snippet": "pre-designed TaqMan assays for mouse Scn1a, 2a, 3a, 5a, 8a, and 1b-4b as well as the internal standard 18 S rRNA or GAPD",
+    "surface": "body",
+    "anchor": "Methods, Quantitative RT-PCR",
+    "artifact": "files/fulltext/PMID30175250_Ogiwara2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Group comparisons used Mann-Whitney U or unpaired t tests unless otherwise stated.",
+    "snippet": "Comparisons between two genotype groups were performed using Mann–Whitney U test and unpaired t-test, unless otherwise described.",
+    "surface": "body",
+    "anchor": "Methods, Statistical analyses",
+    "artifact": "files/fulltext/PMID30175250_Ogiwara2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Nav1.2 protein in six-week-old neocortex and hippocampus was reduced by about half in the excitatory-neuron deletion and not significantly altered in the inhibitory-neuron deletion.",
+    "snippet": "Nav1.2 expression in 6-week-old neocortex and hippocampus showed ~50% reduction in Scn2afl/+/Emx1-Cre and no significant alterations in Scn2afl/+/Vgat-Cre, compared with Scn2afl/+ mice (Fig. 6)",
+    "surface": "body",
+    "anchor": "Results, section on redistribution of Nav1.2",
+    "artifact": "files/fulltext/PMID30175250_Ogiwara2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 9 read as an image: at P7 to 8 neocortical pyramidal action-potential amplitude is lower in Scn2aKO/+ (about 62 against about 70 mV, three stars) and the maximal rate of rise is about 60 against about 110 across holding potentials; at P15 to 22 amplitudes overlap and only half-width differs (one star); fast-spiking cells show no star.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 9: P7-8 pyramidal AP amplitude about 62 vs about 70 mV (***), dV/dt max about 60 vs about 110; P15-22 amplitude overlaps, half-width *; fast-spiking no star.",
+    "surface": "figure",
+    "anchor": "Figure 9 panels b-g, h-m (JPEG raster)",
+    "artifact": "files/figures/PMID30175250_r2/nihms-984331-f0009.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Supplementary Table 1 legend states that fast-spiking interneurons showed no significant difference between the genotypes.",
+    "snippet": "There is no significant difference in fast-spiking interneurons.",
+    "surface": "supplement",
+    "anchor": "Supplementary Table 1 legend (Supplementary Information, page 20)",
+    "artifact": "files/supplement/PMID30175250/supp1.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say that, in mice with genuine Scn2a deficiency, no epileptic seizures had been described before this work.",
+    "snippet": "In mice with genuine Scn2a deficiency, no epileptic seizures have been described so far38.",
+    "surface": "body",
+    "anchor": "Introduction, fourth paragraph",
+    "artifact": "files/fulltext/PMID30175250_Ogiwara2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
    }
   ],
   "note": ""

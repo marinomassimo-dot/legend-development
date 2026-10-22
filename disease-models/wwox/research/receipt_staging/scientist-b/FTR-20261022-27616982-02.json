@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-22T00:00:00Z",
+ "event_at": "2026-10-22T04:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present"
+ },
+ "event_id": "FTR-20261022-27616982-02",
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "Completing pass (owed: introduction, methods, results, discussion, figures). Introduction, Methods, every Results section with legends and the Discussion were read in full from the XML; all nine figure rasters were opened as images. Supplementary: the article lists no supplementary file (the XML has none and the Frontiers record names none), recorded as not_present."
+ ],
+ "evidence_depth": "complete_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID27616982.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-b_20261022d.md"
+ ],
+ "prior_receipt": "FTR-20261022-27616982-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "7f24e8bae36cd775281b57149473d4d2da2bd74c1655ef3081b26f70a76e5497",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID27616982_Aguado2016_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.3389/fnana.2016.00083",
+  "pmid": "27616982"
+ },
+ "workflow": "scientist-b repurposing batch R2c completing pass 2026-10-22; SOURCE_FIRST for the owed sections; NOT WWOX EVIDENCE; PMC efetch XML acquired with no User-Agent; prepared as JSON for the integrator and staged, not appended."
+}

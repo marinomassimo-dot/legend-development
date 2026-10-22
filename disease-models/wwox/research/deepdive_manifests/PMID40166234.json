@@ -1,0 +1,381 @@
+{
+ "schema_version": 2,
+ "pmid": "40166234",
+ "doi": "10.1101/2025.03.21.644680",
+ "receipt": "FTR-20261022-40166234-01",
+ "landing": [
+  "FTR-20261022-40166234-01",
+  "repurposing_10h_scientist-b_20261022d"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline: pmc_bucket_fetch.py returned a restricted XML stub (PMC holds no body for this record) and the bioRxiv full-text PDF address answered 200 with a 43-page PDF, so no further tier was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locator capture had to come from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author; a blind audit becomes owed if a commit candidate uses this preprint."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; the question (a genotype-by-T-type-blocker design and what was measured) was fixed in advance."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 200,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed search 2026-10-22: 'Huguenard JR[au]' total_count 200 as reported by the search tool (possibly capped); with (WWOX OR Wwox) 0. Initials-level author string, may pool homonyms.",
+  "research_type": "experimental_lab",
+  "weighting": "Transferable literature (NOT WWOX EVIDENCE); a thalamic-physiology laboratory with no WWOX publications on this string; credibility is judged from the design in the preprint, which is a bioRxiv version not certified by peer review.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the derived preprint text (case-insensitive)",
+    "route": "local count over files/fulltext/PMID40166234_Jang2025_bioRxiv.txt",
+    "count": 0
+   },
+   {
+    "query": "occurrences of mRNA, qPCR, RNA-seq, Western, immunohisto, in situ or Cacna in the same text",
+    "route": "local count, same file",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: the counts are the measurement; zero licenses only that the text of this file holds no WWOX mention and no transcript or protein assay vocabulary."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 87,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count from the Crossref reference list used by dependency_integrity.py screen (references_declared 87); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-40166234-01",
+    "target": "Reference 65 (Z944 selective T-type blocker, absence seizures) and reference 83 (Cav3.3 deletion, reticular T-currents)",
+    "question": "Do the cited primary papers give a genotype-by-drug test with a vehicle arm per genotype?",
+    "status": "open - cited, not read"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree, the registry or the receipt ledger already hold anything for PMID 40166234, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "registry_records.py get --pmid returned no record hit and fulltext_receipts.py status --pmid returned nothing; paper_packet.py claim succeeded for scientist-b."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-22",
+  "route": "dependency_integrity.py screen against the Retraction Watch snapshot (the paper is a preprint; no PubMed retraction status applies to a bioRxiv record)",
+  "result": "No retraction flag among the screened references; the preprint itself has no retraction mechanism visible on its bioRxiv record in the queries run, and that absence is a statement about those queries.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 87,
+   "references_screened": 84,
+   "references_with_doi": 84,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 1,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40166234_Jang2025_bioRxiv.pdf",
+   "sha256": "b001c3a8d6cdf683c4005a72a9111c1f74971014b2e23b060d5c1e556cc87a1a",
+   "kind": "article_binary",
+   "note": "bioRxiv preprint PDF, version posted 22 March 2025 (not peer reviewed), 43 pages; PMC holds only a restricted XML stub for this record, so the bioRxiv PDF is the surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.biorxiv.org/content/10.1101/2025.03.21.644680v1.full.pdf",
+    "http_method": "GET",
+    "tier": "biorxiv_full_pdf",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "b001c3a8d6cdf683c4005a72a9111c1f74971014b2e23b060d5c1e556cc87a1a"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID40166234_Jang2025_bioRxiv.txt",
+   "sha256": "ee31f63d2044c367eaae4c8609f3a44d99d345b3219abd2d4ef0e5645f4951fb",
+   "kind": "article_text",
+   "note": "DERIVED text layer of the preprint PDF by pdftotext (reading order, no layout); the manuscript line numbers fall in separate blocks.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftotext_raw_nopgbrk",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "ee31f63d2044c367eaae4c8609f3a44d99d345b3219abd2d4ef0e5645f4951fb",
+    "derived_from": "files/fulltext/PMID40166234_Jang2025_bioRxiv.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -nopgbrk PMID40166234_Jang2025_bioRxiv.pdf PMID40166234_Jang2025_bioRxiv.txt"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID40166234_r1/pg27-001.png",
+   "sha256": "2382c783a1651430b5c8ed59dc684ceeb66ad68eae325ea82a0a1d8d6c5973a6",
+   "kind": "figure",
+   "note": "Figure 3 panels E to G (embedded raster of page 27, 2271 x 850 px) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "2382c783a1651430b5c8ed59dc684ceeb66ad68eae325ea82a0a1d8d6c5973a6",
+    "derived_from": "files/fulltext/PMID40166234_Jang2025_bioRxiv.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f PAGE -l PAGE -png PMID40166234_Jang2025_bioRxiv.pdf OUT"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID40166234_r1/pg27-002.png",
+   "sha256": "bfabb7f2ff8837a0edacbb1bc3b2de3609dd3a4842ac2b8d952c663c5fb90709",
+   "kind": "figure",
+   "note": "Figure 3 panel H (embedded raster of page 27, 2271 x 423 px) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "bfabb7f2ff8837a0edacbb1bc3b2de3609dd3a4842ac2b8d952c663c5fb90709",
+    "derived_from": "files/fulltext/PMID40166234_Jang2025_bioRxiv.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f PAGE -l PAGE -png PMID40166234_Jang2025_bioRxiv.pdf OUT"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID40166234_r1/pg33-001.png",
+   "sha256": "c62a7989679259b47b84d7c7d9e74851413af2a9b34ea1575a9ff94a63911032",
+   "kind": "figure",
+   "note": "Figure 6 panels C and D to F (embedded raster of page 33, 2068 x 910 px) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "c62a7989679259b47b84d7c7d9e74851413af2a9b34ea1575a9ff94a63911032",
+    "derived_from": "files/fulltext/PMID40166234_Jang2025_bioRxiv.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f PAGE -l PAGE -png PMID40166234_Jang2025_bioRxiv.pdf OUT"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID40166234_r1/pg33-002.png",
+   "sha256": "f3b93f24e29adc11c6a7b92180979b00d12a09359e0b36f81a37c20181b9f618",
+   "kind": "figure",
+   "note": "Figure 6 panel G (embedded raster of page 33, 2068 x 454 px) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "f3b93f24e29adc11c6a7b92180979b00d12a09359e0b36f81a37c20181b9f618",
+    "derived_from": "files/fulltext/PMID40166234_Jang2025_bioRxiv.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f PAGE -l PAGE -png PMID40166234_Jang2025_bioRxiv.pdf OUT"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Preprint PDF fingerprinted; derived text layer with working Unicode maps; figure rasters opened as images where stated; every text snippet was machine-verified against the derived text by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet sits in the body or a figure image.",
+  "entries": [
+   {
+    "proposition": "After a low dose of the chemoconvulsant, 6 of 10 knockout mice progressed past the initial spike-wave stage against 4 of 11 wild-type mice.",
+    "snippet": "6 of 10 Cntnap2 –/– mice exhibited such seizure progression, whereas only 4 of 11 Cntnap2+/+ mice showed any progression past the initial SWD stage",
+    "surface": "body",
+    "anchor": "Results, Elevated seizure susceptibility and locomotor activity",
+    "artifact": "files/fulltext/PMID40166234_Jang2025_bioRxiv.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In thalamic slices from knockout mice spontaneous oscillations were commonly observed (7 of 10 slices).",
+    "snippet": "spontaneous oscillations (n ≥ 10 within a 10 min recording) were commonly observed (7 of 10 slices)",
+    "surface": "body",
+    "anchor": "Results, Thalamic Circuit Hyperexcitability",
+    "artifact": "files/fulltext/PMID40166234_Jang2025_bioRxiv.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "At a holding potential of minus 60 mV 15 of 18 knockout reticular neurons showed rebound bursts against 9 of 18 wild-type neurons.",
+    "snippet": "At –60 mV, most (15 of 18) Cntnap2–/– neurons showed rebound bursts compared to about half (9 of 18) Cntnap2+/+ neurons (Fig. 3E)",
+    "surface": "body",
+    "anchor": "Results, Increased burst firing in RT",
+    "artifact": "files/fulltext/PMID40166234_Jang2025_bioRxiv.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors report that the low-threshold T-type calcium conductance, which plays a major role in rebound bursting, was significantly increased in knockout neurons.",
+    "snippet": "Low-threshold T-type calcium conductance, which plays a major role in rebound bursting, was significantly increased in Cntnap2 –/– neurons.",
+    "surface": "body",
+    "anchor": "Results, Increased burst firing in RT",
+    "artifact": "files/fulltext/PMID40166234_Jang2025_bioRxiv.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors word the cause of the bursting as likely increased expression of T-type calcium channels; this is an inference stated with 'likely'.",
+    "snippet": "likely driven by increased expression of T-type calcium channels",
+    "surface": "body",
+    "anchor": "Results, Increased burst firing in RT, last sentence",
+    "artifact": "files/fulltext/PMID40166234_Jang2025_bioRxiv.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors report that Z944 treatment rescued social behaviour in the knockout mice.",
+    "snippet": "Notably, Z944 treatment rescued social behavior in Cntnap2–/– mice",
+    "surface": "body",
+    "anchor": "Results, Acute Systemic inhibition of T-type calcium channel",
+    "artifact": "files/fulltext/PMID40166234_Jang2025_bioRxiv.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors report that the distance travelled by wild-type mice was unaffected by either treatment, vehicle or Z944.",
+    "snippet": "The distance traveled by Cntnap2+/+ mice was unaffected by either treatment (Fig. 6B).",
+    "surface": "body",
+    "anchor": "Results, Acute Systemic inhibition of T-type calcium channel",
+    "artifact": "files/fulltext/PMID40166234_Jang2025_bioRxiv.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the reciprocal interaction test the authors report that Z944 reduced interaction time in wild-type mice and restored it in knockout mice.",
+    "snippet": "Interestingly, Z944 reduced interaction time in Cntnap2 +/+ mice and restored the interaction time in Cntnap2 –/– mice (Fig. 6G).",
+    "surface": "body",
+    "anchor": "Results, Acute Systemic inhibition of T-type calcium channel",
+    "artifact": "files/fulltext/PMID40166234_Jang2025_bioRxiv.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state they cannot exclude that the effect of Z944 on behaviour reflects regions other than the reticular nucleus.",
+    "snippet": "We cannot at this point exclude the possibility that the effects of Z944 on behavior were restricted to RT",
+    "surface": "body",
+    "anchor": "Discussion, paragraph on Z944",
+    "artifact": "files/fulltext/PMID40166234_Jang2025_bioRxiv.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that the Z944 pharmacology did not by itself directly support a role of reticular T channels in the behaviours.",
+    "snippet": "While the pharmacological approach with Z944 did not direct support a role of RT T channels, per se, in ASD behaviors",
+    "surface": "body",
+    "anchor": "Discussion, paragraph on Z944 and DREADDs",
+    "artifact": "files/fulltext/PMID40166234_Jang2025_bioRxiv.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state their study did not explore changes in reticular bursting during postnatal development.",
+    "snippet": "Although our study did not explore changes in RT bursting activity during postnatal development",
+    "surface": "body",
+    "anchor": "Discussion, paragraph on Z944",
+    "artifact": "files/fulltext/PMID40166234_Jang2025_bioRxiv.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Except for oscillation recordings, the experiments used male mice aged 8 to 14 weeks.",
+    "snippet": "Male mice aged 8–14 weeks were used in all experiments except for oscillation recordings",
+    "surface": "body",
+    "anchor": "Materials and Methods, Animals",
+    "artifact": "files/fulltext/PMID40166234_Jang2025_bioRxiv.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The statistics section names t tests, one-way or two-way ANOVA followed by Tukey's test for normally distributed data with equal variance.",
+    "snippet": "Normally distributed data with equal variance were analyzed using t-tests (two-tailed, unpaired or paired), one-way ANOVA, or two-way ANOVA, followed by Tukey’s multiple comparison test.",
+    "surface": "body",
+    "anchor": "Quantification and Statistical analysis",
+    "artifact": "files/fulltext/PMID40166234_Jang2025_bioRxiv.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors cite that deletion of Cav3.3 reduces T-type currents in the reticular nucleus by approximately 80 percent and abolishes rebound bursts.",
+    "snippet": "reduces T-type calcium currents in RT by approximately 80% and abolishes rebound bursts (83)",
+    "surface": "body",
+    "anchor": "Discussion, paragraph on T-type channels",
+    "artifact": "files/fulltext/PMID40166234_Jang2025_bioRxiv.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3H read as an image (peak T-current density, pA/pF, against holding potential): knockout about 2.85 at minus 105 mV and about 1.5 at minus 80 mV, wild type about 1.47 and about 0.7; the curves converge to about 0.3 and about 0.05 at minus 65 mV; two-way ANOVA bracket p = 0.0005.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3H: KO about 2.85 vs WT about 1.47 pA/pF at -105 mV, about 1.5 vs about 0.7 at -80 mV, converging near -65 mV; p = 0.0005 (cells: 14 KO, 15 WT from 3 mice each).",
+    "surface": "figure",
+    "anchor": "Figure 3 panel H (embedded raster)",
+    "artifact": "files/figures/PMID40166234_r1/pg27-002.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3E to G read as an image: pie charts 9 of 18 against 15 of 18 cells with rebound bursts at minus 60 mV; rebound burst count against holding potential higher in knockouts (p = 0.0002 bracket); spikes in the first rebound burst similar (about 7 to 8) in both genotypes.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3E-G: rebound burst pies 9/18 vs 15/18 at -60 mV; burst number higher in KO (p = 0.0002); spikes in first burst about 7-8 in both.",
+    "surface": "figure",
+    "anchor": "Figure 3 panels E-G (embedded raster)",
+    "artifact": "files/figures/PMID40166234_r1/pg27-001.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 6C read as an image (three-chamber test): vehicle wild type spends about 325 s with the social partner against about 135 s with the object (three stars); vehicle knockout about 225 s against about 240 s; Z944 wild type about 345 s against about 130 s and Z944 knockout about 350 s against about 145 s; social index vehicle wild type about 0.37, vehicle knockout about minus 0.05, Z944 wild type about 0.34 and Z944 knockout about 0.42.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6C: social vs object time: WT veh about 325 vs 135 s; KO veh about 225 vs 240; WT Z944 about 345 vs 130; KO Z944 about 350 vs 145; social index WT veh 0.37, KO veh -0.05, WT Z944 0.34, KO Z944 0.42.",
+    "surface": "figure",
+    "anchor": "Figure 6 panel C (embedded raster)",
+    "artifact": "files/figures/PMID40166234_r1/pg33-001.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 6D to G read as an image: grooming time about 40 s (wild type vehicle), about 82 s (knockout vehicle), about 55 s (wild type Z944) and about 40 s (knockout Z944); interaction time about 120, 60, 88 and 95 s in the same order; the number of grooming events and digging time show no star.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6D-G: grooming WT veh about 40, KO veh about 82, WT Z944 about 55, KO Z944 about 40 s; interaction time about 120, 60, 88, 95 s; no star for events or digging.",
+    "surface": "figure",
+    "anchor": "Figure 6 panels D-G (embedded raster)",
+    "artifact": "files/figures/PMID40166234_r1/pg33-002.png",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": ""
+ }
+}

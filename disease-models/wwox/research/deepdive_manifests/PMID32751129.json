@@ -2,8 +2,9 @@
  "schema_version": 2,
  "pmid": "32751129",
  "doi": "10.3390/cells9081800",
- "receipt": "FTR-20261022-32751129-01",
+ "receipt": "FTR-20261022-32751129-02",
  "landing": [
+  "FTR-20261022-32751129-02",
   "FTR-20261022-32751129-01",
   "repurposing_10h_scientist-b_20261022b"
  ],
@@ -112,6 +113,111 @@
     "derived": false,
     "result_sha256": "efc9f05e237a1b8e1e1882a84bf7e0a8e0ed45030c80b96d02f2fb7bcad5473f"
    }
+  },
+  {
+   "path": "files/figures/PMID32751129_r2/cells-09-01800-g001.jpg",
+   "sha256": "555e082e95ace29ea8f66569348f2157ebcbb649323b92b2695589b3bf08a8f4",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC7465657",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "555e082e95ace29ea8f66569348f2157ebcbb649323b92b2695589b3bf08a8f4"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the MDPI JPEG is the only raster)."
+  },
+  {
+   "path": "files/figures/PMID32751129_r2/cells-09-01800-g002.jpg",
+   "sha256": "ba99673cdbd5e841d6e6ab86d3e7e2777f5ff7b01e10c93fd6353fb7bb1342ba",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC7465657",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "ba99673cdbd5e841d6e6ab86d3e7e2777f5ff7b01e10c93fd6353fb7bb1342ba"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the MDPI JPEG is the only raster)."
+  },
+  {
+   "path": "files/figures/PMID32751129_r2/cells-09-01800-g003.jpg",
+   "sha256": "c9cf208e400e2be1da581dda120d2da286acf8cfa84a985cb6b32eb7018f54ba",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC7465657",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "c9cf208e400e2be1da581dda120d2da286acf8cfa84a985cb6b32eb7018f54ba"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the MDPI JPEG is the only raster)."
+  },
+  {
+   "path": "files/figures/PMID32751129_r2/cells-09-01800-g004.jpg",
+   "sha256": "aa899bfbf0ca50e4e5897ed7246c1c77bbdfa0a31cd34cdba75c7075af6fd82d",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC7465657",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "aa899bfbf0ca50e4e5897ed7246c1c77bbdfa0a31cd34cdba75c7075af6fd82d"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the MDPI JPEG is the only raster)."
+  },
+  {
+   "path": "files/figures/PMID32751129_r2/cells-09-01800-g005.jpg",
+   "sha256": "f06026151cb404c4dff2d3996342cd2f129f56d5cde079be702795011eba4518",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC7465657",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "f06026151cb404c4dff2d3996342cd2f129f56d5cde079be702795011eba4518"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the MDPI JPEG is the only raster)."
+  },
+  {
+   "path": "files/figures/PMID32751129_r2/cells-09-01800-g006.jpg",
+   "sha256": "fda1328aefd1c52b91a47fdb7f465d4627190c54b402bcd400c8c13c2ef2b4d6",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC7465657",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "fda1328aefd1c52b91a47fdb7f465d4627190c54b402bcd400c8c13c2ef2b4d6"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the MDPI JPEG is the only raster)."
+  },
+  {
+   "path": "files/supplement/PMID32751129/s001_page-1.png",
+   "sha256": "0642b606b7288e9b64f080fe88528890c3613fd16659de9bf0844fc3a9977ccf",
+   "kind": "figure",
+   "note": "Rendered page image (150 ppi) of Supplementary File 1 (a one-page PDF, SHA-256 65f9a707915bd46fa3e79c03b42d3fbbf604cfc2001cd4d5fd2b027e37e7b630, 13,008 bytes, whose fonts carry no ToUnicode map, so its text layer is not used); opened as an image; the legend wording is read from the rendered page. The PNG is a local render of the PDF member of that zip (pdftoppm 24.02.0, 150 ppi); the PDF itself is not declared because its fonts carry no ToUnicode map.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7465657/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementaryfiles_zip",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "0642b606b7288e9b64f080fe88528890c3613fd16659de9bf0844fc3a9977ccf"
+   }
   }
  ],
  "verbatim_locators": {
@@ -150,6 +256,94 @@
     "surface": "body",
     "anchor": "Results 3.1, first paragraph",
     "artifact": "files/fulltext/PMID32751129_Bouron2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Tissues were collected at embryonic days 11, 13 and 17 and at postnatal day 1.",
+    "snippet": "Tissues were collected at four ages: embryonic days 11 (E11), 13 (E13), and 17 (E17), and post-natal day 1 (PN1)",
+    "surface": "body",
+    "anchor": "Introduction, last paragraph",
+    "artifact": "files/fulltext/PMID32751129_Bouron2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The functional imaging in this paper concerned Chrnb2, Grik5, Orai3 and Trpm7 and not T-type channels.",
+    "snippet": "This study focused its attention on Chrnb2 (AchR β2), Grik5 (GluK5), Orai3 (Orai3), and Trpm7 (TRPM7).",
+    "surface": "body",
+    "anchor": "Results and Discussion 3.2, second paragraph",
+    "artifact": "files/fulltext/PMID32751129_Bouron2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors cite earlier work for functional T-type channels in embryonic cortical cells; their own transcript data are described as indicating that calcium influx through low-threshold channels plays important roles during cortex formation.",
+    "snippet": "They were the predominant VGCC transcripts throughout corticogenesis, from E11 to PN1, indicating that Ca2+ influx through low-threshold VGCC plays important roles during the formation of the rodent cortex.",
+    "surface": "body",
+    "anchor": "Results and Discussion 3.1.1, second paragraph",
+    "artifact": "files/fulltext/PMID32751129_Bouron2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors summarise that at the onset of corticogenesis the main surface calcium-uptake routes include Cav3.1, and at the end, ASIC1, Orai2, P2X2 and GluN1 emerged.",
+    "snippet": "the most important Ca2+ uptake routes of the cell surface at the onset of corticogenesis (Figure 6) are channels formed by TACAN, GluK5, Orai3, Cav3.1, TRPM7, and nAChR β2",
+    "surface": "body",
+    "anchor": "Results and Discussion 3.3, Summary",
+    "artifact": "files/fulltext/PMID32751129_Bouron2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state two limitations: that only some transcripts are translated and that post-translational modifications were not considered.",
+    "snippet": "only certain transcripts are translated to proteins, and this transcriptomic approach did not consider the post-translational modifications known to influence the activity and/or subcellular localization of proteins",
+    "surface": "body",
+    "anchor": "Conclusions, last paragraph",
+    "artifact": "files/fulltext/PMID32751129_Bouron2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that the mRNA expression of auxiliary regulatory subunits of ion channels was not investigated.",
+    "snippet": "the mRNA expression of these regulatory subunits was not investigated",
+    "surface": "body",
+    "anchor": "Conclusions, second paragraph",
+    "artifact": "files/fulltext/PMID32751129_Bouron2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1A read as an image (TPM, bars E11, E13, E17, PN): Cacna1g about 15, 13, 12 and 28; Cacna1h about 4, 11, 33 and 38; Cacna1i no bar at E11 and E13, about 4 at E17 and 8 at PN; Cacna1b about 10 at E17 and 12 at PN; the other plotted calcium channel genes are below about 5.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1A: Cacna1g about 15, 13, 12, 28; Cacna1h about 4, 11, 33, 38; Cacna1i none, none, about 4, 8 (E11, E13, E17, PN).",
+    "surface": "figure",
+    "anchor": "Figure 1A (JPEG raster)",
+    "artifact": "files/figures/PMID32751129_r2/cells-09-01800-g001.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figures 1B-C and 2 to 4 read as images (TPM): Grin1 about 26 at E17 and 58 at PN; Gria2 about 50 at E17; Trpml1 about 17 rising to about 40; Asic1 about 4 rising to about 41; Sec61a1 about 127 at E11 falling to about 93; Tmbim3 about 120, 165, 480 and 620 on its own scale; Atp2a2 about 60 rising to about 115; Slc8a2 about 6 rising to about 50; Gja1 about 73 at E11 falling to about 8 at PN. All bars carry error bars of standard error; no sample number per age is printed in the panels.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figures 1B-C, 2-4: Grin1 about 26 (E17) and 58 (PN); Trpml1 about 17 to 40; Asic1 about 4 to 41; Sec61a1 about 127 to 93; Atp2a2 about 60 to 115; Gja1 about 73 to 8; no n per age in panels.",
+    "surface": "figure",
+    "anchor": "Figures 1B-C, 2, 3, 4 (JPEG rasters)",
+    "artifact": "files/figures/PMID32751129_r2/cells-09-01800-g002.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 5 read as an image: 2-APB raises Fluo-4 signal about 4 percent with calcium and about 3 percent without; zinc with calcium- and magnesium-free saline raises FluoZin-3 to about 1.45 at 8 minutes against about 1.1 with calcium and magnesium, and cadmium suppresses it; thapsigargin raises Fluo-4 by about 20 percent and lanthanum slows decay; puromycin leaves the baseline flat. No panel tests a T-type channel blocker.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5: 2-APB about 1.04 (+Ca) and 1.03 (-Ca); Zn 0Ca/0Mg about 1.45 vs about 1.1; Tg about 1.2, La slows decay; puromycin flat; no T-type blocker panel.",
+    "surface": "figure",
+    "anchor": "Figure 5 panels A-D (JPEG raster)",
+    "artifact": "files/figures/PMID32751129_r2/cells-09-01800-g005.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 6 read as an image: schematic cell for E11-E13 listing GluK5, TACAN, PMCA1, NCX2, nAChR beta2, leak, SERCA2, TRPML1, TMEM165, Cav3.1, Orai3, TRPM7 and connexins CX43, CX45, CX37; schematic for E17-PN1 listing ASIC1, Cav3.2, Orai2, P2X2, GluN1, CX36 and LETM1 in addition.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6: E11-E13 cell shows Cav3.1 among surface uptake routes; E17-PN1 cell shows Cav3.2 with ASIC1, Orai2, P2X2, GluN1.",
+    "surface": "figure",
+    "anchor": "Figure 6 (JPEG raster)",
+    "artifact": "files/figures/PMID32751129_r2/cells-09-01800-g006.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Figure S1, read from the rendered page, says neuroplastin and basigin are mutually exclusive auxiliary subunits of PMCA and plots Nptn, Bsg and Atp2b1 mRNA at E11, E13, E17 and PN (Bsg about 220, 220, 310, 318; Nptn about 6, 7, 20, 30; Atp2b1 about 8, 8, 24, 34 TPM); it concerns the pump, not any voltage-gated channel.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S1 legend reads: Neuroplastin (nptn) and basigin (bsg) are mutually exclusive auxiliary subunits of PMCA; bars for Nptn, Bsg and Atp2b1 at E11, E13, E17 and PN (Bsg about 220 at E11 and E13, about 310 at E17 and about 318 at PN; Nptn about 6, 7, 20, 30; Atp2b1 about 8, 8, 24, 34).",
+    "surface": "figure",
+    "anchor": "Supplementary File 1, page 1, Figure S1 legend (rendered page image)",
+    "artifact": "files/supplement/PMID32751129/s001_page-1.png",
     "panel_text_relation": "text_only"
    }
   ],

@@ -2,8 +2,9 @@
  "schema_version": 2,
  "pmid": "27616982",
  "doi": "10.3389/fnana.2016.00083",
- "receipt": "FTR-20261022-27616982-01",
+ "receipt": "FTR-20261022-27616982-02",
  "landing": [
+  "FTR-20261022-27616982-02",
   "FTR-20261022-27616982-01",
   "repurposing_10h_scientist-b_20261022b"
  ],
@@ -127,6 +128,126 @@
     "result_sha256": "2533d15e4b63cf58e6ec1b6a544b78b380ca2451e01799754c741f1460915fe0"
    },
    "note": "Figure 3 raster (JPEG) opened as an image; native surface. Figure 4 (Cav3.2) read as caption and text only."
+  },
+  {
+   "path": "files/figures/PMID27616982_r2/fnana-10-00083-g0001.jpg",
+   "sha256": "e1a76889bc3b4e4910301b402b1a06d852debb59bd30b83e4cc816f9b1a91c49",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC4999439",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "e1a76889bc3b4e4910301b402b1a06d852debb59bd30b83e4cc816f9b1a91c49"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the Frontiers JPEG is the only raster)."
+  },
+  {
+   "path": "files/figures/PMID27616982_r2/fnana-10-00083-g0002.jpg",
+   "sha256": "8025d9d5ab027595176baa9301bdd1682ae92d97415d2872b90de9683b626951",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC4999439",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "8025d9d5ab027595176baa9301bdd1682ae92d97415d2872b90de9683b626951"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the Frontiers JPEG is the only raster)."
+  },
+  {
+   "path": "files/figures/PMID27616982_r2/fnana-10-00083-g0004.jpg",
+   "sha256": "7dae823d00db568ddbecc5524039ee2fc3b254ca411e27eb0a54052f63d98687",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC4999439",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "7dae823d00db568ddbecc5524039ee2fc3b254ca411e27eb0a54052f63d98687"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the Frontiers JPEG is the only raster)."
+  },
+  {
+   "path": "files/figures/PMID27616982_r2/fnana-10-00083-g0005.jpg",
+   "sha256": "cb1eca2a5f933a4a8f5475d6bc75787d1a3fd3558b69d3f73b86d6c666a6861d",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC4999439",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "cb1eca2a5f933a4a8f5475d6bc75787d1a3fd3558b69d3f73b86d6c666a6861d"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the Frontiers JPEG is the only raster)."
+  },
+  {
+   "path": "files/figures/PMID27616982_r2/fnana-10-00083-g0006.jpg",
+   "sha256": "4ad129c3ffec32d1471b96f235949e70d07976a40b66241b2c89ad8b2be4e0ef",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC4999439",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "4ad129c3ffec32d1471b96f235949e70d07976a40b66241b2c89ad8b2be4e0ef"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the Frontiers JPEG is the only raster)."
+  },
+  {
+   "path": "files/figures/PMID27616982_r2/fnana-10-00083-g0007.jpg",
+   "sha256": "e70271bbd713cd9cbe3b15d7981a23a671e220e6df5ee5833cb25f6758561d3e",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC4999439",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "e70271bbd713cd9cbe3b15d7981a23a671e220e6df5ee5833cb25f6758561d3e"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the Frontiers JPEG is the only raster)."
+  },
+  {
+   "path": "files/figures/PMID27616982_r2/fnana-10-00083-g0008.jpg",
+   "sha256": "8dd03233cee689e6cbfe09ef1d72f03f796ecbf5dbb8580426058a68a11f949c",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC4999439",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "8dd03233cee689e6cbfe09ef1d72f03f796ecbf5dbb8580426058a68a11f949c"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the Frontiers JPEG is the only raster)."
+  },
+  {
+   "path": "files/figures/PMID27616982_r2/fnana-10-00083-g0009.jpg",
+   "sha256": "f30d30de80ac1cad5ed688a9e7c2435b41766bef5b2fde283c487124cd779622",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC4999439",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "f30d30de80ac1cad5ed688a9e7c2435b41766bef5b2fde283c487124cd779622"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the Frontiers JPEG is the only raster)."
   }
  ],
  "verbatim_locators": {
@@ -201,6 +322,102 @@
     "surface": "body",
     "anchor": "Materials and Methods, Tissue Preparation",
     "artifact": "files/fulltext/PMID27616982_Aguado2016_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The animals studied run from the day of birth to adulthood in OF-1 mice.",
+    "snippet": "The OF-1 mice, from the day of birth [postnatal day (P0)] to adulthood",
+    "surface": "body",
+    "anchor": "Materials and Methods, Tissue Preparation",
+    "artifact": "files/fulltext/PMID27616982_Aguado2016_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Two anti-Cav3.3 antibodies failed to give an acceptable or specific signal, so this study reports no Cav3.3 result.",
+    "snippet": "Two different anti-Cav3.3 antibodies were also tested, but failed to provide an acceptable or specific signal.",
+    "surface": "body",
+    "anchor": "Results, first section",
+    "artifact": "files/fulltext/PMID27616982_Aguado2016_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the adult brain Cav3.1 immunoreactivity was strongest in the cerebellum and weaker in the thalamus, with faint staining in hippocampus, neocortex and septum.",
+    "snippet": "Immunoreactivity for Cav3.1 was strongest in the Cb and weaker in the thalamus (Th; Figures 1A,B). Faint staining was observed in the Hp, neocortex and septum (Sp; Figures 1A,B)",
+    "surface": "body",
+    "anchor": "Results, Differential Regional Expression, second paragraph",
+    "artifact": "files/fulltext/PMID27616982_Aguado2016_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the adult brain Cav3.2 immunoreactivity was very strong in hippocampus, cerebellum, septum, caudate putamen and neocortex and moderate in the thalamus.",
+    "snippet": "Thus, very strong Cav3.2 immunoreactivity was observed in the Hp, Cb, Sp, CPu, and Cx, with moderate labeling in the Th",
+    "surface": "body",
+    "anchor": "Results, Differential Regional Expression, third paragraph",
+    "artifact": "files/fulltext/PMID27616982_Aguado2016_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "For Cav3.2 the Results text reports a weak signal at P0, a progressive rise to a peak at P21 and a decrease at P60 in the hippocampal subfields.",
+    "snippet": "weak Cav3.2 expression was detected at P0, increased progressively to reach a peak at P21 and then decreased at P60 (Figures 4A,B)",
+    "surface": "body",
+    "anchor": "Results, postnatal development, Cav3.2 paragraph",
+    "artifact": "files/fulltext/PMID27616982_Aguado2016_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that to their knowledge this is the first detailed description of postnatal changes in T-type channel expression in the brain.",
+    "snippet": "To our knowledge, this data provide the first detailed description of the changes in T-type channel expression in the brain during postnatal development.",
+    "surface": "body",
+    "anchor": "Discussion, Differential Expression of Cav3.1 and Cav3.2 in the Adult and Developing Brain",
+    "artifact": "files/fulltext/PMID27616982_Aguado2016_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors report presynaptic Cav3.2 but not Cav3.1 labeling in axon terminals of excitatory synapses in hippocampus and cerebellum.",
+    "snippet": "we also found presynaptic labeling for Cav3.2 but not Cav3.1 channels in axon terminals establishing excitatory synapses in the Hp and Cb",
+    "surface": "body",
+    "anchor": "Discussion, Cellular and Subcellular Localization",
+    "artifact": "files/fulltext/PMID27616982_Aguado2016_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1B read as an image (adult P90, pixel density in arbitrary units): cerebellum about 90, thalamus about 18, septum about 7, hippocampus about 5, caudate putamen about 3; star brackets over cerebellum against caudate putamen and hippocampus. Figure 1D: cerebellar molecular layer about 92, granule layer about 30, white matter about 10.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1B: Cb about 90, Th about 18, Sp about 7, Hp about 5, CPu about 3; 1D: ml about 92, gc about 30, wm about 10.",
+    "surface": "figure",
+    "anchor": "Figure 1 panels B and D (JPEG raster)",
+    "artifact": "files/figures/PMID27616982_r2/fnana-10-00083-g0001.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2B read as an image (adult P90 Cav3.2, arbitrary units): hippocampus about 30, neocortical layers about 23 to 30, thalamus about 12 (the lowest), septum about 23, caudate putamen about 20, cerebellum about 35, with one star over thalamus against cerebellum; Figure 2F cerebellar molecular layer about 157, granule layer about 83, white matter about 70.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2B: Hp about 30, Cx layers about 23-30, Th about 12 (lowest), Sp about 23, CPu about 20, Cb about 35; 2F: ml about 157, gc about 83, wm about 70.",
+    "surface": "figure",
+    "anchor": "Figure 2 panels B and F (JPEG raster)",
+    "artifact": "files/figures/PMID27616982_r2/fnana-10-00083-g0002.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3B also shows hippocampus, neocortex, caudate putamen and septum flat at roughly 1 to 7 across P0 to P60 for Cav3.1, and the cerebellar bars rising from about 4 at P0 through about 10 at P5, about 41 at P10 and about 58 at P15 to about 70 at P21.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3B: Hp, Cx, CPu, Sp about 1-7 at all ages; Cb P0 about 4, P5 about 10, P10 about 41, P15 about 58, P21 about 70.",
+    "surface": "figure",
+    "anchor": "Figure 3 panel B (JPEG raster)",
+    "artifact": "files/figures/PMID27616982_r2/fnana-10-00083-g0003.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 4B read as an image (Cav3.2): the hippocampal and septal bars rise through P21 and fall at P60 in most subfields (CA1 stratum radiatum about 48 at P21 against about 40 at P60), cerebellar molecular layer about 41 at P21; thalamus is not plotted in this panel.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4B: CA1 sr about 48 at P21, about 40 at P60; Cb ml about 41 at P21; no thalamus group in the panel.",
+    "surface": "figure",
+    "anchor": "Figure 4 panel B (JPEG raster)",
+    "artifact": "files/figures/PMID27616982_r2/fnana-10-00083-g0004.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figures 5 to 9 read as images: pre-embedding immunogold electron micrographs and bar graphs; Cav3.1 gold particles on spines and shafts of cerebellar Purkinje cells and hippocampal interneurons (Figure 5), Cav3.2 in CA1 spines and presynaptic terminals (Figures 6, 7) and in cerebellar parallel-fibre terminals and spines (Figures 8, 9); the Cav3.2 knockout micrographs (Figures 6H, 8E) show essentially no immunogold labelling.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figures 5-9: immunogold micrographs and compartment bar graphs; Cav3.2 KO panels 6H and 8E show essentially no gold labelling.",
+    "surface": "figure",
+    "anchor": "Figures 5 to 9 (JPEG rasters)",
+    "artifact": "files/figures/PMID27616982_r2/fnana-10-00083-g0006.jpg",
     "panel_text_relation": "text_only"
    }
   ],

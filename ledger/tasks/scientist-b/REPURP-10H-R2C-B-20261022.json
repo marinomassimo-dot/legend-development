@@ -1,0 +1,84 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Part of the ten-hour repurposing batch ORCH-REPURPOSING-10H-20261021. Adjacent and transferable literature: every paper that is not WWOX evidence is labelled NOT WWOX EVIDENCE, at class level, no dose, no paediatric suitability presumed, not medical advice.",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-b",
+ "PRIORITY": "HIGH",
+ "DEPENDENCIES": [],
+ "REVIEW_REQUIREMENT": "Mirror ex post",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently",
+ "MILESTONE_PLAN": [
+  "TASK_ACK/CLAIM",
+  "per-paper M0-M5",
+  "analysis note",
+  "self-eval",
+  "report"
+ ],
+ "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
+ "TASK_ID": "REPURP-10H-R2C-B-20261022",
+ "OBJECTIVE": "R2 T-type lot (DL-MECH-170..172): close the partial R2 readings, state what DL-MECH-171 and DL-MECH-172 need in order to be tested, read at most three new 2025-2026 reports.",
+ "SCOPE": {
+  "inputs": [
+   "disease-models/wwox/research/repurposing_batch_selection_20261021.md section 'R2 HELD-partial'",
+   "DL-MECH-171, DL-MECH-172",
+   "drug_repurposing/gse156243/"
+  ],
+  "outputs": "completing staged receipts, manifests, analysis note repurposing_10h_scientist-b_20261022d.md",
+  "forbidden": "repurposing_bridge.py, cards/, cards_early/, the roadmap copies, the four scientific current files, the staged leads"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "partial R2 readings completed with staged receipts (not recorded) and manifests PASS",
+  "discriminating observation and where it would appear stated for DL-MECH-171 and DL-MECH-172",
+  "new reports searched, at most three read",
+  "DEFAULTS_TAKEN and STOP_LOG here"
+ ],
+ "assigned_on": "2026-10-22",
+ "TASK_ACK": {
+  "by": "scientist-b",
+  "on": "2026-10-22"
+ },
+ "TASK_CLAIM": {
+  "by": "scientist-b",
+  "branch": "task/repurp-10h-r2c-b",
+  "worktree": ".claude/worktrees/r2c-b",
+  "on": "2026-10-22"
+ },
+ "DEFAULTS_TAKEN": [
+  "'R2 HELD-partial' lists none; treated the five partial first-relay readings (27616982, 30175250, 32678276, 32751129, 34483921) as the rows to close",
+  "completing receipts use reread_reason inadequate_prior_coverage and prior_receipt, STAGED not recorded",
+  "30175250 supplement declared captions_only (panels not opened); 32751129 supplement PDF not declared (no ToUnicode map), rendered page image declared instead",
+  "one new report read (Cntnap2 preprint 40166234) from the bioRxiv PDF because PMC holds a stub; 41932329, 40165594, 39814556 parked abstract-only",
+  "two of my own earlier propositions narrowed after the advisory strength scan with contradicts_locator declared (34483921 entry 2, 32678276 entry 0)"
+ ],
+ "STOP_LOG": [],
+ "CURRENT_STATE": "DONE_PENDING_LANDING",
+ "RESULT": {
+  "completed": [
+   "34483921",
+   "30175250",
+   "27616982",
+   "32678276",
+   "32751129"
+  ],
+  "new": [
+   "40166234"
+  ],
+  "parked": [
+   "41932329",
+   "40165594",
+   "39814556"
+  ],
+  "receipts": [
+   "FTR-20261022-34483921-02",
+   "FTR-20261022-30175250-02",
+   "FTR-20261022-27616982-02",
+   "FTR-20261022-32678276-02",
+   "FTR-20261022-32751129-02",
+   "FTR-20261022-40166234-01"
+  ],
+  "note": "disease-models/wwox/research/repurposing_10h_scientist-b_20261022d.md"
+ }
+}

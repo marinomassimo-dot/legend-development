@@ -2,8 +2,9 @@
  "schema_version": 2,
  "pmid": "32678276",
  "doi": "10.1038/s41598-020-68845-y",
- "receipt": "FTR-20261022-32678276-01",
+ "receipt": "FTR-20261022-32678276-02",
  "landing": [
+  "FTR-20261022-32678276-02",
   "FTR-20261022-32678276-01",
   "repurposing_10h_scientist-b_20261022b"
  ],
@@ -127,6 +128,96 @@
     "result_sha256": "8d0cb08f9a1b538fba9b9b7610a95f5c154b93c4ec82e0fa06e9b26c52271ed9"
    },
    "note": "Figure 4 raster (JPEG) opened as an image; native surface."
+  },
+  {
+   "path": "files/figures/PMID32678276_r2/41598_2020_68845_Fig1_HTML.jpg",
+   "sha256": "4d70a74068fdff1dcb8b94052c58347e2b4382e30f8636d39b8a32dd6e466b08",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC7366932",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "4d70a74068fdff1dcb8b94052c58347e2b4382e30f8636d39b8a32dd6e466b08"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the Springer HTML JPEG is the only raster)."
+  },
+  {
+   "path": "files/figures/PMID32678276_r2/41598_2020_68845_Fig2_HTML.jpg",
+   "sha256": "cee49a8a352c6c58ce8ddd82c5d9be85e5c8d868ffa1ac11ba2972ee60ade29e",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC7366932",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "cee49a8a352c6c58ce8ddd82c5d9be85e5c8d868ffa1ac11ba2972ee60ade29e"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the Springer HTML JPEG is the only raster)."
+  },
+  {
+   "path": "files/figures/PMID32678276_r2/41598_2020_68845_Fig3_HTML.jpg",
+   "sha256": "2eb63fced64ac1770c9be9c4fc4948d2eca0d8c90f4c1b5b931478bfd4771d52",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC7366932",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "2eb63fced64ac1770c9be9c4fc4948d2eca0d8c90f4c1b5b931478bfd4771d52"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the Springer HTML JPEG is the only raster)."
+  },
+  {
+   "path": "files/figures/PMID32678276_r2/41598_2020_68845_Fig5_HTML.jpg",
+   "sha256": "6dccd8a50bfd38b10ee23e20f263a11fd603dcd4a0dedf0119221e553ef4bcaf",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC7366932",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "6dccd8a50bfd38b10ee23e20f263a11fd603dcd4a0dedf0119221e553ef4bcaf"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the Springer HTML JPEG is the only raster)."
+  },
+  {
+   "path": "files/figures/PMID32678276_r2/41598_2020_68845_Fig6_HTML.jpg",
+   "sha256": "239260620eece7fa6d133e5dda5109a4693b4f29006cc3659a0ce1bb00704a79",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC7366932",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "239260620eece7fa6d133e5dda5109a4693b4f29006cc3659a0ce1bb00704a79"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the Springer HTML JPEG is the only raster)."
+  },
+  {
+   "path": "files/figures/PMID32678276_r2/41598_2020_68845_Fig7_HTML.jpg",
+   "sha256": "c1a72ee87d512e6dfdd889358b521ee56367f9a1272f2e4f138152c342228442",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC7366932",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "c1a72ee87d512e6dfdd889358b521ee56367f9a1272f2e4f138152c342228442"
+   },
+   "note": "Figure raster (JPEG) opened as an image in the completing pass; native surface (the Springer HTML JPEG is the only raster)."
   }
  ],
  "verbatim_locators": {
@@ -136,12 +227,24 @@
   "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet sits in the body, a figure legend or a figure image.",
   "entries": [
    {
-    "proposition": "Two saline sessions separated by intervening drug treatments did not differ on any measured parameter (paired t-test, all p > 0.05), so only the first saline session was used as the comparator.",
+    "proposition": "The authors report no statistically significant difference between two saline sessions after intervening drug treatments in any measured parameter (paired t-test, all p values above 0.05), so only the first saline session was used as the comparator.",
     "snippet": "Firstly, no statistically significant difference in any measured parameter was found between two saline sessions after intervening drug treatments (all p values > 0.05 in paired t-test), so we used only the first saline session in the comparison with other drug treatments.",
     "surface": "body",
     "anchor": "Results, SWD responses section",
     "artifact": "files/fulltext/PMID32678276_Kam2020_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32678276.json",
+     "entry": 0,
+     "what_changed": "2026-10-22 advisory strength scan found 'did not differ' stronger than the quote's 'no statistically significant difference'; proposition narrowed to the quote. Prior wording began: Two saline sessions separated by intervening drug treatments did not differ on a",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "ADVISORY_STRENGTH_SCAN"
+      ],
+      "method": "locator_audit.py --strength-scan (advisory), run 2026-10-22; no blind audit; the narrowing only brings the proposition inside its quote"
+     }
+    }
    },
    {
     "proposition": "The Discussion states that ethosuximide was effective against SWDs in the aged transgenic mice during the mixed state and neutral in sleep and waking immobility.",
@@ -181,6 +284,102 @@
     "surface": "figure",
     "anchor": "Figure 4, top row (JPEG raster)",
     "artifact": "files/figures/PMID32678276_r2/41598_2020_68845_Fig4_HTML.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors chose ethosuximide because it is the prototype drug effective for absence seizures, which are associated with spike-wave discharges in genetic rat models.",
+    "snippet": "As AEDs we selected ethosuximide since it is the prototype drug effective for absence seizures, which are associated with SWDs in genetic rat models of absence epilepsy",
+    "surface": "body",
+    "anchor": "Introduction, fourth paragraph",
+    "artifact": "files/fulltext/PMID32678276_Kam2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Introduction cites one earlier preclinical drug study in two amyloid mouse models in which ethosuximide, and to a lower extent brivaracetam and levetiracetam, significantly reduced spike-wave discharges while phenytoin was ineffective.",
+    "snippet": "Of these, ethosuximide, and to a lower extent, brivaracetam and levetiracetam were able to significantly reduce SWDs in both mouse lines, whereas phenytoin was ineffective.",
+    "surface": "body",
+    "anchor": "Introduction, third paragraph",
+    "artifact": "files/fulltext/PMID32678276_Kam2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Results state that ethosuximide effectively suppressed spike-wave discharges only during the mixed behavioural state and decreased EEG power at about 8-10 Hz.",
+    "snippet": "ESM effectively suppressed SWDs only during the mixed state and decreased both absolute and relative EEG power at ~ 8–10 Hz (peak power frequency of SWD)",
+    "surface": "body",
+    "anchor": "Results, SWD responses section",
+    "artifact": "files/fulltext/PMID32678276_Kam2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Results state that no drug had a significant effect on the duration of a single spike-wave discharge.",
+    "snippet": "None of the drugs had a significant effect on the duration of a single SWD (Fig. 4, bottom row).",
+    "surface": "body",
+    "anchor": "Results, SWD responses section",
+    "artifact": "files/fulltext/PMID32678276_Kam2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors caution that spike-wave discharge counts during sleep are hard to separate from sleep spindles and should be interpreted with caution.",
+    "snippet": "Therefore, the drug effects on SWD occurrence during sleep should be interpreted with caution.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph on sleep spindles",
+    "artifact": "files/fulltext/PMID32678276_Kam2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say the study design did not allow more than one dose of each drug to be tested.",
+    "snippet": "Unfortunately, the present study design did not allow possibility to test more than one dose of each drug",
+    "surface": "body",
+    "anchor": "Discussion, paragraph on GABAB antagonist",
+    "artifact": "files/fulltext/PMID32678276_Kam2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that no EEG study of Alzheimer patients had, to their knowledge, found spike-wave discharges, so the predictive validity of the mouse measure remains to be seen in future clinical studies.",
+    "snippet": "No EEG study on AD patients to our knowledge has discovered SWDs",
+    "surface": "body",
+    "anchor": "Discussion, translational paragraph",
+    "artifact": "files/fulltext/PMID32678276_Kam2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Conclusion states that ethosuximide and levetiracetam reduced spike-wave discharges in the mixed state, probably by different mechanisms, because ethosuximide decreased total cortical EEG power at 9-11 Hz and levetiracetam did not.",
+    "snippet": "ESM and LEV reduced SWD occurrence significantly during the mixed state, but probably through different mechanisms, since ESM decreased total cortical EEG PSD at SWD resonance frequency (9–11 Hz) while LEV did not change total cortical EEG PSD.",
+    "surface": "body",
+    "anchor": "Conclusion",
+    "artifact": "files/fulltext/PMID32678276_Kam2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 4 rows 2 and 3 read as an image: total duration and single-event duration; ethosuximide bars are below saline in total duration in waking immobility (about 38 against about 78 s per hour) and mixed state (about 15 against about 103) with a star only in the mixed state; no drug has a star in the single-event row.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4 rows 2-3: ESM total duration waking immobility about 38 vs about 78 (no star), mixed about 15 vs about 103 (*); single-event duration no stars.",
+    "surface": "figure",
+    "anchor": "Figure 4 rows 2 and 3 (JPEG raster)",
+    "artifact": "files/figures/PMID32678276_r2/41598_2020_68845_Fig4_HTML.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 5 read as an image (PSD of merged spike-wave discharges, mV2/Hz): saline peak about 1.5e-3 near 9 Hz; ethosuximide peak about 1.2e-3 and broader around 9 to 10 Hz; atropine peak about 2.2e-3 at about 5 Hz (grey arrow); donepezil, beta-hydroxybutyrate, pyruvate and lactate peaks about 1.7 to 2.0e-3 near 9 Hz.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5: saline peak about 1.5e-3 near 9 Hz; ESM about 1.2e-3 broad 9-10 Hz; ATR about 2.2e-3 at about 5 Hz; DPZ, BHB, PYR, LAC about 1.7-2.0e-3 near 9 Hz.",
+    "surface": "figure",
+    "anchor": "Figure 5 panels A to I (JPEG raster)",
+    "artifact": "files/figures/PMID32678276_r2/41598_2020_68845_Fig5_HTML.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figures 6 and 7 read as images (absolute and relative PSD, drug against saline, FDR-corrected green shading): ethosuximide shows shaded bands in waking immobility and mixed state between roughly 7 and 22 Hz (Figure 6) and only narrow bands in the relative PSD (Figure 7); atropine shows shading across nearly all frequencies and states; levetiracetam, beta-hydroxybutyrate and pyruvate show little or narrow shading.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figures 6-7: ESM shaded bands in waking immobility and mixed (roughly 7-22 Hz, Fig 6) and narrow bands in Fig 7; ATR shaded nearly everywhere; LEV, BHB, PYR little or narrow.",
+    "surface": "figure",
+    "anchor": "Figures 6 and 7 (JPEG rasters)",
+    "artifact": "files/figures/PMID32678276_r2/41598_2020_68845_Fig6_HTML.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figures 1 to 3 read as images: Figure 1 shows spike-wave discharge examples (red) in the right frontal channel under saline, ethosuximide, levetiracetam, atropine, beta-hydroxybutyrate and pyruvate; Figure 2 a 3 h session with EEG, EMG and staging and spectra for slow-wave sleep, spindle and REM; Figure 3 shows atropine moving time about 41 min per recording hour against about 11 for saline (two stars) and ethosuximide about 7 with no star.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figures 1-3: SWD examples; 3 h session staging; Fig 3 ATR about 41 vs saline about 11 min per hour (**), ESM about 7 no star.",
+    "surface": "figure",
+    "anchor": "Figures 1, 2, 3 (JPEG rasters)",
+    "artifact": "files/figures/PMID32678276_r2/41598_2020_68845_Fig3_HTML.jpg",
     "panel_text_relation": "text_only"
    }
   ],

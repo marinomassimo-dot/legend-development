@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-22T00:00:00Z",
+ "event_at": "2026-10-22T04:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read"
+ },
+ "event_id": "FTR-20261022-32751129-02",
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "Completing pass (owed: abstract, introduction, results, figures, tables, discussion, limitations). Full article read from the XML: Introduction, Materials and Methods, Results and Discussion (all subsections), Conclusions with the limitation paragraphs; Tables 1 and 2 read as XML table text (their cells concatenate in the text layer, so no table cell is quoted as a locator); all six figure rasters opened as images. The article lists Supplementary File 1; it was obtained from Europe PMC supplementaryFiles (a one-page PDF with Figure S1 on the pump auxiliary subunits Nptn and Bsg), its text layer read and its page rendered and opened as an image: supplementary = read. The abstract was read for coverage only and no locator is abstract-anchored."
+ ],
+ "evidence_depth": "complete_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID32751129.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-b_20261022d.md"
+ ],
+ "prior_receipt": "FTR-20261022-32751129-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "efc9f05e237a1b8e1e1882a84bf7e0a8e0ed45030c80b96d02f2fb7bcad5473f",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID32751129_Bouron2020_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.3390/cells9081800",
+  "pmid": "32751129"
+ },
+ "workflow": "scientist-b repurposing batch R2c completing pass 2026-10-22; SOURCE_FIRST for the owed sections; NOT WWOX EVIDENCE; PMC efetch XML acquired with no User-Agent; prepared as JSON for the integrator and staged, not appended."
+}

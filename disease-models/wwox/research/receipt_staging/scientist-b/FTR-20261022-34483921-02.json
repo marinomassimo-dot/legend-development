@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-22T00:00:00Z",
+ "event_at": "2026-10-22T04:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present"
+ },
+ "event_id": "FTR-20261022-34483921-02",
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "Completing pass (owed: discussion, figures captions_only, supplementary). Discussion read in full (three paragraphs). Figures 1 and 3 JPEG rasters opened as images (Figure 2 was read as an image in the first pass). Supplementary: the Data Availability Statement mentions supplementary material but the article XML carries no supplementary-material element and the PMC open-data bucket lists only the article XML, PDF, text, JSON and the three figure rasters; recorded as not_present."
+ ],
+ "evidence_depth": "complete_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID34483921.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-b_20261022d.md"
+ ],
+ "prior_receipt": "FTR-20261022-34483921-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "3999183c9ec83da4a15fbfa2d133b2062ba735ce2001a564c6a913430dce39a1",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID34483921_Iizumi2021_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.3389/fphar.2021.711737",
+  "pmid": "34483921"
+ },
+ "workflow": "scientist-b repurposing batch R2c completing pass 2026-10-22; SOURCE_FIRST for the owed sections; NOT WWOX EVIDENCE; PMC efetch XML acquired with no User-Agent; prepared as JSON for the integrator and staged, not appended."
+}
