@@ -3,7 +3,7 @@
  "pmid": "39625912",
  "doi": "10.1371/journal.pone.0312936",
  "pmcid": "PMC11614242",
- "receipt": "FTR-20261022-39625912-02",
+ "receipt": "FTR-20261021-39625912-01",
  "context_policy": "QUESTION_DRIVEN",
  "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
  "landing": [
