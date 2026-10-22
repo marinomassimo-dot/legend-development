@@ -150,6 +150,11 @@
     "acquired_on": "2026-10-21",
     "result_sha256": "fb2ae1012d35d58a5ae4c0dba3fc39133c2cd382eaf591ac91ca451affbf8c53"
    }
+  },
+  {
+   "path": "files/supplement/PMID37296418_r2/12987_2023_433_MOESM1_ESM.pptx",
+   "sha256": "26b472456e8e30aab108c64f201868cf8f5c7207da06b30aaf5310d7dae0c9e7",
+   "kind": "supplement_binary"
   }
  ],
  "verbatim_locators": {
@@ -270,10 +275,18 @@
     "panel_text_relation": "panel_qualifies_text",
     "qualifies": "entries[5]",
     "qualifies_needle": "PLX-prh, n = 6, 13.5 ± 13.6%, Two-way ANOVA, "
+   },
+   {
+    "proposition": "The supplementary deck's last slide tabulates, per figure panel (1B, 1D, 2B to 2F, 3B, 4B, 5B), a two-way ANOVA genotype (WT versus prh) p value; the same table carries treatment (untreated versus PLX) p values and interactions. I rely on none of these values; they are recorded so that the deck is declared and its content is known.",
+    "snippet": "Figures 1B II-IV 1B VI-V 1B WM 1D 2B 2C 2E 2F 3B GM 3B WM 3B TC 4B 5B top 5B bottom Genotype p value (WT vs prh)",
+    "anchor": "Supplementary pptx, slide 3 (statistics table)",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID37296418_r2/12987_2023_433_MOESM1_ESM.pptx",
+    "panel_text_relation": "text_only"
    }
   ],
   "source_fulltext_indexed": true,
-  "source_fulltext_indexed_evidence": "PMC efetch XML and PMC PDF fingerprinted; Figures 4 and 9 inspected as 150 dpi page renders (the embedded rasters lack axis text and were not used for values); other figures, extracted Fig 1-3, 5-8 and the supplementary pptx read from captions and Results text only.",
+  "source_fulltext_indexed_evidence": "PMC efetch XML and PMC PDF fingerprinted; Figures 4 and 9 inspected as 150 dpi page renders (the embedded rasters lack axis text and were not used for values); other figures, extracted Fig 1-3, 5-8 read from captions and Results text only; the supplementary pptx (3 slides, no speaker-notes pane: Supplementary Figures 1 to 8 as images, Supplementary Table 1, and a two-way ANOVA p-value table for genotype, treatment and interaction by figure panel) was opened through the verifier and declared as supplement_binary.",
   "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
  }
 }
