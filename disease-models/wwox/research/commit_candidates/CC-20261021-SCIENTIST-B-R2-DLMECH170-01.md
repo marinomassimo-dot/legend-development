@@ -25,3 +25,15 @@
 ## Ordering
 
 The twenty-three new receipts and three re-read receipts and the Cheng re-read receipt are staged in event-ID order within `receipt_staging/scientist-b/FTR-20261021-*`; the Orchestrator records them with `record_staged_receipts.py` before any registry record that cites them. Retraction-screen note: 32719346 cites one retracted reference in a grouped background citation (relation: citation only).
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_012`
+
+Propagated by `BATCH_20261019_012` (2026-10-22, MINOR, `WM_v7.27` preserved; integrator ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`).
+
+- **Landed:** (1) `DL-MECH-170` — a dated counter-evidence and qualifiers bullet; the lead is **neither narrowed nor promoted** (tag `IPOTESI` and status `open` unchanged, Causal statement and Falsifying experiment not edited). The R2 qualifiers stand as the header states them: plausible as a category, not established for Wwox; a late phase of a six-animal null arm; control cohorts of a comparable order; no interaction test; an ethosuximide effect does not imply T-type excess; symptomatic in every paper that looks. (2) `FT-115` — a dated update that qualifies the retired negative without reversing it. (3) `PAPER` and `LIT` identity records for the readings that had none (the twenty-three of item 5 and the five of the second wave).
+- **The two WWOX-deficient transcript datasets are recorded with their n and marked UNRECONCILED:** the P47T table (CACNA1G up, CACNA1H down; n = 5 per group) and the P17 re-analysis (Cacna1g no consistent direction, Cacna1i lower in all four comparisons; n = 2 to 4 per group). The reconciliation the producer was asked for had not been written when this batch ran.
+- **Appended as new leads (both validated by `discovery_lead.py check`):** `DL-MECH-171` (the P17 transcripts, with the UNRECONCILED marker added by the integrator to its title and causal statement) and `DL-MECH-172` (trimethadione: the interaction runs OPPOSITE to the `DL-MECH-170` direction — the drug works in wild type and is much weaker in the hyperexcitable mutant, both vehicle groups at a ceiling). Two wording corrections were made to them in place on the strength of the blind audit of 2026-10-22, each with its superseded wording quoted.
+- **Not landed, for want of a registry target:** item 3 (the mis-citation caution on the review that cites a Dravet-and-WWOX organoid sentence to a record that holds neither term) and item 4 (the selection correction) are notes for whoever builds a card from those sources; they live here and in the producer's note.

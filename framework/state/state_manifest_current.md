@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261019_011
-last_batch_commit_date: 2026-10-21
+last_batch_commit_id: BATCH_20261019_012
+last_batch_commit_date: 2026-10-22
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 0
+commit_candidates_propagated: 2
 target_wm_version: WM_v7.27
-trigger: MANUAL (operator-authorised repair batch, ACTOR_ID orchestrator by stated assumption, task ORCH-METABOLIC-BATCH-20261019). Repair of every locator-count disagreement in paper_registry_current.md: fourteen count assertions across thirteen records (PAPER 001, 004, 005, 018, 020, 021, 023, 093, 094, 095, 118, 135, 156 and CORPUS-STUB-109; PAPER 001 and PAPER 094 assert the same manifest's count) each named a deep-dive manifest and understated it. Every one was re-derived first-hand from the manifest on disk as len(verbatim_locators['entries']) and corrected in place with the superseded wording quoted beside the new value per prompt_batch_commit.md 7.2, keeping each sentence's attribution to the receipt it already named rather than re-pointing it at the later reading, and naming that later reading instead. ALL FOURTEEN WERE STALE TOTALS: git log on each manifest shows the asserted figure equal to the entry count on the day its sentence was written. The D-40 len(mapping) signature the tool raised on PAPER 004 and PAPER 156 was contested against the source and is a FALSE POSITIVE on both - both manifests held exactly 6 entries at commit 28faaf0a, the day those sentences were written in 59fba0bc - so no repair of the mis-measurement class was owed or made. locator_count_crosscheck.py --sweep: 14 disagreements before, 0 after; agrees 36 -> 50; unparsed 5 before and after. BASELINE_DISAGREEMENTS lowered 14 -> 0 in the same commit with the fourteen records named in the constant's note; BASELINE_UNPARSED deliberately held at 5, because the five are not count disagreements and two of them discuss a paper's own total beside an erratum's manifest, which is the case that cannot be repaired honestly. No claim, Status, Type, Summary, block or baseline touched; no PAPER or LIT record created. NO WORKING-MODEL BUMP: section 2 bumps only for a BATCH_COMMIT that modifies the disease model, and a locator-count figure in a provenance sentence changes no claim, support or uncertainty - the same reasoning BATCH_20261019_009 applied to a provenance sentence and BATCH_20261019_010 to a detection-rule citation; WM_v7.27 is preserved with its date, its history note and its changelog row untouched.
+trigger: MANUAL (operator-authorised, ACTOR_ID orchestrator by stated assumption, task ORCH-REPURPOSING-10H-20261021). Identity records PAPER 429-544 and LIT-0701-0816 for 116 receipts that had none (ORPHAN_COMPLETE_READ 36 before, 0 after), plus the research-layer propagation of what two candidate headers say survived their audits: DL-MECH-170 qualified and neither narrowed nor promoted, DL-MECH-171 and DL-MECH-172 appended, FT-115 and FT-113 updated. The R3 attribution addition to DL-THER-089 is HELD. NO WORKING-MODEL BUMP: section 2 bumps only for a BATCH_COMMIT that modifies the disease model, and nothing here changes a claim, block, Status, Type, Summary, support or uncertainty - every record carries Claim links none and Working Model impact none, except PAPER 530, whose only link is a cross-reference to a claim that already cites it; the same reasoning BATCH_20261019_009, _010 and _011 applied to a provenance sentence, a detection-rule citation and a locator count. WM_v7.27 is preserved with its date, history note and changelog row untouched.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,8 +126,8 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261021_BATCH_20261019_011
-last_lint_date: 2026-10-21
+last_lint_id: LINT_20261022_BATCH_20261019_012
+last_lint_date: 2026-10-22
 last_lint_result: WARN
 ```
 

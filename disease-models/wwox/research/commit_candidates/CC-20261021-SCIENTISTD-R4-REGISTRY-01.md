@@ -42,3 +42,14 @@ Blind locator audit is OWED on 42481851, 39625912, 33180985, 35841234, 41784472,
 
 ## Discovery-ledger proposals
 None appended. Design leads are in the note and are `IPOTESI`.
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_012`
+
+Propagated by `BATCH_20261019_012` (2026-10-22, MINOR, `WM_v7.27` preserved; integrator ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`).
+
+- **Landed:** `PAPER` and `LIT` identity records for the twenty-two receipts of the table (and the ten of the second wave, which carry the same shape), each class-level, NOT WWOX EVIDENCE, `Claim links: none`. The grade is **T4** for every row: the candidate's table says T3, but the registry's scale defines T3 as WWOX measured outside a loss-of-function neural system and T4 as WWOX not measured, and no row measures WWOX (the read artefacts contain no occurrence of the gene, with one registry-row mention counted in the Spanish multicentre record); the grade was applied by the scale, not by the table.
+- **Not landed:** the held row `36537114` (no receipt; its manifest belongs to another actor); no ledger lead, none being proposed.
+- **Still owed (declared by the candidate):** the blind locator audit of the readings it lists; a later audit file covers ten of those manifests and holds the per-triple verdicts.

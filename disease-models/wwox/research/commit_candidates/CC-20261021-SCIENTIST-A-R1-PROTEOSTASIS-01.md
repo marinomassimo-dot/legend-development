@@ -22,3 +22,15 @@
 ## Owed
 
 Blind locator audit (not by the author) of the 2026-10-22 REPAIRS; the first audit has run and is in the header above. Original owed list: PB-4 narrowing; the three text-versus-panel discrepancies (42157447 Figures 6 and 8, 38731820 Figure 6 N and sample, 32023956 Figure 1B correlation).
+
+## BATCH DISPOSITION
+
+**Verdict:** DEFERRED
+**Batch:** `BATCH_20261019_012`
+
+Handled by `BATCH_20261019_012` (2026-10-22, MINOR, `WM_v7.27` preserved; integrator ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`). The candidate stays queued: its header holds it from claim-level propagation until a second reader has audited the producer's repairs, and that has not happened.
+
+- **Landed (identity only, proposal 1):** `PAPER` and `LIT` identity records for the eighteen R1 readings that had a receipt and no registry identity (the seventeen named here, plus `38509072` from the R1 second wave), each carrying «not restated here» for the paper-level findings and the audit state of its manifest; `FT-113` carries a dated update retiring the «NO RECEIPT PERSISTED» and «not read» statuses of `38378758` and `29785012`, and lifts the Parkin-negative restriction only in the scoped form the audit supports. No finding of any of the eighteen papers was written into a claim, block, ledger lead or dismissal row.
+- **Of proposal 4 (Parkin scope):** the restated bound is written into the two papers' identity records (`38378758`: one compound, one concentration, one 24-hour exposure, a local effect allowed by the authors, not the only probe; `42268630`: a null-allele zebrafish negative with the protein unmeasured). No dismissal-ledger row was edited.
+- **HELD, not landed:** proposal 2 (the verdict annotations of the Q230P dossiers) — `PB-4` is restated by the header as INCONCLUSIVE for a protein-loss lesion, its earlier NARROW verdict having failed all three of its audit triples, and the withdrawn wording appears nowhere in the registries; proposal 3 (the ledger lead and the supplementary half-life check) — not staged by this candidate, nothing was appended.
+- **Still owed:** a blind audit of the repairs, by someone other than the producer.

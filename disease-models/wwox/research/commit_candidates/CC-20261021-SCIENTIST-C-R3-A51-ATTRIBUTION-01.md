@@ -22,3 +22,14 @@
 4. **Missing measurements to record as the unblocking items** (not novelty claims): brain exposure of A51; any neural readout after a CK1-alpha/CDK7/9 inhibitor at two or more doses in a young animal; a dose-by-timing series of Wnt modulation in developing cortex with progenitor, layer-neuron and electrographic endpoints.
 
 `REVIVAL_TRIGGER` for any rejection implied above: a measurement of A51 in a neural system with an attribution control (a CDK7/9-selective arm and a CK1-alpha-selective arm).
+
+## BATCH DISPOSITION
+
+**Verdict:** DEFERRED
+**Batch:** `BATCH_20261019_012`
+
+Handled by `BATCH_20261019_012` (2026-10-22, MINOR, `WM_v7.27` preserved; integrator ACTOR_ID `orchestrator` by stated assumption, task `ORCH-REPURPOSING-10H-20261021`). The candidate stays queued.
+
+- **HELD, not landed: all four proposed additions to `DL-THER-089`** (attribution and BLOCK-1 notes). The dose-proportionality finding of the R3 line was repaired once and failed a second blind audit on four items, and its producer is repairing it again; **no dose-proportionality sentence was written into any registry or ledger**. The coordinator's corrected statement of the finding was received and is deliberately **not reproduced** in any file of this batch, so that no version of a dose-proportionality sentence exists outside the producer's repair; the failed version must not be rebuilt from this candidate's earlier text. The A51 attribution (Wnt against MYC against CDK) stays unresolved and nothing here resolves it.
+- **Landed (identity only):** `PAPER` and `LIT` identity records for the R3 readings that had a receipt and no registry identity (the five sources named in the header, the others of the group, and the second wave), each saying the findings are not restated and naming the audit file that covered its manifest. `40665325` carries «no dose or tolerability claim is carried by this record».
+- **Still owed:** a blind audit of the repaired manifests by someone other than the producer, then a second attempt at the attribution addition.
