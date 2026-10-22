@@ -1,0 +1,19 @@
+HTTP/2 307 
+date: Thu, 22 Oct 2026 03:21:35 GMT
+content-type: text/html; charset=utf-8
+content-length: 171
+location: https://data-api.sigcom-lincs.k8s.maayanlab.cloud/v1/api/v1/enrich/ranktwosided
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST, OPTIONS
+access-control-allow-headers: DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range
+strict-transport-security: max-age=31536000; includeSubDomains
+
+HTTP/2 200 
+access-control-allow-origin: *
+access-control-expose-headers: Content-Range,X-Duration
+content-range: 0-200/693215
+content-type: application/json;charset=ISO-8859-1
+date: Thu, 22 Oct 2026 03:21:38 GMT
+x-duration: 2.931
+content-length: 96
+

@@ -1,0 +1,23 @@
+{
+ "utc": "2026-10-22T03:23:05.094278+00:00",
+ "final_url": "https://data-api.sigcom-lincs.k8s.maayanlab.cloud/v1/api/v1/enrich/ranktwosided",
+ "status": 200,
+ "headers": {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Expose-Headers": "Content-Range,X-Duration",
+  "Content-Range": "0-200/693215",
+  "Content-Type": "application/json;charset=ISO-8859-1",
+  "Date": "Thu, 22 Oct 2026 03:23:15 GMT",
+  "X-Duration": "9.889",
+  "Connection": "close",
+  "Transfer-Encoding": "chunked"
+ },
+ "request_body_counts": {
+  "up": 505,
+  "down": 311
+ },
+ "database": "l1000_cp",
+ "limit": 100,
+ "sha256": "e8946354a741af4b40ff984aa5ceb2e09eb7e2a05a4644aa421bed557cfc8afe",
+ "bytes": 86587
+}

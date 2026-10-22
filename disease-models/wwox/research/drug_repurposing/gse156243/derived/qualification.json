@@ -1,0 +1,102 @@
+{
+ "counts": {
+  "header": [
+   "gene",
+   "cko1",
+   "cko2",
+   "cko3",
+   "cko4",
+   "cwt1",
+   "cwt2"
+  ],
+  "rows": 35337,
+  "unique_ids": 35337,
+  "all_finite_nonneg": true,
+  "fractional_cells": 67496,
+  "cells": 212022,
+  "rows_total_ge10": 19694,
+  "rows_total_zero": 10698,
+  "column_sums": [
+   38725699.7,
+   41153292.5,
+   38206349.2,
+   34206111.8,
+   37256191.9,
+   29979207.0
+  ]
+ },
+ "up": {
+  "header": [
+   "ensg",
+   "symbol",
+   "EntrezID",
+   "pvalue",
+   "padj",
+   "log2FoldChange",
+   "description",
+   "type"
+  ],
+  "rows": 1246,
+  "unique_ensg": 1246,
+  "unique_symbol": 1246,
+  "max_pvalue": 0.00999,
+  "max_padj": 0.0684,
+  "min_padj": 8.75e-34,
+  "lfc_sign_ok": true,
+  "padj_le_0.01": 518,
+  "padj_le_0.05": 1071,
+  "padj_gt_0.05": 175,
+  "abs_lfc_min": 0.26
+ },
+ "down": {
+  "header": [
+   "ensg",
+   "symbol",
+   "EntrezID",
+   "pvalue",
+   "padj",
+   "log2FoldChange",
+   "description",
+   "type"
+  ],
+  "rows": 1021,
+  "unique_ensg": 1021,
+  "unique_symbol": 1021,
+  "max_pvalue": 0.00999,
+  "max_padj": 0.0684,
+  "min_padj": 2.29e-15,
+  "lfc_sign_ok": true,
+  "padj_le_0.01": 317,
+  "padj_le_0.05": 826,
+  "padj_gt_0.05": 195,
+  "abs_lfc_min": 0.26
+ },
+ "union": {
+  "rows": 2267,
+  "unique_ensg": 2267,
+  "p_only_all_lt_0.01": true,
+  "max_padj": 0.0684,
+  "overlap_up_down_ensg": 0
+ },
+ "universe": {
+  "list_symbols_in_counts_rows": 2252,
+  "list_symbols_not_in_counts": [
+   "OTULINL",
+   "LINC01145",
+   "TENT5C",
+   "RF_2528",
+   "RF_2821",
+   "CEMIP2",
+   "MARCHF8",
+   "ARMH3",
+   "AC026464.6",
+   "SEPTIN7",
+   "SEPTIN5",
+   "INSYN1",
+   "CIAO2B",
+   "MARCHF7",
+   "MARCHF2"
+  ],
+  "n_list_symbols_not_in_counts": 15
+ }
+}

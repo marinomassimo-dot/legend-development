@@ -1,0 +1,5799 @@
+{
+  "data": {
+    "genes": {
+      "nodes": [
+        {
+          "conceptId": "hgnc:9962",
+          "interactions": [
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:1098413",
+                "name": "VANDETANIB"
+              },
+              "interactionScore": 0.339295177817785,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ClearityFoundationClinicalTrial",
+                  "sourceDbVersion": "15-June-2013"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C76199",
+                "name": "DOVITINIB"
+              },
+              "interactionScore": 0.236478457266941,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ClearityFoundationClinicalTrial",
+                  "sourceDbVersion": "15-June-2013"
+                }
+              ]
+            }
+          ],
+          "longName": "UPF1 RNA helicase and ATPase",
+          "name": "UPF1"
+        },
+        {
+          "conceptId": "hgnc:12623",
+          "interactions": [
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:301542",
+                "name": "ROSUVASTATIN"
+              },
+              "interactionScore": 3.601748810681102,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 22331829
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            }
+          ],
+          "longName": "ubiquitin specific peptidase 24",
+          "name": "USP24"
+        },
+        {
+          "conceptId": "hgnc:15971",
+          "interactions": [
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL103583",
+                "name": "CHEMBL:CHEMBL103583"
+              },
+              "interactionScore": 0.4180601298111993,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL570408",
+                "name": "1,4-DIMETHOXYANTHRAQUINONE"
+              },
+              "interactionScore": 0.3344481038489594,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL175266",
+                "name": "CHEMBL:CHEMBL175266"
+              },
+              "interactionScore": 0.2388915027492567,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL505670",
+                "name": "CHEMBL:CHEMBL505670"
+              },
+              "interactionScore": 0.09555660109970271,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL1451216",
+                "name": "CHEMBL:CHEMBL1451216"
+              },
+              "interactionScore": 0.196734178734682,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL1392",
+                "name": "2,4-DIHYDROXYBENZOPHENONE"
+              },
+              "interactionScore": 0.5574135064149325,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL585654",
+                "name": "CHEMBL:CHEMBL585654"
+              },
+              "interactionScore": 0.6688962076979189,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2109593",
+                "name": "FGI-101-1A6"
+              },
+              "interactionScore": 6.688962076979189,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                },
+                {
+                  "sourceDbName": "TTD",
+                  "sourceDbVersion": "2020.06.01"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL1607",
+                "name": "TOPOTECAN HYDROCHLORIDE"
+              },
+              "interactionScore": 0.3040437307717813,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:3521",
+                "name": "DIPYRIDAMOLE"
+              },
+              "interactionScore": 0.06431694304787683,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL1486690",
+                "name": "PYRONIN Y"
+              },
+              "interactionScore": 0.1858045021383108,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL1563",
+                "name": "DAUNORUBICIN HYDROCHLORIDE"
+              },
+              "interactionScore": 0.1013479102572604,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "drugbank:DB06313",
+                "name": "BNC105"
+              },
+              "interactionScore": 0.1454122190647649,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL223575",
+                "name": "CHEMBL:CHEMBL223575"
+              },
+              "interactionScore": 0.8361202596223987,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            }
+          ],
+          "longName": "tumor susceptibility 101",
+          "name": "TSG101"
+        },
+        {
+          "conceptId": "hgnc:12799",
+          "interactions": [
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:12574",
+                "name": "GEMCITABINE"
+              },
+              "interactionScore": 0.358794900680876,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 22142827
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:495881",
+                "name": "SORAFENIB"
+              },
+              "interactionScore": 0.2944826071626058,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 35484400
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C1941",
+                "name": "RECOMBINANT TUMOR NECROSIS FACTOR FAMILY PROTEIN"
+              },
+              "interactionScore": 2.081010423949081,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 11058590
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            }
+          ],
+          "longName": "WW domain containing oxidoreductase",
+          "name": "WWOX"
+        },
+        {
+          "conceptId": "hgnc:34518",
+          "interactions": [
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:328134",
+                "name": "GEFITINIB"
+              },
+              "interactionScore": 0.2026958205145209,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:2058848",
+                "name": "DACOMITINIB ANHYDROUS"
+              },
+              "interactionScore": 0.9180928340951829,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:1442981",
+                "name": "IBRUTINIB"
+              },
+              "interactionScore": 0.3629669344097234,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            }
+          ],
+          "longName": "VOPP1 WW domain binding protein",
+          "name": "VOPP1"
+        },
+        {
+          "conceptId": "hgnc:12825",
+          "interactions": [
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "rxcui:2539289",
+                "name": "VERDINEXOR"
+              },
+              "interactionScore": 5.202526059872703,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL464443",
+                "name": "GONIOTHALAMIN"
+              },
+              "interactionScore": 5.202526059872703,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 20381347
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:2178390",
+                "name": "SELINEXOR"
+              },
+              "interactionScore": 1.734175353290901,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [
+                {
+                  "pmid": 24631834
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                },
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                },
+                {
+                  "sourceDbName": "TTD",
+                  "sourceDbVersion": "2020.06.01"
+                },
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:14274",
+                "name": "LEPTOMYCIN B"
+              },
+              "interactionScore": 20.81010423949081,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [
+                {
+                  "pmid": 18835718
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                },
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                },
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:14273",
+                "name": "VERDINEXOR"
+              },
+              "interactionScore": 5.202526059872703,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:9384",
+                "name": "RIFAMPIN"
+              },
+              "interactionScore": 0.3468350706581802,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 22341855
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:10302",
+                "name": "OSTHOLE"
+              },
+              "interactionScore": 3.468350706581802,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 20493693
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C125193",
+                "name": "ELTANEXOR"
+              },
+              "interactionScore": 5.202526059872703,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                },
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C171660",
+                "name": "FELEZONEXOR"
+              },
+              "interactionScore": 5.202526059872703,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "TTD",
+                  "sourceDbVersion": "2020.06.01"
+                }
+              ]
+            }
+          ],
+          "longName": "exportin 1",
+          "name": "XPO1"
+        },
+        {
+          "conceptId": "hgnc:12563",
+          "interactions": [
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:4582",
+                "name": "TEGAFUR"
+              },
+              "interactionScore": 3.901894544904527,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 20647221
+                },
+                {
+                  "pmid": 28347333
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL1164954",
+                "name": "CHEMBL:CHEMBL1164954"
+              },
+              "interactionScore": 23.41136726942716,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 20452222
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:225852",
+                "name": "LEUCOVORIN CALCIUM"
+              },
+              "interactionScore": 1.265479311860927,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 16818689
+                },
+                {
+                  "pmid": 28347333
+                },
+                {
+                  "pmid": 20647221
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL515914",
+                "name": "AZARIBINE"
+              },
+              "interactionScore": 2.926420908678395,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            }
+          ],
+          "longName": "uridine monophosphate synthetase",
+          "name": "UMPS"
+        },
+        {
+          "conceptId": "hgnc:20771",
+          "interactions": [
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2036124",
+                "name": "CHEMBL:CHEMBL2036124"
+              },
+              "interactionScore": 0.05521548884298859,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 22543234
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL289351",
+                "name": "FOSBRETABULIN DISODIUM"
+              },
+              "interactionScore": 0.02944826071626058,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL3990032",
+                "name": "TELISOTUZUMAB VEDOTIN"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL96172",
+                "name": "EPOTHILONE D"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": null,
+                  "type": "modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:1299922",
+                "name": "DOCETAXEL ANHYDROUS"
+              },
+              "interactionScore": 0.008494690591229015,
+              "interactionTypes": [
+                {
+                  "directionality": null,
+                  "type": "modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                },
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL1742998",
+                "name": "CANTUZUMAB RAVTANSINE"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:996051",
+                "name": "CABAZITAXEL"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                },
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4594455",
+                "name": "AGS-16C3F"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "negative modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2103826",
+                "name": "DAVUNETIDE"
+              },
+              "interactionScore": 0.02944826071626058,
+              "interactionTypes": [
+                {
+                  "directionality": null,
+                  "type": "modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL1743028",
+                "name": "GLEMBATUMUMAB VEDOTIN"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4297441",
+                "name": "PACLITAXEL DOCOSAHEXAENOIC ACID"
+              },
+              "interactionScore": 0.02944826071626058,
+              "interactionTypes": [
+                {
+                  "directionality": null,
+                  "type": "modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4297987",
+                "name": "ENAPOTAMAB VEDOTIN"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4297935",
+                "name": "RG-7841"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:8854",
+                "name": "COMBRETASTATIN A4"
+              },
+              "interactionScore": 0.1963217381084039,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 16913727
+                },
+                {
+                  "pmid": 22543234
+                },
+                {
+                  "pmid": 24669888
+                },
+                {
+                  "pmid": 25192811
+                },
+                {
+                  "pmid": 17765552
+                },
+                {
+                  "pmid": 25584687
+                },
+                {
+                  "pmid": 23631389
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:337523",
+                "name": "IXABEPILONE"
+              },
+              "interactionScore": 0.01766895642975635,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL378544",
+                "name": "VINBLASTINE SULFATE"
+              },
+              "interactionScore": 0.02208619553719543,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL5095273",
+                "name": "DISITAMAB VEDOTIN"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "negative modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4297804",
+                "name": "PF-06263507"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2109288",
+                "name": "BIVATUZUMAB MERTANSINE"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2109635",
+                "name": "SAR-566658"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL1096380",
+                "name": "PLINABULIN"
+              },
+              "interactionScore": 0.02944826071626058,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL49642",
+                "name": "INDIBULIN"
+              },
+              "interactionScore": 0.02944826071626058,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL3301582",
+                "name": "POLATUZUMAB VEDOTIN"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL1743037",
+                "name": "LORVOTUZUMAB MERTANSINE"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2111109",
+                "name": "TASIDOTIN"
+              },
+              "interactionScore": 0.02944826071626058,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4279455",
+                "name": "LAROTAXEL"
+              },
+              "interactionScore": 0.02944826071626058,
+              "interactionTypes": [
+                {
+                  "directionality": null,
+                  "type": "modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL3833306",
+                "name": "VANDORTUZUMAB VEDOTIN"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C1623",
+                "name": "PATUPILONE"
+              },
+              "interactionScore": 0.02944826071626058,
+              "interactionTypes": [
+                {
+                  "directionality": null,
+                  "type": "modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL492399",
+                "name": "VERUBULIN"
+              },
+              "interactionScore": 0.02944826071626058,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "negative modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4297736",
+                "name": "PRALUZATAMAB RAVTANSINE"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL292702",
+                "name": "MAYTANSINE"
+              },
+              "interactionScore": 0.05521548884298859,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 563462
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:8463",
+                "name": "PODOFILOX"
+              },
+              "interactionScore": 0.06795752472983212,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 24953821
+                },
+                {
+                  "pmid": 17765552
+                },
+                {
+                  "pmid": 21402478
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL1089636",
+                "name": "ANG1005"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2109556",
+                "name": "MLN-2704"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2109629",
+                "name": "ANETUMAB RAVTANSINE"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL5095312",
+                "name": "MECBOTAMAB VEDOTIN"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL3989512",
+                "name": "SOBLIDOTIN"
+              },
+              "interactionScore": 0.02944826071626058,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL501867",
+                "name": "VINCRISTINE SULFATE"
+              },
+              "interactionScore": 0.02454021726355048,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4297938",
+                "name": "LIFASTUZUMAB VEDOTIN"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2109266",
+                "name": "AVE-9633"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:194337",
+                "name": "VORINOSTAT"
+              },
+              "interactionScore": 0.01636014484236699,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 20491440
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL1683544",
+                "name": "ERIBULIN MESYLATE"
+              },
+              "interactionScore": 0.02944826071626058,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL572284",
+                "name": "OMBRABULIN"
+              },
+              "interactionScore": 0.02944826071626058,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:430",
+                "name": "ALBENDAZOLE"
+              },
+              "interactionScore": 0.02324862688125835,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL1935538",
+                "name": "CHEMBL:CHEMBL1935538"
+              },
+              "interactionScore": 0.05196751891104809,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 22435708
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL1742997",
+                "name": "CANTUZUMAB MERTANSINE"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL3545371",
+                "name": "DENINTUZUMAB MAFODOTIN"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2109575",
+                "name": "BIIB-015"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2109281",
+                "name": "RG-7600"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2108672",
+                "name": "VORSETUZUMAB MAFODOTIN"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4594515",
+                "name": "LOSATUXIZUMAB VEDOTIN"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:11198",
+                "name": "VINBLASTINE"
+              },
+              "interactionScore": 0.02070580831612072,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 23916255
+                },
+                {
+                  "pmid": 23708010
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4297859",
+                "name": "AZINTUXIZUMAB VEDOTIN"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL1242194",
+                "name": "CYCLOSTREPTIN"
+              },
+              "interactionScore": 0.05521548884298859,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 17206139
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL3707277",
+                "name": "DEPATUXIZUMAB MAFODOTIN"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL3301589",
+                "name": "ENFORTUMAB VEDOTIN"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4297296",
+                "name": "KOS-1584"
+              },
+              "interactionScore": 0.02944826071626058,
+              "interactionTypes": [
+                {
+                  "directionality": null,
+                  "type": "modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2107759",
+                "name": "MILATAXEL"
+              },
+              "interactionScore": 0.02944826071626058,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL4298209",
+                "name": "BELANTAMAB MAFODOTIN"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL2105629",
+                "name": "VINFLUNINE DITARTRATE"
+              },
+              "interactionScore": 0.02944826071626058,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL3545132",
+                "name": "MIRVETUXIMAB SORAVTANSINE"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL1173445",
+                "name": "LARGAZOLE"
+              },
+              "interactionScore": 0.03046371798233853,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 20491440
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL2110725",
+                "name": "VINFLUNINE"
+              },
+              "interactionScore": 0.02944826071626058,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:1098413",
+                "name": "VANDETANIB"
+              },
+              "interactionScore": 0.006401795807882736,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:11202",
+                "name": "VINCRISTINE"
+              },
+              "interactionScore": 0.01424915841109383,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 23916255
+                },
+                {
+                  "pmid": 21664138
+                },
+                {
+                  "pmid": 16539377
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL582439",
+                "name": "ZAMPANOLIDE"
+              },
+              "interactionScore": 0.05521548884298859,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 19877653
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL453818",
+                "name": "CHEMBL:CHEMBL453818"
+              },
+              "interactionScore": 0.05521548884298859,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 12141877
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4298101",
+                "name": "LADIRATUZUMAB VEDOTIN"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2304041",
+                "name": "SAGOPILONE"
+              },
+              "interactionScore": 0.02944826071626058,
+              "interactionTypes": [
+                {
+                  "directionality": null,
+                  "type": "modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2108628",
+                "name": "PACLITAXEL POLIGLUMEX"
+              },
+              "interactionScore": 0.02944826071626058,
+              "interactionTypes": [
+                {
+                  "directionality": null,
+                  "type": "modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2109279",
+                "name": "RG-7598"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL538943",
+                "name": "VINORELBINE TARTRATE"
+              },
+              "interactionScore": 0.02598375945552404,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4297440",
+                "name": "T-900607"
+              },
+              "interactionScore": 0.02944826071626058,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "negative modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL3545252",
+                "name": "DOCETAXEL"
+              },
+              "interactionScore": 0.02944826071626058,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL3301585",
+                "name": "PINATUZUMAB VEDOTIN"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4298098",
+                "name": "TUSAMITAMAB RAVTANSINE"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4297636",
+                "name": "PLOCABULIN"
+              },
+              "interactionScore": 0.02944826071626058,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL5314782",
+                "name": "TRASTUZUMAB BOTIDOTIN"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:2955",
+                "name": "CURCUMIN"
+              },
+              "interactionScore": 0.01318578838041518,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 23830698
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:39541",
+                "name": "VINORELBINE"
+              },
+              "interactionScore": 0.03897563918328606,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 25768699
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                },
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:1147320",
+                "name": "BRENTUXIMAB VEDOTIN"
+              },
+              "interactionScore": 0.02208619553719543,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2105643",
+                "name": "FOSBRETABULIN TROMETHAMINE"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "negative modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL1743082",
+                "name": "TRASTUZUMAB EMTANSINE"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL39541",
+                "name": "DOLASTATIN-10"
+              },
+              "interactionScore": 0.02324862688125835,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:486610",
+                "name": "PACLITAXEL PROTEIN-BOUND"
+              },
+              "interactionScore": 0.04684950568496002,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [
+                {
+                  "pmid": 23631389
+                },
+                {
+                  "pmid": 17887662
+                },
+                {
+                  "pmid": 22595423
+                },
+                {
+                  "pmid": 25369367
+                },
+                {
+                  "pmid": 24457094
+                },
+                {
+                  "pmid": 23725535
+                },
+                {
+                  "pmid": 24953821
+                },
+                {
+                  "pmid": 23313639
+                },
+                {
+                  "pmid": 25768699
+                },
+                {
+                  "pmid": 19758808
+                },
+                {
+                  "pmid": 23387901
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                },
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                },
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:6672",
+                "name": "MEBENDAZOLE"
+              },
+              "interactionScore": 0.09816086905420195,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                },
+                {
+                  "sourceDbName": "TdgClinicalTrial",
+                  "sourceDbVersion": "Jan-2014"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:1009342",
+                "name": "OXIBENDAZOLE"
+              },
+              "interactionScore": 0.1472413035813029,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL1743031",
+                "name": "INDATUXIMAB RAVTANSINE"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4297892",
+                "name": "ANVATABART OPADOTIN"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2109282",
+                "name": "RG-7636"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2109633",
+                "name": "IMGN-388"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:2683",
+                "name": "COLCHICINE"
+              },
+              "interactionScore": 0.07887926977569798,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [
+                {
+                  "pmid": 24773591
+                },
+                {
+                  "pmid": 25938266
+                },
+                {
+                  "pmid": 24502232
+                },
+                {
+                  "pmid": 25805446
+                },
+                {
+                  "pmid": 25061803
+                },
+                {
+                  "pmid": 25937236
+                },
+                {
+                  "pmid": 23750455
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                },
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                },
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2036119",
+                "name": "CHEMBL:CHEMBL2036119"
+              },
+              "interactionScore": 0.05521548884298859,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 22543234
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4298045",
+                "name": "INDUSATUMAB VEDOTIN"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL3545372",
+                "name": "SOFITUZUMAB VEDOTIN"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL4297841",
+                "name": "TISOTUMAB VEDOTIN"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL552212",
+                "name": "LEXIBULIN"
+              },
+              "interactionScore": 0.02454021726355048,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4297268",
+                "name": "BMS-275183"
+              },
+              "interactionScore": 0.02944826071626058,
+              "interactionTypes": [
+                {
+                  "directionality": null,
+                  "type": "modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL1795737",
+                "name": "CHEMBL:CHEMBL1795737"
+              },
+              "interactionScore": 0.05521548884298859,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 21664138
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2109286",
+                "name": "COLTUXIMAB RAVTANSINE"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C75228",
+                "name": "NOCODAZOLE"
+              },
+              "interactionScore": 0.09465512373083758,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 25262051
+                },
+                {
+                  "pmid": 23313639
+                },
+                {
+                  "pmid": 25815147
+                },
+                {
+                  "pmid": 21194809
+                },
+                {
+                  "pmid": 25369367
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2109574",
+                "name": "ASG-5ME"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2103852",
+                "name": "CROLIBULIN"
+              },
+              "interactionScore": 0.02944826071626058,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL214154",
+                "name": "MAYTANSINOL"
+              },
+              "interactionScore": 0.05521548884298859,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 563462
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4650293",
+                "name": "APRUTUMAB IXADOTIN"
+              },
+              "interactionScore": 0.02760774442149429,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL20684",
+                "name": "ABT-751"
+              },
+              "interactionScore": 0.07795127836657213,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [
+                {
+                  "pmid": 25468039
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                },
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            }
+          ],
+          "longName": "tubulin beta 4B class IVb",
+          "name": "TUBB4B"
+        },
+        {
+          "conceptId": "hgnc:20774",
+          "interactions": [
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2105643",
+                "name": "FOSBRETABULIN TROMETHAMINE"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "negative modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL3301582",
+                "name": "POLATUZUMAB VEDOTIN"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL1242194",
+                "name": "CYCLOSTREPTIN"
+              },
+              "interactionScore": 0.05738080213094893,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 17206139
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL1743031",
+                "name": "INDATUXIMAB RAVTANSINE"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:1299922",
+                "name": "DOCETAXEL ANHYDROUS"
+              },
+              "interactionScore": 0.008827815712453682,
+              "interactionTypes": [
+                {
+                  "directionality": null,
+                  "type": "modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                },
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4298098",
+                "name": "TUSAMITAMAB RAVTANSINE"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2109574",
+                "name": "ASG-5ME"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2109556",
+                "name": "MLN-2704"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL5314782",
+                "name": "TRASTUZUMAB BOTIDOTIN"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2103826",
+                "name": "DAVUNETIDE"
+              },
+              "interactionScore": 0.03060309446983943,
+              "interactionTypes": [
+                {
+                  "directionality": null,
+                  "type": "modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL492399",
+                "name": "VERUBULIN"
+              },
+              "interactionScore": 0.03060309446983943,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "negative modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4297268",
+                "name": "BMS-275183"
+              },
+              "interactionScore": 0.03060309446983943,
+              "interactionTypes": [
+                {
+                  "directionality": null,
+                  "type": "modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL3989512",
+                "name": "SOBLIDOTIN"
+              },
+              "interactionScore": 0.03060309446983943,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL1742998",
+                "name": "CANTUZUMAB RAVTANSINE"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL538943",
+                "name": "VINORELBINE TARTRATE"
+              },
+              "interactionScore": 0.0270027304145642,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL552212",
+                "name": "LEXIBULIN"
+              },
+              "interactionScore": 0.02550257872486619,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4297859",
+                "name": "AZINTUXIZUMAB VEDOTIN"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4297636",
+                "name": "PLOCABULIN"
+              },
+              "interactionScore": 0.03060309446983943,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2109575",
+                "name": "BIIB-015"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL20684",
+                "name": "ABT-751"
+              },
+              "interactionScore": 0.0810081912436926,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [
+                {
+                  "pmid": 25468039
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                },
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2036124",
+                "name": "CHEMBL:CHEMBL2036124"
+              },
+              "interactionScore": 0.05738080213094893,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 22543234
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4594515",
+                "name": "LOSATUXIZUMAB VEDOTIN"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL3545371",
+                "name": "DENINTUZUMAB MAFODOTIN"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2109286",
+                "name": "COLTUXIMAB RAVTANSINE"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:8463",
+                "name": "PODOFILOX"
+              },
+              "interactionScore": 0.07062252569962946,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 24953821
+                },
+                {
+                  "pmid": 17765552
+                },
+                {
+                  "pmid": 21402478
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4297892",
+                "name": "ANVATABART OPADOTIN"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:8854",
+                "name": "COMBRETASTATIN A4"
+              },
+              "interactionScore": 0.2040206297989295,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 16913727
+                },
+                {
+                  "pmid": 22543234
+                },
+                {
+                  "pmid": 24669888
+                },
+                {
+                  "pmid": 25192811
+                },
+                {
+                  "pmid": 17765552
+                },
+                {
+                  "pmid": 25584687
+                },
+                {
+                  "pmid": 23631389
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2109279",
+                "name": "RG-7598"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL1683544",
+                "name": "ERIBULIN MESYLATE"
+              },
+              "interactionScore": 0.03060309446983943,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL378544",
+                "name": "VINBLASTINE SULFATE"
+              },
+              "interactionScore": 0.02295232085237956,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4297441",
+                "name": "PACLITAXEL DOCOSAHEXAENOIC ACID"
+              },
+              "interactionScore": 0.03060309446983943,
+              "interactionTypes": [
+                {
+                  "directionality": null,
+                  "type": "modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:486610",
+                "name": "PACLITAXEL PROTEIN-BOUND"
+              },
+              "interactionScore": 0.04868674120201728,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [
+                {
+                  "pmid": 23387901
+                },
+                {
+                  "pmid": 19758808
+                },
+                {
+                  "pmid": 25768699
+                },
+                {
+                  "pmid": 23313639
+                },
+                {
+                  "pmid": 24953821
+                },
+                {
+                  "pmid": 23725535
+                },
+                {
+                  "pmid": 24457094
+                },
+                {
+                  "pmid": 25369367
+                },
+                {
+                  "pmid": 22595423
+                },
+                {
+                  "pmid": 17887662
+                },
+                {
+                  "pmid": 23631389
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                },
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                },
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL582439",
+                "name": "ZAMPANOLIDE"
+              },
+              "interactionScore": 0.05738080213094893,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 19877653
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL5095312",
+                "name": "MECBOTAMAB VEDOTIN"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4297987",
+                "name": "ENAPOTAMAB VEDOTIN"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2109629",
+                "name": "ANETUMAB RAVTANSINE"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL4297841",
+                "name": "TISOTUMAB VEDOTIN"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL3990032",
+                "name": "TELISOTUZUMAB VEDOTIN"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4650293",
+                "name": "APRUTUMAB IXADOTIN"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL4298209",
+                "name": "BELANTAMAB MAFODOTIN"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL1096380",
+                "name": "PLINABULIN"
+              },
+              "interactionScore": 0.03060309446983943,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL39541",
+                "name": "DOLASTATIN-10"
+              },
+              "interactionScore": 0.02416033773934691,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL5095273",
+                "name": "DISITAMAB VEDOTIN"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "negative modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2109633",
+                "name": "IMGN-388"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:2955",
+                "name": "CURCUMIN"
+              },
+              "interactionScore": 0.01370287812082362,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 23830698
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL3545252",
+                "name": "DOCETAXEL"
+              },
+              "interactionScore": 0.03060309446983943,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL49642",
+                "name": "INDIBULIN"
+              },
+              "interactionScore": 0.03060309446983943,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2109288",
+                "name": "BIVATUZUMAB MERTANSINE"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL3833306",
+                "name": "VANDORTUZUMAB VEDOTIN"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4298101",
+                "name": "LADIRATUZUMAB VEDOTIN"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL1743037",
+                "name": "LORVOTUZUMAB MERTANSINE"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2109635",
+                "name": "SAR-566658"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4297938",
+                "name": "LIFASTUZUMAB VEDOTIN"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL3301589",
+                "name": "ENFORTUMAB VEDOTIN"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4297935",
+                "name": "RG-7841"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL96172",
+                "name": "EPOTHILONE D"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": null,
+                  "type": "modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2103852",
+                "name": "CROLIBULIN"
+              },
+              "interactionScore": 0.03060309446983943,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL1795737",
+                "name": "CHEMBL:CHEMBL1795737"
+              },
+              "interactionScore": 0.05738080213094893,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 21664138
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2109282",
+                "name": "RG-7636"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:2683",
+                "name": "COLCHICINE"
+              },
+              "interactionScore": 0.08197257447278418,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [
+                {
+                  "pmid": 23750455
+                },
+                {
+                  "pmid": 25937236
+                },
+                {
+                  "pmid": 25061803
+                },
+                {
+                  "pmid": 25805446
+                },
+                {
+                  "pmid": 24502232
+                },
+                {
+                  "pmid": 25938266
+                },
+                {
+                  "pmid": 24773591
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                },
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                },
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:337523",
+                "name": "IXABEPILONE"
+              },
+              "interactionScore": 0.01836185668190365,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4297296",
+                "name": "KOS-1584"
+              },
+              "interactionScore": 0.03060309446983943,
+              "interactionTypes": [
+                {
+                  "directionality": null,
+                  "type": "modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C1623",
+                "name": "PATUPILONE"
+              },
+              "interactionScore": 0.03060309446983943,
+              "interactionTypes": [
+                {
+                  "directionality": null,
+                  "type": "modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL1743028",
+                "name": "GLEMBATUMUMAB VEDOTIN"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2107759",
+                "name": "MILATAXEL"
+              },
+              "interactionScore": 0.03060309446983943,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL3707277",
+                "name": "DEPATUXIZUMAB MAFODOTIN"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4297736",
+                "name": "PRALUZATAMAB RAVTANSINE"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2304041",
+                "name": "SAGOPILONE"
+              },
+              "interactionScore": 0.03060309446983943,
+              "interactionTypes": [
+                {
+                  "directionality": null,
+                  "type": "modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4297440",
+                "name": "T-900607"
+              },
+              "interactionScore": 0.03060309446983943,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "negative modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4297804",
+                "name": "PF-06263507"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL3301585",
+                "name": "PINATUZUMAB VEDOTIN"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL289351",
+                "name": "FOSBRETABULIN DISODIUM"
+              },
+              "interactionScore": 0.03060309446983943,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:11198",
+                "name": "VINBLASTINE"
+              },
+              "interactionScore": 0.02151780079910584,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 23916255
+                },
+                {
+                  "pmid": 23708010
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL1935538",
+                "name": "CHEMBL:CHEMBL1935538"
+              },
+              "interactionScore": 0.0540054608291284,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 22435708
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2109266",
+                "name": "AVE-9633"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL3545372",
+                "name": "SOFITUZUMAB VEDOTIN"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL1743082",
+                "name": "TRASTUZUMAB EMTANSINE"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL2110725",
+                "name": "VINFLUNINE"
+              },
+              "interactionScore": 0.03060309446983943,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2036119",
+                "name": "CHEMBL:CHEMBL2036119"
+              },
+              "interactionScore": 0.05738080213094893,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 22543234
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL453818",
+                "name": "CHEMBL:CHEMBL453818"
+              },
+              "interactionScore": 0.05738080213094893,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 12141877
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:39541",
+                "name": "VINORELBINE"
+              },
+              "interactionScore": 0.0405040956218463,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 25768699
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                },
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2108672",
+                "name": "VORSETUZUMAB MAFODOTIN"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:11202",
+                "name": "VINCRISTINE"
+              },
+              "interactionScore": 0.01480794893701907,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 21664138
+                },
+                {
+                  "pmid": 23916255
+                },
+                {
+                  "pmid": 16539377
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:194337",
+                "name": "VORINOSTAT"
+              },
+              "interactionScore": 0.01700171914991079,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 20491440
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:996051",
+                "name": "CABAZITAXEL"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                },
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL501867",
+                "name": "VINCRISTINE SULFATE"
+              },
+              "interactionScore": 0.02550257872486619,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL572284",
+                "name": "OMBRABULIN"
+              },
+              "interactionScore": 0.03060309446983943,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:1147320",
+                "name": "BRENTUXIMAB VEDOTIN"
+              },
+              "interactionScore": 0.02295232085237956,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL1089636",
+                "name": "ANG1005"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL292702",
+                "name": "MAYTANSINE"
+              },
+              "interactionScore": 0.05738080213094893,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 563462
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL214154",
+                "name": "MAYTANSINOL"
+              },
+              "interactionScore": 0.05738080213094893,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 563462
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4298045",
+                "name": "INDUSATUMAB VEDOTIN"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4594455",
+                "name": "AGS-16C3F"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "negative modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL1742997",
+                "name": "CANTUZUMAB MERTANSINE"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL3545132",
+                "name": "MIRVETUXIMAB SORAVTANSINE"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL2105629",
+                "name": "VINFLUNINE DITARTRATE"
+              },
+              "interactionScore": 0.03060309446983943,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL1173445",
+                "name": "LARGAZOLE"
+              },
+              "interactionScore": 0.03165837358948906,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 20491440
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4279455",
+                "name": "LAROTAXEL"
+              },
+              "interactionScore": 0.03060309446983943,
+              "interactionTypes": [
+                {
+                  "directionality": null,
+                  "type": "modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C75228",
+                "name": "NOCODAZOLE"
+              },
+              "interactionScore": 0.098367089367341,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 21194809
+                },
+                {
+                  "pmid": 25369367
+                },
+                {
+                  "pmid": 25815147
+                },
+                {
+                  "pmid": 23313639
+                },
+                {
+                  "pmid": 25262051
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2111109",
+                "name": "TASIDOTIN"
+              },
+              "interactionScore": 0.03060309446983943,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2109281",
+                "name": "RG-7600"
+              },
+              "interactionScore": 0.02869040106547446,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2108628",
+                "name": "PACLITAXEL POLIGLUMEX"
+              },
+              "interactionScore": 0.03060309446983943,
+              "interactionTypes": [
+                {
+                  "directionality": null,
+                  "type": "modulator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            }
+          ],
+          "longName": "tubulin beta 4A class IVa",
+          "name": "TUBB4A"
+        },
+        {
+          "conceptId": "hgnc:15979",
+          "interactions": [
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C80765",
+                "name": "PARDOPRUNOX"
+              },
+              "interactionScore": 0.445930805131946,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:9382",
+                "name": "NVP-TAE 226"
+              },
+              "interactionScore": 0.4928708898826771,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:1921217",
+                "name": "BRIGATINIB"
+              },
+              "interactionScore": 0.4256612230804938,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:1739745",
+                "name": "BRIVARACETAM"
+              },
+              "interactionScore": 0.5508557004571097,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "drugbank:DB06021",
+                "name": "AV-412"
+              },
+              "interactionScore": 0.7803789089809055,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            }
+          ],
+          "longName": "tumor protein p63",
+          "name": "TP63"
+        },
+        {
+          "conceptId": "hgnc:12307",
+          "interactions": [],
+          "longName": "thyroid hormone receptor interactor 13",
+          "name": "TRIP13"
+        },
+        {
+          "conceptId": "hgnc:12003",
+          "interactions": [
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C1088",
+                "name": "EPIGALLOCATECHIN GALLATE"
+              },
+              "interactionScore": 0.7094353718008233,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 17369354
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:83947",
+                "name": "TAZAROTENE"
+              },
+              "interactionScore": 0.9459138290677643,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 15610529
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:10753",
+                "name": "TRETINOIN"
+              },
+              "interactionScore": 0.0935519171605481,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 10809758
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C684",
+                "name": "RECOMBINANT NERVE GROWTH FACTOR"
+              },
+              "interactionScore": 0.7094353718008233,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 10894779
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:11202",
+                "name": "VINCRISTINE"
+              },
+              "interactionScore": 0.06865503598072482,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 12007564
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C275",
+                "name": "ANTIOXIDANT"
+              },
+              "interactionScore": 0.4053916410290418,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 12023887
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:3041",
+                "name": "CYTARABINE"
+              },
+              "interactionScore": 0.0935519171605481,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 16505115
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:2555",
+                "name": "CISPLATIN"
+              },
+              "interactionScore": 0.04978493837198759,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 11689148
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:40048",
+                "name": "CARBOPLATIN"
+              },
+              "interactionScore": 0.09565420743381885,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 12499281
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C1272",
+                "name": "RECOMBINANT VASCULAR ENDOTHELIAL GROWTH FACTOR"
+              },
+              "interactionScore": 0.6080874615435626,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 11704858
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:4942",
+                "name": "GM-CSF"
+              },
+              "interactionScore": 0.5675482974406586,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 15126418
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            }
+          ],
+          "longName": "tumor protein p73",
+          "name": "TP73"
+        },
+        {
+          "conceptId": "hgnc:12311",
+          "interactions": [],
+          "longName": "thyroid hormone receptor interactor 6",
+          "name": "TRIP6"
+        },
+        {
+          "conceptId": "hgnc:12632",
+          "interactions": [],
+          "longName": "ubiquitin specific peptidase 9 X-linked",
+          "name": "USP9X"
+        },
+        {
+          "conceptId": "hgnc:28030",
+          "interactions": [],
+          "longName": "thioredoxin domain containing 11",
+          "name": "TXNDC11"
+        },
+        {
+          "conceptId": "hgnc:12672",
+          "interactions": [
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C174604",
+                "name": "OLESOXIME"
+              },
+              "interactionScore": 3.901894544904527,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "TdgClinicalTrial",
+                  "sourceDbVersion": "Jan-2014"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL401989",
+                "name": "ERASTIN"
+              },
+              "interactionScore": 1.734175353290901,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:9642",
+                "name": "TCDD"
+              },
+              "interactionScore": 1.300631514968175,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 17998243
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            }
+          ],
+          "longName": "voltage dependent anion channel 2",
+          "name": "VDAC2"
+        },
+        {
+          "conceptId": "hgnc:16264",
+          "interactions": [
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:9261",
+                "name": "LUMINESPIB"
+              },
+              "interactionScore": 4.682273453885433,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            }
+          ],
+          "longName": "TNF receptor associated protein 1",
+          "name": "TRAP1"
+        },
+        {
+          "conceptId": "hgnc:21642",
+          "interactions": [],
+          "longName": "valyl-tRNA synthetase 2, mitochondrial",
+          "name": "VARS2"
+        },
+        {
+          "conceptId": "hgnc:18637",
+          "interactions": [],
+          "longName": "tubulin alpha 4b",
+          "name": "TUBA4B"
+        }
+      ]
+    }
+  }
+}

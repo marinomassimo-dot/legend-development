@@ -1,0 +1,717 @@
+{
+  "facet_fields": [
+    {
+      "facet_values": [
+        {
+          "count": 12,
+          "label": "biolink:Gene"
+        }
+      ],
+      "label": "category"
+    },
+    {
+      "facet_values": [
+        {
+          "count": 3,
+          "label": "Homo sapiens"
+        },
+        {
+          "count": 1,
+          "label": "Bos taurus"
+        },
+        {
+          "count": 1,
+          "label": "Canis lupus familiaris"
+        },
+        {
+          "count": 1,
+          "label": "Danio rerio"
+        },
+        {
+          "count": 1,
+          "label": "Drosophila melanogaster"
+        },
+        {
+          "count": 1,
+          "label": "Gallus gallus"
+        },
+        {
+          "count": 1,
+          "label": "Mus musculus"
+        },
+        {
+          "count": 1,
+          "label": "Rattus norvegicus"
+        },
+        {
+          "count": 1,
+          "label": "Sus scrofa"
+        },
+        {
+          "count": 1,
+          "label": "Xenopus tropicalis"
+        }
+      ],
+      "label": "in_taxon_label"
+    }
+  ],
+  "facet_queries": [],
+  "items": [
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": null,
+      "exact_synonym": null,
+      "file_source": "hgnc_gene_nodes",
+      "full_name": "WW domain containing oxidoreductase",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>WWOX</em>"
+        ],
+        "symbol": [
+          "<em>WWOX</em>"
+        ]
+      },
+      "id": "HGNC:12799",
+      "in_taxon": "NCBITaxon:9606",
+      "in_taxon_label": "Homo sapiens",
+      "iri": null,
+      "match_type": "exact",
+      "matched_field": "name",
+      "name": "WWOX",
+      "namespace": "HGNC",
+      "narrow_synonym": null,
+      "provided_by": "hgnc_gene_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 63.04768,
+      "subsets": null,
+      "symbol": "WWOX",
+      "synonym": [
+        "FOR",
+        "WOX1",
+        "SDR41C1",
+        "short chain dehydrogenase/reductase family 41C, member 1",
+        "WW domain-containing oxidoreductase"
+      ],
+      "synonyms": null,
+      "type": "SO:0001217",
+      "xref": [
+        "ENSEMBL:ENSG00000186153",
+        "OMIM:605131"
+      ]
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": "WW domain containing oxidoreductase",
+      "exact_synonym": null,
+      "file_source": "ncbi_gene_9615_nodes",
+      "full_name": "WW domain containing oxidoreductase",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>WWOX</em>"
+        ],
+        "symbol": [
+          "<em>WWOX</em>"
+        ]
+      },
+      "id": "NCBIGene:610120",
+      "in_taxon": "NCBITaxon:9615",
+      "in_taxon_label": "Canis lupus familiaris",
+      "iri": null,
+      "match_type": "exact",
+      "matched_field": "name",
+      "name": "WWOX",
+      "namespace": "NCBIGene",
+      "narrow_synonym": null,
+      "provided_by": "ncbi_gene_9615_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 57.31607,
+      "subsets": null,
+      "symbol": "WWOX",
+      "synonym": null,
+      "synonyms": null,
+      "type": null,
+      "xref": null
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": "WW domain containing oxidoreductase",
+      "exact_synonym": null,
+      "file_source": "ncbi_gene_9823_nodes",
+      "full_name": "WW domain containing oxidoreductase",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>WWOX</em>"
+        ],
+        "symbol": [
+          "<em>WWOX</em>"
+        ]
+      },
+      "id": "NCBIGene:100518839",
+      "in_taxon": "NCBITaxon:9823",
+      "in_taxon_label": "Sus scrofa",
+      "iri": null,
+      "match_type": "exact",
+      "matched_field": "name",
+      "name": "WWOX",
+      "namespace": "NCBIGene",
+      "narrow_synonym": null,
+      "provided_by": "ncbi_gene_9823_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 57.31607,
+      "subsets": null,
+      "symbol": "WWOX",
+      "synonym": null,
+      "synonyms": null,
+      "type": null,
+      "xref": null
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": "WW domain containing oxidoreductase",
+      "exact_synonym": null,
+      "file_source": "ncbi_gene_9913_nodes",
+      "full_name": "WW domain containing oxidoreductase",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>WWOX</em>"
+        ],
+        "symbol": [
+          "<em>WWOX</em>"
+        ]
+      },
+      "id": "NCBIGene:618792",
+      "in_taxon": "NCBITaxon:9913",
+      "in_taxon_label": "Bos taurus",
+      "iri": null,
+      "match_type": "exact",
+      "matched_field": "name",
+      "name": "WWOX",
+      "namespace": "NCBIGene",
+      "narrow_synonym": null,
+      "provided_by": "ncbi_gene_9913_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 57.31607,
+      "subsets": null,
+      "symbol": "WWOX",
+      "synonym": null,
+      "synonyms": null,
+      "type": null,
+      "xref": null
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": "WW domain containing oxidoreductase",
+      "exact_synonym": null,
+      "file_source": "ncbi_gene_9031_nodes",
+      "full_name": "WW domain containing oxidoreductase",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>WWOX</em>"
+        ],
+        "symbol": [
+          "<em>WWOX</em>"
+        ]
+      },
+      "id": "NCBIGene:415801",
+      "in_taxon": "NCBITaxon:9031",
+      "in_taxon_label": "Gallus gallus",
+      "iri": null,
+      "match_type": "exact",
+      "matched_field": "name",
+      "name": "WWOX",
+      "namespace": "NCBIGene",
+      "narrow_synonym": null,
+      "provided_by": "ncbi_gene_9031_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 57.31607,
+      "subsets": null,
+      "symbol": "WWOX",
+      "synonym": null,
+      "synonyms": null,
+      "type": null,
+      "xref": null
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": null,
+      "exact_synonym": null,
+      "file_source": "alliance_gene_nodes",
+      "full_name": "WW domain-containing oxidoreductase",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>Wwox</em>"
+        ],
+        "symbol": [
+          "<em>Wwox</em>"
+        ]
+      },
+      "id": "RGD:1309927",
+      "in_taxon": "NCBITaxon:10116",
+      "in_taxon_label": "Rattus norvegicus",
+      "iri": null,
+      "match_type": "exact",
+      "matched_field": "name",
+      "name": "Wwox",
+      "namespace": "RGD",
+      "narrow_synonym": null,
+      "provided_by": "alliance_gene_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 35.87754,
+      "subsets": null,
+      "symbol": "Wwox",
+      "synonym": [
+        "LOC292041"
+      ],
+      "synonyms": null,
+      "type": "SO:0001217",
+      "xref": [
+        "ENSEMBL:ENSRNOG00000012030",
+        "NCBI_Gene:292041",
+        "PANTHER:PTHR24320",
+        "PANTHER:PTHR17616",
+        "UniProtKB:A0ABK0L3D1",
+        "UniProtKB:D3ZG54",
+        "UniProtKB:A0A8I5ZLQ3",
+        "UniProtKB:A0A8I5ZV74",
+        "UniProtKB:A6IZE7",
+        "UniProtKB:A0ABK0LQK5",
+        "UniProtKB:A0A8I6GB09",
+        "UniProtKB:A0A8I6AEI3",
+        "UniProtKB:A0A8I6B2V8",
+        "UniProtKB:A0A8I5ZV28",
+        "RGD:1309927"
+      ]
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": null,
+      "exact_synonym": null,
+      "file_source": "alliance_gene_nodes",
+      "full_name": "WW domain containing oxidoreductase",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>wwox</em>"
+        ],
+        "symbol": [
+          "<em>wwox</em>"
+        ],
+        "synonym": [
+          "<em>wwox</em>"
+        ]
+      },
+      "id": "Xenbase:XB-GENE-5721345",
+      "in_taxon": "NCBITaxon:8364",
+      "in_taxon_label": "Xenopus tropicalis",
+      "iri": null,
+      "match_type": "exact",
+      "matched_field": "name",
+      "name": "wwox",
+      "namespace": "Xenbase",
+      "narrow_synonym": null,
+      "provided_by": "alliance_gene_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 35.87754,
+      "subsets": null,
+      "symbol": "wwox",
+      "synonym": [
+        "wwox",
+        "WW domain containing oxidoreductase"
+      ],
+      "synonyms": null,
+      "type": "SO:0000704",
+      "xref": [
+        "UniProtKB:A0A8J1JFJ5",
+        "UniProtKB:A0A6I8S6H9",
+        "UniProtKB:A0A803JD15",
+        "ENSEMBL:ENSXETG00000012689",
+        "NCBI_Gene:100145151",
+        "RefSeq:KAE8608325",
+        "RefSeq:KAE8608323",
+        "RefSeq:KAE8608324",
+        "Xenbase:XB-GENE-5721345",
+        "Xenbase:XB-GENEPAGE-5721344"
+      ]
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": null,
+      "exact_synonym": null,
+      "file_source": "alliance_gene_nodes",
+      "full_name": "WW domain containing oxidoreductase",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>Wwox</em>"
+        ],
+        "symbol": [
+          "<em>Wwox</em>"
+        ],
+        "synonym": [
+          "<em>WWOX</em>"
+        ]
+      },
+      "id": "FB:FBgn0031972",
+      "in_taxon": "NCBITaxon:7227",
+      "in_taxon_label": "Drosophila melanogaster",
+      "iri": null,
+      "match_type": "exact",
+      "matched_field": "name",
+      "name": "Wwox",
+      "namespace": "FB",
+      "narrow_synonym": null,
+      "provided_by": "alliance_gene_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 35.87754,
+      "subsets": null,
+      "symbol": "Wwox",
+      "synonym": [
+        "DmWWOX",
+        "anon-EST:Posey177",
+        "WWOX",
+        "CG7221",
+        "Wwox"
+      ],
+      "synonyms": null,
+      "type": "SO:0001217",
+      "xref": [
+        "NCBI_Gene:34090",
+        "UniProtKB:X2J7F1",
+        "UniProtKB:Q9VLU5",
+        "FB:FBgn0031972",
+        "PANTHER:PTHR24320"
+      ]
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": null,
+      "exact_synonym": null,
+      "file_source": "alliance_gene_nodes",
+      "full_name": "WW domain containing oxidoreductase",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>wwox</em>"
+        ],
+        "symbol": [
+          "<em>wwox</em>"
+        ]
+      },
+      "id": "ZFIN:ZDB-GENE-040426-858",
+      "in_taxon": "NCBITaxon:7955",
+      "in_taxon_label": "Danio rerio",
+      "iri": null,
+      "match_type": "exact",
+      "matched_field": "name",
+      "name": "wwox",
+      "namespace": "ZFIN",
+      "narrow_synonym": null,
+      "provided_by": "alliance_gene_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 35.87754,
+      "subsets": null,
+      "symbol": "wwox",
+      "synonym": [
+        "zgc:55975"
+      ],
+      "synonyms": null,
+      "type": "SO:0001217",
+      "xref": [
+        "ZFIN:ZDB-GENE-040426-858",
+        "UniProtKB:Q803A8",
+        "PANTHER:PTHR24320",
+        "ENSEMBL:ENSDARG00000007614",
+        "UniProtKB:A0AC58IUW7",
+        "UniProtKB:A0AB32TC48",
+        "NCBI_Gene:393887",
+        "UniProtKB:A0AC58IUW6"
+      ]
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": null,
+      "exact_synonym": null,
+      "file_source": "alliance_gene_nodes",
+      "full_name": "WW domain-containing oxidoreductase",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>Wwox</em>"
+        ],
+        "symbol": [
+          "<em>Wwox</em>"
+        ]
+      },
+      "id": "MGI:1931237",
+      "in_taxon": "NCBITaxon:10090",
+      "in_taxon_label": "Mus musculus",
+      "iri": null,
+      "match_type": "exact",
+      "matched_field": "name",
+      "name": "Wwox",
+      "namespace": "MGI",
+      "narrow_synonym": null,
+      "provided_by": "alliance_gene_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 35.87754,
+      "subsets": null,
+      "symbol": "Wwox",
+      "synonym": [
+        "5330426P09Rik",
+        "9030416C10Rik",
+        "RIKEN cDNA 5330426P09 gene",
+        "RIKEN cDNA 9030416C10 gene",
+        "WOX1"
+      ],
+      "synonyms": null,
+      "type": "SO:0001217",
+      "xref": [
+        "ENSEMBL:ENSMUSG00000004637",
+        "NCBI_Gene:80707",
+        "PANTHER:PTHR24320",
+        "UniProtKB:Q91WL8",
+        "MGI:1931237"
+      ]
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": null,
+      "exact_synonym": null,
+      "file_source": "hgnc_gene_nodes",
+      "full_name": "WWOX antisense RNA 1",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>WWOX</em>-AS1"
+        ],
+        "symbol": [
+          "<em>WWOX</em>-AS1"
+        ]
+      },
+      "id": "HGNC:53169",
+      "in_taxon": "NCBITaxon:9606",
+      "in_taxon_label": "Homo sapiens",
+      "iri": null,
+      "match_type": null,
+      "matched_field": null,
+      "name": "WWOX-AS1",
+      "namespace": "HGNC",
+      "narrow_synonym": null,
+      "provided_by": "hgnc_gene_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 35.138767,
+      "subsets": null,
+      "symbol": "WWOX-AS1",
+      "synonym": [
+        "RP11-190D6.2"
+      ],
+      "synonyms": null,
+      "type": "SO:0001263",
+      "xref": [
+        "ENSEMBL:ENSG00000260969"
+      ]
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": null,
+      "exact_synonym": null,
+      "file_source": "hgnc_gene_nodes",
+      "full_name": "WWOX antisense RNA 2",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>WWOX</em>-AS2"
+        ],
+        "symbol": [
+          "<em>WWOX</em>-AS2"
+        ]
+      },
+      "id": "HGNC:58302",
+      "in_taxon": "NCBITaxon:9606",
+      "in_taxon_label": "Homo sapiens",
+      "iri": null,
+      "match_type": null,
+      "matched_field": null,
+      "name": "WWOX-AS2",
+      "namespace": "HGNC",
+      "narrow_synonym": null,
+      "provided_by": "hgnc_gene_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 35.138767,
+      "subsets": null,
+      "symbol": "WWOX-AS2",
+      "synonym": null,
+      "synonyms": null,
+      "type": "SO:0001263",
+      "xref": [
+        "ENSEMBL:ENSG00000260733"
+      ]
+    }
+  ],
+  "limit": 20,
+  "offset": 0,
+  "scope": null,
+  "total": 12
+}
