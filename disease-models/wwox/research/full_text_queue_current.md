@@ -5253,6 +5253,8 @@ enzymology) → `A10` (`17823927`, the hypomorph tissue panel) → `A4` (`339148
 it needs a proper read with persisted receipt and locators, not an acquisition. Whoever runs the
 `TX-003` prior-probability question owns it.
 
+**Update 2026-10-22 (`BATCH_20261019_012`, from the R1 commit candidate, proposal 1):** `38378758` now carries receipt `FTR-20261021-38378758-01` (`partial_fulltext_read`; landing [[paper_registry_current#PAPER 436]]) and `29785012` carries `FTR-20261021-29785012-01` (`partial_fulltext_read`; landing [[paper_registry_current#PAPER 430]]); the «NO RECEIPT PERSISTED» and «not read» statuses in the table above are superseded for these two, and `32442409` remains not read. The restriction on using the Parkin negative for `TX-003` is therefore lifted only in the scoped form the audited reading supports: one activity modulator, at one concentration and one 24-hour exposure, was not a global abundance stabiliser — never «small molecules cannot stabilise». Whoever scores `TX-003` owns that use.
+
 
 ---
 
@@ -5328,6 +5330,7 @@ being what it is described as. ⚠️ **If it turned out to report an actual `CA
 WWOX patient, the negative would invert.** Nobody has opened it.
 
 **Current status:** ✅ retired as a confirmed negative (2026-10-20, `CC-20261019-SCIENTIST-B-W4-NEGATIVES-01`, `BATCH_20261019_006`; receipt `FTR-20261019-41510857-01`, `complete_fulltext_read`; landing [[paper_registry_current#PAPER 400]]). The paper contains gene counts only (WWOX n = 4, CACNA1H n = 6 among 261 diagnosed patients), no patient-level data for any gene, no variant names, and never mentions T-type channels; its Figure 1 does not reproduce the text counts. The negative 'no T-type calcium evidence in WWOX deficiency' stands. Wording corrected: this entry's 'across different patients' is not supported by the paper and is replaced by 'no patient-level data'. Revival trigger: patient-level data for the four WWOX cases.
+**Update 2026-10-22 (`BATCH_20261019_012`, from the R2 commit candidate; qualifies, does not reverse):** the retired negative above is a statement about **papers that test T-type function** in WWOX deficiency, and it stands as that. Two WWOX-deficient transcript tables nevertheless exist on disk and list T-type genes with mixed direction: the P47T knock-in hippocampal RNA-seq table of PMID 36828035 (n = 5 per group, bulk mRNA, partial loss of function) lists CACNA1G up and CACNA1H down and is not discussed in the paper, and the knockout-organoid Tables EV1 and EV2 of PMID 34268881 (n = 2 against 4) list none of CACNA1G, CACNA1H or CACNA1I. A P17 re-analysis of public brain deposits (n = 2 to 4 per group) shows Cacna1g with no consistent direction and Cacna1i lower in all four comparisons; the disagreement with the P47T table is UNRECONCILED. These are mRNA levels, not function. Zero-hit queries of 2026-10-21/22 license only «none indexed in those queries».
 **Next action:** none. (Earlier text, kept: 'one abstract-level confirmation is enough to retire this entry; a full read is not required for the use it is being put to. Retrievability untested.')
 
 
