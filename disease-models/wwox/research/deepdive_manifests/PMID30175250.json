@@ -205,12 +205,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Figure 5f read as an image: vehicle group about 35 SWDs per 2.5 h (individual points about 8 to 60), ethosuximide group about 1 to 2; six points per group joined by the paired design; ** bracket.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5f: vehicle about 35 SWDs for 2.5 hr, points about 8 to 60; ethosuximide about 1 to 2; six points per group; ** bracket.",
+    "proposition": "Figure 5f read as an image: vehicle group about 35 SWDs per 2.5 h (individual points span about 16 to 50, mean about 32; the 60 is the axis tick, not a point), ethosuximide group points cluster near 1 to 4; six points per group joined by the paired design; bracket with two stars.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5f: vehicle points about 16 to 50 (axis runs to 60); ethosuximide points about 1 to 4; six points per group; ** bracket.",
     "surface": "figure",
     "anchor": "Figure 5 panel f (JPEG raster)",
     "artifact": "files/figures/PMID30175250_r2/nihms-984331-f0005.jpg",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30175250.json",
+     "entry": 6,
+     "what_changed": "2026-10-22 blind audit (locator_audit_R4b_R2b_20261022.md) found an OVERSHOOT: the vehicle points span about 16 to 50, not 8 to 60 (60 is the axis tick); ethosuximide points cluster near 1 to 4. Proposition narrowed. Prior wording began: Figure 5f read as an image: vehicle group about 35 SWDs per 2.5 h (individual points about",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind audit, triple plus source; verdict table in disease-models/wwox/research/page_adjudications/locator_audit_R4b_R2b_20261022.md; the repair itself is unaudited"
+     }
+    }
    }
   ],
   "note": ""
