@@ -269,12 +269,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Figure 1 read as an image: panel E activation curves show L208P (blue) and M1508V (green) left of wild type (black) by about 10 to 15 mV and L909F (red) by about 4 to 5 mV; panel F inactivation curves for L208P and M1508V sit left of wild type by about 5 mV while L909F overlaps it; panel D peak current density is similar between variants but the voltage of peak current is shifted left for all three variants.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1E: half-activation WT about -32, L208P about -42, L909F about -37, M1508V about -44 mV; Figure 1F: inactivation curves for WT and L909F overlap near -62 mV, L208P and M1508V near -67 mV.",
+    "proposition": "Figure 1 read as an image: panel E activation curves show M1508V (green) and L208P (blue) left of wild type (black) by about 12 and about 10 mV and L909F (red) by about 6 mV; panel F inactivation curves for L208P and M1508V sit left of wild type by about 3 to 5 mV while L909F nearly overlaps it; panel D peak current density is larger than wild type for L909F and M1508V (about minus 270 and minus 258 against minus 205 pA/pF) and smaller for L208P (about minus 175); the voltage of the peak is shifted left for L208P and M1508V (about minus 35 to minus 40 mV against about minus 20 to minus 25 for wild type) and not for L909F (about minus 25 to minus 20 mV).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1D-F: V1/2 act shift M1508V about -12, L208P about -10, L909F about -6 mV; inactivation L208P, M1508V left by 3-5 mV; peak density L909F about -270, M1508V about -258, WT about -205, L208P about -175; peak voltage left for L208P and M1508V only.",
     "surface": "figure",
     "artifact": "files/figures/PMID32878331_r2/ijms-21-06333-g001.jpg",
     "anchor": "Figure 1 panels D to F; bucket jpg 764 px wide as delivered",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32878331.json",
+     "entry": 5,
+     "what_changed": "2026-10-22 blind figure rerun (locator_audit_R2_figures_rerun_20261022.md): a numeral or clause did not match the panel; re-read from the artefact this session and corrected. Prior wording began: Figure 1 read as an image: panel E activation curves show L208P (blue) and M1508",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "A figure legend title reads: recovery from fast inactivation of wild-type and mutant Cav3.1 channels.",
@@ -313,12 +325,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Figure 1 read as an image: peak current density in heterologous cells is larger than wild type for two variants (about minus 260 against minus 205 pA/pF, at minus 25 to minus 30 mV) and similar to wild type for L208P (about minus 175 against minus 205); half-activation voltage is shifted hyperpolarised for all three (steady-state activation curves left of wild type: M1508V furthest, then L208P, then L909F); the steady-state inactivation curves of L208P and M1508V sit left of wild type and L909F close to it.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1D-F: peak density L909F and M1508V about -260 vs WT about -205 pA/pF; L208P about -175; activation curves all left of WT (M1508V > L208P > L909F); inactivation L208P and M1508V left of WT, L909F close.",
+    "proposition": "Figure 1 read as an image: peak current density in heterologous cells is larger than wild type for L909F and M1508V (about minus 270 and minus 258 against minus 205 pA/pF) and somewhat smaller for L208P (about minus 175); half-activation voltage is shifted hyperpolarised for all three (steady-state activation curves left of wild type: M1508V furthest, then L208P, then L909F); the steady-state inactivation curves of L208P and M1508V sit left of wild type and L909F close to it.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1D-F: peak density L909F about -270, M1508V about -258 vs WT about -205 pA/pF; L208P about -175; activation curves all left of WT (M1508V > L208P > L909F); inactivation L208P and M1508V left of WT, L909F close.",
     "surface": "figure",
     "anchor": "Figure 1 panels D-F (JPEG raster)",
     "artifact": "files/figures/PMID32878331_r2/ijms-21-06333-g001.jpg",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32878331.json",
+     "entry": 9,
+     "what_changed": "2026-10-22 blind figure rerun (locator_audit_R2_figures_rerun_20261022.md): a numeral or clause did not match the panel; re-read from the artefact this session and corrected. Prior wording began: Figure 1 read as an image: peak current density in heterologous cells is larger ",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "Figure 2 read as an image: the deactivation time constant is much slower for L208P (about 80 ms at minus 50 mV against about 6 ms for wild type) and M1508V (about 46 ms), slightly slower for L909F (about 11 ms); the activation time constant is slower for L208P (about 25 ms at minus 55 mV against about 7 ms) and M1508V (about 17 ms); the inactivation time constant is much slower for L208P (about 225 ms at minus 50 mV against about 135 ms) and M1508V stays near 40 ms at depolarised potentials against about 12 ms for wild type and L909F.",

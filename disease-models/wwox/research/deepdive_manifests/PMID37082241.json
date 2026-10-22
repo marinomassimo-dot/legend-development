@@ -553,20 +553,44 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Figure 8 read as an image (absence-model rats, four drug conditions): normalised incidence and total duration rise above baseline for the treated groups (stars at the middle and highest doses), raw incidence about 65 for vehicle against about 78 to 79 for the middle and highest doses (one star), total duration about 940 s against about 1,200 s at the highest dose (three stars), average duration about 15 s against about 16 s (one star); average frequency about 9 to 10 Hz in all groups.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 8: raw incidence vehicle about 65 vs about 78-79; total duration about 940 vs about 1200 s (***); average duration about 15 vs 16 s (*); frequency about 9-10 Hz.",
+    "proposition": "Figure 8 read as an image (absence-model rats; panels B, D, F, H are the four-hour raw data): raw incidence is about 230 with vehicle against about 285, about 305 (one star) and about 290 at the three doses; total duration about 2,750 s against about 3,400, about 4,000 (one star) and about 4,400 s (three stars); average duration about 12 s against about 12.5, about 13.5 and about 15.8 s (one star at the highest dose); average frequency about 9 to 10 Hz in all groups. Normalised panels A, C, E and G carry stars at the middle and highest doses.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 8B, D, F, H: incidence about 230 / 285 / 305 (*) / 290; total duration about 2750 / 3400 / 4000 (*) / 4400 s (***); average duration about 12 / 12.5 / 13.5 / 15.8 s (*); frequency about 9-10 Hz.",
     "surface": "figure",
     "anchor": "Figure 8 panels A-H (JPEG raster)",
     "artifact": "files/figures/PMID37082241_r2/fphys-14-1086243-g008.jpg",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID37082241.json",
+     "entry": 18,
+     "what_changed": "2026-10-22 blind figure rerun (locator_audit_R2_figures_rerun_20261022.md): a numeral or clause did not match the panel; re-read from the artefact this session and corrected. Prior wording began: Figure 8 read as an image (absence-model rats, four drug conditions): normalised",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
-    "proposition": "Supplementary Figure 2 read as an image (first hour of the absence-model recordings, 10 minute bins): incidence, total duration, average duration and frequency curves for vehicle and the three doses overlap until the last bin, where error bars are large (up to about 600 to 2,000 percent of baseline); the bar panels show no star.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Fig 2: curves overlap; last 10-min bin error bars very large; no star in B, D, F, H.",
+    "proposition": "Supplementary Figure 2 read as an image (first hour of the absence-model recordings, 10 minute bins): the curves for vehicle and the three doses overlap until the last bin, where error bars are large (up to about 600 to 2,000 percent of baseline); the raw first-hour bar panels read incidence about 64 with vehicle against about 75, 79 and 78, total duration about 945 s against about 1,195 s at the highest dose, average duration about 15 s against about 16 s, with no star on any bar.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Fig 2: curves overlap; last 10-min bin error bars very large; first-hour raw incidence about 64 vs 75/79/78, total duration about 945 vs 1195 s, average duration about 15 vs 16 s; no star in B, D, F, H.",
     "surface": "figure",
     "anchor": "Supplementary Figure 2 (TIF converted to PNG)",
     "artifact": "files/supplement/PMID37082241_r2/Image2.png",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID37082241.json",
+     "entry": 19,
+     "what_changed": "2026-10-22 blind figure rerun (locator_audit_R2_figures_rerun_20261022.md): a numeral or clause did not match the panel; re-read from the artefact this session and corrected. Prior wording began: Supplementary Figure 2 read as an image (first hour of the absence-model recordi",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "Supplementary Figure S1 read as an image: percentage weight gain of the Scn1a heterozygous mice on treated chow against control chow is not different at postnatal day 25 (about 21 against about 28 percent) or day 31 (about 56 against about 60 percent).",

@@ -316,12 +316,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Figure 4B read as an image (page 8 render): residual-current curves for Cav3.1, Cav3.2 and Cav3.3 versus stiripentol concentration fall from near 100 percent at 5 micromolar to below 10 percent at 300 micromolar; points carry small error bars from n = 3 cells; the fitted Hill curves pass through the points at 50 to 150 micromolar for Cav3.1 and Cav3.2, with a looser fit for Cav3.3 at the low end.",
+    "proposition": "Figure 4B read as an image (page 8 render): residual-current curves for Cav3.1, Cav3.2 and Cav3.3 versus the compound concentration fall from about 93, 92 and 81 percent at 5 micromolar to below 10 percent at 300 micromolar; points carry small error bars from n = 3 cells; the fitted Hill curves pass through the points at 50 to 150 micromolar for Cav3.1 and Cav3.2, with a looser fit for Cav3.3 at the low end.",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4B: three concentration-response panels; Cav3.1 residual about 65 percent at 50 micromolar and about 10 percent at 300; Cav3.3 about 80 percent at 5 to 15 and about 5 at 300.",
     "surface": "figure",
     "artifact": "files/figures/PMID35184274_r2/PMC9314114_p08_120dpi.png",
     "anchor": "Figure 4 panels A and B; page 8 render at 120 dpi",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35184274.json",
+     "entry": 6,
+     "what_changed": "2026-10-22 blind figure rerun (locator_audit_R2_figures_rerun_20261022.md): a numeral or clause did not match the panel; re-read from the artefact this session and corrected. Prior wording began: Figure 4B read as an image (page 8 render): residual-current curves for Cav3.1, ",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "Industry authorship: four of five authors are full-time employees of the stiripentol marketing-authorisation holder, as stated in the paper's conflict-of-interest statement.",
@@ -372,12 +384,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The file EPI-63-1200-g001 is Figure 1 (low-dose convulsant in non-epileptic rats): the cumulated discharge duration in the first 20 minutes is about 72 s with vehicle, about 22 s at the lower dose and about 0 at the higher dose, and at 40 to 60 minutes the three groups are about 19 to 20 s; discharge number falls from about 36 to about 10 and 0 in the first 20 minutes and returns toward about 12, 11 and 3 at 40 to 60 minutes.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1B (file g001): cumulated duration 0-20 min veh about 72 s, low dose about 22, high dose about 0; 40-60 min about 19-20 s; number about 36 -> 10 and 0 (0-20 min), about 12, 11, 3 (40-60 min).",
+    "proposition": "The file EPI-63-1200-g001 is Figure 1 (low-dose convulsant in non-epileptic rats): the cumulated discharge duration in the first 20 minutes is about 72 s with vehicle, about 22 s at the lower dose and about 0 at the higher dose; at 40 to 60 minutes vehicle and the lower dose are both about 19 to 20 s and the higher dose about 4 s; discharge number falls from about 36 to about 10 and 0 in the first 20 minutes and is about 12, 11 and 3 at 40 to 60 minutes.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1B (file g001; confirmed on the 482 ppi PDF raster): cumulated duration 0-20 min veh about 72 s, low dose about 22, high dose about 0; 40-60 min veh about 19.5, low dose about 19.5, high dose about 4 s; number about 36 -> 10 and 0 (0-20 min), about 12, 11, 3 (40-60 min).",
     "surface": "figure",
     "anchor": "Figure 1 panel B (file g001, JPEG raster)",
     "artifact": "files/figures/PMID35184274_r2/EPI-63-1200-g001.jpg",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35184274.json",
+     "entry": 13,
+     "what_changed": "2026-10-22 blind figure rerun (locator_audit_R2_figures_rerun_20261022.md): a numeral or clause did not match the panel; re-read from the artefact this session and corrected. Prior wording began: The file EPI-63-1200-g001 is Figure 1 (low-dose convulsant in non-epileptic rats",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    }
   ],
   "note": ""
