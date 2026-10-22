@@ -76,7 +76,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 024 | WWOX WW-domain function depends on WW1–WW2 tandem cooperativity, not only on isolated domain int | consolidated baseline | DATO | domain architecture / variant interpreta | NOT_ANNOTATED | 0 | 1 |
 | CLAIM 025 | The WWOX/HIF1A ratio may function as a systems-level marker of maladaptive biological state, lin | in observation | DATO + INFERENZA | P5 — metabolism / state transition / inf | NOT_ANNOTATED | 1 | 2 |
 | CLAIM 026 | WWOX co-associates with trafficking proteins; its co-purifying partners show metabolic pathway a | in observation | DATO (co-association and pathway annotat | P5 — trafficking / endomembrane systems  | NOT_ANNOTATED | 0 | 3 |
-| CLAIM 027 | WWOX may act as an ECM/membrane-to-nucleus signaling node through HYAL-2/SMAD4 complexes, with c | in observation | INFERENZA | ECM / membrane signaling / injury respon | NOT_ANNOTATED | 0 | 1 |
+| CLAIM 027 | WWOX may act as an ECM/membrane-to-nucleus signaling node through HYAL-2/SMAD4 complexes, with c | in observation | INFERENZA | ECM / membrane signaling / injury respon | NOT_ANNOTATED | 0 | 2 |
 | CLAIM 028 | WWOX biological output is strongly partner- and context-dependent; expression level alone is ins | flagged for review | INFERENZA — principio interpretativo tra | cross-pathway interpretive principle | NOT_ANNOTATED | 4 | 6 |
 | CLAIM 029 | WWOX contributes directly to DNA-damage-response competence and genome-stability maintenance, at | in observation | DATO + INFERENZA prudente | genome stability / ATM / DNA damage resp | NOT_ANNOTATED | 0 | 4 |
 | CLAIM 030 | In WWOX the severity tracks residual protein FUNCTION, not protein abundance | in observation | DATO (serie allelica su cellule di pazie | genotype / protein function / proteostas | NOT_ANNOTATED | 10 | 8 |
@@ -376,6 +376,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 570 input files; digest
-`c95a9f360ccbffc8`. Sources: the claim, paper and
+`214d284d0515bec6`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
