@@ -1,0 +1,84 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Part of the ten-hour repurposing batch ORCH-REPURPOSING-10H-20261021. Adjacent and transferable literature: every paper that is not WWOX evidence is labelled NOT WWOX EVIDENCE, at class level, no dose, no paediatric suitability presumed, not medical advice.",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-b",
+ "PRIORITY": "HIGH",
+ "DEPENDENCIES": [],
+ "REVIEW_REQUIREMENT": "Mirror ex post",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently",
+ "MILESTONE_PLAN": [
+  "TASK_ACK/CLAIM",
+  "per-paper M0-M5",
+  "analysis note",
+  "self-eval",
+  "report"
+ ],
+ "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
+ "TASK_ID": "REPURP-10H-R2D-B-20261022",
+ "OBJECTIVE": "Complete the figures and supplements owed by the 19 first-relay R2 receipts, ordered by what DL-MECH-170/171/172 could change; repair the R2c audit overshoots.",
+ "SCOPE": {
+  "inputs": [
+   "owed_sections.py",
+   "paper_packet.py rank",
+   "page_adjudications/locator_audit_R1c_R2c_20261022.md"
+  ],
+  "outputs": "completing staged receipts FTR-20261022-<PMID>-02, manifests, note repurposing_10h_scientist-b_20261022e.md",
+  "forbidden": "repurposing_bridge.py, cards/, cards_early/, roadmap copies, the four current files"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "about 8 completions staged, not recorded",
+  "strength scan before commit",
+  "remaining owed list in the note",
+  "audit repairs with contradicts_locator"
+ ],
+ "assigned_on": "2026-10-22",
+ "TASK_ACK": {
+  "by": "scientist-b",
+  "on": "2026-10-22"
+ },
+ "TASK_CLAIM": {
+  "by": "scientist-b",
+  "branch": "task/repurp-10h-r2d-b",
+  "worktree": ".claude/worktrees/r2d-b",
+  "on": "2026-10-22"
+ },
+ "DEFAULTS_TAKEN": [
+  "seven completions (40834072, 40827489, 32719346, 35243344, 24953239, 42536722, 37275776); 12 first-relay receipts left owed and listed in the note",
+  "supplementary movies and one Data Sheet not opened; coverage captions_only",
+  "five earlier propositions narrowed after the advisory strength scan with contradicts_locator",
+  "R2c audit repairs: 34483921 #13, 40166234 #16, 27616982 #17/#18 (split), 32678276 #17 (split)",
+  "figure reads whose first call returned a placeholder are flagged unaudited in the note"
+ ],
+ "STOP_LOG": [],
+ "CURRENT_STATE": "DONE_PENDING_LANDING",
+ "RESULT": {
+  "completed": [
+   "40834072",
+   "40827489",
+   "32719346",
+   "35243344",
+   "24953239",
+   "42536722",
+   "37275776"
+  ],
+  "owed": [
+   "24002024",
+   "26419537",
+   "31781019",
+   "32878331",
+   "33704440",
+   "35079122",
+   "35184274",
+   "36282524",
+   "37082241",
+   "40068874",
+   "40825030",
+   "41137852"
+  ],
+  "note": "disease-models/wwox/research/repurposing_10h_scientist-b_20261022e.md"
+ }
+}

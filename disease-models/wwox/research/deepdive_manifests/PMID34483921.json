@@ -283,12 +283,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Figure 3 read as an image: at the lowest NBQX dose both genotype series stay near 5 with one star at the first time point; at the two higher doses both series fall to about 3.5 to 4 at 5 to 15 minutes with one or two stars and return toward 4 to 5 by 30 minutes.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3 panels A to C: 30 mg/kg both series near 5; 60 and 100 mg/kg both fall to about 3.5 to 4 at 5 to 15 min with one or two stars, back to 4 to 5 at 30 min.",
+    "proposition": "Figure 3 read as an image (the non-WWOX cited paper's own panels; a quantity from a cited mouse study, no dose guidance): at the lowest of the three antagonist doses both genotype series stay near 5 with one star at the first time point; at the middle dose the wild-type series reads about 4.6, 3.6 and 4.1 and the mutant series about 3.8, 3.7 and 3.7 at 5, 15 and 30 minutes, with stars (one or two) at all three times and the mutant series still about 3.7 at 30 minutes; at the highest dose the wild-type series reads about 3.5, 3.5 and 5.0 and the mutant series about 4.2, 3.5 and 4.7, returning to near 5 by 30 minutes.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3 panels A-C: lowest dose both near 5; middle dose WT about 4.6/3.6/4.1, mutant about 3.8/3.7/3.7 at 5/15/30 min, stars at all three; highest dose WT about 3.5/3.5/5.0, mutant about 4.2/3.5/4.7.",
     "surface": "figure",
     "anchor": "Figure 3 panels A, B and C (JPEG raster)",
     "artifact": "files/figures/PMID34483921_r2/fphar-12-711737-g003.jpg",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34483921.json",
+     "entry": 13,
+     "what_changed": "2026-10-22 blind audit: at the middle dose the mutant series is still about 3.7 at 30 minutes and starred, so the earlier 'return toward 4 to 5 by 30 minutes' held for the highest dose only; rewritten from the panel re-opened this session. Prior wording began: Figure 3 read as an image: at the lowest NBQX dose both genotype series stay nea",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind audit, triple plus source; verdict table in disease-models/wwox/research/page_adjudications/locator_audit_R1c_R2c_20261022.md; the repair itself is unaudited"
+     }
+    }
    }
   ],
   "note": ""

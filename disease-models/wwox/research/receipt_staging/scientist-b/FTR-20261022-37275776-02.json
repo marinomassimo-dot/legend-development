@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-22T00:00:00Z",
+ "event_at": "2026-10-22T04:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "captions_only"
+ },
+ "event_id": "FTR-20261022-37275776-02",
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "Completing pass (owed: figures captions_only, supplementary not_read). Figures 1, 3, 5 and 6 opened as images from the PDF-embedded 300 ppi rasters (Figures 4 and 7 were read as images in the first pass; Figure 2 (electroconvulsive threshold and EEG, the first-relay 300 ppi raster) was opened as an image in this pass too). The Data Sheet supplementary PDF (15 pages: supplementary figures and tables) was not read through: its text layer was extracted (the fonts carry no Unicode map, so it is not used for quotes) and its legends scanned only; supplementary = captions_only."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID37275776.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-b_20261022e.md"
+ ],
+ "prior_receipt": "FTR-20261021-37275776-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "ff7f3eb90b042662c288199a666d013020d2cf293f2505aee8d04179c9ab6acb",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID37275776_Colombo2023_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.3389/fncel.2023.1175895",
+  "pmid": "37275776"
+ },
+ "workflow": "scientist-b repurposing batch R2d completing pass 2026-10-22; SOURCE_FIRST for the owed sections; NOT WWOX EVIDENCE; rasters extracted from the PMC open-data PDF (300 ppi); prepared as JSON for the integrator and staged, not appended."
+}

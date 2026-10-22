@@ -2,8 +2,9 @@
  "schema_version": 2,
  "pmid": "37275776",
  "doi": "10.3389/fncel.2023.1175895",
- "receipt": "FTR-20261021-37275776-01",
+ "receipt": "FTR-20261022-37275776-02",
  "landing": [
+  "FTR-20261022-37275776-02",
   "FTR-20261021-37275776-01",
   "repurposing_10h_scientist-b_20261021"
  ],
@@ -168,6 +169,111 @@
      "join": ""
     }
    }
+  },
+  {
+   "path": "files/figures/PMID37275776_r3/pdf_p9-000.png",
+   "sha256": "c62d80ccb59d716e6fd19f13d201a8407697571c133dea3bea80a20296000016",
+   "kind": "figure",
+   "note": "Figure 1 (PDF page 9 embedded raster, 300 ppi; ranked first by paper_packet.py rank) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "c62d80ccb59d716e6fd19f13d201a8407697571c133dea3bea80a20296000016",
+    "derived_from": "files/supplement/PMID37275776_r2/PMC10232839.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 9 -l 9 -png PMC10232839.1.pdf pdf_p9"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID37275776_r3/pdf_p12-000.png",
+   "sha256": "95b3acd6455ceee2688c4273abf2dcbe43454240cac5215cb14174d4dabcae3d",
+   "kind": "figure",
+   "note": "Figure 3 (PDF page 12 embedded raster, 300 ppi; ranked first by paper_packet.py rank) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "95b3acd6455ceee2688c4273abf2dcbe43454240cac5215cb14174d4dabcae3d",
+    "derived_from": "files/supplement/PMID37275776_r2/PMC10232839.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 12 -l 12 -png PMC10232839.1.pdf pdf_p12"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID37275776_r3/pdf_p15-000.png",
+   "sha256": "e299f9134c47f1f4299f7592f41c8558c9ca0930a57e62fa6d39b2c7f8bb9e66",
+   "kind": "figure",
+   "note": "Figure 5 (PDF page 15 embedded raster, 300 ppi; ranked first by paper_packet.py rank) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "e299f9134c47f1f4299f7592f41c8558c9ca0930a57e62fa6d39b2c7f8bb9e66",
+    "derived_from": "files/supplement/PMID37275776_r2/PMC10232839.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 15 -l 15 -png PMC10232839.1.pdf pdf_p15"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID37275776_r3/pdf_p16-000.png",
+   "sha256": "06ed0739640814f008505a436686392e4e03b7b13d3d57f37aabb1891beab09b",
+   "kind": "figure",
+   "note": "Figure 6 (PDF page 16 embedded raster, 300 ppi; ranked first by paper_packet.py rank) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "06ed0739640814f008505a436686392e4e03b7b13d3d57f37aabb1891beab09b",
+    "derived_from": "files/supplement/PMID37275776_r2/PMC10232839.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 16 -l 16 -png PMC10232839.1.pdf pdf_p16"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID37275776_r2/PMC10232839_p11_embedded.png",
+   "sha256": "7b196acd5152fb3b55ff19aca4361505b04cbf333302f66d636ae58eefd1bb8a",
+   "kind": "figure",
+   "note": "Figure 2 (PDF page 11 embedded raster, 2008 x 2084 px, 300 ppi), extracted in the first relay and opened as an image in the completing pass.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": true,
+    "result_sha256": "7b196acd5152fb3b55ff19aca4361505b04cbf333302f66d636ae58eefd1bb8a",
+    "derived_from": "files/supplement/PMID37275776_r2/PMC10232839.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 11 -l 11 -png PMC10232839.1.pdf PMC10232839_p11"
+    }
+   }
   }
  ],
  "verbatim_locators": {
@@ -201,12 +307,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The authors' argument for a non-T-type target is by elimination: ethosuximide is described as acting mainly on T-type channels with the extent of block at relevant concentrations disputed, phenytoin (which also has a T-type action) did not suppress, and Gβ1 is said not to regulate Cav3.2. No Cav3 current was measured in the mutant neurons or the mouse.",
+    "proposition": "The authors write that, together, their considerations support the hypothesis that, in countering the variant-related spike-wave discharges, ethosuximide acts on a target other than both sodium channels and T-type calcium channels.",
     "snippet": "Together, these considerations support the hypothesis that, in countering GNB1 K78R-related SWDs, ETX acts on a target other than both Na+ channels and T-type Ca2+ channels.",
     "surface": "body",
     "anchor": "Discussion, paragraph 4",
     "artifact": "files/fulltext/PMID37275776_Colombo2023_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID37275776.json",
+     "entry": 3,
+     "what_changed": "2026-10-22 advisory strength scan: 'elimination' and the added measurement statement are not in the quote; narrowed to the quote. Prior wording began: The authors' argument for a non-T-type target is by elimination: ethosuximide is",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "ADVISORY_STRENGTH_SCAN"
+      ],
+      "method": "locator_audit.py --strength-scan (advisory), run 2026-10-22; no blind audit; the narrowing only brings the proposition inside its quote"
+     }
+    }
    },
    {
     "proposition": "Controversy statement in the paper's own words: ethosuximide is thought to act mainly as a T-type blocker, but the extent of T-type block at physiologically relevant concentrations is disputed.",
@@ -254,6 +372,70 @@
     "surface": "body",
     "anchor": "Results, Ethosuximide corrects EEG and network firing patterns",
     "artifact": "files/fulltext/PMID37275776_Colombo2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A figure legend title states that the K78R Gβ variant is a gain of function for GIRK1/2 and GIRK2 activation but, at high expression levels, a loss of function for GIRK1/2.",
+    "snippet": "K78R is a GoF for GIRK1/2 and GIRK2 activation but, at high expression levels, shows an LoF for GIRK1/2.",
+    "surface": "body",
+    "anchor": "Figure 6 legend title",
+    "artifact": "files/fulltext/PMID37275776_Colombo2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A figure legend title states that GABAB-evoked GIRK currents are larger in the heterozygous hippocampal and inhibitory cortical neurons.",
+    "snippet": "GABAB-evoked GIRK currents are larger in K78R/+ hippocampal and inhibitory cortical neurons.",
+    "surface": "body",
+    "anchor": "Figure 5 legend title",
+    "artifact": "files/fulltext/PMID37275776_Colombo2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A figure legend title states that ethosuximide blocks GIRK channels expressed in Xenopus oocytes.",
+    "snippet": "Ethosuximide blocks GIRK channels expressed in Xenopus oocytes.",
+    "surface": "body",
+    "anchor": "Figure 7 legend title",
+    "artifact": "files/fulltext/PMID37275776_Colombo2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 read as an image: heterozygous pups weigh less than wild type from day 4 to day 10 (about 2.2 against 2.7 g at day 4 and about 4.5 against 5.9 g at day 10; four stars), show slower surface righting and negative geotaxis at some ages, make fewer ultrasonic calls (about 75 against 165 at day 5), and as adults travel less in the open field (about 10 against 13 m in the first bin; two stars) and fail the water-maze probe (target about 27 percent against about 46 percent in wild type).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1: weight day 4 about 2.2 vs 2.7 g, day 10 about 4.5 vs 5.9 (****); USVs about 75 vs 165 (**); open field about 10 vs 13 m; probe target about 27 vs 46%.",
+    "surface": "figure",
+    "anchor": "Figure 1 panels B-E (page 9 raster)",
+    "artifact": "files/figures/PMID37275776_r3/pdf_p9-000.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3 read as an image (microelectrode arrays of cultured cortical neurons): the heterozygous cultures fire bursts less often (about 4.4 to 5 against 5.5 to 6.8 per minute; P = 2.4e-13), with longer bursts (about 1.1 to 1.5 against 0.9 to 1.2 s) and more spikes per burst (about 54 to 66 against 43 to 48) while the mean firing rate differs little (P = 0.029) and spike frequency in bursts is similar.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3B: bursts/min about 4.4-5 vs 5.5-6.8 (P = 2.4e-13); burst duration about 1.1-1.5 vs 0.9-1.2 s; spikes/burst about 54-66 vs 43-48; mean firing rate P = 0.029.",
+    "surface": "figure",
+    "anchor": "Figure 3 panel B (page 12 raster)",
+    "artifact": "files/figures/PMID37275776_r3/pdf_p12-000.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 5 read as an image (baclofen-evoked whole-cell currents): hippocampal excitatory neurons show larger currents in the heterozygous mice at the middle and highest concentrations (about 0.11 against 0.05 pA/pF, three stars; about 0.29 against 0.20, one star), hippocampal inhibitory neurons larger at both (about 0.10 against 0.05, two stars; about 0.28 against 0.09, three stars), cortical inhibitory neurons larger at the highest only (about 0.28 against 0.20, one star) and cortical excitatory neurons not different.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5: hippocampal excitatory 1 uM about 0.11 vs 0.05 (***), 10 uM about 0.29 vs 0.20 (*); hippocampal inhibitory 1 uM about 0.10 vs 0.05 (**), 10 uM about 0.28 vs 0.09 (***); cortical inhibitory 10 uM about 0.28 vs 0.20 (*); cortical excitatory ns.",
+    "surface": "figure",
+    "anchor": "Figure 5 panels A-B (page 15 raster)",
+    "artifact": "files/figures/PMID37275776_r3/pdf_p15-000.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 6 read as an image (oocyte co-expression): with GIRK1/2 the variant Gbeta gives more current than wild type at low RNA doses (about 6.6 against 4.1 microamp at 0.1 ng; stars) and less at the highest dose (about 4.7 against 9.4 at 5 ng; four stars) although more protein reaches the membrane; with GIRK2 alone the variant gives more current at 0.5 and 1 ng (about 2.3 against 0.15 and 3.8 against 1.2 microamp; four stars) and less at 5 ng (about 2.5 against 3.4).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6B, G: GIRK1/2 0.1 ng about 6.6 vs 4.1 uA (*), 5 ng about 4.7 vs 9.4 (****); GIRK2 0.5 ng 2.3 vs 0.15, 1 ng 3.8 vs 1.2 (****), 5 ng 2.5 vs 3.4.",
+    "surface": "figure",
+    "anchor": "Figure 6 panels B, G (page 16 raster)",
+    "artifact": "files/figures/PMID37275776_r3/pdf_p16-000.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2 read as an image (the first-relay raster, 300 ppi): the electroconvulsive threshold (iRMS current) is lower in the heterozygous missense mice than in wild type in both sexes (about 26.5 against about 34 for males and about 26 against about 33 for females; four stars) while the haploinsufficient deletion line does not differ from wild type (ns); heterozygous mice show about 1,700 spike-wave discharges per 24 h against about 10 in wild type (four stars), mean duration about 3.4 s, fundamental frequency about 7.3 Hz.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2A, C-E: iRMS threshold K78R about 26.5 vs WT about 34 (males), about 26 vs 33 (females) ****; Del71/+ ns vs WT; SWDs/24 h about 1,700 vs about 10 ****; duration about 3.4 s; frequency about 7.3 Hz.",
+    "surface": "figure",
+    "anchor": "Figure 2 panels A, C-E (page 11 raster)",
+    "artifact": "files/figures/PMID37275776_r2/PMC10232839_p11_embedded.png",
     "panel_text_relation": "text_only"
    }
   ],
