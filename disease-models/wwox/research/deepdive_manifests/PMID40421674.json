@@ -423,7 +423,7 @@
     }
    },
    {
-    "proposition": "Figure 4C-E as drawn: control hiPSC-Heps, OTC protein relative to vehicle about 190 (PC1) and about 230 (PC4, one point near 590), one star each, four to five points; OTC activity about 185 (PC1, one star, points from about 85 to 335) and about 125 (PC4, two stars). Patient line OTCD_3F: protein about 105 and about 97 and activity about 99 for both, all marked n.s.; the representative patient blot shows a darker OTC band with PC4 although the quantification is n.s.; the control CPS1 band looks similar across lanes by eye.",
+    "proposition": "Figure 4C-E as drawn: control hiPSC-Heps, OTC protein relative to vehicle about 190 (PC1) and about 230 (PC4, one point near 550), one star each, four to five points; OTC activity about 185 (PC1, one star, points from about 85 to 335) and about 125 (PC4, two stars). Patient line OTCD_3F: protein about 105 and about 97 and activity about 99 for both, all marked n.s.; the representative patient blot shows a darker OTC band with PC4 although the quantification is n.s.; the control CPS1 band looks similar across lanes by eye.",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4C-E (native raster, printed page 9)",
     "surface": "figure",
     "artifact": "files/figures/PMID40421674_r2/native/PMC12107682.1_p9_img1_native.png",
@@ -433,6 +433,17 @@
      "system": "purified recombinant wild-type human ornithine transcarbamylase (thermal-shift screen); primary human hepatocytes and hiPSC-derived hepatocytes from a control and from patients with OTC deficiency; NOT a WWOX system (OTC is a mitochondrial trimeric enzyme of the urea cycle)",
      "genotype": "OTC wild type; patient lines p.Tyr183Cys (no OTC protein), p.Arg92* (no OTC protein), p.Arg40His, and a fourth patient whose variant is not stated",
      "endpoint": "thermal shift of the purified enzyme; OTC protein by western blot; OTC enzyme activity; urea secretion; ureagenesis"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40421674.json",
+     "entry": 10,
+     "what_changed": "Flag from the blind audit: the outlier point reads about 550, not 590; native raster re-read.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CORRECTED"
+      ]
+     }
     }
    },
    {
