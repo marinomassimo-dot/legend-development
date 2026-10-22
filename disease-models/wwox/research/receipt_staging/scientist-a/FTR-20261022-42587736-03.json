@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261022-42587736-03",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "42587736",
+  "doi": "10.3390/cells15151327"
+ },
+ "event_at": "2026-10-22T04:08:00Z",
+ "analysis_at": "2026-10-22T04:05:00Z",
+ "analysis_time_precision": "second",
+ "workflow": "HELD-partial resume by scientist-a under REPURP-10H-R1C-A-20261022: the owed Supplementary Materials (a zip of one two-page PDF) taken from the Europe PMC supplementaryFiles bundle (digest reproduced against the copy already on disk), the PDF extracted into a fresh directory, each page rendered at 300 dpi and opened as an image beside the embedded rasters, legends read, locators appended to the existing work manifest and verified by deepdive_manifest.py. Supplementary Figures S1 and S2 only; no uncropped gel was found in the retrieved supplement or in the 14-member bundle (a file hosted elsewhere would not be seen by this route).",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID42587736_Song2026_PMC_r2.xml",
+ "source_fingerprint": "3f4e65c6f4333f9b3033826eef145613cb6ff68951b5ad366d50ce90d3d42795",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42587736.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-a_r1c_20261022.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "Supplementary Materials read: legends as text and every supplement panel as an image (300 dpi page renders plus the embedded rasters at native size); context QUESTION_DRIVEN (the reader held the P5 cards on the phenylbutyrate class and the earlier manifest propositions); the manifest's own context_policy field is left as the first reading wrote it."
+ ],
+ "prior_receipt": "FTR-20261021-42587736-02",
+ "reread_reason": "inadequate_prior_coverage"
+}
