@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261022-39771507-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "39771507",
+  "doi": "10.3390/pharmaceutics16121528"
+ },
+ "event_at": "2026-10-22T00:00:00Z",
+ "analysis_at": "2026-10-22T00:00:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-c, task REPURP-10H-R3c-C-20261022, PRIMARY_EVIDENCE_READ, SOURCE_FIRST (written question: what exposure-toxicity relation and age floor does the paediatric CDK4/6 inhibitor record carry); results and discussion read, figures and supplement not read; prepared as JSON for the integrator and not appended by this actor.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID39771507_PopPK2024_PMC_r2.xml",
+ "source_fingerprint": "12363fbc1e997b1c0ff9e048b0e5b583102557d2d26efc1fe351b7e2f0c44351",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "unavailable",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID39771507.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022c.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "results, discussion and methods read in PMC XML; figures, tables and supplement not read; see manifest"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

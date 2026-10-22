@@ -1,0 +1,212 @@
+{
+ "schema_version": 2,
+ "pmid": "38042867",
+ "doi": "10.1186/s13023-023-02982-1",
+ "receipt": "FTR-20261022-38042867-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022c.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "PMC efetch XML by pmc_bucket_fetch.py; no figure image or supplementary file was fetched (Additional file 1, Tables S1 and S2, unread; declared debt)."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "Observational two-country (Norway, Denmark) cohort of 64 patients with tuberous sclerosis complex treated with everolimus, ages 0.9 to 54 years, retrospective with interviews; the paediatric and infant adverse-event record of an mTOR inhibitor in an epileptic-encephalopathy-adjacent population; no WWOX content."
+ },
+ "field_density": {
+  "queries_text": [
+   "(sirolimus OR everolimus) AND (infants OR children) AND tuberous sclerosis AND (safety OR adverse) AND (long-term OR follow-up) -> 69",
+   "everolimus AND tuberous sclerosis AND real-world -> 0"
+  ],
+  "note": "Group R3 relay c reading; queries are PubMed counts on 2026-10-22 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "(sirolimus OR everolimus) AND (infants OR children) AND tuberous sclerosis AND (safety OR adverse) AND (long-term OR follow-up)",
+    "count": 69,
+    "source": "PubMed 2026-10-22"
+   },
+   {
+    "query": "everolimus AND tuberous sclerosis AND real-world",
+    "count": 0,
+    "source": "PubMed 2026-10-22"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 38042867; registry_records.py get --pmid 38042867 --hops 0; fulltext_receipts.py status --pmid 38042867",
+  "hits": 0,
+  "finding": "No receipt, registry record or peer claim before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-22; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 59,
+   "references_screened": 55,
+   "references_with_doi": 55,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38042867_Everolimus2023_PMC_r2.xml",
+   "sha256": "d003a127afc17608c8e5d5cd8d63b429a1f3df61b30354b82065a48a33d02f4a",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC10693167",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "d003a127afc17608c8e5d5cd8d63b429a1f3df61b30354b82065a48a33d02f4a"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Five patients started everolimus before 2 years of age; two had at least 50 percent seizure reduction, one at least 30 percent, one no change and one an increase in seizure frequency.",
+    "snippet": "Five patients started treatment before 2 years of age. Of these, ≥ 50% reduction in seizure frequency occurred in two patients, and ≥ 30%, no change, and increase in seizure frequency in one each of the other three patients.",
+    "anchor": "Results / Epilepsy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38042867_Everolimus2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Sixty-one of 64 patients (95 percent) reported clinical adverse effects.",
+    "snippet": "Sixty-one of the 64 (95%) patients reported clinical adverse effects after follow-up periods",
+    "anchor": "Results / Safety",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38042867_Everolimus2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Adverse effects of grade 3 or higher occurred in 36 percent of patients over the whole period; pneumonia was the most frequent, in 13 percent.",
+    "snippet": "Adverse effects ≥ grade 3 occurred in 36% of the patients during the entire treatment period. The most frequent adverse effect ≥ grade 3 was pneumonia, which occurred in 13% of the patients.",
+    "anchor": "Results / Safety",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38042867_Everolimus2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion prints the grade 3 or higher figure as 35 percent.",
+    "snippet": "Adverse effects ≥ grade 3 were reported in 35% of the patients, and were quite similar to those of EXIST-1 and 3",
+    "anchor": "Discussion / Safety",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38042867_Everolimus2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Patients with grade 3 or higher adverse effects were younger (median 12 against 23 years, p 0.02).",
+    "snippet": "Patients with adverse effects ≥ grade 3 were younger than patients without adverse effects ≥ grade 3 during the entire treatment period (p: 0.02, Md: 12 vs. 23 years)",
+    "anchor": "Results / Safety",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38042867_Everolimus2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Half of patients required dose modifications due to adverse effects.",
+    "snippet": "Fifty percent required dose modifications due to adverse effects.",
+    "anchor": "Results / Safety",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38042867_Everolimus2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Hospitalisation or prolongation of hospitalisation was required in 34 percent of the sample.",
+    "snippet": "Hospitalisation or prolongation of hospitalisation was required in 34% of the sample",
+    "anchor": "Results / Safety",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38042867_Everolimus2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Nine patients (14 percent) discontinued; four for adverse effects, one of them cerebral oedema.",
+    "snippet": "Nine patients (14%) discontinued treatment; four due to adverse effects (leukopenia, neutropenia and COVID-19 infection, cerebral oedema, oral ulceration)",
+    "anchor": "Results / Safety",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38042867_Everolimus2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Results print a median treatment duration of 15 months (range 0 to 28, mean 13, SD 7.9, 95 percent CI 6.9 to 19.1).",
+    "snippet": "The median duration of treatment was 15 months (range 0–28, mean 13, SD: 7.9, 95% CI 6.9–19.1).",
+    "anchor": "Results / Safety, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38042867_Everolimus2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The patient-characteristics table prints median months of follow-up of 31 (range 0 to 106) for all indications.",
+    "snippet": "Months of follow up Mean ± SD (CI)37/25 (30–43)27/22/(18–35)37 ± 4.74 (26–46)52 ± 2 6.95 (19–85) Median (min–max)31 (0–106)",
+    "anchor": "Table 1",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID38042867_Everolimus2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors note that other anti-seizure medications were changed in most patients and some had surgery, so the cause of seizure change is hard to attribute.",
+    "snippet": "Other ASMs were changed in a majority of the patients, and some underwent epilepsy surgery, which made it difficult to draw conclusions on the cause of the change in seizure frequency.",
+    "anchor": "Discussion / Strengths and limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38042867_Everolimus2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "One patient had an immunodeficiency disorder; the authors write that infections increased after treatment initiation, making everolimus a probable cause.",
+    "snippet": "Clinically infections increased significantly after treatment initiation, making everolimus treatment a probable cause.",
+    "anchor": "Discussion / Safety",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38042867_Everolimus2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC XML fingerprinted; abstract, background, methods, results, discussion and Tables 1, 2 and 4 read as text; figures and Additional file 1 not opened.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}

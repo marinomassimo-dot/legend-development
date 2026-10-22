@@ -1,0 +1,186 @@
+{
+ "schema_version": 2,
+ "pmid": "35589394",
+ "doi": "10.1523/JNEUROSCI.2389-21.2022",
+ "receipt": "FTR-20261022-35589394-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022c.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "PMC efetch XML by pmc_bucket_fetch.py; Figures 1-10 (JPEG) obtained from the Europe PMC supplementaryFiles archive (SHA-256 of the archive 61e0b1eef96ac2c0f98707dc4f0b1f9ed5bc7beea87c77ac51e1afbc0691129e); Figures 8 and 9 opened, the others not."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Neonatal mouse hyperoxia (P6, 48 h) hippocampal injury with a GSK3 beta inhibitor (SB216763) given at P6 to P8 and a tamoxifen-induced interneuron or POMC-cell Gsk3b deletion at P4; electrophysiology at P60 and object recognition; GSK3 beta inhibition raises Wnt signalling and is the opposite direction to Wnt suppression; no seizure or EEG measure; no WWOX content."
+ },
+ "field_density": {
+  "queries_text": [
+   "(Wnt OR beta-catenin OR GSK3 OR casein kinase 1) AND (critical period OR developmental window OR postnatal day OR neonatal) AND (cortex OR hippocampus) AND (excitability OR seizures OR interneuron OR epileptogenesis) AND (inhibition OR knockdown OR conditional) -> 4",
+   "(Wnt OR beta-catenin) AND (neonatal OR postnatal OR developing) AND (seizure OR EEG OR epilepsy) AND (inhibitor OR knockout OR deletion) AND (cortex OR hippocampus) -> 12"
+  ],
+  "note": "Group R3 relay c reading; queries are PubMed counts on 2026-10-22 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "(Wnt OR beta-catenin OR GSK3 OR casein kinase 1) AND (critical period OR developmental window OR postnatal day OR neonatal) AND (cortex OR hippocampus) AND (excitability OR seizures OR interneuron OR epileptogenesis) AND (inhibition OR knockdown OR conditional)",
+    "count": 4,
+    "source": "PubMed 2026-10-22"
+   },
+   {
+    "query": "(Wnt OR beta-catenin) AND (neonatal OR postnatal OR developing) AND (seizure OR EEG OR epilepsy) AND (inhibitor OR knockout OR deletion) AND (cortex OR hippocampus)",
+    "count": 12,
+    "source": "PubMed 2026-10-22"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 35589394; registry_records.py get --pmid 35589394 --hops 0; fulltext_receipts.py status --pmid 35589394",
+  "hits": 0,
+  "finding": "No receipt, registry record or peer claim before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-22; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "UNSCREENABLE_NO_REFERENCE_LIST",
+   "reference_source": "network",
+   "references_declared": 0,
+   "references_screened": 0,
+   "references_with_doi": 0,
+   "schema": "retraction_check.dependencies/1",
+   "screened": false,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID35589394_Hyperoxia2022_PMC_r2.xml",
+   "sha256": "daf52733ae817340f063813fcb45f317cdde5371cbfc1505e5b8271b39844924",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC9188427",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "daf52733ae817340f063813fcb45f317cdde5371cbfc1505e5b8271b39844924"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Hyperoxia was applied at 80 to 85 percent oxygen for 48 hours.",
+    "snippet": "Mice in the hyperoxia group, along with a lactating foster dam, were transferred into a transparent plastic chamber maintained with 80–85% of oxygen (O2) for 48 h.",
+    "anchor": "Methods / Hyperoxia",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35589394_Hyperoxia2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Pups received three subcutaneous injections of SB216763 at P6, P7 and P8.",
+    "snippet": "Pups received three subcutaneous injections of SB216763 (SB; Sigma-Aldrich) at P6, P7, and P8.",
+    "anchor": "Methods / Administration of GSK3β inhibitor",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35589394_Hyperoxia2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The SB216763 dose the paper used was 15 mg/kg against a DMSO/PEG vehicle.",
+    "snippet": "Mice were treated with either vehicle (DMSO/PEG in saline) or SB216763 (15 mg/kg).",
+    "anchor": "Methods / Administration of GSK3β inhibitor",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35589394_Hyperoxia2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The inhibitor was given before the hyperoxia exposure at P6, and the authors conclude it prevented the injury.",
+    "snippet": "we administered SB216763 (SB), a GSK3β-specific inhibitor, before hyperoxia exposure at P6",
+    "anchor": "Results / Pharmacological GSK3β inhibition prevents HO-induced alterations in progenitor cell and neuronal development",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35589394_Hyperoxia2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Tamoxifen to delete the floxed kinase gene was injected at P4, 48 hours before hyperoxia.",
+    "snippet": "tamoxifen was injected at P4, 48 h before HO exposure",
+    "anchor": "Results / GSK3β ablation in hippocampal interneurons",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35589394_Hyperoxia2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The legend of the electrophysiology figure lists three groups: control, hyperoxia, and hyperoxia plus SB.",
+    "snippet": "Normalized cumulative probability plots showing control (blue), HO (red), and HO + SB (dashed magenta) changes in IPSC amplitude (E)",
+    "anchor": "Figure legend of the P60 electrophysiology figure",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35589394_Hyperoxia2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The text states that hyperoxia increased EPSC amplitude and frequency in CA1 and that SB reversed this.",
+    "snippet": "On the other hand, HO led to increased amplitude and frequency of EPSCs in the CA1, which was reversed by SB",
+    "anchor": "Results / Pharmacological GSK3β inhibition prevents HO-induced alterations to inhibitory neurotransmission",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35589394_Hyperoxia2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "After hyperoxia the authors observed reduced expression of BDNF, TrkB and Wnt, Akt and PI3K signalling components.",
+    "snippet": "following exposure to HO, we observed reduced expression of BDNF and its receptor TrkB, along with Wnt, Akt, and PI3K signaling components",
+    "anchor": "Discussion, fourth paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35589394_Hyperoxia2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors conclude that GSK3 beta activation in Gad65 interneurons, rather than in POMC granule cells, mediates the memory deficit.",
+    "snippet": "aberrant activation of GSK3β in Gad65-expressing interneurons, rather than in POMC-expressing newly born granule cells, plays a significant role",
+    "anchor": "Results / GSK3β ablation in hippocampal interneurons",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35589394_Hyperoxia2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC XML fingerprinted; abstract, methods, results, discussion and legends read; Figures 8 and 9 opened as images, Figures 1-7 and 10 not opened; supplementary material not separately present.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}

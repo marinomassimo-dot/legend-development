@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261022-35589394-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "35589394",
+  "doi": "10.1523/JNEUROSCI.2389-21.2022"
+ },
+ "event_at": "2026-10-22T00:00:00Z",
+ "analysis_at": "2026-10-22T00:00:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-c, task REPURP-10H-R3c-C-20261022, PRIMARY_EVIDENCE_READ, SOURCE_FIRST (written question: does any paper measure a developmental window for tolerating or harming Wnt-pathway modulation in a neurodevelopmental model); text read in full, Figures 8 and 9 opened; prepared as JSON for the integrator and not appended by this actor.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID35589394_Hyperoxia2022_PMC_r2.xml",
+ "source_fingerprint": "daf52733ae817340f063813fcb45f317cdde5371cbfc1505e5b8271b39844924",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID35589394.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022c.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "full text read; two of ten figure images opened; see manifest"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

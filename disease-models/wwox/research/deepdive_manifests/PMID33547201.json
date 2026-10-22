@@ -1,0 +1,188 @@
+{
+ "schema_version": 2,
+ "pmid": "33547201",
+ "doi": "10.1158/1078-0432.CCR-20-4078",
+ "receipt": "FTR-20261022-33547201-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022c.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "PMC efetch XML by pmc_bucket_fetch.py; Europe PMC supplementaryFiles answered 'not open access' (no lawful figure or supplement archive), so figures and supplementary tables are unread (declared debt)."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "Phase I trial (Pediatric Brain Tumor Consortium style) of ribociclib (CDK4/6) plus everolimus (mTORC1) in children with recurrent or refractory brain tumours, ages 3.9 to 20.4, plus a surgical cohort measuring ribociclib in plasma, CSF and resected tumour; the only paper read that reports a CDK-class inhibitor concentration in tumour and CSF of children (CDK4/6, not the CDK7/9 class); no WWOX content."
+ },
+ "field_density": {
+  "queries_text": [
+   "(palbociclib OR ribociclib OR abemaciclib) AND (children OR pediatric OR adolescents) AND (recommended phase 2 dose OR dose-limiting toxicity OR neutropenia) AND (neuroblastoma OR glioma OR brain tumor OR solid tumors) -> 10",
+   "ribociclib AND (cerebrospinal fluid OR tumor concentration) AND children -> 0"
+  ],
+  "note": "Group R3 relay c reading; queries are PubMed counts on 2026-10-22 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "(palbociclib OR ribociclib OR abemaciclib) AND (children OR pediatric OR adolescents) AND (recommended phase 2 dose OR dose-limiting toxicity OR neutropenia) AND (neuroblastoma OR glioma OR brain tumor OR solid tumors)",
+    "count": 10,
+    "source": "PubMed 2026-10-22"
+   },
+   {
+    "query": "ribociclib AND (cerebrospinal fluid OR tumor concentration) AND children",
+    "count": 0,
+    "source": "PubMed 2026-10-22"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 33547201; registry_records.py get --pmid 33547201 --hops 0; fulltext_receipts.py status --pmid 33547201",
+  "hits": 0,
+  "finding": "No receipt, registry record or peer claim before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-22; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 52,
+   "references_screened": 51,
+   "references_with_doi": 51,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 1,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID33547201_Hanson2021b_PMC_r2.xml",
+   "sha256": "b671f7ca5b76c78d9f59dd9c527ea252a8d926fe92b1e66553a77ace3baab83b",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC8132306",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "b671f7ca5b76c78d9f59dd9c527ea252a8d926fe92b1e66553a77ace3baab83b"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Sixteen patients enrolled on the phase I study (median age 10.3 years, range 3.9 to 20.4) and 6 on the surgical cohort (median 11.4, range 7.2 to 17.1).",
+    "snippet": "Sixteen eligible patients enrolled on the phase I study (median age 10.3 years; range: 3.9–20.4) and 6 patients were enrolled on the surgical cohort (median age 11.4 years; range: 7.2–17.1)",
+    "anchor": "Results / Patients",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33547201_Hanson2021b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "At dose level 2 (ribociclib 170 mg/m2 with everolimus 1.2 mg/m2) 2 of 3 patients had DLTs, grade 3 hypertension and grade 3 ALT elevation; the patient with hypertension was also on dexamethasone.",
+    "snippet": "2 of 3 patients enrolled on dose level 2 (ribociclib 170mg/m2 × 21 days every 28 days; everolimus 1.2 mg/m2 days 1–28) developed dose limiting toxicities including grade 3 hypertension and grade 3 hepatoxicity (elevated ALT). The patient with grade 3 hypertension was also on dexamethasone.",
+    "anchor": "Results / Toxicities",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33547201_Hanson2021b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The MTD was set at ribociclib 120 mg/m2 for 21 days with everolimus 1.2 mg/m2 for 28 days after 8 expansion patients had no DLT.",
+    "snippet": "The MTD was exceeded on dose level 2 and 8 additional patients were treated under dose level 1 as an expansion cohort and none experienced a DLT establishing the MTD for ribociclib as 120mg/m2 × 21 days every 28 days and everolimus 1.2 mg/m2 days 1–28.",
+    "anchor": "Results / Toxicities",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33547201_Hanson2021b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Grade 3 or 4 adverse events at least possibly related occurred in 9 patients (45 percent).",
+    "snippet": "Grade 3/4 AE at least possibly related to ribociclib and/or everolimus related occurred in 9 (45%) patients",
+    "anchor": "Results / Toxicities",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33547201_Hanson2021b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Leukopenia (20 percent), lymphopenia (30 percent) and neutropenia (25 percent) were the most common grade 3 or 4 events; no grade 3 or 4 thrombocytopenia.",
+    "snippet": "related to myelosuppression with leukopenia (20%), lymphopenia (30%), neutropenia (25%) the most common. Neither grade 3 nor grade 4 thrombocytopenia was observed.",
+    "anchor": "Results / Toxicities",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33547201_Hanson2021b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Steady-state everolimus AUC with ribociclib was about 2.5-fold that of everolimus alone.",
+    "snippet": "Steady state everolimus AUC0–24h when given in combination with ribociclib were about 2.5-fold higher than steady state everolimus AUC0–24h administered alone (Course 2 Day 1 not delayed).",
+    "anchor": "Results / Phase I pharmacokinetic studies",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33547201_Hanson2021b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Surgical samples were taken 19.6 to 23.4 hours after the last dose of 350 mg/m2 ribociclib; the mean tumour-to-plasma ratio of total ribociclib was 19.8 (range 2.22 to 53.4).",
+    "snippet": "These samples were all collected between 19.6 and 23.4 hours after the last ribociclib dose (350 mg/m2) prior to surgery. Large variability was observed among patients for plasma, CSF, and tumor ribociclib concentrations (Table 6). At the time of surgery, the mean tumor-to-plasma ratio of total ribociclib (Kp) was 19.8 (ranged from 2.22 to 53.4).",
+    "anchor": "Results / Surgical pharmacokinetic studies",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33547201_Hanson2021b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The surgical concentration table gives, for five patients, plasma 0.129, 0.307, 1.021, 0.090 and 0.139 micromolar, CSF 0.0096, none, 0.139, 0.0108 and 0.0596 micromolar, tumour 0.678, 4.49, 2.27, 4.81 and 3.24 nmol/g, ratios 5.26, 14.6, 2.22, 53.4 and 23.3; the first sample is spinal cord (2.5 mg).",
+    "snippet": "P1 8.8 1.11 Spinal cord 2.5 mg 0.129 0.0096 0.678 5.26 P2 17 1.63 Left front parietal 58.2 mg 0.307 - 4.49 14.6 P3 10.8 1.15 Right sylvian fissure 71.1 mg 1.021 0.139 2.27 2.22 P4 7.3 0.98 Right front temporal 85.7 mg 0.090 0.0108 4.81 53.4 P5 12.1 1.33 Frontal 91.8 mg 0.139 0.0596 3.24 23.3",
+    "anchor": "Table of total ribociclib in plasma, CSF and tumour",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID33547201_Hanson2021b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Ki-67 was assessed in 4 patients and the most drastic change was 5 percent in recurrent tumour against 40 percent in archival tissue.",
+    "snippet": "Ki-67 was performed in 4 consented patients. After 7–10 days of ribociclib therapy, the most drastic changes in Ki-67 post treatment with ribociclib were 5% in recurrent tumor tissue compared to 40% in archival tissue.",
+    "anchor": "Results / Surgical pharmacodynamic studies",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33547201_Hanson2021b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC XML fingerprinted; abstract, methods, results, tables 2 and 6 and discussion read as text; no figure image or supplement lawfully available.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}

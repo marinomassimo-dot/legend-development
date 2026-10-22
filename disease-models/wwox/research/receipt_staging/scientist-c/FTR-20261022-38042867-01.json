@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261022-38042867-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "38042867",
+  "doi": "10.1186/s13023-023-02982-1"
+ },
+ "event_at": "2026-10-22T00:00:00Z",
+ "analysis_at": "2026-10-22T00:00:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-c, task REPURP-10H-R3c-C-20261022, PRIMARY_EVIDENCE_READ, SOURCE_FIRST (written question: what is the paediatric and infant adverse-event record of an mTOR inhibitor in an epilepsy population); text and tables read, figures and supplement not read; prepared as JSON for the integrator and not appended by this actor.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID38042867_Everolimus2023_PMC_r2.xml",
+ "source_fingerprint": "d003a127afc17608c8e5d5cd8d63b429a1f3df61b30354b82065a48a33d02f4a",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "unavailable",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID38042867.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022c.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "full text and Tables 1, 2, 4 read in PMC XML; figures and Additional file 1 not read; see manifest"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

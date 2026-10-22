@@ -1,0 +1,218 @@
+{
+ "schema_version": 2,
+ "pmid": "41144763",
+ "doi": "10.1111/epi.18697",
+ "receipt": "FTR-20261022-41144763-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022c.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "PMC efetch XML by pmc_bucket_fetch.py; Figures 1-6 (JPEG; file numbers run in reverse of figure numbers, g001 is Figure 6, g002 Figure 4, g003 Figure 5, g004 Figure 1, g006 Figure 3) and supplementary Word files and video obtained from the Europe PMC supplementaryFiles archive (SHA-256 of the archive aaeb6d341eebde58a1cf4900e5cf6b383df82086839c8e19ad82f90cecf99466); Figures 1, 3, 4, 5 and 6 opened, Figure 2 and the supplements not opened."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Olig2-Cre conditional knockout of Slc35a2 (an X-linked congenital glycosylation and epileptic-encephalopathy gene) in mice, with continuous video-EEG, PTZ susceptibility and CNPase myelin immunostaining; no drug is tested, so this is an EEG-plus-myelin pairing in a genetic model, not after a drug; no WWOX content."
+ },
+ "field_density": {
+  "queries_text": [
+   "(electroencephalography OR EEG OR spike-wave) AND (myelination OR myelin OR oligodendrocyte) AND (clemastine OR rapamycin OR everolimus OR metformin OR drug) AND (epilepsy OR seizures) AND (mouse OR rat) AND treatment[Title/Abstract] -> 5",
+   "Slc35a2 AND (EEG OR seizure) AND oligodendrocyte -> 1"
+  ],
+  "note": "Group R3 relay c reading; queries are PubMed counts on 2026-10-22 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "(electroencephalography OR EEG OR spike-wave) AND (myelination OR myelin OR oligodendrocyte) AND (clemastine OR rapamycin OR everolimus OR metformin OR drug) AND (epilepsy OR seizures) AND (mouse OR rat) AND treatment[Title/Abstract]",
+    "count": 5,
+    "source": "PubMed 2026-10-22"
+   },
+   {
+    "query": "Slc35a2 AND (EEG OR seizure) AND oligodendrocyte",
+    "count": 1,
+    "source": "PubMed 2026-10-22"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 41144763; registry_records.py get --pmid 41144763 --hops 0; fulltext_receipts.py status --pmid 41144763",
+  "hits": 0,
+  "finding": "No receipt, registry record or peer claim before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-22; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 35,
+   "references_screened": 35,
+   "references_with_doi": 35,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41144763_Slc35a22026_PMC_r2.xml",
+   "sha256": "6b35def4634316aade8513ecbd62ee12e0046a9b726cf5cd35b81adcca885404",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC12861014",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "6b35def4634316aade8513ecbd62ee12e0046a9b726cf5cd35b81adcca885404"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Continuous video-EEG of 20 to 24 hours was recorded in 8 controls (four females, four males) and 8 knockouts (six females, two males).",
+    "snippet": "we implanted epidural electrodes in control (n = 8; four females and four males) and cKO (n = 8; six females and two males) mice and conducted continuous video‐EEG recordings sessions lasting 20–24 h for each animal.",
+    "anchor": "Results / Slc35a2 cKO mice have more severe induced seizures and exhibit spontaneous seizures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41144763_Slc35a22026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Spontaneous seizures were captured in six of eight knockouts (two male, four female) and in no control.",
+    "snippet": "we captured spontaneous seizures in six of eight cKO mice (two male and four female mice). In control female and male mice, we did not observe EEG seizures.",
+    "anchor": "Results / Slc35a2 cKO mice have more severe induced seizures and exhibit spontaneous seizures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41144763_Slc35a22026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PTZ was given at 45 mg/kg intraperitoneally to adult mice.",
+    "snippet": "pentylenetetrazole (PTZ), a γ‐aminobutyric acid antagonist, via intraperitoneal injection at a dose of 45 mg/kg body weight",
+    "anchor": "Results / seizures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41144763_Slc35a22026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The text prints F 1, 17 = 13 with p = .0022 for the female knockout comparison.",
+    "snippet": "whereas four of five cKO mice developed severe tonic–clonic seizures with respiratory arrest (Racine = 7; two‐way ANOVA, F 1, 17 = 13, p = .0022; Figure 3A)",
+    "anchor": "Results / seizures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41144763_Slc35a22026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The text prints the same F 1, 17 = 13 with p < .0001 for the male knockout comparison.",
+    "snippet": "male cKO mice developed significant severe tonic–clonic seizures (Racine = 5–7) with tonic extension and respiratory arrest (two‐way ANOVA, F 1, 17 = 13, p < .0001; Figure 3A)",
+    "anchor": "Results / seizures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41144763_Slc35a22026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The text prints the same F 1, 17 = 13 with p = .0003 for the female against male control comparison.",
+    "snippet": "PTZ‐induced seizure response was significantly different between female and male control (two‐way ANOVA, F 1, 17 = 13, p = .0003; Figure 3A)",
+    "anchor": "Results / seizures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41144763_Slc35a22026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Eighty percent of knockouts suffered severe tonic-clonic seizures followed by death from respiratory arrest.",
+    "snippet": "Of female and male cohorts, 80% of cKO mice suffered from severe tonic–clonic seizures followed by death caused by respiratory arrest.",
+    "anchor": "Results / seizures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41144763_Slc35a22026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CNPase staining in knockouts showed patches of hypomyelination in cortex, corpus callosum, caudate/putamen, anterior commissure and lateral septum.",
+    "snippet": "CNPase protein expression in cKO mice revealed patches of hypomyelination through the cortical layers, corpus callosum, caudate/putamen, anterior commissure, and lateral septal region",
+    "anchor": "Results / hypomyelination",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41144763_Slc35a22026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Myelin was quantified as percent area covered by CNPase staining by automated thresholding in ImageJ, with n = 3 per timepoint per sex.",
+    "snippet": "Semiquantitative analysis using automated thresholding to determine area covered by stain was performed in ImageJ and averaged across all brain sections per animal.",
+    "anchor": "Fig 6 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41144763_Slc35a22026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The legend of the myelin figure gives n = 3 per timepoint per sex for control and knockout mice.",
+    "snippet": "abundant and widespread at postnatal day (P) 15, P21, and P60 in littermate control mice (n = 3 per timepoint per sex)",
+    "anchor": "Fig 6 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41144763_Slc35a22026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fewer oligodendrocytes were seen in the medial and lateral corpus callosum and gray-white junction of knockouts.",
+    "snippet": "We observed fewer oligodendrocytes in the medial/lateral corpus callosum and the gray–white matter junction of male and female cKO mice compared to littermate controls",
+    "anchor": "Results / reduced oligodendrocytes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41144763_Slc35a22026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Slc35a2 protein was not significantly reduced in female knockouts, which the authors attribute to X-linked inactivation.",
+    "snippet": "We did not see a significant reduction in the female cKO mice, which may be explained by the X‐linked inactivation of the Slc35a2 gene",
+    "anchor": "Results / reduced oligodendrocytes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41144763_Slc35a22026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors claim that spontaneous seizures with an intact neuronal compartment show oligodendrocyte abnormalities alone are sufficient to lower the threshold for epileptogenesis.",
+    "snippet": "spontaneous electroclinical seizures were detected, providing direct evidence that oligodendrocyte abnormalities alone are sufficient to lower the threshold for epileptogenesis",
+    "anchor": "Discussion, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41144763_Slc35a22026_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC XML fingerprinted; abstract, methods, results, discussion and legends read; Figures 1, 3, 4, 5 and 6 opened as images; Figure 2 and the supplementary Word files and video not opened.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}

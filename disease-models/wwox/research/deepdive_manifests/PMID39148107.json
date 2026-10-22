@@ -1,0 +1,228 @@
+{
+ "schema_version": 2,
+ "pmid": "39148107",
+ "doi": "10.1186/s13023-024-03243-5",
+ "receipt": "FTR-20261022-39148107-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022c.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "PMC efetch XML by pmc_bucket_fetch.py; figures (Fig 1-3 JPEG) and supplementary PDF obtained from the Europe PMC supplementaryFiles archive (SHA-256 of the archive 65d42c4c3137537c8666bfbaacd963f3ef6e842422bd55f5698b53a18f6a7b11)."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "Pooled analysis of two Chinese prospective cohorts of sirolimus in tuberous sclerosis and lymphangioleiomyomatosis, ages 5 days to 69 years, no control group; mTOR-pathway drug safety record; no WWOX content."
+ },
+ "field_density": {
+  "queries_text": [
+   "sirolimus AND (infant OR child) AND tuberous sclerosis AND (safety OR adverse) AND (long-term OR follow-up) -> 69",
+   "sirolimus AND growth AND children AND safety -> 0"
+  ],
+  "note": "Group R3 relay c reading; queries are PubMed counts on 2026-10-22 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "sirolimus AND (infant OR child) AND tuberous sclerosis AND (safety OR adverse) AND (long-term OR follow-up)",
+    "count": 69,
+    "source": "PubMed 2026-10-22"
+   },
+   {
+    "query": "sirolimus AND growth AND children AND safety",
+    "count": 0,
+    "source": "PubMed 2026-10-22"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 39148107; registry_records.py get --pmid 39148107 --hops 0; fulltext_receipts.py status --pmid 39148107",
+  "hits": 0,
+  "finding": "No receipt, registry record or peer claim before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-22; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 35,
+   "references_screened": 32,
+   "references_with_doi": 32,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39148107_Sirolimus2024_PMC_r2.xml",
+   "sha256": "13135a521d6102d43b41eb038a051ded833c2b302c9c96e5eac652158f72f3b2",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC11325711",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "13135a521d6102d43b41eb038a051ded833c2b302c9c96e5eac652158f72f3b2"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The Results state 1783 patients (1521 children and 217 adult females) aged 5 days to 69 years.",
+    "snippet": "A total of 1783 patients—1521 children and 217 adult females—ranging in age from 5 days to 69 years were included.",
+    "anchor": "Results, first paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39148107_Sirolimus2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The adverse-event table gives N = 1738 as the all-patients denominator.",
+    "snippet": "Percentage in patients (N = 1738)",
+    "anchor": "Table 3 column header",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39148107_Sirolimus2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Median age of the paediatric group at baseline is 2.0 years (IQR 0.8 to 5.6) and the median sirolimus dose is 0.6 mg (IQR 0.4 to 0.8).",
+    "snippet": "Age(years) 2.0 (0.8–5.6)37.8 (31.4–45.6)",
+    "anchor": "Table 1",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID39148107_Sirolimus2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paediatric median dose in Table 1 is 0.6 mg (IQR 0.4 to 0.8).",
+    "snippet": "Dose of sirolimus(mg) 0.6 (0.4–0.8)1 (1–2)",
+    "anchor": "Table 1",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID39148107_Sirolimus2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Dosing was 1 mg per square metre per day to a maximum of 2 mg, titrated over 2 weeks to a trough of 5 to 10 ng/ml.",
+    "snippet": "starting dosage of 1 mg/m2/day, with a maximum dose of 2 mg. Dose adjustments were made by a 2-week titration period to attain a trough blood concentration of 5 to 10 ng/ml",
+    "anchor": "Methods / Study design and participants",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39148107_Sirolimus2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Median follow-up was 25 months (IQR 12 to 43); 380 patients were followed over 4 years, 21 over 8 years and 4 reached 10 years.",
+    "snippet": "The median follow-up duration was 25 months (IQR: 12–43 months), with 380 individuals followed for over 4 years, 21 for over 8 years, and 4 reaching a 10-year follow-up.",
+    "anchor": "Results, first paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39148107_Sirolimus2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Among the paediatric group, dose was the only factor associated with all three growth Z-score categories, with ORs above 2 or below 0.5.",
+    "snippet": "showed that the dose of sirolimus was the only factor significantly associated with all three variables with ORs more than 2 or less than 0.5 (Table 2)",
+    "anchor": "Results, growth paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39148107_Sirolimus2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors describe the conclusion on growth as 'Sirolimus does not negatively affect the physical growth of pediatric patients' while stating there is no control group.",
+    "snippet": "Although there is no control group, this study has set up the safety profile of sirolimus in actual clinical scenarios",
+    "anchor": "Discussion, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39148107_Sirolimus2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Stomatitis was reported in 920 of 1738 patients (52.9 percent) and usually resolved within a week.",
+    "snippet": "stomatitis as the most frequent condition (920/1738 cases, 52.9%), and it usually resolved within a week",
+    "anchor": "Results, adverse events paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39148107_Sirolimus2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Menstrual irregularities are printed as 48.5 percent of adult females (112 of 217), lasting 6 to 24 months, the longest 80 months.",
+    "snippet": "Menstrual irregularities affected 48.5% of adult females (112 of 217), with durations ranging from 6 to 24 months, and the longest case lasting 80 months.",
+    "anchor": "Results, adverse events paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39148107_Sirolimus2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "One patient died of an unknown cause after two years of therapy; the cause was not reported.",
+    "snippet": "Another patient, however, died from an unknown cause after two years of therapy.",
+    "anchor": "Results, adverse events paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39148107_Sirolimus2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "38 participants discontinued, with adverse effects prompting cessation in seven (one recurrent stomatitis, six recurrent infections).",
+    "snippet": "Medication discontinuation was observed in 38 participants at different stages of follow-up, with adverse effects directly prompting cessation in seven instances: one due to recurrent stomatitis and six due to recurrent infections.",
+    "anchor": "Results, adverse events paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39148107_Sirolimus2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The text reports transient rises in RBC, WBC, HGB and PLT within the first year, returning to baseline, citing Fig. 2.",
+    "snippet": "Transient increases in RBC, WBC, HGB, and PLT levels were noted within the first year of follow-up, subsequently returning to baseline values (Fig. 2).",
+    "anchor": "Results, haematology paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39148107_Sirolimus2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors raise a possible dose-response reversal above a threshold and call the result preliminary.",
+    "snippet": "Our findings suggest that the effects of sirolimus may exhibit a certain dose-response reversal effect.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39148107_Sirolimus2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC XML fingerprinted; body and tables read; Figures 1-3 opened as images (Fig 2 axis labels and Fig 3 curves inspected); supplementary PDF Table S1 (reference ranges) read, Table S2 and Figure S1 not opened.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}

@@ -1,0 +1,188 @@
+{
+ "schema_version": 2,
+ "pmid": "39771507",
+ "doi": "10.3390/pharmaceutics16121528",
+ "receipt": "FTR-20261022-39771507-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022c.md",
+  "disease-models/wwox/research/repurposing_batch_selection_20261021.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "PMC efetch XML by pmc_bucket_fetch.py; no figure image or supplementary file was fetched (Table S1, Figures S4 and S5 unread; declared debt)."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED: a blind audit by another actor; an author does not audit own locators."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; not needed."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "computational",
+  "is_primary_group_for_disease": false,
+  "weighting": "Population pharmacokinetic and neutrophil/platelet pharmacodynamic re-analysis of the PBTC-042 phase 1 palbociclib trial (children and young adults 4.9 to 21.6 years); same trial as the primary report read in this relay, so it is an internal edge, not an independent cohort; no WWOX content."
+ },
+ "field_density": {
+  "queries_text": [
+   "palbociclib AND pediatric AND pharmacokinetics -> 0",
+   "(palbociclib OR ribociclib OR abemaciclib) AND (children OR pediatric OR adolescents) AND (recommended phase 2 dose OR dose-limiting toxicity OR neutropenia) AND (neuroblastoma OR glioma OR brain tumor OR solid tumors) -> 10"
+  ],
+  "note": "Group R3 relay c reading; queries are PubMed counts on 2026-10-22 for the paper topic, not a WWOX field census.",
+  "queries": [
+   {
+    "query": "palbociclib AND pediatric AND pharmacokinetics",
+    "count": 0,
+    "source": "PubMed 2026-10-22"
+   },
+   {
+    "query": "(palbociclib OR ribociclib OR abemaciclib) AND (children OR pediatric OR adolescents) AND (recommended phase 2 dose OR dose-limiting toxicity OR neutropenia) AND (neuroblastoma OR glioma OR brain tumor OR solid tumors)",
+    "count": 10,
+    "source": "PubMed 2026-10-22"
+   }
+  ]
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not enumerated; the paper has no WWOX content."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 39771507; registry_records.py get --pmid 39771507 --hops 0; fulltext_receipts.py status --pmid 39771507",
+  "hits": 0,
+  "finding": "No receipt, registry record or peer claim before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed identity check (pubmed_identity_check.py) returned MATCH on 2026-10-22; no retraction notice observed in the surfaces consulted.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 31,
+   "references_screened": 30,
+   "references_with_doi": 30,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 0,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39771507_PopPK2024_PMC_r2.xml",
+   "sha256": "12363fbc1e997b1c0ff9e048b0e5b583102557d2d26efc1fe351b7e2f0c44351",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC11676693",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "result_sha256": "12363fbc1e997b1c0ff9e048b0e5b583102557d2d26efc1fe351b7e2f0c44351"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Patients in the model ranged from 4.9 to 21.6 years old.",
+    "snippet": "Patients ranged from 4.9 to 21.6 years old, and over half were Caucasian.",
+    "anchor": "Results 3.1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39771507_PopPK2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "One patient taking phenytoin and omeprazole was excluded from the analysis, leaving 33 patients with course 1 day 1 sampling.",
+    "snippet": "One patient who deviated from the protocol by taking concomitant medications of phenytoin (a strong CYP3A inducer) and omeprazole (a proton pump inhibitor) was excluded from the analysis. The remaining 33 patients participated in course 1, day 1 pharmacokinetic studies",
+    "anchor": "Results 3.1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39771507_PopPK2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Apparent oral clearance fell with rising AST, from 48.2 L/h/m2 at AST 10 U/L to 24.1 at AST 100 U/L (p = 0.0066).",
+    "snippet": "palbociclib CL/F was significantly decreased with increasing AST (from 48.2 L/h/m2 at AST = 10 U/L to 24.1 L/h/m2 at AST = 100 U/L; p = 0.0066",
+    "anchor": "Results 3.2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39771507_PopPK2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion states that a 2.5-fold increase in baseline AST was associated with a 2-fold lower clearance.",
+    "snippet": "Specifically, a 2.5-fold increase in the baseline AST was associated with a 2-fold lower apparent oral palbociclib clearance.",
+    "anchor": "Discussion, first paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39771507_PopPK2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The simulation gave 19 percent grade 3 or higher neutropenia at a dose of 50 mg per square metre and none for thrombocytopenia.",
+    "snippet": "given a 50 mg/m2 dose, 19% of the individuals are expected to have grade 3 or greater neutropenia and none are expected to have grade 3 or greater thrombocytopenia",
+    "anchor": "Results 3.6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39771507_PopPK2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The 95 mg/m2 simulation gave 69 percent grade 3 or higher neutropenia and 6 percent thrombocytopenia.",
+    "snippet": "given a 95 mg/m2 dose, 69% of the individuals are expected to have grade 3 or greater neutropenia and 6% of the individuals are expected to have grade 3 or greater thrombocytopenia",
+    "anchor": "Results 3.6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39771507_PopPK2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "At 75 mg/m2 the simulated grade 3 neutropenia was 75 percent in the heavily pretreated stratum against 35 percent in the other.",
+    "snippet": "given a dosage of 75 mg/m2, more grade 3 neutropenia would be expected in a heavily pretreated patient (i.e., stratum 2) than a patient who was not heavily pretreated (i.e., stratum 1) (75% vs. 35%; p = 2 × 10−18; Figure S4)",
+    "anchor": "Results 3.6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39771507_PopPK2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors derive that neutrophil decreases were not cumulative from the six patients with data in courses 3 and 4.",
+    "snippet": "Since six patients had ANC data from the third and fourth courses, we determined the ability of our pharmacodynamic model to use course 1 and 2 individual PD and PK estimates to predict the PD profile for courses 3 and 4. The lack of bias in the residuals indicated that our model was capable of predicting course 3 and 4 ANC values well and that the decreases in ANCs were not cumulative.",
+    "anchor": "Discussion, penultimate paragraphs",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39771507_PopPK2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that the model lacks external validation and needs prospective validation.",
+    "snippet": "Another limitation of our study is the lack of external model validation.",
+    "anchor": "Discussion, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39771507_PopPK2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC XML fingerprinted; abstract, methods, results and discussion read; no figure image or supplement lawfully fetched in this reading.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; all body snippets are machine-matched against the declared XML body."
+ }
+}

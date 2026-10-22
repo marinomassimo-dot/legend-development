@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261022-28919853-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "28919853",
+  "doi": "10.3389/fncel.2017.00267"
+ },
+ "event_at": "2026-10-22T00:00:00Z",
+ "analysis_at": "2026-10-22T00:00:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-c, task REPURP-10H-R3c-C-20261022, PRIMARY_EVIDENCE_READ, SOURCE_FIRST (written question: what neural readout exists for a multi-CDK inhibitor given into brain); text and legends read, figures not opened; prepared as JSON for the integrator and not appended by this actor.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID28919853_CDK5astro2017_PMC_r2.xml",
+ "source_fingerprint": "910c013103dd8d92f040301462b87079f215a7ad3a5856816e6f23b863fa5b13",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID28919853.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022c.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "full text and legends read; no figure image opened; see manifest"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
