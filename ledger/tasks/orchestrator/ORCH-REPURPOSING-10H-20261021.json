@@ -100,7 +100,7 @@
     "group": "R4",
     "agentId": "ab5ca29f4fa37a884",
     "task": "REPURP-10H-WWOXROWS-D-20261022",
-    "state": "WWOX rows in treatment-response supplements (started 03:2xZ). Previous: R4 repair landed 335e6e05, R4b landed, 15 receipts recorded cd2b4e3b",
+    "state": "WWOX rows in supplements LANDED (97eeda26, 63d93a30): 12 counted supplements, 2 WWOX rows in supplements (one with a treatment: fenfluramine registry Table S7, n=1, column UNDETERMINED not non-responder; one genotype-only), plus 6 patients in main-text tables already in the registry; 7 to 8 WWOX patients with a treatment entry from 3 reports, independence shown for none, nothing pooled; best-fitting cohort (perampanel, 137 patients, 79 aetiologies) parked behind a bot challenge; idle",
     "previous_agents": [
      "aba610f58ef0e9b25",
      "a953e6e336bf10780",
@@ -193,6 +193,10 @@
    {
     "t": "2026-10-22T04:0xZ",
     "event": "P5 landed; recompute of GSE156243 returned; PUBLICATION GATE BLOCK on gse156243 (service UUID fragments collide with a private-identifier digest) blocks pushes since ~03:55Z: scientist-b asked to store verbatim originals under files/ with sha256 and keep a declared hyphen-less transformed copy in the tree, lossless check required; the gate is not loosened"
+   },
+   {
+    "t": "2026-10-22T03:36Z",
+    "event": "integrator layer 1 landed (cbd62afb: PAPER 429-544, LIT-0701-0816): ORPHAN_COMPLETE_READ lines 31 -> 0; layer 2 and the R3 attribution hold continue. R3c audit returned (810332c6). WWOX-rows sweep landed. Eleven R3c receipts staged, to be recorded after the integrator releases the ledger. Gate still BLOCK_PUBLICATION (8 findings, all service UUID fragments in gse156243 files) until scientist-b's lossless transformation lands; no push since 1592aa69"
    }
   ],
   "audits": {
@@ -235,7 +239,7 @@
    "R3c": {
     "agentId": "a2f4dea72e1ca6420",
     "file": "page_adjudications/locator_audit_R3c_20261022.md",
-    "state": "RUNNING",
+    "state": "RETURNED: 121 triples, 116 supported, 3 overshoot, 2 unverifiable (4.1 percent adverse vs 36 then 12 percent earlier; numeral self-check held); one STATEMENT to correct: the reader had reported no growth deviation for a sirolimus/everolimus paediatric cohort but the paper associates dose with Z-scores beyond 2 SD in both tails; repair sent to scientist-c",
     "scope": "eleven R3c readings; numeral-exception entries first; paediatric safety counts; the reader's CSF arithmetic"
    },
    "R4b_R2b": {
