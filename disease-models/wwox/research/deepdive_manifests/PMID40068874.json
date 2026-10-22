@@ -307,12 +307,24 @@
     }
    },
    {
-    "proposition": "Age window: the experiments use juvenile mice because neurogenesis is faster at that age, giving a mix of maturation stages; the authors cite that hippocampal Cav3.2 expression rises from birth to about postnatal day 21 and falls by day 60, without measuring it. No cortical or thalamic age series is provided and the cells recorded are hippocampal granule cells.",
+    "proposition": "The authors cite that in the rodent hippocampus Cav3.2 expression initially increases from P0 to P21 and then decreases at P60.",
     "snippet": "For instance, in the rodent hippocampus, Cav3.2 expression initially increases from P0 to P21 then decreases at P60 (Aguado et al., 2016).",
     "surface": "body",
     "anchor": "Discussion, paragraph 4",
     "artifact": "files/fulltext/PMID40068874_Sack2025_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40068874.json",
+     "entry": 3,
+     "what_changed": "2026-10-22 blind audit of the R2f repairs (locator_audit_R2f_R1d_repairs_20261022.md): the proposition or anchor did not match the quote; restated or the quote widened. Prior wording began: Age window: the experiments use juvenile mice because neurogenesis is faster at ",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "ANCHOR_MISMATCH"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "Compensation limit: low-threshold spikes remain in about 17 percent of knockout immature cells, and the authors list Cav3.1, Cav3.3 and Cav2.3 as candidates, or compensation, so even a genetic loss of one subtype does not remove the current; a pharmacological block of 'T-type' is a different perturbation from a Cav3.2 null.",

@@ -577,7 +577,7 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Supplementary Table S1 lists the liquid chromatography-tandem mass spectrometry analyte mass transitions and collision energies.",
+    "proposition": "The Supplementary Table S1 caption reads: liquid chromatography-tandem mass spectrometry analyte mass transitions and collision energies.",
     "snippet": "Liquid chromatography-tandem mass spectrometry analyte mass transitions and collision energies.",
     "surface": "supplement",
     "anchor": "Supplementary Table S1 caption",
@@ -586,15 +586,23 @@
     "contradicts_locator": {
      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID37082241.json",
      "entry": 21,
-     "what_changed": "2026-10-22 text-form sweep after the blind text control: the proposition added a clause or inference the quote does not carry; narrowed to the quote. Prior wording began: Supplementary Table S1 lists the mass-spectrometry transitions used to quantify ",
+     "what_changed": "2026-10-22 blind audit of the R2f repairs (locator_audit_R2f_R1d_repairs_20261022.md): the proposition or anchor did not match the quote; restated or the quote widened. Prior wording began: Supplementary Table S1 lists the liquid chromatography-tandem mass spectrometry ",
      "audit": {
-      "auditors": 0,
+      "auditors": 1,
       "verdicts": [
-       "CLAUSE_ADDED_SELF_SWEEP"
+       "CAPTION_VS_TABLE"
       ],
       "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
      }
     }
+   },
+   {
+    "proposition": "The Supplementary Table S1 columns are analyte, molecular weight and precursor and product ions (m/z); no collision-energy column is present in the table text.",
+    "snippet": "Analyte Molecular weight Precursor and product ions (m/z) SB2193 399.54",
+    "surface": "supplement",
+    "anchor": "Supplementary Table S1 body (Word file text)",
+    "artifact": "files/supplement/PMID37082241_r2/Table1.txt",
+    "panel_text_relation": "text_only"
    }
   ],
   "note": ""

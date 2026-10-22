@@ -568,12 +568,24 @@
     }
    },
    {
-    "proposition": "The authors state their pharmacology does not by itself establish that T-type channels in the reticular nucleus are the cause of the behaviours; the inhibitory chemogenetic result is the supporting causal evidence.",
-    "snippet": "While the pharmacological approach with Z944 did not directly establish a causal role of T-type calcium channels in RT per se, in ASD behaviors",
+    "proposition": "The authors write that the Z944 pharmacology did not directly establish a causal role of T-type channels in the reticular nucleus per se in the behaviours, while the results of the excitatory and inhibitory chemogenetic experiments provide complementary support for a reticular role.",
+    "snippet": "While the pharmacological approach with Z944 did not directly establish a causal role of T-type calcium channels in RT per se, in ASD behaviors, the results of excitatory and inhibitory DREADD experiments provide complementary support for an RT role, as the PV-Cre and viral strategies specifically targeted RT cells.",
     "surface": "body",
     "anchor": "Discussion, Pharmacological and neuromodulatory strategies, paragraph 2",
     "artifact": "files/fulltext/PMID40834072_Jang2025_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40834072.json",
+     "entry": 9,
+     "what_changed": "2026-10-22 blind audit of the R2f repairs (locator_audit_R2f_R1d_repairs_20261022.md): the proposition or anchor did not match the quote; restated or the quote widened. Prior wording began: The authors state their pharmacology does not by itself establish that T-type ch",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "Published Figure 1B read as an image: final seizure stage after the low convulsant dose in wild type is no seizure 1 of 11, spike-wave 5 of 11, myoclonic jerk 3 of 11, tonic-clonic 2 of 11, death 0 of 11, and in knockout 0 of 10, 2 of 10, 3 of 10, 2 of 10 and 3 of 10; final seizure score about 1.5 against about 2.6 (one star); latency to spike-wave about 103 against about 57 s and to myoclonic jerk about 140 against about 78 s (one star each). Counting every animal beyond the spike-wave stage this is 5 of 11 wild type and 8 of 10 knockout, not the 4 of 11 and 6 of 10 of the preprint text.",
