@@ -1,0 +1,251 @@
+{
+ "card_drug_classes_reached_only_through_a_neighbour_gene": {
+  "amlexanox (B01)": {
+   "PKM": [
+    "AMLEXANOX"
+   ]
+  },
+  "antisense class via other genes (C02 is a WWOX splice ASO; these are other genes)": {
+   "INPPL1": [
+    "ANTISENSE OLIGONUCLEOTIDES"
+   ],
+   "SMN2": [
+    "NUSINERSEN"
+   ]
+  },
+  "arimoclomol (withdrawn D-03, A05)": {
+   "HSPA1A": [
+    "ARIMOCLOMOL"
+   ]
+  },
+  "corticosteroids (EB-HORM)": {
+   "ANXA1": [
+    "DEXAMETHASONE",
+    "HYDROCORTISONE BUTYRATE",
+    "HYDROCORTISONE PROBUTATE",
+    "METHYLPREDNISOLONE",
+    "PREDNISOLONE",
+    "PREDNISONE"
+   ],
+   "ASNS": [
+    "PREDNISONE"
+   ],
+   "ATM": [
+    "PREDNISONE"
+   ],
+   "BRCA1": [
+    "PREDNISOLONE",
+    "PREDNISONE"
+   ],
+   "HSD17B10": [
+    "HYDROCORTISONE BUTYRATE",
+    "PREDNISONE"
+   ],
+   "HSPA8": [
+    "DEXAMETHASONE"
+   ],
+   "HYAL2": [
+    "DEXAMETHASONE"
+   ],
+   "RARA": [
+    "DEXAMETHASONE"
+   ],
+   "SMAD3": [
+    "DEXAMETHASONE"
+   ],
+   "TP53": [
+    "METHYLPREDNISOLONE"
+   ]
+  },
+  "lithium (not carded in either path)": {
+   "HSPA4": [
+    "LITHIUM CATION"
+   ]
+  },
+  "mTOR-inhibitor class (EB-MTOR)": {
+   "ATM": [
+    "EVEROLIMUS"
+   ],
+   "DCTPP1": [
+    "TEMSIROLIMUS"
+   ],
+   "IRAK1": [
+    "TEMSIROLIMUS"
+   ],
+   "MTOR": [
+    "EVEROLIMUS",
+    "SIROLIMUS",
+    "SIROLIMUS ALBUMIN-BOUND NANOPARTICLES",
+    "TEMSIROLIMUS"
+   ],
+   "TP53": [
+    "SIROLIMUS"
+   ],
+   "YLPM1": [
+    "SIROLIMUS"
+   ]
+  },
+  "phenobarbital (EB-HORM)": {
+   "PGD": [
+    "PHENOBARBITAL"
+   ]
+  },
+  "proteasome inhibitor class (A02)": {
+   "HSPA4": [
+    "BORTEZOMIB"
+   ],
+   "PSMB8": [
+    "BORTEZOMIB",
+    "BORTEZOMIB D-MANNITOL",
+    "CARFILZOMIB",
+    "IXAZOMIB",
+    "IXAZOMIB CITRATE"
+   ],
+   "PSMC1": [
+    "BORTEZOMIB",
+    "BORTEZOMIB D-MANNITOL",
+    "CARFILZOMIB",
+    "IXAZOMIB",
+    "IXAZOMIB CITRATE"
+   ],
+   "PSMC2": [
+    "BORTEZOMIB",
+    "BORTEZOMIB D-MANNITOL",
+    "CARFILZOMIB",
+    "IXAZOMIB",
+    "IXAZOMIB CITRATE"
+   ],
+   "PSMC3": [
+    "BORTEZOMIB",
+    "BORTEZOMIB D-MANNITOL",
+    "CARFILZOMIB",
+    "IXAZOMIB",
+    "IXAZOMIB CITRATE"
+   ],
+   "PSMC5": [
+    "BORTEZOMIB",
+    "BORTEZOMIB D-MANNITOL",
+    "CARFILZOMIB",
+    "IXAZOMIB",
+    "IXAZOMIB CITRATE"
+   ],
+   "PSMC6": [
+    "BORTEZOMIB",
+    "BORTEZOMIB D-MANNITOL",
+    "CARFILZOMIB",
+    "IXAZOMIB",
+    "IXAZOMIB CITRATE"
+   ],
+   "PSMD1": [
+    "BORTEZOMIB",
+    "BORTEZOMIB D-MANNITOL",
+    "CARFILZOMIB",
+    "IXAZOMIB",
+    "IXAZOMIB CITRATE"
+   ],
+   "PSMD9": [
+    "BORTEZOMIB",
+    "CARFILZOMIB"
+   ],
+   "TP53": [
+    "BORTEZOMIB",
+    "IXAZOMIB"
+   ]
+  },
+  "read-through agent, ataluren (B02)": {
+   "HSPA8": [
+    "GENTAMICIN"
+   ],
+   "RPL30": [
+    "ATALUREN"
+   ],
+   "RPL6": [
+    "ATALUREN"
+   ],
+   "SDHB": [
+    "GENTAMICIN"
+   ]
+  },
+  "sodium butyrate / butyrate esters (not 4-PBA) (A01)": {
+   "ANXA1": [
+    "HYDROCORTISONE BUTYRATE"
+   ],
+   "HSD17B10": [
+    "HYDROCORTISONE BUTYRATE"
+   ],
+   "RARA": [
+    "TRIBUTYRIN"
+   ],
+   "SLC16A1": [
+    "SODIUM BUTYRATE"
+   ],
+   "TP53": [
+    "THIOUREIDOBUTYRONITRILE"
+   ]
+  },
+  "valproic acid (not carded)": {
+   "ACADSB": [
+    "VALPROIC ACID"
+   ],
+   "ATM": [
+    "VALPROIC ACID"
+   ],
+   "SLC16A1": [
+    "VALPROIC ACID"
+   ]
+  },
+  "vigabatrin, ethosuximide, cannabidiol, ketogenic diet, A51, AAV, lithium-in-WWOX-system": "no match for vigabatrin, ethosuximide, cannabidiol, A51 or AAV in the returned interactions (coverage INCOMPLETE; not an absence); a regex hit on a ketone dye was a false match and is removed"
+ },
+ "dgidb_status": "INCOMPLETE",
+ "dgidb_symbols_requested": 461,
+ "dgidb_symbols_returned": 328,
+ "dgidb_symbols_unmatched": 133,
+ "matching_note": "name-pattern matching on drug names; butyrate hits are butyrate salts/esters, not 4-phenylbutyrate; corticosteroid hits are drug-gene entries on genes that are neighbours, not WWOX data",
+ "monarch_associations_read": 825,
+ "monarch_registry_total": 825,
+ "monarch_status": "OK",
+ "monarch_truncated": false,
+ "neighbours_with_at_least_one_interaction": 196,
+ "note_seed": "WWOX appears in the DGIdb return as a symbol; its three direct interactions are listed above and none is a WWOX-function datum",
+ "primary_knowledge_source_of_neighbour_edges": {
+  "infores:biogrid": 519,
+  "infores:reactome": 3,
+  "infores:string": 2
+ },
+ "raw_location": "session scratchpad only (7.8 MB), not committed; rerun the command in README to regenerate; live APIs may differ",
+ "raw_response_digests_sha256": {
+  "full_json_packet": "0f09f09789772cebd36d6dc3feac1e886263670eff3915473445f64885dbeb03",
+  "text_output": "17836fac51823d1d7624a5057890acadcd4b55fabf08eb50c009e4544036c0c5"
+ },
+ "reading": "HYPOTHESIS material from a gene-neighbour lookup. A missing hit, an UNMATCHED symbol or INCOMPLETE coverage is not an absence.",
+ "retrieved_at": "2026-10-22T03:22:11.047949+00:00",
+ "run": "read-only, limit 2000, page size 100, batch 50, drug view all, human taxon",
+ "schema": "p5-lookup-1",
+ "seed_WWOX_direct_drug_interactions": [
+  {
+   "drug": "GEMCITABINE",
+   "sources": [
+    "ClinPGx"
+   ]
+  },
+  {
+   "drug": "SORAFENIB",
+   "sources": [
+    "ClinPGx"
+   ]
+  },
+  {
+   "drug": "RECOMBINANT TUMOR NECROSIS FACTOR FAMILY PROTEIN",
+   "sources": [
+    "NCI"
+   ]
+  }
+ ],
+ "status": "INCOMPLETE",
+ "tool": "kg_thin_slice/2.0.0",
+ "typed_neighbours": {
+  "GENE": 521,
+  "PATHWAY": 3,
+  "UNRESOLVED": 0
+ }
+}

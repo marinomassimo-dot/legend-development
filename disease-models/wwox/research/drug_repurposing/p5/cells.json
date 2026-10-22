@@ -1,0 +1,1213 @@
+{
+ "schema": "p5-cells-1",
+ "note": "cells are verbatim pieces of the stored cards or UNKNOWN; no score, rank, probability or index exists in this file",
+ "RECUPERO_PROFONDO": [
+  {
+   "id": "P4-A-01",
+   "candidate": "4-phenylbutyrate class and bile-acid chemical chaperones",
+   "kind": "candidate",
+   "card_file": "cards/A01_pba_class.card.json",
+   "bridge_directional_summary": "UNRESOLVED",
+   "dims": {
+    "benefit_endpoint": {
+     "value": "Return of detectable, soluble, functional WWOX protein from a Q230P-class missense lesion; the proximal readout would be total, soluble and pellet WWOX plus a WWOX function assay, none of which exists for this allele.",
+     "card_field": "input.p4_fields.endpoint_pursued",
+     "cut": false
+    },
+    "benefit_type": {
+     "value": "Function recovery of residual WWOX protein is the only contribution hypothesised; compensation, symptom and protection are not claimed. The branch (retained, cleared, insoluble) must be placed before any contribution can be stated.",
+     "card_field": "input.p4_card.expected_contribution",
+     "cut": false
+    },
+    "evidence_state": {
+     "value": "inconclusive (rationale withdrawn, not refuted; no WWOX test).",
+     "card_field": "input.p4_card.state_of_known_roads",
+     "cut": false
+    },
+    "evidence_functional": {
+     "value": "None for WWOX. Adjacent precedents measure protein and function together in other proteins and the two come apart in six of them (R1 question 2); no function readout for WWOX is defined in the repository.",
+     "card_field": "input.p4_fields.functional_evidence_available",
+     "cut": false
+    },
+    "risk": {
+     "value": "Potency, relevant exposure and selectivity in a WWOX system: UNKNOWN. In the sources: class not selective for the mutant; brain exposure not measured in any R1 paper.",
+     "card_field": "input.p4_card.pharmacology",
+     "cut": false
+    },
+    "block1": {
+     "value": "UNKNOWN",
+     "card_field": null,
+     "note": "no BLOCK-1 field or statement on this card; UNKNOWN is not a pass"
+    },
+    "time_to_access": {
+     "value": "UNKNOWN. Not documented in the repository.",
+     "card_field": "input.p4_card.time_to_access",
+     "cut": false
+    },
+    "time_to_benefit": {
+     "value": "UNKNOWN. Not documented; no WWOX datum exists from which to estimate it.",
+     "card_field": "input.p4_card.time_to_benefit",
+     "cut": false
+    },
+    "feasibility": {
+     "value": "Three-fraction (soluble, pellet, total) plus an inhibitor arm, then a chase from a detectable baseline, on the exact variant, with a WWOX function readout. The result decides whether the class is even addressed to the right branch.",
+     "card_field": "input.p4_card.next_measurement",
+     "cut": false
+    }
+   }
+  },
+  {
+   "id": "P4-A-02",
+   "candidate": "proteasome-inhibitor class",
+   "kind": "candidate",
+   "card_file": "cards/A02_proteasome_inhibitor_class.card.json",
+   "bridge_directional_summary": "UNRESOLVED",
+   "dims": {
+    "benefit_endpoint": {
+     "value": "Return of Q230P protein from an undetectable baseline by blocking its degradation, read as total, soluble and pellet protein and then function.",
+     "card_field": "input.p4_fields.endpoint_pursued",
+     "cut": false
+    },
+    "benefit_type": {
+     "value": "Recovery of residual protein only if Q230P is lost at the proteasome; function of any recovered protein is the unanswered question.",
+     "card_field": "input.p4_card.expected_contribution",
+     "cut": false
+    },
+    "evidence_state": {
+     "value": "not verified for this disease; and exposure-or-toxicity limit shown by its own precedent (other windows toxic to controls).",
+     "card_field": "input.p4_card.state_of_known_roads",
+     "cut": false
+    },
+    "evidence_functional": {
+     "value": "None for WWOX. In the closest precedent, a localisation and a myelin-marker readout moved with a partial protein return; a second precedent returned insoluble protein in which no activity could be measured.",
+     "card_field": "input.p4_fields.functional_evidence_available",
+     "cut": false
+    },
+    "risk": {
+     "value": "UNKNOWN for WWOX; toxicity-bounded exposure window in the closest precedent (values not reproduced).",
+     "card_field": "input.p4_card.pharmacology",
+     "cut": false
+    },
+    "block1": {
+     "value": "UNKNOWN",
+     "card_field": null,
+     "note": "no BLOCK-1 field or statement on this card; UNKNOWN is not a pass"
+    },
+    "time_to_access": {
+     "value": "UNKNOWN. Not documented in the repository.",
+     "card_field": "input.p4_card.time_to_access",
+     "cut": false
+    },
+    "time_to_benefit": {
+     "value": "UNKNOWN.",
+     "card_field": "input.p4_card.time_to_benefit",
+     "cut": false
+    },
+    "feasibility": {
+     "value": "Inhibitor-first arm on the exact variant from a detectable baseline, read as soluble/pellet/total protein, with the proteasome and lysosome arms side by side, before any chase.",
+     "card_field": "input.p4_card.next_measurement",
+     "cut": false
+    }
+   }
+  },
+  {
+   "id": "P4-B-01",
+   "candidate": "amlexanox (PTC alleles only)",
+   "kind": "candidate",
+   "card_file": "cards/B01_amlexanox.card.json",
+   "bridge_directional_summary": "UNRESOLVED",
+   "dims": {
+    "benefit_endpoint": {
+     "value": "Production of full-length WWOX protein from an allele carrying a premature stop codon, then function; proximal readout: full-length versus truncated protein on N- and C-terminal reagents plus a WWOX function assay.",
+     "card_field": "input.p4_fields.endpoint_pursued",
+     "cut": false
+    },
+    "benefit_type": {
+     "value": "Full-length protein from a PTC allele, function of it unmeasured; no contribution is stated for the missense class.",
+     "card_field": "input.p4_card.expected_contribution",
+     "cut": false
+    },
+    "evidence_state": {
+     "value": "not verified for WWOX; elsewhere partial and a relevant negative on phenotypic rescue.",
+     "card_field": "input.p4_card.state_of_known_roads",
+     "cut": false
+    },
+    "evidence_functional": {
+     "value": "None for WWOX. Elsewhere: partial in one gene, a relevant negative on phenotypic rescue in the only comparator-controlled study.",
+     "card_field": "input.p4_fields.functional_evidence_available",
+     "cut": false
+    },
+    "risk": {
+     "value": "The entire safety argument in the originating paper is historic use for other indications; no paediatric, CNS or pharmacokinetic datum.",
+     "card_field": "input.p4_card.evidence_for_and_against.against",
+     "cut": true
+    },
+    "block1": {
+     "value": "UNKNOWN",
+     "card_field": null,
+     "note": "no BLOCK-1 field or statement on this card; UNKNOWN is not a pass"
+    },
+    "time_to_access": {
+     "value": "UNKNOWN.",
+     "card_field": "input.p4_card.time_to_access",
+     "cut": false
+    },
+    "time_to_benefit": {
+     "value": "UNKNOWN.",
+     "card_field": "input.p4_card.time_to_benefit",
+     "cut": false
+    },
+    "feasibility": {
+     "value": "For PTC alleles: the enumeration of WWOX PTC alleles with stop identity and +4 nucleotide, then a function measurement on any protein produced. For the missense class: none, the mechanism does not apply.",
+     "card_field": "input.p4_card.next_measurement",
+     "cut": false
+    }
+   }
+  },
+  {
+   "id": "P4-C-01",
+   "candidate": "AAV9-delivered human WWOX",
+   "kind": "candidate",
+   "card_file": "cards/C01_aav9_wwox.card.json",
+   "bridge_directional_summary": "OPPOSES_DISEASE_CHANGE",
+   "dims": {
+    "benefit_endpoint": {
+     "value": "Restoration of WWOX function by neuron-directed replacement; the single useful endpoint carried is spike-wave discharge rate.",
+     "card_field": "input.p4_fields.endpoint_pursued",
+     "cut": true
+    },
+    "benefit_type": {
+     "value": "Recovery of function by replacement (R-class demonstrated in the null mouse); nothing is stated for clinical benefit.",
+     "card_field": "input.p4_card.expected_contribution",
+     "cut": false
+    },
+    "evidence_state": {
+     "value": "partial: the only measured rescue in the corpus, complete on several R-class endpoints, with no S, C or D datum.",
+     "card_field": "input.p4_card.state_of_known_roads",
+     "cut": false
+    },
+    "evidence_functional": {
+     "value": "In the Wwox-null mouse, by one laboratory: SWD rate to wild-type level (single vector level); survival to 300 days at the higher vector level; a graded motor score; graded glycaemia at one age; WWOX protein graded; myelination qualitative only;",
+     "card_field": "input.p4_fields.functional_evidence_available",
+     "cut": true
+    },
+    "risk": {
+     "value": "No tumour surveillance of any kind in a pro-apoptotic tumour suppressor delivered irreversibly; no measured ceiling.",
+     "card_field": "input.p4_card.evidence_for_and_against.against",
+     "cut": true
+    },
+    "block1": {
+     "value": "UNKNOWN",
+     "card_field": null,
+     "note": "no BLOCK-1 field or statement on this card; UNKNOWN is not a pass"
+    },
+    "time_to_access": {
+     "value": "UNKNOWN. The census records a programme with a gene-therapy objective at grant level; no registered WOREE study; sponsor-declared authorisation, enrolment and first dose UNKNOWN.",
+     "card_field": "input.p4_card.time_to_access",
+     "cut": false
+    },
+    "time_to_benefit": {
+     "value": "UNKNOWN in humans. In the mouse the SWD effect was recorded over one week starting about two weeks after birth; no earlier ECoG timepoint exists.",
+     "card_field": "input.p4_card.time_to_benefit",
+     "cut": false
+    },
+    "feasibility": {
+     "value": "An intermediate-level arm, defined as a fraction of the primary's higher level (never in absolute quantity), carried to 300 days with survival, weight, glycaemia, ECoG and quantified myelin in the same animals; and an independent replication.",
+     "card_field": "input.p4_card.next_measurement",
+     "cut": true
+    }
+   }
+  },
+  {
+   "id": "P4-D-01",
+   "candidate": "A51, multi-kinase inhibitor",
+   "kind": "candidate",
+   "card_file": "cards/D01_a51.card.json",
+   "bridge_directional_summary": "UNRESOLVED",
+   "dims": {
+    "benefit_endpoint": {
+     "value": "Restoration of cortical neurogenesis in a WWOX-deficient neural model; progenitor identity is restored, layer-neuron production is not.",
+     "card_field": "input.p4_fields.endpoint_pursued",
+     "cut": false
+    },
+    "benefit_type": {
+     "value": "Compensation of a downstream signal; not recovery of WWOX function.",
+     "card_field": "input.p4_card.expected_contribution",
+     "cut": false
+    },
+    "evidence_state": {
+     "value": "partial (progenitors yes, layer neurons no), with an exposure-or-toxicity limit that is unmeasured rather than favourable.",
+     "card_field": "input.p4_card.state_of_known_roads",
+     "cut": false
+    },
+    "evidence_functional": {
+     "value": "Cell-identity markers only; no WWOX-function biomarker, no electrophysiology, no seizure endpoint, no myelin readout.",
+     "card_field": "input.p4_fields.functional_evidence_available",
+     "cut": false
+    },
+    "risk": {
+     "value": "Adults: a grade 3 hepatic failure at the highest tested level",
+     "card_field": "input.p4_card.evidence_for_and_against.against",
+     "cut": true
+    },
+    "block1": {
+     "value": "BLOCK-1 open; causal attribution ambiguous; no paediatric record; direction of benefit not signed.",
+     "card_field": "input.p4_card.status_reason",
+     "cut": false
+    },
+    "time_to_access": {
+     "value": "UNKNOWN. Not documented; no registered WOREE study and no paediatric exposure.",
+     "card_field": "input.p4_card.time_to_access",
+     "cut": false
+    },
+    "time_to_benefit": {
+     "value": "UNKNOWN.",
+     "card_field": "input.p4_card.time_to_benefit",
+     "cut": false
+    },
+    "feasibility": {
+     "value": "A dose-by-timing series in a developing-cortex model with a treated wild-type arm, progenitor and layer-neuron endpoints and an electrographic endpoint; a selective MYC inhibitor to separate Wnt from MYC; and a brain-region exposure level in a young animal.",
+     "card_field": "input.p4_card.next_measurement",
+     "cut": false
+    },
+    "exposure_proportionality_SUPERSEDED": {
+     "value": "Card field superseded by a later UNAUDITED recomputation, see 40665325 entry 21 (scientist-c, commit c9aff6a2, coordinator relay 2026-10-22): the later-day exposure measure is roughly proportional over the middle of the tested range (log-log slope about 0.95 to 0.98) and looks supralinear at the bottom only because of ONE patient; the first-day measure is above proportional (slope about 1.48) over the same middle range; across the top two cohorts a 2-fold step gives a 1.27-fold rise; N per cohort is 1, 1, 3, 3, 3, 8, 5 across seven cohorts; CVs 4.1 to 79 percent; one first-day cell is blank. 'Dose-proportional' is therefore reproduced neither exactly nor in a single direction. The stored card says only 'very few measurements at two levels' and neither proportionality nor its absence.",
+     "card_field": "input.p4_card.evidence_for_and_against.against (stored wording) - NOT the source of this cell",
+     "cut": false,
+     "source": "coordinator relay, itself unaudited; no dose value is reproduced here"
+    }
+   }
+  },
+  {
+   "id": "P4-A-03",
+   "candidate": "client-binding pharmacological chaperone",
+   "kind": "abstention",
+   "card_file": "cards/A03_client_binding_chaperone.card.json",
+   "bridge_directional_summary": "UNRESOLVED",
+   "dims": {
+    "benefit_endpoint": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_fields.endpoint_pursued",
+     "cut": false
+    },
+    "benefit_type": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.expected_contribution",
+     "cut": false
+    },
+    "evidence_state": {
+     "value": "known-roads § 8 and R1 § 1 (39216838, 32023956)",
+     "card_field": "input.p4_card.state_of_known_roads",
+     "cut": false
+    },
+    "evidence_functional": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_fields.functional_evidence_available",
+     "cut": false
+    },
+    "risk": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.pharmacology",
+     "cut": false
+    },
+    "block1": {
+     "value": "UNKNOWN",
+     "card_field": null,
+     "note": "no BLOCK-1 field or statement on this card; UNKNOWN is not a pass"
+    },
+    "time_to_access": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.time_to_access",
+     "cut": false
+    },
+    "time_to_benefit": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.time_to_benefit",
+     "cut": false
+    },
+    "feasibility": {
+     "value": "A measured thermal-stability or binding assay of the exact variant and a candidate-ligand screen; each would turn this abstention into a card.",
+     "card_field": "input.p4_card.next_measurement",
+     "cut": false
+    },
+    "missing_datum": {
+     "value": "A ligand known to bind the WWOX SDR domain, and a measured instability of Q230P that such a ligand could stabilise. No experimental structure of the SDR domain exists in the repository (CLAIM 019: AlphaFold and in-silico values only, IPOTESI).",
+     "card_field": "input.abstention_card.missing_datum",
+     "cut": false
+    }
+   }
+  },
+  {
+   "id": "P4-A-04",
+   "candidate": "ER-proteostasis regulators",
+   "kind": "abstention",
+   "card_file": "cards/A04_er_proteostasis_regulators.card.json",
+   "bridge_directional_summary": "UNRESOLVED",
+   "dims": {
+    "benefit_endpoint": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_fields.endpoint_pursued",
+     "cut": false
+    },
+    "benefit_type": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.expected_contribution",
+     "cut": false
+    },
+    "evidence_state": {
+     "value": "R1 § 1 (41178115, 38731820); known-roads § 2.8 (DIS-004 wrong compartment)",
+     "card_field": "input.p4_card.state_of_known_roads",
+     "cut": false
+    },
+    "evidence_functional": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_fields.functional_evidence_available",
+     "cut": false
+    },
+    "risk": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.pharmacology",
+     "cut": false
+    },
+    "block1": {
+     "value": "UNKNOWN",
+     "card_field": null,
+     "note": "no BLOCK-1 field or statement on this card; UNKNOWN is not a pass"
+    },
+    "time_to_access": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.time_to_access",
+     "cut": false
+    },
+    "time_to_benefit": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.time_to_benefit",
+     "cut": false
+    },
+    "feasibility": {
+     "value": "The three-fraction plus inhibitor design on the exact variant would place it; the answer decides whether this axis exists for a cytosolic enzyme.",
+     "card_field": "input.p4_card.next_measurement",
+     "cut": false
+    },
+    "missing_datum": {
+     "value": "Where Q230P is surveilled: WWOX is cytosolic, and no measurement places the variant in ER or cytosolic quality control. Without that, a UPR or ERAD modulator has no stated target in this lesion.",
+     "card_field": "input.abstention_card.missing_datum",
+     "cut": false
+    }
+   }
+  },
+  {
+   "id": "P4-A-05",
+   "candidate": "HSP70-axis modulation",
+   "kind": "abstention",
+   "card_file": "cards/A05_hsp70_axis.card.json",
+   "bridge_directional_summary": "UNRESOLVED",
+   "dims": {
+    "benefit_endpoint": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_fields.endpoint_pursued",
+     "cut": false
+    },
+    "benefit_type": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.expected_contribution",
+     "cut": false
+    },
+    "evidence_state": {
+     "value": "known-roads § 2.8 (D-03); R1 § 1 (33914734, 42875792)",
+     "card_field": "input.p4_card.state_of_known_roads",
+     "cut": false
+    },
+    "evidence_functional": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_fields.functional_evidence_available",
+     "cut": false
+    },
+    "risk": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.pharmacology",
+     "cut": false
+    },
+    "block1": {
+     "value": "UNKNOWN",
+     "card_field": null,
+     "note": "no BLOCK-1 field or statement on this card; UNKNOWN is not a pass"
+    },
+    "time_to_access": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.time_to_access",
+     "cut": false
+    },
+    "time_to_benefit": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.time_to_benefit",
+     "cut": false
+    },
+    "feasibility": {
+     "value": "A chase paired with a chaperone-function perturbation on the exact variant from a detectable baseline.",
+     "card_field": "input.p4_card.next_measurement",
+     "cut": false
+    },
+    "missing_datum": {
+     "value": "The direction of effect of HSP70-axis modulation on Q230P: amplifying the axis may accelerate delivery of the mutant to degradation (HSC70 delivers it to the lysosome in the P252A bridge hypothesis), and blocking it stabilised an insoluble protein, with no",
+     "card_field": "input.abstention_card.missing_datum",
+     "cut": true
+    }
+   }
+  },
+  {
+   "id": "P4-B-02",
+   "candidate": "PTC read-through class",
+   "kind": "abstention",
+   "card_file": "cards/B02_readthrough_class.card.json",
+   "bridge_directional_summary": "UNRESOLVED",
+   "dims": {
+    "benefit_endpoint": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_fields.endpoint_pursued",
+     "cut": false
+    },
+    "benefit_type": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.expected_contribution",
+     "cut": false
+    },
+    "evidence_state": {
+     "value": "known-roads § 4.4, § 5",
+     "card_field": "input.p4_card.state_of_known_roads",
+     "cut": false
+    },
+    "evidence_functional": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_fields.functional_evidence_available",
+     "cut": false
+    },
+    "risk": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.pharmacology",
+     "cut": false
+    },
+    "block1": {
+     "value": "UNKNOWN",
+     "card_field": null,
+     "note": "no BLOCK-1 field or statement on this card; UNKNOWN is not a pass"
+    },
+    "time_to_access": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.time_to_access",
+     "cut": false
+    },
+    "time_to_benefit": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.time_to_benefit",
+     "cut": false
+    },
+    "feasibility": {
+     "value": "Make the PTC-allele enumeration with context annotation; it would populate or empty the class.",
+     "card_field": "input.p4_card.next_measurement",
+     "cut": false
+    },
+    "missing_datum": {
+     "value": "The enumeration: a count of WWOX nonsense alleles with stop-codon identity and the +4 nucleotide, which govern read-through efficiency. No published cohort separates splice from nonsense from frameshift from CNV;",
+     "card_field": "input.abstention_card.missing_datum",
+     "cut": true
+    }
+   }
+  },
+  {
+   "id": "P4-C-02",
+   "candidate": "splice-correcting ASO / editing",
+   "kind": "abstention",
+   "card_file": "cards/C02_splice_aso.card.json",
+   "bridge_directional_summary": "UNRESOLVED",
+   "dims": {
+    "benefit_endpoint": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_fields.endpoint_pursued",
+     "cut": false
+    },
+    "benefit_type": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.expected_contribution",
+     "cut": false
+    },
+    "evidence_state": {
+     "value": "known-roads § 2.8, § 6",
+     "card_field": "input.p4_card.state_of_known_roads",
+     "cut": false
+    },
+    "evidence_functional": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_fields.functional_evidence_available",
+     "cut": false
+    },
+    "risk": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.pharmacology",
+     "cut": false
+    },
+    "block1": {
+     "value": "UNKNOWN",
+     "card_field": null,
+     "note": "no BLOCK-1 field or statement on this card; UNKNOWN is not a pass"
+    },
+    "time_to_access": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.time_to_access",
+     "cut": false
+    },
+    "time_to_benefit": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.time_to_benefit",
+     "cut": false
+    },
+    "feasibility": {
+     "value": "Junction-spanning RT-PCR with and without an NMD block on material carrying a canonical splice allele.",
+     "card_field": "input.p4_card.next_measurement",
+     "cut": false
+    },
+    "missing_datum": {
+     "value": "A baseline: no aberrant-to-normal transcript ratio exists for any WWOX splice allele in any tissue, no WWOX splice allele has had its RNA examined with an NMD inhibitor, and no intragenic precedent exists.",
+     "card_field": "input.abstention_card.missing_datum",
+     "cut": true
+    }
+   }
+  },
+  {
+   "id": "P4-C-03",
+   "candidate": "endogenous boost (CRISPRa or equivalent)",
+   "kind": "abstention",
+   "card_file": "cards/C03_crispra_boost.card.json",
+   "bridge_directional_summary": "UNRESOLVED",
+   "dims": {
+    "benefit_endpoint": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_fields.endpoint_pursued",
+     "cut": false
+    },
+    "benefit_type": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.expected_contribution",
+     "cut": false
+    },
+    "evidence_state": {
+     "value": "known-roads § 2.8",
+     "card_field": "input.p4_card.state_of_known_roads",
+     "cut": false
+    },
+    "evidence_functional": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_fields.functional_evidence_available",
+     "cut": false
+    },
+    "risk": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.pharmacology",
+     "cut": false
+    },
+    "block1": {
+     "value": "UNKNOWN",
+     "card_field": null,
+     "note": "no BLOCK-1 field or statement on this card; UNKNOWN is not a pass"
+    },
+    "time_to_access": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.time_to_access",
+     "cut": false
+    },
+    "time_to_benefit": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.time_to_benefit",
+     "cut": false
+    },
+    "feasibility": {
+     "value": "Synthesis and fate of the exact variant (the same fractionation-and-inhibitor design) decides whether raising its expression can help.",
+     "card_field": "input.p4_card.next_measurement",
+     "cut": false
+    },
+    "missing_datum": {
+     "value": "Whether Q230P synthesis is translation-limited and whether the variant protein folds: a non-allele-specific boost raises both alleles, so the sign of the benefit depends on a folding fate that is unknown. Never attempted in any WWOX system.",
+     "card_field": "input.abstention_card.missing_datum",
+     "cut": false
+    }
+   }
+  },
+  {
+   "id": "P4-D-02",
+   "candidate": "Wnt-lowering agents and GSK3 modulation",
+   "kind": "abstention",
+   "card_file": "cards/D02_wnt_tankyrase.card.json",
+   "bridge_directional_summary": "UNRESOLVED",
+   "dims": {
+    "benefit_endpoint": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_fields.endpoint_pursued",
+     "cut": false
+    },
+    "benefit_type": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.expected_contribution",
+     "cut": false
+    },
+    "evidence_state": {
+     "value": "known-roads § 2.4(c), § 2.2; R3 §§ 1.2, 8",
+     "card_field": "input.p4_card.state_of_known_roads",
+     "cut": false
+    },
+    "evidence_functional": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_fields.functional_evidence_available",
+     "cut": false
+    },
+    "risk": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.pharmacology",
+     "cut": false
+    },
+    "block1": {
+     "value": "UNKNOWN",
+     "card_field": null,
+     "note": "no BLOCK-1 field or statement on this card; UNKNOWN is not a pass"
+    },
+    "time_to_access": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.time_to_access",
+     "cut": false
+    },
+    "time_to_benefit": {
+     "value": "UNKNOWN",
+     "card_field": "input.p4_card.time_to_benefit",
+     "cut": false
+    },
+    "feasibility": {
+     "value": "Activation-step measurement (reporter, nuclear beta-catenin) in a WWOX-deficient neural system, then the dose-by-timing series.",
+     "card_field": "input.p4_card.next_measurement",
+     "cut": false
+    },
+    "missing_datum": {
+     "value": "A dose-by-timing series of Wnt/GSK3/CK1 modulation in a developing cortex with progenitor, layer-neuron and electrographic endpoints, in any WWOX system; and a measured activation step (reporter or nuclear/cytosolic beta-catenin).",
+     "card_field": "input.abstention_card.missing_datum",
+     "cut": true
+    }
+   }
+  }
+ ],
+ "BENEFICIO_PRECOCE": [
+  {
+   "id": "EB-KD-01",
+   "candidate": "ketogenic diet",
+   "kind": "candidate",
+   "card_file": "cards_early/EB-KD-01.card.json",
+   "bridge_directional_summary": "UNRESOLVED",
+   "dims": {
+    "benefit_endpoint": {
+     "value": "clinician-reported seizure control, symptomatic only (the endpoint type the only WOREE therapeutic report used); no count, score, latency, duration or exposure denominator on the delivered surface",
+     "card_field": "input.p4_fields.endpoint_pursued",
+     "cut": false
+    },
+    "benefit_type": {
+     "value": "Symptom (seizure control), to be verified. No compensation, function recovery or protection is claimed. Not disease modification.",
+     "card_field": "input.p4_roadmap_fields.expected_contribution",
+     "cut": false
+    },
+    "evidence_state": {
+     "value": "Inconclusive (known-roads note 2.7): the exposed denominator is absent, 'responded' is undefined, and a DEE base-rate comparison spans 0 to 100 per cent.",
+     "card_field": "input.p4_roadmap_fields.known_roads_state",
+     "cut": true
+    },
+    "evidence_functional": {
+     "value": "none for the gene: no WWOX read-out of any kind in the source, so whatever changed in those children nothing measured WWOX; a clinician statement only",
+     "card_field": "input.p4_fields.functional_evidence_available",
+     "cut": false
+    },
+    "risk": {
+     "value": "Paediatric suitability is not presumed: a diet is not safe because it is food (early-benefit note). Adverse effects: UNKNOWN in the records read. Interaction with antiseizure co-medication: UNKNOWN (co-medication not reported in the retrieved passages).",
+     "card_field": "input.p4_roadmap_fields.paediatrics_and_interactions",
+     "cut": false
+    },
+    "block1": {
+     "value": "UNKNOWN",
+     "card_field": null,
+     "note": "no BLOCK-1 field or statement on this card; UNKNOWN is not a pass"
+    },
+    "time_to_access": {
+     "value": "UNKNOWN. Documented obstacles to administrability were assessed in no record read. CLAIM 042 calls the diet a «clinically available intervention»; that phrase is not an access assessment and not paediatric suitability.",
+     "card_field": "input.p4_roadmap_fields.time_to_access",
+     "cut": true
+    },
+    "time_to_benefit": {
+     "value": "UNKNOWN, separately from access. No latency or duration appears on the delivered surface; the narratives where it would appear are not covered.",
+     "card_field": "input.p4_roadmap_fields.time_to_benefit",
+     "cut": true
+    },
+    "feasibility": {
+     "value": "Does the Results narrative of the series give the number of children placed on the diet, a seizure count before and after, the interval to response and the co-medication? Closing that needs a native surface of the article (on the operator's PDF list);",
+     "card_field": "input.p4_roadmap_fields.next_measure",
+     "cut": true
+    }
+   }
+  },
+  {
+   "id": "EB-VGB-01",
+   "candidate": "vigabatrin",
+   "kind": "candidate",
+   "card_file": "cards_early/EB-VGB-01.card.json",
+   "bridge_directional_summary": "UNRESOLVED",
+   "dims": {
+    "benefit_endpoint": {
+     "value": "clinical cessation of epileptic spasms with a stated criterion (one report used cessation for at least four weeks); symptomatic only; electrographic confirmation is absent in the reports",
+     "card_field": "input.p4_fields.endpoint_pursued",
+     "cut": false
+    },
+    "benefit_type": {
+     "value": "Symptom (spasm control) to be verified against an exposure limit. Not disease modification (CLAIM 031).",
+     "card_field": "input.p4_roadmap_fields.expected_contribution",
+     "cut": false
+    },
+    "evidence_state": {
+     "value": "Partial plus exposure-or-toxicity limit; CLAIM 001 status is conflicting evidence and is confirmed as correctly conflicting: efficacy on spasms (n = 2 and n = 1) against MRI toxicity (n = 2).",
+     "card_field": "input.p4_roadmap_fields.known_roads_state",
+     "cut": false
+    },
+    "evidence_functional": {
+     "value": "none for the gene. Clinical spasm control in n = 1 reports; at least one report shows clinical freedom with persisting electrographic attacks",
+     "card_field": "input.p4_fields.functional_evidence_available",
+     "cut": false
+    },
+    "risk": {
+     "value": "Paediatric safety is the limit itself (VABAM). Interactions: concurrent hormonal therapy is a candidate confounder or co-factor for the MRI finding in non-WWOX cohorts. Suitability is not presumed.",
+     "card_field": "input.p4_roadmap_fields.paediatrics_and_interactions",
+     "cut": false
+    },
+    "block1": {
+     "value": "UNKNOWN",
+     "card_field": null,
+     "note": "no BLOCK-1 field or statement on this card; UNKNOWN is not a pass"
+    },
+    "time_to_access": {
+     "value": "UNKNOWN. Not assessed in any record read. Clinical census 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven unfiltered queries on ClinicalTrials.gov API v2 returned no registered WOREE interventional study;",
+     "card_field": "input.p4_roadmap_fields.time_to_access",
+     "cut": true
+    },
+    "time_to_benefit": {
+     "value": "UNKNOWN. No latency is recorded in the reports; one report defines response as cessation of at least four weeks, which is a definition, not a time.",
+     "card_field": "input.p4_roadmap_fields.time_to_benefit",
+     "cut": false
+    },
+    "feasibility": {
+     "value": "Was hormonal therapy given concurrently in the WWOX reports of MRI abnormality, and was the MRI repeated after withdrawal? The anchor paper has no receipt in the ledger: reading it is the cheapest closing step.",
+     "card_field": "input.p4_roadmap_fields.next_measure",
+     "cut": false
+    }
+   }
+  },
+  {
+   "id": "EB-ETX-01",
+   "candidate": "ethosuximide (T-type contrast)",
+   "kind": "candidate",
+   "card_file": "cards_early/EB-ETX-01.card.json",
+   "bridge_directional_summary": "UNRESOLVED",
+   "dims": {
+    "benefit_endpoint": {
+     "value": "late-phase PTZ-provoked behavioural seizure score in a three-genotype design with an explicit drug-by-genotype interaction test and a concurrent same-day PTZ-alone control (the falsifier of DL-MECH-170); no human endpoint is yet defined for this candidate",
+     "card_field": "input.p4_fields.endpoint_pursued",
+     "cut": false
+    },
+    "benefit_type": {
+     "value": "Symptom (provoked seizure). Not disease modification: in a digenic absence mouse (NOT WWOX EVIDENCE) the ethosuximide effect and a Cav3.1 deletion suppressed the seizure and left a quantified comorbidity untouched (R2 section 6).",
+     "card_field": "input.p4_roadmap_fields.expected_contribution",
+     "cut": false
+    },
+    "evidence_state": {
+     "value": "Partial (known-roads note 2.3), now narrowed by the R2 note: not a clean genotype-specific effect. The lithium arm of the same figure suppressed in all three genotypes (relevant negative on specificity).",
+     "card_field": "input.p4_roadmap_fields.known_roads_state",
+     "cut": false
+    },
+    "evidence_functional": {
+     "value": "one mouse experiment, one laboratory, symptomatic class; no T-type current measured in any Wwox system;",
+     "card_field": "input.p4_fields.functional_evidence_available",
+     "cut": true
+    },
+    "risk": {
+     "value": "UNKNOWN. Class-level signal only: T-type blockers reduce progenitor viability in vitro (research compounds, rat, Cav3.1-dependent), significance unknown.",
+     "card_field": "input.p4_roadmap_fields.paediatrics_and_interactions",
+     "cut": true
+    },
+    "block1": {
+     "value": "UNKNOWN",
+     "card_field": null,
+     "note": "no BLOCK-1 field or statement on this card; UNKNOWN is not a pass"
+    },
+    "time_to_access": {
+     "value": "UNKNOWN. Not assessed in any record read. Clinical census 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven unfiltered queries on ClinicalTrials.gov API v2 returned no registered WOREE interventional study;",
+     "card_field": "input.p4_roadmap_fields.time_to_access",
+     "cut": true
+    },
+    "time_to_benefit": {
+     "value": "UNKNOWN. No human age-at-treatment datum of any kind exists; no experiment in any WWOX model varies age at treatment beyond mouse P5 (early-benefit note, section 4).",
+     "card_field": "input.p4_roadmap_fields.time_to_benefit",
+     "cut": false
+    },
+    "feasibility": {
+     "value": "Is the late-phase ethosuximide effect in the null reproduced, with a drug-by-genotype interaction test, a concurrent same-day PTZ-alone control in every cell and a per-genotype baseline stated? The R2 design sketch says power depends mainly on which control",
+     "card_field": "input.p4_roadmap_fields.next_measure",
+     "cut": true
+    }
+   }
+  },
+  {
+   "id": "EB-GROWTH-AX-01",
+   "candidate": "growth (endpoint axis, not an intervention)",
+   "kind": "abstention",
+   "card_file": "cards_early/EB-GROWTH-AX-01.card.json",
+   "bridge_directional_summary": "UNRESOLVED",
+   "dims": {
+    "benefit_endpoint": {
+     "value": "head circumference, height and weight against age-expected SD scores at a stated age, repeated",
+     "card_field": "input.p4_fields.endpoint_pursued",
+     "cut": false
+    },
+    "benefit_type": {
+     "value": "Quantitative as a kind of measurement, repeatable, already collected in routine care, with an age-expected trajectory as comparator. A good early-benefit endpoint and a bad specificity argument: it moves with feeding route, infection, diet and seizure burden.",
+     "card_field": "input.p4_roadmap_fields.expected_contribution",
+     "cut": false
+    },
+    "evidence_state": {
+     "value": "No intervention has a growth measurement in WOREE. UNKNOWN.",
+     "card_field": "input.p4_roadmap_fields.known_roads_state",
+     "cut": false
+    },
+    "evidence_functional": {
+     "value": "none for any intervention; the only human values sit on a surface that strips signs and ranges",
+     "card_field": "input.p4_fields.functional_evidence_available",
+     "cut": false
+    },
+    "risk": {
+     "value": "Not applicable.",
+     "card_field": "input.p4_roadmap_fields.paediatrics_and_interactions",
+     "cut": false
+    },
+    "block1": {
+     "value": "UNKNOWN",
+     "card_field": null,
+     "note": "no BLOCK-1 field or statement on this card; UNKNOWN is not a pass"
+    },
+    "time_to_access": {
+     "value": "Not applicable to an endpoint; the intervention that would be measured has UNKNOWN access.",
+     "card_field": "input.p4_roadmap_fields.time_to_access",
+     "cut": false
+    },
+    "time_to_benefit": {
+     "value": "UNKNOWN.",
+     "card_field": "input.p4_roadmap_fields.time_to_benefit",
+     "cut": false
+    },
+    "feasibility": {
+     "value": "Can a native surface of the series be acquired so that the growth values, the exposure denominator and the seizure-count question are all read in one acquisition?",
+     "card_field": "input.p4_roadmap_fields.next_measure",
+     "cut": false
+    },
+    "status_missing_datum": {
+     "value": "ASTENSIONE. Missing datum: the growth values and any intervention measured against them.",
+     "card_field": "input.p4_roadmap_fields.status",
+     "cut": false
+    }
+   }
+  },
+  {
+   "id": "EB-DEV-AX-01",
+   "candidate": "development / disease modification (axis)",
+   "kind": "abstention",
+   "card_file": "cards_early/EB-DEV-AX-01.card.json",
+   "bridge_directional_summary": "UNRESOLVED",
+   "dims": {
+    "benefit_endpoint": {
+     "value": "a within-patient developmental measure (growth-scale or raw-score form) across an intervention, against a repeated pre-intervention baseline",
+     "card_field": "input.p4_fields.endpoint_pursued",
+     "cut": false
+    },
+    "benefit_type": {
+     "value": "None claimable. 'Protection' is not licensed.",
+     "card_field": "input.p4_roadmap_fields.expected_contribution",
+     "cut": false
+    },
+    "evidence_state": {
+     "value": "Every disease-modification cell in the known-roads census is empty.",
+     "card_field": "input.p4_roadmap_fields.known_roads_state",
+     "cut": true
+    },
+    "evidence_functional": {
+     "value": "not established here: the early-benefit note's title-and-abstract-level query found no WWOX paper indexed for a standardised developmental, motor or seizure-severity instrument;",
+     "card_field": "input.p4_fields.functional_evidence_available",
+     "cut": true
+    },
+    "risk": {
+     "value": "Not applicable.",
+     "card_field": "input.p4_roadmap_fields.paediatrics_and_interactions",
+     "cut": false
+    },
+    "block1": {
+     "value": "UNKNOWN",
+     "card_field": null,
+     "note": "no BLOCK-1 field or statement on this card; UNKNOWN is not a pass"
+    },
+    "time_to_access": {
+     "value": "Not applicable.",
+     "card_field": "input.p4_roadmap_fields.time_to_access",
+     "cut": false
+    },
+    "time_to_benefit": {
+     "value": "UNKNOWN; the shortest sufficient follow-up in the precedents is 12 months for instrument change and 24 to 36 months for developmental trials, none WOREE.",
+     "card_field": "input.p4_roadmap_fields.time_to_benefit",
+     "cut": false
+    },
+    "feasibility": {
+     "value": "What is the visit-to-visit scatter of a growth-scale developmental instrument in an untreated WOREE child?",
+     "card_field": "input.p4_roadmap_fields.next_measure",
+     "cut": false
+    },
+    "status_missing_datum": {
+     "value": "ASTENSIONE. Missing datum: any within-patient developmental measurement in WOREE.",
+     "card_field": "input.p4_roadmap_fields.status",
+     "cut": false
+    }
+   }
+  },
+  {
+   "id": "EB-PDANCHOR-AX-01",
+   "candidate": "pharmacodynamic anchor (axis)",
+   "kind": "abstention",
+   "card_file": "cards_early/EB-PDANCHOR-AX-01.card.json",
+   "bridge_directional_summary": "UNRESOLVED",
+   "dims": {
+    "benefit_endpoint": {
+     "value": "UNKNOWN: engagement of a WWOX-directed target cannot be shown at all today",
+     "card_field": "input.p4_fields.endpoint_pursued",
+     "cut": false
+    },
+    "benefit_type": {
+     "value": "None.",
+     "card_field": "input.p4_roadmap_fields.expected_contribution",
+     "cut": false
+    },
+    "evidence_state": {
+     "value": "UNKNOWN.",
+     "card_field": "input.p4_roadmap_fields.known_roads_state",
+     "cut": false
+    },
+    "evidence_functional": {
+     "value": "none: the three direct read-outs (transcript, immunoblot, tissue stain) have no limit of detection, linear range or calibrator, and the tissue read-out reached only fair inter-rater agreement; canine tumour matrix, no WWOX variant, no CNS tissue, no body fluid",
+     "card_field": "input.p4_fields.functional_evidence_available",
+     "cut": false
+    },
+    "risk": {
+     "value": "Not applicable.",
+     "card_field": "input.p4_roadmap_fields.paediatrics_and_interactions",
+     "cut": false
+    },
+    "block1": {
+     "value": "UNKNOWN",
+     "card_field": null,
+     "note": "no BLOCK-1 field or statement on this card; UNKNOWN is not a pass"
+    },
+    "time_to_access": {
+     "value": "Not applicable.",
+     "card_field": "input.p4_roadmap_fields.time_to_access",
+     "cut": false
+    },
+    "time_to_benefit": {
+     "value": "Not applicable.",
+     "card_field": "input.p4_roadmap_fields.time_to_benefit",
+     "cut": false
+    },
+    "feasibility": {
+     "value": "Can a WWOX assay report a concentration against a recombinant calibrator, with a stated limit of detection, in a matrix obtainable from a living patient?",
+     "card_field": "input.p4_roadmap_fields.next_measure",
+     "cut": false
+    },
+    "status_missing_datum": {
+     "value": "ASTENSIONE. Missing datum: a calibrated WWOX read-out in a living-patient matrix.",
+     "card_field": "input.p4_roadmap_fields.status",
+     "cut": false
+    }
+   }
+  },
+  {
+   "id": "EB-HORM-AX-01",
+   "candidate": "ACTH, corticosteroids, phenobarbital regimens",
+   "kind": "abstention",
+   "card_file": "cards_early/EB-HORM-AX-01.card.json",
+   "bridge_directional_summary": "UNRESOLVED",
+   "dims": {
+    "benefit_endpoint": {
+     "value": "clinical cessation of epileptic spasms, if and only if a comparator separates a WWOX-genotype response from ordinary West-syndrome pharmacology",
+     "card_field": "input.p4_fields.endpoint_pursued",
+     "cut": false
+    },
+    "benefit_type": {
+     "value": "Symptom, to be verified; unseparated from standard care.",
+     "card_field": "input.p4_roadmap_fields.expected_contribution",
+     "cut": false
+    },
+    "evidence_state": {
+     "value": "Partial, confounded by West-syndrome pharmacology (known-roads note 2.7); visible only in the supplement while the running text calls the regimens flatly not effective.",
+     "card_field": "input.p4_roadmap_fields.known_roads_state",
+     "cut": false
+    },
+    "evidence_functional": {
+     "value": "none for the gene: six explicit responders in a per-patient supplement column of one curation, 'Yes' undefined, no control arm, dosing, duration or standardised follow-up",
+     "card_field": "input.p4_fields.functional_evidence_available",
+     "cut": false
+    },
+    "risk": {
+     "value": "UNKNOWN. Suitability not presumed.",
+     "card_field": "input.p4_roadmap_fields.paediatrics_and_interactions",
+     "cut": false
+    },
+    "block1": {
+     "value": "UNKNOWN",
+     "card_field": null,
+     "note": "no BLOCK-1 field or statement on this card; UNKNOWN is not a pass"
+    },
+    "time_to_access": {
+     "value": "UNKNOWN. Clinical census 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven unfiltered queries on ClinicalTrials.gov API v2 returned no registered WOREE interventional study;",
+     "card_field": "input.p4_roadmap_fields.time_to_access",
+     "cut": true
+    },
+    "time_to_benefit": {
+     "value": "UNKNOWN.",
+     "card_field": "input.p4_roadmap_fields.time_to_benefit",
+     "cut": false
+    },
+    "feasibility": {
+     "value": "In a matched non-WWOX West-syndrome series, what fraction responds to hormonal therapy, and how many WWOX responders would that fraction already explain?",
+     "card_field": "input.p4_roadmap_fields.next_measure",
+     "cut": false
+    },
+    "status_missing_datum": {
+     "value": "ASTENSIONE. Missing datum: a defined response and a matched West-syndrome base rate.",
+     "card_field": "input.p4_roadmap_fields.status",
+     "cut": false
+    }
+   }
+  },
+  {
+   "id": "EB-CBD-AX-01",
+   "candidate": "cannabidiol",
+   "kind": "abstention",
+   "card_file": "cards_early/EB-CBD-AX-01.card.json",
+   "bridge_directional_summary": "UNRESOLVED",
+   "dims": {
+    "benefit_endpoint": {
+     "value": "clinician-reported seizure control, if a response is first defined",
+     "card_field": "input.p4_fields.endpoint_pursued",
+     "cut": false
+    },
+    "benefit_type": {
+     "value": "Symptom, if shown.",
+     "card_field": "input.p4_roadmap_fields.expected_contribution",
+     "cut": false
+    },
+    "evidence_state": {
+     "value": "Inconclusive (known-roads note 2.7).",
+     "card_field": "input.p4_roadmap_fields.known_roads_state",
+     "cut": false
+    },
+    "evidence_functional": {
+     "value": "none: continuation in 4 of 4 patients who started it in one cohort is a continuation pattern, not an efficacy measure; ineffective in one severe case",
+     "card_field": "input.p4_fields.functional_evidence_available",
+     "cut": false
+    },
+    "risk": {
+     "value": "UNKNOWN. Suitability not presumed.",
+     "card_field": "input.p4_roadmap_fields.paediatrics_and_interactions",
+     "cut": false
+    },
+    "block1": {
+     "value": "UNKNOWN",
+     "card_field": null,
+     "note": "no BLOCK-1 field or statement on this card; UNKNOWN is not a pass"
+    },
+    "time_to_access": {
+     "value": "UNKNOWN. Clinical census 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven unfiltered queries on ClinicalTrials.gov API v2 returned no registered WOREE interventional study;",
+     "card_field": "input.p4_roadmap_fields.time_to_access",
+     "cut": true
+    },
+    "time_to_benefit": {
+     "value": "UNKNOWN.",
+     "card_field": "input.p4_roadmap_fields.time_to_benefit",
+     "cut": false
+    },
+    "feasibility": {
+     "value": "Did any WWOX organoid or animal paper test cannabidiol? One registry query answers it.",
+     "card_field": "input.p4_roadmap_fields.next_measure",
+     "cut": false
+    },
+    "status_missing_datum": {
+     "value": "ASTENSIONE. Missing datum: any WWOX-system test of cannabidiol and a defined response.",
+     "card_field": "input.p4_roadmap_fields.status",
+     "cut": false
+    }
+   }
+  },
+  {
+   "id": "EB-MTOR-AX-01",
+   "candidate": "mTOR-inhibitor class",
+   "kind": "abstention",
+   "card_file": "cards_early/EB-MTOR-AX-01.card.json",
+   "bridge_directional_summary": "UNRESOLVED",
+   "dims": {
+    "benefit_endpoint": {
+     "value": "UNKNOWN: no WOREE-relevant endpoint is supported for this class",
+     "card_field": "input.p4_fields.endpoint_pursued",
+     "cut": false
+    },
+    "benefit_type": {
+     "value": "None claimed.",
+     "card_field": "input.p4_roadmap_fields.expected_contribution",
+     "cut": false
+    },
+    "evidence_state": {
+     "value": "UNKNOWN.",
+     "card_field": "input.p4_roadmap_fields.known_roads_state",
+     "cut": false
+    },
+    "evidence_functional": {
+     "value": "none in a WWOX system; the class evidence comes from genetic mTOR-pathway reduction in a Tsc1 model (NOT WWOX EVIDENCE)",
+     "card_field": "input.p4_fields.functional_evidence_available",
+     "cut": false
+    },
+    "risk": {
+     "value": "A paediatric record exists for this class in another disease; it is not an authorisation for this one and not a suitability statement. Interactions: UNKNOWN.",
+     "card_field": "input.p4_roadmap_fields.paediatrics_and_interactions",
+     "cut": false
+    },
+    "block1": {
+     "value": "UNKNOWN",
+     "card_field": null,
+     "note": "no BLOCK-1 field or statement on this card; UNKNOWN is not a pass"
+    },
+    "time_to_access": {
+     "value": "UNKNOWN. Clinical census 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven unfiltered queries on ClinicalTrials.gov API v2 returned no registered WOREE interventional study;",
+     "card_field": "input.p4_roadmap_fields.time_to_access",
+     "cut": true
+    },
+    "time_to_benefit": {
+     "value": "UNKNOWN.",
+     "card_field": "input.p4_roadmap_fields.time_to_benefit",
+     "cut": false
+    },
+    "feasibility": {
+     "value": "Does the blocked WWOX/mTOR paper (full text unread) report a direction of mTOR activity in a WWOX-deficient system?",
+     "card_field": "input.p4_roadmap_fields.next_measure",
+     "cut": false
+    },
+    "status_missing_datum": {
+     "value": "ASTENSIONE. Missing datum: a direction of mTOR activity in a WWOX system and any WOREE endpoint.",
+     "card_field": "input.p4_roadmap_fields.status",
+     "cut": false
+    }
+   }
+  }
+ ]
+}
