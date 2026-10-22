@@ -34,7 +34,7 @@ annotations is reported below whatever it happens to be.
 | Nodes carrying a biological scale | 0 |
 | Deep-dive manifests read | 567 |
 | …of which bound to at least one claim | 106 |
-| Propositions scanned | 8563 |
+| Propositions scanned | 8564 |
 | …carrying a relational connective | 1757 |
 | …locator-backed candidates | 1717 |
 | …locator-backed and bound to a claim | 413 |
@@ -376,6 +376,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 570 input files; digest
-`19a9f327f0a1fd73`. Sources: the claim, paper and
+`2233bf9583972814`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
