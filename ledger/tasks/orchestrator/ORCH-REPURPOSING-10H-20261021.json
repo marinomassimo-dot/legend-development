@@ -40,7 +40,7 @@
     {
      "step": "Hourly watch for ten hours: detect a stopped Scientist (rate limit or finished lot) and restart it, continuing the lot or taking new studies",
      "status": "IN_PROGRESS",
-     "evidence": "cron 4b6b5252 hourly at :07, first fire 22:07 UTC"
+     "evidence": "watch cycles 1-3 done; rate-limit stop at ~02:00Z (reset 02:40Z) recovered at 03:16Z; 4 scientists running: A P5, B GSE156243, C R3c+repair, D WWOX-rows sweep"
     },
     {
      "step": "Integrate returns: record staged receipts with record_staged_receipts.py, BATCH_COMMIT of candidates, blind audit where a trigger fires or the author declares one, Mirror ex post, battery on the final SHA, push",
@@ -53,7 +53,8 @@
    "steps": [
     {
      "step": "First candidate cards (repurposing_bridge.py) from the qualified records, both paths, with explicit abstention where support is missing; no ranking score",
-     "status": "TODO"
+     "status": "DONE",
+     "evidence": "9 early cards (3 candidates, 6 abstentions) and 12 deep cards (5 candidates, 7 abstentions), each audited once and repaired; check_cards.py passes but does not check truth; second blind pass on the repairs OWED"
     }
    ]
   }
@@ -226,7 +227,14 @@
     "state": "RESUMED 03:2xZ after rate-limit stop"
    }
   },
-  "id_pairing_rule": "pair returned agent ids to launches by the description in each launch result, never by position; verify with ListAgents before the first message to a restarted actor"
+  "id_pairing_rule": "pair returned agent ids to launches by the description in each launch result, never by position; verify with ListAgents before the first message to a restarted actor",
+  "integrator": {
+   "BATCH_20261019_012": {
+    "agentId": "a0af7ad4e3003dd32",
+    "state": "RUNNING (started 03:3xZ)",
+    "scope": "layer 1 identity records clearing 31 ORPHAN_COMPLETE_READ; layer 2 only what each candidate header says survived; HELD: the multi-kinase attribution op until scientist-c's second repair lands"
+   }
+  }
  },
  "DECISIONS_TAKEN": [
   {
