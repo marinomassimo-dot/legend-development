@@ -1,0 +1,37 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261022-39762914-02",
+ "study_id": {
+  "pmid": "39762914",
+  "doi": "10.1186/s13023-024-03495-1"
+ },
+ "analysis_at": "2026-10-22T04:46:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d, task REPURP-R4D-D-20261022, resume of the partial receipt FTR-20261021-39762914-01 (owed: the 110-page protocol). Read in this pass from the text layer: the title and signature pages, the objectives and endpoints (section 2), the trial design (3), subject selection (4), randomisation and blinding (5.1), the dosing section with its tables (5.5 to 5.5.4), discontinuation (7), the statistics chapter (9), the oversight committees (12.5) and the sections on sirolimus safety in infants (1.3.7 to 1.3.10). Not read in this pass: the pharmaceutical properties and supply sections (5.2 to 5.4), concomitant medication and interactions (5.6), the assessment schedules (6), adverse event definitions and reporting (8) and the data, archiving and quality chapters (10, 11, 13 onward), so the receipt stays partial. Staged for the integrator, not appended.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID39762914_Driedger2025_PMC.xml",
+ "source_fingerprint": "fc7b8491bb125e0a2a550d5897a3e44a5630ec5f773491deca14be0aaf66c8e8",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID39762914.json"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "Protocol sections 1.3.7-1.3.10, 2, 3, 4, 5.1, 5.5, 7, 9 and 12.5 read; sections 5.2-5.4, 5.6, 6, 8, 10, 11, 13+ not read"
+ ],
+ "prior_receipt": "FTR-20261021-39762914-01",
+ "reread_reason": "inadequate_prior_coverage",
+ "event_at": "2026-10-22T04:46:00Z"
+}

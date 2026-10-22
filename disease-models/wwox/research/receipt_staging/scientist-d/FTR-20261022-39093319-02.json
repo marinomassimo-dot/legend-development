@@ -1,0 +1,37 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261022-39093319-02",
+ "study_id": {
+  "pmid": "39093319",
+  "doi": "10.1002/epi4.12975"
+ },
+ "analysis_at": "2026-10-22T04:39:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d, task REPURP-R4D-D-20261022, resume of the partial receipt FTR-20261021-39093319-01 (owed: both supplementary Word files). Route: the two docx files already on disk (SHA-256 identical to fresh PMC open-data downloads); the text of both read in full through docx_to_text.py (Supplementary Tables 1 to 4, 175 rows), and the embedded TIFF of Figure S1 rendered and opened as an image. Row counts quoted are my own counts of the printed rows and are labelled as such.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID39093319_Gras2024_PMC.xml",
+ "source_fingerprint": "b62b95bc5c4f7b9e6abe117aead014580261e62f44f79c96d235b79102c8a17a",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID39093319.json"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "Supplementary files 1 and 2 read in full; Figure S1 opened as an image"
+ ],
+ "prior_receipt": "FTR-20261021-39093319-01",
+ "reread_reason": "inadequate_prior_coverage",
+ "event_at": "2026-10-22T04:39:00Z"
+}

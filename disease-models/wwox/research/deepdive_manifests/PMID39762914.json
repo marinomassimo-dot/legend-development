@@ -3,7 +3,7 @@
  "pmid": "39762914",
  "doi": "10.1186/s13023-024-03495-1",
  "pmcid": "PMC11702139",
- "receipt": "FTR-20261021-39762914-01",
+ "receipt": "FTR-20261022-39762914-02",
  "context_policy": "QUESTION_DRIVEN",
  "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
  "landing": [
@@ -291,6 +291,134 @@
     "surface": "figure",
     "artifact": "files/figures/PMID39762914_r2/13023_2024_3495_Fig1_HTML.jpg",
     "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE (tuberous sclerosis, sirolimus, a trial protocol). The protocol text reads 'by rater blinded neuropsychologic testing measured by the cognitive scale on the Bayley' (the sentence defines the primary endpoint in the preceding words).",
+    "snippet": "by rater blinded neuropsychologic testing measured by the cognitive scale on the Bayley",
+    "anchor": "Section 2.1 Primary Objective and Primary Endpoint ",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39762914_r2/13023_2024_3495_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol states that no placebo will be administered, to reduce the laboratory examinations (the continuation of the sentence names the examination counts).",
+    "snippet": "No placebo will be administered to reduce",
+    "anchor": "Section 3.1 Overall Trial Design",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39762914_r2/13023_2024_3495_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol states that randomisation is not stratified by centre but by age (the age groups are given in the statistics chapter).",
+    "snippet": "the randomization will not be stratified by centre but by age",
+    "anchor": "Section 5.1.1 Randomization",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39762914_r2/13023_2024_3495_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol states that blinding of trial personnel and patients is not feasible because of the nature of the intervention.",
+    "snippet": "Blinding of trial personnel as well as patients is not feasible due to the nature of the interventions.",
+    "anchor": "Section 5.1.2 Blinding",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39762914_r2/13023_2024_3495_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol's dosing text gives 0.5 mg/m2/day for 0 to under 1 month of age rising to 0.9 mg/m2/day for 3 to under 4 months of age.",
+    "snippet": "0.5 mg/m2/day (0 - <1 months of age) to 0.9 mg/m2/day (3 - <4",
+    "anchor": "Section 5.5 Dosing",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39762914_r2/13023_2024_3495_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol states that to reduce the occurrence of adverse events it will target trough levels of 5 to 10 ng/ml.",
+    "snippet": "To reduce the occurrence of AEs\nwe will target trough levels of 5-10 ng/ml.",
+    "anchor": "Section 5.5 Dosing",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39762914_r2/13023_2024_3495_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A row of the protocol's dose-adjustment table (Table 5) reads 'double all subsequent doses; additional telephone contact' (the trough range of the row is in the cell before it).",
+    "snippet": "double all subsequent doses; additional",
+    "anchor": "Section 5.5.3, Table 5",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39762914_r2/13023_2024_3495_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol states that a data safety monitoring board meeting will take place after 5 patients in the treatment group have had their fourth visit.",
+    "snippet": "A DSMB-meeting will take place after 5 patients in the treatment group had their fourth visit",
+    "anchor": "Section 12.5.1 Data Safety Monitoring Board",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39762914_r2/13023_2024_3495_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol's analysis text reads 'Mann-Whitney-U-test (alpha=0.05) stratified by age groups (0-<2 and 2-<4 months of age)'.",
+    "snippet": "Mann-Whitney-U-test (alpha=0.05) stratified by age groups (0-<2 and 2-<4 months of age)",
+    "anchor": "Section 9.4 Primary Analysis",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39762914_r2/13023_2024_3495_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol states that values of the control group will be used in order to achieve a conservative estimate (for replacing missing values; the replacement is either randomly selected control values or a regression on control patients, per the preceding lines).",
+    "snippet": "Values of the control group will be used in order to achieve a conservative estimate.",
+    "anchor": "Section 9.4 Primary Analysis",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39762914_r2/13023_2024_3495_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol's analysis-set text reads 'followed treatment for at least 9 months and completed neuropsychologic testing (BSID-III) at 2 years'.",
+    "snippet": "followed\ntreatment for at least 9 months and completed neuropsychologic testing (BSID-III) at 2 years",
+    "anchor": "Section 9.1",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39762914_r2/13023_2024_3495_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol states that a statistical analysis plan will be written for the main study by the KKS (the coordinating centre for clinical trials of the sponsor hospital, as named elsewhere in the protocol).",
+    "snippet": "A statistical analysis plan will be written for the main study by the KKS.",
+    "anchor": "Section 9.3 General Considerations",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39762914_r2/13023_2024_3495_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol lists 'a TSC-associated condition for which mTOR treatment is clinically indicated (i.e. SEGA)' among its criteria (the exclusion list, per the anchor).",
+    "snippet": "Has a TSC-associated condition for which mTOR treatment is clinically indicated (i.e. SEGA).",
+    "anchor": "Section 4.4 Exclusion Criteria, item 1",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39762914_r2/13023_2024_3495_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol states that treatment will be terminated if the participant is unlikely to benefit from continuation (the evaluation by two subinvestigators at 6, 12 and 18 months is in the preceding sentence).",
+    "snippet": "participant is unlikely to benefit from continuation of IMP application, the treatment will be\n        terminated.",
+    "anchor": "Section 1.3.10 Individual risk-benefit evaluations",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39762914_r2/13023_2024_3495_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol states that no systematic data assess how the therapeutic range affects the long-term tolerability of sirolimus in neonates and young infants.",
+    "snippet": "There is no systematic data available, that assessed the impact of the therapeutic range to the long-term tolerability of sirolimus in neonates and young infants.",
+    "anchor": "Section 1.3.8",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39762914_r2/13023_2024_3495_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol's power calculation assumes 30 patients per group and a difference of 15 on the Bayley cognitive scale (its power figures under other assumptions are in Table 8, not claimed here).",
+    "snippet": "Assuming\nthat 30 patients per group can be randomized, a difference of 15 in the cognitive scale of BSID-III",
+    "anchor": "Section 9.9 Sample Size",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39762914_r2/13023_2024_3495_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
    }
   ],
   "source_fulltext_indexed": true,

@@ -211,8 +211,8 @@ Selected: 16 (tier 1 highest). All are NOT WWOX EVIDENCE.
 | 42446932 | McKee 2026 | Natural-history protocol for synaptic disorders (STXBP1, SYNGAP1) | owed: three EMF images of Figure S1 | CLOSED 2026-10-22: `FTR-20261022-42446932-02` staged (complete); images decoded from the embedded EMF+ bitmaps. |
 | 42481851 | Kim-McManus 2026 | Individualised antisense for SCN2A-related DEE | owed: the supplementary information | CLOSED 2026-10-22: `FTR-20261022-42481851-02` staged (complete); the supplement is a 3-page Reporting Summary. |
 | 42286026 | Xiong 2026 | KCNQ2 gabapentin | owed: supplementary docx | CLOSED 2026-10-22: `FTR-20261022-42286026-02` staged (complete). |
-| 35499850, 39093319, 41250984, 39439575 | (R4, scientist-d 2026-10-21) | partial readings | owed: supplementary files on disk, not read end to end | STILL OWED. |
-| 39625912, 39762914, 41999155 | (R4, scientist-d 2026-10-21) | partial readings | owed: the long protocol documents (56 pages, 110 pages, 470 thousand characters) | STILL OWED (read only in their synopsis, endpoint and statistics sections).
+| 35499850, 39093319, 41250984, 39439575 | (R4, scientist-d 2026-10-21) | partial readings | owed: supplementary files on disk, not read end to end | CLOSED 2026-10-22 (R4d, `FTR-20261022-<PMID>-02`, staged): 39093319 and 41250984 complete; 35499850 partial by design (supplementary figures `captions_only`); 39439575 figures read, eTable 1 `unavailable` (publisher refused, not open access in Europe PMC). |
+| 39625912, 39762914, 41999155 | (R4, scientist-d 2026-10-21) | partial readings | owed: the long protocol documents (56 pages, 110 pages, 470 thousand characters) | CLOSED in part 2026-10-22 (R4d, staged `-02`): 39625912 complete (protocol to page 47 plus scanned approvals as images); 41999155 complete apart from the numbered reference list; 39762914 stays partial (sections 5.2 to 5.4, 5.6, 6, 8, 10, 11 and 13 onward not read).
 
 **R4c addenda (scientist-d, 2026-10-22; three new precedents in `repurposing_r4c_scientist-d_20261022.md`; all NOT WWOX EVIDENCE):**
 

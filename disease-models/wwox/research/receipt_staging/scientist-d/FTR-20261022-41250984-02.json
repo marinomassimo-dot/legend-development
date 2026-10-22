@@ -1,0 +1,37 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261022-41250984-02",
+ "study_id": {
+  "pmid": "41250984",
+  "doi": "10.1002/epi4.70192"
+ },
+ "analysis_at": "2026-10-22T04:40:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d, task REPURP-R4D-D-20261022, resume of the partial receipt FTR-20261021-41250984-01 (owed: the supplementary PDF and workbook). Route: the files already on disk (SHA-256 identical to fresh PMC open-data downloads); the 12-page supplement read as text and pages 5 to 8 rendered and opened as images, Dataset S1 read through xlsx_to_text.py and its class and dominant-negative columns counted by my own parse. Counts are labelled as mine.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID41250984_Bidwell2026_PMC.xml",
+ "source_fingerprint": "b8698a0c37d48a4e1e33e613d575c15a248e2018295fb7ea23c9f8de5d0fa92e",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41250984.json"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "Supplemental Information and Dataset S1 read in full; Figures S3-S5 opened as images"
+ ],
+ "prior_receipt": "FTR-20261021-41250984-01",
+ "reread_reason": "inadequate_prior_coverage",
+ "event_at": "2026-10-22T04:40:00Z"
+}

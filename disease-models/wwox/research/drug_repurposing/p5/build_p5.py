@@ -78,7 +78,7 @@ EARLY = [
 PICK_DEEP = {
     ("P4-A-02", "risk"): ("p4_card.pharmacology", None),
     ("P4-C-01", "risk"): ("p4_card.evidence_for_and_against.against", "No tumour surveillance of any kind in a pro-apoptotic tumour suppressor delivered irreversibly; no measured ceiling."),
-    ("P4-D-01", "risk"): ("p4_card.evidence_for_and_against.against", "Adults: a grade 3 hepatic failure at the highest tested level"),
+    ("P4-D-01", "risk"): ("p4_card.evidence_for_and_against.against", "one grade 3 hepatic failure with encephalopathy at the highest tested level, a level the study then discontinued for potential serious liver injury although its maximum-tolerated-dose criteria were not met."),
     ("P4-D-01", "block1"): ("p4_card.status_reason", None),
     ("P4-A-01", "risk"): ("p4_card.pharmacology", None),
     ("P4-B-01", "risk"): ("p4_card.evidence_for_and_against.against", "The entire safety argument in the originating paper is historic use for other indications; no paediatric, CNS or pharmacokinetic datum."),
@@ -120,16 +120,10 @@ def deep_rows():
         if kind == "abstention":
             D["missing_datum"] = cell(inp, "abstention_card.missing_datum")
         if pid == "P4-D-01":
-            D["exposure_proportionality_SUPERSEDED"] = {
-                "value": ("Card field superseded by a later UNAUDITED recomputation, see 40665325 entry 21 (scientist-c, commit c9aff6a2, "
-                          "coordinator relay 2026-10-22): the later-day exposure measure is roughly proportional over the middle of the tested range "
-                          "(log-log slope about 0.95 to 0.98) and looks supralinear at the bottom only because of ONE patient; the first-day measure "
-                          "is above proportional (slope about 1.48) over the same middle range; across the top two cohorts a 2-fold step gives a 1.27-fold rise; "
-                          "N per cohort is 1, 1, 3, 3, 3, 8, 5 across seven cohorts; CVs 4.1 to 79 percent; one first-day cell is blank. "
-                          "'Dose-proportional' is therefore reproduced neither exactly nor in a single direction. The stored card says only "
-                          "'very few measurements at two levels' and neither proportionality nor its absence."),
-                "card_field": "input.p4_card.evidence_for_and_against.against (stored wording) - NOT the source of this cell",
-                "cut": False, "source": "coordinator relay, itself unaudited; no dose value is reproduced here"}
+            # The card now carries the audited reading of the cited pharmacokinetic table (card rewritten 2026-10-22,
+            # R4c; sourced to manifest 40665325 entries 6, 12 and 21), so this is an ordinary verbatim cell.
+            D["exposure_proportionality"] = cell(inp, "p4_card.evidence_for_and_against.against",
+                "The paper states plasma exposure was dose-proportional between its lowest and highest levels; its printed table, with N per cohort 1, 1, 3, 3, 3, 8, 5 across seven levels and printed CVs of 4.1 to 79 percent (only for cohorts of three or more), gives day 5 exposure (AUC) roughly proportional to dose from the second to the sixth cohort (log-log slope about 0.95 by the two end points, about 0.98 over the five points, a span that still begins at a cohort of one), supralinear only when the lowest cohort, a single patient, is included (slope about 1.38), and 1.27-fold higher at the top cohort than at the one below for a 2.0-fold dose ratio; the day 1 exposure cell of the top cohort is blank.")
         rows.append(row)
     return rows
 
@@ -183,9 +177,9 @@ def render(rows, title):
             if c["value"] == "UNKNOWN":
                 v = "**UNKNOWN**" + (f" ({c['note']})" if c.get("note") else "")
             out.append(f"| {name} | {v} | `{f}` |")
-        if "exposure_proportionality_SUPERSEDED" in r["dims"]:
-            c = r["dims"]["exposure_proportionality_SUPERSEDED"]
-            out.append(f"| Exposure proportionality (SUPERSEDED, not a card cell) | {esc(c['value'])} | {c['card_field']} |")
+        if "exposure_proportionality" in r["dims"]:
+            c = r["dims"]["exposure_proportionality"]
+            out.append(f"| Exposure versus dose in the cited adult study (class-level fact of a cited study, NOT WWOX EVIDENCE) | {esc(c['value'])}{CUT if c.get('cut') else ''} | `{c['card_field']}` |")
         for extra in ("missing_datum", "status_missing_datum"):
             if extra in r["dims"]:
                 c = r["dims"][extra]

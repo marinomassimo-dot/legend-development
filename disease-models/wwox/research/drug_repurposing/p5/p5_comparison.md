@@ -51,13 +51,7 @@ Time to access / time to benefit: UNKNOWN on all five (C01 carries two separate 
 and no registered WOREE interventional study on that registry on that date, with the census's own caution; and, in the null mouse only, the interval in which the discharge effect was recorded).
 Feasibility is the measurement each card names (verbatim in the table).
 
-**A51 exposure statement: card field superseded.** The D01 card's own pharmacokinetic sentence ("very few measurements at two levels … supports neither
-dose proportionality nor its absence") has been overtaken by scientist-c's later recomputation, entry 21 of the 40665325 reading (commit `c9aff6a2`), **UNAUDITED**: the
-later-day exposure measure is about proportional over the middle of the range and looks supralinear at the bottom only because of one patient; the first-day measure is above
-proportional over the same middle range; across the top two cohorts a two-fold step gives a 1.27-fold rise; N per cohort 1, 1, 3, 3, 3, 8, 5; CVs 4.1 to 79 percent; one first-day cell blank. So "dose-proportional"
-is reproduced neither exactly nor in one direction. The packet stored on `main` at `edc1299d`, which this table reads, still carries the older sentence (the coordinator's relay says the 1.27 wording was
-added earlier; it is not in the stored packet, so it lives on a branch or is not yet landed). Marked in the A51 block of the table as "card field superseded by a later unaudited
-recomputation, see 40665325 entry 21". The card needs a one-line packet update, to be made by its author (gap G5 below).
+**A51 exposure statement: repaired in the card (2026-10-22, R4c; this paragraph replaces the earlier "superseded" note).** The D01 card previously carried "very few measurements at two levels ... supports neither dose proportionality nor its absence". The card now carries the **audited** recomputation of the cited adult phase 1 table (manifest `40665325` entries 2, 3, 5, 6, 12 and 21; recomputation and blind audit in `page_adjudications/locator_audit_R3_repairs_R3b_20261022.md`): N per cohort 1, 1, 3, 3, 3, 8, 5 across seven levels; printed CVs 4.1 to 79 percent, only for cohorts of three or more; day 5 exposure roughly proportional from the second to the sixth cohort (slope about 0.95 by the end points, 0.98 over five points, a span that still begins at a cohort of one patient); supralinear only when the lowest, single-patient cohort is included; 1.27-fold at the top cohort for a 2.0-fold dose ratio; the top cohort's day 1 cell blank. The table below now reads this as an ordinary verbatim card cell ("Exposure versus dose in the cited adult study", a class-level fact of a cited study, NOT WWOX EVIDENCE) and the A51 risk cell reads the card's own hepatic-failure sentence. **The verdict of this comparison does not change:** no pair statement, no non-dominated set and no origin count in this file used the exposure sentence (the A51 pairs differ on endpoint and class, not on exposure), and the risk cell still carries the same fact (a grade 3 hepatic failure at the highest tested level). The earlier note's "UNAUDITED" label no longer applies to the exposure wording; every other reader's derivation in this file keeps its own label.
 
 ### 1.1 Evidence counted by origin (reader's derivation, UNAUDITED)
 
@@ -159,7 +153,7 @@ Pre-existing choices of "the cheapest next observation" (known-roads note § 6, 
 
 | # | Card | Looks stale because |
 |---|---|---|
-| S1 | cards/D01_a51 | its pharmacokinetic sentence is overtaken by the later recomputation (see § 1); the stored packet does not even hold the earlier 1.27 repair. A card frozen at one moment cannot see a repair that lands after it |
+| S1 | cards/D01_a51 | **CLOSED 2026-10-22 (R4c):** the packet and card were rewritten from the audited recomputation; this table was rebuilt from them. The general point stands: a card frozen at one moment cannot see a repair that lands after it |
 | S2 | cards_early/EB-VGB-01 | its prose says two reports were "reported ineffective" (`A-VGB-5`, `A-VGB-6`) while both assertions are encoded UNKNOWN, although `NO_CHANGE` has existed since the bridge change `b96e4cd9` and `A-VGB-10` uses it |
 | S3 | cards_early/README.md | still lists as open "no sign for no change" and "translation hard-coded UNKNOWN", which the deep set records as closed by `b96e4cd9`; its translation blocks in the cards still print plain UNKNOWN |
 | S4 | cards/D02_wnt_tankyrase | `novelty_for_woree` says "NON_TROVATO … as a test" while its own `not_known` records a GSK3 inhibitor given to Wwox-null mice with a seizure endpoint; the abstention sits on a measured relevant negative that has no row |
@@ -174,7 +168,7 @@ Pre-existing choices of "the cheapest next observation" (known-roads note § 6, 
 * **G2 BLOCK-1.** No typed status; it is a free-text clause in one card. "UNKNOWN is not a pass" has no place to live.
 * **G3 comparability.** No typed endpoint family or genotype class, so "incomparable" cannot be stated by a tool; this gate was applied by hand.
 * **G4 one disease assertion per packet (the old open G-2).** It prevented tabulating C01's five endpoint families and D01's two without going back to the prose.
-* **G5 staleness.** A card carries no pointer that says a source reading was later repaired (`superseded_by`), so S1 is invisible to any check. The D01 packet needs a one-line update by its author.
+* **G5 staleness.** A card carries no pointer that says a source reading was later repaired (`superseded_by`), so a stale field is invisible to any check; the D01 instance (S1) was closed by hand on 2026-10-22, the missing pointer remains a bridge gap.
 * **G6 two card layouts.** Deep cards keep P4 fields under `p4_card`, early cards under `p4_roadmap_fields`, with different key names (`next_measurement`/`next_measure`, `state_of_known_roads`/`known_roads_state`); a tabulator needs a mapping, a shared schema would not.
 * **G7 null encoding.** `NO_CHANGE` is used by some assertions and not by others for the same kind of report (S2).
 * **G8 lookup tool.** `interaction_coverage` is `UNKNOWN` at top level beside a per-batch `INCOMPLETE`; a drug listed under a neighbour gene is not flagged in the packet as "not on the seed".

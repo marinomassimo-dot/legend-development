@@ -3,7 +3,7 @@
  "pmid": "39439575",
  "doi": "10.1212/CPJ.0000000000200391",
  "pmcid": "PMC11492899",
- "receipt": "FTR-20261021-39439575-01",
+ "receipt": "FTR-20261022-39439575-02",
  "context_policy": "QUESTION_DRIVEN",
  "context_policy_note": "Held before reading: the R4b task's questions (a confirmed repurposed drug; a missense precedent; an external or natural-history comparator that held up; a pre-dose drift measurement) and the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
  "landing": [
@@ -116,6 +116,81 @@
     "derived": false,
     "result_sha256": "b300c4ee1fe1c40b105e30a833740604421e87c0856c0bdb86c2d004163ec957"
    }
+  },
+  {
+   "path": "files/figures/PMID39439575/CPJ-2024-100093f1.jpg",
+   "sha256": "cd0e48be2fcfca7140e837d34ea5e382684d503b2032017d1bbdf4a397f38657",
+   "kind": "figure",
+   "note": "Figure 1 (stacked bars: mastery of six communication milestones by age group), image from the PMC image CDN, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c65e/11492899/d7def2dffead/CPJ-2024-100093f1.jpg",
+    "http_method": "GET",
+    "tier": "pmc_cdn_blob",
+    "user_agent_policy": "browser_like",
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "result_sha256": "cd0e48be2fcfca7140e837d34ea5e382684d503b2032017d1bbdf4a397f38657"
+   }
+  },
+  {
+   "path": "files/figures/PMID39439575/CPJ-2024-100093f2.jpg",
+   "sha256": "9b08decbcc7b78ee3bdc0e4a17a8196f19ae7a9ba595f5ba08b6e50503e576e7",
+   "kind": "figure",
+   "note": "Figure 2 (scatter plots of ten communication scores by age), image from the PMC image CDN, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c65e/11492899/d7def2dffead/CPJ-2024-100093f2.jpg",
+    "http_method": "GET",
+    "tier": "pmc_cdn_blob",
+    "user_agent_policy": "browser_like",
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "result_sha256": "9b08decbcc7b78ee3bdc0e4a17a8196f19ae7a9ba595f5ba08b6e50503e576e7"
+   }
+  },
+  {
+   "path": "files/figures/PMID39439575/CPJ-2024-100093f3.jpg",
+   "sha256": "7d22b8b0cf772aace7d24812b16b58a9cdab41951164dbc0698b3ce2b27dee56",
+   "kind": "figure",
+   "note": "Figure 3 (box plots of scores by communication function markers, panels A to D), image from the PMC image CDN, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c65e/11492899/d7def2dffead/CPJ-2024-100093f3.jpg",
+    "http_method": "GET",
+    "tier": "pmc_cdn_blob",
+    "user_agent_policy": "browser_like",
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "result_sha256": "7d22b8b0cf772aace7d24812b16b58a9cdab41951164dbc0698b3ce2b27dee56"
+   }
+  },
+  {
+   "path": "files/figures/PMID39439575/CPJ-2024-100093f4.jpg",
+   "sha256": "bdb01e2c8a243ae353c023e0ec1fe91f8697aa64eaaa033aec02cb006b03edb1",
+   "kind": "figure",
+   "note": "Figure 4 (box plots by infantile spasm history and number of current antiseizure medications), image from the PMC image CDN, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c65e/11492899/d7def2dffead/CPJ-2024-100093f4.jpg",
+    "http_method": "GET",
+    "tier": "pmc_cdn_blob",
+    "user_agent_policy": "browser_like",
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "result_sha256": "bdb01e2c8a243ae353c023e0ec1fe91f8697aa64eaaa033aec02cb006b03edb1"
+   }
+  },
+  {
+   "path": "files/figures/PMID39439575/CPJ-2024-100093f5.jpg",
+   "sha256": "27fa29465391473b52cac5207038499a8550412b2c15b3f0ecb63f96ba927353",
+   "kind": "figure",
+   "note": "Figure 5 (Spearman and ICC matrix, N = 65), image from the PMC image CDN, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c65e/11492899/d7def2dffead/CPJ-2024-100093f5.jpg",
+    "http_method": "GET",
+    "tier": "pmc_cdn_blob",
+    "user_agent_policy": "browser_like",
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "result_sha256": "27fa29465391473b52cac5207038499a8550412b2c15b3f0ecb63f96ba927353"
+   }
   }
  ],
  "verbatim_locators": {
@@ -224,6 +299,86 @@
     "surface": "body",
     "artifact": "files/fulltext/PMID39439575_Berg2024comm_PMC_page.html",
     "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE (SCN2A-related disorder, parent-reported communication instruments). Figure 1 shows, for six communication milestones, the shares of children in four age groups reported as not having, learning or having mastered each; the bar for 'Tells a story (5 years)' is almost entirely 'No' in every age group.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 panel Tells a story (5 years): stacked bars No / Learning / Mastered by age 1, 2-4, 5-9, 10+ years; 'No' fills nearly the whole bar in all four groups, with only a small 'Mastered' segment in the 5-9 and 10+ bars.",
+    "anchor": "Figure 1, bottom right panel",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39439575/CPJ-2024-100093f1.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "In Figure 1 the one-year-old group shows 100 percent 'No' for 'Understands no (12 months)', 'Follows simple instructions (18 months)', 'Says two-word sentences (24 months)', 'Points to things in a book (24 months)' and 'Tells a story (5 years)', and a mixed bar only for 'Responds to sounds (4 months)'.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1: in the age 1 column the bars for Understands no, Follows simple instructions, Says two-word sentences, Points to things in a book and Tells a story are entirely 'No'; the Responds to sounds (4 months) age 1 bar is mostly Learning and No.",
+    "anchor": "Figure 1, age 1 column of all six panels",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39439575/CPJ-2024-100093f1.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "In Figure 2 the Vineland composite and communication standardized scores sit on a horizontal line at 20 for the oldest participants (about 20 to 29 years), and in the receptive and expressive standardized-score panels most points sit at 1 beyond the youngest ages (the youngest children have points at 4, 5, 8 or 10), which is the floor the main text reports.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2: panels Vineland composite standardized score and Communication-standardized score show points at 20 for ages from about 20 to 29 years; panels Receptive and Expressive standardized score show most points at 1 at all ages.",
+    "anchor": "Figure 2, top four panels",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39439575/CPJ-2024-100093f2.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "In Figure 2 the growth scale value panels and the raw-score panels (ABAS, Communication Matrix, CSBS) spread over a wide score range, with no horizontal line of points at one value comparable to the standardized scores (a few Communication Matrix points sit at 0, and points above 20 years are sparse).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2: Receptive GSV, Expressive GSV, ABAS communication raw score, Communication Matrix total, Communication Matrix functions and CSBS total score panels scatter widely across the score axis for ages 1 to 29 years.",
+    "anchor": "Figure 2, lower six panels",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39439575/CPJ-2024-100093f2.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 3 panel A prints p values for effective versus non-effective communicators of 0.0004 (Adaptive Behavior Composite) and 0.001 (Communication) for the Vineland standardized scores, and p less than 0.0001 for the Vineland V-scores, with the Communication and V-score boxes for noncommunicators lying near the floor; the noncommunicator Adaptive Behavior Composite box lies well above the floor of 20.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3 panel A Effective vs noneffective communicator: p = 0.0004 and p = 0.001 (ABC, Communication); p < 0.0001 and p < 0.0001 (Expressive, Receptive SS V score); p = 0.0005, 0.01, 0.005 (GSV, GSV, ABAS); p = 0.002, 0.002, 0.001 (Matrix, Matrix functions, CSBS).",
+    "anchor": "Figure 3 panel A",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39439575/CPJ-2024-100093f3.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 3 panel B (primary mode of communication) prints p = 0.08 (Adaptive Behavior Composite) and p = 0.11 (Communication) for the Vineland standardized scores, against p less than 0.0001 for the growth scale values and ABAS and CSBS-type scores.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3 panel B Primary mode of communication: p = 0.08 and p = 0.11 for ABC and Communication SS; p = 0.30 and p = 0.003 for Expressive and Receptive V score; p < 0.0001 for the GSV, ABAS, Matrix and CSBS panels.",
+    "anchor": "Figure 3 panel B",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39439575/CPJ-2024-100093f3.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 4 panel A (history of infantile spasms among participants with epilepsy) prints p = 0.66 and p = 0.82 for the Vineland ABC and Communication standardized scores and p = 0.97 and 0.74 for the V-scores, while the growth scale values and the ABAS, Matrix and CSBS scores print p values from 0.03 down to 0.0008.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4 panel A History of infantile spasms: ABC p = 0.66, Communication p = 0.82; Expressive p = 0.97, Receptive p = 0.74; GSV p = 0.03 and 0.002, ABAS p = 0.01; Matrix total p = 0.0008, Matrix functions p = 0.001, CSBS p = 0.003.",
+    "anchor": "Figure 4 panel A",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39439575/CPJ-2024-100093f4.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 4 panel B (number of current antiseizure medications, 0 to 4) prints p = 0.17 and p = 0.05 for the ABC and Communication standardized scores and p = 0.15 and p = 0.02 for the Expressive and Receptive V-scores; the main text's p = 0.18 for the weakest standardized-score association is not in the image (the closest printed values are 0.17 and 0.15), so the image and the text were compared by me, not by the figure.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4 panel B Number of current antiseizure medications: ABC p = 0.17, Communication p = 0.05; Expressive p = 0.15, Receptive p = 0.02; GSV p = 0.0008 and 0.004, ABAS p = 0.005; Matrix p = 0.0002, 0.0006 and CSBS p = 0.0002.",
+    "anchor": "Figure 4 panel B",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39439575/CPJ-2024-100093f4.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 5 gives, for 65 participants, the Spearman correlation of age with the Vineland standardized scores as negative (Adaptive Behavior Composite -0.65, Communication -0.46, Receptive -0.15, Expressive -0.40) and with the receptive growth scale value, ABAS and Matrix total as positive (0.36, 0.36, 0.27), with the expressive growth scale value at 0.07.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Spearman correlation coefficients (N = 65) Age row: ABC SS -0.65, Communication SS -0.46, Receptive SS -0.15, Expressive SS -0.40, Receptive GSV 0.36, Expressive GSV 0.07, ABAS communication 0.36, Matrix total 0.27, Matrix functions 0.24, CSBS total 0.21.",
+    "anchor": "Figure 5, Age row",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39439575/CPJ-2024-100093f5.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 5 prints test-retest ICC values between 0.92 and 0.99 on its diagonal (the lowest is Matrix functions 0.92, the highest CSBS total 0.99), the receptive standardized score at 0.94 and the Vineland composite at 0.98.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5 diagonal ICC cells: ABC 0.98, Comm SS 0.96, Receptive SS 0.94, Expressive SS 0.97, Receptive GSV 0.97, Expressive GSV 0.97, ABAS communication 0.97, Matrix total 0.98, Matrix functions 0.92, CSBS total 0.99.",
+    "anchor": "Figure 5, black diagonal cells",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39439575/CPJ-2024-100093f5.jpg",
+    "panel_text_relation": "panel_only"
    }
   ],
   "source_fulltext_indexed": true,
