@@ -63,7 +63,7 @@
   "performed": true,
   "query": "paper_packet.py packet --pmid 39771507; registry_records.py get --pmid 39771507 --hops 0; fulltext_receipts.py status --pmid 39771507",
   "hits": 0,
-  "finding": "No receipt, registry record or peer claim before this reading."
+  "finding": "No receipt, registry record or peer claim before this reading. ORIGIN: same trial as PMID 33405376 (PBTC-042, NCT02255461); count the two as one origin downstream."
  },
  "retraction_check": {
   "checked": true,

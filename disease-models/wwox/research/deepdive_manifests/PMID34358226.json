@@ -109,12 +109,26 @@
   "waived": false,
   "entries": [
    {
-    "proposition": "After pilocarpine status epilepticus, inhibitory GSK3 beta phosphorylation and beta-catenin rose slightly by day 3, peaked at day 5 and returned to control by day 7.",
-    "snippet": "there was a slight induction of pGSK3βS9 by day 3, reached a maximum by 5 days and then declined to control levels by 7 days post-SE",
+    "proposition": "After pilocarpine status epilepticus, inhibitory GSK3 beta phosphorylation (S9) rose slightly by day 3, peaked at day 5 and returned to control by day 7; beta-catenin is said to mirror it with a maximal increase at 5 days and a decline to control levels at 7 days (a slight rise at day 3 is stated for the phosphorylation only, not for beta-catenin).",
+    "snippet": "there was a slight induction of pGSK3β S9 by day 3, reached a maximum by 5 days and then declined to control levels by 7 days post-SE. Consistently, Fig 1B shows that β-catenin expression mirrored GSK3β phosphorylation, with a maximal increase at 5 days and a decline to control levels at 7 days.",
     "anchor": "Results / Wnt signaling is activated during the epileptogenic period",
     "surface": "body",
     "artifact": "files/fulltext/PMID34358226_Warburg2021_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34358226.json",
+     "entry": 0,
+     "what_changed": "Auditor OVERSHOOT: 'slight at day 3' is stated for pGSK3 beta only; quote widened to the adjacent beta-catenin sentence and the proposition restated.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3c_20261022.md",
+      "triple": 0,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "The authors report that a porcupine inhibitor and a tankyrase inhibitor failed to affect basal or induced hippocampal Wnt signalling and attribute this to a likely lack of blood-brain barrier penetration.",

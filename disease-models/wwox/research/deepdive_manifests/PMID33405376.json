@@ -63,7 +63,7 @@
   "performed": true,
   "query": "paper_packet.py packet --pmid 33405376; registry_records.py get --pmid 33405376 --hops 0; fulltext_receipts.py status --pmid 33405376",
   "hits": 0,
-  "finding": "No receipt, registry record or peer claim before this reading."
+  "finding": "No receipt, registry record or peer claim before this reading. ORIGIN: same trial as PMID 39771507 (PBTC-042, NCT02255461); count the two as one origin downstream."
  },
  "retraction_check": {
   "checked": true,
@@ -109,12 +109,26 @@
   "waived": false,
   "entries": [
    {
-    "proposition": "Children under 4 years were excluded and no pharmacokinetic data exist for them.",
+    "proposition": "The authors state that children under 4 years were excluded from their trial and that no pharmacokinetic data is available (their trial's scope; not a statement about the wider literature).",
     "snippet": "Unfortunately, children <4 years of age were excluded from this study and no pharmacokinetic data is available.",
     "anchor": "Discussion, second paragraph",
     "surface": "body",
     "artifact": "files/fulltext/PMID33405376_Hanson2021_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33405376.json",
+     "entry": 0,
+     "what_changed": "Auditor UNVERIFIABLE: restated as the authors' own scope statement for this trial, not as a literature negative.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNVERIFIABLE"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3c_20261022.md",
+      "triple": 0,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "Eligible subjects were aged at least 4 and at most 21 years.",
@@ -165,20 +179,50 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The pharmacokinetic table gives a repeated-dose mean AUC to the last time point of 2219 (SD 1086) h.ng/mL in the 75 mg per square metre group.",
-    "snippet": "2219 ± 1086 2269 (521–4253) 30.5 ± 23.1",
+    "proposition": "The pharmacokinetic table gives, for Day 21 in N = 17 patients at 75 mg per square metre, a mean AUC to the last time point of 2219 (SD 1086) h.ng/mL.",
+    "snippet": "Day 21 (N=17) ‡ 139.9 ± 67.1 137 (31.8–286) 4.9 ± 2.5 4.0 (2.0–8.0) 2219 ± 1086 2269 (521–4253) 30.5 ± 23.1",
     "anchor": "Pharmacokinetic table, 75 mg/m2 Day 21 row",
     "surface": "table",
     "artifact": "files/fulltext/PMID33405376_Hanson2021_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "numeral_ok": [],
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33405376.json",
+     "entry": 7,
+     "what_changed": "Auditor request (coordinator item 4): the dose-group N (17 at 75, 2 at 95 mg per square metre) is now anchored inside the quote and stated in the proposition; row identity still rests on table row order.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "SUPPORTED (span widened at coordinator request)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3c_20261022.md",
+      "triple": 7,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
-    "proposition": "The pharmacokinetic table gives a repeated-dose mean AUC to the last time point of 2294 (SD 828) h.ng/mL in the 95 mg per square metre group.",
-    "snippet": "2294 ± 828 2193 (1520–3168) 28.1 ± 10.3",
+    "proposition": "The pharmacokinetic table gives, for Day 21 in N = 2 patients at 95 mg per square metre, a mean AUC to the last time point of 2294 (SD 828) h.ng/mL; with N = 2 the SD and any dose-proportionality comparison rest on two patients.",
+    "snippet": "Day 21 (N=2) ‖ 190 ± 29.1 183 (165–222) 6.0 ± 3.5 8.0 (2.0–8.0) 2294 ± 828 2193 (1520–3168) 28.1 ± 10.3",
     "anchor": "Pharmacokinetic table, 95 mg/m2 Day 21 row",
     "surface": "table",
     "artifact": "files/fulltext/PMID33405376_Hanson2021_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "numeral_ok": [],
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33405376.json",
+     "entry": 8,
+     "what_changed": "Auditor request (coordinator item 4): the dose-group N (17 at 75, 2 at 95 mg per square metre) is now anchored inside the quote and stated in the proposition; row identity still rests on table row order.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "SUPPORTED (span widened at coordinator request)"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3c_20261022.md",
+      "triple": 8,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "The Stratum II adverse event table lists seizure with overall count 3(3), among 13 patients and 28 courses.",
