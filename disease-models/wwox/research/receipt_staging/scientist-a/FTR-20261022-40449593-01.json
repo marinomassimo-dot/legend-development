@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261022-40449593-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "40449593",
+  "doi": "10.1016/j.jbc.2025.110315"
+ },
+ "event_at": "2026-10-22T04:50:28Z",
+ "analysis_at": "2026-10-22T04:48:28Z",
+ "analysis_time_precision": "second",
+ "workflow": "Primary read by scientist-a under REPURP-10H-R1C-A-20261022: PMC efetch XML and PDF acquired with pmc_bucket_fetch.py and the Europe PMC supplementaryFiles endpoint, whole text read section by section, every figure opened as an image, the supplement read, locators captured while the document was open and verified by deepdive_manifest.py. Class-level substitute, NOT WWOX EVIDENCE.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID40449593_GALC2025_PMC_r2.xml",
+ "source_fingerprint": "18a739714272de6668a6c5e3b06334ec934d29678a54b018aecf382cf344a9d1",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID40449593.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-a_r1d_20261022.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "context QUESTION_DRIVEN (protein quantity versus function across a variant panel); thirteen figures read from native rasters, Figures 1 to 4 as a contact sheet; Tables 3 and 4 read as text (wide tables, not cell by cell); the supplementary docx read as text; no chaperone was applied in this paper."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
