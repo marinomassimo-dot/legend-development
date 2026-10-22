@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261019_013
+last_batch_commit_id: BATCH_20261019_014
 last_batch_commit_date: 2026-10-22
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 0
+commit_candidates_propagated: 2
 target_wm_version: WM_v7.27
-trigger: MANUAL (ACTOR_ID integrator, assigned by the Orchestrator). Registry repair, no disease-model change and no candidate propagated: 11 locator-count disagreements re-derived from their manifests (PAPER 470-474, 478, 520, 521, 527-529), the evidence depth of PAPER 408-409 and PAPER 470-474 brought to their standing receipts, and PAPER 545-548 with LIT-0817-0820 as identity records for four receipts that had none (ORPHAN_COMPLETE_READ 3 before, 0 after). WM_v7.27 preserved.
+trigger: MANUAL (ACTOR_ID integrator, assigned by the Orchestrator). Registry identity and depth, no disease-model change: two registry-only candidates (CC-20261022-SCIENTISTD-R4C-01, CC-20261022-SCIENTISTD-R4D-01) propagated with no claim; PAPER 549-556 and LIT-0821-0828 as identity records for eight receipts that had none (ORPHAN_COMPLETE_READ 5 before, 0 after); the depth, receipt, coverage and locator count of twenty-seven records brought to their standing -02 receipts; every locator count re-derived from its manifest. WM_v7.27 preserved.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,7 +126,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261022_BATCH_20261019_013
+last_lint_id: LINT_20261022_BATCH_20261019_014
 last_lint_date: 2026-10-22
 last_lint_result: WARN
 ```
@@ -213,8 +213,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 58
-growth_anchor_head: 0bfc0328cf841659f54ac2fc694581b7bdd05d7b30a67aabed9b56946023611e
+growth_anchor_events: 59
+growth_anchor_head: ba41084652f852fe3a93ffb79345c3a44000ec18b96bc15fd8ed9ed1cfa6e155
 ```
 
 ```bash
