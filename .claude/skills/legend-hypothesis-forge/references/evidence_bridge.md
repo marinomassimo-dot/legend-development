@@ -87,3 +87,8 @@ a measured null. A disease assertion with NO_CHANGE is UNRESOLVED. An optional `
 UNKNOWN, unknown keys are refused. If a packet carries `p4_roadmap_fields`, the two rows
 `indication_and_transfer` and `verification_scope` must be nonempty strings (UNKNOWN allowed); the
 block is validated, never rewritten. Packets without these inputs build exactly as before.
+
+Several endpoints: a packet may give `disease_assertions` (a list, possibly empty) instead of
+`disease_assertion` (never both). Each drug assertion is compared with the disease assertion on its
+own target and endpoint; with none, it is UNRESOLVED ("no disease assertion on this target and
+endpoint"). The singular spelling builds exactly as before.

@@ -240,6 +240,37 @@ class BridgeTests(unittest.TestCase):
                 build_card(broken)
         self.assertNotIn("p4_roadmap_fields", build_card(packet())["input"])
 
+    def test_several_disease_endpoints_each_compare_on_their_own(self):
+        data = packet()
+        first = data.pop("disease_assertion")
+        second = copy.deepcopy(first)
+        second.update(id="disease-2", endpoint="other endpoint", direction="DECREASE")
+        data["disease_assertions"] = [first, second]
+        other = copy.deepcopy(data["drug_assertions"][0])
+        other.update(id="drug-2", endpoint="other endpoint", direction="DECREASE")
+        third = copy.deepcopy(other)
+        third.update(id="drug-3", endpoint="third endpoint")
+        data["drug_assertions"] += [other, third]
+        by_id = {c["assertion_id"]: c for c in build_card(data)["comparisons"]}
+        self.assertEqual(by_id["drug-1"]["status"], "OPPOSES_DISEASE_CHANGE")
+        self.assertEqual(by_id["drug-2"]["status"], "REINFORCES_DISEASE_CHANGE")
+        self.assertEqual(by_id["drug-3"]["status"], "UNRESOLVED")
+        self.assertIn("no disease assertion", by_id["drug-3"]["reasons"][0])
+        self.assertEqual(build_card(data)["directional_summary"], "CONFLICTING")
+        # Singular and plural spellings of one endpoint give the same comparison.
+        single = packet()
+        plural = packet()
+        plural["disease_assertions"] = [plural.pop("disease_assertion")]
+        self.assertEqual(build_card(single)["comparisons"], build_card(plural)["comparisons"])
+        # No disease side at all is legal and never resolves; both spellings together are refused.
+        plural["disease_assertions"] = []
+        self.assertEqual(build_card(plural)["directional_summary"], "UNRESOLVED")
+        both = packet()
+        both["disease_assertions"] = []
+        for bad in (both, {**packet(), "disease_assertions": "x"}):
+            with self.assertRaises(ValueError):
+                build_card(bad)
+
     def test_kg_separates_pathways_and_declares_incomplete_coverage(self):
         raw = {"items": [
             {"object": "HGNC:TEST", "object_label": "GENE", "predicate": "related",
