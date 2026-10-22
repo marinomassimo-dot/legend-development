@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261022-33547201-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "33547201",
+  "doi": "10.1158/1078-0432.CCR-20-4078"
+ },
+ "event_at": "2026-10-22T00:00:00Z",
+ "analysis_at": "2026-10-22T00:00:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-c, task REPURP-10H-R3c-C-20261022, PRIMARY_EVIDENCE_READ, SOURCE_FIRST (written question: is a CDK-class inhibitor concentration measured in the brain or CSF of children); results, tables and discussion read, figures and supplement unavailable; prepared as JSON for the integrator and not appended by this actor.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID33547201_Hanson2021b_PMC_r2.xml",
+ "source_fingerprint": "b671f7ca5b76c78d9f59dd9c527ea252a8d926fe92b1e66553a77ace3baab83b",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "unavailable",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "unavailable"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID33547201.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-c_20261022c.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "results, tables and discussion read in PMC XML; methods skimmed only for design; figures and supplement unavailable; see manifest"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

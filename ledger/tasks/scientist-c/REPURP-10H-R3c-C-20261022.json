@@ -30,7 +30,7 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "CLAIMED",
+ "CURRENT_STATE": "COMPLETED",
  "assigned_on": "2026-10-22",
  "TASK_ACK": {
   "actor": "scientist-c",
@@ -45,6 +45,41 @@
   "mode": "PRIMARY_EVIDENCE_READ",
   "context_policy": "SOURCE_FIRST"
  },
- "DEFAULTS_TAKEN": [],
- "STOP_LOG": []
+ "DEFAULTS_TAKEN": [
+  "manifests SOURCE_FIRST",
+  "figures and supplements from the Europe PMC supplementaryFiles archive; two papers not open access, marked unavailable",
+  "quotes widened to the adjacent sentence, never stitched; a script refused numerals absent from the quote; derived numbers labelled my recomputation",
+  "legends tagged surface body (no caption surface in the validator)",
+  "table rows anchored by a contiguous span of the XML table text; numeral_ok used for unit digits and row identities carried by position, flagged for audit",
+  "held candidate CC-20261021-SCIENTIST-C-R3-A51-ATTRIBUTION-01 not edited (brief said do not touch); superseded dose wording reported instead",
+  "bot-challenged and closed-access papers parked, not circumvented",
+  "second-audit repairs landed separately on task/R3-repair2-scientist-c before further readings; no D- row minted (none found by text search)",
+  "stopped at eleven of twelve readings for context cost"
+ ],
+ "STOP_LOG": [],
+ "RESULT": {
+  "readings": 11,
+  "independent_cohorts": 10,
+  "manifests_pass": 11,
+  "receipts_staged": 11,
+  "parked": [
+   "38070690",
+   "41364203",
+   "40480021",
+   "41875977",
+   "25857536",
+   "28609096",
+   "41934895",
+   "28153522",
+   "37551745",
+   "29603837",
+   "27852007",
+   "36717229"
+  ],
+  "note": "disease-models/wwox/research/repurposing_10h_scientist-c_20261022c.md",
+  "self_eval": "disease-models/wwox/research/session_evaluations/self_eval_scientist-c_R3c_20261022.md",
+  "repair_landing": "task/R3-repair2-scientist-c (c9aff6a2)",
+  "blind_audit": "OWED",
+  "commit_candidate": "none"
+ }
 }
