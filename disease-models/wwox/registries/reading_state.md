@@ -20,7 +20,7 @@ asserted by no receipt. `prior_receipt` means the reading this one builds on, an
 sharing a parent are the normal case under parallel branches.
 
 
-**591 paper(s)** with at least one receipt · **806 receipt(s)** · **5 paper(s) read in parallel** by two receipts sharing a parent.
+**594 paper(s)** with at least one receipt · **811 receipt(s)** · **5 paper(s) read in parallel** by two receipts sharing a parent.
 
 ## Papers read in parallel
 
@@ -505,6 +505,8 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 41324728 | `complete_fulltext_read` | read | read | read | read | read | not_present | read | read | not_present | read | 1 |
 | PMID 41345172 | `partial_fulltext_read` | read | read | read | read | captions_only | read | read | read | captions_only | read | 3 |
 | PMID 41346378 | `partial_fulltext_read` | read | read | read | read | read | read | read | read | captions_only | read | 1 |
+| PMID 41373471 | `complete_fulltext_read` | read | read | read | read | read | not_present | read | not_present | read | — | 1 |
+| PMID 41378214 | `complete_fulltext_read` | read | read | read | read | read | read | read | not_present | read | — | 1 |
 | PMID 41378749 | `complete_fulltext_read` | read | read | read | read | read | read | read | read | read | read | 1 |
 | PMID 41390778 | `partial_fulltext_read` | read | read | read | read | unavailable | unavailable | read | read | unavailable | unavailable | 1 |
 | PMID 41393164 | `complete_fulltext_read` | read | read | read | read | not_present | read | read | read | not_present | read | 1 |
@@ -604,12 +606,13 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 42538560 | `partial_fulltext_read` | read | read | not_read | read | captions_only | not_present | read | read | not_read | not_read | 1 |
 | PMID 42558002 | `complete_fulltext_read` | read | read | read | read | not_present | read | read | read | not_present | read | 1 |
 | PMID 42563882 | `complete_fulltext_read` | not_present | read | not_present | read | read | not_present | read | not_present | not_present | read | 1 |
-| PMID 42587736 | `partial_fulltext_read` | read | read | read | read | read | read | read | not_present | not_present | — | 2 |
+| PMID 42569303 | `complete_fulltext_read` | read | read | read | read | read | not_present | read | not_present | read | — | 1 |
+| PMID 42587736 | `complete_fulltext_read` | read | read | read | read | read | read | read | not_present | read | — | 3 |
 | PMID 42589397 | `partial_fulltext_read` | read | read | read | read | read | not_present | read | read | read | unavailable | 5 |
 | PMID 42601505 | `partial_fulltext_read` | read | read | read | read | read | not_read | read | not_present | not_read | read | 1 |
 | PMID 42638834 | `partial_fulltext_read` | read | read | read | read | read | read | read | read | not_present | not_read | 1 |
 | PMID 42643745 | `partial_fulltext_read` | read | read | read | read | captions_only | read | read | read | not_read | not_read | 1 |
-| PMID 42650175 | `partial_fulltext_read` | read | read | read | read | read | not_present | read | read | captions_only | — | 2 |
+| PMID 42650175 | `complete_fulltext_read` | read | read | read | read | read | not_present | read | read | read | — | 3 |
 | PMID 42652171 | `complete_fulltext_read` | read | read | not_present | not_present | read | read | read | read | not_present | read | 1 |
 | PMID 42652189 | `complete_fulltext_read` | read | read | read | read | read | not_present | read | not_present | not_present | read | 1 |
 | PMID 42654068 | `partial_fulltext_read` | read | read | read | read | captions_only | read | read | not_present | not_read | — | 1 |
