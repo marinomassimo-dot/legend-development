@@ -517,8 +517,8 @@
     "qualifies_needle": "Blood counts were normalized upon treatment w"
    },
    {
-    "proposition": "Fig 6H-I (300 dpi page 10): in 6H a single faint Myc band appears only in the Csnk1a1-/+ p53 lane (one blot, no replicate shown). In 6I Myc is strong in the untreated lanes; in the A51 lanes bands appear at blast percentages of about 62, 70, 93 and 94 and none is visible at 3, 34, 54, 76, 80 or 99 (the 99 lane carries no Myc band). Myc therefore tracks blast percentage only partly (the 99 percent lane contradicts \"strong Myc at high blast burden\"), and the blot is unquantified with 6 untreated and 10 A51 lanes, so the A51-versus-blast-burden contribution cannot be separated.",
-    "snippet": "[figure attestation — pixels cannot be quote-matched] BM blast % 67 78 91 93 96 97 | 3 34 54 62 70 76 80 93 94 99; Myc bands in A51 lanes at 62, 70, 93, 94; no Myc band at 99",
+    "proposition": "Fig 6H-I (300 dpi page 10): in 6H a single faint Myc band appears only in the Csnk1a1-/+ p53 lane (one blot, no replicate shown). In 6I Myc is strong in the untreated lanes; in the A51 lanes clear bands appear at blast percentages of about 62, 70, 93 and 94, faint traces are visible at 76 and 80, and no band is visible at 3, 34, 54 or 99 (the 99 lane carries no Myc band). Myc therefore tracks blast percentage only partly (the 99 percent lane contradicts \"strong Myc at high blast burden\"), and the blot is unquantified with 6 untreated and 10 A51 lanes, so the A51-versus-blast-burden contribution cannot be separated.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] BM blast % 67 78 91 93 96 97 | 3 34 54 62 70 76 80 93 94 99; clear Myc bands in A51 lanes at 62, 70, 93, 94; faint traces at 76 and 80; no Myc band at 99",
     "anchor": "Figure 6H-I, page 10 at 300 dpi",
     "surface": "figure",
     "artifact": "files/figure_renders/PMID38147624_r3c/fig_p10_300dpi.png",
@@ -528,13 +528,13 @@
     "contradicts_locator": {
      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38147624.json",
      "entry": 21,
-     "what_changed": "Auditor: the 99 percent A51 lane has no Myc band, contradicting the stated blast-percentage pattern. Surface re-inspected at original resolution before the change.",
+     "what_changed": "Auditor OVERSHOOT (minor): faint Myc traces ARE visible at the 76 and 80 lanes, so 'none visible' is restated as faint traces at 76 and 80, none at 3, 34, 54, 99. Not re-viewed by me in this relay; restated from the audit's 3x crop reading and flagged for a second look.",
      "audit": {
       "auditors": 1,
       "verdicts": [
        "OVERSHOOT"
       ],
-      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_repairs_R3b_20261022.md",
       "triple": 21,
       "note": "repair unaudited: the author of the repair does not certify it"
      }

@@ -364,7 +364,7 @@
     }
    },
    {
-    "proposition": "Normal-brain treated arm: WT mice receiving J4 are compared with WT Veh for myelin thickness; the text prints F(1, 974) = 1.986, p = 0.0158, but F(1, 974) = 1.986 corresponds to p of about 0.159 (the same F and p = 0.1591 are printed for the slope comparison in the next sentence), so the printed p = 0.0158 is a defect in the SOURCE (a mis-typed p or F). No finding about the J4 effect on WT myelin thickness is drawn here; whether that comparison is significant cannot be decided from the text. OFT and NOR show no change in WT J4 (Fig 1). The only measure of J4 in a non-mutant brain.",
+    "proposition": "Normal-brain treated arm: WT mice receiving J4 are compared with WT Veh for myelin thickness against axon diameter. Three facts on three surfaces: (1) the text first prints F(1, 974) = 1.986, p = 0.1591 for the WT Veh versus WT J4 g-ratio slope comparison (Fig 4C, and the sentence says no significant change); (2) a few sentences later it prints the same F(1, 974) = 1.986 with p = 0.0158 for the myelin-thickness comparison and calls it a slight increase (Fig 4D); (3) the Fig 4D middle panel (WT Veh versus WT J4, N = 3 each) carries a single-star bracket, i.e. the figure signals significance at the 0.05 level, and the Fig 4C middle panel carries 'ns'. F(1, 974) = 1.986 corresponds to p of about 0.16 (my recomputation, matched by the auditor), so the printed p = 0.0158 does not fit that F: it is a defect in the text (a mis-typed F or p), but the star means the source does signal significance for this comparison and which printed value is wrong cannot be settled from the paper alone. OFT and NOR show no change in WT J4 (Fig 1). Whether this is the only measure of J4 in a non-mutant brain was not established (Figs 5 and 6 not fully read).",
     "snippet": "while WT J4 group showed a slight increase of myelin thickness when compared to WT Veh controls (F(1, 974) = 1.986, p = 0.0158)",
     "anchor": "Results / J4 enhanced myelin sheath integrity",
     "surface": "body",
@@ -373,25 +373,39 @@
     "contradicts_locator": {
      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42310739.json",
      "entry": 10,
-     "what_changed": "Coordinator and auditor: F(1, 974) = 1.986 gives p of about 0.159, so p = 0.0158 is a typo in the source; recorded as a source defect, not as a finding about the effect.",
+     "what_changed": "Auditor UNDERSHOOT: restated to give all three facts (the 0.1591 sentence precedes the 0.0158 sentence; F(1,974)=1.986 gives p about 0.16; Fig 4D middle panel carries a single star while Fig 4C middle carries ns). Fig 4 JPEG re-opened by me before the change.",
      "audit": {
       "auditors": 1,
       "verdicts": [
-       "SUPPORTED (source defect recorded)"
+       "UNDERSHOOT"
       ],
-      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_20261022.md",
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_repairs_R3b_20261022.md",
       "triple": 10,
       "note": "repair unaudited: the author of the repair does not certify it"
      }
     }
    },
    {
-    "proposition": "The same sentence reports F(1, 974) = 1.986 for both a nonsignificant slope comparison (P = 0.1591) and a significant one (P = 0.0158): one F value cannot give two P values at identical degrees of freedom, so one of the two is mis-typed.",
+    "proposition": "The text prints F(1, 974) = 1.986 for the WT Veh versus WT J4 g-ratio slope comparison with p = 0.1591 (non-significant), and, in the NEXT sentences, the same F(1, 974) = 1.986 with p = 0.0158 for the myelin-thickness comparison; the quote carries only the first. One F at identical degrees of freedom cannot give two p values, so at least one printed value is wrong; the two comparisons differ (g-ratio versus myelin thickness) so a separate F may have been intended for the second.",
     "snippet": "There were no significant changes in the slopes between WT Veh vs. WT J4 groups (F(1, 974) = 1.986, p = 0.1591) (Fig. 4C).",
     "anchor": "Results / J4 enhanced myelin sheath integrity",
     "surface": "body",
     "artifact": "files/fulltext/PMID42310739_Hsieh2026_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42310739.json",
+     "entry": 11,
+     "what_changed": "Auditor OVERSHOOT (minor): the two p values sit in two adjacent sentences, not one; the quote carries only 0.1591; restated.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_repairs_R3b_20261022.md",
+      "triple": 11,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "Fig 1 (300 ppi): open-field center time WT ~108 s, Tsc2+/- vehicle ~52 s, J4 ~89 s (* both); NOR discrimination index vehicle mutant about -0.02 against about 0.34 for WT and 0.37 for J4; N = 9, 9, 9 and 8 (one mutant J4 mouse is missing against nine per mutant vehicle).",

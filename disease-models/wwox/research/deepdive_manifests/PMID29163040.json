@@ -217,20 +217,48 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Activity blockade by TTX lowers IEG mRNAs (Npas4, c-Fos, Nr4a1, Egr1, Arc) and RNAPII CTD phosphorylation; the inhibitor lowers the same IEGs further in the absence of any stimulus.",
+    "proposition": "Activity blockade by TTX (2 micromolar, 2 h) lowers Npas4, c-Fos, Nr4a1, Egr1 and Arc mRNAs and RNAPII CTD phosphorylation. The text says THZ1 'similarly' lowers CTD phosphorylation and these IEGs in the absence of any stimulus. It does NOT say THZ1 lowers them further: compared by panel at 2 h (Fig 3C TTX versus Fig 3D THZ1, 500 nM), THZ1 is lower for Nr4a1 (about 0.18 versus 0.47), Egr1 (about 0.16 versus 0.43) and c-Fos (about 0.23 versus 0.28), similar for Npas4 (about 0.45 versus 0.38), and higher (less reduced) for Arc (about 0.77 versus 0.36); Homer1a and c-Jun are about equal (0.68 and 0.79 in both). Values read off the bars by eye (inference).",
     "snippet": "Similarly, in the presence of THZ1, which induced drastic decrease of phosphorylation levels of Ser 2, Ser 5 and Ser 7 on the RNAPII CTD",
     "anchor": "Results / Cdk7 Activity Is Required to Maintain Gene Expression at Basal Level",
     "surface": "body",
     "artifact": "files/fulltext/PMID29163040_He2017_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID29163040.json",
+     "entry": 3,
+     "what_changed": "Auditor OVERSHOOT: 'lowers the same IEGs further' is not in the source and is false for Arc; replaced by a per-gene panel comparison read from Figs 3C and 3D (re-opened by me).",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_repairs_R3b_20261022.md",
+      "triple": 3,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
-    "proposition": "Fig 3D: 500 nM at 2 h and 4 h lowers Npas4 to about 0.45 and 0.1 of vehicle, c-Fos to about 0.23 and 0.02, Nr4a1 to about 0.18 and 0.12; Arc, Homer1a and c-Jun fall only to about 0.6-0.8.",
-    "snippet": "[figure attestation — pixels cannot be quote-matched] Npas4 ~0.45/~0.1; cFos ~0.23/~0.02; Nr4a1 ~0.18/~0.12 of vehicle (2 h/4 h); Arc, Homer1a, c-Jun ~0.5-0.8",
+    "proposition": "Fig 3D: 500 nM THZ1 at 2 h and 4 h lowers Npas4 to about 0.45 and 0.10 of vehicle, c-Fos to about 0.23 and 0.02, Nr4a1 to about 0.18 and 0.12; Egr1 to about 0.16 and 0.32; Arc to about 0.77 and 0.61, Homer1a to about 0.68 and 0.48 and c-Jun to about 0.79 and 0.59, so the last three fall to about 0.5 to 0.8 (Homer1a at 4 h about 0.48). Values read off the bars by eye.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Npas4 ~0.45/~0.1; cFos ~0.23/~0.02; Nr4a1 ~0.18/~0.12; Egr1 ~0.16/~0.32; Arc ~0.77/~0.61; Homer1a ~0.68/~0.48; c-Jun ~0.79/~0.59 of vehicle (2 h/4 h)",
     "anchor": "Figure 3D",
     "surface": "figure",
     "artifact": "files/figures/PMID29163040_r2/fnmol-10-00365-g0003.jpg",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID29163040.json",
+     "entry": 4,
+     "what_changed": "Auditor OVERSHOOT: 'Arc, Homer1a and c-Jun fall only to 0.6-0.8' omitted Homer1a at 4 h (about 0.48); every bar value now stated. Fig 3D re-opened by me.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_repairs_R3b_20261022.md",
+      "triple": 4,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "Bicuculline-induced IEG mRNA (up to about 60-fold) and RNAPII CTD phosphorylation are largely prevented by a 4 h THZ1 pre-incubation.",
