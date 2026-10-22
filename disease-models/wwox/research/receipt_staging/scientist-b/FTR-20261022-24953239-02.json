@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-22T00:00:00Z",
+ "event_at": "2026-10-22T04:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present"
+ },
+ "event_id": "FTR-20261022-24953239-02",
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "Completing pass (owed: figures captions_only). Figures 1, 2, 3, 4 and 6 opened as images (Figure 5 was read as an image in the first pass); the article XML lists no supplementary-material element and no limitations section; recorded not_present."
+ ],
+ "evidence_depth": "complete_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID24953239.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-b_20261022e.md"
+ ],
+ "prior_receipt": "FTR-20261021-24953239-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "e740709956fa13e6ce38dedc976a6775aa83f47287afa87a52d262c4ea953f5e",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID24953239_Kanyshkova2015_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1007/s00424-014-1549-4",
+  "pmid": "24953239"
+ },
+ "workflow": "scientist-b repurposing batch R2d completing pass 2026-10-22; SOURCE_FIRST for the owed sections (figures); NOT WWOX EVIDENCE; prepared as JSON for the integrator and staged, not appended."
+}

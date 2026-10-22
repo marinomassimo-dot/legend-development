@@ -2,8 +2,9 @@
  "schema_version": 2,
  "pmid": "35243344",
  "doi": "10.1093/braincomms/fcac010",
- "receipt": "FTR-20261021-35243344-01",
+ "receipt": "FTR-20261022-35243344-02",
  "landing": [
+  "FTR-20261022-35243344-02",
   "FTR-20261021-35243344-01",
   "repurposing_10h_scientist-b_20261021"
  ],
@@ -177,6 +178,216 @@
      "join": ""
     }
    }
+  },
+  {
+   "path": "files/figures/PMID35243344_r3/pdfp6-000.png",
+   "sha256": "722e1902a8f86e4c318a3bdc00956a8348dade61f8e31ab5fddbdb78773f761f",
+   "kind": "figure",
+   "note": "Figure 1 (PDF page 6 embedded raster, about 200 ppi) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "722e1902a8f86e4c318a3bdc00956a8348dade61f8e31ab5fddbdb78773f761f",
+    "derived_from": "files/supplement/PMID35243344_r2/PMC8887905.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 6 -l 6 -png PMC8887905.1.pdf pdfp6"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID35243344_r3/pdfp7-000.png",
+   "sha256": "f77e9c8779a2e40d5e6967407fd30392a7b8c3653313ab0ed5d50fec184f1f56",
+   "kind": "figure",
+   "note": "Figure 2 (PDF page 7 embedded raster, about 200 ppi) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "f77e9c8779a2e40d5e6967407fd30392a7b8c3653313ab0ed5d50fec184f1f56",
+    "derived_from": "files/supplement/PMID35243344_r2/PMC8887905.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 7 -l 7 -png PMC8887905.1.pdf pdfp7"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID35243344_r3/pdfp8-000.png",
+   "sha256": "66f2be40c530ae5e200d1690701e864fde1b656b2c20611bb14d52e15a0e2b54",
+   "kind": "figure",
+   "note": "Figure 3 (PDF page 8 embedded raster, about 200 ppi) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "66f2be40c530ae5e200d1690701e864fde1b656b2c20611bb14d52e15a0e2b54",
+    "derived_from": "files/supplement/PMID35243344_r2/PMC8887905.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 8 -l 8 -png PMC8887905.1.pdf pdfp8"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID35243344_r3/pdfp10-000.png",
+   "sha256": "1ac42b4465dfdfaee57e31b30d67db8aa83961ded02b1c696b00e927fe05cb46",
+   "kind": "figure",
+   "note": "Figure 4 (PDF page 10 embedded raster, about 200 ppi) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "1ac42b4465dfdfaee57e31b30d67db8aa83961ded02b1c696b00e927fe05cb46",
+    "derived_from": "files/supplement/PMID35243344_r2/PMC8887905.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 10 -l 10 -png PMC8887905.1.pdf pdfp10"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID35243344_r3/pdfp11-000.png",
+   "sha256": "40b69c2cd5af35ce9beb22d4ebe541888db9d8fd0fcbc06204fd082641aa8e5f",
+   "kind": "figure",
+   "note": "Figure 5 (PDF page 11 embedded raster, about 200 ppi) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "40b69c2cd5af35ce9beb22d4ebe541888db9d8fd0fcbc06204fd082641aa8e5f",
+    "derived_from": "files/supplement/PMID35243344_r2/PMC8887905.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 11 -l 11 -png PMC8887905.1.pdf pdfp11"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID35243344_r3/pdfp13-000.png",
+   "sha256": "a77168993ddb2701ef201f98775779269946d3a15ac257292081062564a01393",
+   "kind": "figure",
+   "note": "Figure 7 (PDF page 13 embedded raster, about 200 ppi) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "a77168993ddb2701ef201f98775779269946d3a15ac257292081062564a01393",
+    "derived_from": "files/supplement/PMID35243344_r2/PMC8887905.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 13 -l 13 -png PMC8887905.1.pdf pdfp13"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID35243344_r3/pdfp15-000.png",
+   "sha256": "ff7bec948265e3a8cbacd3b02a49833c1b642ba334335b4f87bd99830cfd54ae",
+   "kind": "figure",
+   "note": "Figure 8 (PDF page 15 embedded raster, about 200 ppi) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "ff7bec948265e3a8cbacd3b02a49833c1b642ba334335b4f87bd99830cfd54ae",
+    "derived_from": "files/supplement/PMID35243344_r2/PMC8887905.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 15 -l 15 -png PMC8887905.1.pdf pdfp15"
+    }
+   }
+  },
+  {
+   "path": "files/supplement/PMID35243344_r2/docx_media/image1.png",
+   "sha256": "4e11bc24ead12966c0bca5b03e7e18da6a579e023c01ca1a05508e95765f8dff",
+   "kind": "figure",
+   "note": "Supplementary Figure 1, the embedded TIFF of the supplementary Word file converted to PNG (ImageMagick) and opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "4e11bc24ead12966c0bca5b03e7e18da6a579e023c01ca1a05508e95765f8dff",
+    "derived_from": "files/supplement/PMID35243344_r2/fcac010_supplementary_data.docx",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "unzip word/media/image1.tiff from fcac010_supplementary_data.docx; convert image1.tiff image1.png"
+    }
+   }
+  },
+  {
+   "path": "files/supplement/PMID35243344_r2/docx_media/image2.png",
+   "sha256": "d2a66d643acaeda52f31e33bb43d9d6a87a463c5df9836fcd0d5a30082656160",
+   "kind": "figure",
+   "note": "Supplementary Figure 2, the embedded TIFF of the supplementary Word file converted to PNG (ImageMagick) and opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "d2a66d643acaeda52f31e33bb43d9d6a87a463c5df9836fcd0d5a30082656160",
+    "derived_from": "files/supplement/PMID35243344_r2/fcac010_supplementary_data.docx",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "unzip word/media/image2.tiff from fcac010_supplementary_data.docx; convert image2.tiff image2.png"
+    }
+   }
+  },
+  {
+   "path": "files/supplement/PMID35243344_r2/fcac010_supplementary_data.txt",
+   "sha256": "7a505b23a6d2e275608914334ee42cabcc284bbe87b7739ae60c3d44a2ee1f06",
+   "kind": "supplement_text",
+   "note": "DERIVED text of the supplementary Word file: word/document.xml with markup stripped, one line per paragraph.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftotext_layout_nopgbrk",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "7a505b23a6d2e275608914334ee42cabcc284bbe87b7739ae60c3d44a2ee1f06",
+    "derived_from": "files/supplement/PMID35243344_r2/fcac010_supplementary_data.docx",
+    "extractor": {
+     "name": "python zipfile + re (stdlib)",
+     "version": "3.12",
+     "call": "read word/document.xml from fcac010_supplementary_data.docx, replace </w:p> by newline, strip tags, html.unescape"
+    }
+   }
   }
  ],
  "verbatim_locators": {
@@ -218,12 +429,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The model rests on an opsin's cell-type toxicity, not on a human-genotype lesion: the authors say ArchT expressed without light caused abnormal waves and had a toxic effect on PV cells, and that the phenotype regressed when expression was switched off. Face and predictive validity are claimed from discharges plus ethosuximide response.",
+    "proposition": "The authors write that expression of the opsin, even without light activation, had a toxic effect on parvalbumin-positive cells.",
     "snippet": "indicating that ArchT expression—even without light activation—had a toxic effect on PV-positive cells.",
     "surface": "body",
     "anchor": "Results, PV-ArchT mice displayed an absence seizure phenotype",
     "artifact": "files/fulltext/PMID35243344_Yang2022_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35243344.json",
+     "entry": 4,
+     "what_changed": "2026-10-22 advisory strength scan: the proposition carried words and claims the quote does not contain; narrowed to the quote. Prior wording began: The model rests on an opsin's cell-type toxicity, not on a human-genotype lesion",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "ADVISORY_STRENGTH_SCAN"
+      ],
+      "method": "locator_audit.py --strength-scan (advisory), run 2026-10-22; no blind audit; the narrowing only brings the proposition inside its quote"
+     }
+    }
    },
    {
     "proposition": "Figure 6 read as an image (page 12 raster): rebound bursts per cell about 2.2 in controls (three mice) versus about 1.0 in PV-ArchT (three mice), star; T-current peak about 700 pA versus about 155 pA, three stars with the per-mouse points of about 700 to 750 against about 40 to 275; Figure 4E: ethosuximide before about 23 events per hour (range about 8 to 50) falling to about 1 (four mice), baclofen about 33 rising to about 63.",
@@ -231,6 +454,86 @@
     "surface": "figure",
     "artifact": "files/figures/PMID35243344_r2/PMC8887905_p12_embedded.png",
     "anchor": "Figure 6 panels A to G (page 12 raster) and Figure 4 panel E (page 10 raster, PMC8887905_p10_embedded.png)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that T-type channel transcripts showed no difference between the model and control in cortex, thalamus and reticular nucleus (n = 4 mice, in situ hybridisation).",
+    "snippet": "Note that the expression of T-type Ca2+ channel transcripts did not show difference in the cortex, thalamus and TRN comparing PV-ArchT with the control (n = 4 mice).",
+    "surface": "body",
+    "anchor": "Figure 7 legend",
+    "artifact": "files/fulltext/PMID35243344_Yang2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "For the quantitative PCR the Methods describe PV-ArchT mice fed normal chow (3 mice) against PV-ArchT mice fed doxycycline chow (3 mice), i.e. the comparison group is the same genotype with the transgene repressed.",
+    "snippet": "Total RNA was extracted from cortices and thalami of PV-ArchT mice fed normal chow (n = 3 mice) and PV-ArchT mice fed doxycycline (DOX) chow (n = 3 mice).",
+    "surface": "body",
+    "anchor": "Methods, RNA extraction and quantitative RT-PCR",
+    "artifact": "files/fulltext/PMID35243344_Yang2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The supplementary Table S1 legend states that none of the intrinsic-excitability measures of the reticular-nucleus PV neurons differed between PV-ArchT and control.",
+    "snippet": "Table S1: Important metrics of intrinsic excitability of PV neurons in PV-ArchT and control, related to Figure 6. None of the measures showed any significant difference.",
+    "surface": "supplement",
+    "anchor": "Supplementary Table 1 legend",
+    "artifact": "files/supplement/PMID35243344_r2/fcac010_supplementary_data.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Figure 1 states that thalamic hyperactive events coincided with cortical spike-and-wave discharges in 87 percent of events (6 records from 3 mice).",
+    "snippet": "coincided with cortical SWDs (87 ± 1.4%, n = 6 records from 3 mice)",
+    "surface": "supplement",
+    "anchor": "Supplementary Figure 1 legend",
+    "artifact": "files/supplement/PMID35243344_r2/fcac010_supplementary_data.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 7 read as an image: in situ hybridisation shows Cav3.1 in all cortical layers and thalamus but not the reticular nucleus, Cav3.2 strong in layer V and the reticular nucleus, Cav3.3 in all cortical layers and the reticular nucleus, with no visible difference between model and control; qPCR bars (three animals, points shown) cortex Cav3.1 about 0.72 against 1.0, Cav3.2 about 0.94 against 0.98, Cav3.3 about 0.97 against 1.03 and thalamus Cav3.1 about 0.82 against 1.03, no star; the thalamic Cav3.2 and Cav3.3 values are not plotted.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7: ISH no difference; qPCR cortex Cav3.1 about 0.72 vs 1.0, Cav3.2 about 0.94 vs 0.98, Cav3.3 about 0.97 vs 1.03; thalamus Cav3.1 about 0.82 vs 1.03; n = 3 each; no star.",
+    "surface": "figure",
+    "anchor": "Figure 7 panels A-D (page 13 raster)",
+    "artifact": "files/figures/PMID35243344_r3/pdfp13-000.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 4 read as an image (PV-ArchT mice): ethosuximide takes the spike-wave number from about 23 per hour (range about 8 to 50) to about 1 (star, four mice) with theta power unchanged (about 0.75 to 1.3 before and after); baclofen raises it from about 33 to about 63 (star), lengthens the discharge duration from about 2.3 to about 6.3 s (star) and lowers theta power (star).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4E-F: ETX SWDs/h about 23 -> 1 (*), theta unchanged; baclofen about 33 -> 63 (*), duration 2.3 -> 6.3 s (*), theta lower (*).",
+    "surface": "figure",
+    "anchor": "Figure 4 panels E-F (page 10 raster)",
+    "artifact": "files/figures/PMID35243344_r3/pdfp10-000.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3 read as an image: spike-wave discharges in PV-ArchT mice grow with age, number per hour from about 1 at P60 to about 17 at P90, about 30 at P120 and about 54 at P150 (three stars) and duration from about 0.6 to about 8 s (three stars); theta power flat.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3D-E: SWDs per hour about 1 (P60), 17 (P90), 30 (P120), 54 (P150) ***; duration about 0.6 -> 8 s ***; theta flat.",
+    "surface": "figure",
+    "anchor": "Figure 3 panels D-E (page 8 raster)",
+    "artifact": "files/figures/PMID35243344_r3/pdfp8-000.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 8 read as an image (induction timing): lifelong transgene expression gives about 31 spike-wave discharges per hour with about 72 percent of reticular PV cells expressing; neonatal induction followed by repression leaves about 3 percent expressing and no discharges at P150 (three stars); never-induced animals show none (three stars); adult-onset induction gives about 10 per hour with about 41 percent expressing (three stars).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 8: lifelong induction about 31 SWDs/h (72% cells); neonatal induction then DOX: 3% cells, 0 SWDs (***); no induction 0 (***); adult induction about 10/h (41% cells) (***).",
+    "surface": "figure",
+    "anchor": "Figure 8 panels A-D (page 15 raster)",
+    "artifact": "files/figures/PMID35243344_r3/pdfp15-000.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figures 1, 2 and 5 read as images: Figure 1 transgene expression in the reticular nucleus; Figure 2 spectral power at 5 to 11 Hz about 0.65 in the model against about 1.0 in controls (three stars) and epileptiform events (spikes, polyspikes, spike-and-wave complexes) in the model only; Figure 5 viral ArchT expression in PV-Cre mice raises theta power from about 0.57 to about 0.74 between 7 and 30 days (star), produces epileptiform discharges at 60 days and baclofen raises their number from about 2.5 to about 13 per hour (star) with duration about 1.4 to about 2.8 s (star).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figures 1, 2, 5: spectral power 5-11 Hz about 0.65 vs 1.0 (***); viral ArchT: theta 0.57 -> 0.74 (*), baclofen discharges about 2.5 -> 13/h (*), duration 1.4 -> 2.8 s (*).",
+    "surface": "figure",
+    "anchor": "Figures 1, 2, 5 (page 6, 7, 11 rasters)",
+    "artifact": "files/figures/PMID35243344_r3/pdfp11-000.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Figures 1 and 2 read as images: Supplementary Figure 1 thalamic local-field hyperactive events (red) coincide with cortical discharges and EMG quiet; Supplementary Figure 2 theta power trend after chow change: about 0.85 to about 1.1 after doxycycline withdrawal (not significant), about 1.0 to about 0.55 after doxycycline start (three stars), about 0.55 to about 0.5 with doxycycline throughout.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary S1: thalamic hyperactivity coincides with cortical SWD; S2: theta about 0.85 -> 1.1 (dox off, ns), 1.0 -> 0.55 (dox on, ***), flat on dox throughout.",
+    "surface": "figure",
+    "anchor": "Supplementary Figures 1-2 (supplement Word file images)",
+    "artifact": "files/supplement/PMID35243344_r2/docx_media/image2.png",
     "panel_text_relation": "text_only"
    }
   ],

@@ -2,8 +2,9 @@
  "schema_version": 2,
  "pmid": "24953239",
  "doi": "10.1007/s00424-014-1549-4",
- "receipt": "FTR-20261021-24953239-01",
+ "receipt": "FTR-20261022-24953239-02",
  "landing": [
+  "FTR-20261022-24953239-02",
   "FTR-20261021-24953239-01",
   "repurposing_10h_scientist-b_20261021"
  ],
@@ -140,6 +141,81 @@
     "derived": false,
     "result_sha256": "378e5943b554a5f1b251146e9f852457419d2f3d124bdeb40d0af85b442941e3"
    }
+  },
+  {
+   "path": "files/figures/PMID24953239_r2/424_2014_1549_Fig1_HTML.jpg",
+   "sha256": "367b155538117da87961198708cdd783fd6502bcf425589e9ed93a4419bf3afc",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC4435665",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "367b155538117da87961198708cdd783fd6502bcf425589e9ed93a4419bf3afc"
+   },
+   "note": "Figure raster (JPEG, about 111 to 114 ppi, the Springer HTML image) opened as an image; the PDF carries no higher-resolution raster of these figures (paper_packet.py rank: only page 10 has a 300 ppi raster, of Figure 5 as a fragment)."
+  },
+  {
+   "path": "files/figures/PMID24953239_r2/424_2014_1549_Fig2_HTML.jpg",
+   "sha256": "c1cf1892084c464fd31530ea7acd799229c5aa7742004efa30c57c00f969f543",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC4435665",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "c1cf1892084c464fd31530ea7acd799229c5aa7742004efa30c57c00f969f543"
+   },
+   "note": "Figure raster (JPEG, about 111 to 114 ppi, the Springer HTML image) opened as an image; the PDF carries no higher-resolution raster of these figures (paper_packet.py rank: only page 10 has a 300 ppi raster, of Figure 5 as a fragment)."
+  },
+  {
+   "path": "files/figures/PMID24953239_r2/424_2014_1549_Fig3_HTML.jpg",
+   "sha256": "4035cae8be12ed40aeb856597cd38afacfaeed4aede88716e3403c794f48ae38",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC4435665",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "4035cae8be12ed40aeb856597cd38afacfaeed4aede88716e3403c794f48ae38"
+   },
+   "note": "Figure raster (JPEG, about 111 to 114 ppi, the Springer HTML image) opened as an image; the PDF carries no higher-resolution raster of these figures (paper_packet.py rank: only page 10 has a 300 ppi raster, of Figure 5 as a fragment)."
+  },
+  {
+   "path": "files/figures/PMID24953239_r2/424_2014_1549_Fig4_HTML.jpg",
+   "sha256": "16e13bd4881c5dcc7b30679f01d362cd2bc877b8db50426b5826eb7961ba6c32",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC4435665",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "16e13bd4881c5dcc7b30679f01d362cd2bc877b8db50426b5826eb7961ba6c32"
+   },
+   "note": "Figure raster (JPEG, about 111 to 114 ppi, the Springer HTML image) opened as an image; the PDF carries no higher-resolution raster of these figures (paper_packet.py rank: only page 10 has a 300 ppi raster, of Figure 5 as a fragment)."
+  },
+  {
+   "path": "files/figures/PMID24953239_r2/424_2014_1549_Fig6_HTML.jpg",
+   "sha256": "18d75258530028930c44bf1cf59d02c8ad912dfa29a59571b86eb39b08a7ea25",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC4435665",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "18d75258530028930c44bf1cf59d02c8ad912dfa29a59571b86eb39b08a7ea25"
+   },
+   "note": "Figure raster (JPEG, about 111 to 114 ppi, the Springer HTML image) opened as an image; the PDF carries no higher-resolution raster of these figures (paper_packet.py rank: only page 10 has a 300 ppi raster, of Figure 5 as a fragment)."
   }
  ],
  "verbatim_locators": {
@@ -165,12 +241,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "A T-type blocker abolished hyperpolarisation-induced burst firing in relay neurons of both strains, establishing that bursting in these cells needs the T-type channel while the strain difference in bursting does not come from it; the authors say what part ventrobasal neurons play in seizure propagation in this strain remains to be elucidated.",
+    "proposition": "The authors write that what part, if any, the ventrobasal neurons play in absence-seizure propagation remains to be elucidated in the genetic absence model.",
     "snippet": "What part, if any, VB neurons play in absence seizure propagation thus remains to be elucidated for the GAERS genetic model of absence seizures.",
     "surface": "body",
     "anchor": "Discussion, final paragraph",
     "artifact": "files/fulltext/PMID24953239_Kanyshkova2015_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID24953239.json",
+     "entry": 2,
+     "what_changed": "2026-10-22 advisory strength scan: the proposition carried words and claims the quote does not contain; narrowed to the quote. Prior wording began: A T-type blocker abolished hyperpolarisation-induced burst firing in relay neuro",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "ADVISORY_STRENGTH_SCAN"
+      ],
+      "method": "locator_audit.py --strength-scan (advisory), run 2026-10-22; no blind audit; the narrowing only brings the proposition inside its quote"
+     }
+    }
    },
    {
     "proposition": "The authors note a prior gain-of-function Cav3.2 variant in the epileptic strain (restricted to reticular neurons, not relay neurons) and an earlier study that found no strain difference in T-type current in acutely dissociated cells and one that found increased Cav3.1 mRNA by in-situ hybridisation; they explain their discrepancy by preparation (intact slice versus dissociated cells, current density versus absolute current) and say a dissection error could affect the P9 mRNA comparison.",
@@ -186,6 +274,70 @@
     "surface": "figure",
     "artifact": "files/figures/PMID24953239_r2/424_2014_1549_Fig5_HTML.jpg",
     "anchor": "Figure 5 panels a to g; deposit jpg as delivered",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A figure legend states that the hyperpolarisation-activated (Ih) current density is increased in the absence-strain ventrobasal neurons.",
+    "snippet": "Ih current density is increased in GAERS VB neurons",
+    "surface": "body",
+    "anchor": "Figure 3 legend title",
+    "artifact": "files/fulltext/PMID24953239_Kanyshkova2015_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A figure legend title states that blocking Ih normalises the ventrobasal burst-firing activity.",
+    "snippet": "Blockade of Ih normalizes VB burst-firing activity",
+    "surface": "body",
+    "anchor": "Figure 6 legend title",
+    "artifact": "files/fulltext/PMID24953239_Kanyshkova2015_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A figure legend states that HCN protein isoforms are differentially expressed in the absence-strain ventrobasal thalamus.",
+    "snippet": "HCN protein isoforms are differentially expressed in GAERS VB thalamus",
+    "surface": "body",
+    "anchor": "Figure 4 legend title",
+    "artifact": "files/fulltext/PMID24953239_Kanyshkova2015_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 read as an image: current threshold for rebound burst after a 200 ms hyperpolarisation is about minus 27 pA in adult controls against about minus 48 pA in the absence strain (two stars) and about minus 45 against minus 43 pA at P15 to P20 (no star); action potentials per burst about 4 to 5 in all groups; input resistance lower in the absence strain at both ages (one star each); resting potential about minus 73 mV in all groups.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1b-e: adult burst threshold NEC about -27 vs GAERS about -48 pA (**); P15-20 about -45 vs -43; APs/burst about 4-5; Rin lower in GAERS (*); Vrest about -73 mV.",
+    "surface": "figure",
+    "anchor": "Figure 1 panels b-e (jpg as delivered)",
+    "artifact": "files/figures/PMID24953239_r2/424_2014_1549_Fig1_HTML.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2 read as an image: with a 1000 ms hyperpolarisation the threshold current is about minus 30 against minus 41 pA at P15 to P20 and about minus 33 against minus 57 pA in adults (one star each); action potentials per burst about 4 in all groups; burst action-potential frequency about 300 to 450 Hz and tonic firing curves overlap in the two strains.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2b-g: 1000 ms threshold NEC about -30 vs GAERS -41 pA (P15-20, *), about -33 vs -57 pA (adult, *); APs/burst about 4; burst frequency and tonic firing overlap.",
+    "surface": "figure",
+    "anchor": "Figure 2 panels b-g (jpg as delivered)",
+    "artifact": "files/figures/PMID24953239_r2/424_2014_1549_Fig2_HTML.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3 read as an image (ZD7288-subtracted tail current density): at P15 to P20 the absence strain has about minus 5.9 against about minus 3.3 pA/pF at minus 110 mV, with stars across minus 110 to minus 60 mV; in adults about minus 8.8 against about minus 6.2 pA/pF with stars from minus 110 to minus 90 mV; the normalised curves differ only at P15 to P20 near minus 75 mV.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3b-e: Ih tail density at -110 mV: P15-20 GAERS about -5.9 vs NEC -3.3 pA/pF; adult about -8.8 vs -6.2 pA/pF (stars).",
+    "surface": "figure",
+    "anchor": "Figure 3 panels b-e (jpg as delivered)",
+    "artifact": "files/figures/PMID24953239_r2/424_2014_1549_Fig3_HTML.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 4 read as an image (Western blots, six animals per strain, vinculin-normalised): HCN1 about 1.52 against about 0.96 (one star) and HCN3 about 0.60 against about 0.30 (one star) higher in the absence strain; HCN2 about 0.77 against 0.80 and HCN4 about 0.04 in both, no difference.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4b: HCN1 GAERS about 1.52 vs NEC 0.96 (*); HCN3 about 0.60 vs 0.30 (*); HCN2 and HCN4 no difference.",
+    "surface": "figure",
+    "anchor": "Figure 4 panels a-b (jpg as delivered)",
+    "artifact": "files/figures/PMID24953239_r2/424_2014_1549_Fig4_HTML.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 6 read as an image (ZD7288 present): the burst threshold becomes depolarising and similar in the two strains (about plus 30 and plus 38 pA at P15 to P20; about plus 59 and plus 62 pA in adults; no star), action potentials per burst about 4, input resistance no longer different and resting potential about minus 90 mV in all groups.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6b-e: with ZD7288 burst threshold NEC about +30 vs GAERS +38 pA (P15-20); about +59 vs +62 (adult); no star; Vrest about -90 mV.",
+    "surface": "figure",
+    "anchor": "Figure 6 panels b-e (jpg as delivered)",
+    "artifact": "files/figures/PMID24953239_r2/424_2014_1549_Fig6_HTML.jpg",
     "panel_text_relation": "text_only"
    }
   ],

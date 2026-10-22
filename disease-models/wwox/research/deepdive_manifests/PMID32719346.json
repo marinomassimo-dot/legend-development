@@ -2,8 +2,9 @@
  "schema_version": 2,
  "pmid": "32719346",
  "doi": "10.1038/s41467-020-17560-3",
- "receipt": "FTR-20261021-32719346-01",
+ "receipt": "FTR-20261022-32719346-02",
  "landing": [
+  "FTR-20261022-32719346-02",
   "FTR-20261021-32719346-01",
   "repurposing_10h_scientist-b_20261021"
  ],
@@ -165,6 +166,237 @@
     "derived": false,
     "result_sha256": "d414cd1e3d102c2b636b2a0fcf4fedc2b020d61bc8efe24f2d4c3301a9d98c4f"
    }
+  },
+  {
+   "path": "files/figures/PMID32719346_r3/page-03.png",
+   "sha256": "50c59a5ec22c3158271bcef10c6306ad95961a28b3d76afbce48473ff5d065c2",
+   "kind": "figure",
+   "note": "Figure 1, PDF page 3 rendered at 130 ppi and opened as an image; the page rank tool flagged pages 9 and 11 as vector-bearing; bar values are read from the render, not from the data.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "50c59a5ec22c3158271bcef10c6306ad95961a28b3d76afbce48473ff5d065c2",
+    "derived_from": "files/supplement/PMID32719346_r2/PMC7385104.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 130 -png -f 3 -l 3 PMC7385104.1.pdf page"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID32719346_r3/page-04.png",
+   "sha256": "450378536b854f1d487e135b8996a2ecb7fe3b11e8cd7546b91d0ee681f08af5",
+   "kind": "figure",
+   "note": "Figure 2 (and the Figure 1 legend), PDF page 4 rendered at 130 ppi and opened as an image; the page rank tool flagged pages 9 and 11 as vector-bearing; bar values are read from the render, not from the data.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "450378536b854f1d487e135b8996a2ecb7fe3b11e8cd7546b91d0ee681f08af5",
+    "derived_from": "files/supplement/PMID32719346_r2/PMC7385104.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 130 -png -f 4 -l 4 PMC7385104.1.pdf page"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID32719346_r3/page-05.png",
+   "sha256": "430ae019c07c119c3746d1e7bf3bd23ced3050cd511fba525bfc122703647616",
+   "kind": "figure",
+   "note": "Figure 3, PDF page 5 rendered at 130 ppi and opened as an image; the page rank tool flagged pages 9 and 11 as vector-bearing; bar values are read from the render, not from the data.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "430ae019c07c119c3746d1e7bf3bd23ced3050cd511fba525bfc122703647616",
+    "derived_from": "files/supplement/PMID32719346_r2/PMC7385104.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 130 -png -f 5 -l 5 PMC7385104.1.pdf page"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID32719346_r3/page-07.png",
+   "sha256": "c6f3c3ebfbe4b4de5b1f3a0c135960c92d47e64a79581b235e2c015b7fe6b5d5",
+   "kind": "figure",
+   "note": "Figure 4, PDF page 7 rendered at 130 ppi and opened as an image; the page rank tool flagged pages 9 and 11 as vector-bearing; bar values are read from the render, not from the data.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "c6f3c3ebfbe4b4de5b1f3a0c135960c92d47e64a79581b235e2c015b7fe6b5d5",
+    "derived_from": "files/supplement/PMID32719346_r2/PMC7385104.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 130 -png -f 7 -l 7 PMC7385104.1.pdf page"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID32719346_r3/page-09.png",
+   "sha256": "104bd3188013026e5a1fef372559caa8fc4a4a25fa369e72c69e8a9b48ecfa6b",
+   "kind": "figure",
+   "note": "Figure 6, PDF page 9 rendered at 130 ppi and opened as an image; the page rank tool flagged pages 9 and 11 as vector-bearing; bar values are read from the render, not from the data.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "104bd3188013026e5a1fef372559caa8fc4a4a25fa369e72c69e8a9b48ecfa6b",
+    "derived_from": "files/supplement/PMID32719346_r2/PMC7385104.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 130 -png -f 9 -l 9 PMC7385104.1.pdf page"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID32719346_r3/page-11.png",
+   "sha256": "56389b56e206814209f5876db859067f7aa5146db9a62c394cc1505678d7dd72",
+   "kind": "figure",
+   "note": "Figure 7, PDF page 11 rendered at 130 ppi and opened as an image; the page rank tool flagged pages 9 and 11 as vector-bearing; bar values are read from the render, not from the data.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "56389b56e206814209f5876db859067f7aa5146db9a62c394cc1505678d7dd72",
+    "derived_from": "files/supplement/PMID32719346_r2/PMC7385104.1.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 130 -png -f 11 -l 11 PMC7385104.1.pdf page"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID32719346_r3/supp/s_p12-000.png",
+   "sha256": "ae31b428d8b859123dedbbaa069fc2bf6041aab11ce530fa974c5f629b5dd8b3",
+   "kind": "figure",
+   "note": "Supplementary Figure 7 raster (supplement PDF page 12, 1.2 to 1.7 kilopixels wide, about 230 to 250 ppi) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "ae31b428d8b859123dedbbaa069fc2bf6041aab11ce530fa974c5f629b5dd8b3",
+    "derived_from": "files/supplement/PMID32719346_r2/41467_2020_17560_MOESM1_ESM.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 12 -l 12 -png 41467_2020_17560_MOESM1_ESM.pdf s_p12"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID32719346_r3/supp/s_p14-000.png",
+   "sha256": "a7e4a3dbbbd51235af95f66154459e5185ec5cc6fbd4135b87e945b4a854f315",
+   "kind": "figure",
+   "note": "Supplementary Figure 8 raster (supplement PDF page 14, 1.2 to 1.7 kilopixels wide, about 230 to 250 ppi) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "a7e4a3dbbbd51235af95f66154459e5185ec5cc6fbd4135b87e945b4a854f315",
+    "derived_from": "files/supplement/PMID32719346_r2/41467_2020_17560_MOESM1_ESM.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 14 -l 14 -png 41467_2020_17560_MOESM1_ESM.pdf s_p14"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID32719346_r3/supp/s_p15-000.png",
+   "sha256": "f026f93a59f9da3024034f02f960cf086c2c442387367ef59e4022ac4ef9dc8f",
+   "kind": "figure",
+   "note": "Supplementary Figure 9 raster (supplement PDF page 15, 1.2 to 1.7 kilopixels wide, about 230 to 250 ppi) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "f026f93a59f9da3024034f02f960cf086c2c442387367ef59e4022ac4ef9dc8f",
+    "derived_from": "files/supplement/PMID32719346_r2/41467_2020_17560_MOESM1_ESM.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 15 -l 15 -png 41467_2020_17560_MOESM1_ESM.pdf s_p15"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID32719346_r3/supp/s_p16-000.png",
+   "sha256": "20f41ed173f1679e709a81b36cf9931df1754885d0c0660a4f0be74757649d8b",
+   "kind": "figure",
+   "note": "Supplementary Figure 10 raster (supplement PDF page 16, 1.2 to 1.7 kilopixels wide, about 230 to 250 ppi) opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "20f41ed173f1679e709a81b36cf9931df1754885d0c0660a4f0be74757649d8b",
+    "derived_from": "files/supplement/PMID32719346_r2/41467_2020_17560_MOESM1_ESM.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -f 16 -l 16 -png 41467_2020_17560_MOESM1_ESM.pdf s_p16"
+    }
+   }
+  },
+  {
+   "path": "files/supplement/PMID32719346_r2/41467_2020_17560_MOESM1_ESM.txt",
+   "sha256": "a05f628f74077a64b990fdda4f4da1cc2d2a37dddabdb9c579ae02bfcf7fe755",
+   "kind": "supplement_text",
+   "note": "DERIVED text layer of the Supplementary Information PDF (23 pages; legends only).",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftotext_layout_nopgbrk",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "a05f628f74077a64b990fdda4f4da1cc2d2a37dddabdb9c579ae02bfcf7fe755",
+    "derived_from": "files/supplement/PMID32719346_r2/41467_2020_17560_MOESM1_ESM.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk 41467_2020_17560_MOESM1_ESM.pdf 41467_2020_17560_MOESM1_ESM.txt"
+    }
+   }
   }
  ],
  "verbatim_locators": {
@@ -206,12 +438,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Self-stated limit on mechanism: the partial rescue leaves open that ethosuximide acts through other mechanisms independent of the discharges, and the study does not test T-type channels; diazepam (a GABA-A modulator) also blocks the discharges in the knockout, so a drug effect on the discharges does not itself identify the target.",
+    "proposition": "The authors write that they cannot rule out that ethosuximide may also act through other mechanisms independent of the discharges and that other brain regions may also contribute to the behavioural deficits.",
     "snippet": "we cannot rule out the possibility that ETX may also act through other mechanisms independent of the SWDs and/or other brain regions also contribute to these behavioral deficits in NLG2 KO mice.",
     "surface": "body",
     "anchor": "Discussion, paragraph 11",
     "artifact": "files/fulltext/PMID32719346_Liu2020_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32719346.json",
+     "entry": 4,
+     "what_changed": "2026-10-22 advisory strength scan: the proposition carried words and claims the quote does not contain; narrowed to the quote. Prior wording began: Self-stated limit on mechanism: the partial rescue leaves open that ethosuximide",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "ADVISORY_STRENGTH_SCAN"
+      ],
+      "method": "locator_audit.py --strength-scan (advisory), run 2026-10-22; no blind audit; the narrowing only brings the proposition inside its quote"
+     }
+    }
    },
    {
     "proposition": "Figure 5 read as an image: panels a and b show knockout mice (n about 11 to 13) before and after ethosuximide with stars on total distance, speed, mobile time, freezing time, open-arm time and entries; panels c and d show sociability (S1 versus empty) unchanged in both genotypes and the novel-mouse preference (S2 versus S1) restored in knockouts after the drug (ns before, ** after) while wild type is a clear preference before and after; panel e local thalamic injection raises distance and mobile time. The plots are before and after points on the same animals without a vehicle arm.",
@@ -219,6 +463,110 @@
     "surface": "figure",
     "artifact": "files/figures/PMID32719346_r2/41467_2020_17560_Fig5_HTML.jpg",
     "anchor": "Figure 5 panels a to e; bucket jpg as delivered",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In 13 wild-type mice the open-field measures were reported similar before and after systemic ethosuximide (travel distance p = 0.4772); the comparison is before against after in the same animals.",
+    "snippet": "Open field test showing similar travel distance (p = 0.4772), travel speed (p = 0.4833), mobile time (p = 0.5539), freezing time (p = 0.8073), time spent in periphery zone (p = 0.9018), and time spent in center zone (p = 0.8903) after systemic injections of ETX compared to before injections in WT mice (n = 13)",
+    "surface": "supplement",
+    "anchor": "Supplementary Fig. 7 legend, panel a",
+    "artifact": "files/supplement/PMID32719346_r2/41467_2020_17560_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors report similar elevated-plus-maze open-arm time in wild-type mice before and after ethosuximide (p = 0.7839).",
+    "snippet": "Elevated plus maze test showing similar time spent in open arms (p = 0.7839)",
+    "surface": "supplement",
+    "anchor": "Supplementary Fig. 7 legend, panel b",
+    "artifact": "files/supplement/PMID32719346_r2/41467_2020_17560_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the PAK3 transgenic comparison the preference of wild-type mice for the novel mouse over the familiar one is reported before (p = 0.0009) and after (p = 0.0003) ethosuximide, and the transgenic mice show no preference before (p = 0.5266) or after (p = 0.886) it.",
+    "snippet": "WT mice before treatment: p = 0.0009, after treatment: p = 0.0003, n = 8; PAK3 Tg mice before treatment: p = 0.5266, after treatment: p = 0.886, n = 12",
+    "surface": "supplement",
+    "anchor": "Supplementary Fig. 8 legend, panel b",
+    "artifact": "files/supplement/PMID32719346_r2/41467_2020_17560_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the FMR1 knockout comparison the knockout mice show no preference for the novel mouse before (p = 0.8359) or after (p = 0.6543) ethosuximide.",
+    "snippet": "FMR1 KO mice before treatment: p = 0.8359; after treatment: p = 0.6543, n = 7",
+    "surface": "supplement",
+    "anchor": "Supplementary Fig. 9 legend, panel b",
+    "artifact": "files/supplement/PMID32719346_r2/41467_2020_17560_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors report that the rebound action-potential number in thalamic neurons fell significantly after ethosuximide in both genotypes (wild type p = 0.0012, knockout p = 0.0001).",
+    "snippet": "There is significant reduction in the number of action potentials in both WT (p = 0.0012) and NLG2 KO (p = 0.0001) neurons after the ETX treatment compared to no ETX treatment",
+    "surface": "supplement",
+    "anchor": "Supplementary Fig. 10 legend, panel c",
+    "artifact": "files/supplement/PMID32719346_r2/41467_2020_17560_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors report that the number of rebound action potentials after ethosuximide did not differ between wild-type (20 neurons) and knockout (34 neurons) thalamic neurons (p = 0.9259).",
+    "snippet": "similar number of action potentials in the rebound burst firing after ETX treatment in WT (n = 20) and NLG2 KO (n = 34) thalamic neurons (p = 0.9259)",
+    "surface": "supplement",
+    "anchor": "Supplementary Fig. 10 legend, panel c",
+    "artifact": "files/supplement/PMID32719346_r2/41467_2020_17560_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "After ethosuximide the knockout thalamic neurons still showed lower sIPSC amplitude (p = 0.0005) and frequency (p = 0.0008) than wild type.",
+    "snippet": "Summary graphs showing impaired sIPSC amplitude (p = 0.0005) and frequency (p = 0.0008) in NLG2 KO (n = 10) thalamic neurons compared to WT (n = 11) thalamic neurons after ETX treatment",
+    "surface": "supplement",
+    "anchor": "Supplementary Fig. 10 legend, panel e",
+    "artifact": "files/supplement/PMID32719346_r2/41467_2020_17560_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 and Figure 2 read as images: knockout mice show spike-wave discharges in wake and REM (proportion of time about 13 percent, about 680 events, mean duration about 4.2 against about 1.1 s in wild type); systemic ethosuximide drops the discharge to about 10 percent of baseline within 20 minutes (three stars) and diazepam to about 5 percent; local injection into the thalamus lowers it to about 35 to 45 percent while cortex and hippocampus injections do nothing (ns).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1e: KO SWD about 13% of time, about 680 events, about 4.2 vs 1.1 s; Figure 2: systemic ETX to about 10% of baseline, diazepam about 5%; thalamic injection to about 35-45%; cortex and hippocampus ns.",
+    "surface": "figure",
+    "anchor": "Figure 1 e-h (page 3 render); Figure 2 (page 4 render)",
+    "artifact": "files/figures/PMID32719346_r3/page-04.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3 read as an image: in knockout thalamic neurons sIPSC amplitude about 13 against about 25 pA and frequency about 1.3 against about 4.7 Hz (three stars), mIPSC amplitude and frequency also lower (two and three stars), while reticular-nucleus neurons and intrinsic firing are unchanged (ns).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3: thalamic sIPSC amplitude about 13 vs 25 pA, frequency about 1.3 vs 4.7 Hz (***); nRT ns; firing ns.",
+    "surface": "figure",
+    "anchor": "Figure 3 (page 5 render)",
+    "artifact": "files/figures/PMID32719346_r3/page-05.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 4 read as an image: knockout mice travel about 15 against about 30 m, mobile time about 255 against about 470 s, centre time about 5 against about 40 s; elevated-plus-maze open-arm time about 15 against about 80 s; novel-mouse preference in stage 3 lost in knockouts (ns) with wild type clear (two stars); sociability intact; novel-object recognition intact (Figure 4i-k).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4: KO distance about 15 vs 30 m; mobile about 255 vs 470 s; open arms about 15 vs 80 s; stage-3 social preference lost (ns) vs WT (**).",
+    "surface": "figure",
+    "anchor": "Figure 4 (page 7 render)",
+    "artifact": "files/figures/PMID32719346_r3/page-07.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figures 6 and 7 read as images: optical activation of the reticular terminals raises thalamic sIPSC amplitude and frequency (stars) and lowers the discharge proportion from about 19 to about 10 percent in knockouts, with control-virus sham showing no change; re-expression of the neuroligin in ventrobasal thalamus (CamKII or CAG vectors) raises sIPSC amplitude about 16 to about 26 pA and lowers the discharge proportion from about 22 to about 8 percent.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figures 6-7: optical activation lowers SWD proportion about 19 -> 10%; re-expression raises sIPSC about 16 -> 26 pA and lowers SWD about 22 -> 8%; control virus no effect.",
+    "surface": "figure",
+    "anchor": "Figures 6 and 7 (pages 9 and 11 renders)",
+    "artifact": "files/figures/PMID32719346_r3/page-11.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Figures 7 to 9 read as images: wild-type open-field and plus-maze measures before and after ethosuximide are flat (ns, n = 13 and 10, paired points); in the PAK3 transgenic and FMR1 knockout comparisons the novel-mouse preference of wild-type animals is clear before and after ethosuximide (two to three stars, about 80 percent) and the transgenic or knockout preference stays near 50 percent before and after (ns).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary S7-S9: WT before vs after ETX flat (ns); PAK3 Tg and FMR1 KO stage-3 preference about 50% before and after ETX (ns), WT about 80% (** or ***).",
+    "surface": "figure",
+    "anchor": "Supplementary Figures 7-9 (supplement PDF page rasters)",
+    "artifact": "files/figures/PMID32719346_r3/supp/s_p14-000.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Figure 10 read as an image: rebound action-potential number at minus 80 mV about 4.8 (wild type) against about 4.3 (knockout) in reticular neurons and about 3.3 against about 3.0 in thalamic neurons without ethosuximide, and about 1.2 in both genotypes after ethosuximide (ns between genotypes); firing frequency against injected current identical (ns); sIPSC amplitude about 29 against about 16 pA and frequency about 4.7 against about 2.1 Hz in wild type against knockout after ethosuximide (three stars).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary S10: rebound AP number WT about 3.3, KO about 3.0 without ETX; both about 1.2 with ETX; sIPSC amplitude about 29 vs 16 pA and frequency about 4.7 vs 2.1 Hz after ETX (***).",
+    "surface": "figure",
+    "anchor": "Supplementary Figure 10 (supplement PDF page 16 raster)",
+    "artifact": "files/figures/PMID32719346_r3/supp/s_p16-000.png",
     "panel_text_relation": "text_only"
    }
   ],
