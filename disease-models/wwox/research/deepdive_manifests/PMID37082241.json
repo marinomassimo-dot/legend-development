@@ -473,12 +473,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The Figure 2 legend title states that the analogues are potent inhibitors of Cav3 channels, measured in a plate-reader calcium-flux assay with the response expressed as a percentage of vehicle.",
+    "proposition": "A figure legend title states that the analogues are potent inhibitors of Cav3 channels.",
     "snippet": "MEPIRAPIM analogues are potent inhibitors of Cav3 channels.",
     "surface": "body",
     "anchor": "Figure 2 legend",
     "artifact": "files/fulltext/PMID37082241_Harman2023_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID37082241.json",
+     "entry": 11,
+     "what_changed": "2026-10-22 text-form sweep after the blind text control: the proposition added a clause the quote does not carry; narrowed to the quote (or the quote widened to the source sentence). Prior wording began: The Figure 2 legend title states that the analogues are potent inhibitors of Cav",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CLAUSE_ADDED_SELF_SWEEP"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "The Figure 3 legend states that the compound inhibited Cav3.1 in whole-cell patch-clamp experiments (7 to 8 cells).",
@@ -489,12 +501,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The Supplementary Figure 2 legend states that the first-hour analysis of the absence-model recordings showed no significant differences between treatments.",
+    "proposition": "The supplementary legend states that statistical analyses revealed no significant differences between treatments.",
     "snippet": "Statistical analyses revealed no significant differences between treatments.",
     "surface": "body",
     "anchor": "Supplementary Figure 2 legend",
     "artifact": "files/fulltext/PMID37082241_Harman2023_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID37082241.json",
+     "entry": 13,
+     "what_changed": "2026-10-22 text-form sweep after the blind text control: the proposition added a clause the quote does not carry; narrowed to the quote (or the quote widened to the source sentence). Prior wording began: The Supplementary Figure 2 legend states that the first-hour analysis of the abs",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CLAUSE_ADDED_SELF_SWEEP"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "Figure 2 read as an image (calcium-flux concentration-response curves, three Cav3 subtypes, three compounds): the first compound inhibits Cav3.1 and Cav3.2 with curves crossing 50 percent near the middle of the tested range and Cav3.3 only at the top concentration (about 35 percent response left); the second compound is weaker on Cav3.1 and Cav3.3 and similar on Cav3.2; the reference compound is steeper on all three (response about 10 to 15 percent at the top concentration).",
@@ -553,12 +577,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Supplementary Table S1 lists the mass-spectrometry transitions used to quantify the two analogues and the internal standard; it holds no efficacy data.",
+    "proposition": "Supplementary Table S1 lists the liquid chromatography-tandem mass spectrometry analyte mass transitions and collision energies.",
     "snippet": "Liquid chromatography-tandem mass spectrometry analyte mass transitions and collision energies.",
     "surface": "supplement",
     "anchor": "Supplementary Table S1 caption",
     "artifact": "files/supplement/PMID37082241_r2/Table1.txt",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID37082241.json",
+     "entry": 21,
+     "what_changed": "2026-10-22 text-form sweep after the blind text control: the proposition added a clause or inference the quote does not carry; narrowed to the quote. Prior wording began: Supplementary Table S1 lists the mass-spectrometry transitions used to quantify ",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CLAUSE_ADDED_SELF_SWEEP"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    }
   ],
   "note": ""

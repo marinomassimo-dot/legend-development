@@ -377,12 +377,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "A genotype-restricted effect is reported on one endpoint and the authors' own explanation is a floor: average SWD duration fell with ethosuximide and with memantine in the heterozygotes but not in wild type (interaction p = .044), and the authors say this may stem from the significantly fewer and shorter seizures in wild type; they offer an alternative of distinct mechanisms between genotypes without testing it.",
+    "proposition": "The authors write that the specific effect on the heterozygous rats, but not wild types, may stem from the significantly fewer and shorter seizures observed in the wild-type animals.",
     "snippet": "The specific effect on Grin2b +/− rats, but not wild‐types, may stem from the significantly fewer and shorter seizures observed in Grin2b +/+ animals.",
     "surface": "body",
     "anchor": "Results, Pharmacological blockade of SWDs",
     "artifact": "files/fulltext/PMID40827489_Hristova2025_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40827489.json",
+     "entry": 2,
+     "what_changed": "2026-10-22 blind text control (locator_audit_R2d_figures_20261022.md): the proposition added a clause the quote does not carry; narrowed to the quote (or the quote widened to the source sentences that carry the clause). Prior wording began: A genotype-restricted effect is reported on one endpoint and the authors' own ex",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "Total seizure duration fell with ethosuximide in both genotypes (treatment effect p = .0011, interaction p = .34); the duration interaction is therefore confined to average duration while number and total duration show none. The wild-type group size is 5 and the heterozygous 12.",

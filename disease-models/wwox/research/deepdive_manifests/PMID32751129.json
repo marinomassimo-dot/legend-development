@@ -267,28 +267,64 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The functional imaging in this paper concerned Chrnb2, Grik5, Orai3 and Trpm7 and not T-type channels.",
+    "proposition": "The authors write that this study focused its attention on Chrnb2, Grik5, Orai3 and Trpm7.",
     "snippet": "This study focused its attention on Chrnb2 (AchR β2), Grik5 (GluK5), Orai3 (Orai3), and Trpm7 (TRPM7).",
     "surface": "body",
     "anchor": "Results and Discussion 3.2, second paragraph",
     "artifact": "files/fulltext/PMID32751129_Bouron2020_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32751129.json",
+     "entry": 5,
+     "what_changed": "2026-10-22 text-form sweep after the blind text control: the proposition added a clause or inference the quote does not carry; narrowed to the quote. Prior wording began: The functional imaging in this paper concerned Chrnb2, Grik5, Orai3 and Trpm7 an",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CLAUSE_ADDED_SELF_SWEEP"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
-    "proposition": "The authors cite earlier work for functional T-type channels in embryonic cortical cells; their own transcript data are described as indicating that calcium influx through low-threshold channels plays important roles during cortex formation.",
+    "proposition": "The authors write that the voltage-gated calcium channel transcripts were the predominant ones throughout corticogenesis, indicating that calcium influx through low-threshold channels plays important roles during the formation of the rodent cortex.",
     "snippet": "They were the predominant VGCC transcripts throughout corticogenesis, from E11 to PN1, indicating that Ca2+ influx through low-threshold VGCC plays important roles during the formation of the rodent cortex.",
     "surface": "body",
     "anchor": "Results and Discussion 3.1.1, second paragraph",
     "artifact": "files/fulltext/PMID32751129_Bouron2020_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32751129.json",
+     "entry": 6,
+     "what_changed": "2026-10-22 text-form sweep after the blind text control: the proposition added a clause or inference the quote does not carry; narrowed to the quote. Prior wording began: The authors cite earlier work for functional T-type channels in embryonic cortic",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CLAUSE_ADDED_SELF_SWEEP"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
-    "proposition": "The authors summarise that at the onset of corticogenesis the main surface calcium-uptake routes include Cav3.1, and at the end, ASIC1, Orai2, P2X2 and GluN1 emerged.",
+    "proposition": "The authors write that the most important calcium uptake routes of the cell surface at the onset of corticogenesis are channels formed by TACAN, GluK5, Orai3, Cav3.1, TRPM7 and nAChR β2.",
     "snippet": "the most important Ca2+ uptake routes of the cell surface at the onset of corticogenesis (Figure 6) are channels formed by TACAN, GluK5, Orai3, Cav3.1, TRPM7, and nAChR β2",
     "surface": "body",
     "anchor": "Results and Discussion 3.3, Summary",
     "artifact": "files/fulltext/PMID32751129_Bouron2020_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32751129.json",
+     "entry": 7,
+     "what_changed": "2026-10-22 blind text control (locator_audit_R2d_figures_20261022.md): the proposition added a clause the quote does not carry; narrowed to the quote (or the quote widened to the source sentences that carry the clause). Prior wording began: The authors summarise that at the onset of corticogenesis the main surface calci",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "The authors state two limitations: that only some transcripts are translated and that post-translational modifications were not considered.",

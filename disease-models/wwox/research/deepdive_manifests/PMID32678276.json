@@ -319,12 +319,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The authors caution that spike-wave discharge counts during sleep are hard to separate from sleep spindles and should be interpreted with caution.",
+    "proposition": "The authors write that the drug effects on spike-wave discharge occurrence during sleep should be interpreted with caution.",
     "snippet": "Therefore, the drug effects on SWD occurrence during sleep should be interpreted with caution.",
     "surface": "body",
     "anchor": "Discussion, paragraph on sleep spindles",
     "artifact": "files/fulltext/PMID32678276_Kam2020_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32678276.json",
+     "entry": 10,
+     "what_changed": "2026-10-22 text-form sweep after the blind text control: the proposition added a clause or inference the quote does not carry; narrowed to the quote. Prior wording began: The authors caution that spike-wave discharge counts during sleep are hard to se",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CLAUSE_ADDED_SELF_SWEEP"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "The authors say the study design did not allow more than one dose of each drug to be tested.",
@@ -335,12 +347,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The authors state that no EEG study of Alzheimer patients had, to their knowledge, found spike-wave discharges, so the predictive validity of the mouse measure remains to be seen in future clinical studies.",
+    "proposition": "The authors write that no EEG study on Alzheimer patients, to their knowledge, has discovered spike-wave discharges.",
     "snippet": "No EEG study on AD patients to our knowledge has discovered SWDs",
     "surface": "body",
     "anchor": "Discussion, translational paragraph",
     "artifact": "files/fulltext/PMID32678276_Kam2020_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32678276.json",
+     "entry": 12,
+     "what_changed": "2026-10-22 text-form sweep after the blind text control: the proposition added a clause the quote does not carry; narrowed to the quote (or the quote widened to the source sentence). Prior wording began: The authors state that no EEG study of Alzheimer patients had, to their knowledg",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CLAUSE_ADDED_SELF_SWEEP"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "The Conclusion states that ethosuximide and levetiracetam reduced spike-wave discharges in the mixed state, probably by different mechanisms, because ethosuximide decreased total cortical EEG power at 9-11 Hz and levetiracetam did not.",

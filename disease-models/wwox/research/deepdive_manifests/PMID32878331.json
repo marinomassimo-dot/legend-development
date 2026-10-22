@@ -277,12 +277,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The Figure 3 legend states that the experiment evaluated recovery from fast inactivation of wild-type and mutant Cav3.1 channels with a paired-pulse protocol.",
+    "proposition": "A figure legend title reads: recovery from fast inactivation of wild-type and mutant Cav3.1 channels.",
     "snippet": "Recovery from fast inactivation of WT and mutant Cav3.1 channels.",
     "surface": "body",
     "anchor": "Figure 3 legend title",
     "artifact": "files/fulltext/PMID32878331_Berecki2020_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32878331.json",
+     "entry": 6,
+     "what_changed": "2026-10-22 text-form sweep after the blind text control: the proposition added a clause the quote does not carry; narrowed to the quote (or the quote widened to the source sentence). Prior wording began: The Figure 3 legend states that the experiment evaluated recovery from fast inac",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CLAUSE_ADDED_SELF_SWEEP"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "The Figure 4 legend states that the experiment measured rate-dependent changes in calcium current availability of wild-type and mutant channels.",

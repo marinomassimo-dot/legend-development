@@ -398,12 +398,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Seizure suppression did not rescue the social-novelty deficit with ethosuximide in a repeated three-chamber design, the controls being dosed too: the group difference in social novelty (control versus digenic) was present before and after the drug. A symptomatic effect on the seizure endpoint without effect on this comorbidity.",
+    "proposition": "The authors report that ethosuximide treatment did not rescue the social deficits in the digenic mice.",
     "snippet": "we found that ETX treatment did not rescue the social deficits in DiGstg+Ca1A mice (Fig. 2E).",
     "surface": "body",
     "anchor": "Results, Ethosuximide suppresses seizures but fails to rescue the social deficit",
     "artifact": "files/fulltext/PMID42536722_Miao2026_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42536722.json",
+     "entry": 2,
+     "what_changed": "2026-10-22 blind text control (locator_audit_R2d_figures_20261022.md): the proposition added a clause the quote does not carry; narrowed to the quote (or the quote widened to the source sentences that carry the clause). Prior wording began: Seizure suppression did not rescue the social-novelty deficit with ethosuximide ",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "The authors state that, with the Cav3.1 gene deleted, the finding demonstrates Cav3.1 to be critical for the generation of spike-wave discharges in both a monogenic and the digenic absence seizure model.",
@@ -502,20 +514,44 @@
     }
    },
    {
-    "proposition": "The authors report that almost all mice of the PV-specific Cacna1a deletion on the Cacng2 heterozygous background (11 of 12 recorded) showed more than one spike-wave discharge in 4 hours of recording.",
+    "proposition": "The authors report that almost all of the PV-specific deletion mice on the Cacng2 background (11 of 12 recorded) showed more than one spike-wave discharge during the 4-hour EEG recording.",
     "snippet": "Almost all DiGstg+PV-Ca1A mice (11/12 mice recorded) showed more than one SWD during 4-hr EEG recording period",
     "surface": "body",
     "anchor": "Results, Heterozygous PV-specific Cacna1a deletion",
     "artifact": "files/fulltext/PMID42536722_Miao2026_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42536722.json",
+     "entry": 9,
+     "what_changed": "2026-10-22 text-form sweep after the blind text control: the proposition added a clause the quote does not carry; narrowed to the quote (or the quote widened to the source sentence). Prior wording began: The authors report that almost all mice of the PV-specific Cacna1a deletion on t",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CLAUSE_ADDED_SELF_SWEEP"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
-    "proposition": "The authors state that, like ethosuximide, clozapine treatment dramatically suppressed cortical activities across a broad frequency range in the chemogenetic mice.",
+    "proposition": "The authors state that clozapine treatment dramatically suppressed cortical activities across a broad frequency range.",
     "snippet": "clozapine treatment dramatically suppressed cortical activities across a broad frequency range",
     "surface": "body",
     "anchor": "Results, Activating PV interneurons ameliorates absence seizures",
     "artifact": "files/fulltext/PMID42536722_Miao2026_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42536722.json",
+     "entry": 10,
+     "what_changed": "2026-10-22 text-form sweep after the blind text control: the proposition added a clause the quote does not carry; narrowed to the quote (or the quote widened to the source sentence). Prior wording began: The authors state that, like ethosuximide, clozapine treatment dramatically supp",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CLAUSE_ADDED_SELF_SWEEP"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "The authors report that the chemogenetic mice were almost immobile after the higher clozapine dose.",
@@ -526,12 +562,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The authors report that clozapine alone did not rescue the social-novelty deficit in mice lacking the designer receptor, which they take to show that clozapine itself cannot account for the behavioural rescue.",
+    "proposition": "The authors report that clozapine treatment alone did not rescue the social novelty deficit in mice lacking the designer receptor.",
     "snippet": "Clozapine treatment alone did not rescue the social novelty deficit in DREADD-negative mice",
     "surface": "body",
     "anchor": "Results, Activating PV interneurons ameliorates absence seizures",
     "artifact": "files/fulltext/PMID42536722_Miao2026_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42536722.json",
+     "entry": 12,
+     "what_changed": "2026-10-22 text-form sweep after the blind text control: the proposition added a clause the quote does not carry; narrowed to the quote (or the quote widened to the source sentence). Prior wording began: The authors report that clozapine alone did not rescue the social-novelty defici",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CLAUSE_ADDED_SELF_SWEEP"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "The authors state that deleting the Cav3.1 channel abolishes bursting in thalamocortical neurons and the generation of spike-wave discharges but fails to rescue the social deficits.",
@@ -550,12 +598,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The supplementary legend states that the vehicle injection did not stop the absence seizures in the chemogenetic mice and had no impact on the power spectrum.",
+    "proposition": "The supplementary legend states that vehicle treatment does not stop absence seizures in the chemogenetic mice.",
     "snippet": "Vehicle treatment does not stop absence seizures in ePV-DiGstg+Ca1A mice.",
     "surface": "supplement",
     "anchor": "Supplementary Fig. S7 legend",
     "artifact": "files/supplement/PMID42536722_r2/sciadv.aec6065_sm.txt",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42536722.json",
+     "entry": 15,
+     "what_changed": "2026-10-22 text-form sweep after the blind text control: the proposition added a clause the quote does not carry; narrowed to the quote (or the quote widened to the source sentence). Prior wording began: The supplementary legend states that the vehicle injection did not stop the abse",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CLAUSE_ADDED_SELF_SWEEP"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "The supplementary legend states that ethosuximide broadly suppresses cortical activities.",

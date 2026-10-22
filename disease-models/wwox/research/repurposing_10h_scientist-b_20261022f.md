@@ -39,3 +39,9 @@ All new figure attestations and the strength-scan narrowings below are unaudited
 ## 6. DEFAULTS_TAKEN and STOP_LOG
 
 Seven completions (ordering by lead relevance, then by figure effort); 32878331, 33704440 and 40825030 supplements: text layer of a font without Unicode map was not used for locators except where the verifier accepted it; three PMC-bucket supplement TIF files were converted to PNG with ImageMagick for viewing. STOP_LOG: none.
+
+## 7. Text-control repairs (blind text control in `locator_audit_R2d_figures_20261022.md`: 6 of 32 OVERSHOOT)
+
+The six adverse text entries were repaired from the source, each with `contradicts_locator` declared (repairs unaudited): 40827489 e2, 32719346 e2, 35243344 e2, 42536722 e2 and 32751129 e7 were narrowed to their quotes; 37275776 e9 (chronic in-vitro arm) was repaired by widening the quote to the three source sentences, which carry both the restoration of close-to-normal firing at the middle concentration and the authors' statement that the highest concentration seemed to produce an overshoot and greatly reduced network activity (so the earlier "over-suppressed" is the authors' own word, and the earlier quote had simply omitted it).
+
+Self-sweep of every text entry written in the R2c to R2e passes (20 manifests) by form: 15 further entries whose proposition added a clause or an inference beyond the quote were narrowed (30175250 e19; 32678276 e10, e12; 32719346 e6, e8, e9, e11; 32751129 e5, e6; 33704440 e8, e10; 34483921 e11; 35243344 e7, e9; 37082241 e11, e13, e21; 40068874 e9; 40166234 e4; 42536722 e9, e10, e12, e15; 32878331 e6), all declared (`ADVISORY`/self-sweep audit field, unaudited). `locator_audit.py --strength-scan` over all 20 manifests now flags one entry (37082241 e3, "null" in "Cav3.3 null mice": a mouse-line name, not a null-result claim). Figure attestations that rendered were not touched; the 53 unrendered ones await the audit rerun.
