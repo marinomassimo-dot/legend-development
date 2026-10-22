@@ -1,37 +1,37 @@
 {
-  "record_kind": "contemporaneous_receipt",
-  "event_id": "FTR-20261022-41531035-02",
-  "study_id": {
-    "pmid": "41531035",
-    "doi": "10.1002/epi.70095"
-  },
-  "analysis_at": "2026-10-22T04:05:00Z",
-  "analysis_time_precision": "minute",
-  "workflow": "scientist-d, task R4c-D-20261022, resume of the partial receipt FTR-20261021-41531035-01 (owed: the nine embedded supplementary images). Route: the supplementary docx already on disk; its text (Tables S2 and S3, figure titles) read in full and the nine embedded images extracted unchanged with the Python zipfile module and opened as images (Table S1 as two images, Figure S1, Figure S2 panels A to F). Locators appended; nothing in the prior manifest was changed.",
-  "evidence_depth": "complete_fulltext_read",
-  "source_locator": "files/fulltext/PMID41531035_LiogierDArdhuy2026_PMC_r2.xml",
-  "source_fingerprint": "f5ffc20a1c18f15db4aaa3b5ecd64f0c8f9ba7e41bf925089588b675b222092c",
-  "source_kind": "fulltext_local",
-  "coverage": {
-    "abstract": "read",
-    "introduction": "read",
-    "methods": "read",
-    "results": "read",
-    "figures": "read",
-    "tables": "read",
-    "discussion": "read",
-    "limitations": "read",
-    "supplementary": "read"
-  },
-  "outputs": [
-    "disease-models/wwox/research/deepdive_manifests/PMID41531035.json"
-  ],
-  "evidence_basis": [
-    "coverage_map",
-    "manifest",
-    "supplementary tables read and all nine embedded images opened"
-  ],
-  "prior_receipt": "FTR-20261021-41531035-01",
-  "reread_reason": "inadequate_prior_coverage",
-  "event_at": "2026-10-22T04:05:00Z"
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261022-41531035-02",
+ "study_id": {
+  "pmid": "41531035",
+  "doi": "10.1002/epi.70095"
+ },
+ "analysis_at": "2026-10-22T04:05:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d, task R4c-D-20261022, resume of the partial receipt FTR-20261021-41531035-01 (owed: the nine embedded supplementary images). Route: the supplementary docx already on disk; its text (Tables S2 and S3, figure titles) read in full and the nine embedded images extracted unchanged with the Python zipfile module and opened as images (Table S1 as two images, Figure S1, Figure S2 panels A to F). Locators appended; nothing in the prior manifest was changed.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID41531035_LiogierDArdhuy2026_PMC_r2.xml",
+ "source_fingerprint": "f5ffc20a1c18f15db4aaa3b5ecd64f0c8f9ba7e41bf925089588b675b222092c",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41531035.json"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "supplementary tables read and all nine embedded images opened"
+ ],
+ "prior_receipt": "FTR-20261021-41531035-01",
+ "reread_reason": "inadequate_prior_coverage",
+ "event_at": "2026-10-22T04:05:00Z"
 }

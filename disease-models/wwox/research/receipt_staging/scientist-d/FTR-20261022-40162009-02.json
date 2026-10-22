@@ -1,37 +1,37 @@
 {
-  "record_kind": "contemporaneous_receipt",
-  "event_id": "FTR-20261022-40162009-02",
-  "study_id": {
-    "pmid": "40162009",
-    "doi": "10.3389/fneur.2025.1516026"
-  },
-  "analysis_at": "2026-10-22T04:04:00Z",
-  "analysis_time_precision": "minute",
-  "workflow": "scientist-d, task R4c-D-20261022, resume of the partial receipt FTR-20261021-40162009-01 (owed: the three supplementary figure images). Route: the supplementary docx already on disk; its text (Tables S1-S4 and figure legends) was read in full and the three embedded images extracted unchanged with the Python zipfile module and opened as images. Locators appended; nothing in the prior manifest was changed.",
-  "evidence_depth": "complete_fulltext_read",
-  "source_locator": "files/fulltext/PMID40162009_Schulz2025_PMC.xml",
-  "source_fingerprint": "a7f996c3a5c18885ec47f533d240028a198cb13ea6083a8b04694065975c7a97",
-  "source_kind": "fulltext_local",
-  "coverage": {
-    "abstract": "read",
-    "introduction": "read",
-    "methods": "read",
-    "results": "read",
-    "figures": "read",
-    "tables": "read",
-    "discussion": "read",
-    "limitations": "read",
-    "supplementary": "read"
-  },
-  "outputs": [
-    "disease-models/wwox/research/deepdive_manifests/PMID40162009.json"
-  ],
-  "evidence_basis": [
-    "coverage_map",
-    "manifest",
-    "supplementary Tables S1-S4 read and Figures S1-S3 opened as images"
-  ],
-  "prior_receipt": "FTR-20261021-40162009-01",
-  "reread_reason": "inadequate_prior_coverage",
-  "event_at": "2026-10-22T04:04:00Z"
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261022-40162009-02",
+ "study_id": {
+  "pmid": "40162009",
+  "doi": "10.3389/fneur.2025.1516026"
+ },
+ "analysis_at": "2026-10-22T04:04:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d, task R4c-D-20261022, resume of the partial receipt FTR-20261021-40162009-01 (owed: the three supplementary figure images). Route: the supplementary docx already on disk; its text (Tables S1-S4 and figure legends) was read in full and the three embedded images extracted unchanged with the Python zipfile module and opened as images. Locators appended; nothing in the prior manifest was changed.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID40162009_Schulz2025_PMC.xml",
+ "source_fingerprint": "a7f996c3a5c18885ec47f533d240028a198cb13ea6083a8b04694065975c7a97",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID40162009.json"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "supplementary Tables S1-S4 read and Figures S1-S3 opened as images"
+ ],
+ "prior_receipt": "FTR-20261021-40162009-01",
+ "reread_reason": "inadequate_prior_coverage",
+ "event_at": "2026-10-22T04:04:00Z"
 }

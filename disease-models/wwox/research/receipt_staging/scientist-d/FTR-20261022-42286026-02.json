@@ -1,37 +1,37 @@
 {
-  "record_kind": "contemporaneous_receipt",
-  "event_id": "FTR-20261022-42286026-02",
-  "study_id": {
-    "pmid": "42286026",
-    "doi": "10.1038/s41598-026-55285-3"
-  },
-  "analysis_at": "2026-10-22T04:08:00Z",
-  "analysis_time_precision": "minute",
-  "workflow": "scientist-d, task R4c-D-20261022, resume of the partial receipt FTR-20261021-42286026-01 (owed: the supplementary docx). Route: the docx already on disk (SHA-256 recorded); its two paragraphs read as text and its one embedded image extracted unchanged and opened as an image. Locators appended; nothing in the prior manifest was changed.",
-  "evidence_depth": "complete_fulltext_read",
-  "source_locator": "files/fulltext/PMID42286026_Xiong2026_PMC.xml",
-  "source_fingerprint": "1cb601ecef5a60f36892ad227a22353832ad716e60f002f6e5bc89380ae79a59",
-  "source_kind": "fulltext_local",
-  "coverage": {
-    "abstract": "read",
-    "introduction": "read",
-    "methods": "read",
-    "results": "read",
-    "figures": "read",
-    "tables": "read",
-    "discussion": "read",
-    "limitations": "read",
-    "supplementary": "read"
-  },
-  "outputs": [
-    "disease-models/wwox/research/deepdive_manifests/PMID42286026.json"
-  ],
-  "evidence_basis": [
-    "coverage_map",
-    "manifest",
-    "supplementary docx (legend and Figure S1) read"
-  ],
-  "prior_receipt": "FTR-20261021-42286026-01",
-  "reread_reason": "inadequate_prior_coverage",
-  "event_at": "2026-10-22T04:08:00Z"
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261022-42286026-02",
+ "study_id": {
+  "pmid": "42286026",
+  "doi": "10.1038/s41598-026-55285-3"
+ },
+ "analysis_at": "2026-10-22T04:08:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d, task R4c-D-20261022, resume of the partial receipt FTR-20261021-42286026-01 (owed: the supplementary docx). Route: the docx already on disk (SHA-256 recorded); its two paragraphs read as text and its one embedded image extracted unchanged and opened as an image. Locators appended; nothing in the prior manifest was changed.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID42286026_Xiong2026_PMC.xml",
+ "source_fingerprint": "1cb601ecef5a60f36892ad227a22353832ad716e60f002f6e5bc89380ae79a59",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42286026.json"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "supplementary docx (legend and Figure S1) read"
+ ],
+ "prior_receipt": "FTR-20261021-42286026-01",
+ "reread_reason": "inadequate_prior_coverage",
+ "event_at": "2026-10-22T04:08:00Z"
 }

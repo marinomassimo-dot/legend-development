@@ -1,42 +1,42 @@
 {
-  "record_kind": "contemporaneous_receipt",
-  "event_id": "FTR-20261022-42594875-01",
-  "study_id": {
-    "pmid": "42594875",
-    "doi": "10.1016/j.xcrm.2026.102989"
-  },
-  "analysis_at": "2026-10-22T04:16:00Z",
-  "analysis_time_precision": "minute",
-  "workflow": "scientist-d (stated assumption of the Orchestrator), task R4c-D-20261022, adjacent R4 precedent (new, not in the registry); context_policy QUESTION_DRIVEN (held: the group's questions on symptomatic versus modifying separation and N-of-1 designs). Route: Europe PMC JATS for PMC13589468 (CC BY-NC) as the text surface; Data S1 and Document S2 and the figures from the Europe PMC supplementaryFiles container; Data S1 read in full, Document S2 compared with it; Figure 1 and the graphical abstract converted to PNG and opened as images. Every statement is class level and is not WWOX evidence.",
-  "evidence_depth": "complete_fulltext_read",
-  "source_locator": "files/fulltext/PMID42594875_AartsmaRus2026_PMC13589468.xml",
-  "source_fingerprint": "505342c722a1eb8fde16af40356b17fecbada359dd0d2913e1f48d9593141a37",
-  "source_kind": "fulltext_local",
-  "coverage": {
-    "abstract": "read",
-    "introduction": "read",
-    "methods": "read",
-    "results": "not_present",
-    "figures": "read",
-    "tables": "not_present",
-    "discussion": "read",
-    "limitations": "not_present",
-    "supplementary": "read",
-    "references": "read"
-  },
-  "outputs": [
-    "disease-models/wwox/research/deepdive_manifests/PMID42594875.json",
-    "disease-models/wwox/research/repurposing_r4c_scientist-d_20261022.md",
-    "disease-models/wwox/research/commit_candidates/CC-20261022-SCIENTISTD-R4C-01.md"
-  ],
-  "evidence_basis": [
-    "coverage_map",
-    "manifest",
-    "Figure 1 and graphical abstract opened as images",
-    "Data S1 voting record read in full; Document S2 compared",
-    "SUBSTITUTE: no WWOX content (0 mentions)"
-  ],
-  "prior_receipt": null,
-  "reread_reason": "first_read",
-  "event_at": "2026-10-22T04:16:00Z"
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261022-42594875-01",
+ "study_id": {
+  "pmid": "42594875",
+  "doi": "10.1016/j.xcrm.2026.102989"
+ },
+ "analysis_at": "2026-10-22T04:16:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d (stated assumption of the Orchestrator), task R4c-D-20261022, adjacent R4 precedent (new, not in the registry); context_policy QUESTION_DRIVEN (held: the group's questions on symptomatic versus modifying separation and N-of-1 designs). Route: Europe PMC JATS for PMC13589468 (CC BY-NC) as the text surface; Data S1 and Document S2 and the figures from the Europe PMC supplementaryFiles container; Data S1 read in full, Document S2 compared with it; Figure 1 and the graphical abstract converted to PNG and opened as images. Every statement is class level and is not WWOX evidence.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID42594875_AartsmaRus2026_PMC13589468.xml",
+ "source_fingerprint": "505342c722a1eb8fde16af40356b17fecbada359dd0d2913e1f48d9593141a37",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "not_present",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42594875.json",
+  "disease-models/wwox/research/repurposing_r4c_scientist-d_20261022.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261022-SCIENTISTD-R4C-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "Figure 1 and graphical abstract opened as images",
+  "Data S1 voting record read in full; Document S2 compared",
+  "SUBSTITUTE: no WWOX content (0 mentions)"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "event_at": "2026-10-22T04:16:00Z"
 }

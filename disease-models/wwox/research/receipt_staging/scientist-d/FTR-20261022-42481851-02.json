@@ -1,37 +1,37 @@
 {
-  "record_kind": "contemporaneous_receipt",
-  "event_id": "FTR-20261022-42481851-02",
-  "study_id": {
-    "pmid": "42481851",
-    "doi": "10.1038/s41591-026-04527-y"
-  },
-  "analysis_at": "2026-10-22T04:07:00Z",
-  "analysis_time_precision": "minute",
-  "workflow": "scientist-d, task R4c-D-20261022, resume of the partial receipt FTR-20261021-42481851-01 (owed: the supplementary information). Route: the three-page PDF already on disk (image-only Reporting Summary, SHA-256 identical to a fresh PMC open-data download); pages rendered at 110 dpi and opened as images; the Extended Data figures named in the prior receipt are in the article PDF, not in this file, and are not claimed here. Locators appended; nothing in the prior manifest was changed.",
-  "evidence_depth": "complete_fulltext_read",
-  "source_locator": "files/fulltext/PMID42481851_KimMcManus2026_PMC.xml",
-  "source_fingerprint": "eda796130cebea1ceb25e572b9a5ba7a9a6682d995d97e680b7105aad70e1005",
-  "source_kind": "fulltext_local",
-  "coverage": {
-    "abstract": "read",
-    "introduction": "read",
-    "methods": "read",
-    "results": "read",
-    "figures": "read",
-    "tables": "read",
-    "discussion": "read",
-    "limitations": "read",
-    "supplementary": "read"
-  },
-  "outputs": [
-    "disease-models/wwox/research/deepdive_manifests/PMID42481851.json"
-  ],
-  "evidence_basis": [
-    "coverage_map",
-    "manifest",
-    "supplementary Reporting Summary (3 pages) read as images"
-  ],
-  "prior_receipt": "FTR-20261021-42481851-01",
-  "reread_reason": "inadequate_prior_coverage",
-  "event_at": "2026-10-22T04:07:00Z"
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261022-42481851-02",
+ "study_id": {
+  "pmid": "42481851",
+  "doi": "10.1038/s41591-026-04527-y"
+ },
+ "analysis_at": "2026-10-22T04:07:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d, task R4c-D-20261022, resume of the partial receipt FTR-20261021-42481851-01 (owed: the supplementary information). Route: the three-page PDF already on disk (image-only Reporting Summary, SHA-256 identical to a fresh PMC open-data download); pages rendered at 110 dpi and opened as images; the Extended Data figures named in the prior receipt are in the article PDF, not in this file, and are not claimed here. Locators appended; nothing in the prior manifest was changed.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID42481851_KimMcManus2026_PMC.xml",
+ "source_fingerprint": "eda796130cebea1ceb25e572b9a5ba7a9a6682d995d97e680b7105aad70e1005",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42481851.json"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "supplementary Reporting Summary (3 pages) read as images"
+ ],
+ "prior_receipt": "FTR-20261021-42481851-01",
+ "reread_reason": "inadequate_prior_coverage",
+ "event_at": "2026-10-22T04:07:00Z"
 }
