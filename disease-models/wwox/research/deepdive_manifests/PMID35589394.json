@@ -131,12 +131,26 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The inhibitor was given before the hyperoxia exposure at P6, and the authors conclude it prevented the injury.",
-    "snippet": "we administered SB216763 (SB), a GSK3β-specific inhibitor, before hyperoxia exposure at P6",
+    "proposition": "The inhibitor was given before the hyperoxia exposure at P6; the authors conclude that GSK3 beta inhibition before the injury prevents the hyperoxia-induced dysmaturation of neuronal progenitors and restores interneuron development in the hippocampus (named readouts: Sox2, POMC/CB and BrdU cells at P8 and GAD65-GFP interneurons at P60), not the injury in general.",
+    "snippet": "Overall, these results show that pharmacological inhibition of GSK3β before the hyperoxic injury prevents the HO-induced dysmaturation of neuronal progenitors and restores interneuron development in the hippocampus.",
     "anchor": "Results / Pharmacological GSK3β inhibition prevents HO-induced alterations in progenitor cell and neuronal development",
     "surface": "body",
     "artifact": "files/fulltext/PMID35589394_Hyperoxia2022_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35589394.json",
+     "entry": 3,
+     "what_changed": "Auditor OVERSHOOT: 'prevented the injury' was broader than the readouts named; quote widened to the authors' own conclusion sentence and the proposition restated with the named readouts.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3c_20261022.md",
+      "triple": 3,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "Tamoxifen to delete the floxed kinase gene was injected at P4, 48 hours before hyperoxia.",
@@ -171,12 +185,26 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The authors conclude that GSK3 beta activation in Gad65 interneurons, rather than in POMC granule cells, mediates the memory deficit.",
-    "snippet": "aberrant activation of GSK3β in Gad65-expressing interneurons, rather than in POMC-expressing newly born granule cells, plays a significant role",
+    "proposition": "The authors conclude that aberrant GSK3 beta activation in Gad65 interneurons, rather than in POMC granule cells, plays a significant role in mediating the hyperoxia-induced deficit in hippocampus-dependent learning (not that it is the sole mediator).",
+    "snippet": "Together, these results indicate that aberrant activation of GSK3β in Gad65-expressing interneurons, rather than in POMC-expressing newly born granule cells, plays a significant role in mediating the HO-induced deficit in hippocampal-dependent learning tasks.",
     "anchor": "Results / GSK3β ablation in hippocampal interneurons",
     "surface": "body",
     "artifact": "files/fulltext/PMID35589394_Hyperoxia2022_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35589394.json",
+     "entry": 8,
+     "what_changed": "Auditor OVERSHOOT: 'mediates' replaced by the source's 'plays a significant role in mediating'; quote widened to the full sentence.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3c_20261022.md",
+      "triple": 8,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    }
   ],
   "source_fulltext_indexed": true,

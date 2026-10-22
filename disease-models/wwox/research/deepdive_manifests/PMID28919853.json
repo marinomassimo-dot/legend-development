@@ -115,12 +115,26 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The authors state, without data, that in a pilot and an earlier study these concentrations did not affect seizure latency or severity after pilocarpine.",
+    "proposition": "The authors state that a pilot study and an earlier paper found the infused concentrations did not affect seizure latency or severity after pilocarpine; the data are not in the PMC XML body (one hit for 'latency'), and the supplement was not on disk, so absence of the data from the supplement is not established.",
     "snippet": "In a pilot study and our previous study (Hyun et al., 2017), the concentration of each compound could not affect the seizure latency and its severity in response to pilocarpine.",
     "anchor": "Methods / Intracerebroventricular Infusion",
     "surface": "body",
     "artifact": "files/fulltext/PMID28919853_CDK5astro2017_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID28919853.json",
+     "entry": 1,
+     "what_changed": "Auditor UNVERIFIABLE: 'without data' was checked in the XML body only; restated with that scope and the unread supplement declared.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNVERIFIABLE"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3c_20261022.md",
+      "triple": 1,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "Six hours after status epilepticus 81.7 percent of PV cells carried CDK5-Y15 phosphorylation against 19.6 percent in controls.",
