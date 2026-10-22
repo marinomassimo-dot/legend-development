@@ -339,12 +339,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Within each diagnosis the 12-month responder proportion did not differ by age band (Table 3 prints 101 of 165, 32 of 42 and 21 of 40 as the all-ages cells); the table, not this sentence, carries the counts.",
+    "proposition": "In each diagnosis the paper reports no significant difference in the 12-month responder proportion by age band (Table 3 prints p values of .14, .99, .29 and .56 across the columns, in cells of 7 to 54 patients); a non-significant test in cells this small is not evidence that the proportions are equal, and the table, not this sentence, carries the counts.",
     "snippet": "Within each diagnosis category, there was no significant difference in the proportion of responders to FFA",
     "anchor": "Results, Responders by age and DEE diagnosis",
     "surface": "body",
     "artifact": "files/fulltext/PMID42334048_Villanueva2026_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42334048.json",
+     "entry": 7,
+     "what_changed": "Proposition narrowed after the blind audit (OVERSHOOT). Was: Within each diagnosis the 12-month responder proportion did not differ by age band (Table 3 prints 101 of 165, 32 of 42 and 21 of 40 as the all-ages cells); the table, not this sentence, carries the counts. The original said the proportion 'did not differ by age band'; the source says 'no significant difference', and the same paragraph reports a higher LGS responder rate in adults. The quoted snippet, anchor and artefact are unchanged unless stated.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind audit of triples against the sources; persisted in disease-models/wwox/research/page_adjudications/locator_audit_R4b_R2b_20261022.md (commit ae343793). The repair itself is unaudited (blind audit OWED)."
+     }
+    }
    },
    {
     "proposition": "Retention was 96.4, 86.1 and 77.1 percent at 3, 6 and 12 months; the text does not state how patients who stopped before 12 months enter the responder denominators.",
@@ -355,12 +367,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Non-seizure outcome counts: improvement in cognition 51 of 86 (59.3 percent), behavior 36 of 88, sleep 18 of 74, caregiver 30 of 67 - fewer than half of the 166 patients have a rating in any domain.",
+    "proposition": "Non-seizure outcome counts: improvement in cognition 51 of 86 (59.3 percent), behavior 36 of 88, sleep 18 of 74, caregiver 30 of 67. The ratings cover 86, 88, 74 and 67 of the 166 patients, i.e. about 52, 53, 45 and 40 percent: more than half for cognition and behavior, fewer than half only for sleep and caregiver.",
     "snippet": "Between baseline and the 12‐month visit, 51 of 86 participants (59.3%), 36 of 88 (40.9%), 18 of 74 (24.3%), and 30 of 67 participants (44.8%) with CGI data showed improvements in cognition, behavior, sleep and caregiver domains, respectively",
     "anchor": "Results, Non-seizures outcomes",
     "surface": "body",
     "artifact": "files/fulltext/PMID42334048_Villanueva2026_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42334048.json",
+     "entry": 9,
+     "what_changed": "Proposition narrowed after the blind audit (OVERSHOOT). Was: Non-seizure outcome counts: improvement in cognition 51 of 86 (59.3 percent), behavior 36 of 88, sleep 18 of 74, caregiver 30 of 67 - fewer than half of the 166 patients have a rating in any domain. The original said 'fewer than half of the 166 patients have a rating in any domain', which is false for cognition (86 of 166) and behavior (88 of 166). The quoted snippet, anchor and artefact are unchanged unless stated.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind audit of triples against the sources; persisted in disease-models/wwox/research/page_adjudications/locator_audit_R4b_R2b_20261022.md (commit ae343793). The repair itself is unaudited (blind audit OWED)."
+     }
+    }
    },
    {
     "proposition": "The authors acknowledge the global-impression scale is not a formal test.",
@@ -409,6 +433,14 @@
     "surface": "body",
     "artifact": "files/fulltext/PMID42334048_Villanueva2026_PMC.xml",
     "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In LGS the paper reports a higher responder rate in adults than in the youngest children, which it relates possibly to disease evolution, with the caveat that few LGS patients were in the younger groups.",
+    "snippet": "For patients with LGS, a higher responder rate was observed in adults vs children 0–6 or",
+    "anchor": "Results, Responders by age and DEE diagnosis",
+    "surface": "body",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID42334048_Villanueva2026_PMC.xml"
    }
   ],
   "source_fulltext_indexed": true,

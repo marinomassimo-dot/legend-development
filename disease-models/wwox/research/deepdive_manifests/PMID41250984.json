@@ -246,12 +246,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Fig 2: stacked severity-score bars by functional class: gain-of-function (n=3 scored) from 0 to 5 with about one third at 5, loss-of-function mostly scores 1 to 2, severe loss spans 0 to 5, wild-type-like (n=2) all at 1; every class contains scores of 0 to 2.",
+    "proposition": "Fig 2: stacked severity-score bars by functional class: gain-of-function (n=3 scored) at 0, 2 and 5, one third each; loss-of-function mostly scores 1 to 2 (50 percent at 1); severe loss spans 0 to 5; wild-type-like (n=2) all at 1. The classes do not share a common range: wild-type-like has only the score 1 and gain-of-function has no score 1.",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 percent of participants by PSS: GOF 33 at PSS 0, 33 at PSS 2, 33 at PSS 5; LOF 8 at 0, 50 at 1, 17 at 2, 17 at 3, 8 at 4; SLOF 18 at 0, 27 at 1, 18 at 2, 18 at 3, 9 at 4, 9 at 5; WT-like 100 at 1.",
     "anchor": "Figure 2",
     "surface": "figure",
     "artifact": "files/figures/PMID41250984_r2/EPI4-11-190-g002.jpg",
-    "panel_text_relation": "panel_only"
+    "panel_text_relation": "panel_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID41250984.json",
+     "entry": 12,
+     "what_changed": "Proposition narrowed after the blind audit (OVERSHOOT). Was: Fig 2: stacked severity-score bars by functional class: gain-of-function (n=3 scored) from 0 to 5 with about one third at 5, loss-of-function mostly scores 1 to 2, severe loss spans 0 to 5, wild-type-like (n=2) all at 1; every class contains scores of 0 to 2. The original ended 'every class contains scores of 0 to 2', which is false: wild-type-like has only 1 and gain-of-function has no 1. The quoted snippet, anchor and artefact are unchanged unless stated.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind audit of triples against the sources; persisted in disease-models/wwox/research/page_adjudications/locator_audit_R4b_R2b_20261022.md (commit ae343793). The repair itself is unaudited (blind audit OWED)."
+     }
+    }
    },
    {
     "proposition": "Fig 1: in the heterozygous state about 12 variants lie at 0.2 to 0.6 of wild-type peak current at plus 40 mV above the significance line and about five lie below it; activation midpoint shifts are within a few millivolts for most variants.",

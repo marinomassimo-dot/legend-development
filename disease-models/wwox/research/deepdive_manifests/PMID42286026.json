@@ -225,12 +225,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Three patients had earlier seizure-free periods on a sodium-channel blocker that ended in relapse after about 6 to 7 months, so a remission of that length can occur without the studied drug.",
+    "proposition": "Two of the four patients had a seizure-free response to oxcarbazepine that ended in relapse after approximately six months, and a third stayed seizure-free for nearly three years; the fourth did not respond. So a seizure-free interval of about six months can occur on a sodium-channel blocker before the studied drug.",
     "snippet": "Three of the four patients responded to oxcarbazepine (OXC), with Patient 3 remaining seizure‑free for nearly three years, whereas Patients 2 and 4 experienced seizure relapse after approximately six months.",
     "anchor": "Results, Clinical features and genetic results",
     "surface": "body",
     "artifact": "files/fulltext/PMID42286026_Xiong2026_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42286026.json",
+     "entry": 4,
+     "what_changed": "Proposition narrowed after the blind audit (OVERSHOOT). Was: Three patients had earlier seizure-free periods on a sodium-channel blocker that ended in relapse after about 6 to 7 months, so a remission of that length can occur without the studied drug. The original said three patients relapsed after about 6 to 7 months; the source says only patients 2 and 4 relapsed. The quoted snippet, anchor and artefact are unchanged unless stated.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind audit of triples against the sources; persisted in disease-models/wwox/research/page_adjudications/locator_audit_R4b_R2b_20261022.md (commit ae343793). The repair itself is unaudited (blind audit OWED)."
+     }
+    }
    },
    {
     "proposition": "Patient 2 became seizure-free only after 1 year and 5 months of exposure and patient 4 within 3 months, each against a background of fluctuating earlier courses.",
@@ -249,12 +261,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Parent-reported cognitive gains were described in all four patients including the non-responder, while motor improvement was absent in the three seizure-free patients; the authors say the improvements were similar across patients.",
+    "proposition": "The authors say the cognitive improvements for the four patients with gabapentin were similar, based on the parents' observations (not a measured outcome); the next entry carries what Table 1 records for motor change.",
     "snippet": "Nevertheless, the cognitive improvements for the four patients with gabapentin in the study were similar based on their parents’ observations.",
     "anchor": "Discussion",
     "surface": "body",
     "artifact": "files/fulltext/PMID42286026_Xiong2026_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42286026.json",
+     "entry": 7,
+     "what_changed": "Proposition narrowed after the blind audit (OVERSHOOT). Was: Parent-reported cognitive gains were described in all four patients including the non-responder, while motor improvement was absent in the three seizure-free patients; the authors say the improvements were similar across patients. The original added 'motor improvement was absent in the three seizure-free patients', which Table 1 contradicts for one of them. The quoted snippet, anchor and artefact are unchanged unless stated.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind audit of triples against the sources; persisted in disease-models/wwox/research/page_adjudications/locator_audit_R4b_R2b_20261022.md (commit ae343793). The repair itself is unaudited (blind audit OWED)."
+     }
+    }
    },
    {
     "proposition": "A dose increase in patient 4 gave no further progress, the only dose-response observation.",
@@ -303,6 +327,14 @@
     "surface": "figure",
     "artifact": "files/page_renders/PMID42286026/img-002.png",
     "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Table 1 records, for the fourth patient column, improved head control and grasping abilities with increased responsiveness; the other three columns record no motor improvement or still poor motor development.",
+    "snippet": "Improved head control and grasping abilities, with increased responsiveness to external stimuli",
+    "anchor": "Table 1, Change in development with GBP",
+    "surface": "body",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID42286026_Xiong2026_PMC.xml"
    }
   ],
   "source_fulltext_indexed": true,

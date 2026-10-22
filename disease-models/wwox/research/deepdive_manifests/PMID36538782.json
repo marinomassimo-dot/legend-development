@@ -235,20 +235,44 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The baseline is a 7-day mean of the diary scores before randomisation; the diary was required for at least 6 of 7 days before enrolment, a pre-dose baseline with measured completeness above 90 percent.",
+    "proposition": "The baseline pain score is derived from the last 7 days before screening, and participants were required to record pain scores for a minimum of 6 of 7 days before screening/enrollment (not before randomisation); the analysis defines 'baseline' as the part A baseline.",
     "snippet": "Participants were required to record their pain intensity scores for a minimum of 6 of 7 days before screening/enrollment, and then three times per day throughout the study.",
     "anchor": "Methods, Procedures",
     "surface": "body",
     "artifact": "files/fulltext/PMID36538782_Ratcliffe2023_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36538782.json",
+     "entry": 3,
+     "what_changed": "Proposition narrowed after the blind audit (OVERSHOOT). Was: The baseline is a 7-day mean of the diary scores before randomisation; the diary was required for at least 6 of 7 days before enrolment, a pre-dose baseline with measured completeness above 90 percent. The original said 7-day mean before randomisation and attached a measured completeness above 90 percent that this snippet does not carry (it is a separate Results sentence, now its own entry). The quoted snippet, anchor and artefact are unchanged unless stated.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind audit of triples against the sources; persisted in disease-models/wwox/research/page_adjudications/locator_audit_R4b_R2b_20261022.md (commit ae343793). The repair itself is unaudited (blind audit OWED)."
+     }
+    }
    },
    {
-    "proposition": "Primary result: change of minus 0.75 on drug and minus 0.41 on placebo, placebo-adjusted difference minus 0.34 with an interval from minus 1.55 to 0.88 (P 0.570); the interval includes zero and effects up to about 1.5 points of benefit, but its lower end does not reach the 2-point difference the study was powered to detect, so it is an underpowered result and not a demonstration of no effect.",
+    "proposition": "Primary result: change of minus 0.75 on drug and minus 0.41 on placebo, placebo-adjusted difference minus 0.34 with a 95 percent interval from minus 1.55 to 0.88 (P 0.570), reported as statistically non-significant. The interval includes zero and benefits up to 1.55 points on the 11-point scale, and it excludes the 2-point benefit the study was powered to detect; the authors say only that the planned power of at least 65 percent may have been too low.",
     "snippet": "resulting in a statistically non-significant placebo-adjusted difference of –0.34 (–1.55, 0.88; P = .570)",
     "anchor": "Results, Efficacy",
     "surface": "body",
     "artifact": "files/fulltext/PMID36538782_Ratcliffe2023_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36538782.json",
+     "entry": 4,
+     "what_changed": "Proposition narrowed after the blind audit (OVERSHOOT). Was: Primary result: change of minus 0.75 on drug and minus 0.41 on placebo, placebo-adjusted difference minus 0.34 with an interval from minus 1.55 to 0.88 (P 0.570); the interval includes zero and effects up to about 1.5 points of benefit, but its lower end does not reach the 2-point difference the study was powered to detect, so it is an underpowered result and not a demonstration of no effect. The original said the lower end does not reach 2 points 'so it is an underpowered result'; that does not follow, because the interval excludes a 2-point benefit. The quoted snippet, anchor and artefact are unchanged unless stated.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind audit of triples against the sources; persisted in disease-models/wwox/research/page_adjudications/locator_audit_R4b_R2b_20261022.md (commit ae343793). The repair itself is unaudited (blind audit OWED)."
+     }
+    }
    },
    {
     "proposition": "The placebo arm improved by 0.41 points on the primary scale and 2 of 9 placebo participants met the 30 percent responder definition, against 4 of 15 on drug.",
@@ -283,12 +307,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The authors use the marker to infer adherence and that it supports use of 24HC as a biomarker of drug activity, while the clinical endpoint was null.",
+    "proposition": "The authors say the plasma 24HC fall indicates that participants adhered to treatment and supports 24HC as a biomarker of soticlestat activity; in the same Discussion they say the study did not show significance for its primary endpoint.",
     "snippet": "This indicates that participants adhered to treatment and supports the use of 24HC as a biomarker for soticlestat activity.",
     "anchor": "Discussion",
     "surface": "body",
     "artifact": "files/fulltext/PMID36538782_Ratcliffe2023_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36538782.json",
+     "entry": 9,
+     "what_changed": "Proposition narrowed after the blind audit (OVERSHOOT). Was: The authors use the marker to infer adherence and that it supports use of 24HC as a biomarker of drug activity, while the clinical endpoint was null. The original called the clinical endpoint 'null', which is the reader's word; the source says the study did not show significance. The quoted snippet, anchor and artefact are unchanged unless stated.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind audit of triples against the sources; persisted in disease-models/wwox/research/page_adjudications/locator_audit_R4b_R2b_20261022.md (commit ae343793). The repair itself is unaudited (blind audit OWED)."
+     }
+    }
    },
    {
     "proposition": "The authors say the open-label part B cannot be analysed statistically because there is no control arm.",
@@ -307,28 +343,64 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The authors propose the effect may be greater near onset, a duration-of-disease explanation offered after a null result.",
+    "proposition": "The authors propose that the likelihood of a response may be greater in individuals at the onset of CRPS; this is their hypothesis about duration of disease, offered after a primary endpoint that did not reach significance.",
     "snippet": "the likelihood of a response to soticlestat may be greater in individuals at the onset of CRPS",
     "anchor": "Discussion",
     "surface": "body",
     "artifact": "files/fulltext/PMID36538782_Ratcliffe2023_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36538782.json",
+     "entry": 12,
+     "what_changed": "Proposition narrowed after the blind audit (OVERSHOOT). Was: The authors propose the effect may be greater near onset, a duration-of-disease explanation offered after a null result. The original called the primary result 'a null result'; the source says lack of significance. The quoted snippet, anchor and artefact are unchanged unless stated.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind audit of triples against the sources; persisted in disease-models/wwox/research/page_adjudications/locator_audit_R4b_R2b_20261022.md (commit ae343793). The repair itself is unaudited (blind audit OWED)."
+     }
+    }
    },
    {
-    "proposition": "Supplement Table S2: mean PROMIS-29 physical function at part A was 36.38 on drug and 38.51 on placebo from baselines of 34.65 and 35.83, i.e. the placebo arm rose more in the completers, while main Table 2 prints changes of 2.4 on drug and 1.5 on placebo.",
+    "proposition": "Supplementary Table S2 prints mean PROMIS-29 physical-function scores by visit for different numbers of participants (baseline 15 on drug and 9 on placebo; part A 12 and 8): 34.65 and 35.83 at baseline, 36.38 and 38.51 at part A, 39.61 and 39.20 at part B. Means over different participants cannot be subtracted into a change; the paired changes to week 15 are printed in the main text as 2.4 on drug and 1.5 on placebo, so S2 does not show that the placebo arm rose more.",
     "snippet": "Score, mean (SD) | 34.65 (4.743) | 35.83 (5.607) |  | 36.38 (4.965) | 38.51 (4.914) |  | 39.61 (7.599) | 39.20 (3.762)",
     "anchor": "Supplementary Table S2, Physical function",
     "surface": "supplement",
     "artifact": "files/supplement/PMID36538782_r2/pnac198_supplementary_data.txt",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36538782.json",
+     "entry": 13,
+     "what_changed": "Proposition narrowed after the blind audit (OVERSHOOT). Was: Supplement Table S2: mean PROMIS-29 physical function at part A was 36.38 on drug and 38.51 on placebo from baselines of 34.65 and 35.83, i.e. the placebo arm rose more in the completers, while main Table 2 prints changes of 2.4 on drug and 1.5 on placebo. The original said 'the placebo arm rose more in the completers' by subtracting unmatched group means; the main table's paired changes run the other way (2.4 on drug, 1.5 on placebo). The quoted snippet, anchor and artefact are unchanged unless stated.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind audit of triples against the sources; persisted in disease-models/wwox/research/page_adjudications/locator_audit_R4b_R2b_20261022.md (commit ae343793). The repair itself is unaudited (blind audit OWED)."
+     }
+    }
    },
    {
-    "proposition": "Fig 2: weekly mean change in pain from baseline; both arms are below zero by week 15, the drug line separates from the placebo line only after about week 17, when placebo participants have moved to open-label drug, and every error bar spans zero.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 weekly means with SD bars, weeks 1-29: soticlestat triangles from about -0.4 at week 1 to about -1.0 at week 15 and about -2.0 at week 29; placebo circles about 0 at week 1, about -0.75 at week 15 and about -1.0 at week 29; separation grows after about week 17; SD bars of both series include zero at most weeks.",
+    "proposition": "Fig 2 (read as a 698 by 490 raster; no PDF is on disk, so this jpg is the only surface and the rank listed nothing better): weekly mean change in pain from baseline; both arms are below zero by week 15, the drug line is below the placebo line more clearly after about week 17, when placebo participants had moved to open-label drug; every placebo error bar spans zero, while several soticlestat bars lie wholly or nearly wholly below zero (for example weeks 3 and 4 and a run in roughly weeks 19 to 28) and others span zero; the bars are standard deviations, not a test.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 weekly means with SD bars, weeks 1-29: soticlestat triangles from about -0.4 at week 1 to about -1.05 at week 15 and about -2.0 at week 29; placebo circles about 0.1 at week 1, about -0.75 at week 15 and about -1.0 at week 29; separation grows after about week 17; every placebo SD bar includes zero; soticlestat SD bars include zero at most weeks but several (weeks 3-4 and about weeks 19-28) lie wholly or nearly wholly below zero.",
     "anchor": "Figure 2",
     "surface": "figure",
     "artifact": "files/figures/PMID36538782_r2/pnac198f2.jpg",
-    "panel_text_relation": "panel_only"
+    "panel_text_relation": "panel_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36538782.json",
+     "entry": 14,
+     "what_changed": "Proposition narrowed after the blind audit (OVERSHOOT). Was: Fig 2: weekly mean change in pain from baseline; both arms are below zero by week 15, the drug line separates from the placebo line only after about week 17, when placebo participants have moved to open-label drug, and every error bar spans zero. The original said 'every error bar spans zero'; several soticlestat bars do not. The quoted snippet, anchor and artefact are unchanged unless stated. The figure attestation is re-read from the same jpg on 2026-10-22 and rewritten to match.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind audit of triples against the sources; persisted in disease-models/wwox/research/page_adjudications/locator_audit_R4b_R2b_20261022.md (commit ae343793). The repair itself is unaudited (blind audit OWED)."
+     }
+    }
    },
    {
     "proposition": "Fig 3: plasma 24HC pre-dose about 51 ng/mL on drug (n=15) and 48 on placebo (n=8); week 2 about 16 on drug (n=13) against about 51 on placebo (n=6); week 7 about 15 against 55; at week 29 both groups are on drug and the placebo-then-drug group is about 15 (n=3).",
@@ -347,12 +419,40 @@
     "panel_text_relation": "panel_only"
    },
    {
-    "proposition": "One participant in part B had depression and suicidal ideation judged related to the drug; the authors note no suicidal ideation in other soticlestat studies.",
+    "proposition": "In the Discussion the authors note that suicidal ideation has not been reported in any other soticlestat clinical study (the next entry carries the Results statement of which part and participant).",
     "snippet": "Of note, suicidal ideation has not been reported in any other soticlestat clinical study",
     "anchor": "Discussion",
     "surface": "body",
     "artifact": "files/fulltext/PMID36538782_Ratcliffe2023_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36538782.json",
+     "entry": 17,
+     "what_changed": "Proposition narrowed after the blind audit (OVERSHOOT). Was: One participant in part B had depression and suicidal ideation judged related to the drug; the authors note no suicidal ideation in other soticlestat studies. The audit found 'in part B' not carried by this snippet; the Results text does say part B, so the attribution is moved to its own entry and this proposition keeps only what the Discussion sentence says. The quoted snippet, anchor and artefact are unchanged unless stated.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind audit of triples against the sources; persisted in disease-models/wwox/research/page_adjudications/locator_audit_R4b_R2b_20261022.md (commit ae343793). The repair itself is unaudited (blind audit OWED)."
+     }
+    }
+   },
+   {
+    "proposition": "During screening all participants had an E-diary response rate of more than 90 percent for pain intensity; during treatment one participant of 24 had a rate below 90 percent (88.9 percent).",
+    "snippet": "During screening, all participants had an E-diary response rate of more than 90% for pain intensity scores. During treatment, only one participant out of 24 had a response rate of less than 90% (88.9%).",
+    "anchor": "Results, Participants",
+    "surface": "body",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID36538782_Ratcliffe2023_PMC.xml"
+   },
+   {
+    "proposition": "Two severe treatment-emergent events (depression and suicidal ideation), judged related to treatment and leading to discontinuation, occurred in one participant during part B; that participant had a history of depression and a depressed-mood event during part A while on placebo.",
+    "snippet": "two severe TEAEs occurred in one participant during part B (depression and suicidal ideation; considered related to treatment and leading to discontinuation)",
+    "anchor": "Results, Safety",
+    "surface": "body",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID36538782_Ratcliffe2023_PMC.xml"
    }
   ],
   "source_fulltext_indexed": true,
