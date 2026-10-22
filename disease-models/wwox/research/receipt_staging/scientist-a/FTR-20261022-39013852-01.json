@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261022-39013852-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "39013852",
+  "doi": "10.1038/s41467-024-49982-8"
+ },
+ "event_at": "2026-10-22T04:47:53Z",
+ "analysis_at": "2026-10-22T04:45:53Z",
+ "analysis_time_precision": "second",
+ "workflow": "Primary read by scientist-a under REPURP-10H-R1C-A-20261022: PMC efetch XML and PDF acquired with pmc_bucket_fetch.py and the Europe PMC supplementaryFiles endpoint, whole text read section by section, every figure opened as an image, the supplement read, locators captured while the document was open and verified by deepdive_manifest.py. Class-level substitute, NOT WWOX EVIDENCE.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID39013852_Bruning2024_PMC_r2.xml",
+ "source_fingerprint": "e66e5a24664d13b201d90c6635fcfff689aa2c8def947fc3c458f9a8753e4c0c",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "captions_only"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID39013852.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-a_r1d_20261022.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "context QUESTION_DRIVEN; main figures read from 200 dpi renders of the article PDF pages; the supplement (figures PDF, further PDFs, workbooks) was not opened, only its existence and the main-text references were read, so coverage is partial and the owed section is the supplement (Supplementary Figures 6, 7 and 10 in particular); limits are inside the Discussion."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
