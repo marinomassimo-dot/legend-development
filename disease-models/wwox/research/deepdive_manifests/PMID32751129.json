@@ -287,8 +287,8 @@
     }
    },
    {
-    "proposition": "The authors write that the voltage-gated calcium channel transcripts were the predominant ones throughout corticogenesis, indicating that calcium influx through low-threshold channels plays important roles during the formation of the rodent cortex.",
-    "snippet": "They were the predominant VGCC transcripts throughout corticogenesis, from E11 to PN1, indicating that Ca2+ influx through low-threshold VGCC plays important roles during the formation of the rodent cortex.",
+    "proposition": "The authors write that the T-type voltage-gated calcium channels were the predominant voltage-gated calcium channel transcripts throughout corticogenesis, from E11 to PN1, indicating that calcium influx through low-threshold channels plays important roles during the formation of the rodent cortex.",
+    "snippet": "Altogether, these data point to the expression of functional T-type VGCC at very early stages of the cortical development [19,20]. They were the predominant VGCC transcripts throughout corticogenesis, from E11 to PN1, indicating that Ca2+ influx through low-threshold VGCC plays important roles during the formation of the rodent cortex.",
     "surface": "body",
     "anchor": "Results and Discussion 3.1.1, second paragraph",
     "artifact": "files/fulltext/PMID32751129_Bouron2020_PMC_r2.xml",
@@ -296,11 +296,11 @@
     "contradicts_locator": {
      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32751129.json",
      "entry": 6,
-     "what_changed": "2026-10-22 text-form sweep after the blind text control: the proposition added a clause or inference the quote does not carry; narrowed to the quote. Prior wording began: The authors cite earlier work for functional T-type channels in embryonic cortic",
+     "what_changed": "2026-10-22 blind audit of the R2f repairs (locator_audit_R2f_R1d_repairs_20261022.md): the proposition or anchor did not match the quote; restated or the quote widened. Prior wording began: The authors write that the voltage-gated calcium channel transcripts were the pr",
      "audit": {
-      "auditors": 0,
+      "auditors": 1,
       "verdicts": [
-       "CLAUSE_ADDED_SELF_SWEEP"
+       "OVERSHOOT"
       ],
       "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
      }

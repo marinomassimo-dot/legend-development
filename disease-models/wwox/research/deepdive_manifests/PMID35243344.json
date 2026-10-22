@@ -461,12 +461,24 @@
     }
    },
    {
-    "proposition": "Figure 6 read as an image (page 12 raster): rebound bursts per cell about 2.2 in controls (three mice) versus about 1.0 in PV-ArchT (three mice), star; T-current peak about 700 pA versus about 155 pA, three stars with the per-mouse points of about 700 to 750 against about 40 to 275; Figure 4E: ethosuximide before about 23 events per hour (range about 8 to 50) falling to about 1 (four mice), baclofen about 33 rising to about 63.",
+    "proposition": "Figure 6 read as an image (page 12 raster): rebound bursts per cell about 2.2 in controls (three mice) versus about 1.0 in PV-ArchT (three mice), star; T-current peak about 700 pA versus about 155 pA, three stars with the per-mouse points of about 640 to 750 against about 40 to 275; Figure 4E: ethosuximide before about 23 events per hour (range about 8 to 50) falling to about 1 (four mice), baclofen about 33 rising to about 63.",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6B bars about 2.2 and about 1.0; Figure 6G bars about 699 and about 155 pA with three dots each; Figure 4E before and after lines for four mice.",
     "surface": "figure",
     "artifact": "files/figures/PMID35243344_r2/PMC8887905_p12_embedded.png",
     "anchor": "Figure 6 panels A to G (page 12 raster) and Figure 4 panel E (page 10 raster, PMC8887905_p10_embedded.png)",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35243344.json",
+     "entry": 5,
+     "what_changed": "2026-10-22 blind audit: the lowest control dot is about 640 pA, not 700; corrected, other values unchanged. Prior wording began: Figure 6 read as an image (page 12 raster): rebound bursts per cell about 2.2 in",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind audit of the R2f repairs (locator_audit_R2f_R1d_repairs_20261022.md); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "The authors state that T-type channel transcripts showed no difference between the model and control in cortex, thalamus and reticular nucleus (n = 4 mice, in situ hybridisation).",

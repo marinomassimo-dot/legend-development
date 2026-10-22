@@ -261,12 +261,24 @@
     }
    },
    {
-    "proposition": "The authors note a prior gain-of-function Cav3.2 variant in the epileptic strain (restricted to reticular neurons, not relay neurons) and an earlier study that found no strain difference in T-type current in acutely dissociated cells and one that found increased Cav3.1 mRNA by in-situ hybridisation; they explain their discrepancy by preparation (intact slice versus dissociated cells, current density versus absolute current) and say a dissection error could affect the P9 mRNA comparison.",
-    "snippet": "This contrasts our findings of reduced T-type calcium current density in GAERS VB neurons.",
+    "proposition": "The authors write that T-type currents in these neurons had been assessed in an earlier study with no significant difference between the strains at P11 to P14 or P15 to P17, which contrasts their findings of reduced T-type current density.",
+    "snippet": "T-type calcium currents in GAERS VB neurons have been assessed in a previous study wherein no significant differences were observed at P11–P14 or P15–P17 between NEC and GAERS [47]. This contrasts our findings of reduced T-type calcium current density in GAERS VB neurons.",
     "surface": "body",
-    "anchor": "Discussion, paragraph 5",
+    "anchor": "Discussion, paragraph on T-type current in the earlier study",
     "artifact": "files/fulltext/PMID24953239_Kanyshkova2015_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID24953239.json",
+     "entry": 3,
+     "what_changed": "2026-10-22 blind audit of the R2f repairs (locator_audit_R2f_R1d_repairs_20261022.md): the proposition or anchor did not match the quote; restated or the quote widened. Prior wording began: The authors note a prior gain-of-function Cav3.2 variant in the epileptic strain",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "ANCHOR_MISMATCH"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "Figure 5 read as an image: panel b T-type current density curves for the non-epileptic control (filled squares) peak about -21 pA per pF at -50 mV against about -16 for GAERS (open circles) with stars from -60 to -40 mV, and the Z944 curve near 0; panel c high-voltage current slightly larger in GAERS at -10 to 0 mV; panel e Cav3.1 mRNA about 1.6 versus 1.2 (two stars); panel g Cav3.1 protein about 3.7 versus 1.7 (three stars); panel a burst firing present before and abolished by Z944.",
