@@ -2,8 +2,9 @@
  "schema_version": 2,
  "pmid": "40068874",
  "doi": "10.1523/ENEURO.0423-24.2025",
- "receipt": "FTR-20261021-40068874-01",
+ "receipt": "FTR-20261022-40068874-02",
  "landing": [
+  "FTR-20261022-40068874-02",
   "FTR-20261021-40068874-01",
   "repurposing_10h_scientist-b_20261021"
  ],
@@ -144,6 +145,123 @@
      "join": ""
     }
    }
+  },
+  {
+   "path": "files/figures/PMID40068874_r2/eneuro-12-ENEURO.0423-24.2025-g004.jpg",
+   "sha256": "490f70205084dfe9436366db4df041167a87e3b255ed8d3ab49277000cb127f4",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC11974363",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "490f70205084dfe9436366db4df041167a87e3b255ed8d3ab49277000cb127f4"
+   },
+   "note": "Figure raster (JPEG, 120 to 240 ppi, the eNeuro html image) opened as an image; the PDF holds 300 ppi embedded rasters of the same figures."
+  },
+  {
+   "path": "files/figures/PMID40068874_r2/eneuro-12-ENEURO.0423-24.2025-g005.jpg",
+   "sha256": "745342d9c945c7af041a628ea4ffce57caa9b0f9fee45236e82b51287937f28a",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC11974363",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "745342d9c945c7af041a628ea4ffce57caa9b0f9fee45236e82b51287937f28a"
+   },
+   "note": "Figure raster (JPEG, 120 to 240 ppi, the eNeuro html image) opened as an image; the PDF holds 300 ppi embedded rasters of the same figures."
+  },
+  {
+   "path": "files/figures/PMID40068874_r2/eneuro-12-ENEURO.0423-24.2025-g006.jpg",
+   "sha256": "2228ef21d85eed4e1de616ee3aeec32668698b41888da60ddd3257359287fc89",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC11974363",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "2228ef21d85eed4e1de616ee3aeec32668698b41888da60ddd3257359287fc89"
+   },
+   "note": "Figure raster (JPEG, 120 to 240 ppi, the eNeuro html image) opened as an image; the PDF holds 300 ppi embedded rasters of the same figures."
+  },
+  {
+   "path": "files/supplement/PMID40068874_r2/eneuro-12-ENEURO.0423-24.2025-s002.png",
+   "sha256": "21c3747a0910538806c692260fd28877f2c3fbd505802316c844da7ca148696a",
+   "kind": "figure",
+   "note": "Supplementary Figure 1-1 converted and resized to 1400 px width and opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "21c3747a0910538806c692260fd28877f2c3fbd505802316c844da7ca148696a",
+    "derived_from": "files/supplement/PMID40068874_r2/eneuro-12-ENEURO.0423-24.2025-s002.tif",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "convert eneuro-12-ENEURO.0423-24.2025-s002.tif -resize 1400x eneuro-12-ENEURO.0423-24.2025-s002.png (ImageMagick)"
+    }
+   }
+  },
+  {
+   "path": "files/supplement/PMID40068874_r2/eneuro-12-ENEURO.0423-24.2025-s003.png",
+   "sha256": "ec01bdeb6f91eba37d830b58f5064efabbd1e24c3684575d9aaa27d7a43cdadf",
+   "kind": "figure",
+   "note": "Supplementary Figure 1-2 converted and resized to 1400 px width and opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "ec01bdeb6f91eba37d830b58f5064efabbd1e24c3684575d9aaa27d7a43cdadf",
+    "derived_from": "files/supplement/PMID40068874_r2/eneuro-12-ENEURO.0423-24.2025-s003.tif",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "convert eneuro-12-ENEURO.0423-24.2025-s003.tif -resize 1400x eneuro-12-ENEURO.0423-24.2025-s003.png (ImageMagick)"
+    }
+   }
+  },
+  {
+   "path": "files/supplement/PMID40068874_r2/eneuro-12-ENEURO.0423-24.2025-s002.tif",
+   "sha256": "4f2fc2306d67ccd6987ec57ae03d0a33233620807427d3e3b9f3ded1fcaa0257",
+   "kind": "supplement_binary",
+   "note": "Supplementary Figure 1-1 TIF from the PMC open-data bucket.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11974363.1/eneuro-12-ENEURO.0423-24.2025-s002.tif",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "4f2fc2306d67ccd6987ec57ae03d0a33233620807427d3e3b9f3ded1fcaa0257"
+   }
+  },
+  {
+   "path": "files/supplement/PMID40068874_r2/eneuro-12-ENEURO.0423-24.2025-s003.tif",
+   "sha256": "7d8108ec097a57f1de683527761fdb50a31da4b5e6046d2645b223b61eb2c121",
+   "kind": "supplement_binary",
+   "note": "Supplementary Figure 1-2 TIF from the PMC open-data bucket.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11974363.1/eneuro-12-ENEURO.0423-24.2025-s003.tif",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "7d8108ec097a57f1de683527761fdb50a31da4b5e6046d2645b223b61eb2c121"
+   }
   }
  ],
  "verbatim_locators": {
@@ -169,12 +287,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Subthreshold and frequency-following measures are unchanged by the knockout and the authors state the intrinsic effects of Cav3.2 loss on granule-cell excitability are relatively subtle despite a strong behavioural and epilepsy-development phenotype in this knockout, leaving the population responsible unidentified.",
+    "proposition": "The authors write that, despite a strong phenotype, their results indicate that the effects of the Cav3.2 knockout on granule-cell intrinsic excitability are relatively subtle.",
     "snippet": "Despite this strong phenotype, our results indicate that the effects of Cav3.2 KO on GC intrinsic excitability are relatively subtle.",
     "surface": "body",
     "anchor": "Discussion, paragraph 7",
     "artifact": "files/fulltext/PMID40068874_Sack2025_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40068874.json",
+     "entry": 2,
+     "what_changed": "2026-10-22 advisory strength scan: the proposition carried wording or claims the quote does not contain; narrowed to the quote (the dropped inference is in the note, not this locator). Prior wording began: Subthreshold and frequency-following measures are unchanged by the knockout and ",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "ADVISORY_STRENGTH_SCAN"
+      ],
+      "method": "locator_audit.py --strength-scan (advisory), run 2026-10-22; no blind audit; the narrowing only brings the proposition inside its quote"
+     }
+    }
    },
    {
     "proposition": "Age window: the experiments use juvenile mice because neurogenesis is faster at that age, giving a mix of maturation stages; the authors cite that hippocampal Cav3.2 expression rises from birth to about postnatal day 21 and falls by day 60, without measuring it. No cortical or thalamic age series is provided and the cells recorded are hippocampal granule cells.",
@@ -198,6 +328,70 @@
     "surface": "figure",
     "artifact": "files/figures/PMID40068874_r2/PMC11974363_p08_embedded.png",
     "anchor": "Figure 2 panels A to C; page 8 embedded raster 1828x2491",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A figure legend states that loss of Cav3.2 increases excitability in intermediate-maturity regular-spiking dentate granule cells.",
+    "snippet": "Loss of Cav3.2 increases excitability in intermediate regular spiking GCs.",
+    "surface": "body",
+    "anchor": "Figure 5 legend title",
+    "artifact": "files/fulltext/PMID40068874_Sack2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A figure legend states that genetic deletion of Cav3.2 increases firing frequency in mature regular-spiking cells.",
+    "snippet": "Genetic deletion of Cav3.2 increases firing frequency in mature regular spiking GCs.",
+    "surface": "body",
+    "anchor": "Figure 6 legend title",
+    "artifact": "files/fulltext/PMID40068874_Sack2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A figure legend states that loss of Cav3.2 does not impact suprathreshold frequency-dependent responses in regular-spiking cells.",
+    "snippet": "Loss of Cav3.2 does not impact suprathreshold frequency-dependent responses in regular spiking GCs.",
+    "surface": "body",
+    "anchor": "Figure 7 legend title",
+    "artifact": "files/fulltext/PMID40068874_Sack2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The supplementary legend states that the antibody from one supplier did not show any immunoreactivity for the channel in the dentate gyrus or other regions examined, and that the staining with another antibody matched that of the immature-neuron marker doublecortin, indicating cross-reactivity.",
+    "snippet": "The Neuromab antibody (A) did not show any immunoreactivity for Cav3.2 channels in the DG or other brain regions examined (not shown).",
+    "surface": "body",
+    "anchor": "Supplementary Figure 1-2 legend",
+    "artifact": "files/fulltext/PMID40068874_Sack2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 4 read as an image: in intermediate-maturity cells the share of burst-spiking cells is 48 percent in wild type and 38 percent in the knockout; in mature cells 5 percent in wild type and 0 in the knockout; the burst-spiking cells fire faster at 60 pA above rheobase (about 50 against 20 Hz in wild type, four stars; about 54 against 20 in the knockout, two stars).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4B, C, E: burst-spiking share intermediate WT 48% vs KO 38%; mature WT 5% vs KO 0%; frequency at +60 pA burst about 50 vs regular 20 Hz (****) WT; about 54 vs 20 (**) KO.",
+    "surface": "figure",
+    "anchor": "Figure 4 panels B, C, E (JPEG raster)",
+    "artifact": "files/figures/PMID40068874_r2/eneuro-12-ENEURO.0423-24.2025-g004.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 5 read as an image (intermediate regular-spiking cells): the interspike interval is shorter in the knockout at the second and third intervals (about 68 against 105 ms, one star; about 79 against 133 ms, two stars); average frequency over the first four intervals about 14.5 against 11.5 Hz without a marked difference, resting potential about minus 84.5 against minus 83 mV and input resistance not different; burst-spiking cells show the same intervals in both genotypes.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5B-G: ISI 2 about 68 (KO) vs 105 ms (WT) (*), ISI 3 about 79 vs 133 (**); average frequency about 14.5 vs 11.5 Hz (ns); RMP and Rin ns; burst cells same ISI.",
+    "surface": "figure",
+    "anchor": "Figure 5 panels B-G (JPEG raster)",
+    "artifact": "files/figures/PMID40068874_r2/eneuro-12-ENEURO.0423-24.2025-g005.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 6 read as an image (mature regular-spiking cells): the average firing frequency is higher in the knockout (about 11.3 against 9.4 Hz; one star) while the first interspike interval is similar, and resting potential and input resistance do not differ (about minus 86.5 mV; about 275 to 280 megaohm).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6B-E: average frequency KO about 11.3 vs WT 9.4 Hz (*); first ISI similar; RMP about -86.5 mV and Rin about 275-280 MOhm ns.",
+    "surface": "figure",
+    "anchor": "Figure 6 panels B-E (JPEG raster)",
+    "artifact": "files/figures/PMID40068874_r2/eneuro-12-ENEURO.0423-24.2025-g006.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Figure 1-2 read as an image: for the antibody from the first supplier the dentate gyrus shows no signal (panel A) and heat-based antigen retrieval gives diffuse background (panel B); the second supplier's antibody labels granule cells in a pattern that overlaps doublecortin (panel C, inset); the third supplier's antibody gives non-specific signal in the hilus (panel D).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Fig 1-2: A no signal; B diffuse background after antigen retrieval; C granule-cell signal overlapping DCX (inset); D non-specific hilar signal.",
+    "surface": "figure",
+    "anchor": "Supplementary Figure 1-2 (TIF converted to PNG, resized)",
+    "artifact": "files/supplement/PMID40068874_r2/eneuro-12-ENEURO.0423-24.2025-s003.png",
     "panel_text_relation": "text_only"
    }
   ],

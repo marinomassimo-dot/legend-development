@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-22T00:00:00Z",
+ "event_at": "2026-10-22T04:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "captions_only"
+ },
+ "event_id": "FTR-20261022-33704440-02",
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "Completing pass (owed: figures captions_only, supplementary not_read). Figures 2, 3, 4, 5, 6 and 7 opened as images, each read returned an image (Figure 6, the model panels, carries no locator); the Supplementary Data PDF (19 pages) read through its text layer (methods, Table S3, legends); Supplementary Figures S1 to S6 were not opened as images: supplementary = captions_only."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID33704440.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-b_20261022f.md"
+ ],
+ "prior_receipt": "FTR-20261021-33704440-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "0e85ac67397026878b675694e3dd2ed265a68715c3a309448b7ef9bb7d9fdb61",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID33704440_ElGhaleb2021_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1093/brain/awab101",
+  "pmid": "33704440"
+ },
+ "workflow": "scientist-b repurposing batch R2e completing pass 2026-10-22; SOURCE_FIRST for the owed sections; NOT WWOX EVIDENCE; prepared as JSON for the integrator and staged, not appended."
+}

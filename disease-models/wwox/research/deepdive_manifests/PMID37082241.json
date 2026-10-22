@@ -2,8 +2,9 @@
  "schema_version": 2,
  "pmid": "37082241",
  "doi": "10.3389/fphys.2023.1086243",
- "receipt": "FTR-20261021-37082241-01",
+ "receipt": "FTR-20261022-37082241-02",
  "landing": [
+  "FTR-20261022-37082241-02",
   "FTR-20261021-37082241-01",
   "repurposing_10h_scientist-b_20261021"
  ],
@@ -168,6 +169,189 @@
      "join": ""
     }
    }
+  },
+  {
+   "path": "files/figures/PMID37082241_r2/fphys-14-1086243-g002.jpg",
+   "sha256": "aa9dea884db55950f6a2e6c2e5478e4f9b5a98b731c1fe337c6a4a6e64493f9f",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC10110893",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "aa9dea884db55950f6a2e6c2e5478e4f9b5a98b731c1fe337c6a4a6e64493f9f"
+   },
+   "note": "Figure raster (JPEG, 200 ppi, the Frontiers image from the PMC open-data bucket) opened as an image; the same figures are 300 ppi embedded rasters in the PDF."
+  },
+  {
+   "path": "files/figures/PMID37082241_r2/fphys-14-1086243-g005.jpg",
+   "sha256": "cdc60f2f082a2fdd4d3b1673af395c981c758a7c2dea5109a14571c2aa6a40e5",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC10110893",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "cdc60f2f082a2fdd4d3b1673af395c981c758a7c2dea5109a14571c2aa6a40e5"
+   },
+   "note": "Figure raster (JPEG, 200 ppi, the Frontiers image from the PMC open-data bucket) opened as an image; the same figures are 300 ppi embedded rasters in the PDF."
+  },
+  {
+   "path": "files/figures/PMID37082241_r2/fphys-14-1086243-g006.jpg",
+   "sha256": "893fdecae4843c9ec97be02977012a7557428e008d1de04b8161e24e4b87e769",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC10110893",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "893fdecae4843c9ec97be02977012a7557428e008d1de04b8161e24e4b87e769"
+   },
+   "note": "Figure raster (JPEG, 200 ppi, the Frontiers image from the PMC open-data bucket) opened as an image; the same figures are 300 ppi embedded rasters in the PDF."
+  },
+  {
+   "path": "files/figures/PMID37082241_r2/fphys-14-1086243-g007.jpg",
+   "sha256": "1a55f1655e1ec4e55786b8b29ff1f91e805a7cee9bc81badc45dac3dc40a9982",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC10110893",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "1a55f1655e1ec4e55786b8b29ff1f91e805a7cee9bc81badc45dac3dc40a9982"
+   },
+   "note": "Figure raster (JPEG, 200 ppi, the Frontiers image from the PMC open-data bucket) opened as an image; the same figures are 300 ppi embedded rasters in the PDF."
+  },
+  {
+   "path": "files/figures/PMID37082241_r2/fphys-14-1086243-g008.jpg",
+   "sha256": "02da10f3c14475fa4b509aaba832ea00422c19de8c3de6a4e56952b3bc1545ad",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC10110893",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "02da10f3c14475fa4b509aaba832ea00422c19de8c3de6a4e56952b3bc1545ad"
+   },
+   "note": "Figure raster (JPEG, 200 ppi, the Frontiers image from the PMC open-data bucket) opened as an image; the same figures are 300 ppi embedded rasters in the PDF."
+  },
+  {
+   "path": "files/supplement/PMID37082241_r2/Image1.png",
+   "sha256": "bb65821bb2fa9a6805b9dbc75d03ebdf87ae6bfb4210c8663ddb437deab3f87c",
+   "kind": "figure",
+   "note": "Supplementary Figure S1 (TIF) converted to PNG and opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "bb65821bb2fa9a6805b9dbc75d03ebdf87ae6bfb4210c8663ddb437deab3f87c",
+    "derived_from": "files/supplement/PMID37082241_r2/Image1.TIF",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "convert Image1.TIF Image1.png (ImageMagick)"
+    }
+   }
+  },
+  {
+   "path": "files/supplement/PMID37082241_r2/Image2.png",
+   "sha256": "496d7e856c0e9407d02a23e752f92281479cd438955c476348bfa11d6ec2db94",
+   "kind": "figure",
+   "note": "Supplementary Figure 2 (TIF) converted to PNG and opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "496d7e856c0e9407d02a23e752f92281479cd438955c476348bfa11d6ec2db94",
+    "derived_from": "files/supplement/PMID37082241_r2/Image2.TIF",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "convert Image2.TIF Image2.png (ImageMagick)"
+    }
+   }
+  },
+  {
+   "path": "files/supplement/PMID37082241_r2/Image1.TIF",
+   "sha256": "a98051bee05dbc12fd3e44ebcde5000636452a28c4b6b3f1c257e7d274a55a93",
+   "kind": "supplement_binary",
+   "note": "Supplementary Figure S1 TIF (171,772 bytes) from the PMC open-data bucket.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10110893.1/Image1.TIF",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "a98051bee05dbc12fd3e44ebcde5000636452a28c4b6b3f1c257e7d274a55a93"
+   }
+  },
+  {
+   "path": "files/supplement/PMID37082241_r2/Image2.TIF",
+   "sha256": "a4babe5c04d514f41744eaacd208bb809dad9c05f94f3c8d3d4d0c0954866058",
+   "kind": "supplement_binary",
+   "note": "Supplementary Figure 2 TIF (345,120 bytes) from the PMC open-data bucket.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10110893.1/Image2.TIF",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "a4babe5c04d514f41744eaacd208bb809dad9c05f94f3c8d3d4d0c0954866058"
+   }
+  },
+  {
+   "path": "files/supplement/PMID37082241_r2/Table1.docx",
+   "sha256": "03e59dc00e3a9ed5b7b76569ac69598626d3fe6494227c5d860a98f80be06f9a",
+   "kind": "supplement_binary",
+   "note": "Supplementary Table S1 Word file (14,869 bytes).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10110893.1/Table1.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "03e59dc00e3a9ed5b7b76569ac69598626d3fe6494227c5d860a98f80be06f9a"
+   }
+  },
+  {
+   "path": "files/supplement/PMID37082241_r2/Table1.txt",
+   "sha256": "5fc78d47349ebb34cdd23c0e4c15ae40b06bdb6b9a4ea3725d0518187191ab19",
+   "kind": "supplement_text",
+   "note": "DERIVED text of Table1.docx (word/document.xml, markup stripped).",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftotext_layout_nopgbrk",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "5fc78d47349ebb34cdd23c0e4c15ae40b06bdb6b9a4ea3725d0518187191ab19",
+    "derived_from": "files/supplement/PMID37082241_r2/Table1.docx",
+    "extractor": {
+     "name": "python zipfile + re (stdlib)",
+     "version": "3.12",
+     "call": "read word/document.xml from Table1.docx, replace </w:p> by newline, strip tags, html.unescape"
+    }
+   }
   }
  ],
  "verbatim_locators": {
@@ -193,20 +377,44 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The GAERS aggravation is attributed by the authors to possible off-target sodium-channel action, or to bioconversion to a cannabinoid-receptor agonist, neither of which was tested; the delayed time course (no effect in the first hour) is the stated reason for the bioconversion speculation.",
+    "proposition": "The authors write that it is possible the effect was due to off-target actions of the compound at other targets such as voltage-gated sodium channels, given the close exofacial sequence homology of Cav3 channels with other voltage-gated ion channels.",
     "snippet": "Given the close exofacial sequence homology of Cav3 channels with other voltage-gated ion channels, it is possible that this effect was due to off-target actions of SB2193 at other targets such as voltage-gated sodium channels.",
     "surface": "body",
     "anchor": "Discussion, paragraph 9",
     "artifact": "files/fulltext/PMID37082241_Harman2023_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID37082241.json",
+     "entry": 2,
+     "what_changed": "2026-10-22 advisory strength scan: the proposition carried wording or claims the quote does not contain; narrowed to the quote (the dropped inference is in the note, not this locator). Prior wording began: The GAERS aggravation is attributed by the authors to possible off-target sodium",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "ADVISORY_STRENGTH_SCAN"
+      ],
+      "method": "locator_audit.py --strength-scan (advisory), run 2026-10-22; no blind audit; the narrowing only brings the proposition inside its quote"
+     }
+    }
    },
    {
-    "proposition": "A subtype argument that matters for any pan-T-type reading: Cav3.3 null mice show increased SWD susceptibility, so Cav3.3 inhibition may be proconvulsant; the compound inhibits Cav3.1, 3.2 and 3.3 with IC50 in the same micromolar range for 3.2 and 3.3.",
+    "proposition": "The authors note that Cav3.3 null mice exhibit increased susceptibility to spike-wave discharges, suggesting that Cav3.3 inhibition may be proconvulsant.",
     "snippet": "Notably, Cav3.3 null mice exhibit increased susceptibility to SWDs suggesting that Cav3.3 inhibition may be proconvulsant (Lee et al., 2014).",
     "surface": "body",
     "anchor": "Discussion, paragraph 6",
     "artifact": "files/fulltext/PMID37082241_Harman2023_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID37082241.json",
+     "entry": 3,
+     "what_changed": "2026-10-22 advisory strength scan: the proposition carried wording or claims the quote does not contain; narrowed to the quote (the dropped inference is in the note, not this locator). Prior wording began: A subtype argument that matters for any pan-T-type reading: Cav3.3 null mice sho",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "ADVISORY_STRENGTH_SCAN"
+      ],
+      "method": "locator_audit.py --strength-scan (advisory), run 2026-10-22; no blind audit; the narrowing only brings the proposition inside its quote"
+     }
+    }
    },
    {
     "proposition": "The authors cite that ethosuximide was ineffective against seizures in an Scn1a zebrafish model, i.e. a second 'pan T-type' blocker in the same Dravet-type genotype with no seizure benefit (cited, not measured here).",
@@ -246,6 +454,110 @@
     "surface": "body",
     "anchor": "Discussion, paragraph 10",
     "artifact": "files/fulltext/PMID37082241_Harman2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Figure 8 legend states that the compound increased spike-and-wave discharge incidence and duration in the absence-model rats (nine males, five females).",
+    "snippet": "SB2193 increased spike and wave discharge (SWD) incidence and duration in GAERS (males: n = 9; females: n = 5).",
+    "surface": "body",
+    "anchor": "Figure 8 legend",
+    "artifact": "files/fulltext/PMID37082241_Harman2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A figure legend states that sub-chronic treatment had no effect on spontaneous seizure frequency in the Scn1a heterozygous mice (P = 0.67, 17 to 19 animals).",
+    "snippet": "Sub-chronic SB2193 treatment had no effect on spontaneous seizure frequency (p = 0.67, Mann-Whitney U test, n = 17–19).",
+    "surface": "body",
+    "anchor": "Figure 6 legend",
+    "artifact": "files/fulltext/PMID37082241_Harman2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Figure 2 legend title states that the analogues are potent inhibitors of Cav3 channels, measured in a plate-reader calcium-flux assay with the response expressed as a percentage of vehicle.",
+    "snippet": "MEPIRAPIM analogues are potent inhibitors of Cav3 channels.",
+    "surface": "body",
+    "anchor": "Figure 2 legend",
+    "artifact": "files/fulltext/PMID37082241_Harman2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Figure 3 legend states that the compound inhibited Cav3.1 in whole-cell patch-clamp experiments (7 to 8 cells).",
+    "snippet": "SB2193 inhibited Cav3.1 in whole-cell patch-clamp electrophysiology experiments (n = 7–8).",
+    "surface": "body",
+    "anchor": "Figure 3 legend",
+    "artifact": "files/fulltext/PMID37082241_Harman2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Supplementary Figure 2 legend states that the first-hour analysis of the absence-model recordings showed no significant differences between treatments.",
+    "snippet": "Statistical analyses revealed no significant differences between treatments.",
+    "surface": "body",
+    "anchor": "Supplementary Figure 2 legend",
+    "artifact": "files/fulltext/PMID37082241_Harman2023_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2 read as an image (calcium-flux concentration-response curves, three Cav3 subtypes, three compounds): the first compound inhibits Cav3.1 and Cav3.2 with curves crossing 50 percent near the middle of the tested range and Cav3.3 only at the top concentration (about 35 percent response left); the second compound is weaker on Cav3.1 and Cav3.3 and similar on Cav3.2; the reference compound is steeper on all three (response about 10 to 15 percent at the top concentration).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2A-C: cmpd 1 Cav3.1/3.2 mid-range IC50, Cav3.3 only at top conc (about 35% left); cmpd 2 weaker on 3.1 and 3.3; reference steeper (about 10-15% left).",
+    "surface": "figure",
+    "anchor": "Figure 2 panels A-C (JPEG raster)",
+    "artifact": "files/figures/PMID37082241_r2/fphys-14-1086243-g002.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 5 read as an image (pharmacokinetics after one injection): plasma and brain concentrations of both analogues fall to a small fraction within 60 minutes (first compound brain about 1.2 ng/mg at 15 min, about 0.2 at 60 min; second compound about 1.0 and about 0.15), so brain exposure is short-lived.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5: brain first compound about 1.2 ng/mg (15 min) -> about 0.2 (60 min); second about 1.0 -> about 0.15.",
+    "surface": "figure",
+    "anchor": "Figure 5 panels A-D (JPEG raster)",
+    "artifact": "files/figures/PMID37082241_r2/fphys-14-1086243-g005.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 6 read as an image (Scn1a heterozygous mice): in both the control and treated groups most animals have zero seizures per hour; the treated group has two animals at about 0.5 and 0.65 per hour against a control maximum of about 0.34; the survival curve of the treated group ends about 43 percent against about 67 percent for control at day 30 (P = 0.09, not significant).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6A-B: most animals 0 seizures/h in both groups; treated max about 0.65 vs control about 0.34; survival day 30 about 43% treated vs about 67% control (ns).",
+    "surface": "figure",
+    "anchor": "Figure 6 panels A-B (JPEG raster)",
+    "artifact": "files/figures/PMID37082241_r2/fphys-14-1086243-g006.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 7 read as an image (6 Hz corneal seizure model, 10 mice per group): the share protected is near 3 percent with vehicle, about 10 percent at the two lower doses and about 50 percent at the highest dose (one star), against about 90 percent for the valproate comparator (four stars).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7: protected vehicle about 3%, low doses about 10%, highest dose about 50% (*), valproate about 90% (****).",
+    "surface": "figure",
+    "anchor": "Figure 7 (JPEG raster)",
+    "artifact": "files/figures/PMID37082241_r2/fphys-14-1086243-g007.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 8 read as an image (absence-model rats, four drug conditions): normalised incidence and total duration rise above baseline for the treated groups (stars at the middle and highest doses), raw incidence about 65 for vehicle against about 78 to 79 for the middle and highest doses (one star), total duration about 940 s against about 1,200 s at the highest dose (three stars), average duration about 15 s against about 16 s (one star); average frequency about 9 to 10 Hz in all groups.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 8: raw incidence vehicle about 65 vs about 78-79; total duration about 940 vs about 1200 s (***); average duration about 15 vs 16 s (*); frequency about 9-10 Hz.",
+    "surface": "figure",
+    "anchor": "Figure 8 panels A-H (JPEG raster)",
+    "artifact": "files/figures/PMID37082241_r2/fphys-14-1086243-g008.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Figure 2 read as an image (first hour of the absence-model recordings, 10 minute bins): incidence, total duration, average duration and frequency curves for vehicle and the three doses overlap until the last bin, where error bars are large (up to about 600 to 2,000 percent of baseline); the bar panels show no star.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Fig 2: curves overlap; last 10-min bin error bars very large; no star in B, D, F, H.",
+    "surface": "figure",
+    "anchor": "Supplementary Figure 2 (TIF converted to PNG)",
+    "artifact": "files/supplement/PMID37082241_r2/Image2.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Figure S1 read as an image: percentage weight gain of the Scn1a heterozygous mice on treated chow against control chow is not different at postnatal day 25 (about 21 against about 28 percent) or day 31 (about 56 against about 60 percent).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Fig S1: weight gain P25 about 21% (treated) vs about 28% (control); P31 about 56% vs about 60%; ns.",
+    "surface": "figure",
+    "anchor": "Supplementary Figure S1 (TIF converted to PNG)",
+    "artifact": "files/supplement/PMID37082241_r2/Image1.png",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table S1 lists the mass-spectrometry transitions used to quantify the two analogues and the internal standard; it holds no efficacy data.",
+    "snippet": "Liquid chromatography-tandem mass spectrometry analyte mass transitions and collision energies.",
+    "surface": "supplement",
+    "anchor": "Supplementary Table S1 caption",
+    "artifact": "files/supplement/PMID37082241_r2/Table1.txt",
     "panel_text_relation": "text_only"
    }
   ],

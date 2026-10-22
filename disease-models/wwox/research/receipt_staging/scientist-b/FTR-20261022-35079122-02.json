@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-22T00:00:00Z",
+ "event_at": "2026-10-22T04:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "captions_only"
+ },
+ "event_id": "FTR-20261022-35079122-02",
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "Completing pass (owed: figures captions_only, supplementary not_read). Figures 2, 3 and 4 opened as images (each read returned an image; Figure 1 was opened in the first pass). The supplementary Word file (Methods, 58 kB of text with embedded reference-manager blobs) was opened for its head only; its text layer is not used for any locator: supplementary = captions_only, a declared debt."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID35079122.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-b_20261022f.md"
+ ],
+ "prior_receipt": "FTR-20261021-35079122-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "3e6eaf4583ef910bc921ede40c32ccca98d17f27b2947499eca1b2ab8d226e8b",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID35079122_Cabungcal2022_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1038/s41380-021-01425-2",
+  "pmid": "35079122"
+ },
+ "workflow": "scientist-b repurposing batch R2e completing pass 2026-10-22; SOURCE_FIRST for the owed sections; NOT WWOX EVIDENCE; prepared as JSON for the integrator and staged, not appended."
+}

@@ -2,8 +2,9 @@
  "schema_version": 2,
  "pmid": "33704440",
  "doi": "10.1093/brain/awab101",
- "receipt": "FTR-20261021-33704440-01",
+ "receipt": "FTR-20261022-33704440-02",
  "landing": [
+  "FTR-20261022-33704440-02",
   "FTR-20261021-33704440-01",
   "repurposing_10h_scientist-b_20261021"
  ],
@@ -141,6 +142,102 @@
     "derived": false,
     "result_sha256": "fa4deb27b4d2bf20b1f38669fb54bd86cca4c5d24f4c5fb3b699fd1400ea18be"
    }
+  },
+  {
+   "path": "files/figures/PMID33704440_r2/awab101f2.jpg",
+   "sha256": "c987d5adbb605cfc1c68bbd610a03c71f577c14a9e63b1097490099ed4e8132b",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC8422349",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "c987d5adbb605cfc1c68bbd610a03c71f577c14a9e63b1097490099ed4e8132b"
+   },
+   "note": "Figure raster (JPEG from the journal html as delivered) opened as an image."
+  },
+  {
+   "path": "files/figures/PMID33704440_r2/awab101f3.jpg",
+   "sha256": "85def16ee9806005db8e6b9bb8df5997abfe88802a7510d897d6a40c1577f55c",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC8422349",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "85def16ee9806005db8e6b9bb8df5997abfe88802a7510d897d6a40c1577f55c"
+   },
+   "note": "Figure raster (JPEG from the journal html as delivered) opened as an image."
+  },
+  {
+   "path": "files/figures/PMID33704440_r2/awab101f4.jpg",
+   "sha256": "2e1f439b547da71ad3d3150466a2208e5dbf1badfa57bd004ccb23d06c2c3a3a",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC8422349",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "2e1f439b547da71ad3d3150466a2208e5dbf1badfa57bd004ccb23d06c2c3a3a"
+   },
+   "note": "Figure raster (JPEG from the journal html as delivered) opened as an image."
+  },
+  {
+   "path": "files/figures/PMID33704440_r2/awab101f5.jpg",
+   "sha256": "5fe6c378d58d9ecf52ab502b863816b59b94ca7a5645a0d35c26247463bbd780",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC8422349",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "5fe6c378d58d9ecf52ab502b863816b59b94ca7a5645a0d35c26247463bbd780"
+   },
+   "note": "Figure raster (JPEG from the journal html as delivered) opened as an image."
+  },
+  {
+   "path": "files/figures/PMID33704440_r2/awab101f7.jpg",
+   "sha256": "c6671537f028d1faa5967e71daddce3ad1b99769ddbb2cc682a9ea487af32484",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC8422349",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "c6671537f028d1faa5967e71daddce3ad1b99769ddbb2cc682a9ea487af32484"
+   },
+   "note": "Figure raster (JPEG from the journal html as delivered) opened as an image."
+  },
+  {
+   "path": "files/supplement/PMID33704440_r2/awab101_Supplementary_Data.txt",
+   "sha256": "75b6b988f5effa7f714306dda19d00515a8cbcc2a327fd7e7f335810323ccb6a",
+   "kind": "supplement_text",
+   "note": "DERIVED text layer of the Supplementary Data PDF (19 pages: methods, Tables S1 to S3, Figures S1 to S6 legends) by pdftotext -layout -nopgbrk; the supplementary plots themselves were not opened as images.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftotext_layout_nopgbrk",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "75b6b988f5effa7f714306dda19d00515a8cbcc2a327fd7e7f335810323ccb6a",
+    "derived_from": "files/supplement/PMID33704440_r2/awab101_Supplementary_Data.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk awab101_Supplementary_Data.pdf awab101_Supplementary_Data.txt"
+    }
+   }
   }
  ],
  "verbatim_locators": {
@@ -166,12 +263,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Mechanism claim as the authors frame it: two parallel mechanisms, calcium toxicity from increased resting and action-potential-driven calcium entry in neurons expressing the variants from early development, and altered firing mode in thalamic neurons; the authors write it is uncertain how much developmental versus acute excitability changes contribute to network hyperexcitability and seizures, and they do not exclude a glial contribution.",
+    "proposition": "The authors write that at present it remains uncertain to what extent deficiencies in early neuronal development and acutely altered excitability contribute to hyper-excitability on the network level and consequently to seizures.",
     "snippet": "At present it remains uncertain to what extent deficiencies in early neuronal development and acutely altered excitability contribute to hyper-excitability on the network level and consequently to seizures.",
     "surface": "body",
     "anchor": "Discussion, penultimate paragraph",
     "artifact": "files/fulltext/PMID33704440_ElGhaleb2021_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33704440.json",
+     "entry": 2,
+     "what_changed": "2026-10-22 advisory strength scan: the proposition carried wording or claims the quote does not contain; narrowed to the quote (the dropped inference is in the note, not this locator). Prior wording began: Mechanism claim as the authors frame it: two parallel mechanisms, calcium toxici",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "ADVISORY_STRENGTH_SCAN"
+      ],
+      "method": "locator_audit.py --strength-scan (advisory), run 2026-10-22; no blind audit; the narrowing only brings the proposition inside its quote"
+     }
+    }
    },
    {
     "proposition": "In a computer model of reticular-thalamic neurons, all four variants lowered the current needed to start firing and lengthened bursts beyond the stimulus, strongest for I860N. This is a simulation with parameters set from HEK-cell recordings, not recordings from neurons.",
@@ -187,6 +296,94 @@
     "surface": "body",
     "anchor": "Results, Heterozygous missense variants in the CACNA1I gene cause a spectrum of neurological symptoms",
     "artifact": "files/fulltext/PMID33704440_ElGhaleb2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A figure legend states that the I860N and I860M substitutions slow current kinetics and left-shift the voltage dependence of activation of the Cav3.3 channel.",
+    "snippet": "The I860N and I860M substitutions slow current kinetics and left-shift the voltage-dependence of activation of Cav3.3.",
+    "surface": "body",
+    "anchor": "Figure 2 legend title",
+    "artifact": "files/fulltext/PMID33704440_ElGhaleb2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A figure legend states that steady-state inactivation and window currents are left-shifted in all four missense variants.",
+    "snippet": "Steady state inactivation and window currents are left-shifted in all four missense variants of Cav3.3.",
+    "surface": "body",
+    "anchor": "Figure 5 legend title",
+    "artifact": "files/fulltext/PMID33704440_ElGhaleb2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A figure legend states that the computer model of a reticular-nucleus neuron shows all amino acid substitutions increase electrical activity of Cav3.3, with the first variant showing a stronger effect.",
+    "snippet": "Computer modelling of a TRN neuron shows that all amino acid substitutions increase electrical activity of Cav3.3, with I860N showing a stronger effect.",
+    "surface": "body",
+    "anchor": "Figure 6 legend title",
+    "artifact": "files/fulltext/PMID33704440_ElGhaleb2021_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table S3 gives the wild-type and first-variant peak current densities as -72.9 and -45.0 pA/pF with a t-test P of 0.18.",
+    "snippet": "Ipeak (pA/pF) -72.9±12.2 -45.0±15.3 0.18",
+    "surface": "supplement",
+    "anchor": "Supplementary Table S3",
+    "artifact": "files/supplement/PMID33704440_r2/awab101_Supplementary_Data.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The supplementary legend states that 15 of 19 chromaffin cells expressing the first variant experienced a dramatic loss of seal quality.",
+    "snippet": "15/19 chromaffin cells expressing CaV3.3-I860N experienced a dramatic loss of seal quality.",
+    "surface": "supplement",
+    "anchor": "Supplementary Figure S6 legend",
+    "artifact": "files/supplement/PMID33704440_r2/awab101_Supplementary_Data.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The supplementary legend states that the action-potential-current increases are 3-, 4- and 7-fold, respectively, for three of the variants.",
+    "snippet": "show a 3-, 4-, and 7-fold increase, respectively.",
+    "surface": "supplement",
+    "anchor": "Supplementary Figure S3 legend, panel E",
+    "artifact": "files/supplement/PMID33704440_r2/awab101_Supplementary_Data.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2 read as an image: for I860N the time to peak is about 85 against 24 ms for wild type (four stars), inactivation at 500 ms about 52 against 98 percent (four stars), peak density about minus 45 against minus 73 pA/pF (not different), half-activation about minus 59 against minus 42 mV (four stars); for I860M time to peak about 46 against 23 ms (three stars), inactivation about 88 against 97 percent (four stars), half-activation about minus 49 against minus 41 mV (four stars) and peak density not different.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2D-G, K-N: I860N time to peak about 85 vs 24 ms, inactivation 52 vs 98%, Ipeak ns, V1/2 -59 vs -42 mV; I860M time to peak 46 vs 23 ms, inactivation 88 vs 97%, V1/2 -49 vs -41 mV.",
+    "surface": "figure",
+    "anchor": "Figure 2 panels D-G and K-N (JPEG raster)",
+    "artifact": "files/figures/PMID33704440_r2/awab101f2.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3 read as an image: I1306T and M1425I have longer time to peak (about 78 and 55 against 20 ms), less inactivation at 500 ms (about 50 and 63 against 96 percent), a larger peak density only for M1425I (about minus 99 against minus 40 pA/pF; one star) and half-activation about minus 53 and minus 52 against minus 39 mV (four stars).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3D-G: time to peak I1306T about 78, M1425I about 55 vs WT 20 ms; inactivation about 50, 63 vs 96%; Ipeak M1425I about -99 vs -40 pA/pF (*); V1/2 about -53, -52 vs -39 mV.",
+    "surface": "figure",
+    "anchor": "Figure 3 panels D-G (JPEG raster)",
+    "artifact": "files/figures/PMID33704440_r2/awab101f3.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 4 read as an image: the deactivation time constant is about 4.8 ms for I860N against about 0.5 ms for wild type (four stars), about 0.8 ms for I860M (not different), and about 2.0 and 2.3 ms for I1306T and M1425I against about 0.6 ms (one and two stars).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4B, D: tau deactivation I860N about 4.8 vs WT 0.5 ms (****); I860M about 0.8 ns; I1306T about 2.0 (*), M1425I about 2.3 vs 0.6 ms (**).",
+    "surface": "figure",
+    "anchor": "Figure 4 panels B, D (JPEG raster)",
+    "artifact": "files/figures/PMID33704440_r2/awab101f4.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 5 read as an image: steady-state half-inactivation is shifted to about minus 76 mV for the two I860 variants against about minus 70 mV for wild type (two stars) and for M1425I to about minus 79 against minus 72 mV (three stars) with I1306T not different; the window-current areas are drawn larger for the variants.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5B, F: V1/2 inactivation I860N and I860M about -76 vs WT about -70 mV (**); M1425I about -79 vs about -72 (***); I1306T ns.",
+    "surface": "figure",
+    "anchor": "Figure 5 panels B, F (JPEG raster)",
+    "artifact": "files/figures/PMID33704440_r2/awab101f5.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 7 read as an image (mouse chromaffin cells expressing the channel): wild-type cells show low-threshold firing at rest in all cells while I860M shows it in 50 percent with slow oscillations in 25 percent and I860N shows neither (0 percent) with slow oscillations in 100 percent at minus 70 mV; baseline potential about minus 114 mV for I860N against about minus 73 mV for wild type (two stars).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7A-G: LTF at RMP WT 100%, I860M 50%, I860N 0%; SO at -70 mV WT 0%, I860M 50%, I860N 100%; baseline I860N about -114 vs WT -73 mV (**).",
+    "surface": "figure",
+    "anchor": "Figure 7 panels A-F (JPEG raster)",
+    "artifact": "files/figures/PMID33704440_r2/awab101f7.jpg",
     "panel_text_relation": "text_only"
    }
   ],
