@@ -1,0 +1,41 @@
+{
+ "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Part of the ten-hour repurposing batch ORCH-REPURPOSING-10H-20261021. Adjacent and transferable literature: every paper that is not WWOX evidence is labelled NOT WWOX EVIDENCE, at class level, no dose, no paediatric suitability presumed, not medical advice.",
+ "TASK_ID": "REPURP-10H-P5-A-20261022",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-a",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Roadmap P5, drafted from the audited and repaired cards: present TWO comparisons, one per path (deep recovery, early benefit), as VISIBLE DIMENSIONS (benefit, evidence, risk, time to access, time to benefit, feasibility) with UNKNOWN kept as UNKNOWN (never zero, never favourable); identify the NON-DOMINATED candidates per path as a statement about those visible dimensions; compare with the plain target-to-drug lookup and with the pre-existing records; state what changes in the choice of the next experiment. NO score, NO rank, NO probability, NO blended index, NO dose, NO paediatric suitability.",
+ "SCOPE": {
+  "inputs": [
+   "disease-models/wwox/research/drug_repurposing/cards/ (12)",
+   "disease-models/wwox/research/drug_repurposing/cards_early/ (9)",
+   "the cards' notes and the roadmap P5 section quoted in drug_repurposing/roadmap_v4_r14_20261020.md"
+  ],
+  "outputs": "disease-models/wwox/research/drug_repurposing/p5/ (new, yours alone) with a README; do NOT edit cards/ or cards_early/"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "a table per path with the visible dimensions as columns and every candidate AND abstention as rows, cells carrying the card's own field value or UNKNOWN",
+  "non-dominated set per path stated with the dominance relation spelled out pair by pair for the pairs that decide it",
+  "a convergence note that separates agreeing ALGORITHMS from independent ORIGINS of evidence (shared sources count once)",
+  "what the simple target-to-drug lookup would have chosen and whether the cards change it",
+  "the single measurement that would most change which candidate deserves discussion with a treating team, phrased as a question",
+  "DEFAULTS_TAKEN and STOP_LOG here"
+ ],
+ "DEPENDENCIES": [],
+ "REVIEW_REQUIREMENT": "Mirror ex post",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently",
+ "MILESTONE_PLAN": [
+  "TASK_ACK/CLAIM",
+  "per-paper M0-M5",
+  "analysis note",
+  "self-eval",
+  "report"
+ ],
+ "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
+ "CURRENT_STATE": "ASSIGNED",
+ "assigned_on": "2026-10-22"
+}

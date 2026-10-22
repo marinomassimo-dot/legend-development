@@ -1,0 +1,39 @@
+{
+ "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Part of the ten-hour repurposing batch ORCH-REPURPOSING-10H-20261021. Adjacent and transferable literature: every paper that is not WWOX evidence is labelled NOT WWOX EVIDENCE, at class level, no dose, no paediatric suitability presumed, not medical advice.",
+ "TASK_ID": "REPURP-10H-WWOXROWS-D-20261022",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-d",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Search for WWOX-direct rows inside the SUPPLEMENTARY TABLES of large developmental-and-epileptic-encephalopathy treatment-response cohorts and registries. The R4b reading of a fenfluramine registry found one WWOX patient in a supplement (a non-responder, n=1, variant unstated, possible 'not evaluable' all-zero column) that no abstract mentions; Europe PMC full text does not reach supplementary tables, so a PubMed or full-text zero says nothing about them. Use framework/scripts/supplement_symbol_search.py (scientist-b's tool) on the supplements of every genotype-stratified treatment-response cohort you can reach lawfully, up to 12 papers.",
+ "SCOPE": {
+  "inputs": [
+   "disease-models/wwox/research/repurposing_10h_scientist-d_20261022b.md (the Table S7 finding)",
+   "framework/scripts/supplement_symbol_search.py"
+  ],
+  "outputs": "your note, manifests and staged receipts; a WWOX-row inventory table in your note"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "per cohort: what the supplement is, which column carries genotype, which carries the treatment and the response, whether an all-zero WWOX row means 'no response' or 'not evaluable' (read the supplement legend or methods; say if undetermined)",
+  "every WWOX row counted ONCE: check for patient overlap between cohorts and with the repository's WWOX case series (shared patients are not independent confirmations)",
+  "explicit statement that a zero hit in a supplement licenses only 'no WWOX row in the files searched'",
+  "no inference about efficacy from n=1",
+  "DEFAULTS_TAKEN and STOP_LOG here"
+ ],
+ "DEPENDENCIES": [],
+ "REVIEW_REQUIREMENT": "Mirror ex post",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently",
+ "MILESTONE_PLAN": [
+  "TASK_ACK/CLAIM",
+  "per-paper M0-M5",
+  "analysis note",
+  "self-eval",
+  "report"
+ ],
+ "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
+ "CURRENT_STATE": "ASSIGNED",
+ "assigned_on": "2026-10-22"
+}
