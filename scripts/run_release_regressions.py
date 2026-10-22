@@ -131,6 +131,7 @@ PRIORITY_TESTS = (
     "framework/scripts/test_eutils.py",
     "framework/scripts/test_figure_legend_pairs.py",
     "framework/scripts/test_docx_to_text.py",
+    "framework/scripts/test_docx_media_extract.py",
     "framework/scripts/test_pmc_bucket_fetch.py",
     # The clinical census connector, enrolled in the commit that adds it. Four states, no
     # pre-filter on phase or masking, and an empty answer that can never read as "no study

@@ -3,7 +3,7 @@
  "pmid": "42286026",
  "doi": "10.1038/s41598-026-55285-3",
  "pmcid": "PMC13518877",
- "receipt": "FTR-20261021-42286026-01",
+ "receipt": "FTR-20261022-42286026-02",
  "context_policy": "QUESTION_DRIVEN",
  "context_policy_note": "Held before reading: the R4b task's questions (a confirmed repurposed drug; a missense precedent; an external or natural-history comparator that held up; a pre-dose drift measurement) and the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
  "landing": [
@@ -187,6 +187,61 @@
      "call": "pdfimages -f 6 -l 6 -png <pdf> img"
     }
    }
+  },
+  {
+   "path": "files/supplement/PMID42286026_r2/41598_2026_55285_MOESM1_ESM.docx",
+   "sha256": "fdce3dd9675bb309af18f95de12b204bce1cce38e623beaf16432350c60dc673",
+   "kind": "supplement_binary",
+   "note": "Supplementary information docx (one figure, S1) from the PMC open-data bucket.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13518877.1/41598_2026_55285_MOESM1_ESM.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "result_sha256": "fdce3dd9675bb309af18f95de12b204bce1cce38e623beaf16432350c60dc673"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42286026_r2/41598_2026_55285_MOESM1_ESM.txt",
+   "sha256": "2a203debdd82e22b6e2729bf4dee03f6409c11adc6bd98a9dbaf8b68b1aa7b36",
+   "kind": "supplement_text",
+   "note": "Text of the supplementary docx by docx_to_text.py.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "docx_to_text",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42286026_r2/41598_2026_55285_MOESM1_ESM.docx",
+    "extractor": {
+     "name": "framework/scripts/docx_to_text.py",
+     "version": "repository main f941c9c8",
+     "call": "python3 framework/scripts/docx_to_text.py --out <txt> <docx>"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "2a203debdd82e22b6e2729bf4dee03f6409c11adc6bd98a9dbaf8b68b1aa7b36"
+   }
+  },
+  {
+   "path": "files/figures/PMID42286026/suppS1.png",
+   "sha256": "32097e5c72ab72a991cee0003b4698e8d4dd70d45b6d7b51e2ef2245fe76f913",
+   "kind": "figure",
+   "note": "Supplementary Figure S1 image (word/media/image1.png of the docx, written unchanged), opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "docx media extraction",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42286026_r2/41598_2026_55285_MOESM1_ESM.docx",
+    "extractor": {
+     "name": "zipfile (Python standard library)",
+     "version": "3.12",
+     "call": "read word/media/image1.png from the docx"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "32097e5c72ab72a991cee0003b4698e8d4dd70d45b6d7b51e2ef2245fe76f913"
+   }
   }
  ],
  "verbatim_locators": {
@@ -335,6 +390,22 @@
     "surface": "body",
     "panel_text_relation": "text_only",
     "artifact": "files/fulltext/PMID42286026_Xiong2026_PMC.xml"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE (KCNQ2 developmental and epileptic encephalopathy, gabapentin add-on). The supplementary legend states the recorded cell numbers: mock 9, wild type 15, L200P/KCNQ2 29, A294V/KCNQ2 12, F305del/KCNQ2 17 and F305I/KCNQ2 14, with variants co-expressed with wild-type KCNQ2 at a 1:1 ratio; no statistical test is named in the legend.",
+    "snippet": "The number of recorded cells for each condition: mock(n = 9), KCNQ2 WT (n = 15), p.L200P/KCNQ2 (n = 29), p.A294V/KCNQ2 (n = 12), p.F305del/KCNQ2 (n = 17), p.F305I/KCNQ2 (n = 14).",
+    "anchor": "Supplementary Fig. S1 legend",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID42286026_r2/41598_2026_55285_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Supplementary Figure S1: with wild-type KCNQ2 as the partner (a different partner from the main-text co-expression), the L200P current density at +60 mV is about 220 pA/pF against about 117 for wild type, A294V is lower (about 65), and F305del and F305I (about 140) sit near the wild-type curve with overlapping error bars while their activation curves shift to more negative voltages; L200P shifts to more positive voltages; the legend names no statistical test, so the apparent differences are not tested here (readings by eye).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Fig. S1 left panel legend lists mock, WT, L200P+KCNQ2, A294V+KCNQ2, F305I+KCNQ2, F305del+KCNQ2 with current density to about 220 pA/pF for L200P+KCNQ2 at +60 mV; right panel G/Gmax curves with F305del and F305I left of WT and L200P right of WT.",
+    "anchor": "Supplementary Figure S1, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42286026/suppS1.png",
+    "panel_text_relation": "panel_only"
    }
   ],
   "source_fulltext_indexed": true,

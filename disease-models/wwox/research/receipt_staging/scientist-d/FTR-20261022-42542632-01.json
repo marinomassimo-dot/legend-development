@@ -1,0 +1,43 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261022-42542632-01",
+  "study_id": {
+    "pmid": "42542632",
+    "doi": "10.1016/j.eclinm.2026.104092"
+  },
+  "analysis_at": "2026-10-22T04:14:00Z",
+  "analysis_time_precision": "minute",
+  "workflow": "scientist-d (stated assumption of the Orchestrator), task R4c-D-20261022, adjacent R4 precedent (new, not in the registry); context_policy QUESTION_DRIVEN (held: the group's five questions on symptomatic versus modifying separation, external controls and N-of-1 or aggregated designs). Route: Europe PMC JATS for PMC13427569 (CC BY) as the text surface; figures, the 28-page appendix with the statistical analysis plan, and the 58-page protocol from the Europe PMC supplementaryFiles container; the appendix read in full, the protocol read in its synopsis, endpoint and statistical sections only; figures and appendix pages opened as images. Every statement is about GNAO1-related disorders and is not WWOX evidence.",
+  "evidence_depth": "partial_fulltext_read",
+  "source_locator": "files/fulltext/PMID42542632_Thiel2026_PMC13427569.xml",
+  "source_fingerprint": "633d5b68e0940ccb6b3a8fbbe6e56d51c3f0098332218d41da7ad6235ab3f982",
+  "source_kind": "fulltext_local",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "read",
+    "methods": "read",
+    "results": "read",
+    "figures": "read",
+    "tables": "read",
+    "discussion": "read",
+    "limitations": "read",
+    "supplementary": "captions_only",
+    "references": "read"
+  },
+  "outputs": [
+    "disease-models/wwox/research/deepdive_manifests/PMID42542632.json",
+    "disease-models/wwox/research/repurposing_r4c_scientist-d_20261022.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261022-SCIENTISTD-R4C-01.md"
+  ],
+  "evidence_basis": [
+    "coverage_map",
+    "manifest",
+    "Figures 1-3 and appendix pages 14-16 opened as images",
+    "Tables 1-2 and appendix Tables S1-S8 read",
+    "protocol read in synopsis, endpoints and statistics only (supplementary declared captions_only)",
+    "SUBSTITUTE: no WWOX content (0 mentions)"
+  ],
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "event_at": "2026-10-22T04:14:00Z"
+}

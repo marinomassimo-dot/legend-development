@@ -204,6 +204,22 @@ Selected: 16 (tier 1 highest). All are NOT WWOX EVIDENCE.
 | PMID | First author, year | Title | Receipt state | Note |
 |---|---|---|---|---|
 | 36537114 | Chong SC 2023 | Expansion of the clinical and molecular spectrum of WWOX-related epileptic encephalopathy | receipt FTR-20261020-36537114-01 (owed: figures captions_only, supplementary not_read, tables not_read); blind locator audit already run 2026-10-21 | Not re-read: used and corrected in the early-benefit note. |
+| 36537114 | (same) | (same) | 2026-10-22 R4c retry | Still HELD: OpenAlex lists no open location, Europe PMC has no full text, the publisher page and its supplement route answer HTTP 403 with an anti-automation challenge (not circumvented). Operator PDF wishlist item 2 stands. |
+| 38015929 | Xian 2023 | Delineating clinical and developmental outcomes in STXBP1-related disorders | owed: supplementary tables and Figures S1-S7 | CLOSED 2026-10-22: `FTR-20261022-38015929-02` staged (complete); 13 locators appended. |
+| 40162009 | Schulz 2025 | CLN2 enzyme replacement versus natural history | owed: Figures S1-S3 | CLOSED 2026-10-22: `FTR-20261022-40162009-02` staged (complete). |
+| 41531035 | Liogier d'Ardhuy 2026 | CDKL5 deficiency disorder baseline outcome measures | owed: nine embedded supplementary images | CLOSED 2026-10-22: `FTR-20261022-41531035-02` staged (complete). |
+| 42446932 | McKee 2026 | Natural-history protocol for synaptic disorders (STXBP1, SYNGAP1) | owed: three EMF images of Figure S1 | CLOSED 2026-10-22: `FTR-20261022-42446932-02` staged (complete); images decoded from the embedded EMF+ bitmaps. |
+| 42481851 | Kim-McManus 2026 | Individualised antisense for SCN2A-related DEE | owed: the supplementary information | CLOSED 2026-10-22: `FTR-20261022-42481851-02` staged (complete); the supplement is a 3-page Reporting Summary. |
+| 42286026 | Xiong 2026 | KCNQ2 gabapentin | owed: supplementary docx | CLOSED 2026-10-22: `FTR-20261022-42286026-02` staged (complete). |
+| 35499850, 39093319, 41250984, 39439575 | (R4, scientist-d 2026-10-21) | partial readings | owed: supplementary files on disk, not read end to end | STILL OWED. |
+| 39625912, 39762914, 41999155 | (R4, scientist-d 2026-10-21) | partial readings | owed: the long protocol documents (56 pages, 110 pages, 470 thousand characters) | STILL OWED (read only in their synopsis, endpoint and statistics sections).
+
+**R4c addenda (scientist-d, 2026-10-22; three new precedents in `repurposing_r4c_scientist-d_20261022.md`; all NOT WWOX EVIDENCE):**
+
+1. *Symptomatic versus modifying:* no new design separates them; a consensus text on individualised antisense treats a symptomatic response as a hint of modifiability (42594875) and an outcome-strategy review never uses the term disease-modifying (42494992). In the GNAO1 zinc pilot the unblinded disability and caregiver goal scores moved while the blinded movement score did not (42542632).
+3. *External controls:* a non-disease comparator (cerebral palsy trajectories and a rehabilitation-programme cohort) carried the headline claim of the GNAO1 pilot; the treated n is 8 in the main text and 10 in the appendix (42542632). The CLN2 sensitivity analysis gives weaker hazard ratios than the main matched analysis (40162009).
+4. *N-of-1 and aggregated designs:* the SCN2A antisense Reporting Summary states two open-label single-patient trials with dose replication inside patients and no multiplicity correction (42481851); the consensus eligibility framework applies to nanorare variants (under 30 patients worldwide), which fits a private allele rather than the WWOX class (inference).
+5. *Responsive instruments:* growth scale values still lack agreed meaningful-change thresholds (42494992); the CDKL5 baseline study judges the 88-item gross motor measure unsuitable and still schedules it (41531035).
 
 ### R1 five questions
 

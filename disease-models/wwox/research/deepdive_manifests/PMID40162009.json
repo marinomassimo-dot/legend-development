@@ -381,12 +381,26 @@
     "panel_text_relation": "panel_only"
    },
    {
-    "proposition": "PANEL READING, Supplementary Figure S3 (image S3): for time to unreversed score 0 the hazard ratio is printed as 0.10 (0.02 to 0.47), P = 0.004, against 0.07 in the main analysis; the treated curve drops once near month 25 and is flat at about 0.83 thereafter; 3 controls remain at risk by month 21.",
+    "proposition": "PANEL READING, Supplementary Figure S3 (image S3): for time to unreversed score 0 the hazard ratio is printed as 0.10 (0.02 to 0.47), P = 0.004, against 0.07 in the main analysis; the treated curve drops to about 0.94 near month 6, then to about 0.83 near month 25, and is flat thereafter; 3 controls remain at risk by month 21.",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S3 reads 'HR (95% CI) = 0.10 (0.02, 0.47); p = 0.004'; the treated curve steps from about 0.94 to about 0.83 near month 25.",
     "anchor": "Supplementary Figure S3, read as an image",
     "surface": "figure",
     "artifact": "files/figures/PMID40162009_r2/suppS3.jpeg",
-    "panel_text_relation": "panel_only"
+    "panel_text_relation": "panel_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40162009.json",
+     "entry": 19,
+     "what_changed": "Proposition said the treated curve drops once near month 25; it drops twice (near month 6 and near month 25). Reworded.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R4c_20261022.md",
+      "triple": 19,
+      "note": "narrowed as the auditor advised; the narrowing itself is unaudited"
+     }
+    }
    },
    {
     "proposition": "PANEL READING, Supplementary Figure S1 (image S1): matched-pair ML score trajectories drawn in panels by baseline age band (under 3, 3 to under 4, 4 to under 5, 5 to under 6, 6 or more years); in most pairs the control line (NH) falls to a lower score than the treated line over the same ages, in a few pairs the lines overlap, in some pairs the control line has only one or two points after baseline, and the 6-or-more band includes a pair with no control line after baseline; each panel is one pair, no pooled estimate is on the figure.",

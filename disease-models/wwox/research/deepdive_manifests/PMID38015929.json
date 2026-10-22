@@ -683,12 +683,26 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The single decision tree for unpredictable seizures has seven leaves holding 55, 2, 7, 16, 9, 9 and 2 percent of individuals; the 2 percent leaves are about one or two of the 78 individuals in the forecasting set (inference from the percentages), so leaf probabilities of 1.00 and 0.00 rest on one or two people.",
+    "proposition": "The single decision tree for unpredictable seizures has seven leaves holding 55, 2, 7, 16, 9, 9 and 2 percent of individuals; the two 2 percent leaves (leaf 2, probability 1.00, and leaf 7, probability 0.00) would be about one or two people if the tree used the 78 individuals of the forecasting analysis, a denominator the supplement does not state for the tree (inference).",
     "snippet": "Percent of all individuals 55% 2% 7% 16% 9% 9% 2%",
     "anchor": "Supplementary Table 3, last row",
     "surface": "supplement",
     "artifact": "files/supplement/PMID38015929_r2/awad287_supplementary_data.txt",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38015929.json",
+     "entry": 30,
+     "what_changed": "Proposition said the 1.00 and 0.00 leaf probabilities rest on one or two people; only the two 2 percent leaves do, and the 78-person denominator is stated for the forecasting analysis, not the tree. Reworded as inference.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R4c_20261022.md",
+      "triple": 30,
+      "note": "narrowed as the auditor advised; the narrowing itself is unaudited"
+     }
+    }
    },
    {
     "proposition": "The supplementary methods state 1,000 simulated trials per month; the supplementary schematic of the same procedure labels the step 'Run trial 100 times with sampling'.",
@@ -707,12 +721,26 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "PANEL READING, supplementary virtual-trial schematic (image 007): the schematic box reads 'Run trial 100 times with sampling' beside a sliding-window plot of 67 individuals over 36 months, whereas the methods text says 1,000 simulated trials; the example trial is 6 months with 20 percent reduction.",
+    "proposition": "PANEL READING, supplementary virtual-trial schematic (image 007): the schematic box reads 'Run trial 100 times with sampling' beside a sliding-window plot over 36 months, whereas the methods text says 1,000 simulated trials; the example trial is 6 months with 20 percent reduction.",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Image 007 reads 'Run trial 100 times with sampling' and 'Example virtual trial: Trial duration of 6 months, Targeted seizure reduction of 20%' over a 36-month plot of seizures in 67 individuals.",
     "anchor": "Supplementary virtual-trial schematic, read as an image",
     "surface": "figure",
     "artifact": "files/page_renders/PMID38015929/suppimg-007.png",
-    "panel_text_relation": "panel_only"
+    "panel_text_relation": "panel_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38015929.json",
+     "entry": 33,
+     "what_changed": "Proposition named a plot of 67 individuals; the schematic image names no number of individuals. Words \"of 67 individuals\" deleted.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "NOT_IN_SOURCE"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R4c_20261022.md",
+      "triple": 33,
+      "note": "narrowed as the auditor advised; the narrowing itself is unaudited"
+     }
+    }
    },
    {
     "proposition": "PANEL READING, Supplementary Figure 3 grouped hotspot panel (image 011): the legend text says the grouped association was 'less robust with only an increase in tonic seizures between 7 and 8 months'; the panel's focal-onset trace also rises above the dashed significance line near 2.8 years and between about 3.8 and 4.2 years, and the all-seizure trace reaches the line near 1.2 years (approximate readings; no confidence band).",
