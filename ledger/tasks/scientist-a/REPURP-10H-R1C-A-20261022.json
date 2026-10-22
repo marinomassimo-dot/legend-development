@@ -1,0 +1,92 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Issued by the coordinator by message in the session of 2026-10-22 (R1 lot, close the two HELD-partial rows, a note on what would split the Q230P dependence, at most three new post-2025 R1-class readings). Every non-WWOX paper is NOT WWOX EVIDENCE; class level; no dose, administration or suitability; not medical advice.",
+ "TASK_ID": "REPURP-10H-R1C-A-20261022",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-a",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "(1) Close the R1 HELD-partial rows PMID 42587736 and 42650175 by reading their owed sections from the lawful body and staging completing receipts (not recording them). (2) One short note: what single additional measurement would split the dependence of seven of twelve deep rows on one Q230P measurement, citing only what was read. (3) If budget remains, search Europe PMC for post-2025 R1-class proteostasis reports not yet in the selection (registry first) and read at most three.",
+ "SCOPE": {
+  "inputs": [
+   "disease-models/wwox/research/repurposing_batch_selection_20261021.md",
+   "deepdive_manifests/PMID42587736.json",
+   "deepdive_manifests/PMID42650175.json",
+   "P5 comparison, commit 8ed0f930"
+  ],
+  "outputs": "manifests, staged receipts under receipt_staging/scientist-a/, note repurposing_10h_scientist-a_r1c_20261022.md"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "manifests PASS under --verify-artifacts --require-current-schema",
+  "numeral-in-quote and quantifier/negation/strength-word checks run on every new locator",
+  "receipts staged, dry-run OK, none recorded",
+  "any contradiction of an earlier reading declared as contradicts_locator",
+  "max 12 readings"
+ ],
+ "DEPENDENCIES": [],
+ "REVIEW_REQUIREMENT": "Mirror ex post",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently",
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-10-22",
+ "TASK_ACK": {
+  "actor": "scientist-a",
+  "at": "2026-10-22T04:10:00Z",
+  "directive_version": 1,
+  "generation": 1,
+  "understanding": "Read the owed supplement sections of the two HELD-partial R1 papers, extend their manifests, stage completing receipts; write the dependence-splitting note; if budget remains, find and read at most three new post-2025 R1-class reports after a registry check. No dose, administration or suitability; no recording of receipts."
+ },
+ "TASK_CLAIM": {
+  "actor": "scientist-a",
+  "at": "2026-10-22T04:10:00Z",
+  "branch": "task/repurp-10h-r1c-a",
+  "worktree": ".claude/worktrees/r1c-a",
+  "reading_claims": [
+   "42587736",
+   "42650175"
+  ],
+  "note": "Reading claims for the two held papers (peer sign: the earlier R1 claim by the same actor)."
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "The owed-section text of the two HELD-partial rows was stale (the -02 resume receipts had covered methods, results and figures)",
+   "default": "read the supplement only; resume receipts -03 with prior_receipt -02",
+   "why_safe": "re-reading covered sections would overstate; the ledger status was queried first"
+  },
+  {
+   "condition": "Supplement PDF of 42650175 has no ToUnicode map",
+   "default": "legends quoted from the rendered page (rendered_text); text layer not used",
+   "why_safe": "the protocol forbids hand-correcting a suspect layer"
+  },
+  {
+   "condition": "Earlier supplement routes unrecorded",
+   "default": "re-fetched the Europe PMC bundle, reproduced the member digest, recorded the route",
+   "why_safe": "no new bytes enter the chain"
+  },
+  {
+   "condition": "60 MB raw-data workbook of 42569303",
+   "default": "ten sheets read as tables, 22 uncropped-blot images opened as contact sheets, limit declared in the receipt",
+   "why_safe": "lane-by-lane reading out of proportion; limit stated"
+  }
+ ],
+ "STOP_LOG": [],
+ "MILESTONE_LOG": [
+  {
+   "at": "2026-10-22",
+   "milestone": "supplements of 42587736 and 42650175 read, -03 receipts staged; Q230P dependence note; three new post-2025 R1-class readings (41378214, 41373471, 42569303) with manifests PASS and receipts staged; note and self-evaluation written"
+  }
+ ],
+ "STAGED_RECEIPTS": [
+  "FTR-20261022-42587736-03",
+  "FTR-20261022-42650175-03",
+  "FTR-20261022-41378214-01",
+  "FTR-20261022-41373471-01",
+  "FTR-20261022-42569303-01"
+ ],
+ "OWED": [
+  "blind audit by someone else of the text-versus-panel relations declared in the five manifests",
+  "the Q230P fractionated measurement of the note section 4 (a proposal, not made)",
+  "Harness decision on a read-only numeral/word-in-quote companion to the manifest validator"
+ ]
+}

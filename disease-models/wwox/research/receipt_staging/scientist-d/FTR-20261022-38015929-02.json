@@ -1,0 +1,37 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261022-38015929-02",
+  "study_id": {
+    "pmid": "38015929",
+    "doi": "10.1093/brain/awad287"
+  },
+  "analysis_at": "2026-10-22T04:03:00Z",
+  "analysis_time_precision": "minute",
+  "workflow": "scientist-d, task R4c-D-20261022, resume of the partial receipt FTR-20261021-38015929-01 (owed: supplementary tables and Figures S1-S7). Route: the supplementary PDF already on disk; its text layer read in full (Supplementary Tables 1-3, figure legends); the 23 embedded images extracted with pdfimages and opened as images (methods schematics, S1-S7 panels); eight of them are declared artefacts. Locators appended; nothing in the prior manifest was changed.",
+  "evidence_depth": "complete_fulltext_read",
+  "source_locator": "files/fulltext/PMID38015929_Xian2023_PMC.xml",
+  "source_fingerprint": "a31a389e9358a177f78099cc5c5ac3aafed7122fe2c33b2ca2b1f1ae6d9e7d34",
+  "source_kind": "fulltext_local",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "read",
+    "methods": "read",
+    "results": "read",
+    "figures": "read",
+    "tables": "read",
+    "discussion": "read",
+    "limitations": "read",
+    "supplementary": "read"
+  },
+  "outputs": [
+    "disease-models/wwox/research/deepdive_manifests/PMID38015929.json"
+  ],
+  "evidence_basis": [
+    "coverage_map",
+    "manifest",
+    "supplementary tables and Figures S1-S7 read (text layer in full; all embedded images opened)"
+  ],
+  "prior_receipt": "FTR-20261021-38015929-01",
+  "reread_reason": "inadequate_prior_coverage",
+  "event_at": "2026-10-22T04:03:00Z"
+}

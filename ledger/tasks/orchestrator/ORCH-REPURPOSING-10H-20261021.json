@@ -61,13 +61,13 @@
  },
  "WATCH": {
   "interval": "hourly, 10 firings",
-  "cycles_done": 3,
+  "cycles_done": 4,
   "roster": {
    "scientist-a": {
     "group": "R1",
     "agentId": "a690b0766b3bc4360",
     "task": "REPURP-10H-P5-A-20261022",
-    "state": "P5 two-path comparison LANDED (8ed0f930): 21 rows, 202 cells verified 0 problems; deep non-dominated = all five candidates (9 of 10 pairs incomparable by endpoint and genotype class), early non-dominated = all three; seven of twelve deep rows rest on one Q230P measurement counting once; plain lookup reaches only rows with no WWOX-system measurement; INCONCLUSIVE for choosing a candidate, KEEP for choosing what to measure; idle",
+    "state": "running R1 lot 2 (HELD-partial 42587736/42650175, single-measurement note)",
     "previous_agents": [
      "ab601f2e19d3a1d37",
      "a3c29605f071db51b",
@@ -78,7 +78,7 @@
     "group": "R2",
     "agentId": "afd899465e185a8d9",
     "task": "REPURP-10H-GSE156243-B-20261022",
-    "state": "GSE156243 CLOSED AND LANDED (8e6efecc): digests match roadmap; 4 KO + 2 WT; padj<=0.01 518 up/317 down, <=0.05 1071/826; universe CONTEXT_UNRESOLVED (paper 15370 vs filter 19694); SigCom LINCS reversal INCONCLUSIVE (context dominates, 74 of top 100 from lines with no tissue annotation); independent recomputation dispatched; idle",
+    "state": "R2c landed 3f644051, 5 receipts recorded; running lot 3 (owed figures of 19 R2 receipts)",
     "previous_agents": [
      "a85b13d3c3c5f7071",
      "a9ce64fa724e5f4ef",
@@ -89,7 +89,7 @@
     "group": "R3",
     "agentId": "a248f254237ba316a",
     "task": "REPURP-10H-R3c-C-20261022",
-    "state": "R3c CLOSED (11 readings; repair c9aff6a2, readings fcf72ac2; eleven receipts NOT YET RECORDED: waiting for integrator batch 012 to release the ledger); idle, no slot reassigned",
+    "state": "pptx declared (0ade8bfb); 11 R3c receipts recorded; idle",
     "previous_agents": [
      "ab754106b9854e8bd",
      "aa7339b0af1c43595",
@@ -100,7 +100,7 @@
     "group": "R4",
     "agentId": "ab5ca29f4fa37a884",
     "task": "REPURP-10H-WWOXROWS-D-20261022",
-    "state": "WWOX rows in supplements LANDED (97eeda26, 63d93a30): 12 counted supplements, 2 WWOX rows in supplements (one with a treatment: fenfluramine registry Table S7, n=1, column UNDETERMINED not non-responder; one genotype-only), plus 6 patients in main-text tables already in the registry; 7 to 8 WWOX patients with a treatment entry from 3 reports, independence shown for none, nothing pooled; best-fitting cohort (perampanel, 137 patients, 79 aetiologies) parked behind a bot challenge; idle",
+    "state": "running lot 2 (D01 card dose update, R4 partials)",
     "previous_agents": [
      "aba610f58ef0e9b25",
      "a953e6e336bf10780",
@@ -197,7 +197,8 @@
    {
     "t": "2026-10-22T03:36Z",
     "event": "integrator layer 1 landed (cbd62afb: PAPER 429-544, LIT-0701-0816): ORPHAN_COMPLETE_READ lines 31 -> 0; layer 2 and the R3 attribution hold continue. R3c audit returned (810332c6). WWOX-rows sweep landed. Eleven R3c receipts staged, to be recorded after the integrator releases the ledger. Gate still BLOCK_PUBLICATION (8 findings, all service UUID fragments in gse156243 files) until scientist-b's lossless transformation lands; no push since 1592aa69"
-   }
+   },
+   "2026-10-22T04:30Z cycle 4: Harness strength-scan landed (b09cef4f); C pptx declared; 17 receipts recorded (11 R3c, 6 R2c); A,B,D given new lots; surfaces regenerated; push pending final gate"
   ],
   "audits": {
    "R3": {

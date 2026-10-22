@@ -3,7 +3,7 @@
  "pmid": "42446932",
  "doi": "10.1002/epi.70374",
  "pmcid": "PMC13675783",
- "receipt": "FTR-20261021-42446932-01",
+ "receipt": "FTR-20261022-42446932-02",
  "context_policy": "QUESTION_DRIVEN",
  "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
  "landing": [
@@ -239,6 +239,66 @@
      "call": "python3 framework/scripts/docx_to_text.py --out <txt> <docx>"
     }
    }
+  },
+  {
+   "path": "files/figures/PMID42446932/suppS1_panel1.png",
+   "sha256": "3102bd02e0b140ab2253049c4a286f6dd9e85aeb312121072a61bd7a378027b0",
+   "kind": "figure",
+   "note": "Supplementary Figure S1 panel A (map of participants), decoded from the docx image1.emf, opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "docx media extraction (EMF+ bitmap record decoded)",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42446932_r2/EPI-67-5448-s001.docx",
+    "extractor": {
+     "name": "custom Python standard-library script",
+     "version": "3.12",
+     "call": "read word/media/image1.emf from the docx; decode the single EMF+ bitmap object (844 x 595, premultiplied 32-bit ARGB, uncompressed) to PNG; transparent regions appear black"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "3102bd02e0b140ab2253049c4a286f6dd9e85aeb312121072a61bd7a378027b0"
+   }
+  },
+  {
+   "path": "files/figures/PMID42446932/suppS1_panel2.png",
+   "sha256": "4395e0c9b5ffaf189935fe5a0b1373a64c0de5ca512f3bdf95116cbfffd3dbc7",
+   "kind": "figure",
+   "note": "Supplementary Figure S1 panel B (age histogram, first cohort), decoded from the docx image2.emf, opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "docx media extraction (EMF+ bitmap record decoded)",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42446932_r2/EPI-67-5448-s001.docx",
+    "extractor": {
+     "name": "custom Python standard-library script",
+     "version": "3.12",
+     "call": "read word/media/image2.emf from the docx; decode the single EMF+ bitmap object (844 x 595, premultiplied 32-bit ARGB, uncompressed) to PNG; transparent regions appear black"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "4395e0c9b5ffaf189935fe5a0b1373a64c0de5ca512f3bdf95116cbfffd3dbc7"
+   }
+  },
+  {
+   "path": "files/figures/PMID42446932/suppS1_panel3.png",
+   "sha256": "b0b1fc1d3c0cdefc1138b3a4ff998eef80fd7445f458722f81deabb9b7dbe7ad",
+   "kind": "figure",
+   "note": "Supplementary Figure S1 panel C (age histogram, second cohort), decoded from the docx image3.emf, opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "docx media extraction (EMF+ bitmap record decoded)",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42446932_r2/EPI-67-5448-s001.docx",
+    "extractor": {
+     "name": "custom Python standard-library script",
+     "version": "3.12",
+     "call": "read word/media/image3.emf from the docx; decode the single EMF+ bitmap object (844 x 595, premultiplied 32-bit ARGB, uncompressed) to PNG; transparent regions appear black"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "b0b1fc1d3c0cdefc1138b3a4ff998eef80fd7445f458722f81deabb9b7dbe7ad"
+   }
   }
  ],
  "verbatim_locators": {
@@ -402,6 +462,38 @@
     "anchor": "Figure 4, page 10 raster",
     "surface": "figure",
     "artifact": "files/page_renders/PMID42446932/p10img-000.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE (STXBP1 and SYNGAP1 natural-history protocol). The supplementary legend describes a map of participants across the United States and age histograms for the STXBP1 and SYNGAP1 cohorts.",
+    "snippet": "Histograms depict the age distributions of participants in the STXBP1 (B) and SYNGAP1 (C) cohorts.",
+    "anchor": "Supplementary Figure S1 legend",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID42446932_r2/EPI-67-5448-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table S1 gives the floor and ceiling percentages for eight measures in both cohorts as 0 to 2 percent, with the largest, 6 percent, being the SYNGAP1 Bayley-4 expressive language ceiling (n = 81); sample sizes are 69 to 115.",
+    "snippet": "Bayley 4 Expressive Language | 81 | 0% | 6% | 69 | 0% | 0%",
+    "anchor": "Supplementary Table S1",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID42446932_r2/EPI-67-5448-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Supplementary Figure S1 panels B and C (images 2 and 3): the two age histograms have six uneven bins (0-2, a bin labelled '2, 4', 4-6, 6-12, 12-18, 18+) and bar labels that sum to 66 (9, 10, 11, 21, 10, 5) and 75 (4, 17, 12, 24, 5, 13) patients, against 164 and 159 participants in the main text; the legend does not say why the histograms hold fewer (sums are my addition of the printed bar labels).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Image 2 bar labels 9, 10, 11, 21, 10, 5 over bins 0-2, '2, 4', 4-6, 6-12, 12-18, 18+; image 3 bar labels 4, 17, 12, 24, 5, 13 over the same bins.",
+    "anchor": "Supplementary Figure S1 panels B and C, read as images",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42446932/suppS1_panel2.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "PANEL READING, Supplementary Figure S1 panel A (image 1): a map of the United States with points in two colours, densest along the east coast and in Florida and sparse in the central and mountain states; no title or count is shown on the map image.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Image 1 shows a US basemap with teal and magenta points concentrated in the north-eastern and south-eastern states and Florida.",
+    "anchor": "Supplementary Figure S1 panel A, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42446932/suppS1_panel1.png",
     "panel_text_relation": "panel_only"
    }
   ],

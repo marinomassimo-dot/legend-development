@@ -1,0 +1,651 @@
+{
+ "schema_version": 2,
+ "pmid": "42494992",
+ "doi": "10.1016/j.nsa.2026.107021",
+ "receipt": "FTR-20261022-42494992-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/repurposing_r4c_scientist-d_20261022.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261022-SCIENTISTD-R4C-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named from wave-1 reading debts and deduplicated by the per-paper M0 packet and the receipt status check run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate and the analysis note; the discovery ledger is a shared single-writer file appended by the Orchestrator at integration."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A transatlantic expert group convened by the ECNP and the ISCTM, with a US NIH lead and many industry, contract-research and advocacy authors (from the affiliations and the competing-interest statement); expert opinion, not a data group; not a WWOX group. A PRECEDENT for endpoint strategy and external controls; its authors' commercial interests in outcome assessment are noted and the text is weighed accordingly. The supplementary tables, which list cons the main text omits, are weighed above the main text's summary where they differ."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND outcome measures",
+    "count": 22,
+    "source": "PubMed ESearch rettype=count 2026-10-22"
+   },
+   {
+    "query": "neuropediatric rare disease AND clinical outcome assessment",
+    "count": 54,
+    "source": "PubMed ESearch rettype=count 2026-10-22"
+   }
+  ],
+  "note": "PubMed counts, dated."
+ },
+ "multihop": {
+  "references_enumerated": 91,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "91 references enumerated from the JATS; none is WWOX-related (0 occurrences of WWOX counted)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42494992 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note; SUBSTITUTE rows carry no WWOX record by construction."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-22 via PubMed efetch for PMID 42494992: publication types ['Journal Article', 'Review']; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 89,
+   "references_screened": 69,
+   "references_with_doi": 69,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 1,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 20
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42494992_Acosta2026_PMC13393641.xml",
+   "sha256": "33d165e7e2a819077d02e51fa9984c59611f0940f03a4f7e6c9cc7f2cfa4cb3b",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC13393641 (CC BY 4.0): review: abstract, four tables, three figures and a graphical abstract, 91 references. Every text locator is matched against this surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13393641/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "33d165e7e2a819077d02e51fa9984c59611f0940f03a4f7e6c9cc7f2cfa4cb3b"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42494992_r1/mmc1.pdf",
+   "sha256": "242620bdc11abe74e5b39636489b6704b9ec1dc28bdfd0fac496cda9b936e13f",
+   "kind": "supplement_binary",
+   "note": "Supplementary Figure 1, a single A0 conference poster (ECNP 2024), from the Europe PMC supplementaryFiles container; text layer read in its first part only.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13393641/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "242620bdc11abe74e5b39636489b6704b9ec1dc28bdfd0fac496cda9b936e13f"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42494992_r1/mmc1.txt",
+   "sha256": "1202634514d73e144c740e674a5d160d19d4a02cc5f81c5739f884f2a7a1aa6d",
+   "kind": "supplement_text",
+   "note": "Text layer of the poster by pdftotext.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftotext",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42494992_r1/mmc1.pdf",
+    "extractor": {
+     "name": "pdftotext",
+     "version": "24.02.0",
+     "call": "pdftotext mmc1.pdf - | tr '\\f' '\\n' > mmc1.txt (page-separator form feeds replaced by newlines; no other change)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "1202634514d73e144c740e674a5d160d19d4a02cc5f81c5739f884f2a7a1aa6d"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42494992_r1/mmc2.docx",
+   "sha256": "5e4a93d151fe986f995d7cd25df05343264867fb4298c897cf7852fbf37b9ffc",
+   "kind": "supplement_binary",
+   "note": "Supplementary Table 1 (raw brainstormed outcome strategies with experience and cons), same container.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13393641/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "5e4a93d151fe986f995d7cd25df05343264867fb4298c897cf7852fbf37b9ffc"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42494992_r1/mmc2.txt",
+   "sha256": "81789cc146830e67a2ddb22307b5f39864bf2d69df25a7955bd24105d9342c97",
+   "kind": "supplement_text",
+   "note": "Text of Supplementary Table 1 by docx_to_text.py.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "framework/scripts/docx_to_text.py",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42494992_r1/mmc2.docx",
+    "extractor": {
+     "name": "framework/scripts/docx_to_text.py",
+     "version": "repository main f941c9c8",
+     "call": "python3 framework/scripts/docx_to_text.py --out <txt> <docx>"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "81789cc146830e67a2ddb22307b5f39864bf2d69df25a7955bd24105d9342c97"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42494992_r1/mmc3.docx",
+   "sha256": "a332ace6c9dea853797c58c75353e488edbb6d59094bb30834e7e63569290a56",
+   "kind": "supplement_binary",
+   "note": "Supplementary Table 2 (checklist of methodological challenges), same container.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13393641/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "a332ace6c9dea853797c58c75353e488edbb6d59094bb30834e7e63569290a56"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42494992_r1/mmc3.txt",
+   "sha256": "7bda3bc8ce4ba1a42452e781fb4df45b92cf8c53e6874d7b4c39c267432eba74",
+   "kind": "supplement_text",
+   "note": "Text of Supplementary Table 2 by docx_to_text.py.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "framework/scripts/docx_to_text.py",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42494992_r1/mmc3.docx",
+    "extractor": {
+     "name": "framework/scripts/docx_to_text.py",
+     "version": "repository main f941c9c8",
+     "call": "python3 framework/scripts/docx_to_text.py --out <txt> <docx>"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "7bda3bc8ce4ba1a42452e781fb4df45b92cf8c53e6874d7b4c39c267432eba74"
+   }
+  },
+  {
+   "path": "files/figures/PMID42494992/gr1.jpg",
+   "sha256": "a528440950b59841be6bd94dc748f36625f4e4dafc277a5cf44eaf6b26bd38fe",
+   "kind": "figure",
+   "note": "Figure 1 JPEG (goal attainment scaling implementation), from the same container, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13393641/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "a528440950b59841be6bd94dc748f36625f4e4dafc277a5cf44eaf6b26bd38fe"
+   }
+  },
+  {
+   "path": "files/figures/PMID42494992/gr2.jpg",
+   "sha256": "496bd782f11f408b57143236fb30a45ad3ee0a8e1140e1cf66c6b21fd3571593",
+   "kind": "figure",
+   "note": "Image attached to the Figure 2 element in the JATS; it shows the reliable change index chart, not the multi-domain responder index the Figure 2 legend describes; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13393641/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "496bd782f11f408b57143236fb30a45ad3ee0a8e1140e1cf66c6b21fd3571593"
+   }
+  },
+  {
+   "path": "files/figures/PMID42494992/gr3.jpg",
+   "sha256": "e03fd751828612b9779fc29e465104482b46e37fc0c7f8d1ef944b427f15cd32",
+   "kind": "figure",
+   "note": "Image attached to the Figure 3 element in the JATS; it shows the multi-domain responder index table, not the reliable change index the Figure 3 legend describes; opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13393641/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "e03fd751828612b9779fc29e465104482b46e37fc0c7f8d1ef944b427f15cd32"
+   }
+  },
+  {
+   "path": "files/figures/PMID42494992/ga1.jpg",
+   "sha256": "111467c28002f918991cb2e4ee8624ac79d5a719dc06c588381281c1dc0e3338",
+   "kind": "figure",
+   "note": "Graphical abstract JPEG, same container, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13393641/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "111467c28002f918991cb2e4ee8624ac79d5a719dc06c588381281c1dc0e3338"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE (outcome-measurement review for rare paediatric neurological diseases; precedent for endpoints, external controls and expectancy). The method is expert opinion, not a systematic review.",
+    "snippet": "The methodological approach was structured, iterative expert opinion rather than a systematic review",
+    "anchor": "Introduction, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42494992_Acosta2026_PMC13393641.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "expert-opinion review (ECNP and ISCTM working groups) of outcome strategies for trials in neuropaediatric rare diseases; no patient data of its own; NOT a WWOX system",
+     "genotype": "class level; no WWOX",
+     "endpoint": "outcome assessment strategies, external controls from natural history, expectancy bias"
+    }
+   },
+   {
+    "proposition": "The authors state the strategies rest on expert opinion without prospective empirical validation.",
+    "snippet": "The strategies proposed here are based on structured expert opinion rather than prospective empirical validation",
+    "anchor": "Discussion, limitations paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42494992_Acosta2026_PMC13393641.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "expert-opinion review (ECNP and ISCTM working groups) of outcome strategies for trials in neuropaediatric rare diseases; no patient data of its own; NOT a WWOX system",
+     "genotype": "class level; no WWOX",
+     "endpoint": "outcome assessment strategies, external controls from natural history, expectancy bias"
+    }
+   },
+   {
+    "proposition": "The Conclusion says each strategy is already implemented in at least one programme or validated in an analogous rare disease context.",
+    "snippet": "each is already implemented in at least one NRD programme or validated in an analogous rare-disease context.",
+    "anchor": "Conclusion, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42494992_Acosta2026_PMC13393641.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "expert-opinion review (ECNP and ISCTM working groups) of outcome strategies for trials in neuropaediatric rare diseases; no patient data of its own; NOT a WWOX system",
+     "genotype": "class level; no WWOX",
+     "endpoint": "outcome assessment strategies, external controls from natural history, expectancy bias"
+    }
+   },
+   {
+    "proposition": "The text never states a separation of symptomatic effect from disease modification as a design goal: the toolbox is framed for endpoints, and the article text has no occurrence of 'disease-modifying' (the only 'symptomatic' occurrence is 'pre-symptomatic').",
+    "snippet": "The expectation is not that every strategy be used in every trial, but that they provide a structured, flexible foundation for designing fit-for-purpose endpoints.",
+    "anchor": "Conclusion, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42494992_Acosta2026_PMC13393641.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "expert-opinion review (ECNP and ISCTM working groups) of outcome strategies for trials in neuropaediatric rare diseases; no patient data of its own; NOT a WWOX system",
+     "genotype": "class level; no WWOX",
+     "endpoint": "outcome assessment strategies, external controls from natural history, expectancy bias"
+    }
+   },
+   {
+    "proposition": "Natural-history cohorts are proposed as external controls, with outcomes substantially better than expected treated as prima facie evidence of benefit.",
+    "snippet": "Outcomes substantially better than expected based on the natural disease trajectory provide prima facie evidence of therapeutic benefit",
+    "anchor": "Section 4.1, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42494992_Acosta2026_PMC13393641.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "expert-opinion review (ECNP and ISCTM working groups) of outcome strategies for trials in neuropaediatric rare diseases; no patient data of its own; NOT a WWOX system",
+     "genotype": "class level; no WWOX",
+     "endpoint": "outcome assessment strategies, external controls from natural history, expectancy bias"
+    }
+   },
+   {
+    "proposition": "Among non-oncology single-arm approvals from 2019 to 2022 natural-history cohorts were the most frequent comparator, in 45 percent of FDA and 47 percent of EMA decisions.",
+    "snippet": "natural history cohorts were the most frequent comparator, used in 45% of FDA and 47% of EMA decisions",
+    "anchor": "Section 4.1, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42494992_Acosta2026_PMC13393641.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "expert-opinion review (ECNP and ISCTM working groups) of outcome strategies for trials in neuropaediatric rare diseases; no patient data of its own; NOT a WWOX system",
+     "genotype": "class level; no WWOX",
+     "endpoint": "outcome assessment strategies, external controls from natural history, expectancy bias"
+    }
+   },
+   {
+    "proposition": "External-control designs carry systematic bias from differing selection, observation windows, instrument versions and rater training; mitigation depends on data quality and granularity.",
+    "snippet": "Differences in patient selection, observation windows, instrument versions, and rater training introduce systematic bias, and the absence of randomisation increases the reliance on analytical assumptions.",
+    "anchor": "Section 4.1, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42494992_Acosta2026_PMC13393641.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "expert-opinion review (ECNP and ISCTM working groups) of outcome strategies for trials in neuropaediatric rare diseases; no patient data of its own; NOT a WWOX system",
+     "genotype": "class level; no WWOX",
+     "endpoint": "outcome assessment strategies, external controls from natural history, expectancy bias"
+    }
+   },
+   {
+    "proposition": "Fragile X placebo arms improved on caregiver-rated endpoints but not on performance-based measures.",
+    "snippet": "Placebo arms in Fragile X syndrome trials showed significant gains on caregiver-rated endpoints but none on performance-based measures",
+    "anchor": "Section 6.1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42494992_Acosta2026_PMC13393641.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "expert-opinion review (ECNP and ISCTM working groups) of outcome strategies for trials in neuropaediatric rare diseases; no patient data of its own; NOT a WWOX system",
+     "genotype": "class level; no WWOX",
+     "endpoint": "outcome assessment strategies, external controls from natural history, expectancy bias"
+    }
+   },
+   {
+    "proposition": "No validated caregiver expectancy scale exists; the proposed mitigation is a caregiver global impression of benefit-risk entered as a baseline covariate.",
+    "snippet": "However, no validated \"Caregiver Expectancy Scale\" exists as of today.",
+    "anchor": "Section 6.1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42494992_Acosta2026_PMC13393641.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "expert-opinion review (ECNP and ISCTM working groups) of outcome strategies for trials in neuropaediatric rare diseases; no patient data of its own; NOT a WWOX system",
+     "genotype": "class level; no WWOX",
+     "endpoint": "outcome assessment strategies, external controls from natural history, expectancy bias"
+    }
+   },
+   {
+    "proposition": "In single-arm designs goal attainment scaling must address expectancy bias, with non-treatment-related control goals, blinded goal raters and delayed assessment windows suggested.",
+    "snippet": "In single-arm designs, which are frequently necessary in NRDs, GAS implementation must also address expectancy bias.",
+    "anchor": "Section 3.1, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42494992_Acosta2026_PMC13393641.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "expert-opinion review (ECNP and ISCTM working groups) of outcome strategies for trials in neuropaediatric rare diseases; no patient data of its own; NOT a WWOX system",
+     "genotype": "class level; no WWOX",
+     "endpoint": "outcome assessment strategies, external controls from natural history, expectancy bias"
+    }
+   },
+   {
+    "proposition": "The goal attainment scaling feasibility example cited is for SCN2A developmental and epileptic encephalopathy.",
+    "snippet": "Real-world feasibility has been demonstrated in a feasibility study for SCN2A-associated developmental and epileptic encephalopathy",
+    "anchor": "Section 3.1, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42494992_Acosta2026_PMC13393641.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "expert-opinion review (ECNP and ISCTM working groups) of outcome strategies for trials in neuropaediatric rare diseases; no patient data of its own; NOT a WWOX system",
+     "genotype": "class level; no WWOX",
+     "endpoint": "outcome assessment strategies, external controls from natural history, expectancy bias"
+    }
+   },
+   {
+    "proposition": "Supplementary Table 1 lists, as a con of personalised goal-based endpoints, that regulators may not accept precision methods because every patient is measured differently.",
+    "snippet": "Precision methods may not be accepted by regulatory authorities because every patient is measured differently and regulators do not have experience with this.",
+    "anchor": "Supplementary Table 1, family-agreement row",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID42494992_r1/mmc2.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "expert-opinion review (ECNP and ISCTM working groups) of outcome strategies for trials in neuropaediatric rare diseases; no patient data of its own; NOT a WWOX system",
+     "genotype": "class level; no WWOX",
+     "endpoint": "outcome assessment strategies, external controls from natural history, expectancy bias"
+    }
+   },
+   {
+    "proposition": "Growth scale values still lack thresholds for what families and clinicians recognise as a beneficial change.",
+    "snippet": "A key next step is establishing clinically meaningful thresholds—how many GSV units correspond to a change that families and clinicians recognize as beneficial.",
+    "anchor": "Section 3.5, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42494992_Acosta2026_PMC13393641.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "expert-opinion review (ECNP and ISCTM working groups) of outcome strategies for trials in neuropaediatric rare diseases; no patient data of its own; NOT a WWOX system",
+     "genotype": "class level; no WWOX",
+     "endpoint": "outcome assessment strategies, external controls from natural history, expectancy bias"
+    }
+   },
+   {
+    "proposition": "The reliable change index is illustrated by one phase 1 neurofibromatosis lovastatin trial in which individual analyses showed improvements not apparent in group means.",
+    "snippet": "RCI has been successfully applied, for example, in a Phase I trial of lovastatin for neurocognitive deficits in neurofibromatosis type 1, where individual-level analyses revealed improvements not apparent in group means",
+    "anchor": "Section 3.4, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42494992_Acosta2026_PMC13393641.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "expert-opinion review (ECNP and ISCTM working groups) of outcome strategies for trials in neuropaediatric rare diseases; no patient data of its own; NOT a WWOX system",
+     "genotype": "class level; no WWOX",
+     "endpoint": "outcome assessment strategies, external controls from natural history, expectancy bias"
+    }
+   },
+   {
+    "proposition": "Supplementary Table 1 records that reliable and clinically meaningful change values for the BRIEF caregiver instruments in Dravet and Lennox-Gastaut syndromes came from post hoc exploratory hypothesis-generating studies.",
+    "snippet": "were calculated in post hoc exploratory “hypothesis generating” studies for the BRIEF caregiver family of instruments used in Dravet syndrome and Lennox Gastaut syndrome",
+    "anchor": "Supplementary Table 1, change-value row",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID42494992_r1/mmc2.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "expert-opinion review (ECNP and ISCTM working groups) of outcome strategies for trials in neuropaediatric rare diseases; no patient data of its own; NOT a WWOX system",
+     "genotype": "class level; no WWOX",
+     "endpoint": "outcome assessment strategies, external controls from natural history, expectancy bias"
+    }
+   },
+   {
+    "proposition": "The main text presents retrospective clinical global impression scoring as feasible for historical controls in GM1 gangliosidosis, while Supplementary Table 1 says it still requires validation and shows high subjectivity.",
+    "snippet": "However, nowadays requires validation and shows a high subjectivity",
+    "anchor": "Supplementary Table 1, natural history records row",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID42494992_r1/mmc2.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "expert-opinion review (ECNP and ISCTM working groups) of outcome strategies for trials in neuropaediatric rare diseases; no patient data of its own; NOT a WWOX system",
+     "genotype": "class level; no WWOX",
+     "endpoint": "outcome assessment strategies, external controls from natural history, expectancy bias"
+    }
+   },
+   {
+    "proposition": "The main text says a recent application demonstrated the feasibility of retrospective global impression scoring for quantifying historical control data.",
+    "snippet": "A recent application in GM1 gangliosidosis demonstrated its feasibility for quantifying historical control data under structured validation procedures",
+    "anchor": "Section 3.2, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42494992_Acosta2026_PMC13393641.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "expert-opinion review (ECNP and ISCTM working groups) of outcome strategies for trials in neuropaediatric rare diseases; no patient data of its own; NOT a WWOX system",
+     "genotype": "class level; no WWOX",
+     "endpoint": "outcome assessment strategies, external controls from natural history, expectancy bias"
+    }
+   },
+   {
+    "proposition": "The multi-domain responder index's main implementation challenge is setting the minimum score difference thresholds per domain, for which natural history and benchmarks are suggested.",
+    "snippet": "The principal implementation challenge is determining MSD thresholds for each domain.",
+    "anchor": "Section 3.3, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42494992_Acosta2026_PMC13393641.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "expert-opinion review (ECNP and ISCTM working groups) of outcome strategies for trials in neuropaediatric rare diseases; no patient data of its own; NOT a WWOX system",
+     "genotype": "class level; no WWOX",
+     "endpoint": "outcome assessment strategies, external controls from natural history, expectancy bias"
+    }
+   },
+   {
+    "proposition": "Supplementary Table 1 says composite scores need regulatory input and agreement long before the trial and can dilute single-domain changes.",
+    "snippet": "Experience: Composite scores need regulatory input and agreement LONG in advance prior to implementing clinical trials.",
+    "anchor": "Supplementary Table 1, composite row",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID42494992_r1/mmc2.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "expert-opinion review (ECNP and ISCTM working groups) of outcome strategies for trials in neuropaediatric rare diseases; no patient data of its own; NOT a WWOX system",
+     "genotype": "class level; no WWOX",
+     "endpoint": "outcome assessment strategies, external controls from natural history, expectancy bias"
+    }
+   },
+   {
+    "proposition": "A maturity index (bone age) to separate maturation from treatment effect is proposed but needs prospective validation in disease-specific cohorts.",
+    "snippet": "Prospective validation in disease-specific cohorts is required to confirm whether BA or similar markers have sufficiently consistent relationships with target outcomes.",
+    "anchor": "Section 6.4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42494992_Acosta2026_PMC13393641.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "expert-opinion review (ECNP and ISCTM working groups) of outcome strategies for trials in neuropaediatric rare diseases; no patient data of its own; NOT a WWOX system",
+     "genotype": "class level; no WWOX",
+     "endpoint": "outcome assessment strategies, external controls from natural history, expectancy bias"
+    }
+   },
+   {
+    "proposition": "For developmental and epileptic encephalopathies and Dravet syndrome, caregivers are said to rank behavioural, cognitive and social outcomes above seizure frequency.",
+    "snippet": "caregivers identify behavioural, cognitive, and social outcomes as more important than seizure frequency or other traditional clinical markers",
+    "anchor": "Section 6.3, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42494992_Acosta2026_PMC13393641.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "expert-opinion review (ECNP and ISCTM working groups) of outcome strategies for trials in neuropaediatric rare diseases; no patient data of its own; NOT a WWOX system",
+     "genotype": "class level; no WWOX",
+     "endpoint": "outcome assessment strategies, external controls from natural history, expectancy bias"
+    }
+   },
+   {
+    "proposition": "The authors disclose using an AI language model for language editing and structural revision of sections.",
+    "snippet": "During the preparation of this work, the authors used the Claude AI (Anthropic) Sonnet 4.6 model to assist with language editing and structural revision of sections.",
+    "anchor": "AI declaration",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42494992_Acosta2026_PMC13393641.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "expert-opinion review (ECNP and ISCTM working groups) of outcome strategies for trials in neuropaediatric rare diseases; no patient data of its own; NOT a WWOX system",
+     "genotype": "class level; no WWOX",
+     "endpoint": "outcome assessment strategies, external controls from natural history, expectancy bias"
+    }
+   },
+   {
+    "proposition": "Several authors are employees of companies (named in the competing-interest statement); GS, KR and CC, three of the four named authors of the goal attainment scaling section, are employees of Ardea Outcomes, Inc.",
+    "snippet": "GS, KR and CC are employees of Ardea Outcomes, Inc.",
+    "anchor": "Declaration of competing interest",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42494992_Acosta2026_PMC13393641.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "expert-opinion review (ECNP and ISCTM working groups) of outcome strategies for trials in neuropaediatric rare diseases; no patient data of its own; NOT a WWOX system",
+     "genotype": "class level; no WWOX",
+     "endpoint": "outcome assessment strategies, external controls from natural history, expectancy bias"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 2 element (image gr2): the image attached to the Figure 2 element shows a reliable change index chart (scale score against sessions, points A to E, a baseline band and a clinical cut score), whereas the Figure 2 legend describes a multi-domain responder index example; the images attached to Figures 2 and 3 are swapped relative to their legends. The chart is an illustrative fictive example, not data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] gr2.jpg shows 'Scale score' against 'Sessions' with points A, B, C, D, E, 'Baseline', 'RCI 95%CI' and 'Clinical cut Score for Improvement'.",
+    "anchor": "Image gr2, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42494992/gr2.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "expert-opinion review (ECNP and ISCTM working groups) of outcome strategies for trials in neuropaediatric rare diseases; no patient data of its own; NOT a WWOX system",
+     "genotype": "class level; no WWOX",
+     "endpoint": "outcome assessment strategies, external controls from natural history, expectancy bias"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 3 element (image gr3): the image shows a five-domain table (walking, breathing, sleeping, joint, vision) with minimum important difference thresholds and responder scores for three patients summing to +3, 0 and +1, i.e. the multi-domain responder index the Figure 2 legend names; an illustrative example adapted from another source.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] gr3.jpg shows 'Domain 1 Walking' to 'Domain 5 Vision', 'MID Threshold', 'TOTAL Net Response' and patient rows ending '= +3', '= 0' and '= +1'.",
+    "anchor": "Image gr3, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42494992/gr3.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "expert-opinion review (ECNP and ISCTM working groups) of outcome strategies for trials in neuropaediatric rare diseases; no patient data of its own; NOT a WWOX system",
+     "genotype": "class level; no WWOX",
+     "endpoint": "outcome assessment strategies, external controls from natural history, expectancy bias"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 1 (image gr1): a flow of standardised goal attainment scaling implementation (training, goal inventory, electronic platform), goal setting at baseline on a five-point scale from -2 to +2 with participant and clinician ratings, and example outputs of per-domain goal achievement and T-scores for treatment versus placebo; a schematic with example curves, not data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 reads 'Standardized GAS implementation', 'Baseline visit', 'Follow-up visit(s)', 'GAS Outcomes' and a goal scale from +2 to -2.",
+    "anchor": "Figure 1, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42494992/gr1.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "expert-opinion review (ECNP and ISCTM working groups) of outcome strategies for trials in neuropaediatric rare diseases; no patient data of its own; NOT a WWOX system",
+     "genotype": "class level; no WWOX",
+     "endpoint": "outcome assessment strategies, external controls from natural history, expectancy bias"
+    }
+   },
+   {
+    "proposition": "PANEL READING, graphical abstract: four groups (innovative methodologies, novel outcomes and endpoints, additional factors, natural history studies) around a multidisciplinary experts panel, listing goal attainment scaling, reliable change, multi-domain responder index, global impressions, core outcome sets and natural history as external control group.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] The graphical abstract reads 'Rethinking Outcome Strategies in Neuropediatric Rare Disease Trials' and 'Natural-history as external control group'.",
+    "anchor": "Graphical abstract, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42494992/ga1.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "expert-opinion review (ECNP and ISCTM working groups) of outcome strategies for trials in neuropaediatric rare diseases; no patient data of its own; NOT a WWOX system",
+     "genotype": "class level; no WWOX",
+     "endpoint": "outcome assessment strategies, external controls from natural history, expectancy bias"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML for PMC13393641 returned HTTP 200 on 2026-10-22 (open access, CC BY 4.0); the supplementaryFiles zip carried the figures and three supplementary files.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

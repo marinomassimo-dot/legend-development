@@ -3,7 +3,7 @@
  "pmid": "41531035",
  "doi": "10.1002/epi.70095",
  "pmcid": "PMC13075603",
- "receipt": "FTR-20261021-41531035-01",
+ "receipt": "FTR-20261022-41531035-02",
  "context_policy": "QUESTION_DRIVEN",
  "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
  "landing": [
@@ -191,6 +191,106 @@
      "call": "python3 framework/scripts/docx_to_text.py --out <txt> <docx>"
     }
    }
+  },
+  {
+   "path": "files/figures/PMID41531035_r2/suppimg1.png",
+   "sha256": "4eb68a7cfa2a429a72677d849a05b6f0834d0c3560ce379fed1d8f5cc26b921f",
+   "kind": "figure",
+   "note": "Supplementary docx image 1 (Table S1, schedule of assessments, upper part), opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "docx media extraction",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID41531035_r2/EPI-67-1703-s001.docx",
+    "extractor": {
+     "name": "zipfile (Python standard library)",
+     "version": "3.12",
+     "call": "read word/media/image1.png from the docx, written unchanged"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "4eb68a7cfa2a429a72677d849a05b6f0834d0c3560ce379fed1d8f5cc26b921f"
+   }
+  },
+  {
+   "path": "files/figures/PMID41531035_r2/suppimg2.png",
+   "sha256": "28b3b1d99a22069e1f5f280c3c9973258493d75bc10a987b68e5328d25dad5f4",
+   "kind": "figure",
+   "note": "Supplementary docx image 2 (Table S1, schedule of assessments, lower part with footnotes), opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "docx media extraction",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID41531035_r2/EPI-67-1703-s001.docx",
+    "extractor": {
+     "name": "zipfile (Python standard library)",
+     "version": "3.12",
+     "call": "read word/media/image2.png from the docx, written unchanged"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "28b3b1d99a22069e1f5f280c3c9973258493d75bc10a987b68e5328d25dad5f4"
+   }
+  },
+  {
+   "path": "files/figures/PMID41531035_r2/suppimg3.png",
+   "sha256": "695cf7c8ebe06f42b5ad8e56263a19121c4b65603461dfdef704cbec91545bd1",
+   "kind": "figure",
+   "note": "Supplementary docx image 3 (Figure S1, conceptual model of symptoms and impacts), opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "docx media extraction",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID41531035_r2/EPI-67-1703-s001.docx",
+    "extractor": {
+     "name": "zipfile (Python standard library)",
+     "version": "3.12",
+     "call": "read word/media/image3.png from the docx, written unchanged"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "695cf7c8ebe06f42b5ad8e56263a19121c4b65603461dfdef704cbec91545bd1"
+   }
+  },
+  {
+   "path": "files/figures/PMID41531035_r2/suppimg4.png",
+   "sha256": "4fcbf2680608f1372a9336711e7dd96f43c710de26c4c437fadda7cdcb399710",
+   "kind": "figure",
+   "note": "Supplementary docx image 4 (Figure S2 panel A, Bayley-4 growth scale values by chronological age), opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "docx media extraction",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID41531035_r2/EPI-67-1703-s001.docx",
+    "extractor": {
+     "name": "zipfile (Python standard library)",
+     "version": "3.12",
+     "call": "read word/media/image4.png from the docx, written unchanged"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "4fcbf2680608f1372a9336711e7dd96f43c710de26c4c437fadda7cdcb399710"
+   }
+  },
+  {
+   "path": "files/figures/PMID41531035_r2/suppimg9.png",
+   "sha256": "15650464d4a62ce860961fc1c9b6f8edd58fb0f5f64aa7df723f62bb5d77b1b7",
+   "kind": "figure",
+   "note": "Supplementary docx image 9 (Figure S2 panel F, SF-12 scores at baseline by age band), opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "docx media extraction",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID41531035_r2/EPI-67-1703-s001.docx",
+    "extractor": {
+     "name": "zipfile (Python standard library)",
+     "version": "3.12",
+     "call": "read word/media/image9.png from the docx, written unchanged"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "15650464d4a62ce860961fc1c9b6f8edd58fb0f5f64aa7df723f62bb5d77b1b7"
+   }
   }
  ],
  "verbatim_locators": {
@@ -330,6 +430,62 @@
     "anchor": "Figure 2",
     "surface": "figure",
     "artifact": "files/figures/PMID41531035_r2/EPI-67-1703-g001.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE (CDKL5 deficiency disorder, baseline outcome-measure study). Table S3 reports 62 to 95 percent of the youngest age group at floor for the gross-motor crawling, standing and walking dimensions and marks the gross motor, cerebral visual impairment range and caregiver severity-rating scale suitability as NO, NO and YES.",
+    "snippet": "more specifically for the youngest age group where 62-95% of the participants were at floor",
+    "anchor": "Supplementary Table S3, functioning level row",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41531035_r2/EPI-67-1703-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table S3 says about 70 percent of parents rated their child as significantly ill or beyond on the caregiver severity scale (scores 5 or more) and that the cerebral visual impairment range showed mean scores around 40 percent with high inter-subject variability.",
+    "snippet": "About 70% of the parents considered their child as significantly ill or beyond (scores ≥5).",
+    "anchor": "Supplementary Table S3, functioning level row",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41531035_r2/EPI-67-1703-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The SF-12 is listed with the reporter 'Caregiver / Caregiver' in the study's assessment table, so its physical and mental component scores describe the caregiver, not the child.",
+    "snippet": "Domains: Physical and Mental | Caregiver / Caregiver",
+    "anchor": "Supplementary Table S2, quality of life and family impact row",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41531035_r2/EPI-67-1703-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Table S1 (images 1 and 2): the schedule of assessments has nine visits from screening to month 36 and lists the gross motor function measure at baseline, 6, 12, 18, 24 and 36 months, although Table S3 of the same file judges that measure unsuitable at baseline; the 3-, 9- and 30-month visits use an abbreviated schedule recommended to take place remotely.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Table S1 (image 2) lists 'Gross Motor Function Measure (GMFM)' with X at baseline, month 6, month 12, month 18, month 24 and month 36, and footnote c reads '3-, 9-, and 30-month follow-up visits use an abbreviated schedule of assessments and are recommended to take place remotely.'",
+    "anchor": "Table S1 images, read as images",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41531035_r2/suppimg2.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure S1 (image 3): a conceptual model of symptoms (cognitive and sensory, physical health and autonomic, motor functioning, other, and seizures) on the left and their impacts (functioning, feeding, communication, physical health, emotional and social well-being) on the right leading to an HRQoL box; the note says proposed core symptoms are in bold blue; it is a diagram with no data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S1 (image 3) note reads '* Proposed core symptoms can be found in bold, blue font' beside a box labelled HRQoL.",
+    "anchor": "Figure S1, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41531035_r2/suppimg3.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure S2 panel A (image 4): Bayley-4 growth scale values by chronological age for cognition, receptive and expressive language, fine motor and gross motor are cross-sectional dots (one per patient) with a fitted line and band; the cognition, language and fine-motor lines are near flat over 0 to 27 years and the gross-motor line slopes slightly upward.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S2A (image 4): five panels 'Cognition', 'Receptive Language', 'Expressive Language', 'Fine Motor', 'Gross Motor'; 'Each dot represents 1 patient'.",
+    "anchor": "Figure S2 panel A, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41531035_r2/suppimg4.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure S2 panel F (image 9): SF-12 baseline scores by age band with the physical component median above the norm of 50 in three bands and near 50 in the 6 to 12 band, mental component medians below 50 in all four bands, and a printed t test t(212) = -5.96, p < 0.0001 for n = 214 comparing the two components pooled over age.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S2F (image 9) title 'SF12 scores at baseline' with 'T test, t(212) = -5.96, p = <0.0001, n = 214' and a red dashed line at 50.",
+    "anchor": "Figure S2 panel F, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41531035_r2/suppimg9.png",
     "panel_text_relation": "panel_only"
    }
   ],

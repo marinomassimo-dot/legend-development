@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261022-41373471-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "41373471",
+  "doi": "10.3390/ijms262311310"
+ },
+ "event_at": "2026-10-22T04:19:36Z",
+ "analysis_at": "2026-10-22T04:17:36Z",
+ "analysis_time_precision": "second",
+ "workflow": "Primary read by scientist-a under REPURP-10H-R1C-A-20261022: PMC efetch XML and PDF acquired with pmc_bucket_fetch.py and the Europe PMC supplementaryFiles endpoint, whole text read section by section, every figure opened as an image, the supplement read, locators captured while the document was open and verified by deepdive_manifest.py. Class-level substitute, NOT WWOX EVIDENCE.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID41373471_Ruggieri2025_PMC_r2.xml",
+ "source_fingerprint": "7dd8a0c0f832b53fbd1954e955b351a8571e85fdc97f14713de8d1e529020bb3",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41373471.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-a_r1c_20261022.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "context QUESTION_DRIVEN (the reader held the P5 cards on the proteasome-inhibitor class); main figures read from 220 dpi renders of the article PDF, the supplement figures S1 to S5 from 200 dpi renders; supplementary tables S2 to S6 (STRING enrichment lists) were read at the term level and not cell by cell, S1 was scanned for SIL1 and S7/S8 read as lists; limits are inside the Discussion."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

@@ -124,7 +124,13 @@
    "kind": "figure",
    "note": "Figure 1 image (WebP) acquired by the first reading (scientist-b) and found on disk; opened as an image in the resumed reading of 2026-10-21; its route was not recorded by the first reading.",
    "acquisition_recipe": {
-    "no_recipe": "the first reading did not record the route; the file sits beside the other bytes the packet lists for this PMID"
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "result_sha256": "7d808f0f0ec994af657816e5ad8779d98f8efd992548d62f3a228cfe168d3f08",
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13512211/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementaryFiles_bundle (member genes-17-00983-g001.webp; digest reproduced against the file already on disk on 2026-10-22, original route unrecorded)",
+    "user_agent_policy": "none"
    }
   },
   {
@@ -133,7 +139,13 @@
    "kind": "figure",
    "note": "Figure 2 image (WebP) acquired by the first reading (scientist-b) and found on disk; opened as an image in the resumed reading of 2026-10-21; its route was not recorded by the first reading.",
    "acquisition_recipe": {
-    "no_recipe": "the first reading did not record the route; the file sits beside the other bytes the packet lists for this PMID"
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "result_sha256": "dcc400bb62b655e3aa5cedff2fe4a7e19d8995fde3dc9f06e6d6613e5fb866f4",
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13512211/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementaryFiles_bundle (member genes-17-00983-g002.webp; digest reproduced against the file already on disk on 2026-10-22, original route unrecorded)",
+    "user_agent_policy": "none"
    }
   },
   {
@@ -142,7 +154,13 @@
    "kind": "figure",
    "note": "Figure 3 image (WebP) acquired by the first reading (scientist-b) and found on disk; opened as an image in the resumed reading of 2026-10-21; its route was not recorded by the first reading.",
    "acquisition_recipe": {
-    "no_recipe": "the first reading did not record the route; the file sits beside the other bytes the packet lists for this PMID"
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "result_sha256": "41243d7f4c7a3cf88b615e5a1f7cf51f8a4529fd25e2e0f215028ca378236640",
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13512211/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementaryFiles_bundle (member genes-17-00983-g003.webp; digest reproduced against the file already on disk on 2026-10-22, original route unrecorded)",
+    "user_agent_policy": "none"
    }
   },
   {
@@ -151,7 +169,13 @@
    "kind": "figure",
    "note": "Figure 4 image (WebP) acquired by the first reading (scientist-b) and found on disk; opened as an image in the resumed reading of 2026-10-21; its route was not recorded by the first reading.",
    "acquisition_recipe": {
-    "no_recipe": "the first reading did not record the route; the file sits beside the other bytes the packet lists for this PMID"
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "result_sha256": "1a7c95f3770dc12ffa83deb9083ad2c2a0fc0c4a5d70a7ce75fdc803608daae3",
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13512211/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementaryFiles_bundle (member genes-17-00983-g004.webp; digest reproduced against the file already on disk on 2026-10-22, original route unrecorded)",
+    "user_agent_policy": "none"
    }
   },
   {
@@ -160,7 +184,13 @@
    "kind": "figure",
    "note": "Figure 5 image (WebP) acquired by the first reading (scientist-b) and found on disk; opened as an image in the resumed reading of 2026-10-21; its route was not recorded by the first reading.",
    "acquisition_recipe": {
-    "no_recipe": "the first reading did not record the route; the file sits beside the other bytes the packet lists for this PMID"
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "result_sha256": "64bf9369a3d93c45859562a9856141c365680acf3ae5894e03f73f02dc90c23e",
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13512211/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementaryFiles_bundle (member genes-17-00983-g005.webp; digest reproduced against the file already on disk on 2026-10-22, original route unrecorded)",
+    "user_agent_policy": "none"
    }
   },
   {
@@ -169,7 +199,13 @@
    "kind": "figure",
    "note": "Figure 6 image (WebP) acquired by the first reading (scientist-b) and found on disk; opened as an image in the resumed reading of 2026-10-21; its route was not recorded by the first reading.",
    "acquisition_recipe": {
-    "no_recipe": "the first reading did not record the route; the file sits beside the other bytes the packet lists for this PMID"
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "result_sha256": "f60fed051b31dc5b694f9dc880e7b017fbf37682a735a28a5dc938620c82b71a",
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13512211/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementaryFiles_bundle (member genes-17-00983-g006.webp; digest reproduced against the file already on disk on 2026-10-22, original route unrecorded)",
+    "user_agent_policy": "none"
    }
   },
   {
@@ -178,7 +214,79 @@
    "kind": "figure",
    "note": "Figure 7 image (WebP) acquired by the first reading (scientist-b) and found on disk; opened as an image in the resumed reading of 2026-10-21; its route was not recorded by the first reading.",
    "acquisition_recipe": {
-    "no_recipe": "the first reading did not record the route; the file sits beside the other bytes the packet lists for this PMID"
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "result_sha256": "0e36ec4f1244a449030d64e6d1e2492cc629d48dc7b68f2f238ac1e03e18409c",
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13512211/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementaryFiles_bundle (member genes-17-00983-g007.webp; digest reproduced against the file already on disk on 2026-10-22, original route unrecorded)",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42650175_r2/genes-17-00983-s001.zip",
+   "sha256": "098f0fe40ae4dd859513fc9f28229a1b946c0541e3ac396260c4528f3efabffc",
+   "kind": "supplement_binary",
+   "note": "Supplementary Materials container (Figures S1 to S3), a member of the Europe PMC supplementaryFiles bundle of PMC13512211 (15 members: seven figure WebP and GIF pairs, this zip). A byte-identical copy sits beside the figures at files/supplement/PMID42650175/.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "result_sha256": "098f0fe40ae4dd859513fc9f28229a1b946c0541e3ac396260c4528f3efabffc",
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13512211/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementaryFiles_bundle (member genes-17-00983-s001.zip extracted unchanged; digest reproduced against the copy already on disk)",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42650175_r3/genes-4381080-supplementary.pdf",
+   "sha256": "e5154d86bebbd9b3d905fdc3a4a1eda50fc751fe3ea839df147206afb3eab757",
+   "kind": "article_binary",
+   "note": "The single member of the supplement zip, two pages, extracted with Python zipfile into a fresh directory. Its three fonts carry no ToUnicode CMap, so its text layer is not used: captions are quoted from the rendered page (rendered_text).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42650175_r2/genes-17-00983-s001.zip",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "stdlib",
+     "call": "ZipFile.extractall of the single member genes-4381080-supplementary.pdf",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42650175_r3/genes-4381080-supplementary_p1_300dpi.png",
+   "sha256": "3310e0075abf4ac1d1d1ed8c5be78e71baeba958297cf1199e0b2584ef48e5a6",
+   "kind": "figure",
+   "note": "Supplement page 1 (Figures S1 and S2) rendered at 300 dpi; opened as an image, with the two embedded rasters opened at native size.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42650175_r3/genes-4381080-supplementary.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=300).save() page 1",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42650175_r3/genes-4381080-supplementary_p2_300dpi.png",
+   "sha256": "ce58681d2e279cf0dac84b02bb482ccce6cd96664a9abe2d7a57504fbc8ec56c",
+   "kind": "figure",
+   "note": "Supplement page 2 (Figure S3) rendered at 300 dpi; opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42650175_r3/genes-4381080-supplementary.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=300).save() page 2",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
    }
   }
  ],
@@ -187,7 +295,7 @@
   "source_fulltext_indexed": true,
   "source_fulltext_indexed_evidence": "PMC efetch JATS for PMC13512211 retrieved 2026-10-20, 96,301 bytes; the whole body is indexed locally for exact-text checks.",
   "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
-  "note": "SOURCE_FIRST. Class-level substitute (NOT WWOX evidence). Whole text read; no figure was opened (the bucket has none and the PDF was not rendered), so figures are captions_only and the depth is partial; numeric readings are the text values.",
+  "note": "SOURCE_FIRST. Class-level substitute (NOT WWOX evidence). Whole text read; no figure was opened (the bucket has none and the PDF was not rendered), so figures are captions_only and the depth is partial; numeric readings are the text values. 2026-10-22 resume (scientist-a, REPURP-10H-R1C-A-20261022): Supplementary Figures S1 to S3 opened as images at 300 dpi (S1 and S2 page rasters also at native size) and their legends read; entries 14 to 22 are the new locators. QUESTION_DRIVEN in effect.",
   "entries": [
    {
     "proposition": "Class-level design for a misfolded missense protein: the mutant GAT-1 accumulates in the ER (about 30 percent of wild-type signal overlaps the ER marker against about 76 percent for Ala305Val) and PBA lowers the overlap to about 36 percent and restores total fluorescence from about 25 to about 47.5 arbitrary units, in human astrocytes.",
@@ -375,6 +483,135 @@
      "system": "GAT-1 (SLC6A1) variants A305V, A305T, A288V, S295L as YFP-tagged constructs in HEK293T cells and human iPSC-derived astrocytes and neurons, heterozygous-like co-expression with wild-type cDNA, phenylbutyrate, bile-acid chaperone and salubrinal; NOT a WWOX system",
      "genotype": "SLC6A1 A305V (novel, uncertain significance), A305T, A288V, S295L",
      "endpoint": "[3H]GABA uptake relative to wild type, ER overlap, total YFP fluorescence, band intensities"
+    }
+   },
+   {
+    "proposition": "Text: across most stability tools negative values are reported for Ala305Thr (citing Supplementary Figure S1) with an average of -1.4 kcal/mol for Ala305Thr and -0.5 for Ala305Val, and DUET is named as estimating the largest effect for Ala305Thr (-3.4 kcal/mol).",
+    "snippet": "Across most stability prediction tools (Figure 2B), negative ΔΔG values were observed for both Ala305Thr (Supplementary Figure S1) and p.Ala305Val variants, with an average of −1.4 kcal/mol for p.Ala305Thr and −0.5 kcal/mol for p.Ala305Val. While the magnitude of ΔΔG varied between tools, most computational tools predicted destabilization of the mutant protein, with DUET estimating the largest effect for p.Ala305Thr (−3.4 kcal/mol).",
+    "anchor": "Results 5.2, stability-prediction paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42650175_Delahanty2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "in silico stability predictors (machine-learning tools) run on a human GAT-1 structure; NOT a WWOX system",
+     "genotype": "SLC6A1 A305T and A305V (substitutions at one residue)",
+     "endpoint": "predicted change in folding free energy, kcal/mol"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure S1B as drawn (Ala305Thr, seven numbered tools): about -1.7 (1 mCSM), -3.3 (2 mCSM-membrane), -2.0 (3 SDM), -0.25 (4 DUET), +0.5 (5 Dynamut), -0.1 (6 Dynamut2), -0.2 (7 INPS-MD sequence only). Six of seven are negative; the largest effect is tool 2, mCSM-membrane, not DUET, whose bar is the second smallest in magnitude among the negative ones; the mean of the seven bars is about -1.0, not -1.4 (the text's average is over a nine-tool panel that S1B does not show). Readings are from the printed axis. INFERENZA, not a DATO: the printed -3.4 sits near tool 2's bar, so a mislabelled tool is one possible reading and is not established. In silico predictions are HYPOTHESIS material, not measurements.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure S1B (page 1)",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID42650175_r3/genes-4381080-supplementary_p1_300dpi.png",
+    "anchor": "Supplementary Figure S1B (page 1)",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "in silico stability predictors (machine-learning tools) run on a human GAT-1 structure; NOT a WWOX system",
+     "genotype": "SLC6A1 A305T and A305V (substitutions at one residue)",
+     "endpoint": "predicted change in folding free energy, kcal/mol"
+    },
+    "contradicts": "entries[14]",
+    "contradicts_needle": "DUET estimating the largest effect for p.Ala305Thr"
+   },
+   {
+    "proposition": "Text for the main Figure 2B: DUET predicted the largest single effect for the Ala305Val substitution (-3.4 kcal/mol).",
+    "snippet": "DUET predicted the largest single effect for p.Ala305Val (−3.4 kcal/mol) (Figure 2B)",
+    "anchor": "Results 5.2, stability-prediction paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42650175_Delahanty2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "in silico stability predictors (machine-learning tools) run on a human GAT-1 structure; NOT a WWOX system",
+     "genotype": "SLC6A1 A305T and A305V (substitutions at one residue)",
+     "endpoint": "predicted change in folding free energy, kcal/mol"
+    }
+   },
+   {
+    "proposition": "Figure 2B (main figure, already declared) as drawn for Ala305Val, nine numbered tools: about -0.3, +0.4, -0.8, -0.1 (4 DUET), +1.1, -1.9 (6 Dynamut2), 0.0, -0.2, -0.65; the largest effect is tool 6, Dynamut2 (about -1.9), and DUET is about -0.1; no bar reaches -3.4. The panel does not carry the value the text gives to DUET. (The first reading's entry for this figure reads the same nine bars; this adds the comparison with the DUET sentence.)",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2B, predicted delta delta G bars for the nine numbered tools",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID42650175/genes-17-00983-g002.webp",
+    "anchor": "Figure 2B (panel as printed, native WebP)",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "in silico stability predictors (machine-learning tools) run on a human GAT-1 structure; NOT a WWOX system",
+     "genotype": "SLC6A1 A305T and A305V (substitutions at one residue)",
+     "endpoint": "predicted change in folding free energy, kcal/mol"
+    },
+    "contradicts": "entries[16]",
+    "contradicts_needle": "DUET predicted the largest single effect for p.Ala305Val"
+   },
+   {
+    "proposition": "Text: the mature GAT-1 band (about 108 kDa, band a) is reduced for A305V against wild type (1 vs. 0.228 ± 0.023) and similar to S295L (0.16 ± 0.032), citing Figure 2C,D and Supplementary Figure S2.",
+    "snippet": "the GAT-1 p.Ala305Val protein at the ~108 KDa in the purple boxed region representing the mature forms of GAT-1 (band a) was reduced compared to the wildtype (1 vs. 0.228 ± 0.023) but similar to GAT-1 p.Ser295Leu (0.16 ± 0.032), which has been identified to cause a loss of GABA function due to reduced functional GAT-1 protein at the total and cell surface levels (Figure 2C,D and Supplementary Figure S2).",
+    "anchor": "Results 5.2, biochemical-stability paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42650175_Delahanty2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) variants A305V, A305T, S295L as YFP-tagged constructs in HEK293T cells and human iPSC-derived neural cells; in silico stability predictors on a GAT-1 structure; NOT a WWOX system",
+     "genotype": "SLC6A1 A305V, A305T, A288V, S295L",
+     "endpoint": "predicted stability change, band intensities, culture morphology"
+    }
+   },
+   {
+    "proposition": "Text: the lower band (band b, about 90 kDa, immature form) is higher in A305V (1.858 ±0.08) and S295L (1.785±0.0357) than in wild type (=1).",
+    "snippet": "the lower band (band b) at ~90 KDa representing the immature form in the red boxed region was higher in the mutant GAT-1 p.Ala305Val (1.858 ±0.08) and GAT-1 p.Ser295Leu (1.785±0.0357) compared with the wildtype (=1)",
+    "anchor": "Results 5.2, biochemical-stability paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42650175_Delahanty2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) variants A305V, A305T, S295L as YFP-tagged constructs in HEK293T cells and human iPSC-derived neural cells; in silico stability predictors on a GAT-1 structure; NOT a WWOX system",
+     "genotype": "SLC6A1 A305V, A305T, A288V, S295L",
+     "endpoint": "predicted stability change, band intensities, culture morphology"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure S2 as drawn (full-length gel behind Figure 2C): one blot, four lanes (untransfected, wild type, A305V, S295L); the untransfected lane shows no GAT-1-YFP signal; the upper two bands (just under the 100 marker) are strongest in wild type, weaker in A305V and nearly absent in S295L; the strongest band, level with the 75 marker, is stronger in A305V and S295L than in wild type; a faint lower band appears in the variant lanes; the ATPase loading band is present in all four lanes. The direction matches the text. Ladder positions in this crop and in Figure 2C differ (see the dossier note), so the kDa values in the text are not reproduced from this image. One blot is shown; the quantification in 2D and 2E is from several samples.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure S2, full-length gel (page 1)",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID42650175_r3/genes-4381080-supplementary_p1_300dpi.png",
+    "anchor": "Supplementary Figure S2, full-length gel (page 1)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) variants A305V, A305T, S295L as YFP-tagged constructs in HEK293T cells and human iPSC-derived neural cells; in silico stability predictors on a GAT-1 structure; NOT a WWOX system",
+     "genotype": "SLC6A1 A305V, A305T, A288V, S295L",
+     "endpoint": "predicted stability change, band intensities, culture morphology"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure S3 is a set of live phase-contrast images of neural progenitor cells, astrocytes and neurons before the experiment; its legend names the first cell type 'pregenital' where the main text says neural progenitor cells.",
+    "snippet": "Live images of human neural pregenital cells, astrocytes and neurons before experi",
+    "anchor": "Supplementary Figure S3 legend",
+    "surface": "rendered_text",
+    "artifact": "files/supplement/PMID42650175_r3/genes-4381080-supplementary.pdf",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) variants A305V, A305T, S295L as YFP-tagged constructs in HEK293T cells and human iPSC-derived neural cells; in silico stability predictors on a GAT-1 structure; NOT a WWOX system",
+     "genotype": "SLC6A1 A305V, A305T, A288V, S295L",
+     "endpoint": "predicted stability change, band intensities, culture morphology"
+    },
+    "page_anchor": {
+     "page": 2,
+     "dpi": 300,
+     "render_call": "PyMuPDF 1.28.2 page.get_pixmap(dpi=300)",
+     "source_pdf_sha256": "e5154d86bebbd9b3d905fdc3a4a1eda50fc751fe3ea839df147206afb3eab757",
+     "crop_published": false,
+     "crop_note": "The whole rendered page is published as the declared page PNG (page 2) and is reproducible from the declared digest with the render call above."
+    }
+   },
+   {
+    "proposition": "Supplementary Figure S3 as drawn: three unlabelled-by-marker phase-contrast panels (neural progenitor cells, astrocytes, neurons); one scale bar, labelled 10 micrometres, on the neuron panel only; no marker staining, count, purity or time point appears on the page. The page therefore does not establish the identity or purity of the cultures used for the uptake experiments.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure S3 (page 2)",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID42650175_r3/genes-4381080-supplementary_p2_300dpi.png",
+    "anchor": "Supplementary Figure S3 (page 2)",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "GAT-1 (SLC6A1) variants A305V, A305T, S295L as YFP-tagged constructs in HEK293T cells and human iPSC-derived neural cells; in silico stability predictors on a GAT-1 structure; NOT a WWOX system",
+     "genotype": "SLC6A1 A305V, A305T, A288V, S295L",
+     "endpoint": "predicted stability change, band intensities, culture morphology"
     }
    }
   ]

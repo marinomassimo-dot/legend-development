@@ -29,8 +29,8 @@ Date: 2026-10-21. Author: read-only study selector. No repository file was edite
 
 | PMID | What was found | Consequence |
 |---|---|---|
-| 42587736 | Receipt FTR-20261019-42587736-01, partial; owed: figures, methods, results (captions only); staged by scientist-b | Moved to R1 HELD-partial; not selected |
-| 42650175 | Receipt FTR-20261019-42650175-01, partial; owed: figures, supplementary; staged by scientist-b | Moved to R1 HELD-partial; not selected |
+| 42587736 | Receipt FTR-20261019-42587736-01, partial; owed: figures, methods, results (captions only); staged by scientist-b | Moved to R1 HELD-partial; not selected. Closed 2026-10-22, see the HELD-partial table |
+| 42650175 | Receipt FTR-20261019-42650175-01, partial; owed: figures, supplementary; staged by scientist-b | Moved to R1 HELD-partial; not selected. Closed 2026-10-22, see the HELD-partial table |
 | 38378758 | Mentioned in queue FT-113; no receipt, none staged; also cited in four analysis files | Selected (R1); status "queued" |
 | 29785012 | Mentioned in queue FT-113 ("not read"); cited in two analysis files | Selected (R1); status "queued" |
 | 40665325 | Mentioned in queue FT-123; abstract-level verification only; cited in two analysis files | Selected (R3); status "queued" |
@@ -78,8 +78,8 @@ Selected: 16 (tier 1 highest). All are NOT WWOX EVIDENCE.
 
 | PMID | First author, year | Title | Receipt state | Note |
 |---|---|---|---|---|
-| 42587736 | Song ZD 2026 | 4-Phenylbutyrate Rescue in GABRA1 Variants Associated with Developmental Epileptic Encephalopathies: From Cell and Mouse Models to Humans | receipt FTR-20261019-42587736-01, partial_fulltext_read; owed: figures, methods, results (captions only) | Re-read only with a stated question, e.g. whether the in-vivo expression data have a per-animal read-out; a PBA total-versus-surface measurement. |
-| 42650175 | Delahanty AJ 2026 | 4-Phenylbutyrate Plus Wildtype GAT-1 Augmentation: A Dual Therapy to Rescue SLC6A1 Variant-Associated Developmental and Epileptic Encephalopathy | receipt FTR-20261019-42650175-01, partial_fulltext_read; owed: figures, supplementary (captions only) | Not recommended by default; the body was read. |
+| 42587736 | Song ZD 2026 | 4-Phenylbutyrate Rescue in GABRA1 Variants Associated with Developmental Epileptic Encephalopathies: From Cell and Mouse Models to Humans | receipt FTR-20261019-42587736-01, partial_fulltext_read; owed: figures, methods, results (captions only) | Re-read only with a stated question, e.g. whether the in-vivo expression data have a per-animal read-out; a PBA total-versus-surface measurement. **CLOSED 2026-10-22 (scientist-a, REPURP-10H-R1C-A-20261022):** the figures, methods and results were already read by resume receipt FTR-20261021-42587736-02; the only section still owed was the supplement (two figure pages), now read; completing receipt FTR-20261022-42587736-03 staged, manifest PASS. The owed-sections text of this row (figures, methods, results) was stale at the time of the closure task. |
+| 42650175 | Delahanty AJ 2026 | 4-Phenylbutyrate Plus Wildtype GAT-1 Augmentation: A Dual Therapy to Rescue SLC6A1 Variant-Associated Developmental and Epileptic Encephalopathy | receipt FTR-20261019-42650175-01, partial_fulltext_read; owed: figures, supplementary (captions only) | Not recommended by default; the body was read. **CLOSED 2026-10-22 (scientist-a, REPURP-10H-R1C-A-20261022):** the figures were read by resume receipt FTR-20261021-42650175-02; the supplement (three figure pages) is now read; completing receipt FTR-20261022-42650175-03 staged, manifest PASS. |
 
 ## Group R2 - T-type calcium-channel axis and genotype-specific antiseizure pharmacology
 
@@ -204,6 +204,22 @@ Selected: 16 (tier 1 highest). All are NOT WWOX EVIDENCE.
 | PMID | First author, year | Title | Receipt state | Note |
 |---|---|---|---|---|
 | 36537114 | Chong SC 2023 | Expansion of the clinical and molecular spectrum of WWOX-related epileptic encephalopathy | receipt FTR-20261020-36537114-01 (owed: figures captions_only, supplementary not_read, tables not_read); blind locator audit already run 2026-10-21 | Not re-read: used and corrected in the early-benefit note. |
+| 36537114 | (same) | (same) | 2026-10-22 R4c retry | Still HELD: OpenAlex lists no open location, Europe PMC has no full text, the publisher page and its supplement route answer HTTP 403 with an anti-automation challenge (not circumvented). Operator PDF wishlist item 2 stands. |
+| 38015929 | Xian 2023 | Delineating clinical and developmental outcomes in STXBP1-related disorders | owed: supplementary tables and Figures S1-S7 | CLOSED 2026-10-22: `FTR-20261022-38015929-02` staged (complete); 13 locators appended. |
+| 40162009 | Schulz 2025 | CLN2 enzyme replacement versus natural history | owed: Figures S1-S3 | CLOSED 2026-10-22: `FTR-20261022-40162009-02` staged (complete). |
+| 41531035 | Liogier d'Ardhuy 2026 | CDKL5 deficiency disorder baseline outcome measures | owed: nine embedded supplementary images | CLOSED 2026-10-22: `FTR-20261022-41531035-02` staged (complete). |
+| 42446932 | McKee 2026 | Natural-history protocol for synaptic disorders (STXBP1, SYNGAP1) | owed: three EMF images of Figure S1 | CLOSED 2026-10-22: `FTR-20261022-42446932-02` staged (complete); images decoded from the embedded EMF+ bitmaps. |
+| 42481851 | Kim-McManus 2026 | Individualised antisense for SCN2A-related DEE | owed: the supplementary information | CLOSED 2026-10-22: `FTR-20261022-42481851-02` staged (complete); the supplement is a 3-page Reporting Summary. |
+| 42286026 | Xiong 2026 | KCNQ2 gabapentin | owed: supplementary docx | CLOSED 2026-10-22: `FTR-20261022-42286026-02` staged (complete). |
+| 35499850, 39093319, 41250984, 39439575 | (R4, scientist-d 2026-10-21) | partial readings | owed: supplementary files on disk, not read end to end | STILL OWED. |
+| 39625912, 39762914, 41999155 | (R4, scientist-d 2026-10-21) | partial readings | owed: the long protocol documents (56 pages, 110 pages, 470 thousand characters) | STILL OWED (read only in their synopsis, endpoint and statistics sections).
+
+**R4c addenda (scientist-d, 2026-10-22; three new precedents in `repurposing_r4c_scientist-d_20261022.md`; all NOT WWOX EVIDENCE):**
+
+1. *Symptomatic versus modifying:* no new design separates them; a consensus text on individualised antisense treats a symptomatic response as a hint of modifiability (42594875) and an outcome-strategy review never uses the term disease-modifying (42494992). In the GNAO1 zinc pilot the unblinded disability and caregiver goal scores moved while the blinded movement score did not (42542632).
+3. *External controls:* a non-disease comparator (cerebral palsy trajectories and a rehabilitation-programme cohort) carried the headline claim of the GNAO1 pilot; the treated n is 8 in the main text and 10 in the appendix (42542632). The CLN2 sensitivity analysis gives weaker hazard ratios than the main matched analysis (40162009).
+4. *N-of-1 and aggregated designs:* the SCN2A antisense Reporting Summary states two open-label single-patient trials with dose replication inside patients and no multiplicity correction (42481851); the consensus eligibility framework applies to nanorare variants (under 30 patients worldwide), which fits a private allele rather than the WWOX class (inference).
+5. *Responsive instruments:* growth scale values still lack agreed meaningful-change thresholds (42494992); the CDKL5 baseline study judges the 88-item gross motor measure unsuitable and still schedules it (41531035).
 
 ### R1 five questions
 

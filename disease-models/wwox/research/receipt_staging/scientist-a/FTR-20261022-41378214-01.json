@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261022-41378214-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "41378214",
+  "doi": "10.3389/fphar.2025.1674737"
+ },
+ "event_at": "2026-10-22T04:15:07Z",
+ "analysis_at": "2026-10-22T04:13:07Z",
+ "analysis_time_precision": "second",
+ "workflow": "Primary read by scientist-a under REPURP-10H-R1C-A-20261022: PMC efetch XML and PDF acquired with pmc_bucket_fetch.py and the Europe PMC supplementaryFiles endpoint, whole text read section by section, every figure opened as an image, the supplement read, locators captured while the document was open and verified by deepdive_manifest.py. Class-level substitute, NOT WWOX EVIDENCE.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID41378214_Shah2025b_PMC_r2.xml",
+ "source_fingerprint": "a2da36e56998a842bc2dbfd5242d4a5ab525374434b22da02b22d3a9abe4eb2c",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41378214.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-a_r1c_20261022.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "context QUESTION_DRIVEN (the reader held the P5 cards on the phenylbutyrate and proteasome-inhibitor classes and the earlier manifests of the same laboratory family); main figures read from 220 dpi page renders of the article PDF (the PMC JPEGs are about 660 pixels wide); the single supplementary figure read from its TIFF; limitations are inside the Discussion."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

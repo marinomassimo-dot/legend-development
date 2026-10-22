@@ -1,0 +1,782 @@
+{
+ "schema_version": 2,
+ "pmid": "41378214",
+ "doi": "10.3389/fphar.2025.1674737",
+ "receipt": "FTR-20261022-41378214-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-a_r1c_20261022.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: PMC efetch XML, the PDF and the supplementary bundle were returned by pmc_bucket_fetch.py and the Europe PMC supplementaryFiles endpoint."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Primary-evidence read of a NOT WWOX EVIDENCE paper under the Scientist brief; the analysis note is the dossier."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No consolidated baseline claim is narrowed, reversed or removed; a blind audit of the text-versus-panel relations is declared OWED."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a candidate; class level only."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 9,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed ESearch 2026-10-22: Sucic S[au] AND GABA transporter 9; Sucic S[au] AND WWOX 0.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "The laboratory that also produced the G443 GAT-1 rescue paper already read in this lot (same constructs, same fly model); the two papers are one laboratory family and count as one origin for any statement about 4-phenylbutyrate and GAT-1. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "SLC6A1 AND proteasome",
+    "count": 2,
+    "source": "PubMed ESearch count 2026-10-22"
+   },
+   {
+    "query": "SLC6A1 AND phenylbutyrate",
+    "count": 22,
+    "source": "PubMed ESearch count 2026-10-22"
+   },
+   {
+    "query": "GAT-1 AND R44",
+    "count": 1,
+    "source": "PubMed ESearch count 2026-10-22"
+   }
+  ],
+  "note": "WWOX does not occur in the article; counts are title/abstract-level and license 'no paper is indexed', never 'never measured' (D-37)."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 81,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS: 81; none WWOX-direct.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-direct reference. Same-laboratory GAT-1 papers (Kasture 2023, Shah 2025) are cited; the 2025 G443 paper is already in the repository (40485335)."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --pmid 41378214 --hops 0 and paper_packet.py packet (before the read); the comparison with the earlier R1 readings after the first pass",
+  "hits": 0,
+  "finding": "NO RECORD MATCHED before this reading (a statement about that query, not about what the laboratory knows)."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-22",
+  "route": "dependency_integrity.py screen --manifest-block; PubMed efetch CommentsCorrections",
+  "result": "PubMed efetch 2026-10-22: publication types [Journal Article]; no CommentsCorrections entry; dependency screen SCREENED_CLEAN.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 81,
+   "references_screened": 78,
+   "references_with_doi": 78,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 1,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41378214_Shah2025b_PMC_r2.xml",
+   "sha256": "a2da36e56998a842bc2dbfd5242d4a5ab525374434b22da02b22d3a9abe4eb2c",
+   "kind": "article_text",
+   "note": "PMC efetch JATS for PMC12685850 (Front. Pharmacol. 2025, CC BY), retrieved with pmc_bucket_fetch.py.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC12685850&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "result_sha256": "a2da36e56998a842bc2dbfd5242d4a5ab525374434b22da02b22d3a9abe4eb2c"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41378214_r2/PMC12685850.1.pdf",
+   "sha256": "d78212f4454f79f5c7d51271a38bc7de17e4ff622fb726e842ecafd9ef4a15ec",
+   "kind": "article_binary",
+   "note": "Article PDF from the PMC open-data bucket; its page renders below are the figure surfaces opened.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12685850.1/PMC12685850.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "result_sha256": "d78212f4454f79f5c7d51271a38bc7de17e4ff622fb726e842ecafd9ef4a15ec"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41378214_r2/Image1.tif",
+   "sha256": "053cf83ce6a956343e6cdd9e937c282d2c5706bc58407d90ca03541d351193a1",
+   "kind": "figure",
+   "note": "Supplementary Figure S1, the only supplementary file of the article, a member of the Europe PMC supplementaryFiles bundle; converted to PNG for viewing only.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12685850/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementaryFiles_bundle (member Image1.tif extracted unchanged)",
+    "user_agent_policy": "none",
+    "result_sha256": "053cf83ce6a956343e6cdd9e937c282d2c5706bc58407d90ca03541d351193a1"
+   }
+  },
+  {
+   "path": "files/figures/PMID41378214_r2/pages_220dpi/PMC12685850.1_p5_220dpi.png",
+   "sha256": "da1236f6470eab58c778354c9bdc807de4993e7536abe6c3946930ee7c69f2be",
+   "kind": "figure",
+   "note": "Printed page 5 of the article PDF rendered at 220 dpi and opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41378214_r2/PMC12685850.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=220).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID41378214_r2/pages_220dpi/PMC12685850.1_p7_220dpi.png",
+   "sha256": "71fdef54f822c9d276d7f0ae1507ccc0541e6d274f9703a38d80d4d0695bd4cb",
+   "kind": "figure",
+   "note": "Printed page 7 of the article PDF rendered at 220 dpi and opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41378214_r2/PMC12685850.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=220).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID41378214_r2/pages_220dpi/PMC12685850.1_p10_220dpi.png",
+   "sha256": "aaf2f0bc5afcdf98733c704c85def040d9f36be709f35f0f02947cce5fd5c733",
+   "kind": "figure",
+   "note": "Printed page 10 of the article PDF rendered at 220 dpi and opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41378214_r2/PMC12685850.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=220).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID41378214_r2/pages_220dpi/PMC12685850.1_p12_220dpi.png",
+   "sha256": "b557a9938e4cd6c16d124ce40c593e56241435da0eef3fc0e35ddb627e61bed0",
+   "kind": "figure",
+   "note": "Printed page 12 of the article PDF rendered at 220 dpi and opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41378214_r2/PMC12685850.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=220).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID41378214_r2/pages_220dpi/PMC12685850.1_p13_220dpi.png",
+   "sha256": "3693be925dcac69d1bb308997fcdf04c810af7b2e2e3e5b5de05f019a3508bfa",
+   "kind": "figure",
+   "note": "Printed page 13 of the article PDF rendered at 220 dpi and opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41378214_r2/PMC12685850.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=220).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID41378214_r2/pages_220dpi/PMC12685850.1_p14_220dpi.png",
+   "sha256": "ad50bf43591e5d217ad5eedaedf2b9d2be21d2f2717a95d691ebcf8c02f24797",
+   "kind": "figure",
+   "note": "Printed page 14 of the article PDF rendered at 220 dpi and opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41378214_r2/PMC12685850.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=220).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID41378214_r2/pages_220dpi/PMC12685850.1_p16_220dpi.png",
+   "sha256": "fedbb5c110808f1e2926282de11dd662a979624c7c86b146e26d1ed0118bfff9",
+   "kind": "figure",
+   "note": "Printed page 16 of the article PDF rendered at 220 dpi and opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41378214_r2/PMC12685850.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=220).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch JATS for PMC12685850 retrieved 2026-10-22, 196,204 bytes; the whole body is indexed locally for exact-text checks.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "QUESTION_DRIVEN: the reader held the P5 cards on the phenylbutyrate and proteasome-inhibitor classes and the earlier R1 manifests of the same laboratory family when opening the paper. Class-level substitute for the Q230P-class missense question, NOT WWOX EVIDENCE. Read: abstract, introduction, methods, results, every figure (printed pages 5, 7, 10, 12, 13, 14, 16 rendered at 220 dpi and opened), tables 1 to 3, discussion, the supplementary figure (the only supplement), no limitations section as such (declared limits are inside the Discussion). The abstract's 'partially rescued R44Q function' is compared in entries on Figures 4 and 5.",
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE. Text: none of the three R44 variants (R44Q, R44P, R44W) shows appreciable GABA uptake in HEK293 cells.",
+    "snippet": "none of the three epilepsy-associated mutants exhibited appreciable GABA uptake, indicating severe functional impairments",
+    "anchor": "Results, first subsection, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41378214_Shah2025b_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Figure 1A as drawn: wild-type uptake about 67 (axis units pmol per million cells per minute; three points from about 48 to 80); R44Q, R44P and R44W about zero, three points each, three asterisks versus wild type. Agrees with the text.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1A, printed page 5, 220 dpi render",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41378214_r2/pages_220dpi/PMC12685850.1_p5_220dpi.png",
+    "anchor": "Figure 1A, printed page 5, 220 dpi render",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Text: all three variants show substantial Endo H-resistant (mature) band and the authors read this as reaching the cell surface like wild type.",
+    "snippet": "all three functionally-deficient mutants (R44Q, R44P, R44W) displayed substantial levels of the Endo H-resistant band, suggesting that these proteins reached the cell surface in the same manner as the WT hGAT-1 (Figure 1B, right panel)",
+    "anchor": "Results, first subsection, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41378214_Shah2025b_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Figure 1B as drawn: mature (M) band normalised to wild type about 0.8 to 0.9 for the three variants, three points per bar, no star; the blot shows an M band and a core (C) band for every lane. INFERENZA, reader's: an Endo H-resistant band shows Golgi processing, not plasma-membrane residence or function, which the uptake panel shows is absent; the text itself says 'suggesting'. The confocal panel 1C shows plasma-membrane signal for each variant and also intracellular puncta, without a quantified co-localisation.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1B and 1C (printed page 5)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41378214_r2/pages_220dpi/PMC12685850.1_p5_220dpi.png",
+    "anchor": "Figure 1B and 1C (printed page 5)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Text: R44Q exhibited no detectable GABA uptake, confirming a complete abolition of GABA transport.",
+    "snippet": "the R44Q mutant exhibited no detectable GABA uptake, confirming a complete abolition of GABA transport",
+    "anchor": "Results, first subsection, last sentences",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41378214_Shah2025b_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Figure 2A as drawn: wild type is saturable (about 320 at the highest concentration); R44Q stays close to zero (a few units) at every concentration. Agrees with the text.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2A (printed page 7)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41378214_r2/pages_220dpi/PMC12685850.1_p7_220dpi.png",
+    "anchor": "Figure 2A (printed page 7)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Text: 4-PBA did not improve the GABA uptake activity of the loss-of-function R44Q mutant in HEK293 cells (Figure 2D, second bar).",
+    "snippet": "In the present study, 4-PBA did not improve the GABA uptake activity of the loss-of-function R44Q mutant (Figure 2D, second bar).",
+    "anchor": "Results, second subsection, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41378214_Shah2025b_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Figure 2D as drawn (axis 0 to 4, against 0 to about 150 in 2C): R44Q uptake is about 0.1 to 0.3 under control, 4-PBA, glycerol, pifithrin-mu, YM-08, 17-DMAG and NVP-HSP990; two single points reach about 1.3 and 1.8 (pifithrin-mu and 17-DMAG) and no bar carries a star. Figure 2C: the same treatments raise wild-type uptake from about 60 to about 110 or more (4-PBA one star; YM-08 and 17-DMAG two stars; NVP-HSP990 three stars; glycerol not marked).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2C and 2D (printed page 7)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41378214_r2/pages_220dpi/PMC12685850.1_p7_220dpi.png",
+    "anchor": "Figure 2C and 2D (printed page 7)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Text: the treatments led to a marked increase in wild-type transporter activity.",
+    "snippet": "Treatment led to a marked increase in WT transporter activity (Figure 2C)",
+    "anchor": "Results, second subsection, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41378214_Shah2025b_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Text: MG-132 gave an approximate 8 percent increase in R44Q uptake relative to the wild-type control (cited as Figure 3B), bortezomib only a marginal functional rescue (Figure 4D).",
+    "snippet": "MG-132 treatment led to an approximate 8% increase in GABA uptake activity of the R44Q mutant relative to the WT hGAT-1 control (Figure 3B), while bortezomib resulted in only a marginal functional rescue (Figure 4D).",
+    "anchor": "Results, proteasome paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41378214_Shah2025b_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Figure 4A to D as drawn: with MG-132 wild-type uptake is about 250 percent of its untreated control (one star) and R44Q about 6 percent of untreated wild type (points about 3.8, 5.8 and 9; one star), against about 0 for untreated R44Q; with bortezomib wild type is about 185 percent (one star) and R44Q about 2.7 percent (one star) against about 0.4 untreated. So the same inhibitors raise wild-type uptake by about two to two and a half times and bring R44Q to a few percent of untreated wild type; the text's figure reference '3B' is the 4B panel; the mean in 4B is about 6, not 8.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4A-D (printed page 12)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41378214_r2/pages_220dpi/PMC12685850.1_p12_220dpi.png",
+    "anchor": "Figure 4A-D (printed page 12)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    },
+    "qualifies": "entries[9]",
+    "qualifies_needle": "MG-132 treatment led to an approximate 8% increase"
+   },
+   {
+    "proposition": "Text: after MG-132 the mature glycosylated R44Q bands show enhanced thermal stability from 52 to 60 degrees, against untreated.",
+    "snippet": "Upon treatment, the mature glycosylated bands of R44Q at the plasma membrane showed enhanced thermal stability across a temperature range of 52 °C–60 °C (Figure 4F, right panel), compared to the untreated condition (Figure 4F, left panel).",
+    "anchor": "Results, proteasome paragraph, last sentences",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41378214_Shah2025b_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Figure 4E and 4F as drawn: one representative blot per condition, six temperatures from room temperature to 60 degrees, a loading band below; no quantification, no melting curve, no replicate number on the panel. With MG-132 the signal is stronger in the wild-type blot as well as in the R44Q blot, so the stronger bands are not specific to the variant; the untreated wild-type and untreated R44Q profiles look alike by eye (INFERENZA, no measurement). The panel does not carry 'enhanced thermal stability' as a measured quantity.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4E and 4F (printed page 12)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41378214_r2/pages_220dpi/PMC12685850.1_p12_220dpi.png",
+    "anchor": "Figure 4E and 4F (printed page 12)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    },
+    "qualifies": "entries[11]",
+    "qualifies_needle": "showed enhanced thermal stability across a temperature range"
+   },
+   {
+    "proposition": "Text: trichostatin A gave an apparent, statistically insignificant increase in R44Q uptake (Figure 5B), with an approximately 1.4-fold rise in surface expression (Figure 5C; Supplementary Figure S1).",
+    "snippet": "TSA treatment resulted in an apparent, though statistically insignificant, increase in radiolabeled GABA uptake (Figure 5B), accompanied by an approximately 1.4-fold rise in the surface expression of the R44Q mutant protein (Figure 5C; Supplementary Figure S1).",
+    "anchor": "Results, trichostatin paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41378214_Shah2025b_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Figure 5B as drawn: R44Q uptake with trichostatin A is about 5 percent of untreated wild type (points about 4.4, 4.5 and 5.9 to 6.3) against about 0.1 untreated, and the bar carries ONE STAR (paired t-test legend: one star p < 0.05). Figure 5A: wild-type uptake rises to about 290 percent of its control (three stars). The text calls the R44Q increase statistically insignificant; the panel marks it significant at the 0.05 level.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5A and 5B (printed page 13)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41378214_r2/pages_220dpi/PMC12685850.1_p13_220dpi.png",
+    "anchor": "Figure 5A and 5B (printed page 13)",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    },
+    "contradicts": "entries[13]",
+    "contradicts_needle": "statistically insignificant, increase in radiolabeled GABA uptake"
+   },
+   {
+    "proposition": "Supplementary Figure S1 as drawn (the figure the text cites for the 1.4-fold rise): mature band, each condition normalised to its own untreated control; wild type with trichostatin A about 1.2 (points about 0.92, 1.1, 1.6), R44Q with trichostatin A about 1.4 (points about 0.95, 1.6, 1.7); no star; the legend states no significant change among the conditions. The 1.4 is the mean of three points one of which is below 1 and is not a significant change by the authors' own supplement.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure S1 (Image1.tif)",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID41378214_r2/Image1.tif",
+    "anchor": "Supplementary Figure S1 (Image1.tif)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    },
+    "qualifies": "entries[13]",
+    "qualifies_needle": "approximately 1.4-fold rise in the surface expression"
+   },
+   {
+    "proposition": "Summary text: proteasome inhibitors MG-132 and bortezomib moderately rescue the functional deficits of R44Q and trichostatin A enhances both in-vivo expression and in-vitro activity.",
+    "snippet": "Pharmacological interventions with proteasome inhibitors MG-132 and bortezomib moderately rescue the functional deficits of R44Q, while treatment with trichostatin A, enhances both in vivo expression and in vitro activity of this variant.",
+    "anchor": "Summary and concluding remarks",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41378214_Shah2025b_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Figures 4B, 4D and 5B as drawn: the R44Q uptake reached is about 6 (MG-132), 2.7 (bortezomib) and 5 (trichostatin A) percent of the untreated wild-type uptake, from about zero, and the same treatments raise wild-type uptake about two- to three-fold. 'Moderately rescue' is a word for a recovery to a few percent of wild-type uptake.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4B, 4D and Figure 5B (pages 12 and 13)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41378214_r2/pages_220dpi/PMC12685850.1_p12_220dpi.png",
+    "anchor": "Figure 4B, 4D and Figure 5B (pages 12 and 13)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    },
+    "qualifies": "entries[16]",
+    "qualifies_needle": "moderately rescue the functional deficits of R44Q"
+   },
+   {
+    "proposition": "Text: co-expression of wild type with R44Q, R44P or R44W at a 1:1 plasmid ratio showed no reduction in surface expression or trafficking of wild type, and R44Q did not impair wild-type uptake when co-expressed.",
+    "snippet": "Co-transfection of WT with R44Q, R44P, or R44W (1:1 plasmid ratio) showed no reduction in surface expression or trafficking of WT compared to control (Figures 3A,B). Radiolabeled GABA uptake assays further demonstrated that R44Q did not impair WT transport activity when co-expressed (Figure 3C).",
+    "anchor": "Results, second subsection, dominant-negative paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41378214_Shah2025b_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Figure 3B and 3C as drawn: mature mCherry-wild-type band with each variant about 0.9 against 1.0 (three points; the three-star bars are the lanes without mCherry-wild-type); uptake about 3.7 for wild type plus empty vector, about 6.2 for wild type plus wild type (one star), about 0 for R44Q plus YFP (two stars) and about 3.1 for wild type plus R44Q, which also carries two stars; the legend gives the star meanings but not the comparator. The uptake scale here (a few units) is about one fifteenth of Figure 1A's wild-type bar, so the co-expression experiment runs at a much lower expression level.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3A-C (printed page 10)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41378214_r2/pages_220dpi/PMC12685850.1_p10_220dpi.png",
+    "anchor": "Figure 3A-C (printed page 10)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    },
+    "qualifies": "entries[18]",
+    "qualifies_needle": "R44Q did not impair WT transport activity when co-expressed"
+   },
+   {
+    "proposition": "Text: all three SVM-based tools predict that the mutation at position 44 reduces protein stability, as shown in Table 3.",
+    "snippet": "As shown in Table 3, all three SVM algorithms predict that the mutation at position 44 leads to a reduction in protein stability.",
+    "anchor": "Results, second subsection, structure paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41378214_Shah2025b_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "in silico stability predictors (MUpro, I-Mutant 2.0, INPS-MD) on human GAT-1; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44S, R44W, R44P",
+     "endpoint": "predicted change in folding free energy"
+    }
+   },
+   {
+    "proposition": "Table 3, R44W row: the MUpro value -1.3183621 is labelled Decrease and the INPS-MD value -0.37 is labelled neutral.",
+    "snippet": "R44W−1.3183621Decrease−0.37 (neutral)",
+    "anchor": "Table 3, R44W row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41378214_Shah2025b_PMC_r2.xml",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "in silico stability predictors (MUpro, I-Mutant 2.0, INPS-MD) on human GAT-1; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44S, R44W, R44P",
+     "endpoint": "predicted change in folding free energy"
+    },
+    "contradicts": "entries[20]",
+    "contradicts_needle": "all three SVM algorithms predict that the mutation at position 44 leads to a reduction"
+   },
+   {
+    "proposition": "Text: R44Q expression was markedly reduced in the astrocytic antennal-lobe neuropil of the fly compared with wild-type hGAT-1.",
+    "snippet": "WT hGAT-1 exhibited broad expression closely matching the membrane marker pattern (Figure 6D), while R44Q expression was markedly reduced in the AL (Figures 6E, 7A).",
+    "anchor": "Results, fruit-fly subsection, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41378214_Shah2025b_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Figure 6D and 6E as drawn: one confocal plane per genotype; wild type shows a broad punctate green signal, R44Q almost none; no quantification, number of animals or intensity measure on the panel. The comparison is qualitative.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6D-E (printed page 14)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41378214_r2/pages_220dpi/PMC12685850.1_p14_220dpi.png",
+    "anchor": "Figure 6D-E (printed page 14)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Text: about 30 percent of R44Q flies showed seizure-like activity by 2 minutes, about 43 percent by 5 minutes, against about 10 percent of wild-type flies; control flies exhibited no seizure susceptibility.",
+    "snippet": "approximately 30% of flies showing susceptibility by 2 min (Figure 6K), increasing to ∼43% by the end of the 5-min exposure. In contrast, only ∼10% of WT flies showed mild seizure-like activity, while w1118 control flies exhibited no seizure susceptibility under parallel conditions.",
+    "anchor": "Results, fruit-fly subsection, seizure paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41378214_Shah2025b_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Figure 6J and 6K as drawn: R44Q about 24 percent at 1 minute, about 32 at 2, about 30 at 3 and about 43 at 5 minutes; wild-type hGAT-1 about 5 to 8 percent throughout; the w1118 line zero; in 6K about eight to ten points per bar and the lettered comparison marks. The wild-type fraction reads about 5 to 8, not about 10.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6J-K (printed page 14)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41378214_r2/pages_220dpi/PMC12685850.1_p14_220dpi.png",
+    "anchor": "Figure 6J-K (printed page 14)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    },
+    "qualifies": "entries[24]",
+    "qualifies_needle": "only ∼10% of WT flies showed mild seizure-like activity"
+   },
+   {
+    "proposition": "Text: knockdown of the proteasomal subunits RPT1 or RPT6 significantly enhanced astrocytic expression of R44Q, supporting a role of proteasomal pathways.",
+    "snippet": "RNAi-mediated knockdown of RPT1 or RPT6 significantly enhanced astrocytic expression of the R44Q variant, supporting the role of proteasomal pathways in modulating its stability and accumulation.",
+    "anchor": "Results, fruit-fly subsection, rescue paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41378214_Shah2025b_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Figure 7F and 7G as drawn: one confocal plane each for RPT1 and RPT6 knockdown, with a visible green signal at the astrocytic membrane; no quantification, no test and no non-targeting-RNAi image appear on the page, so 'significantly' is not carried by the panel; the control panel 7A shows almost no signal.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7A, 7F and 7G (printed page 16)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41378214_r2/pages_220dpi/PMC12685850.1_p16_220dpi.png",
+    "anchor": "Figure 7A, 7F and 7G (printed page 16)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    },
+    "qualifies": "entries[26]",
+    "qualifies_needle": "significantly enhanced astrocytic expression of the R44Q variant"
+   },
+   {
+    "proposition": "Text: tiagabine, 4-PBA and liothyronine considerably increased R44Q expression in the antennal lobe, and trichostatin A did too.",
+    "snippet": "As shown in Figures 7A–D, all three compounds considerably increased R44Q expression in the antennal lobe.",
+    "anchor": "Results, fruit-fly subsection, rescue paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41378214_Shah2025b_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Figure 7B, 7C and 7D as drawn: one confocal plane each; tiagabine, 4-PBA and liothyronine panels show more green signal than the control panel 7A, with patchy distribution; no quantification, no per-animal number and no treated wild-type-fly image on the page.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7A-E (printed page 16)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41378214_r2/pages_220dpi/PMC12685850.1_p16_220dpi.png",
+    "anchor": "Figure 7A-E (printed page 16)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    },
+    "qualifies": "entries[28]",
+    "qualifies_needle": "all three compounds considerably increased R44Q expression"
+   },
+   {
+    "proposition": "Text: 4-PBA significantly reduced seizure susceptibility of R44Q flies, whereas tiagabine had no evident effect.",
+    "snippet": "4-PBA treatment significantly reduced seizure susceptibility in R44Q flies, whereas tiagabine had no evident effect.",
+    "anchor": "Results, fruit-fly subsection, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41378214_Shah2025b_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Figure 7H as drawn: untreated R44Q about 36 percent of flies with seizure-like episodes (about five points), 4-PBA about 16 (one star; p = 0.0172 in the legend), tiagabine about 34 (points from about 20 to 50). No PBA-treated wild-type or w1118 flies are on the panel, so a non-specific effect of the compound on heat-induced seizure-like behaviour is not excluded (INFERENZA, reader's).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7H (printed page 16)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41378214_r2/pages_220dpi/PMC12685850.1_p16_220dpi.png",
+    "anchor": "Figure 7H (printed page 16)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Authors' own acknowledgement: the reasons for the discrepancy between the effects of 4-PBA observed in vitro and in vivo remain unclear.",
+    "snippet": "The precise reasons for the discrepancy between the effects of 4-PBA observed in vitro and in vivo remain unclear",
+    "anchor": "Discussion, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41378214_Shah2025b_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Limits stated by the authors: the transgenic flies expressing R44Q in astrocytes also express endogenous astrocytic GAT, which at least partially mimics the heterozygous clinical setting.",
+    "snippet": "Transgenic flies expressing astrocytic R44Q used in these studies also expressed endogenous astrocytic GAT, which - at least partially - mimics the heterozygous clinical setting.",
+    "anchor": "Discussion, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41378214_Shah2025b_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "A negative reported with no data: blocking detyrosination with parthenolide failed to rescue R44Q.",
+    "snippet": "Blocking detyrosination with parthenolide failed to rescue the R44Q mutant (data not shown)",
+    "anchor": "Discussion, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41378214_Shah2025b_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Statistics as declared: one-way ANOVA with Tukey post hoc tests or paired t-tests as indicated, from at least three independent experiments, each condition in triplicate in the functional assays.",
+    "snippet": "The results were obtained from at least three independent experiments, with each data set or condition performed in triplicate in all functional assays.",
+    "anchor": "Materials and methods, statistical data analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41378214_Shah2025b_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    }
+   },
+   {
+    "proposition": "Summary text: computational stability predictions, supported by thermal shift assays, reveal that these mutations significantly destabilize the protein structure.",
+    "snippet": "Computational stability predictions, supported by thermal shift assays, reveal that these mutations significantly destabilize the protein structure.",
+    "anchor": "Summary and concluding remarks",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41378214_Shah2025b_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells expressing YFP-tagged human GAT-1 (SLC6A1) R44 variants, and Drosophila with human GAT-1 R44Q expressed in astrocytes or GABAergic neurons; NOT a WWOX system",
+     "genotype": "SLC6A1 R44Q, R44P, R44W (R44Q prioritised); wild-type hGAT-1",
+     "endpoint": "[3H]GABA uptake, Endo H-resistant (mature) band intensity, in-vivo expression by confocal imaging, heat-induced seizure-like episodes"
+    }
+   }
+  ]
+ }
+}

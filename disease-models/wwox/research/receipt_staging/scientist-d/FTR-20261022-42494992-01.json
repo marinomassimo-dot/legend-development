@@ -1,0 +1,43 @@
+{
+  "record_kind": "contemporaneous_receipt",
+  "event_id": "FTR-20261022-42494992-01",
+  "study_id": {
+    "pmid": "42494992",
+    "doi": "10.1016/j.nsa.2026.107021"
+  },
+  "analysis_at": "2026-10-22T04:18:00Z",
+  "analysis_time_precision": "minute",
+  "workflow": "scientist-d (stated assumption of the Orchestrator), task R4c-D-20261022, adjacent R4 precedent (new, not in the registry); context_policy QUESTION_DRIVEN (held: the group's questions on instruments' responsiveness, external controls and symptomatic versus modifying separation). Route: Europe PMC JATS for PMC13393641 (CC BY) as the text surface; figures and the three supplementary files from the Europe PMC supplementaryFiles container; Supplementary Tables 1 and 2 read in full, the Supplementary Figure 1 poster read in its first part only; all figures opened as images (the images attached to Figures 2 and 3 are swapped relative to their legends). Every statement is class level and is not WWOX evidence.",
+  "evidence_depth": "partial_fulltext_read",
+  "source_locator": "files/fulltext/PMID42494992_Acosta2026_PMC13393641.xml",
+  "source_fingerprint": "33d165e7e2a819077d02e51fa9984c59611f0940f03a4f7e6c9cc7f2cfa4cb3b",
+  "source_kind": "fulltext_local",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "read",
+    "methods": "not_present",
+    "results": "not_present",
+    "figures": "read",
+    "tables": "read",
+    "discussion": "read",
+    "limitations": "read",
+    "supplementary": "captions_only",
+    "references": "read"
+  },
+  "outputs": [
+    "disease-models/wwox/research/deepdive_manifests/PMID42494992.json",
+    "disease-models/wwox/research/repurposing_r4c_scientist-d_20261022.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261022-SCIENTISTD-R4C-01.md"
+  ],
+  "evidence_basis": [
+    "coverage_map",
+    "manifest",
+    "Figures 1-3 and graphical abstract opened as images",
+    "Tables 1-4 read",
+    "Supplementary Tables 1-2 read; poster read in part (supplementary declared captions_only)",
+    "SUBSTITUTE: no WWOX content (0 mentions)"
+  ],
+  "prior_receipt": null,
+  "reread_reason": "first_read",
+  "event_at": "2026-10-22T04:18:00Z"
+}

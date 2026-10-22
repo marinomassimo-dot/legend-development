@@ -1,0 +1,739 @@
+{
+ "schema_version": 2,
+ "pmid": "42542632",
+ "doi": "10.1016/j.eclinm.2026.104092",
+ "receipt": "FTR-20261022-42542632-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/repurposing_r4c_scientist-d_20261022.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261022-SCIENTISTD-R4C-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was named from wave-1 reading debts and deduplicated by the per-paper M0 packet and the receipt status check run in this session."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in the commit candidate and the analysis note; the discovery ledger is a shared single-writer file appended by the Orchestrator at integration."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A Cologne paediatric neurology and rare-disease group with a Geneva cell-physiology collaborator (from the affiliations) that also supplied the preclinical and single-patient work the trial builds on; investigator-initiated, funded by the parents' association. Pilot interventional trial, not a WWOX group; used as a PRECEDENT for design (primary safety and feasibility, exploratory efficacy, external cerebral palsy comparators). The appendix tables are weighed above the abstract and Results wording where they differ."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND zinc",
+    "count": 13,
+    "source": "PubMed ESearch rettype=count 2026-10-22"
+   },
+   {
+    "query": "GNAO1 AND zinc",
+    "count": 7,
+    "source": "PubMed ESearch rettype=count 2026-10-22"
+   }
+  ],
+  "note": "PubMed counts, dated."
+ },
+ "multihop": {
+  "references_enumerated": 21,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "21 references enumerated from the JATS; none is WWOX-related (0 occurrences of WWOX counted in the article and the appendix)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42542632 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the analysis note; SUBSTITUTE rows carry no WWOX record by construction."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-22 via PubMed efetch for PMID 42542632: publication types ['Journal Article']; CommentsCorrections RefTypes in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 21,
+   "references_screened": 18,
+   "references_with_doi": 18,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 1,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42542632_Thiel2026_PMC13427569.xml",
+   "sha256": "633d5b68e0940ccb6b3a8fbbe6e56d51c3f0098332218d41da7ad6235ab3f982",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC13427569 (CC BY 4.0): original pilot trial: Summary, Methods, two tables, three figures, 21 references. Every text locator is matched against this surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13427569/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "633d5b68e0940ccb6b3a8fbbe6e56d51c3f0098332218d41da7ad6235ab3f982"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42542632_r1/mmc1.pdf",
+   "sha256": "91463cff387463f8cbb7180c1c649ba14d6438e679e7a6891fb03987f3a11005",
+   "kind": "supplement_binary",
+   "note": "Supplementary Appendix (28 pages: methods, Tables S1-S8, Figures S1-S3, references, the statistical analysis plan) from the Europe PMC supplementaryFiles container of PMC13427569.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13427569/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "91463cff387463f8cbb7180c1c649ba14d6438e679e7a6891fb03987f3a11005"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42542632_r1/mmc1.txt",
+   "sha256": "a1df4e57f247d893617a58ad41e3d9d344272c3869e88189286741c76c8e8124",
+   "kind": "supplement_text",
+   "note": "Text layer of the Supplementary Appendix by pdftotext -layout.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftotext",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42542632_r1/mmc1.pdf",
+    "extractor": {
+     "name": "pdftotext",
+     "version": "24.02.0",
+     "call": "pdftotext -layout mmc1.pdf - | tr '\\f' '\\n' > mmc1.txt (page-separator form feeds replaced by newlines; no other change)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "a1df4e57f247d893617a58ad41e3d9d344272c3869e88189286741c76c8e8124"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42542632_r1/mmc3.pdf",
+   "sha256": "da7c330684639d6b4ecc5ca3bd5c5d44212f9c81138a56dd6bab66f7dbc5a2be",
+   "kind": "supplement_binary",
+   "note": "Trial protocol version 1.2 of 24 March 2025 (58 pages) from the same container; read in its synopsis, endpoints and statistical sections only.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13427569/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "da7c330684639d6b4ecc5ca3bd5c5d44212f9c81138a56dd6bab66f7dbc5a2be"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42542632_r1/mmc3.txt",
+   "sha256": "3beaf60e30d5faf990f32d5a05d03d8403aa56c44a8cdeed955886f0134146a0",
+   "kind": "supplement_text",
+   "note": "Text layer of the protocol by pdftotext -layout.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftotext",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42542632_r1/mmc3.pdf",
+    "extractor": {
+     "name": "pdftotext",
+     "version": "24.02.0",
+     "call": "pdftotext -layout mmc3.pdf - | tr '\\f' '\\n' > mmc3.txt (page-separator form feeds replaced by newlines; no other change)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "3beaf60e30d5faf990f32d5a05d03d8403aa56c44a8cdeed955886f0134146a0"
+   }
+  },
+  {
+   "path": "files/figures/PMID42542632/gr1.jpg",
+   "sha256": "20746e82001c6567437e809feafa9591fa0e97c3ad5660fb780c72ae1cda2009",
+   "kind": "figure",
+   "note": "Figure 1 JPEG (participant flowchart) from the same container, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13427569/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "20746e82001c6567437e809feafa9591fa0e97c3ad5660fb780c72ae1cda2009"
+   }
+  },
+  {
+   "path": "files/figures/PMID42542632/gr2.jpg",
+   "sha256": "39ea722faef72926f44333e40f209737202997109d505be5337d0fecf2db55d0",
+   "kind": "figure",
+   "note": "Figure 2 JPEG (secondary outcome box plots A-F) from the same container, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13427569/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "39ea722faef72926f44333e40f209737202997109d505be5337d0fecf2db55d0"
+   }
+  },
+  {
+   "path": "files/figures/PMID42542632/gr3.jpg",
+   "sha256": "5dd34c13ccdbcf78aaea4db9cfdeb7dbc55d8480244c4ec81f6f7f4a705f9721",
+   "kind": "figure",
+   "note": "Figure 3 JPEG (GMFM-66 trajectories against reference centiles, and effect sizes) from the same container, opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13427569/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": false,
+    "result_sha256": "5dd34c13ccdbcf78aaea4db9cfdeb7dbc55d8480244c4ec81f6f7f4a705f9721"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID42542632/mmc1_p-14.png",
+   "sha256": "a02fc938314a68b8c58c4216fc900e14e957bfdd47dfa769f57225ab2f315e3c",
+   "kind": "figure",
+   "note": "Appendix page 14 (Figure S1, individual trajectories) rendered at 100 dpi, opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42542632_r1/mmc1.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 100 -f 14 -l 16 -png mmc1.pdf mmc1_p (page 14)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "a02fc938314a68b8c58c4216fc900e14e957bfdd47dfa769f57225ab2f315e3c"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID42542632/mmc1_p-16.png",
+   "sha256": "1377ecba75b5a17ec7ea958f0aac48cf03e55d4575f8e6f9d62bc8f8886a09fe",
+   "kind": "figure",
+   "note": "Appendix page 16 (Figure S3, zinc effects on five variants) rendered at 100 dpi, opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42542632_r1/mmc1.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 100 -f 14 -l 16 -png mmc1.pdf mmc1_p (page 16)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "1377ecba75b5a17ec7ea958f0aac48cf03e55d4575f8e6f9d62bc8f8886a09fe"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID42542632/mmc1_p15crop-15.png",
+   "sha256": "c9f9aaedeadd77c316495f8679ccbd7092a321c782192c1a9cd5a9234fcba177",
+   "kind": "figure",
+   "note": "Appendix page 15 (Figure S2, laboratory categories) upper-left region rendered at 300 dpi (crop 1300 x 1100 at offset 600, 400), opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID42542632_r1/mmc1.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 300 -f 15 -l 15 -x 600 -y 400 -W 1300 -H 1100 -png mmc1.pdf mmc1_p15crop"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "c9f9aaedeadd77c316495f8679ccbd7092a321c782192c1a9cd5a9234fcba177"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE (GNAO1 repurposed zinc pilot trial; precedent for design, endpoints and external controls). All statements are about GNAO1-related disorders. The exploratory secondary outcomes carry nominal p values not adjusted for multiplicity.",
+    "snippet": "For exploratory secondary outcomes, p values are nominal and were not adjusted for multiplicity.",
+    "anchor": "Methods, Statistical analysis, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42542632_Thiel2026_PMC13427569.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "There was no randomisation, no placebo and no masking of participants, caregivers, treating clinicians or study personnel.",
+    "snippet": "No randomisation was performed because ZINCGNAO1 was a single-arm, open-label pilot trial. Participants, caregivers, treating clinicians, and study personnel were not masked to treatment allocation or study visit. No placebo or intervention concealment was used.",
+    "anchor": "Methods, Randomisation and masking",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42542632_Thiel2026_PMC13427569.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "The BFMDRS disability score was assessed by an unblinded rater, according to the Figure 2 legend.",
+    "snippet": "(D) Burke–Fahn–Marsden Dystonia Rating Scale (BFMDRS) disability score, assessed by an unblinded rater.",
+    "anchor": "Figure 2 legend, panel D",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42542632_Thiel2026_PMC13427569.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "The blinded rater's movement score (BFMDRS-M) showed no clear change over six months.",
+    "snippet": "The mean BFMDRS-M evaluated by a blinded rater did not show clear change over time",
+    "anchor": "Results, paragraph 11",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42542632_Thiel2026_PMC13427569.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "The Results give GMFM-66 means at baseline, 3 months and 6 months (33.1, 35.0, 37.8) without stating how many patients contribute at each time.",
+    "snippet": "Mean GMFM-66 scores increased over the study period, from baseline (mean 33.1 [SD 12.8]) to three months (mean 35.0 [SD 13.8]) and 6 months (mean 37.8 [SD 12.8]).",
+    "anchor": "Results, paragraph 9",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42542632_Thiel2026_PMC13427569.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "Appendix Table S2 gives the same GMFM-66 means with a paired six-month change of 2.3 points (95% CI 0.8 to 3.8; P 0.006), smaller than the 4.7-point difference of the printed means, with a Wilcoxon sensitivity P of 0.018.",
+    "snippet": "33·1 (12·8), 35·0 (13·8), 37·8 (12·8), 1·3 (-0·7 to 3·4), 0·436 0·123 2·3 (0·8 to 3·8), 1·123 (0·302 to 0·018",
+    "anchor": "Appendix Table S2, GMFM-66 row",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID42542632_r1/mmc1.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "Appendix Table S2 shows the GMFM-66 sample sizes behind those means: 12 at baseline, 11 at day 90, 10 at day 180.",
+    "snippet": "n=12 n=11 n=10 p=0·180 (-0·194 to 1·047) p=0·006",
+    "anchor": "Appendix Table S2, GMFM-66 row, second line",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID42542632_r1/mmc1.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "The BFMDRS-Disability change from 25.5 to 23.5 is also a difference of means over 12 and 11 patients; Table S2 gives the paired change as -1.6 (interval -2.6 to -0.6), Wilcoxon sensitivity P 0.017.",
+    "snippet": "25·5 (2·5), 24·2 (2·6), 23·5 (2·8), -1·0 (-1·9 to 0·0), -0·674 0·040 -1·6 (-2·6 to -0·6), -1·090 (-1·829 to - 0·017",
+    "anchor": "Appendix Table S2, BFMDRS-Disability row",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID42542632_r1/mmc1.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "The authors call the cerebral palsy comparator biologically non-equivalent to GNAO1-related disorders.",
+    "snippet": "While CP is biologically non-equivalent to GNAO1-RD, it provided a pragmatic external context for interpreting the results",
+    "anchor": "Discussion, limitations, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42542632_Thiel2026_PMC13427569.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "The propensity-matched comparison reports a GMFM-66 change of 2.21 (SD 2.17) in treated against 0.43 (SD 2.06) in matched controls, nominal P 0.040.",
+    "snippet": "In an additional exploratory propensity score–matched comparison with individuals with cerebral palsy, participants receiving zinc had a larger increase in GMFM-66 scores than matched controls (mean change 2.21 [SD 2.17] vs 0.43 [SD 2.06]; nominal p = 0.040)",
+    "anchor": "Results, paragraph 12",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42542632_Thiel2026_PMC13427569.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "The matched controls come from the follow-up phase of a neuromuscular rehabilitation programme that combined intensive goal-directed training with home-based whole-body vibration, not from untreated patients.",
+    "snippet": "a comparison cohort was drawn from the follow-up phase of the “On your feet” neuromuscular rehabilitation program8. This program combined intensive, goal-directed training with home-based whole-body vibration therapy over 6 months",
+    "anchor": "Appendix, Further statistical methods, propensity score",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID42542632_r1/mmc1.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "The appendix propensity analysis uses 10 treated participants and a control pool of 137.",
+    "snippet": "Given the limited number of treated participants (n=10) and the large control pool (n=137)",
+    "anchor": "Appendix, Further statistical methods, propensity score",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID42542632_r1/mmc1.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "The main Methods state that both post-hoc comparisons were performed in the age-restricted comparative subset (participants aged 2 to 18 years with complete baseline and 6-month scores).",
+    "snippet": "two post-hoc exploratory analyses were performed in a GMFM-66 comparative subset, defined as participants aged 2–18 years with complete baseline and 6-month GMFM-66 assessments.",
+    "anchor": "Methods, Statistical analysis, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42542632_Thiel2026_PMC13427569.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "A longitudinal GNAO1 study cited in the Discussion found no significant change over time in GMFM-88 or in the Vineland motor skills domain.",
+    "snippet": "found no statistically significant longitudinal change in gross motor function measured with GMFM-88, nor in the motor skills domain of the Vineland Adaptive Behaviour Scales.",
+    "anchor": "Discussion, paragraph 7",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42542632_Thiel2026_PMC13427569.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "One participant whose variant was zinc-responsive in vitro (P11) showed no obvious clinical improvement.",
+    "snippet": "One participant with in vitro zinc responsiveness (P11) did not show obvious clinical improvement and discontinued zinc after trial completion.",
+    "anchor": "Results, paragraph 17",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42542632_Thiel2026_PMC13427569.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "Every participant's variant showed in-vitro zinc responsiveness (class II or III), so no non-responsive class was enrolled and the assay's predictive value could not be tested here (inference).",
+    "snippet": "All genetic variants of the participants in this trial (Table 1) showed in vitro responsiveness to zinc in Group II",
+    "anchor": "Results, paragraph 19",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42542632_Thiel2026_PMC13427569.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "The in-vitro test was performed after inclusion, so it did not select participants.",
+    "snippet": "Post-inclusion, variant-specific Zn²⁺ sensitivity was evaluated in vitro using recombinant His₆-Gαo",
+    "anchor": "Appendix, In vitro assessment of GNAO1 variants",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID42542632_r1/mmc1.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "Seizure frequency is reported as unchanged, which the Discussion attributes to the small number of participants with active seizures and the short observation period.",
+    "snippet": "whereas seizure frequency remained unchanged. These observations may have been influenced by the small number of participants with active seizures and the short observation period",
+    "anchor": "Discussion, paragraph 11",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42542632_Thiel2026_PMC13427569.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "Four of the twelve exposed participants had a serious adverse event, and one participant had three, including asystole, judged unrelated to zinc.",
+    "snippet": "One patient (marked with ∗) had 3 serious adverse events which were not related to the intake of zinc. One was resolved (Asystole), the other two were resolved with sequelae.",
+    "anchor": "Table 2 footnote",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42542632_Thiel2026_PMC13427569.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "The paper states no copper or ferritin deficiency was observed in the safety set throughout the trial.",
+    "snippet": "No copper or ferritin deficiency was observed in the safety analysis set throughout the trial.",
+    "anchor": "Results, paragraph 14",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42542632_Thiel2026_PMC13427569.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "The paper says zinc levels normalised in all treated participants after three months, with supraphysiological concentrations in eight individuals at 6 months.",
+    "snippet": "Zinc levels normalised in all treated participants after three months, with supraphysiological concentrations observed in eight individuals at 6 months.",
+    "anchor": "Results, paragraph 14",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42542632_Thiel2026_PMC13427569.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "Central nervous system exposure of zinc was not measured; the authors list the extent to which serum zinc translates into CNS exposure as a question for future data.",
+    "snippet": "the extent to which increased serum zinc concentrations translate into meaningful CNS exposure.",
+    "anchor": "Discussion, paragraph 10",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42542632_Thiel2026_PMC13427569.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "The protocol lists an analysis of the stool microbiome among the secondary end points; the article text contains no occurrence of 'microbiome'.",
+    "snippet": "Analyze of the microbiome in stool",
+    "anchor": "Protocol synopsis, secondary end points",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID42542632_r1/mmc3.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "The protocol also lists a movement log for parents among the secondary end points; the article text contains no occurrence of 'movement log'.",
+    "snippet": "Level of dyskinesia measured by Abnormal involuntary movement scale (AIMS) and a Movement log for parents",
+    "anchor": "Protocol synopsis, secondary end points",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID42542632_r1/mmc3.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "The statistical analysis plan is marked version 1.0 final and dated 22 July 2025.",
+    "snippet": "SAP version:1.0, final Date: 2025-07-22",
+    "anchor": "Appendix, Statistical Analysis Plan, cover page",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID42542632_r1/mmc1.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "The protocol states all analyses are descriptive with no adjustment for multiple testing.",
+    "snippet": "All statistical analyses are considered descriptive and, thus, no adjustment will be made for multiple testing.",
+    "anchor": "Protocol, section 5.1",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID42542632_r1/mmc3.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "Appendix Table S8 gives GMFM-66 means by baseline severity: 35.5, 39.6 and 40.0 in the moderate group and 20.0, 19.6 and 22.0 in the severe group (the last with interval -28.8 to 72.8), and 53.4, 49.0 and 53.4 for the single mild patient.",
+    "snippet": "Mean (CI) 53·4 49·0 53·4 35·5 (26·7 to 44·2) 39·6 (29·0 to 50·1) 40·0 (30·3 to 49·8) 20·0 (6·9 to 33·1) 19·6 (5·3 to 33·9) 22·0 (-28·8 to 72·8)",
+    "anchor": "Appendix Table S8, GMFM-66 mean row",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID42542632_r1/mmc1.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 3 (image gr3): eight participants have a GMFM-66 trajectory placed against cerebral palsy reference centiles; the effect-size bars are above the 0.5 line for four (IDs 5, 6, 7, 13) and at or below zero for IDs 2, 4, 11 and 12; no interval is drawn.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3B bars for participants 2, 4, 5, 6, 7, 11, 12, 13; bars for 5, 6, 7 and 13 rise above the dashed 0.5 line, bars for 4 and 11 are below zero, bars for 2 and 12 are near zero.",
+    "anchor": "Figure 3, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42542632/gr3.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 1 (image gr1): 13 enrolled, 1 never treated (refused intake), 12 started treatment, 1 stopped for a non-treatment-related serious adverse event, 11 at day 90 and day 180; analysis sets of 13, 12 and 12 and an exploratory GMFM-66 subset of 8.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 boxes read 'Enrolled (n=13)', 'Start of treatment (n=12)', 'Follow up visit 1 (n = 11)', 'Follow up visit 2 (n = 11)', 'Exploratory GMFM-66 comparative subset (n=8)'.",
+    "anchor": "Figure 1, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42542632/gr1.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 2 (image gr2): box plots at day 0 and day 180 for COPM performance and satisfaction (medians rising), and at days 0, 90 and 180 for BFMDRS blinded movement (near flat), BFMDRS disability (small fall), CPCHILD and AIMS (no clear change); the COPM boxes carry no day-90 point.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2 panels A-F: COPM Average Performance and Satisfaction Score at Day 0 and Day 180 only; BFMDRS Blinded Rating Score, BFMDRS Disability Score, CPCHILD Standard Survey Score and AIMS Score at Day 0, 90 and 180.",
+    "anchor": "Figure 2, read as an image",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42542632/gr2.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Appendix Figure S2 zinc and ferritin panels (300 dpi crop): zinc categories read 8 low and 4 normal at day 0 (12 patients), 3 normal and 8 high at day 90 (11), 2 normal and 9 high at day 180 (11); ferritin reads 11 normal and 1 high at day 0, 1 low, 9 normal and 1 high at day 90, and 10 normal at day 180.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Appendix Figure S2: Zinc (mg/l) bars Day 0: 8 and 4; Day 90: 3 and 8; Day 180: 2 and 9; Ferritin (µg/l) bars Day 90: 1, 9, 1.",
+    "anchor": "Appendix Figure S2, read as an image",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID42542632/mmc1_p15crop-15.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Appendix Figure S3 (page 16): for R209L, I55T, I56S, S229R and F288S the GTP-binding and GTP-hydrolysis traces are drawn at 0, 25, 50 and 100 micromolar zinc; in the I56S hydrolysis panel the four traces overlap, and in the four class III variants the binding signal falls with zinc, with no wild-type reference trace shown, so the direction of the described restoration cannot be read from the figure.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Appendix Figure S3 panels for R209L, I55T, I56S, S229R, F288S with BODIPY-GTPγS rows decreasing in height with ZnCl2 and the I56S BODIPY-GTP trace overlapping at all concentrations.",
+    "anchor": "Appendix Figure S3, read as an image",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID42542632/mmc1_p-16.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Appendix Figure S1 (page 14): individual trajectories for COPM, BFMDRS, CPCHILD and AIMS; most COPM lines rise, most BFMDRS disability lines fall by a few points, and one CPCHILD line falls from about 55 to about 23.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Appendix Figure S1 panels A-F: lines per participant over Day 0, Day 90, Day 180; panel E has one line falling to about 23.",
+    "anchor": "Appendix Figure S1, read as an image",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID42542632/mmc1_p-14.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "13 patients (6 months to 25 years) with GNAO1-related disorders, single centre in Germany, open-label single-arm oral zinc acetate for 6 months; external comparators were cerebral palsy cohorts; NOT a WWOX system",
+     "genotype": "GNAO1 (11 different variants); no WWOX",
+     "endpoint": "safety and feasibility (primary); GMFM-66, BFMDRS, COPM, CPCHILD, AIMS (exploratory, nominal p)"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML for PMC13427569 returned HTTP 200 on 2026-10-22 (open access, CC BY 4.0); the supplementaryFiles zip carried the figures, the appendix, the protocol and the translated abstract.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

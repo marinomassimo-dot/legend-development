@@ -209,6 +209,89 @@
     "derived": false,
     "result_sha256": "db31eb3d272ba1cd54543ea203fd0968194b91d8b81da60bc71dc4560100f2df"
    }
+  },
+  {
+   "path": "files/supplement/PMID42587736_r2/cells-15-01327-s001.zip",
+   "sha256": "636404f27c471af833ce5d8a2a199d8860078cadce97f57a540caeb8f8844a00",
+   "kind": "supplement_binary",
+   "note": "Supplementary Materials container (Figures S1 and S2), a member of the Europe PMC supplementaryFiles bundle of PMC13465587 (14 members: six figure JPEG and GIF pairs, one inline image, this zip); the bundle holds no uncropped-gel file.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "result_sha256": "636404f27c471af833ce5d8a2a199d8860078cadce97f57a540caeb8f8844a00",
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13465587/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementaryFiles_bundle (member cells-15-01327-s001.zip extracted unchanged; digest reproduced against the copy already on disk)",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42587736_r3/cells-4310591-supplementary.pdf",
+   "sha256": "618678f95c4d72e1aaa536da6855142287f5c0226411c6d6540f38c04e38c883",
+   "kind": "supplement_binary",
+   "note": "The single member of the supplement zip, two pages, extracted with Python zipfile into a fresh directory.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42587736_r2/cells-15-01327-s001.zip",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "stdlib",
+     "call": "ZipFile.extractall of the single member cells-4310591-supplementary.pdf",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42587736_r3/cells-4310591-supplementary.txt",
+   "sha256": "efe429b8673a6760e6f749b229235dc58dc21d74363e21d4dac458f74eb94eab",
+   "kind": "supplement_text",
+   "note": "Text layer of the two supplement pages (captions only; the figures are raster images).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42587736_r3/cells-4310591-supplementary.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_text() default mode, pages concatenated",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42587736_r3/cells-4310591-supplementary_p1_300dpi.png",
+   "sha256": "5caead0a754a28d239ceb903cd6e1439240fb718c1e4f7fe922dbe08269d20a6",
+   "kind": "figure",
+   "note": "Supplement page 1 (Figure S1) rendered at 300 dpi; opened as an image; the two embedded rasters of the page were also opened at native size.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42587736_r3/cells-4310591-supplementary.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=300).save() page 1",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42587736_r3/cells-4310591-supplementary_p2_300dpi.png",
+   "sha256": "79cadb4e28ab3901d1a48830416450f6b5c3446841236608195fa018c957757b",
+   "kind": "figure",
+   "note": "Supplement page 2 (Figure S2) rendered at 300 dpi; opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42587736_r3/cells-4310591-supplementary.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=300).save() page 2",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
   }
  ],
  "verbatim_locators": {
@@ -216,7 +299,7 @@
   "source_fulltext_indexed": true,
   "source_fulltext_indexed_evidence": "PMC efetch JATS for PMC13465587 retrieved 2026-10-20, 152,182 bytes; the whole body is indexed locally for exact-text checks.",
   "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
-  "note": "SOURCE_FIRST. Class-level substitute (NOT WWOX evidence). Read: abstract, Results 3.10 and 3.11, Discussion, Table 2 narrative from the PDF; Results 3.1 to 3.9 (HEK293T structure and expression experiments) and Figures 1 to 4 and 6 were not read in detail, so results are captions_only and the depth is partial.",
+  "note": "SOURCE_FIRST. Class-level substitute (NOT WWOX evidence). Read: abstract, Results 3.10 and 3.11, Discussion, Table 2 narrative from the PDF; Results 3.1 to 3.9 (HEK293T structure and expression experiments) and Figures 1 to 4 and 6 were not read in detail, so results are captions_only and the depth is partial. 2026-10-22 resume (scientist-a, REPURP-10H-R1C-A-20261022): Supplementary Figures S1 and S2 opened as images at 300 dpi (and the page's embedded rasters at native size) and their legends read; entries 18 to 29 are the supplement locators. QUESTION_DRIVEN in effect: the reader held the P5 cards on the phenylbutyrate class and the earlier manifest's propositions.",
   "entries": [
    {
     "proposition": "PBA raised expression of both the wild-type and the variant alpha1 subunit, including in cells carrying no variant; the authors read that as beneficial in haploinsufficiency, which also means the effect is not specific to the mutant allele.",
@@ -456,6 +539,168 @@
      "system": "GABRA1 missense variants in HEK293T cells (homozygous and 1:1 with an HA-tagged wild-type allele, with beta2 or beta3 and gamma2S) and Gabra1 +/A322D knock-in mice, treated with the phenylbutyrate class; NOT a WWOX system",
      "genotype": "GABRA1 I148F, R214C, R214H, M263T, T292S, A322D, F325L; mouse A322D heterozygote",
      "endpoint": "total alpha1 by Western blot, surface alpha1 by flow cytometry, peak GABA current, regional brain alpha1"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure S1 reports gamma2 and beta2 partner-subunit Western-blot quantification in the HEK293T 'heterozygous' co-expression (variant or wild-type alpha1 with an HA-tagged wild-type alpha1, beta2 and gamma2S) with and without the phenylbutyrate class.",
+    "snippet": "Graphs display (A) γ2 and (B) β2 expression levels measured by Western blot in HEK293T cells co-expressing WT or variant α1, WT α1HA, β2, and γ2S partnering subunits at a 0.5:0.5:1:1 ratio.",
+    "anchor": "Supplementary Figure S1 legend",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID42587736_r3/cells-4310591-supplementary.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293T cells co-expressing GABRA1 variants or wild type with an HA-tagged wild-type allele and partnering subunits, treated with the phenylbutyrate class; NOT a WWOX system",
+     "genotype": "GABRA1 I148F, I148P, R214H, M263K, M263T, T292S, A322D, F325L, wild type",
+     "endpoint": "Western-blot intensity ratios to untreated wild type (gamma2, beta2, total alpha1, HA-tagged wild-type alpha1)"
+    }
+   },
+   {
+    "proposition": "Text: in the gamma2S experiment I148F showed a moderate 16.7 percent increase with treatment, marked with one asterisk (p < 0.05).",
+    "snippet": "I148F showed a moderate 16.7% increase (* p < 0.05)",
+    "anchor": "Results 3.7, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42587736_Song2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293T cells co-expressing GABRA1 variants or wild type with an HA-tagged wild-type allele and partnering subunits, treated with the phenylbutyrate class; NOT a WWOX system",
+     "genotype": "GABRA1 I148F, I148P, R214H, M263K, M263T, T292S, A322D, F325L, wild type",
+     "endpoint": "Western-blot intensity ratios to untreated wild type (gamma2, beta2, total alpha1, HA-tagged wild-type alpha1)"
+    }
+   },
+   {
+    "proposition": "Text: treatment raised gamma2S in the wild-type condition by 29.0 percent, marked four asterisks (p < 0.0001 versus untreated).",
+    "snippet": "PBA treatment increased γ2S expression in the WT condition by 29.0% (**** p < 0.0001 vs. untreated)",
+    "anchor": "Results 3.7, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42587736_Song2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293T cells co-expressing GABRA1 variants or wild type with an HA-tagged wild-type allele and partnering subunits, treated with the phenylbutyrate class; NOT a WWOX system",
+     "genotype": "GABRA1 I148F, I148P, R214H, M263K, M263T, T292S, A322D, F325L, wild type",
+     "endpoint": "Western-blot intensity ratios to untreated wild type (gamma2, beta2, total alpha1, HA-tagged wild-type alpha1)"
+    }
+   },
+   {
+    "proposition": "Figure S1A as drawn: every bar carries two plotted points (n = 2 per condition); the bracket for I148F untreated versus treated is labelled ns, not one asterisk as the running text states; the wild-type versus wild-type-plus-treatment bracket is labelled with a single hash, not four asterisks as the running text states; M263T untreated carries a single hash against untreated wild type, as the text says. Treated I148F is about 0.77 against about 0.66 untreated. DATO as a reading of the panel; the reason for the difference (a different test, an earlier version of the panel) is not stated by the source.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure S1A, panel as printed (page 1)",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID42587736_r3/cells-4310591-supplementary_p1_300dpi.png",
+    "anchor": "Supplementary Figure S1A, panel as printed (page 1)",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "HEK293T cells co-expressing GABRA1 variants or wild type with an HA-tagged wild-type allele and partnering subunits, treated with the phenylbutyrate class; NOT a WWOX system",
+     "genotype": "GABRA1 I148F, I148P, R214H, M263K, M263T, T292S, A322D, F325L, wild type",
+     "endpoint": "Western-blot intensity ratios to untreated wild type (gamma2, beta2, total alpha1, HA-tagged wild-type alpha1)"
+    },
+    "contradicts": "entries[19]",
+    "contradicts_needle": "I148F showed a moderate 16.7% increase (* p < 0.05)"
+   },
+   {
+    "proposition": "Figure S1A, second bracket: the wild-type versus wild-type-plus-treatment bracket is labelled with a single hash (the legend defines hash marks as versus untreated wild type, the text reports four asterisks).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure S1A, wild-type bracket (page 1)",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID42587736_r3/cells-4310591-supplementary_p1_300dpi.png",
+    "anchor": "Supplementary Figure S1A, wild-type bracket (page 1)",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "HEK293T cells co-expressing GABRA1 variants or wild type with an HA-tagged wild-type allele and partnering subunits, treated with the phenylbutyrate class; NOT a WWOX system",
+     "genotype": "GABRA1 I148F, I148P, R214H, M263K, M263T, T292S, A322D, F325L, wild type",
+     "endpoint": "Western-blot intensity ratios to untreated wild type (gamma2, beta2, total alpha1, HA-tagged wild-type alpha1)"
+    },
+    "contradicts": "entries[20]",
+    "contradicts_needle": "PBA treatment increased γ2S expression in the WT condition by 29.0%"
+   },
+   {
+    "proposition": "Text: beta2 expression showed no significant change for the variants, values typically slightly lower than wild type; treatment showed no significant change across the groups.",
+    "snippet": "Expression of β2 showed no significant changes for the variants, though the values across the variants were typically slightly lower than for WT",
+    "anchor": "Results 3.7, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42587736_Song2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293T cells co-expressing GABRA1 variants or wild type with an HA-tagged wild-type allele and partnering subunits, treated with the phenylbutyrate class; NOT a WWOX system",
+     "genotype": "GABRA1 I148F, I148P, R214H, M263K, M263T, T292S, A322D, F325L, wild type",
+     "endpoint": "Western-blot intensity ratios to untreated wild type (gamma2, beta2, total alpha1, HA-tagged wild-type alpha1)"
+    }
+   },
+   {
+    "proposition": "Figure S1B as drawn: every comparison is labelled ns; untreated variants sit at about 0.75 to 0.85 of wild type; treated bars are about 0.78 to 1.0; the wild-type treated bar is about 0.92; two to five points per bar; wide error bars. The panel agrees with the text.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure S1B (page 1)",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID42587736_r3/cells-4310591-supplementary_p1_300dpi.png",
+    "anchor": "Supplementary Figure S1B (page 1)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "HEK293T cells co-expressing GABRA1 variants or wild type with an HA-tagged wild-type allele and partnering subunits, treated with the phenylbutyrate class; NOT a WWOX system",
+     "genotype": "GABRA1 I148F, I148P, R214H, M263K, M263T, T292S, A322D, F325L, wild type",
+     "endpoint": "Western-blot intensity ratios to untreated wild type (gamma2, beta2, total alpha1, HA-tagged wild-type alpha1)"
+    }
+   },
+   {
+    "proposition": "Text: the M263K variant, evaluated with beta3 and gamma2, showed the strongest dominant-negative effect seen among the variants, a 66.2 percent reduction of the HA-tagged wild-type alpha1;",
+    "snippet": "M263K demonstrated the strongest dominant negative effect we observed among the variants, showing a strong decrease in WT α1HA expression (66.2% reduction vs. WT; ## p < 0.01)",
+    "anchor": "Results 3.9, paragraph 3 (continuing from Figure S2)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42587736_Song2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293T cells co-expressing GABRA1 variants or wild type with an HA-tagged wild-type allele and partnering subunits, treated with the phenylbutyrate class; NOT a WWOX system",
+     "genotype": "GABRA1 I148F, I148P, R214H, M263K, M263T, T292S, A322D, F325L, wild type",
+     "endpoint": "Western-blot intensity ratios to untreated wild type (gamma2, beta2, total alpha1, HA-tagged wild-type alpha1)"
+    }
+   },
+   {
+    "proposition": "Figure S2B and S2C as drawn (alpha1 / HA-wild-type alpha1 with beta3 and gamma2S, four points per bar): total alpha1 untreated is about 0.37 (I148P), 0.50 (R214H), 0.23 (M263K), 0.33 (M263T), 0.24 (A322D) of wild type and about 0.64, 0.80, 0.61, 0.63, 0.64 with treatment, all treated-versus-untreated brackets four asterisks, wild type treated about 1.3; the HA-tagged wild-type alpha1 is about 1.0 of wild type for I148P, R214H and M263T, about 1.05 for A322D (one hash) and about 0.34 for M263K (two hashes), and rises to about 1.05 to 1.25 with treatment in every condition including the wild-type one (about 1.2). The M263K reduction of about two thirds agrees with the text.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure S2B and S2C (page 2)",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID42587736_r3/cells-4310591-supplementary_p2_300dpi.png",
+    "anchor": "Supplementary Figure S2B and S2C (page 2)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "HEK293T cells co-expressing GABRA1 variants or wild type with an HA-tagged wild-type allele and partnering subunits, treated with the phenylbutyrate class; NOT a WWOX system",
+     "genotype": "GABRA1 I148F, I148P, R214H, M263K, M263T, T292S, A322D, F325L, wild type",
+     "endpoint": "Western-blot intensity ratios to untreated wild type (gamma2, beta2, total alpha1, HA-tagged wild-type alpha1)"
+    }
+   },
+   {
+    "proposition": "Text: the Methods say uncropped full-length Western gels were provided in the Supplementary Materials.",
+    "snippet": "Uncropped full-length gels for Western blots were provided in the Supplementary Materials.",
+    "anchor": "Methods, Western blotting (last sentence)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42587736_Song2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293T cells co-expressing GABRA1 variants or wild type with an HA-tagged wild-type allele and partnering subunits, treated with the phenylbutyrate class; NOT a WWOX system",
+     "genotype": "GABRA1 I148F, I148P, R214H, M263K, M263T, T292S, A322D, F325L, wild type",
+     "endpoint": "Western-blot intensity ratios to untreated wild type (gamma2, beta2, total alpha1, HA-tagged wild-type alpha1)"
+    }
+   },
+   {
+    "proposition": "The legend of Supplementary Figure S2 calls panel A a sample Western blot, shown for some of the subunit conditions, which bears on the Methods sentence that uncropped full-length gels were provided in the Supplementary Materials.",
+    "snippet": "Sample Western blot showing the expressed α1, α1HA, β3, and γ2S subunits for some of the subunit conditions.",
+    "anchor": "Supplementary Figure S2 legend, panel A",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID42587736_r3/cells-4310591-supplementary.txt",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "HEK293T cells co-expressing GABRA1 variants or wild type with an HA-tagged wild-type allele and partnering subunits, treated with the phenylbutyrate class; NOT a WWOX system",
+     "genotype": "GABRA1 I148F, I148P, R214H, M263K, M263T, T292S, A322D, F325L, wild type",
+     "endpoint": "Western-blot intensity ratios to untreated wild type (gamma2, beta2, total alpha1, HA-tagged wild-type alpha1)"
+    },
+    "qualifies": "entries[27]",
+    "qualifies_needle": "Uncropped full-length gels for Western blots were provided"
+   },
+   {
+    "proposition": "The supplement legend itself limits the beta3 data: only the R214H, M263T and A322D variants of the main dataset were tested, with I148P and M263K added.",
+    "snippet": "Note that only the R214H, M263T, and A322D variants out of the main dataset in this study were tested.",
+    "anchor": "Supplementary Figure S2 legend",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID42587736_r3/cells-4310591-supplementary.txt",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293T cells co-expressing GABRA1 variants or wild type with an HA-tagged wild-type allele and partnering subunits, treated with the phenylbutyrate class; NOT a WWOX system",
+     "genotype": "GABRA1 I148F, I148P, R214H, M263K, M263T, T292S, A322D, F325L, wild type",
+     "endpoint": "Western-blot intensity ratios to untreated wild type (gamma2, beta2, total alpha1, HA-tagged wild-type alpha1)"
     }
    }
   ]

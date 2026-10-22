@@ -1,0 +1,741 @@
+{
+ "schema_version": 2,
+ "pmid": "42569303",
+ "doi": "10.1080/27694127.2026.2712797",
+ "receipt": "FTR-20261022-42569303-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-a_r1c_20261022.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: PMC efetch XML, the PDF and the workbook were returned by pmc_bucket_fetch.py."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Primary-evidence read of a NOT WWOX EVIDENCE paper under the Scientist brief; the analysis note is the dossier."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No consolidated baseline claim is narrowed, reversed or removed; a blind audit of the text-versus-panel relations is declared OWED."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a candidate; the one chemical used (a glucosidase inhibitor) is a tool compound in cells."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 10,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed ESearch 2026-10-22: Molinari M[au] AND ERLAD 10; Molinari M[au] AND WWOX 0.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "The laboratory that defined the ERLAD pathways it applies here (alpha1-antitrypsin Z, pro-collagen); the neuroserpin result extends its own earlier clients, so it is one group's programme rather than an independent replication. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "neuroserpin AND ERLAD",
+    "count": 1,
+    "source": "PubMed ESearch count 2026-10-22"
+   },
+   {
+    "query": "neuroserpin AND WWOX",
+    "count": 0,
+    "source": "PubMed ESearch count 2026-10-22"
+   },
+   {
+    "query": "Molinari M[au] AND ERLAD",
+    "count": 10,
+    "source": "PubMed ESearch count 2026-10-22"
+   }
+  ],
+  "note": "WWOX does not occur in the article; counts are title/abstract-level and license 'no paper is indexed', never 'never measured' (D-37)."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 43,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS: 43; none WWOX-direct.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-direct reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --pmid 42569303 --hops 0 and paper_packet.py packet (before the read)",
+  "hits": 0,
+  "finding": "NO RECORD MATCHED before this reading (a statement about that query, not about what the laboratory knows)."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-22",
+  "route": "dependency_integrity.py screen --manifest-block; PubMed efetch CommentsCorrections",
+  "result": "PubMed efetch 2026-10-22: publication types [Journal Article]; no CommentsCorrections entry; dependency screen SCREENED_CLEAN.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 43,
+   "references_screened": 43,
+   "references_with_doi": 43,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 1,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42569303_Hoefner2026_PMC_r2.xml",
+   "sha256": "dc8822eebc5ec98bc797b35aedda7b8e342eb6ef06bb1ba4cfecf54172ea549c",
+   "kind": "article_text",
+   "note": "PMC efetch JATS for PMC13449852 (Autophagy Reports 2026, CC BY), retrieved with pmc_bucket_fetch.py.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC13449852&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "result_sha256": "dc8822eebc5ec98bc797b35aedda7b8e342eb6ef06bb1ba4cfecf54172ea549c"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42569303_r2/PMC13449852.1.pdf",
+   "sha256": "55d275d4ed158147ae1d76befe5f7e9e7b32b13e85d4e2ed3c30558f85daff8c",
+   "kind": "article_binary",
+   "note": "Article PDF from the PMC open-data bucket; the six figures are embedded as high-resolution rasters (about 2300 to 4800 pixels wide) and were extracted at native size.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13449852.1/PMC13449852.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "result_sha256": "55d275d4ed158147ae1d76befe5f7e9e7b32b13e85d4e2ed3c30558f85daff8c"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42569303_r2/KAUO_A_2712797_SM9501.xlsx",
+   "sha256": "b3662ef6cdf912e52ba845104a98119914dfa6b4e28b0d9947128010ff1990b6",
+   "kind": "supplement_binary",
+   "note": "Rawdata workbook: ten sheets of per-cell and per-replicate values for Figures 1 to 6, plus embedded uncropped blot images; sheets were read as tables and the per-cell counts and means were compared with the figures. The route URL is inferred from the bucket layout.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13449852.1/KAUO_A_2712797_SM9501.xlsx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3 (URL form inferred; file listed by pmc_bucket_fetch.py)",
+    "user_agent_policy": "none",
+    "result_sha256": "b3662ef6cdf912e52ba845104a98119914dfa6b4e28b0d9947128010ff1990b6"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42569303_r3/Rawdata_uncropped_blots_contact_sheet_1.png",
+   "sha256": "66e17e36fb63a5f62c324c857afc78504e022792a0c28b98a7b283c34362f176",
+   "kind": "figure",
+   "note": "Contact sheet of the workbook's embedded uncropped-blot images (montage, 500-pixel thumbnails), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42569303_r2/KAUO_A_2712797_SM9501.xlsx",
+    "extractor": {
+     "name": "python zipfile + ImageMagick montage",
+     "version": "stdlib",
+     "call": "ZipFile.read of xl/media/image*.tiff, then montage -tile 4x2 -geometry 500x500+4+4",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42569303_r3/Rawdata_uncropped_blots_contact_sheet_2.png",
+   "sha256": "8a66b31819da2ab9db0107ed330d73d2c5e8a3c9eef039ee52f9420714917b6e",
+   "kind": "figure",
+   "note": "Contact sheet of the workbook's embedded uncropped-blot images (montage, 500-pixel thumbnails), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42569303_r2/KAUO_A_2712797_SM9501.xlsx",
+    "extractor": {
+     "name": "python zipfile + ImageMagick montage",
+     "version": "stdlib",
+     "call": "ZipFile.read of xl/media/image*.tiff, then montage -tile 4x2 -geometry 500x500+4+4",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42569303_r3/Rawdata_uncropped_blots_contact_sheet_3.png",
+   "sha256": "3a511b95d995c186c7455c30cd2b4ba466b8e4fd83a42cecfb75ad99166b0fd4",
+   "kind": "figure",
+   "note": "Contact sheet of the workbook's embedded uncropped-blot images (montage, 500-pixel thumbnails), opened as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42569303_r2/KAUO_A_2712797_SM9501.xlsx",
+    "extractor": {
+     "name": "python zipfile + ImageMagick montage",
+     "version": "stdlib",
+     "call": "ZipFile.read of xl/media/image*.tiff, then montage -tile 4x2 -geometry 500x500+4+4",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID42569303_r2/native/PMC13449852.1_p3_Figure1_native.png",
+   "sha256": "2e131ca2f442d12a21ed7d2088524525432de6c974d008374a63d9213d121c19",
+   "kind": "figure",
+   "note": "Figure 1, the raster embedded on printed page 3 of the article PDF, extracted at native size (pixmap save) and opened downscaled.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42569303_r2/PMC13449852.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's largest image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID42569303_r2/native/PMC13449852.1_p5_Figure2_native.png",
+   "sha256": "a124986249f33a69b5aeb3e822a7fcb367a24f1af0587acbd0a27d0c2239d652",
+   "kind": "figure",
+   "note": "Figure 2, the raster embedded on printed page 5 of the article PDF, extracted at native size (pixmap save) and opened downscaled.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42569303_r2/PMC13449852.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's largest image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID42569303_r2/native/PMC13449852.1_p6_Figure3_native.png",
+   "sha256": "b977ae8556a0a76e97ad9ec3ba5292247713940e0b5ff00e4a73640c82b80efe",
+   "kind": "figure",
+   "note": "Figure 3, the raster embedded on printed page 6 of the article PDF, extracted at native size (pixmap save) and opened downscaled.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42569303_r2/PMC13449852.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's largest image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID42569303_r2/native/PMC13449852.1_p7_Figure4_native.png",
+   "sha256": "934c46b3f9861f6d8f9dc3d5a01b8dca09a4f5933fc9e7e14d4eb7be65c7a81d",
+   "kind": "figure",
+   "note": "Figure 4, the raster embedded on printed page 7 of the article PDF, extracted at native size (pixmap save) and opened downscaled.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42569303_r2/PMC13449852.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's largest image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID42569303_r2/native/PMC13449852.1_p8_Figure5_native.png",
+   "sha256": "82c3376beb194bd2de107d1b6a837d043c2326ab86de0058ab6f8a785f590dc7",
+   "kind": "figure",
+   "note": "Figure 5, the raster embedded on printed page 8 of the article PDF, extracted at native size (pixmap save) and opened downscaled.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42569303_r2/PMC13449852.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's largest image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID42569303_r2/native/PMC13449852.1_p10_Figure6_native.png",
+   "sha256": "c89630ad7312350df9706871b3eb87f7dbbdd3df323378be4338b46df71efc5c",
+   "kind": "figure",
+   "note": "Figure 6, the raster embedded on printed page 10 of the article PDF, extracted at native size (pixmap save) and opened downscaled.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42569303_r2/PMC13449852.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's largest image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch JATS for PMC13449852 retrieved 2026-10-22, 112,462 bytes; the whole body is indexed locally for exact-text checks.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "QUESTION_DRIVEN: the reader held the P5 cards on the compartment/route questions (proteasome versus lysosome) when opening the paper. Class-level substitute for a route-labelling design only; an ER-lumen glycoprotein is not a cytosolic enzyme, NOT WWOX EVIDENCE. Read: abstract, introduction, methods, results, discussion, all six figures (native rasters extracted from the PDF and opened downscaled; crops not needed), the workbook (ten sheets read as tables; per-cell counts agree with the legends; the 22 embedded uncropped-blot images were opened as contact-sheet thumbnails, not lane by lane).",
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE. Text: the Portland mutation substantially inhibited secretion of the ectopically expressed polypeptide.",
+    "snippet": "The mutation in NS_PL substantially inhibited the secretion of the ectopically expressed polypeptide (Figure 1B, upper panel, lanes 2 vs. 4, Figure 1C).",
+    "anchor": "Results, first subsection, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42569303_Hoefner2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    }
+   },
+   {
+    "proposition": "Figure 1C as drawn: secreted fraction normalised to wild type = 100; the Portland variant about 30 (three points, one star), about 27 with bafilomycin; the workbook sheet for Figure 1 lists the three values as about 40, 40 and 12 and the wild-type-with-bafilomycin values as about 115, 73 and 62.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1B-C (native raster, printed page 3)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42569303_r2/native/PMC13449852.1_p3_Figure1_native.png",
+    "anchor": "Figure 1B-C (native raster, printed page 3)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    }
+   },
+   {
+    "proposition": "Text: NS_PL shows a marked accumulation in the detergent-insoluble fraction.",
+    "snippet": "NS_PL shows a marked accumulation in the detergent-insoluble fraction (Figure 1B, third panel, lane 4, Figure 1E).",
+    "anchor": "Results, first subsection, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42569303_Hoefner2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    }
+   },
+   {
+    "proposition": "Figure 1E as drawn: the insoluble fraction is normalised to the Portland variant = 100 (not to wild type), so wild type reads about 53 and the Portland variant with bafilomycin about 127 (three points each, one star between wild type and the variant); Figure 1D: the soluble fraction is about 100 for wild type and about 120 for the variant with a spread from about 80 to about 200 (ns); Figure 1F: wild type runs as a monomer on the native gel and the variant as a high-molecular-weight smear.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1D-F (native raster, printed page 3)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42569303_r2/native/PMC13449852.1_p3_Figure1_native.png",
+    "anchor": "Figure 1D-F (native raster, printed page 3)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    }
+   },
+   {
+    "proposition": "Text: previous studies showed that clearance of this folding-defective polypeptide from the ER relies on both the ubiquitin-proteasome system and autophagy.",
+    "snippet": "Previous studies showed that clearance from the ER of this folding-defective polypeptide relies on the intervention of both the ubiquitin-proteasome system and autophagy [21].",
+    "anchor": "Introduction, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42569303_Hoefner2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    }
+   },
+   {
+    "proposition": "Authors' general statement: large misfolded polypeptides that form aggregates or polymers cannot be dislocated across the ER membrane for proteasomal clearance.",
+    "snippet": "Large, misfolded proteins and misfolded polypeptides that form aggregates or polymers cannot be dislocated across the ER membrane for proteasomal clearance.",
+    "anchor": "Discussion, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42569303_Hoefner2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    }
+   },
+   {
+    "proposition": "Text: accumulation of NS_PL within LAMP1-positive endolysosomes on bafilomycin confirms endolysosomal clearance and identifies NS_PL as an ERLAD client.",
+    "snippet": "The substantial accumulation of NS_PL within LAMP1-positive endolysosomes upon inactivation of their degradative activity in cells exposed to BafA1 (Figure 2B, quantification in Figure 2I) confirms that NS_PL is cleared by endolysosomal degradation and thereby identifies NS_PL as a client of the ERLAD machinery.",
+    "anchor": "Results, second subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42569303_Hoefner2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    }
+   },
+   {
+    "proposition": "Figure 2I as drawn: the fraction of endolysosomes positive for the variant is about 12 percent without bafilomycin and about 50 with it (per-cell points; four stars); the workbook sheet for Figure 2 lists 41 and 85 per-cell values with means of about 11.7 and 49.9. The measure is delivery to a lysosomal compartment that cannot degrade; it carries no measure of how much of the variant pool is cleared by this route against another.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2A-B and 2I (native raster, printed page 5)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42569303_r2/native/PMC13449852.1_p5_Figure2_native.png",
+    "anchor": "Figure 2A-B and 2I (native raster, printed page 5)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    },
+    "qualifies": "entries[6]",
+    "qualifies_needle": "confirms that NS_PL is cleared by endolysosomal degradation"
+   },
+   {
+    "proposition": "Text: loss of either ATG5 or ATG7 markedly reduced delivery of NS_PL to endolysosomes.",
+    "snippet": "Loss of either ATG5 or ATG7 markedly reduced the delivery of NS_PL to endolysosomes (Figure 2C,D, respectively, Figure 2I).",
+    "anchor": "Results, third subsection, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42569303_Hoefner2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    }
+   },
+   {
+    "proposition": "Figure 2I as drawn: ATG5 knockout about 17 percent (31 cells) and ATG7 knockout about 26 (12 cells) against about 50 for wild type with bafilomycin, four stars each; the ATG7 point set is the smallest in the panel.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2C-D and 2I (native raster, printed page 5)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42569303_r2/native/PMC13449852.1_p5_Figure2_native.png",
+    "anchor": "Figure 2C-D and 2I (native raster, printed page 5)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    }
+   },
+   {
+    "proposition": "Text: deletion of FAM134B substantially inhibits endolysosomal delivery of NS_PL while deletion of SEC62 had no consequence, citing panels E,L and F,L.",
+    "snippet": "We observed that deletion of FAM134B substantially inhibits endolysosomal delivery of NS_PL (Figure 2E,L), whereas deletion of SEC62 had no consequence (Figure 2,F,L).",
+    "anchor": "Results, third subsection, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42569303_Hoefner2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    }
+   },
+   {
+    "proposition": "Figure 2 as drawn has panels A to K only; there is no panel L, so the citations to panel L point to nothing; panel 2I carries the data: FAM134B knockout about 23 percent (74 cells, four stars), SEC62 knockout about 55 (29 cells, ns) against about 50 for wild type with bafilomycin.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2 panel list and 2I (native raster, printed page 5)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42569303_r2/native/PMC13449852.1_p5_Figure2_native.png",
+    "anchor": "Figure 2 panel list and 2I (native raster, printed page 5)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    },
+    "qualifies": "entries[10]",
+    "qualifies_needle": "(Figure 2E,L)"
+   },
+   {
+    "proposition": "Text: in FIP200 knockout MEF delivery of NS_PL to endolysosomes remains unaffected, so lysosomal clearance does not require double-membrane autophagosomes.",
+    "snippet": "In FIP200 KO MEF, the delivery of NS_PL to endolysosomes remains unaffected (Figure 2H,I). Taken together, these data reveal that the lysosomal clearance of NS_PL does not require the intervention of double membrane autophagosomes.",
+    "anchor": "Results, third subsection, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42569303_Hoefner2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    }
+   },
+   {
+    "proposition": "Figure 2I as drawn: FIP200 knockout about 53 percent (44 cells) against about 50 for wild type with bafilomycin, marked ns; the legend gives N = 2 independent replicates for panel H. A non-significant difference at N = 2 is not an equivalence test.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2H and 2I (native raster, printed page 5)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42569303_r2/native/PMC13449852.1_p5_Figure2_native.png",
+    "anchor": "Figure 2H and 2I (native raster, printed page 5)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    },
+    "qualifies": "entries[12]",
+    "qualifies_needle": "remains unaffected"
+   },
+   {
+    "proposition": "Text: only the active FAM134B-HALO rescues NS_PL delivery in FAM134B knockout MEF, shown in Figure 2J,K.",
+    "snippet": "The analyses by CLSM revealed that only the expression of the active FAM134B-HALO efficiently rescues NS_PL delivery to endolysosomal compartments in FAM134B KO MEFs (Figure 2J,K)",
+    "anchor": "Results, third subsection, paragraph 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42569303_Hoefner2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    }
+   },
+   {
+    "proposition": "Figure 2K as drawn: FAM134B-HALO about 48 percent (33 cells) against the LC3-binding-mutant form about 16 (19 cells), four stars; the legend gives N = 2.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2J-K (native raster, printed page 5)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42569303_r2/native/PMC13449852.1_p5_Figure2_native.png",
+    "anchor": "Figure 2J-K (native raster, printed page 5)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    }
+   },
+   {
+    "proposition": "Text: the experiment confirms the preferential capture of NS_PL in the functional complex formed by CNX and FAM134B.",
+    "snippet": "The results of this experiment confirm the preferential capture of NS_PL in the functional complex formed by CNX and FAM134B (Figure 3, lane 10, lower panel).",
+    "anchor": "Results, fourth subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42569303_Hoefner2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    }
+   },
+   {
+    "proposition": "Figure 3 as drawn: one blot set; in the anti-V5 immunoprecipitate the HA signal is strong in the FAM134B-plus-NS_PL lane and faint in the FAM134B-plus-NS lane, while in the input the NS-HA band is visibly weaker than the NS_PL-HA band; no quantification, no replicate number on the panel.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3 (native raster, printed page 6)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42569303_r2/native/PMC13449852.1_p6_Figure3_native.png",
+    "anchor": "Figure 3 (native raster, printed page 6)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    },
+    "qualifies": "entries[16]",
+    "qualifies_needle": "confirm the preferential capture of NS_PL"
+   },
+   {
+    "proposition": "Text: castanospermine drastically reduced the lysosomal delivery of NS_PL.",
+    "snippet": "Cells exposure to CST drastically reduced the lysosomal delivery of NS_PL (Figure 4D,G).",
+    "anchor": "Results, fifth subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42569303_Hoefner2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    }
+   },
+   {
+    "proposition": "Figure 4G as drawn: wild type with bafilomycin about 62 percent; castanospermine about 22, UGGT1 knockout about 35 and CNX knockout about 29, four stars each; the workbook sheet for Figure 4 gives 15, 16, 29 and 21 per-cell values (N = 3 in the legend).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4B-G (native raster, printed page 7)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42569303_r2/native/PMC13449852.1_p7_Figure4_native.png",
+    "anchor": "Figure 4B-G (native raster, printed page 7)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    }
+   },
+   {
+    "proposition": "Text: deletion of the glycosylation site at position 321 substantially hampers delivery of the misfolded polypeptides within LAMP1-positive endolysosomes.",
+    "snippet": "In sharp contrast, the deletion of the glycosylation site at position 321 substantially hampers the delivery of the misfolded polypeptides within LAMP1-positive endolysosomes (Figure 5C,D).",
+    "anchor": "Results, sixth subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42569303_Hoefner2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    }
+   },
+   {
+    "proposition": "Figure 5D as drawn: variant about 57 percent, N157Q about 62 (ns), N321Q about 24 (four stars), N401Q about 59 (ns); 40 to 49 per-cell points each (workbook sheet for Figure 5: 49, 42, 41 and 40 values).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5C-D (native raster, printed page 8)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42569303_r2/native/PMC13449852.1_p8_Figure5_native.png",
+    "anchor": "Figure 5C-D (native raster, printed page 8)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    }
+   },
+   {
+    "proposition": "Text: the observations were consistent with increased accumulation of NS_PL_N321Q in the detergent-insoluble fraction of HEK293 cells.",
+    "snippet": "These observations were consistent with an increased accumulation of NS_PL_N321Q in the detergent-insoluble fraction of HEK293 cells expressing NS_PL and its glyco-mutants, as determined by SDS–PAGE followed by immunoblotting (Figure 6A,D).",
+    "anchor": "Results, sixth subsection, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42569303_Hoefner2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    }
+   },
+   {
+    "proposition": "Figure 6D as drawn (normalised to wild-type neuroserpin = 100; three points per bar, no star or test on the panel): NS_PL about 145, N157Q about 238, N321Q about 267, N401Q about 176; the workbook sheet for Figure 6 lists the N157Q values as about 185, 219 and 311 and the N321Q values as about 345, 237 and 219. N157Q, whose delivery to endolysosomes is unaffected in Figure 5D, rises as much as N321Q, so the insoluble rise is not specific to the site whose loss impairs delivery.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6A-D (native raster, printed page 10)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42569303_r2/native/PMC13449852.1_p10_Figure6_native.png",
+    "anchor": "Figure 6A-D (native raster, printed page 10)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    },
+    "qualifies": "entries[22]",
+    "qualifies_needle": "increased accumulation of NS_PL_N321Q in the detergent-insoluble fraction"
+   },
+   {
+    "proposition": "Text: the interaction with calnexin was substantially reduced for NS_PL_N321Q, indicating the glycan at N321 plays an important role for the interaction.",
+    "snippet": "This interaction was substantially reduced for NS_PL_N321Q (Figure 6A), indicating that the glycan at position N321 plays an important role for the interaction with CNX.",
+    "anchor": "Results, sixth subsection, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42569303_Hoefner2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    }
+   },
+   {
+    "proposition": "Figure 6A as drawn: in the soluble immunoprecipitate the calnexin band is strongest for NS_PL and weaker for the three glyco-mutants, with the N321Q lane looking close to the N157Q and N401Q lanes by eye; one blot, no quantification and no replicate number on the panel (INFERENZA, by eye).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6A (native raster, printed page 10)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42569303_r2/native/PMC13449852.1_p10_Figure6_native.png",
+    "anchor": "Figure 6A (native raster, printed page 10)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    },
+    "qualifies": "entries[24]",
+    "qualifies_needle": "This interaction was substantially reduced for NS_PL_N321Q"
+   },
+   {
+    "proposition": "Authors' own caveat: the glucosylation state of the N321 glycan was not directly assessed, and the findings are said to support its role among the critical determinants.",
+    "snippet": "Although we did not directly assess its glucosylation state, these findings support the conclusion that the glycan at position 321, its processing by resident glucosidases and glucosyltransferases and the enhanced engagement of CNX that it promotes, are all critical determinants of NS_PL selection for FAM134B-mediated ERLAD.",
+    "anchor": "Discussion, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42569303_Hoefner2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    }
+   },
+   {
+    "proposition": "Statistics as legended: per-cell means with one-way ANOVA and Dunnett comparisons for the eight conditions of Figure 2I, with the number of cells listed.",
+    "snippet": "Mean, n = 41, 85, 31, 12, 74, 29, 38, 44 cells. One-way ANOVA with Dunnett’s multiple comparisons test",
+    "anchor": "Figure 2 legend, panel I",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42569303_Hoefner2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    }
+   },
+   {
+    "proposition": "Statistics section: replicates are described as independent biological replicates and the legends give cells (n) and replicates (N).",
+    "snippet": "All experimental replicates represent independent biological replicates. The corresponding figure legends indicate the number of cells analyzed (n) and the number of independent biological replicates (N).",
+    "anchor": "Statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42569303_Hoefner2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    }
+   },
+   {
+    "proposition": "Workbook, embedded uncropped images, Figure 1 blots (seven images): contact sheet of thumbnails (about 500 pixels each) of the full-field films for the secreted, soluble, insoluble, loading-control and native-gel panels; the native-gel film shows monomer and high-molecular-weight material in the lanes; opened as thumbnails, not lane by lane, so no lane-level reading is claimed.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Rawdata workbook images, contact sheet 1",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID42569303_r3/Rawdata_uncropped_blots_contact_sheet_1.png",
+    "anchor": "Rawdata workbook images, contact sheet 1",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    }
+   },
+   {
+    "proposition": "Workbook, embedded uncropped images, Figure 3 co-immunoprecipitation (seven images): contact sheet of thumbnails (about 500 pixels each) of the full-field films behind the blots shown in Figure 3; opened as thumbnails, not lane by lane, so no lane-level reading is claimed.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Rawdata workbook images, contact sheet 2",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID42569303_r3/Rawdata_uncropped_blots_contact_sheet_2.png",
+    "anchor": "Rawdata workbook images, contact sheet 2",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    }
+   },
+   {
+    "proposition": "Workbook, embedded uncropped images, Figure 5 (two images) and Figure 6 (six images): contact sheet of thumbnails (about 500 pixels each) of the full-field films for the deglycosylation and fraction blots; opened as thumbnails, not lane by lane, so no lane-level reading is claimed.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Rawdata workbook images, contact sheet 3",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID42569303_r3/Rawdata_uncropped_blots_contact_sheet_3.png",
+    "anchor": "Rawdata workbook images, contact sheet 3",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
+     "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
+     "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    }
+   }
+  ]
+ }
+}
