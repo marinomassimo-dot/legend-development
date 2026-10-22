@@ -1,5 +1,5 @@
 {
- "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
  "_note": "Part of the ten-hour repurposing batch ORCH-REPURPOSING-10H-20261021. Adjacent and transferable literature: every paper that is not WWOX evidence is labelled NOT WWOX EVIDENCE, at class level, no dose, no paediatric suitability presumed, not medical advice.",
  "TASK_ID": "REPURP-10H-P5-A-20261022",
  "DIRECTIVE_VERSION": 1,
@@ -36,6 +36,56 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-22"
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-10-22",
+ "TASK_ACK": {
+  "actor": "scientist-a",
+  "at": "2026-10-22T03:00:00Z",
+  "directive_version": 1,
+  "generation": 1,
+  "understanding": "Roadmap P5: two separate visible-dimension tables (deep recovery 12 rows, early benefit 9 rows, abstentions as rows), UNKNOWN kept UNKNOWN, non-dominated sets stated pair by pair over evaluable dimensions only, convergence split into algorithms vs origins, comparison with the Monarch/DGIdb thin slice and pre-existing records, statement of what changes in the next-experiment choice. No score, rank, probability, blended index, dose, route, schedule or paediatric suitability; no paper is read."
+ },
+ "TASK_CLAIM": {
+  "actor": "scientist-a",
+  "at": "2026-10-22T03:00:00Z",
+  "branch": "task/repurp-10h-p5-a",
+  "worktree": ".claude/worktrees/p5-a",
+  "reading_claims": [],
+  "note": "No paper is read; no reading claim, no receipt. Outputs only under disease-models/wwox/research/drug_repurposing/p5/ and the note repurposing_10h_scientist-a_p5_20261022.md; cards/, cards_early/, roadmap copies and repurposing_bridge.py are not touched."
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "'Non-dominated' needs a comparability rule the roadmap does not give",
+   "default": "same endpoint and same genotype class, fixed before the pairs were read",
+   "why_safe": "dominance across endpoints would force an order the cards cannot support"
+  },
+  {
+   "condition": "Abstentions have no evaluable cell",
+   "default": "rows in the tables, not called non-dominated",
+   "why_safe": "vacuous truth would read as a result"
+  },
+  {
+   "condition": "Coordinator relay: A51 exposure statement superseded by a later unaudited recomputation",
+   "default": "kept outside the verbatim cells, labelled superseded, no dose reproduced; one-line packet update listed for the card author",
+   "why_safe": "cards/ is not mine to edit"
+  },
+  {
+   "condition": "Shared origin is not a card field",
+   "default": "computed by hand, labelled a reader's derivation, audit OWED",
+   "why_safe": "not counting would double-count"
+  }
+ ],
+ "STOP_LOG": [],
+ "MILESTONE_LOG": [
+  {
+   "at": "2026-10-22",
+   "milestone": "21 rows tabulated (cells verbatim, p5_check 0 problems), two non-dominated statements, convergence, lookup comparison, stale fields S1-S8, bridge gaps G1-G8, note and self-eval written; no reading performed"
+  }
+ ],
+ "OWED": [
+  "blind audit of the reader's derivations (origin counts, comparability calls, staleness flags, lookup reading)",
+  "one-line D01 packet update by its author",
+  "Harness decision on G1-G8",
+  "lithium card or an explicit decision not to"
+ ]
 }
