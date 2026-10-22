@@ -61,13 +61,13 @@
  },
  "WATCH": {
   "interval": "hourly, 10 firings",
-  "cycles_done": 4,
+  "cycles_done": 5,
   "roster": {
    "scientist-a": {
     "group": "R1",
     "agentId": "a690b0766b3bc4360",
     "task": "REPURP-10H-P5-A-20261022",
-    "state": "running R1 lot 2 (HELD-partial 42587736/42650175, single-measurement note)",
+    "state": "R1c/R1d lots landed; 11 audited entries repaired (fa184c9c); idle",
     "previous_agents": [
      "ab601f2e19d3a1d37",
      "a3c29605f071db51b",
@@ -78,7 +78,7 @@
     "group": "R2",
     "agentId": "afd899465e185a8d9",
     "task": "REPURP-10H-GSE156243-B-20261022",
-    "state": "R2c landed 3f644051, 5 receipts recorded; running lot 3 (owed figures of 19 R2 receipts)",
+    "state": "R2c/R2d/R2e landed (R2e 42d1bf6c); idle; figure attestations await blind audit",
     "previous_agents": [
      "a85b13d3c3c5f7071",
      "a9ce64fa724e5f4ef",
@@ -100,7 +100,7 @@
     "group": "R4",
     "agentId": "ab5ca29f4fa37a884",
     "task": "REPURP-10H-WWOXROWS-D-20261022",
-    "state": "running lot 2 (D01 card dose update, R4 partials)",
+    "state": "R4c/R4d landed; idle",
     "previous_agents": [
      "aba610f58ef0e9b25",
      "a953e6e336bf10780",
@@ -198,7 +198,8 @@
     "t": "2026-10-22T03:36Z",
     "event": "integrator layer 1 landed (cbd62afb: PAPER 429-544, LIT-0701-0816): ORPHAN_COMPLETE_READ lines 31 -> 0; layer 2 and the R3 attribution hold continue. R3c audit returned (810332c6). WWOX-rows sweep landed. Eleven R3c receipts staged, to be recorded after the integrator releases the ledger. Gate still BLOCK_PUBLICATION (8 findings, all service UUID fragments in gse156243 files) until scientist-b's lossless transformation lands; no push since 1592aa69"
    },
-   "2026-10-22T04:30Z cycle 4: Harness strength-scan landed (b09cef4f); C pptx declared; 17 receipts recorded (11 R3c, 6 R2c); A,B,D given new lots; surfaces regenerated; push pending final gate"
+   "2026-10-22T04:30Z cycle 4: Harness strength-scan landed (b09cef4f); C pptx declared; 17 receipts recorded (11 R3c, 6 R2c); A,B,D given new lots; surfaces regenerated; push pending final gate",
+   "2026-10-22T08:20Z closing watch: session limit 429 stopped integrator 014, figure auditor, B between ~05:10 and 08:10 UTC; B resumed on its own and landed R2e; 7+12+16 receipts recorded; 20 manifests repointed; integrator and auditor resumed; pushed 14810716 at 04:57; final push and battery pending"
   ],
   "audits": {
    "R3": {
