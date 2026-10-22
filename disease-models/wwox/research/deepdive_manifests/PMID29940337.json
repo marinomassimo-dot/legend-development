@@ -120,12 +120,26 @@
   "waived": false,
   "entries": [
    {
-    "proposition": "In preterm rabbits with glycerol-induced IVH, activated beta-catenin, TCF4 and Axin2 are lower than in pups without IVH at day 7 and GSK-3 beta mRNA is higher; in six versus six human preterm brains activated beta-catenin and TCF4 are lower in white matter only.",
+    "proposition": "In preterm human infants activated beta-catenin is lower in white matter of those with IVH than in controls without IVH (P<0.009) but not in cortex or ganglionic eminence; the Methods inclusion count of six per group is not in this quote. The rabbit half (activated beta-catenin, TCF4, Axin2 lower and GSK-3 beta mRNA higher after glycerol-induced IVH) is carried by other entries; the rabbit Western blot legends give n = 5 per group, not six.",
     "snippet": "However, activated β-catenin levels were reduced in the white matter of preterm infants with IVH compared to controls without IVH (P<0.009), but not in the cortex or ganglionic eminence.",
     "anchor": "Results / IVH downregulates Wnt-signaling in human preterm infants",
     "surface": "body",
     "artifact": "files/fulltext/PMID29940337_R3b_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID29940337.json",
+     "entry": 0,
+     "what_changed": "Auditor OVERSHOOT: proposition narrowed to what the quote carries; 'six versus six' belongs to the Methods inclusion count while the blot legends give n = 5; rabbit half assigned to other entries.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_repairs_R3b_20261022.md",
+      "triple": 0,
+      "note": "repair unaudited: the author of the repair does not certify it"
+     }
+    }
    },
    {
     "proposition": "A 7-day course of the GSK-3 beta inhibitor AR-A014418 (20 mg/kg intramuscularly twice daily from day 1, one dose) raises Axin2 mRNA, activated beta-catenin and TCF4 at day 7 in pups with IVH and shifts the inhibitory and activating GSK-3 beta phosphorylations in the expected direction.",
@@ -179,6 +193,22 @@
     "proposition": "The authors state that the lack of effect of Wnt3A, despite lowered Wnt signalling after IVH, suggests Wnt downregulation might not be the principal cause of the myelination failure, and that results cannot be compared with other disease models.",
     "snippet": "This suggests that downregulation of Wnt signaling might not be the principal cause of myelination failure in IVH.",
     "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29940337_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "GSK-3 beta mRNA was higher in rabbits with IVH than in controls without IVH at day 7 (P = 0.03) but not at day 3; no GSK-3 beta protein antibody worked, so protein was not measured.",
+    "snippet": "We found that GSK-3β mRNA expression was elevated in rabbits with IVH compared to controls without IVH at D7 (P=0.03), not at D3",
+    "anchor": "Results / GSK-3beta in rabbits",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29940337_R3b_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The rabbit Western blot legend gives n = 5 per group and states total beta-catenin was reduced in pups with IVH at day 7.",
+    "snippet": "The bar charts are mean ± s.e.m. (n = 5 each). Values were normalized to β actin levels. TBC levels were reduced in pups with IVH compared to both glycerol-treated and untreated controls without IVH at D7.",
+    "anchor": "Figure 2 legend (rabbit blots)",
     "surface": "body",
     "artifact": "files/fulltext/PMID29940337_R3b_PMC_r2.xml",
     "panel_text_relation": "text_only"
