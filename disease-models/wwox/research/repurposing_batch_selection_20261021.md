@@ -29,8 +29,8 @@ Date: 2026-10-21. Author: read-only study selector. No repository file was edite
 
 | PMID | What was found | Consequence |
 |---|---|---|
-| 42587736 | Receipt FTR-20261019-42587736-01, partial; owed: figures, methods, results (captions only); staged by scientist-b | Moved to R1 HELD-partial; not selected |
-| 42650175 | Receipt FTR-20261019-42650175-01, partial; owed: figures, supplementary; staged by scientist-b | Moved to R1 HELD-partial; not selected |
+| 42587736 | Receipt FTR-20261019-42587736-01, partial; owed: figures, methods, results (captions only); staged by scientist-b | Moved to R1 HELD-partial; not selected. Closed 2026-10-22, see the HELD-partial table |
+| 42650175 | Receipt FTR-20261019-42650175-01, partial; owed: figures, supplementary; staged by scientist-b | Moved to R1 HELD-partial; not selected. Closed 2026-10-22, see the HELD-partial table |
 | 38378758 | Mentioned in queue FT-113; no receipt, none staged; also cited in four analysis files | Selected (R1); status "queued" |
 | 29785012 | Mentioned in queue FT-113 ("not read"); cited in two analysis files | Selected (R1); status "queued" |
 | 40665325 | Mentioned in queue FT-123; abstract-level verification only; cited in two analysis files | Selected (R3); status "queued" |
@@ -78,8 +78,8 @@ Selected: 16 (tier 1 highest). All are NOT WWOX EVIDENCE.
 
 | PMID | First author, year | Title | Receipt state | Note |
 |---|---|---|---|---|
-| 42587736 | Song ZD 2026 | 4-Phenylbutyrate Rescue in GABRA1 Variants Associated with Developmental Epileptic Encephalopathies: From Cell and Mouse Models to Humans | receipt FTR-20261019-42587736-01, partial_fulltext_read; owed: figures, methods, results (captions only) | Re-read only with a stated question, e.g. whether the in-vivo expression data have a per-animal read-out; a PBA total-versus-surface measurement. |
-| 42650175 | Delahanty AJ 2026 | 4-Phenylbutyrate Plus Wildtype GAT-1 Augmentation: A Dual Therapy to Rescue SLC6A1 Variant-Associated Developmental and Epileptic Encephalopathy | receipt FTR-20261019-42650175-01, partial_fulltext_read; owed: figures, supplementary (captions only) | Not recommended by default; the body was read. |
+| 42587736 | Song ZD 2026 | 4-Phenylbutyrate Rescue in GABRA1 Variants Associated with Developmental Epileptic Encephalopathies: From Cell and Mouse Models to Humans | receipt FTR-20261019-42587736-01, partial_fulltext_read; owed: figures, methods, results (captions only) | Re-read only with a stated question, e.g. whether the in-vivo expression data have a per-animal read-out; a PBA total-versus-surface measurement. **CLOSED 2026-10-22 (scientist-a, REPURP-10H-R1C-A-20261022):** the figures, methods and results were already read by resume receipt FTR-20261021-42587736-02; the only section still owed was the supplement (two figure pages), now read; completing receipt FTR-20261022-42587736-03 staged, manifest PASS. The owed-sections text of this row (figures, methods, results) was stale at the time of the closure task. |
+| 42650175 | Delahanty AJ 2026 | 4-Phenylbutyrate Plus Wildtype GAT-1 Augmentation: A Dual Therapy to Rescue SLC6A1 Variant-Associated Developmental and Epileptic Encephalopathy | receipt FTR-20261019-42650175-01, partial_fulltext_read; owed: figures, supplementary (captions only) | Not recommended by default; the body was read. **CLOSED 2026-10-22 (scientist-a, REPURP-10H-R1C-A-20261022):** the figures were read by resume receipt FTR-20261021-42650175-02; the supplement (three figure pages) is now read; completing receipt FTR-20261022-42650175-03 staged, manifest PASS. |
 
 ## Group R2 - T-type calcium-channel axis and genotype-specific antiseizure pharmacology
 

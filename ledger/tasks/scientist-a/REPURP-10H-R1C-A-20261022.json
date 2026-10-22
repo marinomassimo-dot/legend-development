@@ -28,7 +28,7 @@
  "REVIEW_REQUIREMENT": "Mirror ex post",
  "INTERACTION_MODE": "AUTONOMOUS",
  "RETRY_POLICY": "resume idempotently",
- "CURRENT_STATE": "IN_PROGRESS",
+ "CURRENT_STATE": "COMPLETE",
  "assigned_on": "2026-10-22",
  "TASK_ACK": {
   "actor": "scientist-a",
@@ -47,5 +47,46 @@
    "42650175"
   ],
   "note": "Reading claims for the two held papers (peer sign: the earlier R1 claim by the same actor)."
- }
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "The owed-section text of the two HELD-partial rows was stale (the -02 resume receipts had covered methods, results and figures)",
+   "default": "read the supplement only; resume receipts -03 with prior_receipt -02",
+   "why_safe": "re-reading covered sections would overstate; the ledger status was queried first"
+  },
+  {
+   "condition": "Supplement PDF of 42650175 has no ToUnicode map",
+   "default": "legends quoted from the rendered page (rendered_text); text layer not used",
+   "why_safe": "the protocol forbids hand-correcting a suspect layer"
+  },
+  {
+   "condition": "Earlier supplement routes unrecorded",
+   "default": "re-fetched the Europe PMC bundle, reproduced the member digest, recorded the route",
+   "why_safe": "no new bytes enter the chain"
+  },
+  {
+   "condition": "60 MB raw-data workbook of 42569303",
+   "default": "ten sheets read as tables, 22 uncropped-blot images opened as contact sheets, limit declared in the receipt",
+   "why_safe": "lane-by-lane reading out of proportion; limit stated"
+  }
+ ],
+ "STOP_LOG": [],
+ "MILESTONE_LOG": [
+  {
+   "at": "2026-10-22",
+   "milestone": "supplements of 42587736 and 42650175 read, -03 receipts staged; Q230P dependence note; three new post-2025 R1-class readings (41378214, 41373471, 42569303) with manifests PASS and receipts staged; note and self-evaluation written"
+  }
+ ],
+ "STAGED_RECEIPTS": [
+  "FTR-20261022-42587736-03",
+  "FTR-20261022-42650175-03",
+  "FTR-20261022-41378214-01",
+  "FTR-20261022-41373471-01",
+  "FTR-20261022-42569303-01"
+ ],
+ "OWED": [
+  "blind audit by someone else of the text-versus-panel relations declared in the five manifests",
+  "the Q230P fractionated measurement of the note section 4 (a proposal, not made)",
+  "Harness decision on a read-only numeral/word-in-quote companion to the manifest validator"
+ ]
 }
