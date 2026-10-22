@@ -60,23 +60,24 @@
  },
  "WATCH": {
   "interval": "hourly, 10 firings",
-  "cycles_done": 2,
+  "cycles_done": 3,
   "roster": {
    "scientist-a": {
     "group": "R1",
-    "agentId": "aa4d5f436e85255dd",
-    "task": "REPURP-10H-FILL-A-20261022",
-    "state": "FILL relay running: closing the data gaps the seven deep-recovery abstentions name | measured 23:18Z via ListAgents: running",
+    "agentId": "a690b0766b3bc4360",
+    "task": "REPURP-10H-P5-A-20261022",
+    "state": "P5 two-path comparison (relay started 03:2xZ). Previous: deep-cards repair landed d71f3f2e, abstention-gap verdicts landed c0b91adf, receipt recorded 49602af4",
     "previous_agents": [
      "ab601f2e19d3a1d37",
-     "a3c29605f071db51b"
+     "a3c29605f071db51b",
+     "aa4d5f436e85255dd"
     ]
    },
    "scientist-b": {
     "group": "R2",
-    "agentId": "a9be556c4afa30ad3",
+    "agentId": "afd899465e185a8d9",
     "task": "REPURP-10H-GSE156243-B-20261022",
-    "state": "R2b readings committed on branch task/repurp-10h-r2b-b (932e0e3f), landing blocked by an untracked peer file (the R3-repairs auditor, still writing); GSE156243 qualification relay started",
+    "state": "RESUMED 03:2xZ after rate-limit stop (reset 02:40Z): GSE156243 qualification, branch task/repurp-10h-gse156243-b",
     "previous_agents": [
      "a85b13d3c3c5f7071",
      "a9ce64fa724e5f4ef",
@@ -87,7 +88,7 @@
     "group": "R3",
     "agentId": "a248f254237ba316a",
     "task": "REPURP-10H-R3c-C-20261022",
-    "state": "R3 repaired and landed (2b33a1fc, 51 repairs, unaudited), R3b landed (58e66825, 6 receipts recorded d334b690); relay R3c started | measured 23:18Z via ListAgents: running",
+    "state": "RESUMED 03:2xZ after rate-limit stop: dose-slope and three other repairs first (audit 6ade40f8), then R3c readings",
     "previous_agents": [
      "ab754106b9854e8bd",
      "aa7339b0af1c43595"
@@ -95,12 +96,13 @@
    },
    "scientist-d": {
     "group": "R4",
-    "agentId": "a1b21908680566c50",
-    "task": "REPURP-10H-R4b-D-20261022",
-    "state": "R4b relay (started 23:4xZ) | measured 23:18Z via ListAgents: running",
+    "agentId": "ab5ca29f4fa37a884",
+    "task": "REPURP-10H-WWOXROWS-D-20261022",
+    "state": "WWOX rows in treatment-response supplements (started 03:2xZ). Previous: R4 repair landed 335e6e05, R4b landed, 15 receipts recorded cd2b4e3b",
     "previous_agents": [
      "aba610f58ef0e9b25",
-     "a953e6e336bf10780"
+     "a953e6e336bf10780",
+     "a1b21908680566c50"
     ]
    }
   },
@@ -172,6 +174,11 @@
    {
     "t": "2026-10-21T23:35Z",
     "event": "scientist-b R2b: first direct drug-by-genotype interaction test found (trimethadione in a GluA1 C811S mouse) and it runs OPPOSITE to DL-MECH-170 (drug works in wild type, mostly fails in the hyperexcitable mutant; both vehicle groups at a ceiling); P47T RNA-seq (GSE158681/2) shows Cacna1i lower in all four comparisons, Cacna1g no consistent direction \u2014 contradicts the earlier P47T 'CACNA1G up' reading, to be reconciled; DL-MECH-170 neither narrowed nor promoted. B then handed the roadmap's first transcriptomic input GSE156243"
+   },
+   {
+    "t": "2026-10-22T03:20Z",
+    "cycle": 3,
+    "event": "RATE LIMIT: session limit hit at about 02:00Z, reset 02:40Z; stopped: scientist-b (GSE156243), scientist-c (R3c), Harness (bridge gaps). The hourly watch could not run in that window because the REPL was busy; at 03:16Z no agent was live. Resumed all three from durable state; scientist-a and scientist-d had finished their lots and were handed P5 and the WWOX-rows sweep. Lesson: the watch fires only when idle, so a limit that stops everything is noticed only when the next prompt arrives"
    }
   ],
   "audits": {
@@ -216,7 +223,7 @@
    "bridge_gaps": {
     "agentId": "aa2c22a1eb7c2ebdb",
     "task": "PLAN-BRIDGE-GAPS-20261022",
-    "state": "RUNNING"
+    "state": "RESUMED 03:2xZ after rate-limit stop"
    }
   },
   "id_pairing_rule": "pair returned agent ids to launches by the description in each launch result, never by position; verify with ListAgents before the first message to a restarted actor"
