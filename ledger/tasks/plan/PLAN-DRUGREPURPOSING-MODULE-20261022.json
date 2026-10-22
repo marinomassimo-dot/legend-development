@@ -1,0 +1,136 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT · A.1c AUTHORISED_QUEUE",
+ "TASK_ID": "PLAN-DRUGREPURPOSING-MODULE-20261022",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "plan",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Make Drug Repurposing a first-class LEGEND module: survey (A), adapter seam (B), the registry join (C), the feedback loop into research (D), proof on the real corpus (E). Mandate: disease-models/wwox/research/drug_repurposing/harness_mandate_20261022.md (operator-issued through the Orchestrator, 2026-10-22).",
+ "assigned_on": "2026-10-22",
+ "started_at_head": "88559fd28b07814118c245021e0735368f0c2a90",
+ "worktree": ".claude/worktrees/repurp-module",
+ "branch": "task/plan-drugrepurposing-module",
+ "CURRENT_STATE": "IN_PROGRESS",
+ "AUTHORISED_QUEUE": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_A_SURVEY": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "A. Read-only survey note (at most two pages): 8 to 12 external tools across the seven evidence classes, five fields per row, a measured dry call or a recorded block for every ADOPT NOW, and what the scout log already covered",
+     "status": "DONE",
+     "evidence": "disease-models/wwox/research/drug_repurposing/tool_survey_20261022.md (12 rows, 6 ADOPT NOW each with a measured dry call, 4 TRY, 2 WATCH; blocks table; scout-log coverage section) + tool_survey_20261022_drycalls.json (22 calls, 2026-10-22)"
+    },
+    {
+     "step": "A. Land on main, gate PASS on the exact SHA, safe_push to development",
+     "status": "IN_PROGRESS",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_B_SEAM": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "B. One adapter contract page in framework/protocols/ and one adapter directory under framework/ (path named with its reason); adapters declare name, inputs, outputs, network use, licence, retrieval-date stamping, self-test; plain-file registry; card format reused; CLI adapter list | add | remove | selftest",
+     "status": "TODO",
+     "evidence": ""
+    },
+    {
+     "step": "B. Regression removes every adapter in turn with the core still running; each ADOPT NOW adapter MEASURED green or a recorded block; scripts/test_tool_routing.py green; suites enrolled in run_release_regressions.py",
+     "status": "TODO",
+     "evidence": ""
+    },
+    {
+     "step": "B. Land, gate, push",
+     "status": "TODO",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_C_JOIN": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "C. Queries derived from claims, hypotheses, discovery ledger, mechanism lines and the pathograph export, each with its claim or locator of origin",
+     "status": "TODO",
+     "evidence": ""
+    },
+    {
+     "step": "C. Evidence table per query from receipts and manifests with depth, audit status (declarations + adjudication files) and the NOT WWOX EVIDENCE label",
+     "status": "TODO",
+     "evidence": ""
+    },
+    {
+     "step": "C. Cards composed from adapter hits plus the table (derived, never typed); a measure-next list per candidate; one command, deterministic, incremental, prints what changed; regressions enrolled; diff against a hand-made card in cards/",
+     "status": "TODO",
+     "evidence": ""
+    },
+    {
+     "step": "C. Land, gate, push",
+     "status": "TODO",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_D_FEEDBACK": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "D. A short routed procedure (mode of an existing tool preferred) turning a module result into a Scientist assignment, a selection-file row or a hypothesis; one real result from C turned into one real row for the next batch",
+     "status": "TODO",
+     "evidence": ""
+    },
+    {
+     "step": "D. Land, gate, push",
+     "status": "TODO",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_E_PROOF": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "E. Run C on the three live axes (missense-class proteostasis, T-type calcium, downstream Wnt/MYC/GSK3/mTOR); report what the module found that the hand-made cards did not and what it missed; update README.md stage table and the reconciliation from measurement",
+     "status": "TODO",
+     "evidence": ""
+    },
+    {
+     "step": "E. Final report: self-evaluation per framework/protocols/session_self_evaluation.md, capability-scout entry, takeaways; land, gate, push",
+     "status": "TODO",
+     "evidence": ""
+    }
+   ]
+  }
+ },
+ "BOOTSTRAP_DONE": [
+  "state_manifest_current.md: current_state: READY (2026-10-22)",
+  "CLAUDE.md, LEGEND_CORE.md §21c §21d §21e read by name",
+  "harness_development_principles.md, roles/plan.md, framework/scripts/README.md, ARCHITECTURE.md read",
+  "harness_session_start.py --actor plan: HARNESS_SCOUT 2026-W43 SCOUT_DUE (Junior's input missing); 2 branches, 1 LAND_OVERDUE (not this task's; reported, not acted on inside this mandate)"
+ ],
+ "DEFAULTS_TAKEN": [
+  "W43 harness-scout input missing from the Junior · proceed with the mandate, report the gap · the weekly triage waits on an input that does not exist and the mandate is explicit about its own order · with the input present, Monday triage would have been done first",
+  "1 LAND_OVERDUE branch listed by harness_session_start (not this actor's) · left to its author, named in the stage report · landing another actor's branch is not this mandate's scope and deleting is reserved · nothing else changes",
+  "Dry calls for the survey use a public gene symbol (WWOX), a public Ensembl id and two public drug names only · no identifier of any person, no key, no spend · the mandate forbids keys and private data; a key-less read with public terms is the declared default · nothing would differ",
+  "The survey note keeps raw API payloads out of the repository (a compact per-call summary file is committed; the payloads stay in the session scratchpad) · payloads carry free text that the publication gate may flag and that nobody reads again · the measurement is reproducible from the command recorded in the note · a payload needed later is re-fetched with its date"
+ ],
+ "DECISIONS_TAKEN": [
+  "Worktree .claude/worktrees/repurp-module on branch task/plan-drugrepurposing-module cut from main 88559fd2 · alternative: commit on main from the root checkout (rejected: the task spans hours and five landings) · nobody consulted · reversible: git worktree remove after landing",
+  "Open Targets dry call rewritten against the live schema (API 26.9.0): target.knownDrugs no longer exists, target.drugAndClinicalCandidates replaces it (measured HTTP 400 then 200) · consequence recorded as a survey finding: any adapter pins the API version it was measured against · reversible"
+ ],
+ "STOP_LOG": [],
+ "OPERATOR_INSTRUCTIONS": [
+  "2026-10-22, received through the Orchestrator during deliverable A, binding every deliverable and overriding anything in the mandate file that reads more rigidly: lean, flexible, modular; patterns easy to implement and easy to remove; NO rigid contracts. Concretely for B: the adapter 'contract' is a one-page convention (a small function signature, a dict in and a dict out, a self-test), not a schema with validation layers, abstract base classes, registries kept in sync, or version fields; an adapter is one file dropped in or deleted with nothing else to edit; the CLI discovers adapters from the directory and requires no registration; no plugin framework, no dependency injection, no configuration language; plain Python modules and files over any infrastructure. Before adding anything: would deleting it later be a one-file act? If not, simplify until it is. Each stage report says what was NOT built for this reason."
+ ],
+ "NOT_BUILT_BY_DESIGN": [
+  "A: no survey schema, no candidate registry, no scoring of tools; one Markdown note plus one JSON list of calls, both deletable without any other edit"
+ ],
+ "BLOCKS_FOR_OPERATOR": [
+  "No R interpreter on this host: drugfindR and CDRPipe (signature-reversal clients) stay a recorded block; installing R is a system package (mandate §5)",
+  "IUPHAR Guide to Pharmacology web services answer 401 without an API key (measured 2026-10-22): flagged, never used; its CC BY-SA downloads are the key-less route if ever wanted"
+ ],
+ "STAGE_REPORTS": []
+}

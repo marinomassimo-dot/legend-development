@@ -1,0 +1,30 @@
+{
+ "_what": "Per-call record of the read-only survey dry calls, deliverable A of harness_mandate_20261022.md. Key-less, zero spend, public identifiers only (gene WWOX, Ensembl ENSG00000186153, two public drug names). Raw payloads were not committed; re-run the request to reproduce. Every source is NOT WWOX EVIDENCE.",
+ "retrieval_date": "2026-10-22",
+ "actor": "plan",
+ "task": "PLAN-DRUGREPURPOSING-MODULE-20261022",
+ "calls": [
+  {"service": "Open Targets GraphQL", "request": "POST https://api.platform.opentargets.org/api/v4/graphql", "query": "target(ensemblId:ENSG00000186153){drugAndClinicalCandidates{count} associatedDiseases{count} tractability}", "http": 200, "seconds": 0.089, "headline": "associatedDiseases.count=2012; drugAndClinicalCandidates.count=0; apiVersion 26.9.0 dataVersion 26.09; target.knownDrugs -> HTTP 400 (field removed)"},
+  {"service": "ChEMBL REST", "request": "GET https://www.ebi.ac.uk/chembl/api/data/status.json", "query": "", "http": 200, "seconds": null, "headline": "ChEMBL_37 2026-05-01; 2921148 compounds; 18552 targets"},
+  {"service": "ChEMBL REST", "request": "GET https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL325041&limit=2", "query": "", "http": 200, "seconds": null, "headline": "mechanism_of_action '26S proteasome inhibitor', action_type INHIBITOR, ref DailyMed"},
+  {"service": "ChEMBL REST", "request": "GET https://www.ebi.ac.uk/chembl/api/data/target/search.json?q=WWOX&limit=3", "query": "", "http": 200, "seconds": null, "headline": "total_count 0 (NO_MATCH on the target axis)"},
+  {"service": "PubTator3", "request": "GET https://www.ncbi.nlm.nih.gov/research/pubtator3-api/entity/autocomplete/?query=WWOX&limit=3", "query": "", "http": 200, "seconds": 0.80, "headline": "@GENE_WWOX ncbi_gene 51741 plus LitVar variants"},
+  {"service": "PubTator3", "request": "GET https://www.ncbi.nlm.nih.gov/research/pubtator3-api/relations?e1=@GENE_WWOX", "query": "", "http": 200, "seconds": null, "headline": "808 relations; types associate/inhibit/interact/negative_correlate/positive_correlate/stimulate; type=treat -> []"},
+  {"service": "openFDA label", "request": "GET https://api.fda.gov/drug/label.json?search=openfda.generic_name:\"sodium phenylbutyrate\"&limit=1", "query": "", "http": 200, "seconds": null, "headline": "total 7; sections include indications_and_usage, contraindications, pediatric_use"},
+  {"service": "openFDA label", "request": "GET https://api.fda.gov/drug/label.json?search=openfda.generic_name:\"amlexanox\"&limit=1", "query": "", "http": 404, "seconds": 0.79, "headline": "NOT_FOUND (NO_MATCH, never absence)"},
+  {"service": "openFDA FAERS", "request": "GET https://api.fda.gov/drug/event.json?search=patient.drug.medicinalproduct:\"sodium phenylbutyrate\"&count=patient.reaction.reactionmeddrapt.exact&limit=3", "query": "", "http": 200, "seconds": 0.77, "headline": "count terms returned (spontaneous reports; never a rate)"},
+  {"service": "DailyMed SPL v2", "request": "GET https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?drug_name=sodium+phenylbutyrate&pagesize=2", "query": "", "http": 200, "seconds": null, "headline": "total_elements 8"},
+  {"service": "Orphadata API", "request": "GET https://api.orphadata.com/rd-cross-referencing/orphacodes/names/WWOX", "query": "", "http": 200, "seconds": 0.08, "headline": "__count 1; __licence CC-BY-4.0; data date 2026-06-23"},
+  {"service": "Orphadata XML", "request": "HEAD https://www.orphadata.com/data/xml/en_product6.xml", "query": "", "http": 200, "seconds": 0.22, "headline": "reachable"},
+  {"service": "iLINCS API", "request": "GET https://www.ilincs.org/api/SignatureMeta?filter={where:{libraryid:LIB_5},limit:1}", "query": "", "http": 200, "seconds": 0.51, "headline": "one LIB_5 signature record with cellline and concentration"},
+  {"service": "SigCom LINCS", "request": "GET https://maayanlab.cloud/sigcom-lincs/metadata-api/libraries?limit=2", "query": "", "http": 200, "seconds": 0.85, "headline": "library records"},
+  {"service": "Pharos GraphQL", "request": "POST https://pharos-api.ncats.io/graphql", "query": "target(q:{sym:WWOX}){tdl fam ligandCounts}", "http": 200, "seconds": 0.42, "headline": "tdl Tbio; fam Enzyme; ligand 0; drug 0"},
+  {"service": "INDRA DB REST", "request": "GET https://db.indra.bio/statements/from_agents?subject=WWOX&limit=2", "query": "", "http": 200, "seconds": 8.31, "headline": "2 statements (Activation WWOX -> apoptotic process); belief_scores present (dropped at the adapter)"},
+  {"service": "Europe PMC REST", "request": "GET https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=WWOX AND repurposing&format=json&pageSize=2", "query": "", "http": 200, "seconds": 0.13, "headline": "hitCount 61"},
+  {"service": "IUPHAR GtoPdb", "request": "GET https://www.guidetopharmacology.org/services/targets?geneSymbol=WWOX", "query": "", "http": 401, "seconds": 0.27, "headline": "API key is missing (flagged, not used)"},
+  {"service": "DrugCentral download page", "request": "HEAD https://unmtid-dbs.net/download/DrugCentral/", "query": "", "http": 200, "seconds": 0.30, "headline": "reachable"},
+  {"service": "nSIDES", "request": "HEAD https://nsides.io/", "query": "", "http": 200, "seconds": null, "headline": "landing reachable"},
+  {"service": "nSIDES", "request": "HEAD https://tatonettilab-datasets.s3-us-west-1.amazonaws.com/nsides/OFFSIDES.csv.gz", "query": "", "http": 404, "seconds": null, "headline": "download path moved (.xz also 404)"},
+  {"service": "repoDB", "request": "HEAD https://unmtid-shinyapps.net/shiny/repodb/", "query": "", "http": 200, "seconds": null, "headline": "reachable (not surveyed as a row)"}
+ ]
+}
