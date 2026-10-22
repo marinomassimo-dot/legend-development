@@ -367,12 +367,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Figure 6 read as an image: schematic cell for E11-E13 listing GluK5, TACAN, PMCA1, NCX2, nAChR beta2, leak, SERCA2, TRPML1, TMEM165, Cav3.1, Orai3, TRPM7 and connexins CX43, CX45, CX37; schematic for E17-PN1 listing ASIC1, Cav3.2, Orai2, P2X2, GluN1, CX36 and LETM1 in addition.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6: E11-E13 cell shows Cav3.1 among surface uptake routes; E17-PN1 cell shows Cav3.2 with ASIC1, Orai2, P2X2, GluN1.",
+    "proposition": "Figure 6 read as an image: the E11-E13 schematic cell lists GluK5, TACAN, PMCA1, NCX2, nAChR beta2, leak, SERCA2, TRPML1, TMEM165, Cav3.1, Orai3, TRPM7 and connexins CX43, CX45, CX37; the E17-PN1 schematic keeps GluK5, TACAN, PMCA1, NCX2, nAChR beta2, leak, SERCA2 and TRPML1, drops TMEM165, Cav3.1, Orai3, TRPM7 and the CX43, CX45, CX37 connexins, and shows LETM1 (mitochondria), ASIC1, Cav3.2, Orai2, P2X2, GluN1 and CX36 instead.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6: E11-E13 cell has TMEM165, Cav3.1, Orai3, TRPM7, CX43/45/37; E17-PN1 cell keeps GluK5, TACAN, PMCA1, NCX2, nAChR b2, leak, SERCA2, TRPML1 and adds LETM1, ASIC1, Cav3.2, Orai2, P2X2, GluN1, CX36.",
     "surface": "figure",
     "anchor": "Figure 6 (JPEG raster)",
     "artifact": "files/figures/PMID32751129_r2/cells-09-01800-g006.jpg",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32751129.json",
+     "entry": 13,
+     "what_changed": "2026-10-22 blind figure rerun (locator_audit_R2_figures_rerun_20261022.md): a numeral or clause did not match the panel; re-read from the artefact this session and corrected. Prior wording began: Figure 6 read as an image: schematic cell for E11-E13 listing GluK5, TACAN, PMCA",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "Supplementary Figure S1, read from the rendered page, says neuroplastin and basigin are mutually exclusive auxiliary subunits of PMCA and plots Nptn, Bsg and Atp2b1 mRNA at E11, E13, E17 and PN (Bsg about 220, 220, 310, 318; Nptn about 6, 7, 20, 30; Atp2b1 about 8, 8, 24, 34 TPM); it concerns the pump, not any voltage-gated channel.",

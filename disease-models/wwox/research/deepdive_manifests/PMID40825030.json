@@ -285,20 +285,44 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Figure 3 read as an image (kinetics): the inactivation time constant is about 190 ms for A398E against about 80 ms for wild type (two stars) and about 25 to 45 ms for A398V (stars), and about 330 to 410 ms for M1425V and about 480 to 730 ms for M1425I against about 120 to 190 ms (stars); the deactivation time constant at minus 60 mV is about 40 ms for A398E, about 42 for M1425V and about 60 for M1425I against about 5 to 7 ms for wild type (three stars), and about 1.5 ms for A398V.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3B, C, E, F: tau inactivation A398E about 190 vs WT about 80 ms; A398V about 25-45; M1425V about 330-410, M1425I about 480-730 vs WT about 120-190; tau deactivation at -60 mV A398E about 40, M1425V about 42, M1425I about 60 vs WT about 6 ms (***), A398V about 1.5.",
+    "proposition": "Figure 3 read as an image (kinetics): the inactivation time constant is about 190 ms for A398E against about 80 ms for wild type (two stars) and about 25 to 70 ms for A398V (stars), and about 330 to 410 ms for M1425V and about 480 to 730 ms for M1425I against about 120 to 190 ms (stars); the deactivation time constant at minus 60 mV is about 40 ms for A398E, about 42 for M1425V and about 60 for M1425I against about 5 to 7 ms for wild type (three stars), and about 1.5 ms for A398V.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3B, C, E, F: tau inactivation A398E about 190 vs WT about 80 ms; A398V about 25-70; M1425V about 330-410, M1425I about 480-730 vs WT about 120-190; tau deactivation at -60 mV A398E about 40, M1425V about 42, M1425I about 60 vs WT about 6 ms (***), A398V about 1.5.",
     "surface": "figure",
     "anchor": "Figure 3 panels A-F (page 9 raster)",
     "artifact": "files/figures/PMID40825030_r3/p9-000.png",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40825030.json",
+     "entry": 10,
+     "what_changed": "2026-10-22 blind figure rerun (locator_audit_R2_figures_rerun_20261022.md): a numeral or clause did not match the panel; re-read from the artefact this session and corrected. Prior wording began: Figure 3 read as an image (kinetics): the inactivation time constant is about 19",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "NUMERAL_RECHECK"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
-    "proposition": "Figure 6 read as an image (simulated reticular-nucleus neuron): the A398E, M1425V and M1425I simulations fire more often at rest than the wild-type simulation and produce longer, denser bursts after the hyperpolarising pulse, while the A398V simulation is silent at rest and fires a single spike after the pulse; the wild-type simulation fires about 14 spikes in the first 3000 ms.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6A-H: AE, MV, MI fire more at rest and longer bursts after the pulse than WT; AV silent at rest, single spike after the pulse; WT about 14 spikes in 3 s.",
+    "proposition": "Figure 6 read as an image (simulated reticular-nucleus neuron): the A398E, M1425V and M1425I simulations fire more often at rest than the wild-type simulation and produce longer, denser bursts after the hyperpolarising pulse, while the A398V simulation is silent at rest and fires a single spike after the pulse; the wild-type simulation fires about 23 spikes in the first 3000 ms (about 10 before the pulse, a burst of about 4, about 9 after; about 19 without the burst).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6A-H: AE, MV, MI fire more at rest and longer bursts after the pulse than WT; AV silent at rest, single spike after the pulse; WT about 23 spikes in 3 s (about 19 without the burst).",
     "surface": "figure",
     "anchor": "Figure 6 panels A-H (page 13 raster)",
     "artifact": "files/figures/PMID40825030_r3/p13-000.png",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40825030.json",
+     "entry": 11,
+     "what_changed": "2026-10-22 blind figure rerun (locator_audit_R2_figures_rerun_20261022.md): a numeral or clause did not match the panel; re-read from the artefact this session and corrected. Prior wording began: Figure 6 read as an image (simulated reticular-nucleus neuron): the A398E, M1425",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    }
   ],
   "note": ""
