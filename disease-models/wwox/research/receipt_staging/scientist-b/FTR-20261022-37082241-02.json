@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-22T00:00:00Z",
+ "event_at": "2026-10-22T04:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read"
+ },
+ "event_id": "FTR-20261022-37082241-02",
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "Completing pass (owed: figures captions_only, supplementary not_read). Figures 2, 5, 6, 7 and 8 opened as images (Figures 1, 3 and 4 are structures, a curve and a docking view and were opened as well but carry no locator); the supplement (two figures as TIF and one table as Word) was obtained from the PMC open-data bucket and read in full. Every image read returned an image."
+ ],
+ "evidence_depth": "complete_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID37082241.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-b_20261022f.md"
+ ],
+ "prior_receipt": "FTR-20261021-37082241-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "0450aadf2e01ba5c120653b14600fc4be0069f660dca69025ba65593f7b68da9",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID37082241_Harman2023_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.3389/fphys.2023.1086243",
+  "pmid": "37082241"
+ },
+ "workflow": "scientist-b repurposing batch R2e completing pass 2026-10-22; SOURCE_FIRST for the owed sections; NOT WWOX EVIDENCE; prepared as JSON for the integrator and staged, not appended."
+}

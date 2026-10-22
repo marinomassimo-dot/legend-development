@@ -2,8 +2,9 @@
  "schema_version": 2,
  "pmid": "32878331",
  "doi": "10.3390/ijms21176333",
- "receipt": "FTR-20261021-32878331-01",
+ "receipt": "FTR-20261022-32878331-02",
  "landing": [
+  "FTR-20261022-32878331-02",
   "FTR-20261021-32878331-01",
   "repurposing_10h_scientist-b_20261021"
  ],
@@ -153,6 +154,72 @@
     "derived": false,
     "result_sha256": "524dd63d50a14fbc905e725331cebe97b4fd0849c98aa71f240db76ec6797d06"
    }
+  },
+  {
+   "path": "files/figures/PMID32878331_r2/ijms-21-06333-g002.jpg",
+   "sha256": "010f4dda0c1361724a5ad0332d327e8e3178c711872541e12f056523948ebd24",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC7503748",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "010f4dda0c1361724a5ad0332d327e8e3178c711872541e12f056523948ebd24"
+   },
+   "note": "Figure raster (JPEG from the MDPI html, about 130 to 180 ppi as delivered; the PDF holds 210 to 221 ppi embedded rasters of the same figures) opened as an image."
+  },
+  {
+   "path": "files/figures/PMID32878331_r2/ijms-21-06333-g003.jpg",
+   "sha256": "0a86e7243934cdb7b07d7a2e47340da033346a4dc06f8e8013024a47eca2dba5",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC7503748",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "0a86e7243934cdb7b07d7a2e47340da033346a4dc06f8e8013024a47eca2dba5"
+   },
+   "note": "Figure raster (JPEG from the MDPI html, about 130 to 180 ppi as delivered; the PDF holds 210 to 221 ppi embedded rasters of the same figures) opened as an image."
+  },
+  {
+   "path": "files/figures/PMID32878331_r2/ijms-21-06333-g004.jpg",
+   "sha256": "038459e73d4b73dfaae1d45c7f11aa84c2e0808c4f9290b99cd64b86c86ceb00",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC7503748",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-21",
+    "derived": false,
+    "result_sha256": "038459e73d4b73dfaae1d45c7f11aa84c2e0808c4f9290b99cd64b86c86ceb00"
+   },
+   "note": "Figure raster (JPEG from the MDPI html, about 130 to 180 ppi as delivered; the PDF holds 210 to 221 ppi embedded rasters of the same figures) opened as an image."
+  },
+  {
+   "path": "files/figures/PMID32878331_r3/supp-1.png",
+   "sha256": "08cc0c47f5a4163198747c80c1885247a4eaf00f09835a47c8c79726450a212f",
+   "kind": "figure",
+   "note": "Supplementary Materials page 1 (the whole supplement; fonts carry no Unicode map, so the rendered page is the surface) rendered at 100 ppi and opened as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdfimages_png",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-22",
+    "derived": true,
+    "result_sha256": "08cc0c47f5a4163198747c80c1885247a4eaf00f09835a47c8c79726450a212f",
+    "derived_from": "files/supplement/PMID32878331_r2/ijms-21-06333-s001.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 100 -png ijms-21-06333-s001.pdf supp"
+    }
+   }
   }
  ],
  "verbatim_locators": {
@@ -207,6 +274,70 @@
     "surface": "figure",
     "artifact": "files/figures/PMID32878331_r2/ijms-21-06333-g001.jpg",
     "anchor": "Figure 1 panels D to F; bucket jpg 764 px wide as delivered",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Figure 3 legend states that the experiment evaluated recovery from fast inactivation of wild-type and mutant Cav3.1 channels with a paired-pulse protocol.",
+    "snippet": "Recovery from fast inactivation of WT and mutant Cav3.1 channels.",
+    "surface": "body",
+    "anchor": "Figure 3 legend title",
+    "artifact": "files/fulltext/PMID32878331_Berecki2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Figure 4 legend states that the experiment measured rate-dependent changes in calcium current availability of wild-type and mutant channels.",
+    "snippet": "Rate-dependent changes in calcium current availability of WT and mutant Cav3.1 channels.",
+    "surface": "body",
+    "anchor": "Figure 4 legend title",
+    "artifact": "files/fulltext/PMID32878331_Berecki2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Figure 1 legend states that all three variants fall in the pore region (segments 5 or 6).",
+    "snippet": "Note that all mutations fall in the pore region (segments 5 or 6).",
+    "surface": "body",
+    "anchor": "Figure 1 legend, panel A",
+    "artifact": "files/fulltext/PMID32878331_Berecki2020_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 read as an image: peak current density in heterologous cells is larger than wild type for two variants (about minus 260 against minus 205 pA/pF, at minus 25 to minus 30 mV) and similar to wild type for L208P (about minus 175 against minus 205); half-activation voltage is shifted hyperpolarised for all three (steady-state activation curves left of wild type: M1508V furthest, then L208P, then L909F); the steady-state inactivation curves of L208P and M1508V sit left of wild type and L909F close to it.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1D-F: peak density L909F and M1508V about -260 vs WT about -205 pA/pF; L208P about -175; activation curves all left of WT (M1508V > L208P > L909F); inactivation L208P and M1508V left of WT, L909F close.",
+    "surface": "figure",
+    "anchor": "Figure 1 panels D-F (JPEG raster)",
+    "artifact": "files/figures/PMID32878331_r2/ijms-21-06333-g001.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2 read as an image: the deactivation time constant is much slower for L208P (about 80 ms at minus 50 mV against about 6 ms for wild type) and M1508V (about 46 ms), slightly slower for L909F (about 11 ms); the activation time constant is slower for L208P (about 25 ms at minus 55 mV against about 7 ms) and M1508V (about 17 ms); the inactivation time constant is much slower for L208P (about 225 ms at minus 50 mV against about 135 ms) and M1508V stays near 40 ms at depolarised potentials against about 12 ms for wild type and L909F.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2B-D: deactivation tau at -50 mV: L208P about 80, M1508V about 46, L909F about 11, WT about 6 ms; activation tau L208P about 25, M1508V about 17 vs WT about 7; inactivation tau L208P about 225 vs WT about 135 at -50 mV.",
+    "surface": "figure",
+    "anchor": "Figure 2 panels B-D (JPEG raster)",
+    "artifact": "files/figures/PMID32878331_r2/ijms-21-06333-g002.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3 read as an image: recovery from inactivation is much slower for L208P (about 65 percent recovered at 1000 ms and about 91 percent at 8000 ms against full recovery near 1000 ms for wild type), modestly slower for M1508V at short intervals and not different for L909F.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3B: L208P about 65% recovered at 1000 ms, about 91% at 8000 ms; WT full by about 1000 ms; M1508V slightly slower at short intervals; L909F like WT.",
+    "surface": "figure",
+    "anchor": "Figure 3 panel B (JPEG raster)",
+    "artifact": "files/figures/PMID32878331_r2/ijms-21-06333-g003.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 4 read as an image: with repeated depolarisation at 1 Hz the current falls to about 32 percent (L208P) and about 48 percent (M1508V) of the first pulse against about 85 percent for wild type and about 80 percent for L909F; at 3 Hz the plateau is about 12 percent (L208P), 20 percent (M1508V), 37 percent (L909F) and 62 percent (wild type).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4B: 1 Hz plateau L208P about 32%, M1508V about 48%, WT about 85%, L909F about 80%; 3 Hz L208P about 12%, M1508V about 20%, L909F about 37%, WT about 62%.",
+    "surface": "figure",
+    "anchor": "Figure 4 panel B (JPEG raster)",
+    "artifact": "files/figures/PMID32878331_r2/ijms-21-06333-g004.jpg",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Figure S1, read from the rendered page, is a surface electroencephalogram of case 1 at age 5 years showing a burst of irregular generalised polyspike-wave discharges followed by a brief tonic seizure; the supplement is a single page.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure S1 (page 1 render): EEG of case 1 at age 5, polyspike-wave burst then brief tonic seizure with paroxysmal fast activity.",
+    "surface": "figure",
+    "anchor": "Supplementary Materials page 1, Figure S1 (rendered page)",
+    "artifact": "files/figures/PMID32878331_r3/supp-1.png",
     "panel_text_relation": "text_only"
    }
   ],
