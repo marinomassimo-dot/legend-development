@@ -279,7 +279,8 @@
    "alternatives_rejected": "ten one-shots (ten ids to track and one missed fire loses an hour)",
    "reversibility": "high",
    "how_to_revert": "CronDelete 4b6b5252"
-  }
+  },
+  "2026-10-22: operator wrote \"Procedi con worktree se landati in main eliminali\": removed 48 detached worktrees, each verified an ancestor of main with a clean tree; 195 ignored files that existed only in those worktrees (check_runs, figures, fulltext, supplement, batch backups) were copied into the root checkout first with copy-if-absent; backup/vps-main-2026-09-25 untouched; one running audit worktree kept."
  ],
  "DEFAULTS_TAKEN": [
   {
